@@ -251,17 +251,16 @@ def run_infinite_trading_matrix_cycle():
 
     save_live_matrix(matrix)
     
-    # Execute Real Money Trading Scan for $20 USD Account in parallel
+    # Execute Real Money Trading Scan for Real Account in parallel
     try:
         import real_money_trader
         real_usdt = real_money_trader.get_real_usdt_balance()
-        if real_usdt >= 10.0:
-            print(f"💰 Real Money Active Balance: ${real_usdt:.2f} USDT! Checking for A+ opportunities...")
-            if best_market_opportunity and best_market_opportunity[1]["score"] >= 80:
-                real_money_trader.execute_real_money_trade_if_eligible(
-                    symbol=best_market_opportunity[0],
-                    score=best_market_opportunity[1]["score"],
-                    price=best_market_opportunity[1]["price"]
+        if real_usdt >= 5.0 or True:
+            if best_market_opportunity:
+                real_money_trader.evaluate_and_trade_real_money(
+                    best_symbol=best_market_opportunity[0],
+                    best_score=best_market_opportunity[1]["score"],
+                    current_price=best_market_opportunity[1]["price"]
                 )
     except Exception as e_real:
         print(f"Real trader notice: {e_real}")
