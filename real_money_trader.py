@@ -55,6 +55,10 @@ def get_real_balances():
     except Exception:
         return []
 
+def get_real_usdt_balance():
+    balances = get_real_balances()
+    return sum([float(b["free"]) for b in balances if b["asset"] in ["USDT", "USDC"]])
+
 def execute_real_spot_market_buy(symbol, usdt_amount):
     timestamp = int(time.time() * 1000)
     params = {
