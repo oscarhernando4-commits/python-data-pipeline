@@ -29,6 +29,13 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install requests numpy pandas ta urllib3; fi
 
+      - name: 🔑 Verify Real Binance API Connection
+        env:
+          BINANCE_REAL_API_KEY: ${{ secrets.BINANCE_REAL_API_KEY }}
+          BINANCE_REAL_API_SECRET: ${{ secrets.BINANCE_REAL_API_SECRET }}
+        run: |
+          python test_real_binance_account.py
+
       - name: 🚀 Execute 100-Account Live Matrix & Dynamic Market Rotation
         env:
           BINANCE_TESTNET: "true"
