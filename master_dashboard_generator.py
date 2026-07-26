@@ -6,7 +6,7 @@ import parallel_simulation_matrix
 import learning_engine
 import obsidian_sync
 
-OBSIDIAN_FOLDER = r"C:\Users\hosca\Documents\Antigravity\Obsidian\01_PROYECTOS\BINANCE_QUANT_TRADING"
+OBSIDIAN_FOLDER = parallel_simulation_matrix.OBSIDIAN_FOLDER
 
 def ensure_obsidian_dir():
     if not os.path.exists(OBSIDIAN_FOLDER):

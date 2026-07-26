@@ -17,8 +17,18 @@ TOP_PAIRS = [
     'FILUSDT', 'APTUSDT', 'TRXUSDT', 'ARBUSDT', 'OPUSDT'
 ]
 
-DATA_MATRIX_FILE = r"c:\Users\hosca\Documents\Antigravity\BINANCE\matrix_100_simulations.json"
-OBSIDIAN_FOLDER = r"C:\Users\hosca\Documents\Antigravity\Obsidian\01_PROYECTOS\BINANCE_QUANT_TRADING"
+DATA_MATRIX_FILE = os.path.join(os.path.dirname(__file__), "matrix_100_simulations.json")
+
+def get_obsidian_folder():
+    local_path = r"C:\Users\hosca\Documents\Antigravity\Obsidian\01_PROYECTOS\BINANCE_QUANT_TRADING"
+    if os.path.exists(os.path.dirname(local_path)):
+        os.makedirs(local_path, exist_ok=True)
+        return local_path
+    rel_path = os.path.join(os.getcwd(), "Obsidian", "01_PROYECTOS", "BINANCE_QUANT_TRADING")
+    os.makedirs(rel_path, exist_ok=True)
+    return rel_path
+
+OBSIDIAN_FOLDER = get_obsidian_folder()
 
 def load_live_matrix():
     now_date = datetime.now().strftime("%y-%m-%d")
