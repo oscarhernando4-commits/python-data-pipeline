@@ -22,7 +22,8 @@ def load_real_account_state():
         except Exception:
             pass
     return {
-        "initial_balance_usd": 20.07,
+        "initial_deposit_usdt": 15.47,
+        "initial_total_usd": 20.07,
         "current_balance_usd": 20.07,
         "net_pnl_usd": 0.0,
         "wins": 0,
@@ -37,7 +38,7 @@ def save_real_account_state(state):
     with open(REAL_STATE_FILE, "w", encoding="utf-8") as f:
         json.dump(state, f, indent=2, ensure_ascii=False)
 
-def get_real_usdt_balance():
+def get_real_balances():
     timestamp = int(time.time() * 1000)
     params = {"timestamp": timestamp}
     query_string = urlencode(params)
@@ -49,20 +50,18 @@ def get_real_usdt_balance():
     try:
         res = requests.get(url, headers=headers, params=params, timeout=10)
         if res.status_code == 200:
-            balances = res.json().get("balances", [])
-            usdt_bal = sum([float(b["free"]) for b in balances if b["asset"] in ["USDT", "USDC"]])
-            return usdt_bal
-        return 20.07
+            return res.json().get("balances", [])
+        return []
     except Exception:
-        return 20.07
+        return []
 
-def execute_real_spot_order(symbol, side, quantity):
+def execute_real_spot_market_buy(symbol, usdt_amount):
     timestamp = int(time.time() * 1000)
     params = {
         "symbol": symbol,
-        "side": side,
+        "side": "BUY",
         "type": "MARKET",
-        "quantity": quantity,
+        "quoteOrderQty": f"{usdt_amount:.2f}",
         "timestamp": timestamp
     }
     query_string = urlencode(params)
@@ -79,66 +78,40 @@ def execute_real_spot_order(symbol, side, quantity):
 
 def evaluate_and_trade_real_money(best_symbol, best_score, current_price):
     state = load_real_account_state()
-    usdt_live = get_real_usdt_balance()
+    balances = get_real_balances()
+    
+    usdt_free = sum([float(b["free"]) for b in balances if b["asset"] == "USDT"])
+    bnb_free = sum([float(b["free"]) for b in balances if b["asset"] == "BNB"])
+    
+    # Calculate BNB USD value
+    bnb_usd = bnb_free * 576.0 # Approx BNB price
+    total_val = usdt_free + bnb_usd
+    
+    # Check if there is an active non-USDT crypto position on Binance Spot
+    crypto_balances = [b for b in balances if b["asset"] not in ["USDT", "USDC", "BNB"] and float(b["free"]) > 0]
+    
     now_str = datetime.now().strftime("%y-%m-%d<br>%H:%M")
     
-    if usdt_live > 0:
-        state["current_balance_usd"] = round(usdt_live, 2)
-        state["net_pnl_usd"] = round(usdt_live - state["initial_balance_usd"], 2)
-        
-    # Check open position for TP (+3.0%) or SL (-1.5%)
-    if state.get("position"):
-        pos = state["position"]
-        sym = pos["symbol"]
-        entry = pos["entry_price"]
-        pnl_pct = ((current_price - entry) / entry) * 100.0
-        
-        if pnl_pct >= 3.0 or pnl_pct <= -1.5:
-            # Close trade
-            state["trades_count"] += 1
-            if pnl_pct >= 3.0:
-                state["wins"] += 1
-                gain = round(pos["cost_usd"] * 0.03, 2)
-                state["current_balance_usd"] += gain
-                state["last_result"] = f"🟢 Ganó +${gain:.2f}"
-            else:
-                state["losses"] += 1
-                loss = round(pos["cost_usd"] * 0.015, 2)
-                state["current_balance_usd"] -= loss
-                state["last_result"] = f"🔴 Perdió -${loss:.2f}"
-                
-            state["position"] = None
-            state["status"] = "🟢 Buscando Entrada A+" if state["net_pnl_usd"] >= 0 else "🔴 Buscando Entrada A+"
-            state["last_trade_time"] = now_str
-            save_real_account_state(state)
-            return state
-
-    # If no open position and score >= 75 (or immediate best A+ entry)
-    if not state.get("position") and best_symbol and best_score >= 70:
-        cost = min(usdt_live, 20.0) if usdt_live >= 10.0 else 20.07
-        qty = round(cost / current_price, 4)
-        
-        # Execute real market order if API balance allows, else track live position
-        order_res = execute_real_spot_order(best_symbol, "BUY", qty)
-        
+    if crypto_balances:
+        active_asset = crypto_balances[0]["asset"]
+        active_qty = float(crypto_balances[0]["free"])
         state["position"] = {
-            "symbol": best_symbol,
+            "symbol": f"{active_asset}USDT",
+            "quantity": active_qty,
             "entry_price": current_price,
-            "quantity": qty,
-            "cost_usd": cost,
-            "target_tp": round(current_price * 1.03, 4),
-            "target_sl": round(current_price * 0.985, 4),
-            "entry_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            "cost_usd": round(active_qty * current_price, 2)
         }
-        state["status"] = f"🔵 En Vivo ({best_symbol} @ ${current_price})"
-        state["last_trade_time"] = now_str
-        save_real_account_state(state)
-        print(f"🚀 [DINERO REAL EN VIVO] Posición Abierta: {best_symbol} por ${cost:.2f} USD a ${current_price}")
-        
+        state["status"] = f"🔵 En Vivo ({active_asset}USDT @ ${current_price})"
+    else:
+        state["position"] = None
+        state["status"] = "🟦 Buscando Entrada A+"
+
+    state["current_balance_usd"] = round(total_val if total_val > 0 else 20.07, 2)
+    state["net_pnl_usd"] = round(state["current_balance_usd"] - 20.07, 2)
     save_real_account_state(state)
     return state
 
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding='utf-8')
     st = load_real_account_state()
-    print(f"💰 Real Account Loaded: {st['status']} | Balance: ${st['current_balance_usd']} USD")
+    print(f"💰 Real Account State: {st['status']} | Balance: ${st['current_balance_usd']} USD")
