@@ -1,9 +1,9 @@
-name: Binance Quant Trading Engine 24/7 (Cron 2H)
+name: Binance Quant Trading Engine 24/7 (Cron 5M Cloud)
 
 on:
   schedule:
-    # Runs every 120 minutes (2 Hours) 24/7 in GitHub Cloud
-    - cron: '0 */2 * * *'
+    # Runs every 5 minutes 24/7 in GitHub Cloud for high-frequency market scanning & trading
+    - cron: '*/5 * * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI
 
 jobs:
@@ -44,4 +44,4 @@ jobs:
           git config --global user.name "BinanceQuantBot[bot]"
           git config --global user.email "bot@binancequant.internal"
           git add -A
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-Sync 24/7 Cloud Cycle [2H Cron]" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-Sync 24/7 Cloud Cycle [5m Cron]" && git push)
