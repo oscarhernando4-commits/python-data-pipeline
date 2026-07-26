@@ -322,7 +322,7 @@ def sync_live_matrix_obsidian(matrix):
 
 | 💵 Capital Depósito | 🪙 Cripto Activa | 🔢 Ops (#) | 📈 Balance Actual | 💰 Beneficio Neto (PnL) | 📊 Racha Real | 🎯 Estado Operativo Real |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **`$15.47 USDT`** | **`{active_crypto}`** | `#{real_st['trades_count']}` | **`${real_st['current_balance_usd']:.2f} USD`** | **`${real_st['net_pnl_usd']:+,.2f} USD`** | `{real_st['wins']}W/{real_st['losses']}L` | **`{real_st['status']}`** |
+| **`$15.47 USDT`** | **`{active_crypto}`** | `#{real_st['trades_count']}` | **`$15.47 USDT`** (`$20.07 USD`) | **`${real_st['net_pnl_usd']:+,.2f} USD`** | `{real_st['wins']}W/{real_st['losses']}L` | **`{real_st['status']}`** |
 
 ---
 
