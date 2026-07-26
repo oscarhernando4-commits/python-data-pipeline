@@ -315,14 +315,15 @@ def sync_live_matrix_obsidian(matrix):
 
     import real_money_trader
     real_st = real_money_trader.load_real_account_state()
+    active_crypto = real_st.get("position", {}).get("symbol", "Ninguna (Buscando)") if real_st.get("position") else "Ninguna (Buscando)"
 
     content = f"""# 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT REAL - $20.07 USD)
 
 > ⏱️ **Última Actualización del Reporte:** `{now_str}`
 
-| 💵 Capital Depósito | 📈 Balance Actual | 💰 Beneficio Neto (PnL) | 📊 Racha Real | 🎯 Estado Operativo Real |
-| :---: | :---: | :---: | :---: | :---: |
-| **`$20.07 USD`** | **`${real_st['current_balance_usd']:.2f} USD`** | **`${real_st['net_pnl_usd']:+,.2f} USD`** | `{real_st['wins']}W/{real_st['losses']}L` | **`{real_st['status']}`** |
+| 💵 Capital Depósito | 🪙 Cripto Activa | 📈 Balance Actual | 💰 Beneficio Neto (PnL) | 📊 Racha Real | 🎯 Estado Operativo Real |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| **`$20.07 USD`** | **`{active_crypto}`** | **`${real_st['current_balance_usd']:.2f} USD`** | **`${real_st['net_pnl_usd']:+,.2f} USD`** | `{real_st['wins']}W/{real_st['losses']}L` | **`{real_st['status']}`** |
 
 ---
 
