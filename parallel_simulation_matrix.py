@@ -313,13 +313,22 @@ def sync_live_matrix_obsidian(matrix):
     pct_losing = round((losing_accs / total_acc_count) * 100.0, 1)
     pct_active = round((active_live_accs / total_acc_count) * 100.0, 1)
 
-    content = f"""# 🚀 MATRIZ DE 100 CUENTAS
+    import real_money_trader
+    real_st = real_money_trader.load_real_account_state()
+
+    content = f"""# 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT REAL - $20.07 USD)
 
 > ⏱️ **Última Actualización del Reporte:** `{now_str}`
 
+| 💵 Capital Depósito | 📈 Balance Actual | 💰 Beneficio Neto (PnL) | 📊 Racha Real | 🎯 Estado Operativo Real |
+| :---: | :---: | :---: | :---: | :---: |
+| **`$20.07 USD`** | **`${real_st['current_balance_usd']:.2f} USD`** | **`${real_st['net_pnl_usd']:+,.2f} USD`** | `{real_st['wins']}W/{real_st['losses']}L` | **`{real_st['status']}`** |
+
 ---
 
-## 📊 RESUMEN EJECUTIVO GLOBAL ($10,000 USD FONDO TOTAL)
+# 🚀 MATRIZ DE 100 CUENTAS TESTNET ($10,000 USD APRENDIZAJE IA)
+
+## 📊 RESUMEN EJECUTIVO GLOBAL ($10,000 USD FONDO TOTAL TESTNET)
 
 - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)
 - 📈 **Capital Total Acumulado:** **`${matrix['current_total_usd']:,.2f} USD`**
