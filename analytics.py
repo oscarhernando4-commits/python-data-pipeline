@@ -107,6 +107,17 @@ def analyze_institutional_grade(symbol='BTCUSDT', account_balance=10000.0, risk_
     recent_low = min(lows_15m[-10:-1]) if len(lows_15m) > 10 else lows_15m[-1]
     wyckoff_spring = (lows_15m[-1] < recent_low) and (closes_15m[-1] > recent_low) and volume_surge
     
+    # 4. BTC Macro Alignment Filter (Do not buy altcoins if BTC is in a micro-downtrend)
+    btc_aligned = True
+    if symbol != "BTCUSDT":
+        try:
+            btc_closes_15m, _, _, _ = fetch_klines("BTCUSDT", "15m", 30)
+            btc_ema20 = calc_ema(btc_closes_15m, 20)[-1]
+            if btc_closes_15m[-1] < btc_ema20:
+                btc_aligned = False
+        except Exception:
+            pass
+
     # Institutional Confluence Score (0 to 100)
     score = 50
     reasons = []
@@ -156,16 +167,25 @@ def analyze_institutional_grade(symbol='BTCUSDT', account_balance=10000.0, risk_
     if wyckoff_spring:
         score += 20
         reasons.append("⚡ Wyckoff Spring Institutional Recovery Approved (+20 Pts)")
-        
-    # High-Probability Execution Thresholds (Elevated to 80 points)
-    if score >= 80:
-        recommendation = "HIGH CONFLUENCE BUY 🚀 (A+ Setup)"
+
+    # Apply BTC Trend Alignment Shield (-15 pts if BTC is dropping)
+    if not btc_aligned:
+        score -= 15
+        reasons.append("⚠️ BTC Trend Alignment Shield: Bitcoin in micro-downtrend (-15 Pts)")
+
+    # Dynamic Threshold Based on Volatility Profile (85 Pts for High-Volatility Meme/Small-Cap Altcoins)
+    high_volatility_symbols = ["DOGEUSDT", "SHIBUSDT", "PEPEUSDT", "FLOKIUSDT", "WIFUSDT", "BONKUSDT"]
+    required_threshold = 85 if symbol.upper() in high_volatility_symbols else 80
+
+    # High-Probability Execution Thresholds
+    if score >= required_threshold:
+        recommendation = f"HIGH CONFLUENCE BUY 🚀 (A+ Setup >= {required_threshold} Pts)"
         action = "BUY"
     elif score <= 20:
         recommendation = "HIGH CONFLUENCE SELL 🔻 (A+ Setup)"
         action = "SELL"
     else:
-        recommendation = "NO TRADE ⏸️ (Wait for A+ Confluence Setup)"
+        recommendation = f"NO TRADE ⏸️ (Wait for A+ Confluence Setup >= {required_threshold} Pts)"
         action = "HOLD"
         
     # Risk Management & Break-Even Strategy
