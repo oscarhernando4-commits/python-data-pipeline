@@ -3,7 +3,7 @@ import json
 import math
 import sys
 
-BASE_URL = 'https://api.binance.com'
+BASE_URL = 'https://data-api.binance.vision'
 
 def fetch_klines(symbol='BTCUSDT', interval='1h', limit=100):
     url = f"{BASE_URL}/api/v3/klines?symbol={symbol.upper()}&interval={interval}&limit={limit}"
