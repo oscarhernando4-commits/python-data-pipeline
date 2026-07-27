@@ -111,6 +111,23 @@ def run_infinite_trading_matrix_cycle():
             tech = analytics.analyze_institutional_grade(s, account_balance=100.0, risk_percentage=1.5)
             final_score = tech.get("confluence_score", 50)
             
+            # Record 5M Time-Series Reading for Pattern Recognition Learning
+            try:
+                import time_series_memory
+                time_series_memory.record_5m_reading(
+                    symbol=s,
+                    price=tech.get("current_price", 0.0),
+                    score=final_score,
+                    rsi=tech.get("indicators", {}).get("rsi_15m", 50.0),
+                    macd=tech.get("indicators", {}).get("macd_signal", "Neutral"),
+                    volume_surge=tech.get("indicators", {}).get("volume_surge_ratio", 1.0),
+                    wyckoff=tech.get("indicators", {}).get("wyckoff_phase", "Sin patron"),
+                    news_headline=None,
+                    fear_greed_score=50
+                )
+            except Exception as e:
+                pass
+            
             symbol_analysis_map[s] = {
                 "tech": tech,
                 "score": final_score,
