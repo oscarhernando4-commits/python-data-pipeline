@@ -1,3 +1,7 @@
+
+# Static Proxy Configuration for 24/7 Cloud Execution
+PROXY_URL = os.getenv("FIXIE_URL", os.getenv("QUOTAGUARDSTATIC_URL", ""))
+PROXIES = {"http": PROXY_URL, "https": PROXY_URL} if PROXY_URL else None
 import os
 import sys
 import time
@@ -48,7 +52,7 @@ def get_real_balances():
     
     url = f"{BASE_URL}/api/v3/account"
     try:
-        res = requests.get(url, headers=headers, params=params, timeout=10)
+        res = requests.get(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
         if res.status_code == 200:
             return res.json().get("balances", [])
         return []
@@ -77,7 +81,7 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
     
     url = f"{BASE_URL}/api/v3/order"
     try:
-        res = requests.post(url, headers=headers, params=params, timeout=10)
+        res = requests.post(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
         return res.json()
     except Exception as e:
         return {"error": str(e)}

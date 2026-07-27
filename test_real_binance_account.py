@@ -1,3 +1,7 @@
+
+# Static Proxy Configuration for 24/7 Cloud Execution
+PROXY_URL = os.getenv("FIXIE_URL", os.getenv("QUOTAGUARDSTATIC_URL", ""))
+PROXIES = {"http": PROXY_URL, "https": PROXY_URL} if PROXY_URL else None
 import os
 import sys
 import time
@@ -24,7 +28,7 @@ def get_real_account_balances():
     
     url = f"{BASE_URL}/api/v3/account"
     try:
-        response = requests.get(url, headers=headers, params=params, timeout=10)
+        response = requests.get(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
         
         if response.status_code == 200:
             data = response.json()
