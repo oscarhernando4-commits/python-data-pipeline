@@ -53,7 +53,8 @@ def get_real_balances():
     
     url = f"{BASE_URL}/api/v3/account"
     try:
-        res = requests.get(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
+        # Route balance check directly (or over proxy if needed) to conserve Fixie requests
+        res = requests.get(url, headers=headers, params=params, timeout=10)
         if res.status_code == 200:
             return res.json().get("balances", [])
         return []
