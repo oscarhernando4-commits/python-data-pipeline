@@ -36,13 +36,6 @@ jobs:
         run: |
           python test_real_binance_account.py
 
-      - name: 🟡 Execute BNB Buy Cloud Test
-        env:
-          BINANCE_REAL_API_KEY: ${{ secrets.BINANCE_REAL_API_KEY }}
-          BINANCE_REAL_API_SECRET: ${{ secrets.BINANCE_REAL_API_SECRET }}
-        run: |
-          python cloud_buy_bnb_test.py
-
       - name: 🚀 Execute 100-Account Live Matrix & Dynamic Market Rotation
         env:
           BINANCE_TESTNET: "true"
