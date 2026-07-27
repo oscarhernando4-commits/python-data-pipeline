@@ -9,8 +9,8 @@ import requests
 from urllib.parse import urlencode
 from datetime import datetime
 
-# Static Proxy Configuration for 24/7 Cloud Execution (Spain Proxy Whitelisted)
-PROXY_URL = os.getenv("FIXIE_URL", os.getenv("QUOTAGUARDSTATIC_URL", "http://64.137.96.74:6641"))
+# Static Proxy Configuration for 24/7 Cloud Execution (Fixie EU West IPs: 54.195.3.54 & 54.217.142.99)
+PROXY_URL = os.getenv("FIXIE_URL", "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80")
 PROXIES = {"http": PROXY_URL, "https": PROXY_URL} if PROXY_URL else None
 
 API_KEY = os.getenv("BINANCE_REAL_API_KEY", "2nfL1p3pIXWmPLpBC9d0MtQzOBzlBBKu5xkKQPJ46QxbqxxqbTrC7tW0ltjJJpka")

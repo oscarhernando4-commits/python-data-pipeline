@@ -11,9 +11,9 @@ API_SECRET = os.getenv("BINANCE_REAL_API_SECRET", "9g2cBC6SgWlgywcJDqxsLELxZnrNV
 BASE_URL = "https://api.binance.com"
 
 def sell_bnb_from_cloud_with_auth_proxy(qty_bnb=0.0105):
-    print(f"🚀 EJECUTANDO EN LA NUBE: VENTA DE {qty_bnb} BNB A USDT VIA PROXY AUTENTICADO DE ESPAÑA (64.137.96.74)...")
+    print(f"🚀 EJECUTANDO EN LA NUBE: VENTA DE {qty_bnb} BNB A USDT VIA FIXIE EU PROXY (54.195.3.54)...")
     
-    proxy_url = "http://mjkcggfj:f1tlwlv0tmgy@64.137.96.74:6641"
+    proxy_url = "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80"
     proxies = {"http": proxy_url, "https": proxy_url}
     timestamp = int(time.time() * 1000)
     
@@ -21,7 +21,7 @@ def sell_bnb_from_cloud_with_auth_proxy(qty_bnb=0.0105):
         "symbol": "BNBUSDT",
         "side": "SELL",
         "type": "MARKET",
-        "quantity": f"{qty_bnb:.4f}",
+        "quantity": "0.011",
         "timestamp": timestamp
     }
     query_string = urlencode(params)
