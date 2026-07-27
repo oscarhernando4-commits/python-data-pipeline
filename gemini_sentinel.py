@@ -36,7 +36,8 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
     }}
     """
     
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_API_KEY}"
+    # Primary endpoint: gemini-flash-latest (Always routes to the latest bleeding-edge Flash model version 3.5/3.6+)
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key={GEMINI_API_KEY}"
     payload = {
         "contents": [{"parts": [{"text": prompt_text}]}],
         "generationConfig": {"temperature": 0.2, "responseMimeType": "application/json"}
@@ -53,12 +54,12 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
             res_json = json.loads(response.read().decode("utf-8"))
             content = res_json['candidates'][0]['content']['parts'][0]['text']
             parsed = json.loads(content)
-            print(f"🎉 Respuesta de Gemini 2.5 Flash AI: Approved={parsed.get('approved')} | Conf={parsed.get('confidence')}% | Razonamiento: {parsed.get('reasoning')}")
+            print(f"🎉 Respuesta de Gemini Flash Latest AI (gemini-flash-latest): Approved={parsed.get('approved')} | Conf={parsed.get('confidence')}% | Razonamiento: {parsed.get('reasoning')}")
             return parsed
     except Exception as e:
-        print(f"Aviso consultando Gemini 2.5 Flash ({e}). Probando Gemini 2.0 Flash...")
+        print(f"Aviso consultando gemini-flash-latest ({e}). Probando fallback gemini-2.5-flash...")
         try:
-            url2 = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
+            url2 = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_API_KEY}"
             req2 = urllib.request.Request(
                 url2, 
                 data=json.dumps(payload).encode("utf-8"), 
@@ -69,7 +70,7 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
                 res_json = json.loads(response.read().decode("utf-8"))
                 content = res_json['candidates'][0]['content']['parts'][0]['text']
                 parsed = json.loads(content)
-                print(f"🎉 Respuesta de Gemini 2.0 Flash AI: Approved={parsed.get('approved')} | Conf={parsed.get('confidence')}% | Razonamiento: {parsed.get('reasoning')}")
+                print(f"🎉 Respuesta de Gemini 2.5 Flash AI: Approved={parsed.get('approved')} | Conf={parsed.get('confidence')}% | Razonamiento: {parsed.get('reasoning')}")
                 return parsed
         except Exception as e2:
             print(f"Gemini LLM Notice: {e2}. Usando fallback cuantitativo seguro.")
