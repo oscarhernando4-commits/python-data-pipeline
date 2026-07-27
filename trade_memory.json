@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 77,
+    "total_trades": 82,
     "wins": 32,
-    "losses": 45,
-    "win_rate_pct": 41.56,
-    "total_pnl_usd": 28.75
+    "losses": 50,
+    "win_rate_pct": 39.02,
+    "total_pnl_usd": 21.25
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -54,7 +54,8 @@
       "Preventive Block for ATOMUSDT: Loss logged at 1.391 -> Parallel Matrix Account SIM-093 Stop-Loss Triggered",
       "Preventive Block for ETCUSDT: Loss logged at 6.71 -> Parallel Matrix Account SIM-095 Stop-Loss Triggered",
       "Preventive Block for TRXUSDT: Loss logged at 0.3312 -> Parallel Matrix Account SIM-098 Stop-Loss Triggered",
-      "Preventive Block for OPUSDT: Loss logged at 0.0929 -> Parallel Matrix Account SIM-100 Stop-Loss Triggered"
+      "Preventive Block for OPUSDT: Loss logged at 0.0929 -> Parallel Matrix Account SIM-100 Stop-Loss Triggered",
+      "Preventive Block for DOTUSDT: Loss logged at 0.818 -> Hit SL on DOTUSDT (-$1.50). Re-Trading!"
     ],
     "boosted_patterns": [
       "RSI < 30 + MACD Bullish Cross + Volume > 1.5x (High Probability Win)",
@@ -854,6 +855,56 @@
       "pnl_usd": 3.09,
       "result": "WIN",
       "notes": "Win on NEARUSDT (+$3.09) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-27 06:50:20",
+      "symbol": "DOTUSDT",
+      "side": "BUY",
+      "entry_price": 0.818,
+      "exit_price": 0.808,
+      "pnl_usd": -1.5,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.50). Re-Trading!"
+    },
+    {
+      "timestamp": "2026-07-27 06:50:20",
+      "symbol": "DOTUSDT",
+      "side": "BUY",
+      "entry_price": 0.818,
+      "exit_price": 0.808,
+      "pnl_usd": -1.5,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.50). Re-Trading!"
+    },
+    {
+      "timestamp": "2026-07-27 06:50:20",
+      "symbol": "DOTUSDT",
+      "side": "BUY",
+      "entry_price": 0.818,
+      "exit_price": 0.808,
+      "pnl_usd": -1.5,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.50). Re-Trading!"
+    },
+    {
+      "timestamp": "2026-07-27 06:50:20",
+      "symbol": "DOTUSDT",
+      "side": "BUY",
+      "entry_price": 0.818,
+      "exit_price": 0.808,
+      "pnl_usd": -1.5,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.50). Re-Trading!"
+    },
+    {
+      "timestamp": "2026-07-27 06:50:20",
+      "symbol": "DOTUSDT",
+      "side": "BUY",
+      "entry_price": 0.818,
+      "exit_price": 0.808,
+      "pnl_usd": -1.5,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.50). Re-Trading!"
     }
   ]
 }
