@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 72,
-    "wins": 27,
+    "total_trades": 77,
+    "wins": 32,
     "losses": 45,
-    "win_rate_pct": 37.5,
-    "total_pnl_usd": 13.3
+    "win_rate_pct": 41.56,
+    "total_pnl_usd": 28.75
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -80,7 +80,8 @@
       "Optimized Setup for LTCUSDT: Profit logged (+$3.00) -> Parallel Matrix Account SIM-094 +3% Target Win",
       "Optimized Setup for FILUSDT: Profit logged (+$3.00) -> Parallel Matrix Account SIM-096 +3% Target Win",
       "Optimized Setup for APTUSDT: Profit logged (+$3.00) -> Parallel Matrix Account SIM-097 +3% Target Win",
-      "Optimized Setup for ETHUSDT: Profit logged (+$2.96) -> Win on ETHUSDT (+$2.96) -> Level 2 Re-Trading Started!"
+      "Optimized Setup for ETHUSDT: Profit logged (+$2.96) -> Win on ETHUSDT (+$2.96) -> Level 2 Re-Trading Started!",
+      "Optimized Setup for NEARUSDT: Profit logged (+$3.09) -> Win on NEARUSDT (+$3.09) -> Level 2 Re-Trading Started!"
     ]
   },
   "history": [
@@ -803,6 +804,56 @@
       "pnl_usd": 2.96,
       "result": "WIN",
       "notes": "Win on ETHUSDT (+$2.96) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-26 19:28:16",
+      "symbol": "NEARUSDT",
+      "side": "BUY",
+      "entry_price": 1.8,
+      "exit_price": 1.841,
+      "pnl_usd": 3.09,
+      "result": "WIN",
+      "notes": "Win on NEARUSDT (+$3.09) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-26 19:28:16",
+      "symbol": "NEARUSDT",
+      "side": "BUY",
+      "entry_price": 1.8,
+      "exit_price": 1.841,
+      "pnl_usd": 3.09,
+      "result": "WIN",
+      "notes": "Win on NEARUSDT (+$3.09) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-26 19:28:16",
+      "symbol": "NEARUSDT",
+      "side": "BUY",
+      "entry_price": 1.8,
+      "exit_price": 1.841,
+      "pnl_usd": 3.09,
+      "result": "WIN",
+      "notes": "Win on NEARUSDT (+$3.09) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-26 19:28:16",
+      "symbol": "NEARUSDT",
+      "side": "BUY",
+      "entry_price": 1.8,
+      "exit_price": 1.841,
+      "pnl_usd": 3.09,
+      "result": "WIN",
+      "notes": "Win on NEARUSDT (+$3.09) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-26 19:28:16",
+      "symbol": "NEARUSDT",
+      "side": "BUY",
+      "entry_price": 1.8,
+      "exit_price": 1.841,
+      "pnl_usd": 3.09,
+      "result": "WIN",
+      "notes": "Win on NEARUSDT (+$3.09) -> Level 2 Re-Trading Started!"
     }
   ]
 }
