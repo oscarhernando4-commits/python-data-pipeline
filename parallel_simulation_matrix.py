@@ -316,25 +316,30 @@ def sync_live_matrix_obsidian(matrix):
 
     import real_money_trader
     real_st = real_money_trader.load_real_account_state()
-    active_crypto = real_st.get("position", {}).get("symbol", "Ninguna (Buscando)") if real_st.get("position") else "Ninguna (Buscando)"
+    real_active_crypto = real_st.get("position", {}).get("symbol", "Ninguna (Buscando)") if real_st.get("position") else "Ninguna (Buscando)"
+    timestamp = now_str
+    
+    real_usdt_free = 17.19
+    real_bnb = 0.004988
+    real_bnb_usd = real_bnb * 575.0
+    real_total_val = real_usdt_free + real_bnb_usd
+    
+    real_section = (
+        f"# 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT REAL - ${real_total_val:.2f} USD)\n\n"
+        f"> ⏱️ **Última Actualización del Reporte:** `{timestamp}`\n"
+        f">\n"
+        f"> 🛡️ **Desglose de Fondos en Cuenta Real:**\n"
+        f"> - 🟡 **BNB Escudo Comisiones (25% Descuento):** `{real_bnb:.8f} BNB` (`~${real_bnb_usd:.2f} USD`)\n"
+        f"> - 💵 **USDT Reserva / Margen Segura:** `{real_usdt_free - 17.00:.4f} USDT`\n"
+        f"> - 🎯 **Capital Activo para Operaciones Spot:** `$17.00 USDT`\n"
+        f"> - 💰 **Saldo Total Acumulado Cuenta Real:** `${real_total_val:.2f} USD`\n\n"
+        f"| 💵 Capital Depósito | 🪙 Cripto Activa | 🔢 Ops (#) | 📈 Balance Actual | 💰 Beneficio Neto (PnL) | 📊 Racha Real | 🎯 Estado Operativo Real |\n"
+        f"| :---: | :---: | :---: | :---: | :---: | :---: | :---: |\n"
+        f"| **`$17.00 USDT`** | **`{real_active_crypto}`** | `#{real_st['trades_count']}` | **`$17.00 USDT`** | **`${real_st['net_pnl_usd']:+.2f} USD`** | `{real_st['wins']}W/{real_st['losses']}L` | **`{real_st['status']}`** |\n\n"
+        f"---\n\n"
+    )
 
-    content = f"""# 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT REAL - $20.07 USD)
-
-> ⏱️ **Última Actualización del Reporte:** `{now_str}`
-> 
-> 🛡️ **Desglose de Fondos en Cuenta Real:**
-> - 🟡 **BNB Escudo Comisiones (25% Descuento):** `0.00799400 BNB` (`~$4.58 USD`)
-> - 💵 **USDT Reserva / Margen Segura:** `0.46589294 USDT`
-> - 🎯 **Capital Activo para Operaciones Spot:** `$15.00 USDT`
-> - 💰 **Saldo Total Acumulado Cuenta Real:** `${real_st['current_balance_usd']:.2f} USD`
-
-| 💵 Capital Depósito | 🪙 Cripto Activa | 🔢 Ops (#) | 📈 Balance Actual | 💰 Beneficio Neto (PnL) | 📊 Racha Real | 🎯 Estado Operativo Real |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **`$15.00 USDT`** | **`{active_crypto}`** | `#{real_st['trades_count']}` | **`$15.00 USDT`** | **`${real_st['net_pnl_usd']:+,.2f} USD`** | `{real_st['wins']}W/{real_st['losses']}L` | **`{real_st['status']}`** |
-
----
-
-# 🚀 MATRIZ DE 100 CUENTAS TESTNET ($10,000 USD APRENDIZAJE IA)
+    content = f"""{real_section}# 🚀 MATRIZ DE 100 CUENTAS TESTNET ($10,000 USD APRENDIZAJE IA)
 
 ## 📊 RESUMEN EJECUTIVO GLOBAL ($10,000 USD FONDO TOTAL TESTNET)
 
