@@ -3,7 +3,7 @@ import sys
 import json
 import urllib.request
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyDPEcjMraRyLC7o0LgjdKw65emfieZZPOM")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 
 def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed):
     """
