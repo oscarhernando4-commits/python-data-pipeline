@@ -61,11 +61,13 @@ def get_real_usdt_balance():
 
 def execute_real_spot_market_buy(symbol, usdt_amount):
     timestamp = int(time.time() * 1000)
+    # Round down to nearest clean integer (e.g. 15.00 USD) for 100% precision safety
+    clean_usd = int(usdt_amount) if usdt_amount >= 10.0 else usdt_amount
     params = {
         "symbol": symbol,
         "side": "BUY",
         "type": "MARKET",
-        "quoteOrderQty": f"{usdt_amount:.2f}",
+        "quoteOrderQty": f"{clean_usd:.2f}",
         "timestamp": timestamp
     }
     query_string = urlencode(params)
