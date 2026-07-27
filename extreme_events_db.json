@@ -1,0 +1,35 @@
+{
+  "BTCUSDT": {
+    "max_15m_crash_pct": -12.5,
+    "max_15m_pump_pct": 14.2,
+    "extreme_patterns": [
+      "Cascada de Liquidaciones masivas cuando RSI 15M cae de 20 y volumen supera 4.5x.",
+      "Trampa de Toros Wyckoff Upthrust tras consolidación de 4 horas cerca de ATH.",
+      "Rebote violento en forma de V cuando Fear & Greed cae a Miedo Extremo (<18)."
+    ]
+  },
+  "ETHUSDT": {
+    "max_15m_crash_pct": -15.8,
+    "max_15m_pump_pct": 18.0,
+    "extreme_patterns": [
+      "Desplome por Liquidación Gas Surge cuando los Futuros sufren colateralización extrema.",
+      "Rally parabólico de altcoins cuando ETH/BTC supera la EMA200 de 4H."
+    ]
+  },
+  "BNBUSDT": {
+    "max_15m_crash_pct": -10.0,
+    "max_15m_pump_pct": 12.5,
+    "extreme_patterns": [
+      "Resiliencia extrema por utilidad de comisiones y quema trimestral de tokens.",
+      "Fuerte rebote institucional cuando el precio testea la EMA200 diaria."
+    ]
+  },
+  "SOLUSDT": {
+    "max_15m_crash_pct": -22.0,
+    "max_15m_pump_pct": 25.0,
+    "extreme_patterns": [
+      "Alta volatilidad beta: Movimientos amplificados de 2x a 3x respecto a BTC.",
+      "Ruptura de rango de 4H respaldada por volumen superior a 3.8x desata squeezes."
+    ]
+  }
+}

@@ -15,16 +15,21 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
         return {"approved": True, "confidence": score, "reasoning": "Fallback cuantitativo (Score >= 85 Pts)"}
 
     import time_series_memory
+    import extreme_events_memory
     pattern_summary = time_series_memory.get_multi_cycle_pattern_summary(symbol)
+    extreme_context = extreme_events_memory.get_symbol_extreme_context(symbol)
 
     print(f"🧠 Consultando al Súper-Cerebro Gemini Flash (gemini-flash-latest) para {symbol} (Score: {score} Pts)...")
     
     prompt_text = f"""
-    Eres un Trader Cuantitativo Institucional Senior y Experto en Aprendizaje de Patrones Históricos / Rastro de Ballenas.
+    Eres un Trader Cuantitativo Institucional Senior y Experto en Aprendizaje de Patrones Históricos Extremos / Rastro de Ballenas.
     Tu objetivo es lograr operaciones victoriosas de alta frecuencia intradía para {symbol}.
 
-    HISTORIAL DE LECTURAS 5M Y PATRONES MULTI-CICLO (1 HORA):
+    HISTORIAL DE LECTURAS 5M (ÚLTIMAS 4 HORAS):
     - {pattern_summary}
+
+    BASE DE DATOS DE EVENTOS EXTREMOS HISTÓRICOS DE {symbol}:
+    - {extreme_context}
 
     EVALÚA LOS SIGUIENTES DATOS EN TIEMPO REAL:
     - Puntaje Técnico Cuantitativo Actual: {score} / 100 Pts
@@ -35,10 +40,11 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
     - Sentimiento del Mercado (Fear & Greed): {fear_greed.get('score')} ({fear_greed.get('sentiment')})
     - Noticias al Minuto (CoinTelegraph/CryptoPanic): {json.dumps(news_data.get('headlines', [])[:4])}
 
-    REGLAS DE DECISIÓN CON APRENDIZAJE HISTÓRICO 5M:
-    1. Si el historial 5M muestra acumulación creciente de ballenas, volumen > 1.8x y noticias neutrales/alcistas, APRUEBA para BUY_LONG.
-    2. Si el historial 5M muestra distribución bajista y noticias negativas, APRUEBA para SELL_SHORT.
-    3. Si hay riesgo de trampa macro o contradicción entre el historial 5M y las noticias, RECHAZA (HOLD).
+    REGLAS DE DECISIÓN CON APRENDIZAJE HISTÓRICO Y EVENTOS EXTREMOS:
+    1. Compara si el patrón actual imita un evento extremo histórico de desplome o pump de {symbol}.
+    2. Si el historial de 4H muestra acumulación creciente de ballenas, volumen > 1.8x y no imita un patrón de trampa histórica, APRUEBA para BUY_LONG.
+    3. Si imita una cascada de liquidación o distribución bajista, APRUEBA para SELL_SHORT.
+    4. Si hay riesgo de trampa o contradicción con eventos extremos pasados, RECHAZA (HOLD).
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON CON ESTA ESTRUCTURA EXACTA:
     {{

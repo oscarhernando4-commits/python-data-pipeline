@@ -43,31 +43,31 @@ def record_5m_reading(symbol, price, score, rsi, macd, volume_surge, wyckoff, ne
     }
     
     history[symbol].append(snapshot)
-    # Retain the last 12 snapshots (1 hour of 5m readings)
-    history[symbol] = history[symbol][-12:]
+    # Retain the last 48 snapshots (4 hours of 5m readings for deep structural context)
+    history[symbol] = history[symbol][-48:]
     save_time_series_history(history)
     return history[symbol]
 
 def get_multi_cycle_pattern_summary(symbol):
     """
-    Analyzes the rolling 1-hour 5-minute time-series history for a symbol
-    to calculate momentum acceleration, whale accumulation velocity, and news impact.
+    Analyzes the rolling 4-hour 5-minute time-series history for a symbol
+    to calculate multi-hour momentum acceleration, whale accumulation velocity, and news impact.
     """
     history = load_time_series_history().get(symbol, [])
     if len(history) < 2:
-        return "Historial reciente insuficiente (Primeras lecturas)."
+        return "Historial reciente insuficiente (Primeras lecturas de 5M)."
         
     first = history[0]
     last = history[-1]
     
-    price_change_pct = ((last["price"] - first["price"]) / first["price"]) * 100.0
+    price_change_pct = ((last["price"] - first["price"]) / first["price"]) * 100.0 if first["price"] > 0 else 0.0
     score_trend = last["score"] - first["score"]
     avg_volume_surge = sum(s["volume_surge"] for s in history) / len(history)
     
     summary = (
-        f"Historial 1h ({len(history)} ciclos 5M): Cambio Precio: {price_change_pct:+.2f}%, "
+        f"Historial 4H ({len(history)} ciclos 5M): Cambio Precio 4H: {price_change_pct:+.2f}%, "
         f"Evolución Score: {score_trend:+d} Pts, Promedio Volumen: {avg_volume_surge:.1f}x. "
-        f"Patrón: {'Acumulación Intensa de Ballenas' if score_trend > 10 and avg_volume_surge > 1.5 else 'Distribución o Rango'}"
+        f"Diagnóstico 4H: {'Acumulación Intensa de Ballenas' if score_trend > 10 and avg_volume_surge > 1.5 else 'Distribución o Rango Estructural'}"
     )
     return summary
 
