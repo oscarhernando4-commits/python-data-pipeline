@@ -11,7 +11,8 @@ API_SECRET = os.getenv("BINANCE_REAL_API_SECRET", "9g2cBC6SgWlgywcJDqxsLELxZnrNV
 BASE_URL = "https://api.binance.com"
 
 def execute_real_bnb_buy_from_cloud():
-    print("🚀 EJECUTANDO ORDEN REAL EN LA NUBE: COMPRA DE $5.00 USD EN BNB EN BINANCE SPOT REAL...")
+    output_lines = []
+    output_lines.append("🚀 EJECUTANDO ORDEN REAL EN LA NUBE: COMPRA DE $5.00 USD EN BNB EN BINANCE SPOT REAL...")
     timestamp = int(time.time() * 1000)
     
     params = {
@@ -30,21 +31,22 @@ def execute_real_bnb_buy_from_cloud():
     try:
         res = requests.post(url, headers=headers, params=params, timeout=10)
         res_json = res.json()
-        print(f"📊 Respuesta Binance Real (Status {res.status_code}): {res_json}")
+        output_lines.append(f"📊 Respuesta Binance Real (Status {res.status_code}): {res_json}")
         
         if res.status_code == 200 and "orderId" in res_json:
-            print(f"🎉 ¡ORDEN REAL EN LA NUBE EJECUTADA CON ÉXITO!")
-            print(f"  - ID de Orden: {res_json.get('orderId')}")
-            print(f"  - Cripto Comprada: {res_json.get('symbol')}")
-            print(f"  - Monto USD Ejecutado: ${res_json.get('cummulativeQuoteQty')} USD")
-            print(f"  - Cantidad BNB Recibida: {res_json.get('executedQty')} BNB")
-            return True
+            output_lines.append(f"🎉 ¡ORDEN REAL EN LA NUBE EJECUTADA CON ÉXITO!")
+            output_lines.append(f"  - ID de Orden: {res_json.get('orderId')}")
+            output_lines.append(f"  - Monto USD Ejecutado: ${res_json.get('cummulativeQuoteQty')} USD")
         else:
-            print(f"❌ Error en Orden Real: {res_json}")
-            return False
+            output_lines.append(f"❌ Error en Orden Real: {res_json}")
     except Exception as e:
-        print(f"Exception ejecutando orden real: {e}")
-        return False
+        output_lines.append(f"Exception ejecutando orden real: {e}")
+        
+    full_output = "\n".join(output_lines)
+    print(full_output)
+    
+    with open("last_bnb_buy_log.txt", "w", encoding="utf-8") as f:
+        f.write(full_output)
 
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding='utf-8')
