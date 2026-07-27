@@ -141,6 +141,22 @@ def run_infinite_trading_matrix_cycle():
         except Exception as e:
             print(f"Error fetching live data for {s}: {e}")
 
+    # Evaluate Top Candidate with Gemini Flash Latest LLM Sentinel
+    if best_market_opportunity:
+        top_sym, top_data = best_market_opportunity
+        try:
+            import gemini_sentinel
+            gemini_res = gemini_sentinel.review_trade_decision(
+                symbol=top_sym,
+                score=top_data["score"],
+                tech_data=top_data["tech"],
+                news_data={"headlines": []},
+                fear_greed={"score": 50, "sentiment": "Neutral"}
+            )
+            print(f"🧠 [GEMINI-FLASH-LATEST AI CO-PILOT] {top_sym} (Score {top_data['score']} Pts): Approved={gemini_res.get('approved')} | Conf={gemini_res.get('confidence')}% | Razonamiento: {gemini_res.get('reasoning')}")
+        except Exception as ge:
+            print(f"💡 Gemini Sentinel Note: {ge}")
+
     total_balance = 0.0
     global_trades = 0
     global_wins = 0
