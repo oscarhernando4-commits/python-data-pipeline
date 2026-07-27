@@ -3,18 +3,18 @@ import sys
 import json
 import urllib.request
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyDPEcjMraRyLC7o0LgjdKw65emfieZZPOM")
 
 def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed):
     """
-    Super-Brain AI Decision Reviewer using Google Gemini Flash Free API.
+    Super-Brain AI Decision Reviewer using Google Gemini Flash Free API (gemini-flash-latest).
     Provides sub-second LLM reasoning for high-stakes trades.
     """
     if not GEMINI_API_KEY:
         print("💡 Gemini Notice: GEMINI_API_KEY no configurada aún. Usando fallback cuantitativo.")
         return {"approved": True, "confidence": score, "reasoning": "Fallback cuantitativo (Score >= 85 Pts)"}
 
-    print(f"🧠 Consultando al Súper-Cerebro Gemini Flash para {symbol} (Score: {score} Pts)...")
+    print(f"🧠 Consultando al Súper-Cerebro Gemini Flash (gemini-flash-latest) para {symbol} (Score: {score} Pts)...")
     
     prompt_text = f"""
     Eres un Trader Cuantitativo Institucional Senior de Criptomonedas.
@@ -36,7 +36,7 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
     }}
     """
     
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_API_KEY}"
     payload = {
         "contents": [{"parts": [{"text": prompt_text}]}],
         "generationConfig": {"temperature": 0.2, "responseMimeType": "application/json"}
@@ -49,15 +49,31 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
             headers={"Content-Type": "application/json"},
             method="POST"
         )
-        with urllib.request.urlopen(req, timeout=8) as response:
+        with urllib.request.urlopen(req, timeout=15) as response:
             res_json = json.loads(response.read().decode("utf-8"))
             content = res_json['candidates'][0]['content']['parts'][0]['text']
             parsed = json.loads(content)
-            print(f"🎉 Respuesta de Gemini Flash AI: Approved={parsed.get('approved')} | Conf={parsed.get('confidence')}% | Razonamiento: {parsed.get('reasoning')}")
+            print(f"🎉 Respuesta de Gemini 2.5 Flash AI: Approved={parsed.get('approved')} | Conf={parsed.get('confidence')}% | Razonamiento: {parsed.get('reasoning')}")
             return parsed
     except Exception as e:
-        print(f"Error consultando Gemini Flash API: {e}")
-        return {"approved": True, "confidence": score, "reasoning": f"Fallback cuantitativo por aviso: {e}"}
+        print(f"Aviso consultando Gemini 2.5 Flash ({e}). Probando Gemini 2.0 Flash...")
+        try:
+            url2 = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
+            req2 = urllib.request.Request(
+                url2, 
+                data=json.dumps(payload).encode("utf-8"), 
+                headers={"Content-Type": "application/json"},
+                method="POST"
+            )
+            with urllib.request.urlopen(req2, timeout=15) as response:
+                res_json = json.loads(response.read().decode("utf-8"))
+                content = res_json['candidates'][0]['content']['parts'][0]['text']
+                parsed = json.loads(content)
+                print(f"🎉 Respuesta de Gemini 2.0 Flash AI: Approved={parsed.get('approved')} | Conf={parsed.get('confidence')}% | Razonamiento: {parsed.get('reasoning')}")
+                return parsed
+        except Exception as e2:
+            print(f"Gemini LLM Notice: {e2}. Usando fallback cuantitativo seguro.")
+            return {"approved": True, "confidence": score, "reasoning": f"Fallback cuantitativo (Score >= {score} Pts)"}
 
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding='utf-8')
