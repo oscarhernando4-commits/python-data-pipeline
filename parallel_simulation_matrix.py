@@ -37,10 +37,11 @@ def load_live_matrix():
     
     if not os.path.exists(DATA_MATRIX_FILE):
         accounts = []
-        for i in range(1, 101):
-            assigned_pair = TOP_PAIRS[(i - 1) % len(TOP_PAIRS)]
+        for i in range(0, 100):
+            assigned_pair = TOP_PAIRS[i % len(TOP_PAIRS)]
+            acc_id = "SIM-000 (Réplica Real)" if i == 0 else f"SIM-{i:03d}"
             accounts.append({
-                "account_id": f"SIM-{i:03d}",
+                "account_id": acc_id,
                 "symbol": assigned_pair,
                 "initial_capital": 100.0,
                 "current_balance": 100.0,
