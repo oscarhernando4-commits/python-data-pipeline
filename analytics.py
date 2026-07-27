@@ -168,6 +168,13 @@ def analyze_institutional_grade(symbol='BTCUSDT', account_balance=10000.0, risk_
         score += 20
         reasons.append("⚡ Wyckoff Spring Institutional Recovery Approved (+20 Pts)")
 
+    # 5. Layer-1 Institutional Triad Booster (+10 Pts for high-liquidity proven assets)
+    institutional_layer1_assets = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "NEARUSDT", "AVAXUSDT", "LINKUSDT", "DOTUSDT", "BNBUSDT"]
+    is_layer1 = symbol.upper() in institutional_layer1_assets
+    if is_layer1 and (wyckoff_spring or (bb_squeeze and volume_surge)) and macro_trend == "BULLISH":
+        score += 10
+        reasons.append("💎 Layer-1 Institutional Triad Booster Approved (+10 Pts)")
+
     # Apply BTC Trend Alignment Shield (-15 pts if BTC is dropping)
     if not btc_aligned:
         score -= 15
