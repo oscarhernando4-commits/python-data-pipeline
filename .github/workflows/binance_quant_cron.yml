@@ -27,41 +27,19 @@ jobs:
       - name: 📦 Install Requirements
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install requests numpy pandas ta urllib3; fi
-
-      - name: 🌐 Setup Static IP for 24/7 Cloud Execution
-        uses: gacts/static-ip@v1
-
-      - name: 🔑 Verify Real Binance API Connection
-        env:
-          BINANCE_REAL_API_KEY: ${{ secrets.BINANCE_REAL_API_KEY }}
-          BINANCE_REAL_API_SECRET: ${{ secrets.BINANCE_REAL_API_SECRET }}
-          FIXIE_URL: ${{ secrets.FIXIE_URL }}
-        run: |
-          python test_real_binance_account.py
-
-      - name: 🚀 Diagnose Cloud IP & Execute Live BNB Sell Order
-        env:
-          BINANCE_REAL_API_KEY: ${{ secrets.BINANCE_REAL_API_KEY }}
-          BINANCE_REAL_API_SECRET: ${{ secrets.BINANCE_REAL_API_SECRET }}
-        run: |
-          python get_github_cloud_ip.py
-
       - name: 🚀 Execute 100-Account Live Matrix & Dynamic Market Rotation
         env:
-          BINANCE_TESTNET: "true"
-          BINANCE_API_KEY: ${{ secrets.BINANCE_API_KEY }}
-          BINANCE_API_SECRET: ${{ secrets.BINANCE_API_SECRET }}
           BINANCE_REAL_API_KEY: ${{ secrets.BINANCE_REAL_API_KEY }}
           BINANCE_REAL_API_SECRET: ${{ secrets.BINANCE_REAL_API_SECRET }}
-          FIXIE_URL: ${{ secrets.FIXIE_URL }}
+          FIXIE_URL: ${{ secrets.FIXIE_URL || 'http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80' }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           python parallel_simulation_matrix.py
-
-      - name: 🔄 Commit & Push Updated Obsidian Notes and Matrix State
+          
+      - name: 💾 Commit & Push Real-Time Matrix Updates
         run: |
-          git config --global user.name "BinanceQuantBot[bot]"
-          git config --global user.email "bot@binancequant.internal"
-          git add -A
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-Sync 24/7 Cloud Cycle [5m Cron]" && git push)
+          git config --global user.name 'antigravity-bot[bot]'
+          git config --global user.email 'antigravity-bot[bot]@users.noreply.github.com'
+          git add .
+          git commit -m "Auto-Update: Live 100-Account Matrix Cycle [$(date -u +'%Y-%m-%d %H:%M:%S UTC')]" || echo "No changes to commit"
+          git push origin main
