@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 82,
+    "total_trades": 87,
     "wins": 32,
-    "losses": 50,
-    "win_rate_pct": 39.02,
-    "total_pnl_usd": 21.25
+    "losses": 55,
+    "win_rate_pct": 36.78,
+    "total_pnl_usd": 13.849999999999998
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -55,7 +55,8 @@
       "Preventive Block for ETCUSDT: Loss logged at 6.71 -> Parallel Matrix Account SIM-095 Stop-Loss Triggered",
       "Preventive Block for TRXUSDT: Loss logged at 0.3312 -> Parallel Matrix Account SIM-098 Stop-Loss Triggered",
       "Preventive Block for OPUSDT: Loss logged at 0.0929 -> Parallel Matrix Account SIM-100 Stop-Loss Triggered",
-      "Preventive Block for DOTUSDT: Loss logged at 0.818 -> Hit SL on DOTUSDT (-$1.50). Re-Trading!"
+      "Preventive Block for DOTUSDT: Loss logged at 0.818 -> Hit SL on DOTUSDT (-$1.50). Re-Trading!",
+      "Preventive Block for ATOMUSDT: Loss logged at 1.391 -> Hit SL on ATOMUSDT (-$1.48). Re-Trading!"
     ],
     "boosted_patterns": [
       "RSI < 30 + MACD Bullish Cross + Volume > 1.5x (High Probability Win)",
@@ -905,6 +906,56 @@
       "pnl_usd": -1.5,
       "result": "LOSS",
       "notes": "Hit SL on DOTUSDT (-$1.50). Re-Trading!"
+    },
+    {
+      "timestamp": "2026-07-27 11:39:25",
+      "symbol": "ATOMUSDT",
+      "side": "BUY",
+      "entry_price": 1.391,
+      "exit_price": 1.349,
+      "pnl_usd": -1.48,
+      "result": "LOSS",
+      "notes": "Hit SL on ATOMUSDT (-$1.48). Re-Trading!"
+    },
+    {
+      "timestamp": "2026-07-27 11:39:25",
+      "symbol": "ATOMUSDT",
+      "side": "BUY",
+      "entry_price": 1.391,
+      "exit_price": 1.349,
+      "pnl_usd": -1.48,
+      "result": "LOSS",
+      "notes": "Hit SL on ATOMUSDT (-$1.48). Re-Trading!"
+    },
+    {
+      "timestamp": "2026-07-27 11:39:25",
+      "symbol": "ATOMUSDT",
+      "side": "BUY",
+      "entry_price": 1.391,
+      "exit_price": 1.349,
+      "pnl_usd": -1.48,
+      "result": "LOSS",
+      "notes": "Hit SL on ATOMUSDT (-$1.48). Re-Trading!"
+    },
+    {
+      "timestamp": "2026-07-27 11:39:25",
+      "symbol": "ATOMUSDT",
+      "side": "BUY",
+      "entry_price": 1.391,
+      "exit_price": 1.349,
+      "pnl_usd": -1.48,
+      "result": "LOSS",
+      "notes": "Hit SL on ATOMUSDT (-$1.48). Re-Trading!"
+    },
+    {
+      "timestamp": "2026-07-27 11:39:25",
+      "symbol": "ATOMUSDT",
+      "side": "BUY",
+      "entry_price": 1.391,
+      "exit_price": 1.349,
+      "pnl_usd": -1.48,
+      "result": "LOSS",
+      "notes": "Hit SL on ATOMUSDT (-$1.48). Re-Trading!"
     }
   ]
 }

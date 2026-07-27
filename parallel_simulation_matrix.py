@@ -304,13 +304,15 @@ def sync_live_matrix_obsidian(matrix):
 
     # Calculate separated account percentages respect to 100 total accounts
     total_acc_count = len(accounts)
-    winning_accs = sum(1 for a in accounts if a.get("pnl_usd", 0.0) > 0)
-    losing_accs = sum(1 for a in accounts if a.get("pnl_usd", 0.0) < 0)
+    winning_accs = sum(1 for a in accounts if a.get("pnl_usd", 0.0) > 0 and a.get("position") is None)
+    losing_accs = sum(1 for a in accounts if a.get("pnl_usd", 0.0) < 0 and a.get("position") is None)
     active_live_accs = sum(1 for a in accounts if a.get("position") is not None or "En Vivo" in a.get("status", ""))
+    neutral_accs = total_acc_count - (winning_accs + losing_accs + active_live_accs)
     
     pct_winning = round((winning_accs / total_acc_count) * 100.0, 1)
     pct_losing = round((losing_accs / total_acc_count) * 100.0, 1)
     pct_active = round((active_live_accs / total_acc_count) * 100.0, 1)
+    pct_neutral = round((neutral_accs / total_acc_count) * 100.0, 1)
 
     import real_money_trader
     real_st = real_money_trader.load_real_account_state()
@@ -340,10 +342,11 @@ def sync_live_matrix_obsidian(matrix):
 - 📈 **Capital Total Acumulado:** **`${matrix['current_total_usd']:,.2f} USD`**
 - 💰 **Beneficio Neto Acumulado:** **`${matrix['net_pnl_usd']:+,.2f} USD`**
 
-### 📊 ESTADO DESGLOSADO DE LAS 100 CUENTAS (% RESPECTO AL TOTAL):
+### 📊 ESTADO DESGLOSADO DE LAS 100 CUENTAS (SUMA EXACTA 100%):
 - 🟢 **Cuentas Ganadoras (+3% o más):** **`{pct_winning}%`** (`{winning_accs}` de 100 Cuentas)
 - 🔴 **Cuentas en Pérdida (-1.5%):** **`{pct_losing}%`** (`{losing_accs}` de 100 Cuentas)
 - 🔵 **Cuentas Operando en Vivo (En Curso):** **`{pct_active}%`** (`{active_live_accs}` de 100 Cuentas)
+- ⚪ **Cuentas Neutras / En Espera ($100 Exactos):** **`{pct_neutral}%`** (`{neutral_accs}` de 100 Cuentas)
 
 ---
 
