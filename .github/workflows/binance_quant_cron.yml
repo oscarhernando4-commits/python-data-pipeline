@@ -45,14 +45,6 @@ jobs:
         run: |
           python execute_cloud_sell_bnb.py
 
-      - name: 🚀 Execute Live $5 BNB Market Buy Order in Cloud via Static Proxy
-        env:
-          BINANCE_REAL_API_KEY: ${{ secrets.BINANCE_REAL_API_KEY }}
-          BINANCE_REAL_API_SECRET: ${{ secrets.BINANCE_REAL_API_SECRET }}
-          FIXIE_URL: ${{ secrets.FIXIE_URL }}
-        run: |
-          python execute_cloud_real_bnb_buy.py
-
       - name: 🚀 Execute 100-Account Live Matrix & Dynamic Market Rotation
         env:
           BINANCE_TESTNET: "true"

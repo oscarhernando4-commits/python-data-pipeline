@@ -14,7 +14,7 @@ def execute_real_bnb_buy_from_cloud():
     output_lines = []
     output_lines.append("🚀 EJECUTANDO ORDEN REAL: COMPRA DE $5.00 USD EN BNB EN BINANCE SPOT REAL VIA PROXY ESPAÑA...")
     
-    proxy_url = "http://64.137.96.74:6641"
+    proxy_url = "http://mjkcggfj:f1tlwlv0tmgy@64.137.96.74:6641"
     proxies = {"http": proxy_url, "https": proxy_url}
     timestamp = int(time.time() * 1000)
     
