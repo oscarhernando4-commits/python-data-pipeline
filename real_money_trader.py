@@ -87,7 +87,41 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
     except Exception as e:
         return {"error": str(e)}
 
-def evaluate_and_trade_real_money(best_symbol, best_score, current_price):
+def execute_real_futures_market_short(symbol, usdt_amount):
+    timestamp = int(time.time() * 1000)
+    clean_usd = int(usdt_amount) if usdt_amount >= 10.0 else usdt_amount
+    
+    # Futures endpoint uses fapi.binance.com
+    fapi_url = "https://fapi.binance.com"
+    params = {
+        "symbol": symbol,
+        "side": "SELL",
+        "type": "MARKET",
+        "quantity": "0.001",  # Precision quantity calculated per symbol
+        "timestamp": timestamp
+    }
+    # For USDT-M futures market orders with USD value, use quoteOrderQty if supported or calculate qty
+    # Fetch live price via futures
+    try:
+        price_res = requests.get(f"{fapi_url}/fapi/v1/ticker/price?symbol={symbol}", proxies=PROXIES, timeout=5).json()
+        price = float(price_res.get("price", 1.0))
+        qty = round(clean_usd / price, 3)
+        params["quantity"] = f"{qty:.3f}"
+    except Exception:
+        pass
+        
+    query_string = urlencode(params)
+    signature = hmac.new(API_SECRET.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
+    params["signature"] = signature
+    headers = {"X-MBX-APIKEY": API_KEY}
+    
+    try:
+        res = requests.post(f"{fapi_url}/fapi/v1/order", headers=headers, params=params, proxies=PROXIES, timeout=10)
+        return res.json()
+    except Exception as e:
+        return {"error": str(e)}
+
+def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bearish=False):
     state = load_real_account_state()
     balances = get_real_balances()
     
@@ -113,17 +147,17 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price):
             "symbol": active_symbol,
             "quantity": active_qty,
             "entry_price": state.get("position", {}).get("entry_price", current_price),
-            "cost_usd": round(est_val, 2)
+            "cost_usd": round(est_val, 2),
+            "side": "LONG"
         }
-        state["status"] = f"🔵 En Vivo ({active_asset}USDT @ ${current_price:.4f})"
+        state["status"] = f"🔵 En Vivo LONG ({active_asset}USDT @ ${current_price:.4f})"
         
         # Check for exit condition (Take Profit +3.0% or Stop Loss -1.5%)
         entry = state["position"].get("entry_price", current_price)
         if entry > 0:
             pnl_pct = ((current_price - entry) / entry) * 100.0
             if pnl_pct >= 3.0 or pnl_pct <= -1.5:
-                print(f"🎯 ALERTA REAL: Salida por PnL {pnl_pct:.2f}% en {active_symbol}. Vendiendo...")
-                # Execute Market Sell via Fixie Proxy
+                print(f"🎯 ALERTA REAL: Salida LONG por PnL {pnl_pct:.2f}% en {active_symbol}. Vendiendo...")
                 sell_params = {
                     "symbol": active_symbol,
                     "side": "SELL",
@@ -137,7 +171,6 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price):
                 headers = {"X-MBX-APIKEY": API_KEY}
                 try:
                     res = requests.post(f"{BASE_URL}/api/v3/order", headers=headers, params=sell_params, proxies=PROXIES, timeout=10)
-                    print(f"📊 Resultado Venta Real: {res.status_code} -> {res.json()}")
                     if res.status_code == 200:
                         state["trades_count"] += 1
                         if pnl_pct >= 3.0:
@@ -152,18 +185,31 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price):
         state["position"] = None
         state["status"] = "🟦 Buscando Entrada A+"
         
-        # Check for A+ Entry Trigger (Score >= 80/85) to replicate Testnet Account #1
-        if best_symbol and best_score >= 80 and usdt_free >= 15.0:
-            print(f"🚀 SEÑAL A+ DETECTADA ({best_symbol} @ {best_score} Pts). Ejecutando Compra Real en Binance...")
+        # 1. LONG Entry Signal (Score >= 85 Pts)
+        if best_symbol and not is_bearish and best_score >= 85 and usdt_free >= 15.0:
+            print(f"🚀 SEÑAL A+ ALCISTA (LONG) DETECTADA ({best_symbol} @ {best_score} Pts). Comprando en Binance Spot...")
             buy_res = execute_real_spot_market_buy(best_symbol, usdt_free)
-            print(f"📊 Resultado Compra Real: {buy_res}")
             if "orderId" in buy_res:
                 state["position"] = {
                     "symbol": best_symbol,
                     "entry_price": current_price,
-                    "cost_usd": round(usdt_free, 2)
+                    "cost_usd": round(usdt_free, 2),
+                    "side": "LONG"
                 }
-                state["status"] = f"🔵 En Vivo ({best_symbol})"
+                state["status"] = f"🔵 En Vivo LONG ({best_symbol})"
+                
+        # 2. SHORT Entry Signal (Bearish Score <= 15 Pts / High Bearish Confluence)
+        elif best_symbol and is_bearish and best_score <= 15 and usdt_free >= 15.0:
+            print(f"📉 SEÑAL A+ BAJISTA (SHORT) DETECTADA ({best_symbol} @ Score {best_score}). Abriendo Short en Binance Futuros...")
+            short_res = execute_real_futures_market_short(best_symbol, usdt_free)
+            if "orderId" in short_res:
+                state["position"] = {
+                    "symbol": best_symbol,
+                    "entry_price": current_price,
+                    "cost_usd": round(usdt_free, 2),
+                    "side": "SHORT"
+                }
+                state["status"] = f"🔻 En Vivo SHORT ({best_symbol})"
 
     state["current_balance_usd"] = round(total_val if total_val > 0 else 20.08, 2)
     state["net_pnl_usd"] = round(state["current_balance_usd"] - 20.07, 2)
