@@ -10,9 +10,6 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
     Super-Brain AI Decision Reviewer using Google Gemini Flash Free API (gemini-flash-latest).
     Provides sub-second LLM reasoning for high-stakes trades.
     """
-
-# Function alias for universal compatibility across trading engines
-review_trade_decision = consult_gemini_flash_oracle
     if not GEMINI_API_KEY:
         print("💡 Gemini Notice: GEMINI_API_KEY no configurada aún. Usando fallback cuantitativo.")
         return {"approved": True, "confidence": score, "reasoning": "Fallback cuantitativo (Score >= 85 Pts)"}
@@ -91,6 +88,9 @@ review_trade_decision = consult_gemini_flash_oracle
         except Exception as e2:
             print(f"Gemini LLM Notice: {e2}. Usando fallback cuantitativo seguro.")
             return {"approved": True, "confidence": score, "reasoning": f"Fallback cuantitativo (Score >= {score} Pts)"}
+
+# Function alias for universal compatibility across trading engines
+review_trade_decision = consult_gemini_flash_oracle
 
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding='utf-8')
