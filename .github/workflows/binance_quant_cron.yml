@@ -29,6 +29,9 @@ jobs:
           python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install requests numpy pandas ta urllib3; fi
 
+      - name: 🌐 Setup Static IP for 24/7 Cloud Execution
+        uses: gacts/static-ip@v1
+
       - name: 🔑 Verify Real Binance API Connection
         env:
           BINANCE_REAL_API_KEY: ${{ secrets.BINANCE_REAL_API_KEY }}
