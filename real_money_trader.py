@@ -1,6 +1,6 @@
 
-# Static Proxy Configuration for 24/7 Cloud Execution
-PROXY_URL = os.getenv("FIXIE_URL", os.getenv("QUOTAGUARDSTATIC_URL", ""))
+# Static Proxy Configuration for 24/7 Cloud Execution (Spain Proxy Whitelisted)
+PROXY_URL = os.getenv("FIXIE_URL", os.getenv("QUOTAGUARDSTATIC_URL", "http://64.137.96.74:6641"))
 PROXIES = {"http": PROXY_URL, "https": PROXY_URL} if PROXY_URL else None
 import os
 import sys
