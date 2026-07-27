@@ -1,0 +1,20 @@
+{
+  "stats": {
+    "total_trades": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate_pct": 0.0,
+    "total_pnl_usd": 0.0
+  },
+  "learned_rules": {
+    "blocked_patterns": [
+      "High impact news within 30 mins (Block Trade)",
+      "Volume surge < 1.1x average during trend reversals (Block Fakeouts)"
+    ],
+    "boosted_patterns": [
+      "RSI < 30 + MACD Bullish Cross + Volume > 1.5x (High Probability Win)",
+      "4H Macro Trend Alignment with 15M Reversal"
+    ]
+  },
+  "history": []
+}
