@@ -95,10 +95,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price):
     bnb_free = sum([float(b["free"]) for b in balances if b["asset"] == "BNB"])
     
     # Calculate BNB USD value
-    bnb_usd = bnb_free * 576.0 # Approx BNB price
+    bnb_usd = bnb_free * 575.0  # Approx BNB price
     total_val = usdt_free + bnb_usd
     
-    # Check if there is an active non-USDT crypto position on Binance Spot
+    # Check for active non-USDT crypto position on Binance Spot Real
     crypto_balances = [b for b in balances if b["asset"] not in ["USDT", "USDC", "BNB"] and float(b["free"]) > 0]
     
     now_str = datetime.now().strftime("%y-%m-%d<br>%H:%M")
@@ -106,18 +106,66 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price):
     if crypto_balances:
         active_asset = crypto_balances[0]["asset"]
         active_qty = float(crypto_balances[0]["free"])
+        active_symbol = f"{active_asset}USDT"
+        est_val = active_qty * current_price if current_price > 0 else 17.0
+        
         state["position"] = {
-            "symbol": f"{active_asset}USDT",
+            "symbol": active_symbol,
             "quantity": active_qty,
-            "entry_price": current_price,
-            "cost_usd": round(active_qty * current_price, 2)
+            "entry_price": state.get("position", {}).get("entry_price", current_price),
+            "cost_usd": round(est_val, 2)
         }
-        state["status"] = f"🔵 En Vivo ({active_asset}USDT @ ${current_price})"
+        state["status"] = f"🔵 En Vivo ({active_asset}USDT @ ${current_price:.4f})"
+        
+        # Check for exit condition (Take Profit +3.0% or Stop Loss -1.5%)
+        entry = state["position"].get("entry_price", current_price)
+        if entry > 0:
+            pnl_pct = ((current_price - entry) / entry) * 100.0
+            if pnl_pct >= 3.0 or pnl_pct <= -1.5:
+                print(f"🎯 ALERTA REAL: Salida por PnL {pnl_pct:.2f}% en {active_symbol}. Vendiendo...")
+                # Execute Market Sell via Fixie Proxy
+                sell_params = {
+                    "symbol": active_symbol,
+                    "side": "SELL",
+                    "type": "MARKET",
+                    "quantity": f"{active_qty:.3f}",
+                    "timestamp": int(time.time() * 1000)
+                }
+                query_string = urlencode(sell_params)
+                signature = hmac.new(API_SECRET.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
+                sell_params["signature"] = signature
+                headers = {"X-MBX-APIKEY": API_KEY}
+                try:
+                    res = requests.post(f"{BASE_URL}/api/v3/order", headers=headers, params=sell_params, proxies=PROXIES, timeout=10)
+                    print(f"📊 Resultado Venta Real: {res.status_code} -> {res.json()}")
+                    if res.status_code == 200:
+                        state["trades_count"] += 1
+                        if pnl_pct >= 3.0:
+                            state["wins"] += 1
+                        else:
+                            state["losses"] += 1
+                        state["position"] = None
+                        state["status"] = "🟦 Buscando Entrada A+"
+                except Exception as e:
+                    print(f"Error ejecutando venta real: {e}")
     else:
         state["position"] = None
         state["status"] = "🟦 Buscando Entrada A+"
+        
+        # Check for A+ Entry Trigger (Score >= 80/85) to replicate Testnet Account #1
+        if best_symbol and best_score >= 80 and usdt_free >= 15.0:
+            print(f"🚀 SEÑAL A+ DETECTADA ({best_symbol} @ {best_score} Pts). Ejecutando Compra Real en Binance...")
+            buy_res = execute_real_spot_market_buy(best_symbol, usdt_free)
+            print(f"📊 Resultado Compra Real: {buy_res}")
+            if "orderId" in buy_res:
+                state["position"] = {
+                    "symbol": best_symbol,
+                    "entry_price": current_price,
+                    "cost_usd": round(usdt_free, 2)
+                }
+                state["status"] = f"🔵 En Vivo ({best_symbol})"
 
-    state["current_balance_usd"] = round(total_val if total_val > 0 else 20.07, 2)
+    state["current_balance_usd"] = round(total_val if total_val > 0 else 20.08, 2)
     state["net_pnl_usd"] = round(state["current_balance_usd"] - 20.07, 2)
     save_real_account_state(state)
     return state
