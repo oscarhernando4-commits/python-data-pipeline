@@ -190,8 +190,14 @@ def run_infinite_trading_matrix_cycle():
             else:
                 unr_pnl = (curr_price - entry_p) * position["qty"]
                 unr_pct = ((curr_price - entry_p) / entry_p) * 100.0
+                
+                # Trailing Stop: Move SL to Break-Even (+0.2%) once profit reaches +1.5%
+                if unr_pct >= 1.5 and position.get("sl", 0) < entry_p:
+                    position["sl"] = entry_p * 1.002
+                    acc["last_result"] = "🛡️ Protegida (Break-Even)"
+                    
                 acc["last_trade_time"] = position.get("open_time_br", now_br)
-                acc["last_result"] = f"🔵 En Curso"
+                acc["last_result"] = f"🔵 En Curso" if position.get("sl", 0) < entry_p else "🛡️ Protegida (BE)"
                 acc["status"] = f"EN_OPERACION_VIVO ({symbol} {unr_pct:+.1f}%)"
 
         # 2. DYNAMIC MARKET ROTATION: IF NO POSITION -> SELECT THE HIGHEST SCORE PAIR IN THE MARKET!
@@ -204,7 +210,7 @@ def run_infinite_trading_matrix_cycle():
                     selected_symbol = sym
                     best_analysis = data_item
                     
-            if best_analysis and best_analysis["score"] >= 80:
+            if best_analysis and best_analysis["score"] >= 85 and best_analysis["tech"]["indicators"].get("volume_surge_ratio", 1.0) >= 1.8:
                 fundamental_report = fundamental_sentinel.get_crypto_fundamental_sentinel()
                 if fundamental_report.get("macro_risk_level") == "HIGH_RISK":
                     acc["status"] = f"🛑 Riesgo Noticias ({fundamental_report.get('sentiment_label')})"
