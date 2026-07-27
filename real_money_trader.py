@@ -1,7 +1,4 @@
 
-# Static Proxy Configuration for 24/7 Cloud Execution (Spain Proxy Whitelisted)
-PROXY_URL = os.getenv("FIXIE_URL", os.getenv("QUOTAGUARDSTATIC_URL", "http://64.137.96.74:6641"))
-PROXIES = {"http": PROXY_URL, "https": PROXY_URL} if PROXY_URL else None
 import os
 import sys
 import time
@@ -11,6 +8,10 @@ import hashlib
 import requests
 from urllib.parse import urlencode
 from datetime import datetime
+
+# Static Proxy Configuration for 24/7 Cloud Execution (Spain Proxy Whitelisted)
+PROXY_URL = os.getenv("FIXIE_URL", os.getenv("QUOTAGUARDSTATIC_URL", "http://64.137.96.74:6641"))
+PROXIES = {"http": PROXY_URL, "https": PROXY_URL} if PROXY_URL else None
 
 API_KEY = os.getenv("BINANCE_REAL_API_KEY", "2nfL1p3pIXWmPLpBC9d0MtQzOBzlBBKu5xkKQPJ46QxbqxxqbTrC7tW0ltjJJpka")
 API_SECRET = os.getenv("BINANCE_REAL_API_SECRET", "9g2cBC6SgWlgywcJDqxsLELxZnrNV5dYjD5bqxEbjbKEjbZ5qD8f0ldrXfJpbfnN")
