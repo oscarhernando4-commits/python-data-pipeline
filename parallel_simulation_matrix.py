@@ -104,7 +104,9 @@ def run_infinite_trading_matrix_cycle():
     
     symbol_analysis_map = {}
     best_market_opportunity = None
+    best_bearish_opportunity = None
     max_market_score = -1
+    min_market_score = None
 
     for s in TOP_PAIRS:
         try:
@@ -135,15 +137,22 @@ def run_infinite_trading_matrix_cycle():
                 "risk": tech.get("institutional_risk_plan", {})
             }
             
-            if final_score > max_market_score:
+            # Track both Bullish (High Score) and Bearish (Low Score) setups
+            if final_score >= 80 and final_score > max_market_score:
                 max_market_score = final_score
-                best_market_opportunity = (s, symbol_analysis_map[s])
+                best_market_opportunity = (s, symbol_analysis_map[s], "BUY_LONG")
+            elif final_score <= 20 and (min_market_score is None or final_score < min_market_score):
+                min_market_score = final_score
+                best_bearish_opportunity = (s, symbol_analysis_map[s], "SELL_SHORT")
         except Exception as e:
             print(f"Error fetching live data for {s}: {e}")
 
-    # Evaluate Top Candidate with Gemini Flash Latest LLM Sentinel
-    if best_market_opportunity:
-        top_sym, top_data = best_market_opportunity
+    # Select top overall opportunity (Bullish or Bearish)
+    selected_opp = best_market_opportunity if best_market_opportunity else best_bearish_opportunity
+
+    # Evaluate Top Candidate with Gemini Flash / Pro LLM Sentinel
+    if selected_opp:
+        top_sym, top_data, top_side = selected_opp
         try:
             import gemini_sentinel
             gemini_res = gemini_sentinel.review_trade_decision(
@@ -153,7 +162,7 @@ def run_infinite_trading_matrix_cycle():
                 news_data={"headlines": []},
                 fear_greed={"score": 50, "sentiment": "Neutral"}
             )
-            print(f"🧠 [GEMINI-FLASH-LATEST AI CO-PILOT] {top_sym} (Score {top_data['score']} Pts): Approved={gemini_res.get('approved')} | Conf={gemini_res.get('confidence')}% | Razonamiento: {gemini_res.get('reasoning')}")
+            print(f"🧠 [AI CO-PILOT {top_side}] {top_sym} (Score {top_data['score']} Pts): Approved={gemini_res.get('approved')} | Action={gemini_res.get('action')} | Conf={gemini_res.get('confidence')}% | Razonamiento: {gemini_res.get('reasoning')}")
         except Exception as ge:
             print(f"💡 Gemini Sentinel Note: {ge}")
 
