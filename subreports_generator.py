@@ -3,8 +3,16 @@ import json
 from datetime import datetime, timedelta
 
 TRADE_MEMORY_FILE = os.path.join(os.path.dirname(__file__), "trade_memory.json")
-OBSIDIAN_FOLDER = r"C:\Users\hosca\Documents\Antigravity\Obsidian\01_PROYECTOS\BINANCE_QUANT_TRADING\Reportes"
+def _get_obsidian_folder():
+    local_path = r"C:\Users\hosca\Documents\Antigravity\Obsidian\01_PROYECTOS\BINANCE_QUANT_TRADING\Reportes"
+    if os.path.exists(os.path.dirname(local_path)):
+        os.makedirs(local_path, exist_ok=True)
+        return local_path
+    rel_path = os.path.join(os.getcwd(), "Obsidian", "01_PROYECTOS", "BINANCE_QUANT_TRADING", "Reportes")
+    os.makedirs(rel_path, exist_ok=True)
+    return rel_path
 
+OBSIDIAN_FOLDER = _get_obsidian_folder()
 def ensure_obsidian_dir():
     if not os.path.exists(OBSIDIAN_FOLDER):
         os.makedirs(OBSIDIAN_FOLDER, exist_ok=True)

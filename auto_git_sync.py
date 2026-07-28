@@ -18,7 +18,10 @@ def run_git_pull():
         )
         now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         if "Already up to date" not in result.stdout:
-            print(f"[{now_str}] Obsidian Auto-Synced from Cloud: {result.stdout.strip()}")
+            print(f"[{now_str}] Datos Nube Sincronizados: {result.stdout.strip()}")
+            # Regenerate the dashboard locally so it points to the correct external Obsidian vault
+            subprocess.run(["python", "master_dashboard_generator.py"], cwd=REPO_PATH, capture_output=True)
+            print(f"[{now_str}] Obsidian Local Actualizado con los datos de la Nube.")
         else:
             print(f"[{now_str}] Obsidian in sync with Cloud.")
     except Exception as e:
