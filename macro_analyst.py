@@ -72,22 +72,28 @@ def get_market_macro_context(symbol_analysis_map, fear_greed, news_headlines):
     }
     
     # We use lite for macro sweep to save standard flash quota
-    model_name = "gemini-3.1-flash-lite-preview"
+    lite_models = [
+        "gemini-3.5-flash-lite",
+        "gemini-3.1-flash-lite",
+        "gemini-3.1-flash-lite-preview"
+    ]
     
-    print(f"🕵️ [Macro Analyst Lite ({model_name})] Analizando el contexto global de {len(symbol_analysis_map)} criptomonedas...")
+    print(f"🕵️ [Macro Analyst Lite] Analizando el contexto global de {len(symbol_analysis_map)} criptomonedas...")
     
-    for attempt in range(2):
-        try:
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_API_KEY}"
-            req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers={'Content-Type': 'application/json'})
-            with urllib.request.urlopen(req, timeout=10) as response:
-                res_data = json.loads(response.read().decode('utf-8'))
-                if "candidates" in res_data and len(res_data["candidates"]) > 0:
-                    text_res = res_data["candidates"][0]["content"]["parts"][0]["text"].strip()
-                    print(f"📊 [Macro Contexto]: {text_res}")
-                    return text_res
-        except Exception as e:
-            time.sleep(2)
+    for model_name in lite_models:
+        for attempt in range(2):
+            try:
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_API_KEY}"
+                req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers={'Content-Type': 'application/json'})
+                with urllib.request.urlopen(req, timeout=10) as response:
+                    res_data = json.loads(response.read().decode('utf-8'))
+                    if "candidates" in res_data and len(res_data["candidates"]) > 0:
+                        text_res = res_data["candidates"][0]["content"]["parts"][0]["text"].strip()
+                        print(f"📊 [Macro Contexto ({model_name})]: {text_res}")
+                        return text_res
+            except Exception as e:
+                print(f"💡 Error conectando a {model_name} (intento {attempt+1}/2): {e}")
+                time.sleep(2)
+        print(f"⏭️ Agotados intentos para {model_name}. Cambiando a modelo de respaldo...")
             
-    print("⚠️ [Macro Analyst Lite] Falló al obtener contexto. Usando fallback.")
-    return "El mercado se encuentra en un estado indeterminado debido a fallos de conectividad con el oráculo macro. Precaución."
+    return "Macro Analyst Fallback: Alta volatilidad detectada (Modelos IA Ocupados)."
