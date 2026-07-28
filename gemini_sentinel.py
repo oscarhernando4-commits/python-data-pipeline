@@ -89,7 +89,6 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     models_to_try = [
         "gemini-flash-latest",
         "gemini-3.6-flash", 
-        "gemini-3.5-flash", 
         "gemini-2.5-flash"
     ]
     
