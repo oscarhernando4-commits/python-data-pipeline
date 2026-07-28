@@ -67,7 +67,6 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     
     # User Requested Priority Cascade (Strongest → Fallback)
     # Each model gets 2 attempts with 5s wait on rate-limit before moving to next
-    MODEL_CASCADE = [
     payload = {
         "contents": [{"parts": [{"text": prompt_text}]}],
         "generationConfig": {"temperature": 0.2, "responseMimeType": "application/json"}
