@@ -333,7 +333,7 @@ def run_infinite_trading_matrix_cycle():
                     # but to save API limits on 100 accounts, we assume the initial macro/score filtering is the AI.
                     pass 
                 
-                if cached_fundamental_report.get("macro_risk_level") == "HIGH_RISK":
+                if cached_fundamental_report.get("macro_risk_level") == "HIGH_RISK" and g_id != 5:
                     acc["status"] = f"🛑 Riesgo Noticias ({cached_fundamental_report.get('sentiment_label')})"
                 elif ai_approved:
                     try:
