@@ -30,11 +30,6 @@ def get_obsidian_folder():
 
 OBSIDIAN_FOLDER = get_obsidian_folder()
 
-def load_live_matrix():
-    now_date = datetime.now().strftime("%y-%m-%d")
-    now_time = datetime.now().strftime("%H:%M")
-    now_br = f"{now_date}<br>{now_time}"
-    
 def get_group_info(index):
     if index == 0:
         return {"group_id": 0, "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)", "threshold_score": 85, "risk_pct": 1.5, "label": "Ultra-Estricto A+"}
@@ -46,7 +41,7 @@ def get_group_info(index):
         return {"group_id": 3, "group_name": "⚖️ GRUPO 3: Balanceado", "threshold_score": 65, "risk_pct": 2.5, "label": "Balanceado (Score >= 65)"}
     elif 61 <= index <= 80:
         return {"group_id": 4, "group_name": "⚡ GRUPO 4: Frecuencia Alta", "threshold_score": 55, "risk_pct": 3.0, "label": "Frecuencia Alta (Score >= 55)"}
-    else: # 81 <= index <= 99
+    else:
         return {"group_id": 5, "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia", "threshold_score": 45, "risk_pct": 3.5, "label": "Máxima Permisividad (Score >= 45)"}
 
 def load_live_matrix():
@@ -179,8 +174,10 @@ def run_infinite_trading_matrix_cycle():
         except Exception as e:
             print(f"Error fetching live data for {s}: {e}")
 
-    # Select top overall opportunity (Bullish or Bearish)
-    selected_opp = best_market_opportunity if best_market_opportunity else best_bearish_opportunity
+    # Select top overall opportunity by strongest divergence from neutral (50)
+    bull_strength = (max_market_score - 50) if best_market_opportunity else -999
+    bear_strength = (50 - min_market_score) if best_bearish_opportunity and min_market_score is not None else -999
+    selected_opp = best_market_opportunity if bull_strength >= bear_strength else best_bearish_opportunity
 
     # Evaluate Top Candidate with Gemini Flash / Pro LLM Sentinel
     if selected_opp:
@@ -201,6 +198,9 @@ def run_infinite_trading_matrix_cycle():
     total_balance = 0.0
     global_trades = 0
     global_wins = 0
+
+    # Cache fundamental sentinel ONCE per cycle (prevents 100 redundant HTTP calls)
+    cached_fundamental_report = fundamental_sentinel.get_crypto_fundamental_sentinel()
 
     for acc in accounts:
         curr_bal = acc["current_balance"]
@@ -286,9 +286,8 @@ def run_infinite_trading_matrix_cycle():
                     
             acc_thresh = acc.get("threshold_score", 85)
             if best_analysis and best_analysis["score"] >= acc_thresh:
-                fundamental_report = fundamental_sentinel.get_crypto_fundamental_sentinel()
-                if fundamental_report.get("macro_risk_level") == "HIGH_RISK":
-                    acc["status"] = f"🛑 Riesgo Noticias ({fundamental_report.get('sentiment_label')})"
+                if cached_fundamental_report.get("macro_risk_level") == "HIGH_RISK":
+                    acc["status"] = f"🛑 Riesgo Noticias ({cached_fundamental_report.get('sentiment_label')})"
                 else:
                     try:
                         import historical_catalyst_analyzer
@@ -342,7 +341,15 @@ def run_infinite_trading_matrix_cycle():
                 real_money_trader.evaluate_and_trade_real_money(
                     best_symbol=best_market_opportunity[0],
                     best_score=best_market_opportunity[1]["score"],
-                    current_price=best_market_opportunity[1]["price"]
+                    current_price=best_market_opportunity[1]["price"],
+                    is_bearish=False
+                )
+            elif best_bearish_opportunity:
+                real_money_trader.evaluate_and_trade_real_money(
+                    best_symbol=best_bearish_opportunity[0],
+                    best_score=best_bearish_opportunity[1]["score"],
+                    current_price=best_bearish_opportunity[1]["price"],
+                    is_bearish=True
                 )
     except Exception as e_real:
         print(f"Real trader notice: {e_real}")

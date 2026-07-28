@@ -13,12 +13,17 @@
       "current_level": 1,
       "consecutive_losses": 0,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35",
+      "last_trade_time": "26-07-28<br>08:00",
       "position": null,
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)"
+      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "group_id": 0,
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+"
     },
     {
       "account_id": "SIM-001",
@@ -33,9 +38,14 @@
       "goal_reached": false,
       "position": null,
       "last_result": "🟢 Ganó +$2.96",
-      "last_trade_time": "26-07-28<br>07:35",
+      "last_trade_time": "26-07-28<br>08:00",
       "consecutive_losses": 0,
-      "current_level": 2
+      "current_level": 2,
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-002",
@@ -49,7 +59,12 @@
       "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-003",
@@ -60,7 +75,7 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "EN_OPERACION_VIVO (BNBUSDT -0.4%)",
+      "status": "EN_OPERACION_VIVO (BNBUSDT -0.2%)",
       "goal_reached": false,
       "position": {
         "entry_price": 569.82,
@@ -71,7 +86,12 @@
         "open_time": "2026-07-25 17:39:55"
       },
       "last_result": "🔵 En Curso",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-004",
@@ -85,7 +105,12 @@
       "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-005",
@@ -99,7 +124,12 @@
       "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-006",
@@ -113,7 +143,12 @@
       "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-007",
@@ -128,9 +163,14 @@
       "goal_reached": true,
       "position": null,
       "last_result": "🟢 Ganó +$3.09",
-      "last_trade_time": "26-07-28<br>07:35",
+      "last_trade_time": "26-07-28<br>08:00",
       "consecutive_losses": 0,
-      "current_level": 2
+      "current_level": 2,
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-008",
@@ -141,10 +181,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (LINKUSDT 50pts)",
+      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-009",
@@ -158,7 +203,12 @@
       "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-010",
@@ -169,12 +219,17 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (DOTUSDT 50pts)",
+      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
       "goal_reached": false,
       "position": null,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35",
-      "consecutive_losses": 1
+      "last_trade_time": "26-07-28<br>08:00",
+      "consecutive_losses": 1,
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-011",
@@ -188,7 +243,12 @@
       "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-012",
@@ -203,8 +263,13 @@
       "goal_reached": false,
       "position": null,
       "last_result": "🔴 Perdió -$1.48",
-      "last_trade_time": "26-07-28<br>07:35",
-      "consecutive_losses": 1
+      "last_trade_time": "26-07-28<br>08:00",
+      "consecutive_losses": 1,
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-013",
@@ -218,7 +283,12 @@
       "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
       "goal_reached": true,
       "last_result": "🟢 Ganó +$3.00",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-014",
@@ -229,10 +299,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ETCUSDT 50pts)",
+      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-015",
@@ -243,10 +318,15 @@
       "trades_count": 1,
       "wins": 1,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (FILUSDT 50pts)",
+      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
       "goal_reached": true,
       "last_result": "🟢 Ganó +$3.00",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-016",
@@ -260,7 +340,12 @@
       "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
       "goal_reached": true,
       "last_result": "🟢 Ganó +$3.00",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-017",
@@ -275,8 +360,13 @@
       "goal_reached": false,
       "position": null,
       "last_result": "🔴 Perdió -$1.48",
-      "last_trade_time": "26-07-28<br>07:35",
-      "consecutive_losses": 1
+      "last_trade_time": "26-07-28<br>08:00",
+      "consecutive_losses": 1,
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-018",
@@ -287,10 +377,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ARBUSDT 50pts)",
+      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-019",
@@ -304,7 +399,12 @@
       "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-020",
@@ -318,7 +418,12 @@
       "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 1,
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "threshold_score": 85,
+      "risk_pct": 1.5,
+      "permissiveness_label": "Ultra-Estricto A+ (Score >= 85)"
     },
     {
       "account_id": "SIM-021",
@@ -329,13 +434,18 @@
       "trades_count": 2,
       "wins": 1,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "position": null,
       "last_result": "🟢 Ganó +$2.96",
-      "last_trade_time": "26-07-28<br>07:35",
+      "last_trade_time": "26-07-28<br>08:00",
       "consecutive_losses": 0,
-      "current_level": 2
+      "current_level": 2,
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-022",
@@ -346,10 +456,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-023",
@@ -360,7 +475,7 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "EN_OPERACION_VIVO (BNBUSDT -0.4%)",
+      "status": "EN_OPERACION_VIVO (BNBUSDT -0.2%)",
       "goal_reached": false,
       "position": {
         "entry_price": 569.82,
@@ -371,7 +486,12 @@
         "open_time": "2026-07-25 17:39:55"
       },
       "last_result": "🔵 En Curso",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-024",
@@ -382,10 +502,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-025",
@@ -396,10 +521,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-026",
@@ -410,10 +540,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-027",
@@ -424,13 +559,18 @@
       "trades_count": 2,
       "wins": 2,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": true,
       "position": null,
       "last_result": "🟢 Ganó +$3.09",
-      "last_trade_time": "26-07-28<br>07:35",
+      "last_trade_time": "26-07-28<br>08:00",
       "consecutive_losses": 0,
-      "current_level": 2
+      "current_level": 2,
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-028",
@@ -441,10 +581,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (LINKUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-029",
@@ -455,10 +600,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-030",
@@ -469,12 +619,17 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (DOTUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "position": null,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35",
-      "consecutive_losses": 1
+      "last_trade_time": "26-07-28<br>08:00",
+      "consecutive_losses": 1,
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-031",
@@ -485,10 +640,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-032",
@@ -499,12 +659,17 @@
       "trades_count": 2,
       "wins": 0,
       "losses": 2,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "position": null,
       "last_result": "🔴 Perdió -$1.48",
-      "last_trade_time": "26-07-28<br>07:35",
-      "consecutive_losses": 1
+      "last_trade_time": "26-07-28<br>08:00",
+      "consecutive_losses": 1,
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-033",
@@ -515,10 +680,15 @@
       "trades_count": 1,
       "wins": 1,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": true,
       "last_result": "🟢 Ganó +$3.00",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-034",
@@ -529,10 +699,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ETCUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-035",
@@ -543,10 +718,15 @@
       "trades_count": 1,
       "wins": 1,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (FILUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": true,
       "last_result": "🟢 Ganó +$3.00",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-036",
@@ -557,10 +737,15 @@
       "trades_count": 1,
       "wins": 1,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": true,
       "last_result": "🟢 Ganó +$3.00",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-037",
@@ -571,12 +756,17 @@
       "trades_count": 2,
       "wins": 0,
       "losses": 2,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "position": null,
       "last_result": "🔴 Perdió -$1.48",
-      "last_trade_time": "26-07-28<br>07:35",
-      "consecutive_losses": 1
+      "last_trade_time": "26-07-28<br>08:00",
+      "consecutive_losses": 1,
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-038",
@@ -587,10 +777,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ARBUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-039",
@@ -601,10 +796,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-040",
@@ -615,10 +815,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "threshold_score": 75,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 75)"
     },
     {
       "account_id": "SIM-041",
@@ -629,13 +834,18 @@
       "trades_count": 2,
       "wins": 1,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "position": null,
       "last_result": "🟢 Ganó +$2.96",
-      "last_trade_time": "26-07-28<br>07:35",
+      "last_trade_time": "26-07-28<br>08:00",
       "consecutive_losses": 0,
-      "current_level": 2
+      "current_level": 2,
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-042",
@@ -646,10 +856,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-043",
@@ -660,7 +875,7 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "EN_OPERACION_VIVO (BNBUSDT -0.4%)",
+      "status": "EN_OPERACION_VIVO (BNBUSDT -0.2%)",
       "goal_reached": false,
       "position": {
         "entry_price": 569.82,
@@ -671,7 +886,12 @@
         "open_time": "2026-07-25 17:39:55"
       },
       "last_result": "🔵 En Curso",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-044",
@@ -682,10 +902,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-045",
@@ -696,10 +921,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-046",
@@ -710,10 +940,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-047",
@@ -724,13 +959,18 @@
       "trades_count": 2,
       "wins": 2,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": true,
       "position": null,
       "last_result": "🟢 Ganó +$3.09",
-      "last_trade_time": "26-07-28<br>07:35",
+      "last_trade_time": "26-07-28<br>08:00",
       "consecutive_losses": 0,
-      "current_level": 2
+      "current_level": 2,
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-048",
@@ -741,10 +981,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (LINKUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-049",
@@ -755,10 +1000,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-050",
@@ -769,12 +1019,17 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (DOTUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "position": null,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35",
-      "consecutive_losses": 1
+      "last_trade_time": "26-07-28<br>08:00",
+      "consecutive_losses": 1,
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-051",
@@ -785,10 +1040,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-052",
@@ -799,12 +1059,17 @@
       "trades_count": 2,
       "wins": 0,
       "losses": 2,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "position": null,
       "last_result": "🔴 Perdió -$1.48",
-      "last_trade_time": "26-07-28<br>07:35",
-      "consecutive_losses": 1
+      "last_trade_time": "26-07-28<br>08:00",
+      "consecutive_losses": 1,
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-053",
@@ -815,10 +1080,15 @@
       "trades_count": 1,
       "wins": 1,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": true,
       "last_result": "🟢 Ganó +$3.00",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-054",
@@ -829,10 +1099,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ETCUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-055",
@@ -843,10 +1118,15 @@
       "trades_count": 1,
       "wins": 1,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (FILUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": true,
       "last_result": "🟢 Ganó +$3.00",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-056",
@@ -857,10 +1137,15 @@
       "trades_count": 1,
       "wins": 1,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": true,
       "last_result": "🟢 Ganó +$3.00",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-057",
@@ -871,12 +1156,17 @@
       "trades_count": 2,
       "wins": 0,
       "losses": 2,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "position": null,
       "last_result": "🔴 Perdió -$1.48",
-      "last_trade_time": "26-07-28<br>07:35",
-      "consecutive_losses": 1
+      "last_trade_time": "26-07-28<br>08:00",
+      "consecutive_losses": 1,
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-058",
@@ -887,10 +1177,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ARBUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-059",
@@ -901,10 +1196,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-060",
@@ -915,10 +1215,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "threshold_score": 65,
+      "risk_pct": 2.5,
+      "permissiveness_label": "Balanceado (Score >= 65)"
     },
     {
       "account_id": "SIM-061",
@@ -929,13 +1234,18 @@
       "trades_count": 2,
       "wins": 1,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "position": null,
       "last_result": "🟢 Ganó +$2.96",
-      "last_trade_time": "26-07-28<br>07:35",
+      "last_trade_time": "26-07-28<br>08:00",
       "consecutive_losses": 0,
-      "current_level": 2
+      "current_level": 2,
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-062",
@@ -946,10 +1256,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-063",
@@ -960,7 +1275,7 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "EN_OPERACION_VIVO (BNBUSDT -0.4%)",
+      "status": "EN_OPERACION_VIVO (BNBUSDT -0.2%)",
       "goal_reached": false,
       "position": {
         "entry_price": 569.82,
@@ -971,7 +1286,12 @@
         "open_time": "2026-07-25 17:39:55"
       },
       "last_result": "🔵 En Curso",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-064",
@@ -982,10 +1302,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-065",
@@ -996,10 +1321,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-066",
@@ -1010,10 +1340,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-067",
@@ -1024,13 +1359,18 @@
       "trades_count": 2,
       "wins": 2,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": true,
       "position": null,
       "last_result": "🟢 Ganó +$3.09",
-      "last_trade_time": "26-07-28<br>07:35",
+      "last_trade_time": "26-07-28<br>08:00",
       "consecutive_losses": 0,
-      "current_level": 2
+      "current_level": 2,
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-068",
@@ -1041,10 +1381,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (LINKUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-069",
@@ -1055,10 +1400,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-070",
@@ -1069,12 +1419,17 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (DOTUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "position": null,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35",
-      "consecutive_losses": 1
+      "last_trade_time": "26-07-28<br>08:00",
+      "consecutive_losses": 1,
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-071",
@@ -1085,10 +1440,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-072",
@@ -1099,12 +1459,17 @@
       "trades_count": 2,
       "wins": 0,
       "losses": 2,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "position": null,
       "last_result": "🔴 Perdió -$1.48",
-      "last_trade_time": "26-07-28<br>07:35",
-      "consecutive_losses": 1
+      "last_trade_time": "26-07-28<br>08:00",
+      "consecutive_losses": 1,
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-073",
@@ -1115,10 +1480,15 @@
       "trades_count": 1,
       "wins": 1,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": true,
       "last_result": "🟢 Ganó +$3.00",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-074",
@@ -1129,10 +1499,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ETCUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-075",
@@ -1143,10 +1518,15 @@
       "trades_count": 1,
       "wins": 1,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (FILUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": true,
       "last_result": "🟢 Ganó +$3.00",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-076",
@@ -1157,10 +1537,15 @@
       "trades_count": 1,
       "wins": 1,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": true,
       "last_result": "🟢 Ganó +$3.00",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-077",
@@ -1171,12 +1556,17 @@
       "trades_count": 2,
       "wins": 0,
       "losses": 2,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "position": null,
       "last_result": "🔴 Perdió -$1.48",
-      "last_trade_time": "26-07-28<br>07:35",
-      "consecutive_losses": 1
+      "last_trade_time": "26-07-28<br>08:00",
+      "consecutive_losses": 1,
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-078",
@@ -1187,10 +1577,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ARBUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-079",
@@ -1201,10 +1596,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-080",
@@ -1215,10 +1615,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 4,
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "threshold_score": 55,
+      "risk_pct": 3.0,
+      "permissiveness_label": "Frecuencia Alta (Score >= 55)"
     },
     {
       "account_id": "SIM-081",
@@ -1229,13 +1634,18 @@
       "trades_count": 2,
       "wins": 1,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "position": null,
       "last_result": "🟢 Ganó +$2.96",
-      "last_trade_time": "26-07-28<br>07:35",
+      "last_trade_time": "26-07-28<br>08:00",
       "consecutive_losses": 0,
-      "current_level": 2
+      "current_level": 2,
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     },
     {
       "account_id": "SIM-082",
@@ -1246,10 +1656,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     },
     {
       "account_id": "SIM-083",
@@ -1260,7 +1675,7 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "EN_OPERACION_VIVO (BNBUSDT -0.4%)",
+      "status": "EN_OPERACION_VIVO (BNBUSDT -0.2%)",
       "goal_reached": false,
       "position": {
         "entry_price": 569.82,
@@ -1271,7 +1686,12 @@
         "open_time": "2026-07-25 17:39:55"
       },
       "last_result": "🔵 En Curso",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     },
     {
       "account_id": "SIM-084",
@@ -1282,10 +1702,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     },
     {
       "account_id": "SIM-085",
@@ -1296,10 +1721,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     },
     {
       "account_id": "SIM-086",
@@ -1310,10 +1740,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     },
     {
       "account_id": "SIM-087",
@@ -1324,13 +1759,18 @@
       "trades_count": 2,
       "wins": 2,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": true,
       "position": null,
       "last_result": "🟢 Ganó +$3.09",
-      "last_trade_time": "26-07-28<br>07:35",
+      "last_trade_time": "26-07-28<br>08:00",
       "consecutive_losses": 0,
-      "current_level": 2
+      "current_level": 2,
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     },
     {
       "account_id": "SIM-088",
@@ -1341,10 +1781,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (LINKUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     },
     {
       "account_id": "SIM-089",
@@ -1355,10 +1800,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     },
     {
       "account_id": "SIM-090",
@@ -1369,12 +1819,17 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (DOTUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "position": null,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35",
-      "consecutive_losses": 1
+      "last_trade_time": "26-07-28<br>08:00",
+      "consecutive_losses": 1,
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     },
     {
       "account_id": "SIM-091",
@@ -1385,10 +1840,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     },
     {
       "account_id": "SIM-092",
@@ -1399,12 +1859,17 @@
       "trades_count": 2,
       "wins": 0,
       "losses": 2,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "position": null,
       "last_result": "🔴 Perdió -$1.48",
-      "last_trade_time": "26-07-28<br>07:35",
-      "consecutive_losses": 1
+      "last_trade_time": "26-07-28<br>08:00",
+      "consecutive_losses": 1,
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     },
     {
       "account_id": "SIM-093",
@@ -1415,10 +1880,15 @@
       "trades_count": 1,
       "wins": 1,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": true,
       "last_result": "🟢 Ganó +$3.00",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     },
     {
       "account_id": "SIM-094",
@@ -1429,10 +1899,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ETCUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     },
     {
       "account_id": "SIM-095",
@@ -1443,10 +1918,15 @@
       "trades_count": 1,
       "wins": 1,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (FILUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": true,
       "last_result": "🟢 Ganó +$3.00",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     },
     {
       "account_id": "SIM-096",
@@ -1457,10 +1937,15 @@
       "trades_count": 1,
       "wins": 1,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": true,
       "last_result": "🟢 Ganó +$3.00",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     },
     {
       "account_id": "SIM-097",
@@ -1471,12 +1956,17 @@
       "trades_count": 2,
       "wins": 0,
       "losses": 2,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "position": null,
       "last_result": "🔴 Perdió -$1.48",
-      "last_trade_time": "26-07-28<br>07:35",
-      "consecutive_losses": 1
+      "last_trade_time": "26-07-28<br>08:00",
+      "consecutive_losses": 1,
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     },
     {
       "account_id": "SIM-098",
@@ -1487,10 +1977,15 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (ARBUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "Esperando Entrada",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     },
     {
       "account_id": "SIM-099",
@@ -1501,10 +1996,15 @@
       "trades_count": 1,
       "wins": 0,
       "losses": 1,
-      "status": "BUSCANDO_OPORTUNIDAD (ADAUSDT 50pts)",
+      "status": "🛑 Riesgo Noticias (Fear)",
       "goal_reached": false,
       "last_result": "🔴 Perdió -$1.50",
-      "last_trade_time": "26-07-28<br>07:35"
+      "last_trade_time": "26-07-28<br>08:00",
+      "group_id": 5,
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "threshold_score": 45,
+      "risk_pct": 3.5,
+      "permissiveness_label": "Máxima Permisividad (Score >= 45)"
     }
   ]
 }

@@ -13,8 +13,8 @@ from datetime import datetime
 PROXY_URL = os.getenv("FIXIE_URL", "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80")
 PROXIES = {"http": PROXY_URL, "https": PROXY_URL} if PROXY_URL else None
 
-API_KEY = os.getenv("BINANCE_REAL_API_KEY", "2nfL1p3pIXWmPLpBC9d0MtQzOBzlBBKu5xkKQPJ46QxbqxxqbTrC7tW0ltjJJpka")
-API_SECRET = os.getenv("BINANCE_REAL_API_SECRET", "9g2cBC6SgWlgywcJDqxsLELxZnrNV5dYjD5bqxEbjbKEjbZ5qD8f0ldrXfJpbfnN")
+API_KEY = os.getenv("BINANCE_REAL_API_KEY", "")
+API_SECRET = os.getenv("BINANCE_REAL_API_SECRET", "")
 BASE_URL = "https://api.binance.com"
 
 REAL_STATE_FILE = os.path.join(os.path.dirname(__file__), "real_money_account.json")
@@ -53,8 +53,8 @@ def get_real_balances():
     
     url = f"{BASE_URL}/api/v3/account"
     try:
-        # Route balance check directly (or over proxy if needed) to conserve Fixie requests
-        res = requests.get(url, headers=headers, params=params, timeout=10)
+        # Use Fixie proxy for geo-block bypass on GitHub Actions (US IPs blocked by Binance)
+        res = requests.get(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
         if res.status_code == 200:
             return res.json().get("balances", [])
         return []

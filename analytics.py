@@ -180,44 +180,6 @@ def analyze_institutional_grade(symbol='BTCUSDT', account_balance=10000.0, risk_
         score -= 15
         reasons.append("⚠️ BTC Trend Alignment Shield: Bitcoin in micro-downtrend (-15 Pts)")
 
-    # Dynamic Threshold Based on Volatility Profile (85 Pts for High-Volatility Meme/Small-Cap Altcoins)
-    high_volatility_symbols = ["DOGEUSDT", "SHIBUSDT", "PEPEUSDT", "FLOKIUSDT", "WIFUSDT", "BONKUSDT"]
-    required_threshold = 85 if symbol.upper() in high_volatility_symbols else 80
-
-    # High-Probability Execution Thresholds
-    if score >= required_threshold:
-        recommendation = f"HIGH CONFLUENCE BUY 🚀 (A+ Setup >= {required_threshold} Pts)"
-        action = "BUY"
-    elif score <= 20:
-        recommendation = "HIGH CONFLUENCE SELL 🔻 (A+ Setup)"
-        action = "SELL"
-    else:
-        recommendation = f"NO TRADE ⏸️ (Wait for A+ Confluence Setup >= {required_threshold} Pts)"
-        action = "HOLD"
-        
-    # Risk Management & Break-Even Strategy
-    risk_usd = account_balance * (risk_percentage / 100.0)
-    sl_distance = max(atr_15m * 1.5, current_price * 0.008)
-    
-    if action == "BUY":
-        stop_loss = current_price - sl_distance
-        break_even_trigger = current_price + (sl_distance * 1.0) # Move SL to Entry at +1R
-        take_profit_1 = current_price + (sl_distance * 2.0)     # 1:2 R:R
-        take_profit_2 = current_price + (sl_distance * 3.5)     # 1:3.5 R:R
-    elif action == "SELL":
-        stop_loss = current_price + sl_distance
-        break_even_trigger = current_price - (sl_distance * 1.0)
-        take_profit_1 = current_price - (sl_distance * 2.0)
-        take_profit_2 = current_price - (sl_distance * 3.5)
-    else:
-        stop_loss = current_price * 0.99
-        break_even_trigger = current_price
-        take_profit_1 = current_price * 1.02
-        take_profit_2 = current_price * 1.035
-        
-    per_unit_risk = abs(current_price - stop_loss)
-    units = (risk_usd / per_unit_risk) if per_unit_risk > 0 else 0
-    
     # 7. TAKASHI KOTEGAWA (BNF) ASSET-SPECIFIC MA DEVIATION SIGNALS
     ema_25 = sum(closes_15m[-25:]) / 25 if len(closes_15m) >= 25 else ema20_15m
     ma_dev_pct = ((current_price - ema_25) / ema_25) * 100.0
@@ -232,15 +194,57 @@ def analyze_institutional_grade(symbol='BTCUSDT', account_balance=10000.0, risk_
     bnf_yakubari_signal = ma_dev_pct <= dev_threshold and rsi_15m < 38
     if bnf_yakubari_signal:
         score += 15
+        reasons.append(f"\u2694\ufe0f BNF Yakubari Extreme Oversold Bounce ({ma_dev_pct:.1f}% dev) (+15 Pts)")
         
     # BNF Shunbari Trend Continuation Pullback Signal (+10 Pts)
     ema_50 = calc_ema(closes_15m, 50)[-1]
     bnf_shunbari_signal = (abs(ma_dev_pct) <= 0.8) and (ema20_15m > ema_50) and rsi_15m >= 50
     if bnf_shunbari_signal:
         score += 10
+        reasons.append("\u26a1 BNF Shunbari Trend Continuation Pullback (+10 Pts)")
         
     score = min(max(score, 0), 100)
+
+    # Dynamic Threshold Based on Volatility Profile (85 Pts for High-Volatility Meme/Small-Cap Altcoins)
+    high_volatility_symbols = ["DOGEUSDT", "SHIBUSDT", "PEPEUSDT", "FLOKIUSDT", "WIFUSDT", "BONKUSDT"]
+    required_threshold = 85 if symbol.upper() in high_volatility_symbols else 80
+
+    # High-Probability Execution Thresholds (calculated AFTER all scoring including BNF)
+    if score >= required_threshold:
+        recommendation = f"HIGH CONFLUENCE BUY \ud83d\ude80 (A+ Setup >= {required_threshold} Pts)"
+        action = "BUY"
+    elif score <= 20:
+        recommendation = "HIGH CONFLUENCE SELL \ud83d\udd3b (A+ Setup)"
+        action = "SELL"
+    else:
+        recommendation = f"NO TRADE \u23f8\ufe0f (Wait for A+ Confluence Setup >= {required_threshold} Pts)"
+        action = "HOLD"
     
+    # Risk Management & Break-Even Strategy
+    risk_usd = account_balance * (risk_percentage / 100.0)
+    sl_distance = max(atr_15m * 1.5, current_price * 0.008)
+    
+    if action == "BUY":
+        stop_loss = current_price - sl_distance
+        break_even_trigger = current_price + (sl_distance * 1.0)
+        take_profit_1 = current_price + (sl_distance * 2.0)
+        take_profit_2 = current_price + (sl_distance * 3.5)
+    elif action == "SELL":
+        stop_loss = current_price + sl_distance
+        break_even_trigger = current_price - (sl_distance * 1.0)
+        take_profit_1 = current_price - (sl_distance * 2.0)
+        take_profit_2 = current_price - (sl_distance * 3.5)
+    else:
+        stop_loss = current_price * 0.99
+        break_even_trigger = current_price
+        take_profit_1 = current_price * 1.02
+        take_profit_2 = current_price * 1.035
+        
+    per_unit_risk = abs(current_price - stop_loss)
+    units = (risk_usd / per_unit_risk) if per_unit_risk > 0 else 0
+
+    volume_surge_ratio = round(curr_vol / avg_vol_15m, 2) if avg_vol_15m > 0 else 1.0
+
     return {
         "symbol": symbol.upper(),
         "current_price": current_price,
@@ -252,7 +256,8 @@ def analyze_institutional_grade(symbol='BTCUSDT', account_balance=10000.0, risk_
             "rsi_15m": round(rsi_15m, 2),
             "macd_hist_15m": round(macd_hist_15m, 4),
             "atr_15m": round(atr_15m, 4),
-            "volume_surge": volume_surge
+            "volume_surge": volume_surge,
+            "volume_surge_ratio": volume_surge_ratio
         },
         "institutional_risk_plan": {
             "account_balance": account_balance,

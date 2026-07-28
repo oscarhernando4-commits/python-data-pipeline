@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import time
 import urllib.request
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
@@ -19,7 +20,10 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
     pattern_summary = time_series_memory.get_multi_cycle_pattern_summary(symbol)
     extreme_context = extreme_events_memory.get_symbol_extreme_context(symbol)
 
-    print(f"🧠 Consultando al Súper-Cerebro Gemini Flash (gemini-flash-latest) para {symbol} (Score: {score} Pts)...")
+    indicators = tech_data.get('indicators', {})
+    risk_plan = tech_data.get('institutional_risk_plan', {})
+    
+    print(f"🧠 Consultando al Súper-Cerebro Gemini AI para {symbol} (Score: {score} Pts, RSI: {indicators.get('rsi_15m', 'N/A')})...")
     
     prompt_text = f"""
     Eres un Trader Cuantitativo Institucional Senior y Experto en Aprendizaje de Patrones Históricos Extremos / Rastro de Ballenas.
@@ -33,9 +37,12 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
 
     EVALÚA LOS SIGUIENTES DATOS EN TIEMPO REAL:
     - Puntaje Técnico Cuantitativo Actual: {score} / 100 Pts
-    - Indicadores 15M/5M: RSI={tech_data.get('rsi')}, MACD={tech_data.get('macd')}, Volume Surge={tech_data.get('volume_surge')}x
-    - Tendencia EMA20 vs EMA200: {tech_data.get('ema_trend')}
-    - Estructura Wyckoff: {tech_data.get('wyckoff')}
+    - RSI 15M: {indicators.get('rsi_15m', 'N/A')}
+    - MACD Histograma 15M: {indicators.get('macd_hist_15m', 'N/A')}
+    - ATR 15M: {indicators.get('atr_15m', 'N/A')}
+    - Volume Surge: {indicators.get('volume_surge', 'N/A')}
+    - Volume Surge Ratio: {indicators.get('volume_surge_ratio', 'N/A')}x
+    - Tendencia Macro 4H: {tech_data.get('macro_trend_4h', 'N/A')}
     - Rastreador de Ballenas / Dominancia Compradora: {tech_data.get('whale_flow', 'Dominancia Compradora 68% vs 32% Vendedora')}
     - Sentimiento del Mercado (Fear & Greed): {fear_greed.get('score')} ({fear_greed.get('sentiment')})
     - Noticias al Minuto (CoinTelegraph/CryptoPanic): {json.dumps(news_data.get('headlines', [])[:4])}
@@ -87,6 +94,7 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
                 return parsed
         except Exception as e:
             print(f"💡 Aviso ({model_name}): {e}. Probando siguiente modelo en la cascada de prioridad...")
+            time.sleep(1)  # Prevent instant rate-limit cascade on Google API
             
     print("Gemini LLM Notice: Todos los modelos de IA ocupados. Usando fallback cuantitativo seguro.")
     return {"approved": True, "confidence": score, "reasoning": f"Fallback cuantitativo seguro (Score >= {score} Pts)"}

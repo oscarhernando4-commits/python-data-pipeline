@@ -2,8 +2,18 @@ import os
 import json
 from datetime import datetime
 
-DATA_FILE = r"c:\Users\hosca\Documents\Antigravity\BINANCE\trade_memory.json"
-OBSIDIAN_FOLDER = r"C:\Users\hosca\Documents\Antigravity\Obsidian\01_PROYECTOS\BINANCE_QUANT_TRADING"
+DATA_FILE = os.path.join(os.path.dirname(__file__), "trade_memory.json")
+
+def _get_obsidian_folder():
+    local_path = r"C:\Users\hosca\Documents\Antigravity\Obsidian\01_PROYECTOS\BINANCE_QUANT_TRADING"
+    if os.path.exists(os.path.dirname(local_path)):
+        os.makedirs(local_path, exist_ok=True)
+        return local_path
+    rel_path = os.path.join(os.getcwd(), "Obsidian", "01_PROYECTOS", "BINANCE_QUANT_TRADING")
+    os.makedirs(rel_path, exist_ok=True)
+    return rel_path
+
+OBSIDIAN_FOLDER = _get_obsidian_folder()
 
 def load_memory():
     if not os.path.exists(DATA_FILE):
