@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-07-28 22:07:25
+date: 2026-07-28 22:12:20
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-07-28 22:07:25`  
+> **Última Actualización:** `2026-07-28 22:12:20`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -54,7 +54,7 @@ date: 2026-07-28 22:07:25
 
 | Criptomoneda | Balance Actual | Ganancia | Estado |
 | :--- | :--- | :--- | :--- |
-| **BTCUSDT** | `$100.00 USD` | `$+0.00 USD` | 🔵 En Operación |
+| **LTCUSDT** | `$100.00 USD` | `$+0.00 USD` | 🔵 En Operación |
 | **ETHUSDT** | `$100.00 USD` | `$+0.00 USD` | 🔵 En Operación |
 | **SOLUSDT** | `$100.00 USD` | `$+0.00 USD` | 🔵 En Operación |
 | **BNBUSDT** | `$100.00 USD` | `$+0.00 USD` | 🔵 En Operación |

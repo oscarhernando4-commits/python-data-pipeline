@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-07-28 22:07:25
+date: 2026-07-28 22:12:20
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-07-28 22:07:25`
+> ⏱️ **Última Actualización:** `2026-07-28 22:12:20`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -33,8 +33,8 @@ date: 2026-07-28 22:07:25
 > - 📈 **Capital Total Acumulado:** **`$10,000.00 USD`** (`$+0.00 USD`)  
 > - 🟢 **Cuentas Ganadoras (+3% Meta Cumplida):** `0 Cuentas (0.0%)`  
 > - 🔴 **Cuentas en Pérdida (-1.5% Stop Loss):** `0 Cuentas (0.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `19 Cuentas (19.0%)`  
-> - ⚪ **Cuentas Neutras / En Espera:** `81 Cuentas (81.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `40 Cuentas (40.0%)`  
+> - ⚪ **Cuentas Neutras / En Espera:** `60 Cuentas (60.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
 
@@ -45,7 +45,7 @@ date: 2026-07-28 22:07:25
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-000 (Réplica Real)** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
+| **SIM-000 (Réplica Real)** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
 
 ---
 
@@ -58,26 +58,26 @@ date: 2026-07-28 22:07:25
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-001** | **ETHUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-002** | **SOLUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-003** | **BNBUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-004** | **ADAUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-005** | **XRPUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-006** | **DOGEUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-007** | **NEARUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-008** | **LINKUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-009** | **AVAXUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-010** | **DOTUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-011** | **UNIUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-012** | **ATOMUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-013** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-014** | **ETCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-015** | **FILUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-016** | **APTUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-017** | **TRXUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-018** | **ARBUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-019** | **OPUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-020** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-001** | **ETHUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-002** | **SOLUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-003** | **BNBUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-004** | **ADAUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-005** | **XRPUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-006** | **DOGEUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-007** | **NEARUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-008** | **LINKUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-009** | **AVAXUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-010** | **DOTUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-011** | **UNIUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-012** | **ATOMUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-013** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-014** | **ETCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-015** | **FILUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-016** | **APTUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-017** | **TRXUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-018** | **ARBUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-019** | **OPUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-020** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
 
 ---
 
@@ -90,26 +90,26 @@ date: 2026-07-28 22:07:25
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-021** | **ETHUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-022** | **SOLUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-023** | **BNBUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-024** | **ADAUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-025** | **XRPUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-026** | **DOGEUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-027** | **NEARUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-028** | **LINKUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-029** | **AVAXUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-030** | **DOTUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-031** | **UNIUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-032** | **ATOMUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-033** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-034** | **ETCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-035** | **FILUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-036** | **APTUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-037** | **TRXUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-038** | **ARBUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-039** | **OPUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-040** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-021** | **ETHUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-022** | **SOLUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-023** | **BNBUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-024** | **ADAUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-025** | **XRPUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-026** | **DOGEUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-027** | **NEARUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-028** | **LINKUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-029** | **AVAXUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-030** | **DOTUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-031** | **UNIUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-032** | **ATOMUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-033** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-034** | **ETCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-035** | **FILUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-036** | **APTUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-037** | **TRXUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-038** | **ARBUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-039** | **OPUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-040** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
 
 ---
 
@@ -122,26 +122,26 @@ date: 2026-07-28 22:07:25
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-041** | **ETHUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-042** | **SOLUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-043** | **BNBUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-044** | **ADAUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-045** | **XRPUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-046** | **DOGEUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-047** | **NEARUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-048** | **LINKUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-049** | **AVAXUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-050** | **DOTUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-051** | **UNIUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-052** | **ATOMUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-053** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-054** | **ETCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-055** | **FILUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-056** | **APTUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-057** | **TRXUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-058** | **ARBUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-059** | **OPUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
-| **SIM-060** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-041** | **ETHUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-042** | **SOLUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-043** | **BNBUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-044** | **ADAUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-045** | **XRPUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-046** | **DOGEUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-047** | **NEARUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-048** | **LINKUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-049** | **AVAXUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-050** | **DOTUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-051** | **UNIUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-052** | **ATOMUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-053** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-054** | **ETCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-055** | **FILUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-056** | **APTUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-057** | **TRXUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-058** | **ARBUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-059** | **OPUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
+| **SIM-060** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🟦 Buscando |
 
 ---
 
@@ -154,26 +154,26 @@ date: 2026-07-28 22:07:25
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-061** | **ETHUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-062** | **SOLUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-063** | **BNBUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-064** | **ADAUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-065** | **XRPUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-066** | **DOGEUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-067** | **NEARUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-068** | **LINKUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-069** | **AVAXUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-070** | **DOTUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-071** | **UNIUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-072** | **ATOMUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-073** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-074** | **ETCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-075** | **FILUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-076** | **APTUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-077** | **TRXUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-078** | **ARBUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-079** | **OPUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
-| **SIM-080** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `Esperando Entrada` | **`$100.00`** (`+$0.00`) | 🛑 Pausado |
+| **SIM-061** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-062** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-063** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-064** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-065** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-066** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-067** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-068** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-069** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-070** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-071** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-072** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-073** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-074** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-075** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-076** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-077** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-078** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-079** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-080** | **LTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
 
 ---
 
@@ -186,25 +186,25 @@ date: 2026-07-28 22:07:25
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-081** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
-| **SIM-082** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
-| **SIM-083** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
-| **SIM-084** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
-| **SIM-085** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
-| **SIM-086** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
-| **SIM-087** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
-| **SIM-088** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
-| **SIM-089** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
-| **SIM-090** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
-| **SIM-091** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
-| **SIM-092** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
-| **SIM-093** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
-| **SIM-094** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
-| **SIM-095** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
-| **SIM-096** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
-| **SIM-097** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
-| **SIM-098** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
-| **SIM-099** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:07 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-081** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-082** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-083** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-084** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-085** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-086** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-087** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-088** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-089** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-090** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-091** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-092** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-093** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-094** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-095** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-096** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-097** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-098** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
+| **SIM-099** | **BTCUSDT** | `#0` | `0W/0L` | 26-07-28<br>22:12 | `🔵 En Curso` | **`$100.00`** (`+$0.00`) | 🔵 En Vivo |
 
 ---
 
