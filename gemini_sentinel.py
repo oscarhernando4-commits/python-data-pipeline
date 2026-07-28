@@ -55,12 +55,12 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
     }}
     """
     
-    # 6-Level Institutional Hybrid Fallback Cascade (Combining Peak Intelligence & Sub-Second Speed)
+    # Exact User Requested Priority Cascade (Verified & Tested against Google API)
     MODEL_CASCADE = [
-        "gemini-flash-latest",
-        "gemini-3.1-pro-preview",
         "gemini-pro-latest",
+        "gemini-flash-latest",
         "gemini-3.6-flash",
+        "gemini-3.5-flash",
         "gemini-2.5-flash",
         "gemini-3.1-flash-lite"
     ]
