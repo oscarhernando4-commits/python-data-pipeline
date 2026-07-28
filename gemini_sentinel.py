@@ -55,45 +55,41 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
     }}
     """
     
-    # Primary endpoint: gemini-flash-latest (Always routes to the latest bleeding-edge Flash model version 3.5/3.6+)
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key={GEMINI_API_KEY}"
+    # 6-Level Institutional Hybrid Fallback Cascade (Combining Peak Intelligence & Sub-Second Speed)
+    MODEL_CASCADE = [
+        "gemini-flash-latest",
+        "gemini-3.1-pro-preview",
+        "gemini-pro-latest",
+        "gemini-3.6-flash",
+        "gemini-2.5-flash",
+        "gemini-3.1-flash-lite"
+    ]
+    
     payload = {
         "contents": [{"parts": [{"text": prompt_text}]}],
         "generationConfig": {"temperature": 0.2, "responseMimeType": "application/json"}
     }
     
-    try:
-        req = urllib.request.Request(
-            url, 
-            data=json.dumps(payload).encode("utf-8"), 
-            headers={"Content-Type": "application/json"},
-            method="POST"
-        )
-        with urllib.request.urlopen(req, timeout=15) as response:
-            res_json = json.loads(response.read().decode("utf-8"))
-            content = res_json['candidates'][0]['content']['parts'][0]['text']
-            parsed = json.loads(content)
-            print(f"🎉 Respuesta de Gemini Flash Latest AI (gemini-flash-latest): Approved={parsed.get('approved')} | Conf={parsed.get('confidence')}% | Razonamiento: {parsed.get('reasoning')}")
-            return parsed
-    except Exception as e:
-        print(f"Aviso consultando gemini-flash-latest ({e}). Probando fallback gemini-2.5-flash...")
+    for model_name in MODEL_CASCADE:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_API_KEY}"
         try:
-            url2 = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_API_KEY}"
-            req2 = urllib.request.Request(
-                url2, 
+            req = urllib.request.Request(
+                url, 
                 data=json.dumps(payload).encode("utf-8"), 
                 headers={"Content-Type": "application/json"},
                 method="POST"
             )
-            with urllib.request.urlopen(req2, timeout=15) as response:
+            with urllib.request.urlopen(req, timeout=15) as response:
                 res_json = json.loads(response.read().decode("utf-8"))
                 content = res_json['candidates'][0]['content']['parts'][0]['text']
                 parsed = json.loads(content)
-                print(f"🎉 Respuesta de Gemini 2.5 Flash AI: Approved={parsed.get('approved')} | Conf={parsed.get('confidence')}% | Razonamiento: {parsed.get('reasoning')}")
+                print(f"🎉 Respuesta Exitosa de AI Co-Pilot ({model_name}): Approved={parsed.get('approved')} | Conf={parsed.get('confidence')}% | Razonamiento: {parsed.get('reasoning')}")
                 return parsed
-        except Exception as e2:
-            print(f"Gemini LLM Notice: {e2}. Usando fallback cuantitativo seguro.")
-            return {"approved": True, "confidence": score, "reasoning": f"Fallback cuantitativo (Score >= {score} Pts)"}
+        except Exception as e:
+            print(f"💡 Aviso ({model_name}): {e}. Probando siguiente modelo en la cascada de prioridad...")
+            
+    print("Gemini LLM Notice: Todos los modelos de IA ocupados. Usando fallback cuantitativo seguro.")
+    return {"approved": True, "confidence": score, "reasoning": f"Fallback cuantitativo seguro (Score >= {score} Pts)"}
 
 # Function alias for universal compatibility across trading engines
 review_trade_decision = consult_gemini_flash_oracle
