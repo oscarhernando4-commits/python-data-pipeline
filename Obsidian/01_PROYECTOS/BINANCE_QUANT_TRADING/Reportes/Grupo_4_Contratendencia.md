@@ -1,6 +1,6 @@
 # Reporte Temporal: Grupo 4_Contratendencia
 
-> Actualizado: 2026-07-28 19:57:18
+> Actualizado: 2026-07-28 20:02:10
 
 | Ventana de Tiempo | Total Operaciones | Ganadoras | Perdedoras | Win Rate | PnL Neto |
 | :--- | :--- | :--- | :--- | :--- | :--- |
