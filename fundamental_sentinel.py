@@ -34,7 +34,8 @@ def fetch_live_crypto_news():
                 headlines.append(title)
                 title_lower = title.lower()
                 for kw in CRITICAL_ALERT_KEYWORDS:
-                    if kw in title_lower:
+                    import re
+                    if re.search(rf'\b{kw}\b', title_lower):
                         high_risk_alerts.append({"keyword": kw, "headline": title})
     except Exception as e:
         headlines.append(f"News Feed Notice: {e}")
