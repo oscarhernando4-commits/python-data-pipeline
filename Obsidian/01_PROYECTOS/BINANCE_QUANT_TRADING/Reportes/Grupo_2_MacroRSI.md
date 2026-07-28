@@ -1,6 +1,6 @@
 # Reporte Temporal: Grupo 2_MacroRSI
 
-> Actualizado: 2026-07-28 23:47:23
+> Actualizado: 2026-07-28 23:52:22
 
 | Ventana de Tiempo | Total Operaciones | Ganadoras | Perdedoras | Win Rate | PnL Neto |
 | :--- | :--- | :--- | :--- | :--- | :--- |
