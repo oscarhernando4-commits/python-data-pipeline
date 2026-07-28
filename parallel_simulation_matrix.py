@@ -189,16 +189,16 @@ def run_infinite_trading_matrix_cycle():
             
             macro_ctx = macro_analyst.get_market_macro_context(
                 symbol_analysis_map, 
-                {"score": 50, "sentiment": "Neutral"}, # You can connect real fear_greed here if desired
-                [] # connect real news here if desired
+                cached_fundamental_report.get("fear_and_greed", {"score": 50, "sentiment": "Neutral"}),
+                cached_fundamental_report.get("recent_headlines", [])
             )
             
             gemini_res = gemini_sentinel.review_trade_decision(
                 symbol=top_sym,
                 score=top_data["score"],
                 tech_data=top_data["tech"],
-                news_data={"headlines": []},
-                fear_greed={"score": 50, "sentiment": "Neutral"},
+                news_data={"headlines": cached_fundamental_report.get("recent_headlines", [])},
+                fear_greed=cached_fundamental_report.get("fear_and_greed", {"score": 50, "sentiment": "Neutral"}),
                 macro_context=macro_ctx
             )
             print(f"🧠 [AI CO-PILOT {top_side}] {top_sym} (Score {top_data['score']} Pts): Approved={gemini_res.get('approved')} | Action={gemini_res.get('action')} | Conf={gemini_res.get('confidence')}% | Razonamiento: {gemini_res.get('reasoning')}")
