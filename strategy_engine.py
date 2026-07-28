@@ -19,7 +19,7 @@ def evaluate_opportunity(tech, group_id):
             
     # GROUP 1: Ultra-Estricto (Tendencia Fuerte Pullback)
     elif group_id == 1:
-        if trend == "Alcista" and score >= 85 and 40 <= rsi <= 60:
+        if trend == "BULLISH" and score >= 85 and 40 <= rsi <= 60:
             return {"action": "LONG", "use_ai": True, "reason": "Trend Alcista + Pullback RSI + Score Alto (G-1)"}
             
     # GROUP 2: Reversión a la Media (Caza-Rebotes mecánicos sin IA)
@@ -30,12 +30,12 @@ def evaluate_opportunity(tech, group_id):
             
     # GROUP 3: Breakout por Volumen (Mecánico)
     elif group_id == 3:
-        if vol_surge >= 2.0 and rsi > 55 and trend == "Alcista":
+        if vol_surge >= 2.0 and rsi > 55 and trend == "BULLISH":
             return {"action": "LONG", "use_ai": False, "reason": "Volume Surge > 2.0x Breakout (G-3)"}
             
     # GROUP 4: Enfoque Bajista (Short-Seller con IA)
     elif group_id == 4:
-        if rsi >= 70 and macd_hist < 0 and trend == "Bajista":
+        if rsi >= 70 and macd_hist < 0 and trend == "BEARISH":
             return {"action": "SHORT", "use_ai": True, "reason": "Overbought RSI > 70 + MACD Cross + Bear Trend (G-4)"}
         elif score <= 25:
             return {"action": "SHORT", "use_ai": True, "reason": "Score <= 25 (G-4)"}
