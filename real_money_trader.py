@@ -134,33 +134,50 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
 def execute_real_futures_market_short(symbol, usdt_amount):
     timestamp = int(time.time() * 1000)
     clean_usd = int(usdt_amount) if usdt_amount >= 10.0 else usdt_amount
-    
-    # Futures endpoint uses fapi.binance.com
     fapi_url = "https://fapi.binance.com"
-    params = {
-        "symbol": symbol,
-        "side": "SELL",
-        "type": "MARKET",
-        "quantity": "0.001",  # Precision quantity calculated per symbol
-        "timestamp": timestamp
-    }
-    # For USDT-M futures market orders with USD value, use quoteOrderQty if supported or calculate qty
-    # Fetch live price via futures
+    headers = {"X-MBX-APIKEY": API_KEY}
+
+    # 1. Force Isolated Margin (Ignore if already Isolated)
+    try:
+        m_params = {"symbol": symbol, "marginType": "ISOLATED", "timestamp": timestamp}
+        m_query = urlencode(m_params)
+        m_sig = hmac.new(API_SECRET.encode("utf-8"), m_query.encode("utf-8"), hashlib.sha256).hexdigest()
+        requests.post(f"{fapi_url}/fapi/v1/marginType", headers=headers, params={**m_params, "signature": m_sig}, proxies=PROXIES, timeout=5)
+    except Exception:
+        pass
+
+    # 2. Fetch live price to calculate Qty and SL/TP Prices
     try:
         price_res = requests.get(f"{fapi_url}/fapi/v1/ticker/price?symbol={symbol}", proxies=PROXIES, timeout=5).json()
         price = float(price_res.get("price", 1.0))
         qty = round(clean_usd / price, 3)
-        params["quantity"] = f"{qty:.3f}"
-    except Exception:
-        pass
+        qty_str = f"{qty:.3f}"
         
-    query_string = urlencode(params)
-    signature = hmac.new(API_SECRET.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
-    params["signature"] = signature
-    headers = {"X-MBX-APIKEY": API_KEY}
+        # Risk Management: SL +1.5% (loss), TP -3.0% (win) for SHORT
+        sl_price = round(price * 1.015, 4)
+        tp_price = round(price * 0.97, 4)
+    except Exception as e:
+        return {"error": f"Failed to calculate price/qty: {e}"}
+
+    # 3. Execute Batch Order (Entry + SL + TP in 1 API call = 1 Fixie Request!)
+    # We use STOP_MARKET and TAKE_PROFIT_MARKET based on Mark Price (Binance default)
+    timestamp = int(time.time() * 1000)
+    orders = [
+        {"symbol": symbol, "side": "SELL", "type": "MARKET", "quantity": qty_str},
+        {"symbol": symbol, "side": "BUY", "type": "STOP_MARKET", "quantity": qty_str, "stopPrice": str(sl_price), "reduceOnly": "true", "timeInForce": "GTC"},
+        {"symbol": symbol, "side": "BUY", "type": "TAKE_PROFIT_MARKET", "quantity": qty_str, "stopPrice": str(tp_price), "reduceOnly": "true", "timeInForce": "GTC"}
+    ]
+    
+    b_params = {
+        "batchOrders": json.dumps(orders),
+        "timestamp": timestamp
+    }
+    b_query = urlencode(b_params)
+    b_sig = hmac.new(API_SECRET.encode("utf-8"), b_query.encode("utf-8"), hashlib.sha256).hexdigest()
+    b_params["signature"] = b_sig
     
     try:
-        res = requests.post(f"{fapi_url}/fapi/v1/order", headers=headers, params=params, proxies=PROXIES, timeout=10)
+        res = requests.post(f"{fapi_url}/fapi/v1/batchOrders", headers=headers, params=b_params, proxies=PROXIES, timeout=10)
         return res.json()
     except Exception as e:
         return {"error": str(e)}
@@ -285,32 +302,36 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         if entry > 0:
             pnl_pct = ((entry - current_price) / entry) * 100.0
             state["status"] = f"🔻 En Vivo SHORT ({active_symbol} @ ${current_price:.4f} | PnL: {pnl_pct:+.2f}%)"
+            # Note: We NO LONGER manually close here. 
+            # Binance Batch Orders (Stop Market / Take Profit Market) will automatically close it for us.
             
-            if pnl_pct >= 3.0 or pnl_pct <= -1.5:
-                print(f"🎯 ALERTA REAL: Salida SHORT por PnL {pnl_pct:.2f}% en {active_symbol}. Cerrando (BUY)...")
-                close_res = execute_real_futures_market_close(active_symbol, active_qty)
-                if "orderId" in close_res:
-                    import learning_engine
-                    state["trades_count"] += 1
-                    pnl_usd = (entry - current_price) * active_qty
-                    if pnl_pct >= 3.0:
-                        state["wins"] += 1
-                        res_type = "WIN"
-                    else:
-                        state["losses"] += 1
-                        res_type = "LOSS"
-                        
-                    learning_engine.record_trade_outcome(
-                        symbol=active_symbol, side="SHORT", entry_price=entry, exit_price=current_price,
-                        pnl_usd=pnl_usd, result_type=res_type, notes=f"Real Money SHORT closed with {pnl_pct:.2f}%",
-                        account_id="R-01", group_name="CUENTA REAL"
-                    )
-                    state["position"] = None
-                    state["status"] = "🟦 Buscando Entrada A+"
-                else:
-                    print(f"Error ejecutando cierre de SHORT real: {close_res}")
-                    
     else:
+        # If we had a SHORT but now it's gone, Binance closed it natively!
+        if state.get("position") and state["position"].get("side") == "SHORT":
+            import learning_engine
+            closed_pos = state["position"]
+            entry = closed_pos["entry_price"]
+            active_qty = closed_pos["quantity"]
+            active_symbol = closed_pos["symbol"]
+            
+            # Infer result based on current price relative to entry
+            if current_price < entry:
+                state["wins"] += 1
+                res_type = "WIN"
+                pnl_usd = entry * 0.03 * active_qty # Approx +3% win
+            else:
+                state["losses"] += 1
+                res_type = "LOSS"
+                pnl_usd = -(entry * 0.015 * active_qty) # Approx -1.5% loss
+                
+            state["trades_count"] += 1
+            learning_engine.record_trade_outcome(
+                symbol=active_symbol, side="SHORT", entry_price=entry, exit_price=current_price,
+                pnl_usd=pnl_usd, result_type=res_type, notes=f"Real Money SHORT auto-closed by Binance",
+                account_id="R-01", group_name="CUENTA REAL"
+            )
+            print(f"🎯 ALERTA REAL: Posición SHORT en {active_symbol} fue cerrada automáticamente por Binance ({res_type})")
+            
         state["position"] = None
         state["status"] = "🟦 Buscando Entrada A+"
         

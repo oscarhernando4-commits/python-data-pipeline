@@ -240,17 +240,20 @@ def run_infinite_trading_matrix_cycle():
             
             if side == "LONG":
                 is_win = curr_price >= tp_min_price
-                is_loss = curr_price <= sl_price
+                # Simulate Mark Price wicks hitting SL 0.1% earlier
+                is_loss = curr_price <= (sl_price * 1.001)
                 unr_pct = ((curr_price - entry_p) / entry_p) * 100.0
             else: # SHORT
                 is_win = curr_price <= tp_min_price
-                is_loss = curr_price >= sl_price
+                is_loss = curr_price >= (sl_price * 0.999)
                 unr_pct = ((entry_p - curr_price) / entry_p) * 100.0
+            
+            friction_cost = curr_bal * 0.001 # 0.1% round-trip fees + slippage
             
             # WIN CASE: Hit Take-Profit
             if is_win:
                 gain_ratio = max(unr_pct / 100.0, 0.03)
-                pnl = round(curr_bal * gain_ratio, 2)
+                pnl = round((curr_bal * gain_ratio) - friction_cost, 2)
                 
                 acc["current_balance"] += pnl
                 acc["pnl_usd"] += pnl
@@ -265,13 +268,13 @@ def run_infinite_trading_matrix_cycle():
                 
                 learning_engine.record_trade_outcome(
                     symbol=symbol, side=side, entry_price=entry_p, exit_price=curr_price,
-                    pnl_usd=pnl, result_type="WIN", notes=f"Win on {symbol} (+${pnl:.2f}) -> Level {acc['current_level']} Re-Trading Started!",
+                    pnl_usd=pnl, result_type="WIN", notes=f"Win on {symbol} (+${pnl:.2f} net) -> Level {acc['current_level']} Re-Trading Started!",
                     account_id=acc.get("account_id", "Desconocida"), group_name=acc.get("group_name", "Sin Grupo")
                 )
 
             # LOSS CASE: Hit Stop-Loss (-1.5%)
             elif is_loss:
-                loss = round(curr_bal * 0.015, 2)
+                loss = round((curr_bal * 0.015) + friction_cost, 2)
                 acc["current_balance"] -= loss
                 acc["pnl_usd"] -= loss
                 acc["losses"] += 1
