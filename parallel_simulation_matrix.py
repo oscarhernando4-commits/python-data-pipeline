@@ -397,13 +397,18 @@ def sync_live_matrix_obsidian(matrix):
         g_wr = round((g_wins / g_trades * 100.0), 1) if g_trades > 0 else 0.0
         g_pnl_str = f"+${g_pnl:.2f}" if g_pnl >= 0 else f"-${abs(g_pnl):.2f}"
         
-        grouped_tables_md += f"## {g_name}\n\n"
-        grouped_tables_md += f"> 📊 **Resumen del {g_name}:**  \n"
-        grouped_tables_md += f"> - 💵 **Balance Total del Grupo:** `${g_bal:,.2f} USD` (`{g_pnl_str}`)  \n"
-        grouped_tables_md += f"> - 🎯 **Operaciones Totales:** `{g_trades}` (`{g_wins} Ganadas / {g_losses} Perdidas`)  \n"
-        grouped_tables_md += f"> - 📈 **Tasa de Acierto del Grupo:** `{g_wr}% Win Rate`  \n\n"
+        # Determine callout type based on performance
+        callout_type = "[!NOTE]"
+        if g_pnl > 5.0: callout_type = "[!TIP]"
+        elif g_pnl < -2.0: callout_type = "[!WARNING]"
         
-        grouped_tables_md += f"| ID Cuenta | Cripto | Ops (#) | Racha | Última Hora | Último Resultado | Balance Actual (PnL) | Estado Operativo |\n"
+        grouped_tables_md += f"## {g_name}\n\n"
+        grouped_tables_md += f"> {callout_type} 📊 **Resumen del {g_name}:**\n"
+        grouped_tables_md += f"> - 💵 **Balance Total del Grupo:** `${g_bal:,.2f} USD` (`{g_pnl_str}`)\n"
+        grouped_tables_md += f"> - 🎯 **Operaciones Totales:** `{g_trades}` (`{g_wins} Ganadas / {g_losses} Perdidas`)\n"
+        grouped_tables_md += f"> - 📈 **Tasa de Acierto del Grupo:** `{g_wr}% Win Rate`\n\n"
+        
+        grouped_tables_md += f"| ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |\n"
         grouped_tables_md += f"| :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |\n"
         
         for acc in acc_list:
@@ -418,7 +423,7 @@ def sync_live_matrix_obsidian(matrix):
             if "EN_OPERACION_VIVO" in status_raw or acc.get("position") is not None:
                 status_clean = f"🔵 En Vivo"
             elif "Riesgo Noticias" in status_raw or "🛑" in status_raw:
-                status_clean = f"🛑 Pausado Noticias"
+                status_clean = f"🛑 Pausado"
             elif pnl < 0:
                 status_clean = f"🔴 Buscando"
             elif pnl > 0:
@@ -438,40 +443,68 @@ def sync_live_matrix_obsidian(matrix):
     active_live_accs = sum(1 for a in accounts if a.get("position") is not None or "En Vivo" in a.get("status", ""))
     neutral_accs = total_acc_count - (winning_accs + losing_accs + active_live_accs)
     
-    pct_winning = round((winning_accs / total_acc_count) * 100.0, 1)
-    pct_losing = round((losing_accs / total_acc_count) * 100.0, 1)
-    pct_active = round((active_live_accs / total_acc_count) * 100.0, 1)
-    pct_neutral = round((neutral_accs / total_acc_count) * 100.0, 1)
+    pct_winning = round((winning_accs / total_acc_count) * 100.0, 1) if total_acc_count > 0 else 0
+    pct_losing = round((losing_accs / total_acc_count) * 100.0, 1) if total_acc_count > 0 else 0
+    pct_active = round((active_live_accs / total_acc_count) * 100.0, 1) if total_acc_count > 0 else 0
+    pct_neutral = round((neutral_accs / total_acc_count) * 100.0, 1) if total_acc_count > 0 else 0
 
-    import real_money_trader
-    real_st = real_money_trader.load_real_account_state()
+    real_st = {"position": None, "trades_count": 0, "net_pnl_usd": 0.0, "wins": 0, "losses": 0, "status": "No configurado", "current_balance_usd": 0.0}
+    real_total_val = 0.0
+    real_bnb = 0.0
+    real_bnb_usd = 0.0
+    real_usdt_free = 0.0
+    
+    try:
+        import real_money_trader
+        real_st = real_money_trader.load_real_account_state()
+        balances = real_money_trader.get_real_balances()
+        for b in balances:
+            asset = b.get("asset", "")
+            if asset == "USDT":
+                real_usdt_free = float(b.get("free", 0))
+                real_total_val += real_usdt_free
+            elif asset == "BNB":
+                real_bnb = float(b.get("free", 0))
+                real_bnb_usd = real_bnb * 575.0 # Approx BNB price
+                real_total_val += real_bnb_usd
+    except Exception as e:
+        print(f"Error cargando datos reales en matrix sync: {e}")
+        # Usamos los datos guardados en state si la API falla
+        real_total_val = real_st.get("current_balance_usd", 0.0)
+
     real_active_crypto = real_st.get("position", {}).get("symbol", "Ninguna (Buscando)") if real_st.get("position") else "Ninguna (Buscando)"
     timestamp = now_str
     
-    real_usdt_free = 17.19
-    real_bnb = 0.004988
-    real_bnb_usd = real_bnb * 575.0
-    real_total_val = real_usdt_free + real_bnb_usd
-    
     real_section = (
-        f"# 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT REAL - ${real_total_val:.2f} USD)\n\n"
-        f"> ⏱️ **Última Actualización del Reporte:** `{timestamp}`\n"
+        f"# 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - ${real_total_val:.2f} USD)\n\n"
+        f"> [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**\n"
+        f"> ⏱️ **Última Actualización:** `{timestamp}`\n"
         f">\n"
         f"> 🛡️ **Desglose de Fondos en Cuenta Real:**\n"
-        f"> - 🟡 **BNB Escudo Comisiones (25% Descuento):** `{real_bnb:.8f} BNB` (`~${real_bnb_usd:.2f} USD`)\n"
-        f"> - 💵 **USDT Reserva / Margen Segura:** `{real_usdt_free - 17.00:.4f} USDT`\n"
-        f"> - 🎯 **Capital Activo para Operaciones Spot:** `$17.00 USDT`\n"
-        f"> - 💰 **Saldo Total Acumulado Cuenta Real:** `${real_total_val:.2f} USD`\n\n"
-        f"| 💵 Capital Depósito | 🪙 Cripto Activa | 🔢 Ops (#) | 📈 Balance Actual | 💰 Beneficio Neto (PnL) | 📊 Racha Real | 🎯 Estado Operativo Real |\n"
+        f"> - 🟡 **BNB Escudo Comisiones:** `{real_bnb:.8f} BNB` (`~${real_bnb_usd:.2f} USD`)\n"
+        f"> - 💵 **USDT Disponible:** `{real_usdt_free:.4f} USDT`\n"
+        f"> - 💰 **Saldo Total Acumulado:** `${real_total_val:.2f} USD`\n\n"
+        f"| 💵 Capital | 🪙 Cripto Activa | 🔢 Ops | 📈 Balance | 💰 Beneficio (PnL) | 📊 Racha | 🎯 Estado Operativo |\n"
         f"| :---: | :---: | :---: | :---: | :---: | :---: | :---: |\n"
-        f"| **`$17.00 USDT`** | **`{real_active_crypto}`** | `#{real_st['trades_count']}` | **`$17.00 USDT`** | **`${real_st['net_pnl_usd']:+.2f} USD`** | `{real_st['wins']}W/{real_st['losses']}L` | **`{real_st['status']}`** |\n\n"
+        f"| **`${real_total_val:.2f} USD`** | **`{real_active_crypto}`** | `#{real_st.get('trades_count', 0)}` | **`${real_st.get('current_balance_usd', 0):.2f} USD`** | **`${real_st.get('net_pnl_usd', 0):+.2f} USD`** | `{real_st.get('wins', 0)}W/{real_st.get('losses', 0)}L` | **`{real_st.get('status', 'Buscando')}`** |\n\n"
         f"---\n\n"
     )
 
     matrix_md = (
+        f"---\n"
+        f"tags:\n"
+        f"  - matrix\n"
+        f"  - trading\n"
+        f"  - simulacion\n"
+        f"aliases:\n"
+        f"  - Matriz 100 Cuentas\n"
+        f"cssclasses:\n"
+        f"  - matrix-report\n"
+        f"date: {now_str}\n"
+        f"---\n\n"
         f"{real_section}"
         f"# 🚀 MATRIZ CLASIFICADA EN 5 GRUPOS PROGRESIVOS (100 CUENTAS TESTNET)\n\n"
-        f"> 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  \n"
+        f"> [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  \n"
         f"> - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  \n"
         f"> - 📈 **Capital Total Acumulado:** **`${matrix['current_total_usd']:,.2f} USD`** (`${matrix['net_pnl_usd']:+,.2f} USD`)  \n"
         f"> - 🟢 **Cuentas Ganadoras (+3% Meta Cumplida):** `{winning_accs} Cuentas ({pct_winning}%)`  \n"

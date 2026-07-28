@@ -3,7 +3,16 @@ import json
 import math
 from datetime import datetime
 
-OBSIDIAN_FOLDER = r"C:\Users\hosca\Documents\Antigravity\Obsidian\01_PROYECTOS\BINANCE_QUANT_TRADING"
+def _get_obsidian_folder():
+    local_path = r"C:\Users\hosca\Documents\Antigravity\Obsidian\01_PROYECTOS\BINANCE_QUANT_TRADING"
+    if os.path.exists(os.path.dirname(local_path)):
+        os.makedirs(local_path, exist_ok=True)
+        return local_path
+    rel_path = os.path.join(os.getcwd(), "Obsidian", "01_PROYECTOS", "BINANCE_QUANT_TRADING")
+    os.makedirs(rel_path, exist_ok=True)
+    return rel_path
+
+OBSIDIAN_FOLDER = _get_obsidian_folder()
 
 def ensure_obsidian_dir():
     if not os.path.exists(OBSIDIAN_FOLDER):

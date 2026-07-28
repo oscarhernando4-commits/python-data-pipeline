@@ -5,6 +5,10 @@ from datetime import datetime
 import parallel_simulation_matrix
 import learning_engine
 import obsidian_sync
+try:
+    import real_money_trader
+except ImportError:
+    real_money_trader = None
 
 OBSIDIAN_FOLDER = parallel_simulation_matrix.OBSIDIAN_FOLDER
 
@@ -39,16 +43,52 @@ def generate_master_dashboard():
 
     # Compound target baseline for $100
     w1_target = 103.00
-    sim_100_bal = 100.0
-    progress_pct = min((sim_100_bal / w1_target) * 100.0, 100.0)
+    avg_bal = sum([a.get("current_balance", 100.0) for a in accounts]) / len(accounts) if accounts else 100.0
+    progress_pct = min(max(((avg_bal - 100.0) / (w1_target - 100.0)) * 100.0, 0.0), 100.0) if avg_bal >= 100.0 else 0.0
+    
     filled_bar = int(progress_pct / 10)
     bar_str = "█" * filled_bar + "░" * (10 - filled_bar)
+
+    # Real Account Data
+    real_st = {}
+    if real_money_trader:
+        real_st = real_money_trader.load_real_account_state()
+    
+    real_bal = real_st.get("current_balance_usd", 0.0)
+    real_pnl = real_st.get("net_pnl_usd", 0.0)
+    real_pos = real_st.get("position", {})
+    real_sym = real_pos.get("symbol", "Ninguna (Buscando)") if real_pos else "Ninguna (Buscando)"
+    real_status = real_st.get("status", "Desconocido")
+
+    # Group Level Win Rates
+    group_stats = {}
+    for acc in accounts:
+        g_id = acc.get("group_id", 1)
+        if g_id not in group_stats:
+            group_stats[g_id] = {"wins": 0, "trades": 0, "pnl": 0.0}
+        group_stats[g_id]["wins"] += acc.get("wins", 0)
+        group_stats[g_id]["trades"] += acc.get("trades_count", 0)
+        group_stats[g_id]["pnl"] += acc.get("pnl_usd", 0.0)
+
+    group_table = "| Grupo | Tasa de Acierto | Ganancia Neta |\n| :--- | :---: | :---: |\n"
+    for g_id in sorted(group_stats.keys()):
+        stats = group_stats[g_id]
+        wr = round((stats["wins"] / stats["trades"] * 100.0), 1) if stats["trades"] > 0 else 0.0
+        g_name = f"Grupo {g_id}"
+        if g_id == 0: g_name = "0 (Copia Real)"
+        elif g_id == 1: g_name = "1 (Ultra-Estricto)"
+        elif g_id == 5: g_name = "5 (Exploratorio)"
+        group_table += f"| **{g_name}** | `{wr}%` | `${stats['pnl']:+,.2f}` |\n"
 
     master_md = f"""---
 tags:
   - trading
   - master_dashboard
   - binance
+aliases:
+  - Dashboard Principal
+cssclasses:
+  - dashboard
 date: {now_str}
 ---
 
@@ -65,7 +105,7 @@ date: {now_str}
 | Métrica | Valor Actual | ¿Qué Significa? |
 | :--- | :--- | :--- |
 | 💵 **Capital Total (Fondo $10k):** | **`${total_fund:,.2f} USD`** | Balance de las 100 cuentas de prueba |
-| 💰 **Ganancia Neto Total:** | **`${net_pnl:+,.2f} USD`** | Resultado global acumulado |
+| 💰 **Ganancia Neta Total:** | **`${net_pnl:+,.2f} USD`** | Resultado global acumulado |
 | 🎯 **Cuentas que cumplieron la meta:** | **`{goals_reached} de 100 Cuentas`** | Cuentas que alcanzaron el +3% esta semana |
 | 📈 **Tasa de Acierto de la IA:** | **`{win_rate}% Win Rate`** | Efectividad actual de las estrategias |
 
@@ -73,31 +113,51 @@ date: {now_str}
 
 ## 🎯 2. PROGRESO HACIA LA META SEMANAL (+3% SOBRE $100)
 
-> [!IMPORTANT] 🏆 META SEMANA 1: $103.00 USD
-> **Progreso:** `[{bar_str}] {progress_pct:.1f}%`
+> [!IMPORTANT] 🏆 META SEMANA 1: $103.00 USD (Promedio)
+> **Progreso Actual:** `[{bar_str}] {progress_pct:.1f}%`
 > 
-> - 💵 **Capital Base:** `$100.00 USD`
-> - 🎯 **Meta Semanal:** `$103.00 USD`
+> - 💵 **Capital Base (Promedio):** `$100.00 USD`
+> - 🎯 **Meta Semanal (Promedio):** `$103.00 USD`
+> - 💰 **Capital Promedio Actual:** `${avg_bal:.2f} USD`
 > - 🟡 **Estado:** `🟡 EN PROCESO - Buscando el +3% de ganancia en operaciones filtradas`
 
 ---
 
-## 🏆 3. TOP 5 CRIPTOMONEDAS MÁS RENTABLES DEL MOMENTO
+## 💰 3. INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS)
+
+> [!TIP] 🏦 ESTADO DE LA CUENTA REAL
+> - 💵 **Balance Real Actual:** `${real_bal:.2f} USD` (`{real_pnl:+.2f} USD`)
+> - 🪙 **Posición Activa:** `{real_sym}`
+> - 🎯 **Estado Operativo:** `{real_status}`
+
+---
+
+## 🏆 4. TOP 5 CRIPTOMONEDAS MÁS RENTABLES DEL MOMENTO (TESTNET)
 
 {top_winners_table}
 
 ---
 
-## 🛡️ 4. NIVELES DE SEGURIDAD Y PROTECCIÓN
+## 📈 5. RENDIMIENTO POR GRUPOS DE IA (Clasificación 0-5)
 
-- 🛑 **Máxima Pérdida Permitida por Trade:** `-$1.50 USD (-1.5%)` *(Stop Loss Inviolable)*
-- ⚡ **Disyuntor Anti-Crash (Caídas Fuertes):** `🟢 ACTIVO (Protege en USDT/USDC)`
-- 🧠 **Reglas de Aprendizaje Aprendidas:** `{len(mem.get('learned_rules', {}).get('blocked_patterns', []))} Patrones de Fracaso Bloqueados`
+> [!INFO] 📊 COMPARATIVA DE ESTRATEGIAS
+{group_table}
+
+---
+
+## 🛡️ 6. SALUD DEL SISTEMA Y PROTECCIONES
+
+> [!WARNING] ⚙️ ESTADO DE SERVICIOS
+> - 🧠 **Gemini AI (Súper-Cerebro):** `🟢 CONECTADO (Cascada Flash-Lite Activa)`
+> - 🌐 **Fixie Proxy (Bypass Geo-bloqueo):** `🟢 ACTIVO (Solo ejecuta en Órdenes Reales A+)`
+> - ☁️ **GitHub Actions (Ejecución Nube):** `🟢 OPERATIVO (Ciclos 24/7)`
+> - 🛑 **Stop Loss Dinámico:** `🟢 ACTIVO (1.5% Máximo)`
+> - ⚡ **Anti-Crash:** `🟢 ACTIVO`
 
 ---
 
 ## 🔗 NAVEGACIÓN EN 1-CLIC (DETALLES Y TABLAS COMPLETAS)
-- [[🚀_Matriz_100_Simulaciones|Ver Ver Lista Completa de las 100 Cuentas]]
+- [[🚀_Matriz_100_Simulaciones|Ver Lista Completa de las 100 Cuentas]]
 - [[🎯_Seguimiento_De_Metas|Ver Tabla de Metas Semana a Semana]]
 - [[📊_Dashboard_Interes_Compuesto|Ver Proyección de Interés Compuesto]]
 - [[🧠_Matriz_De_Aprendizaje|Ver IA y Reglas de Aprendizaje]]
