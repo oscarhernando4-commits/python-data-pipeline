@@ -62,12 +62,13 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
     }}
     """
     
-    # User Requested Priority Cascade (4 Models - All Verified Against Google API)
+    # User Requested Priority Cascade (Strongest → Fallback)
+    # Each model gets 2 attempts with 5s wait on rate-limit before moving to next
     MODEL_CASCADE = [
-        "gemini-flash-latest",
-        "gemini-3.6-flash",
-        "gemini-3.5-flash",
-        "gemini-2.5-flash"
+        "gemini-flash-latest",       # 1° Prioridad: Siempre el más actual y potente
+        "gemini-3.6-flash",          # 2° Prioridad: Último modelo estable
+        "gemini-3.5-flash",          # 3° Prioridad: Modelo probado
+        "gemini-2.5-flash"           # 4° Última alternativa
     ]
     
     payload = {
@@ -77,22 +78,31 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
     
     for model_name in MODEL_CASCADE:
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_API_KEY}"
-        try:
-            req = urllib.request.Request(
-                url, 
-                data=json.dumps(payload).encode("utf-8"), 
-                headers={"Content-Type": "application/json"},
-                method="POST"
-            )
-            with urllib.request.urlopen(req, timeout=15) as response:
-                res_json = json.loads(response.read().decode("utf-8"))
-                content = res_json['candidates'][0]['content']['parts'][0]['text']
-                parsed = json.loads(content)
-                print(f"🎉 Respuesta Exitosa de AI Co-Pilot ({model_name}): Approved={parsed.get('approved')} | Conf={parsed.get('confidence')}% | Razonamiento: {parsed.get('reasoning')}")
-                return parsed
-        except Exception as e:
-            print(f"💡 Aviso ({model_name}): {e}. Probando siguiente modelo en la cascada de prioridad...")
-            time.sleep(1)  # Prevent instant rate-limit cascade on Google API
+        
+        # Each model gets 2 attempts (retry once after 5s if rate-limited)
+        for attempt in range(1, 3):
+            try:
+                req = urllib.request.Request(
+                    url, 
+                    data=json.dumps(payload).encode("utf-8"), 
+                    headers={"Content-Type": "application/json"},
+                    method="POST"
+                )
+                with urllib.request.urlopen(req, timeout=20) as response:
+                    res_json = json.loads(response.read().decode("utf-8"))
+                    content = res_json['candidates'][0]['content']['parts'][0]['text']
+                    parsed = json.loads(content)
+                    print(f"🎉 Respuesta Exitosa de AI Co-Pilot ({model_name}): Approved={parsed.get('approved')} | Conf={parsed.get('confidence')}% | Razonamiento: {parsed.get('reasoning')}")
+                    return parsed
+            except Exception as e:
+                error_str = str(e)
+                is_rate_limit = "429" in error_str or "503" in error_str
+                if is_rate_limit and attempt == 1:
+                    print(f"⏳ {model_name}: Rate limit (intento {attempt}/2). Esperando 5s para reintentar este modelo...")
+                    time.sleep(5)
+                else:
+                    print(f"💡 Aviso ({model_name}): {e}. Pasando al siguiente modelo...")
+                    break  # Move to next model
             
     print("Gemini LLM Notice: Todos los modelos de IA ocupados. Usando fallback cuantitativo seguro.")
     return {"approved": True, "confidence": score, "reasoning": f"Fallback cuantitativo seguro (Score >= {score} Pts)"}
