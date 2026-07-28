@@ -17,8 +17,15 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
 
     import time_series_memory
     import extreme_events_memory
+    import learning_engine
+    
     pattern_summary = time_series_memory.get_multi_cycle_pattern_summary(symbol)
     extreme_context = extreme_events_memory.get_symbol_extreme_context(symbol)
+    
+    # RAG: Extract Learned Rules from the 99 Testnet Simulations
+    mem = learning_engine.load_memory()
+    blocked_rules = "\n    - ".join(mem["learned_rules"]["blocked_patterns"][-5:]) # Get latest 5
+    boosted_rules = "\n    - ".join(mem["learned_rules"]["boosted_patterns"][-5:])
 
     indicators = tech_data.get('indicators', {})
     risk_plan = tech_data.get('institutional_risk_plan', {})
@@ -28,6 +35,12 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     prompt_text = f"""
     Eres un Trader Cuantitativo Institucional Senior y Experto en Aprendizaje de Patrones Históricos Extremos / Rastro de Ballenas.
     Tu objetivo es lograr operaciones victoriosas de alta frecuencia intradía para {symbol}.
+
+    LECCIONES APRENDIDAS DE 99 SIMULACIONES (RAG MEMORY):
+    Patrones Prohibidos (Trampas descubiertas):
+    - {blocked_rules if blocked_rules else 'Sin trampas descubiertas aún.'}
+    Patrones Potenciados (Victorias descubiertas):
+    - {boosted_rules if boosted_rules else 'Sin victorias descubiertas aún.'}
 
     HISTORIAL DE LECTURAS 5M (ÚLTIMAS 4 HORAS):
     - {pattern_summary}
@@ -44,17 +57,16 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     - MACD Histograma 15M: {indicators.get('macd_hist_15m', 'N/A')}
     - ATR 15M: {indicators.get('atr_15m', 'N/A')}
     - Volume Surge: {indicators.get('volume_surge', 'N/A')}
-    - Volume Surge Ratio: {indicators.get('volume_surge_ratio', 'N/A')}x
     - Tendencia Macro 4H: {tech_data.get('macro_trend_4h', 'N/A')}
-    - Rastreador de Ballenas / Dominancia Compradora: {tech_data.get('whale_flow', 'Dominancia Compradora 68% vs 32% Vendedora')}
+    - Rastreador de Ballenas: {tech_data.get('whale_flow', 'Dominancia Compradora 68% vs 32% Vendedora')}
     - Sentimiento del Mercado (Fear & Greed): {fear_greed.get('score')} ({fear_greed.get('sentiment')})
-    - Noticias al Minuto (CoinTelegraph/CryptoPanic): {json.dumps(news_data.get('headlines', [])[:4])}
+    - Noticias al Minuto: {json.dumps(news_data.get('headlines', [])[:4])}
 
     REGLAS DE DECISIÓN CON APRENDIZAJE HISTÓRICO Y EVENTOS EXTREMOS:
     1. Compara si el patrón actual imita un evento extremo histórico de desplome o pump de {symbol}.
-    2. Si el historial de 4H muestra acumulación creciente de ballenas, volumen > 1.8x y no imita un patrón de trampa histórica, APRUEBA para BUY_LONG.
-    3. Si imita una cascada de liquidación o distribución bajista, APRUEBA para SELL_SHORT.
-    4. Si hay riesgo de trampa o contradicción con eventos extremos pasados, RECHAZA (HOLD).
+    2. Usa las 'LECCIONES APRENDIDAS' del simulador. Si el mercado actual imita un Patrón Prohibido, RECHAZA (HOLD).
+    3. Si el historial de 4H muestra acumulación creciente de ballenas, volumen > 1.8x y no imita un patrón de trampa histórica, APRUEBA para BUY_LONG.
+    4. Si imita una cascada de liquidación o distribución bajista, APRUEBA para SELL_SHORT.
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON CON ESTA ESTRUCTURA EXACTA:
     {{

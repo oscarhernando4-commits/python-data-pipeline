@@ -335,9 +335,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         state["position"] = None
         state["status"] = "🟦 Buscando Entrada A+"
         
-        # 1. LONG Entry Signal (Score >= 85 Pts)
-        if best_symbol and not is_bearish and best_score >= 85 and usdt_free >= 15.0:
-            print(f"🚀 SEÑAL A+ ALCISTA (LONG) DETECTADA ({best_symbol} @ {best_score} Pts). Comprando en Binance Spot...")
+        # 1. LONG Entry Signal (Score >= 75 Pts + AI Approved externally)
+        if best_symbol and not is_bearish and best_score >= 75 and usdt_free >= 15.0:
+            print(f"🚀 SEÑAL ALCISTA (LONG) ({best_symbol} @ {best_score} Pts). Comprando en Binance Spot...")
             buy_res = execute_real_spot_market_buy(best_symbol, usdt_free)
             if "orderId" in buy_res:
                 state["position"] = {
@@ -348,9 +348,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 }
                 state["status"] = f"🔵 En Vivo LONG ({best_symbol})"
                 
-        # 2. SHORT Entry Signal (Bearish Score <= 15 Pts / High Bearish Confluence)
-        elif best_symbol and is_bearish and best_score <= 15 and futures_usdt_free >= 15.0:
-            print(f"📉 SEÑAL A+ BAJISTA (SHORT) DETECTADA ({best_symbol} @ Score {best_score}). Abriendo Short en Binance Futuros...")
+        # 2. SHORT Entry Signal (Bearish Score <= 25 Pts + AI Approved externally)
+        elif best_symbol and is_bearish and best_score <= 25 and futures_usdt_free >= 15.0:
+            print(f"📉 SEÑAL BAJISTA (SHORT) ({best_symbol} @ Score {best_score}). Abriendo Short en Binance Futuros...")
             short_res = execute_real_futures_market_short(best_symbol, futures_usdt_free)
             if "orderId" in short_res:
                 state["position"] = {
