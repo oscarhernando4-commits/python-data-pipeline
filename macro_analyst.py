@@ -12,10 +12,20 @@ def get_market_macro_context(symbol_analysis_map, fear_greed, news_headlines):
     if not GEMINI_API_KEY:
         return "Macro Analyst Offline (No API Key). Mercado evaluado solo cuantitativamente."
 
-    # Prepare compact market summary to save tokens
+    # Prepare rich market summary to provide deep historical context
     market_summary = []
     bullish_count = 0
     bearish_count = 0
+    
+    try:
+        import time_series_memory
+    except ImportError:
+        time_series_memory = None
+    
+    # Sort symbols by score to only include rich history for top 5 and bottom 5 (to save tokens)
+    sorted_symbols = sorted(symbol_analysis_map.items(), key=lambda x: x[1].get("score", 50), reverse=True)
+    symbols_to_detail = sorted_symbols[:5] + sorted_symbols[-5:] if len(sorted_symbols) > 10 else sorted_symbols
+    detailed_syms = set([s[0] for s in symbols_to_detail])
     
     for sym, data in symbol_analysis_map.items():
         score = data.get("score", 50)
@@ -25,32 +35,40 @@ def get_market_macro_context(symbol_analysis_map, fear_greed, news_headlines):
         elif score <= 40:
             bearish_count += 1
             
-        market_summary.append(f"{sym}: Score {score}, {trend}")
+        history_str = ""
+        if sym in detailed_syms and time_series_memory:
+            hist = time_series_memory.get_multi_cycle_pattern_summary(sym)
+            if hist:
+                history_str = f" | HISTORIAL: {hist}"
+                
+        market_summary.append(f"[{sym}] Score: {score}/100, Tendencia: {trend}{history_str}")
         
     market_text = "\n".join(market_summary)
     
     prompt_text = f"""
-    Eres el "Macro Analista de Riesgo" de un fondo de inversión institucional.
-    Tu objetivo es leer el estado general del mercado de criptomonedas y emitir un veredicto de 2 a 3 oraciones sobre el RIESGO GLOBAL.
+    Eres el "Jefe de Riesgo Macro e Inteligencia Histórica" de un fondo cuantitativo.
+    Tu objetivo es leer el estado general del mercado, correlacionar la historia reciente de los pares principales y emitir un REPORTE SÚPER DETALLADO.
     
     DATOS DEL MERCADO ACTUAL:
     - Índice Fear & Greed: {fear_greed.get('score')} ({fear_greed.get('sentiment')})
     - Monedas Fuertes (Score >= 60): {bullish_count}
     - Monedas Débiles (Score <= 40): {bearish_count}
-    - Noticias Recientes: {json.dumps(news_headlines[:3])}
+    - Noticias Recientes: {json.dumps(news_headlines[:5])}
     
-    ESTADO DE LAS MONEDAS (Resumen 4H):
+    ESTADO DE LAS MONEDAS (Contexto en Tiempo Real e Historial 4H):
     {market_text}
     
-    REGLAS DE SALIDA:
-    1. Identifica si el mercado está correlacionado al alza, a la baja, o es mixto.
-    2. Identifica si hay riesgo sistémico inminente.
-    3. Responde SOLAMENTE con 2 a 3 oraciones contundentes en español detallando el contexto macro, sin formato especial, directo al grano.
+    REGLAS DE ANÁLISIS SÚPER DETALLADO:
+    1. Analiza profundamente si el mercado está correlacionado (¿están todas cayendo juntas o es mixto?).
+    2. Usa el "HISTORIAL" de las monedas principales para identificar si estamos en fase de acumulación de ballenas, distribución o pánico institucional.
+    3. Identifica riesgos sistémicos ocultos (ej. Bitcoin cae mientras altcoins suben = trampa).
+    4. Escribe un análisis RICO Y DETALLADO de 2 a 3 párrafos completos que sirva como "Mapa de Guerra" para el Agente Ejecutor que operará la moneda Top 1.
+    5. Termina con un Veredicto Global (Ej: "VEREDICTO: Entorno favorable solo para Shorts rápidos").
     """
     
     payload = {
         "contents": [{"parts": [{"text": prompt_text}]}],
-        "generationConfig": {"temperature": 0.2, "maxOutputTokens": 200}
+        "generationConfig": {"temperature": 0.3, "maxOutputTokens": 600}
     }
     
     # We use lite for macro sweep to save standard flash quota
