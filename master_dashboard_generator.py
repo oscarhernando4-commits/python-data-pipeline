@@ -202,6 +202,13 @@ Análisis de rendimiento detallado a 1D, 3D, 1W, 2W, y 1M:
     except Exception as e:
         print(f"Error generating subreports: {e}")
         
+    # NEW: Also regenerate the Matriz 100 Simulaciones markdown locally!
+    try:
+        parallel_simulation_matrix.sync_live_matrix_obsidian(matrix)
+        print("Matriz de 100 Simulaciones actualizada localmente.")
+    except Exception as e:
+        print(f"Error generando matriz local: {e}")
+        
     print(f"Dashboard y Sub-Reportes generados exitosamente a las {now_str}")
     return file_path
 
