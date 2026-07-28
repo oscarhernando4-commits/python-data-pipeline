@@ -1,6 +1,6 @@
 # Reporte Temporal: Grupo 1_UltraEstricto
 
-> Actualizado: 2026-07-28 21:52:23
+> Actualizado: 2026-07-28 21:57:11
 
 | Ventana de Tiempo | Total Operaciones | Ganadoras | Perdedoras | Win Rate | PnL Neto |
 | :--- | :--- | :--- | :--- | :--- | :--- |
