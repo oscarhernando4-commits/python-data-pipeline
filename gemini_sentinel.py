@@ -86,12 +86,11 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     
     # Option 1: Top 1 Filter implemented. 
     # Exact cascade requested by user
-    # Official Gemini API Models
     models_to_try = [
-        "gemini-1.5-flash-latest",
-        "gemini-1.5-flash", 
-        "gemini-1.5-pro-latest", 
-        "gemini-1.5-pro"
+        "gemini-flash-latest",
+        "gemini-3.6-flash", 
+        "gemini-3.5-flash", 
+        "gemini-2.5-flash"
     ]
     
     max_retries_per_model = 2
