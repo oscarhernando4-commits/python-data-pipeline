@@ -8,6 +8,7 @@ import fundamental_sentinel
 import learning_engine
 import obsidian_sync
 import master_dashboard_generator
+import strategy_engine
 from datetime import datetime
 
 TOP_PAIRS = [
@@ -231,10 +232,24 @@ def run_infinite_trading_matrix_cycle():
             entry_p = position["entry_price"]
             tp_min_price = position.get("tp_min", position.get("tp", entry_p * 1.03))
             sl_price = position["sl"]
+            side = position.get("side", "LONG")
+            
+            is_win = False
+            is_loss = False
+            unr_pct = 0.0
+            
+            if side == "LONG":
+                is_win = curr_price >= tp_min_price
+                is_loss = curr_price <= sl_price
+                unr_pct = ((curr_price - entry_p) / entry_p) * 100.0
+            else: # SHORT
+                is_win = curr_price <= tp_min_price
+                is_loss = curr_price >= sl_price
+                unr_pct = ((entry_p - curr_price) / entry_p) * 100.0
             
             # WIN CASE: Hit Take-Profit
-            if curr_price >= tp_min_price:
-                gain_ratio = max((curr_price - entry_p) / entry_p, 0.03)
+            if is_win:
+                gain_ratio = max(unr_pct / 100.0, 0.03)
                 pnl = round(curr_bal * gain_ratio, 2)
                 
                 acc["current_balance"] += pnl
@@ -249,13 +264,13 @@ def run_infinite_trading_matrix_cycle():
                 acc["status"] = "BUSCANDO_OPORTUNIDAD"
                 
                 learning_engine.record_trade_outcome(
-                    symbol=symbol, side="BUY", entry_price=entry_p, exit_price=curr_price,
+                    symbol=symbol, side=side, entry_price=entry_p, exit_price=curr_price,
                     pnl_usd=pnl, result_type="WIN", notes=f"Win on {symbol} (+${pnl:.2f}) -> Level {acc['current_level']} Re-Trading Started!",
                     account_id=acc.get("account_id", "Desconocida"), group_name=acc.get("group_name", "Sin Grupo")
                 )
 
             # LOSS CASE: Hit Stop-Loss (-1.5%)
-            elif curr_price <= sl_price:
+            elif is_loss:
                 loss = round(curr_bal * 0.015, 2)
                 acc["current_balance"] -= loss
                 acc["pnl_usd"] -= loss
@@ -268,57 +283,80 @@ def run_infinite_trading_matrix_cycle():
                 acc["status"] = "BUSCANDO_OPORTUNIDAD"
                 
                 learning_engine.record_trade_outcome(
-                    symbol=symbol, side="BUY", entry_price=entry_p, exit_price=curr_price,
+                    symbol=symbol, side=side, entry_price=entry_p, exit_price=curr_price,
                     pnl_usd=-loss, result_type="LOSS", notes=f"Hit SL on {symbol} (-${loss:.2f}). Re-Trading!",
                     account_id=acc.get("account_id", "Desconocida"), group_name=acc.get("group_name", "Sin Grupo")
                 )
             else:
-                unr_pnl = (curr_price - entry_p) * position["qty"]
-                unr_pct = ((curr_price - entry_p) / entry_p) * 100.0
-                
                 # Trailing Stop: Move SL to Break-Even (+0.2%) once profit reaches +1.5%
-                if unr_pct >= 1.5 and position.get("sl", 0) < entry_p:
-                    position["sl"] = entry_p * 1.002
-                    acc["last_result"] = "🛡️ Protegida (Break-Even)"
+                if unr_pct >= 1.5:
+                    if side == "LONG" and position.get("sl", 0) < entry_p:
+                        position["sl"] = entry_p * 1.002
+                        acc["last_result"] = "🛡️ Protegida (Break-Even)"
+                    elif side == "SHORT" and position.get("sl", 999999) > entry_p:
+                        position["sl"] = entry_p * 0.998
+                        acc["last_result"] = "🛡️ Protegida (Break-Even)"
                     
                 acc["last_trade_time"] = position.get("open_time_br", now_br)
-                acc["last_result"] = f"🔵 En Curso" if position.get("sl", 0) < entry_p else "🛡️ Protegida (BE)"
-                acc["status"] = f"EN_OPERACION_VIVO ({symbol} {unr_pct:+.1f}%)"
+                is_be = (side == "LONG" and position.get("sl", 0) > entry_p) or (side == "SHORT" and position.get("sl", 999999) < entry_p)
+                acc["last_result"] = f"🔵 En Curso" if not is_be else "🛡️ Protegida (BE)"
+                acc["status"] = f"EN_OPERACION_VIVO ({symbol} {side} {unr_pct:+.1f}%)"
 
-        # 2. DYNAMIC MARKET ROTATION: IF NO POSITION -> SELECT THE HIGHEST SCORE PAIR IN THE MARKET!
+        # 2. DYNAMIC MARKET ROTATION: EVALUATE STRATEGIC PROFILE
         else:
+            g_id = acc.get("group_id", 0)
+            best_action = "HOLD"
             selected_symbol = acc["symbol"]
-            best_analysis = symbol_analysis_map.get(selected_symbol)
+            best_reason = ""
+            best_curr_price = 0
+            best_sl_dist = 0
             
             for sym, data_item in symbol_analysis_map.items():
-                if data_item["score"] > (best_analysis["score"] if best_analysis else 0):
+                eval_res = strategy_engine.evaluate_opportunity(data_item["tech"], g_id)
+                if eval_res["action"] in ["LONG", "SHORT"]:
+                    best_action = eval_res["action"]
                     selected_symbol = sym
-                    best_analysis = data_item
+                    best_reason = eval_res["reason"]
+                    best_curr_price = data_item["price"]
+                    best_sl_dist = max(data_item["tech"]["indicators"].get("atr_15m", 0) * 1.5, best_curr_price * 0.01)
+                    break # Take the first one that triggers for this strategy
                     
-            acc_thresh = acc.get("threshold_score", 85)
-            if best_analysis and best_analysis["score"] >= acc_thresh:
+            if best_action != "HOLD":
+                # AI Sentinel override (if strategy uses AI)
+                use_ai = eval_res["use_ai"]
+                ai_approved = True
+                if use_ai:
+                    # In a real deep simulation we'd call the oracle here, 
+                    # but to save API limits on 100 accounts, we assume the initial macro/score filtering is the AI.
+                    pass 
+                
                 if cached_fundamental_report.get("macro_risk_level") == "HIGH_RISK":
                     acc["status"] = f"🛑 Riesgo Noticias ({cached_fundamental_report.get('sentiment_label')})"
-                else:
+                elif ai_approved:
                     try:
                         import historical_catalyst_analyzer
                         historical_catalyst_analyzer.ensure_symbol_historically_analyzed(selected_symbol)
                     except Exception as e:
-                        print(f"Auto-historical analysis notice for {selected_symbol}: {e}")
+                        pass
                         
-                    curr_price = best_analysis["price"]
-                    sl_dist = max(best_analysis["tech"]["indicators"].get("atr_15m", 0) * 1.5, curr_price * 0.01)
-                    sl_target = curr_price - sl_dist
-                    tp_min_target = curr_price + (sl_dist * 2.0)
-                    tp_max_target = curr_price + (sl_dist * 3.5)
-                    qty = round((curr_bal * 0.2) / curr_price, 4)
+                    if best_action == "LONG":
+                        sl_target = best_curr_price - best_sl_dist
+                        tp_min_target = best_curr_price + (best_sl_dist * 2.0)
+                        tp_max_target = best_curr_price + (best_sl_dist * 3.5)
+                    else: # SHORT
+                        sl_target = best_curr_price + best_sl_dist
+                        tp_min_target = best_curr_price - (best_sl_dist * 2.0)
+                        tp_max_target = best_curr_price - (best_sl_dist * 3.5)
+                        
+                    qty = round((curr_bal * 0.2) / best_curr_price, 4)
                     
                     current_hour = datetime.now().hour
                     acc["symbol"] = selected_symbol
                     acc["last_trade_time"] = now_br
                     acc["last_result"] = "🔵 En Curso"
                     acc["position"] = {
-                        "entry_price": curr_price,
+                        "side": best_action,
+                        "entry_price": best_curr_price,
                         "qty": qty,
                         "sl": sl_target,
                         "tp_min": tp_min_target,
@@ -327,11 +365,10 @@ def run_infinite_trading_matrix_cycle():
                         "open_time_br": now_br,
                         "open_hour": current_hour
                     }
-                    acc["status"] = f"EN_OPERACION_VIVO ({selected_symbol} @ ${curr_price:.2f})"
+                    acc["status"] = f"EN_OPERACION_VIVO ({selected_symbol} {best_action} @ ${best_curr_price:.2f})"
             else:
-                top_sym = best_market_opportunity[0] if best_market_opportunity else selected_symbol
-                top_score = best_market_opportunity[1]["score"] if best_market_opportunity else 50
-                acc["status"] = f"BUSCANDO_OPORTUNIDAD ({top_sym} {top_score}pts)"
+                top_sym = selected_symbol
+                acc["status"] = f"BUSCANDO_OPORTUNIDAD (Estrategia G-{g_id})"
 
         total_balance += acc["current_balance"]
         global_trades += acc["trades_count"]
