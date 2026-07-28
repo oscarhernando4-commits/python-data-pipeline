@@ -35,14 +35,39 @@ def load_live_matrix():
     now_time = datetime.now().strftime("%H:%M")
     now_br = f"{now_date}<br>{now_time}"
     
+def get_group_info(index):
+    if index == 0:
+        return {"group_id": 0, "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)", "threshold_score": 85, "risk_pct": 1.5, "label": "Ultra-Estricto A+"}
+    elif 1 <= index <= 20:
+        return {"group_id": 1, "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)", "threshold_score": 85, "risk_pct": 1.5, "label": "Ultra-Estricto A+ (Score >= 85)"}
+    elif 21 <= index <= 40:
+        return {"group_id": 2, "group_name": "🔷 GRUPO 2: Moderado-Estricto", "threshold_score": 75, "risk_pct": 2.0, "label": "Moderado-Estricto (Score >= 75)"}
+    elif 41 <= index <= 60:
+        return {"group_id": 3, "group_name": "⚖️ GRUPO 3: Balanceado", "threshold_score": 65, "risk_pct": 2.5, "label": "Balanceado (Score >= 65)"}
+    elif 61 <= index <= 80:
+        return {"group_id": 4, "group_name": "⚡ GRUPO 4: Frecuencia Alta", "threshold_score": 55, "risk_pct": 3.0, "label": "Frecuencia Alta (Score >= 55)"}
+    else: # 81 <= index <= 99
+        return {"group_id": 5, "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia", "threshold_score": 45, "risk_pct": 3.5, "label": "Máxima Permisividad (Score >= 45)"}
+
+def load_live_matrix():
+    now_date = datetime.now().strftime("%y-%m-%d")
+    now_time = datetime.now().strftime("%H:%M")
+    now_br = f"{now_date}<br>{now_time}"
+    
     if not os.path.exists(DATA_MATRIX_FILE):
         accounts = []
         for i in range(0, 100):
             assigned_pair = TOP_PAIRS[i % len(TOP_PAIRS)]
             acc_id = "SIM-000 (Réplica Real)" if i == 0 else f"SIM-{i:03d}"
+            g_info = get_group_info(i)
             accounts.append({
                 "account_id": acc_id,
                 "symbol": assigned_pair,
+                "group_id": g_info["group_id"],
+                "group_name": g_info["group_name"],
+                "threshold_score": g_info["threshold_score"],
+                "risk_pct": g_info["risk_pct"],
+                "permissiveness_label": g_info["label"],
                 "initial_capital": 100.0,
                 "current_balance": 100.0,
                 "pnl_usd": 0.0,
@@ -68,7 +93,14 @@ def load_live_matrix():
         return data
     with open(DATA_MATRIX_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
-        for acc in data.get("accounts", []):
+        accounts = data.get("accounts", [])
+        for i, acc in enumerate(accounts):
+            g_info = get_group_info(i)
+            acc["group_id"] = g_info["group_id"]
+            acc["group_name"] = g_info["group_name"]
+            acc["threshold_score"] = g_info["threshold_score"]
+            acc["risk_pct"] = g_info["risk_pct"]
+            acc["permissiveness_label"] = g_info["label"]
             pnl = acc.get("pnl_usd", 0.0)
             if "last_result" not in acc or acc["last_result"] in ["NINGUNO", "-"]:
                 if pnl > 0:
@@ -252,7 +284,8 @@ def run_infinite_trading_matrix_cycle():
                     selected_symbol = sym
                     best_analysis = data_item
                     
-            if best_analysis and best_analysis["score"] >= 85 and best_analysis["tech"]["indicators"].get("volume_surge_ratio", 1.0) >= 1.8:
+            acc_thresh = acc.get("threshold_score", 85)
+            if best_analysis and best_analysis["score"] >= acc_thresh:
                 fundamental_report = fundamental_sentinel.get_crypto_fundamental_sentinel()
                 if fundamental_report.get("macro_risk_level") == "HIGH_RISK":
                     acc["status"] = f"🛑 Riesgo Noticias ({fundamental_report.get('sentiment_label')})"
@@ -325,31 +358,70 @@ def sync_live_matrix_obsidian(matrix):
     now_br = f"{now_date}<br>{now_time}"
     accounts = matrix["accounts"]
     
-    table_rows = ""
+    # Group Accounts by group_id (0 to 5)
+    groups_dict = {}
     for acc in accounts:
-        last_res = acc.get("last_result", "Esperando")
-        last_time = acc.get("last_trade_time", now_br)
-        trades_num = acc.get("trades_count", 0)
-        pnl = acc.get("pnl_usd", 0.0)
-        bal = acc.get("current_balance", 100.0)
-        sym = acc.get("symbol", "USDT")
-        status_raw = acc.get("status", "")
+        g_id = acc.get("group_id", 1)
+        if g_id not in groups_dict:
+            groups_dict[g_id] = []
+        groups_dict[g_id].append(acc)
+
+    grouped_tables_md = ""
+    
+    group_titles = {
+        0: "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)",
+        1: "🛡️ GRUPO 1: Ultra-Estricto (Copia Estrategia Real A+ - Score >= 85 Pts)",
+        2: "🔷 GRUPO 2: Moderado-Estricto (Permisividad Nivel 2 - Score >= 75 Pts)",
+        3: "⚖️ GRUPO 3: Balanceado (Permisividad Nivel 3 - Score >= 65 Pts)",
+        4: "⚡ GRUPO 4: Frecuencia Alta (Permisividad Nivel 4 - Score >= 55 Pts)",
+        5: "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia (Permisividad Nivel 5 - Score >= 45 Pts)"
+    }
+
+    for g_id in sorted(groups_dict.keys()):
+        acc_list = groups_dict[g_id]
+        g_name = group_titles.get(g_id, f"GRUPO {g_id}")
         
-        if "EN_OPERACION_VIVO" in status_raw or acc.get("position") is not None:
-            status_clean = f"🔵 En Vivo"
-        elif "Riesgo Noticias" in status_raw or "🛑" in status_raw:
-            status_clean = f"🛑 Pausado por Noticia"
-        elif pnl < 0:
-            status_clean = f"🔴 Buscando"
-        elif pnl > 0:
-            status_clean = f"🟢 Buscando"
-        else:
-            status_clean = f"🟦 Buscando"
+        g_bal = sum(a.get("current_balance", 100.0) for a in acc_list)
+        g_pnl = sum(a.get("pnl_usd", 0.0) for a in acc_list)
+        g_wins = sum(a.get("wins", 0) for a in acc_list)
+        g_losses = sum(a.get("losses", 0) for a in acc_list)
+        g_trades = sum(a.get("trades_count", 0) for a in acc_list)
+        g_wr = round((g_wins / g_trades * 100.0), 1) if g_trades > 0 else 0.0
+        g_pnl_str = f"+${g_pnl:.2f}" if g_pnl >= 0 else f"-${abs(g_pnl):.2f}"
+        
+        grouped_tables_md += f"## {g_name}\n\n"
+        grouped_tables_md += f"> 📊 **Resumen del {g_name}:**  \n"
+        grouped_tables_md += f"> - 💵 **Balance Total del Grupo:** `${g_bal:,.2f} USD` (`{g_pnl_str}`)  \n"
+        grouped_tables_md += f"> - 🎯 **Operaciones Totales:** `{g_trades}` (`{g_wins} Ganadas / {g_losses} Perdidas`)  \n"
+        grouped_tables_md += f"> - 📈 **Tasa de Acierto del Grupo:** `{g_wr}% Win Rate`  \n\n"
+        
+        grouped_tables_md += f"| ID Cuenta | Cripto | Ops (#) | Racha | Última Hora | Último Resultado | Balance Actual (PnL) | Estado Operativo |\n"
+        grouped_tables_md += f"| :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |\n"
+        
+        for acc in acc_list:
+            last_res = acc.get("last_result", "Esperando")
+            last_time = acc.get("last_trade_time", now_br)
+            trades_num = acc.get("trades_count", 0)
+            pnl = acc.get("pnl_usd", 0.0)
+            bal = acc.get("current_balance", 100.0)
+            sym = acc.get("symbol", "USDT")
+            status_raw = acc.get("status", "")
             
-        pnl_str = f"+${pnl:.2f}" if pnl >= 0 else f"-${abs(pnl):.2f}"
-        
-        # NO BACKTICKS AROUND last_time SO <br> COMPILES AS NATIVE HTML LINE BREAK!
-        table_rows += f"| **{acc['account_id']}** | **{sym}** | `#{trades_num}` | `{acc['wins']}W/{acc['losses']}L` | {last_time} | `{last_res}` | **`${bal:.2f}`** (`{pnl_str}`) | {status_clean} |\n"
+            if "EN_OPERACION_VIVO" in status_raw or acc.get("position") is not None:
+                status_clean = f"🔵 En Vivo"
+            elif "Riesgo Noticias" in status_raw or "🛑" in status_raw:
+                status_clean = f"🛑 Pausado Noticias"
+            elif pnl < 0:
+                status_clean = f"🔴 Buscando"
+            elif pnl > 0:
+                status_clean = f"🟢 Buscando"
+            else:
+                status_clean = f"🟦 Buscando"
+                
+            pnl_str = f"+${pnl:.2f}" if pnl >= 0 else f"-${abs(pnl):.2f}"
+            grouped_tables_md += f"| **{acc['account_id']}** | **{sym}** | `#{trades_num}` | `{acc['wins']}W/{acc['losses']}L` | {last_time} | `{last_res}` | **`${bal:.2f}`** (`{pnl_str}`) | {status_clean} |\n"
+            
+        grouped_tables_md += "\n---\n\n"
 
     # Calculate separated account percentages respect to 100 total accounts
     total_acc_count = len(accounts)
@@ -388,41 +460,28 @@ def sync_live_matrix_obsidian(matrix):
         f"---\n\n"
     )
 
-    content = f"""{real_section}# 🚀 MATRIZ DE 100 CUENTAS TESTNET ($10,000 USD APRENDIZAJE IA)
-
-## 📊 RESUMEN EJECUTIVO GLOBAL ($10,000 USD FONDO TOTAL TESTNET)
-
-- 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)
-- 📈 **Capital Total Acumulado:** **`${matrix['current_total_usd']:,.2f} USD`**
-- 💰 **Beneficio Neto Acumulado:** **`${matrix['net_pnl_usd']:+,.2f} USD`**
-
-### 📊 ESTADO DESGLOSADO DE LAS 100 CUENTAS (SUMA EXACTA 100%):
-- 🟢 **Cuentas Ganadoras (+3% o más):** **`{pct_winning}%`** (`{winning_accs}` de 100 Cuentas)
-- 🔴 **Cuentas en Pérdida (-1.5%):** **`{pct_losing}%`** (`{losing_accs}` de 100 Cuentas)
-- 🔵 **Cuentas Operando en Vivo (En Curso):** **`{pct_active}%`** (`{active_live_accs}` de 100 Cuentas)
-- ⚪ **Cuentas Neutras / En Espera ($100 Exactos):** **`{pct_neutral}%`** (`{neutral_accs}` de 100 Cuentas)
-
----
-
-## 💼 TABLA COMPACTA DE LAS 100 CUENTAS
-
-| ID | Cripto | Ops (#) | Racha | Última Op (Fecha / Hora) | Último Resultado | Balance (PnL) | Estado |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-{table_rows}
-
----
-
-## 🔗 NAVEGACIÓN RÁPIDA
-- [[📊_MASTER_DASHBOARD_TRADING|Ver Master Dashboard]]
-- [[🎯_Seguimiento_De_Metas|Ver Seguimiento de Metas $100 USD]]
-- [[📊_Dashboard_Interes_Compuesto|Ver Dashboard de Interés Compuesto]]
-- [[🧠_Matriz_De_Aprendizaje|Ver Matriz de IA y Aprendizaje]]
-- [[🛡️_Escudo_Anti_Caidas_Y_Riesgo|Ver Escudo Anti-Caídas]]
-"""
-
+    matrix_md = (
+        f"{real_section}"
+        f"# 🚀 MATRIZ CLASIFICADA EN 5 GRUPOS PROGRESIVOS (100 CUENTAS TESTNET)\n\n"
+        f"> 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  \n"
+        f"> - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  \n"
+        f"> - 📈 **Capital Total Acumulado:** **`${matrix['current_total_usd']:,.2f} USD`** (`${matrix['net_pnl_usd']:+,.2f} USD`)  \n"
+        f"> - 🟢 **Cuentas Ganadoras (+3% Meta Cumplida):** `{winning_accs} Cuentas ({pct_winning}%)`  \n"
+        f"> - 🔴 **Cuentas en Pérdida (-1.5% Stop Loss):** `{losing_accs} Cuentas ({pct_losing}%)`  \n"
+        f"> - 🔵 **Cuentas Operando en Vivo:** `{active_live_accs} Cuentas ({pct_active}%)`  \n"
+        f"> - ⚪ **Cuentas Neutras / En Espera:** `{neutral_accs} Cuentas ({pct_neutral}%)`  \n\n"
+        f"{grouped_tables_md}\n"
+        f"## 🔗 NAVEGACIÓN RÁPIDA DE OBSIDIAN\n"
+        f"- [[📊_MASTER_DASHBOARD_TRADING|Ver Master Dashboard]]\n"
+        f"- [[🎯_Seguimiento_De_Metas|Ver Seguimiento de Metas $100 USD]]\n"
+        f"- [[📊_Dashboard_Interes_Compuesto|Ver Dashboard de Interés Compuesto]]\n"
+        f"- [[🧠_Matriz_De_Aprendizaje|Ver Matriz de IA y Aprendizaje]]\n"
+        f"- [[🛡️_Escudo_Anti_Caidas_Y_Riesgo|Ver Escudo Anti-Caídas]]\n"
+    )
+    
     file_path = os.path.join(OBSIDIAN_FOLDER, "🚀_Matriz_100_Simulaciones.md")
     with open(file_path, "w", encoding="utf-8") as f:
-        f.write(content)
+        f.write(matrix_md)
     return file_path
 
 def ensure_obsidian_dir():
