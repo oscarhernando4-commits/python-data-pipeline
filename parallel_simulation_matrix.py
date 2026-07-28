@@ -250,7 +250,8 @@ def run_infinite_trading_matrix_cycle():
                 
                 learning_engine.record_trade_outcome(
                     symbol=symbol, side="BUY", entry_price=entry_p, exit_price=curr_price,
-                    pnl_usd=pnl, result_type="WIN", notes=f"Win on {symbol} (+${pnl:.2f}) -> Level {acc['current_level']} Re-Trading Started!"
+                    pnl_usd=pnl, result_type="WIN", notes=f"Win on {symbol} (+${pnl:.2f}) -> Level {acc['current_level']} Re-Trading Started!",
+                    account_id=acc.get("account_id", "Desconocida"), group_name=acc.get("group_name", "Sin Grupo")
                 )
 
             # LOSS CASE: Hit Stop-Loss (-1.5%)
@@ -268,7 +269,8 @@ def run_infinite_trading_matrix_cycle():
                 
                 learning_engine.record_trade_outcome(
                     symbol=symbol, side="BUY", entry_price=entry_p, exit_price=curr_price,
-                    pnl_usd=-loss, result_type="LOSS", notes=f"Hit SL on {symbol} (-${loss:.2f}). Re-Trading!"
+                    pnl_usd=-loss, result_type="LOSS", notes=f"Hit SL on {symbol} (-${loss:.2f}). Re-Trading!",
+                    account_id=acc.get("account_id", "Desconocida"), group_name=acc.get("group_name", "Sin Grupo")
                 )
             else:
                 unr_pnl = (curr_price - entry_p) * position["qty"]

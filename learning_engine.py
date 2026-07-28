@@ -42,12 +42,14 @@ def save_memory(data):
         json.dump(data, f, indent=2, ensure_ascii=False)
     sync_learning_note(data)
 
-def record_trade_outcome(symbol, side, entry_price, exit_price, pnl_usd, result_type, notes=""):
+def record_trade_outcome(symbol, side, entry_price, exit_price, pnl_usd, result_type, notes="", account_id="Histórico", group_name="Sin Grupo"):
     data = load_memory()
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
     trade_entry = {
         "timestamp": now_str,
+        "account_id": account_id,
+        "group_name": group_name,
         "symbol": symbol.upper(),
         "side": side.upper(),
         "entry_price": entry_price,

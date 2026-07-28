@@ -160,9 +160,27 @@ date: {now_str}
 - [[🚀_Matriz_100_Simulaciones|Ver Lista Completa de las 100 Cuentas]]
 - [[🎯_Seguimiento_De_Metas|Ver Tabla de Metas Semana a Semana]]
 - [[📊_Dashboard_Interes_Compuesto|Ver Proyección de Interés Compuesto]]
-- [[🧠_Matriz_De_Aprendizaje|Ver IA y Reglas de Aprendizaje]]
-- [[🛡️_Escudo_Anti_Caidas_Y_Riesgo|Ver Protocolo Anti-Caídas]]
+
+## 📂 Sub-Reportes por Ventanas de Tiempo
+Análisis de rendimiento detallado a 1D, 3D, 1W, 2W, y 1M:
+
 """
+
+    try:
+        import reports_generator
+        files = reports_generator.generate_subreports()
+        if not files:
+            master_md += "> ⏳ Aún no hay datos agrupados para generar sub-reportes (comenzará a poblarse con las próximas operaciones).\n"
+        for f in files:
+            group_name = f['group']
+            filename = f['file']
+            master_md += f"- [[{filename.replace('.md', '')}]] ({group_name})\n"
+    except Exception as e:
+        master_md += f"> ⚠️ Error generando sub-reportes: {e}\n"
+
+    master_md += "\n## 📚 Knowledge Base\n"
+    master_md += "- [[🧠_Patrones_de_Aprendizaje_y_Optimizacion_IA]]\n"
+    master_md += "- [[🛡️_Escudo_Anti_Caidas_Y_Riesgo|Ver Protocolo Anti-Caídas]]\n"
 
     file_path = os.path.join(OBSIDIAN_FOLDER, "📊_MASTER_DASHBOARD_TRADING.md")
     with open(file_path, "w", encoding="utf-8") as f:

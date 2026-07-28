@@ -174,11 +174,21 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 try:
                     res = requests.post(f"{BASE_URL}/api/v3/order", headers=headers, params=sell_params, proxies=PROXIES, timeout=10)
                     if res.status_code == 200:
+                        import learning_engine
                         state["trades_count"] += 1
+                        pnl_usd = (current_price - entry) * active_qty
                         if pnl_pct >= 3.0:
                             state["wins"] += 1
+                            res_type = "WIN"
                         else:
                             state["losses"] += 1
+                            res_type = "LOSS"
+                            
+                        learning_engine.record_trade_outcome(
+                            symbol=active_symbol, side="BUY", entry_price=entry, exit_price=current_price,
+                            pnl_usd=pnl_usd, result_type=res_type, notes=f"Real Money Trade closed with {pnl_pct:.2f}%",
+                            account_id="R-01", group_name="CUENTA REAL"
+                        )
                         state["position"] = None
                         state["status"] = "🟦 Buscando Entrada A+"
                 except Exception as e:
