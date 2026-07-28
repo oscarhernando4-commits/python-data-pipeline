@@ -407,8 +407,13 @@ def run_infinite_trading_matrix_cycle():
                 current_price=best_bearish_opportunity[1]["price"],
                 is_bearish=True
             )
-        elif selected_opp:
-            print(f"🔒 [REAL] Oportunidad en {selected_opp[0]} bloqueada. IA Approved={is_ai_approved} (Acción sugerida: {ai_action})")
+        else:
+            if selected_opp:
+                print(f"🔒 [REAL] Oportunidad en {selected_opp[0]} ignorada/bloqueada. IA Approved={is_ai_approved} (Acción sugerida: {ai_action})")
+            # Always run the trader to manage OPEN positions and sync balances, even if no new entry is approved
+            real_money_trader.evaluate_and_trade_real_money(
+                best_symbol=None, best_score=50, current_price=0.0, is_bearish=False
+            )
             
     except Exception as e_real:
         print(f"Real trader notice: {e_real}")
