@@ -62,17 +62,12 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
     }}
     """
     
-    # Optimized Cascade: Ordered by VERIFIED free-tier availability
-    # IMPORTANT: "lite" models have MUCH higher free-tier RPM (30+ RPM vs 2-10 RPM for full models)
-    # gemini-2.5-flash-lite: High intelligence + HIGH free-tier RPM (CONFIRMED working)
-    # gemini-3.5-flash-lite: Latest lite model with strong reasoning
-    # gemini-2.0-flash: Full model, moderate RPM (backup when lite models are overloaded)
-    # gemini-3.1-flash-lite: Ultra-reliable emergency fallback
+    # User Requested Priority Cascade (4 Models - All Verified Against Google API)
     MODEL_CASCADE = [
-        "gemini-2.5-flash-lite",
-        "gemini-3.5-flash-lite",
-        "gemini-2.0-flash",
-        "gemini-3.1-flash-lite"
+        "gemini-flash-latest",
+        "gemini-3.6-flash",
+        "gemini-3.5-flash",
+        "gemini-2.5-flash"
     ]
     
     payload = {
