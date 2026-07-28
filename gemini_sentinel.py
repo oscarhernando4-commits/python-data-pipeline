@@ -6,10 +6,10 @@ import urllib.request
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 
-def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed):
+def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed, macro_context=""):
     """
-    Super-Brain AI Decision Reviewer using Google Gemini Flash Free API (gemini-flash-latest).
-    Provides sub-second LLM reasoning for high-stakes trades.
+    Super-Brain AI Decision Reviewer using Google Gemini Flash Free API.
+    Provides sub-second LLM reasoning for high-stakes trades, enriched with Macro Lite context.
     """
     if not GEMINI_API_KEY:
         print("💡 Gemini Notice: GEMINI_API_KEY no configurada aún. Usando fallback cuantitativo.")
@@ -35,7 +35,10 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
     BASE DE DATOS DE EVENTOS EXTREMOS HISTÓRICOS DE {symbol}:
     - {extreme_context}
 
-    EVALÚA LOS SIGUIENTES DATOS EN TIEMPO REAL:
+    ESTADO GLOBAL DEL MERCADO (Reporte de Analista Macro Lite):
+    - {macro_context if macro_context else "Contexto Macro No Disponible."}
+
+    EVALÚA LOS SIGUIENTES DATOS EN TIEMPO REAL PARA {symbol}:
     - Puntaje Técnico Cuantitativo Actual: {score} / 100 Pts
     - RSI 15M: {indicators.get('rsi_15m', 'N/A')}
     - MACD Histograma 15M: {indicators.get('macd_hist_15m', 'N/A')}
@@ -71,12 +74,12 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
     }
     
     # Option 1: Top 1 Filter implemented. 
-    # Valid free tier high-capacity models
+    # Exact cascade requested by user
     models_to_try = [
-        "gemini-3-flash-preview", 
-        "gemini-2.5-flash",
         "gemini-flash-latest",
-        "gemini-2.0-flash"
+        "gemini-3.6-flash", 
+        "gemini-3.5-flash", 
+        "gemini-2.5-flash"
     ]
     
     max_retries_per_model = 2
