@@ -131,6 +131,8 @@ def run_infinite_trading_matrix_cycle():
     accounts = matrix["accounts"]
     
     symbol_analysis_map = {}
+    # Cache fundamental sentinel ONCE per cycle (prevents 100 redundant HTTP calls)
+    cached_fundamental_report = fundamental_sentinel.get_crypto_fundamental_sentinel()
     best_market_opportunity = None
     best_bearish_opportunity = None
     max_market_score = -1
@@ -208,9 +210,6 @@ def run_infinite_trading_matrix_cycle():
     total_balance = 0.0
     global_trades = 0
     global_wins = 0
-
-    # Cache fundamental sentinel ONCE per cycle (prevents 100 redundant HTTP calls)
-    cached_fundamental_report = fundamental_sentinel.get_crypto_fundamental_sentinel()
 
     for acc in accounts:
         curr_bal = acc["current_balance"]
