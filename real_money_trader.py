@@ -66,6 +66,48 @@ def get_real_usdt_balance():
     balances = get_real_balances()
     return sum([float(b["free"]) for b in balances if b["asset"] in ["USDT", "USDC"]])
 
+def get_real_futures_balances():
+    timestamp = int(time.time() * 1000)
+    params = {"timestamp": timestamp}
+    query_string = urlencode(params)
+    signature = hmac.new(API_SECRET.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
+    params["signature"] = signature
+    headers = {"X-MBX-APIKEY": API_KEY}
+    
+    url = "https://fapi.binance.com/fapi/v2/account"
+    try:
+        # NO proxy here - balance checks must NOT consume Fixie quota
+        res = requests.get(url, headers=headers, params=params, timeout=10)
+        if res.status_code == 200:
+            return res.json().get("assets", [])
+        return []
+    except Exception:
+        return []
+
+def get_real_futures_positions():
+    timestamp = int(time.time() * 1000)
+    params = {"timestamp": timestamp}
+    query_string = urlencode(params)
+    signature = hmac.new(API_SECRET.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
+    params["signature"] = signature
+    headers = {"X-MBX-APIKEY": API_KEY}
+    
+    url = "https://fapi.binance.com/fapi/v2/positionRisk"
+    try:
+        # NO proxy here - checks must NOT consume Fixie quota
+        res = requests.get(url, headers=headers, params=params, timeout=10)
+        if res.status_code == 200:
+            positions = res.json()
+            # Return only active positions
+            return [p for p in positions if float(p.get("positionAmt", 0)) != 0.0]
+        return []
+    except Exception:
+        return []
+
+def get_real_futures_usdt_balance():
+    assets = get_real_futures_balances()
+    return sum([float(a["availableBalance"]) for a in assets if a["asset"] in ["USDT", "USDC"]])
+
 def execute_real_spot_market_buy(symbol, usdt_amount):
     timestamp = int(time.time() * 1000)
     # Round down to nearest clean integer (e.g. 15.00 USD) for 100% precision safety
@@ -123,6 +165,30 @@ def execute_real_futures_market_short(symbol, usdt_amount):
     except Exception as e:
         return {"error": str(e)}
 
+def execute_real_futures_market_close(symbol, quantity):
+    timestamp = int(time.time() * 1000)
+    
+    fapi_url = "https://fapi.binance.com"
+    params = {
+        "symbol": symbol,
+        "side": "BUY", # We are closing a SHORT, so we BUY
+        "type": "MARKET",
+        "quantity": str(quantity),
+        "reduceOnly": "true",
+        "timestamp": timestamp
+    }
+        
+    query_string = urlencode(params)
+    signature = hmac.new(API_SECRET.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
+    params["signature"] = signature
+    headers = {"X-MBX-APIKEY": API_KEY}
+    
+    try:
+        res = requests.post(f"{fapi_url}/fapi/v1/order", headers=headers, params=params, proxies=PROXIES, timeout=10)
+        return res.json()
+    except Exception as e:
+        return {"error": str(e)}
+
 def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bearish=False):
     state = load_real_account_state()
     balances = get_real_balances()
@@ -134,8 +200,12 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
     bnb_usd = bnb_free * 575.0  # Approx BNB price
     total_val = usdt_free + bnb_usd
     
-    # Check for active non-USDT crypto position on Binance Spot Real
+    # Check for active non-USDT crypto position on Binance Spot Real (LONG)
     crypto_balances = [b for b in balances if b["asset"] not in ["USDT", "USDC", "BNB"] and float(b["free"]) > 0]
+    
+    # Check for active Futures positions (SHORT)
+    futures_positions = get_real_futures_positions()
+    futures_usdt_free = get_real_futures_usdt_balance()
     
     now_str = datetime.now().strftime("%y-%m-%d<br>%H:%M")
     
@@ -193,6 +263,53 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         state["status"] = "🟦 Buscando Entrada A+"
                 except Exception as e:
                     print(f"Error ejecutando venta real: {e}")
+                    
+    elif futures_positions:
+        # We have an active SHORT position
+        active_pos = futures_positions[0]
+        active_symbol = active_pos["symbol"]
+        # Position amount is negative for SHORTs
+        active_qty = abs(float(active_pos["positionAmt"]))
+        entry = float(active_pos["entryPrice"])
+        est_val = active_qty * current_price if current_price > 0 else 17.0
+        
+        state["position"] = {
+            "symbol": active_symbol,
+            "quantity": active_qty,
+            "entry_price": entry,
+            "cost_usd": round(est_val, 2),
+            "side": "SHORT"
+        }
+        
+        # PnL logic for SHORT: If current price drops, pnl is positive
+        if entry > 0:
+            pnl_pct = ((entry - current_price) / entry) * 100.0
+            state["status"] = f"🔻 En Vivo SHORT ({active_symbol} @ ${current_price:.4f} | PnL: {pnl_pct:+.2f}%)"
+            
+            if pnl_pct >= 3.0 or pnl_pct <= -1.5:
+                print(f"🎯 ALERTA REAL: Salida SHORT por PnL {pnl_pct:.2f}% en {active_symbol}. Cerrando (BUY)...")
+                close_res = execute_real_futures_market_close(active_symbol, active_qty)
+                if "orderId" in close_res:
+                    import learning_engine
+                    state["trades_count"] += 1
+                    pnl_usd = (entry - current_price) * active_qty
+                    if pnl_pct >= 3.0:
+                        state["wins"] += 1
+                        res_type = "WIN"
+                    else:
+                        state["losses"] += 1
+                        res_type = "LOSS"
+                        
+                    learning_engine.record_trade_outcome(
+                        symbol=active_symbol, side="SHORT", entry_price=entry, exit_price=current_price,
+                        pnl_usd=pnl_usd, result_type=res_type, notes=f"Real Money SHORT closed with {pnl_pct:.2f}%",
+                        account_id="R-01", group_name="CUENTA REAL"
+                    )
+                    state["position"] = None
+                    state["status"] = "🟦 Buscando Entrada A+"
+                else:
+                    print(f"Error ejecutando cierre de SHORT real: {close_res}")
+                    
     else:
         state["position"] = None
         state["status"] = "🟦 Buscando Entrada A+"
@@ -211,15 +328,14 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 state["status"] = f"🔵 En Vivo LONG ({best_symbol})"
                 
         # 2. SHORT Entry Signal (Bearish Score <= 15 Pts / High Bearish Confluence)
-        # Futures IS enabled on real account (verified). Uses 2 Fixie requests (price + order).
-        elif best_symbol and is_bearish and best_score <= 15 and usdt_free >= 15.0:
+        elif best_symbol and is_bearish and best_score <= 15 and futures_usdt_free >= 15.0:
             print(f"📉 SEÑAL A+ BAJISTA (SHORT) DETECTADA ({best_symbol} @ Score {best_score}). Abriendo Short en Binance Futuros...")
-            short_res = execute_real_futures_market_short(best_symbol, usdt_free)
+            short_res = execute_real_futures_market_short(best_symbol, futures_usdt_free)
             if "orderId" in short_res:
                 state["position"] = {
                     "symbol": best_symbol,
                     "entry_price": current_price,
-                    "cost_usd": round(usdt_free, 2),
+                    "cost_usd": round(futures_usdt_free, 2),
                     "side": "SHORT"
                 }
                 state["status"] = f"🔻 En Vivo SHORT ({best_symbol})"
