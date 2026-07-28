@@ -54,9 +54,9 @@ def get_market_macro_context(symbol_analysis_map, fear_greed, news_headlines):
     }
     
     # We use lite for macro sweep to save standard flash quota
-    model_name = "gemini-2.5-flash-lite"
+    model_name = "gemini-3.1-flash-lite-preview"
     
-    print(f"🕵️ [Macro Analyst Lite] Analizando el contexto global de {len(symbol_analysis_map)} criptomonedas...")
+    print(f"🕵️ [Macro Analyst Lite ({model_name})] Analizando el contexto global de {len(symbol_analysis_map)} criptomonedas...")
     
     for attempt in range(2):
         try:
