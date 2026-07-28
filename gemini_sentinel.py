@@ -65,45 +65,61 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed)
     # User Requested Priority Cascade (Strongest → Fallback)
     # Each model gets 2 attempts with 5s wait on rate-limit before moving to next
     MODEL_CASCADE = [
-        "gemini-flash-latest",       # 1° Prioridad: Siempre el más actual y potente
-        "gemini-3.6-flash",          # 2° Prioridad: Último modelo estable
-        "gemini-3.5-flash",          # 3° Prioridad: Modelo probado
-        "gemini-2.5-flash"           # 4° Última alternativa
-    ]
-    
     payload = {
         "contents": [{"parts": [{"text": prompt_text}]}],
         "generationConfig": {"temperature": 0.2, "responseMimeType": "application/json"}
     }
     
-    for model_name in MODEL_CASCADE:
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_API_KEY}"
-        
-        # Each model gets 2 attempts (retry once after 5s if rate-limited)
-        for attempt in range(1, 3):
+    # Option 1: Top 1 Filter implemented. 
+    # Valid free tier high-capacity models
+    models_to_try = [
+        "gemini-3-flash-preview", 
+        "gemini-2.5-flash",
+        "gemini-flash-latest",
+        "gemini-2.0-flash"
+    ]
+    
+    max_retries_per_model = 2
+    
+    print(f"✅ [Pre-Filtro Matemático] 30 Pares analizados. Consultando al Súper-Cerebro Gemini AI SOLO para el TOP 1 ({symbol})...")
+    
+    for model_name in models_to_try:
+        for attempt in range(max_retries_per_model):
             try:
-                req = urllib.request.Request(
-                    url, 
-                    data=json.dumps(payload).encode("utf-8"), 
-                    headers={"Content-Type": "application/json"},
-                    method="POST"
-                )
-                with urllib.request.urlopen(req, timeout=20) as response:
-                    res_json = json.loads(response.read().decode("utf-8"))
-                    content = res_json['candidates'][0]['content']['parts'][0]['text']
-                    parsed = json.loads(content)
-                    print(f"🎉 Respuesta Exitosa de AI Co-Pilot ({model_name}): Approved={parsed.get('approved')} | Conf={parsed.get('confidence')}% | Razonamiento: {parsed.get('reasoning')}")
-                    return parsed
-            except Exception as e:
-                error_str = str(e)
-                is_rate_limit = "429" in error_str or "503" in error_str
-                if is_rate_limit and attempt == 1:
-                    print(f"⏳ {model_name}: Rate limit (intento {attempt}/2). Esperando 5s para reintentar este modelo...")
-                    time.sleep(5)
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_API_KEY}"
+                
+                req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers={'Content-Type': 'application/json'})
+                with urllib.request.urlopen(req, timeout=10) as response:
+                    res_data = json.loads(response.read().decode('utf-8'))
+                    
+                    if "candidates" in res_data and len(res_data["candidates"]) > 0:
+                        text_res = res_data["candidates"][0]["content"]["parts"][0]["text"]
+                        
+                        try:
+                            # Clean markdown blocks if present
+                            if "```json" in text_res:
+                                text_res = text_res.split("```json")[1].split("```")[0]
+                            elif "```" in text_res:
+                                text_res = text_res.split("```")[1].split("```")[0]
+                                
+                            parsed_res = json.loads(text_res.strip())
+                            if "approved" in parsed_res and "confidence" in parsed_res:
+                                return parsed_res
+                        except json.JSONDecodeError:
+                            return {"approved": True, "confidence": score, "reasoning": "Fallback cuantitativo (Fallo de formato IA)"}
+            except urllib.error.HTTPError as e:
+                if e.code == 429:
+                    print(f"⏳ {model_name}: Rate limit (intento {attempt+1}/{max_retries_per_model}). Esperando 10s para reintentar este modelo...")
+                    time.sleep(10) # Mayor tiempo de espera para que se recupere la cuota (Opción 1)
                 else:
-                    print(f"💡 Aviso ({model_name}): {e}. Pasando al siguiente modelo...")
-                    break  # Move to next model
-            
+                    print(f"💡 Aviso ({model_name}): HTTP Error {e.code}. Pasando al siguiente modelo...")
+                    break # Skip to next model on 400, 403, 500, etc.
+            except Exception as e:
+                print(f"💡 Error de conexión ({model_name}): {e}. Pasando al siguiente modelo...")
+                break
+                
+        print(f"⏭️ Agotados intentos para {model_name}. Cambiando a modelo de respaldo...")
+
     print("Gemini LLM Notice: Todos los modelos de IA ocupados. Usando fallback cuantitativo seguro.")
     return {"approved": True, "confidence": score, "reasoning": f"Fallback cuantitativo seguro (Score >= {score} Pts)"}
 
