@@ -2,7 +2,6 @@ import os
 import json
 import sys
 from datetime import datetime
-import parallel_simulation_matrix
 import learning_engine
 import obsidian_sync
 try:
@@ -10,13 +9,23 @@ try:
 except ImportError:
     real_money_trader = None
 
-OBSIDIAN_FOLDER = parallel_simulation_matrix.OBSIDIAN_FOLDER
+def _get_obsidian_folder():
+    local_path = r"C:\Users\hosca\Documents\Antigravity\Obsidian\01_PROYECTOS\BINANCE_QUANT_TRADING"
+    if os.path.exists(os.path.dirname(local_path)):
+        os.makedirs(local_path, exist_ok=True)
+        return local_path
+    rel_path = os.path.join(os.getcwd(), "Obsidian", "01_PROYECTOS", "BINANCE_QUANT_TRADING")
+    os.makedirs(rel_path, exist_ok=True)
+    return rel_path
+
+OBSIDIAN_FOLDER = _get_obsidian_folder()
 
 def ensure_obsidian_dir():
     if not os.path.exists(OBSIDIAN_FOLDER):
         os.makedirs(OBSIDIAN_FOLDER, exist_ok=True)
 
 def generate_master_dashboard():
+    import parallel_simulation_matrix
     ensure_obsidian_dir()
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
