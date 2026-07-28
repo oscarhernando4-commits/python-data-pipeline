@@ -332,22 +332,26 @@ def run_infinite_trading_matrix_cycle():
 
     save_live_matrix(matrix)
     
-    # Execute Real Money Trading Scan for Real Account in parallel
-    # Execute Real Money Trading ONLY when there's a genuine A+ BUY signal
-    # Fixie proxy is EXCLUSIVELY for real BUY/SELL order execution (500 requests/month limit)
-    # Do NOT call real_money_trader for balance checks or bearish signals (SHORT disabled on real account)
+    # Execute Real Money Trading ONLY on genuine A+ signals (BUY >= 85 or SHORT <= 15)
+    # Fixie proxy is consumed ONLY when an actual order is placed (not for balance checks)
     try:
         import real_money_trader
         if best_market_opportunity and best_market_opportunity[1]["score"] >= 85:
-            print(f"💰 [REAL] Señal A+ detectada ({best_market_opportunity[0]} @ {best_market_opportunity[1]['score']} Pts). Evaluando cuenta real...")
+            print(f"💰 [REAL] Señal A+ ALCISTA ({best_market_opportunity[0]} @ {best_market_opportunity[1]['score']} Pts). Evaluando cuenta real...")
             real_money_trader.evaluate_and_trade_real_money(
                 best_symbol=best_market_opportunity[0],
                 best_score=best_market_opportunity[1]["score"],
                 current_price=best_market_opportunity[1]["price"],
                 is_bearish=False
             )
-        elif best_bearish_opportunity:
-            print(f"📉 [TESTNET ONLY] Señal bajista ({best_bearish_opportunity[0]} @ Score {best_bearish_opportunity[1]['score']}). SHORT solo en simulación.")
+        elif best_bearish_opportunity and best_bearish_opportunity[1]["score"] <= 15:
+            print(f"📉 [REAL] Señal A+ BAJISTA ({best_bearish_opportunity[0]} @ Score {best_bearish_opportunity[1]['score']}). Evaluando SHORT en Futuros...")
+            real_money_trader.evaluate_and_trade_real_money(
+                best_symbol=best_bearish_opportunity[0],
+                best_score=best_bearish_opportunity[1]["score"],
+                current_price=best_bearish_opportunity[1]["price"],
+                is_bearish=True
+            )
     except Exception as e_real:
         print(f"Real trader notice: {e_real}")
         

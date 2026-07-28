@@ -200,11 +200,21 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 }
                 state["status"] = f"🔵 En Vivo LONG ({best_symbol})"
                 
-        # 2. SHORT Entry Signal - DISABLED on Real Account (Futures not enabled yet)
-        # SHORT logic operates in testnet simulation only. Re-enable when Futures account is activated.
-        # Each SHORT attempt consumes 2 Fixie requests (price check + order execution).
-        elif best_symbol and is_bearish and best_score <= 15:
-            print(f"📉 [SIMULACIÓN] Señal Bajista detectada ({best_symbol} @ Score {best_score}). SHORT solo en Testnet (Futuros no activado en cuenta real).")
+        # 2. SHORT Entry Signal (Bearish Score <= 15 Pts / High Bearish Confluence)
+        # Futures IS enabled on real account (verified). Uses 2 Fixie requests (price + order).
+        elif best_symbol and is_bearish and best_score <= 15 and usdt_free >= 15.0:
+            print(f"📉 SEÑAL A+ BAJISTA (SHORT) DETECTADA ({best_symbol} @ Score {best_score}). Abriendo Short en Binance Futuros...")
+            short_res = execute_real_futures_market_short(best_symbol, usdt_free)
+            if "orderId" in short_res:
+                state["position"] = {
+                    "symbol": best_symbol,
+                    "entry_price": current_price,
+                    "cost_usd": round(usdt_free, 2),
+                    "side": "SHORT"
+                }
+                state["status"] = f"🔻 En Vivo SHORT ({best_symbol})"
+            else:
+                print(f"⚠️ SHORT no ejecutado: {short_res}")
 
     state["current_balance_usd"] = round(total_val if total_val > 0 else 20.08, 2)
     state["net_pnl_usd"] = round(state["current_balance_usd"] - 20.07, 2)
