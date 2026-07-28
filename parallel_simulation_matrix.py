@@ -166,10 +166,10 @@ def run_infinite_trading_matrix_cycle():
             }
             
             # Track both Bullish (High Score) and Bearish (Low Score) setups
-            if final_score >= 80 and final_score > max_market_score:
+            if final_score >= 75 and final_score > max_market_score:
                 max_market_score = final_score
                 best_market_opportunity = (s, symbol_analysis_map[s], "BUY_LONG")
-            elif final_score <= 20 and (min_market_score is None or final_score < min_market_score):
+            elif final_score <= 25 and (min_market_score is None or final_score < min_market_score):
                 min_market_score = final_score
                 best_bearish_opportunity = (s, symbol_analysis_map[s], "SELL_SHORT")
         except Exception as e:
