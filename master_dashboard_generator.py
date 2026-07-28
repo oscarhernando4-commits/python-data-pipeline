@@ -186,7 +186,14 @@ Análisis de rendimiento detallado a 1D, 3D, 1W, 2W, y 1M:
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(master_md)
         
-    print(f"Master Dashboard created at: {file_path}")
+    # Run subreports generator
+    try:
+        import subreports_generator
+        subreports_generator.generate_all_subreports()
+    except Exception as e:
+        print(f"Error generating subreports: {e}")
+        
+    print(f"Dashboard y Sub-Reportes generados exitosamente a las {now_str}")
     return file_path
 
 if __name__ == '__main__':
