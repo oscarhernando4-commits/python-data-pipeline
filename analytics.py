@@ -272,7 +272,10 @@ def analyze_institutional_grade(symbol='BTCUSDT', account_balance=10000.0, risk_
             "macd_hist_15m": round(macd_hist_15m, 4),
             "atr_15m": round(atr_15m, 4),
             "volume_surge": volume_surge,
-            "volume_surge_ratio": volume_surge_ratio
+            "volume_surge_ratio": volume_surge_ratio,
+            "pump_24h_pct": round(pump_24h_pct, 2),
+            "dump_1h_pct": round(dump_1h_pct, 2),
+            "pump_dump_exhaustion": pump_dump_exhaustion
         },
         "institutional_risk_plan": {
             "account_balance": account_balance,

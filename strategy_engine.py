@@ -36,7 +36,9 @@ def evaluate_opportunity(tech, group_id):
     
     # GROUP 0: Replica Real (Algoritmo actual de alta confluencia)
     if group_id == 0:
-        if score >= t["group_0"]["long_score"]:
+        if inds.get("pump_dump_exhaustion", False):
+            return {"action": "SHORT", "use_ai": True, "reason": f"🩸 Pump & Dump Exhaustion: Subida agresiva (+{inds.get('pump_24h_pct', 0)}%) y colapso ({inds.get('dump_1h_pct', 0)}%) detectado (G-0)"}
+        elif score >= t["group_0"]["long_score"]:
             return {"action": "LONG", "use_ai": True, "reason": f"Score >= {t['group_0']['long_score']} (G-0)"}
         elif score <= t["group_0"]["short_score"]:
             return {"action": "SHORT", "use_ai": True, "reason": f"Score <= {t['group_0']['short_score']} (G-0)"}
@@ -67,7 +69,9 @@ def evaluate_opportunity(tech, group_id):
     # GROUP 4: Enfoque Bajista (Short-Seller con IA)
     elif group_id == 4:
         trend_ok = (trend == "BEARISH") if t.get("group_4", {}).get("require_trend", False) else True
-        if rsi >= t["group_4"]["short_rsi"] and macd_hist < 0 and trend_ok:
+        if inds.get("pump_dump_exhaustion", False):
+            return {"action": "SHORT", "use_ai": True, "reason": f"🩸 Pump & Dump Exhaustion: Subida agresiva (+{inds.get('pump_24h_pct', 0)}%) y colapso ({inds.get('dump_1h_pct', 0)}%) detectado (G-4)"}
+        elif rsi >= t["group_4"]["short_rsi"] and macd_hist < 0 and trend_ok:
             return {"action": "SHORT", "use_ai": True, "reason": f"Overbought RSI > {t['group_4']['short_rsi']} + Bear Trend (G-4)"}
         elif score <= t["group_4"]["short_score"]:
             return {"action": "SHORT", "use_ai": True, "reason": f"Score <= {t['group_4']['short_score']} (G-4)"}
