@@ -11,12 +11,25 @@ import master_dashboard_generator
 import strategy_engine
 from datetime import datetime
 
-TOP_PAIRS = [
-    'BTCUSDT', 'ETHUSDT', 'SOLUSDT', 'BNBUSDT', 'ADAUSDT', 
-    'XRPUSDT', 'DOGEUSDT', 'NEARUSDT', 'LINKUSDT', 'AVAXUSDT',
-    'DOTUSDT', 'UNIUSDT', 'ATOMUSDT', 'LTCUSDT', 'ETCUSDT',
-    'FILUSDT', 'APTUSDT', 'TRXUSDT', 'ARBUSDT', 'OPUSDT'
-]
+def get_top_pairs():
+    try:
+        with open("top_100_pairs.json", "r", encoding="utf-8") as f:
+            pairs = json.load(f)
+            if len(pairs) >= 30:
+                return pairs
+    except Exception:
+        pass
+    
+    # Fallback to the classic 30 pairs if file is missing or broken
+    return [
+        "BTCUSDT", "ETHUSDT", "BNBUSDT", "SOLUSDT", "XRPUSDT", "DOGEUSDT", "ADAUSDT",
+        "AVAXUSDT", "LINKUSDT", "DOTUSDT", "MATICUSDT", "LTCUSDT", "BCHUSDT", "UNIUSDT",
+        "ATOMUSDT", "ETCUSDT", "XLMUSDT", "FILUSDT", "NEARUSDT", "APTUSDT", "OPUSDT",
+        "ARBUSDT", "LDOUSDT", "INJUSDT", "RNDRUSDT", "TIAUSDT", "SUIUSDT", "SEIUSDT",
+        "ORDIUSDT", "1000PEPEUSDT"
+    ]
+
+TOP_PAIRS = get_top_pairs()
 
 DATA_MATRIX_FILE = os.path.join(os.path.dirname(__file__), "matrix_100_simulations.json")
 

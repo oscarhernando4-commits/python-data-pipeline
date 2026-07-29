@@ -37,6 +37,7 @@ jobs:
           FIXIE_URL: ${{ secrets.FIXIE_URL || 'http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80' }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
+          python update_top_100_pairs.py
           python parallel_simulation_matrix.py
           
       - name: 💾 Commit & Push Real-Time Matrix Updates
