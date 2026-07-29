@@ -47,4 +47,5 @@ jobs:
           git config --global user.email 'antigravity-bot[bot]@users.noreply.github.com'
           git add .
           git commit -m "Auto-Update: Live 100-Account Matrix Cycle [$(date -u +'%Y-%m-%d %H:%M:%S UTC')]" || echo "No changes to commit"
+          git pull --rebase origin main || true
           git push origin main
