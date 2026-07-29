@@ -6,11 +6,11 @@ THRESHOLDS_FILE = os.path.join(os.path.dirname(__file__), "dynamic_thresholds.js
 def load_thresholds():
     default_t = {
       "group_0": {"long_score": 80, "short_score": 20},
-      "group_1": {"long_score": 80, "rsi_min": 35, "rsi_max": 65},
-      "group_2": {"long_rsi": 35, "short_rsi": 65},
-      "group_3": {"vol_surge": 1.5, "long_rsi": 50},
-      "group_4": {"short_rsi": 65, "short_score": 35},
-      "group_5": {"long_score": 55, "short_score": 45}
+      "group_1": {"long_score": 70, "rsi_min": 30, "rsi_max": 70, "require_trend": True},
+      "group_2": {"long_rsi": 40, "short_rsi": 60, "macd_long": -0.5, "macd_short": 0.5},
+      "group_3": {"vol_surge": 1.2, "long_rsi": 45, "require_trend": False},
+      "group_4": {"short_rsi": 60, "short_score": 40, "require_trend": False},
+      "group_5": {"long_score": 50, "short_score": 50}
     }
     if not os.path.exists(THRESHOLDS_FILE):
         return default_t
@@ -43,26 +43,31 @@ def evaluate_opportunity(tech, group_id):
             
     # GROUP 1: Ultra-Estricto (Tendencia Fuerte Pullback)
     elif group_id == 1:
-        if trend == "BULLISH" and score >= t["group_1"]["long_score"] and t["group_1"]["rsi_min"] <= rsi <= t["group_1"]["rsi_max"]:
+        trend_ok = (trend == "BULLISH") if t.get("group_1", {}).get("require_trend", True) else True
+        if trend_ok and score >= t["group_1"]["long_score"] and t["group_1"]["rsi_min"] <= rsi <= t["group_1"]["rsi_max"]:
             return {"action": "LONG", "use_ai": True, "reason": "Trend Alcista + Pullback RSI + Score Alto (G-1)"}
             
     # GROUP 2: Reversión a la Media (Caza-Rebotes + Inteligencia Artificial)
     elif group_id == 2:
+        macd_l = t.get("group_2", {}).get("macd_long", -0.1)
+        macd_s = t.get("group_2", {}).get("macd_short", 0.1)
         # Buy extreme oversold with MACD divergence starting
-        if rsi <= t["group_2"]["long_rsi"] and macd_hist > -0.1:
+        if rsi <= t["group_2"]["long_rsi"] and macd_hist > macd_l:
             return {"action": "LONG", "use_ai": True, "reason": f"Oversold RSI < {t['group_2']['long_rsi']} Bounce (G-2)"}
         # Short extreme overbought
-        elif rsi >= t["group_2"]["short_rsi"] and macd_hist < 0.1:
+        elif rsi >= t["group_2"]["short_rsi"] and macd_hist < macd_s:
             return {"action": "SHORT", "use_ai": True, "reason": f"Overbought RSI > {t['group_2']['short_rsi']} Bounce (G-2)"}
             
     # GROUP 3: Breakout por Volumen (Volumen + Inteligencia Artificial)
     elif group_id == 3:
-        if vol_surge >= t["group_3"]["vol_surge"] and rsi > t["group_3"]["long_rsi"] and trend == "BULLISH":
+        trend_ok = (trend == "BULLISH") if t.get("group_3", {}).get("require_trend", False) else True
+        if vol_surge >= t["group_3"]["vol_surge"] and rsi > t["group_3"]["long_rsi"] and trend_ok:
             return {"action": "LONG", "use_ai": True, "reason": f"Volume Surge > {t['group_3']['vol_surge']} Breakout (G-3)"}
             
     # GROUP 4: Enfoque Bajista (Short-Seller con IA)
     elif group_id == 4:
-        if rsi >= t["group_4"]["short_rsi"] and macd_hist < 0 and trend == "BEARISH":
+        trend_ok = (trend == "BEARISH") if t.get("group_4", {}).get("require_trend", False) else True
+        if rsi >= t["group_4"]["short_rsi"] and macd_hist < 0 and trend_ok:
             return {"action": "SHORT", "use_ai": True, "reason": f"Overbought RSI > {t['group_4']['short_rsi']} + Bear Trend (G-4)"}
         elif score <= t["group_4"]["short_score"]:
             return {"action": "SHORT", "use_ai": True, "reason": f"Score <= {t['group_4']['short_score']} (G-4)"}

@@ -49,35 +49,49 @@ def auto_tune():
                 stats = v
                 break
                 
-        if stats:
-            total = stats["wins"] + stats["losses"]
-            wr = stats["wins"] / total if total > 0 else 0
+        total = stats["wins"] + stats["losses"] if stats else 0
+        wr = stats["wins"] / total if total > 0 else 0
+        
+        # If winrate is great, relax thresholds to trade more!
+        # If winrate is terrible, tighten thresholds to protect capital.
+        gk = f"group_{g_id}"
+        if gk not in t:
+            continue
             
-            # If winrate is great, relax thresholds to trade more!
-            # If winrate is terrible, tighten thresholds to protect capital.
-            gk = f"group_{g_id}"
-            if gk not in t:
-                continue
-                
-            if wr >= 0.65:
-                # Relax (Decrease long_score, increase short_score, etc.)
-                if "long_score" in t[gk]: t[gk]["long_score"] = max(20, t[gk]["long_score"] - 1)
-                if "short_score" in t[gk]: t[gk]["short_score"] = min(80, t[gk]["short_score"] + 1)
-                if "rsi_min" in t[gk]: t[gk]["rsi_min"] = max(10, t[gk]["rsi_min"] - 1)
-                if "rsi_max" in t[gk]: t[gk]["rsi_max"] = min(90, t[gk]["rsi_max"] + 1)
-                if "long_rsi" in t[gk]: t[gk]["long_rsi"] = min(80, t[gk]["long_rsi"] + 1)
-                if "short_rsi" in t[gk]: t[gk]["short_rsi"] = max(20, t[gk]["short_rsi"] - 1)
-                if "vol_surge" in t[gk]: t[gk]["vol_surge"] = max(1.0, t[gk]["vol_surge"] - 0.1)
-                
-            elif wr < 0.40:
-                # Tighten
-                if "long_score" in t[gk]: t[gk]["long_score"] = min(95, t[gk]["long_score"] + 1)
-                if "short_score" in t[gk]: t[gk]["short_score"] = max(5, t[gk]["short_score"] - 1)
-                if "rsi_min" in t[gk]: t[gk]["rsi_min"] = min(40, t[gk]["rsi_min"] + 1)
-                if "rsi_max" in t[gk]: t[gk]["rsi_max"] = max(60, t[gk]["rsi_max"] - 1)
-                if "long_rsi" in t[gk]: t[gk]["long_rsi"] = max(20, t[gk]["long_rsi"] - 1)
-                if "short_rsi" in t[gk]: t[gk]["short_rsi"] = min(80, t[gk]["short_rsi"] + 1)
-                if "vol_surge" in t[gk]: t[gk]["vol_surge"] = min(3.0, t[gk]["vol_surge"] + 0.1)
+        if not stats or total == 0:
+            print(f"[{gk}] INACTIVITY DETECTED! Relaxing constraints to force trades.")
+            if "long_score" in t[gk]: t[gk]["long_score"] = max(20, t[gk]["long_score"] - 2)
+            if "short_score" in t[gk]: t[gk]["short_score"] = min(80, t[gk]["short_score"] + 2)
+            if "rsi_min" in t[gk]: t[gk]["rsi_min"] = max(10, t[gk]["rsi_min"] - 2)
+            if "rsi_max" in t[gk]: t[gk]["rsi_max"] = min(90, t[gk]["rsi_max"] + 2)
+            if "long_rsi" in t[gk]: t[gk]["long_rsi"] = min(80, t[gk]["long_rsi"] + 2)
+            if "short_rsi" in t[gk]: t[gk]["short_rsi"] = max(20, t[gk]["short_rsi"] - 2)
+            if "vol_surge" in t[gk]: t[gk]["vol_surge"] = max(1.0, t[gk]["vol_surge"] - 0.1)
+            if "macd_long" in t[gk]: t[gk]["macd_long"] = min(0.0, t[gk]["macd_long"] + 0.1)
+            if "macd_short" in t[gk]: t[gk]["macd_short"] = max(0.0, t[gk]["macd_short"] - 0.1)
+        elif wr >= 0.65:
+            # Relax (Decrease long_score, increase short_score, etc.)
+            if "long_score" in t[gk]: t[gk]["long_score"] = max(20, t[gk]["long_score"] - 1)
+            if "short_score" in t[gk]: t[gk]["short_score"] = min(80, t[gk]["short_score"] + 1)
+            if "rsi_min" in t[gk]: t[gk]["rsi_min"] = max(10, t[gk]["rsi_min"] - 1)
+            if "rsi_max" in t[gk]: t[gk]["rsi_max"] = min(90, t[gk]["rsi_max"] + 1)
+            if "long_rsi" in t[gk]: t[gk]["long_rsi"] = min(80, t[gk]["long_rsi"] + 1)
+            if "short_rsi" in t[gk]: t[gk]["short_rsi"] = max(20, t[gk]["short_rsi"] - 1)
+            if "vol_surge" in t[gk]: t[gk]["vol_surge"] = max(1.0, t[gk]["vol_surge"] - 0.1)
+            if "macd_long" in t[gk]: t[gk]["macd_long"] = min(0.0, t[gk]["macd_long"] + 0.1)
+            if "macd_short" in t[gk]: t[gk]["macd_short"] = max(0.0, t[gk]["macd_short"] - 0.1)
+            
+        elif wr < 0.40:
+            # Tighten
+            if "long_score" in t[gk]: t[gk]["long_score"] = min(95, t[gk]["long_score"] + 1)
+            if "short_score" in t[gk]: t[gk]["short_score"] = max(5, t[gk]["short_score"] - 1)
+            if "rsi_min" in t[gk]: t[gk]["rsi_min"] = min(40, t[gk]["rsi_min"] + 1)
+            if "rsi_max" in t[gk]: t[gk]["rsi_max"] = max(60, t[gk]["rsi_max"] - 1)
+            if "long_rsi" in t[gk]: t[gk]["long_rsi"] = max(20, t[gk]["long_rsi"] - 1)
+            if "short_rsi" in t[gk]: t[gk]["short_rsi"] = min(80, t[gk]["short_rsi"] + 1)
+            if "vol_surge" in t[gk]: t[gk]["vol_surge"] = min(3.0, t[gk]["vol_surge"] + 0.1)
+            if "macd_long" in t[gk]: t[gk]["macd_long"] = max(-1.0, t[gk]["macd_long"] - 0.1)
+            if "macd_short" in t[gk]: t[gk]["macd_short"] = min(1.0, t[gk]["macd_short"] + 0.1)
 
     with open(THRESHOLDS_FILE, "w", encoding="utf-8") as f:
         json.dump(t, f, indent=2)
