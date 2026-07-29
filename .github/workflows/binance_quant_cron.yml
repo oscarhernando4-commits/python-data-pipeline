@@ -2,8 +2,8 @@ name: Binance Quant Trading Engine 24/7 (Cron 5M Cloud)
 
 on:
   schedule:
-    # Runs every 10 minutes 24/7 in GitHub Cloud (Consumes ~86.4% of CMC Daily Limit)
-    - cron: '*/10 * * * *'
+    # Runs every 5 minutes 24/7 in GitHub Cloud (Consumes 0 Fixie requests unless trading)
+    - cron: '*/5 * * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI
   repository_dispatch: # Allows instant external 5m pings from Cron-Job.org / UptimeRobot
     types: [trigger_quant_trade]
