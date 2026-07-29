@@ -1,6 +1,6 @@
 # Reporte Temporal: Grupo 0_ReplicaReal
 
-> Actualizado: 2026-07-29 05:21:33
+> Actualizado: 2026-07-29 05:27:03
 
 | Ventana de Tiempo | Total Operaciones | Ganadoras | Perdedoras | Win Rate | PnL Neto |
 | :--- | :--- | :--- | :--- | :--- | :--- |
