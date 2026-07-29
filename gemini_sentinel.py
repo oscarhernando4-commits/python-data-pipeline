@@ -97,7 +97,6 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     
     # Exact cascade requested by user: prioritizing flash-lite to avoid rate limits
     models_to_try = [
-        "gemini-3.5-flash-lite",
         "gemini-3.1-flash-lite",
         "gemini-3.1-flash-lite-preview"
     ]

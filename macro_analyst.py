@@ -73,7 +73,6 @@ def get_market_macro_context(symbol_analysis_map, fear_greed, news_headlines):
     
     # We use lite for macro sweep to save standard flash quota
     lite_models = [
-        "gemini-3.5-flash-lite",
         "gemini-3.1-flash-lite",
         "gemini-3.1-flash-lite-preview"
     ]
