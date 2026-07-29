@@ -33,14 +33,20 @@ TOP_PAIRS = get_top_pairs()
 
 DATA_MATRIX_FILE = os.path.join(os.path.dirname(__file__), "matrix_100_simulations.json")
 
-def get_obsidian_folder():
+def get_obsidian_path():
+    if os.environ.get("GITHUB_ACTIONS"):
+        return os.path.join(os.getcwd(), "Obsidian", "01_PROYECTOS", "BINANCE_QUANT_TRADING")
+        
     local_path = r"C:\Users\hosca\Documents\Antigravity\Obsidian\01_PROYECTOS\BINANCE_QUANT_TRADING"
-    if os.path.exists(os.path.dirname(local_path)):
-        os.makedirs(local_path, exist_ok=True)
+    if os.path.exists(local_path):
         return local_path
+    
     rel_path = os.path.join(os.getcwd(), "Obsidian", "01_PROYECTOS", "BINANCE_QUANT_TRADING")
     os.makedirs(rel_path, exist_ok=True)
     return rel_path
+
+def get_obsidian_folder():
+    return get_obsidian_path()
 
 OBSIDIAN_FOLDER = get_obsidian_folder()
 
