@@ -91,7 +91,7 @@ CORPORATE_ECOSYSTEM_DATABASE = {
 def fetch_full_lifetime_klines(symbol="BTCUSDT"):
     try:
         # Fetch maximum available daily candles (1,000 candles limit per request)
-        url = f"https://api.binance.com/api/v3/klines?symbol={symbol}&interval=1d&limit=1000"
+        url = f"https://data-api.binance.vision/api/v3/klines?symbol={symbol}&interval=1d&limit=1000"
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req) as response:
             data = json.loads(response.read().decode())

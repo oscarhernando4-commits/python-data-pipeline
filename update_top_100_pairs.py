@@ -30,7 +30,7 @@ def update_top_pairs():
     
     print(f"Fetching valid Binance USDT pairs...")
     try:
-        binance_res = requests.get('https://api.binance.com/api/v3/exchangeInfo')
+        binance_res = requests.get('https://data-api.binance.vision/api/v3/exchangeInfo')
         binance_res.raise_for_status()
         binance_data = binance_res.json()
         valid_binance_pairs = {s['symbol'] for s in binance_data['symbols'] if s['status'] == 'TRADING' and s['quoteAsset'] == 'USDT'}
