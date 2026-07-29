@@ -1,23 +1,18 @@
-=== INICIANDO OPERACIÓN KAMIKAZE FORZADA EN CUENTA REAL ===
-Buscando precio actual para BTCUSDT...
-Forzando compra LONG en BTCUSDT a precio $64063.99 por orden del Creador...
-🚀 SEÑAL ALCISTA (LONG) (BTCUSDT @ 100 Pts - AUTO-APRENDIZAJE). Comprando en Binance Spot...
+=== INICIANDO OPERACIÓN KAMIKAZE SHORT EN FUTUROS ===
+Forzando SHORT en BTCUSDT con 8.5 USDT por orden del Creador...
 
-✅ ESTADO DE LA CUENTA REAL ACTUALIZADO:
-{
-    "initial_deposit_usdt": 17.13,
-    "initial_total_usd": 20.08,
-    "current_balance_usd": 17.15,
-    "net_pnl_usd": -2.92,
-    "wins": 0,
-    "losses": 0,
-    "trades_count": 0,
-    "position": {
-        "symbol": "BTCUSDT",
-        "entry_price": 64063.99,
-        "cost_usd": 8.57,
-        "side": "LONG"
+✅ RESPUESTA RAW DE BINANCE (FUTUROS BATCH ORDER):
+[
+    {
+        "code": -4003,
+        "msg": "Quantity less than or equal to zero."
     },
-    "last_trade_time": "26-07-27<br>14:47",
-    "status": "🔵 En Vivo LONG (BTCUSDT)"
-}
+    {
+        "code": -4120,
+        "msg": "Order type not supported for this endpoint. Please use the Algo Order API endpoints instead."
+    },
+    {
+        "code": -4120,
+        "msg": "Order type not supported for this endpoint. Please use the Algo Order API endpoints instead."
+    }
+]
