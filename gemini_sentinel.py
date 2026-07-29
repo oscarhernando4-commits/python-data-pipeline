@@ -60,7 +60,8 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
 
     HISTORIAL SUPER DETALLADO (TABLA COMPLETA ALL-TIME DE TODAS LAS OPERACIONES):
     {super_detailed_table}
-    Lee detenidamente esta tabla. Contiene los detalles exactos de qué RSI, Score, y Tendencia tenían los trades históricos ganadores y perdedores. Úsalo para extraer patrones y aplicarlos a tu decisión actual.
+    Lee detenidamente esta tabla. Contiene los detalles exactos de qué RSI, Score, y Tendencia tenían los trades históricos ganadores y perdedores. 
+    ⚠️ DIRECTRIZ CRÍTICA DE CERO PÉRDIDAS: Tu misión número 1 es NO PERDER. Si los indicadores actuales se parecen remotamente a CUALQUIER operación de esta tabla que terminó en PÉRDIDA (LOSS), debes RECHAZARLA (HOLD). Solo aprueba si el patrón coincide exactamente con operaciones históricas ganadoras (WIN). ¡Ve a la fija, asegura la victoria!
 
     EVALÚA LOS SIGUIENTES DATOS EN TIEMPO REAL PARA {symbol}:
     - Puntaje Técnico Cuantitativo Actual: {score} / 100 Pts

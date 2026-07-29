@@ -353,22 +353,12 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             learning_engine.record_trade_outcome(
                 symbol=active_symbol, side="SHORT", entry_price=entry, exit_price=current_price,
                 pnl_usd=pnl_usd, result_type=res_type, notes=f"Real Money SHORT auto-closed by Binance",
-                account_id="R-01", group_name="CUENTA REAL"
             )
             print(f"🎯 ALERTA REAL: Posición SHORT en {active_symbol} fue cerrada automáticamente por Binance ({res_type})")
             
         state["position"] = None
         state["status"] = "🟦 Buscando Entrada A+"
         
-        # Check Daily Limits before taking a new position
-        today_str = datetime.now().strftime("%Y-%m-%d")
-        if state.get("last_trading_day") == today_str:
-            if state.get("daily_wins", 0) >= 3 or state.get("daily_losses", 0) >= 1:
-                print(f"⛔ [REAL] LÍMITE DIARIO ALCANZADO (Wins: {state.get('daily_wins',0)}, Losses: {state.get('daily_losses',0)}). Bloqueando nuevas operaciones hasta mañana.")
-                state["status"] = "⛔ Meta Diaria Alcanzada. En Pausa."
-                save_real_account_state(state)
-                return
-                
         # 1. LONG Entry Signal (Score >= 85 Pts OR AI Learned Signal)
         if best_symbol and not is_bearish and (best_score >= 85 or is_learned_signal) and usdt_free >= 15.0:
             trigger_reason = "AUTO-APRENDIZAJE" if is_learned_signal else "Score 85+"
