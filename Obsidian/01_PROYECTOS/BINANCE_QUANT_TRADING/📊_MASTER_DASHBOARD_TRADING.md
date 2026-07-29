@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-07-29 14:26:14
+date: 2026-07-29 14:36:23
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-07-29 14:26:14`  
+> **Última Actualización:** `2026-07-29 14:36:23`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -103,6 +103,7 @@ date: 2026-07-29 14:26:14
 - [[🎯_Seguimiento_De_Metas|Ver Tabla de Metas Semana a Semana]]
 - [[📊_Dashboard_Interes_Compuesto|Ver Proyección de Interés Compuesto]]
 - [[📚_Historial_Super_Detallado|Ver Historial Súper Detallado de Trades (Contexto IA)]]
+- [[📊_Analisis_Por_Grupo_y_Movimientos|Ver Análisis y Movimientos por Grupo]]
 
 ## 📂 Sub-Reportes por Ventanas de Tiempo
 Análisis de rendimiento detallado a 1D, 3D, 1W, 2W, y 1M:
