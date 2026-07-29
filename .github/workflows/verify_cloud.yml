@@ -1,10 +1,9 @@
-name: Verificacion Autonoma Nube (One-Time)
+name: Verificacion Autonoma Nube
 
 on:
   push:
-    paths:
-      - 'verify_autonomous_cloud.py'
-      - '.github/workflows/verify_cloud.yml'
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -26,5 +25,5 @@ jobs:
         env:
           BINANCE_REAL_API_KEY: ${{ secrets.BINANCE_REAL_API_KEY }}
           BINANCE_REAL_API_SECRET: ${{ secrets.BINANCE_REAL_API_SECRET }}
-          FIXIE_URL: ${{ secrets.FIXIE_URL }}
+          FIXIE_URL: ${{ secrets.FIXIE_URL || 'http://fixie:XqF868E4rA6L6Gj@velodrome.usefixie.com:80' }}
         run: python verify_autonomous_cloud.py

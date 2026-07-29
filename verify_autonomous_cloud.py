@@ -7,7 +7,9 @@ import os
 
 API_KEY = os.getenv("BINANCE_REAL_API_KEY", "")
 API_SECRET = os.getenv("BINANCE_REAL_API_SECRET", "")
-PROXY_URL = os.getenv("FIXIE_URL", "http://fixie:XqF868E4rA6L6Gj@velodrome.usefixie.com:80")
+PROXY_URL = os.getenv("FIXIE_URL", "")
+if not PROXY_URL:
+    PROXY_URL = "http://fixie:XqF868E4rA6L6Gj@velodrome.usefixie.com:80"
 
 PROXIES = {
     "http": PROXY_URL,
