@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-07-28 22:22:14
+date: 2026-07-29 12:32:16
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-07-28 22:22:14`  
+> **Última Actualización:** `2026-07-29 12:32:16`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -22,10 +22,10 @@ date: 2026-07-28 22:22:14
 
 | Métrica | Valor Actual | ¿Qué Significa? |
 | :--- | :--- | :--- |
-| 💵 **Capital Total (Fondo $10k):** | **`$10,000.00 USD`** | Balance de las 100 cuentas de prueba |
-| 💰 **Ganancia Neta Total:** | **`$+0.00 USD`** | Resultado global acumulado |
+| 💵 **Capital Total (Fondo $10k):** | **`$9,931.85 USD`** | Balance de las 100 cuentas de prueba |
+| 💰 **Ganancia Neta Total:** | **`$-68.15 USD`** | Resultado global acumulado |
 | 🎯 **Cuentas que cumplieron la meta:** | **`20 de 100 Cuentas`** | Cuentas que alcanzaron el +3% esta semana |
-| 📈 **Tasa de Acierto de la IA:** | **`0.0% Win Rate`** | Efectividad actual de las estrategias |
+| 📈 **Tasa de Acierto de la IA:** | **`20.59% Win Rate`** | Efectividad actual de las estrategias |
 
 ---
 
@@ -36,7 +36,7 @@ date: 2026-07-28 22:22:14
 > 
 > - 💵 **Capital Base (Promedio):** `$100.00 USD`
 > - 🎯 **Meta Semanal (Promedio):** `$103.00 USD`
-> - 💰 **Capital Promedio Actual:** `$100.00 USD`
+> - 💰 **Capital Promedio Actual:** `$99.32 USD`
 > - 🟡 **Estado:** `🟡 EN PROCESO - Buscando el +3% de ganancia en operaciones filtradas`
 
 ---
@@ -54,11 +54,11 @@ date: 2026-07-28 22:22:14
 
 | Criptomoneda | Balance Actual | Ganancia | Estado |
 | :--- | :--- | :--- | :--- |
-| **LTCUSDT** | `$100.00 USD` | `$+0.00 USD` | 🔵 En Operación |
-| **ETHUSDT** | `$100.00 USD` | `$+0.00 USD` | 🔵 En Operación |
-| **SOLUSDT** | `$100.00 USD` | `$+0.00 USD` | 🔵 En Operación |
-| **BNBUSDT** | `$100.00 USD` | `$+0.00 USD` | 🔵 En Operación |
-| **ADAUSDT** | `$100.00 USD` | `$+0.00 USD` | 🔵 En Operación |
+| **OPUSDT** | `$101.25 USD` | `$+1.25 USD` | 🔵 En Operación |
+| **XRPUSDT** | `$101.25 USD` | `$+1.25 USD` | 🔵 En Operación |
+| **XRPUSDT** | `$101.25 USD` | `$+1.25 USD` | 🔵 En Operación |
+| **XRPUSDT** | `$101.25 USD` | `$+1.25 USD` | 🔵 En Operación |
+| **XRPUSDT** | `$101.25 USD` | `$+1.25 USD` | 🔵 En Operación |
 
 
 ---
@@ -68,11 +68,11 @@ date: 2026-07-28 22:22:14
 > [!INFO] 📊 COMPARATIVA DE ESTRATEGIAS
 | Grupo | Tasa de Acierto | Ganancia Neta |
 | :--- | :---: | :---: |
-| **0 (Copia Real)** | `0.0%` | `$+0.00` |
+| **0 (Copia Real)** | `50.0%` | `$+1.25` |
 | **1 (Ultra-Estricto)** | `0.0%` | `$+0.00` |
-| **Grupo 2** | `0.0%` | `$+0.00` |
+| **Grupo 2** | `0.0%` | `$-94.40` |
 | **Grupo 3** | `0.0%` | `$+0.00` |
-| **Grupo 4** | `0.0%` | `$+0.00` |
+| **Grupo 4** | `50.0%` | `$+25.00` |
 | **5 (Exploratorio)** | `0.0%` | `$+0.00` |
 
 
@@ -97,7 +97,9 @@ date: 2026-07-28 22:22:14
 ## 📂 Sub-Reportes por Ventanas de Tiempo
 Análisis de rendimiento detallado a 1D, 3D, 1W, 2W, y 1M:
 
-> ⏳ Aún no hay datos agrupados para generar sub-reportes (comenzará a poblarse con las próximas operaciones).
+- [[📊_Reporte_Temporal_GRUPO_2_ModeradoEstricto]] (🔷 GRUPO 2: Moderado-Estricto)
+- [[📊_Reporte_Temporal_GRUPO_0_RÉPLICA_REAL_Copia_Fiel]] (🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel))
+- [[📊_Reporte_Temporal_GRUPO_4_Frecuencia_Alta]] (⚡ GRUPO 4: Frecuencia Alta)
 
 ## 📚 Knowledge Base
 - [[🧠_Patrones_de_Aprendizaje_y_Optimizacion_IA]]
