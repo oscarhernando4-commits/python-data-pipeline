@@ -33,17 +33,17 @@ OBSIDIAN_FOLDER = get_obsidian_folder()
 
 def get_group_info(index):
     if index == 0:
-        return {"group_id": 0, "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)", "threshold_score": 85, "risk_pct": 1.5, "label": "Ultra-Estricto A+"}
+        return {"group_id": 0, "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)", "threshold_score": 85, "risk_pct": 1.0, "label": "Ultra-Estricto A+"}
     elif 1 <= index <= 20:
-        return {"group_id": 1, "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)", "threshold_score": 85, "risk_pct": 1.5, "label": "Ultra-Estricto A+ (Score >= 85)"}
+        return {"group_id": 1, "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)", "threshold_score": 85, "risk_pct": 1.0, "label": "Ultra-Estricto A+ (Score >= 85)"}
     elif 21 <= index <= 40:
-        return {"group_id": 2, "group_name": "🔷 GRUPO 2: Moderado-Estricto", "threshold_score": 75, "risk_pct": 2.0, "label": "Moderado-Estricto (Score >= 75)"}
+        return {"group_id": 2, "group_name": "🔷 GRUPO 2: Moderado-Estricto", "threshold_score": 75, "risk_pct": 1.0, "label": "Moderado-Estricto (Score >= 75)"}
     elif 41 <= index <= 60:
-        return {"group_id": 3, "group_name": "⚖️ GRUPO 3: Balanceado", "threshold_score": 65, "risk_pct": 2.5, "label": "Balanceado (Score >= 65)"}
+        return {"group_id": 3, "group_name": "⚖️ GRUPO 3: Balanceado", "threshold_score": 65, "risk_pct": 1.0, "label": "Balanceado (Score >= 65)"}
     elif 61 <= index <= 80:
-        return {"group_id": 4, "group_name": "⚡ GRUPO 4: Frecuencia Alta", "threshold_score": 55, "risk_pct": 3.0, "label": "Frecuencia Alta (Score >= 55)"}
+        return {"group_id": 4, "group_name": "⚡ GRUPO 4: Frecuencia Alta", "threshold_score": 55, "risk_pct": 2.0, "label": "Frecuencia Alta (Score >= 55)"}
     else:
-        return {"group_id": 5, "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia", "threshold_score": 45, "risk_pct": 3.5, "label": "Máxima Permisividad (Score >= 45)"}
+        return {"group_id": 5, "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia", "threshold_score": 45, "risk_pct": 2.0, "label": "Exploratorio de Máxima Frecuencia (Score >= 45)"}
 
 def load_live_matrix():
     now_date = datetime.now().strftime("%y-%m-%d")
@@ -142,7 +142,7 @@ def run_infinite_trading_matrix_cycle():
 
     for s in TOP_PAIRS:
         try:
-            tech = analytics.analyze_institutional_grade(s, account_balance=100.0, risk_percentage=1.5)
+            tech = analytics.analyze_institutional_grade(s, account_balance=100.0, risk_percentage=1.0)
             final_score = tech.get("confluence_score", 50)
             
             # Record 5M Time-Series Reading for Pattern Recognition Learning
@@ -238,7 +238,7 @@ def run_infinite_trading_matrix_cycle():
             curr_price = analysis["price"] if analysis else position["entry_price"]
             
             entry_p = position["entry_price"]
-            tp_min_price = position.get("tp_min", position.get("tp", entry_p * 1.03))
+            tp_min_price = position.get("tp_min", position.get("tp", entry_p * 1.02))
             sl_price = position["sl"]
             side = position.get("side", "LONG")
             
@@ -260,7 +260,7 @@ def run_infinite_trading_matrix_cycle():
             
             # WIN CASE: Hit Take-Profit
             if is_win:
-                gain_ratio = max(unr_pct / 100.0, 0.03)
+                gain_ratio = max(unr_pct / 100.0, 0.02)
                 pnl = round((curr_bal * gain_ratio) - friction_cost, 2)
                 
                 acc["current_balance"] += pnl
@@ -289,9 +289,9 @@ def run_infinite_trading_matrix_cycle():
                     context=ctx
                 )
 
-            # LOSS CASE: Hit Stop-Loss (-1.5%)
+            # LOSS CASE: Hit Stop-Loss (-1.0%)
             elif is_loss:
-                loss = round((curr_bal * 0.015) + friction_cost, 2)
+                loss = round((curr_bal * 0.01) + friction_cost, 2)
                 acc["current_balance"] -= loss
                 acc["pnl_usd"] -= loss
                 acc["losses"] += 1
@@ -317,8 +317,8 @@ def run_infinite_trading_matrix_cycle():
                     context=ctx
                 )
             else:
-                # Trailing Stop: Move SL to Break-Even (+0.2%) once profit reaches +1.5%
-                if unr_pct >= 1.5:
+                # Trailing Stop: Move SL to Break-Even (+0.2%) once profit reaches +1.0%
+                if unr_pct >= 1.0:
                     if side == "LONG" and position.get("sl", 0) < entry_p:
                         position["sl"] = entry_p * 1.002
                         acc["last_result"] = "🛡️ Protegida (Break-Even)"
@@ -347,7 +347,7 @@ def run_infinite_trading_matrix_cycle():
                     selected_symbol = sym
                     best_reason = eval_res["reason"]
                     best_curr_price = data_item["price"]
-                    best_sl_dist = max(data_item["tech"]["indicators"].get("atr_15m", 0) * 1.5, best_curr_price * 0.01)
+                    best_sl_dist = max(data_item["tech"]["indicators"].get("atr_15m", 0) * 1.0, best_curr_price * 0.01)
                     break # Take the first one that triggers for this strategy
                     
             if best_action != "HOLD":
@@ -610,8 +610,8 @@ def sync_live_matrix_obsidian(matrix):
         f"> [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  \n"
         f"> - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  \n"
         f"> - 📈 **Capital Total Acumulado:** **`${matrix['current_total_usd']:,.2f} USD`** (`${matrix['net_pnl_usd']:+,.2f} USD`)  \n"
-        f"> - 🟢 **Cuentas Ganadoras (+3% Meta Cumplida):** `{winning_accs} Cuentas ({pct_winning}%)`  \n"
-        f"> - 🔴 **Cuentas en Pérdida (-1.5% Stop Loss):** `{losing_accs} Cuentas ({pct_losing}%)`  \n"
+        f"> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `{winning_accs} Cuentas ({pct_winning}%)`  \n"
+        f"> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `{losing_accs} Cuentas ({pct_losing}%)`  \n"
         f"> - 🔵 **Cuentas Operando en Vivo:** `{active_live_accs} Cuentas ({pct_active}%)`  \n"
         f"> - ⚪ **Cuentas Neutras / En Espera:** `{neutral_accs} Cuentas ({pct_neutral}%)`  \n\n"
         f"{grouped_tables_md}\n"

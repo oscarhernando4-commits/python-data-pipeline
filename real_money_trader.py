@@ -158,9 +158,9 @@ def execute_real_futures_market_short(symbol, usdt_amount):
         qty = round(clean_usd / price, 3)
         qty_str = f"{qty:.3f}"
         
-        # Risk Management: SL +1.5% (loss), TP -3.0% (win) for SHORT
-        sl_price = round(price * 1.015, 4)
-        tp_price = round(price * 0.97, 4)
+        # Risk Management: SL +1.0% (loss), TP -2.0% (win) for SHORT
+        sl_price = round(price * 1.01, 4)
+        tp_price = round(price * 0.98, 4)
     except Exception as e:
         return {"error": f"Failed to calculate price/qty: {e}"}
 
@@ -254,20 +254,20 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         }
         state["status"] = f"🔵 En Vivo LONG ({active_asset}USDT @ ${current_price:.4f})"
         
-        # Check for exit condition (Take Profit +3.0% or Stop Loss -1.5%)
+        # Check for exit condition (Take Profit +2.0% or Stop Loss -1.0%)
         entry = state["position"].get("entry_price", current_price)
         if entry > 0:
             pnl_pct = ((current_price - entry) / entry) * 100.0
             
             # --- ESCUDO REAL: BREAK-EVEN DINÁMICO ---
-            if pnl_pct >= 1.5 and not state["position"].get("break_even", False):
+            if pnl_pct >= 1.0 and not state["position"].get("break_even", False):
                 state["position"]["break_even"] = True
                 print(f"🛡️ ESCUDO REAL ACTIVADO: El precio subió +{pnl_pct:.2f}%. Stop-loss asegurado en Break-Even (+0.2%).")
                 
-            dynamic_sl = 0.2 if state["position"].get("break_even", False) else -1.5
+            dynamic_sl = 0.2 if state["position"].get("break_even", False) else -1.0
             
-            if pnl_pct >= 3.0 or pnl_pct <= dynamic_sl:
-                reason_str = f"Ganancia Asegurada (+{pnl_pct:.2f}%)" if pnl_pct >= 3.0 or state["position"].get("break_even", False) else f"Stop Loss ({pnl_pct:.2f}%)"
+            if pnl_pct >= 2.0 or pnl_pct <= dynamic_sl:
+                reason_str = f"Ganancia Asegurada (+{pnl_pct:.2f}%)" if pnl_pct >= 2.0 or state["position"].get("break_even", False) else f"Stop Loss ({pnl_pct:.2f}%)"
                 print(f"🎯 ALERTA REAL: Salida LONG por {reason_str} en {active_symbol}. Vendiendo...")
                 sell_params = {
                     "symbol": active_symbol,
@@ -356,12 +356,12 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 state["wins"] += 1
                 state["daily_wins"] = state.get("daily_wins", 0) + 1
                 res_type = "WIN"
-                pnl_usd = entry * 0.03 * active_qty # Approx +3% win
+                pnl_usd = entry * 0.02 * active_qty # Approx +2% win
             else:
                 state["losses"] += 1
                 state["daily_losses"] = state.get("daily_losses", 0) + 1
                 res_type = "LOSS"
-                pnl_usd = -(entry * 0.015 * active_qty) # Approx -1.5% loss
+                pnl_usd = -(entry * 0.01 * active_qty) # Approx -1.0% loss
                 
             state["trades_count"] += 1
             learning_engine.record_trade_outcome(
