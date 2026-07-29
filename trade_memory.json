@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 203,
+    "total_trades": 262,
     "wins": 81,
-    "losses": 122,
-    "win_rate_pct": 39.9,
-    "total_pnl_usd": 15.740000000000022
+    "losses": 181,
+    "win_rate_pct": 30.92,
+    "total_pnl_usd": -48.560000000000024
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -16,7 +16,10 @@
       "Preventive Block for NEARUSDT: Loss logged at 1.579 -> Hit SL on NEARUSDT (-$1.55). Re-Trading!",
       "Preventive Block for DOTUSDT: Loss logged at 0.765 -> Hit SL on DOTUSDT (-$1.60). Re-Trading!",
       "Preventive Block for OPUSDT: Loss logged at 0.0879 -> Hit SL on OPUSDT (-$1.11). Re-Trading!",
-      "Preventive Block for BTCUSDT: Loss logged at 63976.01 -> Hit SL on BTCUSDT (-$1.15). Re-Trading!"
+      "Preventive Block for BTCUSDT: Loss logged at 63976.01 -> Hit SL on BTCUSDT (-$1.15). Re-Trading!",
+      "Preventive Block for BTCUSDT: Loss logged at 64594.65 -> Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "Preventive Block for XRPUSDT: Loss logged at 1.0736 -> Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "Preventive Block for BTCUSDT: Loss logged at 63920.0 -> Hit SL on BTCUSDT (-$1.10). Re-Trading!"
     ],
     "boosted_patterns": [
       "RSI < 30 + MACD Bullish Cross + Volume > 1.5x (High Probability Win)",
@@ -2970,6 +2973,1009 @@
       "context": {
         "score": 75,
         "rsi_15m": 61.14,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-001",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-002",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-003",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-004",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-005",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-006",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-007",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-008",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-009",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-010",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-011",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-012",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-013",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-014",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-015",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-016",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-017",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-018",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-019",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-020",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 64594.65,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.12,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.12). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-021",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-022",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-023",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-024",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-025",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-026",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-030",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-031",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-032",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-033",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-034",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-035",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-036",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-037",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-038",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:11",
+      "account_id": "SIM-040",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "LONG",
+      "entry_price": 1.0736,
+      "exit_price": 1.074,
+      "pnl_usd": -1.05,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.05). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-081",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-082",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-083",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-084",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-085",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-086",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-087",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-088",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-089",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-090",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-091",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-092",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-093",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-094",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-095",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-096",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-098",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 22:43:12",
+      "account_id": "SIM-099",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 63920.0,
+      "exit_price": 63960.77,
+      "pnl_usd": -1.1,
+      "result": "LOSS",
+      "notes": "Hit SL on BTCUSDT (-$1.10). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.69,
         "macro_trend_4h": "NEUTRAL"
       }
     }
