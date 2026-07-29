@@ -110,8 +110,8 @@ def get_real_futures_usdt_balance():
 
 def execute_real_spot_market_buy(symbol, usdt_amount):
     timestamp = int(time.time() * 1000)
-    # Round down to nearest clean integer (e.g. 15.00 USD) for 100% precision safety
-    clean_usd = int(usdt_amount) if usdt_amount >= 10.0 else usdt_amount
+    # Use full balance minus a tiny 1% safety buffer to avoid "Insufficient Balance" errors
+    clean_usd = round(usdt_amount * 0.99, 2)
     params = {
         "symbol": symbol,
         "side": "BUY",
@@ -133,7 +133,8 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
 
 def execute_real_futures_market_short(symbol, usdt_amount):
     timestamp = int(time.time() * 1000)
-    clean_usd = int(usdt_amount) if usdt_amount >= 10.0 else usdt_amount
+    # Use full balance minus a 2% safety buffer for Futures margin and fees
+    clean_usd = round(usdt_amount * 0.98, 2)
     fapi_url = "https://fapi.binance.com"
     headers = {"X-MBX-APIKEY": API_KEY}
 
