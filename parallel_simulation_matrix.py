@@ -396,29 +396,7 @@ def run_infinite_trading_matrix_cycle():
                     }
                     acc["status"] = f"EN_OPERACION_VIVO ({selected_symbol} {best_action} @ ${best_curr_price:.2f})"
                     
-                    # AUTO-LEARNING REAL MONEY TRIGGER
-                    # If this group is the historically best-performing group (WinRate > 50%), and it just opened a trade,
-                    # we mirror this exact trade to the Real Money Account!
-                    best_grp_name = bias_data.get("best_group")
-                    if not has_triggered_learned_trade and best_grp_name and best_grp_name == acc.get("group_name"):
-                        try:
-                            import real_money_trader
-                            print(f"🌟 [AUTO-LEARNING] El grupo más rentable ({best_grp_name}) encontró una señal en {selected_symbol}. ¡Ejecutando en Dinero Real!")
-                            
-                            # Fake a high/low score so it passes the internal logs, but use the is_learned_signal=True flag to bypass the hardcoded 85/15 filters
-                            fake_score = 99 if best_action == "LONG" else 1
-                            
-                            real_money_trader.evaluate_and_trade_real_money(
-                                best_symbol=selected_symbol,
-                                best_score=fake_score,
-                                current_price=best_curr_price,
-                                is_bearish=(best_action == "SHORT"),
-                                is_learned_signal=True
-                            )
-                            has_triggered_learned_trade = True
-                        except Exception as e:
-                            print(f"Error executing auto-learned real trade: {e}")
-                            
+                    # (Removed auto-learning bypass to strictly enforce Gemini Zero-Loss rule for all Real Money trades)
             else:
                 top_sym = selected_symbol
                 acc["status"] = f"BUSCANDO_OPORTUNIDAD (Estrategia G-{g_id})"
@@ -445,21 +423,23 @@ def run_infinite_trading_matrix_cycle():
         is_ai_approved = gemini_res.get('approved') == True
         ai_action = gemini_res.get('action', 'HOLD')
         
-        if best_market_opportunity and selected_opp == best_market_opportunity and best_market_opportunity[1]["score"] >= real_long_score and is_ai_approved and ai_action == "BUY_LONG":
+        if best_market_opportunity and selected_opp == best_market_opportunity and is_ai_approved and ai_action == "BUY_LONG":
             print(f"💰 [REAL] Señal ALCISTA Aprobada por IA ({best_market_opportunity[0]} @ {best_market_opportunity[1]['score']} Pts). Evaluando cuenta real...")
             real_money_trader.evaluate_and_trade_real_money(
                 best_symbol=best_market_opportunity[0],
                 best_score=best_market_opportunity[1]["score"],
                 current_price=best_market_opportunity[1]["price"],
-                is_bearish=False
+                is_bearish=False,
+                is_learned_signal=True
             )
-        elif best_bearish_opportunity and selected_opp == best_bearish_opportunity and best_bearish_opportunity[1]["score"] <= real_short_score and is_ai_approved and ai_action == "SELL_SHORT":
+        elif best_bearish_opportunity and selected_opp == best_bearish_opportunity and is_ai_approved and ai_action == "SELL_SHORT":
             print(f"📉 [REAL] Señal BAJISTA Aprobada por IA ({best_bearish_opportunity[0]} @ Score {best_bearish_opportunity[1]['score']}). Evaluando SHORT en Futuros...")
             real_money_trader.evaluate_and_trade_real_money(
                 best_symbol=best_bearish_opportunity[0],
                 best_score=best_bearish_opportunity[1]["score"],
                 current_price=best_bearish_opportunity[1]["price"],
-                is_bearish=True
+                is_bearish=True,
+                is_learned_signal=True
             )
         else:
             if selected_opp:
