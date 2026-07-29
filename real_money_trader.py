@@ -213,6 +213,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
     usdt_free = sum([float(b["free"]) for b in balances if b["asset"] == "USDT"])
     bnb_free = sum([float(b["free"]) for b in balances if b["asset"] == "BNB"])
     
+    # Cloud fallback: If Binance blocked our IP (no proxy), fallback to local JSON state so we don't freeze
+    if usdt_free == 0.0 and bnb_free == 0.0 and not balances:
+        usdt_free = state.get("current_balance_usd", 17.15)
+    
     # Calculate BNB USD value
     bnb_usd = bnb_free * 575.0  # Approx BNB price
     total_val = usdt_free + bnb_usd
@@ -223,6 +227,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
     # Check for active Futures positions (SHORT)
     futures_positions = get_real_futures_positions()
     futures_usdt_free = get_real_futures_usdt_balance()
+    
+    # Cloud fallback: If Futures API blocked our IP (no proxy), fallback to local JSON state
+    if futures_usdt_free == 0.0 and not futures_positions:
+        futures_usdt_free = state.get("current_balance_usd", 17.15)
     
     now_str = datetime.now().strftime("%y-%m-%d<br>%H:%M")
     
@@ -335,8 +343,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         state["position"] = None
         state["status"] = "🟦 Buscando Entrada A+"
         
-        # 1. LONG Entry Signal (Score >= 75 Pts + AI Approved externally)
-        if best_symbol and not is_bearish and best_score >= 75 and usdt_free >= 15.0:
+        # 1. LONG Entry Signal (Score >= 85 Pts + AI Approved externally - SYNCED WITH GRUPO 0)
+        if best_symbol and not is_bearish and best_score >= 85 and usdt_free >= 15.0:
             print(f"🚀 SEÑAL ALCISTA (LONG) ({best_symbol} @ {best_score} Pts). Comprando en Binance Spot...")
             buy_res = execute_real_spot_market_buy(best_symbol, usdt_free)
             if "orderId" in buy_res:
@@ -348,8 +356,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 }
                 state["status"] = f"🔵 En Vivo LONG ({best_symbol})"
                 
-        # 2. SHORT Entry Signal (Bearish Score <= 25 Pts + AI Approved externally)
-        elif best_symbol and is_bearish and best_score <= 25 and futures_usdt_free >= 15.0:
+        # 2. SHORT Entry Signal (Bearish Score <= 15 Pts + AI Approved externally - SYNCED WITH GRUPO 0)
+        elif best_symbol and is_bearish and best_score <= 15 and futures_usdt_free >= 15.0:
             print(f"📉 SEÑAL BAJISTA (SHORT) ({best_symbol} @ Score {best_score}). Abriendo Short en Binance Futuros...")
             short_res = execute_real_futures_market_short(best_symbol, futures_usdt_free)
             if "orderId" in short_res:

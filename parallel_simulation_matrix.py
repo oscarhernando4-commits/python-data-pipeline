@@ -382,7 +382,7 @@ def run_infinite_trading_matrix_cycle():
 
     save_live_matrix(matrix)
     
-    # Execute Real Money Trading ONLY on AI Approved signals with Score >= 75 or <= 25
+    # Execute Real Money Trading ONLY on AI Approved signals with Score >= 85 or <= 15 (SYNCED WITH GRUPO 0)
     # Fixie proxy is consumed ONLY when an actual order is placed
     try:
         import real_money_trader
@@ -390,7 +390,7 @@ def run_infinite_trading_matrix_cycle():
         is_ai_approved = gemini_res.get('approved') == True
         ai_action = gemini_res.get('action', 'HOLD')
         
-        if best_market_opportunity and selected_opp == best_market_opportunity and best_market_opportunity[1]["score"] >= 75 and is_ai_approved and ai_action == "BUY_LONG":
+        if best_market_opportunity and selected_opp == best_market_opportunity and best_market_opportunity[1]["score"] >= 85 and is_ai_approved and ai_action == "BUY_LONG":
             print(f"💰 [REAL] Señal ALCISTA Aprobada por IA ({best_market_opportunity[0]} @ {best_market_opportunity[1]['score']} Pts). Evaluando cuenta real...")
             real_money_trader.evaluate_and_trade_real_money(
                 best_symbol=best_market_opportunity[0],
@@ -398,7 +398,7 @@ def run_infinite_trading_matrix_cycle():
                 current_price=best_market_opportunity[1]["price"],
                 is_bearish=False
             )
-        elif best_bearish_opportunity and selected_opp == best_bearish_opportunity and best_bearish_opportunity[1]["score"] <= 25 and is_ai_approved and ai_action == "SELL_SHORT":
+        elif best_bearish_opportunity and selected_opp == best_bearish_opportunity and best_bearish_opportunity[1]["score"] <= 15 and is_ai_approved and ai_action == "SELL_SHORT":
             print(f"📉 [REAL] Señal BAJISTA Aprobada por IA ({best_bearish_opportunity[0]} @ Score {best_bearish_opportunity[1]['score']}). Evaluando SHORT en Futuros...")
             real_money_trader.evaluate_and_trade_real_money(
                 best_symbol=best_bearish_opportunity[0],
