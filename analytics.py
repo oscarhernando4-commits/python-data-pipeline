@@ -8,7 +8,7 @@ BASE_URL = 'https://data-api.binance.vision'
 def fetch_klines(symbol='BTCUSDT', interval='1h', limit=100):
     url = f"{BASE_URL}/api/v3/klines?symbol={symbol.upper()}&interval={interval}&limit={limit}"
     req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-    with urllib.request.urlopen(req) as response:
+    with urllib.request.urlopen(req, timeout=10) as response:
         data = json.loads(response.read().decode())
     
     closes = [float(k[4]) for k in data]

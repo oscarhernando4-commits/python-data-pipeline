@@ -159,7 +159,9 @@ def run_infinite_trading_matrix_cycle():
     max_market_score = -1
     min_market_score = None
 
-    for s in TOP_PAIRS:
+    import concurrent.futures
+
+    def analyze_symbol(s):
         try:
             tech = analytics.analyze_institutional_grade(s, account_balance=100.0, risk_percentage=1.0)
             final_score = tech.get("confluence_score", 50)
@@ -180,18 +182,27 @@ def run_infinite_trading_matrix_cycle():
                 )
             except Exception as e:
                 pass
-            
-            symbol_analysis_map[s] = {
+                
+            return s, {
                 "tech": tech,
                 "score": final_score,
                 "price": tech.get("current_price", 0.0),
                 "risk": tech.get("institutional_risk_plan", {})
             }
-            
-            # Instead of keeping just one max/min, we just store it in the map
-            pass
         except Exception as e:
             print(f"Error fetching live data for {s}: {e}")
+            return s, None
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+        future_to_symbol = {executor.submit(analyze_symbol, s): s for s in TOP_PAIRS}
+        for future in concurrent.futures.as_completed(future_to_symbol):
+            s = future_to_symbol[future]
+            try:
+                sym, data = future.result()
+                if data:
+                    symbol_analysis_map[sym] = data
+            except Exception as e:
+                print(f"Concurrent exception for {s}: {e}")
 
     # Select top 5 overall opportunities by strongest divergence from neutral (50)
     candidates_list = []
