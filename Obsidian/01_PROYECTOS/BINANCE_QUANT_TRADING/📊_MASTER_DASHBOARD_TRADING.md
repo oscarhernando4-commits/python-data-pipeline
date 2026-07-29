@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-07-29 14:01:33
+date: 2026-07-29 14:06:48
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-07-29 14:01:33`  
+> **Última Actualización:** `2026-07-29 14:06:48`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -31,9 +31,9 @@ date: 2026-07-29 14:01:33
 
 ## 🧭 2. AUTO-APRENDIZAJE: SESGO DE MERCADO (LONG vs SHORT)
 
-> [!WARNING] 🧠 IA SENTINEL REGLA DE PRIORIDAD: `NEUTRAL`
+> [!WARNING] 🧠 IA SENTINEL REGLA DE PRIORIDAD: `FAVOR_SHORT`
 > - 🟢 **Rendimiento Compras (LONG):** `0.0%` de Acierto
-> - 🔴 **Rendimiento Ventas (SHORT):** `0.0%` de Acierto
+> - 🔴 **Rendimiento Ventas (SHORT):** `50.0%` de Acierto
 > - **Acción de la IA:** El bot está inyectando esta data en tiempo real a Gemini. Si la tendencia muestra pérdidas en LONG y ganancias en SHORT, **Gemini bloqueará operaciones LONG** priorizando el flujo ganador del mercado para el dinero real.
 
 ---
