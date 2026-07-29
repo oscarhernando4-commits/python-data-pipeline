@@ -181,6 +181,11 @@ def run_infinite_trading_matrix_cycle():
     bull_strength = (max_market_score - 50) if best_market_opportunity else -999
     bear_strength = (50 - min_market_score) if best_bearish_opportunity and min_market_score is not None else -999
     selected_opp = best_market_opportunity if bull_strength >= bear_strength else best_bearish_opportunity
+    
+    import learning_engine
+    bias_data = learning_engine.get_market_bias()
+    bias_str = f"BIAS: {bias_data['bias']} | WinRates -> LONG: {bias_data['long_win_rate']}% vs SHORT: {bias_data['short_win_rate']}%"
+    
     # Evaluate Top Candidate with Gemini Flash / Pro LLM Sentinel
     gemini_res = {}
     if selected_opp:
@@ -194,10 +199,6 @@ def run_infinite_trading_matrix_cycle():
                 cached_fundamental_report.get("fear_and_greed", {"score": 50, "sentiment": "Neutral"}),
                 cached_fundamental_report.get("recent_headlines", [])
             )
-            
-            import learning_engine
-            bias_data = learning_engine.get_market_bias()
-            bias_str = f"BIAS: {bias_data['bias']} | WinRates -> LONG: {bias_data['long_win_rate']}% vs SHORT: {bias_data['short_win_rate']}%"
             
             gemini_res = gemini_sentinel.review_trade_decision(
                 symbol=top_sym,
@@ -215,6 +216,7 @@ def run_infinite_trading_matrix_cycle():
     total_balance = 0.0
     global_trades = 0
     global_wins = 0
+    has_triggered_learned_trade = False
 
     for acc in accounts:
         curr_bal = acc["current_balance"]
@@ -373,6 +375,30 @@ def run_infinite_trading_matrix_cycle():
                         "open_hour": current_hour
                     }
                     acc["status"] = f"EN_OPERACION_VIVO ({selected_symbol} {best_action} @ ${best_curr_price:.2f})"
+                    
+                    # AUTO-LEARNING REAL MONEY TRIGGER
+                    # If this group is the historically best-performing group (WinRate > 50%), and it just opened a trade,
+                    # we mirror this exact trade to the Real Money Account!
+                    best_grp_name = bias_data.get("best_group")
+                    if not has_triggered_learned_trade and best_grp_name and best_grp_name == acc.get("group_name"):
+                        try:
+                            import real_money_trader
+                            print(f"🌟 [AUTO-LEARNING] El grupo más rentable ({best_grp_name}) encontró una señal en {selected_symbol}. ¡Ejecutando en Dinero Real!")
+                            
+                            # Fake a high/low score so it passes the internal logs, but use the is_learned_signal=True flag to bypass the hardcoded 85/15 filters
+                            fake_score = 99 if best_action == "LONG" else 1
+                            
+                            real_money_trader.evaluate_and_trade_real_money(
+                                best_symbol=selected_symbol,
+                                best_score=fake_score,
+                                current_price=best_curr_price,
+                                is_bearish=(best_action == "SHORT"),
+                                is_learned_signal=True
+                            )
+                            has_triggered_learned_trade = True
+                        except Exception as e:
+                            print(f"Error executing auto-learned real trade: {e}")
+                            
             else:
                 top_sym = selected_symbol
                 acc["status"] = f"BUSCANDO_OPORTUNIDAD (Estrategia G-{g_id})"

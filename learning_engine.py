@@ -45,18 +45,42 @@ def save_memory(data):
 def get_market_bias(data=None):
     if data is None:
         data = load_memory()
-    trades = data.get("history", [])[-50:] # Look at last 50 trades
+    trades = data.get("history", [])[-100:] # Look at last 100 trades for group learning
     long_w=0; long_l=0; short_w=0; short_l=0
+    group_stats = {}
+    
     for t in trades:
         side = t.get("side", "LONG")
         res = t.get("result", "LOSS")
-        if side == "LONG":
-            if res == "WIN": long_w += 1
-            else: long_l += 1
-        elif side == "SHORT":
-            if res == "WIN": short_w += 1
-            else: short_l += 1
+        grp = t.get("group_name", "Unknown")
+        
+        if grp not in group_stats:
+            group_stats[grp] = {"w": 0, "l": 0, "pnl": 0.0}
             
+        group_stats[grp]["pnl"] += float(t.get("pnl_usd", 0.0))
+        if res == "WIN":
+            group_stats[grp]["w"] += 1
+            if side == "LONG": long_w += 1
+            elif side == "SHORT": short_w += 1
+        else:
+            group_stats[grp]["l"] += 1
+            if side == "LONG": long_l += 1
+            elif side == "SHORT": short_l += 1
+            
+    # Find Best Group
+    best_group_name = None
+    best_group_wr = 0.0
+    best_group_pnl = -9999
+    
+    for g, st in group_stats.items():
+        total = st["w"] + st["l"]
+        if total >= 3: # Must have at least 3 trades to be considered
+            wr = (st["w"] / total) * 100
+            if wr >= 50.0 and st["pnl"] > 0 and st["pnl"] > best_group_pnl:
+                best_group_wr = wr
+                best_group_pnl = st["pnl"]
+                best_group_name = g
+                
     long_total = long_w + long_l
     short_total = short_w + short_l
     long_wr = (long_w / long_total * 100) if long_total > 0 else 0
@@ -73,7 +97,10 @@ def get_market_bias(data=None):
         "long_win_rate": round(long_wr, 1),
         "short_win_rate": round(short_wr, 1),
         "long_trades": long_total,
-        "short_trades": short_total
+        "short_trades": short_total,
+        "best_group": best_group_name,
+        "best_group_wr": round(best_group_wr, 1),
+        "best_group_pnl": round(best_group_pnl, 2)
     }
 
 def record_trade_outcome(symbol, side, entry_price, exit_price, pnl_usd, result_type, notes="", account_id="Histórico", group_name="Sin Grupo"):
@@ -157,11 +184,12 @@ date: {now_str}
 
 ---
 
-## 🧭 Sesgo de Aprendizaje Automático (Últimos 50 Trades)
+## 🧭 Sesgo de Aprendizaje Automático (Últimos 100 Trades)
 - **Sesgo Actual (Market Bias):** `{bias_info['bias']}`
 - **Rendimiento LONG (Compras):** `{bias_info['long_win_rate']}%` de Acierto (en {bias_info['long_trades']} ops recientes)
 - **Rendimiento SHORT (Ventas):** `{bias_info['short_win_rate']}%` de Acierto (en {bias_info['short_trades']} ops recientes)
-- *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada.
+- 🏆 **Grupo de IA Más Rentable:** `{bias_info['best_group'] if bias_info['best_group'] else 'Ninguno superó el umbral'}` (WinRate: {bias_info['best_group_wr']}%, PnL: ${bias_info['best_group_pnl']})
+- *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada. Y el Dinero Real copiará automáticamente al Grupo Más Rentable.
 
 ---
 
