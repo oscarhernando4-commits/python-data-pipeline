@@ -272,11 +272,21 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         import learning_engine
                         state["trades_count"] += 1
                         pnl_usd = (current_price - entry) * active_qty
+                        
+                        # Update daily counters
+                        today_str = datetime.now().strftime("%Y-%m-%d")
+                        if state.get("last_trading_day") != today_str:
+                            state["daily_wins"] = 0
+                            state["daily_losses"] = 0
+                            state["last_trading_day"] = today_str
+                            
                         if pnl_pct >= 3.0:
                             state["wins"] += 1
+                            state["daily_wins"] = state.get("daily_wins", 0) + 1
                             res_type = "WIN"
                         else:
                             state["losses"] += 1
+                            state["daily_losses"] = state.get("daily_losses", 0) + 1
                             res_type = "LOSS"
                             
                         learning_engine.record_trade_outcome(
@@ -310,8 +320,6 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         if entry > 0:
             pnl_pct = ((entry - current_price) / entry) * 100.0
             state["status"] = f"🔻 En Vivo SHORT ({active_symbol} @ ${current_price:.4f} | PnL: {pnl_pct:+.2f}%)"
-            # Note: We NO LONGER manually close here. 
-            # Binance Batch Orders (Stop Market / Take Profit Market) will automatically close it for us.
             
     else:
         # If we had a SHORT but now it's gone, Binance closed it natively!
@@ -322,13 +330,22 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             active_qty = closed_pos["quantity"]
             active_symbol = closed_pos["symbol"]
             
+            # Update daily counters
+            today_str = datetime.now().strftime("%Y-%m-%d")
+            if state.get("last_trading_day") != today_str:
+                state["daily_wins"] = 0
+                state["daily_losses"] = 0
+                state["last_trading_day"] = today_str
+                
             # Infer result based on current price relative to entry
             if current_price < entry:
                 state["wins"] += 1
+                state["daily_wins"] = state.get("daily_wins", 0) + 1
                 res_type = "WIN"
                 pnl_usd = entry * 0.03 * active_qty # Approx +3% win
             else:
                 state["losses"] += 1
+                state["daily_losses"] = state.get("daily_losses", 0) + 1
                 res_type = "LOSS"
                 pnl_usd = -(entry * 0.015 * active_qty) # Approx -1.5% loss
                 
@@ -343,6 +360,15 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         state["position"] = None
         state["status"] = "🟦 Buscando Entrada A+"
         
+        # Check Daily Limits before taking a new position
+        today_str = datetime.now().strftime("%Y-%m-%d")
+        if state.get("last_trading_day") == today_str:
+            if state.get("daily_wins", 0) >= 3 or state.get("daily_losses", 0) >= 1:
+                print(f"⛔ [REAL] LÍMITE DIARIO ALCANZADO (Wins: {state.get('daily_wins',0)}, Losses: {state.get('daily_losses',0)}). Bloqueando nuevas operaciones hasta mañana.")
+                state["status"] = "⛔ Meta Diaria Alcanzada. En Pausa."
+                save_real_account_state(state)
+                return
+                
         # 1. LONG Entry Signal (Score >= 85 Pts OR AI Learned Signal)
         if best_symbol and not is_bearish and (best_score >= 85 or is_learned_signal) and usdt_free >= 15.0:
             trigger_reason = "AUTO-APRENDIZAJE" if is_learned_signal else "Score 85+"

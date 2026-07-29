@@ -1,3 +1,25 @@
+import os
+import json
+
+THRESHOLDS_FILE = os.path.join(os.path.dirname(__file__), "dynamic_thresholds.json")
+
+def load_thresholds():
+    default_t = {
+      "group_0": {"long_score": 80, "short_score": 20},
+      "group_1": {"long_score": 80, "rsi_min": 35, "rsi_max": 65},
+      "group_2": {"long_rsi": 35, "short_rsi": 65},
+      "group_3": {"vol_surge": 1.5, "long_rsi": 50},
+      "group_4": {"short_rsi": 65, "short_score": 35},
+      "group_5": {"long_score": 55, "short_score": 45}
+    }
+    if not os.path.exists(THRESHOLDS_FILE):
+        return default_t
+    try:
+        with open(THRESHOLDS_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return default_t
+
 def evaluate_opportunity(tech, group_id):
     """
     Evaluates a symbol's technical data against the specific strategic profile of a given group.
@@ -10,44 +32,46 @@ def evaluate_opportunity(tech, group_id):
     vol_surge = inds.get("volume_surge_ratio", 1.0)
     trend = tech.get("macro_trend_4h", "Neutral")
     
+    t = load_thresholds()
+    
     # GROUP 0: Replica Real (Algoritmo actual de alta confluencia)
     if group_id == 0:
-        if score >= 80:
-            return {"action": "LONG", "use_ai": True, "reason": "Score >= 80 (G-0)"}
-        elif score <= 20:
-            return {"action": "SHORT", "use_ai": True, "reason": "Score <= 20 (G-0)"}
+        if score >= t["group_0"]["long_score"]:
+            return {"action": "LONG", "use_ai": True, "reason": f"Score >= {t['group_0']['long_score']} (G-0)"}
+        elif score <= t["group_0"]["short_score"]:
+            return {"action": "SHORT", "use_ai": True, "reason": f"Score <= {t['group_0']['short_score']} (G-0)"}
             
     # GROUP 1: Ultra-Estricto (Tendencia Fuerte Pullback)
     elif group_id == 1:
-        if trend == "BULLISH" and score >= 80 and 35 <= rsi <= 65:
+        if trend == "BULLISH" and score >= t["group_1"]["long_score"] and t["group_1"]["rsi_min"] <= rsi <= t["group_1"]["rsi_max"]:
             return {"action": "LONG", "use_ai": True, "reason": "Trend Alcista + Pullback RSI + Score Alto (G-1)"}
             
     # GROUP 2: Reversión a la Media (Caza-Rebotes + Inteligencia Artificial)
     elif group_id == 2:
         # Buy extreme oversold with MACD divergence starting
-        if rsi <= 35 and macd_hist > -0.1:
-            return {"action": "LONG", "use_ai": True, "reason": "Oversold RSI < 35 Bounce (G-2)"}
+        if rsi <= t["group_2"]["long_rsi"] and macd_hist > -0.1:
+            return {"action": "LONG", "use_ai": True, "reason": f"Oversold RSI < {t['group_2']['long_rsi']} Bounce (G-2)"}
         # Short extreme overbought
-        elif rsi >= 65 and macd_hist < 0.1:
-            return {"action": "SHORT", "use_ai": True, "reason": "Overbought RSI > 65 Bounce (G-2)"}
+        elif rsi >= t["group_2"]["short_rsi"] and macd_hist < 0.1:
+            return {"action": "SHORT", "use_ai": True, "reason": f"Overbought RSI > {t['group_2']['short_rsi']} Bounce (G-2)"}
             
     # GROUP 3: Breakout por Volumen (Volumen + Inteligencia Artificial)
     elif group_id == 3:
-        if vol_surge >= 1.5 and rsi > 50 and trend == "BULLISH":
-            return {"action": "LONG", "use_ai": True, "reason": "Volume Surge > 1.5x Breakout (G-3)"}
+        if vol_surge >= t["group_3"]["vol_surge"] and rsi > t["group_3"]["long_rsi"] and trend == "BULLISH":
+            return {"action": "LONG", "use_ai": True, "reason": f"Volume Surge > {t['group_3']['vol_surge']} Breakout (G-3)"}
             
     # GROUP 4: Enfoque Bajista (Short-Seller con IA)
     elif group_id == 4:
-        if rsi >= 65 and macd_hist < 0 and trend == "BEARISH":
-            return {"action": "SHORT", "use_ai": True, "reason": "Overbought RSI > 65 + MACD Cross + Bear Trend (G-4)"}
-        elif score <= 35:
-            return {"action": "SHORT", "use_ai": True, "reason": "Score <= 35 (G-4)"}
+        if rsi >= t["group_4"]["short_rsi"] and macd_hist < 0 and trend == "BEARISH":
+            return {"action": "SHORT", "use_ai": True, "reason": f"Overbought RSI > {t['group_4']['short_rsi']} + Bear Trend (G-4)"}
+        elif score <= t["group_4"]["short_score"]:
+            return {"action": "SHORT", "use_ai": True, "reason": f"Score <= {t['group_4']['short_score']} (G-4)"}
             
     # GROUP 5: Kamikaze (Relajado, IA máxima delegación)
     elif group_id == 5:
-        if score >= 55:
-            return {"action": "LONG", "use_ai": True, "reason": "Score >= 55 (Kamikaze G-5)"}
-        elif score <= 45:
-            return {"action": "SHORT", "use_ai": True, "reason": "Score <= 45 (Kamikaze G-5)"}
+        if score >= t["group_5"]["long_score"]:
+            return {"action": "LONG", "use_ai": True, "reason": f"Score >= {t['group_5']['long_score']} (Kamikaze G-5)"}
+        elif score <= t["group_5"]["short_score"]:
+            return {"action": "SHORT", "use_ai": True, "reason": f"Score <= {t['group_5']['short_score']} (Kamikaze G-5)"}
 
     return {"action": "HOLD", "use_ai": False, "reason": ""}

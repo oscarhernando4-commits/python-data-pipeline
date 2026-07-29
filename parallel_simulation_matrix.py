@@ -466,6 +466,12 @@ def run_infinite_trading_matrix_cycle():
     except Exception as e_real:
         print(f"Real trader notice: {e_real}")
         
+    try:
+        import auto_tune_thresholds
+        auto_tune_thresholds.auto_tune()
+    except Exception as e_tune:
+        print(f"Error auto-tuning thresholds: {e_tune}")
+        
     print(f"[{now_str}] Screen-Optimized Matrix Completed! Total Fund: ${total_balance:,.2f} USD")
     return matrix
 
