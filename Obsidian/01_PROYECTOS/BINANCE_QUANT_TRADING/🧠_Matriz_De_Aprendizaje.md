@@ -4,21 +4,21 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-07-29 06:32:29
+date: 2026-07-29 08:16:20
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-07-29 06:32:29`  
+> **Última Actualización:** `2026-07-29 08:16:20`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `62`
-- **Ganadas (WIN):** `21` | **Perdidas (LOSS):** `41`
-- **Tasa de Acierto (Win Rate):** `33.87%`
-- **PnL Total Neto:** `$-5.75 USD`
+- **Total Operaciones:** `82`
+- **Ganadas (WIN):** `21` | **Perdidas (LOSS):** `61`
+- **Tasa de Acierto (Win Rate):** `25.61%`
+- **PnL Total Neto:** `$-37.15 USD`
 
 ---
 
@@ -28,6 +28,7 @@ date: 2026-07-29 06:32:29
 - 🛑 Volume surge < 1.1x average during trend reversals (Block Fakeouts)
 - 🛑 Preventive Block for LTCUSDT: Loss logged at 46.03 -> Hit SL on LTCUSDT (-$1.60). Re-Trading!
 - 🛑 Preventive Block for BTCUSDT: Loss logged at 63662.44 -> Hit SL on BTCUSDT (-$1.65). Re-Trading!
+- 🛑 Preventive Block for NEARUSDT: Loss logged at 1.609 -> Hit SL on NEARUSDT (-$1.57). Re-Trading!
 
 ---
 
@@ -43,14 +44,14 @@ date: 2026-07-29 06:32:29
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
-| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
-| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
-| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
-| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
-| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
-| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
-| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
-| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
-| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
+| 2026-07-29 08:16:20 | NEARUSDT | LONG | `$1.609` | `$1.594` | `$-1.57` | 🔴 LOSS |
+| 2026-07-29 08:16:20 | NEARUSDT | LONG | `$1.609` | `$1.594` | `$-1.57` | 🔴 LOSS |
+| 2026-07-29 08:16:20 | NEARUSDT | LONG | `$1.609` | `$1.594` | `$-1.57` | 🔴 LOSS |
+| 2026-07-29 08:16:20 | NEARUSDT | LONG | `$1.609` | `$1.594` | `$-1.57` | 🔴 LOSS |
+| 2026-07-29 08:16:20 | NEARUSDT | LONG | `$1.609` | `$1.594` | `$-1.57` | 🔴 LOSS |
+| 2026-07-29 08:16:20 | NEARUSDT | LONG | `$1.609` | `$1.594` | `$-1.57` | 🔴 LOSS |
+| 2026-07-29 08:16:20 | NEARUSDT | LONG | `$1.609` | `$1.594` | `$-1.57` | 🔴 LOSS |
+| 2026-07-29 08:16:20 | NEARUSDT | LONG | `$1.609` | `$1.594` | `$-1.57` | 🔴 LOSS |
+| 2026-07-29 08:16:20 | NEARUSDT | LONG | `$1.609` | `$1.594` | `$-1.57` | 🔴 LOSS |
+| 2026-07-29 08:16:20 | NEARUSDT | LONG | `$1.609` | `$1.594` | `$-1.57` | 🔴 LOSS |
 

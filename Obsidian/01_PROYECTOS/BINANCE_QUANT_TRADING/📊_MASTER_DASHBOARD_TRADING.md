@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-07-29 08:11:15
+date: 2026-07-29 08:16:20
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-07-29 08:11:15`  
+> **Última Actualización:** `2026-07-29 08:16:20`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -22,10 +22,10 @@ date: 2026-07-29 08:11:15
 
 | Métrica | Valor Actual | ¿Qué Significa? |
 | :--- | :--- | :--- |
-| 💵 **Capital Total (Fondo $10k):** | **`$9,994.25 USD`** | Balance de las 100 cuentas de prueba |
-| 💰 **Ganancia Neta Total:** | **`$-5.75 USD`** | Resultado global acumulado |
+| 💵 **Capital Total (Fondo $10k):** | **`$9,962.85 USD`** | Balance de las 100 cuentas de prueba |
+| 💰 **Ganancia Neta Total:** | **`$-37.15 USD`** | Resultado global acumulado |
 | 🎯 **Cuentas que cumplieron la meta:** | **`20 de 100 Cuentas`** | Cuentas que alcanzaron el +3% esta semana |
-| 📈 **Tasa de Acierto de la IA:** | **`33.87% Win Rate`** | Efectividad actual de las estrategias |
+| 📈 **Tasa de Acierto de la IA:** | **`25.61% Win Rate`** | Efectividad actual de las estrategias |
 
 ---
 
@@ -36,7 +36,7 @@ date: 2026-07-29 08:11:15
 > 
 > - 💵 **Capital Base (Promedio):** `$100.00 USD`
 > - 🎯 **Meta Semanal (Promedio):** `$103.00 USD`
-> - 💰 **Capital Promedio Actual:** `$99.94 USD`
+> - 💰 **Capital Promedio Actual:** `$99.63 USD`
 > - 🟡 **Estado:** `🟡 EN PROCESO - Buscando el +3% de ganancia en operaciones filtradas`
 
 ---
@@ -70,7 +70,7 @@ date: 2026-07-29 08:11:15
 | :--- | :---: | :---: |
 | **0 (Copia Real)** | `50.0%` | `$+1.25` |
 | **1 (Ultra-Estricto)** | `0.0%` | `$+0.00` |
-| **Grupo 2** | `0.0%` | `$-32.00` |
+| **Grupo 2** | `0.0%` | `$-63.40` |
 | **Grupo 3** | `0.0%` | `$+0.00` |
 | **Grupo 4** | `50.0%` | `$+25.00` |
 | **5 (Exploratorio)** | `0.0%` | `$+0.00` |
