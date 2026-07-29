@@ -113,7 +113,8 @@ def get_real_futures_usdt_balance():
 def execute_real_spot_market_buy(symbol, usdt_amount):
     timestamp = int(time.time() * 1000)
     # Use full balance minus a tiny 1% safety buffer to avoid "Insufficient Balance" errors
-    clean_usd = round(usdt_amount * 0.99, 2)
+    # Strict floor truncation to ensure we never exceed exactly available decimals
+    clean_usd = int(usdt_amount * 0.99 * 100) / 100.0
     params = {
         "symbol": symbol,
         "side": "BUY",
@@ -136,7 +137,8 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
 def execute_real_futures_market_short(symbol, usdt_amount):
     timestamp = int(time.time() * 1000)
     # Use full balance minus a 2% safety buffer for Futures margin and fees
-    clean_usd = round(usdt_amount * 0.98, 2)
+    # Strict floor truncation to ensure we never exceed exactly available decimals
+    clean_usd = int(usdt_amount * 0.98 * 100) / 100.0
     fapi_url = "https://fapi.binance.com"
     headers = {"X-MBX-APIKEY": API_KEY}
 
@@ -256,8 +258,17 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         entry = state["position"].get("entry_price", current_price)
         if entry > 0:
             pnl_pct = ((current_price - entry) / entry) * 100.0
-            if pnl_pct >= 3.0 or pnl_pct <= -1.5:
-                print(f"🎯 ALERTA REAL: Salida LONG por PnL {pnl_pct:.2f}% en {active_symbol}. Vendiendo...")
+            
+            # --- ESCUDO REAL: BREAK-EVEN DINÁMICO ---
+            if pnl_pct >= 1.5 and not state["position"].get("break_even", False):
+                state["position"]["break_even"] = True
+                print(f"🛡️ ESCUDO REAL ACTIVADO: El precio subió +{pnl_pct:.2f}%. Stop-loss asegurado en Break-Even (+0.2%).")
+                
+            dynamic_sl = 0.2 if state["position"].get("break_even", False) else -1.5
+            
+            if pnl_pct >= 3.0 or pnl_pct <= dynamic_sl:
+                reason_str = f"Ganancia Asegurada (+{pnl_pct:.2f}%)" if pnl_pct >= 3.0 or state["position"].get("break_even", False) else f"Stop Loss ({pnl_pct:.2f}%)"
+                print(f"🎯 ALERTA REAL: Salida LONG por {reason_str} en {active_symbol}. Vendiendo...")
                 sell_params = {
                     "symbol": active_symbol,
                     "side": "SELL",
