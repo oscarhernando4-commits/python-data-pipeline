@@ -75,8 +75,8 @@ def should_update():
     import time
     if not os.path.exists("top_100_pairs.json"):
         return True
-    # If file is older than 1 hora (3600 seconds) - Utilizing more of the daily limit
-    if time.time() - os.path.getmtime("top_100_pairs.json") > 3600:
+    # If file is older than 15 minutos (800 seconds) - Increasing frequency 4.5x to catch rapid moonshots
+    if time.time() - os.path.getmtime("top_100_pairs.json") > 800:
         return True
     return False
 
@@ -87,4 +87,4 @@ if __name__ == "__main__":
         else:
             print("CMC_API_KEY is not set. Skipping update.")
     else:
-        print("top_100_pairs.json is less than 1 hour old. Skipping CMC API call to save free tier limits.")
+        print("top_100_pairs.json is less than 15 minutes old. Skipping CMC API call to save free tier limits.")
