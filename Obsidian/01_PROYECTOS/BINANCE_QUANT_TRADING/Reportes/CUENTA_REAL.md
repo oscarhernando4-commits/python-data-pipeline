@@ -1,6 +1,6 @@
 # Reporte Temporal: CUENTA REAL
 
-> Actualizado: 2026-07-29 11:01:53
+> Actualizado: 2026-07-29 11:07:15
 
 | Ventana de Tiempo | Total Operaciones | Ganadoras | Perdedoras | Win Rate | PnL Neto |
 | :--- | :--- | :--- | :--- | :--- | :--- |

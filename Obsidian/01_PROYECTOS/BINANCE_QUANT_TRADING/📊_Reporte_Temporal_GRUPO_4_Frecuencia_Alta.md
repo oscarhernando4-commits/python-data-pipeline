@@ -4,7 +4,7 @@ aliases: [Rendimiento ⚡ GRUPO 4: Frecuencia Alta]
 cssclasses: [dashboard-view]
 ---
 # 📊 Rendimiento por Periodos: ⚡ GRUPO 4: Frecuencia Alta
-> Última actualización: 2026-07-29 11:01:53
+> Última actualización: 2026-07-29 11:07:15
 
 | Periodo | Total Operaciones | ✅ Ganadoras | 💰 PnL Ganado | ❌ Perdedoras | 💸 PnL Perdido | 📈 Neto |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
