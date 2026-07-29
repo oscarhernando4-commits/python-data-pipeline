@@ -1,0 +1,46 @@
+name: Force Real Live Trade Override
+
+on:
+  push:
+    paths:
+      - 'force_real_trade.py'
+  workflow_dispatch:
+
+jobs:
+  execute_force_trade:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 📥 Checkout Repository Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🐍 Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: 📦 Install Requirements
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests numpy pandas ta urllib3
+
+      - name: 🚀 EXECUTE LIVE FORCED TRADE
+        env:
+          BINANCE_REAL_API_KEY: ${{ secrets.BINANCE_REAL_API_KEY }}
+          BINANCE_REAL_API_SECRET: ${{ secrets.BINANCE_REAL_API_SECRET }}
+          FIXIE_URL: ${{ secrets.FIXIE_URL || 'http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80' }}
+        run: |
+          python force_real_trade.py
+          
+      - name: 💾 Commit & Push Risk State Updates
+        run: |
+          git config --global user.name 'antigravity-bot[bot]'
+          git config --global user.email 'antigravity-bot[bot]@users.noreply.github.com'
+          git add real_money_account.json
+          git commit -m "Auto-Update: Forced Live Trade State Update [$(date -u +'%Y-%m-%d %H:%M:%S UTC')]" || echo "No changes to commit"
+          git push origin main
