@@ -37,7 +37,7 @@ jobs:
           BINANCE_REAL_API_SECRET: ${{ secrets.BINANCE_REAL_API_SECRET }}
           FIXIE_URL: ${{ secrets.FIXIE_URL || 'http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80' }}
         run: |
-          python force_real_trade.py > force_trade_log.txt 2>&1
+          python check_futures.py > force_trade_log.txt 2>&1
           
       - name: 💾 Commit & Push Risk State Updates
         run: |
