@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-07-29 13:56:25
+date: 2026-07-29 14:01:33
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-07-29 13:56:25`  
+> **Última Actualización:** `2026-07-29 14:01:33`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -29,7 +29,16 @@ date: 2026-07-29 13:56:25
 
 ---
 
-## 🎯 2. PROGRESO HACIA LA META SEMANAL (+3% SOBRE $100)
+## 🧭 2. AUTO-APRENDIZAJE: SESGO DE MERCADO (LONG vs SHORT)
+
+> [!WARNING] 🧠 IA SENTINEL REGLA DE PRIORIDAD: `NEUTRAL`
+> - 🟢 **Rendimiento Compras (LONG):** `0.0%` de Acierto
+> - 🔴 **Rendimiento Ventas (SHORT):** `0.0%` de Acierto
+> - **Acción de la IA:** El bot está inyectando esta data en tiempo real a Gemini. Si la tendencia muestra pérdidas en LONG y ganancias en SHORT, **Gemini bloqueará operaciones LONG** priorizando el flujo ganador del mercado para el dinero real.
+
+---
+
+## 🎯 3. PROGRESO HACIA LA META SEMANAL (+3% SOBRE $100)
 
 > [!IMPORTANT] 🏆 META SEMANA 1: $103.00 USD (Promedio)
 > **Progreso Actual:** `[░░░░░░░░░░] 0.0%`
@@ -41,7 +50,7 @@ date: 2026-07-29 13:56:25
 
 ---
 
-## 💰 3. INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS)
+## 💰 4. INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS)
 
 > [!TIP] 🏦 ESTADO DE LA CUENTA REAL
 > - 💵 **Balance Real Actual:** `$17.15 USD` (`-2.92 USD`)
@@ -50,7 +59,7 @@ date: 2026-07-29 13:56:25
 
 ---
 
-## 🏆 4. TOP 5 CRIPTOMONEDAS MÁS RENTABLES DEL MOMENTO (TESTNET)
+## 🏆 5. TOP 5 CRIPTOMONEDAS MÁS RENTABLES DEL MOMENTO (TESTNET)
 
 | Criptomoneda | Balance Actual | Ganancia | Estado |
 | :--- | :--- | :--- | :--- |
@@ -63,7 +72,7 @@ date: 2026-07-29 13:56:25
 
 ---
 
-## 📈 5. RENDIMIENTO POR GRUPOS DE IA (Clasificación 0-5)
+## 📈 6. RENDIMIENTO POR GRUPOS DE IA (Clasificación 0-5)
 
 > [!INFO] 📊 COMPARATIVA DE ESTRATEGIAS
 | Grupo | Tasa de Acierto | Ganancia Neta |
@@ -78,7 +87,7 @@ date: 2026-07-29 13:56:25
 
 ---
 
-## 🛡️ 6. SALUD DEL SISTEMA Y PROTECCIONES
+## 🛡️ 7. SALUD DEL SISTEMA Y PROTECCIONES
 
 > [!WARNING] ⚙️ ESTADO DE SERVICIOS
 > - 🧠 **Gemini AI (Súper-Cerebro):** `🟢 CONECTADO (Cascada Flash-Lite Activa)`
@@ -89,7 +98,7 @@ date: 2026-07-29 13:56:25
 
 ---
 
-## 🔗 NAVEGACIÓN EN 1-CLIC (DETALLES Y TABLAS COMPLETAS)
+## 🔗 8. NAVEGACIÓN EN 1-CLIC (DETALLES Y TABLAS COMPLETAS)
 - [[🚀_Matriz_100_Simulaciones|Ver Lista Completa de las 100 Cuentas]]
 - [[🎯_Seguimiento_De_Metas|Ver Tabla de Metas Semana a Semana]]
 - [[📊_Dashboard_Interes_Compuesto|Ver Proyección de Interés Compuesto]]
