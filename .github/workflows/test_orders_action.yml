@@ -1,0 +1,40 @@
+name: Pruebas de Ejecución Real
+
+on:
+  push:
+    paths:
+      - 'test_orders.py'
+
+jobs:
+  run-test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 📦 Install Dependencies
+        run: pip install requests
+
+      - name: 🚀 Run Order Test in Cloud
+        env:
+          BINANCE_API_KEY: ${{ secrets.BINANCE_API_KEY }}
+          BINANCE_API_SECRET: ${{ secrets.BINANCE_API_SECRET }}
+        run: python test_orders.py
+
+      - name: 📝 Upload Report
+        run: |
+          mkdir -p Obsidian/01_PROYECTOS/BINANCE_QUANT_TRADING/
+          mv TEST_EJECUCION_REAL.md Obsidian/01_PROYECTOS/BINANCE_QUANT_TRADING/PRUEBA_NUBE_REAL.md
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add Obsidian/01_PROYECTOS/BINANCE_QUANT_TRADING/PRUEBA_NUBE_REAL.md
+          git commit -m "Auto-Reporte: Prueba de conexión real exitosa" || echo "No changes to commit"
+          git push origin main
