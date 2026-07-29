@@ -5,7 +5,7 @@ THRESHOLDS_FILE = os.path.join(os.path.dirname(__file__), "dynamic_thresholds.js
 
 def load_thresholds():
     default_t = {
-      "group_0": {"long_score": 80, "short_score": 20},
+      "group_0": {"long_score": 50, "short_score": 50},
       "group_1": {"long_score": 70, "rsi_min": 30, "rsi_max": 70, "require_trend": True},
       "group_2": {"long_rsi": 40, "short_rsi": 60, "macd_long": -0.5, "macd_short": 0.5},
       "group_3": {"vol_surge": 1.2, "long_rsi": 45, "require_trend": False},
