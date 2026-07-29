@@ -181,6 +181,7 @@ date: {now_str}
 - [[🎯_Seguimiento_De_Metas|Ver Tabla de Metas Semana a Semana]]
 - [[📊_Dashboard_Interes_Compuesto|Ver Proyección de Interés Compuesto]]
 - [[📚_Historial_Super_Detallado|Ver Historial Súper Detallado de Trades (Contexto IA)]]
+- [[📊_Analisis_Por_Grupo_y_Movimientos|Ver Análisis y Movimientos por Grupo]]
 
 ## 📂 Sub-Reportes por Ventanas de Tiempo
 Análisis de rendimiento detallado a 1D, 3D, 1W, 2W, y 1M:
