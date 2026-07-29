@@ -45,7 +45,7 @@ def save_memory(data):
 def get_market_bias(data=None):
     if data is None:
         data = load_memory()
-    trades = data.get("history", [])[-100:] # Look at last 100 trades for group learning
+    trades = data.get("history", []) # Look at TOTAL ALL-TIME trades for group learning
     long_w=0; long_l=0; short_w=0; short_l=0
     group_stats = {}
     
@@ -103,7 +103,7 @@ def get_market_bias(data=None):
         "best_group_pnl": round(best_group_pnl, 2)
     }
 
-def record_trade_outcome(symbol, side, entry_price, exit_price, pnl_usd, result_type, notes="", account_id="Histórico", group_name="Sin Grupo"):
+def record_trade_outcome(symbol, side, entry_price, exit_price, pnl_usd, result_type, notes="", account_id="Histórico", group_name="Sin Grupo", context=None):
     data = load_memory()
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
@@ -117,7 +117,8 @@ def record_trade_outcome(symbol, side, entry_price, exit_price, pnl_usd, result_
         "exit_price": exit_price,
         "pnl_usd": pnl_usd,
         "result": result_type.upper(),  # "WIN" or "LOSS"
-        "notes": notes
+        "notes": notes,
+        "context": context or {}
     }
     
     data["history"].append(trade_entry)
@@ -142,6 +143,27 @@ def record_trade_outcome(symbol, side, entry_price, exit_price, pnl_usd, result_
             
     save_memory(data)
     return trade_entry
+
+def get_super_detailed_table_str(data=None):
+    if data is None:
+        data = load_memory()
+    
+    table = "| Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |\n"
+    table += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
+    
+    for t in data.get("history", []):
+        ctx = t.get("context", {})
+        score = ctx.get("score", "N/A")
+        rsi = ctx.get("rsi_15m", "N/A")
+        if isinstance(rsi, float): rsi = f"{rsi:.1f}"
+        trend = ctx.get("macro_trend_4h", "N/A")
+        
+        res_emoji = "🟢 WIN" if t['result'] == 'WIN' else "🔴 LOSS"
+        gname = t.get('group_name', 'Sin Grupo')[:15]
+        
+        table += f"| {t['timestamp']} | {gname}... | {t['symbol']} | {t['side']} | ${t['entry_price']} | ${t['exit_price']} | ${t['pnl_usd']:+.2f} | {score} | {rsi} | {trend} | {res_emoji} |\n"
+        
+    return table
 
 def sync_learning_note(data):
     if not os.path.exists(OBSIDIAN_FOLDER):
@@ -213,6 +235,27 @@ date: {now_str}
     file_path = os.path.join(OBSIDIAN_FOLDER, "🧠_Matriz_De_Aprendizaje.md")
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(content)
+        
+    # Generate super detailed history file for Obsidian
+    detailed_table = get_super_detailed_table_str(data)
+    detailed_md = f"""---
+tags:
+  - trading
+  - historial_completo
+  - binance
+date: {now_str}
+---
+
+# 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
+
+> **Última Actualización:** `{now_str}`
+> Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
+
+{detailed_table}
+"""
+    detailed_path = os.path.join(OBSIDIAN_FOLDER, "📚_Historial_Super_Detallado.md")
+    with open(detailed_path, "w", encoding="utf-8") as f:
+        f.write(detailed_md)
 
 if __name__ == '__main__':
     data = load_memory()

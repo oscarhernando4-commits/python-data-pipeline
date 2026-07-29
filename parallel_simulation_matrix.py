@@ -272,10 +272,19 @@ def run_infinite_trading_matrix_cycle():
                 acc["current_level"] = acc.get("current_level", 1) + 1
                 acc["status"] = "BUSCANDO_OPORTUNIDAD"
                 
+                ctx = {}
+                if analysis:
+                    ctx = {
+                        "score": analysis.get("score"),
+                        "rsi_15m": analysis.get("tech", {}).get("indicators", {}).get("rsi_15m"),
+                        "macro_trend_4h": analysis.get("tech", {}).get("macro_trend_4h")
+                    }
+                    
                 learning_engine.record_trade_outcome(
                     symbol=symbol, side=side, entry_price=entry_p, exit_price=curr_price,
                     pnl_usd=pnl, result_type="WIN", notes=f"Win on {symbol} (+${pnl:.2f} net) -> Level {acc['current_level']} Re-Trading Started!",
-                    account_id=acc.get("account_id", "Desconocida"), group_name=acc.get("group_name", "Sin Grupo")
+                    account_id=acc.get("account_id", "Desconocida"), group_name=acc.get("group_name", "Sin Grupo"),
+                    context=ctx
                 )
 
             # LOSS CASE: Hit Stop-Loss (-1.5%)
@@ -291,10 +300,19 @@ def run_infinite_trading_matrix_cycle():
                 acc["position"] = None
                 acc["status"] = "BUSCANDO_OPORTUNIDAD"
                 
+                ctx = {}
+                if analysis:
+                    ctx = {
+                        "score": analysis.get("score"),
+                        "rsi_15m": analysis.get("tech", {}).get("indicators", {}).get("rsi_15m"),
+                        "macro_trend_4h": analysis.get("tech", {}).get("macro_trend_4h")
+                    }
+                    
                 learning_engine.record_trade_outcome(
                     symbol=symbol, side=side, entry_price=entry_p, exit_price=curr_price,
                     pnl_usd=-loss, result_type="LOSS", notes=f"Hit SL on {symbol} (-${loss:.2f}). Re-Trading!",
-                    account_id=acc.get("account_id", "Desconocida"), group_name=acc.get("group_name", "Sin Grupo")
+                    account_id=acc.get("account_id", "Desconocida"), group_name=acc.get("group_name", "Sin Grupo"),
+                    context=ctx
                 )
             else:
                 # Trailing Stop: Move SL to Break-Even (+0.2%) once profit reaches +1.5%

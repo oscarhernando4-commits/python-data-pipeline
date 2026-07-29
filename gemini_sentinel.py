@@ -26,6 +26,9 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     mem = learning_engine.load_memory()
     blocked_rules = "\n    - ".join(mem["learned_rules"]["blocked_patterns"][-5:]) # Get latest 5
     boosted_rules = "\n    - ".join(mem["learned_rules"]["boosted_patterns"][-5:])
+    
+    # RAG: Extract ALL-TIME Super Detailed History Table
+    super_detailed_table = learning_engine.get_super_detailed_table_str(mem)
 
     indicators = tech_data.get('indicators', {})
     risk_plan = tech_data.get('institutional_risk_plan', {})
@@ -54,6 +57,10 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     SESGO DEL MERCADO RECIENTE (AUTO-APRENDIZAJE DE PNL LONG vs SHORT):
     - {market_bias_ctx if market_bias_ctx else "Sesgo de Mercado No Disponible."}
     ⚠️ IMPORTANTE: Si el sesgo reciente indica que un lado (ej. LONG) está perdiendo repetidamente y el otro (ej. SHORT) está ganando, DEBES RECHAZAR operaciones que vayan en contra del flujo ganador a menos que haya una confirmación macro extrema de reversión. Alinear tus decisiones al dinero real (Real Money).
+
+    HISTORIAL SUPER DETALLADO (TABLA COMPLETA ALL-TIME DE TODAS LAS OPERACIONES):
+    {super_detailed_table}
+    Lee detenidamente esta tabla. Contiene los detalles exactos de qué RSI, Score, y Tendencia tenían los trades históricos ganadores y perdedores. Úsalo para extraer patrones y aplicarlos a tu decisión actual.
 
     EVALÚA LOS SIGUIENTES DATOS EN TIEMPO REAL PARA {symbol}:
     - Puntaje Técnico Cuantitativo Actual: {score} / 100 Pts
