@@ -37,6 +37,8 @@ def generate_master_dashboard():
     win_rate = matrix.get("global_win_rate_pct", 0.0)
     accounts = matrix.get("accounts", [])
     
+    bias_info = learning_engine.get_market_bias(mem)
+    
     goals_reached = sum([1 for a in accounts if a.get("goal_reached")])
     
     # Sort top 5 winning cryptocurrencies
@@ -120,7 +122,16 @@ date: {now_str}
 
 ---
 
-## 🎯 2. PROGRESO HACIA LA META SEMANAL (+3% SOBRE $100)
+## 🧭 2. AUTO-APRENDIZAJE: SESGO DE MERCADO (LONG vs SHORT)
+
+> [!WARNING] 🧠 IA SENTINEL REGLA DE PRIORIDAD: `{bias_info['bias']}`
+> - 🟢 **Rendimiento Compras (LONG):** `{bias_info['long_win_rate']}%` de Acierto
+> - 🔴 **Rendimiento Ventas (SHORT):** `{bias_info['short_win_rate']}%` de Acierto
+> - **Acción de la IA:** El bot está inyectando esta data en tiempo real a Gemini. Si la tendencia muestra pérdidas en LONG y ganancias en SHORT, **Gemini bloqueará operaciones LONG** priorizando el flujo ganador del mercado para el dinero real.
+
+---
+
+## 🎯 3. PROGRESO HACIA LA META SEMANAL (+3% SOBRE $100)
 
 > [!IMPORTANT] 🏆 META SEMANA 1: $103.00 USD (Promedio)
 > **Progreso Actual:** `[{bar_str}] {progress_pct:.1f}%`
@@ -132,7 +143,7 @@ date: {now_str}
 
 ---
 
-## 💰 3. INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS)
+## 💰 4. INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS)
 
 > [!TIP] 🏦 ESTADO DE LA CUENTA REAL
 > - 💵 **Balance Real Actual:** `${real_bal:.2f} USD` (`{real_pnl:+.2f} USD`)
@@ -141,20 +152,20 @@ date: {now_str}
 
 ---
 
-## 🏆 4. TOP 5 CRIPTOMONEDAS MÁS RENTABLES DEL MOMENTO (TESTNET)
+## 🏆 5. TOP 5 CRIPTOMONEDAS MÁS RENTABLES DEL MOMENTO (TESTNET)
 
 {top_winners_table}
 
 ---
 
-## 📈 5. RENDIMIENTO POR GRUPOS DE IA (Clasificación 0-5)
+## 📈 6. RENDIMIENTO POR GRUPOS DE IA (Clasificación 0-5)
 
 > [!INFO] 📊 COMPARATIVA DE ESTRATEGIAS
 {group_table}
 
 ---
 
-## 🛡️ 6. SALUD DEL SISTEMA Y PROTECCIONES
+## 🛡️ 7. SALUD DEL SISTEMA Y PROTECCIONES
 
 > [!WARNING] ⚙️ ESTADO DE SERVICIOS
 > - 🧠 **Gemini AI (Súper-Cerebro):** `🟢 CONECTADO (Cascada Flash-Lite Activa)`
@@ -165,7 +176,7 @@ date: {now_str}
 
 ---
 
-## 🔗 NAVEGACIÓN EN 1-CLIC (DETALLES Y TABLAS COMPLETAS)
+## 🔗 8. NAVEGACIÓN EN 1-CLIC (DETALLES Y TABLAS COMPLETAS)
 - [[🚀_Matriz_100_Simulaciones|Ver Lista Completa de las 100 Cuentas]]
 - [[🎯_Seguimiento_De_Metas|Ver Tabla de Metas Semana a Semana]]
 - [[📊_Dashboard_Interes_Compuesto|Ver Proyección de Interés Compuesto]]

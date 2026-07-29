@@ -6,7 +6,7 @@ import urllib.request
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 
-def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed, macro_context=""):
+def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed, macro_context="", market_bias_ctx=""):
     """
     Super-Brain AI Decision Reviewer using Google Gemini Flash Free API.
     Provides sub-second LLM reasoning for high-stakes trades, enriched with Macro Lite context.
@@ -50,6 +50,10 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
 
     ESTADO GLOBAL DEL MERCADO (Reporte de Analista Macro Lite):
     - {macro_context if macro_context else "Contexto Macro No Disponible."}
+
+    SESGO DEL MERCADO RECIENTE (AUTO-APRENDIZAJE DE PNL LONG vs SHORT):
+    - {market_bias_ctx if market_bias_ctx else "Sesgo de Mercado No Disponible."}
+    ⚠️ IMPORTANTE: Si el sesgo reciente indica que un lado (ej. LONG) está perdiendo repetidamente y el otro (ej. SHORT) está ganando, DEBES RECHAZAR operaciones que vayan en contra del flujo ganador a menos que haya una confirmación macro extrema de reversión. Alinear tus decisiones al dinero real (Real Money).
 
     EVALÚA LOS SIGUIENTES DATOS EN TIEMPO REAL PARA {symbol}:
     - Puntaje Técnico Cuantitativo Actual: {score} / 100 Pts

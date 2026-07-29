@@ -42,6 +42,40 @@ def save_memory(data):
         json.dump(data, f, indent=2, ensure_ascii=False)
     sync_learning_note(data)
 
+def get_market_bias(data=None):
+    if data is None:
+        data = load_memory()
+    trades = data.get("history", [])[-50:] # Look at last 50 trades
+    long_w=0; long_l=0; short_w=0; short_l=0
+    for t in trades:
+        side = t.get("side", "LONG")
+        res = t.get("result", "LOSS")
+        if side == "LONG":
+            if res == "WIN": long_w += 1
+            else: long_l += 1
+        elif side == "SHORT":
+            if res == "WIN": short_w += 1
+            else: short_l += 1
+            
+    long_total = long_w + long_l
+    short_total = short_w + short_l
+    long_wr = (long_w / long_total * 100) if long_total > 0 else 0
+    short_wr = (short_w / short_total * 100) if short_total > 0 else 0
+    
+    bias = "NEUTRAL"
+    if short_wr > long_wr + 10:
+        bias = "FAVOR_SHORT"
+    elif long_wr > short_wr + 10:
+        bias = "FAVOR_LONG"
+        
+    return {
+        "bias": bias,
+        "long_win_rate": round(long_wr, 1),
+        "short_win_rate": round(short_wr, 1),
+        "long_trades": long_total,
+        "short_trades": short_total
+    }
+
 def record_trade_outcome(symbol, side, entry_price, exit_price, pnl_usd, result_type, notes="", account_id="Histórico", group_name="Sin Grupo"):
     data = load_memory()
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -88,6 +122,7 @@ def sync_learning_note(data):
         
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     stats = data["stats"]
+    bias_info = get_market_bias(data)
     blocked = "\n".join([f"- 🛑 {r}" for r in data["learned_rules"]["blocked_patterns"]])
     boosted = "\n".join([f"- ⚡ {r}" for r in data["learned_rules"]["boosted_patterns"]])
     
@@ -119,6 +154,14 @@ date: {now_str}
 - **Ganadas (WIN):** `{stats['wins']}` | **Perdidas (LOSS):** `{stats['losses']}`
 - **Tasa de Acierto (Win Rate):** `{stats['win_rate_pct']}%`
 - **PnL Total Neto:** `${stats['total_pnl_usd']:+.2f} USD`
+
+---
+
+## 🧭 Sesgo de Aprendizaje Automático (Últimos 50 Trades)
+- **Sesgo Actual (Market Bias):** `{bias_info['bias']}`
+- **Rendimiento LONG (Compras):** `{bias_info['long_win_rate']}%` de Acierto (en {bias_info['long_trades']} ops recientes)
+- **Rendimiento SHORT (Ventas):** `{bias_info['short_win_rate']}%` de Acierto (en {bias_info['short_trades']} ops recientes)
+- *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada.
 
 ---
 

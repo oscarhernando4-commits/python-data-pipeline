@@ -195,13 +195,18 @@ def run_infinite_trading_matrix_cycle():
                 cached_fundamental_report.get("recent_headlines", [])
             )
             
+            import learning_engine
+            bias_data = learning_engine.get_market_bias()
+            bias_str = f"BIAS: {bias_data['bias']} | WinRates -> LONG: {bias_data['long_win_rate']}% vs SHORT: {bias_data['short_win_rate']}%"
+            
             gemini_res = gemini_sentinel.review_trade_decision(
                 symbol=top_sym,
                 score=top_data["score"],
                 tech_data=top_data["tech"],
                 news_data={"headlines": cached_fundamental_report.get("recent_headlines", [])},
                 fear_greed=cached_fundamental_report.get("fear_and_greed", {"score": 50, "sentiment": "Neutral"}),
-                macro_context=macro_ctx
+                macro_context=macro_ctx,
+                market_bias_ctx=bias_str
             )
             print(f"🧠 [AI CO-PILOT {top_side}] {top_sym} (Score {top_data['score']} Pts): Approved={gemini_res.get('approved')} | Action={gemini_res.get('action')} | Conf={gemini_res.get('confidence')}% | Razonamiento: {gemini_res.get('reasoning')}")
         except Exception as ge:
