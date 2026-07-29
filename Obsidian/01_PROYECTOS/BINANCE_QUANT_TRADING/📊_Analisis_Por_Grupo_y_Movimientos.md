@@ -2,12 +2,12 @@
 tags:
   - analisis_grupos
   - trading
-date: 2026-07-29 16:06:03
+date: 2026-07-29 16:11:31
 ---
 
 # 📊 ANÁLISIS GLOBAL DE GANANCIAS Y PÉRDIDAS POR GRUPO
 
-> **Última Actualización:** `2026-07-29 16:06:03`
+> **Última Actualización:** `2026-07-29 16:11:31`
 > Este reporte desglosa el rendimiento matemático de cada Estrategia de IA. 
 
 ## 🏆 Resumen de Rendimiento (Ranking de Grupos)
