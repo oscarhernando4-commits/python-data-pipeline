@@ -1,6 +1,6 @@
 # Reporte Temporal: Grupo 5_IA_Experimental
 
-> Actualizado: 2026-07-29 04:27:25
+> Actualizado: 2026-07-29 04:31:30
 
 | Ventana de Tiempo | Total Operaciones | Ganadoras | Perdedoras | Win Rate | PnL Neto |
 | :--- | :--- | :--- | :--- | :--- | :--- |
