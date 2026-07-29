@@ -1,18 +1,29 @@
-=== INICIANDO OPERACIÓN KAMIKAZE SHORT EN FUTUROS ===
-Forzando SHORT en BTCUSDT con 8.5 USDT por orden del Creador...
+=== INICIANDO OPERACIÓN KAMIKAZE SHORT EN FUTUROS (XRP) ===
+Forzando SHORT en XRPUSDT con 8.5 USDT...
+Enviando MARKET SELL de 7 XRPUSDT...
 
-✅ RESPUESTA RAW DE BINANCE (FUTUROS BATCH ORDER):
-[
-    {
-        "code": -4003,
-        "msg": "Quantity less than or equal to zero."
-    },
-    {
-        "code": -4120,
-        "msg": "Order type not supported for this endpoint. Please use the Algo Order API endpoints instead."
-    },
-    {
-        "code": -4120,
-        "msg": "Order type not supported for this endpoint. Please use the Algo Order API endpoints instead."
-    }
-]
+✅ RESPUESTA RAW DE BINANCE (FUTUROS SHORT):
+{
+    "orderId": 154604309839,
+    "symbol": "XRPUSDT",
+    "status": "NEW",
+    "clientOrderId": "CuqDBwGbBInRnQdkpnnm9G",
+    "price": "0.0000",
+    "origQty": "7.0",
+    "executedQty": "0.0",
+    "cumQty": "0.0",
+    "timeInForce": "GTC",
+    "type": "MARKET",
+    "reduceOnly": false,
+    "closePosition": false,
+    "side": "SELL",
+    "positionSide": "BOTH",
+    "stopPrice": "0.0000",
+    "workingType": "CONTRACT_PRICE",
+    "priceProtect": false,
+    "origType": "MARKET",
+    "priceMatch": "NONE",
+    "selfTradePreventionMode": "EXPIRE_MAKER",
+    "goodTillDate": 0,
+    "updateTime": 1785363856081
+}
