@@ -12,39 +12,42 @@ def evaluate_opportunity(tech, group_id):
     
     # GROUP 0: Replica Real (Algoritmo actual de alta confluencia)
     if group_id == 0:
-        if score >= 85:
-            return {"action": "LONG", "use_ai": True, "reason": "Score >= 85 (G-0)"}
-        elif score <= 15:
-            return {"action": "SHORT", "use_ai": True, "reason": "Score <= 15 (G-0)"}
+        if score >= 80:
+            return {"action": "LONG", "use_ai": True, "reason": "Score >= 80 (G-0)"}
+        elif score <= 20:
+            return {"action": "SHORT", "use_ai": True, "reason": "Score <= 20 (G-0)"}
             
     # GROUP 1: Ultra-Estricto (Tendencia Fuerte Pullback)
     elif group_id == 1:
-        if trend == "BULLISH" and score >= 85 and 40 <= rsi <= 60:
+        if trend == "BULLISH" and score >= 80 and 35 <= rsi <= 65:
             return {"action": "LONG", "use_ai": True, "reason": "Trend Alcista + Pullback RSI + Score Alto (G-1)"}
             
-    # GROUP 2: Reversión a la Media (Caza-Rebotes mecánicos sin IA)
+    # GROUP 2: Reversión a la Media (Caza-Rebotes + Inteligencia Artificial)
     elif group_id == 2:
         # Buy extreme oversold with MACD divergence starting
-        if rsi <= 30 and macd_hist > -0.05:  # Histograma perdiendo fuerza bajista
-            return {"action": "LONG", "use_ai": False, "reason": "Oversold RSI < 30 Bounce (G-2)"}
+        if rsi <= 35 and macd_hist > -0.1:
+            return {"action": "LONG", "use_ai": True, "reason": "Oversold RSI < 35 Bounce (G-2)"}
+        # Short extreme overbought
+        elif rsi >= 65 and macd_hist < 0.1:
+            return {"action": "SHORT", "use_ai": True, "reason": "Overbought RSI > 65 Bounce (G-2)"}
             
-    # GROUP 3: Breakout por Volumen (Mecánico)
+    # GROUP 3: Breakout por Volumen (Volumen + Inteligencia Artificial)
     elif group_id == 3:
-        if vol_surge >= 2.0 and rsi > 55 and trend == "BULLISH":
-            return {"action": "LONG", "use_ai": False, "reason": "Volume Surge > 2.0x Breakout (G-3)"}
+        if vol_surge >= 1.5 and rsi > 50 and trend == "BULLISH":
+            return {"action": "LONG", "use_ai": True, "reason": "Volume Surge > 1.5x Breakout (G-3)"}
             
     # GROUP 4: Enfoque Bajista (Short-Seller con IA)
     elif group_id == 4:
-        if rsi >= 70 and macd_hist < 0 and trend == "BEARISH":
-            return {"action": "SHORT", "use_ai": True, "reason": "Overbought RSI > 70 + MACD Cross + Bear Trend (G-4)"}
-        elif score <= 25:
-            return {"action": "SHORT", "use_ai": True, "reason": "Score <= 25 (G-4)"}
+        if rsi >= 65 and macd_hist < 0 and trend == "BEARISH":
+            return {"action": "SHORT", "use_ai": True, "reason": "Overbought RSI > 65 + MACD Cross + Bear Trend (G-4)"}
+        elif score <= 35:
+            return {"action": "SHORT", "use_ai": True, "reason": "Score <= 35 (G-4)"}
             
     # GROUP 5: Kamikaze (Relajado, IA máxima delegación)
     elif group_id == 5:
-        if score >= 60:
-            return {"action": "LONG", "use_ai": True, "reason": "Score > 60 (Kamikaze G-5)"}
-        elif score <= 40:
-            return {"action": "SHORT", "use_ai": True, "reason": "Score < 40 (Kamikaze G-5)"}
+        if score >= 55:
+            return {"action": "LONG", "use_ai": True, "reason": "Score >= 55 (Kamikaze G-5)"}
+        elif score <= 45:
+            return {"action": "SHORT", "use_ai": True, "reason": "Score <= 45 (Kamikaze G-5)"}
 
     return {"action": "HOLD", "use_ai": False, "reason": ""}
