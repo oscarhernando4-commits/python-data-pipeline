@@ -3,12 +3,12 @@ tags:
   - trading
   - historial_completo
   - binance
-date: 2026-07-29 18:54:28
+date: 2026-07-29 18:58:46
 ---
 
 # 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
 
-> **Última Actualización:** `2026-07-29 18:54:28`
+> **Última Actualización:** `2026-07-29 18:58:46`
 > Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
 
 | Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |
@@ -176,4 +176,44 @@ date: 2026-07-29 18:54:28
 | 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
 | 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
 | 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚖️ GRUPO 3: Bal... | TRUMPUSDT | LONG | $1.441 | $1.473 | $+2.09 | 35 | 72.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
 

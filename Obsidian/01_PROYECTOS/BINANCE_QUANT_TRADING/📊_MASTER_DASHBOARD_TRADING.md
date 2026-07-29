@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-07-29 18:54:28
+date: 2026-07-29 18:58:46
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-07-29 18:54:28`  
+> **Última Actualización:** `2026-07-29 18:58:46`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -22,18 +22,18 @@ date: 2026-07-29 18:54:28
 
 | Métrica | Valor Actual | ¿Qué Significa? |
 | :--- | :--- | :--- |
-| 💵 **Capital Total (Fondo $10k):** | **`$9,996.94 USD`** | Balance de las 100 cuentas de prueba |
-| 💰 **Ganancia Neta Total:** | **`$-3.06 USD`** | Resultado global acumulado |
+| 💵 **Capital Total (Fondo $10k):** | **`$10,015.74 USD`** | Balance de las 100 cuentas de prueba |
+| 💰 **Ganancia Neta Total:** | **`$+15.74 USD`** | Resultado global acumulado |
 | 🎯 **Cuentas que cumplieron la meta:** | **`20 de 100 Cuentas`** | Cuentas que alcanzaron el +3% esta semana |
-| 📈 **Tasa de Acierto de la IA:** | **`37.42% Win Rate`** | Efectividad actual de las estrategias |
+| 📈 **Tasa de Acierto de la IA:** | **`39.9% Win Rate`** | Efectividad actual de las estrategias |
 
 ---
 
 ## 🧭 2. AUTO-APRENDIZAJE: SESGO DE MERCADO (LONG vs SHORT)
 
 > [!WARNING] 🧠 IA SENTINEL REGLA DE PRIORIDAD: `FAVOR_SHORT`
-> - 🟢 **Rendimiento Compras (LONG):** `20.0%` de Acierto
-> - 🔴 **Rendimiento Ventas (SHORT):** `65.1%` de Acierto
+> - 🟢 **Rendimiento Compras (LONG):** `33.3%` de Acierto
+> - 🔴 **Rendimiento Ventas (SHORT):** `49.4%` de Acierto
 > - **Acción de la IA:** El bot está inyectando esta data en tiempo real a Gemini. Si la tendencia muestra pérdidas en LONG y ganancias en SHORT, **Gemini bloqueará operaciones LONG** priorizando el flujo ganador del mercado para el dinero real.
 
 ---
@@ -41,11 +41,11 @@ date: 2026-07-29 18:54:28
 ## 🎯 3. PROGRESO HACIA LA META SEMANAL (+3% SOBRE $100)
 
 > [!IMPORTANT] 🏆 META SEMANA 1: $103.00 USD (Promedio)
-> **Progreso Actual:** `[░░░░░░░░░░] 0.0%`
+> **Progreso Actual:** `[░░░░░░░░░░] 5.2%`
 > 
 > - 💵 **Capital Base (Promedio):** `$100.00 USD`
 > - 🎯 **Meta Semanal (Promedio):** `$103.00 USD`
-> - 💰 **Capital Promedio Actual:** `$99.97 USD`
+> - 💰 **Capital Promedio Actual:** `$100.16 USD`
 > - 🟡 **Estado:** `🟡 EN PROCESO - Buscando el +3% de ganancia en operaciones filtradas`
 
 ---
@@ -63,11 +63,11 @@ date: 2026-07-29 18:54:28
 
 | Criptomoneda | Balance Actual | Ganancia | Estado |
 | :--- | :--- | :--- | :--- |
-| **BTCUSDT** | `$104.19 USD` | `$+4.19 USD` | 🔵 En Operación |
-| **BTCUSDT** | `$104.19 USD` | `$+4.19 USD` | 🔵 En Operación |
-| **BTCUSDT** | `$104.19 USD` | `$+4.19 USD` | 🔵 En Operación |
-| **BTCUSDT** | `$104.19 USD` | `$+4.19 USD` | 🔵 En Operación |
-| **BTCUSDT** | `$104.19 USD` | `$+4.19 USD` | 🔵 En Operación |
+| **BTCUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
+| **BTCUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
+| **BTCUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
+| **BTCUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
+| **BTCUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
 
 
 ---
@@ -80,8 +80,8 @@ date: 2026-07-29 18:54:28
 | **0 (Copia Real)** | `33.3%` | `$+0.14` |
 | **1 (Ultra-Estricto)** | `100.0%` | `$+39.40` |
 | **Grupo 2** | `0.0%` | `$-94.40` |
-| **Grupo 3** | `0.0%` | `$-32.00` |
-| **Grupo 4** | `66.7%` | `$+83.80` |
+| **Grupo 3** | `50.0%` | `$+9.80` |
+| **Grupo 4** | `50.0%` | `$+60.80` |
 | **5 (Exploratorio)** | `0.0%` | `$+0.00` |
 
 
