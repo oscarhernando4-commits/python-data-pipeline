@@ -84,12 +84,11 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
         "generationConfig": {"temperature": 0.2, "responseMimeType": "application/json"}
     }
     
-    # Option 1: Top 1 Filter implemented. 
-    # Exact cascade requested by user
+    # Exact cascade requested by user: prioritizing flash-lite to avoid rate limits
     models_to_try = [
-        "gemini-flash-latest",
-        "gemini-3.6-flash", 
-        "gemini-2.5-flash"
+        "gemini-3.5-flash-lite",
+        "gemini-3.1-flash-lite",
+        "gemini-3.1-flash-lite-preview"
     ]
     
     max_retries_per_model = 2
