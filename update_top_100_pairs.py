@@ -3,7 +3,8 @@ import json
 import os
 from datetime import datetime
 
-CMC_API_KEY = "81c586a5-c37b-4876-91d9-e6efa40537b1"
+# Secreto de GitHub para mayor seguridad
+CMC_API_KEY = os.getenv("CMC_API_KEY", "")
 
 def update_top_pairs():
     print(f"[{datetime.now().isoformat()}] Fetching top cryptos from CoinMarketCap...")
@@ -74,13 +75,16 @@ def should_update():
     import time
     if not os.path.exists("top_100_pairs.json"):
         return True
-    # If file is older than 24 hours (86400 seconds)
-    if time.time() - os.path.getmtime("top_100_pairs.json") > 86400:
+    # If file is older than 1 hora (3600 seconds) - Utilizing more of the daily limit
+    if time.time() - os.path.getmtime("top_100_pairs.json") > 3600:
         return True
     return False
 
 if __name__ == "__main__":
     if should_update():
-        update_top_pairs()
+        if CMC_API_KEY:
+            update_top_pairs()
+        else:
+            print("CMC_API_KEY is not set. Skipping update.")
     else:
-        print("top_100_pairs.json is less than 24 hours old. Skipping CMC API call to save free tier limits.")
+        print("top_100_pairs.json is less than 1 hour old. Skipping CMC API call to save free tier limits.")

@@ -203,6 +203,21 @@ def analyze_institutional_grade(symbol='BTCUSDT', account_balance=10000.0, risk_
         score += 10
         reasons.append("\u26a1 BNF Shunbari Trend Continuation Pullback (+10 Pts)")
         
+    # 8. PUMP & DUMP EXHAUSTION (Trampa Alcista / Mean Reversion SHORT Signal)
+    # Calculamos rendimiento de las últimas 24h (6 velas de 4h)
+    price_24h_ago = closes_4h[-7] if len(closes_4h) >= 7 else closes_4h[0]
+    pump_24h_pct = ((current_price - price_24h_ago) / price_24h_ago) * 100.0
+    
+    # Calculamos el colapso de la última 1h (4 velas de 15m)
+    price_1h_ago = closes_15m[-5] if len(closes_15m) >= 5 else closes_15m[0]
+    dump_1h_pct = ((current_price - price_1h_ago) / price_1h_ago) * 100.0
+    
+    # Condición: Subida anormal en 24h (>10%) pero fuerte caída reciente en 1h (< -2%)
+    pump_dump_exhaustion = pump_24h_pct >= 10.0 and dump_1h_pct <= -2.0
+    if pump_dump_exhaustion:
+        score -= 60  # Castigo brutal para forzar el SHORT
+        reasons.append(f"🩸 PUMP & DUMP EXHAUSTION DETECTADO: Subió +{pump_24h_pct:.1f}% en 24h pero colapsó {dump_1h_pct:.1f}% en la última hora. (Oportunidad SHORT masiva, -60 Pts)")
+        
     score = min(max(score, 0), 100)
 
     # Dynamic Threshold Based on Volatility Profile (85 Pts for High-Volatility Meme/Small-Cap Altcoins)
