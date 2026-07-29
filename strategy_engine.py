@@ -43,7 +43,7 @@ def evaluate_opportunity(tech, group_id):
             
     # GROUP 1: Ultra-Estricto (Tendencia Fuerte Pullback)
     elif group_id == 1:
-        trend_ok = (trend == "BULLISH") if t.get("group_1", {}).get("require_trend", True) else True
+        trend_ok = (trend == "BULLISH") if t.get("group_1", {}).get("require_trend", False) else True
         if trend_ok and score >= t["group_1"]["long_score"] and t["group_1"]["rsi_min"] <= rsi <= t["group_1"]["rsi_max"]:
             return {"action": "LONG", "use_ai": True, "reason": "Trend Alcista + Pullback RSI + Score Alto (G-1)"}
             
