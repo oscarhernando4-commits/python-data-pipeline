@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 20,
-    "wins": 0,
+    "total_trades": 41,
+    "wins": 21,
     "losses": 20,
-    "win_rate_pct": 0.0,
-    "total_pnl_usd": -32.00000000000001
+    "win_rate_pct": 51.22,
+    "total_pnl_usd": 28.89999999999998
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -14,7 +14,9 @@
     ],
     "boosted_patterns": [
       "RSI < 30 + MACD Bullish Cross + Volume > 1.5x (High Probability Win)",
-      "4H Macro Trend Alignment with 15M Reversal"
+      "4H Macro Trend Alignment with 15M Reversal",
+      "Optimized Setup for LTCUSDT: Profit logged (+$2.90) -> Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!",
+      "Optimized Setup for LTCUSDT: Profit logged (+$2.90) -> Win on LTCUSDT (+$2.90 net) -> Level 3 Re-Trading Started!"
     ]
   },
   "history": [
@@ -257,6 +259,258 @@
       "pnl_usd": -1.6,
       "result": "LOSS",
       "notes": "Hit SL on LTCUSDT (-$1.60). Re-Trading!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-061",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 3 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-062",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-063",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-064",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-065",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-066",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-067",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 3 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-068",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-069",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-071",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-072",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-073",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-074",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-075",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-076",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-077",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-078",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-079",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
+    },
+    {
+      "timestamp": "2026-07-29 04:02:13",
+      "account_id": "SIM-080",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LTCUSDT",
+      "side": "SHORT",
+      "entry_price": 46.34,
+      "exit_price": 45.29,
+      "pnl_usd": 2.9,
+      "result": "WIN",
+      "notes": "Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!"
     }
   ]
 }
