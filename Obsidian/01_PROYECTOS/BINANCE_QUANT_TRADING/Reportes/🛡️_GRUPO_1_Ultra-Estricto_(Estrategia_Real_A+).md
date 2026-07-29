@@ -1,6 +1,6 @@
 # Reporte Temporal: 🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)
 
-> Actualizado: 2026-07-29 14:46:15
+> Actualizado: 2026-07-29 14:51:17
 
 | Ventana de Tiempo | Total Operaciones | Ganadoras | Perdedoras | Win Rate | PnL Neto |
 | :--- | :--- | :--- | :--- | :--- | :--- |
