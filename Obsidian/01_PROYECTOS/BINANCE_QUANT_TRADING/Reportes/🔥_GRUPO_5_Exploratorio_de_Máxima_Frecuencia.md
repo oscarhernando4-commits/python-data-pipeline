@@ -1,6 +1,6 @@
 # Reporte Temporal: 🔥 GRUPO 5: Exploratorio de Máxima Frecuencia
 
-> Actualizado: 2026-07-29 15:46:12
+> Actualizado: 2026-07-29 15:51:29
 
 | Ventana de Tiempo | Total Operaciones | Ganadoras | Perdedoras | Win Rate | PnL Neto |
 | :--- | :--- | :--- | :--- | :--- | :--- |
