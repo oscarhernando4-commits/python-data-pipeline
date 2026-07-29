@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-07-29 18:58:46
+date: 2026-07-29 19:04:36
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-07-29 18:58:46`  
+> **Última Actualización:** `2026-07-29 19:04:36`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -63,11 +63,11 @@ date: 2026-07-29 18:58:46
 
 | Criptomoneda | Balance Actual | Ganancia | Estado |
 | :--- | :--- | :--- | :--- |
-| **BTCUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
-| **BTCUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
-| **BTCUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
-| **BTCUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
-| **BTCUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
+| **TRXUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
+| **TRXUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
+| **TRXUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
+| **TRXUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
+| **TRXUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
 
 
 ---
