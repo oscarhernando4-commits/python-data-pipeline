@@ -2,12 +2,12 @@
 tags:
   - analisis_grupos
   - trading
-date: 2026-07-29 17:49:35
+date: 2026-07-29 18:03:55
 ---
 
 # 📊 ANÁLISIS GLOBAL DE GANANCIAS Y PÉRDIDAS POR GRUPO
 
-> **Última Actualización:** `2026-07-29 17:49:35`
+> **Última Actualización:** `2026-07-29 18:03:55`
 > Este reporte desglosa el rendimiento matemático de cada Estrategia de IA. 
 
 ## 🏆 Resumen de Rendimiento (Ranking de Grupos)
@@ -15,7 +15,7 @@ date: 2026-07-29 17:49:35
 | Grupo de IA | Operaciones | Tasa de Acierto (WinRate) | PnL en LONGs | PnL en SHORTs | 💰 PnL NETO TOTAL |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **⚡ GRUPO 4: Frecuencia Alta** | 60 | `66.7%` | $+0.00 | $+83.80 | **$+83.80** |
-| **🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)** | 2 | `50.0%` | $+0.00 | $+1.25 | **$+1.25** |
+| **🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)** | 3 | `33.3%` | $+0.00 | $+0.14 | **$+0.14** |
 | **⚖️ GRUPO 3: Balanceado** | 20 | `0.0%` | $-32.00 | $+0.00 | **$-32.00** |
 | **🔷 GRUPO 2: Moderado-Estricto** | 60 | `0.0%` | $-94.40 | $+0.00 | **$-94.40** |
 
@@ -97,6 +97,7 @@ date: 2026-07-29 17:49:35
 
 | Fecha | Par | Lado | Precio Entrada | Precio Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-29 18:03:54 | **OPUSDT** | SHORT | $0.0879 | $0.0886 | `$-1.11` | 🔴 LOSS |
 | 2026-07-29 06:32:29 | **BTCUSDT** | SHORT | $63662.44 | $64399.99 | `$-1.65` | 🔴 LOSS |
 | 2026-07-29 04:02:13 | **LTCUSDT** | SHORT | $46.34 | $45.29 | `$+2.90` | 🟢 WIN |
 

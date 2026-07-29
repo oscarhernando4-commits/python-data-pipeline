@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 142,
+    "total_trades": 143,
     "wins": 41,
-    "losses": 101,
-    "win_rate_pct": 28.87,
-    "total_pnl_usd": -41.35
+    "losses": 102,
+    "win_rate_pct": 28.67,
+    "total_pnl_usd": -42.46
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -14,7 +14,8 @@
       "Preventive Block for BTCUSDT: Loss logged at 63662.44 -> Hit SL on BTCUSDT (-$1.65). Re-Trading!",
       "Preventive Block for NEARUSDT: Loss logged at 1.609 -> Hit SL on NEARUSDT (-$1.57). Re-Trading!",
       "Preventive Block for NEARUSDT: Loss logged at 1.579 -> Hit SL on NEARUSDT (-$1.55). Re-Trading!",
-      "Preventive Block for DOTUSDT: Loss logged at 0.765 -> Hit SL on DOTUSDT (-$1.60). Re-Trading!"
+      "Preventive Block for DOTUSDT: Loss logged at 0.765 -> Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "Preventive Block for OPUSDT: Loss logged at 0.0879 -> Hit SL on OPUSDT (-$1.11). Re-Trading!"
     ],
     "boosted_patterns": [
       "RSI < 30 + MACD Bullish Cross + Volume > 1.5x (High Probability Win)",
@@ -1927,6 +1928,23 @@
       "context": {
         "score": 15,
         "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:03:54",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "OPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0879,
+      "exit_price": 0.0886,
+      "pnl_usd": -1.11,
+      "result": "LOSS",
+      "notes": "Hit SL on OPUSDT (-$1.11). Re-Trading!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 70.51,
         "macro_trend_4h": "NEUTRAL"
       }
     }
