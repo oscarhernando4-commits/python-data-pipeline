@@ -127,6 +127,8 @@ def run_infinite_trading_matrix_cycle():
     now_br = f"{now_date}<br>{now_time}"
     print(f"[{now_str}] 🚀 Running Screen-Optimized Matrix Cycle (100 Accounts)...")
     
+    import strategy_engine
+    
     matrix = load_live_matrix()
     accounts = matrix["accounts"]
     
@@ -431,15 +433,19 @@ def run_infinite_trading_matrix_cycle():
 
     save_live_matrix(matrix)
     
-    # Execute Real Money Trading ONLY on AI Approved signals with Score >= 85 or <= 15 (SYNCED WITH GRUPO 0)
+    # Execute Real Money Trading ONLY on AI Approved signals with Dynamic Scores (SYNCED WITH GRUPO 0)
     # Fixie proxy is consumed ONLY when an actual order is placed
     try:
         import real_money_trader
         
+        dyn_t = strategy_engine.load_thresholds()
+        real_long_score = dyn_t.get("group_0", {}).get("long_score", 80)
+        real_short_score = dyn_t.get("group_0", {}).get("short_score", 20)
+        
         is_ai_approved = gemini_res.get('approved') == True
         ai_action = gemini_res.get('action', 'HOLD')
         
-        if best_market_opportunity and selected_opp == best_market_opportunity and best_market_opportunity[1]["score"] >= 85 and is_ai_approved and ai_action == "BUY_LONG":
+        if best_market_opportunity and selected_opp == best_market_opportunity and best_market_opportunity[1]["score"] >= real_long_score and is_ai_approved and ai_action == "BUY_LONG":
             print(f"💰 [REAL] Señal ALCISTA Aprobada por IA ({best_market_opportunity[0]} @ {best_market_opportunity[1]['score']} Pts). Evaluando cuenta real...")
             real_money_trader.evaluate_and_trade_real_money(
                 best_symbol=best_market_opportunity[0],
@@ -447,7 +453,7 @@ def run_infinite_trading_matrix_cycle():
                 current_price=best_market_opportunity[1]["price"],
                 is_bearish=False
             )
-        elif best_bearish_opportunity and selected_opp == best_bearish_opportunity and best_bearish_opportunity[1]["score"] <= 15 and is_ai_approved and ai_action == "SELL_SHORT":
+        elif best_bearish_opportunity and selected_opp == best_bearish_opportunity and best_bearish_opportunity[1]["score"] <= real_short_score and is_ai_approved and ai_action == "SELL_SHORT":
             print(f"📉 [REAL] Señal BAJISTA Aprobada por IA ({best_bearish_opportunity[0]} @ Score {best_bearish_opportunity[1]['score']}). Evaluando SHORT en Futuros...")
             real_money_trader.evaluate_and_trade_real_money(
                 best_symbol=best_bearish_opportunity[0],
