@@ -10,8 +10,10 @@ from urllib.parse import urlencode
 from datetime import datetime
 
 # Static Proxy Configuration for 24/7 Cloud Execution (Fixie EU West IPs: 54.195.3.54 & 54.217.142.99)
-PROXY_URL = os.getenv("FIXIE_URL", "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80")
-PROXIES = {"http": PROXY_URL, "https": PROXY_URL} if PROXY_URL else None
+PROXY_URL = os.getenv("FIXIE_URL", "")
+if not PROXY_URL:
+    PROXY_URL = "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80"
+PROXIES = {"http": PROXY_URL, "https": PROXY_URL}
 
 API_KEY = os.getenv("BINANCE_REAL_API_KEY", "")
 API_SECRET = os.getenv("BINANCE_REAL_API_SECRET", "")
