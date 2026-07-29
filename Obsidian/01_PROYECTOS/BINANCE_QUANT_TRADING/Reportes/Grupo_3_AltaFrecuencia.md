@@ -1,6 +1,6 @@
 # Reporte Temporal: Grupo 3_AltaFrecuencia
 
-> Actualizado: 2026-07-29 00:22:09
+> Actualizado: 2026-07-29 00:27:10
 
 | Ventana de Tiempo | Total Operaciones | Ganadoras | Perdedoras | Win Rate | PnL Neto |
 | :--- | :--- | :--- | :--- | :--- | :--- |
