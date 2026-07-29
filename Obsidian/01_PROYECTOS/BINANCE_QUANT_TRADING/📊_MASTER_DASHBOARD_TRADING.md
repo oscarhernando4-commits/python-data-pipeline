@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-07-29 04:02:13
+date: 2026-07-29 04:07:19
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-07-29 04:02:13`  
+> **Última Actualización:** `2026-07-29 04:07:19`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -54,11 +54,11 @@ date: 2026-07-29 04:02:13
 
 | Criptomoneda | Balance Actual | Ganancia | Estado |
 | :--- | :--- | :--- | :--- |
-| **LTCUSDT** | `$102.90 USD` | `$+2.90 USD` | 🔵 En Operación |
-| **LTCUSDT** | `$102.90 USD` | `$+2.90 USD` | 🔵 En Operación |
-| **LTCUSDT** | `$102.90 USD` | `$+2.90 USD` | 🔵 En Operación |
-| **LTCUSDT** | `$102.90 USD` | `$+2.90 USD` | 🔵 En Operación |
-| **LTCUSDT** | `$102.90 USD` | `$+2.90 USD` | 🔵 En Operación |
+| **BTCUSDT** | `$102.90 USD` | `$+2.90 USD` | 🔵 En Operación |
+| **BTCUSDT** | `$102.90 USD` | `$+2.90 USD` | 🔵 En Operación |
+| **BTCUSDT** | `$102.90 USD` | `$+2.90 USD` | 🔵 En Operación |
+| **BTCUSDT** | `$102.90 USD` | `$+2.90 USD` | 🔵 En Operación |
+| **BTCUSDT** | `$102.90 USD` | `$+2.90 USD` | 🔵 En Operación |
 
 
 ---
