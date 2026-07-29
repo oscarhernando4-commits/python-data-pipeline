@@ -3,12 +3,12 @@ tags:
   - trading
   - historial_completo
   - binance
-date: 2026-07-29 16:06:03
+date: 2026-07-29 16:51:14
 ---
 
 # 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
 
-> **Última Actualización:** `2026-07-29 16:06:03`
+> **Última Actualización:** `2026-07-29 16:51:14`
 > Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
 
 | Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |
@@ -135,4 +135,24 @@ date: 2026-07-29 16:06:03
 | 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
 | 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
 | 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
 

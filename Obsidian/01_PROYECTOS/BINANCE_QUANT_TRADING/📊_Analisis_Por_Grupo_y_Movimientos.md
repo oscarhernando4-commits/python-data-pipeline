@@ -2,12 +2,12 @@
 tags:
   - analisis_grupos
   - trading
-date: 2026-07-29 16:46:23
+date: 2026-07-29 16:51:15
 ---
 
 # 📊 ANÁLISIS GLOBAL DE GANANCIAS Y PÉRDIDAS POR GRUPO
 
-> **Última Actualización:** `2026-07-29 16:46:23`
+> **Última Actualización:** `2026-07-29 16:51:15`
 > Este reporte desglosa el rendimiento matemático de cada Estrategia de IA. 
 
 ## 🏆 Resumen de Rendimiento (Ranking de Grupos)
@@ -16,6 +16,7 @@ date: 2026-07-29 16:46:23
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **⚡ GRUPO 4: Frecuencia Alta** | 60 | `66.7%` | $+0.00 | $+83.80 | **$+83.80** |
 | **🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)** | 2 | `50.0%` | $+0.00 | $+1.25 | **$+1.25** |
+| **⚖️ GRUPO 3: Balanceado** | 20 | `0.0%` | $-32.00 | $+0.00 | **$-32.00** |
 | **🔷 GRUPO 2: Moderado-Estricto** | 60 | `0.0%` | $-94.40 | $+0.00 | **$-94.40** |
 
 ---
@@ -98,6 +99,34 @@ date: 2026-07-29 16:46:23
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 2026-07-29 06:32:29 | **BTCUSDT** | SHORT | $63662.44 | $64399.99 | `$-1.65` | 🔴 LOSS |
 | 2026-07-29 04:02:13 | **LTCUSDT** | SHORT | $46.34 | $45.29 | `$+2.90` | 🟢 WIN |
+
+
+### ⚖️ GRUPO 3: Balanceado
+
+> **Mejor Par Operado:** `DOTUSDT ($-32.00)`
+
+| Fecha | Par | Lado | Precio Entrada | Precio Salida | PnL | Resultado |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
 
 
 ### 🔷 GRUPO 2: Moderado-Estricto

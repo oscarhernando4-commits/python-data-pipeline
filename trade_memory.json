@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 122,
+    "total_trades": 142,
     "wins": 41,
-    "losses": 81,
-    "win_rate_pct": 33.61,
-    "total_pnl_usd": -9.349999999999985
+    "losses": 101,
+    "win_rate_pct": 28.87,
+    "total_pnl_usd": -41.35
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -13,7 +13,8 @@
       "Preventive Block for LTCUSDT: Loss logged at 46.03 -> Hit SL on LTCUSDT (-$1.60). Re-Trading!",
       "Preventive Block for BTCUSDT: Loss logged at 63662.44 -> Hit SL on BTCUSDT (-$1.65). Re-Trading!",
       "Preventive Block for NEARUSDT: Loss logged at 1.609 -> Hit SL on NEARUSDT (-$1.57). Re-Trading!",
-      "Preventive Block for NEARUSDT: Loss logged at 1.579 -> Hit SL on NEARUSDT (-$1.55). Re-Trading!"
+      "Preventive Block for NEARUSDT: Loss logged at 1.579 -> Hit SL on NEARUSDT (-$1.55). Re-Trading!",
+      "Preventive Block for DOTUSDT: Loss logged at 0.765 -> Hit SL on DOTUSDT (-$1.60). Re-Trading!"
     ],
     "boosted_patterns": [
       "RSI < 30 + MACD Bullish Cross + Volume > 1.5x (High Probability Win)",
@@ -1586,6 +1587,346 @@
       "context": {
         "score": 25,
         "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-041",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-043",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-044",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-045",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-046",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-047",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-048",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-049",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-050",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-053",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-054",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-055",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-056",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-057",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-058",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-059",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:51:14",
+      "account_id": "SIM-060",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.765,
+      "exit_price": 0.757,
+      "pnl_usd": -1.6,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$1.60). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.64,
         "macro_trend_4h": "NEUTRAL"
       }
     }
