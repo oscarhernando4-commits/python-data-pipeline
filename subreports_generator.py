@@ -92,16 +92,16 @@ def generate_all_subreports():
     now = datetime.now()
     
     # We must ensure there is a file for every group even if no trades exist yet
-    # Group names: "CUENTA REAL", "Grupo 0", "Grupo 1", "Grupo 2", "Grupo 3", "Grupo 4", "Grupo 5"
-    all_groups = [
-        "CUENTA REAL",
-        "Grupo 0_ReplicaReal",
-        "Grupo 1_UltraEstricto",
-        "Grupo 2_MacroRSI",
-        "Grupo 3_AltaFrecuencia",
-        "Grupo 4_Contratendencia",
-        "Grupo 5_IA_Experimental"
-    ]
+    # Extract current group names dynamically from matrix
+    all_groups = ["CUENTA REAL"]
+    matrix_file = os.path.join(os.path.dirname(__file__), "matrix_100_simulations.json")
+    if os.path.exists(matrix_file):
+        with open(matrix_file, "r", encoding="utf-8") as f:
+            m_data = json.load(f)
+            groups_set = set()
+            for acc in m_data.get("accounts", []):
+                groups_set.add(acc.get("group_name", "Desconocido"))
+            all_groups.extend(sorted(list(groups_set)))
     
     grouped = {g: [] for g in all_groups}
     for t in trades:
@@ -114,7 +114,7 @@ def generate_all_subreports():
         stats = calculate_stats(g_trades, now)
         md = generate_markdown(group_name, stats)
         
-        safe_name = group_name.replace(" ", "_").replace("/", "_")
+        safe_name = group_name.replace(" ", "_").replace("/", "_").replace(":", "").replace("?", "")
         filepath = os.path.join(OBSIDIAN_FOLDER, f"{safe_name}.md")
         with open(filepath, "w", encoding="utf-8") as f:
             f.write(md)
