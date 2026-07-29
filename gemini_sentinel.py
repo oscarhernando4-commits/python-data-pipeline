@@ -60,8 +60,12 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
 
     HISTORIAL SUPER DETALLADO (TABLA COMPLETA ALL-TIME DE TODAS LAS OPERACIONES):
     {super_detailed_table}
-    Lee detenidamente esta tabla. Contiene los detalles exactos de qué RSI, Score, y Tendencia tenían los trades históricos ganadores y perdedores. 
-    ⚠️ DIRECTRIZ CRÍTICA DE CERO PÉRDIDAS: Tu misión número 1 es NO PERDER. Si los indicadores actuales se parecen remotamente a CUALQUIER operación de esta tabla que terminó en PÉRDIDA (LOSS), debes RECHAZARLA (HOLD). Solo aprueba si el patrón coincide exactamente con operaciones históricas ganadoras (WIN). ¡Ve a la fija, asegura la victoria!
+    Lee detenidamente esta tabla. Contiene los resultados cruzados de 5 GRUPOS DIFERENTES de estrategias operando en el mercado en tiempo real. 
+    ⚠️ INSTRUCCIÓN DE AUTO-APRENDIZAJE DINÁMICO (SUPERCEREBRO):
+    1. No te limites a leer las reglas pasadas. Debes analizar esta tabla AHORA MISMO y descubrir qué grupo está siendo más rentable en las condiciones actuales.
+    2. Si un Grupo (ej. Grupo 4) está logrando victorias repetidas bajo cierto RSI o Tendencia, ABSORBE esa estrategia dinámicamente y aplícala para esta decisión.
+    3. Si ves que múltiples grupos están perdiendo bajo condiciones específicas recientes, crea una regla mental de bloqueo inmediato para esta operación.
+    4. DIRECTRIZ CRÍTICA DE CERO PÉRDIDAS: Tu misión número 1 es NO PERDER. Rechaza categóricamente (HOLD) si el entorno actual se parece a los fracasos recientes de cualquier grupo. Solo aprueba si el patrón coincide con las victorias comprobadas de los mejores grupos de la tabla.
 
     EVALÚA LOS SIGUIENTES DATOS EN TIEMPO REAL PARA {symbol}:
     - Puntaje Técnico Cuantitativo Actual: {score} / 100 Pts
@@ -76,9 +80,10 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
 
     REGLAS DE DECISIÓN CON APRENDIZAJE HISTÓRICO Y EVENTOS EXTREMOS:
     1. Compara si el patrón actual imita un evento extremo histórico de desplome o pump de {symbol}.
-    2. Usa las 'LECCIONES APRENDIDAS' del simulador. Si el mercado actual imita un Patrón Prohibido, RECHAZA (HOLD).
-    3. Si el historial de 4H muestra acumulación creciente de ballenas, volumen > 1.8x y no imita un patrón de trampa histórica, APRUEBA para BUY_LONG.
-    4. Si imita una cascada de liquidación o distribución bajista, APRUEBA para SELL_SHORT.
+    2. Extrae dinámicamente el perfil del "Grupo Más Rentable" de la tabla histórica. Si la operación actual encaja en su perfil ganador, APRUEBA.
+    3. Extrae dinámicamente el perfil de los "Grupos Perdedores". Si la operación imita sus errores recientes, RECHAZA (HOLD).
+    4. Si el historial de 4H muestra acumulación creciente de ballenas y volumen fuerte, cruzado con victorias en la tabla, APRUEBA para BUY_LONG.
+    5. Si imita una cascada de liquidación o distribución bajista que los grupos kamikazes ya sufrieron, APRUEBA para SELL_SHORT (si el mercado está cayendo) o HOLD.
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON CON ESTA ESTRUCTURA EXACTA:
     {{
