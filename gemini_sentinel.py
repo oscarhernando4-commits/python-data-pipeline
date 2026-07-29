@@ -214,7 +214,7 @@ def review_top_5_candidates(candidates_data_list, news_data, fear_greed, macro_c
     REGLAS:
     1. Revisa qué grupo de estrategias (en la tabla histórica) está ganando y si alguno de los 5 candidatos imita esa estructura ganadora.
     2. Compara el 'Volume Surge' y el 'RSI 15M'. Prioriza la operación con mayor divergencia clara o agotamiento (Pump & Dump Exhaustion).
-    3. SELECCIONA SOLO UN SÍMBOLO GANADOR. Si ninguno es seguro frente a la volatilidad macro actual, selecciona "NONE" y approved=false.
+    3. ERES UN TRADER AGRESIVO PERO CALCULADOR. El usuario quiere ejecutar operaciones reales frecuentemente. DEBES ELEGIR AL MEJOR CANDIDATO del Top 5. Sólo selecciona "NONE" si ocurre un crash catastrófico del mercado global. De lo contrario, elige la moneda con la mejor estructura técnica.
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO:
     {{

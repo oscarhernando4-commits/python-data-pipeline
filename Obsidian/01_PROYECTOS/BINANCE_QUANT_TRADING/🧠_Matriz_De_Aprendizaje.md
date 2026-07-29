@@ -4,27 +4,27 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-07-29 22:43:12
+date: 2026-07-29 18:58:46
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-07-29 22:43:12`  
+> **Última Actualización:** `2026-07-29 18:58:46`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `262`
-- **Ganadas (WIN):** `81` | **Perdidas (LOSS):** `181`
-- **Tasa de Acierto (Win Rate):** `30.92%`
-- **PnL Total Neto:** `$-48.56 USD`
+- **Total Operaciones:** `203`
+- **Ganadas (WIN):** `81` | **Perdidas (LOSS):** `122`
+- **Tasa de Acierto (Win Rate):** `39.9%`
+- **PnL Total Neto:** `$+15.74 USD`
 
 ---
 
 ## 🧭 Sesgo de Aprendizaje Automático (Últimos 100 Trades)
 - **Sesgo Actual (Market Bias):** `FAVOR_SHORT`
-- **Rendimiento LONG (Compras):** `22.3%` de Acierto (en 179 ops recientes)
+- **Rendimiento LONG (Compras):** `33.3%` de Acierto (en 120 ops recientes)
 - **Rendimiento SHORT (Ventas):** `49.4%` de Acierto (en 83 ops recientes)
 - 🏆 **Grupo de IA Más Rentable:** `⚡ GRUPO 4: Frecuencia Alta` (WinRate: 50.0%, PnL: $60.8)
 - *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada. Y el Dinero Real copiará automáticamente al Grupo Más Rentable.
@@ -42,9 +42,6 @@ date: 2026-07-29 22:43:12
 - 🛑 Preventive Block for DOTUSDT: Loss logged at 0.765 -> Hit SL on DOTUSDT (-$1.60). Re-Trading!
 - 🛑 Preventive Block for OPUSDT: Loss logged at 0.0879 -> Hit SL on OPUSDT (-$1.11). Re-Trading!
 - 🛑 Preventive Block for BTCUSDT: Loss logged at 63976.01 -> Hit SL on BTCUSDT (-$1.15). Re-Trading!
-- 🛑 Preventive Block for BTCUSDT: Loss logged at 64594.65 -> Hit SL on BTCUSDT (-$1.12). Re-Trading!
-- 🛑 Preventive Block for XRPUSDT: Loss logged at 1.0736 -> Hit SL on XRPUSDT (-$1.05). Re-Trading!
-- 🛑 Preventive Block for BTCUSDT: Loss logged at 63920.0 -> Hit SL on BTCUSDT (-$1.10). Re-Trading!
 
 ---
 
@@ -66,14 +63,14 @@ date: 2026-07-29 22:43:12
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-07-29 22:43:12 | BTCUSDT | LONG | `$63920.0` | `$63960.77` | `$-1.10` | 🔴 LOSS |
-| 2026-07-29 22:43:12 | BTCUSDT | LONG | `$63920.0` | `$63960.77` | `$-1.10` | 🔴 LOSS |
-| 2026-07-29 22:43:12 | BTCUSDT | LONG | `$63920.0` | `$63960.77` | `$-1.10` | 🔴 LOSS |
-| 2026-07-29 22:43:12 | BTCUSDT | LONG | `$63920.0` | `$63960.77` | `$-1.10` | 🔴 LOSS |
-| 2026-07-29 22:43:12 | BTCUSDT | LONG | `$63920.0` | `$63960.77` | `$-1.10` | 🔴 LOSS |
-| 2026-07-29 22:43:12 | BTCUSDT | LONG | `$63920.0` | `$63960.77` | `$-1.10` | 🔴 LOSS |
-| 2026-07-29 22:43:12 | BTCUSDT | LONG | `$63920.0` | `$63960.77` | `$-1.10` | 🔴 LOSS |
-| 2026-07-29 22:43:12 | BTCUSDT | LONG | `$63920.0` | `$63960.77` | `$-1.10` | 🔴 LOSS |
-| 2026-07-29 22:43:12 | BTCUSDT | LONG | `$63920.0` | `$63960.77` | `$-1.10` | 🔴 LOSS |
-| 2026-07-29 22:43:12 | BTCUSDT | LONG | `$63920.0` | `$63960.77` | `$-1.10` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
 

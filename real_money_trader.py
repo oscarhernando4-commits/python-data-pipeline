@@ -223,10 +223,12 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
     
     # Hydrate crypto_balances and futures_positions flags artificially from local state
     if state.get("position"):
-        if state["position"].get("side") == "LONG":
-            crypto_balances = [{"asset": state["position"]["symbol"].replace("USDT", ""), "free": state["position"]["quantity"]}]
-        elif state["position"].get("side") == "SHORT":
-            futures_positions = [{"symbol": state["position"]["symbol"], "positionAmt": -state["position"]["quantity"], "entryPrice": state["position"]["entry_price"]}]
+        pos = state["position"]
+        qty = pos.get("quantity", pos.get("cost_usd", 10.0) / (pos.get("entry_price") or 1.0))
+        if pos.get("side") == "LONG":
+            crypto_balances = [{"asset": pos["symbol"].replace("USDT", ""), "free": qty}]
+        elif pos.get("side") == "SHORT":
+            futures_positions = [{"symbol": pos["symbol"], "positionAmt": -qty, "entryPrice": pos["entry_price"]}]
     
     now_str = datetime.now().strftime("%y-%m-%d<br>%H:%M")
     
@@ -331,9 +333,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         if state.get("position") and state["position"].get("side") == "SHORT":
             import learning_engine
             closed_pos = state["position"]
-            entry = closed_pos["entry_price"]
-            active_qty = closed_pos["quantity"]
-            active_symbol = closed_pos["symbol"]
+            entry = closed_pos.get("entry_price", 1.0)
+            active_qty = closed_pos.get("quantity", closed_pos.get("cost_usd", 10.0) / (entry or 1.0))
+            active_symbol = closed_pos.get("symbol", "UNKNOWN")
             
             # Update daily counters
             today_str = datetime.now().strftime("%Y-%m-%d")
