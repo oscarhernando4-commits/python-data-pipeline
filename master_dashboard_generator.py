@@ -222,6 +222,13 @@ Análisis de rendimiento detallado a 1D, 3D, 1W, 2W, y 1M:
     except Exception as e:
         print(f"Error generando matriz local: {e}")
         
+    # Run group analysis generator
+    try:
+        import generate_group_analysis
+        generate_group_analysis.generate_report()
+    except Exception as e:
+        print(f"Error generando analisis por grupo: {e}")
+        
     print(f"Dashboard y Sub-Reportes generados exitosamente a las {now_str}")
     return file_path
 
