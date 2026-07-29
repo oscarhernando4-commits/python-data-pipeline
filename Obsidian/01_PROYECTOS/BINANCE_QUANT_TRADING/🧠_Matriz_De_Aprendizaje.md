@@ -4,21 +4,21 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-07-29 04:02:13
+date: 2026-07-29 06:32:29
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-07-29 04:02:13`  
+> **Última Actualización:** `2026-07-29 06:32:29`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `41`
-- **Ganadas (WIN):** `21` | **Perdidas (LOSS):** `20`
-- **Tasa de Acierto (Win Rate):** `51.22%`
-- **PnL Total Neto:** `$+28.90 USD`
+- **Total Operaciones:** `62`
+- **Ganadas (WIN):** `21` | **Perdidas (LOSS):** `41`
+- **Tasa de Acierto (Win Rate):** `33.87%`
+- **PnL Total Neto:** `$-5.75 USD`
 
 ---
 
@@ -27,6 +27,7 @@ date: 2026-07-29 04:02:13
 - 🛑 High impact news within 30 mins (Block Trade)
 - 🛑 Volume surge < 1.1x average during trend reversals (Block Fakeouts)
 - 🛑 Preventive Block for LTCUSDT: Loss logged at 46.03 -> Hit SL on LTCUSDT (-$1.60). Re-Trading!
+- 🛑 Preventive Block for BTCUSDT: Loss logged at 63662.44 -> Hit SL on BTCUSDT (-$1.65). Re-Trading!
 
 ---
 
@@ -42,14 +43,14 @@ date: 2026-07-29 04:02:13
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-07-29 04:02:13 | LTCUSDT | SHORT | `$46.34` | `$45.29` | `$+2.90` | 🟢 WIN |
-| 2026-07-29 04:02:13 | LTCUSDT | SHORT | `$46.34` | `$45.29` | `$+2.90` | 🟢 WIN |
-| 2026-07-29 04:02:13 | LTCUSDT | SHORT | `$46.34` | `$45.29` | `$+2.90` | 🟢 WIN |
-| 2026-07-29 04:02:13 | LTCUSDT | SHORT | `$46.34` | `$45.29` | `$+2.90` | 🟢 WIN |
-| 2026-07-29 04:02:13 | LTCUSDT | SHORT | `$46.34` | `$45.29` | `$+2.90` | 🟢 WIN |
-| 2026-07-29 04:02:13 | LTCUSDT | SHORT | `$46.34` | `$45.29` | `$+2.90` | 🟢 WIN |
-| 2026-07-29 04:02:13 | LTCUSDT | SHORT | `$46.34` | `$45.29` | `$+2.90` | 🟢 WIN |
-| 2026-07-29 04:02:13 | LTCUSDT | SHORT | `$46.34` | `$45.29` | `$+2.90` | 🟢 WIN |
-| 2026-07-29 04:02:13 | LTCUSDT | SHORT | `$46.34` | `$45.29` | `$+2.90` | 🟢 WIN |
-| 2026-07-29 04:02:13 | LTCUSDT | SHORT | `$46.34` | `$45.29` | `$+2.90` | 🟢 WIN |
+| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
+| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
+| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
+| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
+| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
+| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
+| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
+| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
+| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
+| 2026-07-29 06:32:29 | BTCUSDT | SHORT | `$63662.44` | `$64399.99` | `$-1.65` | 🔴 LOSS |
 
