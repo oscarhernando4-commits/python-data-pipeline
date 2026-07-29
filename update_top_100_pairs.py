@@ -75,8 +75,8 @@ def should_update():
     import time
     if not os.path.exists("top_100_pairs.json"):
         return True
-    # If file is older than 15 minutos (800 seconds) - Increasing frequency 4.5x to catch rapid moonshots
-    if time.time() - os.path.getmtime("top_100_pairs.json") > 800:
+    # If file is older than 10 minutos (600 seconds) - Increasing frequency to match 12-minute cron (72% limit)
+    if time.time() - os.path.getmtime("top_100_pairs.json") > 600:
         return True
     return False
 
