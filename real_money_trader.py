@@ -169,8 +169,8 @@ def execute_real_futures_market_short(symbol, usdt_amount):
     timestamp = int(time.time() * 1000)
     orders = [
         {"symbol": symbol, "side": "SELL", "type": "MARKET", "quantity": qty_str},
-        {"symbol": symbol, "side": "BUY", "type": "STOP_MARKET", "quantity": qty_str, "stopPrice": str(sl_price), "reduceOnly": "true", "timeInForce": "GTC"},
-        {"symbol": symbol, "side": "BUY", "type": "TAKE_PROFIT_MARKET", "quantity": qty_str, "stopPrice": str(tp_price), "reduceOnly": "true", "timeInForce": "GTC"}
+        {"symbol": symbol, "side": "BUY", "type": "STOP_MARKET", "quantity": qty_str, "stopPrice": str(sl_price), "reduceOnly": "true"},
+        {"symbol": symbol, "side": "BUY", "type": "TAKE_PROFIT_MARKET", "quantity": qty_str, "stopPrice": str(tp_price), "reduceOnly": "true"}
     ]
     
     b_params = {
@@ -296,6 +296,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                             state["daily_losses"] = state.get("daily_losses", 0) + 1
                             res_type = "LOSS"
                             
+                        state["current_balance_usd"] = state.get("current_balance_usd", 20.07) + pnl_usd
+                            
                         learning_engine.record_trade_outcome(
                             symbol=active_symbol, side="BUY", entry_price=entry, exit_price=current_price,
                             pnl_usd=pnl_usd, result_type=res_type, notes=f"Real Money Trade closed with {pnl_pct:.2f}%",
@@ -356,6 +358,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 res_type = "LOSS"
                 pnl_usd = -(entry * 0.01 * active_qty) # Approx -1.0% loss
                 
+            state["current_balance_usd"] = state.get("current_balance_usd", 20.07) + pnl_usd
             state["trades_count"] += 1
             learning_engine.record_trade_outcome(
                 symbol=active_symbol, side="SHORT", entry_price=entry, exit_price=current_price,
@@ -401,7 +404,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             else:
                 print(f"⚠️ SHORT no ejecutado: {short_res}")
 
-    state["current_balance_usd"] = round(total_val if total_val > 0 else state.get("current_balance_usd", 20.07), 2)
+    state["current_balance_usd"] = round(state.get("current_balance_usd", 20.07), 2)
     state["net_pnl_usd"] = round(state["current_balance_usd"] - 20.07, 2)
     save_real_account_state(state)
     return state
