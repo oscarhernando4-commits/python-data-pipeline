@@ -4,7 +4,7 @@ aliases: [Rendimiento 🔷 GRUPO 2: Moderado-Estricto]
 cssclasses: [dashboard-view]
 ---
 # 📊 Rendimiento por Periodos: 🔷 GRUPO 2: Moderado-Estricto
-> Última actualización: 2026-07-29 18:28:13
+> Última actualización: 2026-07-29 18:33:02
 
 | Periodo | Total Operaciones | ✅ Ganadoras | 💰 PnL Ganado | ❌ Perdedoras | 💸 PnL Perdido | 📈 Neto |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
