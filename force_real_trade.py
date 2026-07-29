@@ -5,25 +5,27 @@ import sys
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-print("=== DEPURACIÓN DE ORDEN BINANCE ===")
+print("=== INICIANDO OPERACIÓN KAMIKAZE FORZADA EN CUENTA REAL ===")
 
 try:
     best_symbol = "BTCUSDT"
     
-    # 1. Chequeamos saldo disponible (para asegurar que mandamos la orden con el monto correcto)
-    balances = real_money_trader.get_real_balances()
-    usdt_free = sum([float(b["free"]) for b in balances if b["asset"] == "USDT"])
+    print(f"Buscando precio actual para {best_symbol}...")
+    tech = analytics.analyze_institutional_grade(best_symbol, account_balance=100.0, risk_percentage=1.0)
+    price = tech["current_price"]
     
-    # Si la API falla por la IP, forzamos a 17.15 para la orden
-    if usdt_free == 0.0:
-        usdt_free = 17.15
-        
-    print(f"Mandando orden a Binance por {usdt_free} USDT...")
+    print(f"Forzando compra LONG en {best_symbol} a precio ${price} por orden del Creador...")
     
-    # We call the exact function directly to see the RAW API RESPONSE from Binance via Fixie
-    res = real_money_trader.execute_real_spot_market_buy(best_symbol, usdt_free)
+    # is_learned_signal=True bypasses all score thresholds!
+    res = real_money_trader.evaluate_and_trade_real_money(
+        best_symbol=best_symbol,
+        best_score=100, 
+        current_price=price,
+        is_bearish=False,  # False = Force LONG (Spot), True = Force SHORT (Futures)
+        is_learned_signal=True
+    )
     
-    print("\n✅ RAW BINANCE API RESPONSE:")
+    print("\n✅ ESTADO DE LA CUENTA REAL ACTUALIZADO:")
     print(json.dumps(res, indent=4, ensure_ascii=False))
 
 except Exception as e:
