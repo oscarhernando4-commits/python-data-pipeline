@@ -359,9 +359,14 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         state["position"] = None
         state["status"] = "🟦 Buscando Entrada A+"
         
-        # 1. LONG Entry Signal (Score >= 85 Pts OR AI Learned Signal)
-        if best_symbol and not is_bearish and (best_score >= 85 or is_learned_signal) and usdt_free >= 15.0:
-            trigger_reason = "AUTO-APRENDIZAJE" if is_learned_signal else "Score 85+"
+        import strategy_engine
+        dyn_t = strategy_engine.load_thresholds()
+        real_long_score = dyn_t.get("group_0", {}).get("long_score", 80)
+        real_short_score = dyn_t.get("group_0", {}).get("short_score", 20)
+        
+        # 1. LONG Entry Signal (Score >= Dynamic Pts OR AI Learned Signal)
+        if best_symbol and not is_bearish and (best_score >= real_long_score or is_learned_signal) and usdt_free >= 15.0:
+            trigger_reason = "AUTO-APRENDIZAJE" if is_learned_signal else f"Score {real_long_score}+"
             print(f"🚀 SEÑAL ALCISTA (LONG) ({best_symbol} @ {best_score} Pts - {trigger_reason}). Comprando en Binance Spot...")
             buy_res = execute_real_spot_market_buy(best_symbol, usdt_free)
             if "orderId" in buy_res:
@@ -373,9 +378,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 }
                 state["status"] = f"🔵 En Vivo LONG ({best_symbol})"
                 
-        # 2. SHORT Entry Signal (Bearish Score <= 15 Pts OR AI Learned Signal)
-        elif best_symbol and is_bearish and (best_score <= 15 or is_learned_signal) and futures_usdt_free >= 15.0:
-            trigger_reason = "AUTO-APRENDIZAJE" if is_learned_signal else "Score <= 15"
+        # 2. SHORT Entry Signal (Bearish Score <= Dynamic Pts OR AI Learned Signal)
+        elif best_symbol and is_bearish and (best_score <= real_short_score or is_learned_signal) and futures_usdt_free >= 15.0:
+            trigger_reason = "AUTO-APRENDIZAJE" if is_learned_signal else f"Score <= {real_short_score}"
             print(f"📉 SEÑAL BAJISTA (SHORT) ({best_symbol} @ Score {best_score} - {trigger_reason}). Abriendo Short en Binance Futuros...")
             short_res = execute_real_futures_market_short(best_symbol, futures_usdt_free)
             if "orderId" in short_res:
