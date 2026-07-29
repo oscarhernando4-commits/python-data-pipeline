@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-07-29 15:56:37
+date: 2026-07-29 16:06:03
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-07-29 15:56:37`  
+> **Última Actualización:** `2026-07-29 16:06:03`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -22,10 +22,10 @@ date: 2026-07-29 15:56:37
 
 | Métrica | Valor Actual | ¿Qué Significa? |
 | :--- | :--- | :--- |
-| 💵 **Capital Total (Fondo $10k):** | **`$9,931.85 USD`** | Balance de las 100 cuentas de prueba |
-| 💰 **Ganancia Neta Total:** | **`$-68.15 USD`** | Resultado global acumulado |
+| 💵 **Capital Total (Fondo $10k):** | **`$9,990.65 USD`** | Balance de las 100 cuentas de prueba |
+| 💰 **Ganancia Neta Total:** | **`$-9.35 USD`** | Resultado global acumulado |
 | 🎯 **Cuentas que cumplieron la meta:** | **`20 de 100 Cuentas`** | Cuentas que alcanzaron el +3% esta semana |
-| 📈 **Tasa de Acierto de la IA:** | **`20.59% Win Rate`** | Efectividad actual de las estrategias |
+| 📈 **Tasa de Acierto de la IA:** | **`33.61% Win Rate`** | Efectividad actual de las estrategias |
 
 ---
 
@@ -33,7 +33,7 @@ date: 2026-07-29 15:56:37
 
 > [!WARNING] 🧠 IA SENTINEL REGLA DE PRIORIDAD: `FAVOR_SHORT`
 > - 🟢 **Rendimiento Compras (LONG):** `0.0%` de Acierto
-> - 🔴 **Rendimiento Ventas (SHORT):** `50.0%` de Acierto
+> - 🔴 **Rendimiento Ventas (SHORT):** `66.1%` de Acierto
 > - **Acción de la IA:** El bot está inyectando esta data en tiempo real a Gemini. Si la tendencia muestra pérdidas en LONG y ganancias en SHORT, **Gemini bloqueará operaciones LONG** priorizando el flujo ganador del mercado para el dinero real.
 
 ---
@@ -45,7 +45,7 @@ date: 2026-07-29 15:56:37
 > 
 > - 💵 **Capital Base (Promedio):** `$100.00 USD`
 > - 🎯 **Meta Semanal (Promedio):** `$103.00 USD`
-> - 💰 **Capital Promedio Actual:** `$99.32 USD`
+> - 💰 **Capital Promedio Actual:** `$99.91 USD`
 > - 🟡 **Estado:** `🟡 EN PROCESO - Buscando el +3% de ganancia en operaciones filtradas`
 
 ---
@@ -63,11 +63,11 @@ date: 2026-07-29 15:56:37
 
 | Criptomoneda | Balance Actual | Ganancia | Estado |
 | :--- | :--- | :--- | :--- |
-| **OPUSDT** | `$101.25 USD` | `$+1.25 USD` | 🔵 En Operación |
-| **XRPUSDT** | `$101.25 USD` | `$+1.25 USD` | 🔵 En Operación |
-| **XRPUSDT** | `$101.25 USD` | `$+1.25 USD` | 🔵 En Operación |
-| **XRPUSDT** | `$101.25 USD` | `$+1.25 USD` | 🔵 En Operación |
-| **XRPUSDT** | `$101.25 USD` | `$+1.25 USD` | 🔵 En Operación |
+| **XRPUSDT** | `$104.19 USD` | `$+4.19 USD` | 🔵 En Operación |
+| **XRPUSDT** | `$104.19 USD` | `$+4.19 USD` | 🔵 En Operación |
+| **XRPUSDT** | `$104.19 USD` | `$+4.19 USD` | 🔵 En Operación |
+| **XRPUSDT** | `$104.19 USD` | `$+4.19 USD` | 🔵 En Operación |
+| **XRPUSDT** | `$104.19 USD` | `$+4.19 USD` | 🔵 En Operación |
 
 
 ---
@@ -81,7 +81,7 @@ date: 2026-07-29 15:56:37
 | **1 (Ultra-Estricto)** | `0.0%` | `$+0.00` |
 | **Grupo 2** | `0.0%` | `$-94.40` |
 | **Grupo 3** | `0.0%` | `$+0.00` |
-| **Grupo 4** | `50.0%` | `$+25.00` |
+| **Grupo 4** | `66.7%` | `$+83.80` |
 | **5 (Exploratorio)** | `0.0%` | `$+0.00` |
 
 

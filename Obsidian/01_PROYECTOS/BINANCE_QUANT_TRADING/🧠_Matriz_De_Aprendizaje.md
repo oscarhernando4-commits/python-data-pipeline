@@ -4,21 +4,30 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-07-29 10:57:46
+date: 2026-07-29 16:06:03
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-07-29 10:57:46`  
+> **Última Actualización:** `2026-07-29 16:06:03`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `102`
-- **Ganadas (WIN):** `21` | **Perdidas (LOSS):** `81`
-- **Tasa de Acierto (Win Rate):** `20.59%`
-- **PnL Total Neto:** `$-68.15 USD`
+- **Total Operaciones:** `122`
+- **Ganadas (WIN):** `41` | **Perdidas (LOSS):** `81`
+- **Tasa de Acierto (Win Rate):** `33.61%`
+- **PnL Total Neto:** `$-9.35 USD`
+
+---
+
+## 🧭 Sesgo de Aprendizaje Automático (Últimos 100 Trades)
+- **Sesgo Actual (Market Bias):** `FAVOR_SHORT`
+- **Rendimiento LONG (Compras):** `0.0%` de Acierto (en 60 ops recientes)
+- **Rendimiento SHORT (Ventas):** `66.1%` de Acierto (en 62 ops recientes)
+- 🏆 **Grupo de IA Más Rentable:** `⚡ GRUPO 4: Frecuencia Alta` (WinRate: 66.7%, PnL: $83.8)
+- *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada. Y el Dinero Real copiará automáticamente al Grupo Más Rentable.
 
 ---
 
@@ -39,20 +48,22 @@ date: 2026-07-29 10:57:46
 - ⚡ 4H Macro Trend Alignment with 15M Reversal
 - ⚡ Optimized Setup for LTCUSDT: Profit logged (+$2.90) -> Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!
 - ⚡ Optimized Setup for LTCUSDT: Profit logged (+$2.90) -> Win on LTCUSDT (+$2.90 net) -> Level 3 Re-Trading Started!
+- ⚡ Optimized Setup for XRPUSDT: Profit logged (+$2.94) -> Win on XRPUSDT (+$2.94 net) -> Level 4 Re-Trading Started!
+- ⚡ Optimized Setup for XRPUSDT: Profit logged (+$2.94) -> Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!
 
 ---
 
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-07-29 10:57:46 | NEARUSDT | LONG | `$1.579` | `$1.581` | `$-1.55` | 🔴 LOSS |
-| 2026-07-29 10:57:46 | NEARUSDT | LONG | `$1.579` | `$1.581` | `$-1.55` | 🔴 LOSS |
-| 2026-07-29 10:57:46 | NEARUSDT | LONG | `$1.579` | `$1.581` | `$-1.55` | 🔴 LOSS |
-| 2026-07-29 10:57:46 | NEARUSDT | LONG | `$1.579` | `$1.581` | `$-1.55` | 🔴 LOSS |
-| 2026-07-29 10:57:46 | NEARUSDT | LONG | `$1.579` | `$1.581` | `$-1.55` | 🔴 LOSS |
-| 2026-07-29 10:57:46 | NEARUSDT | LONG | `$1.579` | `$1.581` | `$-1.55` | 🔴 LOSS |
-| 2026-07-29 10:57:46 | NEARUSDT | LONG | `$1.579` | `$1.581` | `$-1.55` | 🔴 LOSS |
-| 2026-07-29 10:57:46 | NEARUSDT | LONG | `$1.579` | `$1.581` | `$-1.55` | 🔴 LOSS |
-| 2026-07-29 10:57:46 | NEARUSDT | LONG | `$1.579` | `$1.581` | `$-1.55` | 🔴 LOSS |
-| 2026-07-29 10:57:46 | NEARUSDT | LONG | `$1.579` | `$1.581` | `$-1.55` | 🔴 LOSS |
+| 2026-07-29 16:06:03 | XRPUSDT | SHORT | `$1.089` | `$1.0666` | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | XRPUSDT | SHORT | `$1.089` | `$1.0666` | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | XRPUSDT | SHORT | `$1.089` | `$1.0666` | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | XRPUSDT | SHORT | `$1.089` | `$1.0666` | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | XRPUSDT | SHORT | `$1.089` | `$1.0666` | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | XRPUSDT | SHORT | `$1.089` | `$1.0666` | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | XRPUSDT | SHORT | `$1.089` | `$1.0666` | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | XRPUSDT | SHORT | `$1.089` | `$1.0666` | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | XRPUSDT | SHORT | `$1.089` | `$1.0666` | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | XRPUSDT | SHORT | `$1.089` | `$1.0666` | `$+2.94` | 🟢 WIN |
 

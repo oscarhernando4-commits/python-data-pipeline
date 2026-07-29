@@ -2,19 +2,19 @@
 tags:
   - analisis_grupos
   - trading
-date: 2026-07-29 15:56:38
+date: 2026-07-29 16:06:03
 ---
 
 # 📊 ANÁLISIS GLOBAL DE GANANCIAS Y PÉRDIDAS POR GRUPO
 
-> **Última Actualización:** `2026-07-29 15:56:38`
+> **Última Actualización:** `2026-07-29 16:06:03`
 > Este reporte desglosa el rendimiento matemático de cada Estrategia de IA. 
 
 ## 🏆 Resumen de Rendimiento (Ranking de Grupos)
 
 | Grupo de IA | Operaciones | Tasa de Acierto (WinRate) | PnL en LONGs | PnL en SHORTs | 💰 PnL NETO TOTAL |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **⚡ GRUPO 4: Frecuencia Alta** | 40 | `50.0%` | $+0.00 | $+25.00 | **$+25.00** |
+| **⚡ GRUPO 4: Frecuencia Alta** | 60 | `66.7%` | $+0.00 | $+83.80 | **$+83.80** |
 | **🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)** | 2 | `50.0%` | $+0.00 | $+1.25 | **$+1.25** |
 | **🔷 GRUPO 2: Moderado-Estricto** | 60 | `0.0%` | $-94.40 | $+0.00 | **$-94.40** |
 
@@ -24,10 +24,30 @@ date: 2026-07-29 15:56:38
 
 ### ⚡ GRUPO 4: Frecuencia Alta
 
-> **Mejor Par Operado:** `LTCUSDT ($+58.00)`
+> **Mejor Par Operado:** `XRPUSDT ($+58.80)`
 
 | Fecha | Par | Lado | Precio Entrada | Precio Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
+| 2026-07-29 16:06:03 | **XRPUSDT** | SHORT | $1.089 | $1.0666 | `$+2.94` | 🟢 WIN |
 | 2026-07-29 06:32:29 | **BTCUSDT** | SHORT | $63662.44 | $64399.99 | `$-1.65` | 🔴 LOSS |
 | 2026-07-29 06:32:29 | **BTCUSDT** | SHORT | $63662.44 | $64399.99 | `$-1.65` | 🔴 LOSS |
 | 2026-07-29 06:32:29 | **BTCUSDT** | SHORT | $63662.44 | $64399.99 | `$-1.65` | 🔴 LOSS |

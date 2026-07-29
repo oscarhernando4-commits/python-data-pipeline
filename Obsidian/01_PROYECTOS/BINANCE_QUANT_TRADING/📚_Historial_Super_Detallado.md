@@ -1,0 +1,138 @@
+---
+tags:
+  - trading
+  - historial_completo
+  - binance
+date: 2026-07-29 16:06:03
+---
+
+# 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
+
+> **Última Actualización:** `2026-07-29 16:06:03`
+> Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
+
+| Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 03:52:35 | 🔷 GRUPO 2: Mode... | LTCUSDT | LONG | $46.03 | $45.5 | $-1.60 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 04:02:13 | 🥇 GRUPO 0: RÉPL... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 04:02:13 | ⚡ GRUPO 4: Frec... | LTCUSDT | SHORT | $46.34 | $45.29 | $+2.90 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-07-29 06:32:29 | 🥇 GRUPO 0: RÉPL... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 06:32:29 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63662.44 | $64399.99 | $-1.65 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 08:16:20 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.609 | $1.594 | $-1.57 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 10:57:46 | 🔷 GRUPO 2: Mode... | NEARUSDT | LONG | $1.579 | $1.581 | $-1.55 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 16:06:03 | ⚡ GRUPO 4: Frec... | XRPUSDT | SHORT | $1.089 | $1.0666 | $+2.94 | 25 | 22.9 | NEUTRAL | 🟢 WIN |
+

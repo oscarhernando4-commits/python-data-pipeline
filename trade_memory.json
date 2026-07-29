@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 102,
-    "wins": 21,
+    "total_trades": 122,
+    "wins": 41,
     "losses": 81,
-    "win_rate_pct": 20.59,
-    "total_pnl_usd": -68.14999999999996
+    "win_rate_pct": 33.61,
+    "total_pnl_usd": -9.349999999999985
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -19,7 +19,9 @@
       "RSI < 30 + MACD Bullish Cross + Volume > 1.5x (High Probability Win)",
       "4H Macro Trend Alignment with 15M Reversal",
       "Optimized Setup for LTCUSDT: Profit logged (+$2.90) -> Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!",
-      "Optimized Setup for LTCUSDT: Profit logged (+$2.90) -> Win on LTCUSDT (+$2.90 net) -> Level 3 Re-Trading Started!"
+      "Optimized Setup for LTCUSDT: Profit logged (+$2.90) -> Win on LTCUSDT (+$2.90 net) -> Level 3 Re-Trading Started!",
+      "Optimized Setup for XRPUSDT: Profit logged (+$2.94) -> Win on XRPUSDT (+$2.94 net) -> Level 4 Re-Trading Started!",
+      "Optimized Setup for XRPUSDT: Profit logged (+$2.94) -> Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!"
     ]
   },
   "history": [
@@ -1246,6 +1248,346 @@
       "pnl_usd": -1.55,
       "result": "LOSS",
       "notes": "Hit SL on NEARUSDT (-$1.55). Re-Trading!"
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-061",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-062",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-063",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-064",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-065",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-066",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-067",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-068",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-069",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-071",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-072",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-073",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-074",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-075",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-076",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-077",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-078",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-079",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 16:06:03",
+      "account_id": "SIM-080",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.089,
+      "exit_price": 1.0666,
+      "pnl_usd": 2.94,
+      "result": "WIN",
+      "notes": "Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
