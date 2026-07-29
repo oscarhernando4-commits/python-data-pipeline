@@ -3,12 +3,12 @@ tags:
   - trading
   - historial_completo
   - binance
-date: 2026-07-29 18:03:54
+date: 2026-07-29 18:54:28
 ---
 
 # 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
 
-> **Última Actualización:** `2026-07-29 18:03:54`
+> **Última Actualización:** `2026-07-29 18:54:28`
 > Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
 
 | Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |
@@ -156,4 +156,24 @@ date: 2026-07-29 18:03:54
 | 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
 | 2026-07-29 16:51:14 | ⚖️ GRUPO 3: Bal... | DOTUSDT | LONG | $0.765 | $0.757 | $-1.60 | 15 | 42.6 | NEUTRAL | 🔴 LOSS |
 | 2026-07-29 18:03:54 | 🥇 GRUPO 0: RÉPL... | OPUSDT | SHORT | $0.0879 | $0.0886 | $-1.11 | 50 | 70.5 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
+| 2026-07-29 18:54:28 | 🛡️ GRUPO 1: Ult... | ADAUSDT | LONG | $0.1639 | $0.1673 | $+1.97 | 35 | 68.6 | NEUTRAL | 🟢 WIN |
 

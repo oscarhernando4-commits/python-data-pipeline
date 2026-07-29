@@ -4,27 +4,27 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-07-29 18:03:54
+date: 2026-07-29 18:54:28
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-07-29 18:03:54`  
+> **Última Actualización:** `2026-07-29 18:54:28`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `143`
-- **Ganadas (WIN):** `41` | **Perdidas (LOSS):** `102`
-- **Tasa de Acierto (Win Rate):** `28.67%`
-- **PnL Total Neto:** `$-42.46 USD`
+- **Total Operaciones:** `163`
+- **Ganadas (WIN):** `61` | **Perdidas (LOSS):** `102`
+- **Tasa de Acierto (Win Rate):** `37.42%`
+- **PnL Total Neto:** `$-3.06 USD`
 
 ---
 
 ## 🧭 Sesgo de Aprendizaje Automático (Últimos 100 Trades)
 - **Sesgo Actual (Market Bias):** `FAVOR_SHORT`
-- **Rendimiento LONG (Compras):** `0.0%` de Acierto (en 80 ops recientes)
+- **Rendimiento LONG (Compras):** `20.0%` de Acierto (en 100 ops recientes)
 - **Rendimiento SHORT (Ventas):** `65.1%` de Acierto (en 63 ops recientes)
 - 🏆 **Grupo de IA Más Rentable:** `⚡ GRUPO 4: Frecuencia Alta` (WinRate: 66.7%, PnL: $83.8)
 - *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada. Y el Dinero Real copiará automáticamente al Grupo Más Rentable.
@@ -52,20 +52,22 @@ date: 2026-07-29 18:03:54
 - ⚡ Optimized Setup for LTCUSDT: Profit logged (+$2.90) -> Win on LTCUSDT (+$2.90 net) -> Level 3 Re-Trading Started!
 - ⚡ Optimized Setup for XRPUSDT: Profit logged (+$2.94) -> Win on XRPUSDT (+$2.94 net) -> Level 4 Re-Trading Started!
 - ⚡ Optimized Setup for XRPUSDT: Profit logged (+$2.94) -> Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!
+- ⚡ Optimized Setup for ADAUSDT: Profit logged (+$1.97) -> Win on ADAUSDT (+$1.97 net) -> Level 3 Re-Trading Started!
+- ⚡ Optimized Setup for ADAUSDT: Profit logged (+$1.97) -> Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!
 
 ---
 
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-07-29 18:03:54 | OPUSDT | SHORT | `$0.0879` | `$0.0886` | `$-1.11` | 🔴 LOSS |
-| 2026-07-29 16:51:14 | DOTUSDT | LONG | `$0.765` | `$0.757` | `$-1.60` | 🔴 LOSS |
-| 2026-07-29 16:51:14 | DOTUSDT | LONG | `$0.765` | `$0.757` | `$-1.60` | 🔴 LOSS |
-| 2026-07-29 16:51:14 | DOTUSDT | LONG | `$0.765` | `$0.757` | `$-1.60` | 🔴 LOSS |
-| 2026-07-29 16:51:14 | DOTUSDT | LONG | `$0.765` | `$0.757` | `$-1.60` | 🔴 LOSS |
-| 2026-07-29 16:51:14 | DOTUSDT | LONG | `$0.765` | `$0.757` | `$-1.60` | 🔴 LOSS |
-| 2026-07-29 16:51:14 | DOTUSDT | LONG | `$0.765` | `$0.757` | `$-1.60` | 🔴 LOSS |
-| 2026-07-29 16:51:14 | DOTUSDT | LONG | `$0.765` | `$0.757` | `$-1.60` | 🔴 LOSS |
-| 2026-07-29 16:51:14 | DOTUSDT | LONG | `$0.765` | `$0.757` | `$-1.60` | 🔴 LOSS |
-| 2026-07-29 16:51:14 | DOTUSDT | LONG | `$0.765` | `$0.757` | `$-1.60` | 🔴 LOSS |
+| 2026-07-29 18:54:28 | ADAUSDT | LONG | `$0.1639` | `$0.1673` | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | ADAUSDT | LONG | `$0.1639` | `$0.1673` | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | ADAUSDT | LONG | `$0.1639` | `$0.1673` | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | ADAUSDT | LONG | `$0.1639` | `$0.1673` | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | ADAUSDT | LONG | `$0.1639` | `$0.1673` | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | ADAUSDT | LONG | `$0.1639` | `$0.1673` | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | ADAUSDT | LONG | `$0.1639` | `$0.1673` | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | ADAUSDT | LONG | `$0.1639` | `$0.1673` | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | ADAUSDT | LONG | `$0.1639` | `$0.1673` | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | ADAUSDT | LONG | `$0.1639` | `$0.1673` | `$+1.97` | 🟢 WIN |
 

@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 143,
-    "wins": 41,
+    "total_trades": 163,
+    "wins": 61,
     "losses": 102,
-    "win_rate_pct": 28.67,
-    "total_pnl_usd": -42.46
+    "win_rate_pct": 37.42,
+    "total_pnl_usd": -3.060000000000014
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -23,7 +23,9 @@
       "Optimized Setup for LTCUSDT: Profit logged (+$2.90) -> Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!",
       "Optimized Setup for LTCUSDT: Profit logged (+$2.90) -> Win on LTCUSDT (+$2.90 net) -> Level 3 Re-Trading Started!",
       "Optimized Setup for XRPUSDT: Profit logged (+$2.94) -> Win on XRPUSDT (+$2.94 net) -> Level 4 Re-Trading Started!",
-      "Optimized Setup for XRPUSDT: Profit logged (+$2.94) -> Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!"
+      "Optimized Setup for XRPUSDT: Profit logged (+$2.94) -> Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
+      "Optimized Setup for ADAUSDT: Profit logged (+$1.97) -> Win on ADAUSDT (+$1.97 net) -> Level 3 Re-Trading Started!",
+      "Optimized Setup for ADAUSDT: Profit logged (+$1.97) -> Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!"
     ]
   },
   "history": [
@@ -1945,6 +1947,346 @@
       "context": {
         "score": 50,
         "rsi_15m": 70.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-001",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-002",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-003",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-004",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-005",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-006",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-007",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-008",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-009",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-010",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-011",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-012",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-013",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-014",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-015",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-016",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-017",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-018",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-019",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-29 18:54:28",
+      "account_id": "SIM-020",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1639,
+      "exit_price": 0.1673,
+      "pnl_usd": 1.97,
+      "result": "WIN",
+      "notes": "Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 68.56,
         "macro_trend_4h": "NEUTRAL"
       }
     }

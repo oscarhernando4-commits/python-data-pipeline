@@ -2,12 +2,12 @@
 tags:
   - analisis_grupos
   - trading
-date: 2026-07-29 18:48:56
+date: 2026-07-29 18:54:29
 ---
 
 # 📊 ANÁLISIS GLOBAL DE GANANCIAS Y PÉRDIDAS POR GRUPO
 
-> **Última Actualización:** `2026-07-29 18:48:56`
+> **Última Actualización:** `2026-07-29 18:54:29`
 > Este reporte desglosa el rendimiento matemático de cada Estrategia de IA. 
 
 ## 🏆 Resumen de Rendimiento (Ranking de Grupos)
@@ -15,6 +15,7 @@ date: 2026-07-29 18:48:56
 | Grupo de IA | Operaciones | Tasa de Acierto (WinRate) | PnL en LONGs | PnL en SHORTs | 💰 PnL NETO TOTAL |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **⚡ GRUPO 4: Frecuencia Alta** | 60 | `66.7%` | $+0.00 | $+83.80 | **$+83.80** |
+| **🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)** | 20 | `100.0%` | $+39.40 | $+0.00 | **$+39.40** |
 | **🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)** | 3 | `33.3%` | $+0.00 | $+0.14 | **$+0.14** |
 | **⚖️ GRUPO 3: Balanceado** | 20 | `0.0%` | $-32.00 | $+0.00 | **$-32.00** |
 | **🔷 GRUPO 2: Moderado-Estricto** | 60 | `0.0%` | $-94.40 | $+0.00 | **$-94.40** |
@@ -89,6 +90,34 @@ date: 2026-07-29 18:48:56
 | 2026-07-29 04:02:13 | **LTCUSDT** | SHORT | $46.34 | $45.29 | `$+2.90` | 🟢 WIN |
 | 2026-07-29 04:02:13 | **LTCUSDT** | SHORT | $46.34 | $45.29 | `$+2.90` | 🟢 WIN |
 | 2026-07-29 04:02:13 | **LTCUSDT** | SHORT | $46.34 | $45.29 | `$+2.90` | 🟢 WIN |
+
+
+### 🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)
+
+> **Mejor Par Operado:** `ADAUSDT ($+39.40)`
+
+| Fecha | Par | Lado | Precio Entrada | Precio Salida | PnL | Resultado |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
+| 2026-07-29 18:54:28 | **ADAUSDT** | LONG | $0.1639 | $0.1673 | `$+1.97` | 🟢 WIN |
 
 
 ### 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)
