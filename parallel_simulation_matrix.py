@@ -182,29 +182,37 @@ def run_infinite_trading_matrix_cycle():
                 "risk": tech.get("institutional_risk_plan", {})
             }
             
-            # Track both Bullish (High Score) and Bearish (Low Score) setups
-            if final_score > max_market_score:
-                max_market_score = final_score
-                best_market_opportunity = (s, symbol_analysis_map[s], "BUY_LONG")
-            if min_market_score is None or final_score < min_market_score:
-                min_market_score = final_score
-                best_bearish_opportunity = (s, symbol_analysis_map[s], "SELL_SHORT")
+            # Instead of keeping just one max/min, we just store it in the map
+            pass
         except Exception as e:
             print(f"Error fetching live data for {s}: {e}")
 
-    # Select top overall opportunity by strongest divergence from neutral (50)
-    bull_strength = (max_market_score - 50) if best_market_opportunity else -999
-    bear_strength = (50 - min_market_score) if best_bearish_opportunity and min_market_score is not None else -999
-    selected_opp = best_market_opportunity if bull_strength >= bear_strength else best_bearish_opportunity
+    # Select top 5 overall opportunities by strongest divergence from neutral (50)
+    candidates_list = []
+    for sym, data in symbol_analysis_map.items():
+        score = data["score"]
+        divergence = abs(score - 50)
+        action = "BUY_LONG" if score >= 50 else "SELL_SHORT"
+        candidates_list.append({
+            "symbol": sym,
+            "divergence": divergence,
+            "score": score,
+            "tech_data": data["tech"],
+            "suggested_action": action
+        })
+    
+    # Sort by strongest divergence descending and take top 5
+    candidates_list.sort(key=lambda x: x["divergence"], reverse=True)
+    top_5_candidates = candidates_list[:5]
     
     import learning_engine
     bias_data = learning_engine.get_market_bias()
     bias_str = f"BIAS: {bias_data['bias']} | WinRates -> LONG: {bias_data['long_win_rate']}% vs SHORT: {bias_data['short_win_rate']}%"
     
-    # Evaluate Top Candidate with Gemini Flash / Pro LLM Sentinel
+    # Evaluate Top 5 Candidates with Gemini Flash / Pro LLM Sentinel
     gemini_res = {}
-    if selected_opp:
-        top_sym, top_data, top_side = selected_opp
+    selected_opp = None
+    if top_5_candidates:
         try:
             import macro_analyst
             import gemini_sentinel
@@ -215,16 +223,23 @@ def run_infinite_trading_matrix_cycle():
                 cached_fundamental_report.get("recent_headlines", [])
             )
             
-            gemini_res = gemini_sentinel.review_trade_decision(
-                symbol=top_sym,
-                score=top_data["score"],
-                tech_data=top_data["tech"],
+            gemini_res = gemini_sentinel.review_top_5_candidates(
+                candidates_data_list=top_5_candidates,
                 news_data={"headlines": cached_fundamental_report.get("recent_headlines", [])},
                 fear_greed=cached_fundamental_report.get("fear_and_greed", {"score": 50, "sentiment": "Neutral"}),
                 macro_context=macro_ctx,
                 market_bias_ctx=bias_str
             )
-            print(f"🧠 [AI CO-PILOT {top_side}] {top_sym} (Score {top_data['score']} Pts): Approved={gemini_res.get('approved')} | Action={gemini_res.get('action')} | Conf={gemini_res.get('confidence')}% | Razonamiento: {gemini_res.get('reasoning')}")
+            
+            winner_sym = gemini_res.get("selected_symbol")
+            if winner_sym and winner_sym != "NONE" and winner_sym in symbol_analysis_map:
+                top_data = symbol_analysis_map[winner_sym]
+                top_side = gemini_res.get("action", "BUY_LONG")
+                selected_opp = (winner_sym, top_data, top_side)
+                
+                print(f"🧠 [COMITÉ AI ELIGIÓ {top_side}] {winner_sym} (Score Original {top_data['score']} Pts): Approved={gemini_res.get('approved')} | Conf={gemini_res.get('confidence')}% | Razonamiento: {gemini_res.get('reasoning')}")
+            else:
+                print(f"🧠 [COMITÉ AI] Ninguna moneda fue aprobada (NONE). El mercado es demasiado tóxico. Razonamiento: {gemini_res.get('reasoning')}")
         except Exception as ge:
             print(f"💡 Gemini Sentinel Note: {ge}")
 
