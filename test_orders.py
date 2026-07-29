@@ -6,9 +6,10 @@ import hashlib
 from urllib.parse import urlencode
 import json
 
-API_KEY = os.getenv("BINANCE_API_KEY", "")
-API_SECRET = os.getenv("BINANCE_API_SECRET", "")
-PROXIES = None 
+API_KEY = os.getenv("BINANCE_REAL_API_KEY", "")
+API_SECRET = os.getenv("BINANCE_REAL_API_SECRET", "")
+PROXY_URL = os.getenv("FIXIE_URL", "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80")
+PROXIES = {"http": PROXY_URL, "https": PROXY_URL} if PROXY_URL else None
 BASE_URL = "https://api.binance.com"
 FAPI_URL = "https://fapi.binance.com"
 
@@ -39,7 +40,7 @@ def test_spot_limit():
         "timestamp": int(time.time() * 1000)
     }
     params = sign(params)
-    res = requests.post(f"{BASE_URL}/api/v3/order", headers=headers, params=params)
+    res = requests.post(f"{BASE_URL}/api/v3/order", headers=headers, params=params, proxies=PROXIES)
     data = res.json()
     
     if "orderId" in data:
@@ -48,7 +49,7 @@ def test_spot_limit():
         
         # Cancel it
         c_params = sign({"symbol": "BTCUSDT", "orderId": order_id, "timestamp": int(time.time() * 1000)})
-        c_res = requests.delete(f"{BASE_URL}/api/v3/order", headers=headers, params=c_params)
+        c_res = requests.delete(f"{BASE_URL}/api/v3/order", headers=headers, params=c_params, proxies=PROXIES)
         if "orderId" in c_res.json():
             log_report(f"✅ ORDEN LONG CANCELADA EXITOSAMENTE. El dinero real está intacto.")
         else:
@@ -71,7 +72,7 @@ def test_futures_limit():
         "timestamp": int(time.time() * 1000)
     }
     params = sign(params)
-    res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=params)
+    res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=params, proxies=PROXIES)
     data = res.json()
     
     if "orderId" in data:
@@ -80,7 +81,7 @@ def test_futures_limit():
         
         # Cancel it
         c_params = sign({"symbol": "BTCUSDT", "orderId": order_id, "timestamp": int(time.time() * 1000)})
-        c_res = requests.delete(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=c_params)
+        c_res = requests.delete(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=c_params, proxies=PROXIES)
         if "orderId" in c_res.json():
             log_report(f"✅ ORDEN SHORT CANCELADA EXITOSAMENTE. El dinero real está intacto.")
         else:
