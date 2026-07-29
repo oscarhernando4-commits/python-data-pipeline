@@ -4,7 +4,7 @@ aliases: [Rendimiento 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)]
 cssclasses: [dashboard-view]
 ---
 # 📊 Rendimiento por Periodos: 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)
-> Última actualización: 2026-07-29 17:44:32
+> Última actualización: 2026-07-29 17:49:35
 
 | Periodo | Total Operaciones | ✅ Ganadoras | 💰 PnL Ganado | ❌ Perdedoras | 💸 PnL Perdido | 📈 Neto |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
