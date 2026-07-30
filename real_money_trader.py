@@ -208,7 +208,7 @@ def execute_real_futures_market_short(symbol, usdt_amount):
 
     # 2. Fetch live price to calculate Qty and SL/TP Prices
     try:
-        price_res = requests.get(f"{FAPI_URL}/fapi/v1/ticker/price?symbol={symbol}", proxies=PROXIES, timeout=5).json()
+        price_res = requests.get(f"{FAPI_URL}/fapi/v1/ticker/price?symbol={symbol}", timeout=5).json()
         price = float(price_res.get("price", 1.0))
         qty = round(clean_usd / price, 3)
         qty_str = f"{qty:.3f}"
