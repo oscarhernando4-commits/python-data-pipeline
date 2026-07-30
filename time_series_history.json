@@ -1,16 +1,68 @@
 {
-  "EIGENUSDT": [
+  "TWTUSDT": [
     {
-      "timestamp": "2026-07-29 18:10:30",
-      "price": 0.1801,
-      "score": 30,
-      "rsi": 46.35,
+      "timestamp": "2026-07-30 12:40:16",
+      "price": 0.3602,
+      "score": 40,
+      "rsi": 30.3,
       "macd": "Neutral",
-      "volume_surge": 0.66,
+      "volume_surge": 0.07,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
 }
+  "OPUSDT": [
+    {
+      "timestamp": "2026-07-30 12:40:16",
+      "price": 0.0886,
+      "score": 65,
+      "rsi": 54.29,
+      "macd": "Neutral",
+      "volume_surge": 0.61,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "COMPUSDT": [
+    {
+      "timestamp": "2026-07-30 12:40:16",
+      "price": 16.62,
+      "score": 65,
+      "rsi": 58.3,
+      "macd": "Neutral",
+      "volume_surge": 0.11,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "RUNEUSDT": [
+    {
+      "timestamp": "2026-07-30 12:40:16",
+      "price": 0.442,
+      "score": 15,
+      "rsi": 33.32,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "IOTAUSDT": [
+    {
+      "timestamp": "2026-07-30 12:40:16",
+      "price": 0.0326,
+      "score": 15,
+      "rsi": 43.26,
+      "macd": "Neutral",
+      "volume_surge": 0.95,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ]
 }

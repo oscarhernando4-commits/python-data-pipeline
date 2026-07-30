@@ -10,8 +10,8 @@ import hashlib
 import requests
 from urllib.parse import urlencode
 
-API_KEY = os.getenv("BINANCE_REAL_API_KEY", "2nfL1p3pIXWmPLpBC9d0MtQzOBzlBBKu5xkKQPJ46QxbqxxqbTrC7tW0ltjJJpka")
-API_SECRET = os.getenv("BINANCE_REAL_API_SECRET", "9g2cBC6SgWlgywcJDqxsLELxZnrNV5dYjD5bqxEbjbKEjbZ5qD8f0ldrXfJpbfnN")
+API_KEY = os.getenv("BINANCE_REAL_API_KEY", "")
+API_SECRET = os.getenv("BINANCE_REAL_API_SECRET", "")
 
 BASE_URL = "https://api.binance.com"
 

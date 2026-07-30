@@ -9,7 +9,7 @@ import obsidian_sync
 import learning_engine
 from datetime import datetime
 
-API_KEY = "xaKSEi9J4vPzfrEVVjPBaKHLvhY8YEG8sEf2LPQobLoMYuVX898HqBcjORlODXdx"
+API_KEY = ""
 API_SECRET = "bjHEoq12tOaSJZAAZQgwVmUpFV88leJb5XmRb2ZSyRcCK9WtQiKegu41TbZCdOYR"
 BASE_URL = "https://testnet.binance.vision"
 

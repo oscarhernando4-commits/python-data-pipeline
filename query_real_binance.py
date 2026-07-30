@@ -1,8 +1,8 @@
 import os, time, hmac, hashlib, requests
 from urllib.parse import urlencode
 
-API_KEY = "2nfL1p3pIXWmPLpBC9d0MtQzOBzlBBKu5xkKQPJ46QxbqxxqbTrC7tW0ltjJJpka"
-API_SECRET = "9g2cBC6SgWlgywcJDqxsLELxZnrNV5dYjD5bqxEbjbKEjbZ5qD8f0ldrXfJpbfnN"
+API_KEY = ""
+API_SECRET = ""
 BASE_URL = "https://api.binance.com"
 proxy_url = os.getenv("FIXIE_URL", "")
 proxies = {"http": proxy_url, "https": proxy_url} if proxy_url else None

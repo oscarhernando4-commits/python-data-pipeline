@@ -9,8 +9,8 @@ import obsidian_sync
 from datetime import datetime
 
 # Real Binance API Keys configured by user
-API_KEY = "2nfL1p3pIXWmPLpBC9d0MtQzOBzlBBKu5xkKQPJ46QxbqxxqbTrC7tW0ltjJJpka"
-API_SECRET = "9g2cBC6SgWlgywcJDqxsLELxZnrNV5dYjD5bqxEbjbKEjbZ5qD8f0ldrXfJpbfnN"
+API_KEY = ""
+API_SECRET = ""
 BASE_URL = "https://api.binance.com"
 
 def sign_query(query_str):
