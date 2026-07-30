@@ -224,7 +224,7 @@ def execute_real_futures_market_short(symbol, usdt_amount):
         # Get correct quantity precision for this symbol
         qty_precision = 3  # default
         try:
-            exinfo = requests.get(f"{FAPI_URL}/fapi/v1/exchangeInfo", timeout=5).json()
+            exinfo = requests.get(f"{FAPI_URL}/fapi/v1/exchangeInfo", proxies=PROXIES, timeout=5).json()
             sym_info = next((s for s in exinfo['symbols'] if s['symbol'] == symbol), None)
             if sym_info:
                 qty_precision = int(sym_info.get('quantityPrecision', 3))
@@ -316,7 +316,7 @@ def execute_real_futures_market_close(symbol, quantity):
     
     qty_precision = 3  # default
     try:
-        exinfo = requests.get(f"{FAPI_URL}/fapi/v1/exchangeInfo", timeout=5).json()
+        exinfo = requests.get(f"{FAPI_URL}/fapi/v1/exchangeInfo", proxies=PROXIES, timeout=5).json()
         sym_info = next((s for s in exinfo['symbols'] if s['symbol'] == symbol), None)
         if sym_info:
             qty_precision = int(sym_info.get('quantityPrecision', 3))
