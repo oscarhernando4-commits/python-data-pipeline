@@ -1,9 +1,9 @@
-name: Binance Quant Trading Engine 24/7 (Cron 5M Cloud)
+name: Data Pipeline Cron
 
 on:
   schedule:
-    # Runs every 2 hours to preserve GitHub Actions Free Tier quota (1080 mins/month)
-    - cron: '0 */2 * * *'
+    # Runs every 5 minutes 24/7 in GitHub Cloud (Public repo = unlimited quota)
+    - cron: '*/5 * * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI
   repository_dispatch: # Allows instant external 5m pings from Cron-Job.org / UptimeRobot
     types: [trigger_quant_trade]
@@ -45,6 +45,6 @@ jobs:
           git config --global user.name 'antigravity-bot[bot]'
           git config --global user.email 'antigravity-bot[bot]@users.noreply.github.com'
           git add .
-          git commit -m "Auto-Update: Live 100-Account Matrix Cycle [$(date -u +'%Y-%m-%d %H:%M:%S UTC')]" || echo "No changes to commit"
+          git commit -m "chore: pipeline data sync [$(date -u +'%Y-%m-%d %H:%M:%S UTC')]" || echo "No changes to commit"
           git pull --rebase origin main || true
           git push origin main
