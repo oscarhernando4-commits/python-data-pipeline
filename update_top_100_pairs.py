@@ -67,13 +67,28 @@ def update_top_pairs():
         return
         
     print(f"Fetching valid Binance Futures USDT pairs...")
-    try:
-        f_res = requests.get('https://fapi.binance.com/fapi/v1/exchangeInfo', timeout=10)
-        f_res.raise_for_status()
-        futures_pairs = {s['symbol'] for s in f_res.json()['symbols'] if s['status'] == 'TRADING' and s['quoteAsset'] == 'USDT'}
-    except Exception as e:
-        print(f"Failed to fetch Futures info: {e}")
-        futures_pairs = set()
+    futures_cache_file = "futures_pairs_cache.json"
+    futures_pairs = set()
+    # Usar caché de 24h para no gastar quota del Proxy
+    if os.path.exists(futures_cache_file) and time.time() - os.path.getmtime(futures_cache_file) < 86400:
+        try:
+            with open(futures_cache_file, "r") as f:
+                futures_pairs = set(json.load(f))
+        except:
+            pass
+            
+    if not futures_pairs:
+        try:
+            import real_money_trader
+            f_res = requests.get('https://fapi.binance.com/fapi/v1/exchangeInfo', proxies=real_money_trader.PROXIES, timeout=10)
+            f_res.raise_for_status()
+            futures_pairs_list = [s['symbol'] for s in f_res.json()['symbols'] if s['status'] == 'TRADING' and s['quoteAsset'] == 'USDT']
+            futures_pairs = set(futures_pairs_list)
+            with open(futures_cache_file, "w") as f:
+                json.dump(futures_pairs_list, f)
+        except Exception as e:
+            print(f"Failed to fetch Futures info via Proxy: {e}")
+            futures_pairs = set()
 
     cmc_symbols = get_cmc_top_coins()
     binance_vol_symbols = get_binance_top_volume_coins(valid_binance_pairs)
