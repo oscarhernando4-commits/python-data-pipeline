@@ -22,20 +22,32 @@ def update_top_pairs():
         res = requests.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', headers=headers, params=params)
         res.raise_for_status()
         data = res.json()
+        cmc_symbols = [coin['symbol'] for coin in data.get('data', [])]
+        print(f"✅ CMC API exitosa. Se obtuvieron {len(cmc_symbols)} símbolos.")
     except Exception as e:
-        print(f"Failed to fetch from CMC: {e}")
-        return
+        print(f"Fallo CMC (posible limite de cuota): {e}. Usando FALLBACK nativo de Binance...")
+        cmc_symbols = [] # Lo llenaremos con Binance
         
-    cmc_symbols = [coin['symbol'] for coin in data.get('data', [])]
-    
     print(f"Fetching valid Binance USDT pairs...")
     try:
         binance_res = requests.get('https://data-api.binance.vision/api/v3/exchangeInfo')
         binance_res.raise_for_status()
         binance_data = binance_res.json()
         valid_binance_pairs = {s['symbol'] for s in binance_data['symbols'] if s['status'] == 'TRADING' and s['quoteAsset'] == 'USDT'}
+        
+        # Si CMC falló, usamos las monedas con más volumen de las últimas 24H en Binance
+        if not cmc_symbols:
+            print("Activando PLAN B: Clasificando por volumen 24H de Binance...")
+            ticker_res = requests.get('https://data-api.binance.vision/api/v3/ticker/24hr')
+            tickers = ticker_res.json()
+            # Filtrar solo USDT y ordenar por volumen
+            usdt_tickers = [t for t in tickers if t['symbol'] in valid_binance_pairs]
+            usdt_tickers.sort(key=lambda x: float(x['quoteVolume']), reverse=True)
+            # Tomar los top 200 para tener margen al filtrar stablecoins
+            cmc_symbols = [t['symbol'].replace('USDT', '') for t in usdt_tickers[:200]]
+            
     except Exception as e:
-        print(f"Failed to fetch Binance exchange info: {e}")
+        print(f"Failed to fetch Binance data: {e}")
         return
         
     top_100_pairs = []
@@ -75,8 +87,9 @@ def should_update():
     import time
     if not os.path.exists("top_100_pairs.json"):
         return True
-    # If file is older than 8.3 minutos (500 seconds) - Increasing frequency to match 10-minute cron (86.4% limit)
-    if time.time() - os.path.getmtime("top_100_pairs.json") > 500:
+    # El Top 100 no cambia tan rápido. Actualizar cada 4 horas (14400 segundos) 
+    # es perfecto y consume solo ~6 créditos al día (180 al mes vs el límite de 10,000).
+    if time.time() - os.path.getmtime("top_100_pairs.json") > 14400:
         return True
     return False
 
