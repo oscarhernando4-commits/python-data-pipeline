@@ -35,7 +35,6 @@ jobs:
         env:
           BINANCE_REAL_API_KEY: ${{ secrets.BINANCE_REAL_API_KEY }}
           BINANCE_REAL_API_SECRET: ${{ secrets.BINANCE_REAL_API_SECRET }}
-          FIXIE_URL: ${{ secrets.FIXIE_URL || 'http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80' }}
         run: |
           python check_futures.py > force_trade_log.txt 2>&1
           

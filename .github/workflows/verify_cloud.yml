@@ -25,5 +25,4 @@ jobs:
         env:
           BINANCE_REAL_API_KEY: ${{ secrets.BINANCE_REAL_API_KEY }}
           BINANCE_REAL_API_SECRET: ${{ secrets.BINANCE_REAL_API_SECRET }}
-          FIXIE_URL: ${{ secrets.FIXIE_URL || 'http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80' }}
         run: python verify_autonomous_cloud.py
