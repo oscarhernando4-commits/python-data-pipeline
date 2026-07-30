@@ -489,6 +489,18 @@ def run_infinite_trading_matrix_cycle():
         ai_price = ai_opp_data.get("price", 0)
         ai_score = ai_opp_data.get("score", 50)
         
+        # --- AUTO-LEARNING FROM TESTNET: Feed winning patterns to real money decisions ---
+        testnet_boost = False
+        try:
+            import learning_engine
+            bias = learning_engine.get_market_bias()
+            testnet_wr = bias.get("long_win_rate", 0) if ai_action == "BUY_LONG" else bias.get("short_win_rate", 0)
+            if testnet_wr > 55:  # Testnet shows >55% win rate for this direction
+                testnet_boost = True
+                print(f"🧠 [APRENDIZAJE] Testnet WR={testnet_wr:.1f}% para {ai_action} — Confianza reforzada")
+        except:
+            pass
+        
         if is_ai_approved and ai_action == "BUY_LONG" and ai_symbol and ai_symbol != "NONE" and ai_price > 0:
             print(f"💰 [REAL] Señal ALCISTA Aprobada por IA ({ai_symbol} @ {ai_score} Pts, Conf={ai_confidence}%). Evaluando cuenta real...")
             real_money_trader.evaluate_and_trade_real_money(
@@ -508,12 +520,34 @@ def run_infinite_trading_matrix_cycle():
                 is_learned_signal=True
             )
         else:
-            if ai_symbol:
-                print(f"🔒 [REAL] IA seleccionó {ai_symbol} pero acción={ai_action}, Approved={is_ai_approved}. Sin operación nueva.")
-            # Always run the trader to manage OPEN positions (check TP/SL), even if no new entry
-            real_money_trader.evaluate_and_trade_real_money(
-                best_symbol=None, best_score=50, current_price=0.0, is_bearish=False
-            )
+            # --- OVEREXTENSION DETECTOR: If Gemini says HOLD, check for overextended coins to SHORT ---
+            overext_signal = None
+            try:
+                import overextension_detector
+                overext_signal = overextension_detector.get_best_short_candidate(TOP_PAIRS, min_score=60)
+            except Exception as e_ov:
+                print(f"Overextension detector: {e_ov}")
+            
+            if overext_signal and overext_signal.get('overextension_score', 0) >= 60:
+                ov_sym = overext_signal['symbol']
+                ov_price = overext_signal['price']
+                ov_score = overext_signal['overextension_score']
+                print(f"📉 [REAL] SOBREEXTENSIÓN DETECTADA: {ov_sym} Score={ov_score}/100 | 24H={overext_signal['change_24h']:+.2f}%")
+                print(f"   Activando SHORT automático por corrección de mercado...")
+                real_money_trader.evaluate_and_trade_real_money(
+                    best_symbol=ov_sym,
+                    best_score=20,  # Low score = bearish signal
+                    current_price=ov_price,
+                    is_bearish=True,
+                    is_learned_signal=True
+                )
+            else:
+                if ai_symbol:
+                    print(f"🔒 [REAL] IA seleccionó {ai_symbol} pero acción={ai_action}, Approved={is_ai_approved}. Sin operación nueva.")
+                # Always run the trader to manage OPEN positions (check TP/SL), even if no new entry
+                real_money_trader.evaluate_and_trade_real_money(
+                    best_symbol=None, best_score=50, current_price=0.0, is_bearish=False
+                )
             
     except Exception as e_real:
         print(f"Real trader notice: {e_real}")
