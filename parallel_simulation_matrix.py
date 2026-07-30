@@ -619,16 +619,38 @@ def sync_live_matrix_obsidian(matrix):
     try:
         import real_money_trader
         real_st = real_money_trader.load_real_account_state()
-        balances = real_money_trader.get_real_balances()
-        for b in balances:
-            asset = b.get("asset", "")
-            if asset == "USDT":
-                real_usdt_free = float(b.get("free", 0))
-                real_total_val += real_usdt_free
-            elif asset == "BNB":
-                real_bnb = float(b.get("free", 0))
-                real_bnb_usd = real_bnb * 575.0 # Approx BNB price
-                real_total_val += real_bnb_usd
+        
+        # SMART PROXY SAVER: Only sync real balance from Binance API every 30 minutes
+        # (minute 0 and 30) to conserve Fixie proxy requests.
+        # Orders (buy/sell) always use proxy instantly regardless of this timer.
+        current_minute = datetime.now().minute
+        is_sync_window = current_minute in [0, 30, 1, 31]  # 2-min window for cron drift
+        
+        if is_sync_window:
+            print("🔄 [SYNC 30M] Sincronizando balance real desde Binance API (Fixie Proxy)...")
+            balances = real_money_trader.get_real_balances()
+            for b in balances:
+                asset = b.get("asset", "")
+                if asset == "USDT":
+                    real_usdt_free = float(b.get("free", 0))
+                    real_total_val += real_usdt_free
+                elif asset == "BNB":
+                    real_bnb = float(b.get("free", 0))
+                    real_bnb_usd = real_bnb * 575.0
+                    real_total_val += real_bnb_usd
+            # Cache the synced values in local state for non-sync cycles
+            real_st["_cached_total_val"] = round(real_total_val, 2)
+            real_st["_cached_usdt_free"] = round(real_usdt_free, 4)
+            real_st["_cached_bnb"] = real_bnb
+            real_st["_cached_bnb_usd"] = round(real_bnb_usd, 2)
+            real_money_trader.save_real_account_state(real_st)
+        else:
+            # Use cached values from last sync (0 Fixie requests consumed)
+            real_total_val = real_st.get("_cached_total_val", real_st.get("current_balance_usd", 0.0))
+            real_usdt_free = real_st.get("_cached_usdt_free", 0.0)
+            real_bnb = real_st.get("_cached_bnb", 0.0)
+            real_bnb_usd = real_st.get("_cached_bnb_usd", 0.0)
+            print(f"💤 [CACHE] Usando balance cacheado (${real_total_val:.2f}). Próximo sync en {30 - (current_minute % 30)} min.")
     except Exception as e:
         print(f"Error cargando datos reales en matrix sync: {e}")
         # Usamos los datos guardados en state si la API falla
