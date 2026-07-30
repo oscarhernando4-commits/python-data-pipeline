@@ -234,7 +234,14 @@ def execute_real_futures_market_short(symbol, usdt_amount):
     headers = {"X-MBX-APIKEY": API_KEY}
 
     # 0. Ensure funds are in Futures wallet (Auto-transfer from Spot)
-    transfer_usdt(clean_usd + 0.1, to_futures=True) # Add tiny buffer for transfer
+    try:
+        f_balance = get_real_futures_usdt_balance()
+        amount_needed = (clean_usd + 0.1) - f_balance
+        if amount_needed > 1.0:
+            transfer_usdt(amount_needed, to_futures=True)
+    except Exception as e:
+        print(f"Error checking futures balance before transfer: {e}")
+        transfer_usdt(clean_usd + 0.1, to_futures=True) # Fallback
 
     # 1. Force Isolated Margin (Ignore if already Isolated)
     try:
