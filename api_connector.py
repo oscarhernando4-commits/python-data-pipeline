@@ -162,7 +162,7 @@ def get_symbol_price(symbol, is_futures=False):
     try:
         base = FAPI_URL if is_futures else BASE_URL
         endpoint = "/fapi/v1/ticker/price" if is_futures else "/api/v3/ticker/price"
-        res = requests.get(f"{base}{endpoint}?symbol={symbol}", timeout=5).json()
+        res = requests.get(f"{base}{endpoint}?symbol={symbol}", proxies=PROXIES, timeout=5).json()
         price = float(res.get("price", 0))
         return price if price > 0 else None
     except Exception:
@@ -243,7 +243,7 @@ def execute_real_futures_market_short(symbol, usdt_amount):
 
     # 2. Fetch live price AND correct quantity precision from exchangeInfo
     try:
-        price_res = requests.get(f"{FAPI_URL}/fapi/v1/ticker/price?symbol={symbol}", timeout=5).json()
+        price_res = requests.get(f"{FAPI_URL}/fapi/v1/ticker/price?symbol={symbol}", proxies=PROXIES, timeout=5).json()
         price = float(price_res.get("price", 1.0))
         
         # Get correct quantity precision for this symbol
