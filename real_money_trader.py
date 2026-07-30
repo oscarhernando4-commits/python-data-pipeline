@@ -216,16 +216,50 @@ def execute_real_futures_market_short(symbol, usdt_amount):
     except Exception:
         pass
 
-    # 2. Fetch live price to calculate Qty and SL/TP Prices
+    # 2. Fetch live price AND correct quantity precision from exchangeInfo
     try:
         price_res = requests.get(f"{FAPI_URL}/fapi/v1/ticker/price?symbol={symbol}", timeout=5).json()
         price = float(price_res.get("price", 1.0))
-        qty = round(clean_usd / price, 3)
-        qty_str = f"{qty:.3f}"
+        
+        # Get correct quantity precision for this symbol
+        qty_precision = 3  # default
+        try:
+            exinfo = requests.get(f"{FAPI_URL}/fapi/v1/exchangeInfo", timeout=5).json()
+            sym_info = next((s for s in exinfo['symbols'] if s['symbol'] == symbol), None)
+            if sym_info:
+                qty_precision = int(sym_info.get('quantityPrecision', 3))
+        except:
+            pass
+        
+        qty = clean_usd / price
+        if qty_precision == 0:
+            qty = max(int(qty), 1)
+            # Ensure notional (qty * price) >= $5.0 minimum
+            while qty * price < 5.0:
+                qty += 1
+            qty_str = str(qty)
+        else:
+            qty = round(qty, qty_precision)
+            qty_str = f"{qty:.{qty_precision}f}"
+        
+        # Final notional check
+        notional = qty * price
+        if notional < 5.0:
+            return {"error": f"Notional too small: {qty} x ${price:.4f} = ${notional:.2f} (min $5.0)"}
         
         # Risk Management: SL +1.0% (loss), TP -2.0% (win) for SHORT
-        sl_price = round(price * 1.01, 4)
-        tp_price = round(price * 0.98, 4)
+        # Get price precision too
+        price_precision = 4
+        try:
+            if sym_info:
+                price_filter = next((f for f in sym_info['filters'] if f['filterType'] == 'PRICE_FILTER'), None)
+                if price_filter:
+                    tick = price_filter.get('tickSize', '0.0001')
+                    price_precision = max(0, len(tick.rstrip('0').split('.')[-1])) if '.' in tick else 0
+        except:
+            pass
+        sl_price = round(price * 1.01, price_precision)
+        tp_price = round(price * 0.98, price_precision)
     except Exception as e:
         return {"error": f"Failed to calculate price/qty: {e}"}
 
