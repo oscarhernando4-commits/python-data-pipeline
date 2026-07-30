@@ -313,9 +313,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
     
     # FIXIE OPTIMIZATION: We rely on local JSON state for balances 
     # to avoid burning Fixie Proxy requests every 5 minutes.
-    # Use FULL balance (not split) since we only have 1 position at a time
-    usdt_free = state.get("current_balance_usd", 17.15)
-    futures_usdt_free = state.get("current_balance_usd", 17.15)
+    # Split 50/50 between Spot (LONG) and Futures (SHORT) as user confirmed
+    usdt_free = state.get("current_balance_usd", 17.15) / 2.0
+    futures_usdt_free = state.get("current_balance_usd", 17.15) / 2.0
     
     crypto_balances = []
     futures_positions = []
