@@ -12,16 +12,18 @@ from datetime import datetime
 import random
 
 # Dynamic Proxy Rotator for 24/7 Cloud Execution (7 Fixie EU West accounts, 3500 requests/month)
+# Ordered: Fresh accounts first, nearly-depleted account LAST
 FIXIE_POOL = [
-    "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80",
-    "http://fixie:ak4QPysr5gnUAQW@ventoux.usefixie.com:80",
-    "http://fixie:ygTezfOLKeqEhhF@ventoux.usefixie.com:80",
-    "http://fixie:zW3cwceDZ64c1lE@ventoux.usefixie.com:80",
-    "http://fixie:SIOQ4x5oF0pbFju@ventoux.usefixie.com:80",
-    "http://fixie:V9uciGagtBF2MJc@ventoux.usefixie.com:80",
-    "http://fixie:gnvJakG6jyBrS04@ventoux.usefixie.com:80"
+    "http://fixie:ak4QPysr5gnUAQW@ventoux.usefixie.com:80",   # utn.sig (0/500)
+    "http://fixie:ygTezfOLKeqEhhF@ventoux.usefixie.com:80",   # forestalutn (0/500)
+    "http://fixie:zW3cwceDZ64c1lE@ventoux.usefixie.com:80",   # oscarhernandot11es (0/500)
+    "http://fixie:SIOQ4x5oF0pbFju@ventoux.usefixie.com:80",   # oscarhernando4ec (0/500)
+    "http://fixie:V9uciGagtBF2MJc@ventoux.usefixie.com:80",   # sconcienciautn (0/500)
+    "http://fixie:gnvJakG6jyBrS04@ventoux.usefixie.com:80",   # utn2024a (0/500)
+    "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80",   # oscarhernando4 (405/500 - RESERVA)
 ]
-PROXY_URL = random.choice(FIXIE_POOL)
+# Select randomly from the 6 FRESH accounts only (exclude the depleted #7 as reserve)
+PROXY_URL = random.choice(FIXIE_POOL[:6])
 PROXIES = {"http": PROXY_URL, "https": PROXY_URL}
 
 API_KEY = os.getenv("BINANCE_REAL_API_KEY", "")
@@ -311,8 +313,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
     
     # FIXIE OPTIMIZATION: We rely on local JSON state for balances 
     # to avoid burning Fixie Proxy requests every 5 minutes.
-    usdt_free = state.get("current_balance_usd", 17.15) / 2.0
-    futures_usdt_free = state.get("current_balance_usd", 17.15) / 2.0
+    # Use FULL balance (not split) since we only have 1 position at a time
+    usdt_free = state.get("current_balance_usd", 17.15)
+    futures_usdt_free = state.get("current_balance_usd", 17.15)
     
     crypto_balances = []
     futures_positions = []
@@ -581,7 +584,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         
         if bias_ok:
             # 1. LONG Entry Signal
-            if best_symbol and not is_bearish and (best_score >= real_long_score or is_learned_signal) and usdt_free >= 8.0:
+            if best_symbol and not is_bearish and (best_score >= real_long_score or is_learned_signal) and usdt_free >= 5.0:
                 trigger_reason = "AUTO-APRENDIZAJE" if is_learned_signal else f"Score {real_long_score}+"
                 print(f"🚀 SEÑAL ALCISTA (LONG) ({best_symbol} @ {best_score} Pts - {trigger_reason}). Comprando en Binance Spot...")
                 buy_res = execute_real_spot_market_buy(best_symbol, usdt_free)
@@ -597,7 +600,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     print(f"⚠️ LONG no ejecutado: {buy_res}")
                     
             # 2. SHORT Entry Signal
-            elif best_symbol and is_bearish and (best_score <= real_short_score or is_learned_signal) and futures_usdt_free >= 8.0:
+            elif best_symbol and is_bearish and (best_score <= real_short_score or is_learned_signal) and futures_usdt_free >= 5.0:
                 trigger_reason = "AUTO-APRENDIZAJE" if is_learned_signal else f"Score <= {real_short_score}"
                 print(f"📉 SEÑAL BAJISTA (SHORT) ({best_symbol} @ Score {best_score} - {trigger_reason}). Abriendo Short en Binance Futuros...")
                 short_res = execute_real_futures_market_short(best_symbol, futures_usdt_free)

@@ -481,29 +481,36 @@ def run_infinite_trading_matrix_cycle():
         
         is_ai_approved = gemini_res.get('approved') == True
         ai_action = gemini_res.get('action', 'HOLD')
+        ai_symbol = gemini_res.get('selected_symbol', '')
+        ai_confidence = gemini_res.get('confidence', 0)
         
-        if best_market_opportunity and selected_opp == best_market_opportunity and is_ai_approved and ai_action == "BUY_LONG":
-            print(f"💰 [REAL] Señal ALCISTA Aprobada por IA ({best_market_opportunity[0]} @ {best_market_opportunity[1]['score']} Pts). Evaluando cuenta real...")
+        # Get the AI-selected opportunity data (from any of the top 5, not just #1)
+        ai_opp_data = symbol_analysis_map.get(ai_symbol, {}) if ai_symbol and ai_symbol != "NONE" else {}
+        ai_price = ai_opp_data.get("price", 0)
+        ai_score = ai_opp_data.get("score", 50)
+        
+        if is_ai_approved and ai_action == "BUY_LONG" and ai_symbol and ai_symbol != "NONE" and ai_price > 0:
+            print(f"💰 [REAL] Señal ALCISTA Aprobada por IA ({ai_symbol} @ {ai_score} Pts, Conf={ai_confidence}%). Evaluando cuenta real...")
             real_money_trader.evaluate_and_trade_real_money(
-                best_symbol=best_market_opportunity[0],
-                best_score=best_market_opportunity[1]["score"],
-                current_price=best_market_opportunity[1]["price"],
+                best_symbol=ai_symbol,
+                best_score=ai_score,
+                current_price=ai_price,
                 is_bearish=False,
                 is_learned_signal=True
             )
-        elif best_bearish_opportunity and selected_opp == best_bearish_opportunity and is_ai_approved and ai_action == "SELL_SHORT":
-            print(f"📉 [REAL] Señal BAJISTA Aprobada por IA ({best_bearish_opportunity[0]} @ Score {best_bearish_opportunity[1]['score']}). Evaluando SHORT en Futuros...")
+        elif is_ai_approved and ai_action == "SELL_SHORT" and ai_symbol and ai_symbol != "NONE" and ai_price > 0:
+            print(f"📉 [REAL] Señal BAJISTA Aprobada por IA ({ai_symbol} @ Score {ai_score}, Conf={ai_confidence}%). Evaluando SHORT en Futuros...")
             real_money_trader.evaluate_and_trade_real_money(
-                best_symbol=best_bearish_opportunity[0],
-                best_score=best_bearish_opportunity[1]["score"],
-                current_price=best_bearish_opportunity[1]["price"],
+                best_symbol=ai_symbol,
+                best_score=ai_score,
+                current_price=ai_price,
                 is_bearish=True,
                 is_learned_signal=True
             )
         else:
-            if selected_opp:
-                print(f"🔒 [REAL] Oportunidad en {selected_opp[0]} ignorada/bloqueada. IA Approved={is_ai_approved} (Acción sugerida: {ai_action})")
-            # Always run the trader to manage OPEN positions and sync balances, even if no new entry is approved
+            if ai_symbol:
+                print(f"🔒 [REAL] IA seleccionó {ai_symbol} pero acción={ai_action}, Approved={is_ai_approved}. Sin operación nueva.")
+            # Always run the trader to manage OPEN positions (check TP/SL), even if no new entry
             real_money_trader.evaluate_and_trade_real_money(
                 best_symbol=None, best_score=50, current_price=0.0, is_bearish=False
             )
