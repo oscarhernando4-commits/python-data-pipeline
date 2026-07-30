@@ -192,7 +192,7 @@ def review_top_5_candidates(candidates_data_list, news_data, fear_greed, macro_c
         candidates_prompt_text += f"- Historial 5M (4h): {pat}\n"
         candidates_prompt_text += "------------------------------------"
 
-    print(f"✅ [Comité Institucional] 100 Pares analizados. Consultando al Súper-Cerebro Gemini AI para el TOP {len(candidates_data_list)} simultáneo...")
+    print(f"✅ [Comité Institucional] Mercado filtrado y analizado. Consultando al Súper-Cerebro Gemini AI para el TOP {len(candidates_data_list)} simultáneo...")
 
     prompt_text = f"""
     Eres el Súper-Cerebro Cuantitativo Institucional.
