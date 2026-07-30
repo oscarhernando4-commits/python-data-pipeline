@@ -66,6 +66,15 @@ def update_top_pairs():
         print(f"Failed to fetch Binance exchange info: {e}")
         return
         
+    print(f"Fetching valid Binance Futures USDT pairs...")
+    try:
+        f_res = requests.get('https://fapi.binance.com/fapi/v1/exchangeInfo', timeout=10)
+        f_res.raise_for_status()
+        futures_pairs = {s['symbol'] for s in f_res.json()['symbols'] if s['status'] == 'TRADING' and s['quoteAsset'] == 'USDT'}
+    except Exception as e:
+        print(f"Failed to fetch Futures info: {e}")
+        futures_pairs = set()
+
     cmc_symbols = get_cmc_top_coins()
     binance_vol_symbols = get_binance_top_volume_coins(valid_binance_pairs)
     
@@ -86,9 +95,14 @@ def update_top_pairs():
     for sym in raw_symbols:
         if sym in stablecoins:
             continue
+        # Filter out weird ASCII/Chinese symbols
+        if not all(ord(c) < 128 for c in sym):
+            continue
+            
         binance_sym = f"{mapping.get(sym, sym)}USDT"
         
-        if binance_sym in valid_binance_pairs and binance_sym not in top_100_pairs:
+        # Must exist in BOTH Spot (for Longs) and Futures (for Shorts)
+        if binance_sym in valid_binance_pairs and binance_sym in futures_pairs and binance_sym not in top_100_pairs:
             top_100_pairs.append(binance_sym)
                 
         if len(top_100_pairs) >= 120:  # Expanded to 120 pairs for more opportunities!
