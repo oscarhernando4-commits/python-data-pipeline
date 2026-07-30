@@ -1,103 +1,106 @@
 import requests
 import json
 import os
+import time
 from datetime import datetime
 
-# Secreto de GitHub para mayor seguridad
 CMC_API_KEY = os.getenv("CMC_API_KEY", "")
 
-def update_top_pairs():
+def get_cmc_top_coins():
+    """Fetches top coins by Market Cap from CMC. Runs every 10 mins."""
+    if not CMC_API_KEY:
+        return []
+    
+    # Check if we should use cached CMC data to save quota (every 10 mins)
+    cache_file = "cmc_cache.json"
+    if os.path.exists(cache_file):
+        if time.time() - os.path.getmtime(cache_file) < 600:
+            try:
+                with open(cache_file, "r") as f:
+                    return json.load(f)
+            except:
+                pass
+
     print(f"[{datetime.now().isoformat()}] Fetching top cryptos from CoinMarketCap...")
     headers = {
         'Accepts': 'application/json',
         'X-CMC_PRO_API_KEY': CMC_API_KEY,
     }
-    params = {
-        'start': '1',
-        'limit': '300', # Fetch top 300 to ensure we get at least 100 Binance pairs
-        'convert': 'USD'
-    }
+    params = {'start': '1', 'limit': '300', 'convert': 'USD'}
     
     try:
-        res = requests.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', headers=headers, params=params)
+        res = requests.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest', headers=headers, params=params, timeout=10)
         res.raise_for_status()
-        data = res.json()
-        cmc_symbols = [coin['symbol'] for coin in data.get('data', [])]
-        print(f"✅ CMC API exitosa. Se obtuvieron {len(cmc_symbols)} símbolos.")
+        cmc_symbols = [coin['symbol'] for coin in res.json().get('data', [])]
+        print(f"CMC API exitosa. Se obtuvieron {len(cmc_symbols)} símbolos (Market Cap).")
+        with open(cache_file, "w") as f:
+            json.dump(cmc_symbols, f)
+        return cmc_symbols
     except Exception as e:
-        print(f"Fallo CMC (posible limite de cuota): {e}. Usando FALLBACK nativo de Binance...")
-        cmc_symbols = [] # Lo llenaremos con Binance
-        
+        print(f"Fallo CMC (cuota/red): {e}")
+        return []
+
+def get_binance_top_volume_coins(valid_pairs):
+    """Fetches top coins by 24H Volume from Binance directly (100% Free)."""
+    print("Obteniendo clasificación por volumen 24H nativo de Binance...")
+    try:
+        ticker_res = requests.get('https://data-api.binance.vision/api/v3/ticker/24hr', timeout=10)
+        tickers = ticker_res.json()
+        usdt_tickers = [t for t in tickers if t['symbol'] in valid_pairs]
+        usdt_tickers.sort(key=lambda x: float(x['quoteVolume']), reverse=True)
+        # Take top 150 by volume
+        vol_symbols = [t['symbol'].replace('USDT', '') for t in usdt_tickers[:150]]
+        print(f"Binance API exitosa. Se obtuvieron {len(vol_symbols)} símbolos (Volumen).")
+        return vol_symbols
+    except Exception as e:
+        print(f"Fallo Binance 24H Volume: {e}")
+        return []
+
+def update_top_pairs():
     print(f"Fetching valid Binance USDT pairs...")
     try:
-        binance_res = requests.get('https://data-api.binance.vision/api/v3/exchangeInfo')
+        binance_res = requests.get('https://data-api.binance.vision/api/v3/exchangeInfo', timeout=10)
         binance_res.raise_for_status()
-        binance_data = binance_res.json()
-        valid_binance_pairs = {s['symbol'] for s in binance_data['symbols'] if s['status'] == 'TRADING' and s['quoteAsset'] == 'USDT'}
-        
-        # Si CMC falló, usamos las monedas con más volumen de las últimas 24H en Binance
-        if not cmc_symbols:
-            print("Activando PLAN B: Clasificando por volumen 24H de Binance...")
-            ticker_res = requests.get('https://data-api.binance.vision/api/v3/ticker/24hr')
-            tickers = ticker_res.json()
-            # Filtrar solo USDT y ordenar por volumen
-            usdt_tickers = [t for t in tickers if t['symbol'] in valid_binance_pairs]
-            usdt_tickers.sort(key=lambda x: float(x['quoteVolume']), reverse=True)
-            # Tomar los top 200 para tener margen al filtrar stablecoins
-            cmc_symbols = [t['symbol'].replace('USDT', '') for t in usdt_tickers[:200]]
-            
+        valid_binance_pairs = {s['symbol'] for s in binance_res.json()['symbols'] if s['status'] == 'TRADING' and s['quoteAsset'] == 'USDT'}
     except Exception as e:
-        print(f"Failed to fetch Binance data: {e}")
+        print(f"Failed to fetch Binance exchange info: {e}")
         return
         
+    cmc_symbols = get_cmc_top_coins()
+    binance_vol_symbols = get_binance_top_volume_coins(valid_binance_pairs)
+    
+    # Merge both lists to get the ultimate list (Market Cap + High Volume)
+    raw_symbols = []
+    # Interleave to prioritize coins that are high on BOTH lists
+    max_len = max(len(cmc_symbols), len(binance_vol_symbols))
+    for i in range(max_len):
+        if i < len(cmc_symbols) and cmc_symbols[i] not in raw_symbols:
+            raw_symbols.append(cmc_symbols[i])
+        if i < len(binance_vol_symbols) and binance_vol_symbols[i] not in raw_symbols:
+            raw_symbols.append(binance_vol_symbols[i])
+    
     top_100_pairs = []
-    # Special mappings for CMC -> Binance
-    mapping = {
-        "IOTA": "IOTA", # Sometimes MIOTA
-    }
-    
-    # Stablecoins to exclude
     stablecoins = {"USDT", "USDC", "FDUSD", "TUSD", "BUSD", "DAI", "USDD", "USDE", "USDTUSDT", "USDCUSDT", "FDUSDUSDT"}
+    mapping = {"IOTA": "IOTA"}
     
-    for sym in cmc_symbols:
+    for sym in raw_symbols:
         if sym in stablecoins:
             continue
-            
         binance_sym = f"{mapping.get(sym, sym)}USDT"
         
-        # Binance has some tokens like PEPE as 1000PEPE, SHIB as 1000SHIB on futures, but on SPOT it's just PEPEUSDT and SHIBUSDT
-        # The real money bot trades SPOT for LONGs and FUTURES for SHORTs.
-        # It's better to stick to standard SPOT names for now, the quant analytics will handle mapping if needed.
-        if binance_sym in valid_binance_pairs:
-            if binance_sym not in top_100_pairs:
-                top_100_pairs.append(binance_sym)
+        if binance_sym in valid_binance_pairs and binance_sym not in top_100_pairs:
+            top_100_pairs.append(binance_sym)
                 
-        if len(top_100_pairs) >= 100:
+        if len(top_100_pairs) >= 120:  # Expanded to 120 pairs for more opportunities!
             break
             
     if len(top_100_pairs) > 0:
         with open("top_100_pairs.json", "w", encoding="utf-8") as f:
             json.dump(top_100_pairs, f, indent=4)
-        print(f"Successfully saved {len(top_100_pairs)} pairs to top_100_pairs.json")
-        print(f"Top 5: {top_100_pairs[:5]}")
+        print(f"Successfully saved {len(top_100_pairs)} HIBRID pairs to top_100_pairs.json")
+        print(f"Top 5 Híbrido: {top_100_pairs[:5]}")
     else:
         print("Failed to map any pairs.")
 
-def should_update():
-    import time
-    if not os.path.exists("top_100_pairs.json"):
-        return True
-    # El Top 100 no cambia tan rápido. Actualizar cada 4 horas (14400 segundos) 
-    # es perfecto y consume solo ~6 créditos al día (180 al mes vs el límite de 10,000).
-    if time.time() - os.path.getmtime("top_100_pairs.json") > 14400:
-        return True
-    return False
-
 if __name__ == "__main__":
-    if should_update():
-        if CMC_API_KEY:
-            update_top_pairs()
-        else:
-            print("CMC_API_KEY is not set. Skipping update.")
-    else:
-        print("top_100_pairs.json is less than 15 minutes old. Skipping CMC API call to save free tier limits.")
+    update_top_pairs()
