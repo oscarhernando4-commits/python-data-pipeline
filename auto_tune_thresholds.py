@@ -93,6 +93,18 @@ def auto_tune():
             if "macd_long" in t[gk]: t[gk]["macd_long"] = max(-1.0, t[gk]["macd_long"] - 0.1)
             if "macd_short" in t[gk]: t[gk]["macd_short"] = min(1.0, t[gk]["macd_short"] + 0.1)
 
+    # SAFETY CLAMPS: Prevent threshold inversion (Bug #5 fix)
+    # Group 0 (REAL MONEY) must have the widest neutral zone
+    for gk in t:
+        if "long_score" in t[gk] and "short_score" in t[gk]:
+            # Ensure long_score is ALWAYS higher than short_score (minimum 20-point gap)
+            if t[gk]["long_score"] <= t[gk]["short_score"] + 20:
+                t[gk]["long_score"] = t[gk]["short_score"] + 20
+            # Group 0 (Real Money): Extra strict bounds
+            if gk == "group_0":
+                t[gk]["long_score"] = max(60, min(85, t[gk]["long_score"]))
+                t[gk]["short_score"] = max(15, min(40, t[gk]["short_score"]))
+    
     with open(THRESHOLDS_FILE, "w", encoding="utf-8") as f:
         json.dump(t, f, indent=2)
 
