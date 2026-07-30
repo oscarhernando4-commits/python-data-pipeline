@@ -236,21 +236,28 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         active_asset = crypto_balances[0]["asset"]
         active_qty = float(crypto_balances[0]["free"])
         active_symbol = f"{active_asset}USDT"
-        est_val = active_qty * current_price if current_price > 0 else 17.0
+        
+        try:
+            active_price_res = requests.get(f"https://api.binance.com/api/v3/ticker/price?symbol={active_symbol}", timeout=5).json()
+            active_current_price = float(active_price_res["price"])
+        except:
+            active_current_price = current_price
+            
+        est_val = active_qty * active_current_price if active_current_price > 0 else 17.0
         
         state["position"] = {
             "symbol": active_symbol,
             "quantity": active_qty,
-            "entry_price": state.get("position", {}).get("entry_price", current_price),
+            "entry_price": state.get("position", {}).get("entry_price", active_current_price),
             "cost_usd": round(est_val, 2),
             "side": "LONG"
         }
-        state["status"] = f"🔵 En Vivo LONG ({active_asset}USDT @ ${current_price:.4f})"
+        state["status"] = f"🔵 En Vivo LONG ({active_asset}USDT @ ${active_current_price:.4f})"
         
         # Check for exit condition (Take Profit +2.0% or Stop Loss -1.0%)
-        entry = state["position"].get("entry_price", current_price)
+        entry = state["position"].get("entry_price", active_current_price)
         if entry > 0:
-            pnl_pct = ((current_price - entry) / entry) * 100.0
+            pnl_pct = ((active_current_price - entry) / entry) * 100.0
             
             # --- ESCUDO REAL: BREAK-EVEN DINÁMICO ---
             if pnl_pct >= 1.0 and not state["position"].get("break_even", False):
@@ -262,11 +269,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             if pnl_pct >= 2.0 or pnl_pct <= dynamic_sl:
                 reason_str = f"Ganancia Asegurada (+{pnl_pct:.2f}%)" if pnl_pct >= 2.0 or state["position"].get("break_even", False) else f"Stop Loss ({pnl_pct:.2f}%)"
                 print(f"🎯 ALERTA REAL: Salida LONG por {reason_str} en {active_symbol}. Vendiendo...")
+                # Format qty to 5 decimals for BTC, or 2 for cheap coins to respect Binance LOT_SIZE
+                qty_str = f"{active_qty:.5f}" if active_current_price > 1000 else f"{active_qty:.2f}"
                 sell_params = {
                     "symbol": active_symbol,
                     "side": "SELL",
                     "type": "MARKET",
-                    "quantity": f"{active_qty:.3f}",
+                    "quantity": qty_str,
                     "timestamp": int(time.time() * 1000)
                 }
                 query_string = urlencode(sell_params)
@@ -312,10 +321,17 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         # We have an active SHORT position
         active_pos = futures_positions[0]
         active_symbol = active_pos["symbol"]
+        
+        try:
+            active_price_res = requests.get(f"https://fapi.binance.com/fapi/v1/ticker/price?symbol={active_symbol}", timeout=5).json()
+            active_current_price = float(active_price_res["price"])
+        except:
+            active_current_price = current_price
+            
         # Position amount is negative for SHORTs
         active_qty = abs(float(active_pos["positionAmt"]))
         entry = float(active_pos["entryPrice"])
-        est_val = active_qty * current_price if current_price > 0 else 17.0
+        est_val = active_qty * active_current_price if active_current_price > 0 else 17.0
         
         state["position"] = {
             "symbol": active_symbol,
@@ -327,8 +343,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         
         # PnL logic for SHORT: If current price drops, pnl is positive
         if entry > 0:
-            pnl_pct = ((entry - current_price) / entry) * 100.0
-            state["status"] = f"🔻 En Vivo SHORT ({active_symbol} @ ${current_price:.4f} | PnL: {pnl_pct:+.2f}%)"
+            pnl_pct = ((entry - active_current_price) / entry) * 100.0
+            state["status"] = f"🔻 En Vivo SHORT ({active_symbol} @ ${active_current_price:.4f} | PnL: {pnl_pct:+.2f}%)"
             
     else:
         # If we had a SHORT but now it's gone, Binance closed it natively!
