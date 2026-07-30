@@ -143,11 +143,9 @@ def get_real_futures_positions():
     
     url = f"{FAPI_URL}/fapi/v2/positionRisk"
     try:
-        # NO proxy here - checks must NOT consume Fixie quota
-        res = requests.get(url, headers=headers, params=params, timeout=10)
+        res = requests.get(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
         if res.status_code == 200:
             positions = res.json()
-            # Return only active positions
             return [p for p in positions if float(p.get("positionAmt", 0)) != 0.0]
         return []
     except Exception:
@@ -174,9 +172,17 @@ def get_symbol_price(symbol, is_futures=False):
 
 def execute_real_spot_market_buy(symbol, usdt_amount):
     timestamp = int(time.time() * 1000)
-    # Use full balance minus a tiny 1% safety buffer to avoid "Insufficient Balance" errors
-    # Strict floor truncation to ensure we never exceed exactly available decimals
     clean_usd = int(usdt_amount * 0.99 * 100) / 100.0
+    
+    # Ensure minimum notional value
+    if clean_usd < 5.1:
+        return {"error": "MIN_NOTIONAL not met"}
+        
+    # Auto-transfer from Futures back to Spot if necessary
+    f_balance = get_real_futures_usdt_balance()
+    if f_balance > 1.0:
+        transfer_usdt(f_balance - 0.1, to_futures=False)
+        
     params = {
         "symbol": symbol,
         "side": "BUY",
@@ -199,12 +205,10 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
 def transfer_usdt(amount, to_futures=True):
     """
     Transfers USDT between Spot and Futures automatically.
-    type 1: Spot to USDT-M Futures
-    type 2: USDT-M Futures to Spot
     """
     timestamp = int(time.time() * 1000)
     params = {
-        "type": 1 if to_futures else 2,
+        "type": "MAIN_UMFUTURE" if to_futures else "UMFUTURE_MAIN",
         "asset": "USDT",
         "amount": f"{amount:.2f}",
         "timestamp": timestamp
@@ -369,16 +373,18 @@ def execute_real_futures_market_close(symbol, quantity):
     
     try:
         res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=params, proxies=PROXIES, timeout=10)
+        res_json = res.json()
         
-        # Transfer balance back to spot
-        try:
-            f_balance = get_real_futures_usdt_balance()
-            if f_balance > 1.0:
-                transfer_usdt(f_balance - 0.1, to_futures=False)
-        except Exception as te:
-            print(f"Error transferring back to spot: {te}")
+        # Only transfer balance back to spot if the close order was successful
+        if "orderId" in res_json:
+            try:
+                f_balance = get_real_futures_usdt_balance()
+                if f_balance > 1.0:
+                    transfer_usdt(f_balance - 0.1, to_futures=False)
+            except Exception as te:
+                print(f"Error transferring back to spot: {te}")
             
-        return res.json()
+        return res_json
     except Exception as e:
         return {"error": str(e)}
 
@@ -462,16 +468,26 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 reason_str = f"Ganancia Asegurada (+{pnl_pct:.2f}%)" if pnl_pct >= 2.0 or state["position"].get("break_even", False) else f"Stop Loss ({pnl_pct:.2f}%)"
                 print(f"🎯 ALERTA REAL: Salida LONG por {reason_str} en {active_symbol}. Vendiendo...")
                 
-                # FIX Bug #7: Dynamic LOT_SIZE precision
-                if active_current_price > 10000:    # BTC
-                    qty_str = f"{active_qty:.5f}"
-                elif active_current_price > 100:    # ETH, BNB, SOL
-                    qty_str = f"{active_qty:.3f}"
-                elif active_current_price > 1:      # LINK, DOT, etc
-                    qty_str = f"{active_qty:.1f}"
-                else:                               # DOGE, PEPE, SHIB
-                    qty_str = f"{int(active_qty)}"
-                
+                # Fetch exact precision from Spot exchangeInfo
+                qty_precision = 0
+                try:
+                    exinfo = requests.get(f"{BASE_URL}/api/v3/exchangeInfo?symbol={active_symbol}", proxies=PROXIES, timeout=5).json()
+                    for s in exinfo.get("symbols", []):
+                        if s["symbol"] == active_symbol:
+                            for f in s.get("filters", []):
+                                if f["filterType"] == "LOT_SIZE":
+                                    step = float(f["stepSize"])
+                                    import math
+                                    qty_precision = max(0, int(round(-math.log10(step))))
+                                    break
+                except Exception as e:
+                    print(f"Error fetching precision, defaulting to 2. {e}")
+                    qty_precision = 2
+                    
+                if qty_precision == 0:
+                    qty_str = str(int(active_qty))
+                else:
+                    qty_str = f"{active_qty:.{qty_precision}f}"
                 sell_params = {
                     "symbol": active_symbol,
                     "side": "SELL",
@@ -497,7 +513,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                             state["last_trading_day"] = today_str
                         
                         # FIX Bug #3: Win threshold matches TP threshold (>= 2.0, not >= 3.0)
-                        if pnl_pct >= 2.0:
+                        if pnl_usd > 0:
                             state["wins"] = state.get("wins", 0) + 1
                             state["daily_wins"] = state.get("daily_wins", 0) + 1
                             res_type = "WIN"
@@ -572,7 +588,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         state["daily_losses"] = 0
                         state["last_trading_day"] = today_str
                     
-                    if pnl_pct >= 2.0:
+                    if pnl_usd > 0:
                         state["wins"] = state.get("wins", 0) + 1
                         state["daily_wins"] = state.get("daily_wins", 0) + 1
                         res_type = "WIN"
@@ -672,11 +688,14 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"🚀 SEÑAL ALCISTA (LONG) ({best_symbol} @ {best_score} Pts - {trigger_reason}). Comprando en Binance Spot...")
                 buy_res = execute_real_spot_market_buy(best_symbol, usdt_free)
                 if isinstance(buy_res, dict) and "orderId" in buy_res:
+                    qty = float(buy_res.get("executedQty", 0))
+                    if qty == 0: qty = round(usdt_free / current_price, 5) # Fallback
                     state["position"] = {
                         "symbol": best_symbol,
                         "entry_price": current_price,
                         "cost_usd": round(usdt_free, 2),
-                        "side": "LONG"
+                        "side": "LONG",
+                        "quantity": qty
                     }
                     state["status"] = f"🔵 En Vivo LONG ({best_symbol})"
                 else:
@@ -689,11 +708,14 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 short_res = execute_real_futures_market_short(best_symbol, futures_usdt_free)
                 # FIX Bug #1: short_res is now a dict (entry order), not a list
                 if isinstance(short_res, dict) and "orderId" in short_res:
+                    qty = float(short_res.get("executedQty", 0))
+                    if qty == 0: qty = round(futures_usdt_free / current_price, 5) # Fallback
                     state["position"] = {
                         "symbol": best_symbol,
                         "entry_price": current_price,
                         "cost_usd": round(futures_usdt_free, 2),
-                        "side": "SHORT"
+                        "side": "SHORT",
+                        "quantity": qty
                     }
                     state["status"] = f"🔻 En Vivo SHORT ({best_symbol})"
                     print(f"✅ SHORT abierto exitosamente: {best_symbol}")
