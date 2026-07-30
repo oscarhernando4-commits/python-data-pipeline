@@ -94,13 +94,112 @@ def get_market_bias(data=None):
         
     return {
         "bias": bias,
+        "recommended_bias": "STRONG_LONG" if long_wr > 60 and short_wr < 40 else ("STRONG_SHORT" if short_wr > 60 and long_wr < 40 else bias),
         "long_win_rate": round(long_wr, 1),
         "short_win_rate": round(short_wr, 1),
         "long_trades": long_total,
         "short_trades": short_total,
+        "total_trades": long_total + short_total,
         "best_group": best_group_name,
         "best_group_wr": round(best_group_wr, 1),
         "best_group_pnl": round(best_group_pnl, 2)
+    }
+
+def _extract_technical_rule(symbol, side, result_type, context):
+    """Generate an abstract, generalizable technical rule from trade context."""
+    if not context:
+        return None
+    rsi = context.get("rsi_15m")
+    score = context.get("score")
+    trend = context.get("macro_trend_4h", "")
+    
+    if rsi is None and score is None:
+        return None
+    
+    parts = []
+    if rsi is not None:
+        if rsi < 30: parts.append("RSI<30(Oversold)")
+        elif rsi < 40: parts.append("RSI:30-40(Weak)")
+        elif rsi < 60: parts.append("RSI:40-60(Neutral)")
+        elif rsi < 70: parts.append("RSI:60-70(Strong)")
+        else: parts.append("RSI>70(Overbought)")
+    if score is not None:
+        if score >= 70: parts.append("Score:70+(Bullish)")
+        elif score >= 50: parts.append("Score:50-70(Mild)")
+        elif score >= 30: parts.append("Score:30-50(Mild-Bear)")
+        else: parts.append("Score:<30(Bearish)")
+    if trend:
+        parts.append(f"Trend:{trend}")
+    
+    condition = " + ".join(parts)
+    
+    if result_type.upper() == "LOSS":
+        return f"BLOCK {side} when {condition} (Lost on {symbol})"
+    else:
+        return f"BOOST {side} when {condition} (Won on {symbol})"
+
+def get_optimal_entry_conditions(data=None):
+    """Analyze ALL trade history to discover statistically validated patterns.
+    Returns the RSI ranges, score ranges, and trends with the highest win rates."""
+    if data is None:
+        data = load_memory()
+    history = data.get("history", [])
+    if len(history) < 10:
+        return None
+    
+    # Bucket trades by RSI range
+    rsi_buckets = {"<30": {"w": 0, "l": 0}, "30-40": {"w": 0, "l": 0}, 
+                   "40-60": {"w": 0, "l": 0}, "60-70": {"w": 0, "l": 0}, ">70": {"w": 0, "l": 0}}
+    score_buckets = {"<30": {"w": 0, "l": 0}, "30-50": {"w": 0, "l": 0},
+                    "50-70": {"w": 0, "l": 0}, "70+": {"w": 0, "l": 0}}
+    trend_buckets = {}
+    side_buckets = {"LONG": {"w": 0, "l": 0}, "SHORT": {"w": 0, "l": 0}}
+    
+    for t in history:
+        ctx = t.get("context", {})
+        result = t.get("result", "LOSS")
+        side = t.get("side", "LONG")
+        k = "w" if result == "WIN" else "l"
+        
+        # Side tracking
+        if side in side_buckets:
+            side_buckets[side][k] += 1
+        
+        rsi = ctx.get("rsi_15m")
+        if rsi is not None:
+            if rsi < 30: rsi_buckets["<30"][k] += 1
+            elif rsi < 40: rsi_buckets["30-40"][k] += 1
+            elif rsi < 60: rsi_buckets["40-60"][k] += 1
+            elif rsi < 70: rsi_buckets["60-70"][k] += 1
+            else: rsi_buckets[">70"][k] += 1
+        
+        score = ctx.get("score")
+        if score is not None:
+            if score < 30: score_buckets["<30"][k] += 1
+            elif score < 50: score_buckets["30-50"][k] += 1
+            elif score < 70: score_buckets["50-70"][k] += 1
+            else: score_buckets["70+"][k] += 1
+        
+        trend = ctx.get("macro_trend_4h", "")
+        if trend:
+            if trend not in trend_buckets:
+                trend_buckets[trend] = {"w": 0, "l": 0}
+            trend_buckets[trend][k] += 1
+    
+    def calc_wr(bucket):
+        results = {}
+        for key, stats in bucket.items():
+            total = stats["w"] + stats["l"]
+            if total >= 3:
+                results[key] = {"win_rate": round(stats["w"] / total * 100, 1), "total": total, "wins": stats["w"]}
+        return results
+    
+    return {
+        "rsi_analysis": calc_wr(rsi_buckets),
+        "score_analysis": calc_wr(score_buckets),
+        "trend_analysis": calc_wr(trend_buckets),
+        "side_analysis": calc_wr(side_buckets),
+        "total_trades_analyzed": len(history)
     }
 
 def record_trade_outcome(symbol, side, entry_price, exit_price, pnl_usd, result_type, notes="", account_id="Histórico", group_name="Sin Grupo", context=None):
@@ -116,7 +215,7 @@ def record_trade_outcome(symbol, side, entry_price, exit_price, pnl_usd, result_
         "entry_price": entry_price,
         "exit_price": exit_price,
         "pnl_usd": pnl_usd,
-        "result": result_type.upper(),  # "WIN" or "LOSS"
+        "result": result_type.upper(),
         "notes": notes,
         "context": context or {}
     }
@@ -131,15 +230,20 @@ def record_trade_outcome(symbol, side, entry_price, exit_price, pnl_usd, result_
     stats["total_pnl_usd"] += pnl_usd
     stats["win_rate_pct"] = round((stats["wins"] / stats["total_trades"]) * 100.0, 2)
     
-    # Auto-adjust rules based on post-mortem
-    if result_type.upper() == "LOSS":
-        rule = f"Preventive Block for {symbol}: Loss logged at {entry_price} -> {notes or 'Market Whipsaw'}"
-        if rule not in data["learned_rules"]["blocked_patterns"]:
-            data["learned_rules"]["blocked_patterns"].append(rule)
-    elif result_type.upper() == "WIN":
-        rule = f"Optimized Setup for {symbol}: Profit logged (+${pnl_usd:.2f}) -> {notes or 'Trend Confluence'}"
-        if rule not in data["learned_rules"]["boosted_patterns"]:
-            data["learned_rules"]["boosted_patterns"].append(rule)
+    # Generate ABSTRACT technical rules (not trade-specific strings)
+    tech_rule = _extract_technical_rule(symbol, side, result_type, context)
+    if tech_rule:
+        if result_type.upper() == "LOSS":
+            if tech_rule not in data["learned_rules"]["blocked_patterns"]:
+                data["learned_rules"]["blocked_patterns"].append(tech_rule)
+                # Keep only the latest 20 rules to avoid noise
+                if len(data["learned_rules"]["blocked_patterns"]) > 20:
+                    data["learned_rules"]["blocked_patterns"] = data["learned_rules"]["blocked_patterns"][-20:]
+        elif result_type.upper() == "WIN":
+            if tech_rule not in data["learned_rules"]["boosted_patterns"]:
+                data["learned_rules"]["boosted_patterns"].append(tech_rule)
+                if len(data["learned_rules"]["boosted_patterns"]) > 20:
+                    data["learned_rules"]["boosted_patterns"] = data["learned_rules"]["boosted_patterns"][-20:]
             
     save_memory(data)
     return trade_entry

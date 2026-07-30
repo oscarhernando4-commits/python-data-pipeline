@@ -226,6 +226,20 @@ def run_infinite_trading_matrix_cycle():
     bias_data = learning_engine.get_market_bias()
     bias_str = f"BIAS: {bias_data['bias']} | WinRates -> LONG: {bias_data['long_win_rate']}% vs SHORT: {bias_data['short_win_rate']}%"
     
+    # Inject statistical pattern analysis into AI context
+    optimal = learning_engine.get_optimal_entry_conditions()
+    if optimal:
+        bias_str += f"\n    ANÁLISIS ESTADÍSTICO DE {optimal['total_trades_analyzed']} TRADES:"
+        if optimal.get("rsi_analysis"):
+            for rsi_range, stats in optimal["rsi_analysis"].items():
+                bias_str += f"\n    - RSI {rsi_range}: {stats['win_rate']}% win rate ({stats['total']} trades)"
+        if optimal.get("score_analysis"):
+            for score_range, stats in optimal["score_analysis"].items():
+                bias_str += f"\n    - Score {score_range}: {stats['win_rate']}% win rate ({stats['total']} trades)"
+        if optimal.get("trend_analysis"):
+            for trend, stats in optimal["trend_analysis"].items():
+                bias_str += f"\n    - Trend '{trend}': {stats['win_rate']}% win rate ({stats['total']} trades)"
+    
     # Evaluate Top 5 Candidates with Gemini Flash / Pro LLM Sentinel
     gemini_res = {}
     selected_opp = None
