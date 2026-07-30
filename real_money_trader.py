@@ -314,11 +314,25 @@ def execute_real_futures_market_close(symbol, quantity):
     """Close an active SHORT position by placing a BUY MARKET order."""
     timestamp = int(time.time() * 1000)
     
+    qty_precision = 3  # default
+    try:
+        exinfo = requests.get(f"{FAPI_URL}/fapi/v1/exchangeInfo", timeout=5).json()
+        sym_info = next((s for s in exinfo['symbols'] if s['symbol'] == symbol), None)
+        if sym_info:
+            qty_precision = int(sym_info.get('quantityPrecision', 3))
+    except:
+        pass
+        
+    if qty_precision == 0:
+        qty_str = str(int(quantity))
+    else:
+        qty_str = f"{quantity:.{qty_precision}f}"
+
     params = {
         "symbol": symbol,
         "side": "BUY",  # We are closing a SHORT, so we BUY
         "type": "MARKET",
-        "quantity": str(round(quantity, 3)),
+        "quantity": qty_str,
         "reduceOnly": "true",
         "timestamp": timestamp
     }

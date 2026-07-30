@@ -1,23 +1,19 @@
 {
   "initial_deposit_usdt": 17.13,
   "initial_total_usd": 20.08,
-  "current_balance_usd": 20.16,
-  "net_pnl_usd": 0.09,
+  "current_balance_usd": 20.1,
+  "net_pnl_usd": 0.03,
   "wins": 1,
-  "losses": 0,
-  "trades_count": 1,
-  "position": {
-    "symbol": "UNIUSDT",
-    "entry_price": 4.4,
-    "cost_usd": 10.08,
-    "side": "SHORT"
-  },
-  "last_trade_time": "26-07-30<br>12:42",
-  "status": "🔻 En Vivo SHORT (UNIUSDT)",
-  "daily_wins": 1,
-  "daily_losses": 0,
+  "losses": 1,
+  "trades_count": 2,
+  "position": null,
+  "last_trade_time": "26-07-30<br>12:49",
+  "status": "🟦 Buscando Entrada A+",
+  "daily_wins": 0,
+  "daily_losses": 1,
   "_cached_total_val": 20.16,
   "_cached_usdt_free": 8.61,
   "_cached_bnb": 0.0,
-  "_cached_bnb_usd": 0.0
+  "_cached_bnb_usd": 0.0,
+  "last_trading_day": "2026-07-30"
 }
