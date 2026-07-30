@@ -330,9 +330,8 @@ def execute_real_futures_market_short(symbol, usdt_amount):
                 "symbol": symbol,
                 "side": "BUY",
                 "type": order_type,
-                "quantity": qty_str,
                 "stopPrice": str(stop_px),
-                "reduceOnly": "true",
+                "closePosition": "true",
                 "timestamp": ts
             }
             q = urlencode(p)
