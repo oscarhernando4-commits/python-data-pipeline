@@ -10,10 +10,21 @@ import tempfile
 from urllib.parse import urlencode
 from datetime import datetime
 
-# Static Proxy Configuration for 24/7 Cloud Execution (Fixie EU West IPs: 54.195.3.54 & 54.217.142.99)
+import random
+
+# Dynamic Proxy Rotator for 24/7 Cloud Execution (7 Fixie EU West accounts, 3500 requests/month)
+FIXIE_POOL = [
+    "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80",
+    "http://fixie:ak4QPysr5gnUAQW@ventoux.usefixie.com:80",
+    "http://fixie:ygTezfOLKeqEhhF@ventoux.usefixie.com:80",
+    "http://fixie:zW3cwceDZ64c1lE@ventoux.usefixie.com:80",
+    "http://fixie:SIOQ4x5oF0pbFju@ventoux.usefixie.com:80",
+    "http://fixie:V9uciGagtBF2MJc@ventoux.usefixie.com:80",
+    "http://fixie:gnvJakG6jyBrS04@ventoux.usefixie.com:80"
+]
 PROXY_URL = os.getenv("FIXIE_URL", "")
 if not PROXY_URL:
-    PROXY_URL = "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80"
+    PROXY_URL = random.choice(FIXIE_POOL)
 PROXIES = {"http": PROXY_URL, "https": PROXY_URL}
 
 API_KEY = os.getenv("BINANCE_REAL_API_KEY", "")
