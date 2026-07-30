@@ -64,8 +64,8 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     ⚠️ INSTRUCCIÓN DE AUTO-APRENDIZAJE DINÁMICO (SUPERCEREBRO):
     1. No te limites a leer las reglas pasadas. Debes analizar esta tabla AHORA MISMO y descubrir qué grupo está siendo más rentable en las condiciones actuales.
     2. Si un Grupo (ej. Grupo 4) está logrando victorias repetidas bajo cierto RSI o Tendencia, ABSORBE esa estrategia dinámicamente y aplícala para esta decisión.
-    3. Si ves que múltiples grupos están perdiendo bajo condiciones específicas recientes, crea una regla mental de bloqueo inmediato para esta operación.
-    4. DIRECTRIZ CRÍTICA DE CERO PÉRDIDAS: Tu misión número 1 es NO PERDER. Rechaza categóricamente (HOLD) si el entorno actual se parece a los fracasos recientes de cualquier grupo. Solo aprueba si el patrón coincide con las victorias comprobadas de los mejores grupos de la tabla.
+    3. Si ves que múltiples grupos están perdiendo bajo condiciones específicas recientes, tómalo como precaución pero NO como bloqueo absoluto.
+    4. DIRECTRIZ DE TRADER ACTIVO RENTABLE: Tu misión es ENCONTRAR OPORTUNIDADES REALES de ganancia. El usuario necesita entre 3-4 operaciones diarias con un Risk/Reward de 1:2 (pierde 1%, gana 2%). Con ese ratio, solo necesitas acertar el 35% de las veces para ser rentable. NO seas excesivamente conservador. Si hay una señal técnica clara (RSI extremo, volumen fuerte, tendencia definida), APRUEBA la operación. Solo rechaza (HOLD) si TODOS los indicadores están en contra simultáneamente.
 
     EVALÚA LOS SIGUIENTES DATOS EN TIEMPO REAL PARA {symbol}:
     - Puntaje Técnico Cuantitativo Actual: {score} / 100 Pts
