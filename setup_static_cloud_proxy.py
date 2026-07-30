@@ -21,8 +21,8 @@ PROXIES = {"http": PROXY_URL, "https": PROXY_URL} if PROXY_URL else None
                 f.write(content)
             print("  - test_real_binance_account.py actualizado con soporte de IP estática.")
 
-    # 2. Update real_money_trader.py
-    trader_script_path = os.path.join(os.path.dirname(__file__), "real_money_trader.py")
+    # 2. Update api_connector.py
+    trader_script_path = os.path.join(os.path.dirname(__file__), "api_connector.py")
     if os.path.exists(trader_script_path):
         with open(trader_script_path, "r", encoding="utf-8") as f:
             content = f.read()
@@ -37,7 +37,7 @@ PROXIES = {"http": PROXY_URL, "https": PROXY_URL} if PROXY_URL else None
             content = content.replace("requests.post(url, headers=headers, params=params, timeout=10)", "requests.post(url, headers=headers, params=params, proxies=PROXIES, timeout=10)")
             with open(trader_script_path, "w", encoding="utf-8") as f:
                 f.write(content)
-            print("  - real_money_trader.py actualizado con soporte de IP estática.")
+            print("  - api_connector.py actualizado con soporte de IP estática.")
 
 if __name__ == "__main__":
     sys.stdout.reconfigure(encoding='utf-8')

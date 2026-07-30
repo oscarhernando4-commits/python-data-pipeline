@@ -13,7 +13,7 @@ BASE_URL = "https://api.binance.com"
 def sell_bnb_from_cloud_with_auth_proxy(qty_bnb=0.0105):
     print(f"🚀 EJECUTANDO EN LA NUBE: VENTA DE {qty_bnb} BNB A USDT VIA FIXIE EU PROXY ROTATOR...")
     import random
-    from real_money_trader import FIXIE_POOL
+    from api_connector import FIXIE_POOL
     proxy_url = random.choice(FIXIE_POOL[:6])
     proxies = {"http": proxy_url, "https": proxy_url}
     timestamp = int(time.time() * 1000)

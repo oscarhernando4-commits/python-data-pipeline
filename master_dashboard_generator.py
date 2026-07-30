@@ -5,9 +5,9 @@ from datetime import datetime
 import learning_engine
 import obsidian_sync
 try:
-    import real_money_trader
+    import api_connector
 except ImportError:
-    real_money_trader = None
+    api_connector = None
 
 def _get_obsidian_folder():
     local_path = r"C:\Users\hosca\Documents\Antigravity\Obsidian\01_PROYECTOS\BINANCE_QUANT_TRADING"
@@ -25,11 +25,11 @@ def ensure_obsidian_dir():
         os.makedirs(OBSIDIAN_FOLDER, exist_ok=True)
 
 def generate_master_dashboard():
-    import parallel_simulation_matrix
+    import pipeline_processor
     ensure_obsidian_dir()
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
-    matrix = parallel_simulation_matrix.load_live_matrix()
+    matrix = pipeline_processor.load_live_matrix()
     mem = learning_engine.load_memory()
     
     total_fund = matrix.get("current_total_usd", 10000.0)
@@ -62,8 +62,8 @@ def generate_master_dashboard():
 
     # Real Account Data
     real_st = {}
-    if real_money_trader:
-        real_st = real_money_trader.load_real_account_state()
+    if api_connector:
+        real_st = api_connector.load_real_account_state()
     
     real_bal = real_st.get("current_balance_usd", 0.0)
     real_pnl = real_st.get("net_pnl_usd", 0.0)
@@ -217,7 +217,7 @@ Análisis de rendimiento detallado a 1D, 3D, 1W, 2W, y 1M:
         
     # NEW: Also regenerate the Matriz 100 Simulaciones markdown locally!
     try:
-        parallel_simulation_matrix.sync_live_matrix_obsidian(matrix)
+        pipeline_processor.sync_live_matrix_obsidian(matrix)
         print("Matriz de 100 Simulaciones actualizada localmente.")
     except Exception as e:
         print(f"Error generando matriz local: {e}")

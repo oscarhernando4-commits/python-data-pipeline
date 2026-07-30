@@ -245,16 +245,16 @@ def run_infinite_trading_matrix_cycle():
     selected_opp = None
     if top_5_candidates:
         try:
-            import macro_analyst
-            import gemini_sentinel
+            import text_analyzer
+            import llm_router
             
-            macro_ctx = macro_analyst.get_market_macro_context(
+            macro_ctx = text_analyzer.get_market_macro_context(
                 symbol_analysis_map, 
                 cached_fundamental_report.get("fear_and_greed", {"score": 50, "sentiment": "Neutral"}),
                 cached_fundamental_report.get("recent_headlines", [])
             )
             
-            gemini_res = gemini_sentinel.review_top_5_candidates(
+            gemini_res = llm_router.review_top_5_candidates(
                 candidates_data_list=top_5_candidates,
                 news_data={"headlines": cached_fundamental_report.get("recent_headlines", [])},
                 fear_greed=cached_fundamental_report.get("fear_and_greed", {"score": 50, "sentiment": "Neutral"}),
@@ -473,7 +473,7 @@ def run_infinite_trading_matrix_cycle():
     # Execute Real Money Trading ONLY on AI Approved signals with Dynamic Scores (SYNCED WITH GRUPO 0)
     # Fixie proxy is consumed ONLY when an actual order is placed
     try:
-        import real_money_trader
+        import api_connector
         
         dyn_t = strategy_engine.load_thresholds()
         real_long_score = dyn_t.get("group_0", {}).get("long_score", 80)
@@ -503,7 +503,7 @@ def run_infinite_trading_matrix_cycle():
         
         if is_ai_approved and ai_action == "BUY_LONG" and ai_symbol and ai_symbol != "NONE" and ai_price > 0:
             print(f"💰 [REAL] Señal ALCISTA Aprobada por IA ({ai_symbol} @ {ai_score} Pts, Conf={ai_confidence}%). Evaluando cuenta real...")
-            real_money_trader.evaluate_and_trade_real_money(
+            api_connector.evaluate_and_trade_real_money(
                 best_symbol=ai_symbol,
                 best_score=ai_score,
                 current_price=ai_price,
@@ -512,7 +512,7 @@ def run_infinite_trading_matrix_cycle():
             )
         elif is_ai_approved and ai_action == "SELL_SHORT" and ai_symbol and ai_symbol != "NONE" and ai_price > 0:
             print(f"📉 [REAL] Señal BAJISTA Aprobada por IA ({ai_symbol} @ Score {ai_score}, Conf={ai_confidence}%). Evaluando SHORT en Futuros...")
-            real_money_trader.evaluate_and_trade_real_money(
+            api_connector.evaluate_and_trade_real_money(
                 best_symbol=ai_symbol,
                 best_score=ai_score,
                 current_price=ai_price,
@@ -534,7 +534,7 @@ def run_infinite_trading_matrix_cycle():
                 ov_score = overext_signal['overextension_score']
                 print(f"📉 [REAL] SOBREEXTENSIÓN DETECTADA: {ov_sym} Score={ov_score}/100 | 24H={overext_signal['change_24h']:+.2f}%")
                 print(f"   Activando SHORT automático por corrección de mercado...")
-                real_money_trader.evaluate_and_trade_real_money(
+                api_connector.evaluate_and_trade_real_money(
                     best_symbol=ov_sym,
                     best_score=20,  # Low score = bearish signal
                     current_price=ov_price,
@@ -545,7 +545,7 @@ def run_infinite_trading_matrix_cycle():
                 if ai_symbol:
                     print(f"🔒 [REAL] IA seleccionó {ai_symbol} pero acción={ai_action}, Approved={is_ai_approved}. Sin operación nueva.")
                 # Always run the trader to manage OPEN positions (check TP/SL), even if no new entry
-                real_money_trader.evaluate_and_trade_real_money(
+                api_connector.evaluate_and_trade_real_money(
                     best_symbol=None, best_score=50, current_price=0.0, is_bearish=False
                 )
             
@@ -658,8 +658,8 @@ def sync_live_matrix_obsidian(matrix):
     real_usdt_free = 0.0
     
     try:
-        import real_money_trader
-        real_st = real_money_trader.load_real_account_state()
+        import api_connector
+        real_st = api_connector.load_real_account_state()
         
         # SMART PROXY SAVER: Only sync real balance from Binance API every 30 minutes
         # (minute 0 and 30) to conserve Fixie proxy requests.
@@ -669,7 +669,7 @@ def sync_live_matrix_obsidian(matrix):
         
         if is_sync_window:
             print("🔄 [SYNC 30M] Sincronizando balance real desde Binance API (Fixie Proxy)...")
-            balances = real_money_trader.get_real_balances()
+            balances = api_connector.get_real_balances()
             for b in balances:
                 asset = b.get("asset", "")
                 if asset == "USDT":
@@ -684,7 +684,7 @@ def sync_live_matrix_obsidian(matrix):
             real_st["_cached_usdt_free"] = round(real_usdt_free, 4)
             real_st["_cached_bnb"] = real_bnb
             real_st["_cached_bnb_usd"] = round(real_bnb_usd, 2)
-            real_money_trader.save_real_account_state(real_st)
+            api_connector.save_real_account_state(real_st)
         else:
             # Use cached values from last sync (0 Fixie requests consumed)
             real_total_val = real_st.get("_cached_total_val", real_st.get("current_balance_usd", 0.0))

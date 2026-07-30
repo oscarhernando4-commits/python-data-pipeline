@@ -79,8 +79,8 @@ def update_top_pairs():
             
     if not futures_pairs:
         try:
-            import real_money_trader
-            f_res = requests.get('https://fapi.binance.com/fapi/v1/exchangeInfo', proxies=real_money_trader.PROXIES, timeout=10)
+            import api_connector
+            f_res = requests.get('https://fapi.binance.com/fapi/v1/exchangeInfo', proxies=api_connector.PROXIES, timeout=10)
             f_res.raise_for_status()
             futures_pairs_list = [s['symbol'] for s in f_res.json()['symbols'] if s['status'] == 'TRADING' and s['quoteAsset'] == 'USDT']
             futures_pairs = set(futures_pairs_list)

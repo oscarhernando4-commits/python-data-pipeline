@@ -3,7 +3,7 @@ import sys
 import os
 from datetime import datetime
 import autotrade_daemon
-import parallel_simulation_matrix
+import pipeline_processor
 
 def run_single_15m_scan():
     sys.stdout.reconfigure(encoding='utf-8')
@@ -13,7 +13,7 @@ def run_single_15m_scan():
     
     try:
         # 1. Run 100-Account Live Matrix Cycle & Obsidian Table Update
-        parallel_simulation_matrix.run_infinite_trading_matrix_cycle()
+        pipeline_processor.run_infinite_trading_matrix_cycle()
         
         # 2. Run General Daemon Scan
         try:

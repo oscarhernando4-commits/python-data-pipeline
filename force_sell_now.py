@@ -12,16 +12,16 @@ sys.stdout.reconfigure(encoding='utf-8')
 from dotenv import load_dotenv
 load_dotenv()
 
-import real_money_trader
+import api_connector
 
-API_KEY = real_money_trader.API_KEY
-API_SECRET = real_money_trader.API_SECRET
-BASE_URL = real_money_trader.BASE_URL
-PROXIES = real_money_trader.PROXIES
+API_KEY = api_connector.API_KEY
+API_SECRET = api_connector.API_SECRET
+BASE_URL = api_connector.BASE_URL
+PROXIES = api_connector.PROXIES
 
 def manual_sell():
     print("Iniciando venta manual de la posición SPOT BTCUSDT LONG...")
-    state = real_money_trader.load_real_account_state()
+    state = api_connector.load_real_account_state()
     pos = state.get("position")
     
     if not pos:
@@ -36,7 +36,7 @@ def manual_sell():
     if side == "LONG":
         print(f"Cerrando posición SPOT LONG de {symbol}...")
         try:
-            active_current_price = real_money_trader.get_symbol_price(symbol, is_futures=False)
+            active_current_price = api_connector.get_symbol_price(symbol, is_futures=False)
             print(f"Precio actual de mercado: {active_current_price}")
             
             # Format qty
@@ -80,7 +80,7 @@ def manual_sell():
                 state["status"] = "BUSCANDO_OPORTUNIDAD"
                 state["last_trade_time"] = time.strftime("%y-%m-%d<br>%H:%M", time.localtime())
                 
-                real_money_trader.save_real_account_state(state)
+                api_connector.save_real_account_state(state)
                 print(f"✅ Estado local actualizado. PnL: ${pnl_usd:.2f} ({pnl_pct:.2f}%)")
             else:
                 print(f"❌ Falló la venta en Binance. Código: {res.status_code}")

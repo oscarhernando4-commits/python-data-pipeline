@@ -5,7 +5,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 from dotenv import load_dotenv
 load_dotenv()
-import real_money_trader as rmt
+import api_connector as rmt
 
 print("=" * 65)
 print("[TEST 2] SHORT UNIUSDT — Con precision fix")

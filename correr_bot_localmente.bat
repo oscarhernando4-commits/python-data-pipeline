@@ -13,8 +13,8 @@ echo.
 
 :loop
 echo [%time%] Iniciando ciclo de analisis...
-python update_top_100_pairs.py
-python parallel_simulation_matrix.py
+python data_fetcher.py
+python pipeline_processor.py
 echo.
 echo [%time%] Ciclo completado. Esperando 5 minutos...
 echo.

@@ -38,8 +38,8 @@ else:
 
 # GATE 3: Balance Check
 print("\n[GATE 3] Verificando Balance...")
-import real_money_trader
-state = real_money_trader.load_real_account_state()
+import api_connector
+state = api_connector.load_real_account_state()
 balance = state.get("current_balance_usd", 0)
 position = state.get("position")
 print(f"  Balance: ${balance:.2f}")
@@ -99,28 +99,28 @@ except Exception as e:
 
 # GATE 5: Test de conexión a Binance (precio sin proxy)
 print("\n[GATE 5] Test de precio en vivo (sin proxy)...")
-btc_price = real_money_trader.get_symbol_price("BTCUSDT", is_futures=False)
+btc_price = api_connector.get_symbol_price("BTCUSDT", is_futures=False)
 print(f"  BTC Spot: ${btc_price:.2f}" if btc_price else "  ❌ Fallo obteniendo precio")
 
-btc_futures = real_money_trader.get_symbol_price("BTCUSDT", is_futures=True)
+btc_futures = api_connector.get_symbol_price("BTCUSDT", is_futures=True)
 print(f"  BTC Futures: ${btc_futures:.2f}" if btc_futures else "  ❌ Fallo obteniendo precio futuros")
 
 # GATE 6: Test de ejecución CON proxy (solo verificación, NO compra)
 print("\n[GATE 6] Test de conexión autenticada (con proxy Fixie)...")
-print(f"  Proxy seleccionado: ...{real_money_trader.PROXY_URL[-30:]}")
+print(f"  Proxy seleccionado: ...{api_connector.PROXY_URL[-30:]}")
 try:
     import requests, hmac, hashlib
     from urllib.parse import urlencode
     ts = int(time.time() * 1000)
     params = {"timestamp": ts}
     qs = urlencode(params)
-    sig = hmac.new(real_money_trader.API_SECRET.encode(), qs.encode(), hashlib.sha256).hexdigest()
+    sig = hmac.new(api_connector.API_SECRET.encode(), qs.encode(), hashlib.sha256).hexdigest()
     params["signature"] = sig
-    headers = {"X-MBX-APIKEY": real_money_trader.API_KEY}
+    headers = {"X-MBX-APIKEY": api_connector.API_KEY}
     
-    res = requests.get(f"{real_money_trader.BASE_URL}/api/v3/account", 
+    res = requests.get(f"{api_connector.BASE_URL}/api/v3/account", 
                        headers=headers, params=params, 
-                       proxies=real_money_trader.PROXIES, timeout=10)
+                       proxies=api_connector.PROXIES, timeout=10)
     if res.status_code == 200:
         acc = res.json()
         can_trade = acc.get("canTrade", False)
@@ -135,7 +135,7 @@ except Exception as e:
 # GATE 7: Test de cierre SHORT automático
 print("\n[GATE 7] Verificando lógica de cierre SHORT automático...")
 print("  Función execute_real_futures_market_close: ", end="")
-print("✅ EXISTE" if hasattr(real_money_trader, 'execute_real_futures_market_close') else "❌ NO EXISTE")
+print("✅ EXISTE" if hasattr(api_connector, 'execute_real_futures_market_close') else "❌ NO EXISTE")
 print("  Software-side monitoring (TP +2%, SL -1%): ✅ Implementado (líneas 476-515)")
 
 print("\n" + "=" * 65)

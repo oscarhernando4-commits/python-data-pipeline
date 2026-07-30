@@ -89,5 +89,5 @@ def review_top_5_candidates(candidates_data_list, news_data, fear_greed, macro_c
     return {"selected_symbol": candidates_data_list[0]['symbol'], "approved": True, "action": candidates_data_list[0]['suggested_action'], "confidence": 70, "reasoning": "Fallback Cuantitativo Tras Fallo de Conexión AI"}
 """
 
-with open('gemini_sentinel.py', 'a', encoding='utf-8') as f:
+with open('llm_router.py', 'a', encoding='utf-8') as f:
     f.write(code_to_append)

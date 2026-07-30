@@ -3,7 +3,7 @@ from urllib.parse import urlencode
 os.chdir(r'c:\Users\hosca\Documents\Antigravity\BINANCE')
 from dotenv import load_dotenv
 load_dotenv()
-import real_money_trader as rmt
+import api_connector as rmt
 
 ts = int(time.time() * 1000)
 p = {'timestamp': ts}

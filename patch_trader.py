@@ -1,6 +1,6 @@
 import re
 
-with open("real_money_trader.py", "r", encoding="utf-8") as f:
+with open("api_connector.py", "r", encoding="utf-8") as f:
     content = f.read()
 
 # 1. Remove the unconditional balance polling at the top of evaluate_and_trade_real_money
@@ -46,7 +46,7 @@ replacement1 = """    # FIXIE OPTIMIZATION: We rely entirely on the local JSON s
 
 content = re.sub(pattern1, replacement1, content)
 
-with open("real_money_trader.py", "w", encoding="utf-8") as f:
+with open("api_connector.py", "w", encoding="utf-8") as f:
     f.write(content)
 
-print("Patch applied to real_money_trader.py successfully!")
+print("Patch applied to api_connector.py successfully!")

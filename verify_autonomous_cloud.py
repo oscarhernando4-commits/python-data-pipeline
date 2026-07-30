@@ -10,7 +10,7 @@ API_KEY = os.getenv("BINANCE_REAL_API_KEY", "")
 API_SECRET = os.getenv("BINANCE_REAL_API_SECRET", "")
 
 # Use shared proxy rotator (6 fresh accounts)
-from real_money_trader import FIXIE_POOL
+from api_connector import FIXIE_POOL
 PROXY_URL = random.choice(FIXIE_POOL[:6])
 PROXIES = {
     "http": PROXY_URL,

@@ -9,12 +9,12 @@ from dotenv import load_dotenv
 sys.stdout.reconfigure(encoding='utf-8')
 load_dotenv()
 
-import real_money_trader
+import api_connector
 
-API_KEY = real_money_trader.API_KEY
-API_SECRET = real_money_trader.API_SECRET
-BASE_URL = real_money_trader.BASE_URL
-PROXIES = real_money_trader.PROXIES
+API_KEY = api_connector.API_KEY
+API_SECRET = api_connector.API_SECRET
+BASE_URL = api_connector.BASE_URL
+PROXIES = api_connector.PROXIES
 
 def deep_diagnostic():
     print("="*60)
