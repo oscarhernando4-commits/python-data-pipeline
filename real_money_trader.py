@@ -126,8 +126,7 @@ def get_real_futures_balances():
     
     url = f"{FAPI_URL}/fapi/v2/account"
     try:
-        # NO proxy here - balance checks must NOT consume Fixie quota
-        res = requests.get(url, headers=headers, params=params, timeout=10)
+        res = requests.get(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
         if res.status_code == 200:
             return res.json().get("assets", [])
         return []
@@ -197,6 +196,29 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
     except Exception as e:
         return {"error": str(e)}
 
+def transfer_usdt(amount, to_futures=True):
+    """
+    Transfers USDT between Spot and Futures automatically.
+    type 1: Spot to USDT-M Futures
+    type 2: USDT-M Futures to Spot
+    """
+    timestamp = int(time.time() * 1000)
+    params = {
+        "type": 1 if to_futures else 2,
+        "asset": "USDT",
+        "amount": f"{amount:.2f}",
+        "timestamp": timestamp
+    }
+    query = urlencode(params)
+    sig = hmac.new(API_SECRET.encode("utf-8"), query.encode("utf-8"), hashlib.sha256).hexdigest()
+    try:
+        res = requests.post(f"{BASE_URL}/sapi/v1/asset/transfer", headers={"X-MBX-APIKEY": API_KEY}, params={**params, "signature": sig}, proxies=PROXIES, timeout=10)
+        print(f"🔄 Auto-Transfer {'to Futures' if to_futures else 'to Spot'}: {res.json()}")
+        return res.json()
+    except Exception as e:
+        print(f"Transfer failed: {e}")
+        return {"error": str(e)}
+
 def execute_real_futures_market_short(symbol, usdt_amount):
     """
     Opens a SHORT position on Binance Futures.
@@ -206,6 +228,9 @@ def execute_real_futures_market_short(symbol, usdt_amount):
     timestamp = int(time.time() * 1000)
     clean_usd = int(usdt_amount * 0.98 * 100) / 100.0
     headers = {"X-MBX-APIKEY": API_KEY}
+
+    # 0. Ensure funds are in Futures wallet (Auto-transfer from Spot)
+    transfer_usdt(clean_usd + 0.1, to_futures=True) # Add tiny buffer for transfer
 
     # 1. Force Isolated Margin (Ignore if already Isolated)
     try:
@@ -344,6 +369,15 @@ def execute_real_futures_market_close(symbol, quantity):
     
     try:
         res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=params, proxies=PROXIES, timeout=10)
+        
+        # Transfer balance back to spot
+        try:
+            f_balance = get_real_futures_usdt_balance()
+            if f_balance > 1.0:
+                transfer_usdt(f_balance - 0.1, to_futures=False)
+        except Exception as te:
+            print(f"Error transferring back to spot: {te}")
+            
         return res.json()
     except Exception as e:
         return {"error": str(e)}
