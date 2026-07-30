@@ -504,9 +504,12 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         }
         
         # PnL logic for SHORT: If current price drops, pnl is positive
+        # Multiply by 5x (Leverage) to match the ROI % shown in Binance Futures!
         if entry and entry > 0:
-            pnl_pct = ((entry - active_current_price) / entry) * 100.0
-            state["status"] = f"🔻 En Vivo SHORT ({active_symbol} @ ${active_current_price:.4f} | PnL: {pnl_pct:+.2f}%)"
+            price_pnl_pct = ((entry - active_current_price) / entry) * 100.0
+            pnl_pct = price_pnl_pct * 5.0  # 5x Leverage ROI
+            
+            state["status"] = f"🔻 En Vivo SHORT ({active_symbol} @ ${active_current_price:.4f} | ROI: {pnl_pct:+.2f}%)"
             
             # FIX Bug #6: SOFTWARE-SIDE SHORT EXIT MONITORING
             # If SL/TP native orders failed (Bug #2), we close via software
