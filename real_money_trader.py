@@ -9,7 +9,6 @@ import requests
 import tempfile
 from urllib.parse import urlencode
 from datetime import datetime
-
 import random
 
 # Dynamic Proxy Rotator for 24/7 Cloud Execution (7 Fixie EU West accounts, 3500 requests/month)
@@ -22,9 +21,7 @@ FIXIE_POOL = [
     "http://fixie:V9uciGagtBF2MJc@ventoux.usefixie.com:80",
     "http://fixie:gnvJakG6jyBrS04@ventoux.usefixie.com:80"
 ]
-PROXY_URL = os.getenv("FIXIE_URL", "")
-if not PROXY_URL:
-    PROXY_URL = random.choice(FIXIE_POOL)
+PROXY_URL = random.choice(FIXIE_POOL)
 PROXIES = {"http": PROXY_URL, "https": PROXY_URL}
 
 API_KEY = os.getenv("BINANCE_REAL_API_KEY", "")
