@@ -668,7 +668,7 @@ def sync_live_matrix_obsidian(matrix):
             real_usdt_free = real_st.get("_cached_usdt_free", 0.0)
             real_bnb = real_st.get("_cached_bnb", 0.0)
             real_bnb_usd = real_st.get("_cached_bnb_usd", 0.0)
-            print(f"💤 [CACHE] Usando balance cacheado (${real_total_val:.2f}). Sincronización API cada 12h.")
+            print(f"💤 [CACHE] Usando balance cacheado (${real_total_val:.2f}). Sincronización API cada 15m.")
     except Exception as e:
         print(f"Error cargando datos reales en matrix sync: {e}")
         # Usamos los datos guardados en state si la API falla
