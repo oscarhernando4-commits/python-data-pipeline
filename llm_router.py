@@ -215,11 +215,11 @@ def review_top_5_candidates(candidates_data_list, news_data, fear_greed, macro_c
     {candidates_prompt_text}
 
     REGLAS:
-    1. Revisa qué grupo de estrategias (en la tabla histórica) está ganando y si alguno de los 5 candidatos imita esa estructura ganadora.
+    1. 📊 PESO PRINCIPAL (TÉCNICO E HISTÓRICO): Revisa exhaustivamente qué grupo de estrategias (en la tabla histórica) está ganando y si alguno de los 5 candidatos imita esa estructura ganadora. Los datos reales de ese momento y el historial de comportamientos (5m, 1h, 24h, 3d, 1w) SON LA RAZÓN PRINCIPAL PARA TOMAR UNA DECISIÓN.
     2. Compara el 'Volume Surge' y el 'RSI 15M'. Prioriza la operación con mayor divergencia clara o agotamiento (Pump & Dump Exhaustion).
-    3. 🔴 MODO ORÁCULO PREDICTOR (CRÍTICO Y CAUTELOSO): Lee minuciosamente las "NOTICIAS ESPECÍFICAS ÚLTIMAS 24H". Si detectas un evento alcista (Lanzamiento, ETF, Institucional), DEBES VALIDAR QUE SEA UNA NOTICIA REAL Y CONFIRMADA DE FUENTES SÓLIDAS. Ignora rumores de baja calidad o "shilling". Si la noticia es un catalizador institucional masivo y confirmado, ELÍGELO INMEDIATAMENTE para "BUY_LONG" con confianza máxima.
-    4. Si hay noticias de HACKEOS, DEMANDAS O BANS (FUD extremo) para un candidato, RECHÁZALO inmediatamente, no importa qué tan perfecto sea el puntaje técnico.
-    5. ERES UN TRADER AGRESIVO PERO CALCULADOR. El usuario quiere ejecutar operaciones reales frecuentemente. Elige la moneda con la mejor estructura técnica o el mejor catalizador fundamental de noticias. Solo responde "NONE" si hay un crash catastrófico global.
+    3. 📰 ORÁCULO PREDICTOR (SOLO COMO REFERENCIA SECUNDARIA): Lee las "NOTICIAS ESPECÍFICAS ÚLTIMAS 24H". Úsalas ÚNICAMENTE como contexto adicional o para confirmar una estructura técnica que ya era buena. NUNCA tomes una decisión de compra basándote principalmente en una noticia de lanzamiento o ETF si la estructura técnica y el historial no lo respaldan firmemente. Las noticias son una referencia, NO el motivo principal.
+    4. Si hay noticias de HACKEOS, DEMANDAS O BANS (FUD extremo) para un candidato, RECHÁZALO inmediatamente.
+    5. ERES UN TRADER AGRESIVO PERO CALCULADOR. El usuario quiere ejecutar operaciones reales frecuentemente. Elige la moneda con la MEJOR ESTRUCTURA TÉCNICA E HISTÓRICA. Solo responde "NONE" si hay un crash catastrófico global.
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO:
     {{
