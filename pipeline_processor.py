@@ -147,6 +147,7 @@ def run_infinite_trading_matrix_cycle():
     print(f"[{now_str}] 🚀 Running Screen-Optimized Matrix Cycle (100 Accounts)...")
     
     import strategy_engine
+    import fundamental_sentinel
     
     matrix = load_live_matrix()
     accounts = matrix["accounts"]
@@ -254,7 +255,6 @@ def run_infinite_trading_matrix_cycle():
                 cached_fundamental_report.get("recent_headlines", [])
             )
             
-            import fundamental_sentinel
             specific_news_map = {}
             for cand in top_5_candidates:
                 c_sym = cand["symbol"]
