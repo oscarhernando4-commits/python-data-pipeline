@@ -129,9 +129,9 @@ def get_real_futures_balances():
         res = requests.get(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
         if res.status_code == 200:
             return res.json().get("assets", [])
-        return []
+        return None
     except Exception:
-        return []
+        return None
 
 def get_real_futures_positions():
     timestamp = int(time.time() * 1000)
@@ -432,6 +432,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
     
     now_str = datetime.now().strftime("%y-%m-%d<br>%H:%M")
     
+    # ========================================
+    # CASE 0: API ERROR - Abort Cycle
+    # ========================================
+    if crypto_balances is None or futures_positions is None:
+        print("⚠️ Binance API error: Could not fetch real balances/positions. Aborting cycle to protect state.")
+        return state
+        
     # ========================================
     # CASE 1: We have an active LONG position
     # ========================================
