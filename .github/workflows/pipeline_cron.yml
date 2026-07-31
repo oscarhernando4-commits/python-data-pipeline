@@ -8,6 +8,10 @@ on:
   repository_dispatch: # Allows instant external 5m pings from Cron-Job.org / UptimeRobot
     types: [trigger_quant_trade]
 
+concurrency:
+  group: "quant-trader-bot"
+  cancel-in-progress: false
+
 jobs:
   trade_and_sync:
     runs-on: ubuntu-latest
