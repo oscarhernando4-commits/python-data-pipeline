@@ -156,11 +156,10 @@ def get_real_futures_usdt_balance():
     return sum([float(a["availableBalance"]) for a in assets if a["asset"] in ["USDT", "USDC"]])
 
 def get_symbol_price(symbol, is_futures=False):
-    """Fetch live price for a specific symbol. NO proxy needed (public endpoint)."""
+    """Fetch live price for a specific symbol. NO proxy needed (using data-api)."""
     try:
-        base = FAPI_URL if is_futures else BASE_URL
-        endpoint = "/fapi/v1/ticker/price" if is_futures else "/api/v3/ticker/price"
-        res = requests.get(f"{base}{endpoint}?symbol={symbol}", proxies=PROXIES, timeout=5).json()
+        # data-api.binance.vision is fully public and not geo-blocked for US IPs
+        res = requests.get(f"https://data-api.binance.vision/api/v3/ticker/price?symbol={symbol}", timeout=5).json()
         price = float(res.get("price", 0))
         return price if price > 0 else None
     except Exception:

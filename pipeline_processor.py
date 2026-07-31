@@ -661,11 +661,11 @@ def sync_live_matrix_obsidian(matrix):
         import api_connector
         real_st = api_connector.load_real_account_state()
         
-        # SMART PROXY SAVER: Only sync real balance from Binance API every 30 minutes
-        # (minute 0 and 30) to conserve Fixie proxy requests.
+        # SMART PROXY SAVER: Only sync real balance from Binance API every 12 hours
+        # (hours 0 and 12, minute 0) to conserve Fixie proxy requests (500/month limit).
         # Orders (buy/sell) always use proxy instantly regardless of this timer.
-        current_minute = datetime.now().minute
-        is_sync_window = current_minute in [0, 30, 1, 31]  # 2-min window for cron drift
+        now = datetime.now()
+        is_sync_window = now.hour in [0, 12] and now.minute in [0, 1]  # 2-min window for cron drift
         
         if is_sync_window:
             print("🔄 [SYNC 30M] Sincronizando balance real desde Binance API (Fixie Proxy)...")
