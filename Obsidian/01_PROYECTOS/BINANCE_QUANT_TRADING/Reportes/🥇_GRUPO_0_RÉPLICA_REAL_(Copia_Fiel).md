@@ -1,6 +1,6 @@
 # Reporte Temporal: 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)
 
-> Actualizado: 2026-07-31 22:45:49
+> Actualizado: 2026-07-31 22:51:16
 
 | Ventana de Tiempo | Total Operaciones | Ganadoras | Perdedoras | Win Rate | PnL Neto |
 | :--- | :--- | :--- | :--- | :--- | :--- |
