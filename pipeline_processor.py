@@ -642,7 +642,9 @@ def sync_live_matrix_obsidian(matrix):
         # (hours 0 and 12, minute 0) to conserve Fixie proxy requests (500/month limit).
         # Orders (buy/sell) always use proxy instantly regardless of this timer.
         now = datetime.now()
-        is_sync_window = now.minute in [0, 1, 15, 16, 30, 31, 45, 46]  # Sync 1 vez cada 15m (seguro para el pool de 7 proxies)
+        # Expand window to 5 mins because matrix calculation takes ~2-3 mins. 
+        # Since cron runs every 5 mins, this ensures only the runs starting at 0, 15, 30, 45 trigger the sync.
+        is_sync_window = now.minute in [0, 1, 2, 3, 4, 15, 16, 17, 18, 19, 30, 31, 32, 33, 34, 45, 46, 47, 48, 49]
         
         if is_sync_window:
             print("🔄 [SYNC 30M] Sincronizando balance real desde Binance API (Fixie Proxy)...")
