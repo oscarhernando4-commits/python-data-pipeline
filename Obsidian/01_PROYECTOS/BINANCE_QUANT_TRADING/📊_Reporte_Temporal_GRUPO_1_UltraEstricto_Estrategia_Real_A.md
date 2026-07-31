@@ -4,7 +4,7 @@ aliases: [Rendimiento 🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)]
 cssclasses: [dashboard-view]
 ---
 # 📊 Rendimiento por Periodos: 🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)
-> Última actualización: 2026-07-31 22:25:56
+> Última actualización: 2026-07-31 22:30:50
 
 | Periodo | Total Operaciones | ✅ Ganadoras | 💰 PnL Ganado | ❌ Perdedoras | 💸 PnL Perdido | 📈 Neto |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
