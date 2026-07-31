@@ -6,9 +6,15 @@
   "wins": 1,
   "losses": 1,
   "trades_count": 2,
-  "position": null,
-  "last_trade_time": "26-07-31<br>21:16",
-  "status": "🟦 Buscando Entrada A+",
+  "position": {
+    "symbol": "ZECUSDT",
+    "entry_price": 456.15,
+    "cost_usd": 8.66,
+    "side": "LONG",
+    "quantity": 0.018
+  },
+  "last_trade_time": "26-07-31<br>21:20",
+  "status": "🔵 En Vivo LONG (ZECUSDT)",
   "daily_wins": 0,
   "daily_losses": 1,
   "_cached_total_val": 20.03,
