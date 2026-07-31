@@ -4,28 +4,28 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-07-29 18:58:46
+date: 2026-07-31 20:51:03
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-07-29 18:58:46`  
+> **Última Actualización:** `2026-07-31 20:51:03`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `203`
-- **Ganadas (WIN):** `81` | **Perdidas (LOSS):** `122`
-- **Tasa de Acierto (Win Rate):** `39.9%`
-- **PnL Total Neto:** `$+15.74 USD`
+- **Total Operaciones:** `264`
+- **Ganadas (WIN):** `81` | **Perdidas (LOSS):** `183`
+- **Tasa de Acierto (Win Rate):** `30.68%`
+- **PnL Total Neto:** `$-49.72 USD`
 
 ---
 
 ## 🧭 Sesgo de Aprendizaje Automático (Últimos 100 Trades)
 - **Sesgo Actual (Market Bias):** `FAVOR_SHORT`
-- **Rendimiento LONG (Compras):** `33.3%` de Acierto (en 120 ops recientes)
-- **Rendimiento SHORT (Ventas):** `49.4%` de Acierto (en 83 ops recientes)
+- **Rendimiento LONG (Compras):** `22.2%` de Acierto (en 180 ops recientes)
+- **Rendimiento SHORT (Ventas):** `48.8%` de Acierto (en 84 ops recientes)
 - 🏆 **Grupo de IA Más Rentable:** `⚡ GRUPO 4: Frecuencia Alta` (WinRate: 50.0%, PnL: $60.8)
 - *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada. Y el Dinero Real copiará automáticamente al Grupo Más Rentable.
 
@@ -42,6 +42,10 @@ date: 2026-07-29 18:58:46
 - 🛑 Preventive Block for DOTUSDT: Loss logged at 0.765 -> Hit SL on DOTUSDT (-$1.60). Re-Trading!
 - 🛑 Preventive Block for OPUSDT: Loss logged at 0.0879 -> Hit SL on OPUSDT (-$1.11). Re-Trading!
 - 🛑 Preventive Block for BTCUSDT: Loss logged at 63976.01 -> Hit SL on BTCUSDT (-$1.15). Re-Trading!
+- 🛑 Preventive Block for BTCUSDT: Loss logged at 64594.65 -> Hit SL on BTCUSDT (-$1.12). Re-Trading!
+- 🛑 Preventive Block for XRPUSDT: Loss logged at 1.0736 -> Hit SL on XRPUSDT (-$1.05). Re-Trading!
+- 🛑 Preventive Block for BTCUSDT: Loss logged at 63920.0 -> Hit SL on BTCUSDT (-$1.10). Re-Trading!
+- 🛑 BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BTCUSDT)
 
 ---
 
@@ -63,14 +67,14 @@ date: 2026-07-29 18:58:46
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
-| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
-| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
-| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
-| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
-| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
-| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
-| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
-| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
-| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-31 20:51:03 | BTCUSDT | LONG | `$64376.52` | `$62976.01` | `$-1.10` | 🔴 LOSS |
+| 2026-07-30 12:49:04 | UNIUSDT | SHORT | `$4.4` | `$4.427` | `$-0.06` | 🔴 LOSS |
+| 2026-07-29 17:56:21 | BTCUSDT | LONG | `$63920.0` | `$63938.95` | `$-1.10` | 🔴 LOSS |
+| 2026-07-29 17:56:21 | BTCUSDT | LONG | `$63920.0` | `$63938.95` | `$-1.10` | 🔴 LOSS |
+| 2026-07-29 17:56:21 | BTCUSDT | LONG | `$63920.0` | `$63938.95` | `$-1.10` | 🔴 LOSS |
+| 2026-07-29 17:56:21 | BTCUSDT | LONG | `$63920.0` | `$63938.95` | `$-1.10` | 🔴 LOSS |
+| 2026-07-29 17:56:21 | BTCUSDT | LONG | `$63920.0` | `$63938.95` | `$-1.10` | 🔴 LOSS |
+| 2026-07-29 17:56:21 | BTCUSDT | LONG | `$63920.0` | `$63938.95` | `$-1.10` | 🔴 LOSS |
+| 2026-07-29 17:56:21 | BTCUSDT | LONG | `$63920.0` | `$63938.95` | `$-1.10` | 🔴 LOSS |
+| 2026-07-29 17:56:21 | BTCUSDT | LONG | `$63920.0` | `$63938.95` | `$-1.10` | 🔴 LOSS |
 

@@ -4,11 +4,11 @@ aliases: [Rendimiento ⚖️ GRUPO 3: Balanceado]
 cssclasses: [dashboard-view]
 ---
 # 📊 Rendimiento por Periodos: ⚖️ GRUPO 3: Balanceado
-> Última actualización: 2026-07-29 19:04:36
+> Última actualización: 2026-07-31 20:53:08
 
 | Periodo | Total Operaciones | ✅ Ganadoras | 💰 PnL Ganado | ❌ Perdedoras | 💸 PnL Perdido | 📈 Neto |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **1 Día (24h)** | 40 | 20 | +$41.80 | 20 | -$32.00 | **+$9.80** |
+| **1 Día (24h)** | 0 | 0 | +$0.00 | 0 | -$0.00 | **$0.00** |
 | **3 Días** | 40 | 20 | +$41.80 | 20 | -$32.00 | **+$9.80** |
 | **1 Semana** | 40 | 20 | +$41.80 | 20 | -$32.00 | **+$9.80** |
 | **2 Semanas** | 40 | 20 | +$41.80 | 20 | -$32.00 | **+$9.80** |

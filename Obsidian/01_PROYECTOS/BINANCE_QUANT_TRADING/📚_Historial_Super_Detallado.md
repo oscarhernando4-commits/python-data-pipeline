@@ -3,12 +3,12 @@ tags:
   - trading
   - historial_completo
   - binance
-date: 2026-07-29 18:58:46
+date: 2026-07-31 20:51:03
 ---
 
 # 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
 
-> **Última Actualización:** `2026-07-29 18:58:46`
+> **Última Actualización:** `2026-07-31 20:51:03`
 > Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
 
 | Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |
@@ -216,4 +216,65 @@ date: 2026-07-29 18:58:46
 | 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
 | 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
 | 2026-07-29 18:58:46 | ⚡ GRUPO 4: Frec... | BTCUSDT | SHORT | $63976.01 | $64594.65 | $-1.15 | 75 | 61.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:19 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:19 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:19 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:19 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:19 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:19 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:19 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:19 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:19 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🛡️ GRUPO 1: Ult... | BTCUSDT | LONG | $64594.65 | $63938.95 | $-1.12 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔷 GRUPO 2: Mode... | XRPUSDT | LONG | $1.0736 | $1.0748 | $-1.05 | 50 | 50.1 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:20 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:21 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:21 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:21 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:21 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:21 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:21 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:21 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-29 17:56:21 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
+| 2026-07-30 12:49:04 | CUENTA REAL... | UNIUSDT | SHORT | $4.4 | $4.427 | $-0.06 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-07-31 20:51:03 | 🥇 GRUPO 0: RÉPL... | BTCUSDT | LONG | $64376.52 | $62976.01 | $-1.10 | 30 | 43.0 | NEUTRAL | 🔴 LOSS |
 
