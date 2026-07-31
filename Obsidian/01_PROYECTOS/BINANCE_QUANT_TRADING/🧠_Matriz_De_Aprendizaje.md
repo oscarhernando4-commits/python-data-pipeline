@@ -4,28 +4,28 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-07-31 21:40:52
+date: 2026-07-31 23:25:48
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-07-31 21:40:52`  
+> **Última Actualización:** `2026-07-31 23:25:48`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `284`
-- **Ganadas (WIN):** `101` | **Perdidas (LOSS):** `183`
-- **Tasa de Acierto (Win Rate):** `35.56%`
-- **PnL Total Neto:** `$+44.28 USD`
+- **Total Operaciones:** `304`
+- **Ganadas (WIN):** `101` | **Perdidas (LOSS):** `203`
+- **Tasa de Acierto (Win Rate):** `33.22%`
+- **PnL Total Neto:** `$+22.48 USD`
 
 ---
 
 ## 🧭 Sesgo de Aprendizaje Automático (Últimos 100 Trades)
-- **Sesgo Actual (Market Bias):** `FAVOR_SHORT`
+- **Sesgo Actual (Market Bias):** `NEUTRAL`
 - **Rendimiento LONG (Compras):** `30.0%` de Acierto (en 200 ops recientes)
-- **Rendimiento SHORT (Ventas):** `48.8%` de Acierto (en 84 ops recientes)
+- **Rendimiento SHORT (Ventas):** `39.4%` de Acierto (en 104 ops recientes)
 - 🏆 **Grupo de IA Más Rentable:** `⚡ GRUPO 4: Frecuencia Alta` (WinRate: 50.0%, PnL: $60.8)
 - *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada. Y el Dinero Real copiará automáticamente al Grupo Más Rentable.
 
@@ -46,6 +46,7 @@ date: 2026-07-31 21:40:52
 - 🛑 Preventive Block for XRPUSDT: Loss logged at 1.0736 -> Hit SL on XRPUSDT (-$1.05). Re-Trading!
 - 🛑 Preventive Block for BTCUSDT: Loss logged at 63920.0 -> Hit SL on BTCUSDT (-$1.10). Re-Trading!
 - 🛑 BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BTCUSDT)
+- 🛑 BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TLMUSDT)
 
 ---
 
@@ -68,14 +69,14 @@ date: 2026-07-31 21:40:52
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-07-31 21:40:52 | MMTUSDT | LONG | `$0.1908` | `$0.2005` | `$+4.70` | 🟢 WIN |
-| 2026-07-31 21:40:52 | MMTUSDT | LONG | `$0.1908` | `$0.2005` | `$+4.70` | 🟢 WIN |
-| 2026-07-31 21:40:52 | MMTUSDT | LONG | `$0.1908` | `$0.2005` | `$+4.70` | 🟢 WIN |
-| 2026-07-31 21:40:52 | MMTUSDT | LONG | `$0.1908` | `$0.2005` | `$+4.70` | 🟢 WIN |
-| 2026-07-31 21:40:52 | MMTUSDT | LONG | `$0.1908` | `$0.2005` | `$+4.70` | 🟢 WIN |
-| 2026-07-31 21:40:52 | MMTUSDT | LONG | `$0.1908` | `$0.2005` | `$+4.70` | 🟢 WIN |
-| 2026-07-31 21:40:52 | MMTUSDT | LONG | `$0.1908` | `$0.2005` | `$+4.70` | 🟢 WIN |
-| 2026-07-31 21:40:52 | MMTUSDT | LONG | `$0.1908` | `$0.2005` | `$+4.70` | 🟢 WIN |
-| 2026-07-31 21:40:52 | MMTUSDT | LONG | `$0.1908` | `$0.2005` | `$+4.70` | 🟢 WIN |
-| 2026-07-31 21:40:52 | MMTUSDT | LONG | `$0.1908` | `$0.2005` | `$+4.70` | 🟢 WIN |
+| 2026-07-31 23:25:48 | TLMUSDT | SHORT | `$0.001822` | `$0.001827` | `$-1.09` | 🔴 LOSS |
+| 2026-07-31 23:25:48 | TLMUSDT | SHORT | `$0.001822` | `$0.001827` | `$-1.09` | 🔴 LOSS |
+| 2026-07-31 23:25:48 | TLMUSDT | SHORT | `$0.001822` | `$0.001827` | `$-1.09` | 🔴 LOSS |
+| 2026-07-31 23:25:48 | TLMUSDT | SHORT | `$0.001822` | `$0.001827` | `$-1.09` | 🔴 LOSS |
+| 2026-07-31 23:25:48 | TLMUSDT | SHORT | `$0.001822` | `$0.001827` | `$-1.09` | 🔴 LOSS |
+| 2026-07-31 23:25:48 | TLMUSDT | SHORT | `$0.001822` | `$0.001827` | `$-1.09` | 🔴 LOSS |
+| 2026-07-31 23:25:48 | TLMUSDT | SHORT | `$0.001822` | `$0.001827` | `$-1.09` | 🔴 LOSS |
+| 2026-07-31 23:25:48 | TLMUSDT | SHORT | `$0.001822` | `$0.001827` | `$-1.09` | 🔴 LOSS |
+| 2026-07-31 23:25:48 | TLMUSDT | SHORT | `$0.001822` | `$0.001827` | `$-1.09` | 🔴 LOSS |
+| 2026-07-31 23:25:48 | TLMUSDT | SHORT | `$0.001822` | `$0.001827` | `$-1.09` | 🔴 LOSS |
 

@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 284,
+    "total_trades": 304,
     "wins": 101,
-    "losses": 183,
-    "win_rate_pct": 35.56,
-    "total_pnl_usd": 44.27814545454544
+    "losses": 203,
+    "win_rate_pct": 33.22,
+    "total_pnl_usd": 22.478145454545402
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -20,7 +20,8 @@
       "Preventive Block for BTCUSDT: Loss logged at 64594.65 -> Hit SL on BTCUSDT (-$1.12). Re-Trading!",
       "Preventive Block for XRPUSDT: Loss logged at 1.0736 -> Hit SL on XRPUSDT (-$1.05). Re-Trading!",
       "Preventive Block for BTCUSDT: Loss logged at 63920.0 -> Hit SL on BTCUSDT (-$1.10). Re-Trading!",
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BTCUSDT)"
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BTCUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TLMUSDT)"
     ],
     "boosted_patterns": [
       "RSI < 30 + MACD Bullish Cross + Volume > 1.5x (High Probability Win)",
@@ -4348,6 +4349,346 @@
       "context": {
         "score": 65,
         "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-021",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-022",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-023",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-024",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-025",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-026",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-030",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-031",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-032",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-033",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-034",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-035",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-036",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-037",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-038",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 23:25:48",
+      "account_id": "SIM-040",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001822,
+      "exit_price": 0.001827,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on TLMUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 69.48,
         "macro_trend_4h": "NEUTRAL"
       }
     }
