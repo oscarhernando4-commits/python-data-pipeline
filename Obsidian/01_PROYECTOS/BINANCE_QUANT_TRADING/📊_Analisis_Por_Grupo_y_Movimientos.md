@@ -2,12 +2,12 @@
 tags:
   - analisis_grupos
   - trading
-date: 2026-07-31 21:36:03
+date: 2026-07-31 21:40:52
 ---
 
 # 📊 ANÁLISIS GLOBAL DE GANANCIAS Y PÉRDIDAS POR GRUPO
 
-> **Última Actualización:** `2026-07-31 21:36:03`
+> **Última Actualización:** `2026-07-31 21:40:52`
 > Este reporte desglosa el rendimiento matemático de cada Estrategia de IA. 
 
 ## 🏆 Resumen de Rendimiento (Ranking de Grupos)
@@ -20,7 +20,7 @@ date: 2026-07-31 21:36:03
 | **CUENTA REAL** | 1 | `0.0%` | $+0.00 | $-0.06 | **$-0.06** |
 | **🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)** | 4 | `25.0%` | $-1.10 | $+0.14 | **$-0.96** |
 | **🔥 GRUPO 5: Exploratorio de Máxima Frecuencia** | 19 | `0.0%` | $-20.90 | $+0.00 | **$-20.90** |
-| **🔷 GRUPO 2: Moderado-Estricto** | 80 | `0.0%` | $-115.40 | $+0.00 | **$-115.40** |
+| **🔷 GRUPO 2: Moderado-Estricto** | 100 | `20.0%` | $-21.40 | $+0.00 | **$-21.40** |
 
 ---
 
@@ -260,10 +260,30 @@ date: 2026-07-31 21:36:03
 
 ### 🔷 GRUPO 2: Moderado-Estricto
 
-> **Mejor Par Operado:** `XRPUSDT ($-21.00)`
+> **Mejor Par Operado:** `MMTUSDT ($+94.00)`
 
 | Fecha | Par | Lado | Precio Entrada | Precio Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
+| 2026-07-31 21:40:52 | **MMTUSDT** | LONG | $0.1908 | $0.2005 | `$+4.70` | 🟢 WIN |
 | 2026-07-29 17:56:20 | **XRPUSDT** | LONG | $1.0736 | $1.0748 | `$-1.05` | 🔴 LOSS |
 | 2026-07-29 17:56:20 | **XRPUSDT** | LONG | $1.0736 | $1.0748 | `$-1.05` | 🔴 LOSS |
 | 2026-07-29 17:56:20 | **XRPUSDT** | LONG | $1.0736 | $1.0748 | `$-1.05` | 🔴 LOSS |

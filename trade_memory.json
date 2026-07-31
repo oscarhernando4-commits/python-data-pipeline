@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 264,
-    "wins": 81,
+    "total_trades": 284,
+    "wins": 101,
     "losses": 183,
-    "win_rate_pct": 30.68,
-    "total_pnl_usd": -49.72185454545457
+    "win_rate_pct": 35.56,
+    "total_pnl_usd": 44.27814545454544
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -32,7 +32,8 @@
       "Optimized Setup for ADAUSDT: Profit logged (+$1.97) -> Win on ADAUSDT (+$1.97 net) -> Level 3 Re-Trading Started!",
       "Optimized Setup for ADAUSDT: Profit logged (+$1.97) -> Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
       "Optimized Setup for TRUMPUSDT: Profit logged (+$2.09) -> Win on TRUMPUSDT (+$2.09 net) -> Level 3 Re-Trading Started!",
-      "Optimized Setup for TRUMPUSDT: Profit logged (+$2.09) -> Win on TRUMPUSDT (+$2.09 net) -> Level 2 Re-Trading Started!"
+      "Optimized Setup for TRUMPUSDT: Profit logged (+$2.09) -> Win on TRUMPUSDT (+$2.09 net) -> Level 2 Re-Trading Started!",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MMTUSDT)"
     ]
   },
   "history": [
@@ -4007,6 +4008,346 @@
       "context": {
         "score": 30,
         "rsi_15m": 43.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-021",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-022",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-023",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-024",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-025",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-026",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-030",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-031",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-032",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-033",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-034",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-035",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-036",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-037",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-038",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-07-31 21:40:52",
+      "account_id": "SIM-040",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MMTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1908,
+      "exit_price": 0.2005,
+      "pnl_usd": 4.7,
+      "result": "WIN",
+      "notes": "Win on MMTUSDT (+$4.70 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 45.43,
         "macro_trend_4h": "NEUTRAL"
       }
     }

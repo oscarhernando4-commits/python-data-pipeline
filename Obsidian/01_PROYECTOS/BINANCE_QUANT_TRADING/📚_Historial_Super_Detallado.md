@@ -3,12 +3,12 @@ tags:
   - trading
   - historial_completo
   - binance
-date: 2026-07-31 20:51:03
+date: 2026-07-31 21:40:52
 ---
 
 # 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
 
-> **Última Actualización:** `2026-07-31 20:51:03`
+> **Última Actualización:** `2026-07-31 21:40:52`
 > Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
 
 | Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |
@@ -277,4 +277,24 @@ date: 2026-07-31 20:51:03
 | 2026-07-29 17:56:21 | 🔥 GRUPO 5: Expl... | BTCUSDT | LONG | $63920.0 | $63938.95 | $-1.10 | 50 | 50.9 | NEUTRAL | 🔴 LOSS |
 | 2026-07-30 12:49:04 | CUENTA REAL... | UNIUSDT | SHORT | $4.4 | $4.427 | $-0.06 | N/A | N/A | N/A | 🔴 LOSS |
 | 2026-07-31 20:51:03 | 🥇 GRUPO 0: RÉPL... | BTCUSDT | LONG | $64376.52 | $62976.01 | $-1.10 | 30 | 43.0 | NEUTRAL | 🔴 LOSS |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
+| 2026-07-31 21:40:52 | 🔷 GRUPO 2: Mode... | MMTUSDT | LONG | $0.1908 | $0.2005 | $+4.70 | 65 | 45.4 | NEUTRAL | 🟢 WIN |
 
