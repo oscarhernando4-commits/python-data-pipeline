@@ -104,13 +104,12 @@ def get_real_balances():
     
     url = f"{BASE_URL}/api/v3/account"
     try:
-        # NO proxy here - balance checks must NOT consume Fixie quota
-        res = requests.get(url, headers=headers, params=params, timeout=10)
+        res = requests.get(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
         if res.status_code == 200:
             return res.json().get("balances", [])
-        return []
+        return None
     except Exception:
-        return []
+        return None
 
 def get_real_usdt_balance():
     balances = get_real_balances()
