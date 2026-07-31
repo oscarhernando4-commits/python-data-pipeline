@@ -42,9 +42,30 @@ def fetch_live_crypto_news():
     
     return headlines, high_risk_alerts
 
+def fetch_coin_specific_news(symbol):
+    headlines = []
+    try:
+        # Extraer el nombre base (ej. BTCUSDT -> BTC)
+        base_asset = symbol.replace('USDT', '')
+        url = f'https://news.google.com/rss/search?q=crypto+%22{base_asset}%22+when:1d&hl=en-US&gl=US&ceid=US:en'
+        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+        with urllib.request.urlopen(req, timeout=5) as response:
+            xml_data = response.read()
+            root = ET.fromstring(xml_data)
+            for item in root.findall('.//item')[:3]:
+                title = item.find('title').text if item.find('title') is not None else ""
+                if title:
+                    headlines.append(title)
+    except Exception as e:
+        headlines.append(f"No specific news found ({e})")
+    return headlines
+
 def get_crypto_fundamental_sentinel(symbol="BTCUSDT"):
     fng = get_fear_and_greed_index()
     headlines, risk_alerts = fetch_live_crypto_news()
+    
+    # NUEVO: Noticias Específicas
+    coin_news = fetch_coin_specific_news(symbol)
     
     macro_risk = "LOW_RISK"
     if len(risk_alerts) >= 3 or fng['score'] <= 20:
@@ -57,7 +78,8 @@ def get_crypto_fundamental_sentinel(symbol="BTCUSDT"):
         "fear_and_greed": fng,
         "sentiment_label": fng['sentiment'],
         "macro_risk_level": macro_risk,
-        "recent_headlines": headlines[:5],
+        "recent_headlines": headlines[:3],
+        "coin_specific_news": coin_news,
         "risk_alerts_detected": risk_alerts
     }
 

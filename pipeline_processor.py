@@ -254,9 +254,17 @@ def run_infinite_trading_matrix_cycle():
                 cached_fundamental_report.get("recent_headlines", [])
             )
             
+            import fundamental_sentinel
+            specific_news_map = {}
+            for cand in top_5_candidates:
+                c_sym = cand["symbol"]
+                s_news = fundamental_sentinel.fetch_coin_specific_news(c_sym)
+                if s_news:
+                    specific_news_map[c_sym] = s_news
+            
             gemini_res = llm_router.review_top_5_candidates(
                 candidates_data_list=top_5_candidates,
-                news_data={"headlines": cached_fundamental_report.get("recent_headlines", [])},
+                news_data={"headlines": cached_fundamental_report.get("recent_headlines", []), "specific_news": specific_news_map},
                 fear_greed=cached_fundamental_report.get("fear_and_greed", {"score": 50, "sentiment": "Neutral"}),
                 macro_context=macro_ctx,
                 market_bias_ctx=bias_str

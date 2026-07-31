@@ -185,25 +185,28 @@ def review_top_5_candidates(candidates_data_list, news_data, fear_greed, macro_c
         tech = cand['tech_data']
         ind = tech.get('indicators', {})
         pat = time_series_memory.get_multi_cycle_pattern_summary(sym)
+        specific_n = news_data.get('specific_news', {}).get(sym, [])
+        
         candidates_prompt_text += f"\nCANDIDATO: {sym} (Acción Cuantitativa Sugerida: {action})\n"
         candidates_prompt_text += f"- Score Técnico: {score}/100\n"
         candidates_prompt_text += f"- RSI 15M: {ind.get('rsi_15m')}, MACD: {ind.get('macd_hist_15m')}, Volume Surge: {ind.get('volume_surge_ratio')}\n"
         candidates_prompt_text += f"- Tendencia 4H: {tech.get('macro_trend_4h')}\n"
         candidates_prompt_text += f"- Historial 5M (4h): {pat}\n"
+        candidates_prompt_text += f"- NOTICIAS ESPECÍFICAS ÚLTIMAS 24H: {json.dumps(specific_n)}\n"
         candidates_prompt_text += "------------------------------------"
 
     print(f"✅ [Comité Institucional] Mercado filtrado y analizado. Consultando al Súper-Cerebro Gemini AI para el TOP {len(candidates_data_list)} simultáneo...")
 
     prompt_text = f"""
-    Eres el Súper-Cerebro Cuantitativo Institucional.
+    Eres el Súper-Cerebro Cuantitativo Institucional y Oráculo Predictor de Eventos Fundamentales (Catalyst Sentinel).
     Tu tarea es recibir un TOP {len(candidates_data_list)} de las mejores criptomonedas pre-filtradas por un motor matemático.
-    Debes hacer un análisis cruzado (Cross-Analysis) profundo de los 5 escenarios y ELEGIR A UN ÚNICO GANADOR ABSOLUTO para operar, o RECHAZARLOS TODOS si el entorno es muy tóxico.
+    Debes hacer un análisis cruzado (Cross-Analysis) profundo de los 5 escenarios, y usar tu intuición basada en NOTICIAS para predecir movimientos futuros masivos. ELEGIRÁS A UN ÚNICO GANADOR ABSOLUTO.
 
     CONTEXTO GLOBAL MACRO Y SESGO DE MERCADO:
     - Sesgo de Aprendizaje: {market_bias_ctx}
     - Entorno Macro: {macro_context}
     - Fear & Greed: {fear_greed.get('score')} ({fear_greed.get('sentiment')})
-    - Noticias: {json.dumps(news_data.get('headlines', [])[:3])}
+    - Noticias Globales: {json.dumps(news_data.get('headlines', [])[:3])}
 
     MEMORIA DE SIMULADORES (Super Detailed Table):
     {super_detailed_table}
@@ -214,7 +217,9 @@ def review_top_5_candidates(candidates_data_list, news_data, fear_greed, macro_c
     REGLAS:
     1. Revisa qué grupo de estrategias (en la tabla histórica) está ganando y si alguno de los 5 candidatos imita esa estructura ganadora.
     2. Compara el 'Volume Surge' y el 'RSI 15M'. Prioriza la operación con mayor divergencia clara o agotamiento (Pump & Dump Exhaustion).
-    3. ERES UN TRADER AGRESIVO PERO CALCULADOR. El usuario quiere ejecutar operaciones reales frecuentemente. DEBES ELEGIR AL MEJOR CANDIDATO del Top 5. Sólo selecciona "NONE" si ocurre un crash catastrófico del mercado global. De lo contrario, elige la moneda con la mejor estructura técnica.
+    3. 🔴 MODO ORÁCULO PREDICTOR (CRÍTICO): Lee minuciosamente las "NOTICIAS ESPECÍFICAS ÚLTIMAS 24H" de cada candidato. Si detectas un evento extremadamente alcista (Lanzamiento de Mainnet, Airdrop, Partnership con grandes empresas, Adopción masiva, Inyección de capital, ETFs), DEBES ELEGIR ESE CANDIDATO INMEDIATAMENTE para "BUY_LONG" con confianza máxima, ignorando imperfecciones técnicas (Los catalizadores de noticias matan al análisis técnico).
+    4. Si hay noticias de HACKEOS, DEMANDAS O BANS (FUD extremo) para un candidato, RECHÁZALO inmediatamente, no importa qué tan perfecto sea el puntaje técnico.
+    5. ERES UN TRADER AGRESIVO PERO CALCULADOR. El usuario quiere ejecutar operaciones reales frecuentemente. Elige la moneda con la mejor estructura técnica o el mejor catalizador fundamental de noticias. Solo responde "NONE" si hay un crash catastrófico global.
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO:
     {{
