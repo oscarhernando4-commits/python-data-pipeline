@@ -66,29 +66,7 @@ def update_top_pairs():
         print(f"Failed to fetch Binance exchange info: {e}")
         return
         
-    print(f"Fetching valid Binance Futures USDT pairs...")
-    futures_cache_file = "futures_pairs_cache.json"
-    futures_pairs = set()
-    # Usar caché de 24h para no gastar quota del Proxy
-    if os.path.exists(futures_cache_file) and time.time() - os.path.getmtime(futures_cache_file) < 86400:
-        try:
-            with open(futures_cache_file, "r") as f:
-                futures_pairs = set(json.load(f))
-        except:
-            pass
-            
-    if not futures_pairs:
-        try:
-            import api_connector
-            f_res = requests.get('https://fapi.binance.com/fapi/v1/exchangeInfo', proxies=api_connector.PROXIES, timeout=10)
-            f_res.raise_for_status()
-            futures_pairs_list = [s['symbol'] for s in f_res.json()['symbols'] if s['status'] == 'TRADING' and s['quoteAsset'] == 'USDT']
-            futures_pairs = set(futures_pairs_list)
-            with open(futures_cache_file, "w") as f:
-                json.dump(futures_pairs_list, f)
-        except Exception as e:
-            print(f"Failed to fetch Futures info via Proxy: {e}")
-            futures_pairs = set()
+
 
     cmc_symbols = get_cmc_top_coins()
     binance_vol_symbols = get_binance_top_volume_coins(valid_binance_pairs)
@@ -116,8 +94,8 @@ def update_top_pairs():
             
         binance_sym = f"{mapping.get(sym, sym)}USDT"
         
-        # Must exist in BOTH Spot (for Longs) and Futures (for Shorts)
-        if binance_sym in valid_binance_pairs and binance_sym in futures_pairs and binance_sym not in top_100_pairs:
+        # Must exist in Spot
+        if binance_sym in valid_binance_pairs and binance_sym not in top_100_pairs:
             top_100_pairs.append(binance_sym)
                 
         if len(top_100_pairs) >= 120:  # Expanded to 120 pairs for more opportunities!
