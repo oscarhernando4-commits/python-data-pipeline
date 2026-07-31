@@ -4,7 +4,7 @@ aliases: [Rendimiento CUENTA REAL]
 cssclasses: [dashboard-view]
 ---
 # 📊 Rendimiento por Periodos: CUENTA REAL
-> Última actualización: 2026-07-31 22:30:50
+> Última actualización: 2026-07-31 22:36:16
 
 | Periodo | Total Operaciones | ✅ Ganadoras | 💰 PnL Ganado | ❌ Perdedoras | 💸 PnL Perdido | 📈 Neto |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |

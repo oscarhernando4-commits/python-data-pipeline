@@ -1,12 +1,38 @@
 {
-  "OPUSDT": [
+  "GNOUSDT": [
     {
-      "timestamp": "2026-07-31 22:30:43",
-      "price": 0.0855,
-      "score": 15,
-      "rsi": 42.34,
+      "timestamp": "2026-07-31 22:36:10",
+      "price": 104.96,
+      "score": 50,
+      "rsi": 50.22,
       "macd": "Neutral",
-      "volume_surge": 0.06,
+      "volume_surge": 0.34,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GOOGLBUSDT": [
+    {
+      "timestamp": "2026-07-31 22:36:10",
+      "price": 353.52,
+      "score": 10,
+      "rsi": 50.48,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LUNCUSDT": [
+    {
+      "timestamp": "2026-07-31 22:36:10",
+      "price": 4.94e-05,
+      "score": 50,
+      "rsi": 56.32,
+      "macd": "Neutral",
+      "volume_surge": 0.31,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
