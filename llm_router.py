@@ -54,9 +54,9 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     ESTADO GLOBAL DEL MERCADO (Reporte de Analista Macro Lite):
     - {macro_context if macro_context else "Contexto Macro No Disponible."}
 
-    SESGO DEL MERCADO RECIENTE (AUTO-APRENDIZAJE DE PNL LONG vs SHORT):
+    SESGO DEL MERCADO RECIENTE (AUTO-APRENDIZAJE DE PNL):
     - {market_bias_ctx if market_bias_ctx else "Sesgo de Mercado No Disponible."}
-    ⚠️ IMPORTANTE: Si el sesgo reciente indica que un lado (ej. LONG) está perdiendo repetidamente y el otro (ej. SHORT) está ganando, DEBES RECHAZAR operaciones que vayan en contra del flujo ganador a menos que haya una confirmación macro extrema de reversión. Alinear tus decisiones al dinero real (Real Money).
+    ⚠️ IMPORTANTE: Si el sesgo reciente indica que el mercado está cayendo fuertemente y las compras (LONG) están perdiendo repetidamente, DEBES SER EXTREMADAMENTE SELECTIVO y solo aprobar compras si hay una confirmación técnica extrema de reversión. Alinear tus decisiones al dinero real (Real Money).
 
     HISTORIAL SUPER DETALLADO (TABLA COMPLETA ALL-TIME DE TODAS LAS OPERACIONES):
     {super_detailed_table}
@@ -65,7 +65,7 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     1. No te limites a leer las reglas pasadas. Debes analizar esta tabla AHORA MISMO y descubrir qué grupo está siendo más rentable en las condiciones actuales.
     2. Si un Grupo (ej. Grupo 4) está logrando victorias repetidas bajo cierto RSI o Tendencia, ABSORBE esa estrategia dinámicamente y aplícala para esta decisión.
     3. Si ves que múltiples grupos están perdiendo bajo condiciones específicas recientes, tómalo como precaución pero NO como bloqueo absoluto.
-    4. DIRECTRIZ DE TRADER ACTIVO RENTABLE: Tu misión es ENCONTRAR OPORTUNIDADES REALES de ganancia. El usuario necesita entre 3-4 operaciones diarias con un Risk/Reward de 1:2 (pierde 1%, gana 2%). Con ese ratio, solo necesitas acertar el 35% de las veces para ser rentable. NO seas excesivamente conservador. Si hay una señal técnica clara (RSI extremo, volumen fuerte, tendencia definida), APRUEBA la operación. Solo rechaza (HOLD) si TODOS los indicadores están en contra simultáneamente.
+    4. DIRECTRIZ DE TRADER ACTIVO RENTABLE: Tu misión es ENCONTRAR OPORTUNIDADES REALES de ganancia. El usuario necesita entre 3-4 operaciones diarias en SPOT. NO seas excesivamente conservador. Si hay una señal técnica clara (RSI extremo, volumen fuerte, tendencia definida), APRUEBA la operación para BUY_LONG. Solo rechaza (HOLD) si TODOS los indicadores están en contra simultáneamente.
 
     EVALÚA LOS SIGUIENTES DATOS EN TIEMPO REAL PARA {symbol}:
     - Puntaje Técnico Cuantitativo Actual: {score} / 100 Pts
@@ -78,19 +78,19 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     - Sentimiento del Mercado (Fear & Greed): {fear_greed.get('score')} ({fear_greed.get('sentiment')})
     - Noticias al Minuto: {json.dumps(news_data.get('headlines', [])[:4])}
 
-    REGLAS DE DECISIÓN CON APRENDIZAJE HISTÓRICO Y EVENTOS EXTREMOS:
+    REGLAS DE DECISIÓN CON APRENDIZAJE HISTÓRICO Y EVENTOS EXTREMOS (MODO SPOT ONLY):
     1. Compara si el patrón actual imita un evento extremo histórico de desplome o pump de {symbol}.
     2. Extrae dinámicamente el perfil del "Grupo Más Rentable" de la tabla histórica. Si la operación actual encaja en su perfil ganador, APRUEBA.
     3. Extrae dinámicamente el perfil de los "Grupos Perdedores". Si la operación imita sus errores recientes, RECHAZA (HOLD).
     4. Si el historial de 4H muestra acumulación creciente de ballenas y volumen fuerte, cruzado con victorias en la tabla, APRUEBA para BUY_LONG.
-    5. Si imita una cascada de liquidación o distribución bajista que los grupos kamikazes ya sufrieron, APRUEBA para SELL_SHORT (si el mercado está cayendo) o HOLD.
+    5. ESTRICTAMENTE PROHIBIDO OPERAR EN SHORT. El usuario solo opera en mercado SPOT (LONG). Si el mercado se está desplomando y no hay oportunidades de rebote, la única acción válida es HOLD.
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON CON ESTA ESTRUCTURA EXACTA:
     {{
         "approved": true o false,
         "confidence": entero de 0 a 100,
-        "reasoning": "explicación concisa en español de 1 oración destacando el patrón histórico 5M, ballenas y noticias",
-        "action": "BUY_LONG" o "SELL_SHORT" o "HOLD"
+        "reasoning": "explicación concisa en español de 1 oración",
+        "action": "BUY_LONG" o "HOLD"
     }}
     """
     
@@ -221,13 +221,16 @@ def review_top_5_candidates(candidates_data_list, news_data, fear_greed, macro_c
     4. Si hay noticias de HACKEOS, DEMANDAS O BANS (FUD extremo) para un candidato, RECHÁZALO inmediatamente.
     5. ERES UN TRADER AGRESIVO PERO CALCULADOR. El usuario quiere ejecutar operaciones reales frecuentemente. Elige la moneda con la MEJOR ESTRUCTURA TÉCNICA E HISTÓRICA. Solo responde "NONE" si hay un crash catastrófico global.
 
+    ⚠️ REGLA CRÍTICA DE OPERACIÓN (SPOT ONLY): El usuario ha deshabilitado el mercado de Futuros. AHORA SOLO PODEMOS OPERAR EN SPOT (COMPRAR BARATO PARA VENDER CARO).
+    ESTÁ ESTRICTAMENTE PROHIBIDO SELECCIONAR "SELL_SHORT". TU ÚNICA OPCIÓN ES BUSCAR LA MEJOR OPORTUNIDAD PARA "BUY_LONG" O RESPONDER "NONE" SI TODO EL MERCADO ESTÁ COLAPSANDO.
+
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO:
     {{
-        "selected_symbol": "EL_SIMBOLO_GANADOR_EJ_BTCUSDT_O_NONE",
-        "approved": true,
-        "confidence": 95,
-        "reasoning": "explicación concisa en español de por qué ganó sobre los demás",
-        "action": "BUY_LONG"
+        "selected_symbol": "SIMBOLO" o "NONE",
+        "action": "BUY_LONG" o "HOLD",
+        "confidence": 0-100,
+        "approved": true o false,
+        "reasoning": "Tu explicación técnica..."
     }}
     """
 
