@@ -632,16 +632,17 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             "side": "LONG",
             "break_even": state.get("position", {}).get("break_even", False)
         }
-        state["status"] = f"🔵 En Vivo LONG ({active_asset}USDT @ ${active_current_price:.4f})"
+        price_fmt = lambda p: f"${p:.8f}" if p < 0.01 else f"${p:.4f}"
+        state["status"] = f"🔵 En Vivo LONG ({active_asset}USDT @ {price_fmt(active_current_price)})"
         
         # --- MONITOREO ACTIVO PRIORITARIO (CADA 5 MINUTOS) ---
         print("\n" + "="*65)
         print(f"📊 [SEGUIMIENTO DE POSICIÓN ACTIVA REAL - SPOT]")
-        print(f"🪙 Moneda: {active_symbol} | Cantidad: {active_qty:.4f} {active_asset}")
-        print(f"💵 Entrada: ${entry:.4f} USD | Precio Actual: ${active_current_price:.4f} USD")
-        print(f"📈 PnL Flotante: {pnl_pct:+.2f}% (${pnl_usd:+.2f} USD)")
-        print(f"🎯 Objetivo Take Profit (+2.0%): ${tp_target:.4f} USD")
-        print(f"🛡️ Límite Stop Loss ({'Break-Even +0.2%' if state['position'].get('break_even') else '-1.0%'}): ${sl_target:.4f} USD")
+        print(f"🪙 Moneda: {active_symbol} | Cantidad: {active_qty:,.2f} {active_asset}")
+        print(f"💵 Entrada: {price_fmt(entry)} USD | Precio Actual: {price_fmt(active_current_price)} USD")
+        print(f"📈 PnL Flotante: {pnl_pct:+.2f}% (${pnl_usd:+.4f} USD)")
+        print(f"🎯 Objetivo Take Profit (+2.0%): {price_fmt(tp_target)} USD")
+        print(f"🛡️ Límite Stop Loss ({'Break-Even +0.2%' if state['position'].get('break_even') else '-1.0%'}): {price_fmt(sl_target)} USD")
         print("="*65 + "\n")
         
         # Check for exit condition (Take Profit +2.0% or Stop Loss -1.0%)
