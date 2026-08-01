@@ -4,12 +4,12 @@ aliases: [Rendimiento 🔷 GRUPO 2: Moderado-Estricto]
 cssclasses: [dashboard-view]
 ---
 # 📊 Rendimiento por Periodos: 🔷 GRUPO 2: Moderado-Estricto
-> Última actualización: 2026-08-01 08:15:59
+> Última actualización: 2026-08-01 08:20:55
 
 | Periodo | Total Operaciones | ✅ Ganadoras | 💰 PnL Ganado | ❌ Perdedoras | 💸 PnL Perdido | 📈 Neto |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **1 Día (24h)** | 40 | 20 | +$94.00 | 20 | -$21.80 | **+$72.20** |
-| **3 Días** | 100 | 20 | +$94.00 | 80 | -$105.20 | **$-11.20** |
+| **3 Días** | 80 | 20 | +$94.00 | 60 | -$73.80 | **+$20.20** |
 | **1 Semana** | 120 | 20 | +$94.00 | 100 | -$137.20 | **$-43.20** |
 | **2 Semanas** | 120 | 20 | +$94.00 | 100 | -$137.20 | **$-43.20** |
 | **1 Mes (30d)** | 120 | 20 | +$94.00 | 100 | -$137.20 | **$-43.20** |
