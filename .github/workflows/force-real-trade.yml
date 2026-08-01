@@ -1,10 +1,6 @@
 name: Force Real Live Trade Override
 
 on:
-  push:
-    paths:
-      - 'force_real_trade.py'
-      - '.github/workflows/force-real-trade.yml'
   workflow_dispatch:
 
 jobs:

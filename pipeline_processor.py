@@ -509,6 +509,13 @@ def run_infinite_trading_matrix_cycle():
         except:
             pass
         
+        # Check if there is a top bullish Spot opportunity across all analyzed pairs
+        best_spot_long = None
+        long_candidates = [c for c in candidates_list if c["score"] >= real_long_score]
+        if long_candidates:
+            long_candidates.sort(key=lambda x: x["score"], reverse=True)
+            best_spot_long = long_candidates[0]
+            
         if is_ai_approved and ai_action == "BUY_LONG" and ai_symbol and ai_symbol != "NONE" and ai_price > 0:
             print(f"💰 [REAL] Señal ALCISTA Aprobada por IA ({ai_symbol} @ {ai_score} Pts, Conf={ai_confidence}%). Evaluando cuenta real...")
             api_connector.evaluate_and_trade_real_money(
@@ -518,9 +525,22 @@ def run_infinite_trading_matrix_cycle():
                 is_bearish=False,
                 is_learned_signal=True
             )
+        elif best_spot_long:
+            bs_sym = best_spot_long["symbol"]
+            bs_data = symbol_analysis_map.get(bs_sym, {})
+            bs_price = bs_data.get("price", 0)
+            bs_score = best_spot_long["score"]
+            print(f"🎯 [REAL SPOT] Oportunidad alcista independiente detectada ({bs_sym} @ {bs_score} Pts >= {real_long_score}). Evaluando cuenta real...")
+            api_connector.evaluate_and_trade_real_money(
+                best_symbol=bs_sym,
+                best_score=bs_score,
+                current_price=bs_price,
+                is_bearish=False,
+                is_learned_signal=False
+            )
         else:
             if ai_symbol:
-                print(f"🔒 [REAL] IA seleccionó {ai_symbol} pero acción={ai_action}, Approved={is_ai_approved}. Solo operaciones Spot (LONG) permitidas.")
+                print(f"🔒 [REAL] Mercado general bajista (Top={ai_symbol}, acción={ai_action}). Protegiendo capital Spot.")
             # Always run the trader to manage OPEN positions (check TP/SL), even if no new entry
             api_connector.evaluate_and_trade_real_money(
                 best_symbol=None, best_score=50, current_price=0.0, is_bearish=False

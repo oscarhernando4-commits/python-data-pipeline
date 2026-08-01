@@ -1,11 +1,8 @@
-name: Data Pipeline Cron
+name: 🤖 Quant Trading Engine (trigger_quant_trade)
 
 on:
-  schedule:
-    # Runs every 5 minutes 24/7 in GitHub Cloud (Public repo = unlimited quota)
-    - cron: '*/5 * * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI
-  repository_dispatch: # Allows instant external 5m pings from Cron-Job.org / UptimeRobot
+  repository_dispatch: # External 5m trigger from Cron-Job.org / UptimeRobot
     types: [trigger_quant_trade]
 
 concurrency:

@@ -1,9 +1,6 @@
 name: Verificacion Autonoma Nube
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:

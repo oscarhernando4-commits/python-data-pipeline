@@ -11,6 +11,11 @@ from urllib.parse import urlencode
 from datetime import datetime
 import random
 
+try:
+    sys.stdout.reconfigure(encoding='utf-8')
+except Exception:
+    pass
+
 # Dynamic Proxy Rotator for 24/7 Cloud Execution (7 Fixie EU West accounts, 3500 requests/month)
 # Ordered: Fresh accounts first, nearly-depleted account LAST
 FIXIE_POOL = [
