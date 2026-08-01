@@ -1,12 +1,51 @@
 {
-  "ZROUSDT": [
+  "GNOUSDT": [
     {
-      "timestamp": "2026-08-01 14:20:50",
-      "price": 0.735,
+      "timestamp": "2026-08-01 14:25:48",
+      "price": 105.03,
       "score": 15,
-      "rsi": 37.06,
+      "rsi": 45.29,
       "macd": "Neutral",
-      "volume_surge": 0.24,
+      "volume_surge": 0.17,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "TIAUSDT": [
+    {
+      "timestamp": "2026-08-01 14:25:48",
+      "price": 0.3286,
+      "score": 15,
+      "rsi": 46.67,
+      "macd": "Neutral",
+      "volume_surge": 0.32,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "MEGAUSDT": [
+    {
+      "timestamp": "2026-08-01 14:25:48",
+      "price": 0.03749,
+      "score": 25,
+      "rsi": 36.22,
+      "macd": "Neutral",
+      "volume_surge": 3.02,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "FLOWUSDT": [
+    {
+      "timestamp": "2026-08-01 14:25:48",
+      "price": 0.02941,
+      "score": 45,
+      "rsi": 42.75,
+      "macd": "Neutral",
+      "volume_surge": 0.18,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +53,12 @@
   ],
   "PENDLEUSDT": [
     {
-      "timestamp": "2026-08-01 14:20:50",
+      "timestamp": "2026-08-01 14:25:48",
       "price": 1.408,
       "score": 45,
       "rsi": 33.03,
       "macd": "Neutral",
-      "volume_surge": 0.12,
+      "volume_surge": 0.24,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -27,12 +66,12 @@
   ],
   "LUNCUSDT": [
     {
-      "timestamp": "2026-08-01 14:20:51",
-      "price": 4.956e-05,
-      "score": 60,
-      "rsi": 50.64,
+      "timestamp": "2026-08-01 14:25:48",
+      "price": 4.948e-05,
+      "score": 15,
+      "rsi": 46.73,
       "macd": "Neutral",
-      "volume_surge": 0.11,
+      "volume_surge": 0.25,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
