@@ -4,27 +4,27 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-08-01 16:57:03
+date: 2026-08-01 18:32:56
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-08-01 16:57:03`  
+> **Última Actualización:** `2026-08-01 18:32:56`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `467`
-- **Ganadas (WIN):** `103` | **Perdidas (LOSS):** `364`
-- **Tasa de Acierto (Win Rate):** `22.06%`
-- **PnL Total Neto:** `$-149.50 USD`
+- **Total Operaciones:** `487`
+- **Ganadas (WIN):** `103` | **Perdidas (LOSS):** `384`
+- **Tasa de Acierto (Win Rate):** `21.15%`
+- **PnL Total Neto:** `$-171.50 USD`
 
 ---
 
 ## 🧭 Sesgo de Aprendizaje Automático (Últimos 100 Trades)
 - **Sesgo Actual (Market Bias):** `NEUTRAL`
-- **Rendimiento LONG (Compras):** `25.0%` de Acierto (en 240 ops recientes)
+- **Rendimiento LONG (Compras):** `23.1%` de Acierto (en 260 ops recientes)
 - **Rendimiento SHORT (Ventas):** `18.3%` de Acierto (en 224 ops recientes)
 - 🏆 **Grupo de IA Más Rentable:** `CUENTA REAL` (WinRate: 50.0%, PnL: $0.16)
 - *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada. Y el Dinero Real copiará automáticamente al Grupo Más Rentable.
@@ -33,7 +33,6 @@ date: 2026-08-01 16:57:03
 
 ## 🛑 Reglas de Bloqueo de Fracasos (Filtros Anti-Pérdida)
 *Estas condiciones han sido aprendidas tras fallos y BLOQUEAN automáticamente futuras operaciones de riesgo:*
-- 🛑 High impact news within 30 mins (Block Trade)
 - 🛑 Volume surge < 1.1x average during trend reversals (Block Fakeouts)
 - 🛑 Preventive Block for LTCUSDT: Loss logged at 46.03 -> Hit SL on LTCUSDT (-$1.60). Re-Trading!
 - 🛑 Preventive Block for BTCUSDT: Loss logged at 63662.44 -> Hit SL on BTCUSDT (-$1.65). Re-Trading!
@@ -53,6 +52,7 @@ date: 2026-08-01 16:57:03
 - 🛑 BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on EULUSDT)
 - 🛑 BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on TRXUSDT)
 - 🛑 BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GRAMUSDT)
+- 🛑 BLOCK LONG when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BTCUSDT)
 
 ---
 
@@ -75,14 +75,14 @@ date: 2026-08-01 16:57:03
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-08-01 16:57:03 | GRAMUSDT | LONG | `$1.389` | `$1.391` | `$-1.11` | 🔴 LOSS |
-| 2026-08-01 16:57:03 | GRAMUSDT | LONG | `$1.389` | `$1.391` | `$-1.11` | 🔴 LOSS |
-| 2026-08-01 16:57:03 | GRAMUSDT | LONG | `$1.389` | `$1.391` | `$-1.11` | 🔴 LOSS |
-| 2026-08-01 16:57:03 | GRAMUSDT | LONG | `$1.389` | `$1.391` | `$-1.11` | 🔴 LOSS |
-| 2026-08-01 16:57:03 | GRAMUSDT | LONG | `$1.389` | `$1.391` | `$-1.11` | 🔴 LOSS |
-| 2026-08-01 16:57:03 | GRAMUSDT | LONG | `$1.389` | `$1.391` | `$-1.11` | 🔴 LOSS |
-| 2026-08-01 16:57:03 | GRAMUSDT | LONG | `$1.389` | `$1.391` | `$-1.11` | 🔴 LOSS |
-| 2026-08-01 16:57:03 | GRAMUSDT | LONG | `$1.389` | `$1.391` | `$-1.11` | 🔴 LOSS |
-| 2026-08-01 16:57:03 | GRAMUSDT | LONG | `$1.389` | `$1.391` | `$-1.11` | 🔴 LOSS |
-| 2026-08-01 16:57:03 | GRAMUSDT | LONG | `$1.389` | `$1.391` | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
+| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
+| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
+| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
+| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
+| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
+| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
+| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
+| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
+| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
 
