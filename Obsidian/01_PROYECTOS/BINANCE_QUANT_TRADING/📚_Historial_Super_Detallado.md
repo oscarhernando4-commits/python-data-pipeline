@@ -3,12 +3,12 @@ tags:
   - trading
   - historial_completo
   - binance
-date: 2026-08-01 14:21:20
+date: 2026-08-01 14:40:58
 ---
 
 # 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
 
-> **Última Actualización:** `2026-08-01 14:21:20`
+> **Última Actualización:** `2026-08-01 14:40:58`
 > Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
 
 | Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |
@@ -400,4 +400,24 @@ date: 2026-08-01 14:21:20
 | 2026-08-01 14:21:20 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9269 | $0.9639 | $-1.04 | 40 | 84.3 | NEUTRAL | 🔴 LOSS |
 | 2026-08-01 14:21:20 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9269 | $0.9639 | $-1.04 | 40 | 84.3 | NEUTRAL | 🔴 LOSS |
 | 2026-08-01 14:21:20 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9269 | $0.9639 | $-1.04 | 40 | 84.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 14:40:58 | 🔷 GRUPO 2: Mode... | EULUSDT | SHORT | $1.658 | $1.669 | $-1.03 | 40 | 77.1 | NEUTRAL | 🔴 LOSS |
 

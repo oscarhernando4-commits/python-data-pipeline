@@ -2,12 +2,12 @@
 tags:
   - analisis_grupos
   - trading
-date: 2026-08-01 14:35:56
+date: 2026-08-01 14:40:58
 ---
 
 # 📊 ANÁLISIS GLOBAL DE GANANCIAS Y PÉRDIDAS POR GRUPO
 
-> **Última Actualización:** `2026-08-01 14:35:56`
+> **Última Actualización:** `2026-08-01 14:40:58`
 > Este reporte desglosa el rendimiento matemático de cada Estrategia de IA. 
 
 ## 🏆 Resumen de Rendimiento (Ranking de Grupos)
@@ -20,7 +20,7 @@ date: 2026-08-01 14:35:56
 | **CUENTA REAL** | 4 | `50.0%` | $+0.00 | $+0.16 | **$+0.16** |
 | **🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)** | 4 | `25.0%` | $-1.10 | $+0.14 | **$-0.96** |
 | **🔥 GRUPO 5: Exploratorio de Máxima Frecuencia** | 19 | `0.0%` | $-20.90 | $+0.00 | **$-20.90** |
-| **🔷 GRUPO 2: Moderado-Estricto** | 200 | `10.0%` | $-21.40 | $-106.40 | **$-127.80** |
+| **🔷 GRUPO 2: Moderado-Estricto** | 220 | `9.1%` | $-21.40 | $-127.00 | **$-148.40** |
 
 ---
 
@@ -267,6 +267,26 @@ date: 2026-08-01 14:35:56
 
 | Fecha | Par | Lado | Precio Entrada | Precio Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | **EULUSDT** | SHORT | $1.658 | $1.669 | `$-1.03` | 🔴 LOSS |
 | 2026-08-01 14:21:20 | **EPICUSDT** | SHORT | $0.9269 | $0.9639 | `$-1.04` | 🔴 LOSS |
 | 2026-08-01 14:21:20 | **EPICUSDT** | SHORT | $0.9269 | $0.9639 | `$-1.04` | 🔴 LOSS |
 | 2026-08-01 14:21:20 | **EPICUSDT** | SHORT | $0.9269 | $0.9639 | `$-1.04` | 🔴 LOSS |

@@ -4,28 +4,28 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-08-01 14:21:20
+date: 2026-08-01 14:40:58
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-08-01 14:21:20`  
+> **Última Actualización:** `2026-08-01 14:40:58`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `387`
-- **Ganadas (WIN):** `103` | **Perdidas (LOSS):** `284`
-- **Tasa de Acierto (Win Rate):** `26.61%`
-- **PnL Total Neto:** `$-61.90 USD`
+- **Total Operaciones:** `407`
+- **Ganadas (WIN):** `103` | **Perdidas (LOSS):** `304`
+- **Tasa de Acierto (Win Rate):** `25.31%`
+- **PnL Total Neto:** `$-82.50 USD`
 
 ---
 
 ## 🧭 Sesgo de Aprendizaje Automático (Últimos 100 Trades)
 - **Sesgo Actual (Market Bias):** `NEUTRAL`
 - **Rendimiento LONG (Compras):** `30.0%` de Acierto (en 200 ops recientes)
-- **Rendimiento SHORT (Ventas):** `22.3%` de Acierto (en 184 ops recientes)
+- **Rendimiento SHORT (Ventas):** `20.1%` de Acierto (en 204 ops recientes)
 - 🏆 **Grupo de IA Más Rentable:** `⚡ GRUPO 4: Frecuencia Alta` (WinRate: 50.0%, PnL: $60.8)
 - *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada. Y el Dinero Real copiará automáticamente al Grupo Más Rentable.
 
@@ -50,6 +50,7 @@ date: 2026-08-01 14:21:20
 - 🛑 BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ARBUSDT)
 - 🛑 BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on EPICUSDT)
 - 🛑 BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on EPICUSDT)
+- 🛑 BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on EULUSDT)
 
 ---
 
@@ -72,14 +73,14 @@ date: 2026-08-01 14:21:20
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
-| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
-| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
-| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
-| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
-| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
-| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
-| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
-| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
-| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
 
