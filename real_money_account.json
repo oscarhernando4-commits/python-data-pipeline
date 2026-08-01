@@ -6,14 +6,20 @@
   "wins": 3,
   "losses": 1,
   "trades_count": 4,
-  "position": null,
-  "last_trade_time": "26-08-01<br>04:11",
-  "status": "🟦 Buscando Entrada A+",
+  "position": {
+    "symbol": "UNIUSDT",
+    "entry_price": 4.263,
+    "cost_usd": 8.85,
+    "side": "LONG",
+    "quantity": 2.05
+  },
+  "last_trade_time": "26-08-01<br>04:18",
+  "status": "🔵 En Vivo LONG (UNIUSDT)",
   "daily_wins": 2,
   "daily_losses": 0,
-  "_cached_total_val": 11.82,
-  "_cached_usdt_free": 9.0898,
-  "_cached_bnb": 0.00474819,
-  "_cached_bnb_usd": 2.73,
+  "_cached_total_val": 20.34,
+  "_cached_usdt_free": 17.6323,
+  "_cached_bnb": 0.00471541,
+  "_cached_bnb_usd": 2.71,
   "last_trading_day": "2026-08-01"
 }
