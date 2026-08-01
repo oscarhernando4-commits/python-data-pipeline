@@ -1,26 +1,19 @@
 {
   "initial_deposit_usdt": 17.13,
   "initial_total_usd": 20.08,
-  "current_balance_usd": 17.33,
-  "net_pnl_usd": -2.74,
-  "wins": 1,
+  "current_balance_usd": 17.51,
+  "net_pnl_usd": -2.56,
+  "wins": 2,
   "losses": 1,
-  "trades_count": 2,
-  "position": {
-    "symbol": "ZECUSDT",
-    "quantity": 0.018,
-    "entry_price": 456.15,
-    "cost_usd": 8.35,
-    "side": "LONG",
-    "break_even": true
-  },
-  "last_trade_time": "26-08-01<br>03:56",
-  "status": "🔵 En Vivo LONG (ZECUSDT @ $463.9500)",
-  "daily_wins": 0,
-  "daily_losses": 1,
+  "trades_count": 3,
+  "position": null,
+  "last_trade_time": "26-08-01<br>04:03",
+  "status": "🟦 Buscando Entrada A+",
+  "daily_wins": 1,
+  "daily_losses": 0,
   "_cached_total_val": 11.82,
   "_cached_usdt_free": 9.0898,
   "_cached_bnb": 0.00474819,
   "_cached_bnb_usd": 2.73,
-  "last_trading_day": "2026-07-30"
+  "last_trading_day": "2026-08-01"
 }

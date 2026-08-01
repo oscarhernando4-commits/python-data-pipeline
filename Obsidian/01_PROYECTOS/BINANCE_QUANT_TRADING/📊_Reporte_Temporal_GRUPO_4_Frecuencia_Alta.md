@@ -4,12 +4,12 @@ aliases: [Rendimiento ⚡ GRUPO 4: Frecuencia Alta]
 cssclasses: [dashboard-view]
 ---
 # 📊 Rendimiento por Periodos: ⚡ GRUPO 4: Frecuencia Alta
-> Última actualización: 2026-08-01 03:56:58
+> Última actualización: 2026-08-01 04:03:04
 
 | Periodo | Total Operaciones | ✅ Ganadoras | 💰 PnL Ganado | ❌ Perdedoras | 💸 PnL Perdido | 📈 Neto |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **1 Día (24h)** | 0 | 0 | +$0.00 | 0 | -$0.00 | **$0.00** |
-| **3 Días** | 80 | 40 | +$116.80 | 40 | -$56.00 | **+$60.80** |
+| **3 Días** | 60 | 20 | +$58.80 | 40 | -$56.00 | **+$2.80** |
 | **1 Semana** | 80 | 40 | +$116.80 | 40 | -$56.00 | **+$60.80** |
 | **2 Semanas** | 80 | 40 | +$116.80 | 40 | -$56.00 | **+$60.80** |
 | **1 Mes (30d)** | 80 | 40 | +$116.80 | 40 | -$56.00 | **+$60.80** |

@@ -4,12 +4,12 @@ aliases: [Rendimiento 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)]
 cssclasses: [dashboard-view]
 ---
 # 📊 Rendimiento por Periodos: 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)
-> Última actualización: 2026-08-01 03:56:58
+> Última actualización: 2026-08-01 04:03:04
 
 | Periodo | Total Operaciones | ✅ Ganadoras | 💰 PnL Ganado | ❌ Perdedoras | 💸 PnL Perdido | 📈 Neto |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **1 Día (24h)** | 1 | 0 | +$0.00 | 1 | -$1.10 | **$-1.10** |
-| **3 Días** | 4 | 1 | +$2.90 | 3 | -$3.86 | **$-0.96** |
+| **3 Días** | 3 | 0 | +$0.00 | 3 | -$3.86 | **$-3.86** |
 | **1 Semana** | 4 | 1 | +$2.90 | 3 | -$3.86 | **$-0.96** |
 | **2 Semanas** | 4 | 1 | +$2.90 | 3 | -$3.86 | **$-0.96** |
 | **1 Mes (30d)** | 4 | 1 | +$2.90 | 3 | -$3.86 | **$-0.96** |

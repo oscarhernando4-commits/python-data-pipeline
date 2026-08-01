@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 304,
-    "wins": 101,
+    "total_trades": 305,
+    "wins": 102,
     "losses": 203,
-    "win_rate_pct": 33.22,
-    "total_pnl_usd": 22.478145454545402
+    "win_rate_pct": 33.44,
+    "total_pnl_usd": 22.655265454545404
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -4691,6 +4691,19 @@
         "rsi_15m": 69.48,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-01 04:03:07",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "ZECUSDT",
+      "side": "BUY",
+      "entry_price": 456.15,
+      "exit_price": 465.99,
+      "pnl_usd": 0.17712000000000055,
+      "result": "WIN",
+      "notes": "Real Money Trade closed with 2.16%",
+      "context": {}
     }
   ]
 }
