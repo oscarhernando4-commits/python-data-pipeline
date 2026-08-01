@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-08-01 21:52:55
+date: 2026-08-01 22:04:02
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-08-01 21:52:55`  
+> **Última Actualización:** `2026-08-01 22:04:02`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -53,7 +53,7 @@ date: 2026-08-01 21:52:55
 ## 💰 4. INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS)
 
 > [!TIP] 🏦 ESTADO DE LA CUENTA REAL
-> - 💵 **Balance Real Actual:** `$20.23 USD` (`+3.10 USD`)
+> - 💵 **Balance Real Actual:** `$20.16 USD` (`+3.03 USD`)
 > - 🪙 **Posición Activa:** `ASTERUSDT`
 > - 🎯 **Estado Operativo:** `🔵 En Vivo LONG (ASTERUSDT @ $0.6000)`
 
