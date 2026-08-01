@@ -1,6 +1,6 @@
 # Reporte Temporal: ⚡ GRUPO 4: Frecuencia Alta
 
-> Actualizado: 2026-08-01 21:27:10
+> Actualizado: 2026-08-01 21:33:18
 
 | Ventana de Tiempo | Total Operaciones | Ganadoras | Perdedoras | Win Rate | PnL Neto |
 | :--- | :--- | :--- | :--- | :--- | :--- |
