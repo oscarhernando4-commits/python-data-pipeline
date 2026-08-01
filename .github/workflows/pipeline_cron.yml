@@ -7,11 +7,12 @@ on:
 
 concurrency:
   group: "quant-trader-bot"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   trade_and_sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 4
     permissions:
       contents: write
 
@@ -25,11 +26,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-          cache: 'pip'
 
-      - name: 📦 Install Requirements
+      - name: 📦 Install Requirements Fast
         run: |
-          python -m pip install --upgrade pip
           pip install requests numpy pandas ta urllib3
       - name: 🚀 Execute 100-Account Live Matrix & Dynamic Market Rotation
         env:

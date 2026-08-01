@@ -194,7 +194,7 @@ def run_infinite_trading_matrix_cycle():
             print(f"Error fetching live data for {s}: {e}")
             return s, None
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=35) as executor:
         future_to_symbol = {executor.submit(analyze_symbol, s): s for s in TOP_PAIRS}
         for future in concurrent.futures.as_completed(future_to_symbol):
             s = future_to_symbol[future]
