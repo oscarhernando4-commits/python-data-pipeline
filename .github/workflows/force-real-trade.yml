@@ -3,10 +3,6 @@ name: ⚡ Manual Spot Trade Cycle Override
 on:
   workflow_dispatch:
 
-concurrency:
-  group: "quant-trader-bot"
-  cancel-in-progress: true
-
 jobs:
   execute_force_trade:
     runs-on: ubuntu-latest
