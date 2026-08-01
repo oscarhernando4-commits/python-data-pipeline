@@ -1,14 +1,20 @@
-name: 🤖 Quant Trading Engine (trigger_quant_trade)
+name: 🤖 Quant Trading Engine (6-Hour Continuous Runner)
 
 on:
-  workflow_dispatch: # Allows manual trigger from GitHub UI
-  repository_dispatch: # External 5m trigger from Cron-Job.org / UptimeRobot
-    types: [trigger_quant_trade]
+  workflow_dispatch: # Allows manual trigger from GitHub UI anytime
+  schedule:
+    - cron: '0 */5 * * *' # Native GitHub Cron: Starts a fresh 5.5-hour worker every 5 hours
+  repository_dispatch:
+    types: [trigger_quant_trade] # External trigger from Cron-Job.org / UptimeRobot (set to 5 hours)
+
+concurrency:
+  group: "continuous-quant-engine"
+  cancel-in-progress: true # When a fresh 5.5h cycle starts, it cleanly replaces the previous one
 
 jobs:
-  trade_and_sync:
+  continuous_trade_and_sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 4
+    timeout-minutes: 350 # 5 hours 50 minutes hard limit
     permissions:
       contents: write
 
@@ -26,24 +32,12 @@ jobs:
       - name: 📦 Install Requirements Fast
         run: |
           pip install requests numpy pandas ta urllib3
-      - name: 🚀 Execute 100-Account Live Matrix & Dynamic Market Rotation
+
+      - name: 🚀 Execute 6-Hour Continuous Quant Trading Loop (Every 5m)
         env:
           BINANCE_REAL_API_KEY: ${{ secrets.BINANCE_REAL_API_KEY }}
           BINANCE_REAL_API_SECRET: ${{ secrets.BINANCE_REAL_API_SECRET }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           CMC_API_KEY: ${{ secrets.CMC_API_KEY }}
         run: |
-          python data_fetcher.py
-          python pipeline_processor.py
-          
-      - name: 💾 Commit & Push Real-Time Matrix Updates
-        run: |
-          git config --global user.name 'antigravity-bot[bot]'
-          git config --global user.email 'antigravity-bot[bot]@users.noreply.github.com'
-          for i in 1 2 3; do
-            git fetch origin main || true
-            git reset --soft origin/main || true
-            git add .
-            git commit -m "chore: pipeline data sync [$(date -u +'%Y-%m-%d %H:%M:%S UTC')]" || break
-            git push origin main && break || sleep 3
-          done
+          python cloud_continuous_loop.py

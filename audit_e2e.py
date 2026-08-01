@@ -110,9 +110,15 @@ if os.path.exists(wf_path):
     with open(wf_path, "r", encoding="utf-8") as f:
         wf_code = f.read()
     test("Disparador trigger_quant_trade activo", "trigger_quant_trade" in wf_code)
-    test("Cron interno schedule eliminado (previene colisiones)", "schedule:" not in wf_code)
+    test("Runner continuo cloud_continuous_loop.py configurado", "cloud_continuous_loop.py" in wf_code)
     test("Secret BINANCE_REAL_API_KEY inyectado", "BINANCE_REAL_API_KEY" in wf_code)
-    test("Mitigación de conflictos git integrada", "git reset --soft" in wf_code or "git pull" in wf_code)
+    
+    loop_exists = os.path.exists("cloud_continuous_loop.py")
+    test("cloud_continuous_loop.py existe", loop_exists)
+    if loop_exists:
+        with open("cloud_continuous_loop.py", "r", encoding="utf-8") as f:
+            loop_code = f.read()
+        test("Mitigación de conflictos git integrada en el loop continuo", "--soft" in loop_code)
 
 # 9. INTEGRIDAD DE REPORTES OBSIDIAN
 print("\n[9/10] REPORTES EN OBSIDIAN (Rutas relativas y legibilidad)")
