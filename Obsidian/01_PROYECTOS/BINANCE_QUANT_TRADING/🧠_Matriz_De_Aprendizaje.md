@@ -4,21 +4,21 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-08-01 20:15:50
+date: 2026-08-01 22:05:20
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-08-01 20:15:50`  
+> **Última Actualización:** `2026-08-01 22:05:20`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `284`
-- **Ganadas (WIN):** `81` | **Perdidas (LOSS):** `203`
-- **Tasa de Acierto (Win Rate):** `28.52%`
-- **PnL Total Neto:** `$-71.52 USD`
+- **Total Operaciones:** `285`
+- **Ganadas (WIN):** `81` | **Perdidas (LOSS):** `204`
+- **Tasa de Acierto (Win Rate):** `28.42%`
+- **PnL Total Neto:** `$-71.55 USD`
 
 ---
 
@@ -69,8 +69,8 @@ date: 2026-08-01 20:15:50
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-01 22:05:20 | ASTERUSDT | BUY | `$0.601` | `$0.6` | `$-0.03` | 🔴 LOSS |
 | 2026-08-01 20:15:50 | BANKUSDT | SHORT | `$0.0533` | `$0.0534` | `$-1.09` | 🔴 LOSS |
-| 2026-08-01 20:00:50 | DEXEUSDT | SHORT | `$2.392` | `$2.394` | `$-1.09` | 🔴 LOSS |
 | 2026-08-01 20:00:50 | DEXEUSDT | SHORT | `$2.392` | `$2.394` | `$-1.09` | 🔴 LOSS |
 | 2026-08-01 20:00:50 | DEXEUSDT | SHORT | `$2.392` | `$2.394` | `$-1.09` | 🔴 LOSS |
 | 2026-08-01 20:00:50 | DEXEUSDT | SHORT | `$2.392` | `$2.394` | `$-1.09` | 🔴 LOSS |
