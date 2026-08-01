@@ -2,12 +2,12 @@
 tags:
   - analisis_grupos
   - trading
-date: 2026-08-01 12:55:48
+date: 2026-08-01 13:00:54
 ---
 
 # 📊 ANÁLISIS GLOBAL DE GANANCIAS Y PÉRDIDAS POR GRUPO
 
-> **Última Actualización:** `2026-08-01 12:55:48`
+> **Última Actualización:** `2026-08-01 13:00:54`
 > Este reporte desglosa el rendimiento matemático de cada Estrategia de IA. 
 
 ## 🏆 Resumen de Rendimiento (Ranking de Grupos)
@@ -20,7 +20,7 @@ date: 2026-08-01 12:55:48
 | **CUENTA REAL** | 4 | `50.0%` | $+0.00 | $+0.16 | **$+0.16** |
 | **🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)** | 4 | `25.0%` | $-1.10 | $+0.14 | **$-0.96** |
 | **🔥 GRUPO 5: Exploratorio de Máxima Frecuencia** | 19 | `0.0%` | $-20.90 | $+0.00 | **$-20.90** |
-| **🔷 GRUPO 2: Moderado-Estricto** | 160 | `12.5%` | $-21.40 | $-64.60 | **$-86.00** |
+| **🔷 GRUPO 2: Moderado-Estricto** | 180 | `11.1%` | $-21.40 | $-85.60 | **$-107.00** |
 
 ---
 
@@ -267,6 +267,26 @@ date: 2026-08-01 12:55:48
 
 | Fecha | Par | Lado | Precio Entrada | Precio Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 13:00:52 | **EPICUSDT** | SHORT | $0.912 | $0.9403 | `$-1.05` | 🔴 LOSS |
 | 2026-08-01 12:47:39 | **EPICUSDT** | SHORT | $0.9198 | $0.9299 | `$-1.06` | 🔴 LOSS |
 | 2026-08-01 12:47:39 | **EPICUSDT** | SHORT | $0.9198 | $0.9299 | `$-1.06` | 🔴 LOSS |
 | 2026-08-01 12:47:39 | **EPICUSDT** | SHORT | $0.9198 | $0.9299 | `$-1.06` | 🔴 LOSS |
