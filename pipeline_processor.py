@@ -509,6 +509,20 @@ def run_infinite_trading_matrix_cycle():
         except:
             pass
         
+        # --- BITCOIN (BTC) MASTER REGIME & CORRELATION GATEKEEPER ---
+        btc_data = symbol_analysis_map.get("BTCUSDT", {})
+        btc_score = btc_data.get("score", 50)
+        btc_rsi = btc_data.get("tech", {}).get("indicators", {}).get("rsi_15m", 50.0)
+        btc_trend = btc_data.get("tech", {}).get("macro_trend_4h", "NEUTRAL")
+        btc_price = btc_data.get("price", 0.0)
+        
+        # Determine BTC Health State
+        is_btc_bearish = btc_score < 45 or btc_rsi < 45.0 or btc_trend == "DOWNTREND"
+        is_btc_strong = btc_score >= 55 and btc_rsi >= 50.0
+        
+        btc_status_str = f"BTC @ ${btc_price:,.2f} (Score={btc_score}, RSI={btc_rsi:.1f}, Trend={btc_trend})"
+        print(f"🪙 [GUARDIÁN BITCOIN] Estado Macro: {btc_status_str}")
+        
         # Check if there is a top bullish Spot opportunity across all analyzed pairs
         best_spot_long = None
         long_candidates = [c for c in candidates_list if c["score"] >= real_long_score]
@@ -517,27 +531,38 @@ def run_infinite_trading_matrix_cycle():
             best_spot_long = long_candidates[0]
             
         if is_ai_approved and ai_action == "BUY_LONG" and ai_symbol and ai_symbol != "NONE" and ai_price > 0:
-            print(f"💰 [REAL] Señal ALCISTA Aprobada por IA ({ai_symbol} @ {ai_score} Pts, Conf={ai_confidence}%). Evaluando cuenta real...")
-            api_connector.evaluate_and_trade_real_money(
-                best_symbol=ai_symbol,
-                best_score=ai_score,
-                current_price=ai_price,
-                is_bearish=False,
-                is_learned_signal=True
-            )
+            # Check BTC correlation if trading an Altcoin
+            if ai_symbol != "BTCUSDT" and is_btc_bearish and ai_confidence < 85:
+                print(f"🛡️ [FILTRO CORRELACIÓN BTC] Entrada LONG bloqueada en {ai_symbol}. Bitcoin bajista ({btc_status_str}). Protegiendo capital.")
+                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
+            else:
+                print(f"💰 [REAL] Señal ALCISTA Aprobada por IA ({ai_symbol} @ {ai_score} Pts, Conf={ai_confidence}%). Evaluando cuenta real...")
+                api_connector.evaluate_and_trade_real_money(
+                    best_symbol=ai_symbol,
+                    best_score=ai_score,
+                    current_price=ai_price,
+                    is_bearish=False,
+                    is_learned_signal=True
+                )
         elif best_spot_long:
             bs_sym = best_spot_long["symbol"]
             bs_data = symbol_analysis_map.get(bs_sym, {})
             bs_price = bs_data.get("price", 0)
             bs_score = best_spot_long["score"]
-            print(f"🎯 [REAL SPOT] Oportunidad alcista independiente detectada ({bs_sym} @ {bs_score} Pts >= {real_long_score}). Evaluando cuenta real...")
-            api_connector.evaluate_and_trade_real_money(
-                best_symbol=bs_sym,
-                best_score=bs_score,
-                current_price=bs_price,
-                is_bearish=False,
-                is_learned_signal=False
-            )
+            
+            # Check BTC correlation if trading an Altcoin
+            if bs_sym != "BTCUSDT" and is_btc_bearish:
+                print(f"🛡️ [FILTRO CORRELACIÓN BTC] Oportunidad {bs_sym} ({bs_score} Pts) bloqueada porque Bitcoin está bajista ({btc_status_str}). Protegiendo capital.")
+                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
+            else:
+                print(f"🎯 [REAL SPOT] Oportunidad alcista independiente detectada ({bs_sym} @ {bs_score} Pts >= {real_long_score}). Evaluando cuenta real...")
+                api_connector.evaluate_and_trade_real_money(
+                    best_symbol=bs_sym,
+                    best_score=bs_score,
+                    current_price=bs_price,
+                    is_bearish=False,
+                    is_learned_signal=False
+                )
         else:
             if ai_symbol:
                 print(f"🔒 [REAL] Mercado general bajista (Top={ai_symbol}, acción={ai_action}). Protegiendo capital Spot.")

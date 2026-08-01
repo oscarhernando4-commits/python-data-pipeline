@@ -10,6 +10,7 @@
     "blocked_patterns": [
       "High impact news within 30 mins (Block Trade)",
       "Volume surge < 1.1x average during trend reversals (Block Fakeouts)",
+      "BLOCK ALTCOIN LONGS when BTC is Bearish / Dumping (BTC Score < 45 or BTC RSI < 45)",
       "Preventive Block for LTCUSDT: Loss logged at 46.03 -> Hit SL on LTCUSDT (-$1.60). Re-Trading!",
       "Preventive Block for BTCUSDT: Loss logged at 63662.44 -> Hit SL on BTCUSDT (-$1.65). Re-Trading!",
       "Preventive Block for NEARUSDT: Loss logged at 1.609 -> Hit SL on NEARUSDT (-$1.57). Re-Trading!",
