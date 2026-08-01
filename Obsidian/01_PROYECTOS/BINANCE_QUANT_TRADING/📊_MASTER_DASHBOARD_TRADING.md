@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-08-01 16:17:11
+date: 2026-08-01 16:20:49
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-08-01 16:17:11`  
+> **Última Actualización:** `2026-08-01 16:20:49`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -55,7 +55,7 @@ date: 2026-08-01 16:17:11
 > [!TIP] 🏦 ESTADO DE LA CUENTA REAL
 > - 💵 **Balance Real Actual:** `$17.56 USD` (`-2.51 USD`)
 > - 🪙 **Posición Activa:** `RLUSDUSDT`
-> - 🎯 **Estado Operativo:** `🔵 En Vivo LONG (RLUSDUSDT @ $1.0011)`
+> - 🎯 **Estado Operativo:** `🔵 En Vivo LONG (RLUSDUSDT @ $1.0012)`
 
 ---
 
@@ -63,11 +63,11 @@ date: 2026-08-01 16:17:11
 
 | Criptomoneda | Balance Actual | Ganancia | Estado |
 | :--- | :--- | :--- | :--- |
-| **TRXUSDT** | `$101.91 USD` | `$+1.91 USD` | 🔵 En Operación |
-| **TRXUSDT** | `$101.91 USD` | `$+1.91 USD` | 🔵 En Operación |
-| **TRXUSDT** | `$101.91 USD` | `$+1.91 USD` | 🔵 En Operación |
-| **TRXUSDT** | `$101.91 USD` | `$+1.91 USD` | 🔵 En Operación |
-| **TRXUSDT** | `$101.91 USD` | `$+1.91 USD` | 🔵 En Operación |
+| **BTCUSDT** | `$101.91 USD` | `$+1.91 USD` | 🔵 En Operación |
+| **BTCUSDT** | `$101.91 USD` | `$+1.91 USD` | 🔵 En Operación |
+| **BTCUSDT** | `$101.91 USD` | `$+1.91 USD` | 🔵 En Operación |
+| **BTCUSDT** | `$101.91 USD` | `$+1.91 USD` | 🔵 En Operación |
+| **BTCUSDT** | `$101.91 USD` | `$+1.91 USD` | 🔵 En Operación |
 
 
 ---
