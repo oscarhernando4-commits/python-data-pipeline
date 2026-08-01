@@ -658,14 +658,14 @@ def sync_live_matrix_obsidian(matrix):
         import api_connector
         real_st = api_connector.load_real_account_state()
         
-        # SMART PROXY SAVER: Only run full wallet diagnosis from Binance API every 1 HOUR
-        # (at minute 0-4 of each hour) to conserve Fixie proxy requests (24 req/day).
+        # SMART PROXY SAVER: Run full wallet diagnosis from Binance API every 30 MINUTES
+        # (at minute 0-4 and 30-34 of each hour) to keep wallet data fresh while safely within Fixie quota (48 req/day).
         # Orders (buy/sell) always use proxy instantly regardless of this timer.
         now = datetime.now()
-        is_sync_window = now.minute in [0, 1, 2, 3, 4]
+        is_sync_window = (now.minute in [0, 1, 2, 3, 4]) or (now.minute in [30, 31, 32, 33, 34])
         
         if is_sync_window:
-            print("🔄 [SYNC HOURLY] Ejecutando diagnóstico completo de billetera Spot desde Binance API (Fixie Proxy)...")
+            print("🔄 [SYNC 30M] Ejecutando diagnóstico completo de billetera Spot desde Binance API (Fixie Proxy)...")
             real_st = api_connector.diagnose_full_spot_wallet()
             real_total_val = real_st.get("_cached_total_val", real_st.get("current_balance_usd", 0.0))
             real_usdt_free = real_st.get("_cached_usdt_free", 0.0)
@@ -677,7 +677,7 @@ def sync_live_matrix_obsidian(matrix):
             real_usdt_free = real_st.get("_cached_usdt_free", 0.0)
             real_bnb = real_st.get("_cached_bnb", 0.0)
             real_bnb_usd = real_st.get("_cached_bnb_usd", 0.0)
-            print(f"💤 [CACHE] Usando balance cacheado (${real_total_val:.2f}). Diagnóstico API cada 1 hora.")
+            print(f"💤 [CACHE] Usando balance cacheado (${real_total_val:.2f}). Diagnóstico API cada 30 minutos.")
     except Exception as e:
         print(f"Error cargando datos reales en matrix sync: {e}")
         # Usamos los datos guardados en state si la API falla

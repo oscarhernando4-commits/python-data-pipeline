@@ -270,8 +270,8 @@ def execute_real_spot_market_sell(symbol, quantity=None):
 
 def diagnose_full_spot_wallet():
     """
-    HOURLY COMPREHENSIVE SPOT WALLET DIAGNOSIS (via Fixie Proxy).
-    Runs once every hour to conserve Fixie proxy requests (24 req/day).
+    30-MINUTE COMPREHENSIVE SPOT WALLET DIAGNOSIS (via Fixie Proxy).
+    Runs every 30 minutes to conserve Fixie proxy requests (~48 req/day).
     - Inspects ALL assets held in Spot (USDT, BNB, and active cryptos).
     - Computes exact USD value for every coin.
     - Auto-detects and adopts active positions (> $5 USD) to ensure Take Profit (+2%) / Stop Loss.
@@ -299,7 +299,7 @@ def diagnose_full_spot_wallet():
     }
     
     print("\n" + "="*60)
-    print("🔍 [DIAGNÓSTICO INTEGRAL DE BILLETERA SPOT (FIXIE HOURLY)]")
+    print("🔍 [DIAGNÓSTICO INTEGRAL DE BILLETERA SPOT (FIXIE 30-MIN)]")
     print("="*60)
     
     for b in balances:
@@ -618,22 +618,34 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             active_current_price = current_price  # Fallback
             
         est_val = active_qty * active_current_price
+        entry = state["position"].get("entry_price", active_current_price)
+        pnl_pct = ((active_current_price - entry) / entry) * 100.0 if entry > 0 else 0.0
+        pnl_usd = (active_current_price - entry) * active_qty
+        tp_target = entry * 1.02
+        sl_target = entry * 1.002 if state["position"].get("break_even", False) else entry * 0.99
         
         state["position"] = {
             "symbol": active_symbol,
             "quantity": active_qty,
-            "entry_price": state.get("position", {}).get("entry_price", active_current_price),
+            "entry_price": entry,
             "cost_usd": round(est_val, 2),
             "side": "LONG",
             "break_even": state.get("position", {}).get("break_even", False)
         }
         state["status"] = f"🔵 En Vivo LONG ({active_asset}USDT @ ${active_current_price:.4f})"
         
+        # --- MONITOREO ACTIVO PRIORITARIO (CADA 5 MINUTOS) ---
+        print("\n" + "="*65)
+        print(f"📊 [SEGUIMIENTO DE POSICIÓN ACTIVA REAL - SPOT]")
+        print(f"🪙 Moneda: {active_symbol} | Cantidad: {active_qty:.4f} {active_asset}")
+        print(f"💵 Entrada: ${entry:.4f} USD | Precio Actual: ${active_current_price:.4f} USD")
+        print(f"📈 PnL Flotante: {pnl_pct:+.2f}% (${pnl_usd:+.2f} USD)")
+        print(f"🎯 Objetivo Take Profit (+2.0%): ${tp_target:.4f} USD")
+        print(f"🛡️ Límite Stop Loss ({'Break-Even +0.2%' if state['position'].get('break_even') else '-1.0%'}): ${sl_target:.4f} USD")
+        print("="*65 + "\n")
+        
         # Check for exit condition (Take Profit +2.0% or Stop Loss -1.0%)
-        entry = state["position"].get("entry_price", active_current_price)
         if entry and entry > 0:
-            pnl_pct = ((active_current_price - entry) / entry) * 100.0
-            
             # --- ESCUDO REAL: BREAK-EVEN DINÁMICO ---
             if pnl_pct >= 1.0 and not state["position"].get("break_even", False):
                 state["position"]["break_even"] = True
