@@ -3,12 +3,12 @@ tags:
   - trading
   - historial_completo
   - binance
-date: 2026-08-01 12:25:46
+date: 2026-08-01 12:47:39
 ---
 
 # 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
 
-> **Última Actualización:** `2026-08-01 12:25:46`
+> **Última Actualización:** `2026-08-01 12:47:39`
 > Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
 
 | Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |
@@ -340,4 +340,24 @@ date: 2026-08-01 12:25:46
 | 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
 | 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
 | 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:47:39 | 🔷 GRUPO 2: Mode... | EPICUSDT | SHORT | $0.9198 | $0.9299 | $-1.06 | 40 | 88.3 | NEUTRAL | 🔴 LOSS |
 
