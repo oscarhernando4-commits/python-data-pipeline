@@ -1,28 +1,28 @@
 {
-  "PYTHUSDT": [
+  "TIAUSDT": [
     {
-      "timestamp": "2026-08-01 08:00:59",
-      "price": 0.03927,
+      "timestamp": "2026-08-01 08:05:40",
+      "price": 0.3268,
+      "score": 60,
+      "rsi": 59.7,
+      "macd": "Neutral",
+      "volume_surge": 1.27,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-01 08:05:40",
+      "price": 0.0853,
       "score": 15,
-      "rsi": 32.59,
+      "rsi": 40.37,
       "macd": "Neutral",
-      "volume_surge": 0.01,
+      "volume_surge": 0.16,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}"CRVUSDT": [
-    {
-      "timestamp": "2026-08-01 08:00:59",
-      "price": 0.2067,
-      "score": 40,
-      "rsi": 31.85,
-      "macd": "Neutral",
-      "volume_surge": 0.08,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ]
-}}
+}
