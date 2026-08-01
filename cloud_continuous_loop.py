@@ -1,6 +1,6 @@
 """
-Continuous 6-Hour Cloud Quant Trading Loop
-Runs autonomously in GitHub Actions for 5.5 hours (66 cycles x 5 minutes).
+Continuous 4-Hour Cloud Quant Trading Loop
+Runs autonomously in GitHub Actions for 4.1 hours (50 cycles x 5 minutes).
 Eliminates runner queue delays by keeping a single virtual machine active.
 """
 
@@ -10,7 +10,7 @@ import subprocess
 import sys
 from datetime import datetime
 
-TOTAL_CYCLES = 66       # 66 cycles * 5 minutes = 330 minutes (5.5 hours)
+TOTAL_CYCLES = 50       # 50 cycles * 5 minutes = 250 minutes (~4.1 hours)
 SLEEP_SECONDS = 300     # 5 minutes exact interval between analysis cycles
 
 def run_git_push_sync(cycle_num: int):
