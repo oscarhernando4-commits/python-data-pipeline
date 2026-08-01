@@ -6,14 +6,21 @@
   "wins": 1,
   "losses": 2,
   "trades_count": 3,
-  "position": null,
-  "last_trade_time": "26-08-01<br>22:47",
-  "status": "🟦 Buscando Entrada A+",
+  "position": {
+    "symbol": "XECUSDT",
+    "quantity": 2619760.0,
+    "entry_price": 6.69e-06,
+    "cost_usd": 17.53,
+    "side": "LONG",
+    "break_even": false
+  },
+  "last_trade_time": "26-08-01<br>23:03",
+  "status": "🔵 En Vivo LONG (XECUSDT @ $0.0000)",
   "daily_wins": 0,
   "daily_losses": 1,
   "_cached_total_val": 20.16,
-  "_cached_usdt_free": 17.51,
-  "_cached_bnb": 0.00459569,
-  "_cached_bnb_usd": 2.65,
+  "_cached_usdt_free": 0.0112,
+  "_cached_bnb": 0.00455336,
+  "_cached_bnb_usd": 2.62,
   "last_trading_day": "2026-08-01"
 }
