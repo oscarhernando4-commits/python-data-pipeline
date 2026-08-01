@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-08-01 14:18:35
+date: 2026-08-01 14:21:20
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-08-01 14:18:35`  
+> **Última Actualización:** `2026-08-01 14:21:20`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -22,10 +22,10 @@ date: 2026-08-01 14:18:35
 
 | Métrica | Valor Actual | ¿Qué Significa? |
 | :--- | :--- | :--- |
-| 💵 **Capital Total (Fondo $10k):** | **`$9,958.74 USD`** | Balance de las 100 cuentas de prueba |
-| 💰 **Ganancia Neta Total:** | **`$-41.26 USD`** | Resultado global acumulado |
+| 💵 **Capital Total (Fondo $10k):** | **`$9,937.94 USD`** | Balance de las 100 cuentas de prueba |
+| 💰 **Ganancia Neta Total:** | **`$-62.06 USD`** | Resultado global acumulado |
 | 🎯 **Cuentas que cumplieron la meta:** | **`20 de 100 Cuentas`** | Cuentas que alcanzaron el +3% esta semana |
-| 📈 **Tasa de Acierto de la IA:** | **`27.82% Win Rate`** | Efectividad actual de las estrategias |
+| 📈 **Tasa de Acierto de la IA:** | **`26.37% Win Rate`** | Efectividad actual de las estrategias |
 
 ---
 
@@ -33,7 +33,7 @@ date: 2026-08-01 14:18:35
 
 > [!WARNING] 🧠 IA SENTINEL REGLA DE PRIORIDAD: `NEUTRAL`
 > - 🟢 **Rendimiento Compras (LONG):** `30.0%` de Acierto
-> - 🔴 **Rendimiento Ventas (SHORT):** `25.0%` de Acierto
+> - 🔴 **Rendimiento Ventas (SHORT):** `22.3%` de Acierto
 > - **Acción de la IA:** El bot está inyectando esta data en tiempo real a Gemini. Si la tendencia muestra pérdidas en LONG y ganancias en SHORT, **Gemini bloqueará operaciones LONG** priorizando el flujo ganador del mercado para el dinero real.
 
 ---
@@ -45,7 +45,7 @@ date: 2026-08-01 14:18:35
 > 
 > - 💵 **Capital Base (Promedio):** `$100.00 USD`
 > - 🎯 **Meta Semanal (Promedio):** `$103.00 USD`
-> - 💰 **Capital Promedio Actual:** `$99.59 USD`
+> - 💰 **Capital Promedio Actual:** `$99.38 USD`
 > - 🟡 **Estado:** `🟡 EN PROCESO - Buscando el +3% de ganancia en operaciones filtradas`
 
 ---
@@ -79,7 +79,7 @@ date: 2026-08-01 14:18:35
 | :--- | :---: | :---: |
 | **0 (Copia Real)** | `25.0%` | `$-0.96` |
 | **1 (Ultra-Estricto)** | `50.0%` | `$+17.00` |
-| **Grupo 2** | `11.1%` | `$-107.00` |
+| **Grupo 2** | `10.0%` | `$-127.80` |
 | **Grupo 3** | `50.0%` | `$+9.80` |
 | **Grupo 4** | `50.0%` | `$+60.80` |
 | **5 (Exploratorio)** | `0.0%` | `$-20.90` |

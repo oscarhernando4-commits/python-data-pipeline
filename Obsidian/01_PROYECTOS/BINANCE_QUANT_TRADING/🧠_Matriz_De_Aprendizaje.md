@@ -4,28 +4,28 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-08-01 13:00:52
+date: 2026-08-01 14:21:20
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-08-01 13:00:52`  
+> **Última Actualización:** `2026-08-01 14:21:20`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `367`
-- **Ganadas (WIN):** `103` | **Perdidas (LOSS):** `264`
-- **Tasa de Acierto (Win Rate):** `28.07%`
-- **PnL Total Neto:** `$-41.10 USD`
+- **Total Operaciones:** `387`
+- **Ganadas (WIN):** `103` | **Perdidas (LOSS):** `284`
+- **Tasa de Acierto (Win Rate):** `26.61%`
+- **PnL Total Neto:** `$-61.90 USD`
 
 ---
 
 ## 🧭 Sesgo de Aprendizaje Automático (Últimos 100 Trades)
 - **Sesgo Actual (Market Bias):** `NEUTRAL`
 - **Rendimiento LONG (Compras):** `30.0%` de Acierto (en 200 ops recientes)
-- **Rendimiento SHORT (Ventas):** `25.0%` de Acierto (en 164 ops recientes)
+- **Rendimiento SHORT (Ventas):** `22.3%` de Acierto (en 184 ops recientes)
 - 🏆 **Grupo de IA Más Rentable:** `⚡ GRUPO 4: Frecuencia Alta` (WinRate: 50.0%, PnL: $60.8)
 - *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada. Y el Dinero Real copiará automáticamente al Grupo Más Rentable.
 
@@ -72,14 +72,14 @@ date: 2026-08-01 13:00:52
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-08-01 13:00:52 | EPICUSDT | SHORT | `$0.912` | `$0.9403` | `$-1.05` | 🔴 LOSS |
-| 2026-08-01 13:00:52 | EPICUSDT | SHORT | `$0.912` | `$0.9403` | `$-1.05` | 🔴 LOSS |
-| 2026-08-01 13:00:52 | EPICUSDT | SHORT | `$0.912` | `$0.9403` | `$-1.05` | 🔴 LOSS |
-| 2026-08-01 13:00:52 | EPICUSDT | SHORT | `$0.912` | `$0.9403` | `$-1.05` | 🔴 LOSS |
-| 2026-08-01 13:00:52 | EPICUSDT | SHORT | `$0.912` | `$0.9403` | `$-1.05` | 🔴 LOSS |
-| 2026-08-01 13:00:52 | EPICUSDT | SHORT | `$0.912` | `$0.9403` | `$-1.05` | 🔴 LOSS |
-| 2026-08-01 13:00:52 | EPICUSDT | SHORT | `$0.912` | `$0.9403` | `$-1.05` | 🔴 LOSS |
-| 2026-08-01 13:00:52 | EPICUSDT | SHORT | `$0.912` | `$0.9403` | `$-1.05` | 🔴 LOSS |
-| 2026-08-01 13:00:52 | EPICUSDT | SHORT | `$0.912` | `$0.9403` | `$-1.05` | 🔴 LOSS |
-| 2026-08-01 13:00:52 | EPICUSDT | SHORT | `$0.912` | `$0.9403` | `$-1.05` | 🔴 LOSS |
+| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
+| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
+| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
+| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
+| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
+| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
+| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
+| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
+| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
+| 2026-08-01 14:21:20 | EPICUSDT | SHORT | `$0.9269` | `$0.9639` | `$-1.04` | 🔴 LOSS |
 
