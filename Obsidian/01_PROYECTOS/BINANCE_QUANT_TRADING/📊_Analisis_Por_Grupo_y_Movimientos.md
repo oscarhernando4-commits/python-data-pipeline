@@ -2,12 +2,12 @@
 tags:
   - analisis_grupos
   - trading
-date: 2026-08-01 19:55:48
+date: 2026-08-01 20:00:53
 ---
 
 # 📊 ANÁLISIS GLOBAL DE GANANCIAS Y PÉRDIDAS POR GRUPO
 
-> **Última Actualización:** `2026-08-01 19:55:48`
+> **Última Actualización:** `2026-08-01 20:00:53`
 > Este reporte desglosa el rendimiento matemático de cada Estrategia de IA. 
 
 ## 🏆 Resumen de Rendimiento (Ranking de Grupos)
@@ -19,7 +19,7 @@ date: 2026-08-01 19:55:48
 | **⚖️ GRUPO 3: Balanceado** | 40 | `50.0%` | $+9.80 | $+0.00 | **$+9.80** |
 | **CUENTA REAL** | 1 | `0.0%` | $+0.00 | $-0.06 | **$-0.06** |
 | **🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)** | 4 | `25.0%` | $-1.10 | $+0.14 | **$-0.96** |
-| **🔥 GRUPO 5: Exploratorio de Máxima Frecuencia** | 19 | `0.0%` | $-20.90 | $+0.00 | **$-20.90** |
+| **🔥 GRUPO 5: Exploratorio de Máxima Frecuencia** | 38 | `0.0%` | $-20.90 | $-20.71 | **$-41.61** |
 | **🔷 GRUPO 2: Moderado-Estricto** | 80 | `0.0%` | $-115.40 | $+0.00 | **$-115.40** |
 
 ---
@@ -233,10 +233,29 @@ date: 2026-08-01 19:55:48
 
 ### 🔥 GRUPO 5: Exploratorio de Máxima Frecuencia
 
-> **Mejor Par Operado:** `BTCUSDT ($-20.90)`
+> **Mejor Par Operado:** `DEXEUSDT ($-20.71)`
 
 | Fecha | Par | Lado | Precio Entrada | Precio Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:00:50 | **DEXEUSDT** | SHORT | $2.392 | $2.394 | `$-1.09` | 🔴 LOSS |
 | 2026-07-29 17:56:21 | **BTCUSDT** | LONG | $63920.0 | $63938.95 | `$-1.10` | 🔴 LOSS |
 | 2026-07-29 17:56:21 | **BTCUSDT** | LONG | $63920.0 | $63938.95 | `$-1.10` | 🔴 LOSS |
 | 2026-07-29 17:56:21 | **BTCUSDT** | LONG | $63920.0 | $63938.95 | `$-1.10` | 🔴 LOSS |

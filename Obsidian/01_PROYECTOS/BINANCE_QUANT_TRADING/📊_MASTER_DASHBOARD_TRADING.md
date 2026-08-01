@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-08-01 19:55:48
+date: 2026-08-01 20:00:52
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-08-01 19:55:48`  
+> **Última Actualización:** `2026-08-01 20:00:52`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -22,10 +22,10 @@ date: 2026-08-01 19:55:48
 
 | Métrica | Valor Actual | ¿Qué Significa? |
 | :--- | :--- | :--- |
-| 💵 **Capital Total (Fondo $10k):** | **`$9,950.34 USD`** | Balance de las 100 cuentas de prueba |
-| 💰 **Ganancia Neta Total:** | **`$-49.66 USD`** | Resultado global acumulado |
+| 💵 **Capital Total (Fondo $10k):** | **`$9,929.63 USD`** | Balance de las 100 cuentas de prueba |
+| 💰 **Ganancia Neta Total:** | **`$-70.37 USD`** | Resultado global acumulado |
 | 🎯 **Cuentas que cumplieron la meta:** | **`20 de 100 Cuentas`** | Cuentas que alcanzaron el +3% esta semana |
-| 📈 **Tasa de Acierto de la IA:** | **`30.8% Win Rate`** | Efectividad actual de las estrategias |
+| 📈 **Tasa de Acierto de la IA:** | **`28.72% Win Rate`** | Efectividad actual de las estrategias |
 
 ---
 
@@ -33,7 +33,7 @@ date: 2026-08-01 19:55:48
 
 > [!WARNING] 🧠 IA SENTINEL REGLA DE PRIORIDAD: `FAVOR_SHORT`
 > - 🟢 **Rendimiento Compras (LONG):** `22.2%` de Acierto
-> - 🔴 **Rendimiento Ventas (SHORT):** `48.8%` de Acierto
+> - 🔴 **Rendimiento Ventas (SHORT):** `39.8%` de Acierto
 > - **Acción de la IA:** El bot está inyectando esta data en tiempo real a Gemini. Si la tendencia muestra pérdidas en LONG y ganancias en SHORT, **Gemini bloqueará operaciones LONG** priorizando el flujo ganador del mercado para el dinero real.
 
 ---
@@ -45,7 +45,7 @@ date: 2026-08-01 19:55:48
 > 
 > - 💵 **Capital Base (Promedio):** `$100.00 USD`
 > - 🎯 **Meta Semanal (Promedio):** `$103.00 USD`
-> - 💰 **Capital Promedio Actual:** `$99.50 USD`
+> - 💰 **Capital Promedio Actual:** `$99.30 USD`
 > - 🟡 **Estado:** `🟡 EN PROCESO - Buscando el +3% de ganancia en operaciones filtradas`
 
 ---
@@ -53,7 +53,7 @@ date: 2026-08-01 19:55:48
 ## 💰 4. INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS)
 
 > [!TIP] 🏦 ESTADO DE LA CUENTA REAL
-> - 💵 **Balance Real Actual:** `$20.22 USD` (`+3.09 USD`)
+> - 💵 **Balance Real Actual:** `$20.23 USD` (`+3.10 USD`)
 > - 🪙 **Posición Activa:** `Ninguna (Buscando)`
 > - 🎯 **Estado Operativo:** `🟦 Buscando Entrada A+`
 
@@ -82,7 +82,7 @@ date: 2026-08-01 19:55:48
 | **Grupo 2** | `0.0%` | `$-115.40` |
 | **Grupo 3** | `50.0%` | `$+9.80` |
 | **Grupo 4** | `50.0%` | `$+60.80` |
-| **5 (Exploratorio)** | `0.0%` | `$-20.90` |
+| **5 (Exploratorio)** | `0.0%` | `$-41.61` |
 
 
 ---

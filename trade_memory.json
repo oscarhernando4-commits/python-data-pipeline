@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 264,
+    "total_trades": 283,
     "wins": 81,
-    "losses": 183,
-    "win_rate_pct": 30.68,
-    "total_pnl_usd": -49.72185454545457
+    "losses": 202,
+    "win_rate_pct": 28.62,
+    "total_pnl_usd": -70.43185454545463
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -20,7 +20,8 @@
       "Preventive Block for BTCUSDT: Loss logged at 64594.65 -> Hit SL on BTCUSDT (-$1.12). Re-Trading!",
       "Preventive Block for XRPUSDT: Loss logged at 1.0736 -> Hit SL on XRPUSDT (-$1.05). Re-Trading!",
       "Preventive Block for BTCUSDT: Loss logged at 63920.0 -> Hit SL on BTCUSDT (-$1.10). Re-Trading!",
-      "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BTCUSDT)"
+      "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BTCUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DEXEUSDT)"
     ],
     "boosted_patterns": [
       "RSI < 30 + MACD Bullish Cross + Volume > 1.5x (High Probability Win)",
@@ -4007,6 +4008,329 @@
       "context": {
         "score": 40,
         "rsi_15m": 30.04,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-081",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-082",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-083",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-084",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-085",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-086",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-087",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-088",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-089",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-090",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-091",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-092",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-093",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-094",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-095",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-096",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-098",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:00:50",
+      "account_id": "SIM-099",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 2.392,
+      "exit_price": 2.394,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$1.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.76,
         "macro_trend_4h": "NEUTRAL"
       }
     }
