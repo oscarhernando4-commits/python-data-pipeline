@@ -169,23 +169,23 @@ def get_symbol_price(symbol, is_futures=False):
 # ============================================================
 
 def execute_real_spot_market_buy(symbol, usdt_amount):
+    """
+    Executes a SPOT MARKET BUY using 100% of available USDT.
+    Amount is strictly truncated to 1 decimal place rounded down (floor).
+    """
     timestamp = int(time.time() * 1000)
-    clean_usd = int(usdt_amount * 0.99 * 100) / 100.0
+    import math
+    clean_usd = math.floor(float(usdt_amount) * 10) / 10.0
     
-    # Ensure minimum notional value
+    # Ensure minimum notional value (Binance requires >= $5.0 USD)
     if clean_usd < 5.1:
-        return {"error": "MIN_NOTIONAL not met"}
-        
-    # Auto-transfer from Futures back to Spot if necessary
-    f_balance = get_real_futures_usdt_balance()
-    if f_balance > 1.0:
-        transfer_usdt(f_balance - 0.1, to_futures=False)
+        return {"error": f"MIN_NOTIONAL not met (${clean_usd:.1f} < $5.10)"}
         
     params = {
         "symbol": symbol,
         "side": "BUY",
         "type": "MARKET",
-        "quoteOrderQty": f"{clean_usd:.2f}",
+        "quoteOrderQty": f"{clean_usd:.1f}",
         "timestamp": timestamp
     }
     query_string = urlencode(params)
@@ -199,6 +199,114 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
         return res.json()
     except Exception as e:
         return {"error": str(e)}
+
+def diagnose_full_spot_wallet():
+    """
+    HOURLY COMPREHENSIVE SPOT WALLET DIAGNOSIS (via Fixie Proxy).
+    Runs once every hour to conserve Fixie proxy requests (24 req/day).
+    - Inspects ALL assets held in Spot (USDT, BNB, and active cryptos).
+    - Computes exact USD value for every coin.
+    - Auto-detects and adopts active positions (> $5 USD) to ensure Take Profit (+2%) / Stop Loss.
+    - Auto-clears positions if coin was manually sold/converted.
+    - Updates real_money_account.json state.
+    """
+    state = load_real_account_state()
+    balances = get_real_balances()
+    if not balances:
+        print("⚠️ [DIAGNÓSTICO] No se pudieron obtener los balances desde Binance API.")
+        return state
+        
+    usdt_free = 0.0
+    bnb_free = 0.0
+    bnb_usd = 0.0
+    total_wallet_usd = 0.0
+    crypto_holdings = []
+    
+    # Fetch BNB price for fee shield calculation
+    bnb_price = get_symbol_price("BNBUSDT", is_futures=False) or 575.0
+    
+    stablecoin_set = {
+        "USDT", "USDC", "FDUSD", "TUSD", "BUSD", "DAI", "USDD", "USDE", "RLUSD", "USD1",
+        "EUR", "AEUR", "WBTC", "TBTC", "USDS", "USTC", "FRAX", "PYUSD", "USD0", "SNDKB", "SNDK", "USD"
+    }
+    
+    print("\n" + "="*60)
+    print("🔍 [DIAGNÓSTICO INTEGRAL DE BILLETERA SPOT (FIXIE HOURLY)]")
+    print("="*60)
+    
+    for b in balances:
+        asset = b.get("asset", "")
+        free_qty = float(b.get("free", 0))
+        locked_qty = float(b.get("locked", 0))
+        total_qty = free_qty + locked_qty
+        
+        if total_qty <= 0.000001:
+            continue
+            
+        if asset == "USDT":
+            usdt_free = free_qty
+            total_wallet_usd += free_qty
+            print(f"  💵 USDT Disponible: ${free_qty:.4f} USDT")
+        elif asset == "BNB":
+            bnb_free = free_qty
+            bnb_usd = free_qty * bnb_price
+            total_wallet_usd += bnb_usd
+            print(f"  🟡 BNB Escudo Comisiones: {free_qty:.6f} BNB (~${bnb_usd:.2f} USD @ ${bnb_price:.2f})")
+        else:
+            # Other crypto asset: calculate USD value
+            sym = f"{asset}USDT"
+            c_price = get_symbol_price(sym, is_futures=False) or 0.0
+            usd_val = total_qty * c_price
+            if usd_val >= 0.5:  # Only show non-dust assets
+                total_wallet_usd += usd_val
+                crypto_holdings.append({
+                    "asset": asset,
+                    "symbol": sym,
+                    "quantity": free_qty,
+                    "price": c_price,
+                    "usd_value": round(usd_val, 2),
+                    "is_stable": asset in stablecoin_set
+                })
+                print(f"  🪙 {asset}: {free_qty:.4f} @ ${c_price:.4f} = ${usd_val:.2f} USD")
+                
+    print(f"  💰 SALDO TOTAL NETO EN CUENTA: ${total_wallet_usd:.2f} USD")
+    print("="*60 + "\n")
+    
+    # Auto-adoption or clearance of active positions
+    current_pos = state.get("position")
+    significant_cryptos = [c for c in crypto_holdings if c["usd_value"] >= 5.0 and not c["is_stable"]]
+    
+    if significant_cryptos:
+        primary = significant_cryptos[0]
+        if not current_pos or current_pos.get("symbol") != primary["symbol"]:
+            state["position"] = {
+                "symbol": primary["symbol"],
+                "quantity": primary["quantity"],
+                "entry_price": primary["price"],
+                "cost_usd": primary["usd_value"],
+                "side": "LONG",
+                "break_even": False
+            }
+            state["status"] = f"🔵 En Vivo LONG ({primary['symbol']} @ ${primary['price']:.4f})"
+            print(f"🎯 [AUTO-ADOPCIÓN] Posición en {primary['symbol']} adoptada automáticamente para gestión de Take Profit (+2%) / Stop Loss.")
+    else:
+        # If we thought we had a position but no non-stable crypto >= $4 USD exists in wallet
+        if current_pos and current_pos.get("side") == "LONG":
+            held_sym = current_pos.get("symbol", "").replace("USDT", "")
+            is_still_held = any(c["asset"] == held_sym and c["usd_value"] >= 4.0 for c in crypto_holdings)
+            if not is_still_held:
+                print(f"🧹 [AUTO-LIMPIEZA] La posición {current_pos.get('symbol')} ya no existe en Binance Spot (vendida/convertida). Estado liberado a 'Buscando'.")
+                state["position"] = None
+                state["status"] = "🟦 Buscando Entrada A+"
+                
+    state["_cached_total_val"] = round(total_wallet_usd, 2)
+    state["_cached_usdt_free"] = round(usdt_free, 4)
+    state["_cached_bnb"] = bnb_free
+    state["_cached_bnb_usd"] = round(bnb_usd, 2)
+    state["current_balance_usd"] = round(total_wallet_usd, 2)
+    state["net_pnl_usd"] = round(total_wallet_usd - state.get("initial_deposit_usdt", 17.13), 2)
+    save_real_account_state(state)
+    return state
 
 def transfer_usdt(amount, to_futures=True):
     """
@@ -398,30 +506,27 @@ def execute_real_futures_market_close(symbol, quantity):
 
 def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bearish=False, is_learned_signal=False):
     state = load_real_account_state()
+    import math
     
     # Null guard on current_price
     if not current_price or current_price <= 0:
         current_price = 1.0
     
-    # FIXIE OPTIMIZATION: We rely on local JSON state for balances 
-    # to avoid burning Fixie Proxy requests every 5 minutes.
-    # Split 50/50 between Spot (LONG) and Futures (SHORT) as user confirmed
-    usdt_free = state.get("current_balance_usd", 17.15) / 2.0
-    futures_usdt_free = state.get("current_balance_usd", 17.15) / 2.0
+    # 100% OF AVAILABLE USDT CAPITAL (SPOT ONLY)
+    # Strictly truncated to 1 decimal place rounded down (floor)
+    raw_usdt = state.get("_cached_usdt_free", state.get("current_balance_usd", 17.29))
+    usdt_free = math.floor(float(raw_usdt) * 10) / 10.0
     
     crypto_balances = []
-    futures_positions = []
     
-    # Hydrate crypto_balances and futures_positions from local state
+    # Hydrate crypto_balances from local state
     if state.get("position"):
         pos = state["position"]
         qty = pos.get("quantity", pos.get("cost_usd", 10.0) / max(pos.get("entry_price", 1.0), 0.0001))
         if pos.get("side") == "LONG":
             crypto_balances = [{"asset": pos["symbol"].replace("USDT", ""), "free": qty}]
-        elif pos.get("side") == "SHORT":
-            futures_positions = [{"symbol": pos["symbol"], "positionAmt": -qty, "entryPrice": pos.get("entry_price", 1.0)}]
     
-    # --- LEARNING ENGINE INTEGRATION (Bug #8 fix) ---
+    # --- LEARNING ENGINE INTEGRATION ---
     market_bias = None
     try:
         import learning_engine
@@ -432,13 +537,6 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
     now_str = datetime.now().strftime("%y-%m-%d<br>%H:%M")
     
     # ========================================
-    # CASE 0: API ERROR - Abort Cycle
-    # ========================================
-    if crypto_balances is None or futures_positions is None:
-        print("⚠️ Binance API error: Could not fetch real balances/positions. Aborting cycle to protect state.")
-        return state
-        
-    # ========================================
     # CASE 1: We have an active LONG position
     # ========================================
     if crypto_balances:
@@ -446,7 +544,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         active_qty = float(crypto_balances[0]["free"])
         active_symbol = f"{active_asset}USDT"
         
-        # FIX Bug #4: Fetch ACTUAL price of the held asset, not the new prospect
+        # Fetch live price of the held asset
         active_current_price = get_symbol_price(active_symbol, is_futures=False)
         if not active_current_price:
             active_current_price = current_price  # Fallback
@@ -479,7 +577,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 reason_str = f"Ganancia Asegurada (+{pnl_pct:.2f}%)" if pnl_pct >= 2.0 or state["position"].get("break_even", False) else f"Stop Loss ({pnl_pct:.2f}%)"
                 print(f"🎯 ALERTA REAL: Salida LONG por {reason_str} en {active_symbol}. Vendiendo...")
                 
-                # Fetch exact precision from Spot exchangeInfo
+                # Fetch exact LOT_SIZE filter from Spot exchangeInfo
+                step_size = 1.0
                 qty_precision = 0
                 try:
                     exinfo = requests.get(f"{BASE_URL}/api/v3/exchangeInfo?symbol={active_symbol}", proxies=PROXIES, timeout=5).json()
@@ -487,18 +586,23 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         if s["symbol"] == active_symbol:
                             for f in s.get("filters", []):
                                 if f["filterType"] == "LOT_SIZE":
-                                    step = float(f["stepSize"])
-                                    import math
-                                    qty_precision = max(0, int(round(-math.log10(step))))
+                                    step_size = float(f["stepSize"])
+                                    if step_size < 1.0:
+                                        qty_precision = max(0, int(round(-math.log10(step_size))))
+                                    else:
+                                        qty_precision = 0
                                     break
                 except Exception as e:
-                    print(f"Error fetching precision, defaulting to 2. {e}")
+                    print(f"Error fetching precision, defaulting: {e}")
                     qty_precision = 2
+                    step_size = 0.01
                     
-                if qty_precision == 0:
-                    qty_str = str(int(active_qty))
+                if step_size < 1.0 and qty_precision > 0:
+                    quantized_qty = math.floor(active_qty / step_size) * step_size
+                    qty_str = f"{quantized_qty:.{qty_precision}f}"
                 else:
-                    qty_str = f"{active_qty:.{qty_precision}f}"
+                    qty_str = str(int(math.floor(active_qty)))
+                    
                 sell_params = {
                     "symbol": active_symbol,
                     "side": "SELL",
@@ -513,7 +617,6 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 try:
                     res = requests.post(f"{BASE_URL}/api/v3/order", headers=headers, params=sell_params, proxies=PROXIES, timeout=10)
                     if res.status_code == 200:
-                        # FIX Bug #4: Use active_current_price, not current_price
                         pnl_usd = (active_current_price - entry) * active_qty
                         
                         # Update daily counters
@@ -523,7 +626,6 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                             state["daily_losses"] = 0
                             state["last_trading_day"] = today_str
                         
-                        # FIX Bug #3: Win threshold matches TP threshold (>= 2.0, not >= 3.0)
                         if pnl_usd > 0:
                             state["wins"] = state.get("wins", 0) + 1
                             state["daily_wins"] = state.get("daily_wins", 0) + 1
@@ -534,6 +636,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                             res_type = "LOSS"
                             
                         state["current_balance_usd"] = state.get("current_balance_usd", 20.07) + pnl_usd
+                        state["_cached_usdt_free"] = state["current_balance_usd"]
                         state["trades_count"] = state.get("trades_count", 0) + 1
                             
                         try:
@@ -555,186 +658,64 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     print(f"Error ejecutando venta real: {e}")
                     
     # ========================================
-    # CASE 2: We have an active SHORT position
-    # ========================================
-    elif futures_positions:
-        active_pos = futures_positions[0]
-        active_symbol = active_pos["symbol"]
-        
-        # FIX Bug #4: Fetch ACTUAL price of the held SHORT asset
-        active_current_price = get_symbol_price(active_symbol, is_futures=True)
-        if not active_current_price:
-            active_current_price = current_price  # Fallback
-            
-        active_qty = abs(float(active_pos["positionAmt"]))
-        entry = float(active_pos["entryPrice"])
-        est_val = active_qty * active_current_price
-        
-        state["position"] = {
-            "symbol": active_symbol,
-            "quantity": active_qty,
-            "entry_price": entry,
-            "cost_usd": round(est_val, 2),
-            "side": "SHORT"
-        }
-        
-        # PnL logic for SHORT: If current price drops, pnl is positive
-        if entry and entry > 0:
-            pnl_pct = ((entry - active_current_price) / entry) * 100.0
-            
-            state["status"] = f"🔻 En Vivo SHORT ({active_symbol} @ ${active_current_price:.4f} | PnL: {pnl_pct:+.2f}%)"
-            
-            # FIX Bug #6: SOFTWARE-SIDE SHORT EXIT MONITORING
-            # If SL/TP native orders failed (Bug #2), we close via software
-            if pnl_pct >= 2.0 or pnl_pct <= -1.0:
-                reason = f"TP alcanzado (+{pnl_pct:.2f}%)" if pnl_pct >= 2.0 else f"SL alcanzado ({pnl_pct:.2f}%)"
-                print(f"🎯 ALERTA REAL: Cierre SHORT por {reason} en {active_symbol}. Cerrando posición...")
-                close_res = execute_real_futures_market_close(active_symbol, active_qty)
-                if close_res.get("orderId"):
-                    pnl_usd = (entry - active_current_price) * active_qty
-                    
-                    today_str = datetime.now().strftime("%Y-%m-%d")
-                    if state.get("last_trading_day") != today_str:
-                        state["daily_wins"] = 0
-                        state["daily_losses"] = 0
-                        state["last_trading_day"] = today_str
-                    
-                    if pnl_usd > 0:
-                        state["wins"] = state.get("wins", 0) + 1
-                        state["daily_wins"] = state.get("daily_wins", 0) + 1
-                        res_type = "WIN"
-                    else:
-                        state["losses"] = state.get("losses", 0) + 1
-                        state["daily_losses"] = state.get("daily_losses", 0) + 1
-                        res_type = "LOSS"
-                    
-                    state["current_balance_usd"] = state.get("current_balance_usd", 20.07) + pnl_usd
-                    state["trades_count"] = state.get("trades_count", 0) + 1
-                    
-                    try:
-                        import learning_engine
-                        learning_engine.record_trade_outcome(
-                            symbol=active_symbol, side="SHORT", entry_price=entry, exit_price=active_current_price,
-                            pnl_usd=pnl_usd, result_type=res_type, notes=f"Real Money SHORT closed by software ({pnl_pct:.2f}%)",
-                            account_id="R-01", group_name="CUENTA REAL"
-                        )
-                    except Exception as le:
-                        print(f"Learning engine error: {le}")
-                    
-                    state["position"] = None
-                    state["status"] = "🟦 Buscando Entrada A+"
-                    print(f"✅ SHORT cerrado exitosamente: {res_type} ({pnl_pct:+.2f}% | ${pnl_usd:+.2f})")
-                else:
-                    print(f"⚠️ SHORT close failed: {close_res}")
-            
-    # ========================================
-    # CASE 3: No active position - look for entries
+    # CASE 2: No active position - Look for SPOT LONG Entry
     # ========================================
     else:
-        # If we had a SHORT but now it's gone, Binance closed it natively!
-        if state.get("position") and state["position"].get("side") == "SHORT":
-            closed_pos = state["position"]
-            entry = closed_pos.get("entry_price", 1.0)
-            active_qty = closed_pos.get("quantity", closed_pos.get("cost_usd", 10.0) / max(entry, 0.0001))
-            active_symbol = closed_pos.get("symbol", "UNKNOWN")
-            
-            # Fetch the actual close price
-            close_price = get_symbol_price(active_symbol, is_futures=True) or current_price
-            
-            # Update daily counters
-            today_str = datetime.now().strftime("%Y-%m-%d")
-            if state.get("last_trading_day") != today_str:
-                state["daily_wins"] = 0
-                state["daily_losses"] = 0
-                state["last_trading_day"] = today_str
-                
-            # Infer result using actual close price
-            pnl_usd = (entry - close_price) * active_qty
-            if close_price < entry:
-                state["wins"] = state.get("wins", 0) + 1
-                state["daily_wins"] = state.get("daily_wins", 0) + 1
-                res_type = "WIN"
-            else:
-                state["losses"] = state.get("losses", 0) + 1
-                state["daily_losses"] = state.get("daily_losses", 0) + 1
-                res_type = "LOSS"
-                
-            state["current_balance_usd"] = state.get("current_balance_usd", 20.07) + pnl_usd
-            state["trades_count"] = state.get("trades_count", 0) + 1
-            
-            try:
-                import learning_engine
-                learning_engine.record_trade_outcome(
-                    symbol=active_symbol, side="SHORT", entry_price=entry, exit_price=close_price,
-                    pnl_usd=pnl_usd, result_type=res_type, notes=f"Real Money SHORT auto-closed by Binance",
-                )
-            except Exception as le:
-                print(f"Learning engine error: {le}")
-            print(f"🎯 ALERTA REAL: Posición SHORT en {active_symbol} fue cerrada automáticamente por Binance ({res_type})")
-            
         state["position"] = None
         state["status"] = "🟦 Buscando Entrada A+"
         
-        # --- ENTRY DECISION LOGIC ---
+        # Stablecoin filter check
+        stablecoins_blacklist = {
+            "USDT", "USDC", "FDUSD", "TUSD", "BUSD", "DAI", "USDD", "USDE", "RLUSD", "USD1",
+            "EUR", "AEUR", "WBTC", "TBTC", "USDS", "USTC", "FRAX", "PYUSD", "USD0", "SNDKB", "SNDK", "USD"
+        }
+        
+        # --- ENTRY DECISION LOGIC (SPOT ONLY) ---
         import strategy_engine
         dyn_t = strategy_engine.load_thresholds()
         real_long_score = dyn_t.get("group_0", {}).get("long_score", 65)
-        real_short_score = dyn_t.get("group_0", {}).get("short_score", 35)
         
-        # FIX Bug #8: Check learning engine bias before entering
+        # Check learning engine bias before entering
         bias_ok = True
         if market_bias:
             bias_direction = market_bias.get("recommended_bias", "NEUTRAL")
-            if is_bearish and bias_direction == "STRONG_LONG":
-                bias_ok = False
-                print(f"🧠 Learning Engine BLOCKED SHORT: Market bias is STRONG_LONG")
-            elif not is_bearish and bias_direction == "STRONG_SHORT":
+            if not is_bearish and bias_direction == "STRONG_SHORT":
                 bias_ok = False
                 print(f"🧠 Learning Engine BLOCKED LONG: Market bias is STRONG_SHORT")
         
-        if bias_ok:
-            # 1. LONG Entry Signal
-            if best_symbol and not is_bearish and (best_score >= real_long_score or is_learned_signal) and usdt_free >= 5.0:
+        is_stable = False
+        if best_symbol:
+            sym_clean = best_symbol.replace("USDT", "")
+            if sym_clean in stablecoins_blacklist or best_symbol in stablecoins_blacklist:
+                is_stable = True
+                print(f"⛔ Compra rechazada: {best_symbol} es una stablecoin / activo no volátil.")
+                
+        if bias_ok and not is_stable:
+            # 1. LONG Entry Signal (Operates with 100% of available USDT, 1 decimal floor)
+            if best_symbol and not is_bearish and (best_score >= real_long_score or is_learned_signal) and usdt_free >= 5.1:
                 trigger_reason = "AUTO-APRENDIZAJE" if is_learned_signal else f"Score {real_long_score}+"
-                print(f"🚀 SEÑAL ALCISTA (LONG) ({best_symbol} @ {best_score} Pts - {trigger_reason}). Comprando en Binance Spot...")
+                print(f"🚀 SEÑAL ALCISTA (LONG) ({best_symbol} @ {best_score} Pts - {trigger_reason}). Comprando con ${usdt_free:.1f} USDT (100% Capital)...")
                 buy_res = execute_real_spot_market_buy(best_symbol, usdt_free)
                 if isinstance(buy_res, dict) and "orderId" in buy_res:
                     qty = float(buy_res.get("executedQty", 0))
-                    if qty == 0: qty = round(usdt_free / current_price, 5) # Fallback
+                    if qty == 0:
+                        qty = round(usdt_free / current_price, 5)  # Fallback
                     state["position"] = {
                         "symbol": best_symbol,
                         "entry_price": current_price,
                         "cost_usd": round(usdt_free, 2),
                         "side": "LONG",
-                        "quantity": qty
+                        "quantity": qty,
+                        "break_even": False
                     }
                     state["status"] = f"🔵 En Vivo LONG ({best_symbol})"
+                    state["_cached_usdt_free"] = 0.0
+                    print(f"✅ SPOT LONG ejecutado exitosamente en {best_symbol} por ${usdt_free:.1f} USDT")
                 else:
                     print(f"⚠️ LONG no ejecutado: {buy_res}")
-                    
-            # 2. SHORT Entry Signal
-            elif best_symbol and is_bearish and (best_score <= real_short_score or is_learned_signal) and futures_usdt_free >= 5.0:
-                trigger_reason = "AUTO-APRENDIZAJE" if is_learned_signal else f"Score <= {real_short_score}"
-                print(f"📉 SEÑAL BAJISTA (SHORT) ({best_symbol} @ Score {best_score} - {trigger_reason}). Abriendo Short en Binance Futuros...")
-                short_res = execute_real_futures_market_short(best_symbol, futures_usdt_free)
-                # FIX Bug #1: short_res is now a dict (entry order), not a list
-                if isinstance(short_res, dict) and "orderId" in short_res:
-                    qty = float(short_res.get("executedQty", 0))
-                    if qty == 0: qty = round(futures_usdt_free / current_price, 5) # Fallback
-                    state["position"] = {
-                        "symbol": best_symbol,
-                        "entry_price": current_price,
-                        "cost_usd": round(futures_usdt_free, 2),
-                        "side": "SHORT",
-                        "quantity": qty
-                    }
-                    state["status"] = f"🔻 En Vivo SHORT ({best_symbol})"
-                    print(f"✅ SHORT abierto exitosamente: {best_symbol}")
-                else:
-                    print(f"⚠️ SHORT no ejecutado: {short_res}")
 
     state["current_balance_usd"] = round(state.get("current_balance_usd", 20.07), 2)
-    state["net_pnl_usd"] = round(state["current_balance_usd"] - 20.07, 2)
+    state["net_pnl_usd"] = round(state["current_balance_usd"] - state.get("initial_deposit_usdt", 17.13), 2)
     state["last_trade_time"] = now_str
     save_real_account_state(state)
     return state

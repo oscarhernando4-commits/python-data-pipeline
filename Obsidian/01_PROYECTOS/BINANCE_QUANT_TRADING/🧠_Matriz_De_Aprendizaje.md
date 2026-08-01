@@ -4,35 +4,36 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-08-01 18:32:56
+date: 2026-07-29 18:58:46
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-08-01 18:32:56`  
+> **Última Actualización:** `2026-07-29 18:58:46`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `487`
-- **Ganadas (WIN):** `103` | **Perdidas (LOSS):** `384`
-- **Tasa de Acierto (Win Rate):** `21.15%`
-- **PnL Total Neto:** `$-171.50 USD`
+- **Total Operaciones:** `203`
+- **Ganadas (WIN):** `81` | **Perdidas (LOSS):** `122`
+- **Tasa de Acierto (Win Rate):** `39.9%`
+- **PnL Total Neto:** `$+15.74 USD`
 
 ---
 
 ## 🧭 Sesgo de Aprendizaje Automático (Últimos 100 Trades)
-- **Sesgo Actual (Market Bias):** `NEUTRAL`
-- **Rendimiento LONG (Compras):** `23.1%` de Acierto (en 260 ops recientes)
-- **Rendimiento SHORT (Ventas):** `18.3%` de Acierto (en 224 ops recientes)
-- 🏆 **Grupo de IA Más Rentable:** `CUENTA REAL` (WinRate: 50.0%, PnL: $0.16)
+- **Sesgo Actual (Market Bias):** `FAVOR_SHORT`
+- **Rendimiento LONG (Compras):** `33.3%` de Acierto (en 120 ops recientes)
+- **Rendimiento SHORT (Ventas):** `49.4%` de Acierto (en 83 ops recientes)
+- 🏆 **Grupo de IA Más Rentable:** `⚡ GRUPO 4: Frecuencia Alta` (WinRate: 50.0%, PnL: $60.8)
 - *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada. Y el Dinero Real copiará automáticamente al Grupo Más Rentable.
 
 ---
 
 ## 🛑 Reglas de Bloqueo de Fracasos (Filtros Anti-Pérdida)
 *Estas condiciones han sido aprendidas tras fallos y BLOQUEAN automáticamente futuras operaciones de riesgo:*
+- 🛑 High impact news within 30 mins (Block Trade)
 - 🛑 Volume surge < 1.1x average during trend reversals (Block Fakeouts)
 - 🛑 Preventive Block for LTCUSDT: Loss logged at 46.03 -> Hit SL on LTCUSDT (-$1.60). Re-Trading!
 - 🛑 Preventive Block for BTCUSDT: Loss logged at 63662.44 -> Hit SL on BTCUSDT (-$1.65). Re-Trading!
@@ -41,18 +42,6 @@ date: 2026-08-01 18:32:56
 - 🛑 Preventive Block for DOTUSDT: Loss logged at 0.765 -> Hit SL on DOTUSDT (-$1.60). Re-Trading!
 - 🛑 Preventive Block for OPUSDT: Loss logged at 0.0879 -> Hit SL on OPUSDT (-$1.11). Re-Trading!
 - 🛑 Preventive Block for BTCUSDT: Loss logged at 63976.01 -> Hit SL on BTCUSDT (-$1.15). Re-Trading!
-- 🛑 Preventive Block for BTCUSDT: Loss logged at 64594.65 -> Hit SL on BTCUSDT (-$1.12). Re-Trading!
-- 🛑 Preventive Block for XRPUSDT: Loss logged at 1.0736 -> Hit SL on XRPUSDT (-$1.05). Re-Trading!
-- 🛑 Preventive Block for BTCUSDT: Loss logged at 63920.0 -> Hit SL on BTCUSDT (-$1.10). Re-Trading!
-- 🛑 BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BTCUSDT)
-- 🛑 BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TLMUSDT)
-- 🛑 BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ARBUSDT)
-- 🛑 BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on EPICUSDT)
-- 🛑 BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on EPICUSDT)
-- 🛑 BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on EULUSDT)
-- 🛑 BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on TRXUSDT)
-- 🛑 BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GRAMUSDT)
-- 🛑 BLOCK LONG when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BTCUSDT)
 
 ---
 
@@ -68,21 +57,20 @@ date: 2026-08-01 18:32:56
 - ⚡ Optimized Setup for ADAUSDT: Profit logged (+$1.97) -> Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!
 - ⚡ Optimized Setup for TRUMPUSDT: Profit logged (+$2.09) -> Win on TRUMPUSDT (+$2.09 net) -> Level 3 Re-Trading Started!
 - ⚡ Optimized Setup for TRUMPUSDT: Profit logged (+$2.09) -> Win on TRUMPUSDT (+$2.09 net) -> Level 2 Re-Trading Started!
-- ⚡ BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MMTUSDT)
 
 ---
 
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
-| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
-| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
-| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
-| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
-| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
-| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
-| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
-| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
-| 2026-08-01 18:32:56 | BTCUSDT | LONG | `$62930.02` | `$62363.0` | `$-1.10` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
+| 2026-07-29 18:58:46 | BTCUSDT | SHORT | `$63976.01` | `$64594.65` | `$-1.15` | 🔴 LOSS |
 

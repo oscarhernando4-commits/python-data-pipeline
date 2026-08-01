@@ -22,7 +22,7 @@ def get_top_pairs():
 
 TOP_PAIRS = get_top_pairs()
 
-OBSIDIAN_FOLDER = r"C:\Users\hosca\Documents\Antigravity\Obsidian\01_PROYECTOS\BINANCE_QUANT_TRADING"
+OBSIDIAN_FOLDER = os.path.join("Obsidian", "01_PROYECTOS", "BINANCE_QUANT_TRADING")
 
 # Corporate Partnerships, Institutional Backing & Roadmap Catalysts Database
 CORPORATE_ECOSYSTEM_DATABASE = {

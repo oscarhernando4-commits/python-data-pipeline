@@ -638,39 +638,26 @@ def sync_live_matrix_obsidian(matrix):
         import api_connector
         real_st = api_connector.load_real_account_state()
         
-        # SMART PROXY SAVER: Only sync real balance from Binance API every 12 hours
-        # (hours 0 and 12, minute 0) to conserve Fixie proxy requests (500/month limit).
+        # SMART PROXY SAVER: Only run full wallet diagnosis from Binance API every 1 HOUR
+        # (at minute 0-4 of each hour) to conserve Fixie proxy requests (24 req/day).
         # Orders (buy/sell) always use proxy instantly regardless of this timer.
         now = datetime.now()
-        # Expand window to 5 mins because matrix calculation takes ~2-3 mins. 
-        # Since cron runs every 5 mins, this ensures only the runs starting at 0, 15, 30, 45 trigger the sync.
-        is_sync_window = now.minute in [0, 1, 2, 3, 4, 15, 16, 17, 18, 19, 30, 31, 32, 33, 34, 45, 46, 47, 48, 49]
+        is_sync_window = now.minute in [0, 1, 2, 3, 4]
         
         if is_sync_window:
-            print("🔄 [SYNC 30M] Sincronizando balance real desde Binance API (Fixie Proxy)...")
-            balances = api_connector.get_real_balances()
-            for b in balances:
-                asset = b.get("asset", "")
-                if asset == "USDT":
-                    real_usdt_free = float(b.get("free", 0))
-                    real_total_val += real_usdt_free
-                elif asset == "BNB":
-                    real_bnb = float(b.get("free", 0))
-                    real_bnb_usd = real_bnb * 575.0
-                    real_total_val += real_bnb_usd
-            # Cache the synced values in local state for non-sync cycles
-            real_st["_cached_total_val"] = round(real_total_val, 2)
-            real_st["_cached_usdt_free"] = round(real_usdt_free, 4)
-            real_st["_cached_bnb"] = real_bnb
-            real_st["_cached_bnb_usd"] = round(real_bnb_usd, 2)
-            api_connector.save_real_account_state(real_st)
+            print("🔄 [SYNC HOURLY] Ejecutando diagnóstico completo de billetera Spot desde Binance API (Fixie Proxy)...")
+            real_st = api_connector.diagnose_full_spot_wallet()
+            real_total_val = real_st.get("_cached_total_val", real_st.get("current_balance_usd", 0.0))
+            real_usdt_free = real_st.get("_cached_usdt_free", 0.0)
+            real_bnb = real_st.get("_cached_bnb", 0.0)
+            real_bnb_usd = real_st.get("_cached_bnb_usd", 0.0)
         else:
             # Use cached values from last sync (0 Fixie requests consumed)
             real_total_val = real_st.get("_cached_total_val", real_st.get("current_balance_usd", 0.0))
             real_usdt_free = real_st.get("_cached_usdt_free", 0.0)
             real_bnb = real_st.get("_cached_bnb", 0.0)
             real_bnb_usd = real_st.get("_cached_bnb_usd", 0.0)
-            print(f"💤 [CACHE] Usando balance cacheado (${real_total_val:.2f}). Sincronización API cada 15m.")
+            print(f"💤 [CACHE] Usando balance cacheado (${real_total_val:.2f}). Diagnóstico API cada 1 hora.")
     except Exception as e:
         print(f"Error cargando datos reales en matrix sync: {e}")
         # Usamos los datos guardados en state si la API falla

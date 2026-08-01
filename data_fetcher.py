@@ -82,17 +82,27 @@ def update_top_pairs():
             raw_symbols.append(binance_vol_symbols[i])
     
     top_100_pairs = []
-    stablecoins = {"USDT", "USDC", "FDUSD", "TUSD", "BUSD", "DAI", "USDD", "USDE", "USDTUSDT", "USDCUSDT", "FDUSDUSDT"}
+    # Exhaustive Blacklist of Stablecoins, Fiat-Pegged Assets, and Synthetic Collateral
+    stablecoins = {
+        "USDT", "USDC", "FDUSD", "TUSD", "BUSD", "DAI", "USDD", "USDE", "RLUSD", "USD1",
+        "EUR", "AEUR", "WBTC", "TBTC", "USDS", "USTC", "FRAX", "PYUSD", "USD0", "SNDKB",
+        "SNDK", "USD", "EURUSDT", "AEURUSDT", "RLUSDUSDT", "USD1USDT", "USDCUSDT", "FDUSDUSDT",
+        "TUSDUSDT", "BUSDUSDT", "DAIUSDT", "USDDUSDT", "USDEUSDT", "FRAXUSDT", "PYUSDUSDT",
+        "WBTCUSDT", "TBTCUSDT", "EURI", "EURIOUSDT"
+    }
     mapping = {"IOTA": "IOTA"}
     
     for sym in raw_symbols:
-        if sym in stablecoins:
+        clean_sym = sym.upper().strip()
+        if clean_sym in stablecoins or f"{clean_sym}USDT" in stablecoins:
             continue
         # Filter out weird ASCII/Chinese symbols
         if not all(ord(c) < 128 for c in sym):
             continue
             
         binance_sym = f"{mapping.get(sym, sym)}USDT"
+        if binance_sym in stablecoins:
+            continue
         
         # Must exist in Spot
         if binance_sym in valid_binance_pairs and binance_sym not in top_100_pairs:
