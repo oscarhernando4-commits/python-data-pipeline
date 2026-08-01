@@ -2,12 +2,12 @@
 tags:
   - analisis_grupos
   - trading
-date: 2026-08-01 05:17:55
+date: 2026-08-01 05:21:16
 ---
 
 # 📊 ANÁLISIS GLOBAL DE GANANCIAS Y PÉRDIDAS POR GRUPO
 
-> **Última Actualización:** `2026-08-01 05:17:55`
+> **Última Actualización:** `2026-08-01 05:21:16`
 > Este reporte desglosa el rendimiento matemático de cada Estrategia de IA. 
 
 ## 🏆 Resumen de Rendimiento (Ranking de Grupos)
@@ -17,7 +17,7 @@ date: 2026-08-01 05:17:55
 | **⚡ GRUPO 4: Frecuencia Alta** | 80 | `50.0%` | $+0.00 | $+60.80 | **$+60.80** |
 | **🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)** | 40 | `50.0%` | $+17.00 | $+0.00 | **$+17.00** |
 | **⚖️ GRUPO 3: Balanceado** | 40 | `50.0%` | $+9.80 | $+0.00 | **$+9.80** |
-| **CUENTA REAL** | 3 | `66.7%` | $+0.00 | $+0.30 | **$+0.30** |
+| **CUENTA REAL** | 4 | `50.0%` | $+0.00 | $+0.16 | **$+0.16** |
 | **🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)** | 4 | `25.0%` | $-1.10 | $+0.14 | **$-0.96** |
 | **🔥 GRUPO 5: Exploratorio de Máxima Frecuencia** | 19 | `0.0%` | $-20.90 | $+0.00 | **$-20.90** |
 | **🔷 GRUPO 2: Moderado-Estricto** | 120 | `16.7%` | $-21.40 | $-21.80 | **$-43.20** |
@@ -216,6 +216,7 @@ date: 2026-08-01 05:17:55
 
 | Fecha | Par | Lado | Precio Entrada | Precio Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-01 05:17:57 | **UNIUSDT** | BUY | $4.263 | $4.194 | `$-0.14` | 🔴 LOSS |
 | 2026-08-01 04:11:20 | **MMTUSDT** | BUY | $0.1895 | $0.1936 | `$+0.19` | 🟢 WIN |
 | 2026-08-01 04:03:07 | **ZECUSDT** | BUY | $456.15 | $465.99 | `$+0.18` | 🟢 WIN |
 | 2026-07-30 12:49:04 | **UNIUSDT** | SHORT | $4.4 | $4.427 | `$-0.06` | 🔴 LOSS |
