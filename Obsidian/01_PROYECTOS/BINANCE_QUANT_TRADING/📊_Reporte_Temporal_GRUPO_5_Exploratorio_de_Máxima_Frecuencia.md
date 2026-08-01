@@ -4,7 +4,7 @@ aliases: [Rendimiento 🔥 GRUPO 5: Exploratorio de Máxima Frecuencia]
 cssclasses: [dashboard-view]
 ---
 # 📊 Rendimiento por Periodos: 🔥 GRUPO 5: Exploratorio de Máxima Frecuencia
-> Última actualización: 2026-08-01 15:40:52
+> Última actualización: 2026-08-01 15:41:42
 
 | Periodo | Total Operaciones | ✅ Ganadoras | 💰 PnL Ganado | ❌ Perdedoras | 💸 PnL Perdido | 📈 Neto |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
