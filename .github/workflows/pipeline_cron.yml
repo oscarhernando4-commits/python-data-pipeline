@@ -7,7 +7,7 @@ on:
 
 concurrency:
   group: "quant-trader-bot"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   trade_and_sync:
