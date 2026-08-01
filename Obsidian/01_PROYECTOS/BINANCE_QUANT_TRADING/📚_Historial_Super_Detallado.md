@@ -3,12 +3,12 @@ tags:
   - trading
   - historial_completo
   - binance
-date: 2026-08-01 16:17:10
+date: 2026-08-01 16:57:03
 ---
 
 # 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
 
-> **Última Actualización:** `2026-08-01 16:17:10`
+> **Última Actualización:** `2026-08-01 16:57:03`
 > Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
 
 | Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |
@@ -440,4 +440,44 @@ date: 2026-08-01 16:17:10
 | 2026-08-01 16:17:10 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 60 | 66.3 | NEUTRAL | 🔴 LOSS |
 | 2026-08-01 16:17:10 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 60 | 66.3 | NEUTRAL | 🔴 LOSS |
 | 2026-08-01 16:17:10 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 60 | 66.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | 🛡️ GRUPO 1: Ult... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 16:57:03 | ⚖️ GRUPO 3: Bal... | GRAMUSDT | LONG | $1.389 | $1.391 | $-1.11 | 10 | 33.2 | NEUTRAL | 🔴 LOSS |
 

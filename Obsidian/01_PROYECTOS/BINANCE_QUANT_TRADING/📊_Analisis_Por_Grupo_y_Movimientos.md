@@ -2,12 +2,12 @@
 tags:
   - analisis_grupos
   - trading
-date: 2026-08-01 16:50:51
+date: 2026-08-01 16:57:03
 ---
 
 # 📊 ANÁLISIS GLOBAL DE GANANCIAS Y PÉRDIDAS POR GRUPO
 
-> **Última Actualización:** `2026-08-01 16:50:51`
+> **Última Actualización:** `2026-08-01 16:57:03`
 > Este reporte desglosa el rendimiento matemático de cada Estrategia de IA. 
 
 ## 🏆 Resumen de Rendimiento (Ranking de Grupos)
@@ -15,10 +15,10 @@ date: 2026-08-01 16:50:51
 | Grupo de IA | Operaciones | Tasa de Acierto (WinRate) | PnL en LONGs | PnL en SHORTs | 💰 PnL NETO TOTAL |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **⚡ GRUPO 4: Frecuencia Alta** | 100 | `40.0%` | $+0.00 | $+38.20 | **$+38.20** |
-| **🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)** | 40 | `50.0%` | $+17.00 | $+0.00 | **$+17.00** |
-| **⚖️ GRUPO 3: Balanceado** | 40 | `50.0%` | $+9.80 | $+0.00 | **$+9.80** |
 | **CUENTA REAL** | 4 | `50.0%` | $+0.00 | $+0.16 | **$+0.16** |
 | **🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)** | 4 | `25.0%` | $-1.10 | $+0.14 | **$-0.96** |
+| **🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)** | 60 | `33.3%` | $-5.20 | $+0.00 | **$-5.20** |
+| **⚖️ GRUPO 3: Balanceado** | 60 | `33.3%` | $-12.40 | $+0.00 | **$-12.40** |
 | **🔥 GRUPO 5: Exploratorio de Máxima Frecuencia** | 19 | `0.0%` | $-20.90 | $+0.00 | **$-20.90** |
 | **🔷 GRUPO 2: Moderado-Estricto** | 220 | `9.1%` | $-21.40 | $-127.00 | **$-148.40** |
 
@@ -134,12 +134,56 @@ date: 2026-08-01 16:50:51
 | 2026-07-29 04:02:13 | **LTCUSDT** | SHORT | $46.34 | $45.29 | `$+2.90` | 🟢 WIN |
 
 
+### CUENTA REAL
+
+> **Mejor Par Operado:** `MMTUSDT ($+0.19)`
+
+| Fecha | Par | Lado | Precio Entrada | Precio Salida | PnL | Resultado |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-01 05:17:57 | **UNIUSDT** | BUY | $4.263 | $4.194 | `$-0.14` | 🔴 LOSS |
+| 2026-08-01 04:11:20 | **MMTUSDT** | BUY | $0.1895 | $0.1936 | `$+0.19` | 🟢 WIN |
+| 2026-08-01 04:03:07 | **ZECUSDT** | BUY | $456.15 | $465.99 | `$+0.18` | 🟢 WIN |
+| 2026-07-30 12:49:04 | **UNIUSDT** | SHORT | $4.4 | $4.427 | `$-0.06` | 🔴 LOSS |
+
+
+### 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)
+
+> **Mejor Par Operado:** `LTCUSDT ($+2.90)`
+
+| Fecha | Par | Lado | Precio Entrada | Precio Salida | PnL | Resultado |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-07-31 20:51:03 | **BTCUSDT** | LONG | $64376.52 | $62976.01 | `$-1.10` | 🔴 LOSS |
+| 2026-07-29 18:03:54 | **OPUSDT** | SHORT | $0.0879 | $0.0886 | `$-1.11` | 🔴 LOSS |
+| 2026-07-29 06:32:29 | **BTCUSDT** | SHORT | $63662.44 | $64399.99 | `$-1.65` | 🔴 LOSS |
+| 2026-07-29 04:02:13 | **LTCUSDT** | SHORT | $46.34 | $45.29 | `$+2.90` | 🟢 WIN |
+
+
 ### 🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)
 
 > **Mejor Par Operado:** `ADAUSDT ($+39.40)`
 
 | Fecha | Par | Lado | Precio Entrada | Precio Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
 | 2026-07-29 17:56:20 | **BTCUSDT** | LONG | $64594.65 | $63938.95 | `$-1.12` | 🔴 LOSS |
 | 2026-07-29 17:56:20 | **BTCUSDT** | LONG | $64594.65 | $63938.95 | `$-1.12` | 🔴 LOSS |
 | 2026-07-29 17:56:20 | **BTCUSDT** | LONG | $64594.65 | $63938.95 | `$-1.12` | 🔴 LOSS |
@@ -188,6 +232,26 @@ date: 2026-08-01 16:50:51
 
 | Fecha | Par | Lado | Precio Entrada | Precio Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
+| 2026-08-01 16:57:03 | **GRAMUSDT** | LONG | $1.389 | $1.391 | `$-1.11` | 🔴 LOSS |
 | 2026-07-29 18:58:46 | **TRUMPUSDT** | LONG | $1.441 | $1.473 | `$+2.09` | 🟢 WIN |
 | 2026-07-29 18:58:46 | **TRUMPUSDT** | LONG | $1.441 | $1.473 | `$+2.09` | 🟢 WIN |
 | 2026-07-29 18:58:46 | **TRUMPUSDT** | LONG | $1.441 | $1.473 | `$+2.09` | 🟢 WIN |
@@ -228,30 +292,6 @@ date: 2026-08-01 16:50:51
 | 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
 | 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
 | 2026-07-29 16:51:14 | **DOTUSDT** | LONG | $0.765 | $0.757 | `$-1.60` | 🔴 LOSS |
-
-
-### CUENTA REAL
-
-> **Mejor Par Operado:** `MMTUSDT ($+0.19)`
-
-| Fecha | Par | Lado | Precio Entrada | Precio Salida | PnL | Resultado |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-08-01 05:17:57 | **UNIUSDT** | BUY | $4.263 | $4.194 | `$-0.14` | 🔴 LOSS |
-| 2026-08-01 04:11:20 | **MMTUSDT** | BUY | $0.1895 | $0.1936 | `$+0.19` | 🟢 WIN |
-| 2026-08-01 04:03:07 | **ZECUSDT** | BUY | $456.15 | $465.99 | `$+0.18` | 🟢 WIN |
-| 2026-07-30 12:49:04 | **UNIUSDT** | SHORT | $4.4 | $4.427 | `$-0.06` | 🔴 LOSS |
-
-
-### 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)
-
-> **Mejor Par Operado:** `LTCUSDT ($+2.90)`
-
-| Fecha | Par | Lado | Precio Entrada | Precio Salida | PnL | Resultado |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-07-31 20:51:03 | **BTCUSDT** | LONG | $64376.52 | $62976.01 | `$-1.10` | 🔴 LOSS |
-| 2026-07-29 18:03:54 | **OPUSDT** | SHORT | $0.0879 | $0.0886 | `$-1.11` | 🔴 LOSS |
-| 2026-07-29 06:32:29 | **BTCUSDT** | SHORT | $63662.44 | $64399.99 | `$-1.65` | 🔴 LOSS |
-| 2026-07-29 04:02:13 | **LTCUSDT** | SHORT | $46.34 | $45.29 | `$+2.90` | 🟢 WIN |
 
 
 ### 🔥 GRUPO 5: Exploratorio de Máxima Frecuencia
