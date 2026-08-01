@@ -219,9 +219,9 @@ def run_infinite_trading_matrix_cycle():
             "suggested_action": action
         })
     
-    # Sort by strongest divergence descending and take top 5
+    # Sort by strongest divergence descending and take top 10
     candidates_list.sort(key=lambda x: x["divergence"], reverse=True)
-    top_5_candidates = candidates_list[:5]
+    top_10_candidates = candidates_list[:10]
     
     import learning_engine
     bias_data = learning_engine.get_market_bias()
@@ -241,10 +241,10 @@ def run_infinite_trading_matrix_cycle():
             for trend, stats in optimal["trend_analysis"].items():
                 bias_str += f"\n    - Trend '{trend}': {stats['win_rate']}% win rate ({stats['total']} trades)"
     
-    # Evaluate Top 5 Candidates with Gemini Flash / Pro LLM Sentinel
+    # Evaluate Top 10 Candidates with Gemini Flash / Pro LLM Sentinel
     gemini_res = {}
     selected_opp = None
-    if top_5_candidates:
+    if top_10_candidates:
         try:
             import text_analyzer
             import llm_router
@@ -256,14 +256,14 @@ def run_infinite_trading_matrix_cycle():
             )
             
             specific_news_map = {}
-            for cand in top_5_candidates:
+            for cand in top_10_candidates:
                 c_sym = cand["symbol"]
                 s_news = fundamental_sentinel.fetch_coin_specific_news(c_sym)
                 if s_news:
                     specific_news_map[c_sym] = s_news
             
-            gemini_res = llm_router.review_top_5_candidates(
-                candidates_data_list=top_5_candidates,
+            gemini_res = llm_router.review_top_candidates(
+                candidates_data_list=top_10_candidates,
                 news_data={"headlines": cached_fundamental_report.get("recent_headlines", []), "specific_news": specific_news_map},
                 fear_greed=cached_fundamental_report.get("fear_and_greed", {"score": 50, "sentiment": "Neutral"}),
                 macro_context=macro_ctx,

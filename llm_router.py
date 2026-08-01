@@ -165,7 +165,7 @@ if __name__ == "__main__":
     print(res)
 
 
-def review_top_5_candidates(candidates_data_list, news_data, fear_greed, macro_context="", market_bias_ctx=""):
+def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_context="", market_bias_ctx=""):
     if not GEMINI_API_KEY:
         print("💡 Gemini Notice: GEMINI_API_KEY no configurada. Fallback al primer candidato.")
         return {"selected_symbol": candidates_data_list[0]['symbol'], "approved": True, "action": candidates_data_list[0]['suggested_action'], "confidence": candidates_data_list[0]['score'], "reasoning": "Fallback Cuantitativo"}
@@ -200,7 +200,7 @@ def review_top_5_candidates(candidates_data_list, news_data, fear_greed, macro_c
     prompt_text = f"""
     Eres el Súper-Cerebro Cuantitativo Institucional y Oráculo Predictor de Eventos Fundamentales (Catalyst Sentinel).
     Tu tarea es recibir un TOP {len(candidates_data_list)} de las mejores criptomonedas pre-filtradas por un motor matemático.
-    Debes hacer un análisis cruzado (Cross-Analysis) profundo de los 5 escenarios, y usar tu intuición basada en NOTICIAS para predecir movimientos futuros masivos. ELEGIRÁS A UN ÚNICO GANADOR ABSOLUTO.
+    Debes hacer un análisis cruzado (Cross-Analysis) profundo de los {len(candidates_data_list)} escenarios, y usar tu intuición basada en NOTICIAS para predecir movimientos futuros masivos. ELEGIRÁS A UN ÚNICO GANADOR ABSOLUTO.
 
     CONTEXTO GLOBAL MACRO Y SESGO DE MERCADO:
     - Sesgo de Aprendizaje: {market_bias_ctx}
@@ -215,7 +215,7 @@ def review_top_5_candidates(candidates_data_list, news_data, fear_greed, macro_c
     {candidates_prompt_text}
 
     REGLAS:
-    1. 📊 PESO PRINCIPAL (TÉCNICO E HISTÓRICO): Revisa exhaustivamente qué grupo de estrategias (en la tabla histórica) está ganando y si alguno de los 5 candidatos imita esa estructura ganadora. Los datos reales de ese momento y el historial de comportamientos (5m, 1h, 24h, 3d, 1w) SON LA RAZÓN PRINCIPAL PARA TOMAR UNA DECISIÓN.
+    1. 📊 PESO PRINCIPAL (TÉCNICO E HISTÓRICO): Revisa exhaustivamente qué grupo de estrategias (en la tabla histórica) está ganando y si alguno de los {len(candidates_data_list)} candidatos imita esa estructura ganadora. Los datos reales de ese momento y el historial de comportamientos (5m, 1h, 24h, 3d, 1w) SON LA RAZÓN PRINCIPAL PARA TOMAR UNA DECISIÓN.
     2. Compara el 'Volume Surge' y el 'RSI 15M'. Prioriza la operación con mayor divergencia clara o agotamiento (Pump & Dump Exhaustion).
     3. 📰 ORÁCULO PREDICTOR (SOLO COMO REFERENCIA SECUNDARIA): Lee las "NOTICIAS ESPECÍFICAS ÚLTIMAS 24H". Úsalas ÚNICAMENTE como contexto adicional o para confirmar una estructura técnica que ya era buena. NUNCA tomes una decisión de compra basándote principalmente en una noticia de lanzamiento o ETF si la estructura técnica y el historial no lo respaldan firmemente. Las noticias son una referencia, NO el motivo principal.
     4. Si hay noticias de HACKEOS, DEMANDAS O BANS (FUD extremo) para un candidato, RECHÁZALO inmediatamente.
@@ -258,3 +258,6 @@ def review_top_5_candidates(candidates_data_list, news_data, fear_greed, macro_c
     # Fallback to the first one if all fails
     print("💡 Gemini Fallback: No se pudo obtener respuesta del comité AI. Tomando el #1.")
     return {"selected_symbol": candidates_data_list[0]['symbol'], "approved": True, "action": candidates_data_list[0]['suggested_action'], "confidence": 70, "reasoning": "Fallback Cuantitativo Tras Fallo de Conexión AI"}
+
+# Backwards compatibility alias
+review_top_5_candidates = review_top_candidates
