@@ -43,12 +43,12 @@ def run_git_push_sync(cycle_num: int):
         print(f"⚠️ [Cycle {cycle_num}] Git sync warning: {e}")
 
 def main():
-    sys.stdout.reconfigure(encoding='utf-8')
-    print("=" * 70)
-    print("🚀 INICIANDO RUNNER CONTINUO CUÁNTICO DE 6 HORAS (5.5H / 66 CICLOS)")
-    print(f"⏱️ Intervalo: Cada 5 minutos exactos ({SLEEP_SECONDS}s)")
-    print(f"🎯 Total Ciclos: {TOTAL_CYCLES} ejecuciones continuas sin colas de espera")
-    print("=" * 70)
+    sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
+    print("=" * 70, flush=True)
+    print(f"🚀 INICIANDO RUNNER CONTINUO CUÁNTICO (4 HORAS / {TOTAL_CYCLES} CICLOS)", flush=True)
+    print(f"⏱️ Intervalo: Cada 5 minutos exactos ({SLEEP_SECONDS}s)", flush=True)
+    print(f"🎯 Total Ciclos: {TOTAL_CYCLES} ejecuciones continuas sin colas de espera", flush=True)
+    print("=" * 70, flush=True)
     
     import data_fetcher
     import pipeline_processor

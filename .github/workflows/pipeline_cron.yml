@@ -33,8 +33,9 @@ jobs:
         run: |
           pip install requests numpy pandas ta urllib3
 
-      - name: 🚀 Execute 6-Hour Continuous Quant Trading Loop (Every 5m)
+      - name: 🚀 Execute 4-Hour Continuous Quant Trading Loop (Every 5m)
         env:
+          PYTHONUNBUFFERED: "1"
           BINANCE_REAL_API_KEY: ${{ secrets.BINANCE_REAL_API_KEY }}
           BINANCE_REAL_API_SECRET: ${{ secrets.BINANCE_REAL_API_SECRET }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
