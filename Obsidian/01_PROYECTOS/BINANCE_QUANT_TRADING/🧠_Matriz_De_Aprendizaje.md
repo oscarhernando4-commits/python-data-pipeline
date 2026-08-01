@@ -4,28 +4,28 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-08-01 20:00:50
+date: 2026-08-01 20:15:50
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-08-01 20:00:50`  
+> **Última Actualización:** `2026-08-01 20:15:50`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `283`
-- **Ganadas (WIN):** `81` | **Perdidas (LOSS):** `202`
-- **Tasa de Acierto (Win Rate):** `28.62%`
-- **PnL Total Neto:** `$-70.43 USD`
+- **Total Operaciones:** `284`
+- **Ganadas (WIN):** `81` | **Perdidas (LOSS):** `203`
+- **Tasa de Acierto (Win Rate):** `28.52%`
+- **PnL Total Neto:** `$-71.52 USD`
 
 ---
 
 ## 🧭 Sesgo de Aprendizaje Automático (Últimos 100 Trades)
 - **Sesgo Actual (Market Bias):** `FAVOR_SHORT`
 - **Rendimiento LONG (Compras):** `22.2%` de Acierto (en 180 ops recientes)
-- **Rendimiento SHORT (Ventas):** `39.8%` de Acierto (en 103 ops recientes)
+- **Rendimiento SHORT (Ventas):** `39.4%` de Acierto (en 104 ops recientes)
 - 🏆 **Grupo de IA Más Rentable:** `⚡ GRUPO 4: Frecuencia Alta` (WinRate: 50.0%, PnL: $60.8)
 - *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada. Y el Dinero Real copiará automáticamente al Grupo Más Rentable.
 
@@ -47,6 +47,7 @@ date: 2026-08-01 20:00:50
 - 🛑 Preventive Block for BTCUSDT: Loss logged at 63920.0 -> Hit SL on BTCUSDT (-$1.10). Re-Trading!
 - 🛑 BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BTCUSDT)
 - 🛑 BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DEXEUSDT)
+- 🛑 BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BANKUSDT)
 
 ---
 
@@ -68,7 +69,7 @@ date: 2026-08-01 20:00:50
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-08-01 20:00:50 | DEXEUSDT | SHORT | `$2.392` | `$2.394` | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 20:15:50 | BANKUSDT | SHORT | `$0.0533` | `$0.0534` | `$-1.09` | 🔴 LOSS |
 | 2026-08-01 20:00:50 | DEXEUSDT | SHORT | `$2.392` | `$2.394` | `$-1.09` | 🔴 LOSS |
 | 2026-08-01 20:00:50 | DEXEUSDT | SHORT | `$2.392` | `$2.394` | `$-1.09` | 🔴 LOSS |
 | 2026-08-01 20:00:50 | DEXEUSDT | SHORT | `$2.392` | `$2.394` | `$-1.09` | 🔴 LOSS |

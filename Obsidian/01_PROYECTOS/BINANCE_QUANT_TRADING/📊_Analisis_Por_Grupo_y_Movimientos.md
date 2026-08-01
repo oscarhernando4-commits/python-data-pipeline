@@ -2,12 +2,12 @@
 tags:
   - analisis_grupos
   - trading
-date: 2026-08-01 20:10:51
+date: 2026-08-01 20:15:50
 ---
 
 # 📊 ANÁLISIS GLOBAL DE GANANCIAS Y PÉRDIDAS POR GRUPO
 
-> **Última Actualización:** `2026-08-01 20:10:51`
+> **Última Actualización:** `2026-08-01 20:15:50`
 > Este reporte desglosa el rendimiento matemático de cada Estrategia de IA. 
 
 ## 🏆 Resumen de Rendimiento (Ranking de Grupos)
@@ -18,7 +18,7 @@ date: 2026-08-01 20:10:51
 | **🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)** | 40 | `50.0%` | $+17.00 | $+0.00 | **$+17.00** |
 | **⚖️ GRUPO 3: Balanceado** | 40 | `50.0%` | $+9.80 | $+0.00 | **$+9.80** |
 | **CUENTA REAL** | 1 | `0.0%` | $+0.00 | $-0.06 | **$-0.06** |
-| **🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)** | 4 | `25.0%` | $-1.10 | $+0.14 | **$-0.96** |
+| **🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)** | 5 | `20.0%` | $-1.10 | $-0.95 | **$-2.05** |
 | **🔥 GRUPO 5: Exploratorio de Máxima Frecuencia** | 38 | `0.0%` | $-20.90 | $-20.71 | **$-41.61** |
 | **🔷 GRUPO 2: Moderado-Estricto** | 80 | `0.0%` | $-115.40 | $+0.00 | **$-115.40** |
 
@@ -225,6 +225,7 @@ date: 2026-08-01 20:10:51
 
 | Fecha | Par | Lado | Precio Entrada | Precio Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-01 20:15:50 | **BANKUSDT** | SHORT | $0.0533 | $0.0534 | `$-1.09` | 🔴 LOSS |
 | 2026-08-01 14:16:15 | **BTCUSDT** | LONG | $64376.52 | $62550.01 | `$-1.10` | 🔴 LOSS |
 | 2026-07-29 18:03:54 | **OPUSDT** | SHORT | $0.0879 | $0.0886 | `$-1.11` | 🔴 LOSS |
 | 2026-07-29 06:32:29 | **BTCUSDT** | SHORT | $63662.44 | $64399.99 | `$-1.65` | 🔴 LOSS |
