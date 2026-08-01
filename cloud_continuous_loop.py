@@ -42,6 +42,13 @@ def run_git_push_sync(cycle_num: int):
     except Exception as e:
         print(f"⚠️ [Cycle {cycle_num}] Git sync warning: {e}")
 
+def sleep_until_next_5m_boundary():
+    """Calculates sleep time so every cycle aligns to clean clock intervals (:00, :05, :10, :15...)."""
+    now = time.time()
+    next_boundary = ((int(now) // 300) + 1) * 300
+    sleep_secs = max(10, int(next_boundary - now))
+    return sleep_secs
+
 def main():
     sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
     print("=" * 70, flush=True)
@@ -55,32 +62,34 @@ def main():
 
     for cycle in range(1, TOTAL_CYCLES + 1):
         now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        print(f"\n[{now_str}] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-        print(f"🔄 CICLO [{cycle}/{TOTAL_CYCLES}] - ESCANEO Y OPERACIÓN CUÁNTICA EN VIVO")
-        print(f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+        print(f"\n[{now_str}] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", flush=True)
+        print(f"🔄 CICLO [{cycle}/{TOTAL_CYCLES}] - ESCANEO Y OPERACIÓN CUÁNTICA EN VIVO", flush=True)
+        print(f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", flush=True)
         
         # Step 1: Fetch pairs
         try:
             data_fetcher.fetch_top_100_pairs()
         except Exception as e:
-            print(f"⚠️ Error en data_fetcher (Ciclo {cycle}): {e}")
+            print(f"⚠️ Error en data_fetcher (Ciclo {cycle}): {e}", flush=True)
             
         # Step 2: Run institutional quant pipeline
         try:
             pipeline_processor.run_optimized_pipeline()
         except Exception as e:
-            print(f"⚠️ Error en pipeline_processor (Ciclo {cycle}): {e}")
+            print(f"⚠️ Error en pipeline_processor (Ciclo {cycle}): {e}", flush=True)
             
         # Step 3: Push changes to GitHub
         run_git_push_sync(cycle)
         
-        # Step 4: Sleep until next 5-minute cycle (except after the final cycle)
+        # Step 4: Sleep until next 5-minute clock boundary (except after the final cycle)
         if cycle < TOTAL_CYCLES:
-            print(f"⏳ [Ciclo {cycle}] Completado. Esperando {SLEEP_SECONDS}s (5 minutos) para el siguiente ciclo...")
-            time.sleep(SLEEP_SECONDS)
+            sleep_secs = sleep_until_next_5m_boundary()
+            target_time = datetime.fromtimestamp(time.time() + sleep_secs).strftime("%H:%M:%S")
+            print(f"⏳ [Ciclo {cycle}] Completado. Esperando {sleep_secs}s hasta la marca en punto ({target_time}) para el Ciclo {cycle+1}...", flush=True)
+            time.sleep(sleep_secs)
 
-    print("\n🏁 [RUNNER CONTINUO FINALIZADO] Se completaron los 66 ciclos (5.5 horas).")
-    print("El siguiente disparador o cron tomará el relevo automáticamente.")
+    print(f"\n🏁 [RUNNER CONTINUO FINALIZADO] Se completaron los {TOTAL_CYCLES} ciclos (4 horas).", flush=True)
+    print("El siguiente disparador o cron tomará el relevo automáticamente.", flush=True)
 
 if __name__ == "__main__":
     main()
