@@ -741,19 +741,27 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 buy_res = execute_real_spot_market_buy(best_symbol, usdt_free)
                 if isinstance(buy_res, dict) and "orderId" in buy_res:
                     qty = float(buy_res.get("executedQty", 0))
+                    cum_quote = float(buy_res.get("cummulativeQuoteQty", 0))
+                    if qty > 0 and cum_quote > 0:
+                        actual_entry_price = round(cum_quote / qty, 6)
+                        actual_cost = round(cum_quote, 2)
+                    else:
+                        actual_entry_price = current_price
+                        actual_cost = round(usdt_free, 2)
                     if qty == 0:
                         qty = round(usdt_free / current_price, 5)  # Fallback
                     state["position"] = {
                         "symbol": best_symbol,
-                        "entry_price": current_price,
-                        "cost_usd": round(usdt_free, 2),
+                        "entry_price": actual_entry_price,
+                        "cost_usd": actual_cost,
                         "side": "LONG",
                         "quantity": qty,
                         "break_even": False
                     }
-                    state["status"] = f"🔵 En Vivo LONG ({best_symbol})"
+                    state["status"] = f"🔵 En Vivo LONG ({best_symbol} @ ${actual_entry_price:.4f})"
                     state["_cached_usdt_free"] = 0.0
-                    print(f"✅ SPOT LONG ejecutado exitosamente en {best_symbol} por ${usdt_free:.1f} USDT")
+                    save_real_account_state(state)
+                    print(f"✅ SPOT LONG ejecutado exitosamente: {best_symbol} ({qty} @ ${actual_entry_price:.4f} = ${actual_cost} USD)")
                 else:
                     print(f"⚠️ LONG no ejecutado: {buy_res}")
 
