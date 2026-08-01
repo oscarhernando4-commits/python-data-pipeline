@@ -4,28 +4,28 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-08-01 05:17:57
+date: 2026-08-01 12:25:46
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-08-01 05:17:57`  
+> **Última Actualización:** `2026-08-01 12:25:46`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `307`
-- **Ganadas (WIN):** `103` | **Perdidas (LOSS):** `204`
-- **Tasa de Acierto (Win Rate):** `33.55%`
-- **PnL Total Neto:** `$+22.70 USD`
+- **Total Operaciones:** `327`
+- **Ganadas (WIN):** `103` | **Perdidas (LOSS):** `224`
+- **Tasa de Acierto (Win Rate):** `31.5%`
+- **PnL Total Neto:** `$+1.10 USD`
 
 ---
 
 ## 🧭 Sesgo de Aprendizaje Automático (Últimos 100 Trades)
 - **Sesgo Actual (Market Bias):** `NEUTRAL`
 - **Rendimiento LONG (Compras):** `30.0%` de Acierto (en 200 ops recientes)
-- **Rendimiento SHORT (Ventas):** `39.4%` de Acierto (en 104 ops recientes)
+- **Rendimiento SHORT (Ventas):** `33.1%` de Acierto (en 124 ops recientes)
 - 🏆 **Grupo de IA Más Rentable:** `⚡ GRUPO 4: Frecuencia Alta` (WinRate: 50.0%, PnL: $60.8)
 - *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada. Y el Dinero Real copiará automáticamente al Grupo Más Rentable.
 
@@ -47,6 +47,7 @@ date: 2026-08-01 05:17:57
 - 🛑 Preventive Block for BTCUSDT: Loss logged at 63920.0 -> Hit SL on BTCUSDT (-$1.10). Re-Trading!
 - 🛑 BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BTCUSDT)
 - 🛑 BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TLMUSDT)
+- 🛑 BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ARBUSDT)
 
 ---
 
@@ -69,14 +70,14 @@ date: 2026-08-01 05:17:57
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-08-01 05:17:57 | UNIUSDT | BUY | `$4.263` | `$4.194` | `$-0.14` | 🔴 LOSS |
-| 2026-08-01 04:11:20 | MMTUSDT | BUY | `$0.1895` | `$0.1936` | `$+0.19` | 🟢 WIN |
-| 2026-08-01 04:03:07 | ZECUSDT | BUY | `$456.15` | `$465.99` | `$+0.18` | 🟢 WIN |
-| 2026-07-31 23:25:48 | TLMUSDT | SHORT | `$0.001822` | `$0.001827` | `$-1.09` | 🔴 LOSS |
-| 2026-07-31 23:25:48 | TLMUSDT | SHORT | `$0.001822` | `$0.001827` | `$-1.09` | 🔴 LOSS |
-| 2026-07-31 23:25:48 | TLMUSDT | SHORT | `$0.001822` | `$0.001827` | `$-1.09` | 🔴 LOSS |
-| 2026-07-31 23:25:48 | TLMUSDT | SHORT | `$0.001822` | `$0.001827` | `$-1.09` | 🔴 LOSS |
-| 2026-07-31 23:25:48 | TLMUSDT | SHORT | `$0.001822` | `$0.001827` | `$-1.09` | 🔴 LOSS |
-| 2026-07-31 23:25:48 | TLMUSDT | SHORT | `$0.001822` | `$0.001827` | `$-1.09` | 🔴 LOSS |
-| 2026-07-31 23:25:48 | TLMUSDT | SHORT | `$0.001822` | `$0.001827` | `$-1.09` | 🔴 LOSS |
+| 2026-08-01 12:25:46 | ARBUSDT | SHORT | `$0.0787` | `$0.0786` | `$-1.08` | 🔴 LOSS |
+| 2026-08-01 12:25:46 | ARBUSDT | SHORT | `$0.0787` | `$0.0786` | `$-1.08` | 🔴 LOSS |
+| 2026-08-01 12:25:46 | ARBUSDT | SHORT | `$0.0787` | `$0.0786` | `$-1.08` | 🔴 LOSS |
+| 2026-08-01 12:25:46 | ARBUSDT | SHORT | `$0.0787` | `$0.0786` | `$-1.08` | 🔴 LOSS |
+| 2026-08-01 12:25:46 | ARBUSDT | SHORT | `$0.0787` | `$0.0786` | `$-1.08` | 🔴 LOSS |
+| 2026-08-01 12:25:46 | ARBUSDT | SHORT | `$0.0787` | `$0.0786` | `$-1.08` | 🔴 LOSS |
+| 2026-08-01 12:25:46 | ARBUSDT | SHORT | `$0.0787` | `$0.0786` | `$-1.08` | 🔴 LOSS |
+| 2026-08-01 12:25:46 | ARBUSDT | SHORT | `$0.0787` | `$0.0786` | `$-1.08` | 🔴 LOSS |
+| 2026-08-01 12:25:46 | ARBUSDT | SHORT | `$0.0787` | `$0.0786` | `$-1.08` | 🔴 LOSS |
+| 2026-08-01 12:25:46 | ARBUSDT | SHORT | `$0.0787` | `$0.0786` | `$-1.08` | 🔴 LOSS |
 

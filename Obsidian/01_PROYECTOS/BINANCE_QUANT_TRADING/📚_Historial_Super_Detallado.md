@@ -3,12 +3,12 @@ tags:
   - trading
   - historial_completo
   - binance
-date: 2026-08-01 05:17:57
+date: 2026-08-01 12:25:46
 ---
 
 # 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
 
-> **Última Actualización:** `2026-08-01 05:17:57`
+> **Última Actualización:** `2026-08-01 12:25:46`
 > Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
 
 | Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |
@@ -320,4 +320,24 @@ date: 2026-08-01 05:17:57
 | 2026-08-01 04:03:07 | CUENTA REAL... | ZECUSDT | BUY | $456.15 | $465.99 | $+0.18 | N/A | N/A | N/A | 🟢 WIN |
 | 2026-08-01 04:11:20 | CUENTA REAL... | MMTUSDT | BUY | $0.1895 | $0.1936 | $+0.19 | N/A | N/A | N/A | 🟢 WIN |
 | 2026-08-01 05:17:57 | CUENTA REAL... | UNIUSDT | BUY | $4.263 | $4.194 | $-0.14 | N/A | N/A | N/A | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 12:25:46 | 🔷 GRUPO 2: Mode... | ARBUSDT | SHORT | $0.0787 | $0.0786 | $-1.08 | 75 | 64.0 | NEUTRAL | 🔴 LOSS |
 
