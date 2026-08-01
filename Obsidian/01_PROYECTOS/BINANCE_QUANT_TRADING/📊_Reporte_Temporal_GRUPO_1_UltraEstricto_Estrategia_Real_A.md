@@ -4,15 +4,15 @@ aliases: [Rendimiento 🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)]
 cssclasses: [dashboard-view]
 ---
 # 📊 Rendimiento por Periodos: 🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)
-> Última actualización: 2026-07-29 19:04:36
+> Última actualización: 2026-08-01 19:27:19
 
 | Periodo | Total Operaciones | ✅ Ganadoras | 💰 PnL Ganado | ❌ Perdedoras | 💸 PnL Perdido | 📈 Neto |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **1 Día (24h)** | 20 | 20 | +$39.40 | 0 | -$0.00 | **+$39.40** |
-| **3 Días** | 20 | 20 | +$39.40 | 0 | -$0.00 | **+$39.40** |
-| **1 Semana** | 20 | 20 | +$39.40 | 0 | -$0.00 | **+$39.40** |
-| **2 Semanas** | 20 | 20 | +$39.40 | 0 | -$0.00 | **+$39.40** |
-| **1 Mes (30d)** | 20 | 20 | +$39.40 | 0 | -$0.00 | **+$39.40** |
+| **1 Día (24h)** | 0 | 0 | +$0.00 | 0 | -$0.00 | **$0.00** |
+| **3 Días** | 0 | 0 | +$0.00 | 0 | -$0.00 | **$0.00** |
+| **1 Semana** | 40 | 20 | +$39.40 | 20 | -$22.40 | **+$17.00** |
+| **2 Semanas** | 40 | 20 | +$39.40 | 20 | -$22.40 | **+$17.00** |
+| **1 Mes (30d)** | 40 | 20 | +$39.40 | 20 | -$22.40 | **+$17.00** |
 
 ## 🔍 Últimas 10 Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL |
