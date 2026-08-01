@@ -3,12 +3,12 @@ tags:
   - trading
   - historial_completo
   - binance
-date: 2026-08-01 04:03:07
+date: 2026-08-01 04:11:20
 ---
 
 # 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
 
-> **Última Actualización:** `2026-08-01 04:03:07`
+> **Última Actualización:** `2026-08-01 04:11:20`
 > Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
 
 | Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |
@@ -318,4 +318,5 @@ date: 2026-08-01 04:03:07
 | 2026-07-31 23:25:48 | 🔷 GRUPO 2: Mode... | TLMUSDT | SHORT | $0.001822 | $0.001827 | $-1.09 | 10 | 69.5 | NEUTRAL | 🔴 LOSS |
 | 2026-07-31 23:25:48 | 🔷 GRUPO 2: Mode... | TLMUSDT | SHORT | $0.001822 | $0.001827 | $-1.09 | 10 | 69.5 | NEUTRAL | 🔴 LOSS |
 | 2026-08-01 04:03:07 | CUENTA REAL... | ZECUSDT | BUY | $456.15 | $465.99 | $+0.18 | N/A | N/A | N/A | 🟢 WIN |
+| 2026-08-01 04:11:20 | CUENTA REAL... | MMTUSDT | BUY | $0.1895 | $0.1936 | $+0.19 | N/A | N/A | N/A | 🟢 WIN |
 
