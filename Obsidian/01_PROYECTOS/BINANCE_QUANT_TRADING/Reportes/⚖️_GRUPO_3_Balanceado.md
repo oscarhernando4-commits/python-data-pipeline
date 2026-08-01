@@ -1,6 +1,6 @@
 # Reporte Temporal: ⚖️ GRUPO 3: Balanceado
 
-> Actualizado: 2026-08-01 02:20:49
+> Actualizado: 2026-08-01 02:27:18
 
 | Ventana de Tiempo | Total Operaciones | Ganadoras | Perdedoras | Win Rate | PnL Neto |
 | :--- | :--- | :--- | :--- | :--- | :--- |
