@@ -3,12 +3,12 @@ tags:
   - trading
   - historial_completo
   - binance
-date: 2026-08-01 22:05:20
+date: 2026-08-01 20:15:50
 ---
 
 # 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
 
-> **Última Actualización:** `2026-08-01 22:05:20`
+> **Última Actualización:** `2026-08-01 20:15:50`
 > Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
 
 | Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |
@@ -297,5 +297,4 @@ date: 2026-08-01 22:05:20
 | 2026-08-01 20:00:50 | 🔥 GRUPO 5: Expl... | DEXEUSDT | SHORT | $2.392 | $2.394 | $-1.09 | 0 | 44.8 | NEUTRAL | 🔴 LOSS |
 | 2026-08-01 20:00:50 | 🔥 GRUPO 5: Expl... | DEXEUSDT | SHORT | $2.392 | $2.394 | $-1.09 | 0 | 44.8 | NEUTRAL | 🔴 LOSS |
 | 2026-08-01 20:15:50 | 🥇 GRUPO 0: RÉPL... | BANKUSDT | SHORT | $0.0533 | $0.0534 | $-1.09 | 30 | 42.3 | NEUTRAL | 🔴 LOSS |
-| 2026-08-01 22:05:20 | CUENTA REAL... | ASTERUSDT | BUY | $0.601 | $0.6 | $-0.03 | N/A | N/A | N/A | 🔴 LOSS |
 

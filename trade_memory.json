@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 285,
+    "total_trades": 284,
     "wins": 81,
-    "losses": 204,
-    "win_rate_pct": 28.42,
-    "total_pnl_usd": -71.55091454545463
+    "losses": 203,
+    "win_rate_pct": 28.52,
+    "total_pnl_usd": -71.52185454545463
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -4351,19 +4351,6 @@
         "rsi_15m": 42.34,
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-08-01 22:05:20",
-      "account_id": "R-01",
-      "group_name": "CUENTA REAL",
-      "symbol": "ASTERUSDT",
-      "side": "BUY",
-      "entry_price": 0.601,
-      "exit_price": 0.6,
-      "pnl_usd": -0.029060000000000023,
-      "result": "LOSS",
-      "notes": "Real Money Trade closed with -0.17%",
-      "context": {}
     }
   ]
 }
