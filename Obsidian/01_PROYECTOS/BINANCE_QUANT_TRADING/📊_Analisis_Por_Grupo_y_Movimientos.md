@@ -2,19 +2,19 @@
 tags:
   - analisis_grupos
   - trading
-date: 2026-08-01 16:10:50
+date: 2026-08-01 16:17:12
 ---
 
 # 📊 ANÁLISIS GLOBAL DE GANANCIAS Y PÉRDIDAS POR GRUPO
 
-> **Última Actualización:** `2026-08-01 16:10:50`
+> **Última Actualización:** `2026-08-01 16:17:12`
 > Este reporte desglosa el rendimiento matemático de cada Estrategia de IA. 
 
 ## 🏆 Resumen de Rendimiento (Ranking de Grupos)
 
 | Grupo de IA | Operaciones | Tasa de Acierto (WinRate) | PnL en LONGs | PnL en SHORTs | 💰 PnL NETO TOTAL |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **⚡ GRUPO 4: Frecuencia Alta** | 80 | `50.0%` | $+0.00 | $+60.80 | **$+60.80** |
+| **⚡ GRUPO 4: Frecuencia Alta** | 100 | `40.0%` | $+0.00 | $+38.20 | **$+38.20** |
 | **🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)** | 40 | `50.0%` | $+17.00 | $+0.00 | **$+17.00** |
 | **⚖️ GRUPO 3: Balanceado** | 40 | `50.0%` | $+9.80 | $+0.00 | **$+9.80** |
 | **CUENTA REAL** | 4 | `50.0%` | $+0.00 | $+0.16 | **$+0.16** |
@@ -32,6 +32,26 @@ date: 2026-08-01 16:10:50
 
 | Fecha | Par | Lado | Precio Entrada | Precio Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | **TRXUSDT** | SHORT | $0.3256 | $0.3286 | `$-1.13` | 🔴 LOSS |
 | 2026-07-29 18:58:46 | **BTCUSDT** | SHORT | $63976.01 | $64594.65 | `$-1.15` | 🔴 LOSS |
 | 2026-07-29 18:58:46 | **BTCUSDT** | SHORT | $63976.01 | $64594.65 | `$-1.15` | 🔴 LOSS |
 | 2026-07-29 18:58:46 | **BTCUSDT** | SHORT | $63976.01 | $64594.65 | `$-1.15` | 🔴 LOSS |

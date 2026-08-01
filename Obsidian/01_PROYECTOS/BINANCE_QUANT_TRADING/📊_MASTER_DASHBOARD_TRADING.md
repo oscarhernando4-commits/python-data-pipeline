@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-08-01 16:10:50
+date: 2026-08-01 16:17:11
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-08-01 16:10:50`  
+> **Última Actualización:** `2026-08-01 16:17:11`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -22,18 +22,18 @@ date: 2026-08-01 16:10:50
 
 | Métrica | Valor Actual | ¿Qué Significa? |
 | :--- | :--- | :--- |
-| 💵 **Capital Total (Fondo $10k):** | **`$9,917.34 USD`** | Balance de las 100 cuentas de prueba |
-| 💰 **Ganancia Neta Total:** | **`$-82.66 USD`** | Resultado global acumulado |
+| 💵 **Capital Total (Fondo $10k):** | **`$9,894.74 USD`** | Balance de las 100 cuentas de prueba |
+| 💰 **Ganancia Neta Total:** | **`$-105.26 USD`** | Resultado global acumulado |
 | 🎯 **Cuentas que cumplieron la meta:** | **`20 de 100 Cuentas`** | Cuentas que alcanzaron el +3% esta semana |
-| 📈 **Tasa de Acierto de la IA:** | **`25.06% Win Rate`** | Efectividad actual de las estrategias |
+| 📈 **Tasa de Acierto de la IA:** | **`23.88% Win Rate`** | Efectividad actual de las estrategias |
 
 ---
 
 ## 🧭 2. AUTO-APRENDIZAJE: SESGO DE MERCADO (LONG vs SHORT)
 
-> [!WARNING] 🧠 IA SENTINEL REGLA DE PRIORIDAD: `NEUTRAL`
+> [!WARNING] 🧠 IA SENTINEL REGLA DE PRIORIDAD: `FAVOR_LONG`
 > - 🟢 **Rendimiento Compras (LONG):** `30.0%` de Acierto
-> - 🔴 **Rendimiento Ventas (SHORT):** `20.1%` de Acierto
+> - 🔴 **Rendimiento Ventas (SHORT):** `18.3%` de Acierto
 > - **Acción de la IA:** El bot está inyectando esta data en tiempo real a Gemini. Si la tendencia muestra pérdidas en LONG y ganancias en SHORT, **Gemini bloqueará operaciones LONG** priorizando el flujo ganador del mercado para el dinero real.
 
 ---
@@ -45,7 +45,7 @@ date: 2026-08-01 16:10:50
 > 
 > - 💵 **Capital Base (Promedio):** `$100.00 USD`
 > - 🎯 **Meta Semanal (Promedio):** `$103.00 USD`
-> - 💰 **Capital Promedio Actual:** `$99.17 USD`
+> - 💰 **Capital Promedio Actual:** `$98.95 USD`
 > - 🟡 **Estado:** `🟡 EN PROCESO - Buscando el +3% de ganancia en operaciones filtradas`
 
 ---
@@ -63,11 +63,11 @@ date: 2026-08-01 16:10:50
 
 | Criptomoneda | Balance Actual | Ganancia | Estado |
 | :--- | :--- | :--- | :--- |
-| **TRXUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
-| **TRXUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
-| **TRXUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
-| **TRXUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
-| **TRXUSDT** | `$103.04 USD` | `$+3.04 USD` | 🔵 En Operación |
+| **TRXUSDT** | `$101.91 USD` | `$+1.91 USD` | 🔵 En Operación |
+| **TRXUSDT** | `$101.91 USD` | `$+1.91 USD` | 🔵 En Operación |
+| **TRXUSDT** | `$101.91 USD` | `$+1.91 USD` | 🔵 En Operación |
+| **TRXUSDT** | `$101.91 USD` | `$+1.91 USD` | 🔵 En Operación |
+| **TRXUSDT** | `$101.91 USD` | `$+1.91 USD` | 🔵 En Operación |
 
 
 ---
@@ -81,7 +81,7 @@ date: 2026-08-01 16:10:50
 | **1 (Ultra-Estricto)** | `50.0%` | `$+17.00` |
 | **Grupo 2** | `9.1%` | `$-148.40` |
 | **Grupo 3** | `50.0%` | `$+9.80` |
-| **Grupo 4** | `50.0%` | `$+60.80` |
+| **Grupo 4** | `40.0%` | `$+38.20` |
 | **5 (Exploratorio)** | `0.0%` | `$-20.90` |
 
 

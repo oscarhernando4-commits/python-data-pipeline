@@ -4,29 +4,29 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-08-01 14:40:58
+date: 2026-08-01 16:17:10
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-08-01 14:40:58`  
+> **Última Actualización:** `2026-08-01 16:17:10`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `407`
-- **Ganadas (WIN):** `103` | **Perdidas (LOSS):** `304`
-- **Tasa de Acierto (Win Rate):** `25.31%`
-- **PnL Total Neto:** `$-82.50 USD`
+- **Total Operaciones:** `427`
+- **Ganadas (WIN):** `103` | **Perdidas (LOSS):** `324`
+- **Tasa de Acierto (Win Rate):** `24.12%`
+- **PnL Total Neto:** `$-105.10 USD`
 
 ---
 
 ## 🧭 Sesgo de Aprendizaje Automático (Últimos 100 Trades)
-- **Sesgo Actual (Market Bias):** `NEUTRAL`
+- **Sesgo Actual (Market Bias):** `FAVOR_LONG`
 - **Rendimiento LONG (Compras):** `30.0%` de Acierto (en 200 ops recientes)
-- **Rendimiento SHORT (Ventas):** `20.1%` de Acierto (en 204 ops recientes)
-- 🏆 **Grupo de IA Más Rentable:** `⚡ GRUPO 4: Frecuencia Alta` (WinRate: 50.0%, PnL: $60.8)
+- **Rendimiento SHORT (Ventas):** `18.3%` de Acierto (en 224 ops recientes)
+- 🏆 **Grupo de IA Más Rentable:** `🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)` (WinRate: 50.0%, PnL: $17.0)
 - *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada. Y el Dinero Real copiará automáticamente al Grupo Más Rentable.
 
 ---
@@ -51,6 +51,7 @@ date: 2026-08-01 14:40:58
 - 🛑 BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on EPICUSDT)
 - 🛑 BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on EPICUSDT)
 - 🛑 BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on EULUSDT)
+- 🛑 BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on TRXUSDT)
 
 ---
 
@@ -73,14 +74,14 @@ date: 2026-08-01 14:40:58
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
-| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
-| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
-| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
-| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
-| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
-| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
-| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
-| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
-| 2026-08-01 14:40:58 | EULUSDT | SHORT | `$1.658` | `$1.669` | `$-1.03` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
+| 2026-08-01 16:17:10 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
 
