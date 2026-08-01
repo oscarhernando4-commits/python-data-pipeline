@@ -56,6 +56,15 @@ def get_binance_top_volume_coins(valid_pairs):
         print(f"Fallo Binance 24H Volume: {e}")
         return []
 
+# Exhaustive Blacklist of Stablecoins, Fiat-Pegged Assets, and Synthetic Collateral
+STABLECOIN_BLACKLIST = {
+    "USDT", "USDC", "FDUSD", "TUSD", "BUSD", "DAI", "USDD", "USDE", "RLUSD", "USD1",
+    "EUR", "AEUR", "WBTC", "TBTC", "USDS", "USTC", "FRAX", "PYUSD", "USD0", "SNDKB",
+    "SNDK", "USD", "EURUSDT", "AEURUSDT", "RLUSDUSDT", "USD1USDT", "USDCUSDT", "FDUSDUSDT",
+    "TUSDUSDT", "BUSDUSDT", "DAIUSDT", "USDDUSDT", "USDEUSDT", "FRAXUSDT", "PYUSDUSDT",
+    "WBTCUSDT", "TBTCUSDT", "EURI", "EURIOUSDT"
+}
+
 def update_top_pairs():
     print(f"Fetching valid Binance USDT pairs...")
     try:
@@ -65,15 +74,12 @@ def update_top_pairs():
     except Exception as e:
         print(f"Failed to fetch Binance exchange info: {e}")
         return
-        
-
 
     cmc_symbols = get_cmc_top_coins()
     binance_vol_symbols = get_binance_top_volume_coins(valid_binance_pairs)
     
     # Merge both lists to get the ultimate list (Market Cap + High Volume)
     raw_symbols = []
-    # Interleave to prioritize coins that are high on BOTH lists
     max_len = max(len(cmc_symbols), len(binance_vol_symbols))
     for i in range(max_len):
         if i < len(cmc_symbols) and cmc_symbols[i] not in raw_symbols:
@@ -82,26 +88,18 @@ def update_top_pairs():
             raw_symbols.append(binance_vol_symbols[i])
     
     top_100_pairs = []
-    # Exhaustive Blacklist of Stablecoins, Fiat-Pegged Assets, and Synthetic Collateral
-    stablecoins = {
-        "USDT", "USDC", "FDUSD", "TUSD", "BUSD", "DAI", "USDD", "USDE", "RLUSD", "USD1",
-        "EUR", "AEUR", "WBTC", "TBTC", "USDS", "USTC", "FRAX", "PYUSD", "USD0", "SNDKB",
-        "SNDK", "USD", "EURUSDT", "AEURUSDT", "RLUSDUSDT", "USD1USDT", "USDCUSDT", "FDUSDUSDT",
-        "TUSDUSDT", "BUSDUSDT", "DAIUSDT", "USDDUSDT", "USDEUSDT", "FRAXUSDT", "PYUSDUSDT",
-        "WBTCUSDT", "TBTCUSDT", "EURI", "EURIOUSDT"
-    }
     mapping = {"IOTA": "IOTA"}
     
     for sym in raw_symbols:
         clean_sym = sym.upper().strip()
-        if clean_sym in stablecoins or f"{clean_sym}USDT" in stablecoins:
+        if clean_sym in STABLECOIN_BLACKLIST or f"{clean_sym}USDT" in STABLECOIN_BLACKLIST:
             continue
         # Filter out weird ASCII/Chinese symbols
         if not all(ord(c) < 128 for c in sym):
             continue
             
         binance_sym = f"{mapping.get(sym, sym)}USDT"
-        if binance_sym in stablecoins:
+        if binance_sym in STABLECOIN_BLACKLIST:
             continue
         
         # Must exist in Spot

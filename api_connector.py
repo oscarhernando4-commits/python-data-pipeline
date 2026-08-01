@@ -205,6 +205,69 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
     except Exception as e:
         return {"error": str(e)}
 
+def execute_real_spot_market_sell(symbol, quantity=None):
+    """
+    Executes a SPOT MARKET SELL.
+    - If quantity is None, fetches the entire free balance of the asset.
+    - Dynamically gets LOT_SIZE and stepSize precision to prevent API rejects.
+    """
+    import math
+    asset = symbol.replace("USDT", "")
+    
+    if quantity is None:
+        balances = get_real_balances()
+        if balances:
+            for b in balances:
+                if b.get("asset") == asset:
+                    quantity = float(b.get("free", 0))
+                    break
+                    
+    if not quantity or quantity <= 0:
+        return {"error": f"No available balance to sell for {symbol}"}
+        
+    try:
+        ex_info = requests.get(f"{BASE_URL}/api/v3/exchangeInfo?symbol={symbol}", timeout=5).json()
+        symbol_info = ex_info.get("symbols", [{}])[0]
+        step_size = 0.01
+        qty_precision = 2
+        for f in symbol_info.get("filters", []):
+            if f.get("filterType") == "LOT_SIZE":
+                step_size = float(f.get("stepSize", "0.01"))
+                if "." in f.get("stepSize", ""):
+                    qty_precision = len(f.get("stepSize", "").split(".")[1].rstrip("0"))
+                else:
+                    qty_precision = 0
+                break
+    except Exception as e:
+        print(f"Error fetching precision for {symbol}, defaulting: {e}")
+        qty_precision = 2
+        step_size = 0.01
+        
+    if step_size < 1.0 and qty_precision > 0:
+        quantized_qty = math.floor(quantity / step_size) * step_size
+        qty_str = f"{quantized_qty:.{qty_precision}f}"
+    else:
+        qty_str = str(int(math.floor(quantity)))
+        
+    params = {
+        "symbol": symbol,
+        "side": "SELL",
+        "type": "MARKET",
+        "quantity": qty_str,
+        "timestamp": int(time.time() * 1000)
+    }
+    query_string = urlencode(params)
+    signature = hmac.new(API_SECRET.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
+    params["signature"] = signature
+    headers = {"X-MBX-APIKEY": API_KEY}
+    
+    url = f"{BASE_URL}/api/v3/order"
+    try:
+        res = requests.post(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
+        return res.json()
+    except Exception as e:
+        return {"error": str(e)}
+
 def diagnose_full_spot_wallet():
     """
     HOURLY COMPREHENSIVE SPOT WALLET DIAGNOSIS (via Fixie Proxy).
@@ -582,46 +645,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 reason_str = f"Ganancia Asegurada (+{pnl_pct:.2f}%)" if pnl_pct >= 2.0 or state["position"].get("break_even", False) else f"Stop Loss ({pnl_pct:.2f}%)"
                 print(f"🎯 ALERTA REAL: Salida LONG por {reason_str} en {active_symbol}. Vendiendo...")
                 
-                # Fetch exact LOT_SIZE filter from Spot exchangeInfo
-                step_size = 1.0
-                qty_precision = 0
                 try:
-                    exinfo = requests.get(f"{BASE_URL}/api/v3/exchangeInfo?symbol={active_symbol}", proxies=PROXIES, timeout=5).json()
-                    for s in exinfo.get("symbols", []):
-                        if s["symbol"] == active_symbol:
-                            for f in s.get("filters", []):
-                                if f["filterType"] == "LOT_SIZE":
-                                    step_size = float(f["stepSize"])
-                                    if step_size < 1.0:
-                                        qty_precision = max(0, int(round(-math.log10(step_size))))
-                                    else:
-                                        qty_precision = 0
-                                    break
-                except Exception as e:
-                    print(f"Error fetching precision, defaulting: {e}")
-                    qty_precision = 2
-                    step_size = 0.01
-                    
-                if step_size < 1.0 and qty_precision > 0:
-                    quantized_qty = math.floor(active_qty / step_size) * step_size
-                    qty_str = f"{quantized_qty:.{qty_precision}f}"
-                else:
-                    qty_str = str(int(math.floor(active_qty)))
-                    
-                sell_params = {
-                    "symbol": active_symbol,
-                    "side": "SELL",
-                    "type": "MARKET",
-                    "quantity": qty_str,
-                    "timestamp": int(time.time() * 1000)
-                }
-                query_string = urlencode(sell_params)
-                signature = hmac.new(API_SECRET.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
-                sell_params["signature"] = signature
-                headers = {"X-MBX-APIKEY": API_KEY}
-                try:
-                    res = requests.post(f"{BASE_URL}/api/v3/order", headers=headers, params=sell_params, proxies=PROXIES, timeout=10)
-                    if res.status_code == 200:
+                    res_json = execute_real_spot_market_sell(active_symbol, active_qty)
+                    if "orderId" in res_json or res_json.get("status") == "FILLED":
                         pnl_usd = (active_current_price - entry) * active_qty
                         
                         # Update daily counters
@@ -658,7 +684,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         state["status"] = "🟦 Buscando Entrada A+"
                         print(f"✅ LONG cerrado exitosamente: {res_type} ({pnl_pct:+.2f}% | ${pnl_usd:+.2f})")
                     else:
-                        print(f"⚠️ Spot SELL rejected (HTTP {res.status_code}): {res.text}")
+                        print(f"⚠️ Spot SELL rejected: {res_json}")
                 except Exception as e:
                     print(f"Error ejecutando venta real: {e}")
                     

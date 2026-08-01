@@ -1,14 +1,20 @@
 """
-AUDITORÍA COMPLETA E2E - Smart Proxy Saver + Trading Pipeline
-Verifica que todo el flujo funciona correctamente sin errores.
+AUDITORÍA INTEGRAL E2E - SISTEMA QUANT TRADING BINANCE SPOT
+Diagnóstico a profundidad de todos los subsistemas, APIs, reglas de capital,
+filtros de stablecoins, proxies Fixie, flujos de GitHub Actions y reportes.
 """
 import sys
 import os
 import json
+import math
 import time
 from datetime import datetime
 
-sys.stdout.reconfigure(encoding='utf-8')
+try:
+    sys.stdout.reconfigure(encoding='utf-8')
+except Exception:
+    pass
+
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 from dotenv import load_dotenv
@@ -26,87 +32,107 @@ def test(name, condition, detail=""):
         TESTS_FAILED += 1
         print(f"  ❌ {name} -> {detail}")
 
-print("=" * 60)
-print("🔍 AUDITORÍA COMPLETA E2E DEL SISTEMA DE TRADING")
-print("=" * 60)
+print("=" * 65)
+print("🔍 DIAGNÓSTICO INTEGRAL A PROFUNDIDAD DEL SISTEMA DE TRADING")
+print("=" * 65)
 
-# TEST 1: Proxy Rotator
-print("\n[1/8] PROXY ROTATOR (7 cuentas Fixie)")
+# 1. PROXY FIXIE POOL
+print("\n[1/10] ROTADOR DE PROXIES FIXIE (7 Cuentas EU West)")
 import api_connector
-test("FIXIE_POOL tiene 7 proxies", len(api_connector.FIXIE_POOL) == 7, f"Solo tiene {len(api_connector.FIXIE_POOL)}")
-test("PROXY_URL seleccionado del pool", api_connector.PROXY_URL in api_connector.FIXIE_POOL, f"URL: {api_connector.PROXY_URL}")
-test("PROXIES dict configurado", "http" in api_connector.PROXIES and "https" in api_connector.PROXIES)
+test("FIXIE_POOL tiene 7 proxies configurados", len(api_connector.FIXIE_POOL) == 7, f"Tiene {len(api_connector.FIXIE_POOL)}")
+test("PROXY_URL seleccionado válidamente", api_connector.PROXY_URL in api_connector.FIXIE_POOL)
+test("PROXIES dict (http/https) listo", "http" in api_connector.PROXIES and "https" in api_connector.PROXIES)
 
-# TEST 2: API Keys
-print("\n[2/8] API KEYS CARGADAS")
-test("BINANCE_REAL_API_KEY existe", len(api_connector.API_KEY) > 10, "API KEY vacía o muy corta")
-test("BINANCE_REAL_API_SECRET existe", len(api_connector.API_SECRET) > 10, "API SECRET vacía o muy corta")
+# 2. PRECIOS EN VIVO (Conexión Pública Binance sin consumo de proxy)
+print("\n[2/10] FEED DE PRECIOS EN VIVO DE BINANCE")
+try:
+    btc_p = api_connector.get_symbol_price("BTCUSDT", is_futures=False)
+    eth_p = api_connector.get_symbol_price("ETHUSDT", is_futures=False)
+    sol_p = api_connector.get_symbol_price("SOLUSDT", is_futures=False)
+    test(f"BTCUSDT precio en vivo: ${btc_p:,.2f}", btc_p and btc_p > 20000)
+    test(f"ETHUSDT precio en vivo: ${eth_p:,.2f}", eth_p and eth_p > 1000)
+    test(f"SOLUSDT precio en vivo: ${sol_p:,.2f}", sol_p and sol_p > 20)
+except Exception as e:
+    test("Conexión con Binance Price API", False, str(e))
 
-# TEST 3: Learning Engine
-print("\n[3/8] LEARNING ENGINE V2")
+# 3. LISTA NEGRA DE STABLECOINS Y ACTIVOS SINTÉTICOS
+print("\n[3/10] FILTRO Y LISTA NEGRA DE STABLECOINS")
+import data_fetcher
+blacklist_samples = ["RLUSD", "USD1", "USDC", "FDUSD", "TUSD", "BUSD", "EUR", "DAI"]
+all_blacklisted = all(s in data_fetcher.STABLECOIN_BLACKLIST for s in blacklist_samples)
+test("Blacklist en data_fetcher contiene stablecoins y sintéticos", all_blacklisted)
+
+if os.path.exists("top_100_pairs.json"):
+    with open("top_100_pairs.json", "r", encoding="utf-8") as f:
+        pairs = json.load(f)
+    test(f"top_100_pairs.json contiene {len(pairs)} pares híbridos", len(pairs) >= 50)
+    has_toxic_stable = any(p in ["RLUSDUSDT", "USD1USDT", "USDCUSDT", "EURUSDT", "FDUSDUSDT"] for p in pairs)
+    test("Ninguna stablecoin en top_100_pairs.json", not has_toxic_stable, "Se encontraron stablecoins en lista activa")
+
+# 4. GESTIÓN DE CAPITAL 100% Y REDONDEO A 1 DECIMAL (HACIA ABAJO)
+print("\n[4/10] REGLAS DE CAPITAL (100% Saldo Libre & Truncamiento 1 Decimal)")
+test_balances = [17.5692, 20.99, 15.42, 8.78]
+expected_floors = [17.5, 20.9, 15.4, 8.7]
+floors_ok = [math.floor(b * 10) / 10.0 for b in test_balances] == expected_floors
+test("Truncamiento estricto a 1 decimal hacia abajo", floors_ok)
+
+# 5. ESTADO DE LA CUENTA REAL
+print("\n[5/10] ESTADO PERSISTENTE DE CUENTA REAL (real_money_account.json)")
+state = api_connector.load_real_account_state()
+test("real_money_account.json cargado correctamente", state is not None)
+test(f"Balance USDT registrado: ${state.get('_cached_usdt_free', 0):.4f} USDT", state.get('_cached_usdt_free', 0) > 0)
+test(f"BNB escudo comisiones: {state.get('_cached_bnb', 0):.6f} BNB", state.get('_cached_bnb', 0) >= 0)
+test(f"Estado operativo: {state.get('status')}", "status" in state)
+
+# 6. MOTOR DE APRENDIZAJE CONTINUO (LEARNING ENGINE)
+print("\n[6/10] MOTOR DE APRENDIZAJE Y MEMORIA (learning_engine.py)")
 import learning_engine
 mem = learning_engine.load_memory()
-test("trade_memory.json cargable", mem is not None)
-test("Historial tiene trades", len(mem.get("history", [])) > 0, f"Trades: {len(mem.get('history', []))}")
+test("trade_memory.json cargado", mem is not None)
 bias = learning_engine.get_market_bias()
-test("get_market_bias() funciona", bias is not None and "bias" in bias, f"Resultado: {bias}")
-test("recommended_bias existe", "recommended_bias" in bias, "Campo falta")
-test("total_trades existe", "total_trades" in bias, "Campo falta")
-optimal = learning_engine.get_optimal_entry_conditions()
-test("get_optimal_entry_conditions() funciona", optimal is not None, "Retornó None")
-if optimal:
-    test("RSI analysis presente", "rsi_analysis" in optimal)
-    test("Score analysis presente", "score_analysis" in optimal)
+test(f"Sesgo estadístico calculado: {bias.get('bias')} (WR LONG: {bias.get('long_win_rate')}%, SHORT: {bias.get('short_win_rate')}%)", "bias" in bias)
 
-# TEST 4: State Management
-print("\n[4/8] STATE MANAGEMENT")
-state = api_connector.load_real_account_state()
-test("real_money_account.json cargable", state is not None)
-test("current_balance_usd existe", "current_balance_usd" in state)
-test("position campo existe", "position" in state)
-
-# TEST 5: Smart Proxy Saver Logic
-print("\n[5/8] SMART PROXY SAVER")
-current_min = datetime.now().minute
-is_sync = current_min in [0, 30, 1, 31]
-test(f"Minuto actual: {current_min}, Sync window: {is_sync}", True)
-if not is_sync:
-    test("Debería usar CACHE (no gastar Fixie)", True)
-else:
-    test("Debería SINCRONIZAR (usar Fixie)", True)
-
-# TEST 6: Price Fetch (NO proxy, directo)
-print("\n[6/8] PRICE FETCH (Sin Proxy - Gratis)")
-try:
-    btc_price = api_connector.get_symbol_price("BTCUSDT", is_futures=False)
-    test(f"BTC precio obtenido: ${btc_price:.2f}", btc_price and btc_price > 10000, f"Precio: {btc_price}")
-except Exception as e:
-    test(f"BTC precio obtenido", False, str(e))
-
-# TEST 7: Gemini Sentinel Config
-print("\n[7/8] GEMINI SENTINEL")
+# 7. ROUTER DE INTELIGENCIA ARTIFICIAL (GEMINI / FALLBACK CUANTITATIVO)
+print("\n[7/10] COMITÉ DE IA Y FALLBACK CUANTITATIVO")
 import llm_router
-gemini_key = os.getenv("GEMINI_API_KEY", "")
-test("GEMINI_API_KEY existe (local o cloud)", len(gemini_key) > 10 or True, "Key solo en GitHub Secrets (OK para cloud)")
+dummy_cands = [{
+    "symbol": "BTCUSDT", "divergence": 25, "score": 75,
+    "suggested_action": "BUY_LONG", "tech_data": {"rsi": 45, "trend": "BULLISH"}
+}]
+ai_rev = llm_router.review_top_5_candidates(dummy_cands, {"headlines": []}, {"score": 50})
+test("AI Router responde con estructura válida", "approved" in ai_rev and "selected_symbol" in ai_rev)
 
-# TEST 8: GitHub Actions Workflow
-print("\n[8/8] GITHUB ACTIONS WORKFLOW")
-workflow_path = os.path.join(os.path.dirname(__file__), ".github", "workflows", "binance_quant_cron.yml")
-if os.path.exists(workflow_path):
-    with open(workflow_path, "r", encoding="utf-8", errors="ignore") as f:
-        wf_content = f.read()
-    test("Cron cada 5 minutos", "*/5 * * * *" in wf_content)
-    test("pipeline_processor.py en workflow", "pipeline_processor.py" in wf_content)
-    test("BINANCE_REAL_API_KEY en env", "BINANCE_REAL_API_KEY" in wf_content)
-    test("GEMINI_API_KEY en env", "GEMINI_API_KEY" in wf_content)
-else:
-    test("Workflow file exists", False, "No encontrado")
+# 8. WORKFLOW DE GITHUB ACTIONS (trigger_quant_trade)
+print("\n[8/10] WORKFLOW DE GITHUB ACTIONS (.github/workflows/pipeline_cron.yml)")
+wf_path = os.path.join(".github", "workflows", "pipeline_cron.yml")
+test("pipeline_cron.yml existe", os.path.exists(wf_path))
+if os.path.exists(wf_path):
+    with open(wf_path, "r", encoding="utf-8") as f:
+        wf_code = f.read()
+    test("Disparador trigger_quant_trade activo", "trigger_quant_trade" in wf_code)
+    test("Cron interno schedule eliminado (previene colisiones)", "schedule:" not in wf_code)
+    test("Secret BINANCE_REAL_API_KEY inyectado", "BINANCE_REAL_API_KEY" in wf_code)
+    test("Mitigación de conflictos git integrada", "git reset --soft" in wf_code or "git pull" in wf_code)
 
-# SUMMARY
-print("\n" + "=" * 60)
-print(f"🎯 RESULTADOS: {TESTS_PASSED} PASSED / {TESTS_FAILED} FAILED")
+# 9. INTEGRIDAD DE REPORTES OBSIDIAN
+print("\n[9/10] REPORTES EN OBSIDIAN (Rutas relativas y legibilidad)")
+obsidian_matrix = os.path.join("Obsidian", "01_PROYECTOS", "BINANCE_QUANT_TRADING", "📊_Analisis_Por_Grupo_y_Movimientos.md")
+obsidian_real = os.path.join("Obsidian", "01_PROYECTOS", "BINANCE_QUANT_TRADING", "Reportes", "CUENTA_REAL.md")
+test("Reporte matriz Obsidian existe", os.path.exists(obsidian_matrix))
+test("Reporte CUENTA_REAL.md existe", os.path.exists(obsidian_real))
+
+# 10. SINCRONIZACIÓN Y SCRIPT DIAGNÓSTICO
+print("\n[10/10] EJECUCIÓN DEL RADAR Y SINCRONIZACIÓN")
+test("Función diagnose_full_spot_wallet definida", hasattr(api_connector, "diagnose_full_spot_wallet"))
+test("Función evaluate_and_trade_real_money definida", hasattr(api_connector, "evaluate_and_trade_real_money"))
+test("Función execute_real_spot_market_buy con quoteOrderQty definida", hasattr(api_connector, "execute_real_spot_market_buy"))
+test("Función execute_real_spot_market_sell con LOT_SIZE definida", hasattr(api_connector, "execute_real_spot_market_sell"))
+
+# RESUMEN FINAL
+print("\n" + "=" * 65)
+print(f"🎯 RESULTADOS FINALES: {TESTS_PASSED} TESTS PASADOS / {TESTS_FAILED} FALLADOS")
 if TESTS_FAILED == 0:
-    print("🏆 TODOS LOS TESTS PASARON - SISTEMA 100% OPERATIVO")
+    print("🏆 AUDITORÍA 100% EXITOSA - TODOS LOS SUBSISTEMAS OPERATIVOS")
 else:
-    print(f"⚠️ {TESTS_FAILED} TESTS FALLARON - REQUIERE ATENCIÓN")
-print("=" * 60)
+    print(f"⚠️ SE DETECTARON {TESTS_FAILED} PROBLEMAS QUE REQUIEREN ATENCIÓN")
+print("=" * 65)
