@@ -4,17 +4,18 @@ aliases: [Rendimiento CUENTA REAL]
 cssclasses: [dashboard-view]
 ---
 # 📊 Rendimiento por Periodos: CUENTA REAL
-> Última actualización: 2026-08-01 04:03:04
+> Última actualización: 2026-08-01 04:06:10
 
 | Periodo | Total Operaciones | ✅ Ganadoras | 💰 PnL Ganado | ❌ Perdedoras | 💸 PnL Perdido | 📈 Neto |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **1 Día (24h)** | 0 | 0 | +$0.00 | 0 | -$0.00 | **$0.00** |
-| **3 Días** | 1 | 0 | +$0.00 | 1 | -$0.06 | **$-0.06** |
-| **1 Semana** | 1 | 0 | +$0.00 | 1 | -$0.06 | **$-0.06** |
-| **2 Semanas** | 1 | 0 | +$0.00 | 1 | -$0.06 | **$-0.06** |
-| **1 Mes (30d)** | 1 | 0 | +$0.00 | 1 | -$0.06 | **$-0.06** |
+| **1 Día (24h)** | 1 | 1 | +$0.18 | 0 | -$0.00 | **+$0.18** |
+| **3 Días** | 2 | 1 | +$0.18 | 1 | -$0.06 | **+$0.12** |
+| **1 Semana** | 2 | 1 | +$0.18 | 1 | -$0.06 | **+$0.12** |
+| **2 Semanas** | 2 | 1 | +$0.18 | 1 | -$0.06 | **+$0.12** |
+| **1 Mes (30d)** | 2 | 1 | +$0.18 | 1 | -$0.06 | **+$0.12** |
 
 ## 🔍 Últimas 10 Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL |
 | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-01 04:03:07 | **ZECUSDT** | BUY | $456.15 | $465.99 | 🟢 +$0.18 |
 | 2026-07-30 12:49:04 | **UNIUSDT** | SHORT | $4.4 | $4.427 | 🔴 -$0.06 |
