@@ -45,7 +45,7 @@ def generate_web_dashboard():
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
     deliberation = verdict_data.get("committee_deliberation", {})
-    pos = account_data.get("position", {})
+    pos = account_data.get("position") or {}
     
     data_payload = {
         "updated_at": now_str,
@@ -54,10 +54,10 @@ def generate_web_dashboard():
         "bnb_free": account_data.get("_cached_bnb", 0.00446),
         "status": account_data.get("status", "🟦 Buscando Entrada A+"),
         "position": {
-            "symbol": pos.get("symbol", "NINGUNA"),
-            "quantity": pos.get("quantity", 0.0),
-            "entry_price": pos.get("entry_price", 0.0),
-            "highest_price": pos.get("highest_price", pos.get("entry_price", 0.0)),
+            "symbol": pos.get("symbol", "NINGUNA") if pos else "NINGUNA",
+            "quantity": pos.get("quantity", 0.0) if pos else 0.0,
+            "entry_price": pos.get("entry_price", 0.0) if pos else 0.0,
+            "highest_price": pos.get("highest_price", pos.get("entry_price", 0.0)) if pos else 0.0,
             "break_even": pos.get("break_even", False),
             "trailing_active": pos.get("trailing_active", False),
             "adaptive_sl_pct": pos.get("adaptive_sl_pct", 1.0),

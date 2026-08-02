@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-08-02 14:30:08",
-  "total_balance_usd": 20.18,
-  "usdt_free": 0.005,
-  "bnb_free": 0.00446371,
-  "status": "🔵 En Vivo LONG (INJUSDT @ $5.0610)",
+  "updated_at": "2026-08-02 14:33:41",
+  "total_balance_usd": 20.11,
+  "usdt_free": 17.4987,
+  "bnb_free": 0.00444145,
+  "status": "🟦 Buscando Entrada A+",
   "position": {
-    "symbol": "INJUSDT",
-    "quantity": 3.46,
-    "entry_price": 4.97,
-    "highest_price": 5.085,
-    "break_even": true,
-    "trailing_active": true,
-    "adaptive_sl_pct": 1.2,
-    "volatility_regime": "🔵 Volatilidad Estándar / Margen Óptimo"
+    "symbol": "NINGUNA",
+    "quantity": 0.0,
+    "entry_price": 0.0,
+    "highest_price": 0.0,
+    "break_even": false,
+    "trailing_active": false,
+    "adaptive_sl_pct": 1.0,
+    "volatility_regime": "🔵 Standard ATR"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -24,10 +24,10 @@
     "agent_7_ceo_anti_loss": "Consenso del CEO Supreme Anti-Loss Profit Maximizer."
   },
   "verdict": {
-    "selected_symbol": "BCHUSDT",
-    "action": "BUY_LONG",
-    "confidence": 72,
-    "approved": true,
-    "reasoning": "BCHUSDT es el único candidato que supera el umbral de Score Técnico (85/100) con un volumen de transacciones institucional significativo, cumpliendo con los criterios de seguridad y rentabilidad exigidos por el comité para una operación de scalping de alta convicción."
+    "selected_symbol": "NONE",
+    "action": "HOLD",
+    "confidence": 0,
+    "approved": false,
+    "reasoning": "El mercado se encuentra en un régimen de compresión de volatilidad con sentimiento de miedo predominante; no existen activos que cumplan con los criterios estrictos de convicción A+ (Score >= 65 y soporte de libro de órdenes > 55%), por lo que la decisión institucional es mantener la liquidez en USDT."
   }
 }
