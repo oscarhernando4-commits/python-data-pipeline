@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 02:40:18",
+  "timestamp": "2026-08-02 02:45:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que ERAUSDT y SPCXBUSDT presentan un score de 70, ambos carecen de historial suficiente (5M) para validar una estructura de soporte institucional fiable. El mercado se encuentra en un régimen de 'Miedo' (Fear & Greed: 27) con alta incertidumbre regulatoria. La mayoría de los activos con scores elevados muestran divergencias de volumen o falta de confirmación técnica sólida. Siguiendo la filosofía de preservación de capital de Francisca Serrano y la paciencia de francotirador de Hyenuk Chu, la mejor operación es no operar y mantener la liquidez en USDT hasta que el mercado confirme una tendencia clara y una base de soporte robusta.",
+  "reasoning": "El mercado se encuentra en un entorno de alta aversión al riesgo (Fear & Greed: 27) con una estructura de distribución institucional. Aunque UUSDT y RIFUSDT presentan un score de 75, carecen de historial suficiente para validar una estrategia de alta probabilidad. Los activos con score >= 65 (BCH, OGN, XUSD) no muestran un 'Volume Surge' significativo ni una estructura de soporte consolidada, lo que los convierte en trampas de liquidez. Siguiendo la filosofía de preservación de capital, se prioriza la liquidez en USDT ante la ausencia de un setup A+ con confirmación de volumen y tendencia clara.",
   "top_candidates": [
     {
-      "symbol": "ERAUSDT",
-      "score": 70
+      "symbol": "UUSDT",
+      "score": 75
     },
     {
-      "symbol": "SPCXBUSDT",
-      "score": 70
+      "symbol": "RIFUSDT",
+      "score": 75
     },
     {
       "symbol": "BCHUSDT",
       "score": 65
     },
     {
-      "symbol": "SYNUSDT",
+      "symbol": "OGNUSDT",
       "score": 65
     },
     {
-      "symbol": "SKYUSDT",
+      "symbol": "XUSDUSDT",
       "score": 65
     }
   ]
