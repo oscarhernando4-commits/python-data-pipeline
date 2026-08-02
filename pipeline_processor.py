@@ -548,8 +548,9 @@ def run_infinite_trading_matrix_cycle():
         btc_price = btc_data.get("price", 0.0)
         
         # Determine BTC Health State
-        is_btc_bearish = btc_score < 45 or btc_rsi < 45.0 or btc_trend == "DOWNTREND"
-        is_btc_strong = btc_score >= 55 and btc_rsi >= 50.0
+        # Crash state: BTC in active panic dump (Score < 30 AND RSI < 35.0)
+        is_btc_crashing = btc_score < 30 and btc_rsi < 35.0
+        is_btc_weak = btc_score < 45 or btc_rsi < 42.0
         
         btc_status_str = f"BTC @ ${btc_price:,.2f} (Score={btc_score}, RSI={btc_rsi:.1f}, Trend={btc_trend})"
         print(f"🪙 [GUARDIÁN BITCOIN] Estado Macro: {btc_status_str}")
@@ -562,18 +563,28 @@ def run_infinite_trading_matrix_cycle():
             best_spot_long = long_candidates[0]
             
         if is_ai_approved and ai_action == "BUY_LONG" and ai_symbol and ai_symbol != "NONE" and ai_price > 0:
-            # STRICT SNIPER GATE (Hyenuk Chu / Francisca Serrano: Capital Preservation)
+            # Extract volume surge of approved symbol
+            target_vol_surge = 1.0
+            for cand in analyzed_data:
+                if cand.get("symbol") == ai_symbol:
+                    target_vol_surge = cand.get("tech", {}).get("indicators", {}).get("volume_surge", 1.0)
+                    break
+
+            # PRECISION SNIPER GATE (Francisca Serrano / Hyenuk Chu)
             if ai_score < 65:
                 print(f"🛡️ [ESCUDO CAPITAL REAL] Compra en {ai_symbol} bloqueada (Score {ai_score} < 65). Solo operamos Setups A+ para dinero real.")
                 api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
-            elif ai_symbol != "BTCUSDT" and (is_btc_bearish or btc_score < 50):
-                print(f"🛡️ [FILTRO CORRELACIÓN BTC] Entrada LONG bloqueada en {ai_symbol}. Bitcoin no tiene fuerza alcista ({btc_status_str}). Protegiendo capital.")
+            elif is_btc_crashing and ai_symbol != "BTCUSDT":
+                print(f"🛡️ [FILTRO CRASH BTC] Entrada LONG bloqueada en {ai_symbol}. Bitcoin en colapso activo ({btc_status_str}). Protegiendo capital.")
                 api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
-            elif ai_confidence < 75:
-                print(f"🛡️ [FILTRO CONFIANZA IA] Confianza de Gemini ({ai_confidence}%) menor al umbral A+ (75%). Esperando mejor setup.")
+            elif is_btc_weak and ai_symbol != "BTCUSDT" and not (ai_score >= 70 or target_vol_surge >= 2.0):
+                print(f"🛡️ [FILTRO CORRELACIÓN BTC] Entrada en {ai_symbol} bloqueada (Score {ai_score}, VolSurge {target_vol_surge:.2f}x). Se exige Score>=70 o VolSurge>=2.0x durante BTC débil ({btc_status_str}).")
+                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
+            elif ai_confidence < 70:
+                print(f"🛡️ [FILTRO CONFIANZA IA] Confianza de Gemini ({ai_confidence}%) menor al umbral mínimo (70%). Esperando mejor setup.")
                 api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
             else:
-                print(f"💰 [REAL A+] Señal ALCISTA Aprobada por IA ({ai_symbol} @ {ai_score} Pts, Conf={ai_confidence}%). Evaluando cuenta real...")
+                print(f"💰 [REAL A+] Señal ALCISTA Aprobada por IA ({ai_symbol} @ {ai_score} Pts, VolSurge={target_vol_surge:.2f}x, Conf={ai_confidence}%). Evaluando cuenta real...")
                 api_connector.evaluate_and_trade_real_money(
                     best_symbol=ai_symbol,
                     best_score=ai_score,
