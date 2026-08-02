@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-02 09:55:19",
+  "timestamp": "2026-08-02 09:57:03",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral mínimo de Score Técnico A+ (>= 65) bajo las condiciones de mercado actuales. El sesgo de mercado es NEUTRAL y el análisis estadístico de 544 trades muestra una baja probabilidad de éxito en entornos de tendencia lateral. Se prioriza la preservación de capital en liquidez (USDT) ante la falta de setups de alta probabilidad.",
+  "reasoning": "El mercado presenta un nivel de alerta ROJO con una correlación bajista sistémica y drenaje de liquidez. Ninguno de los candidatos analizados cumple con el umbral mínimo de Score Técnico A+ (>= 65). La ausencia de activos con fuerza relativa y el entorno de desconfianza institucional dictan una política de preservación de capital estricta. Operar en este entorno de alta fragilidad contraviene la filosofía de paciencia de francotirador.",
   "top_candidates": [
-    {
-      "symbol": "DOTUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 60
-    },
     {
       "symbol": "WLFIUSDT",
       "score": 60
@@ -23,7 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "DOTUSDT",
+      "score": 55
+    },
+    {
       "symbol": "GIGGLEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "EULUSDT",
       "score": 50
     }
   ]
