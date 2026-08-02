@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-02 14:35:21",
+  "timestamp": "2026-08-02 14:40:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragilidad técnica y falta de convicción institucional. Dado que ningún activo alcanza el umbral de calidad A+ (Score >= 65) y el entorno macro es de alta incertidumbre, el comité ha decidido unánimemente mantener la liquidez en USDT para evitar riesgos innecesarios de 'falling knives'.",
+  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema con una selección adversa marcada; al no existir ningún activo que cumpla con el umbral de Score 65 y la confirmación de liquidez necesaria, el comité decide proteger el 100% de la liquidez en espera de una capitulación o una estructura técnica más sólida.",
   "top_candidates": [
+    {
+      "symbol": "ICPUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "SUIUSDT",
+      "score": 60
+    },
     {
       "symbol": "XRPUSDT",
       "score": 60
     },
     {
-      "symbol": "GRAMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "BNBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "UNIUSDT",
+      "symbol": "DOGEUSDT",
       "score": 60
     },
     {
