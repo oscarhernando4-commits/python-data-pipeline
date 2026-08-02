@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-02 15:10:20",
+  "timestamp": "2026-08-02 15:15:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual carece de la fortaleza técnica y la profundidad de liquidez necesarias para cumplir con los estándares de riesgo A+. Se prioriza la preservación del capital en USDT hasta que los scores técnicos superen el umbral de 65 y se observe una estabilización orgánica del volumen.",
+  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema con una ausencia total de activos que cumplan con los criterios de alta convicción. La falta de soporte en el libro de órdenes y la debilidad técnica generalizada dictan una postura de protección de liquidez (HOLD) hasta que se observe una acumulación institucional clara.",
   "top_candidates": [
     {
-      "symbol": "SUIUSDT",
-      "score": 70
+      "symbol": "SOLUSDT",
+      "score": 60
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "SHIBUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "GRAMUSDT",
       "score": 60
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "XRPUSDT",
       "score": 60
     }
   ]
