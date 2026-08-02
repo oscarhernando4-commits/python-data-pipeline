@@ -1,12 +1,38 @@
 {
-  "TLMUSDT": [
+  "GNOUSDT": [
     {
-      "timestamp": "2026-08-02 12:30:09",
-      "price": 0.001642,
-      "score": 50,
-      "rsi": 60.15,
+      "timestamp": "2026-08-02 12:35:08",
+      "price": 104.34,
+      "score": 0,
+      "rsi": 45.75,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.05,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BOMEUSDT": [
+    {
+      "timestamp": "2026-08-02 12:35:08",
+      "price": 0.000617,
+      "score": 30,
+      "rsi": 56.58,
+      "macd": "Neutral",
+      "volume_surge": 0.11,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-02 12:35:08",
+      "price": 0.1397,
+      "score": 45,
+      "rsi": 57.28,
+      "macd": "Neutral",
+      "volume_surge": 0.02,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
