@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-08-02 19:46:22",
-  "total_balance_usd": 20.11,
-  "usdt_free": 0.0,
+  "updated_at": "2026-08-02 19:48:21",
+  "total_balance_usd": 20.09,
+  "usdt_free": 20.08935,
   "bnb_free": 0.00444145,
-  "status": "🔵 En Vivo LONG (UNIUSDT @ $4.2030)",
+  "status": "🟦 Buscando Entrada A+",
   "position": {
-    "symbol": "UNIUSDT",
-    "quantity": 4.13,
-    "entry_price": 4.209,
-    "highest_price": 4.209,
+    "symbol": "NINGUNA",
+    "quantity": 0.0,
+    "entry_price": 0.0,
+    "highest_price": 0.0,
     "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 0.6,
-    "volatility_regime": "⏳ Estancamiento Apretado (-0.6%)"
+    "adaptive_sl_pct": 1.0,
+    "volatility_regime": "🔵 Standard ATR"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado por consenso unánime que, a pesar de los scores técnicos de 75/100, la falta de dominancia clara en el libro de órdenes y el entorno de miedo (Fear 27) no cumplen con los estándares de seguridad A+ exigidos para la ejecución de capital."
+    "reasoning": "El mercado se encuentra en un estado de indecisión de alta frecuencia con una falta crítica de profundidad en el libro de órdenes y una ausencia de confirmación de volumen institucional. Ningún candidato cumple con el umbral de seguridad A+ exigido por el comité, por lo que la estrategia prioritaria es la preservación del capital mediante el mantenimiento de la posición en efectivo (HOLD)."
   }
 }
