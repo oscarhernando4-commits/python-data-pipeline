@@ -29,7 +29,8 @@ OBSIDIAN_FOLDER = _get_obsidian_folder()
 
 def generate_super_cerebro_report():
     import obsidian_sync
-    if not obsidian_sync.is_obsidian_sync_allowed():
+    check_sync = getattr(obsidian_sync, "is_obsidian_sync_allowed", None)
+    if check_sync and not check_sync():
         return
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     

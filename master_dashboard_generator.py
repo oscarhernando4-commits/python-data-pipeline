@@ -27,7 +27,8 @@ def ensure_obsidian_dir():
 def generate_master_dashboard():
     import pipeline_processor
     import obsidian_sync
-    if not obsidian_sync.is_obsidian_sync_allowed():
+    check_sync = getattr(obsidian_sync, "is_obsidian_sync_allowed", None)
+    if check_sync and not check_sync():
         return
     ensure_obsidian_dir()
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")

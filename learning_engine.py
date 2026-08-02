@@ -271,7 +271,8 @@ def get_super_detailed_table_str(data=None):
 
 def sync_learning_note(data):
     import obsidian_sync
-    if not obsidian_sync.is_obsidian_sync_allowed():
+    check_sync = getattr(obsidian_sync, "is_obsidian_sync_allowed", None)
+    if check_sync and not check_sync():
         return
     if not os.path.exists(OBSIDIAN_FOLDER):
         os.makedirs(OBSIDIAN_FOLDER, exist_ok=True)
