@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 16:15:20",
+  "timestamp": "2026-08-02 16:20:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual presenta una trampa de liquidez y una falta de convicción institucional. Ningún activo cumple con los requisitos de riesgo A+ exigidos por el Chief Risk Officer, por lo que la orden es proteger el 100% de la liquidez en USDT.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y alta incertidumbre regulatoria. Ninguno de los activos analizados alcanza el Score Técnico de 65 requerido para una convicción A+, por lo que el comité ha decidido proteger el 100% de la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo'.",
   "top_candidates": [
     {
-      "symbol": "MUBUSDT",
+      "symbol": "SOXLBUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "LTCUSDT",
       "score": 60
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "EPICUSDT",
       "score": 60
     },
     {
-      "symbol": "JSTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "CAKEUSDT",
+      "symbol": "ICPUSDT",
       "score": 60
     }
   ]
