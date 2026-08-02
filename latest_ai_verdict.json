@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 20:02:19",
+  "timestamp": "2026-08-02 20:04:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y volumen confirmado). El mercado se encuentra en una fase de alta incertidumbre y fragmentación, por lo que la estrategia institucional es preservar el capital y esperar una señal de mayor calidad.",
+  "reasoning": "El mercado presenta una compresión de volatilidad con falta de convicción institucional. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es el HOLD para evitar la exposición a 'falling knives' o falsos breakouts.",
   "top_candidates": [
     {
       "symbol": "RENDERUSDT",
       "score": 85
     },
     {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
       "symbol": "UNIUSDT",
       "score": 75
     },
     {
+      "symbol": "WLDUSDT",
+      "score": 75
+    },
+    {
       "symbol": "PEPEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LTCUSDT",
       "score": 75
     }
   ]
