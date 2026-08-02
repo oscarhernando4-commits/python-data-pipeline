@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-02 23:04:23",
+  "timestamp": "2026-08-02 23:06:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la evaluación exhaustiva de los 7 agentes, se ha determinado que ningún activo cumple con los criterios de alta convicción (Score >= 65) ni con la confirmación de soporte institucional necesaria en el libro de órdenes. Ante la incertidumbre del mercado y la alta probabilidad de pérdidas observada en el historial de simulaciones para condiciones neutrales, el comité ha decidido mantener la liquidez en USDT para preservar el capital.",
+  "reasoning": "El comité ha determinado que no existen activos con la calidad técnica (Score >= 65) ni la confirmación de liquidez necesaria para ejecutar una operación de compra, priorizando la preservación del capital frente a la incertidumbre del mercado actual.",
   "top_candidates": [
+    {
+      "symbol": "GIGGLEUSDT",
+      "score": 50
+    },
     {
       "symbol": "SOXLBUSDT",
       "score": 50
@@ -15,15 +19,11 @@
       "score": 50
     },
     {
-      "symbol": "ORDIUSDT",
+      "symbol": "DODOUSDT",
       "score": 50
     },
     {
       "symbol": "ADAUSDT",
-      "score": 45
-    },
-    {
-      "symbol": "XRPUSDT",
       "score": 45
     }
   ]
