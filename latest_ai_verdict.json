@@ -1,23 +1,11 @@
 {
-  "timestamp": "2026-08-02 11:25:21",
+  "timestamp": "2026-08-02 11:30:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El entorno macroeconómico actual presenta una toxicidad sistémica con un índice Fear & Greed en 27 y una correlación bajista masiva. Ninguno de los candidatos analizados alcanza el umbral de seguridad A+ (Score >= 65). La mayoría de los activos presentan scores técnicos de 60 o inferiores, lo que, bajo la filosofía de preservación de capital, no justifica la entrada en mercado. Se mantiene la liquidez en USD para evitar la exposición a 'cuchillos cayendo' y volatilidad errática.",
+  "reasoning": "El mercado se encuentra en una fase de contracción y miedo extremo (Fear & Greed: 27). Ninguno de los activos analizados cumple con el umbral mínimo de calidad A+ (Score >= 65). Los candidatos con mayor score (CAKE y VET, con 60/100) no alcanzan el nivel requerido y presentan riesgos asociados a baja liquidez o noticias negativas. La estrategia institucional dicta la preservación de capital en liquidez (USDT) ante la ausencia de setups de alta probabilidad matemática.",
   "top_candidates": [
-    {
-      "symbol": "AAVEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "JSTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SPCXBUSDT",
-      "score": 60
-    },
     {
       "symbol": "CAKEUSDT",
       "score": 60
@@ -25,6 +13,18 @@
     {
       "symbol": "VETUSDT",
       "score": 60
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "AEVOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "DEXEUSDT",
+      "score": 50
     }
   ]
 }
