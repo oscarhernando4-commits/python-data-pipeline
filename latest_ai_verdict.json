@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-02 08:30:15",
+  "timestamp": "2026-08-02 08:35:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El entorno macro actual presenta una fuga de liquidez sistémica con un índice Fear & Greed en 27. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico A+ (>= 65). Los activos con mayor puntuación (UUSDT, WLFIUSDT) carecen de profundidad histórica suficiente para una ejecución institucional segura, y el resto de los activos presentan scores mediocres o están bajo presión de FUD. La preservación de capital es la prioridad absoluta; se mantiene la liquidez en USDT.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación sistémica con un sesgo bajista predominante. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico (>= 65) requerido para un Setup A+. La ausencia de activos con fuerza relativa y el entorno macro de alta incertidumbre (hackeos y regulaciones) dictan la preservación total del capital en liquidez (USDT) para evitar trampas de liquidez.",
   "top_candidates": [
     {
-      "symbol": "UUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "WLFIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "MIRAUSDT",
+      "symbol": "EULUSDT",
       "score": 50
     },
     {
@@ -23,8 +15,16 @@
       "score": 50
     },
     {
+      "symbol": "MIRAUSDT",
+      "score": 50
+    },
+    {
       "symbol": "TUTUSDT",
       "score": 50
+    },
+    {
+      "symbol": "UUSDT",
+      "score": 45
     }
   ]
 }
