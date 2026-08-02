@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-02 08:35:17",
+  "timestamp": "2026-08-02 08:40:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación sistémica con un sesgo bajista predominante. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico (>= 65) requerido para un Setup A+. La ausencia de activos con fuerza relativa y el entorno macro de alta incertidumbre (hackeos y regulaciones) dictan la preservación total del capital en liquidez (USDT) para evitar trampas de liquidez.",
+  "reasoning": "El entorno macro es de alta toxicidad con un índice de Fear & Greed en 27. Ninguno de los candidatos analizados cumple con el umbral mínimo de Score Técnico A+ (>= 65). El mercado presenta una estructura de distribución y parálisis, lo que invalida cualquier setup de compra en spot bajo nuestra filosofía de preservación de capital. Se mantiene la liquidez en espera de una mejora en el score de salud de los activos principales.",
   "top_candidates": [
     {
-      "symbol": "EULUSDT",
-      "score": 50
+      "symbol": "UUSDT",
+      "score": 60
     },
     {
-      "symbol": "GIGGLEUSDT",
+      "symbol": "EULUSDT",
       "score": 50
     },
     {
@@ -23,8 +23,8 @@
       "score": 50
     },
     {
-      "symbol": "UUSDT",
-      "score": 45
+      "symbol": "RIFUSDT",
+      "score": 50
     }
   ]
 }
