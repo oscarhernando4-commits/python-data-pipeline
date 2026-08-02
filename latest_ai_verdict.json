@@ -1,14 +1,22 @@
 {
-  "timestamp": "2026-08-02 19:42:19",
+  "timestamp": "2026-08-02 19:44:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el requisito de soporte de libro de órdenes (Bids > 55%) ni con la confirmación de una tendencia clara, por lo que el comité decide mantener la liquidez para evitar riesgos innecesarios en un mercado de alta incertidumbre.",
+  "reasoning": "El mercado presenta una fragmentación extrema y falta de profundidad en el libro de órdenes para los candidatos con mejor score técnico. Ningún activo cumple con el umbral de convicción A+ exigido por el Comité, por lo que la estrategia de preservación de capital es la única opción viable.",
   "top_candidates": [
     {
       "symbol": "SPCXBUSDT",
       "score": 85
+    },
+    {
+      "symbol": "DASHUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "SUIUSDT",
+      "score": 75
     },
     {
       "symbol": "UUSDT",
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "PEPEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "HEIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ZAMAUSDT",
       "score": 75
     }
   ]

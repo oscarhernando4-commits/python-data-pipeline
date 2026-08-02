@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-02 19:42:20",
+  "updated_at": "2026-08-02 19:44:22",
   "total_balance_usd": 20.11,
   "usdt_free": 0.0,
   "bnb_free": 0.00444145,
-  "status": "🔵 En Vivo LONG (UNIUSDT @ $4.2010)",
+  "status": "🔵 En Vivo LONG (UNIUSDT @ $4.2020)",
   "position": {
     "symbol": "UNIUSDT",
     "quantity": 4.13,
@@ -11,8 +11,8 @@
     "highest_price": 4.209,
     "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 0.96,
-    "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
+    "adaptive_sl_pct": 0.6,
+    "volatility_regime": "⏳ Estancamiento Apretado (-0.6%)"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el requisito de soporte de libro de órdenes (Bids > 55%) ni con la confirmación de una tendencia clara, por lo que el comité decide mantener la liquidez para evitar riesgos innecesarios en un mercado de alta incertidumbre."
+    "reasoning": "El mercado presenta una fragmentación extrema y falta de profundidad en el libro de órdenes para los candidatos con mejor score técnico. Ningún activo cumple con el umbral de convicción A+ exigido por el Comité, por lo que la estrategia de preservación de capital es la única opción viable."
   }
 }
