@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-02 19:03:10",
+  "timestamp": "2026-08-02 19:04:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que TRUMPUSDT posee un score técnico de 85, la ausencia de profundidad en el libro de órdenes (50% bids), la falta de historial de trading y el entorno de mercado con sentimiento de miedo (27) invalidan la ejecución bajo las reglas de gestión de riesgo A+. Se prioriza la preservación del capital sobre la especulación en activos de alta beta.",
+  "reasoning": "El mercado se encuentra en un estado de 'Neutralidad Especulativa' con falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de soporte de libro de órdenes (Bids > 55%) ni con una estructura técnica que garantice una alta probabilidad de éxito, por lo que la decisión prudente es el HOLD para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "TRUMPUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "BCHUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "UUSDT",
       "score": 75
     }
   ]
