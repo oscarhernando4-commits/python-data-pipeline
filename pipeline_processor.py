@@ -1,8 +1,23 @@
+import os
+import sys
+
+# Auto-load .env into environment
+env_path = os.path.join(os.path.dirname(__file__), ".env")
+if os.path.exists(env_path):
+    try:
+        with open(env_path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    k, v = line.split('=', 1)
+                    if k.strip() not in os.environ:
+                        os.environ[k.strip()] = v.strip()
+    except Exception:
+        pass
+
 import urllib.request
 import json
 import time
-import sys
-import os
 import analytics
 import fundamental_sentinel
 import learning_engine
@@ -279,6 +294,23 @@ def run_infinite_trading_matrix_cycle():
                 print(f"🧠 [COMITÉ AI ELIGIÓ {top_side}] {winner_sym} (Score Original {top_data['score']} Pts): Approved={gemini_res.get('approved')} | Conf={gemini_res.get('confidence')}% | Razonamiento: {gemini_res.get('reasoning')}")
             else:
                 print(f"🧠 [COMITÉ AI] Ninguna moneda fue aprobada (NONE). El mercado es demasiado tóxico. Razonamiento: {gemini_res.get('reasoning')}")
+            
+            # Persist AI Super-Brain Verdict to JSON for Dashboards and Obsidian
+            try:
+                verdict_data = {
+                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "selected_symbol": winner_sym if winner_sym else "NONE",
+                    "action": gemini_res.get("action", "HOLD"),
+                    "approved": gemini_res.get("approved", False),
+                    "confidence": gemini_res.get("confidence", 0),
+                    "reasoning": gemini_res.get("reasoning", "Análisis Cuantitativo Institucional"),
+                    "top_candidates": [{"symbol": c["symbol"], "score": c["score"]} for c in top_10_candidates[:5]]
+                }
+                vpath = os.path.join(os.path.dirname(__file__), "latest_ai_verdict.json")
+                with open(vpath, "w", encoding="utf-8") as vf:
+                    json.dump(verdict_data, vf, indent=2, ensure_ascii=False)
+            except Exception as ve:
+                print(f"Error saving AI verdict: {ve}")
         except Exception as ge:
             print(f"💡 Gemini Sentinel Note: {ge}")
 
