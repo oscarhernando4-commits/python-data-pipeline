@@ -563,12 +563,8 @@ def run_infinite_trading_matrix_cycle():
             best_spot_long = long_candidates[0]
             
         if is_ai_approved and ai_action == "BUY_LONG" and ai_symbol and ai_symbol != "NONE" and ai_price > 0:
-            # Extract volume surge of approved symbol
-            target_vol_surge = 1.0
-            for cand in analyzed_data:
-                if cand.get("symbol") == ai_symbol:
-                    target_vol_surge = cand.get("tech", {}).get("indicators", {}).get("volume_surge", 1.0)
-                    break
+            # Extract volume surge directly from AI opportunity data
+            target_vol_surge = ai_opp_data.get("tech", {}).get("indicators", {}).get("volume_surge", 1.0)
 
             # PRECISION SNIPER GATE (Francisca Serrano / Hyenuk Chu)
             if ai_score < 65:
