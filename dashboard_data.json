@@ -1,0 +1,33 @@
+{
+  "updated_at": "2026-08-02 12:14:50",
+  "total_balance_usd": 19.9,
+  "usdt_free": 0.005,
+  "bnb_free": 0.00446371,
+  "status": "🔵 En Vivo LONG (INJUSDT @ $4.9910)",
+  "position": {
+    "symbol": "INJUSDT",
+    "quantity": 3.46,
+    "entry_price": 4.97,
+    "highest_price": 5.009,
+    "break_even": false,
+    "trailing_active": false,
+    "adaptive_sl_pct": 1.0,
+    "volatility_regime": "🔵 Standard ATR"
+  },
+  "agents": {
+    "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
+    "agent_2_tech": "Osciladores RSI, MACD, EMAs y mechas de absorción evaluadas.",
+    "agent_3_orderbook": "Rastro de liquidez del Orderbook y muros de soporte de ballenas.",
+    "agent_4_sector": "Evaluación de rotación de capital por cluster sectorial.",
+    "agent_5_memory": "Cruzamiento RAG con simulaciones históricas y patrones perdedores.",
+    "agent_6_risk": "Evaluación final de preservación de capital, ratio 1:2 y Trailing Stop ATR.",
+    "agent_7_ceo_anti_loss": "Consenso del CEO Supreme Anti-Loss Profit Maximizer."
+  },
+  "verdict": {
+    "selected_symbol": "NONE",
+    "action": "HOLD",
+    "confidence": 0,
+    "approved": false,
+    "reasoning": "El mercado se encuentra en una fase de apatía defensiva con una divergencia sistémica peligrosa; la falta de muros de soporte claros y la baja probabilidad estadística de éxito en condiciones neutrales obligan a mantener la liquidez en USDT para proteger el capital."
+  }
+}

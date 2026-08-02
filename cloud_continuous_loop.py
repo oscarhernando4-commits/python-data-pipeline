@@ -108,6 +108,13 @@ def main():
         except Exception as e:
             print(f"⚠️ Error generando dashboards (Ciclo {cycle}): {e}", flush=True)
 
+        # Step 4: Refresh Web Dashboard & Data Feed (dashboard.html & dashboard_data.json)
+        try:
+            import web_dashboard_generator
+            web_dashboard_generator.generate_web_dashboard()
+        except Exception as e:
+            print(f"⚠️ Error generando web dashboard (Ciclo {cycle}): {e}", flush=True)
+
         # Step 4: Push changes to GitHub
         run_git_push_sync(cycle)
         

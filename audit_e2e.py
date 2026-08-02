@@ -105,6 +105,14 @@ test("Módulo orderbook_analyzer funcional", "bid_dominance_pct" in ob_depth)
 sec_rot = sector_analyzer.analyze_sector_rotation({"BTCUSDT": {"score": 50}})
 test("Módulo sector_analyzer funcional", "top_sector" in sec_rot)
 
+import atr_risk_calculator
+atr_res = atr_risk_calculator.calculate_adaptive_atr_stop_loss(63150.0, 320.0)
+test("Módulo atr_risk_calculator funcional (SL adaptativo)", "sl_pct" in atr_res and "volatility_regime" in atr_res)
+
+import web_dashboard_generator
+html_p = web_dashboard_generator.generate_web_dashboard()
+test("Módulo web_dashboard_generator funcional (dashboard.html generado)", os.path.exists(html_p))
+
 dummy_cands = [{
     "symbol": "BTCUSDT", "divergence": 25, "score": 75,
     "suggested_action": "BUY_LONG", "tech_data": {"rsi": 45, "trend": "BULLISH"}

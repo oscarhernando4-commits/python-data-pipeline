@@ -663,15 +663,19 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             trailing_active = True
             print(f"🚀 TRAILING STOP DINÁMICO ACTIVADO: El precio alcanzó +{pnl_pct:.2f}%. Persiguiendo super-tendencia...")
             
+        import atr_risk_calculator
+        atr_info = atr_risk_calculator.calculate_adaptive_atr_stop_loss(entry, atr_15m=entry*0.008)
+        adaptive_sl_pct = atr_info.get("sl_pct", 1.0)
+
         # Calculate dynamic trailing stop floor (1.5% below highest price peak, minimum +0.5%)
         if trailing_active:
             trailing_floor_pct = max(0.5, highest_pnl_pct - 1.5)
         elif break_even_active:
             trailing_floor_pct = 0.2
         else:
-            trailing_floor_pct = -1.0
+            trailing_floor_pct = -abs(adaptive_sl_pct)
             
-        tp_target = entry * 1.02
+        tp_target = entry * (1.0 + (adaptive_sl_pct * 2.0 / 100.0))
         sl_target = entry * (1.0 + (trailing_floor_pct / 100.0))
         
         state["position"] = {
@@ -682,7 +686,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             "cost_usd": round(est_val, 2),
             "side": "LONG",
             "break_even": break_even_active,
-            "trailing_active": trailing_active
+            "trailing_active": trailing_active,
+            "adaptive_sl_pct": adaptive_sl_pct,
+            "volatility_regime": atr_info.get("volatility_regime", "Estándar")
         }
         price_fmt = lambda p: f"${p:.8f}" if p < 0.01 else f"${p:.4f}"
         state["status"] = f"🔵 En Vivo LONG ({active_asset}USDT @ {price_fmt(active_current_price)})"
