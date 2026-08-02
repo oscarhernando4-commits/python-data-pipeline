@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 15:05:21",
+  "timestamp": "2026-08-02 15:10:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con debilidad sistémica generalizada. Ninguno de los candidatos alcanza el umbral de convicción A+ requerido por el comité, y la falta de profundidad en el libro de órdenes aumenta el riesgo de slippage. Se mantiene la posición en efectivo para evitar 'cuchillos cayendo' y proteger el capital institucional.",
+  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual carece de la fortaleza técnica y la profundidad de liquidez necesarias para cumplir con los estándares de riesgo A+. Se prioriza la preservación del capital en USDT hasta que los scores técnicos superen el umbral de 65 y se observe una estabilización orgánica del volumen.",
   "top_candidates": [
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "SUIUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "GRAMUSDT",
       "score": 60
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "XLMUSDT",
       "score": 60
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "LTCUSDT",
       "score": 60
     },
     {
-      "symbol": "QQQBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "APTUSDT",
+      "symbol": "SOLUSDT",
       "score": 60
     }
   ]
