@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 23:06:25",
+  "timestamp": "2026-08-02 23:07:38",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos con la calidad técnica (Score >= 65) ni la confirmación de liquidez necesaria para ejecutar una operación de compra, priorizando la preservación del capital frente a la incertidumbre del mercado actual.",
+  "reasoning": "Ninguno de los candidatos analizados cumple con el umbral mínimo de Score Técnico (65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que se prioriza la protección del capital en un entorno de mercado incierto.",
   "top_candidates": [
+    {
+      "symbol": "ORDIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SOXLBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "score": 55
+    },
     {
       "symbol": "GIGGLEUSDT",
       "score": 50
     },
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "MIRAUSDT",
       "score": 50
-    },
-    {
-      "symbol": "EWYBUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "DODOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ADAUSDT",
-      "score": 45
     }
   ]
 }
