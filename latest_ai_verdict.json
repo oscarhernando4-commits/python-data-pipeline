@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-02 14:10:20",
+  "timestamp": "2026-08-02 14:15:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación institucional con una configuración técnica deficiente. Ningún activo cumple con el requisito estricto de Score >= 65 y confirmación de volumen, por lo que la estrategia óptima es la preservación total del capital en USDT hasta que el mercado muestre una estructura de acumulación clara.",
+  "reasoning": "El mercado se encuentra en una fase de distribución masiva y alta correlación bajista. Ninguno de los candidatos cumple con los requisitos de riesgo A+ establecidos por el comité, por lo que la estrategia prioritaria es la preservación total de la liquidez en USDT.",
   "top_candidates": [
     {
-      "symbol": "MIRAUSDT",
-      "score": 70
+      "symbol": "GRAMUSDT",
+      "score": 60
     },
     {
       "symbol": "UUSDT",
       "score": 60
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "SUIUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "JUPUSDT",
+      "symbol": "DOTUSDT",
       "score": 60
     }
   ]
