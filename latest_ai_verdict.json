@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-02 19:22:24",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La falta de profundidad en el libro de órdenes y la incertidumbre macro actual dictan una postura de preservación de capital (HOLD) para evitar trampas de valor.",
+  "timestamp": "2026-08-02 19:24:20",
+  "selected_symbol": "BCHUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "BCHUSDT es el único candidato que supera el umbral de Score Técnico (85/100) con un volumen de transacciones institucional significativo, cumpliendo con los criterios de seguridad y rentabilidad exigidos por el comité para una operación de scalping de alta convicción.",
   "top_candidates": [
     {
       "symbol": "BCHUSDT",
       "score": 85
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "KORUBUSDT",
+      "symbol": "ONDOUSDT",
       "score": 75
     }
   ]
