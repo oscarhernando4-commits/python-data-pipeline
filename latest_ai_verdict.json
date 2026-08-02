@@ -1,22 +1,14 @@
 {
-  "timestamp": "2026-08-02 22:27:13",
+  "timestamp": "2026-08-02 22:29:29",
   "selected_symbol": "DOGEUSDT",
   "action": "BUY_LONG",
   "approved": true,
   "confidence": 75,
-  "reasoning": "El comité ha deliberado y aprobado una operación de compra LONG para DOGEUSDT. La decisión se basa en la confluencia de un fuerte volumen institucional, un RSI favorable, la pertenencia al sector de alta volatilidad dominante, y el cumplimiento de los criterios de riesgo y técnicos establecidos por el comité, a pesar de un sentimiento general de miedo en el mercado.",
+  "reasoning": "El comité ha deliberado y aprobado una operación LONG en DOGEUSDT. A pesar del sentimiento general de miedo en el mercado, el aumento del volumen institucional, la fortaleza del sector de Memes & High Volatility, y un Score Técnico de 85/100 para DOGEUSDT, justifican la entrada. Se aplicarán estrictas medidas de gestión de riesgos, incluyendo un Trailing Stop ATR, para proteger el capital.",
   "top_candidates": [
     {
       "symbol": "DOGEUSDT",
       "score": 85
-    },
-    {
-      "symbol": "AAVEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
     },
     {
       "symbol": "ADAUSDT",
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "MIRAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "FETUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "VETUSDT",
       "score": 75
     }
   ]
