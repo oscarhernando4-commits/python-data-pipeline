@@ -8,19 +8,25 @@
   "trades_count": 5,
   "position": {
     "symbol": "UUSDT",
+    "quantity": 17.0,
     "entry_price": 1.0008,
+    "highest_price": 1.0008,
     "cost_usd": 17.01,
     "side": "LONG",
-    "quantity": 17.0,
-    "break_even": false
+    "break_even": false,
+    "trailing_active": false,
+    "adaptive_sl_pct": 0.96,
+    "holding_cycles": 1,
+    "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
   },
-  "last_trade_time": "26-08-02<br>20:00",
-  "status": "🔵 En Vivo LONG (UUSDT @ $1.0008)",
+  "last_trade_time": "26-08-02<br>20:02",
+  "status": "🔵 En Vivo LONG (UUSDT @ $1.0007)",
   "daily_wins": 1,
   "daily_losses": 1,
   "_cached_total_val": 20.07,
-  "_cached_usdt_free": 0.0,
+  "_cached_usdt_free": 0.4645,
   "_cached_bnb": 0.00439723,
   "_cached_bnb_usd": 2.59,
-  "last_trading_day": "2026-08-02"
+  "last_trading_day": "2026-08-02",
+  "_btc_last_price": 63466.0
 }

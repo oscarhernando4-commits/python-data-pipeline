@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-02 20:00:24",
+  "updated_at": "2026-08-02 20:02:23",
   "total_balance_usd": 20.07,
-  "usdt_free": 0.0,
+  "usdt_free": 0.4645,
   "bnb_free": 0.00439723,
-  "status": "🔵 En Vivo LONG (UUSDT @ $1.0008)",
+  "status": "🔵 En Vivo LONG (UUSDT @ $1.0007)",
   "position": {
     "symbol": "UUSDT",
     "quantity": 17.0,
@@ -11,8 +11,8 @@
     "highest_price": 1.0008,
     "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 1.0,
-    "volatility_regime": "🔵 Standard ATR"
+    "adaptive_sl_pct": 0.96,
+    "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de limbo operativo con baja convicción institucional. Ninguno de los candidatos cumple con el umbral de dominancia de bids (>55%) ni con una confirmación de volumen necesaria para mitigar el riesgo de slippage, por lo que se prioriza la preservación del capital."
+    "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y volumen confirmado). El mercado se encuentra en una fase de alta incertidumbre y fragmentación, por lo que la estrategia institucional es preservar el capital y esperar una señal de mayor calidad."
   }
 }
