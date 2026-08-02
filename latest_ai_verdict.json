@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 02:50:22",
+  "timestamp": "2026-08-02 02:55:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "A pesar de que activos como BCH, U y ASTER presentan un Score de 75, el entorno macroeconómico actual con un Fear & Greed en 27 (Miedo) y la falta de datos históricos sólidos en estos activos de alta volatilidad impiden una ejecución de alta probabilidad. El mercado se encuentra en un 'limbo de liquidez' con una rotación especulativa peligrosa. Siguiendo la filosofía de preservación de capital y paciencia de francotirador, la mejor operación es no operar y mantener la liquidez en USDT hasta que la estructura de mercado ofrezca una confluencia técnica más robusta y menos dependiente de flujos rápidos sin consolidación.",
+  "confidence": 95,
+  "reasoning": "El entorno macro actual presenta un índice Fear & Greed en 27 (miedo) y una estructura de mercado con 68 activos en debilidad frente a 23 en fortaleza. Aunque BCH, ASTER, XAUT, HBAR, SYN, POL, ALGO, DASH y OGN presentan scores técnicos >= 65, el análisis de riesgo institucional detecta que la mayoría carece de historial sólido o presenta divergencias de riesgo (baja liquidez/manipulación). La alta tasa de fallos en los simuladores recientes (especialmente en activos con tendencia NEUTRAL) y la persistente presión vendedora en los activos de alta capitalización confirman que no existen condiciones de alta probabilidad para un setup A+ en este momento. La preservación de capital es la prioridad absoluta.",
   "top_candidates": [
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
     {
       "symbol": "UUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "HBARUSDT",
-      "score": 65
+      "symbol": "ASTERUSDT",
+      "score": 70
     },
     {
-      "symbol": "SYNUSDT",
+      "symbol": "XAUTUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "HBARUSDT",
       "score": 65
     }
   ]
