@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-02 04:10:18",
-  "selected_symbol": "ASTERUSDT",
+  "timestamp": "2026-08-02 04:15:18",
+  "selected_symbol": "ORDIUSDT",
   "action": "BUY_LONG",
   "approved": true,
   "confidence": 75,
-  "reasoning": "ASTERUSDT cumple con el umbral de Score Técnico A+ (75/100) y presenta una divergencia positiva frente a la debilidad de los activos principales. A pesar del entorno de aversión al riesgo, su volumen y estructura técnica sugieren una acumulación institucional activa. Se prioriza este activo por su resiliencia táctica y descorrelación con el mercado bajista de los majors.",
+  "reasoning": "ORDIUSDT cumple con el umbral de Score Técnico A+ (75/100) establecido en el memorándum de rotación defensiva. A diferencia de los activos con scores bajos, ORDI muestra resiliencia y absorción de liquidez. La entrada se justifica bajo una estrategia de scalping de alta volatilidad, manteniendo una gestión de riesgo estricta al no existir soporte histórico profundo, alineado con la filosofía de preservación de capital.",
   "top_candidates": [
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "ORDIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "INJUSDT",
       "score": 75
     },
     {
@@ -15,16 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "RIFUSDT",
+      "symbol": "ZAMAUSDT",
       "score": 65
     },
     {
-      "symbol": "LTCUSDT",
-      "score": 60
+      "symbol": "1000SATSUSDT",
+      "score": 65
     }
   ]
 }
