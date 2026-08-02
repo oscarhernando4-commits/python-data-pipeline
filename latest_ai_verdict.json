@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-02 23:46:19",
+  "timestamp": "2026-08-02 23:48:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución y alta fragilidad con una correlación bajista masiva. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) y la profundidad de mercado necesaria para proteger el capital institucional. Se prioriza la preservación de margen sobre la especulación en activos de baja capitalización.",
+  "reasoning": "El mercado presenta una configuración de riesgo sistémico elevado con una clara ausencia de convicción compradora institucional. Ninguno de los candidatos cumple con el umbral de seguridad A+ exigido por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos de baja probabilidad.",
   "top_candidates": [
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ARBUSDT",
       "score": 75
     },
     {
@@ -19,12 +23,8 @@
       "score": 70
     },
     {
-      "symbol": "GIGGLEUSDT",
+      "symbol": "ORDIUSDT",
       "score": 65
-    },
-    {
-      "symbol": "WLDUSDT",
-      "score": 60
     }
   ]
 }
