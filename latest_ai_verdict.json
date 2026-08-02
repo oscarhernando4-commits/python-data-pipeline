@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-02 12:40:16",
+  "timestamp": "2026-08-02 12:45:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de alta toxicidad y riesgo sistémico con un sesgo bajista predominante. Aunque FIL posee un Score de 70, su historial es insuficiente para validar una entrada institucional de alta probabilidad. El resto de los candidatos no cumplen con el umbral mínimo de Score >= 65 o presentan señales de FUD. Siguiendo la filosofía de preservación de capital, la liquidez total (Cash is King) es la única estrategia prudente ante la falta de setups A+ claros.",
+  "reasoning": "El mercado presenta un estancamiento sistémico con un sesgo bajista predominante. Ninguno de los activos analizados alcanza el umbral mínimo de Score Técnico A+ (>= 65) requerido por la política de preservación de capital. La ausencia de acumulación institucional y la prevalencia de noticias negativas confirman un entorno de alta incertidumbre. Siguiendo la filosofía de paciencia de francotirador, la decisión óptima es mantener la liquidez en USDT y evitar la exposición a activos con perfiles de riesgo no validados.",
   "top_candidates": [
     {
-      "symbol": "FILUSDT",
-      "score": 70
+      "symbol": "UUSDT",
+      "score": 60
     },
     {
       "symbol": "XAUTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
@@ -20,11 +24,7 @@
     },
     {
       "symbol": "ROSEUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "TLMUSDT",
-      "score": 55
+      "score": 60
     }
   ]
 }
