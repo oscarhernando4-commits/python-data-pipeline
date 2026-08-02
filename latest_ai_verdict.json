@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 23:34:18",
+  "timestamp": "2026-08-02 23:36:48",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una asimetría de pánico y una falta de convicción institucional clara. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65 y confirmación de libro de órdenes), por lo que el comité ha decidido unánimemente mantener la posición en efectivo para evitar la exposición a 'cuchillos cayendo' y volatilidad errática.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, ninguno de los candidatos cumple con el umbral de seguridad en el libro de órdenes ni con la confirmación de volumen institucional necesaria para mitigar el riesgo sistémico actual. Se prioriza la preservación del capital ante la alta probabilidad de una capitulación final del mercado.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "ZBTUSDT",
+      "symbol": "NEARUSDT",
       "score": 75
     },
     {
-      "symbol": "BONKUSDT",
+      "symbol": "ADAUSDT",
       "score": 75
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 70
+      "symbol": "WLDUSDT",
+      "score": 75
     },
     {
-      "symbol": "QNTUSDT",
-      "score": 65
+      "symbol": "DRAMBUSDT",
+      "score": 75
     }
   ]
 }
