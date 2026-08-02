@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-02 14:30:21",
+  "timestamp": "2026-08-02 14:35:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado carece de la convicción institucional necesaria para una entrada de alta probabilidad. Todos los candidatos presentan un score técnico de 60, lo cual es insuficiente bajo nuestras reglas de oro (Score >= 65). Se mantiene la liquidez en USDT para evitar el riesgo de 'falling knives' en un entorno de mercado con sentimiento de miedo.",
+  "reasoning": "El mercado se encuentra en un estado de fragilidad técnica y falta de convicción institucional. Dado que ningún activo alcanza el umbral de calidad A+ (Score >= 65) y el entorno macro es de alta incertidumbre, el comité ha decidido unánimemente mantener la liquidez en USDT para evitar riesgos innecesarios de 'falling knives'.",
   "top_candidates": [
     {
-      "symbol": "XLMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SUIUSDT",
+      "symbol": "XRPUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "BNBUSDT",
       "score": 60
     },
     {
-      "symbol": "XRPUSDT",
+      "symbol": "UNIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "PEPEUSDT",
       "score": 60
     }
   ]
