@@ -270,6 +270,9 @@ def get_super_detailed_table_str(data=None):
     return table
 
 def sync_learning_note(data):
+    import obsidian_sync
+    if not obsidian_sync.is_obsidian_sync_allowed():
+        return
     if not os.path.exists(OBSIDIAN_FOLDER):
         os.makedirs(OBSIDIAN_FOLDER, exist_ok=True)
         

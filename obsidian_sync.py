@@ -14,6 +14,13 @@ def _get_obsidian_folder():
 
 OBSIDIAN_FOLDER = _get_obsidian_folder()
 
+def is_obsidian_sync_allowed():
+    """
+    Returns True only if manual sync is explicitly requested.
+    Disables automatic background sync during continuous cycles as requested by user.
+    """
+    return os.getenv("ENABLE_OBSIDIAN_AUTO_SYNC", "false").lower() in ("true", "1", "yes")
+
 def ensure_obsidian_dir():
     if not os.path.exists(OBSIDIAN_FOLDER):
         os.makedirs(OBSIDIAN_FOLDER, exist_ok=True)

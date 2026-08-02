@@ -28,14 +28,9 @@ def _get_obsidian_folder():
 OBSIDIAN_FOLDER = _get_obsidian_folder()
 
 def generate_super_cerebro_report():
-    """
-    Generates the comprehensive 🧠_Analisis_Super_Cerebro.md report covering:
-    - Multi-timeframe analysis: 5M, 15M, 1H, 4H, 24H, 7D
-    - Full Technical Indicators: RSI, MACD, EMA20/50/200, Bollinger Bands, ATR, Volume Surge
-    - Candlestick & Price Action Patterns: Wyckoff Spring, Hammer, Engulfing, Absorption wicks
-    - Statistical Memory & Win-Rate Learning
-    - Real-time Gemini 3.1 Flash Lite Decision & Confidence
-    """
+    import obsidian_sync
+    if not obsidian_sync.is_obsidian_sync_allowed():
+        return
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
     # 1. Load latest AI verdict

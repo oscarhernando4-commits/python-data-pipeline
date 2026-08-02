@@ -92,11 +92,12 @@ test("trade_memory.json cargado", mem is not None)
 bias = learning_engine.get_market_bias()
 test(f"Sesgo estadístico calculado: {bias.get('bias')} (WR LONG: {bias.get('long_win_rate')}%, SHORT: {bias.get('short_win_rate')}%)", "bias" in bias)
 
-# 7. ROUTER DE INTELIGENCIA ARTIFICIAL (COMITÉ MULTI-AGENTE 6 AGENTES & FALLBACK)
+# 7. ROUTER DE INTELIGENCIA ARTIFICIAL (COMITÉ MULTI-AGENTE 7 AGENTES - CEO SUPREME & FALLBACK)
 print("\n[7/10] COMITÉ DE IA Y FALLBACK CUANTITATIVO")
 import llm_router
 import orderbook_analyzer
 import sector_analyzer
+import obsidian_sync
 
 ob_depth = orderbook_analyzer.fetch_orderbook_depth("BTCUSDT")
 test("Módulo orderbook_analyzer funcional", "bid_dominance_pct" in ob_depth)
@@ -109,7 +110,9 @@ dummy_cands = [{
     "suggested_action": "BUY_LONG", "tech_data": {"rsi": 45, "trend": "BULLISH"}
 }]
 ai_rev = llm_router.review_top_5_candidates(dummy_cands, {"headlines": []}, {"score": 50})
-test("AI Router responde con estructura de 6 Agentes válida", "approved" in ai_rev and "selected_symbol" in ai_rev and "committee_deliberation" in ai_rev)
+test("AI Router responde con estructura de 7 Agentes (CEO Supreme) válida", "approved" in ai_rev and "selected_symbol" in ai_rev and "committee_deliberation" in ai_rev)
+
+test("Control de sincronización manual Obsidian activo", hasattr(obsidian_sync, "is_obsidian_sync_allowed"))
 
 # 8. WORKFLOW DE GITHUB ACTIONS (trigger_quant_trade)
 print("\n[8/10] WORKFLOW DE GITHUB ACTIONS (.github/workflows/pipeline_cron.yml)")

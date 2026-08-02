@@ -207,11 +207,11 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         candidates_prompt_text += f"- NOTICIAS ESPECÍFICAS ÚLTIMAS 24H: {json.dumps(specific_n)}\n"
         candidates_prompt_text += "------------------------------------"
 
-    print(f"✅ [Comité Institucional 6 Agentes] Mercado filtrado y analizado. Consultando al Súper-Cerebro Gemini AI para el TOP {len(candidates_data_list)} simultáneo...")
+    print(f"✅ [Comité Institucional 7 Agentes - CEO Supreme] Mercado filtrado y analizado. Consultando al Súper-Cerebro Gemini AI para el TOP {len(candidates_data_list)} simultáneo...")
 
     prompt_text = f"""
     Eres el COMITÉ INSTITUCIONAL MULTI-AGENTE CUÁNTICO 24/7 (Súper-Cerebro de Élite).
-    Tu estructura está compuesta por 6 AGENTES ESPECIALIZADOS DE INTELIGENCIA ARTIFICIAL que deben deliberar y lograr consenso antes de ejecutar cualquier orden real:
+    Tu estructura está compuesta por 7 AGENTES ESPECIALIZADOS DE INTELIGENCIA ARTIFICIAL que deben deliberar y lograr consenso unánime antes de ejecutar cualquier orden real:
     
     1. 🕵️ AGENTE 1 - ANALISTA MACRO & RASTRO DE BALLENAS (Whale & Macro Sentinel):
        - Examina el sentimiento Fear & Greed ({fear_greed.get('score')} - {fear_greed.get('sentiment')}), noticias globales y volumen institucional (Volume Surge > 1.2x).
@@ -230,6 +230,9 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     
     6. 🛡️ AGENTE 6 - CHIEF RISK OFFICER (Juez Supremo de Riesgo - Francisca Serrano & Hyenuk Chu):
        - Posee VETO ABSOLUTO. Regla #1: No perder dinero. Regla #2: No olvidar la regla #1. Activa Trailing Stop ATR dinámico al alcanzar +2.0%. Exige convicción A+ (Score >= 65, Confianza >= 70%).
+    
+    7. 👑 AGENTE 7 - CEO & ANTI-LOSS PROFIT MAXIMIZER (Chief Executive Orchestrator):
+       - LÍDER SUPREMO Y ORQUESTADOR DE RENTABILIDAD. Sinteriza las opiniones de los otros 6 agentes. Bloquea absolutamente cualquier patrón que coincida con pérdidas pasadas y autoriza Trailing Stop ATR para exprimir súper-tendencias de +5%, +10% o +20%+.
 
     CONTEXTO GLOBAL MACRO Y ROTACIÓN SECTORIAL:
     - Sector Liderando Entrada de Capital: {sector_summary['top_sector']} ({sector_summary['all_sectors'].get(sector_summary['top_sector'], {}).get('status', '')})
@@ -249,9 +252,9 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     2. 🚫 PROHIBIDO 'FALLING KNIVES': Si un activo tiene Score bajo (15, 20, 30), NO intentes adivinar un rebote especulativo. Deja que el mercado limpie a los minoristas.
     3. 🌊 SOPORTE EN LIBRO DE ÓRDENES: Prioriza candidatos con Bids Compradores >= 55% que confirmen muros de soporte de ballenas.
     4. 🧩 ROTACIÓN SECTORIAL: Favorece activos pertenecientes a sectores con entrada masiva de capital ({sector_summary['top_sector']}).
-    5. 💎 DECISIÓN: Si encuentras un candidato excepcional que cumple TODAS las reglas A+, selecciona su símbolo y aprueba "BUY_LONG" con confianza >= 70%. Si el mercado está sucio, lateral, bajista o con activos mediocres, responde "NONE" y protege el 100% de la liquidez en USDT.
+    5. 💎 DECISIÓN DEL AGENTE 7 CEO: Si encuentras un candidato excepcional que cumple TODAS las reglas A+, selecciona su símbolo y aprueba "BUY_LONG" con confianza >= 70%. Si el mercado está sucio, lateral, bajista o con activos mediocres, responde "NONE" y protege el 100% de la liquidez en USDT.
 
-    RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA MULTI-AGENTE (6 AGENTES):
+    RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA MULTI-AGENTE (7 AGENTES):
     {{
         "selected_symbol": "SIMBOLO" o "NONE",
         "action": "BUY_LONG" o "HOLD",
@@ -263,7 +266,8 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
             "agent_3_orderbook": "Dictamen del Rastreador de Libro de Órdenes sobre dominancia Bids/Asks en 1 oración...",
             "agent_4_sector": "Dictamen del Analista Sectorial sobre la rotación de capital en 1 oración...",
             "agent_5_memory": "Dictamen del Historiador RAG sobre coincidencia con patrones pasados en 1 oración...",
-            "agent_6_risk": "Dictamen final del Chief Risk Officer (Veto o Aprobación) en 1 oración..."
+            "agent_6_risk": "Dictamen del Chief Risk Officer sobre veto de riesgo y ratio 1:2 en 1 oración...",
+            "agent_7_ceo_anti_loss": "Dictamen final del CEO & Anti-Loss Profit Maximizer (Consenso Supremo) en 1 oración..."
         }},
         "reasoning": "Resumen ejecutivo del consenso institucional..."
     }}
