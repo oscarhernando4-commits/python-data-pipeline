@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 19:12:23",
+  "timestamp": "2026-08-02 19:14:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha deliberado y, a pesar de que SUNUSDT tiene un score técnico alto, la falta de confirmación en el libro de órdenes, la debilidad del mercado general y la ausencia de una estructura de soporte sólida obligan a mantener una postura defensiva para preservar el capital.",
+  "reasoning": "El mercado se encuentra en un estado de 'Apatía de Alta Volatilidad' con una estructura técnica fragmentada. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia institucional es preservar capital y esperar una ruptura clara de la neutralidad.",
   "top_candidates": [
     {
-      "symbol": "SUNUSDT",
+      "symbol": "ONDOUSDT",
       "score": 85
     },
     {
-      "symbol": "ZECUSDT",
-      "score": 75
+      "symbol": "GNOUSDT",
+      "score": 85
     },
     {
       "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     }
   ]
