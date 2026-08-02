@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-02 20:58:20",
-  "total_balance_usd": 20.05,
+  "updated_at": "2026-08-02 21:00:23",
+  "total_balance_usd": 20.03,
   "usdt_free": 0.1778,
   "bnb_free": 0.00437518,
   "status": "🔵 En Vivo LONG (ASTERUSDT @ $0.6030)",
@@ -12,7 +12,7 @@
     "break_even": false,
     "trailing_active": false,
     "adaptive_sl_pct": 0.6,
-    "volatility_regime": "⏳ Escalera 10m: SL Apretado a -0.60%"
+    "volatility_regime": "⏳ Escalera 20m: SL Apretado a -0.60%"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos por la Regla de Oro #1, optando por mantener la liquidez en espera de una estructura de mercado más clara."
+    "reasoning": "El comité ha determinado por consenso unánime que, a pesar de tener activos con scores técnicos de 75, la ausencia de una dominancia clara en el libro de órdenes y la inestabilidad macroeconómica actual no cumplen con los criterios de seguridad A+ exigidos por el CRO. Se prioriza la preservación del capital sobre la ejecución especulativa."
   }
 }
