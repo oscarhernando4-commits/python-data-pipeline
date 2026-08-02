@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-02 19:24:20",
-  "selected_symbol": "BCHUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "BCHUSDT es el único candidato que supera el umbral de Score Técnico (85/100) con un volumen de transacciones institucional significativo, cumpliendo con los criterios de seguridad y rentabilidad exigidos por el comité para una operación de scalping de alta convicción.",
+  "timestamp": "2026-08-02 19:26:20",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El comité ha determinado que, a pesar de que BCHUSDT presenta un score técnico elevado, la ausencia de soporte real en el libro de órdenes y el entorno de miedo generalizado (Fear & Greed 27) no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en un mercado sin tendencia definida.",
   "top_candidates": [
     {
       "symbol": "BCHUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "SPCXBUSDT",
       "score": 75
     },
     {
-      "symbol": "ONDOUSDT",
+      "symbol": "KORUBUSDT",
       "score": 75
     }
   ]

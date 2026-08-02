@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 564,
-    "wins": 180,
+    "total_trades": 565,
+    "wins": 181,
     "losses": 384,
-    "win_rate_pct": 31.91,
-    "total_pnl_usd": 20.8481454545454
+    "win_rate_pct": 32.04,
+    "total_pnl_usd": 21.1491654545454
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -9120,6 +9120,19 @@
         "rsi_15m": 69.49,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-02 19:26:22",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "INJUSDT",
+      "side": "BUY",
+      "entry_price": 4.97,
+      "exit_price": 5.057,
+      "pnl_usd": 0.3010200000000022,
+      "result": "WIN",
+      "notes": "Real Money Trade closed with 1.75%",
+      "context": {}
     }
   ]
 }
