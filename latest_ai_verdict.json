@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-02 22:22:42",
-  "selected_symbol": "FILUSDT",
+  "timestamp": "2026-08-02 22:25:28",
+  "selected_symbol": "DOGEUSDT",
   "action": "BUY_LONG",
   "approved": true,
   "confidence": 75,
-  "reasoning": "El comité multi-agente ha seleccionado FILUSDT dentro del sector DePIN & Storage con un Score Técnico de 75, superando el umbral A+ requerido, con confirmación de un fuerte volumen (Surge 1.75) y bajo la supervisión rigurosa de gestión de riesgo para maximizar rentabilidad protegiendo el capital.",
+  "reasoning": "El consenso institucional favorece la entrada en DOGEUSDT debido a un fuerte impulso técnico y sectorial, a pesar del sentimiento general de miedo en el mercado. Se aprueba la operación con un enfoque de gestión de riesgo estricto.",
   "top_candidates": [
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "DOGEUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "NEARUSDT",
       "score": 75
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "NEARUSDT",
+      "symbol": "AAVEUSDT",
       "score": 75
     },
     {
       "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ADAUSDT",
       "score": 75
     }
   ]
