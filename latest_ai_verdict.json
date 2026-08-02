@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 03:10:24",
-  "selected_symbol": "ETHFIUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "ETHFIUSDT exhibits the highest technical score (75/100) and a significant volume surge (2.48x), indicating institutional accumulation despite the broader market's 'Fear' sentiment. Its RSI (65.74) is within the optimal range for momentum, and it shows resilience as an 'island of liquidity' in a period of systemic stress. The setup aligns with the strategy of capturing divergence in high-strength assets while avoiding the decay of major pairs.",
+  "timestamp": "2026-08-02 03:15:18",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El entorno macroeconómico actual presenta una fragilidad sistémica con un índice Fear & Greed en 27 (Miedo). Aunque activos como RE y RIF presentan un score de 75, carecen de profundidad histórica y volumen de confirmación, lo que los clasifica como activos de alta volatilidad artificial. Los activos con scores >= 65 (EUL, GIGGLE) no muestran un 'Volume Surge' significativo que valide una entrada institucional. Siguiendo la filosofía de preservación de capital y paciencia de francotirador, se prioriza la liquidez en USDT hasta que el mercado demuestre una estructura de acumulación clara y el score de BTC supere el nivel de 50.",
   "top_candidates": [
     {
-      "symbol": "UUSDT",
+      "symbol": "REUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "RIFUSDT",
       "score": 75
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 70
     },
     {
       "symbol": "EULUSDT",
       "score": 65
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "TRXUSDT",
+      "score": 60
     }
   ]
 }
