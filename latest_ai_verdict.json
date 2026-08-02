@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-02 23:08:23",
+  "timestamp": "2026-08-02 23:10:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual carece de la convicción técnica y el soporte de liquidez necesarios para ejecutar una operación de bajo riesgo. Todos los candidatos presentan scores inferiores al umbral de seguridad A+ (65), por lo que se prioriza la preservación del capital.",
+  "reasoning": "Tras evaluar a todos los candidatos, ninguno cumple con el umbral de Score Técnico de 65 ni con la dominancia de Bids necesaria para garantizar una alta probabilidad de éxito, por lo que se mantiene la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "SOXLBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "BONKUSDT",
       "score": 60
     },
     {
@@ -19,11 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "MIRAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "DODOUSDT",
+      "symbol": "EWYBUSDT",
       "score": 50
     }
   ]
