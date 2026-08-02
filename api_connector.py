@@ -664,6 +664,17 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         active_qty = float(crypto_balances[0]["free"])
         active_symbol = f"{active_asset}USDT"
         
+        import multi_timeframe_analyzer
+        # AUTO-LIQUIDATION GUARD FOR UUSDT OR STABLECOIN POSITIONS
+        if multi_timeframe_analyzer.is_stablecoin(active_symbol) or active_symbol == "UUSDT":
+            print(f"🚨 DETECTADA POSICIÓN EN STABLECOIN / DÓLAR SINTÉTICO ({active_symbol}). Ejecutando Venta de Emergencia para restaurar saldo USDT...")
+            sell_res = execute_real_spot_market_sell(active_symbol, active_qty)
+            print(f"🔄 Venta de Emergencia {active_symbol}: {sell_res}")
+            state["position"] = None
+            state["status"] = "🟦 Buscando Entrada A+"
+            save_real_account_state(state)
+            return state
+            
         # Fetch live price of the held asset
         active_current_price = get_symbol_price(active_symbol, is_futures=False)
         if not active_current_price:
@@ -865,6 +876,14 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             if sym_clean in stablecoins_blacklist or best_symbol in stablecoins_blacklist:
                 is_stable = True
                 print(f"⛔ Compra rechazada: {best_symbol} es una stablecoin / activo no volátil.")
+            else:
+                import multi_timeframe_analyzer
+                mtf_res = multi_timeframe_analyzer.analyze_multi_timeframe_candles(best_symbol)
+                if not mtf_res.get("is_valid_tradable_asset", True):
+                    is_stable = True
+                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por análisis histórico multi-temporal ({mtf_res.get('rejection_reason')}).")
+                else:
+                    print(f"📊 Análisis Multi-Temporal {best_symbol}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Rango 1D={mtf_res.get('price_expansion_1d_pct')}% | Alignment={mtf_res.get('timeframe_alignment')}")
                 
         if bias_ok and not is_stable:
             # 1. LONG Entry Signal (Operates with 100% of available USDT, strictly requires Score >= 65 Setup A+)

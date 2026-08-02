@@ -56,13 +56,14 @@ def get_binance_top_volume_coins(valid_pairs):
         print(f"Fallo Binance 24H Volume: {e}")
         return []
 
+import multi_timeframe_analyzer
+
 # Exhaustive Blacklist of Stablecoins, Fiat-Pegged Assets, and Synthetic Collateral
 STABLECOIN_BLACKLIST = {
-    "USDT", "USDC", "FDUSD", "TUSD", "BUSD", "DAI", "USDD", "USDE", "RLUSD", "USD1",
-    "EUR", "AEUR", "WBTC", "TBTC", "USDS", "USTC", "FRAX", "PYUSD", "USD0", "SNDKB",
-    "SNDK", "USD", "EURUSDT", "AEURUSDT", "RLUSDUSDT", "USD1USDT", "USDCUSDT", "FDUSDUSDT",
-    "TUSDUSDT", "BUSDUSDT", "DAIUSDT", "USDDUSDT", "USDEUSDT", "FRAXUSDT", "PYUSDUSDT",
-    "WBTCUSDT", "TBTCUSDT", "EURI", "EURIOUSDT"
+    "U", "UUSDT", "USD", "USDE", "USD0", "USDS", "USDF", "USDC", "FDUSD", "TUSD", "BUSD", "DAI", "USDD", "RLUSD", "USD1",
+    "EUR", "AEUR", "WBTC", "TBTC", "USDS", "USTC", "FRAX", "PYUSD", "USD0", "SNDKB", "SNDK", "USD", "EURUSDT", "AEURUSDT",
+    "RLUSDUSDT", "USD1USDT", "USDCUSDT", "FDUSDUSDT", "TUSDUSDT", "BUSDUSDT", "DAIUSDT", "USDDUSDT", "USDEUSDT", "FRAXUSDT",
+    "PYUSDUSDT", "WBTCUSDT", "TBTCUSDT", "EURI", "EURIOUSDT", "CRCLB", "CRCLBUSDT", "SPCXB", "SPCXBUSDT", "QQQB", "QQQBUSDT"
 }
 
 def update_top_pairs():
@@ -94,12 +95,14 @@ def update_top_pairs():
         clean_sym = sym.upper().strip()
         if clean_sym in STABLECOIN_BLACKLIST or f"{clean_sym}USDT" in STABLECOIN_BLACKLIST:
             continue
+        if multi_timeframe_analyzer.is_stablecoin(clean_sym) or multi_timeframe_analyzer.is_stablecoin(f"{clean_sym}USDT"):
+            continue
         # Filter out weird ASCII/Chinese symbols
         if not all(ord(c) < 128 for c in sym):
             continue
             
         binance_sym = f"{mapping.get(sym, sym)}USDT"
-        if binance_sym in STABLECOIN_BLACKLIST:
+        if binance_sym in STABLECOIN_BLACKLIST or multi_timeframe_analyzer.is_stablecoin(binance_sym):
             continue
         
         # Must exist in Spot
