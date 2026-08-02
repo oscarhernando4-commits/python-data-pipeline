@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-02 07:05:19",
+  "timestamp": "2026-08-02 07:10:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'anemia de liquidez' con un índice Fear & Greed de 27. Aunque TRX y POL presentan un score de 75, el entorno macro es de alta fragilidad y los activos con score >= 65 carecen de la confluencia necesaria de volumen (Volume Surge < 1.2x) y confirmación técnica para un setup A+. La preservación de capital es la prioridad absoluta; no operaremos en un entorno de neutralidad forzada donde la probabilidad de éxito es estadísticamente baja.",
+  "reasoning": "El entorno macroeconómico actual presenta un índice de miedo (Fear & Greed) en 27, indicando una fragilidad sistémica. Aunque activos como TRX y POL presentan un score de 75, carecen de un historial de datos suficiente para validar una probabilidad estadística de éxito A+ bajo nuestra metodología de preservación de capital. La mayoría de los activos con score > 60 muestran una falta de convicción institucional y volumen de confirmación necesario. Siguiendo la filosofía de paciencia de francotirador, la preservación del capital en liquidez (USDT) es la estrategia óptima ante la ausencia de un setup de alta probabilidad.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "SYNUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "1000SATSUSDT",
-      "score": 65
-    },
-    {
       "symbol": "ENSOUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "HEIUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "SYNUSDT",
       "score": 65
     }
   ]
