@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-02 10:05:19",
+  "timestamp": "2026-08-02 10:10:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de aversión al riesgo sistémica con un índice Fear & Greed de 27. Ninguno de los activos analizados cumple con el umbral mínimo de Score Técnico A+ (>= 65). Los candidatos con Score 60 presentan un historial insuficiente y falta de confirmación institucional, lo que los convierte en trampas de liquidez. La prioridad absoluta es la preservación de capital; se mantiene la liquidez en USDT.",
+  "reasoning": "El mercado se encuentra en un entorno de alta correlación bajista con un sentimiento de miedo (Fear & Greed 27). Aunque STX presenta un score de 70, no alcanza el umbral de seguridad necesario en un entorno de capitulación sistémica donde el 93% de los activos muestran debilidad extrema. La falta de profundidad histórica en los activos con score superior y la persistencia de noticias negativas sobre el ecosistema cripto obligan a mantener la liquidez en USDT para preservar el capital, siguiendo la filosofía de paciencia de francotirador.",
   "top_candidates": [
+    {
+      "symbol": "STXUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "MIRAUSDT",
+      "score": 60
+    },
     {
       "symbol": "WLFIUSDT",
       "score": 60
@@ -17,14 +25,6 @@
     {
       "symbol": "INJUSDT",
       "score": 60
-    },
-    {
-      "symbol": "STXUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "MIRAUSDT",
-      "score": 50
     }
   ]
 }
