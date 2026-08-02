@@ -143,21 +143,21 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
         "generationConfig": {"temperature": 0.2, "responseMimeType": "application/json"}
     }
     
-    # Exact cascade requested by user: prioritizing flash-lite to avoid rate limits
+    # User Mandate: STRICTLY ONLY gemini-3.1-flash-lite and gemini-3.5-flash-lite
     models_to_try = [
         "gemini-3.1-flash-lite",
-        "gemini-3.5-flash-lite",
-        "gemini-3.1-flash-lite-preview",
-        "gemini-2.5-flash-lite"
+        "gemini-3.5-flash-lite"
     ]
     
     max_retries_per_model = 2
     
     keys_pool = get_gemini_api_keys()
-    print(f"✅ [Pre-Filtro Matemático] 30 Pares analizados. Pool de {len(keys_pool)} Claves Gemini activas. Consultando al Súper-Cerebro Gemini AI SOLO para el TOP 1 ({symbol})...")
+    print(f"✅ [Pre-Filtro Matemático] 30 Pares analizados. Pool de {len(keys_pool)} Claves Gemini activas. Consultando al Súper-Cerebro Gemini AI (Flash-Lite Only) SOLO para el TOP 1 ({symbol})...")
     
     for model_name in models_to_try:
-        for key in keys_pool:
+        # Start from round-robin key index to balance usage across all 10 API keys
+        keys_rotated = [keys_pool[(i + _KEY_INDEX) % len(keys_pool)] for i in range(len(keys_pool))]
+        for key in keys_rotated:
             try:
                 url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={key}"
                 
@@ -317,14 +317,13 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     payload = {"contents": [{"parts": [{"text": prompt_text}]}], "generationConfig": {"temperature": 0.1, "responseMimeType": "application/json"}}
     models_to_try = [
         "gemini-3.1-flash-lite",
-        "gemini-3.5-flash-lite",
-        "gemini-3.1-flash-lite-preview",
-        "gemini-2.5-flash-lite"
+        "gemini-3.5-flash-lite"
     ]
     
     keys_pool = get_gemini_api_keys()
     for model_name in models_to_try:
-        for key in keys_pool:
+        keys_rotated = [keys_pool[(i + _KEY_INDEX) % len(keys_pool)] for i in range(len(keys_pool))]
+        for key in keys_rotated:
             try:
                 url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={key}"
                 req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers={'Content-Type': 'application/json'})
