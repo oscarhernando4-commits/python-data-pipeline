@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-08-02 12:27:44",
-  "total_balance_usd": 19.9,
+  "updated_at": "2026-08-02 17:57:00",
+  "total_balance_usd": 19.92,
   "usdt_free": 0.005,
   "bnb_free": 0.00446371,
-  "status": "🔵 En Vivo LONG (INJUSDT @ $5.0010)",
+  "status": "🔵 En Vivo LONG (INJUSDT @ $4.9910)",
   "position": {
     "symbol": "INJUSDT",
     "quantity": 3.46,
     "entry_price": 4.97,
-    "highest_price": 5.009,
+    "highest_price": 5.012,
     "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 1.0,
-    "volatility_regime": "🔵 Standard ATR"
+    "adaptive_sl_pct": 1.2,
+    "volatility_regime": "🔵 Volatilidad Estándar / Margen Óptimo"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 45,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de fragmentación y alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La estrategia institucional dicta la preservación del capital en USDT hasta que se observe una rotación de capital clara y una estructura de mercado alcista confirmada."
+    "reasoning": "El mercado se encuentra en una fase de indecisión estructural con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo."
   }
 }

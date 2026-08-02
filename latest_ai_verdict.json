@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-02 17:55:20",
+  "timestamp": "2026-08-02 17:56:59",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "El comité ha decidido mantener la liquidez en USDT debido a que, a pesar de los scores técnicos de 75, ninguno de los candidatos presenta una dominancia de Bids superior al 55% ni una estructura de mercado que garantice una alta probabilidad de éxito, cumpliendo con la regla de oro de no arriesgar capital en condiciones de mercado mediocres.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una fase de indecisión estructural con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XRPUSDT",
       "score": 75
     }
   ]
