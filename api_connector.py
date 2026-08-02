@@ -896,9 +896,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 elif mtf_res.get("is_overextended_15m"):
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} rechazado por vela de 15m sobre-extendida / mecha de trampa ({mtf_res.get('overextension_reason')}).")
-                elif tf_align.get("5m") != "BULLISH" or tf_align.get("15m") != "BULLISH" or tf_align.get("1h") != "BULLISH":
+                elif tf_align.get("5m") != "BULLISH" or tf_align.get("15m") != "BULLISH":
                     is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de alineación alcista simultánea en 5m/15m/1h (Alignment: {tf_align}).")
+                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de alineación alcista simultánea en 5m y 15m (Alignment: {tf_align}).")
                 else:
                     print(f"📊 Análisis Multi-Temporal {best_symbol}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Rango 1D={mtf_res.get('price_expansion_1d_pct')}% | Alignment={tf_align}")
                 
