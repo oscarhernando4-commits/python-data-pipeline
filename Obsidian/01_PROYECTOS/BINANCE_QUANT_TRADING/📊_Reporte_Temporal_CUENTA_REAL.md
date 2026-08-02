@@ -4,12 +4,12 @@ aliases: [Rendimiento CUENTA REAL]
 cssclasses: [dashboard-view]
 ---
 # 📊 Rendimiento por Periodos: CUENTA REAL
-> Última actualización: 2026-08-02 12:45:19
+> Última actualización: 2026-08-02 12:50:17
 
 | Periodo | Total Operaciones | ✅ Ganadoras | 💰 PnL Ganado | ❌ Perdedoras | 💸 PnL Perdido | 📈 Neto |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **1 Día (24h)** | 3 | 0 | +$0.00 | 3 | -$0.34 | **$-0.34** |
-| **3 Días** | 4 | 0 | +$0.00 | 4 | -$0.40 | **$-0.40** |
+| **3 Días** | 3 | 0 | +$0.00 | 3 | -$0.34 | **$-0.34** |
 | **1 Semana** | 4 | 0 | +$0.00 | 4 | -$0.40 | **$-0.40** |
 | **2 Semanas** | 4 | 0 | +$0.00 | 4 | -$0.40 | **$-0.40** |
 | **1 Mes (30d)** | 4 | 0 | +$0.00 | 4 | -$0.40 | **$-0.40** |
