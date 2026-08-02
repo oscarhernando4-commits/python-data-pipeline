@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-02 13:55:16",
-  "selected_symbol": "INJUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "INJUSDT es el único activo que cumple con el umbral de Score Técnico A+ (70/100) y presenta una confluencia positiva de factores: un Volume Surge de 2.75x (indicativo de interés institucional real) y noticias fundamentales de respaldo (lanzamiento de validador institucional). A diferencia de otros activos con scores similares pero historial insuficiente o manipulación, INJ muestra una estructura de mercado más robusta en el contexto actual de capitulación, alineándose con la estrategia de francotirador al buscar activos con fuerza relativa real frente a la debilidad generalizada del mercado.",
+  "timestamp": "2026-08-02 13:57:00",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una fase de purga de liquidez con alta correlación negativa. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el CRO, por lo que la estrategia óptima es mantener la liquidez en USDT hasta que el Orderbook muestre una acumulación institucional clara.",
   "top_candidates": [
+    {
+      "symbol": "XAUTUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "score": 70
+    },
     {
       "symbol": "POLUSDT",
       "score": 70
@@ -15,15 +23,7 @@
       "score": 70
     },
     {
-      "symbol": "UUSDT",
-      "score": 60
-    },
-    {
       "symbol": "TRXUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DOGEUSDT",
       "score": 60
     }
   ]
