@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-02 07:00:23",
+  "timestamp": "2026-08-02 07:05:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El entorno macroeconómico actual presenta una aversión al riesgo sistémica con un índice Fear & Greed en 27. Aunque activos como TRXUSDT y POLUSDT presentan un score de 75/100, el análisis de riesgo institucional advierte sobre la insuficiencia de datos históricos y la alta probabilidad de manipulación (wash trading). La mayoría de los activos con score >= 65 carecen de un 'Volume Surge' significativo que confirme una acumulación institucional real. Siguiendo la filosofía de preservación de capital y paciencia de francotirador, la mejor operación en este mercado de alta incertidumbre y tendencia neutral es mantener la liquidez en USDT.",
+  "reasoning": "El mercado se encuentra en un estado de 'anemia de liquidez' con un índice Fear & Greed de 27. Aunque TRX y POL presentan un score de 75, el entorno macro es de alta fragilidad y los activos con score >= 65 carecen de la confluencia necesaria de volumen (Volume Surge < 1.2x) y confirmación técnica para un setup A+. La preservación de capital es la prioridad absoluta; no operaremos en un entorno de neutralidad forzada donde la probabilidad de éxito es estadísticamente baja.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "HEIUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "ENSOUSDT",
+      "symbol": "SYNUSDT",
       "score": 65
     },
     {
       "symbol": "1000SATSUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "ENSOUSDT",
       "score": 65
     }
   ]
