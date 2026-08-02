@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-02 21:06:21",
+  "timestamp": "2026-08-02 21:08:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos aceptables, ninguno cumple con los requisitos estrictos de soporte en el libro de órdenes (Bids > 55%) ni con la convicción necesaria para mitigar el riesgo sistémico actual. Se prioriza la protección del capital ante la falta de una tendencia alcista confirmada.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65 con Bids > 55% y confirmación de volumen). La alta volatilidad y la falta de historial en los activos con mayor score técnico representan un riesgo inaceptable para el capital institucional, por lo que se mantiene la posición en efectivo (HOLD).",
   "top_candidates": [
     {
-      "symbol": "ETCUSDT",
-      "score": 100
+      "symbol": "SUNUSDT",
+      "score": 85
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "GNOUSDT",
       "score": 85
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "NEARUSDT",
       "score": 75
     }
   ]
