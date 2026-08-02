@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-02 13:05:15",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada con un sentimiento de 'Fear' (27) actuando como ancla. Ninguno de los candidatos analizados cumple con el umbral estricto de Score A+ (>= 65) con confirmación de volumen y estabilidad técnica. FILUSDT, aunque destaca con un Score de 70, carece de profundidad histórica suficiente para validar una entrada de alta probabilidad, y el resto de los activos presentan scores inferiores o riesgos de FUD. La preservación del capital es la prioridad absoluta; nos mantenemos en liquidez (USDT) hasta que el entorno macro mejore.",
+  "timestamp": "2026-08-02 13:10:15",
+  "selected_symbol": "XAUTUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 70,
+  "reasoning": "XAUTUSDT es el único activo que cumple con el umbral de Score Técnico >= 65 en un entorno de mercado de debilidad sistémica extrema. Actúa como refugio de valor ante la incertidumbre macro y la salida de liquidez de los activos de riesgo. La operación se justifica bajo la premisa de preservación de capital y cobertura, evitando la exposición a activos de alta volatilidad con scores inferiores.",
   "top_candidates": [
+    {
+      "symbol": "XAUTUSDT",
+      "score": 70
+    },
     {
       "symbol": "FILUSDT",
       "score": 70
     },
     {
       "symbol": "HBARUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
