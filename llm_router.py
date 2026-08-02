@@ -33,11 +33,23 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     indicators = tech_data.get('indicators', {})
     risk_plan = tech_data.get('institutional_risk_plan', {})
     
-    print(f"🧠 Consultando al Súper-Cerebro Gemini AI para {symbol} (Score: {score} Pts, RSI: {indicators.get('rsi_15m', 'N/A')})...")
+    import multi_timeframe_analyzer
+    mtf_info = multi_timeframe_analyzer.analyze_multi_timeframe_candles(symbol)
+    mtf_alignment = mtf_info.get("timeframe_alignment", {})
+    mtf_score = mtf_info.get("multi_tf_score", 50)
+    mtf_range_1d = mtf_info.get("price_expansion_1d_pct", 0.0)
+    
+    print(f"🧠 Consultando al Súper-Cerebro Gemini AI para {symbol} (Score: {score} Pts, MTF 1H/4H: {mtf_alignment.get('1h', 'NEUTRAL')}/{mtf_alignment.get('4h', 'NEUTRAL')})...")
     
     prompt_text = f"""
     Eres un Trader Cuantitativo Institucional Senior y Experto en Aprendizaje de Patrones Históricos Extremos / Rastro de Ballenas.
     Tu objetivo es lograr operaciones victoriosas de alta frecuencia intradía para {symbol}.
+
+    ANÁLISIS ESTRUCTURAL DE VELAS DE 1 HORA (1H) Y 4 HORAS (4H):
+    - Rango de Volatilidad 1D: {mtf_range_1d}%
+    - Calificación Multi-Temporal: {mtf_score}/100
+    - Alineación por Temporalidad: 5m={mtf_alignment.get('5m')}, 15m={mtf_alignment.get('15m')}, 1h={mtf_alignment.get('1h')}, 4h={mtf_alignment.get('4h')}, 1d={mtf_alignment.get('1d')}
+    ⚠️ REGLA ESTRICTA DE VELAS DE 1H: Si la vela de 1H está en consolidación plana muerta (< 1.0% de movimiento) o en tendencia bajista fuerte en 1H/4H, RECHAZA la compra para evitar quedar atrapado en acumulación horizontal sin volumen.
 
     LECCIONES APRENDIDAS DE 99 SIMULACIONES (RAG MEMORY):
     Patrones Prohibidos (Trampas descubiertas):

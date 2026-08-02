@@ -713,15 +713,19 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         adaptive_sl_pct = min(1.0, atr_info.get("sl_pct", 1.0))
         trailing_offset = atr_risk_calculator.get_adaptive_trailing_offset(active_symbol, atr_info.get("atr_pct", 0.8))
 
-        # Progressive Time-Decay Escalation Ladder:
+        # Progressive 1H-Synchronized Time-Decay Escalation Ladder:
+        # 1. 0 to 20m (cycles 1-9): SL capped at -1.0% (allows 1H candle lower wick formation)
+        # 2. 20m to 45m (cycles 10-22): SL tightens to -0.60% (protects during 1H candle buildup)
+        # 3. 45m to 75m (cycles 23-37): SL tightens to -0.20% (Break-Even style float protection)
+        # 4. > 75m (cycles >= 38 / 1h 15m): Market exit for capital release towards faster opportunities
         time_regime_msg = ""
         if not break_even_active and not trailing_active:
-            if holding_cycles >= 15:    # 10m + 20m = 30 mins
+            if holding_cycles >= 23:    # 45 mins (cycle 23 * 2m = 46m)
                 adaptive_sl_pct = 0.2
-                time_regime_msg = "⏳ Escalera 30m: SL Apretado a -0.20%"
-            elif holding_cycles >= 5:   # 10 mins
+                time_regime_msg = "⏳ Escalera 45m: SL Apretado a -0.20%"
+            elif holding_cycles >= 10:   # 20 mins (cycle 10 * 2m = 20m)
                 adaptive_sl_pct = 0.6
-                time_regime_msg = "⏳ Escalera 10m: SL Apretado a -0.60%"
+                time_regime_msg = "⏳ Escalera 20m: SL Apretado a -0.60%"
 
         # ESCUDO 1: BTC Flash Crash Circuit Breaker
         btc_price_now = get_symbol_price("BTCUSDT", is_futures=False)
@@ -778,7 +782,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         # --- MONITOREO ACTIVO PRIORITARIO (CADA 2 MINUTOS) ---
         print("\n" + "="*65)
         print(f"📊 [SEGUIMIENTO DE POSICIÓN ACTIVA REAL - SPOT]")
-        print(f"🪙 Moneda: {active_symbol} | Cantidad: {active_qty:,.2f} {active_asset} (Tiempo Abierto: {holding_cycles*2}m / 50m)")
+        print(f"🪙 Moneda: {active_symbol} | Cantidad: {active_qty:,.2f} {active_asset} (Tiempo Abierto: {holding_cycles*2}m / 75m)")
         print(f"💵 Entrada: {price_fmt(entry)} USD | Máximo Pico: {price_fmt(highest_price)} USD (+{highest_pnl_pct:.2f}%)")
         print(f"📈 PnL Flotante Actual: {pnl_pct:+.2f}% (${pnl_usd:+.4f} USD)")
         print(f"🚀 Modo Trailing Stop: {'🔥 ACTIVO (Distancia ' + str(trailing_offset) + '%)' if trailing_active else '⚪ Esperando +2.0%'}")
@@ -797,9 +801,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             elif not trailing_active and pnl_pct <= trailing_floor_pct:
                 should_exit = True
                 reason_str = f"Stop Loss Escalonado ({pnl_pct:.2f}%)"
-            elif holding_cycles >= 25 and not break_even_active and not trailing_active:
+            elif holding_cycles >= 38 and not break_even_active and not trailing_active:
                 should_exit = True
-                reason_str = f"Liberación Final por Estancamiento (50m sin movimiento PnL={pnl_pct:+.2f}%)"
+                reason_str = f"Liberación Final por Estancamiento (75m / 1h 15m sin movimiento PnL={pnl_pct:+.2f}%)"
                 
             if should_exit:
                 print(f"🎯 ALERTA REAL: Salida LONG por {reason_str} en {active_symbol}. Vendiendo...")
