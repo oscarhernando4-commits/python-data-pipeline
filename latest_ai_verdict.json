@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-02 23:32:21",
+  "timestamp": "2026-08-02 23:33:30",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de alta fragilidad con una rotación de capital hacia stablecoins. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y soporte de libro de órdenes > 55%) necesario para mitigar el riesgo de una caída sistémica, por lo que se mantiene la posición en efectivo.",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de tener candidatos con scores técnicos de 75, ninguno cumple con los requisitos de profundidad de libro de órdenes y confirmación de volumen institucional necesarios para una operación A+. Se prioriza la preservación del capital ante la alta volatilidad y la falta de una tendencia clara en el mercado.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
@@ -15,16 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "DRAMBUSDT",
-      "score": 75
-    },
-    {
       "symbol": "BONKUSDT",
       "score": 75
     },
     {
       "symbol": "KAITOUSDT",
       "score": 70
+    },
+    {
+      "symbol": "QNTUSDT",
+      "score": 65
     }
   ]
 }
