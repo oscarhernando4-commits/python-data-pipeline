@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-02 21:04:23",
+  "timestamp": "2026-08-02 21:06:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de consolidación con aversión al riesgo selectiva. Ninguno de los candidatos cumple con el umbral estricto de convicción A+ exigido por el comité, y la falta de profundidad en el libro de órdenes impide una ejecución segura. Se prioriza la protección del capital sobre la especulación en un entorno de alta volatilidad.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos aceptables, ninguno cumple con los requisitos estrictos de soporte en el libro de órdenes (Bids > 55%) ni con la convicción necesaria para mitigar el riesgo sistémico actual. Se prioriza la protección del capital ante la falta de una tendencia alcista confirmada.",
   "top_candidates": [
     {
       "symbol": "ETCUSDT",
       "score": 100
+    },
+    {
+      "symbol": "SUNUSDT",
+      "score": 85
     },
     {
       "symbol": "BTCUSDT",
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
       "score": 75
     },
     {
