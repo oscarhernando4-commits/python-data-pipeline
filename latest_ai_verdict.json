@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 18:00:21",
+  "timestamp": "2026-08-02 18:05:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de dominancia de Bids (>= 55%) ni con una confirmación de volumen institucional necesaria para una entrada A+. El mercado presenta una divergencia fragmentada que aumenta el riesgo de 'trampas de valor', por lo que el comité decide mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de re-acumulación volátil con falta de soporte institucional claro en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ necesario para mitigar el riesgo de 'falling knives' o trampas de valor, por lo que la estrategia óptima es mantener la liquidez en espera de una señal de alta probabilidad.",
   "top_candidates": [
     {
-      "symbol": "LINKUSDT",
+      "symbol": "EIGENUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "XRPUSDT",
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "DOTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SPCXBUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     }
   ]
