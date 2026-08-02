@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 18:35:27",
+  "timestamp": "2026-08-02 18:40:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de dominancia de bids (>= 55%) ni con la confirmación de volumen institucional necesaria para una entrada de alta probabilidad, por lo que se prioriza la preservación del capital bajo la regla de no perder dinero.",
+  "reasoning": "Ninguno de los candidatos cumple con el requisito de dominancia de Bids (>= 55%) ni con la confirmación de soporte institucional necesaria para una operación A+. Se prioriza la preservación del capital ante la falta de una tendencia clara y el riesgo de falsas rupturas.",
   "top_candidates": [
     {
-      "symbol": "UUSDT",
-      "score": 75
+      "symbol": "BTCUSDT",
+      "score": 85
     },
     {
-      "symbol": "AVAXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
-      "score": 75
+      "symbol": "LINKUSDT",
+      "score": 85
     },
     {
       "symbol": "ZECUSDT",
-      "score": 75
+      "score": 85
     },
     {
-      "symbol": "DOTUSDT",
-      "score": 75
+      "symbol": "SOLUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "score": 85
     }
   ]
 }
