@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 04:50:20",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El entorno macroeconómico actual presenta una debilidad sistémica severa con un índice Fear & Greed en 27 y una contracción de liquidez confirmada. Aunque SUNUSDT presenta un score técnico de 85, su historial de 5 minutos es insuficiente para garantizar una entrada de alta probabilidad sin riesgo de trampa de liquidez. Siguiendo la filosofía de preservación de capital y la regla de oro de no operar en mercados con alta incertidumbre y debilidad en las 'majors', la decisión institucional es mantener la liquidez en USDT hasta que el mercado muestre una estructura de soporte clara y una rotación de capital real.",
+  "timestamp": "2026-08-02 04:55:28",
+  "selected_symbol": "ROSEUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 78,
+  "reasoning": "ROSEUSDT es el único activo que cumple con el umbral de Score Técnico A+ (85/100) y presenta un Volume Surge de 1.97, indicando una acumulación institucional significativa. A pesar del entorno macro de aversión al riesgo, su resiliencia técnica y el momentum alcista en 5M justifican una entrada táctica en SPOT bajo una gestión de riesgo estricta, evitando el resto de activos que presentan scores inferiores o señales de distribución.",
   "top_candidates": [
     {
-      "symbol": "SUNUSDT",
+      "symbol": "ROSEUSDT",
       "score": 85
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETCUSDT",
+      "score": 75
     },
     {
       "symbol": "INJUSDT",
       "score": 75
     },
     {
-      "symbol": "ROSEUSDT",
+      "symbol": "POLUSDT",
       "score": 75
-    },
-    {
-      "symbol": "KITEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "RENDERUSDT",
-      "score": 70
     }
   ]
 }
