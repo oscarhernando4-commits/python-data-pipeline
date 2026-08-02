@@ -551,6 +551,7 @@ def run_infinite_trading_matrix_cycle():
         # Crash state: BTC in active panic dump (Score < 30 AND RSI < 35.0)
         is_btc_crashing = btc_score < 30 and btc_rsi < 35.0
         is_btc_weak = btc_score < 45 or btc_rsi < 42.0
+        is_btc_bearish = is_btc_crashing or is_btc_weak or btc_score < 50
         
         btc_status_str = f"BTC @ ${btc_price:,.2f} (Score={btc_score}, RSI={btc_rsi:.1f}, Trend={btc_trend})"
         print(f"🪙 [GUARDIÁN BITCOIN] Estado Macro: {btc_status_str}")
