@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-02 20:42:20",
+  "timestamp": "2026-08-02 20:44:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de identificar activos con scores técnicos de 75, el comité ha determinado que la falta de dominancia en el libro de órdenes (Bids < 55%) y la incertidumbre macroeconómica actual no cumplen con los estándares de seguridad A+ exigidos por el CRO, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en una fase de 'Neutralidad Forzada' con una estructura de debilidad sistémica. Ningún candidato cumple con el requisito de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
   "top_candidates": [
     {
       "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ASTERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUNUSDT",
       "score": 75
     },
     {
@@ -23,7 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "SUNUSDT",
+      "score": 75
+    },
+    {
       "symbol": "SKYUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "DASHUSDT",
       "score": 70
     }
   ]
