@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-02 22:40:39",
+  "timestamp": "2026-08-02 22:42:37",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 95,
-  "reasoning": "Ningún candidato cumple con el umbral estricto de Score Técnico >= 65 exigido por el Chief Risk Officer y el CEO. Ante un entorno con señales neutrales y sin confirmación de ballenas, la decisión institucional es proteger la liquidez y evitar operaciones especulativas.",
+  "reasoning": "Ningún candidato cumple de forma unánime y robusta con todas las reglas de oro del filtro A+ (Score >= 65, confirmación clara de libro de órdenes y baja volatilidad). Por lo tanto, el comité decide por unanimidad proteger la liquidez en USDT y mantener una postura de HOLD.",
   "top_candidates": [
+    {
+      "symbol": "BTCUSDT",
+      "score": 70
+    },
     {
       "symbol": "ADAUSDT",
       "score": 60
@@ -15,16 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "ZENUSDT",
-      "score": 55
+      "symbol": "MIRAUSDT",
+      "score": 60
     },
     {
-      "symbol": "JTOUSDT",
+      "symbol": "ENAUSDT",
       "score": 55
-    },
-    {
-      "symbol": "EDENUSDT",
-      "score": 50
     }
   ]
 }
