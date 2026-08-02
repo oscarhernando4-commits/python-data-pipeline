@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-02 21:10:22",
+  "timestamp": "2026-08-02 21:12:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura de 'trampa de neutralidad'. A pesar de que ONDO y SUN tienen scores técnicos altos, no cumplen con el umbral de soporte de libro de órdenes (Bids > 55%) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo (Fear & Greed 27).",
+  "confidence": 0,
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos, no existe una confluencia de liquidez en el libro de órdenes (Bids < 65%) ni una confirmación de tendencia que minimice el riesgo de 'falling knives' en el entorno macro actual.",
   "top_candidates": [
     {
-      "symbol": "ONDOUSDT",
-      "score": 85
+      "symbol": "ETCUSDT",
+      "score": 100
+    },
+    {
+      "symbol": "CRVUSDT",
+      "score": 90
     },
     {
       "symbol": "SUNUSDT",
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "XLMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
+      "symbol": "NEARUSDT",
       "score": 75
     }
   ]
