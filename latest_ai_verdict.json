@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-02 13:25:15",
+  "timestamp": "2026-08-02 13:30:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos analizados alcanza el umbral crítico de Score Técnico >= 65 requerido para un Setup A+. El mercado presenta un entorno de alta toxicidad con una tendencia macro bajista y una distribución institucional agresiva. La preservación de capital es la prioridad absoluta; por tanto, se mantiene la liquidez en USDT hasta que las condiciones de mercado ofrezcan una probabilidad estadística superior.",
+  "reasoning": "El mercado se encuentra en una fase de contracción sistémica con un sesgo de miedo predominante (Fear & Greed: 27). Ninguno de los activos analizados alcanza el umbral mínimo de Score A+ (>= 65) requerido por nuestra política de preservación de capital. Los candidatos con score 60 (DOGE, XAUT, SHIB) presentan una estructura técnica insuficiente y falta de profundidad histórica, lo que aumenta el riesgo de 'slippage' y trampas de valor. Siguiendo la filosofía de paciencia de francotirador, la mejor operación es mantener la liquidez en USDT hasta que el mercado muestre una rotación de capital clara y una estructura de soporte institucional sólida.",
   "top_candidates": [
     {
       "symbol": "DOGEUSDT",
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "SHIBUSDT",
       "score": 60
     },
     {
-      "symbol": "LUNCUSDT",
-      "score": 60
+      "symbol": "ADAUSDT",
+      "score": 50
     },
     {
-      "symbol": "STXUSDT",
-      "score": 60
+      "symbol": "SUIUSDT",
+      "score": 50
     }
   ]
 }
