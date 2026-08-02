@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-02 20:08:20",
+  "timestamp": "2026-08-02 20:10:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad exigido por el comité (Bids > 55% y confirmación de tendencia). La alta volatilidad y la falta de muros de soporte sólidos en el libro de órdenes hacen que cualquier entrada sea considerada de alto riesgo, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 con confirmación de soporte de ballenas > 55%). Ante la incertidumbre macro y la falta de profundidad en el libro de órdenes, la decisión institucional es mantener la posición en efectivo para evitar el riesgo de 'falling knives' en un mercado de miedo extremo.",
   "top_candidates": [
     {
       "symbol": "RENDERUSDT",
       "score": 85
     },
     {
+      "symbol": "UNIUSDT",
+      "score": 75
+    },
+    {
       "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "UNIUSDT",
+      "symbol": "WLDUSDT",
       "score": 75
     },
     {

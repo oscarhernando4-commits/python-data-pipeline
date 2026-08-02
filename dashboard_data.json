@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02 20:08:22",
+  "updated_at": "2026-08-02 20:10:21",
   "total_balance_usd": 20.07,
   "usdt_free": 0.4645,
   "bnb_free": 0.00439723,
@@ -11,8 +11,8 @@
     "highest_price": 1.0008,
     "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 0.96,
-    "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
+    "adaptive_sl_pct": 0.6,
+    "volatility_regime": "⏳ Escalera 10m: SL Apretado a -0.60%"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad exigido por el comité (Bids > 55% y confirmación de tendencia). La alta volatilidad y la falta de muros de soporte sólidos en el libro de órdenes hacen que cualquier entrada sea considerada de alto riesgo, por lo que se prioriza la preservación del capital."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 con confirmación de soporte de ballenas > 55%). Ante la incertidumbre macro y la falta de profundidad en el libro de órdenes, la decisión institucional es mantener la posición en efectivo para evitar el riesgo de 'falling knives' en un mercado de miedo extremo."
   }
 }
