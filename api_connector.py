@@ -674,14 +674,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         holding_cycles = state["position"].get("holding_cycles", 0) + 1
         
         import atr_risk_calculator
+        import orderbook_analyzer
+        
         atr_info = atr_risk_calculator.calculate_adaptive_atr_stop_loss(entry, atr_15m=entry*0.008)
         adaptive_sl_pct = min(1.0, atr_info.get("sl_pct", 1.0))
+        trailing_offset = atr_risk_calculator.get_adaptive_trailing_offset(active_symbol, atr_info.get("atr_pct", 0.8))
 
-        # Progressive Time-Decay Escalation Ladder (Requested by User):
-        # 1. 0 to 10m (cycles 1-4): SL capped at -1.0%
-        # 2. 10m to 30m (cycles 5-14): SL tightens to -0.60%
-        # 3. 30m to 50m (cycles 15-24): SL tightens to -0.20%
-        # 4. > 50m (cycles >= 25): Market exit for capital release towards faster opportunities
+        # Progressive Time-Decay Escalation Ladder:
         time_regime_msg = ""
         if not break_even_active and not trailing_active:
             if holding_cycles >= 15:    # 10m + 20m = 30 mins
@@ -691,15 +690,39 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 adaptive_sl_pct = 0.6
                 time_regime_msg = "⏳ Escalera 10m: SL Apretado a -0.60%"
 
-        # Ultra-Precision Trailing Stop: floor is exactly 0.2% below peak (guaranteed minimum +1.5% profit)
+        # ESCUDO 1: BTC Flash Crash Circuit Breaker
+        btc_price_now = get_symbol_price("BTCUSDT", is_futures=False)
+        btc_crash_emergency = False
+        if btc_price_now and active_symbol != "BTCUSDT":
+            btc_prev = state.get("_btc_last_price", btc_price_now)
+            state["_btc_last_price"] = btc_price_now
+            btc_drop_pct = ((btc_price_now - btc_prev) / btc_prev) * 100.0 if btc_prev > 0 else 0.0
+            if btc_drop_pct <= -1.2:
+                btc_crash_emergency = True
+                print(f"🚨 ESCUDO 1 (BTC Flash Crash): BTC cayó {btc_drop_pct:.2f}%. Freno de emergencia activado!")
+
+        # ESCUDO 2: Guardia de Muro Inverso de Liquidez (Orderbook Wall Flip)
+        ob_depth = orderbook_analyzer.fetch_orderbook_depth(active_symbol)
+        ask_dominance = ob_depth.get("ask_dominance_pct", 50.0)
+        orderbook_wall_emergency = False
+        if ask_dominance >= 65.0:
+            orderbook_wall_emergency = True
+            print(f"🧱 ESCUDO 2 (Muro Inverso): Vendedores (Asks) dominan el {ask_dominance:.1f}%. Muro de ballena detectado!")
+
+        # Ultra-Precision Adaptive Trailing Stop (0.15% - 0.25% based on liquidity)
         if trailing_active or highest_pnl_pct >= 2.0:
             trailing_active = True
-            trailing_floor_pct = max(1.5, highest_pnl_pct - 0.2)
+            trailing_floor_pct = max(1.5, highest_pnl_pct - trailing_offset)
         elif break_even_active:
             trailing_floor_pct = 0.2
         else:
             trailing_floor_pct = -abs(adaptive_sl_pct)
-            
+
+        # Apply Emergency Tightening if Shield 1 or Shield 2 triggered
+        if (btc_crash_emergency or orderbook_wall_emergency) and not trailing_active:
+            trailing_floor_pct = max(-0.20, trailing_floor_pct)
+            time_regime_msg = f"🛡️ ESCUDO DE EMERGENCIA ACTIVADO: Stop-Loss apretado a {trailing_floor_pct:+.2f}%"
+
         tp_target = entry * (1.0 + (adaptive_sl_pct * 2.0 / 100.0))
         sl_target = entry * (1.0 + (trailing_floor_pct / 100.0))
         
@@ -725,10 +748,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         print(f"🪙 Moneda: {active_symbol} | Cantidad: {active_qty:,.2f} {active_asset} (Tiempo Abierto: {holding_cycles*2}m / 50m)")
         print(f"💵 Entrada: {price_fmt(entry)} USD | Máximo Pico: {price_fmt(highest_price)} USD (+{highest_pnl_pct:.2f}%)")
         print(f"📈 PnL Flotante Actual: {pnl_pct:+.2f}% (${pnl_usd:+.4f} USD)")
-        print(f"🚀 Modo Trailing Stop: {'🔥 ACTIVO (Persiguiendo Pico)' if trailing_active else '⚪ Esperando +2.0%'}")
+        print(f"🚀 Modo Trailing Stop: {'🔥 ACTIVO (Distancia ' + str(trailing_offset) + '%)' if trailing_active else '⚪ Esperando +2.0%'}")
         print(f"🛡️ Piso de Salida Dinámico: {price_fmt(sl_target)} USD ({trailing_floor_pct:+.2f}%)")
+        print(f"🏰 Trilogía de Escudos: BTC Circuit Breaker [{'🔴 ALERTA' if btc_crash_emergency else '🟢 OK'}] | Muro Orderbook [{'🔴 ALERTA' if orderbook_wall_emergency else '🟢 OK'}] | Trailing Adaptativo [{trailing_offset:.2f}%]")
         if time_regime_msg:
-            print(f"⏳ Alerta de Escalera Temporal: {time_regime_msg}")
+            print(f"⏳ Alerta Institucional: {time_regime_msg}")
         print("="*65 + "\n")
         
         # Check for exit condition

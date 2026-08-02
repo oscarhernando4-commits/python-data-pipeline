@@ -44,6 +44,21 @@ def calculate_adaptive_atr_stop_loss(current_price, atr_15m, min_sl_pct=0.5, max
         "volatility_regime": vol_regime
     }
 
+def get_adaptive_trailing_offset(symbol, atr_pct=0.8):
+    """
+    Computes optimal trailing stop distance (0.15% to 0.25%) based on asset liquidity & volatility.
+    - Majors (BTC, ETH, SOL, BNB): 0.15% (tightest, ultra-high liquidity)
+    - Low/Mid Volatility (atr_pct <= 1.2%): 0.20%
+    - High Volatility (atr_pct > 1.2%): 0.25% (prevents spread noise stop-outs)
+    """
+    sym_upper = str(symbol).upper()
+    if sym_upper in ("BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT"):
+        return 0.15
+    elif atr_pct > 1.2:
+        return 0.25
+    else:
+        return 0.20
+
 if __name__ == "__main__":
     print("BTC Adaptativo:", calculate_adaptive_atr_stop_loss(63150.0, 320.0))
     print("INJ Adaptativo:", calculate_adaptive_atr_stop_loss(4.99, 0.045))
