@@ -2,10 +2,8 @@ name: 🤖 Quant Trading Engine (4-Hour Continuous Runner)
 
 on:
   workflow_dispatch: # Allows manual trigger from GitHub UI anytime
-  schedule:
-    - cron: '0 */4 * * *' # Native GitHub Cron: Starts a fresh 4-hour worker every 4 hours
   repository_dispatch:
-    types: [trigger_quant_trade] # External trigger from Cron-Job.org (set to Cada 4 horas)
+    types: [trigger_quant_trade] # External trigger from Cron-Job.org (set to Cada 4 horas a las :56)
 
 concurrency:
   group: "continuous-quant-engine"
