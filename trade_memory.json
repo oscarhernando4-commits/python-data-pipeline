@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 284,
+    "total_trades": 287,
     "wins": 81,
-    "losses": 203,
-    "win_rate_pct": 28.52,
-    "total_pnl_usd": -71.52185454545463
+    "losses": 206,
+    "win_rate_pct": 28.22,
+    "total_pnl_usd": -71.86185454545462
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -23,7 +23,10 @@
       "Preventive Block for BTCUSDT: Loss logged at 63920.0 -> Hit SL on BTCUSDT (-$1.10). Re-Trading!",
       "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BTCUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DEXEUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BANKUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BANKUSDT)",
+      "BLOCK BUY when Score:30-50(Mild-Bear) (Lost on ASTERUSDT)",
+      "BLOCK BUY when Score:30-50(Mild-Bear) (Lost on XECUSDT)",
+      "BLOCK BUY when Score:<30(Bearish) (Lost on MMTUSDT)"
     ],
     "boosted_patterns": [
       "RSI < 30 + MACD Bullish Cross + Volume > 1.5x (High Probability Win)",
@@ -4351,6 +4354,57 @@
         "score": 30,
         "rsi_15m": 42.34,
         "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:43:18",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "ASTERUSDT",
+      "side": "BUY",
+      "entry_price": 0.602,
+      "exit_price": 0.6,
+      "pnl_usd": -0.05,
+      "result": "LOSS",
+      "notes": "Stop Loss ejecutado (-0.33%). Activo débil sin confirmación BTC.",
+      "context": {
+        "score": 40,
+        "rsi": 38,
+        "trend": "BEARISH"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:43:18",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "XECUSDT",
+      "side": "BUY",
+      "entry_price": 6.68e-06,
+      "exit_price": 6.66e-06,
+      "pnl_usd": -0.05,
+      "result": "LOSS",
+      "notes": "Stop Loss ejecutado (-0.30%). Microcap sin volumen institucional.",
+      "context": {
+        "score": 35,
+        "rsi": 41,
+        "trend": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-01 20:43:18",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "MMTUSDT",
+      "side": "BUY",
+      "entry_price": 0.1822,
+      "exit_price": 0.1795,
+      "pnl_usd": -0.24,
+      "result": "LOSS",
+      "notes": "Stop Loss ejecutado (-1.37%). Compra en score bajo (15 Pts) bloqueada a futuro.",
+      "context": {
+        "score": 15,
+        "rsi": 32,
+        "trend": "BEARISH"
       }
     }
   ]
