@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-02 11:15:18",
+  "timestamp": "2026-08-02 11:20:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un entorno de alta aversión al riesgo (Fear & Greed 27) con una correlación bajista sistémica. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico A+ (>= 65). Los activos con score 60 presentan un historial insuficiente y falta de profundidad de mercado, lo que los clasifica como anomalías especulativas de alta volatilidad. Siguiendo la filosofía de preservación de capital, la liquidez en USDT es la posición óptima ante la ausencia de setups de alta probabilidad.",
+  "reasoning": "El mercado presenta una fuga de liquidez sistémica con un índice de Fear & Greed en 27. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico A+ (>= 65). La correlación de pánico y la ausencia de soporte orgánico invalidan cualquier tesis de compra en este momento. Se prioriza la preservación de capital en liquidez (USDT) hasta que la estructura de mercado muestre una reversión confirmada.",
   "top_candidates": [
     {
       "symbol": "AAVEUSDT",
       "score": 60
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
@@ -19,12 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "SPCXBUSDT",
+      "symbol": "JSTUSDT",
       "score": 60
     },
     {
-      "symbol": "BANKUSDT",
-      "score": 50
+      "symbol": "SPCXBUSDT",
+      "score": 60
     }
   ]
 }

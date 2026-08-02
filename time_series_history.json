@@ -1,12 +1,38 @@
 {
-  "STXUSDT": [
+  "SAHARAUSDT": [
     {
-      "timestamp": "2026-08-02 11:15:11",
-      "price": 0.1396,
-      "score": 45,
-      "rsi": 58.94,
+      "timestamp": "2026-08-02 11:20:11",
+      "price": 0.0079,
+      "score": 0,
+      "rsi": 39.64,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.06,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LUNCUSDT": [
+    {
+      "timestamp": "2026-08-02 11:20:11",
+      "price": 4.89e-05,
+      "score": 0,
+      "rsi": 43.87,
+      "macd": "Neutral",
+      "volume_surge": 0.05,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ZBTUSDT": [
+    {
+      "timestamp": "2026-08-02 11:20:11",
+      "price": 0.1217,
+      "score": 0,
+      "rsi": 41.45,
+      "macd": "Neutral",
+      "volume_surge": 0.1,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,25 +40,12 @@
   ],
   "ZROUSDT": [
     {
-      "timestamp": "2026-08-02 11:15:11",
-      "price": 0.72,
-      "score": 15,
-      "rsi": 47.02,
-      "macd": "Neutral",
-      "volume_surge": 0.02,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "SAHARAUSDT": [
-    {
-      "timestamp": "2026-08-02 11:15:11",
-      "price": 0.0079,
+      "timestamp": "2026-08-02 11:20:11",
+      "price": 0.719,
       "score": 0,
-      "rsi": 39.64,
+      "rsi": 44.37,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.14,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -40,12 +53,38 @@
   ],
   "PROMUSDT": [
     {
-      "timestamp": "2026-08-02 11:15:11",
-      "price": 1.89,
+      "timestamp": "2026-08-02 11:20:11",
+      "price": 1.887,
       "score": 50,
-      "rsi": 54.45,
+      "rsi": 53.5,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.55,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-02 11:20:11",
+      "price": 0.14,
+      "score": 60,
+      "rsi": 63.29,
+      "macd": "Neutral",
+      "volume_surge": 0.81,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BOMEUSDT": [
+    {
+      "timestamp": "2026-08-02 11:20:11",
+      "price": 0.0006229,
+      "score": 20,
+      "rsi": 64.69,
+      "macd": "Neutral",
+      "volume_surge": 0.09,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
