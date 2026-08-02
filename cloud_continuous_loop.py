@@ -59,6 +59,7 @@ def main():
     
     import data_fetcher
     import pipeline_processor
+    import master_dashboard_generator
 
     for cycle in range(1, TOTAL_CYCLES + 1):
         now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -68,20 +69,32 @@ def main():
         
         # Step 1: Fetch pairs
         try:
-            data_fetcher.fetch_top_100_pairs()
+            if hasattr(data_fetcher, 'update_top_pairs'):
+                data_fetcher.update_top_pairs()
+            elif hasattr(data_fetcher, 'fetch_top_100_pairs'):
+                data_fetcher.fetch_top_100_pairs()
         except Exception as e:
             print(f"⚠️ Error en data_fetcher (Ciclo {cycle}): {e}", flush=True)
             
         # Step 2: Run institutional quant pipeline
         try:
-            pipeline_processor.run_optimized_pipeline()
+            if hasattr(pipeline_processor, 'run_infinite_trading_matrix_cycle'):
+                pipeline_processor.run_infinite_trading_matrix_cycle()
+            elif hasattr(pipeline_processor, 'run_optimized_pipeline'):
+                pipeline_processor.run_optimized_pipeline()
         except Exception as e:
             print(f"⚠️ Error en pipeline_processor (Ciclo {cycle}): {e}", flush=True)
             
-        # Step 3: Push changes to GitHub
+        # Step 3: Refresh Master Dashboard
+        try:
+            master_dashboard_generator.generate_master_dashboard()
+        except Exception as e:
+            print(f"⚠️ Error generando dashboards (Ciclo {cycle}): {e}", flush=True)
+
+        # Step 4: Push changes to GitHub
         run_git_push_sync(cycle)
         
-        # Step 4: Sleep until next 5-minute clock boundary (except after the final cycle)
+        # Step 5: Sleep until next 5-minute clock boundary (except after the final cycle)
         if cycle < TOTAL_CYCLES:
             sleep_secs = sleep_until_next_5m_boundary()
             target_time = datetime.fromtimestamp(time.time() + sleep_secs).strftime("%H:%M:%S")

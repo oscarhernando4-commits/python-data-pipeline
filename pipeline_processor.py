@@ -797,5 +797,9 @@ def ensure_obsidian_dir():
     if not os.path.exists(OBSIDIAN_FOLDER):
         os.makedirs(OBSIDIAN_FOLDER, exist_ok=True)
 
+# Compatibility alias for runners
+run_optimized_pipeline = run_infinite_trading_matrix_cycle
+
 if __name__ == '__main__':
     run_infinite_trading_matrix_cycle()
+

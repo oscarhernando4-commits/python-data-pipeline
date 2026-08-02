@@ -117,5 +117,8 @@ def update_top_pairs():
     else:
         print("Failed to map any pairs.")
 
+# Compatibility aliases
+fetch_top_100_pairs = update_top_pairs
+
 if __name__ == "__main__":
     update_top_pairs()
