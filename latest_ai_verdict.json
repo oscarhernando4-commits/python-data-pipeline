@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 21:44:20",
-  "selected_symbol": "FILUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "Tras analizar los candidatos, FILUSDT destaca por su pertenencia al sector dominante (DePIN & Storage) y un score técnico de 85/100. A pesar de la neutralidad en el libro de órdenes, el volumen de entrada y la alineación con la estrategia de rotación de capital justifican una entrada de alta convicción con gestión de riesgo estricta.",
+  "timestamp": "2026-08-02 21:46:31",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 45,
+  "reasoning": "El comité multi-agente ha evaluado a los candidatos finalistas y concluye por unanimidad que, a pesar de los scores técnicos nominales de 75, las condiciones del libro de órdenes (50% bids), la neutralidad de la tendencia en 4H y las directrices estrictas de gestión de riesgo no cumplen con los requisitos de convicción A+. Por consiguiente, se veta toda operación y se decide mantener la liquidez intacta en USDT.",
   "top_candidates": [
     {
-      "symbol": "ICPUSDT",
-      "score": 85
+      "symbol": "ADAUSDT",
+      "score": 75
     },
     {
-      "symbol": "POLUSDT",
-      "score": 85
+      "symbol": "TAOUSDT",
+      "score": 75
     },
     {
-      "symbol": "FILUSDT",
-      "score": 85
+      "symbol": "DOGEUSDT",
+      "score": 75
     },
     {
-      "symbol": "RENDERUSDT",
-      "score": 85
+      "symbol": "NEARUSDT",
+      "score": 75
     },
     {
-      "symbol": "VETUSDT",
-      "score": 85
+      "symbol": "XLMUSDT",
+      "score": 75
     }
   ]
 }

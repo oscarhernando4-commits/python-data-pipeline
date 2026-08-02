@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-08-02 21:44:22",
-  "total_balance_usd": 20.11,
-  "usdt_free": 0.1778,
+  "updated_at": "2026-08-02 21:46:34",
+  "total_balance_usd": 20.17,
+  "usdt_free": 20.167279999999998,
   "bnb_free": 0.00437518,
-  "status": "🔵 En Vivo LONG (ASTERUSDT @ $0.6070)",
+  "status": "🟦 Buscando Entrada A+",
   "position": {
-    "symbol": "ASTERUSDT",
-    "quantity": 28.64,
-    "entry_price": 0.604,
-    "highest_price": 0.607,
+    "symbol": "NINGUNA",
+    "quantity": 0.0,
+    "entry_price": 0.0,
+    "highest_price": 0.0,
     "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 0.2,
-    "volatility_regime": "⏳ Escalera 45m: SL Apretado a -0.20%"
+    "adaptive_sl_pct": 1.0,
+    "volatility_regime": "🔵 Standard ATR"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -24,10 +24,10 @@
     "agent_7_ceo_anti_loss": "Consenso del CEO Supreme Anti-Loss Profit Maximizer."
   },
   "verdict": {
-    "selected_symbol": "FILUSDT",
-    "action": "BUY_LONG",
-    "confidence": 75,
-    "approved": true,
-    "reasoning": "Tras analizar los candidatos, FILUSDT destaca por su pertenencia al sector dominante (DePIN & Storage) y un score técnico de 85/100. A pesar de la neutralidad en el libro de órdenes, el volumen de entrada y la alineación con la estrategia de rotación de capital justifican una entrada de alta convicción con gestión de riesgo estricta."
+    "selected_symbol": "NONE",
+    "action": "HOLD",
+    "confidence": 45,
+    "approved": false,
+    "reasoning": "El comité multi-agente ha evaluado a los candidatos finalistas y concluye por unanimidad que, a pesar de los scores técnicos nominales de 75, las condiciones del libro de órdenes (50% bids), la neutralidad de la tendencia en 4H y las directrices estrictas de gestión de riesgo no cumplen con los requisitos de convicción A+. Por consiguiente, se veta toda operación y se decide mantener la liquidez intacta en USDT."
   }
 }
