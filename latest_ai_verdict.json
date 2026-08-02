@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-02 21:32:22",
+  "timestamp": "2026-08-02 21:34:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional). Ante la incertidumbre macro y la falta de soporte claro en el libro de órdenes, el comité decide mantener la liquidez en USDT para evitar el riesgo de 'falling knives' en un mercado lateral.",
+  "reasoning": "El mercado presenta una divergencia defensiva y una falta de profundidad en el libro de órdenes. A pesar de que varios activos tienen un score técnico de 75, la ausencia de datos históricos suficientes y la falta de muros de soporte institucionales claros hacen que cualquier operación sea considerada de alto riesgo. El comité ha decidido mantener la liquidez en USDT para evitar la exposición a posibles 'bull traps' en un entorno de miedo extremo.",
   "top_candidates": [
     {
       "symbol": "XLMUSDT",
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "WLDUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "NEARUSDT",
+      "symbol": "AVAXUSDT",
       "score": 75
     },
     {
-      "symbol": "XRPUSDT",
+      "symbol": "NEARUSDT",
       "score": 75
     }
   ]
