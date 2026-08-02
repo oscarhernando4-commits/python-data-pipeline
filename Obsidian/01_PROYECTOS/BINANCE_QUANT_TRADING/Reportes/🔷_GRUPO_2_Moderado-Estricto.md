@@ -1,6 +1,6 @@
 # Reporte Temporal: 🔷 GRUPO 2: Moderado-Estricto
 
-> Actualizado: 2026-08-02 03:30:27
+> Actualizado: 2026-08-02 03:35:25
 
 | Ventana de Tiempo | Total Operaciones | Ganadoras | Perdedoras | Win Rate | PnL Neto |
 | :--- | :--- | :--- | :--- | :--- | :--- |
