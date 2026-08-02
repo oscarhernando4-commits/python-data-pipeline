@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-02 04:35:18",
+  "timestamp": "2026-08-02 04:40:35",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que varios activos presentan un Score Técnico de 75/100, el análisis de riesgo macro revela que estos scores están impulsados por flujos especulativos de corto plazo en un entorno de 'risk-off' y miedo extremo (Fear & Greed: 27). La falta de un historial sólido (lecturas de 5M insuficientes) y la alta probabilidad de una liquidación en cascada ante cualquier movimiento de Bitcoin invalidan estos activos como Setups A+. La preservación de capital es prioritaria; el mercado actual se encuentra en un 'limbo de espera' y no cumple con los criterios de acumulación institucional estable.",
+  "reasoning": "A pesar de que varios activos presentan un Score técnico de 75, el entorno macroeconómico actual con un índice Fear & Greed en 27 (miedo) y la debilidad estructural de los activos principales (BTC/ETH) genera un riesgo sistémico elevado. La falta de historial consolidado en los activos de alto score y la volatilidad errática detectada en los simuladores sugieren que el capital está rotando de forma especulativa y no mediante una tendencia sostenible. Siguiendo la filosofía de preservación de capital y paciencia de francotirador, se prioriza la liquidez en USDT hasta que la estructura de mercado muestre una confluencia clara de volumen y tendencia, evitando trampas de liquidez en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "HBARUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "INJUSDT",
       "score": 75
     },
     {
@@ -23,7 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "KITEUSDT",
+      "symbol": "INJUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ROSEUSDT",
       "score": 75
     }
   ]
