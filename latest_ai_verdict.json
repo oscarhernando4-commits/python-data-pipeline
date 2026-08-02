@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 13:10:15",
-  "selected_symbol": "XAUTUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 70,
-  "reasoning": "XAUTUSDT es el único activo que cumple con el umbral de Score Técnico >= 65 en un entorno de mercado de debilidad sistémica extrema. Actúa como refugio de valor ante la incertidumbre macro y la salida de liquidez de los activos de riesgo. La operación se justifica bajo la premisa de preservación de capital y cobertura, evitando la exposición a activos de alta volatilidad con scores inferiores.",
+  "timestamp": "2026-08-02 13:15:17",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un régimen de aversión al riesgo severa con un índice Fear & Greed de 27. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico (>= 65) requerido para un Setup A+. La mayoría de los activos presentan un historial insuficiente o señales de ser trampas de liquidez en un entorno de alta fragilidad sistémica. Siguiendo la filosofía de preservación de capital, la decisión óptima es mantener la liquidez en USDT y esperar una base de acumulación sólida.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "FILUSDT",
-      "score": 70
+      "symbol": "SUIUSDT",
+      "score": 60
     },
     {
       "symbol": "HBARUSDT",
       "score": 60
     },
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "UNIUSDT",
       "score": 60
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "XAUTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "WLFIUSDT",
       "score": 60
     }
   ]
