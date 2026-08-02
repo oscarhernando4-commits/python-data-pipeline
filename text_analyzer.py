@@ -71,18 +71,23 @@ def get_market_macro_context(symbol_analysis_map, fear_greed, news_headlines):
         "generationConfig": {"temperature": 0.3, "maxOutputTokens": 600}
     }
     
-    # We use lite for macro sweep to save standard flash quota
+    import llm_router
+    keys_pool = llm_router.get_gemini_api_keys()
+    if not keys_pool or keys_pool == [""]:
+        return "Macro Analyst Offline (No API Key). Mercado evaluado solo cuantitativamente."
+
     lite_models = [
         "gemini-3.1-flash-lite",
-        "gemini-3.1-flash-lite-preview"
+        "gemini-3.5-flash-lite"
     ]
     
-    print(f"🕵️ [Macro Analyst Lite] Analizando el contexto global de {len(symbol_analysis_map)} criptomonedas...")
+    print(f"🕵️ [Macro Analyst Lite] Analizando el contexto global de {len(symbol_analysis_map)} criptomonedas (Pool de {len(keys_pool)} Claves)...")
     
     for model_name in lite_models:
-        for attempt in range(2):
+        keys_rotated = [keys_pool[(i + llm_router._KEY_INDEX) % len(keys_pool)] for i in range(len(keys_pool))]
+        for key in keys_rotated:
             try:
-                url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_API_KEY}"
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={key}"
                 req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers={'Content-Type': 'application/json'})
                 with urllib.request.urlopen(req, timeout=10) as response:
                     res_data = json.loads(response.read().decode('utf-8'))
@@ -90,9 +95,13 @@ def get_market_macro_context(symbol_analysis_map, fear_greed, news_headlines):
                         text_res = res_data["candidates"][0]["content"]["parts"][0]["text"].strip()
                         print(f"📊 [Macro Contexto ({model_name})]: {text_res}")
                         return text_res
-            except Exception as e:
-                print(f"💡 Error conectando a {model_name} (intento {attempt+1}/2): {e}")
-                time.sleep(2)
-        print(f"⏭️ Agotados intentos para {model_name}. Cambiando a modelo de respaldo...")
+            except urllib.error.HTTPError as e:
+                if e.code == 429:
+                    llm_router.mark_key_in_cooldown(key)
+                    continue
+                else:
+                    break
+            except Exception:
+                break
             
     return "Macro Analyst Fallback: Alta volatilidad detectada (Modelos IA Ocupados)."
