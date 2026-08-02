@@ -179,6 +179,13 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     mem = learning_engine.load_memory()
     super_detailed_table = learning_engine.get_super_detailed_table_str(mem)
 
+    import orderbook_analyzer
+    import sector_analyzer
+
+    # Extract sector rotation summary across candidates map
+    symbol_map = {c["symbol"]: c for c in candidates_data_list}
+    sector_summary = sector_analyzer.analyze_sector_rotation(symbol_map)
+
     candidates_prompt_text = ""
     for cand in candidates_data_list:
         sym = cand['symbol']
@@ -188,20 +195,23 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         ind = tech.get('indicators', {})
         pat = time_series_memory.get_multi_cycle_pattern_summary(sym)
         specific_n = news_data.get('specific_news', {}).get(sym, [])
+        sec = sector_analyzer.get_symbol_sector(sym)
+        ob = orderbook_analyzer.fetch_orderbook_depth(sym)
         
-        candidates_prompt_text += f"\nCANDIDATO: {sym} (Acción Cuantitativa Sugerida: {action})\n"
+        candidates_prompt_text += f"\nCANDIDATO: {sym} (Sector: {sec} | Acción Sugerida: {action})\n"
         candidates_prompt_text += f"- Score Técnico: {score}/100\n"
         candidates_prompt_text += f"- RSI 15M: {ind.get('rsi_15m')}, MACD: {ind.get('macd_hist_15m')}, Volume Surge: {ind.get('volume_surge_ratio')}\n"
+        candidates_prompt_text += f"- Libro de Órdenes: Dominancia Bids Compradores {ob['bid_dominance_pct']}% ({ob['liquidity_status']})\n"
         candidates_prompt_text += f"- Tendencia 4H: {tech.get('macro_trend_4h')}\n"
         candidates_prompt_text += f"- Historial 5M (4h): {pat}\n"
         candidates_prompt_text += f"- NOTICIAS ESPECÍFICAS ÚLTIMAS 24H: {json.dumps(specific_n)}\n"
         candidates_prompt_text += "------------------------------------"
 
-    print(f"✅ [Comité Institucional] Mercado filtrado y analizado. Consultando al Súper-Cerebro Gemini AI para el TOP {len(candidates_data_list)} simultáneo...")
+    print(f"✅ [Comité Institucional 6 Agentes] Mercado filtrado y analizado. Consultando al Súper-Cerebro Gemini AI para el TOP {len(candidates_data_list)} simultáneo...")
 
     prompt_text = f"""
     Eres el COMITÉ INSTITUCIONAL MULTI-AGENTE CUÁNTICO 24/7 (Súper-Cerebro de Élite).
-    Tu estructura está compuesta por 4 AGENTES ESPECIALIZADOS DE INTELIGENCIA ARTIFICIAL que deben deliberar y consenso antes de cualquier orden real:
+    Tu estructura está compuesta por 6 AGENTES ESPECIALIZADOS DE INTELIGENCIA ARTIFICIAL que deben deliberar y lograr consenso antes de ejecutar cualquier orden real:
     
     1. 🕵️ AGENTE 1 - ANALISTA MACRO & RASTRO DE BALLENAS (Whale & Macro Sentinel):
        - Examina el sentimiento Fear & Greed ({fear_greed.get('score')} - {fear_greed.get('sentiment')}), noticias globales y volumen institucional (Volume Surge > 1.2x).
@@ -209,13 +219,20 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     2. 📊 AGENTE 2 - INGENIERO TÉCNICO & PRICE ACTION (Chartist & Pattern Sniper):
        - Examina RSI (15m y 4h), MACD Histograma, EMAs (20, 50, 200), mechas de absorción y estructuras de volatilidad ATR.
     
-    3. 🧠 AGENTE 3 - HISTORIADOR RAG & MEMORIA QUANT (Memory & Pattern Historian):
+    3. 🌊 AGENTE 3 - RASTREADOR DE PROFUNDIDAD Y LIBRO DE ÓRDENES (Orderbook & Liquidity Depth Tracker):
+       - Examina el Orderbook en tiempo real (Dominancia Bids Compradores vs Asks Vendedores), muros de soporte de ballenas (Bids > 65%) y riesgo de slippage.
+    
+    4. 🧩 AGENTE 4 - ANALISTA DE SECTORES Y ROTACIÓN DE CAPITAL (Sector Cluster Analyst):
+       - Examina la rotación de capital institucional por sectores. Sector Dominante Actual: {sector_summary['top_sector']} (Score {sector_summary['top_sector_score']}, VolSurge {sector_summary['top_sector_vol_surge']}x).
+    
+    5. 🧠 AGENTE 5 - HISTORIADOR RAG & MEMORIA QUANT (Memory & Pattern Historian):
        - Compara con las 99 simulaciones pasadas ({market_bias_ctx}), patrones prohibidos/potenciados y la tabla All-Time de simulaciones.
     
-    4. 🛡️ AGENTE 4 - CHIEF RISK OFFICER (Juez Supremo de Riesgo - Francisca Serrano & Hyenuk Chu):
-       - Posee VETO ABSOLUTO. Regla #1: No perder dinero. Regla #2: No olvidar la regla #1. Exige convicción A+ (Score >= 65, Confianza >= 70%).
+    6. 🛡️ AGENTE 6 - CHIEF RISK OFFICER (Juez Supremo de Riesgo - Francisca Serrano & Hyenuk Chu):
+       - Posee VETO ABSOLUTO. Regla #1: No perder dinero. Regla #2: No olvidar la regla #1. Activa Trailing Stop ATR dinámico al alcanzar +2.0%. Exige convicción A+ (Score >= 65, Confianza >= 70%).
 
-    CONTEXTO GLOBAL MACRO Y SESGO DE MERCADO:
+    CONTEXTO GLOBAL MACRO Y ROTACIÓN SECTORIAL:
+    - Sector Liderando Entrada de Capital: {sector_summary['top_sector']} ({sector_summary['all_sectors'].get(sector_summary['top_sector'], {}).get('status', '')})
     - Sesgo de Aprendizaje: {market_bias_ctx}
     - Entorno Macro: {macro_context}
     - Fear & Greed: {fear_greed.get('score')} ({fear_greed.get('sentiment')})
@@ -224,17 +241,17 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     MEMORIA DE SIMULADORES (Super Detailed Table):
     {super_detailed_table}
 
-    PERFILES DE LOS CANDIDATOS FINALISTAS (TOP BULLISH):
+    PERFILES DE LOS CANDIDATOS FINALISTAS (TOP BULLISH CON LIBRO DE ÓRDENES Y SECTOR):
     {candidates_prompt_text}
 
     REGLAS DE ORO PARA LA TOMA DE DECISIONES (SPOT ONLY):
     1. 🛡️ UMBRAL MÍNIMO A+ (Score >= 65): NUNCA apruebes una compra para un activo con Score Técnico < 65 o en caída libre. Si ningún candidato tiene Score >= 65 con confirmación de volumen, la respuesta OBLIGATORIA es responder "NONE" con "action": "HOLD".
     2. 🚫 PROHIBIDO 'FALLING KNIVES': Si un activo tiene Score bajo (15, 20, 30), NO intentes adivinar un rebote especulativo. Deja que el mercado limpie a los minoristas.
-    3. ⚖️ VOLUMEN Y RSI: Prioriza activos con RSI en rango saludable (35-65) y Volume Surge > 1.2x que muestren soporte sólido y acumulación de ballenas.
-    4. 📰 FILTRO DE FUD: Si hay hackeos, demandas o investigaciones sobre un activo, descártalo inmediatamente.
+    3. 🌊 SOPORTE EN LIBRO DE ÓRDENES: Prioriza candidatos con Bids Compradores >= 55% que confirmen muros de soporte de ballenas.
+    4. 🧩 ROTACIÓN SECTORIAL: Favorece activos pertenecientes a sectores con entrada masiva de capital ({sector_summary['top_sector']}).
     5. 💎 DECISIÓN: Si encuentras un candidato excepcional que cumple TODAS las reglas A+, selecciona su símbolo y aprueba "BUY_LONG" con confianza >= 70%. Si el mercado está sucio, lateral, bajista o con activos mediocres, responde "NONE" y protege el 100% de la liquidez en USDT.
 
-    RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA MULTI-AGENTE:
+    RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA MULTI-AGENTE (6 AGENTES):
     {{
         "selected_symbol": "SIMBOLO" o "NONE",
         "action": "BUY_LONG" o "HOLD",
@@ -243,8 +260,10 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         "committee_deliberation": {{
             "agent_1_macro": "Dictamen del Analista Macro y volumen de ballenas en 1 oración...",
             "agent_2_tech": "Dictamen del Ingeniero Técnico sobre RSI, MACD y soportes en 1 oración...",
-            "agent_3_memory": "Dictamen del Historiador RAG sobre coincidencia con patrones pasados en 1 oración...",
-            "agent_4_risk": "Dictamen final del Chief Risk Officer (Veto o Aprobación) en 1 oración..."
+            "agent_3_orderbook": "Dictamen del Rastreador de Libro de Órdenes sobre dominancia Bids/Asks en 1 oración...",
+            "agent_4_sector": "Dictamen del Analista Sectorial sobre la rotación de capital en 1 oración...",
+            "agent_5_memory": "Dictamen del Historiador RAG sobre coincidencia con patrones pasados en 1 oración...",
+            "agent_6_risk": "Dictamen final del Chief Risk Officer (Veto o Aprobación) en 1 oración..."
         }},
         "reasoning": "Resumen ejecutivo del consenso institucional..."
     }}

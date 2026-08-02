@@ -92,15 +92,24 @@ test("trade_memory.json cargado", mem is not None)
 bias = learning_engine.get_market_bias()
 test(f"Sesgo estadístico calculado: {bias.get('bias')} (WR LONG: {bias.get('long_win_rate')}%, SHORT: {bias.get('short_win_rate')}%)", "bias" in bias)
 
-# 7. ROUTER DE INTELIGENCIA ARTIFICIAL (GEMINI / FALLBACK CUANTITATIVO)
+# 7. ROUTER DE INTELIGENCIA ARTIFICIAL (COMITÉ MULTI-AGENTE 6 AGENTES & FALLBACK)
 print("\n[7/10] COMITÉ DE IA Y FALLBACK CUANTITATIVO")
 import llm_router
+import orderbook_analyzer
+import sector_analyzer
+
+ob_depth = orderbook_analyzer.fetch_orderbook_depth("BTCUSDT")
+test("Módulo orderbook_analyzer funcional", "bid_dominance_pct" in ob_depth)
+
+sec_rot = sector_analyzer.analyze_sector_rotation({"BTCUSDT": {"score": 50}})
+test("Módulo sector_analyzer funcional", "top_sector" in sec_rot)
+
 dummy_cands = [{
     "symbol": "BTCUSDT", "divergence": 25, "score": 75,
     "suggested_action": "BUY_LONG", "tech_data": {"rsi": 45, "trend": "BULLISH"}
 }]
 ai_rev = llm_router.review_top_5_candidates(dummy_cands, {"headlines": []}, {"score": 50})
-test("AI Router responde con estructura válida", "approved" in ai_rev and "selected_symbol" in ai_rev)
+test("AI Router responde con estructura de 6 Agentes válida", "approved" in ai_rev and "selected_symbol" in ai_rev and "committee_deliberation" in ai_rev)
 
 # 8. WORKFLOW DE GITHUB ACTIONS (trigger_quant_trade)
 print("\n[8/10] WORKFLOW DE GITHUB ACTIONS (.github/workflows/pipeline_cron.yml)")

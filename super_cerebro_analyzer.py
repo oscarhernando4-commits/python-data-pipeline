@@ -114,10 +114,12 @@ def generate_super_cerebro_report():
     deliberation = ai_verdict.get("committee_deliberation", {})
     agent_1 = deliberation.get("agent_1_macro", "Análisis de régimen macro y volumen de ballenas activo.")
     agent_2 = deliberation.get("agent_2_tech", "Análisis de osciladores, EMAs y mechas de absorción completado.")
-    agent_3 = deliberation.get("agent_3_memory", "Cruzamiento RAG con simulaciones históricas y patrones de fallos.")
-    agent_4 = deliberation.get("agent_4_risk", "Evaluación final de preservación de capital y ratio asimétrico 1:2.")
+    agent_3 = deliberation.get("agent_3_orderbook", "Rastro de liquidez del Orderbook y muros de soporte de ballenas.")
+    agent_4 = deliberation.get("agent_4_sector", "Evaluación de rotación de capital por cluster sectorial.")
+    agent_5 = deliberation.get("agent_5_memory", "Cruzamiento RAG con simulaciones históricas y patrones perdedores.")
+    agent_6 = deliberation.get("agent_6_risk", "Evaluación final de preservación de capital, ratio 1:2 y Trailing Stop ATR.")
 
-    report_md = f"""# 🧠 INFORME EJECUTIVO DEL COMITÉ MULTI-AGENTE CUÁNTICO (GEMINI AI 24/7)
+    report_md = f"""# 🧠 INFORME EJECUTIVO DEL COMITÉ MULTI-AGENTE CUÁNTICO 24/7 (6 AGENTES IA)
 *Última actualización: `{now_str}`*
 
 > [!IMPORTANT] 🎯 **VEREDICTO DE CONSENSO INSTITUCIONAL EN TIEMPO REAL:**
@@ -128,14 +130,16 @@ def generate_super_cerebro_report():
 
 ---
 
-## 🏛️ 1. DELIBERACIÓN DEL COMITÉ INSTITUCIONAL DE 4 AGENTES INTELIGENTES
+## 🏛️ 1. DELIBERACIÓN DEL COMITÉ INSTITUCIONAL DE 6 AGENTES INTELIGENTES
 
 | Agente Especializado | Rol Cuantitativo | Dictamen y Análisis Individual en Tiempo Real |
 | :--- | :--- | :--- |
 | 🕵️ **Agente 1: Analista Macro & Ballenas** | Regime & Whale Flow | {agent_1} |
 | 📊 **Agente 2: Ingeniero Técnico & PA** | Technical Sniper | {agent_2} |
-| 🧠 **Agente 3: Historiador RAG & Memoria** | RAG Memory Analyst | {agent_3} |
-| 🛡️ **Agente 4: Chief Risk Officer (CRO)** | Veto & Capital Risk | **{agent_4}** |
+| 🌊 **Agente 3: Rastreador de Libro de Órdenes** | Orderbook Depth & Bids | {agent_3} |
+| 🧩 **Agente 4: Analista Sectorial & Rotación** | Sector Inflow Analyst | {agent_4} |
+| 🧠 **Agente 5: Historiador RAG & Memoria** | RAG Memory Analyst | {agent_5} |
+| 🛡️ **Agente 6: Chief Risk Officer (CRO)** | Veto & Trailing Stop ATR | **{agent_6}** |
 
 > 📝 **Resumen del Consenso Institucional:**
 > `{reasoning}`

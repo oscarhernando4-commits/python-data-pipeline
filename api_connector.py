@@ -646,16 +646,43 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         entry = state["position"].get("entry_price", active_current_price)
         pnl_pct = ((active_current_price - entry) / entry) * 100.0 if entry > 0 else 0.0
         pnl_usd = (active_current_price - entry) * active_qty
+        
+        # Track Highest Price Reached for Dynamic Trailing Stop
+        highest_price = max(state["position"].get("highest_price", entry), active_current_price)
+        highest_pnl_pct = ((highest_price - entry) / entry) * 100.0 if entry > 0 else 0.0
+        
+        # Activate Break-Even at +1.0%
+        break_even_active = state["position"].get("break_even", False)
+        if pnl_pct >= 1.0 and not break_even_active:
+            break_even_active = True
+            print(f"🛡️ ESCUDO REAL ACTIVADO: El precio subió +{pnl_pct:.2f}%. Stop-loss asegurado en Break-Even (+0.2%).")
+            
+        # Activate Dynamic Trailing Stop when PnL hits +2.0% (Rides mega-pumps up to +10%, +20%)
+        trailing_active = state["position"].get("trailing_active", False)
+        if pnl_pct >= 2.0 and not trailing_active:
+            trailing_active = True
+            print(f"🚀 TRAILING STOP DINÁMICO ACTIVADO: El precio alcanzó +{pnl_pct:.2f}%. Persiguiendo super-tendencia...")
+            
+        # Calculate dynamic trailing stop floor (1.5% below highest price peak, minimum +0.5%)
+        if trailing_active:
+            trailing_floor_pct = max(0.5, highest_pnl_pct - 1.5)
+        elif break_even_active:
+            trailing_floor_pct = 0.2
+        else:
+            trailing_floor_pct = -1.0
+            
         tp_target = entry * 1.02
-        sl_target = entry * 1.002 if state["position"].get("break_even", False) else entry * 0.99
+        sl_target = entry * (1.0 + (trailing_floor_pct / 100.0))
         
         state["position"] = {
             "symbol": active_symbol,
             "quantity": active_qty,
             "entry_price": entry,
+            "highest_price": highest_price,
             "cost_usd": round(est_val, 2),
             "side": "LONG",
-            "break_even": state.get("position", {}).get("break_even", False)
+            "break_even": break_even_active,
+            "trailing_active": trailing_active
         }
         price_fmt = lambda p: f"${p:.8f}" if p < 0.01 else f"${p:.4f}"
         state["status"] = f"🔵 En Vivo LONG ({active_asset}USDT @ {price_fmt(active_current_price)})"
@@ -664,23 +691,23 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         print("\n" + "="*65)
         print(f"📊 [SEGUIMIENTO DE POSICIÓN ACTIVA REAL - SPOT]")
         print(f"🪙 Moneda: {active_symbol} | Cantidad: {active_qty:,.2f} {active_asset}")
-        print(f"💵 Entrada: {price_fmt(entry)} USD | Precio Actual: {price_fmt(active_current_price)} USD")
-        print(f"📈 PnL Flotante: {pnl_pct:+.2f}% (${pnl_usd:+.4f} USD)")
-        print(f"🎯 Objetivo Take Profit (+2.0%): {price_fmt(tp_target)} USD")
-        print(f"🛡️ Límite Stop Loss ({'Break-Even +0.2%' if state['position'].get('break_even') else '-1.0%'}): {price_fmt(sl_target)} USD")
+        print(f"💵 Entrada: {price_fmt(entry)} USD | Máximo Pico: {price_fmt(highest_price)} USD (+{highest_pnl_pct:.2f}%)")
+        print(f"📈 PnL Flotante Actual: {pnl_pct:+.2f}% (${pnl_usd:+.4f} USD)")
+        print(f"🚀 Modo Trailing Stop: {'🔥 ACTIVO (Persiguiendo Pico)' if trailing_active else '⚪ Esperando +2.0%'}")
+        print(f"🛡️ Piso de Salida Dinámico: {price_fmt(sl_target)} USD ({trailing_floor_pct:+.2f}%)")
         print("="*65 + "\n")
         
-        # Check for exit condition (Take Profit +2.0% or Stop Loss -1.0%)
+        # Check for exit condition
         if entry and entry > 0:
-            # --- ESCUDO REAL: BREAK-EVEN DINÁMICO ---
-            if pnl_pct >= 1.0 and not state["position"].get("break_even", False):
-                state["position"]["break_even"] = True
-                print(f"🛡️ ESCUDO REAL ACTIVADO: El precio subió +{pnl_pct:.2f}%. Stop-loss asegurado en Break-Even (+0.2%).")
+            should_exit = False
+            if trailing_active and pnl_pct <= trailing_floor_pct:
+                should_exit = True
+                reason_str = f"Trailing Stop Dinámico Pico (+{highest_pnl_pct:.2f}% -> Venta en +{pnl_pct:.2f}%)"
+            elif not trailing_active and pnl_pct <= trailing_floor_pct:
+                should_exit = True
+                reason_str = f"Stop Loss ({pnl_pct:.2f}%)"
                 
-            dynamic_sl = 0.2 if state["position"].get("break_even", False) else -1.0
-            
-            if pnl_pct >= 2.0 or pnl_pct <= dynamic_sl:
-                reason_str = f"Ganancia Asegurada (+{pnl_pct:.2f}%)" if pnl_pct >= 2.0 or state["position"].get("break_even", False) else f"Stop Loss ({pnl_pct:.2f}%)"
+            if should_exit:
                 print(f"🎯 ALERTA REAL: Salida LONG por {reason_str} en {active_symbol}. Vendiendo...")
                 
                 try:
