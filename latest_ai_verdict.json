@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-02 10:35:19",
+  "timestamp": "2026-08-02 10:40:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de evacuación de liquidez sistémica con un Fear & Greed en 27. Ninguno de los candidatos analizados cumple con el umbral mínimo de Score Técnico A+ (>= 65). Los activos con score 60 (UUSDT, OPUSDT, STXUSDT) presentan historiales insuficientes y volatilidad de baja profundidad, lo que los convierte en trampas de valor. La estrategia de preservación de capital dicta mantener el 100% de la liquidez en USDT hasta que la estructura de mercado muestre una acumulación institucional real y no una anomalía estadística.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional masiva con un sesgo bajista sistémico. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico A+ (>= 65) requerido para una operación de alta probabilidad. La falta de profundidad en el libro de órdenes y la ausencia de rotación de capital hacia activos defensivos confirman que la estrategia óptima es la preservación de capital en liquidez (USDT) hasta que la estructura de mercado muestre una reversión clara y validada.",
   "top_candidates": [
     {
       "symbol": "UUSDT",
       "score": 60
     },
     {
-      "symbol": "OPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "STXUSDT",
-      "score": 60
-    },
-    {
       "symbol": "GIGGLEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "MIRAUSDT",
       "score": 50
     },
     {
