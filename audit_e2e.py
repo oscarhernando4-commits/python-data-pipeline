@@ -139,6 +139,7 @@ if os.path.exists(wf_path):
         with open("cloud_continuous_loop.py", "r", encoding="utf-8") as f:
             loop_code = f.read()
         test("Mitigación de conflictos git integrada en el loop continuo", "--rebase" in loop_code or "pull" in loop_code)
+        test("Intervalo de escaneo continuo acelerado a 2 minutos (120s)", "SLEEP_SECONDS = 120" in loop_code)
 
 
 # 9. INTEGRIDAD DE REPORTES OBSIDIAN

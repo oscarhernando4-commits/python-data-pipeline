@@ -10,8 +10,8 @@ import subprocess
 import sys
 from datetime import datetime
 
-TOTAL_CYCLES = 50       # 50 cycles * 5 minutes = 250 minutes (~4.1 hours)
-SLEEP_SECONDS = 300     # 5 minutes exact interval between analysis cycles
+TOTAL_CYCLES = 120      # 120 cycles * 2 minutes = 240 minutes (~4.0 hours)
+SLEEP_SECONDS = 120     # 2 minutes exact interval between analysis cycles
 
 def run_git_push_sync(cycle_num: int):
     """Safely commits and pushes updated matrix and account state to GitHub."""
@@ -29,7 +29,7 @@ def run_git_push_sync(cycle_num: int):
         subprocess.run(["git", "add", "."], check=False)
         status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
         if status.stdout.strip():
-            msg = f"chore: live 5m sync [Cycle {cycle_num}/{TOTAL_CYCLES}] [{now_utc}]"
+            msg = f"chore: live 2m sync [Cycle {cycle_num}/{TOTAL_CYCLES}] [{now_utc}]"
             subprocess.run(["git", "commit", "-m", msg], check=False)
             
         # Rebase pull cleanly on committed working tree
@@ -50,10 +50,10 @@ def run_git_push_sync(cycle_num: int):
 
 
 
-def sleep_until_next_5m_boundary():
-    """Calculates sleep time so every cycle aligns to clean clock intervals (:00, :05, :10, :15...)."""
+def sleep_until_next_2m_boundary():
+    """Calculates sleep time so every cycle aligns to clean 2-minute clock intervals (:00, :02, :04, :06...)."""
     now = time.time()
-    next_boundary = ((int(now) // 300) + 1) * 300
+    next_boundary = ((int(now) // 120) + 1) * 120
     sleep_secs = max(10, int(next_boundary - now))
     return sleep_secs
 
@@ -61,7 +61,7 @@ def main():
     sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
     print("=" * 70, flush=True)
     print(f"🚀 INICIANDO RUNNER CONTINUO CUÁNTICO (4 HORAS / {TOTAL_CYCLES} CICLOS)", flush=True)
-    print(f"⏱️ Intervalo: Cada 5 minutos exactos ({SLEEP_SECONDS}s)", flush=True)
+    print(f"⏱️ Intervalo: Cada 2 minutos exactos ({SLEEP_SECONDS}s)", flush=True)
     print(f"🎯 Total Ciclos: {TOTAL_CYCLES} ejecuciones continuas sin colas de espera", flush=True)
     print("=" * 70, flush=True)
     
@@ -120,9 +120,9 @@ def main():
         # Step 4: Push changes to GitHub
         run_git_push_sync(cycle)
         
-        # Step 5: Sleep until next 5-minute clock boundary (except after the final cycle)
+        # Step 5: Sleep until next 2-minute clock boundary (except after the final cycle)
         if cycle < TOTAL_CYCLES:
-            sleep_secs = sleep_until_next_5m_boundary()
+            sleep_secs = sleep_until_next_2m_boundary()
             target_time = datetime.fromtimestamp(time.time() + sleep_secs).strftime("%H:%M:%S")
             print(f"⏳ [Ciclo {cycle}] Completado. Esperando {sleep_secs}s hasta la marca en punto ({target_time}) para el Ciclo {cycle+1}...", flush=True)
             time.sleep(sleep_secs)
