@@ -4,7 +4,7 @@ aliases: [Rendimiento ⚖️ GRUPO 3: Balanceado]
 cssclasses: [dashboard-view]
 ---
 # 📊 Rendimiento por Periodos: ⚖️ GRUPO 3: Balanceado
-> Última actualización: 2026-08-02 07:35:23
+> Última actualización: 2026-08-02 07:40:24
 
 | Periodo | Total Operaciones | ✅ Ganadoras | 💰 PnL Ganado | ❌ Perdedoras | 💸 PnL Perdido | 📈 Neto |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
