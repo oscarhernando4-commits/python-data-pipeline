@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-08-02 21:30:25",
-  "total_balance_usd": 20.11,
+  "updated_at": "2026-08-02 21:32:25",
+  "total_balance_usd": 20.14,
   "usdt_free": 0.1778,
   "bnb_free": 0.00437518,
-  "status": "🔵 En Vivo LONG (ASTERUSDT @ $0.6060)",
+  "status": "🔵 En Vivo LONG (ASTERUSDT @ $0.6070)",
   "position": {
     "symbol": "ASTERUSDT",
     "quantity": 28.64,
     "entry_price": 0.604,
-    "highest_price": 0.606,
+    "highest_price": 0.607,
     "break_even": false,
     "trailing_active": false,
     "adaptive_sl_pct": 0.2,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado por consenso unánime que, a pesar de tener activos con un score técnico de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y el entorno de mercado 'NEUTRAL' no cumplen con los estándares de seguridad A+ exigidos por el CRO, por lo que se prioriza la preservación del capital."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional). Ante la incertidumbre macro y la falta de soporte claro en el libro de órdenes, el comité decide mantener la liquidez en USDT para evitar el riesgo de 'falling knives' en un mercado lateral."
   }
 }
