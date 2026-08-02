@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-02 10:30:19",
+  "timestamp": "2026-08-02 10:35:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con un índice Fear & Greed de 27. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico A+ (>= 65). Los activos con score 60 presentan datos históricos insuficientes y volatilidad errática, lo que representa un riesgo inaceptable para la preservación de capital. Siguiendo la filosofía de paciencia de francotirador, la mejor operación es mantener la liquidez en USDT hasta que el mercado muestre una estructura de acumulación clara y confirmada.",
+  "reasoning": "El mercado se encuentra en un estado de evacuación de liquidez sistémica con un Fear & Greed en 27. Ninguno de los candidatos analizados cumple con el umbral mínimo de Score Técnico A+ (>= 65). Los activos con score 60 (UUSDT, OPUSDT, STXUSDT) presentan historiales insuficientes y volatilidad de baja profundidad, lo que los convierte en trampas de valor. La estrategia de preservación de capital dicta mantener el 100% de la liquidez en USDT hasta que la estructura de mercado muestre una acumulación institucional real y no una anomalía estadística.",
   "top_candidates": [
     {
       "symbol": "UUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "GIGGLEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "EPICUSDT",
       "score": 50
     }
   ]
