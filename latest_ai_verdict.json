@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 10:15:18",
+  "timestamp": "2026-08-02 10:20:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una vulnerabilidad sistémica extrema con un índice Fear & Greed en 27 y una ausencia total de activos con un Score Técnico >= 65. El activo con mayor puntuación (STX) solo alcanza 60, lo cual incumple nuestro umbral mínimo de seguridad A+. La correlación negativa hacia la baja y la distribución institucional agresiva confirman que no existen condiciones de alta probabilidad para una entrada en SPOT. La preservación de capital es la prioridad absoluta; nos mantenemos en liquidez (USDT) hasta que el mercado muestre una estructura de acumulación clara y un setup de alta probabilidad.",
+  "reasoning": "El mercado presenta una debilidad sistémica con un score técnico máximo de 60 entre los candidatos, incumpliendo el umbral mínimo de A+ (Score >= 65) establecido en las reglas de gestión de riesgo. La alta correlación negativa, el pánico institucional reflejado en el Fear & Greed (27) y la ausencia de activos con volumen de acumulación institucional (Volume Surge < 1.2x) dictan la preservación total del capital en liquidez (USDT).",
   "top_candidates": [
+    {
+      "symbol": "AAVEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "INJUSDT",
+      "score": 60
+    },
     {
       "symbol": "STXUSDT",
       "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
+      "symbol": "EPICUSDT",
       "score": 50
     },
     {
       "symbol": "GIGGLEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "MIRAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "EPICUSDT",
       "score": 50
     }
   ]
