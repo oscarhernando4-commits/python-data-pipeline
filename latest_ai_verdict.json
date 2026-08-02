@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-02 18:15:37",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de indecisión con alta volatilidad y falta de soporte institucional claro en el libro de órdenes. Ningún activo cumple con los criterios de convicción A+ (Score >= 65 con volumen confirmado y soporte de ballenas), por lo que la estrategia óptima es preservar el capital en USDT.",
+  "timestamp": "2026-08-02 18:20:33",
+  "selected_symbol": "NEARUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "NEARUSDT es el único activo que cumple con el umbral de Score A+ (85) y pertenece al sector dominante (AI & Big Data). La estrategia se basa en la acumulación institucional detectada, evitando activos de baja capitalización y memecoins que han mostrado pérdidas recurrentes en las simulaciones. Se ejecutará una entrada escalonada con un estricto control de riesgo y Trailing Stop dinámico para proteger el capital ante cualquier reversión sistémica de BTC.",
   "top_candidates": [
     {
-      "symbol": "HBARUSDT",
-      "score": 75
-    },
-    {
       "symbol": "NEARUSDT",
-      "score": 75
+      "score": 85
     },
     {
       "symbol": "UUSDT",
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ARBUSDT",
+      "symbol": "ZECUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AVAXUSDT",
       "score": 75
     }
   ]
