@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-02 11:00:20",
+  "timestamp": "2026-08-02 11:05:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un entorno de alta fragilidad con un sesgo bajista institucional confirmado. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico A+ (>= 65) requerido por la política de gestión de riesgos. La ausencia de profundidad de mercado y la correlación negativa generalizada invalidan cualquier setup de compra en este momento. Se prioriza la preservación de capital en liquidez (USDT) hasta que las condiciones macro mejoren.",
+  "reasoning": "El mercado presenta una debilidad sistémica extrema con un sesgo de distribución agresiva. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico A+ (>= 65). Los activos con score 60 (UUSDT, POLUSDT) carecen de historial suficiente y volumen de confirmación, lo que los convierte en trampas de volatilidad. La preservación de capital es la prioridad absoluta; ante la ausencia de setups de alta probabilidad, la liquidez en USDT es la posición más rentable y segura.",
   "top_candidates": [
-    {
-      "symbol": "AAVEUSDT",
-      "score": 60
-    },
     {
       "symbol": "UUSDT",
       "score": 60
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "CAKEUSDT",
-      "score": 60
+      "symbol": "KAITOUSDT",
+      "score": 50
     },
     {
-      "symbol": "OGNUSDT",
+      "symbol": "BANKUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "DEXEUSDT",
       "score": 50
     }
   ]
