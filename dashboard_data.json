@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-08-02 22:10:38",
-  "total_balance_usd": 20.04,
-  "usdt_free": 0.2377,
+  "updated_at": "2026-08-02 22:13:07",
+  "total_balance_usd": 19.85,
+  "usdt_free": 19.852,
   "bnb_free": 0.00433121,
-  "status": "🔵 En Vivo LONG (ZROUSDT @ $0.7300)",
+  "status": "🟦 Buscando Entrada A+",
   "position": {
-    "symbol": "ZROUSDT",
-    "quantity": 23.5,
-    "entry_price": 0.736,
-    "highest_price": 0.736,
+    "symbol": "NINGUNA",
+    "quantity": 0.0,
+    "entry_price": 0.0,
+    "highest_price": 0.0,
     "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 0.96,
-    "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
+    "adaptive_sl_pct": 1.0,
+    "volatility_regime": "🔵 Standard ATR"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -28,6 +28,6 @@
     "action": "BUY_LONG",
     "confidence": 85,
     "approved": true,
-    "reasoning": "El comité multi-agente aprueba por unanimidad la operación en FETUSDT respaldada por el liderazgo del sector AI & Big Data, un sólido score técnico de 85/100, alto volumen institucional (6.58x) y el estricto cumplimiento de los filtros de gestión de riesgo establecidos."
+    "reasoning": "El comité multi-agente aprueba por unanimidad la entrada en FETUSDT tras validar un score técnico superior a 65, pertenencia al sector dominante de AI & Big Data con fuerte volumen, y el cumplimiento estricto de las normas de gestión de riesgo del Chief Risk Officer."
   }
 }
