@@ -5,6 +5,36 @@ import time
 import urllib.request
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+_KEY_INDEX = 0
+
+def get_gemini_api_keys():
+    """
+    Extracts all 10 available Gemini API Keys from environment variables.
+    Returns a list of non-empty API keys.
+    """
+    keys = []
+    # Key 1 (Primary)
+    k1 = os.getenv("GEMINI_API_KEY", "")
+    if k1: keys.append(k1)
+    
+    # Keys 2 to 10
+    for i in range(2, 11):
+        env_name = f"GEMINI_API_KEY_{i:02d}"
+        val = os.getenv(env_name, "")
+        if val and val not in keys:
+            keys.append(val)
+            
+    return keys if keys else [""]
+
+def get_next_gemini_key():
+    """Returns the next API key in round-robin sequence across the 10-key pool."""
+    global _KEY_INDEX
+    keys = get_gemini_api_keys()
+    if not keys or keys == [""]:
+        return ""
+    key = keys[_KEY_INDEX % len(keys)]
+    _KEY_INDEX += 1
+    return key
 
 def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed, macro_context="", market_bias_ctx=""):
     """
@@ -123,12 +153,13 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     
     max_retries_per_model = 2
     
-    print(f"✅ [Pre-Filtro Matemático] 30 Pares analizados. Consultando al Súper-Cerebro Gemini AI SOLO para el TOP 1 ({symbol})...")
+    keys_pool = get_gemini_api_keys()
+    print(f"✅ [Pre-Filtro Matemático] 30 Pares analizados. Pool de {len(keys_pool)} Claves Gemini activas. Consultando al Súper-Cerebro Gemini AI SOLO para el TOP 1 ({symbol})...")
     
     for model_name in models_to_try:
-        for attempt in range(max_retries_per_model):
+        for key in keys_pool:
             try:
-                url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_API_KEY}"
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={key}"
                 
                 req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers={'Content-Type': 'application/json'})
                 with urllib.request.urlopen(req, timeout=10) as response:
@@ -151,13 +182,11 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
                             return {"approved": True, "confidence": score, "reasoning": "Fallback cuantitativo (Fallo de formato IA)"}
             except urllib.error.HTTPError as e:
                 if e.code == 429:
-                    print(f"⏳ {model_name}: Rate limit (intento {attempt+1}/{max_retries_per_model}). Esperando 10s para reintentar este modelo...")
-                    time.sleep(10) # Mayor tiempo de espera para que se recupere la cuota (Opción 1)
+                    print(f"🔄 Clave Gemini en Rate Limit 429 ({model_name}). Rotando a la siguiente clave del pool de {len(keys_pool)} keys...")
+                    continue
                 else:
-                    print(f"💡 Aviso ({model_name}): HTTP Error {e.code}. Pasando al siguiente modelo...")
-                    break # Skip to next model on 400, 403, 500, etc.
+                    break
             except Exception as e:
-                print(f"💡 Error de conexión ({model_name}): {e}. Pasando al siguiente modelo...")
                 break
                 
         print(f"⏭️ Agotados intentos para {model_name}. Cambiando a modelo de respaldo...")
@@ -293,10 +322,11 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         "gemini-2.5-flash-lite"
     ]
     
+    keys_pool = get_gemini_api_keys()
     for model_name in models_to_try:
-        for attempt in range(2):
+        for key in keys_pool:
             try:
-                url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_API_KEY}"
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={key}"
                 req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers={'Content-Type': 'application/json'})
                 with urllib.request.urlopen(req, timeout=15) as response:
                     res_data = json.loads(response.read().decode('utf-8'))
@@ -308,8 +338,14 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
                         parsed = json.loads(text_res.strip())
                         if "selected_symbol" in parsed:
                             return parsed
-            except Exception as e:
-                time.sleep(5)
+            except urllib.error.HTTPError as e:
+                if e.code == 429:
+                    print(f"🔄 Clave Gemini en Rate Limit 429 ({model_name}). Rotando a la siguiente clave del pool de {len(keys_pool)} keys...")
+                    continue
+                else:
+                    break
+            except Exception:
+                break
     
     print("Gemini LLM Notice: Todos los modelos de IA ocupados. Usando fallback cuantitativo seguro.")
     fallback_sym = candidates_data_list[0]['symbol'] if candidates_data_list else "NONE"

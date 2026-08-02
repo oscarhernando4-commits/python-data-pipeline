@@ -140,11 +140,34 @@ def analyze_multi_timeframe_candles(symbol):
     ]
     multi_tf_score = sum(score_components)
     
+    # 4. Detect 15m Candle Over-extension / Parabolic Spike (Prevents buying tops like ZRO)
+    is_overextended_15m = False
+    overextension_reason = None
+    if klines_15m and len(klines_15m) >= 2:
+        last_15m = klines_15m[-1]
+        open_15m = float(last_15m[1])
+        high_15m = float(last_15m[2])
+        low_15m = float(last_15m[3])
+        close_15m = float(last_15m[4])
+        
+        candle_range = high_15m - low_15m
+        upper_wick = high_15m - max(open_15m, close_15m)
+        
+        # Spike up followed by rejection wick (buying top trap)
+        if candle_range > 0 and (upper_wick / candle_range) > 0.50 and (high_15m - low_15m) / low_15m > 0.015:
+            is_overextended_15m = True
+            overextension_reason = f"Mecha superior en vela de 15m representa >50% del rango ({upper_wick/candle_range*100:.1f}%)"
+        elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > 3.0:
+            is_overextended_15m = True
+            overextension_reason = f"Vela de 15m sobre-extendida (+{((close_15m - open_15m) / open_15m) * 100.0:.2f}%)"
+
     return {
         "is_valid_tradable_asset": True,
         "rejection_reason": None,
         "multi_tf_score": multi_tf_score,
         "price_expansion_1d_pct": round(price_expansion_pct, 2),
+        "is_overextended_15m": is_overextended_15m,
+        "overextension_reason": overextension_reason,
         "timeframe_alignment": {
             "5m": "BULLISH" if tf_5m_up else "BEARISH",
             "15m": "BULLISH" if tf_15m_up else "BEARISH",
