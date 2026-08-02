@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-08-02 09:45:17
+date: 2026-08-02 09:50:19
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-08-02 09:45:17`  
+> **Última Actualización:** `2026-08-02 09:50:19`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -22,10 +22,10 @@ date: 2026-08-02 09:45:17
 
 | Métrica | Valor Actual | ¿Qué Significa? |
 | :--- | :--- | :--- |
-| 💵 **Capital Total (Fondo $10k):** | **`$10,024.57 USD`** | Balance de las 100 cuentas de prueba |
-| 💰 **Ganancia Neta Total:** | **`$+24.57 USD`** | Resultado global acumulado |
+| 💵 **Capital Total (Fondo $10k):** | **`$9,980.85 USD`** | Balance de las 100 cuentas de prueba |
+| 💰 **Ganancia Neta Total:** | **`$-19.15 USD`** | Resultado global acumulado |
 | 🎯 **Cuentas que cumplieron la meta:** | **`20 de 100 Cuentas`** | Cuentas que alcanzaron el +3% esta semana |
-| 📈 **Tasa de Acierto de la IA:** | **`31.94% Win Rate`** | Efectividad actual de las estrategias |
+| 📈 **Tasa de Acierto de la IA:** | **`29.63% Win Rate`** | Efectividad actual de las estrategias |
 
 ---
 
@@ -33,7 +33,7 @@ date: 2026-08-02 09:45:17
 
 > [!WARNING] 🧠 IA SENTINEL REGLA DE PRIORIDAD: `NEUTRAL`
 > - 🟢 **Rendimiento Compras (LONG):** `33.3%` de Acierto
-> - 🔴 **Rendimiento Ventas (SHORT):** `30.5%` de Acierto
+> - 🔴 **Rendimiento Ventas (SHORT):** `26.6%` de Acierto
 > - **Acción de la IA:** El bot está inyectando esta data en tiempo real a Gemini. Si la tendencia muestra pérdidas en LONG y ganancias en SHORT, **Gemini bloqueará operaciones LONG** priorizando el flujo ganador del mercado para el dinero real.
 
 ---
@@ -41,11 +41,11 @@ date: 2026-08-02 09:45:17
 ## 🎯 3. PROGRESO HACIA LA META SEMANAL (+3% SOBRE $100)
 
 > [!IMPORTANT] 🏆 META SEMANA 1: $103.00 USD (Promedio)
-> **Progreso Actual:** `[░░░░░░░░░░] 8.2%`
+> **Progreso Actual:** `[░░░░░░░░░░] 0.0%`
 > 
 > - 💵 **Capital Base (Promedio):** `$100.00 USD`
 > - 🎯 **Meta Semanal (Promedio):** `$103.00 USD`
-> - 💰 **Capital Promedio Actual:** `$100.25 USD`
+> - 💰 **Capital Promedio Actual:** `$99.81 USD`
 > - 🟡 **Estado:** `🟡 EN PROCESO - Buscando el +3% de ganancia en operaciones filtradas`
 
 ---
@@ -63,11 +63,11 @@ date: 2026-08-02 09:45:17
 
 | Criptomoneda | Balance Actual | Ganancia | Estado |
 | :--- | :--- | :--- | :--- |
-| **EPICUSDT** | `$105.07 USD` | `$+5.07 USD` | 🔵 En Operación |
-| **EPICUSDT** | `$105.07 USD` | `$+5.07 USD` | 🔵 En Operación |
-| **EPICUSDT** | `$105.07 USD` | `$+5.07 USD` | 🔵 En Operación |
-| **EPICUSDT** | `$105.07 USD` | `$+5.07 USD` | 🔵 En Operación |
-| **EPICUSDT** | `$105.07 USD` | `$+5.07 USD` | 🔵 En Operación |
+| **EPICUSDT** | `$103.91 USD` | `$+3.91 USD` | 🔵 En Operación |
+| **EPICUSDT** | `$103.91 USD` | `$+3.91 USD` | 🔵 En Operación |
+| **EPICUSDT** | `$103.91 USD` | `$+3.91 USD` | 🔵 En Operación |
+| **EPICUSDT** | `$103.91 USD` | `$+3.91 USD` | 🔵 En Operación |
+| **EPICUSDT** | `$103.91 USD` | `$+3.91 USD` | 🔵 En Operación |
 
 
 ---
@@ -81,8 +81,8 @@ date: 2026-08-02 09:45:17
 | **1 (Ultra-Estricto)** | `50.0%` | `$+17.00` |
 | **Grupo 2** | `16.7%` | `$-97.60` |
 | **Grupo 3** | `50.0%` | `$+34.00` |
-| **Grupo 4** | `42.9%` | `$+101.40` |
-| **5 (Exploratorio)** | `16.7%` | `$-26.03` |
+| **Grupo 4** | `37.5%` | `$+78.20` |
+| **5 (Exploratorio)** | `14.3%` | `$-46.55` |
 
 
 ---

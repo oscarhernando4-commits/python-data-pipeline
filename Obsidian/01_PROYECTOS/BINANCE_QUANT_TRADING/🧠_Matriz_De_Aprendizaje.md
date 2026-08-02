@@ -4,28 +4,28 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-08-02 09:05:14
+date: 2026-08-02 09:50:17
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-08-02 09:05:14`  
+> **Última Actualización:** `2026-08-02 09:50:17`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `505`
-- **Ganadas (WIN):** `160` | **Perdidas (LOSS):** `345`
-- **Tasa de Acierto (Win Rate):** `31.68%`
-- **PnL Total Neto:** `$+24.17 USD`
+- **Total Operaciones:** `544`
+- **Ganadas (WIN):** `160` | **Perdidas (LOSS):** `384`
+- **Tasa de Acierto (Win Rate):** `29.41%`
+- **PnL Total Neto:** `$-19.55 USD`
 
 ---
 
 ## 🧭 Sesgo de Aprendizaje Automático (Últimos 100 Trades)
 - **Sesgo Actual (Market Bias):** `NEUTRAL`
 - **Rendimiento LONG (Compras):** `33.3%` de Acierto (en 240 ops recientes)
-- **Rendimiento SHORT (Ventas):** `30.5%` de Acierto (en 262 ops recientes)
+- **Rendimiento SHORT (Ventas):** `26.6%` de Acierto (en 301 ops recientes)
 - 🏆 **Grupo de IA Más Rentable:** `⚖️ GRUPO 3: Balanceado` (WinRate: 50.0%, PnL: $34.0)
 - *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada. Y el Dinero Real copiará automáticamente al Grupo Más Rentable.
 
@@ -33,7 +33,6 @@ date: 2026-08-02 09:05:14
 
 ## 🛑 Reglas de Bloqueo de Fracasos (Filtros Anti-Pérdida)
 *Estas condiciones han sido aprendidas tras fallos y BLOQUEAN automáticamente futuras operaciones de riesgo:*
-- 🛑 Preventive Block for NEARUSDT: Loss logged at 1.579 -> Hit SL on NEARUSDT (-$1.55). Re-Trading!
 - 🛑 Preventive Block for DOTUSDT: Loss logged at 0.765 -> Hit SL on DOTUSDT (-$1.60). Re-Trading!
 - 🛑 Preventive Block for OPUSDT: Loss logged at 0.0879 -> Hit SL on OPUSDT (-$1.11). Re-Trading!
 - 🛑 Preventive Block for BTCUSDT: Loss logged at 63976.01 -> Hit SL on BTCUSDT (-$1.15). Re-Trading!
@@ -53,6 +52,7 @@ date: 2026-08-02 09:05:14
 - 🛑 BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on DEXEUSDT)
 - 🛑 BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on XRPUSDT)
 - 🛑 BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHUSDT)
+- 🛑 BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on EPICUSDT)
 
 ---
 
@@ -77,14 +77,14 @@ date: 2026-08-02 09:05:14
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-08-02 09:05:14 | ETHUSDT | LONG | `$1882.56` | `$1862.31` | `$-1.13` | 🔴 LOSS |
-| 2026-08-02 09:05:14 | ETHUSDT | LONG | `$1882.56` | `$1862.31` | `$-1.13` | 🔴 LOSS |
-| 2026-08-02 09:05:14 | ETHUSDT | LONG | `$1882.56` | `$1862.31` | `$-1.13` | 🔴 LOSS |
-| 2026-08-02 09:05:14 | ETHUSDT | LONG | `$1882.56` | `$1862.31` | `$-1.13` | 🔴 LOSS |
-| 2026-08-02 09:05:14 | ETHUSDT | LONG | `$1882.56` | `$1862.31` | `$-1.13` | 🔴 LOSS |
-| 2026-08-02 09:05:14 | ETHUSDT | LONG | `$1882.56` | `$1862.31` | `$-1.13` | 🔴 LOSS |
-| 2026-08-02 09:05:14 | ETHUSDT | LONG | `$1882.56` | `$1862.31` | `$-1.13` | 🔴 LOSS |
-| 2026-08-02 09:05:14 | ETHUSDT | LONG | `$1882.56` | `$1862.31` | `$-1.13` | 🔴 LOSS |
-| 2026-08-02 09:05:14 | ETHUSDT | LONG | `$1882.56` | `$1862.31` | `$-1.13` | 🔴 LOSS |
-| 2026-08-02 09:05:14 | ETHUSDT | LONG | `$1882.56` | `$1862.31` | `$-1.13` | 🔴 LOSS |
+| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
+| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
+| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
+| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
+| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
+| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
+| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
+| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
+| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
+| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
 
