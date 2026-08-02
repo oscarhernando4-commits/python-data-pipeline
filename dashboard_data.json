@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02 21:14:22",
+  "updated_at": "2026-08-02 21:16:22",
   "total_balance_usd": 20.06,
   "usdt_free": 0.1778,
   "bnb_free": 0.00437518,
@@ -11,8 +11,8 @@
     "highest_price": 0.604,
     "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 0.6,
-    "volatility_regime": "⏳ Escalera 20m: SL Apretado a -0.60%"
+    "adaptive_sl_pct": 0.2,
+    "volatility_regime": "⏳ Escalera 45m: SL Apretado a -0.20%"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 45,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de soporte en libro de órdenes > 55%). La neutralidad en el libro de órdenes y el sentimiento de miedo generalizado dictan una postura de espera para evitar pérdidas innecesarias."
+    "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la falta de dominancia clara en el libro de órdenes (50% bids) y la volatilidad errática del mercado actual impiden la ejecución de una orden de compra bajo los estrictos estándares de riesgo del comité."
   }
 }
