@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 19:28:22",
+  "timestamp": "2026-08-02 19:30:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que BCHUSDT tiene un score técnico alto, la ausencia de soporte real en el libro de órdenes y el entorno macro de miedo técnico impiden la ejecución de cualquier orden de compra, cumpliendo estrictamente con la regla de oro de no arriesgar capital en condiciones mediocres.",
+  "reasoning": "El mercado se encuentra en un régimen de compresión de volatilidad con sentimiento de miedo predominante; no existen activos que cumplan con los criterios estrictos de convicción A+ (Score >= 65 y soporte de libro de órdenes > 55%), por lo que la decisión institucional es mantener la liquidez en USDT.",
   "top_candidates": [
     {
-      "symbol": "BCHUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "PEPEUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     },
     {
-      "symbol": "SPCXBUSDT",
+      "symbol": "UUSDT",
       "score": 75
     },
     {
-      "symbol": "ARBUSDT",
+      "symbol": "NBISBUSDT",
       "score": 75
     },
     {
-      "symbol": "DASHUSDT",
+      "symbol": "NILUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "KORUBUSDT",
       "score": 75
     }
   ]
