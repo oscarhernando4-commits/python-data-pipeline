@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-01 19:49:58",
+  "timestamp": "2026-08-02 01:03:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 85,
-  "reasoning": "El mercado se encuentra en un estado de 'Apatía Estructural' con un sesgo institucional hacia el lado SHORT (39.4% vs 22.2% LONG). Todos los candidatos presentados tienen un Score Técnico de 15/100, lo cual, según el análisis estadístico de 284 trades, indica una probabilidad de éxito extremadamente baja para posiciones LONG. Dado que el usuario ha restringido la operativa exclusivamente a SPOT (BUY_LONG) y el entorno macro presenta una alta probabilidad de 'flash crash' en activos de baja capitalización, no existe una configuración técnica que cumpla con los criterios de alta probabilidad de éxito. Operar en este contexto bajo las condiciones actuales resultaría en una alta exposición a pérdidas innecesarias.",
+  "confidence": 95,
+  "reasoning": "El mercado presenta un sesgo institucional de 'FAVOR_SHORT' con un win rate de 39.4% para posiciones cortas frente a un 22.2% para largos. Todos los candidatos pre-filtrados presentan un 'Score Técnico' de 15/100, lo cual es extremadamente bajo y se correlaciona históricamente con pérdidas en el entorno actual. Dado que el usuario ha restringido la operativa exclusivamente a 'BUY_LONG' (Spot), no existe ninguna oportunidad que cumpla con los criterios de probabilidad estadística mínima para una entrada rentable. La divergencia de momentum y el entorno de miedo (Fear & Greed 27) sugieren que cualquier posición larga en activos con score 15/100 resultaría en una liquidación de capital. Se recomienda esperar a una mejora en el score técnico o un cambio en el sesgo de mercado.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
+      "score": 15
+    },
+    {
+      "symbol": "MMTUSDT",
       "score": 15
     },
     {
@@ -19,11 +23,7 @@
       "score": 15
     },
     {
-      "symbol": "MMTUSDT",
-      "score": 15
-    },
-    {
-      "symbol": "HEIUSDT",
+      "symbol": "TUTUSDT",
       "score": 15
     }
   ]
