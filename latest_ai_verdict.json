@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 15:40:19",
+  "timestamp": "2026-08-02 15:45:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual presenta una debilidad sistémica y una falta de convicción institucional. Dado que ningún activo alcanza el umbral de Score 65 y la profundidad del libro de órdenes es insuficiente, se mantiene la posición en efectivo (USDT) para proteger el capital contra la volatilidad bajista.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos teóricos, la falta de profundidad en el libro de órdenes (bids < 55%) y la ausencia de volumen institucional confirmado (Volume Surge 0.0) no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se mantiene la liquidez en USDT para evitar 'trampas de valor' en un entorno de mercado con sentimiento de miedo predominante.",
   "top_candidates": [
     {
-      "symbol": "JSTUSDT",
-      "score": 70
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "score": 75
     },
     {
       "symbol": "UNIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PEPEUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "LTCUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 60
+      "score": 75
     }
   ]
 }
