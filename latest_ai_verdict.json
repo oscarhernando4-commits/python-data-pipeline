@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-02 08:55:17",
+  "timestamp": "2026-08-02 09:00:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad estructural extrema con un sesgo de pánico institucional. Ninguno de los candidatos analizados alcanza el umbral mínimo de seguridad (Score >= 65). El activo WLFIUSDT, aunque presenta el mayor score (60), está rodeado de noticias negativas y falta de historial, lo que lo clasifica como una trampa de liquidez. La preservación de capital es la prioridad absoluta bajo la filosofía de francotirador; ante la ausencia de un Setup A+, la única decisión cuantitativa correcta es mantener el 100% de la liquidez en USDT.",
+  "reasoning": "El mercado presenta una fragilidad sistémica extrema con un sesgo bajista predominante. Ninguno de los candidatos analizados cumple con el umbral mínimo de Score Técnico A+ (>= 65). El activo con mayor score (WLFIUSDT, 60) presenta riesgos regulatorios y de reputación significativos, además de un historial insuficiente, lo que contraviene la política de preservación de capital. Ante la ausencia de setups de alta probabilidad, la estrategia institucional es mantener el 100% de la liquidez en efectivo para evitar la exposición a activos en distribución institucional.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
       "score": 60
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "EULUSDT",
       "score": 50
     },
     {
