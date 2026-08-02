@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 22:14:34",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité multi-agente ha evaluado los candidatos bajo las reglas de oro de gestión de riesgo. Dado que la dominancia de bids compradores no supera el 50% y la tendencia en 4H es neutral sin confirmación de soporte institucional, se prioriza la preservación del capital y se rechaza la apertura de nuevas posiciones.",
+  "timestamp": "2026-08-02 22:16:37",
+  "selected_symbol": "NEARUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "El comité multi-agente ha seleccionado NEARUSDT por cumplir rigurosamente con los filtros institucionales: un score técnico de 75, pertenencia al sector dominante de IA y Big Data, métricas de RSI e indicadores técnicos alineados, y la validación estricta de riesgo por parte del CRO y el CEO.",
   "top_candidates": [
     {
-      "symbol": "BCHUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ENAUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "XLMUSDT",
-      "score": 85
+      "symbol": "SUIUSDT",
+      "score": 75
     },
     {
       "symbol": "PEPEUSDT",
-      "score": 85
+      "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 85
+      "symbol": "AAVEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XLMUSDT",
+      "score": 75
     }
   ]
 }
