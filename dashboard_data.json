@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02 23:40:20",
+  "updated_at": "2026-08-02 23:42:19",
   "total_balance_usd": 19.74,
   "usdt_free": 17.2258,
   "bnb_free": 0.00426609,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de limpieza de manos débiles con alta correlación negativa. Ningún activo cumple con el requisito de soporte de ballenas (Bids > 55%) ni con la convicción A+ necesaria para operar en este entorno de alta peligrosidad."
+    "reasoning": "El mercado se encuentra en una fase de distribución con alta correlación negativa y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%), por lo que la estrategia de protección de capital dicta una postura de espera (HOLD) para evitar pérdidas innecesarias."
   }
 }
