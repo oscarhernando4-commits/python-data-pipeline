@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 02:05:19",
-  "selected_symbol": "SUNUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 85,
-  "reasoning": "SUNUSDT es el único activo que cumple con el umbral de excelencia A+ (Score 85). Presenta un 'Volume Surge' de 3.01, indicando una entrada de capital institucional significativa que supera ampliamente el filtro de 1.2x. El RSI de 67.71 se encuentra en zona de momentum alcista sin haber entrado en sobrecompra extrema (>70), lo que valida la continuación de la tendencia. Se descartan otros candidatos por menor score técnico o falta de confirmación de volumen, priorizando la preservación de capital en el activo con mayor probabilidad estadística de éxito.",
+  "timestamp": "2026-08-02 02:10:22",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 95,
+  "reasoning": "A pesar de que activos como ASTER y TRX presentan un Score de 85, el entorno macroeconómico actual con un Fear & Greed de 27 y la alta volatilidad en activos de baja profundidad de mercado representan un riesgo sistémico inaceptable. La mayoría de los activos, incluyendo los de alto score, carecen de un historial de 5M consolidado y muestran una estructura de mercado 'NEUTRAL' con alta probabilidad de manipulación. Siguiendo la filosofía de preservación de capital de Francisca Serrano y la paciencia de francotirador de Hyenuk Chu, la mejor operación es mantenerse en liquidez (HOLD) hasta que el mercado confirme una tendencia clara y una reducción en la incertidumbre regulatoria.",
   "top_candidates": [
     {
-      "symbol": "SUNUSDT",
+      "symbol": "TRXUSDT",
       "score": 85
     },
     {
-      "symbol": "UUSDT",
-      "score": 75
-    },
-    {
       "symbol": "ASTERUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "HBARUSDT",
       "score": 75
     },
     {
-      "symbol": "INJUSDT",
+      "symbol": "POLUSDT",
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
-      "score": 65
+      "symbol": "DASHUSDT",
+      "score": 75
     }
   ]
 }

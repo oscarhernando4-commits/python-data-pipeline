@@ -3,12 +3,12 @@ tags:
   - trading
   - historial_completo
   - binance
-date: 2026-08-01 20:15:50
+date: 2026-08-02 02:10:22
 ---
 
 # 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
 
-> **Última Actualización:** `2026-08-01 20:15:50`
+> **Última Actualización:** `2026-08-02 02:10:22`
 > Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
 
 | Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |
@@ -297,4 +297,67 @@ date: 2026-08-01 20:15:50
 | 2026-08-01 20:00:50 | 🔥 GRUPO 5: Expl... | DEXEUSDT | SHORT | $2.392 | $2.394 | $-1.09 | 0 | 44.8 | NEUTRAL | 🔴 LOSS |
 | 2026-08-01 20:00:50 | 🔥 GRUPO 5: Expl... | DEXEUSDT | SHORT | $2.392 | $2.394 | $-1.09 | 0 | 44.8 | NEUTRAL | 🔴 LOSS |
 | 2026-08-01 20:15:50 | 🥇 GRUPO 0: RÉPL... | BANKUSDT | SHORT | $0.0533 | $0.0534 | $-1.09 | 30 | 42.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-01 20:43:18 | CUENTA REAL... | ASTERUSDT | BUY | $0.602 | $0.6 | $-0.05 | 40 | N/A | N/A | 🔴 LOSS |
+| 2026-08-01 20:43:18 | CUENTA REAL... | XECUSDT | BUY | $6.68e-06 | $6.66e-06 | $-0.05 | 35 | N/A | N/A | 🔴 LOSS |
+| 2026-08-01 20:43:18 | CUENTA REAL... | MMTUSDT | BUY | $0.1822 | $0.1795 | $-0.24 | 15 | N/A | N/A | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🥇 GRUPO 0: RÉPL... | BTCUSDT | SHORT | $62593.9 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔷 GRUPO 2: Mode... | DOGEUSDT | LONG | $0.06856 | $0.07005 | $+1.95 | 50 | 72.9 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | ⚖️ GRUPO 3: Bal... | ARBUSDT | LONG | $0.0783 | $0.0802 | $+2.34 | 40 | 70.0 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
 
