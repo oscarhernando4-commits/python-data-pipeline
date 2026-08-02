@@ -208,14 +208,21 @@ def get_symbol_price(symbol, is_futures=False):
 
 def execute_real_spot_market_buy(symbol, usdt_amount):
     """
-    Executes a SPOT MARKET BUY using 100% of available USDT.
-    Amount is strictly truncated to 1 decimal place rounded down (floor).
+    Executes a SPOT MARKET BUY using quoteOrderQty (100% free USDT).
+    Includes Live USDT Balance Lock to prevent 'Account has insufficient balance' (code -2010).
     """
-    timestamp = int(time.time() * 1000)
     import math
-    clean_usd = math.floor(float(usdt_amount) * 10) / 10.0
+    timestamp = int(time.time() * 1000)
     
-    # Ensure minimum notional value (Binance requires >= $5.0 USD)
+    # Query live free USDT balance to guarantee sufficiency
+    try:
+        live_usdt = get_account_balance("USDT")
+        if live_usdt and live_usdt > 0:
+            usdt_amount = min(usdt_amount, live_usdt * 0.99)
+    except Exception:
+        pass
+        
+    clean_usd = math.floor(usdt_amount * 10) / 10.0
     if clean_usd < 5.1:
         return {"error": f"MIN_NOTIONAL not met (${clean_usd:.1f} < $5.10)"}
         
@@ -615,8 +622,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
     
     # 100% OF AVAILABLE USDT CAPITAL (SPOT ONLY)
     # Strictly truncated to 1 decimal place rounded down (floor)
-    raw_usdt = state.get("_cached_usdt_free", state.get("current_balance_usd", 17.29))
-    usdt_free = math.floor(float(raw_usdt) * 10) / 10.0
+    cached_usdt = state.get("_cached_usdt_free")
+    if cached_usdt is None or cached_usdt == 0:
+        live_u = get_account_balance("USDT")
+        raw_usdt = live_u if (live_u and live_u > 0) else state.get("current_balance_usd", 17.29)
+    else:
+        raw_usdt = cached_usdt
+    usdt_free = math.floor(float(raw_usdt) * 0.99 * 10) / 10.0
     
     crypto_balances = []
     
