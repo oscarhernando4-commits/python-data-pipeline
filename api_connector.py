@@ -667,10 +667,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         atr_info = atr_risk_calculator.calculate_adaptive_atr_stop_loss(entry, atr_15m=entry*0.008)
         adaptive_sl_pct = atr_info.get("sl_pct", 1.0)
 
-        # Option B: Calculate dynamic trailing stop floor (0.5% below peak, guaranteed minimum +1.5% profit)
+        # Ultra-Precision Trailing Stop: floor is exactly 0.2% below peak (guaranteed minimum +1.5% profit)
         if trailing_active or highest_pnl_pct >= 2.0:
             trailing_active = True
-            trailing_floor_pct = max(1.5, highest_pnl_pct - 0.5)
+            trailing_floor_pct = max(1.5, highest_pnl_pct - 0.2)
         elif break_even_active:
             trailing_floor_pct = 0.2
         else:
