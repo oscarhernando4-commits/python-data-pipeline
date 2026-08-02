@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-02 04:40:35",
+  "timestamp": "2026-08-02 04:45:34",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que varios activos presentan un Score técnico de 75, el entorno macroeconómico actual con un índice Fear & Greed en 27 (miedo) y la debilidad estructural de los activos principales (BTC/ETH) genera un riesgo sistémico elevado. La falta de historial consolidado en los activos de alto score y la volatilidad errática detectada en los simuladores sugieren que el capital está rotando de forma especulativa y no mediante una tendencia sostenible. Siguiendo la filosofía de preservación de capital y paciencia de francotirador, se prioriza la liquidez en USDT hasta que la estructura de mercado muestre una confluencia clara de volumen y tendencia, evitando trampas de liquidez en un entorno de alta incertidumbre.",
+  "reasoning": "Tras un análisis cuantitativo riguroso, ninguno de los candidatos presenta un Setup A+ con la confluencia necesaria. Aunque varios activos tienen un Score técnico de 65-75, el entorno macro es de alta volatilidad, el Fear & Greed se encuentra en zona de miedo (27) y el historial de los activos propuestos es insuficiente para validar una entrada de alta probabilidad. La preservación del capital es la prioridad absoluta; ante la falta de una señal clara con confirmación de volumen institucional, la decisión óptima es mantener la liquidez en USDT.",
   "top_candidates": [
     {
       "symbol": "HBARUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "QNTUSDT",
       "score": 75
     },
     {
@@ -19,12 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "RENDERUSDT",
+      "symbol": "KITEUSDT",
       "score": 75
     },
     {
       "symbol": "ROSEUSDT",
       "score": 75
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "score": 65
     }
   ]
 }
