@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-02 22:33:27",
+  "timestamp": "2026-08-02 22:34:37",
   "selected_symbol": "ADAUSDT",
   "action": "BUY_LONG",
   "approved": true,
   "confidence": 75,
-  "reasoning": "El comité ha deliberado y aprobado una operación LONG para ADAUSDT. A pesar de un sentimiento general de 'Fear' y falta de volumen institucional masivo, el análisis técnico muestra una consolidación favorable. El sector 'Layer 1 & Infrastructure' está atrayendo capital, y ADAUSDT se destaca dentro de él con un Score Técnico de 75, cumpliendo el umbral mínimo A+. El libro de órdenes es neutral, y el historial de simulaciones no presenta patrones de pérdida que impidan la operación. El riesgo es considerado aceptable, y la confianza en esta operación es del 75%.",
+  "reasoning": "El comité multi-agente aprueba por unanimidad la operación en ADAUSDT debido a su sólido score técnico de 75, su pertenencia al sector líder Layer 1 & Infrastructure y su divergencia alcista comprobada frente al mercado general, cumpliendo con todos los filtros de control de riesgo.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "HBARUSDT",
-      "score": 65
+      "symbol": "GNOUSDT",
+      "score": 70
     },
     {
-      "symbol": "ORDIUSDT",
+      "symbol": "GIGGLEUSDT",
       "score": 65
     }
   ]
