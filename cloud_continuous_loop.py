@@ -16,15 +16,20 @@ SLEEP_SECONDS = 300     # 5 minutes exact interval between analysis cycles
 def run_git_push_sync(cycle_num: int):
     """Safely commits and pushes updated matrix and account state to GitHub."""
     try:
-        now_utc = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+        now_utc = datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")
         subprocess.run(["git", "config", "--global", "user.name", "antigravity-bot[bot]"], check=False)
         subprocess.run(["git", "config", "--global", "user.email", "antigravity-bot[bot]@users.noreply.github.com"], check=False)
         
-        # Soft reset against remote to prevent divergence
-        subprocess.run(["git", "fetch", "origin", "main"], check=False)
-        subprocess.run(["git", "reset", "--soft", "origin/main"], check=False)
+        # Rebase pull first
+        subprocess.run(["git", "pull", "--rebase", "-X", "theirs", "origin", "main"], check=False)
         subprocess.run(["git", "add", "."], check=False)
         
+        # Check if there are changes
+        status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
+        if not status.stdout.strip():
+            print(f"ℹ️ [Cycle {cycle_num}] No hay cambios para sync.")
+            return
+
         msg = f"chore: live 5m sync [Cycle {cycle_num}/{TOTAL_CYCLES}] [{now_utc}]"
         subprocess.run(["git", "commit", "-m", msg], check=False)
         
@@ -36,11 +41,11 @@ def run_git_push_sync(cycle_num: int):
                 break
             else:
                 print(f"⚠️ [Cycle {cycle_num}] Push retry {attempt+1}/3: {res.stderr.strip()[:100]}")
-                subprocess.run(["git", "fetch", "origin", "main"], check=False)
-                subprocess.run(["git", "rebase", "origin/main"], check=False)
-                time.sleep(3)
+                subprocess.run(["git", "pull", "--rebase", "-X", "theirs", "origin", "main"], check=False)
+                time.sleep(2)
     except Exception as e:
         print(f"⚠️ [Cycle {cycle_num}] Git sync warning: {e}")
+
 
 def sleep_until_next_5m_boundary():
     """Calculates sleep time so every cycle aligns to clean clock intervals (:00, :05, :10, :15...)."""
