@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-02 23:30:19",
-  "selected_symbol": "XAUTUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "El comité multi-agente valida por unanimidad la entrada en XAUTUSDT respaldado por el mejor sector en rotación de capital (RWA & Precious Metals), un score técnico sólido de 75 y la estricta alineación con los parámetros de gestión de riesgo establecidos.",
+  "timestamp": "2026-08-02 23:32:21",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El mercado presenta una configuración de alta fragilidad con una rotación de capital hacia stablecoins. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y soporte de libro de órdenes > 55%) necesario para mitigar el riesgo de una caída sistémica, por lo que se mantiene la posición en efectivo.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ALGOUSDT",
       "score": 75
     },
     {
@@ -19,12 +15,16 @@
       "score": 75
     },
     {
+      "symbol": "DRAMBUSDT",
+      "score": 75
+    },
+    {
       "symbol": "BONKUSDT",
       "score": 75
     },
     {
-      "symbol": "HBARUSDT",
-      "score": 65
+      "symbol": "KAITOUSDT",
+      "score": 70
     }
   ]
 }
