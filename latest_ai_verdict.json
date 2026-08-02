@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 08:05:18",
+  "timestamp": "2026-08-02 08:10:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que SPCXB y ETC presentan un Score de 75, el entorno macro actual se define por un 'estancamiento defensivo' y un índice de Fear & Greed en 27 (Fear). El análisis de los últimos 485 trades indica que en entornos de tendencia 'NEUTRAL' el win rate es de apenas 36.7%. La falta de convicción institucional y la alta fragilidad del mercado sugieren que cualquier ruptura alcista actual es una trampa de liquidez. Siguiendo la filosofía de preservación de capital, la mejor operación es no operar y mantener la liquidez en stablecoins hasta que el mercado muestre una estructura de fuerza más robusta y menos correlacionada con el miedo institucional.",
+  "reasoning": "El mercado presenta una fragilidad sistémica extrema con un índice Fear & Greed en 27. Aunque SPCXBUSDT y CFXUSDT alcanzan el umbral de score 75, carecen de historial de 5M suficiente y no presentan un 'Volume Surge' superior a 1.2x, lo que invalida la confirmación de acumulación institucional. La mayoría de los activos están en tendencia NEUTRAL con baja convicción. Bajo la filosofía de preservación de capital, cualquier entrada en este entorno es una trampa de liquidez. Se mantiene 100% de liquidez en USDT.",
   "top_candidates": [
     {
       "symbol": "SPCXBUSDT",
       "score": 75
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "CFXUSDT",
       "score": 75
     },
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "TUTUSDT",
       "score": 65
     },
     {
-      "symbol": "SYNUSDT",
-      "score": 65
+      "symbol": "TLMUSDT",
+      "score": 60
     },
     {
-      "symbol": "ORDIUSDT",
-      "score": 65
+      "symbol": "ICPUSDT",
+      "score": 60
     }
   ]
 }
