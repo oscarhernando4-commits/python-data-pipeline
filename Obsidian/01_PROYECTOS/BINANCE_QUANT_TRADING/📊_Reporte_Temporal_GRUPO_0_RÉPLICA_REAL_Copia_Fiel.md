@@ -4,19 +4,20 @@ aliases: [Rendimiento 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)]
 cssclasses: [dashboard-view]
 ---
 # 📊 Rendimiento por Periodos: 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)
-> Última actualización: 2026-08-02 05:45:45
+> Última actualización: 2026-08-02 05:50:46
 
 | Periodo | Total Operaciones | ✅ Ganadoras | 💰 PnL Ganado | ❌ Perdedoras | 💸 PnL Perdido | 📈 Neto |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **1 Día (24h)** | 3 | 0 | +$0.00 | 3 | -$3.27 | **$-3.27** |
-| **3 Días** | 3 | 0 | +$0.00 | 3 | -$3.27 | **$-3.27** |
-| **1 Semana** | 6 | 1 | +$2.90 | 5 | -$6.03 | **$-3.13** |
-| **2 Semanas** | 6 | 1 | +$2.90 | 5 | -$6.03 | **$-3.13** |
-| **1 Mes (30d)** | 6 | 1 | +$2.90 | 5 | -$6.03 | **$-3.13** |
+| **1 Día (24h)** | 4 | 0 | +$0.00 | 4 | -$4.34 | **$-4.34** |
+| **3 Días** | 4 | 0 | +$0.00 | 4 | -$4.34 | **$-4.34** |
+| **1 Semana** | 7 | 1 | +$2.90 | 6 | -$7.10 | **$-4.20** |
+| **2 Semanas** | 7 | 1 | +$2.90 | 6 | -$7.10 | **$-4.20** |
+| **1 Mes (30d)** | 7 | 1 | +$2.90 | 6 | -$7.10 | **$-4.20** |
 
 ## 🔍 Últimas 10 Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL |
 | :--- | :--- | :--- | :--- | :--- | :--- |
+| 2026-08-02 05:50:44 | **DEXEUSDT** | SHORT | $2.334 | $2.333 | 🔴 -$1.07 |
 | 2026-08-02 02:10:22 | **BTCUSDT** | SHORT | $62593.9 | $63389.99 | 🔴 -$1.08 |
 | 2026-08-01 20:15:50 | **BANKUSDT** | SHORT | $0.0533 | $0.0534 | 🔴 -$1.09 |
 | 2026-08-01 14:16:15 | **BTCUSDT** | LONG | $64376.52 | $62550.01 | 🔴 -$1.10 |

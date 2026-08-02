@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-08-02 05:45:45
+date: 2026-08-02 05:50:46
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-08-02 05:45:45`  
+> **Última Actualización:** `2026-08-02 05:50:46`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -22,10 +22,10 @@ date: 2026-08-02 05:45:45
 
 | Métrica | Valor Actual | ¿Qué Significa? |
 | :--- | :--- | :--- |
-| 💵 **Capital Total (Fondo $10k):** | **`$10,069.44 USD`** | Balance de las 100 cuentas de prueba |
-| 💰 **Ganancia Neta Total:** | **`$+69.44 USD`** | Resultado global acumulado |
+| 💵 **Capital Total (Fondo $10k):** | **`$10,068.37 USD`** | Balance de las 100 cuentas de prueba |
+| 💰 **Ganancia Neta Total:** | **`$+68.37 USD`** | Resultado global acumulado |
 | 🎯 **Cuentas que cumplieron la meta:** | **`20 de 100 Cuentas`** | Cuentas que alcanzaron el +3% esta semana |
-| 📈 **Tasa de Acierto de la IA:** | **`34.78% Win Rate`** | Efectividad actual de las estrategias |
+| 📈 **Tasa de Acierto de la IA:** | **`34.71% Win Rate`** | Efectividad actual de las estrategias |
 
 ---
 
@@ -33,7 +33,7 @@ date: 2026-08-02 05:45:45
 
 > [!WARNING] 🧠 IA SENTINEL REGLA DE PRIORIDAD: `NEUTRAL`
 > - 🟢 **Rendimiento Compras (LONG):** `36.4%` de Acierto
-> - 🔴 **Rendimiento Ventas (SHORT):** `33.2%` de Acierto
+> - 🔴 **Rendimiento Ventas (SHORT):** `33.1%` de Acierto
 > - **Acción de la IA:** El bot está inyectando esta data en tiempo real a Gemini. Si la tendencia muestra pérdidas en LONG y ganancias en SHORT, **Gemini bloqueará operaciones LONG** priorizando el flujo ganador del mercado para el dinero real.
 
 ---
@@ -41,11 +41,11 @@ date: 2026-08-02 05:45:45
 ## 🎯 3. PROGRESO HACIA LA META SEMANAL (+3% SOBRE $100)
 
 > [!IMPORTANT] 🏆 META SEMANA 1: $103.00 USD (Promedio)
-> **Progreso Actual:** `[██░░░░░░░░] 23.1%`
+> **Progreso Actual:** `[██░░░░░░░░] 22.8%`
 > 
 > - 💵 **Capital Base (Promedio):** `$100.00 USD`
 > - 🎯 **Meta Semanal (Promedio):** `$103.00 USD`
-> - 💰 **Capital Promedio Actual:** `$100.69 USD`
+> - 💰 **Capital Promedio Actual:** `$100.68 USD`
 > - 🟡 **Estado:** `🟡 EN PROCESO - Buscando el +3% de ganancia en operaciones filtradas`
 
 ---
@@ -77,7 +77,7 @@ date: 2026-08-02 05:45:45
 > [!INFO] 📊 COMPARATIVA DE ESTRATEGIAS
 | Grupo | Tasa de Acierto | Ganancia Neta |
 | :--- | :---: | :---: |
-| **0 (Copia Real)** | `16.7%` | `$-3.13` |
+| **0 (Copia Real)** | `14.3%` | `$-4.20` |
 | **1 (Ultra-Estricto)** | `50.0%` | `$+17.00` |
 | **Grupo 2** | `20.0%` | `$-76.40` |
 | **Grupo 3** | `66.7%` | `$+56.60` |

@@ -1,5 +1,5 @@
 # 🧠 INFORME EXECUTIVO DEL SÚPER-CEREBRO (GEMINI 3.1 FLASH LITE)
-*Última actualización: `2026-08-02 05:45:45`*
+*Última actualización: `2026-08-02 05:50:46`*
 
 > [!IMPORTANT] 🎯 **VEREDICTO INSTITUCIONAL DE IA EN TIEMPO REAL:**
 > - 🪙 **Activo Evaluado:** **`ERAUSDT`**
@@ -49,7 +49,7 @@ Fallback Cuantitativo Tras Fallo de Conexión AI
 | **EMA 20 (Soporte Dinámico)** | **`$0.067576`** | Referencia | 🟢 Precio por encima (Fuerza) |
 | **Bollinger Banda Superior** | **`$0.068689`** | Resistencia | Techo de volatilidad para toma de ganancias |
 | **Bollinger Banda Inferior** | **`$0.066671`** | Soporte | Suelo de volatilidad para entradas de rebote |
-| **Volumen Surge Ratio** | **`0.26x`** | > 1.50x | ⚪ Volumen Promedio / Normal |
+| **Volumen Surge Ratio** | **`0.95x`** | > 1.50x | ⚪ Volumen Promedio / Normal |
 | **ATR (Volatilidad Real 15m)** | **`$0.000429`** | Margen | Rango medio de movimiento por vela de 15m |
 
 ---
