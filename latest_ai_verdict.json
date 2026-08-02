@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 04:30:19",
+  "timestamp": "2026-08-02 04:35:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El entorno macro actual presenta un índice Fear & Greed de 27 (miedo) y una estructura de mercado caracterizada por la capitulación selectiva. Aunque activos como HBAR, ROSE y KITE presentan scores técnicos de 75, la falta de profundidad histórica y la alta volatilidad en un entorno de distribución institucional los clasifica como trampas de liquidez. Siguiendo la filosofía de preservación de capital y la regla de oro de no operar en entornos de alta incertidumbre, se prioriza la liquidez en USDT sobre la ejecución de trades de alta especulación.",
+  "reasoning": "A pesar de que varios activos presentan un Score Técnico de 75/100, el análisis de riesgo macro revela que estos scores están impulsados por flujos especulativos de corto plazo en un entorno de 'risk-off' y miedo extremo (Fear & Greed: 27). La falta de un historial sólido (lecturas de 5M insuficientes) y la alta probabilidad de una liquidación en cascada ante cualquier movimiento de Bitcoin invalidan estos activos como Setups A+. La preservación de capital es prioritaria; el mercado actual se encuentra en un 'limbo de espera' y no cumple con los criterios de acumulación institucional estable.",
   "top_candidates": [
     {
       "symbol": "HBARUSDT",
       "score": 75
     },
     {
-      "symbol": "ROSEUSDT",
+      "symbol": "ETCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "INJUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "QNTUSDT",
       "score": 75
     },
     {
       "symbol": "KITEUSDT",
       "score": 75
-    },
-    {
-      "symbol": "BANKUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "MMTUSDT",
-      "score": 65
     }
   ]
 }
