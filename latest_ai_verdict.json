@@ -1,26 +1,26 @@
 {
-  "timestamp": "2026-08-02 10:50:18",
+  "timestamp": "2026-08-02 10:55:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un estancamiento sistémico con un sesgo bajista severo. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico A+ (>= 65) requerido para una ejecución de alta probabilidad. La mayoría de los activos operan en zonas de debilidad extrema y el entorno macroeconómico, marcado por el miedo y la falta de rotación de capital hacia altcoins, desaconseja cualquier posición larga. La preservación del capital es la prioridad absoluta; nos mantenemos en liquidez (USDT) hasta que las condiciones técnicas y el sentimiento de mercado mejoren.",
+  "reasoning": "El entorno macro es de alta fragilidad con una correlación bajista sistémica y una capitulación técnica generalizada. Aunque WLFI y POL presentan scores de 70, carecen de historial consolidado (5M), lo que los clasifica como trampas de volatilidad. El resto de los activos no cumplen con el umbral de seguridad A+ (Score >= 65) bajo condiciones de mercado estables. La prioridad absoluta es la preservación de capital en liquidez (USDT) ante la ausencia de setups de alta probabilidad.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
-      "score": 60
+      "score": 70
     },
     {
-      "symbol": "OPUSDT",
+      "symbol": "POLUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "AAVEUSDT",
       "score": 60
     },
     {
       "symbol": "STXUSDT",
       "score": 60
-    },
-    {
-      "symbol": "EPICUSDT",
-      "score": 50
     },
     {
       "symbol": "OGNUSDT",
