@@ -801,6 +801,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             elif not trailing_active and pnl_pct <= trailing_floor_pct:
                 should_exit = True
                 reason_str = f"Stop Loss Escalonado ({pnl_pct:.2f}%)"
+            elif state.get("ai_offline_cycles", 0) >= 5:
+                should_exit = True
+                reason_str = "Guardián de Seguridad: Súper-Cerebro IA Desconectado por 10 minutos (Venta de Emergencia)"
             elif holding_cycles >= 38 and not break_even_active and not trailing_active:
                 should_exit = True
                 reason_str = f"Liberación Final por Estancamiento (75m / 1h 15m sin movimiento PnL={pnl_pct:+.2f}%)"
@@ -886,14 +889,18 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             else:
                 import multi_timeframe_analyzer
                 mtf_res = multi_timeframe_analyzer.analyze_multi_timeframe_candles(best_symbol)
+                tf_align = mtf_res.get("timeframe_alignment", {})
                 if not mtf_res.get("is_valid_tradable_asset", True):
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} descalificado por análisis histórico multi-temporal ({mtf_res.get('rejection_reason')}).")
                 elif mtf_res.get("is_overextended_15m"):
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} rechazado por vela de 15m sobre-extendida / mecha de trampa ({mtf_res.get('overextension_reason')}).")
+                elif tf_align.get("5m") != "BULLISH" or tf_align.get("15m") != "BULLISH" or tf_align.get("1h") != "BULLISH":
+                    is_stable = True
+                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de alineación alcista simultánea en 5m/15m/1h (Alignment: {tf_align}).")
                 else:
-                    print(f"📊 Análisis Multi-Temporal {best_symbol}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Rango 1D={mtf_res.get('price_expansion_1d_pct')}% | Alignment={mtf_res.get('timeframe_alignment')}")
+                    print(f"📊 Análisis Multi-Temporal {best_symbol}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Rango 1D={mtf_res.get('price_expansion_1d_pct')}% | Alignment={tf_align}")
                 
         if bias_ok and not is_stable:
             # 1. LONG Entry Signal (Operates with 100% of available USDT, strictly requires Score >= 65 Setup A+)

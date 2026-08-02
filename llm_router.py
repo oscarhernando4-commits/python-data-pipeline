@@ -42,8 +42,8 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     Provides sub-second LLM reasoning for high-stakes trades, enriched with Macro Lite context.
     """
     if not GEMINI_API_KEY:
-        print("💡 Gemini Notice: GEMINI_API_KEY no configurada aún. Usando fallback cuantitativo.")
-        return {"approved": True, "confidence": score, "reasoning": "Fallback cuantitativo (Score >= 85 Pts)"}
+        print("💡 Gemini Notice: GEMINI_API_KEY no configurada aún. Candado de seguridad: Cero compras sin IA.")
+        return {"approved": False, "confidence": 0, "action": "HOLD", "reasoning": "Veto de Seguridad: GEMINI_API_KEY no configurada"}
 
     import time_series_memory
     import extreme_events_memory
@@ -179,7 +179,7 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
                             if "approved" in parsed_res and "confidence" in parsed_res:
                                 return parsed_res
                         except json.JSONDecodeError:
-                            return {"approved": True, "confidence": score, "reasoning": "Fallback cuantitativo (Fallo de formato IA)"}
+                            return {"approved": False, "confidence": 0, "action": "HOLD", "reasoning": "Veto de Seguridad: Fallo de formato IA"}
             except urllib.error.HTTPError as e:
                 if e.code == 429:
                     print(f"🔄 Clave Gemini en Rate Limit 429 ({model_name}). Rotando a la siguiente clave del pool de {len(keys_pool)} keys...")
@@ -191,8 +191,8 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
                 
         print(f"⏭️ Agotados intentos para {model_name}. Cambiando a modelo de respaldo...")
 
-    print("Gemini LLM Notice: Todos los modelos de IA ocupados. Usando fallback cuantitativo seguro.")
-    return {"approved": True, "confidence": score, "reasoning": f"Fallback cuantitativo seguro (Score >= {score} Pts)"}
+    print("🛡️ VETO DE SEGURIDAD: Todos los modelos de IA fuera de línea. Candado de CERO compras activado.")
+    return {"approved": False, "confidence": 0, "action": "HOLD", "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación de Liquidez)"}
 
 # Function alias for universal compatibility across trading engines
 review_trade_decision = consult_gemini_flash_oracle
@@ -347,20 +347,19 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
             except Exception:
                 break
     
-    print("Gemini LLM Notice: Todos los modelos de IA ocupados. Usando fallback cuantitativo seguro.")
-    fallback_sym = candidates_data_list[0]['symbol'] if candidates_data_list else "NONE"
+    print("🛡️ VETO DE SEGURIDAD: Todos los modelos de IA fuera de línea. Candado de CERO compras activado.")
     return {
-        "selected_symbol": fallback_sym,
+        "selected_symbol": "NONE",
         "action": "HOLD",
         "approved": False,
-        "confidence": 50,
+        "confidence": 0,
         "committee_deliberation": {
-            "agent_1_macro": "Macro en espera por conectividad de respaldo.",
-            "agent_2_tech": "Filtros técnicos cuantitativos aplicados.",
-            "agent_3_memory": "Historial conservador preservado.",
-            "agent_4_risk": "Veto de seguridad activado por fallback."
+            "agent_1_macro": "Súper-Cerebro fuera de línea.",
+            "agent_2_tech": "Operaciones congeladas por seguridad.",
+            "agent_3_memory": "Historial en espera.",
+            "agent_4_risk": "VETO ABSOLUTO: Cero compras sin confirmación de IA."
         },
-        "reasoning": "Fallback Cuantitativo Conservador (Preservación de Liquidez en USDT)"
+        "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)"
     }
 
 # Backwards compatibility alias
