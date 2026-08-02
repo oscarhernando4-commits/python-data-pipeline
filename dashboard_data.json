@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-08-02 14:33:41",
+  "updated_at": "2026-08-02 19:36:24",
   "total_balance_usd": 20.11,
-  "usdt_free": 17.4987,
+  "usdt_free": 0.0,
   "bnb_free": 0.00444145,
-  "status": "🟦 Buscando Entrada A+",
+  "status": "🔵 En Vivo LONG (UNIUSDT @ $4.2090)",
   "position": {
-    "symbol": "NINGUNA",
-    "quantity": 0.0,
-    "entry_price": 0.0,
-    "highest_price": 0.0,
+    "symbol": "UNIUSDT",
+    "quantity": 4.13,
+    "entry_price": 4.209,
+    "highest_price": 4.209,
     "break_even": false,
     "trailing_active": false,
     "adaptive_sl_pct": 1.0,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un régimen de compresión de volatilidad con sentimiento de miedo predominante; no existen activos que cumplan con los criterios estrictos de convicción A+ (Score >= 65 y soporte de libro de órdenes > 55%), por lo que la decisión institucional es mantener la liquidez en USDT."
+    "reasoning": "El mercado presenta una estructura de alta selectividad y falta de confirmación en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de seguridad A+ exigido por el comité, por lo que se prioriza la preservación del capital sobre la operativa especulativa."
   }
 }
