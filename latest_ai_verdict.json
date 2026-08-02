@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-02 21:57:23",
-  "selected_symbol": "PEPEUSDT",
+  "timestamp": "2026-08-02 21:58:33",
+  "selected_symbol": "XRPUSDT",
   "action": "BUY_LONG",
   "approved": true,
-  "confidence": 88,
-  "reasoning": "Consenso institucional unánime alcanzado. PEPEUSDT cumple con todos los filtros estrictos de calidad A+, alta convicción en volumen y pertenencia al sector líder del mercado de alta volatilidad.",
+  "confidence": 85,
+  "reasoning": "El comité multi-agente aprueba por unanimidad la operación LONG en XRPUSDT. El activo destaca con un Score Técnico de 85/100, volumen institucional en expansión (surge de 2.42), y un flujo continuo de entradas netas por ETF que contrarresta el sentimiento general de miedo en el mercado. Se cumplen todos los parámetros de gestión de riesgo y filtros históricos.",
   "top_candidates": [
     {
       "symbol": "XRPUSDT",
@@ -15,16 +15,16 @@
       "score": 85
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "AAVEUSDT",
-      "score": 85
-    },
-    {
       "symbol": "VETUSDT",
       "score": 85
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "score": 75
     }
   ]
 }
