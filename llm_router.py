@@ -6,28 +6,46 @@ import urllib.request
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 _KEY_INDEX = 0
+_KEY_COOLDOWN = {}  # key -> timestamp when marked in cooldown
 
 def get_gemini_api_keys():
     """
-    Extracts all 10 available Gemini API Keys from environment variables.
-    Returns a list of non-empty API keys.
+    Extracts all available Gemini API Keys from environment variables.
+    Filters out any keys placed in the 24-hour cooldown blacklist due to HTTP 429.
     """
-    keys = []
+    now = time.time()
+    raw_keys = []
+    
     # Key 1 (Primary)
     k1 = os.getenv("GEMINI_API_KEY", "")
-    if k1: keys.append(k1)
+    if k1: raw_keys.append(k1)
     
     # Keys 2 to 10
     for i in range(2, 11):
         env_name = f"GEMINI_API_KEY_{i:02d}"
         val = os.getenv(env_name, "")
-        if val and val not in keys:
-            keys.append(val)
+        if val and val not in raw_keys:
+            raw_keys.append(val)
             
-    return keys if keys else [""]
+    # Filter out keys in 24-hour cooldown (86400 seconds)
+    healthy_keys = [k for k in raw_keys if (now - _KEY_COOLDOWN.get(k, 0)) >= 86400]
+    
+    # If all keys happen to be in cooldown, clear cooldown to prevent hard lock
+    if not healthy_keys and raw_keys:
+        print("💡 Reiniciando cuotas de claves Gemini para continuar la rotación.")
+        _KEY_COOLDOWN.clear()
+        healthy_keys = raw_keys
+        
+    return healthy_keys if healthy_keys else [""]
+
+def mark_key_in_cooldown(key):
+    """Puts a key in 24-hour cooldown blacklist when it encounters HTTP 429 Rate Limit."""
+    if key and key != "":
+        _KEY_COOLDOWN[key] = time.time()
+        print(f"🚫 Clave Gemini colocada en Cuarentena de 24 Horas por Rate Limit 429. Claves saludables restantes: {len(get_gemini_api_keys())}")
 
 def get_next_gemini_key():
-    """Returns the next API key in round-robin sequence across the 10-key pool."""
+    """Returns the next API key in round-robin sequence across the healthy key pool."""
     global _KEY_INDEX
     keys = get_gemini_api_keys()
     if not keys or keys == [""]:
@@ -186,7 +204,7 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
                             return {"approved": False, "confidence": 0, "action": "HOLD", "reasoning": "Veto de Seguridad: Fallo de formato IA"}
             except urllib.error.HTTPError as e:
                 if e.code == 429:
-                    print(f"🔄 Clave Gemini en Rate Limit 429 ({model_name}). Rotando a la siguiente clave del pool de {len(keys_pool)} keys...")
+                    mark_key_in_cooldown(key)
                     continue
                 else:
                     break
@@ -343,7 +361,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
                             return parsed
             except urllib.error.HTTPError as e:
                 if e.code == 429:
-                    print(f"🔄 Clave Gemini en Rate Limit 429 ({model_name}). Rotando a la siguiente clave del pool de {len(keys_pool)} keys...")
+                    mark_key_in_cooldown(key)
                     continue
                 else:
                     break
