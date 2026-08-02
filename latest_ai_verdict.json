@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-02 14:20:19",
+  "timestamp": "2026-08-02 14:25:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de neutralidad frágil con alta asimetría de riesgo; ningún activo cumple con los criterios de convicción A+ exigidos por el CRO, por lo que se mantiene la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado que el entorno actual es de alta fragilidad y carece de activos con la convicción técnica y de liquidez necesaria para una ejecución segura. Se prioriza la preservación del capital en USDT hasta que el mercado muestre una estructura de acumulación clara y confirmada por volumen institucional.",
   "top_candidates": [
     {
-      "symbol": "UUSDT",
+      "symbol": "TRUMPUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "BNBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SUIUSDT",
       "score": 60
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "XRPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DOGEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SUIUSDT",
       "score": 60
     }
   ]
