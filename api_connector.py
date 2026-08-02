@@ -209,18 +209,16 @@ def get_symbol_price(symbol, is_futures=False):
 def execute_real_spot_market_buy(symbol, usdt_amount):
     """
     Executes a SPOT MARKET BUY using quoteOrderQty (100% free USDT).
-    Includes Live USDT Balance Lock to prevent 'Account has insufficient balance' (code -2010).
+    Uses 30-Minute Smart Balance Cache to conserve Fixie proxy requests (~0 extra API calls).
     """
     import math
     timestamp = int(time.time() * 1000)
+    state = load_real_account_state()
     
-    # Query live free USDT balance to guarantee sufficiency
-    try:
-        live_usdt = get_account_balance("USDT")
-        if live_usdt and live_usdt > 0:
-            usdt_amount = min(usdt_amount, live_usdt * 0.99)
-    except Exception:
-        pass
+    # Read cached USDT balance from 30m diagnosis state (zero Fixie proxy requests consumed)
+    cached_usdt = state.get("_cached_usdt_free", 0.0)
+    if cached_usdt > 0:
+        usdt_amount = min(usdt_amount, cached_usdt * 0.99)
         
     clean_usd = math.floor(usdt_amount * 10) / 10.0
     if clean_usd < 5.1:
@@ -241,7 +239,12 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
     url = f"{BASE_URL}/api/v3/order"
     try:
         res = requests.post(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
-        return res.json()
+        res_json = res.json()
+        if "orderId" in res_json or res_json.get("status") == "FILLED":
+            # Update local USDT balance cache seamlessly
+            state["_cached_usdt_free"] = max(0.0, round(state.get("_cached_usdt_free", clean_usd) - clean_usd, 4))
+            save_real_account_state(state)
+        return res_json
     except Exception as e:
         return {"error": str(e)}
 
@@ -304,7 +307,15 @@ def execute_real_spot_market_sell(symbol, quantity=None):
     url = f"{BASE_URL}/api/v3/order"
     try:
         res = requests.post(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
-        return res.json()
+        res_json = res.json()
+        if "orderId" in res_json or res_json.get("status") == "FILLED":
+            # Update local USDT balance cache seamlessly upon sell
+            state = load_real_account_state()
+            c_price = get_symbol_price(symbol, is_futures=False) or 1.0
+            approx_usdt = float(qty_str) * c_price
+            state["_cached_usdt_free"] = round(state.get("_cached_usdt_free", 0.0) + approx_usdt, 4)
+            save_real_account_state(state)
+        return res_json
     except Exception as e:
         return {"error": str(e)}
 
@@ -622,12 +633,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
     
     # 100% OF AVAILABLE USDT CAPITAL (SPOT ONLY)
     # Strictly truncated to 1 decimal place rounded down (floor)
-    cached_usdt = state.get("_cached_usdt_free")
-    if cached_usdt is None or cached_usdt == 0:
-        live_u = get_account_balance("USDT")
-        raw_usdt = live_u if (live_u and live_u > 0) else state.get("current_balance_usd", 17.29)
-    else:
-        raw_usdt = cached_usdt
+    # Uses 30-Minute Smart Balance Cache to conserve Fixie proxy quota
+    raw_usdt = state.get("_cached_usdt_free", state.get("current_balance_usd", 17.29))
     usdt_free = math.floor(float(raw_usdt) * 0.99 * 10) / 10.0
     
     crypto_balances = []
