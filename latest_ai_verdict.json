@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 16:10:21",
+  "timestamp": "2026-08-02 16:15:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución selectiva con alta incertidumbre; ningún activo cumple con los criterios estrictos de convicción A+ establecidos por el comité, por lo que se mantiene la liquidez en USDT para evitar riesgos innecesarios.",
+  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual presenta una trampa de liquidez y una falta de convicción institucional. Ningún activo cumple con los requisitos de riesgo A+ exigidos por el Chief Risk Officer, por lo que la orden es proteger el 100% de la liquidez en USDT.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "LTCUSDT",
+      "symbol": "MUBUSDT",
       "score": 60
     },
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "FETUSDT",
       "score": 60
     },
     {
-      "symbol": "UUSDT",
+      "symbol": "PAXGUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "JSTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "CAKEUSDT",
       "score": 60
     }
   ]
