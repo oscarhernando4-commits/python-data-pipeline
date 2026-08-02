@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 16:00:21",
+  "timestamp": "2026-08-02 16:05:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de compresión por pánico con una configuración técnica deficiente. Ningún activo cumple con el requisito de Score >= 65 ni con la confirmación de liquidez necesaria, por lo que el comité ha decidido mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica y debilidad sistémica. Ninguno de los candidatos analizados cumple con los criterios de alta convicción (Score >= 65) ni con la profundidad de liquidez necesaria para una operación segura. Se prioriza la preservación del capital en USDT hasta que el mercado muestre una divergencia alcista clara y un aumento en el sentimiento general.",
   "top_candidates": [
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "UUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SOXLBUSDT",
+      "symbol": "JSTUSDT",
       "score": 60
     },
     {
       "symbol": "PAXGUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "MUBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SOXLBUSDT",
       "score": 60
     }
   ]
