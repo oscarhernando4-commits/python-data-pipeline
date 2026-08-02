@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-02 15:00:22",
+  "timestamp": "2026-08-02 15:05:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual carece de la fuerza institucional necesaria para una operación de alta probabilidad. Todos los candidatos fallan en el umbral de Score Técnico (65) y en la confirmación de liquidez del libro de órdenes. Se mantiene la liquidez en USDT para proteger el capital ante la alta incertidumbre macroeconómica.",
+  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con debilidad sistémica generalizada. Ninguno de los candidatos alcanza el umbral de convicción A+ requerido por el comité, y la falta de profundidad en el libro de órdenes aumenta el riesgo de slippage. Se mantiene la posición en efectivo para evitar 'cuchillos cayendo' y proteger el capital institucional.",
   "top_candidates": [
     {
-      "symbol": "UUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XLMUSDT",
+      "symbol": "PEPEUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "BNBUSDT",
       "score": 60
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "QQQBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "APTUSDT",
       "score": 60
     }
   ]
