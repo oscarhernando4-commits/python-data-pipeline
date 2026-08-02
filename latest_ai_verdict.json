@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 08:15:28",
+  "timestamp": "2026-08-02 08:20:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica severa con un índice Fear & Greed en 27. Aunque SPCXBUSDT presenta un score de 75, su historial de 5M es insuficiente para garantizar una ejecución de alta probabilidad. Los candidatos con score 65 (GIGGLEUSDT, BROCCOLI714USDT, TUTUSDT) carecen de un volumen de confirmación (Volume Surge) significativo para validar una entrada A+. Siguiendo la filosofía de preservación de capital y paciencia de francotirador, la mejor operación es no operar y mantener la liquidez en USDT hasta que la estructura de mercado muestre una convicción institucional clara.",
+  "reasoning": "El entorno macroeconómico actual presenta una aversión al riesgo extrema (Fear & Greed 27) y una alta fragilidad sistémica. Aunque SPCXBUSDT presenta un score de 75, su historial de datos es insuficiente para validar una entrada institucional de alta probabilidad. El resto de los candidatos con score >= 65 (EUL, MIRA, GIGGLE, TUT) carecen de un 'Volume Surge' significativo (>1.2x) que confirme acumulación real, operando en un entorno de neutralidad forzada. Siguiendo la filosofía de preservación de capital, la mejor operación es la paciencia de francotirador: mantenerse en liquidez (USDT) hasta que el ratio de activos fuertes supere las 20 unidades.",
   "top_candidates": [
     {
       "symbol": "SPCXBUSDT",
       "score": 75
     },
     {
-      "symbol": "GIGGLEUSDT",
+      "symbol": "EULUSDT",
       "score": 65
     },
     {
-      "symbol": "BROCCOLI714USDT",
+      "symbol": "MIRAUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "GIGGLEUSDT",
       "score": 65
     },
     {
       "symbol": "TUTUSDT",
       "score": 65
-    },
-    {
-      "symbol": "LUNCUSDT",
-      "score": 60
     }
   ]
 }
