@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-02 10:45:19",
+  "timestamp": "2026-08-02 10:50:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica con un índice Fear & Greed en 27. Ninguno de los candidatos analizados alcanza el umbral crítico de Score A+ (>= 65) requerido para una ejecución de alta probabilidad. Los activos con score 60 (AAVE, WLFI, STX) muestran señales de manipulación en marcos temporales cortos y carecen de volumen institucional sólido. Bajo la filosofía de preservación de capital y paciencia de francotirador, la decisión óptima es mantener el 100% de la liquidez en USDT hasta que las condiciones macro mejoren.",
+  "reasoning": "El mercado presenta un estancamiento sistémico con un sesgo bajista severo. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico A+ (>= 65) requerido para una ejecución de alta probabilidad. La mayoría de los activos operan en zonas de debilidad extrema y el entorno macroeconómico, marcado por el miedo y la falta de rotación de capital hacia altcoins, desaconseja cualquier posición larga. La preservación del capital es la prioridad absoluta; nos mantenemos en liquidez (USDT) hasta que las condiciones técnicas y el sentimiento de mercado mejoren.",
   "top_candidates": [
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "OPUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "VETUSDT",
+      "symbol": "EPICUSDT",
       "score": 50
     },
     {
-      "symbol": "KSMUSDT",
+      "symbol": "OGNUSDT",
       "score": 50
     }
   ]
