@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 22:29:29",
-  "selected_symbol": "DOGEUSDT",
+  "timestamp": "2026-08-02 22:30:49",
+  "selected_symbol": "FETUSDT",
   "action": "BUY_LONG",
   "approved": true,
-  "confidence": 75,
-  "reasoning": "El comité ha deliberado y aprobado una operación LONG en DOGEUSDT. A pesar del sentimiento general de miedo en el mercado, el aumento del volumen institucional, la fortaleza del sector de Memes & High Volatility, y un Score Técnico de 85/100 para DOGEUSDT, justifican la entrada. Se aplicarán estrictas medidas de gestión de riesgos, incluyendo un Trailing Stop ATR, para proteger el capital.",
+  "confidence": 78,
+  "reasoning": "El comité multi-agente ha evaluado los candidatos y determinado que FETUSDT cumple con todas las reglas A+ de la directiva institucional: un Score Técnico de 75, pertenencia al sector dominante de AI & Big Data, y la validación de los filtros de riesgo para operar exclusivamente en la tendencia alcista con protección de capital.",
   "top_candidates": [
     {
-      "symbol": "DOGEUSDT",
-      "score": 85
+      "symbol": "HBARUSDT",
+      "score": 75
     },
     {
       "symbol": "ADAUSDT",
       "score": 75
     },
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOXLBUSDT",
       "score": 75
     },
     {
       "symbol": "FETUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "VETUSDT",
       "score": 75
     }
   ]
