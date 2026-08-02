@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 22:48:39",
-  "selected_symbol": "NEARUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "El comité multi-agente valida a NEARUSDT cumpliendo con el umbral técnico A+ (75/100), alineado con el sector de mayor rotación de capital institucional (AI & Big Data) y cumpliendo las normativas estrictas de gestión de riesgo del Chief Risk Officer.",
+  "timestamp": "2026-08-02 22:50:35",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos analizados alcanza el umbral mínimo A+ (Score >= 65) ni muestra la confirmación de volumen y soportes necesaria en el libro de órdenes, obligando al comité a priorizar la preservación del capital y mantener la posición en liquidez (NONE).",
   "top_candidates": [
     {
-      "symbol": "NEARUSDT",
-      "score": 75
+      "symbol": "HBARUSDT",
+      "score": 60
     },
     {
-      "symbol": "HBARUSDT",
-      "score": 75
+      "symbol": "WLFIUSDT",
+      "score": 60
     },
     {
       "symbol": "SOXLBUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "FETUSDT",
-      "score": 75
+      "symbol": "LINKUSDT",
+      "score": 55
     },
     {
-      "symbol": "SAGAUSDT",
-      "score": 75
+      "symbol": "ADAUSDT",
+      "score": 50
     }
   ]
 }

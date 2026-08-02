@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-02 22:48:41",
+  "updated_at": "2026-08-02 22:50:36",
   "total_balance_usd": 19.84,
   "usdt_free": 0.2479,
   "bnb_free": 0.00428773,
-  "status": "🔵 En Vivo LONG (FETUSDT @ $0.1425)",
+  "status": "🔵 En Vivo LONG (FETUSDT @ $0.1423)",
   "position": {
     "symbol": "FETUSDT",
     "quantity": 119.9,
@@ -11,8 +11,8 @@
     "highest_price": 0.1426,
     "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 0.96,
-    "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
+    "adaptive_sl_pct": 0.6,
+    "volatility_regime": "⏳ Escalera 20m: SL Apretado a -0.60%"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -24,10 +24,10 @@
     "agent_7_ceo_anti_loss": "Consenso del CEO Supreme Anti-Loss Profit Maximizer."
   },
   "verdict": {
-    "selected_symbol": "NEARUSDT",
-    "action": "BUY_LONG",
-    "confidence": 75,
-    "approved": true,
-    "reasoning": "El comité multi-agente valida a NEARUSDT cumpliendo con el umbral técnico A+ (75/100), alineado con el sector de mayor rotación de capital institucional (AI & Big Data) y cumpliendo las normativas estrictas de gestión de riesgo del Chief Risk Officer."
+    "selected_symbol": "NONE",
+    "action": "HOLD",
+    "confidence": 0,
+    "approved": false,
+    "reasoning": "Ninguno de los candidatos analizados alcanza el umbral mínimo A+ (Score >= 65) ni muestra la confirmación de volumen y soportes necesaria en el libro de órdenes, obligando al comité a priorizar la preservación del capital y mantener la posición en liquidez (NONE)."
   }
 }
