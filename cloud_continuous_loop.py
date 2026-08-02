@@ -57,6 +57,9 @@ def sleep_until_next_2m_boundary():
     sleep_secs = max(10, int(next_boundary - now))
     return sleep_secs
 
+# Alias so legacy in-memory calls automatically execute 2-minute sleep
+sleep_until_next_5m_boundary = sleep_until_next_2m_boundary
+
 def main():
     sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
     print("=" * 70, flush=True)
