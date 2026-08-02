@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 08:25:15",
+  "timestamp": "2026-08-02 08:30:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una asimetría de debilidad estructural profunda con un Fear & Greed en 27. Aunque SPCXBUSDT, GIGGLE, MIRA, TUT y ZRO cumplen con el umbral de Score >= 65, todos carecen de historial suficiente en 5M, lo que eleva el riesgo de slippage y manipulación. La divergencia entre el BTC neutral y la debilidad masiva de las altcoins, sumada a los riesgos de custodia por el hack de Coldcard, dictan una postura de preservación de capital. Ningún activo presenta una confluencia de volumen institucional y estructura técnica que justifique una entrada A+ en este entorno de alta incertidumbre.",
+  "reasoning": "El entorno macro actual presenta una fuga de liquidez sistémica con un índice Fear & Greed en 27. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico A+ (>= 65). Los activos con mayor puntuación (UUSDT, WLFIUSDT) carecen de profundidad histórica suficiente para una ejecución institucional segura, y el resto de los activos presentan scores mediocres o están bajo presión de FUD. La preservación de capital es la prioridad absoluta; se mantiene la liquidez en USDT.",
   "top_candidates": [
     {
-      "symbol": "SPCXBUSDT",
-      "score": 75
+      "symbol": "UUSDT",
+      "score": 60
     },
     {
-      "symbol": "GIGGLEUSDT",
-      "score": 65
+      "symbol": "WLFIUSDT",
+      "score": 60
     },
     {
       "symbol": "MIRAUSDT",
-      "score": 65
+      "score": 50
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "score": 50
     },
     {
       "symbol": "TUTUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "ZROUSDT",
-      "score": 65
+      "score": 50
     }
   ]
 }
