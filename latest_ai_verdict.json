@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-02 01:03:19",
+  "timestamp": "2026-08-02 01:05:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 95,
-  "reasoning": "El mercado presenta un sesgo institucional de 'FAVOR_SHORT' con un win rate de 39.4% para posiciones cortas frente a un 22.2% para largos. Todos los candidatos pre-filtrados presentan un 'Score Técnico' de 15/100, lo cual es extremadamente bajo y se correlaciona históricamente con pérdidas en el entorno actual. Dado que el usuario ha restringido la operativa exclusivamente a 'BUY_LONG' (Spot), no existe ninguna oportunidad que cumpla con los criterios de probabilidad estadística mínima para una entrada rentable. La divergencia de momentum y el entorno de miedo (Fear & Greed 27) sugieren que cualquier posición larga en activos con score 15/100 resultaría en una liquidación de capital. Se recomienda esperar a una mejora en el score técnico o un cambio en el sesgo de mercado.",
+  "reasoning": "El análisis cruzado de los 10 candidatos revela que todos presentan un 'Score Técnico' de 15/100, lo cual, bajo el marco de trabajo actual, indica una alta probabilidad de trampa de liquidez y purga de activos débiles. Dado que el usuario ha restringido la operativa exclusivamente a 'BUY_LONG' (Spot) y el sesgo de mercado actual es 'FAVOR_SHORT' con un entorno de miedo (Fear & Greed 27), no existe ninguna configuración técnica que cumpla con los requisitos de probabilidad de éxito para una posición larga. Los activos listados muestran divergencias bajistas o falta de volumen de acumulación institucional, lo que hace que cualquier entrada en largo sea estadísticamente peligrosa en este momento.",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
+      "symbol": "COTIUSDT",
+      "score": 15
+    },
+    {
+      "symbol": "DEXEUSDT",
       "score": 15
     },
     {
@@ -15,11 +19,7 @@
       "score": 15
     },
     {
-      "symbol": "COTIUSDT",
-      "score": 15
-    },
-    {
-      "symbol": "DEXEUSDT",
+      "symbol": "HEIUSDT",
       "score": 15
     },
     {
