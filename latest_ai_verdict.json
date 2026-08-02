@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 16:55:21",
+  "timestamp": "2026-08-02 17:00:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con alta incertidumbre. Ninguno de los candidatos analizados cumple con los criterios estrictos de riesgo y soporte de liquidez exigidos por el comité, por lo que la decisión institucional es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes (50% Bids) y la ausencia de un volumen institucional confirmado hacen que el riesgo de 'trampa de valor' sea demasiado elevado, optando por mantener la liquidez en USDT.",
   "top_candidates": [
-    {
-      "symbol": "EWYBUSDT",
-      "score": 85
-    },
     {
       "symbol": "UUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "MUBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "QQQBUSDT",
       "score": 75
     }
   ]
