@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 16:25:20",
+  "timestamp": "2026-08-02 16:30:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la liquidez en USDT debido a que el mercado actual carece de activos con un score técnico superior a 65 y una estructura de soporte institucional sólida, evitando así el riesgo de 'cuchillos cayendo' en un entorno de alta volatilidad y desinversión sistémica.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad técnica generalizada sin confirmación de soporte institucional. Dado que ningún candidato alcanza el umbral de Score 65 requerido por el Comité de Riesgo, la decisión unánime es proteger la liquidez en USDT hasta que aparezca una configuración de alta probabilidad.",
   "top_candidates": [
     {
       "symbol": "LTCUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "SOXLBUSDT",
-      "score": 70
+      "score": 60
     },
     {
       "symbol": "WLDUSDT",
-      "score": 70
+      "score": 60
     },
     {
       "symbol": "UUSDT",
       "score": 60
     },
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "UNIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "XAUTUSDT",
       "score": 60
     }
   ]
