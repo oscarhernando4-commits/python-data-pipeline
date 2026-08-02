@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 465,
+    "total_trades": 485,
     "wins": 160,
-    "losses": 305,
-    "win_rate_pct": 34.41,
-    "total_pnl_usd": 67.96814545454548
+    "losses": 325,
+    "win_rate_pct": 32.99,
+    "total_pnl_usd": 46.76814545454543
   },
   "learned_rules": {
     "blocked_patterns": [
-      "Preventive Block for BTCUSDT: Loss logged at 63662.44 -> Hit SL on BTCUSDT (-$1.65). Re-Trading!",
       "Preventive Block for NEARUSDT: Loss logged at 1.609 -> Hit SL on NEARUSDT (-$1.57). Re-Trading!",
       "Preventive Block for NEARUSDT: Loss logged at 1.579 -> Hit SL on NEARUSDT (-$1.55). Re-Trading!",
       "Preventive Block for DOTUSDT: Loss logged at 0.765 -> Hit SL on DOTUSDT (-$1.60). Re-Trading!",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on TRXUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on HYPERUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on EULUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on DEXEUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on DEXEUSDT)",
+      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on XRPUSDT)"
     ],
     "boosted_patterns": [
       "RSI < 30 + MACD Bullish Cross + Volume > 1.5x (High Probability Win)",
@@ -7434,6 +7434,346 @@
       "context": {
         "score": 65,
         "rsi_15m": 50.78,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-021",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-022",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-023",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-024",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-025",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-026",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-030",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-031",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-032",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-033",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-034",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-035",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-036",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-037",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-038",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:55:46",
+      "account_id": "SIM-040",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0739,
+      "exit_price": 1.0836,
+      "pnl_usd": -1.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$1.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.51,
         "macro_trend_4h": "NEUTRAL"
       }
     }

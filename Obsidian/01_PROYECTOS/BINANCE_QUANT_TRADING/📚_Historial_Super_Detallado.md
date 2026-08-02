@@ -3,12 +3,12 @@ tags:
   - trading
   - historial_completo
   - binance
-date: 2026-08-02 05:50:44
+date: 2026-08-02 05:55:46
 ---
 
 # 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
 
-> **Última Actualización:** `2026-08-02 05:50:44`
+> **Última Actualización:** `2026-08-02 05:55:46`
 > Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
 
 | Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |
@@ -478,4 +478,24 @@ date: 2026-08-02 05:50:44
 | 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
 | 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
 | 2026-08-02 05:50:44 | 🥇 GRUPO 0: RÉPL... | DEXEUSDT | SHORT | $2.334 | $2.333 | $-1.07 | 65 | 50.8 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
 
