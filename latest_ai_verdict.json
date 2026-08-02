@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-02 02:30:20",
-  "selected_symbol": "INJUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "INJUSDT presenta el score técnico más alto (75/100) en un entorno de mercado con Fear & Greed en 27. Su resiliencia institucional frente a la incertidumbre regulatoria y la ausencia de noticias negativas directas lo posicionan como el activo de mayor probabilidad matemática para un setup A+. Se prioriza la acumulación en este activo sobre el resto de la lista debido a su fortaleza relativa superior.",
+  "timestamp": "2026-08-02 02:35:19",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada con un índice Fear & Greed en 27. Aunque existen activos con scores técnicos de 65-75, el análisis macro indica que estos movimientos son inyecciones de liquidez especulativa de corto plazo sin soporte institucional real. La falta de historial sólido en los candidatos y la alta correlación negativa hacia el riesgo dictan una preservación de capital absoluta. No se cumplen los criterios de alta probabilidad (A+) bajo el filtro de seguridad institucional.",
   "top_candidates": [
     {
-      "symbol": "INJUSDT",
+      "symbol": "ORDIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 65
     },
     {
-      "symbol": "ORDIUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "ALGOUSDT",
+      "symbol": "DASHUSDT",
       "score": 65
     }
   ]
