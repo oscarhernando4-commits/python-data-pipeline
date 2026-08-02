@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-02 10:25:19",
+  "timestamp": "2026-08-02 10:30:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los activos analizados cumple con el umbral mínimo de Score Técnico A+ (>= 65). El mercado presenta una estructura de distribución institucional con alta volatilidad y falta de fortaleza en los activos de mayor capitalización. Siguiendo la filosofía de preservación de capital y paciencia de francotirador, la decisión óptima es mantener la liquidez en USDT hasta que aparezca un setup de alta probabilidad matemática.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con un índice Fear & Greed de 27. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico A+ (>= 65). Los activos con score 60 presentan datos históricos insuficientes y volatilidad errática, lo que representa un riesgo inaceptable para la preservación de capital. Siguiendo la filosofía de paciencia de francotirador, la mejor operación es mantener la liquidez en USDT hasta que el mercado muestre una estructura de acumulación clara y confirmada.",
   "top_candidates": [
     {
-      "symbol": "ZROUSDT",
+      "symbol": "UUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "OPUSDT",
       "score": 60
     },
     {
@@ -15,15 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "GIGGLEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ENSOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "TUTUSDT",
+      "symbol": "MIRAUSDT",
       "score": 50
     }
   ]
