@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 17:00:21",
+  "timestamp": "2026-08-02 17:05:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes (50% Bids) y la ausencia de un volumen institucional confirmado hacen que el riesgo de 'trampa de valor' sea demasiado elevado, optando por mantener la liquidez en USDT.",
+  "reasoning": "El mercado se encuentra en una fase de consolidación por agotamiento de liquidez. Ningún activo cumple con el requisito de soporte de ballenas (Bids > 55%) ni con la convicción técnica necesaria para superar el veto del Chief Risk Officer. Se prioriza la preservación del capital en USDT hasta que el sentimiento de mercado mejore o aparezca una oportunidad con confirmación institucional clara.",
   "top_candidates": [
     {
-      "symbol": "UUSDT",
+      "symbol": "EWYBUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "WLDUSDT",
       "score": 75
     },
     {
-      "symbol": "MUBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "QQQBUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     }
   ]
