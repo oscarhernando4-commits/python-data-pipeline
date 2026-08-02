@@ -1,12 +1,38 @@
 {
-  "STXUSDT": [
+  "REUSDT": [
     {
-      "timestamp": "2026-08-02 09:15:10",
-      "price": 0.1383,
+      "timestamp": "2026-08-02 09:20:11",
+      "price": 0.426,
       "score": 0,
-      "rsi": 43.35,
+      "rsi": 32.36,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.64,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ZENUSDT": [
+    {
+      "timestamp": "2026-08-02 09:20:11",
+      "price": 4.081,
+      "score": 30,
+      "rsi": 61.5,
+      "macd": "Neutral",
+      "volume_surge": 0.08,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ZROUSDT": [
+    {
+      "timestamp": "2026-08-02 09:20:11",
+      "price": 0.72,
+      "score": 0,
+      "rsi": 45.32,
+      "macd": "Neutral",
+      "volume_surge": 0.09,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

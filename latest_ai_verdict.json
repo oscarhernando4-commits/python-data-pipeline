@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-02 09:15:16",
+  "timestamp": "2026-08-02 09:20:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema con un sesgo bajista predominante y una falta de rotación de capital saludable. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico A+ (>= 65) requerido por nuestra política de preservación de capital. La ausencia de fuerza relativa y la presencia de FUD sistémico (hackeos y restricciones regulatorias) invalidan cualquier intento de entrada en largo. La estrategia institucional dicta mantener el 100% de la liquidez en USDT para evitar la exposición a 'cuchillos cayendo' y proteger el capital de la volatilidad irracional.",
+  "reasoning": "Ningún activo cumple con el umbral mínimo de Score A+ (>= 65). El mercado presenta una debilidad sistémica con pánico de liquidez, y los candidatos con mayor score (DOT, WLFI, INJ) carecen de profundidad histórica y volumen institucional suficiente para validar una entrada. La preservación de capital es la prioridad absoluta bajo las condiciones actuales de mercado.",
   "top_candidates": [
     {
       "symbol": "DOTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
@@ -19,11 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "MIRAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "GIGGLEUSDT",
+      "symbol": "SYNUSDT",
       "score": 50
     }
   ]
