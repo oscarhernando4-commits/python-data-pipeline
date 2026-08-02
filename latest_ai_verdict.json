@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-02 22:18:37",
+  "timestamp": "2026-08-02 22:20:55",
   "selected_symbol": "DOGEUSDT",
   "action": "BUY_LONG",
   "approved": true,
-  "confidence": 78,
-  "reasoning": "El comité multi-agente valida a DOGEUSDT como el candidato excepcional que supera el umbral A+ con un Score de 75 y un Volume Surge de 1.48x, respaldado por actividad ballenera significativa y cumpliendo estrictamente con los parámetros de riesgo y gestión de capital del CEO.",
+  "confidence": 85,
+  "reasoning": "El comité multi-agente cuantitativo ha deliberado por unanimidad encontrando en DOGEUSDT el único candidato con un Score Técnico excepcional (85/100), volumen superior a 2.5x, pertenencia al sector líder de Memes & High Volatility y con fuerte actividad de ballenas institucional que valida la ruptura alcista.",
   "top_candidates": [
     {
-      "symbol": "XLMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AAVEUSDT",
-      "score": 75
+      "symbol": "DOGEUSDT",
+      "score": 85
     },
     {
       "symbol": "NEARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ADAUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
