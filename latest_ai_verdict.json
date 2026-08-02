@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-02 23:28:20",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional), por lo que la estrategia más rentable y segura es mantener la liquidez en USDT para evitar pérdidas por volatilidad errática.",
+  "timestamp": "2026-08-02 23:30:19",
+  "selected_symbol": "XAUTUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "El comité multi-agente valida por unanimidad la entrada en XAUTUSDT respaldado por el mejor sector en rotación de capital (RWA & Precious Metals), un score técnico sólido de 75 y la estricta alineación con los parámetros de gestión de riesgo establecidos.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SKHYBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "MORPHOUSDT",
       "score": 75
     },
     {
@@ -23,8 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "MUBUSDT",
+      "symbol": "ZBTUSDT",
       "score": 75
+    },
+    {
+      "symbol": "BONKUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "HBARUSDT",
+      "score": 65
     }
   ]
 }
