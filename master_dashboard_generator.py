@@ -222,16 +222,17 @@ Análisis de rendimiento detallado a 1D, 3D, 1W, 2W, y 1M:
     except Exception as e:
         print(f"Error generando matriz local: {e}")
         
-    # Run group analysis generator
+    # Run super cerebro report generator
     try:
-        import generate_group_analysis
-        generate_group_analysis.generate_report()
+        import super_cerebro_analyzer
+        super_cerebro_analyzer.generate_super_cerebro_report()
     except Exception as e:
-        print(f"Error generando analisis por grupo: {e}")
-        
+        print(f"Error generando reporte del super cerebro: {e}")
+
     print(f"Dashboard y Sub-Reportes generados exitosamente a las {now_str}")
     return file_path
 
 if __name__ == '__main__':
     sys.stdout.reconfigure(encoding='utf-8')
     generate_master_dashboard()
+
