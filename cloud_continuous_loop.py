@@ -65,6 +65,7 @@ def main():
     print(f"🎯 Total Ciclos: {TOTAL_CYCLES} ejecuciones continuas sin colas de espera", flush=True)
     print("=" * 70, flush=True)
     
+    import importlib
     import data_fetcher
     import pipeline_processor
     import master_dashboard_generator
@@ -74,6 +75,14 @@ def main():
         print(f"\n[{now_str}] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", flush=True)
         print(f"🔄 CICLO [{cycle}/{TOTAL_CYCLES}] - ESCANEO Y OPERACIÓN CUÁNTICA EN VIVO", flush=True)
         print(f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", flush=True)
+        
+        # Hot-reload modules so any pulled git improvements take effect immediately
+        try:
+            importlib.reload(data_fetcher)
+            importlib.reload(pipeline_processor)
+            importlib.reload(master_dashboard_generator)
+        except Exception:
+            pass
         
         # Step 1: Fetch pairs
         try:
