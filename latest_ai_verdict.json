@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-02 12:55:14",
-  "selected_symbol": "CAKEUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 70,
-  "reasoning": "CAKEUSDT es el único activo que cumple con el umbral mínimo de Score Técnico (70/100) establecido por el Departamento de Riesgo. Presenta un Volume Surge de 3.34, lo que indica una entrada de capital institucional significativa frente a la debilidad sistémica del mercado. El RSI de 59.57 se encuentra en zona de equilibrio, permitiendo una entrada técnica válida bajo la estrategia de 'Rebote de Fortaleza Relativa'. Se descartan otros activos por no alcanzar el umbral de 65 o por presentar perfiles de riesgo no alineados con la preservación de capital.",
+  "timestamp": "2026-08-02 13:00:17",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un estado de estancamiento sistémico con un sesgo bajista predominante. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score A+ (>= 65) requerido para una operativa de alta probabilidad. La ausencia de volumen comprador significativo y la persistencia de la distribución institucional invalidan cualquier setup de compra en este momento. La preservación de capital es la prioridad absoluta; nos mantenemos en liquidez (USDT) hasta que las condiciones macro mejoren y los activos muestren una estructura de acumulación clara.",
   "top_candidates": [
-    {
-      "symbol": "CAKEUSDT",
-      "score": 70
-    },
     {
       "symbol": "XAUTUSDT",
       "score": 60
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "FILUSDT",
       "score": 60
     },
     {
-      "symbol": "NEXOUSDT",
+      "symbol": "CAKEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ETHFIUSDT",
       "score": 60
     }
   ]
