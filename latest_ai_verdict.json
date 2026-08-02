@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-02 16:35:20",
+  "timestamp": "2026-08-02 16:40:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 45,
-  "reasoning": "El mercado se encuentra en una fase de alta volatilidad y baja liquidez institucional. Ninguno de los candidatos analizados supera el filtro de riesgo del Comité, por lo que se mantiene la liquidez en USDT para evitar trampas de valor.",
+  "reasoning": "El comité ha decidido mantener la liquidez en USDT. A pesar de que SOL e ICP presentan scores técnicos elevados, la ausencia de una dominancia clara en el libro de órdenes (Bids < 55%) y el entorno de 'Fear' global aumentan el riesgo de una trampa de liquidez. Se prioriza la preservación del capital sobre la especulación en un mercado sin convicción institucional clara.",
   "top_candidates": [
+    {
+      "symbol": "SOLUSDT",
+      "score": 85
+    },
     {
       "symbol": "ICPUSDT",
       "score": 85
     },
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AAVEUSDT",
+      "symbol": "WLDUSDT",
       "score": 75
     },
     {
