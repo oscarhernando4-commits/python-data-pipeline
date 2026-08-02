@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 21:02:20",
+  "timestamp": "2026-08-02 21:04:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual carece de la profundidad y la convicción institucional necesarias para ejecutar una operación de compra segura, priorizando la protección del capital frente a la volatilidad incierta.",
+  "reasoning": "El mercado se encuentra en una fase de consolidación con aversión al riesgo selectiva. Ninguno de los candidatos cumple con el umbral estricto de convicción A+ exigido por el comité, y la falta de profundidad en el libro de órdenes impide una ejecución segura. Se prioriza la protección del capital sobre la especulación en un entorno de alta volatilidad.",
   "top_candidates": [
     {
-      "symbol": "TAOUSDT",
+      "symbol": "ETCUSDT",
+      "score": 100
+    },
+    {
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "VETUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUNUSDT",
+      "symbol": "WLDUSDT",
       "score": 75
     }
   ]
