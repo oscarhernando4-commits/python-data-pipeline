@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-02 19:20:25",
+  "timestamp": "2026-08-02 19:22:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de seguridad exigido por el Comité. La ausencia de muros de soporte claros en el libro de órdenes y la volatilidad errática en un entorno de miedo extremo dictan una postura de espera para evitar pérdidas innecesarias.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La falta de profundidad en el libro de órdenes y la incertidumbre macro actual dictan una postura de preservación de capital (HOLD) para evitar trampas de valor.",
   "top_candidates": [
     {
       "symbol": "BCHUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "PEPEUSDT",
+      "score": 75
+    },
+    {
       "symbol": "FETUSDT",
       "score": 75
     },
     {
-      "symbol": "SPCXBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ONDOUSDT",
+      "symbol": "KORUBUSDT",
       "score": 75
     }
   ]
