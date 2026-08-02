@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-02 14:25:22",
+  "timestamp": "2026-08-02 14:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno actual es de alta fragilidad y carece de activos con la convicción técnica y de liquidez necesaria para una ejecución segura. Se prioriza la preservación del capital en USDT hasta que el mercado muestre una estructura de acumulación clara y confirmada por volumen institucional.",
+  "reasoning": "El mercado carece de la convicción institucional necesaria para una entrada de alta probabilidad. Todos los candidatos presentan un score técnico de 60, lo cual es insuficiente bajo nuestras reglas de oro (Score >= 65). Se mantiene la liquidez en USDT para evitar el riesgo de 'falling knives' en un entorno de mercado con sentimiento de miedo.",
   "top_candidates": [
     {
-      "symbol": "TRUMPUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "BNBUSDT",
+      "symbol": "XLMUSDT",
       "score": 60
     },
     {
@@ -20,6 +16,10 @@
     },
     {
       "symbol": "GRAMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "PEPEUSDT",
       "score": 60
     },
     {
