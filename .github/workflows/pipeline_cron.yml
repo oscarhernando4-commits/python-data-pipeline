@@ -9,7 +9,7 @@ on:
 
 concurrency:
   group: "continuous-quant-engine"
-  cancel-in-progress: true # When a fresh 4h cycle starts, it cleanly replaces the previous one
+  cancel-in-progress: false # Keeps the 4-hour runner active without premature cancellations
 
 jobs:
   continuous_trade_and_sync:

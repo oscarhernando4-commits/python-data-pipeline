@@ -160,14 +160,39 @@ def get_real_futures_usdt_balance():
     return sum([float(a["availableBalance"]) for a in assets if a["asset"] in ["USDT", "USDC"]])
 
 def get_symbol_price(symbol, is_futures=False):
-    """Fetch live price for a specific symbol. NO proxy needed (using data-api)."""
+    """
+    Ultra-resilient live price fetcher with multiple fallback mirrors and proxy backup.
+    """
+    endpoints = [
+        f"https://data-api.binance.vision/api/v3/ticker/price?symbol={symbol}",
+        f"https://api.binance.com/api/v3/ticker/price?symbol={symbol}",
+        f"https://api1.binance.com/api/v3/ticker/price?symbol={symbol}",
+        f"https://api2.binance.com/api/v3/ticker/price?symbol={symbol}",
+        f"https://api3.binance.com/api/v3/ticker/price?symbol={symbol}"
+    ]
+    
+    for url in endpoints:
+        try:
+            res = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, timeout=3)
+            if res.status_code == 200:
+                p = float(res.json().get("price", 0))
+                if p > 0:
+                    return p
+        except Exception:
+            continue
+            
+    # Fallback to proxy if direct access has networking issues
     try:
-        # data-api.binance.vision is fully public and not geo-blocked for US IPs
-        res = requests.get(f"https://data-api.binance.vision/api/v3/ticker/price?symbol={symbol}", timeout=5).json()
-        price = float(res.get("price", 0))
-        return price if price > 0 else None
+        url = f"https://api.binance.com/api/v3/ticker/price?symbol={symbol}"
+        res = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, proxies=PROXIES, timeout=6)
+        if res.status_code == 200:
+            p = float(res.json().get("price", 0))
+            if p > 0:
+                return p
     except Exception:
-        return None
+        pass
+        
+    return None
 
 # ============================================================
 # ORDER EXECUTION (Uses Fixie proxy - counted towards quota)
