@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-02 21:12:22",
+  "timestamp": "2026-08-02 21:14:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos, no existe una confluencia de liquidez en el libro de órdenes (Bids < 65%) ni una confirmación de tendencia que minimice el riesgo de 'falling knives' en el entorno macro actual.",
+  "confidence": 45,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de soporte en libro de órdenes > 55%). La neutralidad en el libro de órdenes y el sentimiento de miedo generalizado dictan una postura de espera para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "ETCUSDT",
@@ -15,15 +15,15 @@
       "score": 90
     },
     {
+      "symbol": "XRPUSDT",
+      "score": 85
+    },
+    {
       "symbol": "SUNUSDT",
       "score": 85
     },
     {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NEARUSDT",
       "score": 75
     }
   ]
