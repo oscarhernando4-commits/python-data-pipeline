@@ -556,7 +556,7 @@ def run_infinite_trading_matrix_cycle():
         
         # Check if there is a top bullish Spot opportunity across all analyzed pairs
         best_spot_long = None
-        long_candidates = [c for c in candidates_list if c["score"] >= real_long_score]
+        long_candidates = [c for c in bullish_candidates if c["score"] >= real_long_score]
         if long_candidates:
             long_candidates.sort(key=lambda x: x["score"], reverse=True)
             best_spot_long = long_candidates[0]

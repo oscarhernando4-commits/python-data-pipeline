@@ -25,18 +25,15 @@ def run_git_push_sync(cycle_num: int):
         if gh_token and gh_repo:
             subprocess.run(["git", "remote", "set-url", "origin", f"https://x-access-token:{gh_token}@github.com/{gh_repo}.git"], check=False)
 
-        # Rebase pull first
-        subprocess.run(["git", "pull", "--rebase", "-X", "theirs", "origin", "main"], check=False)
+        # Add and commit local cycle updates first
         subprocess.run(["git", "add", "."], check=False)
-        
-        # Check if there are changes
         status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
-        if not status.stdout.strip():
-            print(f"ℹ️ [Cycle {cycle_num}] No hay cambios para sync.")
-            return
-
-        msg = f"chore: live 5m sync [Cycle {cycle_num}/{TOTAL_CYCLES}] [{now_utc}]"
-        subprocess.run(["git", "commit", "-m", msg], check=False)
+        if status.stdout.strip():
+            msg = f"chore: live 5m sync [Cycle {cycle_num}/{TOTAL_CYCLES}] [{now_utc}]"
+            subprocess.run(["git", "commit", "-m", msg], check=False)
+            
+        # Rebase pull cleanly on committed working tree
+        subprocess.run(["git", "pull", "--rebase", "-X", "theirs", "origin", "main"], check=False)
         
         # Push with retry
         for attempt in range(3):
