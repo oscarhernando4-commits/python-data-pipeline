@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-02 19:48:20",
+  "timestamp": "2026-08-02 19:50:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión de alta frecuencia con una falta crítica de profundidad en el libro de órdenes y una ausencia de confirmación de volumen institucional. Ningún candidato cumple con el umbral de seguridad A+ exigido por el comité, por lo que la estrategia prioritaria es la preservación del capital mediante el mantenimiento de la posición en efectivo (HOLD).",
+  "reasoning": "El mercado se encuentra en un estado de indecisión técnica con falta de liquidez compradora (Bids 50%) y una volatilidad que no garantiza una alta probabilidad de éxito. Se prioriza la protección del capital sobre la ejecución especulativa, esperando una señal de confirmación más clara en los activos de alta capitalización.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LINKUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
       "symbol": "SUIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PEPEUSDT",
       "score": 75
     }
   ]
