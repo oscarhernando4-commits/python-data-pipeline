@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 06:10:39",
-  "selected_symbol": "RENDERUSDT",
+  "timestamp": "2026-08-02 06:15:43",
+  "selected_symbol": "ORDIUSDT",
   "action": "BUY_LONG",
   "approved": true,
-  "confidence": 75,
-  "reasoning": "RENDER cumple con el umbral de Score Técnico (75/100) y presenta un Volume Surge de 1.3x, indicando acumulación institucional. A diferencia de otros activos, RENDER está respaldado por una narrativa de adopción de agentes de IA, lo que reduce el riesgo de ser una trampa de valor. El RSI de 63.26 se encuentra en zona de fuerza sin estar sobrecomprado, alineándose con la estrategia de capturar momentum en activos con resiliencia atípica en un entorno de mercado 'Fear'.",
+  "confidence": 70,
+  "reasoning": "Fallback Cuantitativo Tras Fallo de Conexión AI",
   "top_candidates": [
     {
-      "symbol": "INJUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "RENDERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "FETUSDT",
-      "score": 70
+      "symbol": "ORDIUSDT",
+      "score": 65
     },
     {
       "symbol": "SYNUSDT",
       "score": 65
     },
     {
-      "symbol": "ORDIUSDT",
+      "symbol": "DEXEUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "TUTUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "KITEUSDT",
       "score": 65
     }
   ]
