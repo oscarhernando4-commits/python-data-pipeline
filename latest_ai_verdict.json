@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-02 20:22:20",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la fortaleza relativa de LINKUSDT, el entorno de mercado actual (Fear 27) y la falta de dominancia clara en el libro de órdenes impiden alcanzar el umbral de convicción A+ requerido por la Regla de Oro #1.",
+  "timestamp": "2026-08-02 20:24:18",
+  "selected_symbol": "LINKUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "Tras analizar el entorno de mercado, se ha determinado que LINKUSDT es el único activo que cumple con el umbral de convicción A+ (Score 85) y pertenece al sector RWA, el cual está atrayendo capital institucional. Se prioriza la protección del capital mediante la implementación de un Trailing Stop dinámico, evitando activos de baja capitalización que han mostrado resultados negativos en las simulaciones históricas.",
   "top_candidates": [
     {
       "symbol": "LINKUSDT",
       "score": 85
     },
     {
-      "symbol": "UNIUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
@@ -19,12 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "CRVUSDT",
-      "score": 70
+      "symbol": "DASHUSDT",
+      "score": 75
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 65
+      "symbol": "CRVUSDT",
+      "score": 70
     }
   ]
 }
