@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-02 23:11:51",
+  "timestamp": "2026-08-02 23:12:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada y alta volatilidad sin una base técnica sólida. Ninguno de los activos analizados cumple con el umbral de seguridad A+ (Score >= 65) requerido por el comité para mitigar el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado bajista.",
+  "reasoning": "El mercado actual presenta una configuración de riesgo inaceptable. Ningún activo alcanza el umbral de Score 65 requerido por el Comité, y la falta de profundidad en el libro de órdenes junto con la debilidad macroeconómica invalidan cualquier entrada. Se mantiene la posición en efectivo para evitar trampas de liquidez.",
   "top_candidates": [
     {
-      "symbol": "NEARUSDT",
+      "symbol": "SOXLBUSDT",
       "score": 60
     },
     {
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SOXLBUSDT",
+      "symbol": "BONKUSDT",
       "score": 60
     },
     {
       "symbol": "RENDERUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "OPUSDT",
       "score": 55
     }
   ]

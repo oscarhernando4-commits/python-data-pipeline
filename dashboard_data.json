@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-08-02 23:11:52",
-  "total_balance_usd": 19.78,
-  "usdt_free": 0.2479,
+  "updated_at": "2026-08-02 23:12:25",
+  "total_balance_usd": 19.67,
+  "usdt_free": 19.67209,
   "bnb_free": 0.00428773,
-  "status": "🔵 En Vivo LONG (FETUSDT @ $0.1418)",
+  "status": "🟦 Buscando Entrada A+",
   "position": {
-    "symbol": "FETUSDT",
-    "quantity": 119.9,
-    "entry_price": 0.1426,
-    "highest_price": 0.1426,
+    "symbol": "NINGUNA",
+    "quantity": 0.0,
+    "entry_price": 0.0,
+    "highest_price": 0.0,
     "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 0.6,
-    "volatility_regime": "⏳ Escalera 20m: SL Apretado a -0.60%"
+    "adaptive_sl_pct": 1.0,
+    "volatility_regime": "🔵 Standard ATR"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de distribución forzada y alta volatilidad sin una base técnica sólida. Ninguno de los activos analizados cumple con el umbral de seguridad A+ (Score >= 65) requerido por el comité para mitigar el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado bajista."
+    "reasoning": "El mercado actual presenta una configuración de riesgo inaceptable. Ningún activo alcanza el umbral de Score 65 requerido por el Comité, y la falta de profundidad en el libro de órdenes junto con la debilidad macroeconómica invalidan cualquier entrada. Se mantiene la posición en efectivo para evitar trampas de liquidez."
   }
 }
