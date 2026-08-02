@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-02 21:40:21",
+  "updated_at": "2026-08-02 21:42:25",
   "total_balance_usd": 20.11,
   "usdt_free": 0.1778,
   "bnb_free": 0.00437518,
-  "status": "🔵 En Vivo LONG (ASTERUSDT @ $0.6050)",
+  "status": "🔵 En Vivo LONG (ASTERUSDT @ $0.6060)",
   "position": {
     "symbol": "ASTERUSDT",
     "quantity": 28.64,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 45,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación fragmentada y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ requerido por el Comité, por lo que la estrategia óptima es preservar la liquidez en USDT y evitar la exposición a activos de alta beta en un entorno de 'Fear' elevado."
+    "reasoning": "A pesar de tener activos con scores técnicos altos, la ausencia de una dominancia clara en el libro de órdenes (Bids < 55%) y la tendencia neutral del mercado global invalidan la entrada bajo nuestras reglas de oro A+."
   }
 }
