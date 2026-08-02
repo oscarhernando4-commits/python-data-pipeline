@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-02 21:20:23",
+  "timestamp": "2026-08-02 21:22:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, ninguno cumple con el requisito de soporte de liquidez (Bids > 55%) ni con una confirmación de volumen institucional suficiente. El mercado se encuentra en una fase de alta incertidumbre y volatilidad, por lo que el comité ha decidido mantener la liquidez en espera de una señal de alta convicción.",
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos, el libro de órdenes no muestra una dominancia compradora clara (Bids < 55%) y el entorno macroeconómico presenta un riesgo sistémico elevado que no justifica la exposición al mercado en este momento.",
   "top_candidates": [
     {
+      "symbol": "XRPUSDT",
+      "score": 75
+    },
+    {
       "symbol": "LINKUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "TAOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NEARUSDT",
       "score": 75
     }
   ]

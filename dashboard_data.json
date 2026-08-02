@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02 21:20:24",
+  "updated_at": "2026-08-02 21:22:23",
   "total_balance_usd": 20.06,
   "usdt_free": 0.1778,
   "bnb_free": 0.00437518,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "A pesar de que varios activos presentan un score técnico de 75, ninguno cumple con el requisito de soporte de liquidez (Bids > 55%) ni con una confirmación de volumen institucional suficiente. El mercado se encuentra en una fase de alta incertidumbre y volatilidad, por lo que el comité ha decidido mantener la liquidez en espera de una señal de alta convicción."
+    "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos, el libro de órdenes no muestra una dominancia compradora clara (Bids < 55%) y el entorno macroeconómico presenta un riesgo sistémico elevado que no justifica la exposición al mercado en este momento."
   }
 }
