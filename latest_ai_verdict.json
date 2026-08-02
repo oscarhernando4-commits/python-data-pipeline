@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-02 06:00:43",
+  "timestamp": "2026-08-02 06:05:46",
   "selected_symbol": "ERAUSDT",
   "action": "BUY_LONG",
   "approved": true,
@@ -8,10 +8,14 @@
   "top_candidates": [
     {
       "symbol": "ERAUSDT",
-      "score": 75
+      "score": 85
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "INJUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "RENDERUSDT",
       "score": 75
     },
     {
@@ -19,12 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "RENDERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "INJUSDT",
-      "score": 75
+      "symbol": "VANRYUSDT",
+      "score": 70
     }
   ]
 }
