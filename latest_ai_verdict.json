@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 04:20:18",
+  "timestamp": "2026-08-02 04:25:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de tener candidatos con score 65-75, el entorno macroeconómico actual (Fear & Greed 27) y la alta volatilidad en los activos de alta capitalización sugieren una alta probabilidad de arrastre sistémico. Ninguno de los candidatos presenta un 'Volume Surge' superior a 1.2x, lo cual es una condición crítica para confirmar la entrada de capital institucional. La estrategia de preservación de capital dicta mantenerse en liquidez (HOLD) hasta que el mercado muestre una estructura de acumulación más clara y menos dependiente de la fragilidad de BTC.",
+  "reasoning": "A pesar de que BCH, SUN y ZRO presentan un score técnico de 75, el análisis de mercado revela que carecen de historial consolidado en 4H y son identificados como bombas de liquidez especulativas de corto plazo. El entorno macro es de alta incertidumbre con sesgo neutral y aversión al riesgo institucional. Siguiendo la filosofía de preservación de capital de Francisca Serrano y la paciencia de francotirador de Hyenuk Chu, no se cumplen los criterios de alta probabilidad para un setup A+ en un mercado que exhibe capitulación selectiva y falta de convicción.",
   "top_candidates": [
     {
       "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "ORDIUSDT",
+      "symbol": "SUNUSDT",
       "score": 75
     },
     {
-      "symbol": "CFXUSDT",
+      "symbol": "ZROUSDT",
       "score": 75
     },
     {
-      "symbol": "1000SATSUSDT",
-      "score": 65
+      "symbol": "ROSEUSDT",
+      "score": 70
     },
     {
-      "symbol": "UNIUSDT",
+      "symbol": "HBARUSDT",
       "score": 65
     }
   ]
