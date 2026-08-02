@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 19:08:22",
+  "timestamp": "2026-08-02 19:10:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que ONDO cumple con el score técnico, la falta de dominancia en el libro de órdenes y el entorno macro de miedo (Fear & Greed 27) no garantizan la seguridad del capital, por lo que se prioriza la preservación de la liquidez.",
+  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia institucional es preservar el capital en USDT.",
   "top_candidates": [
     {
       "symbol": "ONDOUSDT",
       "score": 85
     },
     {
+      "symbol": "SUNUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
       "symbol": "ZECUSDT",
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
-      "score": 75
-    },
-    {
       "symbol": "XLMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
