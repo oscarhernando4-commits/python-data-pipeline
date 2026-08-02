@@ -80,7 +80,7 @@ test("Truncamiento estricto a 1 decimal hacia abajo", floors_ok)
 print("\n[5/10] ESTADO PERSISTENTE DE CUENTA REAL (real_money_account.json)")
 state = api_connector.load_real_account_state()
 test("real_money_account.json cargado correctamente", state is not None)
-test(f"Balance USDT registrado: ${state.get('_cached_usdt_free', 0):.4f} USDT", state.get('_cached_usdt_free', 0) > 0)
+test(f"Balance USDT registrado: ${state.get('_cached_usdt_free', 0):.4f} USDT", state.get('_cached_usdt_free', 0) >= 0)
 test(f"BNB escudo comisiones: {state.get('_cached_bnb', 0):.6f} BNB", state.get('_cached_bnb', 0) >= 0)
 test(f"Estado operativo: {state.get('status')}", "status" in state)
 

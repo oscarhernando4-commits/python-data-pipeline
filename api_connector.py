@@ -677,13 +677,19 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         atr_info = atr_risk_calculator.calculate_adaptive_atr_stop_loss(entry, atr_15m=entry*0.008)
         adaptive_sl_pct = min(1.0, atr_info.get("sl_pct", 1.0))
 
-        # Dynamic Time-Decay Volatility Adjustment:
-        # If held for >=3 cycles (6 mins) with low momentum and not in Break-Even/Trailing, tighten SL from -1.0% down to -0.6%
-        stagnant_tightening = False
-        if holding_cycles >= 3 and not break_even_active and not trailing_active:
-            adaptive_sl_pct = 0.6
-            stagnant_tightening = True
-            print(f"⏳ AJUSTE DINÁMICO POR ESTANCAMIENTO (Ciclo {holding_cycles}/6m): Stop Loss apretado a -0.60% debido a baja volatilidad prolongada.")
+        # Progressive Time-Decay Escalation Ladder (Requested by User):
+        # 1. 0 to 10m (cycles 1-4): SL capped at -1.0%
+        # 2. 10m to 30m (cycles 5-14): SL tightens to -0.60%
+        # 3. 30m to 50m (cycles 15-24): SL tightens to -0.20%
+        # 4. > 50m (cycles >= 25): Market exit for capital release towards faster opportunities
+        time_regime_msg = ""
+        if not break_even_active and not trailing_active:
+            if holding_cycles >= 15:    # 10m + 20m = 30 mins
+                adaptive_sl_pct = 0.2
+                time_regime_msg = "⏳ Escalera 30m: SL Apretado a -0.20%"
+            elif holding_cycles >= 5:   # 10 mins
+                adaptive_sl_pct = 0.6
+                time_regime_msg = "⏳ Escalera 10m: SL Apretado a -0.60%"
 
         # Ultra-Precision Trailing Stop: floor is exactly 0.2% below peak (guaranteed minimum +1.5% profit)
         if trailing_active or highest_pnl_pct >= 2.0:
@@ -708,7 +714,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             "trailing_active": trailing_active,
             "adaptive_sl_pct": adaptive_sl_pct,
             "holding_cycles": holding_cycles,
-            "volatility_regime": "⏳ Estancamiento Apretado (-0.6%)" if stagnant_tightening else atr_info.get("volatility_regime", "Estándar")
+            "volatility_regime": time_regime_msg if time_regime_msg else atr_info.get("volatility_regime", "Estándar")
         }
         price_fmt = lambda p: f"${p:.8f}" if p < 0.01 else f"${p:.4f}"
         state["status"] = f"🔵 En Vivo LONG ({active_asset}USDT @ {price_fmt(active_current_price)})"
@@ -716,13 +722,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         # --- MONITOREO ACTIVO PRIORITARIO (CADA 2 MINUTOS) ---
         print("\n" + "="*65)
         print(f"📊 [SEGUIMIENTO DE POSICIÓN ACTIVA REAL - SPOT]")
-        print(f"🪙 Moneda: {active_symbol} | Cantidad: {active_qty:,.2f} {active_asset} (Ciclo {holding_cycles}/10m)")
+        print(f"🪙 Moneda: {active_symbol} | Cantidad: {active_qty:,.2f} {active_asset} (Tiempo Abierto: {holding_cycles*2}m / 50m)")
         print(f"💵 Entrada: {price_fmt(entry)} USD | Máximo Pico: {price_fmt(highest_price)} USD (+{highest_pnl_pct:.2f}%)")
         print(f"📈 PnL Flotante Actual: {pnl_pct:+.2f}% (${pnl_usd:+.4f} USD)")
         print(f"🚀 Modo Trailing Stop: {'🔥 ACTIVO (Persiguiendo Pico)' if trailing_active else '⚪ Esperando +2.0%'}")
         print(f"🛡️ Piso de Salida Dinámico: {price_fmt(sl_target)} USD ({trailing_floor_pct:+.2f}%)")
-        if stagnant_tightening:
-            print(f"⏳ Alerta de Volatilidad: Stop-Loss reducido dinámicamente a -0.60% por inactividad.")
+        if time_regime_msg:
+            print(f"⏳ Alerta de Escalera Temporal: {time_regime_msg}")
         print("="*65 + "\n")
         
         # Check for exit condition
@@ -733,10 +739,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 reason_str = f"Trailing Stop Dinámico Pico (+{highest_pnl_pct:.2f}% -> Venta en +{pnl_pct:.2f}%)"
             elif not trailing_active and pnl_pct <= trailing_floor_pct:
                 should_exit = True
-                reason_str = f"Stop Loss ({pnl_pct:.2f}%)"
-            elif holding_cycles >= 5 and -0.4 <= pnl_pct <= 0.4 and not break_even_active:
+                reason_str = f"Stop Loss Escalonado ({pnl_pct:.2f}%)"
+            elif holding_cycles >= 25 and not break_even_active and not trailing_active:
                 should_exit = True
-                reason_str = f"Liberación por Estancamiento / Sin Volatilidad (>10m plano PnL={pnl_pct:+.2f}%)"
+                reason_str = f"Liberación Final por Estancamiento (50m sin movimiento PnL={pnl_pct:+.2f}%)"
                 
             if should_exit:
                 print(f"🎯 ALERTA REAL: Salida LONG por {reason_str} en {active_symbol}. Vendiendo...")
