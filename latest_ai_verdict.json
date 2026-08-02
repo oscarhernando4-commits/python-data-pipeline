@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-02 10:20:17",
+  "timestamp": "2026-08-02 10:25:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica con un score técnico máximo de 60 entre los candidatos, incumpliendo el umbral mínimo de A+ (Score >= 65) establecido en las reglas de gestión de riesgo. La alta correlación negativa, el pánico institucional reflejado en el Fear & Greed (27) y la ausencia de activos con volumen de acumulación institucional (Volume Surge < 1.2x) dictan la preservación total del capital en liquidez (USDT).",
+  "reasoning": "Ninguno de los activos analizados cumple con el umbral mínimo de Score Técnico A+ (>= 65). El mercado presenta una estructura de distribución institucional con alta volatilidad y falta de fortaleza en los activos de mayor capitalización. Siguiendo la filosofía de preservación de capital y paciencia de francotirador, la decisión óptima es mantener la liquidez en USDT hasta que aparezca un setup de alta probabilidad matemática.",
   "top_candidates": [
     {
-      "symbol": "AAVEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "INJUSDT",
+      "symbol": "ZROUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "EPICUSDT",
+      "symbol": "GIGGLEUSDT",
       "score": 50
     },
     {
-      "symbol": "GIGGLEUSDT",
+      "symbol": "ENSOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "TUTUSDT",
       "score": 50
     }
   ]
