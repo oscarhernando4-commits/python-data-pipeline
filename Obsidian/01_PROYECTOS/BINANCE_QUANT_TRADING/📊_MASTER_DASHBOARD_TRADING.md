@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-08-02 02:20:22
+date: 2026-08-02 02:25:22
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-08-02 02:20:22`  
+> **Última Actualización:** `2026-08-02 02:25:22`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -22,18 +22,18 @@ date: 2026-08-02 02:20:22
 
 | Métrica | Valor Actual | ¿Qué Significa? |
 | :--- | :--- | :--- |
-| 💵 **Capital Total (Fondo $10k):** | **`$9,970.14 USD`** | Balance de las 100 cuentas de prueba |
-| 💰 **Ganancia Neta Total:** | **`$-29.86 USD`** | Resultado global acumulado |
+| 💵 **Capital Total (Fondo $10k):** | **`$9,950.00 USD`** | Balance de las 100 cuentas de prueba |
+| 💰 **Ganancia Neta Total:** | **`$-50.00 USD`** | Resultado global acumulado |
 | 🎯 **Cuentas que cumplieron la meta:** | **`20 de 100 Cuentas`** | Cuentas que alcanzaron el +3% esta semana |
-| 📈 **Tasa de Acierto de la IA:** | **`33.33% Win Rate`** | Efectividad actual de las estrategias |
+| 📈 **Tasa de Acierto de la IA:** | **`31.68% Win Rate`** | Efectividad actual de las estrategias |
 
 ---
 
 ## 🧭 2. AUTO-APRENDIZAJE: SESGO DE MERCADO (LONG vs SHORT)
 
-> [!WARNING] 🧠 IA SENTINEL REGLA DE PRIORIDAD: `NEUTRAL`
+> [!WARNING] 🧠 IA SENTINEL REGLA DE PRIORIDAD: `FAVOR_LONG`
 > - 🟢 **Rendimiento Compras (LONG):** `36.4%` de Acierto
-> - 🔴 **Rendimiento Ventas (SHORT):** `28.5%` de Acierto
+> - 🔴 **Rendimiento Ventas (SHORT):** `25.2%` de Acierto
 > - **Acción de la IA:** El bot está inyectando esta data en tiempo real a Gemini. Si la tendencia muestra pérdidas en LONG y ganancias en SHORT, **Gemini bloqueará operaciones LONG** priorizando el flujo ganador del mercado para el dinero real.
 
 ---
@@ -45,7 +45,7 @@ date: 2026-08-02 02:20:22
 > 
 > - 💵 **Capital Base (Promedio):** `$100.00 USD`
 > - 🎯 **Meta Semanal (Promedio):** `$103.00 USD`
-> - 💰 **Capital Promedio Actual:** `$99.70 USD`
+> - 💰 **Capital Promedio Actual:** `$99.50 USD`
 > - 🟡 **Estado:** `🟡 EN PROCESO - Buscando el +3% de ganancia en operaciones filtradas`
 
 ---
@@ -82,7 +82,7 @@ date: 2026-08-02 02:20:22
 | **Grupo 2** | `20.0%` | `$-76.40` |
 | **Grupo 3** | `66.7%` | `$+56.60` |
 | **Grupo 4** | `40.0%` | `$+38.20` |
-| **5 (Exploratorio)** | `0.0%` | `$-62.13` |
+| **5 (Exploratorio)** | `0.0%` | `$-82.27` |
 
 
 ---
