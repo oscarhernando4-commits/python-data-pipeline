@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 12:10:16",
+  "timestamp": "2026-08-02 12:15:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución agresiva con un sesgo bajista sistémico. Ninguno de los candidatos analizados cumple con el umbral mínimo de Score Técnico A+ (>= 65). La ausencia de activos con fuerza relativa y la prevalencia de scores inferiores a 40 confirman que no existe una narrativa de acumulación institucional. Bajo la filosofía de preservación de capital, la mejor operación es mantener la liquidez en USDT y evitar la exposición a activos que carecen de soporte estructural.",
+  "reasoning": "El entorno macroeconómico actual es de alta toxicidad con una tendencia bajista sistémica confirmada. Ninguno de los candidatos presentados alcanza el umbral mínimo de Score Técnico A+ (>= 65) requerido por la estrategia de preservación de capital. Además, los activos con score 60 presentan un historial insuficiente de 5M, lo que aumenta el riesgo de manipulación o trampa de liquidez. Se mantiene la liquidez en USDT para proteger el capital ante la falta de setups de alta probabilidad.",
   "top_candidates": [
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "GRAMUSDT",
       "score": 60
     },
     {
-      "symbol": "PYTHUSDT",
+      "symbol": "ICPUSDT",
       "score": 60
     },
     {
-      "symbol": "GIGGLEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "DEXEUSDT",
-      "score": 50
+      "symbol": "FILUSDT",
+      "score": 60
     },
     {
       "symbol": "VETUSDT",
-      "score": 50
+      "score": 60
+    },
+    {
+      "symbol": "STXUSDT",
+      "score": 60
     }
   ]
 }
