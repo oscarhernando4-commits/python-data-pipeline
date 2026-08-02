@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-02 22:56:36",
+  "timestamp": "2026-08-02 22:58:35",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El comité multi-agente ha evaluado rigurosamente a los candidatos y ha determinado que ninguno cumple con el umbral estricto de Score Técnico A+ (>= 65) ni con las confirmaciones de volumen y libro de órdenes requeridas. En cumplimiento de las reglas de oro y el protocolo anti-pérdidas, se decide mantener la liquidez intacta en USDT respondiendo 'NONE'.",
+  "confidence": 0,
+  "reasoning": "Ningún candidato cumple de forma simultánea con el umbral estricto de Score Técnico >= 65, confirmación de libro de órdenes por encima del 55% y alineación sectorial perfecta. Se prioriza la preservación de capital protegiendo la liquidez en USDT.",
   "top_candidates": [
+    {
+      "symbol": "WLFIUSDT",
+      "score": 70
+    },
     {
       "symbol": "ADAUSDT",
       "score": 60
@@ -15,16 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "WLFIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SOXLBUSDT",
-      "score": 60
-    },
-    {
       "symbol": "ONDOUSDT",
       "score": 55
+    },
+    {
+      "symbol": "ORDIUSDT",
+      "score": 50
     }
   ]
 }

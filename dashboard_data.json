@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02 17:56:37",
+  "updated_at": "2026-08-02 22:58:36",
   "total_balance_usd": 19.84,
   "usdt_free": 0.2479,
   "bnb_free": 0.00428773,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El comité multi-agente ha evaluado rigurosamente a los candidatos y ha determinado que ninguno cumple con el umbral estricto de Score Técnico A+ (>= 65) ni con las confirmaciones de volumen y libro de órdenes requeridas. En cumplimiento de las reglas de oro y el protocolo anti-pérdidas, se decide mantener la liquidez intacta en USDT respondiendo 'NONE'."
+    "reasoning": "Ningún candidato cumple de forma simultánea con el umbral estricto de Score Técnico >= 65, confirmación de libro de órdenes por encima del 55% y alineación sectorial perfecta. Se prioriza la preservación de capital protegiendo la liquidez en USDT."
   }
 }
