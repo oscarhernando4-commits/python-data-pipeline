@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-02 21:22:21",
+  "timestamp": "2026-08-02 21:24:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos, el libro de órdenes no muestra una dominancia compradora clara (Bids < 55%) y el entorno macroeconómico presenta un riesgo sistémico elevado que no justifica la exposición al mercado en este momento.",
+  "reasoning": "El mercado presenta una divergencia defensiva extrema y falta de convicción en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de seguridad A+ exigido por el comité, por lo que se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "XRPUSDT",
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "WLDUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     }
   ]
