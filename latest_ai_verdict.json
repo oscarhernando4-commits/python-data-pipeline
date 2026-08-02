@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-02 04:55:28",
-  "selected_symbol": "ROSEUSDT",
+  "timestamp": "2026-08-02 05:00:40",
+  "selected_symbol": "ICPUSDT",
   "action": "BUY_LONG",
   "approved": true,
-  "confidence": 78,
-  "reasoning": "ROSEUSDT es el único activo que cumple con el umbral de Score Técnico A+ (85/100) y presenta un Volume Surge de 1.97, indicando una acumulación institucional significativa. A pesar del entorno macro de aversión al riesgo, su resiliencia técnica y el momentum alcista en 5M justifican una entrada táctica en SPOT bajo una gestión de riesgo estricta, evitando el resto de activos que presentan scores inferiores o señales de distribución.",
+  "confidence": 70,
+  "reasoning": "Fallback Cuantitativo Tras Fallo de Conexión AI",
   "top_candidates": [
     {
-      "symbol": "ROSEUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "BCHUSDT",
+      "symbol": "ICPUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "INJUSDT",
+      "symbol": "ROSEUSDT",
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "KITEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUNUSDT",
       "score": 75
     }
   ]
