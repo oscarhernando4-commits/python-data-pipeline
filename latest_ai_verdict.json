@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-02 07:15:20",
+  "timestamp": "2026-08-02 07:20:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento defensivo con sesgo bajista (Fear & Greed 27). Aunque activos como UNI, SYN, ENSO, HEI, MUBARAK, LUNC y RIF presentan un Score de 65, el análisis de riesgo institucional determina que carecen de historial consolidado y su fortaleza es producto de volatilidad especulativa de baja liquidez. La ausencia de una tendencia clara en BTC (Score 45) y el entorno de 'pánico silencioso' desaconsejan la entrada en cualquier activo, priorizando la preservación de capital sobre la búsqueda de alfa.",
+  "confidence": 0,
+  "reasoning": "A pesar de que activos como TRX, UNI, 1000SATS, ENSO, DEXE y RIF presentan un Score de 65, ninguno cumple con el filtro de 'Volume Surge > 1.2x' necesario para confirmar una entrada de alta probabilidad en un entorno de mercado con Fear & Greed en 27 (Miedo). La fragilidad macro y la erosión de la confianza institucional dictan una política de preservación de capital. Mantener liquidez en USDT es la estrategia de francotirador más eficiente ante la ausencia de un setup A+ con volumen comprador institucional confirmado.",
   "top_candidates": [
     {
-      "symbol": "UNIUSDT",
+      "symbol": "TRXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "1000SATSUSDT",
       "score": 65
     },
     {
-      "symbol": "SYNUSDT",
+      "symbol": "UNIUSDT",
       "score": 65
     },
     {
@@ -19,11 +23,7 @@
       "score": 65
     },
     {
-      "symbol": "HEIUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "MUBARAKUSDT",
+      "symbol": "DEXEUSDT",
       "score": 65
     }
   ]
