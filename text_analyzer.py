@@ -5,20 +5,6 @@ import time
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 
-if not GEMINI_API_KEY:
-    env_path = os.path.join(os.path.dirname(__file__), ".env")
-    if os.path.exists(env_path):
-        try:
-            with open(env_path, "r", encoding="utf-8") as f:
-                for line in f:
-                    line = line.strip()
-                    if line and not line.startswith('#') and '=' in line:
-                        k, v = line.split('=', 1)
-                        if k.strip() == "GEMINI_API_KEY":
-                            GEMINI_API_KEY = v.strip()
-        except Exception:
-            pass
-
 def get_market_macro_context(symbol_analysis_map, fear_greed, news_headlines):
     """
     Uses Gemini Lite to perform a macro scan of ALL 30 cryptos and return a global context string.
@@ -85,13 +71,10 @@ def get_market_macro_context(symbol_analysis_map, fear_greed, news_headlines):
         "generationConfig": {"temperature": 0.3, "maxOutputTokens": 600}
     }
     
-    # We prioritize gemini-3.1-flash-lite for macro sweep
+    # We use lite for macro sweep to save standard flash quota
     lite_models = [
         "gemini-3.1-flash-lite",
-        "gemini-3.1-flash-lite-preview",
-        "gemini-2.0-flash-lite",
-        "gemini-2.0-flash",
-        "gemini-1.5-flash"
+        "gemini-3.1-flash-lite-preview"
     ]
     
     print(f"🕵️ [Macro Analyst Lite] Analizando el contexto global de {len(symbol_analysis_map)} criptomonedas...")
