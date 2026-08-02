@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-02 14:40:21",
+  "timestamp": "2026-08-02 14:45:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema con una selección adversa marcada; al no existir ningún activo que cumpla con el umbral de Score 65 y la confirmación de liquidez necesaria, el comité decide proteger el 100% de la liquidez en espera de una capitulación o una estructura técnica más sólida.",
+  "reasoning": "El mercado se encuentra en una fase de distribución selectiva con alta incertidumbre. Ningún activo cumple con los criterios estrictos de Score técnico y soporte de liquidez exigidos por el comité, por lo que la decisión institucional es mantener el 100% de la liquidez en USDT para evitar riesgos innecesarios.",
   "top_candidates": [
-    {
-      "symbol": "ICPUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "SUIUSDT",
-      "score": 60
-    },
     {
       "symbol": "XRPUSDT",
       "score": 60
@@ -23,7 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "SHIBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "UNIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "LINKUSDT",
       "score": 60
     }
   ]
