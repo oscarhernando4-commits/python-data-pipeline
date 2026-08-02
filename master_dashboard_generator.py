@@ -91,26 +91,6 @@ def generate_master_dashboard():
         elif g_id == 5: g_name = "5 (Exploratorio)"
         group_table += f"| **{g_name}** | `{wr}%` | `${stats['pnl']:+,.2f}` |\n"
 
-    # Load Latest AI Super-Brain Verdict
-    ai_verdict_file = os.path.join(os.path.dirname(__file__), "latest_ai_verdict.json")
-    ai_verdict = {}
-    if os.path.exists(ai_verdict_file):
-        try:
-            with open(ai_verdict_file, "r", encoding="utf-8") as vf:
-                ai_verdict = json.load(vf)
-        except Exception:
-            pass
-
-    ai_time = ai_verdict.get("timestamp", now_str)
-    ai_sym = ai_verdict.get("selected_symbol", "ANALIZANDO")
-    ai_act = ai_verdict.get("action", "HOLD")
-    ai_conf = ai_verdict.get("confidence", 85)
-    ai_appr = "✅ APROBADO" if ai_verdict.get("approved") else "⏸️ EN ESPERA (HOLD)"
-    ai_reason = ai_verdict.get("reasoning", "Evaluando confluencia matemática y sesgo macro...")
-    ai_top_cands = ai_verdict.get("top_candidates", [])
-
-    cands_str = ", ".join([f"`{c.get('symbol')}` ({c.get('score')} Pts)" for c in ai_top_cands]) if ai_top_cands else "`BTCUSDT`, `ETHUSDT`, `SOLUSDT`"
-
     master_md = f"""---
 tags:
   - trading
@@ -142,18 +122,7 @@ date: {now_str}
 
 ---
 
-## 🧠 2. ANÁLISIS EN VIVO DEL SÚPER-CEREBRO IA (CADA 5 MINUTOS)
-
-> [!NOTE] 🤖 VEREDICTO INSTITUCIONAL DEL COMITÉ DE IA
-> - 🪙 **Candidato Ganador:** **`{ai_sym}`** | **Acción:** **`{ai_act}`**
-> - 🎯 **Nivel de Confianza:** **`{ai_conf}%`** | **Decisión:** **`{ai_appr}`**
-> - 💡 **Razonamiento del Súper-Cerebro:** *"{ai_reason}"*
-> - 📋 **Top Candidatos Evaluados:** {cands_str}
-> - ⏱️ **Última Actualización:** `{ai_time}`
-
----
-
-## 🧭 3. AUTO-APRENDIZAJE: SESGO DE MERCADO (LONG vs SHORT)
+## 🧭 2. AUTO-APRENDIZAJE: SESGO DE MERCADO (LONG vs SHORT)
 
 > [!WARNING] 🧠 IA SENTINEL REGLA DE PRIORIDAD: `{bias_info['bias']}`
 > - 🟢 **Rendimiento Compras (LONG):** `{bias_info['long_win_rate']}%` de Acierto
@@ -208,7 +177,6 @@ date: {now_str}
 ---
 
 ## 🔗 8. NAVEGACIÓN EN 1-CLIC (DETALLES Y TABLAS COMPLETAS)
-- [[🧠_Analisis_Super_Cerebro|Ver Análisis Detallado del Súper-Cerebro IA (Ciclos 5M)]]
 - [[🚀_Matriz_100_Simulaciones|Ver Lista Completa de las 100 Cuentas]]
 - [[🎯_Seguimiento_De_Metas|Ver Tabla de Metas Semana a Semana]]
 - [[📊_Dashboard_Interes_Compuesto|Ver Proyección de Interés Compuesto]]
@@ -233,7 +201,6 @@ Análisis de rendimiento detallado a 1D, 3D, 1W, 2W, y 1M:
         master_md += f"> ⚠️ Error generando sub-reportes: {e}\n"
 
     master_md += "\n## 📚 Knowledge Base\n"
-    master_md += "- [[🧠_Analisis_Super_Cerebro|Ver Análisis Detallado del Súper-Cerebro]]\n"
     master_md += "- [[🧠_Patrones_de_Aprendizaje_y_Optimizacion_IA]]\n"
     master_md += "- [[🛡️_Escudo_Anti_Caidas_Y_Riesgo|Ver Protocolo Anti-Caídas]]\n"
 
@@ -241,13 +208,6 @@ Análisis de rendimiento detallado a 1D, 3D, 1W, 2W, y 1M:
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(master_md)
         
-    # Generate dedicated Super-Brain report
-    try:
-        import super_cerebro_analyzer
-        super_cerebro_analyzer.generate_super_cerebro_report()
-    except Exception as e:
-        print(f"Error generando reporte de Super Cerebro: {e}")
-
     # Run subreports generator
     try:
         import subreports_generator
