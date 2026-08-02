@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-02 06:25:46",
-  "selected_symbol": "ERAUSDT",
+  "timestamp": "2026-08-02 06:30:43",
+  "selected_symbol": "POLUSDT",
   "action": "BUY_LONG",
   "approved": true,
   "confidence": 70,
   "reasoning": "Fallback Cuantitativo Tras Fallo de Conexión AI",
   "top_candidates": [
     {
-      "symbol": "ERAUSDT",
-      "score": 85
+      "symbol": "POLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "1000SATSUSDT",
+      "score": 65
     },
     {
       "symbol": "SYNUSDT",
@@ -19,11 +23,7 @@
       "score": 65
     },
     {
-      "symbol": "TUTUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "ROSEUSDT",
+      "symbol": "MUBARAKUSDT",
       "score": 65
     }
   ]
