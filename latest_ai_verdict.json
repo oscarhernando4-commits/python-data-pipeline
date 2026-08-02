@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 14:00:22",
+  "timestamp": "2026-08-02 14:05:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta fragilidad con una evacuación de liquidez sistémica. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 65) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage. Se prioriza la preservación de capital sobre la especulación en un entorno de tendencia neutral con alta probabilidad de capitulación.",
+  "reasoning": "El comité ha determinado por consenso que el mercado actual carece de la estructura técnica y la liquidez institucional necesaria para garantizar una operación con alta probabilidad de éxito, por lo que se mantiene la liquidez en USDT para proteger el capital.",
   "top_candidates": [
     {
-      "symbol": "HBARUSDT",
-      "score": 60
+      "symbol": "MIRAUSDT",
+      "score": 70
     },
     {
       "symbol": "UUSDT",
       "score": 60
     },
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "GRAMUSDT",
       "score": 60
     },
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "DOTUSDT",
       "score": 60
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "POLUSDT",
       "score": 60
     }
   ]

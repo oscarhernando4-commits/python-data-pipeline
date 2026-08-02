@@ -1,12 +1,38 @@
 {
   "ZBTUSDT": [
     {
-      "timestamp": "2026-08-02 14:00:13",
+      "timestamp": "2026-08-02 14:05:12",
       "price": 0.121,
       "score": 0,
       "rsi": 41.92,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.07,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BOMEUSDT": [
+    {
+      "timestamp": "2026-08-02 14:05:12",
+      "price": 0.0006265,
+      "score": 20,
+      "rsi": 62.62,
+      "macd": "Neutral",
+      "volume_surge": 0.58,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ZROUSDT": [
+    {
+      "timestamp": "2026-08-02 14:05:12",
+      "price": 0.715,
+      "score": 0,
+      "rsi": 39.04,
+      "macd": "Neutral",
+      "volume_surge": 0.23,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
