@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 13:50:16",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de alta toxicidad con un índice Fear & Greed en 27. Aunque ASTERUSDT tiene un score de 70, su falta de profundidad histórica y el entorno macro de capitulación sistémica (BTC/ETH en scores críticos de 0-15) invalidan la seguridad de la operación. Ningún otro candidato alcanza el umbral de alta convicción A+ (Score >= 65) con confirmación de volumen institucional sólido. La preservación de capital es la prioridad absoluta; nos mantenemos en liquidez (USDT) hasta que la estructura de mercado muestre una acumulación real y no especulativa.",
+  "timestamp": "2026-08-02 13:55:16",
+  "selected_symbol": "INJUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "INJUSDT es el único activo que cumple con el umbral de Score Técnico A+ (70/100) y presenta una confluencia positiva de factores: un Volume Surge de 2.75x (indicativo de interés institucional real) y noticias fundamentales de respaldo (lanzamiento de validador institucional). A diferencia de otros activos con scores similares pero historial insuficiente o manipulación, INJ muestra una estructura de mercado más robusta en el contexto actual de capitulación, alineándose con la estrategia de francotirador al buscar activos con fuerza relativa real frente a la debilidad generalizada del mercado.",
   "top_candidates": [
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "POLUSDT",
       "score": 70
     },
     {
-      "symbol": "HBARUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DOGEUSDT",
-      "score": 60
+      "symbol": "INJUSDT",
+      "score": 70
     },
     {
       "symbol": "UUSDT",
       "score": 60
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "TRXUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "DOGEUSDT",
       "score": 60
     }
   ]
