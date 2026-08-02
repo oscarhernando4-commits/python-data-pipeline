@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 03:00:22",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "A pesar de que BCHUSDT, UUSDT y ASTERUSDT presentan un Score Técnico de 75, ninguno cumple con el umbral de confirmación de volumen (Volume Surge > 1.2x) ni con un historial de datos suficiente para mitigar el riesgo de 'pump-and-dump'. El entorno macro actual con un Fear & Greed en 27 y una tendencia general NEUTRAL confirma que el mercado está en una fase de distribución silenciosa. Siguiendo la filosofía de preservación de capital y paciencia de francotirador, no se ejecutarán operaciones en activos con historial insuficiente o falta de convicción institucional. Se mantiene la liquidez en USDT.",
+  "timestamp": "2026-08-02 03:05:21",
+  "selected_symbol": "SPCXBUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 70,
+  "reasoning": "SPCXBUSDT es el único activo que cumple con el umbral de Score Técnico >= 65 (70/100) y presenta un Volume Surge de 2.06, lo cual indica una entrada de capital institucional significativa y una acumulación activa. A diferencia de otros candidatos, su volumen es el más robusto, superando el filtro de 1.2x. Se mantiene una postura de gestión de riesgo estricta, operando únicamente este activo debido a su resiliencia técnica en un entorno de mercado NEUTRAL.",
   "top_candidates": [
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
     {
       "symbol": "UUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 75
+      "symbol": "SPCXBUSDT",
+      "score": 70
     },
     {
-      "symbol": "GRAMUSDT",
-      "score": 60
+      "symbol": "EULUSDT",
+      "score": 65
     },
     {
-      "symbol": "TRXUSDT",
-      "score": 60
+      "symbol": "WLFIUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "REUSDT",
+      "score": 65
     }
   ]
 }

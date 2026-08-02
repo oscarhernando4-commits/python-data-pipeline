@@ -4,28 +4,28 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-08-02 02:25:20
+date: 2026-08-02 03:05:22
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-08-02 02:25:20`  
+> **Última Actualización:** `2026-08-02 03:05:22`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `386`
-- **Ganadas (WIN):** `121` | **Perdidas (LOSS):** `265`
-- **Tasa de Acierto (Win Rate):** `31.35%`
-- **PnL Total Neto:** `$-50.40 USD`
+- **Total Operaciones:** `425`
+- **Ganadas (WIN):** `121` | **Perdidas (LOSS):** `304`
+- **Tasa de Acierto (Win Rate):** `28.47%`
+- **PnL Total Neto:** `$-92.75 USD`
 
 ---
 
 ## 🧭 Sesgo de Aprendizaje Automático (Últimos 100 Trades)
 - **Sesgo Actual (Market Bias):** `FAVOR_LONG`
 - **Rendimiento LONG (Compras):** `36.4%` de Acierto (en 220 ops recientes)
-- **Rendimiento SHORT (Ventas):** `25.2%` de Acierto (en 163 ops recientes)
+- **Rendimiento SHORT (Ventas):** `20.3%` de Acierto (en 202 ops recientes)
 - 🏆 **Grupo de IA Más Rentable:** `⚖️ GRUPO 3: Balanceado` (WinRate: 66.7%, PnL: $56.6)
 - *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada. Y el Dinero Real copiará automáticamente al Grupo Más Rentable.
 
@@ -33,7 +33,6 @@ date: 2026-08-02 02:25:20
 
 ## 🛑 Reglas de Bloqueo de Fracasos (Filtros Anti-Pérdida)
 *Estas condiciones han sido aprendidas tras fallos y BLOQUEAN automáticamente futuras operaciones de riesgo:*
-- 🛑 BLOCK ALTCOIN LONGS when BTC is Bearish / Dumping (BTC Score < 45 or BTC RSI < 45)
 - 🛑 Preventive Block for LTCUSDT: Loss logged at 46.03 -> Hit SL on LTCUSDT (-$1.60). Re-Trading!
 - 🛑 Preventive Block for BTCUSDT: Loss logged at 63662.44 -> Hit SL on BTCUSDT (-$1.65). Re-Trading!
 - 🛑 Preventive Block for NEARUSDT: Loss logged at 1.609 -> Hit SL on NEARUSDT (-$1.57). Re-Trading!
@@ -53,6 +52,7 @@ date: 2026-08-02 02:25:20
 - 🛑 BLOCK SHORT when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BTCUSDT)
 - 🛑 BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on TRXUSDT)
 - 🛑 BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on HYPERUSDT)
+- 🛑 BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on EULUSDT)
 
 ---
 
@@ -76,14 +76,14 @@ date: 2026-08-02 02:25:20
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-08-02 02:25:20 | HYPERUSDT | SHORT | `$0.0619` | `$0.0638` | `$-1.06` | 🔴 LOSS |
-| 2026-08-02 02:25:20 | HYPERUSDT | SHORT | `$0.0619` | `$0.0638` | `$-1.06` | 🔴 LOSS |
-| 2026-08-02 02:25:20 | HYPERUSDT | SHORT | `$0.0619` | `$0.0638` | `$-1.06` | 🔴 LOSS |
-| 2026-08-02 02:25:20 | HYPERUSDT | SHORT | `$0.0619` | `$0.0638` | `$-1.06` | 🔴 LOSS |
-| 2026-08-02 02:25:20 | HYPERUSDT | SHORT | `$0.0619` | `$0.0638` | `$-1.06` | 🔴 LOSS |
-| 2026-08-02 02:25:20 | HYPERUSDT | SHORT | `$0.0619` | `$0.0638` | `$-1.06` | 🔴 LOSS |
-| 2026-08-02 02:25:20 | HYPERUSDT | SHORT | `$0.0619` | `$0.0638` | `$-1.06` | 🔴 LOSS |
-| 2026-08-02 02:25:20 | HYPERUSDT | SHORT | `$0.0619` | `$0.0638` | `$-1.06` | 🔴 LOSS |
-| 2026-08-02 02:25:20 | HYPERUSDT | SHORT | `$0.0619` | `$0.0638` | `$-1.06` | 🔴 LOSS |
-| 2026-08-02 02:25:20 | HYPERUSDT | SHORT | `$0.0619` | `$0.0638` | `$-1.06` | 🔴 LOSS |
+| 2026-08-02 03:05:22 | EULUSDT | SHORT | `$1.593` | `$1.62` | `$-1.05` | 🔴 LOSS |
+| 2026-08-02 03:05:22 | EULUSDT | SHORT | `$1.593` | `$1.62` | `$-1.05` | 🔴 LOSS |
+| 2026-08-02 03:05:22 | EULUSDT | SHORT | `$1.593` | `$1.62` | `$-1.05` | 🔴 LOSS |
+| 2026-08-02 03:05:22 | EULUSDT | SHORT | `$1.593` | `$1.62` | `$-1.05` | 🔴 LOSS |
+| 2026-08-02 03:05:22 | EULUSDT | SHORT | `$1.593` | `$1.62` | `$-1.05` | 🔴 LOSS |
+| 2026-08-02 03:05:22 | EULUSDT | SHORT | `$1.593` | `$1.62` | `$-1.05` | 🔴 LOSS |
+| 2026-08-02 03:05:22 | EULUSDT | SHORT | `$1.593` | `$1.62` | `$-1.05` | 🔴 LOSS |
+| 2026-08-02 03:05:22 | EULUSDT | SHORT | `$1.593` | `$1.62` | `$-1.05` | 🔴 LOSS |
+| 2026-08-02 03:05:22 | EULUSDT | SHORT | `$1.593` | `$1.62` | `$-1.05` | 🔴 LOSS |
+| 2026-08-02 03:05:22 | EULUSDT | SHORT | `$1.593` | `$1.62` | `$-1.05` | 🔴 LOSS |
 
