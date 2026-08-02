@@ -3,12 +3,12 @@ tags:
   - trading
   - historial_completo
   - binance
-date: 2026-08-02 02:10:22
+date: 2026-08-02 02:15:21
 ---
 
 # 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
 
-> **Última Actualización:** `2026-08-02 02:10:22`
+> **Última Actualización:** `2026-08-02 02:15:21`
 > Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
 
 | Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |
@@ -360,4 +360,24 @@ date: 2026-08-02 02:10:22
 | 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
 | 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
 | 2026-08-02 02:10:22 | 🔥 GRUPO 5: Expl... | BTCUSDT | SHORT | $62545.72 | $63389.99 | $-1.08 | 50 | 76.3 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 02:15:21 | ⚡ GRUPO 4: Frec... | TRXUSDT | SHORT | $0.3256 | $0.3286 | $-1.13 | 75 | 66.4 | NEUTRAL | 🔴 LOSS |
 

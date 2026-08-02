@@ -4,36 +4,35 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-08-02 02:10:22
+date: 2026-08-02 02:15:21
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-08-02 02:10:22`  
+> **Última Actualización:** `2026-08-02 02:15:21`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `347`
-- **Ganadas (WIN):** `121` | **Perdidas (LOSS):** `226`
-- **Tasa de Acierto (Win Rate):** `34.87%`
-- **PnL Total Neto:** `$-7.66 USD`
+- **Total Operaciones:** `367`
+- **Ganadas (WIN):** `121` | **Perdidas (LOSS):** `246`
+- **Tasa de Acierto (Win Rate):** `32.97%`
+- **PnL Total Neto:** `$-30.26 USD`
 
 ---
 
 ## 🧭 Sesgo de Aprendizaje Automático (Últimos 100 Trades)
 - **Sesgo Actual (Market Bias):** `NEUTRAL`
 - **Rendimiento LONG (Compras):** `36.4%` de Acierto (en 220 ops recientes)
-- **Rendimiento SHORT (Ventas):** `33.1%` de Acierto (en 124 ops recientes)
-- 🏆 **Grupo de IA Más Rentable:** `⚡ GRUPO 4: Frecuencia Alta` (WinRate: 50.0%, PnL: $60.8)
+- **Rendimiento SHORT (Ventas):** `28.5%` de Acierto (en 144 ops recientes)
+- 🏆 **Grupo de IA Más Rentable:** `⚖️ GRUPO 3: Balanceado` (WinRate: 66.7%, PnL: $56.6)
 - *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada. Y el Dinero Real copiará automáticamente al Grupo Más Rentable.
 
 ---
 
 ## 🛑 Reglas de Bloqueo de Fracasos (Filtros Anti-Pérdida)
 *Estas condiciones han sido aprendidas tras fallos y BLOQUEAN automáticamente futuras operaciones de riesgo:*
-- 🛑 High impact news within 30 mins (Block Trade)
 - 🛑 Volume surge < 1.1x average during trend reversals (Block Fakeouts)
 - 🛑 BLOCK ALTCOIN LONGS when BTC is Bearish / Dumping (BTC Score < 45 or BTC RSI < 45)
 - 🛑 Preventive Block for LTCUSDT: Loss logged at 46.03 -> Hit SL on LTCUSDT (-$1.60). Re-Trading!
@@ -53,6 +52,7 @@ date: 2026-08-02 02:10:22
 - 🛑 BLOCK BUY when Score:30-50(Mild-Bear) (Lost on XECUSDT)
 - 🛑 BLOCK BUY when Score:<30(Bearish) (Lost on MMTUSDT)
 - 🛑 BLOCK SHORT when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BTCUSDT)
+- 🛑 BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on TRXUSDT)
 
 ---
 
@@ -76,14 +76,14 @@ date: 2026-08-02 02:10:22
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-08-02 02:10:22 | BTCUSDT | SHORT | `$62545.72` | `$63389.99` | `$-1.08` | 🔴 LOSS |
-| 2026-08-02 02:10:22 | BTCUSDT | SHORT | `$62545.72` | `$63389.99` | `$-1.08` | 🔴 LOSS |
-| 2026-08-02 02:10:22 | BTCUSDT | SHORT | `$62545.72` | `$63389.99` | `$-1.08` | 🔴 LOSS |
-| 2026-08-02 02:10:22 | BTCUSDT | SHORT | `$62545.72` | `$63389.99` | `$-1.08` | 🔴 LOSS |
-| 2026-08-02 02:10:22 | BTCUSDT | SHORT | `$62545.72` | `$63389.99` | `$-1.08` | 🔴 LOSS |
-| 2026-08-02 02:10:22 | BTCUSDT | SHORT | `$62545.72` | `$63389.99` | `$-1.08` | 🔴 LOSS |
-| 2026-08-02 02:10:22 | BTCUSDT | SHORT | `$62545.72` | `$63389.99` | `$-1.08` | 🔴 LOSS |
-| 2026-08-02 02:10:22 | BTCUSDT | SHORT | `$62545.72` | `$63389.99` | `$-1.08` | 🔴 LOSS |
-| 2026-08-02 02:10:22 | BTCUSDT | SHORT | `$62545.72` | `$63389.99` | `$-1.08` | 🔴 LOSS |
-| 2026-08-02 02:10:22 | BTCUSDT | SHORT | `$62545.72` | `$63389.99` | `$-1.08` | 🔴 LOSS |
+| 2026-08-02 02:15:21 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
+| 2026-08-02 02:15:21 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
+| 2026-08-02 02:15:21 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
+| 2026-08-02 02:15:21 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
+| 2026-08-02 02:15:21 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
+| 2026-08-02 02:15:21 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
+| 2026-08-02 02:15:21 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
+| 2026-08-02 02:15:21 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
+| 2026-08-02 02:15:21 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
+| 2026-08-02 02:15:21 | TRXUSDT | SHORT | `$0.3256` | `$0.3286` | `$-1.13` | 🔴 LOSS |
 
