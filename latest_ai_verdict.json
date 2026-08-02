@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 15:35:20",
+  "timestamp": "2026-08-02 15:40:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la liquidez en USDT debido a la falta de una estructura de soporte clara en el libro de órdenes y la alta incertidumbre macroeconómica. Ningún activo cumple con el umbral de convicción A+ necesario para mitigar el riesgo de 'falling knives' en este entorno de mercado fragmentado.",
+  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual presenta una debilidad sistémica y una falta de convicción institucional. Dado que ningún activo alcanza el umbral de Score 65 y la profundidad del libro de órdenes es insuficiente, se mantiene la posición en efectivo (USDT) para proteger el capital contra la volatilidad bajista.",
   "top_candidates": [
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
+      "symbol": "JSTUSDT",
+      "score": 70
     },
     {
       "symbol": "UNIUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "XLMUSDT",
-      "score": 75
+      "symbol": "PEPEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 60
     },
     {
       "symbol": "XAUTUSDT",
-      "score": 75
+      "score": 60
     }
   ]
 }
