@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 20:52:17",
+  "timestamp": "2026-08-02 20:54:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de alta incertidumbre con falta de profundidad en el libro de órdenes y ausencia de convicción institucional en los activos analizados. Siguiendo la Regla de Oro #1, se prioriza la protección del capital sobre la especulación, manteniendo la posición en efectivo hasta que las condiciones de mercado alcancen el umbral A+.",
+  "reasoning": "El comité ha decidido mantener la posición en liquidez (HOLD) debido a que, a pesar de los scores técnicos, ninguno de los candidatos presenta la profundidad de mercado (Orderbook Bids > 55%) ni la confirmación de volumen necesaria para cumplir con la Regla de Oro #1 de protección de capital.",
   "top_candidates": [
+    {
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LINKUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "score": 75
+    },
     {
       "symbol": "RENDERUSDT",
       "score": 75
     },
     {
-      "symbol": "VIRTUALUSDT",
-      "score": 75
-    },
-    {
       "symbol": "SUNUSDT",
       "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "WLFIUSDT",
-      "score": 65
     }
   ]
 }
