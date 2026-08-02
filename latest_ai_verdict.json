@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 14:15:20",
+  "timestamp": "2026-08-02 14:20:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución masiva y alta correlación bajista. Ninguno de los candidatos cumple con los requisitos de riesgo A+ establecidos por el comité, por lo que la estrategia prioritaria es la preservación total de la liquidez en USDT.",
+  "reasoning": "El mercado se encuentra en un estado de neutralidad frágil con alta asimetría de riesgo; ningún activo cumple con los criterios de convicción A+ exigidos por el CRO, por lo que se mantiene la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "GRAMUSDT",
-      "score": 60
-    },
     {
       "symbol": "UUSDT",
       "score": 60
     },
     {
+      "symbol": "GRAMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "XRPUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "score": 60
+    },
+    {
       "symbol": "SUIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DOTUSDT",
       "score": 60
     }
   ]
