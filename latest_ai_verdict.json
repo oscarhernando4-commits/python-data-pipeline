@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-02 23:38:17",
+  "timestamp": "2026-08-02 23:40:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada con falta de profundidad en el libro de órdenes y una ausencia de activos que cumplan con el umbral de convicción A+ (Score >= 65). Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y riesgo de manipulación.",
+  "reasoning": "El mercado se encuentra en una fase de limpieza de manos débiles con alta correlación negativa. Ningún activo cumple con el requisito de soporte de ballenas (Bids > 55%) ni con la convicción A+ necesaria para operar en este entorno de alta peligrosidad.",
   "top_candidates": [
+    {
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
     {
       "symbol": "HBARUSDT",
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "MUBUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "BONKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "KAITOUSDT",
+      "symbol": "ADAUSDT",
       "score": 70
     }
   ]
