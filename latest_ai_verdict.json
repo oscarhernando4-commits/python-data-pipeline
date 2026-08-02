@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-02 02:00:25",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "A pesar de tener activos con Score >= 65, el entorno macro presenta una divergencia estructural y alta sensibilidad a noticias regulatorias negativas. El historial de 5M es insuficiente para validar una entrada institucional de alta probabilidad. Siguiendo la filosofía de preservación de capital y paciencia de francotirador, se prioriza la liquidez en USDT ante la falta de una confirmación de volumen (Volume Surge > 1.2x) y la inestabilidad en las 'Blue Chips' que sugiere una rotación de capital errática.",
+  "timestamp": "2026-08-02 02:05:19",
+  "selected_symbol": "SUNUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 85,
+  "reasoning": "SUNUSDT es el único activo que cumple con el umbral de excelencia A+ (Score 85). Presenta un 'Volume Surge' de 3.01, indicando una entrada de capital institucional significativa que supera ampliamente el filtro de 1.2x. El RSI de 67.71 se encuentra en zona de momentum alcista sin haber entrado en sobrecompra extrema (>70), lo que valida la continuación de la tendencia. Se descartan otros candidatos por menor score técnico o falta de confirmación de volumen, priorizando la preservación de capital en el activo con mayor probabilidad estadística de éxito.",
   "top_candidates": [
     {
+      "symbol": "SUNUSDT",
+      "score": 85
+    },
+    {
       "symbol": "UUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "TUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUNUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ERAUSDT",
+      "symbol": "SHIBUSDT",
       "score": 65
     }
   ]
