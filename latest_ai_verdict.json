@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-02 21:16:21",
+  "timestamp": "2026-08-02 21:18:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la falta de dominancia clara en el libro de órdenes (50% bids) y la volatilidad errática del mercado actual impiden la ejecución de una orden de compra bajo los estrictos estándares de riesgo del comité.",
+  "reasoning": "El comité ha determinado que, a pesar de tener activos con un score técnico de 75, ninguno cumple con los requisitos de soporte de ballenas (Bids > 55%) ni con la confirmación de tendencia necesaria para mitigar el riesgo en un entorno de Fear 27. Se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
+      "symbol": "NEARUSDT",
       "score": 75
     },
     {
-      "symbol": "WLDUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XRPUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XRPUSDT",
       "score": 75
     }
   ]

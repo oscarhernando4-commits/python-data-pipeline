@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02 21:16:22",
+  "updated_at": "2026-08-02 21:18:22",
   "total_balance_usd": 20.06,
   "usdt_free": 0.1778,
   "bnb_free": 0.00437518,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la falta de dominancia clara en el libro de órdenes (50% bids) y la volatilidad errática del mercado actual impiden la ejecución de una orden de compra bajo los estrictos estándares de riesgo del comité."
+    "reasoning": "El comité ha determinado que, a pesar de tener activos con un score técnico de 75, ninguno cumple con los requisitos de soporte de ballenas (Bids > 55%) ni con la confirmación de tendencia necesaria para mitigar el riesgo en un entorno de Fear 27. Se prioriza la preservación del capital sobre la ejecución especulativa."
   }
 }
