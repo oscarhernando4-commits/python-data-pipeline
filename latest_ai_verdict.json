@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-02 20:32:19",
+  "timestamp": "2026-08-02 20:34:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro). La alta volatilidad y la falta de muros de soporte institucionales confirmados obligan a la preservación del capital mediante una postura de espera (HOLD).",
+  "reasoning": "A pesar de identificar activos con score 75, el comité ha determinado que el entorno de mercado actual es de 'Alta Precisión y Baja Exposición'. La falta de soporte claro en el libro de órdenes y la alta probabilidad de 'trampas de valor' en el sector de altcoins, sumado al veto del Agente 6, obliga a mantener una posición de espera (HOLD) para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "LINKUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "UNIUSDT",
       "score": 75
     },
     {
@@ -15,16 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 75
-    },
-    {
       "symbol": "SKYUSDT",
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 65
+      "symbol": "ASTERUSDT",
+      "score": 75
     }
   ]
 }
