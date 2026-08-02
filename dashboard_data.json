@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-08-02 14:59:09",
-  "total_balance_usd": 20.09,
-  "usdt_free": 20.08935,
-  "bnb_free": 0.00444145,
-  "status": "🟦 Buscando Entrada A+",
+  "updated_at": "2026-08-02 20:00:24",
+  "total_balance_usd": 20.07,
+  "usdt_free": 0.0,
+  "bnb_free": 0.00439723,
+  "status": "🔵 En Vivo LONG (UUSDT @ $1.0008)",
   "position": {
-    "symbol": "NINGUNA",
-    "quantity": 0.0,
-    "entry_price": 0.0,
-    "highest_price": 0.0,
+    "symbol": "UUSDT",
+    "quantity": 17.0,
+    "entry_price": 1.0008,
+    "highest_price": 1.0008,
     "break_even": false,
     "trailing_active": false,
     "adaptive_sl_pct": 1.0,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). La falta de profundidad histórica en los activos con mejor score y la neutralidad del mercado dictan una postura de preservación de capital."
+    "reasoning": "El mercado se encuentra en un estado de limbo operativo con baja convicción institucional. Ninguno de los candidatos cumple con el umbral de dominancia de bids (>55%) ni con una confirmación de volumen necesaria para mitigar el riesgo de slippage, por lo que se prioriza la preservación del capital."
   }
 }
