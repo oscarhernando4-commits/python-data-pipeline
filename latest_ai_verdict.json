@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 11:46:21",
+  "timestamp": "2026-08-02 11:50:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación sistémica con un sesgo bajista predominante. Ninguno de los activos analizados alcanza el umbral mínimo de seguridad A+ (Score >= 65). Los activos con score 60 (PENGU, VET, PYTH) presentan riesgos idiosincráticos y falta de profundidad histórica, lo que los convierte en trampas de liquidez en el entorno actual de alta correlación bajista. La preservación del capital es la prioridad absoluta; se mantiene la liquidez en USDT hasta que las condiciones macroeconómicas y el flujo de capital institucional muestren una reversión clara.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con un sesgo bajista sistémico. Ninguno de los candidatos cumple con el umbral mínimo de Score A+ (>= 65) con confirmación de volumen institucional. PYTHUSDT, aunque tiene un score de 70, carece de historial suficiente en 5M y opera en un entorno de alta volatilidad sin anclaje, lo que lo clasifica como una trampa de valor. La preservación de capital es la prioridad absoluta ante la fuga de liquidez hacia activos de refugio.",
   "top_candidates": [
     {
-      "symbol": "PENGUUSDT",
-      "score": 60
+      "symbol": "PYTHUSDT",
+      "score": 70
     },
     {
       "symbol": "VETUSDT",
       "score": 60
     },
     {
-      "symbol": "PYTHUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "AEVOUSDT",
+      "symbol": "GIGGLEUSDT",
       "score": 50
     },
     {
       "symbol": "DEXEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "TLMUSDT",
       "score": 50
     }
   ]
