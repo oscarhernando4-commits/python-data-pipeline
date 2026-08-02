@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 21:28:19",
+  "timestamp": "2026-08-02 21:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de tener candidatos con scores técnicos elevados, la falta de profundidad en el libro de órdenes y la inestabilidad macroeconómica actual no cumplen con los estándares de seguridad exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado incierto.",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de tener activos con un score técnico de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y el entorno de mercado 'NEUTRAL' no cumplen con los estándares de seguridad A+ exigidos por el CRO, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "PENGUUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ASTERUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
+      "symbol": "ENAUSDT",
       "score": 75
     },
     {
       "symbol": "WLDUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XLMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "NEARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XRPUSDT",
       "score": 75
     }
   ]
