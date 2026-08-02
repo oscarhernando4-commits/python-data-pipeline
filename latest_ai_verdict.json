@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-02 01:57:03",
+  "timestamp": "2026-08-02 02:00:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "A pesar de que activos como QQQBUSDT y SUNUSDT presentan scores técnicos de 85, el mercado se encuentra en una fase de fragmentación táctica con un índice Fear & Greed en 27 (miedo). La ausencia de una tendencia direccional clara en el 100% de los pares y el historial insuficiente en temporalidades de 5M para estos activos de alta fortaleza elevan el riesgo de 'wash trading'. Siguiendo la filosofía de preservación de capital y paciencia de francotirador, la mejor decisión es mantener la liquidez en USDT hasta que el mercado confirme una estructura de acumulación más robusta y menos volátil.",
+  "confidence": 0,
+  "reasoning": "A pesar de tener activos con Score >= 65, el entorno macro presenta una divergencia estructural y alta sensibilidad a noticias regulatorias negativas. El historial de 5M es insuficiente para validar una entrada institucional de alta probabilidad. Siguiendo la filosofía de preservación de capital y paciencia de francotirador, se prioriza la liquidez en USDT ante la falta de una confirmación de volumen (Volume Surge > 1.2x) y la inestabilidad en las 'Blue Chips' que sugiere una rotación de capital errática.",
   "top_candidates": [
     {
-      "symbol": "QQQBUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SUNUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "XLMUSDT",
+      "symbol": "UUSDT",
       "score": 75
     },
     {
@@ -23,8 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "TUTUSDT",
       "score": 75
+    },
+    {
+      "symbol": "SUNUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ERAUSDT",
+      "score": 65
     }
   ]
 }
