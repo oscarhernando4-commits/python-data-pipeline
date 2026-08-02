@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 20:16:20",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento selectivo con una falta crítica de profundidad en el libro de órdenes y una tendencia neutral generalizada. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de liquidez confirmado), por lo que la estrategia institucional es preservar el capital y esperar un catalizador macroeconómico.",
+  "timestamp": "2026-08-02 20:18:19",
+  "selected_symbol": "LINKUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "LINKUSDT es el único candidato que combina un score técnico de 85/100 con una posición dominante en el sector RWA, cumpliendo con los criterios de calidad institucional A+ exigidos por el comité para operar en un entorno de mercado con Fear & Greed en 27.",
   "top_candidates": [
     {
       "symbol": "LINKUSDT",
       "score": 85
     },
     {
-      "symbol": "PEPEUSDT",
-      "score": 75
-    },
-    {
       "symbol": "UNIUSDT",
       "score": 75
     },
     {
-      "symbol": "EULUSDT",
-      "score": 65
+      "symbol": "SKYUSDT",
+      "score": 75
     },
     {
-      "symbol": "PUMPUSDT",
-      "score": 65
+      "symbol": "RENDERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DASHUSDT",
+      "score": 75
     }
   ]
 }
