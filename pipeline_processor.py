@@ -279,6 +279,22 @@ def run_infinite_trading_matrix_cycle():
                 print(f"🧠 [COMITÉ AI ELIGIÓ {top_side}] {winner_sym} (Score Original {top_data['score']} Pts): Approved={gemini_res.get('approved')} | Conf={gemini_res.get('confidence')}% | Razonamiento: {gemini_res.get('reasoning')}")
             else:
                 print(f"🧠 [COMITÉ AI] Ninguna moneda fue aprobada (NONE). El mercado es demasiado tóxico. Razonamiento: {gemini_res.get('reasoning')}")
+            
+            # Persist AI Super-Brain Verdict to JSON for Dashboards and Obsidian
+            try:
+                verdict_data = {
+                    "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "selected_symbol": winner_sym if winner_sym else "NONE",
+                    "action": gemini_res.get("action", "HOLD"),
+                    "approved": gemini_res.get("approved", False),
+                    "confidence": gemini_res.get("confidence", 0),
+                    "reasoning": gemini_res.get("reasoning", "Análisis Cuantitativo Institucional"),
+                    "top_candidates": [{"symbol": c["symbol"], "score": c["score"]} for c in top_10_candidates[:5]]
+                }
+                with open("latest_ai_verdict.json", "w", encoding="utf-8") as vf:
+                    json.dump(verdict_data, vf, indent=2)
+            except Exception as ve:
+                print(f"Error saving AI verdict: {ve}")
         except Exception as ge:
             print(f"💡 Gemini Sentinel Note: {ge}")
 
