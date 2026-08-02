@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-02 23:52:19",
+  "timestamp": "2026-08-02 23:54:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta aversión al riesgo. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es mantener la liquidez y evitar la exposición a activos con alta probabilidad de 'falling knife'.",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de candidatos con scores técnicos aceptables, ninguno cumple con los requisitos estrictos de soporte en el libro de órdenes y convicción institucional necesarios para operar en un entorno de mercado bajo 'Fear'. Se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "VETUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "HBARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ADAUSDT",
       "score": 75
     },
     {
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "HBARUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "EWYBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ARBUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     }
   ]
