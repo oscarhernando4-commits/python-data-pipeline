@@ -220,23 +220,22 @@ def run_infinite_trading_matrix_cycle():
             except Exception as e:
                 print(f"Concurrent exception for {s}: {e}")
 
-    # Select top 5 overall opportunities by strongest divergence from neutral (50)
-    candidates_list = []
+    # For SPOT LONG trading, prioritize the highest scoring bullish assets (Hyenuk Chu / Francisca Serrano Sniper)
+    bullish_candidates = []
     for sym, data in symbol_analysis_map.items():
         score = data["score"]
-        divergence = abs(score - 50)
-        action = "BUY_LONG" if score >= 50 else "SELL_SHORT"
-        candidates_list.append({
+        action = "BUY_LONG" if score >= 55 else "HOLD"
+        bullish_candidates.append({
             "symbol": sym,
-            "divergence": divergence,
             "score": score,
             "tech_data": data["tech"],
             "suggested_action": action
         })
     
-    # Sort by strongest divergence descending and take top 10
-    candidates_list.sort(key=lambda x: x["divergence"], reverse=True)
-    top_10_candidates = candidates_list[:10]
+    # Sort strictly by highest score first (Top Bullish Setups)
+    bullish_candidates.sort(key=lambda x: x["score"], reverse=True)
+    top_10_candidates = bullish_candidates[:10]
+
     
     import learning_engine
     bias_data = learning_engine.get_market_bias()
@@ -563,12 +562,18 @@ def run_infinite_trading_matrix_cycle():
             best_spot_long = long_candidates[0]
             
         if is_ai_approved and ai_action == "BUY_LONG" and ai_symbol and ai_symbol != "NONE" and ai_price > 0:
-            # Check BTC correlation if trading an Altcoin
-            if ai_symbol != "BTCUSDT" and is_btc_bearish and ai_confidence < 85:
-                print(f"🛡️ [FILTRO CORRELACIÓN BTC] Entrada LONG bloqueada en {ai_symbol}. Bitcoin bajista ({btc_status_str}). Protegiendo capital.")
+            # STRICT SNIPER GATE (Hyenuk Chu / Francisca Serrano: Capital Preservation)
+            if ai_score < 65:
+                print(f"🛡️ [ESCUDO CAPITAL REAL] Compra en {ai_symbol} bloqueada (Score {ai_score} < 65). Solo operamos Setups A+ para dinero real.")
+                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
+            elif ai_symbol != "BTCUSDT" and (is_btc_bearish or btc_score < 50):
+                print(f"🛡️ [FILTRO CORRELACIÓN BTC] Entrada LONG bloqueada en {ai_symbol}. Bitcoin no tiene fuerza alcista ({btc_status_str}). Protegiendo capital.")
+                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
+            elif ai_confidence < 75:
+                print(f"🛡️ [FILTRO CONFIANZA IA] Confianza de Gemini ({ai_confidence}%) menor al umbral A+ (75%). Esperando mejor setup.")
                 api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
             else:
-                print(f"💰 [REAL] Señal ALCISTA Aprobada por IA ({ai_symbol} @ {ai_score} Pts, Conf={ai_confidence}%). Evaluando cuenta real...")
+                print(f"💰 [REAL A+] Señal ALCISTA Aprobada por IA ({ai_symbol} @ {ai_score} Pts, Conf={ai_confidence}%). Evaluando cuenta real...")
                 api_connector.evaluate_and_trade_real_money(
                     best_symbol=ai_symbol,
                     best_score=ai_score,
@@ -576,18 +581,18 @@ def run_infinite_trading_matrix_cycle():
                     is_bearish=False,
                     is_learned_signal=True
                 )
-        elif best_spot_long:
+        elif best_spot_long and best_spot_long["score"] >= 75:
             bs_sym = best_spot_long["symbol"]
             bs_data = symbol_analysis_map.get(bs_sym, {})
             bs_price = bs_data.get("price", 0)
             bs_score = best_spot_long["score"]
             
             # Check BTC correlation if trading an Altcoin
-            if bs_sym != "BTCUSDT" and is_btc_bearish:
-                print(f"🛡️ [FILTRO CORRELACIÓN BTC] Oportunidad {bs_sym} ({bs_score} Pts) bloqueada porque Bitcoin está bajista ({btc_status_str}). Protegiendo capital.")
+            if bs_sym != "BTCUSDT" and (is_btc_bearish or btc_score < 50):
+                print(f"🛡️ [FILTRO CORRELACIÓN BTC] Oportunidad {bs_sym} ({bs_score} Pts) bloqueada porque Bitcoin no tiene fuerza ({btc_status_str}). Protegiendo capital.")
                 api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
             else:
-                print(f"🎯 [REAL SPOT] Oportunidad alcista independiente detectada ({bs_sym} @ {bs_score} Pts >= {real_long_score}). Evaluando cuenta real...")
+                print(f"🎯 [REAL SPOT A+] Oportunidad alcista independiente detectada ({bs_sym} @ {bs_score} Pts >= 75). Evaluando cuenta real...")
                 api_connector.evaluate_and_trade_real_money(
                     best_symbol=bs_sym,
                     best_score=bs_score,
@@ -596,8 +601,10 @@ def run_infinite_trading_matrix_cycle():
                     is_learned_signal=False
                 )
         else:
-            if ai_symbol:
-                print(f"🔒 [REAL] Mercado general bajista (Top={ai_symbol}, acción={ai_action}). Protegiendo capital Spot.")
+            if ai_symbol and ai_symbol != "NONE":
+                print(f"🔒 [REAL] Mercado sin setup A+ (Top={ai_symbol}, Score={ai_score}, Acción={ai_action}). Protegiendo 100% de capital en USDT.")
+            else:
+                print(f"🔒 [REAL] Ningún activo califica como Setup A+. Manteniendo 100% liquidez en USDT.")
             # Always run the trader to manage OPEN positions (check TP/SL), even if no new entry
             api_connector.evaluate_and_trade_real_money(
                 best_symbol=None, best_score=50, current_price=0.0, is_bearish=False

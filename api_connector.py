@@ -760,9 +760,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"⛔ Compra rechazada: {best_symbol} es una stablecoin / activo no volátil.")
                 
         if bias_ok and not is_stable:
-            # 1. LONG Entry Signal (Operates with 100% of available USDT, 1 decimal floor)
-            if best_symbol and not is_bearish and (best_score >= real_long_score or is_learned_signal) and usdt_free >= 5.1:
-                trigger_reason = "AUTO-APRENDIZAJE" if is_learned_signal else f"Score {real_long_score}+"
+            # 1. LONG Entry Signal (Operates with 100% of available USDT, strictly requires Score >= 65 Setup A+)
+            min_required_score = max(65, real_long_score) if not is_learned_signal else 65
+            if best_symbol and not is_bearish and best_score >= min_required_score and usdt_free >= 5.1:
+                trigger_reason = "AUTO-APRENDIZAJE A+" if is_learned_signal else f"Score {real_long_score}+"
                 print(f"🚀 SEÑAL ALCISTA (LONG) ({best_symbol} @ {best_score} Pts - {trigger_reason}). Comprando con ${usdt_free:.1f} USDT (100% Capital)...")
                 buy_res = execute_real_spot_market_buy(best_symbol, usdt_free)
                 if isinstance(buy_res, dict) and "orderId" in buy_res:

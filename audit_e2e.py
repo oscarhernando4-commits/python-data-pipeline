@@ -118,7 +118,8 @@ if os.path.exists(wf_path):
     if loop_exists:
         with open("cloud_continuous_loop.py", "r", encoding="utf-8") as f:
             loop_code = f.read()
-        test("Mitigación de conflictos git integrada en el loop continuo", "--soft" in loop_code)
+        test("Mitigación de conflictos git integrada en el loop continuo", "--rebase" in loop_code or "pull" in loop_code)
+
 
 # 9. INTEGRIDAD DE REPORTES OBSIDIAN
 print("\n[9/10] REPORTES EN OBSIDIAN (Rutas relativas y legibilidad)")

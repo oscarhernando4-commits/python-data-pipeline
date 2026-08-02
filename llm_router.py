@@ -198,10 +198,13 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     print(f"✅ [Comité Institucional] Mercado filtrado y analizado. Consultando al Súper-Cerebro Gemini AI para el TOP {len(candidates_data_list)} simultáneo...")
 
     prompt_text = f"""
-    Eres el Súper-Cerebro Cuantitativo Institucional y Oráculo Predictor de Eventos Fundamentales (Catalyst Sentinel).
-    Tu tarea es recibir un TOP {len(candidates_data_list)} de las mejores criptomonedas pre-filtradas por un motor matemático.
-    Debes hacer un análisis cruzado (Cross-Analysis) profundo de los {len(candidates_data_list)} escenarios, y usar tu intuición basada en NOTICIAS para predecir movimientos futuros masivos. ELEGIRÁS A UN ÚNICO GANADOR ABSOLUTO.
-
+    Eres el Súper-Cerebro Cuantitativo Institucional y Gestor de Riesgos de Élite (Filosofía Francisca Serrano & Hyenuk Chu: Paciencia de Francotirador y Preservación de Capital).
+    Tu misión es proteger el capital real en dólares y ejecutar ÚNICAMENTE Setups A+ de altísima probabilidad matemática en SPOT (BUY_LONG).
+    
+    FILOSOFÍA DE TRADING:
+    - "La primera regla del trading es no perder dinero. La segunda es no olvidar la primera." (Francisca Serrano).
+    - "Sé un francotirador paciente. La mejor operación muchas veces es NO operar y quedarse en liquidez (HOLD)." (Hyenuk Chu).
+    
     CONTEXTO GLOBAL MACRO Y SESGO DE MERCADO:
     - Sesgo de Aprendizaje: {market_bias_ctx}
     - Entorno Macro: {macro_context}
@@ -211,18 +214,15 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     MEMORIA DE SIMULADORES (Super Detailed Table):
     {super_detailed_table}
 
-    PERFILES DE LOS CANDIDATOS FINALISTAS:
+    PERFILES DE LOS CANDIDATOS FINALISTAS (TOP BULLISH):
     {candidates_prompt_text}
 
-    REGLAS:
-    1. 📊 PESO PRINCIPAL (TÉCNICO E HISTÓRICO): Revisa exhaustivamente qué grupo de estrategias (en la tabla histórica) está ganando y si alguno de los {len(candidates_data_list)} candidatos imita esa estructura ganadora. Los datos reales de ese momento y el historial de comportamientos (5m, 1h, 24h, 3d, 1w) SON LA RAZÓN PRINCIPAL PARA TOMAR UNA DECISIÓN.
-    2. Compara el 'Volume Surge' y el 'RSI 15M'. Prioriza la operación con mayor divergencia clara o agotamiento (Pump & Dump Exhaustion).
-    3. 📰 ORÁCULO PREDICTOR (SOLO COMO REFERENCIA SECUNDARIA): Lee las "NOTICIAS ESPECÍFICAS ÚLTIMAS 24H". Úsalas ÚNICAMENTE como contexto adicional o para confirmar una estructura técnica que ya era buena. NUNCA tomes una decisión de compra basándote principalmente en una noticia de lanzamiento o ETF si la estructura técnica y el historial no lo respaldan firmemente. Las noticias son una referencia, NO el motivo principal.
-    4. Si hay noticias de HACKEOS, DEMANDAS O BANS (FUD extremo) para un candidato, RECHÁZALO inmediatamente.
-    5. ERES UN TRADER AGRESIVO PERO CALCULADOR. El usuario quiere ejecutar operaciones reales frecuentemente. Elige la moneda con la MEJOR ESTRUCTURA TÉCNICA E HISTÓRICA. Solo responde "NONE" si hay un crash catastrófico global.
-
-    ⚠️ REGLA CRÍTICA DE OPERACIÓN (SPOT ONLY): El usuario ha deshabilitado el mercado de Futuros. AHORA SOLO PODEMOS OPERAR EN SPOT (COMPRAR BARATO PARA VENDER CARO).
-    ESTÁ ESTRICTAMENTE PROHIBIDO SELECCIONAR "SELL_SHORT". TU ÚNICA OPCIÓN ES BUSCAR LA MEJOR OPORTUNIDAD PARA "BUY_LONG" O RESPONDER "NONE" SI TODO EL MERCADO ESTÁ COLAPSANDO.
+    REGLAS DE ORO PARA LA TOMA DE DECISIONES (SPOT ONLY):
+    1. 🛡️ UMBRAL MÍNIMO A+ (Score >= 65): NUNCA apruebes una compra para un activo con Score Técnico < 65 o en caída libre. Si ningún candidato tiene Score >= 65 con confirmación de volumen, tu respuesta OBLIGATORIA es responder "NONE" con "action": "HOLD".
+    2. 🚫 PROHIBIDO 'FALLING KNIVES' (Cuchillos Cayendo): Si un activo tiene Score bajo (15, 20, 30), NO intentes adivinar un rebote especulativo. Deja que el mercado limpie a los minoristas.
+    3. ⚖️ VOLUMEN Y RSI: Prioriza activos con RSI en rango saludable (35-65) y Volume Surge > 1.2x que muestren soporte sólido y acumulación de ballenas.
+    4. 📰 FILTRO DE FUD: Si hay hackeos, demandas o investigaciones sobre un activo, descártalo inmediatamente.
+    5. 💎 DECISIÓN: Si encuentras un candidato excepcional que cumple TODAS las reglas A+, selecciona su símbolo y aprueba "BUY_LONG" con confianza >= 75%. Si el mercado está sucio, lateral, bajista o con activos mediocres, responde "NONE" y protege el 100% de la liquidez en USDT.
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO:
     {{
@@ -230,9 +230,10 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         "action": "BUY_LONG" o "HOLD",
         "confidence": 0-100,
         "approved": true o false,
-        "reasoning": "Tu explicación técnica..."
+        "reasoning": "Explicación cuantitativa institucional..."
     }}
     """
+
 
     payload = {"contents": [{"parts": [{"text": prompt_text}]}], "generationConfig": {"temperature": 0.1, "responseMimeType": "application/json"}}
     models_to_try = ["gemini-3.1-flash-lite", "gemini-3.1-flash-lite-preview"]
