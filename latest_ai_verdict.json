@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-08-02 07:10:20",
+  "timestamp": "2026-08-02 07:15:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El entorno macroeconómico actual presenta un índice de miedo (Fear & Greed) en 27, indicando una fragilidad sistémica. Aunque activos como TRX y POL presentan un score de 75, carecen de un historial de datos suficiente para validar una probabilidad estadística de éxito A+ bajo nuestra metodología de preservación de capital. La mayoría de los activos con score > 60 muestran una falta de convicción institucional y volumen de confirmación necesario. Siguiendo la filosofía de paciencia de francotirador, la preservación del capital en liquidez (USDT) es la estrategia óptima ante la ausencia de un setup de alta probabilidad.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en un estado de estancamiento defensivo con sesgo bajista (Fear & Greed 27). Aunque activos como UNI, SYN, ENSO, HEI, MUBARAK, LUNC y RIF presentan un Score de 65, el análisis de riesgo institucional determina que carecen de historial consolidado y su fortaleza es producto de volatilidad especulativa de baja liquidez. La ausencia de una tendencia clara en BTC (Score 45) y el entorno de 'pánico silencioso' desaconsejan la entrada en cualquier activo, priorizando la preservación de capital sobre la búsqueda de alfa.",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
-      "score": 75
+      "symbol": "UNIUSDT",
+      "score": 65
     },
     {
-      "symbol": "POLUSDT",
-      "score": 75
+      "symbol": "SYNUSDT",
+      "score": 65
     },
     {
       "symbol": "ENSOUSDT",
@@ -23,7 +23,7 @@
       "score": 65
     },
     {
-      "symbol": "SYNUSDT",
+      "symbol": "MUBARAKUSDT",
       "score": 65
     }
   ]
