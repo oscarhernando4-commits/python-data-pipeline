@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-02 04:15:18",
-  "selected_symbol": "ORDIUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "ORDIUSDT cumple con el umbral de Score Técnico A+ (75/100) establecido en el memorándum de rotación defensiva. A diferencia de los activos con scores bajos, ORDI muestra resiliencia y absorción de liquidez. La entrada se justifica bajo una estrategia de scalping de alta volatilidad, manteniendo una gestión de riesgo estricta al no existir soporte histórico profundo, alineado con la filosofía de preservación de capital.",
+  "timestamp": "2026-08-02 04:20:18",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "A pesar de tener candidatos con score 65-75, el entorno macroeconómico actual (Fear & Greed 27) y la alta volatilidad en los activos de alta capitalización sugieren una alta probabilidad de arrastre sistémico. Ninguno de los candidatos presenta un 'Volume Surge' superior a 1.2x, lo cual es una condición crítica para confirmar la entrada de capital institucional. La estrategia de preservación de capital dicta mantenerse en liquidez (HOLD) hasta que el mercado muestre una estructura de acumulación más clara y menos dependiente de la fragilidad de BTC.",
   "top_candidates": [
     {
-      "symbol": "ORDIUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "INJUSDT",
+      "symbol": "ORDIUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ZAMAUSDT",
+      "symbol": "1000SATSUSDT",
       "score": 65
     },
     {
-      "symbol": "1000SATSUSDT",
+      "symbol": "UNIUSDT",
       "score": 65
     }
   ]
