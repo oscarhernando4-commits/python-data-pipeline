@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-02 11:35:17",
+  "timestamp": "2026-08-02 11:40:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de fuga de liquidez sistémica con un sesgo bajista consolidado. Ninguno de los activos analizados alcanza el umbral de seguridad A+ (Score >= 65). Los candidatos con mayor puntuación (WLFI y VET, con 60/100) no cumplen con el requisito mínimo de calidad institucional y presentan riesgos asociados a volatilidad especulativa o noticias negativas. La estrategia de preservación de capital dicta mantener el 100% de la liquidez en USDT para evitar 'cuchillos cayendo' en un entorno de alta correlación negativa.",
+  "reasoning": "El mercado presenta una debilidad sistémica extrema con un sesgo bajista predominante. Aunque PENGUUSDT presenta un score de 70, su historial de 5M es insuficiente para validar una entrada institucional de alta probabilidad. El resto de los activos no cumplen con el umbral mínimo de seguridad (Score >= 65) o presentan riesgos asociados a FUD. Bajo la filosofía de preservación de capital, la mejor operación es mantenerse en liquidez (HOLD) hasta que la estructura de mercado muestre una reversión clara y confirmada.",
   "top_candidates": [
     {
-      "symbol": "WLFIUSDT",
-      "score": 60
+      "symbol": "PENGUUSDT",
+      "score": 70
     },
     {
       "symbol": "VETUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "STXUSDT",
       "score": 60
     },
     {
@@ -19,11 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "DEXEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "OGNUSDT",
+      "symbol": "AEVOUSDT",
       "score": 50
     }
   ]
