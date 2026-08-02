@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-02 15:15:20",
+  "timestamp": "2026-08-02 15:20:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema con una ausencia total de activos que cumplan con los criterios de alta convicción. La falta de soporte en el libro de órdenes y la debilidad técnica generalizada dictan una postura de protección de liquidez (HOLD) hasta que se observe una acumulación institucional clara.",
+  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con debilidad sistémica. Ninguno de los candidatos alcanza el Score técnico de 65 requerido por el Comité, y la falta de profundidad en el libro de órdenes aumenta el riesgo de slippage, por lo que se mantiene la liquidez en USDT.",
   "top_candidates": [
     {
+      "symbol": "ATOMUSDT",
+      "score": 70
+    },
+    {
       "symbol": "SOLUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "UUSDT",
       "score": 60
     },
     {
@@ -15,15 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "XLMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XRPUSDT",
+      "symbol": "LTCUSDT",
       "score": 60
     }
   ]
