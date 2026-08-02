@@ -121,6 +121,7 @@ def analyze_multi_timeframe_candles(symbol):
     # Parse 5m and 15m trends
     closes_5m = [float(k[4]) for k in klines_5m]
     closes_15m = [float(k[4]) for k in klines_15m]
+    vols_15m = [float(k[5]) for k in klines_15m]
     closes_1h = [float(k[4]) for k in klines_1h] if klines_1h else closes_15m
     closes_4h = [float(k[4]) for k in klines_4h] if klines_4h else closes_15m
     
@@ -129,6 +130,15 @@ def analyze_multi_timeframe_candles(symbol):
     tf_1h_up = closes_1h[-1] > closes_1h[0] if closes_1h else False
     tf_4h_up = closes_4h[-1] > closes_4h[0] if closes_4h else False
     tf_1d_up = d_closes[-1] > d_closes[0] if d_closes else False
+    
+    # 15m Microstructure moving averages (MA7, MA25) & Volume Surge
+    ma7_15m = sum(closes_15m[-7:]) / len(closes_15m[-7:]) if len(closes_15m) >= 7 else closes_15m[-1]
+    ma25_15m = sum(closes_15m[-20:]) / len(closes_15m[-20:]) if closes_15m else closes_15m[-1]
+    price_above_15m_ma7 = closes_15m[-1] > ma7_15m
+    price_above_15m_ma25 = closes_15m[-1] > ma25_15m
+    
+    avg_vol_15m = sum(vols_15m[-5:]) / len(vols_15m[-5:]) if len(vols_15m) >= 5 else 1.0
+    vol_surge_15m = round(vols_15m[-1] / avg_vol_15m, 2) if avg_vol_15m > 0 else 1.0
     
     # Multi-Timeframe Alignment Score (0 to 100)
     score_components = [
@@ -154,12 +164,21 @@ def analyze_multi_timeframe_candles(symbol):
         upper_wick = high_15m - max(open_15m, close_15m)
         
         # Spike up followed by rejection wick (buying top trap)
-        if candle_range > 0 and (upper_wick / candle_range) > 0.50 and (high_15m - low_15m) / low_15m > 0.015:
+        if candle_range > 0 and (upper_wick / candle_range) > 0.35 and (high_15m - low_15m) / low_15m > 0.012:
             is_overextended_15m = True
-            overextension_reason = f"Mecha superior en vela de 15m representa >50% del rango ({upper_wick/candle_range*100:.1f}%)"
-        elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > 3.0:
+            overextension_reason = f"Mecha superior de reversión en vela de 15m ({upper_wick/candle_range*100:.1f}% del rango)"
+        elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > 2.5:
             is_overextended_15m = True
-            overextension_reason = f"Vela de 15m sobre-extendida (+{((close_15m - open_15m) / open_15m) * 100.0:.2f}%)"
+            overextension_reason = f"Vela de 15m sobre-extendida en la cima (+{((close_15m - open_15m) / open_15m) * 100.0:.2f}%)"
+        elif not price_above_15m_ma7 or not price_above_15m_ma25:
+            is_overextended_15m = True
+            overextension_reason = f"Precio de 15m por debajo de medias móviles (Precio: {closes_15m[-1]} < MA7: {ma7_15m:.4f} / MA25: {ma25_15m:.4f})"
+
+    pattern_15m_summary = (
+        f"Precio 15m=${closes_15m[-1]:.4f} | MA7_15m=${ma7_15m:.4f} | MA25_15m=${ma25_15m:.4f} | "
+        f"Por encima MA7/MA25={'SÍ' if price_above_15m_ma7 and price_above_15m_ma25 else 'NO'} | "
+        f"VolSurge 15m={vol_surge_15m}x"
+    )
 
     return {
         "is_valid_tradable_asset": True,
@@ -168,6 +187,9 @@ def analyze_multi_timeframe_candles(symbol):
         "price_expansion_1d_pct": round(price_expansion_pct, 2),
         "is_overextended_15m": is_overextended_15m,
         "overextension_reason": overextension_reason,
+        "price_above_15m_mas": price_above_15m_ma7 and price_above_15m_ma25,
+        "vol_surge_15m": vol_surge_15m,
+        "pattern_15m_summary": pattern_15m_summary,
         "timeframe_alignment": {
             "5m": "BULLISH" if tf_5m_up else "BEARISH",
             "15m": "BULLISH" if tf_15m_up else "BEARISH",

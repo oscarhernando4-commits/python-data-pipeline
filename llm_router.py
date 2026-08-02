@@ -75,11 +75,15 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     Eres un Trader Cuantitativo Institucional Senior y Experto en Aprendizaje de Patrones Históricos Extremos / Rastro de Ballenas.
     Tu objetivo es lograr operaciones victoriosas de alta frecuencia intradía para {symbol}.
 
-    ANÁLISIS ESTRUCTURAL DE VELAS DE 1 HORA (1H) Y 4 HORAS (4H):
+    ANÁLISIS DE MICROESTRUCTURA DE VELAS DE 15 MINUTOS (15M - CRITERIO PRINCIPAL DE DECISIÓN):
+    - {mtf_info.get('pattern_15m_summary', 'Análisis 15m activo')}
     - Rango de Volatilidad 1D: {mtf_range_1d}%
     - Calificación Multi-Temporal: {mtf_score}/100
     - Alineación por Temporalidad: 5m={mtf_alignment.get('5m')}, 15m={mtf_alignment.get('15m')}, 1h={mtf_alignment.get('1h')}, 4h={mtf_alignment.get('4h')}, 1d={mtf_alignment.get('1d')}
-    ⚠️ REGLA ESTRICTA DE VELAS DE 1H: Si la vela de 1H está en consolidación plana muerta (< 1.0% de movimiento) o en tendencia bajista fuerte en 1H/4H, RECHAZA la compra para evitar quedar atrapado en acumulación horizontal sin volumen.
+    ⚠️ REGLA DE ORO DE VELAS DE 15M (DECISIÓN PRINCIPAL):
+    1. Si el precio de 15m está por DEBAJO de MA(7) o MA(25) en 15m, RECHAZA la compra de inmediato (HOLD).
+    2. Si la vela de 15m presenta mechas superiores de reversión o está sobre-extendida en la cima, RECHAZA la compra (HOLD).
+    3. Exige que 5m, 15m y 1h muestren alineación alcista simultánea.
 
     LECCIONES APRENDIDAS DE 99 SIMULACIONES (RAG MEMORY):
     Patrones Prohibidos (Trampas descubiertas):
