@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-02 03:35:23",
-  "selected_symbol": "ORDIUSDT",
+  "timestamp": "2026-08-02 03:40:20",
+  "selected_symbol": "TAOUSDT",
   "action": "BUY_LONG",
   "approved": true,
-  "confidence": 75,
-  "reasoning": "ORDIUSDT es el único activo que cumple con el umbral de Score Técnico A+ (75/100) y presenta un volumen de compra significativo (Volume Surge 0.94, el más alto entre los candidatos con score >= 65). El RSI de 53.24 se encuentra en zona neutral saludable, evitando condiciones de sobrecompra. Se prioriza este activo por su resiliencia técnica frente al entorno macro de debilidad sistémica, manteniendo una gestión de riesgo estricta al ser una operación en SPOT.",
+  "confidence": 85,
+  "reasoning": "TAO presenta el mejor perfil técnico (Score 85/100) con un volumen de 1.83x, indicando acumulación institucional. A pesar del miedo macro, su fuerza relativa y narrativa de IA lo posicionan como el activo de mayor probabilidad para un setup A+ en spot, cumpliendo con el umbral de riesgo y evitando activos con FUD o scores inferiores.",
   "top_candidates": [
     {
+      "symbol": "TAOUSDT",
+      "score": 85
+    },
+    {
       "symbol": "ORDIUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "NIGHTUSDT",
       "score": 75
     },
     {
@@ -15,16 +23,8 @@
       "score": 70
     },
     {
-      "symbol": "DASHUSDT",
+      "symbol": "QNTUSDT",
       "score": 70
-    },
-    {
-      "symbol": "1000SATSUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "GIGGLEUSDT",
-      "score": 65
     }
   ]
 }
