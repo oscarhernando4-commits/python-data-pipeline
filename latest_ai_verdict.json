@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 18:30:57",
+  "timestamp": "2026-08-02 18:35:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de estancamiento defensivo con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes), por lo que la estrategia más rentable es mantener la liquidez en USDT y evitar la exposición a activos con señales mixtas.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de dominancia de bids (>= 55%) ni con la confirmación de volumen institucional necesaria para una entrada de alta probabilidad, por lo que se prioriza la preservación del capital bajo la regla de no perder dinero.",
   "top_candidates": [
-    {
-      "symbol": "ZECUSDT",
-      "score": 75
-    },
     {
       "symbol": "UUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "AVAXUSDT",
       "score": 75
     },
     {
-      "symbol": "ARBUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "RENDERUSDT",
+      "symbol": "ZECUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOTUSDT",
       "score": 75
     }
   ]
