@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 18:50:21",
+  "timestamp": "2026-08-02 18:55:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional). El mercado se encuentra en una fase de indecisión técnica donde la probabilidad de éxito es baja, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de candidatos con scores técnicos aceptables, ninguno cumple con la Regla de Oro #1 (Convicción A+ y soporte de libro de órdenes). La volatilidad actual y la falta de muros de compra institucionales sugieren un entorno de alta selectividad donde la preservación del capital es la prioridad absoluta.",
   "top_candidates": [
     {
-      "symbol": "ZECUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "UUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XLMUSDT",
-      "score": 75
+      "symbol": "DOGEUSDT",
+      "score": 85
     },
     {
       "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "SUIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "NEARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZECUSDT",
       "score": 75
     }
   ]
