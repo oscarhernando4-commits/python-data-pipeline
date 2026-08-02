@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 15:45:23",
+  "timestamp": "2026-08-02 15:50:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos teóricos, la falta de profundidad en el libro de órdenes (bids < 55%) y la ausencia de volumen institucional confirmado (Volume Surge 0.0) no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se mantiene la liquidez en USDT para evitar 'trampas de valor' en un entorno de mercado con sentimiento de miedo predominante.",
+  "reasoning": "El mercado presenta una fragilidad estructural extrema con una ausencia de convicción alcista. Dado que ningún activo alcanza el umbral de Score A+ (65) y los datos de liquidez son inaccesibles, el comité ha decidido mantener el 100% de la liquidez en USDT para evitar trampas de valor y volatilidad innecesaria.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
-      "score": 75
+      "symbol": "CAKEUSDT",
+      "score": 70
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 75
+      "symbol": "XAUTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "UUSDT",
+      "score": 60
     },
     {
       "symbol": "AAVEUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
+      "symbol": "BCHUSDT",
+      "score": 60
     }
   ]
 }
