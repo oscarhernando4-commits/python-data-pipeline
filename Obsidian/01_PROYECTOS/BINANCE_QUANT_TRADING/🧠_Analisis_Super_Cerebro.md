@@ -1,11 +1,11 @@
 # 🧠 INFORME EXECUTIVO DEL SÚPER-CEREBRO (GEMINI 3.1 FLASH LITE)
-*Última actualización: `2026-08-02 05:35:46`*
+*Última actualización: `2026-08-02 05:40:46`*
 
 > [!IMPORTANT] 🎯 **VEREDICTO INSTITUCIONAL DE IA EN TIEMPO REAL:**
 > - 🪙 **Activo Evaluado:** **`ERAUSDT`**
 > - 🚦 **Acción Recomendada:** **`BUY_LONG`** (Aprobada ✅)
 > - 📊 **Nivel de Confianza Cuántica:** **`70%`**
-> - 💵 **Precio Actual de Mercado:** **`$0.067800 USD`**
+> - 💵 **Precio Actual de Mercado:** **`$0.067700 USD`**
 
 ---
 
@@ -21,8 +21,8 @@ Fallback Cuantitativo Tras Fallo de Conexión AI
 | Temporalidad | Estructura de Mercado | Tendencia | Observación Cuantitativa |
 | :--- | :--- | :--- | :--- |
 | **5 Minutos (Micro / Scalp)** | Micro-flujo y libros de órdenes | 🟢 Alcista | Volatilidad inmediata y lectura de tick |
-| **15 Minutos (Gatillo de Entrada)** | Señal técnica y gatillo | 🟢 Expansión | RSI=56.7, MACD Hist=+0.0000 |
-| **1 Hora (Intradía)** | Rango y consolidación | 🟢 Sobre EMA20 | Soporte intradía clave en $0.0677 |
+| **15 Minutos (Gatillo de Entrada)** | Señal técnica y gatillo | 🟢 Expansión | RSI=54.9, MACD Hist=-0.0000 |
+| **1 Hora (Intradía)** | Rango y consolidación | 🟢 Sobre EMA20 | Soporte intradía clave en $0.0676 |
 | **4 Horas (Macro Institucional)** | Tendencia mayor de ballenas | **🔴 BAJISTA (Bearish)** | EMA50: $0.0724 - EMA200: $0.0724 |
 | **24 Horas a 7 Días (Historial)** | Memoria de 0 Operaciones | **Sesgo: NEUTRAL** | Win Rate Histórico Global: **0.0%** |
 
@@ -32,8 +32,8 @@ Fallback Cuantitativo Tras Fallo de Conexión AI
 
 * **Patrón de Vela Actual:** **`Vela Neutral de Consolidación`**
 * **Mecha Inferior (Absorción de Compras):** `0.000000 USD` (Indica si las ballenas compraron en la caída)
-* **Mecha Superior (Presión Vendedora):** `0.000100 USD` (Indica rechazo en techos)
-* **Cuerpo de la Vela:** `0.000300 USD` (Fuerza direccional del ciclo)
+* **Mecha Superior (Presión Vendedora):** `0.000200 USD` (Indica rechazo en techos)
+* **Cuerpo de la Vela:** `0.000200 USD` (Fuerza direccional del ciclo)
 * **Comportamiento 5M en las últimas 4 Horas:**  
   *Historial reciente insuficiente (Primeras lecturas de 5M).*
 
@@ -43,20 +43,20 @@ Fallback Cuantitativo Tras Fallo de Conexión AI
 
 | Indicador Técnico | Valor Actual | Rango Normal | Diagnóstico Cuantitativo |
 | :--- | :--- | :--- | :--- |
-| **RSI (14) - 15 Minutos** | **`56.67`** | 30 - 70 | 🔵 Zona Neutral Saludable |
+| **RSI (14) - 15 Minutos** | **`54.93`** | 30 - 70 | 🔵 Zona Neutral Saludable |
 | **RSI (14) - 4 Horas** | **`44.23`** | 30 - 70 | 🔴 Macro Bajista |
-| **MACD Histograma (15m)** | **`+0.000003`** | Oscilador | 🟢 Impulso Comprador Creciente |
-| **EMA 20 (Soporte Dinámico)** | **`$0.067482`** | Referencia | 🟢 Precio por encima (Fuerza) |
-| **Bollinger Banda Superior** | **`$0.068597`** | Resistencia | Techo de volatilidad para toma de ganancias |
-| **Bollinger Banda Inferior** | **`$0.066673`** | Soporte | Suelo de volatilidad para entradas de rebote |
-| **Volumen Surge Ratio** | **`2.14x`** | > 1.50x | 🔥 Volumen Institucional Detectado |
+| **MACD Histograma (15m)** | **`-0.000003`** | Oscilador | 🔴 Presión Vendedora |
+| **EMA 20 (Soporte Dinámico)** | **`$0.067472`** | Referencia | 🟢 Precio por encima (Fuerza) |
+| **Bollinger Banda Superior** | **`$0.068589`** | Resistencia | Techo de volatilidad para toma de ganancias |
+| **Bollinger Banda Inferior** | **`$0.066671`** | Soporte | Suelo de volatilidad para entradas de rebote |
+| **Volumen Surge Ratio** | **`2.28x`** | > 1.50x | 🔥 Volumen Institucional Detectado |
 | **ATR (Volatilidad Real 15m)** | **`$0.000421`** | Margen | Rango medio de movimiento por vela de 15m |
 
 ---
 
 ## 🛡️ 5. GESTIÓN DE RIESGO Y PARÁMETROS ASIMÉTRICOS (1:2)
-* 🎯 **Take Profit Objetivo (+2.0%):** **`$0.069156 USD`**
-* 🛑 **Stop Loss Inflexible (-1.0%):** **`$0.067122 USD`**
+* 🎯 **Take Profit Objetivo (+2.0%):** **`$0.069054 USD`**
+* 🛑 **Stop Loss Inflexible (-1.0%):** **`$0.067023 USD`**
 * ⚖️ **Relación Riesgo / Beneficio:** **`1 : 2`** (Arriesgamos 1 para ganar 2)
 * 🧠 **Escudo Anti-Trampas:** Activado - Operación Aprobada
 
