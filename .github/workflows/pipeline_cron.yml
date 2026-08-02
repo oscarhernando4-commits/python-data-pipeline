@@ -9,7 +9,7 @@ on:
 
 concurrency:
   group: "continuous-quant-engine"
-  cancel-in-progress: false # Keeps the 4-hour runner active without premature cancellations
+  cancel-in-progress: true # Automatically cancels previous running instance when new 4-hour cron arrives
 
 jobs:
   continuous_trade_and_sync:
