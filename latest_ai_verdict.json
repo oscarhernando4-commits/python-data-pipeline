@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-02 04:00:22",
+  "timestamp": "2026-08-02 04:05:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El entorno macro actual presenta una fragilidad extrema con un índice Fear & Greed en 27 (Miedo) y una clara distribución institucional. Aunque activos como ALGO, SPCXB y CFX presentan un Score de 75, el volumen de confirmación (Volume Surge) es insuficiente (0.02 o menor) para validar una entrada A+ en un mercado con alta correlación negativa. La preservación de capital es la prioridad absoluta; no se detectan condiciones de alta probabilidad que justifiquen el riesgo de exposición en este momento. Se mantiene la liquidez en USDT.",
+  "reasoning": "A pesar de que ALGO, ORDI, CFX y RIF presentan un score técnico de 75/100, el análisis de volumen (Volume Surge) es insuficiente (< 1.2x) para confirmar una entrada institucional de alta probabilidad. El mercado se encuentra en un estado de 'miedo' (Fear & Greed 27) con una tendencia neutral predominante y una alta tasa de fallos en los últimos trades. Siguiendo la filosofía de preservación de capital y paciencia de francotirador, se prioriza la liquidez en USDT hasta que el volumen de compra institucional sea evidente y no solo una anomalía de baja liquidez.",
   "top_candidates": [
     {
-      "symbol": "SPCXBUSDT",
+      "symbol": "ALGOUSDT",
       "score": 75
     },
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "ORDIUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ZAMAUSDT",
-      "score": 65
+      "symbol": "RIFUSDT",
+      "score": 75
     },
     {
-      "symbol": "ORDIUSDT",
+      "symbol": "ZAMAUSDT",
       "score": 65
     }
   ]
