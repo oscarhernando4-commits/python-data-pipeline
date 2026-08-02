@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-02 21:24:21",
+  "timestamp": "2026-08-02 21:26:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia defensiva extrema y falta de convicción en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de seguridad A+ exigido por el comité, por lo que se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos elevados, ninguno cumple con el umbral de seguridad y confirmación de liquidez exigido por el CRO. Se prioriza la preservación del capital frente a la incertidumbre del mercado actual, manteniendo la posición en efectivo hasta que se observe una capitulación clara o una confirmación de tendencia alcista robusta.",
   "top_candidates": [
     {
+      "symbol": "PENGUUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "LINKUSDT",
+      "score": 75
+    },
+    {
       "symbol": "XRPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "WLDUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     }
   ]
