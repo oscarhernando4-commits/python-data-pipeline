@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-02 22:52:37",
+  "timestamp": "2026-08-02 22:54:35",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "Ningún candidato cumple con el estricto umbral mínimo A+ (Score >= 65) requerido por el comité, y el contexto de mercado presenta demasiada incertidumbre. Por seguridad, se rechazan todas las operaciones y se mantiene la liquidez en USDT.",
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos analizados alcanza el Score Técnico mínimo de 65 requerido por el Chief Risk Officer y el CEO. Ante la ausencia de una configuración A+ y la presencia de condiciones de mercado neutrales/laterales, el comité multi-agente decide por unanimidad vetar las operaciones y mantener el 100% de la liquidez en USDT.",
   "top_candidates": [
     {
-      "symbol": "HBARUSDT",
+      "symbol": "ADAUSDT",
       "score": 60
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
@@ -20,11 +20,11 @@
     },
     {
       "symbol": "MIRAUSDT",
-      "score": 50
+      "score": 60
     },
     {
-      "symbol": "ORDIUSDT",
-      "score": 50
+      "symbol": "ONDOUSDT",
+      "score": 55
     }
   ]
 }
