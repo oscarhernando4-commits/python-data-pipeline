@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 05:30:43",
-  "selected_symbol": "INJUSDT",
+  "timestamp": "2026-08-02 05:35:44",
+  "selected_symbol": "ERAUSDT",
   "action": "BUY_LONG",
   "approved": true,
   "confidence": 70,
   "reasoning": "Fallback Cuantitativo Tras Fallo de Conexión AI",
   "top_candidates": [
     {
+      "symbol": "ERAUSDT",
+      "score": 75
+    },
+    {
       "symbol": "INJUSDT",
       "score": 75
     },
     {
-      "symbol": "ETCUSDT",
-      "score": 65
+      "symbol": "ICPUSDT",
+      "score": 75
     },
     {
-      "symbol": "OGNUSDT",
-      "score": 65
+      "symbol": "ORDIUSDT",
+      "score": 75
     },
     {
-      "symbol": "KITEUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 60
+      "symbol": "POLUSDT",
+      "score": 75
     }
   ]
 }
