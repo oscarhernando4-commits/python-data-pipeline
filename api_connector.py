@@ -241,9 +241,12 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
         res = requests.post(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
         res_json = res.json()
         if "orderId" in res_json or res_json.get("status") == "FILLED":
-            # Update local USDT balance cache seamlessly
-            state["_cached_usdt_free"] = max(0.0, round(state.get("_cached_usdt_free", clean_usd) - clean_usd, 4))
-            save_real_account_state(state)
+            # Real-Time Balance Sync via Fixie Proxy upon Trade Opening
+            print("🔄 [TRADE OPENED] Sincronizando balance real desde Binance API (Fixie Proxy)...")
+            try:
+                diagnose_full_spot_wallet()
+            except Exception as se:
+                print(f"Error re-syncing wallet after buy: {se}")
         return res_json
     except Exception as e:
         return {"error": str(e)}
@@ -309,12 +312,12 @@ def execute_real_spot_market_sell(symbol, quantity=None):
         res = requests.post(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
         res_json = res.json()
         if "orderId" in res_json or res_json.get("status") == "FILLED":
-            # Update local USDT balance cache seamlessly upon sell
-            state = load_real_account_state()
-            c_price = get_symbol_price(symbol, is_futures=False) or 1.0
-            approx_usdt = float(qty_str) * c_price
-            state["_cached_usdt_free"] = round(state.get("_cached_usdt_free", 0.0) + approx_usdt, 4)
-            save_real_account_state(state)
+            # Real-Time Balance Sync via Fixie Proxy upon Trade Closing
+            print("🔄 [TRADE CLOSED] Sincronizando balance real en vivo desde Binance API (Fixie Proxy)...")
+            try:
+                diagnose_full_spot_wallet()
+            except Exception as se:
+                print(f"Error re-syncing wallet after sell: {se}")
         return res_json
     except Exception as e:
         return {"error": str(e)}
@@ -631,11 +634,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
     if not current_price or current_price <= 0:
         current_price = 1.0
     
-    # 100% OF AVAILABLE USDT CAPITAL (SPOT ONLY)
-    # Strictly truncated to 1 decimal place rounded down (floor)
-    # Uses 30-Minute Smart Balance Cache to conserve Fixie proxy quota
+    # CAPITAL ALLOCATION (SPOT ONLY - EXACTLY 1 POSITION AT A TIME)
+    # Truncate to 1 decimal place without rounding, then subtract 0.1 USD to stay safely below available capital
     raw_usdt = state.get("_cached_usdt_free", state.get("current_balance_usd", 17.29))
-    usdt_free = math.floor(float(raw_usdt) * 0.99 * 10) / 10.0
+    truncated_1d = math.floor(float(raw_usdt) * 10) / 10.0
+    usdt_free = max(0.0, round(truncated_1d - 0.1, 1))
     
     crypto_balances = []
     
