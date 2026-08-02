@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-02 20:44:20",
+  "timestamp": "2026-08-02 20:46:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de 'Neutralidad Forzada' con una estructura de debilidad sistémica. Ningún candidato cumple con el requisito de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
+  "reasoning": "El mercado se encuentra en un estado de compresión y alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos analizados presenta la confluencia necesaria de soporte en el libro de órdenes (Bids > 55%) y convicción técnica (Score >= 65) para superar el umbral de riesgo exigido por el comité. Se prioriza la protección del capital sobre la ejecución especulativa.",
   "top_candidates": [
-    {
-      "symbol": "LINKUSDT",
-      "score": 75
-    },
     {
       "symbol": "VIRTUALUSDT",
       "score": 75
@@ -19,12 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "SKYUSDT",
-      "score": 70
+      "symbol": "TAOUSDT",
+      "score": 65
     },
     {
-      "symbol": "DASHUSDT",
-      "score": 70
+      "symbol": "MORPHOUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "1000SATSUSDT",
+      "score": 65
     }
   ]
 }
