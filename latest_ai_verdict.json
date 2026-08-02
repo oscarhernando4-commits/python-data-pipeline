@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-02 20:20:19",
-  "selected_symbol": "LINKUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "LINKUSDT es el único activo que cumple con el umbral de Score A+ (85/100) y pertenece al sector de mayor rotación de capital (RWA). La estrategia se basa en la divergencia alcista frente al mercado general, ejecutando una entrada quirúrgica con gestión de riesgo estricta para evitar la volatilidad de las altcoins débiles.",
+  "timestamp": "2026-08-02 20:22:20",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El comité ha determinado que, a pesar de la fortaleza relativa de LINKUSDT, el entorno de mercado actual (Fear 27) y la falta de dominancia clara en el libro de órdenes impiden alcanzar el umbral de convicción A+ requerido por la Regla de Oro #1.",
   "top_candidates": [
     {
       "symbol": "LINKUSDT",
@@ -19,12 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 75
+      "symbol": "CRVUSDT",
+      "score": 70
     },
     {
-      "symbol": "RENDERUSDT",
-      "score": 75
+      "symbol": "TAOUSDT",
+      "score": 65
     }
   ]
 }
