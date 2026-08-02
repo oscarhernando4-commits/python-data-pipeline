@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 15:55:19",
+  "timestamp": "2026-08-02 16:00:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de aversión al riesgo con una fragmentación severa. Ninguno de los candidatos cumple con el requisito de soporte institucional (Bids > 55%) ni con la convicción necesaria para superar el Veto del CRO. Se mantiene la liquidez en USDT para evitar el riesgo de 'falling knives' en un entorno de distribución silenciosa.",
+  "reasoning": "El mercado se encuentra en una fase de compresión por pánico con una configuración técnica deficiente. Ningún activo cumple con el requisito de Score >= 65 ni con la confirmación de liquidez necesaria, por lo que el comité ha decidido mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "CAKEUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "NBISBUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "STXUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "LTCUSDT",
+      "symbol": "AAVEUSDT",
       "score": 60
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "UUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SOXLBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "PAXGUSDT",
       "score": 60
     }
   ]
