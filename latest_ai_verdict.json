@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-02 19:26:20",
+  "timestamp": "2026-08-02 19:28:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de que BCHUSDT presenta un score técnico elevado, la ausencia de soporte real en el libro de órdenes y el entorno de miedo generalizado (Fear & Greed 27) no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en un mercado sin tendencia definida.",
+  "reasoning": "A pesar de que BCHUSDT tiene un score técnico alto, la ausencia de soporte real en el libro de órdenes y el entorno macro de miedo técnico impiden la ejecución de cualquier orden de compra, cumpliendo estrictamente con la regla de oro de no arriesgar capital en condiciones mediocres.",
   "top_candidates": [
     {
       "symbol": "BCHUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
-      "score": 75
-    },
-    {
       "symbol": "SPCXBUSDT",
       "score": 75
     },
     {
-      "symbol": "KORUBUSDT",
+      "symbol": "ARBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DASHUSDT",
       "score": 75
     }
   ]
