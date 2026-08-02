@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-02 17:20:21",
+  "timestamp": "2026-08-02 17:25:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 45,
-  "reasoning": "El mercado se encuentra en un estado de fragmentación y alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La estrategia institucional dicta la preservación del capital en USDT hasta que se observe una rotación de capital clara y una estructura de mercado alcista confirmada.",
+  "reasoning": "El comité ha determinado que, a pesar de la fortaleza técnica de activos como FET, el entorno de mercado actual presenta una 'Apatía de Alta Volatilidad' sin la profundidad de liquidez necesaria en el Orderbook para garantizar una entrada segura. Se prioriza la preservación del capital en USDT hasta que el mercado muestre una estructura de soporte clara y confirmada por muros de ballenas.",
   "top_candidates": [
     {
+      "symbol": "FETUSDT",
+      "score": 85
+    },
+    {
       "symbol": "EWYBUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ATOMUSDT",
       "score": 85
     },
     {
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "UNIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
+      "symbol": "XRPUSDT",
       "score": 75
     }
   ]
