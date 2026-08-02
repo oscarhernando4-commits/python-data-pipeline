@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 02:45:20",
+  "timestamp": "2026-08-02 02:50:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un entorno de alta aversión al riesgo (Fear & Greed: 27) con una estructura de distribución institucional. Aunque UUSDT y RIFUSDT presentan un score de 75, carecen de historial suficiente para validar una estrategia de alta probabilidad. Los activos con score >= 65 (BCH, OGN, XUSD) no muestran un 'Volume Surge' significativo ni una estructura de soporte consolidada, lo que los convierte en trampas de liquidez. Siguiendo la filosofía de preservación de capital, se prioriza la liquidez en USDT ante la ausencia de un setup A+ con confirmación de volumen y tendencia clara.",
+  "reasoning": "A pesar de que activos como BCH, U y ASTER presentan un Score de 75, el entorno macroeconómico actual con un Fear & Greed en 27 (Miedo) y la falta de datos históricos sólidos en estos activos de alta volatilidad impiden una ejecución de alta probabilidad. El mercado se encuentra en un 'limbo de liquidez' con una rotación especulativa peligrosa. Siguiendo la filosofía de preservación de capital y paciencia de francotirador, la mejor operación es no operar y mantener la liquidez en USDT hasta que la estructura de mercado ofrezca una confluencia técnica más robusta y menos dependiente de flujos rápidos sin consolidación.",
   "top_candidates": [
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
     {
       "symbol": "UUSDT",
       "score": 75
     },
     {
-      "symbol": "RIFUSDT",
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "HBARUSDT",
       "score": 65
     },
     {
-      "symbol": "OGNUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "XUSDUSDT",
+      "symbol": "SYNUSDT",
       "score": 65
     }
   ]
