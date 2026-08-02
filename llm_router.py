@@ -179,13 +179,13 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
     candidates_prompt_text = ""
     for cand in candidates_data_list:
-        sym = cand['symbol']
-        score = cand['score']
-        action = cand['suggested_action']
-        tech = cand['tech_data']
+        sym = cand.get('symbol', 'UNKNOWN')
+        score = cand.get('score', 0)
+        action = cand.get('suggested_action', cand.get('side', 'BUY_LONG'))
+        tech = cand.get('tech_data', {})
         ind = tech.get('indicators', {})
         pat = time_series_memory.get_multi_cycle_pattern_summary(sym)
-        specific_n = news_data.get('specific_news', {}).get(sym, [])
+        specific_n = news_data.get('specific_news', {}).get(sym, []) if isinstance(news_data, dict) else []
         
         candidates_prompt_text += f"\nCANDIDATO: {sym} (Acción Cuantitativa Sugerida: {action})\n"
         candidates_prompt_text += f"- Score Técnico: {score}/100\n"
@@ -197,6 +197,10 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
     print(f"✅ [Comité Institucional] Mercado filtrado y analizado. Consultando al Súper-Cerebro Gemini AI para el TOP {len(candidates_data_list)} simultáneo...")
 
+    fg_score = fear_greed.get('score', 'N/A') if isinstance(fear_greed, dict) else str(fear_greed)
+    fg_sent = fear_greed.get('sentiment', 'N/A') if isinstance(fear_greed, dict) else ''
+    news_hl = news_data.get('headlines', [])[:3] if isinstance(news_data, dict) else [str(news_data)]
+
     prompt_text = f"""
     Eres el Súper-Cerebro Cuantitativo Institucional y Oráculo Predictor de Eventos Fundamentales (Catalyst Sentinel).
     Tu tarea es recibir un TOP {len(candidates_data_list)} de las mejores criptomonedas pre-filtradas por un motor matemático.
@@ -205,8 +209,8 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     CONTEXTO GLOBAL MACRO Y SESGO DE MERCADO:
     - Sesgo de Aprendizaje: {market_bias_ctx}
     - Entorno Macro: {macro_context}
-    - Fear & Greed: {fear_greed.get('score')} ({fear_greed.get('sentiment')})
-    - Noticias Globales: {json.dumps(news_data.get('headlines', [])[:3])}
+    - Fear & Greed: {fg_score} ({fg_sent})
+    - Noticias Globales: {json.dumps(news_hl)}
 
     MEMORIA DE SIMULADORES (Super Detailed Table):
     {super_detailed_table}
