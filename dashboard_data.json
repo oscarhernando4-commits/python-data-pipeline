@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-02 19:40:22",
+  "updated_at": "2026-08-02 19:41:34",
   "total_balance_usd": 20.11,
   "usdt_free": 0.0,
   "bnb_free": 0.00444145,
-  "status": "🔵 En Vivo LONG (UNIUSDT @ $4.2080)",
+  "status": "🔵 En Vivo LONG (UNIUSDT @ $4.2010)",
   "position": {
     "symbol": "UNIUSDT",
     "quantity": 4.13,
@@ -11,8 +11,8 @@
     "highest_price": 4.209,
     "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 1.2,
-    "volatility_regime": "🔵 Volatilidad Estándar / Margen Óptimo"
+    "adaptive_sl_pct": 0.96,
+    "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos elevados, ninguno cumple con el umbral de seguridad y soporte de libro de órdenes necesario para una ejecución A+. Se prioriza la preservación del capital ante la incertidumbre macroeconómica actual."
+    "reasoning": "El mercado presenta una divergencia técnica y falta de liquidez institucional en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de Bids > 55%), por lo que la estrategia de protección de capital dicta mantenerse en efectivo (HOLD) para evitar la exposición a activos de alta volatilidad en un entorno de miedo (Fear 27)."
   }
 }
