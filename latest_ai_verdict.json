@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-02 13:40:15",
+  "timestamp": "2026-08-02 13:45:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un entorno de alta correlación bajista y distribución institucional. Ninguno de los candidatos analizados cumple con el umbral mínimo de Score Técnico A+ (>= 65) requerido para una ejecución de alta probabilidad. La preservación de capital es la prioridad absoluta ante la falta de estructuras de acumulación y la debilidad sistémica observada en los activos principales.",
+  "reasoning": "Ninguno de los candidatos analizados alcanza el umbral crítico de Score Técnico >= 65. El mercado se encuentra en una fase de capitulación técnica con una alta correlación negativa y distribución institucional. Los activos con score 60 carecen de profundidad histórica y volumen institucional, lo que los clasifica como especulativos y de alto riesgo. La preservación de capital es la prioridad absoluta bajo la filosofía de francotirador; por tanto, se mantiene la liquidez en USDT hasta que aparezca un setup A+ validado.",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
+      "symbol": "UUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "DOGEUSDT",
       "score": 60
     },
     {
@@ -15,16 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "UUSDT",
+      "symbol": "MIRAUSDT",
       "score": 60
     },
     {
-      "symbol": "ESPUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "AEROUSDT",
-      "score": 50
+      "symbol": "DOTUSDT",
+      "score": 60
     }
   ]
 }
