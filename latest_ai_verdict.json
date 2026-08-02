@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-02 17:35:19",
+  "timestamp": "2026-08-02 17:40:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 45,
-  "reasoning": "El mercado se encuentra en una fase de acumulación selectiva con alta incertidumbre. Ningún candidato cumple con la regla de oro de soporte de ballenas (Bids > 55%) ni con una confirmación de volumen institucional suficiente para justificar una entrada, por lo que se prioriza la preservación del capital en USDT.",
+  "reasoning": "El comité ha decidido mantener la liquidez en USDT debido a la falta de una señal clara de convicción institucional. Los candidatos, aunque presentan scores técnicos aceptables, carecen de la profundidad de mercado necesaria y el soporte de libro de órdenes requerido para mitigar el riesgo en un entorno de mercado neutral y volátil.",
   "top_candidates": [
     {
-      "symbol": "UNIUSDT",
+      "symbol": "XAUTUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "OPUSDT",
       "score": 85
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
-      "symbol": "XRPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AVAXUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     }
   ]
