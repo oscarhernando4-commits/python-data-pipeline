@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-02 18:59:01",
+  "timestamp": "2026-08-02 19:00:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). El mercado presenta una estructura fragmentada y de alta volatilidad que no ofrece una ventaja estadística clara, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en una fase de consolidación por miedo con una estructura técnica inestable. Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 55% ni con una confirmación de volumen institucional, lo que obliga a mantener la liquidez en USDT para evitar pérdidas por volatilidad lateral.",
   "top_candidates": [
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
     {
       "symbol": "ZECUSDT",
       "score": 75
@@ -23,7 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "UUSDT",
+      "symbol": "NBISBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUNUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "CRVUSDT",
       "score": 75
     }
   ]
