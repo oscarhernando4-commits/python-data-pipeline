@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 10:10:19",
+  "timestamp": "2026-08-02 10:15:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un entorno de alta correlación bajista con un sentimiento de miedo (Fear & Greed 27). Aunque STX presenta un score de 70, no alcanza el umbral de seguridad necesario en un entorno de capitulación sistémica donde el 93% de los activos muestran debilidad extrema. La falta de profundidad histórica en los activos con score superior y la persistencia de noticias negativas sobre el ecosistema cripto obligan a mantener la liquidez en USDT para preservar el capital, siguiendo la filosofía de paciencia de francotirador.",
+  "reasoning": "El mercado presenta una vulnerabilidad sistémica extrema con un índice Fear & Greed en 27 y una ausencia total de activos con un Score Técnico >= 65. El activo con mayor puntuación (STX) solo alcanza 60, lo cual incumple nuestro umbral mínimo de seguridad A+. La correlación negativa hacia la baja y la distribución institucional agresiva confirman que no existen condiciones de alta probabilidad para una entrada en SPOT. La preservación de capital es la prioridad absoluta; nos mantenemos en liquidez (USDT) hasta que el mercado muestre una estructura de acumulación clara y un setup de alta probabilidad.",
   "top_candidates": [
     {
       "symbol": "STXUSDT",
-      "score": 70
+      "score": 60
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "score": 50
     },
     {
       "symbol": "MIRAUSDT",
-      "score": 60
+      "score": 50
     },
     {
-      "symbol": "WLFIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ALGOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "INJUSDT",
-      "score": 60
+      "symbol": "EPICUSDT",
+      "score": 50
     }
   ]
 }
