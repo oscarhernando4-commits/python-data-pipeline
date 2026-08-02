@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-02 23:24:23",
+  "timestamp": "2026-08-02 23:26:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de alta incertidumbre con una divergencia extrema. Ninguno de los candidatos cumple con el umbral de seguridad exigido (Bids > 55% y profundidad histórica consolidada), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas por volatilidad en activos de baja capitalización.",
+  "reasoning": "El mercado se encuentra en un estado de 'neutralidad forzada' con alta incertidumbre macroeconómica. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido y confirmación histórica). Se prioriza la preservación del capital sobre la especulación en activos de baja profundidad.",
   "top_candidates": [
-    {
-      "symbol": "NEARUSDT",
-      "score": 75
-    },
     {
       "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "MUBUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "MUBUSDT",
+      "symbol": "ALGOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SAGAUSDT",
       "score": 75
     }
   ]

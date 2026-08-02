@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02 23:24:23",
+  "updated_at": "2026-08-02 23:26:18",
   "total_balance_usd": 19.67,
   "usdt_free": 19.67209,
   "bnb_free": 0.00428773,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una configuración de alta incertidumbre con una divergencia extrema. Ninguno de los candidatos cumple con el umbral de seguridad exigido (Bids > 55% y profundidad histórica consolidada), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas por volatilidad en activos de baja capitalización."
+    "reasoning": "El mercado se encuentra en un estado de 'neutralidad forzada' con alta incertidumbre macroeconómica. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido y confirmación histórica). Se prioriza la preservación del capital sobre la especulación en activos de baja profundidad."
   }
 }
