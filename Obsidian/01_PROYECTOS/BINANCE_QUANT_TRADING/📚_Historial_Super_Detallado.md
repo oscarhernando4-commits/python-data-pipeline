@@ -3,12 +3,12 @@ tags:
   - trading
   - historial_completo
   - binance
-date: 2026-08-02 05:55:46
+date: 2026-08-02 09:05:14
 ---
 
 # 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
 
-> **Última Actualización:** `2026-08-02 05:55:46`
+> **Última Actualización:** `2026-08-02 09:05:14`
 > Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
 
 | Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |
@@ -498,4 +498,24 @@ date: 2026-08-02 05:55:46
 | 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
 | 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
 | 2026-08-02 05:55:46 | 🔷 GRUPO 2: Mode... | XRPUSDT | SHORT | $1.0739 | $1.0836 | $-1.06 | 25 | 79.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 09:05:14 | ⚖️ GRUPO 3: Bal... | ETHUSDT | LONG | $1882.56 | $1862.31 | $-1.13 | 0 | 32.2 | NEUTRAL | 🔴 LOSS |
 

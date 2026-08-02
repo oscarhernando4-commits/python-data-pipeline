@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 485,
+    "total_trades": 505,
     "wins": 160,
-    "losses": 325,
-    "win_rate_pct": 32.99,
-    "total_pnl_usd": 46.76814545454543
+    "losses": 345,
+    "win_rate_pct": 31.68,
+    "total_pnl_usd": 24.168145454545407
   },
   "learned_rules": {
     "blocked_patterns": [
-      "Preventive Block for NEARUSDT: Loss logged at 1.609 -> Hit SL on NEARUSDT (-$1.57). Re-Trading!",
       "Preventive Block for NEARUSDT: Loss logged at 1.579 -> Hit SL on NEARUSDT (-$1.55). Re-Trading!",
       "Preventive Block for DOTUSDT: Loss logged at 0.765 -> Hit SL on DOTUSDT (-$1.60). Re-Trading!",
       "Preventive Block for OPUSDT: Loss logged at 0.0879 -> Hit SL on OPUSDT (-$1.11). Re-Trading!",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on HYPERUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on EULUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on DEXEUSDT)",
-      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on XRPUSDT)"
+      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on XRPUSDT)",
+      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHUSDT)"
     ],
     "boosted_patterns": [
       "RSI < 30 + MACD Bullish Cross + Volume > 1.5x (High Probability Win)",
@@ -7774,6 +7774,346 @@
       "context": {
         "score": 25,
         "rsi_15m": 79.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-041",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-043",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-044",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-045",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-046",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-047",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-048",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-049",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-050",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-053",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-054",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-055",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-056",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-057",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-058",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-059",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 09:05:14",
+      "account_id": "SIM-060",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 1882.56,
+      "exit_price": 1862.31,
+      "pnl_usd": -1.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ETHUSDT (-$1.13). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.18,
         "macro_trend_4h": "NEUTRAL"
       }
     }
