@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-02 20:54:20",
+  "timestamp": "2026-08-02 20:56:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en liquidez (HOLD) debido a que, a pesar de los scores técnicos, ninguno de los candidatos presenta la profundidad de mercado (Orderbook Bids > 55%) ni la confirmación de volumen necesaria para cumplir con la Regla de Oro #1 de protección de capital.",
+  "reasoning": "El mercado presenta una trampa de liquidez y una falta de convicción institucional en los activos analizados. Ningún candidato cumple con el umbral de seguridad (Score >= 65 y Bids > 55%) exigido por el comité para evitar pérdidas, por lo que la orden es mantener la posición en efectivo.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
@@ -15,7 +15,7 @@
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "WLDUSDT",
       "score": 75
     },
     {
