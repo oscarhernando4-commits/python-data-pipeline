@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-02 22:38:36",
+  "timestamp": "2026-08-02 22:40:39",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "Ninguno de los candidatos analizados supera el Score Técnico mínimo exigido de 65 (el máximo es 60), y las condiciones de mercado con Fear & Greed en 27 sugieren preservar la liquidez y evitar operaciones especulativas.",
+  "confidence": 95,
+  "reasoning": "Ningún candidato cumple con el umbral estricto de Score Técnico >= 65 exigido por el Chief Risk Officer y el CEO. Ante un entorno con señales neutrales y sin confirmación de ballenas, la decisión institucional es proteger la liquidez y evitar operaciones especulativas.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "SAGAUSDT",
-      "score": 60
+      "symbol": "ZENUSDT",
+      "score": 55
     },
     {
-      "symbol": "GNOUSDT",
+      "symbol": "JTOUSDT",
       "score": 55
+    },
+    {
+      "symbol": "EDENUSDT",
+      "score": 50
     }
   ]
 }
