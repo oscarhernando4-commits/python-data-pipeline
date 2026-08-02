@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-02 13:20:15",
+  "timestamp": "2026-08-02 13:25:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los activos analizados alcanza el umbral crítico de Score Técnico >= 65 requerido para un Setup A+. El mercado presenta una debilidad sistémica con un Fear & Greed en 27 y una falta de acumulación institucional en los activos principales. La mayoría de los candidatos con Score 60 carecen de profundidad histórica y volumen de confirmación (Volume Surge < 1.2x), lo que los clasifica como activos de alta volatilidad y baja convicción. Siguiendo la filosofía de preservación de capital, la orden es mantener liquidez total en USDT.",
+  "reasoning": "Ninguno de los candidatos analizados alcanza el umbral crítico de Score Técnico >= 65 requerido para un Setup A+. El mercado presenta un entorno de alta toxicidad con una tendencia macro bajista y una distribución institucional agresiva. La preservación de capital es la prioridad absoluta; por tanto, se mantiene la liquidez en USDT hasta que las condiciones de mercado ofrezcan una probabilidad estadística superior.",
   "top_candidates": [
     {
-      "symbol": "UUSDT",
+      "symbol": "DOGEUSDT",
       "score": 60
     },
     {
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 60
-    },
-    {
       "symbol": "HBARUSDT",
       "score": 60
     },
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "LUNCUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "STXUSDT",
       "score": 60
     }
   ]
