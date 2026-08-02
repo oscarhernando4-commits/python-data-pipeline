@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 04:25:18",
+  "timestamp": "2026-08-02 04:30:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que BCH, SUN y ZRO presentan un score técnico de 75, el análisis de mercado revela que carecen de historial consolidado en 4H y son identificados como bombas de liquidez especulativas de corto plazo. El entorno macro es de alta incertidumbre con sesgo neutral y aversión al riesgo institucional. Siguiendo la filosofía de preservación de capital de Francisca Serrano y la paciencia de francotirador de Hyenuk Chu, no se cumplen los criterios de alta probabilidad para un setup A+ en un mercado que exhibe capitulación selectiva y falta de convicción.",
+  "reasoning": "El entorno macro actual presenta un índice Fear & Greed de 27 (miedo) y una estructura de mercado caracterizada por la capitulación selectiva. Aunque activos como HBAR, ROSE y KITE presentan scores técnicos de 75, la falta de profundidad histórica y la alta volatilidad en un entorno de distribución institucional los clasifica como trampas de liquidez. Siguiendo la filosofía de preservación de capital y la regla de oro de no operar en entornos de alta incertidumbre, se prioriza la liquidez en USDT sobre la ejecución de trades de alta especulación.",
   "top_candidates": [
     {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUNUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ZROUSDT",
+      "symbol": "HBARUSDT",
       "score": 75
     },
     {
       "symbol": "ROSEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "KITEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BANKUSDT",
       "score": 70
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "MMTUSDT",
       "score": 65
     }
   ]
