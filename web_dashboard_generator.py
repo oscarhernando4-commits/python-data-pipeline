@@ -307,15 +307,9 @@ def generate_web_dashboard():
     </div>
 
     <footer>
-        Última actualización del tablero: <strong>{now_str}</strong> | Súper-Cerebro Cuántico 24/7 Binance Spot Engine
+        Última actualización: <strong>{now_str}</strong> | Súper-Cerebro Cuántico 24/7 Binance Spot Engine
+        <button onclick="window.location.reload()" style="margin-left: 15px; padding: 6px 14px; background: rgba(6, 182, 212, 0.2); border: 1px solid rgba(6, 182, 212, 0.4); color: #06b6d4; border-radius: 8px; cursor: pointer; font-weight: 600;">🔄 Actualizar Ahora</button>
     </footer>
-
-    <script>
-        // Auto-refresh every 30 seconds
-        setTimeout(() => {{
-            window.location.reload();
-        }}, 30000);
-    </script>
 </body>
 </html>
 """
