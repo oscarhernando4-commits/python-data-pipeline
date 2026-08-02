@@ -1,25 +1,38 @@
 {
-  "REUSDT": [
+  "ENSOUSDT": [
     {
-      "timestamp": "2026-08-02 16:50:11",
-      "price": 0.4145,
-      "score": 15,
-      "rsi": 33.72,
+      "timestamp": "2026-08-02 16:55:12",
+      "price": 0.928,
+      "score": 35,
+      "rsi": 56.7,
       "macd": "Neutral",
-      "volume_surge": 0.38,
+      "volume_surge": 0.15,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ]
+} "BONKUSDT": [
+    {
+      "timestamp": "2026-08-02 16:55:12",
+      "price": 2.88e-06,
+      "score": 15,
+      "rsi": 35.51,
+      "macd": "Neutral",
+      "volume_surge": 0.46,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "BROCCOLI714USDT": [
+  "LUNCUSDT": [
     {
-      "timestamp": "2026-08-02 16:50:11",
-      "price": 0.01352,
-      "score": 65,
-      "rsi": 57.88,
+      "timestamp": "2026-08-02 16:55:12",
+      "price": 4.905e-05,
+      "score": 75,
+      "rsi": 53.81,
       "macd": "Neutral",
-      "volume_surge": 0.17,
+      "volume_surge": 0.07,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -27,12 +40,77 @@
   ],
   "STXUSDT": [
     {
-      "timestamp": "2026-08-02 16:50:11",
-      "price": 0.1402,
+      "timestamp": "2026-08-02 16:55:12",
+      "price": 0.1401,
       "score": 25,
-      "rsi": 52.15,
+      "rsi": 50.77,
       "macd": "Neutral",
-      "volume_surge": 0.2,
+      "volume_surge": 0.25,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SAGAUSDT": [
+    {
+      "timestamp": "2026-08-02 16:55:12",
+      "price": 0.01323,
+      "score": 45,
+      "rsi": 56.83,
+      "macd": "Neutral",
+      "volume_surge": 0.28,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "REUSDT": [
+    {
+      "timestamp": "2026-08-02 16:55:12",
+      "price": 0.414,
+      "score": 15,
+      "rsi": 32.95,
+      "macd": "Neutral",
+      "volume_surge": 0.94,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ROSEUSDT": [
+    {
+      "timestamp": "2026-08-02 16:55:12",
+      "price": 0.00559,
+      "score": 15,
+      "rsi": 48.05,
+      "macd": "Neutral",
+      "volume_surge": 0.07,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "KITEUSDT": [
+    {
+      "timestamp": "2026-08-02 16:55:12",
+      "price": 0.0937,
+      "score": 65,
+      "rsi": 49.11,
+      "macd": "Neutral",
+      "volume_surge": 0.06,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BROCCOLI714USDT": [
+    {
+      "timestamp": "2026-08-02 16:55:12",
+      "price": 0.01352,
+      "score": 65,
+      "rsi": 57.88,
+      "macd": "Neutral",
+      "volume_surge": 0.25,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
