@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-02 23:26:18",
+  "timestamp": "2026-08-02 23:28:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'neutralidad forzada' con alta incertidumbre macroeconómica. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido y confirmación histórica). Se prioriza la preservación del capital sobre la especulación en activos de baja profundidad.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional), por lo que la estrategia más rentable y segura es mantener la liquidez en USDT para evitar pérdidas por volatilidad errática.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "MUBUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "MORPHOUSDT",
+      "score": 75
+    },
+    {
       "symbol": "ALGOUSDT",
       "score": 75
     },
     {
-      "symbol": "SAGAUSDT",
+      "symbol": "MUBUSDT",
       "score": 75
     }
   ]
