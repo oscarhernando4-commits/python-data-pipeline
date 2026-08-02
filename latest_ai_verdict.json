@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 19:44:21",
+  "timestamp": "2026-08-02 19:46:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragmentación extrema y falta de profundidad en el libro de órdenes para los candidatos con mejor score técnico. Ningún activo cumple con el umbral de convicción A+ exigido por el Comité, por lo que la estrategia de preservación de capital es la única opción viable.",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de los scores técnicos de 75/100, la falta de dominancia clara en el libro de órdenes y el entorno de miedo (Fear 27) no cumplen con los estándares de seguridad A+ exigidos para la ejecución de capital.",
   "top_candidates": [
     {
-      "symbol": "SPCXBUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "DASHUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SUIUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "UUSDT",
+      "symbol": "UNIUSDT",
       "score": 75
     },
     {
       "symbol": "PEPEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "QQQBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SPCXBUSDT",
       "score": 75
     }
   ]
