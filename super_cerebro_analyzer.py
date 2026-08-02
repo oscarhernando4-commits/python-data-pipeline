@@ -111,10 +111,16 @@ def generate_super_cerebro_report():
     # Time series pattern (5m over 4 hours)
     pattern_summary = time_series_memory.get_multi_cycle_pattern_summary(selected_sym)
 
-    report_md = f"""# 🧠 INFORME EXECUTIVO DEL SÚPER-CEREBRO (GEMINI 3.1 FLASH LITE)
+    deliberation = ai_verdict.get("committee_deliberation", {})
+    agent_1 = deliberation.get("agent_1_macro", "Análisis de régimen macro y volumen de ballenas activo.")
+    agent_2 = deliberation.get("agent_2_tech", "Análisis de osciladores, EMAs y mechas de absorción completado.")
+    agent_3 = deliberation.get("agent_3_memory", "Cruzamiento RAG con simulaciones históricas y patrones de fallos.")
+    agent_4 = deliberation.get("agent_4_risk", "Evaluación final de preservación de capital y ratio asimétrico 1:2.")
+
+    report_md = f"""# 🧠 INFORME EJECUTIVO DEL COMITÉ MULTI-AGENTE CUÁNTICO (GEMINI AI 24/7)
 *Última actualización: `{now_str}`*
 
-> [!IMPORTANT] 🎯 **VEREDICTO INSTITUCIONAL DE IA EN TIEMPO REAL:**
+> [!IMPORTANT] 🎯 **VEREDICTO DE CONSENSO INSTITUCIONAL EN TIEMPO REAL:**
 > - 🪙 **Activo Evaluado:** **`{selected_sym}`**
 > - 🚦 **Acción Recomendada:** **`{action}`** {'(Aprobada ✅)' if approved else '(Bloqueada por Riesgo 🛡️)'}
 > - 📊 **Nivel de Confianza Cuántica:** **`{confidence}%`**
@@ -122,10 +128,17 @@ def generate_super_cerebro_report():
 
 ---
 
-## 🧭 1. RAZONAMIENTO DEL COMITÉ DE INTELIGENCIA ARTIFICIAL
-```text
-{reasoning}
-```
+## 🏛️ 1. DELIBERACIÓN DEL COMITÉ INSTITUCIONAL DE 4 AGENTES INTELIGENTES
+
+| Agente Especializado | Rol Cuantitativo | Dictamen y Análisis Individual en Tiempo Real |
+| :--- | :--- | :--- |
+| 🕵️ **Agente 1: Analista Macro & Ballenas** | Regime & Whale Flow | {agent_1} |
+| 📊 **Agente 2: Ingeniero Técnico & PA** | Technical Sniper | {agent_2} |
+| 🧠 **Agente 3: Historiador RAG & Memoria** | RAG Memory Analyst | {agent_3} |
+| 🛡️ **Agente 4: Chief Risk Officer (CRO)** | Veto & Capital Risk | **{agent_4}** |
+
+> 📝 **Resumen del Consenso Institucional:**
+> `{reasoning}`
 
 ---
 

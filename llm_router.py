@@ -200,13 +200,21 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     print(f"✅ [Comité Institucional] Mercado filtrado y analizado. Consultando al Súper-Cerebro Gemini AI para el TOP {len(candidates_data_list)} simultáneo...")
 
     prompt_text = f"""
-    Eres el Súper-Cerebro Cuantitativo Institucional y Gestor de Riesgos de Élite (Filosofía Francisca Serrano & Hyenuk Chu: Paciencia de Francotirador y Preservación de Capital).
-    Tu misión es proteger el capital real en dólares y ejecutar ÚNICAMENTE Setups A+ de altísima probabilidad matemática en SPOT (BUY_LONG).
+    Eres el COMITÉ INSTITUCIONAL MULTI-AGENTE CUÁNTICO 24/7 (Súper-Cerebro de Élite).
+    Tu estructura está compuesta por 4 AGENTES ESPECIALIZADOS DE INTELIGENCIA ARTIFICIAL que deben deliberar y consenso antes de cualquier orden real:
     
-    FILOSOFÍA DE TRADING:
-    - "La primera regla del trading es no perder dinero. La segunda es no olvidar la primera." (Francisca Serrano).
-    - "Sé un francotirador paciente. La mejor operación muchas veces es NO operar y quedarse en liquidez (HOLD)." (Hyenuk Chu).
+    1. 🕵️ AGENTE 1 - ANALISTA MACRO & RASTRO DE BALLENAS (Whale & Macro Sentinel):
+       - Examina el sentimiento Fear & Greed ({fear_greed.get('score')} - {fear_greed.get('sentiment')}), noticias globales y volumen institucional (Volume Surge > 1.2x).
     
+    2. 📊 AGENTE 2 - INGENIERO TÉCNICO & PRICE ACTION (Chartist & Pattern Sniper):
+       - Examina RSI (15m y 4h), MACD Histograma, EMAs (20, 50, 200), mechas de absorción y estructuras de volatilidad ATR.
+    
+    3. 🧠 AGENTE 3 - HISTORIADOR RAG & MEMORIA QUANT (Memory & Pattern Historian):
+       - Compara con las 99 simulaciones pasadas ({market_bias_ctx}), patrones prohibidos/potenciados y la tabla All-Time de simulaciones.
+    
+    4. 🛡️ AGENTE 4 - CHIEF RISK OFFICER (Juez Supremo de Riesgo - Francisca Serrano & Hyenuk Chu):
+       - Posee VETO ABSOLUTO. Regla #1: No perder dinero. Regla #2: No olvidar la regla #1. Exige convicción A+ (Score >= 65, Confianza >= 70%).
+
     CONTEXTO GLOBAL MACRO Y SESGO DE MERCADO:
     - Sesgo de Aprendizaje: {market_bias_ctx}
     - Entorno Macro: {macro_context}
@@ -220,22 +228,27 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     {candidates_prompt_text}
 
     REGLAS DE ORO PARA LA TOMA DE DECISIONES (SPOT ONLY):
-    1. 🛡️ UMBRAL MÍNIMO A+ (Score >= 65): NUNCA apruebes una compra para un activo con Score Técnico < 65 o en caída libre. Si ningún candidato tiene Score >= 65 con confirmación de volumen, tu respuesta OBLIGATORIA es responder "NONE" con "action": "HOLD".
-    2. 🚫 PROHIBIDO 'FALLING KNIVES' (Cuchillos Cayendo): Si un activo tiene Score bajo (15, 20, 30), NO intentes adivinar un rebote especulativo. Deja que el mercado limpie a los minoristas.
+    1. 🛡️ UMBRAL MÍNIMO A+ (Score >= 65): NUNCA apruebes una compra para un activo con Score Técnico < 65 o en caída libre. Si ningún candidato tiene Score >= 65 con confirmación de volumen, la respuesta OBLIGATORIA es responder "NONE" con "action": "HOLD".
+    2. 🚫 PROHIBIDO 'FALLING KNIVES': Si un activo tiene Score bajo (15, 20, 30), NO intentes adivinar un rebote especulativo. Deja que el mercado limpie a los minoristas.
     3. ⚖️ VOLUMEN Y RSI: Prioriza activos con RSI en rango saludable (35-65) y Volume Surge > 1.2x que muestren soporte sólido y acumulación de ballenas.
     4. 📰 FILTRO DE FUD: Si hay hackeos, demandas o investigaciones sobre un activo, descártalo inmediatamente.
-    5. 💎 DECISIÓN: Si encuentras un candidato excepcional que cumple TODAS las reglas A+, selecciona su símbolo y aprueba "BUY_LONG" con confianza >= 75%. Si el mercado está sucio, lateral, bajista o con activos mediocres, responde "NONE" y protege el 100% de la liquidez en USDT.
+    5. 💎 DECISIÓN: Si encuentras un candidato excepcional que cumple TODAS las reglas A+, selecciona su símbolo y aprueba "BUY_LONG" con confianza >= 70%. Si el mercado está sucio, lateral, bajista o con activos mediocres, responde "NONE" y protege el 100% de la liquidez en USDT.
 
-    RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO:
+    RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA MULTI-AGENTE:
     {{
         "selected_symbol": "SIMBOLO" o "NONE",
         "action": "BUY_LONG" o "HOLD",
         "confidence": 0-100,
         "approved": true o false,
-        "reasoning": "Explicación cuantitativa institucional..."
+        "committee_deliberation": {{
+            "agent_1_macro": "Dictamen del Analista Macro y volumen de ballenas en 1 oración...",
+            "agent_2_tech": "Dictamen del Ingeniero Técnico sobre RSI, MACD y soportes en 1 oración...",
+            "agent_3_memory": "Dictamen del Historiador RAG sobre coincidencia con patrones pasados en 1 oración...",
+            "agent_4_risk": "Dictamen final del Chief Risk Officer (Veto o Aprobación) en 1 oración..."
+        }},
+        "reasoning": "Resumen ejecutivo del consenso institucional..."
     }}
     """
-
 
     payload = {"contents": [{"parts": [{"text": prompt_text}]}], "generationConfig": {"temperature": 0.1, "responseMimeType": "application/json"}}
     models_to_try = [
@@ -263,9 +276,21 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
             except Exception as e:
                 time.sleep(5)
     
-    # Fallback to the first one if all fails
-    print("💡 Gemini Fallback: No se pudo obtener respuesta del comité AI. Tomando el #1.")
-    return {"selected_symbol": candidates_data_list[0]['symbol'], "approved": True, "action": candidates_data_list[0]['suggested_action'], "confidence": 70, "reasoning": "Fallback Cuantitativo Tras Fallo de Conexión AI"}
+    print("Gemini LLM Notice: Todos los modelos de IA ocupados. Usando fallback cuantitativo seguro.")
+    fallback_sym = candidates_data_list[0]['symbol'] if candidates_data_list else "NONE"
+    return {
+        "selected_symbol": fallback_sym,
+        "action": "HOLD",
+        "approved": False,
+        "confidence": 50,
+        "committee_deliberation": {
+            "agent_1_macro": "Macro en espera por conectividad de respaldo.",
+            "agent_2_tech": "Filtros técnicos cuantitativos aplicados.",
+            "agent_3_memory": "Historial conservador preservado.",
+            "agent_4_risk": "Veto de seguridad activado por fallback."
+        },
+        "reasoning": "Fallback Cuantitativo Conservador (Preservación de Liquidez en USDT)"
+    }
 
 # Backwards compatibility alias
 review_top_5_candidates = review_top_candidates
