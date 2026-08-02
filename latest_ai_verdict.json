@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-02 22:36:39",
+  "timestamp": "2026-08-02 22:38:36",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El comité multi-agente ha deliberado por unanimidad y ha decidido no ejecutar ninguna operación de compra (BUY_LONG). Dado que ningún candidato alcanza el Score Técnico mínimo de 65 exigido por el Chief Risk Officer y el entorno macroeconómico presenta indecisión y miedo (Fear & Greed 27), la directriz suprema es mantener la liquidez intacta en USDT para evitar pérdidas innecesarias.",
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos analizados supera el Score Técnico mínimo exigido de 65 (el máximo es 60), y las condiciones de mercado con Fear & Greed en 27 sugieren preservar la liquidez y evitar operaciones especulativas.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
@@ -15,16 +19,12 @@
       "score": 60
     },
     {
+      "symbol": "SAGAUSDT",
+      "score": 60
+    },
+    {
       "symbol": "GNOUSDT",
       "score": 55
-    },
-    {
-      "symbol": "ENAUSDT",
-      "score": 45
-    },
-    {
-      "symbol": "XRPUSDT",
-      "score": 45
     }
   ]
 }
