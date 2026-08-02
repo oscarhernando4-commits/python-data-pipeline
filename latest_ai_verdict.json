@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-02 11:50:15",
+  "timestamp": "2026-08-02 11:55:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con un sesgo bajista sistémico. Ninguno de los candidatos cumple con el umbral mínimo de Score A+ (>= 65) con confirmación de volumen institucional. PYTHUSDT, aunque tiene un score de 70, carece de historial suficiente en 5M y opera en un entorno de alta volatilidad sin anclaje, lo que lo clasifica como una trampa de valor. La preservación de capital es la prioridad absoluta ante la fuga de liquidez hacia activos de refugio.",
+  "reasoning": "El mercado se encuentra en una fase de desapalancamiento sistémico con un sesgo bajista predominante. Aunque PYTHUSDT presenta un score de 70, su historial es insuficiente para validar una entrada de alta probabilidad bajo los estándares de preservación de capital. El resto de los activos no cumplen con el umbral de seguridad A+ (Score >= 65) o presentan riesgos asociados a noticias negativas. La prioridad institucional es la preservación del capital en liquidez (USDT) ante la falta de una estructura de mercado alcista confirmada.",
   "top_candidates": [
     {
       "symbol": "PYTHUSDT",
       "score": 70
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "score": 60
     },
     {
       "symbol": "VETUSDT",
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "DEXEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "TLMUSDT",
       "score": 50
     }
   ]
