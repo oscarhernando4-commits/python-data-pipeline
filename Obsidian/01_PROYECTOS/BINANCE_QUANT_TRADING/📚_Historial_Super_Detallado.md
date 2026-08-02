@@ -3,12 +3,12 @@ tags:
   - trading
   - historial_completo
   - binance
-date: 2026-08-02 09:50:17
+date: 2026-08-02 16:50:20
 ---
 
 # 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
 
-> **Última Actualización:** `2026-08-02 09:50:17`
+> **Última Actualización:** `2026-08-02 16:50:20`
 > Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
 
 | Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |
@@ -557,4 +557,24 @@ date: 2026-08-02 09:50:17
 | 2026-08-02 09:50:17 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.8968 | $0.898 | $-1.08 | 50 | 56.6 | NEUTRAL | 🔴 LOSS |
 | 2026-08-02 09:50:17 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.8968 | $0.898 | $-1.08 | 50 | 56.6 | NEUTRAL | 🔴 LOSS |
 | 2026-08-02 09:50:17 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.8968 | $0.898 | $-1.08 | 50 | 56.6 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 16:50:20 | 🛡️ GRUPO 1: Ult... | BCHUSDT | LONG | $209.5 | $213.9 | $+2.02 | 50 | 69.5 | NEUTRAL | 🟢 WIN |
 

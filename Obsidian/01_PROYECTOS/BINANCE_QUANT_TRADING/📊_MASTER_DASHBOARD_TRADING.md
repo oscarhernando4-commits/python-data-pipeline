@@ -7,13 +7,13 @@ aliases:
   - Dashboard Principal
 cssclasses:
   - dashboard
-date: 2026-08-02 16:45:25
+date: 2026-08-02 16:50:23
 ---
 
 # 📊 MASTER DASHBOARD - SEGUIMIENTO RÁPIDO DE TRADING
 
 > [!NOTE] 🟢 RESUMEN ULTRA-FÁCIL DE INTERPRETAR
-> **Última Actualización:** `2026-08-02 16:45:25`  
+> **Última Actualización:** `2026-08-02 16:50:23`  
 > **Estado del Sistema:** `🟢 BOT OPERANDO 24/7 EN SEGUNDO PLANO`
 
 ---
@@ -22,17 +22,17 @@ date: 2026-08-02 16:45:25
 
 | Métrica | Valor Actual | ¿Qué Significa? |
 | :--- | :--- | :--- |
-| 💵 **Capital Total (Fondo $10k):** | **`$9,980.85 USD`** | Balance de las 100 cuentas de prueba |
-| 💰 **Ganancia Neta Total:** | **`$-19.15 USD`** | Resultado global acumulado |
+| 💵 **Capital Total (Fondo $10k):** | **`$10,021.25 USD`** | Balance de las 100 cuentas de prueba |
+| 💰 **Ganancia Neta Total:** | **`$+21.25 USD`** | Resultado global acumulado |
 | 🎯 **Cuentas que cumplieron la meta:** | **`20 de 100 Cuentas`** | Cuentas que alcanzaron el +3% esta semana |
-| 📈 **Tasa de Acierto de la IA:** | **`29.63% Win Rate`** | Efectividad actual de las estrategias |
+| 📈 **Tasa de Acierto de la IA:** | **`32.14% Win Rate`** | Efectividad actual de las estrategias |
 
 ---
 
 ## 🧭 2. AUTO-APRENDIZAJE: SESGO DE MERCADO (LONG vs SHORT)
 
-> [!WARNING] 🧠 IA SENTINEL REGLA DE PRIORIDAD: `NEUTRAL`
-> - 🟢 **Rendimiento Compras (LONG):** `33.3%` de Acierto
+> [!WARNING] 🧠 IA SENTINEL REGLA DE PRIORIDAD: `FAVOR_LONG`
+> - 🟢 **Rendimiento Compras (LONG):** `38.5%` de Acierto
 > - 🔴 **Rendimiento Ventas (SHORT):** `26.6%` de Acierto
 > - **Acción de la IA:** El bot está inyectando esta data en tiempo real a Gemini. Si la tendencia muestra pérdidas en LONG y ganancias en SHORT, **Gemini bloqueará operaciones LONG** priorizando el flujo ganador del mercado para el dinero real.
 
@@ -41,11 +41,11 @@ date: 2026-08-02 16:45:25
 ## 🎯 3. PROGRESO HACIA LA META SEMANAL (+3% SOBRE $100)
 
 > [!IMPORTANT] 🏆 META SEMANA 1: $103.00 USD (Promedio)
-> **Progreso Actual:** `[░░░░░░░░░░] 0.0%`
+> **Progreso Actual:** `[░░░░░░░░░░] 7.1%`
 > 
 > - 💵 **Capital Base (Promedio):** `$100.00 USD`
 > - 🎯 **Meta Semanal (Promedio):** `$103.00 USD`
-> - 💰 **Capital Promedio Actual:** `$99.81 USD`
+> - 💰 **Capital Promedio Actual:** `$100.21 USD`
 > - 🟡 **Estado:** `🟡 EN PROCESO - Buscando el +3% de ganancia en operaciones filtradas`
 
 ---
@@ -55,7 +55,7 @@ date: 2026-08-02 16:45:25
 > [!TIP] 🏦 ESTADO DE LA CUENTA REAL
 > - 💵 **Balance Real Actual:** `$19.91 USD` (`+2.78 USD`)
 > - 🪙 **Posición Activa:** `INJUSDT`
-> - 🎯 **Estado Operativo:** `🔵 En Vivo LONG (INJUSDT @ $4.9960)`
+> - 🎯 **Estado Operativo:** `🔵 En Vivo LONG (INJUSDT @ $4.9920)`
 
 ---
 
@@ -78,7 +78,7 @@ date: 2026-08-02 16:45:25
 | Grupo | Tasa de Acierto | Ganancia Neta |
 | :--- | :---: | :---: |
 | **0 (Copia Real)** | `14.3%` | `$-4.20` |
-| **1 (Ultra-Estricto)** | `50.0%` | `$+17.00` |
+| **1 (Ultra-Estricto)** | `66.7%` | `$+57.40` |
 | **Grupo 2** | `16.7%` | `$-97.60` |
 | **Grupo 3** | `50.0%` | `$+34.00` |
 | **Grupo 4** | `37.5%` | `$+78.20` |

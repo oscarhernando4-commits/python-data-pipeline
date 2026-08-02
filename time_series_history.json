@@ -1,15 +1,41 @@
 {
-  "ZBTUSDT": [
+  "REUSDT": [
     {
-      "timestamp": "2026-08-02 16:45:13",
-      "price": 0.1224,
-      "score": 60,
-      "rsi": 53.45,
+      "timestamp": "2026-08-02 16:50:11",
+      "price": 0.4145,
+      "score": 15,
+      "rsi": 33.72,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.38,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BROCCOLI714USDT": [
+    {
+      "timestamp": "2026-08-02 16:50:11",
+      "price": 0.01352,
+      "score": 65,
+      "rsi": 57.88,
+      "macd": "Neutral",
+      "volume_surge": 0.17,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-02 16:50:11",
+      "price": 0.1402,
+      "score": 25,
+      "rsi": 52.15,
+      "macd": "Neutral",
+      "volume_surge": 0.2,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}}
+}

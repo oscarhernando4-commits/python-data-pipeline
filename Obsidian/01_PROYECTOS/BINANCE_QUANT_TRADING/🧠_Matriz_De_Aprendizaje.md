@@ -4,29 +4,29 @@ tags:
   - aprendizaje
   - inteligencia_artificial
   - binance
-date: 2026-08-02 09:50:17
+date: 2026-08-02 16:50:20
 ---
 
 # 🧠 Matriz de Aprendizaje Reforzado (Reinforcement Learning Engine)
 
-> **Última Actualización:** `2026-08-02 09:50:17`  
+> **Última Actualización:** `2026-08-02 16:50:20`  
 > **Sistema:** Optimización Continua de Aciertos & Bloqueo de Fracasos
 
 ---
 
 ## 📊 Estadísticas Acumuladas
-- **Total Operaciones:** `544`
-- **Ganadas (WIN):** `160` | **Perdidas (LOSS):** `384`
-- **Tasa de Acierto (Win Rate):** `29.41%`
-- **PnL Total Neto:** `$-19.55 USD`
+- **Total Operaciones:** `564`
+- **Ganadas (WIN):** `180` | **Perdidas (LOSS):** `384`
+- **Tasa de Acierto (Win Rate):** `31.91%`
+- **PnL Total Neto:** `$+20.85 USD`
 
 ---
 
 ## 🧭 Sesgo de Aprendizaje Automático (Últimos 100 Trades)
-- **Sesgo Actual (Market Bias):** `NEUTRAL`
-- **Rendimiento LONG (Compras):** `33.3%` de Acierto (en 240 ops recientes)
+- **Sesgo Actual (Market Bias):** `FAVOR_LONG`
+- **Rendimiento LONG (Compras):** `38.5%` de Acierto (en 260 ops recientes)
 - **Rendimiento SHORT (Ventas):** `26.6%` de Acierto (en 301 ops recientes)
-- 🏆 **Grupo de IA Más Rentable:** `⚖️ GRUPO 3: Balanceado` (WinRate: 50.0%, PnL: $34.0)
+- 🏆 **Grupo de IA Más Rentable:** `🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)` (WinRate: 66.7%, PnL: $57.4)
 - *Nota:* La IA utilizará este sesgo en tiempo real para descartar operaciones que vayan contra la tendencia comprobada. Y el Dinero Real copiará automáticamente al Grupo Más Rentable.
 
 ---
@@ -71,20 +71,21 @@ date: 2026-08-02 09:50:17
 - ⚡ BOOST LONG when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DOGEUSDT)
 - ⚡ BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ARBUSDT)
 - ⚡ BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on EPICUSDT)
+- ⚡ BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BCHUSDT)
 
 ---
 
 ## 📜 Registro de Post-Mortem de Operaciones
 | Fecha | Par | Lado | Entrada | Salida | PnL | Resultado |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
-| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
-| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
-| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
-| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
-| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
-| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
-| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
-| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
-| 2026-08-02 09:50:17 | EPICUSDT | SHORT | `$0.8968` | `$0.898` | `$-1.08` | 🔴 LOSS |
+| 2026-08-02 16:50:20 | BCHUSDT | LONG | `$209.5` | `$213.9` | `$+2.02` | 🟢 WIN |
+| 2026-08-02 16:50:20 | BCHUSDT | LONG | `$209.5` | `$213.9` | `$+2.02` | 🟢 WIN |
+| 2026-08-02 16:50:20 | BCHUSDT | LONG | `$209.5` | `$213.9` | `$+2.02` | 🟢 WIN |
+| 2026-08-02 16:50:20 | BCHUSDT | LONG | `$209.5` | `$213.9` | `$+2.02` | 🟢 WIN |
+| 2026-08-02 16:50:20 | BCHUSDT | LONG | `$209.5` | `$213.9` | `$+2.02` | 🟢 WIN |
+| 2026-08-02 16:50:20 | BCHUSDT | LONG | `$209.5` | `$213.9` | `$+2.02` | 🟢 WIN |
+| 2026-08-02 16:50:20 | BCHUSDT | LONG | `$209.5` | `$213.9` | `$+2.02` | 🟢 WIN |
+| 2026-08-02 16:50:20 | BCHUSDT | LONG | `$209.5` | `$213.9` | `$+2.02` | 🟢 WIN |
+| 2026-08-02 16:50:20 | BCHUSDT | LONG | `$209.5` | `$213.9` | `$+2.02` | 🟢 WIN |
+| 2026-08-02 16:50:20 | BCHUSDT | LONG | `$209.5` | `$213.9` | `$+2.02` | 🟢 WIN |
 
