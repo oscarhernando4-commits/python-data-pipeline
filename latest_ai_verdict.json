@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 19:38:20",
+  "timestamp": "2026-08-02 19:40:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "El comité ha decidido mantener la liquidez en USDT. A pesar de que varios activos tienen un score técnico de 75, la ausencia de confirmación en el libro de órdenes (debido a errores de conexión) y la volatilidad del entorno macro impiden alcanzar el umbral de confianza del 70% requerido para una ejecución segura.",
+  "confidence": 0,
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos elevados, ninguno cumple con el umbral de seguridad y soporte de libro de órdenes necesario para una ejecución A+. Se prioriza la preservación del capital ante la incertidumbre macroeconómica actual.",
   "top_candidates": [
     {
-      "symbol": "NEARUSDT",
-      "score": 75
-    },
-    {
       "symbol": "SPCXBUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "UNIUSDT",
       "score": 75
     },
     {
-      "symbol": "NILUSDT",
+      "symbol": "ZAMAUSDT",
       "score": 75
     },
     {
-      "symbol": "DASHUSDT",
+      "symbol": "QQQBUSDT",
       "score": 75
     },
     {
-      "symbol": "EWYBUSDT",
+      "symbol": "DOTUSDT",
       "score": 75
     }
   ]

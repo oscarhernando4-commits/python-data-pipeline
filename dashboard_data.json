@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-02 19:38:21",
+  "updated_at": "2026-08-02 19:40:22",
   "total_balance_usd": 20.11,
   "usdt_free": 0.0,
   "bnb_free": 0.00444145,
-  "status": "🔵 En Vivo LONG (UNIUSDT @ $4.2060)",
+  "status": "🔵 En Vivo LONG (UNIUSDT @ $4.2080)",
   "position": {
     "symbol": "UNIUSDT",
     "quantity": 4.13,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 45,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha decidido mantener la liquidez en USDT. A pesar de que varios activos tienen un score técnico de 75, la ausencia de confirmación en el libro de órdenes (debido a errores de conexión) y la volatilidad del entorno macro impiden alcanzar el umbral de confianza del 70% requerido para una ejecución segura."
+    "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos elevados, ninguno cumple con el umbral de seguridad y soporte de libro de órdenes necesario para una ejecución A+. Se prioriza la preservación del capital ante la incertidumbre macroeconómica actual."
   }
 }
