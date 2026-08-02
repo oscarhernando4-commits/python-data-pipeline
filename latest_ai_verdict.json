@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 08:10:17",
+  "timestamp": "2026-08-02 08:15:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica extrema con un índice Fear & Greed en 27. Aunque SPCXBUSDT y CFXUSDT alcanzan el umbral de score 75, carecen de historial de 5M suficiente y no presentan un 'Volume Surge' superior a 1.2x, lo que invalida la confirmación de acumulación institucional. La mayoría de los activos están en tendencia NEUTRAL con baja convicción. Bajo la filosofía de preservación de capital, cualquier entrada en este entorno es una trampa de liquidez. Se mantiene 100% de liquidez en USDT.",
+  "reasoning": "El mercado presenta una fragilidad sistémica severa con un índice Fear & Greed en 27. Aunque SPCXBUSDT presenta un score de 75, su historial de 5M es insuficiente para garantizar una ejecución de alta probabilidad. Los candidatos con score 65 (GIGGLEUSDT, BROCCOLI714USDT, TUTUSDT) carecen de un volumen de confirmación (Volume Surge) significativo para validar una entrada A+. Siguiendo la filosofía de preservación de capital y paciencia de francotirador, la mejor operación es no operar y mantener la liquidez en USDT hasta que la estructura de mercado muestre una convicción institucional clara.",
   "top_candidates": [
     {
       "symbol": "SPCXBUSDT",
       "score": 75
     },
     {
-      "symbol": "CFXUSDT",
-      "score": 75
+      "symbol": "GIGGLEUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "BROCCOLI714USDT",
+      "score": 65
     },
     {
       "symbol": "TUTUSDT",
       "score": 65
     },
     {
-      "symbol": "TLMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ICPUSDT",
+      "symbol": "LUNCUSDT",
       "score": 60
     }
   ]
