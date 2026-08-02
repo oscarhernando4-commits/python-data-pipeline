@@ -17,9 +17,14 @@ def run_git_push_sync(cycle_num: int):
     """Safely commits and pushes updated matrix and account state to GitHub."""
     try:
         now_utc = datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")
-        subprocess.run(["git", "config", "--global", "user.name", "antigravity-bot[bot]"], check=False)
-        subprocess.run(["git", "config", "--global", "user.email", "antigravity-bot[bot]@users.noreply.github.com"], check=False)
+        subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=False)
+        subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"], check=False)
         
+        gh_token = os.getenv("GITHUB_TOKEN")
+        gh_repo = os.getenv("GITHUB_REPOSITORY")
+        if gh_token and gh_repo:
+            subprocess.run(["git", "remote", "set-url", "origin", f"https://x-access-token:{gh_token}@github.com/{gh_repo}.git"], check=False)
+
         # Rebase pull first
         subprocess.run(["git", "pull", "--rebase", "-X", "theirs", "origin", "main"], check=False)
         subprocess.run(["git", "add", "."], check=False)
@@ -45,6 +50,7 @@ def run_git_push_sync(cycle_num: int):
                 time.sleep(2)
     except Exception as e:
         print(f"⚠️ [Cycle {cycle_num}] Git sync warning: {e}")
+
 
 
 def sleep_until_next_5m_boundary():

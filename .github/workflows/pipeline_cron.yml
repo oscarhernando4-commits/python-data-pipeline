@@ -36,9 +36,11 @@ jobs:
       - name: 🚀 Execute 4-Hour Continuous Quant Trading Loop (Every 5m)
         env:
           PYTHONUNBUFFERED: "1"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BINANCE_REAL_API_KEY: ${{ secrets.BINANCE_REAL_API_KEY }}
           BINANCE_REAL_API_SECRET: ${{ secrets.BINANCE_REAL_API_SECRET }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           CMC_API_KEY: ${{ secrets.CMC_API_KEY }}
         run: |
           python cloud_continuous_loop.py
+
