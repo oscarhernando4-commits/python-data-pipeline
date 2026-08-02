@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-02 12:25:15",
+  "timestamp": "2026-08-02 12:30:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional bajo estrés con un índice Fear & Greed en 27. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico A+ (>= 65). Los activos con score 60 son espejismos estadísticos de corto plazo sin soporte en 4H. Siguiendo la filosofía de preservación de capital y la instrucción de no operar activos con score inferior a 65, la decisión es mantener el 100% de la liquidez en stablecoins.",
+  "reasoning": "El mercado presenta una fragilidad sistémica extrema con un índice Fear & Greed en 27. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico A+ (>= 65) requerido por nuestra política de preservación de capital. La correlación bajista es total y los activos con scores de 60 (XAUT, FIL, CAKE) carecen de profundidad de mercado y volumen institucional necesario para validar una entrada. Siguiendo la filosofía de paciencia de francotirador, la liquidez en USDT se mantiene intacta para evitar trampas de liquidez en un entorno de distribución institucional.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
@@ -19,12 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "PYTHUSDT",
-      "score": 60
+      "symbol": "DEXEUSDT",
+      "score": 50
     },
     {
-      "symbol": "ZENUSDT",
-      "score": 60
+      "symbol": "NEXOUSDT",
+      "score": 50
     }
   ]
 }
