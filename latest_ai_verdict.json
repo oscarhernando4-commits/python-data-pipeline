@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 22:46:35",
-  "selected_symbol": "HBARUSDT",
+  "timestamp": "2026-08-02 22:48:39",
+  "selected_symbol": "NEARUSDT",
   "action": "BUY_LONG",
   "approved": true,
   "confidence": 75,
-  "reasoning": "El candidato HBARUSDT cumple con el umbral mínimo A+ (Score 75/100), pertenece al sector líder Layer 1 & Infrastructure con noticias de adopción institucional, y cuenta con el respaldo de la memoria quant y la validación estricta de gestión de riesgo del comité.",
+  "reasoning": "El comité multi-agente valida a NEARUSDT cumpliendo con el umbral técnico A+ (75/100), alineado con el sector de mayor rotación de capital institucional (AI & Big Data) y cumpliendo las normativas estrictas de gestión de riesgo del Chief Risk Officer.",
   "top_candidates": [
+    {
+      "symbol": "NEARUSDT",
+      "score": 75
+    },
     {
       "symbol": "HBARUSDT",
       "score": 75
     },
     {
-      "symbol": "ZBTUSDT",
+      "symbol": "SOXLBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "FETUSDT",
       "score": 75
     },
     {
       "symbol": "SAGAUSDT",
       "score": 75
-    },
-    {
-      "symbol": "ADAUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "GIGGLEUSDT",
-      "score": 65
     }
   ]
 }
