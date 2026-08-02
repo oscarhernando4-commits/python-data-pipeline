@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-02 07:20:23",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "A pesar de que activos como TRX, UNI, 1000SATS, ENSO, DEXE y RIF presentan un Score de 65, ninguno cumple con el filtro de 'Volume Surge > 1.2x' necesario para confirmar una entrada de alta probabilidad en un entorno de mercado con Fear & Greed en 27 (Miedo). La fragilidad macro y la erosión de la confianza institucional dictan una política de preservación de capital. Mantener liquidez en USDT es la estrategia de francotirador más eficiente ante la ausencia de un setup A+ con volumen comprador institucional confirmado.",
+  "timestamp": "2026-08-02 07:25:19",
+  "selected_symbol": "ZROUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "ZROUSDT presenta un Score Técnico de 75/100 y un Volume Surge de 1.91, lo que indica una acumulación institucional significativa que se desvincula de la debilidad general del mercado. Su RSI de 50.01 se encuentra en el rango óptimo de equilibrio, evitando la sobrecompra. A diferencia de otros activos, no presenta FUD activo y su comportamiento técnico sugiere una divergencia alcista frente a la tendencia NEUTRAL del mercado.",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
+      "symbol": "ETCUSDT",
       "score": 75
     },
     {
-      "symbol": "1000SATSUSDT",
-      "score": 65
+      "symbol": "ZROUSDT",
+      "score": 75
     },
     {
-      "symbol": "UNIUSDT",
+      "symbol": "COTIUSDT",
       "score": 65
     },
     {
