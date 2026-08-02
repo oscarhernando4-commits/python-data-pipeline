@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 425,
-    "wins": 121,
+    "total_trades": 464,
+    "wins": 160,
     "losses": 304,
-    "win_rate_pct": 28.47,
-    "total_pnl_usd": -92.75185454545453
+    "win_rate_pct": 34.48,
+    "total_pnl_usd": 69.03814545454547
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -41,7 +41,8 @@
       "Optimized Setup for TRUMPUSDT: Profit logged (+$2.09) -> Win on TRUMPUSDT (+$2.09 net) -> Level 3 Re-Trading Started!",
       "Optimized Setup for TRUMPUSDT: Profit logged (+$2.09) -> Win on TRUMPUSDT (+$2.09 net) -> Level 2 Re-Trading Started!",
       "BOOST LONG when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DOGEUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ARBUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ARBUSDT)",
+      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on EPICUSDT)"
     ]
   },
   "history": [
@@ -6753,6 +6754,669 @@
       "context": {
         "score": 65,
         "rsi_15m": 59.46,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-061",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-062",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-063",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-064",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-065",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-066",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-067",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-068",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-069",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-071",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-072",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-073",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-074",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-075",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-076",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-077",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-078",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-079",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-080",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.28,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.28 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-081",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-082",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-083",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-084",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-085",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-086",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-087",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 3 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-088",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-089",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-090",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-091",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-092",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-093",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-094",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-095",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-096",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-098",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-02 05:30:43",
+      "account_id": "SIM-099",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.9256,
+      "exit_price": 0.8854,
+      "pnl_usd": 4.01,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$4.01 net) -> Level 2 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.11,
         "macro_trend_4h": "NEUTRAL"
       }
     }

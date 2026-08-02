@@ -3,12 +3,12 @@ tags:
   - trading
   - historial_completo
   - binance
-date: 2026-08-02 03:05:22
+date: 2026-08-02 05:30:43
 ---
 
 # 📚 HISTORIAL SÚPER DETALLADO (ALL-TIME)
 
-> **Última Actualización:** `2026-08-02 03:05:22`
+> **Última Actualización:** `2026-08-02 05:30:43`
 > Este historial contiene absolutamente todas las operaciones desde el inicio de los tiempos, junto con el análisis contextual (RSI, Score, Tendencia) en el momento exacto de la operación. La IA lee esta tabla COMPLETA para tomar decisiones.
 
 | Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |
@@ -438,4 +438,43 @@ date: 2026-08-02 03:05:22
 | 2026-08-02 03:05:22 | 🔥 GRUPO 5: Expl... | EULUSDT | SHORT | $1.593 | $1.62 | $-1.05 | 65 | 59.5 | NEUTRAL | 🔴 LOSS |
 | 2026-08-02 03:05:22 | 🔥 GRUPO 5: Expl... | EULUSDT | SHORT | $1.593 | $1.62 | $-1.05 | 65 | 59.5 | NEUTRAL | 🔴 LOSS |
 | 2026-08-02 03:05:22 | 🔥 GRUPO 5: Expl... | EULUSDT | SHORT | $1.593 | $1.62 | $-1.05 | 65 | 59.5 | NEUTRAL | 🔴 LOSS |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | ⚡ GRUPO 4: Frec... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.28 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
+| 2026-08-02 05:30:43 | 🔥 GRUPO 5: Expl... | EPICUSDT | SHORT | $0.9256 | $0.8854 | $+4.01 | 0 | 39.1 | NEUTRAL | 🟢 WIN |
 
