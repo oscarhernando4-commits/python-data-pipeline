@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-02 17:56:59",
+  "timestamp": "2026-08-02 18:00:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de indecisión estructural con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de dominancia de Bids (>= 55%) ni con una confirmación de volumen institucional necesaria para una entrada A+. El mercado presenta una divergencia fragmentada que aumenta el riesgo de 'trampas de valor', por lo que el comité decide mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AVAXUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
@@ -23,7 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "XRPUSDT",
+      "symbol": "AVAXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SPCXBUSDT",
       "score": 75
     }
   ]
