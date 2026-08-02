@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-02 22:16:37",
-  "selected_symbol": "NEARUSDT",
+  "timestamp": "2026-08-02 22:18:37",
+  "selected_symbol": "DOGEUSDT",
   "action": "BUY_LONG",
   "approved": true,
-  "confidence": 75,
-  "reasoning": "El comité multi-agente ha seleccionado NEARUSDT por cumplir rigurosamente con los filtros institucionales: un score técnico de 75, pertenencia al sector dominante de IA y Big Data, métricas de RSI e indicadores técnicos alineados, y la validación estricta de riesgo por parte del CRO y el CEO.",
+  "confidence": 78,
+  "reasoning": "El comité multi-agente valida a DOGEUSDT como el candidato excepcional que supera el umbral A+ con un Score de 75 y un Volume Surge de 1.48x, respaldado por actividad ballenera significativa y cumpliendo estrictamente con los parámetros de riesgo y gestión de capital del CEO.",
   "top_candidates": [
     {
-      "symbol": "SUIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PEPEUSDT",
+      "symbol": "XLMUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "NEARUSDT",
       "score": 75
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "PEPEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUIUSDT",
       "score": 75
     }
   ]
