@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 14:55:20",
+  "timestamp": "2026-08-02 15:00:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de que algunos activos mantienen un score técnico de 70, la falta de dominancia clara en el libro de órdenes y el entorno macro de miedo extremo hacen que cualquier posición sea una trampa de liquidez. Se prioriza la preservación del capital en USDT hasta que el mercado muestre una estructura de tendencia definida y soporte institucional real.",
+  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual carece de la fuerza institucional necesaria para una operación de alta probabilidad. Todos los candidatos fallan en el umbral de Score Técnico (65) y en la confirmación de liquidez del libro de órdenes. Se mantiene la liquidez en USDT para proteger el capital ante la alta incertidumbre macroeconómica.",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "PEPEUSDT",
-      "score": 70
+      "symbol": "UUSDT",
+      "score": 60
     },
     {
       "symbol": "XLMUSDT",
-      "score": 70
+      "score": 60
     },
     {
       "symbol": "DOGEUSDT",
-      "score": 70
+      "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 70
+      "symbol": "PEPEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "BNBUSDT",
+      "score": 60
     }
   ]
 }
