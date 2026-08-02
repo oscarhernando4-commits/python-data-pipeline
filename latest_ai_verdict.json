@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-02 23:14:20",
+  "timestamp": "2026-08-02 23:16:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los 10 candidatos, ninguno alcanza el umbral de convicción A+ (Score >= 65) ni muestra una estructura de soporte institucional clara en el libro de órdenes. Ante la debilidad macroeconómica y la alta probabilidad de pérdidas basada en el historial de simulaciones, el comité decide mantener la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y falta de convicción institucional. Ninguno de los activos analizados cumple con el umbral mínimo de Score 65 ni con la confirmación de soporte en el libro de órdenes, por lo que la estrategia de supervivencia dicta mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
-      "symbol": "ASTERUSDT",
-      "score": 70
+      "symbol": "ALGOUSDT",
+      "score": 60
     },
     {
-      "symbol": "ORDIUSDT",
+      "symbol": "MUBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "MIRAUSDT",
       "score": 60
     },
     {
@@ -19,12 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "RENDERUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "OPUSDT",
-      "score": 55
+      "symbol": "GIGGLEUSDT",
+      "score": 50
     }
   ]
 }

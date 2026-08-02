@@ -1,15 +1,28 @@
 {
-  "EIGENUSDT": [
+  "NVDABUSDT": [
     {
-      "timestamp": "2026-08-02 23:14:11",
-      "price": 0.1873,
-      "score": 15,
-      "rsi": 48.3,
+      "timestamp": "2026-08-02 23:16:11",
+      "price": 199.88,
+      "score": 0,
+      "rsi": 42.45,
       "macd": "Neutral",
-      "volume_surge": 1.18,
+      "volume_surge": 0.07,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "IMXUSDT": [
+    {
+      "timestamp": "2026-08-02 23:16:11",
+      "price": 0.1107,
+      "score": 0,
+      "rsi": 36.69,
+      "macd": "Neutral",
+      "volume_surge": 0.03,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}}
+}
