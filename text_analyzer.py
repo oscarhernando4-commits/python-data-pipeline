@@ -77,8 +77,7 @@ def get_market_macro_context(symbol_analysis_map, fear_greed, news_headlines):
         return "Macro Analyst Offline (No API Key). Mercado evaluado solo cuantitativamente."
 
     lite_models = [
-        "gemini-3.1-flash-lite",
-        "gemini-3.5-flash-lite"
+        "gemini-3.1-flash-lite"
     ]
     
     print(f"🕵️ [Macro Analyst Lite] Analizando el contexto global de {len(symbol_analysis_map)} criptomonedas (Pool de {len(keys_pool)} Claves)...")
