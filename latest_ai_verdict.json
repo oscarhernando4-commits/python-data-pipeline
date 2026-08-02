@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-02 19:00:20",
+  "timestamp": "2026-08-02 19:03:10",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de consolidación por miedo con una estructura técnica inestable. Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 55% ni con una confirmación de volumen institucional, lo que obliga a mantener la liquidez en USDT para evitar pérdidas por volatilidad lateral.",
+  "reasoning": "A pesar de que TRUMPUSDT posee un score técnico de 85, la ausencia de profundidad en el libro de órdenes (50% bids), la falta de historial de trading y el entorno de mercado con sentimiento de miedo (27) invalidan la ejecución bajo las reglas de gestión de riesgo A+. Se prioriza la preservación del capital sobre la especulación en activos de alta beta.",
   "top_candidates": [
     {
-      "symbol": "ZECUSDT",
+      "symbol": "TRUMPUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "NBISBUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
-      "symbol": "SUNUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "CRVUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     }
   ]

@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-08-02 19:00:23",
+  "updated_at": "2026-08-02 19:03:12",
   "total_balance_usd": 20.18,
   "usdt_free": 0.005,
   "bnb_free": 0.00446371,
-  "status": "🔵 En Vivo LONG (INJUSDT @ $5.0710)",
+  "status": "🔵 En Vivo LONG (INJUSDT @ $5.0720)",
   "position": {
     "symbol": "INJUSDT",
     "quantity": 3.46,
     "entry_price": 4.97,
-    "highest_price": 5.071,
+    "highest_price": 5.072,
     "break_even": true,
     "trailing_active": true,
     "adaptive_sl_pct": 1.2,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de consolidación por miedo con una estructura técnica inestable. Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 55% ni con una confirmación de volumen institucional, lo que obliga a mantener la liquidez en USDT para evitar pérdidas por volatilidad lateral."
+    "reasoning": "A pesar de que TRUMPUSDT posee un score técnico de 85, la ausencia de profundidad en el libro de órdenes (50% bids), la falta de historial de trading y el entorno de mercado con sentimiento de miedo (27) invalidan la ejecución bajo las reglas de gestión de riesgo A+. Se prioriza la preservación del capital sobre la especulación en activos de alta beta."
   }
 }
