@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-02 15:20:20",
+  "timestamp": "2026-08-02 15:25:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con debilidad sistémica. Ninguno de los candidatos alcanza el Score técnico de 65 requerido por el Comité, y la falta de profundidad en el libro de órdenes aumenta el riesgo de slippage, por lo que se mantiene la liquidez en USDT.",
+  "reasoning": "El mercado se encuentra en una fase de alta toxicidad y distribución agresiva. Ningún activo cumple con el umbral de Score técnico requerido (>= 65) ni con la confirmación de soporte en el libro de órdenes. Se mantiene la liquidez en 100% para evitar la exposición a trampas de liquidez y volatilidad bajista.",
   "top_candidates": [
     {
       "symbol": "ATOMUSDT",
       "score": 70
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "SUIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "GRAMUSDT",
       "score": 60
     },
     {
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "SHIBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "LTCUSDT",
+      "symbol": "UNIUSDT",
       "score": 60
     }
   ]
