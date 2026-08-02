@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02 21:08:24",
+  "updated_at": "2026-08-02 21:10:23",
   "total_balance_usd": 20.06,
   "usdt_free": 0.1778,
   "bnb_free": 0.00437518,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 45,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65 con Bids > 55% y confirmación de volumen). La alta volatilidad y la falta de historial en los activos con mayor score técnico representan un riesgo inaceptable para el capital institucional, por lo que se mantiene la posición en efectivo (HOLD)."
+    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura de 'trampa de neutralidad'. A pesar de que ONDO y SUN tienen scores técnicos altos, no cumplen con el umbral de soporte de libro de órdenes (Bids > 55%) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo (Fear & Greed 27)."
   }
 }
