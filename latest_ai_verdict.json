@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-02 11:10:20",
+  "timestamp": "2026-08-02 11:15:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El análisis cuantitativo arroja que ningún activo cumple con el umbral mínimo de Score A+ (>= 65). Los candidatos con mayor fuerza relativa (WLFI, POL, OP) presentan un historial insuficiente y una estructura de mercado de alta volatilidad con riesgo de manipulación. El entorno macro es de distribución institucional agresiva y el sentimiento de mercado (Fear & Greed 27) junto con las noticias de FUD sistémico invalidan cualquier setup de compra. La preservación de capital es la prioridad absoluta; nos mantenemos en liquidez (USDT).",
+  "reasoning": "El mercado se encuentra en un entorno de alta aversión al riesgo (Fear & Greed 27) con una correlación bajista sistémica. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico A+ (>= 65). Los activos con score 60 presentan un historial insuficiente y falta de profundidad de mercado, lo que los clasifica como anomalías especulativas de alta volatilidad. Siguiendo la filosofía de preservación de capital, la liquidez en USDT es la posición óptima ante la ausencia de setups de alta probabilidad.",
   "top_candidates": [
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "AAVEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "JSTUSDT",
       "score": 60
     },
     {
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "OPUSDT",
+      "symbol": "SPCXBUSDT",
       "score": 60
     },
     {
-      "symbol": "UUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "DEXEUSDT",
+      "symbol": "BANKUSDT",
       "score": 50
     }
   ]
