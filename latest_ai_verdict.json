@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 18:20:33",
+  "timestamp": "2026-08-02 18:25:59",
   "selected_symbol": "NEARUSDT",
   "action": "BUY_LONG",
   "approved": true,
-  "confidence": 75,
-  "reasoning": "NEARUSDT es el único activo que cumple con el umbral de Score A+ (85) y pertenece al sector dominante (AI & Big Data). La estrategia se basa en la acumulación institucional detectada, evitando activos de baja capitalización y memecoins que han mostrado pérdidas recurrentes en las simulaciones. Se ejecutará una entrada escalonada con un estricto control de riesgo y Trailing Stop dinámico para proteger el capital ante cualquier reversión sistémica de BTC.",
+  "confidence": 85,
+  "reasoning": "El comité multi-agente aprueba por unanimidad la ejecución en NEARUSDT respaldado por su liderazgo en el sector AI & Big Data, un volumen de 8.95x y un score técnico de 85/100, cumpliendo con todas las normativas de gestión de riesgo y protección de capital.",
   "top_candidates": [
     {
       "symbol": "NEARUSDT",
       "score": 85
     },
     {
-      "symbol": "UUSDT",
-      "score": 75
+      "symbol": "RENDERUSDT",
+      "score": 85
     },
     {
       "symbol": "XRPUSDT",
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     }
   ]
