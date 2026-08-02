@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 20:46:17",
+  "timestamp": "2026-08-02 20:48:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de compresión y alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos analizados presenta la confluencia necesaria de soporte en el libro de órdenes (Bids > 55%) y convicción técnica (Score >= 65) para superar el umbral de riesgo exigido por el comité. Se prioriza la protección del capital sobre la ejecución especulativa.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, las condiciones de mercado actuales (Fear 27, tendencia neutral, falta de profundidad en el orderbook) no cumplen con los estándares de seguridad y rentabilidad exigidos por el protocolo de riesgo, por lo que se opta por una postura de espera (HOLD).",
   "top_candidates": [
     {
-      "symbol": "VIRTUALUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUNUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
       "symbol": "TAOUSDT",
-      "score": 65
+      "score": 75
     },
     {
-      "symbol": "MORPHOUSDT",
-      "score": 65
+      "symbol": "LINKUSDT",
+      "score": 75
     },
     {
-      "symbol": "1000SATSUSDT",
-      "score": 65
+      "symbol": "ONDOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "score": 75
     }
   ]
 }
