@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 03:40:20",
-  "selected_symbol": "TAOUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 85,
-  "reasoning": "TAO presenta el mejor perfil técnico (Score 85/100) con un volumen de 1.83x, indicando acumulación institucional. A pesar del miedo macro, su fuerza relativa y narrativa de IA lo posicionan como el activo de mayor probabilidad para un setup A+ en spot, cumpliendo con el umbral de riesgo y evitando activos con FUD o scores inferiores.",
+  "timestamp": "2026-08-02 03:45:18",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "A pesar de que varios activos presentan un score de 75/100, el entorno macroeconómico actual se encuentra en una fase de 'desgaste lento' (grind down) con un índice Fear & Greed en 27 (Miedo). La alta correlación sistémica y la debilidad técnica de los activos líderes (BTC/ETH) sugieren que cualquier entrada en altcoins, incluso con scores técnicos favorables, representa un riesgo elevado de 'trampa de liquidez'. Siguiendo la filosofía de preservación de capital y paciencia de francotirador, la mejor decisión es mantener la liquidez en USDT hasta que el mercado muestre una estructura de soporte clara y una reducción en la presión regulatoria.",
   "top_candidates": [
     {
-      "symbol": "TAOUSDT",
-      "score": 85
-    },
-    {
       "symbol": "ORDIUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "NIGHTUSDT",
       "score": 75
     },
     {
-      "symbol": "UUSDT",
-      "score": 70
+      "symbol": "TAOUSDT",
+      "score": 75
     },
     {
-      "symbol": "QNTUSDT",
-      "score": 70
+      "symbol": "SPCXBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "CFXUSDT",
+      "score": 75
     }
   ]
 }
