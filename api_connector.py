@@ -16,19 +16,27 @@ try:
 except Exception:
     pass
 
-# Dynamic Proxy Rotator for 24/7 Cloud Execution (7 Fixie EU West accounts, 3500 requests/month)
-# Ordered: Fresh accounts first, nearly-depleted account LAST
+# Dynamic Proxy Rotator for 24/7 Cloud Execution (10 Fixie EU West accounts, 5,000 requests/month)
 FIXIE_POOL = [
-    "http://fixie:ak4QPysr5gnUAQW@ventoux.usefixie.com:80",   # utn.sig (0/500)
-    "http://fixie:ygTezfOLKeqEhhF@ventoux.usefixie.com:80",   # forestalutn (0/500)
-    "http://fixie:zW3cwceDZ64c1lE@ventoux.usefixie.com:80",   # oscarhernandot11es (0/500)
-    "http://fixie:SIOQ4x5oF0pbFju@ventoux.usefixie.com:80",   # oscarhernando4ec (0/500)
-    "http://fixie:V9uciGagtBF2MJc@ventoux.usefixie.com:80",   # sconcienciautn (0/500)
-    "http://fixie:gnvJakG6jyBrS04@ventoux.usefixie.com:80",   # utn2024a (0/500)
-    "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80",   # oscarhernando4 (405/500 - RESERVA)
+    # 3 Cuentas 100% Nuevas (0/500 peticiones usadas) - PRIORIDAD MÁXIMA
+    "http://fixie:YOtqrUO1HVYG2xM@ventoux.usefixie.com:80",   # observatorioforestalutn (0/500)
+    "http://fixie:WWaxRExXfmPL05s@ventoux.usefixie.com:80",   # utnagp (0/500)
+    "http://fixie:f9ibnMDQHLjZTpM@ventoux.usefixie.com:80",   # dronforestalutn (0/500)
+    
+    # 6 Cuentas de Uso Bajo/Moderado (93 - 155/500 peticiones usadas) - PRIORIDAD SECUNDARIA
+    "http://fixie:zW3cwceDZ64c1lE@ventoux.usefixie.com:80",   # oscarhernandot11es (93/500)
+    "http://fixie:ygTezfOLKeqEhhF@ventoux.usefixie.com:80",   # forestalutn (110/500)
+    "http://fixie:V9uciGagtBF2MJc@ventoux.usefixie.com:80",   # sconcienciautn (129/500)
+    "http://fixie:gnvJakG6jyBrS04@ventoux.usefixie.com:80",   # utn2024a (146/500)
+    "http://fixie:ak4QPysr5gnUAQW@ventoux.usefixie.com:80",   # utn.sig (150/500)
+    "http://fixie:SIOQ4x5oF0pbFju@ventoux.usefixie.com:80",   # oscarhernando4ec (155/500)
+    
+    # 1 Cuenta de Reserva de Emergencia (420/500 peticiones usadas) - RESPALDO
+    "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80",   # oscarhernando4 (420/500)
 ]
-# Select randomly from the 6 FRESH accounts only (exclude the depleted #7 as reserve)
-PROXY_URL = random.choice(FIXIE_POOL[:6])
+
+# Balanceador Inteligente: Prioriza las 9 cuentas con menor consumo (excluye la de 420/500 como reserva)
+PROXY_URL = random.choice(FIXIE_POOL[:9])
 PROXIES = {"http": PROXY_URL, "https": PROXY_URL}
 
 API_KEY = os.getenv("BINANCE_REAL_API_KEY", "")

@@ -37,9 +37,9 @@ print("🔍 DIAGNÓSTICO INTEGRAL A PROFUNDIDAD DEL SISTEMA DE TRADING")
 print("=" * 65)
 
 # 1. PROXY FIXIE POOL
-print("\n[1/10] ROTADOR DE PROXIES FIXIE (7 Cuentas EU West)")
+print("\n[1/10] ROTADOR DE PROXIES FIXIE (10 Cuentas EU West)")
 import api_connector
-test("FIXIE_POOL tiene 7 proxies configurados", len(api_connector.FIXIE_POOL) == 7, f"Tiene {len(api_connector.FIXIE_POOL)}")
+test("FIXIE_POOL tiene 10 proxies configurados", len(api_connector.FIXIE_POOL) == 10, f"Tiene {len(api_connector.FIXIE_POOL)}")
 test("PROXY_URL seleccionado válidamente", api_connector.PROXY_URL in api_connector.FIXIE_POOL)
 test("PROXIES dict (http/https) listo", "http" in api_connector.PROXIES and "https" in api_connector.PROXIES)
 
