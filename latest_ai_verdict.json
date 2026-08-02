@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-02 11:05:18",
+  "timestamp": "2026-08-02 11:10:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica extrema con un sesgo de distribución agresiva. Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico A+ (>= 65). Los activos con score 60 (UUSDT, POLUSDT) carecen de historial suficiente y volumen de confirmación, lo que los convierte en trampas de volatilidad. La preservación de capital es la prioridad absoluta; ante la ausencia de setups de alta probabilidad, la liquidez en USDT es la posición más rentable y segura.",
+  "reasoning": "El análisis cuantitativo arroja que ningún activo cumple con el umbral mínimo de Score A+ (>= 65). Los candidatos con mayor fuerza relativa (WLFI, POL, OP) presentan un historial insuficiente y una estructura de mercado de alta volatilidad con riesgo de manipulación. El entorno macro es de distribución institucional agresiva y el sentimiento de mercado (Fear & Greed 27) junto con las noticias de FUD sistémico invalidan cualquier setup de compra. La preservación de capital es la prioridad absoluta; nos mantenemos en liquidez (USDT).",
   "top_candidates": [
     {
-      "symbol": "UUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
@@ -15,12 +15,12 @@
       "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 50
+      "symbol": "OPUSDT",
+      "score": 60
     },
     {
-      "symbol": "BANKUSDT",
-      "score": 50
+      "symbol": "UUSDT",
+      "score": 55
     },
     {
       "symbol": "DEXEUSDT",
