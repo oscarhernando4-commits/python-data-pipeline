@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 12:05:14",
+  "timestamp": "2026-08-02 12:10:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un entorno de riesgo sistémico (risk-off) con 115 de 117 activos en zona de debilidad. Ningún candidato cumple con el umbral mínimo de Score A+ (>= 65) ni presenta una confirmación de volumen institucional (Volume Surge > 1.2x). La estrategia de preservación de capital dicta mantener liquidez total en USDT para evitar trampas de valor en un mercado de distribución forzada.",
+  "reasoning": "El mercado se encuentra en una fase de distribución agresiva con un sesgo bajista sistémico. Ninguno de los candidatos analizados cumple con el umbral mínimo de Score Técnico A+ (>= 65). La ausencia de activos con fuerza relativa y la prevalencia de scores inferiores a 40 confirman que no existe una narrativa de acumulación institucional. Bajo la filosofía de preservación de capital, la mejor operación es mantener la liquidez en USDT y evitar la exposición a activos que carecen de soporte estructural.",
   "top_candidates": [
     {
-      "symbol": "VETUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
+    },
+    {
+      "symbol": "PYTHUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "score": 50
     },
     {
       "symbol": "DEXEUSDT",
       "score": 50
     },
     {
-      "symbol": "PYTHUSDT",
+      "symbol": "VETUSDT",
       "score": 50
-    },
-    {
-      "symbol": "TLMUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "STXUSDT",
-      "score": 45
     }
   ]
 }
