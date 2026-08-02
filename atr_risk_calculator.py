@@ -4,11 +4,11 @@ Computes dynamic, volatility-adjusted Stop Loss levels based on 15m Average True
 Prevents premature stop-outs on high-volatility alts while maintaining tight precision on low-volatility assets.
 """
 
-def calculate_adaptive_atr_stop_loss(current_price, atr_15m, min_sl_pct=0.8, max_sl_pct=2.5, multiplier=1.5):
+def calculate_adaptive_atr_stop_loss(current_price, atr_15m, min_sl_pct=0.5, max_sl_pct=1.0, multiplier=1.2):
     """
     Calculates adaptive Stop Loss percentage based on asset ATR volatility.
     - atr_pct: (atr_15m / current_price) * 100.0
-    - dynamic_sl_pct: clamped between min_sl_pct (0.8%) and max_sl_pct (2.5%)
+    - dynamic_sl_pct: strictly clamped between min_sl_pct (0.5%) and max_sl_pct (1.0% HARD CEILING)
     Returns dict with sl_pct, sl_price, tp1_price, tp2_price, and volatility_regime.
     """
     if current_price <= 0:
@@ -24,19 +24,17 @@ def calculate_adaptive_atr_stop_loss(current_price, atr_15m, min_sl_pct=0.8, max
     # Calculate raw adaptive SL
     raw_sl_pct = atr_pct * multiplier
     
-    # Clamp between min_sl_pct (0.8%) and max_sl_pct (2.5%)
+    # Clamp between min_sl_pct (0.5%) and max_sl_pct (1.0% HARD CEILING)
     clamped_sl_pct = max(min_sl_pct, min(max_sl_pct, raw_sl_pct))
     clamped_sl_pct = round(clamped_sl_pct, 2)
     
     sl_price = current_price * (1.0 - (clamped_sl_pct / 100.0))
     tp1_price = current_price * (1.0 + ((clamped_sl_pct * 2.0) / 100.0))  # 1:2 R:R Ratio
     
-    if clamped_sl_pct <= 1.0:
-        vol_regime = "🟢 Volatilidad Baja / Ajuste Quirúrgico"
-    elif clamped_sl_pct <= 1.8:
-        vol_regime = "🔵 Volatilidad Estándar / Margen Óptimo"
+    if clamped_sl_pct <= 0.7:
+        vol_regime = "🟢 Volatilidad Ultra-Baja / Ajuste Estricto (0.5% - 0.7%)"
     else:
-        vol_regime = "🔥 Volatilidad Alta / Colchón Adaptativo"
+        vol_regime = "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
         
     return {
         "sl_pct": clamped_sl_pct,
