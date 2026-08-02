@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 19:41:33",
+  "timestamp": "2026-08-02 19:42:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia técnica y falta de liquidez institucional en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de Bids > 55%), por lo que la estrategia de protección de capital dicta mantenerse en efectivo (HOLD) para evitar la exposición a activos de alta volatilidad en un entorno de miedo (Fear 27).",
+  "reasoning": "Ninguno de los candidatos cumple con el requisito de soporte de libro de órdenes (Bids > 55%) ni con la confirmación de una tendencia clara, por lo que el comité decide mantener la liquidez para evitar riesgos innecesarios en un mercado de alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "SPCXBUSDT",
       "score": 85
     },
     {
+      "symbol": "UUSDT",
+      "score": 75
+    },
+    {
       "symbol": "PEPEUSDT",
       "score": 75
     },
     {
-      "symbol": "QQQBUSDT",
+      "symbol": "HEIUSDT",
       "score": 75
     },
     {
       "symbol": "ZAMAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LDOUSDT",
       "score": 75
     }
   ]
