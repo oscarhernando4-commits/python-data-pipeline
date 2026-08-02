@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-02 03:20:19",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 95,
-  "reasoning": "A pesar de que EULUSDT, ETHFIUSDT, NEIROUSDT y XECUSDT alcanzan el umbral de Score 65, el entorno macro actual con un Fear & Greed de 27 y la debilidad estructural de los activos de alta capitalización (BTC, ETH, SOL) dictan una postura defensiva. Los activos con Score 65 presentan un historial insuficiente en 5M y no muestran un 'Volume Surge' superior a 1.2x que confirme una acumulación institucional real. La preservación de capital es prioritaria; el mercado se encuentra en un régimen de alta volatilidad y baja convicción, por lo que la liquidez en USDT es la posición de mayor valor esperado.",
+  "timestamp": "2026-08-02 03:25:23",
+  "selected_symbol": "XAUTUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 85,
+  "reasoning": "XAUTUSDT presenta el score técnico más alto (85/100) y actúa como activo de refugio (RWA) en un entorno de mercado con Fear & Greed en 27 (miedo). Su fortaleza relativa frente a la debilidad de los 'Blue Chips' y el aumento de volumen institucional validan una estrategia de cobertura de valor. Cumple con el umbral A+ y la filosofía de preservación de capital al evitar la alta correlación beta de las altcoins en tendencia neutral.",
   "top_candidates": [
+    {
+      "symbol": "XAUTUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "RIFUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZAMAUSDT",
+      "score": 65
+    },
     {
       "symbol": "EULUSDT",
       "score": 65
-    },
-    {
-      "symbol": "ETHFIUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "NEIROUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "XECUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 60
     }
   ]
 }
