@@ -1,5 +1,5 @@
 # 🧠 INFORME EXECUTIVO DEL SÚPER-CEREBRO (GEMINI 3.1 FLASH LITE)
-*Última actualización: `2026-08-02 06:30:50`*
+*Última actualización: `2026-08-02 06:35:47`*
 
 > [!IMPORTANT] 🎯 **VEREDICTO INSTITUCIONAL DE IA EN TIEMPO REAL:**
 > - 🪙 **Activo Evaluado:** **`POLUSDT`**
@@ -31,8 +31,8 @@ Fallback Cuantitativo Tras Fallo de Conexión AI
 ## 🕯️ 3. ANÁLISIS DE VELAS JAPONESAS Y PRICE ACTION (15M)
 
 * **Patrón de Vela Actual:** **`Vela Neutral de Consolidación`**
-* **Mecha Inferior (Absorción de Compras):** `0.000000 USD` (Indica si las ballenas compraron en la caída)
-* **Mecha Superior (Presión Vendedora):** `-0.000010 USD` (Indica rechazo en techos)
+* **Mecha Inferior (Absorción de Compras):** `0.000010 USD` (Indica si las ballenas compraron en la caída)
+* **Mecha Superior (Presión Vendedora):** `0.000000 USD` (Indica rechazo en techos)
 * **Cuerpo de la Vela:** `0.000030 USD` (Fuerza direccional del ciclo)
 * **Comportamiento 5M en las últimas 4 Horas:**  
   *Historial reciente insuficiente (Primeras lecturas de 5M).*
@@ -49,8 +49,8 @@ Fallback Cuantitativo Tras Fallo de Conexión AI
 | **EMA 20 (Soporte Dinámico)** | **`$0.072409`** | Referencia | 🟢 Precio por encima (Fuerza) |
 | **Bollinger Banda Superior** | **`$0.072692`** | Resistencia | Techo de volatilidad para toma de ganancias |
 | **Bollinger Banda Inferior** | **`$0.072161`** | Soporte | Suelo de volatilidad para entradas de rebote |
-| **Volumen Surge Ratio** | **`0.03x`** | > 1.50x | ⚪ Volumen Promedio / Normal |
-| **ATR (Volatilidad Real 15m)** | **`$0.000141`** | Margen | Rango medio de movimiento por vela de 15m |
+| **Volumen Surge Ratio** | **`0.15x`** | > 1.50x | ⚪ Volumen Promedio / Normal |
+| **ATR (Volatilidad Real 15m)** | **`$0.000142`** | Margen | Rango medio de movimiento por vela de 15m |
 
 ---
 
