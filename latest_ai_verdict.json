@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 09:05:14",
+  "timestamp": "2026-08-02 09:10:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación sistémica con un sesgo bajista predominante. Ninguno de los activos analizados alcanza el umbral mínimo de Score Técnico (>= 65) requerido para un Setup A+. La ausencia de activos con fortaleza institucional, sumada a la alta volatilidad y las noticias negativas de FUD, dictan una política de preservación de capital estricta. Mantener 100% de liquidez en USDT es la única estrategia que cumple con la filosofía de gestión de riesgo de élite.",
+  "reasoning": "El entorno macroeconómico presenta un estrés sistémico agudo con una tendencia bajista predominante. Ninguno de los candidatos analizados cumple con el umbral estricto de Score Técnico A+ (>= 65) bajo condiciones de mercado seguras. WLFIUSDT y DOTUSDT, aunque presentan scores de 70 y 60 respectivamente, carecen de historial suficiente y están sujetos a alta incertidumbre regulatoria y de liquidez. Se prioriza la preservación de capital en liquidez (USDT) ante la ausencia de setups de alta probabilidad matemática.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "DOTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "LUNCUSDT",
       "score": 55
     },
     {
+      "symbol": "RIFUSDT",
+      "score": 50
+    },
+    {
       "symbol": "EULUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "HEIUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ORDIUSDT",
-      "score": 45
-    },
-    {
-      "symbol": "MUBUSDT",
       "score": 45
     }
   ]
