@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 07:25:19",
-  "selected_symbol": "ZROUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "ZROUSDT presenta un Score Técnico de 75/100 y un Volume Surge de 1.91, lo que indica una acumulación institucional significativa que se desvincula de la debilidad general del mercado. Su RSI de 50.01 se encuentra en el rango óptimo de equilibrio, evitando la sobrecompra. A diferencia de otros activos, no presenta FUD activo y su comportamiento técnico sugiere una divergencia alcista frente a la tendencia NEUTRAL del mercado.",
+  "timestamp": "2026-08-02 07:30:20",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El entorno macro actual presenta una fragilidad sistémica con un índice Fear & Greed en 27 (Miedo). Aunque activos como TRX y POL presentan un Score de 75, el análisis de los datos históricos de 485 trades muestra una tasa de éxito del 0% en activos con tendencia NEUTRAL y una alta probabilidad de pérdida en entornos de baja convicción. La falta de profundidad en el libro de órdenes y la ausencia de un volumen de confirmación (Volume Surge > 1.2x) invalidan los Setups A+. Se prioriza la preservación de capital en liquidez (USDT) ante la alta probabilidad de una purga de activos de baja convicción.",
   "top_candidates": [
     {
-      "symbol": "ETCUSDT",
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {
-      "symbol": "ZROUSDT",
+      "symbol": "SPCXBUSDT",
       "score": 75
     },
     {
-      "symbol": "COTIUSDT",
-      "score": 65
+      "symbol": "POLUSDT",
+      "score": 75
     },
     {
-      "symbol": "ENSOUSDT",
-      "score": 65
+      "symbol": "CFXUSDT",
+      "score": 75
     },
     {
-      "symbol": "DEXEUSDT",
+      "symbol": "1000SATSUSDT",
       "score": 65
     }
   ]
