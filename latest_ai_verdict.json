@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-02 08:50:16",
+  "timestamp": "2026-08-02 08:55:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una vulnerabilidad sistémica extrema con un índice de Fear & Greed en 27. Ninguno de los activos analizados cumple con el umbral mínimo de Score Técnico A+ (>= 65). El candidato con mayor score (WLFIUSDT, 60/100) no alcanza el requisito de calidad y presenta noticias negativas asociadas a pérdidas de inversores. Ante la ausencia de señales de acumulación institucional y la alta probabilidad de capitulación, la preservación de capital dicta mantener el 100% de la liquidez en USDT.",
+  "reasoning": "El mercado presenta una debilidad estructural extrema con un sesgo de pánico institucional. Ninguno de los candidatos analizados alcanza el umbral mínimo de seguridad (Score >= 65). El activo WLFIUSDT, aunque presenta el mayor score (60), está rodeado de noticias negativas y falta de historial, lo que lo clasifica como una trampa de liquidez. La preservación de capital es la prioridad absoluta bajo la filosofía de francotirador; ante la ausencia de un Setup A+, la única decisión cuantitativa correcta es mantener el 100% de la liquidez en USDT.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
       "score": 60
     },
     {
-      "symbol": "EULUSDT",
+      "symbol": "QNTUSDT",
       "score": 50
     },
     {
@@ -23,8 +23,8 @@
       "score": 50
     },
     {
-      "symbol": "QNTUSDT",
-      "score": 50
+      "symbol": "UUSDT",
+      "score": 45
     }
   ]
 }
