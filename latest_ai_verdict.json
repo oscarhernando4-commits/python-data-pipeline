@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-02 09:50:17",
+  "timestamp": "2026-08-02 09:55:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragilidad estructural con un índice Fear & Greed en 27 (miedo). Ninguno de los candidatos analizados alcanza el umbral mínimo de Score Técnico A+ (>= 65). Los activos con score 60 presentan riesgos de 'trampa de liquidez' y falta de profundidad, mientras que el entorno macro de ventas institucionales y hackeos desaconseja cualquier posición en largo. La preservación del capital es la prioridad absoluta; nos mantenemos en liquidez (USDT).",
+  "reasoning": "Ningún activo cumple con el umbral mínimo de Score Técnico A+ (>= 65) bajo las condiciones de mercado actuales. El sesgo de mercado es NEUTRAL y el análisis estadístico de 544 trades muestra una baja probabilidad de éxito en entornos de tendencia lateral. Se prioriza la preservación de capital en liquidez (USDT) ante la falta de setups de alta probabilidad.",
   "top_candidates": [
     {
-      "symbol": "ERAUSDT",
+      "symbol": "DOTUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "POLUSDT",
       "score": 60
     },
     {
@@ -15,16 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DOTUSDT",
-      "score": 60
-    },
-    {
       "symbol": "INJUSDT",
       "score": 60
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "score": 50
     }
   ]
 }
