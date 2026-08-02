@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-02 13:45:16",
+  "timestamp": "2026-08-02 13:50:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos analizados alcanza el umbral crítico de Score Técnico >= 65. El mercado se encuentra en una fase de capitulación técnica con una alta correlación negativa y distribución institucional. Los activos con score 60 carecen de profundidad histórica y volumen institucional, lo que los clasifica como especulativos y de alto riesgo. La preservación de capital es la prioridad absoluta bajo la filosofía de francotirador; por tanto, se mantiene la liquidez en USDT hasta que aparezca un setup A+ validado.",
+  "reasoning": "El mercado presenta una estructura de alta toxicidad con un índice Fear & Greed en 27. Aunque ASTERUSDT tiene un score de 70, su falta de profundidad histórica y el entorno macro de capitulación sistémica (BTC/ETH en scores críticos de 0-15) invalidan la seguridad de la operación. Ningún otro candidato alcanza el umbral de alta convicción A+ (Score >= 65) con confirmación de volumen institucional sólido. La preservación de capital es la prioridad absoluta; nos mantenemos en liquidez (USDT) hasta que la estructura de mercado muestre una acumulación real y no especulativa.",
   "top_candidates": [
     {
-      "symbol": "UUSDT",
+      "symbol": "ASTERUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "HBARUSDT",
       "score": 60
     },
     {
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "UUSDT",
       "score": 60
     },
     {
-      "symbol": "MIRAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DOTUSDT",
+      "symbol": "SUIUSDT",
       "score": 60
     }
   ]
