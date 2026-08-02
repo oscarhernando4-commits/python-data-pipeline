@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-02 19:04:19",
+  "timestamp": "2026-08-02 19:06:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'Neutralidad Especulativa' con falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de soporte de libro de órdenes (Bids > 55%) ni con una estructura técnica que garantice una alta probabilidad de éxito, por lo que la decisión prudente es el HOLD para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de tener candidatos con un score técnico de 75, la falta de confirmación en el libro de órdenes, la ausencia de un volumen de compra institucional contundente y el entorno de miedo generalizado (27) invalidan la ejecución de cualquier operación de compra en este momento, priorizando la protección del capital.",
   "top_candidates": [
-    {
-      "symbol": "PEPEUSDT",
-      "score": 75
-    },
     {
       "symbol": "XLMUSDT",
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "UUSDT",
+      "symbol": "ZECUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ASTERUSDT",
       "score": 75
     }
   ]
