@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-03 17:12:21",
+  "timestamp": "2026-08-03 17:14:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). Ante la incertidumbre macro y la falta de muros de compra institucionales, la decisión institucional es mantener la liquidez en USDT para evitar 'falling knives' y trampas de liquidez.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en un estado de apatía estructural que no justifica el riesgo de capital, por lo que se mantiene la posición en efectivo para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "ETCUSDT",
       "score": 85
+    },
+    {
+      "symbol": "SOLUSDT",
+      "score": 75
     },
     {
       "symbol": "WLFIUSDT",
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "RENDERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "JTOUSDT",
       "score": 75
     }
   ]
