@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 07:38:21",
+  "timestamp": "2026-08-03 07:40:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por unanimidad que no existen activos que cumplan con los criterios de alta convicción (Score >= 65) y soporte de liquidez necesarios para una ejecución segura, por lo que se mantiene la posición en efectivo para evitar riesgos innecesarios.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. La ausencia de activos con un score técnico superior a 65 y la debilidad en el libro de órdenes obligan a mantener la liquidez en efectivo para evitar el riesgo de 'bull traps' en un entorno de distribución.",
   "top_candidates": [
     {
       "symbol": "POLUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "KAITOUSDT",
+      "score": 50
+    },
+    {
       "symbol": "ERAUSDT",
       "score": 50
     },
     {
       "symbol": "HOMEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "KAITOUSDT",
       "score": 50
     }
   ]
