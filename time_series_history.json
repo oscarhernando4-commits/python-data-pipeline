@@ -1,12 +1,51 @@
 {
-  "LDOUSDT": [
+  "KITEUSDT": [
     {
-      "timestamp": "2026-08-03 03:24:09",
-      "price": 0.3239,
+      "timestamp": "2026-08-03 03:26:08",
+      "price": 0.0924,
       "score": 0,
-      "rsi": 45.97,
+      "rsi": 36.65,
       "macd": "Neutral",
-      "volume_surge": 0.47,
+      "volume_surge": 0.26,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DCRUSDT": [
+    {
+      "timestamp": "2026-08-03 03:26:08",
+      "price": 13.18,
+      "score": 0,
+      "rsi": 40.61,
+      "macd": "Neutral",
+      "volume_surge": 0.08,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "IMXUSDT": [
+    {
+      "timestamp": "2026-08-03 03:26:08",
+      "price": 0.1099,
+      "score": 15,
+      "rsi": 39.95,
+      "macd": "Neutral",
+      "volume_surge": 0.07,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-03 03:26:08",
+      "price": 2.83e-06,
+      "score": 25,
+      "rsi": 31.52,
+      "macd": "Neutral",
+      "volume_surge": 0.24,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
