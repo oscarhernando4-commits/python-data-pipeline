@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 22:30:21",
+  "timestamp": "2026-08-03 22:32:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un entorno de alta toxicidad con una correlación bajista sistémica. Ninguno de los candidatos cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de 'falling knives'. Se prioriza la preservación de capital sobre la especulación.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y drenaje de liquidez. Ninguno de los activos analizados cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de soporte institucional necesaria para mitigar el riesgo de pérdida, por lo que la única decisión prudente es mantener la liquidez en espera de mejores condiciones.",
   "top_candidates": [
     {
       "symbol": "EULUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "VANRYUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "COTIUSDT",
       "score": 50
     },
     {
       "symbol": "ACXUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "HFTUSDT",
       "score": 50
     }
   ]
