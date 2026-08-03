@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 20:52:23",
+  "timestamp": "2026-08-03 20:54:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos con la calidad técnica y la profundidad de mercado necesarias para garantizar una operación de alta probabilidad. Ante la ausencia de candidatos con un score >= 65 y la persistente debilidad macro, la decisión institucional es mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado actual presenta un riesgo sistémico elevado y una falta de fuerza relativa en los activos analizados. Ningún candidato cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital mediante el estado de espera (HOLD).",
   "top_candidates": [
     {
-      "symbol": "ACXUSDT",
+      "symbol": "ACEUSDT",
       "score": 60
     },
     {
-      "symbol": "JUPUSDT",
-      "score": 55
+      "symbol": "ACXUSDT",
+      "score": 60
     },
     {
       "symbol": "SKHYBUSDT",
       "score": 50
     },
     {
-      "symbol": "ACEUSDT",
+      "symbol": "DEXEUSDT",
       "score": 50
     },
     {
-      "symbol": "DEXEUSDT",
+      "symbol": "VANRYUSDT",
       "score": 50
     }
   ]
