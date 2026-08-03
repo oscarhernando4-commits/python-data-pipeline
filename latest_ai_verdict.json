@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 22:38:21",
+  "timestamp": "2026-08-03 22:40:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación o distribución sin soporte institucional claro. Ninguno de los candidatos cumple con el umbral de Score A+ (>= 65) ni con la dominancia de liquidez necesaria para mitigar el riesgo de slippage, por lo que la orden es mantener la posición en efectivo para preservar el capital.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una correlación negativa extrema. Ningún activo cumple con los criterios de alta convicción (Score >= 65) ni con la profundidad de liquidez necesaria para mitigar el riesgo de slippage, por lo que se mantiene la posición en efectivo para evitar la exposición a 'cuchillos cayendo'.",
   "top_candidates": [
+    {
+      "symbol": "OPENUSDT",
+      "score": 70
+    },
     {
       "symbol": "EULUSDT",
       "score": 60
     },
     {
-      "symbol": "OPENUSDT",
+      "symbol": "INTCBUSDT",
       "score": 60
     },
     {
-      "symbol": "MUBUSDT",
+      "symbol": "SKHYBUSDT",
       "score": 50
     },
     {
-      "symbol": "COTIUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "REUSDT",
+      "symbol": "SOXLBUSDT",
       "score": 50
     }
   ]
