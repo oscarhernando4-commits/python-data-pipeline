@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 00:28:20",
+  "timestamp": "2026-08-03 00:30:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de candidatos con scores técnicos de 65-70, la falta de soporte en el libro de órdenes y el entorno macro de capitulación técnica impiden alcanzar el umbral de convicción A+ necesario para operar, resultando en una decisión de mantener liquidez en USDT.",
+  "reasoning": "El mercado presenta una debilidad sistémica extrema con una falta de divergencia alcista y ausencia de soporte institucional. Ninguno de los candidatos analizados alcanza el umbral de calidad A+ (Score >= 65) requerido por el comité para mitigar el riesgo de 'falling knives'. Se prioriza la preservación de capital sobre la especulación de baja probabilidad.",
   "top_candidates": [
     {
-      "symbol": "SNXXBUSDT",
-      "score": 70
+      "symbol": "MANTRAUSDT",
+      "score": 60
     },
     {
       "symbol": "ATOMUSDT",
-      "score": 70
+      "score": 60
     },
     {
-      "symbol": "OPUSDT",
-      "score": 70
+      "symbol": "SAGAUSDT",
+      "score": 60
     },
     {
-      "symbol": "EULUSDT",
-      "score": 65
+      "symbol": "NVDABUSDT",
+      "score": 60
     },
     {
       "symbol": "ERAUSDT",
-      "score": 60
+      "score": 50
     }
   ]
 }
