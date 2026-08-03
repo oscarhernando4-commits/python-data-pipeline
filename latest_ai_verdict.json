@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 07:42:23",
+  "timestamp": "2026-08-03 07:44:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual se encuentra en un estado de alta correlación bajista y falta de profundidad, lo que invalida cualquier oportunidad de compra según nuestras reglas de gestión de riesgo A+. Ningún activo cumple con los criterios de score, volumen y soporte necesarios para una ejecución segura.",
+  "reasoning": "Ningún activo cumple con el umbral estricto de convicción A+ (Score >= 65 y confirmación de liquidez en el libro de órdenes). Ante la fragilidad del mercado y la alta probabilidad de trampas de liquidez, la decisión institucional es mantener la posición en efectivo (HOLD) para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "ATOMUSDT",
+      "score": 70
+    },
     {
       "symbol": "ONDOUSDT",
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "NIGHTUSDT",
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
-      "score": 55
+      "symbol": "DODOUSDT",
+      "score": 60
     },
     {
-      "symbol": "ERAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "KAITOUSDT",
+      "symbol": "HOMEUSDT",
       "score": 50
     }
   ]

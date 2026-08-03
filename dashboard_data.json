@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 07:42:23",
+  "updated_at": "2026-08-03 07:44:20",
   "total_balance_usd": 19.71,
   "usdt_free": 17.2258,
   "bnb_free": 0.00426609,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado actual se encuentra en un estado de alta correlación bajista y falta de profundidad, lo que invalida cualquier oportunidad de compra según nuestras reglas de gestión de riesgo A+. Ningún activo cumple con los criterios de score, volumen y soporte necesarios para una ejecución segura."
+    "reasoning": "Ningún activo cumple con el umbral estricto de convicción A+ (Score >= 65 y confirmación de liquidez en el libro de órdenes). Ante la fragilidad del mercado y la alta probabilidad de trampas de liquidez, la decisión institucional es mantener la posición en efectivo (HOLD) para evitar pérdidas innecesarias."
   }
 }
