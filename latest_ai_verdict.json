@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 20:20:21",
+  "timestamp": "2026-08-03 20:22:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. La falta de soporte sólido en el libro de órdenes y la tendencia neutral predominante hacen que cualquier operación sea de alto riesgo, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el comité. La falta de dominancia clara en el libro de órdenes (Bids < 55%) y la naturaleza errática del mercado actual obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "AVAXUSDT",
+      "score": 75
+    },
     {
       "symbol": "XLMUSDT",
       "score": 75
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "INTCBUSDT",
+      "symbol": "BONKUSDT",
       "score": 75
     },
     {
       "symbol": "HOLOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BONKUSDT",
       "score": 75
     }
   ]
