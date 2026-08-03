@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 05:54:15",
+  "timestamp": "2026-08-03 05:57:08",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos que cumplan con los criterios de alta convicción (Score >= 65) y soporte de liquidez. Ante la fragilidad macroeconómica y la falta de confirmación técnica, la estrategia óptima es la preservación total del capital en espera de una estructura de mercado más robusta.",
+  "reasoning": "El mercado actual presenta una debilidad estructural generalizada. Ninguno de los candidatos cumple con el umbral de Score A+ (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital (HOLD) hasta que aparezca una oportunidad con alta probabilidad estadística.",
   "top_candidates": [
+    {
+      "symbol": "MIRAUSDT",
+      "score": 70
+    },
     {
       "symbol": "SAGAUSDT",
       "score": 70
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "NEARUSDT",
       "score": 60
     },
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "INJUSDT",
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "NIGHTUSDT",
+      "symbol": "DOTUSDT",
       "score": 60
     }
   ]
