@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 01:14:20",
+  "timestamp": "2026-08-03 01:16:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una debilidad estructural sistémica. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico A+ (>= 65) requerido por el Comité para garantizar una operación de alta probabilidad. Ante la ausencia de muros de soporte claros y la persistencia de una tendencia neutral, la decisión institucional es mantener la liquidez en USDT para evitar la exposición a activos en fase de distribución o baja liquidez.",
+  "reasoning": "El mercado se encuentra en un estado de distribución forzada y alta incertidumbre. Ninguno de los candidatos cumple con los requisitos mínimos de Score Técnico (A+), soporte de liquidez en el Orderbook o confirmación de tendencia, por lo que la orden es mantener la posición en efectivo para evitar el riesgo de 'cuchillos cayendo'.",
   "top_candidates": [
     {
       "symbol": "DCRUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ESPUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "SAGAUSDT",
       "score": 60
     },
     {
-      "symbol": "ZBTUSDT",
-      "score": 60
+      "symbol": "KAITOUSDT",
+      "score": 55
     },
     {
-      "symbol": "NVDABUSDT",
-      "score": 60
+      "symbol": "DODOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "TLMUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "score": 45
     }
   ]
 }
