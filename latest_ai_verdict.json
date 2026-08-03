@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 17:18:22",
+  "timestamp": "2026-08-03 17:20:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de dominancia compradora en el libro de órdenes y la inestabilidad del entorno macro actual no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en un mercado de alta incertidumbre.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). El mercado actual presenta una volatilidad que, combinada con la falta de profundidad en los activos, aumenta el riesgo de pérdidas, por lo que la decisión institucional es mantener la liquidez en USDT.",
   "top_candidates": [
     {
-      "symbol": "SUIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETCUSDT",
+      "symbol": "ALLOUSDT",
       "score": 75
     },
     {
@@ -19,12 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "ARBUSDT",
+      "symbol": "ETCUSDT",
       "score": 75
     },
     {
-      "symbol": "JTOUSDT",
+      "symbol": "VIRTUALUSDT",
       "score": 75
+    },
+    {
+      "symbol": "SKHYBUSDT",
+      "score": 65
     }
   ]
 }
