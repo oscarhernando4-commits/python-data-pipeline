@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 17:30:21",
+  "timestamp": "2026-08-03 17:32:35",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La falta de profundidad en el libro de órdenes y la incertidumbre macro sugieren que el mercado aún no ha finalizado su fase de purga, por lo que la estrategia óptima es mantener la liquidez en espera de una oportunidad de alta probabilidad.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
+    {
+      "symbol": "ALLOUSDT",
+      "score": 75
+    },
     {
       "symbol": "ZAMAUSDT",
       "score": 75
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "JTOUSDT",
-      "score": 75
-    },
-    {
       "symbol": "SKHYBUSDT",
       "score": 65
     },
     {
-      "symbol": "ALLOUSDT",
+      "symbol": "KORUBUSDT",
       "score": 65
     }
   ]
