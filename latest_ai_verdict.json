@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-03 19:30:23",
+  "timestamp": "2026-08-03 19:32:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la liquidez en USDT. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y confirmación de volumen). La falta de soporte en el libro de órdenes y el entorno de miedo generalizado aumentan el riesgo de 'falling knives', por lo que se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de soporte real en el libro de órdenes y la persistencia de una tendencia neutral en el mercado global no justifican el riesgo de ejecución, optando por preservar el capital hasta que surja una señal de alta convicción.",
   "top_candidates": [
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "INJUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ARBUSDT",
       "score": 75
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "PYTHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ARBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BONKUSDT",
       "score": 75
     }
   ]
