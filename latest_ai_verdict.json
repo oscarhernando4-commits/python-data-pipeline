@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-03 03:50:21",
+  "timestamp": "2026-08-03 03:52:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con alta incertidumbre macro. Ningún activo cumple con el umbral de seguridad A+ requerido por el comité, por lo que la preservación de capital es la prioridad absoluta.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score A+ (>= 65) combinado con una estructura de libro de órdenes favorable. El mercado se encuentra en un régimen de alta incertidumbre y distribución institucional, por lo que la estrategia óptima es mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "MIRAUSDT",
-      "score": 70
-    },
     {
       "symbol": "HOMEUSDT",
       "score": 70
@@ -19,12 +15,16 @@
       "score": 70
     },
     {
-      "symbol": "WLDUSDT",
-      "score": 60
+      "symbol": "MIRAUSDT",
+      "score": 70
     },
     {
-      "symbol": "XPLUSDT",
-      "score": 55
+      "symbol": "REZUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "WLDUSDT",
+      "score": 60
     }
   ]
 }
