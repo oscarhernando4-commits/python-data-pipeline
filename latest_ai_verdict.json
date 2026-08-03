@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 08:54:21",
+  "timestamp": "2026-08-03 08:56:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con falta de profundidad y fuerza técnica. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la orden es proteger el capital.",
+  "reasoning": "El comité ha determinado que el entorno de mercado actual es de alta fragilidad y riesgo sistémico. Ningún activo cumple con el umbral de Score técnico A+ (>= 65) ni con la profundidad de libro de órdenes necesaria para una ejecución segura. Se prioriza la protección del capital en efectivo hasta que las condiciones macro mejoren y se identifiquen setups de alta probabilidad.",
   "top_candidates": [
+    {
+      "symbol": "POLUSDT",
+      "score": 70
+    },
     {
       "symbol": "ENAUSDT",
       "score": 60
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "APTUSDT",
+      "symbol": "TIAUSDT",
       "score": 60
     }
   ]
