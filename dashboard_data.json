@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 19:34:26",
+  "updated_at": "2026-08-03 19:36:19",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 45,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 75, la ausencia de una dominancia clara en el libro de órdenes (Bids < 55%) y el entorno de miedo generalizado (Fear & Greed 28) no cumplen con los criterios de convicción A+ exigidos por el Chief Risk Officer. Se prioriza la preservación del capital sobre la especulación en un mercado de alta incertidumbre."
+    "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital en un entorno de mercado con sentimiento de miedo (Fear 28)."
   }
 }

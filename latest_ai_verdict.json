@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-03 19:34:25",
+  "timestamp": "2026-08-03 19:36:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 75, la ausencia de una dominancia clara en el libro de órdenes (Bids < 55%) y el entorno de miedo generalizado (Fear & Greed 28) no cumplen con los criterios de convicción A+ exigidos por el Chief Risk Officer. Se prioriza la preservación del capital sobre la especulación en un mercado de alta incertidumbre.",
+  "confidence": 0,
+  "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital en un entorno de mercado con sentimiento de miedo (Fear 28).",
   "top_candidates": [
     {
+      "symbol": "SEIUSDT",
+      "score": 85
+    },
+    {
       "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "INJUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ARBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SEIUSDT",
       "score": 75
     }
   ]
