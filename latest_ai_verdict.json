@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 00:22:20",
+  "timestamp": "2026-08-03 00:24:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una correlación bajista extrema y falta de fuerza relativa en los activos analizados. Dado que ningún candidato cumple con el requisito de Score >= 65 y la liquidez es precaria, la estrategia institucional es la preservación total de capital mediante una postura de espera (HOLD).",
+  "reasoning": "El mercado se encuentra en una fase de distribución forzada con alta incertidumbre macroeconómica. Ningún activo cumple con los criterios estrictos de riesgo-beneficio del comité, por lo que la estrategia óptima es la preservación de capital hasta que el sentimiento de mercado mejore y los scores técnicos superen el umbral de 65.",
   "top_candidates": [
     {
-      "symbol": "ARBUSDT",
-      "score": 60
+      "symbol": "ATOMUSDT",
+      "score": 70
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "MANTRAUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "SAGAUSDT",
+      "symbol": "ZBTUSDT",
       "score": 60
     },
     {
-      "symbol": "ZBTUSDT",
+      "symbol": "NVDABUSDT",
       "score": 60
     }
   ]
