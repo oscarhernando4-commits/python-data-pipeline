@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 10:24:16",
+  "timestamp": "2026-08-03 10:26:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75 en activos como SOL, ZEC y AAVE, la ausencia de soporte real en el libro de órdenes y el entorno macro de miedo (Fear 28) impiden una ejecución segura. Se mantiene la liquidez en espera de una estructura de mercado más definida y con mayor convicción institucional.",
+  "reasoning": "El comité ha decidido por unanimidad mantener la posición en efectivo (HOLD). A pesar de que algunos activos tienen un score técnico de 75, la falta de profundidad en el libro de órdenes, la inestabilidad macroeconómica y la alta probabilidad de pérdidas basada en el historial de 589 trades en entornos neutrales, impiden la ejecución de cualquier compra. La prioridad es la preservación del capital hasta que el mercado muestre una estructura de acumulación clara y confirmada.",
   "top_candidates": [
     {
-      "symbol": "SOLUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -19,12 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
-      "score": 75
+      "symbol": "ATOMUSDT",
+      "score": 70
     },
     {
-      "symbol": "OPUSDT",
-      "score": 75
+      "symbol": "BTCUSDT",
+      "score": 65
     }
   ]
 }
