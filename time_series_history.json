@@ -1,12 +1,64 @@
 {
-  "EDENUSDT": [
+  "KITEUSDT": [
     {
-      "timestamp": "2026-08-03 22:36:12",
-      "price": 0.03958,
-      "score": 30,
-      "rsi": 53.32,
+      "timestamp": "2026-08-03 22:38:12",
+      "price": 0.0962,
+      "score": 20,
+      "rsi": 65.23,
       "macd": "Neutral",
-      "volume_surge": 0.69,
+      "volume_surge": 1.26,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ROBOUSDT": [
+    {
+      "timestamp": "2026-08-03 22:38:12",
+      "price": 0.01332,
+      "score": 30,
+      "rsi": 55.52,
+      "macd": "Neutral",
+      "volume_surge": 0.74,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPENUSDT": [
+    {
+      "timestamp": "2026-08-03 22:38:12",
+      "price": 0.1891,
+      "score": 60,
+      "rsi": 54.52,
+      "macd": "Neutral",
+      "volume_surge": 0.42,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "1000SATSUSDT": [
+    {
+      "timestamp": "2026-08-03 22:38:12",
+      "price": 1.01e-05,
+      "score": 15,
+      "rsi": 45.57,
+      "macd": "Neutral",
+      "volume_surge": 0.19,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-03 22:38:12",
+      "price": 0.1369,
+      "score": 0,
+      "rsi": 38.07,
+      "macd": "Neutral",
+      "volume_surge": 0.42,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
