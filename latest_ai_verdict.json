@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-03 05:10:23",
+  "timestamp": "2026-08-03 05:12:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de estancamiento sistémico con sesgo bajista. Ninguno de los candidatos cumple con el requisito estricto de Score Técnico >= 65 ni con una estructura de soporte institucional sólida en el libro de órdenes. La prioridad absoluta es la preservación de capital, por lo que se ordena el cese de operaciones hasta que las condiciones macro y técnicas mejoren.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada con scores técnicos insuficientes. Ningún activo cumple con la regla de oro de Score A+ (>= 65) ni con la confirmación de soporte institucional en el libro de órdenes, por lo que la decisión es preservar el capital mediante una postura de espera (HOLD).",
   "top_candidates": [
     {
       "symbol": "MIRAUSDT",
       "score": 70
-    },
-    {
-      "symbol": "NILUSDT",
-      "score": 60
     },
     {
       "symbol": "POLUSDT",
@@ -23,8 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "HOMEUSDT",
-      "score": 55
+      "symbol": "VETUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "BOMEUSDT",
+      "score": 60
     }
   ]
 }
