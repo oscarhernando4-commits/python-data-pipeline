@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 17:44:22",
+  "timestamp": "2026-08-03 17:46:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras deliberar, el comité ha determinado que las condiciones actuales del mercado no cumplen con los criterios de seguridad y rentabilidad exigidos. La falta de profundidad en el libro de órdenes y la inestabilidad macro sugieren que el riesgo de pérdida supera el potencial de beneficio, por lo que se mantiene la posición en efectivo (HOLD).",
+  "reasoning": "El mercado se encuentra en una fase de estancamiento técnico con un sesgo defensivo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la decisión institucional es mantener la liquidez en espera de un catalizador claro.",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "LDOUSDT",
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "OPUSDT",
-      "score": 70
-    },
-    {
       "symbol": "ALLOUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "XLMUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "TAOUSDT",
       "score": 65
     }
   ]
