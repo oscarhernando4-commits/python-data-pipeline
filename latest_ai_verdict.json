@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 00:12:17",
+  "timestamp": "2026-08-03 00:14:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que se prioriza la preservación del capital ante la inestabilidad macroeconómica actual.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional y alta fragilidad. Ningún activo cumple con el umbral de Score Técnico >= 65 ni con la confirmación de liquidez necesaria para una operación de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de baja calidad técnica.",
   "top_candidates": [
     {
       "symbol": "MIRAUSDT",
       "score": 70
     },
     {
+      "symbol": "ORDIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NVDABUSDT",
+      "score": 60
+    },
+    {
       "symbol": "ZBTUSDT",
-      "score": 70
+      "score": 55
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SNXXBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ARBUSDT",
-      "score": 60
+      "symbol": "NEARUSDT",
+      "score": 45
     }
   ]
 }
