@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-03 03:34:20",
+  "timestamp": "2026-08-03 03:36:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de distribución forzada y falta de soporte institucional. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que la orden es mantener la liquidez en efectivo para evitar riesgos innecesarios.",
+  "reasoning": "El mercado presenta un entorno de estrés sistémico tras el exploit de Coldcard, con una ausencia total de activos que cumplan con el umbral de calidad A+ (Score >= 65). Ante la falta de soporte institucional y la alta probabilidad de 'trampas de valor', el comité ha decidido mantener el 100% de la liquidez en espera de una estabilización del mercado.",
   "top_candidates": [
-    {
-      "symbol": "MIRAUSDT",
-      "score": 70
-    },
     {
       "symbol": "HOMEUSDT",
       "score": 70
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "XAUTUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "BANKUSDT",
       "score": 50
     }
   ]
