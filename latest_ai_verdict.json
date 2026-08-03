@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-03 14:24:19",
+  "timestamp": "2026-08-03 14:26:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, la falta de dominancia en el libro de órdenes y la inestabilidad macro actual no justifican la entrada en el mercado, priorizando la preservación del capital sobre la especulación.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y dominancia de Bids > 55%). La falta de soporte institucional en el libro de órdenes y la volatilidad exógena por la intervención del Yen obligan a una postura defensiva de preservación de capital.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
+      "symbol": "AAVEUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "XRPUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "MORPHOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AAVEUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     }
   ]
