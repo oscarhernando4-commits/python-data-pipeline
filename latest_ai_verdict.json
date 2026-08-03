@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-03 08:40:20",
+  "timestamp": "2026-08-03 08:42:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de distribución institucional agresiva y falta de soporte, lo que hace que cualquier entrada sea una apuesta de alto riesgo. Ningún activo cumple con el umbral de Score Técnico >= 65 ni con la dominancia de Bids necesaria para una operación A+. Se prioriza la preservación del capital.",
+  "reasoning": "El comité ha determinado que no existen activos que cumplan con los criterios de alta convicción (Score >= 65) y soporte de liquidez necesarios para operar. Ante la debilidad sistémica y el riesgo de un flash crash, la estrategia óptima es mantenerse en efectivo (USDT) para evitar trampas de liquidez.",
   "top_candidates": [
-    {
-      "symbol": "XLMUSDT",
-      "score": 70
-    },
     {
       "symbol": "DODOUSDT",
       "score": 70
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "MUBARAKUSDT",
+      "symbol": "XLMUSDT",
       "score": 60
     },
     {
-      "symbol": "ERAUSDT",
-      "score": 50
+      "symbol": "POLUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ETHUSDT",
+      "score": 55
     }
   ]
 }
