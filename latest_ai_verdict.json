@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-03 11:10:18",
+  "timestamp": "2026-08-03 11:12:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad generalizada con scores técnicos inferiores al umbral de seguridad A+ (65). Ningún activo cumple con los criterios de soporte de liquidez ni de fortaleza técnica, por lo que la estrategia institucional es preservar el capital mediante una posición de espera (HOLD) hasta que se identifique una rotación de capital clara y confirmada.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada y una falta de convicción institucional. Ningún activo cumple con los criterios de riesgo-retorno exigidos por el comité, por lo que la estrategia óptima es la preservación de capital mediante la inacción.",
   "top_candidates": [
     {
       "symbol": "SUNUSDT",
       "score": 60
-    },
-    {
-      "symbol": "BICOUSDT",
-      "score": 50
     },
     {
       "symbol": "PEPEUSDT",
@@ -23,7 +19,11 @@
       "score": 50
     },
     {
-      "symbol": "MANTRAUSDT",
+      "symbol": "ZAMAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "SYNUSDT",
       "score": 50
     }
   ]

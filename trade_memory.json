@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 589,
-    "wins": 182,
+    "total_trades": 590,
+    "wins": 183,
     "losses": 407,
-    "win_rate_pct": 30.9,
-    "total_pnl_usd": -1.710114545454588
+    "win_rate_pct": 31.02,
+    "total_pnl_usd": -1.688844545454588
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -9525,6 +9525,19 @@
         "rsi_15m": 30.2,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-03 11:12:18",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "DOTUSDT",
+      "side": "BUY",
+      "entry_price": 0.799,
+      "exit_price": 0.8,
+      "pnl_usd": 0.021270000000000018,
+      "result": "WIN",
+      "notes": "Real Money Trade closed with 0.13%",
+      "context": {}
     }
   ]
 }

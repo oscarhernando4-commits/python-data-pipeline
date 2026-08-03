@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-08-03 11:10:19",
-  "total_balance_usd": 19.78,
-  "usdt_free": 0.231,
+  "updated_at": "2026-08-03 11:12:18",
+  "total_balance_usd": 19.8,
+  "usdt_free": 19.801270000000002,
   "bnb_free": 0.00424436,
-  "status": "🔵 En Vivo LONG (DOTUSDT @ $0.8010)",
+  "status": "🟦 Buscando Entrada A+",
   "position": {
-    "symbol": "DOTUSDT",
-    "quantity": 21.27,
-    "entry_price": 0.799,
-    "highest_price": 0.807,
-    "break_even": true,
+    "symbol": "NINGUNA",
+    "quantity": 0.0,
+    "entry_price": 0.0,
+    "highest_price": 0.0,
+    "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 0.96,
-    "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
+    "adaptive_sl_pct": 1.0,
+    "volatility_regime": "🔵 Standard ATR"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una debilidad generalizada con scores técnicos inferiores al umbral de seguridad A+ (65). Ningún activo cumple con los criterios de soporte de liquidez ni de fortaleza técnica, por lo que la estrategia institucional es preservar el capital mediante una posición de espera (HOLD) hasta que se identifique una rotación de capital clara y confirmada."
+    "reasoning": "El mercado presenta una debilidad estructural generalizada y una falta de convicción institucional. Ningún activo cumple con los criterios de riesgo-retorno exigidos por el comité, por lo que la estrategia óptima es la preservación de capital mediante la inacción."
   }
 }
