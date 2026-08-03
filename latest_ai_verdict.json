@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 05:18:17",
+  "timestamp": "2026-08-03 05:20:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica y falta de profundidad, lo que impide la ejecución de cualquier operación bajo nuestras estrictas reglas de gestión de riesgo. Se prioriza la preservación del capital sobre la especulación en activos de baja convicción.",
+  "reasoning": "El mercado actual muestra una debilidad sistémica generalizada sin anclas de valor claras. Ningún activo cumple con el umbral de score técnico A+ (>= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que la estrategia institucional es proteger el capital y esperar una mejora en las condiciones de mercado.",
   "top_candidates": [
     {
       "symbol": "MIRAUSDT",
       "score": 70
     },
     {
-      "symbol": "POLUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "INJUSDT",
-      "score": 60
-    },
-    {
       "symbol": "ALGOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "POLUSDT",
       "score": 60
     },
     {
       "symbol": "DODOUSDT",
       "score": 60
+    },
+    {
+      "symbol": "HOMEUSDT",
+      "score": 55
     }
   ]
 }
