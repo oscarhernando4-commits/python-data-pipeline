@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 18:46:15",
+  "timestamp": "2026-08-03 18:48:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el requisito estricto de Score >= 65 combinado con una dominancia de Bids > 55% y un volumen institucional significativo. La estrategia de protección de capital exige mantenerse en liquidez (HOLD) ante la ausencia de una oportunidad de alta probabilidad.",
+  "reasoning": "El mercado presenta una estructura de estancamiento defensivo. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro). Se prioriza la preservación del capital sobre la ejecución de trades especulativos en un entorno de baja volatilidad direccional.",
   "top_candidates": [
     {
-      "symbol": "BANKUSDT",
-      "score": 65
+      "symbol": "UNIUSDT",
+      "score": 70
     },
     {
       "symbol": "XAUTUSDT",
       "score": 65
     },
     {
+      "symbol": "BANKUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "score": 65
+    },
+    {
       "symbol": "PAXGUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "ERAUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "JSTUSDT",
       "score": 65
     }
   ]
