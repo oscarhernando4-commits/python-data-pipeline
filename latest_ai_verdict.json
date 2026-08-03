@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 04:38:15",
+  "timestamp": "2026-08-03 04:40:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de pánico institucional y debilidad técnica generalizada. Ninguno de los candidatos analizados cumple con el umbral mínimo de Score 65/100 ni con la confirmación de soporte en el libro de órdenes, por lo que la estrategia de preservación de capital dicta mantenerse en liquidez total.",
+  "reasoning": "El comité ha determinado por consenso unánime que no existen condiciones de mercado ni activos que cumplan con los criterios de alta convicción (Score >= 65) exigidos por el protocolo de gestión de riesgo. Se prioriza la preservación de capital ante la incertidumbre macroeconómica y la falta de soporte institucional en el libro de órdenes.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 50
+      "symbol": "OPUSDT",
+      "score": 60
     },
     {
-      "symbol": "NEARUSDT",
+      "symbol": "SHIBUSDT",
       "score": 50
     }
   ]
