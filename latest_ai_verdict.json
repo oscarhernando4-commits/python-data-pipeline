@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-03 13:14:21",
+  "timestamp": "2026-08-03 13:16:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de alta frecuencia y manipulación especulativa sin soporte real de ballenas. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%), por lo que el comité decide mantener la liquidez en espera de una estructura de mercado más clara.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales de mercado no cumplen con los requisitos de alta convicción (Score >= 65 y soporte de libro de órdenes verificado). Se prioriza la preservación del capital frente a la volatilidad incierta, manteniendo la posición en efectivo hasta que surja una señal técnica y fundamental de mayor calidad.",
   "top_candidates": [
     {
-      "symbol": "FILUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ONDOUSDT",
+      "symbol": "SYNUSDT",
       "score": 75
     },
     {
-      "symbol": "SKYUSDT",
+      "symbol": "APTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "CRVUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "XPLUSDT",
+      "symbol": "OPUSDT",
       "score": 75
     }
   ]
