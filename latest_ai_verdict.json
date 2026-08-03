@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 16:16:21",
+  "timestamp": "2026-08-03 16:18:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con la regla de oro de tener una dominancia de Bids Compradores superior al 55% ni una confirmación de soporte institucional sólida, por lo que se prioriza la preservación del capital ante la incertidumbre macroeconómica.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta dispersión de resultados en el historial de simulaciones y la falta de muros de soporte institucionales obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "ETCUSDT",
+      "score": 75
+    },
     {
       "symbol": "ASTERUSDT",
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ARBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "CAKEUSDT",
-      "score": 75
-    },
-    {
       "symbol": "SUNUSDT",
       "score": 75
+    },
+    {
+      "symbol": "SOXLBUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "MUBUSDT",
+      "score": 65
     }
   ]
 }
