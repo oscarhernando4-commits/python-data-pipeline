@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 09:44:20",
+  "updated_at": "2026-08-03 09:46:24",
   "total_balance_usd": 19.72,
   "usdt_free": 17.2258,
   "bnb_free": 0.00426609,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de Score Técnico >= 65 ni con la confirmación de soporte en el libro de órdenes, lo que obliga a mantener la posición en efectivo para evitar pérdidas en un entorno de alta volatilidad y baja convicción."
+    "reasoning": "El mercado se encuentra en un estado de indecisión con un sentimiento de miedo predominante y falta de soporte institucional en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%), por lo que la estrategia óptima es la preservación total del capital mediante el modo HOLD."
   }
 }
