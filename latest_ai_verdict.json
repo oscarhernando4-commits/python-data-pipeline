@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-03 14:00:22",
+  "timestamp": "2026-08-03 14:02:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de indecisión institucional profunda con una correlación mixta. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT).",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
+      "symbol": "SKYUSDT",
       "score": 75
     },
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "AEROUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZROUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "XLMUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "GRAMUSDT",
+      "symbol": "BTCUSDT",
       "score": 65
     }
   ]
