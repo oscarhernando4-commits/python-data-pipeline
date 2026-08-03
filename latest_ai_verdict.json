@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-03 10:22:18",
+  "timestamp": "2026-08-03 10:24:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de apatía estructural con falta de profundidad en el libro de órdenes y ausencia de convicción institucional. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65 con soporte de órdenes confirmado), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75 en activos como SOL, ZEC y AAVE, la ausencia de soporte real en el libro de órdenes y el entorno macro de miedo (Fear 28) impiden una ejecución segura. Se mantiene la liquidez en espera de una estructura de mercado más definida y con mayor convicción institucional.",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZECUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AAVEUSDT",
       "score": 75
     },
     {
@@ -15,16 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "TRUMPUSDT",
-      "score": 75
-    },
-    {
       "symbol": "OPUSDT",
       "score": 75
-    },
-    {
-      "symbol": "BTCUSDT",
-      "score": 65
     }
   ]
 }
