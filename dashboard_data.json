@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 03:56:16",
+  "updated_at": "2026-08-03 03:58:17",
   "total_balance_usd": 19.72,
   "usdt_free": 17.2258,
   "bnb_free": 0.00426609,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "A pesar de que AAVE y WLD cumplen con el score técnico mínimo, la ausencia de una dominancia clara en el libro de órdenes (bids < 55%) y el entorno macro de desconfianza sistémica impiden la ejecución de una orden de compra bajo los estándares de riesgo del comité."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) y la confirmación de soporte en el libro de órdenes necesaria para mitigar el riesgo sistémico actual. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre."
   }
 }
