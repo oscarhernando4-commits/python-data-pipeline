@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-03 05:08:16",
+  "timestamp": "2026-08-03 05:10:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno de mercado presenta una fragilidad sistémica extrema. Ningún activo cumple con los criterios de alta convicción (Score >= 65) y la falta de soporte institucional en el libro de órdenes, sumado a las noticias negativas, obliga a una postura de preservación de capital total.",
+  "reasoning": "El mercado se encuentra en una fase de estancamiento sistémico con sesgo bajista. Ninguno de los candidatos cumple con el requisito estricto de Score Técnico >= 65 ni con una estructura de soporte institucional sólida en el libro de órdenes. La prioridad absoluta es la preservación de capital, por lo que se ordena el cese de operaciones hasta que las condiciones macro y técnicas mejoren.",
   "top_candidates": [
     {
       "symbol": "MIRAUSDT",
       "score": 70
+    },
+    {
+      "symbol": "NILUSDT",
+      "score": 60
     },
     {
       "symbol": "POLUSDT",
@@ -19,12 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "GIGGLEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "DEXEUSDT",
-      "score": 50
+      "symbol": "HOMEUSDT",
+      "score": 55
     }
   ]
 }
