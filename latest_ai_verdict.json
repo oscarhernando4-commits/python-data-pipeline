@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-03 14:56:25",
+  "timestamp": "2026-08-03 14:58:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de alta incertidumbre y falta de convicción institucional. A pesar de que algunos activos tienen scores técnicos de 75, la ausencia de soporte en el libro de órdenes y el entorno macro defensivo (Fear & Greed 28) obligan a mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y distribución silenciosa. Ninguno de los candidatos cumple con el requisito estricto de soporte de órdenes verificado (Bids > 55%) ni con una estructura técnica que garantice una operación de alta probabilidad, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "BCHUSDT",
-      "score": 75
+      "symbol": "PUMPUSDT",
+      "score": 85
     },
     {
       "symbol": "TAOUSDT",
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "ALGOUSDT",
       "score": 75
     }
   ]
