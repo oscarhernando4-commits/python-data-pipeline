@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 17:10:31",
+  "updated_at": "2026-08-03 17:12:25",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 45,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado presenta una alta probabilidad de 'trampa de valor' en las altcoins analizadas, por lo que la decisión institucional es mantener la liquidez en espera de una estructura de mercado más favorable."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). Ante la incertidumbre macro y la falta de muros de compra institucionales, la decisión institucional es mantener la liquidez en USDT para evitar 'falling knives' y trampas de liquidez."
   }
 }
