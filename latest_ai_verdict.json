@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 01:44:19",
+  "timestamp": "2026-08-03 01:46:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad estructural generalizada sin activos que alcancen el umbral de calidad A+ requerido. La ausencia de soporte en el libro de órdenes y la inestabilidad macroeconómica dictan una postura de preservación de capital total.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica generalizada sin activos que cumplan con los criterios de alta convicción (Score >= 65) exigidos por el comité, por lo que la orden es proteger la liquidez total.",
   "top_candidates": [
     {
-      "symbol": "TIAUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "DCRUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "KORUBUSDT",
+      "symbol": "POLUSDT",
       "score": 50
     },
     {
-      "symbol": "SNXXBUSDT",
+      "symbol": "ESPUSDT",
       "score": 50
     },
     {
       "symbol": "TLMUSDT",
       "score": 50
+    },
+    {
+      "symbol": "SAGAUSDT",
+      "score": 45
+    },
+    {
+      "symbol": "NVDABUSDT",
+      "score": 45
     }
   ]
 }
