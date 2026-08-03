@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-03 18:58:17",
+  "timestamp": "2026-08-03 19:00:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con falta de convicción institucional en el libro de órdenes. Ningún candidato cumple con el umbral de seguridad de Bids > 55% ni con la confirmación de volumen necesaria para mitigar el riesgo de 'falling knives', por lo que se prioriza la preservación del capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes verificado). La prioridad es la preservación del capital ante la volatilidad actual y la falta de datos de profundidad de mercado.",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
       "score": 75
     },
     {
-      "symbol": "INJUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PORTALUSDT",
+      "symbol": "SEIUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "BANKUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "ERAUSDT",
       "score": 65
     }
   ]
