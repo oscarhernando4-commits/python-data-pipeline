@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 19:12:23",
+  "timestamp": "2026-08-03 19:14:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación bajista predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia institucional es mantener la liquidez en espera de una confirmación de tendencia más clara.",
+  "reasoning": "El comité ha determinado que, a pesar de los altos scores técnicos, la falta de dominancia en el libro de órdenes y el entorno macro de miedo impiden una ejecución de alta probabilidad, priorizando la preservación del capital sobre la especulación.",
   "top_candidates": [
+    {
+      "symbol": "PYTHUSDT",
+      "score": 85
+    },
     {
       "symbol": "SEIUSDT",
       "score": 85
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "GRAMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "INJUSDT",
       "score": 75
     }
   ]
