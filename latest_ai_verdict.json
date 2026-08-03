@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 00:36:17",
+  "timestamp": "2026-08-03 00:38:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual carece de las condiciones técnicas y de liquidez necesarias para una ejecución segura. Ningún activo cumple con el umbral de Score A+ (>= 65) y la alta correlación bajista junto con el sentimiento de miedo extremo desaconsejan cualquier posicionamiento en largo, priorizando la protección del capital.",
+  "reasoning": "El mercado se encuentra en una fase de alta fragilidad y liquidación, donde los candidatos disponibles no cumplen con los criterios estrictos de Score Técnico (A+) ni con la profundidad de liquidez necesaria para una operación segura, por lo que se prioriza la protección del capital.",
   "top_candidates": [
+    {
+      "symbol": "MIRAUSDT",
+      "score": 70
+    },
     {
       "symbol": "ZBTUSDT",
       "score": 70
     },
     {
-      "symbol": "MANTRAUSDT",
+      "symbol": "DOTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ARBUSDT",
       "score": 60
     },
     {
       "symbol": "ATOMUSDT",
       "score": 60
-    },
-    {
-      "symbol": "NVDABUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SNXXBUSDT",
-      "score": 50
     }
   ]
 }
