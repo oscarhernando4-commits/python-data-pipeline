@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 22:02:20",
+  "timestamp": "2026-08-03 22:04:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva y capitulación técnica. Ninguno de los candidatos analizados cumple con el umbral mínimo de Score Técnico (>= 65) ni con la profundidad de mercado necesaria para una ejecución segura. Se prioriza la preservación de capital sobre la especulación en activos de baja calidad.",
+  "reasoning": "El mercado se encuentra en un estado de purga de liquidez sin activos que cumplan con los criterios de fuerza técnica (Score >= 65) ni soporte institucional en el libro de órdenes, por lo que la decisión institucional es mantenerse al margen para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "ACXUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "OPENUSDT",
-      "score": 60
+      "symbol": "TAOUSDT",
+      "score": 55
     },
     {
       "symbol": "VICUSDT",
       "score": 50
     },
     {
-      "symbol": "VANRYUSDT",
+      "symbol": "COTIUSDT",
       "score": 50
     },
     {
-      "symbol": "COTIUSDT",
+      "symbol": "ASTERUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "HFTUSDT",
       "score": 50
     }
   ]
