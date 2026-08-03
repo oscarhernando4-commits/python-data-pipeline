@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-03 02:56:17",
+  "timestamp": "2026-08-03 02:58:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada sin activos que alcancen el umbral de calidad A+ (Score >= 65). Ante la ausencia de soporte institucional en el libro de órdenes y la alta probabilidad de pérdidas basada en el historial de trades, el comité ha decidido unánimemente no ejecutar ninguna operación para proteger el capital.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación con alta fragilidad estructural. Ninguno de los candidatos cumple con los requisitos técnicos (Score >= 65) ni de profundidad de mercado necesarios para una operación de alta convicción. Se prioriza la protección del capital frente a la especulación en un entorno de baja confianza.",
   "top_candidates": [
     {
       "symbol": "MIRAUSDT",
-      "score": 60
+      "score": 90
     },
     {
       "symbol": "SUNUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 50
+      "symbol": "PYTHUSDT",
+      "score": 60
     },
     {
-      "symbol": "PORTALUSDT",
+      "symbol": "KAITOUSDT",
       "score": 50
     }
   ]
