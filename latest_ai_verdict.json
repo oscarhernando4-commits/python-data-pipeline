@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 09:20:20",
+  "timestamp": "2026-08-03 09:22:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema con una falta de activos que cumplan con el umbral de calidad A+ (Score >= 65). La estrategia institucional dicta la preservación total del capital en USDT hasta que el sentimiento de mercado mejore y los indicadores técnicos ofrezcan una señal de alta probabilidad.",
+  "reasoning": "El mercado se encuentra en una fase de distribución y alta incertidumbre. Ninguno de los candidatos analizados alcanza el umbral de Score A+ (>= 65) necesario para garantizar una operación de alta probabilidad, por lo que el comité ha decidido unánimemente mantener la liquidez en espera de mejores condiciones.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "NEARUSDT",
       "score": 60
     },
     {
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "DODOUSDT",
+      "symbol": "CRVUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ZROUSDT",
       "score": 60
     }
   ]
