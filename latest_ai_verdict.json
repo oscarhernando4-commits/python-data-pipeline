@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-03 11:26:16",
+  "timestamp": "2026-08-03 11:28:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento con alta incertidumbre macro. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia institucional es preservar el capital y esperar una mejor configuración técnica.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). El mercado presenta una estructura de alta incertidumbre y baja liquidez, lo que aumenta el riesgo de 'trampas de liquidez'. Se prioriza la preservación del capital sobre la ejecución de operaciones mediocres.",
   "top_candidates": [
     {
-      "symbol": "SKYUSDT",
+      "symbol": "NEXOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TIAUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "EULUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "BCHUSDT",
       "score": 65
     }
   ]
