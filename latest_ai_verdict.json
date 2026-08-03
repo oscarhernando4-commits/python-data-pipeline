@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 23:52:24",
+  "timestamp": "2026-08-03 23:54:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un entorno de alta toxicidad con una ausencia total de activos que cumplan con los criterios de alta convicción (Score >= 65). La estrategia institucional es la preservación de capital, evitando posiciones largas en un mercado sin soporte de ballenas y con sesgo bajista predominante.",
+  "reasoning": "El mercado se encuentra en un estado de alta toxicidad con una correlación bajista extrema. Ninguno de los candidatos analizados cumple con el umbral de calidad A+ (Score >= 65) exigido por el comité. Se prioriza la preservación de capital sobre la especulación en un entorno de capitulación, por lo que se decide no ejecutar ninguna operación.",
   "top_candidates": [
+    {
+      "symbol": "ENAUSDT",
+      "score": 60
+    },
     {
       "symbol": "BFUSDUSDT",
       "score": 60
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "MUBUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "KAITOUSDT",
       "score": 50
     }
   ]
