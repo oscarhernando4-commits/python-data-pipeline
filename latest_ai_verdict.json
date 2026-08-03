@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 12:24:19",
+  "timestamp": "2026-08-03 12:26:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada con scores técnicos insuficientes. Ningún activo cumple con los criterios de riesgo A+ establecidos por el comité, por lo que la estrategia prioritaria es la preservación del capital en efectivo.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación generalizada con una ausencia total de activos que cumplan con el umbral de calidad A+ (Score >= 65). La estrategia institucional es proteger el 100% de la liquidez hasta que aparezca una divergencia alcista clara o una mejora en el sentimiento macro.",
   "top_candidates": [
-    {
-      "symbol": "TRUMPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TIAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SEIUSDT",
-      "score": 60
-    },
     {
       "symbol": "ATOMUSDT",
       "score": 55
     },
     {
+      "symbol": "GIGGLEUSDT",
+      "score": 50
+    },
+    {
       "symbol": "SHIBUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "SUIUSDT",
       "score": 50
     }
   ]
