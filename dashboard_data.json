@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 13:36:24",
+  "updated_at": "2026-08-03 13:38:26",
   "total_balance_usd": 19.44,
   "usdt_free": 0.1914,
   "bnb_free": 0.00411434,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité (Bids > 55% y Score A+). La estrategia actual es de protección de capital, evitando la exposición en un mercado con alta probabilidad de 'falling knives' y falta de liquidez institucional confirmada."
+    "reasoning": "El mercado presenta una alta selectividad defensiva y falta de profundidad en el libro de órdenes para los candidatos con mejor score técnico. Se ha decidido mantener la liquidez en USDT para evitar el riesgo de 'falling knives' y esperar una estructura de mercado más clara que cumpla con el umbral de convicción A+."
   }
 }
