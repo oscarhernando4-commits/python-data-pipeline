@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 04:06:15",
+  "timestamp": "2026-08-03 04:08:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una toxicidad sistémica elevada y una falta de convicción institucional en los activos analizados. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que la estrategia óptima es la preservación total del capital en efectivo.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y alta incertidumbre macroeconómica. Ninguno de los candidatos cumple con los requisitos estrictos de Score A+ (>= 65) y soporte de liquidez necesarios para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
   "top_candidates": [
     {
       "symbol": "HOMEUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 50
+      "symbol": "HYPERUSDT",
+      "score": 55
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "XAUTUSDT",
       "score": 50
     }
   ]
