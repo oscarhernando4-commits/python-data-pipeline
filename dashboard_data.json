@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 18:00:25",
+  "updated_at": "2026-08-03 18:02:26",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ningún candidato cumple con la regla de oro de convicción A+ (Score >= 65 y Bids > 55%). La falta de volumen real y la neutralidad del libro de órdenes, sumado al historial estadístico negativo para scores altos, dictan una postura de espera (HOLD) para preservar el capital."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de convicción A+ (Score >= 65 con confirmación de volumen y soporte de ballenas). La falta de dominancia en el libro de órdenes y la incertidumbre macroeconómica dictan una postura de preservación de capital."
   }
 }
