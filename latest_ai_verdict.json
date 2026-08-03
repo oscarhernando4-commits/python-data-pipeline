@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-03 08:38:17",
+  "timestamp": "2026-08-03 08:40:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con falta de soporte en el libro de órdenes y scores técnicos insuficientes. Ningún candidato cumple con el umbral A+ (Score >= 65), por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
+  "reasoning": "El mercado se encuentra en un estado de distribución institucional agresiva y falta de soporte, lo que hace que cualquier entrada sea una apuesta de alto riesgo. Ningún activo cumple con el umbral de Score Técnico >= 65 ni con la dominancia de Bids necesaria para una operación A+. Se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "XLMUSDT",
-      "score": 85
+      "score": 70
     },
     {
       "symbol": "DODOUSDT",
@@ -19,8 +19,8 @@
       "score": 60
     },
     {
-      "symbol": "TRXUSDT",
-      "score": 50
+      "symbol": "MUBARAKUSDT",
+      "score": 60
     },
     {
       "symbol": "ERAUSDT",
