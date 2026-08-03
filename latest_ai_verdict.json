@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 16:00:25",
+  "timestamp": "2026-08-03 16:02:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de purga selectiva con alta incertidumbre macro. Ninguno de los candidatos cumple con el umbral estricto de Score A+ (>= 65) combinado con una confirmación sólida en el libro de órdenes, por lo que la estrategia institucional es mantener la liquidez en espera de una configuración de alta probabilidad.",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de activos con score 75, la falta de profundidad en el libro de órdenes y el entorno macroeconómico de miedo (Fear 28) no cumplen con los criterios de seguridad y rentabilidad exigidos por la Regla #1 de no perder dinero.",
   "top_candidates": [
     {
-      "symbol": "SUNUSDT",
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
-      "symbol": "DEXEUSDT",
-      "score": 65
+      "symbol": "FETUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUNUSDT",
+      "score": 75
     },
     {
       "symbol": "SKHYBUSDT",
       "score": 65
     },
     {
-      "symbol": "COTIUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "ETHFIUSDT",
+      "symbol": "KORUBUSDT",
       "score": 65
     }
   ]
