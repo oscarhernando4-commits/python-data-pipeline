@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 09:34:22",
+  "timestamp": "2026-08-03 09:36:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de apatía estructural con alta presión vendedora y falta de liquidez institucional. Ninguno de los candidatos cumple con el umbral estricto de Score A+ (>= 65) combinado con una dominancia de Bids superior al 55%, por lo que la decisión institucional es mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "Ningún activo cumple con el umbral de Score Técnico >= 65 ni con la confirmación de soporte en el libro de órdenes, por lo que el comité ha decidido mantener la liquidez en USDT para evitar pérdidas en un entorno de mercado frágil.",
   "top_candidates": [
     {
-      "symbol": "ZROUSDT",
-      "score": 65
+      "symbol": "GRAMUSDT",
+      "score": 60
     },
     {
-      "symbol": "OPUSDT",
-      "score": 65
+      "symbol": "NEARUSDT",
+      "score": 60
     },
     {
-      "symbol": "PENDLEUSDT",
-      "score": 65
+      "symbol": "AAVEUSDT",
+      "score": 60
     },
     {
-      "symbol": "LDOUSDT",
-      "score": 65
+      "symbol": "DOTUSDT",
+      "score": 60
     },
     {
-      "symbol": "JTOUSDT",
-      "score": 65
+      "symbol": "ALGOUSDT",
+      "score": 60
     }
   ]
 }
