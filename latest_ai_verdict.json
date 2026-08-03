@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-03 15:14:23",
+  "timestamp": "2026-08-03 15:16:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de algunos scores técnicos aceptables, la falta de profundidad en el libro de órdenes y la incertidumbre macroeconómica impiden una ejecución segura bajo los estándares de riesgo A+.",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la fortaleza sectorial en AI, ninguno de los candidatos cumple con los umbrales de convicción A+ (Score >= 65 y Bids > 55%) necesarios para mitigar el riesgo de pérdida, optando por una postura de preservación de capital.",
   "top_candidates": [
+    {
+      "symbol": "ASTERUSDT",
+      "score": 75
+    },
     {
       "symbol": "CAKEUSDT",
       "score": 75
     },
     {
-      "symbol": "OPUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ADAUSDT",
+      "symbol": "SOXLBUSDT",
       "score": 65
     },
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "GRAMUSDT",
       "score": 65
     },
     {
