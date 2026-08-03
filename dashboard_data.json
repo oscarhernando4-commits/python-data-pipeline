@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 17:20:24",
+  "updated_at": "2026-08-03 17:22:20",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). El mercado actual presenta una volatilidad que, combinada con la falta de profundidad en los activos, aumenta el riesgo de pérdidas, por lo que la decisión institucional es mantener la liquidez en USDT."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 combinado con una dominancia de Bids > 55%). La falta de profundidad en el libro de órdenes y la alta probabilidad de 'trampas de neutralidad' dictan una política de no intervención para proteger el capital institucional."
   }
 }
