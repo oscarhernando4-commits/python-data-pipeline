@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 09:52:21",
+  "timestamp": "2026-08-03 09:54:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con score 75, ninguno cumple con la confirmación de liquidez en el libro de órdenes ni con la convicción A+ requerida por el protocolo de riesgo. Se prioriza la preservación del capital ante la incertidumbre macroeconómica y la falta de soporte institucional claro.",
+  "reasoning": "El comité ha decidido unánimemente mantener la posición en efectivo (HOLD). A pesar de que algunos activos presentan un score técnico de 75, la falta de profundidad en el libro de órdenes (Bids 50%) y la inestabilidad macroeconómica impiden alcanzar el umbral de convicción A+ necesario para ejecutar una compra segura bajo la Regla #1 de no perder dinero.",
   "top_candidates": [
+    {
+      "symbol": "NEARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TRXUSDT",
+      "score": 75
+    },
     {
       "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 75
-    },
-    {
-      "symbol": "BTCUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "ZECUSDT",
-      "score": 65
     }
   ]
 }
