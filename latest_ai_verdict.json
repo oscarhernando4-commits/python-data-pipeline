@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-03 20:04:17",
+  "timestamp": "2026-08-03 20:06:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de distribución y alta incertidumbre, por lo que la preservación del capital es la prioridad absoluta según las reglas del comité.",
+  "reasoning": "El mercado actual presenta una debilidad generalizada y una falta de convicción compradora. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el comité (Score >= 65 con soporte de libro de órdenes claro), por lo que se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "INTCBUSDT",
       "score": 85
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "AVAXUSDT",
       "score": 75
     },
     {
