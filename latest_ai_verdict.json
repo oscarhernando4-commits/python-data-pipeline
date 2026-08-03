@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-03 08:06:20",
+  "timestamp": "2026-08-03 08:08:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte en el libro de órdenes. El entorno macroeconómico actual es de alta fragilidad y distribución, por lo que la estrategia óptima es la preservación total de capital hasta que surja una oportunidad con convicción A+.",
+  "reasoning": "El mercado presenta una estructura de alta fragilidad y falta de convicción compradora. Ninguno de los candidatos analizados alcanza el umbral de seguridad A+ (Score >= 65) requerido por el comité, y el libro de órdenes no muestra soporte institucional. Por tanto, la orden es proteger la liquidez y esperar una mejor configuración técnica.",
   "top_candidates": [
+    {
+      "symbol": "TRXUSDT",
+      "score": 60
+    },
     {
       "symbol": "ERAUSDT",
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 60
     },
     {
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "DODOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TRUMPUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     }
   ]
