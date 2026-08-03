@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 14:14:22",
+  "timestamp": "2026-08-03 14:16:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de activos con scores técnicos elevados, las condiciones de mercado (Fear & Greed 28, falta de soporte en el orderbook y tendencia neutral en 4H) no cumplen con los estándares de seguridad A+ exigidos por el Chief Risk Officer. Se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado se encuentra en una fase de indecisión con alta probabilidad de pérdidas, por lo que la estrategia institucional es mantener la liquidez en USDT.",
   "top_candidates": [
     {
-      "symbol": "AAVEUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SEIUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "DOGEUSDT",
+      "symbol": "JTOUSDT",
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 75
+      "symbol": "REUSDT",
+      "score": 70
     },
     {
-      "symbol": "PEPEUSDT",
-      "score": 75
+      "symbol": "XRPUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "EULUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 65
     }
   ]
 }
