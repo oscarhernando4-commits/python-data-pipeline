@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 15:58:24",
+  "timestamp": "2026-08-03 16:00:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el requisito estricto de soporte institucional (Bids > 55%) ni con la confirmación de una tendencia clara, por lo que se prioriza la preservación del capital ante la alta volatilidad y el sentimiento de miedo predominante.",
+  "reasoning": "El mercado se encuentra en una fase de purga selectiva con alta incertidumbre macro. Ninguno de los candidatos cumple con el umbral estricto de Score A+ (>= 65) combinado con una confirmación sólida en el libro de órdenes, por lo que la estrategia institucional es mantener la liquidez en espera de una configuración de alta probabilidad.",
   "top_candidates": [
     {
       "symbol": "SUNUSDT",
-      "score": 85
+      "score": 75
+    },
+    {
+      "symbol": "DEXEUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "SKHYBUSDT",
+      "score": 65
     },
     {
       "symbol": "COTIUSDT",
-      "score": 80
+      "score": 65
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "CAKEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SKYUSDT",
-      "score": 70
+      "symbol": "ETHFIUSDT",
+      "score": 65
     }
   ]
 }
