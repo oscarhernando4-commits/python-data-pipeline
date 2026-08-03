@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 09:36:21",
+  "updated_at": "2026-08-03 09:38:21",
   "total_balance_usd": 19.72,
   "usdt_free": 17.2258,
   "bnb_free": 0.00426609,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ningún activo cumple con el umbral de Score Técnico >= 65 ni con la confirmación de soporte en el libro de órdenes, por lo que el comité ha decidido mantener la liquidez en USDT para evitar pérdidas en un entorno de mercado frágil."
+    "reasoning": "El mercado se encuentra en un estado de letargo neutral con scores técnicos insuficientes (todos en 60/100) y falta de profundidad en el libro de órdenes. Siguiendo la Regla de Oro #1, se bloquea cualquier operación para proteger el capital, manteniendo la posición en efectivo hasta que surja una configuración A+."
   }
 }
