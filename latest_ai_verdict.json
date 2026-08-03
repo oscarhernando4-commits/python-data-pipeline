@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 20:58:18",
+  "timestamp": "2026-08-03 21:00:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con una correlación negativa alarmante. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 65) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de colapso vertical. Se prioriza la preservación del capital sobre la operativa especulativa.",
+  "reasoning": "El mercado se encuentra en una fase de purga sistémica sin activos que cumplan con los criterios de alta convicción (Score >= 65). La falta de soporte institucional en el libro de órdenes y la debilidad transversal en los sectores clave obligan a mantener una posición de liquidez total para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "TAOUSDT",
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "ACXUSDT",
+      "symbol": "ORDIUSDT",
       "score": 60
     },
     {
-      "symbol": "MUBARAKUSDT",
+      "symbol": "BONKUSDT",
       "score": 60
     },
     {
-      "symbol": "NIGHTUSDT",
-      "score": 60
+      "symbol": "SKHYBUSDT",
+      "score": 50
     }
   ]
 }
