@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 11:22:24",
+  "updated_at": "2026-08-03 11:24:19",
   "total_balance_usd": 19.8,
   "usdt_free": 19.801270000000002,
   "bnb_free": 0.00424436,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una compresión de volatilidad sin una base de soporte clara en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y volumen confirmado), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo."
+    "reasoning": "El mercado presenta una divergencia estructural y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de ballenas), por lo que la estrategia más rentable es el HOLD para evitar pérdidas en un entorno de alta incertidumbre."
   }
 }
