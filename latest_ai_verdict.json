@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 17:04:22",
+  "timestamp": "2026-08-03 17:06:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de apatía institucional con un sesgo de miedo predominante. Ninguno de los activos analizados supera el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la decisión unánime es mantener la posición en liquidez (HOLD) para evitar pérdidas innecesarias en un entorno de baja convicción.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de compresión de volatilidad con alta incertidumbre, por lo que la estrategia institucional es preservar el capital en espera de una señal de confirmación más clara.",
   "top_candidates": [
     {
       "symbol": "ALLOUSDT",
       "score": 75
     },
     {
-      "symbol": "DEXEUSDT",
+      "symbol": "ETCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SKHYBUSDT",
       "score": 65
     },
     {
-      "symbol": "WLFIUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "COTIUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "MORPHOUSDT",
+      "symbol": "TAOUSDT",
       "score": 65
     }
   ]
