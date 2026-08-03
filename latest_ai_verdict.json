@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-03 12:56:20",
+  "timestamp": "2026-08-03 12:58:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). El mercado presenta una alta incertidumbre y una alta tasa de fallos en trades recientes, por lo que la decisión institucional es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos aceptables, ninguno cumple con el umbral de convicción A+ ni con la profundidad de liquidez necesaria en el libro de órdenes para garantizar una operación de bajo riesgo. Se prioriza la preservación del capital frente a la volatilidad actual del mercado.",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
+      "symbol": "POLUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ARBUSDT",
       "score": 75
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "TRUMPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "OPUSDT",
       "score": 75
     }
   ]
