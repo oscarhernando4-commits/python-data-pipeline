@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-03 08:48:22",
+  "timestamp": "2026-08-03 08:50:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual no ofrece ninguna oportunidad que cumpla con los criterios estrictos de convicción A+ del comité. La ausencia de un Score técnico >= 65 y la falta de soporte claro en el libro de órdenes obligan a mantener una postura defensiva de liquidez total para evitar pérdidas innecesarias en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en una fase de distribución forzada con falta de liquidez institucional. Ningún activo cumple con los criterios de convicción A+ requeridos por el comité, por lo que la estrategia óptima es mantener el 100% de la liquidez en USDT para evitar trampas de liquidez y pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "NEARUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ALGOUSDT",
       "score": 60
     },
     {
@@ -19,12 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "MUBARAKUSDT",
+      "symbol": "NIGHTUSDT",
       "score": 60
-    },
-    {
-      "symbol": "TRXUSDT",
-      "score": 50
     }
   ]
 }
