@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 06:16:20",
+  "timestamp": "2026-08-03 06:18:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado carece de convicción institucional y los candidatos analizados no superan el umbral de riesgo A+ requerido por el comité, por lo que se prioriza la preservación del capital en efectivo.",
+  "reasoning": "Tras la deliberación del comité, se ha determinado que no existen activos que cumplan con el umbral mínimo de seguridad (Score >= 65) y la confirmación de volumen institucional necesaria. El entorno macroeconómico de miedo y la falta de soporte en el libro de órdenes invalidan cualquier oportunidad de compra, priorizando la preservación de capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "STXUSDT",
+      "symbol": "XLMUSDT",
       "score": 55
     },
     {
-      "symbol": "BANKUSDT",
+      "symbol": "WLFIUSDT",
       "score": 50
     }
   ]
