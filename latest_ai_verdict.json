@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-03 10:40:17",
+  "timestamp": "2026-08-03 10:42:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de estancamiento con alta volatilidad y falta de convicción compradora. Ninguno de los candidatos cumple con el umbral de Score técnico (>= 65) ni con la profundidad de libro de órdenes necesaria para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado 'zombie'.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada y una falta de activos con un score técnico superior a 65. Ningún candidato cumple con los criterios estrictos de riesgo y convicción del comité, por lo que se mantiene la posición en efectivo para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "SUNUSDT",
       "score": 70
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "ZECUSDT",
       "score": 60
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "BNBUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "MMTUSDT",
+      "symbol": "AAVEUSDT",
       "score": 60
     }
   ]
