@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-03 20:36:20",
+  "timestamp": "2026-08-03 20:38:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una trampa de liquidez con baja convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad de Bids > 55% ni presenta una estructura técnica que garantice una alta probabilidad de éxito, por lo que se prioriza la preservación del capital sobre la operativa especulativa.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada y una falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de soporte de libro de órdenes necesario ni con la robustez histórica requerida para una ejecución A+. Se prioriza la preservación del capital sobre la especulación en activos de baja liquidez.",
   "top_candidates": [
     {
-      "symbol": "XLMUSDT",
+      "symbol": "INTCBUSDT",
       "score": 75
     },
     {
       "symbol": "MUBARAKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "INTCBUSDT",
       "score": 75
     },
     {
@@ -25,6 +21,10 @@
     {
       "symbol": "BONKUSDT",
       "score": 75
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 65
     }
   ]
 }
