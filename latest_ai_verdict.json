@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-03 16:24:22",
+  "timestamp": "2026-08-03 16:26:31",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). Ante la debilidad técnica y la incertidumbre macro, la estrategia óptima es preservar el capital y evitar la exposición a activos que no presentan una ventaja estadística clara.",
+  "reasoning": "El mercado presenta una consolidación defensiva sin una clara dominancia de compradores en el libro de órdenes. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65 + Bids > 55%), por lo que la decisión institucional es mantener la liquidez en efectivo para evitar el riesgo de 'cuchillos cayendo' en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
+      "symbol": "CAKEUSDT",
+      "score": 85
+    },
+    {
       "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETCUSDT",
       "score": 75
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "ARBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "CAKEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DASHUSDT",
       "score": 75
     }
   ]
