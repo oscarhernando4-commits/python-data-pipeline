@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-03 04:44:18",
+  "timestamp": "2026-08-03 04:46:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada y alta volatilidad. Ninguno de los activos analizados cumple con los criterios de Score Técnico (>= 65) ni con la profundidad de libro de órdenes necesaria para una entrada segura. Se prioriza la preservación de capital sobre la especulación en activos de baja convicción.",
+  "reasoning": "El mercado actual presenta una fragilidad sistémica extrema y falta de convicción institucional. Ninguno de los candidatos cumple con el umbral mínimo de score (65) ni con la profundidad de mercado necesaria para una operación de alta probabilidad, por lo que la decisión institucional es proteger el capital y permanecer en modo HOLD.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "WLDUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PUMPUSDT",
       "score": 60
     },
     {
@@ -23,8 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "ORDIUSDT",
-      "score": 60
+      "symbol": "ZAMAUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "ENAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "score": 50
     }
   ]
 }
