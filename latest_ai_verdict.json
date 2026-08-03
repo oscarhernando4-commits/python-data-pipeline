@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 11:52:15",
+  "timestamp": "2026-08-03 11:54:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado carece de la fuerza técnica y la profundidad de liquidez necesaria para cumplir con los estándares de calidad A+ del comité. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre y distribución institucional.",
+  "reasoning": "El mercado presenta una fragilidad sistémica alta con scores técnicos insuficientes (máximo 60/100) y falta de soporte en el libro de órdenes. Siguiendo la Regla de Oro #1, al no existir candidatos con Score >= 65, la decisión institucional es no operar y proteger el capital.",
   "top_candidates": [
     {
       "symbol": "GIGGLEUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "ZECUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 50
+      "symbol": "TRXUSDT",
+      "score": 55
     },
     {
       "symbol": "ONDOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "SUIUSDT",
       "score": 50
     }
   ]
