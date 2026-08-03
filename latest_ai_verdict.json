@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 17:02:21",
+  "timestamp": "2026-08-03 17:04:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La fragmentación de liquidez y la debilidad en el sentimiento general dictan una postura de preservación de capital (HOLD) hasta que surja una señal de alta calidad.",
+  "reasoning": "El mercado se encuentra en un estado de apatía institucional con un sesgo de miedo predominante. Ninguno de los activos analizados supera el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la decisión unánime es mantener la posición en liquidez (HOLD) para evitar pérdidas innecesarias en un entorno de baja convicción.",
   "top_candidates": [
     {
       "symbol": "ALLOUSDT",
@@ -15,15 +15,15 @@
       "score": 65
     },
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "WLFIUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "COTIUSDT",
       "score": 65
     },
     {
       "symbol": "MORPHOUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "WLFIUSDT",
       "score": 65
     }
   ]
