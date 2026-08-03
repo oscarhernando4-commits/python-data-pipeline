@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 07:58:21",
+  "timestamp": "2026-08-03 08:00:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de seguridad A+ (Score >= 65). La alta correlación bajista, la falta de profundidad en el libro de órdenes y el entorno macro de aversión al riesgo dictan una postura de espera total para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual se encuentra en una fase de distribución defensiva. Ninguno de los activos analizados cumple con el umbral mínimo de seguridad (Score >= 65) ni con la profundidad de liquidez necesaria en el libro de órdenes. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y riesgo sistémico.",
   "top_candidates": [
-    {
-      "symbol": "BNBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ATOMUSDT",
-      "score": 60
-    },
     {
       "symbol": "DODOUSDT",
       "score": 60
     },
     {
-      "symbol": "BTCUSDT",
+      "symbol": "MUBARAKUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "STXUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "BNBUSDT",
       "score": 50
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "ERAUSDT",
       "score": 50
     }
   ]
