@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-03 21:46:20",
+  "timestamp": "2026-08-03 21:48:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta fragilidad. Ninguno de los candidatos analizados cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de soporte en el libro de órdenes. Se prioriza la preservación de capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El comité ha determinado que el mercado se encuentra en un entorno de alta incertidumbre y debilidad estructural. Dado que ningún activo alcanza el umbral de convicción A+ (Score >= 65) y el entorno macro es de aversión al riesgo, la decisión institucional es mantener la liquidez en espera de una mejor configuración técnica.",
   "top_candidates": [
     {
-      "symbol": "WLFIUSDT",
-      "score": 60
-    },
-    {
       "symbol": "RENDERUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SEIUSDT",
       "score": 60
     },
     {
@@ -23,7 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "SEIUSDT",
+      "score": 60
+    },
+    {
       "symbol": "HOLOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "OPUSDT",
       "score": 60
     }
   ]
