@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-03 13:16:21",
+  "timestamp": "2026-08-03 13:18:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales de mercado no cumplen con los requisitos de alta convicción (Score >= 65 y soporte de libro de órdenes verificado). Se prioriza la preservación del capital frente a la volatilidad incierta, manteniendo la posición en efectivo hasta que surja una señal técnica y fundamental de mayor calidad.",
+  "reasoning": "El mercado se encuentra en una fase de indecisión con un sentimiento de miedo predominante. Ninguno de los candidatos analizados presenta la dominancia de Bids necesaria (>55%) ni una estructura técnica que garantice una alta probabilidad de éxito, por lo que la estrategia de protección de capital dicta mantenerse en espera (HOLD).",
   "top_candidates": [
+    {
+      "symbol": "HBARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "score": 75
+    },
     {
       "symbol": "SYNUSDT",
       "score": 75
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "CRVUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SEIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "OPUSDT",
+      "symbol": "VETUSDT",
       "score": 75
     }
   ]
