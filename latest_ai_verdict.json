@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 05:57:08",
+  "timestamp": "2026-08-03 05:58:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una debilidad estructural generalizada. Ninguno de los candidatos cumple con el umbral de Score A+ (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital (HOLD) hasta que aparezca una oportunidad con alta probabilidad estadística.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional y alta volatilidad negativa. Ninguno de los candidatos cumple con el requisito estricto de Score Técnico >= 65 ni presenta una ventaja estadística clara en el libro de órdenes, por lo que la decisión prudente es mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "MIRAUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "INJUSDT",
+      "symbol": "DOTUSDT",
       "score": 60
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "POLUSDT",
       "score": 60
     }
   ]
