@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 07:02:21",
+  "timestamp": "2026-08-03 07:04:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras el análisis exhaustivo de los 7 agentes, se concluye que no existe ningún activo que cumpla con los criterios de convicción A+ (Score >= 65). El entorno macroeconómico de capitulación técnica y la falta de soporte en el libro de órdenes dictan una postura defensiva estricta para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional silenciosa y alta fragilidad. Ningún activo cumple con el umbral de Score Técnico A+ (>= 65) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de pérdida. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
+    {
+      "symbol": "SKYUSDT",
+      "score": 60
+    },
     {
       "symbol": "ATOMUSDT",
       "score": 60
+    },
+    {
+      "symbol": "XLMUSDT",
+      "score": 55
     },
     {
       "symbol": "HOMEUSDT",
       "score": 50
     },
     {
-      "symbol": "PUMPUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "SYNUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "NILUSDT",
+      "symbol": "ENAUSDT",
       "score": 50
     }
   ]
