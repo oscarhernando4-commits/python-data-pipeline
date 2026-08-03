@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 07:40:19",
+  "timestamp": "2026-08-03 07:42:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. La ausencia de activos con un score técnico superior a 65 y la debilidad en el libro de órdenes obligan a mantener la liquidez en efectivo para evitar el riesgo de 'bull traps' en un entorno de distribución.",
+  "reasoning": "El mercado actual se encuentra en un estado de alta correlación bajista y falta de profundidad, lo que invalida cualquier oportunidad de compra según nuestras reglas de gestión de riesgo A+. Ningún activo cumple con los criterios de score, volumen y soporte necesarios para una ejecución segura.",
   "top_candidates": [
     {
-      "symbol": "POLUSDT",
-      "score": 70
+      "symbol": "ONDOUSDT",
+      "score": 60
     },
     {
       "symbol": "ATOMUSDT",
       "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 50
+      "symbol": "POLUSDT",
+      "score": 55
     },
     {
       "symbol": "ERAUSDT",
       "score": 50
     },
     {
-      "symbol": "HOMEUSDT",
+      "symbol": "KAITOUSDT",
       "score": 50
     }
   ]
