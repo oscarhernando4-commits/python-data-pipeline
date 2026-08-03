@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 21:50:20",
+  "timestamp": "2026-08-03 21:52:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de debilidad sistémica con scores técnicos insuficientes (máximo 60/100) y falta de profundidad en el libro de órdenes. Siguiendo la Regla de Oro #1, al no existir candidatos con Score >= 65, la orden es mantener la liquidez en USDT para evitar pérdidas en un entorno de alta volatilidad y baja convicción.",
+  "reasoning": "El mercado se encuentra en una fase de distribución forzada con alta correlación negativa. Ninguno de los candidatos analizados alcanza el Score Técnico de 65/100 ni presenta una estructura de libro de órdenes que garantice la protección del capital. Se prioriza la preservación de liquidez hasta que el sentimiento macro mejore y aparezcan configuraciones técnicas de alta convicción.",
   "top_candidates": [
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "RENDERUSDT",
       "score": 60
     },
     {
-      "symbol": "RENDERUSDT",
+      "symbol": "ACXUSDT",
       "score": 60
     },
     {
