@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 04:02:16",
+  "timestamp": "2026-08-03 04:04:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva sin soporte claro. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de pérdida, por lo que se mantiene la posición en efectivo.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación institucional con una correlación bajista casi perfecta; ningún activo cumple con el umbral mínimo de seguridad (Score >= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que se prioriza la preservación de capital.",
   "top_candidates": [
     {
       "symbol": "HOMEUSDT",
       "score": 70
     },
     {
-      "symbol": "MIRAUSDT",
-      "score": 60
-    },
-    {
       "symbol": "WLDUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "MMTUSDT",
-      "score": 55
+      "score": 70
     },
     {
       "symbol": "XAUTUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "AAVEUSDT",
       "score": 50
     }
   ]
