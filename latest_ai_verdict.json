@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-03 09:04:20",
+  "timestamp": "2026-08-03 09:06:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación y falta de convicción institucional. Ninguno de los activos candidatos alcanza el score técnico mínimo de 65 ni presenta una ventaja estadística clara en el libro de órdenes. Se prioriza la preservación del capital (Regla #1) sobre la ejecución de trades mediocres.",
+  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual presenta una fragilidad sistémica extrema. Ninguno de los candidatos cumple con el umbral de Score A+ (>= 65) ni con la confirmación de soporte institucional en el libro de órdenes, lo que invalida cualquier operación de compra bajo las reglas de gestión de riesgo vigentes.",
   "top_candidates": [
-    {
-      "symbol": "BICOUSDT",
-      "score": 60
-    },
     {
       "symbol": "NEARUSDT",
       "score": 60
     },
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "BICOUSDT",
       "score": 60
     },
     {
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "MUBARAKUSDT",
+      "symbol": "ALGOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "DODOUSDT",
       "score": 60
     }
   ]
