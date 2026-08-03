@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-08-03 09:50:26",
+  "updated_at": "2026-08-03 09:52:23",
   "total_balance_usd": 19.72,
   "usdt_free": 0.0,
   "bnb_free": 0.00426609,
-  "status": "🔵 En Vivo LONG (DOTUSDT @ $0.7990)",
+  "status": "🔵 En Vivo LONG (DOTUSDT @ $0.8000)",
   "position": {
     "symbol": "DOTUSDT",
     "quantity": 21.27,
     "entry_price": 0.799,
-    "highest_price": 0.799,
+    "highest_price": 0.8,
     "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 1.0,
-    "volatility_regime": "🔵 Standard ATR"
+    "adaptive_sl_pct": 0.96,
+    "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de indecisión y riesgo elevado, por lo que la estrategia institucional es mantener la liquidez en espera de una señal técnica más clara."
+    "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con score 75, ninguno cumple con la confirmación de liquidez en el libro de órdenes ni con la convicción A+ requerida por el protocolo de riesgo. Se prioriza la preservación del capital ante la incertidumbre macroeconómica y la falta de soporte institucional claro."
   }
 }
