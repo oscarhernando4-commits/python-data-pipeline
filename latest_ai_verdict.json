@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 10:12:14",
+  "timestamp": "2026-08-03 10:14:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia técnica y un sentimiento de miedo que, sumado a la falta de datos de liquidez en el libro de órdenes, no cumple con los criterios de alta convicción (A+) exigidos por el comité para la ejecución de trades.",
+  "reasoning": "El mercado presenta una fragmentación de liquidez y un sentimiento de miedo que no garantiza una entrada de alta probabilidad. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la decisión institucional es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "POLUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "TRUMPUSDT",
       "score": 85
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "DEXEUSDT",
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DEXEUSDT",
       "score": 75
     }
   ]
