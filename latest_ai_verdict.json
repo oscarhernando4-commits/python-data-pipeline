@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 02:22:16",
+  "timestamp": "2026-08-03 02:24:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de alta incertidumbre y debilidad técnica generalizada. Ningún activo cumple con los criterios estrictos de Score A+ (>= 65) ni con la confirmación de soporte institucional necesaria para mitigar el riesgo de 'falling knives', por lo que se decide proteger la liquidez total.",
+  "reasoning": "El mercado presenta un riesgo sistémico elevado tras el exploit de Coldcard, con una ausencia total de activos que cumplan con el umbral de seguridad A+ (Score >= 65). La estrategia institucional es la preservación de capital (Cash-is-King) hasta que los indicadores técnicos y el libro de órdenes muestren una acumulación institucional clara.",
   "top_candidates": [
     {
-      "symbol": "SAGAUSDT",
+      "symbol": "EPICUSDT",
       "score": 60
     },
     {
-      "symbol": "DRAMBUSDT",
+      "symbol": "SAGAUSDT",
       "score": 60
     },
     {
