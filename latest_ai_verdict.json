@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-03 00:32:18",
+  "timestamp": "2026-08-03 00:34:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad técnica y falta de liquidez institucional. Ningún activo cumple con los criterios de selección A+ (Score >= 65), por lo que el comité ha decidido no ejecutar ninguna operación para evitar el riesgo de 'cuchillo cayendo' y proteger el capital.",
+  "reasoning": "El comité ha determinado que el mercado actual carece de la convicción institucional necesaria para ejecutar operaciones de compra. Todos los candidatos analizados presentan scores técnicos inferiores al umbral A+ (65), y el entorno macroeconómico de 'apatía estructural' desaconseja cualquier exposición al riesgo en este momento. Se prioriza la preservación del capital hasta que surja una señal clara de acumulación de ballenas y una mejora en la profundidad del libro de órdenes.",
   "top_candidates": [
     {
       "symbol": "MANTRAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SNXXBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "MIRAUSDT",
       "score": 60
     },
     {
@@ -15,16 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "NVDABUSDT",
+      "symbol": "ZBTUSDT",
       "score": 60
-    },
-    {
-      "symbol": "ESPUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "EULUSDT",
-      "score": 50
     }
   ]
 }
