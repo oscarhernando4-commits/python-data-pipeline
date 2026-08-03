@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-03 16:04:21",
+  "timestamp": "2026-08-03 16:06:29",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia estructural y falta de soporte institucional en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de ballenas), por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado presenta una divergencia estructural severa con un sesgo bajista y falta de convicción. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (HOLD).",
   "top_candidates": [
     {
       "symbol": "ASTERUSDT",
       "score": 75
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "FETUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUNUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "CAKEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUNUSDT",
+      "symbol": "PYTHUSDT",
       "score": 75
     }
   ]
