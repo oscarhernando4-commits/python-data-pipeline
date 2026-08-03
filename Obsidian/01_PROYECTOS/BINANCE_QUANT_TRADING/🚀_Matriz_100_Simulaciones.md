@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-03 04:20:18
+date: 2026-08-03 04:22:16
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $19.72 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-03 04:20:18`
+> ⏱️ **Última Actualización:** `2026-08-03 04:22:16`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00426609 BNB` (`~$2.49 USD`)
@@ -31,9 +31,9 @@ date: 2026-08-03 04:20:18
 > [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
 > - 📈 **Capital Total Acumulado:** **`$10,021.25 USD`** (`$+21.25 USD`)  
-> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `20 Cuentas (20.0%)`  
+> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `0 Cuentas (0.0%)`  
 > - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `0 Cuentas (0.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `80 Cuentas (80.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `100 Cuentas (100.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
@@ -122,26 +122,26 @@ date: 2026-08-03 04:20:18
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-041** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-042** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-043** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-044** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-045** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-046** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-047** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-048** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-049** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-050** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-051** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-052** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-053** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-054** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-055** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-056** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-057** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-058** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-059** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
-| **SIM-060** | **ETHUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:20 | `🔴 Perdió -$1.13` | **`$101.70`** (`+$1.70`) | 🟢 Buscando |
+| **SIM-041** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-042** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-043** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-044** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-045** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-046** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-047** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-048** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-049** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-050** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-051** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-052** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-053** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-054** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-055** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-056** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-057** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-058** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-059** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
+| **SIM-060** | **SUNUSDT** | `#4` | `2W/2L` | 26-08-03<br>04:22 | `🔵 En Curso` | **`$101.70`** (`+$1.70`) | 🔵 En Vivo |
 
 ---
 
