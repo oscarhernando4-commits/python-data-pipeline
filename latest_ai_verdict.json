@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 10:36:16",
+  "timestamp": "2026-08-03 10:38:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica sin convicción compradora. Ningún activo cumple con los criterios de riesgo A+ establecidos por el comité, por lo que la estrategia óptima es mantener la liquidez y evitar la exposición a activos que no muestran fortaleza institucional.",
+  "reasoning": "El mercado se encuentra en una fase de debilidad sistémica con una ausencia total de activos que cumplan con el umbral de calidad A+ (Score >= 65). La falta de soporte en el libro de órdenes y la inestabilidad macroeconómica dictan una postura defensiva estricta para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
@@ -16,14 +16,14 @@
     },
     {
       "symbol": "SUNUSDT",
-      "score": 60
+      "score": 55
     },
     {
       "symbol": "ZROUSDT",
       "score": 55
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "LTCUSDT",
       "score": 50
     }
   ]
