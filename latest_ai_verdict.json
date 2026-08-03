@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 09:58:16",
+  "timestamp": "2026-08-03 10:00:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, el entorno macroeconómico de miedo (Fear 28), la falta de dominancia clara en el libro de órdenes y la alta probabilidad de pérdidas en condiciones de mercado neutral dictan una postura de protección de capital (HOLD) hasta que se cumplan estrictamente los criterios de convicción A+.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante y falta de liquidez institucional confirmada en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ exigido por el comité, por lo que la estrategia óptima es preservar el capital en efectivo (USDT) hasta que las condiciones macro y técnicas mejoren.",
   "top_candidates": [
-    {
-      "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PEPEUSDT",
-      "score": 75
-    },
     {
       "symbol": "NEARUSDT",
       "score": 75
     },
     {
+      "symbol": "AAVEUSDT",
+      "score": 75
+    },
+    {
       "symbol": "POLUSDT",
       "score": 75
+    },
+    {
+      "symbol": "BTCUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "BANKUSDT",
+      "score": 65
     }
   ]
 }
