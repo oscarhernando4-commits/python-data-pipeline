@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 04:24:16",
+  "timestamp": "2026-08-03 04:26:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta toxicidad y capitulación técnica. Ningún activo cumple con los criterios estrictos de selección (Score >= 65 y soporte de libro de órdenes). La estrategia institucional prioriza la preservación de capital sobre la especulación en un entorno de distribución, por lo que se mantiene la posición en liquidez total.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada. Ningún activo cumple con los criterios estrictos de Score Técnico (>= 65) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage. La estrategia institucional prioriza la preservación del capital ante la falta de convicción compradora.",
   "top_candidates": [
     {
       "symbol": "POLUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "HOMEUSDT",
-      "score": 55
+      "symbol": "SUIUSDT",
+      "score": 50
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "NEARUSDT",
       "score": 50
     }
   ]
