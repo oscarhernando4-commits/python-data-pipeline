@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 17:42:20",
+  "timestamp": "2026-08-03 17:44:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 55% ni con una estructura de mercado que garantice una alta probabilidad de éxito, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Tras deliberar, el comité ha determinado que las condiciones actuales del mercado no cumplen con los criterios de seguridad y rentabilidad exigidos. La falta de profundidad en el libro de órdenes y la inestabilidad macro sugieren que el riesgo de pérdida supera el potencial de beneficio, por lo que se mantiene la posición en efectivo (HOLD).",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
@@ -15,16 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "ZAMAUSDT",
-      "score": 75
+      "symbol": "GRAMUSDT",
+      "score": 70
     },
     {
-      "symbol": "GNOUSDT",
-      "score": 75
+      "symbol": "OPUSDT",
+      "score": 70
     },
     {
-      "symbol": "LDOUSDT",
-      "score": 75
+      "symbol": "ALLOUSDT",
+      "score": 65
     }
   ]
 }
