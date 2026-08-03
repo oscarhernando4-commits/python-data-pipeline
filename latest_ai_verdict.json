@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-03 09:40:22",
+  "timestamp": "2026-08-03 09:42:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual no ofrece una oportunidad con la calidad técnica y de liquidez necesaria para cumplir con la Regla de Oro #1. Se prioriza la preservación del capital frente a la incertidumbre macroeconómica y la falta de soporte institucional en el libro de órdenes.",
+  "reasoning": "El mercado se encuentra en un entorno de 'Risk-Off' extremo con una estructura técnica deficiente. Ningún activo cumple con el requisito de Score A+ (>= 65) ni con la profundidad de liquidez necesaria en el libro de órdenes. Se prioriza la preservación de capital sobre la operativa especulativa.",
   "top_candidates": [
-    {
-      "symbol": "NEARUSDT",
-      "score": 70
-    },
     {
       "symbol": "XLMUSDT",
       "score": 60
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "AAVEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "JSTUSDT",
       "score": 60
     }
   ]
