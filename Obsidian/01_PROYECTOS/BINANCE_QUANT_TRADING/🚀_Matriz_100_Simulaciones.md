@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-03 04:56:17
+date: 2026-08-03 04:58:15
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $19.72 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-03 04:56:17`
+> ⏱️ **Última Actualización:** `2026-08-03 04:58:15`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00426609 BNB` (`~$2.49 USD`)
@@ -90,26 +90,26 @@ date: 2026-08-03 04:56:17
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-021** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-022** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-023** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-024** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-025** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-026** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-027** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-028** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-029** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-030** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-031** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-032** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-033** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-034** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-035** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-036** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-037** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-038** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-039** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
-| **SIM-040** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🔵 En Curso` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-021** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-022** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-023** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-024** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-025** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-026** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-027** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-028** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-029** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-030** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-031** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-032** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-033** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-034** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-035** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-036** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-037** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-038** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-039** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
+| **SIM-040** | **BTCUSDT** | `#6` | `1W/5L` | 26-08-02<br>05:58 | `🛡️ Protegida (BE)` | **`$95.12`** (`-$4.88`) | 🔵 En Vivo |
 
 ---
 

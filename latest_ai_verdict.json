@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-03 04:56:17",
+  "timestamp": "2026-08-03 04:58:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual carece de la calidad técnica y la profundidad de liquidez necesarias para una ejecución segura. Dado que ningún activo supera el umbral de riesgo A+ (Score >= 65), la orden institucional es proteger el capital y permanecer en modo 'HOLD' hasta que las condiciones macro y técnicas mejoren.",
+  "reasoning": "El comité ha determinado que el mercado actual presenta una fragilidad estructural extrema y una falta de convicción institucional. Dado que ningún activo cumple con el umbral de seguridad A+ (Score >= 65) y el riesgo de 'cuchillos cayendo' es alto, la decisión unánime es mantener la liquidez en USDT para preservar el capital hasta que surja una oportunidad de alta probabilidad.",
   "top_candidates": [
     {
-      "symbol": "NILUSDT",
-      "score": 60
+      "symbol": "STXUSDT",
+      "score": 65
     },
     {
       "symbol": "POLUSDT",
@@ -19,8 +19,8 @@
       "score": 55
     },
     {
-      "symbol": "GIGGLEUSDT",
-      "score": 50
+      "symbol": "NVDABUSDT",
+      "score": 55
     },
     {
       "symbol": "SHIBUSDT",
