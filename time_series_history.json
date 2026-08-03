@@ -1,25 +1,38 @@
 {
-  "STRKUSDT": [
+  "NBISBUSDT": [
     {
-      "timestamp": "2026-08-03 10:58:08",
-      "price": 0.02441,
-      "score": 30,
-      "rsi": 32.77,
+      "timestamp": "2026-08-03 11:00:11",
+      "price": 190.63,
+      "score": 15,
+      "rsi": 38.61,
       "macd": "Neutral",
-      "volume_surge": 0.61,
+      "volume_surge": 0.15,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
-  ]
-}}BISBUSDT": [
+  ],
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-03 10:58:08",
-      "price": 190.28,
-      "score": 15,
-      "rsi": 36.92,
+      "timestamp": "2026-08-03 11:00:11",
+      "price": 0.1359,
+      "score": 30,
+      "rsi": 39.96,
       "macd": "Neutral",
-      "volume_surge": 1.14,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STRKUSDT": [
+    {
+      "timestamp": "2026-08-03 11:00:11",
+      "price": 0.02441,
+      "score": 30,
+      "rsi": 32.78,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

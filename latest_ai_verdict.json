@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 10:58:17",
+  "timestamp": "2026-08-03 11:00:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el requisito de soporte de ballenas (Bids > 55%) ni con una estructura técnica que supere el umbral de riesgo exigido por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
+  "reasoning": "El mercado se encuentra en una fase de compresión sin volumen institucional y con una estructura técnica neutral, lo que no cumple con los criterios de alta probabilidad exigidos por el comité para una ejecución segura.",
   "top_candidates": [
     {
+      "symbol": "PEPEUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "XRPUSDT",
+      "score": 65
+    },
+    {
       "symbol": "SUIUSDT",
-      "score": 75
+      "score": 65
     },
     {
-      "symbol": "NEXOUSDT",
-      "score": 75
+      "symbol": "INJUSDT",
+      "score": 65
     },
     {
-      "symbol": "TRUMPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUNUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "BTCUSDT",
+      "symbol": "SYNUSDT",
       "score": 65
     }
   ]
