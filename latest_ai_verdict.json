@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-03 16:36:22",
+  "timestamp": "2026-08-03 16:38:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). El mercado se encuentra en una fase de compresión de volatilidad con alta incertidumbre, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar 'trampas de valor' y pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el requisito estricto de dominancia de Bids > 55% ni presenta una estructura técnica que garantice una probabilidad de éxito superior al 70%. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
   "top_candidates": [
     {
       "symbol": "ARBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DASHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "VIRTUALUSDT",
       "score": 75
     },
     {
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "DEXEUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "ALLOUSDT",
       "score": 65
     }
   ]
