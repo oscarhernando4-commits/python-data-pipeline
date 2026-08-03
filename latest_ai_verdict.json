@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 01:28:20",
+  "timestamp": "2026-08-03 01:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional y pánico minorista. Ningún activo cumple con el requisito de Score Técnico >= 65 ni con la profundidad de mercado necesaria para una ejecución segura. Se prioriza la protección del capital frente a la alta probabilidad de 'whipsaws' y continuación de la tendencia bajista.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una ausencia total de activos que cumplan con los criterios de alta convicción (Score >= 65). La estrategia institucional es preservar el capital y evitar la exposición a 'cuchillos cayendo' en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
-      "symbol": "DCRUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "NVDABUSDT",
+      "symbol": "NILUSDT",
       "score": 60
     },
     {
-      "symbol": "ETCUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "TLMUSDT",
-      "score": 50
+      "symbol": "DCRUSDT",
+      "score": 60
     },
     {
       "symbol": "XTZUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "ESPUSDT",
       "score": 50
     }
   ]
