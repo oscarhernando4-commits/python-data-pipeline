@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-03 03:10:14",
+  "timestamp": "2026-08-03 03:12:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta toxicidad y fragilidad sistémica. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 ni muestra una dominancia de Bids superior al 55%, lo que invalida cualquier entrada bajo los protocolos de gestión de riesgo del comité.",
+  "reasoning": "Debido a la capitulación técnica generalizada y la ausencia de activos con un Score A+ (>= 65) que cumplan con los requisitos de riesgo, el comité ha decidido no ejecutar ninguna operación para proteger el capital institucional.",
   "top_candidates": [
     {
       "symbol": "MIRAUSDT",
       "score": 70
+    },
+    {
+      "symbol": "FILUSDT",
+      "score": 60
     },
     {
       "symbol": "PORTALUSDT",
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "XAUTUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "KAITOUSDT",
       "score": 50
     }
   ]
