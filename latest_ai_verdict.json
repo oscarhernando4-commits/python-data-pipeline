@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-03 15:44:24",
+  "timestamp": "2026-08-03 15:46:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 75, la falta de profundidad en el libro de órdenes, la debilidad del mercado global (Fear 28) y la ausencia de una tendencia clara en 4H no cumplen con los estándares de convicción A+ exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con baja volatilidad direccional y falta de datos de liquidez confirmados. Ningún candidato cumple con el umbral de convicción A+ exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' o trampas de mercado.",
   "top_candidates": [
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "POLUSDT",
       "score": 75
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
-      "score": 70
+      "symbol": "SUNUSDT",
+      "score": 75
     },
     {
-      "symbol": "VETUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ADAUSDT",
+      "symbol": "GRAMUSDT",
       "score": 65
     }
   ]
