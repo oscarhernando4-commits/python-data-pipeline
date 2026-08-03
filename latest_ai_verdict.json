@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 14:42:23",
+  "timestamp": "2026-08-03 14:44:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una trampa de rango con falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité (Bids > 55% y Score A+), por lo que la decisión unánime es mantener la posición en efectivo (HOLD) para evitar la exposición a la volatilidad sin tendencia.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de libro de órdenes > 55%). La volatilidad actual y la falta de soporte institucional claro en el orderbook dictan una postura de preservación de capital (HOLD) para evitar pérdidas en un mercado de alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
       "score": 85
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "NEARUSDT",
       "score": 75
     },
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "XRPUSDT",
       "score": 75
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "ALGOUSDT",
       "score": 75
     }
   ]
