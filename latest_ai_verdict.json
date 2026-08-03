@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 13:34:24",
+  "timestamp": "2026-08-03 13:36:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia de alta volatilidad con un sesgo bajista predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de soporte institucional), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas en un entorno de rotación de pánico.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité (Bids > 55% y Score A+). La estrategia actual es de protección de capital, evitando la exposición en un mercado con alta probabilidad de 'falling knives' y falta de liquidez institucional confirmada.",
   "top_candidates": [
+    {
+      "symbol": "SNXXBUSDT",
+      "score": 80
+    },
     {
       "symbol": "PEPEUSDT",
       "score": 75
     },
     {
-      "symbol": "VETUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
-      "symbol": "CRVUSDT",
+      "symbol": "SUIUSDT",
       "score": 75
     },
     {
-      "symbol": "APTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "STXUSDT",
+      "symbol": "AAVEUSDT",
       "score": 75
     }
   ]
