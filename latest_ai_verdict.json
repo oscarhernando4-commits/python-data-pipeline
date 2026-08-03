@@ -1,22 +1,22 @@
 {
-  "timestamp": "2026-08-03 12:04:18",
+  "timestamp": "2026-08-03 12:06:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico A+ (>= 65) ni con la confirmación de soporte en el libro de órdenes. Ante la incertidumbre macro y la falta de convicción técnica, la decisión institucional es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' y proteger el capital.",
+  "reasoning": "El mercado presenta un riesgo sistémico elevado sin señales de acumulación institucional. Ningún activo cumple con el umbral de Score Técnico A+ (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la estrategia óptima es la preservación de capital en liquidez (USDT).",
   "top_candidates": [
     {
       "symbol": "GIGGLEUSDT",
       "score": 60
     },
     {
-      "symbol": "TIAUSDT",
-      "score": 55
+      "symbol": "PAXGUSDT",
+      "score": 60
     },
     {
-      "symbol": "PEPEUSDT",
-      "score": 50
+      "symbol": "TIAUSDT",
+      "score": 55
     },
     {
       "symbol": "XAUTUSDT",
