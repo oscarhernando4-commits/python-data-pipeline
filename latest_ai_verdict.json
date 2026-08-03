@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 06:22:20",
+  "timestamp": "2026-08-03 06:24:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existe ningún activo con un Score Técnico >= 65 ni soporte de liquidez institucional, lo que invalida cualquier operación de compra bajo los protocolos de gestión de riesgo vigentes.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y falta de profundidad, donde ningún activo cumple con los criterios de calidad A+ exigidos por el comité para una ejecución de compra, por lo que se mantiene la posición en efectivo para evitar riesgos innecesarios.",
   "top_candidates": [
-    {
-      "symbol": "XAUTUSDT",
-      "score": 60
-    },
     {
       "symbol": "UNIUSDT",
       "score": 60
     },
     {
+      "symbol": "XAUTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "REZUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "GNOUSDT",
+      "score": 60
+    },
+    {
       "symbol": "XLMUSDT",
       "score": 55
-    },
-    {
-      "symbol": "NEXOUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "BANKUSDT",
-      "score": 50
     }
   ]
 }
