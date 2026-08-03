@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 03:48:16",
+  "timestamp": "2026-08-03 03:50:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno actual es de alta fragilidad y no cumple con los criterios de convicción A+ exigidos por la Regla de Oro #1. Se prioriza la preservación de capital sobre la búsqueda de alfa, manteniendo la posición en liquidez (USDT) hasta que el mercado muestre una estructura de fortaleza consolidada.",
+  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con alta incertidumbre macro. Ningún activo cumple con el umbral de seguridad A+ requerido por el comité, por lo que la preservación de capital es la prioridad absoluta.",
   "top_candidates": [
+    {
+      "symbol": "MIRAUSDT",
+      "score": 70
+    },
     {
       "symbol": "HOMEUSDT",
       "score": 70
@@ -15,12 +19,8 @@
       "score": 70
     },
     {
-      "symbol": "HYPERUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "MMTUSDT",
-      "score": 55
+      "symbol": "WLDUSDT",
+      "score": 60
     },
     {
       "symbol": "XPLUSDT",
