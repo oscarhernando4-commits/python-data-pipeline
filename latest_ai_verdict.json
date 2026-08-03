@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-03 19:52:16",
+  "timestamp": "2026-08-03 19:54:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento defensivo con una erosión de liquidez evidente. Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el Comité, especialmente en la métrica de profundidad del libro de órdenes (Bids > 55%). Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en un estado de compresión y neutralidad forzada sin una ventaja estadística clara. Ninguno de los candidatos cumple con el umbral de confianza A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la decisión institucional es mantener la liquidez en espera de una estructura de mercado más definida.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
       "score": 75
     },
     {
-      "symbol": "LDOUSDT",
+      "symbol": "XLMUSDT",
       "score": 75
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "LTCUSDT",
       "score": 65
     },
     {
@@ -23,7 +23,7 @@
       "score": 65
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "PAXGUSDT",
       "score": 65
     }
   ]
