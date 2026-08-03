@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 06:34:18",
+  "timestamp": "2026-08-03 06:36:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y falta de liquidez institucional. Ninguno de los candidatos analizados alcanza el umbral de Score 65 requerido por el Comité para una ejecución segura, por lo que se prioriza la protección del capital sobre la especulación.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva sin activos que cumplan con el umbral de seguridad A+ (Score >= 65). La falta de soporte en el libro de órdenes y la debilidad técnica generalizada obligan a la preservación total del capital en stablecoins.",
   "top_candidates": [
     {
       "symbol": "STXUSDT",
       "score": 55
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 50
-    },
-    {
       "symbol": "BANKUSDT",
       "score": 50
     },
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "UNIUSDT",
       "score": 50
     },
     {
       "symbol": "DOTUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "SYNUSDT",
       "score": 50
     }
   ]
