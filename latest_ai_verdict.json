@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 13:06:20",
+  "timestamp": "2026-08-03 13:08:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de activos con score 65, ninguno cumple con la profundidad de libro de órdenes necesaria ni con la confirmación de volumen institucional para mitigar el riesgo en un entorno de mercado con Fear & Greed en 28.",
+  "confidence": 0,
+  "reasoning": "El mercado actual carece de la convicción necesaria para una entrada de alta probabilidad; la mayoría de los activos presentan scores técnicos mediocres y una falta de soporte institucional en el libro de órdenes, lo que obliga a mantener una postura defensiva en liquidez.",
   "top_candidates": [
+    {
+      "symbol": "SEIUSDT",
+      "score": 75
+    },
     {
       "symbol": "OPUSDT",
       "score": 75
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "HOMEUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "SUIUSDT",
       "score": 65
     },
     {
