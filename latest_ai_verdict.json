@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 03:18:15",
+  "timestamp": "2026-08-03 03:20:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con falta de liquidez y soporte institucional. Ningún activo cumple con los criterios de convicción A+ requeridos por el comité, por lo que se mantiene la liquidez total en USDT para evitar la exposición a 'cuchillos cayendo'.",
+  "reasoning": "El mercado carece de convicción institucional y presenta una debilidad sistémica generalizada. Ningún activo cumple con los criterios de alta probabilidad (Score >= 65) ni con el soporte necesario en el libro de órdenes. Se prioriza la protección del capital ante la alta probabilidad de 'trampas de valor' en el contexto actual de miedo extremo.",
   "top_candidates": [
     {
       "symbol": "HOMEUSDT",
       "score": 70
     },
     {
+      "symbol": "MIRAUSDT",
+      "score": 60
+    },
+    {
       "symbol": "EPICUSDT",
       "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "SUIUSDT",
-      "score": 50
-    },
-    {
       "symbol": "XAUTUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "KAITOUSDT",
       "score": 50
     }
   ]
