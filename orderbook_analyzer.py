@@ -33,6 +33,11 @@ def fetch_orderbook_depth(symbol, limit=20, proxies=None):
         bids = data.get("bids", [])
         asks = data.get("asks", [])
         
+        top_bid = float(bids[0][0]) if bids else 0.0
+        top_ask = float(asks[0][0]) if asks else 0.0
+        spread_pct = round(((top_ask - top_bid) / top_bid) * 100.0, 3) if top_bid > 0 else 0.0
+        is_low_spread = spread_pct <= 0.25
+        
         bid_vol_usdt = sum(float(p) * float(q) for p, q in bids)
         ask_vol_usdt = sum(float(p) * float(q) for p, q in asks)
         
@@ -42,6 +47,10 @@ def fetch_orderbook_depth(symbol, limit=20, proxies=None):
         
         return {
             "symbol": symbol,
+            "top_bid": top_bid,
+            "top_ask": top_ask,
+            "spread_pct": spread_pct,
+            "is_low_spread": is_low_spread,
             "bid_vol_usdt": round(bid_vol_usdt, 2),
             "ask_vol_usdt": round(ask_vol_usdt, 2),
             "bid_dominance_pct": bid_dominance_pct,

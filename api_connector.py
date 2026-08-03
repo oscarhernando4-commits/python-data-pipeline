@@ -900,7 +900,16 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de alineación alcista simultánea en 5m y 15m (Alignment: {tf_align}).")
                 else:
-                    print(f"📊 Análisis Multi-Temporal {best_symbol}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Rango 1D={mtf_res.get('price_expansion_1d_pct')}% | Alignment={tf_align}")
+                    import orderbook_analyzer
+                    ob_info = orderbook_analyzer.fetch_orderbook_depth(best_symbol, limit=20, proxies=proxies)
+                    if ob_info.get("spread_pct", 0.0) > 0.25:
+                        is_stable = True
+                        print(f"⛔ Compra rechazada: {best_symbol} descalificado por Spread elevado ({ob_info.get('spread_pct'):.3f}% > 0.25%). Evitando deslizamiento de precio.")
+                    elif ob_info.get("bid_dominance_pct", 50.0) < 55.0:
+                        is_stable = True
+                        print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de muro comprador (Bids: {ob_info.get('bid_dominance_pct')}% < 55.0%).")
+                    else:
+                        print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.25% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=55% OK)")
                 
         if bias_ok and not is_stable:
             # 1. LONG Entry Signal (Operates with 100% of available USDT, strictly requires Score >= 65 Setup A+)
