@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-03 18:36:17",
+  "timestamp": "2026-08-03 18:38:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con la totalidad de los requisitos de convicción A+ (Score >= 65, Bids > 55% y confirmación de volumen). Ante la incertidumbre macro y la falta de datos de liquidez, la estrategia institucional es preservar el capital y evitar la exposición a activos con alta probabilidad de reversión.",
+  "reasoning": "El mercado presenta una estructura de 'distribución silenciosa' con una falta de profundidad en el libro de órdenes y una tendencia neutral predominante. Ningún candidato cumple con el umbral de convicción A+ necesario para garantizar la preservación del capital, por lo que la decisión institucional es mantener la liquidez en espera de un catalizador claro.",
   "top_candidates": [
     {
-      "symbol": "PYTHUSDT",
+      "symbol": "ORDIUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 65
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "KAITOUSDT",
       "score": 65
     }
   ]
