@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-03 21:54:21",
+  "timestamp": "2026-08-03 21:56:53",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de liquidez necesaria en el libro de órdenes. La estructura de mercado actual es de distribución institucional, por lo que cualquier entrada Long es estadísticamente desfavorable. Se mantiene la posición en efectivo para preservar el capital.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica sin activos que cumplan con los criterios de convicción A+ requeridos por el comité, por lo que la estrategia óptima es la preservación de capital.",
   "top_candidates": [
     {
-      "symbol": "RENDERUSDT",
-      "score": 60
-    },
-    {
       "symbol": "SEIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ACXUSDT",
       "score": 60
     },
     {
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "VICUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "UNIUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "VANRYUSDT",
       "score": 50
     }
   ]
