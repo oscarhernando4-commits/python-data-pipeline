@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 22:52:19",
+  "timestamp": "2026-08-03 22:54:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la evaluación exhaustiva de los 7 agentes, se concluye que no existen activos que cumplan con los requisitos de calidad A+ (Score >= 65). La debilidad estructural del mercado y la falta de convicción en el libro de órdenes obligan a mantener una postura de espera para preservar el capital.",
+  "reasoning": "El comité ha determinado que no existen activos que cumplan con el umbral mínimo de Score A+ (>= 65) ni con la confirmación de liquidez necesaria en el libro de órdenes. Ante la debilidad sistémica y la alta probabilidad de 'trampas de valor', se ha decidido mantener el 100% de la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "ENAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "EULUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "MUBUSDT",
+      "score": 50
+    },
+    {
       "symbol": "SKHYBUSDT",
       "score": 50
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "ASTERUSDT",
       "score": 50
     }
   ]
