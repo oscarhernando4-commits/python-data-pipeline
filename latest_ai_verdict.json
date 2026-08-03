@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 15:52:22",
+  "timestamp": "2026-08-03 15:54:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos, la falta de profundidad en el libro de órdenes y la inestabilidad macroeconómica no garantizan la seguridad del capital bajo la Regla #1 de no perder dinero.",
+  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con alta aversión al riesgo. Ningún candidato cumple con el umbral de seguridad institucional (Bids > 55% y confirmación de volumen), por lo que se prioriza la preservación del capital sobre la especulación de corto plazo.",
   "top_candidates": [
     {
       "symbol": "SUNUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "SKYUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "MIRAUSDT",
+      "symbol": "SHIBUSDT",
       "score": 65
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "SOXLBUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "BCHUSDT",
       "score": 65
     }
   ]
