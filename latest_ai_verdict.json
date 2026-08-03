@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-03 20:24:18",
+  "timestamp": "2026-08-03 20:26:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con alta ineficiencia. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65, Bids > 55%, y volumen institucional confirmado), por lo que la orden es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta un estancamiento sistémico con un sesgo bajista latente. Ninguno de los candidatos cumple con el requisito de soporte de ballenas (Bids > 65%) ni con una confirmación de volumen institucional robusta, lo que obliga a mantener la liquidez en USDT para evitar la exposición a 'falling knives' en un entorno de miedo.",
   "top_candidates": [
-    {
-      "symbol": "GRAMUSDT",
-      "score": 75
-    },
     {
       "symbol": "XLMUSDT",
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "INTCBUSDT",
       "score": 75
     },
     {
@@ -23,8 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "INTCBUSDT",
+      "symbol": "HOLOUSDT",
       "score": 75
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "score": 70
     }
   ]
 }
