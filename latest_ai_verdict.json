@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 09:42:18",
+  "timestamp": "2026-08-03 09:44:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un entorno de 'Risk-Off' extremo con una estructura técnica deficiente. Ningún activo cumple con el requisito de Score A+ (>= 65) ni con la profundidad de liquidez necesaria en el libro de órdenes. Se prioriza la preservación de capital sobre la operativa especulativa.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de Score Técnico >= 65 ni con la confirmación de soporte en el libro de órdenes, lo que obliga a mantener la posición en efectivo para evitar pérdidas en un entorno de alta volatilidad y baja convicción.",
   "top_candidates": [
+    {
+      "symbol": "BTCUSDT",
+      "score": 65
+    },
     {
       "symbol": "XLMUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "DOTUSDT",
       "score": 60
     },
     {
       "symbol": "AAVEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "JSTUSDT",
       "score": 60
     }
   ]
