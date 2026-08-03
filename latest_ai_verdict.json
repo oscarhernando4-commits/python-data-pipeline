@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 23:46:20",
+  "timestamp": "2026-08-03 23:48:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad estructural sistémica. Ningún activo cumple con el umbral de Score 65 requerido por el Comité para una operación de alta convicción. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez y alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad técnica generalizada. Ninguno de los activos analizados alcanza el umbral de seguridad A+ (Score >= 65) ni muestra una dominancia clara en el libro de órdenes. Siguiendo la regla de oro de preservación de capital, el comité decide mantenerse al margen para evitar el riesgo de 'cuchillos cayendo' y posibles deslizamientos masivos.",
   "top_candidates": [
+    {
+      "symbol": "ENAUSDT",
+      "score": 60
+    },
     {
       "symbol": "XPLUSDT",
       "score": 60
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "KAITOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "POLUSDT",
       "score": 50
     }
   ]
