@@ -1,18 +1,22 @@
 {
-  "timestamp": "2026-08-03 01:26:17",
+  "timestamp": "2026-08-03 01:28:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada con falta de soporte en el libro de órdenes y scores técnicos insuficientes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65), por lo que la decisión institucional es mantener la liquidez en espera de una estructura de mercado más clara y alcista.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional y pánico minorista. Ningún activo cumple con el requisito de Score Técnico >= 65 ni con la profundidad de mercado necesaria para una ejecución segura. Se prioriza la protección del capital frente a la alta probabilidad de 'whipsaws' y continuación de la tendencia bajista.",
   "top_candidates": [
     {
       "symbol": "DCRUSDT",
       "score": 70
     },
     {
-      "symbol": "REZUSDT",
-      "score": 50
+      "symbol": "NVDABUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ETCUSDT",
+      "score": 55
     },
     {
       "symbol": "TLMUSDT",
@@ -21,10 +25,6 @@
     {
       "symbol": "XTZUSDT",
       "score": 50
-    },
-    {
-      "symbol": "ESPUSDT",
-      "score": 45
     }
   ]
 }
