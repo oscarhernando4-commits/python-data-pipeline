@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 13:03:29",
+  "timestamp": "2026-08-03 13:04:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia estructural y falta de convicción institucional en los libros de órdenes. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65 con Bids > 55% y volumen confirmado), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de alta volatilidad.",
+  "reasoning": "Ninguno de los candidatos cumple con la regla de oro de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado actual se encuentra en una fase de alta volatilidad y baja liquidez, lo que hace que cualquier entrada sea prematura y de alto riesgo. Se prioriza la preservación del capital sobre la ejecución forzada.",
   "top_candidates": [
     {
       "symbol": "ARBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SEIUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "BTCUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "HOMEUSDT",
       "score": 65
     }
   ]

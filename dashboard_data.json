@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-03 13:03:33",
-  "total_balance_usd": 19.63,
+  "updated_at": "2026-08-03 13:04:22",
+  "total_balance_usd": 19.61,
   "usdt_free": 0.1942,
   "bnb_free": 0.00415754,
-  "status": "🔵 En Vivo LONG (ARBUSDT @ $0.0813)",
+  "status": "🔵 En Vivo LONG (ARBUSDT @ $0.0812)",
   "position": {
     "symbol": "ARBUSDT",
     "quantity": 209.1,
@@ -11,8 +11,8 @@
     "highest_price": 0.0814,
     "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 0.96,
-    "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
+    "adaptive_sl_pct": 0.6,
+    "volatility_regime": "⏳ Escalera 20m: SL Apretado a -0.60%"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una divergencia estructural y falta de convicción institucional en los libros de órdenes. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65 con Bids > 55% y volumen confirmado), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de alta volatilidad."
+    "reasoning": "Ninguno de los candidatos cumple con la regla de oro de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado actual se encuentra en una fase de alta volatilidad y baja liquidez, lo que hace que cualquier entrada sea prematura y de alto riesgo. Se prioriza la preservación del capital sobre la ejecución forzada."
   }
 }
