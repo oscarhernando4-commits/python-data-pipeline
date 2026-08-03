@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-03 14:36:21",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%) necesario para garantizar una operación de alta probabilidad, por lo que se prioriza la preservación del capital.",
+  "timestamp": "2026-08-03 14:38:25",
+  "selected_symbol": "BNBUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "Tras deliberar, el comité ha determinado que BNBUSDT es el único activo que cumple con los estándares de alta convicción (Score 85) y rotación sectorial, superando el filtro de riesgo y la memoria histórica de trades exitosos.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
       "score": 85
-    },
-    {
-      "symbol": "PUMPUSDT",
-      "score": 75
     },
     {
       "symbol": "NILUSDT",
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "LDOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "JTOUSDT",
       "score": 75
     }
   ]
