@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 12:22:16",
+  "timestamp": "2026-08-03 12:24:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual se encuentra en un estado de distribución forzada con una ausencia total de activos que cumplan con el umbral de convicción A+ (Score >= 65). La falta de muros de soporte institucionales y la fragilidad técnica generalizada obligan al comité a priorizar la preservación del capital sobre la ejecución de operaciones especulativas.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada con scores técnicos insuficientes. Ningún activo cumple con los criterios de riesgo A+ establecidos por el comité, por lo que la estrategia prioritaria es la preservación del capital en efectivo.",
   "top_candidates": [
+    {
+      "symbol": "TRUMPUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TIAUSDT",
+      "score": 60
+    },
     {
       "symbol": "SEIUSDT",
       "score": 60
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 50
+      "symbol": "ATOMUSDT",
+      "score": 55
     },
     {
-      "symbol": "ADAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "GIGGLEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "UNIUSDT",
+      "symbol": "SHIBUSDT",
       "score": 50
     }
   ]
