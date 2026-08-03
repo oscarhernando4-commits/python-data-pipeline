@@ -1,12 +1,25 @@
 {
-  "PENDLEUSDT": [
+  "DCRUSDT": [
     {
-      "timestamp": "2026-08-03 03:00:10",
-      "price": 1.364,
+      "timestamp": "2026-08-03 03:02:08",
+      "price": 13.22,
       "score": 0,
-      "rsi": 34.5,
+      "rsi": 45.14,
       "macd": "Neutral",
-      "volume_surge": 0.08,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "AEVOUSDT": [
+    {
+      "timestamp": "2026-08-03 03:02:08",
+      "price": 0.01904,
+      "score": 30,
+      "rsi": 42.0,
+      "macd": "Neutral",
+      "volume_surge": 0.07,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

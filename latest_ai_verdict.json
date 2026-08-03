@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-03 03:00:18",
+  "timestamp": "2026-08-03 03:02:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada sin activos que cumplan con los criterios de alta convicción (Score >= 65). La estrategia institucional es la preservación total del capital mediante la inacción hasta que las condiciones macro mejoren y se detecten muros de soporte reales.",
+  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema tras el reciente exploit de seguridad, lo que ha provocado una distribución de pánico. Ninguno de los activos analizados cumple con los criterios de calidad A+ exigidos por el comité. Por lo tanto, se prioriza la preservación del capital sobre la operativa especulativa, manteniendo la posición en liquidez total.",
   "top_candidates": [
     {
-      "symbol": "WLDUSDT",
+      "symbol": "FILUSDT",
       "score": 60
     },
     {
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "BANKUSDT",
+      "score": 55
+    },
+    {
       "symbol": "XAUTUSDT",
       "score": 50
     },
     {
       "symbol": "PAXGUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "PORTALUSDT",
       "score": 50
     }
   ]
