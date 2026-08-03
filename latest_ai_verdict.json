@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-03 04:54:16",
+  "timestamp": "2026-08-03 04:56:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con debilidad generalizada. Ningún activo cumple con el umbral mínimo de Score 65 ni con la confirmación de volumen institucional necesaria para una entrada segura. Se prioriza la preservación del capital ante la falta de estructura alcista clara.",
+  "reasoning": "El comité ha determinado que el mercado actual carece de la calidad técnica y la profundidad de liquidez necesarias para una ejecución segura. Dado que ningún activo supera el umbral de riesgo A+ (Score >= 65), la orden institucional es proteger el capital y permanecer en modo 'HOLD' hasta que las condiciones macro y técnicas mejoren.",
   "top_candidates": [
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "NILUSDT",
       "score": 60
     },
     {
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "NILUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
       "symbol": "ZAMAUSDT",
       "score": 55
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "score": 50
     }
   ]
 }
