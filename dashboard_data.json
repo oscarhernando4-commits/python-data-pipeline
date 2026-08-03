@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 12:16:18",
+  "updated_at": "2026-08-03 12:18:16",
   "total_balance_usd": 19.75,
   "usdt_free": 0.2477,
   "bnb_free": 0.00420089,
@@ -11,8 +11,8 @@
     "highest_price": 1.292,
     "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 0.6,
-    "volatility_regime": "⏳ Escalera 20m: SL Apretado a -0.60%"
+    "adaptive_sl_pct": 0.2,
+    "volatility_regime": "⏳ Escalera 45m: SL Apretado a -0.20%"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que el mercado actual carece de la convicción técnica y la profundidad de liquidez necesaria para ejecutar operaciones de compra. Todos los candidatos presentan un Score Técnico de 50, lo cual es insuficiente bajo nuestras reglas de oro. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y sentimiento de miedo."
+    "reasoning": "El mercado se encuentra en un estado de capitulación técnica y falta de liquidez institucional. Ninguno de los candidatos analizados alcanza el umbral de Score 65 requerido por el Comité, por lo que la orden de ejecución es NONE para preservar el capital."
   }
 }

@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 12:16:17",
+  "timestamp": "2026-08-03 12:18:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual carece de la convicción técnica y la profundidad de liquidez necesaria para ejecutar operaciones de compra. Todos los candidatos presentan un Score Técnico de 50, lo cual es insuficiente bajo nuestras reglas de oro. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y sentimiento de miedo.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y falta de liquidez institucional. Ninguno de los candidatos analizados alcanza el umbral de Score 65 requerido por el Comité, por lo que la orden de ejecución es NONE para preservar el capital.",
   "top_candidates": [
     {
-      "symbol": "GIGGLEUSDT",
+      "symbol": "ENAUSDT",
       "score": 50
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "GIGGLEUSDT",
       "score": 50
     },
     {
@@ -19,11 +19,11 @@
       "score": 50
     },
     {
-      "symbol": "ENAUSDT",
+      "symbol": "XAUTUSDT",
       "score": 50
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "PAXGUSDT",
       "score": 50
     }
   ]
