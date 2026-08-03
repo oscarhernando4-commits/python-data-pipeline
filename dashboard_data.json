@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 15:22:22",
+  "updated_at": "2026-08-03 15:24:24",
   "total_balance_usd": 20.63,
   "usdt_free": 20.62874,
   "bnb_free": 0.00411434,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una divergencia estructural y falta de convicción compradora en los activos analizados. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' en un entorno de miedo institucional."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de liquidez y soporte de ballenas). La alta volatilidad y la falta de datos históricos en los activos sugeridos aumentan el riesgo de 'falling knives', por lo que se prioriza la preservación del capital."
   }
 }

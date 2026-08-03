@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 15:22:22",
+  "timestamp": "2026-08-03 15:24:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia estructural y falta de convicción compradora en los activos analizados. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' en un entorno de miedo institucional.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de liquidez y soporte de ballenas). La alta volatilidad y la falta de datos históricos en los activos sugeridos aumentan el riesgo de 'falling knives', por lo que se prioriza la preservación del capital.",
   "top_candidates": [
+    {
+      "symbol": "ASTERUSDT",
+      "score": 75
+    },
     {
       "symbol": "CAKEUSDT",
       "score": 75
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "GRAMUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "ALGOUSDT",
       "score": 65
     }
   ]
