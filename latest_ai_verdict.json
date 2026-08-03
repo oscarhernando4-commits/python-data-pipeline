@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 09:02:18",
+  "timestamp": "2026-08-03 09:04:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por unanimidad que las condiciones actuales del mercado no cumplen con los requisitos mínimos de seguridad y rentabilidad exigidos por el protocolo A+. La falta de activos con un score técnico superior a 65 y la ausencia de muros de soporte claros en el libro de órdenes obligan a mantener una postura de espera (HOLD) para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación y falta de convicción institucional. Ninguno de los activos candidatos alcanza el score técnico mínimo de 65 ni presenta una ventaja estadística clara en el libro de órdenes. Se prioriza la preservación del capital (Regla #1) sobre la ejecución de trades mediocres.",
   "top_candidates": [
+    {
+      "symbol": "BICOUSDT",
+      "score": 60
+    },
     {
       "symbol": "NEARUSDT",
       "score": 60
@@ -19,12 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "ZROUSDT",
+      "symbol": "MUBARAKUSDT",
       "score": 60
-    },
-    {
-      "symbol": "EULUSDT",
-      "score": 50
     }
   ]
 }
