@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-03 14:54:20
+date: 2026-08-03 14:56:26
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $19.68 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-03 14:54:20`
+> ⏱️ **Última Actualización:** `2026-08-03 14:56:26`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00411434 BNB` (`~$2.42 USD`)
@@ -30,10 +30,10 @@ date: 2026-08-03 14:54:20
 
 > [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
-> - 📈 **Capital Total Acumulado:** **`$9,953.80 USD`** (`$-46.20 USD`)  
-> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `0 Cuentas (0.0%)`  
+> - 📈 **Capital Total Acumulado:** **`$9,994.00 USD`** (`$-6.00 USD`)  
+> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `20 Cuentas (20.0%)`  
 > - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `0 Cuentas (0.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `100 Cuentas (100.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `80 Cuentas (80.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
@@ -52,32 +52,32 @@ date: 2026-08-03 14:54:20
 ## 🛡️ GRUPO 1: Ultra-Estricto (Copia Estrategia Real A+ - Score >= 85 Pts)
 
 > [!TIP] 📊 **Resumen del 🛡️ GRUPO 1: Ultra-Estricto (Copia Estrategia Real A+ - Score >= 85 Pts):**
-> - 💵 **Balance Total del Grupo:** `$2,034.80 USD` (`+$34.80`)
-> - 🎯 **Operaciones Totales:** `80` (`40 Ganadas / 40 Perdidas`)
-> - 📈 **Tasa de Acierto del Grupo:** `50.0% Win Rate`
+> - 💵 **Balance Total del Grupo:** `$2,075.00 USD` (`+$75.00`)
+> - 🎯 **Operaciones Totales:** `100` (`60 Ganadas / 40 Perdidas`)
+> - 📈 **Tasa de Acierto del Grupo:** `60.0% Win Rate`
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-001** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-002** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-003** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-004** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-005** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-006** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-007** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-008** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-009** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-010** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-011** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-012** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-013** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-014** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-015** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-016** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-017** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-018** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-019** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
-| **SIM-020** | **BTCUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:58 | `🛡️ Protegida (BE)` | **`$101.74`** (`+$1.74`) | 🔵 En Vivo |
+| **SIM-001** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-002** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-003** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-004** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-005** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-006** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-007** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-008** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-009** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-010** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-011** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-012** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-013** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-014** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-015** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-016** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-017** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-018** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-019** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
+| **SIM-020** | **BTCUSDT** | `#5` | `3W/2L` | 26-08-03<br>14:56 | `🟢 Ganó +$2.01` | **`$103.75`** (`+$3.75`) | 🟢 Buscando |
 
 ---
 

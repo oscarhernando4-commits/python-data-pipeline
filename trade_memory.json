@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 633,
-    "wins": 183,
+    "total_trades": 653,
+    "wins": 203,
     "losses": 450,
-    "win_rate_pct": 28.91,
-    "total_pnl_usd": -46.69643454545456
+    "win_rate_pct": 31.09,
+    "total_pnl_usd": -6.496434545454589
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -43,7 +43,8 @@
       "BOOST LONG when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DOGEUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ARBUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on EPICUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BCHUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BCHUSDT)",
+      "BOOST LONG when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BTCUSDT)"
     ]
   },
   "history": [
@@ -10259,6 +10260,346 @@
       "context": {
         "score": 40,
         "rsi_15m": 73.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:25",
+      "account_id": "SIM-001",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:25",
+      "account_id": "SIM-002",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:25",
+      "account_id": "SIM-003",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:25",
+      "account_id": "SIM-004",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:25",
+      "account_id": "SIM-005",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:25",
+      "account_id": "SIM-006",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:25",
+      "account_id": "SIM-007",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:25",
+      "account_id": "SIM-008",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:25",
+      "account_id": "SIM-009",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:25",
+      "account_id": "SIM-010",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:25",
+      "account_id": "SIM-011",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:25",
+      "account_id": "SIM-012",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:25",
+      "account_id": "SIM-013",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:26",
+      "account_id": "SIM-014",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:26",
+      "account_id": "SIM-015",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:26",
+      "account_id": "SIM-016",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:26",
+      "account_id": "SIM-017",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:26",
+      "account_id": "SIM-018",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:26",
+      "account_id": "SIM-019",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 14:56:26",
+      "account_id": "SIM-020",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 62648.62,
+      "exit_price": 63946.0,
+      "pnl_usd": 2.01,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$2.01 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 81.25,
         "macro_trend_4h": "NEUTRAL"
       }
     }
