@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 08:16:21",
+  "timestamp": "2026-08-03 08:18:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos con un Score técnico superior a 65 ni confirmación de soporte institucional en el libro de órdenes, lo que invalida cualquier oportunidad de compra bajo los estrictos protocolos de gestión de riesgo.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte en el libro de órdenes, lo que invalida cualquier entrada bajo las reglas de gestión de riesgo del comité.",
   "top_candidates": [
+    {
+      "symbol": "VICUSDT",
+      "score": 70
+    },
     {
       "symbol": "NEARUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "EULUSDT",
-      "score": 50
+      "symbol": "APTUSDT",
+      "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "TRXUSDT",
+      "symbol": "ERAUSDT",
       "score": 50
     }
   ]
