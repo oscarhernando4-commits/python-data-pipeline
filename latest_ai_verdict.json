@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-03 21:34:16",
+  "timestamp": "2026-08-03 21:36:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de compresión de volatilidad por agotamiento con una clara tendencia bajista macro. Ninguno de los candidatos cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital hasta que surja una señal de acumulación institucional clara.",
+  "reasoning": "El mercado actual se encuentra en un estado de distribución forzada y parálisis técnica. Ninguno de los activos analizados cumple con el requisito estricto de Score A+ (>= 65) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
-    {
-      "symbol": "TAOUSDT",
-      "score": 60
-    },
     {
       "symbol": "ACXUSDT",
       "score": 60
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "HOLOUSDT",
-      "score": 60
+      "symbol": "UNIUSDT",
+      "score": 50
     },
     {
-      "symbol": "UNIUSDT",
+      "symbol": "TAOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "SYNUSDT",
       "score": 50
     }
   ]
