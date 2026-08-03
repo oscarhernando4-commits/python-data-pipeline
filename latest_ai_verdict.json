@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 11:00:20",
+  "timestamp": "2026-08-03 11:02:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de compresión sin volumen institucional y con una estructura técnica neutral, lo que no cumple con los criterios de alta probabilidad exigidos por el comité para una ejecución segura.",
+  "reasoning": "El mercado se encuentra en una fase de distribución y alta fragilidad sin activos que cumplan con los criterios de calidad A+. Se prioriza la preservación de capital sobre la especulación, manteniendo la posición en efectivo hasta que aparezca una señal clara de acumulación institucional.",
   "top_candidates": [
     {
+      "symbol": "EULUSDT",
+      "score": 50
+    },
+    {
       "symbol": "PEPEUSDT",
-      "score": 65
+      "score": 50
     },
     {
-      "symbol": "XRPUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "SUIUSDT",
-      "score": 65
+      "symbol": "ETCUSDT",
+      "score": 50
     },
     {
       "symbol": "INJUSDT",
-      "score": 65
+      "score": 50
     },
     {
       "symbol": "SYNUSDT",
-      "score": 65
+      "score": 50
     }
   ]
 }
