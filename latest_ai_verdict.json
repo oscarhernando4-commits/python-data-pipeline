@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-03 06:30:20",
+  "timestamp": "2026-08-03 06:32:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha evaluado los candidatos y el entorno macroeconómico, concluyendo que no existe ningún activo que cumpla con los criterios de riesgo A+ exigidos. La estrategia institucional es proteger el capital y evitar la exposición a activos con scores técnicos mediocres en un entorno de alta fragilidad.",
+  "reasoning": "El mercado se encuentra en un estado de alta toxicidad con una correlación bajista generalizada. Ninguno de los candidatos analizados cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de liquidez necesaria en el libro de órdenes. Se prioriza la preservación del capital evitando trampas de liquidez en activos con scores mediocres.",
   "top_candidates": [
-    {
-      "symbol": "XAUTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XLMUSDT",
-      "score": 55
-    },
     {
       "symbol": "STXUSDT",
       "score": 55
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "UNIUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "NILUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "WLFIUSDT",
       "score": 50
     }
   ]
