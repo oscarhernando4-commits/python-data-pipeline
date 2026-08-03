@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 09:28:22",
+  "timestamp": "2026-08-03 09:30:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno actual es de alta fragilidad y baja convicción. Ninguno de los candidatos cumple con el requisito estricto de Score >= 65, y la falta de soporte en el libro de órdenes junto con el sentimiento de miedo generalizado hace que cualquier operación sea estadísticamente desfavorable. Se prioriza la preservación de capital sobre la especulación.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada con scores técnicos inferiores al umbral de 65. Ningún activo cumple con los criterios de convicción A+ necesarios para una ejecución, por lo que el comité ha decidido mantener la neutralidad operativa para evitar pérdidas en un entorno de alta incertidumbre.",
   "top_candidates": [
-    {
-      "symbol": "ERAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PUMPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 60
-    },
     {
       "symbol": "ALGOUSDT",
       "score": 60
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "DOTUSDT",
       "score": 60
+    },
+    {
+      "symbol": "EULUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "BICOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 50
     }
   ]
 }
