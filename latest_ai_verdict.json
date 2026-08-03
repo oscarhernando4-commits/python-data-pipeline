@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-02 23:58:20",
+  "timestamp": "2026-08-03 00:00:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta selectividad y consolidación. Ninguno de los candidatos cumple con el requisito estricto de soporte en el libro de órdenes (Bids >= 55%) ni con la convicción A+ exigida por el Comité, por lo que la preservación del capital es la prioridad absoluta.",
+  "reasoning": "El mercado se encuentra en una fase de supervivencia y distribución forzada. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y volumen confirmado). Se prioriza la preservación de capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
-      "symbol": "MIRAUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "VETUSDT",
-      "score": 85
+      "symbol": "ADAUSDT",
+      "score": 75
     },
     {
       "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "ERAUSDT",
+      "symbol": "HBARUSDT",
       "score": 75
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "PAXGUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOTUSDT",
       "score": 75
     }
   ]
