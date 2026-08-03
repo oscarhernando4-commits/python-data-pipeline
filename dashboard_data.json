@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-08-03 10:06:20",
+  "updated_at": "2026-08-03 10:08:16",
   "total_balance_usd": 19.84,
   "usdt_free": 0.231,
   "bnb_free": 0.00424436,
-  "status": "🔵 En Vivo LONG (DOTUSDT @ $0.8060)",
+  "status": "🔵 En Vivo LONG (DOTUSDT @ $0.8070)",
   "position": {
     "symbol": "DOTUSDT",
     "quantity": 21.27,
     "entry_price": 0.799,
-    "highest_price": 0.806,
-    "break_even": false,
+    "highest_price": 0.807,
+    "break_even": true,
     "trailing_active": false,
     "adaptive_sl_pct": 0.96,
     "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una divergencia estructural y una falta de datos críticos en el libro de órdenes que impiden alcanzar el umbral de confianza A+ requerido por el comité para una ejecución de compra."
+    "reasoning": "Ningún candidato cumple con el umbral estricto de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La falta de profundidad en el libro de órdenes y la inestabilidad del mercado actual obligan a proteger el capital mediante una postura de espera (HOLD)."
   }
 }
