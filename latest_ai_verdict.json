@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 12:34:16",
+  "timestamp": "2026-08-03 12:36:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada con una falta de convicción técnica en todos los candidatos analizados. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) exigido por el comité, y el entorno macroeconómico de aversión al riesgo desaconseja cualquier exposición en este momento. Se mantiene la liquidez en espera de una estructura de mercado más clara y alcista.",
+  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de calidad A+ requerido por el comité. La debilidad estructural del mercado y la falta de confirmación en el libro de órdenes obligan a una postura defensiva de 'HOLD' para proteger el capital contra la volatilidad bajista.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
@@ -19,11 +19,11 @@
       "score": 50
     },
     {
-      "symbol": "GIGGLEUSDT",
+      "symbol": "EULUSDT",
       "score": 50
     },
     {
-      "symbol": "EULUSDT",
+      "symbol": "GIGGLEUSDT",
       "score": 50
     }
   ]
