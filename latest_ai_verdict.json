@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 14:52:25",
+  "timestamp": "2026-08-03 14:54:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo en un entorno de mercado hostil y selectivo.",
+  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%) necesario para garantizar la preservación del capital, por lo que se prioriza la liquidez.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
@@ -23,8 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
-      "score": 65
+      "symbol": "FETUSDT",
+      "score": 70
     }
   ]
 }
