@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-03 04:50:15",
+  "timestamp": "2026-08-03 04:52:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución agresiva con una ausencia crítica de liquidez institucional. Ningún activo cumple con los criterios de seguridad y convicción exigidos por el comité, por lo que la preservación del capital es la prioridad absoluta.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad estructural extrema sin activos que cumplan con los criterios de alta convicción (Score >= 65). Se prioriza la preservación de capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "NILUSDT",
       "score": 60
     },
     {
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "NILUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "INJUSDT",
-      "score": 60
-    },
-    {
       "symbol": "ATOMUSDT",
       "score": 60
+    },
+    {
+      "symbol": "ZAMAUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "STXUSDT",
+      "score": 55
     }
   ]
 }
