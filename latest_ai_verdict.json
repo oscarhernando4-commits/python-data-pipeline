@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 12:20:19",
+  "timestamp": "2026-08-03 12:22:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una zona de trampa de valor con baja profundidad de liquidez y scores técnicos insuficientes. Ningún candidato cumple con los criterios de convicción A+ exigidos por el comité, por lo que la orden es proteger el capital y esperar una mejor configuración.",
+  "reasoning": "El mercado actual se encuentra en un estado de distribución forzada con una ausencia total de activos que cumplan con el umbral de convicción A+ (Score >= 65). La falta de muros de soporte institucionales y la fragilidad técnica generalizada obligan al comité a priorizar la preservación del capital sobre la ejecución de operaciones especulativas.",
   "top_candidates": [
-    {
-      "symbol": "TRUMPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TIAUSDT",
-      "score": 60
-    },
     {
       "symbol": "SEIUSDT",
       "score": 60
     },
     {
-      "symbol": "OPUSDT",
-      "score": 60
+      "symbol": "DOGEUSDT",
+      "score": 50
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "ADAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "UNIUSDT",
       "score": 50
     }
   ]

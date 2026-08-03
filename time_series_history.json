@@ -1,12 +1,25 @@
 {
-  "STXUSDT": [
+  "ZROUSDT": [
     {
-      "timestamp": "2026-08-03 12:20:10",
-      "price": 0.1364,
-      "score": 50,
-      "rsi": 50.84,
+      "timestamp": "2026-08-03 12:22:08",
+      "price": 0.726,
+      "score": 30,
+      "rsi": 56.25,
       "macd": "Neutral",
-      "volume_surge": 0.01,
+      "volume_surge": 0.05,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STRKUSDT": [
+    {
+      "timestamp": "2026-08-03 12:22:08",
+      "price": 0.02453,
+      "score": 50,
+      "rsi": 46.79,
+      "macd": "Neutral",
+      "volume_surge": 0.33,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
