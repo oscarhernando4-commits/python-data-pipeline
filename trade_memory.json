@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 654,
-    "wins": 204,
+    "total_trades": 674,
+    "wins": 224,
     "losses": 450,
-    "win_rate_pct": 31.19,
-    "total_pnl_usd": -5.95769454545459
+    "win_rate_pct": 33.23,
+    "total_pnl_usd": 86.0423054545454
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -44,7 +44,8 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ARBUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on EPICUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BCHUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BTCUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BTCUSDT)",
+      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on WAXPUSDT)"
     ]
   },
   "history": [
@@ -10615,6 +10616,346 @@
       "result": "WIN",
       "notes": "Real Money Trade closed with 3.19%",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-061",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-062",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-063",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-064",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-065",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-066",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-067",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-068",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-069",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-071",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-072",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-073",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-074",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-075",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-076",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-077",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-078",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-079",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-03 19:42:25",
+      "account_id": "SIM-080",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WAXPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00437,
+      "exit_price": 0.00417,
+      "pnl_usd": 4.6,
+      "result": "WIN",
+      "notes": "Win on WAXPUSDT (+$4.60 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
