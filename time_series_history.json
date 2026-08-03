@@ -1,17 +1,41 @@
 {
-  "JTOUSDT": [
+  "OPENUSDT": [
     {
-      "timestamp": "2026-08-03 18:34:11",
-      "price": 0.5022,
-      "score": 50,
-      "rsi": 65.83,
+      "timestamp": "2026-08-03 18:36:09",
+      "price": 0.188,
+      "score": 15,
+      "rsi": 48.78,
       "macd": "Neutral",
-      "volume_surge": 0.12,
+      "volume_surge": 0.05,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
-  ]
-}}}
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-03 18:36:09",
+      "price": 0.1378,
+      "score": 45,
+      "rsi": 53.72,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PYRUSDT": [
+    {
+      "timestamp": "2026-08-03 18:36:09",
+      "price": 0.062,
+      "score": 35,
+      "rsi": 52.19,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
   ]
 }

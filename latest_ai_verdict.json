@@ -1,14 +1,22 @@
 {
-  "timestamp": "2026-08-03 18:34:20",
+  "timestamp": "2026-08-03 18:36:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento neutral con falta de volumen institucional y soporte en el libro de órdenes. Ningún candidato cumple con la exigencia de convicción A+ (Score >= 65 con confirmación de liquidez), por lo que el comité decide mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "Ninguno de los candidatos cumple con la totalidad de los requisitos de convicción A+ (Score >= 65, Bids > 55% y confirmación de volumen). Ante la incertidumbre macro y la falta de datos de liquidez, la estrategia institucional es preservar el capital y evitar la exposición a activos con alta probabilidad de reversión.",
   "top_candidates": [
+    {
+      "symbol": "PYTHUSDT",
+      "score": 75
+    },
     {
       "symbol": "VIRTUALUSDT",
       "score": 70
+    },
+    {
+      "symbol": "XLMUSDT",
+      "score": 65
     },
     {
       "symbol": "XAUTUSDT",
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "PAXGUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "ERAUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "COTIUSDT",
       "score": 65
     }
   ]
