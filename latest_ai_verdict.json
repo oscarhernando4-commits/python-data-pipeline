@@ -1,26 +1,26 @@
 {
-  "timestamp": "2026-08-03 21:10:18",
+  "timestamp": "2026-08-03 21:12:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que no existen activos que cumplan con los criterios de alta convicción (Score >= 65) y soporte de liquidez necesarios para operar en el actual entorno de mercado bajista, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado actual no cumple con los criterios de alta convicción (Score >= 65) exigidos por el comité. La ausencia de soporte institucional en el libro de órdenes y la inestabilidad macroeconómica dictan una postura defensiva de protección de capital.",
   "top_candidates": [
-    {
-      "symbol": "WLFIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ACEUSDT",
-      "score": 60
-    },
     {
       "symbol": "ACXUSDT",
       "score": 60
     },
     {
+      "symbol": "EDENUSDT",
+      "score": 60
+    },
+    {
       "symbol": "INJUSDT",
       "score": 55
+    },
+    {
+      "symbol": "UNIUSDT",
+      "score": 50
     },
     {
       "symbol": "SKHYBUSDT",
