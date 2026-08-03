@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 13:08:22",
+  "timestamp": "2026-08-03 13:10:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual carece de la convicción necesaria para una entrada de alta probabilidad; la mayoría de los activos presentan scores técnicos mediocres y una falta de soporte institucional en el libro de órdenes, lo que obliga a mantener una postura defensiva en liquidez.",
+  "reasoning": "El mercado se encuentra en un estado de fragmentación y alta volatilidad con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia institucional es mantener la liquidez en USDT para evitar el riesgo de 'trampas de valor' en un entorno de limpieza de activos zombis.",
   "top_candidates": [
+    {
+      "symbol": "FILUSDT",
+      "score": 75
+    },
     {
       "symbol": "SEIUSDT",
       "score": 75
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
+      "symbol": "STRKUSDT",
+      "score": 75
+    },
+    {
       "symbol": "BTCUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "HOMEUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "ENAUSDT",
       "score": 65
     }
   ]
