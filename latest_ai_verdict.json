@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 13:58:24",
+  "timestamp": "2026-08-03 14:00:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de candidatos con scores técnicos de 75, la ausencia de una dominancia clara en el libro de órdenes y la persistencia de un sentimiento de miedo (Fear 28) aumentan el riesgo de 'trampa de valor'. Se ha decidido mantener la liquidez en espera de una estructura de mercado más definida y con mayor convicción institucional.",
+  "reasoning": "El mercado se encuentra en una fase de indecisión institucional profunda con una correlación mixta. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT).",
   "top_candidates": [
     {
+      "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "score": 75
+    },
+    {
       "symbol": "JTOUSDT",
-      "score": 85
+      "score": 75
     },
     {
       "symbol": "XLMUSDT",
-      "score": 75
+      "score": 65
     },
     {
       "symbol": "GRAMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NEARUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LINKUSDT",
-      "score": 75
+      "score": 65
     }
   ]
 }
