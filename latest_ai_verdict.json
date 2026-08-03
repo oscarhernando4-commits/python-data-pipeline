@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 11:16:15",
+  "timestamp": "2026-08-03 11:18:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica sin activos que cumplan con los criterios de alta convicción (Score A+). La estrategia institucional es preservar el capital en efectivo (USDT) hasta que se observe una acumulación clara de ballenas y una mejora en el sentimiento global.",
+  "reasoning": "El mercado se encuentra en una fase de estrangulamiento de liquidez con una correlación negativa extrema. Ningún candidato cumple con el umbral de Score Técnico >= 65 ni con la confirmación de soporte institucional en el libro de órdenes, por lo que la única decisión prudente es mantener la liquidez en stablecoins.",
   "top_candidates": [
+    {
+      "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "score": 50
+    },
     {
       "symbol": "EULUSDT",
       "score": 50
     },
     {
-      "symbol": "ICPUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "INJUSDT",
+      "symbol": "ETCUSDT",
       "score": 50
     },
     {
       "symbol": "SYNUSDT",
       "score": 50
-    },
-    {
-      "symbol": "BNBUSDT",
-      "score": 45
     }
   ]
 }
