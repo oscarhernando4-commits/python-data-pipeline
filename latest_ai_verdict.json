@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 15:24:24",
+  "timestamp": "2026-08-03 15:26:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de liquidez y soporte de ballenas). La alta volatilidad y la falta de datos históricos en los activos sugeridos aumentan el riesgo de 'falling knives', por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con sentimiento de miedo, donde la falta de profundidad en el libro de órdenes y la ausencia de una tendencia definida impiden la ejecución de trades de alta convicción, priorizando la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "ASTERUSDT",
@@ -19,8 +19,8 @@
       "score": 75
     },
     {
-      "symbol": "ADAUSDT",
-      "score": 65
+      "symbol": "OPUSDT",
+      "score": 70
     },
     {
       "symbol": "GRAMUSDT",
