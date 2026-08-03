@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 19:58:20",
+  "timestamp": "2026-08-03 20:00:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de estancamiento con baja liquidez y falta de muros de soporte claros. Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 55% ni con una convicción técnica superior al 70%, por lo que la estrategia de protección de capital dicta mantener la posición en efectivo.",
+  "reasoning": "El mercado se encuentra en una 'Trampa de Neutralidad' con falta de volumen institucional y una asimetría defensiva. Ningún candidato cumple con la convicción A+ necesaria para superar el veto de riesgo, por lo que se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
       "score": 75
     },
     {
-      "symbol": "LDOUSDT",
+      "symbol": "INTCBUSDT",
       "score": 75
-    },
-    {
-      "symbol": "BANKUSDT",
-      "score": 65
     },
     {
       "symbol": "LTCUSDT",
       "score": 65
     },
     {
-      "symbol": "RENDERUSDT",
+      "symbol": "BANKUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "VANRYUSDT",
       "score": 65
     }
   ]
