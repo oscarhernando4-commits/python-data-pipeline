@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-03 05:48:18",
+  "timestamp": "2026-08-03 05:50:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución por pánico con una correlación de debilidad sistémica. Ningún activo cumple con los criterios de Score técnico (>= 65) ni con la profundidad de liquidez necesaria para una ejecución segura. Se prioriza la protección del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en un entorno de alta toxicidad con una clara tendencia a la capitulación. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que la estrategia institucional es preservar el capital y mantenerse en liquidez (USDT).",
   "top_candidates": [
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "POLUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NILUSDT",
       "score": 60
     },
     {
@@ -15,16 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "DODOUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     },
     {
-      "symbol": "XLMUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "BANKUSDT",
-      "score": 50
+      "symbol": "DODOUSDT",
+      "score": 60
     }
   ]
 }
