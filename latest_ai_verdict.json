@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 16:50:23",
+  "timestamp": "2026-08-03 16:52:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (Score A+ y soporte de libro de órdenes) necesarios para ejecutar una operación de compra, priorizando la preservación del capital sobre la especulación.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y dominancia de Bids > 55%). El mercado se encuentra en una fase de indecisión con alta probabilidad de trampas de liquidez, por lo que la estrategia institucional es mantener la posición en efectivo (USDT) para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "ETCUSDT",
@@ -15,11 +15,11 @@
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "SKHYBUSDT",
       "score": 65
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "TAOUSDT",
       "score": 65
     },
     {
