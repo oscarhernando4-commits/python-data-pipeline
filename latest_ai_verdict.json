@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-03 08:42:21",
+  "timestamp": "2026-08-03 08:44:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos que cumplan con los criterios de alta convicción (Score >= 65) y soporte de liquidez necesarios para operar. Ante la debilidad sistémica y el riesgo de un flash crash, la estrategia óptima es mantenerse en efectivo (USDT) para evitar trampas de liquidez.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con una correlación bajista predominante. Ningún candidato cumple con el umbral de Score A+ (>=65) ni con la confirmación de liquidez necesaria en el libro de órdenes. Se mantiene la liquidez en USDT para evitar riesgos innecesarios de 'falling knives' en un entorno de capitulación.",
   "top_candidates": [
     {
       "symbol": "DODOUSDT",
       "score": 70
     },
     {
-      "symbol": "NEARUSDT",
+      "symbol": "XLMUSDT",
       "score": 60
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "NEARUSDT",
       "score": 60
     },
     {
@@ -23,8 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "ETHUSDT",
-      "score": 55
+      "symbol": "MUBARAKUSDT",
+      "score": 60
     }
   ]
 }
