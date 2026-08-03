@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-03 23:32:22",
+  "timestamp": "2026-08-03 23:34:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. Ningún activo presenta un score técnico superior a 60 ni una estructura de libro de órdenes que garantice una entrada de bajo riesgo, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con un sesgo bajista severo. Ninguno de los activos analizados cumple con el umbral de seguridad A+ (Score >= 65) ni con la profundidad de mercado necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es mantener la liquidez en espera de una estructura de mercado más saludable.",
   "top_candidates": [
     {
       "symbol": "ENAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NEXOUSDT",
       "score": 60
     },
     {
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "JSTUSDT",
+      "symbol": "BICOUSDT",
       "score": 50
     }
   ]
