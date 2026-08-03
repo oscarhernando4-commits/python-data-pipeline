@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 01:18:19",
+  "timestamp": "2026-08-03 01:20:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno de mercado es de alta fragilidad sistémica. Ningún activo cumple con el requisito de Score Técnico >= 65 ni con la confirmación de soporte institucional en el libro de órdenes, por lo que se mantiene la política de no operar (HOLD) para preservar el capital.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva y falta de dispersión en los scores de los activos. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65) ni con la confirmación de liquidez necesaria en el orderbook. Se prioriza la protección del capital frente a la alta probabilidad de un 'flash crash' de liquidez.",
   "top_candidates": [
     {
       "symbol": "DCRUSDT",
@@ -19,7 +19,7 @@
       "score": 55
     },
     {
-      "symbol": "SAGAUSDT",
+      "symbol": "EULUSDT",
       "score": 50
     },
     {
