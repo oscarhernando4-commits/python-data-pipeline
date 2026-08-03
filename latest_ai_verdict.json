@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-03 00:08:19",
+  "timestamp": "2026-08-03 00:10:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que no existen activos que cumplan con los criterios de alta convicción (Score >= 65) y soporte institucional en el libro de órdenes, por lo que se mantiene la posición en liquidez para evitar riesgos innecesarios en un mercado de alta volatilidad y baja confianza.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con una asimetría de riesgo negativa. Ningún activo cumple con los criterios estrictos de Score A+ (>= 65) ni con la profundidad de mercado necesaria para una ejecución segura. Se prioriza la preservación de capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "MIRAUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "ZBTUSDT",
       "score": 70
     },
     {
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "SNXXBUSDT",
       "score": 60
     },
     {
-      "symbol": "ZBTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "NVDABUSDT",
+      "symbol": "ORDIUSDT",
       "score": 60
     }
   ]
