@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-03 22:06:19",
+  "timestamp": "2026-08-03 22:08:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de distribución forzada sin activos que cumplan con los criterios de alta convicción (Score >= 65). Se prioriza la protección del capital sobre la especulación en un entorno de baja liquidez y alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en un estado de alta toxicidad y falta de convicción institucional. Ningún activo cumple con los criterios de selección A+ (Score >= 65) ni presenta una ventaja estadística clara en el libro de órdenes, por lo que la estrategia óptima es la preservación total del capital.",
   "top_candidates": [
+    {
+      "symbol": "AVAXUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "INTCBUSDT",
+      "score": 60
+    },
     {
       "symbol": "TAOUSDT",
       "score": 55
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "VICUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "COTIUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "HFTUSDT",
       "score": 50
     }
   ]
