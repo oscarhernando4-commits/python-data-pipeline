@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-03 11:56:14",
+  "timestamp": "2026-08-03 11:58:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de apatía sistémica con scores técnicos insuficientes (ninguno alcanza el umbral A+ de 65). La alta tasa de fallos en trades recientes y la falta de convicción en el libro de órdenes obligan a la preservación total del capital mediante la política de 'No-Trade' hasta que las condiciones macro y técnicas mejoren.",
+  "reasoning": "El comité ha determinado que el entorno actual de mercado es de alta incertidumbre y riesgo sistémico. Ninguno de los candidatos analizados cumple con los requisitos estrictos de Score Técnico (>= 65) ni con la confirmación de liquidez necesaria para una entrada A+. Se prioriza la preservación del capital sobre la especulación en activos de baja convicción.",
   "top_candidates": [
     {
       "symbol": "TIAUSDT",
       "score": 70
     },
     {
-      "symbol": "GIGGLEUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "GIGGLEUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "PAXGUSDT",
       "score": 60
     }
   ]
