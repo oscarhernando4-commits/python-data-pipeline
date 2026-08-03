@@ -136,6 +136,7 @@ def analyze_multi_timeframe_candles(symbol):
     ma25_15m = sum(closes_15m[-20:]) / len(closes_15m[-20:]) if closes_15m else closes_15m[-1]
     price_above_15m_ma7 = closes_15m[-1] > ma7_15m
     price_above_15m_ma25 = closes_15m[-1] > ma25_15m
+    dist_from_15m_ma7_pct = round(((closes_15m[-1] - ma7_15m) / ma7_15m) * 100.0, 2) if ma7_15m > 0 else 0.0
     
     avg_vol_15m = sum(vols_15m[-5:]) / len(vols_15m[-5:]) if len(vols_15m) >= 5 else 1.0
     vol_surge_15m = round(vols_15m[-1] / avg_vol_15m, 2) if avg_vol_15m > 0 else 1.0
@@ -150,7 +151,7 @@ def analyze_multi_timeframe_candles(symbol):
     ]
     multi_tf_score = sum(score_components)
     
-    # 4. Detect 15m Candle Over-extension / Parabolic Spike (Prevents buying tops like ZRO)
+    # 4. Detect 15m Candle Over-extension / Parabolic Spike (Prevents buying tops like ZRO, ATOM)
     is_overextended_15m = False
     overextension_reason = None
     if klines_15m and len(klines_15m) >= 2:
@@ -170,14 +171,17 @@ def analyze_multi_timeframe_candles(symbol):
         elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > 2.5:
             is_overextended_15m = True
             overextension_reason = f"Vela de 15m sobre-extendida en la cima (+{((close_15m - open_15m) / open_15m) * 100.0:.2f}%)"
+        elif dist_from_15m_ma7_pct > 1.2:
+            is_overextended_15m = True
+            overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct}% sobre MA7). Exige ruptura fresca <= 1.2%"
         elif not price_above_15m_ma7 or not price_above_15m_ma25:
             is_overextended_15m = True
             overextension_reason = f"Precio de 15m por debajo de medias móviles (Precio: {closes_15m[-1]} < MA7: {ma7_15m:.4f} / MA25: {ma25_15m:.4f})"
 
     pattern_15m_summary = (
-        f"Precio 15m=${closes_15m[-1]:.4f} | MA7_15m=${ma7_15m:.4f} | MA25_15m=${ma25_15m:.4f} | "
-        f"Por encima MA7/MA25={'SÍ' if price_above_15m_ma7 and price_above_15m_ma25 else 'NO'} | "
-        f"VolSurge 15m={vol_surge_15m}x"
+        f"Precio 15m=${closes_15m[-1]:.4f} | MA7_15m=${ma7_15m:.4f} (Distancia: {dist_from_15m_ma7_pct:+.2f}%) | "
+        f"MA25_15m=${ma25_15m:.4f} | Por encima MA7/MA25={'SÍ' if price_above_15m_ma7 and price_above_15m_ma25 else 'NO'} | "
+        f"Fase 15m={'RUPTURA_FRESCA (INICIO)' if 0.0 <= dist_from_15m_ma7_pct <= 1.2 else 'SOBRE_EXTENDIDO (CIMA)'} | VolSurge 15m={vol_surge_15m}x"
     )
 
     return {

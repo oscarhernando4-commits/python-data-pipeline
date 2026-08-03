@@ -101,7 +101,8 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     ⚠️ REGLA DE ORO DE VELAS DE 15M (DECISIÓN PRINCIPAL):
     1. Si el precio de 15m está por DEBAJO de MA(7) o MA(25) en 15m, RECHAZA la compra de inmediato (HOLD).
     2. Si la vela de 15m presenta mechas superiores de reversión o está sobre-extendida en la cima, RECHAZA la compra (HOLD).
-    3. Exige que 5m, 15m y 1h muestren alineación alcista simultánea.
+    3. Exige que 5m y 15m muestren alineación alcista simultánea.
+    4. REGLA DE ENTRADA TEMPRANA (INICIO DE IMPULSO): Si la Fase 15m es SOBRE_EXTENDIDO (CIMA) o la distancia respecto a MA(7) supera el +1.2%, RECHAZA la compra por llegada tardía en el techo (HOLD). APRUEBA únicamente en fase RUPTURA_FRESCA (INICIO) cuando el movimiento recién empieza.
 
     LECCIONES APRENDIDAS DE 99 SIMULACIONES (RAG MEMORY):
     Patrones Prohibidos (Trampas descubiertas):
