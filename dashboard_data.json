@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 13:48:23",
+  "updated_at": "2026-08-03 13:50:28",
   "total_balance_usd": 19.44,
   "usdt_free": 0.1914,
   "bnb_free": 0.00411434,
@@ -11,8 +11,8 @@
     "highest_price": 1.289,
     "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 0.96,
-    "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
+    "adaptive_sl_pct": 0.6,
+    "volatility_regime": "⏳ Escalera 20m: SL Apretado a -0.60%"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de fragmentación y miedo, sin una configuración técnica o de liquidez que cumpla con los estándares A+ exigidos por el comité para una entrada segura."
+    "reasoning": "A pesar de que NEAR y SEI tienen scores técnicos altos, la ausencia de dominancia en el libro de órdenes (Bids < 55%) y la incertidumbre macroeconómica actual impiden la ejecución de una orden de compra bajo los estrictos estándares de riesgo del comité."
   }
 }
