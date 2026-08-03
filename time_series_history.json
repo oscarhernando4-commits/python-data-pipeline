@@ -1,12 +1,25 @@
 {
-  "STXUSDT": [
+  "OPUSDT": [
     {
-      "timestamp": "2026-08-03 20:46:10",
-      "price": 0.1376,
-      "score": 15,
-      "rsi": 49.01,
+      "timestamp": "2026-08-03 20:48:13",
+      "price": 0.0873,
+      "score": 25,
+      "rsi": 51.06,
       "macd": "Neutral",
-      "volume_surge": 0.02,
+      "volume_surge": 0.07,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PYRUSDT": [
+    {
+      "timestamp": "2026-08-03 20:48:13",
+      "price": 0.061,
+      "score": 15,
+      "rsi": 49.21,
+      "macd": "Neutral",
+      "volume_surge": 0.09,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
