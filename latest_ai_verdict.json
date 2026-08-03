@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 00:00:21",
+  "timestamp": "2026-08-03 00:02:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de supervivencia y distribución forzada. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y volumen confirmado). Se prioriza la preservación de capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado presenta una estructura de rotación defensiva con alta incertidumbre. Ninguno de los candidatos seleccionados logra superar el umbral de convicción A+ debido a la neutralidad en el libro de órdenes y la falta de historial técnico sólido, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "SNXXBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ARBUSDT",
       "score": 75
     }
   ]
