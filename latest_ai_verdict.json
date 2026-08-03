@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-03 17:52:23",
+  "timestamp": "2026-08-03 17:54:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "El comité ha determinado que, a pesar de la fortaleza técnica de activos como TAO, la falta de soporte en el libro de órdenes y la inestabilidad macroeconómica actual no cumplen con los criterios de alta convicción (Score >= 65 y Confianza >= 70%) requeridos por el protocolo de riesgo, por lo que se prioriza la preservación del capital.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un estado de indecisión técnica y falta de liquidez institucional confirmada en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia más prudente es el 'HOLD' para evitar trampas de valor y proteger el capital.",
   "top_candidates": [
     {
       "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "GNOUSDT",
+      "symbol": "JTOUSDT",
       "score": 75
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "XLMUSDT",
       "score": 65
     },
     {
@@ -23,7 +23,7 @@
       "score": 65
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "MUBUSDT",
       "score": 65
     }
   ]

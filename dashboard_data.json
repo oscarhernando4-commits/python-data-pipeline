@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 17:52:23",
+  "updated_at": "2026-08-03 17:54:24",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 45,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que, a pesar de la fortaleza técnica de activos como TAO, la falta de soporte en el libro de órdenes y la inestabilidad macroeconómica actual no cumplen con los criterios de alta convicción (Score >= 65 y Confianza >= 70%) requeridos por el protocolo de riesgo, por lo que se prioriza la preservación del capital."
+    "reasoning": "El mercado se encuentra en un estado de indecisión técnica y falta de liquidez institucional confirmada en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia más prudente es el 'HOLD' para evitar trampas de valor y proteger el capital."
   }
 }
