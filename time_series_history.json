@@ -1,12 +1,77 @@
 {
-  "PYRUSDT": [
+  "JTOUSDT": [
     {
-      "timestamp": "2026-08-03 22:28:10",
-      "price": 0.064,
-      "score": 45,
-      "rsi": 59.81,
+      "timestamp": "2026-08-03 22:30:11",
+      "price": 0.5042,
+      "score": 10,
+      "rsi": 51.55,
       "macd": "Neutral",
-      "volume_surge": 2.49,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-03 22:30:11",
+      "price": 0.0872,
+      "score": 0,
+      "rsi": 47.06,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "EDENUSDT": [
+    {
+      "timestamp": "2026-08-03 22:30:11",
+      "price": 0.03939,
+      "score": 10,
+      "rsi": 50.46,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "1000SATSUSDT": [
+    {
+      "timestamp": "2026-08-03 22:30:11",
+      "price": 1.012e-05,
+      "score": 15,
+      "rsi": 48.89,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-03 22:30:11",
+      "price": 0.1371,
+      "score": 0,
+      "rsi": 40.92,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-03 22:30:11",
+      "price": 2.84e-06,
+      "score": 0,
+      "rsi": 43.73,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
