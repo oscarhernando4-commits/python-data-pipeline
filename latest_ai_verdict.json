@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 15:10:23",
-  "selected_symbol": "BNBUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "BNBUSDT es el único candidato que cumple con el umbral de convicción A+ (Score 85) y pertenece al sector de infraestructura, el cual está atrayendo capital institucional en un mercado de rotación selectiva. Se prioriza la entrada en retroceso con protección de capital estricta.",
+  "timestamp": "2026-08-03 15:12:24",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad exigido por el comité. La falta de dominancia en el libro de órdenes y la incertidumbre macro sugieren que el riesgo de 'falling knife' es elevado, por lo que se mantiene la posición en liquidez (HOLD).",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
-      "score": 85
+      "symbol": "ASTERUSDT",
+      "score": 75
     },
     {
       "symbol": "CAKEUSDT",
       "score": 75
     },
     {
+      "symbol": "EULUSDT",
+      "score": 65
+    },
+    {
       "symbol": "BANKUSDT",
       "score": 65
     },
     {
-      "symbol": "GRAMUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "SOXLBUSDT",
+      "symbol": "ADAUSDT",
       "score": 65
     }
   ]
