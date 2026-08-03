@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-03 17:26:21",
+  "timestamp": "2026-08-03 17:28:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de neutralidad y alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional), por lo que el comité ha decidido mantener la liquidez en USDT para evitar la exposición a una trampa de liquidez.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con score técnico de 75, la falta de dominancia compradora en el libro de órdenes (50% vs 50%) y el entorno de mercado en 'Fear' invalidan la ejecución de cualquier posición, priorizando la protección de la liquidez ante la alta probabilidad de falsas rupturas.",
   "top_candidates": [
-    {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
     {
       "symbol": "ALLOUSDT",
       "score": 75
     },
     {
-      "symbol": "ZAMAUSDT",
+      "symbol": "ETCUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "ZAMAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUNUSDT",
       "score": 75
     }
   ]
