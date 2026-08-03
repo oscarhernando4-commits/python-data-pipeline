@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-08-03 13:04:22",
+  "updated_at": "2026-08-03 13:06:22",
   "total_balance_usd": 19.61,
   "usdt_free": 0.1942,
   "bnb_free": 0.00415754,
-  "status": "🔵 En Vivo LONG (ARBUSDT @ $0.0812)",
+  "status": "🔵 En Vivo LONG (ARBUSDT @ $0.0810)",
   "position": {
     "symbol": "ARBUSDT",
     "quantity": 209.1,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 45,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con la regla de oro de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado actual se encuentra en una fase de alta volatilidad y baja liquidez, lo que hace que cualquier entrada sea prematura y de alto riesgo. Se prioriza la preservación del capital sobre la ejecución forzada."
+    "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de activos con score 65, ninguno cumple con la profundidad de libro de órdenes necesaria ni con la confirmación de volumen institucional para mitigar el riesgo en un entorno de mercado con Fear & Greed en 28."
   }
 }
