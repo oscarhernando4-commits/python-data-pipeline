@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-03 00:20:19",
+  "timestamp": "2026-08-03 00:22:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional y pánico minorista. Ningún activo cumple con los criterios de alta convicción (Score >= 65) ni con la profundidad de libro necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la ejecución de trades especulativos de baja calidad.",
+  "reasoning": "El mercado presenta una correlación bajista extrema y falta de fuerza relativa en los activos analizados. Dado que ningún candidato cumple con el requisito de Score >= 65 y la liquidez es precaria, la estrategia institucional es la preservación total de capital mediante una postura de espera (HOLD).",
   "top_candidates": [
     {
       "symbol": "ARBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ATOMUSDT",
       "score": 60
     },
     {
@@ -15,16 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "NVDABUSDT",
+      "symbol": "SAGAUSDT",
       "score": 60
     },
     {
-      "symbol": "SNXXBUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 45
+      "symbol": "ZBTUSDT",
+      "score": 60
     }
   ]
 }
