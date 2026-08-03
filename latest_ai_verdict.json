@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 14:40:23",
+  "timestamp": "2026-08-03 14:42:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una 'trampa de neutralidad' con falta de profundidad en el libro de órdenes y una divergencia estructural marcada. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (HOLD).",
+  "reasoning": "El mercado presenta una trampa de rango con falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité (Bids > 55% y Score A+), por lo que la decisión unánime es mantener la posición en efectivo (HOLD) para evitar la exposición a la volatilidad sin tendencia.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
       "score": 85
     },
     {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
       "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "UNIUSDT",
+      "symbol": "PUMPUSDT",
       "score": 75
     },
     {
       "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AAVEUSDT",
       "score": 75
     }
   ]
