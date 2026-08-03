@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 04:16:19",
+  "timestamp": "2026-08-03 04:18:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de liquidez necesaria en el libro de órdenes. Ante un entorno de mercado caracterizado por la distribución institucional y la falta de soporte, la estrategia óptima es la preservación total del capital en espera de una configuración de alta probabilidad.",
+  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema con una correlación negativa total. Ningún activo cumple con los criterios estrictos de Score Técnico (>=65) ni de soporte en el libro de órdenes, por lo que la preservación del capital es la única estrategia válida.",
   "top_candidates": [
     {
-      "symbol": "HOMEUSDT",
-      "score": 70
+      "symbol": "XAUTUSDT",
+      "score": 60
     },
     {
       "symbol": "MIRAUSDT",
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 50
+      "symbol": "POLUSDT",
+      "score": 60
     },
     {
-      "symbol": "PORTALUSDT",
-      "score": 50
+      "symbol": "HOMEUSDT",
+      "score": 55
     },
     {
-      "symbol": "1000SATSUSDT",
+      "symbol": "SUIUSDT",
       "score": 50
     }
   ]
