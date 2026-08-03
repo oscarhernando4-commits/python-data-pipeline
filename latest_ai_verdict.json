@@ -1,14 +1,22 @@
 {
-  "timestamp": "2026-08-03 01:22:16",
+  "timestamp": "2026-08-03 01:24:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una vulnerabilidad estructural extrema y falta de soporte institucional. Ningún activo cumple con los criterios de alta convicción (Score >= 65) establecidos por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en un estado de consolidación bajo estrés con debilidad sistémica generalizada. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico A+ (>= 65) ni presenta una ventaja estadística clara en el libro de órdenes. Se prioriza la preservación del capital sobre la ejecución de trades de baja convicción.",
   "top_candidates": [
     {
       "symbol": "DCRUSDT",
       "score": 70
+    },
+    {
+      "symbol": "EWYBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "REZUSDT",
+      "score": 60
     },
     {
       "symbol": "NVDABUSDT",
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "EULUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "SNXXBUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "TLMUSDT",
       "score": 50
     }
   ]
