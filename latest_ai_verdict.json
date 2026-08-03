@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 20:30:21",
+  "timestamp": "2026-08-03 20:32:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragmentación peligrosa y falta de convicción compradora. Ninguno de los candidatos cumple con el umbral de soporte de libro de órdenes (Bids > 55%) ni con una confirmación de volumen institucional, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en un estado de estancamiento con sesgo bajista y falta de convicción compradora. Ninguno de los candidatos cumple con el umbral de seguridad A+ ni con la profundidad de libro de órdenes necesaria para garantizar una operación de alta probabilidad, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "LUNCUSDT",
+      "symbol": "INTCBUSDT",
       "score": 75
     },
     {
-      "symbol": "INTCBUSDT",
+      "symbol": "LUNCUSDT",
       "score": 75
     },
     {
