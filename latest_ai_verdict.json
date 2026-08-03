@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-03 18:10:17",
+  "timestamp": "2026-08-03 18:12:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de acumulación silenciosa con baja convicción institucional. Ninguno de los candidatos cumple con el umbral de soporte de libro de órdenes (Bids > 55%) ni con la confirmación de volumen necesaria para mitigar el riesgo de una trampa de liquidez, por lo que se prioriza la protección del capital.",
+  "reasoning": "El mercado se encuentra en una fase de consolidación bajo estrés con una falta de liquidez institucional clara en los activos analizados. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es mantener la posición en efectivo para evitar el riesgo de 'falling knives' o trampas de liquidez.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZAMAUSDT",
       "score": 75
     },
     {
@@ -15,16 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "LUNCUSDT",
+      "symbol": "VIRTUALUSDT",
       "score": 75
     },
     {
-      "symbol": "SKHYBUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "XLMUSDT",
-      "score": 65
+      "symbol": "LUNCUSDT",
+      "score": 75
     }
   ]
 }
