@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 04:08:16",
+  "timestamp": "2026-08-03 04:10:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y alta incertidumbre macroeconómica. Ninguno de los candidatos cumple con los requisitos estrictos de Score A+ (>= 65) y soporte de liquidez necesarios para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
+  "reasoning": "El comité ha determinado que el entorno actual es de alta toxicidad y capitulación técnica. Ningún activo cumple con los criterios estrictos de riesgo A+ establecidos por el CRO. Se prioriza la protección del balance sobre la especulación, manteniendo la liquidez en espera de una estructura de mercado más clara y menos correlacionada a la baja.",
   "top_candidates": [
     {
       "symbol": "HOMEUSDT",
@@ -19,12 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "HYPERUSDT",
+      "symbol": "ONDOUSDT",
       "score": 55
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 50
+      "symbol": "HYPERUSDT",
+      "score": 55
     }
   ]
 }
