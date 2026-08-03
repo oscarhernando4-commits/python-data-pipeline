@@ -1,22 +1,14 @@
 {
-  "timestamp": "2026-08-03 05:04:15",
+  "timestamp": "2026-08-03 05:06:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad estructural generalizada con una distribución institucional agresiva. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que la decisión institucional es mantener la liquidez en espera de una configuración de mercado más favorable.",
+  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual carece de la fuerza técnica y la liquidez necesaria para una operación de alta probabilidad, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
   "top_candidates": [
     {
       "symbol": "MIRAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "NILUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "INJUSDT",
-      "score": 60
+      "score": 70
     },
     {
       "symbol": "POLUSDT",
@@ -25,6 +17,14 @@
     {
       "symbol": "ATOMUSDT",
       "score": 60
+    },
+    {
+      "symbol": "STXUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "score": 50
     }
   ]
 }
