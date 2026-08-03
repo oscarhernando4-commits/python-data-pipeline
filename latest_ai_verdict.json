@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 15:08:21",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de identificar activos con scores técnicos de 65, ninguno cumple con los requisitos de profundidad de mercado (Bids > 55%) ni con la convicción necesaria para mitigar el riesgo de 'flash-crashes' en un entorno de alta fragilidad macro. Se prioriza la preservación de capital sobre la especulación en activos de baja liquidez.",
+  "timestamp": "2026-08-03 15:10:23",
+  "selected_symbol": "BNBUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "BNBUSDT es el único candidato que cumple con el umbral de convicción A+ (Score 85) y pertenece al sector de infraestructura, el cual está atrayendo capital institucional en un mercado de rotación selectiva. Se prioriza la entrada en retroceso con protección de capital estricta.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
-      "score": 75
+      "score": 85
     },
     {
-      "symbol": "LDOUSDT",
+      "symbol": "CAKEUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 65
     },
     {
-      "symbol": "MUBUSDT",
+      "symbol": "SOXLBUSDT",
       "score": 65
     }
   ]
