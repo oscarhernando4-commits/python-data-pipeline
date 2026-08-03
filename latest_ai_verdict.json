@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-03 11:04:16",
+  "timestamp": "2026-08-03 11:06:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de distribución forzada y debilidad estructural generalizada; no existen activos que cumplan con los criterios de alta convicción (Score >= 65) necesarios para una ejecución segura, por lo que la orden es preservar el capital.",
+  "reasoning": "Tras evaluar los 10 candidatos, ninguno cumple con los requisitos mínimos de Score Técnico (>= 65) ni con la confirmación de liquidez en el Orderbook. La estrategia institucional dicta preservar el capital en entornos de alta incertidumbre y baja convicción técnica.",
   "top_candidates": [
     {
+      "symbol": "BICOUSDT",
+      "score": 50
+    },
+    {
       "symbol": "EULUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "PEPEUSDT",
       "score": 50
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "SYNUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ESPUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "SAGAUSDT",
       "score": 50
     }
   ]
