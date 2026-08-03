@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-03 19:36:19",
+  "timestamp": "2026-08-03 19:38:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital en un entorno de mercado con sentimiento de miedo (Fear 28).",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional). El mercado se encuentra en una fase de rotación defensiva donde la preservación del capital es la prioridad absoluta según el mandato del comité.",
   "top_candidates": [
     {
-      "symbol": "SEIUSDT",
-      "score": 85
-    },
-    {
       "symbol": "GRAMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
       "score": 75
     },
     {
@@ -23,8 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "INJUSDT",
+      "symbol": "PYTHUSDT",
       "score": 75
+    },
+    {
+      "symbol": "ARBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SEIUSDT",
+      "score": 70
     }
   ]
 }
