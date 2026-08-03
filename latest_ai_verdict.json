@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-03 10:00:19",
+  "timestamp": "2026-08-03 10:02:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante y falta de liquidez institucional confirmada en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ exigido por el comité, por lo que la estrategia óptima es preservar el capital en efectivo (USDT) hasta que las condiciones macro y técnicas mejoren.",
+  "reasoning": "Ningún candidato cumple con el umbral estricto de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de consolidación técnica con alta probabilidad de volatilidad, por lo que la estrategia institucional es mantener la liquidez en espera de una señal de alta precisión.",
   "top_candidates": [
     {
-      "symbol": "NEARUSDT",
-      "score": 75
+      "symbol": "POLUSDT",
+      "score": 85
     },
     {
       "symbol": "AAVEUSDT",
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "SUNUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 65
     },
     {
-      "symbol": "BANKUSDT",
+      "symbol": "LTCUSDT",
       "score": 65
     }
   ]
