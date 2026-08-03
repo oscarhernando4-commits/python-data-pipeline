@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-03 06:12:18",
+  "timestamp": "2026-08-03 06:14:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica con falta de soporte institucional y una estructura técnica mediocre en todos los candidatos. Ningún activo cumple con el umbral de seguridad A+ requerido por el comité, por lo que se mantiene la neutralidad para evitar la exposición a una posible cascada de liquidaciones.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una ausencia total de setups que cumplan con el umbral de seguridad A+ (Score >= 65). La falta de profundidad en el libro de órdenes y la debilidad macroeconómica dictan una postura de preservación de capital absoluta.",
   "top_candidates": [
     {
       "symbol": "POLUSDT",
       "score": 70
-    },
-    {
-      "symbol": "NEARUSDT",
-      "score": 60
     },
     {
       "symbol": "XAUTUSDT",
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "DOTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ATOMUSDT",
       "score": 60
     }
   ]
