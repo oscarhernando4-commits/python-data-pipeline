@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-03 19:00:21",
+  "timestamp": "2026-08-03 19:02:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes verificado). La prioridad es la preservación del capital ante la volatilidad actual y la falta de datos de profundidad de mercado.",
+  "reasoning": "El comité ha determinado que, a pesar de la fortaleza relativa de ciertos activos en el sector Layer 1, el mercado carece de la profundidad de liquidez y la convicción institucional necesaria para ejecutar una operación con alta probabilidad de éxito, optando por una postura defensiva de preservación de capital.",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "INJUSDT",
       "score": 75
     },
     {
@@ -15,16 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 65
+      "symbol": "STXUSDT",
+      "score": 75
     },
     {
-      "symbol": "BANKUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "ERAUSDT",
-      "score": 65
+      "symbol": "UNIUSDT",
+      "score": 70
     }
   ]
 }
