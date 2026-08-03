@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-03 13:20:24",
+  "timestamp": "2026-08-03 13:22:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de 'Acumulación Selectiva bajo Estrés' con una tendencia neutral predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y volumen confirmado). Se prioriza la preservación de capital sobre la ejecución especulativa.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de soporte institucional). Ante la divergencia macro y la falta de una estructura técnica clara, la estrategia institucional es proteger la liquidez y esperar una señal de mayor calidad.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "SYNUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TIAUSDT",
+      "symbol": "INJUSDT",
       "score": 75
     }
   ]
