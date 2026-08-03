@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 17:46:23",
+  "timestamp": "2026-08-03 17:48:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de estancamiento técnico con un sesgo defensivo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la decisión institucional es mantener la liquidez en espera de un catalizador claro.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de estancamiento técnico donde la probabilidad de éxito es insuficiente para arriesgar el capital, por lo que se prioriza la preservación de liquidez.",
   "top_candidates": [
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LDOUSDT",
+      "symbol": "GNOUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 65
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "SKHYBUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "KORUBUSDT",
       "score": 65
     }
   ]
