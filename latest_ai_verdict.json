@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 22:14:22",
+  "timestamp": "2026-08-03 22:16:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica sin convicción compradora. Ningún candidato cumple con el umbral de Score A+ (>= 65) ni con la profundidad de libro de órdenes necesaria para una ejecución segura, por lo que la estrategia institucional es mantener la liquidez en espera de mejores condiciones.",
+  "reasoning": "El mercado se encuentra en un estado de estancamiento sistémico y distribución forzada. Ningún activo cumple con los criterios de calidad A+ (Score >= 65) ni con la profundidad de liquidez necesaria para una entrada segura. La estrategia institucional es la preservación total del capital hasta que el entorno macroeconómico muestre una reversión clara de la fuga de liquidez.",
   "top_candidates": [
-    {
-      "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AVAXUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SKHYBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ACXUSDT",
-      "score": 60
-    },
     {
       "symbol": "INTCBUSDT",
       "score": 60
+    },
+    {
+      "symbol": "HOLOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "OPENUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SOXLBUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "MUBUSDT",
+      "score": 50
     }
   ]
 }
