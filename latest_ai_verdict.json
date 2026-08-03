@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-03 18:30:18",
+  "timestamp": "2026-08-03 18:32:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de consolidación lateral con sentimiento de miedo, y ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ y soporte de liquidez necesarios para una ejecución segura, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura técnica neutral. Ninguno de los candidatos cumple con el requisito estricto de Score >= 65 y una dominancia de Bids > 55%, por lo que la decisión institucional es mantener la liquidez para evitar la exposición a activos de baja convicción.",
   "top_candidates": [
     {
-      "symbol": "SKYUSDT",
+      "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "VIRTUALUSDT",
       "score": 75
     },
     {
@@ -15,15 +19,11 @@
       "score": 65
     },
     {
-      "symbol": "JSTUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "MANTRAUSDT",
-      "score": 65
-    },
-    {
       "symbol": "PAXGUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "JSTUSDT",
       "score": 65
     }
   ]
