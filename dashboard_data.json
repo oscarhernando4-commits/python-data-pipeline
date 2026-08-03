@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-08-03 11:32:27",
-  "total_balance_usd": 19.73,
-  "usdt_free": 0.0,
-  "bnb_free": 0.0042226,
+  "updated_at": "2026-08-03 11:34:22",
+  "total_balance_usd": 19.7,
+  "usdt_free": 0.2477,
+  "bnb_free": 0.00420089,
   "status": "🔵 En Vivo LONG (ATOMUSDT @ $1.2820)",
   "position": {
     "symbol": "ATOMUSDT",
@@ -11,8 +11,8 @@
     "highest_price": 1.282,
     "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 1.0,
-    "volatility_regime": "🔵 Standard ATR"
+    "adaptive_sl_pct": 0.96,
+    "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Tras deliberar, el comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 65-75, ninguno cumple con el requisito de soporte institucional (Bids > 55%) ni con una convicción A+ necesaria para mitigar el riesgo en un mercado con sesgo NEUTRAL. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad inducida."
+    "reasoning": "El mercado se encuentra en un estado de estancamiento con alta fragmentación y falta de soporte institucional claro en el libro de órdenes. Ningún candidato cumple con la exigencia de convicción A+ (Score >= 65 con Bids > 55%), por lo que el comité decide mantener la liquidez para evitar pérdidas innecesarias en un entorno de alta volatilidad y baja convicción."
   }
 }
