@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 15:06:24",
+  "timestamp": "2026-08-03 15:08:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de tener candidatos con un score técnico de 75, las condiciones de mercado (Fear 28) y la falta de profundidad en el libro de órdenes (50% Bids) no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El comité ha determinado que, a pesar de identificar activos con scores técnicos de 65, ninguno cumple con los requisitos de profundidad de mercado (Bids > 55%) ni con la convicción necesaria para mitigar el riesgo de 'flash-crashes' en un entorno de alta fragilidad macro. Se prioriza la preservación de capital sobre la especulación en activos de baja liquidez.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PUMPUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "BANKUSDT",
       "score": 65
     },
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "GRAMUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "MUBUSDT",
       "score": 65
     }
   ]

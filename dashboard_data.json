@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-08-03 15:06:25",
-  "total_balance_usd": 20.09,
-  "usdt_free": 0.1914,
+  "updated_at": "2026-08-03 15:08:25",
+  "total_balance_usd": 20.63,
+  "usdt_free": 20.62874,
   "bnb_free": 0.00411434,
-  "status": "🔵 En Vivo LONG (ATOMUSDT @ $1.3300)",
+  "status": "🟦 Buscando Entrada A+",
   "position": {
-    "symbol": "ATOMUSDT",
-    "quantity": 13.14,
-    "entry_price": 1.286,
-    "highest_price": 1.33,
-    "break_even": true,
-    "trailing_active": true,
-    "adaptive_sl_pct": 0.96,
-    "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
+    "symbol": "NINGUNA",
+    "quantity": 0.0,
+    "entry_price": 0.0,
+    "highest_price": 0.0,
+    "break_even": false,
+    "trailing_active": false,
+    "adaptive_sl_pct": 1.0,
+    "volatility_regime": "🔵 Standard ATR"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que, a pesar de tener candidatos con un score técnico de 75, las condiciones de mercado (Fear 28) y la falta de profundidad en el libro de órdenes (50% Bids) no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre."
+    "reasoning": "El comité ha determinado que, a pesar de identificar activos con scores técnicos de 65, ninguno cumple con los requisitos de profundidad de mercado (Bids > 55%) ni con la convicción necesaria para mitigar el riesgo de 'flash-crashes' en un entorno de alta fragilidad macro. Se prioriza la preservación de capital sobre la especulación en activos de baja liquidez."
   }
 }

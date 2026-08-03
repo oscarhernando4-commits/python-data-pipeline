@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 653,
-    "wins": 203,
+    "total_trades": 654,
+    "wins": 204,
     "losses": 450,
-    "win_rate_pct": 31.09,
-    "total_pnl_usd": -6.496434545454589
+    "win_rate_pct": 31.19,
+    "total_pnl_usd": -5.95769454545459
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -10602,6 +10602,19 @@
         "rsi_15m": 81.25,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-03 15:08:25",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "ATOMUSDT",
+      "side": "BUY",
+      "entry_price": 1.286,
+      "exit_price": 1.327,
+      "pnl_usd": 0.538739999999999,
+      "result": "WIN",
+      "notes": "Real Money Trade closed with 3.19%",
+      "context": {}
     }
   ]
 }
