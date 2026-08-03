@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-08-03 15:02:24",
-  "total_balance_usd": 20.02,
+  "updated_at": "2026-08-03 15:04:26",
+  "total_balance_usd": 20.09,
   "usdt_free": 0.1914,
   "bnb_free": 0.00411434,
-  "status": "🔵 En Vivo LONG (ATOMUSDT @ $1.3240)",
+  "status": "🔵 En Vivo LONG (ATOMUSDT @ $1.3300)",
   "position": {
     "symbol": "ATOMUSDT",
     "quantity": 13.14,
     "entry_price": 1.286,
-    "highest_price": 1.324,
+    "highest_price": 1.33,
     "break_even": true,
     "trailing_active": true,
     "adaptive_sl_pct": 0.96,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). El mercado presenta ruido de alta frecuencia y falta de soporte institucional, por lo que la estrategia óptima es el resguardo de capital."
+    "reasoning": "A pesar de tener candidatos con un Score técnico de 75, la falta de dominancia en el libro de órdenes (Bids 50%), la incertidumbre macroeconómica y la alta tasa de fallos en activos con poco historial histórico obligan a mantener la liquidez en USDT para evitar el riesgo de 'falling knives' o falsos breakouts."
   }
 }
