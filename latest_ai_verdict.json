@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 17:50:22",
-  "selected_symbol": "TAOUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "Tras deliberar, el comité ha decidido ejecutar una posición LONG en TAOUSDT. A pesar del miedo macro, el capital institucional está rotando hacia el sector AI. TAO cumple con el umbral de score técnico (75) y la narrativa de infraestructura, superando a otros candidatos. Se prioriza la gestión de riesgo con un stop estricto para evitar el riesgo sistémico de BTC.",
+  "timestamp": "2026-08-03 17:52:23",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 45,
+  "reasoning": "El comité ha determinado que, a pesar de la fortaleza técnica de activos como TAO, la falta de soporte en el libro de órdenes y la inestabilidad macroeconómica actual no cumplen con los criterios de alta convicción (Score >= 65 y Confianza >= 70%) requeridos por el protocolo de riesgo, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "TAOUSDT",
@@ -19,11 +19,11 @@
       "score": 65
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "ALLOUSDT",
       "score": 65
     },
     {
-      "symbol": "ALLOUSDT",
+      "symbol": "XLMUSDT",
       "score": 65
     }
   ]
