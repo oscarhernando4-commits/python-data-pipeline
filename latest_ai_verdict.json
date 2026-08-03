@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-03 22:04:21",
+  "timestamp": "2026-08-03 22:06:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de purga de liquidez sin activos que cumplan con los criterios de fuerza técnica (Score >= 65) ni soporte institucional en el libro de órdenes, por lo que la decisión institucional es mantenerse al margen para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de distribución forzada sin activos que cumplan con los criterios de alta convicción (Score >= 65). Se prioriza la protección del capital sobre la especulación en un entorno de baja liquidez y alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "TAOUSDT",
       "score": 55
+    },
+    {
+      "symbol": "MUBUSDT",
+      "score": 50
     },
     {
       "symbol": "VICUSDT",
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "COTIUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ASTERUSDT",
       "score": 50
     },
     {
