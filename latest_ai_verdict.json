@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 21:58:17",
+  "timestamp": "2026-08-03 22:00:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta un estancamiento sistémico con una ausencia total de activos que cumplan con el umbral de calidad A+ (Score >= 65). La mayoría de los candidatos presentan riesgos de delisting o volatilidad especulativa sin soporte institucional, por lo que la estrategia óptima es la preservación total del capital.",
+  "reasoning": "El mercado se encuentra en una fase de estancamiento bajista severo sin activos que cumplan con los criterios de alta convicción (Score >= 65). La estrategia institucional prioriza la preservación de capital sobre la especulación en un entorno de baja liquidez y alta correlación negativa.",
   "top_candidates": [
     {
-      "symbol": "WLFIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ACXUSDT",
+      "symbol": "ASTERUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "OPUSDT",
+      "symbol": "OPENUSDT",
       "score": 60
     },
     {
       "symbol": "VICUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "VANRYUSDT",
       "score": 50
     }
   ]
