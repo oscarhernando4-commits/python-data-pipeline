@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 23:56:22",
+  "timestamp": "2026-08-03 23:58:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con una correlación negativa extrema. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 65) ni con la profundidad de libro de órdenes requerida para una ejecución segura. Se mantiene la liquidez en USDT para preservar el capital ante la inestabilidad sistémica.",
+  "reasoning": "El mercado se encuentra en un entorno de 'Venta en Rebotes' sin soporte estructural definido. Ninguno de los activos analizados cumple con el umbral de convicción A+ (Score >= 65) ni con la confirmación de liquidez necesaria en el libro de órdenes, por lo que la decisión institucional es proteger el capital y permanecer en efectivo.",
   "top_candidates": [
     {
-      "symbol": "NIGHTUSDT",
-      "score": 70
+      "symbol": "ENAUSDT",
+      "score": 60
     },
     {
       "symbol": "MIRAUSDT",
       "score": 60
     },
     {
-      "symbol": "ENAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XPLUSDT",
+      "symbol": "CAKEUSDT",
       "score": 60
     },
     {
       "symbol": "ETHFIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "XPLUSDT",
       "score": 60
     }
   ]
