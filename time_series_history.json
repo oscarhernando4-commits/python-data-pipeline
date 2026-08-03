@@ -1,12 +1,38 @@
 {
-  "OPENUSDT": [
+  "1000SATSUSDT": [
     {
-      "timestamp": "2026-08-03 22:46:11",
-      "price": 0.188,
+      "timestamp": "2026-08-03 22:48:12",
+      "price": 1.01e-05,
       "score": 0,
-      "rsi": 49.37,
+      "rsi": 45.96,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.04,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-03 22:48:12",
+      "price": 0.1371,
+      "score": 0,
+      "rsi": 42.39,
+      "macd": "Neutral",
+      "volume_surge": 0.03,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-03 22:48:12",
+      "price": 0.5046,
+      "score": 10,
+      "rsi": 52.68,
+      "macd": "Neutral",
+      "volume_surge": 0.05,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
