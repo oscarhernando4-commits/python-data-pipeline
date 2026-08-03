@@ -1,12 +1,51 @@
 {
-  "STXUSDT": [
+  "DCRUSDT": [
     {
-      "timestamp": "2026-08-03 05:26:09",
-      "price": 0.1367,
-      "score": 55,
-      "rsi": 26.73,
+      "timestamp": "2026-08-03 05:28:09",
+      "price": 13.22,
+      "score": 50,
+      "rsi": 50.3,
       "macd": "Neutral",
-      "volume_surge": 1.86,
+      "volume_surge": 0.16,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DRAMBUSDT": [
+    {
+      "timestamp": "2026-08-03 05:28:09",
+      "price": 51.6,
+      "score": 0,
+      "rsi": 46.53,
+      "macd": "Neutral",
+      "volume_surge": 0.95,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ZBTUSDT": [
+    {
+      "timestamp": "2026-08-03 05:28:09",
+      "price": 0.1211,
+      "score": 50,
+      "rsi": 51.89,
+      "macd": "Neutral",
+      "volume_surge": 0.4,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STRKUSDT": [
+    {
+      "timestamp": "2026-08-03 05:28:09",
+      "price": 0.02489,
+      "score": 0,
+      "rsi": 41.23,
+      "macd": "Neutral",
+      "volume_surge": 0.28,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
