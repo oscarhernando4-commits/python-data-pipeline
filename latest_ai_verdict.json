@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 15:16:27",
+  "timestamp": "2026-08-03 15:18:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la fortaleza sectorial en AI, ninguno de los candidatos cumple con los umbrales de convicción A+ (Score >= 65 y Bids > 55%) necesarios para mitigar el riesgo de pérdida, optando por una postura de preservación de capital.",
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de la fortaleza relativa de BNB, el mercado global se encuentra en un estado de miedo (Fear 28) y los indicadores de liquidez no ofrecen la seguridad necesaria para una entrada de alta probabilidad, cumpliendo con la regla de oro de no arriesgar capital en condiciones subóptimas.",
   "top_candidates": [
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
-    },
-    {
-      "symbol": "CAKEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOXLBUSDT",
-      "score": 65
     },
     {
       "symbol": "GRAMUSDT",
       "score": 65
     },
     {
+      "symbol": "PEPEUSDT",
+      "score": 65
+    },
+    {
       "symbol": "BANKUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "PORTALUSDT",
       "score": 65
     }
   ]
