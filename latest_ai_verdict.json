@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 22:58:23",
+  "timestamp": "2026-08-03 23:00:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los activos analizados cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte en el libro de órdenes necesaria para una entrada segura. El entorno macro es hostil y la memoria histórica sugiere una alta probabilidad de 'falsa ruptura' en las condiciones actuales. Se prioriza la preservación de capital.",
+  "reasoning": "El mercado se encuentra en un estado de parálisis operativa con una falta total de convicción institucional. Ningún activo cumple con los criterios de riesgo A+ (Score >= 65) y la estructura del libro de órdenes es neutral, lo que aumenta el riesgo de slippage y pérdidas. Se prioriza la preservación de capital sobre la especulación en activos de baja capitalización.",
   "top_candidates": [
     {
       "symbol": "ENAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "INTCBUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "ORDIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "VANRYUSDT",
       "score": 50
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "POLUSDT",
       "score": 50
     }
   ]
