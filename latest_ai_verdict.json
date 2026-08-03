@@ -1,14 +1,22 @@
 {
-  "timestamp": "2026-08-03 01:57:00",
+  "timestamp": "2026-08-03 01:58:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una correlación bajista predominante; ningún activo cumple con los criterios de calidad A+ (Score >= 65) ni con la profundidad de mercado necesaria para una ejecución segura, por lo que la preservación de capital es la única estrategia válida.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva sin activos que cumplan con los criterios de convicción A+ (Score >= 65). La falta de profundidad en el libro de órdenes y la debilidad técnica generalizada obligan a una postura defensiva estricta para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "EWYBUSDT",
       "score": 60
+    },
+    {
+      "symbol": "KORUBUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "SNXXBUSDT",
+      "score": 50
     },
     {
       "symbol": "PORTALUSDT",
@@ -17,14 +25,6 @@
     {
       "symbol": "ESPUSDT",
       "score": 50
-    },
-    {
-      "symbol": "TLMUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "KAITOUSDT",
-      "score": 45
     }
   ]
 }
