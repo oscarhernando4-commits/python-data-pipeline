@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 00:02:17",
+  "timestamp": "2026-08-03 00:04:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de rotación defensiva con alta incertidumbre. Ninguno de los candidatos seleccionados logra superar el umbral de convicción A+ debido a la neutralidad en el libro de órdenes y la falta de historial técnico sólido, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los requisitos de alta convicción (Score >= 65 y Bids > 55%) necesarios para ejecutar una operación de compra, priorizando la preservación del capital frente a la alta volatilidad sistémica.",
   "top_candidates": [
     {
-      "symbol": "ADAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "HBARUSDT",
-      "score": 75
+      "symbol": "BONKUSDT",
+      "score": 85
     },
     {
       "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "SNXXBUSDT",
+      "symbol": "PAXGUSDT",
       "score": 75
     },
     {
-      "symbol": "ARBUSDT",
+      "symbol": "EWYBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "VETUSDT",
       "score": 75
     }
   ]
