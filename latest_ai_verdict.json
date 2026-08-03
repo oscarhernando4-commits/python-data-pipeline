@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 10:26:15",
+  "timestamp": "2026-08-03 10:28:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido por unanimidad mantener la posición en efectivo (HOLD). A pesar de que algunos activos tienen un score técnico de 75, la falta de profundidad en el libro de órdenes, la inestabilidad macroeconómica y la alta probabilidad de pérdidas basada en el historial de 589 trades en entornos neutrales, impiden la ejecución de cualquier compra. La prioridad es la preservación del capital hasta que el mercado muestre una estructura de acumulación clara y confirmada.",
+  "reasoning": "El mercado se encuentra en un estado de consolidación de miedo con una falta crítica de profundidad en el libro de órdenes y una ausencia de convicción técnica A+. Ningún activo cumple con el umbral de seguridad exigido por el comité, por lo que se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
-    {
-      "symbol": "ZECUSDT",
-      "score": 75
-    },
     {
       "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
-      "score": 70
+      "symbol": "FILUSDT",
+      "score": 75
     },
     {
-      "symbol": "BTCUSDT",
-      "score": 65
+      "symbol": "POLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "score": 75
     }
   ]
 }
