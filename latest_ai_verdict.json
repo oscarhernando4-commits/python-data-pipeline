@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-03 15:46:23",
+  "timestamp": "2026-08-03 15:48:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con baja volatilidad direccional y falta de datos de liquidez confirmados. Ningún candidato cumple con el umbral de convicción A+ exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' o trampas de mercado.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una trampa de liquidez y la falta de datos históricos sólidos para los activos con score alto impide una ejecución segura.",
   "top_candidates": [
-    {
-      "symbol": "ASTERUSDT",
-      "score": 75
-    },
     {
       "symbol": "POLUSDT",
       "score": 75
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "SHIBUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "DEXEUSDT",
       "score": 65
     }
   ]
