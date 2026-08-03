@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 00:56:17",
+  "timestamp": "2026-08-03 00:58:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con baja liquidez. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de soporte institucional necesaria para mitigar el riesgo de pérdida, por lo que la orden es mantener la posición en efectivo.",
+  "reasoning": "El mercado se encuentra en una fase de distribución masiva y debilidad estructural. Ningún activo cumple con los criterios de selección A+ (Score >= 65), por lo que la estrategia institucional es mantener la liquidez en espera de una purga de apalancamiento o una señal de acumulación clara.",
   "top_candidates": [
     {
-      "symbol": "SAGAUSDT",
+      "symbol": "ZBTUSDT",
       "score": 60
     },
     {
-      "symbol": "ZBTUSDT",
+      "symbol": "SAGAUSDT",
       "score": 60
     },
     {
@@ -19,8 +19,8 @@
       "score": 60
     },
     {
-      "symbol": "KORUBUSDT",
-      "score": 50
+      "symbol": "KAITOUSDT",
+      "score": 55
     },
     {
       "symbol": "DODOUSDT",
