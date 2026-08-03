@@ -1,26 +1,26 @@
 {
-  "timestamp": "2026-08-03 03:52:16",
+  "timestamp": "2026-08-03 03:54:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score A+ (>= 65) combinado con una estructura de libro de órdenes favorable. El mercado se encuentra en un régimen de alta incertidumbre y distribución institucional, por lo que la estrategia óptima es mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una asimetría de riesgo desfavorable. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y soporte de ballenas > 55%), por lo que la preservación del capital es la prioridad absoluta.",
   "top_candidates": [
-    {
-      "symbol": "HOMEUSDT",
-      "score": 70
-    },
     {
       "symbol": "ONDOUSDT",
       "score": 70
     },
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "BANKUSDT",
       "score": 70
     },
     {
       "symbol": "REZUSDT",
       "score": 70
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "score": 60
     },
     {
       "symbol": "WLDUSDT",
