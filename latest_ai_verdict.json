@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-03 02:36:22",
+  "timestamp": "2026-08-03 02:38:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual presenta un riesgo sistémico elevado y una falta de activos con fortaleza técnica (Score < 65). Se prioriza la protección del capital en USDT hasta que las condiciones macro y técnicas mejoren.",
+  "reasoning": "El mercado se encuentra en una fase de estrés sistémico y trampa de liquidez. Ninguno de los candidatos analizados cumple con los criterios de alta convicción (Score >= 65) ni con el soporte institucional necesario en el libro de órdenes. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y desconfianza.",
   "top_candidates": [
     {
       "symbol": "SUNUSDT",
       "score": 60
+    },
+    {
+      "symbol": "XLMUSDT",
+      "score": 55
     },
     {
       "symbol": "APTUSDT",
@@ -19,11 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "DODOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "TLMUSDT",
+      "symbol": "ETHFIUSDT",
       "score": 50
     }
   ]
