@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 03:14:16",
+  "timestamp": "2026-08-03 03:16:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una toxicidad elevada y una correlación bajista que invalida cualquier intento de compra. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una estabilización estructural.",
+  "reasoning": "El mercado presenta un riesgo sistémico elevado tras el exploit de Coldcard, con una ausencia total de activos que cumplan con el umbral de convicción A+ (Score >= 65). Se prioriza la preservación del capital sobre la operativa especulativa en un entorno de alta volatilidad y baja liquidez.",
   "top_candidates": [
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "HOMEUSDT",
       "score": 70
     },
     {
-      "symbol": "PORTALUSDT",
+      "symbol": "EPICUSDT",
       "score": 60
     },
     {
-      "symbol": "BANKUSDT",
-      "score": 55
+      "symbol": "XAUTUSDT",
+      "score": 50
     },
     {
       "symbol": "KAITOUSDT",
       "score": 50
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "PAXGUSDT",
       "score": 50
     }
   ]
