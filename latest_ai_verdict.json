@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 10:02:19",
+  "timestamp": "2026-08-03 10:04:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral estricto de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de consolidación técnica con alta probabilidad de volatilidad, por lo que la estrategia institucional es mantener la liquidez en espera de una señal de alta precisión.",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de activos con score técnico de 75, la falta de profundidad en el libro de órdenes, la ausencia de muros de soporte institucionales y el entorno de miedo macroeconómico no cumplen con los estándares de seguridad A+ exigidos para la ejecución de capital.",
   "top_candidates": [
     {
-      "symbol": "POLUSDT",
-      "score": 85
+      "symbol": "ICPUSDT",
+      "score": 75
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "BTCUSDT",
-      "score": 65
+      "symbol": "POLUSDT",
+      "score": 70
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "BTCUSDT",
       "score": 65
     }
   ]
