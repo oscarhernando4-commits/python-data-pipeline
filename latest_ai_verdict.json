@@ -1,22 +1,22 @@
 {
-  "timestamp": "2026-08-03 10:30:16",
+  "timestamp": "2026-08-03 10:32:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y confirmación de volumen). La alta tasa de fallos en el historial reciente y la incertidumbre macroeconómica dictan una postura de preservación de capital.",
+  "reasoning": "El mercado presenta una estructura de alta incertidumbre con una correlación asimétrica. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes confirmado). Se prioriza la preservación del capital sobre la especulación en un entorno de miedo (Fear & Greed 28).",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "POLUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
-      "score": 65
+      "symbol": "SUNUSDT",
+      "score": 75
     },
     {
       "symbol": "ZECUSDT",
