@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-03 10:18:18
+date: 2026-08-03 10:20:15
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $19.84 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-03 10:18:18`
+> ⏱️ **Última Actualización:** `2026-08-03 10:20:15`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00424436 BNB` (`~$2.49 USD`)
@@ -22,7 +22,7 @@ date: 2026-08-03 10:18:18
 
 | 💵 Capital | 🪙 Cripto Activa | 🔢 Ops | 📈 Balance | 💰 Beneficio (PnL) | 📊 Racha | 🎯 Estado Operativo |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **`$19.84 USD`** | **`DOTUSDT`** | `#8` | **`$19.84 USD`** | **`$+2.71 USD`** | `3W/5L` | **`🔵 En Vivo LONG (DOTUSDT @ $0.8040)`** |
+| **`$19.84 USD`** | **`DOTUSDT`** | `#8` | **`$19.84 USD`** | **`$+2.71 USD`** | `3W/5L` | **`🔵 En Vivo LONG (DOTUSDT @ $0.8030)`** |
 
 ---
 

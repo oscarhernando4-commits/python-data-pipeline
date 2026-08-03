@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-03 10:18:18",
+  "timestamp": "2026-08-03 10:20:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento defensivo sin una tendencia clara. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia institucional es mantener la liquidez en espera de una señal de alta probabilidad.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación selectiva con una parálisis de convicción institucional. Ninguno de los candidatos cumple con el umbral de soporte de ballenas (Bids > 55%) ni presenta una estructura técnica que garantice una alta probabilidad de éxito, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "POLUSDT",
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AAVEUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "BTCUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "PEPEUSDT",
       "score": 65
     }
   ]
