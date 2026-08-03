@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 07:06:19",
+  "timestamp": "2026-08-03 07:08:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y falta de convicción institucional. Ninguno de los candidatos analizados cumple con los criterios de riesgo A+ establecidos por el comité, por lo que la orden es proteger la liquidez y esperar una estructura de mercado más favorable.",
+  "reasoning": "El comité ha determinado que el mercado actual carece de la convicción institucional necesaria y de la estructura técnica A+ requerida por nuestras reglas de oro. Ningún activo supera el score de 65, por lo que la orden de ejecución es HOLD para proteger el capital contra la volatilidad bajista.",
   "top_candidates": [
     {
       "symbol": "SKYUSDT",
@@ -15,7 +15,7 @@
       "score": 60
     },
     {
-      "symbol": "MANTRAUSDT",
+      "symbol": "ETHUSDT",
       "score": 55
     },
     {
@@ -23,7 +23,7 @@
       "score": 55
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "MANTRAUSDT",
       "score": 55
     }
   ]
