@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 03:54:15",
+  "timestamp": "2026-08-03 03:56:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una asimetría de riesgo desfavorable. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y soporte de ballenas > 55%), por lo que la preservación del capital es la prioridad absoluta.",
+  "reasoning": "A pesar de que AAVE y WLD cumplen con el score técnico mínimo, la ausencia de una dominancia clara en el libro de órdenes (bids < 55%) y el entorno macro de desconfianza sistémica impiden la ejecución de una orden de compra bajo los estándares de riesgo del comité.",
   "top_candidates": [
     {
-      "symbol": "ONDOUSDT",
-      "score": 70
+      "symbol": "AAVEUSDT",
+      "score": 80
     },
     {
-      "symbol": "BANKUSDT",
+      "symbol": "WLDUSDT",
       "score": 70
     },
     {
@@ -19,11 +19,11 @@
       "score": 70
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "POLUSDT",
       "score": 60
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "XPLUSDT",
       "score": 60
     }
   ]
