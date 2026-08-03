@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 23:38:23",
+  "timestamp": "2026-08-03 23:40:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica y fragilidad extrema. Ninguno de los candidatos analizados cumple con los requisitos mínimos de Score A+ (>= 65) ni con la profundidad de liquidez necesaria para mitigar el riesgo sistémico. Se mantiene la posición en efectivo para evitar la exposición a la alta volatilidad bajista actual.",
+  "reasoning": "El mercado se encuentra en una fase de contracción sistémica con una distribución institucional agresiva. Ningún activo cumple con los criterios de calidad A+ (Score >= 65) ni con la profundidad de libro necesaria para garantizar una operación rentable. Se prioriza la protección del capital frente a la volatilidad errática actual.",
   "top_candidates": [
     {
       "symbol": "ENAUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "ORDIUSDT",
+      "score": 60
+    },
+    {
       "symbol": "OPUSDT",
       "score": 60
     },
     {
       "symbol": "KAITOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "JSTUSDT",
       "score": 50
     }
   ]
