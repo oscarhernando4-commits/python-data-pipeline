@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-03 00:34:19",
+  "timestamp": "2026-08-03 00:36:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual carece de la convicción institucional necesaria para ejecutar operaciones de compra. Todos los candidatos analizados presentan scores técnicos inferiores al umbral A+ (65), y el entorno macroeconómico de 'apatía estructural' desaconseja cualquier exposición al riesgo en este momento. Se prioriza la preservación del capital hasta que surja una señal clara de acumulación de ballenas y una mejora en la profundidad del libro de órdenes.",
+  "reasoning": "El comité ha determinado que el mercado actual carece de las condiciones técnicas y de liquidez necesarias para una ejecución segura. Ningún activo cumple con el umbral de Score A+ (>= 65) y la alta correlación bajista junto con el sentimiento de miedo extremo desaconsejan cualquier posicionamiento en largo, priorizando la protección del capital.",
   "top_candidates": [
     {
+      "symbol": "ZBTUSDT",
+      "score": 70
+    },
+    {
       "symbol": "MANTRAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SNXXBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "MIRAUSDT",
       "score": 60
     },
     {
@@ -23,8 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "ZBTUSDT",
+      "symbol": "NVDABUSDT",
       "score": 60
+    },
+    {
+      "symbol": "SNXXBUSDT",
+      "score": 50
     }
   ]
 }
