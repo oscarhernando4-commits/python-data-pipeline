@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 01:06:19",
+  "timestamp": "2026-08-03 01:08:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual se encuentra en una fase de distribución silenciosa y alta fragmentación de liquidez. Ninguno de los candidatos analizados cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de soporte institucional en el libro de órdenes, por lo que la orden es proteger el 100% de la liquidez.",
+  "reasoning": "El comité ha determinado que el entorno de mercado actual es de alta aversión al riesgo y distribución institucional. Ninguno de los activos analizados cumple con los criterios estrictos de Score A+ (>= 65) ni con la confirmación de liquidez necesaria para mitigar el riesgo de pérdida, por lo que se mantiene la posición en efectivo (USDT) para evitar 'cuchillos cayendo'.",
   "top_candidates": [
     {
       "symbol": "DCRUSDT",
       "score": 70
     },
     {
-      "symbol": "MIRAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ORDIUSDT",
+      "symbol": "EWYBUSDT",
       "score": 60
     },
     {
       "symbol": "NVDABUSDT",
       "score": 60
+    },
+    {
+      "symbol": "EULUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "KORUBUSDT",
+      "score": 50
     }
   ]
 }
