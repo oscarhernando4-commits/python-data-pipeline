@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-03 08:34:20",
+  "timestamp": "2026-08-03 08:36:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y falta de liquidez institucional. Ninguno de los candidatos cumple con los criterios de Score A+ (>=65) ni con la confirmación de soporte en el libro de órdenes, por lo que la decisión estratégica es mantenerse al margen para evitar pérdidas por 'cuchillos cayendo'.",
+  "reasoning": "El mercado presenta una fragilidad sistémica con una ausencia total de activos que cumplan con los criterios de convicción A+ (Score >= 65). La falta de soporte en el libro de órdenes y la tendencia neutral predominante obligan a la preservación del capital mediante la inacción.",
   "top_candidates": [
     {
       "symbol": "DODOUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "NILUSDT",
       "score": 60
     },
     {
@@ -15,15 +19,11 @@
       "score": 55
     },
     {
-      "symbol": "MANTRAUSDT",
+      "symbol": "TRXUSDT",
       "score": 50
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "EULUSDT",
+      "symbol": "ENAUSDT",
       "score": 50
     }
   ]
