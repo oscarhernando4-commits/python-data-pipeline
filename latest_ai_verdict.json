@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 13:38:24",
+  "timestamp": "2026-08-03 13:40:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una alta selectividad defensiva y falta de profundidad en el libro de órdenes para los candidatos con mejor score técnico. Se ha decidido mantener la liquidez en USDT para evitar el riesgo de 'falling knives' y esperar una estructura de mercado más clara que cumpla con el umbral de convicción A+.",
+  "reasoning": "A pesar de tener candidatos con scores técnicos altos, la falta de dominancia en el libro de órdenes (Bids < 55%) y el entorno de miedo institucional (Fear & Greed 28) invalidan la entrada. Se prioriza la preservación del capital sobre la especulación en un mercado lateral con alta probabilidad de trampas de valor.",
   "top_candidates": [
     {
       "symbol": "AAVEUSDT",
-      "score": 90
+      "score": 100
     },
     {
-      "symbol": "SOXLBUSDT",
-      "score": 85
+      "symbol": "BCHUSDT",
+      "score": 95
     },
     {
-      "symbol": "MUUBUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "DASHUSDT",
+      "symbol": "SEIUSDT",
       "score": 85
     },
     {
       "symbol": "SNXXBUSDT",
+      "score": 80
+    },
+    {
+      "symbol": "NBISBUSDT",
       "score": 80
     }
   ]
