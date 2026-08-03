@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 15:26:22",
+  "timestamp": "2026-08-03 15:28:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con sentimiento de miedo, donde la falta de profundidad en el libro de órdenes y la ausencia de una tendencia definida impiden la ejecución de trades de alta convicción, priorizando la preservación del capital.",
+  "confidence": 45,
+  "reasoning": "El comité ha determinado que, a pesar de que CAKEUSDT muestra un score técnico elevado, no existe una confirmación unánime en el libro de órdenes ni una estructura de mercado que garantice una operación de bajo riesgo. Se prioriza la preservación del capital frente a la incertidumbre actual.",
   "top_candidates": [
     {
-      "symbol": "ASTERUSDT",
-      "score": 75
+      "symbol": "CAKEUSDT",
+      "score": 85
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "OPUSDT",
+      "symbol": "SEIUSDT",
       "score": 70
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "ADAUSDT",
       "score": 65
     }
   ]
