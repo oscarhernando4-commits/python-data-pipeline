@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 03:16:19",
+  "timestamp": "2026-08-03 03:18:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un riesgo sistémico elevado tras el exploit de Coldcard, con una ausencia total de activos que cumplan con el umbral de convicción A+ (Score >= 65). Se prioriza la preservación del capital sobre la operativa especulativa en un entorno de alta volatilidad y baja liquidez.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con falta de liquidez y soporte institucional. Ningún activo cumple con los criterios de convicción A+ requeridos por el comité, por lo que se mantiene la liquidez total en USDT para evitar la exposición a 'cuchillos cayendo'.",
   "top_candidates": [
     {
       "symbol": "HOMEUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 50
-    },
-    {
       "symbol": "KAITOUSDT",
       "score": 50
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "SUIUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "XAUTUSDT",
       "score": 50
     }
   ]
