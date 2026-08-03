@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 13:50:27",
+  "timestamp": "2026-08-03 13:52:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que NEAR y SEI tienen scores técnicos altos, la ausencia de dominancia en el libro de órdenes (Bids < 55%) y la incertidumbre macroeconómica actual impiden la ejecución de una orden de compra bajo los estrictos estándares de riesgo del comité.",
+  "reasoning": "Ninguno de los candidatos cumple con el requisito estricto de soporte de ballenas (Bids > 55%) ni con una estructura de mercado que garantice una alta probabilidad de éxito, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "NEARUSDT",
-      "score": 85
+      "symbol": "HBARUSDT",
+      "score": 75
     },
     {
-      "symbol": "SEIUSDT",
-      "score": 85
+      "symbol": "TAOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "NEARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "score": 75
     },
     {
       "symbol": "GRAMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XLMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
