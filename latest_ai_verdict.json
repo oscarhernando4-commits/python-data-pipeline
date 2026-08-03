@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 22:42:23",
+  "timestamp": "2026-08-03 22:44:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución agresiva y falta de liquidez profunda. Ningún candidato cumple con los criterios de calidad A+ (Score >= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que la orden es mantener la liquidez en espera de mejores condiciones.",
+  "reasoning": "El mercado se encuentra en una fase de distribución agresiva con scores técnicos mediocres y falta de profundidad en el libro de órdenes. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65), por lo que la estrategia institucional es mantener el 100% de la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "OPENUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "EULUSDT",
+      "symbol": "INTCBUSDT",
       "score": 60
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "ASTERUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "JSTUSDT",
       "score": 50
     }
   ]
