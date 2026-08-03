@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 17:28:23",
+  "updated_at": "2026-08-03 17:30:23",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con score técnico de 75, la falta de dominancia compradora en el libro de órdenes (50% vs 50%) y el entorno de mercado en 'Fear' invalidan la ejecución de cualquier posición, priorizando la protección de la liquidez ante la alta probabilidad de falsas rupturas."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La falta de profundidad en el libro de órdenes y la incertidumbre macro sugieren que el mercado aún no ha finalizado su fase de purga, por lo que la estrategia óptima es mantener la liquidez en espera de una oportunidad de alta probabilidad."
   }
 }
