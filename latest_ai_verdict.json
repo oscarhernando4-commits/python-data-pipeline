@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 14:34:23",
+  "timestamp": "2026-08-03 14:36:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de fragmentación defensiva con alta volatilidad y falta de profundidad en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo de pérdidas, por lo que se prioriza la preservación del capital mediante una postura de espera (HOLD).",
+  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%) necesario para garantizar una operación de alta probabilidad, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
       "score": 85
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "PUMPUSDT",
       "score": 75
     },
     {
@@ -19,12 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "JTOUSDT",
+      "symbol": "CAKEUSDT",
       "score": 75
     },
     {
-      "symbol": "MUBUSDT",
-      "score": 65
+      "symbol": "LDOUSDT",
+      "score": 75
     }
   ]
 }
