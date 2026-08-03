@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-03 11:08:14",
+  "timestamp": "2026-08-03 11:10:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha evaluado los candidatos y ha determinado que ninguno cumple con los criterios de alta convicción (Score >= 65) necesarios para operar en un entorno de mercado caracterizado por la distribución institucional y la falta de soporte claro en el libro de órdenes. Se prioriza la preservación del capital sobre la especulación en activos de baja fortaleza relativa.",
+  "reasoning": "El mercado presenta una debilidad generalizada con scores técnicos inferiores al umbral de seguridad A+ (65). Ningún activo cumple con los criterios de soporte de liquidez ni de fortaleza técnica, por lo que la estrategia institucional es preservar el capital mediante una posición de espera (HOLD) hasta que se identifique una rotación de capital clara y confirmada.",
   "top_candidates": [
     {
+      "symbol": "SUNUSDT",
+      "score": 60
+    },
+    {
       "symbol": "BICOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "PEPEUSDT",
       "score": 50
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "MANTRAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ZAMAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "SYNUSDT",
       "score": 50
     }
   ]
