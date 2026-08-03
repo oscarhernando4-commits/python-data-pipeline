@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 20:10:20",
+  "timestamp": "2026-08-03 20:12:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta volatilidad y falta de soporte en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (HOLD).",
+  "reasoning": "El mercado presenta una configuración de alta fragilidad y falta de convicción. Ningún candidato cumple con el umbral estricto de Score A+ (>= 65) combinado con una profundidad de mercado favorable, por lo que se prioriza la preservación de capital.",
   "top_candidates": [
     {
       "symbol": "INTCBUSDT",
@@ -19,11 +19,11 @@
       "score": 65
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "ACEUSDT",
       "score": 65
     },
     {
-      "symbol": "VANRYUSDT",
+      "symbol": "POLUSDT",
       "score": 65
     }
   ]
