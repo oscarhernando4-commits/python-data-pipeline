@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 15:34:24",
+  "timestamp": "2026-08-03 15:36:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de activos con scores técnicos aceptables, ninguno cumple con los requisitos de convicción A+ (Score >= 65 y Bids > 55%) en el contexto de un mercado neutral y volátil, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El comité ha determinado que, a pesar de la fuerza relativa de algunos activos, las condiciones de mercado actuales no cumplen con los criterios de alta convicción (A+) necesarios para una ejecución segura, priorizando la preservación del capital sobre la especulación.",
   "top_candidates": [
+    {
+      "symbol": "SHIBUSDT",
+      "score": 75
+    },
     {
       "symbol": "POLUSDT",
       "score": 75
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "CAKEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "JTOUSDT",
-      "score": 75
-    },
-    {
       "symbol": "ADAUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "PEPEUSDT",
       "score": 65
     }
   ]
