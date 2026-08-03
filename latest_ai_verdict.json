@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 06:18:19",
+  "timestamp": "2026-08-03 06:20:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación del comité, se ha determinado que no existen activos que cumplan con el umbral mínimo de seguridad (Score >= 65) y la confirmación de volumen institucional necesaria. El entorno macroeconómico de miedo y la falta de soporte en el libro de órdenes invalidan cualquier oportunidad de compra, priorizando la preservación de capital sobre la especulación.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada con una ausencia total de activos que cumplan con los criterios de convicción A+ del comité. Se ha decidido mantener la liquidez en USDT para evitar la exposición a un entorno de distribución bajista.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "OPUSDT",
+      "symbol": "JTOUSDT",
       "score": 60
     },
     {
-      "symbol": "XLMUSDT",
-      "score": 55
+      "symbol": "UNIUSDT",
+      "score": 50
     },
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "BANKUSDT",
       "score": 50
     }
   ]
