@@ -7,22 +7,22 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-03 14:28:20
+date: 2026-08-03 14:30:22
 ---
 
-# 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $19.61 USD)
+# 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $19.67 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-03 14:28:20`
+> ⏱️ **Última Actualización:** `2026-08-03 14:30:22`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
-> - 🟡 **BNB Escudo Comisiones:** `0.00411434 BNB` (`~$2.42 USD`)
+> - 🟡 **BNB Escudo Comisiones:** `0.00411434 BNB` (`~$2.43 USD`)
 > - 💵 **USDT Disponible:** `0.1914 USDT`
-> - 💰 **Saldo Total Acumulado:** `$19.61 USD`
+> - 💰 **Saldo Total Acumulado:** `$19.67 USD`
 
 | 💵 Capital | 🪙 Cripto Activa | 🔢 Ops | 📈 Balance | 💰 Beneficio (PnL) | 📊 Racha | 🎯 Estado Operativo |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **`$19.61 USD`** | **`ATOMUSDT`** | `#11` | **`$19.61 USD`** | **`$+2.48 USD`** | `4W/7L` | **`🔵 En Vivo LONG (ATOMUSDT @ $1.2980)`** |
+| **`$19.67 USD`** | **`ATOMUSDT`** | `#11` | **`$19.67 USD`** | **`$+2.54 USD`** | `4W/7L` | **`🔵 En Vivo LONG (ATOMUSDT @ $1.2970)`** |
 
 ---
 
@@ -30,22 +30,22 @@ date: 2026-08-03 14:28:20
 
 > [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
-> - 📈 **Capital Total Acumulado:** **`$9,954.85 USD`** (`$-45.15 USD`)  
+> - 📈 **Capital Total Acumulado:** **`$9,953.80 USD`** (`$-46.20 USD`)  
 > - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `0 Cuentas (0.0%)`  
-> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `0 Cuentas (0.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `100 Cuentas (100.0%)`  
+> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `1 Cuentas (1.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `99 Cuentas (99.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
 
 > [!WARNING] 📊 **Resumen del 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD):**
-> - 💵 **Balance Total del Grupo:** `$95.80 USD` (`-$4.20`)
-> - 🎯 **Operaciones Totales:** `7` (`1 Ganadas / 6 Perdidas`)
-> - 📈 **Tasa de Acierto del Grupo:** `14.3% Win Rate`
+> - 💵 **Balance Total del Grupo:** `$94.75 USD` (`-$5.25`)
+> - 🎯 **Operaciones Totales:** `8` (`1 Ganadas / 7 Perdidas`)
+> - 📈 **Tasa de Acierto del Grupo:** `12.5% Win Rate`
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-000 (Réplica Real)** | **XRPUSDT** | `#7` | `1W/6L` | 26-08-02<br>05:55 | `🛡️ Protegida (BE)` | **`$95.80`** (`-$4.20`) | 🔵 En Vivo |
+| **SIM-000 (Réplica Real)** | **XRPUSDT** | `#8` | `1W/7L` | 26-08-03<br>14:30 | `🔴 Perdió -$1.05` | **`$94.75`** (`-$5.25`) | 🔴 Buscando |
 
 ---
 
