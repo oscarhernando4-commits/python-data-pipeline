@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 15:38:23",
+  "timestamp": "2026-08-03 15:40:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la liquidez en USDT. A pesar de que varios activos presentan un score técnico de 75, la imposibilidad de verificar la profundidad del libro de órdenes (debido a errores de conexión) y la debilidad del mercado macro impiden alcanzar el umbral de convicción A+ necesario para ejecutar una compra segura.",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de activos con Score 75, ninguno cumple con el requisito crítico de dominancia de Bids (>= 55%) ni con una estructura de mercado que garantice una alta probabilidad de éxito, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "SHIBUSDT",
@@ -15,11 +15,11 @@
       "score": 75
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "ETHFIUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "CAKEUSDT",
       "score": 75
     },
     {
