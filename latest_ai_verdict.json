@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 04:30:15",
+  "timestamp": "2026-08-03 04:32:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con correlación bajista alta; al no existir activos que cumplan con el umbral de Score A+ (>= 65) y con una dominancia de bids compradores estancada en 50%, la decisión institucional es mantener la liquidez en USDT para evitar 'trampas de valor'.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional y estrés de custodia. Ningún activo cumple con los criterios de alta convicción (Score >= 65) ni presenta soporte de liquidez suficiente en el libro de órdenes, por lo que la decisión estratégica es mantener la liquidez en USDT para evitar pérdidas por 'falling knives'.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "GIGGLEUSDT",
+      "symbol": "SOXLBUSDT",
       "score": 50
     },
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "NEARUSDT",
       "score": 50
     }
   ]
