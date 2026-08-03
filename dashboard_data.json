@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 00:16:18",
+  "updated_at": "2026-08-03 00:18:19",
   "total_balance_usd": 19.73,
   "usdt_free": 17.2258,
   "bnb_free": 0.00426609,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de distribución masiva y estancamiento sistémico. Ningún activo cumple con los criterios de alta convicción (Score >= 65) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage. La estrategia institucional es preservar el capital en stablecoins hasta que la estructura de mercado muestre una recuperación clara y una rotación de capital real."
+    "reasoning": "El comité ha determinado que el mercado actual presenta un riesgo sistémico elevado y una falta de activos con fuerza relativa (Score < 65). Siguiendo estrictamente las Reglas de Oro, se ha decidido no ejecutar ninguna operación para evitar el riesgo de 'cuchillos cayendo' y proteger la integridad del capital institucional."
   }
 }
