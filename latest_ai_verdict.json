@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 01:46:17",
+  "timestamp": "2026-08-03 01:48:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica generalizada sin activos que cumplan con los criterios de alta convicción (Score >= 65) exigidos por el comité, por lo que la orden es proteger la liquidez total.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado son de alta fragilidad y riesgo sistémico. Ningún activo cumple con los requisitos técnicos, de volumen o de liquidez necesarios para una operación de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de tendencia neutral y presión vendedora.",
   "top_candidates": [
     {
-      "symbol": "POLUSDT",
+      "symbol": "KAITOUSDT",
       "score": 50
     },
     {
-      "symbol": "ESPUSDT",
+      "symbol": "POLUSDT",
       "score": 50
     },
     {
@@ -19,7 +19,7 @@
       "score": 50
     },
     {
-      "symbol": "SAGAUSDT",
+      "symbol": "KORUBUSDT",
       "score": 45
     },
     {
