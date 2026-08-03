@@ -1,22 +1,14 @@
 {
-  "timestamp": "2026-08-03 07:12:20",
+  "timestamp": "2026-08-03 07:14:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada donde ningún activo cumple con el umbral de seguridad (Score >= 65) ni con la confirmación de liquidez institucional necesaria para una operación de alta rentabilidad, por lo que la decisión estratégica es mantener la liquidez en espera de mejores condiciones.",
+  "reasoning": "El mercado actual presenta una debilidad sistémica generalizada y una falta de convicción institucional. Ninguno de los activos analizados cumple con el umbral de Score técnico A+ (>= 65) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage y fakeouts, por lo que la decisión institucional es mantenerse en posición de espera (HOLD) para proteger el capital.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 70
-    },
-    {
-      "symbol": "XRPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SKYUSDT",
-      "score": 60
     },
     {
       "symbol": "ARBUSDT",
@@ -25,6 +17,14 @@
     {
       "symbol": "ATOMUSDT",
       "score": 60
+    },
+    {
+      "symbol": "XPLUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "MANTRAUSDT",
+      "score": 55
     }
   ]
 }
