@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-03 14:18:21",
+  "timestamp": "2026-08-03 14:20:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con indicadores técnicos neutrales y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con los criterios estrictos de convicción A+ del comité, por lo que la estrategia prioritaria es la preservación de capital mediante el mantenimiento de la liquidez en USDT.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de compresión de volatilidad y alta incertidumbre, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
     {
       "symbol": "AAVEUSDT",
       "score": 75
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "LDOUSDT",
+      "score": 75
+    },
+    {
       "symbol": "JTOUSDT",
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "LINKUSDT",
       "score": 65
     }
   ]
