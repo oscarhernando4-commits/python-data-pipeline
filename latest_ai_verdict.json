@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-03 11:50:18",
+  "timestamp": "2026-08-03 11:52:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con todos los activos analizados presentando un Score técnico de 50 o inferior, lo cual incumple la Regla de Oro #1 (Score >= 65). Ante la ausencia de convicción institucional y la alta correlación bajista, la decisión estratégica es mantener la liquidez en efectivo para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "El mercado carece de la fuerza técnica y la profundidad de liquidez necesaria para cumplir con los estándares de calidad A+ del comité. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre y distribución institucional.",
   "top_candidates": [
     {
-      "symbol": "SUIUSDT",
-      "score": 50
+      "symbol": "GIGGLEUSDT",
+      "score": 60
     },
     {
-      "symbol": "ONDOUSDT",
+      "symbol": "PAXGUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ZECUSDT",
       "score": 50
     },
     {
@@ -19,11 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "ZECUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "PAXGUSDT",
+      "symbol": "ONDOUSDT",
       "score": 50
     }
   ]

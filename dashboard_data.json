@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-08-03 11:50:19",
+  "updated_at": "2026-08-03 11:52:16",
   "total_balance_usd": 19.7,
   "usdt_free": 0.2477,
   "bnb_free": 0.00420089,
-  "status": "🔵 En Vivo LONG (ATOMUSDT @ $1.2820)",
+  "status": "🔵 En Vivo LONG (ATOMUSDT @ $1.2840)",
   "position": {
     "symbol": "ATOMUSDT",
     "quantity": 13.26,
     "entry_price": 1.282,
-    "highest_price": 1.283,
+    "highest_price": 1.284,
     "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 0.96,
-    "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
+    "adaptive_sl_pct": 0.6,
+    "volatility_regime": "⏳ Escalera 20m: SL Apretado a -0.60%"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con todos los activos analizados presentando un Score técnico de 50 o inferior, lo cual incumple la Regla de Oro #1 (Score >= 65). Ante la ausencia de convicción institucional y la alta correlación bajista, la decisión estratégica es mantener la liquidez en efectivo para evitar el riesgo de 'cuchillos cayendo'."
+    "reasoning": "El mercado carece de la fuerza técnica y la profundidad de liquidez necesaria para cumplir con los estándares de calidad A+ del comité. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre y distribución institucional."
   }
 }
