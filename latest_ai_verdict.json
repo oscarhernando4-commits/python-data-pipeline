@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 01:10:17",
+  "timestamp": "2026-08-03 01:12:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de purga de debilidad con scores técnicos insuficientes y falta de soporte en el libro de órdenes. Siguiendo las reglas de oro, ante la ausencia de candidatos con Score A+ (>= 65), la decisión institucional es mantener la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "El mercado se encuentra en un estado de parálisis de compra con una estructura de correlación bajista. Ningún activo cumple con los criterios estrictos de riesgo A+ exigidos por el comité, por lo que se prioriza la protección de la liquidez sobre la ejecución de trades especulativos de baja probabilidad.",
   "top_candidates": [
     {
       "symbol": "EWYBUSDT",
@@ -15,16 +15,16 @@
       "score": 70
     },
     {
+      "symbol": "ESPUSDT",
+      "score": 65
+    },
+    {
       "symbol": "ZBTUSDT",
       "score": 60
     },
     {
       "symbol": "NVDABUSDT",
       "score": 60
-    },
-    {
-      "symbol": "KAITOUSDT",
-      "score": 55
     }
   ]
 }
