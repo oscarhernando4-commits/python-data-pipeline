@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 10:14:16",
+  "timestamp": "2026-08-03 10:16:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragmentación de liquidez y un sentimiento de miedo que no garantiza una entrada de alta probabilidad. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la decisión institucional es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de 'Neutralidad Forzada' con falta de convicción institucional en el libro de órdenes. Ningún activo cumple con el umbral de confianza A+ (Score >= 65 con volumen confirmado y soporte de ballenas > 55%). Se prioriza la preservación del capital sobre la especulación en un entorno de miedo.",
   "top_candidates": [
     {
       "symbol": "POLUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "NEARUSDT",
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "OPUSDT",
       "score": 75
     },
     {
-      "symbol": "DEXEUSDT",
-      "score": 75
+      "symbol": "BTCUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "ETHUSDT",
+      "score": 65
     }
   ]
 }
