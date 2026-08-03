@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 13:54:25",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'Apatía Estructural' con una falta de convicción institucional clara. A pesar de los scores técnicos, la ausencia de soporte en el libro de órdenes y el sesgo neutral del mercado histórico dictan una política de preservación de capital total.",
+  "timestamp": "2026-08-03 13:57:01",
+  "selected_symbol": "JTOUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "Tras deliberar, el comité ha seleccionado JTOUSDT debido a su superior score técnico de 85 y su pertenencia al sector de infraestructura, el cual está capturando el flujo de capital institucional. Se ha descartado el resto de candidatos por no cumplir con el umbral de convicción A+ o por presentar correlaciones de riesgo excesivas con la debilidad de BTC. La ejecución será en retroceso para minimizar el slippage y proteger el capital bajo la supervisión del CRO.",
   "top_candidates": [
     {
-      "symbol": "ETHUSDT",
-      "score": 75
+      "symbol": "JTOUSDT",
+      "score": 85
     },
     {
       "symbol": "LINKUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
-      "symbol": "NEARUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     }
   ]

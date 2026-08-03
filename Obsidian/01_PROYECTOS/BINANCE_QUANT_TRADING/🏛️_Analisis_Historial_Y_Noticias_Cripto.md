@@ -1489,3 +1489,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-34.1%)`, `2026-04-26 (-20.98%)`, `2025-04-23 (-17.48%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: WAXPUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-08` hasta `2026-08-03` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.0044 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.1243 USD` (`2024-03-26`) | Distancia: `-96.48%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0035 USD` (`2026-07-29`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-03-20 (+30.28%)`, `2026-08-03 (+16.84%)`, `2024-02-28 (+15.66%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-24.74%)`, `2024-12-09 (-18.07%)`, `2024-06-17 (-15.94%)`
+
+---
