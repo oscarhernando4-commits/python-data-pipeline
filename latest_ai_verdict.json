@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-03 18:32:19",
+  "timestamp": "2026-08-03 18:34:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura técnica neutral. Ninguno de los candidatos cumple con el requisito estricto de Score >= 65 y una dominancia de Bids > 55%, por lo que la decisión institucional es mantener la liquidez para evitar la exposición a activos de baja convicción.",
+  "reasoning": "El mercado se encuentra en un estado de estancamiento neutral con falta de volumen institucional y soporte en el libro de órdenes. Ningún candidato cumple con la exigencia de convicción A+ (Score >= 65 con confirmación de liquidez), por lo que el comité decide mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "GRAMUSDT",
-      "score": 75
-    },
-    {
       "symbol": "VIRTUALUSDT",
-      "score": 75
+      "score": 70
     },
     {
       "symbol": "XAUTUSDT",
@@ -23,7 +19,11 @@
       "score": 65
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "ERAUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "COTIUSDT",
       "score": 65
     }
   ]
