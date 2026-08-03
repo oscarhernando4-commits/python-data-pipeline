@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-03 03:04:19",
+  "timestamp": "2026-08-03 03:06:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos que cumplan con los criterios de alta convicción (Score >= 65) y soporte de liquidez necesarios para una ejecución segura. El entorno macroeconómico actual, marcado por la desconfianza y la volatilidad, exige una postura defensiva estricta para preservar el capital.",
+  "reasoning": "El comité ha determinado que el entorno actual presenta una fragilidad sistémica extrema. Ninguno de los candidatos analizados cumple con el umbral de Score técnico (>= 65) ni con la confirmación de liquidez necesaria para una operación de alta convicción. Se mantiene la posición en efectivo para evitar la exposición a 'cuchillos cayendo' y proteger el capital institucional.",
   "top_candidates": [
     {
-      "symbol": "WLDUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "EPICUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "MIRAUSDT",
+      "symbol": "PUMPUSDT",
       "score": 60
     },
     {
@@ -25,6 +17,14 @@
     {
       "symbol": "BANKUSDT",
       "score": 55
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 50
     }
   ]
 }
