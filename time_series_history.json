@@ -1,12 +1,25 @@
 {
-  "RIFUSDT": [
+  "IMXUSDT": [
     {
-      "timestamp": "2026-08-03 01:54:10",
-      "price": 0.088,
-      "score": 30,
-      "rsi": 42.59,
+      "timestamp": "2026-08-03 01:56:52",
+      "price": 0.11,
+      "score": 0,
+      "rsi": 39.55,
       "macd": "Neutral",
-      "volume_surge": 0.36,
+      "volume_surge": 0.4,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "XTZUSDT": [
+    {
+      "timestamp": "2026-08-03 01:56:52",
+      "price": 0.2001,
+      "score": 0,
+      "rsi": 43.7,
+      "macd": "Neutral",
+      "volume_surge": 0.24,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
