@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-03 12:46:17",
+  "timestamp": "2026-08-03 12:48:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución selectiva con alta incertidumbre macro. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que se prioriza la preservación del capital sobre la operativa especulativa.",
+  "reasoning": "El mercado presenta una divergencia estructural y falta de convicción en los muros de soporte. Ningún activo cumple con el umbral de seguridad A+ (Bids > 55% y confirmación de volumen), por lo que se prioriza la preservación del capital en USDT.",
   "top_candidates": [
     {
-      "symbol": "ARBUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "ARBUSDT",
       "score": 75
     },
     {
-      "symbol": "SEIUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 75
     }
   ]
