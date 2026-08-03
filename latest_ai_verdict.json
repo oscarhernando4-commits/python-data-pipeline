@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-03 21:40:17",
+  "timestamp": "2026-08-03 21:42:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con scores insuficientes en todos los activos analizados. Ninguna opción cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de soporte institucional necesaria, por lo que la decisión estratégica es mantener la liquidez en espera de una estructura de mercado más robusta.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con baja liquidez y alta incertidumbre. Ninguno de los candidatos cumple con los criterios estrictos de calidad A+ establecidos por el comité, por lo que la decisión estratégica es mantener la posición en efectivo (USDT) para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "XLMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ASTERUSDT",
-      "score": 60
-    },
-    {
       "symbol": "RENDERUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "JUPUSDT",
       "score": 60
     },
     {
@@ -23,8 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "SEIUSDT",
+      "symbol": "HOLOUSDT",
       "score": 60
+    },
+    {
+      "symbol": "UNIUSDT",
+      "score": 50
     }
   ]
 }
