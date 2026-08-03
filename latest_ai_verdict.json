@@ -1,26 +1,26 @@
 {
-  "timestamp": "2026-08-03 01:02:19",
+  "timestamp": "2026-08-03 01:04:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos que cumplan con los criterios de alta convicción (Score >= 65) y soporte institucional. Operar en este entorno de alta toxicidad y correlación negativa violaría la Regla #1 de protección de capital.",
+  "reasoning": "El mercado presenta una estructura de debilidad generalizada sin activos que cumplan con los requisitos de alta convicción (Score >= 65). Ante la falta de soporte institucional y la alta probabilidad de manipulación en activos de baja liquidez, el comité ha decidido mantener el 100% de la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "POLUSDT",
+      "symbol": "DCRUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "MIRAUSDT",
       "score": 60
     },
     {
-      "symbol": "EWYBUSDT",
+      "symbol": "ORDIUSDT",
       "score": 60
     },
     {
       "symbol": "KAITOUSDT",
       "score": 55
-    },
-    {
-      "symbol": "GIGGLEUSDT",
-      "score": 50
     },
     {
       "symbol": "MANTRAUSDT",
