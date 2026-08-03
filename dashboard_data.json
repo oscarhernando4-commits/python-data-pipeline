@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-08-03 13:10:23",
-  "total_balance_usd": 19.61,
-  "usdt_free": 0.1942,
+  "updated_at": "2026-08-03 13:12:23",
+  "total_balance_usd": 19.51,
+  "usdt_free": 19.50545,
   "bnb_free": 0.00415754,
-  "status": "🔵 En Vivo LONG (ARBUSDT @ $0.0810)",
+  "status": "🟦 Buscando Entrada A+",
   "position": {
-    "symbol": "ARBUSDT",
-    "quantity": 209.1,
-    "entry_price": 0.0813,
-    "highest_price": 0.0814,
+    "symbol": "NINGUNA",
+    "quantity": 0.0,
+    "entry_price": 0.0,
+    "highest_price": 0.0,
     "break_even": false,
     "trailing_active": false,
-    "adaptive_sl_pct": 0.6,
-    "volatility_regime": "⏳ Escalera 20m: SL Apretado a -0.60%"
+    "adaptive_sl_pct": 1.0,
+    "volatility_regime": "🔵 Standard ATR"
   },
   "agents": {
     "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de fragmentación y alta volatilidad con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia institucional es mantener la liquidez en USDT para evitar el riesgo de 'trampas de valor' en un entorno de limpieza de activos zombis."
+    "reasoning": "El comité ha determinado por unanimidad que, a pesar de la fortaleza técnica de FIL, las condiciones macroeconómicas, la falta de dominancia en el libro de órdenes y el bajo win rate histórico en mercados neutrales, no justifican el riesgo de una operación en este momento. Se prioriza la preservación del capital hasta que el mercado muestre una estructura de soporte definida."
   }
 }

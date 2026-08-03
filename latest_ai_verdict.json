@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-03 13:10:22",
+  "timestamp": "2026-08-03 13:12:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragmentación y alta volatilidad con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia institucional es mantener la liquidez en USDT para evitar el riesgo de 'trampas de valor' en un entorno de limpieza de activos zombis.",
+  "reasoning": "El comité ha determinado por unanimidad que, a pesar de la fortaleza técnica de FIL, las condiciones macroeconómicas, la falta de dominancia en el libro de órdenes y el bajo win rate histórico en mercados neutrales, no justifican el riesgo de una operación en este momento. Se prioriza la preservación del capital hasta que el mercado muestre una estructura de soporte definida.",
   "top_candidates": [
     {
       "symbol": "FILUSDT",
-      "score": 75
+      "score": 85
     },
     {
       "symbol": "SEIUSDT",
       "score": 75
     },
     {
-      "symbol": "OPUSDT",
+      "symbol": "STRKUSDT",
       "score": 75
     },
     {
-      "symbol": "STRKUSDT",
+      "symbol": "OPUSDT",
       "score": 75
     },
     {

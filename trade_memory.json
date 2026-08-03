@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 591,
+    "total_trades": 592,
     "wins": 183,
-    "losses": 408,
-    "win_rate_pct": 30.96,
-    "total_pnl_usd": -1.741884545454588
+    "losses": 409,
+    "win_rate_pct": 30.91,
+    "total_pnl_usd": -1.846434545454588
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -9550,6 +9550,19 @@
       "pnl_usd": -0.053040000000000045,
       "result": "LOSS",
       "notes": "Real Money Trade closed with -0.31%",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-03 13:12:23",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "ARBUSDT",
+      "side": "BUY",
+      "entry_price": 0.0813,
+      "exit_price": 0.0808,
+      "pnl_usd": -0.10455000000000009,
+      "result": "LOSS",
+      "notes": "Real Money Trade closed with -0.62%",
       "context": {}
     }
   ]
