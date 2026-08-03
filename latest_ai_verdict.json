@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-03 08:44:21",
+  "timestamp": "2026-08-03 08:46:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con una correlación bajista predominante. Ningún candidato cumple con el umbral de Score A+ (>=65) ni con la confirmación de liquidez necesaria en el libro de órdenes. Se mantiene la liquidez en USDT para evitar riesgos innecesarios de 'falling knives' en un entorno de capitulación.",
+  "reasoning": "El mercado actual se encuentra en un estado de debilidad sistémica con una alta correlación negativa. Ninguno de los activos analizados cumple con los criterios de alta convicción (Score >= 65) ni con la profundidad de liquidez necesaria para una ejecución segura. Se prioriza la preservación del capital sobre la operativa especulativa.",
   "top_candidates": [
-    {
-      "symbol": "DODOUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "XLMUSDT",
-      "score": 60
-    },
     {
       "symbol": "NEARUSDT",
       "score": 60
@@ -23,7 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "ALGOUSDT",
+      "score": 60
+    },
+    {
       "symbol": "MUBARAKUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "DODOUSDT",
       "score": 60
     }
   ]
