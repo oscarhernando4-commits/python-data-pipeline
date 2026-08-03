@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-03 14:22:26",
+  "timestamp": "2026-08-03 14:24:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de compresión de volatilidad sin una dirección clara. A pesar de que varios activos tienen un Score de 75, la falta de soporte institucional en el libro de órdenes y la alta tasa de fallos en condiciones de mercado neutrales dictan una postura de preservación de capital (HOLD) hasta que se rompa el rango con volumen institucional confirmado.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, la falta de dominancia en el libro de órdenes y la inestabilidad macro actual no justifican la entrada en el mercado, priorizando la preservación del capital sobre la especulación.",
   "top_candidates": [
+    {
+      "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
     {
       "symbol": "HBARUSDT",
       "score": 75
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "AAVEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "HYPERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "VIRTUALUSDT",
       "score": 75
     }
   ]
