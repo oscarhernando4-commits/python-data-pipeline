@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-08-03 09:48:25",
+  "updated_at": "2026-08-03 09:50:26",
   "total_balance_usd": 19.72,
-  "usdt_free": 17.2258,
+  "usdt_free": 0.0,
   "bnb_free": 0.00426609,
-  "status": "🟦 Buscando Entrada A+",
+  "status": "🔵 En Vivo LONG (DOTUSDT @ $0.7990)",
   "position": {
-    "symbol": "NINGUNA",
-    "quantity": 0.0,
-    "entry_price": 0.0,
-    "highest_price": 0.0,
+    "symbol": "DOTUSDT",
+    "quantity": 21.27,
+    "entry_price": 0.799,
+    "highest_price": 0.799,
     "break_even": false,
     "trailing_active": false,
     "adaptive_sl_pct": 1.0,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de 'Neutralidad de Alta Tensión' donde la falta de profundidad en el libro de órdenes y la ausencia de un volumen institucional claro invalidan cualquier señal de compra bajo los criterios de riesgo A+ del comité."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de indecisión y riesgo elevado, por lo que la estrategia institucional es mantener la liquidez en espera de una señal técnica más clara."
   }
 }
