@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 21:14:17",
+  "timestamp": "2026-08-03 21:16:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con una correlación bajista predominante. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de soporte institucional en el libro de órdenes, por lo que la decisión institucional es mantener la liquidez en espera de una estructura de mercado más saludable.",
+  "reasoning": "El mercado se encuentra en un estado de alta toxicidad y distribución institucional. Ninguno de los candidatos analizados cumple con el requisito mínimo de Score 65 ni con la profundidad de mercado necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la ejecución de trades especulativos de baja probabilidad.",
   "top_candidates": [
     {
       "symbol": "TAOUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "GRAMUSDT",
       "score": 60
     },
     {
@@ -23,8 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "EDENUSDT",
-      "score": 60
+      "symbol": "UNIUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "DEXEUSDT",
+      "score": 50
     }
   ]
 }
