@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 07:56:19",
+  "timestamp": "2026-08-03 07:58:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada con ausencia de demanda institucional real. Dado que ningún activo alcanza el umbral de seguridad A+ (Score >= 65) y el entorno macro es de alta vulnerabilidad, el comité ha decidido proteger el 100% de la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de seguridad A+ (Score >= 65). La alta correlación bajista, la falta de profundidad en el libro de órdenes y el entorno macro de aversión al riesgo dictan una postura de espera total para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "POLUSDT",
       "score": 60
     },
     {
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "ENAUSDT",
+      "symbol": "BTCUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "XLMUSDT",
       "score": 50
     }
   ]
