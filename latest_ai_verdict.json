@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 22:00:21",
+  "timestamp": "2026-08-03 22:02:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de estancamiento bajista severo sin activos que cumplan con los criterios de alta convicción (Score >= 65). La estrategia institucional prioriza la preservación de capital sobre la especulación en un entorno de baja liquidez y alta correlación negativa.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva y capitulación técnica. Ninguno de los candidatos analizados cumple con el umbral mínimo de Score Técnico (>= 65) ni con la profundidad de mercado necesaria para una ejecución segura. Se prioriza la preservación de capital sobre la especulación en activos de baja calidad.",
   "top_candidates": [
     {
-      "symbol": "ASTERUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SEIUSDT",
+      "symbol": "ACXUSDT",
       "score": 60
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "VANRYUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "COTIUSDT",
       "score": 50
     }
   ]
