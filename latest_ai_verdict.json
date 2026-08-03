@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-03 01:20:20",
+  "timestamp": "2026-08-03 01:22:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva y falta de dispersión en los scores de los activos. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65) ni con la confirmación de liquidez necesaria en el orderbook. Se prioriza la protección del capital frente a la alta probabilidad de un 'flash crash' de liquidez.",
+  "reasoning": "El mercado presenta una vulnerabilidad estructural extrema y falta de soporte institucional. Ningún activo cumple con los criterios de alta convicción (Score >= 65) establecidos por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos de baja probabilidad.",
   "top_candidates": [
     {
       "symbol": "DCRUSDT",
       "score": 70
     },
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "NVDABUSDT",
       "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 55
+      "symbol": "EULUSDT",
+      "score": 50
     },
     {
-      "symbol": "EULUSDT",
+      "symbol": "SNXXBUSDT",
       "score": 50
     },
     {
