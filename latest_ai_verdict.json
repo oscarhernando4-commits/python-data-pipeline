@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 17:54:24",
+  "timestamp": "2026-08-03 17:56:47",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión técnica y falta de liquidez institucional confirmada en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia más prudente es el 'HOLD' para evitar trampas de valor y proteger el capital.",
+  "reasoning": "El mercado se encuentra en una fase de rebalanceo con alta incertidumbre y falta de soporte institucional en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de ballenas), por lo que la estrategia óptima es mantener la liquidez y evitar la exposición a activos con alta probabilidad de reversión.",
   "top_candidates": [
-    {
-      "symbol": "TAOUSDT",
-      "score": 75
-    },
     {
       "symbol": "JTOUSDT",
       "score": 75
-    },
-    {
-      "symbol": "XLMUSDT",
-      "score": 65
     },
     {
       "symbol": "ALLOUSDT",
       "score": 65
     },
     {
-      "symbol": "MUBUSDT",
+      "symbol": "XLMUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "SKHYBUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "SOXLBUSDT",
       "score": 65
     }
   ]
