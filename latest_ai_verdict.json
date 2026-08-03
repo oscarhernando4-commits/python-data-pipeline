@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 12:30:19",
+  "timestamp": "2026-08-03 12:32:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual carece de la convicción técnica y de liquidez necesaria para cumplir con nuestros estándares de seguridad A+. Todos los candidatos presentan scores inferiores a 65 y una dominancia de Bids neutral, lo que aumenta el riesgo de 'falling knives'. Se mantiene la posición en efectivo para preservar el capital hasta que surja una configuración de alta probabilidad.",
+  "reasoning": "El mercado actual carece de la convicción técnica y la profundidad de liquidez necesarias para cumplir con los estándares de calidad A+ del comité, por lo que se prioriza la protección del capital sobre la operativa.",
   "top_candidates": [
+    {
+      "symbol": "BNBUSDT",
+      "score": 60
+    },
     {
       "symbol": "RIFUSDT",
       "score": 55
+    },
+    {
+      "symbol": "UNIUSDT",
+      "score": 50
     },
     {
       "symbol": "GIGGLEUSDT",
       "score": 50
     },
     {
-      "symbol": "SUIUSDT",
-      "score": 50
-    },
-    {
       "symbol": "DOGEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "UNIUSDT",
       "score": 50
     }
   ]
