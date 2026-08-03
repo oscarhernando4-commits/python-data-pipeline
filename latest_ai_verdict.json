@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 16:12:22",
+  "timestamp": "2026-08-03 16:14:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura técnica fragmentada. Ninguno de los candidatos presenta una dominancia de Bids superior al 55% ni una confirmación de volumen institucional que justifique el riesgo de una operación, por lo que la decisión es mantener la liquidez en espera de una mejor configuración.",
+  "reasoning": "El comité ha decidido mantener la liquidez en USDT (HOLD) debido a que, a pesar de los scores técnicos de 75, no existe una confirmación de soporte en el libro de órdenes ni una tendencia clara en 4H, lo que contraviene la Regla #1 de no perder dinero.",
   "top_candidates": [
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "AVAXUSDT",
       "score": 75
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "REUSDT",
+      "symbol": "SUNUSDT",
       "score": 75
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "REUSDT",
       "score": 75
     }
   ]
