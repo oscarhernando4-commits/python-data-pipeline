@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-03 05:34:16",
+  "timestamp": "2026-08-03 05:36:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica y alta incertidumbre. Ninguno de los candidatos cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de liquidez necesaria. La estrategia institucional prioriza la preservación del capital sobre la especulación en entornos de baja convicción.",
+  "reasoning": "El mercado presenta una configuración de alta toxicidad y debilidad sistémica. Ningún activo cumple con los requisitos de calidad A+ (Score >= 65) ni con la confirmación de soporte institucional necesaria. Se prioriza la preservación del capital ante la ausencia de una oportunidad con alta probabilidad de éxito.",
   "top_candidates": [
     {
-      "symbol": "MIRAUSDT",
-      "score": 60
-    },
-    {
       "symbol": "ALGOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ATOMUSDT",
       "score": 60
     },
     {
@@ -23,7 +15,15 @@
       "score": 50
     },
     {
-      "symbol": "DEXEUSDT",
+      "symbol": "AAVEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "ZAMAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "SKYUSDT",
       "score": 50
     }
   ]
