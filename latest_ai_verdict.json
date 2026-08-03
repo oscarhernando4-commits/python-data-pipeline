@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-03 18:48:20",
+  "timestamp": "2026-08-03 18:50:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de estancamiento defensivo. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro). Se prioriza la preservación del capital sobre la ejecución de trades especulativos en un entorno de baja volatilidad direccional.",
+  "reasoning": "Tras deliberar, el comité concluye que ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La alta volatilidad y la falta de soporte claro en el libro de órdenes para los activos RWA analizados hacen que la estrategia más rentable sea mantener la liquidez en USDT hasta que el mercado muestre una estructura de acumulación más definida.",
   "top_candidates": [
-    {
-      "symbol": "UNIUSDT",
-      "score": 70
-    },
     {
       "symbol": "XAUTUSDT",
       "score": 65
@@ -19,11 +15,15 @@
       "score": 65
     },
     {
-      "symbol": "KAITOUSDT",
+      "symbol": "PEPEUSDT",
       "score": 65
     },
     {
       "symbol": "PAXGUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "ERAUSDT",
       "score": 65
     }
   ]
