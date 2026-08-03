@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 11:46:18",
+  "timestamp": "2026-08-03 11:48:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual carece de la convicción institucional necesaria y de activos con un score técnico superior a 65. Ante la ausencia de señales claras de acumulación y la alta volatilidad bajista, la estrategia óptima es la preservación total del capital mediante la inacción.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad generalizada sin activos que cumplan con los criterios de alta convicción (Score A+). La estrategia institucional es preservar el 100% de la liquidez en stablecoins hasta que la estructura de mercado muestre una reversión clara y soporte institucional confirmado.",
   "top_candidates": [
     {
-      "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "OPUSDT",
-      "score": 60
+      "symbol": "ZECUSDT",
+      "score": 50
     },
     {
       "symbol": "PEPEUSDT",
       "score": 50
     },
     {
-      "symbol": "ONDOUSDT",
+      "symbol": "SUIUSDT",
       "score": 50
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "PAXGUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "ICPUSDT",
       "score": 50
     }
   ]
