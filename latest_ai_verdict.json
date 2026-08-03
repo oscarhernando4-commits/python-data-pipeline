@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 16:08:25",
+  "timestamp": "2026-08-03 16:10:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una divergencia estructural y falta de profundidad en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte de ballenas confirmado), por lo que la estrategia de protección de capital es la única opción viable.",
+  "reasoning": "El mercado se encuentra en un estado de fragmentación defensiva con una tendencia neutral predominante. Ninguno de los candidatos cumple con el umbral de soporte institucional (Bids > 55%) ni con la convicción A+ requerida por el comité, por lo que la estrategia de preservación de capital es la única opción viable.",
   "top_candidates": [
     {
       "symbol": "ASTERUSDT",
       "score": 75
     },
     {
-      "symbol": "ARBUSDT",
+      "symbol": "FILUSDT",
       "score": 75
     },
     {
@@ -19,12 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "SKHYBUSDT",
-      "score": 65
+      "symbol": "ARBUSDT",
+      "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
-      "score": 65
+      "symbol": "SHIBUSDT",
+      "score": 70
     }
   ]
 }
