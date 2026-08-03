@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-03 10:04:15",
+  "timestamp": "2026-08-03 10:06:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de activos con score técnico de 75, la falta de profundidad en el libro de órdenes, la ausencia de muros de soporte institucionales y el entorno de miedo macroeconómico no cumplen con los estándares de seguridad A+ exigidos para la ejecución de capital.",
+  "reasoning": "El mercado presenta una divergencia estructural y una falta de datos críticos en el libro de órdenes que impiden alcanzar el umbral de confianza A+ requerido por el comité para una ejecución de compra.",
   "top_candidates": [
     {
-      "symbol": "ICPUSDT",
+      "symbol": "POLUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "AAVEUSDT",
       "score": 75
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "ATOMUSDT",
       "score": 75
     },
     {
@@ -19,12 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "BTCUSDT",
-      "score": 65
+      "symbol": "TRUMPUSDT",
+      "score": 75
     }
   ]
 }
