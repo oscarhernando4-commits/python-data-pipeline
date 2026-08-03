@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-03 06:44:22",
+  "timestamp": "2026-08-03 06:46:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad generalizada con scores técnicos insuficientes (máximo 60/100) y falta de soporte en el libro de órdenes. Siguiendo la Regla de Oro #1, al no existir candidatos con Score A+ (>= 65), la decisión institucional es preservar el capital y mantenerse en posición de espera (HOLD).",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica y falta de liquidez institucional. Ningún activo cumple con los criterios estrictos de Score A+ (>= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que la decisión institucional es mantener la posición en efectivo (USDT) para evitar riesgos innecesarios.",
   "top_candidates": [
     {
       "symbol": "NILUSDT",
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "AVAXUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "PENDLEUSDT",
       "score": 55
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "UNIUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "SYNUSDT",
       "score": 50
     }
   ]
