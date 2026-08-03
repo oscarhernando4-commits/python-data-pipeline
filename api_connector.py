@@ -909,7 +909,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         is_stable = True
                         print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de muro comprador (Bids: {ob_info.get('bid_dominance_pct')}% < 55.0%).")
                     else:
-                        print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.25% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=55% OK)")
+                        is_yellow = mtf_res.get("is_yellow_arrow_pivot", False)
+                        arrow_lbl = " 🎯 [PATRÓN FLECHAS AMARILLAS 15M PIVOT REBOUND]" if is_yellow else ""
+                        print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}{arrow_lbl}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.25% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=55% OK)")
                 
         if bias_ok and not is_stable:
             # 1. LONG Entry Signal (Operates with 100% of available USDT, strictly requires Score >= 65 Setup A+)

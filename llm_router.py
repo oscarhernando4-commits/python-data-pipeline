@@ -103,6 +103,7 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     2. Si la vela de 15m presenta mechas superiores de reversión o está sobre-extendida en la cima, RECHAZA la compra (HOLD).
     3. Exige que 5m y 15m muestren alineación alcista simultánea.
     4. REGLA DE ENTRADA TEMPRANA (INICIO DE IMPULSO): Si la Fase 15m es SOBRE_EXTENDIDO (CIMA) o la distancia respecto a MA(7) supera el +1.2%, RECHAZA la compra por llegada tardía en el techo (HOLD). APRUEBA únicamente en fase RUPTURA_FRESCA (INICIO) cuando el movimiento recién empieza.
+    5. PATRÓN FLECHAS AMARILLAS (PUNTO DULCE A+): Si el activo presenta el Patrón de Flechas Amarillas (apoyo/retesteo en MA7/MA25 en 15m con mecha inferior de absorción compradora + anticipación en 5m/1h + correlación alcista de BTC/Mercado), APRUEBA CON ALTA CONVICCIÓN A+ (BUY_LONG).
 
     LECCIONES APRENDIDAS DE 99 SIMULACIONES (RAG MEMORY):
     Patrones Prohibidos (Trampas descubiertas):

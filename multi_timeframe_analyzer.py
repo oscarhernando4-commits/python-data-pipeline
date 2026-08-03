@@ -163,7 +163,13 @@ def analyze_multi_timeframe_candles(symbol):
         
         candle_range = high_15m - low_15m
         upper_wick = high_15m - max(open_15m, close_15m)
+        lower_wick = min(open_15m, close_15m) - low_15m
+        lower_wick_pct = round((lower_wick / candle_range) * 100.0, 1) if candle_range > 0 else 0.0
         
+        # Yellow Arrow 15M Pivot Rebound Pattern Detector (Support retest + buyer absorption wick + 5m momentum)
+        is_yellow_arrow_pivot = (0.0 <= dist_from_15m_ma7_pct <= 1.2) and (lower_wick_pct >= 20.0 or close_15m > open_15m) and tf_5m_up
+        yellow_arrow_status = "🎯 PATRÓN FLECHAS AMARILLAS (REBOTE PIVOTE A+ EN MA7/MA25)" if is_yellow_arrow_pivot else "⚪ NEUTRAL 15M"
+
         # Spike up followed by rejection wick (buying top trap)
         if candle_range > 0 and (upper_wick / candle_range) > 0.35 and (high_15m - low_15m) / low_15m > 0.012:
             is_overextended_15m = True
@@ -177,11 +183,15 @@ def analyze_multi_timeframe_candles(symbol):
         elif not price_above_15m_ma7 or not price_above_15m_ma25:
             is_overextended_15m = True
             overextension_reason = f"Precio de 15m por debajo de medias móviles (Precio: {closes_15m[-1]} < MA7: {ma7_15m:.4f} / MA25: {ma25_15m:.4f})"
+    else:
+        is_yellow_arrow_pivot = False
+        yellow_arrow_status = "⚪ NEUTRAL"
 
     pattern_15m_summary = (
         f"Precio 15m=${closes_15m[-1]:.4f} | MA7_15m=${ma7_15m:.4f} (Distancia: {dist_from_15m_ma7_pct:+.2f}%) | "
         f"MA25_15m=${ma25_15m:.4f} | Por encima MA7/MA25={'SÍ' if price_above_15m_ma7 and price_above_15m_ma25 else 'NO'} | "
-        f"Fase 15m={'RUPTURA_FRESCA (INICIO)' if 0.0 <= dist_from_15m_ma7_pct <= 1.2 else 'SOBRE_EXTENDIDO (CIMA)'} | VolSurge 15m={vol_surge_15m}x"
+        f"Fase 15m={'RUPTURA_FRESCA (INICIO)' if 0.0 <= dist_from_15m_ma7_pct <= 1.2 else 'SOBRE_EXTENDIDO (CIMA)'} | "
+        f"Patrón={yellow_arrow_status} | VolSurge 15m={vol_surge_15m}x"
     )
 
     return {
@@ -191,6 +201,7 @@ def analyze_multi_timeframe_candles(symbol):
         "price_expansion_1d_pct": round(price_expansion_pct, 2),
         "is_overextended_15m": is_overextended_15m,
         "overextension_reason": overextension_reason,
+        "is_yellow_arrow_pivot": is_yellow_arrow_pivot,
         "price_above_15m_mas": price_above_15m_ma7 and price_above_15m_ma25,
         "vol_surge_15m": vol_surge_15m,
         "pattern_15m_summary": pattern_15m_summary,
