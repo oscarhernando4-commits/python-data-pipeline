@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-03 17:00:25",
+  "timestamp": "2026-08-03 17:02:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado presenta una alta incertidumbre y riesgo de trampa de liquidez, por lo que la estrategia óptima es mantener la posición en efectivo (USDT) para preservar el capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La fragmentación de liquidez y la debilidad en el sentimiento general dictan una postura de preservación de capital (HOLD) hasta que surja una señal de alta calidad.",
   "top_candidates": [
     {
       "symbol": "ALLOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ARBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SAGAUSDT",
       "score": 75
     },
     {
@@ -23,7 +15,15 @@
       "score": 65
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "PUMPUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "WLFIUSDT",
       "score": 65
     }
   ]
