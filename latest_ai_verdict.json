@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 19:02:23",
+  "timestamp": "2026-08-03 19:04:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la fortaleza relativa de ciertos activos en el sector Layer 1, el mercado carece de la profundidad de liquidez y la convicción institucional necesaria para ejecutar una operación con alta probabilidad de éxito, optando por una postura defensiva de preservación de capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el requisito de dominancia de Bids compradores > 55% ni con la confirmación de muros de soporte necesarios para una entrada A+. Se prioriza la protección del capital ante la incertidumbre macro y la falta de liquidez direccional.",
   "top_candidates": [
+    {
+      "symbol": "STXUSDT",
+      "score": 85
+    },
     {
       "symbol": "AVAXUSDT",
       "score": 75
@@ -19,12 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "STXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "UNIUSDT",
-      "score": 70
+      "symbol": "BANKUSDT",
+      "score": 65
     }
   ]
 }
