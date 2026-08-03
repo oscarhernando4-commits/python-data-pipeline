@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 18:26:22",
+  "timestamp": "2026-08-03 18:28:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en un estado de indecisión y baja profundidad, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta una compresión de volatilidad inducida por el miedo y una falta de profundidad en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de ballenas confirmado), por lo que la estrategia óptima es mantener la liquidez y evitar la exposición a activos con historial insuficiente.",
   "top_candidates": [
     {
-      "symbol": "JSTUSDT",
+      "symbol": "SKYUSDT",
       "score": 75
     },
     {
-      "symbol": "SKYUSDT",
+      "symbol": "JSTUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 65
     },
     {
-      "symbol": "RENDERUSDT",
+      "symbol": "PAXGUSDT",
       "score": 65
     }
   ]
