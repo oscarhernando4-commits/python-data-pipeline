@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 15:00:32",
+  "timestamp": "2026-08-03 15:02:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado se encuentra en un estado de indecisión (Fear 28) y la mayoría de los activos presentan una estructura técnica neutral que no justifica el riesgo de capital. Se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). El mercado presenta ruido de alta frecuencia y falta de soporte institucional, por lo que la estrategia óptima es el resguardo de capital.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "PUMPUSDT",
+      "score": 75
+    },
+    {
       "symbol": "CAKEUSDT",
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "GRAMUSDT",
+      "symbol": "SOXLBUSDT",
       "score": 65
     }
   ]
