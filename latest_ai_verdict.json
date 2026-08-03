@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 09:08:22",
+  "timestamp": "2026-08-03 09:10:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada donde ningún activo cumple con los criterios de alta convicción (Score >= 65) exigidos por el comité. Se prioriza la preservación del capital frente a la especulación en un entorno de baja liquidez y alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema con una correlación bajista predominante. Ninguno de los candidatos cumple con el requisito de Score Técnico >= 65 ni con la profundidad de libro de órdenes necesaria para una ejecución segura. Se prioriza la preservación de capital sobre la especulación en un entorno de alta volatilidad y baja convicción.",
   "top_candidates": [
     {
       "symbol": "NEARUSDT",
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "ICPUSDT",
       "score": 60
     },
     {
@@ -19,7 +19,7 @@
       "score": 60
     },
     {
-      "symbol": "DODOUSDT",
+      "symbol": "POLUSDT",
       "score": 60
     },
     {
