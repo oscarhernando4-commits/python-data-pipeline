@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-03 07:52:19",
+  "timestamp": "2026-08-03 07:54:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema con una correlación negativa generalizada y falta de convicción institucional. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65), por lo que el comité ha decidido mantener la liquidez en espera de una estructura de mercado más saludable.",
+  "reasoning": "El mercado se encuentra en una fase de distribución defensiva con una ausencia total de momentum alcista. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación de capital mediante la inacción.",
   "top_candidates": [
-    {
-      "symbol": "POLUSDT",
-      "score": 60
-    },
     {
       "symbol": "ATOMUSDT",
       "score": 60
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "KAITOUSDT",
+      "score": 50
+    },
+    {
       "symbol": "ERAUSDT",
       "score": 50
     },
     {
-      "symbol": "KAITOUSDT",
+      "symbol": "QNTUSDT",
       "score": 50
     }
   ]
