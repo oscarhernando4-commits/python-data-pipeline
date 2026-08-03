@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-03 19:32:17",
+  "timestamp": "2026-08-03 19:34:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de soporte real en el libro de órdenes y la persistencia de una tendencia neutral en el mercado global no justifican el riesgo de ejecución, optando por preservar el capital hasta que surja una señal de alta convicción.",
+  "confidence": 45,
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 75, la ausencia de una dominancia clara en el libro de órdenes (Bids < 55%) y el entorno de miedo generalizado (Fear & Greed 28) no cumplen con los criterios de convicción A+ exigidos por el Chief Risk Officer. Se prioriza la preservación del capital sobre la especulación en un mercado de alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PAXGUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "SEIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PYTHUSDT",
       "score": 75
     }
   ]
