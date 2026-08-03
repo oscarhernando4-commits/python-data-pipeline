@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 13:44:21",
+  "timestamp": "2026-08-03 13:46:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La neutralidad en el libro de órdenes y el sentimiento de miedo global dictan una postura defensiva de 'HOLD' para evitar pérdidas innecesarias en un mercado de alta volatilidad y baja direccionalidad.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 75, la falta de confirmación en el libro de órdenes y el entorno macro de aversión al riesgo no cumplen con los estándares de seguridad A+ exigidos para la ejecución de capital.",
   "top_candidates": [
     {
-      "symbol": "BCHUSDT",
-      "score": 95
+      "symbol": "NEARUSDT",
+      "score": 75
     },
     {
-      "symbol": "SOLUSDT",
-      "score": 95
-    },
-    {
-      "symbol": "TIAUSDT",
-      "score": 85
+      "symbol": "ATOMUSDT",
+      "score": 75
     },
     {
       "symbol": "SEIUSDT",
-      "score": 85
+      "score": 75
     },
     {
-      "symbol": "OPUSDT",
-      "score": 85
+      "symbol": "ZROUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "JTOUSDT",
+      "score": 75
     }
   ]
 }
