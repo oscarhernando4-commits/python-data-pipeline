@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-03 06:54:20
+date: 2026-08-03 06:56:20
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $19.71 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-03 06:54:20`
+> ⏱️ **Última Actualización:** `2026-08-03 06:56:20`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00426609 BNB` (`~$2.49 USD`)
@@ -30,10 +30,10 @@ date: 2026-08-03 06:54:20
 
 > [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
-> - 📈 **Capital Total Acumulado:** **`$10,021.25 USD`** (`$+21.25 USD`)  
-> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `0 Cuentas (0.0%)`  
+> - 📈 **Capital Total Acumulado:** **`$9,998.65 USD`** (`$-1.35 USD`)  
+> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `20 Cuentas (20.0%)`  
 > - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `0 Cuentas (0.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `100 Cuentas (100.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `80 Cuentas (80.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
@@ -52,32 +52,32 @@ date: 2026-08-03 06:54:20
 ## 🛡️ GRUPO 1: Ultra-Estricto (Copia Estrategia Real A+ - Score >= 85 Pts)
 
 > [!TIP] 📊 **Resumen del 🛡️ GRUPO 1: Ultra-Estricto (Copia Estrategia Real A+ - Score >= 85 Pts):**
-> - 💵 **Balance Total del Grupo:** `$2,057.40 USD` (`+$57.40`)
-> - 🎯 **Operaciones Totales:** `60` (`40 Ganadas / 20 Perdidas`)
-> - 📈 **Tasa de Acierto del Grupo:** `66.7% Win Rate`
+> - 💵 **Balance Total del Grupo:** `$2,034.80 USD` (`+$34.80`)
+> - 🎯 **Operaciones Totales:** `80` (`40 Ganadas / 40 Perdidas`)
+> - 📈 **Tasa de Acierto del Grupo:** `50.0% Win Rate`
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-001** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-002** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-003** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-004** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-005** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-006** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-007** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-008** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-009** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-010** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-011** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-012** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-013** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-014** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-015** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-016** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-017** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-018** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-019** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
-| **SIM-020** | **MUBUSDT** | `#3` | `2W/1L` | 26-08-03<br>04:20 | `🔵 En Curso` | **`$102.87`** (`+$2.87`) | 🔵 En Vivo |
+| **SIM-001** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-002** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-003** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-004** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-005** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-006** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-007** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-008** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-009** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-010** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-011** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-012** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-013** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-014** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-015** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-016** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-017** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-018** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-019** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
+| **SIM-020** | **MUBUSDT** | `#4` | `2W/2L` | 26-08-03<br>06:56 | `🔴 Perdió -$1.13` | **`$101.74`** (`+$1.74`) | 🟢 Buscando |
 
 ---
 
