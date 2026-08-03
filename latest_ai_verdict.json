@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-03 01:08:20",
+  "timestamp": "2026-08-03 01:10:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno de mercado actual es de alta aversión al riesgo y distribución institucional. Ninguno de los activos analizados cumple con los criterios estrictos de Score A+ (>= 65) ni con la confirmación de liquidez necesaria para mitigar el riesgo de pérdida, por lo que se mantiene la posición en efectivo (USDT) para evitar 'cuchillos cayendo'.",
+  "reasoning": "El mercado se encuentra en una fase de purga de debilidad con scores técnicos insuficientes y falta de soporte en el libro de órdenes. Siguiendo las reglas de oro, ante la ausencia de candidatos con Score A+ (>= 65), la decisión institucional es mantener la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo'.",
   "top_candidates": [
+    {
+      "symbol": "EWYBUSDT",
+      "score": 70
+    },
     {
       "symbol": "DCRUSDT",
       "score": 70
     },
     {
-      "symbol": "EWYBUSDT",
+      "symbol": "ZBTUSDT",
       "score": 60
     },
     {
@@ -19,12 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "EULUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "KORUBUSDT",
-      "score": 50
+      "symbol": "KAITOUSDT",
+      "score": 55
     }
   ]
 }
