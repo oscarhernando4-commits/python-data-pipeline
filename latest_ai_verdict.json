@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-03 22:26:22",
+  "timestamp": "2026-08-03 22:28:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada. Ninguno de los activos analizados cumple con el umbral de Score Técnico A+ (>= 65) ni con la confirmación de liquidez necesaria en el libro de órdenes. Se mantiene la posición en efectivo para evitar el riesgo de 'cuchillos cayendo' y proteger el capital institucional.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad generalizada y falta de acumulación institucional. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage. Se prioriza la protección del capital frente a la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
-    {
-      "symbol": "INTCBUSDT",
-      "score": 60
-    },
     {
       "symbol": "OPENUSDT",
       "score": 60
@@ -19,11 +15,15 @@
       "score": 50
     },
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "COTIUSDT",
       "score": 50
     },
     {
-      "symbol": "COTIUSDT",
+      "symbol": "ACXUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "MUUBUSDT",
       "score": 50
     }
   ]
