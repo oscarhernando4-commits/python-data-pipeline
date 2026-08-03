@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 23:44:21",
+  "timestamp": "2026-08-03 23:46:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica extrema sin activos que cumplan con el umbral de Score Técnico A+ (>= 65). La ausencia de soporte institucional en el libro de órdenes y la alta probabilidad de volatilidad bajista obligan a mantener la posición en efectivo para preservar el capital.",
+  "reasoning": "El mercado presenta una debilidad estructural sistémica. Ningún activo cumple con el umbral de Score 65 requerido por el Comité para una operación de alta convicción. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez y alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "XPLUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ENAUSDT",
       "score": 60
     },
     {
-      "symbol": "NEXOUSDT",
+      "symbol": "BFUSDUSDT",
       "score": 60
     },
     {
-      "symbol": "ORDIUSDT",
-      "score": 60
+      "symbol": "MIRAUSDT",
+      "score": 50
     },
     {
-      "symbol": "OPUSDT",
-      "score": 60
+      "symbol": "KAITOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "POLUSDT",
+      "score": 50
     }
   ]
 }
