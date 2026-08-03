@@ -1,26 +1,26 @@
 {
-  "timestamp": "2026-08-03 16:44:20",
+  "timestamp": "2026-08-03 16:46:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y confirmación de volumen institucional). El mercado se encuentra en un estado de alta incertidumbre y volatilidad, por lo que la estrategia óptima es mantener la liquidez en espera de una señal de alta probabilidad.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con falta de soporte institucional en el libro de órdenes y una tendencia neutral predominante. Ningún candidato cumple con el umbral de convicción A+ necesario para garantizar la preservación del capital, por lo que la estrategia óptima es mantener la liquidez en stablecoins.",
   "top_candidates": [
-    {
-      "symbol": "ORDIUSDT",
-      "score": 95
-    },
     {
       "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "ETCUSDT",
       "score": 75
     },
     {
-      "symbol": "FILUSDT",
-      "score": 70
+      "symbol": "ARBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DASHUSDT",
+      "score": 75
     },
     {
       "symbol": "DEXEUSDT",
