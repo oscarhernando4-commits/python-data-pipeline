@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-03 02:52:17",
+  "timestamp": "2026-08-03 02:54:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica generalizada. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte en el libro de órdenes. La estrategia institucional es de protección de capital, evitando el overtrading en un entorno de alta correlación negativa y desconfianza sistémica.",
+  "reasoning": "El mercado se encuentra en una fase de distribución forzada con alta correlación bajista. Ninguno de los candidatos analizados cumple con los criterios estrictos de Score Técnico (>= 65) ni con la profundidad de libro de órdenes necesaria para una ejecución segura. Se prioriza la protección del capital frente a la volatilidad errática actual.",
   "top_candidates": [
     {
       "symbol": "MIRAUSDT",
-      "score": 90
+      "score": 60
     },
     {
       "symbol": "SUNUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "SNXXBUSDT",
+      "symbol": "KAITOUSDT",
       "score": 50
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "SNXXBUSDT",
       "score": 50
     }
   ]
