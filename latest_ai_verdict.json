@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-03 12:26:18",
+  "timestamp": "2026-08-03 12:28:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación generalizada con una ausencia total de activos que cumplan con el umbral de calidad A+ (Score >= 65). La estrategia institucional es proteger el 100% de la liquidez hasta que aparezca una divergencia alcista clara o una mejora en el sentimiento macro.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una ausencia total de activos que cumplan con el umbral de calidad A+ (Score >= 65). La estrategia institucional prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez y alta incertidumbre macroeconómica.",
   "top_candidates": [
     {
       "symbol": "ATOMUSDT",
       "score": 55
     },
     {
-      "symbol": "GIGGLEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "SHIBUSDT",
+      "symbol": "SUIUSDT",
       "score": 50
     },
     {
@@ -23,7 +19,11 @@
       "score": 50
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "UNIUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "GIGGLEUSDT",
       "score": 50
     }
   ]
