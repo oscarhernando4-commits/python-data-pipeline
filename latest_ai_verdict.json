@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-03 06:14:20",
+  "timestamp": "2026-08-03 06:16:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una ausencia total de setups que cumplan con el umbral de seguridad A+ (Score >= 65). La falta de profundidad en el libro de órdenes y la debilidad macroeconómica dictan una postura de preservación de capital absoluta.",
+  "reasoning": "El mercado carece de convicción institucional y los candidatos analizados no superan el umbral de riesgo A+ requerido por el comité, por lo que se prioriza la preservación del capital en efectivo.",
   "top_candidates": [
-    {
-      "symbol": "POLUSDT",
-      "score": 70
-    },
     {
       "symbol": "XAUTUSDT",
       "score": 60
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "OPUSDT",
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
-      "score": 60
+      "symbol": "STXUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "BANKUSDT",
+      "score": 50
     }
   ]
 }
