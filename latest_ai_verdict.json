@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 21:02:17",
+  "timestamp": "2026-08-03 21:04:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de estancamiento con sesgo bajista y falta de profundidad en el libro de órdenes. Ningún activo cumple con los criterios estrictos de calidad A+ (Score >= 65) establecidos por el comité, por lo que la decisión estratégica es preservar el capital y evitar trampas de liquidez.",
+  "reasoning": "El mercado presenta un riesgo sistémico elevado con una ausencia total de activos que cumplan con los criterios de calidad A+ exigidos por el comité. La estrategia de preservación de capital es la única vía para evitar la exposición a 'trampas de valor' y posibles flash crashes en un entorno de liquidación institucional.",
   "top_candidates": [
     {
       "symbol": "TAOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ACEUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "BONKUSDT",
-      "score": 60
+      "symbol": "DEXEUSDT",
+      "score": 50
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "VANRYUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "COTIUSDT",
       "score": 50
     }
   ]
