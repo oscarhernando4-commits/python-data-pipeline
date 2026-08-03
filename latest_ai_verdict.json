@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 13:30:21",
+  "timestamp": "2026-08-03 13:32:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de activos con scores técnicos de 75, ninguno cumple con los requisitos de soporte en el libro de órdenes ni con la convicción A+ necesaria para mitigar el riesgo sistémico actual. Se prioriza la preservación del capital sobre la especulación en un mercado sin tendencia definida.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional silenciosa con una estructura técnica deficiente. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital hasta que surja una configuración de alta probabilidad.",
   "top_candidates": [
     {
       "symbol": "ATOMUSDT",
-      "score": 75
+      "score": 60
     },
     {
       "symbol": "APTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "CRVUSDT",
-      "score": 75
+      "score": 60
     },
     {
       "symbol": "VETUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "REUSDT",
-      "score": 70
+      "symbol": "CRVUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "STXUSDT",
+      "score": 60
     }
   ]
 }
