@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 08:00:20",
+  "timestamp": "2026-08-03 08:02:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual se encuentra en una fase de distribución defensiva. Ninguno de los activos analizados cumple con el umbral mínimo de seguridad (Score >= 65) ni con la profundidad de liquidez necesaria en el libro de órdenes. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y riesgo sistémico.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con alta fragilidad en los niveles de soporte. Ninguno de los candidatos cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de 'falling knives'. Se prioriza la preservación del capital hasta que las condiciones macro y técnicas mejoren.",
   "top_candidates": [
+    {
+      "symbol": "TRUMPUSDT",
+      "score": 60
+    },
     {
       "symbol": "DODOUSDT",
       "score": 60
@@ -17,10 +21,6 @@
     {
       "symbol": "STXUSDT",
       "score": 55
-    },
-    {
-      "symbol": "BNBUSDT",
-      "score": 50
     },
     {
       "symbol": "ERAUSDT",
