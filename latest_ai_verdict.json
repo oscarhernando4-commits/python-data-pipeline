@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-03 05:02:18",
+  "timestamp": "2026-08-03 05:04:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual no cumple con los criterios mínimos de seguridad y rentabilidad exigidos por el comité. La falta de activos con un score técnico superior a 65, sumada a la inestabilidad macroeconómica y la ausencia de soporte institucional en el libro de órdenes, obliga a una postura de espera (HOLD) para proteger el capital de posibles caídas adicionales.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada con una distribución institucional agresiva. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que la decisión institucional es mantener la liquidez en espera de una configuración de mercado más favorable.",
   "top_candidates": [
     {
       "symbol": "MIRAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NILUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "INJUSDT",
       "score": 60
     },
     {
@@ -17,14 +25,6 @@
     {
       "symbol": "ATOMUSDT",
       "score": 60
-    },
-    {
-      "symbol": "STXUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "GIGGLEUSDT",
-      "score": 50
     }
   ]
 }
