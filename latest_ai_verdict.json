@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-03 03:12:15",
+  "timestamp": "2026-08-03 03:14:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Debido a la capitulación técnica generalizada y la ausencia de activos con un Score A+ (>= 65) que cumplan con los requisitos de riesgo, el comité ha decidido no ejecutar ninguna operación para proteger el capital institucional.",
+  "reasoning": "El mercado presenta una toxicidad elevada y una correlación bajista que invalida cualquier intento de compra. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una estabilización estructural.",
   "top_candidates": [
     {
       "symbol": "MIRAUSDT",
       "score": 70
-    },
-    {
-      "symbol": "FILUSDT",
-      "score": 60
     },
     {
       "symbol": "PORTALUSDT",
@@ -21,6 +17,10 @@
     {
       "symbol": "BANKUSDT",
       "score": 55
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "score": 50
     },
     {
       "symbol": "XAUTUSDT",
