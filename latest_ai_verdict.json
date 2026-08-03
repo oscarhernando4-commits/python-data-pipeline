@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-03 18:18:19",
+  "timestamp": "2026-08-03 18:20:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "El mercado se encuentra en una fase de 'Neutralidad Forzada' con falta de convicción en el libro de órdenes y un sentimiento de miedo predominante. Ningún activo cumple con el umbral de seguridad A+ exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar el riesgo de capitulación minorista.",
+  "confidence": 0,
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
-      "symbol": "ETHUSDT",
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 65
+      "symbol": "ORDIUSDT",
+      "score": 75
     },
     {
       "symbol": "XAUTUSDT",
       "score": 65
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "BANKUSDT",
       "score": 65
     }
   ]
