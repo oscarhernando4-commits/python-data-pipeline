@@ -1,12 +1,38 @@
 {
-  "PENDLEUSDT": [
+  "JTOUSDT": [
     {
-      "timestamp": "2026-08-03 00:44:09",
-      "price": 1.382,
-      "score": 0,
-      "rsi": 49.79,
+      "timestamp": "2026-08-03 00:46:11",
+      "price": 0.497,
+      "score": 30,
+      "rsi": 55.99,
       "macd": "Neutral",
-      "volume_surge": 0.11,
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-03 00:46:11",
+      "price": 0.1393,
+      "score": 0,
+      "rsi": 47.27,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STRKUSDT": [
+    {
+      "timestamp": "2026-08-03 00:46:11",
+      "price": 0.0259,
+      "score": 10,
+      "rsi": 77.17,
+      "macd": "Neutral",
+      "volume_surge": 0.03,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,38 +40,12 @@
   ],
   "EIGENUSDT": [
     {
-      "timestamp": "2026-08-03 00:44:09",
-      "price": 0.1877,
-      "score": 40,
-      "rsi": 52.53,
+      "timestamp": "2026-08-03 00:46:11",
+      "price": 0.1874,
+      "score": 20,
+      "rsi": 50.09,
       "macd": "Neutral",
-      "volume_surge": 1.83,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "DCRUSDT": [
-    {
-      "timestamp": "2026-08-03 00:44:09",
-      "price": 13.28,
-      "score": 30,
-      "rsi": 53.38,
-      "macd": "Neutral",
-      "volume_surge": 0.24,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "IMXUSDT": [
-    {
-      "timestamp": "2026-08-03 00:44:09",
-      "price": 0.1102,
-      "score": 0,
-      "rsi": 35.47,
-      "macd": "Neutral",
-      "volume_surge": 0.64,
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -53,12 +53,25 @@
   ],
   "PEOPLEUSDT": [
     {
-      "timestamp": "2026-08-03 00:44:09",
+      "timestamp": "2026-08-03 00:46:11",
       "price": 0.007,
       "score": 15,
-      "rsi": 43.75,
+      "rsi": 43.74,
       "macd": "Neutral",
-      "volume_surge": 1.43,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "IMXUSDT": [
+    {
+      "timestamp": "2026-08-03 00:46:11",
+      "price": 0.1102,
+      "score": 0,
+      "rsi": 35.46,
+      "macd": "Neutral",
+      "volume_surge": 0.21,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
