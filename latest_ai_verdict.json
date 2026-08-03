@@ -1,26 +1,26 @@
 {
-  "timestamp": "2026-08-03 04:00:17",
+  "timestamp": "2026-08-03 04:02:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un riesgo sistémico elevado y ninguno de los activos candidatos cumple con los requisitos técnicos y de liquidez exigidos por el comité para una operación de alta convicción.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva sin soporte claro. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de pérdida, por lo que se mantiene la posición en efectivo.",
   "top_candidates": [
     {
       "symbol": "HOMEUSDT",
       "score": 70
     },
     {
+      "symbol": "MIRAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "WLDUSDT",
+      "score": 60
+    },
+    {
       "symbol": "MMTUSDT",
       "score": 55
-    },
-    {
-      "symbol": "XPLUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "SOXLBUSDT",
-      "score": 50
     },
     {
       "symbol": "XAUTUSDT",
