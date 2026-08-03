@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 05:38:18",
+  "timestamp": "2026-08-03 05:40:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de distribución institucional agresiva y falta de fuerza técnica en los activos analizados. Ningún candidato cumple con el requisito de Score Técnico >= 65 ni con la confirmación de volumen necesaria para una entrada segura, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una correlación bajista predominante. Ninguno de los candidatos analizados cumple con los criterios estrictos de Score A+ (>= 65) ni con la profundidad de liquidez necesaria para mitigar el riesgo de slippage. Se prioriza la preservación de capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
-      "symbol": "ALGOUSDT",
-      "score": 60
+      "symbol": "MIRAUSDT",
+      "score": 70
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "ALGOUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "ASTERUSDT",
       "score": 50
     }
   ]
