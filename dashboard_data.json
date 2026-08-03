@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 19:10:18",
+  "updated_at": "2026-08-03 19:12:23",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 45,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "A pesar de tener candidatos con scores técnicos altos (SEI, STX), la ausencia de una dominancia clara en el libro de órdenes (Bids < 55%) y la alta volatilidad del entorno macro impiden la ejecución. El comité prioriza la preservación del capital sobre la especulación en un mercado sin una tendencia definida."
+    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación bajista predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia institucional es mantener la liquidez en espera de una confirmación de tendencia más clara."
   }
 }
