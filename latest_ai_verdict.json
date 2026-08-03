@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 08:30:20",
+  "timestamp": "2026-08-03 08:32:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado carece de la fortaleza técnica y la liquidez institucional necesaria para una operación de compra. Todos los candidatos presentan scores inferiores a 65 y una estructura de libro de órdenes neutral, lo que contraviene las reglas de oro de gestión de riesgo. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El comité ha determinado que el mercado se encuentra en un estado de estancamiento bajista con alta correlación negativa. Dado que ningún activo cumple con el umbral de seguridad A+ (Score >= 65) y la liquidez institucional es insuficiente, la decisión estratégica es mantener la posición en efectivo para evitar el riesgo de 'cuchillos cayendo' y preservar el capital ante la falta de un catalizador alcista claro.",
   "top_candidates": [
     {
-      "symbol": "MUBARAKUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ERAUSDT",
+      "symbol": "KAITOUSDT",
       "score": 50
     },
     {
@@ -19,11 +15,15 @@
       "score": 50
     },
     {
-      "symbol": "KAITOUSDT",
+      "symbol": "MANTRAUSDT",
       "score": 50
     },
     {
-      "symbol": "MANTRAUSDT",
+      "symbol": "TRXUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "JSTUSDT",
       "score": 50
     }
   ]
