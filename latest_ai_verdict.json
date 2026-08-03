@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 14:04:24",
+  "timestamp": "2026-08-03 14:06:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fase de distribución selectiva con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que el comité decide mantener la liquidez en espera de una estructura de mercado más definida.",
+  "reasoning": "El mercado presenta una falta de convicción institucional en el libro de órdenes y una estructura técnica neutral que no cumple con los criterios de seguridad A+ exigidos por el comité, por lo que se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "SKYUSDT",
+      "symbol": "HBARUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "NVDABUSDT",
+      "symbol": "ONDOUSDT",
       "score": 75
     },
     {
-      "symbol": "JTOUSDT",
+      "symbol": "NIGHTUSDT",
       "score": 75
     }
   ]
