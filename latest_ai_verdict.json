@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-03 10:50:16",
+  "timestamp": "2026-08-03 10:52:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una ausencia total de activos que cumplan con el umbral de calidad A+ (Score >= 65). La falta de muros de soporte institucionales y la alta volatilidad errática en los activos analizados obligan a mantener la posición en liquidez (USDT) para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de hibernación institucional con scores técnicos mediocres (máximo 55/100) y sin confirmación de soporte en el libro de órdenes. Siguiendo la Regla de Oro #1, al no existir activos con Score >= 65, la decisión es proteger la liquidez y evitar el riesgo de 'falling knives'.",
   "top_candidates": [
     {
       "symbol": "SUNUSDT",
       "score": 55
-    },
-    {
-      "symbol": "BICOUSDT",
-      "score": 50
     },
     {
       "symbol": "PEPEUSDT",
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "CAKEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "ESPUSDT",
       "score": 50
     }
   ]
