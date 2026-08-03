@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 16:52:22",
+  "timestamp": "2026-08-03 16:54:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y dominancia de Bids > 55%). El mercado se encuentra en una fase de indecisión con alta probabilidad de trampas de liquidez, por lo que la estrategia institucional es mantener la posición en efectivo (USDT) para preservar el capital.",
+  "reasoning": "El mercado presenta una estructura de divergencia defensiva y falta de volumen institucional, lo que, sumado a la ausencia de candidatos con un Score Técnico superior a 65 y soporte sólido en el Orderbook, obliga a mantener una posición de espera para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
     {
       "symbol": "ETCUSDT",
       "score": 75
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "SKHYBUSDT",
-      "score": 65
+      "symbol": "VIRTUALUSDT",
+      "score": 75
     },
     {
       "symbol": "TAOUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "DEXEUSDT",
       "score": 65
     }
   ]
