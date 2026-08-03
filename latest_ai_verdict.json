@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 11:06:24",
+  "timestamp": "2026-08-03 11:08:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los 10 candidatos, ninguno cumple con los requisitos mínimos de Score Técnico (>= 65) ni con la confirmación de liquidez en el Orderbook. La estrategia institucional dicta preservar el capital en entornos de alta incertidumbre y baja convicción técnica.",
+  "reasoning": "El comité ha evaluado los candidatos y ha determinado que ninguno cumple con los criterios de alta convicción (Score >= 65) necesarios para operar en un entorno de mercado caracterizado por la distribución institucional y la falta de soporte claro en el libro de órdenes. Se prioriza la preservación del capital sobre la especulación en activos de baja fortaleza relativa.",
   "top_candidates": [
     {
       "symbol": "BICOUSDT",
@@ -15,11 +15,11 @@
       "score": 50
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "MANTRAUSDT",
       "score": 50
     },
     {
-      "symbol": "MANTRAUSDT",
+      "symbol": "ZAMAUSDT",
       "score": 50
     },
     {
