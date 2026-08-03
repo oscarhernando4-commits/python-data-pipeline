@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-03 20:28:15",
+  "timestamp": "2026-08-03 20:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento defensivo. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y volumen confirmado). Se prioriza la preservación del capital sobre la especulación en activos de baja profundidad.",
+  "reasoning": "El mercado presenta una fragmentación peligrosa y falta de convicción compradora. Ninguno de los candidatos cumple con el umbral de soporte de libro de órdenes (Bids > 55%) ni con una confirmación de volumen institucional, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "LUNCUSDT",
       "score": 75
     },
     {
@@ -15,16 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "HYPERUSDT",
-      "score": 75
-    },
-    {
       "symbol": "HOLOUSDT",
       "score": 75
     },
     {
-      "symbol": "MORPHOUSDT",
-      "score": 70
+      "symbol": "BONKUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 65
     }
   ]
 }
