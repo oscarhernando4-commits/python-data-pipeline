@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-08-03 14:58:23",
-  "total_balance_usd": 19.68,
+  "updated_at": "2026-08-03 15:00:36",
+  "total_balance_usd": 19.99,
   "usdt_free": 0.1914,
   "bnb_free": 0.00411434,
-  "status": "🔵 En Vivo LONG (ATOMUSDT @ $1.3200)",
+  "status": "🔵 En Vivo LONG (ATOMUSDT @ $1.3220)",
   "position": {
     "symbol": "ATOMUSDT",
     "quantity": 13.14,
     "entry_price": 1.286,
-    "highest_price": 1.32,
+    "highest_price": 1.322,
     "break_even": true,
     "trailing_active": true,
     "adaptive_sl_pct": 0.96,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y distribución silenciosa. Ninguno de los candidatos cumple con el requisito estricto de soporte de órdenes verificado (Bids > 55%) ni con una estructura técnica que garantice una operación de alta probabilidad, por lo que se prioriza la preservación del capital."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado se encuentra en un estado de indecisión (Fear 28) y la mayoría de los activos presentan una estructura técnica neutral que no justifica el riesgo de capital. Se prioriza la preservación del capital sobre la ejecución de trades especulativos."
   }
 }

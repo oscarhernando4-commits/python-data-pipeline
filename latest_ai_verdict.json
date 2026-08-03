@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 14:58:22",
+  "timestamp": "2026-08-03 15:00:32",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y distribución silenciosa. Ninguno de los candidatos cumple con el requisito estricto de soporte de órdenes verificado (Bids > 55%) ni con una estructura técnica que garantice una operación de alta probabilidad, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado se encuentra en un estado de indecisión (Fear 28) y la mayoría de los activos presentan una estructura técnica neutral que no justifica el riesgo de capital. Se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
   "top_candidates": [
-    {
-      "symbol": "PUMPUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 75
-    },
     {
       "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "CAKEUSDT",
       "score": 75
+    },
+    {
+      "symbol": "TAOUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "score": 65
     }
   ]
 }
