@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-03 18:28:15",
+  "timestamp": "2026-08-03 18:30:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una compresión de volatilidad inducida por el miedo y una falta de profundidad en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de ballenas confirmado), por lo que la estrategia óptima es mantener la liquidez y evitar la exposición a activos con historial insuficiente.",
+  "reasoning": "El mercado se encuentra en una fase de consolidación lateral con sentimiento de miedo, y ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ y soporte de liquidez necesarios para una ejecución segura, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "SKYUSDT",
       "score": 75
     },
     {
-      "symbol": "JSTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ORDIUSDT",
-      "score": 75
-    },
-    {
       "symbol": "XAUTUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "JSTUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "MANTRAUSDT",
       "score": 65
     },
     {
