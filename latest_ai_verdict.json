@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 02:44:18",
+  "timestamp": "2026-08-03 02:46:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno de mercado actual es de alta fragilidad y riesgo sistémico. Ninguno de los candidatos cumple con el umbral de Score A+ (>= 65) ni con la confirmación de soporte institucional en el libro de órdenes. Por lo tanto, se mantiene la posición en efectivo para evitar pérdidas por capitulación técnica.",
+  "reasoning": "El mercado se encuentra en un estado de distribución institucional y debilidad generalizada. Ninguno de los candidatos analizados alcanza el umbral de Score 65 requerido por el comité, y las condiciones macroeconómicas actuales aumentan el riesgo de pérdidas. Se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "SUNUSDT",
-      "score": 70
+      "score": 60
     },
     {
-      "symbol": "HOMEUSDT",
+      "symbol": "BANKUSDT",
       "score": 55
     },
     {
-      "symbol": "XLMUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "SAGAUSDT",
+      "symbol": "PORTALUSDT",
       "score": 50
     },
     {
-      "symbol": "BOMEUSDT",
+      "symbol": "POLUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "DODOUSDT",
       "score": 50
     }
   ]
