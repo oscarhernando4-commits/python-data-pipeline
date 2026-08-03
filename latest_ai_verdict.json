@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-03 04:52:18",
+  "timestamp": "2026-08-03 04:54:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad estructural extrema sin activos que cumplan con los criterios de alta convicción (Score >= 65). Se prioriza la preservación de capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con debilidad generalizada. Ningún activo cumple con el umbral mínimo de Score 65 ni con la confirmación de volumen institucional necesaria para una entrada segura. Se prioriza la preservación del capital ante la falta de estructura alcista clara.",
   "top_candidates": [
     {
-      "symbol": "NILUSDT",
+      "symbol": "MIRAUSDT",
       "score": 60
     },
     {
       "symbol": "POLUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NILUSDT",
       "score": 60
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "ZAMAUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "STXUSDT",
       "score": 55
     }
   ]
