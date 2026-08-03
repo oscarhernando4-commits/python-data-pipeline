@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-03 04:34:16",
+  "timestamp": "2026-08-03 04:36:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de debilidad sistémica con una ausencia total de activos que cumplan con el umbral de score técnico A+ (>= 65). Ante la falta de convicción institucional y la fragilidad del libro de órdenes, el comité ha decidido mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de distribución agresiva sin activos que cumplan con los criterios de alta convicción (Score >= 65). La estrategia institucional dicta la preservación de capital sobre la especulación en activos de baja fuerza técnica.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "MIRAUSDT",
       "score": 60
     },
     {
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "NEARUSDT",
-      "score": 50
+      "symbol": "OPUSDT",
+      "score": 60
     },
     {
       "symbol": "GIGGLEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "SHIBUSDT",
       "score": 50
     }
   ]
