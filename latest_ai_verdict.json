@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-03 23:26:20",
+  "timestamp": "2026-08-03 23:28:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un riesgo sistémico elevado y ninguno de los candidatos cumple con el umbral de Score Técnico >= 65 requerido por el comité para una ejecución de alta convicción, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El comité ha determinado que el mercado actual carece de la fuerza institucional y la estructura técnica necesaria para una operación de alta probabilidad. Ningún candidato cumple con el umbral de Score A+ (>= 65) ni con la profundidad de mercado requerida, por lo que la decisión estratégica es mantener la liquidez en USDT para evitar pérdidas en un entorno de alta volatilidad y baja convicción.",
   "top_candidates": [
     {
       "symbol": "EULUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "OPUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "ENAUSDT",
       "score": 60
     },
     {
@@ -17,14 +25,6 @@
     {
       "symbol": "ORDIUSDT",
       "score": 60
-    },
-    {
-      "symbol": "OPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "KAITOUSDT",
-      "score": 50
     }
   ]
 }
