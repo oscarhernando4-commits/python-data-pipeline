@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 10:34:15",
+  "timestamp": "2026-08-03 10:36:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual no ofrece activos con un score técnico superior a 60 ni una estructura de libro de órdenes que garantice una entrada segura. Siguiendo la Regla de Oro #1, al no existir candidatos con convicción A+, la decisión institucional es proteger el capital y permanecer en liquidez (HOLD).",
+  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica sin convicción compradora. Ningún activo cumple con los criterios de riesgo A+ establecidos por el comité, por lo que la estrategia óptima es mantener la liquidez y evitar la exposición a activos que no muestran fortaleza institucional.",
   "top_candidates": [
     {
-      "symbol": "ZECUSDT",
+      "symbol": "BNBUSDT",
       "score": 60
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "ZECUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "ADAUSDT",
-      "score": 50
+      "symbol": "ZROUSDT",
+      "score": 55
     },
     {
-      "symbol": "BICOUSDT",
+      "symbol": "ADAUSDT",
       "score": 50
     }
   ]
