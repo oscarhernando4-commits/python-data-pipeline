@@ -1,22 +1,18 @@
 {
-  "timestamp": "2026-08-03 05:24:15",
+  "timestamp": "2026-08-03 05:26:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar a todos los candidatos, ninguno cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte institucional necesaria. El mercado presenta una volatilidad inestable y un sentimiento de miedo, por lo que el comité ha decidido priorizar la preservación del capital y mantener la posición en liquidez (USDT).",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional silenciosa con alta fragilidad. Ningún activo cumple con el umbral mínimo de Score 65 ni con la confirmación de volumen necesaria para una operación de alta probabilidad, por lo que el comité decide unánimemente mantener la liquidez en espera de mejores condiciones.",
   "top_candidates": [
-    {
-      "symbol": "MIRAUSDT",
-      "score": 70
-    },
     {
       "symbol": "ALGOUSDT",
       "score": 60
     },
     {
-      "symbol": "DODOUSDT",
-      "score": 60
+      "symbol": "MIRAUSDT",
+      "score": 55
     },
     {
       "symbol": "STXUSDT",
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "BANKUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "DEXEUSDT",
       "score": 50
     }
   ]
