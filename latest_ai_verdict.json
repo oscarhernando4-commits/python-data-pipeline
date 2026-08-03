@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 14:50:25",
+  "timestamp": "2026-08-03 14:52:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un limbo de liquidez con una estructura técnica neutral. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo en un entorno de mercado hostil y selectivo.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
-      "score": 70
+      "symbol": "CAKEUSDT",
+      "score": 75
     },
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "GRAMUSDT",
       "score": 65
     }
   ]

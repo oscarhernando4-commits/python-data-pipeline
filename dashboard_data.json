@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 14:50:26",
+  "updated_at": "2026-08-03 14:52:27",
   "total_balance_usd": 19.68,
   "usdt_free": 0.1914,
   "bnb_free": 0.00411434,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un limbo de liquidez con una estructura técnica neutral. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo en un entorno de mercado hostil y selectivo."
   }
 }
