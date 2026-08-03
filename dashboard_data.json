@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 19:06:17",
+  "updated_at": "2026-08-03 19:08:19",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 45,
     "approved": false,
-    "reasoning": "El mercado presenta una divergencia estructural y falta de soporte en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ requerido por el comité, por lo que la estrategia de preservación de capital dicta una posición de espera (HOLD) para evitar trampas de valor."
+    "reasoning": "A pesar de tener candidatos con scores técnicos elevados (SEI, STX), la falta de dominancia en el libro de órdenes (Bids < 55%) y la persistencia de un entorno de mercado 'NEUTRAL' con alta volatilidad histórica de pérdidas, obliga al comité a mantener una postura defensiva y proteger la liquidez total."
   }
 }
