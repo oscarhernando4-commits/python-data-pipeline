@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 16:40:21",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de fragmentación de liquidez con una tendencia neutral predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro y volumen institucional confirmado), por lo que la estrategia de protección de capital dicta mantener la posición en efectivo (HOLD).",
+  "timestamp": "2026-08-03 16:42:31",
+  "selected_symbol": "TAOUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "Tras analizar el entorno de 'Acumulación Selectiva', el comité ha determinado que TAO es el único candidato que cumple con los criterios A+ de riesgo y sectorialidad. Se prioriza la entrada en activos de infraestructura IA frente a la debilidad de las altcoins especulativas, manteniendo una gestión de riesgo estricta con Trailing Stop para asegurar la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "ETCUSDT",
-      "score": 85
+      "symbol": "TAOUSDT",
+      "score": 75
     },
     {
       "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "ARBUSDT",
-      "score": 75
+      "symbol": "GIGGLEUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "score": 70
     },
     {
       "symbol": "FILUSDT",
       "score": 70
-    },
-    {
-      "symbol": "DEXEUSDT",
-      "score": 65
     }
   ]
 }
