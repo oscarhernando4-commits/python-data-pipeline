@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-03 09:22:21",
+  "timestamp": "2026-08-03 09:24:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución y alta incertidumbre. Ninguno de los candidatos analizados alcanza el umbral de Score A+ (>= 65) necesario para garantizar una operación de alta probabilidad, por lo que el comité ha decidido unánimemente mantener la liquidez en espera de mejores condiciones.",
+  "reasoning": "El mercado actual carece de la fuerza institucional necesaria para justificar una entrada. Todos los candidatos presentan un Score Técnico de 60 o inferior, incumpliendo el umbral mínimo de seguridad A+ (Score >= 65). La ausencia de muros de soporte claros en el libro de órdenes y el entorno macro de aversión al riesgo dictan una postura de preservación de capital (HOLD) hasta que se observe una capitulación clara o una reversión del sentimiento.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "DOTUSDT",
       "score": 60
     },
     {
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "CRVUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ZROUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 60
     }
   ]
