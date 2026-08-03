@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-03 16:58:19",
+  "timestamp": "2026-08-03 17:00:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia estructural y falta de profundidad en el libro de órdenes. Ningún candidato cumple con el requisito de Bids > 55% ni con una estructura técnica que garantice la protección del capital bajo la Regla #1 del CRO.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado presenta una alta incertidumbre y riesgo de trampa de liquidez, por lo que la estrategia óptima es mantener la posición en efectivo (USDT) para preservar el capital.",
   "top_candidates": [
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "ALLOUSDT",
       "score": 75
     },
     {
@@ -15,12 +15,12 @@
       "score": 75
     },
     {
-      "symbol": "DASHUSDT",
+      "symbol": "SAGAUSDT",
       "score": 75
     },
     {
-      "symbol": "SAGAUSDT",
-      "score": 75
+      "symbol": "DEXEUSDT",
+      "score": 65
     },
     {
       "symbol": "TAOUSDT",
