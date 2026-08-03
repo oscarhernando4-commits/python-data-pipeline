@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-03 20:22:17",
+  "timestamp": "2026-08-03 20:24:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el comité. La falta de dominancia clara en el libro de órdenes (Bids < 55%) y la naturaleza errática del mercado actual obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con alta ineficiencia. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65, Bids > 55%, y volumen institucional confirmado), por lo que la orden es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "BONKUSDT",
+      "symbol": "HYPERUSDT",
       "score": 75
     },
     {
-      "symbol": "HOLOUSDT",
+      "symbol": "INTCBUSDT",
       "score": 75
     }
   ]
