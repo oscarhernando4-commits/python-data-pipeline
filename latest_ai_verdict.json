@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-03 09:12:22",
+  "timestamp": "2026-08-03 09:14:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada con falta de convicción institucional. Ningún candidato cumple con los criterios de alta calidad (Score A+ >= 65) exigidos por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado presenta una configuración de alta fragilidad con una purga de posiciones en curso. Ninguno de los candidatos cumple con el umbral de Score A+ (>= 65) ni con una dominancia de Bids en el libro de órdenes que justifique una entrada. La estrategia institucional es la preservación total del capital hasta que el sentimiento de mercado mejore y aparezcan configuraciones de alta probabilidad.",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
+      "symbol": "TLMUSDT",
+      "score": 80
+    },
+    {
+      "symbol": "TRXUSDT",
       "score": 60
     },
     {
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "BNBUSDT",
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ALGOUSDT",
+      "symbol": "ASTERUSDT",
       "score": 60
     }
   ]
