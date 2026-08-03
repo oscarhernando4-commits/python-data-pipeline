@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-03 16:30:22",
+  "timestamp": "2026-08-03 16:32:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de liquidez en el libro de órdenes). El mercado presenta una estructura de divergencia defensiva y alta incertidumbre, por lo que la estrategia óptima es mantener la liquidez en espera de una configuración de alta probabilidad.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La volatilidad actual y la falta de muros de compra institucionales sugieren que el mercado está en una fase de alta incertidumbre, por lo que la estrategia de protección de capital es la única opción viable.",
   "top_candidates": [
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
     {
       "symbol": "ASTERUSDT",
       "score": 75
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "DASHUSDT",
-      "score": 75
+      "symbol": "SKHYBUSDT",
+      "score": 65
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "DEXEUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "ALLOUSDT",
       "score": 65
     }
   ]
