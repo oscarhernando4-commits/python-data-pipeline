@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 02:04:14",
+  "timestamp": "2026-08-03 02:06:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de purga de liquidez con scores técnicos mediocres (50/100) y falta de convicción institucional. Siguiendo la Regla de Oro #1 y #5, se prioriza la protección del capital sobre la especulación en un entorno de alta incertidumbre, manteniendo la posición en efectivo.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica y alta incertidumbre. Ninguno de los candidatos analizados cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez total y evitar la exposición a activos con scores mediocres.",
   "top_candidates": [
     {
-      "symbol": "KAITOUSDT",
-      "score": 50
+      "symbol": "SAGAUSDT",
+      "score": 60
     },
     {
-      "symbol": "KORUBUSDT",
+      "symbol": "KAITOUSDT",
       "score": 50
     },
     {
@@ -19,11 +19,11 @@
       "score": 50
     },
     {
-      "symbol": "EWYBUSDT",
+      "symbol": "KORUBUSDT",
       "score": 50
     },
     {
-      "symbol": "PORTALUSDT",
+      "symbol": "EWYBUSDT",
       "score": 50
     }
   ]
