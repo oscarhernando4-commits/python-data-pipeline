@@ -1,11 +1,23 @@
 {
-  "timestamp": "2026-08-03 08:02:21",
+  "timestamp": "2026-08-03 08:04:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con alta fragilidad en los niveles de soporte. Ninguno de los candidatos cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de 'falling knives'. Se prioriza la preservación del capital hasta que las condiciones macro y técnicas mejoren.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con alta correlación bajista. Ninguno de los candidatos analizados alcanza el Score Técnico de 65 ni presenta una estructura de libro de órdenes que garantice la protección del capital, por lo que la decisión institucional es mantenerse en liquidez total (HOLD) hasta que las condiciones macro mejoren.",
   "top_candidates": [
+    {
+      "symbol": "NIGHTUSDT",
+      "score": 80
+    },
+    {
+      "symbol": "ERAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "POLUSDT",
+      "score": 60
+    },
     {
       "symbol": "TRUMPUSDT",
       "score": 60
@@ -13,18 +25,6 @@
     {
       "symbol": "DODOUSDT",
       "score": 60
-    },
-    {
-      "symbol": "MUBARAKUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "STXUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "ERAUSDT",
-      "score": 50
     }
   ]
 }
