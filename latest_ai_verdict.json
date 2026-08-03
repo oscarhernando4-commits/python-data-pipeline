@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 04:10:15",
+  "timestamp": "2026-08-03 04:12:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno actual es de alta toxicidad y capitulación técnica. Ningún activo cumple con los criterios estrictos de riesgo A+ establecidos por el CRO. Se prioriza la protección del balance sobre la especulación, manteniendo la liquidez en espera de una estructura de mercado más clara y menos correlacionada a la baja.",
+  "reasoning": "El mercado se encuentra en una fase de purga de apalancamiento con una disparidad técnica extrema. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de liquidez necesaria en el libro de órdenes, por lo que la estrategia institucional es la preservación total de capital en efectivo.",
   "top_candidates": [
     {
       "symbol": "HOMEUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "WLDUSDT",
       "score": 70
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "ONDOUSDT",
-      "score": 55
+      "symbol": "WLDUSDT",
+      "score": 60
     },
     {
-      "symbol": "HYPERUSDT",
+      "symbol": "NVDABUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ONDOUSDT",
       "score": 55
     }
   ]
