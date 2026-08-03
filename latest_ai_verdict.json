@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-03 06:00:21",
+  "timestamp": "2026-08-03 06:02:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica transversal. Ninguno de los candidatos analizados cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de liquidez necesaria en el libro de órdenes. Se prioriza la preservación del capital sobre la especulación en un entorno de alta fricción y baja convicción.",
+  "reasoning": "El mercado se encuentra en una fase de distribución agresiva con correlación bajista. Ninguno de los candidatos cumple con el umbral de Score 65 requerido por el Comité para una ejecución A+. Se mantiene la liquidez total para evitar el riesgo de 'falling knives' y proteger el capital institucional.",
   "top_candidates": [
-    {
-      "symbol": "NEARUSDT",
-      "score": 60
-    },
     {
       "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "NEARUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NILUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "ALGOUSDT",
       "score": 60
     }
   ]
