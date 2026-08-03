@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-03 09:10:18",
+  "timestamp": "2026-08-03 09:12:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema con una correlación bajista predominante. Ninguno de los candidatos cumple con el requisito de Score Técnico >= 65 ni con la profundidad de libro de órdenes necesaria para una ejecución segura. Se prioriza la preservación de capital sobre la especulación en un entorno de alta volatilidad y baja convicción.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada con falta de convicción institucional. Ningún candidato cumple con los criterios de alta calidad (Score A+ >= 65) exigidos por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
+    {
+      "symbol": "BNBUSDT",
+      "score": 60
+    },
     {
       "symbol": "NEARUSDT",
       "score": 60
     },
     {
-      "symbol": "ICPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ALGOUSDT",
+      "symbol": "TRXUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "ZROUSDT",
+      "symbol": "ALGOUSDT",
       "score": 60
     }
   ]
