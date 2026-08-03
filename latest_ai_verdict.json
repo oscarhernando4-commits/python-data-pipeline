@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 04:18:14",
+  "timestamp": "2026-08-03 04:20:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema con una correlación negativa total. Ningún activo cumple con los criterios estrictos de Score Técnico (>=65) ni de soporte en el libro de órdenes, por lo que la preservación del capital es la única estrategia válida.",
+  "reasoning": "El mercado se encuentra en una fase de distribución y desapalancamiento forzado. Ningún activo cumple con el umbral de Score Técnico A+ (>= 65) ni con la confirmación de volumen institucional necesaria. Se prioriza la preservación del 100% de la liquidez en USDT para evitar la exposición a activos de baja calidad y alta volatilidad.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
-      "score": 60
+      "symbol": "POLUSDT",
+      "score": 70
     },
     {
       "symbol": "MIRAUSDT",
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "XAUTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "WLDUSDT",
       "score": 60
     },
     {
       "symbol": "HOMEUSDT",
       "score": 55
-    },
-    {
-      "symbol": "SUIUSDT",
-      "score": 50
     }
   ]
 }
