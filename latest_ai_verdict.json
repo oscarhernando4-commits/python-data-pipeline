@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 07:46:21",
+  "timestamp": "2026-08-03 07:48:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con una correlación bajista absoluta; ningún activo cumple con los criterios de Score A+ (>=65) ni con la profundidad de liquidez necesaria para una ejecución segura, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con una correlación bajista sistémica. Ninguno de los candidatos evaluados alcanza el umbral de calidad A+ (Score >= 65) requerido por el protocolo de riesgo. Se prioriza la preservación de capital sobre la especulación en activos de baja liquidez o con señales técnicas mediocres.",
   "top_candidates": [
     {
       "symbol": "ATOMUSDT",
       "score": 60
     },
     {
-      "symbol": "DODOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "KAITOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "HOMEUSDT",
-      "score": 50
-    },
-    {
       "symbol": "ERAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "ENAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "DOTUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "PUMPUSDT",
       "score": 50
     }
   ]
