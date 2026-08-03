@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 03:58:17",
+  "timestamp": "2026-08-03 04:00:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) y la confirmación de soporte en el libro de órdenes necesaria para mitigar el riesgo sistémico actual. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado presenta un riesgo sistémico elevado y ninguno de los activos candidatos cumple con los requisitos técnicos y de liquidez exigidos por el comité para una operación de alta convicción.",
   "top_candidates": [
     {
-      "symbol": "AAVEUSDT",
-      "score": 80
-    },
-    {
-      "symbol": "ETHFIUSDT",
-      "score": 80
-    },
-    {
-      "symbol": "REZUSDT",
+      "symbol": "HOMEUSDT",
       "score": 70
     },
     {
-      "symbol": "SEIUSDT",
-      "score": 60
+      "symbol": "MMTUSDT",
+      "score": 55
     },
     {
       "symbol": "XPLUSDT",
-      "score": 60
+      "score": 55
+    },
+    {
+      "symbol": "SOXLBUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 50
     }
   ]
 }
