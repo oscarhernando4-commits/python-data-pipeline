@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 07:10:19",
+  "timestamp": "2026-08-03 07:12:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de 'Limpieza de Balance' con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de liquidez necesaria en el Orderbook. Se prioriza la preservación del capital en USDT hasta que la Coinbase Premium revierta a terreno positivo y los activos muestren una estructura técnica de acumulación clara.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada donde ningún activo cumple con el umbral de seguridad (Score >= 65) ni con la confirmación de liquidez institucional necesaria para una operación de alta rentabilidad, por lo que la decisión estratégica es mantener la liquidez en espera de mejores condiciones.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 70
     },
     {
+      "symbol": "XRPUSDT",
+      "score": 60
+    },
+    {
       "symbol": "SKYUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ARBUSDT",
       "score": 60
     },
     {
       "symbol": "ATOMUSDT",
       "score": 60
-    },
-    {
-      "symbol": "XLMUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "MANTRAUSDT",
-      "score": 55
     }
   ]
 }
