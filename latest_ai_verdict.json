@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 16:56:23",
+  "timestamp": "2026-08-03 16:58:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de activos con scores técnicos aceptables, la falta de profundidad en el libro de órdenes y la debilidad del sentimiento macroeconómico no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en un mercado de alta incertidumbre.",
+  "reasoning": "El mercado presenta una divergencia estructural y falta de profundidad en el libro de órdenes. Ningún candidato cumple con el requisito de Bids > 55% ni con una estructura técnica que garantice la protección del capital bajo la Regla #1 del CRO.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
@@ -19,8 +19,8 @@
       "score": 75
     },
     {
-      "symbol": "DEXEUSDT",
-      "score": 65
+      "symbol": "SAGAUSDT",
+      "score": 75
     },
     {
       "symbol": "TAOUSDT",
