@@ -1,12 +1,25 @@
 {
-  "OPUSDT": [
+  "JTOUSDT": [
     {
-      "timestamp": "2026-08-03 19:38:10",
-      "price": 0.0873,
+      "timestamp": "2026-08-03 19:40:10",
+      "price": 0.5044,
       "score": 25,
-      "rsi": 51.06,
+      "rsi": 68.97,
       "macd": "Neutral",
-      "volume_surge": 0.29,
+      "volume_surge": 1.13,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPENUSDT": [
+    {
+      "timestamp": "2026-08-03 19:40:10",
+      "price": 0.188,
+      "score": 15,
+      "rsi": 49.31,
+      "macd": "Neutral",
+      "volume_surge": 0.21,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +27,12 @@
   ],
   "PORTALUSDT": [
     {
-      "timestamp": "2026-08-03 19:38:11",
+      "timestamp": "2026-08-03 19:40:10",
       "price": 0.01038,
       "score": 50,
       "rsi": 59.86,
       "macd": "Neutral",
-      "volume_surge": 0.58,
+      "volume_surge": 0.72,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
