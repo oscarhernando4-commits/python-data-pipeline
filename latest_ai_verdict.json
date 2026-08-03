@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 11:14:18",
+  "timestamp": "2026-08-03 11:16:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad estructural generalizada con una falta de convicción institucional. Ningún activo cumple con los criterios de alta calidad (Score >= 65) exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas por 'falling knives' en un entorno de pánico latente.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica sin activos que cumplan con los criterios de alta convicción (Score A+). La estrategia institucional es preservar el capital en efectivo (USDT) hasta que se observe una acumulación clara de ballenas y una mejora en el sentimiento global.",
   "top_candidates": [
-    {
-      "symbol": "SUNUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "BICOUSDT",
-      "score": 50
-    },
     {
       "symbol": "EULUSDT",
       "score": 50
     },
     {
-      "symbol": "ZAMAUSDT",
+      "symbol": "ICPUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "INJUSDT",
       "score": 50
     },
     {
       "symbol": "SYNUSDT",
       "score": 50
+    },
+    {
+      "symbol": "BNBUSDT",
+      "score": 45
     }
   ]
 }
