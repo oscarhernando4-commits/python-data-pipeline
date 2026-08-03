@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-03 21:44:16",
+  "timestamp": "2026-08-03 21:46:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución agresiva sin suelos técnicos definidos. Ningún activo cumple con los criterios de alta convicción (Score A+ >= 65) ni con la profundidad de liquidez necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es preservar el capital en efectivo.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta fragilidad. Ninguno de los candidatos analizados cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de soporte en el libro de órdenes. Se prioriza la preservación de capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
-      "symbol": "JUPUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
@@ -15,11 +15,11 @@
       "score": 60
     },
     {
-      "symbol": "ACXUSDT",
+      "symbol": "SEIUSDT",
       "score": 60
     },
     {
-      "symbol": "HYPERUSDT",
+      "symbol": "ACXUSDT",
       "score": 60
     },
     {
