@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 02:08:16",
+  "timestamp": "2026-08-03 02:10:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno actual de mercado carece de activos con la fuerza técnica y el soporte de liquidez necesarios para cumplir con nuestra estricta política de gestión de riesgos A+. Ante la ausencia de candidatos que superen el umbral de Score 65, la decisión institucional es mantener la posición en efectivo (USDT) para proteger el capital contra la volatilidad bajista sistémica.",
+  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema sin activos que alcancen el umbral de Score 65 requerido por el comité. La ausencia de soporte institucional en el libro de órdenes y la prevalencia de tendencias neutrales/débiles obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "HBARUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "DASHUSDT",
       "score": 55
     },
     {
@@ -23,7 +19,11 @@
       "score": 50
     },
     {
-      "symbol": "SNXXBUSDT",
+      "symbol": "EWYBUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "EPICUSDT",
       "score": 50
     }
   ]
