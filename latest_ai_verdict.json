@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-03 02:38:15",
+  "timestamp": "2026-08-03 02:40:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de estrés sistémico y trampa de liquidez. Ninguno de los candidatos analizados cumple con los criterios de alta convicción (Score >= 65) ni con el soporte institucional necesario en el libro de órdenes. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y desconfianza.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica y desconfianza sistémica. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 requerido por el Comité para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y falta de soporte institucional.",
   "top_candidates": [
     {
       "symbol": "SUNUSDT",
-      "score": 60
+      "score": 70
     },
     {
       "symbol": "XLMUSDT",
       "score": 55
     },
     {
-      "symbol": "APTUSDT",
+      "symbol": "DODOUSDT",
       "score": 50
     },
     {
@@ -23,8 +23,8 @@
       "score": 50
     },
     {
-      "symbol": "ETHFIUSDT",
-      "score": 50
+      "symbol": "EWYBUSDT",
+      "score": 45
     }
   ]
 }
