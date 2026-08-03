@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 12:08:20",
+  "timestamp": "2026-08-03 12:10:29",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con scores de activos insuficientes para cumplir con el umbral de seguridad A+ (Score >= 65). Se prioriza la preservación de capital sobre la especulación en un entorno de alta volatilidad bajista.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
+    {
+      "symbol": "AVAXUSDT",
+      "score": 65
+    },
     {
       "symbol": "GIGGLEUSDT",
       "score": 60
@@ -15,16 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "TIAUSDT",
+      "symbol": "SOXLBUSDT",
       "score": 55
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 50
+      "symbol": "SNXXBUSDT",
+      "score": 55
     }
   ]
 }
