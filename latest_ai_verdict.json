@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 07:08:22",
+  "timestamp": "2026-08-03 07:10:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual carece de la convicción institucional necesaria y de la estructura técnica A+ requerida por nuestras reglas de oro. Ningún activo supera el score de 65, por lo que la orden de ejecución es HOLD para proteger el capital contra la volatilidad bajista.",
+  "reasoning": "El mercado se encuentra en una fase de 'Limpieza de Balance' con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de liquidez necesaria en el Orderbook. Se prioriza la preservación del capital en USDT hasta que la Coinbase Premium revierta a terreno positivo y los activos muestren una estructura técnica de acumulación clara.",
   "top_candidates": [
+    {
+      "symbol": "BTCUSDT",
+      "score": 70
+    },
     {
       "symbol": "SKYUSDT",
       "score": 60
@@ -13,10 +17,6 @@
     {
       "symbol": "ATOMUSDT",
       "score": 60
-    },
-    {
-      "symbol": "ETHUSDT",
-      "score": 55
     },
     {
       "symbol": "XLMUSDT",
