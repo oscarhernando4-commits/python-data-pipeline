@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 11:36:15",
+  "updated_at": "2026-08-03 11:38:21",
   "total_balance_usd": 19.7,
   "usdt_free": 0.2477,
   "bnb_free": 0.00420089,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de indecisión técnica y falta de liquidez institucional confirmada en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de ballenas > 55%), por lo que la estrategia óptima es mantener la liquidez en espera de una estructura de mercado más clara."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de Score A+ (>=65) combinado con una dominancia de Bids superior al 55% y un volumen institucional confirmado, por lo que la estrategia institucional es mantener la liquidez en espera de una estructura de mercado más clara."
   }
 }
