@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 16:48:32",
+  "timestamp": "2026-08-03 16:50:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con la totalidad de las reglas A+ (Score >= 65, Bids > 55%, Volumen > 1.2x). La ausencia de datos de profundidad en el libro de órdenes y la alta volatilidad macro obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (Score A+ y soporte de libro de órdenes) necesarios para ejecutar una operación de compra, priorizando la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "ETCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "VIRTUALUSDT",
       "score": 75
     },
     {
@@ -19,7 +15,11 @@
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "SHIBUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "SKHYBUSDT",
       "score": 65
     },
     {
