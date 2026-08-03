@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-03 12:00:19",
+  "timestamp": "2026-08-03 12:02:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación del comité, se concluye que no existen activos que cumplan con los criterios de alta convicción (Score >= 65) y soporte institucional. El mercado actual presenta una estructura de distribución bajista, por lo que la estrategia óptima es el resguardo de capital en espera de una rotación sectorial más clara o un suelo de mercado confirmado.",
+  "reasoning": "Tras analizar los 10 candidatos, ninguno alcanza el umbral de calidad A+ requerido por el comité. La falta de muros de soporte claros en el libro de órdenes y la debilidad técnica general dictan una postura de preservación de capital (HOLD) para evitar 'cuchillos cayendo' en un entorno de mercado neutral.",
   "top_candidates": [
     {
-      "symbol": "TIAUSDT",
+      "symbol": "GIGGLEUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 50
     },
     {
-      "symbol": "EULUSDT",
+      "symbol": "PEPEUSDT",
       "score": 50
     },
     {
-      "symbol": "GIGGLEUSDT",
+      "symbol": "EULUSDT",
       "score": 50
     }
   ]
