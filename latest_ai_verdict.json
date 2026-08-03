@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-03 00:48:17",
+  "timestamp": "2026-08-03 00:50:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un riesgo sistémico elevado con una falta de convicción institucional en los activos analizados. Ningún candidato cumple con el umbral de calidad A+ requerido por el comité, por lo que se mantiene la posición en efectivo para evitar la exposición a la volatilidad bajista actual.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con una configuración técnica deficiente. Ningún activo cumple con los criterios de alta convicción (Score >= 65) ni presenta soporte de liquidez en el libro de órdenes, por lo que la estrategia óptima es la preservación total del capital.",
   "top_candidates": [
-    {
-      "symbol": "SNXXBUSDT",
-      "score": 60
-    },
     {
       "symbol": "MIRAUSDT",
       "score": 60
@@ -25,6 +21,10 @@
     {
       "symbol": "NVDABUSDT",
       "score": 60
+    },
+    {
+      "symbol": "MANTRAUSDT",
+      "score": 50
     }
   ]
 }
