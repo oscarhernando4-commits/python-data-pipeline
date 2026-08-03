@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-03 19:54:22",
+  "timestamp": "2026-08-03 19:56:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de compresión y neutralidad forzada sin una ventaja estadística clara. Ninguno de los candidatos cumple con el umbral de confianza A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la decisión institucional es mantener la liquidez en espera de una estructura de mercado más definida.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ exigido por el comité. La falta de dominancia clara en el libro de órdenes y el entorno macro de 'Fear' sugieren que el mercado aún no ha completado su fase de purga, por lo que la estrategia óptima es mantener la liquidez en espera de una señal de mayor calidad.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
       "score": 75
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "LDOUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "BANKUSDT",
       "score": 65
     },
     {
-      "symbol": "BANKUSDT",
+      "symbol": "LTCUSDT",
       "score": 65
     },
     {
