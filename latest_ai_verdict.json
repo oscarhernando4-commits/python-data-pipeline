@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 12:38:14",
+  "timestamp": "2026-08-03 12:40:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta aversión al riesgo y falta de convicción técnica. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65), por lo que la política de preservación de capital dictada por el CRO y el CEO obliga a una posición de espera (HOLD) para evitar 'cuchillos cayendo'.",
+  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (Score A+ >= 65). La debilidad sistémica, la falta de soporte en el libro de órdenes y el historial de pérdidas en condiciones similares dictan una postura de preservación de capital (HOLD) hasta que surja una oportunidad de alta probabilidad.",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
-      "score": 60
+      "symbol": "OPUSDT",
+      "score": 70
     },
     {
-      "symbol": "OPUSDT",
+      "symbol": "AAVEUSDT",
       "score": 60
     },
     {
@@ -19,7 +19,7 @@
       "score": 55
     },
     {
-      "symbol": "GIGGLEUSDT",
+      "symbol": "HBARUSDT",
       "score": 50
     },
     {
