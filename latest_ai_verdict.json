@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 02:16:16",
+  "timestamp": "2026-08-03 02:18:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de 'Riesgo de Colapso de Liquidez' sin activos que cumplan con los criterios mínimos de calidad (Score >= 65). La estrategia institucional es proteger el 100% de la liquidez hasta que se observe una rotación de capital clara y una mejora en la estructura técnica de los activos.",
+  "reasoning": "El comité ha determinado que el mercado se encuentra en una fase de capitulación técnica y falta de liquidez, sin activos que cumplan con los criterios de alta convicción (Score >= 65). Se mantiene la posición en efectivo para evitar el riesgo de 'cuchillos cayendo' y proteger el capital institucional.",
   "top_candidates": [
     {
       "symbol": "KAITOUSDT",
@@ -15,15 +15,15 @@
       "score": 50
     },
     {
-      "symbol": "EWYBUSDT",
-      "score": 50
-    },
-    {
       "symbol": "EPICUSDT",
       "score": 50
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "EWYBUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "ESPUSDT",
       "score": 50
     }
   ]
