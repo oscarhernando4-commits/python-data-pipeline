@@ -7,22 +7,22 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-03 21:28:17
+date: 2026-08-03 21:30:17
 ---
 
-# 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $20.05 USD)
+# 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $20.04 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-03 21:28:17`
+> ⏱️ **Última Actualización:** `2026-08-03 21:30:17`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
-> - 🟡 **BNB Escudo Comisiones:** `0.00409216 BNB` (`~$2.42 USD`)
+> - 🟡 **BNB Escudo Comisiones:** `0.00409216 BNB` (`~$2.41 USD`)
 > - 💵 **USDT Disponible:** `17.6282 USDT`
-> - 💰 **Saldo Total Acumulado:** `$20.05 USD`
+> - 💰 **Saldo Total Acumulado:** `$20.04 USD`
 
 | 💵 Capital | 🪙 Cripto Activa | 🔢 Ops | 📈 Balance | 💰 Beneficio (PnL) | 📊 Racha | 🎯 Estado Operativo |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **`$20.05 USD`** | **`Ninguna (Buscando)`** | `#12` | **`$20.05 USD`** | **`$+2.92 USD`** | `5W/7L` | **`🟦 Buscando Entrada A+`** |
+| **`$20.04 USD`** | **`Ninguna (Buscando)`** | `#12` | **`$20.04 USD`** | **`$+2.91 USD`** | `5W/7L` | **`🟦 Buscando Entrada A+`** |
 
 ---
 
