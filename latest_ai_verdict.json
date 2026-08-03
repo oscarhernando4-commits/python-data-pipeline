@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-03 01:42:19",
+  "timestamp": "2026-08-03 01:44:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que las condiciones actuales del mercado son de alto riesgo y baja probabilidad de éxito. Ningún activo cumple con los criterios de calidad A+ exigidos por el Chief Risk Officer, por lo que la decisión estratégica es mantenerse en posición de espera (HOLD) para proteger el capital institucional.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada sin activos que alcancen el umbral de calidad A+ requerido. La ausencia de soporte en el libro de órdenes y la inestabilidad macroeconómica dictan una postura de preservación de capital total.",
   "top_candidates": [
-    {
-      "symbol": "ORDIUSDT",
-      "score": 55
-    },
     {
       "symbol": "TIAUSDT",
       "score": 55
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "SNXXBUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "TLMUSDT",
       "score": 50
     }
   ]
