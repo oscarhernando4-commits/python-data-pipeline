@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 00:54:19",
+  "timestamp": "2026-08-03 00:56:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución agresiva y pánico minorista. Ningún activo cumple con los criterios de alta convicción (Score >= 65) ni con la profundidad de mercado necesaria para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de debilidad sistémica.",
+  "reasoning": "El mercado se encuentra en una fase de distribución forzada con baja liquidez. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de soporte institucional necesaria para mitigar el riesgo de pérdida, por lo que la orden es mantener la posición en efectivo.",
   "top_candidates": [
     {
-      "symbol": "MIRAUSDT",
-      "score": 70
+      "symbol": "SAGAUSDT",
+      "score": 60
     },
     {
-      "symbol": "SAGAUSDT",
+      "symbol": "ZBTUSDT",
       "score": 60
     },
     {
@@ -19,12 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 55
+      "symbol": "KORUBUSDT",
+      "score": 50
     },
     {
-      "symbol": "MANTRAUSDT",
-      "score": 55
+      "symbol": "DODOUSDT",
+      "score": 50
     }
   ]
 }
