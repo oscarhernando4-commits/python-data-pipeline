@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 21:48:18",
+  "timestamp": "2026-08-03 21:50:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado se encuentra en un entorno de alta incertidumbre y debilidad estructural. Dado que ningún activo alcanza el umbral de convicción A+ (Score >= 65) y el entorno macro es de aversión al riesgo, la decisión institucional es mantener la liquidez en espera de una mejor configuración técnica.",
+  "reasoning": "El mercado se encuentra en una fase de debilidad sistémica con scores técnicos insuficientes (máximo 60/100) y falta de profundidad en el libro de órdenes. Siguiendo la Regla de Oro #1, al no existir candidatos con Score >= 65, la orden es mantener la liquidez en USDT para evitar pérdidas en un entorno de alta volatilidad y baja convicción.",
   "top_candidates": [
     {
-      "symbol": "RENDERUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
-      "symbol": "ACXUSDT",
+      "symbol": "RENDERUSDT",
       "score": 60
     },
     {
