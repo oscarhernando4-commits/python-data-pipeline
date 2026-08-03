@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 08:32:24",
+  "timestamp": "2026-08-03 08:34:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado se encuentra en un estado de estancamiento bajista con alta correlación negativa. Dado que ningún activo cumple con el umbral de seguridad A+ (Score >= 65) y la liquidez institucional es insuficiente, la decisión estratégica es mantener la posición en efectivo para evitar el riesgo de 'cuchillos cayendo' y preservar el capital ante la falta de un catalizador alcista claro.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y falta de liquidez institucional. Ninguno de los candidatos cumple con los criterios de Score A+ (>=65) ni con la confirmación de soporte en el libro de órdenes, por lo que la decisión estratégica es mantenerse al margen para evitar pérdidas por 'cuchillos cayendo'.",
   "top_candidates": [
     {
-      "symbol": "KAITOUSDT",
-      "score": 50
+      "symbol": "DODOUSDT",
+      "score": 60
     },
     {
-      "symbol": "EULUSDT",
-      "score": 50
+      "symbol": "EWYBUSDT",
+      "score": 55
     },
     {
       "symbol": "MANTRAUSDT",
       "score": 50
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "KAITOUSDT",
       "score": 50
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "EULUSDT",
       "score": 50
     }
   ]
