@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 01:58:14",
+  "timestamp": "2026-08-03 02:00:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva sin activos que cumplan con los criterios de convicción A+ (Score >= 65). La falta de profundidad en el libro de órdenes y la debilidad técnica generalizada obligan a una postura defensiva estricta para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de compresión y alta incertidumbre. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar la exposición a trampas de liquidez y volatilidad tóxica.",
   "top_candidates": [
     {
-      "symbol": "EWYBUSDT",
+      "symbol": "EPICUSDT",
       "score": 60
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "score": 50
     },
     {
       "symbol": "KORUBUSDT",
       "score": 50
     },
     {
-      "symbol": "SNXXBUSDT",
+      "symbol": "EWYBUSDT",
       "score": 50
     },
     {
       "symbol": "PORTALUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ESPUSDT",
       "score": 50
     }
   ]
