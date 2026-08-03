@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 11:20:21",
+  "updated_at": "2026-08-03 11:22:24",
   "total_balance_usd": 19.8,
   "usdt_free": 19.801270000000002,
   "bnb_free": 0.00424436,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 45,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que, a pesar de la existencia de candidatos con Score 65, la ausencia de confirmación en el libro de órdenes y la inestabilidad del mercado macro impiden una ejecución segura bajo los estándares de riesgo A+."
+    "reasoning": "El mercado presenta una compresión de volatilidad sin una base de soporte clara en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y volumen confirmado), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo."
   }
 }
