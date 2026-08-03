@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 15:54:23",
+  "updated_at": "2026-08-03 15:56:34",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con alta aversión al riesgo. Ningún candidato cumple con el umbral de seguridad institucional (Bids > 55% y confirmación de volumen), por lo que se prioriza la preservación del capital sobre la especulación de corto plazo."
+    "reasoning": "Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 + Bids > 55% + Confirmación de Volumen). La volatilidad actual y la falta de soporte en el libro de órdenes dictan una postura de preservación de capital (HOLD) hasta que las condiciones mejoren."
   }
 }
