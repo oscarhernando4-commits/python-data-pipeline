@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 04:40:18",
+  "timestamp": "2026-08-03 04:42:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que no existen condiciones de mercado ni activos que cumplan con los criterios de alta convicción (Score >= 65) exigidos por el protocolo de gestión de riesgo. Se prioriza la preservación de capital ante la incertidumbre macroeconómica y la falta de soporte institucional en el libro de órdenes.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una fuga de liquidez sistémica. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ (Score >= 65) requerido por el comité, y el libro de órdenes no muestra la dominancia compradora necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
       "score": 60
     },
     {
+      "symbol": "MIRAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "WLDUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "score": 60
+    },
+    {
       "symbol": "POLUSDT",
       "score": 60
-    },
-    {
-      "symbol": "ORDIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "OPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SHIBUSDT",
-      "score": 50
     }
   ]
 }
