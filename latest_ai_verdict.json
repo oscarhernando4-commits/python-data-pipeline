@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 20:40:15",
+  "timestamp": "2026-08-03 20:42:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una trampa de neutralidad con baja convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes confirmado), por lo que la decisión unánime es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta un estancamiento sistémico con sesgo bajista y falta de confirmación institucional. Ninguno de los candidatos cumple con el umbral de convicción A+ ni con una estructura de soporte de libro de órdenes que mitigue el riesgo de una purga de posiciones apalancadas. Se prioriza la protección del capital.",
   "top_candidates": [
+    {
+      "symbol": "XLMUSDT",
+      "score": 75
+    },
     {
       "symbol": "INTCBUSDT",
       "score": 75
@@ -19,12 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "BONKUSDT",
+      "symbol": "ORDIUSDT",
       "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 65
     }
   ]
 }
