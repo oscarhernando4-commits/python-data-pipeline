@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 05:14:16",
+  "timestamp": "2026-08-03 05:16:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta fragilidad sistémica con una ausencia total de candidatos que cumplan con el umbral de Score Técnico >= 65 y confirmación de liquidez. Se prioriza la preservación del capital sobre la ejecución de trades especulativos de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una correlación bajista masiva. Ninguno de los candidatos cumple con el umbral mínimo de Score A+ (65) ni con la profundidad de libro necesaria para garantizar una ejecución segura. Se prioriza la preservación del capital sobre la operativa especulativa.",
   "top_candidates": [
     {
       "symbol": "MIRAUSDT",
-      "score": 70
+      "score": 60
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "ALGOUSDT",
       "score": 60
     },
     {
@@ -19,12 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "VETUSDT",
+      "symbol": "DODOUSDT",
       "score": 60
     },
     {
-      "symbol": "BOMEUSDT",
-      "score": 60
+      "symbol": "GIGGLEUSDT",
+      "score": 50
     }
   ]
 }
