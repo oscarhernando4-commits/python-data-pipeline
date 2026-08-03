@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 10:52:16",
+  "timestamp": "2026-08-03 10:54:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de hibernación institucional con scores técnicos mediocres (máximo 55/100) y sin confirmación de soporte en el libro de órdenes. Siguiendo la Regla de Oro #1, al no existir activos con Score >= 65, la decisión es proteger la liquidez y evitar el riesgo de 'falling knives'.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica sin activos que cumplan con los criterios de alta convicción (Score >= 65). La falta de soporte institucional en el libro de órdenes y la alta probabilidad de pérdidas basada en el historial de simulaciones obligan a la preservación total del capital en stablecoins.",
   "top_candidates": [
     {
       "symbol": "SUNUSDT",
       "score": 55
     },
     {
-      "symbol": "PEPEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "MANTRAUSDT",
-      "score": 50
-    },
-    {
       "symbol": "CAKEUSDT",
       "score": 50
     },
     {
-      "symbol": "ESPUSDT",
+      "symbol": "TRUMPUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "MUBARAKUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "1000SATSUSDT",
       "score": 50
     }
   ]
