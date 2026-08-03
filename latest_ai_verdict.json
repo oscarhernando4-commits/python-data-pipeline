@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-03 04:28:19",
+  "timestamp": "2026-08-03 04:30:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una falta total de soporte en los libros de órdenes. Ningún activo cumple con el umbral de Score Técnico >= 65 ni con la convicción necesaria para una operación de compra, por lo que se mantiene la liquidez total para evitar la exposición a la volatilidad bajista.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con correlación bajista alta; al no existir activos que cumplan con el umbral de Score A+ (>= 65) y con una dominancia de bids compradores estancada en 50%, la decisión institucional es mantener la liquidez en USDT para evitar 'trampas de valor'.",
   "top_candidates": [
-    {
-      "symbol": "POLUSDT",
-      "score": 70
-    },
     {
       "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "NVDABUSDT",
+      "symbol": "POLUSDT",
       "score": 60
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "OPUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "GIGGLEUSDT",
       "score": 50
     },
     {
