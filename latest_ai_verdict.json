@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 13:22:20",
+  "timestamp": "2026-08-03 13:24:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de soporte institucional). Ante la divergencia macro y la falta de una estructura técnica clara, la estrategia institucional es proteger la liquidez y esperar una señal de mayor calidad.",
+  "reasoning": "El mercado presenta una divergencia táctica y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el requisito estricto de Score >= 65 combinado con una dominancia de Bids > 55%, por lo que la estrategia institucional es mantener la liquidez en espera de una confirmación de tendencia más clara.",
   "top_candidates": [
     {
+      "symbol": "SEIUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ZROUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LINKUSDT",
+      "score": 75
+    },
+    {
       "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PEPEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "HBARUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AAVEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "INJUSDT",
       "score": 75
     }
   ]
