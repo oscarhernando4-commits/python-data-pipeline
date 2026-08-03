@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 07:14:20",
+  "timestamp": "2026-08-03 07:16:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una debilidad sistémica generalizada y una falta de convicción institucional. Ninguno de los activos analizados cumple con el umbral de Score técnico A+ (>= 65) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage y fakeouts, por lo que la decisión institucional es mantenerse en posición de espera (HOLD) para proteger el capital.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta incertidumbre. Ningún activo cumple con los criterios de alta convicción (Score >= 65) ni presenta soporte de ballenas en el libro de órdenes, por lo que la estrategia óptima es preservar el capital en efectivo hasta que surja una oportunidad de alta probabilidad.",
   "top_candidates": [
-    {
-      "symbol": "BTCUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ARBUSDT",
-      "score": 60
-    },
     {
       "symbol": "ATOMUSDT",
       "score": 60
     },
     {
-      "symbol": "XPLUSDT",
-      "score": 60
+      "symbol": "AVAXUSDT",
+      "score": 55
     },
     {
       "symbol": "MANTRAUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "XLMUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "PENDLEUSDT",
       "score": 55
     }
   ]
