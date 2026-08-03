@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-03 10:10:16",
+  "timestamp": "2026-08-03 10:12:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes y la inestabilidad macroeconómica actual no cumplen con los estándares de seguridad A+ exigidos por el Chief Risk Officer, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado presenta una divergencia técnica y un sentimiento de miedo que, sumado a la falta de datos de liquidez en el libro de órdenes, no cumple con los criterios de alta convicción (A+) exigidos por el comité para la ejecución de trades.",
   "top_candidates": [
+    {
+      "symbol": "POLUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "score": 85
+    },
     {
       "symbol": "NEARUSDT",
       "score": 75
     },
     {
       "symbol": "DEXEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ICPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TRUMPUSDT",
       "score": 75
     },
     {
