@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-03 14:46:31",
+  "timestamp": "2026-08-03 14:48:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras deliberar, el comité ha determinado que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. La falta de datos claros en el libro de órdenes y la alta tasa de fallos en entornos neutrales obligan a mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un índice de miedo de 28. Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el comité, y la falta de datos de profundidad en el libro de órdenes aumenta el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en activos de baja capitalización.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "NILUSDT",
+      "symbol": "PUMPUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "BANKUSDT",
-      "score": 65
+      "symbol": "FETUSDT",
+      "score": 70
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "SKHYBUSDT",
       "score": 65
     }
   ]
