@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-03 11:18:21",
+  "timestamp": "2026-08-03 11:20:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de estrangulamiento de liquidez con una correlación negativa extrema. Ningún candidato cumple con el umbral de Score Técnico >= 65 ni con la confirmación de soporte institucional en el libro de órdenes, por lo que la única decisión prudente es mantener la liquidez en stablecoins.",
+  "confidence": 45,
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de candidatos con Score 65, la ausencia de confirmación en el libro de órdenes y la inestabilidad del mercado macro impiden una ejecución segura bajo los estándares de riesgo A+.",
   "top_candidates": [
     {
-      "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PEPEUSDT",
-      "score": 50
+      "symbol": "TIAUSDT",
+      "score": 75
     },
     {
       "symbol": "EULUSDT",
-      "score": 50
+      "score": 65
     },
     {
-      "symbol": "ETCUSDT",
-      "score": 50
+      "symbol": "HBARUSDT",
+      "score": 65
     },
     {
-      "symbol": "SYNUSDT",
-      "score": 50
+      "symbol": "SHIBUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "score": 65
     }
   ]
 }

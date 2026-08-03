@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03 11:18:21",
+  "updated_at": "2026-08-03 11:20:21",
   "total_balance_usd": 19.8,
   "usdt_free": 19.801270000000002,
   "bnb_free": 0.00424436,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 45,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de estrangulamiento de liquidez con una correlación negativa extrema. Ningún candidato cumple con el umbral de Score Técnico >= 65 ni con la confirmación de soporte institucional en el libro de órdenes, por lo que la única decisión prudente es mantener la liquidez en stablecoins."
+    "reasoning": "El comité ha determinado que, a pesar de la existencia de candidatos con Score 65, la ausencia de confirmación en el libro de órdenes y la inestabilidad del mercado macro impiden una ejecución segura bajo los estándares de riesgo A+."
   }
 }
