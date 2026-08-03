@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-03 20:06:19",
+  "timestamp": "2026-08-03 20:08:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una debilidad generalizada y una falta de convicción compradora. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el comité (Score >= 65 con soporte de libro de órdenes claro), por lo que se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "El mercado se encuentra en una fase de indecisión institucional con alta asimetría bajista. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas por manipulación de HFT.",
   "top_candidates": [
     {
       "symbol": "INTCBUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
-      "score": 75
-    },
-    {
       "symbol": "LTCUSDT",
       "score": 65
     },
     {
       "symbol": "VANRYUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "RENDERUSDT",
       "score": 65
     }
   ]
