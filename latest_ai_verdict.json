@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-03 12:18:15",
+  "timestamp": "2026-08-03 12:20:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y falta de liquidez institucional. Ninguno de los candidatos analizados alcanza el umbral de Score 65 requerido por el Comité, por lo que la orden de ejecución es NONE para preservar el capital.",
+  "reasoning": "El mercado se encuentra en una zona de trampa de valor con baja profundidad de liquidez y scores técnicos insuficientes. Ningún candidato cumple con los criterios de convicción A+ exigidos por el comité, por lo que la orden es proteger el capital y esperar una mejor configuración.",
   "top_candidates": [
     {
-      "symbol": "ENAUSDT",
-      "score": 50
+      "symbol": "TRUMPUSDT",
+      "score": 60
     },
     {
-      "symbol": "GIGGLEUSDT",
-      "score": 50
+      "symbol": "TIAUSDT",
+      "score": 60
     },
     {
-      "symbol": "SHIBUSDT",
-      "score": 50
+      "symbol": "SEIUSDT",
+      "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 50
+      "symbol": "OPUSDT",
+      "score": 60
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "SUIUSDT",
       "score": 50
     }
   ]
