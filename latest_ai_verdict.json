@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-03 10:38:16",
+  "timestamp": "2026-08-03 10:40:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de debilidad sistémica con una ausencia total de activos que cumplan con el umbral de calidad A+ (Score >= 65). La falta de soporte en el libro de órdenes y la inestabilidad macroeconómica dictan una postura defensiva estricta para preservar el capital.",
+  "reasoning": "El mercado se encuentra en una fase de estancamiento con alta volatilidad y falta de convicción compradora. Ninguno de los candidatos cumple con el umbral de Score técnico (>= 65) ni con la profundidad de libro de órdenes necesaria para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado 'zombie'.",
   "top_candidates": [
+    {
+      "symbol": "SUNUSDT",
+      "score": 70
+    },
     {
       "symbol": "BNBUSDT",
       "score": 60
@@ -15,16 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "SUNUSDT",
-      "score": 55
+      "symbol": "SKYUSDT",
+      "score": 60
     },
     {
-      "symbol": "ZROUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 50
+      "symbol": "MMTUSDT",
+      "score": 60
     }
   ]
 }
