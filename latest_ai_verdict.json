@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-03 04:36:17",
+  "timestamp": "2026-08-03 04:38:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución agresiva sin activos que cumplan con los criterios de alta convicción (Score >= 65). La estrategia institucional dicta la preservación de capital sobre la especulación en activos de baja fuerza técnica.",
+  "reasoning": "El mercado se encuentra en un estado de pánico institucional y debilidad técnica generalizada. Ninguno de los candidatos analizados cumple con el umbral mínimo de Score 65/100 ni con la confirmación de soporte en el libro de órdenes, por lo que la estrategia de preservación de capital dicta mantenerse en liquidez total.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "MIRAUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "OPUSDT",
+      "symbol": "ORDIUSDT",
       "score": 60
     },
     {
-      "symbol": "GIGGLEUSDT",
+      "symbol": "UNIUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "NEARUSDT",
       "score": 50
     }
   ]
