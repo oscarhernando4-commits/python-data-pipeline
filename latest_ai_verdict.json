@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-03 06:48:21",
+  "timestamp": "2026-08-03 06:50:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con falta de convicción compradora. Ningún activo cumple con los criterios de alta convicción (Score A+ >= 65) establecidos por el comité, por lo que la estrategia de preservación de capital 'Cash is King' es la única opción autorizada.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva sin señales de reversión clara; por tanto, se prioriza la preservación del capital sobre la ejecución de trades de baja convicción.",
   "top_candidates": [
     {
-      "symbol": "NILUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XLMUSDT",
-      "score": 55
+      "symbol": "ATOMUSDT",
+      "score": 70
     },
     {
       "symbol": "INJUSDT",
@@ -23,7 +19,11 @@
       "score": 50
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "ENAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "BANKUSDT",
       "score": 50
     }
   ]
