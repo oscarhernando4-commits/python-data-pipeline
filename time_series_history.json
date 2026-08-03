@@ -1,12 +1,12 @@
 {
-  "EIGENUSDT": [
+  "ZBTUSDT": [
     {
-      "timestamp": "2026-08-03 01:34:09",
-      "price": 0.1864,
-      "score": 0,
-      "rsi": 42.45,
+      "timestamp": "2026-08-03 01:36:09",
+      "price": 0.1222,
+      "score": 45,
+      "rsi": 52.19,
       "macd": "Neutral",
-      "volume_surge": 0.11,
+      "volume_surge": 0.17,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +14,25 @@
   ],
   "DCRUSDT": [
     {
-      "timestamp": "2026-08-03 01:34:09",
-      "price": 13.35,
-      "score": 70,
-      "rsi": 61.75,
+      "timestamp": "2026-08-03 01:36:09",
+      "price": 13.3,
+      "score": 55,
+      "rsi": 54.31,
       "macd": "Neutral",
-      "volume_surge": 1.75,
+      "volume_surge": 3.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "KITEUSDT": [
+    {
+      "timestamp": "2026-08-03 01:36:09",
+      "price": 0.0928,
+      "score": 0,
+      "rsi": 38.68,
+      "macd": "Neutral",
+      "volume_surge": 0.3,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
