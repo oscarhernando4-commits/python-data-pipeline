@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-03 05:36:15",
+  "timestamp": "2026-08-03 05:38:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de alta toxicidad y debilidad sistémica. Ningún activo cumple con los requisitos de calidad A+ (Score >= 65) ni con la confirmación de soporte institucional necesaria. Se prioriza la preservación del capital ante la ausencia de una oportunidad con alta probabilidad de éxito.",
+  "reasoning": "El mercado presenta una estructura de distribución institucional agresiva y falta de fuerza técnica en los activos analizados. Ningún candidato cumple con el requisito de Score Técnico >= 65 ni con la confirmación de volumen necesaria para una entrada segura, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "ALGOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ATOMUSDT",
       "score": 60
     },
     {
@@ -19,11 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "ZAMAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "SKYUSDT",
+      "symbol": "ETCUSDT",
       "score": 50
     }
   ]
