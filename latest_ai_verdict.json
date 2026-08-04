@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-04 08:12:25",
+  "timestamp": "2026-08-04 08:14:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de alta incertidumbre y capitulación sistémica. Ninguno de los candidatos cumple con los criterios estrictos de convicción A+ exigidos por el comité, por lo que la decisión unánime es mantener la liquidez en USDT para evitar pérdidas en un entorno de alta volatilidad y baja convicción.",
+  "reasoning": "Ningún activo cumple con el umbral estricto de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido y confirmación de volumen institucional). El mercado actual presenta un riesgo sistémico elevado y una falta de convicción alcista, por lo que la estrategia óptima es preservar el capital en liquidez (USDT) hasta que las condiciones macro mejoren.",
   "top_candidates": [
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "TRXUSDT",
       "score": 70
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "PAXGUSDT",
       "score": 70
     },
     {
@@ -19,7 +19,7 @@
       "score": 70
     },
     {
-      "symbol": "NVDABUSDT",
+      "symbol": "JTOUSDT",
       "score": 70
     },
     {
