@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 06:02:22",
+  "timestamp": "2026-08-04 06:04:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado presenta una divergencia estructural que aumenta el riesgo de pérdidas, por lo que la estrategia óptima es la preservación de capital mediante el modo HOLD.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "LTCUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
       "symbol": "TAOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SKYUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PAXGUSDT",
       "score": 75
     }
   ]
