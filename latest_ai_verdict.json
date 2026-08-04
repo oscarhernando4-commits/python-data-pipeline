@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-04 22:42:23",
+  "timestamp": "2026-08-04 22:44:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia técnica severa y una liquidez delgada. Ninguno de los candidatos cumple con los requisitos estrictos de soporte en el libro de órdenes ni con la convicción necesaria para mitigar el riesgo de pérdida, por lo que la estrategia óptima es la preservación de capital.",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido). El mercado se encuentra en una fase de alta incertidumbre y riesgo sistémico, por lo que la preservación del capital es la prioridad absoluta.",
   "top_candidates": [
     {
-      "symbol": "BCHUSDT",
-      "score": 75
+      "symbol": "OPUSDT",
+      "score": 85
     },
     {
       "symbol": "GRAMUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "ATOMUSDT",
       "score": 75
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "QNTUSDT",
       "score": 75
     }
   ]
