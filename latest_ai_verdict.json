@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-04 14:48:22",
+  "timestamp": "2026-08-04 14:50:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido unánimemente mantener la posición en efectivo (HOLD). A pesar de que varios activos tienen un score técnico de 75, la ausencia de una dominancia clara en el libro de órdenes (Bids < 55%), la alta incertidumbre macroeconómica y el historial reciente de pérdidas en condiciones similares invalidan cualquier señal de compra. La prioridad absoluta es la preservación del capital frente a la alta probabilidad de una capitulación mayor.",
+  "reasoning": "El comité ha decidido unánimemente mantener la posición en efectivo (HOLD). A pesar de que algunos activos presentan scores técnicos de 75, la falta de profundidad en el libro de órdenes, el sentimiento de pánico extremo y la alta tasa de fallos en condiciones de mercado neutrales hacen que ninguna oportunidad cumpla con los estándares de seguridad A+ exigidos por el departamento de riesgo.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "BICOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LINKUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "ZECUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BICOUSDT",
       "score": 75
     }
   ]
