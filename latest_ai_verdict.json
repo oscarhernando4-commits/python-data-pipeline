@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-04 08:24:18",
+  "timestamp": "2026-08-04 08:26:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento sistémico con sesgo bajista. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT) hasta que las condiciones macro y técnicas mejoren.",
+  "reasoning": "El mercado actual presenta un entorno de alta hostilidad y falta de profundidad, donde ningún activo cumple con los criterios de calidad A+ exigidos por el comité. Se prioriza la protección del capital (Regla #1) sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
       "symbol": "BFUSDUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ETCUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "ETCUSDT",
       "score": 60
     },
     {
-      "symbol": "EPICUSDT",
+      "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "JSTUSDT",
       "score": 60
     }
   ]
