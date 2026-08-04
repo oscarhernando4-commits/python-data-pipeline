@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-04 18:16:23",
+  "timestamp": "2026-08-04 18:18:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que varios activos tienen un score técnico de 75, la falta de una dominancia clara en el libro de órdenes (Bids < 55%) y la alta volatilidad en un entorno de pánico extremo impiden la ejecución de una orden de compra bajo los estándares de riesgo A+.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos teóricos, la falta de dominancia en el libro de órdenes y el entorno de 'Extreme Fear' no cumplen con los criterios de alta convicción (A+) exigidos por el protocolo de gestión de riesgo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XRPUSDT",
+      "symbol": "ENAUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
