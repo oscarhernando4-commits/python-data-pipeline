@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-04 21:28:22",
+  "timestamp": "2026-08-04 21:30:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de los scores técnicos de 75, la ausencia de soporte institucional en el libro de órdenes y el entorno de miedo extremo en el mercado macro hacen que cualquier posición Long sea de alto riesgo. Se prioriza la preservación del capital sobre la especulación en un mercado sin una tendencia definida.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado se encuentra en una fase de alta incertidumbre y el riesgo de deslizamiento es elevado, por lo que la estrategia institucional es mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
       "symbol": "WLFIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "POLUSDT",
       "score": 75
     },
     {
@@ -23,8 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "FILUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
+    },
+    {
+      "symbol": "GNOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "score": 65
     }
   ]
 }
