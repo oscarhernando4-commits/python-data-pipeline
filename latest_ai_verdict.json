@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-04 17:30:24",
+  "timestamp": "2026-08-04 17:32:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que varios activos tienen un score técnico de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y la persistencia del miedo extremo en el mercado macroeconómico invalidan la convicción A+ necesaria para ejecutar una orden de compra, priorizando la preservación del capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el Comité. La dominancia de Bids en el libro de órdenes es insuficiente (50% vs el 65% requerido) y la tendencia 4H es puramente neutral, lo que aumenta el riesgo de pérdidas por volatilidad lateral. Se prioriza la preservación de capital hasta que el mercado muestre una estructura de acumulación clara.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUIUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUIUSDT",
       "score": 75
     }
   ]
