@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-04 08:36:22",
+  "timestamp": "2026-08-04 08:38:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos que cumplan con el umbral de Score Técnico >= 65 ni con la confirmación de liquidez necesaria en el libro de órdenes. Ante la volatilidad bajista y la falta de soporte institucional, la estrategia óptima es el resguardo de capital en efectivo para evitar pérdidas por 'falling knives'.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
-      "symbol": "BCHUSDT",
+      "symbol": "SKYUSDT",
       "score": 60
     },
     {
-      "symbol": "BFUSDUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     },
     {
@@ -19,12 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "ALLOUSDT",
-      "score": 50
+      "symbol": "APTUSDT",
+      "score": 55
     },
     {
-      "symbol": "BICOUSDT",
-      "score": 50
+      "symbol": "NVDABUSDT",
+      "score": 55
     }
   ]
 }
