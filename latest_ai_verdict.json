@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-04 23:36:22",
+  "timestamp": "2026-08-04 23:38:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad estructural sistémica. Ninguno de los activos analizados alcanza el umbral de calidad A+ (Score >= 65) requerido por el comité para garantizar la preservación del capital. Se mantiene la posición en efectivo (USDT) para evitar el riesgo de 'cuchillos cayendo' en un entorno de alta volatilidad y baja convicción.",
+  "reasoning": "El comité ha determinado por consenso unánime que no existen condiciones de mercado ni activos que cumplan con los criterios de alta convicción (Score >= 65) necesarios para una ejecución segura, por lo que se prioriza la protección del capital frente a la especulación en un entorno de capitulación.",
   "top_candidates": [
+    {
+      "symbol": "MUBUSDT",
+      "score": 60
+    },
     {
       "symbol": "SKHYBUSDT",
       "score": 60
@@ -15,11 +19,7 @@
       "score": 60
     },
     {
-      "symbol": "GNOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "BANKUSDT",
+      "symbol": "ZAMAUSDT",
       "score": 50
     },
     {
