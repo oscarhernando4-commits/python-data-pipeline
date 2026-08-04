@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-04 23:14:22",
+  "timestamp": "2026-08-04 23:16:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de 'Miedo Extremo' con una falta de soporte institucional en el libro de órdenes. A pesar de que DOGE tiene un score técnico alto, no cumple con la regla de convicción A+ ni con la dominancia de Bids necesaria para mitigar el riesgo de una trampa de liquidez. Se prioriza la preservación del capital sobre la especulación en un mercado lateral y volátil.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes y la ausencia de una tendencia clara en 4H representan un riesgo inaceptable bajo la Regla #1 de no perder dinero.",
   "top_candidates": [
     {
-      "symbol": "DOGEUSDT",
-      "score": 85
+      "symbol": "BTCUSDT",
+      "score": 75
     },
     {
-      "symbol": "EULUSDT",
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ENAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ICPUSDT",
+      "symbol": "SKHYBUSDT",
       "score": 75
     }
   ]
