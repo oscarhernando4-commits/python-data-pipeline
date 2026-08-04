@@ -1,12 +1,25 @@
 {
-  "HOLOUSDT": [
+  "CFXUSDT": [
     {
-      "timestamp": "2026-08-04 05:00:11",
-      "price": 0.0678,
-      "score": 65,
-      "rsi": 56.38,
+      "timestamp": "2026-08-04 05:02:13",
+      "price": 0.03899,
+      "score": 55,
+      "rsi": 28.96,
       "macd": "Neutral",
-      "volume_surge": 0.05,
+      "volume_surge": 0.11,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-04 05:02:13",
+      "price": 0.1379,
+      "score": 75,
+      "rsi": 56.47,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
