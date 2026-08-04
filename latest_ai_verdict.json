@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 07:56:19",
+  "timestamp": "2026-08-04 07:58:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de alta fricción y baja profundidad. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es mantener la liquidez en espera de mejores condiciones.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ requerido por el comité. La falta de soporte claro en el libro de órdenes y la alta volatilidad en un entorno de 'Extreme Fear' hacen que la estrategia más rentable sea mantener la liquidez en espera de una mejor configuración técnica.",
   "top_candidates": [
     {
-      "symbol": "STXUSDT",
+      "symbol": "TRXUSDT",
       "score": 70
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 60
+      "symbol": "XRPUSDT",
+      "score": 70
     },
     {
-      "symbol": "TRXUSDT",
-      "score": 60
+      "symbol": "STXUSDT",
+      "score": 70
     },
     {
       "symbol": "ZECUSDT",
       "score": 60
     },
     {
-      "symbol": "BFUSDUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     }
   ]

@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 974,
-    "wins": 284,
+    "total_trades": 994,
+    "wins": 304,
     "losses": 690,
-    "win_rate_pct": 29.16,
-    "total_pnl_usd": 118.64230545454558
+    "win_rate_pct": 30.58,
+    "total_pnl_usd": 230.44230545454565
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -48,7 +48,8 @@
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on WAXPUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BICOUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GRAMUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TUTUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TUTUSDT)",
+      "BOOST SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on COTIUSDT)"
     ]
   },
   "history": [
@@ -16057,6 +16058,346 @@
       "context": {
         "score": 0,
         "rsi_15m": 39.7,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:21",
+      "account_id": "SIM-021",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:21",
+      "account_id": "SIM-022",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:21",
+      "account_id": "SIM-023",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:21",
+      "account_id": "SIM-024",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:21",
+      "account_id": "SIM-025",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:21",
+      "account_id": "SIM-026",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:21",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:21",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:21",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:21",
+      "account_id": "SIM-030",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:21",
+      "account_id": "SIM-031",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:21",
+      "account_id": "SIM-032",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:21",
+      "account_id": "SIM-033",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:21",
+      "account_id": "SIM-034",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:21",
+      "account_id": "SIM-035",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:21",
+      "account_id": "SIM-036",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:21",
+      "account_id": "SIM-037",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:22",
+      "account_id": "SIM-038",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:22",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 07:58:22",
+      "account_id": "SIM-040",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01466,
+      "exit_price": 0.0138,
+      "pnl_usd": 5.59,
+      "result": "WIN",
+      "notes": "Win on COTIUSDT (+$5.59 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 74.56,
         "macro_trend_4h": "NEUTRAL"
       }
     }

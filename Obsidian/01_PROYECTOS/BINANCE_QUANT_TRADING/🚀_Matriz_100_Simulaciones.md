@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-04 07:56:19
+date: 2026-08-04 07:58:22
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $20.05 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-04 07:56:19`
+> ⏱️ **Última Actualización:** `2026-08-04 07:58:22`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00409216 BNB` (`~$2.42 USD`)
@@ -30,10 +30,10 @@ date: 2026-08-04 07:56:19
 
 > [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
-> - 📈 **Capital Total Acumulado:** **`$10,118.60 USD`** (`$+118.60 USD`)  
-> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `20 Cuentas (20.0%)`  
+> - 📈 **Capital Total Acumulado:** **`$10,230.40 USD`** (`$+230.40 USD`)  
+> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `40 Cuentas (40.0%)`  
 > - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `0 Cuentas (0.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `80 Cuentas (80.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `60 Cuentas (60.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
@@ -58,58 +58,58 @@ date: 2026-08-04 07:56:19
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-001** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-002** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-003** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-004** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-005** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-006** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-007** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-008** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-009** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-010** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-011** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-012** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-013** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-014** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-015** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-016** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-017** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-018** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-019** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-020** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:56 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-001** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-002** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-003** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-004** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-005** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-006** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-007** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-008** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-009** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-010** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-011** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-012** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-013** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-014** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-015** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-016** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-017** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-018** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-019** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-020** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>07:58 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
 
 ---
 
 ## 🔷 GRUPO 2: Moderado-Estricto (Permisividad Nivel 2 - Score >= 75 Pts)
 
-> [!WARNING] 📊 **Resumen del 🔷 GRUPO 2: Moderado-Estricto (Permisividad Nivel 2 - Score >= 75 Pts):**
-> - 💵 **Balance Total del Grupo:** `$1,937.40 USD` (`-$62.60`)
-> - 🎯 **Operaciones Totales:** `280` (`60 Ganadas / 220 Perdidas`)
-> - 📈 **Tasa de Acierto del Grupo:** `21.4% Win Rate`
+> [!TIP] 📊 **Resumen del 🔷 GRUPO 2: Moderado-Estricto (Permisividad Nivel 2 - Score >= 75 Pts):**
+> - 💵 **Balance Total del Grupo:** `$2,049.20 USD` (`+$49.20`)
+> - 🎯 **Operaciones Totales:** `300` (`80 Ganadas / 220 Perdidas`)
+> - 📈 **Tasa de Acierto del Grupo:** `26.7% Win Rate`
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-021** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-022** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-023** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-024** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-025** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-026** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-027** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-028** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-029** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-030** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-031** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-032** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-033** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-034** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-035** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-036** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-037** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-038** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-039** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
-| **SIM-040** | **COTIUSDT** | `#14` | `3W/11L` | 26-08-04<br>07:50 | `🛡️ Protegida (BE)` | **`$96.87`** (`-$3.13`) | 🔵 En Vivo |
+| **SIM-021** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-022** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-023** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-024** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-025** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-026** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-027** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-028** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-029** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-030** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-031** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-032** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-033** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-034** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-035** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-036** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-037** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-038** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-039** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
+| **SIM-040** | **COTIUSDT** | `#15` | `4W/11L` | 26-08-04<br>07:58 | `🟢 Ganó +$5.59` | **`$102.46`** (`+$2.46`) | 🟢 Buscando |
 
 ---
 
