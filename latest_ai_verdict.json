@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-04 22:14:22",
+  "timestamp": "2026-08-04 22:16:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada y alta fragilidad. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que se prioriza la preservación de capital sobre la especulación en un entorno de alta probabilidad de pérdida.",
+  "reasoning": "El mercado se encuentra en un estado de aversión al riesgo extremo con una falta de profundidad en el libro de órdenes. Ninguno de los candidatos cumple con los requisitos de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia institucional es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "LTCUSDT",
-      "score": 85
+      "score": 75
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "score": 75
     },
     {
       "symbol": "POLUSDT",
@@ -17,10 +21,6 @@
     {
       "symbol": "DCRUSDT",
       "score": 75
-    },
-    {
-      "symbol": "ADAUSDT",
-      "score": 65
     },
     {
       "symbol": "EULUSDT",
