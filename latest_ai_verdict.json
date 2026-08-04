@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-04 03:06:22",
+  "timestamp": "2026-08-04 03:08:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido unánimemente mantener la liquidez en USDT. A pesar de la existencia de activos con scores técnicos aceptables, la falta de confirmación en el libro de órdenes, el entorno de miedo extremo y la ausencia de una señal de volumen institucional contundente impiden la ejecución de cualquier orden de compra bajo los estándares de riesgo A+.",
+  "reasoning": "El mercado presenta una desconexión peligrosa entre el pánico macro y la acción técnica de los precios. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia institucional es preservar el capital en efectivo.",
   "top_candidates": [
     {
       "symbol": "INTCBUSDT",
       "score": 85
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "ADAUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "TRXUSDT",
       "score": 75
     }
   ]
