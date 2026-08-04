@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 09:44:19",
+  "timestamp": "2026-08-04 09:46:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con alta volatilidad y falta de soporte institucional real. Ninguno de los candidatos cumple con el umbral mínimo de Score A+ (>= 65) ni con la confirmación de profundidad de mercado necesaria para mitigar el riesgo de slippage. Se mantiene la posición en efectivo (USDT) para evitar trampas de liquidez.",
+  "reasoning": "El comité ha determinado que no existen activos que cumplan con los criterios de alta convicción (Score >= 65) y soporte institucional. Ante la fuga de liquidez sistémica y la alta probabilidad de pérdidas basada en el histórico de simulaciones, la decisión estratégica es la inacción total para proteger el capital.",
   "top_candidates": [
-    {
-      "symbol": "HBARUSDT",
-      "score": 70
-    },
     {
       "symbol": "ADAUSDT",
       "score": 60
     },
     {
-      "symbol": "MIRAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "KAITOUSDT",
+      "symbol": "DOTUSDT",
       "score": 60
     },
     {
       "symbol": "QNTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NVDABUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SUNUSDT",
       "score": 60
     }
   ]
