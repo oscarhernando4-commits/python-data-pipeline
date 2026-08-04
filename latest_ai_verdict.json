@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-04 15:26:24",
+  "timestamp": "2026-08-04 15:28:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, ante el estado de 'Extreme Fear' y la falta de activos que cumplan con el umbral de convicción A+ (Score >= 65), la estrategia óptima es la preservación de capital mediante el mantenimiento de la liquidez en USDT, evitando las trampas de valor actuales.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "JSTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TSLABUSDT",
       "score": 75
     },
     {
@@ -25,6 +17,14 @@
     {
       "symbol": "PUMPUSDT",
       "score": 70
+    },
+    {
+      "symbol": "JTOUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "BICOUSDT",
+      "score": 65
     }
   ]
 }
