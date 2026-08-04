@@ -1,26 +1,26 @@
 {
-  "timestamp": "2026-08-04 01:18:22",
+  "timestamp": "2026-08-04 01:20:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación del comité, se ha determinado que no existen activos que cumplan con los criterios de alta convicción (Score >= 65) en el entorno macro actual de capitulación. La falta de profundidad en el libro de órdenes y la alta probabilidad de pérdidas basada en el historial de simulaciones obligan a la inacción para proteger el capital institucional.",
+  "reasoning": "El comité ha determinado que el entorno de mercado actual es de alta fragilidad y riesgo sistémico. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte institucional necesaria para una ejecución segura. Por lo tanto, se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "JSTUSDT",
       "score": 70
     },
     {
-      "symbol": "AVAXUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TRXUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
       "symbol": "AEROUSDT",
       "score": 60
+    },
+    {
+      "symbol": "EULUSDT",
+      "score": 50
     },
     {
       "symbol": "VICUSDT",
