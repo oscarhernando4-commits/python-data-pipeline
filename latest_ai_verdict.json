@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 12:58:17",
+  "timestamp": "2026-08-04 13:00:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de datos históricos sólidos en los activos analizados, sumado al entorno de 'Extreme Fear', dictaminan una postura de espera (HOLD) para proteger el capital.",
+  "reasoning": "El mercado se encuentra en un estado de aversión al riesgo extremo con una falta de confirmación clara en el libro de órdenes. Ningún candidato cumple con el umbral estricto de Score A+ (>= 65) y la ausencia de datos de liquidez fiables obliga al comité a mantener la posición en efectivo (USDT) para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NEXOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "FETUSDT",
-      "score": 70
+      "symbol": "ENAUSDT",
+      "score": 65
     },
     {
       "symbol": "BICOUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "NILUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "NEXOUSDT",
       "score": 65
     }
   ]
