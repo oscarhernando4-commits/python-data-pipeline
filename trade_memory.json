@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 1253,
+    "total_trades": 1273,
     "wins": 304,
-    "losses": 949,
-    "win_rate_pct": 24.26,
-    "total_pnl_usd": -64.08769454545465
+    "losses": 969,
+    "win_rate_pct": 23.88,
+    "total_pnl_usd": -85.68769454545462
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BTCUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GRAMUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on VICUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on AVAXUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on HOMEUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on XAUTUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BANKUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on STOUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on STOUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SOXLBUSDT)"
     ],
     "boosted_patterns": [
       "RSI < 30 + MACD Bullish Cross + Volume > 1.5x (High Probability Win)",
@@ -20801,6 +20801,346 @@
       "context": {
         "score": 15,
         "rsi_15m": 44.79,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:23",
+      "account_id": "SIM-061",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:23",
+      "account_id": "SIM-062",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:23",
+      "account_id": "SIM-063",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:24",
+      "account_id": "SIM-064",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:24",
+      "account_id": "SIM-065",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:24",
+      "account_id": "SIM-066",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:24",
+      "account_id": "SIM-067",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:24",
+      "account_id": "SIM-068",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:24",
+      "account_id": "SIM-069",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:24",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:24",
+      "account_id": "SIM-071",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:24",
+      "account_id": "SIM-072",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:24",
+      "account_id": "SIM-073",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:24",
+      "account_id": "SIM-074",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:24",
+      "account_id": "SIM-075",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:24",
+      "account_id": "SIM-076",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:24",
+      "account_id": "SIM-077",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:24",
+      "account_id": "SIM-078",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:24",
+      "account_id": "SIM-079",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 21:44:24",
+      "account_id": "SIM-080",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SOXLBUSDT",
+      "side": "SHORT",
+      "entry_price": 135.93,
+      "exit_price": 135.54,
+      "pnl_usd": -1.08,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$1.08). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.11,
         "macro_trend_4h": "NEUTRAL"
       }
     }
