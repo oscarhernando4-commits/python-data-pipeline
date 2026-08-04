@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-04 03:16:19",
+  "timestamp": "2026-08-04 03:18:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, no existe una confirmación unánime de soporte institucional ni una estructura de mercado que garantice una probabilidad de éxito superior al 70%, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en una fase de purga de activos especulativos con una fragmentación de liquidez que no permite una ejecución con alta probabilidad de éxito. Ningún candidato cumple con el requisito de soporte de ballenas (Bids > 55%) ni con una tendencia clara, por lo que la estrategia de preservación de capital es la única opción viable bajo el mandato del CRO.",
   "top_candidates": [
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
     {
       "symbol": "ADAUSDT",
       "score": 75
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "MUBARAKUSDT",
+      "symbol": "MORPHOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZROUSDT",
       "score": 75
     }
   ]
