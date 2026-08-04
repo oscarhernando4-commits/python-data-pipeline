@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-04 04:32:21",
+  "timestamp": "2026-08-04 04:34:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado carece de la convicción necesaria para una entrada de alta probabilidad. Todos los candidatos presentan una dominancia de Bids neutral (50%) y falta de volumen institucional, lo que, sumado al pánico extremo, aumenta el riesgo de pérdidas. Se prioriza la preservación del capital (Regla #1) sobre la ejecución especulativa.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los requisitos de seguridad y convicción A+ exigidos por el protocolo de riesgo, optando por una postura de protección de capital (HOLD) hasta que la estructura de mercado se estabilice.",
   "top_candidates": [
     {
-      "symbol": "ZECUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
