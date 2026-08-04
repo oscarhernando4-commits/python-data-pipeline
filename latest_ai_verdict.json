@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-04 12:26:17",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 75, el entorno de 'Extreme Fear' y la falta de soporte real en el libro de órdenes (Bids 50%) no cumplen con los criterios de seguridad A+ exigidos. Se prioriza la preservación del capital sobre la especulación en un mercado de alta incertidumbre.",
+  "timestamp": "2026-08-04 12:28:20",
+  "selected_symbol": "GNOUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "GNOUSDT es el único candidato que supera el umbral de 80/100 en score técnico, mostrando una resiliencia anómala frente al pánico generalizado del mercado. La estrategia se basa en la acumulación selectiva de activos con fuerza relativa, manteniendo una gestión de riesgo estricta con trailing stop para proteger el capital ante la volatilidad macro.",
   "top_candidates": [
+    {
+      "symbol": "GNOUSDT",
+      "score": 85
+    },
     {
       "symbol": "TRXUSDT",
       "score": 75
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 75
-    },
-    {
       "symbol": "PAXGUSDT",
       "score": 75
     },
     {
-      "symbol": "TSLABUSDT",
+      "symbol": "STXUSDT",
       "score": 75
     }
   ]
