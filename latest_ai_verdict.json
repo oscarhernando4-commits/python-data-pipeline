@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 03:14:20",
+  "timestamp": "2026-08-04 03:16:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "A pesar de tener candidatos con buenos scores técnicos, ninguno cumple con el requisito de dominancia de Bids (>= 55%) ni con la confirmación de soporte de ballenas necesaria para una ejecución A+. Se prioriza la preservación del capital ante la incertidumbre del mercado.",
+  "confidence": 0,
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, no existe una confirmación unánime de soporte institucional ni una estructura de mercado que garantice una probabilidad de éxito superior al 70%, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "ADAUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "HBARUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "KITEUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "TRXUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "ADAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "MUBARAKUSDT",
       "score": 75
     }
   ]
