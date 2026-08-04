@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 20:02:24",
+  "timestamp": "2026-08-04 20:04:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de distribución silenciosa y alta incertidumbre. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ y soporte de liquidez institucional, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "Ninguno de los activos analizados cumple con el umbral mínimo de Score técnico (65) ni con la confirmación de liquidez necesaria para una ejecución de alta convicción, por lo que se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "DOTUSDT",
-      "score": 70
+      "score": 60
     },
     {
-      "symbol": "HFTUSDT",
-      "score": 65
+      "symbol": "BONKUSDT",
+      "score": 60
     },
     {
-      "symbol": "VANRYUSDT",
-      "score": 65
+      "symbol": "JTOUSDT",
+      "score": 60
     },
     {
-      "symbol": "RENDERUSDT",
-      "score": 65
+      "symbol": "BICOUSDT",
+      "score": 50
     },
     {
       "symbol": "SKYUSDT",
-      "score": 65
+      "score": 50
     }
   ]
 }
