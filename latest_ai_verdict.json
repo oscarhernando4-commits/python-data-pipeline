@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-04 20:46:21",
+  "timestamp": "2026-08-04 20:48:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos de 75, no existe una confirmación clara en el libro de órdenes ni un volumen institucional que mitigue el riesgo en un entorno de pánico extremo.",
+  "reasoning": "A pesar de que varios activos tienen un score técnico de 75, ninguno cumple con los requisitos de confirmación de volumen institucional (Surge > 1.2x) ni con la dominancia de Bids necesaria (>= 55%) para mitigar el riesgo en un entorno de Pánico Extremo. El comité ha decidido mantener la liquidez en USDT para evitar las trampas de liquidez recurrentes observadas en el historial de trading.",
   "top_candidates": [
     {
-      "symbol": "SOLUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "ICPUSDT",
       "score": 75
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "ETCUSDT",
       "score": 75
     }
   ]
