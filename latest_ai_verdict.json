@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-04 21:34:21",
+  "timestamp": "2026-08-04 21:36:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragmentación de liquidez peligrosa y una falta de convicción institucional en los activos analizados. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la estrategia óptima es mantener la liquidez en espera de una estructura de mercado más definida.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad de Bids (>= 55%) ni con la convicción A+ necesaria para operar en un entorno de mercado de pánico extremo, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "SKYUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ENAUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "POLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "GNOUSDT",
       "score": 75
     }
   ]
