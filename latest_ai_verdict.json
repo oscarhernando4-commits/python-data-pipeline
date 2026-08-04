@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-04 14:36:25",
+  "timestamp": "2026-08-04 14:38:29",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de algunos scores técnicos favorables, la falta de dominancia clara en el libro de órdenes y el entorno de pánico macroeconómico no cumplen con los criterios de seguridad exigidos para una entrada de capital, optando por una postura de espera para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a la falta de datos de liquidez en el libro de órdenes, el sentimiento de 'Extreme Fear' y la alta tasa de fallos en trades realizados bajo condiciones de mercado neutrales en el historial de simulaciones.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "BICOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BICOUSDT",
       "score": 75
     }
   ]
