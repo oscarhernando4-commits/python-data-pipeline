@@ -1,12 +1,38 @@
 {
-  "FFUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-04 12:44:09",
-      "price": 0.06384,
-      "score": 50,
-      "rsi": 53.45,
+      "timestamp": "2026-08-04 12:46:08",
+      "price": 0.1374,
+      "score": 15,
+      "rsi": 44.39,
       "macd": "Neutral",
-      "volume_surge": 0.58,
+      "volume_surge": 0.08,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "INTCBUSDT": [
+    {
+      "timestamp": "2026-08-04 12:46:08",
+      "price": 95.3,
+      "score": 35,
+      "rsi": 60.28,
+      "macd": "Neutral",
+      "volume_surge": 0.15,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-04 12:46:08",
+      "price": 2.8e-06,
+      "score": 30,
+      "rsi": 34.11,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +40,25 @@
   ],
   "CFXUSDT": [
     {
-      "timestamp": "2026-08-04 12:44:09",
-      "price": 0.03914,
+      "timestamp": "2026-08-04 12:46:08",
+      "price": 0.0391,
       "score": 30,
-      "rsi": 42.71,
+      "rsi": 41.18,
       "macd": "Neutral",
-      "volume_surge": 0.73,
+      "volume_surge": 0.33,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "FFUSDT": [
+    {
+      "timestamp": "2026-08-04 12:46:08",
+      "price": 0.06386,
+      "score": 50,
+      "rsi": 53.97,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -27,12 +66,12 @@
   ],
   "DCRUSDT": [
     {
-      "timestamp": "2026-08-04 12:44:09",
+      "timestamp": "2026-08-04 12:46:08",
       "price": 13.43,
       "score": 45,
-      "rsi": 55.46,
+      "rsi": 55.45,
       "macd": "Neutral",
-      "volume_surge": 0.14,
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
