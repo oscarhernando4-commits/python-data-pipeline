@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-04 17:12:22",
+  "timestamp": "2026-08-04 17:14:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una vulnerabilidad sistémica y falta de convicción en el libro de órdenes. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 con soporte de ballenas > 55%), por lo que la estrategia de preservación de capital dicta mantener la liquidez en USDT.",
+  "reasoning": "El mercado presenta una divergencia estructural y un sentimiento de pánico extremo que invalida las configuraciones técnicas actuales. Ningún activo cumple con el umbral de convicción A+ ni con la dominancia de Bids necesaria para garantizar una entrada de bajo riesgo. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
-      "symbol": "NVDABUSDT",
-      "score": 85
+      "symbol": "DOGEUSDT",
+      "score": 75
     },
     {
       "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "SUIUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     }
   ]
