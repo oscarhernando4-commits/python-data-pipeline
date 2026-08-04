@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-04 11:54:18",
-  "selected_symbol": "TSLABUSDT",
+  "timestamp": "2026-08-04 11:56:14",
+  "selected_symbol": "DOGEUSDT",
   "action": "BUY_LONG",
   "approved": true,
-  "confidence": 72,
-  "reasoning": "TSLABUSDT es el único activo que supera el umbral de convicción A+ (Score 85) con un volumen de entrada institucional significativo, permitiendo una operación de alta probabilidad mientras el resto del mercado purga posiciones débiles.",
+  "confidence": 75,
+  "reasoning": "DOGEUSDT cumple con el umbral de score técnico (85), pertenece al sector dominante de alta volatilidad y muestra una divergencia alcista frente al sentimiento de mercado, validando una entrada de alta convicción con gestión de riesgo activa.",
   "top_candidates": [
+    {
+      "symbol": "DOGEUSDT",
+      "score": 85
+    },
     {
       "symbol": "TSLABUSDT",
       "score": 85
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
+      "symbol": "AVAXUSDT",
       "score": 75
     }
   ]
