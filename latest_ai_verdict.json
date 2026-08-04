@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 00:06:22",
+  "timestamp": "2026-08-04 00:08:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de capitulación con fuga de capital institucional. Ningún activo cumple con el umbral de Score Técnico >= 65 ni con la profundidad de libro de órdenes necesaria para una entrada de alta convicción. Se prioriza la preservación de capital sobre la especulación en un entorno de alta volatilidad y baja liquidez.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad institucional. Ninguno de los candidatos cumple con los requisitos estrictos de Score A+ (>= 65) y soporte de libro de órdenes, por lo que la decisión institucional es mantener la liquidez y evitar el riesgo de 'falling knives'.",
   "top_candidates": [
+    {
+      "symbol": "WAXPUSDT",
+      "score": 80
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "score": 70
+    },
     {
       "symbol": "STXUSDT",
       "score": 70
     },
     {
-      "symbol": "MUBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ENAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "WAXPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "CAKEUSDT",
+      "symbol": "KAITOUSDT",
       "score": 60
     }
   ]
