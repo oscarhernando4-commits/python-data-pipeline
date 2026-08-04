@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 14:06:21",
+  "timestamp": "2026-08-04 14:08:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de activos con scores técnicos aceptables, el entorno de mercado actual (Extreme Fear y falta de profundidad en el libro de órdenes) no cumple con los estándares de seguridad A+ exigidos por el Chief Risk Officer. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja convicción.",
+  "reasoning": "El mercado presenta una fragilidad sistémica extrema con una correlación negativa masiva. Ningún activo cumple con el umbral de convicción A+ (Score >= 65) exigido por el comité, por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT) para evitar la exposición a la volatilidad bajista actual.",
   "top_candidates": [
     {
       "symbol": "SKYUSDT",
-      "score": 95
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
+      "score": 80
     },
     {
       "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 75
+      "score": 60
     },
     {
       "symbol": "PAXGUSDT",
-      "score": 75
+      "score": 60
+    },
+    {
+      "symbol": "JSTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TSLABUSDT",
+      "score": 60
     }
   ]
 }
