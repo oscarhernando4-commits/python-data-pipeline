@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 15:44:27",
+  "timestamp": "2026-08-04 15:46:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de alta incertidumbre y pánico extremo. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y soporte de libro de órdenes > 55%) necesario para garantizar la preservación del capital. Se prioriza la liquidez en espera de una estructura de mercado más favorable.",
+  "reasoning": "El comité ha deliberado y, ante la falta de activos que cumplan con el umbral de convicción A+ (Score >= 65) y la ausencia de muros de soporte institucionales claros en el libro de órdenes, se ha decidido mantener el 100% de la liquidez en USDT para evitar la exposición a la volatilidad bajista actual.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
       "symbol": "ASTERUSDT",
       "score": 75
-    },
-    {
-      "symbol": "MSTRBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ERAUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 65
     }
   ]
 }
