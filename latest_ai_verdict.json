@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 21:22:27",
+  "timestamp": "2026-08-04 21:24:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una correlación bajista predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para una ejecución segura, por lo que se prioriza la protección del capital sobre la operativa especulativa.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de liquidez institucional clara en el orderbook obligan a mantener la posición en efectivo para evitar pérdidas sistémicas.",
   "top_candidates": [
     {
       "symbol": "LTCUSDT",
@@ -15,7 +15,7 @@
       "score": 75
     },
     {
-      "symbol": "VANRYUSDT",
+      "symbol": "ENAUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "ICPUSDT",
       "score": 75
     }
   ]
