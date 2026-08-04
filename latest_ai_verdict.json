@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-04 00:50:23",
+  "timestamp": "2026-08-04 00:52:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación y alta incertidumbre regulatoria. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital en liquidez.",
+  "reasoning": "El comité ha determinado que no existen activos que cumplan con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de volumen institucional necesaria. El entorno macroeconómico de alta toxicidad y la falta de soporte en el libro de órdenes obligan a una postura defensiva de preservación de capital.",
   "top_candidates": [
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "AVAXUSDT",
       "score": 60
     },
     {
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "ASTERUSDT",
+      "score": 60
+    },
+    {
       "symbol": "FFUSDT",
       "score": 60
     },
     {
-      "symbol": "OPENUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "NIGHTUSDT",
+      "symbol": "EULUSDT",
       "score": 50
     }
   ]
