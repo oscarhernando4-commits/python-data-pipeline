@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-04 05:54:22",
+  "timestamp": "2026-08-04 05:56:48",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ y soporte de liquidez en el libro de órdenes. El mercado se encuentra en una fase de alta incertidumbre y 'Fear' extremo, por lo que la estrategia de protección de capital es la única opción viable para evitar pérdidas, conforme a la Regla #1 del Comité.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional). El mercado se encuentra en un estado de alta incertidumbre y el comité ha decidido priorizar la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "TAOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LTCUSDT",
       "score": 75
     },
     {
@@ -15,11 +19,7 @@
       "score": 75
     },
     {
-      "symbol": "EPICUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NVDABUSDT",
+      "symbol": "FILUSDT",
       "score": 75
     },
     {
