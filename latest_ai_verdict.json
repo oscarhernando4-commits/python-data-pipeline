@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 03:58:20",
+  "timestamp": "2026-08-04 04:00:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de consolidación defensiva con alta incertidumbre. Ningún candidato cumple con los requisitos estrictos de convicción A+ y soporte de liquidez, por lo que la decisión institucional es mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de 'trampa de liquidez'.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de alta incertidumbre y el comité ha decidido priorizar la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
-      "symbol": "TRUMPUSDT",
-      "score": 85
+      "symbol": "JUPUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ACXUSDT",
+      "score": 75
     },
     {
       "symbol": "NVDABUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "AXTIBUSDT",
       "score": 75
     },
     {
-      "symbol": "XRPUSDT",
+      "symbol": "INTCBUSDT",
       "score": 75
     }
   ]
