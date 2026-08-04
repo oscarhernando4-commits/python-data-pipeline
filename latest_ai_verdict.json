@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-04 02:04:26",
+  "timestamp": "2026-08-04 02:06:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score A+ (>= 65) combinado con una dominancia de Bids superior al 55%, lo que obliga a mantener la posición en efectivo para evitar riesgos innecesarios en un entorno de alta volatilidad.",
+  "reasoning": "El comité ha decidido por unanimidad mantener la liquidez en USDT. A pesar de los scores técnicos de 85 en DOGE y SKY, la falta de profundidad en el libro de órdenes, la incertidumbre macroeconómica y la ausencia de una tendencia clara invalidan la ejecución bajo los criterios de riesgo A+.",
   "top_candidates": [
     {
       "symbol": "DOGEUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "SKYUSDT",
       "score": 85
     },
     {
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TRXUSDT",
       "score": 75
     },
     {
