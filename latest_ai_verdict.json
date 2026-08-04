@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-04 16:54:23",
+  "timestamp": "2026-08-04 16:56:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica extrema con una correlación bajista predominante. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ (Score >= 65) requerido por el comité, y el libro de órdenes no muestra una dominancia compradora clara. Por lo tanto, se prioriza la preservación de capital sobre la operativa especulativa.",
+  "reasoning": "El mercado presenta una capitulación técnica generalizada y una falta de convicción institucional en los activos analizados. Ningún candidato cumple con el umbral de Score A+ (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
   "top_candidates": [
     {
-      "symbol": "LTCUSDT",
-      "score": 60
-    },
-    {
       "symbol": "TRXUSDT",
-      "score": 60
+      "score": 70
     },
     {
       "symbol": "XAUTUSDT",
@@ -20,6 +16,10 @@
     },
     {
       "symbol": "PAXGUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "MIRAUSDT",
       "score": 60
     },
     {
