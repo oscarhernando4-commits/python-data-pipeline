@@ -1,22 +1,14 @@
 {
-  "timestamp": "2026-08-04 10:04:17",
+  "timestamp": "2026-08-04 10:06:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estrés sistémico con una clara fuga de capital hacia stablecoins. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ (Score >= 65) requerido por el Comité para mitigar el riesgo de pérdida, por lo que la decisión institucional es mantener la liquidez en espera de una estabilización estructural.",
+  "reasoning": "El mercado exhibe una toxicidad sistémica y una falta de convicción alcista en los activos analizados. Ningún candidato cumple con el umbral de calidad A+ (Score >= 65) exigido por el comité, por lo que la estrategia óptima es la preservación total del capital en efectivo (Cash is King) hasta que las condiciones macro mejoren.",
   "top_candidates": [
     {
       "symbol": "JSTUSDT",
       "score": 75
-    },
-    {
-      "symbol": "ADAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "HBARUSDT",
-      "score": 60
     },
     {
       "symbol": "BFUSDUSDT",
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "DOTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "MIRAUSDT",
       "score": 60
     }
   ]
