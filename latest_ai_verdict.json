@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 19:56:21",
-  "selected_symbol": "BCHUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "BCH cumple con el umbral de convicción A+ (Score 85) y muestra una divergencia alcista clara frente al sentimiento de mercado, lo que justifica una entrada de alta probabilidad mientras se mantiene el capital protegido bajo la supervisión del CRO.",
+  "timestamp": "2026-08-04 19:58:24",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de libro de órdenes > 55%). El mercado presenta una divergencia de riesgo que, sumada al pánico extremo, hace que la estrategia de preservación de capital sea la única opción viable bajo las reglas del comité.",
   "top_candidates": [
     {
       "symbol": "BCHUSDT",
       "score": 85
     },
     {
-      "symbol": "XRPUSDT",
-      "score": 75
-    },
-    {
       "symbol": "MUBUSDT",
       "score": 75
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "XRPUSDT",
       "score": 75
     },
     {
-      "symbol": "RENDERUSDT",
+      "symbol": "ENAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETCUSDT",
       "score": 75
     }
   ]
