@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-04 07:04:31",
+  "timestamp": "2026-08-04 07:06:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha deliberado y determinado que, bajo las condiciones actuales de mercado y la falta de candidatos que cumplan con el umbral de calidad A+ (Score >= 65), la estrategia más prudente y rentable es la preservación total del capital en espera de una configuración técnica de alta probabilidad.",
+  "reasoning": "El mercado presenta una capitulación técnica generalizada y falta de convicción institucional. Ningún activo cumple con el umbral mínimo de Score A+ (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
+    {
+      "symbol": "XPLUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "ENAUSDT",
+      "score": 60
+    },
     {
       "symbol": "XAUTUSDT",
       "score": 60
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "OPENUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "JTOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "STXUSDT",
       "score": 60
     }
   ]
