@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 08:44:21",
+  "timestamp": "2026-08-04 08:46:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación generalizada con un sentimiento de miedo extremo. Ninguno de los activos analizados cumple con el umbral de seguridad (Score >= 65) ni con la confirmación de soporte institucional necesaria para ejecutar una operación de compra, por lo que la decisión estratégica es mantener la liquidez en efectivo.",
+  "reasoning": "El comité ha determinado que no existen condiciones de mercado que cumplan con el umbral de convicción A+ (Score >= 65). La alta volatilidad y la falta de soporte en el libro de órdenes, sumado al sentimiento de miedo extremo, dictan una postura de espera para evitar el riesgo de 'falling knives'.",
   "top_candidates": [
     {
-      "symbol": "NIGHTUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ATOMUSDT",
+      "symbol": "QNTUSDT",
       "score": 60
     },
     {
-      "symbol": "APTUSDT",
-      "score": 55
+      "symbol": "NIGHTUSDT",
+      "score": 60
     },
     {
-      "symbol": "NVDABUSDT",
-      "score": 55
+      "symbol": "ZROUSDT",
+      "score": 60
     },
     {
-      "symbol": "BICOUSDT",
+      "symbol": "ALLOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "ALGOUSDT",
       "score": 50
     }
   ]
