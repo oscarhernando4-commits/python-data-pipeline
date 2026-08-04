@@ -1,23 +1,11 @@
 {
-  "timestamp": "2026-08-03 23:58:22",
+  "timestamp": "2026-08-04 00:00:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un entorno de 'Venta en Rebotes' sin soporte estructural definido. Ninguno de los activos analizados cumple con el umbral de convicción A+ (Score >= 65) ni con la confirmación de liquidez necesaria en el libro de órdenes, por lo que la decisión institucional es proteger el capital y permanecer en efectivo.",
+  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de Score A+ (>= 65) ni con la confirmación de soporte institucional en el libro de órdenes. Ante un entorno de 'Extreme Fear' y la alta probabilidad de 'trampas de liquidez', el comité decide mantener la liquidez intacta para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "ENAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "MIRAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "CAKEUSDT",
-      "score": 60
-    },
     {
       "symbol": "ETHFIUSDT",
       "score": 60
@@ -25,6 +13,18 @@
     {
       "symbol": "XPLUSDT",
       "score": 60
+    },
+    {
+      "symbol": "BFUSDUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "STXUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "MIRAUSDT",
+      "score": 50
     }
   ]
 }
