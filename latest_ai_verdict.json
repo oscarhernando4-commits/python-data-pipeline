@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-04 03:02:20",
+  "timestamp": "2026-08-04 03:04:34",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la ausencia de una dominancia clara en el libro de órdenes y el entorno de pánico extremo (Fear & Greed 25) invalidan la ejecución de cualquier compra. Se prioriza la preservación del capital sobre la especulación en activos sin historial profundo.",
+  "reasoning": "El mercado presenta una fragmentación severa y una falta de convicción institucional en los niveles actuales. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es mantener la liquidez en espera de un catalizador claro.",
   "top_candidates": [
     {
-      "symbol": "TAOUSDT",
-      "score": 75
+      "symbol": "INTCBUSDT",
+      "score": 85
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "PUMPUSDT",
       "score": 75
     }
   ]
