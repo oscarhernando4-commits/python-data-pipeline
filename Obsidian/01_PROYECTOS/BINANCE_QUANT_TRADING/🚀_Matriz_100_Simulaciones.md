@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-04 12:52:26
+date: 2026-08-04 12:54:17
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $20.05 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-04 12:52:26`
+> ⏱️ **Última Actualización:** `2026-08-04 12:54:17`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00409216 BNB` (`~$2.42 USD`)
@@ -31,9 +31,9 @@ date: 2026-08-04 12:52:26
 > [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
 > - 📈 **Capital Total Acumulado:** **`$10,159.80 USD`** (`$+159.80 USD`)  
-> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `20 Cuentas (20.0%)`  
+> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `0 Cuentas (0.0%)`  
 > - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `0 Cuentas (0.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `80 Cuentas (80.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `100 Cuentas (100.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
@@ -90,26 +90,26 @@ date: 2026-08-04 12:52:26
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-021** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-022** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-023** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-024** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-025** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-026** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-027** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-028** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-029** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-030** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-031** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-032** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-033** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-034** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-035** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-036** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-037** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-038** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-039** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
-| **SIM-040** | **POLUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:52 | `🔴 Perdió -$1.13` | **`$101.33`** (`+$1.33`) | 🟢 Buscando |
+| **SIM-021** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-022** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-023** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-024** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-025** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-026** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-027** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-028** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-029** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-030** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-031** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-032** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-033** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-034** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-035** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-036** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-037** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-038** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-039** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
+| **SIM-040** | **BTCUSDT** | `#16` | `4W/12L` | 26-08-04<br>12:54 | `🔵 En Curso` | **`$101.33`** (`+$1.33`) | 🔵 En Vivo |
 
 ---
 
