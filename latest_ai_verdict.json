@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 21:46:23",
+  "timestamp": "2026-08-04 21:48:29",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de estrés sistémico con una clara tendencia de distribución. Ninguno de los candidatos analizados alcanza el umbral de Score A+ (>= 65) con una estructura de soporte confirmada en el libro de órdenes, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas por 'falling knives'.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
-      "symbol": "ADAUSDT",
-      "score": 65
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "score": 75
     },
     {
       "symbol": "EULUSDT",
       "score": 65
     },
     {
-      "symbol": "ONDOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "WLFIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 60
+      "symbol": "ADAUSDT",
+      "score": 65
     }
   ]
 }
