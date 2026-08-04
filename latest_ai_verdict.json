@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 11:00:18",
+  "timestamp": "2026-08-04 11:02:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la ausencia de una dominancia clara en el libro de órdenes (Bids < 55%) y la alta volatilidad del entorno macro impiden alcanzar el umbral de convicción A+ exigido por el comité. Se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "confidence": 0,
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con score 75, la falta de dominancia en el libro de órdenes y la inestabilidad del sentimiento macro no cumplen con los criterios de seguridad exigidos por el CRO, por lo que se mantiene la posición en efectivo.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "XPLUSDT",
+      "symbol": "EWYBUSDT",
       "score": 75
     }
   ]
