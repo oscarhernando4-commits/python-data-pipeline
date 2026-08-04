@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 21:30:29",
+  "updated_at": "2026-08-04 21:32:22",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado se encuentra en una fase de alta incertidumbre y el riesgo de deslizamiento es elevado, por lo que la estrategia institucional es mantener la liquidez en espera de una estructura de mercado más clara."
+    "reasoning": "A pesar de que algunos activos presentan un score técnico de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y el entorno de pánico extremo (Fear & Greed 25) impiden la ejecución de una orden de compra bajo los estándares de seguridad del comité."
   }
 }
