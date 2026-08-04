@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 20:28:21",
+  "timestamp": "2026-08-04 20:30:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con una falta de soporte estructural. Ningún candidato cumple con el requisito de Score Técnico >= 65 ni con una dominancia de Bids superior al 55%, por lo que la preservación de capital es la única estrategia válida.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada sin señales de acumulación institucional. Dado que ningún activo alcanza el score técnico mínimo de 65 y el entorno macro es de alta incertidumbre, la decisión institucional es mantener el 100% de la liquidez en espera de una configuración de mercado más favorable.",
   "top_candidates": [
     {
-      "symbol": "VETUSDT",
-      "score": 80
-    },
-    {
-      "symbol": "LUNCUSDT",
-      "score": 70
-    },
-    {
       "symbol": "ADAUSDT",
-      "score": 60
+      "score": 50
     },
     {
-      "symbol": "ETCUSDT",
-      "score": 55
+      "symbol": "DEXEUSDT",
+      "score": 50
     },
     {
-      "symbol": "TRUMPUSDT",
-      "score": 55
+      "symbol": "ALGOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "MIRAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "NILUSDT",
+      "score": 50
     }
   ]
 }
