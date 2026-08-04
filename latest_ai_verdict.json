@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 03:10:22",
+  "timestamp": "2026-08-04 03:12:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad sistémica. Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 55% ni con una estructura técnica que minimice el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con un sentimiento de miedo extremo. Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 55% ni con una estructura técnica que garantice una alta probabilidad de éxito, por lo que la decisión institucional es mantener la liquidez en espera de una señal clara.",
   "top_candidates": [
-    {
-      "symbol": "ADAUSDT",
-      "score": 85
-    },
     {
       "symbol": "HBARUSDT",
       "score": 85
     },
     {
-      "symbol": "NVDABUSDT",
+      "symbol": "ADAUSDT",
       "score": 85
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "PAXGUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ERAUSDT",
       "score": 75
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
