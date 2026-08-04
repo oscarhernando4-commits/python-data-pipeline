@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-04 22:44:18",
+  "timestamp": "2026-08-04 22:46:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido). El mercado se encuentra en una fase de alta incertidumbre y riesgo sistémico, por lo que la preservación del capital es la prioridad absoluta.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con buen score técnico, el entorno de 'Miedo Extremo' y la falta de muros de soporte en el libro de órdenes no justifican el despliegue de capital, priorizando la preservación del mismo sobre la especulación.",
   "top_candidates": [
-    {
-      "symbol": "OPUSDT",
-      "score": 85
-    },
     {
       "symbol": "GRAMUSDT",
       "score": 75
     },
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "JSTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "POLUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "APTUSDT",
       "score": 75
     }
   ]
