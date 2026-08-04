@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 17:36:21",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "A pesar de que varios activos pertenecen al sector de infraestructura, ninguno cumple con el requisito estricto de dominancia de Bids > 55% ni con la convicción necesaria para evitar el riesgo de 'trampa de liquidez' en un entorno de pánico extremo.",
+  "timestamp": "2026-08-04 17:38:26",
+  "selected_symbol": "TAOUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "Tras deliberar, el comité ha seleccionado TAOUSDT debido a su fuerte desempeño en el sector de AI & Big Data, su volumen de surge superior a 1.6x y su score técnico de 75/100, superando los umbrales de riesgo establecidos por el CRO.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
       "symbol": "SOLUSDT",
       "score": 75
     },
     {
       "symbol": "SUIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TAOUSDT",
       "score": 75
     }
   ]
