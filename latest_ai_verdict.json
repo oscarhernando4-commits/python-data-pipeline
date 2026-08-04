@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-04 05:34:19",
+  "timestamp": "2026-08-04 05:36:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de alta vulnerabilidad y falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es mantener la liquidez en stablecoins para evitar pérdidas por volatilidad en un mercado de 'Extreme Fear'.",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital en un entorno de mercado con miedo extremo y alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "STXUSDT",
       "score": 85
     },
     {
-      "symbol": "ENAUSDT",
+      "symbol": "MUBUSDT",
       "score": 75
     },
     {
-      "symbol": "MUBUSDT",
+      "symbol": "ENAUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "KORUBUSDT",
+      "symbol": "EWYBUSDT",
       "score": 75
     }
   ]
