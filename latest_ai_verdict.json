@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-04 04:04:21",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de 'Pánico Extremo' con una falta de convicción institucional en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65 y Bids > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT) para evitar 'cuchillos cayendo'.",
+  "timestamp": "2026-08-04 04:06:18",
+  "selected_symbol": "TIAUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "TIAUSDT es el único candidato que cumple con el umbral de score técnico (85/100) y pertenece al sector de infraestructura, mostrando una divergencia alcista frente al pánico del mercado. La ejecución será quirúrgica, priorizando la protección del capital mediante un Trailing Stop dinámico.",
   "top_candidates": [
     {
-      "symbol": "SOXLBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
+      "symbol": "TIAUSDT",
+      "score": 85
     },
     {
       "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "ALLOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "QNTUSDT",
       "score": 75
     },
     {
