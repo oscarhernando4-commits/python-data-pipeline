@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 11:30:26",
+  "updated_at": "2026-08-04 11:32:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 45,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de consolidación lateral con falta de volumen institucional real. Ningún activo cumple con el umbral de convicción A+ requerido por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos."
+    "reasoning": "A pesar de que algunos activos como LTCUSDT presentan un score técnico de 85, la falta de confirmación en el libro de órdenes (dominancia de bids < 55%) y el entorno de pánico extremo (Fear & Greed 25) impiden la ejecución de una orden de compra bajo los estándares de riesgo A+ del comité."
   }
 }
