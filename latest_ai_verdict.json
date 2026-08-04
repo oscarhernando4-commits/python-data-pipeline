@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-04 06:40:22",
+  "timestamp": "2026-08-04 06:42:29",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada por pánico con una debilidad sistémica generalizada; ningún activo cumple con los requisitos de alta convicción (Score >= 65) establecidos por el comité, por lo que se prioriza la protección del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "ALGOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "GNOUSDT",
       "score": 60
     },
     {
@@ -25,6 +21,10 @@
     {
       "symbol": "XPLUSDT",
       "score": 55
+    },
+    {
+      "symbol": "BICOUSDT",
+      "score": 50
     }
   ]
 }
