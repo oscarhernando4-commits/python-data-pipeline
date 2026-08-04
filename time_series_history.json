@@ -1,12 +1,129 @@
 {
-  "MANTRAUSDT": [
+  "ZROUSDT": [
     {
-      "timestamp": "2026-08-04 10:52:08",
-      "price": 0.00539,
-      "score": 75,
-      "rsi": 52.66,
+      "timestamp": "2026-08-04 10:54:08",
+      "price": 0.764,
+      "score": 40,
+      "rsi": 69.79,
       "macd": "Neutral",
-      "volume_surge": 2.64,
+      "volume_surge": 0.27,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPENUSDT": [
+    {
+      "timestamp": "2026-08-04 10:54:08",
+      "price": 0.187,
+      "score": 65,
+      "rsi": 49.87,
+      "macd": "Neutral",
+      "volume_surge": 0.18,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-04 10:54:08",
+      "price": 0.0892,
+      "score": 75,
+      "rsi": 60.3,
+      "macd": "Neutral",
+      "volume_surge": 0.9,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GNOUSDT": [
+    {
+      "timestamp": "2026-08-04 10:54:08",
+      "price": 103.86,
+      "score": 75,
+      "rsi": 53.94,
+      "macd": "Neutral",
+      "volume_surge": 2.66,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "FFUSDT": [
+    {
+      "timestamp": "2026-08-04 10:54:08",
+      "price": 0.06364,
+      "score": 65,
+      "rsi": 49.1,
+      "macd": "Neutral",
+      "volume_surge": 0.24,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DODOUSDT": [
+    {
+      "timestamp": "2026-08-04 10:54:08",
+      "price": 0.01867,
+      "score": 60,
+      "rsi": 52.49,
+      "macd": "Neutral",
+      "volume_surge": 0.48,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "TSLABUSDT": [
+    {
+      "timestamp": "2026-08-04 10:54:08",
+      "price": 324.26,
+      "score": 15,
+      "rsi": 45.64,
+      "macd": "Neutral",
+      "volume_surge": 0.17,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-04 10:54:08",
+      "price": 0.5043,
+      "score": 15,
+      "rsi": 43.3,
+      "macd": "Neutral",
+      "volume_surge": 0.62,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "INTCBUSDT": [
+    {
+      "timestamp": "2026-08-04 10:54:08",
+      "price": 95.37,
+      "score": 40,
+      "rsi": 72.13,
+      "macd": "Neutral",
+      "volume_surge": 0.71,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-04 10:54:08",
+      "price": 2.81e-06,
+      "score": 45,
+      "rsi": 41.82,
+      "macd": "Neutral",
+      "volume_surge": 1.15,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,7 +131,7 @@
   ],
   "PYRUSDT": [
     {
-      "timestamp": "2026-08-04 10:52:08",
+      "timestamp": "2026-08-04 10:54:08",
       "price": 0.061,
       "score": 15,
       "rsi": 37.6,
@@ -27,12 +144,51 @@
   ],
   "DCRUSDT": [
     {
-      "timestamp": "2026-08-04 10:52:08",
+      "timestamp": "2026-08-04 10:54:08",
       "price": 13.44,
       "score": 60,
       "rsi": 63.76,
       "macd": "Neutral",
       "volume_surge": 0.77,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-04 10:54:08",
+      "price": 0.1374,
+      "score": 25,
+      "rsi": 43.54,
+      "macd": "Neutral",
+      "volume_surge": 4.64,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ORDIUSDT": [
+    {
+      "timestamp": "2026-08-04 10:54:08",
+      "price": 3.464,
+      "score": 75,
+      "rsi": 57.76,
+      "macd": "Neutral",
+      "volume_surge": 1.33,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "MANTRAUSDT": [
+    {
+      "timestamp": "2026-08-04 10:54:08",
+      "price": 0.00539,
+      "score": 75,
+      "rsi": 52.66,
+      "macd": "Neutral",
+      "volume_surge": 2.72,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

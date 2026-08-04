@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-04 10:52:17",
+  "timestamp": "2026-08-04 10:54:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%) en un entorno de mercado de 'Extreme Fear'. Se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "El mercado se encuentra en un estado de pánico extremo con una estructura de liquidez inestable. Ninguno de los candidatos cumple con el requisito de soporte institucional (Bids > 55%) ni con la confirmación de volumen necesaria para mitigar el riesgo de 'trampa de liquidez'. Se prioriza la protección del capital sobre la especulación.",
   "top_candidates": [
     {
-      "symbol": "AEROUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "WLDUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "WLDUSDT",
       "score": 75
     }
   ]
