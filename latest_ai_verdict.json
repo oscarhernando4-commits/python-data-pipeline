@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-04 12:14:16",
+  "timestamp": "2026-08-04 12:16:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que TAO presenta un score técnico alto, la ausencia de muros de soporte claros en el libro de órdenes y el entorno de 'Extreme Fear' global invalidan la entrada bajo nuestras estrictas reglas de gestión de riesgo. Se prioriza la preservación del capital sobre la especulación en un mercado fragmentado.",
+  "reasoning": "A pesar de identificar activos con scores técnicos de 75, el entorno de pánico extremo (Fear & Greed 25) y la falta de dominancia clara en el libro de órdenes (50% bids) invalidan la convicción A+ requerida por el comité. Se prioriza la preservación de capital sobre la especulación en un mercado de trampa de liquidez.",
   "top_candidates": [
     {
-      "symbol": "TAOUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "DOGEUSDT",
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "ALGOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUNUSDT",
       "score": 75
     }
   ]
