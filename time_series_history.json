@@ -1,25 +1,38 @@
 {
-  "CFXUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-04 01:00:13",
-      "price": 0.03864,
-      "score": 25,
-      "rsi": 10.76,
+      "timestamp": "2026-08-04 01:02:12",
+      "price": 0.1375,
+      "score": 15,
+      "rsi": 47.96,
       "macd": "Neutral",
-      "volume_surge": 0.58,
+      "volume_surge": 0.09,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "BONKUSDT": [
+  "ORDIUSDT": [
     {
-      "timestamp": "2026-08-04 01:00:13",
-      "price": 2.82e-06,
+      "timestamp": "2026-08-04 01:02:12",
+      "price": 3.452,
       "score": 0,
-      "rsi": 35.76,
+      "rsi": 46.25,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.47,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-04 01:02:12",
+      "price": 1.359,
+      "score": 0,
+      "rsi": 40.19,
+      "macd": "Neutral",
+      "volume_surge": 0.45,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
