@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-04 20:34:23",
+  "timestamp": "2026-08-04 20:36:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de alta volatilidad defensiva con una clara falta de convicción institucional en los activos analizados. Ningún candidato cumple con los requisitos estrictos de Score Técnico y profundidad de libro de órdenes, por lo que se mantiene la liquidez en USDT para evitar el riesgo de 'trampas de valor'.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y purga de manos débiles. Ninguno de los candidatos cumple con el umbral estricto de convicción A+ requerido por el comité, y la falta de datos de liquidez en el orderbook impide una ejecución segura. Se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
-      "symbol": "DEXEUSDT",
+      "symbol": "DOTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "MIRAUSDT",
       "score": 65
     },
     {
@@ -19,11 +23,7 @@
       "score": 65
     },
     {
-      "symbol": "ACXUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "ACEUSDT",
+      "symbol": "VETUSDT",
       "score": 65
     }
   ]
