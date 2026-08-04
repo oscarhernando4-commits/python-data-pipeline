@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-04 20:42:24",
+  "timestamp": "2026-08-04 20:44:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y confirmación de tendencia). La volatilidad actual y la debilidad en el libro de órdenes sugieren que el mercado aún no ha encontrado un suelo firme, por lo que la estrategia de preservación de capital es la única opción viable.",
+  "reasoning": "El mercado se encuentra en un estado de alta volatilidad y falta de dirección clara. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la protección del capital, por lo que la decisión institucional es mantener la posición en efectivo (HOLD) hasta que las condiciones de mercado mejoren.",
   "top_candidates": [
-    {
-      "symbol": "APTUSDT",
-      "score": 85
-    },
     {
       "symbol": "OPUSDT",
       "score": 85
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "NEARUSDT",
+      "symbol": "SUIUSDT",
       "score": 75
     }
   ]
