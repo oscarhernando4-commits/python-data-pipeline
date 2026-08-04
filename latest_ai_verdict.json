@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 19:28:27",
+  "timestamp": "2026-08-04 19:30:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ requerido por el Comité. La falta de profundidad en el libro de órdenes y la inestabilidad macroeconómica dictan una postura de preservación de capital (HOLD) para evitar pérdidas por 'falling knives' o volatilidad errática.",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%). La falta de soporte en el libro de órdenes y la alta volatilidad en un entorno de pánico extremo dictan una política de preservación de capital (HOLD) para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "ETCUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ADAUSDT",
-      "score": 75
-    },
     {
       "symbol": "SHIBUSDT",
       "score": 75
     },
     {
-      "symbol": "EULUSDT",
+      "symbol": "NEXOUSDT",
       "score": 75
     },
     {
-      "symbol": "NEXOUSDT",
+      "symbol": "SUNUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "GNOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ORDIUSDT",
       "score": 75
     }
   ]
