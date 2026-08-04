@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-04 06:06:19",
+  "timestamp": "2026-08-04 06:08:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de candidatos con scores técnicos de 75/100, la falta de profundidad en el libro de órdenes (bids < 55%) y el entorno de pánico extremo (Fear & Greed 25) no cumplen con los estándares de seguridad A+ exigidos. Se prioriza la preservación del capital sobre la ejecución especulativa en un mercado de alta incertidumbre.",
+  "reasoning": "El comité ha determinado que, a pesar de la fortaleza técnica de LTC, la falta de soporte en el libro de órdenes y el entorno de miedo extremo invalidan la ejecución de cualquier posición, priorizando la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 75
+      "symbol": "LTCUSDT",
+      "score": 85
     },
     {
       "symbol": "ENAUSDT",
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TAOUSDT",
       "score": 75
     }
   ]
