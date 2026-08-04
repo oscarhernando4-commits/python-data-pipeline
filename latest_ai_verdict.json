@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 17:22:24",
-  "selected_symbol": "DASHUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "DASHUSDT es el único candidato que supera el umbral de score técnico (85/100) y muestra un volumen de compra institucional significativo (2.14x), lo que lo posiciona como el activo de mayor fortaleza relativa en un mercado de pánico extremo. Se prioriza la ejecución de un largo con gestión de riesgo estricta.",
+  "timestamp": "2026-08-04 17:24:26",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de la existencia de candidatos con scores técnicos aceptables, ninguno cumple con los requisitos de profundidad de mercado y convicción institucional necesarios para garantizar la preservación del capital bajo la Regla #1.",
   "top_candidates": [
     {
       "symbol": "DASHUSDT",
       "score": 85
     },
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUIUSDT",
-      "score": 75
-    },
-    {
       "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "AEROUSDT",
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUIUSDT",
       "score": 75
     }
   ]
