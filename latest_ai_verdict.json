@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-04 13:56:50",
+  "timestamp": "2026-08-04 13:58:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta toxicidad y capitulación generalizada. Ninguno de los candidatos cumple con el umbral estricto de Score Técnico >= 65 y confirmación de liquidez en el libro de órdenes. Se prioriza la preservación de capital sobre la especulación en un entorno de pánico extremo.",
+  "reasoning": "El mercado presenta una capitulación generalizada y una falta de activos con convicción técnica A+. Ningún candidato cumple con el umbral de seguridad de Score >= 65, por lo que el comité ha decidido mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "GNOUSDT",
-      "score": 75
-    },
     {
       "symbol": "XAUTUSDT",
       "score": 70
@@ -19,12 +15,16 @@
       "score": 70
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "JSTUSDT",
       "score": 60
     },
     {
-      "symbol": "JSTUSDT",
-      "score": 60
+      "symbol": "TAOUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "score": 55
     }
   ]
 }
