@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-04 19:48:23",
+  "timestamp": "2026-08-04 19:50:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 75, la falta de dominancia en el libro de órdenes y la inestabilidad macro actual no cumplen con los estándares de convicción A+ exigidos por el protocolo de riesgo. Se prioriza la preservación del capital sobre la especulación en un entorno de pánico extremo.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de candidatos con scores técnicos aceptables, ninguno cumple con el umbral de seguridad en el libro de órdenes ni con la confirmación de volumen institucional necesaria para mitigar el riesgo en un entorno de 'Miedo Extremo'. Se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "XRPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ENAUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "SOXSBUSDT",
-      "score": 70
+      "symbol": "NEXOUSDT",
+      "score": 75
     },
     {
-      "symbol": "CFXUSDT",
+      "symbol": "GNOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOXSBUSDT",
       "score": 70
     }
   ]
