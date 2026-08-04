@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-04 15:08:20",
+  "timestamp": "2026-08-04 15:10:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'Acumulación Defensiva' con alta incertidumbre. Ninguno de los candidatos cumple con el requisito de soporte institucional (Bids > 55%) ni con la convicción A+ necesaria para superar el veto de riesgo, por lo que la decisión es proteger el capital y esperar mejores condiciones.",
+  "reasoning": "Debido a la fragilidad del mercado, el pánico extremo y la falta de una dominancia clara en el libro de órdenes, el comité ha decidido no ejecutar ninguna operación para preservar el capital, cumpliendo estrictamente con la Regla #1 de no perder dinero.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
-      "score": 75
+      "symbol": "ASTERUSDT",
+      "score": 85
     },
     {
       "symbol": "TAOUSDT",
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PUMPUSDT",
       "score": 75
     }
   ]
