@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-04 23:54:21",
+  "timestamp": "2026-08-04 23:56:29",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de capitulación sistémica con scores técnicos insuficientes y falta de convicción institucional. Siguiendo la Regla de Oro #1, al no existir candidatos con Score >= 65, la decisión obligatoria es mantener la liquidez en USDT para evitar pérdidas por 'falling knives'.",
+  "reasoning": "El mercado exhibe un riesgo sistémico elevado y una falta de fortaleza técnica en los activos analizados. Ningún candidato cumple con el umbral de score A+ (>=65) ni con la confirmación de liquidez necesaria, por lo que la estrategia institucional es la preservación de capital mediante el mantenimiento de la posición en efectivo (USDT).",
   "top_candidates": [
+    {
+      "symbol": "MUBUSDT",
+      "score": 60
+    },
     {
       "symbol": "BANKUSDT",
       "score": 60
@@ -15,11 +19,7 @@
       "score": 60
     },
     {
-      "symbol": "MUBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "STOUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
