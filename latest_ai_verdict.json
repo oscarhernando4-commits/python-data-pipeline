@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-04 03:46:18",
+  "timestamp": "2026-08-04 03:48:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras deliberar, el comité ha determinado que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (Score >= 65 y soporte de ballenas > 55%). La alta tasa de pérdidas en trades recientes bajo condiciones similares obliga a mantener la liquidez en USDT para evitar riesgos innecesarios.",
+  "reasoning": "Tras evaluar los candidatos, ninguno cumple con los criterios estrictos de riesgo y convicción definidos por el comité. La falta de soporte claro en el libro de órdenes y la inestabilidad macroeconómica dictan una postura de espera (HOLD) para evitar la exposición a 'trampas de valor' y volatilidad innecesaria.",
   "top_candidates": [
+    {
+      "symbol": "ZECUSDT",
+      "score": 75
+    },
     {
       "symbol": "BCHUSDT",
       "score": 75
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "MORPHOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TRUMPUSDT",
       "score": 75
     },
     {
