@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-04 22:28:22",
+  "timestamp": "2026-08-04 22:30:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con buen score técnico, la falta de soporte en el libro de órdenes, el sentimiento de miedo extremo y la alta tasa de fallos en condiciones neutrales, no cumplen con los criterios de seguridad y rentabilidad exigidos por el protocolo de riesgo.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo en un entorno de mercado de 'Extreme Fear'. Se prioriza la preservación del capital sobre la especulación en activos con baja profundidad de mercado.",
   "top_candidates": [
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
     {
       "symbol": "GRAMUSDT",
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "JSTUSDT",
       "score": 75
     },
     {
       "symbol": "FILUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "CRVUSDT",
       "score": 75
     },
     {
