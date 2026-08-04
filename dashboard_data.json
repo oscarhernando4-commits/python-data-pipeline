@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 01:38:29",
+  "updated_at": "2026-08-04 01:40:30",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, ninguno de los candidatos cumple con el umbral de convicción A+ ni con la confirmación de liquidez necesaria en el libro de órdenes. Ante un entorno de pánico extremo y alta incertidumbre, la estrategia óptima es la preservación de capital (HOLD) hasta que el mercado ofrezca una señal de entrada con menor riesgo sistémico."
+    "reasoning": "El mercado presenta un entorno de alta volatilidad selectiva sin una estructura de soporte institucional clara en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (HOLD) hasta que la correlación de mercado se estabilice."
   }
 }

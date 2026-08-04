@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-04 01:38:24",
+  "timestamp": "2026-08-04 01:40:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, ninguno de los candidatos cumple con el umbral de convicción A+ ni con la confirmación de liquidez necesaria en el libro de órdenes. Ante un entorno de pánico extremo y alta incertidumbre, la estrategia óptima es la preservación de capital (HOLD) hasta que el mercado ofrezca una señal de entrada con menor riesgo sistémico.",
+  "reasoning": "El mercado presenta un entorno de alta volatilidad selectiva sin una estructura de soporte institucional clara en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (HOLD) hasta que la correlación de mercado se estabilice.",
   "top_candidates": [
     {
       "symbol": "SKYUSDT",
       "score": 85
     },
     {
-      "symbol": "BTCUSDT",
-      "score": 75
+      "symbol": "PENGUUSDT",
+      "score": 85
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
