@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-04 15:40:21",
+  "timestamp": "2026-08-04 15:42:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Debido a la falta de candidatos con un Score técnico superior a 65 y la ausencia de muros de soporte significativos en el libro de órdenes, el comité ha decidido mantener la liquidez en USDT para evitar pérdidas en un entorno de alta volatilidad y riesgo sistémico.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 75, la falta de profundidad en el libro de órdenes, la ausencia de soporte institucional real y el entorno macro de pánico extremo invalidan cualquier oportunidad de compra. Se prioriza la preservación del capital sobre la especulación en un mercado de alta fragilidad.",
   "top_candidates": [
+    {
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "score": 75
+    },
     {
       "symbol": "TSLABUSDT",
       "score": 75
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "GRAMUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "DOTUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "HFTUSDT",
       "score": 65
     }
   ]
