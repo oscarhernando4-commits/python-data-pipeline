@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-04 21:36:23",
+  "timestamp": "2026-08-04 21:38:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad de Bids (>= 55%) ni con la convicción A+ necesaria para operar en un entorno de mercado de pánico extremo, por lo que se prioriza la preservación del capital.",
+  "reasoning": "A pesar de identificar activos con scores técnicos de 75, la ausencia de confirmación en el libro de órdenes, el entorno de 'Extreme Fear' y la alta tasa de fallos en trades recientes bajo condiciones neutrales, obligan al comité a mantener una postura de espera para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "POLUSDT",
       "score": 75
     },
     {
@@ -15,16 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "ENAUSDT",
-      "score": 75
-    },
-    {
       "symbol": "MORPHOUSDT",
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
-      "score": 75
+      "symbol": "LUNCUSDT",
+      "score": 70
     }
   ]
 }
