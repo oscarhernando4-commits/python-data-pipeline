@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 02:24:20",
+  "timestamp": "2026-08-04 02:26:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de candidatos con scores técnicos de 75-85, la ausencia de dominancia en el libro de órdenes y el entorno de pánico extremo (Fear & Greed 25) no cumplen con los estándares de seguridad A+ exigidos por el departamento de riesgo. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y confirmación de volumen). La alta volatilidad y la falta de profundidad en el libro de órdenes sugieren un entorno de alto riesgo donde la preservación del capital es la prioridad absoluta.",
   "top_candidates": [
     {
       "symbol": "PEPEUSDT",
       "score": 85
     },
     {
-      "symbol": "SUIUSDT",
-      "score": 75
+      "symbol": "ERAUSDT",
+      "score": 85
     },
     {
       "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     }
   ]
