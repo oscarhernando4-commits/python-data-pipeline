@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-04 15:10:21",
+  "timestamp": "2026-08-04 15:12:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Debido a la fragilidad del mercado, el pánico extremo y la falta de una dominancia clara en el libro de órdenes, el comité ha decidido no ejecutar ninguna operación para preservar el capital, cumpliendo estrictamente con la Regla #1 de no perder dinero.",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Confianza >= 70%) ni presenta una estructura de libro de órdenes favorable. El entorno de 'Extreme Fear' y la alta tasa de pérdidas en trades recientes bajo condiciones neutrales dictan una postura de preservación de capital.",
   "top_candidates": [
     {
       "symbol": "ASTERUSDT",
       "score": 85
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 75
     },
     {
       "symbol": "LTCUSDT",
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "PUMPUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ATOMUSDT",
       "score": 75
     }
   ]
