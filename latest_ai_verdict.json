@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-04 07:22:21",
+  "timestamp": "2026-08-04 07:24:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) exigido por el comité. La estrategia prioritaria es la preservación de capital ante la falta de señales claras de acumulación institucional.",
+  "reasoning": "El mercado presenta una correlación bajista generalizada y falta de convicción institucional. Ningún activo cumple con el requisito estricto de Score >= 65 y soporte de libro de órdenes, por lo que la decisión institucional es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "LUNCUSDT",
-      "score": 70
-    },
     {
       "symbol": "OPENUSDT",
       "score": 70
@@ -25,6 +21,10 @@
     {
       "symbol": "JTOUSDT",
       "score": 60
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "score": 55
     }
   ]
 }
