@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 21:12:23",
+  "timestamp": "2026-08-04 21:14:32",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha decidido no operar debido a que, a pesar de la existencia de activos con score técnico de 75, ninguno presenta la profundidad de mercado (Bids > 55%) ni la confirmación de tendencia necesaria para cumplir con la Regla de Oro #1 de protección de capital en un entorno de 'Extreme Fear'.",
+  "confidence": 45,
+  "reasoning": "A pesar de que ICP y APT presentan scores técnicos elevados, el mercado se encuentra en un estado de pánico extremo con una falta de soporte claro en el libro de órdenes. El comité ha decidido priorizar la preservación del capital, esperando una estabilización del mercado antes de ejecutar cualquier posición de compra.",
   "top_candidates": [
+    {
+      "symbol": "ICPUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "APTUSDT",
+      "score": 85
+    },
     {
       "symbol": "LTCUSDT",
       "score": 75
     },
     {
+      "symbol": "WLFIUSDT",
+      "score": 75
+    },
+    {
       "symbol": "DOTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "FILUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TIAUSDT",
       "score": 75
     }
   ]
