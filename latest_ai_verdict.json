@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-04 14:18:22",
+  "timestamp": "2026-08-04 14:20:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una capitulación sistémica sin activos con fuerza relativa (Score < 65). Siguiendo la Regla de Oro #1 y el Veto del Agente 6, se mantiene la liquidez en USDT para evitar 'cuchillos cayendo' y proteger el capital institucional.",
+  "reasoning": "El mercado presenta una capitulación técnica generalizada sin activos que cumplan con los criterios de alta convicción (Score >= 65). La estrategia institucional es la preservación de capital mediante la abstención total de posiciones largas hasta que se observe una rotación de capital clara y una mejora en el sentimiento macro.",
   "top_candidates": [
+    {
+      "symbol": "JSTUSDT",
+      "score": 60
+    },
     {
       "symbol": "ERAUSDT",
       "score": 55
@@ -17,10 +21,6 @@
     {
       "symbol": "LDOUSDT",
       "score": 55
-    },
-    {
-      "symbol": "PUMPUSDT",
-      "score": 50
     },
     {
       "symbol": "TUTUSDT",
