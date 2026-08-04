@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 08:04:26",
-  "selected_symbol": "PAXGUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "Dada la alta volatilidad y el sentimiento de 'Extreme Fear', el comité ha decidido ejecutar una estrategia defensiva de 'fuga hacia la calidad'. PAXGUSDT es el único activo que combina un score técnico de 85/100 con una narrativa fundamental sólida (RWA/Oro) y un volumen de entrada institucional significativo, cumpliendo con los criterios de riesgo A+ exigidos por el CRO.",
+  "timestamp": "2026-08-04 08:06:30",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "PAXGUSDT",
-      "score": 85
+      "score": 70
     },
     {
       "symbol": "NVDABUSDT",
-      "score": 85
+      "score": 70
     },
     {
-      "symbol": "TRXUSDT",
-      "score": 75
+      "symbol": "XAUTUSDT",
+      "score": 60
     },
     {
       "symbol": "XRPUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "ZECUSDT",
-      "score": 75
+      "symbol": "AAVEUSDT",
+      "score": 60
     }
   ]
 }
