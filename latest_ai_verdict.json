@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 05:12:18",
+  "timestamp": "2026-08-04 05:14:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de libro de órdenes y volumen). Ante la incertidumbre macro y la falta de datos de liquidez, la estrategia óptima es preservar el capital en USDT.",
+  "reasoning": "El mercado se encuentra en una fase de alta volatilidad selectiva con un entorno de miedo extremo. Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional), por lo que la estrategia óptima es el mantenimiento de la liquidez (HOLD) para evitar pérdidas en un entorno de baja probabilidad de éxito.",
   "top_candidates": [
     {
       "symbol": "ENAUSDT",
       "score": 85
     },
     {
-      "symbol": "POLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TRUMPUSDT",
-      "score": 75
-    },
-    {
       "symbol": "COTIUSDT",
       "score": 75
     },
     {
-      "symbol": "VIRTUALUSDT",
+      "symbol": "KITEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BFUSDUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SYNUSDT",
       "score": 75
     }
   ]
