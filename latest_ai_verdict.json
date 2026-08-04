@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 19:38:25",
-  "selected_symbol": "XRPUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "El comité ha determinado que XRPUSDT es el activo con mayor fortaleza técnica y alineación sectorial en el actual entorno de mercado. Se prioriza la entrada en este activo debido a su score de 85/100 y su desconexión positiva con el sentimiento de miedo, cumpliendo con todas las reglas de gestión de riesgo y evitando los activos de baja liquidez que han mostrado pérdidas en simulaciones pasadas.",
+  "timestamp": "2026-08-04 19:40:23",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%) y el entorno de mercado actual presenta un riesgo sistémico elevado, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "XRPUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "NEXOUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 75
     },
     {
-      "symbol": "ORDIUSDT",
+      "symbol": "INJUSDT",
       "score": 75
     }
   ]
