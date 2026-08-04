@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-04 17:20:24",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "timestamp": "2026-08-04 17:22:24",
+  "selected_symbol": "DASHUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "DASHUSDT es el único candidato que supera el umbral de score técnico (85/100) y muestra un volumen de compra institucional significativo (2.14x), lo que lo posiciona como el activo de mayor fortaleza relativa en un mercado de pánico extremo. Se prioriza la ejecución de un largo con gestión de riesgo estricta.",
   "top_candidates": [
     {
-      "symbol": "TAOUSDT",
+      "symbol": "DASHUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PAXGUSDT",
+      "symbol": "AEROUSDT",
       "score": 75
     }
   ]
