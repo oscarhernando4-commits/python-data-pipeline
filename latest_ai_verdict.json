@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 12:42:16",
+  "timestamp": "2026-08-04 12:44:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%) y la profundidad de mercado es insuficiente para garantizar una entrada segura sin riesgo de slippage o manipulación.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una rotación defensiva que no ofrece una ventaja estadística clara. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es preservar el capital en espera de una mejor configuración.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
@@ -15,15 +15,15 @@
       "score": 85
     },
     {
+      "symbol": "XAUTUSDT",
+      "score": 85
+    },
+    {
       "symbol": "ETCUSDT",
       "score": 85
     },
     {
-      "symbol": "TRXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     }
   ]
