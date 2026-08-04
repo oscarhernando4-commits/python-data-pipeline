@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 05:50:29",
+  "timestamp": "2026-08-04 05:52:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de soporte en libro de órdenes > 55%). El mercado presenta una divergencia de riesgo que hace que cualquier entrada sea prematura y contraria a la regla de oro de no perder dinero.",
+  "reasoning": "El mercado se encuentra en un estado de 'Miedo Extremo' con una falta crítica de soporte en el libro de órdenes y scores técnicos que no alcanzan el umbral de seguridad exigido por el comité. Se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "LDOUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "MUBUSDT",
+      "symbol": "NVDABUSDT",
       "score": 75
     },
     {
-      "symbol": "SNXXBUSDT",
+      "symbol": "TIAUSDT",
       "score": 75
     },
     {
-      "symbol": "EWYBUSDT",
+      "symbol": "TOWNSUSDT",
       "score": 75
     }
   ]
