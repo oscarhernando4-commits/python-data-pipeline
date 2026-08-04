@@ -1,12 +1,64 @@
 {
   "OPNUSDT": [
     {
-      "timestamp": "2026-08-04 04:22:12",
-      "price": 0.0546,
+      "timestamp": "2026-08-04 04:24:12",
+      "price": 0.0543,
       "score": 65,
-      "rsi": 63.11,
+      "rsi": 60.76,
       "macd": "Neutral",
-      "volume_surge": 0.85,
+      "volume_surge": 1.13,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PYRUSDT": [
+    {
+      "timestamp": "2026-08-04 04:24:12",
+      "price": 0.069,
+      "score": 50,
+      "rsi": 55.38,
+      "macd": "Neutral",
+      "volume_surge": 0.4,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "HOLOUSDT": [
+    {
+      "timestamp": "2026-08-04 04:24:12",
+      "price": 0.0675,
+      "score": 30,
+      "rsi": 50.13,
+      "macd": "Neutral",
+      "volume_surge": 0.25,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CFXUSDT": [
+    {
+      "timestamp": "2026-08-04 04:24:12",
+      "price": 0.03948,
+      "score": 45,
+      "rsi": 40.01,
+      "macd": "Neutral",
+      "volume_surge": 0.09,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-04 04:24:12",
+      "price": 0.0894,
+      "score": 35,
+      "rsi": 63.57,
+      "macd": "Neutral",
+      "volume_surge": 0.8,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

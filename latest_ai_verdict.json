@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 04:22:20",
+  "timestamp": "2026-08-04 04:24:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "A pesar de tener candidatos con scores técnicos elevados, el entorno de 'Extreme Fear' y la falta de dominancia clara en el libro de órdenes (Bids 50%) no cumplen con los criterios de convicción A+ exigidos por el Comité. Se mantiene la liquidez en espera de una señal de confirmación más robusta.",
+  "confidence": 45,
+  "reasoning": "A pesar de que JUP y PENGU presentan scores técnicos elevados, la falta de dominancia en el libro de órdenes y la inestabilidad del mercado global impiden alcanzar el umbral de convicción A+ requerido por el comité para ejecutar una operación de compra.",
   "top_candidates": [
     {
       "symbol": "JUPUSDT",
@@ -15,15 +15,15 @@
       "score": 85
     },
     {
-      "symbol": "BTCUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     }
   ]
