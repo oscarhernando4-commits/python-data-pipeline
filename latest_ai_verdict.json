@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 06:12:18",
+  "timestamp": "2026-08-04 06:14:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que NVDABUSDT presenta un score técnico elevado, el comité ha determinado que no cumple con el umbral de seguridad requerido debido a la falta de profundidad en el libro de órdenes y la inestabilidad del sentimiento global. Se prioriza la preservación del capital (Regla #1) ante la ausencia de una señal de alta convicción.",
+  "reasoning": "A pesar de tener candidatos con scores técnicos altos, la falta de soporte en el libro de órdenes y el entorno de miedo extremo hacen que la probabilidad de éxito sea insuficiente para los estándares de riesgo del comité.",
   "top_candidates": [
+    {
+      "symbol": "LTCUSDT",
+      "score": 85
+    },
     {
       "symbol": "NVDABUSDT",
       "score": 85
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
       "symbol": "TAOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "MUBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ENAUSDT",
       "score": 75
     }
   ]
