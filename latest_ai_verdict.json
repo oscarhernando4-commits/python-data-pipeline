@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-04 22:58:22",
+  "timestamp": "2026-08-04 23:00:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras deliberar, el comité ha determinado que el mercado se encuentra en una fase de alta incertidumbre y baja convicción. Ninguno de los candidatos cumple con los requisitos estrictos de riesgo y soporte institucional, por lo que la estrategia óptima es mantenerse al margen para evitar la exposición a una posible purga de altcoins.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y confirmación de tendencia). La fragmentación de liquidez y el pánico extremo sugieren que el riesgo de 'falling knife' es demasiado alto, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "WLFIUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 85
-    },
-    {
       "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ONDOUSDT",
+      "symbol": "JSTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ICPUSDT",
       "score": 75
     }
   ]
