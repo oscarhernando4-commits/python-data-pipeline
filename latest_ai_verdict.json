@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-04 12:36:18",
+  "timestamp": "2026-08-04 12:38:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "El mercado presenta una divergencia estructural y falta de convicción en el libro de órdenes. A pesar de los scores técnicos, la ausencia de un volumen institucional de confirmación (Volume Surge > 1.2x) y el entorno de miedo extremo hacen que la estrategia más rentable sea la preservación de capital (HOLD) hasta que se cumplan los criterios A+.",
+  "confidence": 0,
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 75, ninguno cumple con los requisitos de convicción A+ y soporte de liquidez necesarios para mitigar el riesgo en un entorno de pánico extremo. Se prioriza la preservación del capital sobre la especulación en un mercado de alta incertidumbre.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
-      "score": 75
+      "symbol": "ETCUSDT",
+      "score": 85
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
@@ -19,7 +19,7 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {

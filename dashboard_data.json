@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 12:36:23",
+  "updated_at": "2026-08-04 12:38:21",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 45,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una divergencia estructural y falta de convicción en el libro de órdenes. A pesar de los scores técnicos, la ausencia de un volumen institucional de confirmación (Volume Surge > 1.2x) y el entorno de miedo extremo hacen que la estrategia más rentable sea la preservación de capital (HOLD) hasta que se cumplan los criterios A+."
+    "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 75, ninguno cumple con los requisitos de convicción A+ y soporte de liquidez necesarios para mitigar el riesgo en un entorno de pánico extremo. Se prioriza la preservación del capital sobre la especulación en un mercado de alta incertidumbre."
   }
 }
