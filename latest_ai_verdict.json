@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-04 17:46:21",
+  "timestamp": "2026-08-04 17:48:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 55% ni con una estructura de mercado que minimice el riesgo de 'falling knives' en un entorno de pánico extremo.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ requerido por el comité. La falta de dominancia clara en el libro de órdenes y el entorno de 'Extreme Fear' invalidan cualquier entrada, priorizando la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
-      "score": 75
+      "symbol": "GNOUSDT",
+      "score": 85
     },
     {
       "symbol": "BCHUSDT",
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "XPLUSDT",
+      "symbol": "SUNUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AEROUSDT",
       "score": 75
     }
   ]
