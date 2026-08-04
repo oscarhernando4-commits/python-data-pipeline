@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 00:04:18",
+  "timestamp": "2026-08-04 00:06:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual se encuentra en un entorno de purga técnica sin señales de acumulación institucional. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage. Se prioriza la preservación de capital sobre la ejecución de trades de alta probabilidad de pérdida.",
+  "reasoning": "El mercado presenta una configuración de capitulación con fuga de capital institucional. Ningún activo cumple con el umbral de Score Técnico >= 65 ni con la profundidad de libro de órdenes necesaria para una entrada de alta convicción. Se prioriza la preservación de capital sobre la especulación en un entorno de alta volatilidad y baja liquidez.",
   "top_candidates": [
-    {
-      "symbol": "WAXPUSDT",
-      "score": 80
-    },
     {
       "symbol": "STXUSDT",
       "score": 70
     },
     {
+      "symbol": "MUBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ENAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "WAXPUSDT",
+      "score": 60
+    },
+    {
       "symbol": "CAKEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ETHFIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SEIUSDT",
       "score": 60
     }
   ]
