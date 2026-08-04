@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-04 05:22:18",
+  "timestamp": "2026-08-04 05:24:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de tener activos con scores técnicos de 75, ninguno cumple con la regla de oro de dominancia de Bids (>55%) ni con la convicción A+ requerida por el departamento de riesgo en un entorno de pánico extremo.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos teóricos, las condiciones actuales del mercado no cumplen con los estándares de seguridad y convicción exigidos por el protocolo de riesgo, por lo que se mantiene la posición en efectivo.",
   "top_candidates": [
     {
       "symbol": "ENAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "MUBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SKYUSDT",
       "score": 75
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "COTIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AXTIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ZROUSDT",
       "score": 75
     }
   ]
