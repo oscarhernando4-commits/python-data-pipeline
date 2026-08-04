@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 18:18:24",
+  "timestamp": "2026-08-04 18:20:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos teóricos, la falta de dominancia en el libro de órdenes y el entorno de 'Extreme Fear' no cumplen con los criterios de alta convicción (A+) exigidos por el protocolo de gestión de riesgo para evitar pérdidas innecesarias.",
+  "confidence": 45,
+  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, el mercado carece de la confirmación de volumen necesaria y de una dominancia clara en el libro de órdenes. El comité ha decidido priorizar la protección del capital (Regla #1) ante la incertidumbre del entorno de 'Extreme Fear' y la falta de una estructura de mercado definida.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
+      "symbol": "XRPUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
       "symbol": "ENAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
       "score": 75
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 18:18:27",
+  "updated_at": "2026-08-04 18:20:23",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 45,
     "approved": false,
-    "reasoning": "El comité ha determinado que, a pesar de los scores técnicos teóricos, la falta de dominancia en el libro de órdenes y el entorno de 'Extreme Fear' no cumplen con los criterios de alta convicción (A+) exigidos por el protocolo de gestión de riesgo para evitar pérdidas innecesarias."
+    "reasoning": "A pesar de que varios activos presentan un score técnico de 75, el mercado carece de la confirmación de volumen necesaria y de una dominancia clara en el libro de órdenes. El comité ha decidido priorizar la protección del capital (Regla #1) ante la incertidumbre del entorno de 'Extreme Fear' y la falta de una estructura de mercado definida."
   }
 }
