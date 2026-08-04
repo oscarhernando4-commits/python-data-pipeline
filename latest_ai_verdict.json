@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-04 06:34:20",
+  "timestamp": "2026-08-04 06:36:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia estructural y un sentimiento de pánico extremo. Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT) para evitar pérdidas innecesarias en un entorno de alta volatilidad.",
+  "reasoning": "El mercado presenta un entorno de alta incertidumbre y liquidación selectiva. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y confirmación de volumen), por lo que la estrategia más rentable es preservar el capital en espera de una mejor configuración técnica.",
   "top_candidates": [
     {
       "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ENAUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "ALGOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "GNOUSDT",
       "score": 75
     }
   ]
