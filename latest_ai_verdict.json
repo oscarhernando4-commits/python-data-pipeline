@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 13:44:18",
+  "timestamp": "2026-08-04 13:46:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de tener activos con scores técnicos elevados (MSTRB, LINK), ninguno cumple con el requisito de dominancia de Bids > 55% ni con la convicción A+ exigida por el Chief Risk Officer en este entorno de mercado de miedo extremo.",
+  "reasoning": "El mercado presenta una fragilidad sistémica extrema. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de liquidez y volumen) necesario para mitigar el riesgo de 'falling knives' en un entorno de pánico institucional.",
   "top_candidates": [
     {
-      "symbol": "MSTRBUSDT",
-      "score": 95
-    },
-    {
-      "symbol": "LINKUSDT",
-      "score": 90
-    },
-    {
-      "symbol": "BTCUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SUIUSDT",
-      "score": 85
+      "symbol": "BCHUSDT",
+      "score": 75
     },
     {
       "symbol": "TAOUSDT",
-      "score": 85
+      "score": 75
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "score": 75
     }
   ]
 }
