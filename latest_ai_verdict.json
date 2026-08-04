@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-04 02:08:23",
+  "timestamp": "2026-08-04 02:10:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de tener candidatos con score técnico de 85, la ausencia de una dominancia clara en el libro de órdenes (Bids >= 55%) y el entorno de pánico extremo invalidan la ejecución de una compra bajo los criterios de seguridad del comité.",
+  "reasoning": "A pesar de que algunos activos presentan scores técnicos de 85, el entorno de mercado de 'Pánico Extremo' y la falta de confirmación en el libro de órdenes (dominancia 50%) impiden la ejecución de una orden de compra bajo los estrictos criterios de gestión de riesgo del comité.",
   "top_candidates": [
     {
       "symbol": "DOGEUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ERAUSDT",
       "score": 85
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUIUSDT",
       "score": 75
     }
   ]
