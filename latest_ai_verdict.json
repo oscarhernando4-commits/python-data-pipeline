@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 20:54:23",
+  "timestamp": "2026-08-04 20:56:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de libro de órdenes > 55%). La volatilidad actual y la falta de soporte en el orderbook obligan a mantener la liquidez en espera de una configuración técnica más robusta.",
+  "reasoning": "El mercado se encuentra en un estado de estancamiento defensivo con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de liquidez y soporte de ballenas), por lo que la estrategia más rentable es mantener la liquidez y evitar la exposición a activos de alta volatilidad sin soporte institucional.",
   "top_candidates": [
     {
       "symbol": "LTCUSDT",
@@ -15,7 +15,7 @@
       "score": 85
     },
     {
-      "symbol": "HOMEUSDT",
+      "symbol": "ICPUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "FILUSDT",
       "score": 75
     }
   ]
