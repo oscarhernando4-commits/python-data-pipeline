@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 16:06:23",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'Extreme Fear' con una segmentación agresiva. Ninguno de los candidatos presenta una configuración técnica A+ (Score >= 65 con confirmación de volumen y soporte de ballenas) que justifique el riesgo de capital. Se prioriza la preservación de la liquidez ante la alta probabilidad de trampas de valor en las altcoins actuales.",
+  "timestamp": "2026-08-04 16:08:26",
+  "selected_symbol": "XAUTUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 85,
+  "reasoning": "Ante el 'Extreme Fear' generalizado y la debilidad de las altcoins, el comité ha decidido ejecutar una posición de cobertura en XAUTUSDT, el activo con mayor resiliencia y respaldo institucional, priorizando la protección del capital sobre la especulación.",
   "top_candidates": [
+    {
+      "symbol": "XAUTUSDT",
+      "score": 85
+    },
     {
       "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "FILUSDT",
+      "symbol": "GIGGLEUSDT",
       "score": 75
     },
     {
-      "symbol": "TSLABUSDT",
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
-      "symbol": "AEROUSDT",
+      "symbol": "MIRAUSDT",
       "score": 75
-    },
-    {
-      "symbol": "BNBUSDT",
-      "score": 70
     }
   ]
 }
