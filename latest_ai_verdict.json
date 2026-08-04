@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-04 11:20:25",
+  "timestamp": "2026-08-04 11:22:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras deliberar, el comité ha determinado que, a pesar de los scores técnicos, la falta de visibilidad en el libro de órdenes y el entorno de 'Extreme Fear' representan un riesgo inaceptable para la preservación del capital, optando por mantener la liquidez en espera de una señal más clara.",
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos, el libro de órdenes no muestra una dominancia compradora clara y el entorno de mercado presenta un riesgo sistémico elevado que no cumple con los estándares de convicción A+ exigidos por el departamento de riesgo.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AVAXUSDT",
       "score": 75
     }
   ]
