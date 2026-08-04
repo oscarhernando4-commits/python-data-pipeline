@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 18:56:22",
-  "selected_symbol": "DASHUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "Tras deliberar, el comité ha seleccionado a DASHUSDT debido a su superioridad técnica (Score 85) y volumen institucional, superando el umbral de riesgo A+. Se prioriza la acumulación selectiva en este activo mientras se mantiene una vigilancia estricta sobre el soporte de $64K en BTC para proteger el capital.",
+  "timestamp": "2026-08-04 18:58:23",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de la existencia de activos con scores técnicos aceptables, ninguno cumple con la regla de oro de convicción A+ (Score >= 65 y Bids > 55%) en un entorno de mercado de Miedo Extremo, priorizando la preservación de capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "DASHUSDT",
       "score": 85
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "QNTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "FETUSDT",
       "score": 75
     },
     {
       "symbol": "APTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AEROUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ORDIUSDT",
       "score": 75
     }
   ]
