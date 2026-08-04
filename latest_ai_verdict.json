@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 17:06:23",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad exigido por el comité (Bids > 55% y convicción A+). El entorno de 'Extreme Fear' y la falta de soporte institucional en el libro de órdenes dictan una postura de espera para evitar 'falling knives' y pérdidas innecesarias.",
+  "timestamp": "2026-08-04 17:08:20",
+  "selected_symbol": "NVDABUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "Tras deliberar, el comité identifica a NVDABUSDT como el único activo con la fuerza técnica y el respaldo sectorial necesarios para superar el entorno de pánico extremo, cumpliendo con el umbral de score A+ requerido para una entrada de alta convicción.",
   "top_candidates": [
+    {
+      "symbol": "NVDABUSDT",
+      "score": 85
+    },
     {
       "symbol": "SUIUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "DASHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "APTUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     }
   ]
