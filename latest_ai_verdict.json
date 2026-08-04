@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 14:00:24",
+  "timestamp": "2026-08-04 14:02:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Debido a la ausencia de activos con un Score Técnico >= 65 y la persistencia de un entorno de mercado de 'Extreme Fear' con alta correlación bajista, el comité ha decidido no ejecutar ninguna operación para evitar el riesgo de 'falling knives' y proteger el capital institucional.",
+  "reasoning": "El mercado presenta una estructura de distribución institucional agresiva y falta de soporte técnico. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez total para evitar la trampa de liquidez y los 'cuchillos cayendo'.",
   "top_candidates": [
+    {
+      "symbol": "PAXGUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "JSTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "XLMUSDT",
+      "score": 55
+    },
     {
       "symbol": "LDOUSDT",
       "score": 55
     },
     {
-      "symbol": "COTIUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "DEXEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "OPENUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 45
+      "symbol": "TSLABUSDT",
+      "score": 55
     }
   ]
 }
