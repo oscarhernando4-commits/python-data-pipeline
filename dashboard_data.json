@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-04 16:30:26",
-  "total_balance_usd": 20.05,
+  "updated_at": "2026-08-04 16:32:34",
+  "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
   "status": "🟦 Buscando Entrada A+",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una divergencia crítica y falta de convicción institucional. Ningún activo cumple con el requisito de soporte de libro de órdenes (Bids > 55%) ni con la confirmación de volumen necesaria para mitigar el riesgo en un entorno de pánico extremo."
+    "reasoning": "El mercado presenta un entorno de 'Pánico Extremo' con una alta correlación de pérdidas en las simulaciones pasadas. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar la exposición a 'cuchillos cayendo'."
   }
 }

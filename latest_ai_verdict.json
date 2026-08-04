@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-04 16:30:21",
+  "timestamp": "2026-08-04 16:32:29",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia crítica y falta de convicción institucional. Ningún activo cumple con el requisito de soporte de libro de órdenes (Bids > 55%) ni con la confirmación de volumen necesaria para mitigar el riesgo en un entorno de pánico extremo.",
+  "reasoning": "El mercado presenta un entorno de 'Pánico Extremo' con una alta correlación de pérdidas en las simulaciones pasadas. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar la exposición a 'cuchillos cayendo'.",
   "top_candidates": [
-    {
-      "symbol": "TRXUSDT",
-      "score": 75
-    },
     {
       "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "TRXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "MIRAUSDT",
       "score": 75
     },
     {
@@ -23,8 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "SUIUSDT",
-      "score": 65
+      "symbol": "XPLUSDT",
+      "score": 75
     }
   ]
 }
