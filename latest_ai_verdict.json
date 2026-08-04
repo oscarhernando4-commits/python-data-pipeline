@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 22:26:21",
+  "timestamp": "2026-08-04 22:28:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y capitulación. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de soporte y volumen institucional), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT).",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con buen score técnico, la falta de soporte en el libro de órdenes, el sentimiento de miedo extremo y la alta tasa de fallos en condiciones neutrales, no cumplen con los criterios de seguridad y rentabilidad exigidos por el protocolo de riesgo.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
@@ -15,16 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "BFUSDUSDT",
+      "symbol": "FILUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "CRVUSDT",
       "score": 75
     },
     {
       "symbol": "TIAUSDT",
       "score": 75
-    },
-    {
-      "symbol": "AAVEUSDT",
-      "score": 65
     }
   ]
 }
