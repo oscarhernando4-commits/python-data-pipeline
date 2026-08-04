@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-04 18:10:28",
+  "timestamp": "2026-08-04 18:12:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión con un sentimiento de miedo extremo que no ha sido validado por una acumulación institucional clara en el libro de órdenes. Dado que ningún activo cumple con el umbral de convicción A+ y el historial reciente de trades muestra una alta volatilidad con resultados negativos en condiciones similares, la decisión institucional es mantener la liquidez en espera de una estructura de mercado más definida.",
+  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y el entorno de pánico extremo (Fear & Greed 25) invalidan la ejecución de cualquier orden de compra bajo los estrictos criterios de gestión de riesgo del comité.",
   "top_candidates": [
     {
-      "symbol": "DASHUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SOLUSDT",
+      "symbol": "SUIUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
       "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ENAUSDT",
       "score": 75
     }
   ]
