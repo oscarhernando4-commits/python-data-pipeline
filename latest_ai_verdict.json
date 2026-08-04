@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 04:40:20",
+  "timestamp": "2026-08-04 04:42:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, la falta de profundidad en el libro de órdenes y el entorno de pánico extremo no cumplen con los estándares de seguridad A+ exigidos para la ejecución de capital.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 85, la falta de profundidad en el libro de órdenes y el entorno de pánico extremo invalidan la ejecución de cualquier posición de compra, priorizando la preservación del capital.",
   "top_candidates": [
+    {
+      "symbol": "BCHUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "TIAUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "DASHUSDT",
+      "score": 85
+    },
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
       "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
