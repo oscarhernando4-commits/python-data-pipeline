@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-04 11:24:16",
+  "timestamp": "2026-08-04 11:26:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "El comité ha determinado que, a pesar de la resiliencia de ciertos activos, las condiciones actuales del libro de órdenes y la falta de un volumen institucional de confirmación no cumplen con los estándares de riesgo A+ exigidos. Se prioriza la preservación del capital sobre la especulación en un mercado de miedo extremo.",
+  "confidence": 0,
+  "reasoning": "A pesar de tener activos con scores técnicos de 75, el mercado carece de la profundidad de liquidez necesaria y el soporte de ballenas requerido para una entrada de alta convicción. El entorno de pánico extremo y la alta probabilidad de falsos rebotes dictan una postura de protección de capital total.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
       "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
