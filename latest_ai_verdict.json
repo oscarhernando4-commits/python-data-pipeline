@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-04 04:36:18",
+  "timestamp": "2026-08-04 04:38:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de soporte institucional). El mercado se encuentra en una fase de alta incertidumbre y barrido de stops, por lo que la estrategia óptima es preservar el capital hasta que la estructura de mercado sea más clara.",
+  "reasoning": "El comité ha decidido mantener una posición de liquidez (HOLD) debido a la incertidumbre en el libro de órdenes y la volatilidad extrema del mercado, priorizando la preservación del capital sobre la ejecución de trades de baja convicción.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "SOXLBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZECUSDT",
       "score": 75
     },
     {
       "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
