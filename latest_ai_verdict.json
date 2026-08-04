@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-04 15:50:22",
+  "timestamp": "2026-08-04 15:52:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que varios activos tienen un score técnico de 75, la falta de confirmación en el libro de órdenes, el pánico extremo en el mercado y el historial reciente de pérdidas en condiciones similares dictan una postura de preservación de capital. No se cumplen los criterios de convicción A+ necesarios para ejecutar una orden de compra.",
+  "reasoning": "El mercado presenta una divergencia entre el sentimiento de pánico y la falta de soporte institucional real en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ requerido por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una señal de confirmación más robusta.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     }
   ]
