@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 18:48:24",
+  "timestamp": "2026-08-04 18:50:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la resiliencia de ciertos activos, el entorno de mercado actual carece de la convicción institucional necesaria para una entrada segura. La falta de profundidad en el libro de órdenes y la alta probabilidad de 'mechas' de liquidación en un entorno de pánico extremo obligan a mantener la posición en efectivo para preservar el capital.",
+  "reasoning": "A pesar de tener candidatos con scores técnicos de 75, la ausencia de dominancia en el libro de órdenes, la falta de volumen institucional confirmado y el entorno de 'Extreme Fear' impiden alcanzar el umbral de convicción A+ necesario para operar, por lo que se mantiene la posición en efectivo.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "JSTUSDT",
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "DASHUSDT",
       "score": 75
     }
   ]
