@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 21:24:23",
+  "updated_at": "2026-08-04 21:26:23",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de liquidez institucional clara en el orderbook obligan a mantener la posición en efectivo para evitar pérdidas sistémicas."
+    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una fragmentación de liquidez que invalida las entradas de alta convicción. Ninguno de los candidatos cumple con el requisito de soporte de libro de órdenes (Bids > 55%) ni con la convicción necesaria para mitigar el riesgo de pérdida, por lo que se prioriza la preservación del capital."
   }
 }
