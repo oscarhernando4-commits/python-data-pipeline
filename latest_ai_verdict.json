@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-04 05:06:24",
+  "timestamp": "2026-08-04 05:08:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y volumen de confirmación). El mercado presenta una alta incertidumbre y riesgo de liquidación, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta una dicotomía estructural y un sentimiento de miedo extremo que, sumado a la falta de dominancia clara en el libro de órdenes (Bids 50%), no cumple con los criterios de alta convicción exigidos por el comité para una ejecución segura.",
   "top_candidates": [
     {
-      "symbol": "ENAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SKYUSDT",
-      "score": 75
-    },
-    {
       "symbol": "PAXGUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "POLUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "DASHUSDT",
+      "symbol": "VIRTUALUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "CRVUSDT",
       "score": 75
     }
   ]
