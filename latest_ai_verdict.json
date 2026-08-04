@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 14:20:23",
+  "timestamp": "2026-08-04 14:22:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una capitulación técnica generalizada sin activos que cumplan con los criterios de alta convicción (Score >= 65). La estrategia institucional es la preservación de capital mediante la abstención total de posiciones largas hasta que se observe una rotación de capital clara y una mejora en el sentimiento macro.",
+  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los requisitos mínimos de seguridad y rentabilidad. Ningún activo analizado alcanza el score técnico de 65 necesario para una operación A+, y el entorno de pánico extremo sugiere una alta probabilidad de continuar con la tendencia bajista. Se prioriza la protección del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "JSTUSDT",
@@ -15,15 +15,15 @@
       "score": 55
     },
     {
+      "symbol": "UNIUSDT",
+      "score": 55
+    },
+    {
       "symbol": "PAXGUSDT",
       "score": 55
     },
     {
-      "symbol": "LDOUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "TUTUSDT",
+      "symbol": "SKYUSDT",
       "score": 50
     }
   ]
