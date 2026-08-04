@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 19:10:27",
+  "updated_at": "2026-08-04 19:12:25",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 45,
     "approved": false,
-    "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y volumen institucional confirmado). El mercado se encuentra en una fase de alta incertidumbre y riesgo, por lo que la estrategia institucional es mantener la liquidez en USDT hasta que se estabilice la estructura de mercado."
+    "reasoning": "A pesar de que activos como ETH y OP presentan scores técnicos de 85, el mercado carece de la confirmación de volumen institucional necesaria y el libro de órdenes se mantiene en un estado neutral. Siguiendo la Regla #1 de no perder dinero, el comité ha decidido mantener la liquidez en espera de un catalizador de volumen más claro."
   }
 }
