@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 17:42:29",
+  "updated_at": "2026-08-04 17:44:27",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 45,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la falta de dominancia clara en el libro de órdenes (Bids 50%) y la persistencia del 'Extreme Fear' macroeconómico impiden alcanzar el umbral de confianza del 70% requerido por el comité para una ejecución A+."
+    "reasoning": "Ningún activo cumple con el umbral estricto de convicción A+ (Score >= 65 y Bids >= 55%) exigido por el comité. La alta volatilidad y la falta de soporte institucional en el libro de órdenes obligan a mantener la posición en efectivo para evitar pérdidas innecesarias."
   }
 }
