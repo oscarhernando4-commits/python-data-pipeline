@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 14:38:29",
+  "timestamp": "2026-08-04 14:40:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a la falta de datos de liquidez en el libro de órdenes, el sentimiento de 'Extreme Fear' y la alta tasa de fallos en trades realizados bajo condiciones de mercado neutrales en el historial de simulaciones.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
+    {
+      "symbol": "ZECUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "BNBUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "LINKUSDT",
+      "score": 85
+    },
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BICOUSDT",
+      "symbol": "NEXOUSDT",
       "score": 75
     }
   ]
