@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 04:48:22",
-  "selected_symbol": "JUPUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "JUPUSDT ha sido seleccionado por su alto score técnico (85), su pertenencia al sector DeFi (líder en rotación de capital) y su volumen de transacciones, cumpliendo con los criterios A+ del comité para una entrada táctica en un mercado de miedo extremo.",
+  "timestamp": "2026-08-04 04:50:20",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%). El mercado presenta una alta volatilidad con soporte insuficiente en el libro de órdenes, por lo que el comité ha decidido mantener la liquidez en USDT para evitar pérdidas por 'falling knives'.",
   "top_candidates": [
-    {
-      "symbol": "JUPUSDT",
-      "score": 85
-    },
     {
       "symbol": "CRVUSDT",
       "score": 85
     },
     {
-      "symbol": "BTCUSDT",
+      "symbol": "MUBUSDT",
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LTCUSDT",
       "score": 75
     }
   ]
