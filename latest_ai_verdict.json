@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 12:30:16",
+  "timestamp": "2026-08-04 12:32:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral estricto de convicción A+ (Score >= 65 y Bids > 55%) en un entorno de mercado de pánico extremo, por lo que se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "El mercado presenta una divergencia técnica severa y falta de profundidad en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ necesario para mitigar el riesgo sistémico, por lo que la estrategia óptima es la preservación de capital (HOLD).",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
       "score": 75
     },
     {
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "NBISBUSDT",
+      "score": 75
+    },
+    {
       "symbol": "GNOUSDT",
       "score": 75
-    },
-    {
-      "symbol": "STXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ENAUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "EPICUSDT",
-      "score": 65
     }
   ]
 }
