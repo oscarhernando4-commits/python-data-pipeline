@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 16:24:26",
+  "timestamp": "2026-08-04 16:26:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y confirmación de volumen). El mercado se encuentra en un estado de purga selectiva y el riesgo de 'falling knife' es elevado, por lo que la decisión institucional es mantener la liquidez en USDT.",
+  "reasoning": "El mercado se encuentra en un estado de pánico extremo con una purga selectiva en curso. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "LTCUSDT",
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "TSLABUSDT",
+      "symbol": "ASTERUSDT",
       "score": 75
     }
   ]
