@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 09:30:22",
+  "updated_at": "2026-08-04 09:32:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que el mercado actual se encuentra en una fase de alta fragilidad y falta de convicción institucional. Dado que ningún activo cumple con el umbral de seguridad A+ (Score >= 65) y el entorno macro es de extrema cautela, la decisión unánime es no ejecutar ninguna operación y proteger el capital en efectivo."
+    "reasoning": "Ningún activo cumple con el umbral mínimo de Score Técnico A+ (>= 65) ni con la confirmación de soporte en el libro de órdenes, invalidando cualquier entrada para evitar el riesgo de 'falling knives' en un mercado de capitulación."
   }
 }
