@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 17:56:48",
+  "timestamp": "2026-08-04 17:58:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación sistémica con una falta de profundidad institucional. Ningún activo cumple con los criterios de alta convicción (Score >= 65) establecidos por el comité, por lo que la decisión es proteger el capital y esperar una mejor configuración técnica.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La falta de dominancia compradora en el libro de órdenes y la alta volatilidad en el sector AI sugieren que es preferible mantener la liquidez en USDT para evitar pérdidas innecesarias en un mercado de pánico extremo.",
   "top_candidates": [
     {
       "symbol": "GNOUSDT",
-      "score": 70
+      "score": 85
     },
     {
       "symbol": "STXUSDT",
-      "score": 65
+      "score": 80
     },
     {
       "symbol": "JSTUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "SUNUSDT",
-      "score": 60
+      "score": 75
     },
     {
-      "symbol": "LDOUSDT",
-      "score": 55
+      "symbol": "ASTERUSDT",
+      "score": 70
     }
   ]
 }
