@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-04 17:26:23",
+  "timestamp": "2026-08-04 17:28:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de seguridad A+ exigido por el comité. La dominancia de Bids es insuficiente y el mercado global se encuentra en un estado de miedo extremo que no garantiza una reversión alcista inmediata, por lo que la estrategia óptima es preservar el capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo en un entorno de mercado de pánico extremo. Se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
-      "symbol": "TAOUSDT",
+      "symbol": "ETHUSDT",
       "score": 85
     },
     {
@@ -15,7 +15,7 @@
       "score": 85
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "SUIUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     }
   ]

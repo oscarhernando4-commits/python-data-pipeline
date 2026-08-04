@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 17:26:23",
+  "updated_at": "2026-08-04 17:28:22",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ningún activo cumple con el umbral de seguridad A+ exigido por el comité. La dominancia de Bids es insuficiente y el mercado global se encuentra en un estado de miedo extremo que no garantiza una reversión alcista inmediata, por lo que la estrategia óptima es preservar el capital."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo en un entorno de mercado de pánico extremo. Se prioriza la preservación del capital sobre la especulación."
   }
 }
