@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-04 08:26:21",
+  "timestamp": "2026-08-04 08:28:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta un entorno de alta hostilidad y falta de profundidad, donde ningún activo cumple con los criterios de calidad A+ exigidos por el comité. Se prioriza la protección del capital (Regla #1) sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica generalizada con una falta de convicción institucional. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) y la alta volatilidad junto con la debilidad en el libro de órdenes aumenta el riesgo de 'flash crash'. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado bajista.",
   "top_candidates": [
+    {
+      "symbol": "NVDABUSDT",
+      "score": 70
+    },
     {
       "symbol": "BFUSDUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "ETCUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
       "symbol": "JSTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ETCUSDT",
       "score": 60
     }
   ]
