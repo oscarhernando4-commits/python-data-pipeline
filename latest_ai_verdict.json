@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 03:48:19",
+  "timestamp": "2026-08-04 03:50:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con los criterios estrictos de riesgo y convicción definidos por el comité. La falta de soporte claro en el libro de órdenes y la inestabilidad macroeconómica dictan una postura de espera (HOLD) para evitar la exposición a 'trampas de valor' y volatilidad innecesaria.",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de los scores técnicos de 75, la falta de dominancia clara en el libro de órdenes y el entorno de miedo extremo no cumplen con los criterios de alta convicción necesarios para una ejecución segura.",
   "top_candidates": [
     {
+      "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XRPUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
       "symbol": "ZECUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "MORPHOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "JUPUSDT",
       "score": 75
     }
   ]
