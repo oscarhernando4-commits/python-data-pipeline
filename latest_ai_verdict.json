@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 04:54:23",
+  "timestamp": "2026-08-04 04:56:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos elevados en algunos activos, la falta de soporte claro en el libro de órdenes y el entorno de pánico extremo (Fear & Greed 25) no cumplen con los criterios de seguridad A+ exigidos por el departamento de riesgo.",
+  "confidence": 0,
+  "reasoning": "A pesar de que varios activos presentan un score técnico de 85, la falta de dominancia en el libro de órdenes (50% Bids) y la persistencia del 'Extreme Fear' macroeconómico invalidan la entrada. El comité prioriza la preservación del capital ante la alta probabilidad de volatilidad errática, manteniendo la posición en efectivo (USDT) hasta que se cumplan los criterios de convicción A+.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
@@ -19,11 +19,11 @@
       "score": 85
     },
     {
-      "symbol": "SEIUSDT",
+      "symbol": "CRVUSDT",
       "score": 85
     },
     {
-      "symbol": "CRVUSDT",
+      "symbol": "SEIUSDT",
       "score": 85
     }
   ]
