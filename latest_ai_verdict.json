@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-04 13:54:18",
+  "timestamp": "2026-08-04 13:56:50",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que algunos activos presentan scores técnicos elevados, la falta de dominancia clara en el libro de órdenes, el sentimiento de mercado en 'Extreme Fear' y el historial de pérdidas en condiciones similares dictan una postura de preservación de capital (HOLD) hasta que el riesgo sistémico disminuya.",
+  "reasoning": "El mercado se encuentra en un estado de alta toxicidad y capitulación generalizada. Ninguno de los candidatos cumple con el umbral estricto de Score Técnico >= 65 y confirmación de liquidez en el libro de órdenes. Se prioriza la preservación de capital sobre la especulación en un entorno de pánico extremo.",
   "top_candidates": [
     {
+      "symbol": "GNOUSDT",
+      "score": 75
+    },
+    {
       "symbol": "XAUTUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "TAOUSDT",
       "score": 70
     },
     {
@@ -23,8 +19,12 @@
       "score": 70
     },
     {
-      "symbol": "TRUMPUSDT",
-      "score": 70
+      "symbol": "ZECUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "JSTUSDT",
+      "score": 60
     }
   ]
 }
