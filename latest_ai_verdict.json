@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-04 17:02:24",
+  "timestamp": "2026-08-04 17:04:34",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, el entorno de 'Miedo Extremo' y la falta de una dominancia clara en el libro de órdenes (50% vs 55% requerido) impiden la ejecución. El comité ha decidido mantener la liquidez en USDT para evitar el riesgo de 'falling knives' en un mercado fragmentado.",
+  "confidence": 0,
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
+      "symbol": "SUIUSDT",
       "score": 75
     },
     {
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
       "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "APTUSDT",
       "score": 75
     }
   ]
