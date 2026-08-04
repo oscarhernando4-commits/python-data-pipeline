@@ -1515,3 +1515,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-30.63%)`, `2026-06-21 (-30.37%)`, `2026-06-22 (-28.08%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: VICUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-24` hasta `2026-08-04` (985 Días de Historial)
+- 💵 **Precio Actual:** `$0.0517 USD`
+- 📈 **Máximo Histórico (ATH):** `$1.4740 USD` (`2023-11-24`) | Distancia: `-96.49%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0245 USD` (`2026-08-03`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-07-07 (+78.93%)`, `2026-08-03 (+53.67%)`, `2025-03-12 (+45.62%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-32.68%)`, `2026-05-28 (-26.68%)`, `2026-03-01 (-22.48%)`
+
+---
