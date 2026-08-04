@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 19:04:22",
+  "timestamp": "2026-08-04 19:06:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, el comité ha determinado que las condiciones actuales de mercado no cumplen con los criterios de alta convicción exigidos por nuestra política de gestión de riesgo. Ningún candidato presenta la combinación necesaria de soporte institucional en el libro de órdenes y fortaleza técnica, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
+  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de muros de compra institucionales obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LINKUSDT",
-      "score": 75
-    },
     {
       "symbol": "ASTERUSDT",
       "score": 75
     },
     {
+      "symbol": "AEROUSDT",
+      "score": 75
+    },
+    {
       "symbol": "GNOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "OPUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ORDIUSDT",
       "score": 75
     }
   ]
