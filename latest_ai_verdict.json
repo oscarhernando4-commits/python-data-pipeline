@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 03:20:24",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "timestamp": "2026-08-04 03:22:21",
+  "selected_symbol": "PAXGUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "Tras analizar el pánico extremo del mercado, el comité ha decidido priorizar la seguridad y la fuerza relativa. PAXGUSDT es el único candidato que combina un score técnico superior (85), pertenencia al sector refugio (RWA/Metales) y una estructura de mercado que sugiere acumulación institucional, cumpliendo estrictamente con las reglas de oro de no operar activos de baja calidad.",
   "top_candidates": [
     {
+      "symbol": "PAXGUSDT",
+      "score": 85
+    },
+    {
       "symbol": "ADAUSDT",
-      "score": 60
+      "score": 75
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "score": 75
     },
     {
       "symbol": "MORPHOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PAXGUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "ERAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 50
+      "score": 75
     }
   ]
 }
