@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 18:28:26",
+  "updated_at": "2026-08-04 18:30:28",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "A pesar de que activos como SOL y SUI presentan scores técnicos elevados, la falta de confirmación en el libro de órdenes (bids < 55%) y la persistencia del pánico minorista (Fear & Greed 25) impiden la ejecución de una estrategia de compra. El comité ha decidido mantener la liquidez en espera de una estructura de mercado más definida y menos volátil."
+    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de pánico extremo. A pesar de que los activos de Layer 1 tienen un score técnico de 75, la falta de confirmación en el libro de órdenes y la alta tasa de fallos en trades recientes bajo condiciones neutrales obligan a mantener la liquidez en USDT para evitar pérdidas innecesarias."
   }
 }
