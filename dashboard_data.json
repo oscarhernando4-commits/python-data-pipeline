@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 04:50:24",
+  "updated_at": "2026-08-04 04:52:26",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%). El mercado presenta una alta volatilidad con soporte insuficiente en el libro de órdenes, por lo que el comité ha decidido mantener la liquidez en USDT para evitar pérdidas por 'falling knives'."
+    "reasoning": "El comité ha determinado que, a pesar de los scores técnicos elevados en ciertos activos, la ausencia de una dominancia clara en el libro de órdenes y el entorno de 'Extreme Fear' invalidan la ejecución de cualquier posición larga. Se mantendrá la liquidez en espera de una señal de confirmación más robusta."
   }
 }

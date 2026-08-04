@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 04:50:20",
+  "timestamp": "2026-08-04 04:52:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%). El mercado presenta una alta volatilidad con soporte insuficiente en el libro de órdenes, por lo que el comité ha decidido mantener la liquidez en USDT para evitar pérdidas por 'falling knives'.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos elevados en ciertos activos, la ausencia de una dominancia clara en el libro de órdenes y el entorno de 'Extreme Fear' invalidan la ejecución de cualquier posición larga. Se mantendrá la liquidez en espera de una señal de confirmación más robusta.",
   "top_candidates": [
+    {
+      "symbol": "BTCUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "XRPUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "CAKEUSDT",
+      "score": 85
+    },
     {
       "symbol": "CRVUSDT",
       "score": 85
     },
     {
-      "symbol": "MUBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     }
   ]
