@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-04 13:38:17",
+  "timestamp": "2026-08-04 13:40:14",
   "selected_symbol": "LINKUSDT",
   "action": "BUY_LONG",
   "approved": true,
-  "confidence": 72,
-  "reasoning": "Tras deliberar, el comité ha seleccionado a LINKUSDT debido a su score técnico de 100/100 y su pertenencia al sector RWA, que actualmente absorbe la liquidez institucional. Se prioriza la seguridad del capital mediante la ejecución de un Trailing Stop dinámico, evitando activos de baja capitalización o con scores inferiores a 65.",
+  "confidence": 75,
+  "reasoning": "Tras analizar la rotación de capital hacia activos de valor tangible (RWA) y la divergencia de fortaleza técnica, el comité ha seleccionado a LINKUSDT como el único activo con la solidez necesaria para una entrada en largo, manteniendo una gestión de riesgo estricta mediante un Trailing Stop para mitigar la volatilidad sistémica.",
   "top_candidates": [
     {
       "symbol": "LINKUSDT",
-      "score": 100
-    },
-    {
-      "symbol": "TSLABUSDT",
       "score": 100
     },
     {
@@ -19,11 +15,15 @@
       "score": 95
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "BTCUSDT",
       "score": 85
     },
     {
       "symbol": "TAOUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "SUIUSDT",
       "score": 85
     }
   ]
