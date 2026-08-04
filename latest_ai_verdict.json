@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-04 18:06:25",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65, Bids >= 55%, y confirmación de tendencia). El mercado se encuentra en una fase de alta volatilidad y baja predictibilidad, por lo que la estrategia institucional es mantener la liquidez en espera de una estructura de mercado más clara.",
+  "timestamp": "2026-08-04 18:08:23",
+  "selected_symbol": "DASHUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "DASHUSDT es el único candidato que supera el umbral de Score Técnico A+ (85/100) con un volumen de entrada institucional significativo (1.73x). A pesar del entorno de miedo extremo, la rotación de capital hacia infraestructura y la solidez técnica del activo justifican una entrada con gestión de riesgo estricta mediante Trailing Stop.",
   "top_candidates": [
+    {
+      "symbol": "DASHUSDT",
+      "score": 85
+    },
     {
       "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "ENAUSDT",
       "score": 75
     },
     {
       "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ENAUSDT",
       "score": 75
     },
     {
