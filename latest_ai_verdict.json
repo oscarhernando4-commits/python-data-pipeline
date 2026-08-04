@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-04 10:20:17",
+  "timestamp": "2026-08-04 10:22:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de alta toxicidad y liquidación forzada. Ningún activo cumple con los criterios de calidad A+ (Score >= 65) ni con la confirmación de soporte institucional necesaria para mitigar el riesgo de 'falling knives'. Se prioriza la preservación de capital sobre la especulación.",
+  "reasoning": "El mercado actual se encuentra en un entorno de alta volatilidad y capitulación técnica. Ninguno de los activos analizados alcanza el umbral de convicción A+ (Score >= 65) requerido por el comité. La estrategia institucional es la preservación total del capital, evitando 'cuchillos cayendo' y esperando una estabilización del sentimiento global antes de ejecutar cualquier posición de compra.",
   "top_candidates": [
     {
-      "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SUNUSDT",
+      "symbol": "WLDUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "GIGGLEUSDT",
+      "score": 55
+    },
+    {
       "symbol": "LINKUSDT",
       "score": 50
     },
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "SHIBUSDT",
       "score": 50
     }
   ]
