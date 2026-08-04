@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 23:06:21",
+  "timestamp": "2026-08-04 23:08:29",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de aversión al riesgo sistémico con una parálisis de volumen comprador. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la ejecución de cualquier compra representa un riesgo inaceptable de 'cuchillo cayendo'.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
+    {
+      "symbol": "WLFIUSDT",
+      "score": 85
+    },
     {
       "symbol": "EULUSDT",
       "score": 75
     },
     {
+      "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
       "symbol": "BCHUSDT",
       "score": 75
-    },
-    {
-      "symbol": "JSTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LUNCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "VANRYUSDT",
-      "score": 65
     }
   ]
 }
