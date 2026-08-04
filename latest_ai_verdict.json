@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-04 05:30:18",
+  "timestamp": "2026-08-04 05:32:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). La alta volatilidad y el miedo extremo sugieren que el riesgo de 'falling knife' es demasiado elevado para una ejecución segura en este momento.",
+  "reasoning": "El comité ha determinado que, a pesar de la rotación sectorial hacia DeFi, ningún activo cumple con el umbral de convicción A+ (Score >= 65) y confirmación de soporte institucional. Se mantiene la liquidez en USDT para evitar la exposición a activos que actúan como trampas de valor en el actual entorno de miedo extremo.",
   "top_candidates": [
     {
-      "symbol": "MUBUSDT",
+      "symbol": "STXUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ENAUSDT",
       "score": 75
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
+      "symbol": "MUBUSDT",
+      "score": 75
+    },
+    {
       "symbol": "KORUBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SKYUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PAXGUSDT",
       "score": 75
     }
   ]
