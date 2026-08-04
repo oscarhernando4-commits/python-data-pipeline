@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 14:10:19",
+  "timestamp": "2026-08-04 14:12:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "El mercado presenta una capitulación generalizada sin indicios de acumulación institucional. Ningún candidato cumple con el umbral de Score Técnico >= 65 ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage y pérdida de capital, por lo que la decisión es mantener la liquidez en efectivo.",
   "top_candidates": [
     {
       "symbol": "SKYUSDT",
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "PAXGUSDT",
-      "score": 60
-    },
-    {
       "symbol": "JSTUSDT",
       "score": 60
     },
     {
-      "symbol": "LDOUSDT",
-      "score": 55
+      "symbol": "PAXGUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TSLABUSDT",
+      "score": 60
     }
   ]
 }
