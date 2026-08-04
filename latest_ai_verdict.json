@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 06:18:21",
+  "timestamp": "2026-08-04 06:20:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y confirmación de volumen). El mercado presenta un entorno de miedo extremo con una estructura de libro de órdenes neutral, lo que aumenta el riesgo de pérdidas. Se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "A pesar de tener activos con scores técnicos de 85, la ausencia de soporte en el libro de órdenes (Bids < 55%) y el entorno de 'Extreme Fear' invalidan la ejecución bajo las reglas de oro del comité. Se prioriza la preservación del capital sobre la especulación en un mercado sin convicción institucional clara.",
   "top_candidates": [
     {
+      "symbol": "TAOUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ETHUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "LUNCUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
       "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ENAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "FILUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AAVEUSDT",
       "score": 75
     }
   ]
