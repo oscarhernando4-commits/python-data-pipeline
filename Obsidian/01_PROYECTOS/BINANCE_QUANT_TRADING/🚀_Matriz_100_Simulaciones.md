@@ -7,22 +7,22 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-04 08:02:20
+date: 2026-08-04 08:04:26
 ---
 
-# 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $20.05 USD)
+# 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $20.04 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-04 08:02:20`
+> ⏱️ **Última Actualización:** `2026-08-04 08:04:26`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00409216 BNB` (`~$2.42 USD`)
 > - 💵 **USDT Disponible:** `17.6282 USDT`
-> - 💰 **Saldo Total Acumulado:** `$20.05 USD`
+> - 💰 **Saldo Total Acumulado:** `$20.04 USD`
 
 | 💵 Capital | 🪙 Cripto Activa | 🔢 Ops | 📈 Balance | 💰 Beneficio (PnL) | 📊 Racha | 🎯 Estado Operativo |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **`$20.05 USD`** | **`Ninguna (Buscando)`** | `#12` | **`$20.05 USD`** | **`$+2.92 USD`** | `5W/7L` | **`🟦 Buscando Entrada A+`** |
+| **`$20.04 USD`** | **`Ninguna (Buscando)`** | `#12` | **`$20.04 USD`** | **`$+2.91 USD`** | `5W/7L` | **`🟦 Buscando Entrada A+`** |
 
 ---
 
@@ -58,26 +58,26 @@ date: 2026-08-04 08:02:20
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-001** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-002** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-003** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-004** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-005** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-006** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-007** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-008** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-009** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-010** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-011** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-012** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-013** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-014** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-015** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-016** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-017** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-018** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-019** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
-| **SIM-020** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:02 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-001** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-002** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-003** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-004** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-005** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-006** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-007** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-008** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-009** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-010** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-011** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-012** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-013** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-014** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-015** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-016** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-017** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-018** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-019** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
+| **SIM-020** | **PEPEUSDT** | `#8` | `3W/5L` | 26-08-04<br>08:04 | `🔴 Perdió -$1.12` | **`$100.36`** (`+$0.36`) | 🟢 Buscando |
 
 ---
 
