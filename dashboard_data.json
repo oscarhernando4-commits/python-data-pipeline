@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 11:50:23",
+  "updated_at": "2026-08-04 11:52:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 45,
     "approved": false,
-    "reasoning": "El mercado presenta una fragmentación excesiva y una falta de soporte institucional claro en el libro de órdenes. A pesar de los scores técnicos, la ausencia de una tendencia definida y el entorno de miedo extremo invalidan la ejecución de cualquier operación de compra bajo los estándares de seguridad del comité."
+    "reasoning": "A pesar de que varios activos poseen un score técnico de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y la alta volatilidad en el sentimiento de mercado impiden la ejecución de una orden de compra bajo los estándares de seguridad del comité."
   }
 }
