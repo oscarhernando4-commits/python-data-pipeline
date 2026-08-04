@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-04 22:08:22",
+  "timestamp": "2026-08-04 22:10:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos aceptables, la falta de profundidad en el libro de órdenes, el sentimiento de miedo extremo y la alta probabilidad de pérdidas históricas en condiciones de mercado neutral, dictan una postura de espera para proteger el capital institucional.",
+  "reasoning": "El mercado presenta un entorno de alta incertidumbre y capitulación. Ninguno de los candidatos analizados ofrece una convicción A+ con soporte de libro de órdenes verificado, por lo que la estrategia institucional es mantener la liquidez en USDT para evitar pérdidas por volatilidad no confirmada.",
   "top_candidates": [
     {
       "symbol": "ENAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "GNOUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 65
     },
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "ATOMUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "AAVEUSDT",
       "score": 65
     }
   ]
