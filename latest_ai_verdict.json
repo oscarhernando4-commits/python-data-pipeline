@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-04 15:48:20",
+  "timestamp": "2026-08-04 15:50:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido unánimemente mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes y el entorno de miedo extremo invalidan la seguridad de una entrada rentable bajo los estándares de riesgo A+.",
+  "reasoning": "A pesar de que varios activos tienen un score técnico de 75, la falta de confirmación en el libro de órdenes, el pánico extremo en el mercado y el historial reciente de pérdidas en condiciones similares dictan una postura de preservación de capital. No se cumplen los criterios de convicción A+ necesarios para ejecutar una orden de compra.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
       "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
