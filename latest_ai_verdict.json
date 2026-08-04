@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 16:38:29",
+  "timestamp": "2026-08-04 16:40:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estrés sistémico con una fragmentación que impide una entrada de alta probabilidad. Ninguno de los candidatos, a pesar de sus scores técnicos, logra superar el filtro de riesgo del comité debido a la falta de profundidad en el libro de órdenes y la inestabilidad macroeconómica, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado presenta una divergencia estructural severa y falta de profundidad en el libro de órdenes. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65 y Bids >= 55%) exigidos por el comité para mitigar el riesgo de pérdida en un entorno de pánico minorista.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -23,8 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "SKHYBUSDT",
-      "score": 65
+      "symbol": "JTOUSDT",
+      "score": 75
     }
   ]
 }
