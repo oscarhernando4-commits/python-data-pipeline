@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-04 09:20:18",
+  "timestamp": "2026-08-04 09:22:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos que cumplan con los criterios de alta convicción (Score >= 65) y soporte de liquidez necesarios. Ante el entorno de estrés sistémico y la falta de confirmación institucional, la decisión estratégica es mantener la liquidez en USDT para evitar pérdidas por 'falling knives'.",
+  "reasoning": "El mercado presenta una estructura de liquidación forzada y falta de convicción institucional. Ninguno de los candidatos cumple con el umbral mínimo de Score 65 ni con la confirmación de soporte en el libro de órdenes, por lo que la estrategia más rentable es la inacción para evitar el riesgo de slippage y volatilidad bajista.",
   "top_candidates": [
     {
       "symbol": "HBARUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "JSTUSDT",
       "score": 60
     },
     {
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "EPICUSDT",
+      "symbol": "NILUSDT",
       "score": 60
     },
     {
       "symbol": "SUNUSDT",
       "score": 60
+    },
+    {
+      "symbol": "HFTUSDT",
+      "score": 50
     }
   ]
 }
