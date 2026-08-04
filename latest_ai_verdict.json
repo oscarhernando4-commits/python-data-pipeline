@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-04 09:08:20",
+  "timestamp": "2026-08-04 09:10:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos que cumplan con el umbral mínimo de Score A+ (>= 65) ni con la profundidad de mercado necesaria para mitigar el riesgo de slippage en este entorno de alta fragilidad. Se prioriza la preservación del capital sobre la especulación en activos de baja profundidad.",
+  "reasoning": "El comité ha determinado por unanimidad que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. Ningún activo presenta un Score Técnico superior a 65 con soporte de liquidez confirmado, por lo que se prioriza la preservación del capital en USDT hasta que el entorno macro mejore.",
   "top_candidates": [
     {
       "symbol": "BCHUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "ATOMUSDT",
       "score": 70
     },
     {
@@ -15,16 +19,12 @@
       "score": 70
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "JSTUSDT",
       "score": 60
     },
     {
       "symbol": "SUNUSDT",
       "score": 60
-    },
-    {
-      "symbol": "ETHFIUSDT",
-      "score": 55
     }
   ]
 }
