@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-04 11:52:16",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 45,
-  "reasoning": "A pesar de que varios activos poseen un score técnico de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y la alta volatilidad en el sentimiento de mercado impiden la ejecución de una orden de compra bajo los estándares de seguridad del comité.",
+  "timestamp": "2026-08-04 11:54:18",
+  "selected_symbol": "TSLABUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "TSLABUSDT es el único activo que supera el umbral de convicción A+ (Score 85) con un volumen de entrada institucional significativo, permitiendo una operación de alta probabilidad mientras el resto del mercado purga posiciones débiles.",
   "top_candidates": [
     {
+      "symbol": "TSLABUSDT",
+      "score": 85
+    },
+    {
       "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
-      "score": 75
-    },
-    {
       "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "UNIUSDT",
       "score": 75
     }
   ]
