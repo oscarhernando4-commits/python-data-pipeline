@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-04 11:32:14",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 45,
-  "reasoning": "A pesar de que algunos activos como LTCUSDT presentan un score técnico de 85, la falta de confirmación en el libro de órdenes (dominancia de bids < 55%) y el entorno de pánico extremo (Fear & Greed 25) impiden la ejecución de una orden de compra bajo los estándares de riesgo A+ del comité.",
+  "timestamp": "2026-08-04 11:34:17",
+  "selected_symbol": "XAUTUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "Tras deliberar, el comité ha decidido ejecutar una posición de compra en XAUTUSDT debido a su alta puntuación técnica (85/100), su pertenencia al sector RWA (líder en rotación de capital) y su comportamiento como activo de refugio frente al miedo extremo del mercado. Se aplicará un Trailing Stop ATR dinámico al alcanzar +2.0% para proteger el capital y maximizar beneficios.",
   "top_candidates": [
     {
-      "symbol": "LTCUSDT",
+      "symbol": "XAUTUSDT",
       "score": 85
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "PAXGUSDT",
       "score": 75
     }
   ]
