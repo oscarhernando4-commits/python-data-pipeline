@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-04 23:52:19",
+  "timestamp": "2026-08-04 23:54:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada por pánico sin señales de acumulación institucional. Ningún candidato cumple con el umbral de calidad A+ requerido por el comité, por lo que la estrategia de preservación de capital dicta mantenerse en efectivo (USDT) hasta que la estructura de mercado muestre una divergencia alcista clara y un aumento en la profundidad de los bids.",
+  "reasoning": "El mercado presenta una configuración de capitulación sistémica con scores técnicos insuficientes y falta de convicción institucional. Siguiendo la Regla de Oro #1, al no existir candidatos con Score >= 65, la decisión obligatoria es mantener la liquidez en USDT para evitar pérdidas por 'falling knives'.",
   "top_candidates": [
+    {
+      "symbol": "BANKUSDT",
+      "score": 60
+    },
     {
       "symbol": "GIGGLEUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
+      "symbol": "STOUSDT",
+      "score": 60
+    },
+    {
       "symbol": "DRAMBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "BFUSDUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "NEXOUSDT",
       "score": 60
     }
   ]
