@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 15:52:24",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia entre el sentimiento de pánico y la falta de soporte institucional real en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ requerido por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una señal de confirmación más robusta.",
+  "timestamp": "2026-08-04 15:54:23",
+  "selected_symbol": "SHIBUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "El comité ha determinado que, a pesar del miedo extremo en el mercado, SHIBUSDT destaca por su fortaleza relativa y score técnico superior. Se prioriza la ejecución de scalping de alta frecuencia con gestión de riesgo estricta, evitando activos con scores inferiores a 65 para prevenir pérdidas por distribución institucional.",
   "top_candidates": [
+    {
+      "symbol": "SHIBUSDT",
+      "score": 85
+    },
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     },
     {
       "symbol": "TAOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
