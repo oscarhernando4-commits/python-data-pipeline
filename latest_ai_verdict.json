@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-04 08:22:21",
+  "timestamp": "2026-08-04 08:24:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una contracción sistémica de liquidez y una correlación bajista predominante. Ningún activo cumple con los criterios de alta convicción (Score >= 65) exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar la exposición a 'cuchillos cayendo'.",
+  "reasoning": "El mercado se encuentra en un estado de estancamiento sistémico con sesgo bajista. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT) hasta que las condiciones macro y técnicas mejoren.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "BFUSDUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ETCUSDT",
       "score": 60
     },
     {
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "JSTUSDT",
       "score": 60
     },
     {
-      "symbol": "BFUSDUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ETCUSDT",
+      "symbol": "EPICUSDT",
       "score": 60
     }
   ]
