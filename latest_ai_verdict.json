@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-04 22:48:22",
+  "timestamp": "2026-08-04 22:50:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad estructural. Ninguno de los activos analizados alcanza el umbral de seguridad (Score >= 65) ni cuenta con el respaldo de liquidez necesario en el libro de órdenes. Se prioriza la preservación del capital sobre la especulación en un entorno de pánico.",
+  "reasoning": "El mercado presenta una presión de venta sistémica y falta de liquidez de soporte. Ninguno de los candidatos cumple con el requisito de Score Técnico >= 65 ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la estrategia institucional es mantener la posición en efectivo.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "WLFIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "JSTUSDT",
       "score": 60
     },
     {
@@ -23,7 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "JSTUSDT",
+      "score": 60
+    },
+    {
       "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "INJUSDT",
       "score": 60
     }
   ]

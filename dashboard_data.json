@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 22:48:22",
+  "updated_at": "2026-08-04 22:50:26",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad estructural. Ninguno de los activos analizados alcanza el umbral de seguridad (Score >= 65) ni cuenta con el respaldo de liquidez necesario en el libro de órdenes. Se prioriza la preservación del capital sobre la especulación en un entorno de pánico."
+    "reasoning": "El mercado presenta una presión de venta sistémica y falta de liquidez de soporte. Ninguno de los candidatos cumple con el requisito de Score Técnico >= 65 ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la estrategia institucional es mantener la posición en efectivo."
   }
 }
