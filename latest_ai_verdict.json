@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 07:42:21",
+  "timestamp": "2026-08-04 07:44:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de capitulación sistémica con scores técnicos insuficientes y falta de soporte en el libro de órdenes. Ningún candidato cumple con los criterios de convicción A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital en efectivo.",
+  "reasoning": "Tras la deliberación unánime, el comité ha determinado que el mercado presenta un riesgo sistémico inaceptable. Ningún activo cumple con los criterios de alta convicción (Score >= 65) y la falta de profundidad en el libro de órdenes, sumada a la fragilidad macroeconómica, obliga a mantener una posición de liquidez total (HOLD) para evitar la exposición a 'cuchillos cayendo'.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
       "score": 70
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 60
+      "symbol": "STXUSDT",
+      "score": 70
     },
     {
       "symbol": "GRAMUSDT",
       "score": 60
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "ENAUSDT",
       "score": 60
     },
     {
-      "symbol": "NVDABUSDT",
+      "symbol": "FETUSDT",
       "score": 60
     }
   ]
