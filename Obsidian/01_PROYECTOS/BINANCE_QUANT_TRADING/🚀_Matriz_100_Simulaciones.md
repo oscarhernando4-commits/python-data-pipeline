@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-04 02:22:22
+date: 2026-08-04 02:24:20
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $20.05 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-04 02:22:22`
+> ⏱️ **Última Actualización:** `2026-08-04 02:24:20`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00409216 BNB` (`~$2.42 USD`)
@@ -90,26 +90,26 @@ date: 2026-08-04 02:22:22
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-021** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-022** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-023** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-024** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-025** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-026** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-027** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-028** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-029** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-030** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-031** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-032** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-033** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-034** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-035** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-036** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-037** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-038** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-039** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
-| **SIM-040** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🔵 En Curso` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-021** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-022** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-023** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-024** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-025** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-026** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-027** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-028** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-029** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-030** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-031** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-032** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-033** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-034** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-035** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-036** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-037** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-038** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-039** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
+| **SIM-040** | **AVAXUSDT** | `#11` | `2W/9L` | 26-08-04<br>01:44 | `🛡️ Protegida (BE)` | **`$94.85`** (`-$5.15`) | 🔵 En Vivo |
 
 ---
 
