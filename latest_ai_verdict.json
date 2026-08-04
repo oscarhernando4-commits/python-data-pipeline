@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 18:20:20",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 45,
-  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, el mercado carece de la confirmación de volumen necesaria y de una dominancia clara en el libro de órdenes. El comité ha decidido priorizar la protección del capital (Regla #1) ante la incertidumbre del entorno de 'Extreme Fear' y la falta de una estructura de mercado definida.",
+  "timestamp": "2026-08-04 18:22:22",
+  "selected_symbol": "GNOUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "Tras deliberar, el comité identifica a GNOUSDT como el activo con mayor fortaleza técnica (Score 85) y potencial de divergencia alcista frente al miedo minorista, cumpliendo con los requisitos de riesgo y sectorialidad para una ejecución de compra controlada.",
   "top_candidates": [
+    {
+      "symbol": "GNOUSDT",
+      "score": 85
+    },
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "XRPUSDT",
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
       "symbol": "SUIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ENAUSDT",
       "score": 75
     }
   ]
