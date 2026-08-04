@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 06:00:23",
+  "updated_at": "2026-08-04 06:02:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de alta volatilidad y desconfianza institucional. Ninguno de los candidatos cumple con el umbral de seguridad (Score >= 65 y Bids > 55%) exigido por el comité para mitigar el riesgo de 'falling knives' o trampas de valor. Se prioriza la preservación del capital sobre la ejecución especulativa."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado presenta una divergencia estructural que aumenta el riesgo de pérdidas, por lo que la estrategia óptima es la preservación de capital mediante el modo HOLD."
   }
 }
