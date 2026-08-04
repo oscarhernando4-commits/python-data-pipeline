@@ -1,12 +1,26 @@
 {
-  "DCRUSDT": [
+  "GNOUSDT": [
     {
-      "timestamp": "2026-08-04 20:40:12",
-      "price": 13.34,
-      "score": 75,
-      "rsi": 51.93,
+      "timestamp": "2026-08-04 20:42:14",
+      "price": 104.02,
+      "score": 15,
+      "rsi": 47.56,
       "macd": "Neutral",
-      "volume_surge": 2.16,
+      "volume_surge": 0.4,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ]
+}],
+  "TOWNSUSDT": [
+    {
+      "timestamp": "2026-08-04 20:42:14",
+      "price": 0.00223,
+      "score": 45,
+      "rsi": 51.07,
+      "macd": "Neutral",
+      "volume_surge": 0.72,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

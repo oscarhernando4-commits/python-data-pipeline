@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 20:40:25",
+  "timestamp": "2026-08-04 20:42:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de pánico extremo con una estructura técnica inestable y falta de soporte institucional en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%), por lo que la estrategia institucional es mantener la liquidez en stablecoins para evitar pérdidas innecesarias en un entorno de alta incertidumbre.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y confirmación de tendencia). La volatilidad actual y la debilidad en el libro de órdenes sugieren que el mercado aún no ha encontrado un suelo firme, por lo que la estrategia de preservación de capital es la única opción viable.",
   "top_candidates": [
     {
       "symbol": "APTUSDT",
       "score": 85
     },
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TIAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SEIUSDT",
-      "score": 75
-    },
-    {
       "symbol": "OPUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "SUIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XRPUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "NEARUSDT",
       "score": 75
     }
   ]
