@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-04 06:38:18",
+  "timestamp": "2026-08-04 06:40:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una correlación bajista masiva y una debilidad sistémica extrema. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital en liquidez (USDT) para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "El mercado se encuentra en una fase de distribución forzada por pánico con una debilidad sistémica generalizada; ningún activo cumple con los requisitos de alta convicción (Score >= 65) establecidos por el comité, por lo que se prioriza la protección del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
-      "symbol": "LTCUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "SKYUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "FETUSDT",
+      "symbol": "ALGOUSDT",
       "score": 60
     },
     {
@@ -25,6 +17,14 @@
     {
       "symbol": "JTOUSDT",
       "score": 60
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "XPLUSDT",
+      "score": 55
     }
   ]
 }
