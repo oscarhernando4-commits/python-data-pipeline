@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-04 07:12:28",
+  "timestamp": "2026-08-04 07:14:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de alta incertidumbre y debilidad generalizada. Ninguno de los candidatos analizados cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de soporte institucional en el libro de órdenes, por lo que la decisión estratégica es mantener la liquidez en USDT para evitar pérdidas por 'cuchillos cayendo'.",
+  "reasoning": "El comité ha determinado que el mercado se encuentra en una fase de estrés sistémico severo. Ningún activo cumple con los criterios de alta convicción (Score >= 65) ni con la solidez de libro de órdenes necesaria para mitigar el riesgo de 'cuchillos cayendo'. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez y alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PAXGUSDT",
       "score": 60
     },
     {
@@ -23,7 +19,11 @@
       "score": 55
     },
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "SOXLBUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "BICOUSDT",
       "score": 50
     }
   ]
