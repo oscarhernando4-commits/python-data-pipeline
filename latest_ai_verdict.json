@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-04 15:54:23",
-  "selected_symbol": "SHIBUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "El comité ha determinado que, a pesar del miedo extremo en el mercado, SHIBUSDT destaca por su fortaleza relativa y score técnico superior. Se prioriza la ejecución de scalping de alta frecuencia con gestión de riesgo estricta, evitando activos con scores inferiores a 65 para prevenir pérdidas por distribución institucional.",
+  "timestamp": "2026-08-04 15:56:23",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "SHIBUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "XPLUSDT",
       "score": 85
     },
     {
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
       "score": 75
     },
     {
