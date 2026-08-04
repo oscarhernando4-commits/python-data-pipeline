@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-04 03:36:29",
+  "timestamp": "2026-08-04 03:38:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de ballenas). El mercado se encuentra en un estado de 'Extreme Fear' con una tendencia neutral, lo que aumenta la probabilidad de pérdidas. Se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
   "top_candidates": [
     {
-      "symbol": "BCHUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "HBARUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
