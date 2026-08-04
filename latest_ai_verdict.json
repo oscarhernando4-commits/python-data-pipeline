@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-04 08:10:21",
+  "timestamp": "2026-08-04 08:12:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 con soporte de libro de órdenes claro). El mercado presenta una configuración de distribución forzada donde la preservación de capital es la prioridad absoluta, por lo que se ha decidido no ejecutar ninguna operación.",
+  "reasoning": "El mercado presenta una estructura de alta incertidumbre y capitulación sistémica. Ninguno de los candidatos cumple con los criterios estrictos de convicción A+ exigidos por el comité, por lo que la decisión unánime es mantener la liquidez en USDT para evitar pérdidas en un entorno de alta volatilidad y baja convicción.",
   "top_candidates": [
-    {
-      "symbol": "TRXUSDT",
-      "score": 70
-    },
     {
       "symbol": "PAXGUSDT",
       "score": 70
     },
     {
-      "symbol": "NVDABUSDT",
+      "symbol": "JSTUSDT",
       "score": 70
     },
     {
       "symbol": "APTUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "NVDABUSDT",
       "score": 70
     },
     {
