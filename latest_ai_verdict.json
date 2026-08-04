@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-04 02:50:21",
+  "timestamp": "2026-08-04 02:52:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que ADAUSDT posee un score técnico de 85, el comité ha decidido no ejecutar ninguna operación. La falta de dominancia clara en el libro de órdenes (50% Bids), sumada al entorno de 'Extreme Fear' y la alta tasa de fallos en trades recientes bajo condiciones de mercado neutral, no cumplen con los criterios de convicción A+ exigidos por el Chief Risk Officer. Se prioriza la preservación del capital sobre la especulación en un mercado sin dirección clara.",
+  "reasoning": "A pesar de tener candidatos con scores técnicos altos, el mercado carece de la profundidad de soporte necesaria (Bids > 55%) y el entorno de pánico extremo (Fear & Greed 25) aumenta el riesgo de 'falling knives'. Se prioriza la preservación del capital hasta que el mercado muestre una estructura de acumulación más robusta.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ERAUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "BFUSDUSDT",
       "score": 85
     },
     {
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "HBARUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     }
   ]
