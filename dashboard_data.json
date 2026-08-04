@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 22:10:19",
+  "updated_at": "2026-08-04 22:12:22",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta un entorno de alta incertidumbre y capitulación. Ninguno de los candidatos analizados ofrece una convicción A+ con soporte de libro de órdenes verificado, por lo que la estrategia institucional es mantener la liquidez en USDT para evitar pérdidas por volatilidad no confirmada."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 combinado con una dominancia de Bids > 55%). El mercado se encuentra en una fase de alta incertidumbre y baja profundidad, por lo que la estrategia institucional es mantener la liquidez en USDT para evitar el riesgo de 'falling knives'."
   }
 }
