@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-04 10:50:14",
+  "timestamp": "2026-08-04 10:52:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos teóricos, la falta de profundidad en el libro de órdenes y el entorno de pánico extremo invalidan la ejecución de compras. Se prioriza la preservación del capital (Regla #1) hasta que el mercado muestre una estructura de acumulación institucional confirmada.",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%) en un entorno de mercado de 'Extreme Fear'. Se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
-      "score": 75
+      "symbol": "AEROUSDT",
+      "score": 85
     },
     {
       "symbol": "WLDUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AVAXUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ONDOUSDT",
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AVAXUSDT",
       "score": 75
     }
   ]
