@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 00:28:20",
+  "timestamp": "2026-08-04 00:30:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada y una falta de profundidad en el libro de órdenes. Ningún candidato cumple con los criterios estrictos de riesgo A+ establecidos por el comité, por lo que la preservación del capital es la prioridad absoluta.",
+  "reasoning": "El mercado presenta una estructura de distribución forzada y falta de convicción compradora. Ningún activo cumple con los criterios de riesgo A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital mediante el mantenimiento de la posición en liquidez (USDT).",
   "top_candidates": [
     {
-      "symbol": "WAXPUSDT",
-      "score": 80
+      "symbol": "AVAXUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "WLDUSDT",
+      "score": 60
     },
     {
       "symbol": "WLFIUSDT",
-      "score": 70
+      "score": 60
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ETHFIUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "EULUSDT",
+      "symbol": "FILUSDT",
       "score": 60
     }
   ]
