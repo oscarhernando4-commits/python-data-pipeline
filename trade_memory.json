@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 674,
-    "wins": 224,
+    "total_trades": 694,
+    "wins": 244,
     "losses": 450,
-    "win_rate_pct": 33.23,
-    "total_pnl_usd": 86.0423054545454
+    "win_rate_pct": 35.16,
+    "total_pnl_usd": 229.64230545454552
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -45,7 +45,8 @@
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on EPICUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BCHUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BTCUSDT)",
-      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on WAXPUSDT)"
+      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on WAXPUSDT)",
+      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BICOUSDT)"
     ]
   },
   "history": [
@@ -10954,6 +10955,346 @@
       "context": {
         "score": 15,
         "rsi_15m": 38.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-061",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 7 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-062",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-063",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-064",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-065",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-066",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-067",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 7 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-068",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-069",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-071",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-072",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-073",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-074",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-075",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-076",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-077",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-078",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-079",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 00:22:25",
+      "account_id": "SIM-080",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01784,
+      "exit_price": 0.01663,
+      "pnl_usd": 7.18,
+      "result": "WIN",
+      "notes": "Win on BICOUSDT (+$7.18 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.23,
         "macro_trend_4h": "NEUTRAL"
       }
     }
