@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 03:24:23",
+  "updated_at": "2026-08-04 03:26:24",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "A pesar de tener candidatos con Score 75, ninguno cumple con la Regla #3 (Bids > 55%) ni con la confirmación de convicción A+ exigida por el CRO. El mercado se encuentra en una zona de alta volatilidad y pánico, por lo que la estrategia de preservación de capital dicta mantenerse en liquidez total (HOLD) hasta que las condiciones de riesgo mejoren."
+    "reasoning": "A pesar de identificar activos con scores técnicos de 75, la ausencia de muros de soporte en el libro de órdenes (Bids < 55%) y el entorno de 'Extreme Fear' invalidan la entrada. El comité ha decidido mantener la liquidez en USDT para evitar la exposición a una posible purga de altcoins."
   }
 }
