@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 11:34:17",
+  "timestamp": "2026-08-04 11:36:14",
   "selected_symbol": "XAUTUSDT",
   "action": "BUY_LONG",
   "approved": true,
-  "confidence": 75,
-  "reasoning": "Tras deliberar, el comité ha decidido ejecutar una posición de compra en XAUTUSDT debido a su alta puntuación técnica (85/100), su pertenencia al sector RWA (líder en rotación de capital) y su comportamiento como activo de refugio frente al miedo extremo del mercado. Se aplicará un Trailing Stop ATR dinámico al alcanzar +2.0% para proteger el capital y maximizar beneficios.",
+  "confidence": 82,
+  "reasoning": "El comité ha decidido ejecutar una posición en XAUTUSDT debido a su alta puntuación técnica (85/100), su pertenencia al sector líder de refugio (RWA/Metales) y su volumen de compra institucional, cumpliendo estrictamente con la política de no operar activos con score inferior a 65.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
       "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
