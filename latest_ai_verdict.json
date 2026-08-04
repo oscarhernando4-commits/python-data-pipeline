@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 07:48:20",
+  "timestamp": "2026-08-04 07:50:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y el sentimiento de miedo extremo sugieren que el riesgo de una trampa de liquidez es demasiado elevado para una ejecución segura.",
+  "reasoning": "A pesar de que varios activos tienen un score técnico de 75, el entorno de 'Extreme Fear' y la falta de dominancia compradora en el libro de órdenes (50% neutral) impiden alcanzar la convicción A+ necesaria. El comité decide mantener la liquidez en USDT para evitar el riesgo de 'trampas de valor' y posibles caídas en cascada.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -19,7 +19,7 @@
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
