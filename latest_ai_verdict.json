@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-04 09:04:21",
+  "timestamp": "2026-08-04 09:06:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno de mercado actual es hostil y carece de activos con la fuerza relativa necesaria para cumplir con nuestros estrictos criterios de riesgo A+. Ningún candidato supera el umbral de score de 65, por lo que la decisión institucional es mantener la liquidez en espera de una configuración de alta probabilidad.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación y alta incertidumbre. Ninguno de los activos analizados cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de soporte institucional en el libro de órdenes, por lo que la decisión institucional es no operar y proteger el capital.",
   "top_candidates": [
     {
+      "symbol": "BCHUSDT",
+      "score": 70
+    },
+    {
       "symbol": "QNTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "JSTUSDT",
       "score": 60
     },
     {
@@ -17,14 +25,6 @@
     {
       "symbol": "NVDABUSDT",
       "score": 55
-    },
-    {
-      "symbol": "ALLOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "VANRYUSDT",
-      "score": 50
     }
   ]
 }
