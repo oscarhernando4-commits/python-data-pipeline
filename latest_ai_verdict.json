@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-04 02:38:21",
-  "selected_symbol": "RENDERUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "Tras deliberar, el comité ha determinado que RENDERUSDT es el activo con mayor fortaleza relativa y narrativa institucional. A pesar del pánico generalizado, su score de 85 y su pertenencia al sector de IA justifican una entrada táctica, siempre bajo la protección de un estricto control de riesgo y Trailing Stop.",
+  "timestamp": "2026-08-04 02:40:19",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El comité ha decidido unánimemente mantener la liquidez en USDT. A pesar de que varios activos presentan scores técnicos de 85, la ausencia de muros de soporte institucionales (Bids < 55%) y el entorno de 'Miedo Extremo' invalidan la entrada bajo nuestra estricta política de gestión de riesgo A+.",
   "top_candidates": [
     {
-      "symbol": "RENDERUSDT",
+      "symbol": "SOLUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "PAXGUSDT",
       "score": 85
     },
     {
@@ -15,16 +19,12 @@
       "score": 85
     },
     {
-      "symbol": "BTCUSDT",
-      "score": 75
+      "symbol": "RENDERUSDT",
+      "score": 85
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 75
+      "symbol": "KITEUSDT",
+      "score": 85
     }
   ]
 }
