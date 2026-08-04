@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-04 12:04:27",
+  "timestamp": "2026-08-04 12:06:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia crítica entre el pánico extremo y la resiliencia técnica selectiva. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%) exigido por el comité, por lo que la estrategia de preservación de capital dicta una posición de espera (HOLD).",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "TAOUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
       "symbol": "PAXGUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ALGOUSDT",
       "score": 75
     }
   ]
