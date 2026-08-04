@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 13:36:26",
+  "updated_at": "2026-08-04 13:38:22",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "LINKUSDT",
     "action": "BUY_LONG",
-    "confidence": 75,
+    "confidence": 72,
     "approved": true,
-    "reasoning": "LINKUSDT es el único candidato que cumple con el umbral de score A+ (100/100) y pertenece al sector RWA, el cual es el foco de la rotación de capital institucional. A pesar del pánico generalizado, la divergencia de acumulación y el volumen sugieren una oportunidad de entrada técnica con riesgo controlado."
+    "reasoning": "Tras deliberar, el comité ha seleccionado a LINKUSDT debido a su score técnico de 100/100 y su pertenencia al sector RWA, que actualmente absorbe la liquidez institucional. Se prioriza la seguridad del capital mediante la ejecución de un Trailing Stop dinámico, evitando activos de baja capitalización o con scores inferiores a 65."
   }
 }
