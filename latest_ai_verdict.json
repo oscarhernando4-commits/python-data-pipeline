@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 02:58:20",
+  "timestamp": "2026-08-04 03:00:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos decentes, ninguno cumple con el umbral de convicción A+ requerido por el Chief Risk Officer. La falta de dominancia clara en el libro de órdenes y la volatilidad del entorno macro sugieren que la preservación del capital es la estrategia óptima en este momento.",
+  "reasoning": "El mercado se encuentra en un estado de pánico extremo con una falta de convicción institucional clara en los libros de órdenes. Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 65% ni con una estructura técnica que minimice el riesgo de 'falling knives', por lo que la decisión prudente es preservar el capital en efectivo.",
   "top_candidates": [
     {
-      "symbol": "BFUSDUSDT",
-      "score": 85
+      "symbol": "BCHUSDT",
+      "score": 75
     },
     {
       "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "HBARUSDT",
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 75
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "ATOMUSDT",
       "score": 75
     }
   ]
