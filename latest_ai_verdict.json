@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 04:06:18",
-  "selected_symbol": "TIAUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "TIAUSDT es el único candidato que cumple con el umbral de score técnico (85/100) y pertenece al sector de infraestructura, mostrando una divergencia alcista frente al pánico del mercado. La ejecución será quirúrgica, priorizando la protección del capital mediante un Trailing Stop dinámico.",
+  "timestamp": "2026-08-04 04:08:20",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%) en un entorno de mercado marcado por el miedo extremo y la falta de soporte institucional, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "TIAUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ALLOUSDT",
+      "symbol": "NEARUSDT",
       "score": 75
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 75
     },
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "JUPUSDT",
       "score": 75
     }
   ]
