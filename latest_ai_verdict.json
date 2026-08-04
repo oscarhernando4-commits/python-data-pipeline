@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-04 05:08:19",
+  "timestamp": "2026-08-04 05:10:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una dicotomía estructural y un sentimiento de miedo extremo que, sumado a la falta de dominancia clara en el libro de órdenes (Bids 50%), no cumple con los criterios de alta convicción exigidos por el comité para una ejecución segura.",
+  "reasoning": "El mercado se encuentra en una fase de pánico extremo con una rotación de capital defensiva. Ninguno de los candidatos seleccionados presenta una dominancia de Bids superior al 55% ni una confirmación de volumen institucional que cumpla con los estándares de seguridad del comité. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "ENAUSDT",
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "SOXLBUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "VIRTUALUSDT",
+      "symbol": "CRVUSDT",
       "score": 75
     },
     {
-      "symbol": "CRVUSDT",
+      "symbol": "VIRTUALUSDT",
       "score": 75
     }
   ]
