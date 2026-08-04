@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 11:44:17",
-  "selected_symbol": "XAUTUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 78,
-  "reasoning": "El mercado se encuentra en una fase de purga selectiva donde el capital institucional está migrando hacia activos tangibles. XAUT destaca por su alto score técnico (85) y su pertenencia al sector RWA, cumpliendo con todos los criterios de convicción A+ del comité para una entrada Long protegida.",
+  "timestamp": "2026-08-04 11:46:16",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Ningún activo cumple con los criterios estrictos de convicción A+ exigidos por el comité. La falta de dominancia en el libro de órdenes y la incertidumbre macro sugieren que el riesgo de 'falling knife' es demasiado elevado para una ejecución en este momento.",
   "top_candidates": [
-    {
-      "symbol": "XAUTUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ALGOUSDT",
-      "score": 85
-    },
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 75
     }
   ]
