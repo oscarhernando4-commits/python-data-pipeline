@@ -1,23 +1,11 @@
 {
-  "timestamp": "2026-08-04 00:44:26",
+  "timestamp": "2026-08-04 00:46:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que las condiciones actuales del mercado, marcadas por un sentimiento de 'Extreme Fear' y la falta de soporte institucional en el libro de órdenes, no cumplen con los criterios de seguridad A+ exigidos. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado presenta un entorno de capitulación con falta de profundidad en el libro de órdenes y scores técnicos mediocres. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital en espera de una mejora en las condiciones macro y técnicas.",
   "top_candidates": [
-    {
-      "symbol": "ASTERUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ESPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SEIUSDT",
-      "score": 60
-    },
     {
       "symbol": "OPENUSDT",
       "score": 60
@@ -25,6 +13,18 @@
     {
       "symbol": "BFUSDUSDT",
       "score": 60
+    },
+    {
+      "symbol": "FFUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "EULUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "RIFUSDT",
+      "score": 50
     }
   ]
 }
