@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 20:16:23",
+  "timestamp": "2026-08-04 20:18:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica generalizada sin activos que cumplan con los criterios de alta convicción (Score >= 65). La ausencia de soporte institucional en el libro de órdenes y la debilidad sistémica dictan una política de preservación de capital (HOLD) hasta que se observe una acumulación real.",
+  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (Score A+ >= 65). La ausencia de soporte institucional y la alta probabilidad de pérdidas basada en el análisis histórico de los simuladores dictan una postura de espera y protección de capital.",
   "top_candidates": [
+    {
+      "symbol": "ETCUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "LUNCUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "HFTUSDT",
+      "score": 50
+    },
     {
       "symbol": "DEXEUSDT",
       "score": 50
-    },
-    {
-      "symbol": "RIFUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ACXUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "UNIUSDT",
-      "score": 45
-    },
-    {
-      "symbol": "MIRAUSDT",
-      "score": 45
     }
   ]
 }
