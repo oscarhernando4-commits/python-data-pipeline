@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-04 15:06:23",
+  "timestamp": "2026-08-04 15:08:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de 'Extreme Fear' con una alta correlación bajista y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' en un mercado en fase de distribución forzada.",
+  "reasoning": "El mercado se encuentra en un estado de 'Acumulación Defensiva' con alta incertidumbre. Ninguno de los candidatos cumple con el requisito de soporte institucional (Bids > 55%) ni con la convicción A+ necesaria para superar el veto de riesgo, por lo que la decisión es proteger el capital y esperar mejores condiciones.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
       "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
       "score": 75
     }
   ]
