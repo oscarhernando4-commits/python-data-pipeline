@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 22:46:24",
+  "timestamp": "2026-08-04 22:48:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con buen score técnico, el entorno de 'Miedo Extremo' y la falta de muros de soporte en el libro de órdenes no justifican el despliegue de capital, priorizando la preservación del mismo sobre la especulación.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad estructural. Ninguno de los activos analizados alcanza el umbral de seguridad (Score >= 65) ni cuenta con el respaldo de liquidez necesario en el libro de órdenes. Se prioriza la preservación del capital sobre la especulación en un entorno de pánico.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
-      "score": 75
+      "score": 60
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "score": 60
     },
     {
       "symbol": "JSTUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "POLUSDT",
-      "score": 75
+      "symbol": "ICPUSDT",
+      "score": 60
     },
     {
       "symbol": "ATOMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "APTUSDT",
-      "score": 75
+      "score": 60
     }
   ]
 }
