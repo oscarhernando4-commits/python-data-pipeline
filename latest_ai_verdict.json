@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-04 06:50:18",
+  "timestamp": "2026-08-04 06:52:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con scores de fuerza relativa insuficientes (máximo 60/100) y una ausencia total de muros de soporte en el libro de órdenes. Siguiendo la Regla de Oro #1, se prioriza la preservación del capital sobre la especulación en activos de baja convicción.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. Ningún activo presenta un score técnico superior a 60, y la falta de profundidad en el libro de órdenes junto con el pánico institucional desaconseja cualquier exposición al riesgo. Se prioriza la preservación del capital hasta que surja una oportunidad con convicción A+.",
   "top_candidates": [
+    {
+      "symbol": "SKYUSDT",
+      "score": 60
+    },
     {
       "symbol": "OPENUSDT",
       "score": 60
@@ -13,10 +17,6 @@
     {
       "symbol": "JTOUSDT",
       "score": 60
-    },
-    {
-      "symbol": "HOMEUSDT",
-      "score": 50
     },
     {
       "symbol": "BANKUSDT",
