@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-04 13:50:17",
+  "timestamp": "2026-08-04 13:52:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad estructural generalizada y una falta de liquidez confirmada en el libro de órdenes. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65 con confirmación de volumen y soporte), por lo que la estrategia de supervivencia dicta mantener la posición en efectivo para evitar el riesgo de capitulación.",
+  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El entorno de 'Extreme Fear' y la falta de profundidad histórica en los activos con mejor score técnico aumentan el riesgo de 'falling knives', por lo que el comité decide mantener la liquidez en espera de una estructura de mercado más robusta.",
   "top_candidates": [
     {
+      "symbol": "TAOUSDT",
+      "score": 85
+    },
+    {
       "symbol": "BCHUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "PAXGUSDT",
       "score": 85
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "JSTUSDT",
       "score": 75
     }
   ]
