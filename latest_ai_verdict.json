@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-04 20:22:25",
+  "timestamp": "2026-08-04 20:24:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad estructural generalizada y una falta de fuerza relativa en todos los activos analizados. Dado que ningún candidato alcanza el score técnico de 65 requerido por el protocolo de riesgo, el comité ha decidido mantener la liquidez en USDT para evitar la exposición a 'cuchillos cayendo' durante esta fase de liquidación institucional.",
+  "reasoning": "El mercado carece de liderazgo alcista y presenta una capitulación técnica generalizada. Ningún activo cumple con los criterios de riesgo A+ exigidos por el comité, por lo que se mantiene la posición en efectivo para evitar la exposición a 'cuchillos cayendo'.",
   "top_candidates": [
     {
-      "symbol": "APTUSDT",
+      "symbol": "VETUSDT",
+      "score": 80
+    },
+    {
+      "symbol": "ETCUSDT",
       "score": 55
     },
     {
@@ -15,16 +19,12 @@
       "score": 55
     },
     {
-      "symbol": "LUNCUSDT",
+      "symbol": "APTUSDT",
       "score": 55
     },
     {
-      "symbol": "ADAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "BICOUSDT",
-      "score": 50
+      "symbol": "LUNCUSDT",
+      "score": 55
     }
   ]
 }
