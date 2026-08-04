@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 19:50:22",
+  "timestamp": "2026-08-04 19:52:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de candidatos con scores técnicos aceptables, ninguno cumple con el umbral de seguridad en el libro de órdenes ni con la confirmación de volumen institucional necesaria para mitigar el riesgo en un entorno de 'Miedo Extremo'. Se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado se encuentra en una fase de acumulación selectiva con alta incertidumbre. Ninguno de los candidatos cumple con el requisito de soporte de ballenas (Bids > 55%) ni con una estructura técnica que supere el umbral de riesgo A+ exigido por el comité, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "XRPUSDT",
@@ -15,16 +15,16 @@
       "score": 75
     },
     {
+      "symbol": "JUPUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DRAMBUSDT",
+      "score": 75
+    },
+    {
       "symbol": "NEXOUSDT",
       "score": 75
-    },
-    {
-      "symbol": "GNOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOXSBUSDT",
-      "score": 70
     }
   ]
 }
