@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-04 21:00:28",
+  "timestamp": "2026-08-04 21:02:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'Extreme Fear' con una estructura técnica lateral y falta de profundidad en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ exigido por el comité, por lo que la decisión estratégica es preservar el 100% de la liquidez en espera de una configuración de mayor calidad.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de libro de órdenes > 55% Bids). El mercado se encuentra en una fase de alta incertidumbre y volatilidad, por lo que la estrategia institucional es mantener la liquidez en USDT hasta que aparezca una oportunidad con mayor probabilidad estadística de éxito.",
   "top_candidates": [
     {
+      "symbol": "ICPUSDT",
+      "score": 85
+    },
+    {
       "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "HOMEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOTUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "TOWNSUSDT",
+      "symbol": "APTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TIAUSDT",
       "score": 75
     }
   ]

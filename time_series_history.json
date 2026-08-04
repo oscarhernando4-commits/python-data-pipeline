@@ -1,12 +1,38 @@
 {
-  "DCRUSDT": [
+  "JTOUSDT": [
     {
-      "timestamp": "2026-08-04 21:00:15",
-      "price": 13.46,
-      "score": 65,
-      "rsi": 64.65,
+      "timestamp": "2026-08-04 21:02:13",
+      "price": 0.5094,
+      "score": 45,
+      "rsi": 55.83,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.02,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-04 21:02:13",
+      "price": 2.83e-06,
+      "score": 60,
+      "rsi": 54.6,
+      "macd": "Neutral",
+      "volume_surge": 0.15,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "REUSDT": [
+    {
+      "timestamp": "2026-08-04 21:02:13",
+      "price": 0.3942,
+      "score": 65,
+      "rsi": 54.87,
+      "macd": "Neutral",
+      "volume_surge": 0.11,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
