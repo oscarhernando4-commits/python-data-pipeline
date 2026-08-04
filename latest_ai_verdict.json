@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 03:44:21",
+  "timestamp": "2026-08-04 03:46:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad exigido por el comité (Bids >= 55% y Score >= 65). Se prioriza la preservación del capital ante la incertidumbre del mercado.",
+  "reasoning": "Tras deliberar, el comité ha determinado que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (Score >= 65 y soporte de ballenas > 55%). La alta tasa de pérdidas en trades recientes bajo condiciones similares obliga a mantener la liquidez en USDT para evitar riesgos innecesarios.",
   "top_candidates": [
     {
-      "symbol": "HBARUSDT",
-      "score": 85
+      "symbol": "BCHUSDT",
+      "score": 75
     },
     {
       "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "JUPUSDT",
       "score": 75
     }
   ]
