@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 21:20:23",
+  "timestamp": "2026-08-04 21:22:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de Score Técnico A+ (>= 65) combinado con una dominancia de Bids superior al 55% y un volumen de entrada institucional significativo, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una correlación bajista predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para una ejecución segura, por lo que se prioriza la protección del capital sobre la operativa especulativa.",
   "top_candidates": [
+    {
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "score": 75
+    },
     {
       "symbol": "VANRYUSDT",
       "score": 75
     },
     {
-      "symbol": "GIGGLEUSDT",
-      "score": 65
+      "symbol": "PEPEUSDT",
+      "score": 75
     },
     {
-      "symbol": "WLFIUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "QNTUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "MORPHOUSDT",
-      "score": 65
+      "symbol": "POLUSDT",
+      "score": 75
     }
   ]
 }
