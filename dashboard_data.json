@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 02:02:30",
+  "updated_at": "2026-08-04 02:04:32",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La falta de profundidad en el libro de órdenes y el entorno de pánico extremo sugieren una alta probabilidad de trampa de liquidez, por lo que el comité decide proteger el capital y esperar una mejor configuración técnica."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score A+ (>= 65) combinado con una dominancia de Bids superior al 55%, lo que obliga a mantener la posición en efectivo para evitar riesgos innecesarios en un entorno de alta volatilidad."
   }
 }
