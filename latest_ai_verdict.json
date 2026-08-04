@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-04 00:30:25",
+  "timestamp": "2026-08-04 00:32:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de distribución forzada y falta de convicción compradora. Ningún activo cumple con los criterios de riesgo A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital mediante el mantenimiento de la posición en liquidez (USDT).",
+  "reasoning": "El mercado presenta un entorno de alta peligrosidad con una capitulación técnica generalizada. Ninguno de los candidatos analizados alcanza el Score Técnico de 65 requerido por el Comité, y la falta de soporte institucional en el libro de órdenes invalida cualquier intento de entrada. Se mantiene la posición en efectivo para evitar el riesgo de 'cuchillos cayendo'.",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "FILUSDT",
+      "symbol": "ASTERUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TUTUSDT",
       "score": 60
     }
   ]
