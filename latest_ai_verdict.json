@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-04 15:18:28",
+  "timestamp": "2026-08-04 15:20:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno de mercado actual, caracterizado por un 'Miedo Extremo' y una alta volatilidad sin una tendencia clara, no cumple con los criterios de alta convicción (Score A+) necesarios para ejecutar una operación de compra. Se ha decidido mantener la liquidez en USDT para evitar la exposición a 'cuchillos cayendo' y proteger el capital institucional.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de candidatos con scores técnicos de 65-75, ninguno cumple con la confirmación de volumen institucional ni con la profundidad de libro de órdenes necesaria para una operación A+. Ante la alta fragilidad del mercado y la prevalencia de pérdidas en las simulaciones recientes, la decisión estratégica es proteger el capital y esperar una estructura de mercado más clara.",
   "top_candidates": [
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
     {
       "symbol": "TSLABUSDT",
       "score": 75
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "ERAUSDT",
+      "score": 70
+    },
+    {
       "symbol": "BICOUSDT",
       "score": 65
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "PEPEUSDT",
       "score": 65
     }
   ]
