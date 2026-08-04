@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 16:12:23",
-  "selected_symbol": "XAUTUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 85,
-  "reasoning": "Tras deliberar, el comité ha determinado que, ante el pánico extremo del mercado, la única estrategia viable es la rotación hacia activos de refugio con fundamentos sólidos. XAUTUSDT es el único candidato que cumple con el umbral de score A+ (85) y pertenece al sector dominante de RWA, minimizando el riesgo de exposición a altcoins en caída libre.",
+  "timestamp": "2026-08-04 16:14:18",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y confirmación de tendencia). El mercado presenta un riesgo elevado de 'trampa de toros' y falta de volumen institucional, por lo que la decisión del comité es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "SHIBUSDT",
       "score": 85
     },
     {
-      "symbol": "GIGGLEUSDT",
-      "score": 75
+      "symbol": "XAUTUSDT",
+      "score": 85
     },
     {
       "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "GIGGLEUSDT",
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "MIRAUSDT",
       "score": 75
     }
   ]
