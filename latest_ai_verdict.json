@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 14:16:21",
+  "timestamp": "2026-08-04 14:18:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación institucional con alta correlación negativa. Ningún activo cumple con los criterios estrictos de convicción A+ y soporte de liquidez necesarios para una ejecución segura, por lo que la estrategia óptima es la preservación de capital.",
+  "reasoning": "El mercado presenta una capitulación sistémica sin activos con fuerza relativa (Score < 65). Siguiendo la Regla de Oro #1 y el Veto del Agente 6, se mantiene la liquidez en USDT para evitar 'cuchillos cayendo' y proteger el capital institucional.",
   "top_candidates": [
     {
-      "symbol": "JSTUSDT",
-      "score": 75
+      "symbol": "ERAUSDT",
+      "score": 55
     },
     {
       "symbol": "PAXGUSDT",
-      "score": 75
+      "score": 55
     },
     {
       "symbol": "LDOUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "SOXSBUSDT",
-      "score": 70
+      "score": 55
     },
     {
       "symbol": "PUMPUSDT",
-      "score": 65
+      "score": 50
+    },
+    {
+      "symbol": "TUTUSDT",
+      "score": 50
     }
   ]
 }
