@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-08-04 17:28:22",
+  "timestamp": "2026-08-04 17:30:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo en un entorno de mercado de pánico extremo. Se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "A pesar de que varios activos tienen un score técnico de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y la persistencia del miedo extremo en el mercado macroeconómico invalidan la convicción A+ necesaria para ejecutar una orden de compra, priorizando la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "ETHUSDT",
-      "score": 85
+      "symbol": "BTCUSDT",
+      "score": 75
     },
     {
-      "symbol": "DASHUSDT",
-      "score": 85
+      "symbol": "BCHUSDT",
+      "score": 75
     },
     {
       "symbol": "SUIUSDT",
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     }
   ]
