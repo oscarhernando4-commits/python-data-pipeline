@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-04 09:18:21",
+  "timestamp": "2026-08-04 09:20:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que no existen activos que cumplan con los criterios de calidad A+ exigidos por el Chief Risk Officer. La volatilidad actual y la falta de profundidad en el libro de órdenes sugieren que cualquier entrada sería una trampa de liquidez, por lo que se mantiene la posición en efectivo.",
+  "reasoning": "El comité ha determinado que no existen activos que cumplan con los criterios de alta convicción (Score >= 65) y soporte de liquidez necesarios. Ante el entorno de estrés sistémico y la falta de confirmación institucional, la decisión estratégica es mantener la liquidez en USDT para evitar pérdidas por 'falling knives'.",
   "top_candidates": [
     {
       "symbol": "HBARUSDT",
       "score": 60
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "JSTUSDT",
       "score": 60
     },
     {
-      "symbol": "NILUSDT",
+      "symbol": "QNTUSDT",
       "score": 60
     },
     {
