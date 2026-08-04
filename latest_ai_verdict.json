@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-04 02:00:33",
+  "timestamp": "2026-08-04 02:02:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La falta de profundidad en el libro de órdenes y el entorno de pánico extremo sugieren una alta probabilidad de trampa de liquidez, por lo que el comité decide proteger el capital y esperar una mejor configuración técnica.",
   "top_candidates": [
+    {
+      "symbol": "CAKEUSDT",
+      "score": 85
+    },
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "TRXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SHIBUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     }
   ]
