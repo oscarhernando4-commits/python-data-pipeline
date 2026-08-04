@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 15:32:22",
+  "timestamp": "2026-08-04 15:34:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con alta incertidumbre. Ninguno de los candidatos cumple con los requisitos estrictos de Score A+ y soporte de liquidez institucional, por lo que la estrategia óptima es mantener la posición en efectivo (HOLD) hasta que las condiciones macro mejoren.",
+  "reasoning": "Debido a la ausencia de activos con un Score Técnico superior a 65 y la prevalencia de un entorno de mercado bajista con alta correlación negativa, el comité ha decidido no ejecutar ninguna operación para evitar el riesgo de 'cuchillos cayendo' y preservar el capital institucional.",
   "top_candidates": [
     {
-      "symbol": "TSLABUSDT",
-      "score": 75
-    },
-    {
       "symbol": "DCRUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ERAUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 65
+      "score": 60
     },
     {
       "symbol": "BICOUSDT",
-      "score": 65
+      "score": 50
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "HFTUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "DOTUSDT",
+      "score": 50
     }
   ]
 }
