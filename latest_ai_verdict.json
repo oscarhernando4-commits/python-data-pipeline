@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-04 03:12:20",
+  "timestamp": "2026-08-04 03:14:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con un sentimiento de miedo extremo. Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 55% ni con una estructura técnica que garantice una alta probabilidad de éxito, por lo que la decisión institucional es mantener la liquidez en espera de una señal clara.",
+  "confidence": 45,
+  "reasoning": "A pesar de tener candidatos con buenos scores técnicos, ninguno cumple con el requisito de dominancia de Bids (>= 55%) ni con la confirmación de soporte de ballenas necesaria para una ejecución A+. Se prioriza la preservación del capital ante la incertidumbre del mercado.",
   "top_candidates": [
-    {
-      "symbol": "HBARUSDT",
-      "score": 85
-    },
     {
       "symbol": "ADAUSDT",
       "score": 85
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "HBARUSDT",
       "score": 85
     },
     {
-      "symbol": "ERAUSDT",
+      "symbol": "KITEUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {
