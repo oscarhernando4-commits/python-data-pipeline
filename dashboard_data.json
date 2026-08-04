@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 19:18:24",
+  "updated_at": "2026-08-04 19:20:27",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ningún activo cumple con el umbral estricto de Score Técnico >= 65 combinado con una dominancia de Bids Compradores >= 55%. La estrategia de preservación de capital dicta mantenerse en liquidez total hasta que el mercado muestre una divergencia alcista clara y confirmada por volumen institucional."
+    "reasoning": "Ningún activo cumple con los criterios estrictos de convicción A+ exigidos por el comité. La falta de dominancia en el libro de órdenes (Bids > 55%) y la alta volatilidad en un entorno de miedo extremo hacen que la estrategia más prudente sea mantener la liquidez en USDT hasta que el mercado muestre una estructura de soporte más sólida."
   }
 }
