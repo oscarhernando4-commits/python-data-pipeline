@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 04:16:22",
+  "timestamp": "2026-08-04 04:18:30",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de tener candidatos con un score técnico de 75, ninguno cumple con la regla de oro de soporte en el libro de órdenes (Bids > 55%) ni con una confirmación de volumen institucional necesaria para mitigar el riesgo en un entorno de 'Miedo Extremo'. Se prioriza la preservación del capital sobre la especulación en un mercado de alta fragilidad.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
+    {
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
     {
       "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "SKYUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "JUPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SEIUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     }
   ]
