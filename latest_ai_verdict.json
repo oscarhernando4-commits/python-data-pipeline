@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 11:58:18",
-  "selected_symbol": "PAXGUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "Tras analizar el mercado, el comité ha determinado que la rotación de capital favorece a los activos de refugio (RWA). PAXGUSDT es el candidato con mayor convicción técnica y sectorial, cumpliendo con los criterios de riesgo A+ mientras el resto del mercado muestra debilidad o ruido especulativo.",
+  "timestamp": "2026-08-04 12:00:19",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
-      "score": 85
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
     },
     {
       "symbol": "DOGEUSDT",
-      "score": 85
+      "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
-      "score": 85
+      "symbol": "AVAXUSDT",
+      "score": 75
     },
     {
-      "symbol": "TRUMPUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "TSLABUSDT",
-      "score": 85
+      "symbol": "LTCUSDT",
+      "score": 75
     }
   ]
 }
