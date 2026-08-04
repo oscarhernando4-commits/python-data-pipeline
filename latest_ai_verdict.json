@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-04 16:28:22",
+  "timestamp": "2026-08-04 16:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, la falta de dominancia clara en el libro de órdenes y el entorno de 'Miedo Extremo' no cumplen con los criterios de seguridad A+ exigidos por el departamento de riesgo. Se prioriza la preservación del capital sobre la especulación en un mercado de alta incertidumbre.",
+  "reasoning": "El mercado presenta una divergencia crítica y falta de convicción institucional. Ningún activo cumple con el requisito de soporte de libro de órdenes (Bids > 55%) ni con la confirmación de volumen necesaria para mitigar el riesgo en un entorno de pánico extremo.",
   "top_candidates": [
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PAXGUSDT",
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {
@@ -23,8 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "ASTERUSDT",
       "score": 75
+    },
+    {
+      "symbol": "TSLABUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUIUSDT",
+      "score": 65
     }
   ]
 }
