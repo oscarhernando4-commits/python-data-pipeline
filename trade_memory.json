@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 934,
-    "wins": 264,
+    "total_trades": 954,
+    "wins": 284,
     "losses": 670,
-    "win_rate_pct": 28.27,
-    "total_pnl_usd": 61.24230545454549
+    "win_rate_pct": 29.77,
+    "total_pnl_usd": 143.04230545454556
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -47,7 +47,8 @@
       "BOOST LONG when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BTCUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on WAXPUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BICOUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GRAMUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GRAMUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TUTUSDT)"
     ]
   },
   "history": [
@@ -15376,6 +15377,346 @@
       "context": {
         "score": 25,
         "rsi_15m": 81.07,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-021",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-022",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-023",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-024",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-025",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-026",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-030",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-031",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-032",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-033",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-034",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-035",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-036",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-037",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-038",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-04 06:28:19",
+      "account_id": "SIM-040",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02331,
+      "exit_price": 0.02226,
+      "pnl_usd": 4.09,
+      "result": "WIN",
+      "notes": "Win on TUTUSDT (+$4.09 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.48,
         "macro_trend_4h": "NEUTRAL"
       }
     }
