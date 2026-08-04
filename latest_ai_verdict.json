@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-04 17:08:20",
-  "selected_symbol": "NVDABUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "Tras deliberar, el comité identifica a NVDABUSDT como el único activo con la fuerza técnica y el respaldo sectorial necesarios para superar el entorno de pánico extremo, cumpliendo con el umbral de score A+ requerido para una entrada de alta convicción.",
+  "timestamp": "2026-08-04 17:10:24",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos de 75, el libro de órdenes no muestra la dominancia de compradores necesaria (>= 55%) y el entorno de pánico extremo (25) aumenta el riesgo de trampas alcistas, incumpliendo la regla de oro de no perder dinero.",
   "top_candidates": [
     {
-      "symbol": "NVDABUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SUIUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PAXGUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     }
   ]
