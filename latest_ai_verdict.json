@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 12:56:24",
+  "timestamp": "2026-08-04 12:58:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de pánico extremo con una falta de soporte institucional claro en el libro de órdenes. Ningún activo cumple con los criterios de convicción A+ (Score >= 65 y confianza >= 70%) necesarios para mitigar el riesgo de pérdida, por lo que la estrategia óptima es mantener la liquidez en USDT.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de datos históricos sólidos en los activos analizados, sumado al entorno de 'Extreme Fear', dictaminan una postura de espera (HOLD) para proteger el capital.",
   "top_candidates": [
-    {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
     {
       "symbol": "TRXUSDT",
       "score": 75
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "NEXOUSDT",
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
-      "score": 75
+      "symbol": "FETUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "BICOUSDT",
+      "score": 65
     }
   ]
 }
