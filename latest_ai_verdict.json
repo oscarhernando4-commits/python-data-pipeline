@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-04 11:10:21",
-  "selected_symbol": "WLDUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "WLDUSDT es el único candidato que cumple con el umbral de score técnico (85) y pertenece al sector de mayor rotación de capital (AI & Big Data). La estrategia se basa en la absorción de liquidez institucional detectada por el volumen inorgánico, manteniendo un control de riesgo estricto mediante un Trailing Stop dinámico para mitigar el riesgo sistémico del 'Extreme Fear'.",
+  "timestamp": "2026-08-04 11:12:28",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El comité ha determinado que, a pesar de la fuerza relativa de AERO y otros activos, el entorno de mercado de pánico extremo y la falta de soporte claro en el libro de órdenes no cumplen con los criterios de seguridad exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en un mercado de alta incertidumbre.",
   "top_candidates": [
     {
-      "symbol": "WLDUSDT",
+      "symbol": "AEROUSDT",
       "score": 85
     },
     {
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
       "symbol": "LINKUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZECUSDT",
       "score": 75
     }
   ]
