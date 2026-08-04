@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-04 23:18:20",
+  "timestamp": "2026-08-04 23:20:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, el entorno de 'Miedo Extremo' y la falta de dominancia clara en el libro de órdenes (50% Bids) no cumplen con el umbral de convicción A+ exigido por el Comité. Se prioriza la preservación del capital sobre la especulación en un mercado fragmentado.",
+  "reasoning": "El mercado se encuentra en una trampa de liquidez con alta volatilidad y falta de soporte claro en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de miedo extremo.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
-      "score": 75
+      "score": 85
     },
     {
       "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SKHYBUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SKHYBUSDT",
       "score": 75
     }
   ]
