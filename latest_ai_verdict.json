@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-04 00:52:22",
+  "timestamp": "2026-08-04 00:54:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos que cumplan con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de volumen institucional necesaria. El entorno macroeconómico de alta toxicidad y la falta de soporte en el libro de órdenes obligan a una postura defensiva de preservación de capital.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. Ningún activo presenta un score técnico superior a 65 ni una estructura de liquidez favorable, por lo que se mantiene la posición en efectivo para evitar el riesgo de 'falling knives' en un entorno de pánico institucional.",
   "top_candidates": [
-    {
-      "symbol": "AVAXUSDT",
-      "score": 60
-    },
     {
       "symbol": "WLFIUSDT",
       "score": 60
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "HOLOUSDT",
+      "score": 60
+    },
+    {
       "symbol": "FFUSDT",
       "score": 60
     },
     {
-      "symbol": "EULUSDT",
+      "symbol": "BANKUSDT",
       "score": 50
     }
   ]
