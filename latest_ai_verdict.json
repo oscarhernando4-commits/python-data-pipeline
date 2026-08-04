@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-04 00:26:21",
+  "timestamp": "2026-08-04 00:28:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una vulnerabilidad sistémica alta con una correlación bajista sincronizada. Ninguno de los candidatos cumple con los requisitos estrictos de riesgo y convicción del comité, por lo que la orden es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada y una falta de profundidad en el libro de órdenes. Ningún candidato cumple con los criterios estrictos de riesgo A+ establecidos por el comité, por lo que la preservación del capital es la prioridad absoluta.",
   "top_candidates": [
+    {
+      "symbol": "WAXPUSDT",
+      "score": 80
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "score": 70
+    },
     {
       "symbol": "ASTERUSDT",
       "score": 70
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "EULUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "AVAXUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XAUTUSDT",
       "score": 60
     }
   ]
