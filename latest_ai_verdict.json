@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 13:28:16",
-  "selected_symbol": "XAUTUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "Ante el pánico generalizado, el comité ha decidido ejecutar una entrada de alta convicción en XAUTUSDT, aprovechando su estatus de refugio en el sector RWA y su excelente puntuación técnica, evitando los activos de baja capitalización que actúan como combustible de liquidación.",
+  "timestamp": "2026-08-04 13:30:19",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El mercado presenta una fragmentación masiva y una capitulación selectiva. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) requerido por el comité para mitigar el riesgo de pérdida de capital en un entorno de pánico extremo.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "PAXGUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "NBISBUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ENAUSDT",
+      "symbol": "BICOUSDT",
       "score": 75
     },
     {
-      "symbol": "BICOUSDT",
+      "symbol": "WLDUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "JSTUSDT",
       "score": 75
     }
   ]
