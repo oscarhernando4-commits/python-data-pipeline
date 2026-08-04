@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-04 16:04:21",
+  "timestamp": "2026-08-04 16:06:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos de 75, no existe una confirmación de liquidez en el libro de órdenes ni un volumen institucional que respalde una entrada segura bajo condiciones de Miedo Extremo.",
+  "reasoning": "El mercado se encuentra en un estado de 'Extreme Fear' con una segmentación agresiva. Ninguno de los candidatos presenta una configuración técnica A+ (Score >= 65 con confirmación de volumen y soporte de ballenas) que justifique el riesgo de capital. Se prioriza la preservación de la liquidez ante la alta probabilidad de trampas de valor en las altcoins actuales.",
   "top_candidates": [
     {
       "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AEROUSDT",
+      "symbol": "FILUSDT",
       "score": 75
     },
     {
       "symbol": "TSLABUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AEROUSDT",
       "score": 75
     },
     {
