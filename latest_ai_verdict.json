@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-04 18:04:19",
+  "timestamp": "2026-08-04 18:06:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras deliberar, el comité concluye que, a pesar de los scores técnicos de 75, la falta de dominancia clara en el libro de órdenes y el entorno de pánico extremo invalidan la ejecución de cualquier trade, priorizando la preservación del capital sobre la especulación.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65, Bids >= 55%, y confirmación de tendencia). El mercado se encuentra en una fase de alta volatilidad y baja predictibilidad, por lo que la estrategia institucional es mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
-      "symbol": "ETHUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "SUIUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "ENAUSDT",
       "score": 75
     },
     {
-      "symbol": "AEROUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     }
   ]
