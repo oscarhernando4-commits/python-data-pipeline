@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-04 16:58:24",
+  "timestamp": "2026-08-04 17:00:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia crítica y un sentimiento de miedo extremo que, sumado a la falta de muros de soporte sólidos en el libro de órdenes, hace que ninguna oportunidad cumpla con los estándares de seguridad A+ del comité.",
+  "reasoning": "El comité ha determinado que, a pesar de haber candidatos con scores técnicos de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y el entorno de 'Miedo Extremo' invalidan la entrada. Se prioriza la preservación del capital sobre la especulación en un mercado sin convicción estructural.",
   "top_candidates": [
-    {
-      "symbol": "TRXUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 75
-    },
     {
       "symbol": "LTCUSDT",
       "score": 75
@@ -23,7 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "TRXUSDT",
+      "score": 75
+    },
+    {
       "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUNUSDT",
       "score": 75
     }
   ]
