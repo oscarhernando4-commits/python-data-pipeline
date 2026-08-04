@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 08:20:20",
+  "updated_at": "2026-08-04 08:22:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que las condiciones actuales del mercado, caracterizadas por un pánico sistémico y la falta de activos con un score técnico superior a 65, no cumplen con los criterios de seguridad y rentabilidad exigidos para la ejecución de nuevas posiciones."
+    "reasoning": "El mercado presenta una contracción sistémica de liquidez y una correlación bajista predominante. Ningún activo cumple con los criterios de alta convicción (Score >= 65) exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar la exposición a 'cuchillos cayendo'."
   }
 }
