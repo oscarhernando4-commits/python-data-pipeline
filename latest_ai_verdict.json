@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 10:58:15",
+  "timestamp": "2026-08-04 11:00:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 con confirmación de soporte de ballenas y tendencia clara). El mercado se encuentra en una zona de alta incertidumbre y trampa de liquidez, por lo que la decisión institucional es mantenerse al margen para evitar pérdidas por volatilidad artificial.",
+  "confidence": 45,
+  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la ausencia de una dominancia clara en el libro de órdenes (Bids < 55%) y la alta volatilidad del entorno macro impiden alcanzar el umbral de convicción A+ exigido por el comité. Se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XPLUSDT",
       "score": 75
     }
   ]
