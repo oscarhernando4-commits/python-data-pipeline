@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-04 18:26:22",
-  "selected_symbol": "GNOUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "GNOUSDT es el único candidato que supera el umbral de Score 85/100, cumpliendo con los criterios de fortaleza institucional y rotación sectorial. A pesar del entorno de miedo extremo, la divergencia alcista de GNO justifica una entrada táctica con gestión de riesgo estricta.",
+  "timestamp": "2026-08-04 18:28:23",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "A pesar de que activos como SOL y SUI presentan scores técnicos elevados, la falta de confirmación en el libro de órdenes (bids < 55%) y la persistencia del pánico minorista (Fear & Greed 25) impiden la ejecución de una estrategia de compra. El comité ha decidido mantener la liquidez en espera de una estructura de mercado más definida y menos volátil.",
   "top_candidates": [
+    {
+      "symbol": "SOLUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "SUIUSDT",
+      "score": 85
+    },
     {
       "symbol": "GNOUSDT",
       "score": 85
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "XRPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BNBUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     }
   ]
