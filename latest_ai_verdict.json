@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 09:12:21",
+  "timestamp": "2026-08-04 09:14:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad generalizada y una falta de activos con fuerza relativa real. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de liquidez necesaria, por lo que la estrategia institucional es mantener la liquidez en efectivo para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "El mercado presenta un riesgo sistémico elevado y una falta de convicción técnica en los activos analizados. Ningún candidato cumple con los requisitos estrictos de Score A+ y soporte de liquidez, por lo que la decisión institucional es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "BCHUSDT",
@@ -15,16 +15,16 @@
       "score": 70
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "HBARUSDT",
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
-      "score": 55
+      "symbol": "JSTUSDT",
+      "score": 60
     },
     {
-      "symbol": "NVDABUSDT",
-      "score": 55
+      "symbol": "SUNUSDT",
+      "score": 60
     }
   ]
 }
