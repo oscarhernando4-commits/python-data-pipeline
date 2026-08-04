@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-04 19:06:22",
+  "timestamp": "2026-08-04 19:08:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de muros de compra institucionales obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). El mercado se encuentra en una fase de consolidación incierta donde la preservación del capital es la prioridad absoluta según las reglas del comité.",
   "top_candidates": [
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
     {
       "symbol": "ASTERUSDT",
       "score": 75
     },
     {
-      "symbol": "AEROUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "GNOUSDT",
+      "symbol": "APTUSDT",
       "score": 75
     },
     {
