@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 16:10:21",
+  "timestamp": "2026-08-04 16:12:23",
   "selected_symbol": "XAUTUSDT",
   "action": "BUY_LONG",
   "approved": true,
-  "confidence": 75,
-  "reasoning": "Ante un mercado en fase de capitulación selectiva y pánico extremo, la estrategia institucional se centra exclusivamente en la preservación de capital mediante la rotación hacia activos de valor real (RWA). XAUTUSDT es el único candidato que supera el umbral de Score 65, ofreciendo una cobertura defensiva frente a la debilidad técnica generalizada del resto de las altcoins.",
+  "confidence": 85,
+  "reasoning": "Tras deliberar, el comité ha determinado que, ante el pánico extremo del mercado, la única estrategia viable es la rotación hacia activos de refugio con fundamentos sólidos. XAUTUSDT es el único candidato que cumple con el umbral de score A+ (85) y pertenece al sector dominante de RWA, minimizando el riesgo de exposición a altcoins en caída libre.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
       "score": 85
     },
     {
+      "symbol": "GIGGLEUSDT",
+      "score": 75
+    },
+    {
       "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOTUSDT",
+      "symbol": "FETUSDT",
       "score": 75
     }
   ]
