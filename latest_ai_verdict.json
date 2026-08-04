@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-04 05:42:20",
+  "timestamp": "2026-08-04 05:44:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). El mercado presenta un entorno de pánico extremo y alta incertidumbre, por lo que la estrategia institucional es preservar el capital (HOLD) hasta que las condiciones de liquidez y soporte mejoren.",
+  "reasoning": "A pesar de que AAVE y STX presentan scores técnicos de 85, la ausencia de datos de profundidad en el libro de órdenes y el entorno de 'Extreme Fear' invalidan la convicción A+ requerida por el comité para ejecutar una compra, priorizando la preservación del capital sobre la especulación.",
   "top_candidates": [
+    {
+      "symbol": "XAUTUSDT",
+      "score": 85
+    },
     {
       "symbol": "AAVEUSDT",
       "score": 85
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ACEUSDT",
+      "symbol": "PAXGUSDT",
       "score": 75
     }
   ]
