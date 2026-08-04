@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-04 20:20:23",
+  "timestamp": "2026-08-04 20:22:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras el análisis exhaustivo de los 7 agentes, se concluye que no existe ningún activo que cumpla con los criterios de alta convicción (Score >= 65). El mercado presenta una inercia bajista y una falta de soporte institucional, lo que hace que cualquier posición larga sea de alto riesgo. Se prioriza la protección del capital sobre la operativa especulativa.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada y una falta de fuerza relativa en todos los activos analizados. Dado que ningún candidato alcanza el score técnico de 65 requerido por el protocolo de riesgo, el comité ha decidido mantener la liquidez en USDT para evitar la exposición a 'cuchillos cayendo' durante esta fase de liquidación institucional.",
   "top_candidates": [
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "APTUSDT",
       "score": 55
     },
     {
-      "symbol": "APTUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 55
     },
     {
@@ -19,11 +19,11 @@
       "score": 55
     },
     {
-      "symbol": "RIFUSDT",
+      "symbol": "ADAUSDT",
       "score": 50
     },
     {
-      "symbol": "ACXUSDT",
+      "symbol": "BICOUSDT",
       "score": 50
     }
   ]
