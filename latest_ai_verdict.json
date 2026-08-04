@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 02:28:23",
+  "timestamp": "2026-08-04 02:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos presenta una dominancia de Bids superior al 55% ni una estructura técnica que garantice una alta probabilidad de éxito bajo las reglas de riesgo A+. Se prioriza la preservación del capital ante la incertidumbre del mercado.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). El mercado presenta una alta volatilidad y riesgo de liquidación, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "NIGHTUSDT",
-      "score": 100
-    },
-    {
       "symbol": "SOLUSDT",
-      "score": 85
+      "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
-      "score": 85
+      "symbol": "TRXUSDT",
+      "score": 75
     },
     {
-      "symbol": "ERAUSDT",
-      "score": 85
+      "symbol": "TAOUSDT",
+      "score": 75
     },
     {
       "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "HBARUSDT",
       "score": 75
     }
   ]
