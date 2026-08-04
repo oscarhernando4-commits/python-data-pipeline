@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-04 09:00:23",
+  "timestamp": "2026-08-04 09:02:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 requerido por el Comité para una operación A+. La falta de profundidad en el libro de órdenes y la persistencia de la tendencia bajista obligan a una postura de preservación de capital (HOLD) hasta que aparezcan señales de acumulación institucional clara.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
+    {
+      "symbol": "ATOMUSDT",
+      "score": 60
+    },
     {
       "symbol": "QNTUSDT",
       "score": 60
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "HFTUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "TOWNSUSDT",
       "score": 50
     }
   ]
