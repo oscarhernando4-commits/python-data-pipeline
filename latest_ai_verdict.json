@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 20:44:25",
+  "timestamp": "2026-08-04 20:46:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta volatilidad y falta de dirección clara. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la protección del capital, por lo que la decisión institucional es mantener la posición en efectivo (HOLD) hasta que las condiciones de mercado mejoren.",
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos de 75, no existe una confirmación clara en el libro de órdenes ni un volumen institucional que mitigue el riesgo en un entorno de pánico extremo.",
   "top_candidates": [
     {
-      "symbol": "OPUSDT",
-      "score": 85
+      "symbol": "SOLUSDT",
+      "score": 75
     },
     {
       "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XRPUSDT",
-      "score": 75
-    },
-    {
       "symbol": "SUIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ICPUSDT",
       "score": 75
     }
   ]
