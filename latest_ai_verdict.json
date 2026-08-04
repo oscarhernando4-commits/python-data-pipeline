@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-04 23:20:22",
+  "timestamp": "2026-08-04 23:22:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una trampa de liquidez con alta volatilidad y falta de soporte claro en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de miedo extremo.",
+  "reasoning": "A pesar de que BTC y WLFI tienen scores técnicos altos, el mercado carece de la profundidad de liquidez necesaria y la confirmación de soporte institucional requerida por el comité. La alta volatilidad y el entorno de 'Extreme Fear' aumentan el riesgo de 'trampas de valor', por lo que se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 85
     },
     {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SKHYBUSDT",
-      "score": 75
+      "symbol": "WLFIUSDT",
+      "score": 85
     },
     {
       "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
