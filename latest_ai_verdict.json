@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 01:02:23",
+  "timestamp": "2026-08-04 01:04:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un entorno de estancamiento sistémico con sesgo bajista. Ninguno de los candidatos analizados cumple con el umbral de seguridad A+ (Score >= 65) ni con la profundidad de liquidez necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es mantener la posición en efectivo.",
+  "reasoning": "El mercado se encuentra en un estado de estancamiento sistémico con debilidad estructural generalizada. Ningún activo cumple con los criterios de alta convicción (Score >= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de capitulación.",
   "top_candidates": [
     {
-      "symbol": "AVAXUSDT",
-      "score": 60
+      "symbol": "FFUSDT",
+      "score": 70
     },
     {
       "symbol": "WLFIUSDT",
       "score": 60
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "FFUSDT",
+      "symbol": "ESPUSDT",
       "score": 60
     },
     {
       "symbol": "EULUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "MUBARAKUSDT",
       "score": 50
     }
   ]
