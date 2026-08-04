@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 14:14:24",
+  "timestamp": "2026-08-04 14:16:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación generalizada con un sentimiento de miedo extremo. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de liquidez y soporte de ballenas). Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación institucional con alta correlación negativa. Ningún activo cumple con los criterios estrictos de convicción A+ y soporte de liquidez necesarios para una ejecución segura, por lo que la estrategia óptima es la preservación de capital.",
   "top_candidates": [
     {
-      "symbol": "LINKUSDT",
-      "score": 100
-    },
-    {
-      "symbol": "SKYUSDT",
-      "score": 95
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SHIBUSDT",
+      "symbol": "JSTUSDT",
       "score": 75
     },
     {
       "symbol": "PAXGUSDT",
       "score": 75
+    },
+    {
+      "symbol": "LDOUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "SOXSBUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "score": 65
     }
   ]
 }
