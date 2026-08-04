@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-04 01:36:23",
+  "timestamp": "2026-08-04 01:38:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ exigido por el comité. La falta de dominancia clara en el libro de órdenes y la persistencia del miedo extremo en el mercado macro dictan una postura de preservación de capital (HOLD) para evitar pérdidas innecesarias en un entorno de alta volatilidad.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, ninguno de los candidatos cumple con el umbral de convicción A+ ni con la confirmación de liquidez necesaria en el libro de órdenes. Ante un entorno de pánico extremo y alta incertidumbre, la estrategia óptima es la preservación de capital (HOLD) hasta que el mercado ofrezca una señal de entrada con menor riesgo sistémico.",
   "top_candidates": [
     {
+      "symbol": "SKYUSDT",
+      "score": 85
+    },
+    {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PEPEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NEARUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "NEARUSDT",
       "score": 75
     }
   ]
