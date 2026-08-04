@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-04 17:44:24",
+  "timestamp": "2026-08-04 17:46:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral estricto de convicción A+ (Score >= 65 y Bids >= 55%) exigido por el comité. La alta volatilidad y la falta de soporte institucional en el libro de órdenes obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 55% ni con una estructura de mercado que minimice el riesgo de 'falling knives' en un entorno de pánico extremo.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "JSTUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "XPLUSDT",
       "score": 75
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 17:44:27",
+  "updated_at": "2026-08-04 17:46:21",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ningún activo cumple con el umbral estricto de convicción A+ (Score >= 65 y Bids >= 55%) exigido por el comité. La alta volatilidad y la falta de soporte institucional en el libro de órdenes obligan a mantener la posición en efectivo para evitar pérdidas innecesarias."
+    "reasoning": "Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 55% ni con una estructura de mercado que minimice el riesgo de 'falling knives' en un entorno de pánico extremo."
   }
 }
