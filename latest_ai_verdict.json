@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-04 23:46:21",
+  "timestamp": "2026-08-04 23:48:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad estructural extrema. Ninguno de los candidatos cumple con el umbral de Score Técnico >= 65 ni presenta una ventaja estadística clara en el libro de órdenes. La estrategia institucional prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado presenta un estancamiento sistémico y una debilidad estructural generalizada. Ningún activo cumple con el umbral mínimo de Score A+ (>= 65) requerido por el comité para garantizar la preservación del capital, por lo que se mantiene la posición en efectivo.",
   "top_candidates": [
     {
       "symbol": "MUBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ENAUSDT",
       "score": 60
     },
     {
@@ -23,8 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "SKHYBUSDT",
-      "score": 50
+      "symbol": "NBISBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "CRVUSDT",
+      "score": 55
     }
   ]
 }
