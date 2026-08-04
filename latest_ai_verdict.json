@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-04 12:22:18",
+  "timestamp": "2026-08-04 12:24:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una trampa de neutralidad con alta incertidumbre y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con los criterios estrictos de riesgo A+ del comité, por lo que la decisión unánime es mantener la liquidez en espera de una configuración de alta probabilidad.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, las condiciones de mercado actuales y la falta de profundidad en el libro de órdenes no cumplen con los estándares de seguridad exigidos por el protocolo de riesgo, por lo que se mantiene la liquidez en espera de una estructura más clara.",
   "top_candidates": [
     {
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
       "symbol": "TRXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "ETCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NBISBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUNUSDT",
       "score": 75
     }
   ]
