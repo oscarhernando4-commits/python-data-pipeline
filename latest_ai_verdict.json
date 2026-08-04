@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 11:42:17",
+  "timestamp": "2026-08-04 11:44:17",
   "selected_symbol": "XAUTUSDT",
   "action": "BUY_LONG",
   "approved": true,
-  "confidence": 72,
-  "reasoning": "XAUTUSDT es el único candidato que cumple con el umbral de convicción A+ (Score 85) y pertenece al sector de refugio dominante, lo que justifica una entrada estratégica en un entorno de mercado de miedo extremo.",
+  "confidence": 78,
+  "reasoning": "El mercado se encuentra en una fase de purga selectiva donde el capital institucional está migrando hacia activos tangibles. XAUT destaca por su alto score técnico (85) y su pertenencia al sector RWA, cumpliendo con todos los criterios de convicción A+ del comité para una entrada Long protegida.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
       "score": 85
     },
     {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PAXGUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ONDOUSDT",
-      "score": 75
-    },
-    {
       "symbol": "BCHUSDT",
-      "score": 70
+      "score": 85
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "score": 75
     }
   ]
 }
