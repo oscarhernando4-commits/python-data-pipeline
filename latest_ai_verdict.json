@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-04 19:14:22",
+  "timestamp": "2026-08-04 19:16:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que algunos activos presentan scores técnicos de 85, la ausencia de una dominancia clara en el libro de órdenes (Bids < 55%) y la alta volatilidad en un entorno de pánico extremo (Fear & Greed 25) impiden la ejecución de una orden de compra bajo los estándares de seguridad del comité.",
+  "reasoning": "El mercado se encuentra en un estado de pánico minorista con una estructura técnica inestable. Ningún activo cumple con los criterios estrictos de convicción A+ establecidos por el comité, por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT) para evitar 'cuchillos cayendo'.",
   "top_candidates": [
     {
-      "symbol": "ETHUSDT",
+      "symbol": "ETCUSDT",
       "score": 85
     },
     {
-      "symbol": "OPUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SUIUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "SUIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "NEXOUSDT",
       "score": 75
     }
   ]
