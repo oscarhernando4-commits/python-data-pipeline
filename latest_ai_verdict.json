@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 10:02:15",
+  "timestamp": "2026-08-04 10:04:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual presenta un riesgo sistémico elevado y una falta de convicción técnica en los activos analizados. Ningún candidato alcanza el umbral de Score 65 requerido por la política de riesgo, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
+  "reasoning": "El mercado se encuentra en un estado de estrés sistémico con una clara fuga de capital hacia stablecoins. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ (Score >= 65) requerido por el Comité para mitigar el riesgo de pérdida, por lo que la decisión institucional es mantener la liquidez en espera de una estabilización estructural.",
   "top_candidates": [
     {
       "symbol": "JSTUSDT",
@@ -15,11 +15,11 @@
       "score": 60
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "HBARUSDT",
       "score": 60
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "BFUSDUSDT",
       "score": 60
     },
     {
