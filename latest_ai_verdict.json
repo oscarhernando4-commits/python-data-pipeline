@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 04:26:19",
+  "timestamp": "2026-08-04 04:28:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de convicción A+ (Score >= 65 y soporte de libro de órdenes > 55%). Ante la incertidumbre macro y la falta de muros de soporte, la decisión institucional es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' observado en simulaciones pasadas.",
+  "reasoning": "A pesar de que JUPUSDT presenta un score técnico alto, la ausencia de dominancia en el libro de órdenes y el entorno de pánico extremo invalidan la ejecución bajo los estándares de riesgo A+ del comité.",
   "top_candidates": [
     {
       "symbol": "JUPUSDT",
       "score": 85
     },
     {
+      "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
       "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "SOXLBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BNBUSDT",
+      "symbol": "XRPUSDT",
       "score": 75
     }
   ]
