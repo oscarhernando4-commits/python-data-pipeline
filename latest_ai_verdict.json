@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 16:50:23",
+  "timestamp": "2026-08-04 16:52:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución selectiva y alta incertidumbre técnica. Ninguno de los candidatos cumple con el requisito de soporte de ballenas (Bids > 55%) ni con una confirmación de volumen institucional suficiente para mitigar el riesgo de 'trampa de liquidez' en un entorno de Miedo Extremo.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el Comité. La falta de dominancia en el libro de órdenes y la debilidad del volumen institucional en los activos seleccionados, sumado al entorno de 'Miedo Extremo', dictan una postura de preservación de capital (HOLD) para evitar 'falling knives'.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
@@ -15,11 +15,11 @@
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     },
     {
