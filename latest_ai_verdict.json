@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-04 21:06:43",
+  "timestamp": "2026-08-04 21:08:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "A pesar de que ICPUSDT presenta un score técnico elevado, la ausencia de soporte real en el libro de órdenes y el entorno de 'Miedo Extremo' global impiden la ejecución. El comité prioriza la preservación del capital sobre la especulación en un mercado sin una tendencia definida, optando por una postura de espera (HOLD) hasta que las condiciones de liquidez mejoren.",
   "top_candidates": [
     {
-      "symbol": "DOTUSDT",
+      "symbol": "ICPUSDT",
       "score": 85
     },
     {
       "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOTUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "APTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TIAUSDT",
       "score": 75
     }
   ]

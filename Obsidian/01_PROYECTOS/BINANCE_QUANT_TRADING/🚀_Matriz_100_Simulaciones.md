@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-04 21:06:43
+date: 2026-08-04 21:08:24
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $20.06 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-04 21:06:43`
+> ⏱️ **Última Actualización:** `2026-08-04 21:08:24`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00409216 BNB` (`~$2.43 USD`)
@@ -154,26 +154,26 @@ date: 2026-08-04 21:06:43
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-061** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-062** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-063** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-064** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-065** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-066** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-067** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-068** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-069** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-070** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-071** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-072** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-073** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-074** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-075** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-076** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-077** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-078** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-079** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
-| **SIM-080** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🔵 En Curso` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-061** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-062** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-063** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-064** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-065** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-066** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-067** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-068** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-069** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-070** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-071** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-072** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-073** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-074** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-075** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-076** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-077** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-078** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-079** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
+| **SIM-080** | **SOXLBUSDT** | `#25` | `5W/20L` | 26-08-04<br>21:04 | `🛡️ Protegida (BE)` | **`$98.11`** (`-$1.89`) | 🔵 En Vivo |
 
 ---
 
