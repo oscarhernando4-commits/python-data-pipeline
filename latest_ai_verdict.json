@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 13:32:15",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos elevados, la falta de soporte en el libro de órdenes y el entorno de 'Miedo Extremo' no cumplen con los criterios de seguridad A+ exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en un mercado de capitulación selectiva.",
+  "timestamp": "2026-08-04 13:34:17",
+  "selected_symbol": "LINKUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "LINKUSDT es seleccionado por su score técnico perfecto (100/100) y su pertenencia al sector RWA, el cual está recibiendo flujo de capital institucional en medio del pánico generalizado. La estrategia se basa en la resiliencia del activo frente a la purga de altcoins de baja capitalización, aplicando una gestión de riesgo estricta con Trailing Stop para maximizar beneficios y proteger el capital.",
   "top_candidates": [
+    {
+      "symbol": "LINKUSDT",
+      "score": 100
+    },
     {
       "symbol": "MSTRBUSDT",
       "score": 95
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 80
+      "symbol": "TAOUSDT",
+      "score": 85
     },
     {
-      "symbol": "SNXXBUSDT",
-      "score": 80
+      "symbol": "SUIUSDT",
+      "score": 85
     },
     {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BICOUSDT",
-      "score": 75
+      "symbol": "PAXGUSDT",
+      "score": 85
     }
   ]
 }
