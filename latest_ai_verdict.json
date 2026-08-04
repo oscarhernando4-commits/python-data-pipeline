@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 10:48:16",
+  "timestamp": "2026-08-04 10:50:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes y la inestabilidad macro global no cumplen con los criterios de alta convicción exigidos por el Chief Risk Officer para proteger el capital.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos teóricos, la falta de profundidad en el libro de órdenes y el entorno de pánico extremo invalidan la ejecución de compras. Se prioriza la preservación del capital (Regla #1) hasta que el mercado muestre una estructura de acumulación institucional confirmada.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ADAUSDT",
-      "score": 75
-    },
-    {
       "symbol": "AVAXUSDT",
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ONDOUSDT",
       "score": 75
     }
   ]
