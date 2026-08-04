@@ -1,12 +1,25 @@
 {
-  "CFXUSDT": [
+  "DCRUSDT": [
     {
-      "timestamp": "2026-08-04 19:36:12",
-      "price": 0.03989,
-      "score": 35,
-      "rsi": 68.76,
+      "timestamp": "2026-08-04 19:38:13",
+      "price": 13.31,
+      "score": 45,
+      "rsi": 46.55,
       "macd": "Neutral",
-      "volume_surge": 1.76,
+      "volume_surge": 0.22,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-04 19:38:13",
+      "price": 0.1356,
+      "score": 40,
+      "rsi": 45.44,
+      "macd": "Neutral",
+      "volume_surge": 4.54,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
