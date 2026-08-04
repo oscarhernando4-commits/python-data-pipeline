@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-04 18:46:22",
+  "timestamp": "2026-08-04 18:48:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de tener activos con score 75, la falta de dominancia clara en el libro de órdenes y la persistencia del pánico extremo en el mercado macro no cumplen con los criterios de seguridad A+ exigidos por el Chief Risk Officer.",
+  "reasoning": "El comité ha determinado que, a pesar de la resiliencia de ciertos activos, el entorno de mercado actual carece de la convicción institucional necesaria para una entrada segura. La falta de profundidad en el libro de órdenes y la alta probabilidad de 'mechas' de liquidación en un entorno de pánico extremo obligan a mantener la posición en efectivo para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
