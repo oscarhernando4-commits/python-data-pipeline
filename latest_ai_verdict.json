@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 22:16:20",
+  "timestamp": "2026-08-04 22:18:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de aversión al riesgo extremo con una falta de profundidad en el libro de órdenes. Ninguno de los candidatos cumple con los requisitos de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia institucional es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta un riesgo sistémico elevado con una falta de fortaleza técnica en todos los activos analizados. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65), por lo que el comité ha decidido mantener la posición en liquidez (USDT) para evitar pérdidas innecesarias en un entorno de alta volatilidad y pánico institucional.",
   "top_candidates": [
     {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 75
-    },
-    {
       "symbol": "POLUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "DCRUSDT",
-      "score": 75
+      "symbol": "VICUSDT",
+      "score": 50
     },
     {
       "symbol": "EULUSDT",
-      "score": 65
+      "score": 50
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "score": 50
     }
   ]
 }
