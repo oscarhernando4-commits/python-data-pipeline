@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 19:16:24",
+  "timestamp": "2026-08-04 19:18:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de pánico minorista con una estructura técnica inestable. Ningún activo cumple con los criterios estrictos de convicción A+ establecidos por el comité, por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT) para evitar 'cuchillos cayendo'.",
+  "reasoning": "Ningún activo cumple con el umbral estricto de Score Técnico >= 65 combinado con una dominancia de Bids Compradores >= 55%. La estrategia de preservación de capital dicta mantenerse en liquidez total hasta que el mercado muestre una divergencia alcista clara y confirmada por volumen institucional.",
   "top_candidates": [
     {
       "symbol": "ETCUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUIUSDT",
-      "score": 75
-    },
-    {
       "symbol": "NEXOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "OPUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ORDIUSDT",
       "score": 75
     }
   ]
