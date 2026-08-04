@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-04 17:24:26",
+  "timestamp": "2026-08-04 17:26:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de la existencia de candidatos con scores técnicos aceptables, ninguno cumple con los requisitos de profundidad de mercado y convicción institucional necesarios para garantizar la preservación del capital bajo la Regla #1.",
+  "reasoning": "Ningún activo cumple con el umbral de seguridad A+ exigido por el comité. La dominancia de Bids es insuficiente y el mercado global se encuentra en un estado de miedo extremo que no garantiza una reversión alcista inmediata, por lo que la estrategia óptima es preservar el capital.",
   "top_candidates": [
+    {
+      "symbol": "TAOUSDT",
+      "score": 85
+    },
     {
       "symbol": "DASHUSDT",
       "score": 85
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUIUSDT",
+      "symbol": "PAXGUSDT",
       "score": 75
     }
   ]
