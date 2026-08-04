@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-04 06:46:20",
+  "timestamp": "2026-08-04 06:48:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica sin activos que cumplan con los criterios de fuerza relativa o soporte institucional necesarios para una operación de alta probabilidad, por lo que la preservación del capital es la única estrategia válida.",
+  "reasoning": "El mercado presenta una estructura de riesgo sistémico elevado sin activos que cumplan con los criterios de calidad A+ (Score >= 65). La estrategia institucional es preservar el capital y esperar una estabilización del sentimiento global antes de buscar nuevas entradas.",
   "top_candidates": [
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "OPENUSDT",
       "score": 60
     },
     {
-      "symbol": "OPENUSDT",
+      "symbol": "JTOUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "ALLOUSDT",
+      "symbol": "HOMEUSDT",
       "score": 50
     }
   ]
