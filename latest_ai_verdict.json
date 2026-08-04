@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-04 00:48:20",
+  "timestamp": "2026-08-04 00:50:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con una falta total de convicción institucional. Ninguno de los candidatos cumple con el umbral mínimo de Score (65) ni con la profundidad de libro de órdenes necesaria para una ejecución segura. Se prioriza la preservación de capital sobre la especulación en activos de baja capitalización.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación y alta incertidumbre regulatoria. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital en liquidez.",
   "top_candidates": [
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "ASTERUSDT",
       "score": 60
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "EULUSDT",
+      "symbol": "OPENUSDT",
       "score": 50
     },
     {
-      "symbol": "HOMEUSDT",
+      "symbol": "NIGHTUSDT",
       "score": 50
     }
   ]
