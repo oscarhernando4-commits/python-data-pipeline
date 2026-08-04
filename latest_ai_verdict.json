@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-04 16:42:21",
-  "selected_symbol": "TRXUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "TRXUSDT es el único activo que cumple con los criterios de alta convicción (Score 85) y pertenece al sector de infraestructura, mostrando una resiliencia técnica superior en un entorno de mercado de miedo extremo.",
+  "timestamp": "2026-08-04 16:44:22",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un entorno de capitulación institucional con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de seguridad A+ ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "LTCUSDT",
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
@@ -25,6 +21,10 @@
     {
       "symbol": "JTOUSDT",
       "score": 75
+    },
+    {
+      "symbol": "TRXUSDT",
+      "score": 70
     }
   ]
 }
