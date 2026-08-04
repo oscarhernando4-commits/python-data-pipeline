@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 04:12:26",
+  "updated_at": "2026-08-04 04:14:29",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 45,
     "approved": false,
-    "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de la existencia de activos con scores técnicos aceptables, ninguno cumple con la regla de oro de soporte en el libro de órdenes (Bids > 55%) ni con la convicción A+ necesaria en un entorno de pánico extremo."
+    "reasoning": "A pesar de que TIA y NEAR presentan scores técnicos aceptables, el comité ha determinado que no existe una confluencia suficiente entre el libro de órdenes (bids < 65%) y la estabilidad del mercado para ejecutar una compra. Se prioriza la preservación del capital frente a la incertidumbre actual."
   }
 }
