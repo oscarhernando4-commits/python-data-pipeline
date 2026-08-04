@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 19:24:22",
-  "selected_symbol": "ETCUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "ETCUSDT es el único candidato que alcanza un score técnico de 85/100, superando el umbral de convicción A+ requerido por el comité. La divergencia entre el sentimiento de mercado y su fortaleza técnica sugiere una acumulación institucional, justificando una entrada de alta convicción con gestión de riesgo estricta.",
+  "timestamp": "2026-08-04 19:26:24",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital en el entorno actual de miedo extremo.",
   "top_candidates": [
     {
       "symbol": "ETCUSDT",
       "score": 85
     },
     {
-      "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
       "symbol": "EULUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ICPUSDT",
       "score": 75
     },
     {
       "symbol": "NEXOUSDT",
       "score": 75
+    },
+    {
+      "symbol": "SUNUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOXSBUSDT",
+      "score": 70
     }
   ]
 }
