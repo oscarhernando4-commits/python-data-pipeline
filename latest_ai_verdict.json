@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 16:52:22",
+  "timestamp": "2026-08-04 16:54:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el Comité. La falta de dominancia en el libro de órdenes y la debilidad del volumen institucional en los activos seleccionados, sumado al entorno de 'Miedo Extremo', dictan una postura de preservación de capital (HOLD) para evitar 'falling knives'.",
+  "reasoning": "El mercado presenta una fragilidad sistémica extrema con una correlación bajista predominante. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ (Score >= 65) requerido por el comité, y el libro de órdenes no muestra una dominancia compradora clara. Por lo tanto, se prioriza la preservación de capital sobre la operativa especulativa.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PAXGUSDT",
-      "score": 75
+      "symbol": "LTCUSDT",
+      "score": 60
     },
     {
       "symbol": "TRXUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "LTCUSDT",
-      "score": 75
+      "symbol": "XAUTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "score": 60
     },
     {
       "symbol": "ASTERUSDT",
-      "score": 75
+      "score": 60
     }
   ]
 }
