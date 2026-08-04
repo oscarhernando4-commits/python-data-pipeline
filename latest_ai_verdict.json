@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-04 08:08:19",
+  "timestamp": "2026-08-04 08:10:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un riesgo sistémico elevado con una falta de profundidad en el libro de órdenes y una inercia bajista que no garantiza una entrada de alta probabilidad. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte institucional confirmado), por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la posición en efectivo (USDT).",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 con soporte de libro de órdenes claro). El mercado presenta una configuración de distribución forzada donde la preservación de capital es la prioridad absoluta, por lo que se ha decidido no ejecutar ninguna operación.",
   "top_candidates": [
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "TRXUSDT",
       "score": 70
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "PAXGUSDT",
       "score": 70
     },
     {
@@ -19,8 +19,8 @@
       "score": 70
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 60
+      "symbol": "APTUSDT",
+      "score": 70
     },
     {
       "symbol": "XRPUSDT",
