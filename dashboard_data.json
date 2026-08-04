@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 05:10:26",
+  "updated_at": "2026-08-04 05:12:23",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de pánico extremo con una rotación de capital defensiva. Ninguno de los candidatos seleccionados presenta una dominancia de Bids superior al 55% ni una confirmación de volumen institucional que cumpla con los estándares de seguridad del comité. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre."
+    "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de libro de órdenes y volumen). Ante la incertidumbre macro y la falta de datos de liquidez, la estrategia óptima es preservar el capital en USDT."
   }
 }

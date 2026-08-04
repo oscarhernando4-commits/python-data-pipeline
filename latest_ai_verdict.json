@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-04 05:10:21",
+  "timestamp": "2026-08-04 05:12:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de pánico extremo con una rotación de capital defensiva. Ninguno de los candidatos seleccionados presenta una dominancia de Bids superior al 55% ni una confirmación de volumen institucional que cumpla con los estándares de seguridad del comité. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de libro de órdenes y volumen). Ante la incertidumbre macro y la falta de datos de liquidez, la estrategia óptima es preservar el capital en USDT.",
   "top_candidates": [
     {
       "symbol": "ENAUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "POLUSDT",
       "score": 75
     },
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 75
     },
     {
       "symbol": "COTIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "CRVUSDT",
       "score": 75
     },
     {
