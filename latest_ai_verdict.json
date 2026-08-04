@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-04 10:36:16",
+  "timestamp": "2026-08-04 10:38:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los activos analizados cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de liquidez necesaria. El entorno macroeconómico de miedo extremo y la alta correlación negativa sugieren que cualquier posición larga actual sería una trampa de liquidez. Se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación y alta volatilidad exógena. Ninguno de los candidatos cumple con los criterios estrictos de convicción A+ establecidos por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "ALGOUSDT",
-      "score": 60
+      "score": 70
     },
     {
       "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "LUNCUSDT",
       "score": 60
     },
     {
@@ -21,10 +25,6 @@
     {
       "symbol": "HBARUSDT",
       "score": 55
-    },
-    {
-      "symbol": "SHIBUSDT",
-      "score": 50
     }
   ]
 }
