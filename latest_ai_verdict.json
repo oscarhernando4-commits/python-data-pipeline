@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-04 08:28:27",
+  "timestamp": "2026-08-04 08:30:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica generalizada con una falta de convicción institucional. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) y la alta volatilidad junto con la debilidad en el libro de órdenes aumenta el riesgo de 'flash crash'. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado bajista.",
+  "reasoning": "El mercado se encuentra en un estado de parálisis con scores técnicos insuficientes (máximo 60/100) y falta de soporte en el libro de órdenes. Siguiendo la Regla de Oro #1, al no existir candidatos con Score >= 65, la decisión institucional es mantener la liquidez y evitar el riesgo de 'falling knives'.",
   "top_candidates": [
     {
-      "symbol": "NVDABUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "BFUSDUSDT",
+      "symbol": "BCHUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "BFUSDUSDT",
       "score": 60
     },
     {
       "symbol": "ETCUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ATOMUSDT",
       "score": 60
     }
   ]
