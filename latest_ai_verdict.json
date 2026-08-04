@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 11:40:17",
+  "timestamp": "2026-08-04 11:42:17",
   "selected_symbol": "XAUTUSDT",
   "action": "BUY_LONG",
   "approved": true,
-  "confidence": 78,
-  "reasoning": "Ante el entorno de 'Miedo Extremo' y la purga de liquidez en altcoins, el comité ha decidido ejecutar una compra en XAUTUSDT. Este activo es el único que combina un score técnico superior (85/100), pertenencia al sector de refugio (RWA/Metales) y una clara divergencia de fortaleza frente al resto del mercado, cumpliendo con todos los criterios de seguridad y rentabilidad exigidos por el comité.",
+  "confidence": 72,
+  "reasoning": "XAUTUSDT es el único candidato que cumple con el umbral de convicción A+ (Score 85) y pertenece al sector de refugio dominante, lo que justifica una entrada estratégica en un entorno de mercado de miedo extremo.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
       "score": 85
     },
     {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
       "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "PAXGUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ONDOUSDT",
       "score": 75
     },
     {
       "symbol": "BCHUSDT",
-      "score": 75
+      "score": 70
     }
   ]
 }
