@@ -1,12 +1,38 @@
 {
-  "STXUSDT": [
+  "JTOUSDT": [
     {
-      "timestamp": "2026-08-04 07:32:11",
-      "price": 0.1379,
-      "score": 60,
-      "rsi": 53.94,
+      "timestamp": "2026-08-04 07:34:12",
+      "price": 0.511,
+      "score": 45,
+      "rsi": 55.11,
       "macd": "Neutral",
-      "volume_surge": 0.06,
+      "volume_surge": 0.53,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "MANTRAUSDT": [
+    {
+      "timestamp": "2026-08-04 07:34:12",
+      "price": 0.00534,
+      "score": 0,
+      "rsi": 32.98,
+      "macd": "Neutral",
+      "volume_surge": 0.72,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-04 07:34:12",
+      "price": 2.83e-06,
+      "score": 0,
+      "rsi": 44.93,
+      "macd": "Neutral",
+      "volume_surge": 0.93,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 07:32:18",
+  "timestamp": "2026-08-04 07:34:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una falta total de activos que cumplan con el umbral de calidad A+ (Score >= 65). Se ha decidido proteger el capital y evitar la exposición a activos especulativos que no ofrecen profundidad de libro de órdenes ni fuerza estructural.",
+  "reasoning": "El comité ha determinado que el entorno actual de mercado es de alta incertidumbre y distribución agresiva. Ningún activo cumple con los criterios de convicción A+ (Score >= 65) ni con la solidez necesaria en el libro de órdenes. Se prioriza la preservación del capital sobre la especulación en un mercado bajista.",
   "top_candidates": [
+    {
+      "symbol": "ZECUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "LUNCUSDT",
+      "score": 70
+    },
     {
       "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "NVDABUSDT",
+      "symbol": "TRXUSDT",
       "score": 60
     },
     {
-      "symbol": "OPENUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "LUNCUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "STXUSDT",
+      "symbol": "SKYUSDT",
       "score": 60
     }
   ]
