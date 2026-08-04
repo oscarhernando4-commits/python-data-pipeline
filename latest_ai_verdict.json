@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 01:40:26",
+  "timestamp": "2026-08-04 01:42:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de alta volatilidad selectiva sin una estructura de soporte institucional clara en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (HOLD) hasta que la correlación de mercado se estabilice.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad exigido (Bids > 55% y confirmación de soporte institucional). El mercado presenta una divergencia estructural que, combinada con el 'Extreme Fear', aumenta el riesgo de pérdidas. Se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
-      "symbol": "SKYUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "PENGUUSDT",
-      "score": 85
-    },
-    {
       "symbol": "BTCUSDT",
-      "score": 75
+      "score": 85
+    },
+    {
+      "symbol": "TRXUSDT",
+      "score": 85
     },
     {
       "symbol": "BNBUSDT",
-      "score": 75
+      "score": 85
     },
     {
-      "symbol": "NEARUSDT",
-      "score": 75
+      "symbol": "PEPEUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "SKYUSDT",
+      "score": 85
     }
   ]
 }
