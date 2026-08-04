@@ -1,22 +1,14 @@
 {
-  "timestamp": "2026-08-04 06:10:22",
-  "selected_symbol": "NVDABUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "NVDABUSDT es el único candidato que supera el umbral de 65 puntos en el score técnico (85/100) y pertenece al sector de mayor rotación de capital (AI & Big Data). La estrategia se ejecutará mediante una compra en retroceso de volatilidad, priorizando la resiliencia operativa sobre la especulación, con un estricto control de riesgo mediante Trailing Stop para mitigar el pánico generalizado del mercado.",
+  "timestamp": "2026-08-04 06:12:18",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "A pesar de que NVDABUSDT presenta un score técnico elevado, el comité ha determinado que no cumple con el umbral de seguridad requerido debido a la falta de profundidad en el libro de órdenes y la inestabilidad del sentimiento global. Se prioriza la preservación del capital (Regla #1) ante la ausencia de una señal de alta convicción.",
   "top_candidates": [
     {
       "symbol": "NVDABUSDT",
       "score": 85
-    },
-    {
-      "symbol": "ENAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
     },
     {
       "symbol": "XAUTUSDT",
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TAOUSDT",
       "score": 75
     }
   ]
