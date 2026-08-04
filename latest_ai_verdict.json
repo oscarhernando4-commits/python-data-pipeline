@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-04 02:16:22",
+  "timestamp": "2026-08-04 02:18:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de los scores técnicos de 75, la falta de dominancia en el libro de órdenes y la inestabilidad del mercado macro hacen que cualquier entrada sea de alto riesgo. Se prioriza la preservación del capital sobre la especulación en un entorno de 'Miedo Extremo'.",
+  "confidence": 0,
+  "reasoning": "Tras deliberar, el comité ha determinado que no existe ningún activo que cumpla con el umbral de convicción A+ (Score >= 65 y Bids > 55%). La alta incertidumbre macro y la falta de soporte institucional en el libro de órdenes obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     }
   ]
