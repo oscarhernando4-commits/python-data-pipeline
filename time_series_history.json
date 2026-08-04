@@ -1,49 +1,36 @@
 {
+  "MMTUSDT": [
+    {
+      "timestamp": "2026-08-04 22:32:12",
+      "price": 0.1551,
+      "score": 15,
+      "rsi": 44.88,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
   "JTOUSDT": [
     {
-      "timestamp": "2026-08-04 22:30:13",
+      "timestamp": "2026-08-04 22:32:12",
       "price": 0.5086,
       "score": 45,
       "rsi": 53.07,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.18,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "MUUBUSDT": [
+  "BONKUSDT": [
     {
-      "timestamp": "2026-08-04 22:30:13",
-      "price": 27.24,
+      "timestamp": "2026-08-04 22:32:12",
+      "price": 2.82e-06,
       "score": 15,
-      "rsi": 49.5,
-      "macd": "Neutral",
-      "volume_surge": 0.0,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "REUSDT": [
-    {
-      "timestamp": "2026-08-04 22:30:13",
-      "price": 0.3915,
-      "score": 45,
-      "rsi": 48.68,
-      "macd": "Neutral",
-      "volume_surge": 0.0,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "TOWNSUSDT": [
-    {
-      "timestamp": "2026-08-04 22:30:13",
-      "price": 0.00226,
-      "score": 50,
-      "rsi": 54.89,
+      "rsi": 49.13,
       "macd": "Neutral",
       "volume_surge": 0.0,
       "wyckoff": "Sin patron",
@@ -53,12 +40,38 @@
   ],
   "STXUSDT": [
     {
-      "timestamp": "2026-08-04 22:30:13",
-      "price": 0.1353,
+      "timestamp": "2026-08-04 22:32:12",
+      "price": 0.1354,
       "score": 45,
-      "rsi": 46.46,
+      "rsi": 48.04,
       "macd": "Neutral",
-      "volume_surge": 0.04,
+      "volume_surge": 0.11,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "REUSDT": [
+    {
+      "timestamp": "2026-08-04 22:32:12",
+      "price": 0.3911,
+      "score": 15,
+      "rsi": 47.53,
+      "macd": "Neutral",
+      "volume_surge": 0.06,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "TOWNSUSDT": [
+    {
+      "timestamp": "2026-08-04 22:32:12",
+      "price": 0.00225,
+      "score": 60,
+      "rsi": 52.11,
+      "macd": "Neutral",
+      "volume_surge": 0.05,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
