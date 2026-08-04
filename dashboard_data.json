@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 21:14:32",
+  "updated_at": "2026-08-04 21:16:23",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 45,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "A pesar de que ICP y APT presentan scores técnicos elevados, el mercado se encuentra en un estado de pánico extremo con una falta de soporte claro en el libro de órdenes. El comité ha decidido priorizar la preservación del capital, esperando una estabilización del mercado antes de ejecutar cualquier posición de compra."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) y la confirmación de soporte en el libro de órdenes necesaria para una ejecución de bajo riesgo. La prioridad absoluta es la preservación del capital frente a la volatilidad sistémica."
   }
 }

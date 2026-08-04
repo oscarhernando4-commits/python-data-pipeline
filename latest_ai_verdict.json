@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 21:14:32",
+  "timestamp": "2026-08-04 21:16:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "A pesar de que ICP y APT presentan scores técnicos elevados, el mercado se encuentra en un estado de pánico extremo con una falta de soporte claro en el libro de órdenes. El comité ha decidido priorizar la preservación del capital, esperando una estabilización del mercado antes de ejecutar cualquier posición de compra.",
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) y la confirmación de soporte en el libro de órdenes necesaria para una ejecución de bajo riesgo. La prioridad absoluta es la preservación del capital frente a la volatilidad sistémica.",
   "top_candidates": [
     {
-      "symbol": "ICPUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "APTUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "LTCUSDT",
+      "symbol": "ENAUSDT",
       "score": 75
     },
     {
       "symbol": "WLFIUSDT",
-      "score": 75
+      "score": 65
     },
     {
-      "symbol": "DOTUSDT",
-      "score": 75
+      "symbol": "SKYUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "STXUSDT",
+      "score": 65
     }
   ]
 }
