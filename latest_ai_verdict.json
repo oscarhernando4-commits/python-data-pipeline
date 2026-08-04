@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-04 02:30:21",
+  "timestamp": "2026-08-04 02:32:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). El mercado presenta una alta volatilidad y riesgo de liquidación, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el comité. La falta de soporte en el libro de órdenes y el sentimiento de 'Extreme Fear' global invalidan cualquier entrada, priorizando la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
-      "symbol": "SOLUSDT",
+      "symbol": "ERAUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 75
-    },
-    {
       "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     }
   ]
