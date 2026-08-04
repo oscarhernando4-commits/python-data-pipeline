@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 22:36:26",
+  "updated_at": "2026-08-04 22:38:19",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una divergencia entre el miedo extremo y la acción de precio neutral. Ningún activo cumple con el requisito de Bids > 55% ni con una estructura técnica de alta convicción, por lo que la estrategia óptima es preservar el capital en espera de una señal institucional más clara."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ requerido (Score >= 65 y Bids > 55%). El mercado se encuentra en un estado de pánico extremo con una estructura técnica neutral, lo que aumenta el riesgo de 'trampas de liquidez'. Se ha decidido proteger la liquidez total hasta que el libro de órdenes muestre una acumulación institucional clara y una mejora en el sentimiento global."
   }
 }

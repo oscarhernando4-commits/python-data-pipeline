@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-04 22:36:26",
+  "timestamp": "2026-08-04 22:38:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia entre el miedo extremo y la acción de precio neutral. Ningún activo cumple con el requisito de Bids > 55% ni con una estructura técnica de alta convicción, por lo que la estrategia óptima es preservar el capital en espera de una señal institucional más clara.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ requerido (Score >= 65 y Bids > 55%). El mercado se encuentra en un estado de pánico extremo con una estructura técnica neutral, lo que aumenta el riesgo de 'trampas de liquidez'. Se ha decidido proteger la liquidez total hasta que el libro de órdenes muestre una acumulación institucional clara y una mejora en el sentimiento global.",
   "top_candidates": [
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
     {
       "symbol": "BCHUSDT",
       "score": 75
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "WLFIUSDT",
       "score": 75
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "QNTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "POLUSDT",
       "score": 75
     }
   ]
