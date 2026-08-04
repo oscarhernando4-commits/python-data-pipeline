@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-04 10:46:16",
+  "timestamp": "2026-08-04 10:48:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un régimen de alta incertidumbre con falta de profundidad en el libro de órdenes y una ausencia de volumen institucional confirmatorio. Ningún candidato cumple con el umbral de convicción A+ requerido por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la liquidez en USDT.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes y la inestabilidad macro global no cumplen con los criterios de alta convicción exigidos por el Chief Risk Officer para proteger el capital.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AVAXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ADAUSDT",
       "score": 75
     },
     {
@@ -23,7 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "AEROUSDT",
+      "symbol": "ADAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZECUSDT",
       "score": 75
     }
   ]
