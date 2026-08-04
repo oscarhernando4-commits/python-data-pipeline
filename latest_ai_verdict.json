@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-04 13:08:15",
+  "timestamp": "2026-08-04 13:10:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia técnica severa y una falta de liquidez institucional confirmada en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia de preservación de capital dicta una postura de espera (HOLD) para evitar pérdidas en un entorno de alta volatilidad y baja convicción.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
       "symbol": "TRXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AVAXUSDT",
       "score": 75
     },
     {
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "FETUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "NEXOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ROBOUSDT",
       "score": 75
     }
   ]
