@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-04 01:20:24",
+  "timestamp": "2026-08-04 01:22:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno de mercado actual es de alta fragilidad y riesgo sistémico. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte institucional necesaria para una ejecución segura. Por lo tanto, se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado presenta un entorno de alta peligrosidad con correlación de pánico y falta de convicción institucional. Ningún activo cumple con los requisitos estrictos de Score Técnico (>= 65) y soporte de libro de órdenes, por lo que la decisión institucional es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "JSTUSDT",
       "score": 70
+    },
+    {
+      "symbol": "TRXUSDT",
+      "score": 60
     },
     {
       "symbol": "WLFIUSDT",
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "EULUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "VICUSDT",
+      "symbol": "BANKUSDT",
       "score": 50
     }
   ]
