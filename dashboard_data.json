@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 05:20:25",
+  "updated_at": "2026-08-04 05:22:23",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Tras la deliberación del comité, se ha determinado que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos por el protocolo de riesgo. La falta de dominancia en el libro de órdenes y la ausencia de una tendencia clara en los activos analizados obligan a mantener la posición en liquidez (USDT) para evitar pérdidas innecesarias."
+    "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de tener activos con scores técnicos de 75, ninguno cumple con la regla de oro de dominancia de Bids (>55%) ni con la convicción A+ requerida por el departamento de riesgo en un entorno de pánico extremo."
   }
 }
