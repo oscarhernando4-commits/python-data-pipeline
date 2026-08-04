@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 21:18:21",
+  "timestamp": "2026-08-04 21:20:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'distribución defensiva' con alta volatilidad y falta de convicción institucional. Ninguno de los candidatos cumple con el umbral estricto de Score A+ (>= 65) combinado con una dominancia de Bids superior al 55%, por lo que la orden de no operar es imperativa para preservar el capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de Score Técnico A+ (>= 65) combinado con una dominancia de Bids superior al 55% y un volumen de entrada institucional significativo, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "ENAUSDT",
+      "symbol": "VANRYUSDT",
       "score": 75
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "score": 65
     },
     {
       "symbol": "WLFIUSDT",
       "score": 65
     },
     {
-      "symbol": "SKYUSDT",
+      "symbol": "QNTUSDT",
       "score": 65
     },
     {
       "symbol": "MORPHOUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "DOTUSDT",
       "score": 65
     }
   ]
