@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-04 21:54:25",
+  "timestamp": "2026-08-04 21:56:53",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estancamiento sistémico sin señales de acumulación institucional. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65), por lo que la estrategia de protección de capital dicta mantener la liquidez en espera de un catalizador macro más claro.",
+  "reasoning": "El mercado presenta una capitulación generalizada con scores técnicos mediocres (máximo 60) y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65), por lo que la decisión institucional es mantenerse en liquidez total para evitar pérdidas por volatilidad sistémica.",
   "top_candidates": [
     {
       "symbol": "LTCUSDT",
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     },
     {
