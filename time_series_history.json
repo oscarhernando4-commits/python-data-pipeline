@@ -1,12 +1,51 @@
 {
-  "CFXUSDT": [
+  "MSTRBUSDT": [
     {
-      "timestamp": "2026-08-04 02:20:13",
-      "price": 0.03937,
+      "timestamp": "2026-08-04 02:22:10",
+      "price": 93.66,
       "score": 15,
-      "rsi": 35.28,
+      "rsi": 40.13,
       "macd": "Neutral",
-      "volume_surge": 0.1,
+      "volume_surge": 1.04,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPENUSDT": [
+    {
+      "timestamp": "2026-08-04 02:22:10",
+      "price": 0.1886,
+      "score": 60,
+      "rsi": 51.08,
+      "macd": "Neutral",
+      "volume_surge": 0.13,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "HOLOUSDT": [
+    {
+      "timestamp": "2026-08-04 02:22:10",
+      "price": 0.0673,
+      "score": 30,
+      "rsi": 48.34,
+      "macd": "Neutral",
+      "volume_surge": 0.08,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-04 02:22:10",
+      "price": 0.5076,
+      "score": 45,
+      "rsi": 53.42,
+      "macd": "Neutral",
+      "volume_surge": 0.06,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
