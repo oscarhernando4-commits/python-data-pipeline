@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-04 17:10:24",
+  "timestamp": "2026-08-04 17:12:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos de 75, el libro de órdenes no muestra la dominancia de compradores necesaria (>= 55%) y el entorno de pánico extremo (25) aumenta el riesgo de trampas alcistas, incumpliendo la regla de oro de no perder dinero.",
+  "reasoning": "El mercado presenta una vulnerabilidad sistémica y falta de convicción en el libro de órdenes. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 con soporte de ballenas > 55%), por lo que la estrategia de preservación de capital dicta mantener la liquidez en USDT.",
   "top_candidates": [
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "NVDABUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "TAOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     }
   ]
