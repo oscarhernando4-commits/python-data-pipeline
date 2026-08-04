@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-04 09:48:21",
+  "timestamp": "2026-08-04 09:50:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un riesgo sistémico elevado y ninguno de los activos analizados alcanza el umbral de calidad A+ (Score >= 65) exigido por el comité. La estrategia institucional es la preservación total de capital hasta que se observe una acumulación real y una mejora en el sentimiento global.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva. Ninguno de los candidatos cumple con el requisito estricto de Score Técnico >= 65 ni con la confirmación de soporte en el libro de órdenes, por lo que el comité ha decidido proteger la liquidez total.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "HBARUSDT",
       "score": 60
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "EULUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "WLDUSDT",
       "score": 50
     }
   ]
