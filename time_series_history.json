@@ -1,12 +1,25 @@
 {
-  "ESPUSDT": [
+  "ACXUSDT": [
     {
-      "timestamp": "2026-08-04 18:40:14",
-      "price": 0.06158,
-      "score": 65,
-      "rsi": 52.47,
+      "timestamp": "2026-08-04 18:42:13",
+      "price": 0.03788,
+      "score": 30,
+      "rsi": 45.32,
       "macd": "Neutral",
-      "volume_surge": 0.14,
+      "volume_surge": 4.33,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-04 18:42:13",
+      "price": 2.83e-06,
+      "score": 60,
+      "rsi": 62.41,
+      "macd": "Neutral",
+      "volume_surge": 3.28,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
