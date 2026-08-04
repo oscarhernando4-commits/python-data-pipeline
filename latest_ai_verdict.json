@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-04 03:22:21",
-  "selected_symbol": "PAXGUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "Tras analizar el pánico extremo del mercado, el comité ha decidido priorizar la seguridad y la fuerza relativa. PAXGUSDT es el único candidato que combina un score técnico superior (85), pertenencia al sector refugio (RWA/Metales) y una estructura de mercado que sugiere acumulación institucional, cumpliendo estrictamente con las reglas de oro de no operar activos de baja calidad.",
+  "timestamp": "2026-08-04 03:24:18",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "A pesar de tener candidatos con Score 75, ninguno cumple con la Regla #3 (Bids > 55%) ni con la confirmación de convicción A+ exigida por el CRO. El mercado se encuentra en una zona de alta volatilidad y pánico, por lo que la estrategia de preservación de capital dicta mantenerse en liquidez total (HOLD) hasta que las condiciones de riesgo mejoren.",
   "top_candidates": [
     {
-      "symbol": "PAXGUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ADAUSDT",
+      "symbol": "HBARUSDT",
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "ADAUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "MORPHOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "KITEUSDT",
       "score": 75
     }
   ]
