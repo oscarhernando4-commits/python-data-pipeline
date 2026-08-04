@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-04 07:38:24",
+  "timestamp": "2026-08-04 07:40:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación extrema donde la liquidez es el enemigo. Ningún activo cumple con los criterios de alta convicción (Score >= 65) ni presenta una estructura de libro de órdenes favorable, por lo que la estrategia de preservación de capital dicta una posición de espera total.",
+  "reasoning": "Tras la deliberación del comité, se ha determinado que no existen activos que cumplan con los criterios estrictos de seguridad y rentabilidad exigidos. La debilidad sistémica y la falta de scores técnicos superiores a 65 obligan a mantener una posición de liquidez total para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
-      "score": 60
+      "symbol": "LUNCUSDT",
+      "score": 70
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "GRAMUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "SKYUSDT",
+      "symbol": "NVDABUSDT",
       "score": 60
     },
     {
-      "symbol": "LUNCUSDT",
+      "symbol": "CFXUSDT",
       "score": 60
     }
   ]
