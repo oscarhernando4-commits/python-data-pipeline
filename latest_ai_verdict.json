@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-04 23:50:23",
+  "timestamp": "2026-08-04 23:52:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. Ningún activo alcanza el score técnico de 65/100, y la falta de liquidez en el libro de órdenes junto con el sentimiento de miedo extremo hace que la estrategia más prudente sea el mantenimiento de la liquidez (HOLD) para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de distribución forzada por pánico sin señales de acumulación institucional. Ningún candidato cumple con el umbral de calidad A+ requerido por el comité, por lo que la estrategia de preservación de capital dicta mantenerse en efectivo (USDT) hasta que la estructura de mercado muestre una divergencia alcista clara y un aumento en la profundidad de los bids.",
   "top_candidates": [
+    {
+      "symbol": "GIGGLEUSDT",
+      "score": 60
+    },
     {
       "symbol": "MUBUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "ENAUSDT",
-      "score": 60
-    },
-    {
       "symbol": "BFUSDUSDT",
       "score": 60
     },
     {
-      "symbol": "NBISBUSDT",
+      "symbol": "NEXOUSDT",
       "score": 60
     }
   ]
