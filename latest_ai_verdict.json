@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-04 03:08:20",
+  "timestamp": "2026-08-04 03:10:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una desconexión peligrosa entre el pánico macro y la acción técnica de los precios. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia institucional es preservar el capital en efectivo.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad sistémica. Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 55% ni con una estructura técnica que minimice el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
-      "symbol": "INTCBUSDT",
+      "symbol": "ADAUSDT",
       "score": 85
     },
     {
-      "symbol": "ADAUSDT",
-      "score": 75
+      "symbol": "HBARUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "NVDABUSDT",
+      "score": 85
     },
     {
       "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "HBARUSDT",
       "score": 75
     },
     {
