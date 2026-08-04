@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-04 20:48:26",
+  "timestamp": "2026-08-04 20:50:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "A pesar de que varios activos tienen un score técnico de 75, ninguno cumple con los requisitos de confirmación de volumen institucional (Surge > 1.2x) ni con la dominancia de Bids necesaria (>= 55%) para mitigar el riesgo en un entorno de Pánico Extremo. El comité ha decidido mantener la liquidez en USDT para evitar las trampas de liquidez recurrentes observadas en el historial de trading.",
+  "confidence": 45,
+  "reasoning": "A pesar de tener candidatos con scores técnicos de 75, la falta de dominancia clara en el libro de órdenes (Bids < 55%) y el entorno de 'Extreme Fear' invalidan la convicción A+ necesaria para ejecutar una compra, priorizando la preservación del capital sobre la especulación.",
   "top_candidates": [
-    {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
     {
       "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "ICPUSDT",
       "score": 75
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "DOTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 20:48:26",
+  "updated_at": "2026-08-04 20:50:26",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 45,
     "approved": false,
-    "reasoning": "A pesar de que varios activos tienen un score técnico de 75, ninguno cumple con los requisitos de confirmación de volumen institucional (Surge > 1.2x) ni con la dominancia de Bids necesaria (>= 55%) para mitigar el riesgo en un entorno de Pánico Extremo. El comité ha decidido mantener la liquidez en USDT para evitar las trampas de liquidez recurrentes observadas en el historial de trading."
+    "reasoning": "A pesar de tener candidatos con scores técnicos de 75, la falta de dominancia clara en el libro de órdenes (Bids < 55%) y el entorno de 'Extreme Fear' invalidan la convicción A+ necesaria para ejecutar una compra, priorizando la preservación del capital sobre la especulación."
   }
 }
