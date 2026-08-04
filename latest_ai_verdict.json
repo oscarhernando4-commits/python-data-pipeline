@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-04 09:10:23",
+  "timestamp": "2026-08-04 09:12:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por unanimidad que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. Ningún activo presenta un Score Técnico superior a 65 con soporte de liquidez confirmado, por lo que se prioriza la preservación del capital en USDT hasta que el entorno macro mejore.",
+  "reasoning": "El mercado presenta una debilidad generalizada y una falta de activos con fuerza relativa real. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de liquidez necesaria, por lo que la estrategia institucional es mantener la liquidez en efectivo para evitar el riesgo de 'cuchillos cayendo'.",
   "top_candidates": [
     {
       "symbol": "BCHUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ATOMUSDT",
       "score": 70
     },
     {
@@ -19,12 +15,16 @@
       "score": 70
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "SUNUSDT",
       "score": 60
     },
     {
-      "symbol": "SUNUSDT",
-      "score": 60
+      "symbol": "ATOMUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "NVDABUSDT",
+      "score": 55
     }
   ]
 }
