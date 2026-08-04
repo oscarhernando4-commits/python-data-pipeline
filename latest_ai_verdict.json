@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-04 20:06:22",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "timestamp": "2026-08-04 20:08:22",
+  "selected_symbol": "DOTUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "Tras deliberar, el comité identifica a DOTUSDT como el activo con mayor probabilidad de éxito debido a su score técnico superior (85/100), su pertenencia al sector dominante de Layer 1 y la evidencia de acumulación institucional, superando el filtro de riesgo del Agente 6.",
   "top_candidates": [
     {
       "symbol": "DOTUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ENAUSDT",
       "score": 75
     },
     {
@@ -15,16 +19,12 @@
       "score": 75
     },
     {
+      "symbol": "TRUMPUSDT",
+      "score": 75
+    },
+    {
       "symbol": "TSLABUSDT",
       "score": 70
-    },
-    {
-      "symbol": "ADAUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "DEXEUSDT",
-      "score": 65
     }
   ]
 }
