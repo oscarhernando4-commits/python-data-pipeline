@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 00:38:19",
+  "timestamp": "2026-08-04 00:40:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la evaluación exhaustiva de los 7 agentes, se determina que no existen activos que cumplan con el umbral de calidad A+ (Score >= 65) ni con la confirmación de soporte en el libro de órdenes. El entorno macroeconómico de capitulación sistémica y la falta de convicción técnica obligan a la preservación total del capital.",
+  "reasoning": "El comité ha determinado que las condiciones actuales del mercado presentan un riesgo inaceptable. Ninguno de los candidatos cumple con el umbral de calidad A+ (Score >= 65) ni con la profundidad de libro de órdenes requerida para una ejecución segura. Se prioriza la protección del capital frente a la volatilidad especulativa.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "MANTRAUSDT",
+      "symbol": "OPENUSDT",
       "score": 60
     },
     {
-      "symbol": "OPENUSDT",
+      "symbol": "BFUSDUSDT",
       "score": 60
     }
   ]
