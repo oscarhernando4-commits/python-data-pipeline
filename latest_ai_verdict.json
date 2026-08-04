@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-04 04:20:26",
-  "selected_symbol": "JUPUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "El comité ha determinado que, ante un mercado de alta fricción, la estrategia más segura es operar exclusivamente el activo con el mayor score técnico (JUPUSDT, 85/100) dentro del sector con mayor flujo de capital (DeFi). Se descartan otros activos por falta de convicción técnica o riesgo de trampa de valor, priorizando la preservación del capital mediante un estricto control de riesgo.",
+  "timestamp": "2026-08-04 04:22:20",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "A pesar de tener candidatos con scores técnicos elevados, el entorno de 'Extreme Fear' y la falta de dominancia clara en el libro de órdenes (Bids 50%) no cumplen con los criterios de convicción A+ exigidos por el Comité. Se mantiene la liquidez en espera de una señal de confirmación más robusta.",
   "top_candidates": [
     {
       "symbol": "JUPUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "PENGUUSDT",
       "score": 85
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
       "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     }
   ]
