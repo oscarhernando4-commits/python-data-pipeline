@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 04:14:25",
+  "timestamp": "2026-08-04 04:16:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "A pesar de que TIA y NEAR presentan scores técnicos aceptables, el comité ha determinado que no existe una confluencia suficiente entre el libro de órdenes (bids < 65%) y la estabilidad del mercado para ejecutar una compra. Se prioriza la preservación del capital frente a la incertidumbre actual.",
+  "confidence": 0,
+  "reasoning": "El comité ha determinado que, a pesar de tener candidatos con un score técnico de 75, ninguno cumple con la regla de oro de soporte en el libro de órdenes (Bids > 55%) ni con una confirmación de volumen institucional necesaria para mitigar el riesgo en un entorno de 'Miedo Extremo'. Se prioriza la preservación del capital sobre la especulación en un mercado de alta fragilidad.",
   "top_candidates": [
-    {
-      "symbol": "TIAUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "NEARUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
     {
       "symbol": "BCHUSDT",
       "score": 75
     },
     {
+      "symbol": "SKYUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "score": 75
+    },
+    {
       "symbol": "JUPUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SEIUSDT",
       "score": 75
     }
   ]
