@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-04 18:44:33",
+  "timestamp": "2026-08-04 18:46:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de tener activos con score 75, la falta de dominancia clara en el libro de órdenes y la persistencia del pánico extremo en el mercado macro no cumplen con los criterios de seguridad A+ exigidos por el Chief Risk Officer.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "SUNUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "GNOUSDT",
+      "symbol": "POLUSDT",
       "score": 75
     }
   ]
