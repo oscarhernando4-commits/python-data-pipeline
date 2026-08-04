@@ -1,12 +1,25 @@
 {
   "JTOUSDT": [
     {
-      "timestamp": "2026-08-04 03:26:10",
-      "price": 0.5068,
-      "score": 25,
-      "rsi": 50.55,
+      "timestamp": "2026-08-04 03:28:10",
+      "price": 0.5074,
+      "score": 45,
+      "rsi": 51.92,
       "macd": "Neutral",
-      "volume_surge": 0.62,
+      "volume_surge": 0.67,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "TOWNSUSDT": [
+    {
+      "timestamp": "2026-08-04 03:28:10",
+      "price": 0.00216,
+      "score": 15,
+      "rsi": 34.27,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,38 +27,25 @@
   ],
   "BONKUSDT": [
     {
-      "timestamp": "2026-08-04 03:26:10",
-      "price": 2.84e-06,
+      "timestamp": "2026-08-04 03:28:10",
+      "price": 2.83e-06,
       "score": 30,
-      "rsi": 48.16,
+      "rsi": 44.29,
       "macd": "Neutral",
-      "volume_surge": 0.42,
+      "volume_surge": 0.76,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "STXUSDT": [
+  "HOLOUSDT": [
     {
-      "timestamp": "2026-08-04 03:26:10",
-      "price": 0.1373,
-      "score": 15,
-      "rsi": 44.68,
+      "timestamp": "2026-08-04 03:28:10",
+      "price": 0.0676,
+      "score": 50,
+      "rsi": 53.14,
       "macd": "Neutral",
-      "volume_surge": 0.7,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "OPUSDT": [
-    {
-      "timestamp": "2026-08-04 03:26:10",
-      "price": 0.0888,
-      "score": 60,
-      "rsi": 56.44,
-      "macd": "Neutral",
-      "volume_surge": 1.14,
+      "volume_surge": 0.21,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -53,7 +53,7 @@
   ],
   "DODOUSDT": [
     {
-      "timestamp": "2026-08-04 03:26:10",
+      "timestamp": "2026-08-04 03:28:10",
       "price": 0.01867,
       "score": 65,
       "rsi": 58.26,
