@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-04 17:00:24",
+  "timestamp": "2026-08-04 17:02:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de haber candidatos con scores técnicos de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y el entorno de 'Miedo Extremo' invalidan la entrada. Se prioriza la preservación del capital sobre la especulación en un mercado sin convicción estructural.",
+  "confidence": 45,
+  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, el entorno de 'Miedo Extremo' y la falta de una dominancia clara en el libro de órdenes (50% vs 55% requerido) impiden la ejecución. El comité ha decidido mantener la liquidez en USDT para evitar el riesgo de 'falling knives' en un mercado fragmentado.",
   "top_candidates": [
+    {
+      "symbol": "TRXUSDT",
+      "score": 75
+    },
     {
       "symbol": "LTCUSDT",
       "score": 75
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUNUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     }
   ]
