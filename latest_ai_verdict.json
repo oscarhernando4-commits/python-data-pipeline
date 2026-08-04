@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-04 16:56:19",
+  "timestamp": "2026-08-04 16:58:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una capitulación técnica generalizada y una falta de convicción institucional en los activos analizados. Ningún candidato cumple con el umbral de Score A+ (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
+  "reasoning": "El mercado presenta una divergencia crítica y un sentimiento de miedo extremo que, sumado a la falta de muros de soporte sólidos en el libro de órdenes, hace que ninguna oportunidad cumpla con los estándares de seguridad A+ del comité.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
-      "score": 70
+      "score": 85
     },
     {
       "symbol": "XAUTUSDT",
-      "score": 60
+      "score": 75
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 75
     },
     {
       "symbol": "PAXGUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "MIRAUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "ASTERUSDT",
-      "score": 60
+      "score": 75
     }
   ]
 }
