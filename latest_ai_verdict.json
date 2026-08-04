@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-04 07:08:22",
+  "timestamp": "2026-08-04 07:10:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de riesgo extremo sin confirmación de soporte institucional. Ningún activo cumple con el umbral de calidad A+ (Score >= 65), por lo que el comité ha decidido proteger la liquidez total en espera de una estructura de mercado más favorable.",
+  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. Ningún activo presenta un score técnico superior a 60 ni una estructura de libro de órdenes que justifique una entrada, por lo que se mantiene la posición en efectivo para proteger el capital contra la volatilidad sistémica.",
   "top_candidates": [
-    {
-      "symbol": "ENAUSDT",
-      "score": 60
-    },
     {
       "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "ENAUSDT",
       "score": 60
     },
     {
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "OPENUSDT",
+      "symbol": "PAXGUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "POLUSDT",
       "score": 60
     }
   ]
