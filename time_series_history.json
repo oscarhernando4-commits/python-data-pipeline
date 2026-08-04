@@ -1,12 +1,25 @@
 {
-  "MMTUSDT": [
+  "BONKUSDT": [
     {
-      "timestamp": "2026-08-04 23:30:13",
-      "price": 0.1536,
+      "timestamp": "2026-08-04 23:32:13",
+      "price": 2.8e-06,
       "score": 0,
-      "rsi": 34.57,
+      "rsi": 39.02,
       "macd": "Neutral",
-      "volume_surge": 0.01,
+      "volume_surge": 0.34,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GNOUSDT": [
+    {
+      "timestamp": "2026-08-04 23:32:13",
+      "price": 104.87,
+      "score": 60,
+      "rsi": 58.51,
+      "macd": "Neutral",
+      "volume_surge": 0.05,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
