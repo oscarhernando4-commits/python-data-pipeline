@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 06:16:20",
+  "updated_at": "2026-08-04 06:18:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de pánico extremo con una estructura técnica poco fiable. Ninguno de los candidatos cumple con el umbral de convicción A+ ni con la confirmación de soporte en el libro de órdenes, por lo que el comité decide mantener la liquidez en USDT para evitar pérdidas innecesarias."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y confirmación de volumen). El mercado presenta un entorno de miedo extremo con una estructura de libro de órdenes neutral, lo que aumenta el riesgo de pérdidas. Se prioriza la preservación del capital sobre la ejecución especulativa."
   }
 }
