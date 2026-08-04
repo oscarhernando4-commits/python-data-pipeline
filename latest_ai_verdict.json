@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-04 17:38:26",
-  "selected_symbol": "TAOUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "Tras deliberar, el comité ha seleccionado TAOUSDT debido a su fuerte desempeño en el sector de AI & Big Data, su volumen de surge superior a 1.6x y su score técnico de 75/100, superando los umbrales de riesgo establecidos por el CRO.",
+  "timestamp": "2026-08-04 17:40:21",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 45,
+  "reasoning": "A pesar de que varios activos tienen un score técnico de 75, ninguno cumple con el umbral de convicción A+ ni con una dominancia de bids superior al 55% necesaria para mitigar el riesgo. El mercado se encuentra en una fase de indecisión y alta volatilidad, por lo que la estrategia más rentable es mantener la liquidez en espera de una señal de confirmación institucional más robusta.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "SUIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     }
   ]
