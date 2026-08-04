@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-04 13:52:17",
+  "timestamp": "2026-08-04 13:54:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El entorno de 'Extreme Fear' y la falta de profundidad histórica en los activos con mejor score técnico aumentan el riesgo de 'falling knives', por lo que el comité decide mantener la liquidez en espera de una estructura de mercado más robusta.",
+  "reasoning": "A pesar de que algunos activos presentan scores técnicos elevados, la falta de dominancia clara en el libro de órdenes, el sentimiento de mercado en 'Extreme Fear' y el historial de pérdidas en condiciones similares dictan una postura de preservación de capital (HOLD) hasta que el riesgo sistémico disminuya.",
   "top_candidates": [
     {
-      "symbol": "TAOUSDT",
+      "symbol": "XAUTUSDT",
       "score": 85
     },
     {
@@ -15,16 +15,16 @@
       "score": 85
     },
     {
+      "symbol": "TAOUSDT",
+      "score": 70
+    },
+    {
       "symbol": "PAXGUSDT",
-      "score": 85
+      "score": 70
     },
     {
       "symbol": "TRUMPUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 75
+      "score": 70
     }
   ]
 }
