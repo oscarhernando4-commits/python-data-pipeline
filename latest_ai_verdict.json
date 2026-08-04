@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-04 10:24:16",
+  "timestamp": "2026-08-04 10:26:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad generalizada y una falta de soporte institucional claro. Ningún activo cumple con los criterios de alta convicción (Score >= 65) establecidos por el comité, por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT) para evitar la exposición a activos en caída libre.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la convicción necesaria para operar en un entorno de mercado de capitulación. Se prioriza la preservación de capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
-    {
-      "symbol": "HBARUSDT",
-      "score": 70
-    },
     {
       "symbol": "SKHYBUSDT",
       "score": 60
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "NVDABUSDT",
+      "symbol": "DODOUSDT",
       "score": 60
     },
     {
-      "symbol": "DODOUSDT",
-      "score": 60
+      "symbol": "DCRUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "LINKUSDT",
+      "score": 50
     }
   ]
 }
