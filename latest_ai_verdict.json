@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-04 15:12:23",
+  "timestamp": "2026-08-04 15:14:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Confianza >= 70%) ni presenta una estructura de libro de órdenes favorable. El entorno de 'Extreme Fear' y la alta tasa de pérdidas en trades recientes bajo condiciones neutrales dictan una postura de preservación de capital.",
+  "reasoning": "El comité ha determinado que, a pesar de que BTC presenta un score técnico alto, las condiciones de mercado (Extreme Fear) y la falta de profundidad en el libro de órdenes no cumplen con los estándares de seguridad y rentabilidad exigidos por el protocolo de élite.",
   "top_candidates": [
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "BTCUSDT",
       "score": 85
+    },
+    {
+      "symbol": "TAOUSDT",
+      "score": 75
     },
     {
       "symbol": "LTCUSDT",
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "PUMPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ATOMUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     }
   ]
