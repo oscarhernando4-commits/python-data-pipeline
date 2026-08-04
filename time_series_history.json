@@ -1,12 +1,64 @@
 {
-  "STXUSDT": [
+  "OPUSDT": [
     {
-      "timestamp": "2026-08-04 17:32:12",
-      "price": 0.1356,
-      "score": 45,
-      "rsi": 40.91,
+      "timestamp": "2026-08-04 17:34:15",
+      "price": 0.0883,
+      "score": 65,
+      "rsi": 52.6,
       "macd": "Neutral",
-      "volume_surge": 1.01,
+      "volume_surge": 0.04,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ACXUSDT": [
+    {
+      "timestamp": "2026-08-04 17:34:15",
+      "price": 0.03835,
+      "score": 15,
+      "rsi": 48.85,
+      "macd": "Neutral",
+      "volume_surge": 0.11,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ROBOUSDT": [
+    {
+      "timestamp": "2026-08-04 17:34:15",
+      "price": 0.01218,
+      "score": 45,
+      "rsi": 47.53,
+      "macd": "Neutral",
+      "volume_surge": 0.77,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-04 17:34:15",
+      "price": 0.5101,
+      "score": 65,
+      "rsi": 64.09,
+      "macd": "Neutral",
+      "volume_surge": 1.47,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DCRUSDT": [
+    {
+      "timestamp": "2026-08-04 17:34:15",
+      "price": 13.29,
+      "score": 15,
+      "rsi": 41.08,
+      "macd": "Neutral",
+      "volume_surge": 0.11,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
