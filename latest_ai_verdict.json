@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 14:28:21",
+  "timestamp": "2026-08-04 14:30:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica con una correlación bajista predominante. Ninguno de los candidatos cumple con el umbral de seguridad y soporte institucional requerido por el comité para una entrada de alta convicción, por lo que se prioriza la preservación del capital.",
+  "reasoning": "A pesar de que algunos activos cumplen con el umbral de score técnico, la falta de dominancia clara en el libro de órdenes y el entorno de pánico extremo desaconsejan cualquier exposición al mercado en este momento, priorizando la preservación del capital.",
   "top_candidates": [
     {
+      "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LINKUSDT",
+      "score": 75
+    },
+    {
       "symbol": "TAOUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "PUMPUSDT",
       "score": 75
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "NVDABUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "MSTRBUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     }
   ]
