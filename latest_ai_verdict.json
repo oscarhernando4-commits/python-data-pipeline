@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-04 20:58:22",
+  "timestamp": "2026-08-04 21:00:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos aceptables, ninguno cumple con los criterios de convicción A+ (Score >= 65 y Bids > 55%) necesarios para mitigar el riesgo en un entorno de pánico extremo. Se prioriza la preservación del capital sobre la especulación en un mercado lateral sin dirección clara.",
+  "reasoning": "El mercado se encuentra en un estado de 'Extreme Fear' con una estructura técnica lateral y falta de profundidad en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ exigido por el comité, por lo que la decisión estratégica es preservar el 100% de la liquidez en espera de una configuración de mayor calidad.",
   "top_candidates": [
     {
       "symbol": "LTCUSDT",
-      "score": 85
+      "score": 75
     },
     {
-      "symbol": "OPUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ICPUSDT",
+      "symbol": "HOMEUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "FILUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TOWNSUSDT",
       "score": 75
     }
   ]
