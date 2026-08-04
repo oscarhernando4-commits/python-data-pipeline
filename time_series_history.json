@@ -1,12 +1,25 @@
 {
-  "PYRUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-04 06:42:12",
-      "price": 0.067,
-      "score": 0,
-      "rsi": 48.38,
+      "timestamp": "2026-08-04 06:44:13",
+      "price": 0.1376,
+      "score": 15,
+      "rsi": 49.55,
       "macd": "Neutral",
-      "volume_surge": 0.17,
+      "volume_surge": 0.63,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-04 06:44:13",
+      "price": 2.83e-06,
+      "score": 0,
+      "rsi": 42.03,
+      "macd": "Neutral",
+      "volume_surge": 0.57,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
