@@ -1,25 +1,64 @@
 {
-  "ORDIUSDT": [
+  "JTOUSDT": [
     {
-      "timestamp": "2026-08-04 00:02:12",
-      "price": 3.487,
-      "score": 55,
-      "rsi": 61.54,
+      "timestamp": "2026-08-04 00:04:10",
+      "price": 0.512,
+      "score": 50,
+      "rsi": 65.25,
       "macd": "Neutral",
-      "volume_surge": 2.22,
+      "volume_surge": 0.96,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "HYPERUSDT": [
+  "TOWNSUSDT": [
     {
-      "timestamp": "2026-08-04 00:02:12",
-      "price": 0.0617,
+      "timestamp": "2026-08-04 00:04:10",
+      "price": 0.00219,
       "score": 0,
-      "rsi": 38.51,
+      "rsi": 39.01,
       "macd": "Neutral",
-      "volume_surge": 0.34,
+      "volume_surge": 3.31,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "KITEUSDT": [
+    {
+      "timestamp": "2026-08-04 00:04:10",
+      "price": 0.0951,
+      "score": 0,
+      "rsi": 46.62,
+      "macd": "Neutral",
+      "volume_surge": 0.2,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-04 00:04:10",
+      "price": 0.1379,
+      "score": 70,
+      "rsi": 55.09,
+      "macd": "Neutral",
+      "volume_surge": 4.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-04 00:04:10",
+      "price": 0.0883,
+      "score": 50,
+      "rsi": 66.95,
+      "macd": "Neutral",
+      "volume_surge": 0.35,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -27,12 +66,25 @@
   ],
   "1000SATSUSDT": [
     {
-      "timestamp": "2026-08-04 00:02:12",
-      "price": 1.008e-05,
+      "timestamp": "2026-08-04 00:04:10",
+      "price": 1.01e-05,
       "score": 0,
-      "rsi": 43.63,
+      "rsi": 47.03,
       "macd": "Neutral",
-      "volume_surge": 0.27,
+      "volume_surge": 0.57,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-04 00:04:11",
+      "price": 2.84e-06,
+      "score": 0,
+      "rsi": 44.69,
+      "macd": "Neutral",
+      "volume_surge": 0.02,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

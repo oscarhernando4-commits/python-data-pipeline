@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 00:02:21",
+  "timestamp": "2026-08-04 00:04:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta fragilidad y falta de soporte institucional. Ninguno de los candidatos cumple con los requisitos estrictos de Score A+ (>= 65) ni con una dominancia de Bids superior al 55%, por lo que la decisión institucional es mantener la liquidez en USDT para evitar riesgos innecesarios.",
+  "reasoning": "El mercado actual se encuentra en un entorno de purga técnica sin señales de acumulación institucional. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage. Se prioriza la preservación de capital sobre la ejecución de trades de alta probabilidad de pérdida.",
   "top_candidates": [
     {
       "symbol": "WAXPUSDT",
@@ -15,15 +15,15 @@
       "score": 70
     },
     {
-      "symbol": "ENAUSDT",
-      "score": 60
-    },
-    {
       "symbol": "CAKEUSDT",
       "score": 60
     },
     {
       "symbol": "ETHFIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SEIUSDT",
       "score": 60
     }
   ]
