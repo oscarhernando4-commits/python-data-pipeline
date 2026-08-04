@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-04 02:46:21",
+  "timestamp": "2026-08-04 02:48:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los requisitos estrictos de seguridad y rentabilidad. La falta de dominancia compradora en el libro de órdenes y la ausencia de una estructura técnica de alta convicción obligan a mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (A+) exigidos por el protocolo de riesgo. La falta de soporte claro en el libro de órdenes y la inestabilidad macroeconómica obligan a mantener una postura defensiva (HOLD) para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "ERAUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
       "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUIUSDT",
       "score": 75
     }
   ]
