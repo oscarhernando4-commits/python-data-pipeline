@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 04:24:26",
+  "updated_at": "2026-08-04 04:26:23",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 45,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "A pesar de que JUP y PENGU presentan scores técnicos elevados, la falta de dominancia en el libro de órdenes y la inestabilidad del mercado global impiden alcanzar el umbral de convicción A+ requerido por el comité para ejecutar una operación de compra."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de convicción A+ (Score >= 65 y soporte de libro de órdenes > 55%). Ante la incertidumbre macro y la falta de muros de soporte, la decisión institucional es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' observado en simulaciones pasadas."
   }
 }
