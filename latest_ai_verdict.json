@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 03:40:23",
-  "selected_symbol": "HBARUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "HBARUSDT es el único candidato que combina un score técnico de 85/100, pertenencia al sector dominante (Layer 1) y una resiliencia inusual ante el pánico generalizado, cumpliendo con los criterios de convicción A+ del comité.",
+  "timestamp": "2026-08-04 03:42:19",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "A pesar de que HBAR tiene un score técnico alto, la falta de soporte en el libro de órdenes, el entorno de 'Extreme Fear' y la alta tasa de fallos en trades recientes bajo condiciones similares obligan a mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "HBARUSDT",
       "score": 85
     },
     {
-      "symbol": "VIRTUALUSDT",
-      "score": 85
+      "symbol": "BNBUSDT",
+      "score": 75
     },
     {
       "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
