@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-04 12:34:18",
+  "timestamp": "2026-08-04 12:36:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'Extreme Fear' con una estructura técnica que no ofrece una ventaja estadística clara. Ninguno de los candidatos cumple con el requisito de soporte de libro de órdenes (Bids > 55%) ni con la convicción A+ exigida por el comité, por lo que se opta por una postura de espera para evitar pérdidas en un entorno de alta incertidumbre.",
+  "confidence": 45,
+  "reasoning": "El mercado presenta una divergencia estructural y falta de convicción en el libro de órdenes. A pesar de los scores técnicos, la ausencia de un volumen institucional de confirmación (Volume Surge > 1.2x) y el entorno de miedo extremo hacen que la estrategia más rentable sea la preservación de capital (HOLD) hasta que se cumplan los criterios A+.",
   "top_candidates": [
     {
-      "symbol": "ETCUSDT",
-      "score": 85
+      "symbol": "BTCUSDT",
+      "score": 75
     },
     {
       "symbol": "TRXUSDT",
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "NBISBUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     }
   ]

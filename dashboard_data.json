@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04 12:34:25",
+  "updated_at": "2026-08-04 12:36:23",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 45,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de 'Extreme Fear' con una estructura técnica que no ofrece una ventaja estadística clara. Ninguno de los candidatos cumple con el requisito de soporte de libro de órdenes (Bids > 55%) ni con la convicción A+ exigida por el comité, por lo que se opta por una postura de espera para evitar pérdidas en un entorno de alta incertidumbre."
+    "reasoning": "El mercado presenta una divergencia estructural y falta de convicción en el libro de órdenes. A pesar de los scores técnicos, la ausencia de un volumen institucional de confirmación (Volume Surge > 1.2x) y el entorno de miedo extremo hacen que la estrategia más rentable sea la preservación de capital (HOLD) hasta que se cumplan los criterios A+."
   }
 }
