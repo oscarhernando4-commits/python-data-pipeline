@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-05 04:18:22",
+  "timestamp": "2026-08-05 04:20:31",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación generalizada sin activos que cumplan con los criterios de alta convicción (Score >= 65). Se prioriza la protección del capital frente a la volatilidad, evitando la entrada en activos con historiales insuficientes o scores mediocres.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
-    {
-      "symbol": "DRAMBUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "MUBUSDT",
-      "score": 60
-    },
     {
       "symbol": "KAITOUSDT",
       "score": 60
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "NEXOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "CRVUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "MUUBUSDT",
       "score": 60
     }
   ]
