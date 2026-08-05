@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 09:04:24",
+  "timestamp": "2026-08-05 09:06:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento defensivo con un sesgo bajista predominante. Ninguno de los activos analizados alcanza el umbral de calidad A+ (Score >= 65) exigido por el comité, y la falta de profundidad en el libro de órdenes junto con la debilidad macroeconómica dictan una postura de preservación de capital total.",
+  "reasoning": "Tras evaluar a todos los candidatos, ninguno cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de soporte institucional necesaria en el libro de órdenes. Ante la fragilidad sistémica y el sesgo bajista detectado, el comité decide mantener la posición en efectivo para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
+      "symbol": "DOTUSDT",
+      "score": 60
+    },
+    {
       "symbol": "APTUSDT",
       "score": 60
     },
     {
       "symbol": "TIAUSDT",
       "score": 60
-    },
-    {
-      "symbol": "DOGEUSDT",
-      "score": 50
     }
   ]
 }
