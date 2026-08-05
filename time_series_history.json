@@ -1,12 +1,25 @@
 {
   "STXUSDT": [
     {
-      "timestamp": "2026-08-05 21:12:12",
-      "price": 0.1333,
-      "score": 0,
-      "rsi": 43.02,
+      "timestamp": "2026-08-05 21:14:13",
+      "price": 0.1334,
+      "score": 15,
+      "rsi": 44.28,
       "macd": "Neutral",
-      "volume_surge": 0.23,
+      "volume_surge": 0.56,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SAHARAUSDT": [
+    {
+      "timestamp": "2026-08-05 21:14:13",
+      "price": 0.00851,
+      "score": 65,
+      "rsi": 61.18,
+      "macd": "Neutral",
+      "volume_surge": 0.84,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
