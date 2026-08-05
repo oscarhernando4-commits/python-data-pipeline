@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 12:12:24",
+  "timestamp": "2026-08-05 12:14:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia estructural y un sentimiento de miedo que, combinado con la falta de soporte institucional en el libro de órdenes y la alta tasa de fallos en trades recientes, obliga a mantener una postura de espera (HOLD) para preservar el capital.",
+  "reasoning": "El mercado presenta una estructura de alta volatilidad y baja convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad exigido (Score >= 65 con soporte de libro de órdenes claro), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "DASHUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "UNIUSDT",
+      "score": 75
+    },
+    {
       "symbol": "ONDOUSDT",
       "score": 75
     },
     {
       "symbol": "ASTERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "KAITOUSDT",
       "score": 75
     }
   ]
