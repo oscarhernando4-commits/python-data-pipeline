@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-05 21:24:23",
+  "timestamp": "2026-08-05 21:26:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica y distribución institucional silenciosa. Ninguno de los activos analizados cumple con los criterios de alta convicción (Score >= 65) ni con la profundidad de mercado necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de baja tracción.",
+  "reasoning": "Debido a que ningún activo alcanza el umbral de Score Técnico de 65 y el entorno macroeconómico es de alta fragilidad, el comité ha decidido mantener la liquidez en espera de una señal de acumulación institucional real.",
   "top_candidates": [
     {
       "symbol": "VANRYUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SAHARAUSDT",
       "score": 60
     },
     {
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
+      "symbol": "KITEUSDT",
+      "score": 50
+    },
+    {
       "symbol": "ATOMUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ALLOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ACEUSDT",
       "score": 50
     }
   ]
