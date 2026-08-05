@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-05 17:44:23",
+  "timestamp": "2026-08-05 17:46:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de dominancia de Bids (>= 55%) ni con la convicción A+ exigida por el Comité. Se mantiene la liquidez en espera de una estructura de mercado más definida y con mayor soporte institucional.",
+  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la ausencia de una dominancia clara en el libro de órdenes (Bids < 55%) y la alta probabilidad de pérdidas basada en el historial de trades recientes (especialmente en entornos de tendencia neutral) obligan al comité a mantener una postura de espera para preservar el capital.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     }
   ]
