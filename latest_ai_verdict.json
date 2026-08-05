@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 12:58:22",
+  "timestamp": "2026-08-05 13:00:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75/100, la falta de profundidad en el libro de órdenes y la alta probabilidad de pérdidas en entornos de mercado neutral (basado en el análisis de 1414 trades) hacen que cualquier entrada sea prematura y de alto riesgo. Se mantiene la posición en efectivo para esperar una confirmación de volumen institucional más clara.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y baja liquidez. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia más rentable es mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
     {
       "symbol": "BNBUSDT",
       "score": 75
     },
     {
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
       "symbol": "BIOUSDT",
       "score": 75
+    },
+    {
+      "symbol": "ZECUSDT",
+      "score": 65
     }
   ]
 }
