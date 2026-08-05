@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-05 00:58:23",
+  "timestamp": "2026-08-05 01:00:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de liquidación sistémica con scores técnicos insuficientes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65) ni con la confirmación de soporte de ballenas, por lo que la decisión institucional es mantener la liquidez en USDT para evitar pérdidas por volatilidad no confirmada.",
+  "reasoning": "El mercado se encuentra en una fase de liquidación sistémica sin soporte institucional claro. Ningún activo cumple con el umbral de calidad A+ (Score >= 65) exigido por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la posición en efectivo (HOLD).",
   "top_candidates": [
     {
-      "symbol": "SKYUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "XAUTUSDT",
+      "symbol": "LTCUSDT",
       "score": 60
     },
     {
       "symbol": "BNBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
