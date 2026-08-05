@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-05 01:40:22",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de purga de liquidez con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes verificado), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "timestamp": "2026-08-05 01:42:22",
+  "selected_symbol": "XAUTUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "El mercado se encuentra en una fase de capitulación minorista, lo que hace que los activos de valor refugio (RWA/Oro) sean la única opción con convicción A+. XAUTUSDT destaca por su score técnico de 85 y su rol como cobertura, cumpliendo con todos los criterios de riesgo y sectorialidad del comité.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
-      "score": 75
+      "score": 85
     },
     {
       "symbol": "PAXGUSDT",
