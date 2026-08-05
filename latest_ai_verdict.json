@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-05 04:42:22",
+  "timestamp": "2026-08-05 04:44:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y fuga de liquidez. Ninguno de los candidatos cumple con los criterios estrictos de Score A+ (>= 65) ni con la profundidad de libro de órdenes requerida para una entrada segura. Se prioriza la preservación de capital sobre la especulación en activos de baja capitalización.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada con scores técnicos insuficientes y falta de profundidad en el libro de órdenes. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "TSLABUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "DCRUSDT",
       "score": 70
     },
     {
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "ONDOUSDT",
+      "symbol": "WLDUSDT",
       "score": 60
     },
     {
       "symbol": "FETUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DRAMBUSDT",
       "score": 60
     }
   ]
