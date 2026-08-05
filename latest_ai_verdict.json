@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 17:32:24",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado actual presenta una divergencia técnica y falta de soporte institucional en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y Score >= 65 con confirmación de volumen), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
+  "timestamp": "2026-08-05 17:34:27",
+  "selected_symbol": "CAKEUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "CAKEUSDT es el único candidato que supera el umbral de score técnico de 65, pertenece al sector líder (DeFi) y presenta un volumen de transacciones institucionalmente significativo, cumpliendo con los requisitos de alta convicción del comité.",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
-      "score": 75
+      "symbol": "CAKEUSDT",
+      "score": 85
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {
@@ -19,12 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "NOMUSDT",
       "score": 75
     },
     {
-      "symbol": "NOMUSDT",
-      "score": 75
+      "symbol": "HFTUSDT",
+      "score": 65
     }
   ]
 }
