@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 09:18:21",
+  "timestamp": "2026-08-05 09:20:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica extrema con scores técnicos insuficientes y una tendencia neutral que históricamente ha derivado en pérdidas. Se prioriza la protección del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado presenta una configuración de debilidad sistémica con scores técnicos insuficientes (máximo 70 en APT, pero sin soporte de libro de órdenes claro). Siguiendo la Regla de Oro #1, al no existir candidatos con convicción A+ y soporte de ballenas, la decisión institucional es mantener la liquidez en espera de una estructura de mercado más robusta.",
   "top_candidates": [
     {
-      "symbol": "SOLUSDT",
-      "score": 60
+      "symbol": "APTUSDT",
+      "score": 70
     },
     {
-      "symbol": "HOMEUSDT",
+      "symbol": "SOLUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "APTUSDT",
+      "symbol": "POLUSDT",
       "score": 60
     }
   ]
