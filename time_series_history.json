@@ -1,12 +1,38 @@
 {
   "NOMUSDT": [
     {
-      "timestamp": "2026-08-05 10:54:13",
-      "price": 0.00162,
-      "score": 20,
-      "rsi": 61.98,
+      "timestamp": "2026-08-05 10:56:12",
+      "price": 0.00165,
+      "score": 50,
+      "rsi": 67.35,
       "macd": "Neutral",
-      "volume_surge": 0.55,
+      "volume_surge": 1.17,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-05 10:56:12",
+      "price": 1.383,
+      "score": 0,
+      "rsi": 48.49,
+      "macd": "Neutral",
+      "volume_surge": 0.46,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "IMXUSDT": [
+    {
+      "timestamp": "2026-08-05 10:56:12",
+      "price": 0.1099,
+      "score": 35,
+      "rsi": 31.28,
+      "macd": "Neutral",
+      "volume_surge": 1.57,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
