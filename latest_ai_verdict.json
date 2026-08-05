@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 20:02:19",
+  "timestamp": "2026-08-05 20:04:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada con falta de profundidad en el libro de órdenes y scores técnicos insuficientes. Siguiendo la Regla #1 de no perder dinero, el comité ha decidido no ejecutar ninguna operación de compra, priorizando la preservación de capital ante la alta probabilidad de volatilidad bajista.",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una mayoría de activos en zona de debilidad. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 65) combinado con una profundidad de mercado verificable. Por lo tanto, la estrategia institucional es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' y esperar una configuración de alta probabilidad.",
   "top_candidates": [
+    {
+      "symbol": "ERAUSDT",
+      "score": 65
+    },
     {
       "symbol": "JSTUSDT",
       "score": 65
     },
     {
-      "symbol": "BTCUSDT",
-      "score": 60
+      "symbol": "EPICUSDT",
+      "score": 65
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 60
+      "symbol": "PYTHUSDT",
+      "score": 65
     },
     {
-      "symbol": "HBARUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ERAUSDT",
-      "score": 60
+      "symbol": "ZROUSDT",
+      "score": 65
     }
   ]
 }
