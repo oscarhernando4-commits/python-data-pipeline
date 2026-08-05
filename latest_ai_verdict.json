@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-05 01:04:23",
+  "timestamp": "2026-08-05 01:06:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional y purga de liquidez. Ninguno de los candidatos analizados cumple con el umbral de seguridad (Score >= 65) ni con la confirmación de volumen institucional necesaria para una entrada de alta probabilidad, por lo que la decisión unánime es mantener la liquidez en efectivo.",
+  "reasoning": "El mercado se encuentra en un estado de parálisis por miedo con una correlación bajista predominante. Ninguno de los activos analizados cumple con el umbral de Score A+ (>= 65) ni con la profundidad de liquidez necesaria para una ejecución segura. Se prioriza la preservación del capital sobre la operativa especulativa.",
   "top_candidates": [
+    {
+      "symbol": "SKYUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 60
+    },
     {
       "symbol": "XAUTUSDT",
       "score": 60
@@ -15,16 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "SKYUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "POLUSDT",
+      "symbol": "ETCUSDT",
       "score": 55
-    },
-    {
-      "symbol": "BANKUSDT",
-      "score": 50
     }
   ]
 }
