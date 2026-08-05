@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-05 11:06:21",
+  "timestamp": "2026-08-05 11:08:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los 10 candidatos, ninguno cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de volumen institucional necesaria. El mercado se encuentra en un estado de capitulación técnica, lo que aumenta el riesgo de 'falling knives'. Por lo tanto, la decisión institucional es mantener la liquidez en espera de una estructura de mercado más robusta.",
+  "reasoning": "El mercado presenta una estructura de capitulación sistémica sin fuerza relativa en los activos analizados. Ningún candidato cumple con los criterios de convicción A+ exigidos por el comité, por lo que la estrategia institucional es mantener la liquidez total para evitar pérdidas innecesarias en un entorno de alta volatilidad y baja probabilidad de éxito.",
   "top_candidates": [
     {
       "symbol": "ETHFIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ERAUSDT",
       "score": 60
     },
     {
@@ -19,11 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "PUMPUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "HBARUSDT",
+      "symbol": "GRAMUSDT",
       "score": 50
     }
   ]
