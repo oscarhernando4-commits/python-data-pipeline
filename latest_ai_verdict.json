@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-05 16:10:24",
+  "timestamp": "2026-08-05 16:12:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de consolidación con sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia institucional es preservar el capital y esperar una configuración técnica más robusta.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de preservación de capital dicta mantener la liquidez en espera de una señal más clara.",
   "top_candidates": [
-    {
-      "symbol": "GRAMUSDT",
-      "score": 75
-    },
     {
       "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {

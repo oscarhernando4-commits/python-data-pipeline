@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 1454,
+    "total_trades": 1474,
     "wins": 345,
-    "losses": 1109,
-    "win_rate_pct": 23.73,
-    "total_pnl_usd": -34.59769454545461
+    "losses": 1129,
+    "win_rate_pct": 23.41,
+    "total_pnl_usd": -57.39769454545462
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TUTUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ERAUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on POLUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on HBARUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on NIGHTUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on PENGUUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on DOGEUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on BTCUSDT)"
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on BTCUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on GRAMUSDT)"
     ],
     "boosted_patterns": [
       "Optimized Setup for LTCUSDT: Profit logged (+$2.90) -> Win on LTCUSDT (+$2.90 net) -> Level 3 Re-Trading Started!",
@@ -24218,6 +24218,346 @@
       "context": {
         "score": 75,
         "rsi_15m": 66.78,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-061",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-062",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-063",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-064",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-065",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-066",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-067",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-068",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-069",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-071",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-072",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-073",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-074",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-075",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-076",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-077",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-078",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-079",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 16:12:21",
+      "account_id": "SIM-080",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GRAMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.39,
+      "exit_price": 1.403,
+      "pnl_usd": -1.14,
+      "result": "LOSS",
+      "notes": "Hit SL on GRAMUSDT (-$1.14). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 63.63,
         "macro_trend_4h": "NEUTRAL"
       }
     }
