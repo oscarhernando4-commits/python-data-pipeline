@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 09:20:22",
+  "timestamp": "2026-08-05 09:22:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de debilidad sistémica con scores técnicos insuficientes (máximo 70 en APT, pero sin soporte de libro de órdenes claro). Siguiendo la Regla de Oro #1, al no existir candidatos con convicción A+ y soporte de ballenas, la decisión institucional es mantener la liquidez en espera de una estructura de mercado más robusta.",
+  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con una estructura técnica débil. Ninguno de los candidatos cumple con el umbral de Score Técnico >= 65 ni con la dominancia de Bids necesaria para garantizar una alta probabilidad de éxito, por lo que la decisión institucional es mantener la liquidez en espera de una mejor configuración.",
   "top_candidates": [
     {
       "symbol": "APTUSDT",
       "score": 70
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "ETHUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "SOLUSDT",
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "DOTUSDT",
       "score": 60
     }
   ]
