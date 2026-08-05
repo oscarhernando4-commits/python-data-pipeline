@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-05 01:06:24",
+  "timestamp": "2026-08-05 01:08:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de parálisis por miedo con una correlación bajista predominante. Ninguno de los activos analizados cumple con el umbral de Score A+ (>= 65) ni con la profundidad de liquidez necesaria para una ejecución segura. Se prioriza la preservación del capital sobre la operativa especulativa.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en un estado de desapalancamiento sistémico donde la mayoría de los activos carecen de la fuerza técnica necesaria para una entrada segura. Siguiendo la Regla de Oro #1, al no existir candidatos con un Score >= 65 y una estructura de soporte sólida, el comité ha decidido priorizar la preservación del capital y permanecer en liquidez total.",
   "top_candidates": [
     {
-      "symbol": "SKYUSDT",
+      "symbol": "XAUTUSDT",
       "score": 70
     },
     {
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 60
-    },
-    {
       "symbol": "PAXGUSDT",
       "score": 60
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "RENDERUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "SKYUSDT",
       "score": 55
     }
   ]
