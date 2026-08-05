@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-05 03:30:23",
+  "timestamp": "2026-08-05 03:32:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de parálisis operativa con una correlación bajista predominante. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 ni demuestra una profundidad de mercado que garantice una ejecución sin riesgo de slippage. Se mantiene la posición en efectivo (USDT) para evitar la exposición a 'cuchillos cayendo' y proteger el capital institucional.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con scores insuficientes y falta de convicción institucional. Ningún activo cumple con los criterios de seguridad A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una reversión clara.",
   "top_candidates": [
     {
+      "symbol": "VICUSDT",
+      "score": 70
+    },
+    {
       "symbol": "MUBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "KAITOUSDT",
       "score": 60
     },
     {
@@ -17,14 +25,6 @@
     {
       "symbol": "INTCBUSDT",
       "score": 60
-    },
-    {
-      "symbol": "MUUBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "BICOUSDT",
-      "score": 50
     }
   ]
 }
