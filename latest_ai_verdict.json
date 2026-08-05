@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 02:10:23",
-  "selected_symbol": "XAUTUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "El mercado se encuentra en una fase de acumulación selectiva donde el capital institucional está rotando hacia activos de refugio (RWA/Gold). XAUTUSDT cumple con todos los criterios de alta convicción (Score 85, sector líder, noticias positivas) y se operará bajo una gestión de riesgo estricta con Trailing Stop para maximizar la rentabilidad.",
+  "timestamp": "2026-08-05 02:12:22",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 45,
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos elevados en algunos activos, la falta de soporte real en el libro de órdenes y la incertidumbre macroeconómica actual no cumplen con los criterios de alta convicción necesarios para una ejecución segura, optando por la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "PAXGUSDT",
+      "symbol": "SOLUSDT",
       "score": 85
     },
     {
@@ -20,6 +16,10 @@
     },
     {
       "symbol": "INTCBUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "APTUSDT",
       "score": 85
     },
     {
