@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 09:30:21",
+  "timestamp": "2026-08-05 09:32:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución y alta fragilidad. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital hasta que la estructura de mercado muestre una acumulación institucional clara.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta incertidumbre. Ningún activo cumple con el requisito estricto de Score Técnico >= 65 ni con una dominancia de Bids superior al 55%, por lo que la orden es mantener la liquidez para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "ETHUSDT",
-      "score": 60
-    },
     {
       "symbol": "SOLUSDT",
       "score": 60
     },
     {
-      "symbol": "APTUSDT",
+      "symbol": "HBARUSDT",
       "score": 60
     },
     {
-      "symbol": "GNOUSDT",
+      "symbol": "ETHUSDT",
       "score": 60
     },
     {
-      "symbol": "AVAXUSDT",
-      "score": 50
+      "symbol": "POLUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "score": 60
     }
   ]
 }
