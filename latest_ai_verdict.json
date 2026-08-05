@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-08-05 19:56:22",
+  "timestamp": "2026-08-05 19:58:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno de mercado actual es de alta volatilidad y riesgo, con una falta de convicción técnica en los candidatos disponibles. Siguiendo la Regla de Oro #1, se prioriza la preservación del capital sobre la ejecución especulativa, manteniendo la posición en espera (HOLD) hasta que las condiciones macro y técnicas mejoren.",
+  "reasoning": "El mercado se encuentra en un estado de estancamiento defensivo con una alta probabilidad de volatilidad errática; ningún activo cumple con los criterios estrictos de convicción A+ requeridos por el comité para una ejecución segura.",
   "top_candidates": [
     {
-      "symbol": "POLUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "ETCUSDT",
-      "score": 65
+      "symbol": "POLUSDT",
+      "score": 75
     },
     {
       "symbol": "JSTUSDT",
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "SOLUSDT",
       "score": 60
     }
   ]
