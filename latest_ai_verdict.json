@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 12:20:22",
+  "timestamp": "2026-08-05 12:22:32",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de 'trampa de neutralidad' con alta volatilidad y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia de protección de capital dicta un estado de espera (HOLD) para evitar pérdidas innecesarias.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 85
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "ETHUSDT",
       "score": 85
     },
     {
@@ -19,11 +19,11 @@
       "score": 85
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "HBARUSDT",
       "score": 75
     }
   ]
