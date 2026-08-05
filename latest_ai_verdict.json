@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 23:38:17",
+  "timestamp": "2026-08-05 23:40:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica y alta incertidumbre regulatoria. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 requerido por el Comité para una operación de alta convicción. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una alta aversión al riesgo. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 requerido por el comité, y la falta de profundidad en el libro de órdenes junto con el sesgo bajista histórico en condiciones similares dictamina una postura de protección de capital (HOLD) en USDT.",
   "top_candidates": [
     {
       "symbol": "TAOUSDT",
@@ -23,8 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "FETUSDT",
-      "score": 55
+      "symbol": "ETHFIUSDT",
+      "score": 60
     }
   ]
 }
