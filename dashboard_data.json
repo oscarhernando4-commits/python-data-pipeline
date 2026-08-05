@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 19:16:22",
+  "updated_at": "2026-08-05 19:18:21",
   "total_balance_usd": 20.09,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una estructura de alta incertidumbre con una falta de convicción institucional en el libro de órdenes. Ninguno de los candidatos cumple con el requisito de soporte de ballenas (Bids >= 55%) ni con una tendencia 4H consolidada, lo que eleva el riesgo de pérdidas. Se prioriza la preservación del capital sobre la ejecución especulativa."
+    "reasoning": "Ningún activo cumple con el umbral de seguridad A+ (Score >= 65 y Bids > 55%) exigido por el comité. La alta volatilidad y la falta de profundidad en el libro de órdenes sugieren que el riesgo de 'trampa de valor' es demasiado elevado para ejecutar una compra, por lo que se mantiene la posición en efectivo para preservar el capital."
   }
 }
