@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-05 08:36:22",
+  "timestamp": "2026-08-05 08:38:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes y la ausencia de una tendencia clara en el mercado global (Fear & Greed 27) no justifican la exposición al riesgo. Se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "Tras la deliberación unánime, el comité determina que ningún activo cumple con el umbral estricto de convicción A+ (Score >= 65 y Bids > 55%). La alta volatilidad y la falta de soporte claro en el libro de órdenes sugieren mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "CRVUSDT",
+      "score": 85
+    },
     {
       "symbol": "SOLUSDT",
       "score": 75
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "POLUSDT",
       "score": 75
     },
     {
       "symbol": "APTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NEXOUSDT",
       "score": 75
     }
   ]
