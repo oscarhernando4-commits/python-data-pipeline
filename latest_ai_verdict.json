@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 14:22:22",
+  "timestamp": "2026-08-05 14:24:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de purga selectiva con alta incertidumbre. Ningún activo cumple con el requisito de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es el resguardo de capital hasta que se estabilice la liquidez.",
+  "reasoning": "El mercado actual presenta una alta volatilidad y falta de convicción institucional. Ninguno de los candidatos cumple con el umbral estricto de Score Técnico >= 65 combinado con una dominancia de Bids > 55%, lo que obliga a mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 75
-    },
     {
       "symbol": "ETCUSDT",
       "score": 75
     },
     {
-      "symbol": "APTUSDT",
+      "symbol": "ALLOUSDT",
       "score": 75
+    },
+    {
+      "symbol": "HOMEUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "TAOUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "MIRAUSDT",
+      "score": 65
     }
   ]
 }
