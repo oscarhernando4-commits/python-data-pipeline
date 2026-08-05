@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1374,
-    "wins": 325,
+    "total_trades": 1394,
+    "wins": 345,
     "losses": 1049,
-    "win_rate_pct": 23.65,
-    "total_pnl_usd": -38.59769454545464
+    "win_rate_pct": 24.75,
+    "total_pnl_usd": 29.60230545454537
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BANKUSDT)"
     ],
     "boosted_patterns": [
-      "Optimized Setup for LTCUSDT: Profit logged (+$2.90) -> Win on LTCUSDT (+$2.90 net) -> Level 2 Re-Trading Started!",
       "Optimized Setup for LTCUSDT: Profit logged (+$2.90) -> Win on LTCUSDT (+$2.90 net) -> Level 3 Re-Trading Started!",
       "Optimized Setup for XRPUSDT: Profit logged (+$2.94) -> Win on XRPUSDT (+$2.94 net) -> Level 4 Re-Trading Started!",
       "Optimized Setup for XRPUSDT: Profit logged (+$2.94) -> Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
@@ -49,7 +48,8 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TUTUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on COTIUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HOMEUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BNBUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BNBUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on EPICUSDT)"
     ]
   },
   "history": [
@@ -22858,6 +22858,346 @@
       "context": {
         "score": 50,
         "rsi_15m": 81.93,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-001",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-002",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-003",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-004",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-005",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-006",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-007",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-008",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-009",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-010",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-011",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-012",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-013",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-014",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-015",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-016",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-017",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-018",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-019",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-05 02:38:22",
+      "account_id": "SIM-020",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "EPICUSDT",
+      "side": "LONG",
+      "entry_price": 1.0327,
+      "exit_price": 1.0708,
+      "pnl_usd": 3.41,
+      "result": "WIN",
+      "notes": "Win on EPICUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 69.41,
         "macro_trend_4h": "NEUTRAL"
       }
     }
