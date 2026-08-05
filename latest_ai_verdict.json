@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 07:36:22",
+  "timestamp": "2026-08-05 07:38:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los 10 candidatos, ninguno alcanza el umbral de calidad A+ (Score >= 65). La fragilidad del mercado y la falta de soporte institucional en el libro de órdenes obligan a mantener la posición en efectivo para evitar pérdidas por volatilidad no confirmada.",
+  "reasoning": "El mercado no cumple con los criterios de alta convicción (Score >= 65) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de una caída sistémica. Se prioriza la preservación de capital sobre la especulación en activos de baja liquidez.",
   "top_candidates": [
     {
-      "symbol": "DOTUSDT",
+      "symbol": "ADAUSDT",
       "score": 60
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "MIRAUSDT",
       "score": 60
     },
     {
@@ -19,12 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "ZAMAUSDT",
       "score": 60
     },
     {
-      "symbol": "ADAUSDT",
-      "score": 50
+      "symbol": "SUNUSDT",
+      "score": 60
     }
   ]
 }
