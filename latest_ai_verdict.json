@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-05 23:46:15",
+  "timestamp": "2026-08-05 23:48:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con una ausencia total de activos que cumplan con el umbral de seguridad A+ (Score >= 65). La estrategia prioriza la preservación del capital ante la falta de líderes sectoriales y la alta probabilidad de pérdidas en condiciones de mercado neutral/bajista.",
+  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema con una falta de correlación positiva y scores técnicos mediocres. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital hasta que surja una estructura de mercado clara y alcista.",
   "top_candidates": [
     {
-      "symbol": "NVDABUSDT",
+      "symbol": "SHIBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "HFTUSDT",
       "score": 60
     },
     {
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "XPLUSDT",
       "score": 55
     },
     {
-      "symbol": "FIDAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ATOMUSDT",
+      "symbol": "ERAUSDT",
       "score": 50
     }
   ]
