@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-05 00:08:21",
+  "timestamp": "2026-08-05 00:10:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con scores técnicos insuficientes (máximo 60/100) y falta de soporte en el libro de órdenes. Siguiendo la Regla #1 de no perder dinero, el comité ha decidido no ejecutar ninguna operación hasta que aparezca una oportunidad con convicción A+.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con scores de activos insuficientes para cumplir con nuestra política de gestión de riesgo A+. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja profundidad.",
   "top_candidates": [
     {
-      "symbol": "MUBUSDT",
+      "symbol": "EULUSDT",
+      "score": 80
+    },
+    {
+      "symbol": "BANKUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SOXLBUSDT",
       "score": 60
     },
     {
@@ -15,15 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "NBISBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "MUUBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "JTOUSDT",
+      "symbol": "ENAUSDT",
       "score": 60
     }
   ]
