@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 23:52:21",
+  "timestamp": "2026-08-05 23:54:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos con un Score Técnico superior a 65 ni confirmación de liquidez institucional, por lo que se prioriza la preservación del capital frente a la alta volatilidad y el riesgo de 'bull traps' en un mercado bajista.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con debilidad técnica generalizada. Ningún candidato cumple con los criterios de riesgo A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en efectivo (Cash is King) para evitar pérdidas innecesarias en un entorno de alta fragilidad.",
   "top_candidates": [
-    {
-      "symbol": "TAOUSDT",
-      "score": 60
-    },
     {
       "symbol": "SHIBUSDT",
       "score": 60
     },
     {
+      "symbol": "TAOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SAHARAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "STXUSDT",
+      "score": 60
+    },
+    {
       "symbol": "FETUSDT",
       "score": 55
-    },
-    {
-      "symbol": "ERAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 50
     }
   ]
 }
