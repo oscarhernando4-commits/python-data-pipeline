@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 23:36:20",
+  "timestamp": "2026-08-05 23:38:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una correlación bajista alta. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) ni con la profundidad de liquidez necesaria para mitigar el riesgo de slippage. Se prioriza la preservación de capital sobre la especulación en un entorno de alta volatilidad.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica y alta incertidumbre regulatoria. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 requerido por el Comité para una operación de alta convicción. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez.",
   "top_candidates": [
     {
       "symbol": "TAOUSDT",
       "score": 60
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "ACXUSDT",
       "score": 60
     },
     {
@@ -19,12 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "FETUSDT",
-      "score": 55
+      "symbol": "TRUMPUSDT",
+      "score": 60
     },
     {
-      "symbol": "ADAUSDT",
-      "score": 50
+      "symbol": "FETUSDT",
+      "score": 55
     }
   ]
 }
