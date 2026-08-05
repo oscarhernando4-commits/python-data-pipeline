@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 09:00:21",
+  "timestamp": "2026-08-05 09:02:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los 10 candidatos, ninguno alcanza el umbral de Score Técnico de 65 ni muestra una dominancia de Bids superior al 55%. El entorno macro es de alta aversión al riesgo y los patrones históricos sugieren una alta probabilidad de pérdida en las condiciones actuales. Se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado se encuentra en un estado de estancamiento sistémico con una clara debilidad en los activos principales. Ninguno de los candidatos cumple con el umbral de calidad A+ (Score >= 65) exigido por el comité, por lo que la decisión institucional es mantener la liquidez en efectivo para evitar pérdidas innecesarias en un entorno de alta volatilidad y baja convicción.",
   "top_candidates": [
     {
-      "symbol": "HOMEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SOLUSDT",
+      "symbol": "DOTUSDT",
       "score": 60
     },
     {
@@ -25,6 +21,10 @@
     {
       "symbol": "TIAUSDT",
       "score": 60
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "score": 50
     }
   ]
 }

@@ -1,12 +1,12 @@
 {
-  "OPUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-05 09:00:13",
-      "price": 0.0885,
-      "score": 15,
-      "rsi": 47.79,
+      "timestamp": "2026-08-05 09:02:13",
+      "price": 0.1353,
+      "score": 35,
+      "rsi": 53.3,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.78,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +14,25 @@
   ],
   "DCRUSDT": [
     {
-      "timestamp": "2026-08-05 09:00:13",
-      "price": 13.57,
-      "score": 60,
-      "rsi": 61.17,
+      "timestamp": "2026-08-05 09:02:13",
+      "price": 13.55,
+      "score": 30,
+      "rsi": 57.94,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.03,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-05 09:02:13",
+      "price": 0.0885,
+      "score": 15,
+      "rsi": 47.79,
+      "macd": "Neutral",
+      "volume_surge": 0.1,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
