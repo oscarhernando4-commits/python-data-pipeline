@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-05 00:06:20",
+  "timestamp": "2026-08-05 00:08:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución pasiva con una falta crítica de convicción institucional. Ningún activo cumple con los criterios de riesgo-retorno exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una configuración técnica superior.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con scores técnicos insuficientes (máximo 60/100) y falta de soporte en el libro de órdenes. Siguiendo la Regla #1 de no perder dinero, el comité ha decidido no ejecutar ninguna operación hasta que aparezca una oportunidad con convicción A+.",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
-      "score": 65
-    },
-    {
       "symbol": "MUBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SOXLBUSDT",
       "score": 60
     },
     {
@@ -23,7 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "DRAMBUSDT",
+      "symbol": "NBISBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "MUUBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "JTOUSDT",
       "score": 60
     }
   ]
