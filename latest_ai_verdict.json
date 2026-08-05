@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 12:52:22",
+  "timestamp": "2026-08-05 12:54:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de acumulación defensiva con alta volatilidad y falta de soporte institucional claro en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo de pérdida, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional y alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
   "top_candidates": [
-    {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
     {
       "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
       "symbol": "LTCUSDT",
       "score": 75
+    },
+    {
+      "symbol": "GNOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "MIRAUSDT",
+      "score": 70
     }
   ]
 }
