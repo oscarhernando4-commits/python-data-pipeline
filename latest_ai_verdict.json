@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 19:48:25",
+  "timestamp": "2026-08-05 19:50:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de algunos scores técnicos favorables, la falta de dominancia en el libro de órdenes y la incertidumbre macroeconómica no cumplen con los estándares de seguridad A+ exigidos por el CRO, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Ningún activo cumple con el umbral de calidad A+ (Score >= 65) y la confirmación de soporte en el libro de órdenes necesaria para mitigar el riesgo sistémico actual. La estrategia institucional es la preservación total del capital hasta que el mercado muestre una estructura de acumulación clara y una reducción en el índice de miedo.",
   "top_candidates": [
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TRXUSDT",
-      "score": 75
-    },
     {
       "symbol": "POLUSDT",
       "score": 75
+    },
+    {
+      "symbol": "ICPUSDT",
+      "score": 65
     },
     {
       "symbol": "JSTUSDT",
       "score": 65
     },
     {
-      "symbol": "EPICUSDT",
+      "symbol": "REUSDT",
       "score": 65
+    },
+    {
+      "symbol": "BTCUSDT",
+      "score": 60
     }
   ]
 }
