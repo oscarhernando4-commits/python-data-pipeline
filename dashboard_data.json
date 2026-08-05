@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 12:32:25",
+  "updated_at": "2026-08-05 12:34:28",
   "total_balance_usd": 20.08,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que, a pesar de que varios activos poseen un Score técnico de 75, el entorno de mercado (Fear & Greed 27) y la falta de una dominancia clara en el libro de órdenes (Bids 50%) no cumplen con los criterios estrictos de convicción A+ exigidos por el protocolo de riesgo. Se decide mantener la liquidez en espera de una estructura de mercado más definida."
+    "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado presenta una divergencia estructural y un sentimiento de miedo que, sumado a la falta de profundidad en el libro de órdenes, hace que la estrategia más rentable sea preservar el capital en espera de una señal de alta probabilidad."
   }
 }
