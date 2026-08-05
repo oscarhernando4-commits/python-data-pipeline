@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 06:20:19",
+  "timestamp": "2026-08-05 06:22:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con una clara falta de soporte institucional en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la liquidez en USDT.",
+  "reasoning": "El mercado presenta una divergencia estructural y falta de profundidad en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y confirmación de volumen), por lo que se prioriza la preservación del capital sobre la operativa especulativa.",
   "top_candidates": [
-    {
-      "symbol": "EULUSDT",
-      "score": 75
-    },
     {
       "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "ICPUSDT",
       "score": 75
     },
     {
@@ -23,8 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "HBARUSDT",
-      "score": 65
+      "symbol": "ALLOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TIAUSDT",
+      "score": 75
     }
   ]
 }
