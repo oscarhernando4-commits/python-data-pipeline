@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-05 23:32:20",
+  "timestamp": "2026-08-05 23:34:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de alta fragilidad y falta de convicción institucional. Ningún activo cumple con los criterios de selección A+ (Score >= 65) ni con la profundidad de mercado necesaria para mitigar el riesgo de slippage, por lo que la estrategia óptima es la preservación total del capital.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con debilidad generalizada. Ningún activo cumple con el umbral de Score A+ (>= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que la estrategia óptima es la preservación del capital mediante el mantenimiento de la posición en efectivo.",
   "top_candidates": [
-    {
-      "symbol": "TAOUSDT",
-      "score": 60
-    },
     {
       "symbol": "AMDBUSDT",
       "score": 60
@@ -23,7 +19,11 @@
       "score": 55
     },
     {
-      "symbol": "FIDAUSDT",
+      "symbol": "XPLUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "ADAUSDT",
       "score": 50
     }
   ]
