@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-05 15:54:19",
+  "timestamp": "2026-08-05 15:56:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una alta volatilidad y falta de convicción institucional en los activos analizados. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 y soporte de libro de órdenes > 55%) exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una configuración de alta probabilidad.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La falta de profundidad en el libro de órdenes y la alta volatilidad en el entorno de miedo actual dictan una postura de preservación de capital.",
   "top_candidates": [
     {
       "symbol": "SYNUSDT",
       "score": 75
-    },
-    {
-      "symbol": "SPYBUSDT",
-      "score": 70
     },
     {
       "symbol": "HEIUSDT",
@@ -23,7 +19,11 @@
       "score": 65
     },
     {
-      "symbol": "SNXXBUSDT",
+      "symbol": "DOTUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "GIGGLEUSDT",
       "score": 65
     }
   ]
