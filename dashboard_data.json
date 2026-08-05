@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 14:14:25",
+  "updated_at": "2026-08-05 14:16:24",
   "total_balance_usd": 20.08,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que el mercado se encuentra en un estado de baja convicción con una alta probabilidad de volatilidad negativa. Ningún activo cumple con los requisitos estrictos de soporte de ballenas (Bids >= 55%) y convicción A+ necesarios para una ejecución segura, por lo que se prioriza la preservación del capital sobre la búsqueda de alfa."
+    "reasoning": "El mercado se encuentra en una fase de alta selectividad y purga de activos débiles; al no existir un candidato que cumpla con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), la decisión institucional es mantener la posición en efectivo para evitar pérdidas innecesarias."
   }
 }
