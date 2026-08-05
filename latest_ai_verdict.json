@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-05 10:38:21",
+  "timestamp": "2026-08-05 10:40:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que APTUSDT presenta un score técnico alto, la ausencia de soporte en el libro de órdenes y el entorno macroeconómico de capitulación impiden la ejecución de cualquier orden de compra, priorizando la preservación del capital.",
+  "reasoning": "El mercado presenta una estructura de 'acumulación de pánico' con alta incertidumbre. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja convicción institucional.",
   "top_candidates": [
-    {
-      "symbol": "APTUSDT",
-      "score": 85
-    },
     {
       "symbol": "BTCUSDT",
       "score": 75
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
       "symbol": "ETCUSDT",
       "score": 75
     },
     {
-      "symbol": "VIRTUALUSDT",
+      "symbol": "APTUSDT",
       "score": 75
     }
   ]
