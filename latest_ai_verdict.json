@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-05 10:28:21",
+  "timestamp": "2026-08-05 10:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta fragilidad con una divergencia entre el miedo extremo y la debilidad estructural de las altcoins. Ningún activo presenta una configuración de libro de órdenes (Bids > 55%) que justifique el riesgo de entrada bajo las reglas de protección de capital del comité.",
+  "reasoning": "El mercado se encuentra en un estado de aversión al riesgo selectivo con alta correlación negativa. Ningún activo cumple con los requisitos estrictos de convicción A+ (Score >= 65 y Bids > 55%) necesarios para mitigar el riesgo de 'trampa de valor' o 'cuchillo cayendo'. Se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
-      "symbol": "APTUSDT",
-      "score": 85
-    },
-    {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
       "score": 75
     },
     {
@@ -23,8 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "VIRTUALUSDT",
       "score": 75
+    },
+    {
+      "symbol": "GNOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "score": 65
     }
   ]
 }
