@@ -1,15 +1,29 @@
 {
-  "STXUSDT": [
+  "BIOUSDT": [
     {
-      "timestamp": "2026-08-05 03:58:12",
-      "price": 0.135,
-      "score": 15,
-      "rsi": 47.78,
+      "timestamp": "2026-08-05 04:00:14",
+      "price": 0.0247,
+      "score": 10,
+      "rsi": 78.57,
       "macd": "Neutral",
-      "volume_surge": 0.07,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ESPUSDT": [
+    {
+      "timestamp": "2026-08-05 04:00:14",
+      "price": 0.06027,
+      "score": 0,
+      "rsi": 38.27,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
+}]
 }
