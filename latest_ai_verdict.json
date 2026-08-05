@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-05 09:56:47",
+  "timestamp": "2026-08-05 09:58:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual no cumple con los requisitos mínimos de seguridad y convicción técnica establecidos por el comité. La ausencia de activos con un Score Técnico >= 65 y la falta de soporte claro en el libro de órdenes obligan a mantener una postura defensiva de liquidez total para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta un entorno de capitulación técnica donde los activos con mayor potencial carecen de la fuerza institucional necesaria (Score < 65). Para evitar el riesgo de 'trampas de toros' y proteger el capital, el comité ha decidido no ejecutar ninguna operación, manteniendo la exposición neta en cero.",
   "top_candidates": [
     {
-      "symbol": "ETHUSDT",
+      "symbol": "LTCUSDT",
       "score": 60
     },
     {
@@ -15,11 +15,11 @@
       "score": 60
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "TAOUSDT",
       "score": 60
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "ENAUSDT",
       "score": 60
     },
     {
