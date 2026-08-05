@@ -1,15 +1,54 @@
 {
-  "HYPERUSDT": [
+  "BONKUSDT": [
     {
-      "timestamp": "2026-08-05 05:44:12",
-      "price": 0.0566,
-      "score": 15,
-      "rsi": 37.59,
+      "timestamp": "2026-08-05 05:46:12",
+      "price": 2.82e-06,
+      "score": 60,
+      "rsi": 52.2,
       "macd": "Neutral",
       "volume_surge": 0.2,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
+  ],
+  "RIFUSDT": [
+    {
+      "timestamp": "2026-08-05 05:46:12",
+      "price": 0.0724,
+      "score": 30,
+      "rsi": 45.87,
+      "macd": "Neutral",
+      "volume_surge": 0.22,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-05 05:46:12",
+      "price": 0.1349,
+      "score": 45,
+      "rsi": 48.46,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DCRUSDT": [
+    {
+      "timestamp": "2026-08-05 05:46:12",
+      "price": 13.5,
+      "score": 60,
+      "rsi": 62.66,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
   ]
-}}
+}
