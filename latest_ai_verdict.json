@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 08:26:19",
+  "timestamp": "2026-08-05 08:28:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución defensiva con scores técnicos mediocres y falta de momentum institucional. Ningún activo cumple con los criterios de alta convicción (Score >= 65) ni con la solidez necesaria en el libro de órdenes para garantizar la preservación del capital, por lo que se prioriza la liquidez.",
+  "reasoning": "Tras deliberar, el comité determina que las condiciones actuales de mercado no cumplen con los requisitos de alta convicción (Score >= 65 y Bids > 55%) necesarios para garantizar la preservación del capital, optando por una postura de espera (HOLD) para evitar pérdidas en un entorno de alta volatilidad e indecisión.",
   "top_candidates": [
     {
       "symbol": "MIRAUSDT",
-      "score": 75
+      "score": 90
     },
     {
       "symbol": "CRVUSDT",
-      "score": 70
+      "score": 85
+    },
+    {
+      "symbol": "SOLUSDT",
+      "score": 75
     },
     {
       "symbol": "LINKUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "GIGGLEUSDT",
-      "score": 60
+      "score": 75
     }
   ]
 }
