@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 09:50:22",
+  "timestamp": "2026-08-05 09:52:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual se encuentra en una fase de capitulación y fragmentación de liquidez. Dado que ningún activo cumple con el requisito estricto de un Score Técnico >= 65, se ha decidido proteger el capital y no ejecutar ninguna operación, manteniendo una postura de 'Cash-Neutral' hasta que las condiciones institucionales mejoren.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación forzada con una debilidad técnica generalizada. Ningún activo cumple con el umbral mínimo de score (65) ni con la profundidad de libro de órdenes necesaria para una operación de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad bajista.",
   "top_candidates": [
     {
-      "symbol": "BCHUSDT",
+      "symbol": "TAOUSDT",
       "score": 60
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "LINKUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "BCHUSDT",
       "score": 60
     },
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "ETHUSDT",
       "score": 60
     }
   ]
