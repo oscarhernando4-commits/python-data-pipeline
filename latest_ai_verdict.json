@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-05 09:24:23",
+  "timestamp": "2026-08-05 09:26:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad generalizada con una mayoría de activos operando con scores técnicos inferiores al umbral de seguridad A+ (65). La falta de profundidad en el libro de órdenes y la inestabilidad de los activos líderes frente a la incertidumbre macro impiden la ejecución de cualquier orden de compra, optando por una postura defensiva de liquidez total.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "APTUSDT",
       "score": 70
-    },
-    {
-      "symbol": "ETHUSDT",
-      "score": 60
     },
     {
       "symbol": "LINKUSDT",
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "RENDERUSDT",
+      "symbol": "POLUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ARBUSDT",
       "score": 60
     }
   ]
