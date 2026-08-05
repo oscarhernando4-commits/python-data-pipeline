@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-05 02:12:22",
+  "timestamp": "2026-08-05 02:14:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 45,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos elevados en algunos activos, la falta de soporte real en el libro de órdenes y la incertidumbre macroeconómica actual no cumplen con los criterios de alta convicción necesarios para una ejecución segura, optando por la preservación del capital.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos elevados, el mercado carece de la convicción necesaria y el soporte de liquidez requerido para una operación de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado neutral y temeroso.",
   "top_candidates": [
     {
+      "symbol": "XAUTUSDT",
+      "score": 85
+    },
+    {
       "symbol": "SOLUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "PAXGUSDT",
       "score": 85
     },
     {
@@ -15,15 +23,7 @@
       "score": 85
     },
     {
-      "symbol": "INTCBUSDT",
-      "score": 85
-    },
-    {
       "symbol": "APTUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "LUNCUSDT",
       "score": 85
     }
   ]
