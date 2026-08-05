@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 10:10:20",
+  "timestamp": "2026-08-05 10:12:30",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado está en un estado de desapalancamiento forzado con una correlación negativa extrema. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la convicción necesaria para una entrada, por lo que la estrategia óptima es la preservación total del capital en efectivo.",
+  "reasoning": "El mercado actual se encuentra en un estado de estrés y capitulación. Ninguno de los activos analizados cumple con los criterios de alta convicción (Score >= 65) ni con la solidez necesaria en el libro de órdenes para justificar una entrada, por lo que la estrategia de preservación de capital es la única opción viable.",
   "top_candidates": [
-    {
-      "symbol": "AVAXUSDT",
-      "score": 80
-    },
     {
       "symbol": "LTCUSDT",
       "score": 60
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 60
+      "symbol": "HEIUSDT",
+      "score": 50
     },
     {
-      "symbol": "APTUSDT",
-      "score": 60
+      "symbol": "MIRAUSDT",
+      "score": 50
     },
     {
-      "symbol": "DASHUSDT",
-      "score": 60
+      "symbol": "AVAXUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "STOUSDT",
+      "score": 50
     }
   ]
 }
