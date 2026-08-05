@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 22:44:17",
+  "timestamp": "2026-08-05 22:46:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte institucional necesaria, por lo que se prioriza la preservación de capital ante la inestabilidad del mercado.",
+  "reasoning": "Tras analizar los 10 candidatos, ninguno alcanza el umbral de convicción A+ (Score >= 65). El mercado presenta una alta volatilidad y una falta de soporte institucional claro, lo que aumenta el riesgo de 'falling knives'. Se prioriza la protección del capital sobre la especulación en un entorno de miedo generalizado.",
   "top_candidates": [
-    {
-      "symbol": "WLFIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DEXEUSDT",
-      "score": 60
-    },
     {
       "symbol": "ACXUSDT",
       "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 60
+      "symbol": "SOXLBUSDT",
+      "score": 50
     },
     {
       "symbol": "HFTUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "TAOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "WLFIUSDT",
       "score": 50
     }
   ]
