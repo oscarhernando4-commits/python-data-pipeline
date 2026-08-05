@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-05 04:14:21",
+  "timestamp": "2026-08-05 04:16:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada. Ninguno de los activos analizados alcanza el umbral de score técnico de 65 requerido por el comité, y la falta de soporte claro en el libro de órdenes junto con la alta volatilidad bajista hace que la única decisión prudente sea mantener la posición en efectivo (HOLD).",
+  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema con una correlación negativa masiva. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la profundidad de mercado requerida para una ejecución institucional. Se prioriza la preservación del capital sobre la especulación en activos de baja liquidez.",
   "top_candidates": [
     {
-      "symbol": "NEXOUSDT",
+      "symbol": "DRAMBUSDT",
       "score": 70
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
+      "symbol": "FETUSDT",
       "score": 60
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "TSLABUSDT",
       "score": 60
     }
   ]
