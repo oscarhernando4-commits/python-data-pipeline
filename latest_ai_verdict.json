@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-05 06:12:22",
+  "timestamp": "2026-08-05 06:14:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de consolidación con alta incertidumbre y falta de soporte institucional sólido en el libro de órdenes. Ningún activo cumple con los criterios estrictos de convicción A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar la exposición a una posible purga de mercado.",
+  "reasoning": "Tras la deliberación unánime, el comité concluye que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes (50% Bids) y el entorno de miedo (Fear & Greed 27) no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se decide no ejecutar ninguna operación para evitar la exposición a la alta volatilidad y el riesgo de reversión a la media.",
   "top_candidates": [
     {
-      "symbol": "ETHUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
@@ -19,7 +19,7 @@
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
+      "symbol": "SKYUSDT",
       "score": 75
     },
     {
