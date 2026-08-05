@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-05 08:46:26",
+  "timestamp": "2026-08-05 08:48:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral mínimo de Score Técnico (65) ni con la confirmación de liquidez necesaria en el libro de órdenes. El mercado se encuentra en un estado de distribución forzada y alta incertidumbre, por lo que el comité ha decidido mantener el 100% de la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo'.",
   "top_candidates": [
     {
-      "symbol": "LTCUSDT",
+      "symbol": "SOLUSDT",
       "score": 60
     },
     {
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "NEXOUSDT",
-      "score": 60
-    },
-    {
       "symbol": "APTUSDT",
       "score": 60
     },
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "NEXOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TRXUSDT",
       "score": 50
     }
   ]
