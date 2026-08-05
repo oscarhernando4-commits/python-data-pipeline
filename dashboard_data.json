@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 17:46:21",
+  "updated_at": "2026-08-05 17:48:21",
   "total_balance_usd": 20.09,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la ausencia de una dominancia clara en el libro de órdenes (Bids < 55%) y la alta probabilidad de pérdidas basada en el historial de trades recientes (especialmente en entornos de tendencia neutral) obligan al comité a mantener una postura de espera para preservar el capital."
+    "reasoning": "A pesar de que varios activos presentan un score técnico de 75, el libro de órdenes no muestra la dominancia de compradores necesaria (>= 55%) y el entorno macro es de alta incertidumbre. El comité ha decidido priorizar la preservación del capital sobre la especulación en un mercado sin una tendencia definida."
   }
 }
