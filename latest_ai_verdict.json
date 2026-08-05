@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 10:46:21",
+  "timestamp": "2026-08-05 10:48:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica extrema sin divergencias alcistas claras. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que la orden es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' en un entorno de capitulación.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación sistémica sin activos que cumplan con los criterios de alta convicción (Score >= 65). La falta de profundidad en el libro de órdenes y la debilidad técnica general obligan a mantener una postura de espera para evitar trampas de liquidez.",
   "top_candidates": [
     {
-      "symbol": "APTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "VIRTUALUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "INJUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "NIGHTUSDT",
+      "symbol": "GNOUSDT",
       "score": 60
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "HBARUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "HEIUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "COTIUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "MORPHOUSDT",
       "score": 50
     }
   ]
