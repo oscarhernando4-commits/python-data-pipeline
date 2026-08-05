@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 04:34:21",
+  "timestamp": "2026-08-05 04:36:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad estructural severa. Ninguno de los candidatos con score 75 muestra una dominancia clara en el libro de órdenes (Bids >= 55%) ni una tendencia alcista confirmada, lo que aumenta el riesgo de 'falling knives'. Se prioriza la preservación de capital hasta que el sentimiento de mercado mejore o aparezca una oportunidad con convicción A+.",
+  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema con una correlación bajista sistémica. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la profundidad de mercado necesaria para una ejecución institucional segura. Se prioriza la preservación del capital sobre la especulación en activos de baja liquidez.",
   "top_candidates": [
     {
       "symbol": "MUBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ONDOUSDT",
-      "score": 75
+      "score": 60
     },
     {
       "symbol": "FETUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "TSLABUSDT",
-      "score": 75
+      "symbol": "DRAMBUSDT",
+      "score": 60
     },
     {
-      "symbol": "NBISBUSDT",
-      "score": 75
+      "symbol": "NEXOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "CRVUSDT",
+      "score": 60
     }
   ]
 }
