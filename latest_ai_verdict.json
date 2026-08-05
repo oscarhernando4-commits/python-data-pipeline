@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 04:30:20",
+  "timestamp": "2026-08-05 04:32:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento sistémico con una ausencia total de activos que cumplan con los criterios de calidad A+ exigidos por el comité. La falta de soporte en el libro de órdenes y la debilidad técnica generalizada dictan una postura de preservación de capital (HOLD) hasta que surja una oportunidad con mayor convicción.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una ausencia total de activos que cumplan con el umbral de calidad A+ (Score >= 65). La estrategia institucional dicta la preservación del capital ante la falta de soporte estructural y la debilidad sistémica observada en los candidatos analizados.",
   "top_candidates": [
+    {
+      "symbol": "MUBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "score": 60
+    },
     {
       "symbol": "FETUSDT",
       "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "CRVUSDT",
+      "symbol": "NBISBUSDT",
       "score": 60
     },
     {
       "symbol": "NEXOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "NBISBUSDT",
       "score": 60
     }
   ]
