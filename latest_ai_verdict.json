@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 10:42:22",
+  "timestamp": "2026-08-05 10:44:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación selectiva donde la falta de soporte en el libro de órdenes y la baja probabilidad estadística de éxito en entornos neutrales dictan una postura de espera para preservar el capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes) en un entorno de mercado incierto, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "MIRAUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "APTUSDT",
       "score": 75
     },
     {
-      "symbol": "APTUSDT",
+      "symbol": "VIRTUALUSDT",
       "score": 75
     }
   ]
