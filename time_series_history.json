@@ -1,12 +1,25 @@
 {
-  "PENDLEUSDT": [
+  "HYPERUSDT": [
     {
-      "timestamp": "2026-08-05 19:12:11",
-      "price": 1.405,
-      "score": 50,
-      "rsi": 58.3,
+      "timestamp": "2026-08-05 19:14:12",
+      "price": 0.0604,
+      "score": 65,
+      "rsi": 66.23,
       "macd": "Neutral",
-      "volume_surge": 0.26,
+      "volume_surge": 0.52,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DCRUSDT": [
+    {
+      "timestamp": "2026-08-05 19:14:12",
+      "price": 12.75,
+      "score": 35,
+      "rsi": 13.18,
+      "macd": "Neutral",
+      "volume_surge": 6.69,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
