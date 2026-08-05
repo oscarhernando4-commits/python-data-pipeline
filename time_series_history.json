@@ -1,12 +1,25 @@
 {
-  "RIFUSDT": [
+  "JTOUSDT": [
     {
-      "timestamp": "2026-08-05 08:00:13",
-      "price": 0.0722,
-      "score": 30,
-      "rsi": 47.47,
+      "timestamp": "2026-08-05 08:02:12",
+      "price": 0.5094,
+      "score": 0,
+      "rsi": 49.06,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.2,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-05 08:02:12",
+      "price": 1.392,
+      "score": 30,
+      "rsi": 58.99,
+      "macd": "Neutral",
+      "volume_surge": 0.08,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +27,12 @@
   ],
   "DODOUSDT": [
     {
-      "timestamp": "2026-08-05 08:00:13",
-      "price": 0.01836,
+      "timestamp": "2026-08-05 08:02:12",
+      "price": 0.01833,
       "score": 0,
-      "rsi": 34.54,
+      "rsi": 33.41,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.01,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -27,38 +40,12 @@
   ],
   "STXUSDT": [
     {
-      "timestamp": "2026-08-05 08:00:13",
-      "price": 0.1353,
+      "timestamp": "2026-08-05 08:02:12",
+      "price": 0.1355,
       "score": 50,
-      "rsi": 55.5,
+      "rsi": 58.2,
       "macd": "Neutral",
-      "volume_surge": 0.0,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "REUSDT": [
-    {
-      "timestamp": "2026-08-05 08:00:13",
-      "price": 0.392,
-      "score": 50,
-      "rsi": 60.15,
-      "macd": "Neutral",
-      "volume_surge": 0.0,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "ORDIUSDT": [
-    {
-      "timestamp": "2026-08-05 08:00:13",
-      "price": 3.384,
-      "score": 50,
-      "rsi": 58.07,
-      "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 1.02,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
