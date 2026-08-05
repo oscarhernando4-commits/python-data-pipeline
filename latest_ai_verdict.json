@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-05 00:16:22",
+  "timestamp": "2026-08-05 00:18:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, el comité ha determinado que las condiciones actuales del mercado y la calidad técnica de los candidatos no cumplen con los estándares de seguridad y rentabilidad exigidos, por lo que se mantiene la posición en efectivo (HOLD).",
+  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con scores técnicos insuficientes. Ningún activo cumple con los criterios de alta convicción (A+) establecidos por el comité, por lo que la estrategia óptima es mantener la posición en efectivo (Cash-Neutral) para evitar la exposición a la volatilidad bajista.",
   "top_candidates": [
-    {
-      "symbol": "MUBUSDT",
-      "score": 60
-    },
     {
       "symbol": "BNBUSDT",
       "score": 60
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
       "symbol": "STOUSDT",
       "score": 60
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "NBISBUSDT",
       "score": 60
     }
   ]
