@@ -1,25 +1,38 @@
 {
-  "LUNCUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-05 03:40:13",
-      "price": 5.027e-05,
-      "score": 45,
-      "rsi": 50.95,
+      "timestamp": "2026-08-05 03:42:13",
+      "price": 0.135,
+      "score": 15,
+      "rsi": 47.68,
       "macd": "Neutral",
-      "volume_surge": 0.31,
+      "volume_surge": 0.36,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "OPUSDT": [
+  "JTOUSDT": [
     {
-      "timestamp": "2026-08-05 03:40:13",
-      "price": 0.0883,
-      "score": 0,
-      "rsi": 38.34,
+      "timestamp": "2026-08-05 03:42:13",
+      "price": 0.514,
+      "score": 60,
+      "rsi": 62.54,
       "macd": "Neutral",
-      "volume_surge": 0.21,
+      "volume_surge": 1.65,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SOXSBUSDT": [
+    {
+      "timestamp": "2026-08-05 03:42:13",
+      "price": 42.92,
+      "score": 0,
+      "rsi": 43.57,
+      "macd": "Neutral",
+      "volume_surge": 0.32,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -27,12 +40,51 @@
   ],
   "REUSDT": [
     {
-      "timestamp": "2026-08-05 03:40:13",
-      "price": 0.3878,
+      "timestamp": "2026-08-05 03:42:13",
+      "price": 0.3871,
       "score": 0,
-      "rsi": 44.27,
+      "rsi": 43.16,
       "macd": "Neutral",
-      "volume_surge": 0.36,
+      "volume_surge": 0.4,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-05 03:42:13",
+      "price": 1.379,
+      "score": 35,
+      "rsi": 61.34,
+      "macd": "Neutral",
+      "volume_surge": 0.13,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ESPUSDT": [
+    {
+      "timestamp": "2026-08-05 03:42:13",
+      "price": 0.06059,
+      "score": 0,
+      "rsi": 44.63,
+      "macd": "Neutral",
+      "volume_surge": 0.96,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-05 03:42:13",
+      "price": 0.0882,
+      "score": 0,
+      "rsi": 35.39,
+      "macd": "Neutral",
+      "volume_surge": 0.22,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
