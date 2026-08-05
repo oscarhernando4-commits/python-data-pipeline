@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-05 03:10:23",
+  "timestamp": "2026-08-05 03:12:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de alta volatilidad con baja convicción institucional. Ninguno de los candidatos cumple con el umbral de soporte de libro de órdenes (Bids > 55%) ni con una estructura técnica que garantice una alta probabilidad de éxito, por lo que la estrategia de protección de capital es la única opción viable.",
+  "reasoning": "El mercado actual no ofrece una configuración técnica o de liquidez que cumpla con los estándares de seguridad del comité; por lo tanto, se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
-      "symbol": "EWYBUSDT",
+      "symbol": "BICOUSDT",
       "score": 75
     },
     {
-      "symbol": "NEXOUSDT",
+      "symbol": "ALGOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "EWYBUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "INTCBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NBISBUSDT",
+      "symbol": "NEXOUSDT",
       "score": 75
     }
   ]
