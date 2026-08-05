@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 17:42:20",
+  "timestamp": "2026-08-05 17:44:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con los criterios estrictos de convicción A+ exigidos por el comité. La falta de soporte en el libro de órdenes y la inestabilidad del mercado global dictan una postura de preservación de capital (HOLD) hasta que surja una señal de alta probabilidad.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de dominancia de Bids (>= 55%) ni con la convicción A+ exigida por el Comité. Se mantiene la liquidez en espera de una estructura de mercado más definida y con mayor soporte institucional.",
   "top_candidates": [
-    {
-      "symbol": "CAKEUSDT",
-      "score": 85
-    },
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "ZECUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
