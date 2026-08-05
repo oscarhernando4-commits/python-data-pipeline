@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 05:32:27",
+  "updated_at": "2026-08-05 05:34:25",
   "total_balance_usd": 20.09,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una configuración de miedo y falta de liquidez institucional, con una alta tasa de fallos en los últimos trades. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la decisión institucional es mantenerse en liquidez (HOLD) para evitar el riesgo de 'falling knives' y preservar el capital."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con volumen institucional y soporte de libro de órdenes > 55%). Se prioriza la preservación del capital ante la falta de una tendencia clara y el entorno de miedo moderado."
   }
 }

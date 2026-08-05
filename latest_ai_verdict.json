@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-05 05:32:22",
+  "timestamp": "2026-08-05 05:34:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de miedo y falta de liquidez institucional, con una alta tasa de fallos en los últimos trades. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la decisión institucional es mantenerse en liquidez (HOLD) para evitar el riesgo de 'falling knives' y preservar el capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con volumen institucional y soporte de libro de órdenes > 55%). Se prioriza la preservación del capital ante la falta de una tendencia clara y el entorno de miedo moderado.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "EULUSDT",
       "score": 75
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "BFUSDUSDT",
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ICPUSDT",
+      "symbol": "APTUSDT",
       "score": 75
     }
   ]
