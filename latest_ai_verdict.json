@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 01:14:26",
+  "timestamp": "2026-08-05 01:16:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral estricto de Score A+ (>=65) combinado con una dominancia de Bids superior al 55%. El mercado se encuentra en una fase de alta volatilidad y riesgo de 'trampa de valor', por lo que la política institucional es mantener la liquidez en espera de una confirmación técnica más robusta.",
+  "reasoning": "El mercado se encuentra en un estado de distribución institucional con una correlación bajista transversal. Ningún activo cumple con los criterios de alta convicción (Score >= 65) exigidos por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
-    {
-      "symbol": "XAUTUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 70
-    },
     {
       "symbol": "LTCUSDT",
       "score": 60
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
       "symbol": "PAXGUSDT",
       "score": 60
+    },
+    {
+      "symbol": "ZROUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "HOMEUSDT",
+      "score": 50
     }
   ]
 }
