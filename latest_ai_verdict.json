@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 23:26:15",
+  "timestamp": "2026-08-05 23:28:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad estructural donde ningún activo cumple con los criterios de alta convicción (Score >= 65). La estrategia institucional es preservar el capital en efectivo hasta que aparezca una señal de fortaleza orgánica confirmada por el libro de órdenes y el volumen.",
+  "reasoning": "El mercado actual carece de liderazgo técnico y profundidad de liquidez. Ninguno de los candidatos analizados alcanza el umbral de Score 65 requerido por el Comité para una ejecución de compra, por lo que la estrategia óptima es la preservación total del capital en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
       "symbol": "TAOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ACXUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "ACXUSDT",
+      "score": 60
+    },
+    {
       "symbol": "NVDABUSDT",
       "score": 60
     },
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "PYTHUSDT",
       "score": 60
     }
   ]
