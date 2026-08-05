@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-05 13:40:23",
+  "timestamp": "2026-08-05 13:42:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo sistémico actual; por tanto, se mantiene la posición en efectivo para evitar trampas de valor.",
+  "reasoning": "Ningún activo cumple con el umbral de convicción A+ requerido por el comité. La falta de soporte claro en el libro de órdenes y el entorno macro de miedo extremo dictan una postura de espera (HOLD) para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "QNTUSDT",
+      "symbol": "TSLABUSDT",
       "score": 95
     },
     {
@@ -15,15 +15,15 @@
       "score": 90
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 85
+      "symbol": "XAUTUSDT",
+      "score": 75
     },
     {
       "symbol": "SKHYBUSDT",
       "score": 75
     },
     {
-      "symbol": "MUBUSDT",
+      "symbol": "UNIUSDT",
       "score": 75
     }
   ]
