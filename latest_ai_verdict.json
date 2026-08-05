@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-05 01:24:22",
+  "timestamp": "2026-08-05 01:26:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de calidad A+ (Score >= 65) ni con la profundidad de mercado necesaria para una ejecución segura. La estrategia institucional es mantenerse al margen de posiciones direccionales hasta que el mercado muestre una estructura de acumulación clara y no de distribución por pánico.",
+  "reasoning": "El mercado se encuentra en una fase de distribución agresiva con una correlación bajista generalizada. Ningún activo cumple con el umbral de calidad A+ (Score >= 65) ni con la profundidad de liquidez necesaria para mitigar el riesgo de slippage, por lo que la orden es proteger el capital y esperar una mejor estructura de mercado.",
   "top_candidates": [
     {
       "symbol": "SKYUSDT",
       "score": 70
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "LTCUSDT",
       "score": 60
     },
     {
-      "symbol": "EPICUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "SYNUSDT",
       "score": 60
     }
   ]
