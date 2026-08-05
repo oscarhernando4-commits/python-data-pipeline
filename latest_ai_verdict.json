@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-05 19:44:23",
+  "timestamp": "2026-08-05 19:46:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de Score A+ (>= 65) combinado con una dominancia de Bids superior al 55%, lo que obliga a mantener la posición en efectivo para evitar pérdidas por volatilidad artificial.",
+  "reasoning": "El mercado carece de la convicción necesaria y de los soportes institucionales requeridos para una entrada de bajo riesgo; por lo tanto, se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ICPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AEROUSDT",
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "EPICUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "ICPUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "PYTHUSDT",
       "score": 65
     }
   ]
