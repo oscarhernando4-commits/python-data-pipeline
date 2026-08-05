@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 02:02:23",
+  "timestamp": "2026-08-05 02:04:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro y volumen institucional confirmado). Se opta por mantener el 100% de la liquidez en USDT para evitar pérdidas innecesarias en un entorno de baja calidad técnica.",
+  "reasoning": "Ningún candidato cumple con el umbral estricto de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la protección del capital en un entorno de mercado con sentimiento de miedo (Fear 27).",
   "top_candidates": [
+    {
+      "symbol": "PAXGUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "INTCBUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "LUNCUSDT",
+      "score": 85
+    },
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
       "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SKYUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "EWYBUSDT",
       "score": 75
     }
   ]
