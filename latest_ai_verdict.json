@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-05 17:48:21",
+  "timestamp": "2026-08-05 17:50:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, el libro de órdenes no muestra la dominancia de compradores necesaria (>= 55%) y el entorno macro es de alta incertidumbre. El comité ha decidido priorizar la preservación del capital sobre la especulación en un mercado sin una tendencia definida.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, las condiciones de mercado actuales (Fear 27, falta de profundidad en el libro de órdenes y alta tasa de fallos históricos en entornos neutrales) no cumplen con los criterios de convicción A+ necesarios para una ejecución segura, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TRXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
