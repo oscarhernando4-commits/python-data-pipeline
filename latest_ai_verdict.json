@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 03:50:22",
+  "timestamp": "2026-08-05 03:52:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de alta peligrosidad con una distribución institucional agresiva. Ningún activo cumple con el umbral de score técnico A+ (>= 65) ni con la dominancia de liquidez necesaria para mitigar el riesgo de slippage, por lo que se mantiene la liquidez en USDT.",
+  "reasoning": "El mercado se encuentra en una fase de distribución terminal con una correlación bajista extrema. Ninguno de los candidatos cumple con el requisito de Score Técnico >= 65 ni con la convicción necesaria para una operación de alta probabilidad. Se prioriza la preservación del capital frente a la volatilidad actual.",
   "top_candidates": [
     {
-      "symbol": "MUBUSDT",
+      "symbol": "ERAUSDT",
       "score": 60
     },
     {
-      "symbol": "SNXXBUSDT",
+      "symbol": "MUBUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "EWYBUSDT",
+      "symbol": "DRAMBUSDT",
       "score": 60
     },
     {
-      "symbol": "DRAMBUSDT",
+      "symbol": "TSLABUSDT",
       "score": 60
     }
   ]
