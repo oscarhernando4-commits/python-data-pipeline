@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-05 11:24:19",
+  "timestamp": "2026-08-05 11:26:31",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno de mercado actual es de alta volatilidad y riesgo de capitulación. Ninguno de los activos candidatos cumple con los criterios estrictos de calidad A+ (Score >= 65) establecidos por el departamento de riesgo. Se prioriza la protección del capital sobre la especulación en un mercado sin convicción compradora.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "UNIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "COTIUSDT",
       "score": 60
     },
     {
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "HEIUSDT",
+      "symbol": "DOGEUSDT",
       "score": 50
     }
   ]
