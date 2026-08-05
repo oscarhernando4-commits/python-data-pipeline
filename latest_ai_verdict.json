@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 01:32:23",
+  "timestamp": "2026-08-05 01:34:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno de mercado actual es de alta vulnerabilidad y baja convicción. Dado que ningún activo cumple con el umbral de calidad A+ (Score >= 65) y la dominancia de Bids es insuficiente, la estrategia institucional es proteger el capital y esperar una mejor configuración técnica.",
+  "reasoning": "El mercado actual presenta una fragmentación de liquidez y una debilidad técnica generalizada. Ningún candidato cumple con el requisito estricto de Score >= 65 y confirmación de volumen institucional, por lo que la estrategia óptima es preservar el capital en espera de mejores condiciones.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PAXGUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SKYUSDT",
-      "score": 60
-    },
-    {
       "symbol": "ZROUSDT",
-      "score": 60
+      "score": 75
     },
     {
-      "symbol": "GIGGLEUSDT",
-      "score": 50
+      "symbol": "AMDBUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "ALLOUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "CAKEUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "REUSDT",
+      "score": 65
     }
   ]
 }

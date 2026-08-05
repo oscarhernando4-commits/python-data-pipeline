@@ -7,16 +7,16 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-05 01:32:23
+date: 2026-08-05 01:34:22
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $20.08 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-05 01:32:23`
+> ⏱️ **Última Actualización:** `2026-08-05 01:34:22`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
-> - 🟡 **BNB Escudo Comisiones:** `0.00409216 BNB` (`~$2.45 USD`)
+> - 🟡 **BNB Escudo Comisiones:** `0.00409216 BNB` (`~$2.46 USD`)
 > - 💵 **USDT Disponible:** `17.6282 USDT`
 > - 💰 **Saldo Total Acumulado:** `$20.08 USD`
 
