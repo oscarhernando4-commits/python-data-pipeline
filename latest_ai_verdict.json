@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 16:34:22",
+  "timestamp": "2026-08-05 16:36:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital en un entorno de mercado con sentimiento de miedo (Fear 27).",
+  "reasoning": "Ninguno de los candidatos cumple con la regla de oro de convicción A+ (Score >= 65 y Confianza >= 70%) ni con una dominancia de Bids superior al 55%. El mercado se encuentra en un estado de alta incertidumbre y volatilidad, por lo que la decisión institucional es mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
-      "symbol": "GNOUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "GRAMUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOTUSDT",
       "score": 75
     }
   ]
