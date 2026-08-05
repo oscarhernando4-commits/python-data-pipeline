@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-05 23:56:19",
+  "timestamp": "2026-08-05 23:58:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual carece de la fuerza técnica y el soporte de liquidez necesarios para cumplir con los estándares de riesgo del comité; por lo tanto, se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta correlación bajista. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital en efectivo.",
   "top_candidates": [
+    {
+      "symbol": "TAOUSDT",
+      "score": 70
+    },
     {
       "symbol": "SHIBUSDT",
       "score": 60
@@ -19,12 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "FETUSDT",
-      "score": 55
+      "symbol": "WLDUSDT",
+      "score": 50
     }
   ]
 }
