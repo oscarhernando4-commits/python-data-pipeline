@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 18:16:25",
+  "timestamp": "2026-08-05 18:18:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de 'indiferencia' con falta de profundidad en el libro de órdenes y una alta volatilidad que no cumple con los criterios de seguridad A+ exigidos por el comité. Se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo sistémico actual, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "ENAUSDT",
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "SKYUSDT",
       "score": 75
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "NOMUSDT",
       "score": 75
     }
   ]
