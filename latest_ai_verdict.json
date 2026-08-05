@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 16:56:18",
+  "timestamp": "2026-08-05 16:58:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de tener candidatos con Score 75, ninguno cumple con la Regla de Oro #3 (Bids > 55%) ni con el requisito de volumen institucional (Volume Surge > 1.2x). El mercado se encuentra en una fase de acumulación lateral de alto riesgo, por lo que la estrategia de protección de capital dicta mantenerse en efectivo.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La falta de soporte en el libro de órdenes y la inestabilidad del sentimiento macro dictan una postura de preservación de capital.",
   "top_candidates": [
+    {
+      "symbol": "ZECUSDT",
+      "score": 75
+    },
     {
       "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "APTUSDT",
+      "symbol": "ONDOUSDT",
       "score": 75
     },
     {
-      "symbol": "VIRTUALUSDT",
+      "symbol": "SKYUSDT",
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "EULUSDT",
-      "score": 65
+      "symbol": "ETHFIUSDT",
+      "score": 75
     }
   ]
 }
