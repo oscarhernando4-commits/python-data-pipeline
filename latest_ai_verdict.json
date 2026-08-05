@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 21:16:21",
+  "timestamp": "2026-08-05 21:18:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una trampa de liquidez con alta volatilidad y falta de soporte institucional. Ningún candidato cumple con el umbral de Score A+ (>=65) combinado con una dominancia de bids superior al 55%, por lo que la estrategia óptima es la preservación de capital mediante el modo HOLD.",
+  "reasoning": "El mercado se encuentra en una fase de contracción de liquidez y alta correlación bajista. Ningún activo cumple con los requisitos mínimos de seguridad y fuerza relativa exigidos por el comité, por lo que la orden es mantener la liquidez en efectivo para evitar trampas de mercado.",
   "top_candidates": [
     {
-      "symbol": "JUPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "RESOLVUSDT",
-      "score": 75
+      "symbol": "VANRYUSDT",
+      "score": 60
     },
     {
       "symbol": "ADAUSDT",
-      "score": 65
+      "score": 50
     },
     {
-      "symbol": "ATOMUSDT",
-      "score": 65
+      "symbol": "KAITOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "ALLOUSDT",
+      "score": 50
     },
     {
       "symbol": "ACEUSDT",
-      "score": 65
+      "score": 50
     }
   ]
 }
