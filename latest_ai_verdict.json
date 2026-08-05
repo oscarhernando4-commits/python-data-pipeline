@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-05 03:04:20",
+  "timestamp": "2026-08-05 03:06:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado se encuentra en una fase de espera vigilante y el riesgo de 'trampa de valor' es elevado, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de soporte de ballenas y baja volatilidad). El mercado se encuentra en una fase de alta incertidumbre y baja liquidez, por lo que la estrategia institucional es preservar el capital y evitar la exposición a activos de alta beta.",
   "top_candidates": [
     {
       "symbol": "UNIUSDT",
       "score": 75
     },
     {
-      "symbol": "EWYBUSDT",
+      "symbol": "BICOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "INTCBUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "NEXOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "INTCBUSDT",
       "score": 75
     }
   ]
