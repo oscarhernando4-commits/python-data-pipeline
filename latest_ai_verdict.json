@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-05 00:34:22",
+  "timestamp": "2026-08-05 00:36:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución técnica sin señales claras de acumulación institucional. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la protección del capital mediante el mantenimiento de la liquidez.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una mayoría de activos mostrando debilidad técnica. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) exigido por el comité, por lo que la estrategia óptima es preservar el capital y evitar la exposición a posibles trampas de valor.",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
+      "symbol": "MIRAUSDT",
       "score": 70
     },
     {
-      "symbol": "SKYUSDT",
+      "symbol": "XAUTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "PAXGUSDT",
       "score": 60
     },
     {
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "EWYBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TSLABUSDT",
+      "symbol": "POLUSDT",
       "score": 60
     }
   ]
