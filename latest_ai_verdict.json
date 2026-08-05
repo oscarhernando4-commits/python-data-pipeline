@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 10:26:19",
+  "timestamp": "2026-08-05 10:28:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia estructural severa y un vacío de liquidez. Ninguno de los candidatos, a pesar de tener scores técnicos aceptables, logra superar el umbral de convicción A+ ni cuenta con el respaldo de un libro de órdenes con muros de soporte claros, por lo que la decisión institucional es mantener la liquidez en efectivo.",
+  "reasoning": "El mercado se encuentra en una fase de alta fragilidad con una divergencia entre el miedo extremo y la debilidad estructural de las altcoins. Ningún activo presenta una configuración de libro de órdenes (Bids > 55%) que justifique el riesgo de entrada bajo las reglas de protección de capital del comité.",
   "top_candidates": [
     {
       "symbol": "APTUSDT",
       "score": 85
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "VIRTUALUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "ORDIUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     }
   ]
