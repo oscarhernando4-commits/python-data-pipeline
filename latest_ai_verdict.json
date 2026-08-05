@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 09:36:23",
+  "timestamp": "2026-08-05 09:38:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que varios activos tienen un score técnico de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y el entorno de mercado de 'Fear' (27) con tendencia neutral, no cumplen con los criterios de convicción A+ exigidos por el comité para evitar pérdidas, por lo que se mantiene la liquidez en espera.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con debilidad sistémica. Ningún activo cumple con los criterios de alta convicción (Score >= 65) y soporte de liquidez necesarios para una entrada, por lo que la política de preservación de capital exige mantenerse en modo HOLD.",
   "top_candidates": [
     {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "HBARUSDT",
-      "score": 75
+      "symbol": "LINKUSDT",
+      "score": 60
     },
     {
       "symbol": "ETHUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 75
+      "symbol": "SOLUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "score": 60
     }
   ]
 }

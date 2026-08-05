@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 09:36:23",
+  "updated_at": "2026-08-05 09:38:22",
   "total_balance_usd": 20.08,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "A pesar de que varios activos tienen un score técnico de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y el entorno de mercado de 'Fear' (27) con tendencia neutral, no cumplen con los criterios de convicción A+ exigidos por el comité para evitar pérdidas, por lo que se mantiene la liquidez en espera."
+    "reasoning": "El mercado se encuentra en una fase de distribución institucional con debilidad sistémica. Ningún activo cumple con los criterios de alta convicción (Score >= 65) y soporte de liquidez necesarios para una entrada, por lo que la política de preservación de capital exige mantenerse en modo HOLD."
   }
 }
