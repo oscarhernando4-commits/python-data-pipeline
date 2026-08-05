@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 07:08:23",
+  "timestamp": "2026-08-05 07:10:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual carece de la convicción técnica necesaria para una entrada de alta probabilidad. Todos los candidatos presentan scores inferiores al umbral de 65, y el entorno macro de miedo extremo sugiere que la preservación del capital es la prioridad absoluta hasta que se observe una acumulación institucional clara.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con una alta correlación negativa hacia el riesgo. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 65) ni con una dominancia de Bids en el libro de órdenes que justifique una entrada, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
+      "symbol": "GNOUSDT",
+      "score": 90
+    },
+    {
       "symbol": "ADAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DOTUSDT",
       "score": 60
     },
     {
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "SEIUSDT",
+      "symbol": "DOTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "BFUSDUSDT",
       "score": 60
     }
   ]
