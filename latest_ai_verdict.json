@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 00:26:22",
+  "timestamp": "2026-08-05 00:28:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación psicológica con una desconexión entre la narrativa institucional y la acción del precio. Ningún activo cumple con el umbral de seguridad A+ requerido por el comité, por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una correlación bajista generalizada. Ningún activo cumple con el umbral de Score A+ (>= 65) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de 'trampa de toros'. Por tanto, la decisión institucional es mantener la posición en efectivo (USDT) para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "ATOMUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "SOXLBUSDT",
-      "score": 60
-    },
-    {
       "symbol": "DRAMBUSDT",
       "score": 60
     },
     {
-      "symbol": "NBISBUSDT",
+      "symbol": "TSLABUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "EWYBUSDT",
       "score": 60
     }
   ]
