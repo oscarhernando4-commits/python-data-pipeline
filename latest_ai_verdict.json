@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 10:04:22",
+  "timestamp": "2026-08-05 10:06:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El comité ha determinado que el mercado actual presenta una fragilidad sistémica extrema. Ningún activo cumple con los criterios de calidad A+ (Score >= 65) ni con la profundidad de mercado necesaria para una ejecución segura. Se prioriza la protección del capital frente a la volatilidad bajista, manteniendo la posición en efectivo (USDT) hasta que las condiciones macro y técnicas mejoren.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un entorno de alta peligrosidad con una estructura de distribución institucional. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la decisión es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "GNOUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "TAOUSDT",
+      "symbol": "ETHUSDT",
       "score": 60
     },
     {
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "HEIUSDT",
+      "symbol": "TAOUSDT",
       "score": 60
     },
     {
       "symbol": "RENDERUSDT",
       "score": 60
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "score": 50
     }
   ]
 }
