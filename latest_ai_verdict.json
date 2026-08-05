@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-05 15:44:32",
+  "timestamp": "2026-08-05 15:46:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 55% ni con una convicción A+ necesaria para superar el entorno de mercado neutral y el sentimiento de miedo, por lo que se mantiene la posición en efectivo para evitar pérdidas.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
       "score": 75
     },
     {
@@ -23,7 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "DEXEUSDT",
+      "symbol": "SYNUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOTUSDT",
       "score": 75
     }
   ]
