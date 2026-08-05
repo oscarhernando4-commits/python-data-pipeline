@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-05 23:42:18",
+  "timestamp": "2026-08-05 23:44:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con una evacuación de liquidez evidente. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) requerido por el comité, por lo que la decisión institucional es mantener la liquidez en espera de mejores condiciones.",
+  "reasoning": "El mercado se encuentra en una trampa de liquidez con alta incertidumbre macroeconómica. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es mantener la posición en efectivo.",
   "top_candidates": [
     {
       "symbol": "TAOUSDT",
       "score": 60
     },
     {
-      "symbol": "NVDABUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 60
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "NVDABUSDT",
       "score": 60
     },
     {
