@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 04:32:21",
+  "timestamp": "2026-08-05 04:34:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una ausencia total de activos que cumplan con el umbral de calidad A+ (Score >= 65). La estrategia institucional dicta la preservación del capital ante la falta de soporte estructural y la debilidad sistémica observada en los candidatos analizados.",
+  "reasoning": "El mercado presenta una fragilidad estructural severa. Ninguno de los candidatos con score 75 muestra una dominancia clara en el libro de órdenes (Bids >= 55%) ni una tendencia alcista confirmada, lo que aumenta el riesgo de 'falling knives'. Se prioriza la preservación de capital hasta que el sentimiento de mercado mejore o aparezca una oportunidad con convicción A+.",
   "top_candidates": [
     {
       "symbol": "MUBUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "ONDOUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "FETUSDT",
-      "score": 60
+      "score": 75
+    },
+    {
+      "symbol": "TSLABUSDT",
+      "score": 75
     },
     {
       "symbol": "NBISBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "NEXOUSDT",
-      "score": 60
+      "score": 75
     }
   ]
 }
