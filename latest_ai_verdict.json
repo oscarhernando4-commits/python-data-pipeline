@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-05 22:40:19",
+  "timestamp": "2026-08-05 22:42:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica extrema con una descorrelación negativa masiva. Ningún activo cumple con el umbral de calidad A+ (Score >= 65) exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una estabilización regulatoria y técnica.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada. Ningún activo cumple con los criterios de alta convicción (Score >= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
   "top_candidates": [
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "ACXUSDT",
       "score": 60
     },
     {
@@ -15,7 +15,7 @@
       "score": 60
     },
     {
-      "symbol": "ACXUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
