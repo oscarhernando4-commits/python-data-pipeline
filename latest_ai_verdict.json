@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 18:32:26",
+  "timestamp": "2026-08-05 18:34:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de Score Técnico >= 65 combinado con una dominancia de Bids superior al 55% requerida por el comité para garantizar una ejecución de bajo riesgo.",
+  "reasoning": "El mercado se encuentra en una fase de indecisión con alta probabilidad de reversión. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes confirmado), por lo que la estrategia institucional es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "SUNUSDT",
+      "score": 85
+    },
     {
       "symbol": "HBARUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "DOTUSDT",
       "score": 75
     },
     {
       "symbol": "HFTUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "SYNUSDT",
       "score": 65
     }
   ]
