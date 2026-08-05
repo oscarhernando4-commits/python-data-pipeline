@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 01:36:22",
+  "timestamp": "2026-08-05 01:38:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una vulnerabilidad extrema y falta de convicción institucional. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la estrategia óptima es el resguardo de capital en USDT.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
       "score": 75
     },
     {
@@ -20,6 +16,10 @@
     },
     {
       "symbol": "SKYUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ATOMUSDT",
       "score": 75
     },
     {
