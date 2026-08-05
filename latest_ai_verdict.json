@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-05 23:04:18",
+  "timestamp": "2026-08-05 23:06:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de 'Liquidez de Pánico' con una correlación bajista sistémica. Ningún activo cumple con el umbral de convicción A+ (Score >= 65) exigido por el comité, por lo que la estrategia óptima es la preservación del capital mediante el mantenimiento de la posición en efectivo (Cash-is-King).",
+  "reasoning": "El comité ha determinado que el mercado actual presenta un riesgo sistémico elevado y una falta de activos con la calidad técnica necesaria (Score >= 65) para justificar una entrada. Se prioriza la preservación del capital sobre la especulación en activos de baja profundidad histórica.",
   "top_candidates": [
     {
+      "symbol": "SHIBUSDT",
+      "score": 60
+    },
+    {
       "symbol": "HFTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TAOUSDT",
       "score": 60
     },
     {
@@ -15,16 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "PENGUUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
-    },
-    {
-      "symbol": "ETHFIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 50
     }
   ]
 }
