@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 23:30:16",
+  "timestamp": "2026-08-05 23:32:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta fragilidad con una mayoría de activos por debajo del umbral de calidad exigido por el comité. Ningún candidato alcanza el score técnico de 65, por lo que se prioriza la preservación de capital sobre la ejecución especulativa.",
+  "reasoning": "El mercado presenta una configuración de alta fragilidad y falta de convicción institucional. Ningún activo cumple con los criterios de selección A+ (Score >= 65) ni con la profundidad de mercado necesaria para mitigar el riesgo de slippage, por lo que la estrategia óptima es la preservación total del capital.",
   "top_candidates": [
     {
       "symbol": "TAOUSDT",
@@ -23,7 +23,7 @@
       "score": 55
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "FIDAUSDT",
       "score": 50
     }
   ]
