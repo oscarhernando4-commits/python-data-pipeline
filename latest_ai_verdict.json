@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 22:06:16",
+  "timestamp": "2026-08-05 22:08:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de compresión y falta de flujo de capital real. Ningún activo cumple con los criterios de alta convicción (Score >= 65) establecidos por el comité, por lo que la estrategia óptima es mantener la posición en efectivo para evitar el riesgo de 'cuchillos cayendo' en un entorno de baja liquidez.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad técnica generalizada. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la ejecución de trades de baja calidad.",
   "top_candidates": [
     {
       "symbol": "ZAMAUSDT",
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "SUNUSDT",
-      "score": 60
-    },
-    {
       "symbol": "CRVUSDT",
       "score": 60
     },
     {
-      "symbol": "DOTUSDT",
-      "score": 55
+      "symbol": "SUNUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TSLABUSDT",
+      "score": 60
     }
   ]
 }
