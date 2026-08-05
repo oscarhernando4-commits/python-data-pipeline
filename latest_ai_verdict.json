@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-05 18:24:26",
+  "timestamp": "2026-08-05 18:26:30",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un régimen de alta incertidumbre con una correlación mixta. Ninguno de los candidatos cumple con el requisito estricto de dominancia de Bids (>=55%) ni con una estructura técnica que garantice una probabilidad de éxito superior al 70%. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo institucional.",
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de algunos scores técnicos elevados, la falta de dominancia en el libro de órdenes y la alta volatilidad macro no cumplen con los estándares de seguridad y convicción A+ exigidos por el CRO.",
   "top_candidates": [
     {
-      "symbol": "HBARUSDT",
-      "score": 75
+      "symbol": "TRUMPUSDT",
+      "score": 85
     },
     {
       "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "HBARUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "SUNUSDT",
       "score": 75
     }
   ]
