@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 11:18:21",
+  "timestamp": "2026-08-05 11:20:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una debilidad técnica generalizada y una falta de convicción institucional. Dado que ningún activo alcanza el umbral de seguridad A+ (Score >= 65) y el entorno macro es de alta fragilidad, la decisión institucional es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada y una falta de fuerza relativa en los activos analizados. Ningún candidato cumple con el umbral de calidad A+ (Score >= 65) exigido por el comité, por lo que se mantiene la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo' en un entorno de capitulación.",
   "top_candidates": [
     {
       "symbol": "ETHFIUSDT",
@@ -19,12 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "DASHUSDT",
+      "symbol": "SPYBUSDT",
       "score": 60
     },
     {
-      "symbol": "SPYBUSDT",
-      "score": 60
+      "symbol": "GRAMUSDT",
+      "score": 50
     }
   ]
 }
