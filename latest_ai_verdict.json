@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 17:50:22",
+  "timestamp": "2026-08-05 17:52:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, las condiciones de mercado actuales (Fear 27, falta de profundidad en el libro de órdenes y alta tasa de fallos históricos en entornos neutrales) no cumplen con los criterios de convicción A+ necesarios para una ejecución segura, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una correlación fragmentada. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro y tendencia definida). Se ha decidido mantener la liquidez en USDT para evitar la exposición a la alta volatilidad y el riesgo de 'falling knives' observado en los últimos ciclos de trading.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
-      "score": 75
+      "symbol": "SKYUSDT",
+      "score": 85
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 17:50:22",
+  "updated_at": "2026-08-05 17:52:24",
   "total_balance_usd": 20.09,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, las condiciones de mercado actuales (Fear 27, falta de profundidad en el libro de órdenes y alta tasa de fallos históricos en entornos neutrales) no cumplen con los criterios de convicción A+ necesarios para una ejecución segura, por lo que se prioriza la preservación del capital."
+    "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una correlación fragmentada. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro y tendencia definida). Se ha decidido mantener la liquidez en USDT para evitar la exposición a la alta volatilidad y el riesgo de 'falling knives' observado en los últimos ciclos de trading."
   }
 }
