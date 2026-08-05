@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 08:24:24",
+  "timestamp": "2026-08-05 08:26:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica y falta de liderazgo, donde los activos con mayor puntuación no cumplen con los criterios de seguridad A+ exigidos por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
+  "reasoning": "El mercado se encuentra en una fase de distribución defensiva con scores técnicos mediocres y falta de momentum institucional. Ningún activo cumple con los criterios de alta convicción (Score >= 65) ni con la solidez necesaria en el libro de órdenes para garantizar la preservación del capital, por lo que se prioriza la liquidez.",
   "top_candidates": [
+    {
+      "symbol": "MIRAUSDT",
+      "score": 75
+    },
     {
       "symbol": "CRVUSDT",
       "score": 70
-    },
-    {
-      "symbol": "SOLUSDT",
-      "score": 60
     },
     {
       "symbol": "LINKUSDT",
       "score": 60
     },
     {
-      "symbol": "GIGGLEUSDT",
+      "symbol": "POLUSDT",
       "score": 60
     },
     {
-      "symbol": "APTUSDT",
+      "symbol": "GIGGLEUSDT",
       "score": 60
     }
   ]
