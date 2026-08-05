@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 19:22:25",
+  "updated_at": "2026-08-05 19:24:25",
   "total_balance_usd": 20.09,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un régimen de alta incertidumbre con una rotación de capital fragmentada. Ninguno de los candidatos cumple con los criterios estrictos de seguridad (Bids > 55% y Score A+) establecidos por el comité, por lo que la decisión es mantener la liquidez en efectivo para evitar pérdidas innecesarias."
+    "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de seguridad A+ (Score >= 65 combinado con una dominancia de Bids > 55%). La alta volatilidad y el sentimiento de miedo sugieren que el mercado está en una fase de purga, por lo que el comité ha decidido mantener la liquidez en espera de una estructura de mercado más clara y menos riesgosa."
   }
 }
