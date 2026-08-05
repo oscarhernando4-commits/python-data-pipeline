@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-05 07:56:20",
+  "timestamp": "2026-08-05 07:58:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con alta presión vendedora. Ningún activo cumple con los criterios estrictos de riesgo y fuerza relativa exigidos por el comité, por lo que la decisión es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado actual no cumple con los criterios de calidad A+ exigidos por el comité. La falta de fuerza técnica, sumada a la incertidumbre macro y la ausencia de muros de soporte sólidos en el libro de órdenes, obliga a mantener la liquidez en USDT para evitar el riesgo de 'falling knives' y pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "DOTUSDT",
+      "score": 60
+    },
     {
       "symbol": "ALGOUSDT",
       "score": 60
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "LINKUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ADAUSDT",
       "score": 50
     }
   ]
