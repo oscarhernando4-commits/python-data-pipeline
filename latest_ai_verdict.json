@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 17:54:23",
+  "timestamp": "2026-08-05 17:56:48",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la liquidez en USDT. A pesar de que SKYUSDT tiene un score técnico alto, no cumple con los requisitos de profundidad en el libro de órdenes ni con la confirmación de volumen institucional necesaria para una entrada de alta convicción. El entorno de mercado actual (Fear 27) y la alta volatilidad en las altcoins sugieren que es preferible esperar a una estructura de mercado más clara.",
+  "reasoning": "Ninguno de los candidatos analizados cumple con el umbral de convicción A+ (Score >= 65 con confirmación de soporte en libro de órdenes y tendencia clara). El mercado presenta una estructura de alta incertidumbre y los patrones históricos recientes sugieren una alta probabilidad de pérdida en las condiciones actuales. Se prioriza la protección del capital sobre la ejecución de operaciones mediocres.",
   "top_candidates": [
     {
       "symbol": "SKYUSDT",
@@ -15,11 +15,11 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
