@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 15:40:21",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de indecisión sistémica con un sentimiento de miedo predominante. Ninguno de los candidatos presenta una dominancia de Bids superior al 55% ni una estructura técnica que supere el umbral de riesgo A+ exigido por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
+  "timestamp": "2026-08-05 15:42:27",
+  "selected_symbol": "SOLUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "Tras analizar la rotación de capital hacia activos de alta capitalización y el score técnico superior de SOLUSDT, el comité ha determinado que es el único candidato que cumple con los estándares de riesgo y convicción A+ para una entrada en largo, evitando las trampas de valor en activos de baja capitalización.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
-      "score": 75
+      "symbol": "SOLUSDT",
+      "score": 85
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "ETHFIUSDT",
       "score": 75
     }
   ]
