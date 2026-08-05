@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-05 22:22:16",
+  "timestamp": "2026-08-05 22:24:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con una falta crítica de convicción compradora. Ninguno de los activos evaluados alcanza el umbral de seguridad A+ (Score >= 65), y el historial de trades recientes en condiciones similares muestra una alta tasa de fallos. Se prioriza la preservación del capital sobre la ejecución de operaciones de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en un estado de estancamiento bajista con falta de profundidad y volumen institucional. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65), por lo que cualquier operación se considera estadísticamente desfavorable.",
   "top_candidates": [
+    {
+      "symbol": "RESOLVUSDT",
+      "score": 60
+    },
     {
       "symbol": "ADAUSDT",
       "score": 50
     },
     {
-      "symbol": "DEXEUSDT",
+      "symbol": "EULUSDT",
       "score": 50
     },
     {
@@ -19,11 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "KITEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ACXUSDT",
+      "symbol": "DEXEUSDT",
       "score": 50
     }
   ]
