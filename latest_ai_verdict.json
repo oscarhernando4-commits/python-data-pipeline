@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 22:58:25",
+  "timestamp": "2026-08-05 23:00:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual presenta un riesgo inaceptable. Ningún activo cumple con los criterios de calidad A+ (Score >= 65) y la estructura de mercado es de distribución, lo que invalida cualquier intento de compra. Se prioriza la preservación del capital hasta que las condiciones macro mejoren.",
+  "reasoning": "Tras la deliberación unánime, el comité ha determinado que no existen activos que cumplan con los criterios de alta convicción (Score >= 65). El entorno macroeconómico y la debilidad técnica generalizada dictan una postura de espera para evitar pérdidas innecesarias en un mercado de alta volatilidad y baja profundidad.",
   "top_candidates": [
-    {
-      "symbol": "PENGUUSDT",
-      "score": 70
-    },
     {
       "symbol": "ACXUSDT",
       "score": 60
     },
     {
-      "symbol": "BONKUSDT",
+      "symbol": "PENGUUSDT",
       "score": 60
     },
     {
-      "symbol": "JTOUSDT",
+      "symbol": "ETHFIUSDT",
       "score": 60
     },
     {
-      "symbol": "SAHARAUSDT",
-      "score": 60
+      "symbol": "TAOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "KITEUSDT",
+      "score": 50
     }
   ]
 }
