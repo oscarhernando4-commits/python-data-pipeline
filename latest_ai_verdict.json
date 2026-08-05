@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-05 03:42:20",
+  "timestamp": "2026-08-05 03:44:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de aversión al riesgo sistémica con una clara debilidad en los activos de alta capitalización. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>=65) ni con la profundidad de mercado necesaria para garantizar una ejecución segura. La estrategia institucional es proteger la liquidez hasta que el sentimiento de mercado mejore y los indicadores técnicos ofrezcan una señal de alta convicción.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
-      "symbol": "VICUSDT",
-      "score": 70
-    },
-    {
       "symbol": "MUBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "GIGGLEUSDT",
       "score": 60
     },
     {
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "DRAMBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "EWYBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "AMDBUSDT",
       "score": 60
     }
   ]
