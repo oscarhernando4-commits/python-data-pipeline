@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 04:02:19",
+  "timestamp": "2026-08-05 04:04:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un riesgo sistémico elevado y ninguno de los candidatos cumple con el umbral de calidad A+ (Score >= 65) exigido por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez.",
+  "reasoning": "El comité ha determinado que el entorno actual de mercado es de alto riesgo y baja calidad técnica. Ninguno de los activos candidatos cumple con los requisitos estrictos de score (>= 65) ni con la profundidad de liquidez necesaria para una ejecución segura. Se prioriza la protección del capital frente a la especulación en un mercado en fase de capitulación.",
   "top_candidates": [
     {
       "symbol": "SKHYBUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
+      "symbol": "EWYBUSDT",
       "score": 60
     },
     {
-      "symbol": "EWYBUSDT",
+      "symbol": "DRAMBUSDT",
       "score": 60
     }
   ]
