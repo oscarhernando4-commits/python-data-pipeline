@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 21:56:46",
+  "timestamp": "2026-08-05 21:58:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una asimetría de pánico sistémico. Ningún activo analizado alcanza el score técnico mínimo de 65 ni presenta una profundidad de libro de órdenes que garantice una entrada de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja liquidez.",
+  "reasoning": "El mercado se encuentra en un estado de estrés sistémico con una clara falta de convicción institucional. Ninguno de los activos analizados cumple con los criterios de calidad, profundidad de mercado o score técnico exigidos por el comité para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en activos de baja calidad.",
   "top_candidates": [
     {
       "symbol": "ZAMAUSDT",
@@ -15,7 +15,7 @@
       "score": 60
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "ALGOUSDT",
       "score": 60
     },
     {
@@ -23,8 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "EULUSDT",
-      "score": 50
+      "symbol": "SUNUSDT",
+      "score": 60
     }
   ]
 }
