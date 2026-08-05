@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 07:10:21",
+  "timestamp": "2026-08-05 07:12:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con una alta correlación negativa hacia el riesgo. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 65) ni con una dominancia de Bids en el libro de órdenes que justifique una entrada, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con falta de convicción institucional. Ningún activo cumple con los criterios estrictos de riesgo y calidad técnica exigidos por el comité, por lo que la estrategia óptima es la neutralidad absoluta para evitar trampas de liquidez.",
   "top_candidates": [
     {
       "symbol": "GNOUSDT",
@@ -15,7 +15,7 @@
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "ASTERUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "BFUSDUSDT",
+      "symbol": "POLUSDT",
       "score": 60
     }
   ]
