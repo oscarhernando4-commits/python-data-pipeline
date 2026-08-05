@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 11:36:23",
+  "timestamp": "2026-08-05 11:38:33",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de Score A+ (>= 65) ni con la dominancia de Bids necesaria en el libro de órdenes. El mercado se encuentra en una fase de capitulación sistémica, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
-    {
-      "symbol": "ERAUSDT",
-      "score": 70
-    },
     {
       "symbol": "UNIUSDT",
       "score": 60
     },
     {
-      "symbol": "SPYBUSDT",
+      "symbol": "ERAUSDT",
       "score": 60
     },
     {
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "SPYBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SKHYBUSDT",
       "score": 50
     }
   ]
