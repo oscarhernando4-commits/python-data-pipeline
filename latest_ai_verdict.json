@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-05 21:34:23",
+  "timestamp": "2026-08-05 21:36:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de riesgo sistémico elevado con una correlación bajista generalizada. Ninguno de los activos analizados cumple con los criterios de convicción A+ (Score >= 65), por lo que la decisión institucional es mantener la liquidez en espera de una mejor estructura de mercado.",
+  "reasoning": "El mercado presenta una estructura de correlación bajista y debilidad técnica extrema. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia de preservación de capital es la única opción válida para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "VANRYUSDT",
+      "score": 60
+    },
     {
       "symbol": "TLMUSDT",
       "score": 60
@@ -19,11 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "VANRYUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ACEUSDT",
+      "symbol": "ALLOUSDT",
       "score": 50
     }
   ]
