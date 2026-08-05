@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 03:26:18",
+  "timestamp": "2026-08-05 03:28:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre y debilidad técnica. Ninguno de los activos analizados alcanza el umbral de calidad A+ requerido por el comité, y el historial de trades recientes sugiere que intentar capturar rebotes en este entorno conlleva un riesgo inaceptable de pérdida de capital. Se mantiene la posición en liquidez total.",
+  "reasoning": "El mercado se encuentra en una fase de liquidación sistémica sin activos que cumplan con el umbral de seguridad A+ (Score >= 65). La falta de soporte en el libro de órdenes y la alta probabilidad de pérdidas históricas en condiciones actuales dictan una postura de preservación de capital total.",
   "top_candidates": [
     {
       "symbol": "MUBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "AXTIBUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "AXTIBUSDT",
+      "score": 60
+    },
+    {
       "symbol": "EWYBUSDT",
       "score": 60
     },
     {
-      "symbol": "DRAMBUSDT",
+      "symbol": "TSLABUSDT",
       "score": 60
     }
   ]
