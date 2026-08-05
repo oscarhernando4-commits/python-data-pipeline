@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-05 19:58:23",
+  "timestamp": "2026-08-05 20:00:29",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento defensivo con una alta probabilidad de volatilidad errática; ningún activo cumple con los criterios estrictos de convicción A+ requeridos por el comité para una ejecución segura.",
+  "reasoning": "El mercado no ofrece ninguna oportunidad con un Score técnico >= 65 ni una estructura de libro de órdenes favorable. Siguiendo la Regla de Oro #1, se protege el capital manteniendo la posición en efectivo (USDT) hasta que surja una configuración A+.",
   "top_candidates": [
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 75
-    },
     {
       "symbol": "JSTUSDT",
       "score": 65
@@ -23,7 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "HBARUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "XRPUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "DOGEUSDT",
       "score": 60
     }
   ]
