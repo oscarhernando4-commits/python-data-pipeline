@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-05 20:30:21",
+  "timestamp": "2026-08-05 20:32:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de alta incertidumbre con una correlación fragmentada y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ requerido por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de soporte en libro de órdenes > 55%). El mercado presenta un entorno de 'Flight to Quality' con alta volatilidad, lo que hace que la estrategia más rentable sea la preservación de capital mediante el modo HOLD.",
   "top_candidates": [
-    {
-      "symbol": "PEPEUSDT",
-      "score": 75
-    },
     {
       "symbol": "AVAXUSDT",
       "score": 75
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "SUIUSDT",
+      "score": 75
+    },
+    {
       "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "WLFIUSDT",
       "score": 75
     }
   ]
