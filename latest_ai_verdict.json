@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 02:42:23",
+  "timestamp": "2026-08-05 02:44:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión con un sesgo de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%) y la historia reciente de trades muestra una alta probabilidad de pérdidas en condiciones de mercado neutral. Se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado presenta una divergencia técnica y un sentimiento de miedo predominante que, sumado a la falta de convicción en el libro de órdenes, no permite una ejecución segura bajo los estándares de riesgo del comité.",
   "top_candidates": [
     {
-      "symbol": "TIAUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "CRVUSDT",
-      "score": 85
-    },
-    {
       "symbol": "XPLUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "TIAUSDT",
       "score": 85
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "NEARUSDT",
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 75
     }
   ]
