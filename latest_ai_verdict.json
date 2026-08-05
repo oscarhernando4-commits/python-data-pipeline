@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-05 15:26:24",
+  "timestamp": "2026-08-05 15:28:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). La estrategia actual es preservar el capital ante la alta probabilidad de volatilidad en un mercado neutral.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids >= 55% y confirmación de volumen institucional). El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante, lo que aumenta el riesgo de falsas rupturas. Se decide mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
       "symbol": "TAOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ENAUSDT",
-      "score": 75
-    },
-    {
       "symbol": "DOTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "JUPUSDT",
       "score": 75
     }
   ]
