@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-05 00:30:20",
+  "timestamp": "2026-08-05 00:32:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad estructural generalizada y falta de convicción institucional. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital mediante el modo HOLD.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada con un score técnico insuficiente en todos los candidatos analizados. Ningún activo cumple con el umbral de convicción A+ (Score >= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es mantener la posición en efectivo (HOLD).",
   "top_candidates": [
     {
-      "symbol": "MUBUSDT",
+      "symbol": "MIRAUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "BNBUSDT",
       "score": 60
     },
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "DEXEUSDT",
       "score": 60
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DRAMBUSDT",
       "score": 60
     }
   ]
