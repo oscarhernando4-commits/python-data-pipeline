@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-05 02:50:23",
+  "timestamp": "2026-08-05 02:52:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y fragmentación. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro). La estrategia institucional prioriza la preservación del capital sobre la especulación en un entorno de miedo, por lo que se mantiene la posición en efectivo (HOLD).",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 65%). El mercado se encuentra en una zona de miedo con alta inestabilidad, por lo que la estrategia institucional es preservar el capital y esperar una señal de entrada de alta probabilidad.",
   "top_candidates": [
-    {
-      "symbol": "JTOUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
     {
       "symbol": "UNIUSDT",
       "score": 75
@@ -23,7 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "JSTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "FETUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "FILUSDT",
       "score": 75
     }
   ]
