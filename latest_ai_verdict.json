@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-05 08:38:27",
+  "timestamp": "2026-08-05 08:40:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, el comité determina que ningún activo cumple con el umbral estricto de convicción A+ (Score >= 65 y Bids > 55%). La alta volatilidad y la falta de soporte claro en el libro de órdenes sugieren mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "A pesar de que algunos activos muestran scores técnicos elevados, la ausencia de una dominancia clara en el libro de órdenes, el sentimiento de miedo generalizado y la falta de historial consolidado en los activos líderes impiden alcanzar el umbral de convicción A+ requerido por el comité.",
   "top_candidates": [
     {
       "symbol": "CRVUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "BONKUSDT",
       "score": 85
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "APTUSDT",
+      "symbol": "HOMEUSDT",
       "score": 75
     }
   ]
