@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-05 18:44:20",
+  "timestamp": "2026-08-05 18:46:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de acumulación selectiva con alta incertidumbre y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' en un entorno de tendencia neutral.",
+  "reasoning": "El mercado se encuentra en una fase de rotación defensiva con alta incertidumbre. Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 55% ni con una estructura técnica que garantice una alta probabilidad de éxito, por lo que la decisión institucional es mantener la liquidez en espera de una mejor configuración.",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "SKYUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "ERAUSDT",
       "score": 75
     }
   ]
