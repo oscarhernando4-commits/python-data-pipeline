@@ -1,12 +1,51 @@
 {
-  "BONKUSDT": [
+  "HMSTRUSDT": [
     {
-      "timestamp": "2026-08-05 19:28:12",
-      "price": 2.79e-06,
-      "score": 15,
-      "rsi": 46.87,
+      "timestamp": "2026-08-05 19:30:12",
+      "price": 0.0001904,
+      "score": 40,
+      "rsi": 68.71,
       "macd": "Neutral",
-      "volume_surge": 1.34,
+      "volume_surge": 0.02,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GNOUSDT": [
+    {
+      "timestamp": "2026-08-05 19:30:12",
+      "price": 106.3,
+      "score": 50,
+      "rsi": 65.86,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-05 19:30:12",
+      "price": 1.412,
+      "score": 50,
+      "rsi": 62.44,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DCRUSDT": [
+    {
+      "timestamp": "2026-08-05 19:30:12",
+      "price": 12.81,
+      "score": 40,
+      "rsi": 18.3,
+      "macd": "Neutral",
+      "volume_surge": 0.1,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
