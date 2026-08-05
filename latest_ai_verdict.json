@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 00:14:24",
+  "timestamp": "2026-08-05 00:16:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de estancamiento de pánico con una correlación bajista predominante. Ningún activo cumple con el umbral de Score Técnico A+ (>= 65) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es mantener la posición en efectivo (USDT).",
+  "reasoning": "Tras la deliberación unánime, el comité ha determinado que las condiciones actuales del mercado y la calidad técnica de los candidatos no cumplen con los estándares de seguridad y rentabilidad exigidos, por lo que se mantiene la posición en efectivo (HOLD).",
   "top_candidates": [
     {
-      "symbol": "EULUSDT",
-      "score": 80
+      "symbol": "MUBUSDT",
+      "score": 60
     },
     {
-      "symbol": "MUBUSDT",
-      "score": 70
+      "symbol": "BNBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "KORUBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "STOUSDT",
+      "score": 60
     },
     {
       "symbol": "JSTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "AAVEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "NBISBUSDT",
       "score": 60
     }
   ]
