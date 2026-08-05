@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 03:20:22",
+  "timestamp": "2026-08-05 03:22:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado carece de convicción alcista y los activos analizados no superan el umbral de riesgo A+ (Score >= 65). La estrategia institucional es proteger el capital ante la debilidad sistémica y la falta de soporte en el libro de órdenes.",
+  "reasoning": "El mercado se encuentra en una fase de contracción y alta incertidumbre. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ (Score >= 65) exigido por el comité. Se mantiene la liquidez en USDT para evitar trampas de valor y proteger el capital contra la volatilidad bajista.",
   "top_candidates": [
     {
-      "symbol": "MUBUSDT",
+      "symbol": "BICOUSDT",
       "score": 60
     },
     {
-      "symbol": "BICOUSDT",
+      "symbol": "MUBUSDT",
       "score": 60
     },
     {
