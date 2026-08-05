@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-05 14:48:20",
+  "timestamp": "2026-08-05 14:50:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La falta de profundidad en el libro de órdenes y la alta tasa de fallos en trades históricos bajo condiciones neutrales dictan una política de preservación de capital (HOLD) para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura técnica que no garantiza una ventaja estadística, por lo que el comité ha decidido mantener la liquidez en espera de una configuración de mercado más robusta.",
   "top_candidates": [
     {
-      "symbol": "ETHUSDT",
+      "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
       "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SYNUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
       "score": 75
     }
   ]
