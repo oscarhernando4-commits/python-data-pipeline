@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 11:22:22",
+  "timestamp": "2026-08-05 11:24:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación institucional con una falta total de activos que cumplan con el umbral de seguridad A+ (Score >= 65). La alta volatilidad y la persistencia de la presión vendedora en el sector de activos digitales obligan a mantener una postura defensiva, priorizando la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El comité ha determinado que el entorno de mercado actual es de alta volatilidad y riesgo de capitulación. Ninguno de los activos candidatos cumple con los criterios estrictos de calidad A+ (Score >= 65) establecidos por el departamento de riesgo. Se prioriza la protección del capital sobre la especulación en un mercado sin convicción compradora.",
   "top_candidates": [
     {
       "symbol": "ETHFIUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "APTUSDT",
-      "score": 60
-    },
-    {
       "symbol": "SPYBUSDT",
       "score": 60
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "UNIUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "HEIUSDT",
       "score": 50
     }
   ]
