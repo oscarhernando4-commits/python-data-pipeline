@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-05 22:08:18",
+  "timestamp": "2026-08-05 22:10:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad técnica generalizada. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la ejecución de trades de baja calidad.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de Score Técnico >= 65 ni con la confirmación de soporte en el libro de órdenes, por lo que se prioriza la preservación de capital en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "ZAMAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "KAITOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "CRVUSDT",
       "score": 60
     },
     {
@@ -23,8 +15,16 @@
       "score": 60
     },
     {
+      "symbol": "CRVUSDT",
+      "score": 60
+    },
+    {
       "symbol": "TSLABUSDT",
       "score": 60
+    },
+    {
+      "symbol": "DOTUSDT",
+      "score": 55
     }
   ]
 }
