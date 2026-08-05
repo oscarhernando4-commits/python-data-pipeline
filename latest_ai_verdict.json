@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-05 13:20:21",
+  "timestamp": "2026-08-05 13:22:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una asimetría de debilidad sistémica. Ninguno de los activos analizados alcanza el umbral de convicción A+ (Score >= 65) requerido por el Comité, y la falta de soporte claro en el libro de órdenes junto con la inestabilidad macroeconómica dictan una postura de preservación de capital total.",
+  "reasoning": "El mercado se encuentra en un estado de fragilidad sistémica con un sentimiento de miedo predominante. Ninguno de los activos analizados alcanza el Score Técnico mínimo de 65 ni muestra una estructura de libro de órdenes que garantice una probabilidad de éxito superior al 70%. En consecuencia, el comité ha decidido mantener la posición en liquidez (USDT) para evitar pérdidas innecesarias en un entorno de alta volatilidad y baja convicción.",
   "top_candidates": [
-    {
-      "symbol": "LTCUSDT",
-      "score": 60
-    },
     {
       "symbol": "BNBUSDT",
       "score": 60
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "LTCUSDT",
       "score": 60
     },
     {
       "symbol": "GRAMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "HBARUSDT",
       "score": 60
     },
     {
