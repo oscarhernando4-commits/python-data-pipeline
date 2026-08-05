@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-05 02:52:24",
+  "timestamp": "2026-08-05 02:54:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 65%). El mercado se encuentra en una zona de miedo con alta inestabilidad, por lo que la estrategia institucional es preservar el capital y esperar una señal de entrada de alta probabilidad.",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una tendencia neutral predominante. Ninguno de los candidatos cumple con los criterios estrictos de riesgo (Score A+ y soporte de libro de órdenes) establecidos por el comité, por lo que la decisión prudente es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "UNIUSDT",
+      "symbol": "JTOUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "FILUSDT",
+      "symbol": "UNIUSDT",
       "score": 75
     }
   ]
