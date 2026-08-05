@@ -1,12 +1,51 @@
 {
-  "SAHARAUSDT": [
+  "JTOUSDT": [
     {
-      "timestamp": "2026-08-05 12:22:12",
-      "price": 0.00836,
-      "score": 50,
-      "rsi": 60.81,
+      "timestamp": "2026-08-05 12:24:11",
+      "price": 0.5078,
+      "score": 75,
+      "rsi": 51.39,
       "macd": "Neutral",
-      "volume_surge": 0.72,
+      "volume_surge": 1.91,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-05 12:24:12",
+      "price": 0.1347,
+      "score": 35,
+      "rsi": 49.7,
+      "macd": "Neutral",
+      "volume_surge": 1.37,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DCRUSDT": [
+    {
+      "timestamp": "2026-08-05 12:24:12",
+      "price": 13.43,
+      "score": 25,
+      "rsi": 45.09,
+      "macd": "Neutral",
+      "volume_surge": 1.67,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ORDIUSDT": [
+    {
+      "timestamp": "2026-08-05 12:24:12",
+      "price": 3.367,
+      "score": 35,
+      "rsi": 49.84,
+      "macd": "Neutral",
+      "volume_surge": 0.48,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +53,38 @@
   ],
   "BONKUSDT": [
     {
-      "timestamp": "2026-08-05 12:22:12",
-      "price": 2.82e-06,
+      "timestamp": "2026-08-05 12:24:12",
+      "price": 2.83e-06,
       "score": 75,
-      "rsi": 58.33,
+      "rsi": 63.26,
       "macd": "Neutral",
-      "volume_surge": 1.83,
+      "volume_surge": 2.07,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-05 12:24:12",
+      "price": 1.39,
+      "score": 55,
+      "rsi": 58.15,
+      "macd": "Neutral",
+      "volume_surge": 4.06,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SAHARAUSDT": [
+    {
+      "timestamp": "2026-08-05 12:24:12",
+      "price": 0.00836,
+      "score": 50,
+      "rsi": 60.81,
+      "macd": "Neutral",
+      "volume_surge": 0.74,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
