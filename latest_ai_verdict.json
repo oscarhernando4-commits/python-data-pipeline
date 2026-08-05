@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-05 12:26:23",
+  "timestamp": "2026-08-05 12:28:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos favorables, la falta de dominancia en el libro de órdenes y el entorno de miedo (Fear & Greed 27) no cumplen con los criterios de alta convicción necesarios para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un mercado sin una tendencia definida.",
+  "reasoning": "A pesar de que activos como BNB, ETH, SOL y LINK presentan scores técnicos de 85, el entorno macro de miedo, la falta de dominancia clara en el libro de órdenes y la alta tasa de fallos en trades recientes bajo condiciones neutrales dictan una postura de preservación de capital. Ningún activo cumple con la convicción A+ requerida por el comité.",
   "top_candidates": [
+    {
+      "symbol": "BNBUSDT",
+      "score": 85
+    },
     {
       "symbol": "ETHUSDT",
       "score": 85
@@ -19,12 +23,8 @@
       "score": 85
     },
     {
-      "symbol": "AAVEUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ETHFIUSDT",
-      "score": 85
+      "symbol": "XRPUSDT",
+      "score": 75
     }
   ]
 }
