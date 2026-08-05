@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 23:20:22",
+  "timestamp": "2026-08-05 23:22:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado carece de activos con un Score Técnico superior a 65 y no hay confirmación de muros de soporte significativos en el libro de órdenes, por lo que la estrategia más rentable es mantener la liquidez en USDT para evitar pérdidas en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado presenta una estructura de alta fragilidad con una correlación bajista generalizada. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (65) ni con la confirmación de soporte en el libro de órdenes, por lo que la estrategia institucional es mantener la liquidez en efectivo para evitar el riesgo de 'falling knives'.",
   "top_candidates": [
+    {
+      "symbol": "HFTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "score": 60
+    },
     {
       "symbol": "ACXUSDT",
       "score": 60
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "PENGUUSDT",
       "score": 60
     },
     {
-      "symbol": "FETUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 50
+      "symbol": "TRUMPUSDT",
+      "score": 60
     }
   ]
 }
