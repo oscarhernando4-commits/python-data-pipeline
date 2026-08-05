@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 23:48:19",
+  "timestamp": "2026-08-05 23:50:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema con una falta de correlación positiva y scores técnicos mediocres. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital hasta que surja una estructura de mercado clara y alcista.",
+  "reasoning": "El mercado se encuentra en un estado de alta fragilidad con una correlación bajista sistémica. Ninguno de los candidatos cumple con el requisito mínimo de Score Técnico (>= 65) ni con la profundidad de mercado necesaria para una operativa segura. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "TAOUSDT",
       "score": 60
     },
     {
-      "symbol": "HFTUSDT",
+      "symbol": "SHIBUSDT",
       "score": 60
     },
     {
@@ -19,7 +19,7 @@
       "score": 60
     },
     {
-      "symbol": "XPLUSDT",
+      "symbol": "FETUSDT",
       "score": 55
     },
     {
