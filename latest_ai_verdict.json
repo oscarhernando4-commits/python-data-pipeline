@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-05 08:42:22",
+  "timestamp": "2026-08-05 08:44:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con scores de activos por debajo del umbral de seguridad A+ (65). Ningún candidato presenta la confluencia necesaria de volumen, soporte en el libro de órdenes y estructura técnica para mitigar el riesgo de 'falling knives'. Se prioriza la protección del capital hasta que el entorno macro mejore.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación y alta correlación bajista. Ninguno de los candidatos analizados alcanza el Score técnico mínimo de 65 requerido por el comité para una ejecución A+. Se prioriza la protección del capital frente a la volatilidad errática actual.",
   "top_candidates": [
+    {
+      "symbol": "TRXUSDT",
+      "score": 60
+    },
     {
       "symbol": "SOLUSDT",
       "score": 60
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "PEPEUSDT",
       "score": 60
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "TIAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TOWNSUSDT",
       "score": 60
     }
   ]
