@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-05 01:42:22",
-  "selected_symbol": "XAUTUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "El mercado se encuentra en una fase de capitulación minorista, lo que hace que los activos de valor refugio (RWA/Oro) sean la única opción con convicción A+. XAUTUSDT destaca por su score técnico de 85 y su rol como cobertura, cumpliendo con todos los criterios de riesgo y sectorialidad del comité.",
+  "timestamp": "2026-08-05 01:44:20",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una fase de desapalancamiento sistémico con alta correlación negativa. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital, por lo que se opta por una postura defensiva de espera.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
       "score": 85
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 75
     },
     {
       "symbol": "PAXGUSDT",
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "SKYUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ATOMUSDT",
       "score": 75
     },
     {
