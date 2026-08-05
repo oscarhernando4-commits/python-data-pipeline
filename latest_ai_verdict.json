@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-05 05:46:20",
+  "timestamp": "2026-08-05 05:48:34",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional), por lo que la estrategia más rentable y segura es mantener la posición en efectivo (HOLD) para evitar la volatilidad de las trampas de liquidez.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
+    {
+      "symbol": "CRVUSDT",
+      "score": 85
+    },
     {
       "symbol": "BTCUSDT",
       "score": 75
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ICPUSDT",
       "score": 75
     }
   ]
