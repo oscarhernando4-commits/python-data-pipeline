@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-05 02:04:22",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral estricto de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la protección del capital en un entorno de mercado con sentimiento de miedo (Fear 27).",
+  "timestamp": "2026-08-05 02:06:21",
+  "selected_symbol": "XAUTUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "Tras deliberar, el comité identifica a XAUTUSDT como el activo con mayor convicción institucional (Score 85/100) dentro del sector líder (RWA). Se prioriza la seguridad del capital evitando altcoins de bajo score y se autoriza una posición de alta convicción con gestión de riesgo activa.",
   "top_candidates": [
     {
+      "symbol": "XAUTUSDT",
+      "score": 85
+    },
+    {
       "symbol": "PAXGUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "EWYBUSDT",
       "score": 85
     },
     {
@@ -17,14 +25,6 @@
     {
       "symbol": "LUNCUSDT",
       "score": 85
-    },
-    {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
-      "score": 75
     }
   ]
 }
