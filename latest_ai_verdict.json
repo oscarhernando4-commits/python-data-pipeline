@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 14:16:20",
+  "timestamp": "2026-08-05 14:18:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta selectividad y purga de activos débiles; al no existir un candidato que cumpla con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), la decisión institucional es mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de baja convicción con alta volatilidad. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el comité (Bids >= 55% y convicción A+), por lo que la estrategia óptima es mantener la liquidez y evitar la exposición innecesaria a posibles 'flash crashes'.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "HBARUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 75
     }
   ]
