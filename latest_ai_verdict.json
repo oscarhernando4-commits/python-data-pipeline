@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 13:12:19",
+  "timestamp": "2026-08-05 13:14:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución y búsqueda de suelo. Ningún activo cumple con los criterios estrictos de riesgo y convicción exigidos por el comité, por lo que la estrategia óptima es la preservación de capital.",
+  "reasoning": "El mercado actual se encuentra en una fase de desapalancamiento forzoso con una correlación bajista masiva. Ningún activo cumple con los criterios estrictos de Score Técnico >= 65 y confirmación de liquidez, por lo que la decisión institucional es proteger el capital y esperar una estructura de mercado más saludable.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
       "score": 70
     },
     {
-      "symbol": "SPYBUSDT",
-      "score": 70
+      "symbol": "LTCUSDT",
+      "score": 60
     },
     {
       "symbol": "BNBUSDT",
       "score": 60
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "MIRAUSDT",
       "score": 60
     },
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "BIOUSDT",
       "score": 60
     }
   ]
