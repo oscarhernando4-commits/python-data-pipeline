@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 04:04:20",
+  "timestamp": "2026-08-05 04:06:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno actual de mercado es de alto riesgo y baja calidad técnica. Ninguno de los activos candidatos cumple con los requisitos estrictos de score (>= 65) ni con la profundidad de liquidez necesaria para una ejecución segura. Se prioriza la protección del capital frente a la especulación en un mercado en fase de capitulación.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada con la mayoría de los activos mostrando scores técnicos inferiores a 65. Ante la falta de convicción institucional y la alta probabilidad de trampas de liquidez, la estrategia óptima es mantener la posición en efectivo (HOLD) para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "SKHYBUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "SNXXBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "score": 60
+    },
+    {
       "symbol": "FETUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "EWYBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DRAMBUSDT",
       "score": 60
     }
   ]
