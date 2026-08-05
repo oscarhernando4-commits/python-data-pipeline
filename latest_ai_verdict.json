@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 02:16:20",
+  "timestamp": "2026-08-05 02:18:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de divergencia fragmentada con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y confirmación de volumen institucional), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional). El mercado se encuentra en una fase de alta incertidumbre y baja correlación, lo que hace que cualquier entrada sea especulativa y de alto riesgo. Se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "APTUSDT",
       "score": 75
     }
   ]
