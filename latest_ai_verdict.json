@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 06:52:21",
+  "timestamp": "2026-08-05 06:54:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución agresiva con una correlación bajista elevada. Ningún activo cumple con el umbral de calidad A+ (Score >= 65) ni con la profundidad de liquidez necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es mantener la posición en efectivo (HOLD) para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de apatía sistémica con scores técnicos insuficientes (máximo 60/100). Siguiendo la Regla de Oro #1, al no existir candidatos con Score >= 65, el comité ha decidido mantener la liquidez total para evitar el riesgo de 'falling knives' en un entorno de alta fragilidad.",
   "top_candidates": [
     {
       "symbol": "EULUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "ETHFIUSDT",
+      "score": 60
+    },
+    {
       "symbol": "DOTUSDT",
       "score": 60
     },
     {
       "symbol": "POLUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "APTUSDT",
       "score": 60
     }
   ]
