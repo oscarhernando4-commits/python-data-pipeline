@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 02:32:22",
+  "timestamp": "2026-08-05 02:34:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, el comité ha determinado que el mercado se encuentra en un estado de 'Neutralidad Forzada' con alta volatilidad y falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Bids > 55% y confirmación de volumen), por lo que se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado se encuentra en una fase de indecisión con un sentimiento de miedo predominante y falta de muros de soporte sólidos en el libro de órdenes. Ninguno de los candidatos cumple con el requisito de convicción A+ (Score >= 65 y Bids >= 55%), por lo que la estrategia óptima es mantener la liquidez y evitar la exposición a la volatilidad errática actual.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ATOMUSDT",
       "score": 75
     }
   ]
