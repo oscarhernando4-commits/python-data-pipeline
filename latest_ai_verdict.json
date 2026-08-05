@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 00:28:21",
+  "timestamp": "2026-08-05 00:30:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una correlación bajista generalizada. Ningún activo cumple con el umbral de Score A+ (>= 65) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de 'trampa de toros'. Por tanto, la decisión institucional es mantener la posición en efectivo (USDT) para preservar el capital.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada y falta de convicción institucional. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital mediante el modo HOLD.",
   "top_candidates": [
-    {
-      "symbol": "ATOMUSDT",
-      "score": 70
-    },
     {
       "symbol": "MUBUSDT",
       "score": 60
     },
     {
+      "symbol": "MIRAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SKYUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
       "symbol": "DRAMBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TSLABUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "EWYBUSDT",
       "score": 60
     }
   ]
