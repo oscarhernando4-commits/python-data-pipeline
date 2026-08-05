@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-05 03:52:21",
+  "timestamp": "2026-08-05 03:54:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución terminal con una correlación bajista extrema. Ninguno de los candidatos cumple con el requisito de Score Técnico >= 65 ni con la convicción necesaria para una operación de alta probabilidad. Se prioriza la preservación del capital frente a la volatilidad actual.",
+  "reasoning": "El mercado se encuentra en una fase de distribución forzada y pánico sistémico. Ninguno de los candidatos cumple con el umbral técnico de Score 65+ ni con la confirmación de liquidez necesaria para mitigar el riesgo de pérdida, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
+    {
+      "symbol": "NEXOUSDT",
+      "score": 70
+    },
     {
       "symbol": "ERAUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
+      "symbol": "SNXXBUSDT",
+      "score": 60
+    },
+    {
       "symbol": "KAITOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DRAMBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TSLABUSDT",
       "score": 60
     }
   ]
