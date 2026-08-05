@@ -1,12 +1,25 @@
 {
-  "STXUSDT": [
+  "RESOLVUSDT": [
     {
-      "timestamp": "2026-08-05 21:38:12",
-      "price": 0.1328,
+      "timestamp": "2026-08-05 21:40:13",
+      "price": 0.01732,
       "score": 0,
-      "rsi": 37.2,
+      "rsi": 47.31,
       "macd": "Neutral",
-      "volume_surge": 0.08,
+      "volume_surge": 0.72,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-05 21:40:13",
+      "price": 1.4,
+      "score": 0,
+      "rsi": 47.06,
+      "macd": "Neutral",
+      "volume_surge": 0.21,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

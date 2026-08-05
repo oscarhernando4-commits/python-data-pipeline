@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-05 21:38:21",
+  "timestamp": "2026-08-05 21:40:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con una correlación de 0.95. Ningún activo cumple con los criterios de alta convicción (Score >= 65) exigidos por el Comité, por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación sistémica con una correlación bajista predominante. Ninguno de los activos analizados alcanza el umbral de calidad A+ requerido por el comité, y el historial de trades recientes sugiere que intentar capturar rebotes en este contexto resulta en pérdidas recurrentes. Se prioriza la preservación del capital hasta que el sentimiento macro mejore y los scores técnicos superen el umbral de 65.",
   "top_candidates": [
+    {
+      "symbol": "VANRYUSDT",
+      "score": 60
+    },
     {
       "symbol": "TLMUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 50
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "ACEUSDT",
       "score": 50
     },
     {
-      "symbol": "VANRYUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "NOMUSDT",
+      "symbol": "ALLOUSDT",
       "score": 50
     }
   ]
