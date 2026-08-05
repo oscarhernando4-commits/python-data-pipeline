@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 21:02:22",
+  "timestamp": "2026-08-05 21:04:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Debido a la ausencia de activos con un Score Técnico >= 65 y la falta de soporte institucional en el libro de órdenes, el comité ha decidido no ejecutar ninguna operación para preservar el capital frente a la alta volatilidad y el sesgo bajista del mercado.",
+  "reasoning": "El mercado se encuentra en una fase de distribución con alta volatilidad y falta de profundidad en el libro de órdenes. Ningún candidato cumple con los criterios estrictos de seguridad y convicción A+ establecidos por el comité, por lo que la decisión unánime es mantener la liquidez y evitar la exposición a activos de alta volatilidad.",
   "top_candidates": [
     {
       "symbol": "SUNUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SAHARAUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "RESOLVUSDT",
-      "score": 50
+      "score": 75
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 45
+      "symbol": "SAHARAUSDT",
+      "score": 75
     },
     {
-      "symbol": "ENAUSDT",
-      "score": 45
+      "symbol": "EULUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 65
     }
   ]
 }
