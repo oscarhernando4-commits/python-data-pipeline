@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-05 21:36:19",
+  "timestamp": "2026-08-05 21:38:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de correlación bajista y debilidad técnica extrema. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia de preservación de capital es la única opción válida para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de distribución forzada con una correlación de 0.95. Ningún activo cumple con los criterios de alta convicción (Score >= 65) exigidos por el Comité, por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "VANRYUSDT",
-      "score": 60
-    },
     {
       "symbol": "TLMUSDT",
       "score": 60
@@ -19,11 +15,15 @@
       "score": 50
     },
     {
-      "symbol": "VICUSDT",
+      "symbol": "JSTUSDT",
       "score": 50
     },
     {
-      "symbol": "ALLOUSDT",
+      "symbol": "VANRYUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "NOMUSDT",
       "score": 50
     }
   ]
