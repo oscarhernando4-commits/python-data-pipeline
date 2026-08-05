@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-05 14:54:20",
+  "timestamp": "2026-08-05 14:56:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación mixta y falta de soporte institucional claro en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ exigido por el comité, por lo que la estrategia óptima es el mantenimiento de la liquidez (HOLD) para evitar pérdidas innecesarias en un entorno de 'selección quirúrgica' donde la mayoría de los activos siguen siendo vulnerables a la presión vendedora.",
+  "reasoning": "El comité ha decidido unánimemente mantener la liquidez en USDT. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo sistémico actual, evitando así la exposición a posibles 'falling knives' en un entorno de mercado de miedo extremo.",
   "top_candidates": [
+    {
+      "symbol": "HBARUSDT",
+      "score": 85
+    },
     {
       "symbol": "PENGUUSDT",
       "score": 85
@@ -15,15 +19,11 @@
       "score": 85
     },
     {
+      "symbol": "TAOUSDT",
+      "score": 75
+    },
+    {
       "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TRUMPUSDT",
       "score": 75
     }
   ]
