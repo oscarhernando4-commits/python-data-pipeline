@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-05 07:38:23",
+  "timestamp": "2026-08-05 07:40:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado no cumple con los criterios de alta convicción (Score >= 65) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de una caída sistémica. Se prioriza la preservación de capital sobre la especulación en activos de baja liquidez.",
+  "reasoning": "El mercado se encuentra en un estado de distribución institucional con scores técnicos insuficientes. Ningún activo cumple con el umbral de calidad A+ requerido por el Comité, por lo que la estrategia óptima es la preservación de capital en espera de una estructura de mercado más clara.",
   "top_candidates": [
+    {
+      "symbol": "MIRAUSDT",
+      "score": 60
+    },
     {
       "symbol": "ADAUSDT",
       "score": 60
     },
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "ALGOUSDT",
       "score": 60
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "ZAMAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SUNUSDT",
       "score": 60
     }
   ]
