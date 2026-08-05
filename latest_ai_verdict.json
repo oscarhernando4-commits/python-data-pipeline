@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 16:18:25",
+  "timestamp": "2026-08-05 16:20:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que varios activos tienen un score técnico de 75, ninguno cumple con el requisito de dominancia de Bids > 55% ni con una estructura de mercado que garantice una alta probabilidad de éxito, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en una fase de indecisión con un sesgo neutral predominante. Ninguno de los candidatos cumple con el requisito estricto de Bids > 55% ni con una estructura técnica que garantice una alta probabilidad de éxito, por lo que la decisión institucional es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "GRAMUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
@@ -20,6 +16,10 @@
     },
     {
       "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LTCUSDT",
       "score": 75
     },
     {
