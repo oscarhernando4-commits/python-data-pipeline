@@ -1,12 +1,25 @@
 {
-  "STXUSDT": [
+  "BONKUSDT": [
     {
-      "timestamp": "2026-08-05 05:18:12",
-      "price": 0.1348,
-      "score": 15,
-      "rsi": 47.23,
+      "timestamp": "2026-08-05 05:20:12",
+      "price": 2.82e-06,
+      "score": 60,
+      "rsi": 52.51,
       "macd": "Neutral",
-      "volume_surge": 0.01,
+      "volume_surge": 0.18,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DCRUSDT": [
+    {
+      "timestamp": "2026-08-05 05:20:12",
+      "price": 13.5,
+      "score": 75,
+      "rsi": 65.25,
+      "macd": "Neutral",
+      "volume_surge": 0.04,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
