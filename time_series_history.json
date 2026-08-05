@@ -1,12 +1,64 @@
 {
-  "STXUSDT": [
+  "SPYBUSDT": [
     {
-      "timestamp": "2026-08-05 14:28:12",
-      "price": 0.1335,
+      "timestamp": "2026-08-05 14:30:12",
+      "price": 775.17,
       "score": 15,
-      "rsi": 38.6,
+      "rsi": 48.19,
       "macd": "Neutral",
-      "volume_surge": 0.19,
+      "volume_surge": 0.15,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-05 14:30:12",
+      "price": 1.382,
+      "score": 75,
+      "rsi": 51.3,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-05 14:30:12",
+      "price": 2.8e-06,
+      "score": 15,
+      "rsi": 47.1,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ORDIUSDT": [
+    {
+      "timestamp": "2026-08-05 14:30:12",
+      "price": 3.395,
+      "score": 60,
+      "rsi": 51.63,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "HYPERUSDT": [
+    {
+      "timestamp": "2026-08-05 14:30:13",
+      "price": 0.0586,
+      "score": 40,
+      "rsi": 72.95,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

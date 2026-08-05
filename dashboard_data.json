@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 14:28:25",
+  "updated_at": "2026-08-05 14:30:27",
   "total_balance_usd": 20.08,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -24,10 +24,10 @@
     "agent_7_ceo_anti_loss": "Consenso del CEO Supreme Anti-Loss Profit Maximizer."
   },
   "verdict": {
-    "selected_symbol": "TAOUSDT",
-    "action": "BUY_LONG",
-    "confidence": 75,
-    "approved": true,
-    "reasoning": "Tras deliberar, el comité ha decidido priorizar TAOUSDT debido a su alto score técnico (85/100) y su pertenencia al sector de AI & Big Data, el cual es el principal foco de rotación de capital institucional. Se ignora el resto de candidatos por no cumplir con la convicción A+ necesaria en este entorno de mercado fragmentado."
+    "selected_symbol": "NONE",
+    "action": "HOLD",
+    "confidence": 0,
+    "approved": false,
+    "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%). El entorno macro es de alta incertidumbre y el riesgo de 'falling knives' es elevado, por lo que la estrategia institucional es proteger la liquidez."
   }
 }
