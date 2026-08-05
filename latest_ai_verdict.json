@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-05 13:18:24",
+  "timestamp": "2026-08-05 13:20:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con debilidad sistémica. Ningún activo cumple con los criterios de alta convicción (Score >= 65) exigidos por el comité para mitigar el riesgo de 'falling knives' en un entorno de alta volatilidad y baja liquidez.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una asimetría de debilidad sistémica. Ninguno de los activos analizados alcanza el umbral de convicción A+ (Score >= 65) requerido por el Comité, y la falta de soporte claro en el libro de órdenes junto con la inestabilidad macroeconómica dictan una postura de preservación de capital total.",
   "top_candidates": [
+    {
+      "symbol": "LTCUSDT",
+      "score": 60
+    },
     {
       "symbol": "BNBUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "GRAMUSDT",
       "score": 60
     },
     {
-      "symbol": "BIOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SUNUSDT",
+      "symbol": "ASTERUSDT",
       "score": 60
     }
   ]
