@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 21:28:18",
+  "timestamp": "2026-08-05 21:30:29",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con scores mediocres y falta de soporte institucional. Ningún activo cumple con los criterios de alta convicción (Score >= 65) establecidos por el comité, por lo que la decisión unánime es mantener la liquidez en USDT para evitar pérdidas en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en un estado de parálisis y alta incertidumbre regulatoria. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité. Se mantiene la posición en efectivo para evitar el riesgo de 'cuchillos cayendo' y proteger el capital institucional.",
   "top_candidates": [
-    {
-      "symbol": "SAHARAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "RESOLVUSDT",
-      "score": 60
-    },
     {
       "symbol": "EULUSDT",
       "score": 50
     },
     {
-      "symbol": "DEXEUSDT",
+      "symbol": "VICUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "VANRYUSDT",
       "score": 50
     },
     {
       "symbol": "KITEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "ACEUSDT",
       "score": 50
     }
   ]
