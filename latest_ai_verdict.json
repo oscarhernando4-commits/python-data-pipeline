@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 07:46:20",
+  "timestamp": "2026-08-05 07:48:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con scores técnicos mediocres (<= 60) y falta de convicción en el libro de órdenes. Siguiendo la Regla de Oro #1, al no existir candidatos con Score A+ (>= 65), la decisión institucional es mantener la liquidez en efectivo para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema con una distribución institucional evidente. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de liquidez necesaria para mitigar el riesgo de pérdida. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad bajista.",
   "top_candidates": [
-    {
-      "symbol": "DOTUSDT",
-      "score": 60
-    },
     {
       "symbol": "POLUSDT",
       "score": 60
     },
     {
+      "symbol": "SUNUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SEIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "score": 50
+    },
+    {
       "symbol": "ADAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "MIRAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ASTERUSDT",
       "score": 50
     }
   ]
