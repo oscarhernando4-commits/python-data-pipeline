@@ -1,12 +1,25 @@
 {
-  "NBISBUSDT": [
+  "PENDLEUSDT": [
     {
-      "timestamp": "2026-08-05 22:48:08",
-      "price": 216.76,
+      "timestamp": "2026-08-05 22:50:11",
+      "price": 1.397,
       "score": 0,
-      "rsi": 40.26,
+      "rsi": 45.41,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.03,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ]
+}SAHARAUSDT": [
+    {
+      "timestamp": "2026-08-05 22:50:11",
+      "price": 0.00849,
+      "score": 60,
+      "rsi": 56.01,
+      "macd": "Neutral",
+      "volume_surge": 0.26,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

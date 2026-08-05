@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-05 22:48:16",
+  "timestamp": "2026-08-05 22:50:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la evaluación exhaustiva de los 7 agentes, se concluye que el mercado actual carece de la convicción técnica y la profundidad de liquidez necesarias para una operación de alta probabilidad. Ningún activo supera el umbral de riesgo A+, por lo que la decisión institucional es proteger el capital y esperar a una mejora en las condiciones macroeconómicas.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada y una falta de convicción compradora. Ninguno de los activos analizados cumple con el umbral de seguridad A+ (Score >= 65), por lo que la estrategia de preservación de capital dicta no operar.",
   "top_candidates": [
     {
       "symbol": "ACXUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SAHARAUSDT",
       "score": 60
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "TAOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "WLFIUSDT",
       "score": 50
     }
   ]
