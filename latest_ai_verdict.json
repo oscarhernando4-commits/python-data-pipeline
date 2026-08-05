@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-05 00:04:21",
+  "timestamp": "2026-08-05 00:06:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación y alta fragilidad técnica. Ninguno de los activos analizados alcanza el umbral de calidad A+ requerido por el comité para una ejecución segura. La estrategia institucional prioritaria es la preservación de capital (Cash-is-King) hasta que el volumen institucional confirme una reversión clara y los scores técnicos superen el nivel de 65.",
+  "reasoning": "El mercado se encuentra en una fase de distribución pasiva con una falta crítica de convicción institucional. Ningún activo cumple con los criterios de riesgo-retorno exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una configuración técnica superior.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
       "score": 65
     },
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "MUBUSDT",
       "score": 60
     },
     {
-      "symbol": "MUBUSDT",
+      "symbol": "SOXLBUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "NBISBUSDT",
+      "symbol": "DRAMBUSDT",
       "score": 60
     }
   ]
