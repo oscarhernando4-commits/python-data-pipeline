@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 01:02:20",
+  "timestamp": "2026-08-05 01:04:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y aversión al riesgo. Ninguno de los activos analizados cumple con los criterios estrictos de calidad A+ exigidos por el comité. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional y purga de liquidez. Ninguno de los candidatos analizados cumple con el umbral de seguridad (Score >= 65) ni con la confirmación de volumen institucional necesaria para una entrada de alta probabilidad, por lo que la decisión unánime es mantener la liquidez en efectivo.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
@@ -15,12 +15,12 @@
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
-      "score": 55
+      "symbol": "SKYUSDT",
+      "score": 60
     },
     {
-      "symbol": "HOMEUSDT",
-      "score": 50
+      "symbol": "POLUSDT",
+      "score": 55
     },
     {
       "symbol": "BANKUSDT",
