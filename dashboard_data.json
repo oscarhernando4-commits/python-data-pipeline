@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 20:06:28",
+  "updated_at": "2026-08-05 20:08:21",
   "total_balance_usd": 20.09,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de seguridad A+ (Score >= 65 y Bids >= 55%) en un entorno de mercado de alta incertidumbre y pánico. Se decide mantener la liquidez en USDT para evitar la exposición a activos de alta volatilidad sin soporte institucional."
+    "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de liquidez y soporte de ballenas). La alta tasa de fallos en las simulaciones recientes para activos de alta volatilidad y la falta de dominancia clara en el orderbook dictan una postura de preservación de capital en USDT."
   }
 }

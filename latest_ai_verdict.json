@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 20:06:28",
+  "timestamp": "2026-08-05 20:08:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de seguridad A+ (Score >= 65 y Bids >= 55%) en un entorno de mercado de alta incertidumbre y pánico. Se decide mantener la liquidez en USDT para evitar la exposición a activos de alta volatilidad sin soporte institucional.",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de liquidez y soporte de ballenas). La alta tasa de fallos en las simulaciones recientes para activos de alta volatilidad y la falta de dominancia clara en el orderbook dictan una postura de preservación de capital en USDT.",
   "top_candidates": [
     {
       "symbol": "PEPEUSDT",
@@ -15,16 +15,16 @@
       "score": 75
     },
     {
+      "symbol": "ETCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PYTHUSDT",
+      "score": 75
+    },
+    {
       "symbol": "BCHUSDT",
       "score": 70
-    },
-    {
-      "symbol": "JSTUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "EPICUSDT",
-      "score": 65
     }
   ]
 }
