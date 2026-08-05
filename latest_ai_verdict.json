@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 16:54:25",
+  "timestamp": "2026-08-05 16:56:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta tasa de fallos en condiciones de mercado neutral y la falta de muros de soporte sólidos dictan una postura de preservación de capital (HOLD).",
+  "reasoning": "A pesar de tener candidatos con Score 75, ninguno cumple con la Regla de Oro #3 (Bids > 55%) ni con el requisito de volumen institucional (Volume Surge > 1.2x). El mercado se encuentra en una fase de acumulación lateral de alto riesgo, por lo que la estrategia de protección de capital dicta mantenerse en efectivo.",
   "top_candidates": [
     {
       "symbol": "BCHUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "AEROUSDT",
-      "score": 75
-    },
-    {
       "symbol": "VIRTUALUSDT",
       "score": 75
     },
     {
-      "symbol": "NEARUSDT",
+      "symbol": "LINKUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "EULUSDT",
       "score": 65
     }
   ]
