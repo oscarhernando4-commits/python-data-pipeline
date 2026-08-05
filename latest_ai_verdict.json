@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-05 02:46:24",
+  "timestamp": "2026-08-05 02:48:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de indecisión con un sentimiento de miedo predominante y falta de muros de soporte claros en el libro de órdenes. Ninguno de los candidatos cumple con los criterios estrictos de convicción A+ establecidos por el comité, por lo que la decisión prudente es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad sin una dirección clara. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%) exigido por el comité, por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -15,7 +15,7 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "JSTUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "FILUSDT",
       "score": 75
     }
   ]
