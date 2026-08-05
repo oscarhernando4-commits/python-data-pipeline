@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-05 23:02:22",
+  "timestamp": "2026-08-05 23:04:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de capitulación técnica generalizada. Ningún activo cumple con los criterios de alta convicción (Score >= 65) establecidos por el comité. Se prioriza la protección del capital ante la ausencia de señales claras de reversión alcista.",
+  "reasoning": "El mercado presenta un entorno de 'Liquidez de Pánico' con una correlación bajista sistémica. Ningún activo cumple con el umbral de convicción A+ (Score >= 65) exigido por el comité, por lo que la estrategia óptima es la preservación del capital mediante el mantenimiento de la posición en efectivo (Cash-is-King).",
   "top_candidates": [
+    {
+      "symbol": "HFTUSDT",
+      "score": 60
+    },
     {
       "symbol": "ACXUSDT",
       "score": 60
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "TAOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "DEXEUSDT",
       "score": 50
     }
   ]
