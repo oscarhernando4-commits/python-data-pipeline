@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 22:20:23",
+  "timestamp": "2026-08-05 22:22:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los requisitos mínimos de seguridad y rentabilidad exigidos por el protocolo. Todos los candidatos presentan scores técnicos mediocres (50/100) y falta de convicción en el libro de órdenes, lo que clasifica cualquier entrada como una trampa de liquidez. Se prioriza la preservación del capital sobre la operativa especulativa.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con una falta crítica de convicción compradora. Ninguno de los activos evaluados alcanza el umbral de seguridad A+ (Score >= 65), y el historial de trades recientes en condiciones similares muestra una alta tasa de fallos. Se prioriza la preservación del capital sobre la ejecución de operaciones de baja probabilidad.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
@@ -23,7 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "ACXUSDT",
       "score": 50
     }
   ]
