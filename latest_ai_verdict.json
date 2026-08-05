@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-05 07:52:20",
+  "timestamp": "2026-08-05 07:54:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con falta de liquidez institucional. Dado que ningún activo cumple con el umbral de seguridad A+ (Score >= 65) y el entorno macro es de alta incertidumbre, la decisión institucional es mantener la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada con scores técnicos insuficientes y falta de profundidad en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65), por lo que se prioriza la preservación de capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "ALGOUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "ENAUSDT",
+      "symbol": "MIRAUSDT",
       "score": 50
     }
   ]
