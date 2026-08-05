@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-05 08:30:22",
+  "timestamp": "2026-08-05 08:32:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras deliberar, el comité ha determinado que, a pesar de los scores técnicos, la falta de profundidad en el libro de órdenes y la alta tasa de fallos en entornos neutrales hacen que ninguna oportunidad cumpla con los estándares de seguridad A+ exigidos por el CRO.",
+  "reasoning": "El comité ha decidido mantener la liquidez en USDT. A pesar de que varios activos tienen un score técnico de 75, la falta de confirmación en el libro de órdenes, el sentimiento de miedo global y la alta tasa de fallos en condiciones de mercado neutral impiden la ejecución de una orden de compra bajo los estándares de riesgo A+ exigidos.",
   "top_candidates": [
+    {
+      "symbol": "MIRAUSDT",
+      "score": 75
+    },
     {
       "symbol": "LINKUSDT",
       "score": 75
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "NEXOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TIAUSDT",
       "score": 75
     }
   ]
