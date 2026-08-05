@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 01:56:50",
+  "updated_at": "2026-08-05 01:58:26",
   "total_balance_usd": 20.08,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el comité. La falta de dominancia clara en el libro de órdenes y el entorno de mercado de miedo (Fear 27) dictan una postura de espera para preservar el capital."
+    "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 y confirmación de liquidez). La alta volatilidad y la falta de soporte claro en el libro de órdenes, sumado al historial de pérdidas en condiciones similares, dictan una postura de preservación de capital (HOLD) hasta que el sentimiento de mercado mejore."
   }
 }
