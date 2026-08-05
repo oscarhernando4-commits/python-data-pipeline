@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 05:02:22",
+  "timestamp": "2026-08-05 05:04:37",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta selectividad y riesgo sistémico. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia institucional es mantener la liquidez en espera de mejores condiciones.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
+    {
+      "symbol": "PUMPUSDT",
+      "score": 75
+    },
     {
       "symbol": "KAITOUSDT",
       "score": 75
     },
     {
-      "symbol": "EWYBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NEXOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AEROUSDT",
+      "symbol": "AMDBUSDT",
       "score": 75
     },
     {
       "symbol": "CRVUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AEROUSDT",
       "score": 75
     }
   ]
