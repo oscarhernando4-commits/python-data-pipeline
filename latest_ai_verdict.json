@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 13:44:26",
+  "timestamp": "2026-08-05 13:46:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que no existen activos que cumplan con los criterios de alta convicción (Score A+ >= 65) y soporte de liquidez necesario en el libro de órdenes. Se prioriza la preservación del capital ante la incertidumbre macroeconómica y la debilidad técnica observada en los activos analizados.",
+  "reasoning": "El comité ha determinado que no existen activos que cumplan con los criterios de calidad A+ exigidos. La debilidad técnica generalizada y la falta de profundidad en el libro de órdenes hacen que cualquier operación sea de alto riesgo, por lo que se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "NBISBUSDT",
-      "score": 80
-    },
-    {
       "symbol": "ASTERUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ERAUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "SNXXBUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "BTCUSDT",
       "score": 60
+    },
+    {
+      "symbol": "BIOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ALLOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SKHYBUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "HOMEUSDT",
+      "score": 50
     }
   ]
 }
