@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 17:36:21",
+  "timestamp": "2026-08-05 17:38:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el requisito estricto de soporte en el libro de órdenes (Bids >= 65%) ni con la convicción A+ exigida por el comité. Se prioriza la preservación del capital ante la incertidumbre del mercado.",
+  "reasoning": "El mercado presenta una estructura de alta incertidumbre con una paridad de liquidez que no ofrece una ventaja estadística superior al 70%. Ningún activo cumple con el umbral de soporte de ballenas (Bids >= 55%) ni con la convicción A+ requerida, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "CAKEUSDT",
       "score": 85
     },
     {
+      "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
       "symbol": "GRAMUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TRXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "VIRTUALUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     }
   ]
