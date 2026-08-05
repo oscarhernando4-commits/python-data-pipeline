@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 22:52:16",
+  "timestamp": "2026-08-05 22:54:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un estancamiento sistémico con una falta total de convicción compradora. Ningún activo cumple con los criterios de riesgo A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar la caza de stop-loss minoristas.",
+  "reasoning": "El mercado presenta un entorno de alto riesgo con una tendencia NEUTRAL predominante y falta de soporte institucional en el libro de órdenes. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico A+ (>= 65) requerido por el comité, por lo que la estrategia de preservación de capital dicta una posición de espera (HOLD) para evitar 'cuchillos cayendo'.",
   "top_candidates": [
     {
       "symbol": "ACXUSDT",
       "score": 60
     },
     {
+      "symbol": "TRUMPUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SAHARAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "INJUSDT",
+      "score": 55
+    },
+    {
       "symbol": "HFTUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "WLFIUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "DEXEUSDT",
       "score": 50
     }
   ]
