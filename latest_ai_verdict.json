@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 10:24:20",
+  "timestamp": "2026-08-05 10:26:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual se encuentra en una fase de purga de apalancamiento con una correlación bajista predominante. Ningún activo cumple con los criterios estrictos de Score Técnico (>= 65) y profundidad de libro de órdenes necesarios para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado presenta una divergencia estructural severa y un vacío de liquidez. Ninguno de los candidatos, a pesar de tener scores técnicos aceptables, logra superar el umbral de convicción A+ ni cuenta con el respaldo de un libro de órdenes con muros de soporte claros, por lo que la decisión institucional es mantener la liquidez en efectivo.",
   "top_candidates": [
     {
       "symbol": "APTUSDT",
-      "score": 70
+      "score": 85
     },
     {
-      "symbol": "HEIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 60
+      "symbol": "ETHUSDT",
+      "score": 75
     },
     {
       "symbol": "BCHUSDT",
-      "score": 60
+      "score": 75
     },
     {
-      "symbol": "HBARUSDT",
-      "score": 50
+      "symbol": "VIRTUALUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ORDIUSDT",
+      "score": 75
     }
   ]
 }
