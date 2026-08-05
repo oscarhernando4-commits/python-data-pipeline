@@ -1,14 +1,22 @@
 {
-  "timestamp": "2026-08-05 20:04:26",
+  "timestamp": "2026-08-05 20:06:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una mayoría de activos en zona de debilidad. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 65) combinado con una profundidad de mercado verificable. Por lo tanto, la estrategia institucional es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' y esperar una configuración de alta probabilidad.",
+  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de seguridad A+ (Score >= 65 y Bids >= 55%) en un entorno de mercado de alta incertidumbre y pánico. Se decide mantener la liquidez en USDT para evitar la exposición a activos de alta volatilidad sin soporte institucional.",
   "top_candidates": [
     {
+      "symbol": "PEPEUSDT",
+      "score": 75
+    },
+    {
       "symbol": "ERAUSDT",
-      "score": 65
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 70
     },
     {
       "symbol": "JSTUSDT",
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "EPICUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "PYTHUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "ZROUSDT",
       "score": 65
     }
   ]

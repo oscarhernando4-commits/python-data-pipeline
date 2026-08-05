@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 20:04:26",
+  "updated_at": "2026-08-05 20:06:28",
   "total_balance_usd": 20.09,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una mayoría de activos en zona de debilidad. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 65) combinado con una profundidad de mercado verificable. Por lo tanto, la estrategia institucional es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' y esperar una configuración de alta probabilidad."
+    "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de seguridad A+ (Score >= 65 y Bids >= 55%) en un entorno de mercado de alta incertidumbre y pánico. Se decide mantener la liquidez en USDT para evitar la exposición a activos de alta volatilidad sin soporte institucional."
   }
 }
