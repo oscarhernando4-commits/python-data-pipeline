@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-05 21:46:22",
+  "timestamp": "2026-08-05 21:48:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos con la calidad técnica y el respaldo de liquidez necesarios para una operación de alta probabilidad. La debilidad macroeconómica y la falta de soporte en el libro de órdenes obligan a mantener una postura defensiva de espera (HOLD) para preservar el capital.",
+  "reasoning": "El mercado presenta una debilidad sistémica con una correlación bajista predominante. Ningún activo cumple con los criterios de alta convicción (Score >= 65) ni con la profundidad de libro necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es mantenerse en efectivo (Cash-Neutral).",
   "top_candidates": [
+    {
+      "symbol": "ZAMAUSDT",
+      "score": 60
+    },
     {
       "symbol": "TLMUSDT",
       "score": 60
@@ -19,11 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "VANRYUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "VICUSDT",
+      "symbol": "ADAUSDT",
       "score": 50
     }
   ]
