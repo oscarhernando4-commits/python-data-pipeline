@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 19:10:22",
+  "timestamp": "2026-08-05 19:12:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en un estado de indecisión técnica y alta incertidumbre, por lo que la estrategia institucional es preservar el capital y esperar una estructura de mercado más clara.",
   "top_candidates": [
     {
-      "symbol": "ALGOUSDT",
-      "score": 85
+      "symbol": "BTCUSDT",
+      "score": 75
     },
     {
-      "symbol": "BTCUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
@@ -19,7 +19,7 @@
       "score": 75
     },
     {
-      "symbol": "ERAUSDT",
+      "symbol": "JUPUSDT",
       "score": 75
     },
     {
