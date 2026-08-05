@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 16:32:24",
+  "timestamp": "2026-08-05 16:34:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de dominancia clara en el libro de órdenes y la inestabilidad del mercado global no cumplen con los criterios de seguridad A+ exigidos por el CRO, por lo que se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital en un entorno de mercado con sentimiento de miedo (Fear 27).",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
-      "score": 75
+      "symbol": "GNOUSDT",
+      "score": 85
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOGEUSDT",
       "score": 75
     }
   ]
