@@ -1,22 +1,14 @@
 {
-  "timestamp": "2026-08-05 00:38:20",
+  "timestamp": "2026-08-05 00:40:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los 10 candidatos, ninguno alcanza el umbral de Score técnico de 65 ni presenta una profundidad de mercado (Bids > 55%) que mitigue el riesgo de slippage. El mercado se encuentra en una fase de distribución silenciosa, por lo que el comité ha decidido unánimemente mantener la posición en efectivo (HOLD) para proteger el capital institucional.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta asimetría de riesgo. Ninguno de los candidatos analizados alcanza el umbral de calidad A+ requerido por el comité, por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar la exposición a 'trampas de valor' y volatilidad no confirmada.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "MUBUSDT",
-      "score": 60
+      "symbol": "MIRAUSDT",
+      "score": 70
     },
     {
       "symbol": "DEXEUSDT",
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "SKYUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "EWYBUSDT",
       "score": 60
     }
   ]
