@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 05:34:20",
+  "timestamp": "2026-08-05 05:36:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con volumen institucional y soporte de libro de órdenes > 55%). Se prioriza la preservación del capital ante la falta de una tendencia clara y el entorno de miedo moderado.",
+  "reasoning": "El mercado se encuentra en una fase de compresión con alta incertidumbre y falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes), por lo que la estrategia óptima es mantener la liquidez y evitar el riesgo de 'falling knives' en un entorno de baja volatilidad.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "EULUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "HBARUSDT",
+      "score": 75
+    },
+    {
       "symbol": "BFUSDUSDT",
       "score": 75
     },
     {
-      "symbol": "APTUSDT",
+      "symbol": "CRVUSDT",
       "score": 75
     }
   ]
