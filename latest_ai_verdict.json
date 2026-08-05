@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 14:18:21",
+  "timestamp": "2026-08-05 14:20:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de baja convicción con alta volatilidad. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el comité (Bids >= 55% y convicción A+), por lo que la estrategia óptima es mantener la liquidez y evitar la exposición innecesaria a posibles 'flash crashes'.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes y el entorno macro de 'miedo' fragmentado representan un riesgo inaceptable para la preservación del capital, optando por una postura de espera (HOLD) para evitar las pérdidas observadas en las simulaciones históricas.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BICOUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "ZECUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "GRAMUSDT",
       "score": 75
     }
   ]
