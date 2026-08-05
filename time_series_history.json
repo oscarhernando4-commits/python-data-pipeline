@@ -1,25 +1,38 @@
 {
-  "EWYBUSDT": [
+  "LUNCUSDT": [
     {
-      "timestamp": "2026-08-05 18:56:12",
-      "price": 170.38,
-      "score": 45,
-      "rsi": 53.54,
+      "timestamp": "2026-08-05 18:58:12",
+      "price": 5.015e-05,
+      "score": 60,
+      "rsi": 52.05,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.19,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
-  ]
-}  "STXUSDT": [
+  ],
+  "SAHARAUSDT": [
     {
-      "timestamp": "2026-08-05 18:56:12",
-      "price": 0.1341,
-      "score": 50,
-      "rsi": 53.46,
+      "timestamp": "2026-08-05 18:58:12",
+      "price": 0.00836,
+      "score": 15,
+      "rsi": 47.27,
       "macd": "Neutral",
-      "volume_surge": 0.03,
+      "volume_surge": 0.13,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-05 18:58:12",
+      "price": 1.405,
+      "score": 50,
+      "rsi": 58.3,
+      "macd": "Neutral",
+      "volume_surge": 0.35,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -27,12 +40,25 @@
   ],
   "HYPERUSDT": [
     {
-      "timestamp": "2026-08-05 18:56:12",
-      "price": 0.0601,
+      "timestamp": "2026-08-05 18:58:12",
+      "price": 0.0602,
       "score": 50,
-      "rsi": 63.81,
+      "rsi": 64.62,
       "macd": "Neutral",
-      "volume_surge": 0.34,
+      "volume_surge": 0.35,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DCRUSDT": [
+    {
+      "timestamp": "2026-08-05 18:58:12",
+      "price": 12.88,
+      "score": 35,
+      "rsi": 16.08,
+      "macd": "Neutral",
+      "volume_surge": 6.81,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
