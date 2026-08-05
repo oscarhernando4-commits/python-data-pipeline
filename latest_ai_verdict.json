@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 11:34:20",
+  "timestamp": "2026-08-05 11:36:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una ausencia total de activos que cumplan con el umbral de seguridad A+ (Score >= 65). La falta de profundidad en el libro de órdenes y la fragilidad macroeconómica dictan una postura defensiva para evitar pérdidas innecesarias.",
+  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de Score A+ (>= 65) ni con la dominancia de Bids necesaria en el libro de órdenes. El mercado se encuentra en una fase de capitulación sistémica, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "UNIUSDT",
-      "score": 60
-    },
-    {
       "symbol": "ERAUSDT",
-      "score": 60
+      "score": 70
     },
     {
-      "symbol": "DASHUSDT",
+      "symbol": "UNIUSDT",
       "score": 60
     },
     {
@@ -25,6 +21,10 @@
     {
       "symbol": "SUNUSDT",
       "score": 60
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "score": 50
     }
   ]
 }
