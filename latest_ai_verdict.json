@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 06:40:21",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "A pesar de que SEI y GNO presentan scores técnicos elevados, la ausencia de una dominancia clara en el libro de órdenes (Bids < 55%) y el entorno de miedo generalizado (Fear & Greed 27) impiden la ejecución. Se prioriza la preservación del capital sobre la especulación en un mercado de divergencia selectiva.",
+  "timestamp": "2026-08-05 06:42:22",
+  "selected_symbol": "SEIUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "Tras deliberar, el comité ha decidido ejecutar una posición larga en SEIUSDT debido a su alta puntuación técnica (85/100), su pertenencia al sector dominante de infraestructura y su volumen de transacciones superior a 2.0x, lo que confirma el interés institucional a pesar del miedo generalizado en el mercado.",
   "top_candidates": [
     {
       "symbol": "SEIUSDT",
@@ -15,15 +15,15 @@
       "score": 85
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
       "symbol": "TAOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
       "score": 75
     }
   ]
