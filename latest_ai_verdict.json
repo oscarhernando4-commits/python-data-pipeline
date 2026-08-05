@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 21:58:16",
+  "timestamp": "2026-08-05 22:00:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estrés sistémico con una clara falta de convicción institucional. Ninguno de los activos analizados cumple con los criterios de calidad, profundidad de mercado o score técnico exigidos por el comité para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en activos de baja calidad.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad estructural y alta incertidumbre regulatoria; ningún activo cumple con los criterios de convicción A+ (Score >= 65), por lo que la preservación de capital es la única estrategia válida.",
   "top_candidates": [
     {
       "symbol": "ZAMAUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ADAUSDT",
       "score": 60
     },
     {
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
+      "symbol": "SUNUSDT",
       "score": 60
     },
     {
-      "symbol": "SUNUSDT",
-      "score": 60
+      "symbol": "EULUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 50
     }
   ]
 }
