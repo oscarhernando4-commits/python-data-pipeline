@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 17:24:23",
+  "timestamp": "2026-08-05 17:26:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La alta volatilidad y la falta de soporte claro en el libro de órdenes, sumado al historial de pérdidas en condiciones similares, dictan una postura de preservación de capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad de Bids > 55% ni con una convicción A+ suficiente para justificar la entrada en un entorno de mercado con sesgo neutral y alta volatilidad.",
   "top_candidates": [
+    {
+      "symbol": "TRXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZECUSDT",
+      "score": 75
+    },
     {
       "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "JTOUSDT",
-      "score": 75
-    },
-    {
       "symbol": "NILUSDT",
       "score": 75
-    },
-    {
-      "symbol": "CAKEUSDT",
-      "score": 70
     }
   ]
 }
