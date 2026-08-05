@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 08:14:20",
+  "timestamp": "2026-08-05 08:16:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de confianza A+ (Score >= 65 y Bids > 55%) bajo las condiciones actuales de mercado, por lo que se prioriza la preservación de capital.",
+  "reasoning": "Tras analizar los 10 candidatos, ninguno alcanza el umbral de Score Técnico de 65 requerido por el Comité. La estructura de mercado es bajista y carece de la fuerza necesaria para una entrada de alta probabilidad, por lo que se prioriza la protección del capital sobre la operativa especulativa.",
   "top_candidates": [
     {
-      "symbol": "NIGHTUSDT",
-      "score": 95
-    },
-    {
-      "symbol": "DOTUSDT",
-      "score": 85
+      "symbol": "NEXOUSDT",
+      "score": 60
     },
     {
       "symbol": "CRVUSDT",
-      "score": 85
+      "score": 60
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 75
+      "symbol": "SUIUSDT",
+      "score": 50
     },
     {
-      "symbol": "ADAUSDT",
-      "score": 75
+      "symbol": "ENAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "VICUSDT",
+      "score": 50
     }
   ]
 }
