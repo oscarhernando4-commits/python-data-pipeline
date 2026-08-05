@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 03:18:22",
+  "timestamp": "2026-08-05 03:20:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con un sentimiento de miedo extremo. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado carece de convicción alcista y los activos analizados no superan el umbral de riesgo A+ (Score >= 65). La estrategia institucional es proteger el capital ante la debilidad sistémica y la falta de soporte en el libro de órdenes.",
   "top_candidates": [
     {
-      "symbol": "BICOUSDT",
-      "score": 75
+      "symbol": "MUBUSDT",
+      "score": 60
     },
     {
-      "symbol": "MUBUSDT",
-      "score": 75
+      "symbol": "BICOUSDT",
+      "score": 60
     },
     {
       "symbol": "EWYBUSDT",
-      "score": 75
+      "score": 60
     },
     {
       "symbol": "TSLABUSDT",
-      "score": 75
+      "score": 60
     },
     {
       "symbol": "INTCBUSDT",
-      "score": 75
+      "score": 60
     }
   ]
 }
