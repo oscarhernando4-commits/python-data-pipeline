@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 02:26:26",
+  "updated_at": "2026-08-05 02:28:22",
   "total_balance_usd": 20.1,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 45,
     "approved": false,
-    "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (Score >= 65 y Bids >= 55%) necesarios para ejecutar una operación de compra, priorizando la preservación del capital sobre la especulación."
+    "reasoning": "El mercado se encuentra en una fase de alta volatilidad con señales mixtas y falta de profundidad en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%), por lo que la estrategia institucional es preservar capital y esperar una estructura de mercado más definida."
   }
 }
