@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 06:42:22",
-  "selected_symbol": "SEIUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "Tras deliberar, el comité ha decidido ejecutar una posición larga en SEIUSDT debido a su alta puntuación técnica (85/100), su pertenencia al sector dominante de infraestructura y su volumen de transacciones superior a 2.0x, lo que confirma el interés institucional a pesar del miedo generalizado en el mercado.",
+  "timestamp": "2026-08-05 06:44:19",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con la totalidad de los requisitos A+ (Score >= 65, Bids > 55%, y tendencia confirmada). Ante la alta volatilidad y el historial de pérdidas en entornos neutrales, la decisión institucional es mantener la liquidez en USDT para evitar riesgos innecesarios.",
   "top_candidates": [
     {
       "symbol": "SEIUSDT",
@@ -15,15 +15,15 @@
       "score": 85
     },
     {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
       "symbol": "TAOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "POLUSDT",
       "score": 75
     }
   ]
