@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-05 07:06:19",
+  "timestamp": "2026-08-05 07:08:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una aversión al riesgo sistémica y una falta de convicción técnica en los activos analizados. Ningún candidato alcanza el umbral de Score A+ (65) requerido por el comité, por lo que la estrategia de protección de capital dicta una posición de espera (HOLD) hasta que las condiciones macro y técnicas mejoren.",
+  "reasoning": "El mercado actual carece de la convicción técnica necesaria para una entrada de alta probabilidad. Todos los candidatos presentan scores inferiores al umbral de 65, y el entorno macro de miedo extremo sugiere que la preservación del capital es la prioridad absoluta hasta que se observe una acumulación institucional clara.",
   "top_candidates": [
     {
-      "symbol": "GNOUSDT",
-      "score": 90
+      "symbol": "ADAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "score": 60
     },
     {
       "symbol": "DOTUSDT",
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "POLUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "APTUSDT",
       "score": 60
     },
     {
