@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 23:28:20",
+  "timestamp": "2026-08-05 23:30:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual carece de liderazgo técnico y profundidad de liquidez. Ninguno de los candidatos analizados alcanza el umbral de Score 65 requerido por el Comité para una ejecución de compra, por lo que la estrategia óptima es la preservación total del capital en espera de una estructura de mercado más clara.",
+  "reasoning": "El mercado se encuentra en una fase de alta fragilidad con una mayoría de activos por debajo del umbral de calidad exigido por el comité. Ningún candidato alcanza el score técnico de 65, por lo que se prioriza la preservación de capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "TAOUSDT",
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ACXUSDT",
+      "symbol": "AMDBUSDT",
       "score": 60
     },
     {
@@ -23,8 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "PYTHUSDT",
-      "score": 60
+      "symbol": "FETUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 50
     }
   ]
 }
