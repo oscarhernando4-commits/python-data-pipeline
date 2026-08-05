@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-05 17:06:25",
+  "timestamp": "2026-08-05 17:08:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen institucional y soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de alta incertidumbre y baja liquidez, por lo que la política de 'cero tolerancia' al riesgo dictada por el CRO obliga a mantener la posición en efectivo.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de volumen institucional necesario (Volume Surge > 1.2x) ni con una dominancia de Bids superior al 55% requerida para una entrada de alta convicción en un mercado con sesgo neutral.",
   "top_candidates": [
+    {
+      "symbol": "ZECUSDT",
+      "score": 75
+    },
     {
       "symbol": "BCHUSDT",
       "score": 75
     },
     {
       "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ZECUSDT",
       "score": 75
     },
     {
