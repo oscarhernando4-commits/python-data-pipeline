@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 01:34:22",
+  "timestamp": "2026-08-05 01:36:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una fragmentación de liquidez y una debilidad técnica generalizada. Ningún candidato cumple con el requisito estricto de Score >= 65 y confirmación de volumen institucional, por lo que la estrategia óptima es preservar el capital en espera de mejores condiciones.",
+  "reasoning": "El mercado presenta una vulnerabilidad extrema y falta de convicción institucional. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
   "top_candidates": [
     {
-      "symbol": "ZROUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "AMDBUSDT",
-      "score": 70
+      "symbol": "LTCUSDT",
+      "score": 75
     },
     {
-      "symbol": "ALLOUSDT",
-      "score": 65
+      "symbol": "PAXGUSDT",
+      "score": 75
     },
     {
-      "symbol": "CAKEUSDT",
-      "score": 65
+      "symbol": "SKYUSDT",
+      "score": 75
     },
     {
-      "symbol": "REUSDT",
-      "score": 65
+      "symbol": "ZROUSDT",
+      "score": 75
     }
   ]
 }
