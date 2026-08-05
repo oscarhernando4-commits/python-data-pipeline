@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 14:26:20",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "A pesar de que algunos activos presentan scores técnicos de 75, la ausencia de soporte en el libro de órdenes, la falta de historial de datos y el entorno de mercado de 'limbo institucional' impiden la ejecución de cualquier orden de compra bajo los estrictos criterios de gestión de riesgo del comité.",
+  "timestamp": "2026-08-05 14:28:21",
+  "selected_symbol": "TAOUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "Tras deliberar, el comité ha decidido priorizar TAOUSDT debido a su alto score técnico (85/100) y su pertenencia al sector de AI & Big Data, el cual es el principal foco de rotación de capital institucional. Se ignora el resto de candidatos por no cumplir con la convicción A+ necesaria en este entorno de mercado fragmentado.",
   "top_candidates": [
     {
+      "symbol": "BTCUSDT",
+      "score": 85
+    },
+    {
       "symbol": "TAOUSDT",
-      "score": 75
+      "score": 85
     },
     {
       "symbol": "ETCUSDT",
       "score": 75
     },
     {
-      "symbol": "TSLABUSDT",
+      "symbol": "JUPUSDT",
       "score": 75
     },
     {
-      "symbol": "VETUSDT",
+      "symbol": "AEROUSDT",
       "score": 75
-    },
-    {
-      "symbol": "BTCUSDT",
-      "score": 70
     }
   ]
 }
