@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 23:18:18",
+  "timestamp": "2026-08-05 23:20:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una correlación bajista sistémica. Ningún activo cumple con los criterios de fuerza técnica (Score >= 65) ni de soporte en el libro de órdenes. Se mantiene la posición en efectivo para evitar el riesgo de 'cazar el suelo' en un entorno de pánico.",
+  "reasoning": "El mercado carece de activos con un Score Técnico superior a 65 y no hay confirmación de muros de soporte significativos en el libro de órdenes, por lo que la estrategia más rentable es mantener la liquidez en USDT para evitar pérdidas en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "ACXUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "PENGUUSDT",
-      "score": 60
-    },
-    {
       "symbol": "FETUSDT",
       "score": 55
     },
     {
       "symbol": "TAOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "POLUSDT",
       "score": 50
     }
   ]
