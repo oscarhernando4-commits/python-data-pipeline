@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 07:58:21",
+  "timestamp": "2026-08-05 08:00:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual no cumple con los criterios de calidad A+ exigidos por el comité. La falta de fuerza técnica, sumada a la incertidumbre macro y la ausencia de muros de soporte sólidos en el libro de órdenes, obliga a mantener la liquidez en USDT para evitar el riesgo de 'falling knives' y pérdidas innecesarias.",
+  "reasoning": "El mercado carece de la convicción institucional necesaria y de la estructura técnica requerida por el comité. Todos los candidatos presentan scores inferiores a 65 y el entorno macro es de alta incertidumbre, por lo que la estrategia de preservación de capital es la única opción viable.",
   "top_candidates": [
     {
-      "symbol": "DOTUSDT",
+      "symbol": "MIRAUSDT",
       "score": 60
     },
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "DOTUSDT",
       "score": 60
     },
     {
@@ -19,12 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "SEIUSDT",
+      "symbol": "APTUSDT",
       "score": 60
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 50
+      "symbol": "CRVUSDT",
+      "score": 60
     }
   ]
 }
