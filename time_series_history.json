@@ -1,12 +1,90 @@
 {
-  "DRAMBUSDT": [
+  "TSLABUSDT": [
     {
-      "timestamp": "2026-08-05 20:16:13",
-      "price": 53.61,
+      "timestamp": "2026-08-05 20:18:12",
+      "price": 321.43,
       "score": 15,
-      "rsi": 37.94,
+      "rsi": 39.33,
       "macd": "Neutral",
-      "volume_surge": 0.03,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SAHARAUSDT": [
+    {
+      "timestamp": "2026-08-05 20:18:12",
+      "price": 0.00841,
+      "score": 45,
+      "rsi": 51.72,
+      "macd": "Neutral",
+      "volume_surge": 0.08,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-05 20:18:12",
+      "price": 2.79e-06,
+      "score": 15,
+      "rsi": 47.82,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "NBISBUSDT": [
+    {
+      "timestamp": "2026-08-05 20:18:12",
+      "price": 217.83,
+      "score": 15,
+      "rsi": 36.68,
+      "macd": "Neutral",
+      "volume_surge": 0.11,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-05 20:18:12",
+      "price": 0.1337,
+      "score": 25,
+      "rsi": 48.83,
+      "macd": "Neutral",
+      "volume_surge": 2.7,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "HYPERUSDT": [
+    {
+      "timestamp": "2026-08-05 20:18:12",
+      "price": 0.0603,
+      "score": 35,
+      "rsi": 62.07,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-05 20:18:12",
+      "price": 1.43,
+      "score": 50,
+      "rsi": 65.22,
+      "macd": "Neutral",
+      "volume_surge": 0.4,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
