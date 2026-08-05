@@ -1,12 +1,38 @@
 {
-  "SAHARAUSDT": [
+  "TSLABUSDT": [
     {
-      "timestamp": "2026-08-05 22:16:09",
-      "price": 0.00841,
-      "score": 0,
-      "rsi": 48.13,
+      "timestamp": "2026-08-05 22:18:07",
+      "price": 322.62,
+      "score": 50,
+      "rsi": 50.49,
       "macd": "Neutral",
-      "volume_surge": 0.02,
+      "volume_surge": 0.08,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "NBISBUSDT": [
+    {
+      "timestamp": "2026-08-05 22:18:07",
+      "price": 215.47,
+      "score": 0,
+      "rsi": 34.55,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-05 22:18:07",
+      "price": 1.401,
+      "score": 0,
+      "rsi": 47.7,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

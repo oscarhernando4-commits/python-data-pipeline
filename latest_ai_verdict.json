@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 22:16:18",
+  "timestamp": "2026-08-05 22:18:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento sistémico con una ausencia total de activos que cumplan con el umbral de calidad A+ (Score >= 65). La estrategia institucional prioriza la preservación de capital sobre la especulación en activos de baja profundidad, por lo que se mantiene la posición en liquidez (USDT).",
+  "reasoning": "El mercado se encuentra en un estado de parálisis y alta fragilidad sistémica. Ninguno de los candidatos cumple con los requisitos mínimos de Score Técnico (>= 65) ni presenta una estructura de libro de órdenes que garantice una probabilidad de éxito superior al 70%. Se prioriza la preservación del capital (Cash is King) ante la ausencia de una configuración técnica de alta convicción.",
   "top_candidates": [
     {
-      "symbol": "EULUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "VICUSDT",
+      "symbol": "ADAUSDT",
       "score": 50
     },
     {
@@ -20,6 +16,10 @@
     },
     {
       "symbol": "KITEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "VICUSDT",
       "score": 50
     },
     {
