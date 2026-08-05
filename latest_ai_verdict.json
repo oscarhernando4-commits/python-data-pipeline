@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 21:30:29",
+  "timestamp": "2026-08-05 21:32:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de parálisis y alta incertidumbre regulatoria. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité. Se mantiene la posición en efectivo para evitar el riesgo de 'cuchillos cayendo' y proteger el capital institucional.",
+  "reasoning": "El mercado se encuentra en una fase de distribución pasiva con una capitulación técnica generalizada. Ningún activo cumple con los criterios de alta convicción (Score >= 65) exigidos por el comité, por lo que la estrategia prioritaria es la preservación total del capital.",
   "top_candidates": [
     {
       "symbol": "EULUSDT",
@@ -15,15 +15,15 @@
       "score": 50
     },
     {
+      "symbol": "DEXEUSDT",
+      "score": 50
+    },
+    {
       "symbol": "VANRYUSDT",
       "score": 50
     },
     {
       "symbol": "KITEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ACEUSDT",
       "score": 50
     }
   ]
