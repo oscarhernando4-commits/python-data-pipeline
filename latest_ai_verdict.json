@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-05 19:36:22",
+  "timestamp": "2026-08-05 19:38:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral estricto de Score Técnico >= 65 combinado con una confirmación de profundidad de mercado (Bids > 55%). El entorno actual de 'purga selectiva' y la falta de datos de orderbook imponen una postura de preservación de capital (HOLD) para evitar trampas de liquidez.",
+  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. La falta de profundidad en el libro de órdenes y la ausencia de un volumen institucional significativo en los candidatos con score técnico superior a 65 obligan a mantener una postura defensiva para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "XRPUSDT",
       "score": 75
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "ERAUSDT",
       "score": 65
     },
     {
