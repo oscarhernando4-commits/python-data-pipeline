@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 13:02:22",
+  "timestamp": "2026-08-05 13:04:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia técnica y una falta de profundidad en el libro de órdenes que no cumple con los estándares de seguridad del comité. Se prioriza la preservación del capital ante la ausencia de una ventaja estadística clara.",
+  "reasoning": "El mercado se encuentra en una fase de parálisis analítica con una tendencia neutral predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la protección del capital, por lo que la decisión institucional es mantenerse al margen.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AAVEUSDT",
-      "score": 75
-    },
-    {
       "symbol": "BIOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ERAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUNUSDT",
       "score": 75
     }
   ]
