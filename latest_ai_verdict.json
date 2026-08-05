@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 22:38:25",
+  "timestamp": "2026-08-05 22:40:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución y alta incertidumbre regulatoria. Ninguno de los candidatos cumple con el umbral de calidad A+ (Score >= 65) ni con la profundidad de mercado necesaria para una ejecución segura. Se prioriza la preservación del capital (Cash-is-King) ante la falta de convicción institucional.",
+  "reasoning": "El mercado presenta una fragilidad sistémica extrema con una descorrelación negativa masiva. Ningún activo cumple con el umbral de calidad A+ (Score >= 65) exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una estabilización regulatoria y técnica.",
   "top_candidates": [
     {
-      "symbol": "ACXUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "VANRYUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "ACXUSDT",
+      "score": 60
+    },
+    {
       "symbol": "SAHARAUSDT",
       "score": 60
     },
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "ADAUSDT",
       "score": 50
     }
   ]
