@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 15:34:23",
+  "updated_at": "2026-08-05 15:36:24",
   "total_balance_usd": 20.09,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha decidido mantener la liquidez en USDT. A pesar de que varios activos presentan scores técnicos de 75, la falta de dominancia clara en el libro de órdenes, la tendencia neutral en 4H y el entorno macro de miedo sugieren que el riesgo de una trampa de valor es demasiado alto para una ejecución A+."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y Score >= 65 con confirmación de volumen). Ante la incertidumbre del mercado y el alto riesgo de 'falling knives', la estrategia óptima es mantener la liquidez en USDT para preservar el capital."
   }
 }

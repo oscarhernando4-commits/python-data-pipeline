@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-05 15:34:20",
+  "timestamp": "2026-08-05 15:36:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la liquidez en USDT. A pesar de que varios activos presentan scores técnicos de 75, la falta de dominancia clara en el libro de órdenes, la tendencia neutral en 4H y el entorno macro de miedo sugieren que el riesgo de una trampa de valor es demasiado alto para una ejecución A+.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y Score >= 65 con confirmación de volumen). Ante la incertidumbre del mercado y el alto riesgo de 'falling knives', la estrategia óptima es mantener la liquidez en USDT para preservar el capital.",
   "top_candidates": [
-    {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
     {
       "symbol": "ETHUSDT",
       "score": 75
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "AEROUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "VIRTUALUSDT",
+      "symbol": "ETHFIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AEROUSDT",
       "score": 75
     }
   ]
