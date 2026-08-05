@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 12:42:21",
+  "timestamp": "2026-08-05 12:44:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha deliberado y, ante la ausencia de candidatos que cumplan estrictamente con el umbral de convicción A+ (Score >= 65 con Bids > 55%), se ha decidido mantener la posición en efectivo para evitar la exposición a la alta volatilidad y el riesgo de 'falling knives' observado en los datos históricos recientes.",
+  "reasoning": "El mercado se encuentra en un régimen de alta incertidumbre con un sentimiento de miedo persistente y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que la estrategia óptima es preservar el capital en liquidez (USDT) y evitar la exposición a activos que actúan como trampas de valor.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     }
   ]
