@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-05 19:14:25",
+  "timestamp": "2026-08-05 19:16:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y aversión al riesgo. Ninguno de los candidatos presenta una confluencia de soporte institucional (Orderbook > 55%) y fortaleza técnica que cumpla con los estándares de seguridad del comité. Se prioriza la preservación del capital sobre la especulación en un entorno de baja probabilidad de éxito.",
+  "reasoning": "El mercado presenta una estructura de alta incertidumbre con una falta de convicción institucional en el libro de órdenes. Ninguno de los candidatos cumple con el requisito de soporte de ballenas (Bids >= 55%) ni con una tendencia 4H consolidada, lo que eleva el riesgo de pérdidas. Se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
-    {
-      "symbol": "SUNUSDT",
-      "score": 85
-    },
     {
       "symbol": "BTCUSDT",
       "score": 75
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "HBARUSDT",
       "score": 75
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "ERAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "KAITOUSDT",
       "score": 75
     }
   ]
