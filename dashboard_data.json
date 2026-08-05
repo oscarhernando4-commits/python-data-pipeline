@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 01:20:22",
+  "updated_at": "2026-08-05 01:22:19",
   "total_balance_usd": 20.07,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65) exigido por el Comité. El entorno de mercado es de alta fragilidad y el riesgo de 'falling knives' es elevado, por lo que la estrategia óptima es mantener la liquidez en USDT."
+    "reasoning": "Ninguno de los candidatos analizados alcanza el score técnico mínimo de 65 ni demuestra una dominancia de compra en el libro de órdenes, lo que invalida cualquier operación bajo las reglas de gestión de riesgo del comité."
   }
 }
