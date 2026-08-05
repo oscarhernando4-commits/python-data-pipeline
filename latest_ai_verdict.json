@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 16:08:20",
+  "timestamp": "2026-08-05 16:10:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que varios activos tienen un score técnico de 75, el mercado carece de una dominancia clara en el libro de órdenes y el entorno macro es de alta incertidumbre. Siguiendo la Regla de Oro #1 y #5, el comité decide mantener la liquidez en espera de una señal de convicción A+.",
+  "reasoning": "El mercado se encuentra en una fase de consolidación con sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia institucional es preservar el capital y esperar una configuración técnica más robusta.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -19,7 +19,7 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     },
     {
