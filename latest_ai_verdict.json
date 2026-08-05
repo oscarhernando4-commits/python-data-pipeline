@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-05 06:54:25",
+  "timestamp": "2026-08-05 06:56:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de apatía sistémica con scores técnicos insuficientes (máximo 60/100). Siguiendo la Regla de Oro #1, al no existir candidatos con Score >= 65, el comité ha decidido mantener la liquidez total para evitar el riesgo de 'falling knives' en un entorno de alta fragilidad.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica generalizada con scores insuficientes. Ningún activo cumple con el umbral de seguridad A+ requerido por el comité, por lo que la orden es proteger el capital y esperar un catalizador de mayor calidad.",
   "top_candidates": [
     {
-      "symbol": "EULUSDT",
+      "symbol": "GRAMUSDT",
       "score": 60
     },
     {
       "symbol": "SUIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "POLUSDT",
       "score": 60
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "DOTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "POLUSDT",
       "score": 60
     }
   ]
