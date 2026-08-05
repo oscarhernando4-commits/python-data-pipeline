@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 20:40:23",
+  "timestamp": "2026-08-05 20:42:32",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%). La falta de profundidad en el libro de órdenes y la inestabilidad del mercado actual dictan una postura de espera para preservar el capital.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
-      "symbol": "AVAXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUIUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
-      "symbol": "ENAUSDT",
+      "symbol": "AVAXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUIUSDT",
       "score": 75
     }
   ]
