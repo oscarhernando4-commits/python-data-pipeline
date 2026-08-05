@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 13:58:18",
+  "timestamp": "2026-08-05 14:00:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia bajista profunda y una falta de soporte real en el libro de órdenes. Ningún candidato cumple con la regla de oro de convicción A+ (Score >= 65 con Bids > 55%), por lo que la estrategia institucional es preservar capital y evitar la exposición a activos de alta volatilidad en un entorno de capitulación.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75/100 en algunos activos, la fragilidad macroeconómica y la falta de dominancia clara en el libro de órdenes (Bids 50%) no cumplen con los criterios de seguridad A+ exigidos por el departamento de riesgo. Se prioriza la preservación del capital ante la alta probabilidad de volatilidad bajista.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
-      "score": 85
+      "score": 75
     },
     {
       "symbol": "ETHUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ASTERUSDT",
-      "score": 85
+      "score": 75
     },
     {
       "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "INJUSDT",
       "score": 75
     }
   ]
