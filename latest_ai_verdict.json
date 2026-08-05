@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 19:06:21",
+  "timestamp": "2026-08-05 19:08:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (USDT) debido a la falta de confirmación en el libro de órdenes, la debilidad del sentimiento macro y la alta tasa de fallos en las simulaciones históricas para las condiciones actuales del mercado.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta convicción exigidos por nuestra política de gestión de riesgo, optando por preservar el capital hasta que surja una estructura técnica y de liquidez superior.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
-      "score": 75
+      "symbol": "ALGOUSDT",
+      "score": 85
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "ERAUSDT",
       "score": 75
     },
     {
-      "symbol": "ERAUSDT",
+      "symbol": "JUPUSDT",
       "score": 75
     }
   ]
