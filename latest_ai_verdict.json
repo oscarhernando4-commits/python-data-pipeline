@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 05:28:22",
+  "timestamp": "2026-08-05 05:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento con alta incertidumbre regulatoria y falta de soporte institucional claro en el libro de órdenes. Dado que no existen candidatos con una convicción A+ (Score >= 65 y Bids > 55%) y el historial reciente muestra una alta tasa de pérdidas en condiciones de tendencia neutral, el comité ha decidido mantener la liquidez en efectivo para evitar el riesgo de 'falling knives'.",
+  "reasoning": "El mercado se encuentra en una fase de re-acumulación volátil con falta de volumen institucional y una estructura de divergencia fragmentada. Ningún activo cumple con la convicción A+ requerida por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos de baja probabilidad.",
   "top_candidates": [
     {
-      "symbol": "SOLUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "CRVUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SEIUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "LUNCUSDT",
-      "score": 85
-    },
-    {
       "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ICPUSDT",
       "score": 75
     }
   ]
