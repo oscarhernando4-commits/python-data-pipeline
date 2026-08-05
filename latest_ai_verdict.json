@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 17:20:21",
+  "timestamp": "2026-08-05 17:22:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital en un entorno de mercado fragmentado y con alta volatilidad.",
+  "reasoning": "Ninguno de los candidatos presenta una convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y tendencia alcista confirmada). Ante la alta volatilidad y el sentimiento de miedo, la estrategia institucional es preservar el capital y evitar la exposición en mercados laterales.",
   "top_candidates": [
     {
-      "symbol": "ZECUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {
@@ -23,8 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "JTOUSDT",
-      "score": 75
+      "symbol": "CAKEUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "HFTUSDT",
+      "score": 65
     }
   ]
 }

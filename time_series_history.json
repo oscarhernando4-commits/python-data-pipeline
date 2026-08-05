@@ -1,12 +1,51 @@
 {
-  "DCRUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-05 17:20:12",
-      "price": 13.35,
+      "timestamp": "2026-08-05 17:22:14",
+      "price": 0.1335,
       "score": 45,
-      "rsi": 45.55,
+      "rsi": 46.97,
       "macd": "Neutral",
-      "volume_surge": 0.29,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-05 17:22:14",
+      "price": 2.8e-06,
+      "score": 65,
+      "rsi": 50.04,
+      "macd": "Neutral",
+      "volume_surge": 0.05,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-05 17:22:14",
+      "price": 1.399,
+      "score": 50,
+      "rsi": 59.1,
+      "macd": "Neutral",
+      "volume_surge": 0.06,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "NBISBUSDT": [
+    {
+      "timestamp": "2026-08-05 17:22:14",
+      "price": 224.97,
+      "score": 60,
+      "rsi": 52.78,
+      "macd": "Neutral",
+      "volume_surge": 0.98,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
