@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 07:42:31",
+  "timestamp": "2026-08-05 07:44:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (65) ni con la confirmación de liquidez necesaria en el Orderbook. Se prioriza la preservación del capital ante la incertidumbre del mercado actual.",
+  "reasoning": "El mercado actual no cumple con los requisitos de alta convicción (Score >= 65) establecidos por el comité. La alta correlación bajista y la falta de profundidad en el libro de órdenes sugieren un entorno de alta peligrosidad, por lo que la estrategia óptima es preservar el capital en espera de una capitulación clara o una señal de acumulación institucional confirmada.",
   "top_candidates": [
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "ADAUSDT",
       "score": 60
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "DOTUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "POLUSDT",
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "ZAMAUSDT",
       "score": 60
     }
   ]
