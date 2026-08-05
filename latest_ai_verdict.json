@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 09:08:20",
+  "timestamp": "2026-08-05 09:10:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con scores técnicos insuficientes (máximo 60/100) y falta de soporte en el libro de órdenes. Siguiendo la Regla de Oro #1, al no existir candidatos con Score >= 65, la decisión es mantener la liquidez en USDT para evitar el riesgo de 'falling knives'.",
+  "reasoning": "El mercado se encuentra en una fase de alta aversión al riesgo con una estructura técnica débil. Ningún activo cumple con el umbral de convicción A+ (Score >= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "HOMEUSDT",
-      "score": 60
-    },
     {
       "symbol": "SOLUSDT",
       "score": 60
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "HOMEUSDT",
       "score": 60
     },
     {
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "APTUSDT",
+      "symbol": "NEXOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "DCRUSDT",
       "score": 60
     }
   ]
