@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 12:54:24",
+  "timestamp": "2026-08-05 12:56:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional y alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
+  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la falta de dominancia clara en el libro de órdenes (50% Bids) y el entorno de mercado en 'Fear' (27) no cumplen con los criterios de convicción A+ exigidos por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
@@ -15,16 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "GNOUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 70
+      "symbol": "BIOUSDT",
+      "score": 75
     },
     {
-      "symbol": "MIRAUSDT",
-      "score": 70
+      "symbol": "GNOUSDT",
+      "score": 75
     }
   ]
 }

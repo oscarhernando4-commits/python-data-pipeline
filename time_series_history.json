@@ -1,12 +1,51 @@
 {
   "VETUSDT": [
     {
-      "timestamp": "2026-08-05 12:54:12",
-      "price": 0.004648,
-      "score": 50,
-      "rsi": 49.33,
+      "timestamp": "2026-08-05 12:56:09",
+      "price": 0.004645,
+      "score": 40,
+      "rsi": 47.67,
       "macd": "Neutral",
-      "volume_surge": 1.03,
+      "volume_surge": 1.62,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BABYUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:09",
+      "price": 0.01079,
+      "score": 55,
+      "rsi": 55.68,
+      "macd": "Neutral",
+      "volume_surge": 2.28,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ALLOUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:09",
+      "price": 0.2585,
+      "score": 15,
+      "rsi": 42.78,
+      "macd": "Neutral",
+      "volume_surge": 0.26,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "VIRTUALUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:09",
+      "price": 0.563,
+      "score": 60,
+      "rsi": 53.27,
+      "macd": "Neutral",
+      "volume_surge": 0.65,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,7 +53,7 @@
   ],
   "ZROUSDT": [
     {
-      "timestamp": "2026-08-05 12:54:12",
+      "timestamp": "2026-08-05 12:56:09",
       "price": 0.78,
       "score": 15,
       "rsi": 45.64,
@@ -25,27 +64,131 @@
       "fear_greed": 50
     }
   ],
-  "SEIUSDT": [
+  "CRVUSDT": [
     {
-      "timestamp": "2026-08-05 12:54:13",
-      "price": 0.04157,
-      "score": 50,
-      "rsi": 51.03,
+      "timestamp": "2026-08-05 12:56:09",
+      "price": 0.2047,
+      "score": 15,
+      "rsi": 42.49,
       "macd": "Neutral",
-      "volume_surge": 0.77,
+      "volume_surge": 1.22,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "SOXSBUSDT": [
+  "NILUSDT": [
     {
-      "timestamp": "2026-08-05 12:54:14",
-      "price": 44.46,
-      "score": 35,
-      "rsi": 59.69,
+      "timestamp": "2026-08-05 12:56:09",
+      "price": 0.03331,
+      "score": 45,
+      "rsi": 43.65,
       "macd": "Neutral",
-      "volume_surge": 0.08,
+      "volume_surge": 0.21,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "INTCBUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:09",
+      "price": 98.44,
+      "score": 15,
+      "rsi": 43.37,
+      "macd": "Neutral",
+      "volume_surge": 0.3,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PYTHUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:09",
+      "price": 0.03909,
+      "score": 15,
+      "rsi": 41.05,
+      "macd": "Neutral",
+      "volume_surge": 0.99,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CAKEUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:09",
+      "price": 1.408,
+      "score": 45,
+      "rsi": 43.83,
+      "macd": "Neutral",
+      "volume_surge": 0.13,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "NBISBUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:09",
+      "price": 221.69,
+      "score": 30,
+      "rsi": 44.45,
+      "macd": "Neutral",
+      "volume_surge": 0.19,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "EWYBUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:09",
+      "price": 168.93,
+      "score": 50,
+      "rsi": 50.93,
+      "macd": "Neutral",
+      "volume_surge": 0.17,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "TIAUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:09",
+      "price": 0.3375,
+      "score": 15,
+      "rsi": 38.4,
+      "macd": "Neutral",
+      "volume_surge": 0.17,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SUNUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:10",
+      "price": 0.01799,
+      "score": 60,
+      "rsi": 59.5,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SEIUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:10",
+      "price": 0.04156,
+      "score": 50,
+      "rsi": 50.53,
+      "macd": "Neutral",
+      "volume_surge": 1.11,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -53,7 +196,7 @@
   ],
   "SPYBUSDT": [
     {
-      "timestamp": "2026-08-05 12:54:14",
+      "timestamp": "2026-08-05 12:56:11",
       "price": 775.39,
       "score": 60,
       "rsi": 62.16,
@@ -64,40 +207,14 @@
       "fear_greed": 50
     }
   ],
-  "REUSDT": [
+  "SOXSBUSDT": [
     {
-      "timestamp": "2026-08-05 12:54:14",
-      "price": 0.3914,
-      "score": 15,
-      "rsi": 47.73,
+      "timestamp": "2026-08-05 12:56:11",
+      "price": 44.53,
+      "score": 65,
+      "rsi": 60.47,
       "macd": "Neutral",
-      "volume_surge": 0.24,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "LUNCUSDT": [
-    {
-      "timestamp": "2026-08-05 12:54:14",
-      "price": 5.007e-05,
-      "score": 30,
-      "rsi": 47.85,
-      "macd": "Neutral",
-      "volume_surge": 0.29,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "GNOUSDT": [
-    {
-      "timestamp": "2026-08-05 12:54:14",
-      "price": 104.48,
-      "score": 75,
-      "rsi": 56.99,
-      "macd": "Neutral",
-      "volume_surge": 0.5,
+      "volume_surge": 0.08,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -105,12 +222,25 @@
   ],
   "NOMUSDT": [
     {
-      "timestamp": "2026-08-05 12:54:14",
+      "timestamp": "2026-08-05 12:56:11",
       "price": 0.00165,
       "score": 35,
       "rsi": 60.6,
       "macd": "Neutral",
-      "volume_surge": 0.33,
+      "volume_surge": 0.56,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LUNCUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:11",
+      "price": 5.001e-05,
+      "score": 30,
+      "rsi": 45.28,
+      "macd": "Neutral",
+      "volume_surge": 0.36,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -118,10 +248,10 @@
   ],
   "MUUBUSDT": [
     {
-      "timestamp": "2026-08-05 12:54:14",
-      "price": 26.71,
+      "timestamp": "2026-08-05 12:56:11",
+      "price": 26.7,
       "score": 30,
-      "rsi": 44.51,
+      "rsi": 44.36,
       "macd": "Neutral",
       "volume_surge": 0.03,
       "wyckoff": "Sin patron",
@@ -129,79 +259,14 @@
       "fear_greed": 50
     }
   ],
-  "IMXUSDT": [
+  "REUSDT": [
     {
-      "timestamp": "2026-08-05 12:54:15",
-      "price": 0.1106,
-      "score": 65,
-      "rsi": 54.64,
-      "macd": "Neutral",
-      "volume_surge": 1.23,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "DCRUSDT": [
-    {
-      "timestamp": "2026-08-05 12:54:15",
-      "price": 13.41,
+      "timestamp": "2026-08-05 12:56:11",
+      "price": 0.3914,
       "score": 15,
-      "rsi": 42.33,
+      "rsi": 47.73,
       "macd": "Neutral",
-      "volume_surge": 0.14,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "STXUSDT": [
-    {
-      "timestamp": "2026-08-05 12:54:15",
-      "price": 0.1338,
-      "score": 15,
-      "rsi": 38.48,
-      "macd": "Neutral",
-      "volume_surge": 0.19,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "BONKUSDT": [
-    {
-      "timestamp": "2026-08-05 12:54:15",
-      "price": 2.82e-06,
-      "score": 60,
-      "rsi": 56.11,
-      "macd": "Neutral",
-      "volume_surge": 0.02,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "PENDLEUSDT": [
-    {
-      "timestamp": "2026-08-05 12:54:15",
-      "price": 1.377,
-      "score": 15,
-      "rsi": 42.67,
-      "macd": "Neutral",
-      "volume_surge": 0.38,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "ORDIUSDT": [
-    {
-      "timestamp": "2026-08-05 12:54:15",
-      "price": 3.387,
-      "score": 65,
-      "rsi": 59.47,
-      "macd": "Neutral",
-      "volume_surge": 1.47,
+      "volume_surge": 0.28,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -209,12 +274,103 @@
   ],
   "JTOUSDT": [
     {
-      "timestamp": "2026-08-05 12:54:15",
+      "timestamp": "2026-08-05 12:56:11",
       "price": 0.5134,
       "score": 65,
       "rsi": 64.85,
       "macd": "Neutral",
-      "volume_surge": 0.43,
+      "volume_surge": 0.44,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GNOUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:11",
+      "price": 104.51,
+      "score": 75,
+      "rsi": 57.57,
+      "macd": "Neutral",
+      "volume_surge": 0.73,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:11",
+      "price": 2.8e-06,
+      "score": 30,
+      "rsi": 45.13,
+      "macd": "Neutral",
+      "volume_surge": 0.36,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:11",
+      "price": 1.377,
+      "score": 15,
+      "rsi": 42.67,
+      "macd": "Neutral",
+      "volume_surge": 0.4,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:11",
+      "price": 0.1336,
+      "score": 15,
+      "rsi": 36.54,
+      "macd": "Neutral",
+      "volume_surge": 0.31,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DCRUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:11",
+      "price": 13.38,
+      "score": 15,
+      "rsi": 38.71,
+      "macd": "Neutral",
+      "volume_surge": 0.15,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ORDIUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:11",
+      "price": 3.389,
+      "score": 65,
+      "rsi": 60.3,
+      "macd": "Neutral",
+      "volume_surge": 1.47,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "IMXUSDT": [
+    {
+      "timestamp": "2026-08-05 12:56:11",
+      "price": 0.1106,
+      "score": 75,
+      "rsi": 54.64,
+      "macd": "Neutral",
+      "volume_surge": 1.99,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
