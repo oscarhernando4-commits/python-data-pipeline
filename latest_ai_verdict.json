@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 17:04:23",
+  "timestamp": "2026-08-05 17:06:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, el entorno de mercado actual (Fear 27) y la falta de una dominancia clara en el libro de órdenes (Bids 50%) no cumplen con los requisitos de convicción A+ exigidos por el comité. Se prioriza la preservación del capital sobre la especulación en un mercado que ha mostrado alta volatilidad y resultados mixtos en las simulaciones recientes.",
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen institucional y soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de alta incertidumbre y baja liquidez, por lo que la política de 'cero tolerancia' al riesgo dictada por el CRO obliga a mantener la posición en efectivo.",
   "top_candidates": [
-    {
-      "symbol": "TRXUSDT",
-      "score": 75
-    },
     {
       "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
+      "symbol": "ONDOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SKYUSDT",
       "score": 75
     }
   ]
