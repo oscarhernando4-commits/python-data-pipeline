@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 18:28:22",
+  "timestamp": "2026-08-05 18:30:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de baja liquidez con inyecciones artificiales de volumen en activos sin historial, lo que contraviene las reglas de gestión de riesgo del comité. Ningún candidato alcanza el umbral de convicción A+ con soporte de libro de órdenes superior al 55%, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado presenta una trampa de liquidez con alta fragmentación y falta de convicción institucional. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 con Bids > 55%), por lo que el comité ha decidido unánimemente mantener la posición en efectivo para evitar pérdidas por volatilidad especulativa.",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
       "symbol": "HBARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
@@ -25,6 +21,10 @@
     {
       "symbol": "SUNUSDT",
       "score": 75
+    },
+    {
+      "symbol": "SOXLBUSDT",
+      "score": 65
     }
   ]
 }
