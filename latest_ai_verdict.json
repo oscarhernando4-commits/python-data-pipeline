@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-05 01:08:23",
+  "timestamp": "2026-08-05 01:10:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en un estado de desapalancamiento sistémico donde la mayoría de los activos carecen de la fuerza técnica necesaria para una entrada segura. Siguiendo la Regla de Oro #1, al no existir candidatos con un Score >= 65 y una estructura de soporte sólida, el comité ha decidido priorizar la preservación del capital y permanecer en liquidez total.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un entorno de alta toxicidad con una mayoría de activos mostrando debilidad técnica. Ningún candidato cumple con el requisito de Score >= 65 ni con la confirmación de soporte institucional en el libro de órdenes, por lo que se prioriza la protección del capital sobre la operativa.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
       "score": 70
+    },
+    {
+      "symbol": "SKHYBUSDT",
+      "score": 60
     },
     {
       "symbol": "LTCUSDT",
@@ -17,10 +21,6 @@
     {
       "symbol": "PAXGUSDT",
       "score": 60
-    },
-    {
-      "symbol": "RENDERUSDT",
-      "score": 55
     },
     {
       "symbol": "SKYUSDT",
