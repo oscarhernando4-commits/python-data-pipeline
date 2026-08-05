@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 04:48:21",
+  "timestamp": "2026-08-05 04:50:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de capitulación técnica generalizada sin divergencias alcistas claras. Ningún activo cumple con el umbral de calidad A+ (Score >= 65) exigido por el comité, por lo que la estrategia óptima es el mantenimiento de la liquidez (HOLD) para evitar pérdidas por volatilidad residual.",
+  "reasoning": "El mercado se encuentra en una fase de liquidación técnica con scores insuficientes en todos los activos analizados. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es proteger el capital y permanecer en efectivo.",
   "top_candidates": [
     {
       "symbol": "SKHYBUSDT",
       "score": 60
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "BFUSDUSDT",
       "score": 60
     },
     {
