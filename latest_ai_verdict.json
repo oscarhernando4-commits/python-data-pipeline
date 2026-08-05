@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-05 00:18:21",
+  "timestamp": "2026-08-05 00:20:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con scores técnicos insuficientes. Ningún activo cumple con los criterios de alta convicción (A+) establecidos por el comité, por lo que la estrategia óptima es mantener la posición en efectivo (Cash-Neutral) para evitar la exposición a la volatilidad bajista.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada con scores técnicos insuficientes. Ningún activo cumple con el umbral de calidad A+ requerido por el comité, por lo que la decisión estratégica es proteger el capital y esperar una capitulación técnica más clara.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "MUBUSDT",
       "score": 60
     },
     {
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
       "symbol": "STOUSDT",
       "score": 60
     },
     {
-      "symbol": "NBISBUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     }
   ]

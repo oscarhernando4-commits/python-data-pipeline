@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-05 00:18:21
+date: 2026-08-05 00:20:22
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $20.06 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-05 00:18:21`
+> ⏱️ **Última Actualización:** `2026-08-05 00:20:22`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00409216 BNB` (`~$2.43 USD`)
@@ -32,8 +32,8 @@ date: 2026-08-05 00:18:21
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
 > - 📈 **Capital Total Acumulado:** **`$10,023.67 USD`** (`$+23.67 USD`)  
 > - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `0 Cuentas (0.0%)`  
-> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `20 Cuentas (20.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `80 Cuentas (80.0%)`  
+> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `0 Cuentas (0.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `100 Cuentas (100.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
@@ -58,26 +58,26 @@ date: 2026-08-05 00:18:21
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-001** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-002** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-003** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-004** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-005** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-006** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-007** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-008** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-009** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-010** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-011** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-012** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-013** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-014** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-015** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-016** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-017** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-018** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-019** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
-| **SIM-020** | **BTCUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:18 | `🔴 Perdió -$1.09` | **`$98.17`** (`-$1.83`) | 🔴 Buscando |
+| **SIM-001** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-002** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-003** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-004** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-005** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-006** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-007** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-008** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-009** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-010** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-011** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-012** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-013** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-014** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-015** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-016** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-017** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-018** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-019** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
+| **SIM-020** | **PUMPUSDT** | `#10` | `3W/7L` | 26-08-05<br>00:20 | `🔵 En Curso` | **`$98.17`** (`-$1.83`) | 🔵 En Vivo |
 
 ---
 
