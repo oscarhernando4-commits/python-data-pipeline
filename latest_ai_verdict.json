@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-05 03:16:19",
-  "selected_symbol": "SEIUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "SEIUSDT es el único activo que cumple con el umbral de convicción A+ (Score 85) y pertenece al sector dominante de Layer 1, justificando una entrada de alta precisión bajo condiciones de mercado volátiles.",
+  "timestamp": "2026-08-05 03:18:22",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con un sentimiento de miedo extremo. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "SEIUSDT",
-      "score": 85
+      "symbol": "BICOUSDT",
+      "score": 75
     },
     {
       "symbol": "MUBUSDT",
