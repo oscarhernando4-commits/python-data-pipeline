@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-05 03:34:20",
+  "timestamp": "2026-08-05 03:36:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual exhibe una debilidad sistémica extrema y una falta de tracción en los activos principales. Ningún candidato cumple con el umbral de Score 65 requerido por el comité para una ejecución A+. Se prioriza la preservación del capital ante la alta probabilidad de eventos de cascada.",
+  "reasoning": "El mercado presenta una correlación bajista masiva y una falta de fuerza técnica en los activos analizados. Ningún candidato alcanza el umbral de Score 65 requerido por el comité, por lo que se prioriza la protección del capital frente a la volatilidad sistémica.",
   "top_candidates": [
-    {
-      "symbol": "VICUSDT",
-      "score": 70
-    },
     {
       "symbol": "MUBUSDT",
       "score": 60
     },
     {
       "symbol": "KAITOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TSLABUSDT",
       "score": 60
     },
     {
