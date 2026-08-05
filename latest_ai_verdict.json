@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 10:36:20",
+  "timestamp": "2026-08-05 10:38:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual se encuentra en un estado de capitulación técnica sin señales de acumulación institucional. Dado que ningún activo cumple con el umbral de seguridad A+ (Score >= 65) y la dominancia de Bids es insuficiente, la decisión unánime es mantener la posición en efectivo (HOLD) para proteger el capital contra la volatilidad bajista.",
+  "reasoning": "A pesar de que APTUSDT presenta un score técnico alto, la ausencia de soporte en el libro de órdenes y el entorno macroeconómico de capitulación impiden la ejecución de cualquier orden de compra, priorizando la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "HEIUSDT",
-      "score": 60
+      "symbol": "APTUSDT",
+      "score": 85
     },
     {
-      "symbol": "LTCUSDT",
-      "score": 60
+      "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETCUSDT",
+      "score": 75
     },
     {
       "symbol": "VIRTUALUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "GNOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SHIBUSDT",
-      "score": 50
+      "score": 75
     }
   ]
 }
