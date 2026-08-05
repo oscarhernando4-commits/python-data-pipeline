@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 20:10:23",
+  "timestamp": "2026-08-05 20:12:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia técnica severa y falta de convicción institucional. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65 y Bids > 55%) exigido por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la posición en stablecoins.",
+  "reasoning": "El mercado se encuentra en un estado de miedo sistémico con una falta de liquidez institucional confirmada en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital, por lo que la decisión institucional es mantener la posición en efectivo (HOLD).",
   "top_candidates": [
     {
       "symbol": "ETCUSDT",
       "score": 85
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "ERAUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 70
+      "symbol": "JSTUSDT",
+      "score": 65
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "EPICUSDT",
       "score": 65
     }
   ]
