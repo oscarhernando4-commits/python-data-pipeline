@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-05 19:32:22",
+  "timestamp": "2026-08-05 19:34:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (Score >= 65 y Bids > 55%) necesarios para una ejecución segura, optando por preservar el capital en un entorno de alta incertidumbre.",
+  "reasoning": "Ninguno de los candidatos analizados cumple con el umbral mínimo de Score Técnico A+ (>= 65) combinado con una dominancia de Bids Compradores superior al 55%, lo que obliga a mantener la posición en efectivo para evitar el riesgo de 'falling knives' en un mercado fragmentado.",
   "top_candidates": [
-    {
-      "symbol": "TRXUSDT",
-      "score": 75
-    },
     {
       "symbol": "SUNUSDT",
       "score": 75
@@ -23,7 +19,11 @@
       "score": 65
     },
     {
-      "symbol": "ERAUSDT",
+      "symbol": "EPICUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "JSTUSDT",
       "score": 65
     }
   ]
