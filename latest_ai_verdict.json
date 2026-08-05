@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-05 00:02:23",
+  "timestamp": "2026-08-05 00:04:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de parálisis por miedo con una estructura técnica degradada. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ requerido por el comité, y el riesgo de 'falling knives' es inaceptable bajo las reglas de preservación de capital.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación y alta fragilidad técnica. Ninguno de los activos analizados alcanza el umbral de calidad A+ requerido por el comité para una ejecución segura. La estrategia institucional prioritaria es la preservación de capital (Cash-is-King) hasta que el volumen institucional confirme una reversión clara y los scores técnicos superen el nivel de 65.",
   "top_candidates": [
+    {
+      "symbol": "TRXUSDT",
+      "score": 65
+    },
     {
       "symbol": "SOXLBUSDT",
       "score": 60
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "BFUSDUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "CRVUSDT",
+      "symbol": "NBISBUSDT",
       "score": 60
     }
   ]
