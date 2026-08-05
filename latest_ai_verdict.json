@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-05 12:48:22",
+  "timestamp": "2026-08-05 12:50:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, las condiciones actuales del mercado no cumplen con los requisitos estrictos de convicción A+ y soporte de liquidez, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BNBUSDT",
+      "symbol": "GRAMUSDT",
       "score": 75
     }
   ]
