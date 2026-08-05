@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 18:18:22",
+  "timestamp": "2026-08-05 18:20:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo sistémico actual, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad de Bids Compradores (>= 55%) ni con la convicción A+ exigida por el Comité para operar en un entorno de mercado con sentimiento de miedo y alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ENAUSDT",
       "score": 75
     },
     {
@@ -19,12 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "SUNUSDT",
       "score": 75
     },
     {
-      "symbol": "NOMUSDT",
-      "score": 75
+      "symbol": "MIRAUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "HFTUSDT",
+      "score": 65
     }
   ]
 }
