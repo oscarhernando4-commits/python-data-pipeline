@@ -1,29 +1,54 @@
 {
-  "STXUSDT": [
+  "BFUSDUSDT": [
     {
-      "timestamp": "2026-08-05 09:14:13",
-      "price": 0.1356,
-      "score": 50,
-      "rsi": 57.19,
+      "timestamp": "2026-08-05 09:16:12",
+      "price": 0.9994,
+      "score": 30,
+      "rsi": 55.47,
       "macd": "Neutral",
-      "volume_surge": 1.35,
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "MUUBUSDT": [
+  "DODOUSDT": [
     {
-      "timestamp": "2026-08-05 09:14:13",
-      "price": 26.67,
+      "timestamp": "2026-08-05 09:16:12",
+      "price": 0.01836,
       "score": 0,
-      "rsi": 38.11,
+      "rsi": 37.78,
       "macd": "Neutral",
-      "volume_surge": 0.43,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-05 09:16:12",
+      "price": 0.0885,
+      "score": 15,
+      "rsi": 47.8,
+      "macd": "Neutral",
+      "volume_surge": 0.17,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DCRUSDT": [
+    {
+      "timestamp": "2026-08-05 09:16:12",
+      "price": 13.55,
+      "score": 30,
+      "rsi": 57.93,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}
 }

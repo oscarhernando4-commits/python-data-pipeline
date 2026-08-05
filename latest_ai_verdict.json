@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 09:14:25",
+  "timestamp": "2026-08-05 09:16:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "El mercado se encuentra en una fase de capitulación selectiva con una estructura técnica débil. Ninguno de los candidatos analizados alcanza el umbral de Score A+ (65/100) requerido por el protocolo de riesgo, y la falta de soporte en el libro de órdenes confirma que no es momento de operar.",
   "top_candidates": [
-    {
-      "symbol": "SOLUSDT",
-      "score": 60
-    },
     {
       "symbol": "HOMEUSDT",
       "score": 60
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "SOLUSDT",
       "score": 60
     },
     {
@@ -23,8 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "NEXOUSDT",
       "score": 60
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "score": 50
     }
   ]
 }
