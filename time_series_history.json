@@ -1,7 +1,7 @@
 {
   "STXUSDT": [
     {
-      "timestamp": "2026-08-05 09:12:12",
+      "timestamp": "2026-08-05 09:14:13",
       "price": 0.1356,
       "score": 50,
       "rsi": 57.19,
@@ -12,43 +12,18 @@
       "fear_greed": 50
     }
   ],
-  "ORDIUSDT": [
+  "MUUBUSDT": [
     {
-      "timestamp": "2026-08-05 09:12:12",
-      "price": 3.368,
-      "score": 25,
-      "rsi": 47.76,
+      "timestamp": "2026-08-05 09:14:13",
+      "price": 26.67,
+      "score": 0,
+      "rsi": 38.11,
       "macd": "Neutral",
-      "volume_surge": 2.17,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "BFUSDUSDT": [
-    {
-      "timestamp": "2026-08-05 09:12:12",
-      "price": 0.9995,
-      "score": 35,
-      "rsi": 68.18,
-      "macd": "Neutral",
-      "volume_surge": 0.0,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "OPUSDT": [
-    {
-      "timestamp": "2026-08-05 09:12:12",
-      "price": 0.0885,
-      "score": 15,
-      "rsi": 47.79,
-      "macd": "Neutral",
-      "volume_surge": 1.24,
+      "volume_surge": 0.43,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
+}
 }
