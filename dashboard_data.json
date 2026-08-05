@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 09:34:22",
+  "updated_at": "2026-08-05 09:36:23",
   "total_balance_usd": 20.08,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una divergencia técnica marcada. Ninguno de los activos analizados alcanza el umbral de calidad A+ (Score >= 65) exigido por el comité para garantizar la preservación del capital. Se prioriza la liquidez en espera de una señal de fortaleza institucional más robusta."
+    "reasoning": "A pesar de que varios activos tienen un score técnico de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y el entorno de mercado de 'Fear' (27) con tendencia neutral, no cumplen con los criterios de convicción A+ exigidos por el comité para evitar pérdidas, por lo que se mantiene la liquidez en espera."
   }
 }
