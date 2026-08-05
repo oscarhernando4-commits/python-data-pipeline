@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 11:46:22",
+  "timestamp": "2026-08-05 11:48:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual está en un estado de distribución institucional y capitulación. Ninguno de los candidatos cumple con el umbral mínimo de seguridad (Score >= 65) ni con la profundidad de liquidez necesaria para una ejecución de alta convicción. Se prioriza la preservación del capital sobre la especulación en activos de baja calidad técnica.",
+  "reasoning": "El mercado presenta una debilidad generalizada y falta de convicción institucional. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) ni con la profundidad de liquidez necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es mantenerse al margen.",
   "top_candidates": [
+    {
+      "symbol": "ONDOUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "UNIUSDT",
+      "score": 60
+    },
     {
       "symbol": "ERAUSDT",
       "score": 60
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "APTUSDT",
       "score": 60
     },
     {
-      "symbol": "XLMUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "KORUBUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "GIGGLEUSDT",
-      "score": 50
+      "symbol": "SUNUSDT",
+      "score": 60
     }
   ]
 }
