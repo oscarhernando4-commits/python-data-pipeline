@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 14:40:18",
+  "timestamp": "2026-08-05 14:42:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una debilidad sistémica y falta de convicción en los libros de órdenes. Ninguno de los candidatos cumple con los requisitos estrictos de Score A+ y soporte de ballenas, por lo que la decisión institucional es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación selectiva con alta volatilidad y falta de convicción institucional. Ningún activo cumple con los criterios estrictos de riesgo y score técnico necesarios para una ejecución segura, por lo que la estrategia óptima es preservar el capital en liquidez hasta que el índice Fear & Greed supere los 40 puntos.",
   "top_candidates": [
     {
-      "symbol": "TAOUSDT",
-      "score": 75
+      "symbol": "PENDLEUSDT",
+      "score": 85
     },
     {
       "symbol": "APTUSDT",
       "score": 75
     },
     {
-      "symbol": "SYNUSDT",
+      "symbol": "INJUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "TAOUSDT",
       "score": 65
     },
     {
-      "symbol": "WLFIUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "BIOUSDT",
+      "symbol": "MIRAUSDT",
       "score": 65
     }
   ]
