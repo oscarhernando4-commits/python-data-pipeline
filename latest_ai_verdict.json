@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 17:10:22",
+  "timestamp": "2026-08-05 17:12:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, ninguno de los candidatos cumple con el umbral de seguridad en el libro de órdenes ni con la confirmación de volumen institucional necesaria para mitigar el riesgo en un entorno de mercado con sentimiento de miedo (27).",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ exigido por el comité. La falta de dominancia clara en el libro de órdenes y el entorno de miedo en el mercado macro sugieren que la preservación del capital es la prioridad absoluta en este momento.",
   "top_candidates": [
+    {
+      "symbol": "BCHUSDT",
+      "score": 85
+    },
     {
       "symbol": "ZECUSDT",
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ASTERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SKYUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
       "symbol": "ONDOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SKYUSDT",
       "score": 75
     }
   ]
