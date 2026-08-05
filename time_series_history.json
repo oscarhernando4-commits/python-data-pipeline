@@ -1,12 +1,64 @@
 {
-  "HYPERUSDT": [
+  "JTOUSDT": [
     {
-      "timestamp": "2026-08-05 14:36:12",
-      "price": 0.0585,
-      "score": 25,
-      "rsi": 70.25,
+      "timestamp": "2026-08-05 14:38:11",
+      "price": 0.5094,
+      "score": 40,
+      "rsi": 50.68,
       "macd": "Neutral",
-      "volume_surge": 0.36,
+      "volume_surge": 0.42,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SPYBUSDT": [
+    {
+      "timestamp": "2026-08-05 14:38:11",
+      "price": 774.44,
+      "score": 25,
+      "rsi": 41.94,
+      "macd": "Neutral",
+      "volume_surge": 1.76,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DCRUSDT": [
+    {
+      "timestamp": "2026-08-05 14:38:11",
+      "price": 13.33,
+      "score": 15,
+      "rsi": 38.15,
+      "macd": "Neutral",
+      "volume_surge": 1.25,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-05 14:38:11",
+      "price": 1.381,
+      "score": 75,
+      "rsi": 50.16,
+      "macd": "Neutral",
+      "volume_surge": 0.77,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-05 14:38:11",
+      "price": 0.1332,
+      "score": 15,
+      "rsi": 35.03,
+      "macd": "Neutral",
+      "volume_surge": 0.02,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +66,38 @@
   ],
   "ORDIUSDT": [
     {
-      "timestamp": "2026-08-05 14:36:12",
-      "price": 3.393,
-      "score": 40,
-      "rsi": 51.06,
+      "timestamp": "2026-08-05 14:38:11",
+      "price": 3.395,
+      "score": 60,
+      "rsi": 51.63,
       "macd": "Neutral",
-      "volume_surge": 0.07,
+      "volume_surge": 0.09,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-05 14:38:11",
+      "price": 2.8e-06,
+      "score": 15,
+      "rsi": 47.1,
+      "macd": "Neutral",
+      "volume_surge": 1.02,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "HYPERUSDT": [
+    {
+      "timestamp": "2026-08-05 14:38:11",
+      "price": 0.0588,
+      "score": 40,
+      "rsi": 74.88,
+      "macd": "Neutral",
+      "volume_surge": 0.44,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
