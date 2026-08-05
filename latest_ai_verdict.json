@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-05 04:58:21",
+  "timestamp": "2026-08-05 05:00:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una falta crítica de liquidez y soporte institucional. Ningún activo cumple con el umbral de seguridad A+ requerido por el comité, por lo que la orden es mantener la posición en efectivo para evitar pérdidas en un entorno de alta volatilidad y baja probabilidad de éxito.",
+  "reasoning": "El mercado presenta una debilidad transversal con scores técnicos insuficientes y una falta de soporte institucional en el libro de órdenes. Dado que ningún activo cumple con el umbral de convicción A+ (Score >= 65), el comité ha decidido mantener la liquidez en USDT para evitar la exposición a la alta volatilidad y el riesgo de 'falling knives'.",
   "top_candidates": [
-    {
-      "symbol": "NEXOUSDT",
-      "score": 70
-    },
     {
       "symbol": "SKHYBUSDT",
       "score": 60
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "DRAMBUSDT",
       "score": 60
     },
     {
-      "symbol": "DRAMBUSDT",
+      "symbol": "NEXOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NBISBUSDT",
       "score": 60
     },
     {
