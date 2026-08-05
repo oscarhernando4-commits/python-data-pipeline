@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 02:34:26",
+  "timestamp": "2026-08-05 02:36:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de indecisión con un sentimiento de miedo predominante y falta de muros de soporte sólidos en el libro de órdenes. Ninguno de los candidatos cumple con el requisito de convicción A+ (Score >= 65 y Bids >= 55%), por lo que la estrategia óptima es mantener la liquidez y evitar la exposición a la volatilidad errática actual.",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ requerido por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la liquidez en espera de una estructura de mercado más definida.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
       "symbol": "GRAMUSDT",
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "ICPUSDT",
       "score": 75
     }
   ]
