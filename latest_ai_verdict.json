@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-05 23:24:19",
+  "timestamp": "2026-08-05 23:26:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica extrema con una mayoría de activos mostrando debilidad técnica. Ninguno de los candidatos cumple con el umbral de Score 65 ni con la confirmación de liquidez necesaria para una operativa A+. Se prioriza la preservación de capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad estructural donde ningún activo cumple con los criterios de alta convicción (Score >= 65). La estrategia institucional es preservar el capital en efectivo hasta que aparezca una señal de fortaleza orgánica confirmada por el libro de órdenes y el volumen.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "TAOUSDT",
       "score": 60
     },
     {
       "symbol": "ACXUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ATOMUSDT",
       "score": 60
     },
     {
@@ -21,10 +25,6 @@
     {
       "symbol": "ETHFIUSDT",
       "score": 60
-    },
-    {
-      "symbol": "FETUSDT",
-      "score": 55
     }
   ]
 }
