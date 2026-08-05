@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 12:28:25",
+  "timestamp": "2026-08-05 12:30:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que activos como BNB, ETH, SOL y LINK presentan scores técnicos de 85, el entorno macro de miedo, la falta de dominancia clara en el libro de órdenes y la alta tasa de fallos en trades recientes bajo condiciones neutrales dictan una postura de preservación de capital. Ningún activo cumple con la convicción A+ requerida por el comité.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y tendencia clara). La alta tasa de fallos en trades recientes bajo condiciones de mercado neutral obliga a mantener la liquidez en espera de una mejor configuración técnica.",
   "top_candidates": [
     {
+      "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
       "symbol": "BNBUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ETHUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SOLUSDT",
-      "score": 85
+      "score": 75
     },
     {
       "symbol": "LINKUSDT",
-      "score": 85
+      "score": 75
     },
     {
-      "symbol": "XRPUSDT",
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
       "score": 75
     }
   ]
