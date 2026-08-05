@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 02:56:22",
+  "timestamp": "2026-08-05 02:58:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, el comité ha decidido no ejecutar ninguna operación. La combinación de un sentimiento de miedo (27), la falta de profundidad en el libro de órdenes y la alta tasa de fallos en trades históricos bajo condiciones neutrales, no cumple con los estándares de seguridad A+ exigidos por el CRO. Se mantendrá la liquidez en espera de una estructura de mercado más definida.",
+  "reasoning": "El comité ha deliberado y, a pesar de los scores técnicos de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y la incertidumbre macro regulatoria impiden alcanzar el umbral de confianza A+ necesario para ejecutar una orden de compra, priorizando la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "FILUSDT",
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "JSTUSDT",
       "score": 75
     }
   ]
