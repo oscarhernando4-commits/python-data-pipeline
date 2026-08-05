@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 17:02:22",
+  "updated_at": "2026-08-05 17:04:23",
   "total_balance_usd": 20.09,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 45,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el comité. La dominancia de Bids es neutral (50%) y el entorno de mercado es de alta incertidumbre, lo que eleva el riesgo de 'trampa de liquidez'. Se prioriza la preservación del capital sobre la ejecución especulativa."
+    "reasoning": "A pesar de que varios activos presentan un score técnico de 75, el entorno de mercado actual (Fear 27) y la falta de una dominancia clara en el libro de órdenes (Bids 50%) no cumplen con los requisitos de convicción A+ exigidos por el comité. Se prioriza la preservación del capital sobre la especulación en un mercado que ha mostrado alta volatilidad y resultados mixtos en las simulaciones recientes."
   }
 }
