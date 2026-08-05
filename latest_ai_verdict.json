@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-05 16:40:22",
+  "timestamp": "2026-08-05 16:42:30",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado se encuentra en una fase de alta incertidumbre y baja liquidez, por lo que la estrategia óptima es preservar el capital en USDT.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "GNOUSDT",
       "score": 85
     },
     {
-      "symbol": "BTCUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "AVAXUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     }
   ]
