@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-05 13:24:19",
+  "timestamp": "2026-08-05 13:26:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual se encuentra en una fase de alta volatilidad y baja liquidez, donde ningún activo cumple con los criterios de alta convicción (Score >= 65) exigidos por el Chief Risk Officer. Para evitar la exposición a 'cuchillos cayendo' y proteger el capital, se ha decidido mantener una posición de espera (HOLD) hasta que las condiciones macro y técnicas mejoren.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad sistémica. Ninguno de los activos analizados cumple con los criterios de calidad A+ exigidos por el comité. La prioridad absoluta es la preservación del capital, por lo que se mantiene la posición en efectivo (USDT) hasta que las condiciones macro y técnicas mejoren significativamente.",
   "top_candidates": [
-    {
-      "symbol": "BNBUSDT",
-      "score": 60
-    },
     {
       "symbol": "LTCUSDT",
       "score": 60
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "BIOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SUNUSDT",
       "score": 60
     }
   ]
