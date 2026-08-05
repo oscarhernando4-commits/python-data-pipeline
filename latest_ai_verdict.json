@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-05 21:18:24",
+  "timestamp": "2026-08-05 21:20:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de contracción de liquidez y alta correlación bajista. Ningún activo cumple con los requisitos mínimos de seguridad y fuerza relativa exigidos por el comité, por lo que la orden es mantener la liquidez en efectivo para evitar trampas de mercado.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y aversión al riesgo sistémico. Ninguno de los activos analizados alcanza el umbral de calidad A+ (Score >= 65) requerido por el comité, y el historial de simulaciones desaconseja operar en condiciones de mercado neutral/bajista. Se prioriza la protección del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "VANRYUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "JUPUSDT",
       "score": 60
     },
     {
@@ -15,15 +19,11 @@
       "score": 50
     },
     {
-      "symbol": "KAITOUSDT",
+      "symbol": "ATOMUSDT",
       "score": 50
     },
     {
       "symbol": "ALLOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ACEUSDT",
       "score": 50
     }
   ]
