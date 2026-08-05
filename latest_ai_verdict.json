@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-05 09:16:19",
+  "timestamp": "2026-08-05 09:18:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación selectiva con una estructura técnica débil. Ninguno de los candidatos analizados alcanza el umbral de Score A+ (65/100) requerido por el protocolo de riesgo, y la falta de soporte en el libro de órdenes confirma que no es momento de operar.",
+  "reasoning": "El mercado presenta una fragilidad sistémica extrema con scores técnicos insuficientes y una tendencia neutral que históricamente ha derivado en pérdidas. Se prioriza la protección del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
+    {
+      "symbol": "SOLUSDT",
+      "score": 60
+    },
     {
       "symbol": "HOMEUSDT",
       "score": 60
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "LINKUSDT",
       "score": 60
     },
     {
@@ -19,12 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "NEXOUSDT",
+      "symbol": "APTUSDT",
       "score": 60
-    },
-    {
-      "symbol": "DOGEUSDT",
-      "score": 50
     }
   ]
 }
