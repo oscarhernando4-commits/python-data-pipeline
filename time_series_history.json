@@ -1,12 +1,38 @@
 {
-  "REUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-05 13:50:14",
-      "price": 0.3864,
+      "timestamp": "2026-08-05 13:52:13",
+      "price": 0.1333,
       "score": 15,
-      "rsi": 37.79,
+      "rsi": 34.46,
       "macd": "Neutral",
-      "volume_surge": 0.32,
+      "volume_surge": 0.91,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-05 13:52:13",
+      "price": 0.087,
+      "score": 50,
+      "rsi": 31.34,
+      "macd": "Neutral",
+      "volume_surge": 2.2,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DCRUSDT": [
+    {
+      "timestamp": "2026-08-05 13:52:13",
+      "price": 13.32,
+      "score": 15,
+      "rsi": 33.64,
+      "macd": "Neutral",
+      "volume_surge": 0.29,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +40,12 @@
   ],
   "PENDLEUSDT": [
     {
-      "timestamp": "2026-08-05 13:50:14",
+      "timestamp": "2026-08-05 13:52:13",
       "price": 1.372,
-      "score": 15,
+      "score": 25,
       "rsi": 39.2,
       "macd": "Neutral",
-      "volume_surge": 1.42,
+      "volume_surge": 1.62,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
