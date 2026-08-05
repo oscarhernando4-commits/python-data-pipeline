@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-05 16:00:25",
+  "timestamp": "2026-08-05 16:02:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 65) combinado con una dominancia de Bids superior al 55%, lo que obliga a mantener la posición en efectivo para evitar riesgos innecesarios.",
   "top_candidates": [
     {
-      "symbol": "DOTUSDT",
+      "symbol": "JTOUSDT",
       "score": 75
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "score": 65
     },
     {
       "symbol": "HEIUSDT",
@@ -19,11 +23,7 @@
       "score": 65
     },
     {
-      "symbol": "GIGGLEUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "STOUSDT",
+      "symbol": "ACEUSDT",
       "score": 65
     }
   ]
