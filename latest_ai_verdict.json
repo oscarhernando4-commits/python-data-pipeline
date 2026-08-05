@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 13:34:22",
+  "timestamp": "2026-08-05 13:36:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una toxicidad sistémica con una correlación bajista generalizada. Ninguno de los candidatos analizados cumple con el umbral de convicción A+ (Score >= 65) exigido por el comité. Se prioriza la preservación del capital y se bloquea cualquier intento de compra hasta que las condiciones macroeconómicas y técnicas mejoren significativamente.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta presión vendedora. Ninguno de los candidatos analizados alcanza el umbral de seguridad A+ (Score >= 65) requerido por el comité, y el libro de órdenes no muestra una acumulación de ballenas que garantice un rebote. Se prioriza la preservación del capital sobre la especulación en activos de baja liquidez o historial insuficiente.",
   "top_candidates": [
     {
-      "symbol": "PAXGUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XAUTUSDT",
+      "symbol": "SKHYBUSDT",
       "score": 60
     },
     {
@@ -20,6 +16,10 @@
     },
     {
       "symbol": "BIOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TSLABUSDT",
       "score": 60
     },
     {
