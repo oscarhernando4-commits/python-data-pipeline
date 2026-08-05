@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-05 12:34:25",
+  "timestamp": "2026-08-05 12:36:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado presenta una divergencia estructural y un sentimiento de miedo que, sumado a la falta de profundidad en el libro de órdenes, hace que la estrategia más rentable sea preservar el capital en espera de una señal de alta probabilidad.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
+    {
+      "symbol": "GRAMUSDT",
+      "score": 85
+    },
     {
       "symbol": "AAVEUSDT",
       "score": 85
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
       "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LINKUSDT",
       "score": 75
     }
   ]
