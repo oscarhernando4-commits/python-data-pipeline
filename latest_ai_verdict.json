@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-05 02:22:20",
+  "timestamp": "2026-08-05 02:24:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de 'Apatía de Alta Volatilidad' sin una estructura de soporte clara en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ necesario para mitigar el riesgo de pérdida, por lo que se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "Ninguno de los candidatos cumple con el requisito estricto de dominancia de Bids (>= 55%) necesario para validar el Score Técnico A+, por lo que se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "SOLUSDT",
+      "score": 85
+    },
     {
       "symbol": "APTUSDT",
       "score": 85
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
       "score": 75
     }
   ]
