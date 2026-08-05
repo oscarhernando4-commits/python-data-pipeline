@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 03:06:21",
+  "timestamp": "2026-08-05 03:08:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de soporte de ballenas y baja volatilidad). El mercado se encuentra en una fase de alta incertidumbre y baja liquidez, por lo que la estrategia institucional es preservar el capital y evitar la exposición a activos de alta beta.",
+  "reasoning": "El mercado se encuentra en una fase de consolidación bajo estrés con una falta de convicción institucional clara. Dado que ningún activo cumple con el umbral de soporte de ballenas (Bids > 55%) y el entorno macro es de alta incertidumbre, la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas por volatilidad intradiaria.",
   "top_candidates": [
     {
-      "symbol": "UNIUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "BICOUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "INTCBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TSLABUSDT",
+      "symbol": "AEROUSDT",
       "score": 75
     },
     {
       "symbol": "NEXOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TSLABUSDT",
       "score": 75
     }
   ]
