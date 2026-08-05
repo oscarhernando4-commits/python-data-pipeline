@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 12:44:25",
+  "timestamp": "2026-08-05 12:46:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en un régimen de alta incertidumbre con un sentimiento de miedo persistente y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que la estrategia óptima es preservar el capital en liquidez (USDT) y evitar la exposición a activos que actúan como trampas de valor.",
+  "confidence": 45,
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y baja profundidad de liquidez. Ninguno de los candidatos cumple con los requisitos estrictos de soporte en el libro de órdenes (Bids > 55%) ni con la convicción necesaria para evitar el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
-      "symbol": "GRAMUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "AAVEUSDT",
-      "score": 85
-    },
-    {
       "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LTCUSDT",
       "score": 75
     }
   ]
