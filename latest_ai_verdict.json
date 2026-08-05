@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 06:14:19",
+  "timestamp": "2026-08-05 06:16:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, el comité concluye que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes (50% Bids) y el entorno de miedo (Fear & Greed 27) no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se decide no ejecutar ninguna operación para evitar la exposición a la alta volatilidad y el riesgo de reversión a la media.",
+  "reasoning": "El mercado se encuentra en un estado de indecisión con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de seguridad del 55% en el libro de órdenes ni presenta una estructura técnica que garantice una alta probabilidad de éxito, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
-    {
-      "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
     {
       "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "SKYUSDT",
+      "symbol": "EULUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "POLUSDT",
       "score": 75
+    },
+    {
+      "symbol": "MIRAUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "NEARUSDT",
+      "score": 65
     }
   ]
 }
