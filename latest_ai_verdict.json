@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 21:40:23",
+  "timestamp": "2026-08-05 21:42:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación sistémica con una correlación bajista predominante. Ninguno de los activos analizados alcanza el umbral de calidad A+ requerido por el comité, y el historial de trades recientes sugiere que intentar capturar rebotes en este contexto resulta en pérdidas recurrentes. Se prioriza la preservación del capital hasta que el sentimiento macro mejore y los scores técnicos superen el umbral de 65.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica y alta correlación bajista. Ninguno de los activos analizados cumple con los criterios de fuerza técnica (Score >= 65) ni con la profundidad de libro necesaria para una entrada segura. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "VANRYUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "ADAUSDT",
+      "score": 50
+    },
+    {
       "symbol": "EULUSDT",
       "score": 50
     },
     {
-      "symbol": "ACEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ALLOUSDT",
+      "symbol": "JSTUSDT",
       "score": 50
     }
   ]
