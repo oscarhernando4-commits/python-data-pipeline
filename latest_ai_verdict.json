@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-05 07:04:25",
+  "timestamp": "2026-08-05 07:06:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "El mercado presenta una aversión al riesgo sistémica y una falta de convicción técnica en los activos analizados. Ningún candidato alcanza el umbral de Score A+ (65) requerido por el comité, por lo que la estrategia de protección de capital dicta una posición de espera (HOLD) hasta que las condiciones macro y técnicas mejoren.",
   "top_candidates": [
     {
       "symbol": "GNOUSDT",
       "score": 90
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 60
     },
     {
       "symbol": "DOTUSDT",
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "CRVUSDT",
+      "symbol": "APTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SEIUSDT",
       "score": 60
     }
   ]
