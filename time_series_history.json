@@ -1,12 +1,38 @@
 {
+  "LUNCUSDT": [
+    {
+      "timestamp": "2026-08-05 03:40:13",
+      "price": 5.027e-05,
+      "score": 45,
+      "rsi": 50.95,
+      "macd": "Neutral",
+      "volume_surge": 0.31,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
   "OPUSDT": [
     {
-      "timestamp": "2026-08-05 03:38:12",
+      "timestamp": "2026-08-05 03:40:13",
       "price": 0.0883,
       "score": 0,
       "rsi": 38.34,
       "macd": "Neutral",
       "volume_surge": 0.21,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "REUSDT": [
+    {
+      "timestamp": "2026-08-05 03:40:13",
+      "price": 0.3878,
+      "score": 0,
+      "rsi": 44.27,
+      "macd": "Neutral",
+      "volume_surge": 0.36,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

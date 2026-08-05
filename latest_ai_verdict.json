@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-05 03:38:19",
+  "timestamp": "2026-08-05 03:40:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta volatilidad y falta de soporte estructural. Ninguno de los activos analizados cumple con los criterios de calidad A+ (Score >= 65) ni con la confirmación de liquidez necesaria en el libro de órdenes, por lo que la estrategia óptima es la preservación total del capital mediante el mantenimiento de la posición en efectivo (HOLD).",
+  "reasoning": "El mercado presenta una configuración de riesgo elevado con una correlación bajista predominante. Ninguno de los activos analizados alcanza el umbral de calidad A+ (Score >= 65) exigido por el Comité, y la falta de profundidad en el libro de órdenes aumenta el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en activos de baja liquidez.",
   "top_candidates": [
+    {
+      "symbol": "VICUSDT",
+      "score": 70
+    },
     {
       "symbol": "MUBUSDT",
       "score": 60
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "DRAMBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "EWYBUSDT",
+      "symbol": "INTCBUSDT",
       "score": 60
     }
   ]
