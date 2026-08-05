@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 04:24:19",
+  "timestamp": "2026-08-05 04:26:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de liquidación técnica coordinada con una ausencia total de activos que cumplan con el umbral de convicción A+ requerido por el comité. La estrategia institucional es preservar el capital en efectivo hasta que se observe una divergencia alcista clara y una acumulación de ballenas confirmada en el libro de órdenes.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y aversión al riesgo. Ninguno de los activos analizados cumple con los criterios estrictos de calidad (Score >= 65) y soporte de liquidez necesarios para una ejecución segura. Se prioriza la protección del capital sobre la especulación en un entorno de capitulación minorista.",
   "top_candidates": [
     {
       "symbol": "NEXOUSDT",
       "score": 70
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "MUBUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "CRVUSDT",
+      "symbol": "FETUSDT",
       "score": 60
     },
     {
-      "symbol": "MUUBUSDT",
+      "symbol": "CRVUSDT",
       "score": 60
     }
   ]
