@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 20:08:21",
+  "timestamp": "2026-08-05 20:10:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de liquidez y soporte de ballenas). La alta tasa de fallos en las simulaciones recientes para activos de alta volatilidad y la falta de dominancia clara en el orderbook dictan una postura de preservación de capital en USDT.",
+  "reasoning": "El mercado presenta una divergencia técnica severa y falta de convicción institucional. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65 y Bids > 55%) exigido por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la posición en stablecoins.",
   "top_candidates": [
     {
-      "symbol": "PEPEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ERAUSDT",
-      "score": 75
-    },
-    {
       "symbol": "ETCUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
@@ -25,6 +21,10 @@
     {
       "symbol": "BCHUSDT",
       "score": 70
+    },
+    {
+      "symbol": "ICPUSDT",
+      "score": 65
     }
   ]
 }
