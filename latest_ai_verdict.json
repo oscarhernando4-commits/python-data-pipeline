@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-05 18:00:23",
+  "timestamp": "2026-08-05 18:02:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes y la ausencia de un volumen de confirmación (Volume Surge) invalidan la entrada. Se prioriza la preservación del capital ante un entorno de mercado que no ofrece una ventaja estadística clara.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de tendencia). El mercado presenta una alta incertidumbre y una correlación inestable, por lo que la estrategia institucional es mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
+      "symbol": "SKYUSDT",
       "score": 75
     }
   ]

@@ -1,12 +1,51 @@
 {
+  "RESOLVUSDT": [
+    {
+      "timestamp": "2026-08-05 18:02:12",
+      "price": 0.01728,
+      "score": 15,
+      "rsi": 45.51,
+      "macd": "Neutral",
+      "volume_surge": 0.2,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "HYPERUSDT": [
+    {
+      "timestamp": "2026-08-05 18:02:12",
+      "price": 0.0603,
+      "score": 40,
+      "rsi": 70.11,
+      "macd": "Neutral",
+      "volume_surge": 0.51,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-05 18:02:12",
+      "price": 1.408,
+      "score": 50,
+      "rsi": 63.36,
+      "macd": "Neutral",
+      "volume_surge": 0.02,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
   "DCRUSDT": [
     {
-      "timestamp": "2026-08-05 18:00:13",
+      "timestamp": "2026-08-05 18:02:12",
       "price": 13.37,
       "score": 65,
       "rsi": 48.71,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.01,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
