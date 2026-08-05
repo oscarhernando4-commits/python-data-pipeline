@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 08:28:21",
+  "timestamp": "2026-08-05 08:30:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras deliberar, el comité determina que las condiciones actuales de mercado no cumplen con los requisitos de alta convicción (Score >= 65 y Bids > 55%) necesarios para garantizar la preservación del capital, optando por una postura de espera (HOLD) para evitar pérdidas en un entorno de alta volatilidad e indecisión.",
+  "reasoning": "Tras deliberar, el comité ha determinado que, a pesar de los scores técnicos, la falta de profundidad en el libro de órdenes y la alta tasa de fallos en entornos neutrales hacen que ninguna oportunidad cumpla con los estándares de seguridad A+ exigidos por el CRO.",
   "top_candidates": [
     {
-      "symbol": "MIRAUSDT",
-      "score": 90
-    },
-    {
-      "symbol": "CRVUSDT",
-      "score": 85
+      "symbol": "LINKUSDT",
+      "score": 75
     },
     {
       "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
+      "symbol": "APTUSDT",
       "score": 75
     },
     {
-      "symbol": "GIGGLEUSDT",
+      "symbol": "NEXOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TIAUSDT",
       "score": 75
     }
   ]
