@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-05 01:16:20",
+  "timestamp": "2026-08-05 01:18:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de distribución institucional con una correlación bajista transversal. Ningún activo cumple con los criterios de alta convicción (Score >= 65) exigidos por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score A+ (>= 65) ni con la confirmación de soporte institucional en el libro de órdenes, por lo que se mantiene la posición en efectivo para evitar el riesgo de 'cuchillos cayendo'.",
   "top_candidates": [
-    {
-      "symbol": "LTCUSDT",
-      "score": 60
-    },
     {
       "symbol": "XAUTUSDT",
       "score": 60
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "POLUSDT",
+      "score": 60
+    },
+    {
       "symbol": "ZROUSDT",
       "score": 60
     },
     {
-      "symbol": "HOMEUSDT",
+      "symbol": "BANKUSDT",
       "score": 50
     }
   ]
