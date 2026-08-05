@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 18:52:22",
+  "timestamp": "2026-08-05 18:54:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una alta selectividad y un riesgo sistémico elevado. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y confirmación de volumen), por lo que la estrategia óptima es mantener la liquidez en espera de una estructura de mercado más clara.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de Score A+ (>= 65) combinado con una confirmación sólida de liquidez en el libro de órdenes, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "HBARUSDT",
-      "score": 75
+      "symbol": "SYNUSDT",
+      "score": 65
     },
     {
       "symbol": "FIDAUSDT",
-      "score": 75
+      "score": 65
     },
     {
-      "symbol": "ERAUSDT",
-      "score": 75
+      "symbol": "JSTUSDT",
+      "score": 65
     },
     {
-      "symbol": "SYNUSDT",
+      "symbol": "VICUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "ACXUSDT",
       "score": 65
     }
   ]
