@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 18:08:24",
+  "timestamp": "2026-08-05 18:10:35",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 75, la falta de profundidad en el libro de órdenes y la inestabilidad del sentimiento macro impiden cumplir con la regla de oro de convicción A+. Se mantiene la liquidez en USDT para evitar pérdidas innecesarias en un mercado de alta incertidumbre.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
-      "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
       "symbol": "TRXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "JUPUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "NOMUSDT",
       "score": 75
     }
   ]
