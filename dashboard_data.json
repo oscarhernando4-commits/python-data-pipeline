@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 02:14:25",
+  "updated_at": "2026-08-05 02:16:24",
   "total_balance_usd": 20.1,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 45,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que, a pesar de los scores técnicos elevados, el mercado carece de la convicción necesaria y el soporte de liquidez requerido para una operación de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado neutral y temeroso."
+    "reasoning": "El mercado se encuentra en un estado de divergencia fragmentada con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y confirmación de volumen institucional), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo."
   }
 }
