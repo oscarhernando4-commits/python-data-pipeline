@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 20:26:21",
+  "timestamp": "2026-08-05 20:28:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que BTC presenta un score técnico de 85, la ausencia de una dominancia clara en el libro de órdenes (Bids < 55%) y el entorno de miedo generalizado invalidan la ejecución de una orden de compra bajo los estrictos criterios de riesgo del comité.",
+  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la ausencia de una dominancia clara en el libro de órdenes (Bids > 55%) y la alta probabilidad de 'bull traps' en el sector de alta volatilidad, obligan al comité a mantener una postura de espera para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
-      "score": 85
+      "symbol": "DOGEUSDT",
+      "score": 75
     },
     {
       "symbol": "SUIUSDT",
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PEPEUSDT",
+      "symbol": "AVAXUSDT",
       "score": 75
     },
     {
       "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PEPEUSDT",
       "score": 75
     }
   ]
