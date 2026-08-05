@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 08:40:20",
+  "timestamp": "2026-08-05 08:42:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que algunos activos muestran scores técnicos elevados, la ausencia de una dominancia clara en el libro de órdenes, el sentimiento de miedo generalizado y la falta de historial consolidado en los activos líderes impiden alcanzar el umbral de convicción A+ requerido por el comité.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con scores de activos por debajo del umbral de seguridad A+ (65). Ningún candidato presenta la confluencia necesaria de volumen, soporte en el libro de órdenes y estructura técnica para mitigar el riesgo de 'falling knives'. Se prioriza la protección del capital hasta que el entorno macro mejore.",
   "top_candidates": [
     {
-      "symbol": "CRVUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "BONKUSDT",
-      "score": 85
-    },
-    {
       "symbol": "SOLUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 75
+      "symbol": "TRXUSDT",
+      "score": 60
     },
     {
-      "symbol": "HOMEUSDT",
-      "score": 75
+      "symbol": "NEXOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TIAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TOWNSUSDT",
+      "score": 60
     }
   ]
 }
