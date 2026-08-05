@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-05 00:20:22",
+  "timestamp": "2026-08-05 00:22:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada con scores técnicos insuficientes. Ningún activo cumple con el umbral de calidad A+ requerido por el comité, por lo que la decisión estratégica es proteger el capital y esperar una capitulación técnica más clara.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los requisitos mínimos de seguridad y rentabilidad. Ningún activo alcanza el score técnico de 65, y la falta de soporte en el libro de órdenes junto con el sentimiento de miedo generalizado dictan una postura defensiva de 'HOLD' para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
-      "score": 70
+      "symbol": "EULUSDT",
+      "score": 60
     },
     {
-      "symbol": "MUBUSDT",
+      "symbol": "SOXLBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
       "symbol": "KORUBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "STOUSDT",
       "score": 60
     },
     {
