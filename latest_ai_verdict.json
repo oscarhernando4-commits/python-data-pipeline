@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 05:12:22",
+  "timestamp": "2026-08-05 05:14:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos analizados logra superar el umbral de convicción A+ requerido por el Comité, y la ausencia de muros de soporte sólidos en el libro de órdenes aumenta el riesgo de pérdidas. Se prioriza la protección del capital sobre la especulación en un entorno de mercado lateral y sin dirección clara.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el comité. La falta de dominancia clara en el libro de órdenes y la inestabilidad del mercado neutral obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "ZROUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "DCRUSDT",
       "score": 85
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "ERAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "KAITOUSDT",
       "score": 75
     }
   ]
