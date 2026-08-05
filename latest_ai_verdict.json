@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 03:02:25",
+  "timestamp": "2026-08-05 03:04:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, el comité ha determinado que el mercado actual no ofrece una oportunidad con la calidad técnica y de liquidez requerida para garantizar la protección del capital, optando por una postura defensiva de espera.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado se encuentra en una fase de espera vigilante y el riesgo de 'trampa de valor' es elevado, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "BICOUSDT",
+      "symbol": "UNIUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "EWYBUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "TSLABUSDT",
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "NEXOUSDT",
       "score": 75
     },
     {
-      "symbol": "FILUSDT",
+      "symbol": "INTCBUSDT",
       "score": 75
     }
   ]
