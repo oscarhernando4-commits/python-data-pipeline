@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 19:02:22",
+  "timestamp": "2026-08-05 19:04:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de fragmentación defensiva con alta incertidumbre. Ninguno de los candidatos cumple con el requisito de soporte de ballenas (Bids > 55%) ni con la convicción A+ exigida por el comité. Se prioriza la preservación del capital sobre la especulación en activos de baja profundidad.",
+  "reasoning": "El mercado se encuentra en un estado de indecisión con un sentimiento de miedo predominante. Ninguno de los activos analizados cumple con los criterios estrictos de convicción A+ (Score >= 65 y soporte de libro de órdenes > 55%). Por lo tanto, el comité ha decidido unánimemente mantener la posición en efectivo (HOLD) para preservar el capital hasta que surja una señal de alta probabilidad.",
   "top_candidates": [
     {
       "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "ERAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUNUSDT",
+      "symbol": "JUPUSDT",
       "score": 75
     },
     {
@@ -23,8 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "JUPUSDT",
+      "symbol": "EWYBUSDT",
       "score": 75
+    },
+    {
+      "symbol": "SOXLBUSDT",
+      "score": 65
     }
   ]
 }
