@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 13:14:25",
+  "timestamp": "2026-08-05 13:16:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual se encuentra en una fase de desapalancamiento forzoso con una correlación bajista masiva. Ningún activo cumple con los criterios estrictos de Score Técnico >= 65 y confirmación de liquidez, por lo que la decisión institucional es proteger el capital y esperar una estructura de mercado más saludable.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una correlación bajista predominante. Ninguno de los activos analizados cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de 'falling knives'. Se prioriza la protección del capital sobre la operativa especulativa.",
   "top_candidates": [
     {
-      "symbol": "GRAMUSDT",
-      "score": 70
+      "symbol": "BNBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "HBARUSDT",
+      "score": 60
     },
     {
       "symbol": "LTCUSDT",
       "score": 60
     },
     {
-      "symbol": "BNBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "MIRAUSDT",
-      "score": 60
-    },
-    {
       "symbol": "BIOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SUNUSDT",
       "score": 60
     }
   ]
