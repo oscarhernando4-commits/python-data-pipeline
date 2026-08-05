@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 04:16:21",
+  "timestamp": "2026-08-05 04:18:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema con una correlación negativa masiva. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la profundidad de mercado requerida para una ejecución institucional. Se prioriza la preservación del capital sobre la especulación en activos de baja liquidez.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación generalizada sin activos que cumplan con los criterios de alta convicción (Score >= 65). Se prioriza la protección del capital frente a la volatilidad, evitando la entrada en activos con historiales insuficientes o scores mediocres.",
   "top_candidates": [
     {
       "symbol": "DRAMBUSDT",
@@ -15,7 +15,7 @@
       "score": 60
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "KAITOUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "TSLABUSDT",
+      "symbol": "NEXOUSDT",
       "score": 60
     }
   ]
