@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-05 03:28:22",
+  "timestamp": "2026-08-05 03:30:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de liquidación sistémica sin activos que cumplan con el umbral de seguridad A+ (Score >= 65). La falta de soporte en el libro de órdenes y la alta probabilidad de pérdidas históricas en condiciones actuales dictan una postura de preservación de capital total.",
+  "reasoning": "El mercado se encuentra en un estado de parálisis operativa con una correlación bajista predominante. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 ni demuestra una profundidad de mercado que garantice una ejecución sin riesgo de slippage. Se mantiene la posición en efectivo (USDT) para evitar la exposición a 'cuchillos cayendo' y proteger el capital institucional.",
   "top_candidates": [
     {
       "symbol": "MUBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ASTERUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "AXTIBUSDT",
       "score": 60
     },
     {
@@ -23,8 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "TSLABUSDT",
+      "symbol": "INTCBUSDT",
       "score": 60
+    },
+    {
+      "symbol": "MUUBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "BICOUSDT",
+      "score": 50
     }
   ]
 }
