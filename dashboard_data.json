@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 01:44:20",
+  "updated_at": "2026-08-05 01:46:23",
   "total_balance_usd": 20.08,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de desapalancamiento sistémico con alta correlación negativa. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital, por lo que se opta por una postura defensiva de espera."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La falta de profundidad en el libro de órdenes y la alta volatilidad en el sentimiento de mercado dictan una postura de preservación de capital (HOLD) hasta que se estabilice la estructura de precios."
   }
 }
