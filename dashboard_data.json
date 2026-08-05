@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 21:48:19",
+  "updated_at": "2026-08-05 21:50:24",
   "total_balance_usd": 20.09,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una debilidad sistémica con una correlación bajista predominante. Ningún activo cumple con los criterios de alta convicción (Score >= 65) ni con la profundidad de libro necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es mantenerse en efectivo (Cash-Neutral)."
+    "reasoning": "Ningún activo cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que el comité decide mantener la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo'."
   }
 }
