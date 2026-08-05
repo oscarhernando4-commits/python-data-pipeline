@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 21:00:23",
+  "updated_at": "2026-08-05 21:02:22",
   "total_balance_usd": 20.09,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad de Bids (>= 55%) ni con la convicción técnica necesaria para mitigar el riesgo en un entorno de mercado con Fear & Greed de 27. Se mantiene la liquidez en USDT para evitar pérdidas por alta volatilidad y manipulación."
+    "reasoning": "Debido a la ausencia de activos con un Score Técnico >= 65 y la falta de soporte institucional en el libro de órdenes, el comité ha decidido no ejecutar ninguna operación para preservar el capital frente a la alta volatilidad y el sesgo bajista del mercado."
   }
 }
