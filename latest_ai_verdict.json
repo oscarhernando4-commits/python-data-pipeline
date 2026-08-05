@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 16:42:30",
+  "timestamp": "2026-08-05 16:44:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos elevados, la falta de confirmación en el libro de órdenes y la inestabilidad del mercado actual no cumplen con los estándares de seguridad exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
+    {
+      "symbol": "ASTERUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "AEROUSDT",
+      "score": 85
+    },
     {
       "symbol": "GNOUSDT",
       "score": 85
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     }
   ]
