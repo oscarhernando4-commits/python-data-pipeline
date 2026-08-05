@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-05 12:30:20",
+  "timestamp": "2026-08-05 12:32:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y tendencia clara). La alta tasa de fallos en trades recientes bajo condiciones de mercado neutral obliga a mantener la liquidez en espera de una mejor configuración técnica.",
+  "reasoning": "El comité ha determinado que, a pesar de que varios activos poseen un Score técnico de 75, el entorno de mercado (Fear & Greed 27) y la falta de una dominancia clara en el libro de órdenes (Bids 50%) no cumplen con los criterios estrictos de convicción A+ exigidos por el protocolo de riesgo. Se decide mantener la liquidez en espera de una estructura de mercado más definida.",
   "top_candidates": [
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
       "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "GRAMUSDT",
       "score": 75
     }
   ]
