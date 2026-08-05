@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-05 23:12:18",
+  "timestamp": "2026-08-05 23:14:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y distribución institucional. Ninguno de los candidatos cumple con el umbral de riesgo A+ exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar pérdidas innecesarias en un entorno de baja profundidad y alta volatilidad.",
+  "reasoning": "El mercado se encuentra en un entorno de alta toxicidad con una liquidación coordinada. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la profundidad de libro de órdenes necesaria para garantizar una entrada de bajo riesgo. Se prioriza la preservación de capital sobre la especulación.",
   "top_candidates": [
+    {
+      "symbol": "PENGUUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "HFTUSDT",
+      "score": 60
+    },
     {
       "symbol": "TAOUSDT",
       "score": 60
@@ -15,15 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "ACXUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PENGUUSDT",
+      "symbol": "AMDBUSDT",
       "score": 60
     }
   ]
