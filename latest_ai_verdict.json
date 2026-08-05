@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 16:22:20",
+  "timestamp": "2026-08-05 16:24:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con la totalidad de los requisitos A+ (Score >= 65, Confianza >= 70% y soporte claro en el Orderbook). La alta volatilidad y el sesgo neutral del mercado sugieren que la preservación de capital es la prioridad absoluta en este momento.",
+  "reasoning": "A pesar de los scores técnicos de 85 en ETH y ASTER, el mercado carece de la profundidad de soporte necesaria en el libro de órdenes y la tendencia general es neutral, lo que aumenta el riesgo de pérdidas. Siguiendo la Regla #1 de no perder dinero, el comité decide mantener la liquidez en espera de una señal de alta convicción.",
   "top_candidates": [
+    {
+      "symbol": "ETHUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "score": 85
+    },
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BNBUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
       "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
       "score": 75
     }
   ]
