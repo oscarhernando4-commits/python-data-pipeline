@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-05 16:06:24",
+  "timestamp": "2026-08-05 16:08:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de soporte de ballenas (Bids >= 55%) ni con una confirmación técnica de alta convicción, por lo que se prioriza la preservación del capital.",
+  "reasoning": "A pesar de que varios activos tienen un score técnico de 75, el mercado carece de una dominancia clara en el libro de órdenes y el entorno macro es de alta incertidumbre. Siguiendo la Regla de Oro #1 y #5, el comité decide mantener la liquidez en espera de una señal de convicción A+.",
   "top_candidates": [
     {
+      "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
       "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
+      "symbol": "DOTUSDT",
       "score": 75
     }
   ]
