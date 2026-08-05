@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 13:42:19",
+  "timestamp": "2026-08-05 13:44:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de convicción A+ requerido por el comité. La falta de soporte claro en el libro de órdenes y el entorno macro de miedo extremo dictan una postura de espera (HOLD) para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado por consenso unánime que no existen activos que cumplan con los criterios de alta convicción (Score A+ >= 65) y soporte de liquidez necesario en el libro de órdenes. Se prioriza la preservación del capital ante la incertidumbre macroeconómica y la debilidad técnica observada en los activos analizados.",
   "top_candidates": [
     {
-      "symbol": "TSLABUSDT",
-      "score": 95
+      "symbol": "NBISBUSDT",
+      "score": 80
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "ERAUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "SNXXBUSDT",
+      "score": 65
     },
     {
       "symbol": "BTCUSDT",
-      "score": 90
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SKHYBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "UNIUSDT",
-      "score": 75
+      "score": 60
     }
   ]
 }
