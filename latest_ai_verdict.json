@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 16:38:20",
+  "timestamp": "2026-08-05 16:40:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de la existencia de activos con scores técnicos aceptables, ninguno cumple con el umbral de seguridad de dominancia de Bids (>= 65%) ni con la convicción A+ necesaria para mitigar el riesgo en un entorno de mercado neutral y volátil.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado se encuentra en una fase de alta incertidumbre y baja liquidez, por lo que la estrategia óptima es preservar el capital en USDT.",
   "top_candidates": [
     {
       "symbol": "GNOUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
       "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZECUSDT",
       "score": 75
     }
   ]
