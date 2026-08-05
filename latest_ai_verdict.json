@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 11:54:23",
+  "timestamp": "2026-08-05 11:56:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de purga de manos débiles con alta fragilidad sistémica. Ningún candidato cumple con el umbral estricto de convicción A+ (Score >= 65 y soporte de libro de órdenes > 55%), por lo que la estrategia de protección de capital dicta mantener la liquidez en USDT.",
+  "reasoning": "El mercado actual presenta una fragilidad extrema y una falta de convicción técnica en los activos analizados. Ningún candidato cumple con el umbral de Score A+ (>= 65) ni con la profundidad de mercado necesaria para mitigar el riesgo de slippage, por lo que el comité ha decidido unánimemente mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "ONDOUSDT",
-      "score": 70
-    },
     {
       "symbol": "DASHUSDT",
       "score": 70
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ERAUSDT",
-      "score": 60
-    },
-    {
       "symbol": "APTUSDT",
       "score": 60
+    },
+    {
+      "symbol": "SUNUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "HEIUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "XLMUSDT",
+      "score": 50
     }
   ]
 }
