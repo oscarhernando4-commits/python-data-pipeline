@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 08:06:21",
+  "timestamp": "2026-08-05 08:08:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de calidad A+ (Score >= 65) y la confirmación de liquidez necesaria en el libro de órdenes. El entorno macroeconómico de pánico y la alta probabilidad de 'bull traps' dictan una postura defensiva de espera (HOLD) para proteger el capital institucional.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad técnica. Ninguno de los candidatos analizados, a pesar de sus scores, ofrece una estructura de soporte institucional sólida o una ventaja estadística que justifique el riesgo de capital, por lo que se mantiene la posición en efectivo para preservar el patrimonio.",
   "top_candidates": [
     {
       "symbol": "CRVUSDT",
       "score": 70
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "ADAUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "ERAUSDT",
+      "symbol": "DOTUSDT",
       "score": 60
     }
   ]
