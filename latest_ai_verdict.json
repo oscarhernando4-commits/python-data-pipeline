@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 05:58:19",
+  "timestamp": "2026-08-05 06:00:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de consolidación con alta incertidumbre y falta de soporte institucional claro en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ necesario para mitigar el riesgo de pérdidas, por lo que la estrategia óptima es preservar el capital y esperar una mejor configuración técnica.",
+  "reasoning": "El mercado se encuentra en una fase de 'acumulación selectiva' con alta incertidumbre. Ningún activo cumple con el umbral de convicción A+ exigido por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
-      "symbol": "ICPUSDT",
-      "score": 85
+      "symbol": "BNBUSDT",
+      "score": 75
     },
     {
-      "symbol": "CRVUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "BTCUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "TAOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ICPUSDT",
       "score": 75
     }
   ]
