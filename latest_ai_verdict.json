@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 14:10:21",
+  "timestamp": "2026-08-05 14:12:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia estructural y un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes superior al 55%) necesario para ejecutar una operación de compra, por lo que la estrategia óptima es mantener la liquidez en USDT.",
+  "reasoning": "El comité ha determinado que, a pesar de la fortaleza técnica de BTC y ETH, las condiciones actuales de mercado (Fear 27) y la falta de una dominancia clara en el libro de órdenes no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja convicción.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ZECUSDT",
       "score": 85
     },
     {
@@ -19,11 +15,15 @@
       "score": 85
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "MIRAUSDT",
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "HBARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LTCUSDT",
       "score": 75
     }
   ]
