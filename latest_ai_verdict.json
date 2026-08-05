@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-05 20:54:23",
+  "timestamp": "2026-08-05 20:56:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. La falta de datos de liquidez, sumada a la volatilidad errática y el sesgo neutral, obliga a mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "Ningún activo cumple con el umbral estricto de convicción A+ (Score >= 65 y confirmación de soporte institucional). La alta volatilidad y la falta de profundidad en el libro de órdenes sugieren que el mercado está en una fase de distribución, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
+    {
+      "symbol": "JUPUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
     {
       "symbol": "TAOUSDT",
       "score": 75
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "PENGUUSDT",
-      "score": 75
-    },
-    {
       "symbol": "SUNUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SAHARAUSDT",
       "score": 75
     }
   ]
