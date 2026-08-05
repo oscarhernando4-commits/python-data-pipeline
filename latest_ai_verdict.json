@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 05:06:26",
+  "timestamp": "2026-08-05 05:08:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de datos históricos sólidos en los activos propuestos aumentan el riesgo de pérdida, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de muros de compra institucionales sugieren un riesgo elevado de 'trampa de liquidez', por lo que el comité decide mantener la posición en efectivo.",
   "top_candidates": [
+    {
+      "symbol": "ZROUSDT",
+      "score": 85
+    },
     {
       "symbol": "PUMPUSDT",
       "score": 75
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "ONDOUSDT",
       "score": 75
     },
     {
-      "symbol": "KAITOUSDT",
+      "symbol": "AEROUSDT",
       "score": 75
     },
     {
       "symbol": "AMDBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ZROUSDT",
       "score": 75
     }
   ]
