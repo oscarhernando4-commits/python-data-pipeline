@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 23:14:17",
+  "timestamp": "2026-08-05 23:16:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un entorno de alta toxicidad con una liquidación coordinada. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la profundidad de libro de órdenes necesaria para garantizar una entrada de bajo riesgo. Se prioriza la preservación de capital sobre la especulación.",
+  "reasoning": "El mercado actual presenta un entorno de alta incertidumbre y distribución institucional. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital mediante el mantenimiento de la posición en efectivo.",
   "top_candidates": [
     {
-      "symbol": "PENGUUSDT",
-      "score": 70
+      "symbol": "SHIBUSDT",
+      "score": 60
     },
     {
       "symbol": "HFTUSDT",
       "score": 60
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "ACXUSDT",
       "score": 60
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "PENGUUSDT",
       "score": 60
     },
     {
-      "symbol": "AMDBUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 60
     }
   ]
