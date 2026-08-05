@@ -1,23 +1,11 @@
 {
-  "timestamp": "2026-08-05 10:44:19",
+  "timestamp": "2026-08-05 10:46:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes) en un entorno de mercado incierto, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado presenta una fragilidad sistémica extrema sin divergencias alcistas claras. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que la orden es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' en un entorno de capitulación.",
   "top_candidates": [
-    {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "MIRAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
     {
       "symbol": "APTUSDT",
       "score": 75
@@ -25,6 +13,18 @@
     {
       "symbol": "VIRTUALUSDT",
       "score": 75
+    },
+    {
+      "symbol": "INJUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "NIGHTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 50
     }
   ]
 }
