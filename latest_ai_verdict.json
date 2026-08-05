@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-05 22:26:20",
+  "timestamp": "2026-08-05 22:28:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta fragilidad con una correlación bajista generalizada. Ninguno de los activos analizados alcanza el umbral de calidad A+ (Score >= 65) exigido por el comité. Se prioriza la preservación de capital sobre la especulación en activos de baja liquidez, manteniendo la posición en efectivo (USDT) hasta que las condiciones macro y técnicas mejoren.",
+  "reasoning": "El mercado se encuentra en una fase de distribución agresiva con una falta crítica de soporte institucional. Ninguno de los candidatos analizados alcanza el umbral de calidad A+ (Score >= 65), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar la exposición a 'cuchillos cayendo' y preservar el capital.",
   "top_candidates": [
     {
-      "symbol": "KAITOUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
-      "symbol": "RESOLVUSDT",
+      "symbol": "VANRYUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "KAITOUSDT",
       "score": 60
     },
     {
@@ -19,11 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "POLUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "DEXEUSDT",
+      "symbol": "VICUSDT",
       "score": 50
     }
   ]
