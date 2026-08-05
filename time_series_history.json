@@ -1,12 +1,25 @@
 {
-  "STXUSDT": [
+  "PENDLEUSDT": [
     {
-      "timestamp": "2026-08-05 11:44:12",
-      "price": 0.1343,
-      "score": 10,
-      "rsi": 42.87,
+      "timestamp": "2026-08-05 11:46:13",
+      "price": 1.38,
+      "score": 0,
+      "rsi": 44.86,
       "macd": "Neutral",
-      "volume_surge": 11.08,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "NOMUSDT": [
+    {
+      "timestamp": "2026-08-05 11:46:13",
+      "price": 0.00161,
+      "score": 0,
+      "rsi": 53.81,
+      "macd": "Neutral",
+      "volume_surge": 0.2,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,25 +27,25 @@
   ],
   "JTOUSDT": [
     {
-      "timestamp": "2026-08-05 11:44:12",
+      "timestamp": "2026-08-05 11:46:13",
       "price": 0.5063,
       "score": 0,
-      "rsi": 46.37,
+      "rsi": 46.4,
       "macd": "Neutral",
-      "volume_surge": 0.69,
+      "volume_surge": 0.05,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "PENDLEUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-05 11:44:12",
-      "price": 1.38,
+      "timestamp": "2026-08-05 11:46:13",
+      "price": 0.1342,
       "score": 0,
-      "rsi": 44.85,
+      "rsi": 41.29,
       "macd": "Neutral",
-      "volume_surge": 0.1,
+      "volume_surge": 0.39,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -40,38 +53,12 @@
   ],
   "IMXUSDT": [
     {
-      "timestamp": "2026-08-05 11:44:12",
-      "price": 0.11,
-      "score": 10,
-      "rsi": 43.3,
-      "macd": "Neutral",
-      "volume_surge": 2.91,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "DCRUSDT": [
-    {
-      "timestamp": "2026-08-05 11:44:12",
-      "price": 13.45,
+      "timestamp": "2026-08-05 11:46:13",
+      "price": 0.1099,
       "score": 0,
-      "rsi": 46.53,
+      "rsi": 40.76,
       "macd": "Neutral",
-      "volume_surge": 0.97,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "ORDIUSDT": [
-    {
-      "timestamp": "2026-08-05 11:44:12",
-      "price": 3.363,
-      "score": 0,
-      "rsi": 46.77,
-      "macd": "Neutral",
-      "volume_surge": 0.21,
+      "volume_surge": 0.34,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
