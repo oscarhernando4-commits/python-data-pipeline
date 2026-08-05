@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-05 17:40:22",
+  "timestamp": "2026-08-05 17:42:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de reconfiguración con baja convicción. Ningún activo cumple con el umbral de seguridad de Bids > 65% ni con una estructura técnica que garantice una alta probabilidad de éxito, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Ningún activo cumple con los criterios estrictos de convicción A+ exigidos por el comité. La falta de soporte en el libro de órdenes y la inestabilidad del mercado global dictan una postura de preservación de capital (HOLD) hasta que surja una señal de alta probabilidad.",
   "top_candidates": [
     {
+      "symbol": "CAKEUSDT",
+      "score": 85
+    },
+    {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TRXUSDT",
       "score": 75
     }
   ]
