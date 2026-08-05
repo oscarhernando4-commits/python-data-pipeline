@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 20:34:21",
+  "updated_at": "2026-08-05 20:36:24",
   "total_balance_usd": 20.09,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de distribución técnica con alta volatilidad y falta de soporte institucional claro en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad de dominancia de Bids (>= 55%) ni con la convicción A+ exigida por el comité, por lo que se prioriza la preservación del capital ante la incertidumbre del mercado."
   }
 }

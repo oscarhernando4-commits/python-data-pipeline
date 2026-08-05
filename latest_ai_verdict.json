@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-05 20:34:21",
+  "timestamp": "2026-08-05 20:36:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución técnica con alta volatilidad y falta de soporte institucional claro en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad de dominancia de Bids (>= 55%) ni con la convicción A+ exigida por el comité, por lo que se prioriza la preservación del capital ante la incertidumbre del mercado.",
   "top_candidates": [
     {
       "symbol": "SUIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "KAITOUSDT",
+      "symbol": "VETUSDT",
       "score": 75
     },
     {
       "symbol": "CRVUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUNUSDT",
       "score": 75
     }
   ]
