@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-05 11:14:29",
+  "timestamp": "2026-08-05 11:16:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que se prioriza la preservación del capital en un entorno de alta volatilidad.",
+  "reasoning": "El mercado presenta una capitulación sistémica y falta de convicción institucional. Ningún activo cumple con los criterios de riesgo A+ (Score >= 65), por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar pérdidas por volatilidad residual.",
   "top_candidates": [
     {
-      "symbol": "ERAUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "COTIUSDT",
+      "symbol": "UNIUSDT",
       "score": 60
     },
     {
       "symbol": "ETHFIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ERAUSDT",
       "score": 60
     },
     {
