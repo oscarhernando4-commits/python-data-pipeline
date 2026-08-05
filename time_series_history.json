@@ -1,12 +1,38 @@
 {
   "PENDLEUSDT": [
     {
-      "timestamp": "2026-08-05 21:54:12",
+      "timestamp": "2026-08-05 21:56:37",
       "price": 1.4,
       "score": 0,
       "rsi": 47.11,
       "macd": "Neutral",
       "volume_surge": 0.03,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-05 21:56:37",
+      "price": 2.8e-06,
+      "score": 50,
+      "rsi": 52.89,
+      "macd": "Neutral",
+      "volume_surge": 0.13,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "INTCBUSDT": [
+    {
+      "timestamp": "2026-08-05 21:56:37",
+      "price": 100.56,
+      "score": 0,
+      "rsi": 43.85,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

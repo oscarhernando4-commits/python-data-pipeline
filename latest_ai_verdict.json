@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-05 21:54:22",
+  "timestamp": "2026-08-05 21:56:46",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de riesgo sistémico elevado sin confirmación de acumulación institucional. Ningún activo cumple con el umbral de calidad A+ requerido por el comité, por lo que la estrategia óptima es la preservación del capital mediante el mantenimiento de la liquidez en USDT.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una asimetría de pánico sistémico. Ningún activo analizado alcanza el score técnico mínimo de 65 ni presenta una profundidad de libro de órdenes que garantice una entrada de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja liquidez.",
   "top_candidates": [
     {
-      "symbol": "ADAUSDT",
-      "score": 60
+      "symbol": "ZAMAUSDT",
+      "score": 70
     },
     {
-      "symbol": "ZAMAUSDT",
+      "symbol": "ADAUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "EULUSDT",
-      "score": 50
+      "symbol": "KAITOUSDT",
+      "score": 60
     },
     {
-      "symbol": "VICUSDT",
+      "symbol": "EULUSDT",
       "score": 50
     }
   ]
