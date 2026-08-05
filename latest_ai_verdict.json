@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-05 13:32:21",
+  "timestamp": "2026-08-05 13:34:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación con falta de volumen institucional real en los activos analizados. Ningún candidato alcanza el umbral de Score 65 requerido por el Comité, por lo que la estrategia óptima es mantener la posición en efectivo (USDT) para evitar pérdidas en un entorno de alta volatilidad bajista.",
+  "reasoning": "El mercado presenta una toxicidad sistémica con una correlación bajista generalizada. Ninguno de los candidatos analizados cumple con el umbral de convicción A+ (Score >= 65) exigido por el comité. Se prioriza la preservación del capital y se bloquea cualquier intento de compra hasta que las condiciones macroeconómicas y técnicas mejoren significativamente.",
   "top_candidates": [
     {
-      "symbol": "AXTIBUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "MUBUSDT",
+      "symbol": "PAXGUSDT",
       "score": 60
     },
     {
-      "symbol": "AMDBUSDT",
+      "symbol": "XAUTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "MUBUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "DRAMBUSDT",
+      "symbol": "INTCBUSDT",
       "score": 60
     }
   ]
