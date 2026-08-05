@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 13:26:21",
+  "timestamp": "2026-08-05 13:28:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad sistémica. Ninguno de los activos analizados cumple con los criterios de calidad A+ exigidos por el comité. La prioridad absoluta es la preservación del capital, por lo que se mantiene la posición en efectivo (USDT) hasta que las condiciones macro y técnicas mejoren significativamente.",
+  "reasoning": "El mercado presenta una distribución institucional masiva y falta de profundidad en el libro de órdenes para los candidatos analizados. Ningún activo cumple con los criterios estrictos de convicción A+ del comité, por lo que la estrategia óptima es el resguardo de capital (HOLD) hasta que la estructura de mercado se estabilice.",
   "top_candidates": [
     {
+      "symbol": "MUBUSDT",
+      "score": 80
+    },
+    {
+      "symbol": "SOXLBUSDT",
+      "score": 80
+    },
+    {
+      "symbol": "DRAMBUSDT",
+      "score": 80
+    },
+    {
       "symbol": "LTCUSDT",
-      "score": 60
+      "score": 70
     },
     {
-      "symbol": "HBARUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "BIOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SUNUSDT",
-      "score": 60
+      "symbol": "NVDABUSDT",
+      "score": 70
     }
   ]
 }
