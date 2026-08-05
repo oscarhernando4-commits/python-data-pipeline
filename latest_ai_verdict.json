@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-05 19:00:21",
+  "timestamp": "2026-08-05 19:02:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) en el entorno actual de mercado. La alta volatilidad y la falta de profundidad en el libro de órdenes presentan un riesgo inaceptable para el capital, por lo que se prioriza la preservación del mismo mediante una posición de espera (HOLD).",
+  "reasoning": "El mercado se encuentra en una fase de fragmentación defensiva con alta incertidumbre. Ninguno de los candidatos cumple con el requisito de soporte de ballenas (Bids > 55%) ni con la convicción A+ exigida por el comité. Se prioriza la preservación del capital sobre la especulación en activos de baja profundidad.",
   "top_candidates": [
     {
       "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "ERAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUNUSDT",
       "score": 75
     },
     {
@@ -19,12 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "SYNUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "VICUSDT",
-      "score": 65
+      "symbol": "JUPUSDT",
+      "score": 75
     }
   ]
 }
