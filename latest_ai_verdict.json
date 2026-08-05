@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-05 12:14:20",
+  "timestamp": "2026-08-05 12:16:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de alta volatilidad y baja convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad exigido (Score >= 65 con soporte de libro de órdenes claro), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
-    {
-      "symbol": "DASHUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
     {
       "symbol": "UNIUSDT",
       "score": 75
@@ -23,7 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "KAITOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "VIRTUALUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SPYBUSDT",
       "score": 75
     }
   ]
