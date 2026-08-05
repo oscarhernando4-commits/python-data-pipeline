@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-05 20:28:27",
+  "timestamp": "2026-08-05 20:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la ausencia de una dominancia clara en el libro de órdenes (Bids > 55%) y la alta probabilidad de 'bull traps' en el sector de alta volatilidad, obligan al comité a mantener una postura de espera para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta una estructura de alta incertidumbre con una correlación fragmentada y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ requerido por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUIUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUIUSDT",
       "score": 75
     }
   ]

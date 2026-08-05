@@ -1,12 +1,38 @@
 {
   "HYPERUSDT": [
     {
-      "timestamp": "2026-08-05 20:28:12",
+      "timestamp": "2026-08-05 20:30:12",
       "price": 0.06,
       "score": 45,
       "rsi": 57.58,
       "macd": "Neutral",
-      "volume_surge": 0.92,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "RESOLVUSDT": [
+    {
+      "timestamp": "2026-08-05 20:30:12",
+      "price": 0.01724,
+      "score": 15,
+      "rsi": 44.91,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SPYBUSDT": [
+    {
+      "timestamp": "2026-08-05 20:30:12",
+      "price": 771.35,
+      "score": 15,
+      "rsi": 36.91,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,25 +40,12 @@
   ],
   "PENDLEUSDT": [
     {
-      "timestamp": "2026-08-05 20:28:12",
-      "price": 1.425,
+      "timestamp": "2026-08-05 20:30:12",
+      "price": 1.429,
       "score": 50,
-      "rsi": 61.72,
+      "rsi": 63.42,
       "macd": "Neutral",
-      "volume_surge": 0.84,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "BONKUSDT": [
-    {
-      "timestamp": "2026-08-05 20:28:12",
-      "price": 2.79e-06,
-      "score": 15,
-      "rsi": 47.82,
-      "macd": "Neutral",
-      "volume_surge": 0.5,
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -40,25 +53,25 @@
   ],
   "SAHARAUSDT": [
     {
-      "timestamp": "2026-08-05 20:28:12",
+      "timestamp": "2026-08-05 20:30:12",
       "price": 0.00842,
       "score": 45,
       "rsi": 52.71,
       "macd": "Neutral",
-      "volume_surge": 0.33,
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "NBISBUSDT": [
+  "JTOUSDT": [
     {
-      "timestamp": "2026-08-05 20:28:12",
-      "price": 216.82,
-      "score": 15,
-      "rsi": 34.95,
+      "timestamp": "2026-08-05 20:30:12",
+      "price": 0.5182,
+      "score": 45,
+      "rsi": 59.49,
       "macd": "Neutral",
-      "volume_surge": 0.89,
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
