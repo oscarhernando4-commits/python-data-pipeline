@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 10:32:20",
+  "timestamp": "2026-08-05 10:34:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragilidad sistémica con una alta correlación bajista. Ninguno de los candidatos cumple con los requisitos de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia óptima es mantener la liquidez y evitar la exposición a activos que operan bajo presión de venta constante.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
-      "score": 75
+      "symbol": "HEIUSDT",
+      "score": 60
     },
     {
       "symbol": "VIRTUALUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SHIBUSDT",
-      "score": 65
+      "score": 60
     },
     {
       "symbol": "BCHUSDT",
-      "score": 65
+      "score": 50
     },
     {
-      "symbol": "LDOUSDT",
-      "score": 65
+      "symbol": "PEPEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "INJUSDT",
+      "score": 50
     }
   ]
 }
