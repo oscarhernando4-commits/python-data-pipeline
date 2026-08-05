@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-05 20:56:22",
+  "updated_at": "2026-08-05 20:58:21",
   "total_balance_usd": 20.09,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ningún activo cumple con el umbral estricto de convicción A+ (Score >= 65 y confirmación de soporte institucional). La alta volatilidad y la falta de profundidad en el libro de órdenes sugieren que el mercado está en una fase de distribución, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad."
+    "reasoning": "Ningún candidato cumple con el umbral estricto de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y volumen confirmado). El mercado se encuentra en una fase de distribución silenciosa y alta incertidumbre, por lo que la estrategia institucional es preservar el capital en USDT."
   }
 }
