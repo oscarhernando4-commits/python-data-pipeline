@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-05 16:24:22",
+  "timestamp": "2026-08-05 16:26:29",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de los scores técnicos de 85 en ETH y ASTER, el mercado carece de la profundidad de soporte necesaria en el libro de órdenes y la tendencia general es neutral, lo que aumenta el riesgo de pérdidas. Siguiendo la Regla #1 de no perder dinero, el comité decide mantener la liquidez en espera de una señal de alta convicción.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
-    {
-      "symbol": "ETHUSDT",
-      "score": 85
-    },
     {
       "symbol": "ASTERUSDT",
       "score": 85
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TAOUSDT",
       "score": 75
     }
   ]
