@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-05 15:56:23",
+  "timestamp": "2026-08-05 15:58:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La falta de profundidad en el libro de órdenes y la alta volatilidad en el entorno de miedo actual dictan una postura de preservación de capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y tendencia confirmada). El mercado presenta una fragmentación que aumenta el riesgo de 'trampas de valor', por lo que la estrategia institucional es mantener la liquidez en espera de una mejor configuración técnica.",
   "top_candidates": [
     {
-      "symbol": "SYNUSDT",
+      "symbol": "DOTUSDT",
       "score": 75
     },
     {
-      "symbol": "HEIUSDT",
-      "score": 65
+      "symbol": "ALGOUSDT",
+      "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
-      "score": 65
+      "symbol": "NEXOUSDT",
+      "score": 75
     },
     {
-      "symbol": "DOTUSDT",
-      "score": 65
+      "symbol": "FILUSDT",
+      "score": 70
     },
     {
-      "symbol": "GIGGLEUSDT",
+      "symbol": "SYNUSDT",
       "score": 65
     }
   ]
