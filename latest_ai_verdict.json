@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-05 01:00:25",
+  "timestamp": "2026-08-05 01:02:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de liquidación sistémica sin soporte institucional claro. Ningún activo cumple con el umbral de calidad A+ (Score >= 65) exigido por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la posición en efectivo (HOLD).",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y aversión al riesgo. Ninguno de los activos analizados cumple con los criterios estrictos de calidad A+ exigidos por el comité. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
-    {
-      "symbol": "LTCUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "BNBUSDT",
-      "score": 60
-    },
     {
       "symbol": "XAUTUSDT",
       "score": 60
@@ -23,8 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "DEXEUSDT",
-      "score": 60
+      "symbol": "POLUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "HOMEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "BANKUSDT",
+      "score": 50
     }
   ]
 }
