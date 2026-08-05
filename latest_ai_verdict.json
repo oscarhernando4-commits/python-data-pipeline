@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-05 11:32:21",
+  "timestamp": "2026-08-05 11:34:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual se encuentra en un estado de distribución por pánico sin activos que cumplan con el umbral de calidad A+ requerido. Se prioriza la protección del capital sobre la ejecución de operaciones de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una ausencia total de activos que cumplan con el umbral de seguridad A+ (Score >= 65). La falta de profundidad en el libro de órdenes y la fragilidad macroeconómica dictan una postura defensiva para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "UNIUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "APTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SUNUSDT",
+      "symbol": "DASHUSDT",
       "score": 60
     },
     {
       "symbol": "SPYBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SUNUSDT",
       "score": 60
     }
   ]
