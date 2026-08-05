@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-05 17:58:19",
+  "timestamp": "2026-08-05 18:00:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión con un sentimiento de miedo predominante. Ninguno de los candidatos analizados supera el umbral de convicción A+ necesario para garantizar la Regla #1 (No perder dinero). Se mantiene la liquidez en espera de una estructura de mercado más clara y una mayor dominancia de compradores en el libro de órdenes.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes y la ausencia de un volumen de confirmación (Volume Surge) invalidan la entrada. Se prioriza la preservación del capital ante un entorno de mercado que no ofrece una ventaja estadística clara.",
   "top_candidates": [
     {
-      "symbol": "SKYUSDT",
-      "score": 85
+      "symbol": "BTCUSDT",
+      "score": 75
     },
     {
-      "symbol": "BTCUSDT",
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TRXUSDT",
       "score": 75
     }
   ]
