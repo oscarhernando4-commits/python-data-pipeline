@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 09:58:18",
+  "timestamp": "2026-08-05 10:00:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de capitulación técnica donde los activos con mayor potencial carecen de la fuerza institucional necesaria (Score < 65). Para evitar el riesgo de 'trampas de toros' y proteger el capital, el comité ha decidido no ejecutar ninguna operación, manteniendo la exposición neta en cero.",
+  "reasoning": "El comité ha determinado que el mercado actual se encuentra en una fase de distribución forzada y alta incertidumbre. Dado que ningún activo cumple con el umbral de calidad A+ (Score >= 65) y la falta de soporte institucional en el libro de órdenes, la decisión estratégica es preservar el capital y evitar la exposición hasta que las condiciones macro mejoren.",
   "top_candidates": [
-    {
-      "symbol": "LTCUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 60
-    },
     {
       "symbol": "TAOUSDT",
       "score": 60
     },
     {
-      "symbol": "ENAUSDT",
+      "symbol": "LTCUSDT",
       "score": 60
     },
     {
       "symbol": "ALGOUSDT",
       "score": 60
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "QNTUSDT",
+      "score": 55
     }
   ]
 }
