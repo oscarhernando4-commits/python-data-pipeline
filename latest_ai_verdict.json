@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-05 16:04:20",
+  "timestamp": "2026-08-05 16:06:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de purga de manos débiles y alta incertidumbre, por lo que la estrategia institucional es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de soporte de ballenas (Bids >= 55%) ni con una confirmación técnica de alta convicción, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "GNOUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "JTOUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "SPYBUSDT",
-      "score": 70
+      "symbol": "TAOUSDT",
+      "score": 75
     },
     {
-      "symbol": "HEIUSDT",
-      "score": 65
+      "symbol": "GRAMUSDT",
+      "score": 75
     },
     {
-      "symbol": "SYNUSDT",
-      "score": 65
+      "symbol": "SOLUSDT",
+      "score": 75
     }
   ]
 }
