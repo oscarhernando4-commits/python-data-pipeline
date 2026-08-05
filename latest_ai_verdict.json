@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-05 21:26:22",
+  "timestamp": "2026-08-05 21:28:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Debido a que ningún activo alcanza el umbral de Score Técnico de 65 y el entorno macroeconómico es de alta fragilidad, el comité ha decidido mantener la liquidez en espera de una señal de acumulación institucional real.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con scores mediocres y falta de soporte institucional. Ningún activo cumple con los criterios de alta convicción (Score >= 65) establecidos por el comité, por lo que la decisión unánime es mantener la liquidez en USDT para evitar pérdidas en un entorno de alta incertidumbre.",
   "top_candidates": [
-    {
-      "symbol": "VANRYUSDT",
-      "score": 60
-    },
     {
       "symbol": "SAHARAUSDT",
       "score": 60
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "KITEUSDT",
+      "symbol": "EULUSDT",
       "score": 50
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "DEXEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "KITEUSDT",
       "score": 50
     }
   ]

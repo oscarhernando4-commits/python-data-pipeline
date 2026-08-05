@@ -1,15 +1,54 @@
 {
-  "NBISBUSDT": [
+  "INTCBUSDT": [
     {
-      "timestamp": "2026-08-05 21:26:13",
-      "price": 216.33,
+      "timestamp": "2026-08-05 21:28:11",
+      "price": 101.04,
       "score": 0,
-      "rsi": 34.84,
+      "rsi": 47.46,
       "macd": "Neutral",
-      "volume_surge": 0.03,
+      "volume_surge": 0.16,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "RESOLVUSDT": [
+    {
+      "timestamp": "2026-08-05 21:28:11",
+      "price": 0.01747,
+      "score": 60,
+      "rsi": 51.23,
+      "macd": "Neutral",
+      "volume_surge": 0.14,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-05 21:28:11",
+      "price": 0.133,
+      "score": 0,
+      "rsi": 39.29,
+      "macd": "Neutral",
+      "volume_surge": 0.69,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-05 21:28:11",
+      "price": 1.395,
+      "score": 0,
+      "rsi": 44.27,
+      "macd": "Neutral",
+      "volume_surge": 0.32,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}}
+}
