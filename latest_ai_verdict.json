@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-06 02:04:15",
+  "timestamp": "2026-08-06 02:06:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un estancamiento sistémico con una falta generalizada de convicción institucional. Ningún activo cumple con los criterios de riesgo A+ exigidos por el comité, por lo que la decisión estratégica es proteger el capital y esperar una mejor configuración de mercado.",
+  "reasoning": "El comité ha determinado que el mercado carece de la convicción técnica y la profundidad de liquidez necesarias para ejecutar una operación de compra. Todos los candidatos fallan en el umbral de Score Técnico A+ (>= 65), y el entorno macro de miedo extremo sugiere que la preservación del capital es la prioridad absoluta.",
   "top_candidates": [
     {
-      "symbol": "PAXGUSDT",
-      "score": 60
-    },
-    {
       "symbol": "NEARUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
@@ -25,6 +17,14 @@
     {
       "symbol": "NEXOUSDT",
       "score": 60
+    },
+    {
+      "symbol": "SUNUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SUIUSDT",
+      "score": 55
     }
   ]
 }
