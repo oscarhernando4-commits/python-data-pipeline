@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-06 07:26:18",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de pánico extremo. Ninguno de los candidatos cumple con el umbral de dominancia de Bids (>55%) ni con la robustez histórica necesaria para garantizar una operación de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
+  "timestamp": "2026-08-06 07:28:22",
+  "selected_symbol": "AXSUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "Tras deliberar sobre el pánico extremo del mercado, el comité ha identificado a AXSUSDT como el único activo con la fuerza técnica (Score 85) y el volumen institucional necesario para justificar una posición de compra, priorizando la protección del capital mediante un Trailing Stop dinámico.",
   "top_candidates": [
+    {
+      "symbol": "AXSUSDT",
+      "score": 85
+    },
     {
       "symbol": "BCHUSDT",
       "score": 75
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
+      "symbol": "ETCUSDT",
+      "score": 75
+    },
+    {
       "symbol": "ASTERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AXSUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DASHUSDT",
       "score": 75
     }
   ]
