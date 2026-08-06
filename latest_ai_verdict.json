@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 04:54:21",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha decidido por unanimidad mantener la posición en efectivo (HOLD). A pesar de que CRVUSDT tiene un score técnico alto, la falta de profundidad en el libro de órdenes y el entorno de 'Pánico Extremo' invalidan la entrada bajo nuestra estricta política de gestión de riesgo.",
+  "timestamp": "2026-08-06 04:56:15",
+  "selected_symbol": "CRVUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "Tras deliberar, el comité identifica a CRVUSDT como el activo con mayor fortaleza relativa y respaldo sectorial. A pesar del miedo macro, el volumen institucional y el score técnico de 85/100 justifican una entrada long con gestión de riesgo estricta, evitando los activos de baja capitalización que han mostrado pérdidas en simulaciones pasadas.",
   "top_candidates": [
     {
       "symbol": "CRVUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "BABYUSDT",
-      "score": 75
-    },
-    {
       "symbol": "ETHUSDT",
       "score": 75
     },
     {
       "symbol": "UNIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
