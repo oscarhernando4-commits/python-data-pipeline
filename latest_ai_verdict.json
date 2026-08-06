@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-06 09:52:19",
+  "timestamp": "2026-08-06 09:54:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un estancamiento sistémico con una alta probabilidad de pérdidas. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65) exigido por el comité, por lo que la estrategia óptima es la inacción para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "El comité ha determinado que el mercado actual presenta un riesgo sistémico elevado y una falta de activos con fuerza relativa técnica (Score < 65). Siguiendo la Regla de Oro #1, se ha decidido no ejecutar ninguna operación para evitar la exposición a 'cuchillos cayendo' y proteger el capital institucional.",
   "top_candidates": [
     {
       "symbol": "POLUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "REUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TLMUSDT",
       "score": 60
     },
     {
@@ -25,6 +17,14 @@
     {
       "symbol": "DOGEUSDT",
       "score": 55
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 50
     }
   ]
 }
