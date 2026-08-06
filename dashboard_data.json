@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 09:20:22",
+  "updated_at": "2026-08-06 09:22:20",
   "total_balance_usd": 20.07,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de pánico extremo. Ninguno de los candidatos cumple con el umbral estricto de Score A+ (>= 65) combinado con una profundidad de libro de órdenes que asegure una entrada sin riesgo de slippage o flash crash. Se prioriza la preservación del capital sobre la especulación."
+    "reasoning": "A pesar de que algunos activos como XAUT y PAXG poseen un score técnico de 75, la ausencia de datos de profundidad en el libro de órdenes y el entorno de miedo extremo (25) invalidan la convicción A+ requerida por el comité. Se prioriza la preservación del capital sobre la especulación en un mercado con alta volatilidad y baja liquidez."
   }
 }
