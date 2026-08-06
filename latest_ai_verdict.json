@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-06 00:56:20",
+  "timestamp": "2026-08-06 00:58:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral estricto de Score >= 65 combinado con una dominancia de Bids > 55% y una estructura técnica alcista confirmada; por tanto, se prioriza la preservación del capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de Score Técnico >= 65 y confirmación de volumen institucional. El mercado se encuentra en una fase de alta incertidumbre y riesgo sistémico, por lo que el comité ha decidido unánimemente mantener la posición en efectivo para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "SNXXBUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ATOMUSDT",
       "score": 70
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "PEPEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SKYUSDT",
       "score": 60
     }
   ]
