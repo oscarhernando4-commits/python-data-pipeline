@@ -1,26 +1,26 @@
 {
-  "timestamp": "2026-08-06 10:36:28",
+  "timestamp": "2026-08-06 10:38:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica sin activos que cumplan con los criterios de fuerza relativa y soporte institucional necesarios para una ejecución segura, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los requisitos mínimos de seguridad y rentabilidad. Ningún activo supera el umbral de score 65, y la alta volatilidad bajista junto con la falta de soporte institucional en el libro de órdenes hace que cualquier operación sea de alto riesgo. Se prioriza la protección del capital sobre la ejecución de trades especulativos.",
   "top_candidates": [
+    {
+      "symbol": "ADAUSDT",
+      "score": 60
+    },
     {
       "symbol": "POLUSDT",
       "score": 60
     },
     {
+      "symbol": "TLMUSDT",
+      "score": 60
+    },
+    {
       "symbol": "JTOUSDT",
       "score": 55
-    },
-    {
-      "symbol": "ERAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ADAUSDT",
-      "score": 50
     },
     {
       "symbol": "BABYUSDT",
