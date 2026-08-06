@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-06 08:36:26",
+  "timestamp": "2026-08-06 08:38:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, el comité ha determinado que, a pesar de la existencia de activos con un score técnico de 75, ninguno cumple con la regla de oro de convicción A+ ni con la dominancia de soporte en el libro de órdenes necesaria para mitigar el riesgo en un entorno de pánico extremo.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital en el entorno actual de alta volatilidad y capitulación de altcoins.",
   "top_candidates": [
     {
-      "symbol": "ETHUSDT",
+      "symbol": "PAXGUSDT",
       "score": 75
     },
     {
       "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PAXGUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "POLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZROUSDT",
       "score": 75
     }
   ]
