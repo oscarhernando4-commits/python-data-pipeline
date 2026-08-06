@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 00:54:16",
+  "updated_at": "2026-08-06 00:56:20",
   "total_balance_usd": 20.07,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una divergencia estructural y falta de convicción en los activos analizados. Ningún candidato cumple con el umbral de Score Técnico >= 65 ni con la confirmación de liquidez necesaria en el Orderbook. Se prioriza la preservación de capital ante la alta probabilidad de una trampa de liquidez."
+    "reasoning": "Ningún activo cumple con el umbral estricto de Score >= 65 combinado con una dominancia de Bids > 55% y una estructura técnica alcista confirmada; por tanto, se prioriza la preservación del capital."
   }
 }
