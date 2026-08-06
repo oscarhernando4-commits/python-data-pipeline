@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-06 03:52:20",
+  "timestamp": "2026-08-06 03:54:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado exhibe una fragilidad extrema y una falta de convicción institucional. Ningún activo cumple con los criterios de riesgo A+ establecidos por el comité, por lo que la decisión estratégica es proteger el capital y esperar una estabilización clara de la tendencia.",
+  "reasoning": "El mercado presenta una configuración de alta incertidumbre y debilidad estructural. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ (Score >= 65) exigido por el comité, y la falta de profundidad en el libro de órdenes aumenta el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de capitulación.",
   "top_candidates": [
     {
-      "symbol": "BABYUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "NEARUSDT",
+      "symbol": "BCHUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "NEARUSDT",
       "score": 60
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "WLFIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "MORPHOUSDT",
       "score": 60
     }
   ]
