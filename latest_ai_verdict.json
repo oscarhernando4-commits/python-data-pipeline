@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-06 06:30:23",
+  "timestamp": "2026-08-06 06:32:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%). La alta volatilidad y el sentimiento de pánico extremo, sumado a la falta de muros de soporte claros, dictan una postura de preservación de capital (HOLD) para evitar pérdidas en un mercado de alta incertidumbre.",
+  "reasoning": "El comité ha determinado por consenso unánime que ningún activo cumple con los requisitos de alta convicción (Score >= 65 y Bids > 55%) necesarios para operar en un entorno de mercado de 'Miedo Extremo'. Se prioriza la preservación del capital sobre la ejecución táctica en activos de baja liquidez.",
   "top_candidates": [
+    {
+      "symbol": "AVAXUSDT",
+      "score": 75
+    },
     {
       "symbol": "ASTERUSDT",
       "score": 75
@@ -15,16 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "XRPUSDT",
-      "score": 65
+      "symbol": "MMTUSDT",
+      "score": 75
     },
     {
-      "symbol": "SYNUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "BANKUSDT",
-      "score": 65
+      "symbol": "VETUSDT",
+      "score": 75
     }
   ]
 }
