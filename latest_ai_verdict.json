@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 03:08:17",
+  "timestamp": "2026-08-06 03:10:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score A+ (>= 65) ni con la confirmación de profundidad en el libro de órdenes, lo que obliga a mantener la liquidez en espera de una estructura de mercado más favorable.",
+  "reasoning": "El comité ha determinado que el entorno de mercado actual es de alta volatilidad y riesgo sistémico. Ningún activo cumple con los criterios estrictos de calidad A+ (Score >= 65) ni presenta una estructura de libro de órdenes que garantice una probabilidad de éxito superior al 70%. Se prioriza la protección del capital frente a la inactividad operativa.",
   "top_candidates": [
     {
       "symbol": "POLUSDT",
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
+      "symbol": "VANRYUSDT",
+      "score": 60
+    },
+    {
       "symbol": "BABYUSDT",
       "score": 60
     },
     {
       "symbol": "NVDABUSDT",
       "score": 60
-    },
-    {
-      "symbol": "AAVEUSDT",
-      "score": 55
     }
   ]
 }
