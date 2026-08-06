@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-06 00:26:20",
+  "timestamp": "2026-08-06 00:28:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con los criterios de calidad A+ (Score >= 65) ni con la profundidad de liquidez necesaria en el libro de órdenes. Ante la incertidumbre macro y la alta probabilidad de 'trampas de valor' observada en el historial, la decisión institucional es mantener la posición en efectivo (USDT) para evitar pérdidas innecesarias.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de Score Técnico A+ (>= 65) combinado con una dominancia de Bids superior al 55%. El entorno de mercado actual es de alta fragilidad y el riesgo de 'falling knives' es elevado, por lo que la estrategia de preservación de capital es la única opción autorizada.",
   "top_candidates": [
     {
-      "symbol": "ETCUSDT",
+      "symbol": "SNXXBUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "MORPHOUSDT",
       "score": 70
     },
     {
@@ -15,15 +19,11 @@
       "score": 70
     },
     {
-      "symbol": "SHIBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 60
-    },
-    {
       "symbol": "EULUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SHIBUSDT",
       "score": 60
     }
   ]
