@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-06 12:50:19",
+  "timestamp": "2026-08-06 12:52:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de calidad A+ (Score >= 65) ni con las condiciones de seguridad necesarias para operar en un entorno de pánico extremo. Se prioriza la protección de la liquidez total hasta que el mercado muestre una estructura de acumulación institucional clara.",
+  "reasoning": "El mercado actual presenta una estructura de capitulación sistémica. Ninguno de los activos analizados cumple con el umbral de Score Técnico A+ (>= 65) ni con la confirmación de soporte institucional en el libro de órdenes. La estrategia prioritaria es la preservación de capital en USD hasta que el ratio de activos fuertes supere el 15% del universo analizado.",
   "top_candidates": [
-    {
-      "symbol": "VIRTUALUSDT",
-      "score": 60
-    },
     {
       "symbol": "OGNUSDT",
       "score": 60
@@ -19,11 +15,15 @@
       "score": 55
     },
     {
-      "symbol": "NEARUSDT",
-      "score": 50
+      "symbol": "VIRTUALUSDT",
+      "score": 55
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "ARBUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "NEARUSDT",
       "score": 50
     }
   ]
