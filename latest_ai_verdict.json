@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-06 00:00:19",
+  "timestamp": "2026-08-06 00:02:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una correlación bajista predominante. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la profundidad de liquidez necesaria para una ejecución segura. Se prioriza la preservación de capital sobre la búsqueda de alfa en un entorno de alta volatilidad y baja convicción.",
+  "reasoning": "El mercado actual presenta una correlación negativa masiva y una falta de convicción institucional. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la decisión estratégica es mantener la liquidez en USDT para evitar la exposición a una posible liquidación sistémica.",
   "top_candidates": [
     {
       "symbol": "SHIBUSDT",
       "score": 60
     },
     {
-      "symbol": "ACXUSDT",
+      "symbol": "POLUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TRUMPUSDT",
       "score": 60
     },
     {
@@ -21,10 +25,6 @@
     {
       "symbol": "BONKUSDT",
       "score": 60
-    },
-    {
-      "symbol": "FETUSDT",
-      "score": 55
     }
   ]
 }
