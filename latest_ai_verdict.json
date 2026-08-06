@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-06 14:00:23",
+  "timestamp": "2026-08-06 14:02:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de parálisis sistémica sin activos que cumplan con el umbral de calidad A+ (Score >= 65). Ante la ausencia de una ventaja estadística clara y la alta volatilidad, la decisión institucional es mantener la neutralidad total para proteger el capital.",
+  "reasoning": "Tras analizar los candidatos, ninguno alcanza el umbral de Score técnico de 65/100 ni presenta una ventaja clara en el libro de órdenes. Ante la persistencia de un entorno de 'Extreme Fear' y la alta tasa de fallos en trades recientes, el comité decide mantener la liquidez en espera de una estructura de mercado más clara y segura.",
   "top_candidates": [
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "TRXUSDT",
       "score": 60
     },
     {
-      "symbol": "KITEUSDT",
+      "symbol": "PAXGUSDT",
       "score": 60
     },
     {
@@ -19,12 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "GNOUSDT",
+      "symbol": "AEROUSDT",
       "score": 60
     },
     {
-      "symbol": "AVAXUSDT",
-      "score": 55
+      "symbol": "GNOUSDT",
+      "score": 60
     }
   ]
 }
