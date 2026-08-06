@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 08:56:21",
+  "timestamp": "2026-08-06 08:58:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de liquidez y volumen). La disparidad entre el miedo minorista y la acumulación institucional sugiere un mercado de alta incertidumbre, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "Ningún candidato cumple con el umbral estricto de convicción A+ (Score >= 65) y la confirmación de soporte institucional en el libro de órdenes. Ante la volatilidad y el sentimiento de miedo extremo, la estrategia de preservación de capital es prioritaria.",
   "top_candidates": [
     {
       "symbol": "LUNCUSDT",
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     }
   ]
