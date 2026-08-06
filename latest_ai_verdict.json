@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-06 08:14:20",
+  "timestamp": "2026-08-06 08:16:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta fragilidad sistémica. Ningún activo cumple con el umbral de Score Técnico >= 65 ni con la profundidad de mercado necesaria para una ejecución segura. Se prioriza la protección del capital (Cash is King) hasta que el sentimiento de mercado se estabilice y aparezcan configuraciones de alta probabilidad.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica donde la mayoría de los activos no cumplen con el umbral de calidad A+ (Score >= 65). La falta de soporte institucional claro en el libro de órdenes y la alta probabilidad de pérdidas basada en el historial de simulaciones dictan una postura de preservación de capital total.",
   "top_candidates": [
-    {
-      "symbol": "POLUSDT",
-      "score": 70
-    },
     {
       "symbol": "PAXGUSDT",
       "score": 60
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "AXSUSDT",
+      "symbol": "POLUSDT",
       "score": 60
     },
     {
       "symbol": "ZROUSDT",
       "score": 60
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 50
     }
   ]
 }
