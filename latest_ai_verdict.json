@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 00:14:15",
+  "timestamp": "2026-08-06 00:16:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los requisitos estrictos de seguridad y rentabilidad. Ningún activo presenta un Score A+ (>=65) con confirmación de liquidez, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación sistémica con alta correlación bajista. Ningún activo cumple con el umbral de Score Técnico A+ (>= 65) ni con la dominancia de Bids necesaria para garantizar una entrada segura. Se prioriza la preservación del capital sobre la especulación en un entorno de 'trampa de valor'.",
   "top_candidates": [
     {
       "symbol": "SNXXBUSDT",
       "score": 70
     },
     {
+      "symbol": "LTCUSDT",
+      "score": 60
+    },
+    {
       "symbol": "SHIBUSDT",
-      "score": 70
+      "score": 60
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 70
+      "symbol": "ETCUSDT",
+      "score": 60
     },
     {
-      "symbol": "CRVUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "EULUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 60
     }
   ]
