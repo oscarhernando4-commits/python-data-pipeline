@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 00:50:17",
+  "updated_at": "2026-08-06 00:52:18",
   "total_balance_usd": 20.07,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de liquidación defensiva con un sentimiento de miedo extremo. Ninguno de los candidatos cumple con el umbral de convicción A+ exigido por el comité, ya que la falta de profundidad en el libro de órdenes y la inestabilidad técnica invalidan cualquier entrada. Se prioriza la preservación del capital sobre la especulación."
+    "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con un índice de miedo extremo. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65) y la falta de profundidad en el libro de órdenes (bids <= 50%) aumenta el riesgo de stop-hunts. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez."
   }
 }
