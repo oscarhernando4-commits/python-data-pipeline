@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-06 05:50:21",
+  "timestamp": "2026-08-06 05:52:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una alta volatilidad y una falta de convicción institucional clara. Ninguno de los candidatos cumple con el umbral de seguridad y soporte de libro de órdenes requerido para una operación de alta probabilidad, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Confianza >= 70%) ni presenta una estructura de libro de órdenes favorable (Bids > 55%). El mercado se encuentra en una fase de alta incertidumbre y distribución, por lo que la preservación del capital es la prioridad absoluta.",
   "top_candidates": [
     {
       "symbol": "MORPHOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PENGUUSDT",
       "score": 75
     },
     {
@@ -19,7 +15,11 @@
       "score": 70
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "SOLUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "SUIUSDT",
       "score": 65
     },
     {
