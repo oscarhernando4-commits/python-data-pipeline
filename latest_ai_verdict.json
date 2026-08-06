@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-06 12:56:27",
+  "timestamp": "2026-08-06 12:58:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de debilidad extrema con una correlación bajista predominante. Ningún activo cumple con los criterios de calidad, fuerza relativa y soporte institucional necesarios para una operación de alta convicción, por lo que la estrategia óptima es la preservación de capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el requisito de Score Técnico >= 65 ni con la confirmación de soporte institucional en el libro de órdenes, por lo que se prioriza la preservación de capital ante el entorno de pánico extremo.",
   "top_candidates": [
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "SKYUSDT",
       "score": 60
     },
     {
@@ -19,12 +19,12 @@
       "score": 55
     },
     {
-      "symbol": "ARBUSDT",
+      "symbol": "VIRTUALUSDT",
       "score": 55
     },
     {
-      "symbol": "VIRTUALUSDT",
-      "score": 55
+      "symbol": "LTCUSDT",
+      "score": 50
     }
   ]
 }
