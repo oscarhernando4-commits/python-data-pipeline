@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 05:40:16",
+  "updated_at": "2026-08-06 05:42:22",
   "total_balance_usd": 20.07,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "Debido al entorno de pánico extremo y la falta de dominancia clara en el libro de órdenes, el comité ha decidido mantener la liquidez en USDT para evitar la alta probabilidad de pérdidas observada en los trades recientes."
+    "reasoning": "El comité ha determinado que, a pesar de los scores técnicos teóricos, la falta de profundidad en el libro de órdenes, el sentimiento de miedo extremo y la alta tasa de fallos en simulaciones recientes bajo condiciones similares, dictan una postura de preservación de capital total."
   }
 }
