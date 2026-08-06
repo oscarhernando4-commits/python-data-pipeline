@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-06 13:42:30",
+  "timestamp": "2026-08-06 13:44:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que ninguno de los candidatos cumple con los criterios estrictos de convicción A+ (Score >= 65 y soporte de libro de órdenes > 55%). El entorno de 'Extreme Fear' y la alta tasa de pérdidas en trades recientes bajo condiciones neutrales exigen una postura defensiva para preservar el capital.",
+  "reasoning": "El comité ha determinado que el entorno de mercado actual no cumple con los requisitos mínimos de seguridad y convicción técnica. Ningún activo presenta un perfil de riesgo-beneficio favorable, y la alta tasa de pérdidas en las simulaciones recientes para condiciones de mercado similares refuerza la decisión de mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
       "symbol": "SKHYBUSDT",
-      "score": 80
-    },
-    {
-      "symbol": "DRAMBUSDT",
       "score": 80
     },
     {
@@ -19,11 +15,15 @@
       "score": 70
     },
     {
-      "symbol": "KORUBUSDT",
+      "symbol": "SNXXBUSDT",
       "score": 65
     },
     {
       "symbol": "MUBUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "KORUBUSDT",
       "score": 65
     }
   ]
