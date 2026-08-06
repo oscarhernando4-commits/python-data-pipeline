@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-06 15:52:22",
+  "timestamp": "2026-08-06 15:54:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un régimen de alta incertidumbre y apatía. Ninguno de los candidatos cumple con el requisito de soporte institucional (Bids > 55%) ni con la confirmación de volumen necesaria para mitigar el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la especulación en un entorno de 'Extreme Fear'.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 75, la falta de profundidad en el libro de órdenes, el entorno de pánico extremo y la alta tasa de fallos en condiciones de mercado neutral hacen que cualquier operación actual sea de alto riesgo. Se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ENAUSDT",
       "score": 75
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 65
+      "symbol": "GNOUSDT",
+      "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "BNBUSDT",
+      "symbol": "DOGEUSDT",
       "score": 65
     }
   ]
