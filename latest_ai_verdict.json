@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-08-06 12:54:24",
+  "timestamp": "2026-08-06 12:56:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de alta fragilidad y capitulación. Ninguno de los activos analizados alcanza el umbral de seguridad (Score >= 65) requerido por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT y evitar la exposición a activos débiles.",
+  "reasoning": "El mercado se encuentra en una fase de debilidad extrema con una correlación bajista predominante. Ningún activo cumple con los criterios de calidad, fuerza relativa y soporte institucional necesarios para una operación de alta convicción, por lo que la estrategia óptima es la preservación de capital.",
   "top_candidates": [
     {
-      "symbol": "DEXEUSDT",
+      "symbol": "ALGOUSDT",
       "score": 60
     },
     {
-      "symbol": "EPICUSDT",
-      "score": 55
+      "symbol": "DEXEUSDT",
+      "score": 60
     },
     {
       "symbol": "JUPUSDT",
