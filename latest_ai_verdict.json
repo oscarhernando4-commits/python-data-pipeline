@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 05:18:19",
+  "timestamp": "2026-08-06 05:20:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional) en un entorno de mercado de miedo extremo, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y volumen confirmado). La alta volatilidad y la falta de muros de compra institucionales obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETCUSDT",
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
       "symbol": "VANRYUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SKYUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "POLUSDT",
       "score": 75
     }
   ]
