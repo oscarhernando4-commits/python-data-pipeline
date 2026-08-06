@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-08-06 10:40:22",
+  "timestamp": "2026-08-06 10:42:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de soporte en el libro de órdenes. El entorno macro de capitulación técnica y la alta tasa de fallos en simulaciones pasadas bajo condiciones similares dictan una postura defensiva de protección de capital.",
+  "reasoning": "El mercado presenta una debilidad generalizada y una falta de fuerza relativa en los activos analizados. Dado que ningún candidato alcanza el umbral de seguridad A+ y el entorno macro es de alta incertidumbre, la estrategia óptima es la preservación total del capital en espera de una estructura de mercado más favorable.",
   "top_candidates": [
-    {
-      "symbol": "ADAUSDT",
-      "score": 60
-    },
     {
       "symbol": "TLMUSDT",
       "score": 60
+    },
+    {
+      "symbol": "DASHUSDT",
+      "score": 55
     },
     {
       "symbol": "JTOUSDT",
