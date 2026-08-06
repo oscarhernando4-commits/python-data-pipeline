@@ -1,38 +1,39 @@
 {
   "STXUSDT": [
     {
-      "timestamp": "2026-08-06 07:12:12",
+      "timestamp": "2026-08-06 07:14:11",
       "price": 0.1338,
       "score": 60,
       "rsi": 63.94,
       "macd": "Neutral",
-      "volume_surge": 2.05,
+      "volume_surge": 2.24,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ]
+}
+  "AXTIBUSDT": [
+    {
+      "timestamp": "2026-08-06 07:14:10",
+      "price": 68.59,
+      "score": 75,
+      "rsi": 51.58,
+      "macd": "Neutral",
+      "volume_surge": 0.9,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "PORTALUSDT": [
+  "SAHARAUSDT": [
     {
-      "timestamp": "2026-08-06 07:12:12",
-      "price": 0.01134,
-      "score": 15,
-      "rsi": 46.91,
+      "timestamp": "2026-08-06 07:14:11",
+      "price": 0.00831,
+      "score": 10,
+      "rsi": 44.97,
       "macd": "Neutral",
-      "volume_surge": 0.71,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "RESOLVUSDT": [
-    {
-      "timestamp": "2026-08-06 07:12:12",
-      "price": 0.01799,
-      "score": 30,
-      "rsi": 58.32,
-      "macd": "Neutral",
-      "volume_surge": 2.11,
+      "volume_surge": 2.65,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -40,12 +41,25 @@
   ],
   "LUNCUSDT": [
     {
-      "timestamp": "2026-08-06 07:12:12",
-      "price": 4.991e-05,
-      "score": 65,
-      "rsi": 63.79,
+      "timestamp": "2026-08-06 07:14:11",
+      "price": 4.984e-05,
+      "score": 50,
+      "rsi": 61.01,
       "macd": "Neutral",
-      "volume_surge": 0.82,
+      "volume_surge": 0.85,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ZROUSDT": [
+    {
+      "timestamp": "2026-08-06 07:14:11",
+      "price": 0.773,
+      "score": 25,
+      "rsi": 43.45,
+      "macd": "Neutral",
+      "volume_surge": 1.62,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

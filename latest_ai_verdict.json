@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 07:12:22",
+  "timestamp": "2026-08-06 07:14:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y el sentimiento de miedo extremo sugieren que el mercado aún no ha finalizado su fase de purga, por lo que la estrategia más rentable es mantener la liquidez en USDT.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación inestable. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el comité (Bids > 55% y convicción A+), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas en un entorno de capitulación técnica.",
   "top_candidates": [
     {
       "symbol": "BCHUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "AEROUSDT",
+      "symbol": "AXSUSDT",
       "score": 75
     },
     {
-      "symbol": "AXSUSDT",
+      "symbol": "AEROUSDT",
       "score": 75
     }
   ]
