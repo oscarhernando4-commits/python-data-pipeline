@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-06 06:26:26",
-  "selected_symbol": "ASTERUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "Tras analizar el mercado, ASTERUSDT destaca como el activo con mayor resiliencia y potencial, alineándose con la rotación de capital hacia el sector AI. Se autoriza la entrada fraccionada con gestión de riesgo estricta para evitar la trampa de valor presente en activos de menor calidad.",
+  "timestamp": "2026-08-06 06:28:21",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y capitulación técnica. Ninguno de los candidatos actuales supera el umbral de riesgo A+ exigido por el comité, y la falta de profundidad en el libro de órdenes junto con el sentimiento de miedo extremo dictan una postura de protección de capital (HOLD) para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "AXTIBUSDT",
+      "score": 100
+    },
     {
       "symbol": "ASTERUSDT",
       "score": 85
@@ -15,16 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "STXUSDT",
+      "symbol": "VIRTUALUSDT",
       "score": 75
     },
     {
-      "symbol": "XRPUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 65
+      "symbol": "GNOUSDT",
+      "score": 75
     }
   ]
 }
