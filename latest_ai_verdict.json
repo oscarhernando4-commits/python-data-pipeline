@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-06 12:06:24",
+  "timestamp": "2026-08-06 12:08:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la evaluación exhaustiva de los 7 agentes, se ha determinado que no existe ningún activo que cumpla con el umbral de seguridad A+ (Score >= 65). El entorno macroeconómico de alta volatilidad y la fragilidad sistémica detectada por el historial de simulaciones obligan a mantener una posición de espera (HOLD) para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado que el mercado actual presenta un riesgo sistémico inaceptable. Ningún activo cumple con el umbral de Score técnico de 65 ni con la confirmación de volumen institucional necesaria para una entrada segura. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y pánico.",
   "top_candidates": [
+    {
+      "symbol": "BICOUSDT",
+      "score": 60
+    },
     {
       "symbol": "JSTUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "HBARUSDT",
       "score": 50
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "UNIUSDT",
+      "symbol": "ADAUSDT",
       "score": 50
     }
   ]
