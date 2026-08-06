@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-06 11:38:22",
+  "timestamp": "2026-08-06 11:40:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, el comité ha determinado que el mercado actual presenta una fragilidad sistémica que no cumple con los estándares de seguridad y rentabilidad exigidos. Ningún activo analizado supera el umbral de Score 65, por lo que la estrategia de protección de capital prevalece sobre la operativa especulativa.",
+  "reasoning": "El mercado presenta una fragilidad sistémica extrema con una falta de convicción técnica en todos los candidatos analizados. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "ADAUSDT",
       "score": 60
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "SOXLBUSDT",
       "score": 60
     },
     {
@@ -23,8 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "NEXOUSDT",
-      "score": 55
+      "symbol": "BONKUSDT",
+      "score": 60
     }
   ]
 }
