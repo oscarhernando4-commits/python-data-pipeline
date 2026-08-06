@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-06 10:30:23",
+  "timestamp": "2026-08-06 10:32:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación sistémica sin soporte institucional. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital hasta que el mercado muestre una estructura de acumulación clara.",
+  "reasoning": "El mercado presenta un entorno de riesgo sistémico elevado con una correlación unitaria bajista. Ninguno de los candidatos analizados alcanza el Score Técnico de 65 requerido por el Comité para una ejecución segura. Por lo tanto, se prioriza la preservación del capital sobre la especulación, manteniendo la posición en efectivo (USDT) hasta que las condiciones macro y técnicas mejoren.",
   "top_candidates": [
     {
       "symbol": "POLUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TLMUSDT",
       "score": 60
     },
     {
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "ADAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "BABYUSDT",
       "score": 50
     },
     {
