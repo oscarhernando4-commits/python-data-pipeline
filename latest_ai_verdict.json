@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-06 11:04:21",
+  "timestamp": "2026-08-06 11:06:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de riesgo sistémico elevado sin activos que cumplan con los criterios de calidad A+ exigidos por el comité. La estrategia prioriza la preservación de capital sobre la especulación en un entorno de baja liquidez y alta volatilidad bajista.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica generalizada. Ninguno de los activos evaluados alcanza el umbral de calidad A+ (Score >= 65) requerido por el comité para mitigar el riesgo de 'falling knives'. Se prioriza la protección del capital ante la ausencia de divergencias alcistas institucionales.",
   "top_candidates": [
     {
       "symbol": "JTOUSDT",
       "score": 55
-    },
-    {
-      "symbol": "ERAUSDT",
-      "score": 50
     },
     {
       "symbol": "HFTUSDT",
@@ -23,8 +19,12 @@
       "score": 50
     },
     {
-      "symbol": "HMSTRUSDT",
-      "score": 50
+      "symbol": "EPICUSDT",
+      "score": 40
+    },
+    {
+      "symbol": "ERAUSDT",
+      "score": 35
     }
   ]
 }
