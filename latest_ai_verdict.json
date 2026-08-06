@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 00:10:16",
+  "timestamp": "2026-08-06 00:12:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia tóxica donde los activos con mejor score técnico carecen de historial y profundidad, lo que aumenta el riesgo de pérdidas. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la decisión institucional es mantener la liquidez en espera de una mejor configuración.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y capitulación institucional. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con una dominancia de Bids en el libro de órdenes que mitigue el riesgo de pérdida. Se prioriza la preservación del capital sobre la especulación en un entorno de pánico.",
   "top_candidates": [
     {
       "symbol": "SNXXBUSDT",
@@ -19,12 +19,12 @@
       "score": 70
     },
     {
-      "symbol": "AMDBUSDT",
-      "score": 70
+      "symbol": "EULUSDT",
+      "score": 60
     },
     {
-      "symbol": "BONKUSDT",
-      "score": 70
+      "symbol": "PEPEUSDT",
+      "score": 60
     }
   ]
 }
