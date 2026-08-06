@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-06 06:18:21",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "Debido a la falta de profundidad en el libro de órdenes, la ausencia de una convicción A+ en los candidatos y el entorno de 'Extreme Fear', el comité ha decidido mantener la liquidez en espera de una estructura de mercado más robusta.",
+  "timestamp": "2026-08-06 06:20:23",
+  "selected_symbol": "STXUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "STXUSDT es el único activo que cumple con el umbral de score A+ (75/100) y muestra un volumen de surge significativo (3.49), lo que indica una acumulación institucional que se desacopla del pánico generalizado del mercado. La estrategia se ejecutará con un estricto control de riesgo mediante un Trailing Stop ATR para maximizar la rentabilidad en caso de una recuperación del ecosistema Bitcoin.",
   "top_candidates": [
-    {
-      "symbol": "ASTERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "GNOUSDT",
-      "score": 75
-    },
     {
       "symbol": "STXUSDT",
       "score": 75
@@ -25,6 +17,14 @@
     {
       "symbol": "JTOUSDT",
       "score": 70
+    },
+    {
+      "symbol": "SYNUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "score": 65
     }
   ]
 }
