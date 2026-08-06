@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 15:44:24",
+  "timestamp": "2026-08-06 15:46:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una 'Trampa de Neutralidad' con aversión al riesgo extrema. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es mantener la liquidez y evitar la exposición en un entorno de alta volatilidad y baja convicción.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo extremo. Ninguno de los candidatos analizados supera el umbral de seguridad del 55% en el libro de órdenes ni presenta una convicción técnica A+ suficiente para justificar una entrada, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "NEXOUSDT",
-      "score": 75
+      "symbol": "MIRAUSDT",
+      "score": 65
     },
     {
-      "symbol": "STXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "VETUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "XLMUSDT",
+      "symbol": "BNBUSDT",
       "score": 65
     },
     {
       "symbol": "XRPUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "TAOUSDT",
       "score": 65
     }
   ]
