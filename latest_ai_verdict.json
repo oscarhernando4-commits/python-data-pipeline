@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-06 02:44:22",
+  "timestamp": "2026-08-06 02:46:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con scores inferiores a 65 en todos los activos. La ausencia de muros de soporte sólidos y la alta volatilidad bajista obligan a mantener una postura defensiva de 100% en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de pánico institucional y falta de convicción, con todos los activos analizados fallando en alcanzar el umbral de seguridad A+ (Score >= 65). Se prioriza la preservación del capital ante la alta probabilidad de volatilidad bajista.",
   "top_candidates": [
-    {
-      "symbol": "UNIUSDT",
-      "score": 60
-    },
     {
       "symbol": "POLUSDT",
       "score": 60
     },
     {
-      "symbol": "ACTUSDT",
+      "symbol": "NVDABUSDT",
       "score": 60
     },
     {
@@ -23,8 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "AAVEUSDT",
-      "score": 55
+      "symbol": "MIRAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "BICOUSDT",
+      "score": 50
     }
   ]
 }
