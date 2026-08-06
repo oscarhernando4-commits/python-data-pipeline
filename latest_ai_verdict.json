@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 02:32:19",
+  "timestamp": "2026-08-06 02:34:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los 10 candidatos, ninguno alcanza el umbral de Score Técnico de 65/100 ni muestra una dominancia de Bids superior al 55%. El entorno macroeconómico de 'Extreme Fear' y la alta correlación bajista invalidan cualquier intento de compra, priorizando la preservación del capital sobre la especulación.",
+  "reasoning": "El comité ha determinado que el entorno de mercado actual es de alta volatilidad y riesgo sistémico. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico A+ (>= 65) ni cuenta con el respaldo de liquidez necesario en el libro de órdenes. En cumplimiento con la Regla #1 de no perder dinero, se ha decidido mantener la posición en efectivo (HOLD) hasta que las condiciones macroeconómicas y técnicas mejoren.",
   "top_candidates": [
     {
       "symbol": "UNIUSDT",
       "score": 60
     },
     {
-      "symbol": "BICOUSDT",
-      "score": 50
+      "symbol": "POLUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "APTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "VANRYUSDT",
+      "score": 55
     },
     {
       "symbol": "MIRAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ERAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "QNTUSDT",
       "score": 50
     }
   ]
