@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-06 02:48:21",
+  "timestamp": "2026-08-06 02:50:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragilidad sistémica con una ausencia total de activos que cumplan con los criterios de alta convicción (Score >= 65). La estrategia institucional prioriza la preservación del capital sobre la especulación en un entorno de miedo extremo.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "POLUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "APTUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "APTUSDT",
+      "score": 60
+    },
+    {
       "symbol": "XPLUSDT",
       "score": 60
     },
     {
-      "symbol": "BICOUSDT",
+      "symbol": "NEARUSDT",
       "score": 50
     }
   ]
