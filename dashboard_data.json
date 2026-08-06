@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 00:18:23",
+  "updated_at": "2026-08-06 00:20:18",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ningún activo cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte institucional en el libro de órdenes, por lo que se prioriza la preservación del capital en un entorno de alta volatilidad defensiva."
+    "reasoning": "Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65 y Bids > 55%). Ante el entorno de 'Extreme Fear' y la alta probabilidad de pérdidas basada en el historial de 1474 trades, la decisión institucional es mantener la liquidez en efectivo para evitar la trampa de liquidez."
   }
 }
