@@ -1,12 +1,38 @@
 {
   "RESOLVUSDT": [
     {
-      "timestamp": "2026-08-05 23:58:07",
-      "price": 0.01708,
-      "score": 10,
-      "rsi": 39.49,
+      "timestamp": "2026-08-06 00:00:10",
+      "price": 0.01697,
+      "score": 0,
+      "rsi": 36.46,
       "macd": "Neutral",
-      "volume_surge": 1.97,
+      "volume_surge": 0.33,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "HYPERUSDT": [
+    {
+      "timestamp": "2026-08-06 00:00:10",
+      "price": 0.0607,
+      "score": 30,
+      "rsi": 58.6,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PORTALUSDT": [
+    {
+      "timestamp": "2026-08-06 00:00:10",
+      "price": 0.01124,
+      "score": 0,
+      "rsi": 48.45,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
