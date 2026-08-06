@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 08:30:22",
+  "updated_at": "2026-08-06 08:32:21",
   "total_balance_usd": 20.07,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una correlación negativa entre activos de reserva y altcoins. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y profundidad de libro de órdenes) necesario para ejecutar una operación de compra, por lo que la estrategia óptima es mantener la liquidez en espera de una mejor configuración técnica."
+    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y purga de liquidez. Ninguno de los candidatos presenta una dominancia de Bids superior al 55% ni una estructura técnica que garantice una alta probabilidad de éxito bajo las reglas de gestión de riesgo del comité. Se prioriza la preservación del capital sobre la ejecución especulativa."
   }
 }
