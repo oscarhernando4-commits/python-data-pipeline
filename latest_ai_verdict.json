@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 04:56:15",
-  "selected_symbol": "CRVUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "Tras deliberar, el comité identifica a CRVUSDT como el activo con mayor fortaleza relativa y respaldo sectorial. A pesar del miedo macro, el volumen institucional y el score técnico de 85/100 justifican una entrada long con gestión de riesgo estricta, evitando los activos de baja capitalización que han mostrado pérdidas en simulaciones pasadas.",
+  "timestamp": "2026-08-06 04:58:31",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "A pesar de que CRV presenta un score técnico elevado, la falta de soporte en el libro de órdenes y el entorno de pánico extremo (Fear & Greed 25) invalidan la entrada. El comité ha decidido mantener la liquidez en espera de una estructura de mercado más robusta y confirmada por volumen institucional.",
   "top_candidates": [
     {
       "symbol": "CRVUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
       "symbol": "ETHUSDT",
       "score": 75
     },
     {
       "symbol": "UNIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
