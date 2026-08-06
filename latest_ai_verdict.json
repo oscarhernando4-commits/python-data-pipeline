@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-06 08:04:22",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "A pesar de que activos como XAUT y PAXG tienen scores técnicos de 75, la falta de profundidad en el libro de órdenes y la alta volatilidad macro impiden una ejecución con convicción A+. Se prioriza la preservación del capital sobre la especulación en un entorno de pánico extremo.",
+  "timestamp": "2026-08-06 08:06:20",
+  "selected_symbol": "PAXGUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "El comité ha decidido priorizar la seguridad y la rotación de capital hacia activos de valor (RWA) en un entorno de pánico extremo. PAXGUSDT es el único candidato que combina un score técnico de 75/100 con una narrativa de refugio, cumpliendo con los criterios de riesgo del Agente 6 y la estrategia de acumulación del Agente 7.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
       "symbol": "PAXGUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AXSUSDT",
       "score": 75
     },
     {
@@ -25,6 +17,14 @@
     {
       "symbol": "GNOUSDT",
       "score": 70
+    },
+    {
+      "symbol": "EULUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 65
     }
   ]
 }
