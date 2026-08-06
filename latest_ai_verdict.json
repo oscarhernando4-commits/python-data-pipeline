@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 03:24:20",
+  "timestamp": "2026-08-06 03:26:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado exhibe una debilidad sistémica generalizada y una falta de profundidad en los libros de órdenes. Ningún candidato cumple con los criterios estrictos de riesgo y convicción establecidos por el comité, por lo que la preservación de capital es la única estrategia viable.",
+  "reasoning": "El mercado se encuentra en un estado de estrés sistémico severo sin activos que cumplan con los criterios de alta convicción (Score A+ >= 65). La estrategia institucional es la preservación total de capital hasta que se observe una estabilización en la profundidad del libro de órdenes y una mejora en el sentimiento global.",
   "top_candidates": [
     {
       "symbol": "BABYUSDT",
@@ -23,8 +23,8 @@
       "score": 55
     },
     {
-      "symbol": "SUIUSDT",
-      "score": 55
+      "symbol": "BANKUSDT",
+      "score": 50
     }
   ]
 }
