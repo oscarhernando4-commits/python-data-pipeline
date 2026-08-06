@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-06 04:46:18",
+  "timestamp": "2026-08-06 04:48:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional). El mercado se encuentra en una fase de alta incertidumbre y el riesgo de un flash crash supera el potencial de beneficio, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una zona de alta incertidumbre y el riesgo de pérdida de capital supera la expectativa de beneficio, por lo que se mantiene la posición en efectivo.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
+      "symbol": "SKYUSDT",
       "score": 75
     }
   ]

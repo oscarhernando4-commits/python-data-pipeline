@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 04:46:18",
+  "updated_at": "2026-08-06 04:48:18",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional). El mercado se encuentra en una fase de alta incertidumbre y el riesgo de un flash crash supera el potencial de beneficio, por lo que se prioriza la preservación del capital."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una zona de alta incertidumbre y el riesgo de pérdida de capital supera la expectativa de beneficio, por lo que se mantiene la posición en efectivo."
   }
 }
