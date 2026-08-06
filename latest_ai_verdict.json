@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 04:44:21",
+  "timestamp": "2026-08-06 04:46:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que algunos activos muestran scores técnicos elevados, el entorno macroeconómico de miedo extremo y la falta de profundidad en el libro de órdenes impiden una ejecución segura. El comité ha decidido priorizar la preservación del capital sobre la especulación en un mercado de alta incertidumbre.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional). El mercado se encuentra en una fase de alta incertidumbre y el riesgo de un flash crash supera el potencial de beneficio, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
-    {
-      "symbol": "APTUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SUNUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "RESOLVUSDT",
-      "score": 80
-    },
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
+      "symbol": "SYNUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BABYUSDT",
+      "score": 75
+    },
+    {
       "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
