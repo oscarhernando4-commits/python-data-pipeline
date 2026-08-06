@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-06 07:34:19",
+  "timestamp": "2026-08-06 07:36:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 65-75, la falta de confirmación en el libro de órdenes y el entorno de 'Extreme Fear' no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se mantiene la posición en efectivo para evitar la alta volatilidad y las trampas de valor observadas en el historial reciente.",
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a la falta de datos de liquidez en el libro de órdenes y la ausencia de activos que cumplan con el umbral de convicción A+ en el entorno de mercado actual.",
   "top_candidates": [
+    {
+      "symbol": "AVAXUSDT",
+      "score": 75
+    },
     {
       "symbol": "MORPHOUSDT",
       "score": 75
@@ -15,16 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "SUNUSDT",
-      "score": 75
-    },
-    {
       "symbol": "AXSUSDT",
       "score": 75
     },
     {
-      "symbol": "HFTUSDT",
-      "score": 65
+      "symbol": "BONKUSDT",
+      "score": 75
     }
   ]
 }
