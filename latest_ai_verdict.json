@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-06 04:32:16",
+  "timestamp": "2026-08-06 04:34:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y volumen institucional). La alta volatilidad y el sentimiento de pánico extremo sugieren que el mercado aún no ha finalizado su fase de purga, por lo que se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado presenta un entorno de pánico extremo con una falta de profundidad en el libro de órdenes y una alta correlación de pérdidas en las simulaciones recientes. Ningún activo cumple con el umbral de convicción A+ requerido por el comité, por lo que se mantiene la liquidez en USDT para evitar riesgos innecesarios.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "BABYUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "BABYUSDT",
       "score": 75
     }
   ]
