@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-06 15:16:24",
+  "timestamp": "2026-08-06 15:18:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragmentación de liquidez y una falta de muros de soporte institucionales (Bids < 55%). A pesar de los scores técnicos, la ausencia de una tendencia clara y el entorno de pánico extremo (Fear & Greed 25) invalidan la ejecución de cualquier posición, priorizando la preservación del capital según la Regla #1.",
+  "reasoning": "El mercado se encuentra en un estado de compresión con sentimiento de pánico extremo. Ninguno de los candidatos presenta una dominancia de Bids superior al 55% ni una estructura técnica que garantice una alta probabilidad de éxito, por lo que se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
-      "symbol": "ETHUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 75
     },
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 65
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "SNXXBUSDT",
       "score": 65
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "ZECUSDT",
       "score": 65
     }
   ]
