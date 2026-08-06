@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-06 08:28:20",
+  "timestamp": "2026-08-06 08:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "A pesar de que activos como XAUT y PAXG pertenecen al sector de interés, la falta de datos de liquidez en el libro de órdenes y la alta volatilidad en un entorno de 'Extreme Fear' impiden alcanzar el umbral de confianza A+ requerido por el comité para proteger el capital.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una correlación negativa entre activos de reserva y altcoins. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y profundidad de libro de órdenes) necesario para ejecutar una operación de compra, por lo que la estrategia óptima es mantener la liquidez en espera de una mejor configuración técnica.",
   "top_candidates": [
     {
+      "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
       "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "ICPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ZROUSDT",
       "score": 75
     }
   ]
