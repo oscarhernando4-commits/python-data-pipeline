@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-06 11:20:19",
+  "timestamp": "2026-08-06 11:22:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual carece de activos con un score técnico superior a 65 y presenta una liquidez estancada, lo que invalida cualquier oportunidad de compra bajo los protocolos de gestión de riesgo del comité.",
+  "reasoning": "El mercado carece de soporte institucional y presenta una fragilidad extrema. Ningún activo cumple con el umbral de calidad A+ requerido por el comité, por lo que la estrategia óptima es la inacción para proteger el capital.",
   "top_candidates": [
     {
-      "symbol": "XRPUSDT",
-      "score": 50
+      "symbol": "TLMUSDT",
+      "score": 60
     },
     {
-      "symbol": "ERAUSDT",
+      "symbol": "XRPUSDT",
       "score": 50
     },
     {
@@ -23,7 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "HFTUSDT",
+      "symbol": "HBARUSDT",
       "score": 50
     }
   ]
