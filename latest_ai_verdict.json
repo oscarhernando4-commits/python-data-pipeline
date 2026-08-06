@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 10:34:25",
+  "timestamp": "2026-08-06 10:36:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado está en una fase de liquidación forzada y alta volatilidad bajista. Ninguno de los candidatos analizados cumple con el requisito estricto de Score Técnico >= 65 ni con una confirmación de soporte en el libro de órdenes. Se prioriza la protección del capital sobre la especulación en un entorno de pánico extremo.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica sin activos que cumplan con los criterios de fuerza relativa y soporte institucional necesarios para una ejecución segura, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "POLUSDT",
       "score": 60
     },
     {
-      "symbol": "TLMUSDT",
-      "score": 60
+      "symbol": "JTOUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "ERAUSDT",
+      "score": 50
     },
     {
       "symbol": "ADAUSDT",
       "score": 50
     },
     {
-      "symbol": "SYNUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ERAUSDT",
+      "symbol": "BABYUSDT",
       "score": 50
     }
   ]
