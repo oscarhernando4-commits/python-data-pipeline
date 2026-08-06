@@ -1,12 +1,25 @@
 {
-  "BONKUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-06 03:40:08",
-      "price": 2.8e-06,
+      "timestamp": "2026-08-06 03:42:07",
+      "price": 0.132,
       "score": 0,
-      "rsi": 48.08,
+      "rsi": 38.75,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.55,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DRAMBUSDT": [
+    {
+      "timestamp": "2026-08-06 03:42:07",
+      "price": 51.13,
+      "score": 30,
+      "rsi": 35.58,
+      "macd": "Neutral",
+      "volume_surge": 0.64,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,25 +27,12 @@
   ],
   "PENDLEUSDT": [
     {
-      "timestamp": "2026-08-06 03:40:08",
-      "price": 1.383,
+      "timestamp": "2026-08-06 03:42:07",
+      "price": 1.382,
       "score": 0,
-      "rsi": 41.08,
+      "rsi": 40.2,
       "macd": "Neutral",
-      "volume_surge": 0.07,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "SAHARAUSDT": [
-    {
-      "timestamp": "2026-08-06 03:40:09",
-      "price": 0.00842,
-      "score": 0,
-      "rsi": 47.75,
-      "macd": "Neutral",
-      "volume_surge": 0.13,
+      "volume_surge": 0.17,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

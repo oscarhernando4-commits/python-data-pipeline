@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-06 03:40:17",
+  "timestamp": "2026-08-06 03:42:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con un sentimiento de pánico extremo. Ninguno de los activos analizados alcanza el umbral de convicción A+ (Score >= 65) requerido por el comité para mitigar el riesgo de 'falling knives'. Se ha decidido mantener la liquidez en USDT para evitar pérdidas en un entorno de alta volatilidad y baja profundidad de mercado.",
+  "reasoning": "Tras analizar los 10 candidatos, ninguno alcanza el Score Técnico de 65 ni demuestra una estructura de soporte institucional sólida en el libro de órdenes. Ante un entorno de 'Extreme Fear' y una alta tasa de pérdidas en trades con scores bajos, el comité decide mantener la liquidez en espera de una configuración de alta probabilidad.",
   "top_candidates": [
     {
-      "symbol": "NEARUSDT",
-      "score": 60
-    },
-    {
       "symbol": "BABYUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "VANRYUSDT",
       "score": 60
     },
     {
@@ -23,8 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "APTUSDT",
-      "score": 60
+      "symbol": "HEIUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "NEARUSDT",
+      "score": 50
     }
   ]
 }
