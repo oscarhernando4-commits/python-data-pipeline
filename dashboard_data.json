@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 08:58:26",
+  "updated_at": "2026-08-06 09:00:23",
   "total_balance_usd": 20.07,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ningún candidato cumple con el umbral estricto de convicción A+ (Score >= 65) y la confirmación de soporte institucional en el libro de órdenes. Ante la volatilidad y el sentimiento de miedo extremo, la estrategia de preservación de capital es prioritaria."
+    "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la falta de dominancia en el libro de órdenes (Bids 50%), la ausencia de un volumen institucional superior a 1.2x y el entorno de miedo extremo (25) invalidan la ejecución de cualquier posición, priorizando la preservación del capital en USDT."
   }
 }

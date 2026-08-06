@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 08:58:23",
+  "timestamp": "2026-08-06 09:00:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral estricto de convicción A+ (Score >= 65) y la confirmación de soporte institucional en el libro de órdenes. Ante la volatilidad y el sentimiento de miedo extremo, la estrategia de preservación de capital es prioritaria.",
+  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la falta de dominancia en el libro de órdenes (Bids 50%), la ausencia de un volumen institucional superior a 1.2x y el entorno de miedo extremo (25) invalidan la ejecución de cualquier posición, priorizando la preservación del capital en USDT.",
   "top_candidates": [
-    {
-      "symbol": "LUNCUSDT",
-      "score": 95
-    },
-    {
-      "symbol": "ETHUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ONDOUSDT",
-      "score": 80
-    },
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETCUSDT",
       "score": 75
     }
   ]
