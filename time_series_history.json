@@ -1,12 +1,38 @@
 {
-  "SAHARAUSDT": [
+  "PENDLEUSDT": [
     {
-      "timestamp": "2026-08-06 00:34:11",
-      "price": 0.00847,
-      "score": 35,
-      "rsi": 50.56,
+      "timestamp": "2026-08-06 00:36:08",
+      "price": 1.395,
+      "score": 0,
+      "rsi": 45.16,
       "macd": "Neutral",
-      "volume_surge": 2.51,
+      "volume_surge": 0.57,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-06 00:36:08",
+      "price": 2.83e-06,
+      "score": 50,
+      "rsi": 63.53,
+      "macd": "Neutral",
+      "volume_surge": 0.16,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "INTCBUSDT": [
+    {
+      "timestamp": "2026-08-06 00:36:08",
+      "price": 101.27,
+      "score": 25,
+      "rsi": 50.38,
+      "macd": "Neutral",
+      "volume_surge": 0.03,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
