@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-06 06:56:20",
+  "timestamp": "2026-08-06 06:58:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con score 75, las condiciones de mercado (Fear & Greed 25) y la falta de una dominancia clara en el libro de órdenes no cumplen con los estándares de seguridad exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75 en activos como ETC, MORPHO y BONK, la falta de confirmación en el libro de órdenes y el entorno de pánico extremo no garantizan la seguridad del capital. Se prioriza la preservación de liquidez sobre la especulación en un mercado de alta incertidumbre.",
   "top_candidates": [
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "ETCUSDT",
       "score": 75
     },
     {
       "symbol": "MORPHOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETCUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "ZROUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "GNOUSDT",
       "score": 75
     }
   ]
