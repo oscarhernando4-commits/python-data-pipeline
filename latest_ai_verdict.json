@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-06 07:32:21",
+  "timestamp": "2026-08-06 07:34:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de identificar candidatos con scores técnicos de 75, la falta de profundidad en el libro de órdenes y la inestabilidad del mercado global (Fear & Greed 25) impiden una ejecución segura. Se prioriza la preservación del capital sobre la especulación en activos de alta volatilidad sin soporte confirmado.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 65-75, la falta de confirmación en el libro de órdenes y el entorno de 'Extreme Fear' no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se mantiene la posición en efectivo para evitar la alta volatilidad y las trampas de valor observadas en el historial reciente.",
   "top_candidates": [
     {
-      "symbol": "ETCUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 75
     },
     {
-      "symbol": "AXSUSDT",
+      "symbol": "AXTIBUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "BONKUSDT",
+      "symbol": "AXSUSDT",
       "score": 75
     },
     {
-      "symbol": "SYNUSDT",
+      "symbol": "HFTUSDT",
       "score": 65
     }
   ]
