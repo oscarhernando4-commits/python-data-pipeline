@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-06 01:56:44",
+  "timestamp": "2026-08-06 01:58:31",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual carece de la convicción técnica y la profundidad de liquidez necesaria para ejecutar operaciones de alta probabilidad. Todos los candidatos evaluados fallan en el umbral de Score A+ (>= 65), por lo que la estrategia óptima es mantener la liquidez en USDT hasta que surja una señal de acumulación institucional clara.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "PUMPUSDT",
       "score": 60
     },
     {
@@ -21,10 +25,6 @@
     {
       "symbol": "SUNUSDT",
       "score": 60
-    },
-    {
-      "symbol": "NEARUSDT",
-      "score": 50
     }
   ]
 }
