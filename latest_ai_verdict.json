@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-06 09:30:18",
+  "timestamp": "2026-08-06 09:32:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de volumen institucional necesaria para una entrada segura. El mercado se encuentra en una fase de alta volatilidad y distribución, por lo que la estrategia óptima es la preservación del capital.",
+  "reasoning": "El mercado actual presenta una configuración de alto riesgo con una ausencia total de activos que cumplan con el umbral de convicción A+ (Score >= 65). La estrategia institucional dicta la preservación del 100% de la liquidez en USDT para evitar la exposición a 'cuchillos cayendo' en un entorno de pánico sistémico.",
   "top_candidates": [
-    {
-      "symbol": "XAUTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PAXGUSDT",
-      "score": 60
-    },
     {
       "symbol": "ZROUSDT",
       "score": 60
     },
     {
-      "symbol": "EULUSDT",
+      "symbol": "ERAUSDT",
       "score": 50
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "HOMEUSDT",
       "score": 50
+    },
+    {
+      "symbol": "AXTIBUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 45
     }
   ]
 }
