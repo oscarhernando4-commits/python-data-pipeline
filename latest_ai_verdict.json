@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-06 00:08:19",
+  "timestamp": "2026-08-06 00:10:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación del comité, se ha determinado que las condiciones actuales del mercado no cumplen con los criterios de seguridad y rentabilidad exigidos. Ningún activo presenta un Score Técnico superior a 65 con una estructura de soporte de ballenas clara, por lo que se ha decidido no ejecutar ninguna operación para evitar el riesgo de 'falling knives' y proteger la liquidez institucional.",
+  "reasoning": "El mercado presenta una divergencia tóxica donde los activos con mejor score técnico carecen de historial y profundidad, lo que aumenta el riesgo de pérdidas. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la decisión institucional es mantener la liquidez en espera de una mejor configuración.",
   "top_candidates": [
+    {
+      "symbol": "SNXXBUSDT",
+      "score": 70
+    },
     {
       "symbol": "SHIBUSDT",
       "score": 70
@@ -15,16 +19,12 @@
       "score": 70
     },
     {
-      "symbol": "BONKUSDT",
+      "symbol": "AMDBUSDT",
       "score": 70
     },
     {
-      "symbol": "EULUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 60
+      "symbol": "BONKUSDT",
+      "score": 70
     }
   ]
 }
