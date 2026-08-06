@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 12:16:22",
+  "timestamp": "2026-08-06 12:18:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un riesgo sistémico elevado con una correlación bajista predominante. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la inacción para evitar pérdidas innecesarias.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "JSTUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "HBARUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 50
+    },
+    {
       "symbol": "BICOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "UNIUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "LINKUSDT",
       "score": 50
     }
   ]
