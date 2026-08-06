@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-06 01:00:20",
+  "timestamp": "2026-08-06 01:02:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de Score Técnico >= 65 ni con la confirmación de profundidad en el libro de órdenes necesaria para una ejecución segura. El entorno macroeconómico de pánico y la falta de volumen institucional real dictan una postura de preservación de capital total.",
+  "reasoning": "El mercado se encuentra en un evento de desapalancamiento sistémico con alta incertidumbre regulatoria y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con los criterios de alta convicción (Score >= 65) necesarios para mitigar el riesgo de 'cuchillos cayendo', por lo que la estrategia óptima es la preservación total del capital en efectivo.",
   "top_candidates": [
     {
       "symbol": "SNXXBUSDT",
       "score": 70
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 60
+      "symbol": "SUNUSDT",
+      "score": 70
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "UNIUSDT",
       "score": 60
     },
     {
