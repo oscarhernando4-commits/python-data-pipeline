@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-06 06:38:21",
+  "timestamp": "2026-08-06 06:40:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con alta incertidumbre macroeconómica. Ninguno de los candidatos cumple con los requisitos estrictos de Score A+ (>=65) y soporte de liquidez (Bids >= 55%) necesarios para mitigar el riesgo de pérdida, por lo que la decisión institucional es mantener la liquidez en efectivo.",
+  "reasoning": "El mercado se encuentra en un estado de aversión al riesgo extrema con una falta de profundidad en el libro de órdenes y una alta probabilidad de volatilidad bajista. Ningún activo cumple con el umbral de convicción A+ requerido por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
   "top_candidates": [
     {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
       "symbol": "AVAXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
@@ -17,14 +25,6 @@
     {
       "symbol": "ETHFIUSDT",
       "score": 75
-    },
-    {
-      "symbol": "GNOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BANKUSDT",
-      "score": 65
     }
   ]
 }
