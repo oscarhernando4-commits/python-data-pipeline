@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-06 00:40:17",
+  "timestamp": "2026-08-06 00:42:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral mínimo de Score Técnico (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo sistémico actual, por lo que la decisión institucional es mantener la liquidez en USDT.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los estándares de seguridad y convicción requeridos. La falta de soporte en el libro de órdenes y la inestabilidad macroeconómica desaconsejan cualquier posición, priorizando la preservación del capital sobre la especulación.",
   "top_candidates": [
+    {
+      "symbol": "SNXXBUSDT",
+      "score": 70
+    },
     {
       "symbol": "PEPEUSDT",
       "score": 70
@@ -15,15 +19,11 @@
       "score": 70
     },
     {
-      "symbol": "NEARUSDT",
-      "score": 60
+      "symbol": "SUNUSDT",
+      "score": 70
     },
     {
       "symbol": "UNIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "LTCUSDT",
       "score": 60
     }
   ]
