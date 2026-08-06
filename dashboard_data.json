@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 05:10:17",
+  "updated_at": "2026-08-06 05:12:23",
   "total_balance_usd": 20.07,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el requisito de dominancia de Bids compradores >= 55% ni con la convicción A+ necesaria para mitigar el riesgo en un entorno de pánico extremo."
+    "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de alta incertidumbre y volatilidad, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias."
   }
 }
