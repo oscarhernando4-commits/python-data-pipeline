@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-06 05:08:21",
+  "timestamp": "2026-08-06 05:10:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la ausencia de una dominancia de Bids compradores superior al 55% y la persistencia del pánico extremo en el mercado global invalidan la entrada bajo los criterios de riesgo A+. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el requisito de dominancia de Bids compradores >= 55% ni con la convicción A+ necesaria para mitigar el riesgo en un entorno de pánico extremo.",
   "top_candidates": [
     {
-      "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
       "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "UNIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
