@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-06 00:48:19",
+  "timestamp": "2026-08-06 00:50:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación y alta volatilidad sin soporte institucional claro. Ningún activo cumple con el requisito estricto de Score Técnico >= 65 ni con una dominancia de Bids superior al 55%, por lo que la estrategia de protección de capital dicta una posición de espera (HOLD).",
+  "reasoning": "El mercado se encuentra en una fase de liquidación defensiva con un sentimiento de miedo extremo. Ninguno de los candidatos cumple con el umbral de convicción A+ exigido por el comité, ya que la falta de profundidad en el libro de órdenes y la inestabilidad técnica invalidan cualquier entrada. Se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
-      "symbol": "SNXXBUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 70
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "ETCUSDT",
       "score": 60
     },
     {
-      "symbol": "LDOUSDT",
+      "symbol": "VANRYUSDT",
       "score": 60
     }
   ]
