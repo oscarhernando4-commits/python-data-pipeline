@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-06 04:24:18",
+  "timestamp": "2026-08-06 04:26:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'Extreme Fear' con una estructura técnica inestable y falta de soporte en el libro de órdenes. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de alta incertidumbre.",
+  "reasoning": "El comité ha determinado que, a pesar de la fuerza relativa de algunos activos, el entorno de 'Extreme Fear' y la falta de dominancia clara en el libro de órdenes no cumplen con los criterios de alta convicción exigidos por el protocolo de gestión de riesgo.",
   "top_candidates": [
     {
+      "symbol": "ICPUSDT",
+      "score": 85
+    },
+    {
       "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "NEARUSDT",
       "score": 75
     },
     {
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 75
-    },
-    {
       "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NEARUSDT",
       "score": 75
     }
   ]
