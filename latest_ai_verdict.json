@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 13:00:30",
+  "timestamp": "2026-08-06 13:02:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de alta volatilidad y riesgo sistémico. Ninguno de los candidatos analizados cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que la estrategia institucional es la preservación total del capital en efectivo.",
+  "reasoning": "El mercado se encuentra en una fase de distribución forzada y alta correlación bajista. Ningún activo cumple con los criterios de riesgo-retorno exigidos por el comité, por lo que se mantiene la posición en efectivo para evitar pérdidas por volatilidad no confirmada.",
   "top_candidates": [
     {
-      "symbol": "OGNUSDT",
+      "symbol": "DEXEUSDT",
       "score": 60
     },
     {
-      "symbol": "ARBUSDT",
-      "score": 55
+      "symbol": "OGNUSDT",
+      "score": 60
     },
     {
       "symbol": "BICOUSDT",
       "score": 50
     },
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "ALGOUSDT",
       "score": 50
     },
     {
-      "symbol": "TUTUSDT",
+      "symbol": "SKYUSDT",
       "score": 50
     }
   ]
