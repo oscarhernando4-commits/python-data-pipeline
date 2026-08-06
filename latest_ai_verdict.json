@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 04:52:16",
+  "timestamp": "2026-08-06 04:54:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que CRVUSDT presenta un score técnico de 85, el entorno de mercado de 'Extreme Fear' (25) y la falta de una dominancia clara en el libro de órdenes (50% Bids) invalidan la convicción A+ requerida por el comité. El historial reciente de trades en condiciones similares indica una alta probabilidad de pérdida, por lo que se prioriza la protección del capital sobre la ejecución especulativa.",
+  "reasoning": "El comité ha decidido por unanimidad mantener la posición en efectivo (HOLD). A pesar de que CRVUSDT tiene un score técnico alto, la falta de profundidad en el libro de órdenes y el entorno de 'Pánico Extremo' invalidan la entrada bajo nuestra estricta política de gestión de riesgo.",
   "top_candidates": [
     {
       "symbol": "CRVUSDT",
@@ -15,7 +15,7 @@
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "BABYUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "BABYUSDT",
+      "symbol": "UNIUSDT",
       "score": 75
     }
   ]
