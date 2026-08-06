@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 12:08:24",
+  "timestamp": "2026-08-06 12:10:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual presenta un riesgo sistémico inaceptable. Ningún activo cumple con el umbral de Score técnico de 65 ni con la confirmación de volumen institucional necesaria para una entrada segura. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y pánico.",
+  "reasoning": "El mercado se encuentra en una fase de alta vulnerabilidad con una ausencia total de activos que cumplan con el umbral de calidad A+ (Score >= 65). La estrategia institucional dicta la preservación del capital sobre la especulación en un entorno de baja profundidad y alta volatilidad bajista.",
   "top_candidates": [
     {
       "symbol": "BICOUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "LINKUSDT",
       "score": 50
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "HBARUSDT",
       "score": 50
     }
   ]
