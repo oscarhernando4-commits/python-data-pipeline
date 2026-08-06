@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-06 03:56:19",
+  "timestamp": "2026-08-06 03:58:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una correlación bajista total. Ningún candidato cumple con el requisito estricto de Score Técnico >= 65 ni con una dominancia de Bids Compradores superior al 55%. Se prioriza la protección del capital sobre la especulación en un entorno de baja convicción.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación sistémica con un índice de miedo extremo. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con una dominancia de Bids en el libro de órdenes que justifique una entrada. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja convicción.",
   "top_candidates": [
     {
       "symbol": "BABYUSDT",
       "score": 70
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "NEARUSDT",
       "score": 60
     },
     {
-      "symbol": "NEARUSDT",
+      "symbol": "BCHUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 60
     }
   ]
