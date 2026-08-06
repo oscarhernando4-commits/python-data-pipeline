@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 09:18:22",
+  "updated_at": "2026-08-06 09:20:22",
   "total_balance_usd": 20.07,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado actual presenta una alta volatilidad y una purga de altcoins que no garantiza una probabilidad de éxito superior al 70%. Ningún activo cumple con el umbral de Score A+ (>= 65) y la falta de datos de liquidez en el orderbook aumenta el riesgo de slippage. Se mantiene la posición en efectivo para evitar pérdidas innecesarias."
+    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de pánico extremo. Ninguno de los candidatos cumple con el umbral estricto de Score A+ (>= 65) combinado con una profundidad de libro de órdenes que asegure una entrada sin riesgo de slippage o flash crash. Se prioriza la preservación del capital sobre la especulación."
   }
 }
