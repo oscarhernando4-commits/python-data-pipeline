@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-06 02:30:17",
+  "timestamp": "2026-08-06 02:32:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de pánico institucional con una correlación bajista generalizada. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 ni muestra una estructura de soporte de ballenas confiable, por lo que se prioriza la protección del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "Tras evaluar los 10 candidatos, ninguno alcanza el umbral de Score Técnico de 65/100 ni muestra una dominancia de Bids superior al 55%. El entorno macroeconómico de 'Extreme Fear' y la alta correlación bajista invalidan cualquier intento de compra, priorizando la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "UNIUSDT",
       "score": 60
     },
     {
+      "symbol": "BICOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "MIRAUSDT",
+      "score": 50
+    },
+    {
       "symbol": "ERAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "VANRYUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "EPICUSDT",
       "score": 50
     },
     {
