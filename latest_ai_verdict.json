@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-06 15:40:27",
+  "timestamp": "2026-08-06 15:42:30",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de activos con scores técnicos de 75, las condiciones macroeconómicas de 'Extreme Fear' y la falta de profundidad en el libro de órdenes (50% Bids) no cumplen con el umbral de seguridad A+ exigido. Se prioriza la preservación del capital frente a la especulación en un entorno de alta dispersión.",
+  "reasoning": "Ninguno de los candidatos cumple con la totalidad de las reglas de oro (especialmente la falta de soporte claro en el libro de órdenes y la alta volatilidad en un entorno de 'Extreme Fear'). Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
+    {
+      "symbol": "LINKUSDT",
+      "score": 75
+    },
     {
       "symbol": "TRXUSDT",
       "score": 75
@@ -15,16 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "STXUSDT",
+      "symbol": "NEXOUSDT",
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "XRPUSDT",
-      "score": 65
+      "symbol": "STXUSDT",
+      "score": 75
     }
   ]
 }
