@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-06 04:16:18",
+  "timestamp": "2026-08-06 04:18:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%) y el entorno de mercado presenta un riesgo inaceptable de 'trampa de valor' en las condiciones actuales de pánico extremo.",
+  "reasoning": "A pesar de tener activos con un score técnico de 75, la falta de dominancia clara en el libro de órdenes (Bids 50%), la ausencia de un volumen institucional de confirmación (Volume Surge < 1.2x) y el entorno de 'Extreme Fear' impiden alcanzar el umbral de convicción A+ requerido por el comité para ejecutar una orden de compra.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "BABYUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "APTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ACTUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 75
     }
   ]
