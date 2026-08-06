@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-06 15:26:21",
+  "timestamp": "2026-08-06 15:28:30",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el comité. La falta de dominancia en el libro de órdenes y la inestabilidad del mercado macro sugieren que cualquier entrada actual conlleva un riesgo de slippage y pérdida de capital inaceptable.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "XLMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -21,6 +17,10 @@
     {
       "symbol": "STXUSDT",
       "score": 75
+    },
+    {
+      "symbol": "HEIUSDT",
+      "score": 70
     },
     {
       "symbol": "HBARUSDT",
