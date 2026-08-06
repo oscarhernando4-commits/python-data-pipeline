@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-06 09:10:23",
-  "selected_symbol": "XAUTUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "El comité ha alcanzado un consenso unánime para operar XAUTUSDT. A pesar del miedo generalizado en el mercado, el capital institucional está rotando hacia activos de refugio (RWA/Oro). XAUT cumple con el score técnico A+ requerido, superando el umbral de 65, y se alinea con la tesis de inversión de proteger capital en activos tangibles durante periodos de alta volatilidad.",
+  "timestamp": "2026-08-06 09:12:21",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ requerido por el comité. La alta volatilidad y el sentimiento de pánico global, sumado a la falta de muros de soporte claros en el libro de órdenes, dictan una postura de preservación de capital (HOLD) para evitar el riesgo de 'cuchillos cayendo'.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
-      "score": 85
+      "score": 70
     },
     {
       "symbol": "POLUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
+      "score": 70
     },
     {
       "symbol": "PAXGUSDT",
-      "score": 75
+      "score": 60
+    },
+    {
+      "symbol": "TLMUSDT",
+      "score": 60
     },
     {
       "symbol": "AXTIBUSDT",
-      "score": 75
+      "score": 60
     }
   ]
 }
