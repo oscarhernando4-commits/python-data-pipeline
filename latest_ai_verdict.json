@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 12:14:23",
+  "timestamp": "2026-08-06 12:16:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Debido a la presión bajista sistémica, la falta de activos con score técnico superior a 65 y la ausencia de soporte institucional en el libro de órdenes, el comité ha decidido unánimemente no ejecutar ninguna operación de compra para proteger el capital.",
+  "reasoning": "El mercado presenta un riesgo sistémico elevado con una correlación bajista predominante. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la inacción para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "JSTUSDT",
       "score": 60
     },
     {
-      "symbol": "NIGHTUSDT",
+      "symbol": "TLMUSDT",
       "score": 60
     },
     {
-      "symbol": "EPICUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "MIRAUSDT",
+      "symbol": "BICOUSDT",
       "score": 50
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "UNIUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "LINKUSDT",
       "score": 50
     }
   ]
