@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-06 08:22:20",
+  "timestamp": "2026-08-06 08:24:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de Score A+ (>= 65) combinado con una dominancia de Bids superior al 55%, por lo que la orden es mantener la liquidez en espera de mejores condiciones.",
+  "reasoning": "A pesar de la fortaleza relativa en el sector RWA, ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El entorno de mercado actual es de alta volatilidad y riesgo, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar trampas de liquidez.",
   "top_candidates": [
+    {
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
     {
       "symbol": "PAXGUSDT",
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "ICPUSDT",
       "score": 75
     },
     {
@@ -21,10 +25,6 @@
     {
       "symbol": "ZROUSDT",
       "score": 75
-    },
-    {
-      "symbol": "EULUSDT",
-      "score": 65
     }
   ]
 }
