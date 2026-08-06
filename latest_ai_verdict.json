@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-06 02:08:18",
+  "timestamp": "2026-08-06 02:10:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación con alta correlación negativa y falta de fuerza relativa en los activos analizados. Ningún candidato cumple con los criterios de riesgo A+ establecidos por el comité, por lo que la decisión es proteger el capital y esperar condiciones de mercado más favorables.",
+  "reasoning": "El mercado actual presenta un entorno de alta volatilidad y riesgo sistémico sin confirmación de volumen institucional en los activos analizados. Ningún candidato cumple con el umbral de Score Técnico A+ (>= 65) requerido por el comité, por lo que se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
-      "symbol": "NEARUSDT",
-      "score": 60
+      "symbol": "APTUSDT",
+      "score": 70
     },
     {
       "symbol": "POLUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "PUMPUSDT",
-      "score": 50
+      "symbol": "NEXOUSDT",
+      "score": 60
     },
     {
-      "symbol": "HOMEUSDT",
+      "symbol": "PUMPUSDT",
       "score": 50
     }
   ]
