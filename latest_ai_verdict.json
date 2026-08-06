@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-06 12:34:22",
+  "timestamp": "2026-08-06 12:36:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un riesgo sistémico elevado y una falta de convicción técnica en los activos analizados. Ningún candidato cumple con el requisito de Score >= 65, por lo que la estrategia de preservación de capital dicta una posición de espera total.",
+  "reasoning": "El mercado presenta una configuración de capitulación institucional generalizada. Ninguno de los candidatos analizados alcanza el umbral de seguridad A+ (Score >= 65) requerido por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y falta de soporte estructural.",
   "top_candidates": [
     {
-      "symbol": "CRVUSDT",
+      "symbol": "RENDERUSDT",
       "score": 60
     },
     {
@@ -15,8 +15,8 @@
       "score": 60
     },
     {
-      "symbol": "LTCUSDT",
-      "score": 50
+      "symbol": "CRVUSDT",
+      "score": 60
     },
     {
       "symbol": "HBARUSDT",
