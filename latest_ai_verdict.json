@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 14:52:18",
+  "timestamp": "2026-08-06 14:54:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "A pesar de que algunos activos muestran un score técnico de 75, el entorno de 'Extreme Fear' y la falta de una dominancia clara en el libro de órdenes (Bids < 55%) invalidan la entrada. El comité prioriza la preservación del capital sobre la especulación en un mercado que aún purga proyectos de baja calidad.",
   "top_candidates": [
     {
       "symbol": "ETHUSDT",
@@ -19,12 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "AXSUSDT",
+      "symbol": "VIRTUALUSDT",
       "score": 75
     },
     {
-      "symbol": "VIRTUALUSDT",
-      "score": 75
+      "symbol": "SEIUSDT",
+      "score": 70
     }
   ]
 }
