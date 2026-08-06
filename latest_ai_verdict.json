@@ -1,22 +1,18 @@
 {
-  "timestamp": "2026-08-06 11:48:26",
+  "timestamp": "2026-08-06 11:50:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual carece de la convicción institucional necesaria para ejecutar operaciones de compra. Todos los candidatos analizados fallan en el umbral mínimo de Score técnico (65) y no presentan una estructura de libro de órdenes que garantice una entrada segura. Se prioriza la protección del capital frente a la inercia bajista del mercado.",
+  "reasoning": "El comité ha determinado que el mercado actual carece de la estructura técnica y la profundidad de liquidez necesaria para ejecutar una operación con alta probabilidad de éxito. Todos los candidatos fallan en el umbral mínimo de score (65/100), y el entorno macro de miedo extremo sugiere que la preservación del capital es la prioridad absoluta.",
   "top_candidates": [
     {
-      "symbol": "AEROUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     },
     {
-      "symbol": "TRXUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "MIRAUSDT",
-      "score": 50
+      "symbol": "AEROUSDT",
+      "score": 60
     },
     {
       "symbol": "LINKUSDT",
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "ADAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "HFTUSDT",
       "score": 50
     }
   ]
