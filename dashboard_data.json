@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 01:28:21",
+  "updated_at": "2026-08-06 01:30:24",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una configuración de riesgo extremo con una correlación de activos cercana a 1.0, lo que invalida la diversificación. Ningún activo cumple con el requisito de score técnico >= 65, por lo que la orden es mantener la liquidez en USDT para evitar la exposición a la caída sistémica."
+    "reasoning": "El comité ha determinado que el mercado se encuentra en una fase de capitulación técnica donde la probabilidad de éxito en posiciones largas es estadísticamente baja. Ningún activo cumple con los criterios de fuerza relativa, soporte de ballenas o score técnico mínimo exigido por el CRO. Se ordena la protección total del capital hasta que el sentimiento de mercado mejore y aparezcan configuraciones de alta convicción."
   }
 }
