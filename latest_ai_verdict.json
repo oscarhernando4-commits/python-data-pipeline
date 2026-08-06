@@ -1,23 +1,11 @@
 {
-  "timestamp": "2026-08-06 15:42:30",
+  "timestamp": "2026-08-06 15:44:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con la totalidad de las reglas de oro (especialmente la falta de soporte claro en el libro de órdenes y la alta volatilidad en un entorno de 'Extreme Fear'). Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en una 'Trampa de Neutralidad' con aversión al riesgo extrema. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es mantener la liquidez y evitar la exposición en un entorno de alta volatilidad y baja convicción.",
   "top_candidates": [
-    {
-      "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TRXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ACTUSDT",
-      "score": 75
-    },
     {
       "symbol": "NEXOUSDT",
       "score": 75
@@ -25,6 +13,18 @@
     {
       "symbol": "STXUSDT",
       "score": 75
+    },
+    {
+      "symbol": "VETUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "XLMUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "XRPUSDT",
+      "score": 65
     }
   ]
 }
