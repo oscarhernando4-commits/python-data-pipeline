@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 06:02:21",
+  "timestamp": "2026-08-06 06:04:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) en un entorno de mercado caracterizado por el pánico extremo y la alta probabilidad de liquidaciones, por lo que la decisión institucional es mantenerse en liquidez (HOLD).",
+  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con alta incertidumbre macroeconómica. Ninguno de los candidatos presenta una dominancia de bids compradores superior al 55% ni una estructura técnica que garantice una alta probabilidad de éxito, por lo que se prioriza la preservación del capital en USDT.",
   "top_candidates": [
     {
-      "symbol": "MORPHOUSDT",
-      "score": 75
+      "symbol": "GNOUSDT",
+      "score": 85
     },
     {
       "symbol": "PENGUUSDT",
       "score": 75
     },
     {
-      "symbol": "GNOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TRXUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 70
     },
     {
       "symbol": "XRPUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "SYNUSDT",
       "score": 65
     }
   ]
