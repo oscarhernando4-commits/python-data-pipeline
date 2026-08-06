@@ -1,12 +1,25 @@
 {
-  "STXUSDT": [
+  "GOOGLBUSDT": [
     {
-      "timestamp": "2026-08-06 14:42:10",
-      "price": 0.1324,
-      "score": 45,
-      "rsi": 48.39,
+      "timestamp": "2026-08-06 14:44:10",
+      "price": 360.51,
+      "score": 15,
+      "rsi": 39.62,
       "macd": "Neutral",
-      "volume_surge": 0.39,
+      "volume_surge": 1.18,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-06 14:44:10",
+      "price": 1.372,
+      "score": 75,
+      "rsi": 59.91,
+      "macd": "Neutral",
+      "volume_surge": 4.36,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
