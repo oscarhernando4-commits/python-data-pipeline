@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-06 05:44:18",
+  "timestamp": "2026-08-06 05:46:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con sentimiento de miedo extremo y falta de dominancia clara en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ requerido por el comité, por lo que la estrategia óptima es mantener la liquidez y evitar la exposición a posibles 'falling knives' en un entorno de tendencia neutral.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, la falta de soporte en el libro de órdenes y el entorno de pánico extremo invalidan cualquier oportunidad de entrada con una probabilidad de éxito aceptable, priorizando la preservación del capital.",
   "top_candidates": [
-    {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 75
-    },
     {
       "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "PENGUUSDT",
       "score": 75
     },
     {
-      "symbol": "VANRYUSDT",
+      "symbol": "ACTUSDT",
       "score": 75
+    },
+    {
+      "symbol": "GNOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "INJUSDT",
+      "score": 70
     }
   ]
 }
