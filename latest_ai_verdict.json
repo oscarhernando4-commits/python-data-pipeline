@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 09:12:21",
+  "timestamp": "2026-08-06 09:14:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ requerido por el comité. La alta volatilidad y el sentimiento de pánico global, sumado a la falta de muros de soporte claros en el libro de órdenes, dictan una postura de preservación de capital (HOLD) para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "El mercado se encuentra en un evento de capitulación técnica generalizada. Ninguno de los candidatos cumple con el umbral de Score Técnico >= 65 combinado con una dominancia de Bids > 55% necesaria para mitigar el riesgo de slippage y asegurar una probabilidad de éxito superior al 70%. Se prioriza la preservación de capital sobre la especulación en un entorno de alta volatilidad.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "AXTIBUSDT",
+      "symbol": "ZROUSDT",
       "score": 60
     }
   ]
