@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 07:54:21",
+  "timestamp": "2026-08-06 07:56:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar el contexto de mercado de 'miedo extremo' y la falta de una ventaja estadística clara en los candidatos, el comité ha decidido priorizar la preservación del capital. Ningún activo cumple con el umbral de convicción A+ necesario para una ejecución segura en este momento.",
+  "reasoning": "Tras deliberar, el comité ha determinado que, a pesar de la presencia de activos con scores técnicos de 75, la falta de una dominancia clara en el libro de órdenes y la inestabilidad del mercado global impiden una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de pánico extremo.",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
@@ -19,12 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "TRXUSDT",
-      "score": 65
+      "symbol": "AXSUSDT",
+      "score": 75
     },
     {
-      "symbol": "BABYUSDT",
-      "score": 65
+      "symbol": "ZROUSDT",
+      "score": 75
     }
   ]
 }
