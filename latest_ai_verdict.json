@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-06 10:38:21",
+  "timestamp": "2026-08-06 10:40:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los requisitos mínimos de seguridad y rentabilidad. Ningún activo supera el umbral de score 65, y la alta volatilidad bajista junto con la falta de soporte institucional en el libro de órdenes hace que cualquier operación sea de alto riesgo. Se prioriza la protección del capital sobre la ejecución de trades especulativos.",
+  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de soporte en el libro de órdenes. El entorno macro de capitulación técnica y la alta tasa de fallos en simulaciones pasadas bajo condiciones similares dictan una postura defensiva de protección de capital.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "POLUSDT",
       "score": 60
     },
     {
@@ -21,6 +17,10 @@
     {
       "symbol": "JTOUSDT",
       "score": 55
+    },
+    {
+      "symbol": "ERAUSDT",
+      "score": 50
     },
     {
       "symbol": "BABYUSDT",
