@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 13:36:24",
+  "timestamp": "2026-08-06 13:38:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado carece de la estructura técnica y la profundidad de liquidez necesarias para cumplir con el umbral de convicción A+. Todos los candidatos presentan scores técnicos inferiores a 65, lo que, sumado al entorno de pánico extremo, hace que la única decisión prudente sea mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un entorno de alta volatilidad y riesgo sistémico con una falta de convicción institucional clara. Ningún activo cumple con los criterios de alta calidad (Score >= 65) exigidos por el comité, por lo que la decisión estratégica es mantener el 100% de la liquidez en USDT para proteger el capital frente a la inestabilidad actual.",
   "top_candidates": [
     {
       "symbol": "LTCUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "GNOUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "KORUBUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "TRXUSDT",
       "score": 60
     },
     {
       "symbol": "QNTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ACTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "OGNUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "NVDABUSDT",
       "score": 60
     }
   ]
