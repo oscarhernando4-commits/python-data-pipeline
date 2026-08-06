@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-06 01:32:17",
+  "timestamp": "2026-08-06 01:34:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una parálisis operativa con scores técnicos mediocres y una ausencia total de activos que cumplan con los criterios de alta convicción (Score >= 65). La estrategia institucional prioriza la protección del capital frente a la especulación en un entorno de alta incertidumbre regulatoria y baja liquidez.",
+  "reasoning": "El mercado presenta una estructura de riesgo extremo con una mayoría de activos mostrando debilidad técnica. Ningún candidato cumple con el umbral de calidad A+ requerido por el comité, por lo que la decisión estratégica es mantener la liquidez en espera de una mejora en las condiciones macro y de volumen.",
   "top_candidates": [
     {
-      "symbol": "ACTUSDT",
+      "symbol": "SNXXBUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "NEARUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NEXOUSDT",
       "score": 60
     },
     {
@@ -15,15 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "SNXXBUSDT",
-      "score": 55
-    },
-    {
       "symbol": "HOMEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "HFTUSDT",
       "score": 50
     }
   ]
