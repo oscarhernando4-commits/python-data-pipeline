@@ -1,22 +1,14 @@
 {
-  "timestamp": "2026-08-06 16:14:31",
+  "timestamp": "2026-08-06 16:16:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de distribución institucional agresiva y una falta de fuerza relativa en todos los activos analizados. Dado que ningún candidato alcanza el umbral de score técnico de 65 y el sentimiento global es de miedo extremo, la estrategia de máxima rentabilidad es la preservación del capital mediante la inacción (HOLD).",
+  "reasoning": "El mercado se encuentra en una fase de alta toxicidad y capitulación técnica. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital.",
   "top_candidates": [
     {
-      "symbol": "SUNUSDT",
+      "symbol": "COTIUSDT",
       "score": 60
-    },
-    {
-      "symbol": "GNOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "BTCUSDT",
-      "score": 50
     },
     {
       "symbol": "SYNUSDT",
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "PUMPUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "EPICUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "TUTUSDT",
       "score": 50
     }
   ]
