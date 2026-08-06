@@ -1,12 +1,38 @@
 {
-  "SEIUSDT": [
+  "LUNCUSDT": [
     {
-      "timestamp": "2026-08-06 00:46:11",
-      "price": 0.04153,
-      "score": 35,
-      "rsi": 51.71,
+      "timestamp": "2026-08-06 00:48:11",
+      "price": 4.973e-05,
+      "score": 30,
+      "rsi": 41.02,
       "macd": "Neutral",
-      "volume_surge": 0.05,
+      "volume_surge": 0.14,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-06 00:48:11",
+      "price": 0.5195,
+      "score": 30,
+      "rsi": 52.17,
+      "macd": "Neutral",
+      "volume_surge": 0.14,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-06 00:48:11",
+      "price": 1.392,
+      "score": 0,
+      "rsi": 42.95,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-06 00:46:20",
+  "timestamp": "2026-08-06 00:48:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno actual de mercado es de alta fragilidad. Ninguno de los activos analizados alcanza el umbral de Score 65 requerido para una operación de alta convicción. Se prioriza la preservación del capital ante la falta de soporte institucional claro en el libro de órdenes y la persistencia del sentimiento de miedo extremo.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación y alta volatilidad sin soporte institucional claro. Ningún activo cumple con el requisito estricto de Score Técnico >= 65 ni con una dominancia de Bids superior al 55%, por lo que la estrategia de protección de capital dicta una posición de espera (HOLD).",
   "top_candidates": [
     {
       "symbol": "SNXXBUSDT",
       "score": 70
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 60
+      "symbol": "ATOMUSDT",
+      "score": 70
     },
     {
-      "symbol": "VANRYUSDT",
+      "symbol": "UNIUSDT",
       "score": 60
     },
     {
