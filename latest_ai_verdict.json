@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-06 01:30:23",
+  "timestamp": "2026-08-06 01:32:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado se encuentra en una fase de capitulación técnica donde la probabilidad de éxito en posiciones largas es estadísticamente baja. Ningún activo cumple con los criterios de fuerza relativa, soporte de ballenas o score técnico mínimo exigido por el CRO. Se ordena la protección total del capital hasta que el sentimiento de mercado mejore y aparezcan configuraciones de alta convicción.",
+  "reasoning": "El mercado presenta una parálisis operativa con scores técnicos mediocres y una ausencia total de activos que cumplan con los criterios de alta convicción (Score >= 65). La estrategia institucional prioriza la protección del capital frente a la especulación en un entorno de alta incertidumbre regulatoria y baja liquidez.",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
+      "symbol": "ACTUSDT",
       "score": 60
     },
     {
-      "symbol": "ACTUSDT",
+      "symbol": "SUNUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 55
     },
     {
-      "symbol": "HFTUSDT",
+      "symbol": "HOMEUSDT",
       "score": 50
     },
     {
-      "symbol": "HOMEUSDT",
+      "symbol": "HFTUSDT",
       "score": 50
     }
   ]
