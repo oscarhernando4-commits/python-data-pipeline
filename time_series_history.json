@@ -1,12 +1,77 @@
 {
+  "DRAMBUSDT": [
+    {
+      "timestamp": "2026-08-06 07:26:10",
+      "price": 50.94,
+      "score": 45,
+      "rsi": 42.54,
+      "macd": "Neutral",
+      "volume_surge": 0.11,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "AMDBUSDT": [
+    {
+      "timestamp": "2026-08-06 07:26:10",
+      "price": 478.67,
+      "score": 45,
+      "rsi": 47.73,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-06 07:26:10",
+      "price": 0.1341,
+      "score": 65,
+      "rsi": 67.01,
+      "macd": "Neutral",
+      "volume_surge": 1.36,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "RESOLVUSDT": [
+    {
+      "timestamp": "2026-08-06 07:26:10",
+      "price": 0.01822,
+      "score": 65,
+      "rsi": 62.57,
+      "macd": "Neutral",
+      "volume_surge": 1.33,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
   "BONKUSDT": [
     {
-      "timestamp": "2026-08-06 07:24:11",
-      "price": 2.82e-06,
+      "timestamp": "2026-08-06 07:26:10",
+      "price": 2.81e-06,
       "score": 75,
-      "rsi": 60.33,
+      "rsi": 54.84,
       "macd": "Neutral",
-      "volume_surge": 0.26,
+      "volume_surge": 0.48,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PORTALUSDT": [
+    {
+      "timestamp": "2026-08-06 07:26:10",
+      "price": 0.01137,
+      "score": 15,
+      "rsi": 48.16,
+      "macd": "Neutral",
+      "volume_surge": 0.61,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,7 +79,7 @@
   ],
   "PENDLEUSDT": [
     {
-      "timestamp": "2026-08-06 07:24:11",
+      "timestamp": "2026-08-06 07:26:10",
       "price": 1.386,
       "score": 45,
       "rsi": 47.49,
@@ -24,19 +89,5 @@
       "news_headline": null,
       "fear_greed": 50
     }
-  ],
-  "INTCBUSDT": [
-    {
-      "timestamp": "2026-08-06 07:24:11",
-      "price": 100.18,
-      "score": 45,
-      "rsi": 48.26,
-      "macd": "Neutral",
-      "volume_surge": 0.0,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
   ]
-}]
 }

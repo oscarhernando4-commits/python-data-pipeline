@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-06 07:24:20",
+  "timestamp": "2026-08-06 07:26:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de compresión de volatilidad sin una dirección clara. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ (Score >= 65 y Bids > 55%) exigidos por el comité para mitigar el riesgo de 'trampa de valor' en un entorno de 'Extreme Fear'.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de pánico extremo. Ninguno de los candidatos cumple con el umbral de dominancia de Bids (>55%) ni con la robustez histórica necesaria para garantizar una operación de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
   "top_candidates": [
-    {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
     {
       "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "WLFIUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "TLMUSDT",
+      "symbol": "AXSUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DASHUSDT",
       "score": 75
     }
   ]
