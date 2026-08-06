@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 13:02:23",
+  "timestamp": "2026-08-06 13:04:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada y alta correlación bajista. Ningún activo cumple con los criterios de riesgo-retorno exigidos por el comité, por lo que se mantiene la posición en efectivo para evitar pérdidas por volatilidad no confirmada.",
+  "reasoning": "El mercado actual no cumple con los criterios de convicción A+ exigidos por el comité. La ausencia de activos con un score técnico superior a 65 y la debilidad generalizada en el libro de órdenes hacen que la única decisión responsable sea mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "DEXEUSDT",
@@ -19,11 +19,11 @@
       "score": 50
     },
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "PUMPUSDT",
       "score": 50
     },
     {
-      "symbol": "SKYUSDT",
+      "symbol": "TUTUSDT",
       "score": 50
     }
   ]
