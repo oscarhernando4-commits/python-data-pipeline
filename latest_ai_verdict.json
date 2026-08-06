@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 10:14:21",
+  "timestamp": "2026-08-06 10:16:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación sistémica con una correlación bajista predominante. Ningún activo cumple con el umbral de Score Técnico A+ (>= 65) ni con la profundidad de libro de órdenes necesaria para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja liquidez.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con aversión al riesgo sistémico. Ninguno de los activos analizados cumple con los criterios de calidad, fuerza relativa o soporte de liquidez necesarios para una entrada, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "TLMUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "NVDABUSDT",
       "score": 60
     },
     {
-      "symbol": "XLMUSDT",
-      "score": 55
+      "symbol": "BIOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "BANKUSDT",
+      "score": 50
     },
     {
       "symbol": "BABYUSDT",
       "score": 50
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "SYNUSDT",
       "score": 50
     }
   ]
