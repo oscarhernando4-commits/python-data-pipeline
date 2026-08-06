@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-06 08:50:21",
+  "timestamp": "2026-08-06 08:52:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que algunos activos tienen un score técnico de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y el entorno de pánico extremo (Fear & Greed 25) invalidan la entrada A+ exigida por el comité. Se prioriza la preservación del capital sobre la especulación en un mercado de alta incertidumbre.",
+  "reasoning": "El comité ha decidido mantener la liquidez en USDT. A pesar de que varios activos tienen un score técnico de 75, la falta de confirmación en el libro de órdenes, el entorno de pánico extremo y la alta tasa de pérdidas en trades pasados bajo condiciones neutrales, invalidan la ejecución de cualquier posición larga en este momento.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "POLUSDT",
+      "symbol": "ICPUSDT",
       "score": 75
     }
   ]
