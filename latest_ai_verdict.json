@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-06 12:02:22",
+  "timestamp": "2026-08-06 12:04:32",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los criterios mínimos de seguridad y rentabilidad. La ausencia de activos con un Score técnico superior a 65, sumada al pánico extremo, obliga a mantener una postura de espera (HOLD) para evitar la exposición a la volatilidad bajista.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "JSTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NIGHTUSDT",
       "score": 60
     },
     {
@@ -15,15 +19,11 @@
       "score": 55
     },
     {
-      "symbol": "UNIUSDT",
+      "symbol": "MIRAUSDT",
       "score": 50
     },
     {
       "symbol": "LINKUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "HBARUSDT",
       "score": 50
     }
   ]
