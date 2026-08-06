@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 09:46:18",
+  "timestamp": "2026-08-06 09:48:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta un entorno de 'risk-off' extremo con una ausencia total de activos que cumplan con los criterios de calidad A+ exigidos por el comité. La alta volatilidad y la falta de soporte institucional en el libro de órdenes hacen que la estrategia más rentable sea la preservación de capital mediante el mantenimiento de la liquidez en USDT.",
+  "reasoning": "El mercado presenta una fragilidad sistémica extrema. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico A+ (>= 65) requerido por el Comité. La alta correlación bajista y la falta de liquidez compradora en el libro de órdenes confirman que la estrategia óptima es la preservación del capital mediante una postura de 'HOLD' (liquidez total).",
   "top_candidates": [
     {
-      "symbol": "HOMEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "REUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "AXTIBUSDT",
-      "score": 50
+      "symbol": "TLMUSDT",
+      "score": 60
     },
     {
       "symbol": "ZROUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "TRXUSDT",
       "score": 50
     },
     {
-      "symbol": "ALLOUSDT",
+      "symbol": "SOXLBUSDT",
       "score": 50
     }
   ]
