@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 07:56:20",
+  "timestamp": "2026-08-06 07:58:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras deliberar, el comité ha determinado que, a pesar de la presencia de activos con scores técnicos de 75, la falta de una dominancia clara en el libro de órdenes y la inestabilidad del mercado global impiden una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de pánico extremo.",
+  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual presenta un riesgo sistémico elevado y una falta de profundidad en el libro de órdenes. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65 y Bids >= 55%), por lo que la estrategia óptima es mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
@@ -15,16 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "SUNUSDT",
-      "score": 75
-    },
-    {
       "symbol": "AXSUSDT",
       "score": 75
     },
     {
       "symbol": "ZROUSDT",
       "score": 75
+    },
+    {
+      "symbol": "BTCUSDT",
+      "score": 70
     }
   ]
 }
