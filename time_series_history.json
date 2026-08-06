@@ -1,15 +1,67 @@
 {
   "PENDLEUSDT": [
     {
-      "timestamp": "2026-08-06 14:32:11",
-      "price": 1.359,
-      "score": 25,
-      "rsi": 47.0,
+      "timestamp": "2026-08-06 14:34:09",
+      "price": 1.362,
+      "score": 60,
+      "rsi": 50.47,
       "macd": "Neutral",
-      "volume_surge": 1.86,
+      "volume_surge": 2.08,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BIOUSDT": [
+    {
+      "timestamp": "2026-08-06 14:34:09",
+      "price": 0.02418,
+      "score": 30,
+      "rsi": 48.52,
+      "macd": "Neutral",
+      "volume_surge": 0.05,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LUNCUSDT": [
+    {
+      "timestamp": "2026-08-06 14:34:09",
+      "price": 4.851e-05,
+      "score": 30,
+      "rsi": 39.04,
+      "macd": "Neutral",
+      "volume_surge": 0.05,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-06 14:34:09",
+      "price": 2.76e-06,
+      "score": 0,
+      "rsi": 45.47,
+      "macd": "Neutral",
+      "volume_surge": 0.09,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-06 14:34:09",
+      "price": 0.1322,
+      "score": 30,
+      "rsi": 45.7,
+      "macd": "Neutral",
+      "volume_surge": 0.11,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}}
+}
