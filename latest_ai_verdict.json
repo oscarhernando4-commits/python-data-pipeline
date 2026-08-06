@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-06 00:20:18",
+  "timestamp": "2026-08-06 00:22:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65 y Bids > 55%). Ante el entorno de 'Extreme Fear' y la alta probabilidad de pérdidas basada en el historial de 1474 trades, la decisión institucional es mantener la liquidez en efectivo para evitar la trampa de liquidez.",
+  "reasoning": "El comité ha determinado por unanimidad que el mercado actual no cumple con los requisitos mínimos de seguridad y convicción técnica. La ausencia de datos de liquidez fiables y la prevalencia de scores técnicos mediocres obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "SNXXBUSDT",
+      "symbol": "ETCUSDT",
       "score": 70
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "JTOUSDT",
       "score": 70
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "LDOUSDT",
       "score": 60
     }
   ]
