@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 02:06:19",
+  "timestamp": "2026-08-06 02:08:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado carece de la convicción técnica y la profundidad de liquidez necesarias para ejecutar una operación de compra. Todos los candidatos fallan en el umbral de Score Técnico A+ (>= 65), y el entorno macro de miedo extremo sugiere que la preservación del capital es la prioridad absoluta.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación con alta correlación negativa y falta de fuerza relativa en los activos analizados. Ningún candidato cumple con los criterios de riesgo A+ establecidos por el comité, por lo que la decisión es proteger el capital y esperar condiciones de mercado más favorables.",
   "top_candidates": [
     {
       "symbol": "NEARUSDT",
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "NEXOUSDT",
-      "score": 60
-    },
-    {
       "symbol": "SUNUSDT",
       "score": 60
     },
     {
-      "symbol": "SUIUSDT",
-      "score": 55
+      "symbol": "PUMPUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "HOMEUSDT",
+      "score": 50
     }
   ]
 }
