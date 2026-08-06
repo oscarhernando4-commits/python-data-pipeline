@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 10:56:22",
+  "updated_at": "2026-08-06 10:58:28",
   "total_balance_usd": 20.07,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Tras evaluar los 10 candidatos, ninguno alcanza el score técnico mínimo de 65 ni muestra una dominancia de Bids necesaria para mitigar el riesgo sistémico. El comité ha decidido priorizar la preservación del capital ante la alta volatilidad y la falta de una tendencia alcista clara."
+    "reasoning": "Tras evaluar los 10 candidatos, ninguno alcanza el umbral de seguridad A+ (Score >= 65). La alta correlación bajista y la falta de profundidad en el libro de órdenes confirman que el riesgo de operar en este entorno supera el beneficio potencial, por lo que el comité decide mantener la posición en efectivo."
   }
 }
