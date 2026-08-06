@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-06 10:24:22",
+  "timestamp": "2026-08-06 10:26:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno actual de 'liquidez tóxica' y la falta de activos con un score técnico superior a 65 hacen que cualquier operación de compra sea de alto riesgo. Se prioriza la preservación del capital hasta que las condiciones macroeconómicas y la profundidad del libro de órdenes mejoren.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación selectiva con una debilidad estructural generalizada. Ningún activo cumple con el requisito estricto de Score >= 65 y confirmación de volumen institucional, por lo que la estrategia óptima es el mantenimiento de la liquidez (HOLD) para evitar la exposición a 'falling knives' y volatilidad sin dirección.",
   "top_candidates": [
+    {
+      "symbol": "ZAMAUSDT",
+      "score": 65
+    },
     {
       "symbol": "POLUSDT",
       "score": 60
@@ -15,16 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "BIOUSDT",
+      "symbol": "TLMUSDT",
       "score": 60
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "BANKUSDT",
-      "score": 50
+      "symbol": "BIOUSDT",
+      "score": 60
     }
   ]
 }
