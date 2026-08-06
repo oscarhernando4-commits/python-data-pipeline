@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 08:18:22",
+  "timestamp": "2026-08-06 08:20:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y purga de liquidez. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo de 'cuchillos cayendo'. Se mantiene la liquidez en USDT para evitar pérdidas innecesarias.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un estado de capitulación selectiva donde la mayoría de los activos no cumplen con el umbral de seguridad A+ requerido por el comité. La falta de dominancia clara en el libro de órdenes y la baja probabilidad de éxito histórico en el entorno actual dictan una postura de preservación de capital.",
   "top_candidates": [
     {
       "symbol": "PAXGUSDT",
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "BABYUSDT",
+      "symbol": "ADAUSDT",
       "score": 65
     }
   ]
