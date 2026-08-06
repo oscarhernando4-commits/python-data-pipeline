@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-08-06 10:46:26",
+  "timestamp": "2026-08-06 10:48:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de alta incertidumbre y falta de convicción institucional. Ninguno de los activos analizados alcanza el umbral de seguridad (Score >= 65) ni muestra una estructura de libro de órdenes favorable, por lo que la estrategia óptima es la inacción para evitar pérdidas por 'falling knives'.",
+  "reasoning": "Tras evaluar los 10 candidatos, ninguno alcanza el umbral de Score Técnico de 65/100 requerido por el Comité. El entorno de mercado actual, caracterizado por un 'Extreme Fear' y una falta de convicción en el libro de órdenes, hace que cualquier operación sea considerada de alto riesgo. Se prioriza la protección del capital sobre la ejecución de trades mediocres.",
   "top_candidates": [
+    {
+      "symbol": "BICOUSDT",
+      "score": 60
+    },
     {
       "symbol": "JTOUSDT",
       "score": 55
-    },
-    {
-      "symbol": "BICOUSDT",
-      "score": 50
     },
     {
       "symbol": "ERAUSDT",
