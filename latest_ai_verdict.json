@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-06 09:28:22",
+  "timestamp": "2026-08-06 09:30:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una salud interna colapsada con una mayoría de activos mostrando scores técnicos inferiores a 65. Ningún candidato cumple con los requisitos de convicción A+ exigidos por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la liquidez en espera de un catalizador de volatilidad positivo.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de volumen institucional necesaria para una entrada segura. El mercado se encuentra en una fase de alta volatilidad y distribución, por lo que la estrategia óptima es la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "TLMUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "PAXGUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "PAXGUSDT",
       "score": 60
     },
     {
@@ -23,8 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "ALLOUSDT",
-      "score": 60
+      "symbol": "EULUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "TRXUSDT",
+      "score": 50
     }
   ]
 }
