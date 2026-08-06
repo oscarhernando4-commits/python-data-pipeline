@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-06 03:20:17",
+  "timestamp": "2026-08-06 03:22:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos que cumplan con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte en el libro de órdenes necesaria para garantizar una operación de alta probabilidad. Ante el entorno de 'Extreme Fear' y la alta volatilidad, la estrategia institucional es preservar el capital y esperar una estabilización del mercado.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad crítica y alta incertidumbre. Ninguno de los activos analizados cumple con los criterios estrictos de riesgo y convicción establecidos por el comité, por lo que la decisión prudente es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "BABYUSDT",
       "score": 70
     },
     {
-      "symbol": "UNIUSDT",
+      "symbol": "VANRYUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "VANRYUSDT",
+      "symbol": "BIOUSDT",
       "score": 60
     },
     {
-      "symbol": "BIOUSDT",
+      "symbol": "SUNUSDT",
       "score": 60
     }
   ]
