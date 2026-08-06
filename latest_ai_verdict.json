@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 08:54:19",
+  "timestamp": "2026-08-06 08:56:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que algunos activos tienen un score técnico de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y la incertidumbre macroeconómica impiden la ejecución de una orden de compra bajo los estándares de riesgo A+ del comité.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de liquidez y volumen). La disparidad entre el miedo minorista y la acumulación institucional sugiere un mercado de alta incertidumbre, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
       "symbol": "LUNCUSDT",
       "score": 95
     },
     {
+      "symbol": "ETHUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "score": 80
+    },
+    {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "EULUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     }
   ]
