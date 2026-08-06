@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 11:54:23",
+  "timestamp": "2026-08-06 11:56:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos que cumplan con el umbral de calidad A+ (Score >= 65) y la confirmación de liquidez necesaria. Ante un entorno de mercado en capitulación y alta incertidumbre, la estrategia óptima es la preservación total del capital en efectivo (USDT) hasta que las condiciones técnicas mejoren.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta volatilidad y falta de soporte en el libro de órdenes. Ningún activo cumple con los criterios estrictos de calidad A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez total y esperar una mejora en las condiciones macroeconómicas.",
   "top_candidates": [
     {
       "symbol": "AEROUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "ADAUSDT",
+      "score": 60
+    },
+    {
       "symbol": "ATOMUSDT",
       "score": 60
     },
     {
       "symbol": "CAKEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ACXUSDT",
       "score": 60
     }
   ]
