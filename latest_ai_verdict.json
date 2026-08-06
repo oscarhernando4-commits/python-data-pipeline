@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-08-06 13:22:20",
+  "timestamp": "2026-08-06 13:24:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de Score técnico A+ (>= 65) ni con una dominancia de Bids de ballenas superior al 55%. El entorno de 'Extreme Fear' y la falta de confirmación técnica obligan a la inacción para proteger el capital institucional.",
   "top_candidates": [
+    {
+      "symbol": "BTCUSDT",
+      "score": 70
+    },
     {
       "symbol": "SUNUSDT",
       "score": 60
-    },
-    {
-      "symbol": "AVAXUSDT",
-      "score": 55
     },
     {
       "symbol": "FILUSDT",
