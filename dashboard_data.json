@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 08:52:22",
+  "updated_at": "2026-08-06 08:54:20",
   "total_balance_usd": 20.07,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha decidido mantener la liquidez en USDT. A pesar de que varios activos tienen un score técnico de 75, la falta de confirmación en el libro de órdenes, el entorno de pánico extremo y la alta tasa de pérdidas en trades pasados bajo condiciones neutrales, invalidan la ejecución de cualquier posición larga en este momento."
+    "reasoning": "A pesar de que algunos activos tienen un score técnico de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y la incertidumbre macroeconómica impiden la ejecución de una orden de compra bajo los estándares de riesgo A+ del comité."
   }
 }
