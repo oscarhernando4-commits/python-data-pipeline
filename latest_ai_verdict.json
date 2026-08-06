@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-06 09:16:21",
+  "timestamp": "2026-08-06 09:18:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad generalizada y una falta de convicción técnica en los activos analizados. Dado que ningún candidato cumple con el umbral de Score A+ (>= 65) y el entorno macro es de alta incertidumbre, la decisión institucional es preservar el capital y evitar la exposición al riesgo en condiciones de mercado desfavorables.",
+  "reasoning": "El mercado actual presenta una alta volatilidad y una purga de altcoins que no garantiza una probabilidad de éxito superior al 70%. Ningún activo cumple con el umbral de Score A+ (>= 65) y la falta de datos de liquidez en el orderbook aumenta el riesgo de slippage. Se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "PAXGUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "XAUTUSDT",
-      "score": 60
+      "score": 75
     },
     {
-      "symbol": "BABYUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "BANKUSDT",
-      "score": 50
+      "symbol": "ALLOUSDT",
+      "score": 75
     },
     {
       "symbol": "TRXUSDT",
-      "score": 50
+      "score": 65
+    },
+    {
+      "symbol": "BABYUSDT",
+      "score": 65
     }
   ]
 }
