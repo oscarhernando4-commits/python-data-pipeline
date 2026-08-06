@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-06 07:28:22",
-  "selected_symbol": "AXSUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "Tras deliberar sobre el pánico extremo del mercado, el comité ha identificado a AXSUSDT como el único activo con la fuerza técnica (Score 85) y el volumen institucional necesario para justificar una posición de compra, priorizando la protección del capital mediante un Trailing Stop dinámico.",
+  "timestamp": "2026-08-06 07:30:20",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, aunque existen activos con score técnico de 75, la falta de soporte en el libro de órdenes y la alta volatilidad en el entorno de 'Extreme Fear' no cumplen con los criterios de seguridad A+ exigidos por el CRO.",
   "top_candidates": [
-    {
-      "symbol": "AXSUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "WLFIUSDT",
-      "score": 75
-    },
     {
       "symbol": "ETCUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "AXSUSDT",
       "score": 75
+    },
+    {
+      "symbol": "SUNUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BONKUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TRXUSDT",
+      "score": 65
     }
   ]
 }
