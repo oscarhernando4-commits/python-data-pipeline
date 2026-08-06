@@ -1,14 +1,22 @@
 {
-  "timestamp": "2026-08-06 09:32:22",
+  "timestamp": "2026-08-06 09:34:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una configuración de alto riesgo con una ausencia total de activos que cumplan con el umbral de convicción A+ (Score >= 65). La estrategia institucional dicta la preservación del 100% de la liquidez en USDT para evitar la exposición a 'cuchillos cayendo' en un entorno de pánico sistémico.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
+    {
+      "symbol": "TLMUSDT",
+      "score": 60
+    },
     {
       "symbol": "ZROUSDT",
       "score": 60
+    },
+    {
+      "symbol": "TRXUSDT",
+      "score": 50
     },
     {
       "symbol": "ERAUSDT",
@@ -17,14 +25,6 @@
     {
       "symbol": "HOMEUSDT",
       "score": 50
-    },
-    {
-      "symbol": "AXTIBUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 45
     }
   ]
 }
