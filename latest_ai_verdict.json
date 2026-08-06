@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-06 04:02:17",
+  "timestamp": "2026-08-06 04:04:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de alta vulnerabilidad sistémica sin divergencias alcistas claras. Ningún activo cumple con el umbral de Score técnico de 65 ni con la profundidad de mercado necesaria para una ejecución segura, por lo que la estrategia institucional es proteger el capital en liquidez.",
+  "reasoning": "El mercado presenta una fragilidad extrema con una correlación bajista generalizada. Ningún activo cumple con el umbral de Score técnico A+ (>= 65) ni con la profundidad de liquidez necesaria para mitigar el riesgo de un flash crash. La estrategia institucional es la preservación total de capital.",
   "top_candidates": [
     {
-      "symbol": "BABYUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ASTERUSDT",
+      "symbol": "AVAXUSDT",
       "score": 60
     },
     {
@@ -21,6 +17,10 @@
     {
       "symbol": "APTUSDT",
       "score": 60
+    },
+    {
+      "symbol": "BABYUSDT",
+      "score": 55
     },
     {
       "symbol": "BCHUSDT",
