@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-06 15:38:19",
+  "timestamp": "2026-08-06 15:40:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de activos con scores técnicos de 75, las condiciones macroeconómicas de 'Extreme Fear' y la falta de profundidad en el libro de órdenes (50% Bids) no cumplen con el umbral de seguridad A+ exigido. Se prioriza la preservación del capital frente a la especulación en un entorno de alta dispersión.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ACTUSDT",
       "score": 75
     },
     {
@@ -15,11 +19,7 @@
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "GRAMUSDT",
+      "symbol": "BNBUSDT",
       "score": 65
     },
     {
