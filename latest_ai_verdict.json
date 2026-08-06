@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-06 14:06:24",
+  "timestamp": "2026-08-06 14:08:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (Score A+ >= 65). La falta de soporte en el libro de órdenes y el sentimiento de 'Extreme Fear' sugieren un riesgo elevado de 'flash crashes', por lo que la decisión estratégica es proteger el capital y esperar una mejor estructura de mercado.",
+  "reasoning": "El mercado se encuentra en un estado de estrés sistémico con una falta de convicción institucional en los activos analizados. Dado que ningún candidato cumple con el umbral de calidad A+ (Score >= 65) y el riesgo de 'falling knives' es elevado, la decisión institucional es proteger el capital y permanecer en liquidez (USDT) hasta que las condiciones macro y técnicas mejoren.",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
+      "symbol": "PAXGUSDT",
       "score": 60
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "TRXUSDT",
       "score": 60
     },
     {
@@ -19,7 +19,7 @@
       "score": 60
     },
     {
-      "symbol": "ACTUSDT",
+      "symbol": "AEROUSDT",
       "score": 60
     },
     {
