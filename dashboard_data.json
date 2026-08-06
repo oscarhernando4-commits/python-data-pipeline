@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 00:02:18",
+  "updated_at": "2026-08-06 00:04:18",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado actual presenta una correlación negativa masiva y una falta de convicción institucional. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la decisión estratégica es mantener la liquidez en USDT para evitar la exposición a una posible liquidación sistémica."
+    "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65) ni con la confirmación de soporte en el libro de órdenes. El entorno macro de capitulación y la alta tasa de fallos en simulaciones recientes dictan una postura de protección de capital total."
   }
 }
