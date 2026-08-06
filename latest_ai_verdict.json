@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 03:10:17",
+  "timestamp": "2026-08-06 03:12:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno de mercado actual es de alta volatilidad y riesgo sistémico. Ningún activo cumple con los criterios estrictos de calidad A+ (Score >= 65) ni presenta una estructura de libro de órdenes que garantice una probabilidad de éxito superior al 70%. Se prioriza la protección del capital frente a la inactividad operativa.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada. Ningún activo cumple con el umbral de Score A+ (>= 65) ni con la profundidad de liquidez necesaria para una entrada segura. Se prioriza la preservación del capital ante la alta probabilidad de volatilidad bajista.",
   "top_candidates": [
     {
       "symbol": "POLUSDT",
@@ -15,11 +15,11 @@
       "score": 60
     },
     {
-      "symbol": "VANRYUSDT",
+      "symbol": "BABYUSDT",
       "score": 60
     },
     {
-      "symbol": "BABYUSDT",
+      "symbol": "VANRYUSDT",
       "score": 60
     },
     {
