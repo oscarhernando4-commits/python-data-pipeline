@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 00:16:19",
+  "timestamp": "2026-08-06 00:18:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación sistémica con alta correlación bajista. Ningún activo cumple con el umbral de Score Técnico A+ (>= 65) ni con la dominancia de Bids necesaria para garantizar una entrada segura. Se prioriza la preservación del capital sobre la especulación en un entorno de 'trampa de valor'.",
+  "reasoning": "Ningún activo cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte institucional en el libro de órdenes, por lo que se prioriza la preservación del capital en un entorno de alta volatilidad defensiva.",
   "top_candidates": [
     {
       "symbol": "SNXXBUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "HFTUSDT",
       "score": 60
     },
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "POLUSDT",
       "score": 60
     }
   ]
