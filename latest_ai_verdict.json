@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-06 10:12:24",
+  "timestamp": "2026-08-06 10:14:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos que cumplan con los criterios de alta convicción (Score >= 65) y soporte institucional. La correlación bajista y el pánico generalizado dictan una postura de espera para evitar la captura de 'cuchillos cayendo'.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación sistémica con una correlación bajista predominante. Ningún activo cumple con el umbral de Score Técnico A+ (>= 65) ni con la profundidad de libro de órdenes necesaria para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja liquidez.",
   "top_candidates": [
     {
       "symbol": "TLMUSDT",
-      "score": 60
+      "score": 70
     },
     {
       "symbol": "NVDABUSDT",
@@ -19,12 +19,12 @@
       "score": 55
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 55
+      "symbol": "BABYUSDT",
+      "score": 50
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 55
+      "symbol": "TRXUSDT",
+      "score": 50
     }
   ]
 }
