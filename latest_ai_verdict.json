@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-06 03:28:15",
+  "timestamp": "2026-08-06 03:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un estancamiento bajista severo y falta de convicción institucional. Ningún activo cumple con los criterios de riesgo A+ exigidos por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la liquidez en USDT.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada y ninguno de los candidatos analizados alcanza el umbral de calidad A+ requerido por el comité. Se prioriza la protección del capital frente a la volatilidad incierta.",
   "top_candidates": [
     {
       "symbol": "BABYUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "VANRYUSDT",
       "score": 60
     },
     {
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "VANRYUSDT",
       "score": 60
     },
     {
-      "symbol": "HEIUSDT",
-      "score": 50
+      "symbol": "KAITOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SKHYBUSDT",
+      "score": 55
     }
   ]
 }
