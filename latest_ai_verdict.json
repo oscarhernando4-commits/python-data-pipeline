@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-06 06:36:19",
+  "timestamp": "2026-08-06 06:38:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica y una falta de convicción compradora. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la orden es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de distribución forzada con alta incertidumbre macroeconómica. Ninguno de los candidatos cumple con los requisitos estrictos de Score A+ (>=65) y soporte de liquidez (Bids >= 55%) necesarios para mitigar el riesgo de pérdida, por lo que la decisión institucional es mantener la liquidez en efectivo.",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
@@ -25,6 +21,10 @@
     {
       "symbol": "GNOUSDT",
       "score": 75
+    },
+    {
+      "symbol": "BANKUSDT",
+      "score": 65
     }
   ]
 }
