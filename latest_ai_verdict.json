@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-06 06:40:20",
+  "timestamp": "2026-08-06 06:42:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de aversión al riesgo extrema con una falta de profundidad en el libro de órdenes y una alta probabilidad de volatilidad bajista. Ningún activo cumple con el umbral de convicción A+ requerido por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%) en un entorno de mercado de miedo extremo, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
     {
       "symbol": "AVAXUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHFIUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "GNOUSDT",
       "score": 75
     }
   ]
