@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 13:18:27",
+  "updated_at": "2026-08-06 13:20:21",
   "total_balance_usd": 20.07,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que el mercado se encuentra en una fase de alta fragilidad y baja convicción. Dado que ningún activo cumple con el requisito estricto de Score Técnico >= 65, se prioriza la preservación del capital sobre la ejecución de trades especulativos de baja calidad."
+    "reasoning": "El mercado presenta una debilidad sistémica generalizada sin activos que alcancen el umbral de calidad A+ (Score >= 65). Ante la falta de convicción institucional y la alta probabilidad de 'flash crashes' en activos de bajo score, el comité decide mantener el 100% de la liquidez en stablecoins para proteger el capital."
   }
 }
