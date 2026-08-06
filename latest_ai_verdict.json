@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 09:36:18",
+  "timestamp": "2026-08-06 09:38:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual carece de activos con la fuerza técnica necesaria (Score >= 65) y el soporte de liquidez requerido para una ejecución segura. La alta tasa de fallos en las simulaciones recientes bajo condiciones similares dicta una política de preservación de capital total.",
+  "reasoning": "El mercado presenta una capitulación sistémica y ningún activo cumple con los criterios de convicción A+ (Score >= 65). Se prioriza la protección del capital manteniendo la liquidez en espera de una ruptura clara del sentimiento de pánico.",
   "top_candidates": [
     {
       "symbol": "REUSDT",
       "score": 60
     },
     {
-      "symbol": "ZROUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 50
-    },
-    {
       "symbol": "TRXUSDT",
       "score": 50
     },
     {
+      "symbol": "ERAUSDT",
+      "score": 50
+    },
+    {
       "symbol": "HOMEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "ALGOUSDT",
       "score": 50
     }
   ]
