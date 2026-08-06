@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-06 06:20:23",
-  "selected_symbol": "STXUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "STXUSDT es el único activo que cumple con el umbral de score A+ (75/100) y muestra un volumen de surge significativo (3.49), lo que indica una acumulación institucional que se desacopla del pánico generalizado del mercado. La estrategia se ejecutará con un estricto control de riesgo mediante un Trailing Stop ATR para maximizar la rentabilidad en caso de una recuperación del ecosistema Bitcoin.",
+  "timestamp": "2026-08-06 06:22:29",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
+    {
+      "symbol": "ASTERUSDT",
+      "score": 85
+    },
     {
       "symbol": "STXUSDT",
       "score": 75
@@ -15,15 +19,11 @@
       "score": 70
     },
     {
-      "symbol": "JTOUSDT",
-      "score": 70
-    },
-    {
       "symbol": "SYNUSDT",
       "score": 65
     },
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "HOMEUSDT",
       "score": 65
     }
   ]
