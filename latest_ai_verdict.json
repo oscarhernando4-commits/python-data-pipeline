@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 00:04:17",
+  "timestamp": "2026-08-06 00:06:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65) ni con la confirmación de soporte en el libro de órdenes. El entorno macro de capitulación y la alta tasa de fallos en simulaciones recientes dictan una postura de protección de capital total.",
+  "reasoning": "El comité ha determinado que, ante la ausencia de activos con un Score Técnico >= 65 y la falta de soporte claro en el libro de órdenes, la estrategia más rentable es mantener la liquidez en USDT para evitar la exposición a 'cuchillos cayendo' en un mercado de alta incertidumbre.",
   "top_candidates": [
-    {
-      "symbol": "EULUSDT",
-      "score": 80
-    },
-    {
-      "symbol": "SNXXBUSDT",
-      "score": 70
-    },
     {
       "symbol": "SHIBUSDT",
       "score": 70
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "KORUBUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "EULUSDT",
       "score": 60
     },
     {
       "symbol": "POLUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TRUMPUSDT",
       "score": 60
     }
   ]
