@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-06 02:10:20",
+  "timestamp": "2026-08-06 02:12:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta un entorno de alta volatilidad y riesgo sistémico sin confirmación de volumen institucional en los activos analizados. Ningún candidato cumple con el umbral de Score Técnico A+ (>= 65) requerido por el comité, por lo que se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "Ningún activo cumple con el umbral mínimo de Score Técnico >= 65 combinado con una dominancia de Bids superior al 55%, lo que obliga a la mesa de ejecución a mantener una postura defensiva de espera.",
   "top_candidates": [
+    {
+      "symbol": "PAXGUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 70
+    },
     {
       "symbol": "APTUSDT",
       "score": 70
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "NEARUSDT",
       "score": 60
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "UNIUSDT",
       "score": 60
-    },
-    {
-      "symbol": "NEXOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PUMPUSDT",
-      "score": 50
     }
   ]
 }
