@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 12:26:18",
+  "updated_at": "2026-08-06 12:28:22",
   "total_balance_usd": 20.07,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de alta toxicidad y capitulación. Ninguno de los activos analizados cumple con el requisito de Score Técnico >= 65 ni con la profundidad de mercado necesaria para una ejecución segura. Se prioriza la protección del capital frente a la alta probabilidad de 'trampas de valor' en el entorno actual."
+    "reasoning": "El mercado presenta un entorno de riesgo extremo con una alta correlación de ventas institucionales. Ningún activo cumple con el umbral mínimo de Score 65 ni con la confirmación de soporte en el libro de órdenes, por lo que la estrategia de preservación de capital dicta una posición de espera (HOLD) total."
   }
 }
