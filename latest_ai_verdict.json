@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-06 02:02:20",
+  "timestamp": "2026-08-06 02:04:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un riesgo sistémico elevado con una distribución institucional agresiva. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que se mantiene la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta un estancamiento sistémico con una falta generalizada de convicción institucional. Ningún activo cumple con los criterios de riesgo A+ exigidos por el comité, por lo que la decisión estratégica es proteger el capital y esperar una mejor configuración de mercado.",
   "top_candidates": [
     {
+      "symbol": "PAXGUSDT",
+      "score": 60
+    },
+    {
       "symbol": "NEARUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
@@ -17,14 +25,6 @@
     {
       "symbol": "NEXOUSDT",
       "score": 60
-    },
-    {
-      "symbol": "SUNUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "HOMEUSDT",
-      "score": 50
     }
   ]
 }
