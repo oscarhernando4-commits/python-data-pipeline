@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 16:24:24",
+  "timestamp": "2026-08-06 16:26:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de pánico institucional con una ausencia total de activos que cumplan con los criterios de calidad A+ (Score >= 65). La alta tasa de fallos en las simulaciones históricas bajo condiciones de mercado 'NEUTRAL' y la falta de soporte en el libro de órdenes obligan a una postura defensiva de 'HOLD' para proteger el capital.",
+  "reasoning": "Tras la evaluación exhaustiva de los 7 agentes, se concluye que el mercado actual carece de la convicción necesaria y de los parámetros técnicos exigidos por el comité. Ningún activo supera el umbral de riesgo A+, por lo que la estrategia óptima es mantenerse en liquidez (HOLD) para evitar la exposición a la volatilidad errática y la falta de profundidad en el libro de órdenes.",
   "top_candidates": [
     {
       "symbol": "SYNUSDT",
@@ -15,11 +15,11 @@
       "score": 50
     },
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "TAOUSDT",
       "score": 50
     },
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "JSTUSDT",
       "score": 50
     },
     {
