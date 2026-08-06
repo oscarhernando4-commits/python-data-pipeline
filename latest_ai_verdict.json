@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-06 03:32:17",
+  "timestamp": "2026-08-06 03:34:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad estructural generalizada y una falta de activos con fortaleza técnica (Score >= 65). Siguiendo la Regla de Oro #1, al no existir candidatos que cumplan con los criterios de alta convicción, el comité ha decidido mantener la liquidez en USDT para evitar el riesgo de 'falling knives' y volatilidad artificial.",
+  "reasoning": "El mercado presenta un riesgo sistémico elevado con una falta total de activos que cumplan con el umbral de calidad A+ (Score >= 65). La estrategia institucional prioriza la preservación de capital sobre la especulación en un entorno de alta volatilidad y baja liquidez.",
   "top_candidates": [
-    {
-      "symbol": "BABYUSDT",
-      "score": 60
-    },
     {
       "symbol": "MORPHOUSDT",
       "score": 60
     },
     {
-      "symbol": "ACXUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "APTUSDT",
+      "symbol": "VANRYUSDT",
       "score": 60
     },
     {
       "symbol": "KAITOUSDT",
       "score": 60
+    },
+    {
+      "symbol": "HEIUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "BANKUSDT",
+      "score": 50
     }
   ]
 }
