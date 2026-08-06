@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-06 05:58:24",
+  "timestamp": "2026-08-06 06:00:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una trampa de liquidez con alta volatilidad y falta de soporte institucional claro. Ningún activo cumple con los criterios estrictos de riesgo A+ del comité, por lo que la estrategia óptima es el mantenimiento de la liquidez (HOLD) para evitar la exposición a posibles 'flash crashes' o manipulación algorítmica.",
+  "reasoning": "El mercado se encuentra en un estado de 'selección quirúrgica' con alta volatilidad y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia óptima es mantener la liquidez y evitar trampas de liquidez.",
   "top_candidates": [
-    {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
     {
       "symbol": "MORPHOUSDT",
       "score": 75
@@ -23,8 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
-      "score": 70
+      "symbol": "XRPUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "SUIUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "SYNUSDT",
+      "score": 65
     }
   ]
 }
