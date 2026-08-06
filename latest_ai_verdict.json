@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 14:44:32",
+  "timestamp": "2026-08-06 14:46:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 85, el entorno de 'Miedo Extremo' y la falta de dominancia clara en el libro de órdenes (50% Bids) no cumplen con el umbral de convicción A+ requerido por el Chief Risk Officer. Se prioriza la preservación del capital sobre la especulación en un mercado fragmentado.",
+  "reasoning": "A pesar de que existen activos con scores técnicos de 75, la ausencia de dominancia en el libro de órdenes (Bids < 55%) y la alta volatilidad del mercado minorista en pánico extremo hacen que no se cumplan los criterios de alta convicción A+ exigidos por el comité.",
   "top_candidates": [
     {
       "symbol": "ETHUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "GNOUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "NEARUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
+      "symbol": "PAXGUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "VIRTUALUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "VETUSDT",
       "score": 75
     }
   ]
