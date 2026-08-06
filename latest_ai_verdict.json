@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-06 07:36:21",
+  "timestamp": "2026-08-06 07:38:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a la falta de datos de liquidez en el libro de órdenes y la ausencia de activos que cumplan con el umbral de convicción A+ en el entorno de mercado actual.",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo en un entorno de Miedo Extremo. Se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
+    {
+      "symbol": "GRAMUSDT",
+      "score": 75
+    },
     {
       "symbol": "AVAXUSDT",
       "score": 75
@@ -15,16 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "AXTIBUSDT",
-      "score": 75
-    },
-    {
       "symbol": "AXSUSDT",
       "score": 75
     },
     {
-      "symbol": "BONKUSDT",
-      "score": 75
+      "symbol": "ADAUSDT",
+      "score": 65
     }
   ]
 }
