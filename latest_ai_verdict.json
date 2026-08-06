@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-06 07:06:22",
+  "timestamp": "2026-08-06 07:08:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de los scores técnicos, la falta de soporte en el libro de órdenes y la alta volatilidad macro no justifican el riesgo de ejecución, optando por preservar la liquidez.",
+  "reasoning": "El comité ha determinado que, ante un entorno de 'Miedo Extremo' y la falta de profundidad en el libro de órdenes de los candidatos, la probabilidad de éxito es insuficiente. Se prioriza la preservación del capital sobre la especulación en activos de alta volatilidad sin soporte institucional confirmado.",
   "top_candidates": [
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "AXSUSDT",
       "score": 75
     },
     {
       "symbol": "SUNUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AXSUSDT",
       "score": 75
     },
     {
@@ -25,6 +21,10 @@
     {
       "symbol": "MORPHOUSDT",
       "score": 70
+    },
+    {
+      "symbol": "HFTUSDT",
+      "score": 65
     }
   ]
 }
