@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-06 05:20:21",
+  "timestamp": "2026-08-06 05:22:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y volumen confirmado). La alta volatilidad y la falta de muros de compra institucionales obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "A pesar de que varios activos tienen un score técnico de 75, el mercado carece de la profundidad de soporte necesaria en el libro de órdenes y el sentimiento de 'Extreme Fear' sugiere un riesgo elevado de 'trampa de liquidez'. Ningún candidato cumple con la regla de oro de convicción A+ (Score >= 65 y Confianza >= 70%) con soporte de ballenas confirmado, por lo que la decisión es proteger el capital.",
   "top_candidates": [
     {
       "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "LINKUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "POLUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "SKYUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "POLUSDT",
+      "symbol": "PENGUUSDT",
       "score": 75
     }
   ]
