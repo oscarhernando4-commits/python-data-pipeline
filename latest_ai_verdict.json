@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 04:34:18",
+  "timestamp": "2026-08-06 04:36:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de pánico extremo con una falta de profundidad en el libro de órdenes y una alta correlación de pérdidas en las simulaciones recientes. Ningún activo cumple con el umbral de convicción A+ requerido por el comité, por lo que se mantiene la liquidez en USDT para evitar riesgos innecesarios.",
+  "reasoning": "Tras la deliberación del comité, se ha determinado que ningún candidato cumple con los requisitos estrictos de convicción A+ (Score >= 65 y Confianza >= 70%). La falta de dominancia en el libro de órdenes y la alta volatilidad en un entorno de 'Extreme Fear' hacen que la estrategia más rentable sea la preservación de capital mediante el modo HOLD.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "BABYUSDT",
+      "score": 75
+    },
+    {
       "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BABYUSDT",
+      "symbol": "SKYUSDT",
       "score": 75
     }
   ]
