@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 07:44:25",
+  "updated_at": "2026-08-06 07:46:21",
   "total_balance_usd": 20.07,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha decidido mantener la liquidez en USDT debido a que, a pesar de que algunos activos presentan scores técnicos aceptables, ninguno cumple con la confirmación de liquidez en el libro de órdenes ni con la convicción A+ exigida por el departamento de riesgo en este entorno de mercado neutral y volátil."
+    "reasoning": "A pesar de que algunos activos tienen un score técnico de 75, la ausencia de muros de soporte en el libro de órdenes (Bids < 55%) y la alta volatilidad en un entorno de 'Miedo Extremo' invalidan la convicción A+ necesaria para operar. Se prioriza la protección del capital sobre la especulación en un mercado de alta incertidumbre."
   }
 }

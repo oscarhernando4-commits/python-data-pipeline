@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 07:44:21",
+  "timestamp": "2026-08-06 07:46:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la liquidez en USDT debido a que, a pesar de que algunos activos presentan scores técnicos aceptables, ninguno cumple con la confirmación de liquidez en el libro de órdenes ni con la convicción A+ exigida por el departamento de riesgo en este entorno de mercado neutral y volátil.",
+  "reasoning": "A pesar de que algunos activos tienen un score técnico de 75, la ausencia de muros de soporte en el libro de órdenes (Bids < 55%) y la alta volatilidad en un entorno de 'Miedo Extremo' invalidan la convicción A+ necesaria para operar. Se prioriza la protección del capital sobre la especulación en un mercado de alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
-      "score": 85
+      "score": 75
     },
     {
-      "symbol": "BTCUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "TIAUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "HFTUSDT",
-      "score": 65
+      "symbol": "SUNUSDT",
+      "score": 75
     },
     {
       "symbol": "TRXUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "SYNUSDT",
       "score": 65
     }
   ]
