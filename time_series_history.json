@@ -1,12 +1,51 @@
 {
-  "PENDLEUSDT": [
+  "LUNCUSDT": [
     {
-      "timestamp": "2026-08-06 15:00:11",
-      "price": 1.371,
-      "score": 65,
-      "rsi": 58.7,
+      "timestamp": "2026-08-06 15:02:09",
+      "price": 4.864e-05,
+      "score": 45,
+      "rsi": 43.6,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.08,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-06 15:02:09",
+      "price": 2.77e-06,
+      "score": 65,
+      "rsi": 50.18,
+      "macd": "Neutral",
+      "volume_surge": 0.89,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PORTALUSDT": [
+    {
+      "timestamp": "2026-08-06 15:02:09",
+      "price": 0.01146,
+      "score": 50,
+      "rsi": 55.76,
+      "macd": "Neutral",
+      "volume_surge": 0.06,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPENUSDT": [
+    {
+      "timestamp": "2026-08-06 15:02:09",
+      "price": 0.2114,
+      "score": 15,
+      "rsi": 41.02,
+      "macd": "Neutral",
+      "volume_surge": 0.06,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
