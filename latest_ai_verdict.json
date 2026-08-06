@@ -1,22 +1,22 @@
 {
-  "timestamp": "2026-08-06 12:48:22",
+  "timestamp": "2026-08-06 12:50:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un riesgo sistémico elevado y una falta de fuerza relativa en los activos analizados. Ningún candidato cumple con los criterios de convicción A+ establecidos por el comité, por lo que la decisión institucional es mantener la posición en efectivo (USDT) hasta que las condiciones de mercado mejoren.",
+  "reasoning": "Ningún activo cumple con el umbral de calidad A+ (Score >= 65) ni con las condiciones de seguridad necesarias para operar en un entorno de pánico extremo. Se prioriza la protección de la liquidez total hasta que el mercado muestre una estructura de acumulación institucional clara.",
   "top_candidates": [
     {
       "symbol": "VIRTUALUSDT",
       "score": 60
     },
     {
-      "symbol": "JUPUSDT",
-      "score": 55
+      "symbol": "OGNUSDT",
+      "score": 60
     },
     {
-      "symbol": "BICOUSDT",
-      "score": 50
+      "symbol": "JUPUSDT",
+      "score": 55
     },
     {
       "symbol": "NEARUSDT",
