@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 12:24:23",
+  "timestamp": "2026-08-06 12:26:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte en el libro de órdenes. El mercado presenta una vulnerabilidad sistémica que hace que cualquier intento de compra sea una 'cuchilla cayendo'. Se prioriza la preservación de capital hasta que el entorno macro mejore.",
+  "reasoning": "El mercado se encuentra en un estado de alta toxicidad y capitulación. Ninguno de los activos analizados cumple con el requisito de Score Técnico >= 65 ni con la profundidad de mercado necesaria para una ejecución segura. Se prioriza la protección del capital frente a la alta probabilidad de 'trampas de valor' en el entorno actual.",
   "top_candidates": [
     {
       "symbol": "MORPHOUSDT",
@@ -19,7 +19,7 @@
       "score": 55
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "LINKUSDT",
       "score": 50
     },
     {
