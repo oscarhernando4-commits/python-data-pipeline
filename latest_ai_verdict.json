@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-06 02:54:18",
+  "timestamp": "2026-08-06 02:56:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el requisito estricto de Score Técnico >= 65 ni con la confirmación de liquidez necesaria en el Orderbook. El mercado se encuentra en un estado de pánico generalizado, lo que aumenta la probabilidad de pérdidas. Se mantiene la posición en liquidez (USDT) para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "Debido a la fragilidad del mercado, la falta de muros de soporte sólidos en el libro de órdenes y la ausencia de candidatos que cumplan estrictamente con el umbral de convicción A+, el comité ha decidido mantener la liquidez en espera de una estructura de acumulación más clara.",
   "top_candidates": [
+    {
+      "symbol": "UNIUSDT",
+      "score": 70
+    },
     {
       "symbol": "NVDABUSDT",
       "score": 70
@@ -15,16 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "APTUSDT",
+      "symbol": "VANRYUSDT",
       "score": 60
     },
     {
       "symbol": "XPLUSDT",
       "score": 60
-    },
-    {
-      "symbol": "MIRAUSDT",
-      "score": 50
     }
   ]
 }
