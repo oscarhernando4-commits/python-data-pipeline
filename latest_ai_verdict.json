@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-06 08:26:19",
+  "timestamp": "2026-08-06 08:28:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 combinado con una dominancia de Bids > 55% y volumen institucional confirmado). El entorno de mercado actual es de alta incertidumbre y alta probabilidad de 'trampas de valor', por lo que la estrategia más rentable es la preservación del capital en efectivo.",
+  "confidence": 45,
+  "reasoning": "A pesar de que activos como XAUT y PAXG pertenecen al sector de interés, la falta de datos de liquidez en el libro de órdenes y la alta volatilidad en un entorno de 'Extreme Fear' impiden alcanzar el umbral de confianza A+ requerido por el comité para proteger el capital.",
   "top_candidates": [
+    {
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
     {
       "symbol": "PAXGUSDT",
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "ICPUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "ZROUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DRAMBUSDT",
       "score": 75
     }
   ]

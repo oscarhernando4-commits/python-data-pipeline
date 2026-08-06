@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 08:26:19",
+  "updated_at": "2026-08-06 08:28:20",
   "total_balance_usd": 20.07,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 45,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 combinado con una dominancia de Bids > 55% y volumen institucional confirmado). El entorno de mercado actual es de alta incertidumbre y alta probabilidad de 'trampas de valor', por lo que la estrategia más rentable es la preservación del capital en efectivo."
+    "reasoning": "A pesar de que activos como XAUT y PAXG pertenecen al sector de interés, la falta de datos de liquidez en el libro de órdenes y la alta volatilidad en un entorno de 'Extreme Fear' impiden alcanzar el umbral de confianza A+ requerido por el comité para proteger el capital."
   }
 }
