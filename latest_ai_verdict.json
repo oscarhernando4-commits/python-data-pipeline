@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-06 12:00:28",
+  "timestamp": "2026-08-06 12:02:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con scores de activos insuficientes para cumplir con nuestra política de riesgo A+. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los criterios mínimos de seguridad y rentabilidad. La ausencia de activos con un Score técnico superior a 65, sumada al pánico extremo, obliga a mantener una postura de espera (HOLD) para evitar la exposición a la volatilidad bajista.",
   "top_candidates": [
     {
       "symbol": "JSTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "AEROUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 55
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "UNIUSDT",
       "score": 50
     },
     {
-      "symbol": "XRPUSDT",
+      "symbol": "LINKUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "HBARUSDT",
       "score": 50
     }
   ]
