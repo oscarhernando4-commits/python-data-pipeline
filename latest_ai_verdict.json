@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-06 02:14:22",
+  "timestamp": "2026-08-06 02:16:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una correlación bajista sistémica. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y miedo extremo.",
+  "reasoning": "El mercado presenta una fragilidad extrema con una correlación bajista dominante. Ningún activo cumple con el umbral de calidad A+ (Score >= 65) ni con la profundidad de mercado necesaria para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y capitulación.",
   "top_candidates": [
-    {
-      "symbol": "NEXOUSDT",
-      "score": 70
-    },
     {
       "symbol": "UNIUSDT",
       "score": 60
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "SKYUSDT",
+      "symbol": "APTUSDT",
       "score": 60
     },
     {
-      "symbol": "APTUSDT",
+      "symbol": "SUNUSDT",
       "score": 60
+    },
+    {
+      "symbol": "ERAUSDT",
+      "score": 50
     }
   ]
 }
