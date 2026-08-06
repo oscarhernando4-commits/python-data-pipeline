@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-06 11:58:24",
+  "timestamp": "2026-08-06 12:00:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado exhibe una debilidad sistémica y una falta de convicción institucional. Ningún activo cumple con los criterios de alta calidad (Score A+) exigidos por el comité, por lo que la decisión estratégica es mantenerse en liquidez (HOLD) hasta que las condiciones de mercado mejoren.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con scores de activos insuficientes para cumplir con nuestra política de riesgo A+. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
+      "symbol": "JSTUSDT",
+      "score": 60
+    },
+    {
       "symbol": "AEROUSDT",
-      "score": 70
+      "score": 60
+    },
+    {
+      "symbol": "JUPUSDT",
+      "score": 55
     },
     {
       "symbol": "LTCUSDT",
-      "score": 60
+      "score": 50
     },
     {
-      "symbol": "HBARUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ADAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "CAKEUSDT",
-      "score": 60
+      "symbol": "XRPUSDT",
+      "score": 50
     }
   ]
 }
