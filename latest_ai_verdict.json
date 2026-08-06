@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 09:38:21",
+  "timestamp": "2026-08-06 09:40:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una capitulación sistémica y ningún activo cumple con los criterios de convicción A+ (Score >= 65). Se prioriza la protección del capital manteniendo la liquidez en espera de una ruptura clara del sentimiento de pánico.",
+  "reasoning": "El mercado presenta una debilidad sistémica extrema con una correlación bajista generalizada. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital en espera de mejores condiciones.",
   "top_candidates": [
+    {
+      "symbol": "PYTHUSDT",
+      "score": 60
+    },
     {
       "symbol": "REUSDT",
       "score": 60
     },
     {
+      "symbol": "ADAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "BABYUSDT",
+      "score": 50
+    },
+    {
       "symbol": "TRXUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ERAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "HOMEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ALGOUSDT",
       "score": 50
     }
   ]
