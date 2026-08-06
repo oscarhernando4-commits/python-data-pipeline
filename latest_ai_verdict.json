@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 06:08:22",
-  "selected_symbol": "GNOUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "GNOUSDT es el único activo que supera el umbral de convicción A+ (Score 85) en un mercado de 'Extreme Fear'. La estrategia se centra en una reversión a la media de alta convicción, evitando las trampas de valor en activos con scores inferiores a 65, protegiendo el capital mediante un Trailing Stop ATR dinámico.",
+  "timestamp": "2026-08-06 06:10:20",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Ningún activo cumple con el umbral estricto de convicción A+ (Score >= 65 y soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de alta fragilidad y baja convicción, por lo que la estrategia institucional es proteger la liquidez y esperar un catalizador claro.",
   "top_candidates": [
-    {
-      "symbol": "GNOUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "PENGUUSDT",
-      "score": 75
-    },
     {
       "symbol": "MORPHOUSDT",
       "score": 70
+    },
+    {
+      "symbol": "GNOUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "SKHYBUSDT",
+      "score": 65
     },
     {
       "symbol": "XRPUSDT",
       "score": 65
     },
     {
-      "symbol": "SEIUSDT",
+      "symbol": "ARBUSDT",
       "score": 65
     }
   ]
