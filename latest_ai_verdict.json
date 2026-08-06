@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-06 14:58:19",
+  "timestamp": "2026-08-06 15:00:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una alta volatilidad y una falta de soporte claro en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de purga selectiva.",
+  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la falta de dominancia clara en el libro de órdenes (Bids < 55%) y la alta volatilidad en un entorno de miedo extremo invalidan la convicción A+ requerida por el comité. Se mantiene la posición en efectivo para evitar el riesgo de 'falling knives' observado en sesiones anteriores.",
   "top_candidates": [
-    {
-      "symbol": "XAUTUSDT",
-      "score": 75
-    },
     {
       "symbol": "ETHUSDT",
       "score": 75
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ENAUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "VETUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AXSUSDT",
       "score": 75
     }
   ]

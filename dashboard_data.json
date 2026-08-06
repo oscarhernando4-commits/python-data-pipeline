@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-06 14:58:19",
-  "total_balance_usd": 20.05,
+  "updated_at": "2026-08-06 15:00:29",
+  "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
   "status": "🟦 Buscando Entrada A+",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una alta volatilidad y una falta de soporte claro en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de purga selectiva."
+    "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la falta de dominancia clara en el libro de órdenes (Bids < 55%) y la alta volatilidad en un entorno de miedo extremo invalidan la convicción A+ requerida por el comité. Se mantiene la posición en efectivo para evitar el riesgo de 'falling knives' observado en sesiones anteriores."
   }
 }
