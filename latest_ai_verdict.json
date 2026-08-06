@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-06 06:14:22",
+  "timestamp": "2026-08-06 06:16:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de pánico extremo con una estructura técnica inestable y falta de profundidad en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte de ballenas confirmado), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
+  "reasoning": "Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) y la confirmación de soporte en el libro de órdenes. El mercado se encuentra en una fase de alta volatilidad y manipulación, por lo que la estrategia de protección de capital dicta mantener la posición en efectivo (USDT) hasta que las condiciones macro y técnicas mejoren.",
   "top_candidates": [
     {
-      "symbol": "ASTERUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "MORPHOUSDT",
-      "score": 70
+      "symbol": "GNOUSDT",
+      "score": 75
     },
     {
       "symbol": "INJUSDT",
       "score": 70
     },
     {
-      "symbol": "GNOUSDT",
+      "symbol": "JTOUSDT",
       "score": 70
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "KITEUSDT",
       "score": 65
+    },
+    {
+      "symbol": "BTCUSDT",
+      "score": 60
     }
   ]
 }
