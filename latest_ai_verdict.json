@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-06 04:36:19",
+  "timestamp": "2026-08-06 04:38:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación del comité, se ha determinado que ningún candidato cumple con los requisitos estrictos de convicción A+ (Score >= 65 y Confianza >= 70%). La falta de dominancia en el libro de órdenes y la alta volatilidad en un entorno de 'Extreme Fear' hacen que la estrategia más rentable sea la preservación de capital mediante el modo HOLD.",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una falta de soporte institucional definido en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%), por lo que la estrategia más segura es mantener la liquidez en espera de una estructura de mercado más favorable.",
   "top_candidates": [
+    {
+      "symbol": "RESOLVUSDT",
+      "score": 80
+    },
     {
       "symbol": "BTCUSDT",
       "score": 75
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SKYUSDT",
       "score": 75
     }
   ]
