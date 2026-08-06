@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-06 01:22:21",
+  "timestamp": "2026-08-06 01:24:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Debido a la capitulación sistémica y la falta de candidatos que cumplan con el umbral de riesgo A+ (Score >= 65), el comité ha decidido mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de alta volatilidad y baja convicción.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada y una falta de convicción institucional. Ningún activo cumple con los criterios de alta calidad (Score >= 65) exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de mejores condiciones.",
   "top_candidates": [
-    {
-      "symbol": "SUNUSDT",
-      "score": 90
-    },
     {
       "symbol": "SNXXBUSDT",
       "score": 70
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "NEARUSDT",
+      "symbol": "SUNUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "KAITOUSDT",
       "score": 60
     }
   ]
