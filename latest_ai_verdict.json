@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-06 11:18:24",
+  "timestamp": "2026-08-06 11:20:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual carece de activos con fuerza técnica (Score >= 65) y presenta una correlación negativa extrema. Todos los candidatos analizados fallan en los umbrales de riesgo, por lo que la estrategia óptima es mantener la liquidez en espera de una estabilización del mercado.",
+  "reasoning": "El mercado actual carece de activos con un score técnico superior a 65 y presenta una liquidez estancada, lo que invalida cualquier oportunidad de compra bajo los protocolos de gestión de riesgo del comité.",
   "top_candidates": [
     {
-      "symbol": "TLMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ERAUSDT",
+      "symbol": "XRPUSDT",
       "score": 50
     },
     {
-      "symbol": "HFTUSDT",
+      "symbol": "ERAUSDT",
       "score": 50
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "ADAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "HFTUSDT",
       "score": 50
     }
   ]
