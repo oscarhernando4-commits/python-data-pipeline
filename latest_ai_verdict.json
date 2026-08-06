@@ -1,22 +1,14 @@
 {
-  "timestamp": "2026-08-06 10:42:22",
+  "timestamp": "2026-08-06 10:44:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad generalizada y una falta de fuerza relativa en los activos analizados. Dado que ningún candidato alcanza el umbral de seguridad A+ y el entorno macro es de alta incertidumbre, la estrategia óptima es la preservación total del capital en espera de una estructura de mercado más favorable.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación sistémica. Ninguno de los activos analizados cumple con los criterios de alta convicción (Score A+ >= 65) exigidos por el comité. Se mantiene la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo' y proteger el capital contra la volatilidad bajista actual.",
   "top_candidates": [
     {
       "symbol": "TLMUSDT",
       "score": 60
-    },
-    {
-      "symbol": "DASHUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "JTOUSDT",
-      "score": 55
     },
     {
       "symbol": "ERAUSDT",
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "BABYUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "FIDAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "HMSTRUSDT",
       "score": 50
     }
   ]
