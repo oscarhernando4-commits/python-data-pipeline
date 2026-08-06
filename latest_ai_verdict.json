@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-06 01:42:24",
+  "timestamp": "2026-08-06 01:44:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de capitulación institucional con una falta generalizada de fuerza relativa. Ningún activo cumple con el umbral de Score A+ (>= 65) y la confirmación de volumen necesaria, por lo que la estrategia de preservación de capital dicta una postura de espera (HOLD) hasta que las condiciones macro mejoren.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "NEXOUSDT",
       "score": 70
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "PAXGUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "POLUSDT",
       "score": 60
     }
   ]
