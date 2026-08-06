@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-06 05:42:22",
+  "timestamp": "2026-08-06 05:44:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos teóricos, la falta de profundidad en el libro de órdenes, el sentimiento de miedo extremo y la alta tasa de fallos en simulaciones recientes bajo condiciones similares, dictan una postura de preservación de capital total.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con sentimiento de miedo extremo y falta de dominancia clara en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ requerido por el comité, por lo que la estrategia óptima es mantener la liquidez y evitar la exposición a posibles 'falling knives' en un entorno de tendencia neutral.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "PENGUUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "CAKEUSDT",
+      "symbol": "VANRYUSDT",
       "score": 75
     }
   ]
