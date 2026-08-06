@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 11:16:22",
+  "timestamp": "2026-08-06 11:18:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de riesgo extremo sin activos que cumplan con los criterios técnicos mínimos de calidad (Score >= 65). La estrategia institucional es mantener el 100% de la liquidez en USDT para evitar la exposición a la volatilidad bajista y la falta de soporte en el libro de órdenes.",
+  "reasoning": "El mercado actual carece de activos con fuerza técnica (Score >= 65) y presenta una correlación negativa extrema. Todos los candidatos analizados fallan en los umbrales de riesgo, por lo que la estrategia óptima es mantener la liquidez en espera de una estabilización del mercado.",
   "top_candidates": [
     {
       "symbol": "TLMUSDT",
       "score": 60
     },
     {
-      "symbol": "XRPUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "HBARUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ADAUSDT",
+      "symbol": "ERAUSDT",
       "score": 50
     },
     {
       "symbol": "HFTUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "BABYUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "ADAUSDT",
       "score": 50
     }
   ]
