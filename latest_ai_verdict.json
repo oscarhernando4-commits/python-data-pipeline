@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-06 00:30:21",
+  "timestamp": "2026-08-06 00:32:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una correlación bajista sistémica y una falta de convicción técnica en los activos analizados. Ningún candidato alcanza el umbral de calidad A+ exigido por el comité, por lo que la estrategia de preservación de capital es la única opción viable para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada y ninguno de los candidatos cumple con los criterios estrictos de Score técnico (>= 65) y convicción institucional requeridos por el comité para mitigar el riesgo de pérdida de capital.",
   "top_candidates": [
     {
       "symbol": "SNXXBUSDT",
       "score": 70
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "UNIUSDT",
       "score": 60
     },
     {
-      "symbol": "UNIUSDT",
+      "symbol": "LTCUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "PEPEUSDT",
       "score": 60
     }
   ]
