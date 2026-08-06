@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 15:22:19",
+  "timestamp": "2026-08-06 15:24:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ requerido por el comité. La falta de soporte claro en el libro de órdenes y la inestabilidad macroeconómica dictan una postura de espera para evitar la exposición a activos de baja calidad.",
+  "reasoning": "El comité ha determinado que, a pesar de algunos scores técnicos elevados, la falta de profundidad en el libro de órdenes, el entorno de miedo extremo y la alta probabilidad de pérdidas basada en el historial de simulaciones, no existe una configuración A+ que cumpla con los criterios de seguridad del fondo.",
   "top_candidates": [
+    {
+      "symbol": "XLMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "VETUSDT",
+      "score": 75
+    },
     {
       "symbol": "TRUMPUSDT",
       "score": 75
     },
     {
-      "symbol": "VIRTUALUSDT",
-      "score": 75
+      "symbol": "HBARUSDT",
+      "score": 70
     },
     {
-      "symbol": "GNOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ZECUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "LINKUSDT",
+      "symbol": "BTCUSDT",
       "score": 65
     }
   ]
