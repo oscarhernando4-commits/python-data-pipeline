@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-06 06:46:22",
+  "timestamp": "2026-08-06 06:48:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'distribución silenciosa' con alta aversión al riesgo y falta de convicción institucional. Ningún activo cumple con el umbral de seguridad y soporte de liquidez necesario para una operación de alta probabilidad, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de tener candidatos con scores técnicos aceptables, la falta de dominancia clara en el libro de órdenes y el entorno macro de 'Extreme Fear' no cumplen con los criterios de seguridad A+ exigidos por el protocolo de gestión de riesgo.",
   "top_candidates": [
     {
       "symbol": "ASTERUSDT",
       "score": 85
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
     },
     {
       "symbol": "AVAXUSDT",
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "MMTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BONKUSDT",
+      "symbol": "SUNUSDT",
       "score": 75
     }
   ]
