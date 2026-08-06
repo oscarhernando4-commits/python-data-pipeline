@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-06 09:58:20",
+  "timestamp": "2026-08-06 10:00:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad generalizada con scores técnicos insuficientes y falta de soporte en el libro de órdenes. Siguiendo la regla de oro de no operar activos con score inferior a 65 y evitar 'cuchillos cayendo', el comité decide mantener la posición en efectivo para proteger el capital.",
+  "reasoning": "El mercado se encuentra en un estado de pánico institucional con una ausencia total de activos que cumplan con el umbral de calidad A+ (Score >= 65). La estrategia prioriza la preservación del capital en USDT hasta que el sentimiento de mercado se estabilice por encima de 40 en el índice Fear & Greed.",
   "top_candidates": [
     {
       "symbol": "POLUSDT",
       "score": 60
     },
     {
-      "symbol": "ZROUSDT",
-      "score": 60
+      "symbol": "TRXUSDT",
+      "score": 50
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 55
+      "symbol": "ADAUSDT",
+      "score": 50
     },
     {
-      "symbol": "PAXGUSDT",
-      "score": 55
+      "symbol": "BABYUSDT",
+      "score": 50
     },
     {
-      "symbol": "PENDLEUSDT",
-      "score": 55
+      "symbol": "SYNUSDT",
+      "score": 50
     }
   ]
 }
