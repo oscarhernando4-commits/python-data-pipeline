@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 02:12:18",
+  "timestamp": "2026-08-06 02:14:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral mínimo de Score Técnico >= 65 combinado con una dominancia de Bids superior al 55%, lo que obliga a la mesa de ejecución a mantener una postura defensiva de espera.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una correlación bajista sistémica. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y miedo extremo.",
   "top_candidates": [
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "NEXOUSDT",
       "score": 70
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "APTUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "NEARUSDT",
-      "score": 60
     },
     {
       "symbol": "UNIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "POLUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SKYUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "APTUSDT",
       "score": 60
     }
   ]
