@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-06 10:26:22",
+  "timestamp": "2026-08-06 10:28:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación selectiva con una debilidad estructural generalizada. Ningún activo cumple con el requisito estricto de Score >= 65 y confirmación de volumen institucional, por lo que la estrategia óptima es el mantenimiento de la liquidez (HOLD) para evitar la exposición a 'falling knives' y volatilidad sin dirección.",
+  "reasoning": "El mercado presenta una estructura de alta volatilidad y riesgo, con la mayoría de los activos mostrando scores técnicos inferiores al umbral de seguridad A+. Ante la ausencia de una oportunidad que cumpla con los criterios estrictos de riesgo-beneficio, el comité ha decidido mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "ALGOUSDT",
+      "score": 80
+    },
     {
       "symbol": "ZAMAUSDT",
       "score": 65
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "NVDABUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TLMUSDT",
-      "score": 60
-    },
-    {
       "symbol": "BIOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NVDABUSDT",
       "score": 60
     }
   ]
