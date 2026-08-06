@@ -1,14 +1,22 @@
 {
-  "timestamp": "2026-08-06 13:16:23",
+  "timestamp": "2026-08-06 13:18:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que no existen activos con la fortaleza técnica (Score >= 65) ni la estructura de liquidez necesaria para operar bajo las estrictas reglas de gestión de riesgo, por lo que se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado que el mercado se encuentra en una fase de alta fragilidad y baja convicción. Dado que ningún activo cumple con el requisito estricto de Score Técnico >= 65, se prioriza la preservación del capital sobre la ejecución de trades especulativos de baja calidad.",
   "top_candidates": [
     {
       "symbol": "FILUSDT",
       "score": 55
+    },
+    {
+      "symbol": "ARBUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "SYNUSDT",
+      "score": 50
     },
     {
       "symbol": "BICOUSDT",
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "PUMPUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "SKYUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ALGOUSDT",
       "score": 50
     }
   ]
