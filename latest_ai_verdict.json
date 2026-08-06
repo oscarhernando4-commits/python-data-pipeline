@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 07:46:21",
+  "timestamp": "2026-08-06 07:48:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que algunos activos tienen un score técnico de 75, la ausencia de muros de soporte en el libro de órdenes (Bids < 55%) y la alta volatilidad en un entorno de 'Miedo Extremo' invalidan la convicción A+ necesaria para operar. Se prioriza la protección del capital sobre la especulación en un mercado de alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una clara desconexión entre el sentimiento minorista y el institucional. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de liquidez) necesario para mitigar el riesgo de pérdida, por lo que la estrategia óptima es la preservación de capital mediante el estado de espera (HOLD).",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
@@ -15,11 +15,11 @@
       "score": 75
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "ADAUSDT",
       "score": 65
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "TRXUSDT",
       "score": 65
     },
     {
