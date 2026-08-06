@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-06 02:22:17",
+  "timestamp": "2026-08-06 02:24:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte en el libro de órdenes. El entorno macroeconómico de pánico extremo y la alta correlación bajista invalidan cualquier intento de compra, por lo que el comité decide mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta una debilidad estructural sistémica. Ninguno de los candidatos alcanza el Score técnico de 65 requerido por el comité, y el entorno de pánico extremo aumenta el riesgo de 'trampas de valor'. Se mantiene la liquidez en 100% USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "UNIUSDT",
+      "score": 60
+    },
     {
       "symbol": "BIOUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "DASHUSDT",
       "score": 55
     },
     {
       "symbol": "HOMEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ERAUSDT",
       "score": 50
     }
   ]
