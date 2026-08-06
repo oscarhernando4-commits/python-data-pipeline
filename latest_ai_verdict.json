@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-06 13:46:22",
+  "timestamp": "2026-08-06 13:48:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y capitulación, donde ningún activo cumple con los criterios estrictos de calidad (Score >= 65) y seguridad exigidos por el comité para garantizar la preservación del capital.",
+  "reasoning": "El mercado actual carece de la fuerza técnica y la liquidez necesaria para justificar una entrada. Ningún activo cumple con el umbral de Score A+ (>= 65) y la dominancia de Bids es insuficiente para garantizar una operación de alta probabilidad. Se prioriza la preservación del capital ante la incertidumbre macroeconómica.",
   "top_candidates": [
+    {
+      "symbol": "TRXUSDT",
+      "score": 70
+    },
     {
       "symbol": "KITEUSDT",
       "score": 60
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "NIGHTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "GNOUSDT",
       "score": 60
     }
   ]
