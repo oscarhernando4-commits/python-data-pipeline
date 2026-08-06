@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-06 13:58:20",
+  "timestamp": "2026-08-06 14:00:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno actual de mercado es de alta incertidumbre y aversión al riesgo. Ninguno de los candidatos propuestos alcanza el umbral de calidad A+ (Score >= 65) requerido por el protocolo de riesgo. Se prioriza la protección del capital frente a la especulación en activos con scores mediocres o datos insuficientes.",
+  "reasoning": "El mercado presenta una configuración de parálisis sistémica sin activos que cumplan con el umbral de calidad A+ (Score >= 65). Ante la ausencia de una ventaja estadística clara y la alta volatilidad, la decisión institucional es mantener la neutralidad total para proteger el capital.",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
+      "symbol": "PAXGUSDT",
       "score": 60
     },
     {
-      "symbol": "BABYUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SKHYBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "RENDERUSDT",
+      "symbol": "KITEUSDT",
       "score": 60
     },
     {
       "symbol": "ACTUSDT",
       "score": 60
+    },
+    {
+      "symbol": "GNOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "score": 55
     }
   ]
 }
