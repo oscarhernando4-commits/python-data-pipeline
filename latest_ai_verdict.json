@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 09:22:20",
+  "timestamp": "2026-08-06 09:24:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que algunos activos como XAUT y PAXG poseen un score técnico de 75, la ausencia de datos de profundidad en el libro de órdenes y el entorno de miedo extremo (25) invalidan la convicción A+ requerida por el comité. Se prioriza la preservación del capital sobre la especulación en un mercado con alta volatilidad y baja liquidez.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La alta volatilidad y la falta de soporte institucional en el libro de órdenes dictan una postura de preservación de capital (HOLD) para evitar el riesgo de 'falling knives' en un entorno de pánico extremo.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
@@ -15,16 +15,16 @@
       "score": 75
     },
     {
+      "symbol": "TLMUSDT",
+      "score": 75
+    },
+    {
       "symbol": "ZROUSDT",
       "score": 75
     },
     {
       "symbol": "ALLOUSDT",
       "score": 75
-    },
-    {
-      "symbol": "LINKUSDT",
-      "score": 70
     }
   ]
 }
