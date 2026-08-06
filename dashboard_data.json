@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 07:48:21",
+  "updated_at": "2026-08-06 07:50:20",
   "total_balance_usd": 20.07,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una clara desconexión entre el sentimiento minorista y el institucional. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de liquidez) necesario para mitigar el riesgo de pérdida, por lo que la estrategia óptima es la preservación de capital mediante el estado de espera (HOLD)."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de acumulación selectiva donde la preservación del capital es la prioridad absoluta frente a la especulación de baja probabilidad."
   }
 }
