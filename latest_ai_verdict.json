@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-06 01:02:16",
+  "timestamp": "2026-08-06 01:04:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un evento de desapalancamiento sistémico con alta incertidumbre regulatoria y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con los criterios de alta convicción (Score >= 65) necesarios para mitigar el riesgo de 'cuchillos cayendo', por lo que la estrategia óptima es la preservación total del capital en efectivo.",
+  "reasoning": "El mercado presenta un estrés sistémico severo y una falta de profundidad en los activos analizados. Ningún candidato cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte institucional en el libro de órdenes, haciendo que cualquier posición sea estadísticamente desfavorable.",
   "top_candidates": [
     {
       "symbol": "SNXXBUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "PEPEUSDT",
       "score": 70
     },
     {
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "MORPHOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "JUPUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     }
   ]
