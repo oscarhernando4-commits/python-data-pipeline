@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 12:58:23",
+  "timestamp": "2026-08-06 13:00:30",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el requisito de Score Técnico >= 65 ni con la confirmación de soporte institucional en el libro de órdenes, por lo que se prioriza la preservación de capital ante el entorno de pánico extremo.",
+  "reasoning": "El mercado presenta un entorno de alta volatilidad y riesgo sistémico. Ninguno de los candidatos analizados cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que la estrategia institucional es la preservación total del capital en efectivo.",
   "top_candidates": [
     {
-      "symbol": "SKYUSDT",
+      "symbol": "OGNUSDT",
       "score": 60
     },
     {
-      "symbol": "DEXEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "JUPUSDT",
+      "symbol": "ARBUSDT",
       "score": 55
     },
     {
-      "symbol": "VIRTUALUSDT",
-      "score": 55
+      "symbol": "BICOUSDT",
+      "score": 50
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "PUMPUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "TUTUSDT",
       "score": 50
     }
   ]
