@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 11:26:20",
+  "timestamp": "2026-08-06 11:28:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras un análisis exhaustivo de los 109 activos, ninguno cumple con los criterios de calidad A+ (Score >= 65). El mercado presenta un riesgo sistémico elevado y una falta de liquidez institucional, lo que obliga a la inacción para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de estrangulamiento de liquidez con una alta tasa de fallos en las simulaciones recientes; por tanto, la estrategia de preservación de capital dicta no operar.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
-      "score": 50
+      "score": 60
+    },
+    {
+      "symbol": "NVDABUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "LDOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TLMUSDT",
+      "score": 55
     },
     {
       "symbol": "XRPUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "HBARUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ERAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "HOMEUSDT",
       "score": 50
     }
   ]
