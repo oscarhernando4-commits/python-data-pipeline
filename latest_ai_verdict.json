@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-06 05:26:23",
+  "timestamp": "2026-08-06 05:28:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad exigido por el comité (Bids > 55% y Score >= 65). La falta de profundidad en el libro de órdenes y el entorno de miedo extremo invalidan cualquier señal de compra, por lo que se mantiene la posición en efectivo para evitar el riesgo de 'falling knives'.",
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos, ninguno de los candidatos presenta la profundidad de libro de órdenes (Bids >= 55%) ni la estabilidad histórica necesaria para cumplir con la Regla #1 de no perder dinero en un entorno de Pánico Extremo.",
   "top_candidates": [
     {
       "symbol": "ASTERUSDT",
       "score": 85
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "MUBUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "POLUSDT",
       "score": 75
     }
   ]
