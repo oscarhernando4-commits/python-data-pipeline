@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 06:32:20",
+  "timestamp": "2026-08-06 06:34:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que ningún activo cumple con los requisitos de alta convicción (Score >= 65 y Bids > 55%) necesarios para operar en un entorno de mercado de 'Miedo Extremo'. Se prioriza la preservación del capital sobre la ejecución táctica en activos de baja liquidez.",
+  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). El mercado presenta una correlación fracturada y alta volatilidad, por lo que la estrategia más rentable es mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "MMTUSDT",
+      "symbol": "VETUSDT",
       "score": 75
     },
     {
-      "symbol": "VETUSDT",
+      "symbol": "GNOUSDT",
       "score": 75
     }
   ]
