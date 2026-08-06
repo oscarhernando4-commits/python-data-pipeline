@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 01:26:17",
+  "updated_at": "2026-08-06 01:28:21",
   "total_balance_usd": 20.06,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de liquidez necesaria en el libro de órdenes. El entorno macroeconómico de pánico sistémico y la alta correlación bajista invalidan cualquier oportunidad de trading actual, priorizando la protección del capital sobre la especulación."
+    "reasoning": "El mercado presenta una configuración de riesgo extremo con una correlación de activos cercana a 1.0, lo que invalida la diversificación. Ningún activo cumple con el requisito de score técnico >= 65, por lo que la orden es mantener la liquidez en USDT para evitar la exposición a la caída sistémica."
   }
 }
