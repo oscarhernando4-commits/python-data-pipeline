@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-06 10:44:21",
+  "timestamp": "2026-08-06 10:46:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación sistémica. Ninguno de los activos analizados cumple con los criterios de alta convicción (Score A+ >= 65) exigidos por el comité. Se mantiene la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo' y proteger el capital contra la volatilidad bajista actual.",
+  "reasoning": "El mercado presenta un entorno de alta incertidumbre y falta de convicción institucional. Ninguno de los activos analizados alcanza el umbral de seguridad (Score >= 65) ni muestra una estructura de libro de órdenes favorable, por lo que la estrategia óptima es la inacción para evitar pérdidas por 'falling knives'.",
   "top_candidates": [
     {
-      "symbol": "TLMUSDT",
-      "score": 60
+      "symbol": "JTOUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "BICOUSDT",
+      "score": 50
     },
     {
       "symbol": "ERAUSDT",
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "FIDAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "HMSTRUSDT",
       "score": 50
     }
   ]
