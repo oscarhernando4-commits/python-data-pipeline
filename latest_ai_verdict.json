@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-06 03:50:18",
+  "timestamp": "2026-08-06 03:52:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con los criterios de alta convicción (Score >= 65) y soporte de libro de órdenes necesario para mitigar el riesgo en un entorno de mercado con miedo extremo.",
+  "reasoning": "El mercado exhibe una fragilidad extrema y una falta de convicción institucional. Ningún activo cumple con los criterios de riesgo A+ establecidos por el comité, por lo que la decisión estratégica es proteger el capital y esperar una estabilización clara de la tendencia.",
   "top_candidates": [
     {
-      "symbol": "NEARUSDT",
+      "symbol": "BABYUSDT",
       "score": 70
+    },
+    {
+      "symbol": "NEARUSDT",
+      "score": 60
     },
     {
       "symbol": "HFTUSDT",
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "MORPHOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "BABYUSDT",
       "score": 60
     },
     {
