@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-06 11:40:23",
+  "timestamp": "2026-08-06 11:42:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica extrema con una falta de convicción técnica en todos los candidatos analizados. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una distribución institucional generalizada. Ningún activo cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de liquidez necesaria para mitigar el riesgo de pérdida. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SOXLBUSDT",
       "score": 60
     },
     {
@@ -23,8 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "BONKUSDT",
-      "score": 60
+      "symbol": "HBARUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "XRPUSDT",
+      "score": 50
     }
   ]
 }
