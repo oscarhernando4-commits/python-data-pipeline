@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-06 00:28:21",
+  "timestamp": "2026-08-06 00:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de Score Técnico A+ (>= 65) combinado con una dominancia de Bids superior al 55%. El entorno de mercado actual es de alta fragilidad y el riesgo de 'falling knives' es elevado, por lo que la estrategia de preservación de capital es la única opción autorizada.",
+  "reasoning": "El mercado presenta una correlación bajista sistémica y una falta de convicción técnica en los activos analizados. Ningún candidato alcanza el umbral de calidad A+ exigido por el comité, por lo que la estrategia de preservación de capital es la única opción viable para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "SNXXBUSDT",
       "score": 70
     },
     {
-      "symbol": "MORPHOUSDT",
-      "score": 70
+      "symbol": "TAOUSDT",
+      "score": 60
     },
     {
-      "symbol": "JTOUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "EULUSDT",
+      "symbol": "UNIUSDT",
       "score": 60
     },
     {
       "symbol": "SHIBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "LTCUSDT",
       "score": 60
     }
   ]
