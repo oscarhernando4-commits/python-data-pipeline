@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-06 03:16:16",
+  "timestamp": "2026-08-06 03:18:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado exhibe una debilidad generalizada y falta de soporte institucional. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65), y el entorno macro es desfavorable para posiciones largas. Se prioriza la preservación del capital sobre la especulación en activos de baja liquidez.",
+  "reasoning": "El mercado carece de liderazgo de convicción y los activos analizados no superan el umbral de riesgo requerido por el comité, por lo que se mantiene la posición en efectivo para evitar pérdidas por 'falling knives'.",
   "top_candidates": [
-    {
-      "symbol": "MORPHOUSDT",
-      "score": 60
-    },
     {
       "symbol": "TUTUSDT",
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "BABYUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "MORPHOUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "KAITOUSDT",
       "score": 60
     }
   ]
