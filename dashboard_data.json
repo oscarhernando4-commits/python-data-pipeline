@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-06 09:26:22",
+  "updated_at": "2026-08-06 09:28:22",
   "total_balance_usd": 20.07,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que, bajo las condiciones actuales de mercado y la falta de activos que cumplan con el umbral de calidad A+ (Score >= 65), la estrategia más prudente es mantener la liquidez en USDT para evitar la exposición a la volatilidad bajista y posibles pérdidas por 'falling knives'."
+    "reasoning": "El mercado presenta una salud interna colapsada con una mayoría de activos mostrando scores técnicos inferiores a 65. Ningún candidato cumple con los requisitos de convicción A+ exigidos por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la liquidez en espera de un catalizador de volatilidad positivo."
   }
 }
