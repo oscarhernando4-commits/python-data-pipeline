@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-06 01:06:18",
+  "timestamp": "2026-08-06 01:08:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un estrés sistémico severo con una alta correlación bajista. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (65) ni con una dominancia clara en el libro de órdenes. La estrategia institucional es la preservación total del capital hasta que se observe una acumulación inteligente confirmada.",
+  "reasoning": "El mercado presenta un estrés sistémico agudo con una falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el umbral de calidad A+ exigido por el comité, por lo que la estrategia óptima es la preservación total del capital en espera de una mejora en las condiciones macro y técnicas.",
   "top_candidates": [
     {
       "symbol": "SNXXBUSDT",
       "score": 70
+    },
+    {
+      "symbol": "TRXUSDT",
+      "score": 60
     },
     {
       "symbol": "UNIUSDT",
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "JUPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "MMTUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     }
   ]
