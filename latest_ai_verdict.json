@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-06 12:22:25",
+  "timestamp": "2026-08-06 12:24:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Debido al estrés sistémico severo y la ausencia de activos con un score técnico superior a 65, el comité ha decidido mantener la liquidez en USDT para evitar pérdidas por volatilidad en un mercado de distribución forzada.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte en el libro de órdenes. El mercado presenta una vulnerabilidad sistémica que hace que cualquier intento de compra sea una 'cuchilla cayendo'. Se prioriza la preservación de capital hasta que el entorno macro mejore.",
   "top_candidates": [
-    {
-      "symbol": "JSTUSDT",
-      "score": 60
-    },
     {
       "symbol": "MORPHOUSDT",
       "score": 60
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "TLMUSDT",
-      "score": 60
+      "symbol": "GOOGLBUSDT",
+      "score": 55
     },
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "ADAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "LTCUSDT",
       "score": 50
     }
   ]
