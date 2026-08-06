@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-06 06:00:22",
+  "timestamp": "2026-08-06 06:02:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'selección quirúrgica' con alta volatilidad y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia óptima es mantener la liquidez y evitar trampas de liquidez.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) en un entorno de mercado caracterizado por el pánico extremo y la alta probabilidad de liquidaciones, por lo que la decisión institucional es mantenerse en liquidez (HOLD).",
   "top_candidates": [
     {
       "symbol": "MORPHOUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "GNOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TRXUSDT",
+      "score": 70
+    },
+    {
       "symbol": "XRPUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "SUIUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "SYNUSDT",
       "score": 65
     }
   ]
