@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-06 00:58:19",
+  "timestamp": "2026-08-06 01:00:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de Score Técnico >= 65 y confirmación de volumen institucional. El mercado se encuentra en una fase de alta incertidumbre y riesgo sistémico, por lo que el comité ha decidido unánimemente mantener la posición en efectivo para preservar el capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de Score Técnico >= 65 ni con la confirmación de profundidad en el libro de órdenes necesaria para una ejecución segura. El entorno macroeconómico de pánico y la falta de volumen institucional real dictan una postura de preservación de capital total.",
   "top_candidates": [
     {
       "symbol": "SNXXBUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "MORPHOUSDT",
       "score": 70
     },
     {
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "SKYUSDT",
+      "symbol": "MORPHOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "JUPUSDT",
       "score": 60
     }
   ]
