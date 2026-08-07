@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-07 02:04:18",
+  "timestamp": "2026-08-07 02:06:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de los scores técnicos, las condiciones de mercado actuales y la falta de profundidad en el libro de órdenes no cumplen con los estándares de seguridad exigidos para una ejecución A+.",
+  "reasoning": "El mercado se encuentra en una fase de indecisión táctica con una falta de muros de soporte institucionales claros. Ningún candidato cumple con el umbral de confianza A+ (Score >= 65 con Bids > 55%), por lo que la estrategia más prudente es el mantenimiento de la liquidez para evitar pérdidas innecesarias en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
       "symbol": "XLMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ENAUSDT",
       "score": 75
     },
     {
@@ -25,6 +17,14 @@
     {
       "symbol": "RENDERUSDT",
       "score": 70
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "TRXUSDT",
+      "score": 65
     }
   ]
 }
