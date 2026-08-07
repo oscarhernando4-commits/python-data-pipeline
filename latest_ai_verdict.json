@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-07 17:30:20",
+  "timestamp": "2026-08-07 17:32:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los activos analizados alcanza el umbral mínimo de Score Técnico (65) ni presenta una estructura de libro de órdenes favorable, por lo que se mantiene la posición en efectivo para evitar pérdidas en un mercado de alta volatilidad y baja convicción.",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre y debilidad técnica. Ninguno de los activos analizados alcanza el umbral de seguridad (Score >= 65) ni presenta una estructura de soporte institucional sólida en el libro de órdenes. Para evitar el riesgo de 'cuchillos cayendo' y preservar el capital, la decisión unánime es mantenerse en liquidez (HOLD).",
   "top_candidates": [
     {
       "symbol": "SOXLBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NEXOUSDT",
       "score": 60
     },
     {
@@ -15,16 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "JTOUSDT",
+      "symbol": "ZROUSDT",
       "score": 60
     },
     {
-      "symbol": "ACEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "QNTUSDT",
-      "score": 50
+      "symbol": "JTOUSDT",
+      "score": 60
     }
   ]
 }
