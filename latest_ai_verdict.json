@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-07 08:20:22",
+  "timestamp": "2026-08-07 08:22:31",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital en un entorno de mercado con sentimiento de miedo y alta volatilidad.",
+  "reasoning": "Tras la deliberación unánime, el comité ha determinado que ninguno de los candidatos cumple con el umbral mínimo de Score A+ (>=65) combinado con una dominancia de Bids superior al 55%. El entorno de mercado actual, caracterizado por alta volatilidad y señales mixtas, exige una postura defensiva para evitar el patrón de pérdidas observado en las simulaciones recientes.",
   "top_candidates": [
-    {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
     {
       "symbol": "ZBTUSDT",
       "score": 70
@@ -23,7 +15,15 @@
       "score": 65
     },
     {
-      "symbol": "ACEUSDT",
+      "symbol": "SHIBUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "HFTUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "BICOUSDT",
       "score": 65
     }
   ]
