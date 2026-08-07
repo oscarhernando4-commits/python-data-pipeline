@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-07 02:06:20",
+  "timestamp": "2026-08-07 02:08:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de indecisión táctica con una falta de muros de soporte institucionales claros. Ningún candidato cumple con el umbral de confianza A+ (Score >= 65 con Bids > 55%), por lo que la estrategia más prudente es el mantenimiento de la liquidez para evitar pérdidas innecesarias en un entorno de alta incertidumbre.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado se encuentra en un estado de indecisión volátil, por lo que la estrategia institucional es mantener la liquidez y evitar la exposición a activos con alta probabilidad de retroceso.",
   "top_candidates": [
     {
-      "symbol": "XLMUSDT",
+      "symbol": "ENAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "APTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "REUSDT",
       "score": 75
     },
     {
@@ -17,14 +25,6 @@
     {
       "symbol": "RENDERUSDT",
       "score": 70
-    },
-    {
-      "symbol": "TRUMPUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "TRXUSDT",
-      "score": 65
     }
   ]
 }
