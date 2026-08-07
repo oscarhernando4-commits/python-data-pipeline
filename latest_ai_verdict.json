@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 18:38:15",
+  "timestamp": "2026-08-07 18:40:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema con una correlación negativa masiva. Ningún activo cumple con los criterios de alta convicción (Score >= 65) ni con la profundidad de mercado necesaria para mitigar el riesgo de slippage, por lo que la estrategia óptima es mantenerse en efectivo (HOLD) hasta que las condiciones macro mejoren.",
+  "reasoning": "El mercado se encuentra en un estado de alta toxicidad con una correlación bajista masiva. Ninguno de los candidatos cumple con el umbral de calidad A+ (Score >= 65) exigido por el Comité, por lo que la estrategia óptima es la inactividad total para evitar el riesgo de 'caza de suelos' en un entorno de capitulación.",
   "top_candidates": [
     {
       "symbol": "NEXOUSDT",
       "score": 60
     },
     {
-      "symbol": "ALLOUSDT",
-      "score": 50
-    },
-    {
       "symbol": "ADAUSDT",
       "score": 50
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "GRAMUSDT",
       "score": 50
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "EPICUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "ALLOUSDT",
       "score": 50
     }
   ]
