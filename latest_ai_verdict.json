@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-07 16:10:20",
+  "timestamp": "2026-08-07 16:12:29",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia técnica y una falta de convicción institucional clara. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité, por lo que se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, no existe una confluencia unánime de soporte en el libro de órdenes ni una tendencia clara que justifique el riesgo de entrada, optando por proteger el capital en espera de una estructura de mercado más definida.",
   "top_candidates": [
     {
       "symbol": "ZECUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "VETUSDT",
       "score": 85
     },
     {
@@ -19,11 +15,15 @@
       "score": 85
     },
     {
-      "symbol": "LTCUSDT",
-      "score": 75
+      "symbol": "VETUSDT",
+      "score": 85
     },
     {
       "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TAOUSDT",
       "score": 75
     }
   ]
