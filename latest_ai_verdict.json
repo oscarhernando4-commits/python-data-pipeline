@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-07 22:06:21",
+  "timestamp": "2026-08-07 22:08:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un entorno de alta toxicidad con una correlación bajista sistémica. Ningún activo cumple con el umbral de Score Técnico A+ (>= 65) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage. Se prioriza la preservación de capital sobre la ejecución especulativa.",
+  "reasoning": "El mercado presenta una fragilidad extrema y una falta de convicción institucional. Ningún activo cumple con el requisito de Score Técnico >= 65, por lo que el comité ha decidido no ejecutar ninguna operación para proteger el capital, manteniéndose en modo de espera (HOLD) hasta que las condiciones de mercado mejoren.",
   "top_candidates": [
     {
       "symbol": "ICPUSDT",
       "score": 70
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "PAXGUSDT",
       "score": 60
     },
     {
