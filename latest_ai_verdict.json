@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 18:22:16",
+  "timestamp": "2026-08-07 18:24:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con pánico minorista. Ninguno de los candidatos analizados alcanza el umbral de seguridad (Score >= 65) requerido por el Comité para una ejecución de compra, por lo que la estrategia óptima es la preservación del capital mediante el mantenimiento de la liquidez.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad técnica generalizada. Ninguno de los candidatos analizados alcanza el umbral de seguridad A+ (Score >= 65) requerido por el Comité. La estrategia institucional es proteger el capital y evitar la exposición en un entorno de alta incertidumbre y baja fuerza relativa.",
   "top_candidates": [
+    {
+      "symbol": "HEIUSDT",
+      "score": 60
+    },
     {
       "symbol": "FETUSDT",
       "score": 60
     },
     {
-      "symbol": "ALLOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 50
+      "symbol": "AAOIBUSDT",
+      "score": 60
     },
     {
       "symbol": "XLMUSDT",
       "score": 50
     },
     {
-      "symbol": "HEIUSDT",
+      "symbol": "ALLOUSDT",
       "score": 50
     }
   ]
