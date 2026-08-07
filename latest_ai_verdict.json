@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 09:32:20",
+  "timestamp": "2026-08-07 09:34:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos presenta una dominancia de Bids superior al 55% ni una estructura técnica que garantice una alta probabilidad de éxito, por lo que se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos elevados en algunos activos, la falta de profundidad en el libro de órdenes y el entorno macro de miedo extremo invalidan cualquier entrada. Se prioriza la preservación del capital sobre la especulación en un mercado sin una tendencia clara.",
   "top_candidates": [
     {
-      "symbol": "ZECUSDT",
+      "symbol": "ETHUSDT",
       "score": 85
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "DASHUSDT",
       "score": 85
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "KMNOUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     },
     {
-      "symbol": "DASHUSDT",
+      "symbol": "AAVEUSDT",
       "score": 75
     }
   ]
