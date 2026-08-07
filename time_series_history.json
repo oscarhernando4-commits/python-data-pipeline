@@ -1,12 +1,51 @@
 {
-  "LUNCUSDT": [
+  "TIAUSDT": [
     {
-      "timestamp": "2026-08-07 20:14:09",
-      "price": 4.909e-05,
-      "score": 65,
-      "rsi": 54.91,
+      "timestamp": "2026-08-07 20:16:09",
+      "price": 0.3273,
+      "score": 50,
+      "rsi": 50.44,
       "macd": "Neutral",
-      "volume_surge": 0.15,
+      "volume_surge": 0.08,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SEIUSDT": [
+    {
+      "timestamp": "2026-08-07 20:16:09",
+      "price": 0.04075,
+      "score": 45,
+      "rsi": 43.01,
+      "macd": "Neutral",
+      "volume_surge": 0.19,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-07 20:16:09",
+      "price": 0.4913,
+      "score": 30,
+      "rsi": 48.92,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "AMDBUSDT": [
+    {
+      "timestamp": "2026-08-07 20:16:09",
+      "price": 482.55,
+      "score": 65,
+      "rsi": 49.26,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
