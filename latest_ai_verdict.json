@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 19:26:15",
+  "timestamp": "2026-08-07 19:28:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido no ejecutar ninguna operación debido a que, aunque existen activos con buen score técnico, la falta de datos de profundidad en el libro de órdenes y el entorno de mercado 'Fear' con tendencia 'Neutral' no cumplen con los requisitos de seguridad A+ exigidos por el Chief Risk Officer.",
+  "reasoning": "El mercado presenta una fragmentación excesiva y una falta de soporte institucional claro en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ necesario para mitigar el riesgo de pérdida, por lo que la estrategia óptima es mantener la liquidez en espera de una estructura de mercado más definida.",
   "top_candidates": [
     {
-      "symbol": "ADAUSDT",
-      "score": 75
-    },
-    {
       "symbol": "ETHUSDT",
-      "score": 75
+      "score": 85
     },
     {
       "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "ADAUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "UNIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TAOUSDT",
       "score": 75
     }
   ]
