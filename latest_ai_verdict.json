@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-07 07:22:24",
+  "timestamp": "2026-08-07 07:24:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido). Se prioriza la preservación del capital sobre la especulación en activos de baja liquidez.",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de los scores técnicos teóricos, las condiciones actuales del mercado (Fear 29, falta de profundidad en el orderbook y alta volatilidad) no cumplen con los estándares de seguridad A+ exigidos por el CRO, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
       "symbol": "ZBTUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "LTCUSDT",
       "score": 85
     },
     {
@@ -19,11 +23,7 @@
       "score": 85
     },
     {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     }
   ]
