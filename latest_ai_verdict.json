@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 23:56:20",
+  "timestamp": "2026-08-07 23:58:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) en el contexto actual de aversión al riesgo y debilidad en los activos principales, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La volatilidad actual y la falta de muros de compra institucionales exigen una postura de preservación de capital (HOLD) para evitar el riesgo de 'falling knives' observado en simulaciones pasadas.",
   "top_candidates": [
     {
       "symbol": "DOTUSDT",
@@ -15,11 +15,11 @@
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "JSTUSDT",
       "score": 75
     },
     {
-      "symbol": "INJUSDT",
+      "symbol": "ATOMUSDT",
       "score": 75
     },
     {
