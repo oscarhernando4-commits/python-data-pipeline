@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 11:02:17",
+  "timestamp": "2026-08-07 11:04:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una fragmentación de liquidez que invalida las configuraciones técnicas actuales. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%), por lo que la directriz es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos elevados, ninguno cumple con el umbral de seguridad y confirmación de liquidez necesario para una ejecución A+. Se prioriza la protección del capital frente a la incertidumbre del mercado actual.",
   "top_candidates": [
     {
       "symbol": "ZBTUSDT",
       "score": 85
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "AVAXUSDT",
       "score": 75
     },
     {
-      "symbol": "CAKEUSDT",
-      "score": 75
+      "symbol": "PUMPUSDT",
+      "score": 65
     },
     {
-      "symbol": "LAUSDT",
-      "score": 75
+      "symbol": "ONDOUSDT",
+      "score": 65
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "DODOUSDT",
       "score": 65
     }
   ]
