@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-07 10:16:18",
+  "timestamp": "2026-08-07 10:18:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de aversión al riesgo selectivo. Ninguno de los candidatos analizados presenta una estructura de libro de órdenes con soporte de ballenas (Bids > 65%) ni un score técnico que supere el umbral de seguridad A+ exigido por el comité. Se mantiene la liquidez en USDT para evitar pérdidas innecesarias en un entorno de alta incertidumbre.",
+  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. La falta de confirmación en el libro de órdenes y la alta volatilidad en los activos analizados obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "BFUSDUSDT",
+      "symbol": "AAVEUSDT",
       "score": 75
     },
     {
       "symbol": "LAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "MIRAUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "BABYUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "PUMPUSDT",
       "score": 65
     }
   ]
