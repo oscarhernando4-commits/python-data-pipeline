@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-07 15:00:23",
+  "timestamp": "2026-08-07 15:02:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de desapalancamiento y alta incertidumbre. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 requerido por el Comité, y el riesgo de 'falling knife' es inaceptable bajo las reglas de gestión de riesgo vigentes.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación con una mayoría de activos mostrando scores de salud inferiores a 60. Ningún candidato cumple con el requisito de convicción A+ (Score >= 65), por lo que la estrategia institucional es mantener el 100% de la liquidez en espera de una estructura de mercado más clara y menos volátil.",
   "top_candidates": [
     {
-      "symbol": "SPYBUSDT",
+      "symbol": "TRXUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NEXOUSDT",
       "score": 60
     },
     {
@@ -15,12 +19,8 @@
       "score": 50
     },
     {
-      "symbol": "TRXUSDT",
-      "score": 45
-    },
-    {
-      "symbol": "NEXOUSDT",
-      "score": 45
+      "symbol": "ASTERUSDT",
+      "score": 50
     },
     {
       "symbol": "VETUSDT",
