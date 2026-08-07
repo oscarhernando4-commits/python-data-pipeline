@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 04:12:20",
+  "timestamp": "2026-08-07 04:14:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad técnica generalizada; ningún activo cumple con los criterios estrictos de calidad A+ establecidos por el comité, por lo que la decisión unánime es mantener la posición en efectivo.",
+  "confidence": 95,
+  "reasoning": "Ningún activo cumple con el umbral de calidad A+ (Score >= 65) y la confirmación de volumen institucional necesaria. El mercado se encuentra en una fase de alta incertidumbre y correlación bajista, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo'.",
   "top_candidates": [
     {
       "symbol": "PAXGUSDT",
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 60
-    },
-    {
       "symbol": "XRPUSDT",
       "score": 55
     },
     {
       "symbol": "SUNUSDT",
       "score": 55
+    },
+    {
+      "symbol": "BICOUSDT",
+      "score": 50
     }
   ]
 }
