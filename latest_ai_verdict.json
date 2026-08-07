@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-07 22:36:20",
+  "timestamp": "2026-08-07 22:38:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual carece de activos con la fuerza técnica necesaria (Score >= 65) y el soporte de liquidez institucional requerido para una operación de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de alta fragilidad.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65) exigido por el comité. El mercado se encuentra en una fase de alta incertidumbre y debilidad, por lo que la estrategia de preservación de capital es la única opción viable para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "FETUSDT",
+      "symbol": "PAXGUSDT",
       "score": 60
     },
     {
       "symbol": "QNTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SPYBUSDT",
       "score": 60
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "WLFIUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "TSTUSDT",
       "score": 50
     }
   ]
