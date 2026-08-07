@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-07 16:12:29",
+  "timestamp": "2026-08-07 16:14:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, no existe una confluencia unánime de soporte en el libro de órdenes ni una tendencia clara que justifique el riesgo de entrada, optando por proteger el capital en espera de una estructura de mercado más definida.",
+  "reasoning": "El mercado presenta una configuración de alta incertidumbre con una falta de profundidad en el libro de órdenes y una alta tasa de fallos en los trades recientes. Ningún activo cumple con los criterios estrictos de convicción A+ exigidos por el comité, por lo que se decide mantener la liquidez en espera de una mejor estructura de mercado.",
   "top_candidates": [
     {
-      "symbol": "ZECUSDT",
+      "symbol": "ICPUSDT",
       "score": 85
     },
     {
@@ -15,15 +15,15 @@
       "score": 85
     },
     {
-      "symbol": "VETUSDT",
-      "score": 85
+      "symbol": "LINKUSDT",
+      "score": 75
     },
     {
       "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     }
   ]
