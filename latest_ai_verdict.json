@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 17:12:20",
+  "timestamp": "2026-08-07 17:14:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65). El entorno macroeconómico de miedo y la falta de soporte en el libro de órdenes dictan una postura defensiva total para evitar pérdidas en un mercado de alta fragilidad.",
+  "reasoning": "El mercado actual carece de la convicción técnica y el soporte de liquidez necesarios para cumplir con nuestras estrictas reglas de gestión de riesgo; por lo tanto, se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "QNTUSDT",
       "score": 60
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "SOXLBUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "VETUSDT",
-      "score": 55
+      "symbol": "ZBTUSDT",
+      "score": 50
     },
     {
-      "symbol": "ZBTUSDT",
+      "symbol": "STGUSDT",
       "score": 50
     }
   ]
