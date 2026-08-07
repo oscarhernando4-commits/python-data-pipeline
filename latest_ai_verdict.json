@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-07 03:18:20",
+  "timestamp": "2026-08-07 03:20:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual se encuentra en una fase de alta incertidumbre y baja profundidad de liquidez. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 ni muestra una dominancia de Bids superior al 55%, lo que invalida cualquier entrada bajo nuestras reglas de gestión de riesgo. Se prioriza la preservación del capital sobre la especulación en activos de baja convicción.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional y pánico minorista. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de liquidez necesaria en el libro de órdenes, por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
   "top_candidates": [
-    {
-      "symbol": "DOGEUSDT",
-      "score": 60
-    },
     {
       "symbol": "BNBUSDT",
       "score": 60
     },
     {
-      "symbol": "MUBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ETCUSDT",
-      "score": 60
-    },
-    {
       "symbol": "PUMPUSDT",
       "score": 60
+    },
+    {
+      "symbol": "ZROUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "GNOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "score": 50
     }
   ]
 }
