@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 12:46:26",
+  "timestamp": "2026-08-07 12:48:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad excesiva con volúmenes de futuros que eclipsan al spot, lo que aumenta el riesgo de liquidaciones. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y soporte de libro de órdenes > 55%), por lo que la estrategia óptima es mantener la liquidez en USDT.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional encubierta con baja liquidez y alta volatilidad. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65 y Bids > 55%), por lo que la decisión es mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "LINKUSDT",
+      "symbol": "BFUSDUSDT",
       "score": 75
     },
     {
-      "symbol": "BFUSDUSDT",
+      "symbol": "NEXOUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 65
     },
     {
-      "symbol": "SKYUSDT",
+      "symbol": "DOTUSDT",
       "score": 65
     }
   ]
