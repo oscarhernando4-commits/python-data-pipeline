@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 21:06:19",
+  "updated_at": "2026-08-07 21:08:19",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta un entorno de alta selectividad y riesgo asimétrico. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de libro de órdenes y soporte histórico). La estrategia institucional es proteger el 100% de la liquidez en USDT hasta que la volatilidad se estabilice y se identifique una oportunidad con mayor probabilidad de éxito."
+    "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos elevados, ninguno cumple con el umbral de confianza del 70% ni con la solidez necesaria en el libro de órdenes para justificar una entrada en un entorno de mercado caracterizado por la apatía defensiva."
   }
 }
