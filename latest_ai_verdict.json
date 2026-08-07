@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-07 04:10:18",
+  "timestamp": "2026-08-07 04:12:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución bajista con falta de soporte institucional. Ningún activo cumple con los criterios estrictos de calidad A+ (Score >= 65) establecidos por el comité, por lo que la orden es proteger el capital y esperar condiciones de mercado más favorables.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad técnica generalizada; ningún activo cumple con los criterios estrictos de calidad A+ establecidos por el comité, por lo que la decisión unánime es mantener la posición en efectivo.",
   "top_candidates": [
     {
       "symbol": "PAXGUSDT",
       "score": 70
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "BCHUSDT",
       "score": 60
     },
     {
@@ -23,8 +23,8 @@
       "score": 55
     },
     {
-      "symbol": "ERAUSDT",
-      "score": 50
+      "symbol": "SUNUSDT",
+      "score": 55
     }
   ]
 }
