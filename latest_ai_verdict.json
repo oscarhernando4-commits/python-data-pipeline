@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-07 14:40:19",
+  "timestamp": "2026-08-07 14:42:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la estrategia de preservación de capital dicta mantenerse en liquidez total.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado presenta una divergencia técnica severa y falta de profundidad, lo que hace que cualquier entrada sea especulativa y de alto riesgo. Se prioriza la preservación del capital hasta que el mercado muestre una tendencia consolidada.",
   "top_candidates": [
     {
+      "symbol": "LINKUSDT",
+      "score": 85
+    },
+    {
       "symbol": "TRXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -15,16 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "DASHUSDT",
+      "symbol": "AEROUSDT",
       "score": 75
-    },
-    {
-      "symbol": "SPYBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LINKUSDT",
-      "score": 70
     }
   ]
 }
