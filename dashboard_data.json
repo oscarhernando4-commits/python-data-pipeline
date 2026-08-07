@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 09:02:28",
+  "updated_at": "2026-08-07 09:04:27",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha decidido mantener la liquidez en USDT debido a que ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 65%). El entorno de mercado actual, caracterizado por el miedo y la inestabilidad, aumenta la probabilidad de pérdidas, por lo que la preservación del capital es la prioridad absoluta."
+    "reasoning": "El mercado presenta una divergencia estructural y un entorno de miedo que no cumple con los requisitos de alta convicción (Score >= 65 y Bids >= 55%) exigidos por el comité para una ejecución segura. Se mantiene la liquidez en USDT para evitar la exposición a activos que actúan como lastre en un entorno de rotación defensiva."
   }
 }
