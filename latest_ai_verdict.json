@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-07 07:52:24",
+  "timestamp": "2026-08-07 07:54:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y volumen confirmado). El mercado se encuentra en una fase de consolidación defensiva con alta volatilidad, por lo que la estrategia de preservación de capital es la única opción viable para el comité.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
-      "symbol": "ZBTUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "MIRAUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "MIRAUSDT",
       "score": 75
     },
     {
@@ -23,8 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 75
+      "symbol": "ZBTUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "SYNUSDT",
+      "score": 70
     }
   ]
 }
