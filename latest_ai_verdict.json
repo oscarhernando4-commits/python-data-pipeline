@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 18:26:15",
+  "timestamp": "2026-08-07 18:28:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual se encuentra en una fase de 'liquidez de salida' con una alta correlación negativa y falta de activos con fuerza institucional. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT) para evitar pérdidas innecesarias en un entorno de alta volatilidad y baja convicción.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta correlación bajista. Ninguno de los candidatos cumple con el umbral de calidad A+ (Score >= 65) ni con la profundidad de libro de órdenes requerida para una ejecución segura. Se prioriza la preservación de capital sobre la especulación en un entorno de alta volatilidad y baja convicción.",
   "top_candidates": [
+    {
+      "symbol": "HEIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "FETUSDT",
+      "score": 60
+    },
     {
       "symbol": "AAOIBUSDT",
       "score": 60
     },
     {
-      "symbol": "NEXOUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 60
     },
     {
-      "symbol": "XLMUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ALLOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "MMTUSDT",
+      "symbol": "GRAMUSDT",
       "score": 50
     }
   ]
