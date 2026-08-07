@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-07 05:18:20",
+  "timestamp": "2026-08-07 05:20:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado se encuentra en una fase de estancamiento bajista con alta incertidumbre regulatoria. Ninguno de los activos analizados cumple con el umbral de seguridad A+ (Score >= 65) ni con la profundidad de liquidez necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es mantener la posición en efectivo (HOLD).",
+  "reasoning": "El mercado se encuentra en un estado de drenaje de liquidez y alta incertidumbre macro. Ninguno de los activos analizados cumple con los criterios de convicción A+ exigidos por el Comité (Score >= 65). Operar en estas condiciones contraviene la Regla de Oro #1 de no perder dinero, por lo que se decide mantener la posición en efectivo (USDT) hasta que aparezca una señal de acumulación institucional clara.",
   "top_candidates": [
-    {
-      "symbol": "ONDOUSDT",
-      "score": 70
-    },
     {
       "symbol": "MUBUSDT",
       "score": 60
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "ZAMAUSDT",
+      "symbol": "SOXLBUSDT",
       "score": 60
     },
     {
-      "symbol": "DEXEUSDT",
+      "symbol": "ETCUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ZAMAUSDT",
       "score": 60
     }
   ]
