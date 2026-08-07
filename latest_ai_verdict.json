@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-07 23:48:22",
+  "timestamp": "2026-08-07 23:50:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La falta de profundidad en el libro de órdenes y la alta volatilidad en el entorno macro actual dictan una postura de preservación de capital (HOLD) para evitar el riesgo de 'falling knives' observado en simulaciones previas.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación selectiva con alta volatilidad y falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el comité, por lo que la estrategia óptima es el resguardo de capital hasta que la estructura de mercado sea más clara.",
   "top_candidates": [
-    {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
     {
       "symbol": "DOTUSDT",
       "score": 75
@@ -25,6 +21,10 @@
     {
       "symbol": "ZROUSDT",
       "score": 75
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "score": 70
     }
   ]
 }
