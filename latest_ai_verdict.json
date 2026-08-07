@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-07 19:24:20",
+  "timestamp": "2026-08-07 19:26:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión con alta volatilidad y falta de profundidad en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y confirmación de soporte), por lo que la estrategia más rentable y segura es mantener la liquidez en espera de una mejor oportunidad.",
+  "reasoning": "El comité ha decidido no ejecutar ninguna operación debido a que, aunque existen activos con buen score técnico, la falta de datos de profundidad en el libro de órdenes y el entorno de mercado 'Fear' con tendencia 'Neutral' no cumplen con los requisitos de seguridad A+ exigidos por el Chief Risk Officer.",
   "top_candidates": [
     {
+      "symbol": "ADAUSDT",
+      "score": 75
+    },
+    {
       "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "TAOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ASTERUSDT",
       "score": 75
     }
   ]
