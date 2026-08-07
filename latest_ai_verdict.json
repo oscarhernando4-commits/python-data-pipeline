@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-07 22:10:22",
+  "timestamp": "2026-08-07 22:12:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada. Ningún activo cumple con el umbral de Score Técnico A+ (>= 65) ni con la dominancia de Bids necesaria para garantizar una entrada de bajo riesgo. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
+  "reasoning": "El comité ha determinado que el mercado se encuentra en una fase de distribución institucional agresiva y alta volatilidad, donde ningún activo cumple con los criterios de seguridad y rentabilidad exigidos por nuestra política de riesgo. Se prioriza la preservación del capital sobre la especulación en un entorno de baja probabilidad de éxito.",
   "top_candidates": [
     {
       "symbol": "ICPUSDT",
       "score": 70
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "score": 60
     },
     {
       "symbol": "XAUTUSDT",
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "FETUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "QNTUSDT",
       "score": 60
     }
   ]
