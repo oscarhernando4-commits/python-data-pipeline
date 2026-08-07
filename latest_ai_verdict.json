@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-07 19:56:18",
+  "timestamp": "2026-08-07 19:58:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sesgo 'NEUTRAL' y sentimiento de 'MIEDO'. Ninguno de los candidatos cumple con el umbral de seguridad de Bids (>= 65%) ni con una tendencia clara, lo que aumenta el riesgo de pérdidas. Se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado se encuentra en una fase de indecisión extrema con una correlación baja y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de alta volatilidad sin dirección.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     }
   ]
