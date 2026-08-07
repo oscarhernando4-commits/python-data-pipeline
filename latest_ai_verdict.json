@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-07 07:02:25",
+  "timestamp": "2026-08-07 07:04:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad estructural generalizada y una correlación bajista que invalida cualquier intento de compra. Ningún activo cumple con el umbral de convicción A+ (Score >= 65), por lo que la estrategia de preservación de capital dicta una postura de espera (HOLD) hasta que las condiciones macro mejoren.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
+    {
+      "symbol": "DOGEUSDT",
+      "score": 60
+    },
     {
       "symbol": "MIRAUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
+      "symbol": "XRPUSDT",
+      "score": 50
+    },
+    {
       "symbol": "HBARUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "HFTUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "TAOUSDT",
       "score": 50
     }
   ]
