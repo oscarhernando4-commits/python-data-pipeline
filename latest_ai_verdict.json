@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 16:00:28",
+  "timestamp": "2026-08-07 16:02:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los activos analizados cumple con el umbral mínimo de Score Técnico (65) ni con la profundidad de mercado necesaria para una ejecución segura, por lo que el comité decide mantener la posición en efectivo (USDT) para evitar riesgos innecesarios en un entorno de alta volatilidad y baja convicción.",
+  "reasoning": "El mercado se encuentra en una fase de alta fragilidad con un sentimiento de miedo predominante. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ (Score >= 65) requerido por el comité para mitigar el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la operativa especulativa.",
   "top_candidates": [
     {
-      "symbol": "TAOUSDT",
-      "score": 60
+      "symbol": "SUNUSDT",
+      "score": 70
     },
     {
       "symbol": "LTCUSDT",
       "score": 60
     },
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "TAOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "LINKUSDT",
       "score": 60
     },
     {
       "symbol": "CAKEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "AEROUSDT",
       "score": 60
     }
   ]
