@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 17:32:23",
+  "timestamp": "2026-08-07 17:34:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre y debilidad técnica. Ninguno de los activos analizados alcanza el umbral de seguridad (Score >= 65) ni presenta una estructura de soporte institucional sólida en el libro de órdenes. Para evitar el riesgo de 'cuchillos cayendo' y preservar el capital, la decisión unánime es mantenerse en liquidez (HOLD).",
+  "reasoning": "Tras analizar los candidatos, ninguno alcanza el umbral de Score 65 requerido por el Comité. La fragilidad del mercado y la falta de profundidad en el libro de órdenes para los activos analizados obligan a mantener una postura de espera para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "SOXLBUSDT",
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "SAGAUSDT",
+      "symbol": "JTOUSDT",
       "score": 60
     },
     {
       "symbol": "ZROUSDT",
-      "score": 60
+      "score": 55
     },
     {
-      "symbol": "JTOUSDT",
-      "score": 60
+      "symbol": "ACEUSDT",
+      "score": 50
     }
   ]
 }
