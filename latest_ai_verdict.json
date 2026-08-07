@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 08:14:25",
+  "timestamp": "2026-08-07 08:16:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de purga de proyectos débiles con una estructura de liquidez insuficiente. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%), por lo que la decisión institucional es mantenerse en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta una divergencia técnica y un entorno de miedo que, sumado a la falta de profundidad en el libro de órdenes y el bajo win rate histórico en condiciones neutrales, obliga al comité a mantener una postura de espera para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "HBARUSDT",
+      "symbol": "POLUSDT",
       "score": 85
-    },
-    {
-      "symbol": "ZBTUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "PEPEUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
     },
     {
       "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZROUSDT",
       "score": 75
     }
   ]
