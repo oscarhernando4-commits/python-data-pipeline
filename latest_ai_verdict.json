@@ -1,23 +1,11 @@
 {
-  "timestamp": "2026-08-07 13:36:23",
+  "timestamp": "2026-08-07 13:38:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El entorno macroeconómico de miedo y la alta probabilidad de 'fakeouts' dictan una política de preservación de capital total.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y confirmación de volumen). El entorno macroeconómico de miedo y la alta tasa de fallos en condiciones de mercado neutral dictan una postura de espera para evitar 'cuchillos cayendo'.",
   "top_candidates": [
-    {
-      "symbol": "XRPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AVAXUSDT",
-      "score": 75
-    },
     {
       "symbol": "QNTUSDT",
       "score": 75
@@ -25,6 +13,18 @@
     {
       "symbol": "BFUSDUSDT",
       "score": 75
+    },
+    {
+      "symbol": "NEXOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AEROUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LINKUSDT",
+      "score": 70
     }
   ]
 }
