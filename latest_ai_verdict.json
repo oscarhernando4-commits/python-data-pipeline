@@ -1,23 +1,11 @@
 {
-  "timestamp": "2026-08-07 12:32:22",
+  "timestamp": "2026-08-07 12:34:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (Score >= 65, Confianza >= 70%) y la falta de soporte real en el libro de órdenes, sumado a la alta volatilidad, hace que la estrategia más rentable sea mantener la liquidez en USDT hasta que el mercado valide un suelo sólido.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta fragilidad. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
-    {
-      "symbol": "BCHUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "XRPUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "LINKUSDT",
-      "score": 85
-    },
     {
       "symbol": "TRXUSDT",
       "score": 85
@@ -25,6 +13,18 @@
     {
       "symbol": "SUNUSDT",
       "score": 85
+    },
+    {
+      "symbol": "CAKEUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "MUBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ICPUSDT",
+      "score": 75
     }
   ]
 }
