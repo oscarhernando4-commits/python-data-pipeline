@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 12:54:19",
+  "timestamp": "2026-08-07 12:56:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'zombie' con alta especulación en derivados y falta de soporte real en el libro de órdenes. Ningún activo cumple con los criterios estrictos de convicción A+ del comité, por lo que la estrategia de protección de capital dicta una posición de espera (HOLD) para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta una estructura de distribución técnica encubierta con alta volatilidad y falta de soporte institucional claro en el libro de órdenes. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que la decisión es mantener la liquidez en espera de mejores condiciones.",
   "top_candidates": [
     {
-      "symbol": "SEIUSDT",
-      "score": 95
+      "symbol": "BCHUSDT",
+      "score": 85
     },
     {
       "symbol": "SUNUSDT",
       "score": 85
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "XRPUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AVAXUSDT",
       "score": 75
     },
     {
       "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XRPUSDT",
       "score": 75
     }
   ]
