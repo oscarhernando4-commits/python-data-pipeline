@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-07 11:30:21",
+  "timestamp": "2026-08-07 11:32:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de baja convicción con una estructura de libro de órdenes neutral. Ningún candidato cumple con el requisito de dominancia de Bids > 55% ni con una estructura técnica que garantice una alta probabilidad de éxito, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura de apalancamiento sintético peligrosa. Ningún activo cumple con los criterios de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la estrategia de preservación de capital dicta una posición de espera (HOLD).",
   "top_candidates": [
+    {
+      "symbol": "ADAUSDT",
+      "score": 75
+    },
     {
       "symbol": "AVAXUSDT",
       "score": 75
     },
     {
       "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ADAUSDT",
       "score": 75
     },
     {
