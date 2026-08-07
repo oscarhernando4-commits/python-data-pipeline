@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 10:10:21",
+  "updated_at": "2026-08-07 10:12:19",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de volumen institucional real sugieren una trampa de liquidez, por lo que el comité decide mantener la posición en efectivo para evitar pérdidas innecesarias."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional). El mercado se encuentra en una fase de rebalanceo fragmentado donde el riesgo de 'flash crash' supera el potencial de beneficio, por lo que la decisión institucional es proteger el 100% del capital."
   }
 }
