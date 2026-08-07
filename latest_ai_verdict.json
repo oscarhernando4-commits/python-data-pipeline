@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 07:28:25",
+  "timestamp": "2026-08-07 07:30:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos elevados en algunos activos, la falta de profundidad en el libro de órdenes y el entorno macro de miedo no justifican el riesgo de una entrada. Se prioriza la preservación del capital hasta que el mercado muestre una estructura de acumulación más clara y una dominancia de Bids superior al 55%.",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y volumen confirmado). El mercado se encuentra en una fase de alta incertidumbre y purga de activos, por lo que la estrategia óptima es preservar el capital en USDT.",
   "top_candidates": [
     {
       "symbol": "ZBTUSDT",
@@ -12,19 +12,19 @@
     },
     {
       "symbol": "LTCUSDT",
-      "score": 85
+      "score": 75
     },
     {
-      "symbol": "ENAUSDT",
-      "score": 85
+      "symbol": "MUBUSDT",
+      "score": 75
     },
     {
       "symbol": "ETCUSDT",
-      "score": 85
+      "score": 75
     },
     {
       "symbol": "SYNUSDT",
-      "score": 85
+      "score": 70
     }
   ]
 }
