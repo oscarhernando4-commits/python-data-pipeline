@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-07 07:46:21",
+  "timestamp": "2026-08-07 07:48:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento defensivo con alta incertidumbre regulatoria y falta de profundidad en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte), por lo que la decisión institucional es mantener la liquidez en espera de mejores condiciones.",
+  "reasoning": "El mercado se encuentra en una 'trampa de neutralidad' con baja profundidad de mercado y alta volatilidad especulativa. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) exigido por el comité para mitigar el riesgo de pérdida de capital.",
   "top_candidates": [
+    {
+      "symbol": "DOGEUSDT",
+      "score": 75
+    },
     {
       "symbol": "MIRAUSDT",
       "score": 75
@@ -15,16 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "ZBTUSDT",
-      "score": 70
+      "symbol": "MUBUSDT",
+      "score": 75
     },
     {
-      "symbol": "SYNUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "SKHYBUSDT",
-      "score": 65
+      "symbol": "ETCUSDT",
+      "score": 75
     }
   ]
 }
