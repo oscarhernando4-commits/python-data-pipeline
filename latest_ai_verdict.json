@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-07 21:46:23",
+  "timestamp": "2026-08-07 21:48:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que varios activos tienen un score técnico de 75, ninguno cumple con el requisito de dominancia de Bids > 55% ni con una confirmación de volumen institucional clara, lo que obliga a mantener la liquidez para evitar pérdidas innecesarias en un mercado de alta fragmentación.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los requisitos de convicción A+ (Score >= 65 y Bids >= 65%). La alta volatilidad y la falta de soporte institucional claro en el libro de órdenes sugieren que la estrategia más rentable es la preservación de capital mediante el modo HOLD.",
   "top_candidates": [
     {
       "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BNBUSDT",
+      "symbol": "PAXGUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "ICPUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "QNTUSDT",
       "score": 75
     }
   ]
