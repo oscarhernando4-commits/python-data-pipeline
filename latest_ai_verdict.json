@@ -1,26 +1,26 @@
 {
-  "timestamp": "2026-08-07 20:54:16",
+  "timestamp": "2026-08-07 20:56:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una zona de compresión de alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y dominancia de Bids > 55%). La historia reciente de trades muestra una alta probabilidad de pérdida en condiciones de mercado neutral, por lo que la decisión institucional es mantener la liquidez en espera de una mejor configuración técnica.",
+  "reasoning": "Tras la deliberación unánime, se concluye que el mercado no ofrece una configuración de alta probabilidad (A+) que cumpla con los criterios de riesgo del comité. La falta de soporte claro en el libro de órdenes y la inestabilidad técnica de los candidatos sugieren que la preservación del capital es la estrategia óptima en este ciclo.",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "ESPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ZAMAUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
       "symbol": "TIAUSDT",
       "score": 75
+    },
+    {
+      "symbol": "HBARUSDT",
+      "score": 65
     },
     {
       "symbol": "HEIUSDT",
