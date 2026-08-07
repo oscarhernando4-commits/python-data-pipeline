@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-07 03:56:19",
+  "timestamp": "2026-08-07 03:58:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica generalizada sin activos que cumplan con los criterios de alta convicción (Score >= 65). La falta de soporte en el libro de órdenes y la debilidad en los indicadores técnicos obligan a mantener una postura defensiva para preservar el capital, evitando el riesgo de 'falling knives' en un entorno de baja liquidez.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada donde el 94% de los activos analizados no superan el umbral de riesgo. Ningún candidato cumple con la regla de oro de Score >= 65, por lo que el comité ha decidido unánimemente mantener la liquidez en espera de una estructura de mercado más saludable.",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
+      "symbol": "ZROUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "PAXGUSDT",
       "score": 60
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "KAITOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SUNUSDT",
       "score": 60
     }
   ]
