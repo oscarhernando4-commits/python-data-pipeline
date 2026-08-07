@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-07 16:52:21",
+  "timestamp": "2026-08-07 16:54:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de debilidad sistémica donde la mayoría de los activos presentan scores técnicos insuficientes (<= 60). Ningún candidato cumple con la regla de oro de Score A+ (>= 65) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con debilidad estructural profunda. Ningún activo cumple con los criterios de alta convicción (Score >= 65) ni con la solidez necesaria en el libro de órdenes para justificar una entrada, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "ZECUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "HEIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SOXLBUSDT",
       "score": 60
     },
     {
@@ -23,7 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "QNTUSDT",
+      "score": 60
+    },
+    {
       "symbol": "SUNUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "REUSDT",
       "score": 60
     }
   ]
