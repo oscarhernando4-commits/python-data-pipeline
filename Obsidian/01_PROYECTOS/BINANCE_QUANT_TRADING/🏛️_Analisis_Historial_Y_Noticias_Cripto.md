@@ -1554,3 +1554,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-37.03%)`, `2024-04-12 (-28.44%)`, `2024-12-09 (-22.53%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: HEIUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-02-13` hasta `2026-08-07` (541 Días de Historial)
+- 💵 **Precio Actual:** `$0.2072 USD`
+- 📈 **Máximo Histórico (ATH):** `$1.4900 USD` (`2025-02-13`) | Distancia: `-86.09%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0102 USD` (`2025-10-10`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-08-05 (+107.74%)`, `2026-05-29 (+80.18%)`, `2026-06-25 (+58.55%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-48.12%)`, `2025-12-03 (-34.26%)`, `2026-08-06 (-26.74%)`
+
+---
