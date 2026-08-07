@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-07 07:20:24",
+  "timestamp": "2026-08-07 07:22:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de consolidación defensiva con una falta total de dominancia en el libro de órdenes y una alta probabilidad de pérdidas basada en el historial de simulaciones recientes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de ballenas confirmado), por lo que la decisión institucional es mantener la liquidez en USDT para evitar el riesgo de 'falling knives'.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido). Se prioriza la preservación del capital sobre la especulación en activos de baja liquidez.",
   "top_candidates": [
     {
       "symbol": "ZBTUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ASTERUSDT",
       "score": 85
     },
     {
@@ -15,15 +19,11 @@
       "score": 85
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
       "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     }
   ]
