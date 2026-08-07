@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-07 10:12:19",
+  "timestamp": "2026-08-07 10:14:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional). El mercado se encuentra en una fase de rebalanceo fragmentado donde el riesgo de 'flash crash' supera el potencial de beneficio, por lo que la decisión institucional es proteger el 100% del capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La volatilidad actual y la falta de soporte institucional en el libro de órdenes obligan a una postura defensiva de preservación de capital.",
   "top_candidates": [
     {
       "symbol": "SUIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XLMUSDT",
       "score": 75
     },
     {
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "LAUSDT",
-      "score": 75
-    },
-    {
       "symbol": "NIGHTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "MIRAUSDT",
       "score": 75
     }
   ]
