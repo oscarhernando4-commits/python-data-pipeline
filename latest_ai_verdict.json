@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-07 10:24:19",
+  "timestamp": "2026-08-07 10:26:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de alta incertidumbre con una divergencia técnica que no cumple con los criterios de convicción A+ exigidos por el comité; por tanto, se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "Tras la deliberación unánime, el comité concluye que el mercado carece de la convicción necesaria para una entrada de alta probabilidad. La ausencia de soporte institucional en el libro de órdenes y la alta volatilidad en los activos AI sugieren que es preferible mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "NEARUSDT",
+      "score": 75
+    },
     {
       "symbol": "AVAXUSDT",
       "score": 75
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
+      "symbol": "SUNUSDT",
+      "score": 75
+    },
+    {
       "symbol": "BFUSDUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DASHUSDT",
       "score": 75
     }
   ]
