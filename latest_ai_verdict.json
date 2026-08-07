@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-07 16:20:24",
+  "timestamp": "2026-08-07 16:22:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica y falta de convicción institucional. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) ni con una dominancia clara en el libro de órdenes, por lo que la estrategia óptima es la preservación total de capital en USDT.",
+  "reasoning": "El comité ha determinado que no existen activos con un Score Técnico A+ (>= 65) que cumplan con los criterios de seguridad y volumen institucional necesarios. Ante la debilidad sistémica de las altcoins y la falta de soporte claro en el libro de órdenes, la estrategia óptima es preservar el capital en espera de una configuración de mercado más robusta.",
   "top_candidates": [
+    {
+      "symbol": "XLMUSDT",
+      "score": 60
+    },
     {
       "symbol": "ZECUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
+      "symbol": "WLFIUSDT",
+      "score": 60
+    },
+    {
       "symbol": "SOXLBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "WLDUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ICPUSDT",
       "score": 60
     }
   ]
