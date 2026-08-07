@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 20:40:16",
+  "timestamp": "2026-08-07 20:42:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El comité ha determinado que el mercado carece de la profundidad y el momentum necesarios para una ejecución de alta probabilidad. Todos los candidatos analizados fallan en cumplir con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que se prioriza la protección del capital frente a la exposición al riesgo en un entorno de alta volatilidad y sentimiento de miedo.",
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y confirmación de liquidez). La alta volatilidad y la falta de datos de soporte en el libro de órdenes obligan a mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "NEARUSDT",
@@ -15,12 +15,12 @@
       "score": 75
     },
     {
-      "symbol": "NEXOUSDT",
+      "symbol": "LDOUSDT",
       "score": 75
     },
     {
-      "symbol": "LDOUSDT",
-      "score": 75
+      "symbol": "PEPEUSDT",
+      "score": 70
     },
     {
       "symbol": "XRPUSDT",
