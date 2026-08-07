@@ -1,12 +1,25 @@
 {
-  "LUNCUSDT": [
+  "MIRAUSDT": [
     {
-      "timestamp": "2026-08-07 23:20:11",
-      "price": 4.911e-05,
-      "score": 60,
-      "rsi": 54.73,
+      "timestamp": "2026-08-07 23:22:10",
+      "price": 0.0431,
+      "score": 50,
+      "rsi": 63.23,
       "macd": "Neutral",
-      "volume_surge": 0.8,
+      "volume_surge": 0.79,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-07 23:22:10",
+      "price": 0.4914,
+      "score": 50,
+      "rsi": 51.57,
+      "macd": "Neutral",
+      "volume_surge": 0.18,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
