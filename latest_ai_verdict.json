@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 11:40:14",
-  "selected_symbol": "APTUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "APTUSDT es el único candidato que cumple con el umbral de score A+ (85/100) y pertenece al sector dominante de infraestructura, mostrando una resiliencia superior frente al miedo generalizado del mercado.",
+  "timestamp": "2026-08-07 11:42:17",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una zona de alta incertidumbre con una divergencia entre el sentimiento de miedo y la acción del precio. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la estrategia de preservación de capital dicta mantenerse en liquidez (HOLD).",
   "top_candidates": [
     {
       "symbol": "APTUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 75
-    },
-    {
       "symbol": "PEPEUSDT",
       "score": 75
     },
     {
-      "symbol": "ARBUSDT",
+      "symbol": "TAOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DASHUSDT",
       "score": 75
     }
   ]
