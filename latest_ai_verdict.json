@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-07 14:24:25",
-  "selected_symbol": "DASHUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "DASHUSDT es el único activo que cumple con el umbral de Score Técnico >= 65 y presenta un volumen de compra institucional (2.43x) que lo desacopla del sentimiento de miedo actual. Se prioriza la ejecución en este activo mientras se mantiene el resto de la liquidez en espera, evitando activos de baja fuerza relativa.",
+  "timestamp": "2026-08-07 14:26:22",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (A+) exigidos por el protocolo de riesgo. La falta de soporte claro en el libro de órdenes y la inestabilidad en los activos de infraestructura sugieren que es preferible mantener la liquidez en espera de una estructura de mercado más definida.",
   "top_candidates": [
     {
       "symbol": "DASHUSDT",
       "score": 85
     },
     {
-      "symbol": "LINKUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     }
   ]
