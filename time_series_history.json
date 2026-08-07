@@ -1,12 +1,38 @@
 {
-  "LUNCUSDT": [
+  "MIRAUSDT": [
     {
-      "timestamp": "2026-08-07 17:46:13",
-      "price": 4.877e-05,
+      "timestamp": "2026-08-07 17:48:12",
+      "price": 0.0424,
       "score": 0,
-      "rsi": 44.79,
+      "rsi": 47.76,
       "macd": "Neutral",
-      "volume_surge": 0.5,
+      "volume_surge": 0.2,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "NILUSDT": [
+    {
+      "timestamp": "2026-08-07 17:48:12",
+      "price": 0.039,
+      "score": 0,
+      "rsi": 70.0,
+      "macd": "Neutral",
+      "volume_surge": 0.14,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-07 17:48:12",
+      "price": 0.4927,
+      "score": 60,
+      "rsi": 50.67,
+      "macd": "Neutral",
+      "volume_surge": 0.02,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
