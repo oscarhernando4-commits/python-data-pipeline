@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-07 16:04:23",
+  "timestamp": "2026-08-07 16:06:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo persistente. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ requerido por el comité, y el libro de órdenes no muestra la profundidad necesaria para justificar una entrada. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad estructural. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de soporte institucional necesaria para garantizar una operación de bajo riesgo. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja convicción.",
   "top_candidates": [
     {
+      "symbol": "ZECUSDT",
+      "score": 70
+    },
+    {
       "symbol": "SUNUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "VETUSDT",
       "score": 70
     },
     {
@@ -17,14 +25,6 @@
     {
       "symbol": "LINKUSDT",
       "score": 60
-    },
-    {
-      "symbol": "CAKEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ADAUSDT",
-      "score": 50
     }
   ]
 }
