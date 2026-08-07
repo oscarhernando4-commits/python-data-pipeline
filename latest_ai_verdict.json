@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-07 20:42:24",
+  "timestamp": "2026-08-07 20:44:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y confirmación de liquidez). La alta volatilidad y la falta de datos de soporte en el libro de órdenes obligan a mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la rotación sectorial hacia AI, los candidatos actuales no cumplen con los umbrales de seguridad (Score >= 65 y Bids > 55%) exigidos por el CRO. Se prioriza la preservación de capital ante la volatilidad incierta.",
   "top_candidates": [
     {
       "symbol": "NEARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TAOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ESPUSDT",
       "score": 75
     },
     {
@@ -17,14 +25,6 @@
     {
       "symbol": "LDOUSDT",
       "score": 75
-    },
-    {
-      "symbol": "PEPEUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "XRPUSDT",
-      "score": 65
     }
   ]
 }
