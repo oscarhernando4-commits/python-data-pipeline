@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 20:38:15",
+  "timestamp": "2026-08-07 20:40:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una clara falta de soporte institucional en el libro de órdenes. Ninguno de los candidatos cumple con los criterios estrictos de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia óptima es mantener la liquidez en espera de una estructura de mercado más clara.",
+  "confidence": 95,
+  "reasoning": "El comité ha determinado que el mercado carece de la profundidad y el momentum necesarios para una ejecución de alta probabilidad. Todos los candidatos analizados fallan en cumplir con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que se prioriza la protección del capital frente a la exposición al riesgo en un entorno de alta volatilidad y sentimiento de miedo.",
   "top_candidates": [
     {
       "symbol": "NEARUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "NEXOUSDT",
+      "score": 75
+    },
+    {
       "symbol": "LDOUSDT",
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "HBARUSDT",
+      "symbol": "XRPUSDT",
       "score": 65
     }
   ]
