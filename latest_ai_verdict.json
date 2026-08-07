@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 21:48:15",
+  "timestamp": "2026-08-07 21:50:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los requisitos de convicción A+ (Score >= 65 y Bids >= 65%). La alta volatilidad y la falta de soporte institucional claro en el libro de órdenes sugieren que la estrategia más rentable es la preservación de capital mediante el modo HOLD.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de profundidad de mercado). La incertidumbre regulatoria y la falta de datos de liquidez en el orderbook obligan a mantener una posición de espera para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "QNTUSDT",
       "score": 75
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "ICPUSDT",
       "score": 75
     }
   ]
