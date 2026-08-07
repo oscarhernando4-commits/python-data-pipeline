@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 21:40:16",
+  "timestamp": "2026-08-07 21:42:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una tendencia NEUTRAL predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo de 'falling knives' observado en el historial de trades recientes. Se prioriza la preservación del capital.",
+  "reasoning": "El comité ha determinado que, a pesar de la fortaleza relativa de algunos activos, el entorno de mercado actual no cumple con los criterios de seguridad y convicción exigidos por el protocolo de riesgo. Se prioriza la preservación del capital sobre la especulación en un mercado sin dirección definida.",
   "top_candidates": [
     {
+      "symbol": "ETHUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
       "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PAXGUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ASTERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "FETUSDT",
       "score": 75
     }
   ]
