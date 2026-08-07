@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 04:56:20",
+  "timestamp": "2026-08-07 04:58:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada. Ningún activo cumple con los criterios de alta convicción (Score >= 65) exigidos por el comité. La estrategia de protección de capital dicta que, ante la ausencia de señales claras de acumulación institucional y la persistencia de la tendencia bajista, la única acción prudente es el HOLD total.",
+  "reasoning": "El mercado presenta una estructura de distribución bajista generalizada. Ninguno de los activos analizados alcanza el umbral de calidad A+ (Score >= 65) requerido por el Comité. Se prioriza la preservación del capital ante la falta de muros de soporte institucionales y la alta volatilidad errática.",
   "top_candidates": [
     {
       "symbol": "DEXEUSDT",
       "score": 60
     },
     {
-      "symbol": "ZROUSDT",
-      "score": 60
+      "symbol": "BICOUSDT",
+      "score": 50
     },
     {
       "symbol": "HEIUSDT",
       "score": 50
     },
     {
-      "symbol": "ACEUSDT",
+      "symbol": "CTSIUSDT",
       "score": 50
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "ASTERUSDT",
       "score": 50
     }
   ]
