@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-07 17:50:22",
+  "timestamp": "2026-08-07 17:52:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con una correlación bajista predominante. Ninguno de los candidatos analizados alcanza el score técnico mínimo de 65 ni demuestra una estructura de soporte sólida en el libro de órdenes. Se prioriza la preservación de capital sobre la especulación en activos de baja madurez estadística.",
+  "reasoning": "El mercado actual no ofrece activos con la calidad técnica ni la profundidad de liquidez necesaria para garantizar una operación de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo y baja convicción.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
       "score": 60
     },
     {
-      "symbol": "AAOIBUSDT",
+      "symbol": "SOXLBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ARBUSDT",
       "score": 60
     },
     {
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "SAGAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "EPICUSDT",
+      "symbol": "ERAUSDT",
       "score": 50
     }
   ]
