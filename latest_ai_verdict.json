@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-07 18:32:16",
+  "timestamp": "2026-08-07 18:34:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado carece de activos con un Score Técnico superior a 65 y presenta una estructura de alta volatilidad con riesgo de 'trampa de liquidez'. Siguiendo la Regla de Oro #1, se ha decidido no ejecutar ninguna operación para proteger el capital del fondo.",
+  "reasoning": "El mercado se encuentra en una fase de distribución agresiva con falta de convicción institucional. Ningún activo cumple con los criterios de riesgo A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
       "symbol": "NEXOUSDT",
       "score": 60
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "AEROUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ALLOUSDT",
       "score": 50
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "ADAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "EPICUSDT",
       "score": 50
     }
   ]
