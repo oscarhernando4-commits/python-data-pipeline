@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 07:18:22",
+  "timestamp": "2026-08-07 07:20:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. La falta de profundidad en el libro de órdenes, sumada a la debilidad técnica de los activos con mayor score, obliga a mantener una postura de espera para preservar el capital.",
+  "reasoning": "El mercado se encuentra en un estado de consolidación defensiva con una falta total de dominancia en el libro de órdenes y una alta probabilidad de pérdidas basada en el historial de simulaciones recientes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de ballenas confirmado), por lo que la decisión institucional es mantener la liquidez en USDT para evitar el riesgo de 'falling knives'.",
   "top_candidates": [
     {
       "symbol": "ZBTUSDT",
@@ -15,15 +15,15 @@
       "score": 85
     },
     {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
       "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "MUBUSDT",
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETCUSDT",
       "score": 75
     }
   ]
