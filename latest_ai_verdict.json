@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 07:24:24",
+  "timestamp": "2026-08-07 07:26:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de los scores técnicos teóricos, las condiciones actuales del mercado (Fear 29, falta de profundidad en el orderbook y alta volatilidad) no cumplen con los estándares de seguridad A+ exigidos por el CRO, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, la falta de profundidad en el libro de órdenes y la inestabilidad macroeconómica actual no cumplen con los estándares de convicción A+ requeridos para una operación de alta probabilidad.",
   "top_candidates": [
     {
       "symbol": "ZBTUSDT",
@@ -23,8 +23,8 @@
       "score": 85
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 75
+      "symbol": "ETCUSDT",
+      "score": 85
     }
   ]
 }
