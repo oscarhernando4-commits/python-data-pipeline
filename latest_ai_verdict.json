@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-07 09:26:23",
+  "timestamp": "2026-08-07 09:28:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre y hostilidad, con una falta de soporte institucional claro en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 65%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (HOLD).",
+  "reasoning": "El mercado presenta un entorno de alta incertidumbre con un índice de miedo elevado y una falta de soporte institucional claro en el libro de órdenes. Ninguno de los candidatos analizados alcanza la convicción A+ necesaria para justificar una entrada, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias en una fase de distribución selectiva.",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LINKUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "MIRAUSDT",
       "score": 75
     },
     {
-      "symbol": "MIRAUSDT",
+      "symbol": "NEARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TAOUSDT",
       "score": 75
     }
   ]
