@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 05:00:18",
+  "timestamp": "2026-08-07 05:02:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de purga institucional sin soporte técnico ni fundamental. Ningún activo cumple con los criterios de alta convicción (Score A+), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada. Ningún activo cumple con el requisito de Score Técnico >= 65 ni con la profundidad de mercado necesaria para una ejecución segura. Se mantiene la posición en efectivo para evitar el riesgo de 'trampas de valor' en un entorno de baja confianza.",
   "top_candidates": [
     {
+      "symbol": "MUBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ETCUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ZROUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "score": 55
+    },
+    {
       "symbol": "ACEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "CTSIUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ASTERUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "JSTUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ZAMAUSDT",
       "score": 50
     }
   ]
