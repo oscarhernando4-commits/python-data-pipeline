@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-08-07 15:40:23",
+  "timestamp": "2026-08-07 15:42:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) en un entorno de mercado caracterizado por la capitulación de altcoins y alta incertidumbre macroeconómica.",
+  "reasoning": "El mercado presenta una divergencia crítica y una alta fragmentación. Ninguno de los candidatos, a pesar de sus scores técnicos, logra superar el umbral de confianza del 70% requerido por el Comité debido a la falta de soporte claro en el libro de órdenes y la inestabilidad macroeconómica. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
-      "symbol": "VETUSDT",
+      "symbol": "LTCUSDT",
       "score": 85
     },
     {
-      "symbol": "LTCUSDT",
-      "score": 75
+      "symbol": "VETUSDT",
+      "score": 85
     },
     {
       "symbol": "ICPUSDT",
