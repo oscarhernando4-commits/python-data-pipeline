@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-07 10:26:18",
+  "timestamp": "2026-08-07 10:28:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, el comité concluye que el mercado carece de la convicción necesaria para una entrada de alta probabilidad. La ausencia de soporte institucional en el libro de órdenes y la alta volatilidad en los activos AI sugieren que es preferible mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de confirmación en el orderbook obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "ADAUSDT",
+      "score": 75
+    },
     {
       "symbol": "NEARUSDT",
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "SUNUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BFUSDUSDT",
       "score": 75
     }
   ]
