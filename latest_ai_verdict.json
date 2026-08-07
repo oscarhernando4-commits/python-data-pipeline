@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-07 21:34:18",
+  "timestamp": "2026-08-07 21:36:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la estrategia más rentable y segura es mantener la posición en efectivo (HOLD) hasta que las condiciones macro y técnicas mejoren.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el requisito de dominancia de Bids >= 55% ni con una estructura técnica que garantice una alta probabilidad de éxito, por lo que se decide proteger la liquidez total.",
   "top_candidates": [
+    {
+      "symbol": "DOGEUSDT",
+      "score": 75
+    },
     {
       "symbol": "XAUTUSDT",
       "score": 75
@@ -15,11 +19,7 @@
       "score": 75
     },
     {
-      "symbol": "ICPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "QNTUSDT",
+      "symbol": "AVAXUSDT",
       "score": 75
     },
     {
