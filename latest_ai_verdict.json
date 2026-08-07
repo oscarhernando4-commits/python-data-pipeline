@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 11:28:21",
+  "timestamp": "2026-08-07 11:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de candidatos con scores técnicos de 85, la falta de confirmación en el libro de órdenes (bids < 55%) y la alta volatilidad sintética en el mercado de futuros de BTC invalidan la ejecución de cualquier trade bajo la regla de oro de protección de capital.",
+  "reasoning": "El mercado se encuentra en un estado de baja convicción con una estructura de libro de órdenes neutral. Ningún candidato cumple con el requisito de dominancia de Bids > 55% ni con una estructura técnica que garantice una alta probabilidad de éxito, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "ETHUSDT",
-      "score": 85
+      "symbol": "AVAXUSDT",
+      "score": 75
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 85
+      "symbol": "DOGEUSDT",
+      "score": 75
     },
     {
       "symbol": "ADAUSDT",
-      "score": 85
+      "score": 75
     },
     {
       "symbol": "SUIUSDT",
-      "score": 85
+      "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     }
   ]
