@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-07 14:28:19",
+  "timestamp": "2026-08-07 14:30:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos elevados, la falta de una dominancia clara en el libro de órdenes y la inestabilidad del entorno macro actual no cumplen con los estándares de seguridad A+ exigidos por el protocolo de riesgo.",
+  "reasoning": "El mercado presenta una alta selectividad y riesgo sistémico. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y confirmación de volumen), por lo que la estrategia óptima es mantener la liquidez en espera de una mejor configuración técnica.",
   "top_candidates": [
     {
-      "symbol": "ETCUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "DASHUSDT",
-      "score": 85
+      "symbol": "SOLUSDT",
+      "score": 75
     },
     {
       "symbol": "LINKUSDT",
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TRXUSDT",
       "score": 75
     }
   ]
