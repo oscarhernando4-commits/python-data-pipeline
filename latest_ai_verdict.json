@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 16:18:29",
+  "timestamp": "2026-08-07 16:20:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una divergencia estructural y falta de convicción institucional. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 requerido por el comité, y el libro de órdenes no muestra una dominancia compradora clara. Por lo tanto, se prioriza la preservación del capital (Regla #1) manteniéndose en posición de espera (HOLD) hasta que surja una configuración de alta probabilidad.",
+  "reasoning": "El mercado presenta una fragilidad sistémica y falta de convicción institucional. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) ni con una dominancia clara en el libro de órdenes, por lo que la estrategia óptima es la preservación total de capital en USDT.",
   "top_candidates": [
+    {
+      "symbol": "ZECUSDT",
+      "score": 60
+    },
     {
       "symbol": "BNBUSDT",
       "score": 60
     },
     {
-      "symbol": "LINKUSDT",
+      "symbol": "SOXLBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "WLDUSDT",
       "score": 60
     },
     {
       "symbol": "ICPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SUNUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XPLUSDT",
       "score": 60
     }
   ]
