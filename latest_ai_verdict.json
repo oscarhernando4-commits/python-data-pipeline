@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-07 23:18:20",
+  "timestamp": "2026-08-07 23:20:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada. Ninguno de los activos analizados alcanza el umbral de Score A+ (>= 65) requerido por el Comité para una operación de alta probabilidad. La estrategia de preservación de capital dicta que, ante la ausencia de una ventaja estadística clara, la posición correcta es el efectivo (USDT) para evitar la exposición a 'cuchillos cayendo' y volatilidad no confirmada.",
+  "reasoning": "El mercado presenta una fragilidad sistémica extrema con una alta correlación de debilidad en los activos analizados. Ningún candidato cumple con el requisito estricto de Score Técnico >= 65, lo que invalida cualquier operación bajo las reglas de gestión de riesgo del comité. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
   "top_candidates": [
     {
       "symbol": "TAOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SKYUSDT",
       "score": 60
     },
     {
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
+      "symbol": "CAKEUSDT",
+      "score": 60
+    },
+    {
       "symbol": "LAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DEXEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SPYBUSDT",
       "score": 60
     }
   ]
