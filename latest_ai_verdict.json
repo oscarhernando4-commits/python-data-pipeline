@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-07 20:06:19",
+  "timestamp": "2026-08-07 20:08:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de los scores técnicos de 75/100, la falta de profundidad en el libro de órdenes, el sentimiento de miedo en el mercado y la alta tasa de fallos en condiciones neutrales, no cumplen con los criterios de convicción A+ necesarios para ejecutar una operación de compra, priorizando la preservación del capital.",
+  "reasoning": "El mercado se encuentra en una fase de consolidación con alta incertidumbre y falta de volumen institucional confirmatorio. Ningún activo cumple con los criterios estrictos de convicción A+ del comité, por lo que la estrategia óptima es preservar el capital y evitar la exposición en un entorno de alta probabilidad de falsas rupturas.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOGEUSDT",
       "score": 75
     }
   ]
