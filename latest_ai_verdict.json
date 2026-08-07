@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-07 11:36:19",
+  "timestamp": "2026-08-07 11:38:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de activos con scores técnicos de 75, ninguno cumple con la profundidad de mercado (Bids > 55%) ni con la estabilidad histórica necesaria para garantizar la Regla #1 de no perder dinero. Se prioriza la preservación del capital en un entorno de mercado altamente especulativo y volátil.",
+  "confidence": 95,
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de que APTUSDT tiene un score técnico alto, no cumple con los requisitos de profundidad de libro de órdenes ni con la convicción necesaria para mitigar el riesgo sistémico actual. Se prioriza la preservación del capital sobre la especulación en un mercado con alta fragilidad de derivados.",
   "top_candidates": [
+    {
+      "symbol": "APTUSDT",
+      "score": 85
+    },
     {
       "symbol": "TRXUSDT",
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "APTUSDT",
+      "symbol": "LAUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "LAUSDT",
+      "symbol": "SPYBUSDT",
       "score": 75
     }
   ]
