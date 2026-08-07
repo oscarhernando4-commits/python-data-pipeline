@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-07 21:14:15",
-  "selected_symbol": "ASTERUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "El comité ha determinado que ASTERUSDT es el único candidato que supera el umbral de riesgo A+ (Score 85) y se alinea con la rotación de capital hacia el sector de IA. Se prioriza la entrada en este activo debido a su fortaleza técnica y volumen, manteniendo una gestión de riesgo estricta mediante un Trailing Stop para evitar las trampas de valor observadas en otras altcoins.",
+  "timestamp": "2026-08-07 21:16:17",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 75, ninguno cuenta con la confirmación necesaria en el libro de órdenes ni con un entorno macroeconómico que garantice una alta probabilidad de éxito, por lo que la estrategia más prudente es mantener la liquidez en espera de una configuración de mercado más clara.",
   "top_candidates": [
     {
-      "symbol": "ASTERUSDT",
-      "score": 85
+      "symbol": "PAXGUSDT",
+      "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ICPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ALGOUSDT",
+      "symbol": "ATOMUSDT",
       "score": 75
     }
   ]
