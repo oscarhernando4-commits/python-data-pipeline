@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 10:36:24",
+  "timestamp": "2026-08-07 10:38:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%). El mercado se encuentra en un estado de compresión de volatilidad con un sesgo de miedo, lo que aumenta el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la especulación en activos sin soporte institucional claro.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el comité. La falta de dominancia clara en el libro de órdenes y la inestabilidad macroeconómica dictan una postura de espera para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
       "score": 75
     },
     {
-      "symbol": "BONKUSDT",
+      "symbol": "MMTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZBTUSDT",
       "score": 70
     },
     {
-      "symbol": "PUMPUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 65
-    },
-    {
       "symbol": "BABYUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "NEARUSDT",
       "score": 65
     }
   ]
