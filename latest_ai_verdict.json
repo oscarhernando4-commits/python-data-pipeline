@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 19:42:15",
+  "timestamp": "2026-08-07 19:44:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con los criterios de alta convicción exigidos por el comité. La falta de dominancia clara en el libro de órdenes y la persistencia del sentimiento de miedo en el mercado macro sugieren que la preservación del capital es la estrategia óptima en este momento.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo en un entorno de mercado con sentimiento de miedo. Se prioriza la preservación del capital sobre la especulación en activos que no presentan una ventaja estadística clara.",
   "top_candidates": [
     {
       "symbol": "JTOUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
       "symbol": "DOGEUSDT",
       "score": 75
     },
     {
       "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZECUSDT",
       "score": 75
     }
   ]
