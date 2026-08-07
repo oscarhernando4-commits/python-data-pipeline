@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-07 12:06:15",
+  "timestamp": "2026-08-07 12:08:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de algunos scores técnicos elevados, la falta de soporte real en el libro de órdenes y la inestabilidad macroeconómica actual no garantizan una probabilidad de éxito superior al 70%. Se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "El comité ha determinado que, a pesar de algunos scores técnicos elevados, la falta de confirmación en el libro de órdenes, la inestabilidad macroeconómica y el historial de pérdidas en condiciones similares dictan una postura de preservación de capital (HOLD) hasta que surja una oportunidad con convicción A+.",
   "top_candidates": [
+    {
+      "symbol": "TRXUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ZBTUSDT",
+      "score": 85
+    },
     {
       "symbol": "JSTUSDT",
       "score": 85
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PEPEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "APTUSDT",
+      "symbol": "XRPUSDT",
       "score": 75
     }
   ]
