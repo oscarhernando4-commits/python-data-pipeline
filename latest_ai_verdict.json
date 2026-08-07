@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-07 14:58:26",
+  "timestamp": "2026-08-07 15:00:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los 10 candidatos, ninguno cumple con el umbral de Score técnico A+ (>= 65) ni con la confirmación de soporte institucional en el libro de órdenes. El entorno macroeconómico de capitulación y la alta volatilidad en los activos analizados dictan una postura de preservación de capital, evitando el riesgo de 'cazar suelos' en un mercado con sesgo bajista.",
+  "reasoning": "El mercado se encuentra en una fase de desapalancamiento y alta incertidumbre. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 requerido por el Comité, y el riesgo de 'falling knife' es inaceptable bajo las reglas de gestión de riesgo vigentes.",
   "top_candidates": [
     {
       "symbol": "SPYBUSDT",
       "score": 60
     },
     {
-      "symbol": "NEXOUSDT",
-      "score": 55
-    },
-    {
       "symbol": "ERAUSDT",
       "score": 50
     },
     {
-      "symbol": "BANKUSDT",
-      "score": 50
+      "symbol": "TRXUSDT",
+      "score": 45
     },
     {
-      "symbol": "KITEUSDT",
-      "score": 50
+      "symbol": "NEXOUSDT",
+      "score": 45
+    },
+    {
+      "symbol": "VETUSDT",
+      "score": 45
     }
   ]
 }
