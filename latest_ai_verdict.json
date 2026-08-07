@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-07 02:24:16",
+  "timestamp": "2026-08-07 02:26:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica extrema. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) y la falta de soporte real en el libro de órdenes, sumada a la inestabilidad de BTC, hace que cualquier operación sea una trampa de valor. Se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado presenta una fragilidad sistémica con una mayoría de activos en debilidad extrema. Ningún candidato cumple con el umbral de Score 65 ni con la profundidad de liquidez necesaria para una ejecución de alta convicción, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
-    {
-      "symbol": "ENAUSDT",
-      "score": 70
-    },
     {
       "symbol": "CRVUSDT",
       "score": 70
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "ZROUSDT",
+      "symbol": "COOKIEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "PYTHUSDT",
       "score": 60
     }
   ]
