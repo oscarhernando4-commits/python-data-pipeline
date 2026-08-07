@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 17:08:21",
+  "timestamp": "2026-08-07 17:10:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica y falta de convicción institucional. Ninguno de los activos analizados alcanza el umbral de seguridad A+ (Score >= 65) requerido por el comité, y el historial de trades recientes con scores bajos ha resultado mayoritariamente en pérdidas. Por lo tanto, se mantiene la posición en efectivo para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "Tras la deliberación del comité, se ha determinado que no existen activos que cumplan con los criterios de alta convicción (Score >= 65). La inestabilidad macroeconómica y la falta de soporte institucional en los libros de órdenes sugieren que cualquier entrada actual conlleva un riesgo inaceptable de 'falling knife'. Se prioriza la preservación del capital hasta que surja una señal clara de acumulación institucional.",
   "top_candidates": [
     {
       "symbol": "SOXLBUSDT",
       "score": 60
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "HEIUSDT",
+      "symbol": "BICOUSDT",
       "score": 50
     }
   ]
