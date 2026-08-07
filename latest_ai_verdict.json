@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 15:36:22",
+  "timestamp": "2026-08-07 15:38:29",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 y confirmación de soporte en libro de órdenes). La volatilidad actual y la falta de datos de liquidez verificables obligan a mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar una operación de alta probabilidad, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "LTCUSDT",
-      "score": 75
+      "symbol": "VETUSDT",
+      "score": 85
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "AEROUSDT",
+      "symbol": "ATOMUSDT",
       "score": 75
     },
     {
-      "symbol": "VETUSDT",
+      "symbol": "DASHUSDT",
       "score": 75
     }
   ]
