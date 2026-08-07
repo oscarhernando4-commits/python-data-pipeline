@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 15:48:19",
+  "timestamp": "2026-08-07 15:50:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una debilidad estructural en las altcoins. Ningún activo cumple con el umbral de Score Técnico >= 65 ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un periodo de 'espera forzada' con baja convicción institucional. Ningún activo cumple con los criterios estrictos de calidad A+ (Score >= 65) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
-      "symbol": "TAOUSDT",
+      "symbol": "LTCUSDT",
       "score": 60
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "TAOUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "VETUSDT",
+      "symbol": "AEROUSDT",
       "score": 60
     },
     {
-      "symbol": "DASHUSDT",
+      "symbol": "VETUSDT",
       "score": 60
     }
   ]
