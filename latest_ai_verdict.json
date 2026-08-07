@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-07 20:00:22",
+  "timestamp": "2026-08-07 20:02:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido unánimemente mantener la posición en efectivo (HOLD) debido a que ninguno de los candidatos cumple con el umbral de seguridad del 55% en el libro de órdenes ni con la convicción A+ exigida por el Chief Risk Officer, evitando así la exposición a la alta volatilidad y el riesgo de 'falling knives' observado en el historial reciente.",
+  "reasoning": "El mercado presenta una configuración de alta incertidumbre con una falta de profundidad en el libro de órdenes y una alta tasa de fallos en los trades recientes. Ningún activo cumple con la exigencia de convicción A+ (Score >= 65 con confirmación de volumen y soporte de ballenas), por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la liquidez en USDT.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
       "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ZECUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
       "score": 75
     },
     {
