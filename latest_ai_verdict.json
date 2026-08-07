@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-07 11:32:14",
+  "timestamp": "2026-08-07 11:34:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura de apalancamiento sintético peligrosa. Ningún activo cumple con los criterios de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la estrategia de preservación de capital dicta una posición de espera (HOLD).",
+  "reasoning": "El mercado presenta una divergencia estructural y falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad (Bids > 55% y confirmación de tendencia) exigido por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades de alta probabilidad de pérdida.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AVAXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
@@ -23,7 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
+      "symbol": "PEPEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AEROUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LAUSDT",
       "score": 75
     }
   ]

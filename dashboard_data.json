@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 11:32:15",
+  "updated_at": "2026-08-07 11:34:20",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura de apalancamiento sintético peligrosa. Ningún activo cumple con los criterios de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la estrategia de preservación de capital dicta una posición de espera (HOLD)."
+    "reasoning": "El mercado presenta una divergencia estructural y falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad (Bids > 55% y confirmación de tendencia) exigido por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades de alta probabilidad de pérdida."
   }
 }
