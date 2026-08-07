@@ -1,12 +1,12 @@
 {
-  "JTOUSDT": [
+  "HEMIUSDT": [
     {
-      "timestamp": "2026-08-07 13:40:09",
-      "price": 0.4934,
+      "timestamp": "2026-08-07 13:42:08",
+      "price": 0.00525,
       "score": 15,
-      "rsi": 47.36,
+      "rsi": 41.3,
       "macd": "Neutral",
-      "volume_surge": 0.3,
+      "volume_surge": 0.67,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +14,38 @@
   ],
   "HYPERUSDT": [
     {
-      "timestamp": "2026-08-07 13:40:09",
+      "timestamp": "2026-08-07 13:42:08",
       "price": 0.0629,
       "score": 50,
       "rsi": 58.42,
       "macd": "Neutral",
       "volume_surge": 1.06,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-07 13:42:08",
+      "price": 0.4935,
+      "score": 15,
+      "rsi": 47.63,
+      "macd": "Neutral",
+      "volume_surge": 0.32,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "VICUSDT": [
+    {
+      "timestamp": "2026-08-07 13:42:08",
+      "price": 0.0288,
+      "score": 30,
+      "rsi": 43.37,
+      "macd": "Neutral",
+      "volume_surge": 0.48,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
