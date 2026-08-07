@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 09:50:20",
+  "timestamp": "2026-08-07 09:52:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de muros de compra institucionales sólidos obligan a mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de mercado neutral y temeroso.",
+  "reasoning": "Ninguno de los candidatos analizados cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de alta incertidumbre y baja profundidad, por lo que la estrategia óptima es mantener la liquidez en espera de una configuración de alta probabilidad.",
   "top_candidates": [
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "POLUSDT",
       "score": 75
     },
     {
-      "symbol": "KMNOUSDT",
+      "symbol": "BFUSDUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 70
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "HEIUSDT",
       "score": 65
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "BNBUSDT",
       "score": 65
     }
   ]
