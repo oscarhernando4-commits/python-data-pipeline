@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 13:10:21",
+  "timestamp": "2026-08-07 13:12:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia estructural y falta de soporte institucional en el libro de órdenes. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de ballenas), por lo que se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado actual se encuentra en una fase de alta selectividad y baja profundidad. Ninguno de los candidatos, a pesar de sus scores técnicos, logra superar el filtro de riesgo del comité debido a la falta de muros de soporte claros en el orderbook y la inestabilidad macroeconómica, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "XRPUSDT",
@@ -15,16 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "AEROUSDT",
+      "symbol": "JSTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "NEXOUSDT",
       "score": 75
     },
     {
       "symbol": "BFUSDUSDT",
       "score": 75
-    },
-    {
-      "symbol": "SNXXBUSDT",
-      "score": 65
     }
   ]
 }
