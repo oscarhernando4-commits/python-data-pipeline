@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-07 09:12:28",
+  "timestamp": "2026-08-07 09:14:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 65% y confirmación de soporte institucional). La alta volatilidad y el sentimiento de miedo sugieren que el riesgo de 'falling knife' es elevado, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y purga de activos de baja liquidez. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ del comité, especialmente en lo referente a la profundidad del libro de órdenes y la confirmación de tendencia. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado bajista para las altcoins.",
   "top_candidates": [
     {
       "symbol": "ETHUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "LINKUSDT",
       "score": 85
     },
     {
@@ -19,11 +23,7 @@
       "score": 85
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     }
   ]
