@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-07 21:38:19",
+  "timestamp": "2026-08-07 21:40:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una alta volatilidad con baja convicción institucional. Ninguno de los candidatos analizados supera el umbral de riesgo exigido por el comité, por lo que se decide mantener la liquidez en espera de una estructura de mercado más clara.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una tendencia NEUTRAL predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo de 'falling knives' observado en el historial de trades recientes. Se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "AVAXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XAUTUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "FETUSDT",
       "score": 75
     }
   ]
