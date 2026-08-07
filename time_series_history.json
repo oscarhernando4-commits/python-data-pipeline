@@ -1,29 +1,29 @@
 {
-  "TIAUSDT": [
+  "ZKPUSDT": [
     {
-      "timestamp": "2026-08-07 21:56:39",
-      "price": 0.3281,
-      "score": 35,
-      "rsi": 51.2,
+      "timestamp": "2026-08-07 21:58:14",
+      "price": 0.0447,
+      "score": 30,
+      "rsi": 47.66,
       "macd": "Neutral",
-      "volume_surge": 0.11,
+      "volume_surge": 0.2,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PYTHUSDT": [
+    {
+      "timestamp": "2026-08-07 21:58:14",
+      "price": 0.03807,
+      "score": 0,
+      "rsi": 37.56,
+      "macd": "Neutral",
+      "volume_surge": 0.69,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-},
-  "VANRYUSDT": [
-    {
-      "timestamp": "2026-08-07 21:56:39",
-      "price": 0.003375,
-      "score": 35,
-      "rsi": 57.57,
-      "macd": "Neutral",
-      "volume_surge": 0.35,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ]
+}]
 }
