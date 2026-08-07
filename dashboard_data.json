@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 12:36:22",
+  "updated_at": "2026-08-07 12:38:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de distribución institucional encubierta con baja convicción. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la estrategia óptima es preservar el capital en efectivo hasta que se disipe el riesgo de un 'flash crash'."
+    "reasoning": "El comité ha decidido mantener la liquidez en USDT. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65, Confianza >= 70% y soporte de libro de órdenes verificado). La alta especulación en futuros y la falta de profundidad en el libro de órdenes para los candidatos sugeridos representan un riesgo inaceptable para el capital institucional."
   }
 }

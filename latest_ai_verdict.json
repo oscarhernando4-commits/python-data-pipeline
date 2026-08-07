@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-07 12:36:19",
+  "timestamp": "2026-08-07 12:38:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional encubierta con baja convicción. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la estrategia óptima es preservar el capital en efectivo hasta que se disipe el riesgo de un 'flash crash'.",
+  "confidence": 95,
+  "reasoning": "El comité ha decidido mantener la liquidez en USDT. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65, Confianza >= 70% y soporte de libro de órdenes verificado). La alta especulación en futuros y la falta de profundidad en el libro de órdenes para los candidatos sugeridos representan un riesgo inaceptable para el capital institucional.",
   "top_candidates": [
-    {
-      "symbol": "ZECUSDT",
-      "score": 90
-    },
-    {
-      "symbol": "TRXUSDT",
-      "score": 85
-    },
     {
       "symbol": "SUNUSDT",
       "score": 85
@@ -23,7 +15,15 @@
       "score": 85
     },
     {
+      "symbol": "ZECUSDT",
+      "score": 75
+    },
+    {
       "symbol": "MUBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "JSTUSDT",
       "score": 75
     }
   ]
