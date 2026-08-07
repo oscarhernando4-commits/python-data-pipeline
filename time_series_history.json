@@ -1,12 +1,25 @@
 {
-  "VICUSDT": [
+  "SEIUSDT": [
     {
-      "timestamp": "2026-08-07 19:52:09",
-      "price": 0.0327,
-      "score": 35,
-      "rsi": 71.94,
+      "timestamp": "2026-08-07 19:54:08",
+      "price": 0.04072,
+      "score": 45,
+      "rsi": 40.23,
       "macd": "Neutral",
-      "volume_surge": 2.45,
+      "volume_surge": 0.24,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-07 19:54:08",
+      "price": 0.4947,
+      "score": 75,
+      "rsi": 55.66,
+      "macd": "Neutral",
+      "volume_surge": 0.85,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +27,77 @@
   ],
   "AMDBUSDT": [
     {
-      "timestamp": "2026-08-07 19:52:09",
-      "price": 479.74,
+      "timestamp": "2026-08-07 19:54:08",
+      "price": 481.33,
       "score": 55,
-      "rsi": 42.48,
+      "rsi": 46.49,
       "macd": "Neutral",
-      "volume_surge": 2.63,
+      "volume_surge": 2.74,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "HEMIUSDT": [
+    {
+      "timestamp": "2026-08-07 19:54:08",
+      "price": 0.00524,
+      "score": 45,
+      "rsi": 48.55,
+      "macd": "Neutral",
+      "volume_surge": 0.29,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "MIRAUSDT": [
+    {
+      "timestamp": "2026-08-07 19:54:08",
+      "price": 0.0423,
+      "score": 15,
+      "rsi": 45.15,
+      "macd": "Neutral",
+      "volume_surge": 0.51,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LUNCUSDT": [
+    {
+      "timestamp": "2026-08-07 19:54:08",
+      "price": 4.908e-05,
+      "score": 65,
+      "rsi": 54.59,
+      "macd": "Neutral",
+      "volume_surge": 0.48,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "HYPERUSDT": [
+    {
+      "timestamp": "2026-08-07 19:54:08",
+      "price": 0.063,
+      "score": 15,
+      "rsi": 49.54,
+      "macd": "Neutral",
+      "volume_surge": 0.19,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-07 19:54:08",
+      "price": 0.2856,
+      "score": 15,
+      "rsi": 43.23,
+      "macd": "Neutral",
+      "volume_surge": 0.05,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

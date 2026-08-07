@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-07 19:52:20",
+  "timestamp": "2026-08-07 19:54:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con datos de liquidez incompletos y un sentimiento de miedo predominante. Ningún activo cumple con el umbral de convicción A+ necesario para garantizar la preservación del capital, por lo que la estrategia óptima es mantener la posición en efectivo (USDT) y esperar una mejor configuración técnica.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una falta de soporte institucional claro en el libro de órdenes. Dado que el historial de trades recientes muestra una alta tasa de pérdidas en condiciones de mercado neutral, el comité ha decidido priorizar la preservación del capital y mantenerse en liquidez (HOLD) hasta que se cumplan los criterios de convicción A+.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZECUSDT",
       "score": 75
     }
   ]
