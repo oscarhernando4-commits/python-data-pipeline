@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-07 18:02:18",
+  "timestamp": "2026-08-07 18:04:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual se encuentra en un estado de capitulación técnica y falta de convicción institucional. Ninguno de los candidatos analizados alcanza el umbral de seguridad (Score >= 65) exigido por el comité para mitigar el riesgo de 'cuchillos cayendo'. Se mantiene la posición en efectivo para proteger el capital.",
+  "reasoning": "El mercado actual presenta una debilidad estructural generalizada y una falta de convicción técnica en los activos analizados. Ningún candidato cumple con el umbral de Score Técnico >= 65 ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad bajista.",
   "top_candidates": [
     {
       "symbol": "AAOIBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SOXLBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ARBUSDT",
       "score": 60
     },
     {
@@ -17,14 +25,6 @@
     {
       "symbol": "VETUSDT",
       "score": 60
-    },
-    {
-      "symbol": "ZBTUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "XLMUSDT",
-      "score": 50
     }
   ]
 }
