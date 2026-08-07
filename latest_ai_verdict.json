@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 13:50:24",
+  "timestamp": "2026-08-07 13:52:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación selectiva con alta incertidumbre regulatoria. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes verificado), por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "El mercado actual se encuentra en una fase de purga selectiva con alta volatilidad y falta de soporte institucional claro en el libro de órdenes. Ningún candidato cumple con los requisitos estrictos de riesgo y convicción del comité, por lo que se prioriza la protección del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "VETUSDT",
+      "symbol": "ETCUSDT",
       "score": 75
     },
     {
@@ -19,12 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "ERAUSDT",
-      "score": 65
+      "symbol": "SPYBUSDT",
+      "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
-      "score": 65
+      "symbol": "VETUSDT",
+      "score": 75
     }
   ]
 }
