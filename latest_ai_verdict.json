@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 09:04:23",
+  "timestamp": "2026-08-07 09:06:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia estructural y un entorno de miedo que no cumple con los requisitos de alta convicción (Score >= 65 y Bids >= 55%) exigidos por el comité para una ejecución segura. Se mantiene la liquidez en USDT para evitar la exposición a activos que actúan como lastre en un entorno de rotación defensiva.",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%) en el contexto actual de mercado, por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
   "top_candidates": [
     {
-      "symbol": "LINKUSDT",
-      "score": 75
+      "symbol": "QNTUSDT",
+      "score": 95
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     }
   ]
