@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 23:36:19",
+  "timestamp": "2026-08-07 23:38:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con alta volatilidad y falta de convicción institucional. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la preservación de capital es la única estrategia viable.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta correlación negativa. Ningún activo cumple con los criterios de alta convicción (Score >= 65) exigidos por el comité, por lo que se prioriza la protección del capital sobre la operativa especulativa.",
   "top_candidates": [
     {
-      "symbol": "DOTUSDT",
-      "score": 60
+      "symbol": "VETUSDT",
+      "score": 70
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "DOTUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "VETUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     },
     {
-      "symbol": "LUNCUSDT",
+      "symbol": "LAUSDT",
       "score": 60
     }
   ]
