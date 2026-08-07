@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-07 09:58:18",
+  "timestamp": "2026-08-07 10:00:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%) necesario para garantizar la preservación del capital en un entorno de mercado fragmentado y con alta incertidumbre.",
+  "reasoning": "El mercado presenta una divergencia técnica severa y falta de profundidad en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de Bids > 55%), por lo que la decisión institucional es mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
-      "symbol": "NEARUSDT",
-      "score": 80
-    },
-    {
-      "symbol": "POLUSDT",
+      "symbol": "AVAXUSDT",
       "score": 75
     },
     {
-      "symbol": "ZBTUSDT",
-      "score": 70
+      "symbol": "SUIUSDT",
+      "score": 75
     },
     {
-      "symbol": "LTCUSDT",
-      "score": 70
+      "symbol": "PEPEUSDT",
+      "score": 75
     },
     {
-      "symbol": "ETHUSDT",
-      "score": 70
+      "symbol": "PUMPUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "score": 65
     }
   ]
 }
