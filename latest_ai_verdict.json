@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 03:24:18",
+  "timestamp": "2026-08-07 03:26:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad estructural y alta correlación bajista. Ninguno de los candidatos analizados alcanza el score técnico mínimo de 65 ni presenta una ventaja estadística clara en el libro de órdenes, por lo que la decisión institucional es mantener la liquidez en espera de mejores condiciones.",
+  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de liquidez necesaria en el libro de órdenes. El entorno macro es de alta fragilidad y el riesgo de 'trampa de valor' es inaceptable, por lo que se prioriza la preservación de capital sobre la ejecución de trades mediocres.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
@@ -15,11 +15,11 @@
       "score": 60
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "HFTUSDT",
       "score": 50
     },
     {
-      "symbol": "HFTUSDT",
+      "symbol": "SHIBUSDT",
       "score": 50
     },
     {
