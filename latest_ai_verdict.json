@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-07 02:34:16",
+  "timestamp": "2026-08-07 02:36:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte institucional en el libro de órdenes, lo que obliga a la preservación de capital bajo la política de riesgo del comité.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y capitulación lenta. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ (Score >= 65) necesario para operar bajo las estrictas reglas de gestión de riesgo del comité. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez.",
   "top_candidates": [
     {
       "symbol": "QNTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ALGOUSDT",
       "score": 60
     },
     {
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "CRVUSDT",
+      "symbol": "LUNCUSDT",
       "score": 60
     },
     {
-      "symbol": "LUNCUSDT",
+      "symbol": "GNOUSDT",
       "score": 60
+    },
+    {
+      "symbol": "SUIUSDT",
+      "score": 50
     }
   ]
 }
