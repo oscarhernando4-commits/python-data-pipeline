@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-07 17:20:19",
+  "timestamp": "2026-08-07 17:22:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno alcanza el umbral de calidad A+ (Score >= 65) requerido por el comité. La falta de soporte en el libro de órdenes y la inestabilidad macroeconómica dictan que la estrategia más rentable es mantener la liquidez total y evitar el riesgo innecesario.",
+  "confidence": 95,
+  "reasoning": "Tras evaluar los 10 candidatos, ninguno alcanza el umbral de seguridad requerido (Score >= 65). El mercado muestra una debilidad sistémica y falta de soporte institucional, lo que convierte cualquier operación en un riesgo innecesario. Se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
+      "symbol": "HEIUSDT",
+      "score": 60
+    },
+    {
       "symbol": "SOXLBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NEXOUSDT",
       "score": 60
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "ACEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "QNTUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "C98USDT",
       "score": 50
     }
   ]
