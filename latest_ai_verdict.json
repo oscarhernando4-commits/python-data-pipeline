@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-07 18:24:19",
+  "timestamp": "2026-08-07 18:26:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad técnica generalizada. Ninguno de los candidatos analizados alcanza el umbral de seguridad A+ (Score >= 65) requerido por el Comité. La estrategia institucional es proteger el capital y evitar la exposición en un entorno de alta incertidumbre y baja fuerza relativa.",
+  "reasoning": "El mercado actual se encuentra en una fase de 'liquidez de salida' con una alta correlación negativa y falta de activos con fuerza institucional. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT) para evitar pérdidas innecesarias en un entorno de alta volatilidad y baja convicción.",
   "top_candidates": [
     {
-      "symbol": "HEIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "FETUSDT",
-      "score": 60
-    },
-    {
       "symbol": "AAOIBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NEXOUSDT",
       "score": 60
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "ALLOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "MMTUSDT",
       "score": 50
     }
   ]
