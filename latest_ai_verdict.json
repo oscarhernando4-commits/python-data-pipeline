@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 16:14:22",
+  "timestamp": "2026-08-07 16:16:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de alta incertidumbre con una falta de profundidad en el libro de órdenes y una alta tasa de fallos en los trades recientes. Ningún activo cumple con los criterios estrictos de convicción A+ exigidos por el comité, por lo que se decide mantener la liquidez en espera de una mejor estructura de mercado.",
+  "reasoning": "El mercado se encuentra en un estado de 'Range-Bound' con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y tendencia clara) necesario para garantizar la preservación del capital, por lo que se mantiene la liquidez en USDT.",
   "top_candidates": [
-    {
-      "symbol": "ICPUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SUNUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "LINKUSDT",
-      "score": 75
-    },
     {
       "symbol": "BNBUSDT",
       "score": 75
     },
     {
       "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LINKUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TAOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XPLUSDT",
       "score": 75
     }
   ]
