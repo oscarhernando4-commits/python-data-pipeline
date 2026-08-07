@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-07 17:10:23",
+  "timestamp": "2026-08-07 17:12:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación del comité, se ha determinado que no existen activos que cumplan con los criterios de alta convicción (Score >= 65). La inestabilidad macroeconómica y la falta de soporte institucional en los libros de órdenes sugieren que cualquier entrada actual conlleva un riesgo inaceptable de 'falling knife'. Se prioriza la preservación del capital hasta que surja una señal clara de acumulación institucional.",
+  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65). El entorno macroeconómico de miedo y la falta de soporte en el libro de órdenes dictan una postura defensiva total para evitar pérdidas en un mercado de alta fragilidad.",
   "top_candidates": [
     {
       "symbol": "SOXLBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "QNTUSDT",
       "score": 60
     },
     {
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "ZROUSDT",
-      "score": 60
+      "symbol": "VETUSDT",
+      "score": 55
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "BICOUSDT",
+      "symbol": "ZBTUSDT",
       "score": 50
     }
   ]
