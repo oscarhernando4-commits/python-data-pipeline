@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-07 05:32:20",
+  "timestamp": "2026-08-07 05:34:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta aversión al riesgo. Ninguno de los candidatos analizados alcanza el Score técnico de 65 ni muestra una profundidad de mercado (Orderbook) que justifique una entrada. La estrategia institucional es proteger el capital y esperar a que la volatilidad se estabilice tras la incertidumbre legislativa de septiembre.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada sin indicios de acumulación institucional. Dado que ningún candidato alcanza el umbral de Score 65 requerido por el Comité, se ha decidido no ejecutar ninguna operación para evitar pérdidas innecesarias, manteniendo la liquidez total en espera de una configuración de mercado más favorable.",
   "top_candidates": [
     {
-      "symbol": "SNXXBUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
+      "symbol": "SNXXBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "score": 60
+    },
+    {
       "symbol": "SOXLBUSDT",
       "score": 60
-    },
-    {
-      "symbol": "JTOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "HEIUSDT",
-      "score": 50
     }
   ]
 }
