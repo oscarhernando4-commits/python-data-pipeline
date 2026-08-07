@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 18:48:16",
+  "timestamp": "2026-08-07 18:50:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica sin activos que alcancen el umbral de calidad A+ requerido por el comité. La falta de muros de soporte en el libro de órdenes y la debilidad generalizada de los scores técnicos obligan a mantener una posición de espera (HOLD) para evitar pérdidas innecesarias.",
+  "reasoning": "Tras analizar los 10 candidatos, ninguno alcanza el umbral de Score 65 requerido por el protocolo de riesgo. La falta de dominancia compradora en el libro de órdenes y la debilidad técnica generalizada dictan una postura de preservación de capital (HOLD) hasta que surja una oportunidad con convicción A+.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
@@ -19,12 +19,12 @@
       "score": 50
     },
     {
-      "symbol": "COOKIEUSDT",
+      "symbol": "NBISBUSDT",
       "score": 50
     },
     {
-      "symbol": "NEXOUSDT",
-      "score": 45
+      "symbol": "COOKIEUSDT",
+      "score": 50
     }
   ]
 }
