@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-07 02:32:21",
+  "timestamp": "2026-08-07 02:34:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional y baja liquidez. Ningún activo cumple con los criterios de alta convicción (Score >= 65) exigidos por el comité para mitigar el riesgo de pérdida, por lo que la estrategia óptima es mantenerse al margen (HOLD) hasta que las condiciones macro mejoren.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte institucional en el libro de órdenes, lo que obliga a la preservación de capital bajo la política de riesgo del comité.",
   "top_candidates": [
     {
       "symbol": "QNTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ETHFIUSDT",
       "score": 60
     },
     {
@@ -15,16 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "COOKIEUSDT",
-      "score": 60
-    },
-    {
       "symbol": "LUNCUSDT",
       "score": 60
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 50
     }
   ]
 }
