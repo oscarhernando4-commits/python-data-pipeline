@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 11:56:18",
+  "timestamp": "2026-08-07 11:58:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de alta incertidumbre con una estructura de derivados peligrosa. Ninguno de los candidatos seleccionados ofrece una dominancia de bids superior al 55% ni una confirmación de tendencia clara, lo que incumple las reglas de oro del comité para una ejecución A+. Se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado actual se encuentra en una fase de alta manipulación especulativa con un ratio de futuros/spot desproporcionado. Ninguno de los candidatos cumple con el requisito de soporte de ballenas (Bids > 55%) ni con una estructura técnica que garantice una probabilidad de éxito superior al 70%. Se prioriza la preservación del capital sobre la ejecución de trades de baja calidad.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -15,15 +15,15 @@
       "score": 85
     },
     {
+      "symbol": "JSTUSDT",
+      "score": 85
+    },
+    {
       "symbol": "DASHUSDT",
       "score": 85
     },
     {
       "symbol": "ZECUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PEPEUSDT",
       "score": 75
     }
   ]
