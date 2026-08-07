@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-07 04:48:16",
+  "timestamp": "2026-08-07 04:50:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación y alta incertidumbre. Ninguno de los activos analizados alcanza el score técnico mínimo de 65 ni presenta una estructura de libro de órdenes que garantice una entrada con riesgo controlado. Se prioriza la preservación del capital sobre la especulación en activos de baja fuerza relativa.",
+  "reasoning": "El mercado actual carece de la convicción técnica y la profundidad de liquidez necesarias para cumplir con los estándares de riesgo del comité. Todos los candidatos presentan scores inferiores a 65 y una estructura de mercado inestable, por lo que la estrategia óptima es la preservación total del capital en espera de mejores condiciones.",
   "top_candidates": [
     {
-      "symbol": "NEXOUSDT",
+      "symbol": "DEXEUSDT",
       "score": 60
     },
     {
@@ -15,11 +15,11 @@
       "score": 60
     },
     {
-      "symbol": "HEIUSDT",
+      "symbol": "BICOUSDT",
       "score": 50
     },
     {
-      "symbol": "BICOUSDT",
+      "symbol": "HEIUSDT",
       "score": 50
     },
     {
