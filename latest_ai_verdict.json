@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-07 06:10:22",
+  "timestamp": "2026-08-07 06:12:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de compresión sin una dirección clara. A pesar de que algunos activos presentan scores técnicos de 75, la falta de dominancia en el libro de órdenes y el entorno macro de miedo extremo aumentan el riesgo de 'trampas de liquidez'. Se prioriza la preservación del capital sobre la ejecución de trades de baja convicción.",
+  "reasoning": "El mercado se encuentra en un régimen de alta incertidumbre con una rotación institucional inestable. Ningún candidato cumple con el umbral de convicción A+ (Bids > 55% y confirmación de tendencia), por lo que la preservación del capital es la prioridad absoluta.",
   "top_candidates": [
-    {
-      "symbol": "ADAUSDT",
-      "score": 75
-    },
     {
       "symbol": "BCHUSDT",
       "score": 75
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "NBISBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "JTOUSDT",
       "score": 75
     }
   ]
