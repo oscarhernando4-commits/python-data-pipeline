@@ -1,12 +1,64 @@
 {
-  "JTOUSDT": [
+  "GNOUSDT": [
     {
-      "timestamp": "2026-08-07 08:12:10",
-      "price": 0.5004,
-      "score": 40,
-      "rsi": 76.49,
+      "timestamp": "2026-08-07 08:14:14",
+      "price": 105.9,
+      "score": 15,
+      "rsi": 46.42,
       "macd": "Neutral",
-      "volume_surge": 1.42,
+      "volume_surge": 0.62,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-07 08:14:14",
+      "price": 0.2878,
+      "score": 45,
+      "rsi": 37.56,
+      "macd": "Neutral",
+      "volume_surge": 1.91,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LUNCUSDT": [
+    {
+      "timestamp": "2026-08-07 08:14:14",
+      "price": 4.865e-05,
+      "score": 45,
+      "rsi": 37.63,
+      "macd": "Neutral",
+      "volume_surge": 2.23,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GLMRUSDT": [
+    {
+      "timestamp": "2026-08-07 08:14:14",
+      "price": 0.008416,
+      "score": 60,
+      "rsi": 58.73,
+      "macd": "Neutral",
+      "volume_surge": 6.55,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "NOMUSDT": [
+    {
+      "timestamp": "2026-08-07 08:14:14",
+      "price": 0.00162,
+      "score": 50,
+      "rsi": 56.48,
+      "macd": "Neutral",
+      "volume_surge": 1.16,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
