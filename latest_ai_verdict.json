@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-07 16:34:22",
+  "timestamp": "2026-08-07 16:36:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual no ofrece activos con un score técnico superior a 65 ni una estructura de soporte de ballenas clara. Ante la alta volatilidad y la prevalencia de trampas de liquidez, el comité ha decidido mantener el 100% de la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad estructural. Ninguno de los activos analizados cumple con los criterios de convicción A+ exigidos por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de baja profundidad y alta volatilidad.",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
+      "symbol": "LTCUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ZECUSDT",
       "score": 60
     },
     {
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "SUNUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "VETUSDT",
       "score": 60
     },
     {
