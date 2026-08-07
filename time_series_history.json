@@ -1,10 +1,23 @@
 {
-  "GNOUSDT": [
+  "PYTHUSDT": [
     {
-      "timestamp": "2026-08-07 22:30:13",
-      "price": 106.13,
+      "timestamp": "2026-08-07 22:32:11",
+      "price": 0.03799,
       "score": 15,
-      "rsi": 43.25,
+      "rsi": 36.79,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "AMDBUSDT": [
+    {
+      "timestamp": "2026-08-07 22:32:11",
+      "price": 482.71,
+      "score": 50,
+      "rsi": 50.27,
       "macd": "Neutral",
       "volume_surge": 0.0,
       "wyckoff": "Sin patron",
@@ -12,9 +25,48 @@
       "fear_greed": 50
     }
   ],
+  "TIAUSDT": [
+    {
+      "timestamp": "2026-08-07 22:32:11",
+      "price": 0.326,
+      "score": 15,
+      "rsi": 41.1,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LUNCUSDT": [
+    {
+      "timestamp": "2026-08-07 22:32:11",
+      "price": 4.899e-05,
+      "score": 15,
+      "rsi": 49.78,
+      "macd": "Neutral",
+      "volume_surge": 0.03,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ZROUSDT": [
+    {
+      "timestamp": "2026-08-07 22:32:11",
+      "price": 0.828,
+      "score": 45,
+      "rsi": 57.87,
+      "macd": "Neutral",
+      "volume_surge": 0.22,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
   "MIRAUSDT": [
     {
-      "timestamp": "2026-08-07 22:30:13",
+      "timestamp": "2026-08-07 22:32:11",
       "price": 0.0426,
       "score": 45,
       "rsi": 50.8,
@@ -24,5 +76,18 @@
       "news_headline": null,
       "fear_greed": 50
     }
+  ],
+  "BROCCOLI714USDT": [
+    {
+      "timestamp": "2026-08-07 22:32:11",
+      "price": 0.01568,
+      "score": 45,
+      "rsi": 57.53,
+      "macd": "Neutral",
+      "volume_surge": 0.07,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
   ]
-}}
+}

@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-07 22:30:22",
+  "timestamp": "2026-08-07 22:32:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 y confirmación de volumen institucional). El mercado se encuentra en una fase de distribución acelerada y alta incertidumbre, por lo que la estrategia de protección de capital dicta mantener la posición en efectivo (HOLD) hasta que las condiciones de mercado mejoren.",
+  "reasoning": "Ninguno de los candidatos cumple con los criterios estrictos de riesgo y convicción establecidos por el comité. La falta de soporte en el libro de órdenes y la debilidad técnica generalizada obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "TSTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "FETUSDT",
+      "score": 75
+    },
     {
       "symbol": "QNTUSDT",
       "score": 75
@@ -17,14 +25,6 @@
     {
       "symbol": "SPYBUSDT",
       "score": 75
-    },
-    {
-      "symbol": "TRXUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "WLFIUSDT",
-      "score": 65
     }
   ]
 }
