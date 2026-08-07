@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-07 16:24:26",
+  "timestamp": "2026-08-07 16:26:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución por agotamiento con baja liquidez. Ninguno de los candidatos analizados alcanza el Score técnico mínimo de 65/100 requerido por el Comité para garantizar la preservación del capital, por lo que se mantiene la posición en efectivo.",
+  "reasoning": "El comité ha determinado que no existen activos que cumplan con los criterios de alta convicción (Score >= 65) y soporte institucional. La fragilidad del mercado y la alta probabilidad de 'falling knives' obligan a una postura de espera para proteger el capital.",
   "top_candidates": [
+    {
+      "symbol": "CAKEUSDT",
+      "score": 70
+    },
     {
       "symbol": "BNBUSDT",
       "score": 60
@@ -15,16 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "SUNUSDT",
-      "score": 60
-    },
-    {
       "symbol": "XPLUSDT",
       "score": 60
     },
     {
-      "symbol": "ADAUSDT",
-      "score": 50
+      "symbol": "SUNUSDT",
+      "score": 60
     }
   ]
 }
