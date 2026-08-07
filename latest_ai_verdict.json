@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 02:14:18",
+  "timestamp": "2026-08-07 02:16:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras deliberar, el comité ha determinado que, a pesar de la existencia de activos con scores técnicos elevados, las condiciones de mercado (Fear & Greed 29) y la falta de una dominancia clara en el libro de órdenes no cumplen con los estándares de seguridad exigidos por el CRO. Se prioriza la protección del capital sobre la ejecución especulativa.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo en un entorno de mercado neutral y con alta volatilidad, por lo que se prioriza la preservación de capital.",
   "top_candidates": [
-    {
-      "symbol": "WLDUSDT",
-      "score": 95
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 85
-    },
     {
       "symbol": "APTUSDT",
       "score": 85
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
-      "symbol": "NEARUSDT",
+      "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TRXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOGEUSDT",
       "score": 75
     }
   ]
