@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 19:44:19",
+  "timestamp": "2026-08-07 19:46:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo en un entorno de mercado con sentimiento de miedo. Se prioriza la preservación del capital sobre la especulación en activos que no presentan una ventaja estadística clara.",
+  "reasoning": "El mercado se encuentra en un estado de consolidación de rango con indicadores técnicos mixtos y falta de soporte en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ exigido por el comité, por lo que la estrategia óptima es preservar el capital evitando el riesgo de 'trampas de valor' en un entorno de miedo.",
   "top_candidates": [
     {
-      "symbol": "JTOUSDT",
-      "score": 85
+      "symbol": "BTCUSDT",
+      "score": 75
     },
     {
-      "symbol": "BTCUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     }
   ]
