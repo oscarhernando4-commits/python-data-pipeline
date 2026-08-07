@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 05:52:19",
+  "updated_at": "2026-08-07 05:54:20",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una debilidad estructural generalizada con una dominancia de Bids estancada en el 50% para todos los candidatos. Ningún activo cumple con el umbral de convicción A+ (Bids >= 55%) necesario para mitigar el riesgo de 'falling knives' en un entorno de miedo (Fear & Greed 29). Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y confirmación de volumen institucional). El mercado se encuentra en una fase de alta incertidumbre y riesgo, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias."
   }
 }
