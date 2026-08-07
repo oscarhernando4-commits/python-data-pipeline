@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-07 05:46:17",
+  "timestamp": "2026-08-07 05:48:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica generalizada. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (65) ni con la profundidad de mercado necesaria para una ejecución segura. La estrategia institucional prioriza la preservación del capital sobre la especulación en entornos de alta volatilidad y baja liquidez.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%) y el historial reciente de trades muestra una alta probabilidad de pérdidas en condiciones de mercado neutral. Se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "BCHUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "MUBUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "SNXXBUSDT",
-      "score": 60
+      "score": 75
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "MUBUSDT",
+      "score": 75
     },
     {
       "symbol": "PAXGUSDT",
-      "score": 60
+      "score": 75
     }
   ]
 }
