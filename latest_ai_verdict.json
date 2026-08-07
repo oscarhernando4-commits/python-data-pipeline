@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-07 08:36:21",
+  "timestamp": "2026-08-07 08:38:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión técnica y pesimismo macroeconómico. Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de tendencia) exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' en un entorno de alta volatilidad.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado se encuentra en una fase de distribución silenciosa y alta incertidumbre, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar el riesgo de 'falling knives'.",
   "top_candidates": [
     {
       "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -19,12 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "ETCUSDT",
       "score": 75
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "AEROUSDT",
       "score": 75
+    },
+    {
+      "symbol": "ZBTUSDT",
+      "score": 70
     }
   ]
 }
