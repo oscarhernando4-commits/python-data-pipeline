@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 15:02:25",
+  "timestamp": "2026-08-07 15:04:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación con una mayoría de activos mostrando scores de salud inferiores a 60. Ningún candidato cumple con el requisito de convicción A+ (Score >= 65), por lo que la estrategia institucional es mantener el 100% de la liquidez en espera de una estructura de mercado más clara y menos volátil.",
+  "reasoning": "El mercado se encuentra en un estado de 'Tierra Quemada' con una correlación bajista sistémica. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
       "score": 60
     },
     {
-      "symbol": "NEXOUSDT",
+      "symbol": "SPYBUSDT",
       "score": 60
     },
     {
@@ -19,12 +19,12 @@
       "score": 50
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "ALLOUSDT",
       "score": 50
     },
     {
-      "symbol": "VETUSDT",
-      "score": 45
+      "symbol": "ASTERUSDT",
+      "score": 50
     }
   ]
 }
