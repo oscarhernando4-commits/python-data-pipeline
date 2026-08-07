@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-07 06:12:27",
+  "timestamp": "2026-08-07 06:14:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un régimen de alta incertidumbre con una rotación institucional inestable. Ningún candidato cumple con el umbral de convicción A+ (Bids > 55% y confirmación de tendencia), por lo que la preservación del capital es la prioridad absoluta.",
+  "reasoning": "El mercado se encuentra en un estado de alta volatilidad y miedo, con una falta crítica de soporte en el libro de órdenes para los candidatos analizados. Dado que no se cumplen los criterios de convicción A+ y el historial reciente de trades en condiciones similares ha resultado en pérdidas, la decisión institucional es mantener la liquidez en efectivo (HOLD) para evitar el riesgo de 'falling knives'.",
   "top_candidates": [
     {
-      "symbol": "BCHUSDT",
+      "symbol": "DOGEUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ETHFIUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "VETUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NBISBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "JTOUSDT",
       "score": 75
     }
   ]
