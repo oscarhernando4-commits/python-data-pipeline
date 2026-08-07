@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-07 20:46:17",
+  "timestamp": "2026-08-07 20:48:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro y volumen confirmado). El mercado se encuentra en una fase de alta incertidumbre y el comité ha decidido priorizar la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "El mercado actual presenta un sesgo defensivo y una falta de soporte institucional claro en el libro de órdenes. Ninguno de los candidatos cumple con la convicción A+ requerida por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar la exposición a la volatilidad bajista.",
   "top_candidates": [
+    {
+      "symbol": "PEPEUSDT",
+      "score": 75
+    },
     {
       "symbol": "HEIUSDT",
       "score": 65
@@ -15,15 +19,11 @@
       "score": 65
     },
     {
-      "symbol": "ONDOUSDT",
+      "symbol": "ADAUSDT",
       "score": 65
     },
     {
       "symbol": "ASTERUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "STGUSDT",
       "score": 65
     }
   ]
