@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-07 06:14:21",
+  "timestamp": "2026-08-07 06:16:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta volatilidad y miedo, con una falta crítica de soporte en el libro de órdenes para los candidatos analizados. Dado que no se cumplen los criterios de convicción A+ y el historial reciente de trades en condiciones similares ha resultado en pérdidas, la decisión institucional es mantener la liquidez en efectivo (HOLD) para evitar el riesgo de 'falling knives'.",
+  "reasoning": "El mercado se encuentra en una fase de consolidación defensiva con alta volatilidad y falta de convicción direccional. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la estrategia óptima es el resguardo de capital hasta que la estructura de mercado se aclare.",
   "top_candidates": [
     {
       "symbol": "DOGEUSDT",
-      "score": 85
+      "score": 75
     },
     {
-      "symbol": "ETHFIUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "TAOUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "VETUSDT",
+      "symbol": "ENAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHFIUSDT",
       "score": 75
     }
   ]
