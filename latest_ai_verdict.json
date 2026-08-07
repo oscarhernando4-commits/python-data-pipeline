@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-07 23:44:21",
+  "timestamp": "2026-08-07 23:46:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de muros de compra institucionales, sumado al historial de pérdidas en condiciones de mercado similares, dictan una postura de preservación de capital (HOLD).",
+  "reasoning": "El mercado se encuentra en un estado de alta fragilidad con una clara tendencia de distribución institucional. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que el comité ha decidido mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
-    {
-      "symbol": "VETUSDT",
-      "score": 85
-    },
     {
       "symbol": "ETHUSDT",
       "score": 75
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "VETUSDT",
       "score": 75
     },
     {
-      "symbol": "LAUSDT",
+      "symbol": "NEXOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LUNCUSDT",
       "score": 75
     }
   ]
