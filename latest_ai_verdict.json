@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-07 14:44:19",
+  "timestamp": "2026-08-07 14:46:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y baja liquidez institucional. Ninguno de los candidatos, a pesar de sus scores técnicos, ofrece la profundidad de libro de órdenes necesaria ni la confirmación de tendencia requerida por el Comité para garantizar una operación de alta probabilidad de éxito. Se mantiene la posición en efectivo para evitar pérdidas por volatilidad minorista.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre y debilidad sistémica. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de protección de capital es la única opción viable según las reglas de oro del comité.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "VETUSDT",
       "score": 75
     },
     {
@@ -19,12 +15,16 @@
       "score": 75
     },
     {
+      "symbol": "VETUSDT",
+      "score": 75
+    },
+    {
       "symbol": "SPYBUSDT",
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 70
+      "symbol": "GRAMUSDT",
+      "score": 65
     }
   ]
 }
