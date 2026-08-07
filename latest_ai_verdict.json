@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 11:44:20",
+  "timestamp": "2026-08-07 11:46:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una desconexión institucional peligrosa donde el volumen de derivados supera al spot 8 a 1. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la estrategia de protección de capital dicta mantenerse en liquidez (HOLD) para evitar las trampas de volatilidad observadas en el historial reciente.",
+  "reasoning": "El mercado se encuentra en una trampa de liquidez con alta volatilidad especulativa y falta de convicción en el mercado spot. Ningún candidato cumple con el requisito de soporte institucional (Bids > 55%) ni con la estabilidad necesaria para una operación A+. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
-      "symbol": "APTUSDT",
+      "symbol": "ZBTUSDT",
       "score": 85
     },
     {
-      "symbol": "TRXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOTUSDT",
-      "score": 75
-    },
-    {
       "symbol": "PEPEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "APTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DASHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SPYBUSDT",
       "score": 75
     }
   ]
