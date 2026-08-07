@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-07 07:36:22",
+  "timestamp": "2026-08-07 07:38:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras deliberar, el comité ha determinado que, a pesar de tener candidatos con scores técnicos de 75, ninguno cumple con el umbral de seguridad en el libro de órdenes ni con la confirmación de volumen institucional necesaria para mitigar el riesgo en un entorno de mercado 'Fear'. Se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado se encuentra en un estado de indecisión con baja liquidez institucional y alta fragilidad. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que se mantiene la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
     {
       "symbol": "MIRAUSDT",
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ASTERUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     },
     {
       "symbol": "ZBTUSDT",
       "score": 70
+    },
+    {
+      "symbol": "SYNUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "BTCUSDT",
+      "score": 65
     }
   ]
 }
