@@ -1,12 +1,26 @@
 {
-  "ACXUSDT": [
+  "LDOUSDT": [
     {
-      "timestamp": "2026-08-07 04:06:08",
-      "price": 0.039,
-      "score": 0,
-      "rsi": 45.54,
+      "timestamp": "2026-08-07 04:08:08",
+      "price": 0.2918,
+      "score": 20,
+      "rsi": 49.96,
       "macd": "Neutral",
-      "volume_surge": 1.01,
+      "volume_surge": 0.41,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ]
+}],
+  "TSTUSDT": [
+    {
+      "timestamp": "2026-08-07 04:08:08",
+      "price": 0.01085,
+      "score": 15,
+      "rsi": 36.21,
+      "macd": "Neutral",
+      "volume_surge": 3.57,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
