@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 22:48:19",
+  "timestamp": "2026-08-07 22:50:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una correlación bajista sistémica. Ninguno de los candidatos analizados alcanza el umbral de calidad A+ (Score >= 65) exigido por el comité para garantizar la preservación del capital. Se prioriza la liquidez en espera de una mejor configuración técnica.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con scores técnicos insuficientes (máximo 60/100) y una falta de soporte institucional en el libro de órdenes. Siguiendo la Regla de Oro #1, al no existir activos con Score A+ (>= 65), el comité ha decidido unánimemente mantener la liquidez en USDT para evitar el riesgo de 'falling knives' y volatilidad adversa.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
@@ -15,11 +15,11 @@
       "score": 60
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "QNTUSDT",
       "score": 60
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "FETUSDT",
       "score": 60
     },
     {
