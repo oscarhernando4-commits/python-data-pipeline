@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-07 13:48:22",
+  "timestamp": "2026-08-07 13:50:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de alta incertidumbre y falta de soporte institucional claro. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ del comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación selectiva con alta incertidumbre regulatoria. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes verificado), por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar el riesgo de 'cuchillos cayendo'.",
   "top_candidates": [
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "PEPEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "VETUSDT",
       "score": 75
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
-      "score": 65
-    },
-    {
       "symbol": "ERAUSDT",
       "score": 65
     },
     {
-      "symbol": "ONDOUSDT",
+      "symbol": "GRAMUSDT",
       "score": 65
     }
   ]
