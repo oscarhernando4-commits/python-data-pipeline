@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 13:24:15",
+  "timestamp": "2026-08-07 13:26:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de hibernación defensiva con falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es la preservación de capital.",
+  "reasoning": "El mercado se encuentra en un estado de 'Neutralidad Hostil' con baja profundidad y alta incertidumbre. Ninguno de los candidatos presenta una configuración técnica y de liquidez que cumpla con los estándares de seguridad del comité, por lo que la preservación del capital es la prioridad absoluta.",
   "top_candidates": [
     {
-      "symbol": "XRPUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 75
     },
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "GIGGLEUSDT",
       "score": 75
     },
     {
@@ -19,12 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "AEROUSDT",
+      "symbol": "VETUSDT",
       "score": 75
     },
     {
-      "symbol": "CAKEUSDT",
-      "score": 70
+      "symbol": "AEROUSDT",
+      "score": 75
     }
   ]
 }
