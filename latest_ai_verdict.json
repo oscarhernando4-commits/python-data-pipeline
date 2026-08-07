@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-07 03:52:18",
+  "timestamp": "2026-08-07 03:54:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragilidad sistémica con una tendencia neutral predominante y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el umbral de score técnico A+ (>= 65), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT) para evitar 'cuchillos cayendo'.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad estructural generalizada. Ninguno de los candidatos analizados alcanza el umbral de calidad A+ (Score >= 65) requerido por el comité para mitigar el riesgo de pérdida. Se prioriza la preservación del capital sobre la ejecución de trades de baja convicción.",
   "top_candidates": [
     {
-      "symbol": "MUBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PAXGUSDT",
+      "symbol": "TRXUSDT",
       "score": 60
     },
     {
       "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "KAITOUSDT",
       "score": 60
     },
     {
