@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-07 10:20:19",
+  "timestamp": "2026-08-07 10:22:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, el comité concluye que no existe ningún activo que cumpla con los criterios de alta convicción (Score >= 65 y Bids > 55%). La incertidumbre macroeconómica y la falta de profundidad en el libro de órdenes para los candidatos analizados obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad de Bids (>= 55%) ni con la convicción A+ exigida por el Comité de Riesgo en un entorno de mercado marcado por el miedo y la falta de volumen institucional.",
   "top_candidates": [
     {
       "symbol": "SUIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BFUSDUSDT",
       "score": 75
     },
     {
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "DASHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NEXOUSDT",
       "score": 75
     },
     {
