@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 02:52:18",
+  "timestamp": "2026-08-07 02:54:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de indecisión con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 55% ni con una confirmación de volumen institucional necesaria para mitigar el riesgo de 'falling knives'. Se prioriza la preservación del capital hasta que el mercado muestre una estructura de acumulación más robusta.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 65%) necesario para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez institucional.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
@@ -15,16 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "CRVUSDT",
-      "score": 75
-    },
-    {
       "symbol": "GNOUSDT",
       "score": 75
     },
     {
-      "symbol": "ONDOUSDT",
-      "score": 70
+      "symbol": "BTCUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "SOLUSDT",
+      "score": 65
     }
   ]
 }
