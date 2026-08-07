@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-07 09:30:24",
+  "timestamp": "2026-08-07 09:32:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de consolidación bajo estrés con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). Se prioriza la preservación del capital sobre la especulación en un entorno de baja direccionalidad.",
+  "reasoning": "Ninguno de los candidatos presenta una dominancia de Bids superior al 55% ni una estructura técnica que garantice una alta probabilidad de éxito, por lo que se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "TAOUSDT",
-      "score": 75
+      "symbol": "ZECUSDT",
+      "score": 85
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "ETHUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
@@ -21,10 +25,6 @@
     {
       "symbol": "DASHUSDT",
       "score": 75
-    },
-    {
-      "symbol": "ZBTUSDT",
-      "score": 70
     }
   ]
 }
