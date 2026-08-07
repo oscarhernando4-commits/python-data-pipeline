@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 06:40:22",
+  "timestamp": "2026-08-07 06:42:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento defensivo con una clara falta de convicción institucional. Ninguno de los candidatos analizados supera el umbral de riesgo exigido por el comité, por lo que la decisión unánime es mantener la liquidez en espera de una mejor estructura de mercado.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado se encuentra en una fase de distribución selectiva y alta incertidumbre, por lo que la estrategia óptima es el resguardo de capital.",
   "top_candidates": [
     {
-      "symbol": "ZBTUSDT",
-      "score": 85
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 75
     },
     {
       "symbol": "HBARUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
-      "symbol": "MUBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOXLBUSDT",
+      "symbol": "ENAUSDT",
       "score": 75
     }
   ]
