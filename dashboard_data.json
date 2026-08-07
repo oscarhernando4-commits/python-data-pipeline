@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 14:32:22",
+  "updated_at": "2026-08-07 14:34:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con alta fragilidad. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia institucional es mantener la liquidez en espera de una capitulación real o una reversión confirmada."
+    "reasoning": "El mercado presenta una divergencia estructural y falta de profundidad en el libro de órdenes para los candidatos analizados. Dado que ninguno cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%) y el entorno macro es de miedo, la decisión institucional es mantener la liquidez en USDT para evitar el riesgo de slippage y pérdidas por volatilidad no confirmada."
   }
 }
