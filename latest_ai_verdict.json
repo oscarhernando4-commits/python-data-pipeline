@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 04:14:17",
+  "timestamp": "2026-08-07 04:16:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "Ningún activo cumple con el umbral de calidad A+ (Score >= 65) y la confirmación de volumen institucional necesaria. El mercado se encuentra en una fase de alta incertidumbre y correlación bajista, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo'.",
+  "confidence": 0,
+  "reasoning": "El mercado carece de activos con la calidad técnica y el soporte de liquidez necesarios para una entrada segura; por lo tanto, se mantiene la liquidez en 100% USDT para evitar el riesgo de 'cuchillos cayendo'.",
   "top_candidates": [
     {
-      "symbol": "PAXGUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "XAUTUSDT",
+      "symbol": "GNOUSDT",
       "score": 60
     },
     {
-      "symbol": "XRPUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "SUNUSDT",
-      "score": 55
+      "symbol": "ERAUSDT",
+      "score": 50
     },
     {
       "symbol": "BICOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "VICUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "JSTUSDT",
       "score": 50
     }
   ]

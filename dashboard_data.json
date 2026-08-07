@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 04:14:17",
+  "updated_at": "2026-08-07 04:16:19",
   "total_balance_usd": 20.05,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "Ningún activo cumple con el umbral de calidad A+ (Score >= 65) y la confirmación de volumen institucional necesaria. El mercado se encuentra en una fase de alta incertidumbre y correlación bajista, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo'."
+    "reasoning": "El mercado carece de activos con la calidad técnica y el soporte de liquidez necesarios para una entrada segura; por lo tanto, se mantiene la liquidez en 100% USDT para evitar el riesgo de 'cuchillos cayendo'."
   }
 }
