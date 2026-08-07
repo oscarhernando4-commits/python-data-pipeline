@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 23:04:26",
+  "timestamp": "2026-08-07 23:06:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. Ningún activo alcanza el Score A+ necesario, y la incertidumbre en el libro de órdenes junto con el sesgo neutral del mercado dictan una postura de preservación de capital.",
+  "confidence": 95,
+  "reasoning": "El mercado actual presenta un entorno de alta incertidumbre y debilidad estructural. Ninguno de los activos analizados alcanza el umbral de calidad A+ requerido por el comité, y el historial de simulaciones advierte contra la toma de riesgos en condiciones de mercado neutrales con baja profundidad de libro. Se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "CAKEUSDT",
       "score": 60
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "MIRAUSDT",
       "score": 60
     }
   ]
