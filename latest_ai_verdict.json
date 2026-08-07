@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 03:02:19",
+  "timestamp": "2026-08-07 03:04:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual carece de la fortaleza técnica y la profundidad de liquidez necesaria para cumplir con nuestros estándares de convicción A+. Todos los candidatos presentan scores técnicos inferiores a 65, lo que, sumado a la alta volatilidad y el sentimiento de miedo, hace que la única decisión prudente sea el HOLD para evitar pérdidas por 'falling knives'.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada. Ninguno de los activos analizados alcanza el umbral de Score Técnico de 65 ni muestra una dominancia de Bids superior al 55%, lo que incumple las reglas de oro del comité para la protección del capital.",
   "top_candidates": [
     {
-      "symbol": "SNXXBUSDT",
+      "symbol": "BNBUSDT",
       "score": 60
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "TRXUSDT",
       "score": 60
     },
     {
-      "symbol": "ZROUSDT",
+      "symbol": "SNXXBUSDT",
       "score": 60
     }
   ]
