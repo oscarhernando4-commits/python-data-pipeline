@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 07:14:31",
+  "timestamp": "2026-08-07 07:16:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de 'espera vigilante' con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes) exigido por el comité para mitigar el riesgo de pérdidas, por lo que la orden es mantener la liquidez en efectivo.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). El mercado se encuentra en una fase de alta volatilidad sin una dirección clara, por lo que la estrategia institucional es mantener la liquidez en espera de una estructura de mercado más robusta.",
   "top_candidates": [
     {
       "symbol": "ZBTUSDT",
@@ -15,15 +15,15 @@
       "score": 85
     },
     {
-      "symbol": "MIRAUSDT",
-      "score": 75
-    },
-    {
       "symbol": "DOGEUSDT",
       "score": 75
     },
     {
       "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "MUBUSDT",
       "score": 75
     }
   ]
