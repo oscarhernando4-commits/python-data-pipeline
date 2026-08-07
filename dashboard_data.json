@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 17:42:25",
+  "updated_at": "2026-08-07 17:44:20",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los activos analizados cumple con el requisito estricto de un Score Técnico >= 65 ni con una profundidad de libro de órdenes que garantice una entrada segura. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción."
+    "reasoning": "Ningún activo cumple con el umbral mínimo de seguridad (Score >= 65) y la dominancia de bids en el libro de órdenes es neutral, lo que obliga a mantener la posición en efectivo para evitar pérdidas en un mercado de alta volatilidad y baja convicción."
   }
 }

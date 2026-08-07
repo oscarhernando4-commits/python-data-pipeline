@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-07 17:42:25",
+  "timestamp": "2026-08-07 17:44:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los activos analizados cumple con el requisito estricto de un Score Técnico >= 65 ni con una profundidad de libro de órdenes que garantice una entrada segura. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
+  "reasoning": "Ningún activo cumple con el umbral mínimo de seguridad (Score >= 65) y la dominancia de bids en el libro de órdenes es neutral, lo que obliga a mantener la posición en efectivo para evitar pérdidas en un mercado de alta volatilidad y baja convicción.",
   "top_candidates": [
-    {
-      "symbol": "ZROUSDT",
-      "score": 70
-    },
     {
       "symbol": "JTOUSDT",
       "score": 70
     },
     {
       "symbol": "SOXLBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TRUMPUSDT",
       "score": 60
     },
     {
