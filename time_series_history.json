@@ -1,25 +1,25 @@
 {
-  "HEMIUSDT": [
+  "MIRAUSDT": [
     {
-      "timestamp": "2026-08-07 19:34:07",
-      "price": 0.00524,
-      "score": 45,
-      "rsi": 48.56,
+      "timestamp": "2026-08-07 19:36:08",
+      "price": 0.0424,
+      "score": 15,
+      "rsi": 47.55,
       "macd": "Neutral",
-      "volume_surge": 0.38,
+      "volume_surge": 0.05,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "LDOUSDT": [
+  "LUNCUSDT": [
     {
-      "timestamp": "2026-08-07 19:34:07",
-      "price": 0.2859,
-      "score": 15,
-      "rsi": 45.0,
+      "timestamp": "2026-08-07 19:36:08",
+      "price": 4.903e-05,
+      "score": 65,
+      "rsi": 53.15,
       "macd": "Neutral",
-      "volume_surge": 0.43,
+      "volume_surge": 0.05,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -27,12 +27,12 @@
   ],
   "VICUSDT": [
     {
-      "timestamp": "2026-08-07 19:34:07",
-      "price": 0.0302,
+      "timestamp": "2026-08-07 19:36:08",
+      "price": 0.0304,
       "score": 50,
-      "rsi": 57.18,
+      "rsi": 58.84,
       "macd": "Neutral",
-      "volume_surge": 0.17,
+      "volume_surge": 0.27,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -40,12 +40,25 @@
   ],
   "ENSOUSDT": [
     {
-      "timestamp": "2026-08-07 19:34:08",
+      "timestamp": "2026-08-07 19:36:08",
       "price": 1.011,
       "score": 15,
       "rsi": 42.26,
       "macd": "Neutral",
-      "volume_surge": 0.03,
+      "volume_surge": 0.04,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-07 19:36:08",
+      "price": 0.2859,
+      "score": 15,
+      "rsi": 45.0,
+      "macd": "Neutral",
+      "volume_surge": 0.61,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

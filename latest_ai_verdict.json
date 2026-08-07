@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 19:34:16",
+  "timestamp": "2026-08-07 19:36:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos, no existe una dominancia clara en el libro de órdenes ni una confirmación de volumen institucional que cumpla con los estándares de seguridad A+ exigidos por el CRO.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo de pérdidas, por lo que se mantiene la posición en efectivo.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     },
     {
@@ -19,7 +19,7 @@
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
