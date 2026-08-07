@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 22:40:25",
+  "timestamp": "2026-08-07 22:42:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de Score Técnico A+ (>= 65) ni con la confirmación de soporte en el libro de órdenes. La debilidad sistémica y la alta correlación bajista dictan una política de preservación de capital estricta.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en una fase de liquidación de pánico con una correlación bajista extrema. Ninguno de los candidatos analizados alcanza el score técnico mínimo de 65 requerido por el comité para una operación de alta convicción. Se prioriza la preservación de capital sobre la especulación en un entorno de baja liquidez y alta volatilidad.",
   "top_candidates": [
     {
       "symbol": "PAXGUSDT",
       "score": 60
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
@@ -19,12 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 55
+      "symbol": "QNTUSDT",
+      "score": 60
     },
     {
-      "symbol": "TRXUSDT",
-      "score": 50
+      "symbol": "CAKEUSDT",
+      "score": 60
     }
   ]
 }
