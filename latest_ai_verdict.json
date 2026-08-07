@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-07 21:02:16",
+  "timestamp": "2026-08-07 21:04:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) bajo las condiciones actuales de mercado, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Tras deliberar, el comité ha determinado que ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte). La incertidumbre macroeconómica y la falta de datos de liquidez en el libro de órdenes obligan a mantener una postura defensiva para preservar el capital.",
   "top_candidates": [
-    {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
     {
       "symbol": "ASTERUSDT",
       "score": 75
@@ -20,6 +16,10 @@
     },
     {
       "symbol": "ATOMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ALGOUSDT",
       "score": 75
     },
     {
