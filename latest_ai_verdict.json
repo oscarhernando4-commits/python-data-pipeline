@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 08:44:22",
+  "timestamp": "2026-08-07 08:46:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "El mercado presenta una aversión al riesgo selectiva y una falta de dominancia clara en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ requerido por el comité, por lo que la estrategia óptima es el 'HOLD' para evitar las trampas de valor observadas en el historial de simulaciones.",
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y tendencia clara). La alta volatilidad y la falta de profundidad en el libro de órdenes, sumado al entorno macro adverso, dictan una postura de espera para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "ETHUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "AAVEUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XLMUSDT",
-      "score": 75
-    },
-    {
       "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZECUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LINKUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LTCUSDT",
       "score": 75
     }
   ]

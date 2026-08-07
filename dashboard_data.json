@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 08:44:23",
+  "updated_at": "2026-08-07 08:46:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 45,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una aversión al riesgo selectiva y una falta de dominancia clara en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ requerido por el comité, por lo que la estrategia óptima es el 'HOLD' para evitar las trampas de valor observadas en el historial de simulaciones."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y tendencia clara). La alta volatilidad y la falta de profundidad en el libro de órdenes, sumado al entorno macro adverso, dictan una postura de espera para evitar pérdidas innecesarias."
   }
 }
