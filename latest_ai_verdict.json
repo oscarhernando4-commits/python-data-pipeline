@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-07 07:56:22",
+  "timestamp": "2026-08-07 07:58:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y confirmación de liquidez). El mercado se encuentra en una fase de alta incertidumbre y baja profundidad, por lo que la estrategia institucional es mantener la liquidez en espera de una estructura de mercado más clara.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada y una falta de soporte institucional en los libros de órdenes. Ningún candidato alcanza el umbral de calidad A+ requerido por el comité, por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar el riesgo de 'falling knives'.",
   "top_candidates": [
     {
       "symbol": "MIRAUSDT",
-      "score": 85
+      "score": 70
     },
     {
       "symbol": "DOGEUSDT",
-      "score": 75
+      "score": 60
     },
     {
       "symbol": "MUBUSDT",
-      "score": 75
+      "score": 60
+    },
+    {
+      "symbol": "WLDUSDT",
+      "score": 60
     },
     {
       "symbol": "NEXOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ZBTUSDT",
-      "score": 70
+      "score": 60
     }
   ]
 }
