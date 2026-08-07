@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-07 16:46:22",
+  "timestamp": "2026-08-07 16:48:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno de mercado actual es de alta incertidumbre y baja convicción técnica. Dado que ningún activo cumple con el requisito de score A+ (>= 65) y no hay una dominancia clara en el libro de órdenes, la decisión unánime es no operar y proteger la liquidez total.",
+  "reasoning": "El mercado se encuentra en un estado de estancamiento defensivo con una ausencia total de activos que cumplan con el umbral de calidad A+ (Score >= 65). La alta tasa de fallos en las simulaciones recientes para activos con scores bajos confirma que operar en este entorno es una trampa de liquidez. Se prioriza la preservación del capital (dry powder) hasta que el mercado muestre una estructura de acumulación institucional clara.",
   "top_candidates": [
     {
       "symbol": "ZECUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "POLUSDT",
       "score": 60
     },
     {
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "BICOUSDT",
+      "symbol": "HEIUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "UNIUSDT",
       "score": 50
     }
   ]
