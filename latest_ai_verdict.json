@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-07 09:36:28",
+  "timestamp": "2026-08-07 09:38:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de 'stock picking' sin una tendencia direccional clara. Ningún activo cumple con los requisitos estrictos de convicción A+ del comité, y el riesgo de trampa de liquidez es elevado. Se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "Ninguno de los candidatos cumple con el requisito estricto de dominancia de Bids > 55% ni con la convicción A+ necesaria para operar en un entorno de mercado con sentimiento de miedo y tendencia neutral, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "ETHUSDT",
+      "symbol": "PEPEUSDT",
       "score": 85
     },
     {
@@ -19,7 +19,7 @@
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
