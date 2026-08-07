@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-07 21:00:20",
+  "timestamp": "2026-08-07 21:02:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con alta inestabilidad en altcoins. Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 y confirmación de liquidez), por lo que la estrategia más segura es mantenerse en efectivo (HOLD) hasta que la estructura de mercado sea más favorable.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) bajo las condiciones actuales de mercado, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
+      "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
       "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ESPUSDT",
       "score": 75
     },
     {
@@ -15,16 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "LUNCUSDT",
+      "symbol": "SPYBUSDT",
       "score": 75
-    },
-    {
-      "symbol": "MIRAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "HBARUSDT",
-      "score": 65
     }
   ]
 }
