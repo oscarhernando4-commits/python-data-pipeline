@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-07 02:08:19",
+  "timestamp": "2026-08-07 02:10:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado se encuentra en un estado de indecisión volátil, por lo que la estrategia institucional es mantener la liquidez y evitar la exposición a activos con alta probabilidad de retroceso.",
+  "reasoning": "El mercado presenta una anemia sistémica severa y una falta de convicción técnica en todos los activos analizados; por lo tanto, el comité ha decidido unánimemente mantener la liquidez en espera de mejores condiciones de mercado.",
   "top_candidates": [
     {
-      "symbol": "ENAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "APTUSDT",
-      "score": 75
+      "symbol": "PAXGUSDT",
+      "score": 60
     },
     {
       "symbol": "REUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "NEXOUSDT",
-      "score": 75
+      "symbol": "OGNUSDT",
+      "score": 60
     },
     {
       "symbol": "RENDERUSDT",
-      "score": 70
+      "score": 55
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 50
     }
   ]
 }
