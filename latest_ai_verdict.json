@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-07 10:04:17",
+  "timestamp": "2026-08-07 10:06:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos analizados cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro). El mercado se encuentra en una fase de alta volatilidad y baja confianza, por lo que la estrategia institucional es mantener la liquidez en USDT hasta que aparezca una oportunidad con mayor probabilidad estadística de éxito.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids >= 55%). El mercado presenta una alta volatilidad sin una dirección clara, por lo que la estrategia de preservación de capital es la única opción viable.",
   "top_candidates": [
     {
-      "symbol": "MIRAUSDT",
-      "score": 85
+      "symbol": "AVAXUSDT",
+      "score": 75
     },
     {
       "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "NIGHTUSDT",
       "score": 75
     },
     {
