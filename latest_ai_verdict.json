@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 15:06:29",
+  "timestamp": "2026-08-07 15:08:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en una fase de distribución masiva y pánico institucional. Ninguno de los candidatos cumple con el umbral de Score Técnico >= 65 ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de 'falling knives'. Se prioriza la preservación de capital sobre la especulación en activos de baja resiliencia.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con una correlación bajista sistémica. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 requerido por el protocolo de riesgo, por lo que se prioriza la protección del capital sobre la especulación de baja probabilidad.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
       "score": 60
     },
     {
-      "symbol": "NEXOUSDT",
+      "symbol": "DASHUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "RENDERUSDT",
-      "score": 55
+      "symbol": "ERAUSDT",
+      "score": 50
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "ALLOUSDT",
       "score": 50
     }
   ]

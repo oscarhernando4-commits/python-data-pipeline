@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 15:06:29",
+  "updated_at": "2026-08-07 15:08:20",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de distribución masiva y pánico institucional. Ninguno de los candidatos cumple con el umbral de Score Técnico >= 65 ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de 'falling knives'. Se prioriza la preservación de capital sobre la especulación en activos de baja resiliencia."
+    "reasoning": "El mercado se encuentra en una fase de distribución institucional con una correlación bajista sistémica. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 requerido por el protocolo de riesgo, por lo que se prioriza la protección del capital sobre la especulación de baja probabilidad."
   }
 }
