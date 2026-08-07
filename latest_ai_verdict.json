@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 05:14:15",
+  "timestamp": "2026-08-07 05:16:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura de distribución masiva. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 65) ni con la profundidad de liquidez necesaria para garantizar la preservación de capital, por lo que la orden es mantener la posición en efectivo.",
+  "reasoning": "El mercado se encuentra en un régimen de alta incertidumbre y baja convicción. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia más rentable y segura es mantener la posición en efectivo (USDT) hasta que aparezca una configuración técnica de alta probabilidad.",
   "top_candidates": [
     {
-      "symbol": "ETCUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "VICUSDT",
-      "score": 65
+      "symbol": "SNXXBUSDT",
+      "score": 60
     },
     {
       "symbol": "MUBUSDT",
       "score": 60
     },
     {
-      "symbol": "ERAUSDT",
+      "symbol": "SOXLBUSDT",
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "ETCUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ZAMAUSDT",
       "score": 60
     }
   ]
