@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 18:54:17",
+  "timestamp": "2026-08-07 18:56:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica sin activos que demuestren fortaleza institucional. Siguiendo la Regla de Oro #1, al no existir candidatos con Score >= 65, la decisión es mantener la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "El mercado se encuentra en una fase de contracción sistémica sin señales de acumulación institucional. Dado que ningún activo cumple con el umbral de seguridad A+ (Score >= 65) y la volatilidad es incierta, la decisión institucional es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
@@ -23,8 +23,8 @@
       "score": 50
     },
     {
-      "symbol": "NBISBUSDT",
-      "score": 50
+      "symbol": "TRUMPUSDT",
+      "score": 45
     }
   ]
 }
