@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-07 20:50:18",
+  "timestamp": "2026-08-07 20:52:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%) y el entorno de mercado actual presenta una alta probabilidad de pérdidas basada en el historial de simulaciones, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ exigidos por el comité. La falta de dominancia en el libro de órdenes y la inestabilidad macroeconómica dictan una postura de preservación de capital (HOLD) para evitar trampas de valor.",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
+      "symbol": "ESPUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 65
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "HEIUSDT",
       "score": 65
     },
     {
-      "symbol": "HEIUSDT",
+      "symbol": "HBARUSDT",
       "score": 65
     }
   ]
