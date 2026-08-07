@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 19:40:17",
+  "timestamp": "2026-08-07 19:42:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'espera vigilante' con baja liquidez y falta de muros de soporte claros. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte), por lo que la decisión institucional es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' en un entorno de alta volatilidad selectiva.",
+  "reasoning": "Ninguno de los candidatos cumple con los criterios de alta convicción exigidos por el comité. La falta de dominancia clara en el libro de órdenes y la persistencia del sentimiento de miedo en el mercado macro sugieren que la preservación del capital es la estrategia óptima en este momento.",
   "top_candidates": [
     {
       "symbol": "JTOUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
-      "score": 75
-    },
-    {
       "symbol": "ETHUSDT",
       "score": 75
     },
     {
       "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
