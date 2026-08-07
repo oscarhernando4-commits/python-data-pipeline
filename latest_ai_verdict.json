@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 11:42:17",
+  "timestamp": "2026-08-07 11:44:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una zona de alta incertidumbre con una divergencia entre el sentimiento de miedo y la acción del precio. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la estrategia de preservación de capital dicta mantenerse en liquidez (HOLD).",
+  "reasoning": "El mercado presenta una desconexión institucional peligrosa donde el volumen de derivados supera al spot 8 a 1. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la estrategia de protección de capital dicta mantenerse en liquidez (HOLD) para evitar las trampas de volatilidad observadas en el historial reciente.",
   "top_candidates": [
     {
       "symbol": "APTUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
-      "score": 75
-    },
-    {
       "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "DASHUSDT",
+      "symbol": "DOTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PEPEUSDT",
       "score": 75
     }
   ]

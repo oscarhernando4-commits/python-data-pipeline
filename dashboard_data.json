@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 11:42:17",
+  "updated_at": "2026-08-07 11:44:20",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una zona de alta incertidumbre con una divergencia entre el sentimiento de miedo y la acción del precio. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la estrategia de preservación de capital dicta mantenerse en liquidez (HOLD)."
+    "reasoning": "El mercado presenta una desconexión institucional peligrosa donde el volumen de derivados supera al spot 8 a 1. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la estrategia de protección de capital dicta mantenerse en liquidez (HOLD) para evitar las trampas de volatilidad observadas en el historial reciente."
   }
 }
