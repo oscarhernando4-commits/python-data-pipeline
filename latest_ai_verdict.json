@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-07 02:16:18",
+  "timestamp": "2026-08-07 02:18:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo en un entorno de mercado neutral y con alta volatilidad, por lo que se prioriza la preservación de capital.",
+  "reasoning": "El mercado presenta una divergencia técnica y falta de convicción institucional. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la estrategia de protección de capital dicta mantenerse en modo HOLD.",
   "top_candidates": [
+    {
+      "symbol": "ATOMUSDT",
+      "score": 85
+    },
     {
       "symbol": "APTUSDT",
       "score": 85
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
       "symbol": "TRXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
