@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-07 10:08:17",
+  "timestamp": "2026-08-07 10:10:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%) necesario para mitigar el riesgo sistémico actual. El mercado se encuentra en una fase de distribución selectiva donde la probabilidad de pérdida supera la expectativa de beneficio, por lo que la decisión unánime es mantener la liquidez.",
+  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de volumen institucional real sugieren una trampa de liquidez, por lo que el comité decide mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "MIRAUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
     {
       "symbol": "PEPEUSDT",
       "score": 75
@@ -17,14 +25,6 @@
     {
       "symbol": "NIGHTUSDT",
       "score": 75
-    },
-    {
-      "symbol": "MIRAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SHIBUSDT",
-      "score": 65
     }
   ]
 }
