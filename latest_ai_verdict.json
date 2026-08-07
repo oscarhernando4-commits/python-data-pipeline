@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-07 18:52:16",
+  "timestamp": "2026-08-07 18:54:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución agresiva sin compradores institucionales que respalden los niveles actuales; por tanto, se bloquea cualquier operación para evitar el riesgo de 'cuchillos cayendo' y proteger el capital institucional.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica sin activos que demuestren fortaleza institucional. Siguiendo la Regla de Oro #1, al no existir candidatos con Score >= 65, la decisión es mantener la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo'.",
   "top_candidates": [
     {
-      "symbol": "NEXOUSDT",
-      "score": 60
-    },
-    {
       "symbol": "ADAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "EPICUSDT",
       "score": 50
     },
     {
@@ -23,7 +15,15 @@
       "score": 50
     },
     {
-      "symbol": "XAIUSDT",
+      "symbol": "C98USDT",
+      "score": 50
+    },
+    {
+      "symbol": "DEXEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "NBISBUSDT",
       "score": 50
     }
   ]
