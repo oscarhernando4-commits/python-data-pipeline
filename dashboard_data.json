@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 22:46:19",
+  "updated_at": "2026-08-07 22:48:19",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una estructura de riesgo sistémico elevado sin confirmación técnica de reversión alcista. Ningún activo cumple con los criterios de convicción A+ establecidos por el comité, por lo que la estrategia de preservación de capital dicta mantener una posición de espera (HOLD) hasta que las condiciones macro y técnicas mejoren."
+    "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una correlación bajista sistémica. Ninguno de los candidatos analizados alcanza el umbral de calidad A+ (Score >= 65) exigido por el comité para garantizar la preservación del capital. Se prioriza la liquidez en espera de una mejor configuración técnica."
   }
 }
