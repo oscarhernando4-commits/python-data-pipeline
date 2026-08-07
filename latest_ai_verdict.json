@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-07 22:52:17",
+  "timestamp": "2026-08-07 22:54:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de riesgo sistémico elevado con una divergencia técnica generalizada. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la liquidez en USDT.",
+  "reasoning": "El mercado presenta una fragilidad sistémica con una correlación bajista predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) exigido por el comité, por lo que se mantiene la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "PAXGUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "XAUTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "QNTUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "FETUSDT",
-      "score": 60
+      "score": 75
     },
     {
-      "symbol": "TSTUSDT",
-      "score": 60
+      "symbol": "QNTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "score": 75
     }
   ]
 }
