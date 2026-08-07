@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 19:20:16",
+  "timestamp": "2026-08-07 19:22:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión fragmentada con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido y volumen de confirmación). Se prioriza la preservación del capital sobre la especulación en un entorno de baja probabilidad de éxito.",
+  "reasoning": "El mercado se encuentra en una fase de reconfiguración sin una tendencia direccional clara. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ exigido por el comité, por lo que la estrategia óptima es mantener la liquidez y evitar la exposición a activos con riesgo de slippage o trampas de valor.",
   "top_candidates": [
     {
-      "symbol": "BCHUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "JTOUSDT",
-      "score": 75
+      "symbol": "XLMUSDT",
+      "score": 65
     },
     {
-      "symbol": "KORUBUSDT",
+      "symbol": "ADAUSDT",
       "score": 65
     }
   ]
