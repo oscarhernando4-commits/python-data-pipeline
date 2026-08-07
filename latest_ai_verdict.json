@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 09:40:25",
+  "timestamp": "2026-08-07 09:42:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que PEPE y DASH tienen scores técnicos altos, el entorno de mercado es de miedo y falta de liquidez, lo que aumenta el riesgo de pérdidas. Ningún candidato cumple con el umbral de convicción A+ y la dominancia de Bids es insuficiente para garantizar una entrada segura, por lo que se decide mantener la liquidez en USDT.",
+  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el requisito de soporte de ballenas (Bids > 65%) ni con una tendencia clara en 4H, lo que aumenta el riesgo de pérdidas por 'falling knives'. Se prioriza la preservación del capital sobre la especulación de baja probabilidad.",
   "top_candidates": [
     {
       "symbol": "PEPEUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "AAVEUSDT",
       "score": 75
     }
   ]
