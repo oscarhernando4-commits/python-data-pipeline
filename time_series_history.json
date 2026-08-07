@@ -1,12 +1,25 @@
 {
-  "LDOUSDT": [
+  "HYPERUSDT": [
     {
-      "timestamp": "2026-08-07 13:52:10",
-      "price": 0.2877,
-      "score": 30,
-      "rsi": 46.72,
+      "timestamp": "2026-08-07 13:54:07",
+      "price": 0.0633,
+      "score": 65,
+      "rsi": 64.7,
       "macd": "Neutral",
-      "volume_surge": 0.15,
+      "volume_surge": 0.48,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-07 13:54:07",
+      "price": 0.4939,
+      "score": 15,
+      "rsi": 48.74,
+      "macd": "Neutral",
+      "volume_surge": 0.57,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

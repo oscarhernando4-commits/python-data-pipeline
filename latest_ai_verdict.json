@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 13:52:19",
+  "timestamp": "2026-08-07 13:54:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual se encuentra en una fase de purga selectiva con alta volatilidad y falta de soporte institucional claro en el libro de órdenes. Ningún candidato cumple con los requisitos estrictos de riesgo y convicción del comité, por lo que se prioriza la protección del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La volatilidad actual y la falta de soporte institucional en el libro de órdenes dictan una postura de preservación de capital (HOLD) hasta que las condiciones macro mejoren.",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
+      "symbol": "JSTUSDT",
       "score": 75
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "VETUSDT",
       "score": 75
     },
     {
@@ -23,8 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "VETUSDT",
-      "score": 75
+      "symbol": "ERAUSDT",
+      "score": 65
     }
   ]
 }
