@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 08:58:18",
+  "timestamp": "2026-08-07 09:00:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que AAVE presenta un score técnico de 85, el mercado carece de la profundidad de liquidez necesaria (Bids < 55%) y el entorno macro es de alta aversión al riesgo. Siguiendo la Regla #1 de no perder dinero, el comité decide mantener la liquidez en espera de una señal de confirmación más robusta.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional). El mercado presenta una divergencia defensiva y alta incertidumbre, por lo que la estrategia institucional es preservar el capital y esperar una purga de liquidez más clara.",
   "top_candidates": [
     {
-      "symbol": "AAVEUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "MIRAUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
       "symbol": "ZECUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AAVEUSDT",
       "score": 75
     }
   ]
