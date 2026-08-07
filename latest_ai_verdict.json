@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-07 08:40:20",
+  "timestamp": "2026-08-07 08:42:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de rotación defensiva con alta volatilidad regulatoria. Ninguno de los candidatos cumple con el requisito de soporte de ballenas (Bids > 55%) ni con una convicción A+ necesaria para mitigar el riesgo de pérdida, por lo que la estrategia óptima es preservar el capital en espera de una capitulación clara.",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos presenta una dominancia de Bids superior al 55% ni una estructura técnica que garantice una alta probabilidad de éxito, por lo que el comité ha decidido mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
     {
       "symbol": "LTCUSDT",
       "score": 75
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "AAVEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AEROUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     }
   ]
