@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 09:38:22",
+  "timestamp": "2026-08-07 09:40:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el requisito estricto de dominancia de Bids > 55% ni con la convicción A+ necesaria para operar en un entorno de mercado con sentimiento de miedo y tendencia neutral, por lo que se prioriza la preservación del capital.",
+  "reasoning": "A pesar de que PEPE y DASH tienen scores técnicos altos, el entorno de mercado es de miedo y falta de liquidez, lo que aumenta el riesgo de pérdidas. Ningún candidato cumple con el umbral de convicción A+ y la dominancia de Bids es insuficiente para garantizar una entrada segura, por lo que se decide mantener la liquidez en USDT.",
   "top_candidates": [
     {
       "symbol": "PEPEUSDT",
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     }
   ]
