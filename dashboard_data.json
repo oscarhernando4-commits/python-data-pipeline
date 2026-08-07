@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 19:48:21",
+  "updated_at": "2026-08-07 19:50:16",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad del 55% en el libro de órdenes ni con la convicción A+ requerida por el comité, por lo que se prioriza la preservación del capital sobre la operativa especulativa."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%) necesario para mitigar el riesgo de pérdida, por lo que se mantiene la liquidez en USDT."
   }
 }
