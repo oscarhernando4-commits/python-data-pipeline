@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-07 03:04:18",
+  "timestamp": "2026-08-07 03:06:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada. Ninguno de los activos analizados alcanza el umbral de Score Técnico de 65 ni muestra una dominancia de Bids superior al 55%, lo que incumple las reglas de oro del comité para la protección del capital.",
+  "reasoning": "Ningún activo cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte institucional en el libro de órdenes, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
-      "score": 60
+      "symbol": "TRXUSDT",
+      "score": 70
     },
     {
       "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "MUBUSDT",
+      "symbol": "BNBUSDT",
       "score": 60
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "MUBUSDT",
       "score": 60
     },
     {
