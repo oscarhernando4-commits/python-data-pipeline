@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-07 13:28:16",
+  "timestamp": "2026-08-07 13:30:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con baja liquidez y una correlación inestable. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%) exigido por el comité. Se prioriza la preservación del capital sobre la especulación en activos de baja profundidad histórica.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en una fase de capitulación selectiva con baja confianza institucional. Ninguno de los candidatos analizados supera el umbral de convicción A+ requerido por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT y evitar la exposición a activos de alta volatilidad sin soporte claro.",
   "top_candidates": [
     {
       "symbol": "XRPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "MORPHOUSDT",
       "score": 75
     },
     {
@@ -19,12 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "AEROUSDT",
-      "score": 75
+      "symbol": "BABYUSDT",
+      "score": 65
     },
     {
-      "symbol": "GIGGLEUSDT",
-      "score": 75
+      "symbol": "ONDOUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "BANKUSDT",
+      "score": 65
     }
   ]
 }
