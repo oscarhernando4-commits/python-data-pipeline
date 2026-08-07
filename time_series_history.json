@@ -1,25 +1,38 @@
 {
-  "LUNCUSDT": [
+  "HEMIUSDT": [
     {
-      "timestamp": "2026-08-07 12:20:11",
-      "price": 4.916e-05,
-      "score": 65,
-      "rsi": 59.66,
+      "timestamp": "2026-08-07 12:22:08",
+      "price": 0.00552,
+      "score": 50,
+      "rsi": 62.54,
       "macd": "Neutral",
-      "volume_surge": 0.44,
+      "volume_surge": 0.39,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
-  ]
-}GLMRUSDT": [
+  ],
+  "JTOUSDT": [
     {
-      "timestamp": "2026-08-07 12:20:11",
-      "price": 0.008097,
+      "timestamp": "2026-08-07 12:22:08",
+      "price": 0.4948,
       "score": 15,
-      "rsi": 41.32,
+      "rsi": 47.96,
       "macd": "Neutral",
-      "volume_surge": 0.44,
+      "volume_surge": 0.27,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-07 12:22:08",
+      "price": 0.2893,
+      "score": 65,
+      "rsi": 55.2,
+      "macd": "Neutral",
+      "volume_surge": 0.42,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
