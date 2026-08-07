@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-07 12:48:18",
+  "timestamp": "2026-08-07 12:50:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional encubierta con baja liquidez y alta volatilidad. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65 y Bids > 55%), por lo que la decisión es mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de miedo y alta volatilidad sin soporte estructural sólido. Ningún activo cumple con los criterios estrictos de riesgo y convicción del comité, por lo que la orden es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "BFUSDUSDT",
-      "score": 75
-    },
     {
       "symbol": "NEXOUSDT",
       "score": 75
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "UNIUSDT",
+      "symbol": "QNTUSDT",
       "score": 65
     },
     {
       "symbol": "DOTUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "BFUSDUSDT",
       "score": 65
     }
   ]
