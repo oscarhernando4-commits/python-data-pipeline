@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 18:08:18",
+  "updated_at": "2026-08-07 18:10:17",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de capitulación técnica generalizada sin señales de acumulación de ballenas. Dado que ningún activo alcanza el umbral de seguridad A+ (Score >= 65), la estrategia institucional es mantener la liquidez en efectivo para evitar trampas de valor y pérdidas innecesarias."
+    "reasoning": "El mercado se encuentra en una fase de distribución institucional con scores técnicos mediocres (máximo 60/100). Ningún activo cumple con la regla de oro de Score >= 65 y confirmación de volumen, por lo que se mantiene la liquidez en USDT para evitar pérdidas por volatilidad especulativa."
   }
 }

@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-07 18:08:18",
+  "timestamp": "2026-08-07 18:10:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica generalizada sin señales de acumulación de ballenas. Dado que ningún activo alcanza el umbral de seguridad A+ (Score >= 65), la estrategia institucional es mantener la liquidez en efectivo para evitar trampas de valor y pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con scores técnicos mediocres (máximo 60/100). Ningún activo cumple con la regla de oro de Score >= 65 y confirmación de volumen, por lo que se mantiene la liquidez en USDT para evitar pérdidas por volatilidad especulativa.",
   "top_candidates": [
     {
       "symbol": "AAOIBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ARBUSDT",
       "score": 60
     },
     {
@@ -21,10 +25,6 @@
     {
       "symbol": "SAGAUSDT",
       "score": 60
-    },
-    {
-      "symbol": "ALLOUSDT",
-      "score": 50
     }
   ]
 }
