@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1633,
-    "wins": 365,
+    "total_trades": 1653,
+    "wins": 385,
     "losses": 1268,
-    "win_rate_pct": 22.35,
-    "total_pnl_usd": -165.54769454545522
+    "win_rate_pct": 23.29,
+    "total_pnl_usd": 130.05230545454478
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BTCUSDT)"
     ],
     "boosted_patterns": [
-      "Optimized Setup for XRPUSDT: Profit logged (+$2.94) -> Win on XRPUSDT (+$2.94 net) -> Level 4 Re-Trading Started!",
       "Optimized Setup for XRPUSDT: Profit logged (+$2.94) -> Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
       "Optimized Setup for ADAUSDT: Profit logged (+$1.97) -> Win on ADAUSDT (+$1.97 net) -> Level 3 Re-Trading Started!",
       "Optimized Setup for ADAUSDT: Profit logged (+$1.97) -> Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
@@ -49,7 +48,8 @@
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HOMEUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BNBUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on EPICUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BTCUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BTCUSDT)",
+      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ACEUSDT)"
     ]
   },
   "history": [
@@ -27261,6 +27261,346 @@
       "context": {
         "score": 40,
         "rsi_15m": 78.79,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-061",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-062",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-063",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-064",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-065",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-066",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-067",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-068",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-069",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-071",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-072",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-073",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-074",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-075",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-076",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-077",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-078",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:22",
+      "account_id": "SIM-079",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-07 14:08:23",
+      "account_id": "SIM-080",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ACEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1387,
+      "exit_price": 0.1181,
+      "pnl_usd": 14.78,
+      "result": "WIN",
+      "notes": "Win on ACEUSDT (+$14.78 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 36.34,
         "macro_trend_4h": "NEUTRAL"
       }
     }

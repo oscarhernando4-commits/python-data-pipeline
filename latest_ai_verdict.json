@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 14:06:25",
+  "timestamp": "2026-08-07 14:08:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución sin activos que cumplan con los criterios de alta convicción (Score >= 65). La ausencia de soporte en el libro de órdenes y la debilidad técnica generalizada obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado carece de activos con fuerza relativa (Score < 65) y presenta una estructura de riesgo inaceptable. La estrategia institucional prioriza la preservación de capital sobre la especulación en un entorno de baja liquidez y alta volatilidad bajista.",
   "top_candidates": [
     {
-      "symbol": "NBISBUSDT",
+      "symbol": "SNXXBUSDT",
       "score": 55
+    },
+    {
+      "symbol": "AEROUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "BICOUSDT",
+      "score": 50
     },
     {
       "symbol": "GRAMUSDT",
       "score": 50
     },
     {
-      "symbol": "DEXEUSDT",
-      "score": 50
-    },
-    {
       "symbol": "ZAMAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "KITEUSDT",
       "score": 50
     }
   ]
