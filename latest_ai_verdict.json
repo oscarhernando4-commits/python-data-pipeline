@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-07 04:00:19",
+  "timestamp": "2026-08-07 04:02:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de pánico y debilidad estructural. Ninguno de los candidatos analizados alcanza el umbral de calidad A+ (Score >= 65) requerido por el comité para mitigar el riesgo de pérdida, por lo que la decisión institucional es mantener la posición en efectivo (USDT) para preservar el capital.",
+  "reasoning": "El mercado se encuentra en una fase de distribución forzada y alta incertidumbre. Ninguno de los candidatos analizados cumple con el umbral de calidad A+ (Score >= 65) ni con la dominancia de bids necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la ejecución de operaciones de baja convicción.",
   "top_candidates": [
-    {
-      "symbol": "XAUTUSDT",
-      "score": 60
-    },
     {
       "symbol": "PAXGUSDT",
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ZROUSDT",
+      "symbol": "KAITOUSDT",
       "score": 60
     },
     {
       "symbol": "RIFUSDT",
       "score": 60
+    },
+    {
+      "symbol": "VETUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "BICOUSDT",
+      "score": 50
     }
   ]
 }
