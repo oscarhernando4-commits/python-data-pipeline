@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-07 10:34:17",
+  "timestamp": "2026-08-07 10:36:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha deliberado y, tras analizar la falta de datos de profundidad, el sentimiento de miedo predominante y la alta tasa de fallos en las simulaciones históricas para activos con scores mediocres, se ha decidido por unanimidad mantener la posición en efectivo (HOLD) para preservar el capital.",
+  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%). El mercado se encuentra en un estado de compresión de volatilidad con un sesgo de miedo, lo que aumenta el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la especulación en activos sin soporte institucional claro.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 70
     },
     {
-      "symbol": "BABYUSDT",
+      "symbol": "PUMPUSDT",
       "score": 65
     },
     {
-      "symbol": "MMTUSDT",
+      "symbol": "GRAMUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "BABYUSDT",
       "score": 65
     }
   ]
