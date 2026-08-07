@@ -1,14 +1,22 @@
 {
-  "timestamp": "2026-08-07 16:38:22",
+  "timestamp": "2026-08-07 16:40:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación bajista sistémica. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la profundidad de libro de órdenes requerida para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo institucional.",
+  "reasoning": "El mercado presenta una divergencia técnica severa y falta de profundidad en los libros de órdenes. Ningún activo cumple con el umbral de Score A+ (>= 65) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de 'falling knives'. Se prioriza la protección del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "POLUSDT",
       "score": 70
+    },
+    {
+      "symbol": "DASHUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 60
     },
     {
       "symbol": "ZECUSDT",
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "WLDUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SUNUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DASHUSDT",
       "score": 60
     }
   ]
