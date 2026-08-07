@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 22:44:20",
+  "updated_at": "2026-08-07 22:46:19",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de debilidad extrema y falta de profundidad. Ninguno de los candidatos analizados cumple con el umbral mínimo de seguridad (Score >= 65) ni con la dominancia de liquidez necesaria para mitigar el riesgo de slippage y capitulación. Se prioriza la preservación del capital sobre la ejecución de operaciones de baja probabilidad."
+    "reasoning": "El mercado presenta una estructura de riesgo sistémico elevado sin confirmación técnica de reversión alcista. Ningún activo cumple con los criterios de convicción A+ establecidos por el comité, por lo que la estrategia de preservación de capital dicta mantener una posición de espera (HOLD) hasta que las condiciones macro y técnicas mejoren."
   }
 }
