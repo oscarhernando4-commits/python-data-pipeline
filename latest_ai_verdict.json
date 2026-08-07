@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-07 07:08:23",
+  "timestamp": "2026-08-07 07:10:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado carece de activos con la calidad técnica requerida (Score >= 65) y presenta una asimetría de riesgo inaceptable. Se prioriza la preservación del capital sobre la especulación en un entorno de capitulación técnica.",
+  "reasoning": "El mercado se encuentra en un estado de acumulación selectiva con alta hostilidad para el trading táctico; ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "ZBTUSDT",
-      "score": 70
+      "score": 85
     },
     {
       "symbol": "SYNUSDT",
-      "score": 70
+      "score": 85
     },
     {
       "symbol": "LTCUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "DOGEUSDT",
-      "score": 60
+      "score": 75
     },
     {
-      "symbol": "ENAUSDT",
-      "score": 60
+      "symbol": "HBARUSDT",
+      "score": 75
     }
   ]
 }
