@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-07 21:52:17",
+  "timestamp": "2026-08-07 21:54:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual se encuentra en un estado de alta selectividad y riesgo, donde la falta de confirmación en el libro de órdenes y la debilidad en la estructura de tendencia impiden la ejecución de cualquier posición, priorizando la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado se encuentra en un estado de distribución defensiva con alta fragilidad. Ninguno de los candidatos cumple con el umbral de Score >= 65 y confirmación de volumen institucional, por lo que la estrategia prioritaria es la preservación de capital mediante la retención de liquidez en USD.",
   "top_candidates": [
     {
       "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ICPUSDT",
       "score": 75
     },
     {
@@ -23,8 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "NIGHTUSDT",
-      "score": 75
+      "symbol": "SOXLBUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "SUIUSDT",
+      "score": 65
     }
   ]
 }
