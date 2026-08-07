@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 10:00:19",
+  "timestamp": "2026-08-07 10:02:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia técnica severa y falta de profundidad en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de Bids > 55%), por lo que la decisión institucional es mantener la liquidez en espera de una estructura de mercado más clara.",
+  "reasoning": "El mercado se encuentra en una fase de distribución selectiva con alta volatilidad y falta de soporte institucional sólido. Ningún activo cumple con los criterios de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia óptima es preservar el capital en USDT.",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
       "score": 75
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "MIRAUSDT",
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
-      "score": 75
+      "symbol": "ZBTUSDT",
+      "score": 70
     },
     {
       "symbol": "PUMPUSDT",
       "score": 65
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "HEIUSDT",
       "score": 65
     }
   ]
