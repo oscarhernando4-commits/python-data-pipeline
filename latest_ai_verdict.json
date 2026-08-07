@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-07 09:18:22",
+  "timestamp": "2026-08-07 09:20:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La fragmentación del mercado y la falta de profundidad en el orderbook sugieren un alto riesgo de pérdida, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes superior al 55%). El mercado presenta una trampa de liquidez y una alta volatilidad sin dirección, por lo que la estrategia más rentable es el mantenimiento de la liquidez en espera de un catalizador macro definido.",
   "top_candidates": [
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "MIRAUSDT",
       "score": 75
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AAVEUSDT",
       "score": 75
     },
     {
@@ -19,12 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "TRXUSDT",
-      "score": 65
+      "symbol": "TRUMPUSDT",
+      "score": 75
     }
   ]
 }
