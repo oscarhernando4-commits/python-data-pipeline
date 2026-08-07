@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-07 16:08:23",
+  "timestamp": "2026-08-07 16:10:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia técnica y un sentimiento de miedo que, sumado a la falta de soporte claro en el libro de órdenes y la alta tasa de fallos en trades recientes, hace que la estrategia más prudente sea mantener la liquidez en USDT (HOLD) para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta una divergencia técnica y una falta de convicción institucional clara. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité, por lo que se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "ZECUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SUNUSDT",
       "score": 85
     },
     {
@@ -19,11 +15,15 @@
       "score": 85
     },
     {
+      "symbol": "SUNUSDT",
+      "score": 85
+    },
+    {
       "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     }
   ]
