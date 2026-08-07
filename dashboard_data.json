@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 14:18:21",
+  "updated_at": "2026-08-07 14:20:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de debilidad transversal y falta de convicción institucional. Ninguno de los candidatos analizados alcanza el umbral de seguridad A+ (Score >= 65), y el historial de simulaciones recientes advierte sobre el riesgo de operar en este entorno. Se prioriza la preservación del capital hasta que surja una señal clara de reversión con volumen institucional."
+    "reasoning": "El mercado presenta una alta volatilidad con una estructura técnica que no cumple con los requisitos de convicción A+ del comité. La falta de muros de soporte claros en el libro de órdenes y la alta tasa de fallos en trades recientes bajo condiciones similares dictan una postura de preservación de capital (HOLD) hasta que se observe una estabilización clara del sector Layer 1."
   }
 }
