@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-07 03:10:17",
+  "timestamp": "2026-08-07 03:12:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la fortaleza relativa de activos como TRX y BNB, el entorno de mercado actual es demasiado volátil y carece de la convicción institucional necesaria para cumplir con nuestra estricta política de no pérdida. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo generalizado.",
+  "reasoning": "El mercado se encuentra en un estado de pánico institucional con una desproporción masiva de activos débiles. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 con confirmación de volumen y profundidad de mercado), por lo que la decisión institucional es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
-      "score": 70
+      "symbol": "COTIUSDT",
+      "score": 80
     },
     {
       "symbol": "BNBUSDT",
@@ -16,15 +16,15 @@
     },
     {
       "symbol": "DOGEUSDT",
-      "score": 60
+      "score": 70
     },
     {
-      "symbol": "SNXXBUSDT",
-      "score": 60
+      "symbol": "TRXUSDT",
+      "score": 70
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 60
+      "symbol": "ETCUSDT",
+      "score": 70
     }
   ]
 }
