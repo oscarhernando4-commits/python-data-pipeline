@@ -1,26 +1,26 @@
 {
-  "timestamp": "2026-08-07 12:42:16",
+  "timestamp": "2026-08-07 12:44:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta selectividad y riesgo, con una ratio de apalancamiento peligrosa y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ necesario para garantizar una operación de alta probabilidad, por lo que se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los requisitos de seguridad y convicción A+ exigidos. La falta de soporte institucional en el libro de órdenes y la alta volatilidad especulativa sugieren que la preservación del capital es la prioridad absoluta.",
   "top_candidates": [
+    {
+      "symbol": "ZECUSDT",
+      "score": 90
+    },
     {
       "symbol": "TAOUSDT",
       "score": 90
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "LINKUSDT",
       "score": 85
     },
     {
-      "symbol": "NEXOUSDT",
+      "symbol": "CAKEUSDT",
       "score": 85
-    },
-    {
-      "symbol": "ZECUSDT",
-      "score": 75
     },
     {
       "symbol": "SKHYBUSDT",
