@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-07 04:40:20",
+  "timestamp": "2026-08-07 04:42:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos que cumplan con los criterios de alta convicción (Score >= 65) y soporte de liquidez necesario. Ante la debilidad sistémica y el riesgo de capitulación, la estrategia óptima es la preservación del capital en efectivo hasta que surja una configuración técnica de alta calidad.",
+  "reasoning": "El mercado se encuentra en un estado de fragilidad sistémica con una correlación bajista predominante. Ninguno de los candidatos actuales cumple con los requisitos estrictos de Score técnico (A+) ni con la profundidad de liquidez necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
+    {
+      "symbol": "ZROUSDT",
+      "score": 90
+    },
     {
       "symbol": "DEXEUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "INJUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "SOLUSDT",
+      "symbol": "HEIUSDT",
       "score": 50
     },
     {
-      "symbol": "HEIUSDT",
+      "symbol": "SOLUSDT",
       "score": 50
     }
   ]
