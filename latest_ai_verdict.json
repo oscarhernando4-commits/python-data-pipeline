@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-07 17:22:22",
+  "timestamp": "2026-08-07 17:24:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "Tras evaluar los 10 candidatos, ninguno alcanza el umbral de seguridad requerido (Score >= 65). El mercado muestra una debilidad sistémica y falta de soporte institucional, lo que convierte cualquier operación en un riesgo innecesario. Se prioriza la preservación del capital sobre la especulación.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una fase de alta fragilidad con una clara tendencia de distribución institucional. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ (Score >= 65) requerido por el comité, y el riesgo de 'falling knives' es inaceptable bajo las reglas de gestión de riesgo vigentes. Se prioriza la protección del capital sobre la especulación en un entorno de baja liquidez.",
   "top_candidates": [
-    {
-      "symbol": "HEIUSDT",
-      "score": 60
-    },
     {
       "symbol": "SOXLBUSDT",
       "score": 60
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "ACEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "C98USDT",
       "score": 50
     }
   ]
