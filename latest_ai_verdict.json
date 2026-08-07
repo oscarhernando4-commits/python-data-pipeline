@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-07 18:50:17",
+  "timestamp": "2026-08-07 18:52:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los 10 candidatos, ninguno alcanza el umbral de Score 65 requerido por el protocolo de riesgo. La falta de dominancia compradora en el libro de órdenes y la debilidad técnica generalizada dictan una postura de preservación de capital (HOLD) hasta que surja una oportunidad con convicción A+.",
+  "reasoning": "El mercado se encuentra en una fase de distribución agresiva sin compradores institucionales que respalden los niveles actuales; por tanto, se bloquea cualquier operación para evitar el riesgo de 'cuchillos cayendo' y proteger el capital institucional.",
   "top_candidates": [
     {
+      "symbol": "NEXOUSDT",
+      "score": 60
+    },
+    {
       "symbol": "ADAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "EPICUSDT",
       "score": 50
     },
     {
@@ -15,15 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "C98USDT",
-      "score": 50
-    },
-    {
-      "symbol": "NBISBUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "COOKIEUSDT",
+      "symbol": "XAIUSDT",
       "score": 50
     }
   ]
