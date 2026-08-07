@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 11:04:17",
+  "updated_at": "2026-08-07 11:06:20",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos elevados, ninguno cumple con el umbral de seguridad y confirmación de liquidez necesario para una ejecución A+. Se prioriza la protección del capital frente a la incertidumbre del mercado actual."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y volumen confirmado). El mercado presenta una trampa de liquidez y alta volatilidad, por lo que la estrategia de protección de capital es prioritaria."
   }
 }

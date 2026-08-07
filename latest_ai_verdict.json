@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-07 11:04:16",
+  "timestamp": "2026-08-07 11:06:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos elevados, ninguno cumple con el umbral de seguridad y confirmación de liquidez necesario para una ejecución A+. Se prioriza la protección del capital frente a la incertidumbre del mercado actual.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y volumen confirmado). El mercado presenta una trampa de liquidez y alta volatilidad, por lo que la estrategia de protección de capital es prioritaria.",
   "top_candidates": [
     {
-      "symbol": "ZBTUSDT",
-      "score": 85
+      "symbol": "ADAUSDT",
+      "score": 75
     },
     {
       "symbol": "AVAXUSDT",
       "score": 75
     },
     {
-      "symbol": "PUMPUSDT",
-      "score": 65
+      "symbol": "SUIUSDT",
+      "score": 75
     },
     {
-      "symbol": "ONDOUSDT",
-      "score": 65
+      "symbol": "TAOUSDT",
+      "score": 75
     },
     {
-      "symbol": "DODOUSDT",
-      "score": 65
+      "symbol": "ZBTUSDT",
+      "score": 70
     }
   ]
 }
