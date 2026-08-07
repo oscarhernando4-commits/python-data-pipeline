@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 22:16:20",
+  "timestamp": "2026-08-07 22:18:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de una tendencia definida en el mercado actual dictan una postura de preservación de capital (HOLD) para evitar las pérdidas observadas en el historial de simulaciones.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional encubierta con alta fragilidad. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes), por lo que la estrategia óptima es el mantenimiento de la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "PAXGUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "FETUSDT",
       "score": 75
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "QNTUSDT",
       "score": 75
     }
   ]
