@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-07 20:36:22",
+  "timestamp": "2026-08-07 20:38:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con los criterios estrictos de convicción A+ (Score >= 65, confirmación de volumen institucional y soporte claro en el libro de órdenes). La alta tasa de pérdidas en trades pasados bajo condiciones similares obliga a la preservación total del capital.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una clara falta de soporte institucional en el libro de órdenes. Ninguno de los candidatos cumple con los criterios estrictos de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia óptima es mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
+    {
+      "symbol": "NEARUSDT",
+      "score": 75
+    },
     {
       "symbol": "ZAMAUSDT",
       "score": 75
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "XRPUSDT",
-      "score": 65
-    },
-    {
       "symbol": "SHIBUSDT",
       "score": 65
     },
     {
-      "symbol": "NEARUSDT",
+      "symbol": "HBARUSDT",
       "score": 65
     }
   ]
