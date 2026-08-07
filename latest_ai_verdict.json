@@ -1,22 +1,22 @@
 {
-  "timestamp": "2026-08-07 10:42:15",
+  "timestamp": "2026-08-07 10:44:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar el contexto macroeconómico de miedo, la falta de profundidad en el libro de órdenes y la alta tasa de fallos en trades históricos bajo condiciones neutrales, el comité ha decidido proteger la liquidez en USDT. Ningún activo cumple con el umbral de convicción A+ requerido para mitigar el riesgo de una caída en cascada.",
+  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con debilidad sistémica. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%) necesario para mitigar el riesgo de pérdida, por lo que el comité ha decidido unánimemente mantener la posición en efectivo.",
   "top_candidates": [
-    {
-      "symbol": "ADAUSDT",
-      "score": 75
-    },
     {
       "symbol": "MMTUSDT",
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "ADAUSDT",
       "score": 75
+    },
+    {
+      "symbol": "XLMUSDT",
+      "score": 70
     },
     {
       "symbol": "ZBTUSDT",
