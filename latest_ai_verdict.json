@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 05:58:20",
+  "timestamp": "2026-08-07 06:00:31",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de consolidación con sentimiento de miedo y falta de soporte en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ exigido por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "Tras la deliberación unánime, el comité ha determinado que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos por la Regla de Oro #1. La falta de profundidad en el libro de órdenes y la alta volatilidad en el sector de Layer 1 sugieren un entorno de alta probabilidad de pérdida, por lo que se mantiene la posición en efectivo.",
   "top_candidates": [
     {
-      "symbol": "ETCUSDT",
-      "score": 85
+      "symbol": "ADAUSDT",
+      "score": 75
     },
     {
-      "symbol": "BTCUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "SOXLBUSDT",
       "score": 75
     },
     {
-      "symbol": "SNXXBUSDT",
+      "symbol": "ETCUSDT",
       "score": 75
     }
   ]
