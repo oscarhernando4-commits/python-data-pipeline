@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 07:00:25",
+  "timestamp": "2026-08-07 07:02:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno de mercado actual es de alta toxicidad y fragilidad sistémica. Ningún activo cumple con el umbral mínimo de Score Técnico (65) ni con la confirmación de soporte en el libro de órdenes. Se prioriza la preservación del capital sobre la especulación, manteniendo una postura de espera (HOLD) hasta que las condiciones macro mejoren.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada y una correlación bajista que invalida cualquier intento de compra. Ningún activo cumple con el umbral de convicción A+ (Score >= 65), por lo que la estrategia de preservación de capital dicta una postura de espera (HOLD) hasta que las condiciones macro mejoren.",
   "top_candidates": [
     {
       "symbol": "MIRAUSDT",
       "score": 60
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "ENAUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 50
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "HFTUSDT",
       "score": 50
     },
     {
-      "symbol": "HOMEUSDT",
+      "symbol": "TAOUSDT",
       "score": 50
     }
   ]
