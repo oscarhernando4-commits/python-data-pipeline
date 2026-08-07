@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 22:22:20",
+  "timestamp": "2026-08-07 22:24:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los activos analizados cumple con el umbral mínimo de Score A+ (>= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que el comité decide mantener la posición en efectivo para preservar el capital.",
+  "reasoning": "El mercado presenta una correlación bajista sistémica y una falta de acumulación institucional clara. Ningún activo cumple con los criterios de riesgo exigidos por el comité, por lo que se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     }
   ]
