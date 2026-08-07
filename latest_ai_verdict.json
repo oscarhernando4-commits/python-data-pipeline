@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 12:24:16",
+  "timestamp": "2026-08-07 12:26:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) en un entorno de mercado caracterizado por el miedo y la alta volatilidad especulativa. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de tener candidatos con scores técnicos aceptables, ninguno cumple con la regla de oro de convicción A+ (Score >= 65 y Confianza >= 70%) ni presenta una dominancia de Bids superior al 55% en el libro de órdenes, lo que eleva el riesgo de pérdida en un entorno de mercado dominado por el apalancamiento especulativo.",
   "top_candidates": [
     {
       "symbol": "AEROUSDT",
       "score": 85
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XRPUSDT",
-      "score": 75
-    },
-    {
       "symbol": "LINKUSDT",
       "score": 75
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PEPEUSDT",
       "score": 75
     }
   ]

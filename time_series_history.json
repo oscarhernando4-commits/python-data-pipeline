@@ -1,12 +1,51 @@
 {
-  "VICUSDT": [
+  "JTOUSDT": [
     {
-      "timestamp": "2026-08-07 12:24:08",
-      "price": 0.0292,
-      "score": 45,
-      "rsi": 47.57,
+      "timestamp": "2026-08-07 12:26:08",
+      "price": 0.494,
+      "score": 15,
+      "rsi": 46.0,
       "macd": "Neutral",
-      "volume_surge": 0.19,
+      "volume_surge": 0.29,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "AAOIBUSDT": [
+    {
+      "timestamp": "2026-08-07 12:26:08",
+      "price": 139.6,
+      "score": 25,
+      "rsi": 51.39,
+      "macd": "Neutral",
+      "volume_surge": 0.03,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-07 12:26:08",
+      "price": 0.2885,
+      "score": 65,
+      "rsi": 50.79,
+      "macd": "Neutral",
+      "volume_surge": 0.51,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "HEMIUSDT": [
+    {
+      "timestamp": "2026-08-07 12:26:08",
+      "price": 0.00546,
+      "score": 50,
+      "rsi": 58.32,
+      "macd": "Neutral",
+      "volume_surge": 0.59,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
