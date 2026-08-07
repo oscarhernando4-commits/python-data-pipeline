@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-07 16:16:25",
+  "timestamp": "2026-08-07 16:18:29",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'Range-Bound' con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y tendencia clara) necesario para garantizar la preservación del capital, por lo que se mantiene la liquidez en USDT.",
+  "reasoning": "El mercado actual presenta una divergencia estructural y falta de convicción institucional. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 requerido por el comité, y el libro de órdenes no muestra una dominancia compradora clara. Por lo tanto, se prioriza la preservación del capital (Regla #1) manteniéndose en posición de espera (HOLD) hasta que surja una configuración de alta probabilidad.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
+      "score": 60
     },
     {
       "symbol": "LINKUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 75
+      "symbol": "ICPUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SUNUSDT",
+      "score": 60
     },
     {
       "symbol": "XPLUSDT",
-      "score": 75
+      "score": 60
     }
   ]
 }
