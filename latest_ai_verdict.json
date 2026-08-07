@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-07 09:42:20",
+  "timestamp": "2026-08-07 09:44:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el requisito de soporte de ballenas (Bids > 65%) ni con una tendencia clara en 4H, lo que aumenta el riesgo de pérdidas por 'falling knives'. Se prioriza la preservación del capital sobre la especulación de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en un estado de 'Apatía Volátil' con un sesgo neutral predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT) hasta que aparezca un catalizador macroeconómico definido.",
   "top_candidates": [
+    {
+      "symbol": "ETHUSDT",
+      "score": 85
+    },
     {
       "symbol": "PEPEUSDT",
       "score": 85
@@ -15,15 +19,11 @@
       "score": 85
     },
     {
+      "symbol": "ZECUSDT",
+      "score": 75
+    },
+    {
       "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AAVEUSDT",
       "score": 75
     }
   ]

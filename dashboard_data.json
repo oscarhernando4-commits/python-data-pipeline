@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 09:42:22",
+  "updated_at": "2026-08-07 09:44:25",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el requisito de soporte de ballenas (Bids > 65%) ni con una tendencia clara en 4H, lo que aumenta el riesgo de pérdidas por 'falling knives'. Se prioriza la preservación del capital sobre la especulación de baja probabilidad."
+    "reasoning": "El mercado se encuentra en un estado de 'Apatía Volátil' con un sesgo neutral predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT) hasta que aparezca un catalizador macroeconómico definido."
   }
 }
