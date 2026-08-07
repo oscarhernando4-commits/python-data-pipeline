@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-07 21:24:15",
+  "timestamp": "2026-08-07 21:26:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65) y soporte de libro de órdenes necesario para garantizar la preservación del capital en un entorno de mercado con sesgo neutral y alta volatilidad.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y capitulación selectiva. Ninguno de los candidatos cumple con el umbral de confianza A+ (Score >= 65 con confirmación de libro de órdenes) necesario para garantizar la preservación del capital, por lo que se mantiene la posición en efectivo.",
   "top_candidates": [
+    {
+      "symbol": "DOGEUSDT",
+      "score": 100
+    },
     {
       "symbol": "ASTERUSDT",
       "score": 85
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "MIRAUSDT",
+      "symbol": "QNTUSDT",
       "score": 75
     }
   ]
