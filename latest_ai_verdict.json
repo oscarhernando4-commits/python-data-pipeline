@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-07 17:56:53",
+  "timestamp": "2026-08-07 17:58:13",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con los criterios de alta convicción (Score >= 65) ni con la profundidad de mercado necesaria para mitigar el riesgo de slippage. Se mantiene la liquidez en USDT para evitar la exposición a activos con patrones de pérdida recurrentes.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada y una falta de convicción institucional. Ninguno de los candidatos analizados alcanza el umbral de seguridad A+ (Score >= 65) requerido por el comité, y el entorno macroeconómico de miedo (Fear & Greed 29) aumenta el riesgo de una caída repentina. Por lo tanto, se ha decidido proteger el capital y mantener la posición en efectivo (HOLD) hasta que surja una oportunidad con alta probabilidad estadística.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SOXLBUSDT",
       "score": 60
     },
     {
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "ARBUSDT",
-      "score": 60
-    },
-    {
       "symbol": "VETUSDT",
       "score": 60
     },
     {
-      "symbol": "SAGAUSDT",
+      "symbol": "ARBUSDT",
       "score": 60
     }
   ]
