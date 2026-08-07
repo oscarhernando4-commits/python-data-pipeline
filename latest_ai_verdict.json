@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-07 16:36:20",
+  "timestamp": "2026-08-07 16:38:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad estructural. Ninguno de los activos analizados cumple con los criterios de convicción A+ exigidos por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de baja profundidad y alta volatilidad.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación bajista sistémica. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la profundidad de libro de órdenes requerida para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo institucional.",
   "top_candidates": [
     {
-      "symbol": "LTCUSDT",
-      "score": 60
+      "symbol": "POLUSDT",
+      "score": 70
     },
     {
       "symbol": "ZECUSDT",
