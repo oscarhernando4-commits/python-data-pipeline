@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-07 05:26:18",
+  "timestamp": "2026-08-07 05:28:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de contracción y alta fragilidad. Ningún activo cumple con los criterios estrictos de Score Técnico (>= 65) ni con la profundidad de libro de órdenes necesaria para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de desinterés institucional.",
+  "reasoning": "Tras evaluar los candidatos, ninguno cumple con los requisitos estrictos de Score Técnico (>= 65) ni con la confirmación de liquidez en el Orderbook. El mercado presenta una alta volatilidad y un sesgo neutral que, estadísticamente, ha resultado en pérdidas recurrentes en las simulaciones pasadas. Se prioriza la preservación del capital sobre la ejecución de trades mediocres.",
   "top_candidates": [
     {
       "symbol": "ETCUSDT",
       "score": 70
     },
     {
-      "symbol": "SNXXBUSDT",
+      "symbol": "MUBUSDT",
       "score": 60
     },
     {
-      "symbol": "MUBUSDT",
+      "symbol": "SNXXBUSDT",
       "score": 60
     },
     {
