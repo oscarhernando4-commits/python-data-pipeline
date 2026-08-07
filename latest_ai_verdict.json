@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 22:20:18",
+  "timestamp": "2026-08-07 22:22:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y debilidad generalizada. Ningún activo cumple con los criterios de alta convicción (Score >= 65) exigidos por el comité. La estrategia institucional es la preservación de capital mediante la inacción (HOLD) hasta que las condiciones macro y técnicas mejoren.",
+  "reasoning": "Ninguno de los activos analizados cumple con el umbral mínimo de Score A+ (>= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que el comité decide mantener la posición en efectivo para preservar el capital.",
   "top_candidates": [
-    {
-      "symbol": "PAXGUSDT",
-      "score": 60
-    },
     {
       "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "PAXGUSDT",
       "score": 60
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "FETUSDT",
       "score": 60
     },
     {
       "symbol": "ICPUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "QNTUSDT",
       "score": 60
     }
   ]
