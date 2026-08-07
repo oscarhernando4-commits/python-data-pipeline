@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-07 07:38:26",
+  "timestamp": "2026-08-07 07:40:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión con baja liquidez institucional y alta fragilidad. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que se mantiene la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "Tras la deliberación unánime, el comité concluye que el mercado se encuentra en una fase de alta incertidumbre y baja convicción. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "MIRAUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "OGNUSDT",
       "score": 75
     },
     {
@@ -21,10 +25,6 @@
     {
       "symbol": "SYNUSDT",
       "score": 70
-    },
-    {
-      "symbol": "BTCUSDT",
-      "score": 65
     }
   ]
 }
