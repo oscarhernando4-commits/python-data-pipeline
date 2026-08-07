@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-07 22:54:20",
+  "timestamp": "2026-08-07 22:56:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica con una correlación bajista predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) exigido por el comité, por lo que se mantiene la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con scores insuficientes para una entrada de alta probabilidad. Ningún activo cumple con el umbral de calidad A+ (Score >= 65) exigido por el comité, por lo que la estrategia de protección de capital dicta una postura de espera (HOLD) hasta que la estructura de mercado se estabilice.",
   "top_candidates": [
     {
-      "symbol": "PAXGUSDT",
-      "score": 75
+      "symbol": "CAKEUSDT",
+      "score": 70
     },
     {
       "symbol": "XAUTUSDT",
-      "score": 75
+      "score": 60
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "score": 60
     },
     {
       "symbol": "FETUSDT",
-      "score": 75
+      "score": 60
     },
     {
       "symbol": "QNTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "GIGGLEUSDT",
-      "score": 75
+      "score": 60
     }
   ]
 }
