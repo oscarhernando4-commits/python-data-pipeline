@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 05:16:18",
+  "timestamp": "2026-08-07 05:18:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un régimen de alta incertidumbre y baja convicción. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia más rentable y segura es mantener la posición en efectivo (USDT) hasta que aparezca una configuración técnica de alta probabilidad.",
+  "reasoning": "El comité ha determinado que el mercado se encuentra en una fase de estancamiento bajista con alta incertidumbre regulatoria. Ninguno de los activos analizados cumple con el umbral de seguridad A+ (Score >= 65) ni con la profundidad de liquidez necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es mantener la posición en efectivo (HOLD).",
   "top_candidates": [
     {
-      "symbol": "SNXXBUSDT",
-      "score": 60
+      "symbol": "ONDOUSDT",
+      "score": 70
     },
     {
       "symbol": "MUBUSDT",
       "score": 60
     },
     {
-      "symbol": "SOXLBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ETCUSDT",
+      "symbol": "SNXXBUSDT",
       "score": 60
     },
     {
       "symbol": "ZAMAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "DEXEUSDT",
       "score": 60
     }
   ]
