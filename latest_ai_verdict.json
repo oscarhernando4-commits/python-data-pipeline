@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 14:26:22",
+  "timestamp": "2026-08-07 14:28:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (A+) exigidos por el protocolo de riesgo. La falta de soporte claro en el libro de órdenes y la inestabilidad en los activos de infraestructura sugieren que es preferible mantener la liquidez en espera de una estructura de mercado más definida.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos elevados, la falta de una dominancia clara en el libro de órdenes y la inestabilidad del entorno macro actual no cumplen con los estándares de seguridad A+ exigidos por el protocolo de riesgo.",
   "top_candidates": [
     {
-      "symbol": "DASHUSDT",
+      "symbol": "ETCUSDT",
       "score": 85
     },
     {
-      "symbol": "BNBUSDT",
-      "score": 75
+      "symbol": "DASHUSDT",
+      "score": 85
     },
     {
       "symbol": "LINKUSDT",
       "score": 75
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     }
   ]
