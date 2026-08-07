@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 21:28:19",
+  "updated_at": "2026-08-07 21:30:19",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo en un entorno de mercado con sentimiento de miedo y alta inestabilidad técnica."
+    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y fragmentación de liquidez. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes superior al 55%). La estrategia institucional prioriza la preservación del capital sobre la especulación en entornos de baja probabilidad de éxito."
   }
 }
