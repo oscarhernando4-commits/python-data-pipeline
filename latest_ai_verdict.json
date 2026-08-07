@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-07 06:26:21",
+  "timestamp": "2026-08-07 06:28:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de candidatos con scores técnicos aceptables, la falta de dominancia en el libro de órdenes y la alta volatilidad sin tendencia clara en el entorno macro actual, no cumplen con los estándares de seguridad y rentabilidad exigidos por el protocolo de riesgo.",
+  "reasoning": "A pesar de que DOGEUSDT tiene un score técnico de 85, el libro de órdenes no muestra la dominancia de Bids necesaria (>= 55%) para mitigar el riesgo de slippage y el entorno macro es de alta incertidumbre. Siguiendo la Regla #1 de no perder dinero, el comité ha decidido mantener la posición en efectivo (HOLD) hasta que las condiciones de mercado alcancen una convicción A+.",
   "top_candidates": [
     {
       "symbol": "DOGEUSDT",
       "score": 85
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "HBARUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "MUBUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "SKYUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     }
   ]
