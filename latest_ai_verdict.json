@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 22:34:20",
+  "timestamp": "2026-08-07 22:36:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica donde ningún activo alcanza el umbral de calidad A+ exigido por el comité. La falta de profundidad en el libro de órdenes y la debilidad técnica generalizada dictan una postura de espera para proteger el capital institucional.",
+  "reasoning": "El mercado actual carece de activos con la fuerza técnica necesaria (Score >= 65) y el soporte de liquidez institucional requerido para una operación de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de alta fragilidad.",
   "top_candidates": [
     {
       "symbol": "FETUSDT",
@@ -23,7 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "MMTUSDT",
+      "symbol": "WLFIUSDT",
       "score": 50
     }
   ]
