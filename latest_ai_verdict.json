@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-07 23:54:22",
+  "timestamp": "2026-08-07 23:56:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia técnica y un entorno de miedo regulatorio que, sumado a la falta de muros de soporte sólidos en el libro de órdenes, hace que cualquier entrada sea una trampa de liquidez. Se prioriza la preservación del capital sobre la especulación en activos de baja profundidad.",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) en el contexto actual de aversión al riesgo y debilidad en los activos principales, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "DOTUSDT",
       "score": 85
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "score": 75
     },
     {
       "symbol": "ATOMUSDT",
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "VETUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ZROUSDT",
       "score": 75
     }
   ]
