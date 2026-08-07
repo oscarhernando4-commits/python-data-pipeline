@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 14:20:22",
+  "updated_at": "2026-08-07 14:22:19",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una alta volatilidad con una estructura técnica que no cumple con los requisitos de convicción A+ del comité. La falta de muros de soporte claros en el libro de órdenes y la alta tasa de fallos en trades recientes bajo condiciones similares dictan una postura de preservación de capital (HOLD) hasta que se observe una estabilización clara del sector Layer 1."
+    "reasoning": "El mercado presenta una alta volatilidad y una falta de soporte institucional claro en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y confirmación de volumen) necesario para mitigar el riesgo de 'falling knives' en un entorno de miedo generalizado."
   }
 }
