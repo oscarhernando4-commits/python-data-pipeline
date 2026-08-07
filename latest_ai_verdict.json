@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-07 14:14:22",
+  "timestamp": "2026-08-07 14:16:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en una fase de distribución agresiva con una correlación bajista sistémica. Ninguno de los candidatos cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de soporte institucional necesaria para mitigar el riesgo de 'cuchillos cayendo'. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja convicción.",
+  "confidence": 0,
+  "reasoning": "El mercado presenta una debilidad estructural generalizada con una ausencia total de activos que cumplan con el umbral de convicción A+ (Score >= 65). La alta correlación bajista y la falta de soporte institucional en los libros de órdenes obligan a mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "DASHUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "KITEUSDT",
       "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 60
+      "symbol": "ASTERUSDT",
+      "score": 50
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 55
+      "symbol": "DEXEUSDT",
+      "score": 50
     },
     {
-      "symbol": "CAKEUSDT",
-      "score": 55
+      "symbol": "AXTIBUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "PORTALUSDT",
+      "score": 50
     }
   ]
 }
