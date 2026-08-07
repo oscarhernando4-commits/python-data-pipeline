@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-07 08:50:22",
+  "timestamp": "2026-08-07 08:52:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con la regla de oro de tener una dominancia de bids compradores superior al 55% ni una confirmación de momentum clara, lo que aumenta el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la especulación en un entorno de estancamiento defensivo.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids >= 55% y confirmación de tendencia). El mercado se encuentra en una fase de alta incertidumbre y el comité ha decidido priorizar la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
-    {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
     {
       "symbol": "ZECUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "BANKUSDT",
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AAVEUSDT",
       "score": 75
     }
   ]
