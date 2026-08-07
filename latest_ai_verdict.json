@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 13:02:22",
+  "timestamp": "2026-08-07 13:04:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (Score >= 65 y soporte de libro de órdenes > 55%). La alta incidencia de pérdidas en el historial reciente bajo condiciones de mercado neutral refuerza la decisión de mantener la liquidez en USDT para evitar el riesgo de 'falling knives' en un entorno de casino de derivados.",
+  "reasoning": "El mercado se encuentra en una fase de distribución defensiva con fatiga de liquidez. Ninguno de los candidatos presenta una dominancia de bids superior al 55% ni una confirmación de volumen institucional necesaria para superar el umbral de riesgo A+, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
-    {
-      "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PAXGUSDT",
-      "score": 75
-    },
     {
       "symbol": "LINKUSDT",
       "score": 75
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
       "symbol": "NEXOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BFUSDUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUNUSDT",
       "score": 75
     }
   ]
