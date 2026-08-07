@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-07 03:26:19",
+  "timestamp": "2026-08-07 03:28:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de liquidez necesaria en el libro de órdenes. El entorno macro es de alta fragilidad y el riesgo de 'trampa de valor' es inaceptable, por lo que se prioriza la preservación de capital sobre la ejecución de trades mediocres.",
+  "reasoning": "El mercado actual carece de la fuerza técnica y la convicción institucional necesaria para ejecutar una operación de compra. Ningún activo supera el umbral de Score 65, y el entorno de aversión al riesgo sugiere que la preservación del capital es la prioridad absoluta hasta que se observe una rotación de capital clara y un soporte de liquidez definido.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
@@ -15,16 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "HFTUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "SHIBUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ASTERUSDT",
-      "score": 50
+      "symbol": "PAXGUSDT",
+      "score": 60
     }
   ]
 }
