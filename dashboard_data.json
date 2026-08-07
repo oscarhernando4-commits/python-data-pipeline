@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 15:16:23",
+  "updated_at": "2026-08-07 15:18:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que el mercado carece de la fortaleza técnica y la liquidez necesaria para una entrada de alta convicción. Todos los candidatos presentan scores técnicos inferiores al umbral de seguridad A+ (65), y el entorno macroeconómico sugiere una alta probabilidad de volatilidad bajista. Se mantiene la liquidez en USDT para proteger el capital institucional."
+    "reasoning": "El mercado presenta una toxicidad elevada con una alta correlación bajista. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%) necesario para mitigar el riesgo de un 'flash crash' por correlación forzada. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre."
   }
 }
