@@ -1,12 +1,51 @@
 {
-  "LDOUSDT": [
+  "RIFUSDT": [
     {
-      "timestamp": "2026-08-07 04:50:10",
-      "price": 0.2894,
-      "score": 0,
-      "rsi": 39.62,
+      "timestamp": "2026-08-07 04:52:10",
+      "price": 0.0729,
+      "score": 50,
+      "rsi": 55.84,
       "macd": "Neutral",
-      "volume_surge": 0.07,
+      "volume_surge": 0.09,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ACXUSDT": [
+    {
+      "timestamp": "2026-08-07 04:52:10",
+      "price": 0.03871,
+      "score": 0,
+      "rsi": 41.12,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "TSTUSDT": [
+    {
+      "timestamp": "2026-08-07 04:52:10",
+      "price": 0.01092,
+      "score": 0,
+      "rsi": 43.33,
+      "macd": "Neutral",
+      "volume_surge": 0.25,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GLMRUSDT": [
+    {
+      "timestamp": "2026-08-07 04:52:10",
+      "price": 0.00828,
+      "score": 0,
+      "rsi": 49.19,
+      "macd": "Neutral",
+      "volume_surge": 0.29,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
