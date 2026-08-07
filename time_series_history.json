@@ -1,12 +1,64 @@
 {
-  "LDOUSDT": [
+  "ROBOUSDT": [
     {
-      "timestamp": "2026-08-07 13:30:08",
-      "price": 0.2879,
-      "score": 30,
-      "rsi": 47.8,
+      "timestamp": "2026-08-07 13:32:07",
+      "price": 0.01391,
+      "score": 25,
+      "rsi": 50.09,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.05,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LUNCUSDT": [
+    {
+      "timestamp": "2026-08-07 13:32:07",
+      "price": 4.899e-05,
+      "score": 60,
+      "rsi": 51.13,
+      "macd": "Neutral",
+      "volume_surge": 0.07,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "HYPERUSDT": [
+    {
+      "timestamp": "2026-08-07 13:32:07",
+      "price": 0.0629,
+      "score": 50,
+      "rsi": 58.42,
+      "macd": "Neutral",
+      "volume_surge": 0.21,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-07 13:32:07",
+      "price": 0.4914,
+      "score": 15,
+      "rsi": 41.31,
+      "macd": "Neutral",
+      "volume_surge": 0.02,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "VICUSDT": [
+    {
+      "timestamp": "2026-08-07 13:32:07",
+      "price": 0.0287,
+      "score": 30,
+      "rsi": 42.22,
+      "macd": "Neutral",
+      "volume_surge": 0.32,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
