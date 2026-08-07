@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-07 17:14:21",
+  "timestamp": "2026-08-07 17:16:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual carece de la convicción técnica y el soporte de liquidez necesarios para cumplir con nuestras estrictas reglas de gestión de riesgo; por lo tanto, se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de alta fragilidad con una correlación bajista extrema. Ninguno de los activos analizados alcanza el umbral de seguridad (Score >= 65) ni presenta la profundidad de liquidez necesaria para una ejecución institucional, por lo que la decisión es mantener la liquidez en efectivo para evitar el riesgo de 'falling knives'.",
   "top_candidates": [
-    {
-      "symbol": "QNTUSDT",
-      "score": 60
-    },
     {
       "symbol": "SOXLBUSDT",
       "score": 60
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "SAGAUSDT",
       "score": 60
     },
     {
-      "symbol": "ZBTUSDT",
+      "symbol": "NEXOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ACEUSDT",
       "score": 50
     },
     {
