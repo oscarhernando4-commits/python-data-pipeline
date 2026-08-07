@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-07 05:34:16",
+  "timestamp": "2026-08-07 05:36:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada sin indicios de acumulación institucional. Dado que ningún candidato alcanza el umbral de Score 65 requerido por el Comité, se ha decidido no ejecutar ninguna operación para evitar pérdidas innecesarias, manteniendo la liquidez total en espera de una configuración de mercado más favorable.",
+  "reasoning": "El mercado se encuentra en una fase de distribución forzada con debilidad sistémica. Ninguno de los candidatos cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que la decisión institucional es mantenerse en liquidez total (HOLD).",
   "top_candidates": [
-    {
-      "symbol": "XAUTUSDT",
-      "score": 60
-    },
     {
       "symbol": "MUBUSDT",
       "score": 60
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "SOXLBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ETHFIUSDT",
       "score": 60
     }
   ]
