@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 16:02:23",
+  "timestamp": "2026-08-07 16:04:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta fragilidad con un sentimiento de miedo predominante. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ (Score >= 65) requerido por el comité para mitigar el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la operativa especulativa.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo persistente. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ requerido por el comité, y el libro de órdenes no muestra la profundidad necesaria para justificar una entrada. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
   "top_candidates": [
     {
       "symbol": "SUNUSDT",
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 60
-    },
-    {
       "symbol": "LINKUSDT",
       "score": 60
     },
     {
       "symbol": "CAKEUSDT",
       "score": 60
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 50
     }
   ]
 }
