@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 23:14:22",
+  "timestamp": "2026-08-07 23:16:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un régimen de alta fragilidad y distribución forzada. Ningún activo cumple con los criterios estrictos de Score A+ (>= 65) ni con la confirmación de soporte institucional necesaria para mitigar el riesgo de pérdida, por lo que se mantiene la posición en efectivo.",
+  "reasoning": "El mercado se encuentra en una fase de distribución agresiva con una configuración de riesgo inaceptable. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en efectivo (HOLD) hasta que las condiciones macro y técnicas mejoren significativamente.",
   "top_candidates": [
-    {
-      "symbol": "MUBUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 60
-    },
     {
       "symbol": "ETHUSDT",
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     },
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "GIGGLEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "CAKEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SPYBUSDT",
       "score": 60
     }
   ]
