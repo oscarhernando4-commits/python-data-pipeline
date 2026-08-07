@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 12:40:23",
+  "timestamp": "2026-08-07 12:42:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta fragilidad con una clara falta de convicción institucional. Ninguno de los candidatos cumple con el umbral estricto de seguridad (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo de liquidaciones en cascada. Se prioriza la protección del capital sobre la operativa especulativa.",
+  "reasoning": "El mercado se encuentra en un estado de alta selectividad y riesgo, con una ratio de apalancamiento peligrosa y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ necesario para garantizar una operación de alta probabilidad, por lo que se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "TAOUSDT",
+      "score": 90
+    },
+    {
+      "symbol": "TRXUSDT",
+      "score": 85
+    },
     {
       "symbol": "NEXOUSDT",
       "score": 85
     },
     {
-      "symbol": "SUNUSDT",
-      "score": 85
+      "symbol": "ZECUSDT",
+      "score": 75
     },
     {
       "symbol": "SKHYBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "JSTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BFUSDUSDT",
       "score": 75
     }
   ]
