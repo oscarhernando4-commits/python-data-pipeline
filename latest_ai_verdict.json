@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-07 12:28:17",
+  "timestamp": "2026-08-07 12:30:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los criterios estrictos de seguridad y rentabilidad. La falta de datos de profundidad en el libro de órdenes y la alta volatilidad en los activos de mayor score impiden una ejecución con convicción A+, por lo que se prioriza la protección del capital sobre la operativa especulativa.",
+  "reasoning": "Ninguno de los candidatos cumple con el requisito estricto de dominancia de Bids (>= 65%) ni con la confirmación de soporte institucional necesaria para una operación A+. Se prioriza la preservación del capital ante la incertidumbre del mercado.",
   "top_candidates": [
     {
-      "symbol": "AEROUSDT",
+      "symbol": "BCHUSDT",
       "score": 85
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 75
+      "symbol": "XLMUSDT",
+      "score": 85
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 75
+      "symbol": "ETCUSDT",
+      "score": 85
     },
     {
-      "symbol": "TRXUSDT",
-      "score": 75
+      "symbol": "SUNUSDT",
+      "score": 85
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 75
+      "symbol": "CAKEUSDT",
+      "score": 85
     }
   ]
 }
