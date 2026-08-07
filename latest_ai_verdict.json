@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-07 15:54:22",
+  "timestamp": "2026-08-07 15:56:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento sistémico con una clara falta de acumulación institucional. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una estructura de mercado más robusta.",
+  "reasoning": "El mercado actual presenta una purga de liquidez y una correlación bajista masiva. Ningún activo cumple con los criterios de alta convicción (Score >= 65) exigidos por el comité para mitigar el riesgo sistémico, por lo que se mantiene una postura de espera (HOLD) para preservar el capital.",
   "top_candidates": [
+    {
+      "symbol": "TAOUSDT",
+      "score": 60
+    },
     {
       "symbol": "LTCUSDT",
       "score": 60
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "DASHUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "AEROUSDT",
+      "symbol": "SPYBUSDT",
       "score": 60
     }
   ]
