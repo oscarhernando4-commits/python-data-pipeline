@@ -1,12 +1,51 @@
 {
-  "JTOUSDT": [
+  "GLMRUSDT": [
     {
-      "timestamp": "2026-08-07 04:26:08",
-      "price": 0.4821,
-      "score": 0,
-      "rsi": 46.19,
+      "timestamp": "2026-08-07 04:28:09",
+      "price": 0.008358,
+      "score": 35,
+      "rsi": 52.82,
       "macd": "Neutral",
-      "volume_surge": 0.56,
+      "volume_surge": 0.13,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-07 04:28:09",
+      "price": 2.81e-06,
+      "score": 0,
+      "rsi": 48.43,
+      "macd": "Neutral",
+      "volume_surge": 0.63,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "VANRYUSDT": [
+    {
+      "timestamp": "2026-08-07 04:28:10",
+      "price": 0.003342,
+      "score": 35,
+      "rsi": 56.52,
+      "macd": "Neutral",
+      "volume_surge": 0.35,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "TSTUSDT": [
+    {
+      "timestamp": "2026-08-07 04:28:10",
+      "price": 0.01087,
+      "score": 0,
+      "rsi": 38.36,
+      "macd": "Neutral",
+      "volume_surge": 0.82,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

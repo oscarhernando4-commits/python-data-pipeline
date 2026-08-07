@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 04:26:15",
+  "timestamp": "2026-08-07 04:28:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos analizados alcanza el umbral de Score Técnico A+ (>= 65) ni presenta una ventaja estadística clara en el libro de órdenes, lo que obliga a mantener la posición en efectivo para evitar pérdidas en un entorno de mercado bajista por inercia.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada y una falta de convicción institucional. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia de protección de capital dicta mantener la posición en efectivo (USDT) para evitar el riesgo de 'cuchillos cayendo'.",
   "top_candidates": [
     {
       "symbol": "BCHUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
       "symbol": "DEXEUSDT",
       "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
+      "symbol": "GNOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "RIFUSDT",
       "score": 60
     }
   ]
