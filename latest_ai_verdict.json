@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-07 14:38:23",
+  "timestamp": "2026-08-07 14:40:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y confirmación de volumen institucional). El mercado se encuentra en una fase de distribución inestable, por lo que la preservación del capital es la prioridad absoluta.",
+  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la estrategia de preservación de capital dicta mantenerse en liquidez total.",
   "top_candidates": [
     {
-      "symbol": "SOLUSDT",
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "VETUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DASHUSDT",
       "score": 75
     },
     {
@@ -19,12 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "CAKEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AEROUSDT",
-      "score": 75
+      "symbol": "LINKUSDT",
+      "score": 70
     }
   ]
 }
