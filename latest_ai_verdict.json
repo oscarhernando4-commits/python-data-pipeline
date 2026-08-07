@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 20:32:22",
+  "timestamp": "2026-08-07 20:34:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento defensivo con una alta disparidad entre activos. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes), por lo que el comité ha decidido unánimemente mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica y contracción de liquidez. Ninguno de los candidatos analizados supera el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido). Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre macroeconómica.",
   "top_candidates": [
     {
-      "symbol": "ESPUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
-      "symbol": "XRPUSDT",
-      "score": 65
+      "symbol": "ZAMAUSDT",
+      "score": 75
     },
     {
-      "symbol": "HBARUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "SHIBUSDT",
-      "score": 65
+      "symbol": "LDOUSDT",
+      "score": 75
     },
     {
       "symbol": "HEIUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "NEARUSDT",
       "score": 65
     }
   ]
