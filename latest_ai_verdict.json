@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-07 18:04:20",
+  "timestamp": "2026-08-07 18:06:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una debilidad estructural generalizada y una falta de convicción técnica en los activos analizados. Ningún candidato cumple con el umbral de Score Técnico >= 65 ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad bajista.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad sistémica. Ninguno de los candidatos analizados cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de soporte institucional en el libro de órdenes. Por lo tanto, la estrategia de protección de capital dicta mantener la posición en efectivo (USDT) para evitar 'cuchillos cayendo'.",
   "top_candidates": [
     {
       "symbol": "AAOIBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SOXLBUSDT",
       "score": 60
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "VETUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SAGAUSDT",
       "score": 60
     }
   ]
