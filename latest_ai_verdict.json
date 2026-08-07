@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 16:30:26",
+  "timestamp": "2026-08-07 16:32:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado carece de la convicción técnica y el soporte institucional necesarios para una operación de compra. Ningún activo cumple con el umbral de Score Técnico >= 65, y el entorno macroeconómico de miedo institucional sugiere una alta probabilidad de volatilidad bajista, por lo que la decisión es mantener la posición en efectivo.",
+  "reasoning": "El mercado actual presenta una debilidad sistémica generalizada con scores técnicos insuficientes (máximo 60/100) y falta de profundidad en el libro de órdenes. Siguiendo la Regla de Oro #1, al no existir candidatos con Score >= 65, la decisión institucional es mantener la liquidez y evitar la exposición a activos en zona de riesgo.",
   "top_candidates": [
-    {
-      "symbol": "HEIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "BNBUSDT",
-      "score": 60
-    },
     {
       "symbol": "SUNUSDT",
       "score": 60
     },
     {
-      "symbol": "BICOUSDT",
+      "symbol": "HEIUSDT",
       "score": 50
     },
     {
       "symbol": "ADAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "TUTUSDT",
       "score": 50
     }
   ]
