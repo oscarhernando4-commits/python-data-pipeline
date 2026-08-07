@@ -1,11 +1,23 @@
 {
-  "timestamp": "2026-08-07 11:08:19",
+  "timestamp": "2026-08-07 11:10:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un entorno de alta selectividad y riesgo elevado. Ninguno de los candidatos presenta una dominancia clara en el libro de órdenes ni una estructura técnica que cumpla con el umbral de convicción A+ exigido por el comité, por lo que la estrategia óptima es preservar el capital en efectivo.",
+  "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo en un entorno de mercado con sentimiento de miedo (29). Se prioriza la preservación del capital sobre la especulación en activos de baja profundidad histórica.",
   "top_candidates": [
+    {
+      "symbol": "KITEUSDT",
+      "score": 95
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "SUIUSDT",
+      "score": 75
+    },
     {
       "symbol": "ETHUSDT",
       "score": 75
@@ -13,18 +25,6 @@
     {
       "symbol": "ADAUSDT",
       "score": 75
-    },
-    {
-      "symbol": "AVAXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ZBTUSDT",
-      "score": 70
     }
   ]
 }
