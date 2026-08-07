@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-07 22:26:18",
+  "timestamp": "2026-08-07 22:28:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de distribución institucional agresiva con una correlación bajista sistémica. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que la estrategia óptima es el resguardo total de capital en efectivo (USDT) hasta que el índice Fear & Greed supere el umbral de 45.",
+  "reasoning": "El mercado se encuentra en una fase de alta fragilidad técnica y falta de convicción institucional. Ningún candidato cumple con el requisito estricto de Score >= 65 y soporte de libro de órdenes, por lo que la decisión es mantener la liquidez para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "MIRAUSDT",
+      "score": 70
+    },
     {
       "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "QNTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ATOMUSDT",
       "score": 60
     }
   ]
