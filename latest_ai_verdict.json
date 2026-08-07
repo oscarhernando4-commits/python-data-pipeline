@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-07 13:34:18",
+  "timestamp": "2026-08-07 13:36:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de alta fragilidad con un sentimiento de miedo predominante y una falta de soporte institucional claro en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ exigido por el comité, y el historial reciente de simulaciones advierte sobre el riesgo de 'falling knives' en el entorno actual. Se decide mantener la liquidez en espera de una ruptura de la neutralidad técnica.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El entorno macroeconómico de miedo y la alta probabilidad de 'fakeouts' dictan una política de preservación de capital total.",
   "top_candidates": [
     {
       "symbol": "XRPUSDT",
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "LINKUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AVAXUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "BFUSDUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NEXOUSDT",
       "score": 75
     }
   ]
