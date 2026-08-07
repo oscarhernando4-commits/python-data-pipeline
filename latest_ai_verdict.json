@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-07 10:14:17",
+  "timestamp": "2026-08-07 10:16:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La volatilidad actual y la falta de soporte institucional en el libro de órdenes obligan a una postura defensiva de preservación de capital.",
+  "reasoning": "El mercado se encuentra en un estado de aversión al riesgo selectivo. Ninguno de los candidatos analizados presenta una estructura de libro de órdenes con soporte de ballenas (Bids > 65%) ni un score técnico que supere el umbral de seguridad A+ exigido por el comité. Se mantiene la liquidez en USDT para evitar pérdidas innecesarias en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
-      "symbol": "SUIUSDT",
+      "symbol": "BFUSDUSDT",
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "LAUSDT",
       "score": 75
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "MIRAUSDT",
       "score": 75
     },
     {
-      "symbol": "SKYUSDT",
-      "score": 75
+      "symbol": "ZBTUSDT",
+      "score": 70
     },
     {
-      "symbol": "NIGHTUSDT",
-      "score": 75
+      "symbol": "BABYUSDT",
+      "score": 65
     }
   ]
 }
