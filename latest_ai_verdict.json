@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-07 04:08:17",
+  "timestamp": "2026-08-07 04:10:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica extrema. Ninguno de los candidatos cumple con el umbral de Score Técnico >= 65 ni con la confirmación de liquidez necesaria en el libro de órdenes. Se mantiene la posición en efectivo para evitar trampas de valor y proteger el capital institucional.",
+  "reasoning": "El mercado se encuentra en una fase de distribución bajista con falta de soporte institucional. Ningún activo cumple con los criterios estrictos de calidad A+ (Score >= 65) establecidos por el comité, por lo que la orden es proteger el capital y esperar condiciones de mercado más favorables.",
   "top_candidates": [
     {
       "symbol": "PAXGUSDT",
       "score": 70
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 60
-    },
-    {
       "symbol": "BCHUSDT",
       "score": 60
     },
     {
-      "symbol": "DEXEUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "VETUSDT",
+      "symbol": "XRPUSDT",
       "score": 55
+    },
+    {
+      "symbol": "ERAUSDT",
+      "score": 50
     }
   ]
 }
