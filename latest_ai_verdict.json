@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-07 20:10:15",
+  "timestamp": "2026-08-07 20:12:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional). La estrategia de 'Liquidity Sweeping' dictamina que, ante la incertidumbre y el miedo del mercado, la mejor posición es la preservación de capital en USDT.",
+  "reasoning": "El mercado se encuentra en un estado de neutralidad volátil sin una estructura de soporte clara. Tras analizar los candidatos, ninguno supera el umbral de convicción A+ necesario para garantizar la preservación del capital, por lo que el comité decide mantener la posición en efectivo.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BNBUSDT",
       "score": 75
     }
   ]
