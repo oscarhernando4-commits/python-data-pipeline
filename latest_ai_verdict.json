@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-07 03:54:15",
+  "timestamp": "2026-08-07 03:56:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad estructural generalizada. Ninguno de los candidatos analizados alcanza el umbral de calidad A+ (Score >= 65) requerido por el comité para mitigar el riesgo de pérdida. Se prioriza la preservación del capital sobre la ejecución de trades de baja convicción.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica generalizada sin activos que cumplan con los criterios de alta convicción (Score >= 65). La falta de soporte en el libro de órdenes y la debilidad en los indicadores técnicos obligan a mantener una postura defensiva para preservar el capital, evitando el riesgo de 'falling knives' en un entorno de baja liquidez.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ASTERUSDT",
       "score": 60
     },
     {
@@ -21,10 +25,6 @@
     {
       "symbol": "SUNUSDT",
       "score": 60
-    },
-    {
-      "symbol": "ACEUSDT",
-      "score": 50
     }
   ]
 }
