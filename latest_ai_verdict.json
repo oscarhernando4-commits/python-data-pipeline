@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-07 08:02:25",
+  "timestamp": "2026-08-07 08:04:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de debilidad sistémica con una correlación negativa masiva. Ninguno de los candidatos cumple con el umbral de Score Técnico >= 65 ni con la profundidad de libro de órdenes necesaria para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en un estado de contracción de liquidez y aversión al riesgo. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65) ni presenta una estructura de soporte institucional sólida en el libro de órdenes. La estrategia institucional es preservar el capital en stablecoins hasta que el sentimiento global mejore y se identifiquen patrones de acumulación claros.",
   "top_candidates": [
     {
       "symbol": "ZBTUSDT",
       "score": 70
     },
     {
-      "symbol": "MUBUSDT",
+      "symbol": "DOGEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "HBARUSDT",
       "score": 60
     },
     {
@@ -21,10 +25,6 @@
     {
       "symbol": "ETCUSDT",
       "score": 60
-    },
-    {
-      "symbol": "KORUBUSDT",
-      "score": 50
     }
   ]
 }
