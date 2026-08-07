@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 12:38:20",
+  "timestamp": "2026-08-07 12:40:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El comité ha decidido mantener la liquidez en USDT. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65, Confianza >= 70% y soporte de libro de órdenes verificado). La alta especulación en futuros y la falta de profundidad en el libro de órdenes para los candidatos sugeridos representan un riesgo inaceptable para el capital institucional.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un estado de alta fragilidad con una clara falta de convicción institucional. Ninguno de los candidatos cumple con el umbral estricto de seguridad (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo de liquidaciones en cascada. Se prioriza la protección del capital sobre la operativa especulativa.",
   "top_candidates": [
+    {
+      "symbol": "NEXOUSDT",
+      "score": 85
+    },
     {
       "symbol": "SUNUSDT",
       "score": 85
     },
     {
-      "symbol": "CAKEUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ZECUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "MUBUSDT",
+      "symbol": "SKHYBUSDT",
       "score": 75
     },
     {
       "symbol": "JSTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BFUSDUSDT",
       "score": 75
     }
   ]
