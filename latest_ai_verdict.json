@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-07 14:10:19",
+  "timestamp": "2026-08-07 14:12:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad técnica generalizada y una falta de convicción institucional. Ningún activo cumple con los criterios de alta convicción (Score >= 65) establecidos por el comité, por lo que se mantiene la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "El mercado se encuentra en un estado de pánico sistémico con una configuración técnica deficiente. Ningún activo cumple con el umbral de Score 65 requerido por el Comité, por lo que la estrategia óptima es la preservación total del capital en espera de una estructura de mercado más favorable.",
   "top_candidates": [
     {
       "symbol": "KAITOUSDT",
       "score": 60
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "DASHUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "ERAUSDT",
       "score": 50
     },
     {
@@ -19,11 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "BABYUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ASTERUSDT",
+      "symbol": "GRAMUSDT",
       "score": 50
     }
   ]
