@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 11:26:26",
+  "updated_at": "2026-08-07 11:28:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha decidido unánimemente mantener la liquidez en USDT. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), y el entorno macro de alta especulación en futuros aumenta el riesgo de trampas de valor."
+    "reasoning": "El comité ha determinado que, a pesar de la existencia de candidatos con scores técnicos de 85, la falta de confirmación en el libro de órdenes (bids < 55%) y la alta volatilidad sintética en el mercado de futuros de BTC invalidan la ejecución de cualquier trade bajo la regla de oro de protección de capital."
   }
 }
