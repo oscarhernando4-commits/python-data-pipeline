@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 02:58:17",
-  "selected_symbol": "BNBUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "BNBUSDT is the only candidate meeting the A+ threshold (Score 85) with significant volume support and institutional backing, making it the optimal choice for a high-conviction long position while avoiding the 'long tail' of weak altcoins.",
+  "timestamp": "2026-08-07 03:00:20",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el requisito de volumen institucional (Volume Surge > 1.2x) ni con una dominancia de Bids superior al 55%, lo que, sumado al entorno de miedo, hace que la estrategia más rentable sea la preservación de capital mediante el modo HOLD.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SUNUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "MUBUSDT",
       "score": 75
     },
     {
-      "symbol": "CRVUSDT",
+      "symbol": "SNXXBUSDT",
       "score": 75
     },
     {
-      "symbol": "GNOUSDT",
+      "symbol": "ETCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PUMPUSDT",
       "score": 75
     }
   ]
