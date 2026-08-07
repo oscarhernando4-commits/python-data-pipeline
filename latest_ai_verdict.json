@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-07 06:18:19",
+  "timestamp": "2026-08-07 06:20:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura técnica fragmentada. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%), y el historial reciente de trades sugiere una alta probabilidad de pérdida en condiciones de mercado neutral. Se prioriza la preservación del capital sobre la ejecución de operaciones de baja probabilidad.",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de los scores técnicos de 75/100, la falta de profundidad en el libro de órdenes (Bids 50%) y el entorno de miedo (Fear 29) no cumplen con los estándares de seguridad A+ para una ejecución de compra, optando por preservar el capital.",
   "top_candidates": [
     {
       "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ADAUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "ENAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "JTOUSDT",
       "score": 75
     }
   ]

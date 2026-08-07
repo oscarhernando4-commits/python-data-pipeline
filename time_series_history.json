@@ -1,12 +1,64 @@
 {
-  "VANRYUSDT": [
+  "ESPUSDT": [
     {
-      "timestamp": "2026-08-07 06:18:10",
-      "price": 0.00328,
-      "score": 15,
-      "rsi": 48.48,
+      "timestamp": "2026-08-07 06:20:13",
+      "price": 0.06801,
+      "score": 25,
+      "rsi": 70.04,
       "macd": "Neutral",
-      "volume_surge": 0.25,
+      "volume_surge": 0.96,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-07 06:20:13",
+      "price": 0.2889,
+      "score": 15,
+      "rsi": 39.31,
+      "macd": "Neutral",
+      "volume_surge": 0.05,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "HYPERUSDT": [
+    {
+      "timestamp": "2026-08-07 06:20:13",
+      "price": 0.0625,
+      "score": 65,
+      "rsi": 50.2,
+      "macd": "Neutral",
+      "volume_surge": 0.45,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LAUSDT": [
+    {
+      "timestamp": "2026-08-07 06:20:13",
+      "price": 0.0498,
+      "score": 15,
+      "rsi": 48.88,
+      "macd": "Neutral",
+      "volume_surge": 0.17,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ALICEUSDT": [
+    {
+      "timestamp": "2026-08-07 06:20:13",
+      "price": 0.1266,
+      "score": 25,
+      "rsi": 72.64,
+      "macd": "Neutral",
+      "volume_surge": 0.18,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
