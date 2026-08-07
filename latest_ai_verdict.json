@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-07 06:00:31",
+  "timestamp": "2026-08-07 06:02:29",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, el comité ha determinado que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos por la Regla de Oro #1. La falta de profundidad en el libro de órdenes y la alta volatilidad en el sector de Layer 1 sugieren un entorno de alta probabilidad de pérdida, por lo que se mantiene la posición en efectivo.",
+  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de ballenas). La alta volatilidad y la falta de una tendencia definida en el sector de Layer 1 hacen que la estrategia más prudente sea mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "SNXXBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHFIUSDT",
       "score": 75
     }
   ]
