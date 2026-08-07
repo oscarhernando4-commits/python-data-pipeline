@@ -1,14 +1,22 @@
 {
-  "timestamp": "2026-08-07 09:06:23",
+  "timestamp": "2026-08-07 09:08:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%) en el contexto actual de mercado, por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids > 55% y confirmación de volumen institucional). El mercado se encuentra en una fase de purga de activos especulativos y la falta de dominancia compradora en el libro de órdenes hace que cualquier entrada sea prematura y de alto riesgo.",
   "top_candidates": [
     {
-      "symbol": "QNTUSDT",
-      "score": 95
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LINKUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "MIRAUSDT",
+      "score": 75
     },
     {
       "symbol": "SOLUSDT",
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "ZECUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LINKUSDT",
       "score": 75
     }
   ]
