@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-07 08:32:25",
-  "total_balance_usd": 20.03,
+  "updated_at": "2026-08-07 08:34:26",
+  "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
   "status": "🟦 Buscando Entrada A+",
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de divergencia defensiva con sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%) y el historial reciente de trades muestra una alta recurrencia de pérdidas en condiciones de mercado neutrales. Se prioriza la preservación del capital sobre la especulación."
+    "reasoning": "A pesar de que varios activos tienen un Score técnico de 75, ninguno cumple con el requisito de dominancia de Bids > 55% ni con una convicción de mercado superior al 70%. El entorno de miedo y la alta volatilidad intradiaria sugieren que el riesgo de 'falling knife' es elevado, por lo que se prioriza la preservación del capital."
   }
 }
