@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-07 04:46:18",
+  "timestamp": "2026-08-07 04:48:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con debilidad extrema en los activos analizados. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65) requerido por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de liquidez en espera de una capitulación clara.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación y alta incertidumbre. Ninguno de los activos analizados alcanza el score técnico mínimo de 65 ni presenta una estructura de libro de órdenes que garantice una entrada con riesgo controlado. Se prioriza la preservación del capital sobre la especulación en activos de baja fuerza relativa.",
   "top_candidates": [
     {
-      "symbol": "DEXEUSDT",
+      "symbol": "NEXOUSDT",
       "score": 60
     },
     {
@@ -15,11 +15,11 @@
       "score": 60
     },
     {
-      "symbol": "GNOUSDT",
-      "score": 60
+      "symbol": "HEIUSDT",
+      "score": 50
     },
     {
-      "symbol": "HEIUSDT",
+      "symbol": "BICOUSDT",
       "score": 50
     },
     {
