@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 12:52:19",
+  "updated_at": "2026-08-07 12:54:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado presenta una divergencia técnica y una desconexión entre futuros y spot, lo que aumenta el riesgo de liquidaciones. Se prioriza la protección del capital sobre la especulación en un entorno de miedo (Fear & Greed 29)."
+    "reasoning": "El mercado se encuentra en un estado de 'zombie' con alta especulación en derivados y falta de soporte real en el libro de órdenes. Ningún activo cumple con los criterios estrictos de convicción A+ del comité, por lo que la estrategia de protección de capital dicta una posición de espera (HOLD) para evitar pérdidas innecesarias."
   }
 }
