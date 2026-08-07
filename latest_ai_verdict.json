@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-07 17:44:20",
+  "timestamp": "2026-08-07 17:46:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral mínimo de seguridad (Score >= 65) y la dominancia de bids en el libro de órdenes es neutral, lo que obliga a mantener la posición en efectivo para evitar pérdidas en un mercado de alta volatilidad y baja convicción.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación y alta toxicidad técnica. Ningún activo cumple con el umbral de convicción A+ (Score >= 65) exigido por el Comité. Se prioriza la preservación de capital sobre la ejecución de trades especulativos de baja calidad.",
   "top_candidates": [
     {
-      "symbol": "JTOUSDT",
-      "score": 70
+      "symbol": "GRAMUSDT",
+      "score": 60
     },
     {
       "symbol": "SOXLBUSDT",
       "score": 60
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "AAOIBUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "ALICEUSDT",
+      "symbol": "JTOUSDT",
       "score": 60
     }
   ]

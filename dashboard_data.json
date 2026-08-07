@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 17:44:20",
+  "updated_at": "2026-08-07 17:46:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ningún activo cumple con el umbral mínimo de seguridad (Score >= 65) y la dominancia de bids en el libro de órdenes es neutral, lo que obliga a mantener la posición en efectivo para evitar pérdidas en un mercado de alta volatilidad y baja convicción."
+    "reasoning": "El mercado se encuentra en un estado de capitulación y alta toxicidad técnica. Ningún activo cumple con el umbral de convicción A+ (Score >= 65) exigido por el Comité. Se prioriza la preservación de capital sobre la ejecución de trades especulativos de baja calidad."
   }
 }
