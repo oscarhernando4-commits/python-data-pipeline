@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-07 23:08:25",
+  "timestamp": "2026-08-07 23:10:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El comité ha evaluado los candidatos y ha determinado que ninguno cumple con el umbral de seguridad A+ (Score >= 65). La debilidad sistémica y la falta de soporte en el libro de órdenes dictan una postura de espera para evitar la exposición a activos en caída libre.",
+  "confidence": 0,
+  "reasoning": "El mercado actual no cumple con los criterios de alta convicción exigidos por el comité. La ausencia de scores técnicos superiores a 65, sumada a la falta de visibilidad en el libro de órdenes y la alta volatilidad, obliga a mantener una postura defensiva para proteger el capital.",
   "top_candidates": [
-    {
-      "symbol": "XAUTUSDT",
-      "score": 60
-    },
     {
       "symbol": "PAXGUSDT",
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "ETHUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     }
   ]
