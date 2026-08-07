@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-07 17:02:20",
+  "timestamp": "2026-08-07 17:04:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con una correlación bajista predominante. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 ni demuestra una dominancia de Bids Compradores superior al 55%, lo que incumple las reglas de oro del comité para la preservación de capital.",
+  "reasoning": "El mercado presenta una estructura de riesgo sistémico elevado y falta de fuerza relativa en los activos analizados. Ningún candidato cumple con los criterios de calidad A+ establecidos por el comité, por lo que la orden es mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "SOXLBUSDT",
+      "score": 60
+    },
     {
       "symbol": "QNTUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 50
     },
     {
-      "symbol": "BICOUSDT",
+      "symbol": "ASTERUSDT",
       "score": 50
     },
     {
       "symbol": "REUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "LAUSDT",
       "score": 50
     }
   ]
