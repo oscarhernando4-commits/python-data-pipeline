@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-07 13:08:19",
+  "timestamp": "2026-08-07 13:10:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con baja liquidez y una correlación inestable. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de protección de capital es la única opción viable según las reglas del comité.",
+  "reasoning": "El mercado presenta una divergencia estructural y falta de soporte institucional en el libro de órdenes. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de ballenas), por lo que se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "XRPUSDT",
       "score": 75
     },
     {
-      "symbol": "APTUSDT",
+      "symbol": "SKHYBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AEROUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "DOTUSDT",
+      "symbol": "SNXXBUSDT",
       "score": 65
     }
   ]
