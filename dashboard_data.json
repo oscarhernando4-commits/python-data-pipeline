@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 15:42:19",
+  "updated_at": "2026-08-07 15:44:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado presenta una divergencia crítica y una alta fragmentación. Ninguno de los candidatos, a pesar de sus scores técnicos, logra superar el umbral de confianza del 70% requerido por el Comité debido a la falta de soporte claro en el libro de órdenes y la inestabilidad macroeconómica. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre."
+    "reasoning": "El mercado presenta una divergencia entre el precio de Bitcoin y la debilidad estructural de las altcoins; al no existir candidatos con un score técnico superior a 65 respaldado por una dominancia de Bids superior al 55%, la estrategia óptima es mantener la liquidez en efectivo para evitar el riesgo de 'falling knives'."
   }
 }
