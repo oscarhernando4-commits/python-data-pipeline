@@ -1,12 +1,12 @@
 {
-  "LDOUSDT": [
+  "LUNCUSDT": [
     {
-      "timestamp": "2026-08-07 20:02:09",
-      "price": 0.2869,
+      "timestamp": "2026-08-07 20:04:10",
+      "price": 4.912e-05,
       "score": 65,
-      "rsi": 51.87,
+      "rsi": 55.79,
       "macd": "Neutral",
-      "volume_surge": 0.13,
+      "volume_surge": 0.01,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +14,38 @@
   ],
   "MIRAUSDT": [
     {
-      "timestamp": "2026-08-07 20:02:09",
+      "timestamp": "2026-08-07 20:04:10",
       "price": 0.0425,
       "score": 45,
       "rsi": 50.71,
       "macd": "Neutral",
-      "volume_surge": 0.07,
+      "volume_surge": 0.16,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "HEMIUSDT": [
+    {
+      "timestamp": "2026-08-07 20:04:10",
+      "price": 0.00524,
+      "score": 45,
+      "rsi": 48.56,
+      "macd": "Neutral",
+      "volume_surge": 0.03,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "HYPERUSDT": [
+    {
+      "timestamp": "2026-08-07 20:04:10",
+      "price": 0.0632,
+      "score": 45,
+      "rsi": 54.27,
+      "macd": "Neutral",
+      "volume_surge": 0.16,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
