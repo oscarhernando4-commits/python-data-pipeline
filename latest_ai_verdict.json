@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-07 21:36:19",
+  "timestamp": "2026-08-07 21:38:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el requisito de dominancia de Bids >= 55% ni con una estructura técnica que garantice una alta probabilidad de éxito, por lo que se decide proteger la liquidez total.",
+  "reasoning": "El mercado presenta una alta volatilidad con baja convicción institucional. Ninguno de los candidatos analizados supera el umbral de riesgo exigido por el comité, por lo que se decide mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "AVAXUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "ICPUSDT",
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "QNTUSDT",
       "score": 75
     }
   ]
