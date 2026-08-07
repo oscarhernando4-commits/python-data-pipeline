@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-07 03:30:19",
+  "timestamp": "2026-08-07 03:32:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual se encuentra en un estado de capitulación sistémica con una correlación bajista generalizada. Ninguno de los candidatos analizados cumple con el umbral de Score Técnico A+ (>= 65) ni con una dominancia de Bids en el libro de órdenes que justifique una entrada. Por lo tanto, el comité ha decidido unánimemente mantener la posición en efectivo para evitar el riesgo de 'cuchillos cayendo' y proteger el capital institucional.",
+  "reasoning": "El mercado se encuentra en una fase de distribución y debilidad estructural. Ningún activo cumple con los criterios de alta convicción (Score A+ >= 65) exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital mediante el mantenimiento de la posición en efectivo.",
   "top_candidates": [
+    {
+      "symbol": "BNBUSDT",
+      "score": 60
+    },
     {
       "symbol": "MUBUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "BNBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TRXUSDT",
-      "score": 60
-    },
-    {
       "symbol": "PAXGUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ZROUSDT",
       "score": 60
     }
   ]
