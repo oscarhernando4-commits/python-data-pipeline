@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-07 13:46:21",
+  "timestamp": "2026-08-07 13:48:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de aversión al riesgo selectiva con una estructura técnica fragmentada. Ninguno de los candidatos cumple con el umbral de confianza A+ (Score >= 65 y confirmación de liquidez) necesario para garantizar la preservación del capital, por lo que se opta por una postura de espera (HOLD) para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta un entorno de alta incertidumbre y falta de soporte institucional claro. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ del comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
   "top_candidates": [
     {
       "symbol": "ALGOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "VETUSDT",
-      "score": 75
+      "symbol": "GRAMUSDT",
+      "score": 65
     },
     {
       "symbol": "ERAUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "ONDOUSDT",
       "score": 65
     }
   ]
