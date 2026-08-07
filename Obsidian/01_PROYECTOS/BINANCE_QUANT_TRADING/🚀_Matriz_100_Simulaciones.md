@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-07 17:06:20
+date: 2026-08-07 17:08:21
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $20.04 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-07 17:06:20`
+> ⏱️ **Última Actualización:** `2026-08-07 17:08:21`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00409216 BNB` (`~$2.42 USD`)
@@ -58,26 +58,26 @@ date: 2026-08-07 17:06:20
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-001** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-002** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-003** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-004** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-005** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-006** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-007** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-008** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-009** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-010** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-011** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-012** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-013** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-014** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-015** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-016** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-017** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-018** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-019** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
-| **SIM-020** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🔵 En Curso` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-001** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-002** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-003** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-004** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-005** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-006** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-007** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-008** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-009** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-010** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-011** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-012** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-013** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-014** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-015** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-016** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-017** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-018** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-019** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
+| **SIM-020** | **QNTUSDT** | `#20` | `4W/16L` | 26-08-07<br>09:06 | `🛡️ Protegida (BE)` | **`$92.05`** (`-$7.95`) | 🔵 En Vivo |
 
 ---
 
