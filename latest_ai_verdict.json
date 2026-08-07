@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-07 21:26:18",
+  "timestamp": "2026-08-07 21:28:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y capitulación selectiva. Ninguno de los candidatos cumple con el umbral de confianza A+ (Score >= 65 con confirmación de libro de órdenes) necesario para garantizar la preservación del capital, por lo que se mantiene la posición en efectivo.",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo en un entorno de mercado con sentimiento de miedo y alta inestabilidad técnica.",
   "top_candidates": [
     {
       "symbol": "DOGEUSDT",
-      "score": 100
+      "score": 90
     },
     {
       "symbol": "ASTERUSDT",
       "score": 85
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "AVAXUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     }
   ]
