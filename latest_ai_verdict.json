@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 11:38:19",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 95,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de que APTUSDT tiene un score técnico alto, no cumple con los requisitos de profundidad de libro de órdenes ni con la convicción necesaria para mitigar el riesgo sistémico actual. Se prioriza la preservación del capital sobre la especulación en un mercado con alta fragilidad de derivados.",
+  "timestamp": "2026-08-07 11:40:14",
+  "selected_symbol": "APTUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "APTUSDT es el único candidato que cumple con el umbral de score A+ (85/100) y pertenece al sector dominante de infraestructura, mostrando una resiliencia superior frente al miedo generalizado del mercado.",
   "top_candidates": [
     {
       "symbol": "APTUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "LAUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "AEROUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
-      "symbol": "SPYBUSDT",
+      "symbol": "ARBUSDT",
       "score": 75
     }
   ]
