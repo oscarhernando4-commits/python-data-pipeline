@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 04:16:19",
+  "timestamp": "2026-08-07 04:18:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado carece de activos con la calidad técnica y el soporte de liquidez necesarios para una entrada segura; por lo tanto, se mantiene la liquidez en 100% USDT para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "El mercado presenta una estructura de debilidad generalizada con scores técnicos inferiores a 65 y una alta correlación bajista. No existen condiciones A+ para operar, por lo que la estrategia institucional es proteger la liquidez y evitar el riesgo de 'cuchillos cayendo' hasta que se estabilicen los niveles de soporte.",
   "top_candidates": [
+    {
+      "symbol": "DEXEUSDT",
+      "score": 60
+    },
     {
       "symbol": "GNOUSDT",
       "score": 60
     },
     {
-      "symbol": "ERAUSDT",
-      "score": 50
+      "symbol": "ONDOUSDT",
+      "score": 55
     },
     {
       "symbol": "BICOUSDT",
       "score": 50
     },
     {
-      "symbol": "VICUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "JSTUSDT",
+      "symbol": "ERAUSDT",
       "score": 50
     }
   ]
