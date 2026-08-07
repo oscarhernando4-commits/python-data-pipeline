@@ -1,12 +1,51 @@
 {
-  "AAOIBUSDT": [
+  "JTOUSDT": [
     {
-      "timestamp": "2026-08-07 09:48:13",
-      "price": 143.0,
-      "score": 50,
-      "rsi": 65.73,
+      "timestamp": "2026-08-07 09:50:10",
+      "price": 0.5034,
+      "score": 40,
+      "rsi": 70.77,
       "macd": "Neutral",
-      "volume_surge": 0.02,
+      "volume_surge": 0.47,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ROBOUSDT": [
+    {
+      "timestamp": "2026-08-07 09:50:10",
+      "price": 0.01339,
+      "score": 15,
+      "rsi": 38.24,
+      "macd": "Neutral",
+      "volume_surge": 0.13,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "HYPERUSDT": [
+    {
+      "timestamp": "2026-08-07 09:50:10",
+      "price": 0.0622,
+      "score": 65,
+      "rsi": 50.56,
+      "macd": "Neutral",
+      "volume_surge": 0.13,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-07 09:50:10",
+      "price": 0.2867,
+      "score": 15,
+      "rsi": 36.61,
+      "macd": "Neutral",
+      "volume_surge": 0.43,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
