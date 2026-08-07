@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 11:24:16",
+  "timestamp": "2026-08-07 11:26:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos de 75/100, la falta de dominancia clara en el libro de órdenes y la fragilidad del entorno macro actual no cumplen con los criterios de alta convicción (A+) exigidos por el Chief Risk Officer.",
+  "reasoning": "El comité ha decidido unánimemente mantener la liquidez en USDT. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), y el entorno macro de alta especulación en futuros aumenta el riesgo de trampas de valor.",
   "top_candidates": [
     {
-      "symbol": "ADAUSDT",
-      "score": 75
-    },
-    {
       "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SHIBUSDT",
-      "score": 75
+      "score": 85
     },
     {
       "symbol": "ETHUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "SUIUSDT",
       "score": 75
     }
   ]
