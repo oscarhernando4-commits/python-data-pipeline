@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-07 05:28:15",
+  "timestamp": "2026-08-07 05:30:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con los requisitos estrictos de Score Técnico (>= 65) ni con la confirmación de liquidez en el Orderbook. El mercado presenta una alta volatilidad y un sesgo neutral que, estadísticamente, ha resultado en pérdidas recurrentes en las simulaciones pasadas. Se prioriza la preservación del capital sobre la ejecución de trades mediocres.",
+  "reasoning": "El mercado actual no ofrece activos con la calidad técnica ni la profundidad de liquidez necesaria para garantizar una operación de alta probabilidad de éxito, por lo que se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "ETCUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "MUBUSDT",
+      "symbol": "SNXXBUSDT",
       "score": 60
     },
     {
-      "symbol": "SNXXBUSDT",
+      "symbol": "MUBUSDT",
       "score": 60
     },
     {
@@ -23,8 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "ZAMAUSDT",
-      "score": 60
+      "symbol": "HEIUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "KORUBUSDT",
+      "score": 50
     }
   ]
 }
