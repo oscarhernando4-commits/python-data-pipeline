@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-07 11:18:20",
+  "timestamp": "2026-08-07 11:20:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y confirmación de volumen institucional). La alta tasa de fallos en las simulaciones recientes bajo condiciones de mercado neutral obliga a una postura de espera para evitar el riesgo de 'falling knives' y preservar el capital.",
+  "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en un estado de alta especulación y baja convicción, por lo que la estrategia institucional es mantenerse en liquidez (USDT) para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "SUIUSDT",
-      "score": 75
-    },
-    {
       "symbol": "ICPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
@@ -25,6 +17,14 @@
     {
       "symbol": "ZBTUSDT",
       "score": 70
+    },
+    {
+      "symbol": "BONKUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "FETUSDT",
+      "score": 65
     }
   ]
 }
