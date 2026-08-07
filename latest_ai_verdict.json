@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 15:28:21",
+  "timestamp": "2026-08-07 15:30:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras deliberar, el comité concluye que, a pesar de la existencia de activos con scores técnicos de 85, la falta de profundidad histórica, la neutralidad del libro de órdenes y el entorno macro de miedo (Fear & Greed 29) no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación de alta frecuencia.",
+  "reasoning": "El mercado se encuentra en un estado de alta selectividad y riesgo asimétrico donde la mayoría de los activos no cumplen con los criterios de convicción A+ (Score >= 65 y Bids > 55%). Se prioriza la preservación del capital sobre la operativa especulativa en un entorno de miedo generalizado.",
   "top_candidates": [
-    {
-      "symbol": "ICPUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SPYBUSDT",
-      "score": 85
-    },
     {
       "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "ICPUSDT",
       "score": 75
     },
     {
       "symbol": "VETUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SPYBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AEROUSDT",
       "score": 75
     }
   ]
