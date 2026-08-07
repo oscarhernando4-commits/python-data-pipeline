@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-07 11:06:20",
+  "timestamp": "2026-08-07 11:08:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y volumen confirmado). El mercado presenta una trampa de liquidez y alta volatilidad, por lo que la estrategia de protección de capital es prioritaria.",
+  "reasoning": "El mercado se encuentra en un entorno de alta selectividad y riesgo elevado. Ninguno de los candidatos presenta una dominancia clara en el libro de órdenes ni una estructura técnica que cumpla con el umbral de convicción A+ exigido por el comité, por lo que la estrategia óptima es preservar el capital en efectivo.",
   "top_candidates": [
+    {
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
     {
       "symbol": "ADAUSDT",
       "score": 75
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "SUIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
       "score": 75
     },
     {
