@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 15:20:31",
+  "updated_at": "2026-08-07 15:22:24",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con score técnico de 75, la falta de profundidad en el libro de órdenes y la inestabilidad del entorno macro actual invalidan cualquier entrada. Se prioriza la preservación del capital sobre la especulación en un mercado con alta probabilidad de liquidación."
+    "reasoning": "El mercado se encuentra en una fase de alta fragilidad con una correlación bajista sistémica. Ninguno de los candidatos analizados alcanza el umbral de Score A+ (>= 65) requerido por el comité para garantizar la preservación del capital. Se prioriza la liquidez ante la falta de una base de soporte institucional sólida."
   }
 }
