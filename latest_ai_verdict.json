@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-07 21:18:19",
+  "timestamp": "2026-08-07 21:20:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta selectividad y riesgo elevado. Ninguno de los candidatos cumple con la totalidad de los requisitos de convicción A+ (especialmente la falta de confirmación en el libro de órdenes y la inestabilidad técnica), por lo que la estrategia más prudente es mantener la posición en efectivo (HOLD) para evitar pérdidas innecesarias.",
+  "reasoning": "Ninguno de los candidatos cumple con el requisito de dominancia de Bids compradores (>= 55%) necesario para mitigar el riesgo de slippage y asegurar el soporte institucional, por lo que se mantiene la posición en efectivo para evitar pérdidas en un mercado de alta incertidumbre.",
   "top_candidates": [
+    {
+      "symbol": "PAXGUSDT",
+      "score": 75
+    },
     {
       "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "ATOMUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "FETUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "QNTUSDT",
       "score": 75
     }
   ]

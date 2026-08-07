@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 21:18:19",
+  "updated_at": "2026-08-07 21:20:17",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de alta selectividad y riesgo elevado. Ninguno de los candidatos cumple con la totalidad de los requisitos de convicción A+ (especialmente la falta de confirmación en el libro de órdenes y la inestabilidad técnica), por lo que la estrategia más prudente es mantener la posición en efectivo (HOLD) para evitar pérdidas innecesarias."
+    "reasoning": "Ninguno de los candidatos cumple con el requisito de dominancia de Bids compradores (>= 55%) necesario para mitigar el riesgo de slippage y asegurar el soporte institucional, por lo que se mantiene la posición en efectivo para evitar pérdidas en un mercado de alta incertidumbre."
   }
 }
