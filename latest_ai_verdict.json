@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-07 23:16:20",
+  "timestamp": "2026-08-07 23:18:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución agresiva con una configuración de riesgo inaceptable. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en efectivo (HOLD) hasta que las condiciones macro y técnicas mejoren significativamente.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada. Ninguno de los activos analizados alcanza el umbral de Score A+ (>= 65) requerido por el Comité para una operación de alta probabilidad. La estrategia de preservación de capital dicta que, ante la ausencia de una ventaja estadística clara, la posición correcta es el efectivo (USDT) para evitar la exposición a 'cuchillos cayendo' y volatilidad no confirmada.",
   "top_candidates": [
     {
-      "symbol": "ETHUSDT",
+      "symbol": "TAOUSDT",
       "score": 60
     },
     {
@@ -15,11 +15,11 @@
       "score": 60
     },
     {
-      "symbol": "GIGGLEUSDT",
+      "symbol": "LAUSDT",
       "score": 60
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "DEXEUSDT",
       "score": 60
     },
     {
