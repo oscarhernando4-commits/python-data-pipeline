@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-07 15:26:31",
+  "timestamp": "2026-08-07 15:28:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre y debilidad estructural. Ninguno de los candidatos, a pesar de sus scores técnicos, ofrece la seguridad necesaria para una entrada de alta convicción. La prioridad es la preservación del capital ante la falta de soporte institucional en el libro de órdenes y la inestabilidad macroeconómica.",
+  "confidence": 0,
+  "reasoning": "Tras deliberar, el comité concluye que, a pesar de la existencia de activos con scores técnicos de 85, la falta de profundidad histórica, la neutralidad del libro de órdenes y el entorno macro de miedo (Fear & Greed 29) no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación de alta frecuencia.",
   "top_candidates": [
+    {
+      "symbol": "ICPUSDT",
+      "score": 85
+    },
     {
       "symbol": "SPYBUSDT",
       "score": 85
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "VETUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LUNCUSDT",
       "score": 75
     }
   ]
