@@ -1,12 +1,64 @@
 {
-  "LDOUSDT": [
+  "ZKPUSDT": [
     {
-      "timestamp": "2026-08-07 17:26:13",
-      "price": 0.286,
+      "timestamp": "2026-08-07 17:28:12",
+      "price": 0.0444,
       "score": 0,
-      "rsi": 42.69,
+      "rsi": 40.12,
       "macd": "Neutral",
-      "volume_surge": 0.35,
+      "volume_surge": 0.68,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ENSOUSDT": [
+    {
+      "timestamp": "2026-08-07 17:28:12",
+      "price": 1.011,
+      "score": 0,
+      "rsi": 40.8,
+      "macd": "Neutral",
+      "volume_surge": 0.73,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "MIRAUSDT": [
+    {
+      "timestamp": "2026-08-07 17:28:12",
+      "price": 0.0424,
+      "score": 0,
+      "rsi": 47.77,
+      "macd": "Neutral",
+      "volume_surge": 2.49,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ACTUSDT": [
+    {
+      "timestamp": "2026-08-07 17:28:12",
+      "price": 0.00987,
+      "score": 15,
+      "rsi": 44.45,
+      "macd": "Neutral",
+      "volume_surge": 0.44,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-07 17:28:12",
+      "price": 0.4928,
+      "score": 30,
+      "rsi": 50.87,
+      "macd": "Neutral",
+      "volume_surge": 0.45,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

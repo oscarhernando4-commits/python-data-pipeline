@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-07 17:26:21",
+  "timestamp": "2026-08-07 17:28:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de apatía institucional con una correlación bajista predominante. Ningún activo cumple con los criterios de alta convicción (Score >= 65) exigidos por el Comité, por lo que la estrategia óptima es mantener la liquidez en espera de una mejora en la estructura de mercado.",
+  "reasoning": "El mercado se encuentra en un estado de indecisión con scores técnicos mediocres y falta de soporte institucional en el libro de órdenes. Siguiendo la Regla de Oro #1, al no existir candidatos con un Score >= 65, se mantiene la posición en efectivo para evitar el riesgo de 'cuchillos cayendo'.",
   "top_candidates": [
     {
       "symbol": "SOXLBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "QNTUSDT",
       "score": 60
     },
     {
@@ -19,11 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "QNTUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "LAUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 50
     }
   ]
