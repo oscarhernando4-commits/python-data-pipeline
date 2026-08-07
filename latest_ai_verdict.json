@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-07 15:32:24",
+  "timestamp": "2026-08-07 15:34:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%). La alta volatilidad y la falta de soporte institucional en el libro de órdenes, sumado al sentimiento de miedo, dictan una postura de preservación de capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de compresión de volatilidad con alta probabilidad de falsas rupturas, por lo que la estrategia óptima es mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
+      "symbol": "ICPUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "TAOUSDT",
+      "score": 75
+    },
+    {
       "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AEROUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SPYBUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "LUNCUSDT",
+      "symbol": "AEROUSDT",
       "score": 75
     }
   ]
