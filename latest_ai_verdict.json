@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 15:44:22",
+  "timestamp": "2026-08-07 15:46:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado presenta una divergencia entre el precio de Bitcoin y la debilidad estructural de las altcoins; al no existir candidatos con un score técnico superior a 65 respaldado por una dominancia de Bids superior al 55%, la estrategia óptima es mantener la liquidez en efectivo para evitar el riesgo de 'falling knives'.",
+  "confidence": 0,
+  "reasoning": "El mercado presenta una estructura de alta incertidumbre con un sentimiento de miedo predominante y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ exigido por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
+      "symbol": "TAOUSDT",
+      "score": 75
+    },
+    {
       "symbol": "LTCUSDT",
-      "score": 85
+      "score": 75
     },
     {
       "symbol": "VETUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ICPUSDT",
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "CAKEUSDT",
       "score": 75
     },
     {
-      "symbol": "ARBUSDT",
+      "symbol": "SPYBUSDT",
       "score": 75
     }
   ]
