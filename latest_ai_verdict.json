@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-07 17:34:23",
+  "timestamp": "2026-08-07 17:36:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, ninguno alcanza el umbral de Score 65 requerido por el Comité. La fragilidad del mercado y la falta de profundidad en el libro de órdenes para los activos analizados obligan a mantener una postura de espera para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado actual carece de la convicción necesaria para una ejecución de alta probabilidad. Ningún activo cumple con el umbral de riesgo A+ exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una mejor configuración técnica.",
   "top_candidates": [
     {
       "symbol": "SOXLBUSDT",
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
+      "symbol": "ALICEUSDT",
+      "score": 60
+    },
+    {
       "symbol": "JTOUSDT",
       "score": 60
     },
     {
       "symbol": "ZROUSDT",
       "score": 55
-    },
-    {
-      "symbol": "ACEUSDT",
-      "score": 50
     }
   ]
 }
