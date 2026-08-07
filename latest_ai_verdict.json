@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-07 18:30:17",
+  "timestamp": "2026-08-07 18:32:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con una clara debilidad en la mayoría de los activos. Ninguno de los candidatos analizados alcanza el umbral de seguridad (Score 65+) exigido por el comité para mitigar el riesgo de 'falling knives'. Por lo tanto, la estrategia óptima es mantener la liquidez en efectivo y esperar una estructura de mercado más favorable.",
+  "reasoning": "El mercado carece de activos con un Score Técnico superior a 65 y presenta una estructura de alta volatilidad con riesgo de 'trampa de liquidez'. Siguiendo la Regla de Oro #1, se ha decidido no ejecutar ninguna operación para proteger el capital del fondo.",
   "top_candidates": [
-    {
-      "symbol": "HEIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "FETUSDT",
-      "score": 60
-    },
     {
       "symbol": "NEXOUSDT",
       "score": 60
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "GRAMUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "EPICUSDT",
       "score": 50
     }
   ]
