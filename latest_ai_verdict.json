@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-08-07 13:42:15",
+  "timestamp": "2026-08-07 13:44:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo sistémico actual. Se prioriza la preservación del capital ante la incertidumbre macroeconómica y la falta de profundidad en el libro de órdenes.",
+  "reasoning": "El mercado se encuentra en un estado de reconfiguración con baja convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital, por lo que se opta por una postura de espera (HOLD) para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "CAKEUSDT",
       "score": 85
     },
     {
-      "symbol": "XRPUSDT",
-      "score": 75
+      "symbol": "AAOIBUSDT",
+      "score": 80
     },
     {
       "symbol": "BNBUSDT",
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "XRPUSDT",
       "score": 75
     }
   ]
