@@ -1,12 +1,25 @@
 {
-  "ACTUSDT": [
+  "HEMIUSDT": [
     {
-      "timestamp": "2026-08-07 18:00:11",
-      "price": 0.00978,
-      "score": 15,
-      "rsi": 40.14,
+      "timestamp": "2026-08-07 18:02:08",
+      "price": 0.00521,
+      "score": 0,
+      "rsi": 44.55,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.19,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-07 18:02:08",
+      "price": 0.4907,
+      "score": 30,
+      "rsi": 47.06,
+      "macd": "Neutral",
+      "volume_surge": 0.06,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
