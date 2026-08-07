@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-07 12:00:19",
+  "timestamp": "2026-08-07 12:02:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y confirmación de soporte institucional). La alta volatilidad y la falta de datos históricos en los candidatos de mayor score presentan un riesgo inaceptable para el capital institucional.",
+  "reasoning": "El mercado se encuentra en una fase de alta especulación con una divergencia peligrosa entre el sentimiento de miedo y la acción del precio en altcoins. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 con soporte real en el libro de órdenes), por lo que la decisión institucional es mantenerse en liquidez total para evitar pérdidas por volatilidad inducida.",
   "top_candidates": [
     {
       "symbol": "ZBTUSDT",
       "score": 85
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "JSTUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "JSTUSDT",
+      "symbol": "AVAXUSDT",
       "score": 75
     }
   ]
