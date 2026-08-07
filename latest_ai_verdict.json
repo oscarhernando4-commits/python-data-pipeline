@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-07 16:22:22",
+  "timestamp": "2026-08-07 16:24:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos con un Score Técnico A+ (>= 65) que cumplan con los criterios de seguridad y volumen institucional necesarios. Ante la debilidad sistémica de las altcoins y la falta de soporte claro en el libro de órdenes, la estrategia óptima es preservar el capital en espera de una configuración de mercado más robusta.",
+  "reasoning": "El mercado se encuentra en una fase de distribución por agotamiento con baja liquidez. Ninguno de los candidatos analizados alcanza el Score técnico mínimo de 65/100 requerido por el Comité para garantizar la preservación del capital, por lo que se mantiene la posición en efectivo.",
   "top_candidates": [
-    {
-      "symbol": "XLMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ZECUSDT",
-      "score": 60
-    },
     {
       "symbol": "BNBUSDT",
       "score": 60
@@ -23,8 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "SUNUSDT",
       "score": 60
+    },
+    {
+      "symbol": "XPLUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 50
     }
   ]
 }
