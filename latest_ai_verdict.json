@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-07 21:44:20",
+  "timestamp": "2026-08-07 21:46:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de consolidación defensiva con alta incertidumbre. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes) necesario para operar bajo las reglas de protección de capital. Se prioriza la preservación de la liquidez en USDT.",
+  "reasoning": "A pesar de que varios activos tienen un score técnico de 75, ninguno cumple con el requisito de dominancia de Bids > 55% ni con una confirmación de volumen institucional clara, lo que obliga a mantener la liquidez para evitar pérdidas innecesarias en un mercado de alta fragmentación.",
   "top_candidates": [
     {
       "symbol": "ETHUSDT",
-      "score": 85
+      "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "BTCUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ICPUSDT",
       "score": 75
     }
   ]
