@@ -1,12 +1,25 @@
 {
-  "ROBOUSDT": [
+  "GLMRUSDT": [
     {
-      "timestamp": "2026-08-07 09:44:13",
-      "price": 0.01339,
-      "score": 15,
-      "rsi": 38.25,
+      "timestamp": "2026-08-07 09:46:11",
+      "price": 0.008282,
+      "score": 60,
+      "rsi": 51.8,
       "macd": "Neutral",
-      "volume_surge": 0.24,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-07 09:46:11",
+      "price": 0.2865,
+      "score": 15,
+      "rsi": 35.76,
+      "macd": "Neutral",
+      "volume_surge": 0.08,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
