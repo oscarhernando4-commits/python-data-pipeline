@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-07 20:04:19",
+  "timestamp": "2026-08-07 20:06:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). La alta tasa de pérdidas en trades pasados bajo condiciones de mercado neutral y la falta de profundidad histórica en 4H obligan a mantener la posición en efectivo para evitar el riesgo de 'falling knives'.",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de los scores técnicos de 75/100, la falta de profundidad en el libro de órdenes, el sentimiento de miedo en el mercado y la alta tasa de fallos en condiciones neutrales, no cumplen con los criterios de convicción A+ necesarios para ejecutar una operación de compra, priorizando la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
@@ -23,7 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
       "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 75
     }
   ]
