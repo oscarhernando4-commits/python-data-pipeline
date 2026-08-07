@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-07 17:28:21",
+  "timestamp": "2026-08-07 17:30:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión con scores técnicos mediocres y falta de soporte institucional en el libro de órdenes. Siguiendo la Regla de Oro #1, al no existir candidatos con un Score >= 65, se mantiene la posición en efectivo para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "Ninguno de los activos analizados alcanza el umbral mínimo de Score Técnico (65) ni presenta una estructura de libro de órdenes favorable, por lo que se mantiene la posición en efectivo para evitar pérdidas en un mercado de alta volatilidad y baja convicción.",
   "top_candidates": [
     {
       "symbol": "SOXLBUSDT",
       "score": 60
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "SAGAUSDT",
       "score": 60
     },
     {
-      "symbol": "NEXOUSDT",
+      "symbol": "JTOUSDT",
       "score": 60
     },
     {
-      "symbol": "C98USDT",
+      "symbol": "ACEUSDT",
       "score": 50
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "QNTUSDT",
       "score": 50
     }
   ]
