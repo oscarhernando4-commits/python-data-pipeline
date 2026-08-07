@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-07 08:48:24",
+  "timestamp": "2026-08-07 08:50:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica con un sentimiento de miedo predominante. Ningún activo cumple con el requisito de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de protección de capital es la única opción viable.",
+  "reasoning": "El mercado presenta una fragilidad sistémica con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con la regla de oro de tener una dominancia de bids compradores superior al 55% ni una confirmación de momentum clara, lo que aumenta el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la especulación en un entorno de estancamiento defensivo.",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
       "score": 75
     },
     {
@@ -23,7 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BANKUSDT",
       "score": 75
     }
   ]
