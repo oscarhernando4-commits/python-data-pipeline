@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-07 02:00:20",
+  "timestamp": "2026-08-07 02:02:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos presenta una ventaja estadística clara ni un soporte de libro de órdenes que garantice una alta probabilidad de éxito, por lo que la política de preservación de capital dicta una postura de espera (HOLD).",
+  "reasoning": "El mercado presenta una alta volatilidad selectiva sin una dirección clara. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 + Bids > 55% + Tendencia confirmada), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (HOLD).",
   "top_candidates": [
+    {
+      "symbol": "TRUMPUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "XLMUSDT",
+      "score": 75
+    },
     {
       "symbol": "ENAUSDT",
       "score": 75
@@ -17,14 +25,6 @@
     {
       "symbol": "NEXOUSDT",
       "score": 75
-    },
-    {
-      "symbol": "TRUMPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BTCUSDT",
-      "score": 65
     }
   ]
 }
