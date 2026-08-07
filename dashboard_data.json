@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 11:52:17",
+  "updated_at": "2026-08-07 11:54:18",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que, a pesar de algunos scores técnicos elevados, la falta de profundidad en el libro de órdenes, el entorno de miedo macro y la alta tasa de fallos en condiciones de mercado neutral hacen que cualquier operación sea de alto riesgo. Se prioriza la preservación del capital sobre la especulación, esperando una señal de acumulación más clara."
+    "reasoning": "El mercado presenta una estructura de alto riesgo con una divergencia entre el volumen de futuros y el spot. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de libro de órdenes y soporte histórico), por lo que la estrategia de preservación de capital dicta mantenerse en liquidez (HOLD)."
   }
 }
