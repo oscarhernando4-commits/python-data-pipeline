@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-07 09:24:21",
+  "timestamp": "2026-08-07 09:26:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Debido a la alta incertidumbre macroeconómica, la falta de muros de soporte claros en el libro de órdenes y la alta tasa de fallos en las simulaciones recientes, el comité ha decidido mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre y hostilidad, con una falta de soporte institucional claro en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 65%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (HOLD).",
   "top_candidates": [
     {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "MIRAUSDT",
+      "symbol": "AVAXUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "PENGUUSDT",
+      "symbol": "ZECUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "MIRAUSDT",
       "score": 75
     }
   ]
