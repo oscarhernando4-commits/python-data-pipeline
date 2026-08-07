@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-07 03:16:15",
+  "timestamp": "2026-08-07 03:18:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que se prioriza la preservación de capital ante la alta fragilidad sistémica.",
+  "reasoning": "El comité ha determinado que el mercado actual se encuentra en una fase de alta incertidumbre y baja profundidad de liquidez. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 ni muestra una dominancia de Bids superior al 55%, lo que invalida cualquier entrada bajo nuestras reglas de gestión de riesgo. Se prioriza la preservación del capital sobre la especulación en activos de baja convicción.",
   "top_candidates": [
-    {
-      "symbol": "BNBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SNXXBUSDT",
-      "score": 60
-    },
     {
       "symbol": "DOGEUSDT",
       "score": 60
     },
     {
+      "symbol": "BNBUSDT",
+      "score": 60
+    },
+    {
       "symbol": "MUBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ETCUSDT",
       "score": 60
     },
     {
