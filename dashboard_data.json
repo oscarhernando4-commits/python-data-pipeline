@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 23:30:21",
+  "updated_at": "2026-08-07 23:32:18",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de alta toxicidad y fragilidad sistémica. Ninguno de los activos analizados alcanza el umbral de calidad A+ (Score >= 65) requerido por el comité. La estrategia institucional prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez y alta incertidumbre regulatoria."
+    "reasoning": "El mercado presenta una correlación bajista extrema y una falta de activos con un score técnico superior a 65. Siguiendo las reglas de oro de preservación de capital, el comité ha decidido no ejecutar ninguna operación, manteniendo la liquidez en espera de una configuración de alta probabilidad."
   }
 }
