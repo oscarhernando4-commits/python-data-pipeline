@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-07 05:50:16",
+  "timestamp": "2026-08-07 05:52:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado se encuentra en una fase de alta incertidumbre y baja liquidez institucional. Ninguno de los candidatos cumple con los requisitos estrictos de riesgo y convicción necesarios para una ejecución segura, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada con una dominancia de Bids estancada en el 50% para todos los candidatos. Ningún activo cumple con el umbral de convicción A+ (Bids >= 55%) necesario para mitigar el riesgo de 'falling knives' en un entorno de miedo (Fear & Greed 29). Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
       "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SNXXBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ADAUSDT",
       "score": 75
     },
     {
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "WLFIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PAXGUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETCUSDT",
+      "symbol": "SOXLBUSDT",
       "score": 75
     }
   ]
