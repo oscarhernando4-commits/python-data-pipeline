@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-07 08:54:21",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia crítica y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%), por lo que la estrategia óptima es mantener la liquidez en espera de una mejor configuración técnica.",
+  "timestamp": "2026-08-07 08:56:26",
+  "selected_symbol": "AAVEUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "AAVEUSDT es el único candidato que supera el umbral de 65 puntos con un score de 85, respaldado por su liderazgo en el sector DeFi y una resiliencia superior ante el entorno macro actual. Se prioriza la acumulación en retrocesos para maximizar el potencial de la tendencia institucional, manteniendo un estricto control de riesgo mediante el uso de Trailing Stop.",
   "top_candidates": [
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
+      "symbol": "AAVEUSDT",
+      "score": 85
     },
     {
       "symbol": "ZECUSDT",
@@ -20,6 +16,10 @@
     },
     {
       "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
