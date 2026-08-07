@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-07 07:42:20",
+  "timestamp": "2026-08-07 07:44:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de consolidación defensiva con un sentimiento de miedo predominante. Ninguno de los candidatos analizados presenta una confluencia de soporte institucional (Orderbook > 55%) y fuerza técnica (Score >= 65) necesaria para garantizar una operación de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo de capitulación en un entorno de mercado con sesgo neutral y alta volatilidad.",
   "top_candidates": [
     {
       "symbol": "MIRAUSDT",
       "score": 85
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "MUBUSDT",
       "score": 75
     },
     {
-      "symbol": "NVDABUSDT",
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
