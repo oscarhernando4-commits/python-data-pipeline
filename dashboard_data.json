@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 06:44:22",
+  "updated_at": "2026-08-07 06:46:26",
   "total_balance_usd": 20.03,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo de 'fakeout' en un entorno de mercado neutral y volátil."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La alta volatilidad y la falta de soporte claro en el libro de órdenes, sumado al historial de pérdidas en condiciones de mercado neutral, dictan una postura de preservación de capital."
   }
 }
