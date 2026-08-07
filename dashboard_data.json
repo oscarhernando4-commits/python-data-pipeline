@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 08:18:23",
+  "updated_at": "2026-08-07 08:20:26",
   "total_balance_usd": 20.03,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de estancamiento defensivo con alta aversión al riesgo. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes), por lo que la estrategia más rentable es mantener la liquidez en USDT para evitar la purga de liquidez en altcoins."
+    "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital en un entorno de mercado con sentimiento de miedo y alta volatilidad."
   }
 }

@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-07 08:18:21",
+  "timestamp": "2026-08-07 08:20:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento defensivo con alta aversión al riesgo. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes), por lo que la estrategia más rentable es mantener la liquidez en USDT para evitar la purga de liquidez en altcoins.",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital en un entorno de mercado con sentimiento de miedo y alta volatilidad.",
   "top_candidates": [
     {
       "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XLMUSDT",
       "score": 75
     },
     {
@@ -19,12 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "ZROUSDT",
-      "score": 75
+      "symbol": "ZBTUSDT",
+      "score": 70
     },
     {
-      "symbol": "NVDABUSDT",
-      "score": 75
+      "symbol": "BTCUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "ACEUSDT",
+      "score": 65
     }
   ]
 }
