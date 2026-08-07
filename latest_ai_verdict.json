@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-07 19:06:20",
+  "timestamp": "2026-08-07 19:08:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un riesgo sistémico elevado con una correlación bajista predominante. Ningún activo cumple con los criterios de selección A+ exigidos por el comité, por lo que la estrategia óptima es la preservación del capital en liquidez (USDT) para evitar las trampas de liquidez observadas en las simulaciones históricas.",
+  "reasoning": "El comité ha determinado que el mercado carece de la convicción técnica y el soporte de liquidez necesarios para ejecutar una operación de compra. Todos los candidatos presentan scores técnicos inferiores al umbral de seguridad de 65, lo que, sumado a la alta volatilidad y el sentimiento de miedo, obliga a mantener una postura de espera (HOLD) para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "UNIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "AAOIBUSDT",
       "score": 60
     },
     {
@@ -15,16 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "VETUSDT",
+      "symbol": "ARBUSDT",
       "score": 60
     },
     {
-      "symbol": "BABYUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "HFTUSDT",
-      "score": 50
+      "symbol": "VETUSDT",
+      "score": 60
     }
   ]
 }
