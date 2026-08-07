@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-07 16:06:24",
+  "timestamp": "2026-08-07 16:08:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad estructural. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de soporte institucional necesaria para garantizar una operación de bajo riesgo. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja convicción.",
+  "reasoning": "El mercado presenta una divergencia técnica y un sentimiento de miedo que, sumado a la falta de soporte claro en el libro de órdenes y la alta tasa de fallos en trades recientes, hace que la estrategia más prudente sea mantener la liquidez en USDT (HOLD) para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "ZECUSDT",
-      "score": 70
+      "score": 85
     },
     {
       "symbol": "SUNUSDT",
-      "score": 70
+      "score": 85
     },
     {
       "symbol": "VETUSDT",
-      "score": 70
+      "score": 85
     },
     {
       "symbol": "LTCUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "LINKUSDT",
-      "score": 60
+      "score": 75
     }
   ]
 }
