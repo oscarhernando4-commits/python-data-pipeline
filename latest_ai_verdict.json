@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-07 19:10:16",
+  "timestamp": "2026-08-07 19:12:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica y falta de volumen institucional, lo que hace que cualquier posición larga sea de alto riesgo. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65), por lo que la estrategia óptima es mantener la liquidez y evitar la exposición a activos con historial de pérdidas.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta correlación negativa. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (65/100) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
   "top_candidates": [
+    {
+      "symbol": "VETUSDT",
+      "score": 70
+    },
     {
       "symbol": "UNIUSDT",
       "score": 60
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "NEXOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ARBUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 60
     }
   ]

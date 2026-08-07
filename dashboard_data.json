@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 19:10:16",
+  "updated_at": "2026-08-07 19:12:18",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de capitulación técnica y falta de volumen institucional, lo que hace que cualquier posición larga sea de alto riesgo. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65), por lo que la estrategia óptima es mantener la liquidez y evitar la exposición a activos con historial de pérdidas."
+    "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta correlación negativa. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (65/100) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción."
   }
 }
