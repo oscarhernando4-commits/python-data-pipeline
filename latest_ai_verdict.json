@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-08 06:32:18",
+  "timestamp": "2026-08-08 06:34:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre y debilidad estructural. Ninguno de los activos analizados cumple con el requisito de Score A+ (>= 65) ni presenta una ventaja estadística clara en el libro de órdenes. Para evitar el riesgo de 'falling knives' y proteger el capital, el comité ha decidido no ejecutar ninguna operación de compra.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. Ningún activo alcanza el score técnico mínimo de 65, y el entorno macro es de alta volatilidad bajista, por lo que se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
+    {
+      "symbol": "DOGEUSDT",
+      "score": 60
+    },
     {
       "symbol": "GRAMUSDT",
       "score": 60
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "ASTERUSDT",
       "score": 60
     },
     {
@@ -19,12 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "ARBUSDT",
+      "symbol": "ICPUSDT",
       "score": 60
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 50
     }
   ]
 }
