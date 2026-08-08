@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 02:42:20",
+  "timestamp": "2026-08-08 02:44:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica elevada y una falta de profundidad en los libros de órdenes. A pesar de que BTC tiene un score técnico de 85, la ausencia de una confirmación clara en el soporte de 5M y la regla de oro de no operar activos sin convicción A+ obligan a mantener la posición en efectivo para preservar el capital.",
+  "reasoning": "El mercado presenta una divergencia estructural severa y una falta de convicción direccional. Ningún activo cumple con el umbral de seguridad A+ exigido por el comité, por lo que la estrategia óptima es el mantenimiento de la liquidez (HOLD) para evitar trampas de liquidez bajista.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 85
     },
     {
+      "symbol": "SOLUSDT",
+      "score": 70
+    },
+    {
       "symbol": "SPYBUSDT",
       "score": 70
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 60
+      "symbol": "NIGHTUSDT",
+      "score": 70
     },
     {
-      "symbol": "FETUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "NEXOUSDT",
+      "symbol": "SHIBUSDT",
       "score": 60
     }
   ]
