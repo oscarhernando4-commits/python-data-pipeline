@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 19:16:18",
+  "timestamp": "2026-08-08 19:18:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad técnica generalizada. Ningún activo cumple con los criterios estrictos de calidad A+ (Score >= 65) ni presenta una estructura de liquidez favorable en el libro de órdenes. Se prioriza la protección del capital (Cash-is-King) hasta que se observe una rotación de capital saludable y una mejora en la fuerza relativa de los activos.",
+  "reasoning": "El mercado se encuentra en una fase de 'trampa de liquidez' donde las altcoins carecen de soporte institucional real. Ningún activo cumple con el requisito de Score A+ (>= 65) y la falta de datos de profundidad en el libro de órdenes aumenta el riesgo de slippage, por lo que la decisión es mantener la liquidez en USDT.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "PAXGUSDT",
-      "score": 60
-    },
-    {
       "symbol": "ORDIUSDT",
       "score": 60
     },
     {
       "symbol": "SUNUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "GNOUSDT",
       "score": 60
     }
   ]
