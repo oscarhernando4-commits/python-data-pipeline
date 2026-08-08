@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-08 20:18:16",
+  "timestamp": "2026-08-08 20:20:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado se encuentra en una fase de alta incertidumbre y baja volatilidad, por lo que la estrategia óptima es la preservación de capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo en un entorno de mercado fragmentado y con sentimiento de miedo, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
-    {
-      "symbol": "UNIUSDT",
-      "score": 75
-    },
     {
       "symbol": "LTCUSDT",
       "score": 75
@@ -20,6 +16,10 @@
     },
     {
       "symbol": "PENGUUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TRUMPUSDT",
       "score": 75
     },
     {
