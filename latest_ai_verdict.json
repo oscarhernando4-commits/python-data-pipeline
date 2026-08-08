@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 22:44:18",
+  "timestamp": "2026-08-08 22:46:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una mayoría de activos en zona de debilidad. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65) exigido por el Comité, por lo que la estrategia óptima es la preservación total del capital mediante el mantenimiento de la liquidez en USDT.",
+  "confidence": 95,
+  "reasoning": "El comité ha determinado que no existen activos que cumplan con el umbral de seguridad A+ (Score >= 65). La alta correlación bajista y la falta de profundidad en el libro de órdenes para los candidatos actuales hacen que cualquier operación sea de alto riesgo, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
@@ -23,8 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "HOMEUSDT",
+      "symbol": "GNOUSDT",
       "score": 60
+    },
+    {
+      "symbol": "EPICUSDT",
+      "score": 50
     }
   ]
 }
