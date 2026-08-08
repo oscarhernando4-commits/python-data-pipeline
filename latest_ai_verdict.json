@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-08 01:40:19",
+  "timestamp": "2026-08-08 01:42:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes > 55%). El entorno macro es incierto y la memoria histórica sugiere que operar en estas condiciones de miedo y alta volatilidad resulta en pérdidas recurrentes. Se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una paridad de fuerzas que no permite una ejecución con alta probabilidad de éxito. Siguiendo la Regla #1 de no perder dinero, el comité ha decidido mantener la liquidez en espera de una estructura de mercado más clara y menos volátil.",
   "top_candidates": [
     {
       "symbol": "SHIBUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "TRXUSDT",
       "score": 85
     },
     {
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XLMUSDT",
       "score": 75
     },
     {
