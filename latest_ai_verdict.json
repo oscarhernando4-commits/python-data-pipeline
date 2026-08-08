@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-08 00:22:20",
+  "timestamp": "2026-08-08 00:24:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de Score técnico A+ (>= 65) ni con una dominancia de Bids superior al 55%. El mercado se encuentra en un estado de capitulación técnica y alta incertidumbre, por lo que el comité ha decidido mantener la liquidez en espera de una estructura de mercado más clara y segura.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los estándares de seguridad y convicción A+ necesarios para operar, optando por preservar el capital en efectivo.",
   "top_candidates": [
     {
       "symbol": "PAXGUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "DEXEUSDT",
       "score": 70
     },
     {
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "TRXUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DOTUSDT",
       "score": 60
     },
     {
