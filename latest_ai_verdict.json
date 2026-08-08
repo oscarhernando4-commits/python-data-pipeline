@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-08 21:32:17",
+  "timestamp": "2026-08-08 21:34:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de neutralidad forzada con una alta fragmentación. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 65) ni con la confirmación de soporte en el libro de órdenes, lo que aumenta el riesgo de ser atrapados en una trampa de liquidez. Se prioriza la preservación del capital hasta que surja una señal de alta convicción.",
+  "reasoning": "El mercado se encuentra en una fase de distribución y falta de liquidez estructural. Ningún activo cumple con los criterios estrictos de selección (Score >= 65) establecidos por el Comité, por lo que la orden es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' y volatilidad especulativa.",
   "top_candidates": [
-    {
-      "symbol": "TAOUSDT",
-      "score": 60
-    },
     {
       "symbol": "LINKUSDT",
       "score": 60
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "TAOUSDT",
       "score": 60
     },
     {
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "PEPEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ALGOUSDT",
       "score": 60
     }
   ]
