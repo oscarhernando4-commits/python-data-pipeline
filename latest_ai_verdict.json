@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-08 05:16:20",
+  "timestamp": "2026-08-08 05:18:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de apatía y fragmentación de liquidez. Ninguno de los candidatos cumple con el umbral de convicción A+ ni con la confirmación de soporte institucional en el libro de órdenes, por lo que la estrategia óptima es el resguardo de capital en efectivo.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (Score >= 65 y confirmación de volumen) necesarios para ejecutar una operación, priorizando la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "BABYUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
@@ -19,12 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "BROCCOLI714USDT",
-      "score": 75
-    },
-    {
-      "symbol": "PENDLEUSDT",
-      "score": 75
+      "symbol": "ZBTUSDT",
+      "score": 70
     }
   ]
 }
