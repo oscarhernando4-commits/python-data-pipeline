@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 20:54:16",
+  "timestamp": "2026-08-08 20:56:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la fuerza relativa de algunos activos, el entorno de mercado actual no cumple con los criterios estrictos de seguridad y convicción (Score >= 65 y Bids > 55%) necesarios para desplegar capital sin riesgo de 'trampa de valor'.",
+  "reasoning": "El mercado se encuentra en un estado de baja convicción con una alta probabilidad de volatilidad adversa. Ninguno de los candidatos cumple con los requisitos estrictos de riesgo (Score >= 65 y Bids > 55%) para una entrada de alta probabilidad, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "SUIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "WLFIUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "TRUMPUSDT",
+      "score": 75
+    },
+    {
       "symbol": "CRVUSDT",
       "score": 75
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "ETHFIUSDT",
       "score": 75
     }
   ]
