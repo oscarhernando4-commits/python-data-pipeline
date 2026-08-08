@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-08 04:48:20",
+  "timestamp": "2026-08-08 04:50:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de distribución silenciosa con alta incertidumbre regulatoria y falta de liquidez en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%), por lo que la estrategia óptima es preservar el capital en efectivo (USDT) para evitar las trampas de liquidez observadas en las simulaciones históricas.",
+  "reasoning": "Ninguno de los candidatos cumple con la exigencia de convicción A+ (Score >= 65 con confirmación de soporte y volumen). La incertidumbre macro, sumada a la falta de datos de profundidad en el libro de órdenes, obliga a mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
+      "symbol": "BABYUSDT",
       "score": 75
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "BABYUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "GRAMUSDT",
+      "symbol": "PUMPUSDT",
       "score": 75
     }
   ]
