@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-08 23:06:22",
+  "timestamp": "2026-08-08 23:08:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y alta incertidumbre. Ninguno de los candidatos analizados alcanza el umbral de calidad A+ (Score >= 65) requerido por el comité, y el historial de simulaciones advierte sobre el alto riesgo de pérdidas en las condiciones actuales. Se prioriza la protección del capital sobre la especulación.",
+  "reasoning": "El mercado se encuentra en una fase de alta aversión al riesgo con una clara divergencia entre el flujo institucional hacia Bitcoin y la debilidad estructural de las altcoins. Ningún candidato cumple con los criterios de convicción A+ exigidos por el comité, por lo que la orden es proteger la liquidez y esperar una mejor configuración técnica.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "GRAMUSDT",
       "score": 60
     },
     {
@@ -17,10 +21,6 @@
     {
       "symbol": "ATOMUSDT",
       "score": 60
-    },
-    {
-      "symbol": "TSTUSDT",
-      "score": 50
     },
     {
       "symbol": "EPICUSDT",
