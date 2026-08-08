@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-08 03:50:23",
+  "timestamp": "2026-08-08 03:52:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia estructural y un sentimiento de miedo que, sumado a la falta de muros de soporte claros en el libro de órdenes, obliga a mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de alta volatilidad.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes, la incertidumbre macroeconómica y el historial de pérdidas recientes en condiciones similares, no se cumplen los criterios de seguridad A+ para ejecutar una operación de compra.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "SUIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ADAUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LINKUSDT",
       "score": 75
     }
   ]
