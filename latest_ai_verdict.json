@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-08 19:40:16",
+  "timestamp": "2026-08-08 19:42:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual presenta una toxicidad elevada y una falta de convicción institucional en las altcoins analizadas. Ningún activo cumple con el requisito estricto de un Score Técnico >= 65, por lo que, bajo la Regla de Oro #1, se prohíbe cualquier posición larga para evitar trampas de liquidez y pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los estándares de alta convicción (Score A+). La falta de soporte institucional claro en el libro de órdenes y la alta volatilidad en activos de baja profundidad técnica obligan a una postura de espera para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "GRAMUSDT",
+      "score": 60
+    },
     {
       "symbol": "ADAUSDT",
       "score": 60
     },
     {
       "symbol": "UNIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "GRAMUSDT",
       "score": 60
     },
     {
