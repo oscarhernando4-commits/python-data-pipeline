@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 09:08:19",
+  "timestamp": "2026-08-08 09:10:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de los scores técnicos teóricos, la falta de soporte real en el libro de órdenes y la inestabilidad del mercado neutral hacen que cualquier operación sea de alto riesgo y baja probabilidad de éxito, por lo que se prioriza la protección del capital.",
+  "reasoning": "El mercado presenta una fragmentación estructural severa y una falta de convicción institucional en los libros de órdenes. Ninguno de los candidatos, a pesar de sus scores técnicos, logra superar el umbral de seguridad exigido por el Comité para evitar pérdidas, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "DOGEUSDT",
@@ -19,12 +19,12 @@
       "score": 85
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 75
+      "symbol": "SPYBUSDT",
+      "score": 85
     },
     {
-      "symbol": "ETHUSDT",
-      "score": 75
+      "symbol": "ETHFIUSDT",
+      "score": 85
     }
   ]
 }
