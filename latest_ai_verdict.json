@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 03:24:22",
+  "timestamp": "2026-08-08 03:26:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido por unanimidad mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos elevados en algunos activos, la falta de profundidad en el libro de órdenes y la inestabilidad macroeconómica no cumplen con los criterios de alta convicción exigidos por el Chief Risk Officer.",
+  "reasoning": "A pesar de que activos como BNB y TAO presentan scores técnicos de 85, la ausencia de una dominancia clara en el libro de órdenes y el entorno macro de alta fragilidad regulatoria impiden cumplir con la regla de oro de convicción A+. Se prioriza la preservación del capital sobre la especulación en un mercado de distribución de pánico.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "SUIUSDT",
       "score": 75
     }
   ]
