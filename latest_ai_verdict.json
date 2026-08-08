@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 10:28:19",
+  "timestamp": "2026-08-08 10:30:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un 'limbo de liquidez' con alta volatilidad y falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité de Riesgo, por lo que se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado se encuentra en un estado de fragmentación y alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT).",
   "top_candidates": [
     {
-      "symbol": "ARBUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SKHYBUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "ONDOUSDT",
       "score": 75
     },
     {
-      "symbol": "AXTIBUSDT",
+      "symbol": "FETUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ARBUSDT",
       "score": 75
     }
   ]
