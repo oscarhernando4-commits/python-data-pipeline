@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-08 11:26:21",
+  "timestamp": "2026-08-08 11:28:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral mínimo de Score Técnico (>= 65) ni con una dominancia de Bids superior al 55%. El mercado se encuentra en un estado de distribución institucional, por lo que la estrategia más rentable es la preservación del capital mediante el modo HOLD.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de Score técnico A+ (>= 65) ni con una dominancia de Bids superior al 55%, por lo que la decisión institucional es mantener la liquidez en espera de mejores condiciones.",
   "top_candidates": [
     {
-      "symbol": "GOOGLBUSDT",
+      "symbol": "ASTERUSDT",
       "score": 70
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "SPYBUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 60
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "SPYBUSDT",
       "score": 60
     }
   ]
