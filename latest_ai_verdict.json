@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 02:40:20",
+  "timestamp": "2026-08-08 02:42:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad estructural alta con una clara aversión al riesgo institucional. Ningún activo cumple con el requisito estricto de Score >= 65 combinado con una dominancia de Bids > 55% y una estructura técnica de alta convicción. Se prioriza la preservación del capital sobre la operativa especulativa en un entorno de baja liquidez.",
+  "reasoning": "El mercado presenta una fragilidad sistémica elevada y una falta de profundidad en los libros de órdenes. A pesar de que BTC tiene un score técnico de 85, la ausencia de una confirmación clara en el soporte de 5M y la regla de oro de no operar activos sin convicción A+ obligan a mantener la posición en efectivo para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
@@ -15,15 +15,15 @@
       "score": 70
     },
     {
-      "symbol": "SOLUSDT",
-      "score": 60
-    },
-    {
       "symbol": "BCHUSDT",
       "score": 60
     },
     {
-      "symbol": "FILUSDT",
+      "symbol": "FETUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NEXOUSDT",
       "score": 60
     }
   ]
