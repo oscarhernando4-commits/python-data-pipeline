@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 03:20:21",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de dominancia en el libro de órdenes y el entorno macro de miedo (Fear 30) no cumplen con los criterios de alta convicción (A+) necesarios para proteger el capital. Se prioriza la preservación de la liquidez sobre la ejecución especulativa.",
+  "timestamp": "2026-08-08 03:22:23",
+  "selected_symbol": "TAOUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "TAOUSDT es el único activo que cumple con el umbral de Score A+ (85/100) y pertenece al sector dominante de IA. La estrategia se limita a un scalping de alta convicción bajo estricta gestión de riesgo, evitando la exposición prolongada en un mercado global de alta incertidumbre.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
-      "score": 75
+      "symbol": "TAOUSDT",
+      "score": 85
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     }
   ]
