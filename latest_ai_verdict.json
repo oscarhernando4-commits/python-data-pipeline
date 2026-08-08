@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-08 23:32:22",
+  "timestamp": "2026-08-08 23:34:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual no ofrece ninguna oportunidad que cumpla con los criterios de alta convicción (Score >= 65) y soporte de liquidez, por lo que se prioriza la preservación del capital sobre la operativa especulativa.",
+  "reasoning": "El mercado se encuentra en una fase de liquidación sistémica con scores técnicos insuficientes (máximo 60/100) y falta de profundidad en el libro de órdenes. Siguiendo la regla de oro de no operar activos con score menor a 65 y evitar 'cuchillos cayendo', el comité decide mantener la posición en efectivo (USDT) hasta que surja una oportunidad de alta convicción.",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
+      "symbol": "GRAMUSDT",
       "score": 60
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "HOMEUSDT",
       "score": 60
     },
     {
@@ -19,12 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "BICOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "EPICUSDT",
-      "score": 50
+      "symbol": "CAKEUSDT",
+      "score": 60
     }
   ]
 }

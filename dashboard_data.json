@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 23:32:23",
+  "updated_at": "2026-08-08 23:34:19",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado actual no ofrece ninguna oportunidad que cumpla con los criterios de alta convicción (Score >= 65) y soporte de liquidez, por lo que se prioriza la preservación del capital sobre la operativa especulativa."
+    "reasoning": "El mercado se encuentra en una fase de liquidación sistémica con scores técnicos insuficientes (máximo 60/100) y falta de profundidad en el libro de órdenes. Siguiendo la regla de oro de no operar activos con score menor a 65 y evitar 'cuchillos cayendo', el comité decide mantener la posición en efectivo (USDT) hasta que surja una oportunidad de alta convicción."
   }
 }
