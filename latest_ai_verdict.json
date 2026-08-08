@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 04:32:18",
+  "timestamp": "2026-08-08 04:34:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de consolidación defensiva con un sentimiento de miedo predominante. Ninguno de los candidatos presenta una configuración técnica A+ con soporte de liquidez institucional (Bids > 55%) que garantice la protección del capital. Siguiendo la regla de oro de no operar en entornos neutrales de baja probabilidad de éxito, el comité ha decidido mantener la liquidez en espera de mejores condiciones.",
+  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. La falta de datos de liquidez, sumada a la alta tasa de fallos en el historial de trades bajo condiciones neutrales, obliga a mantener una postura defensiva y preservar el capital.",
   "top_candidates": [
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "BABYUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
-      "symbol": "ARBUSDT",
+      "symbol": "ADAUSDT",
       "score": 75
     }
   ]
