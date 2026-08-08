@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 08:20:22",
+  "updated_at": "2026-08-08 08:22:19",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de alta fragilidad con una correlación negativa predominante. Ningún activo cumple con los criterios estrictos de Score A+ (>= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que la estrategia de preservación de capital dicta mantener la liquidez en USDT."
+    "reasoning": "El mercado presenta un entorno de alta incertidumbre con correlación bajista y falta de profundidad en el libro de órdenes. Ningún activo cumple con los criterios estrictos de convicción A+ del comité, por lo que la estrategia de preservación de capital dicta mantenerse en liquidez (HOLD)."
   }
 }
