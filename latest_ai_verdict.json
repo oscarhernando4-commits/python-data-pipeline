@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 05:56:53",
+  "timestamp": "2026-08-08 05:58:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de alta selectividad y riesgo asimétrico donde los candidatos no cumplen con el umbral de convicción A+ ni con la profundidad de libro de órdenes necesaria para una ejecución segura, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de distribución defensiva con alta probabilidad de capitulación, por lo que la estrategia óptima es preservar el capital en USDT.",
   "top_candidates": [
     {
       "symbol": "DOGEUSDT",
@@ -15,16 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "ADAUSDT",
-      "score": 75
-    },
-    {
       "symbol": "ASTERUSDT",
       "score": 75
     },
     {
       "symbol": "AAVEUSDT",
       "score": 75
+    },
+    {
+      "symbol": "UNIUSDT",
+      "score": 70
     }
   ]
 }

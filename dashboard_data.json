@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 05:56:55",
+  "updated_at": "2026-08-08 05:58:18",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta un entorno de alta selectividad y riesgo asimétrico donde los candidatos no cumplen con el umbral de convicción A+ ni con la profundidad de libro de órdenes necesaria para una ejecución segura, por lo que se prioriza la preservación del capital."
+    "reasoning": "Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de distribución defensiva con alta probabilidad de capitulación, por lo que la estrategia óptima es preservar el capital en USDT."
   }
 }
