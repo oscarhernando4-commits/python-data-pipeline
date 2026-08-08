@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 15:30:23",
+  "updated_at": "2026-08-08 15:32:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sesgo neutral predominante. Ninguno de los candidatos, a pesar de sus scores técnicos, logra superar el filtro de riesgo del comité debido a la falta de soporte real en el libro de órdenes y la debilidad del volumen institucional. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo."
+    "reasoning": "El mercado se encuentra en una fase de alta volatilidad con baja convicción institucional. Ninguno de los activos analizados supera el umbral de riesgo exigido por el Comité, por lo que la estrategia óptima es mantenerse en liquidez (HOLD) para evitar la exposición a 'falling knives' y pérdidas innecesarias."
   }
 }
