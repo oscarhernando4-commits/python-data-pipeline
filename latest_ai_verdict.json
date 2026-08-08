@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 21:14:16",
+  "timestamp": "2026-08-08 21:16:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución terminal con scores técnicos mediocres (60/100) y falta de profundidad en el libro de órdenes. Siguiendo la Regla de Oro #1, al no existir candidatos con Score >= 65, el comité decide mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado actual no cumple con los criterios de calidad A+ exigidos por el comité. La falta de profundidad en el libro de órdenes, sumada a scores técnicos mediocres (60 o inferior), obliga a mantener una postura defensiva en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "TAOUSDT",
+      "symbol": "SUIUSDT",
       "score": 60
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "TAOUSDT",
       "score": 60
     },
     {
@@ -19,7 +19,7 @@
       "score": 60
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "JUPUSDT",
       "score": 60
     },
     {
