@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-08 10:38:19",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de muros de soporte claros en el orderbook, sumado al entorno de miedo, dictan una postura de preservación de capital (HOLD) hasta que el mercado muestre una estructura de acumulación definida.",
+  "timestamp": "2026-08-08 10:40:19",
+  "selected_symbol": "FETUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "Tras analizar el mercado, FETUSDT destaca como el candidato con mayor fuerza relativa y alineación sectorial (AI). A pesar del sentimiento de miedo global, la estructura técnica y el volumen de compra institucional justifican una posición de alta convicción con protección de capital inmediata.",
   "top_candidates": [
+    {
+      "symbol": "FETUSDT",
+      "score": 85
+    },
     {
       "symbol": "VETUSDT",
       "score": 85
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ASTERUSDT",
+      "symbol": "XRPUSDT",
       "score": 75
     }
   ]
