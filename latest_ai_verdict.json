@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 05:10:18",
+  "timestamp": "2026-08-08 05:12:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el requisito de dominancia de Bids >= 55% ni con una estructura de mercado que garantice una alta probabilidad de éxito, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en un estado de purga selectiva con alta incertidumbre regulatoria. Ninguno de los candidatos presenta una estructura de libro de órdenes con soporte institucional (Bids > 55%) ni una convicción técnica superior a 70% que cumpla con las reglas de oro del comité. Se mantiene la liquidez en espera de una capitulación clara o una reversión confirmada.",
   "top_candidates": [
     {
       "symbol": "ETCUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "PENDLEUSDT",
       "score": 85
     },
     {
@@ -21,6 +17,10 @@
     {
       "symbol": "BROCCOLI714USDT",
       "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 70
     },
     {
       "symbol": "LINKUSDT",
