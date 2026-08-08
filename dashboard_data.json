@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 00:12:20",
+  "updated_at": "2026-08-08 00:14:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo sistémico actual, por lo que se prioriza la preservación de capital."
+    "reasoning": "A pesar de que varios activos presentan un score técnico de 85, la ausencia de una dominancia clara en el libro de órdenes (Bids >= 55%) y el entorno de mercado de miedo (Fear 30) impiden cumplir con el umbral de convicción A+ exigido por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre."
   }
 }
