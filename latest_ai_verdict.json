@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 01:28:22",
+  "timestamp": "2026-08-08 01:30:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras deliberar, el comité concluye que, a pesar de los scores técnicos elevados en SHIB y ATOM, la falta de soporte en el libro de órdenes y la inestabilidad macroeconómica impiden una ejecución segura. Se mantiene la posición en efectivo para evitar la exposición a posibles cascadas de liquidación.",
+  "reasoning": "El mercado actual carece de la convicción técnica y el soporte de liquidez necesarios para cumplir con los estándares de seguridad del comité. Ningún activo supera el umbral de Score 65, por lo que la estrategia óptima es la preservación del capital mediante el modo HOLD.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
-      "score": 85
+      "symbol": "AVAXUSDT",
+      "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
-      "score": 85
+      "symbol": "SHIBUSDT",
+      "score": 60
     },
     {
       "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XLMUSDT",
-      "score": 75
+      "score": 60
     },
     {
       "symbol": "DOGEUSDT",
-      "score": 75
+      "score": 60
+    },
+    {
+      "symbol": "SUIUSDT",
+      "score": 60
     }
   ]
 }
