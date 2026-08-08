@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 00:52:24",
+  "updated_at": "2026-08-08 00:54:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado actual presenta una fragilidad extrema y una falta de profundidad en el libro de órdenes. Ningún candidato cumple con la regla de oro de convicción A+ (Score >= 65 con soporte institucional confirmado), por lo que la decisión unánime es mantener la liquidez para evitar pérdidas innecesarias en un entorno de alta volatilidad sin tendencia."
+    "reasoning": "El mercado se encuentra en un estado de alta toxicidad con una clara tendencia de distribución institucional. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital. Se prioriza la protección de la liquidez frente a la especulación de alto riesgo."
   }
 }
