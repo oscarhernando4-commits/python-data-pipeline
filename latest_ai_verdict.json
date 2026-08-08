@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 11:28:24",
+  "timestamp": "2026-08-08 11:30:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de Score técnico A+ (>= 65) ni con una dominancia de Bids superior al 55%, por lo que la decisión institucional es mantener la liquidez en espera de mejores condiciones.",
+  "reasoning": "El mercado se encuentra en un estado de alta fragilidad con una ausencia total de activos que cumplan con el umbral de calidad A+ (Score >= 65). La estrategia institucional es preservar el capital y evitar las 'trampas de liquidez' observadas en los activos de baja capitalización.",
   "top_candidates": [
     {
+      "symbol": "AVAXUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "DOTUSDT",
+      "score": 60
+    },
+    {
       "symbol": "ASTERUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "KORUBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "BONKUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TRUMPUSDT",
       "score": 60
     },
     {
       "symbol": "SPYBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "LAUSDT",
       "score": 60
     }
   ]
