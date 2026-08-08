@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-08 07:18:24",
+  "timestamp": "2026-08-08 07:20:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y distribución, con una falta de profundidad en el libro de órdenes y una alta tasa de fallos en trades recientes. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Debido a la falta de confirmación en el libro de órdenes y la alta volatilidad con resultados negativos en las simulaciones recientes, el comité ha decidido mantener la liquidez en espera de una configuración técnica de mayor calidad.",
   "top_candidates": [
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "PAXGUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
       "symbol": "ICPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TIAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "VANRYUSDT",
       "score": 75
     }
   ]
