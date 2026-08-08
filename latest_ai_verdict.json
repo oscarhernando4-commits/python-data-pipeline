@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-08 19:26:16",
+  "timestamp": "2026-08-08 19:28:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una tendencia neutral predominante. Ninguno de los candidatos cumple con el umbral de calidad A+ (Score >= 65) ni con la profundidad de liquidez necesaria para mitigar el riesgo de slippage, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Ningún activo cumple con los criterios estrictos de selección (Score >= 65 y confirmación de liquidez). El mercado se encuentra en una fase de alta vulnerabilidad y baja convicción, por lo que la estrategia óptima es la preservación de capital hasta que surja una oportunidad con una probabilidad de éxito superior al 70%.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
       "score": 70
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 60
     },
     {
       "symbol": "ZECUSDT",
@@ -19,12 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "GNOUSDT",
+      "symbol": "SUNUSDT",
       "score": 60
-    },
-    {
-      "symbol": "ALLOUSDT",
-      "score": 50
     }
   ]
 }
