@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-08 19:06:17",
+  "timestamp": "2026-08-08 19:08:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una correlación bajista extrema. Ninguno de los candidatos analizados alcanza el umbral de calidad A+ (Score >= 65) exigido por el comité para mitigar el riesgo de ruina. Se prioriza la protección del capital sobre la operativa especulativa en un entorno de alta volatilidad y baja convicción.",
+  "reasoning": "El comité ha determinado que, bajo las reglas de oro, ningún activo cumple con el umbral de Score A+ (>= 65) ni con la dominancia de Bids requerida. La alta volatilidad y la falta de una tendencia clara en los activos analizados sugieren que el riesgo de 'trampa de valor' es elevado, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
-      "symbol": "GRAMUSDT",
-      "score": 70
+      "symbol": "ADAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "UNIUSDT",
+      "score": 60
     },
     {
       "symbol": "PAXGUSDT",
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "DOTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "POLUSDT",
       "score": 60
     },
     {
