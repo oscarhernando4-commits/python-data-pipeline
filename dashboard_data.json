@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 08:56:25",
+  "updated_at": "2026-08-08 08:58:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de fragmentación defensiva con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de soporte de ballenas y volumen), por lo que la estrategia más rentable es mantener la liquidez en espera de una ruptura técnica definitiva."
+    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y baja liquidez, donde los candidatos con buen score técnico carecen de soporte en el libro de órdenes. Siguiendo la Regla de Oro #1 y #5, el comité decide mantener la liquidez en USDT para evitar el riesgo de 'bull traps' en un entorno de mercado neutral."
   }
 }
