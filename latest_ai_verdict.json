@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 10:00:21",
+  "timestamp": "2026-08-08 10:02:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo en un mercado de alta incertidumbre.",
+  "reasoning": "Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) y la falta de profundidad en el libro de órdenes junto con el sentimiento de miedo generalizado dictan una postura de preservación de capital (HOLD) hasta que el mercado muestre una estructura de acumulación clara.",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "GRAMUSDT",
+      "symbol": "DOGEUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "AVAXUSDT",
       "score": 60
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "BABYUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "GRAMUSDT",
       "score": 60
     }
   ]
