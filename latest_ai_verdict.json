@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-08-08 05:08:21",
+  "timestamp": "2026-08-08 05:10:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión con un sesgo NEUTRAL predominante y una alta tasa de fallos en las simulaciones recientes. Ningún activo cumple con los criterios estrictos de convicción A+ y soporte de liquidez, por lo que la estrategia de preservación de capital es la única opción viable bajo el mandato de no perder dinero.",
+  "reasoning": "Ninguno de los candidatos cumple con el requisito de dominancia de Bids >= 55% ni con una estructura de mercado que garantice una alta probabilidad de éxito, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "ETCUSDT",
       "score": 85
     },
     {
-      "symbol": "GRAMUSDT",
-      "score": 75
+      "symbol": "PENDLEUSDT",
+      "score": 85
     },
     {
       "symbol": "ETHFIUSDT",
@@ -23,8 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "PENDLEUSDT",
-      "score": 75
+      "symbol": "LINKUSDT",
+      "score": 70
     }
   ]
 }
