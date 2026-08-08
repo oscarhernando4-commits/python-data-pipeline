@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-08 21:24:18",
+  "timestamp": "2026-08-08 21:26:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una debilidad técnica generalizada. Ninguno de los candidatos cumple con el umbral de Score A+ (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de 'falling knives', por lo que la decisión unánime es mantener la liquidez en efectivo.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica donde los activos candidatos no alcanzan el umbral de calidad A+ (Score >= 65) exigido por el comité. La falta de dominancia clara en el libro de órdenes y la alta volatilidad histórica de los activos analizados obligan a una postura de espera para evitar trampas de valor.",
   "top_candidates": [
-    {
-      "symbol": "LINKUSDT",
-      "score": 60
-    },
     {
       "symbol": "SUIUSDT",
       "score": 60
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "ALGOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ATOMUSDT",
       "score": 60
     }
   ]
