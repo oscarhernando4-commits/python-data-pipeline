@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 02:26:20",
+  "timestamp": "2026-08-08 02:28:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y distribución institucional. Ninguno de los candidatos cumple con el umbral de seguridad (Score >= 65) ni con la confirmación de soporte en el libro de órdenes. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y riesgo sistémico.",
+  "reasoning": "Ningún activo cumple con el umbral de Score Técnico >= 65 ni con la dominancia de Bids necesaria para mitigar el riesgo. El entorno macro es hostil y la memoria histórica sugiere una alta probabilidad de pérdida en las condiciones actuales. Se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "NIGHTUSDT",
       "score": 70
     },
     {
+      "symbol": "SHIBUSDT",
+      "score": 60
+    },
+    {
       "symbol": "SOLUSDT",
       "score": 60
     },
     {
+      "symbol": "PEPEUSDT",
+      "score": 60
+    },
+    {
       "symbol": "SPYBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "NEXOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "CAKEUSDT",
       "score": 60
     }
   ]
