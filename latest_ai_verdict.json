@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-08 08:32:28",
+  "timestamp": "2026-08-08 08:34:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%). La falta de soporte institucional en el libro de órdenes y la alta volatilidad en el entorno de 'Fear' dictan una política de preservación de capital (HOLD) para evitar pérdidas innecesarias.",
+  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, el libro de órdenes no muestra la dominancia de compradores necesaria (>= 55%) para mitigar el riesgo en un entorno de mercado con sentimiento de miedo. La alta tasa de pérdidas en trades recientes bajo condiciones 'NEUTRAL' obliga al comité a mantener una postura defensiva y preservar el capital.",
   "top_candidates": [
-    {
-      "symbol": "HBARUSDT",
-      "score": 75
-    },
     {
       "symbol": "PAXGUSDT",
       "score": 75
@@ -19,7 +15,11 @@
       "score": 75
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "HBARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ONDOUSDT",
       "score": 75
     },
     {
