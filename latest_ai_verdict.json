@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-08 19:42:15",
+  "timestamp": "2026-08-08 19:44:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los estándares de alta convicción (Score A+). La falta de soporte institucional claro en el libro de órdenes y la alta volatilidad en activos de baja profundidad técnica obligan a una postura de espera para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con una correlación bajista extrema. Ningún activo cumple con el umbral de calidad A+ (Score >= 65) exigido por el comité, por lo que la estrategia óptima es la preservación total del capital.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
-      "score": 60
+      "score": 70
     },
     {
       "symbol": "ADAUSDT",
@@ -19,12 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "LUNCUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 60
     },
     {
-      "symbol": "ETHFIUSDT",
-      "score": 55
+      "symbol": "LUNCUSDT",
+      "score": 60
     }
   ]
 }
