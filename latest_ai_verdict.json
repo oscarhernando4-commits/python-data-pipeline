@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-08 15:40:21",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de estancamiento defensivo sin una ventaja estadística clara. Ningún activo cumple con el umbral de dominancia de Bids (>=55%) ni con la convicción A+ exigida por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "timestamp": "2026-08-08 15:42:23",
+  "selected_symbol": "PAXGUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "Tras analizar el mercado, PAXGUSDT destaca como el activo con mayor resiliencia y respaldo institucional. Su score técnico de 85/100, sumado a su pertenencia al sector RWA, lo posiciona como la mejor opción para una entrada táctica en un mercado de miedo, cumpliendo con todos los requisitos de seguridad del comité.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
-      "score": 75
+      "symbol": "PAXGUSDT",
+      "score": 85
     },
     {
       "symbol": "XAUTUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "NILUSDT",
       "score": 75
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "WLDUSDT",
       "score": 75
     }
   ]
