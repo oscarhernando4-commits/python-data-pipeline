@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 07:54:24",
+  "updated_at": "2026-08-08 07:56:24",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de purga institucional con una correlación bajista sistémica. Ninguno de los candidatos analizados alcanza el score técnico mínimo de 65 ni presenta una estructura de libro de órdenes que garantice una entrada de bajo riesgo. Por tanto, el comité decide mantener la liquidez en espera de una configuración de mercado más favorable."
+    "reasoning": "El comité ha determinado que el mercado actual carece de la fuerza necesaria para justificar una entrada. Ningún activo cumple con el umbral de Score A+ (>= 65) y la incertidumbre en el libro de órdenes, sumada a la alta correlación bajista, obliga a mantener la liquidez en USDT para evitar pérdidas innecesarias."
   }
 }
