@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-08 02:20:21",
+  "timestamp": "2026-08-08 02:22:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de purga regulatoria y contracción de liquidez. Ningún activo cumple con los criterios de riesgo A+ exigidos por el comité. La estrategia prioritaria es la preservación del capital, evitando la exposición a 'cuchillos cayendo' y esperando una rotación de capital más saludable.",
+  "confidence": 95,
+  "reasoning": "El mercado presenta una divergencia de debilidad extrema y falta de soporte institucional. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la liquidez en espera de mejores condiciones.",
   "top_candidates": [
     {
+      "symbol": "NIGHTUSDT",
+      "score": 70
+    },
+    {
       "symbol": "SOLUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SHIBUSDT",
       "score": 60
     },
     {
@@ -15,15 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "CAKEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SPYBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "NIGHTUSDT",
+      "symbol": "ASTERUSDT",
       "score": 60
     }
   ]
