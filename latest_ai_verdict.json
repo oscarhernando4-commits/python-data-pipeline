@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 16:10:21",
+  "timestamp": "2026-08-08 16:12:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de compresión de volatilidad con sentimiento de miedo, lo que aumenta la probabilidad de 'trampas de valor'. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral estricto de convicción A+ requerido por el comité, y el historial reciente de trades muestra una alta volatilidad con resultados negativos en condiciones similares. Se prioriza la preservación del capital sobre la ejecución de operaciones de baja probabilidad.",
   "top_candidates": [
     {
       "symbol": "TIAUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "ADAUSDT",
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     }
   ]
