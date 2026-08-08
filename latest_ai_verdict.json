@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-08 06:54:19",
+  "timestamp": "2026-08-08 06:56:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con indicadores técnicos mediocres y falta de confirmación en el libro de órdenes. Siguiendo la Regla de Oro #1, al no existir candidatos con convicción A+ y soporte claro, la decisión institucional es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%) necesario para una ejecución segura. El mercado se encuentra en una fase de alta incertidumbre y volatilidad, por lo que la estrategia óptima es mantener la liquidez en espera de una configuración técnica más robusta.",
   "top_candidates": [
     {
-      "symbol": "ICPUSDT",
-      "score": 85
+      "symbol": "XPLUSDT",
+      "score": 95
     },
     {
       "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "PAXGUSDT",
       "score": 75
     },
     {
