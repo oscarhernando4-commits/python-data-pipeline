@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 03:26:19",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "A pesar de que activos como BNB y TAO presentan scores técnicos de 85, la ausencia de una dominancia clara en el libro de órdenes y el entorno macro de alta fragilidad regulatoria impiden cumplir con la regla de oro de convicción A+. Se prioriza la preservación del capital sobre la especulación en un mercado de distribución de pánico.",
+  "timestamp": "2026-08-08 03:28:20",
+  "selected_symbol": "TAOUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "Tras analizar los candidatos, TAOUSDT destaca por su alto score técnico (85/100) y su pertenencia al sector de IA, que lidera la entrada de capital. A pesar del sentimiento de miedo global, la estructura técnica de TAO permite una entrada con alta convicción, siempre bajo la protección del protocolo de gestión de riesgo del Agente 6.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
@@ -15,15 +15,15 @@
       "score": 85
     },
     {
+      "symbol": "SOLUSDT",
+      "score": 85
+    },
+    {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUIUSDT",
+      "symbol": "XLMUSDT",
       "score": 75
     }
   ]
