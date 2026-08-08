@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 23:26:18",
+  "timestamp": "2026-08-08 23:28:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta fragilidad con una divergencia bajista entre el flujo de ETFs y la acción del precio. Ningún activo cumple con el requisito estricto de Score Técnico >= 65 ni muestra una dominancia de compra en el libro de órdenes, por lo que la decisión institucional es proteger el capital y esperar una configuración de mercado más robusta.",
+  "reasoning": "Tras evaluar los candidatos, ninguno alcanza el umbral de calidad A+ (Score >= 65) exigido por el Comité. La alta correlación bajista y la falta de soporte institucional en el libro de órdenes para los activos analizados obligan a mantener la liquidez en USDT para evitar pérdidas por reversión a la media.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
       "symbol": "SPYBUSDT",
       "score": 60
     },
     {
       "symbol": "KITEUSDT",
       "score": 60
+    },
+    {
+      "symbol": "ZROUSDT",
+      "score": 55
     }
   ]
 }
