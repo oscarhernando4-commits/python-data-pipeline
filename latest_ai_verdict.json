@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 09:46:23",
+  "timestamp": "2026-08-08 09:48:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura de divergencia fragmentada. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y confirmación de volumen institucional), por lo que la estrategia de preservación de capital dicta mantenerse en efectivo (HOLD).",
+  "reasoning": "El mercado se encuentra en un estado de acumulación selectiva con alta volatilidad y falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el comité, por lo que se prioriza la protección del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TRXUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "BABYUSDT",
+      "score": 75
+    },
+    {
       "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "BABYUSDT",
+      "symbol": "TRXUSDT",
       "score": 75
     }
   ]
