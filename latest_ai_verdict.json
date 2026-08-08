@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-08 12:46:18",
+  "timestamp": "2026-08-08 12:48:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de compresión y alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). La estrategia de preservación de capital es prioritaria para evitar las pérdidas observadas en las simulaciones históricas bajo condiciones de mercado neutral.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de consolidación por agotamiento con alta probabilidad de reversión, por lo que la estrategia óptima es mantener la liquidez en USDT hasta que aparezca una oportunidad con mayor confirmación institucional.",
   "top_candidates": [
     {
-      "symbol": "XLMUSDT",
+      "symbol": "SKHYBUSDT",
       "score": 75
     },
     {
       "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XLMUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "AAVEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "VETUSDT",
       "score": 75
     }
   ]

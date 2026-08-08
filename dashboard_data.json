@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 12:46:18",
+  "updated_at": "2026-08-08 12:48:18",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de compresión y alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). La estrategia de preservación de capital es prioritaria para evitar las pérdidas observadas en las simulaciones históricas bajo condiciones de mercado neutral."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de consolidación por agotamiento con alta probabilidad de reversión, por lo que la estrategia óptima es mantener la liquidez en USDT hasta que aparezca una oportunidad con mayor confirmación institucional."
   }
 }
