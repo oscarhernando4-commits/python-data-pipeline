@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 04:58:23",
+  "timestamp": "2026-08-08 05:00:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (Score >= 65 y Bids > 55%) necesarios para una ejecución segura, optando por la preservación de capital.",
+  "reasoning": "El mercado se encuentra en una fase de estancamiento defensivo sin catalizadores claros; los candidatos analizados no cumplen con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la estrategia óptima es mantener la liquidez.",
   "top_candidates": [
     {
-      "symbol": "BABYUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BNBUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "ETHFIUSDT",
       "score": 75
     },
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "BROCCOLI714USDT",
+      "score": 75
+    },
+    {
+      "symbol": "NIGHTUSDT",
       "score": 75
     }
   ]
