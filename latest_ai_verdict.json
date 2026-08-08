@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 23:08:18",
+  "timestamp": "2026-08-08 23:10:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta aversión al riesgo con una clara divergencia entre el flujo institucional hacia Bitcoin y la debilidad estructural de las altcoins. Ningún candidato cumple con los criterios de convicción A+ exigidos por el comité, por lo que la orden es proteger la liquidez y esperar una mejor configuración técnica.",
+  "reasoning": "Tras analizar el universo de activos, ninguno cumple con el umbral de Score Técnico >= 65 ni con la dominancia de Bids necesaria para una ejecución segura. La alta volatilidad y la debilidad sistémica observada en los trades pasados dictan una postura de espera (HOLD) para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 60
-    },
-    {
       "symbol": "ATOMUSDT",
       "score": 60
     },
     {
-      "symbol": "EPICUSDT",
+      "symbol": "BICOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "MUBARAKUSDT",
       "score": 50
     }
   ]
