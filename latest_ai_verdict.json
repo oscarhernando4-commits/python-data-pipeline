@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-08 14:08:21",
-  "selected_symbol": "XAUTUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "El mercado se encuentra en una fase de 'vuelo a la calidad' donde el capital institucional prioriza activos de reserva. XAUTUSDT destaca con un score de 85/100, superando los umbrales de riesgo establecidos y alineándose con la rotación sectorial hacia RWA y metales preciosos, mientras se evitan los activos de baja capitalización con alta probabilidad de pérdida.",
+  "timestamp": "2026-08-08 14:10:19",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 95,
+  "reasoning": "A pesar de que ASTER y XAUT presentan scores técnicos elevados, el entorno de mercado actual (Fear 30) y la falta de una dominancia clara en el libro de órdenes (50% Bids) no cumplen con el umbral de convicción A+ requerido por el Comité. Se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ASTERUSDT",
       "score": 85
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "PAXGUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
