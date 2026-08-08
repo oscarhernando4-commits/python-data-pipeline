@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 12:58:23",
+  "timestamp": "2026-08-08 13:00:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una alta volatilidad con una estructura de soporte débil. A pesar de que varios activos tienen un score técnico de 75, la falta de dominancia clara en el libro de órdenes y la alta tasa de fallos en condiciones de mercado neutrales dictan una postura de preservación de capital (HOLD) para evitar 'cuchillos cayendo'.",
+  "reasoning": "El mercado presenta una divergencia defensiva extrema y falta de profundidad en el libro de órdenes. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de alta volatilidad y miedo.",
   "top_candidates": [
     {
       "symbol": "SKHYBUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "XLMUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "VETUSDT",
       "score": 75
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "BIOUSDT",
       "score": 75
     }
   ]

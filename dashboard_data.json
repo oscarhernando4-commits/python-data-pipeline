@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 12:58:23",
+  "updated_at": "2026-08-08 13:00:20",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una alta volatilidad con una estructura de soporte débil. A pesar de que varios activos tienen un score técnico de 75, la falta de dominancia clara en el libro de órdenes y la alta tasa de fallos en condiciones de mercado neutrales dictan una postura de preservación de capital (HOLD) para evitar 'cuchillos cayendo'."
+    "reasoning": "El mercado presenta una divergencia defensiva extrema y falta de profundidad en el libro de órdenes. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de alta volatilidad y miedo."
   }
 }
