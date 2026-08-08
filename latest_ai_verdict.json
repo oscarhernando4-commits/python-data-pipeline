@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-08 02:06:19",
+  "timestamp": "2026-08-08 02:08:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta fragilidad y distribución. Ningún activo cumple con el umbral de convicción A+ (Score >= 65) ni con la profundidad de liquidez necesaria para mitigar el riesgo de slippage. Se prioriza la protección del capital sobre la especulación en un entorno de baja confianza.",
+  "reasoning": "Tras analizar los 7 agentes, se concluye que el mercado se encuentra en un estado de alta fragilidad con una correlación bajista predominante. Ningún activo cumple con el umbral de calidad A+ (Score >= 65) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
   "top_candidates": [
     {
-      "symbol": "SOLUSDT",
+      "symbol": "SHIBUSDT",
       "score": 60
     },
     {
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "NIGHTUSDT",
+      "symbol": "SOLUSDT",
       "score": 60
     },
     {
-      "symbol": "SPYBUSDT",
+      "symbol": "DOGEUSDT",
       "score": 60
     },
     {
-      "symbol": "NEXOUSDT",
+      "symbol": "NBISBUSDT",
       "score": 60
     }
   ]
