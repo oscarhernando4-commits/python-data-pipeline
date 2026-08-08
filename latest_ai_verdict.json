@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 19:02:18",
+  "timestamp": "2026-08-08 19:04:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Debido a que ningún activo cumple con el umbral de calidad A+ (Score >= 65) y el entorno macro es de alta incertidumbre con tendencia bajista, el comité ha decidido mantener la liquidez en efectivo para evitar pérdidas innecesarias, siguiendo estrictamente la Regla #1 de no perder dinero.",
+  "reasoning": "El mercado se encuentra en una fase de distribución de pánico con una debilidad sistémica generalizada. Ningún activo cumple con el umbral de seguridad (Score >= 65) exigido por el comité, por lo que la única estrategia responsable es mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
       "symbol": "PAXGUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "BICOUSDT",
-      "score": 50
+      "symbol": "ORDIUSDT",
+      "score": 60
     },
     {
-      "symbol": "HFTUSDT",
+      "symbol": "BICOUSDT",
       "score": 50
     }
   ]
