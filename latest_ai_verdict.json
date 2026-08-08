@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 23:56:20",
+  "timestamp": "2026-08-08 23:58:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los 7 agentes, se concluye que no existen activos que cumplan con el umbral de seguridad (Score >= 65) y la confirmación de liquidez necesaria. La estrategia institucional es preservar el capital en USDT hasta que el mercado muestre una estructura de reversión clara y menor volatilidad.",
+  "reasoning": "El mercado se encuentra en una fase de alta volatilidad y baja convicción técnica. Ninguno de los activos analizados cumple con el umbral de seguridad (Score >= 65) ni con la profundidad de libro de órdenes necesaria para una ejecución institucional, por lo que se prioriza la protección del capital sobre la operativa.",
   "top_candidates": [
     {
       "symbol": "SPYBUSDT",
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "HOMEUSDT",
-      "score": 60
-    },
-    {
       "symbol": "CAKEUSDT",
       "score": 60
+    },
+    {
+      "symbol": "AEROUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "VETUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TSTUSDT",
+      "score": 50
     }
   ]
 }
