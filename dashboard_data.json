@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 18:14:15",
+  "updated_at": "2026-08-08 18:16:16",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de compresión de volatilidad con alta incertidumbre. Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la estrategia de preservación de capital es la única opción viable."
+    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación negativa en la mayoría de las altcoins. Ningún activo cumple con el umbral de Score >= 65 y una dominancia de Bids > 55% necesaria para una operación de alta probabilidad. Se prioriza la protección del capital hasta que el sentimiento de mercado mejore o se identifique una tendencia clara."
   }
 }

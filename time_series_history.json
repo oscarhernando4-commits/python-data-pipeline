@@ -1,12 +1,38 @@
 {
   "MAGICUSDT": [
     {
-      "timestamp": "2026-08-08 18:14:08",
+      "timestamp": "2026-08-08 18:16:08",
       "price": 0.0426,
       "score": 25,
       "rsi": 50.88,
       "macd": "Neutral",
-      "volume_surge": 0.29,
+      "volume_surge": 0.02,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-08 18:16:08",
+      "price": 0.2919,
+      "score": 15,
+      "rsi": 48.09,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CHZUSDT": [
+    {
+      "timestamp": "2026-08-08 18:16:08",
+      "price": 0.01404,
+      "score": 40,
+      "rsi": 87.41,
+      "macd": "Neutral",
+      "volume_surge": 0.7,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
