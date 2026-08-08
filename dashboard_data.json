@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 00:10:21",
+  "updated_at": "2026-08-08 00:12:20",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité (Score >= 65 combinado con una dominancia de Bids > 55%). El mercado presenta una divergencia que aumenta el riesgo de 'falling knives', por lo que la decisión institucional es proteger el 100% de la liquidez hasta que aparezca una configuración de alta convicción."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo sistémico actual, por lo que se prioriza la preservación de capital."
   }
 }
