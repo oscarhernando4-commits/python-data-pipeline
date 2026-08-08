@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 09:34:22",
+  "timestamp": "2026-08-08 09:36:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos, el libro de órdenes no muestra una dominancia compradora clara y el entorno macro presenta riesgos regulatorios que no justifican una entrada de alta convicción en este momento.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad exigido por el comité (Bids > 55% y convicción A+). La alta tasa de fallos en trades recientes bajo condiciones de mercado neutral obliga a mantener la liquidez en espera de una estructura de mercado más robusta.",
   "top_candidates": [
     {
       "symbol": "ETHUSDT",
@@ -15,15 +15,15 @@
       "score": 85
     },
     {
+      "symbol": "PAXGUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "score": 85
+    },
+    {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AVAXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XAUTUSDT",
       "score": 75
     }
   ]
