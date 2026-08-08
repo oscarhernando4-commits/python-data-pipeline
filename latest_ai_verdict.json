@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-08 12:44:20",
+  "timestamp": "2026-08-08 12:46:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión técnica y falta de liquidez institucional clara. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
+  "reasoning": "El mercado se encuentra en un estado de compresión y alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). La estrategia de preservación de capital es prioritaria para evitar las pérdidas observadas en las simulaciones históricas bajo condiciones de mercado neutral.",
   "top_candidates": [
     {
-      "symbol": "GNOUSDT",
-      "score": 95
+      "symbol": "XLMUSDT",
+      "score": 75
     },
     {
       "symbol": "LTCUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "AAVEUSDT",
       "score": 75
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "VETUSDT",
       "score": 75
     }
   ]
