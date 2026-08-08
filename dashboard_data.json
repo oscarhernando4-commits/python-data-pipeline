@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 02:08:22",
+  "updated_at": "2026-08-08 02:10:18",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Tras analizar los 7 agentes, se concluye que el mercado se encuentra en un estado de alta fragilidad con una correlación bajista predominante. Ningún activo cumple con el umbral de calidad A+ (Score >= 65) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción."
+    "reasoning": "El mercado no cumple con los criterios de alta convicción (Score >= 65) exigidos por el comité. La ausencia de soporte institucional en el libro de órdenes y la alta probabilidad de 'trampas de valor' en los activos analizados obligan a mantener la liquidez en 100% USDT para evitar pérdidas innecesarias."
   }
 }
