@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-08 12:28:22",
+  "timestamp": "2026-08-08 12:30:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual no cumple con los estándares de calidad A+ exigidos por el comité. La ausencia de activos con un score técnico superior a 65, sumada a la alta volatilidad y el sentimiento de miedo, obliga a una postura defensiva de 'HOLD' para proteger el capital de posibles liquidaciones masivas.",
+  "reasoning": "El mercado exhibe una debilidad estructural generalizada con scores técnicos insuficientes. Ningún activo cumple con la regla de oro de un Score >= 65, por lo que el comité ha decidido mantener la liquidez en espera de una configuración de alta probabilidad.",
   "top_candidates": [
     {
-      "symbol": "XRPUSDT",
+      "symbol": "ASTERUSDT",
       "score": 60
     },
     {
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "QNTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PUMPUSDT",
-      "score": 60
-    },
-    {
       "symbol": "PENGUUSDT",
       "score": 60
+    },
+    {
+      "symbol": "VETUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "score": 55
     }
   ]
 }
