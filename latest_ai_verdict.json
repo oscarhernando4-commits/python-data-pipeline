@@ -1,26 +1,26 @@
 {
-  "timestamp": "2026-08-08 06:00:20",
+  "timestamp": "2026-08-08 06:02:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un entorno de alta incertidumbre y baja convicción. Ninguno de los candidatos cumple con el requisito estricto de soporte en el libro de órdenes (Bids >= 55%) ni con una estructura técnica que garantice una alta probabilidad de éxito, por lo que la decisión es mantener la liquidez en espera de una mejor configuración.",
+  "reasoning": "El mercado presenta una configuración de alto riesgo con una falta de soporte institucional claro en el libro de órdenes. Dado que ningún activo cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte), la estrategia institucional es mantener la liquidez en USDT para evitar la exposición a la alta volatilidad y la limpieza de activos débiles observada en el historial reciente.",
   "top_candidates": [
+    {
+      "symbol": "DOGEUSDT",
+      "score": 75
+    },
     {
       "symbol": "ASTERUSDT",
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "RENDERUSDT",
       "score": 75
     },
     {
-      "symbol": "KAITOUSDT",
+      "symbol": "JSTUSDT",
       "score": 70
-    },
-    {
-      "symbol": "BABYUSDT",
-      "score": 65
     },
     {
       "symbol": "ALLOUSDT",
