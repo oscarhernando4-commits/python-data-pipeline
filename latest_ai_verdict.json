@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 14:10:19",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 95,
-  "reasoning": "A pesar de que ASTER y XAUT presentan scores técnicos elevados, el entorno de mercado actual (Fear 30) y la falta de una dominancia clara en el libro de órdenes (50% Bids) no cumplen con el umbral de convicción A+ requerido por el Comité. Se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "timestamp": "2026-08-08 14:12:22",
+  "selected_symbol": "AAVEUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "AAVEUSDT es el único candidato que combina un score técnico superior a 65 (85/100), pertenencia al sector dominante (DeFi) y una estructura de mercado que permite una entrada de alta convicción, cumpliendo con todos los protocolos de seguridad del comité.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
       "score": 85
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "AAVEUSDT",
       "score": 85
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "PAXGUSDT",
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "FETUSDT",
       "score": 75
     }
   ]
