@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 11:54:18",
+  "timestamp": "2026-08-08 11:56:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de purga de posiciones apalancadas con una estructura técnica deficiente. Ningún activo cumple con el requisito estricto de Score >= 65 y confirmación de volumen institucional, por lo que la decisión unánime es mantener la liquidez en espera de un catalizador claro.",
+  "reasoning": "El mercado presenta una asimetría de riesgo severa y falta de convicción técnica en los activos analizados. Ningún candidato cumple con el requisito estricto de Score >= 65 y soporte de libro de órdenes, por lo que la decisión institucional es mantener la liquidez en espera de mejores condiciones.",
   "top_candidates": [
     {
       "symbol": "JSTUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "XRPUSDT",
+      "score": 60
+    },
+    {
       "symbol": "AVAXUSDT",
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ASTERUSDT",
+      "symbol": "AAVEUSDT",
       "score": 60
     }
   ]
