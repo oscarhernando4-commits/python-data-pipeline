@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 00:02:21",
+  "timestamp": "2026-08-08 00:04:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado presenta una toxicidad elevada y una falta de convicción institucional clara. Ninguno de los candidatos cumple con los requisitos estrictos de Score Técnico (>= 65) y profundidad de mercado (Bids > 55%) exigidos por el protocolo de riesgo. Se mantiene la posición en efectivo para evitar la exposición a la alta volatilidad y el riesgo de 'flash crash' detectado en el análisis macro.",
+  "reasoning": "El mercado se encuentra en una trampa de liquidez con alta volatilidad y noticias negativas. Ningún activo cumple con los criterios estrictos de convicción A+ del comité, por lo que la decisión unánime es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "DOTUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 75
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "JSTUSDT",
       "score": 75
     }
   ]
