@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 03:44:22",
+  "updated_at": "2026-08-08 03:46:20",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una divergencia estructural y una falta de convicción institucional en los niveles de soporte actuales. Dado que ningún activo cumple con el umbral de seguridad A+ (Score >= 65 con Bids > 55%) y el historial reciente de trades en condiciones similares ha resultado en pérdidas, la decisión institucional es mantener la liquidez en USDT para evitar riesgos innecesarios."
+    "reasoning": "El mercado se encuentra en un estado de 'espera de confirmación' con un sentimiento de miedo predominante. Ninguno de los candidatos presenta una ventaja estadística o una profundidad de libro de órdenes que cumpla con los criterios de seguridad del comité. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre regulatoria."
   }
 }
