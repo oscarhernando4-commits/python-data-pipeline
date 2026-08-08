@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 16:14:19",
+  "timestamp": "2026-08-08 16:16:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de liquidez y volumen). El mercado se encuentra en una fase de alta volatilidad y baja predictibilidad, por lo que el comité ha decidido unánimemente mantener la liquidez en espera de una estructura de mercado más clara.",
+  "reasoning": "Tras la deliberación unánime, se concluye que el mercado carece de la estructura técnica y de liquidez necesaria para una entrada de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado neutral y fragmentado.",
   "top_candidates": [
-    {
-      "symbol": "TIAUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "LUNCUSDT",
-      "score": 85
-    },
     {
       "symbol": "AVAXUSDT",
       "score": 75
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "DOTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BONKUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUNUSDT",
       "score": 75
     }
   ]
