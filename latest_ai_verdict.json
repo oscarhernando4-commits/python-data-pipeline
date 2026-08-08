@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 10:10:21",
+  "timestamp": "2026-08-08 10:12:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de miedo y falta de profundidad en el libro de órdenes. Ningún candidato cumple con el umbral de dominancia de Bids (>55%) ni con una confirmación técnica robusta, por lo que el comité decide mantener la liquidez en espera de una señal de mayor calidad.",
+  "reasoning": "El mercado presenta una fragmentación excesiva y una falta de profundidad en el libro de órdenes que no garantiza la seguridad del capital. Ningún activo cumple con el umbral de convicción A+ requerido por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una señal de mercado más clara.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "SUNUSDT",
       "score": 75
     }
   ]
