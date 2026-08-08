@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 01:08:29",
+  "updated_at": "2026-08-08 01:10:29",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una divergencia estructural y falta de convicción institucional. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es la preservación de capital mediante el estado de espera (HOLD)."
+    "reasoning": "El mercado presenta una divergencia estructural y falta de profundidad en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte institucional confirmado), por lo que la estrategia óptima es el resguardo de capital en efectivo."
   }
 }

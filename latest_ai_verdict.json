@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 01:08:29",
+  "timestamp": "2026-08-08 01:10:29",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia estructural y falta de convicción institucional. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es la preservación de capital mediante el estado de espera (HOLD).",
+  "reasoning": "El mercado presenta una divergencia estructural y falta de profundidad en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte institucional confirmado), por lo que la estrategia óptima es el resguardo de capital en efectivo.",
   "top_candidates": [
     {
       "symbol": "HBARUSDT",
       "score": 85
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
       "symbol": "XLMUSDT",
-      "score": 75
+      "score": 85
     },
     {
-      "symbol": "AVAXUSDT",
-      "score": 75
+      "symbol": "AEROUSDT",
+      "score": 85
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "PENGUUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "DOGEUSDT",
       "score": 75
     }
   ]
