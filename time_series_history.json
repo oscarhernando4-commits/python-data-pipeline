@@ -1,10 +1,23 @@
 {
-  "XPLUSDT": [
+  "GNOUSDT": [
     {
-      "timestamp": "2026-08-08 10:50:10",
-      "price": 0.07575,
+      "timestamp": "2026-08-08 10:52:11",
+      "price": 106.49,
       "score": 65,
-      "rsi": 52.12,
+      "rsi": 57.34,
+      "macd": "Neutral",
+      "volume_surge": 0.17,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-08 10:52:11",
+      "price": 0.488,
+      "score": 65,
+      "rsi": 55.13,
       "macd": "Neutral",
       "volume_surge": 0.05,
       "wyckoff": "Sin patron",
@@ -12,14 +25,27 @@
       "fear_greed": 50
     }
   ],
-  "VANRYUSDT": [
+  "XPLUSDT": [
     {
-      "timestamp": "2026-08-08 10:50:10",
-      "price": 0.003267,
-      "score": 60,
-      "rsi": 51.76,
+      "timestamp": "2026-08-08 10:52:11",
+      "price": 0.07579,
+      "score": 65,
+      "rsi": 53.53,
       "macd": "Neutral",
-      "volume_surge": 0.31,
+      "volume_surge": 0.12,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-08 10:52:11",
+      "price": 0.2891,
+      "score": 15,
+      "rsi": 46.57,
+      "macd": "Neutral",
+      "volume_surge": 0.08,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -27,7 +53,7 @@
   ],
   "AMDBUSDT": [
     {
-      "timestamp": "2026-08-08 10:50:10",
+      "timestamp": "2026-08-08 10:52:11",
       "price": 479.45,
       "score": 40,
       "rsi": 42.25,
@@ -38,27 +64,40 @@
       "fear_greed": 50
     }
   ],
-  "LDOUSDT": [
-    {
-      "timestamp": "2026-08-08 10:50:10",
-      "price": 0.2892,
-      "score": 15,
-      "rsi": 47.18,
-      "macd": "Neutral",
-      "volume_surge": 0.08,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
   "STXUSDT": [
     {
-      "timestamp": "2026-08-08 10:50:10",
+      "timestamp": "2026-08-08 10:52:11",
       "price": 0.133,
       "score": 50,
       "rsi": 66.71,
       "macd": "Neutral",
       "volume_surge": 0.05,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LUNCUSDT": [
+    {
+      "timestamp": "2026-08-08 10:52:11",
+      "price": 4.906e-05,
+      "score": 65,
+      "rsi": 49.19,
+      "macd": "Neutral",
+      "volume_surge": 1.14,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "VANRYUSDT": [
+    {
+      "timestamp": "2026-08-08 10:52:11",
+      "price": 0.003264,
+      "score": 60,
+      "rsi": 51.33,
+      "macd": "Neutral",
+      "volume_surge": 0.32,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

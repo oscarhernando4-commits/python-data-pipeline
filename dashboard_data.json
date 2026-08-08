@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 10:50:18",
+  "updated_at": "2026-08-08 10:52:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que, a pesar de algunos scores técnicos elevados, la falta de profundidad en el libro de órdenes, la incertidumbre macroeconómica y el historial insuficiente de los activos líderes impiden una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado neutral y volátil."
+    "reasoning": "El mercado presenta una divergencia estructural y falta de liquidez confirmada en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%), por lo que la estrategia institucional es preservar el capital en espera de una mejor configuración técnica."
   }
 }
