@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 14:42:30",
+  "updated_at": "2026-08-08 14:44:25",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado presenta una alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos seleccionados supera el umbral de Bids del 55% necesario para mitigar el riesgo de slippage, y el historial de trades recientes indica una alta probabilidad de pérdida en condiciones de mercado neutral. Se prioriza la preservación del capital."
+    "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Bids >= 55% y tendencia clara). La alta tasa de fallos en trades recientes bajo condiciones de mercado neutral obliga a mantener la liquidez en USDT para evitar pérdidas innecesarias."
   }
 }
