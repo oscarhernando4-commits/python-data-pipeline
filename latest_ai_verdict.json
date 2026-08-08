@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-08 01:44:20",
+  "timestamp": "2026-08-08 01:46:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una configuración de alta incertidumbre con una falta de soporte institucional claro en el libro de órdenes. Dado que el sesgo de mercado es neutral y los patrones históricos recientes indican una alta probabilidad de pérdidas en condiciones similares, el comité ha decidido mantener la liquidez en espera de una señal de mayor convicción.",
+  "reasoning": "Ninguno de los candidatos analizados supera el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad, combinada con la falta de profundidad en los libros de órdenes y el sentimiento de miedo, hace que cualquier posición sea de alto riesgo. Se mantiene la liquidez en espera de una estructura de mercado más definida.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "PEPEUSDT",
       "score": 85
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "BTCUSDT",
+      "symbol": "XRPUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "XRPUSDT",
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XLMUSDT",
       "score": 75
     }
   ]
