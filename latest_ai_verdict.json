@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 11:06:16",
+  "timestamp": "2026-08-08 11:08:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento con debilidad generalizada. Ningún activo cumple con el umbral de Score Técnico A+ (>= 65) ni con la profundidad de libro de órdenes requerida para una ejecución segura. Se prioriza la protección del capital sobre la especulación en un entorno de baja convicción.",
+  "reasoning": "Tras analizar los 10 candidatos, ninguno alcanza el umbral de Score 65 requerido por el Comité. La falta de profundidad en el libro de órdenes y la inestabilidad macroeconómica dictan una postura de espera (HOLD) para proteger la liquidez institucional.",
   "top_candidates": [
     {
       "symbol": "TIAUSDT",
       "score": 70
     },
     {
+      "symbol": "BNBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "XRPUSDT",
+      "score": 60
+    },
+    {
       "symbol": "DOTUSDT",
       "score": 60
     },
     {
-      "symbol": "WLDUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TRUMPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "AEROUSDT",
+      "symbol": "ERAUSDT",
       "score": 60
     }
   ]
