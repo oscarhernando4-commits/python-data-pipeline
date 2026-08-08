@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-08 20:04:17",
+  "timestamp": "2026-08-08 20:06:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, el comité concluye que el mercado se encuentra en una fase de alta incertidumbre y distribución silenciosa. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo de pérdida, por lo que se prioriza la preservación del capital sobre la operativa especulativa.",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La alta volatilidad y la falta de soporte institucional en el libro de órdenes, sumado al historial de pérdidas en condiciones similares, dictan una postura de preservación de capital (HOLD).",
   "top_candidates": [
     {
-      "symbol": "LTCUSDT",
+      "symbol": "UNIUSDT",
       "score": 75
     },
     {
       "symbol": "GRAMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "UNIUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "ETHFIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LUNCUSDT",
       "score": 75
     }
   ]
