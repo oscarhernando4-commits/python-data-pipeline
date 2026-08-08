@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-08 03:30:21",
+  "timestamp": "2026-08-08 03:32:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragmentación de liquidez y un sentimiento de miedo que, sumado a la falta de muros de soporte claros en el libro de órdenes, no cumple con los criterios de alta convicción (A+) exigidos por el comité para operar.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y confirmación de volumen). La estrategia institucional prioriza la preservación del capital en entornos de mercado neutrales y de miedo, evitando la exposición a activos que no demuestran una acumulación institucional clara.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
@@ -15,11 +19,7 @@
       "score": 75
     },
     {
-      "symbol": "XLMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
+      "symbol": "ADAUSDT",
       "score": 75
     },
     {
