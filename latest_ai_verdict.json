@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 17:32:24",
-  "selected_symbol": "ZROUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "Tras analizar el mercado, el comité ha determinado que ZROUSDT es el único activo que cumple con el umbral de calidad A+ (Score 85/100) y la rotación de capital institucional, evitando los activos de baja capitalización que han mostrado pérdidas recurrentes en las simulaciones pasadas.",
+  "timestamp": "2026-08-08 17:34:23",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de indecisión con alta probabilidad de volatilidad, por lo que la estrategia óptima es preservar el capital en USDT.",
   "top_candidates": [
     {
       "symbol": "ZROUSDT",
       "score": 85
     },
     {
+      "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
       "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "PENGUUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "RENDERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NEXOUSDT",
+      "symbol": "AVAXUSDT",
       "score": 75
     }
   ]
