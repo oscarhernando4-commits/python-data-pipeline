@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 16:36:23",
+  "timestamp": "2026-08-08 16:38:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación bajista predominante. Ninguno de los activos analizados cumple con el umbral de calidad A+ (Score >= 65) ni con la profundidad de mercado necesaria para mitigar el riesgo de slippage. Se ha decidido mantener la liquidez en USDT para evitar la exposición a 'cuchillos cayendo' y proteger el capital institucional.",
+  "reasoning": "Tras evaluar los candidatos, ninguno alcanza el umbral de calidad A+ (Score >= 65) exigido por el comité. La falta de profundidad en el libro de órdenes y la inestabilidad técnica sugieren que el riesgo de 'falling knives' es demasiado elevado, por lo que se mantiene la posición en efectivo para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
