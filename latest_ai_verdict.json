@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 10:02:20",
+  "timestamp": "2026-08-08 10:04:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) y la falta de profundidad en el libro de órdenes junto con el sentimiento de miedo generalizado dictan una postura de preservación de capital (HOLD) hasta que el mercado muestre una estructura de acumulación clara.",
+  "reasoning": "El mercado presenta una asimetría de riesgo severa y ninguno de los activos analizados alcanza el umbral de calidad A+ (Score >= 65) exigido por el comité. Ante la falta de confirmación en el libro de órdenes y la alta volatilidad, la estrategia óptima es el resguardo de capital en espera de una estructura de mercado más saludable.",
   "top_candidates": [
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "ETHUSDT",
       "score": 60
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "GRAMUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "BABYUSDT",
+      "symbol": "BCHUSDT",
       "score": 60
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "FETUSDT",
       "score": 60
     }
   ]
