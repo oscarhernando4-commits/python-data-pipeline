@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-08 09:10:23",
+  "timestamp": "2026-08-08 09:12:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado presenta una fragmentación estructural severa y una falta de convicción institucional en los libros de órdenes. Ninguno de los candidatos, a pesar de sus scores técnicos, logra superar el umbral de seguridad exigido por el Comité para evitar pérdidas, por lo que se prioriza la preservación del capital.",
+  "confidence": 95,
+  "reasoning": "A pesar de tener activos con scores técnicos de 85, la falta de dominancia en el libro de órdenes (Bids < 55%) y el entorno de mercado en 'Fear' invalidan la entrada. El comité prioriza la preservación del capital sobre la especulación en activos de alta beta sin soporte institucional confirmado.",
   "top_candidates": [
     {
       "symbol": "DOGEUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "POLUSDT",
       "score": 85
     },
     {
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "RENDERUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SPYBUSDT",
       "score": 85
     },
     {
