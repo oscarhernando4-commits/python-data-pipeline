@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 03:14:19",
+  "updated_at": "2026-08-08 03:16:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los requisitos de alta convicción (Score >= 65 y Bids >= 55%) necesarios para mitigar el riesgo de pérdida, optando por mantener la posición en efectivo."
+    "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 y confirmación de soporte de ballenas). La alta volatilidad y la falta de datos de liquidez en el libro de órdenes, sumado al historial de pérdidas en condiciones de mercado neutral, dictan una postura de preservación de capital (HOLD)."
   }
 }

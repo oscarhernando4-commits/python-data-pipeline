@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 03:14:18",
+  "timestamp": "2026-08-08 03:16:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los requisitos de alta convicción (Score >= 65 y Bids >= 55%) necesarios para mitigar el riesgo de pérdida, optando por mantener la posición en efectivo.",
+  "confidence": 95,
+  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 y confirmación de soporte de ballenas). La alta volatilidad y la falta de datos de liquidez en el libro de órdenes, sumado al historial de pérdidas en condiciones de mercado neutral, dictan una postura de preservación de capital (HOLD).",
   "top_candidates": [
-    {
-      "symbol": "AEROUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ETHFIUSDT",
-      "score": 85
-    },
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
       "symbol": "TAOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AEROUSDT",
       "score": 75
     }
   ]
