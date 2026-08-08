@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 03:12:21",
+  "timestamp": "2026-08-08 03:14:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de alta selectividad con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el requisito de una dominancia de Bids compradores superior al 55% ni con una confirmación de volumen institucional que mitigue el riesgo de 'flash crashes', por lo que se prioriza la preservación del capital.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los requisitos de alta convicción (Score >= 65 y Bids >= 55%) necesarios para mitigar el riesgo de pérdida, optando por mantener la posición en efectivo.",
   "top_candidates": [
     {
-      "symbol": "SUIUSDT",
+      "symbol": "AEROUSDT",
       "score": 85
     },
     {
-      "symbol": "AEROUSDT",
+      "symbol": "ETHFIUSDT",
       "score": 85
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     }
   ]
