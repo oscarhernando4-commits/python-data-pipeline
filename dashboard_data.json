@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 06:02:20",
+  "updated_at": "2026-08-08 06:04:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado presenta una configuración de alto riesgo con una falta de soporte institucional claro en el libro de órdenes. Dado que ningún activo cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte), la estrategia institucional es mantener la liquidez en USDT para evitar la exposición a la alta volatilidad y la limpieza de activos débiles observada en el historial reciente."
+    "reasoning": "El mercado se encuentra en un estado de baja convicción y alta volatilidad, con una alta probabilidad de 'trampas de valor'. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la posición en efectivo (USDT)."
   }
 }
