@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 12:42:20",
+  "timestamp": "2026-08-08 12:44:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de candidatos con scores técnicos aceptables, ninguno cumple con los requisitos estrictos de convicción A+ y soporte de libro de órdenes necesario para garantizar la preservación del capital en un entorno de mercado con sesgo neutral y alta volatilidad.",
+  "reasoning": "El mercado se encuentra en un estado de indecisión técnica y falta de liquidez institucional clara. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
   "top_candidates": [
     {
       "symbol": "GNOUSDT",
       "score": 95
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "DOTUSDT",
       "score": 75
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "AAVEUSDT",
       "score": 75
     }
   ]
