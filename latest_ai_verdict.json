@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-08 17:16:23",
+  "timestamp": "2026-08-08 17:18:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El comité ha determinado que, a pesar de tener candidatos con un score técnico de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y la alta volatilidad sin una tendencia clara en el mercado neutral, invalidan la ejecución de cualquier orden de compra. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%) necesario para mitigar el riesgo de 'falling knives' en un mercado con sesgo neutral.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "TAOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "FETUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "RENDERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUNUSDT",
       "score": 75
     }
   ]
