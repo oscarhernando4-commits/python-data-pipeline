@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 10:06:20",
+  "timestamp": "2026-08-08 10:08:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragilidad sistémica con una alta probabilidad de 'bull traps'. Ningún activo analizado alcanza el umbral de calidad A+ requerido por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una estructura de mercado más clara y alcista.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en una fase de capitulación y alta incertidumbre. Ninguno de los candidatos cumple con el umbral mínimo de Score A+ (>= 65) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de pérdida, por lo que la decisión es mantener la liquidez en espera de una configuración más favorable.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
       "score": 70
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "SKHYBUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "ETHUSDT",
       "score": 60
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "AVAXUSDT",
       "score": 60
     }
   ]
