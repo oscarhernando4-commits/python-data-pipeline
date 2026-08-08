@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 02:54:22",
+  "updated_at": "2026-08-08 02:56:27",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado actual presenta una fragilidad sistémica extrema. Ninguno de los candidatos analizados alcanza el umbral de seguridad A+ (Score >= 65) requerido por el comité. La estrategia institucional es preservar el capital en efectivo (USDT) hasta que la estructura de mercado muestre una acumulación clara y una reducción en la volatilidad de las noticias macroeconómicas."
+    "reasoning": "Ningún activo cumple con el umbral de Score A+ (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que el comité decide mantener la liquidez en espera de mejores condiciones."
   }
 }
