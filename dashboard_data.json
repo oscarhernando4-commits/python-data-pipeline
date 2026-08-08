@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 20:36:13",
+  "updated_at": "2026-08-08 20:38:17",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de 'trampa de liquidez' con alta volatilidad y resultados estadísticos negativos en las últimas 99 simulaciones. Ningún activo cumple con el requisito estricto de Score >= 65 y una dominancia de Bids > 55%, por lo que la decisión institucional es mantener la liquidez en espera de una mejor configuración técnica."
+    "reasoning": "Debido a la falta de datos de liquidez en el libro de órdenes y la alta volatilidad especulativa en los activos con score 75/100, el comité ha decidido mantener la posición en efectivo para evitar el riesgo de 'trampa de liquidez' y proteger el capital institucional."
   }
 }
