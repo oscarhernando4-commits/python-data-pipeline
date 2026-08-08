@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-08 00:32:19",
+  "timestamp": "2026-08-08 00:34:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual no cumple con los criterios de alta convicción (Score >= 65) exigidos por el comité. La falta de soporte en el libro de órdenes y la inestabilidad macro sugieren un alto riesgo de 'trampa de valor', por lo que la decisión es proteger el capital y esperar una configuración técnica superior.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una correlación bajista sistémica. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de slippage. Se mantiene la posición en efectivo para evitar pérdidas en un entorno de alta volatilidad.",
   "top_candidates": [
-    {
-      "symbol": "DOGEUSDT",
-      "score": 60
-    },
     {
       "symbol": "TRXUSDT",
       "score": 60
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "WLDUSDT",
       "score": 60
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "DOTUSDT",
       "score": 60
     },
     {
