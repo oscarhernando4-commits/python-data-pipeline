@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-08 13:06:19",
+  "timestamp": "2026-08-08 13:08:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura de divergencia defensiva. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido y confirmación de tendencia), por lo que la estrategia más rentable y segura es preservar el capital en espera de una mejor configuración técnica.",
+  "reasoning": "El mercado presenta una estructura de 'miedo' con falta de soporte institucional claro en el libro de órdenes. Ninguno de los candidatos analizados supera el umbral de convicción A+ requerido por el comité, y el historial reciente de trades en condiciones similares ha resultado en pérdidas. Se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
-      "symbol": "LTCUSDT",
-      "score": 75
+      "symbol": "GOOGLBUSDT",
+      "score": 85
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SKHYBUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "NEARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SKHYBUSDT",
       "score": 75
     }
   ]
