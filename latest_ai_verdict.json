@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-08 18:52:15",
+  "timestamp": "2026-08-08 18:54:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual se encuentra en una fase de alta incertidumbre y capitulación, donde ningún activo cumple con los criterios estrictos de calidad A+ (Score >= 65) establecidos por el comité. La falta de soporte en el libro de órdenes y la alta probabilidad de 'trampas de liquidez' dictan una postura de preservación de capital total.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con scores inferiores al umbral de convicción A+ (65). La ausencia de soporte claro en el libro de órdenes y la alta volatilidad en los activos analizados obligan a mantener una postura defensiva para preservar el capital, evitando trampas de liquidez.",
   "top_candidates": [
+    {
+      "symbol": "NEARUSDT",
+      "score": 60
+    },
     {
       "symbol": "ADAUSDT",
       "score": 60
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "POLUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ORDIUSDT",
       "score": 60
     }
   ]
