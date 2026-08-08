@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-08 22:36:17",
+  "timestamp": "2026-08-08 22:38:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual no cumple con los criterios de alta convicción (Score A+ >= 65) exigidos por el comité. La falta de soporte en el libro de órdenes y la debilidad técnica generalizada en los activos analizados obligan a mantener una postura de espera para evitar la exposición a 'cuchillos cayendo' y preservar el capital institucional.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad estructural con una mayoría de activos mostrando scores técnicos inferiores a 65. Ningún candidato cumple con los criterios de convicción A+ exigidos por el comité, por lo que la estrategia óptima es la protección total del capital mediante el mantenimiento de la liquidez en USDT.",
   "top_candidates": [
-    {
-      "symbol": "GRAMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TRXUSDT",
-      "score": 60
-    },
     {
       "symbol": "ATOMUSDT",
       "score": 60
@@ -25,6 +17,14 @@
     {
       "symbol": "SPYBUSDT",
       "score": 60
+    },
+    {
+      "symbol": "GNOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "BICOUSDT",
+      "score": 50
     }
   ]
 }
