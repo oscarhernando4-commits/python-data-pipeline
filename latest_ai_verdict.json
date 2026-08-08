@@ -1,26 +1,26 @@
 {
-  "timestamp": "2026-08-08 05:20:18",
+  "timestamp": "2026-08-08 05:22:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras deliberar, el comité ha determinado que no existe ningún activo que cumpla con los criterios estrictos de convicción A+ (Score >= 65 y confirmación de liquidez). La alta volatilidad y la falta de profundidad en el libro de órdenes, sumado al historial de pérdidas en condiciones de mercado neutral, dictan una postura de preservación de capital (HOLD) para evitar el riesgo de 'falling knives'.",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de ballenas). La alta volatilidad y el sentimiento de miedo en el mercado, sumado a la falta de una tendencia definida, dictan una postura de espera para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "BABYUSDT",
+      "score": 75
+    },
     {
       "symbol": "ASTERUSDT",
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "ETCUSDT",
       "score": 75
     },
     {
-      "symbol": "ZBTUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "BABYUSDT",
-      "score": 65
+      "symbol": "ATOMUSDT",
+      "score": 75
     },
     {
       "symbol": "ACEUSDT",
