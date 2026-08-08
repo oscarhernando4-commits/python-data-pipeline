@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-08 16:16:23",
+  "timestamp": "2026-08-08 16:18:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, se concluye que el mercado carece de la estructura técnica y de liquidez necesaria para una entrada de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado neutral y fragmentado.",
+  "reasoning": "Ninguno de los activos analizados cumple con los criterios estrictos de convicción A+ (Score >= 65 y Bids > 65%). La estrategia institucional dicta la preservación de capital en entornos de alta incertidumbre y baja dominancia compradora.",
   "top_candidates": [
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "AVAXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "FETUSDT",
+      "score": 75
+    },
+    {
       "symbol": "DOTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BONKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUNUSDT",
       "score": 75
     }
   ]
