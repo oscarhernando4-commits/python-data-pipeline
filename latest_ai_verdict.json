@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-08 02:46:24",
+  "timestamp": "2026-08-08 02:48:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad estructural generalizada y una falta de profundidad en el libro de órdenes. Ningún activo cumple con el umbral de Score A+ (>= 65) exigido por el Comité, lo que invalida cualquier entrada para evitar el riesgo de 'stop-hunt' y proteger el capital institucional.",
+  "reasoning": "Tras evaluar los scores técnicos y el contexto macro, ningún activo alcanza el umbral de calidad A+ requerido por el comité. La alta volatilidad y la falta de soporte institucional en el libro de órdenes hacen que cualquier posición sea considerada de alto riesgo, por lo que se opta por la preservación total del capital.",
   "top_candidates": [
     {
       "symbol": "TAOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ASTERUSDT",
       "score": 60
     },
     {
@@ -15,16 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "NIGHTUSDT",
-      "score": 60
-    },
-    {
       "symbol": "ENAUSDT",
       "score": 55
     },
     {
-      "symbol": "BICOUSDT",
-      "score": 50
+      "symbol": "SAGAUSDT",
+      "score": 55
     }
   ]
 }
