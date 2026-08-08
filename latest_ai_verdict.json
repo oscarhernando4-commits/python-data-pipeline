@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 23:04:17",
+  "timestamp": "2026-08-08 23:06:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual carece de activos con un Score Técnico superior a 65 y no presenta una configuración de soporte institucional en el libro de órdenes. Siguiendo la Regla de Oro #1, se mantiene la liquidez en USDT para evitar trampas de liquidez y pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y alta incertidumbre. Ninguno de los candidatos analizados alcanza el umbral de calidad A+ (Score >= 65) requerido por el comité, y el historial de simulaciones advierte sobre el alto riesgo de pérdidas en las condiciones actuales. Se prioriza la protección del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "ZBTUSDT",
+      "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TSTUSDT",
       "score": 50
     },
     {
-      "symbol": "BANKUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "MUBARAKUSDT",
+      "symbol": "EPICUSDT",
       "score": 50
     }
   ]
