@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 03:34:21",
-  "selected_symbol": "ADAUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "Tras deliberar, el comité ha determinado que ADAUSDT es el único activo que supera el umbral de convicción A+ (Score 85). A pesar del entorno de miedo, la rotación de capital hacia Layer 1 justifica una posición de acumulación escalonada (30% inicial) con gestión de riesgo estricta, evitando los activos de baja capitalización que han mostrado pérdidas recurrentes en las simulaciones.",
+  "timestamp": "2026-08-08 03:36:18",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un estado de miedo (30) con una estructura técnica que no ofrece una ventaja estadística clara. Ninguno de los candidatos presenta una dominancia de Bids superior al 55% ni una confirmación de volumen institucional que supere el umbral de riesgo exigido por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
       "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BNBUSDT",
       "score": 75
     }
   ]
