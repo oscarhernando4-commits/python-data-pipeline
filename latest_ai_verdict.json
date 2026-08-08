@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-08 20:16:16",
+  "timestamp": "2026-08-08 20:18:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de purga de liquidez donde los activos analizados no cumplen con el umbral de seguridad (Score >= 65 con soporte de libro de órdenes) exigido por el comité para mitigar el riesgo de pérdidas sistémicas.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado se encuentra en una fase de alta incertidumbre y baja volatilidad, por lo que la estrategia óptima es la preservación de capital.",
   "top_candidates": [
+    {
+      "symbol": "UNIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
     {
       "symbol": "WLFIUSDT",
       "score": 75
@@ -17,14 +25,6 @@
     {
       "symbol": "CRVUSDT",
       "score": 75
-    },
-    {
-      "symbol": "HEIUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "DODOUSDT",
-      "score": 65
     }
   ]
 }
