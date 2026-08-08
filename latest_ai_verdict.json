@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 15:34:21",
+  "timestamp": "2026-08-08 15:36:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). Ante la incertidumbre y la falta de muros de soporte sólidos, la estrategia institucional es preservar el capital en efectivo.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos teóricos, la falta de soporte real en el libro de órdenes y el entorno de mercado 'Fear' con tendencia 'NEUTRAL' no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se mantiene la posición en efectivo para evitar la alta probabilidad de pérdidas observada en el historial de simulaciones recientes.",
   "top_candidates": [
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "NILUSDT",
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "DOTUSDT",
       "score": 75
     }
   ]
