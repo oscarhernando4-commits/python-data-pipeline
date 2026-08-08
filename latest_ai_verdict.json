@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-08 10:58:19",
-  "selected_symbol": "ARBUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "ARBUSDT es el único candidato que cumple con el umbral de Score Técnico >= 65 y muestra un volumen de surge excepcional (3.21), lo que indica una acumulación institucional activa a pesar del sentimiento de miedo generalizado. Se autoriza la entrada con gestión de riesgo estricta mediante Trailing Stop.",
+  "timestamp": "2026-08-08 11:00:21",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y baja convicción. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité (Score >= 65 con confirmación de volumen y profundidad de mercado). Se prioriza la protección del capital sobre la especulación en un entorno de 'Fear' donde la mayoría de los activos carecen de soporte institucional real.",
   "top_candidates": [
     {
-      "symbol": "ARBUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "DOTUSDT",
+      "symbol": "WLDUSDT",
       "score": 75
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "DOTUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "RENDERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TRUMPUSDT",
       "score": 75
     }
   ]
