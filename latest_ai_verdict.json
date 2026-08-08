@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-08 17:44:25",
+  "timestamp": "2026-08-08 17:46:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos analizados cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de alta incertidumbre y rotación selectiva, lo que aumenta el riesgo de 'trampas de valor'. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "Ninguno de los candidatos presenta una dominancia de Bids superior al 55% ni una estructura técnica que garantice una alta probabilidad de éxito, por lo que se mantiene la liquidez en espera de mejores condiciones.",
   "top_candidates": [
-    {
-      "symbol": "LUNCUSDT",
-      "score": 85
-    },
     {
       "symbol": "BTCUSDT",
       "score": 75
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "NEXOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHFIUSDT",
       "score": 75
     }
   ]
