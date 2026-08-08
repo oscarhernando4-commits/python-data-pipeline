@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-08 22:52:22",
+  "timestamp": "2026-08-08 22:54:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada con scores técnicos insuficientes (máximo 60/100) y falta de soporte en el libro de órdenes. Siguiendo la Regla de Oro #1, se bloquea cualquier operación para preservar el capital hasta que surja una configuración A+.",
+  "reasoning": "El mercado presenta una asimetría de debilidad extrema. Ningún activo analizado alcanza el umbral de convicción A+ (Score >= 65). La estrategia institucional es la preservación total del capital mediante la inacción (HOLD) hasta que aparezcan divergencias alcistas claras o una mejora en el sentimiento macro.",
   "top_candidates": [
+    {
+      "symbol": "TRXUSDT",
+      "score": 60
+    },
     {
       "symbol": "SPYBUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "NIGHTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "BICOUSDT",
+      "symbol": "ZBTUSDT",
       "score": 50
     },
     {
-      "symbol": "BANKUSDT",
+      "symbol": "BICOUSDT",
       "score": 50
     }
   ]
