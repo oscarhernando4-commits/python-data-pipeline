@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 02:48:19",
+  "timestamp": "2026-08-08 02:50:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los scores técnicos y el contexto macro, ningún activo alcanza el umbral de calidad A+ requerido por el comité. La alta volatilidad y la falta de soporte institucional en el libro de órdenes hacen que cualquier posición sea considerada de alto riesgo, por lo que se opta por la preservación total del capital.",
+  "reasoning": "El mercado se encuentra en un estado de miedo y alta volatilidad sin una dirección clara. Ninguno de los candidatos cumple con los requisitos estrictos de soporte en el libro de órdenes (Bids > 55%) ni con una tendencia alcista consolidada en 4H, por lo que la decisión institucional es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
+      "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
       "symbol": "TAOUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "ASTERUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "SPYBUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "ENAUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "SAGAUSDT",
-      "score": 55
+      "score": 70
     }
   ]
 }
