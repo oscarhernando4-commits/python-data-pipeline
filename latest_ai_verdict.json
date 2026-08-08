@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-08 11:52:23",
+  "timestamp": "2026-08-08 11:54:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre y aversión al riesgo. Ninguno de los candidatos analizados cumple con el umbral de Score Técnico A+ (>= 65) ni con una dominancia de Bids superior al 55% necesaria para mitigar el riesgo de slippage. Por lo tanto, la estrategia institucional es preservar el capital y esperar una mejor configuración de mercado.",
+  "reasoning": "El mercado se encuentra en una fase de purga de posiciones apalancadas con una estructura técnica deficiente. Ningún activo cumple con el requisito estricto de Score >= 65 y confirmación de volumen institucional, por lo que la decisión unánime es mantener la liquidez en espera de un catalizador claro.",
   "top_candidates": [
     {
       "symbol": "JSTUSDT",
       "score": 65
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 60
     },
     {
       "symbol": "BNBUSDT",
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "XAUTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ASTERUSDT",
       "score": 60
     }
   ]
