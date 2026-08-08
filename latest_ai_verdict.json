@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 00:44:17",
+  "timestamp": "2026-08-08 00:46:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de Score Técnico A+ (>= 65) ni con la confirmación de soporte institucional en el libro de órdenes, por lo que se prioriza la protección del capital frente a la alta fragilidad sistémica.",
+  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con alta incertidumbre regulatoria. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital, por lo que se prioriza la liquidez.",
   "top_candidates": [
     {
-      "symbol": "ALGOUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "TSTUSDT",
-      "score": 65
-    },
-    {
       "symbol": "DOGEUSDT",
-      "score": 60
+      "score": 75
     },
     {
-      "symbol": "TRXUSDT",
-      "score": 60
+      "symbol": "WLDUSDT",
+      "score": 75
     },
     {
       "symbol": "DOTUSDT",
-      "score": 60
+      "score": 75
+    },
+    {
+      "symbol": "VETUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZKPUSDT",
+      "score": 75
     }
   ]
 }
