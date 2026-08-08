@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 05:22:28",
+  "updated_at": "2026-08-08 05:24:20",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de ballenas). La alta volatilidad y el sentimiento de miedo en el mercado, sumado a la falta de una tendencia definida, dictan una postura de espera para evitar pérdidas innecesarias."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 y confirmación de soporte en libro de órdenes). La alta tasa de pérdidas en trades recientes y la incertidumbre macro sugieren que la estrategia óptima es preservar el capital hasta que el mercado muestre una estructura de acumulación clara."
   }
 }

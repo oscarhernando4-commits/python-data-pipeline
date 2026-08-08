@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-08 05:22:26",
+  "timestamp": "2026-08-08 05:24:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de ballenas). La alta volatilidad y el sentimiento de miedo en el mercado, sumado a la falta de una tendencia definida, dictan una postura de espera para evitar pérdidas innecesarias.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 y confirmación de soporte en libro de órdenes). La alta tasa de pérdidas en trades recientes y la incertidumbre macro sugieren que la estrategia óptima es preservar el capital hasta que el mercado muestre una estructura de acumulación clara.",
   "top_candidates": [
+    {
+      "symbol": "ADAUSDT",
+      "score": 75
+    },
     {
       "symbol": "BABYUSDT",
       "score": 75
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ETCUSDT",
-      "score": 75
-    },
-    {
       "symbol": "ATOMUSDT",
       "score": 75
     },
     {
-      "symbol": "ACEUSDT",
+      "symbol": "ENAUSDT",
       "score": 65
     }
   ]
