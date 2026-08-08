@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 06:08:21",
+  "updated_at": "2026-08-08 06:10:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). La alta tasa de fallos en las simulaciones históricas bajo condiciones de mercado neutral, sumada a la incertidumbre macroeconómica, obliga al comité a mantener la liquidez en USDT para evitar el riesgo de 'falling knives'."
+    "reasoning": "El mercado se encuentra en una fase de distribución selectiva con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias."
   }
 }
