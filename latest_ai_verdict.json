@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-08 12:50:19",
+  "timestamp": "2026-08-08 12:52:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras deliberar, el comité concluye que el mercado actual no cumple con los criterios de alta convicción (Score >= 65 y Bids > 55%) exigidos por nuestra política de gestión de riesgo. La alta tasa de fallos en las simulaciones recientes para activos con scores técnicos bajos refuerza la decisión de mantener la liquidez en espera de una mejor oportunidad.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad del 55% en el libro de órdenes ni con la convicción A+ exigida por el comité. La alta volatilidad y la falta de una tendencia clara en el mercado global dictan una postura defensiva de preservación de capital.",
   "top_candidates": [
     {
-      "symbol": "XLMUSDT",
-      "score": 85
+      "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 75
     },
     {
       "symbol": "SKHYBUSDT",
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "AAVEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "VETUSDT",
       "score": 75
     }
   ]
