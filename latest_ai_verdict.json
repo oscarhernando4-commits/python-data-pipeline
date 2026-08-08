@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-08 06:22:21",
+  "timestamp": "2026-08-08 06:24:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia estructural y falta de soporte institucional claro en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%), por lo que la estrategia óptima es mantener la liquidez en espera de una mejor configuración técnica.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 75, la falta de dominancia en el libro de órdenes y la inestabilidad del mercado macro impiden una ejecución con la convicción A+ exigida por el protocolo de riesgo.",
   "top_candidates": [
+    {
+      "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "UNIUSDT",
+      "score": 75
+    },
     {
       "symbol": "BNBUSDT",
       "score": 75
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "ONDOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ICPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ASTERUSDT",
       "score": 75
     }
   ]
