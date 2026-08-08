@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-08 07:22:19",
+  "timestamp": "2026-08-08 07:24:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una purga de liquidez activa. Ninguno de los candidatos analizados supera el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la estrategia más rentable y segura es mantener la liquidez en USDT hasta que el mercado muestre una estructura de acumulación clara.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%) necesario para garantizar la protección del capital bajo las reglas del comité, por lo que se prioriza la preservación de liquidez.",
   "top_candidates": [
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AAVEUSDT",
       "score": 75
     },
     {
       "symbol": "ICPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TIAUSDT",
       "score": 75
     }
   ]
