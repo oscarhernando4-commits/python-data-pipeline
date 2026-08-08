@@ -1,15 +1,41 @@
 {
-  "XPLUSDT": [
+  "LUNCUSDT": [
     {
-      "timestamp": "2026-08-08 23:22:10",
-      "price": 0.07637,
+      "timestamp": "2026-08-08 23:24:12",
+      "price": 4.905e-05,
       "score": 0,
-      "rsi": 41.85,
+      "rsi": 42.86,
       "macd": "Neutral",
-      "volume_surge": 0.38,
+      "volume_surge": 0.9,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-08 23:24:12",
+      "price": 0.2904,
+      "score": 0,
+      "rsi": 44.47,
+      "macd": "Neutral",
+      "volume_surge": 0.9,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-08 23:24:12",
+      "price": 1.403,
+      "score": 0,
+      "rsi": 42.81,
+      "macd": "Neutral",
+      "volume_surge": 0.27,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}}
+}
