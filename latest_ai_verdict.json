@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 00:46:21",
+  "timestamp": "2026-08-08 00:48:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con alta incertidumbre regulatoria. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para garantizar la preservación del capital, por lo que se prioriza la liquidez.",
+  "reasoning": "El mercado actual presenta una fragilidad extrema con una correlación negativa en activos de alta capitalización y una falta de soporte real en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Confianza >= 70%) necesario para proteger el capital, por lo que la estrategia de protección de liquidez es la única opción viable.",
   "top_candidates": [
     {
       "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "WLDUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "WLDUSDT",
+      "score": 75
+    },
+    {
       "symbol": "VETUSDT",
       "score": 75
     },
     {
-      "symbol": "ZKPUSDT",
+      "symbol": "VIRTUALUSDT",
       "score": 75
     }
   ]
