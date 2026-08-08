@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-08 23:10:22",
+  "timestamp": "2026-08-08 23:12:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar el universo de activos, ninguno cumple con el umbral de Score Técnico >= 65 ni con la dominancia de Bids necesaria para una ejecución segura. La alta volatilidad y la debilidad sistémica observada en los trades pasados dictan una postura de espera (HOLD) para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de alta fragilidad y capitulación técnica. Ninguno de los candidatos analizados cumple con el umbral de seguridad A+ (Score >= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
+    {
+      "symbol": "QNTBUSDT",
+      "score": 75
+    },
     {
       "symbol": "TRXUSDT",
       "score": 70
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "BICOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "MUBARAKUSDT",
       "score": 50
     }
   ]
