@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-08 11:18:17",
+  "timestamp": "2026-08-08 11:20:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, ninguno alcanza el umbral de Score Técnico de 65/100 requerido por el Comité. La falta de soporte institucional en el libro de órdenes y el entorno macro de distribución silenciosa dictan una postura de espera para evitar 'cuchillos cayendo' y proteger la liquidez.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada y una falta de convicción institucional. Ninguno de los candidatos analizados alcanza el umbral de seguridad (Score >= 65) requerido por el comité, por lo que se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
-    {
-      "symbol": "AVAXUSDT",
-      "score": 70
-    },
     {
       "symbol": "KORUBUSDT",
       "score": 60
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "DOTUSDT",
       "score": 60
     },
     {
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "TIAUSDT",
+      "symbol": "ZROUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "AMDBUSDT",
       "score": 60
     }
   ]
