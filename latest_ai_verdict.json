@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-08 12:38:18",
+  "timestamp": "2026-08-08 12:40:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos analizados cumple con los criterios estrictos de convicción A+ exigidos por el comité, especialmente ante la falta de muros de soporte claros en el libro de órdenes y la alta tasa de fallos en condiciones de mercado neutral. Se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). El mercado se encuentra en una fase de alta incertidumbre con una correlación técnica inestable, lo que obliga a mantener la liquidez en espera de una estructura de mercado más clara y con mayor profundidad de soporte.",
   "top_candidates": [
-    {
-      "symbol": "GNOUSDT",
-      "score": 95
-    },
-    {
-      "symbol": "XRPUSDT",
-      "score": 75
-    },
     {
       "symbol": "ASTERUSDT",
       "score": 75
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "QNTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "GOOGLBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "VETUSDT",
       "score": 75
     }
   ]
