@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 13:56:56",
+  "timestamp": "2026-08-08 13:58:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos, a pesar de sus scores técnicos, logra superar el umbral de convicción A+ debido a la falta de soporte real en el libro de órdenes y la inestabilidad de la tendencia 4H. Se decide mantener la liquidez para evitar pérdidas innecesarias en un entorno de mercado lateral y volátil.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos elevados, las condiciones macroeconómicas y la falta de profundidad en el libro de órdenes no cumplen con los criterios de seguridad A+ exigidos por el Chief Risk Officer. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado con sentimiento de miedo predominante.",
   "top_candidates": [
     {
       "symbol": "ASTERUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "PAXGUSDT",
       "score": 75
     }
   ]
