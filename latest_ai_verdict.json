@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-08 01:10:29",
+  "timestamp": "2026-08-08 01:12:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia estructural y falta de profundidad en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con soporte institucional confirmado), por lo que la estrategia óptima es el resguardo de capital en efectivo.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos elevados, la falta de dominancia en el libro de órdenes y el entorno macro de miedo hacen que la probabilidad de éxito sea insuficiente para cumplir con la Regla #1 de no perder dinero.",
   "top_candidates": [
     {
-      "symbol": "HBARUSDT",
+      "symbol": "BTCUSDT",
       "score": 85
     },
     {
@@ -15,7 +15,7 @@
       "score": 85
     },
     {
-      "symbol": "AEROUSDT",
+      "symbol": "DOTUSDT",
       "score": 85
     },
     {
@@ -23,8 +23,8 @@
       "score": 85
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 75
+      "symbol": "CAKEUSDT",
+      "score": 85
     }
   ]
 }
