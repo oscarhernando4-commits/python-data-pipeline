@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-08 07:00:24",
+  "timestamp": "2026-08-08 07:02:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional y alta incertidumbre regulatoria. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la estrategia óptima es mantener la liquidez en espera de una estructura de mercado más favorable.",
+  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con una asimetría defensiva marcada. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "PAXGUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOGEUSDT",
       "score": 75
     },
     {
@@ -15,16 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 65
+      "symbol": "SKYUSDT",
+      "score": 75
     }
   ]
 }
