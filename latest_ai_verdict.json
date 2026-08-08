@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-08 15:32:22",
+  "timestamp": "2026-08-08 15:34:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta volatilidad con baja convicción institucional. Ninguno de los activos analizados supera el umbral de riesgo exigido por el Comité, por lo que la estrategia óptima es mantenerse en liquidez (HOLD) para evitar la exposición a 'falling knives' y pérdidas innecesarias.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). Ante la incertidumbre y la falta de muros de soporte sólidos, la estrategia institucional es preservar el capital en efectivo.",
   "top_candidates": [
+    {
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
     {
       "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "PAXGUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "BONKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DASHUSDT",
+      "symbol": "POLUSDT",
       "score": 75
     }
   ]
