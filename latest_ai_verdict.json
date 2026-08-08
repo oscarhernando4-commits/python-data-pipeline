@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-08 00:48:23",
+  "timestamp": "2026-08-08 00:50:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado actual presenta una fragilidad extrema con una correlación negativa en activos de alta capitalización y una falta de soporte real en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Confianza >= 70%) necesario para proteger el capital, por lo que la estrategia de protección de liquidez es la única opción viable.",
+  "confidence": 95,
+  "reasoning": "El comité ha determinado por unanimidad que no existen activos que cumplan con los criterios de convicción A+ (Score >= 65 y soporte de libro de órdenes > 55%). La alta tasa de fallos en las simulaciones históricas bajo condiciones de mercado neutral y la falta de muros de soporte institucionales obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "WLDUSDT",
       "score": 75
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "DEXEUSDT",
       "score": 75
     },
     {
