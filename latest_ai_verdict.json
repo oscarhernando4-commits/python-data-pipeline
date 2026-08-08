@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 11:14:19",
+  "timestamp": "2026-08-08 11:16:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 85 en algunos activos, la falta de confirmación en el libro de órdenes, el entorno de miedo (30) y el historial reciente de pérdidas en condiciones similares, no se cumplen los criterios de seguridad A+ para ejecutar una compra.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta probabilidad (Score A+ y Bids > 55%) necesarios para una ejecución segura, optando por la preservación del capital.",
   "top_candidates": [
-    {
-      "symbol": "DOTUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "JUPUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "NBISBUSDT",
-      "score": 85
-    },
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "AVAXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "WLDUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "JUPUSDT",
       "score": 75
     }
   ]
