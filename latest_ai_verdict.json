@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-08 13:46:30",
+  "timestamp": "2026-08-08 13:48:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el requisito estricto de dominancia de Bids (>= 55%) y el historial reciente de trades muestra una alta probabilidad de pérdidas en condiciones de mercado neutrales. Se prioriza la preservación del capital sobre la ejecución de operaciones de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en un estado de indecisión con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité (Bids > 55% y confirmación de volumen institucional), por lo que la decisión unánime es mantener la liquidez y evitar la exposición a activos que podrían actuar como trampas de valor.",
   "top_candidates": [
+    {
+      "symbol": "BNBUSDT",
+      "score": 75
+    },
     {
       "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PAXGUSDT",
-      "score": 75
-    },
-    {
       "symbol": "HBARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
