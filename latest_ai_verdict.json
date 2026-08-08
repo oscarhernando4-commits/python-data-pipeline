@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 00:50:18",
+  "timestamp": "2026-08-08 00:52:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 95,
-  "reasoning": "El comité ha determinado por unanimidad que no existen activos que cumplan con los criterios de convicción A+ (Score >= 65 y soporte de libro de órdenes > 55%). La alta tasa de fallos en las simulaciones históricas bajo condiciones de mercado neutral y la falta de muros de soporte institucionales obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado actual presenta una fragilidad extrema y una falta de profundidad en el libro de órdenes. Ningún candidato cumple con la regla de oro de convicción A+ (Score >= 65 con soporte institucional confirmado), por lo que la decisión unánime es mantener la liquidez para evitar pérdidas innecesarias en un entorno de alta volatilidad sin tendencia.",
   "top_candidates": [
     {
       "symbol": "DOGEUSDT",
@@ -15,16 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "DEXEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "VETUSDT",
-      "score": 75
-    },
-    {
       "symbol": "VIRTUALUSDT",
       "score": 75
+    },
+    {
+      "symbol": "ZKPUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LUNCUSDT",
+      "score": 70
     }
   ]
 }
