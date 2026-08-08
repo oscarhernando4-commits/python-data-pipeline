@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 06:30:21",
+  "timestamp": "2026-08-08 06:32:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y confirmación de liquidez) bajo las condiciones actuales de mercado, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre y debilidad estructural. Ninguno de los activos analizados cumple con el requisito de Score A+ (>= 65) ni presenta una ventaja estadística clara en el libro de órdenes. Para evitar el riesgo de 'falling knives' y proteger el capital, el comité ha decidido no ejecutar ninguna operación de compra.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ONDOUSDT",
-      "score": 75
+      "score": 60
     },
     {
       "symbol": "ICPUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 70
+      "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ARBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 50
     }
   ]
 }
