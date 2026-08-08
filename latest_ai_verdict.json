@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-08 18:40:15",
+  "timestamp": "2026-08-08 18:42:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual se encuentra en una fase de capitulación y trampa de liquidez. Ninguno de los candidatos cumple con el requisito estricto de Score Técnico >= 65 ni con una dominancia de Bids superior al 55%, por lo que se prioriza la preservación del capital sobre la operativa especulativa.",
+  "reasoning": "El mercado se encuentra en un estado de compresión de volatilidad con scores técnicos insuficientes (máximo 60/100) para cumplir con la Regla de Oro #1 (Score >= 65). Ante la incertidumbre y la falta de confirmación en el libro de órdenes, el comité ha decidido unánimemente mantener la liquidez en USDT para evitar el riesgo de una trampa de liquidez bajista.",
   "top_candidates": [
+    {
+      "symbol": "ADAUSDT",
+      "score": 60
+    },
     {
       "symbol": "REUSDT",
       "score": 60
     },
     {
       "symbol": "XAUTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "POLUSDT",
       "score": 60
     },
     {
