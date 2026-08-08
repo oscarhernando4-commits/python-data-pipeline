@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-08 20:28:14",
+  "timestamp": "2026-08-08 20:30:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una falta de soporte institucional en el libro de órdenes. Ninguno de los candidatos analizados alcanza el umbral de seguridad (Score >= 65) exigido por el comité, lo que obliga a mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una asimetría de pánico severa. Ningún activo cumple con los criterios estrictos de calidad A+ establecidos por el comité. La estrategia de preservación de capital dicta mantener la posición en efectivo (USDT) para evitar la exposición a 'cuchillos cayendo' y volatilidad sin tendencia definida.",
   "top_candidates": [
     {
-      "symbol": "LTCUSDT",
-      "score": 60
-    },
-    {
       "symbol": "UNIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "TRUMPUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "CRVUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ETHFIUSDT",
       "score": 60
     }
   ]
