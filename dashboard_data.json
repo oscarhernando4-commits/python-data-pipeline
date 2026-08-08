@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 14:30:24",
+  "updated_at": "2026-08-08 14:32:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una rotación de capital inestable. Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el Comité, y el historial reciente de trades similares sugiere una alta probabilidad de pérdida. Se prioriza la preservación del capital sobre la ejecución especulativa."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). La alta tasa de fallos en trades recientes bajo condiciones de mercado neutrales obliga a mantener la liquidez en USDT para evitar pérdidas innecesarias."
   }
 }

@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 14:30:22",
+  "timestamp": "2026-08-08 14:32:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una rotación de capital inestable. Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el Comité, y el historial reciente de trades similares sugiere una alta probabilidad de pérdida. Se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). La alta tasa de fallos en trades recientes bajo condiciones de mercado neutrales obliga a mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "BCHUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "ONDOUSDT",
       "score": 75
     }
   ]
