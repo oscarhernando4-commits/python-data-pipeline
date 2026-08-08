@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-08 12:54:24",
+  "timestamp": "2026-08-08 12:56:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una alta fragmentación y falta de convicción institucional. A pesar de los scores técnicos, el libro de órdenes no muestra soporte de ballenas y el entorno macro de miedo sugiere que la preservación del capital es la prioridad absoluta.",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de tener activos con un score técnico de 75, ninguno cumple con la Regla de Oro #3 (Bids >= 55%) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo en un entorno de 'Fear'. Se prioriza la preservación del capital sobre la especulación en un mercado sin dirección clara.",
   "top_candidates": [
-    {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
     {
       "symbol": "SKHYBUSDT",
       "score": 75
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "NEARUSDT",
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "AAVEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "JUPUSDT",
       "score": 75
     }
   ]
