@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 02:12:20",
+  "timestamp": "2026-08-08 02:14:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual carece de la fortaleza técnica y el soporte de liquidez necesarios para cumplir con nuestra estricta política de riesgo A+. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo y alta volatilidad.",
+  "reasoning": "El mercado presenta una debilidad sistémica y una falta de convicción institucional en los activos analizados. Dado que ningún candidato alcanza el umbral de seguridad A+ (Score >= 65) y el entorno macro es de alta volatilidad inducida por noticias, la decisión prudente es no operar y proteger el capital.",
   "top_candidates": [
     {
-      "symbol": "XRPUSDT",
+      "symbol": "SHIBUSDT",
       "score": 60
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "BCHUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "XRPUSDT",
       "score": 60
     },
     {
-      "symbol": "APTUSDT",
+      "symbol": "PEPEUSDT",
       "score": 60
     }
   ]
