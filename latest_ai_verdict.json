@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-08 12:24:20",
+  "timestamp": "2026-08-08 12:26:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una estructura de alta fragilidad y falta de convicción institucional. Ninguno de los activos analizados alcanza el umbral de seguridad (Score >= 65) requerido por el Comité para garantizar una operación de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de baja profundidad y alta volatilidad.",
+  "reasoning": "El mercado se encuentra en una fase de estancamiento técnico con riesgo sistémico elevado; ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que la orden es mantener la liquidez en efectivo.",
   "top_candidates": [
     {
-      "symbol": "LDOUSDT",
-      "score": 70
+      "symbol": "XRPUSDT",
+      "score": 60
     },
     {
-      "symbol": "XRPUSDT",
+      "symbol": "DOTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "PUMPUSDT",
       "score": 60
     },
     {
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DOTUSDT",
+      "symbol": "PENGUUSDT",
       "score": 60
     }
   ]
