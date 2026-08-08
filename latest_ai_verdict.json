@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-08 05:50:20",
+  "timestamp": "2026-08-08 05:52:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de convicción A+ requerido por el comité. La incertidumbre macro, sumada a la falta de profundidad en el libro de órdenes y la inestabilidad técnica, obliga a mantener una postura de espera para preservar el capital.",
+  "reasoning": "El mercado se encuentra en un estado de estancamiento selectivo con alta incertidumbre macroeconómica. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), y el historial reciente de trades muestra una alta probabilidad de pérdida en condiciones de mercado neutral. Se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
@@ -19,12 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "ALLOUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "SYNUSDT",
-      "score": 65
+      "symbol": "ZBTUSDT",
+      "score": 70
     }
   ]
 }
