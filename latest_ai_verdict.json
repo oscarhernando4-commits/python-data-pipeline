@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 17:12:20",
+  "timestamp": "2026-08-08 17:14:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el requisito de dominancia de Bids Compradores >= 55% ni con la confirmación de soporte de ballenas necesaria para una ejecución A+. Se prioriza la preservación del capital ante la incertidumbre del mercado.",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la fortaleza técnica de activos como FET y RENDER, el entorno macroeconómico de 'Miedo' y la falta de profundidad en el libro de órdenes no garantizan la seguridad del capital, por lo que se opta por una postura de espera (HOLD) para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "FETUSDT",
+      "score": 85
+    },
     {
       "symbol": "RENDERUSDT",
       "score": 85
+    },
+    {
+      "symbol": "BTCUSDT",
+      "score": 75
     },
     {
       "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "ADAUSDT",
-      "score": 75
-    },
-    {
       "symbol": "WLFIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "FETUSDT",
       "score": 75
     }
   ]
