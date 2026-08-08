@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 22:58:18",
+  "timestamp": "2026-08-08 23:00:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad técnica generalizada. Ningún activo cumple con el umbral de Score A+ (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado actual presenta una debilidad técnica generalizada y una falta de soporte en los libros de órdenes. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) exigido por el Comité, por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT) para evitar trampas de liquidez.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "ERAUSDT",
+      "symbol": "ZROUSDT",
       "score": 60
     },
     {
-      "symbol": "KITEUSDT",
-      "score": 60
+      "symbol": "TSTUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "BANKUSDT",
+      "score": 50
     }
   ]
 }
