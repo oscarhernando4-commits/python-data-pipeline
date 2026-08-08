@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 05:46:19",
+  "timestamp": "2026-08-08 05:48:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) en un entorno de mercado caracterizado por el miedo y la compresión de volatilidad, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El comité ha determinado por consenso unánime que no existen activos que cumplan con los criterios estrictos de riesgo-recompensa (Score >= 65 y Bids > 55%). La alta probabilidad de pérdidas observada en el historial de simulaciones para condiciones de mercado neutral obliga a mantener la liquidez en espera de una mejor configuración técnica.",
   "top_candidates": [
     {
-      "symbol": "KAITOUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ALLOUSDT",
-      "score": 65
+      "symbol": "ADAUSDT",
+      "score": 75
     },
     {
       "symbol": "EPICUSDT",
-      "score": 65
+      "score": 75
     },
     {
-      "symbol": "NILUSDT",
-      "score": 65
+      "symbol": "POLUSDT",
+      "score": 75
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ALLOUSDT",
       "score": 65
     }
   ]
