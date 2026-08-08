@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 21:28:20",
+  "updated_at": "2026-08-08 21:30:16",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de 'Capitulación Selectiva' con alta volatilidad y falta de confirmación técnica en los activos analizados. Ningún candidato alcanza el umbral de convicción A+ (Score >= 65) exigido por el comité, por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT) para evitar pérdidas en un entorno de alta incertidumbre."
+    "reasoning": "El mercado carece de la convicción necesaria para una ejecución A+. Todos los candidatos presentan un score técnico de 60, por debajo del umbral de 65 requerido por el CRO. La falta de soporte claro en el libro de órdenes y la inestabilidad macroeconómica dictan una postura de espera (HOLD) para evitar pérdidas innecesarias."
   }
 }
