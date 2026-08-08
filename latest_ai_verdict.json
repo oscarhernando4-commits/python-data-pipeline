@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-08 11:20:19",
+  "timestamp": "2026-08-08 11:22:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada y una falta de convicción institucional. Ninguno de los candidatos analizados alcanza el umbral de seguridad (Score >= 65) requerido por el comité, por lo que se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta correlación negativa y falta de soporte en los activos analizados. Ningún candidato cumple con el umbral de Score A+ (>= 65) necesario para garantizar una probabilidad de éxito estadística, por lo que la estrategia de preservación de capital dicta mantenerse en liquidez total.",
   "top_candidates": [
+    {
+      "symbol": "ASTERUSDT",
+      "score": 70
+    },
     {
       "symbol": "KORUBUSDT",
       "score": 60
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "ZROUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "AMDBUSDT",
       "score": 60
     }
   ]
