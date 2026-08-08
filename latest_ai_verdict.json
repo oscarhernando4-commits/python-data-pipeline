@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-08 15:54:19",
+  "timestamp": "2026-08-08 15:56:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, el comité ha determinado que el mercado carece de la convicción necesaria para una entrada de alta probabilidad. La falta de dominancia en el libro de órdenes y la inestabilidad en los activos de alta beta sugieren un riesgo de pérdida superior al beneficio potencial, por lo que se mantiene la posición en efectivo (HOLD).",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de liquidez y soporte). La incertidumbre en el libro de órdenes y el entorno de miedo generalizado dictan una postura de preservación de capital (HOLD) para evitar 'cuchillos cayendo'.",
   "top_candidates": [
     {
       "symbol": "SHIBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "PEPEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "POLUSDT",
       "score": 75
     }
   ]
