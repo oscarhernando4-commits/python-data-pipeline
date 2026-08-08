@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 01:56:47",
+  "updated_at": "2026-08-08 01:58:19",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de Score A+ (>= 65) combinado con una dominancia de Bids superior al 55% y una estructura de mercado clara, por lo que se prioriza la preservación del capital."
+    "reasoning": "El mercado se encuentra en un estado de alta incertidumbre y distribución silenciosa. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro y confirmación histórica), por lo que la estrategia de preservación de capital es la única opción viable."
   }
 }
