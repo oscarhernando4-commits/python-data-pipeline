@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-08 10:44:17",
+  "timestamp": "2026-08-08 10:46:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La alta volatilidad y la falta de muros de soporte institucionales en el libro de órdenes, sumado al entorno de miedo, dictan una postura de preservación de capital (HOLD).",
+  "reasoning": "El mercado se encuentra en un estado de indecisión neutral con baja profundidad de liquidez. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
   "top_candidates": [
-    {
-      "symbol": "FETUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "VETUSDT",
-      "score": 85
-    },
     {
       "symbol": "ASTERUSDT",
       "score": 75
     },
     {
+      "symbol": "DOTUSDT",
+      "score": 75
+    },
+    {
       "symbol": "WLDUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "FETUSDT",
       "score": 75
     },
     {
