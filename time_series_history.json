@@ -1,12 +1,38 @@
 {
   "LDOUSDT": [
     {
-      "timestamp": "2026-08-08 08:10:13",
+      "timestamp": "2026-08-08 08:12:17",
       "price": 0.2905,
       "score": 30,
       "rsi": 54.45,
       "macd": "Neutral",
       "volume_surge": 0.92,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BIOUSDT": [
+    {
+      "timestamp": "2026-08-08 08:12:17",
+      "price": 0.02524,
+      "score": 10,
+      "rsi": 50.21,
+      "macd": "Neutral",
+      "volume_surge": 0.63,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "QNTBUSDT": [
+    {
+      "timestamp": "2026-08-08 08:12:17",
+      "price": 58.16,
+      "score": 45,
+      "rsi": 43.07,
+      "macd": "Neutral",
+      "volume_surge": 1.81,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
