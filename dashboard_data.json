@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 00:00:22",
+  "updated_at": "2026-08-08 00:02:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). La estrategia óptima es mantener la liquidez en efectivo (Cash is King) para evitar pérdidas en activos de baja capitalización y alta volatilidad."
+    "reasoning": "El comité ha determinado que el mercado presenta una toxicidad elevada y una falta de convicción institucional clara. Ninguno de los candidatos cumple con los requisitos estrictos de Score Técnico (>= 65) y profundidad de mercado (Bids > 55%) exigidos por el protocolo de riesgo. Se mantiene la posición en efectivo para evitar la exposición a la alta volatilidad y el riesgo de 'flash crash' detectado en el análisis macro."
   }
 }

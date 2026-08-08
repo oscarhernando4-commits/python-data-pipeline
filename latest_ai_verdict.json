@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-08 00:00:22",
+  "timestamp": "2026-08-08 00:02:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). La estrategia óptima es mantener la liquidez en efectivo (Cash is King) para evitar pérdidas en activos de baja capitalización y alta volatilidad.",
+  "confidence": 0,
+  "reasoning": "El comité ha determinado que el mercado presenta una toxicidad elevada y una falta de convicción institucional clara. Ninguno de los candidatos cumple con los requisitos estrictos de Score Técnico (>= 65) y profundidad de mercado (Bids > 55%) exigidos por el protocolo de riesgo. Se mantiene la posición en efectivo para evitar la exposición a la alta volatilidad y el riesgo de 'flash crash' detectado en el análisis macro.",
   "top_candidates": [
     {
       "symbol": "DOTUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ZECUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "DEXEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "CAKEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "VETUSDT",
+      "symbol": "QNTUSDT",
       "score": 75
     }
   ]
