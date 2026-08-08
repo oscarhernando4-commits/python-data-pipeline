@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 19:14:15",
+  "timestamp": "2026-08-08 19:16:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una asimetría de pánico estructural y ningún activo cumple con el umbral de Score Técnico A+ (>= 65) necesario para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja convicción.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad técnica generalizada. Ningún activo cumple con los criterios estrictos de calidad A+ (Score >= 65) ni presenta una estructura de liquidez favorable en el libro de órdenes. Se prioriza la protección del capital (Cash-is-King) hasta que se observe una rotación de capital saludable y una mejora en la fuerza relativa de los activos.",
   "top_candidates": [
     {
-      "symbol": "SUNUSDT",
-      "score": 90
+      "symbol": "GRAMUSDT",
+      "score": 70
     },
     {
-      "symbol": "UNIUSDT",
+      "symbol": "ZECUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "ZAMAUSDT",
+      "symbol": "ORDIUSDT",
       "score": 60
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "SUNUSDT",
       "score": 60
     }
   ]
