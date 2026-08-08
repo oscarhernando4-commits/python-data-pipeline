@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 22:00:22",
+  "timestamp": "2026-08-08 22:02:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una alta selectividad y riesgo de capitulación. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la estrategia óptima es la preservación total del capital en espera de mejores condiciones.",
+  "reasoning": "El mercado actual carece de la profundidad y la convicción técnica necesaria para una ejecución de compra. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) exigido por el comité, y la alta volatilidad en el sector de altcoins aumenta el riesgo de pérdidas. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo generalizado.",
   "top_candidates": [
     {
-      "symbol": "TAOUSDT",
+      "symbol": "ZECUSDT",
       "score": 60
     },
     {
-      "symbol": "LINKUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "ORDIUSDT",
       "score": 60
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 60
+      "symbol": "HEIUSDT",
+      "score": 50
     },
     {
-      "symbol": "AAVEUSDT",
-      "score": 60
+      "symbol": "EPICUSDT",
+      "score": 50
     }
   ]
 }
