@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 05:44:19",
+  "timestamp": "2026-08-08 05:46:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con la regla de oro de convicción A+ (Score >= 65 con confirmación de liquidez y soporte de ballenas). La alta tasa de fallos en las simulaciones recientes para activos con tendencia neutral obliga a mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) en un entorno de mercado caracterizado por el miedo y la compresión de volatilidad, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "BABYUSDT",
-      "score": 85
+      "symbol": "KAITOUSDT",
+      "score": 70
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 85
+      "symbol": "ALLOUSDT",
+      "score": 65
     },
     {
-      "symbol": "ARBUSDT",
-      "score": 85
+      "symbol": "EPICUSDT",
+      "score": 65
     },
     {
-      "symbol": "ETHUSDT",
-      "score": 75
+      "symbol": "NILUSDT",
+      "score": 65
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 75
+      "symbol": "FETUSDT",
+      "score": 65
     }
   ]
 }
