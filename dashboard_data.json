@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 07:16:23",
+  "updated_at": "2026-08-08 07:18:24",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de parálisis con una clara falta de convicción en los activos analizados. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 y Bids >= 55%) exigido por el comité para garantizar la preservación del capital. Se prioriza la liquidez en espera de una ruptura de niveles críticos en los activos principales."
+    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y distribución, con una falta de profundidad en el libro de órdenes y una alta tasa de fallos en trades recientes. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que se prioriza la preservación del capital."
   }
 }
