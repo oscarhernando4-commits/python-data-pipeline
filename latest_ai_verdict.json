@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-08 12:16:17",
+  "timestamp": "2026-08-08 12:18:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sesgo neutral predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia más prudente y rentable a largo plazo es mantener la liquidez en espera de una configuración de menor riesgo.",
+  "reasoning": "El mercado presenta una fragmentación severa y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con los criterios estrictos de convicción A+ establecidos por el comité, por lo que la estrategia óptima es preservar el capital en espera de una mejor configuración técnica.",
   "top_candidates": [
     {
-      "symbol": "ETHUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XRPUSDT",
       "score": 75
     },
     {
       "symbol": "ASTERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOTUSDT",
       "score": 75
     }
   ]
