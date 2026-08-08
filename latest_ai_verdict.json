@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 03:18:20",
+  "timestamp": "2026-08-08 03:20:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta fragilidad con una correlación inestable. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). Se prioriza la preservación del capital sobre la especulación en un entorno de miedo minorista.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de dominancia en el libro de órdenes y el entorno macro de miedo (Fear 30) no cumplen con los criterios de alta convicción (A+) necesarios para proteger el capital. Se prioriza la preservación de la liquidez sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
