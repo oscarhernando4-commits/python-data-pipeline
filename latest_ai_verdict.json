@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 11:38:21",
+  "timestamp": "2026-08-08 11:40:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre y debilidad técnica. Ninguno de los candidatos cumple con el umbral de Score A+ (>= 65) ni con una dominancia de Bids superior al 55%, lo que aumenta el riesgo de 'falling knives'. Se prioriza la preservación del capital hasta que surja una configuración de alta convicción.",
+  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con debilidad sistémica. Ningún activo cumple con el requisito estricto de Score Técnico >= 65 ni con una dominancia de Bids superior al 55%, por lo que la decisión institucional es mantener la liquidez en espera de una mejor estructura de mercado.",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "PAXGUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "KORUBUSDT",
+      "score": 60
+    },
+    {
       "symbol": "ASTERUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DOTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "GIGGLEUSDT",
       "score": 60
     }
   ]
