@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-08 04:54:19",
+  "timestamp": "2026-08-08 04:56:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de rotación defensiva con alta probabilidad de falsos rompimientos, por lo que la estrategia óptima es mantener la liquidez en espera de una estructura de mercado más robusta.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el Comité. La falta de dominancia clara en el libro de órdenes y la inestabilidad macroeconómica dictan una postura de preservación de capital (HOLD) hasta que surja una señal de alta calidad.",
   "top_candidates": [
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "BABYUSDT",
       "score": 75
     },
     {
@@ -15,11 +15,11 @@
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
-      "symbol": "BABYUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
