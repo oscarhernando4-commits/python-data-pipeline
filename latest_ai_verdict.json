@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-08 10:26:23",
+  "timestamp": "2026-08-08 10:28:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 45,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una divergencia estructural que ha provocado múltiples pérdidas en las simulaciones recientes. Ningún activo presenta la confluencia necesaria de soporte en el libro de órdenes y confirmación técnica para superar el umbral de riesgo del comité. Se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un 'limbo de liquidez' con alta volatilidad y falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité de Riesgo, por lo que se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "ARBUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "SKHYBUSDT",
       "score": 75
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PUMPUSDT",
-      "score": 75
-    },
-    {
       "symbol": "ALGOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AXTIBUSDT",
       "score": 75
     }
   ]
