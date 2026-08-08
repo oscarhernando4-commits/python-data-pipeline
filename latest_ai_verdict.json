@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 18:56:21",
+  "timestamp": "2026-08-08 18:58:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta fragilidad con scores técnicos insuficientes (máximo 60/100) y falta de convicción en el libro de órdenes. Siguiendo la Regla de Oro #1, se bloquea cualquier operación para preservar el capital ante la ausencia de una señal A+.",
+  "reasoning": "El comité ha determinado que no existe ningún activo que cumpla con el umbral mínimo de convicción A+ (Score >= 65). Ante la fragilidad del mercado y la falta de soporte institucional en el libro de órdenes, la decisión estratégica es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
@@ -19,7 +19,7 @@
       "score": 60
     },
     {
-      "symbol": "ORDIUSDT",
+      "symbol": "POLUSDT",
       "score": 60
     },
     {
