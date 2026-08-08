@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-08 17:26:24",
-  "selected_symbol": "NEXOUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "El comité ha alcanzado un consenso unánime para ejecutar una posición de 'Long-Only' en NEXOUSDT. El activo destaca por su alto Score Técnico (85) y un volumen institucional significativo (2.48x), superando a otros candidatos. Se prioriza la protección del capital mediante un Trailing Stop estricto, evitando activos con scores inferiores a 65 que han mostrado pérdidas recurrentes en las simulaciones históricas.",
+  "timestamp": "2026-08-08 17:28:23",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con una estructura técnica poco clara y una falta de soporte institucional contundente en el libro de órdenes. Dado que no se cumplen los criterios de convicción A+ (Score >= 65 y confirmación de volumen), el comité decide mantener la liquidez en USDT para evitar el riesgo de 'falling knives' observado en el historial de simulaciones.",
   "top_candidates": [
+    {
+      "symbol": "RENDERUSDT",
+      "score": 85
+    },
     {
       "symbol": "NEXOUSDT",
       "score": 85
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "WLFIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TRUMPUSDT",
+      "symbol": "ETCUSDT",
       "score": 75
     }
   ]
