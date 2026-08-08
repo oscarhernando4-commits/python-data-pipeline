@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 14:54:21",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 95,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). La alta tasa de pérdidas en trades pasados bajo condiciones de mercado 'NEUTRAL' refuerza la decisión de mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "timestamp": "2026-08-08 14:56:22",
+  "selected_symbol": "XAUTUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "El mercado se encuentra en un estado de miedo y estancamiento, lo que hace que los activos de refugio (RWA/Precious Metals) sean la única opción viable. XAUTUSDT destaca por su alto score técnico (85), volumen institucional y su rol como cobertura, cumpliendo con todos los criterios de seguridad y rentabilidad exigidos por el comité.",
   "top_candidates": [
     {
-      "symbol": "LTCUSDT",
+      "symbol": "XAUTUSDT",
       "score": 85
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "LTCUSDT",
       "score": 85
     },
     {
@@ -23,7 +23,7 @@
       "score": 85
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "ETCUSDT",
       "score": 85
     }
   ]
