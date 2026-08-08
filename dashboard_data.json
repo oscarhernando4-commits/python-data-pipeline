@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 05:52:20",
+  "updated_at": "2026-08-08 05:54:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de estancamiento selectivo con alta incertidumbre macroeconómica. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), y el historial reciente de trades muestra una alta probabilidad de pérdida en condiciones de mercado neutral. Se prioriza la preservación del capital sobre la especulación."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La alta volatilidad y la falta de soporte en el libro de órdenes, sumado al entorno de miedo, dictan una estrategia de preservación de capital (HOLD) para evitar pérdidas por 'falling knives'."
   }
 }
