@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-08 05:54:20",
+  "timestamp": "2026-08-08 05:56:53",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La alta volatilidad y la falta de soporte en el libro de órdenes, sumado al entorno de miedo, dictan una estrategia de preservación de capital (HOLD) para evitar pérdidas por 'falling knives'.",
+  "reasoning": "El mercado presenta un entorno de alta selectividad y riesgo asimétrico donde los candidatos no cumplen con el umbral de convicción A+ ni con la profundidad de libro de órdenes necesaria para una ejecución segura, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "DOGEUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "BABYUSDT",
       "score": 75
     },
     {
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "ASTERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "FETUSDT",
       "score": 75
     },
     {
