@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 23:50:23",
+  "timestamp": "2026-08-08 23:52:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta volatilidad y falta de soporte real. Ningún activo cumple con los criterios de calidad A+ (Score >= 65) exigidos por el comité, por lo que la estrategia óptima es la neutralidad total para evitar pérdidas innecesarias.",
+  "confidence": 0,
+  "reasoning": "El mercado carece de la convicción técnica necesaria (Score < 65) y la profundidad de liquidez requerida para mitigar el riesgo sistémico. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y debilidad técnica.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "GRAMUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "HOMEUSDT",
+      "score": 60
+    },
+    {
       "symbol": "RENDERUSDT",
       "score": 60
     },
     {
-      "symbol": "ORDIUSDT",
+      "symbol": "CAKEUSDT",
       "score": 60
     }
   ]
