@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 02:00:23",
+  "timestamp": "2026-08-08 02:02:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta fragilidad con una tendencia neutral y falta de convicción institucional. Ninguno de los candidatos analizados alcanza el umbral de Score 65 requerido por el Comité para una operación de alta probabilidad. Se prioriza la protección del capital sobre la exposición especulativa.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con alta correlación negativa. Ninguno de los candidatos cumple con el requisito estricto de Score Técnico >= 65 ni con la confirmación de liquidez necesaria en el libro de órdenes. La estrategia institucional prioriza la preservación del capital sobre la especulación en activos de baja capitalización o con historial insuficiente.",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "SPYBUSDT",
+      "symbol": "SUIUSDT",
       "score": 60
     },
     {
-      "symbol": "NIGHTUSDT",
+      "symbol": "XRPUSDT",
       "score": 60
     },
     {
-      "symbol": "MMTUSDT",
-      "score": 50
+      "symbol": "PEPEUSDT",
+      "score": 60
     }
   ]
 }
