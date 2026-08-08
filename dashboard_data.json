@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 07:20:21",
+  "updated_at": "2026-08-08 07:22:19",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Debido a la falta de confirmación en el libro de órdenes y la alta volatilidad con resultados negativos en las simulaciones recientes, el comité ha decidido mantener la liquidez en espera de una configuración técnica de mayor calidad."
+    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una purga de liquidez activa. Ninguno de los candidatos analizados supera el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la estrategia más rentable y segura es mantener la liquidez en USDT hasta que el mercado muestre una estructura de acumulación clara."
   }
 }

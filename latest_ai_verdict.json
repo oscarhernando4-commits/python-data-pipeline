@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 07:20:21",
+  "timestamp": "2026-08-08 07:22:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Debido a la falta de confirmación en el libro de órdenes y la alta volatilidad con resultados negativos en las simulaciones recientes, el comité ha decidido mantener la liquidez en espera de una configuración técnica de mayor calidad.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una purga de liquidez activa. Ninguno de los candidatos analizados supera el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la estrategia más rentable y segura es mantener la liquidez en USDT hasta que el mercado muestre una estructura de acumulación clara.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
       "symbol": "ICPUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TIAUSDT",
       "score": 75
     }
   ]
