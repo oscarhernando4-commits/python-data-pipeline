@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-08 21:12:15",
+  "timestamp": "2026-08-08 21:14:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de alta fragilidad con una capitulación minorista que no ofrece una entrada de alta probabilidad. Ningún activo cumple con el umbral de Score Técnico A+ (>= 65) y la confirmación de soporte en el libro de órdenes, por lo que el comité decide mantenerse en modo de preservación de capital (HOLD) hasta que las condiciones macro y técnicas se alineen.",
+  "reasoning": "El mercado se encuentra en una fase de distribución terminal con scores técnicos mediocres (60/100) y falta de profundidad en el libro de órdenes. Siguiendo la Regla de Oro #1, al no existir candidatos con Score >= 65, el comité decide mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "LINKUSDT",
-      "score": 70
+      "symbol": "TAOUSDT",
+      "score": 60
     },
     {
       "symbol": "SUIUSDT",
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "JUPUSDT",
+      "symbol": "SPYBUSDT",
       "score": 60
     }
   ]
