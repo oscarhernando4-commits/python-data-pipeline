@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 02:32:21",
+  "timestamp": "2026-08-08 02:34:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de confirmación en el orderbook, sumado a la alta tasa de pérdidas en trades similares del historial, dictaminan una postura de espera para preservar el capital.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta volatilidad y falta de soporte claro en el libro de órdenes. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "CAKEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AEROUSDT",
       "score": 75
     }
   ]
