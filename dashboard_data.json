@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 05:40:22",
+  "updated_at": "2026-08-08 05:42:31",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "A pesar de tener candidatos con scores técnicos de 85, la ausencia de una dominancia clara en el libro de órdenes (Bids < 55%) y la alta tasa de fallos en condiciones de mercado neutrales detectada por el historiador RAG, obligan a mantener la liquidez en USDT para evitar pérdidas innecesarias."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Confianza >= 70%) ni con la confirmación de soporte en el libro de órdenes, por lo que se prioriza la preservación del capital ante la alta volatilidad y el sentimiento de miedo predominante."
   }
 }
