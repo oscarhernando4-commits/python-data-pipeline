@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 10:20:21",
+  "updated_at": "2026-08-08 10:22:20",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). El mercado presenta una alta volatilidad con baja profundidad en el libro de órdenes, lo que aumenta el riesgo de pérdidas por 'flash crashes'. Se prioriza la protección del capital sobre la ejecución de trades de baja probabilidad."
+    "reasoning": "El mercado se encuentra en un estado de 'Fear' con una rotación de capital fragmentada y sin soporte institucional definido en el libro de órdenes. Ninguno de los candidatos analizados supera el umbral de riesgo A+ exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una mejor configuración técnica."
   }
 }
