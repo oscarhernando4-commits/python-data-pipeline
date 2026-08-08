@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-08 11:22:19",
+  "timestamp": "2026-08-08 11:24:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta correlación negativa y falta de soporte en los activos analizados. Ningún candidato cumple con el umbral de Score A+ (>= 65) necesario para garantizar una probabilidad de éxito estadística, por lo que la estrategia de preservación de capital dicta mantenerse en liquidez total.",
+  "reasoning": "El mercado carece de la fuerza técnica y la profundidad de liquidez necesarias para una ejecución segura; por lo tanto, se mantiene la posición en efectivo para evitar pérdidas en un entorno de alta volatilidad y sesgo bajista.",
   "top_candidates": [
-    {
-      "symbol": "ASTERUSDT",
-      "score": 70
-    },
     {
       "symbol": "KORUBUSDT",
       "score": 60
@@ -20,6 +16,10 @@
     },
     {
       "symbol": "SPYBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SAGAUSDT",
       "score": 60
     },
     {
