@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-08 04:00:27",
+  "timestamp": "2026-08-08 04:02:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y baja liquidez institucional. Ninguno de los candidatos cumple con el requisito de soporte de libro de órdenes (Bids >= 55%) ni con una confirmación de volumen institucional, lo que obliga al comité a adoptar una postura defensiva de 'HOLD' para evitar pérdidas innecesarias.",
+  "confidence": 95,
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos, no existe una confirmación unánime en el libro de órdenes ni una tendencia macro favorable que cumpla con los estrictos criterios de gestión de riesgo del Agente 6.",
   "top_candidates": [
     {
+      "symbol": "SHIBUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "LDOUSDT",
+      "score": 85
+    },
+    {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ADAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUIUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "ADAUSDT",
       "score": 75
     }
   ]
