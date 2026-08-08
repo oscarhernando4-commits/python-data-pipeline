@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 18:10:17",
+  "timestamp": "2026-08-08 18:12:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión neutral con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con los criterios estrictos de riesgo (Score >= 65 y dominancia de Bids > 55%) exigidos por el comité para garantizar la preservación del capital. Se mantiene la posición en efectivo (USDT) hasta que surja una configuración de alta convicción.",
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con confirmación de liquidez y soporte). El mercado se encuentra en una fase de alta incertidumbre y las lecturas de los indicadores técnicos no ofrecen una ventaja estadística suficiente para justificar la exposición al riesgo.",
   "top_candidates": [
     {
-      "symbol": "SPYBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NEXOUSDT",
+      "symbol": "WLFIUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "BIOUSDT",
+      "score": 75
+    },
+    {
       "symbol": "RENDERUSDT",
       "score": 70
     },
     {
-      "symbol": "ZBTUSDT",
+      "symbol": "NILUSDT",
       "score": 65
     }
   ]
