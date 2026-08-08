@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 11:30:19",
+  "timestamp": "2026-08-08 11:32:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta fragilidad con una ausencia total de activos que cumplan con el umbral de calidad A+ (Score >= 65). La estrategia institucional es preservar el capital y evitar las 'trampas de liquidez' observadas en los activos de baja capitalización.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica y alta incertidumbre. Ninguno de los candidatos analizados alcanza el umbral de seguridad (Score >= 65) requerido por el comité para una ejecución de compra, por lo que la estrategia óptima es mantener la liquidez en espera de mejores condiciones.",
   "top_candidates": [
+    {
+      "symbol": "BNBUSDT",
+      "score": 60
+    },
     {
       "symbol": "AVAXUSDT",
       "score": 60
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "GIGGLEUSDT",
       "score": 60
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 60
     },
     {
       "symbol": "SPYBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "LAUSDT",
       "score": 60
     }
   ]
