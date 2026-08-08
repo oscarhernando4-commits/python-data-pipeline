@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 11:44:19",
+  "timestamp": "2026-08-08 11:46:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional bajo miedo extremo. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el comité (Score >= 65 y Bids > 55%), por lo que se prioriza la preservación del capital sobre la operativa especulativa.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y falta de profundidad institucional. Ningún activo cumple con el requisito estricto de Score 65, por lo que la estrategia de preservación de capital dicta mantenerse en liquidez (HOLD) hasta que las condiciones de mercado mejoren.",
   "top_candidates": [
-    {
-      "symbol": "AVAXUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "GOOGLBUSDT",
-      "score": 70
-    },
     {
       "symbol": "BNBUSDT",
       "score": 60
     },
     {
-      "symbol": "KORUBUSDT",
+      "symbol": "XAUTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "AVAXUSDT",
       "score": 60
     },
     {
       "symbol": "ASTERUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "AAVEUSDT",
       "score": 60
     }
   ]
