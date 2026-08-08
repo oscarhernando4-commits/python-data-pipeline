@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 01:34:29",
+  "timestamp": "2026-08-08 01:36:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta dispersión y hostilidad para posiciones direccionales. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es el mantenimiento de la liquidez (HOLD) para evitar la trampa de liquidez identificada en el memorándum interno.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y purga de activos débiles; la falta de una dominancia clara en el libro de órdenes y la inestabilidad macro impiden la ejecución de cualquier posición, priorizando la preservación del capital sobre la especulación.",
   "top_candidates": [
+    {
+      "symbol": "SHIBUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "BTCUSDT",
+      "score": 75
+    },
     {
       "symbol": "SOLUSDT",
       "score": 75
     },
     {
       "symbol": "XLMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AVAXUSDT",
       "score": 75
     }
   ]
