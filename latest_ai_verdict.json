@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 15:44:24",
+  "timestamp": "2026-08-08 15:46:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y baja convicción. Ninguno de los candidatos cumple con el umbral estricto de seguridad (Score >= 65 y Bids > 55%) exigido por el comité para garantizar la preservación del capital.",
+  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con un sentimiento de miedo (30) y una falta de confirmación en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ exigido por el comité, y el historial reciente de trades en condiciones similares ha resultado en pérdidas, por lo que la decisión unánime es mantener la liquidez en espera de un catalizador macro claro.",
   "top_candidates": [
     {
-      "symbol": "TAOUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "PAXGUSDT",
-      "score": 85
+      "symbol": "SHIBUSDT",
+      "score": 75
     },
     {
       "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "PAXGUSDT",
       "score": 75
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "DOTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "POLUSDT",
       "score": 75
     }
   ]
