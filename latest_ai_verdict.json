@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-08 15:22:21",
+  "timestamp": "2026-08-08 15:24:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que TAO presenta un score técnico alto, la ausencia de muros de soporte institucionales (Bids < 55%) y el entorno de miedo generalizado invalidan la ejecución de cualquier posición, priorizando la preservación del capital sobre la especulación.",
+  "reasoning": "A pesar de que algunos activos presentan scores técnicos elevados, la falta de confirmación en el libro de órdenes y el entorno de miedo sistémico impiden una ejecución segura. Se mantiene la liquidez en espera de una señal de acumulación institucional más clara tras la votación de la CLARITY Act.",
   "top_candidates": [
     {
       "symbol": "TAOUSDT",
       "score": 85
     },
     {
-      "symbol": "AVAXUSDT",
-      "score": 75
+      "symbol": "WLDUSDT",
+      "score": 85
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     }
   ]
