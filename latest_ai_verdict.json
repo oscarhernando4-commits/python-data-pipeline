@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-08 14:52:23",
+  "timestamp": "2026-08-08 14:54:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de indecisión con alta probabilidad de falsos rompimientos. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%) exigido por el comité para mitigar el riesgo de pérdidas, por lo que se mantiene la posición en efectivo.",
+  "confidence": 95,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). La alta tasa de pérdidas en trades pasados bajo condiciones de mercado 'NEUTRAL' refuerza la decisión de mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "LTCUSDT",
       "score": 85
     },
     {
       "symbol": "XAUTUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "SHIBUSDT",
       "score": 85
     },
     {
@@ -21,10 +25,6 @@
     {
       "symbol": "TRUMPUSDT",
       "score": 85
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
     }
   ]
 }

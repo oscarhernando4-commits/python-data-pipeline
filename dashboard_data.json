@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 14:52:24",
+  "updated_at": "2026-08-08 14:54:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de indecisión con alta probabilidad de falsos rompimientos. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%) exigido por el comité para mitigar el riesgo de pérdidas, por lo que se mantiene la posición en efectivo."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). La alta tasa de pérdidas en trades pasados bajo condiciones de mercado 'NEUTRAL' refuerza la decisión de mantener la liquidez en USDT para evitar pérdidas innecesarias."
   }
 }
