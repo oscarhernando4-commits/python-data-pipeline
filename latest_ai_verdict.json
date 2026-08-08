@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-08 20:40:17",
+  "timestamp": "2026-08-08 20:42:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existe ningún activo que cumpla con el umbral de seguridad A+ (Score >= 65). La divergencia estructural y la falta de profundidad en el libro de órdenes sugieren un entorno de alta volatilidad y riesgo de reversión, por lo que la decisión unánime es proteger el capital y mantenerse en posición de espera (HOLD).",
+  "reasoning": "Tras la deliberación del comité, se ha determinado que no existen activos con un Score Técnico >= 65 ni una estructura de libro de órdenes que garantice una probabilidad de éxito superior al 70%. Ante la debilidad sistémica y la falta de convicción, la decisión institucional es mantener la liquidez en espera de una configuración de mercado más favorable.",
   "top_candidates": [
-    {
-      "symbol": "ADAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "UNIUSDT",
-      "score": 60
-    },
     {
       "symbol": "ATOMUSDT",
       "score": 60
@@ -25,6 +17,14 @@
     {
       "symbol": "CRVUSDT",
       "score": 60
+    },
+    {
+      "symbol": "NIGHTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SUNUSDT",
+      "score": 55
     }
   ]
 }
