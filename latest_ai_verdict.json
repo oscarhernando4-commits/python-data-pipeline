@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-08 14:40:20",
+  "timestamp": "2026-08-08 14:42:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de tener activos con scores técnicos de 85, la falta de profundidad en el libro de órdenes (50% Bids), la tendencia neutral en 4H y el historial reciente de pérdidas en condiciones similares, obligan al comité a mantener una postura defensiva de 100% liquidez en USDT para preservar el capital.",
+  "reasoning": "El mercado presenta una alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos seleccionados supera el umbral de Bids del 55% necesario para mitigar el riesgo de slippage, y el historial de trades recientes indica una alta probabilidad de pérdida en condiciones de mercado neutral. Se prioriza la preservación del capital.",
   "top_candidates": [
+    {
+      "symbol": "BTCUSDT",
+      "score": 85
+    },
     {
       "symbol": "BCHUSDT",
       "score": 85
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "ONDOUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "APTUSDT",
       "score": 85
     }
   ]
