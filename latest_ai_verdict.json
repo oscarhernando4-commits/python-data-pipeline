@@ -1,22 +1,14 @@
 {
-  "timestamp": "2026-08-08 08:40:20",
+  "timestamp": "2026-08-08 08:42:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de profundidad en el libro de órdenes, sumado al sentimiento de miedo, dictan una postura de preservación de capital.",
+  "reasoning": "El mercado se encuentra en un estado de 'trampa de neutralidad' con alta incertidumbre macroeconómica. Ningún activo cumple con los criterios estrictos de convicción A+ del comité, por lo que la decisión unánime es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "POLUSDT",
+      "symbol": "ETCUSDT",
       "score": 85
-    },
-    {
-      "symbol": "HBARUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SKHYBUSDT",
-      "score": 75
     },
     {
       "symbol": "TRXUSDT",
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SKHYBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PAXGUSDT",
       "score": 75
     }
   ]
