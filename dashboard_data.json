@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 17:14:27",
+  "updated_at": "2026-08-08 17:16:25",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la fortaleza técnica de activos como FET y RENDER, el entorno macroeconómico de 'Miedo' y la falta de profundidad en el libro de órdenes no garantizan la seguridad del capital, por lo que se opta por una postura de espera (HOLD) para evitar pérdidas innecesarias."
+    "reasoning": "El comité ha determinado que, a pesar de tener candidatos con un score técnico de 75, la falta de dominancia en el libro de órdenes (Bids < 55%) y la alta volatilidad sin una tendencia clara en el mercado neutral, invalidan la ejecución de cualquier orden de compra. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre."
   }
 }
