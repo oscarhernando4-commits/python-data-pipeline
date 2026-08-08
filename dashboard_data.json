@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 17:36:23",
+  "updated_at": "2026-08-08 17:38:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo sistémico actual, por lo que se mantiene la posición en efectivo."
+    "reasoning": "Ninguno de los candidatos presenta una convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). La alta volatilidad y la incertidumbre en el mercado actual, sumadas a la falta de un volumen institucional claro, obligan a mantener la liquidez en USDT para evitar pérdidas innecesarias."
   }
 }

@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 17:36:21",
+  "timestamp": "2026-08-08 17:38:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo sistémico actual, por lo que se mantiene la posición en efectivo.",
+  "reasoning": "Ninguno de los candidatos presenta una convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). La alta volatilidad y la incertidumbre en el mercado actual, sumadas a la falta de un volumen institucional claro, obligan a mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "LUNCUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 75
-    },
-    {
       "symbol": "AVAXUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TAOUSDT",
       "score": 75
     }
   ]
