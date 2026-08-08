@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-08 20:58:15",
+  "timestamp": "2026-08-08 21:00:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la rotación sectorial hacia Layer 1, la falta de profundidad en el libro de órdenes y la debilidad técnica generalizada impiden una entrada de alta convicción, priorizando la preservación del capital sobre la especulación.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y confirmación de volumen). La falta de soporte claro en el libro de órdenes y la alta volatilidad en el entorno actual de miedo (Fear 30) dictan una postura de preservación de capital.",
   "top_candidates": [
     {
-      "symbol": "ADAUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "SPYBUSDT",
       "score": 75
     },
     {
-      "symbol": "CRVUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 75
     }
   ]
