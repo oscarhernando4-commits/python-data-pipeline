@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 23:48:19",
+  "timestamp": "2026-08-08 23:50:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una mayoría de activos mostrando scores inferiores a 65. Ningún candidato cumple con los requisitos estrictos de convicción A+ y soporte de libro de órdenes, por lo que el comité ha decidido unánimemente mantener la liquidez en espera de una estructura de mercado más robusta.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta volatilidad y falta de soporte real. Ningún activo cumple con los criterios de calidad A+ (Score >= 65) exigidos por el comité, por lo que la estrategia óptima es la neutralidad total para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "RENDERUSDT",
       "score": 60
     },
     {
-      "symbol": "VETUSDT",
+      "symbol": "ORDIUSDT",
       "score": 60
     }
   ]
