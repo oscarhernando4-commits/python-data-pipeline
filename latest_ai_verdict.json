@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-08 01:20:23",
+  "timestamp": "2026-08-08 01:22:35",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, la falta de soporte real en el libro de órdenes y el entorno macro de miedo (Fear 30) no cumplen con los estándares de seguridad A+ requeridos para la ejecución, optando por una postura de preservación de capital.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes, el sentimiento de miedo (30) y la inestabilidad macroeconómica impiden una ejecución segura. Se prioriza la preservación del capital (Regla #1) sobre la especulación en un mercado sin tendencia clara.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
       "symbol": "TRXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUIUSDT",
       "score": 75
     }
   ]
