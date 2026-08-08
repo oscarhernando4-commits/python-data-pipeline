@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 06:26:20",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de muros de soporte sólidos, sumado al historial de pérdidas en condiciones similares, dictan una postura de preservación de capital (HOLD).",
+  "timestamp": "2026-08-08 06:28:21",
+  "selected_symbol": "ONDOUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "Tras deliberar, el comité ha decidido operar ONDOUSDT debido a su pertenencia al sector RWA, el cual lidera la entrada de capital institucional, y su score técnico de 75/100. Se prioriza la seguridad del capital mediante la ejecución de un Trailing Stop estricto, evitando activos de baja capitalización que han mostrado pérdidas en simulaciones previas.",
   "top_candidates": [
     {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "UNIUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
@@ -23,8 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "ALICEUSDT",
+      "symbol": "VANRYUSDT",
       "score": 75
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "score": 70
     }
   ]
 }
