@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 02:02:19",
+  "timestamp": "2026-08-08 02:04:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con alta correlación negativa. Ninguno de los candidatos cumple con el requisito estricto de Score Técnico >= 65 ni con la confirmación de liquidez necesaria en el libro de órdenes. La estrategia institucional prioriza la preservación del capital sobre la especulación en activos de baja capitalización o con historial insuficiente.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los estándares de alta convicción (Score A+). La falta de soporte en el libro de órdenes y la debilidad técnica generalizada dictan una política de preservación de capital (HOLD) para evitar trampas de liquidez.",
   "top_candidates": [
-    {
-      "symbol": "SOLUSDT",
-      "score": 60
-    },
     {
       "symbol": "SHIBUSDT",
       "score": 60
     },
     {
-      "symbol": "SUIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XRPUSDT",
+      "symbol": "SOLUSDT",
       "score": 60
     },
     {
       "symbol": "PEPEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NEXOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SPYBUSDT",
       "score": 60
     }
   ]
