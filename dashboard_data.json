@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 14:14:22",
+  "updated_at": "2026-08-08 14:16:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una divergencia estructural y falta de convicción institucional en el libro de órdenes. Ningún activo cumple con el umbral de seguridad A+ exigido por el Comité, por lo que la estrategia óptima es mantener la liquidez en espera de una configuración de alta probabilidad."
+    "reasoning": "El mercado presenta una divergencia estructural y falta de convicción institucional. Ningún activo cumple con el requisito de dominancia de Bids > 55% ni con una confirmación de volumen necesaria para una ejecución A+. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre."
   }
 }
