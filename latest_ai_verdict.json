@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-08 07:40:22",
+  "timestamp": "2026-08-08 07:42:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una capitulación técnica generalizada y una ausencia de activos con fortaleza institucional. Ningún candidato cumple con el umbral de riesgo A+ (Score >= 65), por lo que la estrategia óptima es la preservación total del capital en espera de una reversión de tendencia confirmada.",
+  "reasoning": "El mercado actual no ofrece ninguna oportunidad que cumpla con los estándares de convicción A+ del comité. Todos los candidatos presentan scores técnicos inferiores a 65 y falta de soporte en el libro de órdenes, lo que aumenta el riesgo de pérdidas. Se prioriza la protección del capital mediante la inacción (HOLD) hasta que las condiciones macro y técnicas mejoren.",
   "top_candidates": [
     {
+      "symbol": "POLUSDT",
+      "score": 60
+    },
+    {
       "symbol": "CAKEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "DASHUSDT",
       "score": 60
     },
     {
@@ -15,15 +23,7 @@
       "score": 55
     },
     {
-      "symbol": "HEIUSDT",
-      "score": 50
-    },
-    {
       "symbol": "HFTUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "LTCUSDT",
       "score": 50
     }
   ]
