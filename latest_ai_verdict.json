@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-08 18:08:15",
+  "timestamp": "2026-08-08 18:10:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de compresión de volatilidad con una amplitud técnica deficiente. Ninguno de los candidatos actuales supera el umbral de riesgo exigido por el comité, por lo que la estrategia óptima es la preservación de capital hasta que el mercado muestre una tendencia clara y confirmada.",
+  "reasoning": "El mercado se encuentra en un estado de indecisión neutral con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con los criterios estrictos de riesgo (Score >= 65 y dominancia de Bids > 55%) exigidos por el comité para garantizar la preservación del capital. Se mantiene la posición en efectivo (USDT) hasta que surja una configuración de alta convicción.",
   "top_candidates": [
+    {
+      "symbol": "SPYBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "NEXOUSDT",
+      "score": 75
+    },
     {
       "symbol": "ETHFIUSDT",
       "score": 75
@@ -15,15 +23,7 @@
       "score": 70
     },
     {
-      "symbol": "NEXOUSDT",
-      "score": 70
-    },
-    {
       "symbol": "ZBTUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "ZAMAUSDT",
       "score": 65
     }
   ]
