@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 21:44:16",
+  "timestamp": "2026-08-08 21:46:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una trampa de liquidez con alta volatilidad y falta de soporte institucional claro. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) exigido por el comité, por lo que la decisión unánime es mantener la liquidez en espera de una estructura de mercado más robusta.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en una fase de 'shakeout' institucional con alta inestabilidad. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ (Score >= 65) requerido por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una mejor configuración técnica.",
   "top_candidates": [
-    {
-      "symbol": "XAUTUSDT",
-      "score": 70
-    },
     {
       "symbol": "LINKUSDT",
       "score": 60
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "BCHUSDT",
       "score": 60
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "ETHUSDT",
       "score": 60
     },
     {
       "symbol": "PEPEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "AAVEUSDT",
       "score": 60
     }
   ]
