@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 18:36:21",
+  "updated_at": "2026-08-08 18:38:17",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de capitulación institucional selectiva donde la mayoría de los activos carecen de la fuerza técnica y el soporte de liquidez necesarios para una operación de alta convicción. Dado que ningún candidato alcanza el umbral de seguridad A+ (Score >= 65), el comité ha decidido priorizar la preservación del capital sobre la especulación."
+    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad técnica generalizada. Ninguno de los activos analizados cumple con el requisito estricto de Score Técnico >= 65 ni con una dominancia de Bids superior al 55%. Para preservar el capital y evitar 'cuchillos cayendo', el comité ha decidido no ejecutar ninguna operación y permanecer en liquidez total."
   }
 }
