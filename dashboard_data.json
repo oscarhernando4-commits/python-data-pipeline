@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 01:38:21",
+  "updated_at": "2026-08-08 01:40:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una alta fragilidad macro y una falta de soporte institucional claro en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de ballenas), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar trampas de valor y posibles liquidaciones forzadas."
+    "reasoning": "Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes > 55%). El entorno macro es incierto y la memoria histórica sugiere que operar en estas condiciones de miedo y alta volatilidad resulta en pérdidas recurrentes. Se prioriza la preservación del capital."
   }
 }

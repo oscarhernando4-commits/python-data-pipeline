@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 01:38:20",
+  "timestamp": "2026-08-08 01:40:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una alta fragilidad macro y una falta de soporte institucional claro en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de ballenas), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar trampas de valor y posibles liquidaciones forzadas.",
+  "reasoning": "Ningún candidato cumple con el umbral de seguridad A+ (Score >= 65 con soporte de libro de órdenes > 55%). El entorno macro es incierto y la memoria histórica sugiere que operar en estas condiciones de miedo y alta volatilidad resulta en pérdidas recurrentes. Se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "SHIBUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "XLMUSDT",
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     }
   ]
