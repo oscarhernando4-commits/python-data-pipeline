@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-08 19:08:15",
+  "timestamp": "2026-08-08 19:10:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, bajo las reglas de oro, ningún activo cumple con el umbral de Score A+ (>= 65) ni con la dominancia de Bids requerida. La alta volatilidad y la falta de una tendencia clara en los activos analizados sugieren que el riesgo de 'trampa de valor' es elevado, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en un 'limbo de liquidez' con una debilidad sistémica generalizada. Ningún activo cumple con el umbral de convicción A+ (Score >= 65) exigido por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre y baja correlación positiva.",
   "top_candidates": [
     {
-      "symbol": "ADAUSDT",
-      "score": 60
+      "symbol": "SUNUSDT",
+      "score": 75
     },
     {
       "symbol": "UNIUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "ZAMAUSDT",
       "score": 60
     },
     {
-      "symbol": "ZAMAUSDT",
+      "symbol": "DOTUSDT",
       "score": 60
     }
   ]
