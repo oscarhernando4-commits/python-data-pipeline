@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 21:50:17",
+  "timestamp": "2026-08-08 21:52:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de liquidez necesaria en el libro de órdenes, por lo que se prioriza la preservación del capital sobre la especulación en un entorno de mercado incierto.",
+  "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65) exigido por el Comité. La volatilidad actual y la falta de soporte institucional claro en el libro de órdenes obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "ETHUSDT",
@@ -15,11 +15,11 @@
       "score": 60
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "UNIUSDT",
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "TAOUSDT",
       "score": 60
     },
     {
