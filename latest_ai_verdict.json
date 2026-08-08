@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 11:42:18",
+  "timestamp": "2026-08-08 11:44:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación negativa hacia el riesgo. Ningún activo cumple con el umbral de Score A+ (>= 65) combinado con una profundidad de libro de órdenes que garantice una entrada de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo institucional.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional bajo miedo extremo. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el comité (Score >= 65 y Bids > 55%), por lo que se prioriza la preservación del capital sobre la operativa especulativa.",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "ASTERUSDT",
       "score": 60
     }
   ]

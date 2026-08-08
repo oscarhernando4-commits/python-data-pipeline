@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 11:42:18",
+  "updated_at": "2026-08-08 11:44:19",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación negativa hacia el riesgo. Ningún activo cumple con el umbral de Score A+ (>= 65) combinado con una profundidad de libro de órdenes que garantice una entrada de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo institucional."
+    "reasoning": "El mercado se encuentra en una fase de distribución institucional bajo miedo extremo. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el comité (Score >= 65 y Bids > 55%), por lo que se prioriza la preservación del capital sobre la operativa especulativa."
   }
 }
