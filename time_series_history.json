@@ -1,38 +1,25 @@
 {
-  "VANRYUSDT": [
+  "OPUSDT": [
     {
-      "timestamp": "2026-08-08 18:34:08",
-      "price": 0.003254,
+      "timestamp": "2026-08-08 18:36:08",
+      "price": 0.0889,
+      "score": 10,
+      "rsi": 51.64,
+      "macd": "Neutral",
+      "volume_surge": 0.88,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-08 18:36:08",
+      "price": 0.5032,
       "score": 20,
-      "rsi": 50.76,
+      "rsi": 64.69,
       "macd": "Neutral",
-      "volume_surge": 0.0,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "KORUBUSDT": [
-    {
-      "timestamp": "2026-08-08 18:34:08",
-      "price": 17.4,
-      "score": 5,
-      "rsi": 68.91,
-      "macd": "Neutral",
-      "volume_surge": 0.57,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "LDOUSDT": [
-    {
-      "timestamp": "2026-08-08 18:34:08",
-      "price": 0.2916,
-      "score": 0,
-      "rsi": 46.32,
-      "macd": "Neutral",
-      "volume_surge": 0.06,
+      "volume_surge": 0.11,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
