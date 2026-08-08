@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-08 04:18:19",
+  "timestamp": "2026-08-08 04:20:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una tendencia neutral forzada. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%) necesario para garantizar la preservación del capital, por lo que se prioriza la liquidez.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta incertidumbre macroeconómica. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar pérdidas innecesarias en un entorno de alta volatilidad y baja convicción.",
   "top_candidates": [
+    {
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
     {
       "symbol": "GRAMUSDT",
       "score": 75
     },
     {
-      "symbol": "ADAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
+      "symbol": "BABYUSDT",
       "score": 75
     },
     {
