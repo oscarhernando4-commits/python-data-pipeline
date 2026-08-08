@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 08:34:19",
+  "updated_at": "2026-08-08 08:36:29",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "A pesar de que varios activos presentan un score técnico de 75, el libro de órdenes no muestra la dominancia de compradores necesaria (>= 55%) para mitigar el riesgo en un entorno de mercado con sentimiento de miedo. La alta tasa de pérdidas en trades recientes bajo condiciones 'NEUTRAL' obliga al comité a mantener una postura defensiva y preservar el capital."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de soporte en el libro de órdenes y volumen institucional). La alta tasa de pérdidas en trades recientes bajo condiciones de mercado neutrales obliga a mantener la liquidez en espera de una estructura de mercado más clara."
   }
 }

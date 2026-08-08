@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-08 08:34:19",
+  "timestamp": "2026-08-08 08:36:29",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, el libro de órdenes no muestra la dominancia de compradores necesaria (>= 55%) para mitigar el riesgo en un entorno de mercado con sentimiento de miedo. La alta tasa de pérdidas en trades recientes bajo condiciones 'NEUTRAL' obliga al comité a mantener una postura defensiva y preservar el capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de soporte en el libro de órdenes y volumen institucional). La alta tasa de pérdidas en trades recientes bajo condiciones de mercado neutrales obliga a mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
-      "symbol": "PAXGUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
+      "symbol": "POLUSDT",
+      "score": 85
     },
     {
       "symbol": "HBARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PAXGUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "ICPUSDT",
       "score": 75
     }
   ]
