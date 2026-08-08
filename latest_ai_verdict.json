@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-08 13:58:18",
+  "timestamp": "2026-08-08 14:00:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos elevados, las condiciones macroeconómicas y la falta de profundidad en el libro de órdenes no cumplen con los criterios de seguridad A+ exigidos por el Chief Risk Officer. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado con sentimiento de miedo predominante.",
+  "reasoning": "El mercado se encuentra en una fase de indecisión con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia más prudente es mantener la liquidez en espera de una estructura de mercado más definida.",
   "top_candidates": [
-    {
-      "symbol": "ASTERUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "AXTIBUSDT",
-      "score": 85
-    },
     {
       "symbol": "BTCUSDT",
       "score": 75
@@ -23,7 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
       "symbol": "PAXGUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "FETUSDT",
       "score": 75
     }
   ]
