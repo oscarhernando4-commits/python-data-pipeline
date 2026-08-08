@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 04:44:18",
+  "timestamp": "2026-08-08 04:46:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras deliberar, el comité concluye que el mercado se encuentra en una fase de alta incertidumbre con una correlación bajista predominante y falta de profundidad en el libro de órdenes. Ningún activo cumple con los criterios de convicción A+ (Score >= 65 y Bids > 55%), por lo que se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado presenta una divergencia estructural y una alta sensibilidad a noticias regulatorias. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65 y Bids > 55%) necesarios para garantizar la preservación del capital, por lo que se mantiene la posición en efectivo.",
   "top_candidates": [
-    {
-      "symbol": "ASTERUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ETHFIUSDT",
-      "score": 85
-    },
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "SHIBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BABYUSDT",
       "score": 75
     }
   ]
