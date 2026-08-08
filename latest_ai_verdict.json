@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 17:06:22",
+  "timestamp": "2026-08-08 17:08:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación baja y una falta de soporte institucional sólido en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el comité, por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar pérdidas innecesarias en un entorno de alta volatilidad y baja tracción.",
+  "reasoning": "El mercado actual presenta una fragmentación de liquidez y una falta de soporte institucional sólido en los activos analizados. Ningún candidato alcanza el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes), por lo que la estrategia más rentable y segura es mantener la posición en efectivo (HOLD) hasta que se observe una rotación de capital más clara y un aumento en la dominancia de los compradores.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETCUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "SUNUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "GNOUSDT",
       "score": 75
     }
   ]
