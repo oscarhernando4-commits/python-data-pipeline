@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 05:04:22",
+  "timestamp": "2026-08-08 05:06:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de fragmentación defensiva con una tendencia neutral predominante. Ninguno de los candidatos cumple con el requisito estricto de convicción A+ (Score >= 65 y soporte de ballenas > 55%), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas en un entorno de alta volatilidad y baja convicción.",
+  "reasoning": "El mercado se encuentra en una zona de alta incertidumbre con una fragmentación severa. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ (Score >= 65 y Bids > 55%) necesarios para garantizar la preservación del capital, por lo que se opta por una postura defensiva de espera.",
   "top_candidates": [
     {
       "symbol": "ETCUSDT",
       "score": 85
     },
     {
-      "symbol": "BABYUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ADAUSDT",
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
       "symbol": "ETHFIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BROCCOLI714USDT",
+      "score": 75
+    },
+    {
+      "symbol": "NIGHTUSDT",
       "score": 75
     }
   ]
