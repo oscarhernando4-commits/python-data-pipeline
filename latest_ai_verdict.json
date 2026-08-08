@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 11:16:19",
+  "timestamp": "2026-08-08 11:18:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta probabilidad (Score A+ y Bids > 55%) necesarios para una ejecución segura, optando por la preservación del capital.",
+  "reasoning": "Tras analizar los candidatos, ninguno alcanza el umbral de Score Técnico de 65/100 requerido por el Comité. La falta de soporte institucional en el libro de órdenes y el entorno macro de distribución silenciosa dictan una postura de espera para evitar 'cuchillos cayendo' y proteger la liquidez.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
       "symbol": "AVAXUSDT",
-      "score": 75
+      "score": 70
     },
     {
-      "symbol": "DOTUSDT",
-      "score": 75
+      "symbol": "KORUBUSDT",
+      "score": 60
     },
     {
       "symbol": "WLDUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "JUPUSDT",
-      "score": 75
+      "symbol": "SPYBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TIAUSDT",
+      "score": 60
     }
   ]
 }
