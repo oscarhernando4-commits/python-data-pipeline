@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-08 14:00:24",
+  "timestamp": "2026-08-08 14:02:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de indecisión con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia más prudente es mantener la liquidez en espera de una estructura de mercado más definida.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una falta de dominancia clara en el libro de órdenes y una alta probabilidad de falsos rebotes, por lo que la estrategia más rentable es la preservación de capital.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
       "score": 75
     },
     {
@@ -23,7 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
       "symbol": "FETUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SPYBUSDT",
       "score": 75
     }
   ]
