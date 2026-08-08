@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-08 04:16:21",
+  "timestamp": "2026-08-08 04:18:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragmentación de liquidez y un entorno de miedo (Fear & Greed 30) que, combinado con la falta de soporte institucional en el libro de órdenes y la ausencia de un historial sólido en los candidatos con mejor score, obliga a mantener una postura defensiva de preservación de capital.",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una tendencia neutral forzada. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%) necesario para garantizar la preservación del capital, por lo que se prioriza la liquidez.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "ARBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "CAKEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SEIUSDT",
       "score": 75
     }
   ]
