@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 02:18:19",
+  "timestamp": "2026-08-08 02:20:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de distribución silenciosa y alta volatilidad sin una tendencia clara. Dado que ningún activo alcanza el Score técnico de 65 y el historial de trades en condiciones neutrales es desfavorable, el comité ha decidido unánimemente mantener la posición en efectivo para proteger el capital contra la alta probabilidad de pérdidas.",
+  "reasoning": "El mercado se encuentra en un estado de purga regulatoria y contracción de liquidez. Ningún activo cumple con los criterios de riesgo A+ exigidos por el comité. La estrategia prioritaria es la preservación del capital, evitando la exposición a 'cuchillos cayendo' y esperando una rotación de capital más saludable.",
   "top_candidates": [
-    {
-      "symbol": "BCHUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ADAUSDT",
-      "score": 60
-    },
     {
       "symbol": "SOLUSDT",
       "score": 60
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "BCHUSDT",
       "score": 60
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "CAKEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SPYBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NIGHTUSDT",
       "score": 60
     }
   ]
