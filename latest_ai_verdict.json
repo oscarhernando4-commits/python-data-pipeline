@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 12:10:22",
+  "timestamp": "2026-08-08 12:12:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65) y soporte de libro de órdenes necesario para mitigar el riesgo sistémico actual. Se prioriza la preservación del capital ante la alta probabilidad de 'trampas de valor' identificadas en el análisis histórico.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación sistémica con baja liquidez. Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). Se prioriza la preservación del capital sobre la operativa especulativa de alto riesgo.",
   "top_candidates": [
     {
       "symbol": "ETHUSDT",
@@ -15,15 +15,15 @@
       "score": 70
     },
     {
-      "symbol": "AAVEUSDT",
-      "score": 60
+      "symbol": "ZROUSDT",
+      "score": 70
     },
     {
       "symbol": "DEXEUSDT",
       "score": 60
     },
     {
-      "symbol": "NEXOUSDT",
+      "symbol": "AAVEUSDT",
       "score": 60
     }
   ]
