@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-08 23:30:21",
+  "timestamp": "2026-08-08 23:32:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una asimetría de pánico y falta de soporte institucional. Ningún activo cumple con el umbral mínimo de Score 65 requerido por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT y evitar la exposición a activos de baja calidad técnica.",
+  "reasoning": "El mercado actual no ofrece ninguna oportunidad que cumpla con los criterios de alta convicción (Score >= 65) y soporte de liquidez, por lo que se prioriza la preservación del capital sobre la operativa especulativa.",
   "top_candidates": [
+    {
+      "symbol": "TRXUSDT",
+      "score": 60
+    },
     {
       "symbol": "GRAMUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "CAKEUSDT",
-      "score": 60
-    },
-    {
       "symbol": "BICOUSDT",
       "score": 50
     },
     {
-      "symbol": "KAITOUSDT",
+      "symbol": "EPICUSDT",
       "score": 50
     }
   ]
