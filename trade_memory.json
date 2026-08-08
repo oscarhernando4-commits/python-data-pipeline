@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1793,
-    "wins": 385,
+    "total_trades": 1813,
+    "wins": 405,
     "losses": 1408,
-    "win_rate_pct": 21.47,
-    "total_pnl_usd": -28.75769454545526
+    "win_rate_pct": 22.34,
+    "total_pnl_usd": 116.24230545454475
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on XRPUSDT)"
     ],
     "boosted_patterns": [
-      "Optimized Setup for XRPUSDT: Profit logged (+$2.94) -> Win on XRPUSDT (+$2.94 net) -> Level 3 Re-Trading Started!",
       "Optimized Setup for ADAUSDT: Profit logged (+$1.97) -> Win on ADAUSDT (+$1.97 net) -> Level 3 Re-Trading Started!",
       "Optimized Setup for ADAUSDT: Profit logged (+$1.97) -> Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
       "Optimized Setup for TRUMPUSDT: Profit logged (+$2.09) -> Win on TRUMPUSDT (+$2.09 net) -> Level 3 Re-Trading Started!",
@@ -49,7 +48,8 @@
       "BOOST LONG when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BNBUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on EPICUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BTCUSDT)",
-      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ACEUSDT)"
+      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ACEUSDT)",
+      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TSTUSDT)"
     ]
   },
   "history": [
@@ -29981,6 +29981,346 @@
       "context": {
         "score": 65,
         "rsi_15m": 63.05,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:18",
+      "account_id": "SIM-061",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 10 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:18",
+      "account_id": "SIM-062",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:18",
+      "account_id": "SIM-063",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:18",
+      "account_id": "SIM-064",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:18",
+      "account_id": "SIM-065",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:19",
+      "account_id": "SIM-066",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:19",
+      "account_id": "SIM-067",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 10 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:19",
+      "account_id": "SIM-068",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:19",
+      "account_id": "SIM-069",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:19",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:19",
+      "account_id": "SIM-071",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:19",
+      "account_id": "SIM-072",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:19",
+      "account_id": "SIM-073",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:19",
+      "account_id": "SIM-074",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:19",
+      "account_id": "SIM-075",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:19",
+      "account_id": "SIM-076",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:19",
+      "account_id": "SIM-077",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:19",
+      "account_id": "SIM-078",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:19",
+      "account_id": "SIM-079",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-08 03:04:19",
+      "account_id": "SIM-080",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01299,
+      "exit_price": 0.01213,
+      "pnl_usd": 7.25,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$7.25 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.98,
         "macro_trend_4h": "NEUTRAL"
       }
     }
