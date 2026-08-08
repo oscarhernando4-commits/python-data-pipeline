@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 01:48:21",
+  "timestamp": "2026-08-08 01:50:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de convicción A+ requerido por el comité. La falta de soporte institucional en el libro de órdenes y el historial negativo de trades en condiciones similares dictan una postura de protección de capital (HOLD).",
+  "reasoning": "A pesar de que SHIB y PEPE presentan scores técnicos de 85, la ausencia de una dominancia clara en el libro de órdenes (Bids < 55%) y el entorno macro de miedo (Fear 30) impiden la ejecución. El comité prioriza la preservación del capital ante la alta probabilidad de 'trampas de liquidez' observadas en las simulaciones históricas.",
   "top_candidates": [
     {
       "symbol": "SHIBUSDT",
-      "score": 70
+      "score": 85
     },
     {
       "symbol": "PEPEUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "SOLUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XLMUSDT",
-      "score": 60
+      "score": 85
     },
     {
       "symbol": "DOGEUSDT",
-      "score": 60
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "score": 75
     }
   ]
 }
