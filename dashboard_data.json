@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 13:16:23",
+  "updated_at": "2026-08-08 13:18:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de purga y alta volatilidad con baja convicción institucional. Ninguno de los candidatos cumple con los requisitos estrictos de riesgo y soporte de libro de órdenes necesarios para una operación de alta probabilidad, por lo que la preservación de capital es la prioridad absoluta."
+    "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la falta de datos de profundidad en el libro de órdenes, la incertidumbre macroeconómica y el historial reciente de pérdidas en condiciones similares dictan una postura de preservación de capital. No se cumplen los criterios estrictos de convicción A+ exigidos por el comité."
   }
 }
