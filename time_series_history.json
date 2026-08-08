@@ -1,12 +1,64 @@
 {
-  "ZKPUSDT": [
+  "GNOUSDT": [
     {
-      "timestamp": "2026-08-08 01:24:12",
-      "price": 0.0457,
-      "score": 65,
-      "rsi": 61.27,
+      "timestamp": "2026-08-08 01:26:13",
+      "price": 106.13,
+      "score": 30,
+      "rsi": 45.36,
       "macd": "Neutral",
-      "volume_surge": 1.27,
+      "volume_surge": 0.11,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SEIUSDT": [
+    {
+      "timestamp": "2026-08-08 01:26:13",
+      "price": 0.04089,
+      "score": 65,
+      "rsi": 57.21,
+      "macd": "Neutral",
+      "volume_surge": 0.22,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PLUMEUSDT": [
+    {
+      "timestamp": "2026-08-08 01:26:13",
+      "price": 0.01241,
+      "score": 45,
+      "rsi": 61.15,
+      "macd": "Neutral",
+      "volume_surge": 1.68,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LUNCUSDT": [
+    {
+      "timestamp": "2026-08-08 01:26:13",
+      "price": 4.933e-05,
+      "score": 75,
+      "rsi": 59.76,
+      "macd": "Neutral",
+      "volume_surge": 0.21,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "VANRYUSDT": [
+    {
+      "timestamp": "2026-08-08 01:26:13",
+      "price": 0.003216,
+      "score": 15,
+      "rsi": 46.12,
+      "macd": "Neutral",
+      "volume_surge": 0.03,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,17 +66,28 @@
   ],
   "LDOUSDT": [
     {
-      "timestamp": "2026-08-08 01:24:12",
-      "price": 0.2909,
-      "score": 65,
-      "rsi": 67.43,
+      "timestamp": "2026-08-08 01:26:13",
+      "price": 0.2912,
+      "score": 40,
+      "rsi": 68.27,
       "macd": "Neutral",
-      "volume_surge": 0.67,
+      "volume_surge": 1.07,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
-  ]
-}  }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-08 01:26:13",
+      "price": 0.4884,
+      "score": 15,
+      "rsi": 44.83,
+      "macd": "Neutral",
+      "volume_surge": 1.13,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
   ]
 }

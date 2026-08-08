@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 01:24:26",
+  "updated_at": "2026-08-08 01:26:26",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos de 75, el libro de órdenes no muestra una dominancia de compradores superior al 55% y el entorno macroeconómico es desfavorable. La alta tasa de pérdidas en trades pasados bajo condiciones de mercado neutral refuerza la decisión de no ejecutar ninguna operación para preservar el capital."
+    "reasoning": "El mercado presenta una divergencia fragmentada con alta incertidumbre regulatoria y falta de soporte en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia de preservación de capital dicta mantenerse en efectivo (HOLD)."
   }
 }
