@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-08 12:30:18",
+  "timestamp": "2026-08-08 12:32:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado exhibe una debilidad estructural generalizada con scores técnicos insuficientes. Ningún activo cumple con la regla de oro de un Score >= 65, por lo que el comité ha decidido mantener la liquidez en espera de una configuración de alta probabilidad.",
+  "reasoning": "El mercado actual presenta una asimetría bajista y una falta de convicción institucional en los activos analizados. Dado que ningún candidato alcanza el umbral de Score A+ (65/100) y el entorno macro es de alta incertidumbre, la decisión estratégica es mantener la liquidez en USDT para evitar la exposición a trampas de liquidez.",
   "top_candidates": [
     {
       "symbol": "ASTERUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DOTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PENGUUSDT",
       "score": 60
     },
     {
@@ -23,8 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
+      "symbol": "LDOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "JSTUSDT",
       "score": 55
+    },
+    {
+      "symbol": "ALLOUSDT",
+      "score": 50
     }
   ]
 }
