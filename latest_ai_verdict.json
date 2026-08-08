@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-08 11:48:20",
+  "timestamp": "2026-08-08 11:50:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con scores técnicos insuficientes. Ningún activo cumple con la regla de oro de Score >= 65, por lo que la estrategia institucional es preservar el 100% de la liquidez en espera de una estructura de mercado más saludable.",
+  "reasoning": "El mercado se encuentra en un estado de purga de liquidez con una debilidad estructural generalizada. Ninguno de los candidatos analizados alcanza el umbral de calidad A+ (Score >= 65) requerido por el Comité para garantizar la preservación del capital. Se mantiene la posición en efectivo (USDT) para evitar el riesgo de 'cuchillos cayendo' en un entorno de alta incertidumbre.",
   "top_candidates": [
-    {
-      "symbol": "BNBUSDT",
-      "score": 60
-    },
     {
       "symbol": "XAUTUSDT",
       "score": 60
     },
     {
       "symbol": "AVAXUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "BNBUSDT",
       "score": 60
     },
     {
