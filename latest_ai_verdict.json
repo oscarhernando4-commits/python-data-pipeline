@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-08 20:56:17",
+  "timestamp": "2026-08-08 20:58:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de baja convicción con una alta probabilidad de volatilidad adversa. Ninguno de los candidatos cumple con los requisitos estrictos de riesgo (Score >= 65 y Bids > 55%) para una entrada de alta probabilidad, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El comité ha determinado que, a pesar de la rotación sectorial hacia Layer 1, la falta de profundidad en el libro de órdenes y la debilidad técnica generalizada impiden una entrada de alta convicción, priorizando la preservación del capital sobre la especulación.",
   "top_candidates": [
+    {
+      "symbol": "ADAUSDT",
+      "score": 75
+    },
     {
       "symbol": "SUIUSDT",
       "score": 75
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "ETHFIUSDT",
       "score": 75
     },
     {
       "symbol": "CRVUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHFIUSDT",
       "score": 75
     }
   ]
