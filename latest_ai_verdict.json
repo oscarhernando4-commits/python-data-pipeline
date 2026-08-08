@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 12:32:18",
+  "timestamp": "2026-08-08 12:34:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una asimetría bajista y una falta de convicción institucional en los activos analizados. Dado que ningún candidato alcanza el umbral de Score A+ (65/100) y el entorno macro es de alta incertidumbre, la decisión estratégica es mantener la liquidez en USDT para evitar la exposición a trampas de liquidez.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con scores de fuerza insuficientes en todos los activos analizados. Ningún candidato cumple con el umbral de riesgo A+ exigido por el comité, por lo que se mantiene la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "BNBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "XRPUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "score": 60
+    },
     {
       "symbol": "ASTERUSDT",
       "score": 60
     },
     {
-      "symbol": "VETUSDT",
+      "symbol": "QNTUSDT",
       "score": 60
-    },
-    {
-      "symbol": "LDOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "JSTUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "ALLOUSDT",
-      "score": 50
     }
   ]
 }
