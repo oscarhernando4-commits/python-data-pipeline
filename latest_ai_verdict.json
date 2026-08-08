@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 00:34:20",
+  "timestamp": "2026-08-08 00:36:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una correlación bajista sistémica. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de slippage. Se mantiene la posición en efectivo para evitar pérdidas en un entorno de alta volatilidad.",
+  "reasoning": "Debido a la ausencia de candidatos con un Score Técnico >= 65 y la falta de una dominancia clara en el libro de órdenes, el comité ha decidido mantener la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo' en un entorno de mercado bajista.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -15,11 +15,11 @@
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "DOTUSDT",
       "score": 60
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     },
     {
