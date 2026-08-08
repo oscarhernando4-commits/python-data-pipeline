@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 07:38:21",
+  "timestamp": "2026-08-08 07:40:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los 1893 trades históricos y el estado actual del mercado, el comité ha determinado que no existe ningún activo que cumpla con los criterios de seguridad y rentabilidad exigidos. La ausencia de un Score técnico >= 65 y la falta de muros de soporte institucionales en el libro de órdenes obligan a la preservación total del capital mediante la posición de espera (HOLD).",
+  "reasoning": "El mercado presenta una capitulación técnica generalizada y una ausencia de activos con fortaleza institucional. Ningún candidato cumple con el umbral de riesgo A+ (Score >= 65), por lo que la estrategia óptima es la preservación total del capital en espera de una reversión de tendencia confirmada.",
   "top_candidates": [
     {
       "symbol": "CAKEUSDT",
       "score": 60
     },
     {
-      "symbol": "SHIBUSDT",
-      "score": 50
+      "symbol": "AAVEUSDT",
+      "score": 55
     },
     {
       "symbol": "HEIUSDT",
       "score": 50
     },
     {
-      "symbol": "DEXEUSDT",
+      "symbol": "HFTUSDT",
       "score": 50
     },
     {
-      "symbol": "BANKUSDT",
+      "symbol": "LTCUSDT",
       "score": 50
     }
   ]
