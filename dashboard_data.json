@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 09:28:22",
+  "updated_at": "2026-08-08 09:30:26",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de 'Range-Bound' con alta volatilidad y falta de convicción institucional. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65 con Bids > 55%), por lo que la estrategia óptima es la preservación de capital mediante el modo HOLD."
+    "reasoning": "El mercado se encuentra en un estado de indecisión con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Bids >= 55% y confirmación de volumen institucional), por lo que la estrategia más segura es preservar el capital en USDT."
   }
 }
