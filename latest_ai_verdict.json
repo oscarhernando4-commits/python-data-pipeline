@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-08 07:08:22",
+  "timestamp": "2026-08-08 07:10:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una 'trampa de neutralidad' con alta volatilidad y falta de soporte claro en el libro de órdenes. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65 con confirmación de liquidez), por lo que la estrategia de preservación de capital es la única opción viable.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%) necesario para garantizar la preservación del capital en un entorno de mercado marcado por el miedo y la alta volatilidad.",
   "top_candidates": [
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "PAXGUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ICPUSDT",
       "score": 75
     },
     {
       "symbol": "SKYUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TIAUSDT",
       "score": 75
     }
   ]
