@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-08 07:46:21",
+  "timestamp": "2026-08-08 07:48:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de riesgo sistémico elevado sin activos que cumplan con los criterios de calidad A+ exigidos por el comité. Se prioriza la preservación de capital sobre la especulación en un entorno de baja convicción.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica y falta de profundidad institucional. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una configuración técnica más robusta.",
   "top_candidates": [
     {
-      "symbol": "ETCUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ONDOUSDT",
-      "score": 60
-    },
-    {
       "symbol": "POLUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ICPUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ETHFIUSDT",
       "score": 60
     },
     {
@@ -23,8 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "LAUSDT",
-      "score": 60
+      "symbol": "LTCUSDT",
+      "score": 50
     }
   ]
 }
