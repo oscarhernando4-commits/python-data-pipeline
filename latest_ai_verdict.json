@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-08 13:20:18",
+  "timestamp": "2026-08-08 13:22:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y dominancia de Bids > 55%). La volatilidad actual y la falta de una tendencia clara en el libro de órdenes dictan una postura de preservación de capital (HOLD) para evitar pérdidas en un mercado de alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en un estado de indecisión con alta probabilidad de falsos rompimientos. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "XRPUSDT",
+      "symbol": "PAXGUSDT",
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
