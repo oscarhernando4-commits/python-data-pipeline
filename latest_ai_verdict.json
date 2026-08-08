@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 22:14:19",
+  "timestamp": "2026-08-08 22:16:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'trampa de absorción' con alta correlación negativa y falta de soporte en el libro de órdenes. Ningún activo cumple con los criterios estrictos de riesgo y convicción A+ definidos por el comité, por lo que la estrategia óptima es la preservación de capital.",
+  "reasoning": "El mercado se encuentra en una fase de alta volatilidad y debilidad técnica generalizada. Ninguno de los activos analizados alcanza el umbral de convicción A+ (Score >= 65) requerido por el comité para mitigar el riesgo de 'falling knives'. Se prioriza la protección del capital sobre la especulación en activos de baja liquidez.",
   "top_candidates": [
     {
-      "symbol": "TAOUSDT",
-      "score": 70
-    },
-    {
       "symbol": "XAUTUSDT",
-      "score": 70
+      "score": 60
     },
     {
       "symbol": "ATOMUSDT",
-      "score": 70
+      "score": 60
+    },
+    {
+      "symbol": "HOMEUSDT",
+      "score": 60
     },
     {
       "symbol": "SPYBUSDT",
       "score": 60
     },
     {
-      "symbol": "SUNUSDT",
-      "score": 55
+      "symbol": "TSTUSDT",
+      "score": 50
     }
   ]
 }
