@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 19:54:17",
+  "timestamp": "2026-08-08 19:56:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta volatilidad y purga de manos débiles. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la decisión institucional es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional donde el capital no fluye hacia las altcoins. Ninguno de los candidatos cumple con los criterios estrictos de riesgo y convicción exigidos por el comité, por lo que se mantiene la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "ADAUSDT",
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "UNIUSDT",
       "score": 75
     },
     {
@@ -19,12 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "LUNCUSDT",
+      "symbol": "ZROUSDT",
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
-      "score": 65
+      "symbol": "LUNCUSDT",
+      "score": 75
     }
   ]
 }
