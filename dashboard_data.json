@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 09:12:21",
+  "updated_at": "2026-08-08 09:14:18",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "A pesar de tener activos con scores técnicos de 85, la falta de dominancia en el libro de órdenes (Bids < 55%) y el entorno de mercado en 'Fear' invalidan la entrada. El comité prioriza la preservación del capital sobre la especulación en activos de alta beta sin soporte institucional confirmado."
+    "reasoning": "El mercado presenta una fragmentación de liquidez y una falta de soporte institucional sólido en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Bids > 65%) necesario para mitigar el riesgo de pérdidas, por lo que se prioriza la preservación del capital sobre la especulación."
   }
 }
