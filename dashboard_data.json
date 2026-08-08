@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 21:58:21",
+  "updated_at": "2026-08-08 22:00:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado actual presenta una estructura de debilidad sistémica donde la mayoría de los activos no cumplen con el umbral de seguridad (Score >= 65). Ante la ausencia de una ventaja estadística clara y la alta volatilidad, el comité decide proteger el capital y permanecer en modo de espera (HOLD) hasta que surja una configuración de alta convicción."
+    "reasoning": "El mercado actual presenta una alta selectividad y riesgo de capitulación. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la estrategia óptima es la preservación total del capital en espera de mejores condiciones."
   }
 }

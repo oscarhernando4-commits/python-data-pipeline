@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 21:58:21",
+  "timestamp": "2026-08-08 22:00:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una estructura de debilidad sistémica donde la mayoría de los activos no cumplen con el umbral de seguridad (Score >= 65). Ante la ausencia de una ventaja estadística clara y la alta volatilidad, el comité decide proteger el capital y permanecer en modo de espera (HOLD) hasta que surja una configuración de alta convicción.",
+  "reasoning": "El mercado actual presenta una alta selectividad y riesgo de capitulación. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la estrategia óptima es la preservación total del capital en espera de mejores condiciones.",
   "top_candidates": [
-    {
-      "symbol": "QNTBUSDT",
-      "score": 70
-    },
     {
       "symbol": "TAOUSDT",
       "score": 60
     },
     {
+      "symbol": "LINKUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ETHUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "UNIUSDT",
+      "score": 60
+    },
+    {
       "symbol": "AAVEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ORDIUSDT",
       "score": 60
     }
   ]
