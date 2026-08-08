@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-08 13:50:21",
+  "timestamp": "2026-08-08 13:52:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de confianza A+ (Score >= 65 y Bids >= 55%) necesario para mitigar el riesgo de pérdidas, por lo que se mantiene la posición en efectivo para preservar el capital.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos elevados en ASTER y AXTIB, la falta de profundidad en el libro de órdenes y el entorno de mercado en 'Fear' no garantizan la seguridad del capital, por lo que se opta por una postura de espera (HOLD) para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "ASTERUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "AXTIBUSDT",
+      "score": 85
+    },
     {
       "symbol": "BTCUSDT",
       "score": 75
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
       "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PAXGUSDT",
       "score": 75
     }
   ]
