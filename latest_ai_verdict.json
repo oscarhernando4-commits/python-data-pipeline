@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-08 12:48:18",
+  "timestamp": "2026-08-08 12:50:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de consolidación por agotamiento con alta probabilidad de reversión, por lo que la estrategia óptima es mantener la liquidez en USDT hasta que aparezca una oportunidad con mayor confirmación institucional.",
+  "reasoning": "Tras deliberar, el comité concluye que el mercado actual no cumple con los criterios de alta convicción (Score >= 65 y Bids > 55%) exigidos por nuestra política de gestión de riesgo. La alta tasa de fallos en las simulaciones recientes para activos con scores técnicos bajos refuerza la decisión de mantener la liquidez en espera de una mejor oportunidad.",
   "top_candidates": [
     {
-      "symbol": "SKHYBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
       "symbol": "XLMUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "SKHYBUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "AAVEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "VETUSDT",
       "score": 75
     }
   ]
