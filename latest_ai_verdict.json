@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 14:22:22",
+  "timestamp": "2026-08-08 14:24:24",
   "selected_symbol": "XAUTUSDT",
   "action": "BUY_LONG",
   "approved": true,
   "confidence": 75,
-  "reasoning": "Tras analizar el entorno de mercado, el comité ha determinado que XAUTUSDT es el único activo que cumple con el umbral de convicción A+ (Score 85) y pertenece al sector de refugio dominante, evitando la volatilidad de las altcoins de bajo score.",
+  "reasoning": "Tras analizar el mercado, el comité ha determinado que la mayoría de los activos presentan una alta volatilidad y riesgo de 'trampa de liquidez'. XAUTUSDT destaca como el candidato con mayor convicción (Score 85) y alineación con la rotación de capital hacia activos refugio (RWA), cumpliendo con los criterios de riesgo A+ exigidos por el CRO.",
   "top_candidates": [
+    {
+      "symbol": "SHIBUSDT",
+      "score": 85
+    },
     {
       "symbol": "XAUTUSDT",
       "score": 85
     },
     {
-      "symbol": "BTCUSDT",
-      "score": 75
+      "symbol": "AAVEUSDT",
+      "score": 85
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 75
+      "symbol": "PENGUUSDT",
+      "score": 85
     },
     {
-      "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     }
   ]
