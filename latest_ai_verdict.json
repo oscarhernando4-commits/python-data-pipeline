@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 15:08:24",
+  "timestamp": "2026-08-08 15:10:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%) bajo las condiciones actuales de mercado, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la estrategia institucional es preservar capital y esperar un catalizador macro definido.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
@@ -15,16 +15,16 @@
       "score": 100
     },
     {
-      "symbol": "RENDERUSDT",
+      "symbol": "BCHUSDT",
       "score": 85
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 75
+      "symbol": "POLUSDT",
+      "score": 85
     },
     {
-      "symbol": "SHIBUSDT",
-      "score": 75
+      "symbol": "DASHUSDT",
+      "score": 85
     }
   ]
 }
