@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-08 03:36:18",
+  "timestamp": "2026-08-08 03:38:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de miedo (30) con una estructura técnica que no ofrece una ventaja estadística clara. Ninguno de los candidatos presenta una dominancia de Bids superior al 55% ni una confirmación de volumen institucional que supere el umbral de riesgo exigido por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y divergencia fragmentada. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité (Bids > 55% y tendencia clara), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar la exposición a una posible trampa de liquidez.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "LUNCUSDT",
       "score": 85
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BNBUSDT",
       "score": 75
     }
   ]
