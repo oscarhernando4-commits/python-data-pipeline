@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 07:44:20",
+  "timestamp": "2026-08-08 07:46:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65) y la estructura de mercado actual es de alta volatilidad con riesgo de trampa de liquidez, por lo que la decisión institucional es mantener la posición en efectivo (USDT) para preservar el capital.",
+  "reasoning": "El mercado presenta una estructura de riesgo sistémico elevado sin activos que cumplan con los criterios de calidad A+ exigidos por el comité. Se prioriza la preservación de capital sobre la especulación en un entorno de baja convicción.",
   "top_candidates": [
     {
-      "symbol": "CAKEUSDT",
-      "score": 70
+      "symbol": "ETCUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "score": 60
     },
     {
       "symbol": "POLUSDT",
       "score": 60
     },
     {
-      "symbol": "ICPUSDT",
-      "score": 55
+      "symbol": "CAKEUSDT",
+      "score": 60
     },
     {
-      "symbol": "HEIUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "HFTUSDT",
-      "score": 50
+      "symbol": "LAUSDT",
+      "score": 60
     }
   ]
 }
