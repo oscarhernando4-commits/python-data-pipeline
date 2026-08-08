@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 10:08:18",
+  "updated_at": "2026-08-08 10:10:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de capitulación y alta incertidumbre. Ninguno de los candidatos cumple con el umbral mínimo de Score A+ (>= 65) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de pérdida, por lo que la decisión es mantener la liquidez en espera de una configuración más favorable."
+    "reasoning": "El mercado presenta una estructura de miedo y falta de profundidad en el libro de órdenes. Ningún candidato cumple con el umbral de dominancia de Bids (>55%) ni con una confirmación técnica robusta, por lo que el comité decide mantener la liquidez en espera de una señal de mayor calidad."
   }
 }
