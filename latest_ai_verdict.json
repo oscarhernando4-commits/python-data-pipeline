@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-08 18:22:14",
+  "timestamp": "2026-08-08 18:24:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad técnica generalizada. Ninguno de los activos analizados alcanza el umbral de convicción A+ (Score >= 65) exigido por el Comité de Riesgo, por lo que la estrategia óptima es mantener la liquidez en espera de mejores condiciones.",
+  "reasoning": "El mercado se encuentra en un estado de alta volatilidad y riesgo de capitulación. Ningún activo cumple con los criterios estrictos de convicción A+ establecidos por el comité, por lo que la decisión unánime es mantener la liquidez en espera de una configuración técnica más robusta.",
   "top_candidates": [
+    {
+      "symbol": "LUNCUSDT",
+      "score": 70
+    },
     {
       "symbol": "XAUTUSDT",
       "score": 60
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "SPYBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ZROUSDT",
       "score": 60
     },
     {
