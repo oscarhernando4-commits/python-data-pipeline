@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 11:04:20",
+  "timestamp": "2026-08-08 11:06:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con alta incertidumbre regulatoria y falta de convicción institucional. Ningún activo cumple con los requisitos técnicos y de liquidez exigidos por el comité para una operación de alta probabilidad, por lo que la orden es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de estancamiento con debilidad generalizada. Ningún activo cumple con el umbral de Score Técnico A+ (>= 65) ni con la profundidad de libro de órdenes requerida para una ejecución segura. Se prioriza la protección del capital sobre la especulación en un entorno de baja convicción.",
   "top_candidates": [
     {
       "symbol": "TIAUSDT",
       "score": 70
     },
     {
-      "symbol": "WLDUSDT",
-      "score": 60
-    },
-    {
       "symbol": "DOTUSDT",
       "score": 60
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "WLDUSDT",
       "score": 60
     },
     {
       "symbol": "TRUMPUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "AEROUSDT",
       "score": 60
     }
   ]
