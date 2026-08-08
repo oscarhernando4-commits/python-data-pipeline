@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 04:50:19",
+  "timestamp": "2026-08-08 04:52:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con la exigencia de convicción A+ (Score >= 65 con confirmación de soporte y volumen). La incertidumbre macro, sumada a la falta de datos de profundidad en el libro de órdenes, obliga a mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%). La alta tasa de fallos en el historial reciente y la falta de muros de soporte claros en el libro de órdenes obligan al comité a mantener la liquidez en USDT para preservar el capital.",
   "top_candidates": [
     {
-      "symbol": "BABYUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "BABYUSDT",
       "score": 75
     },
     {
