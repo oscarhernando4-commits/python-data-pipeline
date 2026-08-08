@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 04:36:22",
+  "timestamp": "2026-08-08 04:38:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) en un entorno de mercado marcado por el miedo y la inestabilidad regulatoria. Se prioriza la preservación del capital sobre la especulación en activos de baja liquidez.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, la falta de dominancia clara en el libro de órdenes y el entorno macro de miedo extremo no cumplen con los criterios de alta convicción (A+) exigidos por el CRO. Se mantiene la liquidez en espera de una estructura de mercado más definida.",
   "top_candidates": [
     {
-      "symbol": "ADAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SHIBUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "ADAUSDT",
       "score": 75
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SHIBUSDT",
       "score": 75
     }
   ]
