@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 11:10:18",
+  "timestamp": "2026-08-08 11:12:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación negativa entre el sentimiento de miedo y la acción del precio. Ninguno de los candidatos analizados supera el umbral de seguridad exigido por el Comité, y la falta de profundidad en el libro de órdenes aumenta el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
+  "reasoning": "Tras la deliberación unánime, el comité concluye que el mercado carece de la fuerza necesaria y la confirmación de liquidez requerida para una entrada de alta convicción. Se prioriza la preservación del capital sobre la especulación en un entorno de alta fragmentación y resultados históricos negativos en condiciones similares.",
   "top_candidates": [
     {
       "symbol": "DOTUSDT",
       "score": 85
     },
     {
-      "symbol": "XRPUSDT",
+      "symbol": "JUPUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "TIAUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
       "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "MUBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ASTERUSDT",
       "score": 75
     }
   ]
