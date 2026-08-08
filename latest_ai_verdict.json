@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-08 20:42:17",
+  "timestamp": "2026-08-08 20:44:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación del comité, se ha determinado que no existen activos con un Score Técnico >= 65 ni una estructura de libro de órdenes que garantice una probabilidad de éxito superior al 70%. Ante la debilidad sistémica y la falta de convicción, la decisión institucional es mantener la liquidez en espera de una configuración de mercado más favorable.",
+  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con scores técnicos mediocres. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la decisión estratégica es mantener la liquidez en espera de una mejor oportunidad.",
   "top_candidates": [
+    {
+      "symbol": "WLFIUSDT",
+      "score": 60
+    },
     {
       "symbol": "ATOMUSDT",
       "score": 60
@@ -21,10 +25,6 @@
     {
       "symbol": "NIGHTUSDT",
       "score": 60
-    },
-    {
-      "symbol": "SUNUSDT",
-      "score": 55
     }
   ]
 }
