@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-08 07:10:20",
+  "timestamp": "2026-08-08 07:12:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%) necesario para garantizar la preservación del capital en un entorno de mercado marcado por el miedo y la alta volatilidad.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura de liquidez débil. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la estrategia óptima es mantenerse en efectivo para evitar el riesgo de 'trampas de liquidez' y pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
-      "score": 75
+      "symbol": "ICPUSDT",
+      "score": 85
     },
     {
       "symbol": "XAUTUSDT",
@@ -19,7 +19,7 @@
       "score": 75
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
