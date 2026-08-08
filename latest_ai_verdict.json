@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-08 22:26:22",
+  "timestamp": "2026-08-08 22:28:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una fragilidad técnica extrema. Ningún activo cumple con el requisito de Score A+ (>=65) ni con la confirmación de soporte en el libro de órdenes, por lo que la estrategia de protección de capital dicta una postura de espera (HOLD) para evitar pérdidas por 'falling knives'.",
+  "reasoning": "El mercado se encuentra en una fase de alta fragilidad sistémica. Ninguno de los candidatos analizados alcanza el umbral de calidad A+ (Score >= 65) requerido por el comité para garantizar la preservación del capital. Se prioriza la protección de la liquidez sobre la especulación en activos de baja fuerza relativa.",
   "top_candidates": [
     {
       "symbol": "TAOUSDT",
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     },
     {
