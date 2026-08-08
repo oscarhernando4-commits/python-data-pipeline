@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 09:32:20",
+  "timestamp": "2026-08-08 09:34:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una correlación inestable y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con los criterios de riesgo A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de un catalizador claro.",
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos, el libro de órdenes no muestra una dominancia compradora clara y el entorno macro presenta riesgos regulatorios que no justifican una entrada de alta convicción en este momento.",
   "top_candidates": [
     {
       "symbol": "ETHUSDT",
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     }
   ]
