@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-08 19:38:14",
+  "timestamp": "2026-08-08 19:40:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una zona de alta incertidumbre con scores técnicos insuficientes (máximo 60/100) y falta de soporte institucional en el libro de órdenes. Siguiendo la Regla de Oro #1, al no existir candidatos con Score >= 65, la decisión es mantener la liquidez en espera de una estructura de mercado más clara.",
+  "reasoning": "El comité ha determinado que el mercado actual presenta una toxicidad elevada y una falta de convicción institucional en las altcoins analizadas. Ningún activo cumple con el requisito estricto de un Score Técnico >= 65, por lo que, bajo la Regla de Oro #1, se prohíbe cualquier posición larga para evitar trampas de liquidez y pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "GRAMUSDT",
-      "score": 60
-    },
     {
       "symbol": "ADAUSDT",
       "score": 60
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
+      "symbol": "GRAMUSDT",
+      "score": 60
+    },
+    {
       "symbol": "LUNCUSDT",
       "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 50
+      "symbol": "ETHFIUSDT",
+      "score": 55
     }
   ]
 }
