@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-07 23:58:21",
+  "timestamp": "2026-08-08 00:00:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La volatilidad actual y la falta de muros de compra institucionales exigen una postura de preservación de capital (HOLD) para evitar el riesgo de 'falling knives' observado en simulaciones pasadas.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). La estrategia óptima es mantener la liquidez en efectivo (Cash is King) para evitar pérdidas en activos de baja capitalización y alta volatilidad.",
   "top_candidates": [
     {
       "symbol": "DOTUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "PAXGUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "JSTUSDT",
       "score": 75
     },
     {
       "symbol": "ATOMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DEXEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "CAKEUSDT",
       "score": 75
     },
     {

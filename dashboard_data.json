@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-07 23:58:21",
+  "updated_at": "2026-08-08 00:00:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La volatilidad actual y la falta de muros de compra institucionales exigen una postura de preservación de capital (HOLD) para evitar el riesgo de 'falling knives' observado en simulaciones pasadas."
+    "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). La estrategia óptima es mantener la liquidez en efectivo (Cash is King) para evitar pérdidas en activos de baja capitalización y alta volatilidad."
   }
 }
