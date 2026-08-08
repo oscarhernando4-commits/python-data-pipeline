@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 14:02:21",
+  "timestamp": "2026-08-08 14:04:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una falta de dominancia clara en el libro de órdenes y una alta probabilidad de falsos rebotes, por lo que la estrategia más rentable es la preservación de capital.",
+  "reasoning": "El comité ha determinado que, a pesar de tener activos con un Score técnico de 75, la falta de confirmación en el libro de órdenes y el entorno de mercado de 'miedo' (Fear 30) no cumplen con los estándares de seguridad exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en un mercado sin una tendencia clara.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "AAVEUSDT",
       "score": 75
     },
     {
-      "symbol": "SPYBUSDT",
+      "symbol": "FETUSDT",
       "score": 75
     }
   ]
