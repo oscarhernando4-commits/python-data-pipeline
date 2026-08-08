@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 21:34:16",
+  "timestamp": "2026-08-08 21:36:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución y falta de liquidez estructural. Ningún activo cumple con los criterios estrictos de selección (Score >= 65) establecidos por el Comité, por lo que la orden es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' y volatilidad especulativa.",
+  "reasoning": "El mercado se encuentra en un estado de estancamiento con una divergencia técnica severa. Ninguno de los activos analizados cumple con el umbral de Score técnico (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es mantener la liquidez en espera de una señal de confirmación más clara.",
   "top_candidates": [
     {
-      "symbol": "LINKUSDT",
+      "symbol": "TAOUSDT",
       "score": 60
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "LINKUSDT",
       "score": 60
     },
     {
@@ -19,7 +19,7 @@
       "score": 60
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "AAVEUSDT",
       "score": 60
     },
     {

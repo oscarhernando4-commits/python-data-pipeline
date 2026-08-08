@@ -1,7 +1,20 @@
 {
+  "SPKUSDT": [
+    {
+      "timestamp": "2026-08-08 21:36:08",
+      "price": 0.014693,
+      "score": 0,
+      "rsi": 43.5,
+      "macd": "Neutral",
+      "volume_surge": 0.1,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
   "JTOUSDT": [
     {
-      "timestamp": "2026-08-08 21:34:07",
+      "timestamp": "2026-08-08 21:36:08",
       "price": 0.5116,
       "score": 25,
       "rsi": 76.82,
@@ -14,12 +27,25 @@
   ],
   "BIOUSDT": [
     {
-      "timestamp": "2026-08-08 21:34:07",
+      "timestamp": "2026-08-08 21:36:08",
       "price": 0.02493,
       "score": 15,
       "rsi": 48.35,
       "macd": "Neutral",
       "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-08 21:36:08",
+      "price": 0.2921,
+      "score": 30,
+      "rsi": 53.08,
+      "macd": "Neutral",
+      "volume_surge": 0.03,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
