@@ -1,22 +1,18 @@
 {
-  "timestamp": "2026-08-08 15:02:26",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de compresión sin una tendencia clara. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia más rentable es preservar el capital evitando la exposición a activos con alta probabilidad de reversión o estancamiento.",
+  "timestamp": "2026-08-08 15:04:19",
+  "selected_symbol": "PAXGUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "Tras analizar la fragmentación del mercado y la huida de capital hacia activos de refugio, el comité ha determinado que PAXGUSDT es el único activo que cumple con los criterios de alta convicción (Score 90) y alineación sectorial (RWA/Precious Metals), minimizando el riesgo sistémico frente a la debilidad de las altcoins especulativas.",
   "top_candidates": [
     {
-      "symbol": "NEARUSDT",
-      "score": 75
+      "symbol": "PAXGUSDT",
+      "score": 90
     },
     {
-      "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 75
+      "symbol": "RENDERUSDT",
+      "score": 85
     },
     {
       "symbol": "AVAXUSDT",
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SHIBUSDT",
       "score": 75
     }
   ]
