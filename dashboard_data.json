@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 09:44:21",
+  "updated_at": "2026-08-08 09:46:24",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una divergencia técnica y un sentimiento de miedo que, sumado a la falta de soporte sólido en el libro de órdenes, hace que cualquier operación actual tenga una probabilidad de éxito inferior a los umbrales de riesgo permitidos por el comité."
+    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura de divergencia fragmentada. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y confirmación de volumen institucional), por lo que la estrategia de preservación de capital dicta mantenerse en efectivo (HOLD)."
   }
 }
