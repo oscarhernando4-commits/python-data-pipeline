@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-08 04:12:21",
+  "timestamp": "2026-08-08 04:14:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'limbo' con alta presión bajista y noticias regulatorias adversas. Ninguno de los candidatos, a pesar de sus scores técnicos, logra superar el umbral de convicción A+ exigido por el comité, y el riesgo de pérdida de capital es superior a la probabilidad de beneficio estadístico.",
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de tener candidatos con scores técnicos elevados, el entorno macroeconómico de miedo (Fear & Greed 30), la falta de soporte claro en el libro de órdenes y la alta tasa de fallos en condiciones de mercado neutral, no cumplen con los estándares de seguridad A+ exigidos por el departamento de riesgo.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 85
     },
     {
@@ -19,11 +23,7 @@
       "score": 85
     },
     {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LINKUSDT",
+      "symbol": "NEARUSDT",
       "score": 75
     }
   ]
