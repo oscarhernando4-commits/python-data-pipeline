@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 12:34:19",
+  "timestamp": "2026-08-08 12:36:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con scores de fuerza insuficientes en todos los activos analizados. Ningún candidato cumple con el umbral de riesgo A+ exigido por el comité, por lo que se mantiene la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y fragmentación. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y confirmación de volumen). La alta tasa de pérdidas en trades recientes con scores similares obliga a mantener la liquidez en USDT para evitar la exposición a 'cuchillos cayendo'.",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
-      "score": 60
-    },
-    {
       "symbol": "XRPUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "AAVEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ASTERUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "QNTUSDT",
-      "score": 60
+      "score": 75
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PENGUUSDT",
+      "score": 75
     }
   ]
 }
