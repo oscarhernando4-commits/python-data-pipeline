@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-08 11:36:18",
+  "timestamp": "2026-08-08 11:38:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una zona de alta incertidumbre y debilidad técnica. Ningún activo cumple con el umbral estricto de Score A+ (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la estrategia de protección de capital dicta una postura de espera (HOLD).",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre y debilidad técnica. Ninguno de los candidatos cumple con el umbral de Score A+ (>= 65) ni con una dominancia de Bids superior al 55%, lo que aumenta el riesgo de 'falling knives'. Se prioriza la preservación del capital hasta que surja una configuración de alta convicción.",
   "top_candidates": [
     {
-      "symbol": "GOOGLBUSDT",
+      "symbol": "AVAXUSDT",
       "score": 70
     },
     {
@@ -15,11 +15,11 @@
       "score": 60
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "ASTERUSDT",
       "score": 60
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "DOTUSDT",
       "score": 60
     },
     {
