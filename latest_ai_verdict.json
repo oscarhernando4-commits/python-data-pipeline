@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-08 07:26:24",
+  "timestamp": "2026-08-08 07:28:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar el contexto macroeconómico bajista y la falta de soporte institucional en el libro de órdenes, el comité ha determinado que no existen activos con la convicción A+ requerida. Se prioriza la preservación del capital sobre la ejecución de trades especulativos en un mercado de alta incertidumbre.",
+  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral estricto de Score A+ (>= 65) combinado con una confirmación sólida de profundidad de mercado y volumen institucional. La incertidumbre macro y la falta de datos de soporte en el libro de órdenes obligan a una postura defensiva de 'HOLD' para proteger el capital contra posibles 'falling knives'.",
   "top_candidates": [
-    {
-      "symbol": "GRAMUSDT",
-      "score": 75
-    },
     {
       "symbol": "XAUTUSDT",
       "score": 75
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "AAVEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "CAKEUSDT",
       "score": 75
     }
   ]
