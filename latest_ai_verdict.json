@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 01:22:35",
+  "timestamp": "2026-08-08 01:24:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes, el sentimiento de miedo (30) y la inestabilidad macroeconómica impiden una ejecución segura. Se prioriza la preservación del capital (Regla #1) sobre la especulación en un mercado sin tendencia clara.",
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos de 75, el libro de órdenes no muestra una dominancia de compradores superior al 55% y el entorno macroeconómico es desfavorable. La alta tasa de pérdidas en trades pasados bajo condiciones de mercado neutral refuerza la decisión de no ejecutar ninguna operación para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XLMUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "XLMUSDT",
       "score": 75
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "AVAXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TRXUSDT",
       "score": 75
     }
   ]
