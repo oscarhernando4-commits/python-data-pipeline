@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-08 16:20:20",
+  "timestamp": "2026-08-08 16:22:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ exigido por el comité. La falta de profundidad en el libro de órdenes y la inestabilidad del mercado macro sugieren que la preservación del capital es la prioridad absoluta en este momento.",
+  "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad sin soporte institucional claro y el historial de pérdidas en condiciones de mercado neutrales dictan una postura de preservación de capital (HOLD).",
   "top_candidates": [
+    {
+      "symbol": "SHIBUSDT",
+      "score": 85
+    },
     {
       "symbol": "AVAXUSDT",
       "score": 75
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "FETUSDT",
       "score": 75
     },
     {
       "symbol": "WLDUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "FETUSDT",
       "score": 75
     },
     {
