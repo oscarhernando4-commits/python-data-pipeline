@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 09:26:26",
+  "updated_at": "2026-08-08 09:28:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura técnica que no garantiza una probabilidad de éxito superior al 70%. Ningún activo ha superado el umbral de Score A+ (>= 65) con una confirmación de volumen y soporte de libro de órdenes que justifique el riesgo de capital. Se prioriza la preservación del capital hasta que se observe una rotación de capital más clara y una estabilización en los niveles de soporte de las ballenas."
+    "reasoning": "El mercado se encuentra en un estado de 'Range-Bound' con alta volatilidad y falta de convicción institucional. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65 con Bids > 55%), por lo que la estrategia óptima es la preservación de capital mediante el modo HOLD."
   }
 }
