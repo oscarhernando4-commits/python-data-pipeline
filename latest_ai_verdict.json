@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 06:04:20",
+  "timestamp": "2026-08-08 06:06:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en un estado de baja convicción y alta volatilidad, con una alta probabilidad de 'trampas de valor'. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la posición en efectivo (USDT).",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un estado de desgaste institucional con liquidez fragmentada. Ninguno de los candidatos cumple con el requisito estricto de Score >= 65 y confirmación de profundidad en el libro de órdenes, por lo que la estrategia de preservación de capital dicta mantener una posición en efectivo (HOLD).",
   "top_candidates": [
-    {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "HBARUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ASTERUSDT",
-      "score": 75
-    },
     {
       "symbol": "JSTUSDT",
       "score": 70
     },
     {
+      "symbol": "BICOUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "TAOUSDT",
+      "score": 65
+    },
+    {
       "symbol": "BABYUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "ALLOUSDT",
       "score": 65
     }
   ]

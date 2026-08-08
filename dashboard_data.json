@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 06:04:21",
+  "updated_at": "2026-08-08 06:06:20",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de baja convicción y alta volatilidad, con una alta probabilidad de 'trampas de valor'. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la posición en efectivo (USDT)."
+    "reasoning": "El mercado se encuentra en un estado de desgaste institucional con liquidez fragmentada. Ninguno de los candidatos cumple con el requisito estricto de Score >= 65 y confirmación de profundidad en el libro de órdenes, por lo que la estrategia de preservación de capital dicta mantener una posición en efectivo (HOLD)."
   }
 }
