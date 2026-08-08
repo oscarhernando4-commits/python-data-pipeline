@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-08 22:34:22",
+  "timestamp": "2026-08-08 22:36:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, bajo las condiciones actuales de mercado, ningún activo cumple con los criterios estrictos de calidad A+ (Score >= 65). La alta volatilidad y la falta de confirmación en el libro de órdenes obligan a mantener una postura defensiva y proteger el capital en USDT hasta que surja una oportunidad con mayor probabilidad de éxito.",
+  "reasoning": "El mercado actual no cumple con los criterios de alta convicción (Score A+ >= 65) exigidos por el comité. La falta de soporte en el libro de órdenes y la debilidad técnica generalizada en los activos analizados obligan a mantener una postura de espera para evitar la exposición a 'cuchillos cayendo' y preservar el capital institucional.",
   "top_candidates": [
+    {
+      "symbol": "GRAMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TRXUSDT",
+      "score": 60
+    },
     {
       "symbol": "ATOMUSDT",
       "score": 60
@@ -17,14 +25,6 @@
     {
       "symbol": "SPYBUSDT",
       "score": 60
-    },
-    {
-      "symbol": "GNOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TSTUSDT",
-      "score": 50
     }
   ]
 }
