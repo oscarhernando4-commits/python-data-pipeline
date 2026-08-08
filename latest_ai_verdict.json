@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-08 17:08:19",
+  "timestamp": "2026-08-08 17:10:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado actual presenta una fragmentación de liquidez y una falta de soporte institucional sólido en los activos analizados. Ningún candidato alcanza el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes), por lo que la estrategia más rentable y segura es mantener la posición en efectivo (HOLD) hasta que se observe una rotación de capital más clara y un aumento en la dominancia de los compradores.",
+  "confidence": 95,
+  "reasoning": "El comité ha determinado por unanimidad que, a pesar de la fortaleza relativa de RENDER, las condiciones actuales del mercado no cumplen con los criterios estrictos de riesgo (Score A+ y Bids > 55%). Se prioriza la preservación del capital sobre la especulación en un entorno de miedo y lateralidad.",
   "top_candidates": [
+    {
+      "symbol": "RENDERUSDT",
+      "score": 85
+    },
     {
       "symbol": "WLFIUSDT",
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "RENDERUSDT",
-      "score": 75
-    },
-    {
       "symbol": "SUNUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TIAUSDT",
       "score": 75
     },
     {
