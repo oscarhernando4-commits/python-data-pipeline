@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 08:48:20",
+  "timestamp": "2026-08-08 08:50:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la estrategia más rentable es mantener la liquidez y evitar la exposición a posibles trampas de liquidez.",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La estrategia institucional es preservar el capital (HOLD) hasta que la rotación de capital hacia el sector AI se consolide con muros de compra reales y una mejora en el sentimiento global.",
   "top_candidates": [
     {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PUMPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ATOMUSDT",
-      "score": 75
-    },
-    {
       "symbol": "RENDERUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "LAUSDT",
+      "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AAVEUSDT",
       "score": 75
     }
   ]
