@@ -1,16 +1,28 @@
 {
-  "GNOUSDT": [
+  "SPKUSDT": [
     {
-      "timestamp": "2026-08-08 05:48:12",
-      "price": 106.28,
-      "score": 30,
-      "rsi": 49.81,
+      "timestamp": "2026-08-08 05:50:13",
+      "price": 0.014732,
+      "score": 15,
+      "rsi": 42.68,
       "macd": "Neutral",
-      "volume_surge": 0.17,
+      "volume_surge": 0.67,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "AMDBUSDT": [
+    {
+      "timestamp": "2026-08-08 05:50:13",
+      "price": 479.4,
+      "score": 40,
+      "rsi": 31.81,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-} ]
 }

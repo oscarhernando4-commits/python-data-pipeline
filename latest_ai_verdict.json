@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-08 05:48:21",
+  "timestamp": "2026-08-08 05:50:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que no existen activos que cumplan con los criterios estrictos de riesgo-recompensa (Score >= 65 y Bids > 55%). La alta probabilidad de pérdidas observada en el historial de simulaciones para condiciones de mercado neutral obliga a mantener la liquidez en espera de una mejor configuración técnica.",
+  "reasoning": "Ningún activo cumple con el umbral de convicción A+ requerido por el comité. La incertidumbre macro, sumada a la falta de profundidad en el libro de órdenes y la inestabilidad técnica, obliga a mantener una postura de espera para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "ADAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "EPICUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "POLUSDT",
       "score": 75
     },
     {
@@ -23,7 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "FETUSDT",
+      "score": 75
+    },
+    {
       "symbol": "ALLOUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "SYNUSDT",
       "score": 65
     }
   ]
