@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 13:54:19",
+  "timestamp": "2026-08-08 13:56:56",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una fragmentación de liquidez que impide una entrada segura. Ninguno de los candidatos analizados presenta la confluencia necesaria de soporte en el libro de órdenes, volumen institucional y estructura técnica para cumplir con los estándares de riesgo del comité. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo.",
+  "reasoning": "El mercado presenta una estructura de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos, a pesar de sus scores técnicos, logra superar el umbral de convicción A+ debido a la falta de soporte real en el libro de órdenes y la inestabilidad de la tendencia 4H. Se decide mantener la liquidez para evitar pérdidas innecesarias en un entorno de mercado lateral y volátil.",
   "top_candidates": [
     {
       "symbol": "ASTERUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "PAXGUSDT",
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
