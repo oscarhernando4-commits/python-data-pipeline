@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 17:28:23",
+  "timestamp": "2026-08-08 17:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con una estructura técnica poco clara y una falta de soporte institucional contundente en el libro de órdenes. Dado que no se cumplen los criterios de convicción A+ (Score >= 65 y confirmación de volumen), el comité decide mantener la liquidez en USDT para evitar el riesgo de 'falling knives' observado en el historial de simulaciones.",
+  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral estricto de convicción A+ (Score >= 65 y soporte de libro de órdenes > 55%). La alta volatilidad y la incertidumbre en el sentimiento de mercado sugieren que la mejor estrategia es mantener la liquidez en espera de una configuración técnica más robusta.",
   "top_candidates": [
     {
+      "symbol": "ZROUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PENGUUSDT",
+      "score": 75
+    },
+    {
       "symbol": "RENDERUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "NEXOUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETCUSDT",
+      "symbol": "ETHFIUSDT",
       "score": 75
     }
   ]
