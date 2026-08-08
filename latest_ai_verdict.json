@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-08 18:04:17",
+  "timestamp": "2026-08-08 18:06:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ exigido por el comité. La falta de dominancia clara en el libro de órdenes y la inestabilidad técnica generalizada obligan a mantener la liquidez en espera de una configuración de mercado más favorable.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%). La alta tasa de fallos en el historial de simulaciones para activos con baja profundidad de mercado y la persistencia del sentimiento de miedo (Fear 30) dictan una postura de preservación de capital.",
   "top_candidates": [
+    {
+      "symbol": "ETHFIUSDT",
+      "score": 75
+    },
     {
       "symbol": "ETCUSDT",
       "score": 70
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "NILUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "ZAMAUSDT",
       "score": 65
     }
   ]
