@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 20:00:18",
+  "timestamp": "2026-08-08 20:02:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con los requisitos estrictos de riesgo y convicción del comité. La falta de soporte en el libro de órdenes y la alta probabilidad de pérdidas basada en el historial de simulaciones para activos con scores mediocres obligan a mantener la posición en efectivo (HOLD) para preservar el capital.",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una correlación errática. Ninguno de los candidatos cumple con los requisitos estrictos de riesgo (Score A+ y soporte de libro de órdenes) exigidos por el comité para garantizar la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
@@ -15,16 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "LUNCUSDT",
+      "symbol": "DEXEUSDT",
       "score": 75
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 65
+      "symbol": "ETHFIUSDT",
+      "score": 75
     },
     {
-      "symbol": "DODOUSDT",
-      "score": 65
+      "symbol": "LUNCUSDT",
+      "score": 75
     }
   ]
 }
