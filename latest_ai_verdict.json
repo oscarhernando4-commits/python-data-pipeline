@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-08 18:50:17",
+  "timestamp": "2026-08-08 18:52:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que no existen activos que cumplan con los criterios de alta convicción (Score >= 65) y soporte de liquidez necesario. Se prioriza la preservación del capital ante la incertidumbre del mercado y la falta de confirmación técnica en los candidatos analizados.",
+  "reasoning": "El mercado actual se encuentra en una fase de alta incertidumbre y capitulación, donde ningún activo cumple con los criterios estrictos de calidad A+ (Score >= 65) establecidos por el comité. La falta de soporte en el libro de órdenes y la alta probabilidad de 'trampas de liquidez' dictan una postura de preservación de capital total.",
   "top_candidates": [
-    {
-      "symbol": "NEARUSDT",
-      "score": 60
-    },
     {
       "symbol": "ADAUSDT",
       "score": 60
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "POLUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ORDIUSDT",
       "score": 60
     }
   ]
