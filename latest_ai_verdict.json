@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 06:06:20",
+  "timestamp": "2026-08-08 06:08:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de desgaste institucional con liquidez fragmentada. Ninguno de los candidatos cumple con el requisito estricto de Score >= 65 y confirmación de profundidad en el libro de órdenes, por lo que la estrategia de preservación de capital dicta mantener una posición en efectivo (HOLD).",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). La alta tasa de fallos en las simulaciones históricas bajo condiciones de mercado neutral, sumada a la incertidumbre macroeconómica, obliga al comité a mantener la liquidez en USDT para evitar el riesgo de 'falling knives'.",
   "top_candidates": [
     {
-      "symbol": "JSTUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "BICOUSDT",
-      "score": 65
-    },
-    {
       "symbol": "TAOUSDT",
-      "score": 65
+      "score": 75
+    },
+    {
+      "symbol": "HBARUSDT",
+      "score": 75
     },
     {
       "symbol": "BABYUSDT",
       "score": 65
     },
     {
-      "symbol": "ALLOUSDT",
+      "symbol": "BICOUSDT",
       "score": 65
+    },
+    {
+      "symbol": "SOLUSDT",
+      "score": 60
     }
   ]
 }
