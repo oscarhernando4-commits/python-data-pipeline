@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-08 20:32:14",
+  "timestamp": "2026-08-08 20:34:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de profundidad en el libro de órdenes para los activos analizados aumentan el riesgo de slippage y pérdidas, por lo que la decisión institucional es mantener la liquidez en espera de mejores condiciones.",
+  "reasoning": "El comité ha determinado que, a pesar de algunos scores técnicos de 75, la falta de profundidad en el libro de órdenes, el entorno de miedo generalizado y el historial reciente de pérdidas en activos similares, no se cumplen los criterios estrictos de seguridad y rentabilidad exigidos por el CRO.",
   "top_candidates": [
     {
       "symbol": "UNIUSDT",
       "score": 75
     },
     {
-      "symbol": "PENGUUSDT",
+      "symbol": "ADAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ATOMUSDT",
       "score": 75
     },
     {
@@ -21,10 +25,6 @@
     {
       "symbol": "CRVUSDT",
       "score": 75
-    },
-    {
-      "symbol": "DEXEUSDT",
-      "score": 65
     }
   ]
 }
