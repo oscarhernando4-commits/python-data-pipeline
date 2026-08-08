@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-08 17:34:23",
+  "timestamp": "2026-08-08 17:36:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de indecisión con alta probabilidad de volatilidad, por lo que la estrategia óptima es preservar el capital en USDT.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo sistémico actual, por lo que se mantiene la posición en efectivo.",
   "top_candidates": [
     {
-      "symbol": "ZROUSDT",
+      "symbol": "LUNCUSDT",
       "score": 85
     },
     {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "AVAXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 75
     }
   ]
