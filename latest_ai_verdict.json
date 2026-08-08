@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-08 13:34:21",
+  "timestamp": "2026-08-08 13:36:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (A+) establecidos por el Departamento de Riesgo. La falta de dominancia compradora en el libro de órdenes y la alta probabilidad de pérdidas basada en el historial de simulaciones recientes obligan a mantener una postura defensiva (HOLD) para preservar el capital.",
+  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La falta de soporte claro en el libro de órdenes y la alta volatilidad en un entorno de miedo sistémico hacen que la estrategia más rentable sea preservar el capital en espera de una mejor configuración técnica.",
   "top_candidates": [
     {
-      "symbol": "ASTERUSDT",
-      "score": 85
-    },
-    {
       "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "HBARUSDT",
       "score": 75
     },
     {
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "HBARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AXTIBUSDT",
       "score": 75
     }
   ]
