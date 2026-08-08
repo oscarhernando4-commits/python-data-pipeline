@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 04:34:20",
+  "timestamp": "2026-08-08 04:36:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. La falta de datos de liquidez, sumada a la alta tasa de fallos en el historial de trades bajo condiciones neutrales, obliga a mantener una postura defensiva y preservar el capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) en un entorno de mercado marcado por el miedo y la inestabilidad regulatoria. Se prioriza la preservación del capital sobre la especulación en activos de baja liquidez.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BABYUSDT",
+      "symbol": "ADAUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "CAKEUSDT",
       "score": 75
     }
   ]
