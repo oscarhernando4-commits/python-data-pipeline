@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 02:24:19",
+  "timestamp": "2026-08-08 02:26:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65) y soporte de libro de órdenes. El mercado se encuentra en una fase de alta incertidumbre y baja liquidez, por lo que la estrategia óptima es la preservación de capital.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y distribución institucional. Ninguno de los candidatos cumple con el umbral de seguridad (Score >= 65) ni con la confirmación de soporte en el libro de órdenes. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y riesgo sistémico.",
   "top_candidates": [
     {
       "symbol": "NIGHTUSDT",
       "score": 70
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 60
-    },
-    {
       "symbol": "SOLUSDT",
       "score": 60
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "SPYBUSDT",
       "score": 60
     },
     {
       "symbol": "NEXOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "CAKEUSDT",
       "score": 60
     }
   ]
