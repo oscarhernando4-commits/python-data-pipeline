@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 06:42:21",
+  "timestamp": "2026-08-08 06:44:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que no existen activos con un Score Técnico >= 65 ni soporte de liquidez suficiente en el libro de órdenes. Dado el entorno de mercado de alta incertidumbre y la alta tasa de fallos en las simulaciones recientes, se prioriza la protección del capital sobre la especulación.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada y una falta de convicción institucional clara. Ningún activo cumple con el umbral de seguridad A+ requerido por el comité, por lo que se prioriza la preservación del capital sobre la operativa especulativa.",
   "top_candidates": [
+    {
+      "symbol": "SUIUSDT",
+      "score": 70
+    },
     {
       "symbol": "DOGEUSDT",
       "score": 70
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "score": 60
     },
     {
       "symbol": "GRAMUSDT",
       "score": 60
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 60
-    },
-    {
       "symbol": "ICPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TRUMPUSDT",
       "score": 60
     }
   ]
