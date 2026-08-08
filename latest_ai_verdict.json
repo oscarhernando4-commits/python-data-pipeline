@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-08 07:12:18",
+  "timestamp": "2026-08-08 07:14:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura de liquidez débil. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro), por lo que la estrategia óptima es mantenerse en efectivo para evitar el riesgo de 'trampas de liquidez' y pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de consolidación de miedo donde la mayoría de los activos no cumplen con los criterios estrictos de convicción A+ del comité. Se prioriza la preservación del capital en USDT hasta que aparezca una señal de alta probabilidad con soporte institucional claro.",
   "top_candidates": [
     {
       "symbol": "ICPUSDT",
       "score": 85
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "score": 75
     },
     {
       "symbol": "XAUTUSDT",
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SKYUSDT",
       "score": 75
     }
   ]
