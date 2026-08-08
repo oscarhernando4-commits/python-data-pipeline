@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 18:26:18",
+  "timestamp": "2026-08-08 18:28:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con una asimetría de pánico estructural. Ningún activo cumple con los criterios de alta convicción (Score >= 65) exigidos por el comité, por lo que la preservación de capital es la prioridad absoluta.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta volatilidad y scores técnicos insuficientes. Ningún activo cumple con el umbral de convicción A+ requerido por el comité, por lo que la estrategia de protección de capital (Cash is King) es la única opción autorizada.",
   "top_candidates": [
     {
       "symbol": "LUNCUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "SPYBUSDT",
+      "symbol": "ETHFIUSDT",
       "score": 60
     },
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "SPYBUSDT",
       "score": 60
     }
   ]
