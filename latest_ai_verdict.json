@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 03:58:20",
+  "timestamp": "2026-08-08 04:00:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de consolidación bajo estrés con noticias negativas que afectan la confianza. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y tendencia clara), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y baja liquidez institucional. Ninguno de los candidatos cumple con el requisito de soporte de libro de órdenes (Bids >= 55%) ni con una confirmación de volumen institucional, lo que obliga al comité a adoptar una postura defensiva de 'HOLD' para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "BNBUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ETCUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "AEROUSDT",
-      "score": 85
-    },
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
+      "symbol": "ADAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUIUSDT",
+      "score": 75
+    },
+    {
       "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETCUSDT",
       "score": 75
     }
   ]
