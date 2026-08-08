@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 15:36:23",
+  "timestamp": "2026-08-08 15:38:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos teóricos, la falta de soporte real en el libro de órdenes y el entorno de mercado 'Fear' con tendencia 'NEUTRAL' no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se mantiene la posición en efectivo para evitar la alta probabilidad de pérdidas observada en el historial de simulaciones recientes.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55% y confirmación de volumen institucional). El mercado se encuentra en una fase de distribución selectiva con alta probabilidad de pérdida, por lo que el comité ha decidido mantener la liquidez en espera de una señal de confirmación más clara.",
   "top_candidates": [
     {
-      "symbol": "TAOUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "WLDUSDT",
       "score": 75
     }
   ]
