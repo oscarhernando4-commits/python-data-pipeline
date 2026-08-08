@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 21:02:17",
+  "timestamp": "2026-08-08 21:04:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos presenta una dominancia de Bids superior al 55% ni una convicción A+ suficiente para superar el estricto control de riesgo del comité, por lo que se prioriza la preservación del capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de indecisión donde la preservación del capital es la prioridad absoluta según las reglas del comité.",
   "top_candidates": [
     {
       "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ADAUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "DOTUSDT",
       "score": 75
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "SPYBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "CRVUSDT",
       "score": 75
     }
   ]
