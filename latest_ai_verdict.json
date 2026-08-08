@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 16:42:22",
+  "timestamp": "2026-08-08 16:44:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de tener candidatos con scores técnicos aceptables, ninguno cumple con el umbral de convicción A+ ni con una dominancia clara en el libro de órdenes. La prioridad es preservar el capital ante la inestabilidad del mercado global y la falta de una tendencia definida en los activos de mayor potencial.",
+  "reasoning": "El mercado presenta una alta volatilidad con una estructura técnica inestable. Ninguno de los candidatos cumple con el requisito estricto de un Score Técnico >= 65 combinado con una dominancia de Bids > 55% y una tendencia clara, por lo que la decisión institucional es mantener la liquidez en espera de una mejor oportunidad.",
   "top_candidates": [
     {
       "symbol": "NEARUSDT",
       "score": 85
     },
     {
-      "symbol": "STXUSDT",
+      "symbol": "FETUSDT",
       "score": 85
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "ADAUSDT",
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "WLFIUSDT",
       "score": 75
     }
   ]
