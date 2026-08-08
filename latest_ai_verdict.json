@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-08 02:30:21",
+  "timestamp": "2026-08-08 02:32:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 55% ni con una confirmación de volumen institucional, por lo que la estrategia más prudente es mantener la liquidez en espera de una mejor oportunidad.",
+  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad y la falta de confirmación en el orderbook, sumado a la alta tasa de pérdidas en trades similares del historial, dictaminan una postura de espera para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ADAUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "SPYBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "CAKEUSDT",
       "score": 75
     }
   ]
