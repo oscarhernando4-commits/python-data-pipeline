@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 17:18:21",
+  "timestamp": "2026-08-08 17:20:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%) necesario para mitigar el riesgo de 'falling knives' en un mercado con sesgo neutral.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de libro de órdenes). El mercado se encuentra en una fase de indecisión y el riesgo de 'falling knife' es elevado, por lo que la estrategia óptima es preservar el capital hasta que aparezca una señal de alta probabilidad.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOTUSDT",
+      "symbol": "AAVEUSDT",
       "score": 75
     },
     {
       "symbol": "RENDERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUNUSDT",
       "score": 75
     }
   ]
