@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 17:52:35",
+  "timestamp": "2026-08-08 17:54:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ requerido, especialmente ante la falta de datos de profundidad del libro de órdenes y la alta tasa de pérdidas en el historial reciente bajo condiciones de mercado neutral.",
+  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de seguridad A+ (Score >= 65 combinado con una dominancia de Bids > 55%). La alta volatilidad y la falta de soporte institucional en el libro de órdenes sugieren que el mercado se encuentra en una fase de distribución o estancamiento, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
+      "symbol": "DODOUSDT",
       "score": 75
     },
     {
@@ -25,6 +21,10 @@
     {
       "symbol": "ETHFIUSDT",
       "score": 70
+    },
+    {
+      "symbol": "ZBTUSDT",
+      "score": 65
     }
   ]
 }
