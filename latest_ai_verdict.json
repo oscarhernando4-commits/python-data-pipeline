@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 16:30:20",
+  "timestamp": "2026-08-08 16:32:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 y confirmación de liquidez). La alta volatilidad y la falta de soporte claro en el libro de órdenes, sumado al historial de pérdidas en condiciones similares, dictan una postura de preservación de capital.",
+  "reasoning": "El mercado actual presenta una divergencia patológica y falta de liquidez de soporte. Ningún activo cumple con el umbral de seguridad A+ requerido por el comité, por lo que la estrategia óptima es el resguardo de capital para evitar el riesgo de 'cuchillos cayendo'.",
   "top_candidates": [
     {
-      "symbol": "AVAXUSDT",
-      "score": 75
+      "symbol": "PEPEUSDT",
+      "score": 60
     },
     {
-      "symbol": "ETCUSDT",
-      "score": 75
+      "symbol": "BONKUSDT",
+      "score": 60
     },
     {
-      "symbol": "RENDERUSDT",
-      "score": 75
+      "symbol": "EPICUSDT",
+      "score": 50
     },
     {
-      "symbol": "LUNCUSDT",
-      "score": 75
+      "symbol": "ADAUSDT",
+      "score": 50
     },
     {
       "symbol": "ZBTUSDT",
-      "score": 65
+      "score": 50
     }
   ]
 }
