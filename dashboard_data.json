@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 03:40:26",
+  "updated_at": "2026-08-08 03:42:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta un entorno de alta volatilidad y baja convicción direccional. Ninguno de los candidatos cumple con el umbral de riesgo A+ exigido por el comité, y la memoria histórica de los últimos trades indica una alta probabilidad de pérdida en condiciones de mercado neutral. Se prioriza la preservación de capital."
+    "reasoning": "El mercado se encuentra en una fase de indecisión estructural con un sesgo defensivo. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y confirmación de soporte institucional en el orderbook), por lo que la estrategia óptima es el mantenimiento de la liquidez para evitar el riesgo de 'falling knives' en un entorno de alta volatilidad."
   }
 }

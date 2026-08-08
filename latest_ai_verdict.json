@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 03:40:25",
+  "timestamp": "2026-08-08 03:42:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de alta volatilidad y baja convicción direccional. Ninguno de los candidatos cumple con el umbral de riesgo A+ exigido por el comité, y la memoria histórica de los últimos trades indica una alta probabilidad de pérdida en condiciones de mercado neutral. Se prioriza la preservación de capital.",
+  "reasoning": "El mercado se encuentra en una fase de indecisión estructural con un sesgo defensivo. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y confirmación de soporte institucional en el orderbook), por lo que la estrategia óptima es el mantenimiento de la liquidez para evitar el riesgo de 'falling knives' en un entorno de alta volatilidad.",
   "top_candidates": [
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "ADAUSDT",
       "score": 85
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "DOGEUSDT",
       "score": 85
     },
     {
@@ -19,12 +19,12 @@
       "score": 85
     },
     {
-      "symbol": "LUNCUSDT",
+      "symbol": "AEROUSDT",
       "score": 85
     },
     {
-      "symbol": "BTCUSDT",
-      "score": 75
+      "symbol": "VETUSDT",
+      "score": 85
     }
   ]
 }
