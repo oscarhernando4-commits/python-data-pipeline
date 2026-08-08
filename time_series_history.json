@@ -1,12 +1,38 @@
 {
-  "XPLUSDT": [
+  "LUNCUSDT": [
     {
-      "timestamp": "2026-08-08 13:18:10",
-      "price": 0.07626,
-      "score": 75,
-      "rsi": 66.48,
+      "timestamp": "2026-08-08 13:20:10",
+      "price": 4.914e-05,
+      "score": 60,
+      "rsi": 52.53,
       "macd": "Neutral",
-      "volume_surge": 0.27,
+      "volume_surge": 0.11,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-08 13:20:10",
+      "price": 0.0893,
+      "score": 25,
+      "rsi": 69.85,
+      "macd": "Neutral",
+      "volume_surge": 0.22,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-08 13:20:10",
+      "price": 0.1331,
+      "score": 45,
+      "rsi": 66.07,
+      "macd": "Neutral",
+      "volume_surge": 0.19,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

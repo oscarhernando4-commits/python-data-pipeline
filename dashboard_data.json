@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 13:18:23",
+  "updated_at": "2026-08-08 13:20:19",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "A pesar de que varios activos presentan un score técnico de 75, la falta de datos de profundidad en el libro de órdenes, la incertidumbre macroeconómica y el historial reciente de pérdidas en condiciones similares dictan una postura de preservación de capital. No se cumplen los criterios estrictos de convicción A+ exigidos por el comité."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y dominancia de Bids > 55%). La volatilidad actual y la falta de una tendencia clara en el libro de órdenes dictan una postura de preservación de capital (HOLD) para evitar pérdidas en un mercado de alta incertidumbre."
   }
 }
