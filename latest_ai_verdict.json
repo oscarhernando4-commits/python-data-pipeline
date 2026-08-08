@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-08 03:38:19",
+  "timestamp": "2026-08-08 03:40:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y divergencia fragmentada. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité (Bids > 55% y tendencia clara), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar la exposición a una posible trampa de liquidez.",
+  "reasoning": "El mercado presenta un entorno de alta volatilidad y baja convicción direccional. Ninguno de los candidatos cumple con el umbral de riesgo A+ exigido por el comité, y la memoria histórica de los últimos trades indica una alta probabilidad de pérdida en condiciones de mercado neutral. Se prioriza la preservación de capital.",
   "top_candidates": [
+    {
+      "symbol": "DOGEUSDT",
+      "score": 85
+    },
     {
       "symbol": "ADAUSDT",
       "score": 85
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "ASTERUSDT",
       "score": 85
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
       "score": 75
     }
   ]
