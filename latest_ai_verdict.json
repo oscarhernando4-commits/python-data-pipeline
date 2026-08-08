@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 02:10:18",
+  "timestamp": "2026-08-08 02:12:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado no cumple con los criterios de alta convicción (Score >= 65) exigidos por el comité. La ausencia de soporte institucional en el libro de órdenes y la alta probabilidad de 'trampas de valor' en los activos analizados obligan a mantener la liquidez en 100% USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado que el mercado actual carece de la fortaleza técnica y el soporte de liquidez necesarios para cumplir con nuestra estricta política de riesgo A+. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo y alta volatilidad.",
   "top_candidates": [
     {
-      "symbol": "DOGEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SOLUSDT",
+      "symbol": "XRPUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "XRPUSDT",
+      "symbol": "SOLUSDT",
       "score": 60
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "DOGEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "APTUSDT",
       "score": 60
     }
   ]
