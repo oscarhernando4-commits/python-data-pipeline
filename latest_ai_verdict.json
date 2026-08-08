@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-08 16:48:19",
+  "timestamp": "2026-08-08 16:50:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta selectividad y falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité (Score >= 65 con soporte de libro de órdenes sólido), por lo que la estrategia óptima es la preservación de capital mediante el modo HOLD.",
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de que activos como FETUSDT tienen un score técnico de 85, el libro de órdenes no muestra la dominancia de compradores necesaria (>= 55%) y el entorno macro de miedo (Fear & Greed 30) aumenta el riesgo de una trampa de liquidez. La prioridad es preservar el capital ante la falta de una tendencia direccional clara.",
   "top_candidates": [
     {
       "symbol": "FETUSDT",
       "score": 85
-    },
-    {
-      "symbol": "ADAUSDT",
-      "score": 75
     },
     {
       "symbol": "WLDUSDT",
@@ -23,8 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "SPKUSDT",
+      "symbol": "SUNUSDT",
       "score": 75
+    },
+    {
+      "symbol": "EPICUSDT",
+      "score": 65
     }
   ]
 }
