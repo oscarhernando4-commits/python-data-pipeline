@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-08 01:18:20",
+  "timestamp": "2026-08-08 01:20:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura técnica inestable con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 55% ni con una confirmación de volumen institucional que mitigue el riesgo de 'falling knives'. Por lo tanto, el comité ha decidido unánimemente mantener la posición en efectivo para preservar el capital.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, la falta de soporte real en el libro de órdenes y el entorno macro de miedo (Fear 30) no cumplen con los estándares de seguridad A+ requeridos para la ejecución, optando por una postura de preservación de capital.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUIUSDT",
+      "symbol": "XLMUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "DOGEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TRXUSDT",
       "score": 75
     }
   ]
