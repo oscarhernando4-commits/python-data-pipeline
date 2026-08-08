@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 11:12:19",
+  "timestamp": "2026-08-08 11:14:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, el comité concluye que el mercado carece de la fuerza necesaria y la confirmación de liquidez requerida para una entrada de alta convicción. Se prioriza la preservación del capital sobre la especulación en un entorno de alta fragmentación y resultados históricos negativos en condiciones similares.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 85 en algunos activos, la falta de confirmación en el libro de órdenes, el entorno de miedo (30) y el historial reciente de pérdidas en condiciones similares, no se cumplen los criterios de seguridad A+ para ejecutar una compra.",
   "top_candidates": [
     {
       "symbol": "DOTUSDT",
@@ -15,7 +15,7 @@
       "score": 85
     },
     {
-      "symbol": "TIAUSDT",
+      "symbol": "NBISBUSDT",
       "score": 85
     },
     {
