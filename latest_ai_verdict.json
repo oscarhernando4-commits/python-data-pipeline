@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-08 21:48:16",
+  "timestamp": "2026-08-08 21:50:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual no cumple con los criterios de alta convicción (Score >= 65) establecidos por el comité. La alta volatilidad y la falta de soporte institucional claro en el libro de órdenes dictan una postura de preservación de capital (HOLD) hasta que las condiciones macro mejoren.",
+  "reasoning": "Ningún activo cumple con el umbral de calidad A+ (Score >= 65) ni con la confirmación de liquidez necesaria en el libro de órdenes, por lo que se prioriza la preservación del capital sobre la especulación en un entorno de mercado incierto.",
   "top_candidates": [
     {
       "symbol": "ETHUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TAOUSDT",
       "score": 60
     },
     {
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "QNTBUSDT",
+      "symbol": "TAOUSDT",
       "score": 60
     },
     {
-      "symbol": "HEIUSDT",
-      "score": 50
+      "symbol": "XAUTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "score": 60
     }
   ]
 }
