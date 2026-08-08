@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-08 11:58:18",
+  "timestamp": "2026-08-08 12:00:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre y debilidad sistémica. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con una debilidad estructural generalizada. Ningún activo cumple con el requisito de Score A+ (>= 65) ni presenta una ventaja estadística clara en el libro de órdenes, por lo que la estrategia óptima es la preservación total del capital mediante el modo HOLD.",
   "top_candidates": [
     {
-      "symbol": "JSTUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "XRPUSDT",
+      "symbol": "AVAXUSDT",
       "score": 60
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "XAUTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "AAVEUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "PENGUUSDT",
       "score": 60
     }
   ]
