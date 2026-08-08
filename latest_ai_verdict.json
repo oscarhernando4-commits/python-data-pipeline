@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-08 23:54:19",
+  "timestamp": "2026-08-08 23:56:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con scores técnicos mediocres y falta de profundidad en el libro de órdenes. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65), por lo que la estrategia de preservación de capital es la única opción viable.",
+  "reasoning": "Tras analizar los 7 agentes, se concluye que no existen activos que cumplan con el umbral de seguridad (Score >= 65) y la confirmación de liquidez necesaria. La estrategia institucional es preservar el capital en USDT hasta que el mercado muestre una estructura de reversión clara y menor volatilidad.",
   "top_candidates": [
     {
       "symbol": "SPYBUSDT",
       "score": 75
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "score": 60
     },
     {
       "symbol": "ATOMUSDT",
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "CAKEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "VETUSDT",
       "score": 60
     }
   ]
