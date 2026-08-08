@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 10:46:20",
+  "updated_at": "2026-08-08 10:48:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de indecisión neutral con baja profundidad de liquidez. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) combinado con una dominancia de Bids superior al 55% en el libro de órdenes. La alta volatilidad y la falta de una tendencia clara en el mercado global dictan una postura de preservación de capital."
   }
 }

@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 10:46:19",
+  "timestamp": "2026-08-08 10:48:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión neutral con baja profundidad de liquidez. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) combinado con una dominancia de Bids superior al 55% en el libro de órdenes. La alta volatilidad y la falta de una tendencia clara en el mercado global dictan una postura de preservación de capital.",
   "top_candidates": [
     {
-      "symbol": "ASTERUSDT",
-      "score": 75
+      "symbol": "ARBUSDT",
+      "score": 85
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
@@ -23,8 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "ARBUSDT",
-      "score": 75
+      "symbol": "ADAUSDT",
+      "score": 65
     }
   ]
 }
