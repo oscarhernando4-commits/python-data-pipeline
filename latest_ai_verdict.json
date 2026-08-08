@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 00:08:19",
+  "timestamp": "2026-08-08 00:10:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras deliberar, el comité concluye que, a pesar de los scores técnicos de 85 en activos como TRX, PAXG y DOT, la falta de confirmación en el libro de órdenes y el entorno de miedo (Fear 30) no cumplen con los estándares de convicción A+ exigidos por el Chief Risk Officer. Se prioriza la preservación del capital sobre la especulación en un mercado sin dirección clara.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité (Score >= 65 combinado con una dominancia de Bids > 55%). El mercado presenta una divergencia que aumenta el riesgo de 'falling knives', por lo que la decisión institucional es proteger el 100% de la liquidez hasta que aparezca una configuración de alta convicción.",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
+      "symbol": "PAXGUSDT",
       "score": 85
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "TRXUSDT",
       "score": 85
     },
     {
@@ -19,11 +19,11 @@
       "score": 85
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 75
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "ATOMUSDT",
       "score": 75
     }
   ]
