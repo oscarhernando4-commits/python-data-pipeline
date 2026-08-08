@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 01:36:27",
+  "timestamp": "2026-08-08 01:38:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y purga de activos débiles; la falta de una dominancia clara en el libro de órdenes y la inestabilidad macro impiden la ejecución de cualquier posición, priorizando la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado presenta una alta fragilidad macro y una falta de soporte institucional claro en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con confirmación de volumen y soporte de ballenas), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar trampas de valor y posibles liquidaciones forzadas.",
   "top_candidates": [
     {
       "symbol": "SHIBUSDT",
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "AVAXUSDT",
       "score": 75
     }
   ]
