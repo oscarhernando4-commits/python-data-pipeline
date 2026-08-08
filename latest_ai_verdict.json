@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-08 22:02:20",
+  "timestamp": "2026-08-08 22:04:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual carece de la profundidad y la convicción técnica necesaria para una ejecución de compra. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65) exigido por el comité, y la alta volatilidad en el sector de altcoins aumenta el riesgo de pérdidas. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo generalizado.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica generalizada con scores insuficientes en los activos analizados. Ningún candidato cumple con el umbral de convicción A+ requerido por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una estructura de mercado más clara y alcista.",
   "top_candidates": [
     {
-      "symbol": "ZECUSDT",
-      "score": 60
+      "symbol": "ATOMUSDT",
+      "score": 70
     },
     {
       "symbol": "XAUTUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "PEPEUSDT",
       "score": 60
     },
     {
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "HEIUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "EPICUSDT",
+      "symbol": "BICOUSDT",
       "score": 50
     }
   ]
