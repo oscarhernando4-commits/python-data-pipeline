@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-08 21:10:15",
+  "timestamp": "2026-08-08 21:12:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los activos analizados cumple con el umbral mínimo de Score Técnico (65) ni con la confirmación de liquidez necesaria en el libro de órdenes, lo que obliga a la preservación del capital bajo la política de riesgo del comité.",
+  "reasoning": "El mercado presenta una estructura de alta fragilidad con una capitulación minorista que no ofrece una entrada de alta probabilidad. Ningún activo cumple con el umbral de Score Técnico A+ (>= 65) y la confirmación de soporte en el libro de órdenes, por lo que el comité decide mantenerse en modo de preservación de capital (HOLD) hasta que las condiciones macro y técnicas se alineen.",
   "top_candidates": [
     {
       "symbol": "LINKUSDT",
-      "score": 60
+      "score": 70
     },
     {
       "symbol": "SUIUSDT",
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "SPYBUSDT",
+      "symbol": "JUPUSDT",
       "score": 60
     }
   ]
