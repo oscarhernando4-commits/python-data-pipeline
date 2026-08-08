@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 13:48:19",
+  "updated_at": "2026-08-08 13:50:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de indecisión con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité (Bids > 55% y confirmación de volumen institucional), por lo que la decisión unánime es mantener la liquidez y evitar la exposición a activos que podrían actuar como trampas de valor."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de confianza A+ (Score >= 65 y Bids >= 55%) necesario para mitigar el riesgo de pérdidas, por lo que se mantiene la posición en efectivo para preservar el capital."
   }
 }

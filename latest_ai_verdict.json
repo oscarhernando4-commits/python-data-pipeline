@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-08 13:48:17",
+  "timestamp": "2026-08-08 13:50:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de seguridad exigido por el Comité (Bids > 55% y confirmación de volumen institucional), por lo que la decisión unánime es mantener la liquidez y evitar la exposición a activos que podrían actuar como trampas de valor.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de confianza A+ (Score >= 65 y Bids >= 55%) necesario para mitigar el riesgo de pérdidas, por lo que se mantiene la posición en efectivo para preservar el capital.",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
@@ -15,7 +15,7 @@
       "score": 75
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "PAXGUSDT",
       "score": 75
     }
   ]
