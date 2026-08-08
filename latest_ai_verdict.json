@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 20:06:16",
+  "timestamp": "2026-08-08 20:08:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La alta volatilidad y la falta de soporte institucional en el libro de órdenes, sumado al historial de pérdidas en condiciones similares, dictan una postura de preservación de capital (HOLD).",
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de activos con score 75, la falta de profundidad en el libro de órdenes y la alta volatilidad del mercado actual no cumplen con los criterios de seguridad A+ exigidos por el departamento de riesgo. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado neutral y de alta incertidumbre.",
   "top_candidates": [
     {
-      "symbol": "UNIUSDT",
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "UNIUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "PENGUUSDT",
       "score": 75
     },
     {
-      "symbol": "LUNCUSDT",
+      "symbol": "ETHFIUSDT",
       "score": 75
     }
   ]
