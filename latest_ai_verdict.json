@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 10:56:20",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en una fase de alta volatilidad y purga de activos especulativos. Ninguno de los candidatos analizados supera el umbral de riesgo A+ exigido por el comité, y la falta de profundidad en el libro de órdenes aumenta el riesgo de slippage. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "timestamp": "2026-08-08 10:58:19",
+  "selected_symbol": "ARBUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "ARBUSDT es el único candidato que cumple con el umbral de Score Técnico >= 65 y muestra un volumen de surge excepcional (3.21), lo que indica una acumulación institucional activa a pesar del sentimiento de miedo generalizado. Se autoriza la entrada con gestión de riesgo estricta mediante Trailing Stop.",
   "top_candidates": [
     {
       "symbol": "ARBUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "FETUSDT",
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "ICPUSDT",
       "score": 75
     }
   ]
