@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 22:06:21",
+  "timestamp": "2026-08-08 22:08:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una purga de liquidez en altcoins. Ninguno de los candidatos analizados alcanza el umbral de Score Técnico de 65 requerido por el Comité, y la dominancia de Bids no ofrece la seguridad necesaria para una ejecución de compra. Se prioriza la preservación del capital hasta que surja una señal de alta convicción.",
+  "confidence": 0,
+  "reasoning": "Tras analizar los candidatos, ninguno cumple con los criterios estrictos de convicción A+ exigidos por el comité. La alta volatilidad y la falta de una tendencia clara en el libro de órdenes hacen que la estrategia más rentable sea la preservación de capital (HOLD) hasta que las condiciones macro mejoren.",
   "top_candidates": [
-    {
-      "symbol": "ATOMUSDT",
-      "score": 70
-    },
     {
       "symbol": "XAUTUSDT",
       "score": 70
     },
     {
-      "symbol": "ZECUSDT",
-      "score": 60
+      "symbol": "ATOMUSDT",
+      "score": 70
     },
     {
-      "symbol": "PEPEUSDT",
-      "score": 60
+      "symbol": "ORDIUSDT",
+      "score": 70
     },
     {
       "symbol": "SPYBUSDT",
       "score": 60
+    },
+    {
+      "symbol": "BICOUSDT",
+      "score": 50
     }
   ]
 }
