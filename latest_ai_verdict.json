@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 05:26:21",
+  "timestamp": "2026-08-08 05:28:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno actual de mercado es de alta incertidumbre y aversión al riesgo. Dado que no hay activos que cumplan con el umbral de convicción A+ (Score >= 65) y la falta de datos de liquidez en el libro de órdenes, la estrategia óptima es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los requisitos de seguridad y rentabilidad exigidos por la política de riesgo. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "BABYUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "ETCUSDT",
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "POLUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "BROCCOLI714USDT",
       "score": 75
     }
   ]
