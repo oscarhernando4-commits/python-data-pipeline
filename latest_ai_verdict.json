@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 10:32:24",
+  "timestamp": "2026-08-08 10:34:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%) exigido por el comité. La alta tasa de pérdidas en trades recientes bajo condiciones de mercado neutral refuerza la decisión de mantener la liquidez en USDT para evitar el riesgo de 'falling knives'.",
+  "reasoning": "El mercado actual presenta una fragmentación excesiva y una falta de convicción institucional en los libros de órdenes. Ningún activo cumple con el umbral de seguridad A+ (Score >= 65 con soporte de volumen y profundidad de mercado confirmada), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "VETUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ONDOUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
       "symbol": "ASTERUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ARBUSDT",
       "score": 75
     }
   ]
