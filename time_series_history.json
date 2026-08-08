@@ -1,10 +1,49 @@
 {
+  "LUNCUSDT": [
+    {
+      "timestamp": "2026-08-08 00:32:11",
+      "price": 4.929e-05,
+      "score": 60,
+      "rsi": 60.23,
+      "macd": "Neutral",
+      "volume_surge": 0.45,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
   "VANRYUSDT": [
     {
-      "timestamp": "2026-08-08 00:30:12",
-      "price": 0.003255,
+      "timestamp": "2026-08-08 00:32:11",
+      "price": 0.003258,
+      "score": 30,
+      "rsi": 50.24,
+      "macd": "Neutral",
+      "volume_surge": 0.02,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-08 00:32:11",
+      "price": 0.4872,
       "score": 0,
-      "rsi": 49.91,
+      "rsi": 40.48,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "AMDBUSDT": [
+    {
+      "timestamp": "2026-08-08 00:32:11",
+      "price": 481.82,
+      "score": 15,
+      "rsi": 45.8,
       "macd": "Neutral",
       "volume_surge": 0.0,
       "wyckoff": "Sin patron",
@@ -14,12 +53,25 @@
   ],
   "MIRAUSDT": [
     {
-      "timestamp": "2026-08-08 00:30:12",
-      "price": 0.0427,
-      "score": 15,
-      "rsi": 48.53,
+      "timestamp": "2026-08-08 00:32:11",
+      "price": 0.0428,
+      "score": 25,
+      "rsi": 50.31,
       "macd": "Neutral",
-      "volume_surge": 0.01,
+      "volume_surge": 0.07,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-08 00:32:11",
+      "price": 0.289,
+      "score": 50,
+      "rsi": 64.1,
+      "macd": "Neutral",
+      "volume_surge": 0.17,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
