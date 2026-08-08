@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 09:56:47",
+  "timestamp": "2026-08-08 09:58:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragmentación extrema con una tendencia neutral predominante. Ninguno de los candidatos analizados supera el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%), y el historial de simulaciones recientes advierte sobre la alta probabilidad de pérdidas en condiciones de mercado similares. Se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 85, la falta de soporte en el libro de órdenes y la incertidumbre macroeconómica actual no cumplen con los estándares de seguridad A+ exigidos por el Chief Risk Officer. Se mantiene la posición en efectivo para evitar la exposición a 'trampas de liquidez' y volatilidad no confirmada.",
   "top_candidates": [
     {
       "symbol": "ICPUSDT",
@@ -15,15 +15,15 @@
       "score": 85
     },
     {
-      "symbol": "AVAXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 75
-    },
-    {
       "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TRXUSDT",
       "score": 75
     }
   ]
