@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-08 16:18:22",
+  "timestamp": "2026-08-08 16:20:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los activos analizados cumple con los criterios estrictos de convicción A+ (Score >= 65 y Bids > 65%). La estrategia institucional dicta la preservación de capital en entornos de alta incertidumbre y baja dominancia compradora.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ exigido por el comité. La falta de profundidad en el libro de órdenes y la inestabilidad del mercado macro sugieren que la preservación del capital es la prioridad absoluta en este momento.",
   "top_candidates": [
     {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
       "symbol": "AVAXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "WLDUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "BONKUSDT",
       "score": 75
     }
   ]
