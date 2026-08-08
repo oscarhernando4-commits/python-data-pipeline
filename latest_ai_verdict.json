@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-08 16:56:26",
+  "timestamp": "2026-08-08 16:58:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, la falta de soporte en el libro de órdenes y la inestabilidad del mercado neutral no cumplen con los estándares de seguridad A+ exigidos por el CRO, por lo que se mantiene la posición en efectivo.",
+  "confidence": 95,
+  "reasoning": "A pesar de que algunos activos presentan scores técnicos elevados, la falta de dominancia clara en el libro de órdenes y el entorno de miedo (Fear & Greed 30) aumentan el riesgo de falsos rompimientos. El comité ha decidido priorizar la preservación del capital, esperando una señal de mayor convicción institucional antes de ejecutar cualquier posición.",
   "top_candidates": [
     {
-      "symbol": "FETUSDT",
+      "symbol": "ETCUSDT",
       "score": 85
     },
     {
@@ -15,8 +15,8 @@
       "score": 85
     },
     {
-      "symbol": "SPKUSDT",
-      "score": 85
+      "symbol": "ZECUSDT",
+      "score": 75
     },
     {
       "symbol": "TAOUSDT",
