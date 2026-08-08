@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-08 17:24:20",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia entre el sentimiento de miedo y la acción de precio, con una falta de profundidad en el libro de órdenes que impide una ejecución segura. Se prioriza la preservación del capital sobre la especulación en activos que no cumplen con los umbrales estrictos de convicción A+.",
+  "timestamp": "2026-08-08 17:26:24",
+  "selected_symbol": "NEXOUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "El comité ha alcanzado un consenso unánime para ejecutar una posición de 'Long-Only' en NEXOUSDT. El activo destaca por su alto Score Técnico (85) y un volumen institucional significativo (2.48x), superando a otros candidatos. Se prioriza la protección del capital mediante un Trailing Stop estricto, evitando activos con scores inferiores a 65 que han mostrado pérdidas recurrentes en las simulaciones históricas.",
   "top_candidates": [
+    {
+      "symbol": "NEXOUSDT",
+      "score": 85
+    },
     {
       "symbol": "BTCUSDT",
       "score": 75
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "TRUMPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NEXOUSDT",
       "score": 75
     }
   ]
