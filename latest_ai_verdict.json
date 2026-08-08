@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-08 19:34:14",
+  "timestamp": "2026-08-08 19:36:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y capitulación técnica. Ninguno de los activos analizados alcanza el umbral de calidad A+ (Score >= 65) requerido por el Comité para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez y alta volatilidad bajista.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 65) ni con la confirmación de volumen institucional necesaria para una operación de alta convicción. El mercado se encuentra en una fase de purga de apalancamiento, por lo que la estrategia óptima es la preservación de capital.",
   "top_candidates": [
+    {
+      "symbol": "ADAUSDT",
+      "score": 60
+    },
     {
       "symbol": "UNIUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "ADAUSDT",
-      "score": 60
-    },
-    {
       "symbol": "LUNCUSDT",
       "score": 60
     },
     {
-      "symbol": "TUTUSDT",
+      "symbol": "ZECUSDT",
       "score": 50
     }
   ]

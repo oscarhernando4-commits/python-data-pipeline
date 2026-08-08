@@ -1,12 +1,12 @@
 {
-  "MAGICUSDT": [
+  "PENDLEUSDT": [
     {
-      "timestamp": "2026-08-08 19:34:08",
-      "price": 0.0431,
-      "score": 20,
-      "rsi": 54.44,
+      "timestamp": "2026-08-08 19:36:08",
+      "price": 1.42,
+      "score": 0,
+      "rsi": 72.4,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.32,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,25 +14,38 @@
   ],
   "JTOUSDT": [
     {
-      "timestamp": "2026-08-08 19:34:08",
-      "price": 0.5032,
+      "timestamp": "2026-08-08 19:36:08",
+      "price": 0.5034,
       "score": 30,
-      "rsi": 63.11,
+      "rsi": 63.61,
       "macd": "Neutral",
-      "volume_surge": 0.02,
+      "volume_surge": 0.03,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "LUNCUSDT": [
+  "OPUSDT": [
     {
-      "timestamp": "2026-08-08 19:34:08",
-      "price": 4.925e-05,
-      "score": 60,
-      "rsi": 56.52,
+      "timestamp": "2026-08-08 19:36:08",
+      "price": 0.0889,
+      "score": 10,
+      "rsi": 50.65,
       "macd": "Neutral",
-      "volume_surge": 0.26,
+      "volume_surge": 0.1,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "MAGICUSDT": [
+    {
+      "timestamp": "2026-08-08 19:36:08",
+      "price": 0.0429,
+      "score": 30,
+      "rsi": 52.49,
+      "macd": "Neutral",
+      "volume_surge": 0.1,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
