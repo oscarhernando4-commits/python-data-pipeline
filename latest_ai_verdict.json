@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-08 07:06:20",
+  "timestamp": "2026-08-08 07:08:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia crítica y una falta de soporte institucional en el libro de órdenes. Ningún candidato cumple con la regla de oro de convicción A+ (Score >= 65 con Bids > 55%), por lo que la decisión unánime es mantener la liquidez en USDT para evitar pérdidas en un entorno de alta volatilidad y baja confianza.",
+  "reasoning": "El mercado se encuentra en una 'trampa de neutralidad' con alta volatilidad y falta de soporte claro en el libro de órdenes. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65 con confirmación de liquidez), por lo que la estrategia de preservación de capital es la única opción viable.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "PAXGUSDT",
       "score": 75
     },
     {
@@ -15,7 +15,7 @@
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "TIAUSDT",
       "score": 75
     }
   ]
