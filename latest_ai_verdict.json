@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-08 20:46:15",
+  "timestamp": "2026-08-08 20:48:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65) combinado con una confirmación sólida en el libro de órdenes. La alta tasa de pérdidas en trades recientes bajo condiciones de mercado 'NEUTRAL' obliga a la preservación total de la liquidez.",
+  "reasoning": "El mercado se encuentra en una fase de 'trampa de liquidez selectiva' con una correlación asimétrica. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%) y el historial reciente de trades muestra una alta probabilidad de pérdidas en condiciones de mercado neutral. Se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "SUIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOTUSDT",
       "score": 75
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "TRUMPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "CRVUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "TIAUSDT",
       "score": 75
     }
   ]
