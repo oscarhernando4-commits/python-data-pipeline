@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 12:12:21",
+  "timestamp": "2026-08-08 12:14:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación sistémica con baja liquidez. Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). Se prioriza la preservación del capital sobre la operativa especulativa de alto riesgo.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>=65) combinado con una dominancia de Bids superior al 55%. El mercado se encuentra en un estado de alta volatilidad y baja predictibilidad, por lo que la decisión institucional es preservar el 100% de la liquidez.",
   "top_candidates": [
     {
       "symbol": "ETHUSDT",
@@ -19,7 +19,7 @@
       "score": 70
     },
     {
-      "symbol": "DEXEUSDT",
+      "symbol": "XRPUSDT",
       "score": 60
     },
     {
