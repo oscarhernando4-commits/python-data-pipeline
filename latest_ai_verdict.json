@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 06:58:19",
+  "timestamp": "2026-08-08 07:00:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de activos con scores técnicos aceptables, el entorno macroeconómico de miedo y la falta de confirmación en el libro de órdenes impiden una entrada con la convicción A+ requerida por el protocolo de gestión de riesgo.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional y alta incertidumbre regulatoria. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido), por lo que la estrategia óptima es mantener la liquidez en espera de una estructura de mercado más favorable.",
   "top_candidates": [
     {
-      "symbol": "XPLUSDT",
-      "score": 95
+      "symbol": "PAXGUSDT",
+      "score": 75
     },
     {
       "symbol": "XAUTUSDT",
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
+      "symbol": "ETHFIUSDT",
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
-      "score": 75
+      "symbol": "KAITOUSDT",
+      "score": 70
     },
     {
-      "symbol": "SHIBUSDT",
-      "score": 75
+      "symbol": "LTCUSDT",
+      "score": 65
     }
   ]
 }
