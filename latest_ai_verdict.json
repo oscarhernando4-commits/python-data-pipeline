@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 01:46:23",
+  "timestamp": "2026-08-08 01:48:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos analizados supera el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La alta volatilidad, combinada con la falta de profundidad en los libros de órdenes y el sentimiento de miedo, hace que cualquier posición sea de alto riesgo. Se mantiene la liquidez en espera de una estructura de mercado más definida.",
+  "reasoning": "Ningún activo cumple con el umbral de convicción A+ requerido por el comité. La falta de soporte institucional en el libro de órdenes y el historial negativo de trades en condiciones similares dictan una postura de protección de capital (HOLD).",
   "top_candidates": [
     {
+      "symbol": "SHIBUSDT",
+      "score": 70
+    },
+    {
       "symbol": "PEPEUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "XRPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "DOGEUSDT",
-      "score": 75
+      "score": 70
     },
     {
       "symbol": "SOLUSDT",
-      "score": 75
+      "score": 60
     },
     {
       "symbol": "XLMUSDT",
-      "score": 75
+      "score": 60
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "score": 60
     }
   ]
 }
