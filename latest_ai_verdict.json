@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 13:44:21",
+  "timestamp": "2026-08-08 13:46:30",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia estructural y una falta de soporte institucional sólido en el libro de órdenes. Ningún candidato cumple con la regla de oro de Bids > 65% ni con una confirmación de tendencia clara, por lo que la decisión unánime es mantener la liquidez en USDT para evitar pérdidas por volatilidad especulativa.",
+  "reasoning": "El mercado se encuentra en un estado de indecisión con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el requisito estricto de dominancia de Bids (>= 55%) y el historial reciente de trades muestra una alta probabilidad de pérdidas en condiciones de mercado neutrales. Se prioriza la preservación del capital sobre la ejecución de operaciones de baja probabilidad.",
   "top_candidates": [
     {
-      "symbol": "BCHUSDT",
-      "score": 85
-    },
-    {
       "symbol": "DOGEUSDT",
-      "score": 85
+      "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "LAUSDT",
-      "score": 85
+      "symbol": "BCHUSDT",
+      "score": 75
     },
     {
       "symbol": "PAXGUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "HBARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XAUTUSDT",
       "score": 75
     }
   ]
