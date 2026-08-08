@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 20:48:18",
+  "timestamp": "2026-08-08 20:50:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de 'trampa de liquidez selectiva' con una correlación asimétrica. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%) y el historial reciente de trades muestra una alta probabilidad de pérdidas en condiciones de mercado neutral. Se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva en altcoins. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes sólido y volumen institucional confirmado). Se prioriza la preservación de capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "SUIUSDT",
       "score": 75
     },
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "UNIUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "TRUMPUSDT",
       "score": 75
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "NIGHTUSDT",
       "score": 75
     }
   ]
