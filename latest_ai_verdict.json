@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 20:12:15",
+  "timestamp": "2026-08-08 20:14:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de 'trampa de neutralidad' con alta volatilidad inducida por bots y baja profundidad de mercado. Ninguno de los candidatos cumple con los criterios estrictos de seguridad (Score A+ y soporte de libro de órdenes) exigidos por el comité para garantizar la preservación del capital.",
+  "reasoning": "El mercado presenta una alta incertidumbre y una falta de soporte institucional sólido en el libro de órdenes. Ninguno de los candidatos cumple con los criterios de convicción A+ exigidos por el comité, por lo que la estrategia de preservación de capital es la única opción viable.",
   "top_candidates": [
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "LTCUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "PENGUUSDT",
+      "symbol": "DASHUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "LUNCUSDT",
       "score": 75
     }
   ]
