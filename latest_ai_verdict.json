@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 01:26:24",
+  "timestamp": "2026-08-08 01:28:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia fragmentada con alta incertidumbre regulatoria y falta de soporte en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%), por lo que la estrategia de preservación de capital dicta mantenerse en efectivo (HOLD).",
+  "reasoning": "Tras deliberar, el comité concluye que, a pesar de los scores técnicos elevados en SHIB y ATOM, la falta de soporte en el libro de órdenes y la inestabilidad macroeconómica impiden una ejecución segura. Se mantiene la posición en efectivo para evitar la exposición a posibles cascadas de liquidación.",
   "top_candidates": [
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "SHIBUSDT",
       "score": 85
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 75
+      "symbol": "ATOMUSDT",
+      "score": 85
     },
     {
       "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "XLMUSDT",
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "DOGEUSDT",
       "score": 75
     }
   ]
