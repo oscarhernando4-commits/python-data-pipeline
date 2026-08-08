@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 04:22:21",
+  "timestamp": "2026-08-08 04:24:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con Bids > 55%). La alta volatilidad y la falta de soporte claro en el libro de órdenes, sumado a la inestabilidad macro, dictan una postura de preservación de capital.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta incertidumbre geopolítica. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes claro y volumen confirmado), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas por 'falling knives' o falsas rupturas.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "ARBUSDT",
       "score": 75
     }
   ]
