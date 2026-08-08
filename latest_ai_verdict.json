@@ -1,26 +1,26 @@
 {
-  "timestamp": "2026-08-08 07:42:20",
+  "timestamp": "2026-08-08 07:44:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual no ofrece ninguna oportunidad que cumpla con los estándares de convicción A+ del comité. Todos los candidatos presentan scores técnicos inferiores a 65 y falta de soporte en el libro de órdenes, lo que aumenta el riesgo de pérdidas. Se prioriza la protección del capital mediante la inacción (HOLD) hasta que las condiciones macro y técnicas mejoren.",
+  "reasoning": "Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 65) y la estructura de mercado actual es de alta volatilidad con riesgo de trampa de liquidez, por lo que la decisión institucional es mantener la posición en efectivo (USDT) para preservar el capital.",
   "top_candidates": [
+    {
+      "symbol": "CAKEUSDT",
+      "score": 70
+    },
     {
       "symbol": "POLUSDT",
       "score": 60
     },
     {
-      "symbol": "CAKEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DASHUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "AAVEUSDT",
+      "symbol": "ICPUSDT",
       "score": 55
+    },
+    {
+      "symbol": "HEIUSDT",
+      "score": 50
     },
     {
       "symbol": "HFTUSDT",
