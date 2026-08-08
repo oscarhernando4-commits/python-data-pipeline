@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-08 23:34:19",
+  "timestamp": "2026-08-08 23:36:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de liquidación sistémica con scores técnicos insuficientes (máximo 60/100) y falta de profundidad en el libro de órdenes. Siguiendo la regla de oro de no operar activos con score menor a 65 y evitar 'cuchillos cayendo', el comité decide mantener la posición en efectivo (USDT) hasta que surja una oportunidad de alta convicción.",
+  "reasoning": "Ninguno de los activos analizados alcanza el umbral de convicción A+ (Score >= 65) requerido por el comité. La falta de soporte claro en el libro de órdenes y la debilidad técnica generalizada en el sector altcoin dictan una postura de espera para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "TRXUSDT",
+      "score": 60
+    },
     {
       "symbol": "GRAMUSDT",
       "score": 60
     },
     {
       "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "HOMEUSDT",
       "score": 60
     },
     {
