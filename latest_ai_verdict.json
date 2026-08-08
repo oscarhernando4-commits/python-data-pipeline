@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-08 01:02:21",
+  "timestamp": "2026-08-08 01:04:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'trampa de liquidez' con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo de 'falling knives' observado en el historial reciente. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad sin dirección definida.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una divergencia estructural que no permite una entrada de alta probabilidad. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) exigido por el comité para mitigar el riesgo de pérdida.",
   "top_candidates": [
+    {
+      "symbol": "TRXUSDT",
+      "score": 75
+    },
     {
       "symbol": "DOGEUSDT",
       "score": 75
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "AVAXUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "WLDUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "CAKEUSDT",
+      "symbol": "XLMUSDT",
       "score": 75
     }
   ]
