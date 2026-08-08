@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-08 10:24:28",
+  "timestamp": "2026-08-08 10:26:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo de pérdidas, por lo que se prioriza la preservación del capital en efectivo.",
+  "confidence": 45,
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una divergencia estructural que ha provocado múltiples pérdidas en las simulaciones recientes. Ningún activo presenta la confluencia necesaria de soporte en el libro de órdenes y confirmación técnica para superar el umbral de riesgo del comité. Se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
       "symbol": "HBARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
