@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 16:04:24",
+  "updated_at": "2026-08-08 16:06:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55% y volumen de confirmación). La alta volatilidad y la falta de una tendencia definida en el mercado global sugieren que la mejor estrategia es mantener la liquidez en USDT hasta que se forme una estructura de acumulación clara."
+    "reasoning": "Ninguno de los candidatos actuales cumple con los requisitos estrictos de convicción A+ (Score >= 65 y Bids > 55%). El mercado se encuentra en una fase de rotación defensiva y alta incertidumbre, por lo que la estrategia óptima es mantener la liquidez en USDT hasta que aparezca una señal de alta probabilidad."
   }
 }
