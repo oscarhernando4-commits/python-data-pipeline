@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 08:18:18",
+  "updated_at": "2026-08-08 08:20:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de debilidad sistémica y desinversión. Ninguno de los activos analizados cumple con el umbral de Score técnico (>= 65) ni con la confirmación de liquidez necesaria para una operación de alta convicción, por lo que el comité ha decidido unánimemente mantener la posición en efectivo (HOLD)."
+    "reasoning": "El mercado se encuentra en un estado de alta fragilidad con una correlación negativa predominante. Ningún activo cumple con los criterios estrictos de Score A+ (>= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que la estrategia de preservación de capital dicta mantener la liquidez en USDT."
   }
 }
