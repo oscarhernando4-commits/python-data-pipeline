@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-08 18:06:18",
+  "timestamp": "2026-08-08 18:08:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids >= 55%). La alta tasa de fallos en el historial de simulaciones para activos con baja profundidad de mercado y la persistencia del sentimiento de miedo (Fear 30) dictan una postura de preservación de capital.",
+  "reasoning": "El mercado se encuentra en un estado de compresión de volatilidad con una amplitud técnica deficiente. Ninguno de los candidatos actuales supera el umbral de riesgo exigido por el comité, por lo que la estrategia óptima es la preservación de capital hasta que el mercado muestre una tendencia clara y confirmada.",
   "top_candidates": [
     {
       "symbol": "ETHFIUSDT",
       "score": 75
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "RENDERUSDT",
       "score": 70
     },
     {
-      "symbol": "RENDERUSDT",
+      "symbol": "NEXOUSDT",
       "score": 70
     },
     {
@@ -23,7 +23,7 @@
       "score": 65
     },
     {
-      "symbol": "NILUSDT",
+      "symbol": "ZAMAUSDT",
       "score": 65
     }
   ]
