@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 17:22:21",
+  "timestamp": "2026-08-08 17:24:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de indecisión técnica con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo de pérdida, por lo que la estrategia óptima es mantener la liquidez en efectivo.",
+  "reasoning": "El mercado presenta una divergencia entre el sentimiento de miedo y la acción de precio, con una falta de profundidad en el libro de órdenes que impide una ejecución segura. Se prioriza la preservación del capital sobre la especulación en activos que no cumplen con los umbrales estrictos de convicción A+.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "NEXOUSDT",
       "score": 75
     }
   ]
