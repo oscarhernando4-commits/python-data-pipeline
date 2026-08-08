@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 11:40:19",
+  "updated_at": "2026-08-08 11:42:18",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con debilidad sistémica. Ningún activo cumple con el requisito estricto de Score Técnico >= 65 ni con una dominancia de Bids superior al 55%, por lo que la decisión institucional es mantener la liquidez en espera de una mejor estructura de mercado."
+    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación negativa hacia el riesgo. Ningún activo cumple con el umbral de Score A+ (>= 65) combinado con una profundidad de libro de órdenes que garantice una entrada de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo institucional."
   }
 }
