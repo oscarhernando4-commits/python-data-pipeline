@@ -1,14 +1,22 @@
 {
-  "timestamp": "2026-08-08 05:12:20",
+  "timestamp": "2026-08-08 05:14:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de purga selectiva con alta incertidumbre regulatoria. Ninguno de los candidatos presenta una estructura de libro de órdenes con soporte institucional (Bids > 55%) ni una convicción técnica superior a 70% que cumpla con las reglas de oro del comité. Se mantiene la liquidez en espera de una capitulación clara o una reversión confirmada.",
+  "reasoning": "El mercado se encuentra en un estado de consolidación defensiva con alta incertidumbre regulatoria. Ninguno de los candidatos cumple con el requisito estricto de dominancia de Bids (>= 55%) ni con la convicción necesaria para evitar el riesgo de 'falling knives' observado en el historial de trades recientes. Se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
+    {
+      "symbol": "BABYUSDT",
+      "score": 85
+    },
     {
       "symbol": "ETCUSDT",
       "score": 85
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "score": 75
     },
     {
       "symbol": "ETHFIUSDT",
@@ -17,14 +25,6 @@
     {
       "symbol": "BROCCOLI714USDT",
       "score": 75
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "LINKUSDT",
-      "score": 70
     }
   ]
 }
