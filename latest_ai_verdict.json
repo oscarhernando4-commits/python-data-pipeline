@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-08 11:34:19",
+  "timestamp": "2026-08-08 11:36:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una correlación bajista generalizada. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) exigido por el Comité, y el historial de trades recientes indica una alta probabilidad de pérdidas en las condiciones actuales. Se prioriza la preservación del capital (Regla #1) sobre la especulación.",
+  "reasoning": "El mercado se encuentra en una zona de alta incertidumbre y debilidad técnica. Ningún activo cumple con el umbral estricto de Score A+ (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la estrategia de protección de capital dicta una postura de espera (HOLD).",
   "top_candidates": [
+    {
+      "symbol": "GOOGLBUSDT",
+      "score": 70
+    },
     {
       "symbol": "BNBUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "GIGGLEUSDT",
-      "score": 60
-    },
-    {
       "symbol": "ASTERUSDT",
       "score": 60
     },
     {
-      "symbol": "DEXEUSDT",
+      "symbol": "GIGGLEUSDT",
       "score": 60
     }
   ]
