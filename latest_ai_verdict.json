@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 22:18:19",
+  "timestamp": "2026-08-08 22:20:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual no cumple con los criterios de alta convicción (Score >= 65) establecidos por el comité. La mayoría de los activos presentan una debilidad técnica persistente y el riesgo de 'falling knives' es inaceptable. Se prioriza la preservación del capital hasta que surja una señal clara de acumulación institucional.",
+  "reasoning": "El mercado se encuentra en una fase de limpieza de manos débiles con una correlación bajista masiva. Ningún activo cumple con los criterios estrictos de riesgo y fuerza relativa exigidos por el comité, por lo que la decisión unánime es mantener la liquidez en espera de una mejor configuración técnica.",
   "top_candidates": [
     {
       "symbol": "TAOUSDT",
@@ -19,12 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "HOMEUSDT",
+      "symbol": "SPYBUSDT",
       "score": 60
     },
     {
-      "symbol": "SPYBUSDT",
-      "score": 60
+      "symbol": "TSTUSDT",
+      "score": 50
     }
   ]
 }
