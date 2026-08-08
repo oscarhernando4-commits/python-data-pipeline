@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 04:08:24",
+  "timestamp": "2026-08-08 04:10:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido unánimemente mantener la liquidez en USDT. Ninguno de los candidatos cumple con el umbral estricto de Score A+ (>= 65) combinado con una confirmación sólida de liquidez en el libro de órdenes, lo que contraviene nuestras reglas de gestión de riesgo para evitar 'cuchillos cayendo'.",
+  "reasoning": "El mercado se encuentra en un estado de fragmentación y alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). La estrategia de preservación de capital dicta mantener la liquidez en USDT para evitar la exposición a 'falling knives' o trampas de liquidez en un entorno de miedo (Fear 30).",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
