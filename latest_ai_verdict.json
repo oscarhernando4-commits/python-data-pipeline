@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-08 23:24:20",
+  "timestamp": "2026-08-08 23:26:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de estancamiento con sesgo bajista y falta de convicción institucional. Ningún activo cumple con los criterios estrictos de riesgo y score técnico definidos por el comité, por lo que la orden es mantener la liquidez en espera de una estructura de mercado más favorable.",
+  "reasoning": "El mercado se encuentra en una fase de alta fragilidad con una divergencia bajista entre el flujo de ETFs y la acción del precio. Ningún activo cumple con el requisito estricto de Score Técnico >= 65 ni muestra una dominancia de compra en el libro de órdenes, por lo que la decisión institucional es proteger el capital y esperar una configuración de mercado más robusta.",
   "top_candidates": [
     {
-      "symbol": "VETUSDT",
-      "score": 70
+      "symbol": "TRXUSDT",
+      "score": 60
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "GRAMUSDT",
       "score": 60
     },
     {
@@ -23,8 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "EPICUSDT",
-      "score": 50
+      "symbol": "KITEUSDT",
+      "score": 60
     }
   ]
 }

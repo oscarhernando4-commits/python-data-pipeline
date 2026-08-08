@@ -1,25 +1,25 @@
 {
-  "LUNCUSDT": [
+  "TIAUSDT": [
     {
-      "timestamp": "2026-08-08 23:24:12",
-      "price": 4.905e-05,
-      "score": 0,
-      "rsi": 42.86,
+      "timestamp": "2026-08-08 23:26:10",
+      "price": 0.3273,
+      "score": 10,
+      "rsi": 42.12,
       "macd": "Neutral",
-      "volume_surge": 0.9,
+      "volume_surge": 1.76,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
-  ],
-  "LDOUSDT": [
+  ]
+}  "LDOUSDT": [
     {
-      "timestamp": "2026-08-08 23:24:12",
-      "price": 0.2904,
-      "score": 0,
-      "rsi": 44.47,
+      "timestamp": "2026-08-08 23:26:10",
+      "price": 0.2902,
+      "score": 10,
+      "rsi": 42.77,
       "macd": "Neutral",
-      "volume_surge": 0.9,
+      "volume_surge": 2.03,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -27,12 +27,25 @@
   ],
   "PENDLEUSDT": [
     {
-      "timestamp": "2026-08-08 23:24:12",
+      "timestamp": "2026-08-08 23:26:10",
       "price": 1.403,
       "score": 0,
       "rsi": 42.81,
       "macd": "Neutral",
-      "volume_surge": 0.27,
+      "volume_surge": 0.33,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "COTIUSDT": [
+    {
+      "timestamp": "2026-08-08 23:26:10",
+      "price": 0.01248,
+      "score": 0,
+      "rsi": 43.46,
+      "macd": "Neutral",
+      "volume_surge": 0.56,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
