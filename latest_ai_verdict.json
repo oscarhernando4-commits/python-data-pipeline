@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 23:46:18",
+  "timestamp": "2026-08-08 23:48:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (65) ni con la dominancia de Bids (>= 55%) requerida por el comité para garantizar una operación de alta probabilidad, por lo que se prioriza la protección del capital.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una mayoría de activos mostrando scores inferiores a 65. Ningún candidato cumple con los requisitos estrictos de convicción A+ y soporte de libro de órdenes, por lo que el comité ha decidido unánimemente mantener la liquidez en espera de una estructura de mercado más robusta.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "RENDERUSDT",
+      "symbol": "CAKEUSDT",
       "score": 60
     },
     {
-      "symbol": "HOMEUSDT",
+      "symbol": "VETUSDT",
       "score": 60
     }
   ]
