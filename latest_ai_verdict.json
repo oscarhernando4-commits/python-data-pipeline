@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-08 16:28:21",
+  "timestamp": "2026-08-08 16:30:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de consolidación por agotamiento sin una tendencia clara. Ninguno de los candidatos cumple con el umbral de soporte de libro de órdenes (Bids >= 55%) ni con la convicción técnica necesaria para garantizar la Regla #1 de no perder dinero.",
+  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 65 y confirmación de liquidez). La alta volatilidad y la falta de soporte claro en el libro de órdenes, sumado al historial de pérdidas en condiciones similares, dictan una postura de preservación de capital.",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ZBTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
@@ -23,8 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "RENDERUSDT",
       "score": 75
+    },
+    {
+      "symbol": "LUNCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZBTUSDT",
+      "score": 65
     }
   ]
 }
