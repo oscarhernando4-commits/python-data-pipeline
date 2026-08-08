@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-08 07:28:20",
+  "timestamp": "2026-08-08 07:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral estricto de Score A+ (>= 65) combinado con una confirmación sólida de profundidad de mercado y volumen institucional. La incertidumbre macro y la falta de datos de soporte en el libro de órdenes obligan a una postura defensiva de 'HOLD' para proteger el capital contra posibles 'falling knives'.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación técnica pobre. Ninguno de los candidatos, a pesar de tener scores técnicos teóricos, presenta una profundidad de mercado verificable ni una estructura de soporte institucional que garantice una operación de alta probabilidad de éxito. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo (Fear & Greed 30).",
   "top_candidates": [
-    {
-      "symbol": "XAUTUSDT",
-      "score": 75
-    },
     {
       "symbol": "PAXGUSDT",
       "score": 75
     },
     {
-      "symbol": "ICPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AAVEUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
       "symbol": "CAKEUSDT",
       "score": 75
+    },
+    {
+      "symbol": "TIAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SKYUSDT",
+      "score": 65
     }
   ]
 }
