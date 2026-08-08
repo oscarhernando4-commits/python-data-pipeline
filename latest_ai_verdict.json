@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 06:18:21",
+  "timestamp": "2026-08-08 06:20:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los requisitos de seguridad y rentabilidad exigidos. La falta de datos de liquidez en el libro de órdenes y la alta tasa de pérdidas en trades recientes de activos similares obligan a mantener una posición de espera (HOLD) para proteger el capital institucional.",
+  "reasoning": "El mercado se encuentra en un estado de estancamiento con alta incertidumbre regulatoria. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 65 y Bids > 55%) necesario para mitigar el riesgo de pérdida, por lo que la estrategia óptima es mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "HBARUSDT",
-      "score": 75
-    },
-    {
       "symbol": "PAXGUSDT",
       "score": 75
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "HBARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SHIBUSDT",
       "score": 75
     }
   ]
