@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-08 22:16:20",
+  "timestamp": "2026-08-08 22:18:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta volatilidad y debilidad técnica generalizada. Ninguno de los activos analizados alcanza el umbral de convicción A+ (Score >= 65) requerido por el comité para mitigar el riesgo de 'falling knives'. Se prioriza la protección del capital sobre la especulación en activos de baja liquidez.",
+  "reasoning": "El mercado actual no cumple con los criterios de alta convicción (Score >= 65) establecidos por el comité. La mayoría de los activos presentan una debilidad técnica persistente y el riesgo de 'falling knives' es inaceptable. Se prioriza la preservación del capital hasta que surja una señal clara de acumulación institucional.",
   "top_candidates": [
+    {
+      "symbol": "TAOUSDT",
+      "score": 60
+    },
     {
       "symbol": "XAUTUSDT",
       "score": 60
@@ -21,10 +25,6 @@
     {
       "symbol": "SPYBUSDT",
       "score": 60
-    },
-    {
-      "symbol": "TSTUSDT",
-      "score": 50
     }
   ]
 }
