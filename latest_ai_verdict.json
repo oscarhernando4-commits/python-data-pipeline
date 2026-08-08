@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-08 08:44:21",
+  "timestamp": "2026-08-08 08:46:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragmentación defensiva con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ (Score >= 65 y soporte de ballenas > 55%), y el historial de simulaciones sugiere una alta probabilidad de pérdida en el entorno actual. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado presenta una 'Apatía Estructural' con un sesgo neutral y falta de profundidad en el libro de órdenes. Ningún activo cumple con los criterios de convicción A+ (Score >= 65 y Bids >= 55%), por lo que la decisión unánime es mantener la liquidez en USDT para evitar el riesgo de 'bull traps' o falsos breakouts.",
   "top_candidates": [
     {
-      "symbol": "POLUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ETCUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "TRXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PAXGUSDT",
+      "symbol": "XLMUSDT",
       "score": 75
     },
     {
       "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ICPUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "POLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ATOMUSDT",
       "score": 75
     }
   ]
