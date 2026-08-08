@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 10:48:21",
+  "updated_at": "2026-08-08 10:50:18",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) combinado con una dominancia de Bids superior al 55% en el libro de órdenes. La alta volatilidad y la falta de una tendencia clara en el mercado global dictan una postura de preservación de capital."
+    "reasoning": "El comité ha determinado que, a pesar de algunos scores técnicos elevados, la falta de profundidad en el libro de órdenes, la incertidumbre macroeconómica y el historial insuficiente de los activos líderes impiden una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado neutral y volátil."
   }
 }

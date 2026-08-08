@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-08 10:48:20",
+  "timestamp": "2026-08-08 10:50:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 65) combinado con una dominancia de Bids superior al 55% en el libro de órdenes. La alta volatilidad y la falta de una tendencia clara en el mercado global dictan una postura de preservación de capital.",
+  "confidence": 95,
+  "reasoning": "El comité ha determinado que, a pesar de algunos scores técnicos elevados, la falta de profundidad en el libro de órdenes, la incertidumbre macroeconómica y el historial insuficiente de los activos líderes impiden una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado neutral y volátil.",
   "top_candidates": [
     {
       "symbol": "ARBUSDT",
@@ -15,16 +15,16 @@
       "score": 75
     },
     {
+      "symbol": "DOTUSDT",
+      "score": 75
+    },
+    {
       "symbol": "WLDUSDT",
       "score": 75
     },
     {
       "symbol": "FETUSDT",
       "score": 75
-    },
-    {
-      "symbol": "ADAUSDT",
-      "score": 65
     }
   ]
 }
