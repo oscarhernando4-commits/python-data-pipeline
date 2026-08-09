@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 12:50:22",
+  "timestamp": "2026-08-09 12:52:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con indicadores técnicos que no alcanzan el umbral de convicción A+ requerido. La ausencia de datos de liquidez fiables y la alta volatilidad en activos de bajo historial sugieren que la preservación del capital es la prioridad absoluta en este momento.",
+  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 55 y confirmación de volumen institucional). La alta volatilidad y la falta de soporte claro en el orderbook sugieren que el mercado está en una fase de distribución, por lo que la decisión estratégica es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "MORPHOUSDT",
@@ -15,7 +15,7 @@
       "score": 85
     },
     {
-      "symbol": "MMTUSDT",
+      "symbol": "NEARUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "NEARUSDT",
+      "symbol": "MMTUSDT",
       "score": 75
     }
   ]
