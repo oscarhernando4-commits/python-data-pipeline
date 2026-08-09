@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-09 17:16:20",
+  "timestamp": "2026-08-09 17:18:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta selectividad y rotación defensiva. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con confirmación de volumen y soporte de libro de órdenes), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas en un entorno de alta volatilidad sin dirección.",
+  "reasoning": "El mercado se encuentra en un estado de alta fragilidad con una tendencia neutral predominante. A pesar de que activos como ASTER y FET tienen scores técnicos altos, no cumplen con el umbral de seguridad de soporte en el libro de órdenes ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de 'trampa de valor'. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo.",
   "top_candidates": [
-    {
-      "symbol": "NEARUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "COOKIEUSDT",
-      "score": 75
-    },
     {
       "symbol": "ASTERUSDT",
       "score": 75
@@ -23,7 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "ADAUSDT",
+      "score": 65
+    },
+    {
       "symbol": "TUTUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "XLMUSDT",
       "score": 65
     }
   ]
