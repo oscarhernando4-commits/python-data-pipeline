@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 00:56:23",
+  "timestamp": "2026-08-09 00:58:32",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 70, la falta de profundidad en el libro de órdenes y la inestabilidad macroeconómica impiden alcanzar el umbral de convicción A+ necesario para operar. Se prioriza la preservación del capital sobre la especulación en un mercado de alta incertidumbre.",
+  "confidence": 0,
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -15,16 +15,16 @@
       "score": 70
     },
     {
+      "symbol": "RENDERUSDT",
+      "score": 70
+    },
+    {
       "symbol": "SEIUSDT",
       "score": 70
     },
     {
-      "symbol": "BABYUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "RENDERUSDT",
-      "score": 60
+      "symbol": "LUNCUSDT",
+      "score": 70
     }
   ]
 }
