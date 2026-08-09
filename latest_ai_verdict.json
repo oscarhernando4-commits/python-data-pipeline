@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-09 10:26:21",
-  "selected_symbol": "INJUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "INJUSDT es el único activo que cumple con los criterios de alta resiliencia, score técnico superior (85) y pertenencia al sector dominante (DeFi), superando el filtro de riesgo institucional en un mercado de alta selectividad.",
+  "timestamp": "2026-08-09 10:28:21",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a la falta de datos de liquidez en el libro de órdenes y la alta volatilidad que ha provocado múltiples pérdidas en las simulaciones recientes. Ningún activo cumple con el umbral de convicción A+ requerido para arriesgar capital institucional en este entorno de mercado.",
   "top_candidates": [
     {
-      "symbol": "INJUSDT",
-      "score": 85
+      "symbol": "ETHUSDT",
+      "score": 75
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "UNIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BNBUSDT",
+      "symbol": "WLDUSDT",
       "score": 75
     }
   ]
