@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-09 17:50:20",
+  "timestamp": "2026-08-09 17:52:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "Tras deliberar, el comité ha determinado que el entorno actual de mercado es de alta incertidumbre y baja convicción. Ninguno de los candidatos cumple con los criterios estrictos de riesgo (Score >= 55 y confirmación de soporte en libro de órdenes). Se prioriza la preservación del capital sobre la especulación en activos de alta volatilidad sin soporte institucional claro.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una tendencia neutral que ha provocado múltiples pérdidas en simulaciones recientes; por lo tanto, se prioriza la preservación de capital sobre la especulación de baja liquidez.",
   "top_candidates": [
-    {
-      "symbol": "PEPEUSDT",
-      "score": 75
-    },
     {
       "symbol": "ASTERUSDT",
       "score": 75
     },
     {
-      "symbol": "TUTUSDT",
+      "symbol": "FETUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "SAGAUSDT",
       "score": 65
     },
     {
-      "symbol": "MMTUSDT",
+      "symbol": "TUTUSDT",
       "score": 65
     },
     {

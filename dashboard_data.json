@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 17:50:20",
+  "updated_at": "2026-08-09 17:52:25",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "Tras deliberar, el comité ha determinado que el entorno actual de mercado es de alta incertidumbre y baja convicción. Ninguno de los candidatos cumple con los criterios estrictos de riesgo (Score >= 55 y confirmación de soporte en libro de órdenes). Se prioriza la preservación del capital sobre la especulación en activos de alta volatilidad sin soporte institucional claro."
+    "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una tendencia neutral que ha provocado múltiples pérdidas en simulaciones recientes; por lo tanto, se prioriza la preservación de capital sobre la especulación de baja liquidez."
   }
 }
