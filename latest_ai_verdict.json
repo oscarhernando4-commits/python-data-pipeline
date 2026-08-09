@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 22:42:21",
+  "timestamp": "2026-08-09 22:44:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con debilidad en los activos principales. Ninguno de los candidatos cumple con el umbral de seguridad (Score >= 55) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de pérdida, por lo que se prioriza la preservación del capital.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en un estado de capitulación y alta incertidumbre técnica. Ninguno de los candidatos cumple con los requisitos estrictos de Score, volumen y soporte de libro de órdenes necesarios para una ejecución de alta convicción. Se prioriza la preservación del capital sobre la especulación en un entorno de baja calidad.",
   "top_candidates": [
     {
       "symbol": "EPICUSDT",
@@ -19,8 +19,8 @@
       "score": 55
     },
     {
-      "symbol": "ALLOUSDT",
-      "score": 50
+      "symbol": "NEXOUSDT",
+      "score": 55
     },
     {
       "symbol": "BBUSDT",
