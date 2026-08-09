@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-09 09:10:23",
+  "timestamp": "2026-08-09 09:12:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con scores técnicos mediocres y falta de profundidad en el libro de órdenes. Siguiendo la Regla de Oro #1, al no existir candidatos con Score >= 55 y alta convicción, la decisión institucional es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral mínimo de Score Técnico (>= 55) ni con la confirmación de soporte institucional necesaria. El entorno macro es de alta fragilidad y los patrones históricos sugieren una alta probabilidad de 'bull traps' en los activos analizados. Por tanto, el comité decide mantener la liquidez en espera de una estructura de mercado más robusta.",
   "top_candidates": [
     {
       "symbol": "ZECUSDT",
       "score": 70
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "SUIUSDT",
       "score": 60
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "LTCUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "PENGUUSDT",
       "score": 60
     }
   ]
