@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-09 02:28:16",
+  "timestamp": "2026-08-09 02:30:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de acumulación silenciosa con alta incertidumbre. Ninguno de los candidatos cumple con los requisitos estrictos de riesgo y convicción del comité, por lo que la estrategia óptima es mantener la liquidez en espera de una ruptura confirmada de BTC.",
+  "reasoning": "Ninguno de los candidatos cumple con la regla de oro de convicción A+ (Score >= 55 con soporte de libro de órdenes y volumen confirmado). La alta volatilidad y la falta de dominancia compradora en el orderbook sugieren que el riesgo de 'falling knife' es elevado, por lo que se mantiene la posición en efectivo para preservar el capital.",
   "top_candidates": [
     {
-      "symbol": "HBARUSDT",
-      "score": 70
+      "symbol": "DODOUSDT",
+      "score": 60
     },
     {
-      "symbol": "JUPUSDT",
-      "score": 70
+      "symbol": "HBARUSDT",
+      "score": 60
     },
     {
       "symbol": "NEARUSDT",
       "score": 60
     },
     {
-      "symbol": "RENDERUSDT",
+      "symbol": "PAXGUSDT",
       "score": 60
     },
     {
-      "symbol": "ORDIUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     }
   ]
