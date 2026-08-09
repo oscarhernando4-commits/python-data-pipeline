@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 14:22:21",
+  "updated_at": "2026-08-09 14:24:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de 'Distribución de Pánico Selectivo' con una falta crítica de profundidad en el libro de órdenes y una alta volatilidad en los activos de mayor score. Ningún candidato cumple con el umbral de convicción A+ (Score >= 55 con confirmación de volumen y soporte de ballenas), por lo que la estrategia de preservación de capital dicta mantenerse en liquidez (HOLD)."
+    "reasoning": "El mercado se encuentra en un estado de indecisión con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ ni con la dominancia de Bids necesaria para garantizar una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez y alta volatilidad."
   }
 }
