@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-09 08:46:23",
+  "timestamp": "2026-08-09 08:48:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual carece de la fuerza técnica y la profundidad de liquidez necesarias para cumplir con los estándares de seguridad del comité; por lo tanto, se mantiene la posición en efectivo (USDT) hasta que surja un catalizador claro.",
+  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema sin una base de soporte institucional. Tras analizar los perfiles, ninguno de los candidatos cumple con los requisitos mínimos de seguridad y convicción exigidos por el comité, por lo que se prioriza la protección de la liquidez en espera de una configuración de mercado más favorable.",
   "top_candidates": [
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "ICPUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "PENGUUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SPYBUSDT",
       "score": 60
     },
     {
@@ -15,16 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "DASHUSDT",
-      "score": 60
-    },
-    {
       "symbol": "XAIUSDT",
       "score": 55
-    },
-    {
-      "symbol": "MUBARAKUSDT",
-      "score": 50
     }
   ]
 }
