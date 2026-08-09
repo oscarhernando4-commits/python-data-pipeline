@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-09 23:56:22",
+  "timestamp": "2026-08-09 23:58:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de alta incertidumbre y debilidad técnica generalizada. Ningún activo cumple con los criterios de selección A+ establecidos por el comité, por lo que la estrategia óptima es la preservación total del capital hasta que se identifique una acumulación institucional clara.",
+  "reasoning": "El mercado actual presenta una fragilidad estructural severa y una falta de volumen comprador institucional. Ninguno de los candidatos analizados supera el umbral de seguridad A+ (Score >= 55), por lo que el comité ha decidido mantener la liquidez en USDT para evitar el 'stop-loss hunting' y proteger el capital de la volatilidad bajista.",
   "top_candidates": [
     {
       "symbol": "EPICUSDT",
       "score": 70
     },
     {
-      "symbol": "TUTUSDT",
-      "score": 50
+      "symbol": "AEROUSDT",
+      "score": 55
     },
     {
-      "symbol": "BICOUSDT",
+      "symbol": "TUTUSDT",
       "score": 50
     },
     {
@@ -23,8 +23,8 @@
       "score": 50
     },
     {
-      "symbol": "CHIPUSDT",
-      "score": 40
+      "symbol": "HOMEUSDT",
+      "score": 50
     }
   ]
 }
