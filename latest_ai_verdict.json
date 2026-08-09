@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-09 02:16:17",
+  "timestamp": "2026-08-09 02:18:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 55) y la falta de datos de liquidez en el libro de órdenes, sumado a la inestabilidad macro, obliga a mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con señales mixtas y falta de profundidad en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 55 con confirmación de soporte), por lo que la estrategia óptima es la preservación de capital hasta que se defina una tendencia clara.",
   "top_candidates": [
     {
       "symbol": "NEARUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "HBARUSDT",
       "score": 60
     },
     {
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "VETUSDT",
-      "score": 60
-    },
-    {
       "symbol": "RENDERUSDT",
       "score": 60
     },
     {
-      "symbol": "OPUSDT",
+      "symbol": "ORDIUSDT",
       "score": 60
     }
   ]
