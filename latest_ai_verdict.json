@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-09 08:10:29",
+  "timestamp": "2026-08-09 08:12:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, el comité ha determinado que, a pesar de algunos scores técnicos individuales, la falta de dominancia clara en el libro de órdenes y la alta volatilidad macro impiden alcanzar el umbral de seguridad A+ requerido para proteger el capital, optando por mantener la liquidez en USDT.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una divergencia técnica marcada. Ningún activo cumple con el umbral de convicción A+ (Score >= 55 con confirmación de volumen y soporte de libro de órdenes) necesario para garantizar la preservación del capital. Se prioriza la liquidez sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "LTCUSDT",
       "score": 85
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
       "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "UNIUSDT",
       "score": 75
     }
   ]
