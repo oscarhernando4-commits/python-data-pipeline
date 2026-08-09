@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 13:54:32",
-  "selected_symbol": "PAXGUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "Tras analizar la fragmentación del mercado y la rotación de capital hacia activos de refugio, el comité ha determinado que PAXGUSDT es el único candidato que cumple con el umbral de convicción A+ (Score 85) y se alinea con la tendencia macro de protección de capital en el sector RWA.",
+  "timestamp": "2026-08-09 13:56:48",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 95,
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de los scores técnicos de 85 en activos como LTC y PAXG, la falta de soporte real en el libro de órdenes (50% neutral) y el entorno macro de miedo (31) no cumplen con los criterios de seguridad A+ exigidos por el CRO. Se opta por proteger la liquidez total.",
   "top_candidates": [
     {
       "symbol": "LTCUSDT",
@@ -15,15 +15,15 @@
       "score": 85
     },
     {
+      "symbol": "LUNCUSDT",
+      "score": 85
+    },
+    {
       "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "SUIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PEPEUSDT",
+      "symbol": "UNIUSDT",
       "score": 75
     }
   ]
