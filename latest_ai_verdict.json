@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-09 10:48:21",
+  "timestamp": "2026-08-09 10:50:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de activos con scores técnicos de 75, el entorno macroeconómico de miedo y la falta de una dominancia clara en el libro de órdenes (Bids < 55%) no cumplen con los criterios de seguridad exigidos por el Chief Risk Officer. Se prioriza la preservación del capital sobre la especulación en un mercado de alta incertidumbre.",
+  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual presenta un riesgo sistémico elevado y una falta de convicción en la tendencia, lo que contraviene la Regla #1 de no perder dinero; por tanto, se mantiene la posición en efectivo.",
   "top_candidates": [
     {
-      "symbol": "BNBUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
@@ -23,8 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "ZROUSDT",
-      "score": 75
+      "symbol": "BTCUSDT",
+      "score": 65
     }
   ]
 }
