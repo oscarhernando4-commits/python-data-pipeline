@@ -1,12 +1,38 @@
 {
-  "CHZUSDT": [
+  "LUNCUSDT": [
     {
-      "timestamp": "2026-08-09 17:10:12",
-      "price": 0.01335,
-      "score": 50,
-      "rsi": 51.66,
+      "timestamp": "2026-08-09 17:12:12",
+      "price": 5.012e-05,
+      "score": 15,
+      "rsi": 46.13,
       "macd": "Neutral",
-      "volume_surge": 0.74,
+      "volume_surge": 0.25,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-09 17:12:12",
+      "price": 0.527,
+      "score": 35,
+      "rsi": 76.01,
+      "macd": "Neutral",
+      "volume_surge": 2.48,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SPYBUSDT": [
+    {
+      "timestamp": "2026-08-09 17:12:12",
+      "price": 774.22,
+      "score": 15,
+      "rsi": 47.34,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
