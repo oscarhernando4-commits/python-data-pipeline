@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-09 17:06:24",
+  "timestamp": "2026-08-09 17:08:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que PEPE presenta un score técnico elevado, la ausencia de soporte real en el libro de órdenes, el sentimiento de miedo global y la alta probabilidad de pérdidas basada en el historial de simulaciones, obligan al comité a mantener la posición en efectivo (HOLD) para evitar la exposición a una posible purga de mercado.",
+  "reasoning": "El mercado se encuentra en una fase de estancamiento sistémico con alta probabilidad de reajuste. Ninguno de los candidatos presenta una ventaja estadística clara ni un soporte de libro de órdenes que garantice una operación de bajo riesgo, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
-    {
-      "symbol": "PEPEUSDT",
-      "score": 85
-    },
     {
       "symbol": "SHIBUSDT",
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ASTERUSDT",
+      "symbol": "NEARUSDT",
       "score": 75
     },
     {
       "symbol": "COOKIEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ASTERUSDT",
       "score": 75
     }
   ]
