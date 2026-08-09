@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-09 07:16:20",
+  "timestamp": "2026-08-09 07:18:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado carece de una tendencia direccional clara y los activos con mayor puntaje técnico no logran superar el umbral de convicción exigido por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades de alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en una trampa de liquidez con alta incertidumbre técnica y falta de datos de profundidad en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 55 y confianza >= 70%) exigido por el comité, por lo que la decisión unánime es mantener la liquidez en USDT para evitar pérdidas por volatilidad no estructural.",
   "top_candidates": [
-    {
-      "symbol": "LINKUSDT",
-      "score": 75
-    },
     {
       "symbol": "PAXGUSDT",
       "score": 75
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "LINKUSDT",
       "score": 65
     },
     {
       "symbol": "XLMUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "BMTUSDT",
       "score": 65
     }
   ]
