@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-09 15:08:21",
+  "timestamp": "2026-08-09 15:10:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de seguridad A+ requerido por el comité. La falta de dominancia clara en el libro de órdenes y la inestabilidad macroeconómica dictan una postura de preservación de capital (HOLD) para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de indecisión técnica y macroeconómica. Ninguno de los candidatos presenta una estructura de soporte institucional (Bids >= 55%) ni una convicción técnica que supere el umbral de riesgo exigido por el comité. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
       "symbol": "XRPUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "TIAUSDT",
       "score": 85
     },
     {
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 75
-    },
-    {
       "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETCUSDT",
       "score": 75
     }
   ]
