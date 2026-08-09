@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-09 19:20:20",
+  "timestamp": "2026-08-09 19:22:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos elevados, el entorno macroeconómico de miedo, la falta de profundidad en el libro de órdenes y el historial de pérdidas en condiciones similares dictan una postura de preservación de capital (HOLD) hasta que el mercado muestre una estructura de soporte más robusta.",
+  "confidence": 95,
+  "reasoning": "El entorno de mercado actual es de alta fragilidad con una clara tendencia de 'huida hacia la incertidumbre'. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes sólido), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT) para evitar las 'trampas de valor' identificadas en el análisis histórico.",
   "top_candidates": [
     {
       "symbol": "SUNUSDT",
       "score": 85
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "ALGOUSDT",
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "SPYBUSDT",
       "score": 75
+    },
+    {
+      "symbol": "ZAMAUSDT",
+      "score": 70
     },
     {
       "symbol": "BICOUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "BROCCOLI714USDT",
       "score": 65
     }
   ]
