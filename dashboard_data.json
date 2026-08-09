@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 10:28:22",
+  "updated_at": "2026-08-09 10:30:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a la falta de datos de liquidez en el libro de órdenes y la alta volatilidad que ha provocado múltiples pérdidas en las simulaciones recientes. Ningún activo cumple con el umbral de convicción A+ requerido para arriesgar capital institucional en este entorno de mercado."
+    "reasoning": "El mercado presenta una alta incertidumbre y falta de soporte institucional en los libros de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Score >= 55 con confirmación de volumen y soporte de ballenas), por lo que la estrategia más rentable es mantener la liquidez en USDT para evitar pérdidas en un entorno de alta volatilidad y baja convicción."
   }
 }
