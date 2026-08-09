@@ -1,12 +1,25 @@
 {
-  "PENDLEUSDT": [
+  "JTOUSDT": [
     {
-      "timestamp": "2026-08-09 00:02:10",
-      "price": 1.402,
-      "score": 0,
-      "rsi": 41.62,
+      "timestamp": "2026-08-09 00:04:12",
+      "price": 0.5084,
+      "score": 30,
+      "rsi": 57.92,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.41,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LUNCUSDT": [
+    {
+      "timestamp": "2026-08-09 00:04:12",
+      "price": 4.895e-05,
+      "score": 10,
+      "rsi": 37.06,
+      "macd": "Neutral",
+      "volume_surge": 2.62,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
