@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 14:40:24",
-  "selected_symbol": "SOLUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "El mercado se encuentra en una fase de purga donde solo los activos de alta calidad y utilidad (Layer 1) están atrayendo capital institucional. SOLUSDT cumple con todos los criterios de riesgo y fortaleza técnica, superando el umbral de score 55 y mostrando un volumen de compra superior a la media, lo que justifica una entrada de alta convicción.",
+  "timestamp": "2026-08-09 14:42:21",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la fortaleza técnica de algunos activos, las condiciones macroeconómicas y la falta de soporte institucional en el libro de órdenes no cumplen con los estándares de seguridad exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado incierto.",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "ATOMUSDT",
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "POLUSDT",
       "score": 75
     }
   ]
