@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-09 04:32:14",
+  "timestamp": "2026-08-09 04:34:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de compresión de volatilidad con un sesgo 'NEUTRAL' y un sentimiento de miedo predominante. Ninguno de los candidatos analizados supera el umbral de convicción A+ necesario para garantizar la preservación del capital, por lo que el comité ha decidido mantener la liquidez en espera de un catalizador claro.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en un estado de 'espera activa' con una compresión de volatilidad que no ofrece una ventaja estadística clara. Ninguno de los candidatos cumple con el umbral de convicción A+ exigido por el comité, y el riesgo de 'falling knives' en el entorno actual de miedo es inaceptable. Se prioriza la preservación del capital hasta que el flujo institucional confirme una tendencia alcista sostenida.",
   "top_candidates": [
     {
-      "symbol": "ZECUSDT",
-      "score": 60
+      "symbol": "SKHYBUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "SEIUSDT",
+      "score": 70
     },
     {
       "symbol": "BNBUSDT",
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "PENGUUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "MORPHOUSDT",
       "score": 60
     }
   ]
