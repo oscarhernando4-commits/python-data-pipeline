@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 08:40:22",
-  "selected_symbol": "PAXGUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "Dada la inestabilidad sistémica y el miedo generalizado, el comité ha decidido ignorar las altcoins de baja capitalización y concentrar la liquidez en PAXGUSDT, un activo de refugio con un score técnico superior a 60 y un volumen institucional robusto, cumpliendo estrictamente con las reglas de gestión de riesgo.",
+  "timestamp": "2026-08-09 08:42:21",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un estado de distribución persistente y alta fragilidad. Ninguno de los activos analizados cumple con el umbral de seguridad A+ (Score >= 55) exigido por el comité para mitigar el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "PAXGUSDT",
@@ -15,15 +15,15 @@
       "score": 70
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 65
+      "symbol": "ZECUSDT",
+      "score": 60
     },
     {
-      "symbol": "MUBARAKUSDT",
-      "score": 65
+      "symbol": "PEPEUSDT",
+      "score": 60
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "CAKEUSDT",
       "score": 60
     }
   ]
