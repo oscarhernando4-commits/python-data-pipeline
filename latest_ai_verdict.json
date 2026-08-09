@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-09 03:50:28",
+  "timestamp": "2026-08-09 03:52:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación negativa en altcoins; al no existir activos que cumplan con el umbral de Score A+ y la dominancia de Bids requerida, la decisión institucional es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una falta de convicción técnica en los activos analizados. Ningún candidato cumple con el umbral de seguridad A+ requerido por el comité, por lo que la estrategia óptima es preservar el capital y evitar la exposición a activos con historial insuficiente o falta de soporte institucional.",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ZECUSDT",
       "score": 60
     },
     {
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "APTUSDT",
+      "symbol": "CRVUSDT",
       "score": 60
     },
     {
-      "symbol": "CRVUSDT",
+      "symbol": "LUNCUSDT",
       "score": 60
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "score": 50
     }
   ]
 }
