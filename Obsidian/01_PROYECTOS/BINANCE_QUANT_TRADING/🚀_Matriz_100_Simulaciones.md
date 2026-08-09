@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-09 23:30:16
+date: 2026-08-09 23:32:21
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $20.04 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-09 23:30:16`
+> ⏱️ **Última Actualización:** `2026-08-09 23:32:21`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00409216 BNB` (`~$2.42 USD`)
@@ -30,22 +30,22 @@ date: 2026-08-09 23:30:16
 
 > [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
-> - 📈 **Capital Total Acumulado:** **`$9,775.56 USD`** (`$-224.44 USD`)  
+> - 📈 **Capital Total Acumulado:** **`$9,774.53 USD`** (`$-225.47 USD`)  
 > - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `0 Cuentas (0.0%)`  
-> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `0 Cuentas (0.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `100 Cuentas (100.0%)`  
+> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `1 Cuentas (1.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `99 Cuentas (99.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
 
 > [!WARNING] 📊 **Resumen del 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD):**
-> - 💵 **Balance Total del Grupo:** `$93.49 USD` (`-$6.51`)
-> - 🎯 **Operaciones Totales:** `12` (`2 Ganadas / 10 Perdidas`)
-> - 📈 **Tasa de Acierto del Grupo:** `16.7% Win Rate`
+> - 💵 **Balance Total del Grupo:** `$92.46 USD` (`-$7.54`)
+> - 🎯 **Operaciones Totales:** `13` (`2 Ganadas / 11 Perdidas`)
+> - 📈 **Tasa de Acierto del Grupo:** `15.4% Win Rate`
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-000 (Réplica Real)** | **XRPUSDT** | `#12` | `2W/10L` | 26-08-09<br>13:44 | `🔵 En Curso` | **`$93.49`** (`-$6.51`) | 🔵 En Vivo |
+| **SIM-000 (Réplica Real)** | **XRPUSDT** | `#13` | `2W/11L` | 26-08-09<br>23:32 | `🔴 Perdió -$1.03` | **`$92.46`** (`-$7.54`) | 🔴 Buscando |
 
 ---
 
