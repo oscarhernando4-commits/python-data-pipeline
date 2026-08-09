@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-09 22:36:18",
+  "timestamp": "2026-08-09 22:38:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "Debido a la alta correlación bajista, la falta de activos con fuerza relativa (Score < 55) y el entorno de pánico institucional, el comité ha decidido mantener la liquidez en USDT para evitar pérdidas por 'falling knives'.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad transversal. Ninguno de los candidatos cumple con los criterios estrictos de riesgo y convicción exigidos por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez y alta volatilidad bajista.",
   "top_candidates": [
     {
       "symbol": "EPICUSDT",
       "score": 70
     },
     {
-      "symbol": "GNOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "LUNCUSDT",
+      "symbol": "SHIBUSDT",
       "score": 55
     },
     {
-      "symbol": "DEXEUSDT",
-      "score": 50
+      "symbol": "NEXOUSDT",
+      "score": 55
     },
     {
-      "symbol": "ALLOUSDT",
+      "symbol": "GNOUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "DYMUSDT",
       "score": 50
     }
   ]
