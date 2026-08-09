@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-09 18:16:18",
+  "timestamp": "2026-08-09 18:18:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado presentan un riesgo sistémico elevado. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ (Score >= 55 y soporte de libro de órdenes sólido). Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y sentimiento de miedo.",
+  "confidence": 0,
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de seguridad y rentabilidad exigidos por la Regla #1 (No perder dinero). La falta de dominancia clara en el libro de órdenes y la inestabilidad macroeconómica obligan a mantener una postura de espera (HOLD) para preservar el capital.",
   "top_candidates": [
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "SHIBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "HBARUSDT",
       "score": 75
     },
     {
@@ -15,12 +19,8 @@
       "score": 75
     },
     {
-      "symbol": "BICOUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "TUTUSDT",
-      "score": 65
+      "symbol": "GNOUSDT",
+      "score": 75
     },
     {
       "symbol": "EPICUSDT",
