@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-09 13:14:23",
-  "selected_symbol": "XAUTUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "El mercado se encuentra en una fase de rotación defensiva donde los activos de refugio (RWA/Oro) superan a las altcoins de alta beta. XAUTUSDT destaca con un Score de 85 y un volumen institucional superior, cumpliendo con los criterios de seguridad y rentabilidad exigidos por el comité.",
+  "timestamp": "2026-08-09 13:16:20",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El mercado presenta una configuración de alta indecisión y riesgo sistémico. Ninguno de los candidatos cumple con los requisitos de convicción A+ (Score >= 55 y Bids > 55%) necesarios para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de rango.",
   "top_candidates": [
-    {
-      "symbol": "XAUTUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ETHFIUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "HFTUSDT",
-      "score": 80
-    },
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "MMTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUIUSDT",
       "score": 75
     }
   ]
