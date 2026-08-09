@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-09 00:48:24",
+  "timestamp": "2026-08-09 00:50:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución por agotamiento con una falta crítica de convicción institucional en los activos analizados. Ningún candidato alcanza el umbral de Score A+ (65) ni presenta una estructura de libro de órdenes que garantice una entrada de bajo riesgo. Se prioriza la protección del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en una fase de trampa de liquidez con alta volatilidad y falta de convicción institucional en los activos analizados. Ningún candidato cumple con el requisito estricto de Score >= 65 y soporte de libro de órdenes, por lo que se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
+    {
+      "symbol": "SEIUSDT",
+      "score": 70
+    },
     {
       "symbol": "BABYUSDT",
       "score": 60
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "APTUSDT",
+      "symbol": "TRXUSDT",
       "score": 60
     },
     {
-      "symbol": "NEXOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ORDIUSDT",
+      "symbol": "RENDERUSDT",
       "score": 60
     }
   ]
