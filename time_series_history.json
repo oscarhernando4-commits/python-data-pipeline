@@ -1,12 +1,38 @@
 {
-  "PLUMEUSDT": [
+  "JTOUSDT": [
     {
-      "timestamp": "2026-08-09 02:38:08",
-      "price": 0.0122,
-      "score": 20,
-      "rsi": 72.48,
+      "timestamp": "2026-08-09 02:40:08",
+      "price": 0.5072,
+      "score": 0,
+      "rsi": 48.97,
       "macd": "Neutral",
-      "volume_surge": 1.84,
+      "volume_surge": 1.07,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "NEIROUSDT": [
+    {
+      "timestamp": "2026-08-09 02:40:08",
+      "price": 6.595e-05,
+      "score": 30,
+      "rsi": 53.08,
+      "macd": "Neutral",
+      "volume_surge": 0.2,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-09 02:40:08",
+      "price": 0.2897,
+      "score": 0,
+      "rsi": 46.84,
+      "macd": "Neutral",
+      "volume_surge": 0.73,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,7 +40,7 @@
   ],
   "PENDLEUSDT": [
     {
-      "timestamp": "2026-08-09 02:38:08",
+      "timestamp": "2026-08-09 02:40:08",
       "price": 1.405,
       "score": 60,
       "rsi": 53.65,
@@ -25,14 +51,14 @@
       "fear_greed": 50
     }
   ],
-  "TIAUSDT": [
+  "SPKUSDT": [
     {
-      "timestamp": "2026-08-09 02:38:08",
-      "price": 0.3278,
-      "score": 30,
-      "rsi": 47.74,
+      "timestamp": "2026-08-09 02:40:08",
+      "price": 0.014731,
+      "score": 50,
+      "rsi": 52.37,
       "macd": "Neutral",
-      "volume_surge": 0.09,
+      "volume_surge": 0.13,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

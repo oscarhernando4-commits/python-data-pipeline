@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 02:38:18",
-  "selected_symbol": "JUPUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "El mercado muestra una divergencia clara donde el capital institucional se concentra en activos de alta fuerza relativa. JUPUSDT es el único candidato que cumple con el umbral de score técnico (70), pertenece al sector dominante (DeFi) y presenta un volumen de compra (1.94x) que justifica una entrada de alta convicción bajo una gestión de riesgo estricta.",
+  "timestamp": "2026-08-09 02:40:17",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 95,
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos aceptables, el entorno de mercado actual presenta un riesgo de 'trampa de valor' demasiado elevado. La falta de profundidad en el libro de órdenes y la alta correlación negativa en las simulaciones históricas obligan a mantener una postura defensiva de 'HOLD' para proteger el capital institucional.",
   "top_candidates": [
     {
       "symbol": "JUPUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "ZAMAUSDT",
       "score": 60
     },
     {
-      "symbol": "RENDERUSDT",
+      "symbol": "ALGOUSDT",
       "score": 60
     }
   ]
