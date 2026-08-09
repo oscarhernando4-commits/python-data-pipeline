@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-09 09:30:20",
+  "timestamp": "2026-08-09 09:32:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y falta de liquidez, sin activos que cumplan con los criterios de calidad A+ exigidos por el comité. Se mantiene la posición en efectivo (USDT) para evitar el riesgo de 'cuchillos cayendo' y proteger el capital institucional.",
+  "reasoning": "Ningún activo cumple con el umbral mínimo de Score Técnico (>= 55) ni con la convicción necesaria para operar en un mercado con sesgo bajista y alta fricción regulatoria. Se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
+    {
+      "symbol": "PENGUUSDT",
+      "score": 60
+    },
     {
       "symbol": "COOKIEUSDT",
       "score": 50
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "QNTUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ORDIUSDT",
       "score": 50
     }
   ]
