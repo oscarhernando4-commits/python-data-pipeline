@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-09 03:04:15",
+  "timestamp": "2026-08-09 03:06:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual se encuentra en una fase de alta incertidumbre y baja liquidez. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 55) combinado con una dominancia de Bids superior al 55% necesaria para mitigar el riesgo de slippage. La estrategia institucional es preservar el capital en USDT hasta que se identifique una oportunidad con mayor probabilidad estadística de éxito.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con alta volatilidad y falta de soporte claro en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con confirmación de volumen y soporte), por lo que la estrategia óptima es preservar el capital en efectivo (USDT) y evitar la exposición a activos que actúan como trampas de valor.",
   "top_candidates": [
     {
-      "symbol": "HBARUSDT",
+      "symbol": "DODOUSDT",
       "score": 60
     },
     {
@@ -15,11 +15,11 @@
       "score": 60
     },
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "ZAMAUSDT",
       "score": 60
     },
     {
-      "symbol": "ZAMAUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 60
     },
     {
