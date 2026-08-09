@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-09 14:30:20",
+  "timestamp": "2026-08-09 14:32:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta fragilidad con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y confirmación de volumen institucional), y el historial reciente de trades muestra una alta recurrencia de pérdidas en condiciones similares. Se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "Tras la deliberación unánime, el comité concluye que el mercado carece de la estructura técnica y la profundidad de liquidez necesaria para una ejecución segura. La alta volatilidad y la falta de soporte institucional en el libro de órdenes, sumado al historial de pérdidas en condiciones neutrales, dictaminan una postura de espera (HOLD) para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "WLFIUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
+      "symbol": "INJUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AVAXUSDT",
       "score": 65
     },
     {
-      "symbol": "SKYUSDT",
+      "symbol": "LINKUSDT",
       "score": 65
     }
   ]
