@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-09 16:54:21",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de confianza A+ (Score >= 55 y Bids > 55%) en un entorno de mercado caracterizado por el miedo y la fragmentación de liquidez, por lo que la decisión unánime es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "timestamp": "2026-08-09 16:56:19",
+  "selected_symbol": "SEIUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "El mercado presenta una fragilidad extrema con debilidad en los activos principales (BTC/ETH). SEI es el único candidato que cumple con el umbral de fortaleza A+ (Score 85) y pertenece al sector de infraestructura, lo que justifica una entrada de scalping de alta probabilidad bajo estricta protección de riesgo.",
   "top_candidates": [
+    {
+      "symbol": "SEIUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "POLUSDT",
+      "score": 75
+    },
     {
       "symbol": "DASHUSDT",
       "score": 75
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "GNOUSDT",
-      "score": 75
-    },
-    {
       "symbol": "PEPEUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "SEIUSDT",
       "score": 70
     }
   ]
