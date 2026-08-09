@@ -1,22 +1,14 @@
 {
-  "timestamp": "2026-08-09 00:08:20",
+  "timestamp": "2026-08-09 00:10:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 y Bids > 55%). El mercado presenta una divergencia de liquidez que hace que cualquier entrada sea prematura y de alto riesgo. Se prioriza la preservación del capital sobre la ejecución forzada.",
+  "confidence": 0,
+  "reasoning": "Ningún activo cumple con el umbral mínimo de Score Técnico (>= 65) combinado con una dominancia de Bids superior al 55%. La alta volatilidad y la falta de soporte institucional claro en el libro de órdenes obligan a una postura de protección de capital (HOLD) para evitar las trampas de valor observadas en el historial de trading.",
   "top_candidates": [
-    {
-      "symbol": "ZBTUSDT",
-      "score": 80
-    },
     {
       "symbol": "LAUSDT",
       "score": 80
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 70
     },
     {
       "symbol": "CAKEUSDT",
@@ -25,6 +17,14 @@
     {
       "symbol": "ORDIUSDT",
       "score": 70
+    },
+    {
+      "symbol": "OPUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "ZBTUSDT",
+      "score": 65
     }
   ]
 }
