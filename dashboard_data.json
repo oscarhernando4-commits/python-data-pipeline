@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 08:30:21",
+  "updated_at": "2026-08-09 08:32:25",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de 'limpieza de cartera' con alta volatilidad y falta de convicción en los activos analizados. Ningún candidato cumple con los requisitos estrictos de Score A+ y soporte de libro de órdenes, por lo que la estrategia óptima es mantenerse en liquidez (HOLD) para evitar pérdidas innecesarias."
+    "reasoning": "El mercado presenta un entorno de alta selectividad y baja convicción. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55 con confirmación de volumen y soporte institucional). La alta tasa de pérdidas en las simulaciones recientes para activos con perfiles similares refuerza la decisión de mantener la liquidez en USDT para evitar el riesgo de capital."
   }
 }
