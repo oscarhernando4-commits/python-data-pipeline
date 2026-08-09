@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-09 19:10:22",
+  "timestamp": "2026-08-09 19:12:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno de mercado actual es demasiado frágil y carece de la convicción técnica necesaria para una entrada de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un mercado con sesgo neutral y alta volatilidad negativa.",
+  "reasoning": "El mercado presenta una fragilidad estructural alta con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y confirmación de volumen institucional), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (USDT) para evitar 'cuchillos cayendo'.",
   "top_candidates": [
     {
       "symbol": "SHIBUSDT",
       "score": 75
-    },
-    {
-      "symbol": "EPICUSDT",
-      "score": 70
     },
     {
       "symbol": "BICOUSDT",
@@ -23,7 +19,11 @@
       "score": 65
     },
     {
-      "symbol": "DYMUSDT",
+      "symbol": "GIGGLEUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "THEUSDT",
       "score": 65
     }
   ]
