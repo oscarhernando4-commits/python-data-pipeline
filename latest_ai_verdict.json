@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-09 05:42:17",
+  "timestamp": "2026-08-09 05:44:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta fragilidad y rotación defensiva. Ninguno de los candidatos cumple con el umbral de seguridad A+ requerido por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una mejor configuración técnica.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad sistémica. Ninguno de los candidatos cumple con los requisitos estrictos de Score Técnico (>= 55) y profundidad de mercado necesarios para una operación de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez.",
   "top_candidates": [
     {
+      "symbol": "CAKEUSDT",
+      "score": 70
+    },
+    {
       "symbol": "BNBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "BABYUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TRXUSDT",
       "score": 60
     },
     {
@@ -23,8 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "CATIUSDT",
+      "symbol": "SKHYBUSDT",
       "score": 60
+    },
+    {
+      "symbol": "COOKIEUSDT",
+      "score": 50
     }
   ]
 }
