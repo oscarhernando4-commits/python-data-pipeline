@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-09 03:58:15",
+  "timestamp": "2026-08-09 04:00:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica y falta de convicción institucional. Ningún candidato cumple con el umbral de seguridad A+ exigido por el comité, por lo que la estrategia prioritaria es la preservación de capital mediante el mantenimiento de la liquidez en USDT.",
+  "reasoning": "El comité ha determinado que ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 55) ni con la confirmación de soporte en el libro de órdenes necesaria para una operación de alta probabilidad. La fragilidad del mercado actual y la alta tasa de fallos en trades similares registrados en la memoria histórica dictan una postura de preservación de capital.",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
       "score": 60
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "PENGUUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "GNOUSDT",
+      "symbol": "JTOUSDT",
       "score": 60
     }
   ]
