@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 03:44:19",
+  "updated_at": "2026-08-09 03:46:15",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de purga técnica y alta incertidumbre. Ninguno de los candidatos cumple con la combinación estricta de Score A+ (>=55) y confirmación de liquidez en el libro de órdenes, por lo que la estrategia óptima es preservar el capital en espera de una señal de mayor calidad."
+    "reasoning": "Tras analizar los candidatos, ninguno alcanza el umbral de seguridad A+ requerido por el comité. La debilidad sistémica de las altcoins y la falta de soporte claro en el libro de órdenes hacen que la estrategia más rentable sea mantener la liquidez en espera de una estructura de mercado más robusta."
   }
 }
