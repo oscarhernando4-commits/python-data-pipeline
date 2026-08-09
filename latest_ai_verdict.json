@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-09 23:52:16",
+  "timestamp": "2026-08-09 23:54:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de iliquidez estructural y pánico minorista. Ninguno de los activos analizados alcanza el umbral de calidad A+ (Score >= 55) exigido por el comité. La estrategia institucional es preservar el capital en stablecoins hasta que aparezca una divergencia alcista clara y una acumulación institucional confirmada.",
+  "reasoning": "El mercado se encuentra en una fase de distribución masiva y desconfianza sistémica. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia prioritaria es la preservación de capital mediante la inacción (HOLD) hasta que las condiciones macro mejoren.",
   "top_candidates": [
     {
       "symbol": "EPICUSDT",
       "score": 70
     },
     {
+      "symbol": "BICOUSDT",
+      "score": 50
+    },
+    {
       "symbol": "TUTUSDT",
       "score": 50
     },
     {
-      "symbol": "BICOUSDT",
+      "symbol": "CATIUSDT",
       "score": 50
     },
     {
       "symbol": "CHIPUSDT",
       "score": 40
-    },
-    {
-      "symbol": "KAITOUSDT",
-      "score": 35
     }
   ]
 }
