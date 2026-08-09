@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-09 05:40:16",
+  "timestamp": "2026-08-09 05:42:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con debilidad sistémica. Ninguno de los candidatos cumple con el umbral de Score Técnico >= 55 requerido por el Comité, y la falta de profundidad en el libro de órdenes aumenta el riesgo de slippage. Se prioriza la preservación del capital sobre la ejecución de trades especulativos de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en una fase de alta fragilidad y rotación defensiva. Ninguno de los candidatos cumple con el umbral de seguridad A+ requerido por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una mejor configuración técnica.",
   "top_candidates": [
-    {
-      "symbol": "TRXUSDT",
-      "score": 60
-    },
     {
       "symbol": "BNBUSDT",
       "score": 60
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "BABYUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TRXUSDT",
       "score": 60
     },
     {
