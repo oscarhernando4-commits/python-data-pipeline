@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-09 15:04:21",
+  "timestamp": "2026-08-09 15:06:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una divergencia estructural y una falta de convicción institucional en los niveles de soporte, lo que, sumado a la alta tasa de fallos en las simulaciones históricas bajo condiciones neutrales, obliga a mantener la liquidez en espera de una señal de mayor calidad.",
+  "reasoning": "El mercado presenta una divergencia estructural y falta de liquidez confirmada en el Orderbook. Ningún activo cumple con el requisito estricto de convicción A+ (Score >= 55 y Bids > 55%), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo (HOLD).",
   "top_candidates": [
     {
       "symbol": "XRPUSDT",
       "score": 85
     },
     {
-      "symbol": "WLFIUSDT",
-      "score": 85
+      "symbol": "LINKUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
+      "score": 75
     },
     {
       "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LINKUSDT",
       "score": 75
     }
   ]
