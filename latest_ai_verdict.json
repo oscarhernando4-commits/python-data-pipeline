@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-09 12:52:22",
+  "timestamp": "2026-08-09 12:54:35",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 55 y confirmación de volumen institucional). La alta volatilidad y la falta de soporte claro en el orderbook sugieren que el mercado está en una fase de distribución, por lo que la decisión estratégica es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
+    {
+      "symbol": "BNBUSDT",
+      "score": 85
+    },
     {
       "symbol": "MORPHOUSDT",
       "score": 85
@@ -15,15 +19,11 @@
       "score": 85
     },
     {
-      "symbol": "NEARUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BNBUSDT",
-      "score": 75
-    },
-    {
       "symbol": "MMTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "NEARUSDT",
       "score": 75
     }
   ]
