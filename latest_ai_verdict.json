@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 11:16:22",
+  "timestamp": "2026-08-09 11:18:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes sólido). El mercado se encuentra en una fase de indecisión volátil y purga de activos, por lo que la estrategia más rentable y segura es mantener la liquidez en espera de una oportunidad de alta probabilidad.",
+  "confidence": 0,
+  "reasoning": "El mercado presenta una divergencia técnica severa y un sentimiento de miedo predominante. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ necesario para garantizar la preservación del capital, por lo que se prioriza la liquidez sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "MORPHOUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "GRAMUSDT",
+      "score": 65
+    },
+    {
       "symbol": "TSTUSDT",
       "score": 65
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "GRAMUSDT",
+      "symbol": "ETCUSDT",
       "score": 65
     }
   ]
