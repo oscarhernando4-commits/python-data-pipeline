@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-09 14:38:22",
-  "selected_symbol": "WLFIUSDT",
+  "timestamp": "2026-08-09 14:40:24",
+  "selected_symbol": "SOLUSDT",
   "action": "BUY_LONG",
   "approved": true,
   "confidence": 75,
-  "reasoning": "Tras analizar la rotación de capital y el desempeño histórico, el comité ha determinado que WLFIUSDT es el activo con mayor potencial de crecimiento, superando el umbral de riesgo A+ y alineándose con la estrategia de entrada por ruptura de volatilidad.",
+  "reasoning": "El mercado se encuentra en una fase de purga donde solo los activos de alta calidad y utilidad (Layer 1) están atrayendo capital institucional. SOLUSDT cumple con todos los criterios de riesgo y fortaleza técnica, superando el umbral de score 55 y mostrando un volumen de compra superior a la media, lo que justifica una entrada de alta convicción.",
   "top_candidates": [
+    {
+      "symbol": "SOLUSDT",
+      "score": 85
+    },
     {
       "symbol": "WLFIUSDT",
       "score": 85
     },
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XAUTUSDT",
+      "symbol": "PAXGUSDT",
       "score": 75
     },
     {
       "symbol": "ICPUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XAUTUSDT",
       "score": 75
     }
   ]
