@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-09 14:20:21",
+  "timestamp": "2026-08-09 14:22:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con un score técnico de 75, la falta de dominancia clara en el libro de órdenes y el entorno de miedo (Fear & Greed 31) invalidan la ejecución de cualquier operación. Se prioriza la preservación del capital ante la alta volatilidad y la falta de una tendencia definida.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en una fase de 'Distribución de Pánico Selectivo' con una falta crítica de profundidad en el libro de órdenes y una alta volatilidad en los activos de mayor score. Ningún candidato cumple con el umbral de convicción A+ (Score >= 55 con confirmación de volumen y soporte de ballenas), por lo que la estrategia de preservación de capital dicta mantenerse en liquidez (HOLD).",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "UNIUSDT",
-      "score": 75
-    },
-    {
       "symbol": "SUIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "POLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AAVEUSDT",
       "score": 75
     }
   ]
