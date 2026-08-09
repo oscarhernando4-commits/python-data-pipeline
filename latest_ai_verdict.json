@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-09 16:28:20",
+  "timestamp": "2026-08-09 16:30:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de aversión al riesgo selectivo. Ninguno de los candidatos cumple con los requisitos estrictos de soporte en el libro de órdenes y convicción técnica necesaria para una ejecución A+. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El comité ha decidido unánimemente mantener la posición en efectivo (HOLD). A pesar de que algunos activos tienen scores técnicos de 65-75, la falta de profundidad histórica, la debilidad del mercado macro y la ausencia de muros de soporte sólidos en el libro de órdenes invalidan cualquier oportunidad de entrada bajo los estándares de riesgo A+.",
   "top_candidates": [
     {
-      "symbol": "HBARUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
-      "symbol": "SKYUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
-      "score": 75
+      "symbol": "TSTUSDT",
+      "score": 65
     },
     {
-      "symbol": "POLUSDT",
-      "score": 75
+      "symbol": "IOTXUSDT",
+      "score": 65
     },
     {
-      "symbol": "DASHUSDT",
-      "score": 75
+      "symbol": "ACEUSDT",
+      "score": 65
     }
   ]
 }
