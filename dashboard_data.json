@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 15:30:22",
+  "updated_at": "2026-08-09 15:32:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de los scores técnicos, no existe una confirmación unánime de soporte institucional ni un volumen de compra que mitigue el riesgo de mercado en un entorno de miedo (Fear 31)."
+    "reasoning": "El mercado se encuentra en una fase de distribución selectiva con alta incertidumbre. Ninguno de los activos candidatos cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes claro), por lo que la estrategia de preservación de capital dicta mantenerse en liquidez (HOLD) hasta que las condiciones macro y técnicas mejoren."
   }
 }
