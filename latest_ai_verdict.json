@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-09 08:48:19",
+  "timestamp": "2026-08-09 08:50:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragilidad extrema sin una base de soporte institucional. Tras analizar los perfiles, ninguno de los candidatos cumple con los requisitos mínimos de seguridad y convicción exigidos por el comité, por lo que se prioriza la protección de la liquidez en espera de una configuración de mercado más favorable.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una correlación bajista sistémica. Ningún activo cumple con el umbral de seguridad A+ (Score >= 55) y la confirmación de volumen institucional necesaria. Se prioriza la preservación de capital ante la alta probabilidad de pérdidas observada en el historial de simulaciones recientes.",
   "top_candidates": [
-    {
-      "symbol": "ICPUSDT",
-      "score": 60
-    },
     {
       "symbol": "PENGUUSDT",
       "score": 60
     },
     {
-      "symbol": "SPYBUSDT",
+      "symbol": "ICPUSDT",
       "score": 60
     },
     {
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "XAIUSDT",
+      "symbol": "GRAMUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "XAUTUSDT",
       "score": 55
     }
   ]
