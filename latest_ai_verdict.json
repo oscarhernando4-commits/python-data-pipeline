@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-09 19:08:20",
+  "timestamp": "2026-08-09 19:10:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragmentación excesiva y una falta de soporte institucional en el libro de órdenes. A pesar de que algunos activos tienen scores técnicos teóricos, no cumplen con los criterios de seguridad y convicción exigidos por el comité para evitar pérdidas, por lo que se mantiene la posición en efectivo.",
+  "reasoning": "El comité ha determinado que el entorno de mercado actual es demasiado frágil y carece de la convicción técnica necesaria para una entrada de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un mercado con sesgo neutral y alta volatilidad negativa.",
   "top_candidates": [
     {
       "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SPYBUSDT",
       "score": 75
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "IOTXUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "DYMUSDT",
       "score": 65
     }
   ]
