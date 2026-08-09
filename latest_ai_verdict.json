@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-09 22:24:23",
+  "timestamp": "2026-08-09 22:26:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de tener candidatos con scores técnicos altos, la falta de datos de liquidez en el libro de órdenes, la alta volatilidad macro y el historial reciente de pérdidas en condiciones similares dictan una postura de preservación de capital (HOLD) hasta que se cumplan estrictamente los criterios de convicción A+.",
+  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con un sesgo neutral y noticias adversas. Ningún candidato cumple con el umbral de convicción A+ ni con la dominancia de bids necesaria para mitigar el riesgo de pérdida, por lo que la estrategia óptima es mantener la liquidez en USDT.",
   "top_candidates": [
-    {
-      "symbol": "ETHUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "EPICUSDT",
-      "score": 85
-    },
     {
       "symbol": "HBARUSDT",
       "score": 85
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "ETHUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "LUNCUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "WLFIUSDT",
       "score": 75
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "DEXEUSDT",
       "score": 75
     }
   ]
