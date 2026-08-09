@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-09 04:18:17",
+  "timestamp": "2026-08-09 04:20:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la existencia de activos con score técnico de 60, ninguno cumple con los requisitos de profundidad de mercado y convicción institucional necesarios para garantizar la protección del capital bajo la Regla #1.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una divergencia técnica que no permite una ejecución de alta probabilidad. Ninguno de los activos candidatos cumple con los requisitos estrictos de Score Técnico (>=55) y dominancia de Bids (>=55%) exigidos por el comité para garantizar la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "SOLUSDT",
-      "score": 60
+      "symbol": "BABYUSDT",
+      "score": 70
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "SOLUSDT",
       "score": 60
     },
     {
@@ -19,7 +19,7 @@
       "score": 60
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "HBARUSDT",
       "score": 60
     },
     {
