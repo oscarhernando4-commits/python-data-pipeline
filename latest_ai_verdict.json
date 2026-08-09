@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-09 00:14:24",
+  "timestamp": "2026-08-09 00:16:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con alta fragilidad. Ninguno de los candidatos cumple con los criterios estrictos de riesgo y convicción exigidos por el comité, por lo que la orden es proteger el capital y esperar una mejor estructura de mercado.",
+  "reasoning": "Ninguno de los activos analizados cumple con el umbral mínimo de Score técnico (>= 65) ni con la profundidad de mercado necesaria para mitigar el riesgo de slippage en un entorno de miedo generalizado.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
-      "score": 80
+      "symbol": "BABYUSDT",
+      "score": 60
     },
     {
-      "symbol": "ZBTUSDT",
-      "score": 80
+      "symbol": "TRXUSDT",
+      "score": 60
     },
     {
-      "symbol": "LAUSDT",
-      "score": 80
+      "symbol": "DASHUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "POLUSDT",
+      "score": 60
     },
     {
       "symbol": "CAKEUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ORDIUSDT",
-      "score": 70
+      "score": 60
     }
   ]
 }
