@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 23:46:17",
+  "timestamp": "2026-08-09 23:48:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con una fuga de capital evidente. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55) ni con la confirmación de soporte institucional en el libro de órdenes. La estrategia institucional es proteger la liquidez y evitar el riesgo de 'cuchillos cayendo' en un entorno de alta volatilidad bajista.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad sistémica. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar pérdidas innecesarias en un entorno de alta volatilidad bajista.",
   "top_candidates": [
     {
       "symbol": "EPICUSDT",
@@ -19,12 +19,12 @@
       "score": 50
     },
     {
-      "symbol": "TRXUSDT",
+      "symbol": "KAITOUSDT",
       "score": 50
     },
     {
-      "symbol": "KITEUSDT",
-      "score": 45
+      "symbol": "CHIPUSDT",
+      "score": 40
     }
   ]
 }
