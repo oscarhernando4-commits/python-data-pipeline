@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 03:02:17",
+  "timestamp": "2026-08-09 03:04:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con score 60, ninguno presenta la confluencia necesaria de volumen institucional y soporte en el libro de órdenes para garantizar una operación de alta probabilidad. Se mantiene la liquidez en USDT para evitar la alta correlación negativa con el sentimiento de miedo actual.",
+  "confidence": 0,
+  "reasoning": "El mercado actual se encuentra en una fase de alta incertidumbre y baja liquidez. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 55) combinado con una dominancia de Bids superior al 55% necesaria para mitigar el riesgo de slippage. La estrategia institucional es preservar el capital en USDT hasta que se identifique una oportunidad con mayor probabilidad estadística de éxito.",
   "top_candidates": [
     {
       "symbol": "HBARUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 60
-    },
-    {
       "symbol": "MORPHOUSDT",
       "score": 60
     },
     {
       "symbol": "ZAMAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "XAUTUSDT",
       "score": 60
     }
   ]
