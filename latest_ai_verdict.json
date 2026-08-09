@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-09 06:30:22",
+  "timestamp": "2026-08-09 06:32:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el requisito de dominancia de Bids > 55% ni con una estructura técnica que garantice una alta probabilidad de éxito, por lo que la estrategia más rentable es la preservación de capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes > 65% y tendencia clara). La alta volatilidad y la falta de profundidad en el libro de órdenes sugieren un riesgo elevado de 'trampa de valor', por lo que se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "NEARUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BNBUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "NEARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ICPUSDT",
       "score": 75
     }
   ]
