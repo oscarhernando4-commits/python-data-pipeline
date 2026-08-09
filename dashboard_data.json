@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 02:12:18",
+  "updated_at": "2026-08-09 02:14:19",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación negativa en activos de alta capitalización y una falta de soporte institucional en el libro de órdenes. Dado que ningún activo cumple con los criterios estrictos de riesgo A+ establecidos por el comité, la decisión es mantener la liquidez en USDT para evitar la exposición a 'cuchillos cayendo' y volatilidad especulativa sin fundamento."
+    "reasoning": "El mercado se encuentra en un estado de compresión de volatilidad con alta incertidumbre. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ (Score >= 55 y dominancia de Bids > 55%). Se prioriza la preservación del capital sobre la ejecución de trades especulativos de baja probabilidad."
   }
 }
