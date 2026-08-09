@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-09 15:44:21",
+  "timestamp": "2026-08-09 15:46:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sesgo neutral predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con Bids >= 55%) necesario para garantizar la protección del capital, por lo que se decide mantener la liquidez total en espera de una mejor configuración técnica.",
+  "reasoning": "El mercado se encuentra en una fase de purga selectiva con alta incertidumbre. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 55 y Bids > 65%) necesarios para garantizar la preservación del capital, por lo que se mantiene la posición en efectivo.",
   "top_candidates": [
     {
-      "symbol": "LTCUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "RENDERUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ZROUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "XRPUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "HBARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SEIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ZROUSDT",
       "score": 75
     }
   ]
