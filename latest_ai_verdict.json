@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 08:06:21",
+  "timestamp": "2026-08-09 08:08:22",
   "selected_symbol": "SOLUSDT",
   "action": "BUY_LONG",
   "approved": true,
   "confidence": 75,
-  "reasoning": "SOLUSDT es el único activo que cumple con el umbral A+ (Score 85) y pertenece al sector de infraestructura, mostrando un volumen de compra institucional superior al resto de candidatos, lo que justifica una posición de scalping de alta precisión.",
+  "reasoning": "SOLUSDT es el único activo que supera el umbral de score A+ (85/100) y pertenece al sector de infraestructura, mostrando una divergencia positiva frente al miedo generalizado del mercado. La estrategia se basa en la acumulación institucional detectada, con una gestión de riesgo estricta mediante Trailing Stop para asegurar beneficios y evitar pérdidas en un entorno de mercado volátil.",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 75
-    },
-    {
       "symbol": "BCHUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "SUIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "DOGEUSDT",
       "score": 75
     }
   ]
