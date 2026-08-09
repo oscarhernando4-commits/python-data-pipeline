@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-09 15:10:20",
+  "timestamp": "2026-08-09 15:12:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión técnica y macroeconómica. Ninguno de los candidatos presenta una estructura de soporte institucional (Bids >= 55%) ni una convicción técnica que supere el umbral de riesgo exigido por el comité. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "A pesar de tener candidatos con scores técnicos de 85, el mercado presenta una divergencia estructural y falta de soporte real en el libro de órdenes. La alta tasa de pérdidas en trades recientes bajo condiciones similares obliga al comité a mantener la liquidez en espera de una señal de alta convicción.",
   "top_candidates": [
     {
       "symbol": "XRPUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "WLFIUSDT",
       "score": 85
     },
     {
@@ -15,16 +19,12 @@
       "score": 85
     },
     {
-      "symbol": "TIAUSDT",
+      "symbol": "JUPUSDT",
       "score": 85
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
+      "symbol": "TIAUSDT",
+      "score": 85
     }
   ]
 }
