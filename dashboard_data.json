@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 14:16:20",
+  "updated_at": "2026-08-09 14:18:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que, a pesar de los scores técnicos teóricos, las condiciones actuales del mercado (Fear 31, falta de profundidad en el libro de órdenes y alta probabilidad de pérdidas históricas en entornos neutrales) no cumplen con los criterios de convicción A+ necesarios para una ejecución segura."
+    "reasoning": "El mercado presenta una divergencia técnica y un entorno de miedo que, sumado a la falta de muros de soporte claros en el libro de órdenes, hace que la estrategia más rentable sea la preservación de capital (HOLD) hasta que se estabilice la tendencia."
   }
 }
