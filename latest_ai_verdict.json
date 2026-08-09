@@ -1,22 +1,14 @@
 {
-  "timestamp": "2026-08-09 22:32:16",
+  "timestamp": "2026-08-09 22:34:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una falta de convicción técnica en todos los candidatos analizados. Ningún activo cumple con el umbral de seguridad A+ (Score >= 55), por lo que el comité decide mantener el 100% de la liquidez en USDT para evitar trampas de valor y posibles liquidaciones.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una fase de alta aversión al riesgo con una correlación bajista predominante. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 55) ni con la confirmación de liquidez necesaria, por lo que se prioriza la preservación del capital sobre la operativa especulativa.",
   "top_candidates": [
     {
       "symbol": "EPICUSDT",
       "score": 70
-    },
-    {
-      "symbol": "TRXUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "HBARUSDT",
-      "score": 60
     },
     {
       "symbol": "GNOUSDT",
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "DEXEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "DYMUSDT",
       "score": 50
     }
   ]
