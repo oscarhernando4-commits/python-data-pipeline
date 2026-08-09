@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 18:48:22",
+  "timestamp": "2026-08-09 18:50:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con alta fragilidad. Ninguno de los candidatos cumple con la regla de oro de convicción A+ (Score >= 55 con confirmación de volumen y soporte), por lo que la estrategia obligatoria es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta una fragilidad sistémica evidente con una alta correlación de pérdidas en activos de baja capitalización. Ningún candidato cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes claro), por lo que la estrategia de preservación de capital dicta mantenerse en liquidez (HOLD).",
   "top_candidates": [
     {
       "symbol": "SHIBUSDT",
@@ -23,8 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "SPYBUSDT",
-      "score": 75
+      "symbol": "GIGGLEUSDT",
+      "score": 65
     }
   ]
 }

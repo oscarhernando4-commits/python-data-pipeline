@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-09 18:48:22
+date: 2026-08-09 18:50:27
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $20.04 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-09 18:48:22`
+> ⏱️ **Última Actualización:** `2026-08-09 18:50:27`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00409216 BNB` (`~$2.42 USD`)
@@ -154,26 +154,26 @@ date: 2026-08-09 18:48:22
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-061** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-062** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-063** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-064** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-065** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-066** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-067** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-068** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-069** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-070** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-071** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-072** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-073** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-074** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-075** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-076** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-077** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-078** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-079** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
-| **SIM-080** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🔵 En Curso` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-061** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-062** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-063** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-064** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-065** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-066** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-067** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-068** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-069** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-070** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-071** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-072** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-073** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-074** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-075** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-076** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-077** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-078** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-079** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
+| **SIM-080** | **MUBARAKUSDT** | `#46` | `8W/38L` | 26-08-09<br>18:26 | `🛡️ Protegida (BE)` | **`$104.92`** (`+$4.92`) | 🔵 En Vivo |
 
 ---
 
