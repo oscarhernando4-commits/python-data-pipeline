@@ -1580,3 +1580,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-40.42%)`, `2025-07-05 (-34.32%)`, `2025-05-08 (-25.98%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: IOTXUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-14` hasta `2026-08-09` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.0029 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.0930 USD` (`2024-03-13`) | Distancia: `-96.88%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0000 USD` (`2025-10-10`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2023-12-04 (+52.18%)`, `2024-02-18 (+32.85%)`, `2023-12-20 (+24.73%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-44.59%)`, `2024-12-09 (-21.82%)`, `2025-03-03 (-18.86%)`
+
+---
