@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-09 12:18:21",
+  "timestamp": "2026-08-09 12:20:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de ruido institucional y alta volatilidad, donde la mayoría de los activos con score técnico alto no presentan el respaldo de liquidez necesario en el libro de órdenes. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta incertidumbre. Ninguno de los candidatos cumple con los requisitos estrictos de Score técnico (>= 55) y dominancia de Bids (> 65%) exigidos por el comité para mitigar el riesgo de pérdida. Se prioriza la preservación del capital hasta que la estructura de mercado muestre una acumulación clara y confirmada.",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "UNIUSDT",
       "score": 75
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {
       "symbol": "PAXGUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "WLDUSDT",
       "score": 75
     }
   ]
