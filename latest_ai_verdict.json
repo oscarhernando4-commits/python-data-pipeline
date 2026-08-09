@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-09 12:02:24",
+  "timestamp": "2026-08-09 12:04:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de algunos scores técnicos elevados, la falta de profundidad en el libro de órdenes y el entorno macro de alta incertidumbre no cumplen con los estándares de seguridad exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en activos de baja profundidad.",
+  "reasoning": "El mercado se encuentra en un estado de purga selectiva con alta volatilidad y falta de soporte institucional en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con confirmación de volumen y soporte de ballenas), por lo que la estrategia más rentable y segura es mantener la liquidez en espera de una mejor configuración técnica.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
       "score": 75
     },
     {
@@ -19,12 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "CAKEUSDT",
-      "score": 75
+      "symbol": "TUTUSDT",
+      "score": 65
     },
     {
-      "symbol": "FORMUSDT",
-      "score": 75
+      "symbol": "SHIBUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "DEXEUSDT",
+      "score": 65
     }
   ]
 }
