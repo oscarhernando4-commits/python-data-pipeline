@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-09 05:14:14",
+  "timestamp": "2026-08-09 05:16:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica y alta incertidumbre. Ninguno de los candidatos analizados cumple con los criterios estrictos de riesgo y convicción exigidos por el comité, por lo que la decisión institucional es mantener la liquidez en espera de mejores condiciones.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y baja liquidez. Ninguno de los candidatos analizados cumple con los criterios estrictos de riesgo y convicción definidos por el comité. Se prioriza la preservación del capital sobre la especulación en activos de baja profundidad histórica.",
   "top_candidates": [
     {
-      "symbol": "PENGUUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "QNTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "CRVUSDT",
-      "score": 60
-    },
-    {
       "symbol": "SKHYBUSDT",
       "score": 60
+    },
+    {
+      "symbol": "BABYUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "DODOUSDT",
+      "score": 50
     }
   ]
 }
