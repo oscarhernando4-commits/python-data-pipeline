@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-09 02:14:17",
+  "timestamp": "2026-08-09 02:16:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de compresión de volatilidad con alta incertidumbre. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ (Score >= 55 y dominancia de Bids > 55%). Se prioriza la preservación del capital sobre la ejecución de trades especulativos de baja probabilidad.",
+  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 55) y la falta de datos de liquidez en el libro de órdenes, sumado a la inestabilidad macro, obliga a mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "HBARUSDT",
-      "score": 80
-    },
-    {
-      "symbol": "BABYUSDT",
-      "score": 60
-    },
     {
       "symbol": "NEARUSDT",
       "score": 60
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "FILUSDT",
       "score": 60
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "VETUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "OPUSDT",
       "score": 60
     }
   ]
