@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-09 11:20:21",
+  "timestamp": "2026-08-09 11:22:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado actual se encuentra en una fase de alta volatilidad y distribución, donde la mayoría de los activos carecen de una estructura de soporte sólida. Ningún candidato cumple con los criterios estrictos de riesgo y convicción definidos por el comité, por lo que se prioriza la protección del capital sobre la operativa especulativa.",
+  "confidence": 0,
+  "reasoning": "Tras la deliberación unánime, el comité concluye que el mercado se encuentra en una fase de purga de liquidez selectiva. Ningún activo cumple con los criterios estrictos de riesgo-beneficio y convicción institucional, por lo que se decide mantener la posición en efectivo (HOLD) para proteger el capital contra la volatilidad bajista.",
   "top_candidates": [
     {
-      "symbol": "GNOUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 65
+      "symbol": "GNOUSDT",
+      "score": 75
     },
     {
       "symbol": "TSTUSDT",
       "score": 65
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "GRAMUSDT",
       "score": 65
     },
     {
-      "symbol": "ALLOUSDT",
+      "symbol": "ASTERUSDT",
       "score": 65
     }
   ]
