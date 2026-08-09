@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 05:30:19",
+  "timestamp": "2026-08-09 05:32:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de compresión de volatilidad con una estructura técnica insuficiente en los candidatos analizados. Ningún activo cumple con el umbral de score A+ (>= 55) ni con la profundidad de libro de órdenes necesaria para garantizar una entrada segura, por lo que la decisión institucional es mantener la liquidez en espera de una mejor configuración.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con alta volatilidad y falta de soporte institucional real. Ningún activo cumple con el umbral de seguridad A+ exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una mejor configuración de riesgo-beneficio.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "COOKIEUSDT",
+      "symbol": "PEPEUSDT",
       "score": 60
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "COOKIEUSDT",
       "score": 60
     }
   ]
