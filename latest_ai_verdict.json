@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-09 02:58:16",
+  "timestamp": "2026-08-09 03:00:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de 'limpieza de balance' con alta inestabilidad en las altcoins. Ninguno de los candidatos cumple con los criterios estrictos de riesgo y convicción exigidos por el comité, por lo que la estrategia más rentable es la preservación de capital mediante el modo HOLD.",
+  "reasoning": "El comité ha determinado que el mercado actual es una trampa de liquidez. Ningún activo cumple con el umbral de Score Técnico >= 55 ni con la confirmación de soporte en el libro de órdenes, por lo que se prioriza la preservación del capital sobre la ejecución de trades mediocres.",
   "top_candidates": [
-    {
-      "symbol": "SPYBUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "BABYUSDT",
-      "score": 60
-    },
     {
       "symbol": "HBARUSDT",
       "score": 60
@@ -23,7 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "MORPHOUSDT",
+      "score": 60
+    },
+    {
       "symbol": "XAUTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "JUPUSDT",
       "score": 60
     }
   ]
