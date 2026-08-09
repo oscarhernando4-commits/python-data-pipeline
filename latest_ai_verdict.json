@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-09 21:14:27",
+  "timestamp": "2026-08-09 21:16:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y Bids > 55%) necesario para mitigar el riesgo de 'falling knives' en un mercado con sentimiento de miedo.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y baja profundidad. Ningún activo cumple con los criterios estrictos de calidad (Score >= 55) y soporte institucional, por lo que la estrategia más rentable es la preservación de capital mediante la inacción.",
   "top_candidates": [
-    {
-      "symbol": "SHIBUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ATOMUSDT",
-      "score": 70
-    },
     {
       "symbol": "LINKUSDT",
       "score": 60
     },
     {
-      "symbol": "BANKUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 60
     },
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SUNUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SEIUSDT",
       "score": 60
     }
   ]
