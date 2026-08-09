@@ -1,12 +1,51 @@
 {
-  "JTOUSDT": [
+  "LUNCUSDT": [
     {
-      "timestamp": "2026-08-09 09:52:13",
-      "price": 0.5104,
-      "score": 0,
-      "rsi": 44.72,
+      "timestamp": "2026-08-09 09:54:13",
+      "price": 5.024e-05,
+      "score": 45,
+      "rsi": 55.76,
       "macd": "Neutral",
-      "volume_surge": 0.22,
+      "volume_surge": 0.1,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LISTAUSDT": [
+    {
+      "timestamp": "2026-08-09 09:54:13",
+      "price": 0.0594,
+      "score": 15,
+      "rsi": 37.83,
+      "macd": "Neutral",
+      "volume_surge": 0.25,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-09 09:54:13",
+      "price": 2.47e-06,
+      "score": 15,
+      "rsi": 45.67,
+      "macd": "Neutral",
+      "volume_surge": 0.07,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LAUSDT": [
+    {
+      "timestamp": "2026-08-09 09:54:13",
+      "price": 0.0517,
+      "score": 50,
+      "rsi": 50.79,
+      "macd": "Neutral",
+      "volume_surge": 0.74,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +53,12 @@
   ],
   "THEUSDT": [
     {
-      "timestamp": "2026-08-09 09:52:13",
-      "price": 0.0611,
-      "score": 30,
-      "rsi": 52.11,
+      "timestamp": "2026-08-09 09:54:13",
+      "price": 0.0617,
+      "score": 45,
+      "rsi": 55.2,
       "macd": "Neutral",
-      "volume_surge": 0.05,
+      "volume_surge": 0.06,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
