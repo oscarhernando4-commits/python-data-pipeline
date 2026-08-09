@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-09 01:22:20",
+  "timestamp": "2026-08-09 01:24:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un 'limbo de liquidez' con alta volatilidad y falta de soporte institucional confirmado en los activos analizados. Ningún candidato cumple con el umbral estricto de Score >= 65 y confirmación de libro de órdenes, por lo que la orden es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de purga y falta de convicción, con la mayoría de los activos fallando en los criterios de riesgo A+. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
+    {
+      "symbol": "FILUSDT",
+      "score": 70
+    },
     {
       "symbol": "ATOMUSDT",
       "score": 70
@@ -21,10 +25,6 @@
     {
       "symbol": "OPUSDT",
       "score": 70
-    },
-    {
-      "symbol": "BNBUSDT",
-      "score": 60
     }
   ]
 }
