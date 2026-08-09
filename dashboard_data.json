@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 00:24:20",
+  "updated_at": "2026-08-09 00:26:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 con confirmación de soporte en libro de órdenes > 55%). La alta volatilidad y la falta de muros de compra claros sugieren que el mercado aún no ha finalizado su fase de purga, por lo que la estrategia óptima es mantener la liquidez en espera de una señal de mayor calidad."
+    "reasoning": "El mercado presenta una divergencia técnica severa y falta de soporte institucional en el libro de órdenes. Ningún candidato alcanza el umbral de convicción A+ (Score >= 65) requerido por el comité, por lo que se mantiene la posición en efectivo para evitar pérdidas innecesarias."
   }
 }
