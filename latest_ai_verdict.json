@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-09 02:04:17",
+  "timestamp": "2026-08-09 02:06:13",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta correlación bajista y falta de fuerza relativa en los activos analizados. Ningún candidato cumple con el umbral de convicción A+ (Score >= 55) y la confirmación de soporte en el libro de órdenes, por lo que la decisión unánime del comité es mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de alta fragilidad y distribución institucional. Ningún activo cumple con los criterios estrictos de Score A+ (>= 55) ni con la profundidad de liquidez necesaria para mitigar el riesgo de slippage. Se prioriza la preservación de capital sobre la operativa especulativa.",
   "top_candidates": [
-    {
-      "symbol": "DODOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ZECUSDT",
-      "score": 60
-    },
     {
       "symbol": "BABYUSDT",
       "score": 60
@@ -23,8 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "SEIUSDT",
+      "symbol": "OPUSDT",
       "score": 60
+    },
+    {
+      "symbol": "GNOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 50
     }
   ]
 }
