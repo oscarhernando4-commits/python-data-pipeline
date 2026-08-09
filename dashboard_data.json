@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 22:22:19",
+  "updated_at": "2026-08-09 22:24:25",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación fragmentada. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ y soporte de liquidez necesarios para garantizar la preservación del capital, por lo que se opta por una postura defensiva de espera."
+    "reasoning": "A pesar de tener candidatos con scores técnicos altos, la falta de datos de liquidez en el libro de órdenes, la alta volatilidad macro y el historial reciente de pérdidas en condiciones similares dictan una postura de preservación de capital (HOLD) hasta que se cumplan estrictamente los criterios de convicción A+."
   }
 }
