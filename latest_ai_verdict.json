@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-09 07:40:20",
+  "timestamp": "2026-08-09 07:42:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con una correlación bajista sistémica. Ningún activo cumple con el umbral de Score Técnico >= 55 ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y baja liquidez. Ninguno de los activos analizados cumple con los criterios de calidad A+ (Score >= 55) exigidos por el comité. Se prioriza la preservación del capital sobre la ejecución de operaciones de baja probabilidad, manteniendo la posición en efectivo (USDT) hasta que las condiciones macro y técnicas mejoren.",
   "top_candidates": [
     {
       "symbol": "ZECUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "BNBUSDT",
       "score": 60
     },
     {
@@ -21,10 +25,6 @@
     {
       "symbol": "PENGUUSDT",
       "score": 60
-    },
-    {
-      "symbol": "KAITOUSDT",
-      "score": 50
     }
   ]
 }
