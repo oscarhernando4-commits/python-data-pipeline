@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-09 20:10:20",
+  "timestamp": "2026-08-09 20:12:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de alta toxicidad y distribución forzada. Ningún activo cumple con el umbral de convicción A+ (Score >= 55 y soporte de libro de órdenes sólido). La estrategia institucional es la protección de capital mediante la inacción hasta que la volatilidad se estabilice y aparezca una tendencia clara.",
+  "reasoning": "Ningún activo cumple con el umbral de Score Técnico >= 55 y la confirmación de volumen necesaria para una entrada A+. El mercado se encuentra en una fase de alta incertidumbre y riesgo sistémico, por lo que la estrategia óptima es preservar el capital en stablecoins.",
   "top_candidates": [
     {
       "symbol": "UNIUSDT",
       "score": 70
     },
     {
-      "symbol": "AVAXUSDT",
-      "score": 60
+      "symbol": "PAXGUSDT",
+      "score": 70
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "SHIBUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "POLUSDT",
       "score": 60
     }
   ]
