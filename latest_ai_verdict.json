@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-09 09:26:22",
+  "timestamp": "2026-08-09 09:28:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una correlación negativa hacia el riesgo. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes sólido y volumen confirmado). La estrategia de 'Caza de Oportunidades en el Desierto' dicta que, ante la falta de señales institucionales claras, la preservación del capital es la prioridad absoluta.",
+  "reasoning": "El mercado actual presenta una alta fricción regulatoria y una falta de convicción institucional, lo que se refleja en la inefectividad de los scores técnicos actuales. Ningún candidato cumple con el umbral de seguridad A+ ni con la dominancia de liquidez necesaria para mitigar el riesgo de slippage, por lo que la decisión unánime es mantener la liquidez en USDT.",
   "top_candidates": [
     {
       "symbol": "ZECUSDT",
-      "score": 75
+      "score": 70
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 60
     },
     {
       "symbol": "QNTUSDT",
-      "score": 75
+      "score": 60
     },
     {
       "symbol": "CAKEUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "HEIUSDT",
-      "score": 65
+      "symbol": "PAXGUSDT",
+      "score": 55
     }
   ]
 }
