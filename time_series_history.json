@@ -1,12 +1,51 @@
 {
-  "ZROUSDT": [
+  "JTOUSDT": [
     {
-      "timestamp": "2026-08-09 00:38:12",
-      "price": 0.831,
-      "score": 0,
-      "rsi": 43.91,
+      "timestamp": "2026-08-09 00:40:11",
+      "price": 0.5076,
+      "score": 30,
+      "rsi": 54.48,
       "macd": "Neutral",
-      "volume_surge": 0.41,
+      "volume_surge": 0.22,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-09 00:40:11",
+      "price": 0.2912,
+      "score": 50,
+      "rsi": 52.77,
+      "macd": "Neutral",
+      "volume_surge": 0.2,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-09 00:40:11",
+      "price": 0.1328,
+      "score": 15,
+      "rsi": 48.06,
+      "macd": "Neutral",
+      "volume_surge": 0.44,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "NEIROUSDT": [
+    {
+      "timestamp": "2026-08-09 00:40:11",
+      "price": 6.569e-05,
+      "score": 30,
+      "rsi": 54.21,
+      "macd": "Neutral",
+      "volume_surge": 1.15,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
