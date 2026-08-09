@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 03:00:23",
+  "updated_at": "2026-08-09 03:02:17",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El comité ha determinado que el mercado actual es una trampa de liquidez. Ningún activo cumple con el umbral de Score Técnico >= 55 ni con la confirmación de soporte en el libro de órdenes, por lo que se prioriza la preservación del capital sobre la ejecución de trades mediocres."
+    "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con score 60, ninguno presenta la confluencia necesaria de volumen institucional y soporte en el libro de órdenes para garantizar una operación de alta probabilidad. Se mantiene la liquidez en USDT para evitar la alta correlación negativa con el sentimiento de miedo actual."
   }
 }
