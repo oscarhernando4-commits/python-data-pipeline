@@ -1,14 +1,22 @@
 {
-  "timestamp": "2026-08-09 19:18:16",
+  "timestamp": "2026-08-09 19:20:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con alta correlación negativa. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y confirmación de soporte de ballenas), por lo que la estrategia óptima es mantener la liquidez en espera de una estructura de mercado más favorable.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos elevados, el entorno macroeconómico de miedo, la falta de profundidad en el libro de órdenes y el historial de pérdidas en condiciones similares dictan una postura de preservación de capital (HOLD) hasta que el mercado muestre una estructura de soporte más robusta.",
   "top_candidates": [
     {
-      "symbol": "ZAMAUSDT",
-      "score": 70
+      "symbol": "SUNUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "HBARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "POLUSDT",
+      "score": 75
     },
     {
       "symbol": "BICOUSDT",
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "BROCCOLI714USDT",
-      "score": 65
-    },
-    {
-      "symbol": "IOTXUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "GIGGLEUSDT",
       "score": 65
     }
   ]
