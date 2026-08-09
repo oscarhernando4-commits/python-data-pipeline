@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-08 23:58:17",
+  "timestamp": "2026-08-09 00:00:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta volatilidad y baja convicción técnica. Ninguno de los activos analizados cumple con el umbral de seguridad (Score >= 65) ni con la profundidad de libro de órdenes necesaria para una ejecución institucional, por lo que se prioriza la protección del capital sobre la operativa.",
+  "confidence": 95,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de Score técnico A+ (>= 65) ni con la confirmación de soporte en el libro de órdenes necesaria para mitigar el riesgo sistémico actual. Se prioriza la preservación del capital ante la falta de convicción compradora.",
   "top_candidates": [
     {
-      "symbol": "SPYBUSDT",
-      "score": 75
+      "symbol": "CAKEUSDT",
+      "score": 70
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "TRXUSDT",
       "score": 60
     },
     {
-      "symbol": "AEROUSDT",
+      "symbol": "ORDIUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "TSTUSDT",
+      "symbol": "BANKUSDT",
       "score": 50
     }
   ]
