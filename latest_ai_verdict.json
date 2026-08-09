@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-09 02:20:18",
+  "timestamp": "2026-08-09 02:22:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una trampa de liquidez donde el capital institucional se concentra exclusivamente en BTC, dejando a las altcoins sin soporte orgánico. Ningún candidato cumple con los criterios estrictos de riesgo A+ del comité, por lo que la orden es mantener la posición en efectivo para evitar pérdidas por volatilidad errática.",
+  "reasoning": "El mercado se encuentra en una fase de 'Apatía de Alta Volatilidad' donde la falta de convicción técnica y la ausencia de soporte claro en el libro de órdenes impiden ejecutar operaciones con una probabilidad de éxito aceptable. Se prioriza la protección del capital frente a la especulación en activos de baja convicción.",
   "top_candidates": [
     {
       "symbol": "NEARUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "HBARUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "DODOUSDT",
       "score": 60
     },
     {
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "ORDIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "VETUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SEIUSDT",
       "score": 60
     }
   ]
