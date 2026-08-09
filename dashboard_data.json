@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 20:22:20",
+  "updated_at": "2026-08-09 20:24:20",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una alta correlación bajista. Ninguno de los candidatos actuales cumple con el umbral de seguridad A+ exigido por el comité, por lo que la estrategia óptima es la preservación de capital mediante el hold en stablecoins."
+    "reasoning": "El mercado se encuentra en un evento de drenaje de liquidez institucional con una correlación negativa extrema. Ningún activo cumple con el umbral de convicción A+ (Score >= 55 y Bids >= 55%) necesario para mitigar el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad."
   }
 }
