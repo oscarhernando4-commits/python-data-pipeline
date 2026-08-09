@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 23:00:18",
+  "timestamp": "2026-08-09 23:02:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta correlación bajista. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital en stablecoins.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en un estado de debilidad generalizada con una correlación bajista sistémica. Ningún activo cumple con los criterios de alta convicción (Score >= 55) establecidos por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez y alta volatilidad.",
   "top_candidates": [
     {
       "symbol": "EPICUSDT",
@@ -15,16 +15,16 @@
       "score": 50
     },
     {
+      "symbol": "CATIUSDT",
+      "score": 50
+    },
+    {
       "symbol": "KAITOUSDT",
       "score": 50
     },
     {
       "symbol": "ALLOUSDT",
       "score": 50
-    },
-    {
-      "symbol": "MORPHOUSDT",
-      "score": 45
     }
   ]
 }
