@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 15:46:20",
+  "timestamp": "2026-08-09 15:48:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de purga selectiva con alta incertidumbre. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 55 y Bids > 65%) necesarios para garantizar la preservación del capital, por lo que se mantiene la posición en efectivo.",
+  "reasoning": "El mercado presenta una divergencia estructural y falta de convicción en los libros de órdenes. Ningún activo cumple con el umbral de seguridad A+ exigido por el Comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
   "top_candidates": [
     {
       "symbol": "LINKUSDT",
@@ -15,11 +15,11 @@
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
-      "symbol": "SEIUSDT",
+      "symbol": "XAUTUSDT",
       "score": 75
     },
     {
