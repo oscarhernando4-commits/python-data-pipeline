@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 11:38:20",
+  "timestamp": "2026-08-09 11:40:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en una fase de distribución selectiva con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes claro), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una zona de alta volatilidad con sentimiento de miedo y falta de convicción en el libro de órdenes. Ningún activo cumple con los criterios estrictos de seguridad y rentabilidad exigidos por el comité, por lo que se prioriza la preservación del capital sobre la operativa especulativa.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -15,7 +15,7 @@
       "score": 75
     },
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "DASHUSDT",
       "score": 75
     },
     {
@@ -23,8 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "DASHUSDT",
-      "score": 75
+      "symbol": "SHIBUSDT",
+      "score": 65
     }
   ]
 }
