@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 06:38:25",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado presenta una alta incertidumbre y una falta de soporte institucional sólido en el libro de órdenes. Dado que el historial reciente de trades muestra una alta tasa de pérdidas en condiciones de mercado neutral, el comité ha decidido priorizar la preservación del capital sobre la especulación, manteniendo la posición en efectivo (USDT) hasta que las condiciones macro y técnicas mejoren.",
+  "timestamp": "2026-08-09 06:40:20",
+  "selected_symbol": "AAVEUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "AAVEUSDT es el único candidato que combina un score técnico de 85, pertenencia al sector dominante (DeFi) y un momentum de volumen positivo, cumpliendo con todos los criterios de seguridad y rentabilidad exigidos por el comité.",
   "top_candidates": [
     {
       "symbol": "LTCUSDT",
@@ -23,7 +23,7 @@
       "score": 85
     },
     {
-      "symbol": "NEARUSDT",
+      "symbol": "SUIUSDT",
       "score": 75
     }
   ]
