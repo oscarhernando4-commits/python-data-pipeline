@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-09 19:54:23",
+  "timestamp": "2026-08-09 19:56:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada con una ausencia de convicción compradora. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55 con soporte de libro de órdenes claro), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
+  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con alta volatilidad y falta de soporte institucional. Ningún activo cumple con los criterios de convicción A+ (Score >= 55 y confirmación de libro de órdenes), por lo que la estrategia óptima es preservar el capital en stablecoins.",
   "top_candidates": [
     {
       "symbol": "HBARUSDT",
-      "score": 60
+      "score": 70
     },
     {
       "symbol": "GRAMUSDT",
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "PARTIUSDT",
       "score": 60
     }
   ]
