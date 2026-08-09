@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 00:36:21",
+  "timestamp": "2026-08-09 00:38:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con la mayoría de los activos mostrando scores técnicos mediocres (50-60) y falta de soporte institucional en el libro de órdenes. Siguiendo la Regla de Oro #1, se mantiene la liquidez en espera de una configuración de alta convicción.",
+  "reasoning": "El mercado se encuentra en una fase de alta dispersión y desconfianza. Ninguno de los activos analizados alcanza el umbral de calidad A+ (Score >= 65) exigido por el comité. Para preservar el capital y evitar trampas de valor, se ha decidido mantener la posición en liquidez (USDT) hasta que las condiciones técnicas y de volumen institucional mejoren significativamente.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "NEXOUSDT",
+      "symbol": "CAKEUSDT",
       "score": 60
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "NEXOUSDT",
       "score": 60
     }
   ]
