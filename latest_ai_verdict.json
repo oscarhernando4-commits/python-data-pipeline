@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-09 12:32:22",
+  "timestamp": "2026-08-09 12:34:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia estructural y falta de liquidez institucional confirmada en el libro de órdenes. Ningún candidato cumple con el umbral de convicción A+ (Score >= 55 con Bids > 55%), por lo que la estrategia óptima es preservar el capital en efectivo.",
+  "reasoning": "El mercado se encuentra en una fase de distribución selectiva con alta volatilidad y falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55 y Bids > 55%) necesario para mitigar el riesgo de pérdida, por lo que la decisión estratégica es mantener la liquidez en espera de una estructura de mercado más robusta.",
   "top_candidates": [
     {
-      "symbol": "TAOUSDT",
-      "score": 75
+      "symbol": "VETUSDT",
+      "score": 85
     },
     {
       "symbol": "TRXUSDT",
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "UNIUSDT",
       "score": 75
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "PAXGUSDT",
       "score": 75
     }
   ]
