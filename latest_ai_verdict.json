@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-09 09:56:49",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución selectiva con alta incertidumbre. Ninguno de los candidatos cumple con los requisitos estrictos de soporte en el libro de órdenes ni con la convicción técnica necesaria para mitigar el riesgo de pérdida, por lo que se mantiene la liquidez en USDT.",
+  "timestamp": "2026-08-09 09:58:18",
+  "selected_symbol": "ICPUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "El comité ha decidido operar exclusivamente en ICPUSDT debido a su Score Técnico superior (85) y su capacidad de desacoplarse del sentimiento negativo del mercado, priorizando la gestión de riesgo con un stop-loss ajustado.",
   "top_candidates": [
     {
       "symbol": "ICPUSDT",
       "score": 85
     },
     {
-      "symbol": "UNIUSDT",
+      "symbol": "ZECUSDT",
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "UNIUSDT",
       "score": 75
     },
     {
