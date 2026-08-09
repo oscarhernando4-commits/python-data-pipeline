@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-09 21:06:21",
+  "timestamp": "2026-08-09 21:08:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de pánico y baja liquidez. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 55) ni con una dominancia de Bids en el Orderbook que mitigue el riesgo de slippage, por lo que se prioriza la preservación del capital en USDT.",
+  "reasoning": "El mercado se encuentra en un estado de distribución institucional y alta incertidumbre. Ninguno de los candidatos cumple con los requisitos estrictos de Score Técnico (>= 55) y soporte de liquidez en el Orderbook. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
-      "symbol": "LINKUSDT",
+      "symbol": "SHIBUSDT",
       "score": 60
     },
     {
