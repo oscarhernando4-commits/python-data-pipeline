@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-09 17:20:25",
+  "timestamp": "2026-08-09 17:22:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 75, las condiciones macroeconómicas, la falta de profundidad en el libro de órdenes y el historial reciente de pérdidas en activos similares dictan una postura de preservación de capital. No se ha alcanzado el umbral de convicción A+ requerido para ejecutar una orden de compra.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con confirmación de soporte institucional y volumen). La alta volatilidad y la falta de muros de compra sólidos en el libro de órdenes, sumado al entorno de miedo, dictan una postura de espera para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "TUTUSDT",
+      "symbol": "NEARUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "COOKIEUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "XLMUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "KAITOUSDT",
+      "symbol": "TUTUSDT",
       "score": 65
     }
   ]
