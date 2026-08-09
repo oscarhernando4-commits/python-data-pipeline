@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-09 06:04:21",
+  "timestamp": "2026-08-09 06:06:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta fragilidad con una correlación bajista sistémica. Ninguno de los activos analizados alcanza el umbral de convicción A+ requerido por el comité, y el historial de simulaciones recientes desaconseja operar en condiciones de mercado neutral con baja demanda institucional. Se prioriza la protección del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta correlación negativa, lo que convierte cualquier intento de compra en una trampa de liquidez. Ningún activo cumple con los criterios de convicción A+ (Score >= 55 y Bids >= 55%), por lo que la preservación de capital es la prioridad absoluta.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
@@ -15,15 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "FILUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "VETUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "CAKEUSDT",
+      "symbol": "WLDUSDT",
       "score": 60
     }
   ]
