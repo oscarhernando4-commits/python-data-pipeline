@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-09 14:54:24",
+  "timestamp": "2026-08-09 14:56:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los activos candidatos cumple con el umbral estricto de convicción A+ (Score >= 55 con soporte de ballenas confirmado). La alta volatilidad y la falta de una tendencia direccional clara, sumado al historial de pérdidas en condiciones similares, dictan una postura de protección de capital (HOLD) para evitar 'falling knives' y trampas de liquidez.",
+  "reasoning": "Tras la deliberación unánime, el comité ha determinado que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. La falta de una dominancia clara en el libro de órdenes y la alta volatilidad en los activos analizados sugieren que el riesgo de 'falling knives' es demasiado elevado. Se prioriza la protección del capital sobre la especulación.",
   "top_candidates": [
+    {
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XRPUSDT",
+      "score": 75
+    },
     {
       "symbol": "SOLUSDT",
       "score": 75
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "XRPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "UNIUSDT",
+      "symbol": "WLFIUSDT",
       "score": 75
     }
   ]
