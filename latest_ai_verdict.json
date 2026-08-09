@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-09 17:22:22",
+  "timestamp": "2026-08-09 17:24:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con confirmación de soporte institucional y volumen). La alta volatilidad y la falta de muros de compra sólidos en el libro de órdenes, sumado al entorno de miedo, dictan una postura de espera para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, la falta de soporte en el libro de órdenes y el entorno macro de alta fragilidad no cumplen con los estándares de seguridad y rentabilidad exigidos para una ejecución A+.",
   "top_candidates": [
+    {
+      "symbol": "SHIBUSDT",
+      "score": 75
+    },
     {
       "symbol": "NEARUSDT",
       "score": 75
     },
     {
-      "symbol": "COOKIEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ASTERUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
@@ -23,8 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "TUTUSDT",
-      "score": 65
+      "symbol": "NEXOUSDT",
+      "score": 75
     }
   ]
 }
