@@ -1567,3 +1567,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-48.12%)`, `2025-12-03 (-34.26%)`, `2026-08-06 (-26.74%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: BMTUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-03-18` hasta `2026-08-09` (510 Días de Historial)
+- 💵 **Precio Actual:** `$0.0226 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.3298 USD` (`2025-03-18`) | Distancia: `-93.16%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0109 USD` (`2026-07-29`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-03-18 (+82.75%)`, `2026-08-09 (+71.9%)`, `2025-04-27 (+47.46%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-40.42%)`, `2025-07-05 (-34.32%)`, `2025-05-08 (-25.98%)`
+
+---
