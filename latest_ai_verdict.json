@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-09 15:40:24",
-  "selected_symbol": "JUPUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "JUPUSDT es el único activo que cumple con el umbral de convicción A+ (Score 85) y pertenece al sector dominante (DeFi). La estrategia se basa en la fuerza relativa frente a la debilidad de BTC, utilizando un trailing stop para asegurar beneficios y mitigar el riesgo sistémico.",
+  "timestamp": "2026-08-09 15:42:21",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos presenta una configuración técnica A+ con soporte de liquidez (Bids > 55%) que cumpla con los estrictos criterios de gestión de riesgo del comité. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
   "top_candidates": [
     {
       "symbol": "JUPUSDT",
       "score": 85
     },
     {
-      "symbol": "XRPUSDT",
-      "score": 75
+      "symbol": "ZROUSDT",
+      "score": 85
     },
     {
       "symbol": "LINKUSDT",
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "XRPUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "NEARUSDT",
       "score": 75
     }
   ]
