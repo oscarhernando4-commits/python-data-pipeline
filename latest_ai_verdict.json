@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-09 05:54:23",
+  "timestamp": "2026-08-09 05:56:55",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una correlación vendedora masiva. Ninguno de los candidatos cumple con el umbral de Score A+ (>= 55) ni con la profundidad de libro de órdenes necesaria para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una mayoría de activos operando bajo scores de debilidad extrema. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55) ni con la confirmación de soporte en el libro de órdenes, lo que hace que cualquier posición sea una trampa de volatilidad. Se prioriza la preservación de capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
-      "symbol": "SOLUSDT",
+      "symbol": "BNBUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "PUMPUSDT",
       "score": 50
     },
     {
-      "symbol": "PIXELUSDT",
+      "symbol": "ALLOUSDT",
       "score": 50
     }
   ]

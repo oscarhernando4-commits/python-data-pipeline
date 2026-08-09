@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 05:54:23",
+  "updated_at": "2026-08-09 05:56:55",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una correlación vendedora masiva. Ninguno de los candidatos cumple con el umbral de Score A+ (>= 55) ni con la profundidad de libro de órdenes necesaria para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre."
+    "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una mayoría de activos operando bajo scores de debilidad extrema. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55) ni con la confirmación de soporte en el libro de órdenes, lo que hace que cualquier posición sea una trampa de volatilidad. Se prioriza la preservación de capital sobre la ejecución de trades de baja probabilidad."
   }
 }
