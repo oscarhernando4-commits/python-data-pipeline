@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-09 17:40:22",
+  "timestamp": "2026-08-09 17:42:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 55 y confirmación de soporte de ballenas). El mercado actual presenta una divergencia estructural que aumenta el riesgo de pérdidas, por lo que el comité ha decidido mantener la liquidez en espera de una configuración técnica más clara y segura.",
+  "reasoning": "El mercado se encuentra en una fase de 'selección adversa' con alta volatilidad y falta de liquidez institucional confirmada. Ninguno de los candidatos cumple con el umbral de convicción A+ requerido para mitigar el riesgo de 'trampa de valor', por lo que la decisión unánime es mantener la liquidez en efectivo.",
   "top_candidates": [
+    {
+      "symbol": "RENDERUSDT",
+      "score": 85
+    },
     {
       "symbol": "EPICUSDT",
       "score": 80
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "NEARUSDT",
       "score": 75
     },
     {
@@ -19,12 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "GNOUSDT",
+      "symbol": "SUNUSDT",
       "score": 75
-    },
-    {
-      "symbol": "RENDERUSDT",
-      "score": 70
     }
   ]
 }
