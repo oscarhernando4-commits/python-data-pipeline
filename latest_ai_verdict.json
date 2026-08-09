@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-09 21:20:19",
+  "timestamp": "2026-08-09 21:22:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una correlación negativa generalizada. Ninguno de los activos analizados cumple con el umbral de convicción A+ (Score >= 55) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital hasta que el BTCUSDT supere el umbral de 40 y la volatilidad se estabilice.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de Score Técnico >= 55 combinado con una dominancia de Bids > 55% necesaria para una entrada de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez.",
   "top_candidates": [
+    {
+      "symbol": "ADAUSDT",
+      "score": 60
+    },
     {
       "symbol": "LINKUSDT",
       "score": 60
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "SUNUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SEIUSDT",
+      "symbol": "FILUSDT",
       "score": 60
     }
   ]
