@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 15:14:26",
+  "updated_at": "2026-08-09 15:16:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "A pesar de que algunos activos presentan scores técnicos elevados, la falta de dominancia clara en el libro de órdenes y la inestabilidad macroeconómica actual dictan una postura de preservación de capital. El comité ha decidido no ejecutar ninguna orden para evitar el riesgo de 'falling knives' y proteger la liquidez total."
+    "reasoning": "El mercado presenta una divergencia estructural y una falta de soporte institucional sólido en el libro de órdenes. Ningún activo cumple con los criterios de alta convicción (Score >= 55 con confirmación de volumen y soporte de ballenas), por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar pérdidas innecesarias en un entorno de alta volatilidad y miedo."
   }
 }
