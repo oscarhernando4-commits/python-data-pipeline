@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-09 20:46:19",
+  "timestamp": "2026-08-09 20:48:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado exhibe una fragilidad sistémica extrema con una falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de Score A+ (>= 55) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage. Se prioriza la preservación de capital ante la alta probabilidad de una capitulación técnica.",
+  "confidence": 95,
+  "reasoning": "El mercado presenta una toxicidad sistémica elevada. Ningún activo cumple con los criterios estrictos de convicción A+ y el riesgo de slippage en el entorno actual es inaceptable. Se prioriza la protección del capital sobre la especulación.",
   "top_candidates": [
     {
-      "symbol": "LINKUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ADAUSDT",
+      "symbol": "SHIBUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "LINKUSDT",
+      "score": 60
+    },
+    {
       "symbol": "AAVEUSDT",
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 60
     }
   ]
