@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-09 14:50:26",
+  "timestamp": "2026-08-09 14:52:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con confirmación de volumen y soporte de libro de órdenes). La alta volatilidad y la falta de profundidad en el libro de órdenes, sumado al sentimiento de miedo, dictan una estrategia de preservación de capital (HOLD) para evitar las trampas de valor observadas en el historial de simulaciones.",
+  "reasoning": "A pesar de que varios activos tienen un score técnico de 75, la ausencia de una dominancia de Bids superior al 55% y la falta de un volumen de compra institucional significativo (Volume Surge > 1.2x) hacen que el riesgo de 'falling knife' sea inaceptable bajo las reglas del comité. Se prioriza la protección del capital sobre la especulación en un entorno de mercado con sesgo neutral.",
   "top_candidates": [
     {
+      "symbol": "XRPUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XLMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "UNIUSDT",
+      "score": 75
+    },
+    {
       "symbol": "WLFIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PENGUUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ICPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "KITEUSDT",
       "score": 75
     }
   ]

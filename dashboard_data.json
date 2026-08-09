@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 14:50:26",
+  "updated_at": "2026-08-09 14:52:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con confirmación de volumen y soporte de libro de órdenes). La alta volatilidad y la falta de profundidad en el libro de órdenes, sumado al sentimiento de miedo, dictan una estrategia de preservación de capital (HOLD) para evitar las trampas de valor observadas en el historial de simulaciones."
+    "reasoning": "A pesar de que varios activos tienen un score técnico de 75, la ausencia de una dominancia de Bids superior al 55% y la falta de un volumen de compra institucional significativo (Volume Surge > 1.2x) hacen que el riesgo de 'falling knife' sea inaceptable bajo las reglas del comité. Se prioriza la protección del capital sobre la especulación en un entorno de mercado con sesgo neutral."
   }
 }
