@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-09 09:34:19",
+  "timestamp": "2026-08-09 09:36:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una debilidad sistémica y una falta de profundidad en el libro de órdenes que, combinada con la ausencia de activos con un score técnico superior a 55, obliga a la preservación total del capital.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de Score Técnico >= 55 ni con la confirmación de soporte institucional necesaria, por lo que se prioriza la preservación de capital.",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "PEPEUSDT",
       "score": 60
     },
     {
@@ -15,12 +19,8 @@
       "score": 60
     },
     {
-      "symbol": "ZECUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "MORPHOUSDT",
-      "score": 50
+      "symbol": "ATOMUSDT",
+      "score": 60
     },
     {
       "symbol": "BROCCOLI714USDT",
