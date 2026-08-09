@@ -1,14 +1,22 @@
 {
-  "timestamp": "2026-08-09 23:38:15",
+  "timestamp": "2026-08-09 23:40:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad generalizada y una correlación negativa con el sentimiento inversor, lo que hace que cualquier posición larga sea de alto riesgo. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la liquidez en USDT.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad sistémica. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55 con confirmación de volumen y soporte de ballenas). Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
       "symbol": "EPICUSDT",
       "score": 70
+    },
+    {
+      "symbol": "TAOUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "score": 55
     },
     {
       "symbol": "GRAMUSDT",
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "SUIUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "ENAUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "ETCUSDT",
       "score": 55
     }
   ]
