@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-09 01:26:21",
+  "timestamp": "2026-08-09 01:28:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de que algunos activos presentan un score técnico de 70, la falta de profundidad en el libro de órdenes, el sentimiento de miedo global y el historial negativo de trades en condiciones similares, no justifican el riesgo de una entrada. Se prioriza la preservación del capital hasta que el mercado muestre una estructura de acumulación institucional más robusta.",
+  "confidence": 95,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de alta incertidumbre y el riesgo de 'falling knives' es elevado, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la posición en efectivo.",
   "top_candidates": [
-    {
-      "symbol": "ATOMUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ORDIUSDT",
-      "score": 70
-    },
     {
       "symbol": "VETUSDT",
       "score": 70
@@ -25,6 +17,14 @@
     {
       "symbol": "SEIUSDT",
       "score": 70
+    },
+    {
+      "symbol": "OPUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "score": 60
     }
   ]
 }
