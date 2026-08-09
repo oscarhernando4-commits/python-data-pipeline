@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-09 16:52:21",
+  "timestamp": "2026-08-09 16:54:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. La falta de soporte en el libro de órdenes, sumada a la inestabilidad macroeconómica y la baja tasa de éxito en patrones similares, obliga a mantener una posición de liquidez total (HOLD) para evitar pérdidas innecesarias.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de confianza A+ (Score >= 55 y Bids > 55%) en un entorno de mercado caracterizado por el miedo y la fragmentación de liquidez, por lo que la decisión unánime es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "SHIBUSDT",
-      "score": 75
-    },
     {
       "symbol": "DASHUSDT",
       "score": 75
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "PEPEUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "SEIUSDT",
       "score": 70
     }
   ]
