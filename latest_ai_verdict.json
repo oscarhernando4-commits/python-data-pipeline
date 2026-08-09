@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-09 00:22:21",
+  "timestamp": "2026-08-09 00:24:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de Score >= 65 combinado con una dominancia de Bids superior al 55%, lo que obliga a la preservación del capital bajo la Regla #1 del Comité.",
+  "confidence": 95,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 con confirmación de soporte en libro de órdenes > 55%). La alta volatilidad y la falta de muros de compra claros sugieren que el mercado aún no ha finalizado su fase de purga, por lo que la estrategia óptima es mantener la liquidez en espera de una señal de mayor calidad.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -15,15 +15,15 @@
       "score": 70
     },
     {
+      "symbol": "APTUSDT",
+      "score": 70
+    },
+    {
       "symbol": "VETUSDT",
       "score": 70
     },
     {
       "symbol": "BNBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "EPICUSDT",
       "score": 60
     }
   ]
