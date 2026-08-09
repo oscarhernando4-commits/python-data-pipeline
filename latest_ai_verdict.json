@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-09 14:26:23",
+  "timestamp": "2026-08-09 14:28:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de parálisis de capital con alta incertidumbre macroeconómica. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes claro), por lo que la estrategia más prudente es mantener la liquidez en USDT para evitar la exposición a 'trampas de liquidez' y volatilidad errática.",
+  "reasoning": "El mercado se encuentra en una fase de rotación defensiva con alta incertidumbre macroeconómica. Ninguno de los candidatos presenta una estructura de libro de órdenes con soporte de ballenas (Bids > 55%) ni una tendencia clara en 4H, lo que incumple las reglas de oro para una ejecución A+. Se prioriza la preservación del capital sobre la especulación en un entorno de baja probabilidad de éxito.",
   "top_candidates": [
     {
-      "symbol": "LINKUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "GIGGLEUSDT",
+      "symbol": "LINKUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "KITEUSDT",
+      "symbol": "AAVEUSDT",
       "score": 75
     },
     {
-      "symbol": "SPYBUSDT",
+      "symbol": "INJUSDT",
       "score": 75
     }
   ]
