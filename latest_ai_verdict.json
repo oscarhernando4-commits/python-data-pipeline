@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-09 21:04:21",
+  "timestamp": "2026-08-09 21:06:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado presenta una fragilidad sistémica severa y una falta de convicción institucional en los activos analizados. Ningún candidato cumple con los requisitos estrictos de Score A+ y soporte de ballenas, por lo que se prioriza la preservación total de la liquidez en USDT para evitar pérdidas en un entorno de desapalancamiento forzado.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un estado de pánico y baja liquidez. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 55) ni con una dominancia de Bids en el Orderbook que mitigue el riesgo de slippage, por lo que se prioriza la preservación del capital en USDT.",
   "top_candidates": [
     {
       "symbol": "LINKUSDT",
       "score": 60
     },
     {
-      "symbol": "SHIBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ATOMUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "FILUSDT",
+      "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SUNUSDT",
       "score": 60
     }
   ]

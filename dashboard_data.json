@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 21:04:21",
+  "updated_at": "2026-08-09 21:06:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una fragilidad sistémica severa y una falta de convicción institucional en los activos analizados. Ningún candidato cumple con los requisitos estrictos de Score A+ y soporte de ballenas, por lo que se prioriza la preservación total de la liquidez en USDT para evitar pérdidas en un entorno de desapalancamiento forzado."
+    "reasoning": "El mercado se encuentra en un estado de pánico y baja liquidez. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 55) ni con una dominancia de Bids en el Orderbook que mitigue el riesgo de slippage, por lo que se prioriza la preservación del capital en USDT."
   }
 }
