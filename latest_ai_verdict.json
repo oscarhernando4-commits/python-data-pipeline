@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-09 20:24:19",
+  "timestamp": "2026-08-09 20:26:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un evento de drenaje de liquidez institucional con una correlación negativa extrema. Ningún activo cumple con el umbral de convicción A+ (Score >= 55 y Bids >= 55%) necesario para mitigar el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en una fase de alta volatilidad y baja convicción. Ninguno de los candidatos cumple con los requisitos estrictos de riesgo y confirmación de volumen institucional necesarios para una entrada segura. Se prioriza la preservación del capital sobre la especulación en un entorno de distribución.",
   "top_candidates": [
     {
       "symbol": "XAUTUSDT",
       "score": 70
+    },
+    {
+      "symbol": "UNIUSDT",
+      "score": 60
     },
     {
       "symbol": "SHIBUSDT",
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "AAVEUSDT",
+      "symbol": "PAXGUSDT",
       "score": 60
     }
   ]
