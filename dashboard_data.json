@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 08:50:21",
+  "updated_at": "2026-08-09 08:52:19",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una correlación bajista sistémica. Ningún activo cumple con el umbral de seguridad A+ (Score >= 55) y la confirmación de volumen institucional necesaria. Se prioriza la preservación de capital ante la alta probabilidad de pérdidas observada en el historial de simulaciones recientes."
+    "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de Score Técnico >= 55 ni con la confirmación de soporte institucional necesaria. La alta tasa de fallos en las simulaciones recientes para activos con scores bajos refuerza la decisión de mantener la liquidez en espera de una mejor configuración de mercado."
   }
 }
