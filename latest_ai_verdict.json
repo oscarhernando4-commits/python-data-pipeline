@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-09 15:58:20",
+  "timestamp": "2026-08-09 16:00:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de seguridad y rentabilidad exigidos. La falta de muros de soporte claros en el libro de órdenes y la inestabilidad macroeconómica obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta una trampa de liquidez con alta volatilidad y falta de soporte institucional consolidado; por tanto, se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
-    {
-      "symbol": "SHIBUSDT",
-      "score": 85
-    },
     {
       "symbol": "LINKUSDT",
       "score": 75
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
-      "symbol": "ONDOUSDT",
+      "symbol": "THEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ASTERUSDT",
       "score": 75
     }
   ]
