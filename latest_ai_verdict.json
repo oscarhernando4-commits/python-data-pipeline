@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-09 09:44:21",
+  "timestamp": "2026-08-09 09:46:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con los criterios estrictos de seguridad y convicción A+ establecidos por el comité. El mercado actual se define por una capitulación técnica y falta de soporte institucional, por lo que la orden es mantener la liquidez en espera de una mejor oportunidad.",
+  "reasoning": "Ninguno de los candidatos analizados alcanza el umbral de calidad A+ requerido por el comité. La combinación de un entorno macro hostil, la falta de profundidad de mercado confirmada y la alta probabilidad de 'trampas de valor' en los activos actuales obliga a una postura de preservación de capital total.",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ZECUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PEPEUSDT",
       "score": 60
     },
     {
@@ -23,8 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "GNOUSDT",
       "score": 60
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "score": 50
     }
   ]
 }
