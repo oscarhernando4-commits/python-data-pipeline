@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-09 19:14:20",
+  "timestamp": "2026-08-09 19:16:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que el entorno actual de mercado es de alta fragilidad y baja probabilidad de éxito. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y confirmación de soporte institucional), por lo que se prioriza la preservación del capital sobre la especulación.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en un estado de alta fragilidad técnica y falta de soporte institucional. Ninguno de los candidatos analizados supera el umbral de riesgo A+ requerido por el comité, y la alta probabilidad de 'trampas de liquidez' en el contexto actual obliga a una postura defensiva de 'HOLD' para preservar el capital.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "EPICUSDT",
+      "symbol": "ZAMAUSDT",
       "score": 70
-    },
-    {
-      "symbol": "BICOUSDT",
-      "score": 65
     },
     {
       "symbol": "IOTXUSDT",
       "score": 65
     },
     {
-      "symbol": "GIGGLEUSDT",
+      "symbol": "BROCCOLI714USDT",
+      "score": 65
+    },
+    {
+      "symbol": "BICOUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "ALGOUSDT",
       "score": 65
     }
   ]
