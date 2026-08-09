@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 05:18:17",
+  "updated_at": "2026-08-09 05:20:20",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una divergencia técnica severa y falta de convicción institucional en los activos analizados. Ningún candidato cumple con el umbral de Score A+ (>= 55) y soporte de libro de órdenes necesario para una ejecución segura. Se prioriza la preservación del capital ante la alta probabilidad de volatilidad bajista."
+    "reasoning": "El mercado se encuentra en un estado de 'Liquidez de Trampa' con scores técnicos insuficientes (máximo 60/100 sin confirmación de volumen institucional) y una alta volatilidad que ha resultado en pérdidas recurrentes en las simulaciones recientes. Se prioriza la preservación del capital hasta que aparezca una oportunidad con Score A+ y confirmación de volumen real."
   }
 }
