@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 01:04:24",
+  "updated_at": "2026-08-09 01:06:20",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de indecisión con scores técnicos insuficientes (máximo 65, pero sin confirmación de volumen o soporte de libro de órdenes). Siguiendo la Regla de Oro #1, al no existir un candidato con convicción A+, la decisión institucional es proteger el capital y esperar una mejor configuración de mercado."
+    "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de seguridad A+ (Score >= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage. Se prioriza la protección del capital ante la incertidumbre del mercado."
   }
 }
