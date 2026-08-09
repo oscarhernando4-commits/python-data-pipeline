@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-09 08:28:26",
+  "timestamp": "2026-08-09 08:30:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una correlación de activos débil y falta de soporte institucional en el libro de órdenes. Ningún candidato cumple con los requisitos estrictos de convicción A+ (Score >= 55 y Bids > 65%), por lo que la estrategia más rentable es la preservación del capital mediante el modo HOLD.",
+  "reasoning": "El mercado se encuentra en un estado de 'limpieza de cartera' con alta volatilidad y falta de convicción en los activos analizados. Ningún candidato cumple con los requisitos estrictos de Score A+ y soporte de libro de órdenes, por lo que la estrategia óptima es mantenerse en liquidez (HOLD) para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "ZECUSDT",
-      "score": 85
+      "score": 75
     },
     {
       "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "PENGUUSDT",
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
+      "symbol": "CAKEUSDT",
       "score": 75
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "DASHUSDT",
       "score": 75
     }
   ]
