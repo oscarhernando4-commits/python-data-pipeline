@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 01:28:23",
+  "updated_at": "2026-08-09 01:30:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 65 con soporte de libro de órdenes > 55%). El mercado se encuentra en una fase de alta incertidumbre y el riesgo de 'falling knives' es elevado, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la posición en efectivo."
+    "reasoning": "Ningún activo cumple con el umbral de Score Técnico A+ (>= 65) ni con la confirmación de soporte en el libro de órdenes, por lo que se mantiene la posición en efectivo para evitar pérdidas innecesarias."
   }
 }
