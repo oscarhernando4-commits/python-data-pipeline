@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 01:10:22",
+  "updated_at": "2026-08-09 01:12:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score A+ (>= 65) y la dominancia de Bids en el libro de órdenes es insuficiente para garantizar una entrada segura, por lo que se decide mantener la posición en efectivo para evitar pérdidas innecesarias."
+    "reasoning": "Ningún activo cumple con el umbral de Score técnico A+ (>= 65) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage en un entorno de mercado neutral y volátil."
   }
 }
