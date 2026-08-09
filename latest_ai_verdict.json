@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-09 10:58:20",
+  "timestamp": "2026-08-09 11:00:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y confianza >= 70%) ni presenta una estructura de libro de órdenes favorable. El mercado se encuentra en una fase de purga especulativa, por lo que la estrategia más rentable es mantener la liquidez en espera de una configuración técnica superior.",
+  "reasoning": "El mercado se encuentra en un estado de miedo y estancamiento, con una falta de profundidad en el libro de órdenes y una alta probabilidad de pérdidas basada en el historial de simulaciones. Ningún activo cumple con el umbral de convicción A+ (Score >= 55 y confirmación de volumen), por lo que la decisión institucional es proteger la liquidez y esperar una mejor estructura de mercado.",
   "top_candidates": [
-    {
-      "symbol": "KAITOUSDT",
-      "score": 95
-    },
     {
       "symbol": "BNBUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "DASHUSDT",
       "score": 75
     },
     {
-      "symbol": "FORMUSDT",
-      "score": 75
+      "symbol": "PUMPUSDT",
+      "score": 65
     },
     {
-      "symbol": "GNOUSDT",
-      "score": 75
+      "symbol": "GRAMUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "XRPUSDT",
+      "score": 65
     }
   ]
 }
