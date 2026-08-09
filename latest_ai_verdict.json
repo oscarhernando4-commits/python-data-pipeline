@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-09 13:02:21",
+  "timestamp": "2026-08-09 13:04:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado presenta una divergencia técnica y una falta de convicción institucional en los niveles actuales. Ningún activo cumple con los requisitos estrictos de riesgo y confirmación de volumen, por lo que la estrategia óptima es preservar el capital en efectivo (USDT) hasta que las condiciones macro y técnicas mejoren.",
+  "confidence": 0,
+  "reasoning": "El mercado presenta una divergencia técnica y una falta de soporte institucional en el libro de órdenes. Ningún activo cumple con los criterios estrictos de riesgo A+ establecidos por el comité, por lo que la decisión es mantener la liquidez en USDT para evitar 'cuchillos cayendo' en un entorno de miedo.",
   "top_candidates": [
+    {
+      "symbol": "XAUTUSDT",
+      "score": 85
+    },
     {
       "symbol": "ALLOUSDT",
       "score": 80
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "MMTUSDT",
-      "score": 75
-    },
-    {
       "symbol": "BNBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TAOUSDT",
       "score": 75
     }
   ]
