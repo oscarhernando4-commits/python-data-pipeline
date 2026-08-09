@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-09 04:02:19",
+  "timestamp": "2026-08-09 04:04:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55 y Bids > 65%) exigido por el comité para mitigar el riesgo en un mercado de alta incertidumbre.",
+  "confidence": 95,
+  "reasoning": "El comité ha determinado por consenso unánime que no existe ningún activo que cumpla con los criterios de alta convicción (Score >= 55) y soporte de liquidez necesario. La estrategia actual es la preservación de capital ante la alta volatilidad y la debilidad técnica generalizada del mercado.",
   "top_candidates": [
     {
-      "symbol": "SOLUSDT",
+      "symbol": "HBARUSDT",
       "score": 60
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "SOLUSDT",
       "score": 60
     },
     {
