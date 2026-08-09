@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-09 17:44:21",
+  "timestamp": "2026-08-09 17:46:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 55 y confirmación de soporte en el libro de órdenes). El mercado se encuentra en una fase de alta incertidumbre con una alta probabilidad de pérdidas, por lo que la decisión institucional es mantener la liquidez en espera de mejores condiciones.",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una fragmentación que ha provocado pérdidas recurrentes en las últimas simulaciones. Ningún activo cumple con el umbral de convicción A+ (Score >= 55 y confirmación de liquidez) exigido por el comité, por lo que se decide mantener la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo'.",
   "top_candidates": [
     {
-      "symbol": "EPICUSDT",
-      "score": 80
-    },
-    {
-      "symbol": "HBARUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NEARUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
@@ -23,8 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "SUNUSDT",
-      "score": 75
+      "symbol": "TSTUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "MMTUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "BICOUSDT",
+      "score": 65
     }
   ]
 }
