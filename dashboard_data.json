@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 04:20:20",
+  "updated_at": "2026-08-09 04:22:18",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una divergencia técnica que no permite una ejecución de alta probabilidad. Ninguno de los activos candidatos cumple con los requisitos estrictos de Score Técnico (>=55) y dominancia de Bids (>=55%) exigidos por el comité para garantizar la preservación del capital."
+    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y fragmentación. Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 55 con confirmación de liquidez y volumen), y el historial reciente de trades sugiere que operar en este entorno neutral conlleva un riesgo inaceptable de pérdida de capital."
   }
 }
