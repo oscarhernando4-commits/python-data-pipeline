@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-09 03:14:17",
+  "timestamp": "2026-08-09 03:16:14",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral estricto de Score Técnico >= 55 y la confirmación de soporte en el libro de órdenes. El mercado se encuentra en una fase de distribución silenciosa donde la preservación del capital es la prioridad absoluta según las reglas de oro del comité.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y baja calidad técnica. Ningún activo cumple con el requisito estricto de Score >= 55 y confirmación de volumen institucional, por lo que la estrategia más rentable y segura es mantener la liquidez en USDT hasta que las condiciones macro mejoren.",
   "top_candidates": [
     {
       "symbol": "PAXGUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ZAMAUSDT",
       "score": 60
     },
     {
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "JUPUSDT",
-      "score": 60
+      "symbol": "MMTUSDT",
+      "score": 50
     },
     {
-      "symbol": "GNOUSDT",
-      "score": 60
+      "symbol": "GIGGLEUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "MUBARAKUSDT",
+      "score": 50
     }
   ]
 }
