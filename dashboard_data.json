@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 10:40:20",
+  "updated_at": "2026-08-09 10:42:25",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta un entorno hostil con alta volatilidad y falta de soporte institucional claro. Tras analizar los 1933 trades históricos y la fragilidad del sentimiento actual, el comité decide mantener la liquidez en USDT para evitar trampas de liquidez y pérdidas innecesarias."
+    "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una correlación negativa en los trades recientes. Ningún activo cumple con el umbral de confianza A+ (Score >= 55 y Bids > 55%) necesario para garantizar la preservación del capital, por lo que se mantiene la liquidez en espera de mejores condiciones."
   }
 }
