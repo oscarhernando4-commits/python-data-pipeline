@@ -14,7 +14,8 @@ import api_connector
 API_KEY = api_connector.API_KEY
 API_SECRET = api_connector.API_SECRET
 BASE_URL = api_connector.BASE_URL
-PROXIES = api_connector.PROXIES
+FAPI_URL = api_connector.FAPI_URL
+get_proxy = api_connector.get_proxy
 
 def deep_diagnostic():
     print("="*60)
@@ -24,7 +25,7 @@ def deep_diagnostic():
     # 1. Check IP Configuration
     print("\n[1/5] Verificando Red e IP Pública...")
     try:
-        ip_res = requests.get("https://api.ipify.org?format=json", proxies=PROXIES, timeout=10)
+        ip_res = requests.get("https://api.ipify.org?format=json", proxies=get_proxy(), timeout=10)
         print(f"✅ IP de salida: {ip_res.json().get('ip')}")
         geo_res = requests.get(f"https://ipapi.co/{ip_res.json().get('ip')}/json/", timeout=10)
         geo = geo_res.json()
@@ -39,7 +40,7 @@ def deep_diagnostic():
     # 2. Ping API Binance
     print("\n[2/5] Ping a los servidores de Binance...")
     try:
-        ping = requests.get(f"{BASE_URL}/api/v3/ping", proxies=PROXIES, timeout=5)
+        ping = requests.get(f"{BASE_URL}/api/v3/ping", proxies=get_proxy(), timeout=5)
         if ping.status_code == 200:
             print("✅ Binance API Spot: ONLINE")
         else:
@@ -57,7 +58,7 @@ def deep_diagnostic():
         params["signature"] = signature
         headers = {"X-MBX-APIKEY": API_KEY}
         
-        account_res = requests.get(f"{BASE_URL}/api/v3/account", headers=headers, params=params, proxies=PROXIES, timeout=10)
+        account_res = requests.get(f"{BASE_URL}/api/v3/account", headers=headers, params=params, proxies=get_proxy(), timeout=10)
         if account_res.status_code == 200:
             acc_data = account_res.json()
             if acc_data.get("canTrade"):
@@ -86,7 +87,7 @@ def deep_diagnostic():
         params["signature"] = signature
         headers = {"X-MBX-APIKEY": API_KEY}
         
-        fut_res = requests.get(f"{FAPI_URL}/fapi/v2/account", headers=headers, params=params, proxies=PROXIES, timeout=10)
+        fut_res = requests.get(f"{FAPI_URL}/fapi/v2/account", headers=headers, params=params, proxies=get_proxy(), timeout=10)
         if fut_res.status_code == 200:
             fut_data = fut_res.json()
             print("✅ Permiso de Trading Futuros: ACTIVADO")
@@ -107,7 +108,7 @@ def deep_diagnostic():
         signature = hmac.new(API_SECRET.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
         params["signature"] = signature
         
-        orders_res = requests.get(f"{BASE_URL}/api/v3/allOrders", headers=headers, params=params, proxies=PROXIES, timeout=10)
+        orders_res = requests.get(f"{BASE_URL}/api/v3/allOrders", headers=headers, params=params, proxies=get_proxy(), timeout=10)
         if orders_res.status_code == 200:
             orders = orders_res.json()
             if len(orders) > 0:

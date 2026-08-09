@@ -550,8 +550,8 @@ def run_infinite_trading_matrix_cycle():
         # Determine BTC Health State
         # Crash state: BTC in active panic dump (Score < 30 AND RSI < 35.0)
         is_btc_crashing = btc_score < 30 and btc_rsi < 35.0
-        is_btc_weak = btc_score < 45 or btc_rsi < 42.0
-        is_btc_bearish = is_btc_crashing or is_btc_weak or btc_score < 50
+        is_btc_weak = btc_score < 30 or btc_rsi < 25.0
+        is_btc_bearish = is_btc_crashing or is_btc_weak or btc_score < 25
         
         btc_status_str = f"BTC @ ${btc_price:,.2f} (Score={btc_score}, RSI={btc_rsi:.1f}, Trend={btc_trend})"
         print(f"🪙 [GUARDIÁN BITCOIN] Estado Macro: {btc_status_str}")
@@ -568,8 +568,8 @@ def run_infinite_trading_matrix_cycle():
             target_vol_surge = ai_opp_data.get("tech", {}).get("indicators", {}).get("volume_surge", 1.0)
 
             # PRECISION SNIPER GATE (Francisca Serrano / Hyenuk Chu)
-            if ai_score < 65:
-                print(f"🛡️ [ESCUDO CAPITAL REAL] Compra en {ai_symbol} bloqueada (Score {ai_score} < 65). Solo operamos Setups A+ para dinero real.")
+            if ai_score < 55:
+                print(f"🛡️ [ESCUDO CAPITAL REAL] Compra en {ai_symbol} bloqueada (Score {ai_score} < 55). Solo operamos Setups A+ para dinero real.")
                 api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
             elif is_btc_crashing and ai_symbol != "BTCUSDT":
                 print(f"🛡️ [FILTRO CRASH BTC] Entrada LONG bloqueada en {ai_symbol}. Bitcoin en colapso activo ({btc_status_str}). Protegiendo capital.")
@@ -589,18 +589,18 @@ def run_infinite_trading_matrix_cycle():
                     is_bearish=False,
                     is_learned_signal=True
                 )
-        elif best_spot_long and best_spot_long["score"] >= 75:
+        elif best_spot_long and best_spot_long["score"] >= 65:
             bs_sym = best_spot_long["symbol"]
             bs_data = symbol_analysis_map.get(bs_sym, {})
             bs_price = bs_data.get("price", 0)
             bs_score = best_spot_long["score"]
             
             # Check BTC correlation if trading an Altcoin
-            if bs_sym != "BTCUSDT" and (is_btc_bearish or btc_score < 50):
-                print(f"🛡️ [FILTRO CORRELACIÓN BTC] Oportunidad {bs_sym} ({bs_score} Pts) bloqueada porque Bitcoin no tiene fuerza ({btc_status_str}). Protegiendo capital.")
+            if bs_sym != "BTCUSDT" and is_btc_crashing:
+                print(f"🛡️ [FILTRO CRASH BTC] Oportunidad {bs_sym} ({bs_score} Pts) bloqueada porque Bitcoin está en CRASH activo ({btc_status_str}). Protegiendo capital.")
                 api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
             else:
-                print(f"🎯 [REAL SPOT A+] Oportunidad alcista independiente detectada ({bs_sym} @ {bs_score} Pts >= 75). Evaluando cuenta real...")
+                print(f"🎯 [REAL SPOT A+] Oportunidad alcista independiente detectada ({bs_sym} @ {bs_score} Pts >= 65). Evaluando cuenta real...")
                 api_connector.evaluate_and_trade_real_money(
                     best_symbol=bs_sym,
                     best_score=bs_score,

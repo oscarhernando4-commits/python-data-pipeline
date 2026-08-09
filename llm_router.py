@@ -293,7 +293,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
        - Compara con las 99 simulaciones pasadas ({market_bias_ctx}), patrones prohibidos/potenciados y la tabla All-Time de simulaciones.
     
     6. 🛡️ AGENTE 6 - CHIEF RISK OFFICER (Juez Supremo de Riesgo - Francisca Serrano & Hyenuk Chu):
-       - Posee VETO ABSOLUTO. Regla #1: No perder dinero. Regla #2: No olvidar la regla #1. Activa Trailing Stop ATR dinámico al alcanzar +2.0%. Exige convicción A+ (Score >= 65, Confianza >= 70%).
+       - Posee VETO ABSOLUTO. Regla #1: No perder dinero. Regla #2: No olvidar la regla #1. Activa Trailing Stop ATR dinámico al alcanzar +2.0%. Exige convicción A+ (Score >= 55, Confianza >= 70%).
     
     7. 👑 AGENTE 7 - CEO & ANTI-LOSS PROFIT MAXIMIZER (Chief Executive Orchestrator):
        - LÍDER SUPREMO Y ORQUESTADOR DE RENTABILIDAD. Sinteriza las opiniones de los otros 6 agentes. Bloquea absolutamente cualquier patrón que coincida con pérdidas pasadas y autoriza Trailing Stop ATR para exprimir súper-tendencias de +5%, +10% o +20%+.
@@ -312,7 +312,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     {candidates_prompt_text}
 
     REGLAS DE ORO PARA LA TOMA DE DECISIONES (SPOT ONLY):
-    1. 🛡️ UMBRAL MÍNIMO A+ (Score >= 65): NUNCA apruebes una compra para un activo con Score Técnico < 65 o en caída libre. Si ningún candidato tiene Score >= 65 con confirmación de volumen, la respuesta OBLIGATORIA es responder "NONE" con "action": "HOLD".
+    1. 🛡️ UMBRAL MÍNIMO A+ (Score >= 55): NUNCA apruebes una compra para un activo con Score Técnico < 55 o en caída libre. Si ningún candidato tiene Score >= 55 con confirmación de volumen, la respuesta OBLIGATORIA es responder "NONE" con "action": "HOLD".
     2. 🚫 PROHIBIDO 'FALLING KNIVES': Si un activo tiene Score bajo (15, 20, 30), NO intentes adivinar un rebote especulativo. Deja que el mercado limpie a los minoristas.
     3. 🌊 SOPORTE EN LIBRO DE ÓRDENES: Prioriza candidatos con Bids Compradores >= 55% que confirmen muros de soporte de ballenas.
     4. 🧩 ROTACIÓN SECTORIAL: Favorece activos pertenecientes a sectores con entrada masiva de capital ({sector_summary['top_sector']}).

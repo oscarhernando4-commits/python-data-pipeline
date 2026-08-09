@@ -35,9 +35,15 @@ FIXIE_POOL = [
     "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80",   # oscarhernando4 (420/500)
 ]
 
-# Balanceador Inteligente: Prioriza las 9 cuentas con menor consumo (excluye la de 420/500 como reserva)
-PROXY_URL = random.choice(FIXIE_POOL[:9])
-PROXIES = {"http": PROXY_URL, "https": PROXY_URL}
+# Balanceador Inteligente Dinámico: Rota proxy por cada solicitud (no estático)
+def get_proxy():
+    """Selecciona un proxy aleatorio del pool en cada llamada para distribuir consumo."""
+    url = random.choice(FIXIE_POOL[:9])
+    return {"http": url, "https": url}
+
+# Legacy compatibility (solo para imports externos)
+PROXY_URL = FIXIE_POOL[0]
+PROXIES = get_proxy()
 
 API_KEY = os.getenv("BINANCE_REAL_API_KEY", "")
 API_SECRET = os.getenv("BINANCE_REAL_API_SECRET", "")
@@ -117,7 +123,7 @@ def get_real_balances():
     
     url = f"{BASE_URL}/api/v3/account"
     try:
-        res = requests.get(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
+        res = requests.get(url, headers=headers, params=params, timeout=10)
         if res.status_code == 200:
             return res.json().get("balances", [])
         return None
@@ -138,7 +144,7 @@ def get_real_futures_balances():
     
     url = f"{FAPI_URL}/fapi/v2/account"
     try:
-        res = requests.get(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
+        res = requests.get(url, headers=headers, params=params, timeout=10)
         if res.status_code == 200:
             return res.json().get("assets", [])
         return None
@@ -155,7 +161,7 @@ def get_real_futures_positions():
     
     url = f"{FAPI_URL}/fapi/v2/positionRisk"
     try:
-        res = requests.get(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
+        res = requests.get(url, headers=headers, params=params, timeout=10)
         if res.status_code == 200:
             positions = res.json()
             return [p for p in positions if float(p.get("positionAmt", 0)) != 0.0]
@@ -192,7 +198,7 @@ def get_symbol_price(symbol, is_futures=False):
     # Fallback to proxy if direct access has networking issues
     try:
         url = f"https://api.binance.com/api/v3/ticker/price?symbol={symbol}"
-        res = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, proxies=PROXIES, timeout=6)
+        res = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, proxies=get_proxy(), timeout=6)
         if res.status_code == 200:
             p = float(res.json().get("price", 0))
             if p > 0:
@@ -238,7 +244,7 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
     
     url = f"{BASE_URL}/api/v3/order"
     try:
-        res = requests.post(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
+        res = requests.post(url, headers=headers, params=params, proxies=get_proxy(), timeout=10)
         res_json = res.json()
         if "orderId" in res_json or res_json.get("status") == "FILLED":
             # Real-Time Balance Sync via Fixie Proxy upon Trade Opening
@@ -309,7 +315,7 @@ def execute_real_spot_market_sell(symbol, quantity=None):
     
     url = f"{BASE_URL}/api/v3/order"
     try:
-        res = requests.post(url, headers=headers, params=params, proxies=PROXIES, timeout=10)
+        res = requests.post(url, headers=headers, params=params, proxies=get_proxy(), timeout=10)
         res_json = res.json()
         if "orderId" in res_json or res_json.get("status") == "FILLED":
             # Real-Time Balance Sync via Fixie Proxy upon Trade Closing
@@ -444,7 +450,7 @@ def transfer_usdt(amount, to_futures=True):
     query = urlencode(params)
     sig = hmac.new(API_SECRET.encode("utf-8"), query.encode("utf-8"), hashlib.sha256).hexdigest()
     try:
-        res = requests.post(f"{BASE_URL}/sapi/v1/asset/transfer", headers={"X-MBX-APIKEY": API_KEY}, params={**params, "signature": sig}, proxies=PROXIES, timeout=10)
+        res = requests.post(f"{BASE_URL}/sapi/v1/asset/transfer", headers={"X-MBX-APIKEY": API_KEY}, params={**params, "signature": sig}, proxies=get_proxy(), timeout=10)
         print(f"🔄 Auto-Transfer {'to Futures' if to_futures else 'to Spot'}: {res.json()}")
         return res.json()
     except Exception as e:
@@ -476,19 +482,19 @@ def execute_real_futures_market_short(symbol, usdt_amount):
         m_params = {"symbol": symbol, "marginType": "ISOLATED", "timestamp": timestamp}
         m_query = urlencode(m_params)
         m_sig = hmac.new(API_SECRET.encode("utf-8"), m_query.encode("utf-8"), hashlib.sha256).hexdigest()
-        requests.post(f"{FAPI_URL}/fapi/v1/marginType", headers=headers, params={**m_params, "signature": m_sig}, proxies=PROXIES, timeout=5)
+        requests.post(f"{FAPI_URL}/fapi/v1/marginType", headers=headers, params={**m_params, "signature": m_sig}, proxies=get_proxy(), timeout=5)
     except Exception:
         pass
 
     # 2. Fetch live price AND correct quantity precision from exchangeInfo
     try:
-        price_res = requests.get(f"{FAPI_URL}/fapi/v1/ticker/price?symbol={symbol}", proxies=PROXIES, timeout=5).json()
+        price_res = requests.get(f"{FAPI_URL}/fapi/v1/ticker/price?symbol={symbol}", proxies=get_proxy(), timeout=5).json()
         price = float(price_res.get("price", 1.0))
         
         # Get correct quantity precision for this symbol
         qty_precision = 3  # default
         try:
-            exinfo = requests.get(f"{FAPI_URL}/fapi/v1/exchangeInfo", proxies=PROXIES, timeout=5).json()
+            exinfo = requests.get(f"{FAPI_URL}/fapi/v1/exchangeInfo", proxies=get_proxy(), timeout=5).json()
             sym_info = next((s for s in exinfo['symbols'] if s['symbol'] == symbol), None)
             if sym_info:
                 qty_precision = int(sym_info.get('quantityPrecision', 3))
@@ -541,7 +547,7 @@ def execute_real_futures_market_short(symbol, usdt_amount):
     entry_params["signature"] = entry_sig
     
     try:
-        entry_res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=entry_params, proxies=PROXIES, timeout=10)
+        entry_res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=entry_params, proxies=get_proxy(), timeout=10)
         entry_data = entry_res.json()
         if "orderId" not in entry_data:
             return {"error": f"Entry order failed: {entry_data}"}
@@ -565,7 +571,7 @@ def execute_real_futures_market_short(symbol, usdt_amount):
             q = urlencode(p)
             s = hmac.new(API_SECRET.encode("utf-8"), q.encode("utf-8"), hashlib.sha256).hexdigest()
             p["signature"] = s
-            sl_tp_res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=p, proxies=PROXIES, timeout=10)
+            sl_tp_res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=p, proxies=get_proxy(), timeout=10)
             print(f"  ✅ {sl_tp_type} order placed: {sl_tp_res.json().get('orderId', sl_tp_res.text)}")
         except Exception as e:
             print(f"  ⚠️ {sl_tp_type} order failed: {e}")
@@ -579,7 +585,7 @@ def execute_real_futures_market_close(symbol, quantity):
     
     qty_precision = 3  # default
     try:
-        exinfo = requests.get(f"{FAPI_URL}/fapi/v1/exchangeInfo", proxies=PROXIES, timeout=5).json()
+        exinfo = requests.get(f"{FAPI_URL}/fapi/v1/exchangeInfo", proxies=get_proxy(), timeout=5).json()
         sym_info = next((s for s in exinfo['symbols'] if s['symbol'] == symbol), None)
         if sym_info:
             qty_precision = int(sym_info.get('quantityPrecision', 3))
@@ -606,7 +612,7 @@ def execute_real_futures_market_close(symbol, quantity):
     headers = {"X-MBX-APIKEY": API_KEY}
     
     try:
-        res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=params, proxies=PROXIES, timeout=10)
+        res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=params, proxies=get_proxy(), timeout=10)
         res_json = res.json()
         
         # Only transfer balance back to spot if the close order was successful
@@ -896,26 +902,29 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 elif mtf_res.get("is_overextended_15m"):
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} rechazado por vela de 15m sobre-extendida / mecha de trampa ({mtf_res.get('overextension_reason')}).")
-                elif tf_align.get("5m") != "BULLISH" or tf_align.get("15m") != "BULLISH":
+                elif tf_align.get("15m") != "BULLISH":
                     is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de alineación alcista simultánea en 5m y 15m (Alignment: {tf_align}).")
+                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de alineación alcista en 15m (Alignment: {tf_align}).")
+                elif tf_align.get("5m") != "BULLISH" and best_score < 70:
+                    is_stable = True
+                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de alineación en 5m con Score < 70 (Score={best_score}, Alignment: {tf_align}).")
                 else:
                     import orderbook_analyzer
                     ob_info = orderbook_analyzer.fetch_orderbook_depth(best_symbol, limit=20, proxies=proxies)
-                    if ob_info.get("spread_pct", 0.0) > 0.25:
+                    if ob_info.get("spread_pct", 0.0) > 0.75:
                         is_stable = True
-                        print(f"⛔ Compra rechazada: {best_symbol} descalificado por Spread elevado ({ob_info.get('spread_pct'):.3f}% > 0.25%). Evitando deslizamiento de precio.")
-                    elif ob_info.get("bid_dominance_pct", 50.0) < 55.0:
+                        print(f"⛔ Compra rechazada: {best_symbol} descalificado por Spread elevado ({ob_info.get('spread_pct'):.3f}% > 0.75%). Evitando deslizamiento de precio.")
+                    elif ob_info.get("bid_dominance_pct", 50.0) < 48.0:
                         is_stable = True
-                        print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de muro comprador (Bids: {ob_info.get('bid_dominance_pct')}% < 55.0%).")
+                        print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de muro comprador (Bids: {ob_info.get('bid_dominance_pct')}% < 48.0%).")
                     else:
                         is_yellow = mtf_res.get("is_yellow_arrow_pivot", False)
                         arrow_lbl = " 🎯 [PATRÓN FLECHAS AMARILLAS 15M PIVOT REBOUND]" if is_yellow else ""
-                        print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}{arrow_lbl}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.25% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=55% OK)")
+                        print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}{arrow_lbl}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.75% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=48% OK)")
                 
         if bias_ok and not is_stable:
-            # 1. LONG Entry Signal (Operates with 100% of available USDT, strictly requires Score >= 65 Setup A+)
-            min_required_score = max(65, real_long_score) if not is_learned_signal else 65
+            # 1. LONG Entry Signal (Operates with 100% of available USDT, strictly requires Score >= 55 Setup A+)
+            min_required_score = max(55, real_long_score) if not is_learned_signal else 55
             if best_symbol and not is_bearish and best_score >= min_required_score and usdt_free >= 5.1:
                 trigger_reason = "AUTO-APRENDIZAJE A+" if is_learned_signal else f"Score {real_long_score}+"
                 print(f"🚀 SEÑAL ALCISTA (LONG) ({best_symbol} @ {best_score} Pts - {trigger_reason}). Comprando con ${usdt_free:.1f} USDT (100% Capital)...")

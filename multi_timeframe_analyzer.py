@@ -17,18 +17,10 @@ STABLECOIN_TICKERS = {
     "SNDK", "SNDKB", "CRCLB", "SPCXB", "QQQB", "USDT", "USTC", "FRAX", "USDK", "VAI"
 }
 
-FIXIE_POOL = [
-    "http://fixie:YOtqrUO1HVYG2xM@ventoux.usefixie.com:80",
-    "http://fixie:WWaxRExXfmPL05s@ventoux.usefixie.com:80",
-    "http://fixie:f9ibnMDQHLjZTpM@ventoux.usefixie.com:80",
-    "http://fixie:zW3cwceDZ64c1lE@ventoux.usefixie.com:80",
-    "http://fixie:ygTezfOLKeqEhhF@ventoux.usefixie.com:80",
-    "http://fixie:V9uciGagtBF2MJc@ventoux.usefixie.com:80",
-    "http://fixie:gnvJakG6jyBrS04@ventoux.usefixie.com:80",
-    "http://fixie:ak4QPysr5gnUAQW@ventoux.usefixie.com:80",
-    "http://fixie:SIOQ4x5oF0pbFju@ventoux.usefixie.com:80",
-    "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80",
-]
+try:
+    from api_connector import get_proxy
+except ImportError:
+    get_proxy = None
 
 def is_stablecoin(symbol):
     """
@@ -61,14 +53,14 @@ def fetch_klines_public(symbol, interval, limit=30):
     except Exception:
         pass
         
-    # Fallback with proxy
-    try:
-        p_url = random.choice(FIXIE_POOL[:9])
-        res = requests.get(url, params=params, proxies={"http": p_url, "https": p_url}, timeout=8)
-        if res.status_code == 200:
-            return res.json()
-    except Exception:
-        pass
+    # Fallback with proxy (dynamic rotation)
+    if get_proxy:
+        try:
+            res = requests.get(url, params=params, proxies=get_proxy(), timeout=8)
+            if res.status_code == 200:
+                return res.json()
+        except Exception:
+            pass
     return []
 
 def analyze_multi_timeframe_candles(symbol):
@@ -167,19 +159,19 @@ def analyze_multi_timeframe_candles(symbol):
         lower_wick_pct = round((lower_wick / candle_range) * 100.0, 1) if candle_range > 0 else 0.0
         
         # Yellow Arrow 15M Pivot Rebound Pattern Detector (Support retest + buyer absorption wick + 5m momentum)
-        is_yellow_arrow_pivot = (0.0 <= dist_from_15m_ma7_pct <= 1.2) and (lower_wick_pct >= 20.0 or close_15m > open_15m) and tf_5m_up
+        is_yellow_arrow_pivot = (0.0 <= dist_from_15m_ma7_pct <= 3.0) and (lower_wick_pct >= 20.0 or close_15m > open_15m) and tf_5m_up
         yellow_arrow_status = "🎯 PATRÓN FLECHAS AMARILLAS (REBOTE PIVOTE A+ EN MA7/MA25)" if is_yellow_arrow_pivot else "⚪ NEUTRAL 15M"
 
         # Spike up followed by rejection wick (buying top trap)
         if candle_range > 0 and (upper_wick / candle_range) > 0.35 and (high_15m - low_15m) / low_15m > 0.012:
             is_overextended_15m = True
             overextension_reason = f"Mecha superior de reversión en vela de 15m ({upper_wick/candle_range*100:.1f}% del rango)"
-        elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > 2.5:
+        elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > 4.0:
             is_overextended_15m = True
             overextension_reason = f"Vela de 15m sobre-extendida en la cima (+{((close_15m - open_15m) / open_15m) * 100.0:.2f}%)"
-        elif dist_from_15m_ma7_pct > 1.2:
+        elif dist_from_15m_ma7_pct > 3.0:
             is_overextended_15m = True
-            overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct}% sobre MA7). Exige ruptura fresca <= 1.2%"
+            overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct}% sobre MA7). Exige ruptura fresca <= 3.0%"
         elif not price_above_15m_ma7 or not price_above_15m_ma25:
             is_overextended_15m = True
             overextension_reason = f"Precio de 15m por debajo de medias móviles (Precio: {closes_15m[-1]} < MA7: {ma7_15m:.4f} / MA25: {ma25_15m:.4f})"
@@ -190,7 +182,7 @@ def analyze_multi_timeframe_candles(symbol):
     pattern_15m_summary = (
         f"Precio 15m=${closes_15m[-1]:.4f} | MA7_15m=${ma7_15m:.4f} (Distancia: {dist_from_15m_ma7_pct:+.2f}%) | "
         f"MA25_15m=${ma25_15m:.4f} | Por encima MA7/MA25={'SÍ' if price_above_15m_ma7 and price_above_15m_ma25 else 'NO'} | "
-        f"Fase 15m={'RUPTURA_FRESCA (INICIO)' if 0.0 <= dist_from_15m_ma7_pct <= 1.2 else 'SOBRE_EXTENDIDO (CIMA)'} | "
+        f"Fase 15m={'RUPTURA_FRESCA (INICIO)' if 0.0 <= dist_from_15m_ma7_pct <= 3.0 else 'SOBRE_EXTENDIDO (CIMA)'} | "
         f"Patrón={yellow_arrow_status} | VolSurge 15m={vol_surge_15m}x"
     )
 
