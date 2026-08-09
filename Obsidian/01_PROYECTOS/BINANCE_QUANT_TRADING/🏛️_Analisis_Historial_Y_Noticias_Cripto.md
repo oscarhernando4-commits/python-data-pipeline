@@ -1593,3 +1593,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-44.59%)`, `2024-12-09 (-21.82%)`, `2025-03-03 (-18.86%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: THEUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2024-11-27` hasta `2026-08-09` (621 Días de Historial)
+- 💵 **Precio Actual:** `$0.0672 USD`
+- 📈 **Máximo Histórico (ATH):** `$4.1855 USD` (`2024-11-27`) | Distancia: `-98.39%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0457 USD` (`2026-07-01`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-11-27 (+1719.14%)`, `2025-07-15 (+67.62%)`, `2025-02-12 (+42.17%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-42.07%)`, `2024-12-09 (-25.4%)`, `2026-03-15 (-23.01%)`
+
+---
