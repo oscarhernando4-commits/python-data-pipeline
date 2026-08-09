@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-09 04:08:17",
+  "timestamp": "2026-08-09 04:10:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con los criterios estrictos de convicción A+ exigidos por el comité. La alta volatilidad, la falta de muros de soporte claros en el orderbook y el historial de pérdidas en condiciones de mercado neutrales dictan una postura de espera (HOLD) para proteger el capital institucional.",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre y baja profundidad, donde los activos con scores técnicos aceptables carecen de soporte real en el libro de órdenes. Para preservar el capital institucional, se ha decidido no ejecutar ninguna operación, manteniendo la posición en efectivo hasta que se observe una estructura de mercado más robusta y con menor riesgo sistémico.",
   "top_candidates": [
     {
       "symbol": "CRVUSDT",
       "score": 70
     },
     {
-      "symbol": "SOLUSDT",
-      "score": 60
+      "symbol": "JTOUSDT",
+      "score": 70
     },
     {
       "symbol": "HBARUSDT",
       "score": 60
     },
     {
-      "symbol": "PENGUUSDT",
+      "symbol": "SOLUSDT",
       "score": 60
     },
     {
-      "symbol": "JUPUSDT",
+      "symbol": "PENGUUSDT",
       "score": 60
     }
   ]
