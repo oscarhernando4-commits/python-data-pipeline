@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-09 20:36:17",
+  "timestamp": "2026-08-09 20:38:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado se encuentra en una fase de distribución institucional agresiva. Ningún activo cumple con el umbral de seguridad A+ (Score >= 55) y la falta de soporte claro en el libro de órdenes, sumada a la inestabilidad técnica global, obliga a mantener una postura de protección de capital (HOLD) hasta que las condiciones mejoren.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada con una alta correlación negativa. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes verificado), y el historial de trades recientes sugiere que intentar capturar rebotes en este entorno resulta en pérdidas recurrentes. Se prioriza la protección del capital hasta que el ratio de activos débiles disminuya.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "UNIUSDT",
       "score": 60
     },
     {
-      "symbol": "UNIUSDT",
+      "symbol": "SHIBUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "ONDOUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "AAVEUSDT",
       "score": 60
     }
   ]
