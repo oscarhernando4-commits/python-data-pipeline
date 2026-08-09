@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-09 17:24:20",
+  "timestamp": "2026-08-09 17:26:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, la falta de soporte en el libro de órdenes y el entorno macro de alta fragilidad no cumplen con los estándares de seguridad y rentabilidad exigidos para una ejecución A+.",
+  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 55 y Confianza >= 70%) ni presenta una estructura de soporte institucional sólida en el libro de órdenes. La alta volatilidad y la inestabilidad macroeconómica sugieren que el riesgo de 'falling knives' es demasiado elevado, por lo que se prioriza la protección del capital sobre la ejecución de trades especulativos.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "NEARUSDT",
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "COOKIEUSDT",
       "score": 75
     },
     {
       "symbol": "NEXOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "FETUSDT",
       "score": 75
     }
   ]
