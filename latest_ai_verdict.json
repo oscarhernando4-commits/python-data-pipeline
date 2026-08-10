@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-10 07:46:26",
+  "timestamp": "2026-08-10 07:48:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de indecisión estructural con una alta tasa de fallos en los trades recientes. Ningún activo cumple con los criterios de convicción A+ (Score >= 55 y Bids > 55%), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de consolidación con sentimiento de miedo, lo que aumenta la probabilidad de falsos breakouts. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes claro) necesario para garantizar la preservación del capital, por lo que se prioriza la liquidez.",
   "top_candidates": [
     {
-      "symbol": "WLFIUSDT",
-      "score": 75
-    },
-    {
       "symbol": "POLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "MUBUSDT",
       "score": 75
     },
     {
@@ -23,8 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "SPYBUSDT",
+      "symbol": "MUBUSDT",
       "score": 75
+    },
+    {
+      "symbol": "GNOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 70
     }
   ]
 }
