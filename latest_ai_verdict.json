@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 17:50:24",
+  "timestamp": "2026-08-10 12:50:36",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una correlación bajista sistémica. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 55) ni con la convicción necesaria para mitigar el riesgo de 'falling knives', por lo que se mantiene la posición en efectivo para preservar el capital.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "PYTHUSDT",
@@ -18,8 +18,8 @@
     {
       "symbol": "ETHUSDT",
       "score": 55,
-      "price": 1874.73,
-      "rsi_15m": 25.9,
+      "price": 1875.58,
+      "rsi_15m": 26.57,
       "vol_surge": 0.12,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
@@ -27,45 +27,18 @@
     {
       "symbol": "TUTUSDT",
       "score": 50,
-      "price": 0.1371,
-      "rsi_15m": 55.95,
-      "vol_surge": 0.69,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "BANKUSDT",
-      "score": 50,
-      "price": 0.0389,
-      "rsi_15m": 55.6,
-      "vol_surge": 0.14,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "JSTUSDT",
-      "score": 50,
-      "price": 0.10136,
-      "rsi_15m": 65.46,
-      "vol_surge": 0.12,
+      "price": 0.13731,
+      "rsi_15m": 56.13,
+      "vol_surge": 0.71,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "FILUSDT",
       "score": 50,
-      "price": 0.6999,
-      "rsi_15m": 50.4,
+      "price": 0.7002,
+      "rsi_15m": 51.2,
       "vol_surge": 0.07,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "CAKEUSDT",
-      "score": 50,
-      "price": 1.448,
-      "rsi_15m": 52.96,
-      "vol_surge": 0.21,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -81,18 +54,45 @@
     {
       "symbol": "ETHFIUSDT",
       "score": 50,
-      "price": 0.3912,
-      "rsi_15m": 49.17,
-      "vol_surge": 0.48,
+      "price": 0.2177,
+      "rsi_15m": 58.25,
+      "vol_surge": 0.59,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "TIAUSDT",
+      "score": 50,
+      "price": 0.3271,
+      "rsi_15m": 49.95,
+      "vol_surge": 0.04,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "CRVUSDT",
       "score": 50,
-      "price": 0.2474,
-      "rsi_15m": 67.05,
-      "vol_surge": 0.13,
+      "price": 0.10136,
+      "rsi_15m": 65.46,
+      "vol_surge": 0.12,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 45,
+      "price": 4338.96,
+      "rsi_15m": 60.18,
+      "vol_surge": 0.27,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "score": 45,
+      "price": 4352.64,
+      "rsi_15m": 59.74,
+      "vol_surge": 0.32,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
