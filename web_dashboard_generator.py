@@ -445,6 +445,46 @@ def generate_web_dashboard():
         .refresh-btn:hover {{ background: rgba(6, 182, 212, 0.25); transform: scale(1.03); }}
         .countdown {{ color: var(--accent-cyan); font-weight: 600; font-size: 0.78rem; }}
 
+        /* ============ WALLET ASSETS (Binance-style) ============ */
+        .wallet-section {{
+            background: var(--card-bg); border: 1px solid var(--card-border);
+            backdrop-filter: blur(12px); border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem;
+        }}
+        .wallet-total {{ margin-bottom: 1rem; }}
+        .wallet-total-label {{ font-size: 0.75rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; }}
+        .wallet-total-value {{ font-size: 2.2rem; font-weight: 900; color: var(--text-main); letter-spacing: -1px; }}
+        .wallet-total-currency {{ font-size: 1rem; font-weight: 600; color: var(--text-muted); }}
+        .wallet-tabs {{ display: flex; gap: 1.5rem; border-bottom: 1px solid var(--card-border); margin-bottom: 1rem; padding-bottom: 0; }}
+        .wallet-tab {{
+            font-size: 0.82rem; font-weight: 600; color: var(--text-dim); padding-bottom: 0.6rem; cursor: pointer;
+            border-bottom: 2px solid transparent; transition: color 0.2s;
+        }}
+        .wallet-tab-active {{ color: var(--text-main); border-bottom-color: var(--accent-amber); }}
+        .assets-table {{ }}
+        .assets-header {{
+            display: flex; justify-content: space-between; padding: 0.4rem 0;
+            font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;
+        }}
+        .asset-row {{
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.85rem 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+            transition: background 0.2s;
+        }}
+        .asset-row:hover {{ background: rgba(255,255,255,0.02); margin: 0 -1rem; padding-left: 1rem; padding-right: 1rem; border-radius: 8px; }}
+        .asset-row:last-child {{ border-bottom: none; }}
+        .asset-info {{ display: flex; align-items: center; gap: 0.75rem; }}
+        .asset-icon {{
+            width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center;
+            font-size: 1rem; font-weight: 800; color: white;
+        }}
+        .asset-icon-usdt {{ background: linear-gradient(135deg, #26a17b, #1a8a6a); }}
+        .asset-icon-bnb {{ background: linear-gradient(135deg, #f0b90b, #d4a30a); }}
+        .asset-name {{ font-size: 0.95rem; font-weight: 700; color: var(--text-main); }}
+        .asset-fullname {{ font-size: 0.72rem; color: var(--text-dim); }}
+        .asset-amounts {{ text-align: right; }}
+        .asset-qty {{ font-size: 0.95rem; font-weight: 600; color: var(--text-main); font-variant-numeric: tabular-nums; }}
+        .asset-usd {{ font-size: 0.78rem; color: var(--text-muted); }}
+
         @media (max-width: 768px) {{
             body {{ padding: 1rem; }}
             .header {{ flex-direction: column; gap: 0.75rem; align-items: flex-start; }}
