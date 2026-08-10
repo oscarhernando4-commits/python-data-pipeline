@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-10 12:48:19",
+  "timestamp": "2026-08-10 12:50:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una asimetría bajista severa y falta de soporte estructural. Ninguno de los candidatos cumple con el umbral de seguridad A+ requerido por el comité, por lo que se mantiene la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un entorno de alta fragilidad con una presión de venta constante. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT y evitar la exposición a activos con baja convicción y alto riesgo de reversión.",
   "top_candidates": [
     {
-      "symbol": "NEARUSDT",
+      "symbol": "FETUSDT",
       "score": 60
     },
     {
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "ARBUSDT",
       "score": 60
     },
     {
-      "symbol": "FETUSDT",
+      "symbol": "PYTHUSDT",
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
-      "score": 60
+      "symbol": "NILUSDT",
+      "score": 50
     }
   ]
 }
