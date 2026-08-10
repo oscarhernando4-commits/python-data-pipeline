@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 09:52:18",
+  "timestamp": "2026-08-10 09:54:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "Tras la deliberación, el comité ha determinado que no existen activos que cumplan con el umbral de seguridad A+ (Score >= 55) y la confirmación de volumen institucional necesaria. La alta probabilidad de 'falling knives' y la falta de soporte claro en el orderbook obligan a la preservación total del capital en espera de una estructura de mercado más robusta.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional silenciosa con alta debilidad sistémica. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "LINKUSDT",
@@ -19,12 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "CRVUSDT",
       "score": 60
     },
     {
-      "symbol": "CRVUSDT",
-      "score": 60
+      "symbol": "BABYUSDT",
+      "score": 50
     }
   ]
 }
