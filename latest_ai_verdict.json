@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-10 01:02:21",
+  "timestamp": "2026-08-10 01:04:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el entorno actual es de alto riesgo sistémico. Ningún activo cumple con el umbral mínimo de Score A+ (>= 55) ni con la confirmación de volumen institucional necesaria para una entrada segura. Se prioriza la preservación de capital sobre la especulación en un mercado de capitulación.",
+  "reasoning": "El comité ha determinado por consenso unánime que el entorno de mercado actual es de alta toxicidad y distribución institucional. Ningún activo cumple con los criterios de convicción A+ (Score >= 55) exigidos por el Chief Risk Officer. Se prioriza la preservación del capital sobre la especulación, manteniendo la posición en efectivo (HOLD) hasta que las condiciones macro mejoren.",
   "top_candidates": [
-    {
-      "symbol": "EPICUSDT",
-      "score": 70
-    },
     {
       "symbol": "TRXUSDT",
       "score": 60
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "THEUSDT",
+      "symbol": "XPLUSDT",
       "score": 60
     },
     {
-      "symbol": "DYMUSDT",
-      "score": 60
+      "symbol": "EPICUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "BABYUSDT",
+      "score": 50
     }
   ]
 }
