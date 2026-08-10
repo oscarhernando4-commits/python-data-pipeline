@@ -652,7 +652,7 @@ def run_infinite_trading_matrix_cycle():
         
         # Check if there is a top bullish Spot opportunity across all analyzed pairs
         best_spot_long = None
-        long_candidates = [c for c in bullish_candidates if c["score"] >= real_long_score]
+        long_candidates = [c for c in bullish_candidates if c["score"] >= 58]
         if long_candidates:
             long_candidates.sort(key=lambda x: x["score"], reverse=True)
             best_spot_long = long_candidates[0]
@@ -668,11 +668,11 @@ def run_infinite_trading_matrix_cycle():
             elif is_btc_crashing and ai_symbol != "BTCUSDT":
                 print(f"🛡️ [FILTRO CRASH BTC] Entrada LONG bloqueada en {ai_symbol}. Bitcoin en colapso activo ({btc_status_str}). Protegiendo capital.")
                 api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
-            elif is_btc_weak and ai_symbol != "BTCUSDT" and not (ai_score >= 70 or target_vol_surge >= 2.0):
-                print(f"🛡️ [FILTRO CORRELACIÓN BTC] Entrada en {ai_symbol} bloqueada (Score {ai_score}, VolSurge {target_vol_surge:.2f}x). Se exige Score>=70 o VolSurge>=2.0x durante BTC débil ({btc_status_str}).")
+            elif is_btc_weak and ai_symbol != "BTCUSDT" and not (ai_score >= 65 or target_vol_surge >= 1.8):
+                print(f"🛡️ [FILTRO CORRELACIÓN BTC] Entrada en {ai_symbol} bloqueada (Score {ai_score}, VolSurge {target_vol_surge:.2f}x). Se exige Score>=65 o VolSurge>=1.8x durante BTC débil ({btc_status_str}).")
                 api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
-            elif ai_confidence < 70:
-                print(f"🛡️ [FILTRO CONFIANZA IA] Confianza de Gemini ({ai_confidence}%) menor al umbral mínimo (70%). Esperando mejor setup.")
+            elif ai_confidence < 60:
+                print(f"🛡️ [FILTRO CONFIANZA IA] Confianza de Gemini ({ai_confidence}%) menor al umbral mínimo (60%). Esperando mejor setup.")
                 api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
             else:
                 print(f"💰 [REAL A+] Señal ALCISTA Aprobada por IA ({ai_symbol} @ {ai_score} Pts, VolSurge={target_vol_surge:.2f}x, Conf={ai_confidence}%). Evaluando cuenta real...")
@@ -683,25 +683,38 @@ def run_infinite_trading_matrix_cycle():
                     is_bearish=False,
                     is_learned_signal=True
                 )
-        elif not is_ai_approved and best_spot_long and best_spot_long["score"] >= 75 and ai_action != "HOLD":
-            bs_sym = best_spot_long["symbol"]
+        # CALIBRACIÓN HÍBRIDA REAL: Evaluar la Top Oportunidad del Escáner (Score >= 58) con Confirmación Cuántica (GBM A+/B o Refugio)
+        elif top_15_candidates:
+            top_cand = top_15_candidates[0]
+            bs_sym = top_cand["symbol"]
+            bs_score = top_cand["score"]
             bs_data = symbol_analysis_map.get(bs_sym, {})
             bs_price = bs_data.get("price", 0)
-            bs_score = best_spot_long["score"]
+            bs_tech = bs_data.get("tech", {})
+            bs_inst = bs_tech.get("institutional_analysis", {})
+            bs_trade_qual = bs_inst.get("trade_quality", "C_NOISE")
+            target_vol_surge = bs_tech.get("indicators", {}).get("volume_surge_ratio", 1.0)
             
-            # Check BTC correlation if trading an Altcoin
-            if bs_sym != "BTCUSDT" and is_btc_crashing:
-                print(f"🛡️ [FILTRO CRASH BTC] Oportunidad {bs_sym} ({bs_score} Pts) bloqueada porque Bitcoin está en CRASH activo ({btc_status_str}). Protegiendo capital.")
-                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
+            # Condición Híbrida: Score >= 58 Y (GBM Calidad A+/B O VolSurge >= 1.5x O Refugio O Gold Token)
+            is_gold_refuge = bs_sym in ["PAXGUSDT", "XAUTUSDT"]
+            is_quant_approved = bs_trade_qual in ("A+", "B") or target_vol_surge >= 1.5 or is_gold_refuge or bs_score >= 60
+            
+            if bs_score >= 58 and is_quant_approved:
+                if is_btc_crashing and bs_sym not in ["BTCUSDT", "PAXGUSDT", "XAUTUSDT"]:
+                    print(f"🛡️ [FILTRO CRASH BTC] Oportunidad {bs_sym} ({bs_score} Pts) bloqueada. BTC en crash activo ({btc_status_str}).")
+                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
+                else:
+                    print(f"💰 [REAL HÍBRIDO] Ejecutando Top Oportunidad del Escáner en Dinero Real: {bs_sym} @ {bs_score} Pts (GBM: {bs_trade_qual}, VolSurge: {target_vol_surge:.2f}x)...")
+                    api_connector.evaluate_and_trade_real_money(
+                        best_symbol=bs_sym,
+                        best_score=bs_score,
+                        current_price=bs_price,
+                        is_bearish=False,
+                        is_learned_signal=True
+                    )
             else:
-                print(f"🎯 [REAL SPOT A+] Oportunidad alcista independiente detectada ({bs_sym} @ {bs_score} Pts >= 65). Evaluando cuenta real...")
-                api_connector.evaluate_and_trade_real_money(
-                    best_symbol=bs_sym,
-                    best_score=bs_score,
-                    current_price=bs_price,
-                    is_bearish=False,
-                    is_learned_signal=False
-                )
+                print(f"🔒 [REAL HÍBRIDO] Top Escáner {bs_sym} ({bs_score} Pts, GBM {bs_trade_qual}) no alcanza umbral híbrido (Score>=58 y Calidad A+/B). Preservando capital.")
+                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=False)
         else:
             if ai_symbol and ai_symbol != "NONE":
                 print(f"🔒 [REAL] Mercado sin setup A+ (Top={ai_symbol}, Score={ai_score}, Acción={ai_action}). Protegiendo 100% de capital en USDT.")
