@@ -327,7 +327,7 @@ def generate_web_dashboard():
         cand_ma25 = cand.get("ma25_15m", 0.0)
         
         c_score_ok = cand_score >= 58
-        c_quant_ok = cand_qual in ("A+", "B") or cand_vol >= 1.20 or cand_sym in ("PAXGUSDT", "XAUTUSDT") or cand_score >= 60
+        c_quant_ok = cand_qual in ("A+", "B") or cand_vol >= 1.20 or cand_sym in ("PAXGUSDT", "XAUTUSDT")
         c_rsi_ok = cand_rsi_2m <= 68 or cand_rsi_5m <= 68
         c_ma_ok = cand_price >= cand_ma25 if (cand_price > 0 and cand_ma25 > 0) else True
         
@@ -375,7 +375,7 @@ def generate_web_dashboard():
     ma_structure_ok = c1_price >= c1_ma25 if (c1_price > 0 and c1_ma25 > 0) else True
     
     score_ok = c1_score >= 58
-    quant_confirm = c1_qual in ("A+", "B") or c1_vol >= 1.20 or c1_sym in ("PAXGUSDT", "XAUTUSDT") or c1_score >= 60
+    quant_confirm = c1_qual in ("A+", "B") or c1_vol >= 1.20 or c1_sym in ("PAXGUSDT", "XAUTUSDT")
     fast_rsi_ok = c1_rsi_2m <= 68 or c1_rsi_5m <= 68
     
     c1_ready = has_usdt and no_open_pos and score_ok and quant_confirm and fast_rsi_ok and ma_structure_ok and btc_ok
