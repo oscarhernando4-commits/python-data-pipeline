@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2235,
-    "wins": 405,
+    "total_trades": 2249,
+    "wins": 419,
     "losses": 1830,
-    "win_rate_pct": 18.12,
-    "total_pnl_usd": -320.82769454545564
+    "win_rate_pct": 18.63,
+    "total_pnl_usd": 276.41230545454425
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BTCUSDT)"
     ],
     "boosted_patterns": [
-      "Optimized Setup for ADAUSDT: Profit logged (+$1.97) -> Win on ADAUSDT (+$1.97 net) -> Level 3 Re-Trading Started!",
       "Optimized Setup for ADAUSDT: Profit logged (+$1.97) -> Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
       "Optimized Setup for TRUMPUSDT: Profit logged (+$2.09) -> Win on TRUMPUSDT (+$2.09 net) -> Level 3 Re-Trading Started!",
       "Optimized Setup for TRUMPUSDT: Profit logged (+$2.09) -> Win on TRUMPUSDT (+$2.09 net) -> Level 2 Re-Trading Started!",
@@ -49,7 +48,8 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on EPICUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BTCUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ACEUSDT)",
-      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TSTUSDT)"
+      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TSTUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ALLOUSDT)"
     ]
   },
   "history": [
@@ -37337,6 +37337,244 @@
       "result": "LOSS",
       "notes": "Hit SL on SOLUSDT (-$0.06). Re-Trading!",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-10 11:48:55",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ALLOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3226,
+      "exit_price": 1.0,
+      "pnl_usd": 42.66,
+      "result": "WIN",
+      "notes": "Win on ALLOUSDT (+$42.66 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 50.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 11:48:56",
+      "account_id": "SIM-044",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ALLOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3226,
+      "exit_price": 1.0,
+      "pnl_usd": 42.66,
+      "result": "WIN",
+      "notes": "Win on ALLOUSDT (+$42.66 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 50.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 11:48:56",
+      "account_id": "SIM-045",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ALLOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3226,
+      "exit_price": 1.0,
+      "pnl_usd": 42.66,
+      "result": "WIN",
+      "notes": "Win on ALLOUSDT (+$42.66 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 50.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 11:48:56",
+      "account_id": "SIM-046",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ALLOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3226,
+      "exit_price": 1.0,
+      "pnl_usd": 42.66,
+      "result": "WIN",
+      "notes": "Win on ALLOUSDT (+$42.66 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 50.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 11:48:56",
+      "account_id": "SIM-048",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ALLOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3226,
+      "exit_price": 1.0,
+      "pnl_usd": 42.66,
+      "result": "WIN",
+      "notes": "Win on ALLOUSDT (+$42.66 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 50.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 11:48:56",
+      "account_id": "SIM-049",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ALLOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3226,
+      "exit_price": 1.0,
+      "pnl_usd": 42.66,
+      "result": "WIN",
+      "notes": "Win on ALLOUSDT (+$42.66 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 50.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 11:48:56",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ALLOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3226,
+      "exit_price": 1.0,
+      "pnl_usd": 42.66,
+      "result": "WIN",
+      "notes": "Win on ALLOUSDT (+$42.66 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 50.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 11:48:56",
+      "account_id": "SIM-053",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ALLOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3226,
+      "exit_price": 1.0,
+      "pnl_usd": 42.66,
+      "result": "WIN",
+      "notes": "Win on ALLOUSDT (+$42.66 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 50.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 11:48:56",
+      "account_id": "SIM-054",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ALLOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3226,
+      "exit_price": 1.0,
+      "pnl_usd": 42.66,
+      "result": "WIN",
+      "notes": "Win on ALLOUSDT (+$42.66 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 50.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 11:48:56",
+      "account_id": "SIM-055",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ALLOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3226,
+      "exit_price": 1.0,
+      "pnl_usd": 42.66,
+      "result": "WIN",
+      "notes": "Win on ALLOUSDT (+$42.66 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 50.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 11:48:56",
+      "account_id": "SIM-056",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ALLOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3226,
+      "exit_price": 1.0,
+      "pnl_usd": 42.66,
+      "result": "WIN",
+      "notes": "Win on ALLOUSDT (+$42.66 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 50.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 11:48:56",
+      "account_id": "SIM-058",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ALLOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3226,
+      "exit_price": 1.0,
+      "pnl_usd": 42.66,
+      "result": "WIN",
+      "notes": "Win on ALLOUSDT (+$42.66 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 50.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 11:48:57",
+      "account_id": "SIM-059",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ALLOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3226,
+      "exit_price": 1.0,
+      "pnl_usd": 42.66,
+      "result": "WIN",
+      "notes": "Win on ALLOUSDT (+$42.66 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 50.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 11:48:57",
+      "account_id": "SIM-060",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ALLOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3226,
+      "exit_price": 1.0,
+      "pnl_usd": 42.66,
+      "result": "WIN",
+      "notes": "Win on ALLOUSDT (+$42.66 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 50.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
