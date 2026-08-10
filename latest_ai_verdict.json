@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-10 07:48:22",
+  "timestamp": "2026-08-10 07:50:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de consolidación con sentimiento de miedo, lo que aumenta la probabilidad de falsos breakouts. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes claro) necesario para garantizar la preservación del capital, por lo que se prioriza la liquidez.",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una clara tendencia a la capitulación en activos de baja capitalización. Ninguno de los candidatos cumple con los criterios estrictos de riesgo y convicción establecidos por el comité, por lo que la decisión es preservar el capital en espera de una configuración de mercado más favorable.",
   "top_candidates": [
     {
       "symbol": "POLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SUNUSDT",
       "score": 75
     },
     {
@@ -19,12 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "GNOUSDT",
+      "symbol": "SUNUSDT",
       "score": 75
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 70
+      "symbol": "REUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "GNOUSDT",
+      "score": 75
     }
   ]
 }
