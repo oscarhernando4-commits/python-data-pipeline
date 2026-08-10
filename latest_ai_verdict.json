@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-10 08:34:20",
+  "timestamp": "2026-08-10 08:36:32",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y confirmación de soporte en libro de órdenes). El mercado se encuentra en una fase de rotación defensiva donde la preservación del capital es la prioridad absoluta. Se recomienda mantener la posición en efectivo (USDT) hasta que los indicadores técnicos y de liquidez se alineen con una tendencia alcista confirmada.",
+  "confidence": 0,
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
+    {
+      "symbol": "POLUSDT",
+      "score": 75
+    },
     {
       "symbol": "ETHFIUSDT",
       "score": 75
     },
     {
-      "symbol": "GNOUSDT",
-      "score": 75
+      "symbol": "SEIUSDT",
+      "score": 70
     },
     {
-      "symbol": "ZECUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "TRXUSDT",
+      "symbol": "BICOUSDT",
       "score": 65
     },
     {
