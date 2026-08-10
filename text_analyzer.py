@@ -83,8 +83,10 @@ def get_market_macro_context(symbol_analysis_map, fear_greed, news_headlines):
     print(f"🕵️ [Macro Analyst Lite] Analizando el contexto global de {len(symbol_analysis_map)} criptomonedas (Pool de {len(keys_pool)} Claves)...")
     
     for model_name in lite_models:
-        keys_rotated = [keys_pool[(i + llm_router._KEY_INDEX) % len(keys_pool)] for i in range(len(keys_pool))]
+        rr_idx = llm_router._get_key_index()
+        keys_rotated = [keys_pool[(i + rr_idx) % len(keys_pool)] for i in range(len(keys_pool))]
         for key in keys_rotated:
+            key_label = llm_router.get_key_label(key, keys_pool)
             try:
                 url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={key}"
                 req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers={'Content-Type': 'application/json'})
@@ -92,6 +94,7 @@ def get_market_macro_context(symbol_analysis_map, fear_greed, news_headlines):
                     res_data = json.loads(response.read().decode('utf-8'))
                     if "candidates" in res_data and len(res_data["candidates"]) > 0:
                         text_res = res_data["candidates"][0]["content"]["parts"][0]["text"].strip()
+                        llm_router._advance_key_index(key_label)  # Track successful usage
                         print(f"📊 [Macro Contexto ({model_name})]: {text_res}")
                         return text_res
             except urllib.error.HTTPError as e:

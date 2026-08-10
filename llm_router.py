@@ -5,8 +5,43 @@ import time
 import urllib.request
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
-_KEY_INDEX = 0
 _KEY_COOLDOWN = {}  # key -> timestamp when marked in cooldown
+
+# ============================================================
+# ROUND-ROBIN EQUITATIVO PERSISTENTE PARA GEMINI API KEYS
+# ============================================================
+GEMINI_KEY_STATE_FILE = os.path.join(os.path.dirname(__file__), "gemini_key_state.json")
+
+def _load_gemini_key_state():
+    """Carga el estado persistente del rotador de claves Gemini."""
+    try:
+        with open(GEMINI_KEY_STATE_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {"current_index": 0, "usage": {}, "total_calls": 0}
+
+def _save_gemini_key_state(state):
+    """Guarda el estado del rotador de claves Gemini."""
+    try:
+        with open(GEMINI_KEY_STATE_FILE, "w", encoding="utf-8") as f:
+            json.dump(state, f, indent=2, ensure_ascii=False)
+    except Exception:
+        pass
+
+def _get_key_index():
+    """Lee el índice actual del Round-Robin desde disco."""
+    return _load_gemini_key_state().get("current_index", 0)
+
+def _advance_key_index(key_label=""):
+    """Avanza el índice del Round-Robin y registra uso."""
+    state = _load_gemini_key_state()
+    state["current_index"] = state.get("current_index", 0) + 1
+    state["total_calls"] = state.get("total_calls", 0) + 1
+    if key_label:
+        usage = state.setdefault("usage", {})
+        usage[key_label] = usage.get(key_label, 0) + 1
+    state["last_used_time"] = time.strftime("%Y-%m-%d %H:%M:%S")
+    _save_gemini_key_state(state)
 
 def get_gemini_api_keys():
     """
@@ -38,6 +73,14 @@ def get_gemini_api_keys():
         
     return healthy_keys if healthy_keys else [""]
 
+def get_key_label(key, keys_pool):
+    """Retorna un label legible para tracking (Key_01, Key_02, etc)."""
+    try:
+        idx = keys_pool.index(key)
+        return f"Key_{idx+1:02d}"
+    except ValueError:
+        return f"Key_XX"
+
 def mark_key_in_cooldown(key):
     """Puts a key in 24-hour cooldown blacklist when it encounters HTTP 429 Rate Limit."""
     if key and key != "":
@@ -46,12 +89,12 @@ def mark_key_in_cooldown(key):
 
 def get_next_gemini_key():
     """Returns the next API key in round-robin sequence across the healthy key pool."""
-    global _KEY_INDEX
     keys = get_gemini_api_keys()
     if not keys or keys == [""]:
         return ""
-    key = keys[_KEY_INDEX % len(keys)]
-    _KEY_INDEX += 1
+    idx = _get_key_index()
+    key = keys[idx % len(keys)]
+    _advance_key_index(get_key_label(key, keys))
     return key
 
 def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed, macro_context="", market_bias_ctx=""):
@@ -178,9 +221,11 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     print(f"✅ [Pre-Filtro Matemático] 30 Pares analizados. Pool de {len(keys_pool)} Claves Gemini activas. Consultando al Súper-Cerebro Gemini AI (Flash-Lite Only) SOLO para el TOP 1 ({symbol})...")
     
     for model_name in models_to_try:
-        # Start from round-robin key index to balance usage across all 10 API keys
-        keys_rotated = [keys_pool[(i + _KEY_INDEX) % len(keys_pool)] for i in range(len(keys_pool))]
+        # Start from persistent round-robin key index to balance usage across all 10 API keys
+        rr_idx = _get_key_index()
+        keys_rotated = [keys_pool[(i + rr_idx) % len(keys_pool)] for i in range(len(keys_pool))]
         for key in keys_rotated:
+            key_label = get_key_label(key, keys_pool)
             try:
                 url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={key}"
                 
@@ -200,6 +245,7 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
                                 
                             parsed_res = json.loads(text_res.strip())
                             if "approved" in parsed_res and "confidence" in parsed_res:
+                                _advance_key_index(key_label)  # Track successful usage
                                 return parsed_res
                         except json.JSONDecodeError:
                             return {"approved": False, "confidence": 0, "action": "HOLD", "reasoning": "Veto de Seguridad: Fallo de formato IA"}
@@ -344,8 +390,10 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     
     keys_pool = get_gemini_api_keys()
     for model_name in models_to_try:
-        keys_rotated = [keys_pool[(i + _KEY_INDEX) % len(keys_pool)] for i in range(len(keys_pool))]
+        rr_idx = _get_key_index()
+        keys_rotated = [keys_pool[(i + rr_idx) % len(keys_pool)] for i in range(len(keys_pool))]
         for key in keys_rotated:
+            key_label = get_key_label(key, keys_pool)
             try:
                 url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={key}"
                 req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers={'Content-Type': 'application/json'})
@@ -358,6 +406,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
                         
                         parsed = json.loads(text_res.strip())
                         if "selected_symbol" in parsed:
+                            _advance_key_index(key_label)  # Track successful usage
                             return parsed
             except urllib.error.HTTPError as e:
                 if e.code == 429:

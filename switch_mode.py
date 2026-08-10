@@ -78,6 +78,25 @@ def show_status():
     except Exception:
         print("\n  📈 Sin datos de uso de proxy aún.")
     
+    # Show Gemini API key usage stats
+    GEMINI_KEY_STATE_FILE = os.path.join(os.path.dirname(__file__), "gemini_key_state.json")
+    try:
+        with open(GEMINI_KEY_STATE_FILE, "r", encoding="utf-8") as f:
+            gemini_state = json.load(f)
+        g_usage = gemini_state.get("usage", {})
+        if g_usage:
+            print("\n  🧠 USO DE CLAVES GEMINI AI (Round-Robin):")
+            g_total = sum(g_usage.values())
+            for key_name, count in sorted(g_usage.items(), key=lambda x: x[1], reverse=True):
+                pct = (count / g_total * 100) if g_total > 0 else 0
+                bar = "█" * int(pct / 5) + "░" * (20 - int(pct / 5))
+                print(f"     {key_name:25s} {bar} {count:4d} calls ({pct:.1f}%)")
+            print(f"     {'TOTAL':25s} {'':20s} {g_total:4d} calls")
+        else:
+            print("\n  🧠 Sin datos de uso de Gemini AI aún.")
+    except Exception:
+        print("\n  🧠 Sin datos de uso de Gemini AI aún.")
+    
     print("=" * 60 + "\n")
 
 def main():
