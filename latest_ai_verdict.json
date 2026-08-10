@@ -1,20 +1,11 @@
 {
-  "timestamp": "2026-08-10 17:34:25",
+  "timestamp": "2026-08-10 12:34:45",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
   "reasoning": "El mercado se encuentra en un estado de alta fragilidad con una correlación bajista sistémica. Ninguno de los candidatos analizados cumple con el requisito de Score Técnico A+ (>= 55) ni con la confirmación de liquidez necesaria. Se prioriza la preservación de capital sobre la ejecución de operaciones de baja convicción.",
   "top_candidates": [
-    {
-      "symbol": "XPLUSDT",
-      "score": 60,
-      "price": 0.07948,
-      "rsi_15m": 51.74,
-      "vol_surge": 0.93,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
     {
       "symbol": "LDOUSDT",
       "score": 60,
@@ -27,35 +18,53 @@
     {
       "symbol": "ADAUSDT",
       "score": 50,
-      "price": 0.196,
-      "rsi_15m": 51.2,
-      "vol_surge": 0.21,
+      "price": 0.1959,
+      "rsi_15m": 50.08,
+      "vol_surge": 0.22,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "XLMUSDT",
+      "score": 50,
+      "price": 0.1627,
+      "rsi_15m": 48.23,
+      "vol_surge": 0.33,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "MMTUSDT",
+      "score": 50,
+      "price": 0.2252,
+      "rsi_15m": 64.74,
+      "vol_surge": 0.15,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "TAOUSDT",
+      "score": 50,
+      "price": 203.7,
+      "rsi_15m": 54.87,
+      "vol_surge": 0.07,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "BOMEUSDT",
       "score": 50,
-      "price": 0.0008214,
-      "rsi_15m": 59.12,
-      "vol_surge": 0.29,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "MUBUSDT",
-      "score": 50,
-      "price": 882.93,
-      "rsi_15m": 58.79,
-      "vol_surge": 0.06,
+      "price": 0.0008213,
+      "rsi_15m": 59.08,
+      "vol_surge": 0.33,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "DOGEUSDT",
       "score": 50,
-      "price": 0.06984,
-      "rsi_15m": 51.87,
+      "price": 0.06983,
+      "rsi_15m": 51.48,
       "vol_surge": 0.05,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
@@ -70,29 +79,20 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "MMTUSDT",
+      "symbol": "PUMPUSDT",
       "score": 50,
-      "price": 0.2253,
-      "rsi_15m": 64.85,
-      "vol_surge": 0.15,
+      "price": 0.002836,
+      "rsi_15m": 65.73,
+      "vol_surge": 0.62,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "BANKUSDT",
       "score": 50,
-      "price": 0.002834,
-      "rsi_15m": 65.49,
-      "vol_surge": 0.61,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "PEPEUSDT",
-      "score": 50,
-      "price": 136.87,
-      "rsi_15m": 54.49,
-      "vol_surge": 0.03,
+      "price": 0.0389,
+      "rsi_15m": 55.6,
+      "vol_surge": 0.38,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
