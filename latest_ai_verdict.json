@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-10 06:26:21",
+  "timestamp": "2026-08-10 06:28:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad A+ exigido por el comité. La falta de dominancia clara en el libro de órdenes y la inestabilidad del mercado macro sugieren que la mejor estrategia es la preservación de capital hasta que se identifique una tendencia clara.",
+  "confidence": 95,
+  "reasoning": "A pesar de que varios activos presentan scores técnicos de 85, el entorno macroeconómico de miedo, la falta de dominancia clara en el libro de órdenes y el historial reciente de pérdidas en condiciones de mercado neutral obligan a mantener la liquidez en USDT para evitar riesgos sistémicos.",
   "top_candidates": [
     {
-      "symbol": "ETHUSDT",
+      "symbol": "ADAUSDT",
       "score": 85
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "BCHUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 85
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "BOMEUSDT",
       "score": 75
     }
   ]
