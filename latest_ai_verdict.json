@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 03:02:20",
+  "timestamp": "2026-08-10 03:04:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral de convicción A+ (Score >= 55 y Confianza >= 70%) bajo las condiciones actuales de mercado, por lo que se prioriza la preservación del capital sobre la operativa especulativa.",
+  "reasoning": "El mercado actual exhibe una asimetría de riesgo extrema y una falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad A+ exigido por el Comité, y el historial de pérdidas en condiciones similares obliga a mantener la liquidez en USDT para evitar la exposición a un posible 'flash crash'.",
   "top_candidates": [
     {
-      "symbol": "XLMUSDT",
-      "score": 75
+      "symbol": "PEPEUSDT",
+      "score": 60
     },
     {
-      "symbol": "POLUSDT",
-      "score": 75
+      "symbol": "MORPHOUSDT",
+      "score": 60
     },
     {
-      "symbol": "PENGUUSDT",
-      "score": 75
+      "symbol": "CRVUSDT",
+      "score": 60
     },
     {
       "symbol": "ARBUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "NEXOUSDT",
-      "score": 75
+      "symbol": "JTOUSDT",
+      "score": 60
     }
   ]
 }
