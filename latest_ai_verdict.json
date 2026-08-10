@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-10 06:30:20",
+  "timestamp": "2026-08-10 06:32:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de purga selectiva con alta incertidumbre. Ninguno de los candidatos cumple con los criterios estrictos de riesgo y convicción exigidos por el comité, por lo que la decisión es mantener la liquidez en espera de una estructura de mercado más clara.",
+  "reasoning": "El comité ha decidido mantener la liquidez en USDT. Ninguno de los candidatos cumple con el umbral de seguridad A+ exigido por el CRO, especialmente ante la falta de profundidad en el libro de órdenes y la alta volatilidad en los activos con historial limitado. Se prioriza la preservación del capital sobre la especulación en un mercado con sesgo neutral y alta probabilidad de pérdidas.",
   "top_candidates": [
+    {
+      "symbol": "BCHUSDT",
+      "score": 85
+    },
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
       "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ADAUSDT",
       "score": 75
     },
     {
