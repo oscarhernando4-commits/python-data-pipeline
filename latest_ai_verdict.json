@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-10 05:48:19",
+  "timestamp": "2026-08-10 05:50:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de soporte real en el libro de órdenes, el sentimiento de miedo global y la alta tasa de fallos en trades similares durante periodos de mercado neutral, la estrategia más prudente es el HOLD para preservar el capital.",
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ requerido por el comité. La falta de soporte en el libro de órdenes y la alta volatilidad en un entorno de miedo extremo sugieren que la preservación del capital es la prioridad absoluta.",
   "top_candidates": [
     {
-      "symbol": "UNIUSDT",
+      "symbol": "XLMUSDT",
       "score": 75
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "AVAXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "UNIUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "PYTHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "REUSDT",
+      "symbol": "AAVEUSDT",
       "score": 75
     }
   ]
