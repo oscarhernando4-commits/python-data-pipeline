@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-10 10:22:21",
+  "timestamp": "2026-08-10 10:24:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución agresiva con debilidad sistémica generalizada. Ninguno de los candidatos cumple con el umbral de seguridad A+ ni con la confirmación de soporte institucional en el libro de órdenes, por lo que se prioriza la preservación del capital sobre la especulación.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad técnica. Ninguno de los candidatos cumple con los criterios estrictos de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital en espera de una configuración de mercado más favorable.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "POLUSDT",
       "score": 60
     },
     {
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "JUPUSDT",
+      "symbol": "CRVUSDT",
       "score": 60
     },
     {
-      "symbol": "CRVUSDT",
-      "score": 60
+      "symbol": "ICPUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "BANKUSDT",
+      "score": 50
     }
   ]
 }
