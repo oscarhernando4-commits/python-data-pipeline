@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 09:20:20",
+  "timestamp": "2026-08-10 09:22:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad generalizada y una alta fragilidad. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y confirmación de soporte institucional), por lo que la estrategia de preservación de capital dicta una posición de espera (HOLD) para evitar 'cuchillos cayendo'.",
+  "reasoning": "El mercado presenta una divergencia estructural peligrosa donde los activos de alta capitalización muestran debilidad extrema y los activos de nicho carecen de la liquidez necesaria para una ejecución segura. Dado que el historial de los últimos 2155 trades muestra una alta probabilidad de pérdida en condiciones de mercado neutral, el comité ha decidido mantener la liquidez en 100% USDT para evitar la exposición a 'trampas de liquidez' y movimientos de capitulación.",
   "top_candidates": [
-    {
-      "symbol": "DOGEUSDT",
-      "score": 75
-    },
     {
       "symbol": "TRXUSDT",
       "score": 75
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 65
+      "symbol": "DOGEUSDT",
+      "score": 75
     },
     {
-      "symbol": "MMTUSDT",
-      "score": 65
+      "symbol": "MORPHOUSDT",
+      "score": 75
     },
     {
-      "symbol": "TSTUSDT",
-      "score": 65
+      "symbol": "ATOMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "CRVUSDT",
+      "score": 75
     }
   ]
 }
