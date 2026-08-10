@@ -6,9 +6,21 @@
   "wins": 7,
   "losses": 7,
   "trades_count": 13,
-  "position": null,
-  "last_trade_time": "26-08-10<br>19:44",
-  "status": "🟦 Buscando Entrada A+",
+  "position": {
+    "symbol": "ARBUSDT",
+    "quantity": 216.5,
+    "entry_price": 0.0808,
+    "highest_price": 0.0808,
+    "cost_usd": 17.49,
+    "side": "LONG",
+    "break_even": false,
+    "trailing_active": false,
+    "adaptive_sl_pct": 0.96,
+    "holding_cycles": 4,
+    "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
+  },
+  "last_trade_time": "26-08-10<br>14:44",
+  "status": "🔵 En Vivo LONG (ARBUSDT @ $0.0808)",
   "daily_wins": 2,
   "daily_losses": 2,
   "_cached_total_val": 20.13,
@@ -16,5 +28,5 @@
   "_cached_bnb": 0.00404828,
   "_cached_bnb_usd": 2.43,
   "last_trading_day": "2026-08-03",
-  "_btc_last_price": 63945.99
+  "_btc_last_price": 64031.35
 }
