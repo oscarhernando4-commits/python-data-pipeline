@@ -1,10 +1,23 @@
 {
-  "ALGOUSDT": [
+  "SOLVUSDT": [
     {
-      "timestamp": "2026-08-10 19:04:08",
-      "price": 0.083,
-      "score": 50,
-      "rsi": 59.79,
+      "timestamp": "2026-08-10 14:04:23",
+      "price": 0.00251,
+      "score": 15,
+      "rsi": 48.27,
+      "macd": "Neutral",
+      "volume_surge": 0.47,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ZROUSDT": [
+    {
+      "timestamp": "2026-08-10 14:04:23",
+      "price": 0.862,
+      "score": 0,
+      "rsi": 47.92,
       "macd": "Neutral",
       "volume_surge": 0.54,
       "wyckoff": "Sin patron",
@@ -111,6 +124,45 @@
       "rsi": 50.95,
       "macd": "Neutral",
       "volume_surge": 2.91,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "TIAUSDT": [
+    {
+      "timestamp": "2026-08-10 14:04:23",
+      "price": 0.3262,
+      "score": 15,
+      "rsi": 46.3,
+      "macd": "Neutral",
+      "volume_surge": 0.12,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "NVDABUSDT": [
+    {
+      "timestamp": "2026-08-10 14:04:23",
+      "price": 219.37,
+      "score": 30,
+      "rsi": 42.81,
+      "macd": "Neutral",
+      "volume_surge": 0.06,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "EDENUSDT": [
+    {
+      "timestamp": "2026-08-10 14:04:24",
+      "price": 0.04344,
+      "score": 0,
+      "rsi": 33.2,
+      "macd": "Neutral",
+      "volume_surge": 0.03,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
