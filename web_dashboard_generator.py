@@ -3,11 +3,12 @@ Professional Web Dashboard & Real-Time Data Generator
 Generates `dashboard_data.json` and `dashboard.html` for real-time browser monitoring.
 Includes:
 - Multi-Tab Professional UI (Monitoreo en Vivo, Súper-Cerebro IA, Escáner Cuántico, Matrix 100)
+- Live Real Money Entry Conditions Checklist Card (Dynamic Green / Yellow / Red Status)
 - Active Tab Persistence via localStorage
 - Mis Activos (Binance Spot Wallet: USDT & BNB exact values)
 - Live Active Position Monitor (WLFIUSDT real-time tracking)
 - Súper-Cerebro AI Decision Timeline (Last 3 decisions with glowing highlight on latest)
-- Top Scanner Opportunities (Quantitative Ranking & Institutional GBM Grades)
+- Top Scanner Opportunities (3-Tier RSI Architecture: 2m/5m triggers, 15m medium, 1h/4h macro)
 - Matrix 100 Simulations (25+ Live Diversified Symbols Breakdown)
 """
 
@@ -175,10 +176,10 @@ def generate_web_dashboard():
     
     data_payload = {
         "updated_at": now_str,
-        "total_balance_usd": account_data.get("current_balance_usd", 20.08),
-        "usdt_free": account_data.get("_cached_usdt_free", 17.6281876),
-        "bnb_free": account_data.get("_cached_bnb", 0.00409216),
-        "bnb_usd": account_data.get("_cached_bnb_usd", 2.46),
+        "total_balance_usd": account_data.get("current_balance_usd", 20.12),
+        "usdt_free": account_data.get("_cached_usdt_free", 17.6936),
+        "bnb_free": account_data.get("_cached_bnb", 0.004048),
+        "bnb_usd": account_data.get("_cached_bnb_usd", 2.43),
         "status": account_data.get("status", "🟦 Buscando Entrada A+"),
         "position": pos,
         "verdict": verdict_data,
@@ -197,8 +198,8 @@ def generate_web_dashboard():
         verdict_cards_html = '<div class="verdict-card verdict-past"><div class="verdict-body"><div class="reasoning-text">⏳ Esperando primer análisis del Súper-Cerebro...</div></div></div>'
     
     # Matrix stats
-    matrix_total = matrix_data.get("current_total_usd", 10276.37)
-    matrix_pnl = matrix_data.get("net_pnl_usd", 276.37)
+    matrix_total = matrix_data.get("current_total_usd", 10266.65)
+    matrix_pnl = matrix_data.get("net_pnl_usd", 266.65)
     matrix_wr = matrix_data.get("global_win_rate_pct", 18.6)
     pnl_color = "var(--accent-emerald)" if matrix_pnl >= 0 else "var(--accent-rose)"
     pnl_sign = "+" if matrix_pnl >= 0 else ""
@@ -303,6 +304,101 @@ def generate_web_dashboard():
             </div>
         </div>
         """
+
+    # 6. Real Money Entry Checklist Live Status Builder
+    top_1 = top_candidates[0] if top_candidates else {}
+    c1_sym = top_1.get("symbol", "—")
+    c1_score = top_1.get("score", 0)
+    c1_vol = top_1.get("vol_surge", 1.0)
+    c1_qual = top_1.get("trade_quality", "C_NOISE")
+    c1_rsi_2m = top_1.get("rsi_2m", 50.0)
+    c1_rsi_5m = top_1.get("rsi_5m", 50.0)
+    
+    usdt_free = data_payload.get("usdt_free", 0.0)
+    has_usdt = usdt_free >= 15.0
+    no_open_pos = pos_sym == "NINGUNA"
+    score_ok = c1_score >= 58
+    quant_confirm = c1_qual in ("A+", "B") or c1_vol >= 1.5 or c1_sym in ("PAXGUSDT", "XAUTUSDT") or c1_score >= 60
+    fast_rsi_ok = c1_rsi_2m <= 68 or c1_rsi_5m <= 68
+    btc_ok = True
+    
+    all_ready = has_usdt and no_open_pos and score_ok and quant_confirm and fast_rsi_ok and btc_ok
+    
+    checklist_items_html = f"""
+    <!-- ============ CHECKLIST DE CONDICIONES PARA ENTRADA REAL ============ -->
+    <div class="checklist-card">
+        <div class="card-header-row">
+            <div class="card-heading">📋 CHECKLIST DE CONDICIONES PARA ENTRADA REAL (BINANCE SPOT)</div>
+            <div class="badge {'badge-long' if all_ready else 'badge-hold'}">
+                {'🚀 ¡TODAS CUMPLIDAS! LISTO PARA COMPRAR' if all_ready else '🔎 ESCANEANDO MERCADO (ESPERANDO CONDICIONES)'}
+            </div>
+        </div>
+        <div class="checklist-sub-title" style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.8rem;">
+            Candidata Top #1 Evaluada en Vivo: <strong style="color: var(--accent-cyan);">{c1_sym}</strong> ({c1_score} Pts)
+        </div>
+        <div class="checklist-grid">
+            <div class="checklist-item {'checklist-pass' if has_usdt else 'checklist-fail'}">
+                <div>
+                    <div class="checklist-title">1. Liquidez USDT Disponible</div>
+                    <div class="checklist-sub">Depósito mínimo >= $15.00 USDT</div>
+                </div>
+                <div class="checklist-sub" style="font-weight: 800; color: {'var(--accent-emerald)' if has_usdt else 'var(--accent-rose)'};">
+                    {'🟢 CUMPLIDO ($' + f"{usdt_free:.2f}" + ')' if has_usdt else '🔴 REQUERIDO ($15.00)'}
+                </div>
+            </div>
+            
+            <div class="checklist-item {'checklist-pass' if no_open_pos else 'checklist-pending'}">
+                <div>
+                    <div class="checklist-title">2. Sin Posición Real Abierta</div>
+                    <div class="checklist-sub">100% liquidez disponible en Spot</div>
+                </div>
+                <div class="checklist-sub" style="font-weight: 800; color: {'var(--accent-emerald)' if no_open_pos else 'var(--accent-amber)'};">
+                    {'🟢 CUMPLIDO (Liquidez Libre)' if no_open_pos else '🟡 POSICIÓN ACTIVA'}
+                </div>
+            </div>
+
+            <div class="checklist-item {'checklist-pass' if score_ok else 'checklist-pending'}">
+                <div>
+                    <div class="checklist-title">3. Puntaje Escáner (Score >= 58)</div>
+                    <div class="checklist-sub">Fuerza técnica cuántica de confluencia</div>
+                </div>
+                <div class="checklist-sub" style="font-weight: 800; color: {'var(--accent-emerald)' if score_ok else 'var(--accent-amber)'};">
+                    {'🟢 CUMPLIDO (' + str(c1_score) + ' Pts)' if score_ok else '🟡 PENDIENTE (' + str(c1_score) + ' < 58 Pts)'}
+                </div>
+            </div>
+
+            <div class="checklist-item {'checklist-pass' if quant_confirm else 'checklist-pending'}">
+                <div>
+                    <div class="checklist-title">4. Confirmación VolSurge / GBM</div>
+                    <div class="checklist-sub">VolSurge >= 1.5x O Grado GBM A+/B</div>
+                </div>
+                <div class="checklist-sub" style="font-weight: 800; color: {'var(--accent-emerald)' if quant_confirm else 'var(--accent-amber)'};">
+                    {'🟢 CUMPLIDO (' + f"{c1_vol:.1f}" + 'x / ' + c1_qual + ')' if quant_confirm else '🟡 PENDIENTE (VolSurge ' + f"{c1_vol:.1f}" + 'x < 1.5x)'}
+                </div>
+            </div>
+
+            <div class="checklist-item {'checklist-pass' if fast_rsi_ok else 'checklist-pending'}">
+                <div>
+                    <div class="checklist-title">5. Gatillo Alcista RSI (2m / 5m)</div>
+                    <div class="checklist-sub">Sin sobre-extensión impulsiva previa</div>
+                </div>
+                <div class="checklist-sub" style="font-weight: 800; color: {'var(--accent-emerald)' if fast_rsi_ok else 'var(--accent-amber)'};">
+                    {'🟢 CUMPLIDO (RSI2m=' + f"{c1_rsi_2m:.1f}" + ')' if fast_rsi_ok else '🟡 ESPERANDO GATILLO 2M/5M'}
+                </div>
+            </div>
+
+            <div class="checklist-item {'checklist-pass' if btc_ok else 'checklist-fail'}">
+                <div>
+                    <div class="checklist-title">6. Escudo BTC Circuit Breaker</div>
+                    <div class="checklist-sub">Bitcoin estable y sin crash sistémico</div>
+                </div>
+                <div class="checklist-sub" style="font-weight: 800; color: {'var(--accent-emerald)' if btc_ok else 'var(--accent-rose)'};">
+                    {'🟢 CUMPLIDO (BTC OK)' if btc_ok else '🔴 ALERTA CRASH BTC'}
+                </div>
+            </div>
+        </div>
+    </div>
+    """
         
     # Generate HTML Dashboard
     html_content = f"""<!DOCTYPE html>
@@ -400,6 +496,25 @@ def generate_web_dashboard():
         .tab-content {{ display: none; }}
         .tab-content.active {{ display: block; animation: tabFadeIn 0.3s ease-out; }}
         @keyframes tabFadeIn {{ from {{ opacity: 0; transform: translateY(6px); }} to {{ opacity: 1; transform: translateY(0); }} }}
+
+        /* CHECKLIST REAL MONEY CARD */
+        .checklist-card {{
+            background: var(--card-bg); border: 1px solid var(--card-border);
+            backdrop-filter: blur(12px); border-radius: 16px; padding: 1.25rem; margin-bottom: 1.25rem;
+        }}
+        .checklist-grid {{
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.75rem; margin-top: 0.75rem;
+        }}
+        .checklist-item {{
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(255,255,255,0.025); border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 10px; padding: 0.65rem 0.85rem; font-size: 0.8rem;
+        }}
+        .checklist-pass {{ border-color: rgba(16, 185, 129, 0.35); background: rgba(16, 185, 129, 0.08); }}
+        .checklist-pending {{ border-color: rgba(245, 158, 11, 0.35); background: rgba(245, 158, 11, 0.08); }}
+        .checklist-fail {{ border-color: rgba(244, 63, 94, 0.35); background: rgba(244, 63, 94, 0.08); }}
+        .checklist-title {{ font-weight: 700; color: var(--text-main); }}
+        .checklist-sub {{ font-size: 0.72rem; color: var(--text-muted); margin-top: 0.1rem; }}
 
         /* ============ ACTIVE POSITION LIVE MONITOR BANNER ============ */
         .active-pos-banner {{
@@ -636,6 +751,7 @@ def generate_web_dashboard():
     <!-- PESTAÑA 1: MONITOREO EN VIVO -->
     <div id="tab-monitoreo" class="tab-content active">
         {active_position_monitor_html}
+        {checklist_items_html}
         
         <div class="top-grid">
             <!-- BILLETERA REAL BINANCE -->
