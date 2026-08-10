@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 11:22:25",
+  "timestamp": "2026-08-10 11:24:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una estructura de distribución masiva con una asimetría de liquidez negativa. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55) ni con una dominancia de Bids que garantice un soporte institucional, por lo que la decisión unánime es mantener la liquidez en espera de una mejor configuración.",
+  "reasoning": "El mercado exhibe una debilidad estructural generalizada y una falta de convicción compradora. Ningún activo cumple con los criterios de alta convicción (Score >= 55) ni con el soporte necesario en el libro de órdenes. La estrategia institucional es la preservación de capital ante la alta probabilidad de reversión violenta.",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
+      "symbol": "BBUSDT",
+      "score": 60
+    },
+    {
       "symbol": "CAKEUSDT",
       "score": 60
     },
     {
-      "symbol": "NIGHTUSDT",
+      "symbol": "ZAMAUSDT",
       "score": 60
-    },
-    {
-      "symbol": "MUBUSDT",
-      "score": 55
     }
   ]
 }
