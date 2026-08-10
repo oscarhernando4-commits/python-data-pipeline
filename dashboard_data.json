@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 05:20:27",
+  "updated_at": "2026-08-10 05:22:17",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El comité ha decidido no ejecutar ninguna operación debido a que ningún activo cumple con el umbral mínimo de Score Técnico (>= 55) y la falta de visibilidad en la profundidad del libro de órdenes, priorizando la preservación del capital frente a la alta volatilidad actual."
+    "reasoning": "El mercado se encuentra en una fase de purga de liquidez con alta volatilidad y falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55) y la estructura del libro de órdenes es insuficiente para mitigar el riesgo de 'falling knives'. La estrategia prioritaria es la preservación de capital."
   }
 }
