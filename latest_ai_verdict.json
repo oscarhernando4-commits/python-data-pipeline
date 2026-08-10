@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 15:14:25",
+  "timestamp": "2026-08-10 15:16:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Debido a la fragilidad sistémica del mercado, la falta de convicción técnica en los candidatos y el alto riesgo de manipulación en activos de baja liquidez, el comité ha decidido mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "Tras evaluar los scores técnicos, el sentimiento de mercado y la falta de muros de soporte claros en el libro de órdenes, el comité determina que no existen condiciones de alta probabilidad para ejecutar una operación de compra, optando por la protección total del capital en un entorno de alta volatilidad y riesgo sistémico.",
   "top_candidates": [
     {
       "symbol": "TUTUSDT",
       "score": 70
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "SPYBUSDT",
       "score": 60
     },
     {
-      "symbol": "DEXEUSDT",
-      "score": 60
+      "symbol": "PUMPUSDT",
+      "score": 50
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "BICOUSDT",
       "score": 50
     }
   ]
