@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-10 06:36:20",
+  "timestamp": "2026-08-10 06:38:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de que algunos activos presentan scores técnicos de 85, la falta de confirmación en el libro de órdenes, la volatilidad errática del mercado y el historial negativo de trades en condiciones similares hacen que la operación no cumpla con los estándares de seguridad y rentabilidad exigidos.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sesgo de miedo predominante. Ningún activo cumple con la convicción A+ necesaria (Score >= 55 con confirmación de liquidez y tendencia clara) para justificar una entrada, por lo que la estrategia óptima es la preservación de capital.",
   "top_candidates": [
+    {
+      "symbol": "GRAMUSDT",
+      "score": 85
+    },
     {
       "symbol": "UNIUSDT",
       "score": 85
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ADAUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XLMUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     }
   ]
