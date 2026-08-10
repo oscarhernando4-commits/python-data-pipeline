@@ -382,17 +382,27 @@ def generate_web_dashboard():
 
             <div class="checklist-item {'checklist-pass' if fast_rsi_ok else 'checklist-pending'}">
                 <div>
-                    <div class="checklist-title">5. Gatillo Alcista RSI & Estructura 15M</div>
-                    <div class="checklist-sub">Sin mecha de trampa por debajo de MA25</div>
+                    <div class="checklist-title">5. Gatillo Alcista RSI (2m / 5m)</div>
+                    <div class="checklist-sub">Sin sobre-extensión impulsiva previa</div>
                 </div>
                 <div class="checklist-sub" style="font-weight: 800; color: {'var(--accent-emerald)' if fast_rsi_ok else 'var(--accent-amber)'};">
-                    {'🟢 CUMPLIDO (RSI2m=' + f"{c1_rsi_2m:.1f}" + ')' if fast_rsi_ok else ('🟡 TRAMPA MECHA 15M (Bajo MA25)' if not ma_structure_ok else '🟡 ESPERANDO GATILLO 2M/5M')}
+                    {'🟢 CUMPLIDO (RSI2m=' + f"{c1_rsi_2m:.1f}" + ')' if fast_rsi_ok else '🟡 SOBRE-COMPRADO (RSI > 68)'}
+                </div>
+            </div>
+
+            <div class="checklist-item {'checklist-pass' if ma_structure_ok else 'checklist-pending'}">
+                <div>
+                    <div class="checklist-title">6. Filtro Anti-Trampa 15M (MA25)</div>
+                    <div class="checklist-sub">Precio sobre media móvil de 15m</div>
+                </div>
+                <div class="checklist-sub" style="font-weight: 800; color: {'var(--accent-emerald)' if ma_structure_ok else 'var(--accent-amber)'};">
+                    {'🟢 CUMPLIDO (Precio > MA25)' if ma_structure_ok else '🟡 TRAMPA MECHA (Bajo MA25)'}
                 </div>
             </div>
 
             <div class="checklist-item {'checklist-pass' if btc_ok else 'checklist-fail'}">
                 <div>
-                    <div class="checklist-title">6. Escudo BTC Circuit Breaker</div>
+                    <div class="checklist-title">7. Escudo BTC Circuit Breaker</div>
                     <div class="checklist-sub">Bitcoin estable y sin crash sistémico</div>
                 </div>
                 <div class="checklist-sub" style="font-weight: 800; color: {'var(--accent-emerald)' if btc_ok else 'var(--accent-rose)'};">
