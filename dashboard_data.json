@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 07:04:20",
+  "updated_at": "2026-08-10 07:06:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con los criterios estrictos de convicción A+ establecidos por el comité. La alta volatilidad y la falta de soporte claro en el libro de órdenes, sumado a la alta tasa de fallos en condiciones de mercado neutral, dictan una postura de preservación de capital."
+    "reasoning": "El mercado se encuentra en un estado de fragmentación defensiva con un sesgo NEUTRAL predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y Bids >= 65%) exigido por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la posición en efectivo."
   }
 }
