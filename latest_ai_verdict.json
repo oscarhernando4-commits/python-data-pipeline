@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 14:44:32",
-  "selected_symbol": "WLDUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "El mercado se encuentra en una fase de rebalanceo selectivo. WLD destaca como el candidato con mayor fuerza relativa y narrativa sectorial (AI), cumpliendo con el umbral de score técnico A+ (70/100) y superando el filtro de riesgo del comité al mostrar resiliencia frente a la capitulación generalizada de otros activos.",
+  "timestamp": "2026-08-10 14:46:20",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y Bids >= 55%). La alta volatilidad y la falta de confirmación en el libro de órdenes hacen que la estrategia más rentable sea preservar el capital en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
       "symbol": "WLDUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "QNTUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ATOMUSDT",
-      "score": 70
+      "score": 60
     },
     {
       "symbol": "AVAXUSDT",
       "score": 60
     },
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "LINKUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "QNTUSDT",
       "score": 60
     }
   ]
