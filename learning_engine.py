@@ -365,7 +365,39 @@ date: {now_str}
     with open(detailed_path, "w", encoding="utf-8") as f:
         f.write(detailed_md)
 
+def get_matrix_champions_summary():
+    """
+    Analyzes all 100 Matrix Accounts and returns a summary of the top-performing champions,
+    their strategy groups, and their symbols (e.g. Group 3 + XAUTUSDT, DODOUSDT, ALLOUSDT).
+    """
+    matrix_file = os.path.join(os.path.dirname(__file__), "matrix_100_simulations.json")
+    if not os.path.exists(matrix_file):
+        return "No hay datos de la Matrix aún."
+    
+    try:
+        with open(matrix_file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            
+        accounts = data.get("accounts", [])
+        # Filter top accounts by PnL
+        sorted_accs = sorted(accounts, key=lambda a: a.get("pnl_usd", 0.0), reverse=True)
+        top_5 = sorted_accs[:5]
+        
+        champions_str = []
+        for a in top_5:
+            acc_id = a.get("account_id", "SIM-???")
+            sym = a.get("symbol", "—")
+            pnl = a.get("pnl_usd", 0.0)
+            grp = a.get("group_name", "Grupo ?")
+            wr = (a.get("wins", 0) / a.get("trades_count", 1) * 100.0) if a.get("trades_count", 0) > 0 else 0.0
+            champions_str.append(f"• {acc_id} ({grp}) -> {sym} (+${pnl:.2f} USD | Win Rate {wr:.1f}%)")
+            
+        return "\n".join(champions_str)
+    except Exception as e:
+        return f"Error al extraer campeones: {e}"
+
 if __name__ == '__main__':
     data = load_memory()
     sync_learning_note(data)
+
     print("Learning engine initialized and synced to Obsidian!")

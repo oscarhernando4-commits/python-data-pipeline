@@ -146,6 +146,7 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     
     # RAG: Extract ALL-TIME Super Detailed History Table
     super_detailed_table = learning_engine.get_super_detailed_table_str(mem)
+    matrix_champions = learning_engine.get_matrix_champions_summary()
 
     import data_fetcher
     binance_sent = data_fetcher.get_binance_institutional_sentiment(symbol)
@@ -199,6 +200,10 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
 
     🐋 INTELIGENCIA DE SENTIMIENTO INSTITUCIONAL DE BINANCE (Top Traders Long/Short Ratio):
     - {binance_sent_str}
+
+    🏆 CUENTAS CAMPEONAS EN TIEMPO REAL (REPLICACIÓN MATRIX 100):
+    {matrix_champions}
+    ⚠️ DIRECTRIZ DE REPLICACIÓN DE CAMPEONES: Si los campeones actuales están ganando con Grupo 3 (Breakout por Volumen en activos de tendencia como XAUTUSDT, DODOUSDT, ALLOUSDT), REPLICA de forma prioritaria esta estrategia en Dinero Real cuando el activo presente un setup técnico alcista limpio A+.
 
     HISTORIAL SUPER DETALLADO (TABLA COMPLETA ALL-TIME DE TODAS LAS OPERACIONES):
     {super_detailed_table}
