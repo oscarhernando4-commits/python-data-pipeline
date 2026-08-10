@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-10 10:00:23",
+  "timestamp": "2026-08-10 10:02:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estrés sistémico con una correlación negativa predominante; no existen activos que cumplan con los criterios de calidad A+ exigidos por el comité, por lo que la decisión unánime es mantener la liquidez en USDT para evitar pérdidas por slippage o manipulación.",
+  "reasoning": "El mercado se encuentra en una fase de distribución forzada sin un suelo estructural claro. Ningún activo cumple con los criterios de riesgo A+ exigidos por el comité, por lo que la estrategia óptima es la preservación de capital mediante la neutralidad operativa.",
   "top_candidates": [
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
-      "symbol": "CRVUSDT",
+      "symbol": "GIGGLEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "MORPHOUSDT",
       "score": 60
     },
     {
@@ -19,12 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "LINKUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "BABYUSDT",
-      "score": 50
+      "symbol": "CRVUSDT",
+      "score": 60
     }
   ]
 }
