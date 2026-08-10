@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-10 11:38:23",
+  "timestamp": "2026-08-10 11:40:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de parálisis institucional y alta fragilidad. Ninguno de los candidatos cumple con el umbral de seguridad A+ requerido por el comité, y el historial reciente de trades muestra una alta probabilidad de pérdidas en condiciones de mercado neutral. Se prioriza la protección del capital sobre la ejecución de operaciones de baja probabilidad.",
+  "reasoning": "El mercado presenta una fragilidad extrema y una falta de convicción institucional. Ningún activo cumple con los criterios estrictos de riesgo A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez y evitar la exposición a activos de alta volatilidad en un entorno de incertidumbre macroeconómica.",
   "top_candidates": [
-    {
-      "symbol": "TAOUSDT",
-      "score": 60
-    },
     {
       "symbol": "SUIUSDT",
       "score": 60
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "NEIROUSDT",
+      "symbol": "TAOUSDT",
       "score": 60
     },
     {
-      "symbol": "JUPUSDT",
+      "symbol": "WLFIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NEIROUSDT",
       "score": 60
     }
   ]
