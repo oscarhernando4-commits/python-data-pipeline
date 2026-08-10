@@ -1,16 +1,41 @@
 {
-  "ALLOUSDT": [
+  "CHIPUSDT": [
     {
-      "timestamp": "2026-08-10 09:34:11",
-      "price": 0.3099,
-      "score": 30,
-      "rsi": 56.14,
+      "timestamp": "2026-08-10 09:36:10",
+      "price": 0.02371,
+      "score": 20,
+      "rsi": 83.93,
       "macd": "Neutral",
-      "volume_surge": 0.27,
+      "volume_surge": 2.13,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}
+}  "ZBTUSDT": [
+    {
+      "timestamp": "2026-08-10 09:36:10",
+      "price": 0.1013,
+      "score": 0,
+      "rsi": 46.15,
+      "macd": "Neutral",
+      "volume_surge": 0.13,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "C98USDT": [
+    {
+      "timestamp": "2026-08-10 09:36:10",
+      "price": 0.01486,
+      "score": 15,
+      "rsi": 32.07,
+      "macd": "Neutral",
+      "volume_surge": 0.42,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ]
 }
