@@ -1,98 +1,98 @@
 {
-  "timestamp": "2026-08-10 11:56:48",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "timestamp": "2026-08-10 16:58:23",
+  "selected_symbol": "PAXGUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "Dada la alta aversión al riesgo sistémica y la capitulación de las altcoins, el comité ha decidido ejecutar una posición en PAXGUSDT, el único activo que combina un score técnico de 55 con la fortaleza fundamental del sector de metales preciosos, priorizando la preservación de capital sobre la especulación agresiva.",
   "top_candidates": [
+    {
+      "symbol": "XRPUSDT",
+      "score": 55,
+      "price": 1.0192,
+      "rsi_15m": 27.67,
+      "vol_surge": 2.54,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "score": 55,
+      "price": 4346.3,
+      "rsi_15m": 55.75,
+      "vol_surge": 1.73,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "SAGAUSDT",
+      "score": 55,
+      "price": 0.01522,
+      "rsi_15m": 51.92,
+      "vol_surge": 1.53,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
     {
       "symbol": "C98USDT",
       "score": 55,
-      "price": 0.01427,
-      "rsi_15m": 30.33,
-      "vol_surge": 0.15,
+      "price": 0.01424,
+      "rsi_15m": 29.41,
+      "vol_surge": 0.2,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "TUTUSDT",
+      "symbol": "ZROUSDT",
+      "score": 55,
+      "price": 0.862,
+      "rsi_15m": 50.8,
+      "vol_surge": 1.97,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "BTCUSDT",
       "score": 50,
-      "price": 0.13038,
-      "rsi_15m": 49.57,
-      "vol_surge": 0.76,
+      "price": 63887.24,
+      "rsi_15m": 18.43,
+      "vol_surge": 1.52,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "KAITOUSDT",
+      "symbol": "BICOUSDT",
+      "score": 50,
+      "price": 0.04277,
+      "rsi_15m": 53.68,
+      "vol_surge": 0.47,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "MUBARAKUSDT",
+      "score": 50,
+      "price": 0.02298,
+      "rsi_15m": 66.91,
+      "vol_surge": 0.72,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "BROCCOLI714USDT",
       "score": 50,
       "price": 0.01925,
       "rsi_15m": 58.97,
-      "vol_surge": 0.43,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "REUSDT",
-      "score": 50,
-      "price": 0.4517,
-      "rsi_15m": 63.88,
-      "vol_surge": 0.53,
+      "vol_surge": 0.54,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "ACEUSDT",
       "score": 50,
-      "price": 0.1184,
-      "rsi_15m": 54.37,
-      "vol_surge": 0.78,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "KAITOUSDT",
-      "score": 50,
-      "price": 0.6799,
-      "rsi_15m": 50.36,
-      "vol_surge": 0.16,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "BANKUSDT",
-      "score": 50,
-      "price": 0.0388,
-      "rsi_15m": 52.92,
-      "vol_surge": 0.62,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "NEIROUSDT",
-      "score": 50,
-      "price": 7.261e-05,
-      "rsi_15m": 50.46,
-      "vol_surge": 0.18,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "SOLVUSDT",
-      "score": 50,
-      "price": 0.00251,
-      "rsi_15m": 51.55,
-      "vol_surge": 0.53,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "JSTUSDT",
-      "score": 50,
-      "price": 0.10091,
-      "rsi_15m": 56.19,
-      "vol_surge": 0.83,
+      "price": 0.1183,
+      "rsi_15m": 53.99,
+      "vol_surge": 0.85,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
