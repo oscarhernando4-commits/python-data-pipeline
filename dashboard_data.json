@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 05:22:17",
+  "updated_at": "2026-08-10 05:24:28",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de purga de liquidez con alta volatilidad y falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55) y la estructura del libro de órdenes es insuficiente para mitigar el riesgo de 'falling knives'. La estrategia prioritaria es la preservación de capital."
+    "reasoning": "El mercado se encuentra en una fase de compresión con alta incertidumbre regulatoria y falta de soporte institucional claro en el libro de órdenes. Ningún activo cumple con los criterios de alta convicción (Score >= 55 y Bids > 55%) necesarios para garantizar la preservación del capital, por lo que se mantiene la posición en efectivo."
   }
 }
