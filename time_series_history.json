@@ -1,12 +1,25 @@
 {
-  "FORMUSDT": [
+  "BONKUSDT": [
     {
-      "timestamp": "2026-08-10 22:08:10",
-      "price": 0.2139,
+      "timestamp": "2026-08-10 22:10:08",
+      "price": 2.42e-06,
       "score": 0,
-      "rsi": 37.86,
+      "rsi": 35.64,
       "macd": "Neutral",
-      "volume_surge": 0.79,
+      "volume_surge": 1.43,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-10 22:10:08",
+      "price": 0.091,
+      "score": 0,
+      "rsi": 42.76,
+      "macd": "Neutral",
+      "volume_surge": 0.09,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
