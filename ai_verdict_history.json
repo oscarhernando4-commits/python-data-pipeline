@@ -1,105 +1,5 @@
 [
   {
-    "timestamp": "2026-08-10 11:58:41",
-    "selected_symbol": "NONE",
-    "action": "HOLD",
-    "approved": false,
-    "confidence": 0,
-    "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
-    "top_candidates": [
-      {
-        "symbol": "PAXGUSDT",
-        "score": 55,
-        "price": 4347.03,
-        "rsi_15m": 56.26,
-        "vol_surge": 1.9,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "SAGAUSDT",
-        "score": 55,
-        "price": 0.01522,
-        "rsi_15m": 51.92,
-        "vol_surge": 1.53,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "ZROUSDT",
-        "score": 55,
-        "price": 0.862,
-        "rsi_15m": 50.8,
-        "vol_surge": 1.97,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "BTCUSDT",
-        "score": 50,
-        "price": 63893.17,
-        "rsi_15m": 18.52,
-        "vol_surge": 1.54,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "MUBARAKUSDT",
-        "score": 50,
-        "price": 0.02293,
-        "rsi_15m": 66.57,
-        "vol_surge": 0.73,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "BICOUSDT",
-        "score": 50,
-        "price": 0.04267,
-        "rsi_15m": 53.11,
-        "vol_surge": 0.48,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "ACEUSDT",
-        "score": 50,
-        "price": 0.1183,
-        "rsi_15m": 53.99,
-        "vol_surge": 0.85,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "JSTUSDT",
-        "score": 50,
-        "price": 0.1009,
-        "rsi_15m": 55.97,
-        "vol_surge": 0.97,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "BROCCOLI714USDT",
-        "score": 50,
-        "price": 0.01924,
-        "rsi_15m": 58.83,
-        "vol_surge": 0.54,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "REUSDT",
-        "score": 50,
-        "price": 0.4503,
-        "rsi_15m": 62.83,
-        "vol_surge": 0.6,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      }
-    ]
-  },
-  {
     "timestamp": "2026-08-10 12:00:52",
     "selected_symbol": "NONE",
     "action": "HOLD",
@@ -994,6 +894,106 @@
         "price": 882.15,
         "rsi_15m": 58.07,
         "vol_surge": 0.02,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-08-10 12:18:59",
+    "selected_symbol": "NONE",
+    "action": "HOLD",
+    "approved": false,
+    "confidence": 95,
+    "reasoning": "Tras evaluar los 15 candidatos, ninguno alcanza el umbral de calidad A+ (Score >= 55) exigido por el comité. La combinación de un entorno macro bajista, la falta de convicción en el libro de órdenes y la alta tasa de fallos históricos en condiciones de mercado similares, obliga a la inacción para proteger el capital institucional.",
+    "top_candidates": [
+      {
+        "symbol": "ARBUSDT",
+        "score": 60,
+        "price": 0.0806,
+        "rsi_15m": 58.03,
+        "vol_surge": 0.25,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "XPLUSDT",
+        "score": 60,
+        "price": 0.07956,
+        "rsi_15m": 52.49,
+        "vol_surge": 0.46,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "LDOUSDT",
+        "score": 60,
+        "price": 0.2943,
+        "rsi_15m": 54.47,
+        "vol_surge": 0.34,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "OPUSDT",
+        "score": 60,
+        "price": 0.0919,
+        "rsi_15m": 63.12,
+        "vol_surge": 2.16,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "EULUSDT",
+        "score": 60,
+        "price": 1.238,
+        "rsi_15m": 58.04,
+        "vol_surge": 0.06,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "TUTUSDT",
+        "score": 50,
+        "price": 0.13109,
+        "rsi_15m": 50.53,
+        "vol_surge": 0.12,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "PUMPUSDT",
+        "score": 50,
+        "price": 0.002767,
+        "rsi_15m": 55.97,
+        "vol_surge": 0.12,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "TAOUSDT",
+        "score": 50,
+        "price": 203.1,
+        "rsi_15m": 49.94,
+        "vol_surge": 0.08,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "PENGUUSDT",
+        "score": 50,
+        "price": 0.00666,
+        "rsi_15m": 50.43,
+        "vol_surge": 0.09,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "BANKUSDT",
+        "score": 50,
+        "price": 0.0389,
+        "rsi_15m": 55.42,
+        "vol_surge": 0.14,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }

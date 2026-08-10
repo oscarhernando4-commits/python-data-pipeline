@@ -4,7 +4,7 @@
     "wins": 419,
     "losses": 1831,
     "win_rate_pct": 18.62,
-    "total_pnl_usd": 276.35230545454425
+    "total_pnl_usd": 276.3223054545443
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -37577,19 +37577,19 @@
       }
     },
     {
-      "timestamp": "2026-08-10 17:18:28",
+      "timestamp": "2026-08-10 12:18:59",
       "account_id": "SIM-042",
       "group_name": "⚖️ GRUPO 3: Balanceado",
       "symbol": "KITEUSDT",
       "side": "LONG",
       "entry_price": 0.1075,
-      "exit_price": 0.1074,
-      "pnl_usd": -0.06,
+      "exit_price": 0.1075,
+      "pnl_usd": -0.09,
       "result": "LOSS",
-      "notes": "Hit SL on KITEUSDT (-$0.06). Re-Trading!",
+      "notes": "Hit SL on KITEUSDT (-$0.09). Re-Trading!",
       "context": {
         "score": 10,
-        "rsi_15m": 71.13,
+        "rsi_15m": 72.06,
         "macro_trend_4h": "NEUTRAL"
       }
     }
