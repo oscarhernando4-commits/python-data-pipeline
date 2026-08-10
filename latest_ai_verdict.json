@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 07:32:19",
+  "timestamp": "2026-08-10 07:34:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de 'Apatía Estructural' con alta probabilidad de whipsaws. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con confirmación de libro de órdenes) necesario para garantizar la preservación del capital, por lo que se prioriza la liquidez.",
+  "reasoning": "El mercado se encuentra en un estado de indecisión fragmentada con falta de profundidad en el libro de órdenes. Ningún activo cumple con los criterios estrictos de convicción A+ del comité, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar el riesgo de 'falling knives' y volatilidad sin tendencia.",
   "top_candidates": [
+    {
+      "symbol": "GNOUSDT",
+      "score": 85
+    },
     {
       "symbol": "SOLUSDT",
       "score": 75
     },
     {
-      "symbol": "MUBUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
-      "symbol": "SEIUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
-      "symbol": "GNOUSDT",
+      "symbol": "WLFIUSDT",
       "score": 75
-    },
-    {
-      "symbol": "EPICUSDT",
-      "score": 65
     }
   ]
 }
