@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-10 08:22:21",
+  "timestamp": "2026-08-10 08:24:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un entorno de 'Cautela Selectiva' con alta incertidumbre. Ninguno de los candidatos cumple con los requisitos estrictos de gestión de riesgo (Score >= 55 y soporte de ballenas confirmado), por lo que se prioriza la protección del capital sobre la ejecución especulativa.",
+  "reasoning": "A pesar de que algunos activos presentan un Score técnico de 75, la falta de profundidad en el libro de órdenes, la ausencia de un historial sólido y el entorno de miedo generalizado (Fear & Greed 30) no cumplen con los criterios de seguridad exigidos por el comité para una ejecución A+.",
   "top_candidates": [
     {
-      "symbol": "POLUSDT",
+      "symbol": "SOLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TRUMPUSDT",
       "score": 75
     },
     {
@@ -15,16 +19,12 @@
       "score": 75
     },
     {
-      "symbol": "LUNCUSDT",
+      "symbol": "GNOUSDT",
       "score": 75
     },
     {
-      "symbol": "ZECUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "TRXUSDT",
-      "score": 65
+      "symbol": "LUNCUSDT",
+      "score": 75
     }
   ]
 }
