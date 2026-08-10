@@ -1776,41 +1776,15 @@ date: 2026-08-01 19:25:56
 
 ---
 
-### 🪙 Profile Completo de Vida: ZBTUSDT (Nuevo Activo Incorporado)
-- 📅 **Historial Rastreado:** Desde `2025-10-16` hasta `2026-08-09` (298 Días de Historial)
-- 💵 **Precio Actual:** `$0.1027 USD`
-- 📈 **Máximo Histórico (ATH):** `$0.8887 USD` (`2025-10-16`) | Distancia: `-88.44%`
-- 📉 **Mínimo Histórico (ATL):** `$0.0566 USD` (`2026-02-05`)
+### 🪙 Profile Completo de Vida: GUNUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-03-31` hasta `2026-08-10` (498 Días de Historial)
+- 💵 **Precio Actual:** `$0.0033 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.1500 USD` (`2025-03-31`) | Distancia: `-97.83%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0027 USD` (`2026-08-05`)
 - 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
 - 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
 - ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
-- 🚀 **Mayores Explosiones de 1 Día:** `2025-12-28 (+71.24%)`, `2025-12-24 (+57.95%)`, `2026-08-05 (+47.95%)`
-- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-08-06 (-39.16%)`, `2026-06-09 (-22.17%)`, `2026-07-13 (-21.96%)`
-
----
-
-### 🪙 Profile Completo de Vida: PNUTUSDT (Nuevo Activo Incorporado)
-- 📅 **Historial Rastreado:** Desde `2024-11-10` hasta `2026-08-09` (638 Días de Historial)
-- 💵 **Precio Actual:** `$0.0419 USD`
-- 📈 **Máximo Histórico (ATH):** `$2.5000 USD` (`2024-11-13`) | Distancia: `-98.32%`
-- 📉 **Mínimo Histórico (ATL):** `$0.0296 USD` (`2025-12-10`)
-- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
-- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
-- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
-- 🚀 **Mayores Explosiones de 1 Día:** `2024-11-12 (+282.65%)`, `2024-11-10 (+273.26%)`, `2025-05-08 (+74.46%)`
-- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-34.09%)`, `2024-12-18 (-23.08%)`, `2025-01-17 (-21.63%)`
-
----
-
-### 🪙 Profile Completo de Vida: ALTUSDT (Nuevo Activo Incorporado)
-- 📅 **Historial Rastreado:** Desde `2024-01-24` hasta `2026-08-09` (929 Días de Historial)
-- 💵 **Precio Actual:** `$0.0061 USD`
-- 📈 **Máximo Histórico (ATH):** `$0.6950 USD` (`2024-03-26`) | Distancia: `-99.12%`
-- 📉 **Mínimo Histórico (ATL):** `$0.0053 USD` (`2026-06-05`)
-- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
-- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
-- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
-- 🚀 **Mayores Explosiones de 1 Día:** `2024-01-24 (+5277.83%)`, `2025-06-15 (+35.67%)`, `2024-09-18 (+32.66%)`
-- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-33.77%)`, `2024-12-08 (-19.91%)`, `2025-02-01 (-18.55%)`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-03-31 (+158.4%)`, `2026-01-14 (+43.33%)`, `2026-04-19 (+40.26%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-27.85%)`, `2026-03-03 (-25.83%)`, `2026-04-21 (-25.04%)`
 
 ---
