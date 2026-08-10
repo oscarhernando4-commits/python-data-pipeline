@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 04:36:19",
+  "timestamp": "2026-08-10 04:38:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una correlación bajista extrema. Ningún activo cumple con el umbral de calidad A+ (Score >= 55) ni con la profundidad de liquidez necesaria para mitigar el riesgo de slippage. La estrategia institucional es la preservación total del capital hasta que se observe una acumulación real de ballenas y una mejora en el sentimiento macro.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 55) ni con la confirmación de soporte en el libro de órdenes, por lo que se prioriza la preservación del capital en un entorno de mercado incierto.",
   "top_candidates": [
     {
-      "symbol": "1000CATUSDT",
+      "symbol": "AAVEUSDT",
       "score": 60
     },
     {
-      "symbol": "SPYBUSDT",
+      "symbol": "ETCUSDT",
       "score": 60
     },
     {
-      "symbol": "SUNUSDT",
-      "score": 55
+      "symbol": "ARBUSDT",
+      "score": 60
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "AVAXUSDT",
       "score": 50
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "PUMPUSDT",
       "score": 50
     }
   ]
