@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-10 03:12:20",
+  "timestamp": "2026-08-10 03:14:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estrés sistémico con una correlación bajista predominante. Ninguno de los activos analizados cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia de preservación de capital es la única opción viable.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55) y la confirmación de soporte institucional en el libro de órdenes. El mercado se encuentra en una trampa de liquidez, por lo que la estrategia óptima es mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "MORPHOUSDT",
+      "score": 70
+    },
     {
       "symbol": "MMTUSDT",
       "score": 60
     },
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "BANKUSDT",
       "score": 60
     },
     {
-      "symbol": "SUNUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ARBUSDT",
+      "symbol": "PEOPLEUSDT",
       "score": 60
     },
     {
