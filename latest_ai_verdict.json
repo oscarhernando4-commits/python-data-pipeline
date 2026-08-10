@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 14:04:21",
+  "timestamp": "2026-08-10 14:06:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una correlación negativa alta. Ningún activo cumple con los criterios estrictos de convicción A+ (Score >= 55 y Bids > 55%) necesarios para mitigar el riesgo de pérdida, por lo que se prioriza la preservación del capital.",
+  "confidence": 0,
+  "reasoning": "El comité ha determinado que, a pesar de la rotación sectorial hacia Layer 1, ninguno de los activos cumple con el umbral de seguridad (Score >= 55) ni con la profundidad de mercado necesaria para una ejecución de alta convicción, por lo que se prioriza la preservación de capital.",
   "top_candidates": [
     {
       "symbol": "ATOMUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "ZROUSDT",
       "score": 60
     },
     {
-      "symbol": "ZROUSDT",
+      "symbol": "LDOUSDT",
       "score": 60
     }
   ]
