@@ -1,38 +1,116 @@
 {
-  "NIGHTUSDT": [
+  "LISTAUSDT": [
     {
-      "timestamp": "2026-08-10 21:20:08",
-      "price": 0.0179,
+      "timestamp": "2026-08-10 21:22:08",
+      "price": 0.0648,
+      "score": 35,
+      "rsi": 48.19,
+      "macd": "Neutral",
+      "volume_surge": 0.33,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SEIUSDT": [
+    {
+      "timestamp": "2026-08-10 21:22:08",
+      "price": 0.04139,
       "score": 25,
-      "rsi": 27.51,
+      "rsi": 31.13,
       "macd": "Neutral",
-      "volume_surge": 0.12,
+      "volume_surge": 1.02,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "NEIROUSDT": [
+  "PLUMEUSDT": [
     {
-      "timestamp": "2026-08-10 21:20:08",
-      "price": 7.311e-05,
+      "timestamp": "2026-08-10 21:22:08",
+      "price": 0.01231,
+      "score": 45,
+      "rsi": 53.64,
+      "macd": "Neutral",
+      "volume_surge": 0.29,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "NVDABUSDT": [
+    {
+      "timestamp": "2026-08-10 21:22:08",
+      "price": 218.84,
+      "score": 15,
+      "rsi": 44.07,
+      "macd": "Neutral",
+      "volume_surge": 0.03,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SHELLUSDT": [
+    {
+      "timestamp": "2026-08-10 21:22:09",
+      "price": 0.0201,
       "score": 50,
-      "rsi": 54.28,
+      "rsi": 49.63,
       "macd": "Neutral",
-      "volume_surge": 0.02,
+      "volume_surge": 0.33,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "STXUSDT": [
+  "SYNUSDT": [
     {
-      "timestamp": "2026-08-10 21:20:08",
-      "price": 0.1309,
-      "score": 0,
-      "rsi": 38.02,
+      "timestamp": "2026-08-10 21:22:09",
+      "price": 0.10355,
+      "score": 50,
+      "rsi": 52.29,
       "macd": "Neutral",
-      "volume_surge": 0.83,
+      "volume_surge": 0.08,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "AXTIBUSDT": [
+    {
+      "timestamp": "2026-08-10 21:22:09",
+      "price": 73.73,
+      "score": 55,
+      "rsi": 28.26,
+      "macd": "Neutral",
+      "volume_surge": 0.03,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GALAUSDT": [
+    {
+      "timestamp": "2026-08-10 21:22:09",
+      "price": 0.00179,
+      "score": 0,
+      "rsi": 34.48,
+      "macd": "Neutral",
+      "volume_surge": 0.53,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ZROUSDT": [
+    {
+      "timestamp": "2026-08-10 21:22:09",
+      "price": 0.854,
+      "score": 0,
+      "rsi": 39.35,
+      "macd": "Neutral",
+      "volume_surge": 0.14,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
