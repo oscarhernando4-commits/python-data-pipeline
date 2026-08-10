@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 02:28:17",
+  "updated_at": "2026-08-10 02:30:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado presenta una fragilidad sistémica extrema y una falta de convicción técnica en los activos analizados. Ningún candidato cumple con los requisitos mínimos de seguridad y rentabilidad exigidos por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de operaciones de alto riesgo."
+    "reasoning": "El mercado se encuentra en una fase de distribución por pánico con una correlación bajista sistémica. Ningún activo cumple con los criterios de fuerza relativa (Score >= 55) ni con la profundidad de libro necesaria para una ejecución segura. Se mantiene la posición en efectivo para evitar pérdidas innecesarias."
   }
 }
