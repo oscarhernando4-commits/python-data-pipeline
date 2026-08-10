@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 18:38:20",
+  "timestamp": "2026-08-10 13:38:43",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado carece de activos con un Score técnico superior a 55 y una estructura de soporte institucional clara. La estrategia de preservación de capital dicta que, ante la ausencia de una oportunidad A+, la única acción prudente es mantenerse en efectivo (HOLD) para evitar la purga de apalancamiento actual.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "ZAMAUSDT",
@@ -16,28 +16,19 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "SUNUSDT",
-      "score": 60,
-      "price": 0.0182,
-      "rsi_15m": 58.1,
-      "vol_surge": 0.06,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
       "symbol": "ETHUSDT",
       "score": 55,
-      "price": 1869.58,
-      "rsi_15m": 22.72,
-      "vol_surge": 0.31,
+      "price": 1870.0,
+      "rsi_15m": 23.02,
+      "vol_surge": 0.32,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "EPICUSDT",
       "score": 50,
-      "price": 0.4596,
-      "rsi_15m": 47.92,
+      "price": 0.4594,
+      "rsi_15m": 47.82,
       "vol_surge": 0.4,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
@@ -45,27 +36,9 @@
     {
       "symbol": "TSTUSDT",
       "score": 50,
-      "price": 0.02254,
-      "rsi_15m": 56.18,
-      "vol_surge": 0.44,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "EPICUSDT",
-      "score": 50,
-      "price": 0.0649,
-      "rsi_15m": 51.46,
-      "vol_surge": 0.26,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "FILUSDT",
-      "score": 50,
-      "price": 0.702,
-      "rsi_15m": 55.26,
-      "vol_surge": 0.27,
+      "price": 0.02256,
+      "rsi_15m": 56.31,
+      "vol_surge": 0.45,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -79,11 +52,20 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "FILUSDT",
       "score": 50,
-      "price": 1.448,
-      "rsi_15m": 52.6,
-      "vol_surge": 1.26,
+      "price": 0.7019,
+      "rsi_15m": 54.96,
+      "vol_surge": 0.27,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "EPICUSDT",
+      "score": 50,
+      "price": 0.0649,
+      "rsi_15m": 51.46,
+      "vol_surge": 0.26,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -97,20 +79,20 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "SEIUSDT",
+      "symbol": "PLUMEUSDT",
       "score": 50,
-      "price": 0.04172,
-      "rsi_15m": 50.7,
-      "vol_surge": 0.44,
+      "price": 0.01227,
+      "rsi_15m": 54.84,
+      "vol_surge": 0.59,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "PLUMEUSDT",
-      "score": 50,
-      "price": 0.01234,
-      "rsi_15m": 58.76,
-      "vol_surge": 0.49,
+      "symbol": "WLFIUSDT",
+      "score": 45,
+      "price": 0.0537,
+      "rsi_15m": 61.81,
+      "vol_surge": 0.25,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
