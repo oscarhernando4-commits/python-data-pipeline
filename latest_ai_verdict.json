@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 00:06:20",
+  "timestamp": "2026-08-10 00:08:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de purga de riesgo sin una tendencia clara. Ningún activo cumple con los criterios estrictos de Score A+ y soporte de liquidez, por lo que la decisión institucional es mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y desconfianza generalizada. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ (Score >= 55 con soporte sólido en el libro de órdenes). La prioridad absoluta es la preservación del capital, por lo que se ha decidido mantener la posición en liquidez (HOLD) hasta que las condiciones macro y técnicas mejoren.",
   "top_candidates": [
     {
       "symbol": "EPICUSDT",
       "score": 70
     },
     {
-      "symbol": "ZAMAUSDT",
+      "symbol": "BROCCOLI714USDT",
       "score": 60
     },
     {
-      "symbol": "KITEUSDT",
+      "symbol": "KAITOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ZAMAUSDT",
       "score": 60
     },
     {
       "symbol": "LAUSDT",
       "score": 60
-    },
-    {
-      "symbol": "DOGEUSDT",
-      "score": 55
     }
   ]
 }
