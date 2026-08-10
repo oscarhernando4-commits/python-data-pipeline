@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 17:42:27",
+  "timestamp": "2026-08-10 12:42:36",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un entorno de alta peligrosidad con una tendencia bajista sistémica. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55) y la falta de profundidad en el libro de órdenes aumenta el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "ARBUSDT",
@@ -20,7 +20,7 @@
       "score": 60,
       "price": 1.448,
       "rsi_15m": 52.95,
-      "vol_surge": 2.53,
+      "vol_surge": 2.66,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -34,6 +34,15 @@
       "macro_trend": "NEUTRAL"
     },
     {
+      "symbol": "ALTUSDT",
+      "score": 60,
+      "price": 0.00623,
+      "rsi_15m": 50.5,
+      "vol_surge": 0.36,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "PAXGUSDT",
       "score": 55,
       "price": 4355.56,
@@ -43,29 +52,29 @@
       "macro_trend": "NEUTRAL"
     },
     {
+      "symbol": "GRAMUSDT",
+      "score": 50,
+      "price": 1.33,
+      "rsi_15m": 49.02,
+      "vol_surge": 0.3,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "MMTUSDT",
       "score": 50,
-      "price": 0.2255,
-      "rsi_15m": 65.06,
-      "vol_surge": 0.52,
+      "price": 0.2254,
+      "rsi_15m": 64.96,
+      "vol_surge": 0.53,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "PUMPUSDT",
       "score": 50,
-      "price": 0.002815,
-      "rsi_15m": 63.12,
-      "vol_surge": 1.25,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 50,
-      "price": 203.6,
-      "rsi_15m": 54.09,
-      "vol_surge": 0.16,
+      "price": 0.00281,
+      "rsi_15m": 62.17,
+      "vol_surge": 1.28,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -81,27 +90,9 @@
     {
       "symbol": "TAOUSDT",
       "score": 50,
-      "price": 203.7,
-      "rsi_15m": 54.87,
-      "vol_surge": 0.11,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "MMTUSDT",
-      "score": 50,
-      "price": 0.0389,
-      "rsi_15m": 55.6,
-      "vol_surge": 1.05,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "PENGUUSDT",
-      "score": 50,
-      "price": 0.00666,
-      "rsi_15m": 50.58,
-      "vol_surge": 0.35,
+      "price": 203.6,
+      "rsi_15m": 54.09,
+      "vol_surge": 0.16,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
