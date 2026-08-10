@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 16:52:26",
+  "timestamp": "2026-08-10 11:52:42",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada con un entorno 'Risk-Off'. Ningún activo cumple con los criterios de Score Técnico A+ (>= 55) ni con la profundidad de liquidez necesaria en el Orderbook. Se mantiene la posición en efectivo (USDT) para evitar el 'falling knife' y proteger el capital institucional.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "SAGAUSDT",
@@ -25,28 +25,46 @@
       "macro_trend": "NEUTRAL"
     },
     {
+      "symbol": "ZROUSDT",
+      "score": 55,
+      "price": 0.862,
+      "rsi_15m": 50.8,
+      "vol_surge": 1.82,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "MUBARAKUSDT",
+      "score": 50,
+      "price": 0.02285,
+      "rsi_15m": 66.01,
+      "vol_surge": 0.43,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "TUTUSDT",
       "score": 50,
       "price": 0.13097,
       "rsi_15m": 50.09,
-      "vol_surge": 0.54,
+      "vol_surge": 0.55,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "SNXXBUSDT",
       "score": 50,
-      "price": 0.01939,
-      "rsi_15m": 60.87,
-      "vol_surge": 0.35,
+      "price": 9.75,
+      "rsi_15m": 65.99,
+      "vol_surge": 0.25,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "BANANAS31USDT",
       "score": 50,
-      "price": 0.009073,
-      "rsi_15m": 57.33,
+      "price": 0.009071,
+      "rsi_15m": 57.25,
       "vol_surge": 0.06,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
@@ -54,27 +72,18 @@
     {
       "symbol": "REUSDT",
       "score": 50,
-      "price": 0.452,
-      "rsi_15m": 64.07,
-      "vol_surge": 0.3,
+      "price": 0.4519,
+      "rsi_15m": 64.01,
+      "vol_surge": 0.31,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "BROCCOLI714USDT",
       "score": 50,
-      "price": 9.75,
-      "rsi_15m": 65.99,
-      "vol_surge": 0.24,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "JSTUSDT",
-      "score": 50,
-      "price": 0.1009,
-      "rsi_15m": 55.97,
-      "vol_surge": 0.48,
+      "price": 0.0194,
+      "rsi_15m": 61.0,
+      "vol_surge": 0.37,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -84,15 +93,6 @@
       "price": 0.118,
       "rsi_15m": 52.82,
       "vol_surge": 0.5,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "NEIROUSDT",
-      "score": 50,
-      "price": 7.273e-05,
-      "rsi_15m": 51.85,
-      "vol_surge": 0.08,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
