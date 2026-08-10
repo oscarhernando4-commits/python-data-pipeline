@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 08:56:20",
+  "timestamp": "2026-08-10 08:58:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios estrictos de seguridad y rentabilidad exigidos. La ausencia de datos de profundidad en el libro de órdenes, sumada a la tendencia neutral y el sentimiento de miedo, obliga a mantener una postura defensiva (HOLD) para proteger el capital institucional.",
+  "reasoning": "El comité ha decidido unánimemente mantener la liquidez en USDT. La combinación de un sentimiento de miedo, la falta de datos de profundidad en el libro de órdenes y la alta tasa de fallos en trades recientes bajo condiciones de mercado neutral, impide alcanzar el umbral de convicción A+ necesario para operar.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -15,15 +15,15 @@
       "score": 85
     },
     {
+      "symbol": "ORDIUSDT",
+      "score": 85
+    },
+    {
       "symbol": "SUIUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHFIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ORDIUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     }
   ]
