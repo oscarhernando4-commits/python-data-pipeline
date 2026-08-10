@@ -1,26 +1,17 @@
 {
-  "timestamp": "2026-08-10 12:52:38",
+  "timestamp": "2026-08-10 17:54:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad técnica. Ninguno de los candidatos analizados alcanza el umbral de Score A+ (55) requerido por el comité, y la falta de soporte institucional en el libro de órdenes hace que cualquier posición larga sea de alto riesgo. Se prioriza la protección del capital hasta que surja una configuración de mercado más robusta.",
+  "reasoning": "Tras analizar los 15 candidatos, ninguno alcanza el umbral de Score Técnico A+ (>= 55) ni presenta una estructura de soporte institucional sólida en el libro de órdenes. El mercado se encuentra en una fase de alta vulnerabilidad y distribución, por lo que el comité ha decidido mantener la liquidez en espera de una configuración de mayor calidad.",
   "top_candidates": [
-    {
-      "symbol": "ZROUSDT",
-      "score": 60,
-      "price": 0.869,
-      "rsi_15m": 56.19,
-      "vol_surge": 0.36,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
     {
       "symbol": "ETHUSDT",
       "score": 55,
-      "price": 1874.6,
-      "rsi_15m": 25.8,
-      "vol_surge": 0.16,
+      "price": 1874.4,
+      "rsi_15m": 25.65,
+      "vol_surge": 0.18,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -36,63 +27,81 @@
     {
       "symbol": "TUTUSDT",
       "score": 50,
-      "price": 0.13652,
-      "rsi_15m": 55.44,
-      "vol_surge": 0.9,
+      "price": 0.13605,
+      "rsi_15m": 55.02,
+      "vol_surge": 0.98,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "BANKUSDT",
       "score": 50,
-      "price": 0.7002,
-      "rsi_15m": 51.2,
-      "vol_surge": 0.09,
+      "price": 0.0389,
+      "rsi_15m": 55.6,
+      "vol_surge": 0.22,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "BOMEUSDT",
+      "score": 50,
+      "price": 0.0008187,
+      "rsi_15m": 57.66,
+      "vol_surge": 0.28,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "PEOPLEUSDT",
+      "score": 50,
+      "price": 0.00869,
+      "rsi_15m": 48.26,
+      "vol_surge": 1.0,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "CAKEUSDT",
+      "score": 50,
+      "price": 1.448,
+      "rsi_15m": 52.96,
+      "vol_surge": 0.29,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "NEIROUSDT",
       "score": 50,
-      "price": 7.347e-05,
-      "rsi_15m": 58.86,
-      "vol_surge": 0.11,
+      "price": 7.33e-05,
+      "rsi_15m": 57.15,
+      "vol_surge": 0.16,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "FILUSDT",
+      "score": 50,
+      "price": 0.7001,
+      "rsi_15m": 50.93,
+      "vol_surge": 0.09,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "FORMUSDT",
       "score": 50,
-      "price": 0.217,
-      "rsi_15m": 54.86,
-      "vol_surge": 0.73,
+      "price": 0.2178,
+      "rsi_15m": 58.7,
+      "vol_surge": 1.18,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "JSTUSDT",
+      "symbol": "STXUSDT",
       "score": 50,
-      "price": 0.10137,
-      "rsi_15m": 65.65,
-      "vol_surge": 0.16,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "TIAUSDT",
-      "score": 50,
-      "price": 0.3272,
-      "rsi_15m": 50.36,
-      "vol_surge": 0.04,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "MUBUSDT",
-      "score": 45,
-      "price": 879.44,
-      "rsi_15m": 54.54,
-      "vol_surge": 0.08,
+      "price": 0.1318,
+      "rsi_15m": 52.03,
+      "vol_surge": 0.42,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
