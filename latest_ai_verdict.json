@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-10 18:22:20",
+  "timestamp": "2026-08-10 13:24:11",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
@@ -7,92 +7,92 @@
   "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad estructural. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y confirmación de soporte en el libro de órdenes). La estrategia institucional es preservar el capital hasta que el sentimiento de mercado mejore y se observe una acumulación clara de ballenas.",
   "top_candidates": [
     {
-      "symbol": "QNTUSDT",
-      "score": 60,
-      "price": 57.97,
-      "rsi_15m": 50.39,
-      "vol_surge": 1.94,
-      "trade_quality": "B",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "ZAMAUSDT",
-      "score": 60,
-      "price": 0.04615,
-      "rsi_15m": 59.26,
-      "vol_surge": 0.08,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "INJUSDT",
-      "score": 60,
-      "price": 4.465,
-      "rsi_15m": 56.27,
-      "vol_surge": 0.4,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "SUNUSDT",
-      "score": 60,
-      "price": 0.0182,
-      "rsi_15m": 58.1,
-      "vol_surge": 0.02,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "LUNCUSDT",
-      "score": 60,
-      "price": 5.03e-05,
-      "rsi_15m": 55.77,
-      "vol_surge": 0.23,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
       "symbol": "ETHUSDT",
       "score": 55,
-      "price": 1872.54,
-      "rsi_15m": 25.68,
-      "vol_surge": 0.28,
+      "price": 1873.4,
+      "rsi_15m": 24.92,
+      "vol_surge": 0.27,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "BOMEUSDT",
       "score": 50,
-      "price": 0.0008208,
-      "rsi_15m": 58.4,
-      "vol_surge": 0.73,
+      "price": 0.0008161,
+      "rsi_15m": 56.23,
+      "vol_surge": 0.35,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "PENGUUSDT",
+      "symbol": "TUTUSDT",
       "score": 50,
-      "price": 0.006657,
-      "rsi_15m": 50.81,
-      "vol_surge": 0.1,
+      "price": 0.1393,
+      "rsi_15m": 57.78,
+      "vol_surge": 1.26,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "PUMPUSDT",
       "score": 50,
-      "price": 136.41,
-      "rsi_15m": 50.8,
-      "vol_surge": 0.03,
+      "price": 0.002815,
+      "rsi_15m": 62.42,
+      "vol_surge": 0.9,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "BANKUSDT",
       "score": 50,
-      "price": 0.0393,
-      "rsi_15m": 63.22,
-      "vol_surge": 0.56,
+      "price": 0.039,
+      "rsi_15m": 57.88,
+      "vol_surge": 0.4,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "score": 50,
+      "price": 1.331,
+      "rsi_15m": 51.28,
+      "vol_surge": 0.51,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "FILUSDT",
+      "score": 50,
+      "price": 0.7004,
+      "rsi_15m": 51.74,
+      "vol_surge": 0.09,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "FORMUSDT",
+      "score": 50,
+      "price": 0.2172,
+      "rsi_15m": 55.88,
+      "vol_surge": 1.35,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "APTUSDT",
+      "score": 50,
+      "price": 0.592,
+      "rsi_15m": 50.35,
+      "vol_surge": 0.09,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "SOLVUSDT",
+      "score": 50,
+      "price": 0.00254,
+      "rsi_15m": 59.71,
+      "vol_surge": 0.39,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }

@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2255,
-    "wins": 420,
-    "losses": 1835,
-    "win_rate_pct": 18.63,
-    "total_pnl_usd": 274.14772545454423
+    "total_trades": 2257,
+    "wins": 419,
+    "losses": 1838,
+    "win_rate_pct": 18.56,
+    "total_pnl_usd": 272.6523054545442
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on EPICUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BICOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on EPICUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on UNIUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BTCUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on KITEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ZROUSDT)",
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on VICUSDT)"
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on VICUSDT)",
+      "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MEUSDT)"
     ],
     "boosted_patterns": [
       "Optimized Setup for ADAUSDT: Profit logged (+$1.97) -> Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
@@ -37662,17 +37662,55 @@
       }
     },
     {
-      "timestamp": "2026-08-10 18:04:21",
-      "account_id": "R-01",
-      "group_name": "CUENTA REAL",
-      "symbol": "WLFIUSDT",
-      "side": "BUY",
-      "entry_price": 0.0535,
-      "exit_price": 0.0537,
-      "pnl_usd": 0.0654199999999996,
-      "result": "WIN",
-      "notes": "Real Money Trade closed with 0.37%",
-      "context": {}
+      "timestamp": "2026-08-10 13:24:11",
+      "account_id": "SIM-041",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "MEUSDT",
+      "side": "LONG",
+      "entry_price": 0.07083,
+      "exit_price": 0.06943,
+      "pnl_usd": -0.42,
+      "result": "LOSS",
+      "notes": "Hit SL on MEUSDT (-$0.42). Re-Trading!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 70.95,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 13:24:11",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "MEUSDT",
+      "side": "LONG",
+      "entry_price": 0.07083,
+      "exit_price": 0.06943,
+      "pnl_usd": -0.59,
+      "result": "LOSS",
+      "notes": "Hit SL on MEUSDT (-$0.59). Re-Trading!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 70.95,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 13:24:11",
+      "account_id": "SIM-043",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "MEUSDT",
+      "side": "LONG",
+      "entry_price": 0.07083,
+      "exit_price": 0.06943,
+      "pnl_usd": -0.42,
+      "result": "LOSS",
+      "notes": "Hit SL on MEUSDT (-$0.42). Re-Trading!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 70.95,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
