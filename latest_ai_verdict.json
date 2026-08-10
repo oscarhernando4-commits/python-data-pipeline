@@ -1,26 +1,26 @@
 {
-  "timestamp": "2026-08-10 00:26:16",
+  "timestamp": "2026-08-10 00:28:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El entorno macroeconómico es altamente volátil y bajista, con una correlación sistémica negativa. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55 con confirmación de volumen y profundidad de mercado). Se decide mantener la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo' y proteger el capital institucional.",
+  "reasoning": "El mercado se encuentra en un estado de liquidez tóxica con una alta correlación negativa en los activos principales. Ninguno de los candidatos cumple con los requisitos estrictos de riesgo y convicción establecidos por el comité, por lo que la decisión unánime es mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
-    {
-      "symbol": "EPICUSDT",
-      "score": 70
-    },
     {
       "symbol": "TRXUSDT",
       "score": 70
     },
     {
-      "symbol": "CRVUSDT",
+      "symbol": "EPICUSDT",
       "score": 70
     },
     {
-      "symbol": "BABYUSDT",
-      "score": 60
+      "symbol": "REUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "CRVUSDT",
+      "score": 70
     },
     {
       "symbol": "BROCCOLI714USDT",
