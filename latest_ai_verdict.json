@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-10 06:42:23",
+  "timestamp": "2026-08-10 06:44:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "A pesar de que varios activos presentan scores técnicos de 85, la falta de profundidad en el libro de órdenes, la incertidumbre macroeconómica y el historial reciente de pérdidas en condiciones similares dictan una postura de preservación de capital (HOLD) hasta que se estabilice la estructura de mercado.",
+  "confidence": 0,
+  "reasoning": "Tras la deliberación unánime, el comité concluye que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (Score >= 55 y Bids >= 55%) necesarios para garantizar la preservación del capital, optando por una postura de espera (HOLD).",
   "top_candidates": [
+    {
+      "symbol": "BCHUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "UNIUSDT",
+      "score": 85
+    },
     {
       "symbol": "SHIBUSDT",
       "score": 85
@@ -17,14 +25,6 @@
     {
       "symbol": "GRAMUSDT",
       "score": 85
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "BTCUSDT",
-      "score": 75
     }
   ]
 }

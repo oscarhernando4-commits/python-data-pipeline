@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 06:42:25",
+  "updated_at": "2026-08-10 06:44:29",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "A pesar de que varios activos presentan scores técnicos de 85, la falta de profundidad en el libro de órdenes, la incertidumbre macroeconómica y el historial reciente de pérdidas en condiciones similares dictan una postura de preservación de capital (HOLD) hasta que se estabilice la estructura de mercado."
+    "reasoning": "Tras la deliberación unánime, el comité concluye que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (Score >= 55 y Bids >= 55%) necesarios para garantizar la preservación del capital, optando por una postura de espera (HOLD)."
   }
 }
