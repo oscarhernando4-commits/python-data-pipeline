@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 03:34:17",
+  "timestamp": "2026-08-10 03:36:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta dispersión y fragilidad. Ninguno de los candidatos analizados cumple con los requisitos estrictos de convicción A+ (Score >= 55 y confirmación de soporte institucional). La estrategia institucional es preservar el capital y esperar a que la volatilidad se estabilice y el mercado muestre una dirección clara.",
+  "confidence": 95,
+  "reasoning": "Tras deliberar, el comité concluye que el mercado se encuentra en una fase de alta incertidumbre y baja liquidez institucional. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ (Score >= 55 y Bids > 55%), y el historial reciente de trades en condiciones similares ha resultado en pérdidas recurrentes. Se prioriza la protección del capital sobre la especulación.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "KITEUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "JTOUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "PEPEUSDT",
-      "score": 60
+      "symbol": "MORPHOUSDT",
+      "score": 75
     },
     {
       "symbol": "PENGUUSDT",
-      "score": 60
+      "score": 75
+    },
+    {
+      "symbol": "ARBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SUNUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "NEXOUSDT",
+      "score": 75
     }
   ]
 }
