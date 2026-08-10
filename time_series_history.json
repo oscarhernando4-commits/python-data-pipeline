@@ -1,12 +1,51 @@
 {
-  "INJUSDT": [
+  "NVDABUSDT": [
     {
-      "timestamp": "2026-08-10 20:52:04",
-      "price": 4.472,
-      "score": 60,
-      "rsi": 54.4,
+      "timestamp": "2026-08-10 15:52:22",
+      "price": 219.49,
+      "score": 65,
+      "rsi": 49.03,
       "macd": "Neutral",
-      "volume_surge": 0.08,
+      "volume_surge": 0.22,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ZENUSDT": [
+    {
+      "timestamp": "2026-08-10 15:52:22",
+      "price": 4.246,
+      "score": 15,
+      "rsi": 48.87,
+      "macd": "Neutral",
+      "volume_surge": 0.14,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GALAUSDT": [
+    {
+      "timestamp": "2026-08-10 15:52:22",
+      "price": 0.001798,
+      "score": 15,
+      "rsi": 39.12,
+      "macd": "Neutral",
+      "volume_surge": 0.28,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PLUMEUSDT": [
+    {
+      "timestamp": "2026-08-10 15:52:22",
+      "price": 0.01238,
+      "score": 50,
+      "rsi": 60.71,
+      "macd": "Neutral",
+      "volume_surge": 0.11,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
