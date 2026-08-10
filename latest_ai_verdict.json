@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 00:20:17",
+  "timestamp": "2026-08-10 00:22:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional avanzada con una correlación bajista predominante. Ninguno de los candidatos analizados cumple con los criterios de riesgo A+ exigidos por el comité, por lo que la decisión unánime es mantener la liquidez en efectivo para evitar la exposición a 'cuchillos cayendo'.",
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre y debilidad técnica generalizada. Ninguno de los candidatos analizados cumple con los requisitos estrictos de Score Técnico (>= 55) y soporte de libro de órdenes necesarios para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez y alta volatilidad.",
   "top_candidates": [
     {
       "symbol": "EPICUSDT",
@@ -12,18 +12,18 @@
     },
     {
       "symbol": "TRXUSDT",
-      "score": 60
+      "score": 70
     },
     {
       "symbol": "WLFIUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "REUSDT",
       "score": 60
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SHELLUSDT",
+      "symbol": "NEXOUSDT",
       "score": 60
     }
   ]
