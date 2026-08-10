@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 06:28:19",
+  "timestamp": "2026-08-10 06:30:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "A pesar de que varios activos presentan scores técnicos de 85, el entorno macroeconómico de miedo, la falta de dominancia clara en el libro de órdenes y el historial reciente de pérdidas en condiciones de mercado neutral obligan a mantener la liquidez en USDT para evitar riesgos sistémicos.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un estado de purga selectiva con alta incertidumbre. Ninguno de los candidatos cumple con los criterios estrictos de riesgo y convicción exigidos por el comité, por lo que la decisión es mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
-    {
-      "symbol": "ADAUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "BCHUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ETHUSDT",
-      "score": 85
-    },
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ETHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ASTERUSDT",
       "score": 75
     }
   ]
