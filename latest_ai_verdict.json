@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 00:28:22",
+  "timestamp": "2026-08-10 00:30:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de liquidez tóxica con una alta correlación negativa en los activos principales. Ninguno de los candidatos cumple con los requisitos estrictos de riesgo y convicción establecidos por el comité, por lo que la decisión unánime es mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con una correlación de caída coordinada. Ningún activo cumple con los criterios de alta convicción (Score >= 55) y el riesgo de 'falling knives' es inaceptable bajo las reglas de protección de capital.",
   "top_candidates": [
-    {
-      "symbol": "TRXUSDT",
-      "score": 70
-    },
     {
       "symbol": "EPICUSDT",
       "score": 70
     },
     {
-      "symbol": "REUSDT",
-      "score": 70
+      "symbol": "TRXUSDT",
+      "score": 60
     },
     {
-      "symbol": "CRVUSDT",
-      "score": 70
+      "symbol": "ASTERUSDT",
+      "score": 60
     },
     {
-      "symbol": "BROCCOLI714USDT",
+      "symbol": "DYMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ESPUSDT",
       "score": 60
     }
   ]
