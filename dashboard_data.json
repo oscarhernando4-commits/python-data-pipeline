@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 04:00:25",
+  "updated_at": "2026-08-10 04:02:18",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una fragilidad sistémica extrema con una correlación negativa generalizada. Ningún activo cumple con los criterios de alta convicción (Score >= 55) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de capitulación."
+    "reasoning": "El mercado se encuentra en un estado de contracción de liquidez extrema y alta volatilidad bajista. Ninguno de los candidatos cumple con los criterios estrictos de Score Técnico (>= 55) y soporte de libro de órdenes necesario para garantizar la preservación del capital. Se prioriza la protección de la liquidez sobre la ejecución de trades de baja probabilidad."
   }
 }
