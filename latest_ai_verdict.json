@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 09:46:22",
+  "timestamp": "2026-08-10 09:48:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica extrema. Ningún activo cumple con los criterios de convicción A+ exigidos por el Comité. La estrategia es preservar el capital en USDT hasta que se observe una capitulación clara o una reversión orgánica con volumen institucional confirmado.",
+  "reasoning": "El mercado actual presenta un riesgo sistémico elevado con una correlación bajista predominante. Ninguno de los candidatos cumple con los criterios estrictos de Score Técnico (>= 55) y convicción necesarios para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja confianza.",
   "top_candidates": [
-    {
-      "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "NILUSDT",
-      "score": 60
-    },
     {
       "symbol": "CRVUSDT",
       "score": 60
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "ALLOUSDT",
       "score": 60
     },
     {
-      "symbol": "ORDIUSDT",
-      "score": 60
+      "symbol": "LINKUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "HBARUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "BOMEUSDT",
+      "score": 50
     }
   ]
 }
