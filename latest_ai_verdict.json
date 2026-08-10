@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-10 00:58:22",
+  "timestamp": "2026-08-10 01:00:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El entorno de mercado es altamente tóxico con una descorrelación forzada y falta de volumen institucional real. Ningún activo cumple con los criterios de riesgo A+ exigidos por el comité, por lo que se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado actual se encuentra en una fase de distribución institucional agresiva con una alta correlación negativa en los activos principales. Ningún candidato cumple con los criterios de seguridad y convicción exigidos por el comité, por lo que se prioriza la preservación del capital sobre la especulación en activos de baja liquidez.",
   "top_candidates": [
     {
       "symbol": "EPICUSDT",
       "score": 70
     },
     {
-      "symbol": "KAITOUSDT",
-      "score": 65
+      "symbol": "WLDUSDT",
+      "score": 60
     },
     {
-      "symbol": "THEUSDT",
+      "symbol": "DYMUSDT",
       "score": 60
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "DYMUSDT",
+      "symbol": "PARTIUSDT",
       "score": 60
     }
   ]
