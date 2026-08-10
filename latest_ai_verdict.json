@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-10 02:40:19",
+  "timestamp": "2026-08-10 02:42:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y estancamiento. Ninguno de los candidatos analizados cumple con los requisitos estrictos de Score A+ y confirmación de volumen institucional, por lo que la preservación de capital es la prioridad absoluta.",
+  "reasoning": "El mercado se encuentra en una fase de distribución técnica con alta fragilidad. Ningún activo cumple con los criterios estrictos de convicción A+ exigidos por el comité, por lo que la preservación de capital es la prioridad absoluta.",
   "top_candidates": [
+    {
+      "symbol": "BTCUSDT",
+      "score": 65
+    },
     {
       "symbol": "UNIUSDT",
       "score": 60
     },
     {
-      "symbol": "PENGUUSDT",
+      "symbol": "SHIBUSDT",
       "score": 60
     },
     {
@@ -19,11 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "JTOUSDT",
+      "symbol": "PENGUUSDT",
       "score": 60
     }
   ]
