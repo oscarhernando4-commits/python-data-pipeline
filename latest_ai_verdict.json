@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-10 08:10:20",
+  "timestamp": "2026-08-10 08:12:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragmentación severa y los candidatos, aunque tienen scores técnicos aceptables, carecen de la profundidad de libro de órdenes y la confirmación de tendencia necesaria para cumplir con nuestra política de riesgo A+. Se prioriza la preservación del capital ante la incertidumbre macroeconómica.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con confirmación de soporte en el libro de órdenes y volumen institucional). El mercado se encuentra en una fase de alta incertidumbre y el riesgo de operar activos con historial limitado o baja profundidad es inaceptable bajo las reglas de gestión de riesgo.",
   "top_candidates": [
-    {
-      "symbol": "MUBUSDT",
-      "score": 85
-    },
     {
       "symbol": "SUNUSDT",
       "score": 85
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "SKYUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SEIUSDT",
       "score": 75
     }
   ]
