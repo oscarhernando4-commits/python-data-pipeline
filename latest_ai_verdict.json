@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-10 06:04:20",
+  "timestamp": "2026-08-10 06:06:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras deliberar, el comité ha determinado que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes y la inestabilidad macroeconómica actual no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en un mercado de alta incertidumbre.",
+  "reasoning": "El comité ha decidido mantener la liquidez en USDT. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes sólido). El mercado se encuentra en un estado de indecisión (Fear 30) y los patrones históricos recientes sugieren una alta probabilidad de pérdidas en condiciones de mercado neutral.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
@@ -19,7 +19,7 @@
       "score": 75
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
