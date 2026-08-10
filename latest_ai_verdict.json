@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-10 12:08:26",
-  "selected_symbol": "SOLUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "El comité ha determinado que SOLUSDT es el activo con mayor probabilidad de éxito debido a su alto score técnico (85), su pertenencia al sector dominante (Layer 1) y el respaldo de volumen institucional. Se prioriza la protección del capital mediante un trailing stop dinámico, evitando activos de baja capitalización que han mostrado pérdidas recurrentes en las simulaciones históricas.",
+  "timestamp": "2026-08-10 12:10:20",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la fuerza técnica de activos como SOL y DOT, el entorno de mercado actual y la falta de dominancia clara en el libro de órdenes no justifican una entrada, priorizando la protección del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "DOTUSDT",
       "score": 85
     },
     {
@@ -19,11 +23,7 @@
       "score": 85
     },
     {
-      "symbol": "SUIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PEPEUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     }
   ]
