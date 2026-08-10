@@ -63,10 +63,27 @@ def fetch_klines_public(symbol, interval, limit=30):
             pass
     return []
 
+def _aggregate_1m_to_2m(klines_1m):
+    """Combines pairs of 1m klines into 2m klines [timestamp, open, high, low, close, volume]."""
+    if not klines_1m or len(klines_1m) < 2:
+        return []
+    klines_2m = []
+    for i in range(0, len(klines_1m) - 1, 2):
+        k1 = klines_1m[i]
+        k2 = klines_1m[i+1]
+        open_p = float(k1[1])
+        high_p = max(float(k1[2]), float(k2[2]))
+        low_p = min(float(k1[3]), float(k2[3]))
+        close_p = float(k2[4])
+        vol = float(k1[5]) + float(k2[5])
+        klines_2m.append([k1[0], open_p, high_p, low_p, close_p, vol])
+    return klines_2m
+
 def analyze_multi_timeframe_candles(symbol):
     """
-    Inspects 5m, 15m, 1h, 4h, 1d, and 7d historical candle behavior.
+    Inspects 2m, 5m, 15m, 1h, 4h, 1d, and 7d historical candle behavior.
     Calculates multi-timeframe trend alignment, volatility expansion, and anti-stablecoin verification.
+    Synced 1:1 with the 2-minute continuous execution loop.
     """
     # 1. Immediate Stablecoin Blacklist Guard
     if is_stablecoin(symbol):
@@ -76,7 +93,9 @@ def analyze_multi_timeframe_candles(symbol):
             "multi_tf_score": 0
         }
         
-    # 2. Fetch Multi-Timeframe Klines (5m, 15m, 1h, 4h, 1d)
+    # 2. Fetch Multi-Timeframe Klines (1m->2m, 5m, 15m, 1h, 4h, 1d)
+    klines_1m = fetch_klines_public(symbol, "1m", 40)
+    klines_2m = _aggregate_1m_to_2m(klines_1m)
     klines_5m = fetch_klines_public(symbol, "5m", 20)
     klines_15m = fetch_klines_public(symbol, "15m", 20)
     klines_1h = fetch_klines_public(symbol, "1h", 20)
@@ -110,19 +129,26 @@ def analyze_multi_timeframe_candles(symbol):
             "multi_tf_score": 0
         }
         
-    # Parse 5m and 15m trends
+    # Parse 2m, 5m and 15m trends
+    closes_2m = [float(k[4]) for k in klines_2m] if klines_2m else []
+    vols_2m = [float(k[5]) for k in klines_2m] if klines_2m else []
     closes_5m = [float(k[4]) for k in klines_5m]
     closes_15m = [float(k[4]) for k in klines_15m]
     vols_15m = [float(k[5]) for k in klines_15m]
     closes_1h = [float(k[4]) for k in klines_1h] if klines_1h else closes_15m
     closes_4h = [float(k[4]) for k in klines_4h] if klines_4h else closes_15m
     
+    tf_2m_up = closes_2m[-1] > closes_2m[0] if closes_2m else False
     tf_5m_up = closes_5m[-1] > closes_5m[0] if closes_5m else False
     tf_15m_up = closes_15m[-1] > closes_15m[0] if closes_15m else False
     tf_1h_up = closes_1h[-1] > closes_1h[0] if closes_1h else False
     tf_4h_up = closes_4h[-1] > closes_4h[0] if closes_4h else False
     tf_1d_up = d_closes[-1] > d_closes[0] if d_closes else False
     
+    # 2m Microstructure Volume Surge
+    avg_vol_2m = sum(vols_2m[-5:]) / len(vols_2m[-5:]) if len(vols_2m) >= 5 else 1.0
+    vol_surge_2m = round(vols_2m[-1] / avg_vol_2m, 2) if (vols_2m and avg_vol_2m > 0) else 1.0
+
     # 15m Microstructure moving averages (MA7, MA25) & Volume Surge
     ma7_15m = sum(closes_15m[-7:]) / len(closes_15m[-7:]) if len(closes_15m) >= 7 else closes_15m[-1]
     ma25_15m = sum(closes_15m[-20:]) / len(closes_15m[-20:]) if closes_15m else closes_15m[-1]
@@ -133,12 +159,13 @@ def analyze_multi_timeframe_candles(symbol):
     avg_vol_15m = sum(vols_15m[-5:]) / len(vols_15m[-5:]) if len(vols_15m) >= 5 else 1.0
     vol_surge_15m = round(vols_15m[-1] / avg_vol_15m, 2) if avg_vol_15m > 0 else 1.0
     
-    # Multi-Timeframe Alignment Score (0 to 100)
+    # Multi-Timeframe Alignment Score (0 to 100) including 2m synchronization
     score_components = [
+        tf_2m_up * 10,
         tf_5m_up * 15,
         tf_15m_up * 25,
-        tf_1h_up * 25,
-        tf_4h_up * 20,
+        tf_1h_up * 20,
+        tf_4h_up * 15,
         tf_1d_up * 15
     ]
     multi_tf_score = sum(score_components)
@@ -158,8 +185,8 @@ def analyze_multi_timeframe_candles(symbol):
         lower_wick = min(open_15m, close_15m) - low_15m
         lower_wick_pct = round((lower_wick / candle_range) * 100.0, 1) if candle_range > 0 else 0.0
         
-        # Yellow Arrow 15M Pivot Rebound Pattern Detector (Support retest + buyer absorption wick + 5m momentum)
-        is_yellow_arrow_pivot = (0.0 <= dist_from_15m_ma7_pct <= 3.0) and (lower_wick_pct >= 20.0 or close_15m > open_15m) and tf_5m_up
+        # Yellow Arrow 15M Pivot Rebound Pattern Detector
+        is_yellow_arrow_pivot = (0.0 <= dist_from_15m_ma7_pct <= 3.0) and (lower_wick_pct >= 20.0 or close_15m > open_15m) and (tf_5m_up or tf_2m_up)
         yellow_arrow_status = "🎯 PATRÓN FLECHAS AMARILLAS (REBOTE PIVOTE A+ EN MA7/MA25)" if is_yellow_arrow_pivot else "⚪ NEUTRAL 15M"
 
         # Spike up followed by rejection wick (buying top trap)
@@ -180,6 +207,7 @@ def analyze_multi_timeframe_candles(symbol):
         yellow_arrow_status = "⚪ NEUTRAL"
 
     pattern_15m_summary = (
+        f"2m={'UP' if tf_2m_up else 'DOWN'} (VolSurge2m={vol_surge_2m}x) | "
         f"Precio 15m=${closes_15m[-1]:.4f} | MA7_15m=${ma7_15m:.4f} (Distancia: {dist_from_15m_ma7_pct:+.2f}%) | "
         f"MA25_15m=${ma25_15m:.4f} | Por encima MA7/MA25={'SÍ' if price_above_15m_ma7 and price_above_15m_ma25 else 'NO'} | "
         f"Fase 15m={'RUPTURA_FRESCA (INICIO)' if 0.0 <= dist_from_15m_ma7_pct <= 3.0 else 'SOBRE_EXTENDIDO (CIMA)'} | "
@@ -195,9 +223,11 @@ def analyze_multi_timeframe_candles(symbol):
         "overextension_reason": overextension_reason,
         "is_yellow_arrow_pivot": is_yellow_arrow_pivot,
         "price_above_15m_mas": price_above_15m_ma7 and price_above_15m_ma25,
+        "vol_surge_2m": vol_surge_2m,
         "vol_surge_15m": vol_surge_15m,
         "pattern_15m_summary": pattern_15m_summary,
         "timeframe_alignment": {
+            "2m": "BULLISH" if tf_2m_up else "BEARISH",
             "5m": "BULLISH" if tf_5m_up else "BEARISH",
             "15m": "BULLISH" if tf_15m_up else "BEARISH",
             "1h": "BULLISH" if tf_1h_up else "BEARISH",
