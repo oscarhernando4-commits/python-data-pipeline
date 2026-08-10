@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 06:14:23",
+  "updated_at": "2026-08-10 06:16:19",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de consolidación con alta incertidumbre y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con los criterios de convicción A+ (Score >= 55 con soporte de ballenas confirmado), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar la exposición a una posible trampa de liquidez."
+    "reasoning": "El mercado se encuentra en un estado de 'Neutralidad Forzada' con alta volatilidad y falta de convicción institucional. Ninguno de los candidatos cumple con el requisito de Bids >= 65% ni con una estructura técnica que supere el umbral de riesgo A+. Se prioriza la preservación del capital sobre la especulación en un entorno de alta probabilidad de falsas rupturas."
   }
 }

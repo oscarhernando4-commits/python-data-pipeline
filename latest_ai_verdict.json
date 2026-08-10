@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-10 06:14:21",
+  "timestamp": "2026-08-10 06:16:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de consolidación con alta incertidumbre y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con los criterios de convicción A+ (Score >= 55 con soporte de ballenas confirmado), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar la exposición a una posible trampa de liquidez.",
+  "reasoning": "El mercado se encuentra en un estado de 'Neutralidad Forzada' con alta volatilidad y falta de convicción institucional. Ninguno de los candidatos cumple con el requisito de Bids >= 65% ni con una estructura técnica que supere el umbral de riesgo A+. Se prioriza la preservación del capital sobre la especulación en un entorno de alta probabilidad de falsas rupturas.",
   "top_candidates": [
-    {
-      "symbol": "EPICUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "XLMUSDT",
-      "score": 85
-    },
     {
       "symbol": "BTCUSDT",
       "score": 75
@@ -23,7 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "SHIBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XLMUSDT",
       "score": 75
     }
   ]
