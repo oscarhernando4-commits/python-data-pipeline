@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 11:52:24",
+  "timestamp": "2026-08-10 11:54:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún activo cumple con el umbral estricto de convicción A+ (Score >= 55 y Bids >= 65%). El mercado se encuentra en una fase de alta volatilidad y baja liquidez, lo que aumenta el riesgo de 'trampas de valor'. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "Ninguno de los candidatos cumple con la exigencia de convicción A+ (Score >= 55 y confirmación de soporte institucional). La alta volatilidad y el sentimiento de miedo sugieren que el riesgo de 'trampa alcista' es elevado, por lo que el comité ha decidido mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
-      "symbol": "ZAMAUSDT",
+      "symbol": "POLUSDT",
       "score": 70
     },
     {
-      "symbol": "SUIUSDT",
-      "score": 60
+      "symbol": "ZAMAUSDT",
+      "score": 70
     },
     {
       "symbol": "AVAXUSDT",
       "score": 60
     },
     {
-      "symbol": "PENGUUSDT",
+      "symbol": "SUIUSDT",
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "PENGUUSDT",
       "score": 60
     }
   ]
