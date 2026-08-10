@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-10 05:52:18",
+  "timestamp": "2026-08-10 05:54:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia técnica y un entorno de riesgo elevado. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes claro), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
+  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, el entorno de mercado (Fear 30) y la falta de una dominancia clara en el libro de órdenes (Bids 50%) no cumplen con los criterios de convicción A+ exigidos por el comité. Se prioriza la preservación del capital ante la alta probabilidad de volatilidad bajista.",
   "top_candidates": [
     {
       "symbol": "UNIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XLMUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "XLMUSDT",
+      "score": 75
+    },
+    {
       "symbol": "WLFIUSDT",
       "score": 75
     },
     {
-      "symbol": "ICPUSDT",
+      "symbol": "AAVEUSDT",
       "score": 75
     }
   ]
