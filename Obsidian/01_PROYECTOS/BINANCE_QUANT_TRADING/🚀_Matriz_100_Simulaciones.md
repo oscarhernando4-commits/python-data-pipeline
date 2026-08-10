@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-10 16:10:25
+date: 2026-08-10 16:12:17
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $20.08 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-10 16:10:25`
+> ⏱️ **Última Actualización:** `2026-08-10 16:12:17`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -122,23 +122,23 @@ date: 2026-08-10 16:10:25
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-041** | **ICPUSDT** | `#5` | `2W/3L` | 26-08-10<br>16:10 | `🔴 Perdió -$0.06` | **`$101.64`** (`+$1.64`) | 🟢 Buscando |
+| **SIM-041** | **ICPUSDT** | `#5` | `2W/3L` | 26-08-10<br>16:12 | `🔴 Perdió -$0.06` | **`$101.64`** (`+$1.64`) | 🟢 Buscando |
 | **SIM-042** | **ALLOUSDT** | `#5` | `2W/3L` | 26-08-10<br>10:58 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |
-| **SIM-043** | **ICPUSDT** | `#5` | `2W/3L` | 26-08-10<br>16:10 | `🔴 Perdió -$0.06` | **`$101.64`** (`+$1.64`) | 🟢 Buscando |
+| **SIM-043** | **ICPUSDT** | `#5` | `2W/3L` | 26-08-10<br>16:12 | `🔴 Perdió -$0.06` | **`$101.64`** (`+$1.64`) | 🟢 Buscando |
 | **SIM-044** | **ALLOUSDT** | `#5` | `2W/3L` | 26-08-10<br>10:58 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |
 | **SIM-045** | **ALLOUSDT** | `#5` | `2W/3L` | 26-08-10<br>10:58 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |
 | **SIM-046** | **ALLOUSDT** | `#5` | `2W/3L` | 26-08-10<br>10:58 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |
-| **SIM-047** | **ICPUSDT** | `#5` | `2W/3L` | 26-08-10<br>16:10 | `🔴 Perdió -$0.06` | **`$101.64`** (`+$1.64`) | 🟢 Buscando |
+| **SIM-047** | **ICPUSDT** | `#5` | `2W/3L` | 26-08-10<br>16:12 | `🔴 Perdió -$0.06` | **`$101.64`** (`+$1.64`) | 🟢 Buscando |
 | **SIM-048** | **ALLOUSDT** | `#5` | `2W/3L` | 26-08-10<br>10:58 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |
 | **SIM-049** | **ALLOUSDT** | `#5` | `2W/3L` | 26-08-10<br>10:58 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |
-| **SIM-050** | **ICPUSDT** | `#5` | `2W/3L` | 26-08-10<br>16:10 | `🔴 Perdió -$0.06` | **`$101.64`** (`+$1.64`) | 🟢 Buscando |
+| **SIM-050** | **ICPUSDT** | `#5` | `2W/3L` | 26-08-10<br>16:12 | `🔴 Perdió -$0.06` | **`$101.64`** (`+$1.64`) | 🟢 Buscando |
 | **SIM-051** | **ALLOUSDT** | `#5` | `2W/3L` | 26-08-10<br>10:58 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |
-| **SIM-052** | **ICPUSDT** | `#5` | `2W/3L` | 26-08-10<br>16:10 | `🔴 Perdió -$0.06` | **`$101.64`** (`+$1.64`) | 🟢 Buscando |
+| **SIM-052** | **ICPUSDT** | `#5` | `2W/3L` | 26-08-10<br>16:12 | `🔴 Perdió -$0.06` | **`$101.64`** (`+$1.64`) | 🟢 Buscando |
 | **SIM-053** | **ALLOUSDT** | `#5` | `2W/3L` | 26-08-10<br>10:58 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |
 | **SIM-054** | **ALLOUSDT** | `#5` | `2W/3L` | 26-08-10<br>10:58 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |
 | **SIM-055** | **ALLOUSDT** | `#5` | `2W/3L` | 26-08-10<br>10:58 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |
 | **SIM-056** | **ALLOUSDT** | `#5` | `2W/3L` | 26-08-10<br>10:58 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |
-| **SIM-057** | **ICPUSDT** | `#5` | `2W/3L` | 26-08-10<br>16:10 | `🔴 Perdió -$0.06` | **`$101.64`** (`+$1.64`) | 🟢 Buscando |
+| **SIM-057** | **ICPUSDT** | `#5` | `2W/3L` | 26-08-10<br>16:12 | `🔴 Perdió -$0.06` | **`$101.64`** (`+$1.64`) | 🟢 Buscando |
 | **SIM-058** | **ALLOUSDT** | `#5` | `2W/3L` | 26-08-10<br>10:58 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |
 | **SIM-059** | **ALLOUSDT** | `#5` | `2W/3L` | 26-08-10<br>10:58 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |
 | **SIM-060** | **ALLOUSDT** | `#5` | `2W/3L` | 26-08-10<br>10:58 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |

@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-10 11:10:33",
+  "timestamp": "2026-08-10 16:12:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de pánico institucional con una rotación defensiva inestable. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y Bids >= 55%) necesario para mitigar el riesgo de pérdida, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación bajista sistémica. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ y soporte de liquidez necesarios para una ejecución segura, por lo que el comité ha decidido unánimemente mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
+    {
+      "symbol": "PYTHUSDT",
+      "score": 90
+    },
     {
       "symbol": "KAITOUSDT",
       "score": 80
@@ -15,11 +19,7 @@
       "score": 70
     },
     {
-      "symbol": "WLFIUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "SAGAUSDT",
+      "symbol": "XPLUSDT",
       "score": 70
     },
     {
