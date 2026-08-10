@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-10 12:10:20",
+  "timestamp": "2026-08-10 12:12:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que, a pesar de la fuerza técnica de activos como SOL y DOT, el entorno de mercado actual y la falta de dominancia clara en el libro de órdenes no justifican una entrada, priorizando la protección del capital sobre la especulación.",
+  "reasoning": "El comité ha decidido mantener la liquidez en USDT. A pesar de que algunos activos tienen un score técnico de 85, la falta de profundidad en el libro de órdenes (50% Bids), el sentimiento de miedo en el mercado y la alta tasa de fallos en condiciones neutrales impiden la ejecución de cualquier orden de compra bajo las estrictas reglas de gestión de riesgo.",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "DOTUSDT",
       "score": 85
     },
     {
@@ -19,11 +15,15 @@
       "score": 85
     },
     {
+      "symbol": "VIRTUALUSDT",
+      "score": 85
+    },
+    {
       "symbol": "LDOUSDT",
       "score": 85
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "ADAUSDT",
       "score": 75
     }
   ]
