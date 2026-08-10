@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 08:14:22",
+  "timestamp": "2026-08-10 08:16:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragmentación excesiva y una falta de profundidad en el libro de órdenes. Ningún activo cumple con los criterios de alta convicción (Score >= 55 y Bids > 55%) exigidos por el comité para mitigar el riesgo de 'trampas de valor' y 'limpieza de stops'.",
+  "reasoning": "El mercado se encuentra en un estado de baja convicción con una alta probabilidad de 'trampas de valor'. Ninguno de los candidatos analizados supera el umbral de riesgo exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una configuración técnica más robusta.",
   "top_candidates": [
-    {
-      "symbol": "MUBUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "GNOUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SKYUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SKHYBUSDT",
-      "score": 75
-    },
     {
       "symbol": "ASTERUSDT",
       "score": 75
+    },
+    {
+      "symbol": "POLUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "LUNCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "TSTUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "BICOUSDT",
+      "score": 65
     }
   ]
 }
