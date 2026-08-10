@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 03:46:18",
+  "timestamp": "2026-08-10 03:48:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación y falta de convicción direccional. Ningún activo cumple con el requisito de Score Técnico >= 55 ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la estrategia óptima es la preservación total de capital.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una correlación negativa predominante. Ningún activo cumple con los criterios estrictos de Score Técnico (>=55) y soporte de libro de órdenes, por lo que la preservación de capital es la única estrategia válida bajo el mandato del Comité.",
   "top_candidates": [
+    {
+      "symbol": "BTCUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "DYMUSDT",
+      "score": 60
+    },
     {
       "symbol": "JSTUSDT",
       "score": 55
     },
     {
-      "symbol": "BMTUSDT",
-      "score": 50
-    },
-    {
       "symbol": "BCHUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "PUMPUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "TUTUSDT",
       "score": 50
     }
   ]
