@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-10 03:22:17",
+  "timestamp": "2026-08-10 03:24:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con alta incertidumbre regulatoria. Ninguno de los candidatos analizados cumple con el umbral de convicción A+ (Score >= 55) y la falta de datos de profundidad en el libro de órdenes aumenta el riesgo de slippage, por lo que se prioriza la preservación del capital.",
+  "confidence": 95,
+  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 55 con soporte institucional claro). La alta tasa de pérdidas en trades recientes y la incertidumbre macroeconómica dictan una postura defensiva de preservación de capital (HOLD) hasta que el mercado muestre una estructura de acumulación institucional más definida.",
   "top_candidates": [
+    {
+      "symbol": "MORPHOUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "score": 75
+    },
     {
       "symbol": "ARBUSDT",
       "score": 75
@@ -15,16 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "NEXOUSDT",
-      "score": 75
-    },
-    {
       "symbol": "KITEUSDT",
       "score": 75
-    },
-    {
-      "symbol": "MORPHOUSDT",
-      "score": 70
     }
   ]
 }
