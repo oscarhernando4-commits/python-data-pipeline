@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 12:16:25",
+  "timestamp": "2026-08-10 12:18:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y fragmentación de liquidez. Ningún activo cumple con los requisitos estrictos de convicción A+ y soporte de ballenas necesarios para garantizar la preservación del capital, por lo que la decisión institucional es mantenerse en liquidez (HOLD).",
+  "reasoning": "El mercado se encuentra en una fase de rebalanceo institucional con alta incertidumbre. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ del comité, por lo que la estrategia óptima es mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "WLFIUSDT",
-      "score": 75
+      "symbol": "AVAXUSDT",
+      "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
-      "score": 75
+      "symbol": "ONDOUSDT",
+      "score": 60
     },
     {
       "symbol": "DOTUSDT",
-      "score": 75
+      "score": 60
     },
     {
-      "symbol": "ETCUSDT",
-      "score": 75
+      "symbol": "ATOMUSDT",
+      "score": 60
     }
   ]
 }
