@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 14:28:24",
+  "updated_at": "2026-08-10 14:30:23",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado presenta una debilidad sistémica generalizada y una falta de profundidad en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 55 y Confianza >= 70%) necesario para operar, por lo que el comité ha decidido mantener la liquidez en espera de una estructura de mercado más favorable."
+    "reasoning": "El mercado se encuentra en un estado de distribución forzada y alta incertidumbre. Ninguno de los candidatos cumple con los criterios estrictos de calidad (Score >= 55) y soporte de liquidez necesarios para una ejecución segura. Se mantiene la posición en efectivo para evitar la exposición a activos de baja capitalización que actúan como trampas de liquidez."
   }
 }
