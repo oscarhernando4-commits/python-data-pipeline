@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-10 17:06:24",
+  "timestamp": "2026-08-10 12:06:52",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno alcanza el umbral de calidad A+ requerido por el comité. La debilidad macroeconómica y la falta de soporte en el libro de órdenes, sumado a la alta tasa de fallos en condiciones de mercado neutral, dictan una postura defensiva de 'HOLD' para evitar pérdidas innecesarias.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "CRVUSDT",
       "score": 60,
       "price": 0.2437,
       "rsi_15m": 57.01,
-      "vol_surge": 0.32,
+      "vol_surge": 0.33,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -20,17 +20,17 @@
       "score": 60,
       "price": 0.867,
       "rsi_15m": 56.34,
-      "vol_surge": 0.58,
+      "vol_surge": 0.59,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "ZECUSDT",
       "score": 55,
-      "price": 494.6,
-      "rsi_15m": 26.54,
-      "vol_surge": 1.93,
-      "trade_quality": "C_NOISE",
+      "price": 494.54,
+      "rsi_15m": 26.46,
+      "vol_surge": 1.97,
+      "trade_quality": "B",
       "macro_trend": "NEUTRAL"
     },
     {
@@ -63,8 +63,8 @@
     {
       "symbol": "BROCCOLI714USDT",
       "score": 50,
-      "price": 0.01943,
-      "rsi_15m": 61.51,
+      "price": 0.01939,
+      "rsi_15m": 60.97,
       "vol_surge": 0.28,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
@@ -72,45 +72,27 @@
     {
       "symbol": "NEIROUSDT",
       "score": 50,
-      "price": 7.28e-05,
-      "rsi_15m": 52.39,
+      "price": 7.286e-05,
+      "rsi_15m": 53.14,
       "vol_surge": 0.15,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "BMTUSDT",
-      "score": 45,
-      "price": 0.02479,
-      "rsi_15m": 36.54,
-      "vol_surge": 0.33,
+      "symbol": "SOLVUSDT",
+      "score": 50,
+      "price": 0.00252,
+      "rsi_15m": 54.87,
+      "vol_surge": 0.6,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "PAXGUSDT",
-      "score": 45,
-      "price": 4346.5,
-      "rsi_15m": 55.49,
-      "vol_surge": 0.11,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "GIGGLEUSDT",
-      "score": 45,
-      "price": 34.23,
-      "rsi_15m": 54.18,
+      "symbol": "JSTUSDT",
+      "score": 50,
+      "price": 0.10089,
+      "rsi_15m": 55.65,
       "vol_surge": 0.07,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "BTCUSDT",
-      "score": 40,
-      "price": 63858.64,
-      "rsi_15m": 17.96,
-      "vol_surge": 0.48,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
