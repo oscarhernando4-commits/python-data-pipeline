@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-10 10:36:23",
+  "timestamp": "2026-08-10 10:38:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar el contexto macroeconómico de miedo, la falta de soporte en el libro de órdenes y el bajo rendimiento histórico en condiciones de mercado neutral, el comité ha decidido no ejecutar ninguna operación. Ningún activo cumple con los criterios de calidad A+ exigidos por el Chief Risk Officer, por lo que la prioridad absoluta es la preservación del capital.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con una debilidad estructural generalizada. Ningún activo cumple con el umbral de seguridad A+ (Score >= 55) ni con una confirmación de soporte en el libro de órdenes, lo que obliga a mantener la posición en efectivo para evitar el riesgo de 'cuchillos cayendo'.",
   "top_candidates": [
+    {
+      "symbol": "WLFIUSDT",
+      "score": 60
+    },
     {
       "symbol": "JUPUSDT",
       "score": 60
@@ -21,10 +25,6 @@
     {
       "symbol": "SUNUSDT",
       "score": 60
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 50
     }
   ]
 }
