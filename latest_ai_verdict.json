@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-10 10:54:32",
+  "timestamp": "2026-08-10 15:56:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación silenciosa sin activos que cumplan con los criterios de alta convicción (Score A+). Se prioriza la preservación del capital sobre la especulación en activos de baja calidad técnica.",
+  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral mínimo de Score técnico (55) ni con la confirmación de liquidez necesaria en el libro de órdenes. La alta volatilidad y la falta de una tendencia clara en el mercado global dictan una postura defensiva de preservación de capital.",
   "top_candidates": [
+    {
+      "symbol": "ICPUSDT",
+      "score": 60
+    },
     {
       "symbol": "WLFIUSDT",
       "score": 60
@@ -15,16 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "XPLUSDT",
+      "symbol": "JOEUSDT",
       "score": 60
     },
     {
-      "symbol": "SAGAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "LISTAUSDT",
-      "score": 55
+      "symbol": "BICOUSDT",
+      "score": 50
     }
   ]
 }
