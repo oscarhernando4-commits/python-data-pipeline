@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 10:04:21",
+  "updated_at": "2026-08-10 10:06:20",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con una clara fuga de capital hacia la liquidez. Ninguno de los candidatos cumple con los requisitos estrictos de seguridad y convicción del comité, por lo que la estrategia óptima es mantenerse en efectivo (HOLD) para evitar pérdidas en un entorno de alta volatilidad y baja profundidad."
+    "reasoning": "El mercado actual presenta una estructura de 'trampa de liquidez' con una correlación bajista sistémica. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55) ni con una dominancia de Bids en el libro de órdenes que garantice una entrada protegida. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja convicción."
   }
 }

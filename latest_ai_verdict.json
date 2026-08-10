@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 10:04:20",
+  "timestamp": "2026-08-10 10:06:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con una clara fuga de capital hacia la liquidez. Ninguno de los candidatos cumple con los requisitos estrictos de seguridad y convicción del comité, por lo que la estrategia óptima es mantenerse en efectivo (HOLD) para evitar pérdidas en un entorno de alta volatilidad y baja profundidad.",
+  "confidence": 0,
+  "reasoning": "El mercado actual presenta una estructura de 'trampa de liquidez' con una correlación bajista sistémica. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55) ni con una dominancia de Bids en el libro de órdenes que garantice una entrada protegida. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja convicción.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "MORPHOUSDT",
-      "score": 60
-    },
-    {
       "symbol": "JUPUSDT",
       "score": 60
     },
     {
       "symbol": "CRVUSDT",
       "score": 60
+    },
+    {
+      "symbol": "LINKUSDT",
+      "score": 50
     }
   ]
 }
