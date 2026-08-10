@@ -4,7 +4,7 @@
     "wins": 428,
     "losses": 1903,
     "win_rate_pct": 18.36,
-    "total_pnl_usd": 112462.46900545462
+    "total_pnl_usd": 112462.42900545461
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -38917,19 +38917,19 @@
       }
     },
     {
-      "timestamp": "2026-08-10 23:06:28",
+      "timestamp": "2026-08-10 18:06:37",
       "account_id": "SIM-052",
       "group_name": "⚖️ GRUPO 3: Balanceado",
       "symbol": "RENDERUSDT",
       "side": "LONG",
       "entry_price": 1.273,
-      "exit_price": 1.261,
-      "pnl_usd": -0.23,
+      "exit_price": 1.259,
+      "pnl_usd": -0.27,
       "result": "LOSS",
-      "notes": "Hit SL on RENDERUSDT (-$0.23). Re-Trading!",
+      "notes": "Hit SL on RENDERUSDT (-$0.27). Re-Trading!",
       "context": {
         "score": 35,
-        "rsi_15m": 18.63,
+        "rsi_15m": 17.78,
         "macro_trend_4h": "NEUTRAL"
       }
     }
