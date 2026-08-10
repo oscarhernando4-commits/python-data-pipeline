@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-10 10:26:22",
+  "timestamp": "2026-08-10 10:28:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad técnica. Ninguno de los candidatos analizados cumple con los criterios estrictos de riesgo (Score >= 55) establecidos por el comité. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado actual se encuentra en una fase de alta fragilidad y fragmentación, con una falta de soporte institucional claro en los libros de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y Bids > 55%) necesario para mitigar el riesgo de 'trampas de liquidez'. Por lo tanto, la decisión institucional es mantener la liquidez en USDT para preservar el capital.",
   "top_candidates": [
+    {
+      "symbol": "LINKUSDT",
+      "score": 60
+    },
     {
       "symbol": "WLFIUSDT",
       "score": 60
@@ -15,11 +19,7 @@
       "score": 60
     },
     {
-      "symbol": "JUPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "CRVUSDT",
+      "symbol": "ZROUSDT",
       "score": 60
     },
     {
