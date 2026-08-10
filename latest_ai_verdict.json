@@ -1,25 +1,21 @@
 {
-  "timestamp": "2026-08-10 16:04:22",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado no cumple con los requisitos mínimos de convicción institucional. La falta de soporte en el libro de órdenes y la debilidad técnica generalizada en los activos analizados obligan a mantener una postura de liquidez total (HOLD) para evitar el riesgo de 'falling knives' observado en simulaciones previas.",
+  "timestamp": "2026-08-10 16:06:23",
+  "selected_symbol": "PAXGUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "El mercado cripto general se encuentra en una fase de capitulación técnica con scores bajos. PAXGUSDT es el único activo que cumple con el mandato de convicción A+ (Score 70), respaldado por la rotación de capital hacia activos de refugio (RWA) y un volumen de compra institucional significativo. Se prioriza la protección del capital mediante un estricto control de riesgo.",
   "top_candidates": [
     {
-      "symbol": "WLFIUSDT",
-      "score": 60
+      "symbol": "PAXGUSDT",
+      "score": 70
     },
     {
       "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "PAXGUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "WLFIUSDT",
+      "symbol": "SPYBUSDT",
       "score": 60
     },
     {
@@ -28,10 +24,6 @@
     },
     {
       "symbol": "XPLUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PYTHUSDT",
       "score": 60
     }
   ]
