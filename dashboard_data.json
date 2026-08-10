@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09 23:58:16",
+  "updated_at": "2026-08-10 00:00:31",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado actual presenta una fragilidad estructural severa y una falta de volumen comprador institucional. Ninguno de los candidatos analizados supera el umbral de seguridad A+ (Score >= 55), por lo que el comité ha decidido mantener la liquidez en USDT para evitar el 'stop-loss hunting' y proteger el capital de la volatilidad bajista."
+    "reasoning": "El mercado presenta un entorno de alto riesgo con una correlación bajista predominante. Ningún activo cumple con el umbral de calidad A+ requerido por el comité, por lo que la estrategia óptima es la preservación total del capital en espera de una estabilización del mercado."
   }
 }
