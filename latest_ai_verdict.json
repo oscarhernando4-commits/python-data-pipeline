@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 00:16:16",
+  "timestamp": "2026-08-10 00:18:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El comité ha determinado por consenso unánime que el entorno actual es de alta fragilidad. Ninguno de los candidatos cumple con los requisitos estrictos de riesgo (Score >= 55 y soporte de ballenas confirmado), por lo que se prioriza la preservación del capital sobre la especulación en activos de baja capitalización.",
+  "confidence": 0,
+  "reasoning": "Tras deliberar, el comité ha determinado que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. La falta de profundidad en el libro de órdenes y la ausencia de un sector dominante claro obligan a mantener una posición de liquidez total (HOLD) para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "EPICUSDT",
       "score": 85
     },
     {
+      "symbol": "SKHYBUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "BROCCOLI714USDT",
+      "score": 75
+    },
+    {
       "symbol": "WLFIUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 75
-    },
-    {
       "symbol": "REUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PARTIUSDT",
       "score": 75
     }
   ]
