@@ -1,23 +1,36 @@
 {
-  "SYNUSDT": [
+  "MSTRBUSDT": [
     {
-      "timestamp": "2026-08-10 14:30:21",
-      "price": 0.10246,
-      "score": 0,
-      "rsi": 40.73,
+      "timestamp": "2026-08-10 19:32:10",
+      "price": 97.93,
+      "score": 50,
+      "rsi": 49.97,
       "macd": "Neutral",
-      "volume_surge": 0.02,
+      "volume_surge": 0.04,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "FORMUSDT": [
+  "C98USDT": [
     {
-      "timestamp": "2026-08-10 14:30:21",
-      "price": 219.3,
-      "score": 30,
-      "rsi": 42.58,
+      "timestamp": "2026-08-10 19:32:10",
+      "price": 0.0143,
+      "score": 15,
+      "rsi": 40.28,
+      "macd": "Neutral",
+      "volume_surge": 0.68,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GNOUSDT": [
+    {
+      "timestamp": "2026-08-10 19:32:10",
+      "price": 104.07,
+      "score": 15,
+      "rsi": 34.75,
       "macd": "Neutral",
       "volume_surge": 0.01,
       "wyckoff": "Sin patron",
@@ -25,27 +38,14 @@
       "fear_greed": 50
     }
   ],
-  "GALAUSDT": [
+  "JSTUSDT": [
     {
-      "timestamp": "2026-08-10 14:30:21",
-      "price": 0.00181,
-      "score": 30,
-      "rsi": 48.93,
+      "timestamp": "2026-08-10 19:32:10",
+      "price": 0.1019,
+      "score": 10,
+      "rsi": 68.81,
       "macd": "Neutral",
-      "volume_surge": 0.01,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "PLUMEUSDT": [
-    {
-      "timestamp": "2026-08-10 14:30:21",
-      "price": 0.01228,
-      "score": 35,
-      "rsi": 54.61,
-      "macd": "Neutral",
-      "volume_surge": 0.01,
+      "volume_surge": 0.61,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -53,12 +53,25 @@
   ],
   "SEIUSDT": [
     {
-      "timestamp": "2026-08-10 14:30:22",
-      "price": 0.04186,
+      "timestamp": "2026-08-10 19:32:10",
+      "price": 0.04184,
       "score": 60,
-      "rsi": 59.29,
+      "rsi": 58.12,
       "macd": "Neutral",
-      "volume_surge": 0.12,
+      "volume_surge": 0.31,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GALAUSDT": [
+    {
+      "timestamp": "2026-08-10 19:32:11",
+      "price": 0.00181,
+      "score": 30,
+      "rsi": 48.93,
+      "macd": "Neutral",
+      "volume_surge": 0.05,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
