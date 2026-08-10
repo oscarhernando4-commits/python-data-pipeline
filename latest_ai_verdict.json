@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 08:42:18",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de compresión de alta incertidumbre con una mayoría de activos mostrando un comportamiento errático. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y Bids >= 55%) necesario para mitigar el riesgo de 'falling knives' observado en el historial de pérdidas recientes. Se prioriza la preservación del capital hasta que el volumen institucional confirme una dirección clara.",
+  "timestamp": "2026-08-10 08:44:21",
+  "selected_symbol": "GNOUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "Tras deliberar, el comité ha determinado que GNOUSDT es el único activo que cumple con el umbral de convicción A+ (Score 85) y muestra un volumen institucional significativo. Se prioriza la calidad sobre la especulación, evitando activos con scores bajos que han mostrado pérdidas recurrentes en el historial de simulaciones.",
   "top_candidates": [
     {
       "symbol": "GNOUSDT",
@@ -23,7 +23,7 @@
       "score": 70
     },
     {
-      "symbol": "MMTUSDT",
+      "symbol": "BOMEUSDT",
       "score": 65
     }
   ]
