@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-10 00:00:31",
+  "timestamp": "2026-08-10 00:02:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado presenta un entorno de alto riesgo con una correlación bajista predominante. Ningún activo cumple con el umbral de calidad A+ requerido por el comité, por lo que la estrategia óptima es la preservación total del capital en espera de una estabilización del mercado.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una correlación bajista generalizada. Ninguno de los candidatos analizados alcanza el umbral de seguridad (Score >= 55) ni presenta una estructura de libro de órdenes favorable, por lo que se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "EPICUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "LAUSDT",
       "score": 70
     },
     {
@@ -15,15 +19,11 @@
       "score": 50
     },
     {
-      "symbol": "HMSTRUSDT",
+      "symbol": "KAITOUSDT",
       "score": 50
     },
     {
-      "symbol": "KITEUSDT",
-      "score": 45
-    },
-    {
-      "symbol": "CATIUSDT",
+      "symbol": "DOGEUSDT",
       "score": 35
     }
   ]
