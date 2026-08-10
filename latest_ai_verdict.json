@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-10 10:38:26",
+  "timestamp": "2026-08-10 10:40:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con una debilidad estructural generalizada. Ningún activo cumple con el umbral de seguridad A+ (Score >= 55) ni con una confirmación de soporte en el libro de órdenes, lo que obliga a mantener la posición en efectivo para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "El mercado actual presenta una correlación bajista de alta intensidad y una falta de activos con convicción técnica A+. Dado que ningún candidato cumple con los umbrales mínimos de seguridad establecidos por el Chief Risk Officer, la decisión unánime es no operar y proteger la liquidez.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "JUPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "CAKEUSDT",
       "score": 60
     },
     {
@@ -23,8 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "SUNUSDT",
+      "symbol": "BONKUSDT",
       "score": 60
+    },
+    {
+      "symbol": "LTCUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "BABYUSDT",
+      "score": 50
     }
   ]
 }
