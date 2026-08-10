@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 01:16:18",
+  "updated_at": "2026-08-10 01:18:18",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "Ningún activo cumple con el umbral mínimo de seguridad A+ (Score >= 55) y la confirmación de soporte institucional en el libro de órdenes es insuficiente, por lo que se prioriza la preservación de capital sobre la especulación en un mercado bajista."
+    "reasoning": "El mercado se encuentra en un estado de estancamiento sistémico con una alta correlación hacia la debilidad. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55) y la confirmación de volumen institucional necesaria para mitigar el riesgo de 'caza de stops'. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez."
   }
 }
