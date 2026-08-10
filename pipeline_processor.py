@@ -352,7 +352,7 @@ def run_infinite_trading_matrix_cycle():
     global_wins = 0
     has_triggered_learned_trade = False
 
-    for acc in accounts:
+    for acc_idx, acc in enumerate(accounts):
         curr_bal = acc["current_balance"]
         curr_level = acc.get("current_level", 1)
 
@@ -480,9 +480,20 @@ def run_infinite_trading_matrix_cycle():
             # Collect symbols with open positions in this matrix for correlation filter
             _active_syms_in_matrix = [a["symbol"] for a in accounts if a.get("position") is not None and a.get("symbol")]
             
-            for sym, data_item in symbol_analysis_map.items():
+            # 🔀 DISPERSIÓN DE SÍMBOLOS: Cada cuenta empieza en un offset diferente
+            # para que no todas elijan el mismo primer símbolo
+            _symbols_list = list(symbol_analysis_map.items())
+            _account_offset = acc_idx % max(len(_symbols_list), 1)
+            _rotated_symbols = _symbols_list[_account_offset:] + _symbols_list[:_account_offset]
+            
+            for sym, data_item in _rotated_symbols:
                 eval_res = strategy_engine.evaluate_opportunity(data_item["tech"], g_id)
                 if eval_res["action"] in ["LONG", "SHORT"]:
+                    # 🚫 ANTI-CONCENTRACIÓN: Máximo 3 cuentas del mismo grupo por símbolo
+                    _sym_count_same_group = sum(1 for a in accounts if a.get("position") and a.get("symbol") == sym and a.get("group_id") == g_id)
+                    if _sym_count_same_group >= 3:
+                        continue  # Ya hay 3 cuentas de este grupo en este símbolo
+                    
                     # 🏛️ FILTRO BROWNIANO: Rechazar si el movimiento es solo ruido aleatorio
                     _sym_gbm_z = abs(data_item.get("_gbm_zscore", 0.0))
                     _sym_is_noise = data_item.get("_is_brownian_noise", True)

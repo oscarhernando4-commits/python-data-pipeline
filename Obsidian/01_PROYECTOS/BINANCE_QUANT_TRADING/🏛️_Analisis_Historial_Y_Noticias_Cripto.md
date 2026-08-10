@@ -1619,3 +1619,107 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2024-07-04 (-33.19%)`, `2025-10-10 (-31.08%)`, `2025-05-15 (-25.17%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: AAOIBUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2026-07-14` hasta `2026-08-09` (27 Días de Historial)
+- 💵 **Precio Actual:** `$133.9200 USD`
+- 📈 **Máximo Histórico (ATH):** `$149.4100 USD` (`2026-08-06`) | Distancia: `-10.37%`
+- 📉 **Mínimo Histórico (ATL):** `$74.1900 USD` (`2026-07-28`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-07-29 (+24.31%)`, `2026-07-20 (+19.92%)`, `2026-08-02 (+17.54%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-07-28 (-15.04%)`, `2026-07-14 (-13.62%)`, `2026-07-23 (-11.58%)`
+
+---
+
+### 🪙 Profile Completo de Vida: COOKIEUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-01-09` hasta `2026-08-09` (578 Días de Historial)
+- 💵 **Precio Actual:** `$0.0119 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.6999 USD` (`2025-01-09`) | Distancia: `-98.3%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0074 USD` (`2026-07-28`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-05-20 (+43.46%)`, `2025-02-09 (+42.62%)`, `2026-08-07 (+38.3%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-24.38%)`, `2026-08-09 (-21.71%)`, `2026-05-21 (-20.77%)`
+
+---
+
+### 🪙 Profile Completo de Vida: VELODROMEUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2024-12-12` hasta `2026-08-09` (606 Días de Historial)
+- 💵 **Precio Actual:** `$0.0169 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.3880 USD` (`2024-12-12`) | Distancia: `-95.63%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0118 USD` (`2026-02-05`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-12-12 (+84.3%)`, `2025-05-08 (+39.15%)`, `2025-11-09 (+23.06%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-34.14%)`, `2026-02-04 (-17.3%)`, `2024-12-15 (-17.05%)`
+
+---
+
+### 🪙 Profile Completo de Vida: BBUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2024-05-12` hasta `2026-08-09` (820 Días de Historial)
+- 💵 **Precio Actual:** `$0.0139 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.8789 USD` (`2024-06-05`) | Distancia: `-98.42%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0134 USD` (`2026-08-07`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-05-12 (+1788.66%)`, `2025-08-06 (+42.42%)`, `2024-05-24 (+41.11%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-31.72%)`, `2024-05-15 (-21.78%)`, `2024-12-08 (-20.01%)`
+
+---
+
+### 🪙 Profile Completo de Vida: CHIPUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2026-04-20` hasta `2026-08-09` (112 Días de Historial)
+- 💵 **Precio Actual:** `$0.0231 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.1407 USD` (`2026-04-22`) | Distancia: `-83.62%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0120 USD` (`2026-04-20`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-04-20 (+411.0%)`, `2026-04-21 (+83.96%)`, `2026-05-07 (+28.32%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-04-23 (-18.36%)`, `2026-06-09 (-18.3%)`, `2026-04-24 (-13.83%)`
+
+---
+
+### 🪙 Profile Completo de Vida: C98USDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-14` hasta `2026-08-09` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.0143 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.4604 USD` (`2024-03-10`) | Distancia: `-96.9%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0110 USD` (`2026-07-28`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-01-30 (+39.8%)`, `2025-10-01 (+34.76%)`, `2026-02-04 (+25.86%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-39.58%)`, `2026-01-31 (-29.09%)`, `2024-12-08 (-19.57%)`
+
+---
+
+### 🪙 Profile Completo de Vida: STXUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-14` hasta `2026-08-09` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.1306 USD`
+- 📈 **Máximo Histórico (ATH):** `$3.8464 USD` (`2024-03-31`) | Distancia: `-96.6%`
+- 📉 **Mínimo Histórico (ATL):** `$0.1287 USD` (`2026-08-06`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2023-12-03 (+42.31%)`, `2024-03-19 (+26.99%)`, `2023-12-19 (+24.2%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-27.95%)`, `2024-12-08 (-17.47%)`, `2025-03-02 (-17.18%)`
+
+---
+
+### 🪙 Profile Completo de Vida: BIOUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-01-02` hasta `2026-08-09` (585 Días de Historial)
+- 💵 **Precio Actual:** `$0.0267 USD`
+- 📈 **Máximo Histórico (ATH):** `$1.4770 USD` (`2025-01-02`) | Distancia: `-98.19%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0157 USD` (`2026-03-28`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-01-02 (+2614.67%)`, `2026-04-14 (+56.12%)`, `2025-08-21 (+48.24%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-27.77%)`, `2025-03-02 (-22.76%)`, `2025-05-29 (-20.59%)`
+
+---
