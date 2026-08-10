@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 15:56:23",
+  "timestamp": "2026-08-10 15:58:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral mínimo de Score técnico (55) ni con la confirmación de liquidez necesaria en el libro de órdenes. La alta volatilidad y la falta de una tendencia clara en el mercado global dictan una postura defensiva de preservación de capital.",
+  "reasoning": "Tras la deliberación unánime, el comité ha determinado que no existen activos que cumplan con el umbral de seguridad y convicción A+ (Score >= 55). El mercado se encuentra en una fase de alta incertidumbre y riesgo, por lo que la estrategia institucional es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "ICPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "WLFIUSDT",
-      "score": 60
+      "symbol": "BTCUSDT",
+      "score": 70
     },
     {
       "symbol": "SPYBUSDT",
       "score": 60
     },
     {
-      "symbol": "JOEUSDT",
+      "symbol": "NEXOUSDT",
       "score": 60
     },
     {
-      "symbol": "BICOUSDT",
+      "symbol": "PUMPUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "MUBUSDT",
       "score": 50
     }
   ]
