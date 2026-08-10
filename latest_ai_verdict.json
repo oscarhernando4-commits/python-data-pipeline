@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-10 13:02:25",
+  "timestamp": "2026-08-10 13:04:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los 107 activos, ninguno cumple con el umbral de seguridad A+ (Score >= 55) y la confirmación de volumen institucional necesaria. El mercado se encuentra en una fase de alta incertidumbre y distribución, por lo que la estrategia de protección de capital es la única opción viable para evitar pérdidas, tal como dictan las reglas de oro del comité.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y soporte de libro de órdenes claro). La estrategia de protección de capital prevalece sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
-    {
-      "symbol": "BOMEUSDT",
-      "score": 60
-    },
     {
       "symbol": "WLFIUSDT",
       "score": 60
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "ETCUSDT",
       "score": 60
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ALGOUSDT",
       "score": 60
     }
   ]
