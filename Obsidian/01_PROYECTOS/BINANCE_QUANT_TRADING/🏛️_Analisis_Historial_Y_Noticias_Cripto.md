@@ -1749,3 +1749,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-35.57%)`, `2025-09-30 (-31.97%)`, `2025-10-30 (-20.24%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: PHAUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-15` hasta `2026-08-10` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.0268 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.6040 USD` (`2024-12-28`) | Distancia: `-95.56%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0192 USD` (`2026-08-03`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-12-27 (+104.76%)`, `2024-12-24 (+58.35%)`, `2026-03-03 (+48.19%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-32.62%)`, `2025-01-18 (-18.86%)`, `2025-11-03 (-17.21%)`
+
+---
