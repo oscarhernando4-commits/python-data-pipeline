@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-10 02:08:23",
+  "timestamp": "2026-08-10 02:10:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, el comité ha determinado que, a pesar de la fortaleza técnica de NEXO, las condiciones macroeconómicas y la falta de soporte en el libro de órdenes no garantizan una probabilidad de éxito superior al 70%. Se prioriza la preservación del capital sobre la especulación en un mercado de rango estrecho.",
+  "reasoning": "El mercado presenta un entorno de alta incertidumbre con una estructura de 'Sniper Trading' que ha resultado en múltiples pérdidas en simulaciones recientes. Ningún activo cumple con los criterios de convicción A+ (Score >= 55 y confirmación de soporte), por lo que la estrategia más rentable es preservar el capital y esperar una señal de mayor calidad.",
   "top_candidates": [
-    {
-      "symbol": "NEXOUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SHIBUSDT",
-      "score": 75
-    },
     {
       "symbol": "PEPEUSDT",
       "score": 75
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "AAVEUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PENGUUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "MORPHOUSDT",
       "score": 75
     }
   ]
