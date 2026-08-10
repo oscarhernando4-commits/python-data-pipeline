@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-10 23:02:17
+date: 2026-08-10 23:04:19
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-10 23:02:17`
+> ⏱️ **Última Actualización:** `2026-08-10 23:04:19`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -30,7 +30,7 @@ date: 2026-08-10 23:02:17
 
 > [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
-> - 📈 **Capital Total Acumulado:** **`$10,636.36 USD`** (`$+636.36 USD`)  
+> - 📈 **Capital Total Acumulado:** **`$10,636.32 USD`** (`$+636.32 USD`)  
 > - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `5 Cuentas (5.0%)`  
 > - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `0 Cuentas (0.0%)`  
 > - 🔵 **Cuentas Operando en Vivo:** `95 Cuentas (95.0%)`  
@@ -116,14 +116,14 @@ date: 2026-08-10 23:02:17
 ## ⚖️ GRUPO 3: Balanceado (Permisividad Nivel 3 - Score >= 65 Pts)
 
 > [!TIP] 📊 **Resumen del ⚖️ GRUPO 3: Balanceado (Permisividad Nivel 3 - Score >= 65 Pts):**
-> - 💵 **Balance Total del Grupo:** `$2,992.43 USD` (`+$992.43`)
+> - 💵 **Balance Total del Grupo:** `$2,992.39 USD` (`+$992.39`)
 > - 🎯 **Operaciones Totales:** `168` (`63 Ganadas / 95 Perdidas`)
 > - 📈 **Tasa de Acierto del Grupo:** `37.5% Win Rate`
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
 | **SIM-041** | **ACEUSDT** | `#11` | `4W/6L` | 26-08-10<br>21:28 | `🛡️ Protegida (BE)` | **`$208.48`** (`+$108.48`) | 🔵 En Vivo |
-| **SIM-042** | **SOXLBUSDT** | `#15` | `5W/9L` | 26-08-10<br>23:02 | `🔴 Perdió -$0.18` | **`$292.32`** (`+$192.32`) | 🟢 Buscando |
+| **SIM-042** | **SOXLBUSDT** | `#15` | `5W/9L` | 26-08-10<br>23:04 | `🔴 Perdió -$0.18` | **`$292.32`** (`+$192.32`) | 🟢 Buscando |
 | **SIM-043** | **ACEUSDT** | `#11` | `4W/7L` | 26-08-10<br>21:28 | `🛡️ Protegida (BE)` | **`$208.48`** (`+$108.48`) | 🔵 En Vivo |
 | **SIM-044** | **FETUSDT** | `#11` | `3W/7L` | 26-08-10<br>22:06 | `🔵 En Curso` | **`$142.38`** (`+$42.38`) | 🔵 En Vivo |
 | **SIM-045** | **ACEUSDT** | `#10` | `3W/6L` | 26-08-10<br>21:28 | `🛡️ Protegida (BE)` | **`$143.00`** (`+$43.00`) | 🔵 En Vivo |
@@ -135,13 +135,13 @@ date: 2026-08-10 23:02:17
 | **SIM-051** | **XAUTUSDT** | `#6` | `3W/3L` | 26-08-10<br>13:44 | `🔵 En Curso` | **`$144.30`** (`+$44.30`) | 🔵 En Vivo |
 | **SIM-052** | **RENDERUSDT** | `#7` | `3W/4L` | 26-08-10<br>22:36 | `🔵 En Curso` | **`$112.42`** (`+$12.42`) | 🔵 En Vivo |
 | **SIM-053** | **SOXLBUSDT** | `#7` | `3W/4L` | 26-08-10<br>19:58 | `🔵 En Curso` | **`$143.98`** (`+$43.98`) | 🔵 En Vivo |
-| **SIM-054** | **PUMPUSDT** | `#10` | `4W/6L` | 26-08-10<br>23:02 | `🔴 Perdió -$0.29` | **`$144.68`** (`+$44.68`) | 🟢 Buscando |
-| **SIM-055** | **PUMPUSDT** | `#10` | `4W/6L` | 26-08-10<br>23:02 | `🔴 Perdió -$0.29` | **`$144.68`** (`+$44.68`) | 🟢 Buscando |
+| **SIM-054** | **PUMPUSDT** | `#10` | `4W/6L` | 26-08-10<br>23:04 | `🔴 Perdió -$0.29` | **`$144.66`** (`+$44.66`) | 🟢 Buscando |
+| **SIM-055** | **PUMPUSDT** | `#10` | `4W/6L` | 26-08-10<br>23:04 | `🔴 Perdió -$0.29` | **`$144.66`** (`+$44.66`) | 🟢 Buscando |
 | **SIM-056** | **XRPUSDT** | `#7` | `3W/4L` | 26-08-10<br>22:06 | `🔵 En Curso` | **`$142.75`** (`+$42.75`) | 🔵 En Vivo |
 | **SIM-057** | **XRPUSDT** | `#5` | `2W/3L` | 26-08-10<br>22:06 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |
 | **SIM-058** | **XRPUSDT** | `#7` | `3W/3L` | 26-08-10<br>22:06 | `🔵 En Curso` | **`$143.74`** (`+$43.74`) | 🔵 En Vivo |
-| **SIM-059** | **RENDERUSDT** | `#8` | `3W/3L` | 26-08-10<br>23:02 | `🔴 Perdió -$0.30` | **`$143.44`** (`+$43.44`) | 🟢 Buscando |
-| **SIM-060** | **RENDERUSDT** | `#7` | `3W/3L` | 26-08-10<br>23:02 | `🔴 Perdió -$0.30` | **`$144.00`** (`+$44.00`) | 🟢 Buscando |
+| **SIM-059** | **RENDERUSDT** | `#8` | `3W/3L` | 26-08-10<br>23:04 | `🔴 Perdió -$0.30` | **`$143.44`** (`+$43.44`) | 🟢 Buscando |
+| **SIM-060** | **RENDERUSDT** | `#7` | `3W/3L` | 26-08-10<br>23:04 | `🔴 Perdió -$0.30` | **`$144.00`** (`+$44.00`) | 🟢 Buscando |
 
 ---
 
