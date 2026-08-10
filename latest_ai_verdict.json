@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 09:30:21",
+  "timestamp": "2026-08-10 09:32:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de debilidad estructural generalizada sin soporte institucional. Ningún activo cumple con los criterios de alta convicción (Score >= 55) exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital en espera de una mejora en las condiciones de mercado.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una correlación bajista ineficiente. Ninguno de los candidatos cumple con los criterios estrictos de riesgo y convicción del comité, por lo que se prioriza la preservación de capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "MORPHOUSDT",
-      "score": 60
-    },
-    {
       "symbol": "CRVUSDT",
       "score": 60
     },
     {
       "symbol": "BANANAS31USDT",
       "score": 55
+    },
+    {
+      "symbol": "MMTUSDT",
+      "score": 50
     }
   ]
 }
