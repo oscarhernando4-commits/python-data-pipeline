@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-10 13:46:25",
+  "timestamp": "2026-08-10 13:48:30",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los 10 candidatos, ninguno alcanza el umbral de seguridad (Score >= 55) ni presenta una estructura de libro de órdenes favorable. El entorno macro es de distribución institucional, por lo que el comité decide mantener la liquidez en espera de una configuración de alta convicción.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada y una falta de convicción institucional. Ninguno de los candidatos cumple con los criterios de calidad A+ establecidos por el comité, por lo que se prioriza la preservación del capital sobre la operativa especulativa.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PYTHUSDT",
       "score": 60
     },
     {
@@ -23,7 +19,11 @@
       "score": 50
     },
     {
-      "symbol": "BOMEUSDT",
+      "symbol": "MUBUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "SKHYBUSDT",
       "score": 50
     }
   ]
