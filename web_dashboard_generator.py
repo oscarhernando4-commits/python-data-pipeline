@@ -1053,6 +1053,7 @@ def generate_web_dashboard():
                     <button class="matrix-filter-btn" onclick="filterMatrixGroup('3', this)">G3 Breakout Vol</button>
                     <button class="matrix-filter-btn" onclick="filterMatrixGroup('4', this)">G4 Short-Seller</button>
                     <button class="matrix-filter-btn" onclick="filterMatrixGroup('5', this)">G5 Kamikaze</button>
+                    <button class="matrix-filter-btn" onclick="filterMatrixGroup('6', this)">G6 Tokens Apalancados</button>
                 </div>
                 <input type="text" id="matrixSearchInput" class="matrix-search-input" placeholder="🔍 Buscar símbolo (BTC, ZAMA) o ID..." onkeyup="filterMatrixSearch()">
             </div>

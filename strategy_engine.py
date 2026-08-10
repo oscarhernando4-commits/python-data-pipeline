@@ -132,4 +132,16 @@ def evaluate_opportunity(tech, group_id):
         elif score <= t["group_5"]["short_score"]:
             return {"action": "SHORT", "use_ai": True, "reason": f"Score <= {t['group_5']['short_score']} (Kamikaze G-5)"}
 
+    # GROUP 6: Tokens Apalancados Tier-1 (BTCUP, ETHUP, SOLUP, BNBUP con 4 Cláusulas de Hierro)
+    elif group_id == 6:
+        min_score = t.get("group_6", {}).get("long_score", 75)
+        min_vol = t.get("group_6", {}).get("vol_surge", 1.5)
+        if score >= min_score and (vol_surge >= min_vol or trade_quality == "A+") and (tf_2m_up or tf_5m_up):
+            return {
+                "action": "LONG",
+                "use_ai": True,
+                "reason": f"⚡ [TOKENS APALANCADOS TIER-1] Confluencia Máxima Score={score} (>={min_score} Pts), VolSurge={vol_surge:.1f}x, GBM={trade_quality} (G-6)",
+                "tight_sl_pct": 0.75
+            }
+
     return {"action": "HOLD", "use_ai": False, "reason": ""}
