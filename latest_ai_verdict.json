@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-10 00:02:15",
+  "timestamp": "2026-08-10 00:04:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una correlación bajista generalizada. Ninguno de los candidatos analizados alcanza el umbral de seguridad (Score >= 55) ni presenta una estructura de libro de órdenes favorable, por lo que se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una correlación bajista intensa. Ninguno de los candidatos cumple con el umbral de calidad A+ (Score >= 55) ni con la confirmación de liquidez necesaria en el libro de órdenes. La estrategia institucional es preservar el capital y evitar la exposición a 'cuchillos cayendo' en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
       "symbol": "EPICUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "KITEUSDT",
       "score": 70
     },
     {
@@ -15,16 +19,12 @@
       "score": 70
     },
     {
+      "symbol": "KAITOUSDT",
+      "score": 60
+    },
+    {
       "symbol": "TUTUSDT",
       "score": 50
-    },
-    {
-      "symbol": "KAITOUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "DOGEUSDT",
-      "score": 35
     }
   ]
 }

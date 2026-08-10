@@ -1,12 +1,25 @@
 {
-  "XPLUSDT": [
+  "LUNCUSDT": [
     {
-      "timestamp": "2026-08-10 00:02:08",
-      "price": 0.07642,
-      "score": 25,
-      "rsi": 28.73,
+      "timestamp": "2026-08-10 00:04:09",
+      "price": 4.942e-05,
+      "score": 0,
+      "rsi": 32.85,
       "macd": "Neutral",
-      "volume_surge": 1.05,
+      "volume_surge": 0.15,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-10 00:04:09",
+      "price": 0.5216,
+      "score": 0,
+      "rsi": 44.3,
+      "macd": "Neutral",
+      "volume_surge": 0.71,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +27,12 @@
   ],
   "TOWNSUSDT": [
     {
-      "timestamp": "2026-08-10 00:02:08",
+      "timestamp": "2026-08-10 00:04:09",
       "price": 0.00243,
       "score": 0,
       "rsi": 38.06,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.46,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
