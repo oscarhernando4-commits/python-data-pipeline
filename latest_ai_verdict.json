@@ -1,19 +1,11 @@
 {
-  "timestamp": "2026-08-10 10:56:20",
+  "timestamp": "2026-08-10 10:58:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de purga de liquidez con scores técnicos insuficientes. Ningún activo cumple con el umbral de convicción A+ exigido por el comité, por lo que se mantiene la posición en efectivo para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "Debido a la debilidad sistémica generalizada y la falta de activos que cumplan con el umbral de convicción A+ (Score >= 55) y soporte sólido en el libro de órdenes, el comité ha decidido no ejecutar ninguna operación para preservar el capital.",
   "top_candidates": [
-    {
-      "symbol": "POLUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "LUNCUSDT",
-      "score": 70
-    },
     {
       "symbol": "BNBUSDT",
       "score": 60
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "CAKEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "PYTHUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "LUNCUSDT",
       "score": 60
     }
   ]
