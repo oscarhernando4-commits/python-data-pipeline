@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 15:40:23",
+  "timestamp": "2026-08-10 15:42:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una correlación negativa generalizada. Ningún activo cumple con los criterios de alta convicción (Score >= 55) ni con la profundidad de mercado necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "reasoning": "El mercado presenta una fragilidad extrema con una correlación negativa generalizada. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital hasta que el entorno macro mejore.",
   "top_candidates": [
+    {
+      "symbol": "BANKUSDT",
+      "score": 60
+    },
     {
       "symbol": "NEXOUSDT",
       "score": 60
+    },
+    {
+      "symbol": "UNIUSDT",
+      "score": 55
     },
     {
       "symbol": "AAVEUSDT",
       "score": 55
     },
     {
-      "symbol": "MUBARAKUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "PUMPUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "BABYUSDT",
-      "score": 50
+      "symbol": "JUPUSDT",
+      "score": 55
     }
   ]
 }
