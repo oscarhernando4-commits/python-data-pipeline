@@ -1,12 +1,38 @@
 {
-  "PENDLEUSDT": [
+  "STRKUSDT": [
     {
-      "timestamp": "2026-08-10 23:32:10",
-      "price": 1.352,
-      "score": 0,
-      "rsi": 39.36,
+      "timestamp": "2026-08-10 18:32:21",
+      "price": 0.02408,
+      "score": 50,
+      "rsi": 48.59,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "COTIUSDT": [
+    {
+      "timestamp": "2026-08-10 18:32:21",
+      "price": 0.01152,
+      "score": 50,
+      "rsi": 49.17,
+      "macd": "Neutral",
+      "volume_surge": 0.13,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GNOUSDT": [
+    {
+      "timestamp": "2026-08-10 18:32:23",
+      "price": 103.55,
+      "score": 25,
+      "rsi": 27.68,
+      "macd": "Neutral",
+      "volume_surge": 0.37,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
