@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-10 11:52:42",
+  "timestamp": "2026-08-10 16:54:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "El mercado actual no cumple con los criterios de alta convicción establecidos por el comité. La mayoría de los activos presentan scores técnicos inferiores a 55 y una falta de soporte institucional en el libro de órdenes, lo que aumenta el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja confianza.",
   "top_candidates": [
     {
       "symbol": "SAGAUSDT",
       "score": 60,
       "price": 0.01529,
       "rsi_15m": 55.33,
-      "vol_surge": 0.68,
+      "vol_surge": 0.7,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -45,54 +45,72 @@
     {
       "symbol": "TUTUSDT",
       "score": 50,
-      "price": 0.13097,
-      "rsi_15m": 50.09,
-      "vol_surge": 0.55,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "SNXXBUSDT",
-      "score": 50,
-      "price": 9.75,
-      "rsi_15m": 65.99,
-      "vol_surge": 0.25,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "BANANAS31USDT",
-      "score": 50,
-      "price": 0.009071,
-      "rsi_15m": 57.25,
-      "vol_surge": 0.06,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "REUSDT",
-      "score": 50,
-      "price": 0.4519,
-      "rsi_15m": 64.01,
-      "vol_surge": 0.31,
+      "price": 0.13006,
+      "rsi_15m": 49.28,
+      "vol_surge": 0.66,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "BROCCOLI714USDT",
       "score": 50,
-      "price": 0.0194,
-      "rsi_15m": 61.0,
-      "vol_surge": 0.37,
+      "price": 0.01936,
+      "rsi_15m": 60.48,
+      "vol_surge": 0.39,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "ACEUSDT",
       "score": 50,
-      "price": 0.118,
-      "rsi_15m": 52.82,
-      "vol_surge": 0.5,
+      "price": 0.1181,
+      "rsi_15m": 53.22,
+      "vol_surge": 0.55,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "NEIROUSDT",
+      "score": 50,
+      "price": 7.275e-05,
+      "rsi_15m": 52.09,
+      "vol_surge": 0.12,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "ORDIUSDT",
+      "score": 50,
+      "price": 3.523,
+      "rsi_15m": 53.2,
+      "vol_surge": 0.09,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "BMTUSDT",
+      "score": 45,
+      "price": 0.02463,
+      "rsi_15m": 35.47,
+      "vol_surge": 0.08,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 45,
+      "price": 4332.18,
+      "rsi_15m": 55.59,
+      "vol_surge": 0.12,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "score": 45,
+      "price": 4346.0,
+      "rsi_15m": 55.54,
+      "vol_surge": 0.46,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
