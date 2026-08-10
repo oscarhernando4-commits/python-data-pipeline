@@ -425,11 +425,13 @@ def generate_web_dashboard():
     ma_structure_ok = c1_price >= c1_ma25 if (c1_price > 0 and c1_ma25 > 0) else True
     
     score_ok = c1_score >= 58
+    ai_approved = verdict_data.get("approved", True)
+    ai_reason = verdict_data.get("reasoning", "Veto de Seguridad IA")
     quant_confirm = c1_qual in ("A+", "B") or c1_vol >= 1.20 or c1_sym in ("PAXGUSDT", "XAUTUSDT")
     fast_rsi_ok = c1_rsi_2m <= 68 or c1_rsi_5m <= 68
     
-    header_badge_text = f"🚀 ¡COMPRANDO EN DINERO REAL: {selected_candidate.get('symbol')}!" if selected_candidate else ("🔒 TOP 10 EN PROTECCIÓN: NINGUNA MONEDA CUMPLE LAS 7 REGLAS" if no_open_pos else "🟡 POSICIÓN ABIERTA")
-    header_badge_class = "badge-long" if selected_candidate else "badge-hold"
+    header_badge_text = f"🚀 ¡COMPRANDO EN DINERO REAL: {selected_candidate.get('symbol')}!" if (selected_candidate and ai_approved) else ("🔒 VETO DE SEGURIDAD IA: COMPRAS BLOQUEADAS (PRESERVANDO USDT)" if not ai_approved else ("🔒 TOP 10 EN PROTECCIÓN: NINGUNA MONEDA CUMPLE LAS 8 REGLAS" if no_open_pos else "🟡 POSICIÓN ABIERTA"))
+    header_badge_class = "badge-long" if (selected_candidate and ai_approved) else "badge-hold"
     
     checklist_items_html = f"""
     <!-- ============ CHECKLIST & EVALUACIÓN TOP 10 EN TIEMPO REAL ============ -->
@@ -465,7 +467,7 @@ def generate_web_dashboard():
         </div>
 
         <div class="card-heading" style="font-size: 0.8rem; margin-bottom: 0.5rem;">
-            🛡️ DESGLOSE DE LAS 7 REGLAS DE SEGURIDAD (EVALUANDO #{top_1.get('symbol', 'TOP 1')}):
+            🛡️ DESGLOSE DE LAS 8 REGLAS DE SEGURIDAD (EVALUANDO #{top_1.get('symbol', 'TOP 1')}):
         </div>
         <div class="checklist-grid">
             <div class="checklist-item {'checklist-pass' if has_usdt else 'checklist-fail'}">
@@ -535,6 +537,16 @@ def generate_web_dashboard():
                 </div>
                 <div class="checklist-sub" style="font-weight: 800; color: {'var(--accent-emerald)' if btc_ok else 'var(--accent-rose)'};">
                     {'🟢 CUMPLIDO (BTC OK)' if btc_ok else '🔴 ALERTA CRASH BTC'}
+                </div>
+            </div>
+
+            <div class="checklist-item {'checklist-pass' if ai_approved else 'checklist-fail'}">
+                <div>
+                    <div class="checklist-title">8. Autorización Súper-Cerebro IA</div>
+                    <div class="checklist-sub">Veto de seguridad de Inteligencia IA</div>
+                </div>
+                <div class="checklist-sub" style="font-weight: 800; color: {'var(--accent-emerald)' if ai_approved else 'var(--accent-rose)'};">
+                    {'🟢 APROBADO POR IA' if ai_approved else '🔴 VETO DE SEGURIDAD (CERO COMPRAS)'}
                 </div>
             </div>
         </div>
