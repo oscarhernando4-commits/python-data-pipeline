@@ -82,8 +82,13 @@ def auto_tune():
             if "macd_short" in t[gk]: t[gk]["macd_short"] = max(0.0, t[gk]["macd_short"] - 0.1)
             
         elif wr < 0.40:
-            # Tighten
-            if "long_score" in t[gk]: t[gk]["long_score"] = min(95, t[gk]["long_score"] + 1)
+            # Tighten - BUT with per-group maximum caps to prevent runaway
+            max_long_score_by_group = {
+                "group_0": 85, "group_1": 80, "group_2": 75,
+                "group_3": 70, "group_4": 65, "group_5": 55
+            }
+            max_ls = max_long_score_by_group.get(gk, 80)
+            if "long_score" in t[gk]: t[gk]["long_score"] = min(max_ls, t[gk]["long_score"] + 1)
             if "short_score" in t[gk]: t[gk]["short_score"] = max(5, t[gk]["short_score"] - 1)
             if "rsi_min" in t[gk]: t[gk]["rsi_min"] = min(40, t[gk]["rsi_min"] + 1)
             if "rsi_max" in t[gk]: t[gk]["rsi_max"] = max(60, t[gk]["rsi_max"] - 1)
@@ -92,6 +97,7 @@ def auto_tune():
             if "vol_surge" in t[gk]: t[gk]["vol_surge"] = min(3.0, t[gk]["vol_surge"] + 0.1)
             if "macd_long" in t[gk]: t[gk]["macd_long"] = max(-1.0, t[gk]["macd_long"] - 0.1)
             if "macd_short" in t[gk]: t[gk]["macd_short"] = min(1.0, t[gk]["macd_short"] + 0.1)
+
 
     # SAFETY CLAMPS: Prevent threshold inversion (Bug #5 fix)
     # Group 0 (REAL MONEY) must have the widest neutral zone

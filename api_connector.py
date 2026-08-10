@@ -18,28 +18,94 @@ except Exception:
 
 # Dynamic Proxy Rotator for 24/7 Cloud Execution (10 Fixie EU West accounts, 5,000 requests/month)
 FIXIE_POOL = [
-    # 3 Cuentas 100% Nuevas (0/500 peticiones usadas) - PRIORIDAD MÁXIMA
-    "http://fixie:YOtqrUO1HVYG2xM@ventoux.usefixie.com:80",   # observatorioforestalutn (0/500)
-    "http://fixie:WWaxRExXfmPL05s@ventoux.usefixie.com:80",   # utnagp (0/500)
-    "http://fixie:f9ibnMDQHLjZTpM@ventoux.usefixie.com:80",   # dronforestalutn (0/500)
-    
-    # 6 Cuentas de Uso Bajo/Moderado (93 - 155/500 peticiones usadas) - PRIORIDAD SECUNDARIA
-    "http://fixie:zW3cwceDZ64c1lE@ventoux.usefixie.com:80",   # oscarhernandot11es (93/500)
-    "http://fixie:ygTezfOLKeqEhhF@ventoux.usefixie.com:80",   # forestalutn (110/500)
-    "http://fixie:V9uciGagtBF2MJc@ventoux.usefixie.com:80",   # sconcienciautn (129/500)
-    "http://fixie:gnvJakG6jyBrS04@ventoux.usefixie.com:80",   # utn2024a (146/500)
-    "http://fixie:ak4QPysr5gnUAQW@ventoux.usefixie.com:80",   # utn.sig (150/500)
-    "http://fixie:SIOQ4x5oF0pbFju@ventoux.usefixie.com:80",   # oscarhernando4ec (155/500)
-    
-    # 1 Cuenta de Reserva de Emergencia (420/500 peticiones usadas) - RESPALDO
-    "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80",   # oscarhernando4 (420/500)
+    "http://fixie:YOtqrUO1HVYG2xM@ventoux.usefixie.com:80",   # observatorioforestalutn
+    "http://fixie:WWaxRExXfmPL05s@ventoux.usefixie.com:80",   # utnagp
+    "http://fixie:f9ibnMDQHLjZTpM@ventoux.usefixie.com:80",   # dronforestalutn
+    "http://fixie:zW3cwceDZ64c1lE@ventoux.usefixie.com:80",   # oscarhernandot11es
+    "http://fixie:ygTezfOLKeqEhhF@ventoux.usefixie.com:80",   # forestalutn
+    "http://fixie:V9uciGagtBF2MJc@ventoux.usefixie.com:80",   # sconcienciautn
+    "http://fixie:gnvJakG6jyBrS04@ventoux.usefixie.com:80",   # utn2024a
+    "http://fixie:ak4QPysr5gnUAQW@ventoux.usefixie.com:80",   # utn.sig
+    "http://fixie:SIOQ4x5oF0pbFju@ventoux.usefixie.com:80",   # oscarhernando4ec
+    "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80",   # oscarhernando4
 ]
 
-# Balanceador Inteligente Dinámico: Rota proxy por cada solicitud (no estático)
+# Nombres legibles para tracking de uso por cuenta
+FIXIE_ACCOUNTS = [
+    "observatorioforestalutn", "utnagp", "dronforestalutn",
+    "oscarhernandot11es", "forestalutn", "sconcienciautn",
+    "utn2024a", "utn.sig", "oscarhernando4ec", "oscarhernando4"
+]
+
+# ============================================================
+# SISTEMA HÍBRIDO LOCAL/NUBE + ROUND-ROBIN EQUITATIVO
+# ============================================================
+PROXY_STATE_FILE = os.path.join(os.path.dirname(__file__), "proxy_state.json")
+EXECUTION_MODE_FILE = os.path.join(os.path.dirname(__file__), "execution_mode.json")
+
+def _load_proxy_state():
+    """Carga el estado persistente del rotador de proxies."""
+    try:
+        with open(PROXY_STATE_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {"current_index": 0, "usage": {}}
+
+def _save_proxy_state(state):
+    """Guarda el estado del rotador de proxies."""
+    try:
+        with open(PROXY_STATE_FILE, "w", encoding="utf-8") as f:
+            json.dump(state, f, indent=2, ensure_ascii=False)
+    except Exception:
+        pass
+
+def get_execution_mode():
+    """Lee el modo de ejecución actual: 'local' o 'cloud'."""
+    try:
+        with open(EXECUTION_MODE_FILE, "r", encoding="utf-8") as f:
+            return json.load(f).get("mode", "cloud")
+    except Exception:
+        return "cloud"
+
+def set_execution_mode(mode):
+    """Cambia entre 'local' (sin proxy) y 'cloud' (con Fixie)."""
+    data = {
+        "mode": mode,
+        "switched_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "switched_by": "api_connector"
+    }
+    try:
+        with open(EXECUTION_MODE_FILE, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+    except Exception:
+        pass
+    emoji = "🖥️ LOCAL (Sin Proxy)" if mode == "local" else "☁️ NUBE (Fixie Proxy)"
+    print(f"🔄 Modo de ejecución cambiado a: {emoji}")
+
 def get_proxy():
-    """Selecciona un proxy aleatorio del pool en cada llamada para distribuir consumo."""
-    url = random.choice(FIXIE_POOL[:9])
+    """Round-Robin equitativo: rota secuencialmente entre TODAS las 10 cuentas Fixie."""
+    state = _load_proxy_state()
+    idx = state.get("current_index", 0) % len(FIXIE_POOL)
+    url = FIXIE_POOL[idx]
+    
+    # Avanzar al siguiente para la próxima llamada
+    state["current_index"] = (idx + 1) % len(FIXIE_POOL)
+    
+    # Tracking de uso por cuenta
+    usage = state.setdefault("usage", {})
+    account_name = FIXIE_ACCOUNTS[idx]
+    usage[account_name] = usage.get(account_name, 0) + 1
+    state["last_used"] = account_name
+    state["last_used_time"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+    _save_proxy_state(state)
     return {"http": url, "https": url}
+
+def get_smart_proxy():
+    """Proxy inteligente: usa directo si modo local, Fixie Round-Robin si modo nube."""
+    if get_execution_mode() == "local":
+        return None  # Sin proxy = conexión directa desde PC
+    return get_proxy()  # Round-Robin Fixie equitativo
 
 # Legacy compatibility (solo para imports externos)
 PROXY_URL = FIXIE_POOL[0]
@@ -123,7 +189,7 @@ def get_real_balances():
     
     url = f"{BASE_URL}/api/v3/account"
     try:
-        res = requests.get(url, headers=headers, params=params, timeout=10)
+        res = requests.get(url, headers=headers, params=params, proxies=get_smart_proxy(), timeout=10)
         if res.status_code == 200:
             return res.json().get("balances", [])
         return None
@@ -144,7 +210,7 @@ def get_real_futures_balances():
     
     url = f"{FAPI_URL}/fapi/v2/account"
     try:
-        res = requests.get(url, headers=headers, params=params, timeout=10)
+        res = requests.get(url, headers=headers, params=params, proxies=get_smart_proxy(), timeout=10)
         if res.status_code == 200:
             return res.json().get("assets", [])
         return None
@@ -161,7 +227,7 @@ def get_real_futures_positions():
     
     url = f"{FAPI_URL}/fapi/v2/positionRisk"
     try:
-        res = requests.get(url, headers=headers, params=params, timeout=10)
+        res = requests.get(url, headers=headers, params=params, proxies=get_smart_proxy(), timeout=10)
         if res.status_code == 200:
             positions = res.json()
             return [p for p in positions if float(p.get("positionAmt", 0)) != 0.0]
@@ -198,7 +264,7 @@ def get_symbol_price(symbol, is_futures=False):
     # Fallback to proxy if direct access has networking issues
     try:
         url = f"https://api.binance.com/api/v3/ticker/price?symbol={symbol}"
-        res = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, proxies=get_proxy(), timeout=6)
+        res = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, proxies=get_smart_proxy(), timeout=6)
         if res.status_code == 200:
             p = float(res.json().get("price", 0))
             if p > 0:
@@ -224,7 +290,7 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
     # Read cached USDT balance from 30m diagnosis state (zero Fixie proxy requests consumed)
     cached_usdt = state.get("_cached_usdt_free", 0.0)
     if cached_usdt > 0:
-        usdt_amount = min(usdt_amount, cached_usdt * 0.99)
+        usdt_amount = min(usdt_amount, cached_usdt)
         
     clean_usd = math.floor(usdt_amount * 10) / 10.0
     if clean_usd < 5.1:
@@ -244,7 +310,7 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
     
     url = f"{BASE_URL}/api/v3/order"
     try:
-        res = requests.post(url, headers=headers, params=params, proxies=get_proxy(), timeout=10)
+        res = requests.post(url, headers=headers, params=params, proxies=get_smart_proxy(), timeout=10)
         res_json = res.json()
         if "orderId" in res_json or res_json.get("status") == "FILLED":
             # Real-Time Balance Sync via Fixie Proxy upon Trade Opening
@@ -315,7 +381,7 @@ def execute_real_spot_market_sell(symbol, quantity=None):
     
     url = f"{BASE_URL}/api/v3/order"
     try:
-        res = requests.post(url, headers=headers, params=params, proxies=get_proxy(), timeout=10)
+        res = requests.post(url, headers=headers, params=params, proxies=get_smart_proxy(), timeout=10)
         res_json = res.json()
         if "orderId" in res_json or res_json.get("status") == "FILLED":
             # Real-Time Balance Sync via Fixie Proxy upon Trade Closing
@@ -450,7 +516,7 @@ def transfer_usdt(amount, to_futures=True):
     query = urlencode(params)
     sig = hmac.new(API_SECRET.encode("utf-8"), query.encode("utf-8"), hashlib.sha256).hexdigest()
     try:
-        res = requests.post(f"{BASE_URL}/sapi/v1/asset/transfer", headers={"X-MBX-APIKEY": API_KEY}, params={**params, "signature": sig}, proxies=get_proxy(), timeout=10)
+        res = requests.post(f"{BASE_URL}/sapi/v1/asset/transfer", headers={"X-MBX-APIKEY": API_KEY}, params={**params, "signature": sig}, proxies=get_smart_proxy(), timeout=10)
         print(f"🔄 Auto-Transfer {'to Futures' if to_futures else 'to Spot'}: {res.json()}")
         return res.json()
     except Exception as e:
@@ -482,19 +548,19 @@ def execute_real_futures_market_short(symbol, usdt_amount):
         m_params = {"symbol": symbol, "marginType": "ISOLATED", "timestamp": timestamp}
         m_query = urlencode(m_params)
         m_sig = hmac.new(API_SECRET.encode("utf-8"), m_query.encode("utf-8"), hashlib.sha256).hexdigest()
-        requests.post(f"{FAPI_URL}/fapi/v1/marginType", headers=headers, params={**m_params, "signature": m_sig}, proxies=get_proxy(), timeout=5)
+        requests.post(f"{FAPI_URL}/fapi/v1/marginType", headers=headers, params={**m_params, "signature": m_sig}, proxies=get_smart_proxy(), timeout=5)
     except Exception:
         pass
 
     # 2. Fetch live price AND correct quantity precision from exchangeInfo
     try:
-        price_res = requests.get(f"{FAPI_URL}/fapi/v1/ticker/price?symbol={symbol}", proxies=get_proxy(), timeout=5).json()
+        price_res = requests.get(f"{FAPI_URL}/fapi/v1/ticker/price?symbol={symbol}", proxies=get_smart_proxy(), timeout=5).json()
         price = float(price_res.get("price", 1.0))
         
         # Get correct quantity precision for this symbol
         qty_precision = 3  # default
         try:
-            exinfo = requests.get(f"{FAPI_URL}/fapi/v1/exchangeInfo", proxies=get_proxy(), timeout=5).json()
+            exinfo = requests.get(f"{FAPI_URL}/fapi/v1/exchangeInfo", proxies=get_smart_proxy(), timeout=5).json()
             sym_info = next((s for s in exinfo['symbols'] if s['symbol'] == symbol), None)
             if sym_info:
                 qty_precision = int(sym_info.get('quantityPrecision', 3))
@@ -547,7 +613,7 @@ def execute_real_futures_market_short(symbol, usdt_amount):
     entry_params["signature"] = entry_sig
     
     try:
-        entry_res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=entry_params, proxies=get_proxy(), timeout=10)
+        entry_res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=entry_params, proxies=get_smart_proxy(), timeout=10)
         entry_data = entry_res.json()
         if "orderId" not in entry_data:
             return {"error": f"Entry order failed: {entry_data}"}
@@ -571,7 +637,7 @@ def execute_real_futures_market_short(symbol, usdt_amount):
             q = urlencode(p)
             s = hmac.new(API_SECRET.encode("utf-8"), q.encode("utf-8"), hashlib.sha256).hexdigest()
             p["signature"] = s
-            sl_tp_res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=p, proxies=get_proxy(), timeout=10)
+            sl_tp_res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=p, proxies=get_smart_proxy(), timeout=10)
             print(f"  ✅ {sl_tp_type} order placed: {sl_tp_res.json().get('orderId', sl_tp_res.text)}")
         except Exception as e:
             print(f"  ⚠️ {sl_tp_type} order failed: {e}")
@@ -585,7 +651,7 @@ def execute_real_futures_market_close(symbol, quantity):
     
     qty_precision = 3  # default
     try:
-        exinfo = requests.get(f"{FAPI_URL}/fapi/v1/exchangeInfo", proxies=get_proxy(), timeout=5).json()
+        exinfo = requests.get(f"{FAPI_URL}/fapi/v1/exchangeInfo", proxies=get_smart_proxy(), timeout=5).json()
         sym_info = next((s for s in exinfo['symbols'] if s['symbol'] == symbol), None)
         if sym_info:
             qty_precision = int(sym_info.get('quantityPrecision', 3))
@@ -612,7 +678,7 @@ def execute_real_futures_market_close(symbol, quantity):
     headers = {"X-MBX-APIKEY": API_KEY}
     
     try:
-        res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=params, proxies=get_proxy(), timeout=10)
+        res = requests.post(f"{FAPI_URL}/fapi/v1/order", headers=headers, params=params, proxies=get_smart_proxy(), timeout=10)
         res_json = res.json()
         
         # Only transfer balance back to spot if the close order was successful
@@ -910,7 +976,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de alineación en 5m con Score < 70 (Score={best_score}, Alignment: {tf_align}).")
                 else:
                     import orderbook_analyzer
-                    ob_info = orderbook_analyzer.fetch_orderbook_depth(best_symbol, limit=20, proxies=proxies)
+                    ob_info = orderbook_analyzer.fetch_orderbook_depth(best_symbol, limit=20)
                     if ob_info.get("spread_pct", 0.0) > 0.75:
                         is_stable = True
                         print(f"⛔ Compra rechazada: {best_symbol} descalificado por Spread elevado ({ob_info.get('spread_pct'):.3f}% > 0.75%). Evitando deslizamiento de precio.")

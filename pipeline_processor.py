@@ -354,12 +354,14 @@ def run_infinite_trading_matrix_cycle():
                 is_loss = curr_price >= (sl_price * 0.999)
                 unr_pct = ((entry_p - curr_price) / entry_p) * 100.0
             
-            friction_cost = curr_bal * 0.001 # 0.1% round-trip fees + slippage
+            invested = curr_bal * 0.2  # 20% position size for fee calculation
+            friction_cost = invested * 0.001 # 0.1% round-trip fees + slippage on invested portion
             
             # WIN CASE: Hit Take-Profit
             if is_win:
                 gain_ratio = max(unr_pct / 100.0, 0.02)
-                pnl = round((curr_bal * gain_ratio) - friction_cost, 2)
+                invested = curr_bal * 0.2  # Only 20% of balance is invested per position
+                pnl = round((invested * gain_ratio) - friction_cost, 2)
                 
                 acc["current_balance"] += pnl
                 acc["pnl_usd"] += pnl
@@ -389,7 +391,10 @@ def run_infinite_trading_matrix_cycle():
 
             # LOSS CASE: Hit Stop-Loss (-1.0%)
             elif is_loss:
-                loss = round((curr_bal * 0.01) + friction_cost, 2)
+                invested = curr_bal * 0.2  # Only 20% of balance is invested per position
+                # Calculate actual loss based on price distance, not fixed 1%
+                actual_loss_pct = abs(unr_pct) / 100.0 if unr_pct < 0 else 0.002  # Break-even = ~0.2% loss (fees)
+                loss = round((invested * actual_loss_pct) + friction_cost, 2)
                 acc["current_balance"] -= loss
                 acc["pnl_usd"] -= loss
                 acc["losses"] += 1
@@ -565,7 +570,7 @@ def run_infinite_trading_matrix_cycle():
             
         if is_ai_approved and ai_action == "BUY_LONG" and ai_symbol and ai_symbol != "NONE" and ai_price > 0:
             # Extract volume surge directly from AI opportunity data
-            target_vol_surge = ai_opp_data.get("tech", {}).get("indicators", {}).get("volume_surge", 1.0)
+            target_vol_surge = ai_opp_data.get("tech", {}).get("indicators", {}).get("volume_surge_ratio", 1.0)
 
             # PRECISION SNIPER GATE (Francisca Serrano / Hyenuk Chu)
             if ai_score < 55:
@@ -589,7 +594,7 @@ def run_infinite_trading_matrix_cycle():
                     is_bearish=False,
                     is_learned_signal=True
                 )
-        elif best_spot_long and best_spot_long["score"] >= 65:
+        elif not is_ai_approved and best_spot_long and best_spot_long["score"] >= 75 and ai_action != "HOLD":
             bs_sym = best_spot_long["symbol"]
             bs_data = symbol_analysis_map.get(bs_sym, {})
             bs_price = bs_data.get("price", 0)
@@ -730,14 +735,16 @@ def sync_live_matrix_obsidian(matrix):
         import api_connector
         real_st = api_connector.load_real_account_state()
         
-        # SMART PROXY SAVER: Run full wallet diagnosis from Binance API every 30 MINUTES
-        # (at minute 0-4 and 30-34 of each hour) to keep wallet data fresh while safely within Fixie quota (48 req/day).
-        # Orders (buy/sell) always use proxy instantly regardless of this timer.
+        # SMART PROXY SAVER: Adaptive based on execution mode
+        # LOCAL: Sync every cycle (no proxy quota consumed)
+        # CLOUD: Sync every 30 min (at minute 0-4 and 30-34) to conserve Fixie quota
         now = datetime.now()
+        is_local_mode = api_connector.get_execution_mode() == "local"
         is_sync_window = (now.minute in [0, 1, 2, 3, 4]) or (now.minute in [30, 31, 32, 33, 34])
         
-        if is_sync_window:
-            print("🔄 [SYNC 30M] Ejecutando diagnóstico completo de billetera Spot desde Binance API (Fixie Proxy)...")
+        if is_local_mode or is_sync_window:
+            mode_label = "LOCAL DIRECTO" if is_local_mode else "NUBE 30M"
+            print(f"🔄 [SYNC {mode_label}] Ejecutando diagnóstico completo de billetera Spot desde Binance API...")
             real_st = api_connector.diagnose_full_spot_wallet()
             real_total_val = real_st.get("_cached_total_val", real_st.get("current_balance_usd", 0.0))
             real_usdt_free = real_st.get("_cached_usdt_free", 0.0)

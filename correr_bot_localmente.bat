@@ -8,7 +8,11 @@ echo ========================================================
 echo.
 echo Presiona CTRL+C en cualquier momento para detener el bot.
 echo El bot se ejecutara cada 5 minutos usando tu PC.
-echo ¡Esto es 100%% GRATIS y no consume cuota de GitHub!
+echo Esto es 100%% GRATIS y no consume cuota de Fixie!
+echo.
+
+REM Activar modo local automaticamente al iniciar
+python switch_mode.py local
 echo.
 
 :loop
