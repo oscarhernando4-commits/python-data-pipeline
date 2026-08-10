@@ -1,18 +1,22 @@
 {
-  "timestamp": "2026-08-10 07:10:21",
+  "timestamp": "2026-08-10 07:12:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación selectiva con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y Bids > 55%) necesario para mitigar el riesgo de 'trampas de valor' identificadas en el análisis histórico. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos analizados ofrece una configuración técnica de alta convicción (A+) que cumpla con los requisitos de soporte en el libro de órdenes y la solidez estadística necesaria para evitar las pérdidas observadas en el historial reciente. Por lo tanto, la decisión institucional es proteger el capital y esperar una mejor estructura de mercado.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
       "score": 85
     },
     {
-      "symbol": "LUNCUSDT",
-      "score": 85
+      "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 75
     },
     {
       "symbol": "AAVEUSDT",
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "SUNUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "MUBUSDT",
       "score": 75
     }
   ]
