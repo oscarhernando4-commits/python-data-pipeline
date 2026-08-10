@@ -924,9 +924,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                             state["daily_losses"] = state.get("daily_losses", 0) + 1
                             res_type = "LOSS"
                             
-                        state["current_balance_usd"] = state.get("current_balance_usd", 20.07) + pnl_usd
-                        state["_cached_usdt_free"] = state["current_balance_usd"]
                         state["trades_count"] = state.get("trades_count", 0) + 1
+                        save_real_account_state(state)
+                        # Sync exact live balances from Binance API
+                        try:
+                            sync_real_account_with_binance()
+                        except Exception:
+                            pass
                             
                         try:
                             import learning_engine
