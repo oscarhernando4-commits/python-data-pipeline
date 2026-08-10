@@ -365,12 +365,42 @@
     <!-- PESTAÑA 1: MONITOREO EN VIVO -->
     <div id="tab-monitoreo" class="tab-content active">
         
-        <div class="active-pos-banner active-pos-idle">
+        <!-- ============ SEGUIMIENTO EN TIEMPO REAL POSICIÓN ACTIVA ============ -->
+        <div class="active-pos-banner">
             <div class="active-pos-header">
                 <div class="active-pos-title">
-                    <span class="active-pos-symbol" style="color: var(--text-muted);">🔒 NINGUNA POSICIÓN ABIERTA (100% CAPITAL EN USDT)</span>
+                    <span class="active-pos-pulse"></span>
+                    <span class="active-pos-symbol">🎯 POSICIÓN REAL EN VIVO: <b>ARBUSDT</b></span>
+                    <span class="badge badge-long">BUY SPOT LONG</span>
                 </div>
-                <div class="active-pos-time">🔎 Escaneando 120 Pares en Tiempo Real</div>
+                <div class="active-pos-time">⏱️ Tiempo Abierto: <b>40 min</b> / 75 min (Escalera Time-Decay)</div>
+            </div>
+            <div class="active-pos-grid">
+                <div class="pos-widget">
+                    <div class="pos-widget-label">Capital Invertido</div>
+                    <div class="pos-widget-val">$17.43 USD</div>
+                    <div class="pos-widget-sub">216.50 ARB</div>
+                </div>
+                <div class="pos-widget">
+                    <div class="pos-widget-label">Precio de Entrada</div>
+                    <div class="pos-widget-val">$0.0808</div>
+                    <div class="pos-widget-sub">Binance Spot Live</div>
+                </div>
+                <div class="pos-widget">
+                    <div class="pos-widget-label">Máximo Pico Alcanzado</div>
+                    <div class="pos-widget-val" style="color: var(--accent-emerald);">$0.0808</div>
+                    <div class="pos-widget-sub">Pico Flotante: +0.00%</div>
+                </div>
+                <div class="pos-widget">
+                    <div class="pos-widget-label">Piso Stop-Loss ATR</div>
+                    <div class="pos-widget-val" style="color: var(--accent-rose);">$0.0803</div>
+                    <div class="pos-widget-sub">Límite Salida: -0.60%</div>
+                </div>
+            </div>
+            <div class="active-pos-footer">
+                <div class="pos-shield-tag">🛡️ BTC Circuit Breaker: <b>🟢 ACTIVO</b></div>
+                <div class="pos-shield-tag">🧱 Orderbook Muro: <b>🟢 OK</b></div>
+                <div class="pos-shield-tag">🚀 Trailing Stop: <b>⚪ Esperando +2.0%</b></div>
             </div>
         </div>
         
@@ -405,20 +435,20 @@
                     
         <tr style="">
             <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#1</td>
-            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">TSTUSDT</td>
-            <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-mid">50 Pts</span></td>
-            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.4x</td>
-            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">54.9</td>
+            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">AXTIBUSDT</td>
+            <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-mid">55 Pts</span></td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.9x</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">26.5</td>
             <td style="padding: 0.45rem 0.6rem;">🟢 > MA25</td>
             <td style="padding: 0.45rem 0.6rem; color: var(--accent-amber); font-weight: 700;">Score < 58 Pts</td>
         </tr>
         
         <tr style="">
             <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#2</td>
-            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">DOGEUSDT</td>
+            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">TSTUSDT</td>
             <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-mid">50 Pts</span></td>
-            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">1.3x</td>
-            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">57.9</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.5x</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">54.9</td>
             <td style="padding: 0.45rem 0.6rem;">🟢 > MA25</td>
             <td style="padding: 0.45rem 0.6rem; color: var(--accent-amber); font-weight: 700;">Score < 58 Pts</td>
         </tr>
@@ -428,7 +458,7 @@
             <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">BICOUSDT</td>
             <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-mid">50 Pts</span></td>
             <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.5x</td>
-            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">51.5</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">51.6</td>
             <td style="padding: 0.45rem 0.6rem;">🟢 > MA25</td>
             <td style="padding: 0.45rem 0.6rem; color: var(--accent-amber); font-weight: 700;">Score < 58 Pts</td>
         </tr>
@@ -437,8 +467,8 @@
             <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#4</td>
             <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">LINKUSDT</td>
             <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-mid">50 Pts</span></td>
-            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.3x</td>
-            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">52.2</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.5x</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">54.3</td>
             <td style="padding: 0.45rem 0.6rem;">🟢 > MA25</td>
             <td style="padding: 0.45rem 0.6rem; color: var(--accent-amber); font-weight: 700;">Score < 58 Pts</td>
         </tr>
@@ -447,8 +477,8 @@
             <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#5</td>
             <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">SOLUSDT</td>
             <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-mid">50 Pts</span></td>
-            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.5x</td>
-            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">54.3</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">1.3x</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">57.5</td>
             <td style="padding: 0.45rem 0.6rem;">🟢 > MA25</td>
             <td style="padding: 0.45rem 0.6rem; color: var(--accent-amber); font-weight: 700;">Score < 58 Pts</td>
         </tr>
@@ -465,26 +495,6 @@
         
         <tr style="">
             <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#7</td>
-            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">DOTUSDT</td>
-            <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-mid">50 Pts</span></td>
-            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.3x</td>
-            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">50.9</td>
-            <td style="padding: 0.45rem 0.6rem;">🟢 > MA25</td>
-            <td style="padding: 0.45rem 0.6rem; color: var(--accent-amber); font-weight: 700;">Score < 58 Pts</td>
-        </tr>
-        
-        <tr style="">
-            <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#8</td>
-            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">THEUSDT</td>
-            <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-mid">50 Pts</span></td>
-            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.7x</td>
-            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">56.1</td>
-            <td style="padding: 0.45rem 0.6rem;">🟢 > MA25</td>
-            <td style="padding: 0.45rem 0.6rem; color: var(--accent-amber); font-weight: 700;">Score < 58 Pts</td>
-        </tr>
-        
-        <tr style="">
-            <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#9</td>
             <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">BROCCOLI714USDT</td>
             <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-mid">50 Pts</span></td>
             <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.7x</td>
@@ -494,11 +504,31 @@
         </tr>
         
         <tr style="">
-            <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#10</td>
+            <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#8</td>
+            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">KAITOUSDT</td>
+            <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-mid">50 Pts</span></td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.3x</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">47.5</td>
+            <td style="padding: 0.45rem 0.6rem;">🟢 > MA25</td>
+            <td style="padding: 0.45rem 0.6rem; color: var(--accent-amber); font-weight: 700;">Score < 58 Pts</td>
+        </tr>
+        
+        <tr style="">
+            <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#9</td>
             <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">ALGOUSDT</td>
             <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-mid">50 Pts</span></td>
             <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">1.0x</td>
             <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">54.3</td>
+            <td style="padding: 0.45rem 0.6rem;">🟢 > MA25</td>
+            <td style="padding: 0.45rem 0.6rem; color: var(--accent-amber); font-weight: 700;">Score < 58 Pts</td>
+        </tr>
+        
+        <tr style="">
+            <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#10</td>
+            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">HEIUSDT</td>
+            <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-mid">50 Pts</span></td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">1.3x</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">59.7</td>
             <td style="padding: 0.45rem 0.6rem;">🟢 > MA25</td>
             <td style="padding: 0.45rem 0.6rem; color: var(--accent-amber); font-weight: 700;">Score < 58 Pts</td>
         </tr>
@@ -521,13 +551,13 @@
                 </div>
             </div>
             
-            <div class="checklist-item checklist-pass">
+            <div class="checklist-item checklist-pending">
                 <div>
                     <div class="checklist-title">2. Sin Posición Real Abierta</div>
                     <div class="checklist-sub">100% liquidez disponible en Spot</div>
                 </div>
-                <div class="checklist-sub" style="font-weight: 800; color: var(--accent-emerald);">
-                    🟢 CUMPLIDO (Liquidez Libre)
+                <div class="checklist-sub" style="font-weight: 800; color: var(--accent-amber);">
+                    🟡 POSICIÓN ACTIVA
                 </div>
             </div>
 
@@ -557,7 +587,7 @@
                     <div class="checklist-sub">Sin sobre-extensión impulsiva previa</div>
                 </div>
                 <div class="checklist-sub" style="font-weight: 800; color: var(--accent-emerald);">
-                    🟢 CUMPLIDO (RSI2m=54.9)
+                    🟢 CUMPLIDO (RSI2m=26.5)
                 </div>
             </div>
 
@@ -637,8 +667,8 @@
                 <div class="stats-grid">
                     <div class="stat-box">
                         <div class="stat-label">Posición Activa</div>
-                        <div class="stat-value">NINGUNA</div>
-                        <div class="stat-sub">🔒 100% USDT Preservado</div>
+                        <div class="stat-value">ARBUSDT</div>
+                        <div class="stat-sub">Entrada: $0.0808</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Historial Operatorio</div>
@@ -672,7 +702,37 @@
         <div class="verdict-card verdict-latest">
             <div class="verdict-header">
                 <div class="verdict-label"><div class="latest-pulse"></div>🔴 ÚLTIMO ANÁLISIS EN VIVO</div>
-                <div class="verdict-time">🕐 2026-08-10 20:14:19</div>
+                <div class="verdict-time">🕐 2026-08-10 15:14:45</div>
+            </div>
+            <div class="verdict-body">
+                <div class="verdict-decision">
+                    <div class="verdict-symbol">🔒 SIN ENTRADA (100% USDT)</div>
+                    <div class="verdict-badges">
+                        <span class="badge badge-hold">⏸️ HOLD / PROTECCIÓN</span>
+                        <span class="approved-no">🔒 CERO COMPRAS (VETO RIESGO)</span>
+                    </div>
+                </div>
+                <div class="confidence-section">
+                    <div class="confidence-header">
+                        <span class="confidence-label">Nivel de Confianza del Súper-Cerebro:</span>
+                        <span class="confidence-value" style="color: var(--accent-rose);">0%</span>
+                    </div>
+                    <div class="confidence-bar-bg">
+                        <div class="confidence-bar-fill" style="width: 0%; background: var(--accent-rose);"></div>
+                    </div>
+                </div>
+                <div class="candidates-row"><span class="candidates-label">Top Evaluados:</span> <span class="chip">AXTIBUSDT <b>55 Pts</b></span><span class="chip">TSTUSDT <b>50 Pts</b></span><span class="chip">BICOUSDT <b>50 Pts</b></span><span class="chip">SOLUSDT <b>50 Pts</b></span><span class="chip">DOGEUSDT <b>50 Pts</b></span></div>
+                <div class="reasoning-section">
+                    <div class="reasoning-label">💭 Dictamen y Razonamiento Cuántico:</div>
+                    <div class="reasoning-text">El mercado presenta una debilidad sistémica generalizada sin activos que cumplan con los criterios de alta convicción (Score >= 55). La alta frecuencia de pérdidas en el historial reciente y la falta de muros de soporte institucionales obligan a la preservación total del capital.</div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="verdict-card verdict-past">
+            <div class="verdict-header">
+                <div class="verdict-label">📋 ANÁLISIS ANTERIOR (#2)</div>
+                <div class="verdict-time">🕐 2026-08-10 15:12:45</div>
             </div>
             <div class="verdict-body">
                 <div class="verdict-decision">
@@ -694,14 +754,14 @@
                 <div class="candidates-row"><span class="candidates-label">Top Evaluados:</span> <span class="chip">TSTUSDT <b>50 Pts</b></span><span class="chip">DOGEUSDT <b>50 Pts</b></span><span class="chip">BICOUSDT <b>50 Pts</b></span><span class="chip">LINKUSDT <b>50 Pts</b></span><span class="chip">SOLUSDT <b>50 Pts</b></span></div>
                 <div class="reasoning-section">
                     <div class="reasoning-label">💭 Dictamen y Razonamiento Cuántico:</div>
-                    <div class="reasoning-text">El comité ha determinado que el mercado actual se encuentra en una fase de distribución institucional sin activos que cumplan con los criterios de alta convicción (Score >= 55). Ante la ausencia de fortaleza técnica y el riesgo de volatilidad, la estrategia óptima es mantener la posición en efectivo (HOLD) para proteger el capital contra posibles caídas.</div>
+                    <div class="reasoning-text">El mercado presenta una estructura de correlación negativa extrema y falta de convicción compradora. Ningún activo cumple con los criterios de riesgo-beneficio exigidos por el comité, por lo que se mantiene la liquidez e...</div>
                 </div>
             </div>
         </div>
     
         <div class="verdict-card verdict-past">
             <div class="verdict-header">
-                <div class="verdict-label">📋 ANÁLISIS ANTERIOR (#2)</div>
+                <div class="verdict-label">📋 ANÁLISIS ANTERIOR (#1)</div>
                 <div class="verdict-time">🕐 2026-08-10 20:12:14</div>
             </div>
             <div class="verdict-body">
@@ -725,36 +785,6 @@
                 <div class="reasoning-section">
                     <div class="reasoning-label">💭 Dictamen y Razonamiento Cuántico:</div>
                     <div class="reasoning-text">El mercado se encuentra en un estado de estancamiento técnico y debilidad sistémica. Ningún activo cumple con los criterios de alta convicción (Score >= 55) exigidos por el Comité, y el riesgo de 'trampa de valor' es ele...</div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="verdict-card verdict-past">
-            <div class="verdict-header">
-                <div class="verdict-label">📋 ANÁLISIS ANTERIOR (#1)</div>
-                <div class="verdict-time">🕐 2026-08-10 20:10:25</div>
-            </div>
-            <div class="verdict-body">
-                <div class="verdict-decision">
-                    <div class="verdict-symbol">🔒 SIN ENTRADA (100% USDT)</div>
-                    <div class="verdict-badges">
-                        <span class="badge badge-hold">⏸️ HOLD / PROTECCIÓN</span>
-                        <span class="approved-no">🔒 CERO COMPRAS (VETO RIESGO)</span>
-                    </div>
-                </div>
-                <div class="confidence-section">
-                    <div class="confidence-header">
-                        <span class="confidence-label">Nivel de Confianza del Súper-Cerebro:</span>
-                        <span class="confidence-value" style="color: var(--accent-rose);">0%</span>
-                    </div>
-                    <div class="confidence-bar-bg">
-                        <div class="confidence-bar-fill" style="width: 0%; background: var(--accent-rose);"></div>
-                    </div>
-                </div>
-                <div class="candidates-row"><span class="candidates-label">Top Evaluados:</span> <span class="chip">BICOUSDT <b>50 Pts</b></span><span class="chip">BNBUSDT <b>50 Pts</b></span><span class="chip">DOGEUSDT <b>50 Pts</b></span><span class="chip">SOLUSDT <b>50 Pts</b></span><span class="chip">TSTUSDT <b>50 Pts</b></span></div>
-                <div class="reasoning-section">
-                    <div class="reasoning-label">💭 Dictamen y Razonamiento Cuántico:</div>
-                    <div class="reasoning-text">El mercado carece de activos con fuerza relativa (Score < 55) y presenta una estructura de distribución silenciosa. Ante la ausencia de convicción alcista y la alta probabilidad de cacería de stops, el comité decide mant...</div>
                 </div>
             </div>
         </div>
@@ -785,10 +815,10 @@
                     
         <tr class="cand-row">
             <td class="cand-rank">#1</td>
-            <td class="cand-symbol"><b>TSTUSDT</b></td>
-            <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
-            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>54.9</b> <small style="color:var(--text-muted);">(2m)</small> / <b>54.9</b> <small style="color:var(--text-muted);">(5m)</small></td>
-            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>54.9</b> <small style="color:var(--text-muted);">(15m)</small></td>
+            <td class="cand-symbol"><b>AXTIBUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-mid">55 Pts</span></td>
+            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>26.5</b> <small style="color:var(--text-muted);">(2m)</small> / <b>26.5</b> <small style="color:var(--text-muted);">(5m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>26.5</b> <small style="color:var(--text-muted);">(15m)</small></td>
             <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>50.0</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
             <td class="cand-vol">0.4x</td>
             <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
@@ -797,12 +827,12 @@
         
         <tr class="cand-row">
             <td class="cand-rank">#2</td>
-            <td class="cand-symbol"><b>DOGEUSDT</b></td>
+            <td class="cand-symbol"><b>TSTUSDT</b></td>
             <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
-            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>57.9</b> <small style="color:var(--text-muted);">(2m)</small> / <b>57.9</b> <small style="color:var(--text-muted);">(5m)</small></td>
-            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>57.9</b> <small style="color:var(--text-muted);">(15m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>54.9</b> <small style="color:var(--text-muted);">(2m)</small> / <b>54.9</b> <small style="color:var(--text-muted);">(5m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>54.9</b> <small style="color:var(--text-muted);">(15m)</small></td>
             <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>50.0</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
-            <td class="cand-vol">1.3x</td>
+            <td class="cand-vol">0.5x</td>
             <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
             <td class="cand-status">🔍 Monitoreando</td>
         </tr>
@@ -811,8 +841,8 @@
             <td class="cand-rank">#3</td>
             <td class="cand-symbol"><b>BICOUSDT</b></td>
             <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
-            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>51.5</b> <small style="color:var(--text-muted);">(2m)</small> / <b>51.5</b> <small style="color:var(--text-muted);">(5m)</small></td>
-            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>51.5</b> <small style="color:var(--text-muted);">(15m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>51.6</b> <small style="color:var(--text-muted);">(2m)</small> / <b>51.6</b> <small style="color:var(--text-muted);">(5m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>51.6</b> <small style="color:var(--text-muted);">(15m)</small></td>
             <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>50.0</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
             <td class="cand-vol">0.5x</td>
             <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
@@ -844,6 +874,18 @@
         </tr>
         
         <tr class="cand-row">
+            <td class="cand-rank">#5</td>
+            <td class="cand-symbol"><b>DOGEUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
+            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>57.5</b> <small style="color:var(--text-muted);">(2m)</small> / <b>57.5</b> <small style="color:var(--text-muted);">(5m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>57.5</b> <small style="color:var(--text-muted);">(15m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>50.0</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
+            <td class="cand-vol">1.3x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
             <td class="cand-rank">#6</td>
             <td class="cand-symbol"><b>UNIUSDT</b></td>
             <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
@@ -857,30 +899,6 @@
         
         <tr class="cand-row">
             <td class="cand-rank">#7</td>
-            <td class="cand-symbol"><b>DOTUSDT</b></td>
-            <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
-            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>50.9</b> <small style="color:var(--text-muted);">(2m)</small> / <b>50.9</b> <small style="color:var(--text-muted);">(5m)</small></td>
-            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>50.9</b> <small style="color:var(--text-muted);">(15m)</small></td>
-            <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>50.0</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
-            <td class="cand-vol">0.3x</td>
-            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
-            <td class="cand-status">🔍 Monitoreando</td>
-        </tr>
-        
-        <tr class="cand-row">
-            <td class="cand-rank">#8</td>
-            <td class="cand-symbol"><b>THEUSDT</b></td>
-            <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
-            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>56.1</b> <small style="color:var(--text-muted);">(2m)</small> / <b>56.1</b> <small style="color:var(--text-muted);">(5m)</small></td>
-            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>56.1</b> <small style="color:var(--text-muted);">(15m)</small></td>
-            <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>50.0</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
-            <td class="cand-vol">0.7x</td>
-            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
-            <td class="cand-status">🔍 Monitoreando</td>
-        </tr>
-        
-        <tr class="cand-row">
-            <td class="cand-rank">#9</td>
             <td class="cand-symbol"><b>BROCCOLI714USDT</b></td>
             <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
             <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>66.0</b> <small style="color:var(--text-muted);">(2m)</small> / <b>66.0</b> <small style="color:var(--text-muted);">(5m)</small></td>
@@ -892,13 +910,37 @@
         </tr>
         
         <tr class="cand-row">
-            <td class="cand-rank">#10</td>
+            <td class="cand-rank">#8</td>
+            <td class="cand-symbol"><b>KAITOUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
+            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>47.5</b> <small style="color:var(--text-muted);">(2m)</small> / <b>47.5</b> <small style="color:var(--text-muted);">(5m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>47.5</b> <small style="color:var(--text-muted);">(15m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>50.0</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
+            <td class="cand-vol">0.3x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#9</td>
             <td class="cand-symbol"><b>ALGOUSDT</b></td>
             <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
             <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>54.3</b> <small style="color:var(--text-muted);">(2m)</small> / <b>54.3</b> <small style="color:var(--text-muted);">(5m)</small></td>
             <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>54.3</b> <small style="color:var(--text-muted);">(15m)</small></td>
             <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>50.0</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
             <td class="cand-vol">1.0x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#10</td>
+            <td class="cand-symbol"><b>HEIUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
+            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>59.7</b> <small style="color:var(--text-muted);">(2m)</small> / <b>59.7</b> <small style="color:var(--text-muted);">(5m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>59.7</b> <small style="color:var(--text-muted);">(15m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>50.0</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
+            <td class="cand-vol">1.3x</td>
             <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
             <td class="cand-status">🔍 Monitoreando</td>
         </tr>
@@ -1669,7 +1711,7 @@
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-emerald);">+$45.06</td>
             <td style="font-variant-numeric: tabular-nums;"><b>50.0%</b> <small style="color:var(--text-dim);">(4W/4L)</small></td>
             <td>8</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🟢 Ganó +$2.46</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🟢 Ganó +$2.31</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="3" data-active="0" data-search="sim-055 dodousdt ⚖️ grupo 3: balanceado">
@@ -1682,7 +1724,7 @@
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-emerald);">+$45.06</td>
             <td style="font-variant-numeric: tabular-nums;"><b>50.0%</b> <small style="color:var(--text-dim);">(4W/4L)</small></td>
             <td>8</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🟢 Ganó +$2.46</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🟢 Ganó +$2.31</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="3" data-active="0" data-search="sim-056 dodousdt ⚖️ grupo 3: balanceado">
@@ -2270,7 +2312,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <span>Última actualización: <strong>2026-08-10 20:14:19</strong> | Algoritmo Cuántico Binance 24/7</span>
+        <span>Última actualización: <strong>2026-08-10 15:14:49</strong> | Algoritmo Cuántico Binance 24/7</span>
         <span class="countdown" id="countdown">Auto-refresh en: 30s</span>
         <button class="refresh-btn" onclick="window.location.reload()">🔄 Actualizar Ahora</button>
     </footer>
