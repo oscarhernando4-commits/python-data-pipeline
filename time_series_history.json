@@ -1,12 +1,38 @@
 {
   "LUNCUSDT": [
     {
-      "timestamp": "2026-08-10 15:58:11",
-      "price": 4.993e-05,
+      "timestamp": "2026-08-10 10:56:22",
+      "price": 0.001808,
       "score": 0,
-      "rsi": 44.94,
+      "rsi": 42.24,
       "macd": "Neutral",
-      "volume_surge": 0.49,
+      "volume_surge": 0.73,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PARTIUSDT": [
+    {
+      "timestamp": "2026-08-10 10:56:22",
+      "price": 0.0251,
+      "score": 25,
+      "rsi": 29.99,
+      "macd": "Neutral",
+      "volume_surge": 0.32,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PLUMEUSDT": [
+    {
+      "timestamp": "2026-08-10 10:56:22",
+      "price": 0.01209,
+      "score": 0,
+      "rsi": 40.44,
+      "macd": "Neutral",
+      "volume_surge": 0.44,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
