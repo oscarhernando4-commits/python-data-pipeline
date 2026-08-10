@@ -1,25 +1,12 @@
 {
-  "JSTUSDT": [
+  "CGPTUSDT": [
     {
-      "timestamp": "2026-08-10 16:44:12",
-      "price": 0.1008,
-      "score": 60,
-      "rsi": 53.53,
+      "timestamp": "2026-08-10 11:44:32",
+      "price": 0.0208,
+      "score": 30,
+      "rsi": 43.7,
       "macd": "Neutral",
-      "volume_surge": 1.7,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "IOTXUSDT": [
-    {
-      "timestamp": "2026-08-10 16:44:12",
-      "price": 0.00275,
-      "score": 50,
-      "rsi": 64.18,
-      "macd": "Neutral",
-      "volume_surge": 0.11,
+      "volume_surge": 0.81,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -27,25 +14,12 @@
   ],
   "PARTIUSDT": [
     {
-      "timestamp": "2026-08-10 16:44:13",
-      "price": 0.0251,
-      "score": 0,
-      "rsi": 32.42,
+      "timestamp": "2026-08-10 11:44:32",
+      "price": 0.025,
+      "score": 25,
+      "rsi": 28.41,
       "macd": "Neutral",
-      "volume_surge": 1.02,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "GALAUSDT": [
-    {
-      "timestamp": "2026-08-10 16:44:13",
-      "price": 0.001806,
-      "score": 10,
-      "rsi": 40.57,
-      "macd": "Neutral",
-      "volume_surge": 2.57,
+      "volume_surge": 1.05,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -53,12 +27,12 @@
   ],
   "PLUMEUSDT": [
     {
-      "timestamp": "2026-08-10 16:44:13",
+      "timestamp": "2026-08-10 11:44:32",
       "price": 0.01208,
       "score": 0,
       "rsi": 40.71,
       "macd": "Neutral",
-      "volume_surge": 2.52,
+      "volume_surge": 0.38,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -66,12 +40,12 @@
   ],
   "RIFUSDT": [
     {
-      "timestamp": "2026-08-10 16:44:14",
-      "price": 0.0721,
+      "timestamp": "2026-08-10 11:44:32",
+      "price": 0.072,
       "score": 10,
       "rsi": 51.42,
       "macd": "Neutral",
-      "volume_surge": 0.33,
+      "volume_surge": 0.34,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -79,7 +53,7 @@
   ],
   "MAVUSDT": [
     {
-      "timestamp": "2026-08-10 16:44:14",
+      "timestamp": "2026-08-10 11:44:32",
       "price": 0.00932,
       "score": 35,
       "rsi": 61.26,
@@ -90,5 +64,4 @@
       "fear_greed": 50
     }
   ]
-}
 }

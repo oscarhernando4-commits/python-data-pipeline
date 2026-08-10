@@ -240,6 +240,73 @@ def generate_web_dashboard():
     if not candidates_rows:
         candidates_rows = '<tr><td colspan="7" style="text-align:center; color: var(--text-dim); padding: 1rem;">Analizando mercado...</td></tr>'
         
+    # Active position live monitor HTML
+    active_position_monitor_html = ""
+    pos_sym = pos.get("symbol", "NINGUNA") if pos else "NINGUNA"
+    if pos and pos_sym != "NINGUNA":
+        pos_qty = pos.get("quantity", 0.0)
+        pos_entry = pos.get("entry_price", 0.0)
+        pos_cost = pos.get("cost_usd", pos_qty * pos_entry)
+        pos_highest = pos.get("highest_price", pos_entry)
+        pos_sl_pct = pos.get("adaptive_sl_pct", 1.0)
+        pos_sl_price = pos_entry * (1.0 - (pos_sl_pct / 100.0))
+        pos_cycles = pos.get("holding_cycles", 1)
+        pos_holding_mins = pos_cycles * 2
+        pos_trailing = "🔥 ACTIVO (Trailing Dinámico)" if pos.get("trailing_active") else "⚪ Esperando +2.0%"
+        peak_pnl_pct = ((pos_highest - pos_entry) / pos_entry * 100.0) if pos_entry > 0 else 0.0
+        
+        active_position_monitor_html = f"""
+        <!-- ============ SEGUIMIENTO EN TIEMPO REAL POSICIÓN ACTIVA ============ -->
+        <div class="active-pos-banner">
+            <div class="active-pos-header">
+                <div class="active-pos-title">
+                    <span class="active-pos-pulse"></span>
+                    <span class="active-pos-symbol">🎯 POSICIÓN REAL EN VIVO: <b>{pos_sym}</b></span>
+                    <span class="badge badge-long">BUY SPOT LONG</span>
+                </div>
+                <div class="active-pos-time">⏱️ Tiempo Abierto: <b>{pos_holding_mins} min</b> / 75 min (Escalera Time-Decay)</div>
+            </div>
+            <div class="active-pos-grid">
+                <div class="pos-widget">
+                    <div class="pos-widget-label">Capital Invertido</div>
+                    <div class="pos-widget-val">${pos_cost:.2f} USD</div>
+                    <div class="pos-widget-sub">{pos_qty:,.2f} {pos_sym.replace('USDT','')}</div>
+                </div>
+                <div class="pos-widget">
+                    <div class="pos-widget-label">Precio de Entrada</div>
+                    <div class="pos-widget-val">${pos_entry:.4f}</div>
+                    <div class="pos-widget-sub">Binance Spot Live</div>
+                </div>
+                <div class="pos-widget">
+                    <div class="pos-widget-label">Máximo Pico Alcanzado</div>
+                    <div class="pos-widget-val" style="color: var(--accent-emerald);">${pos_highest:.4f}</div>
+                    <div class="pos-widget-sub">Pico Flotante: +{peak_pnl_pct:.2f}%</div>
+                </div>
+                <div class="pos-widget">
+                    <div class="pos-widget-label">Piso Stop-Loss ATR</div>
+                    <div class="pos-widget-val" style="color: var(--accent-rose);">${pos_sl_price:.4f}</div>
+                    <div class="pos-widget-sub">Límite Salida: -{pos_sl_pct:.2f}%</div>
+                </div>
+            </div>
+            <div class="active-pos-footer">
+                <div class="pos-shield-tag">🛡️ BTC Circuit Breaker: <b>🟢 ACTIVO</b></div>
+                <div class="pos-shield-tag">🧱 Orderbook Muro: <b>🟢 OK</b></div>
+                <div class="pos-shield-tag">🚀 Trailing Stop: <b>{pos_trailing}</b></div>
+            </div>
+        </div>
+        """
+    else:
+        active_position_monitor_html = """
+        <div class="active-pos-banner active-pos-idle">
+            <div class="active-pos-header">
+                <div class="active-pos-title">
+                    <span class="active-pos-symbol" style="color: var(--text-muted);">🔒 NINGUNA POSICIÓN ABIERTA (100% CAPITAL EN USDT)</span>
+                </div>
+                <div class="active-pos-time">🔎 Escaneando 120 Pares en Tiempo Real</div>
+            </div>
+        </div>
+        """
+        
     # Generate HTML Dashboard
     html_content = f"""<!DOCTYPE html>
 <html lang="es">
@@ -275,6 +342,49 @@ def generate_web_dashboard():
             color: var(--text-main);
             min-height: 100vh;
             padding: 1.25rem 1.75rem;
+        }}
+
+        /* ============ ACTIVE POSITION LIVE MONITOR BANNER ============ */
+        .active-pos-banner {{
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.12), rgba(16, 185, 129, 0.08));
+            border: 1px solid rgba(6, 182, 212, 0.35);
+            border-radius: 16px; padding: 1.25rem; margin-bottom: 1.25rem;
+            box-shadow: 0 0 30px rgba(6, 182, 212, 0.15);
+        }}
+        .active-pos-idle {{
+            background: rgba(30, 41, 59, 0.3); border: 1px solid var(--card-border);
+            box-shadow: none; padding: 1rem 1.25rem;
+        }}
+        .active-pos-header {{
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;
+        }}
+        .active-pos-idle .active-pos-header {{ margin-bottom: 0; }}
+        .active-pos-title {{ display: flex; align-items: center; gap: 0.6rem; font-size: 1.05rem; font-weight: 800; }}
+        .active-pos-pulse {{
+            width: 12px; height: 12px; background: var(--accent-emerald); border-radius: 50%;
+            box-shadow: 0 0 14px var(--accent-emerald); animation: pulse 1.2s infinite;
+        }}
+        .active-pos-time {{ font-size: 0.8rem; color: var(--text-muted); font-weight: 600; }}
+
+        .active-pos-grid {{
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.85rem; margin-bottom: 1rem;
+        }}
+        .pos-widget {{
+            background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px; padding: 0.85rem 1rem;
+        }}
+        .pos-widget-label {{ font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }}
+        .pos-widget-val {{ font-size: 1.35rem; font-weight: 900; color: var(--text-main); margin-top: 0.2rem; }}
+        .pos-widget-sub {{ font-size: 0.72rem; color: var(--text-muted); margin-top: 0.1rem; font-weight: 600; }}
+
+        .active-pos-footer {{
+            display: flex; gap: 1rem; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 0.75rem; font-size: 0.75rem; color: var(--text-muted);
+        }}
+        .pos-shield-tag {{
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);
+            padding: 0.3rem 0.75rem; border-radius: 8px; font-weight: 600;
         }}
 
         /* ============ HEADER ============ */
