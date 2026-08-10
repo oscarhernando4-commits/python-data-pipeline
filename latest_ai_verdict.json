@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 06:48:27",
+  "timestamp": "2026-08-10 06:50:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de fragmentación y alta incertidumbre con un sesgo NEUTRAL predominante. Ninguno de los candidatos cumple con la convicción A+ requerida (Score >= 55 con confirmación de volumen y soporte de libro de órdenes). La estrategia institucional es preservar el capital y esperar una purga de liquidez o una confirmación de tendencia antes de ejecutar cualquier posición.",
+  "reasoning": "El mercado se encuentra en un estado de indecisión con un sesgo neutral predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes claro), y el historial de simulaciones sugiere que operar en este entorno neutral resulta en pérdidas recurrentes. Se prioriza la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "GRAMUSDT",
+      "symbol": "ETHUSDT",
       "score": 75
     },
     {
       "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "UNIUSDT",
       "score": 75
     }
   ]
