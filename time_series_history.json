@@ -1,7 +1,85 @@
 {
+  "PARTIUSDT": [
+    {
+      "timestamp": "2026-08-10 11:42:12",
+      "price": 0.0261,
+      "score": 50,
+      "rsi": 52.53,
+      "macd": "Neutral",
+      "volume_surge": 0.98,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "KITEUSDT": [
+    {
+      "timestamp": "2026-08-10 11:42:12",
+      "price": 0.1023,
+      "score": 60,
+      "rsi": 63.62,
+      "macd": "Neutral",
+      "volume_surge": 2.3,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "TIAUSDT": [
+    {
+      "timestamp": "2026-08-10 11:42:12",
+      "price": 0.3309,
+      "score": 30,
+      "rsi": 61.2,
+      "macd": "Neutral",
+      "volume_surge": 0.31,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SOLVUSDT": [
+    {
+      "timestamp": "2026-08-10 11:42:12",
+      "price": 0.0025,
+      "score": 15,
+      "rsi": 45.0,
+      "macd": "Neutral",
+      "volume_surge": 0.11,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ZBTUSDT": [
+    {
+      "timestamp": "2026-08-10 11:42:12",
+      "price": 0.1022,
+      "score": 50,
+      "rsi": 56.57,
+      "macd": "Neutral",
+      "volume_surge": 0.47,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "HMSTRUSDT": [
+    {
+      "timestamp": "2026-08-10 11:42:12",
+      "price": 0.0001921,
+      "score": 30,
+      "rsi": 41.76,
+      "macd": "Neutral",
+      "volume_surge": 0.15,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
   "ORDIUSDT": [
     {
-      "timestamp": "2026-08-10 11:40:13",
+      "timestamp": "2026-08-10 11:42:12",
       "price": 3.521,
       "score": 0,
       "rsi": 47.0,
@@ -14,64 +92,12 @@
   ],
   "LUNCUSDT": [
     {
-      "timestamp": "2026-08-10 11:40:13",
-      "price": 5.031e-05,
+      "timestamp": "2026-08-10 11:42:12",
+      "price": 5.03e-05,
       "score": 45,
-      "rsi": 56.07,
+      "rsi": 55.68,
       "macd": "Neutral",
-      "volume_surge": 0.38,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "ZBTUSDT": [
-    {
-      "timestamp": "2026-08-10 11:40:13",
-      "price": 0.1022,
-      "score": 50,
-      "rsi": 56.57,
-      "macd": "Neutral",
-      "volume_surge": 0.4,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "SOLVUSDT": [
-    {
-      "timestamp": "2026-08-10 11:40:13",
-      "price": 0.00249,
-      "score": 15,
-      "rsi": 42.63,
-      "macd": "Neutral",
-      "volume_surge": 0.1,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "ALLOUSDT": [
-    {
-      "timestamp": "2026-08-10 11:40:13",
-      "price": 0.3091,
-      "score": 45,
-      "rsi": 51.6,
-      "macd": "Neutral",
-      "volume_surge": 0.51,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "C98USDT": [
-    {
-      "timestamp": "2026-08-10 11:40:13",
-      "price": 0.01487,
-      "score": 0,
-      "rsi": 39.58,
-      "macd": "Neutral",
-      "volume_surge": 0.34,
+      "volume_surge": 0.47,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -79,12 +105,38 @@
   ],
   "GNOUSDT": [
     {
-      "timestamp": "2026-08-10 11:40:13",
+      "timestamp": "2026-08-10 11:42:12",
       "price": 106.43,
       "score": 0,
       "rsi": 47.17,
       "macd": "Neutral",
       "volume_surge": 0.2,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-10 11:42:12",
+      "price": 2.47e-06,
+      "score": 50,
+      "rsi": 50.02,
+      "macd": "Neutral",
+      "volume_surge": 0.03,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "C98USDT": [
+    {
+      "timestamp": "2026-08-10 11:42:12",
+      "price": 0.01491,
+      "score": 0,
+      "rsi": 40.88,
+      "macd": "Neutral",
+      "volume_surge": 0.51,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-10 11:40:25",
+  "timestamp": "2026-08-10 11:42:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad extrema y una falta de convicción institucional. Ningún activo cumple con los criterios estrictos de riesgo A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez y evitar la exposición a activos de alta volatilidad en un entorno de incertidumbre macroeconómica.",
+  "reasoning": "El mercado se encuentra en una fase de capitulación técnica generalizada con un sentimiento de miedo predominante. Ninguno de los candidatos analizados supera el umbral de riesgo exigido por el Comité (Score >= 55 con confirmación de soporte institucional), por lo que se decide mantener la posición en efectivo para evitar la exposición a 'cuchillos cayendo'.",
   "top_candidates": [
-    {
-      "symbol": "SUIUSDT",
-      "score": 60
-    },
     {
       "symbol": "AVAXUSDT",
       "score": 60
     },
     {
       "symbol": "TAOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SUIUSDT",
       "score": 60
     },
     {
