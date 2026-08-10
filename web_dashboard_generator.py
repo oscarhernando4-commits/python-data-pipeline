@@ -377,7 +377,7 @@ def generate_web_dashboard():
         cand_ma25 = cand.get("ma25_15m", 0.0)
         
         c_score_ok = cand_score >= 58
-        c_quant_ok = cand_qual in ("A+", "B") or cand_vol >= 1.20 or cand_sym in ("PAXGUSDT", "XAUTUSDT")
+        c_quant_ok = cand_qual in ("A+", "B") or cand_vol >= 1.00 or cand_sym in ("PAXGUSDT", "XAUTUSDT")
         c_rsi_ok = cand_rsi_2m <= 68 or cand_rsi_5m <= 68
         c_ma_ok = cand_price >= cand_ma25 if (cand_price > 0 and cand_ma25 > 0) else True
         
@@ -392,7 +392,7 @@ def generate_web_dashboard():
         elif not c_ma_ok:
             rejection_reason = "🟡 Trampa Mecha 15M (Bajo MA25)"
         elif not c_quant_ok:
-            rejection_reason = f"VolSurge {cand_vol:.1f}x < 1.20x"
+            rejection_reason = f"VolSurge {cand_vol:.1f}x < 1.00x"
         elif not c_rsi_ok:
             rejection_reason = "Overbought RSI > 68"
         else:
@@ -503,10 +503,10 @@ def generate_web_dashboard():
             <div class="checklist-item {'checklist-pass' if quant_confirm else 'checklist-pending'}">
                 <div>
                     <div class="checklist-title">4. Confirmación VolSurge / GBM</div>
-                    <div class="checklist-sub">VolSurge >= 1.20x O Grado GBM A+/B</div>
+                    <div class="checklist-sub">VolSurge >= 1.00x O Grado GBM A+/B</div>
                 </div>
                 <div class="checklist-sub" style="font-weight: 800; color: {'var(--accent-emerald)' if quant_confirm else 'var(--accent-amber)'};">
-                    {'🟢 CUMPLIDO (' + f"{c1_vol:.1f}" + 'x / ' + c1_qual + ')' if quant_confirm else '🟡 PENDIENTE (VolSurge ' + f"{c1_vol:.1f}" + 'x < 1.20x)'}
+                    {'🟢 CUMPLIDO (' + f"{c1_vol:.1f}" + 'x / ' + c1_qual + ')' if quant_confirm else '🟡 PENDIENTE (VolSurge ' + f"{c1_vol:.1f}" + 'x < 1.00x)'}
                 </div>
             </div>
 

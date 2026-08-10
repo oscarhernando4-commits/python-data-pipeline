@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "TIAUSDT": [
     {
       "timestamp": "2026-08-10 20:48:09",
@@ -189,6 +190,16 @@
       "rsi": 29.07,
       "macd": "Neutral",
       "volume_surge": 0.01,
+=======
+  "PLUMEUSDT": [
+    {
+      "timestamp": "2026-08-10 15:48:22",
+      "price": 0.0124,
+      "score": 65,
+      "rsi": 62.77,
+      "macd": "Neutral",
+      "volume_surge": 0.05,
+>>>>>>> b5032dcff (calib: Calibrated VolSurge threshold to >= 1.0x (equal or greater than average volume) as requested by user)
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
