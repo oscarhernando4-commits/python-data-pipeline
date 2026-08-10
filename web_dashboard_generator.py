@@ -2,14 +2,15 @@
 Professional Web Dashboard & Real-Time Data Generator
 Generates `dashboard_data.json` and `dashboard.html` for real-time browser monitoring.
 Includes:
-- Multi-Tab Professional UI (Monitoreo en Vivo, Súper-Cerebro IA, Escáner Cuántico, Matrix 100)
-- Live Real Money Entry Conditions Checklist Card (Dynamic Green / Yellow / Red Status)
+- 4 Multi-Tab Professional UI:
+  1. 🎯 MONITOREO EN VIVO (Real Money Spot Position & Live Safety Escudos)
+  2. 🧠 SÚPER-CEREBRO IA (AI Verdict Timeline & Institutional Reasoning)
+  3. 📊 ESCÁNER CUÁNTICO (Top 10 Quantum Scanner Ranking & 3-Tier RSI Architecture)
+  4. 🌐 MATRIX 100 CUENTAS (Complete 100-Account Testnet Simulation Analysis Engine)
+- Live Top 10 Real Money Evaluation Matrix Table (Checks all 10 candidates against 7 safety rules)
+- Full 100 Matrix Accounts Interactive Table with Search & Group Filtering (G0-G5, Active Positions)
 - Active Tab Persistence via localStorage
-- Mis Activos (Binance Spot Wallet: USDT & BNB exact values)
-- Live Active Position Monitor (WLFIUSDT real-time tracking)
-- Súper-Cerebro AI Decision Timeline (Last 3 decisions with glowing highlight on latest)
-- Top Scanner Opportunities (3-Tier RSI Architecture: 2m/5m triggers, 15m medium, 1h/4h macro)
-- Matrix 100 Simulations (25+ Live Diversified Symbols Breakdown)
+- Anti-Cache Headers
 """
 
 import os
@@ -120,6 +121,56 @@ def _build_verdict_card_html(verdict, index, is_latest=False):
         </div>
     """
 
+def _build_matrix_100_rows_html(matrix_accounts):
+    """Builds HTML rows for all 100 Matrix Testnet Accounts."""
+    rows = ""
+    for acc in matrix_accounts:
+        acc_id = acc.get("account_id", "SIM-???")
+        group_id = acc.get("group_id", 0)
+        group_name = acc.get("group_name", f"Grupo {group_id}")
+        symbol = acc.get("symbol", "—")
+        balance = acc.get("current_balance", 100.0)
+        pnl_usd = acc.get("pnl_usd", 0.0)
+        trades = acc.get("trades_count", 0)
+        wins = acc.get("wins", 0)
+        losses = acc.get("losses", 0)
+        wr = (wins / trades * 100.0) if trades > 0 else 0.0
+        
+        pos = acc.get("position")
+        if pos:
+            side = pos.get("side", "LONG")
+            entry = pos.get("entry_price", 0.0)
+            side_badge = f'<span class="badge badge-long">BUY {side}</span>' if side == "LONG" else f'<span class="badge badge-short">SELL {side}</span>'
+            entry_str = f"${entry:.4f}" if entry < 10 else f"${entry:.2f}"
+            status_str = f"🟢 POSICIÓN ACTIVA"
+        else:
+            side_badge = '<span class="badge badge-hold">100% USDT</span>'
+            entry_str = "—"
+            status_str = "⚪ EN USDT"
+            
+        pnl_style = "color: var(--accent-emerald);" if pnl_usd >= 0 else "color: var(--accent-rose);"
+        pnl_sign = "+" if pnl_usd >= 0 else ""
+        
+        last_res = acc.get("last_result", "—")
+        
+        rows += f"""
+        <tr class="matrix-acc-row" data-group="{group_id}" data-active="{1 if pos else 0}" data-search="{acc_id.lower()} {symbol.lower()} {group_name.lower()}">
+            <td style="font-weight: 800; color: var(--accent-cyan);">{acc_id}</td>
+            <td style="font-size: 0.74rem; color: var(--text-muted);">{group_name}</td>
+            <td style="font-weight: 700; color: var(--text-main);">{symbol}</td>
+            <td>{side_badge}</td>
+            <td style="font-variant-numeric: tabular-nums;">{entry_str}</td>
+            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">${balance:.2f}</td>
+            <td style="font-weight: 800; font-variant-numeric: tabular-nums; {pnl_style}">{pnl_sign}${pnl_usd:.2f}</td>
+            <td style="font-variant-numeric: tabular-nums;"><b>{wr:.1f}%</b> <small style="color:var(--text-dim);">({wins}W/{losses}L)</small></td>
+            <td>{trades}</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">{last_res}</td>
+        </tr>
+        """
+    if not rows:
+        rows = '<tr><td colspan="10" style="text-align:center; padding: 1rem; color: var(--text-dim);">No hay datos de la Matrix...</td></tr>'
+    return rows
+
 
 def generate_web_dashboard():
     """Generates dashboard_data.json and builds/updates dashboard.html"""
@@ -170,6 +221,8 @@ def generate_web_dashboard():
         f'<span class="matrix-tag"><b>{sym}</b> <small>({count})</small></span>'
         for sym, count in symbol_counts.most_common(25)
     ) if symbol_counts else '<span class="matrix-tag">Esperando señales de compra...</span>'
+    
+    matrix_rows_html = _build_matrix_100_rows_html(matrix_accounts)
             
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     pos = account_data.get("position") or {}
@@ -210,7 +263,6 @@ def generate_web_dashboard():
     for idx, cand in enumerate(top_candidates[:10], 1):
         cand_sym = cand.get("symbol", "—")
         cand_score = cand.get("score", 0)
-        cand_price = cand.get("price", 0.0)
         cand_rsi_2m = cand.get("rsi_2m", cand.get("rsi_15m", 50.0))
         cand_rsi_5m = cand.get("rsi_5m", cand.get("rsi_15m", 50.0))
         cand_rsi_15m = cand.get("rsi_15m", 50.0)
@@ -305,8 +357,6 @@ def generate_web_dashboard():
         </div>
         """
 
-    # 6. Real Money Entry Checklist Live Status Builder
-    top_1 = top_candidates[0] if top_candidates else {}
     # 6. Real Money Entry Checklist & Top 10 Evaluation Matrix Builder
     usdt_free = data_payload.get("usdt_free", 0.0)
     has_usdt = usdt_free >= 15.0
@@ -377,9 +427,6 @@ def generate_web_dashboard():
     score_ok = c1_score >= 58
     quant_confirm = c1_qual in ("A+", "B") or c1_vol >= 1.20 or c1_sym in ("PAXGUSDT", "XAUTUSDT")
     fast_rsi_ok = c1_rsi_2m <= 68 or c1_rsi_5m <= 68
-    
-    c1_ready = has_usdt and no_open_pos and score_ok and quant_confirm and fast_rsi_ok and ma_structure_ok and btc_ok
-    any_ready = selected_candidate is not None
     
     header_badge_text = f"🚀 ¡COMPRANDO EN DINERO REAL: {selected_candidate.get('symbol')}!" if selected_candidate else ("🔒 TOP 10 EN PROTECCIÓN: NINGUNA MONEDA CUMPLE LAS 7 REGLAS" if no_open_pos else "🟡 POSICIÓN ABIERTA")
     header_badge_class = "badge-long" if selected_candidate else "badge-hold"
@@ -609,6 +656,23 @@ def generate_web_dashboard():
         .checklist-fail {{ border-color: rgba(244, 63, 94, 0.35); background: rgba(244, 63, 94, 0.08); }}
         .checklist-title {{ font-weight: 700; color: var(--text-main); }}
         .checklist-sub {{ font-size: 0.72rem; color: var(--text-muted); margin-top: 0.1rem; }}
+
+        /* MATRIX 100 TAB CONTROLS */
+        .matrix-filter-bar {{
+            display: flex; gap: 0.6rem; margin-bottom: 1rem; flex-wrap: wrap; align-items: center; justify-content: space-between;
+        }}
+        .matrix-filter-btn {{
+            padding: 0.4rem 0.85rem; background: rgba(30, 41, 59, 0.5); border: 1px solid var(--card-border);
+            border-radius: 8px; color: var(--text-muted); font-size: 0.76rem; font-weight: 700; cursor: pointer; transition: all 0.15s;
+        }}
+        .matrix-filter-btn:hover, .matrix-filter-btn.active {{
+            background: rgba(6, 182, 212, 0.18); border-color: var(--accent-cyan); color: var(--text-main);
+        }}
+        .matrix-search-input {{
+            padding: 0.45rem 0.85rem; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--card-border);
+            border-radius: 8px; color: var(--text-main); font-size: 0.78rem; width: 260px; outline: none; transition: border-color 0.2s;
+        }}
+        .matrix-search-input:focus {{ border-color: var(--accent-purple); box-shadow: 0 0 10px rgba(168, 85, 247, 0.2); }}
 
         /* ============ ACTIVE POSITION LIVE MONITOR BANNER ============ */
         .active-pos-banner {{
@@ -951,21 +1015,60 @@ def generate_web_dashboard():
         </div>
     </div>
 
-    <!-- PESTAÑA 4: MATRIX 100 CUENTAS -->
+    <!-- PESTAÑA 4: MATRIX 100 CUENTAS (ANÁLISIS COMPLETO EN VIVO) -->
     <div id="tab-matrix" class="tab-content">
         <div class="matrix-card">
             <div class="matrix-header">
                 <div>
-                    <div class="matrix-title">🌐 MATRIX 100 CUENTAS — SIMULADOR EN VIVO</div>
+                    <div class="matrix-title">🌐 MATRIX 100 CUENTAS — ANÁLISIS COMPLETO DE SIMULACIONES EN VIVO</div>
                     <div class="matrix-total-val">${matrix_total:,.2f} USD</div>
-                    <div class="matrix-pnl" style="color: {pnl_color};">{pnl_sign}${matrix_pnl:,.2f} PnL Net | Win Rate {matrix_wr:.1f}%</div>
+                    <div class="matrix-pnl" style="color: {pnl_color};">{pnl_sign}${matrix_pnl:,.2f} PnL Neto Total | Win Rate {matrix_wr:.1f}%</div>
                 </div>
                 <div style="text-align: right;">
-                    <span class="badge badge-long">{len(active_positions)} Cuentas en Posición</span>
+                    <span class="badge badge-long">{len(active_positions)} Cuentas en Posición Activa</span>
                     <div style="font-size: 0.72rem; color: var(--accent-emerald); margin-top: 0.3rem; font-weight: 700;">{len(symbol_counts)} Símbolos Diversificados</div>
                 </div>
             </div>
-            <div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 0.5rem; font-weight: 600;">Símbolos Activos en Paralelo (Offset Rotativo):</div>
+
+            <!-- CONTROLES E INTERACTIVIDAD MATRIX 100 -->
+            <div class="matrix-filter-bar" style="margin-top: 1rem;">
+                <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+                    <button class="matrix-filter-btn active" onclick="filterMatrixGroup('all', this)">Todas (100)</button>
+                    <button class="matrix-filter-btn" onclick="filterMatrixGroup('active', this)">🔥 En Posición ({len(active_positions)})</button>
+                    <button class="matrix-filter-btn" onclick="filterMatrixGroup('0', this)">G0 Réplica Real</button>
+                    <button class="matrix-filter-btn" onclick="filterMatrixGroup('1', this)">G1 Ultra-Estricto</button>
+                    <button class="matrix-filter-btn" onclick="filterMatrixGroup('2', this)">G2 Mean Reversion</button>
+                    <button class="matrix-filter-btn" onclick="filterMatrixGroup('3', this)">G3 Breakout Vol</button>
+                    <button class="matrix-filter-btn" onclick="filterMatrixGroup('4', this)">G4 Short-Seller</button>
+                    <button class="matrix-filter-btn" onclick="filterMatrixGroup('5', this)">G5 Kamikaze</button>
+                </div>
+                <input type="text" id="matrixSearchInput" class="matrix-search-input" placeholder="🔍 Buscar símbolo (BTC, ZAMA) o ID..." onkeyup="filterMatrixSearch()">
+            </div>
+
+            <!-- TABLA INTERACTIVA DE LAS 100 CUENTAS MATRIX -->
+            <div style="overflow-x: auto; background: rgba(0,0,0,0.25); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); padding: 0.5rem; max-height: 550px; overflow-y: auto;">
+                <table class="cand-table" id="matrix100Table">
+                    <thead>
+                        <tr>
+                            <th>Cuenta ID</th>
+                            <th>Grupo Estratégico</th>
+                            <th>Símbolo</th>
+                            <th>Posición</th>
+                            <th>Precio Entrada</th>
+                            <th>Balance</th>
+                            <th>PnL Neto USD</th>
+                            <th>Win Rate</th>
+                            <th>Trades</th>
+                            <th>Estado Escudo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {matrix_rows_html}
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 1rem; font-weight: 600;">Símbolos Diversificados Activos en Paralelo (Offset Rotativo):</div>
             <div class="matrix-tags-box">
                 {matrix_symbol_tags}
             </div>
@@ -992,6 +1095,35 @@ def generate_web_dashboard():
                 targetContent.classList.add('active');
                 localStorage.setItem('activeDashboardTab', tabId);
             }}
+        }}
+
+        // Matrix 100 Filtering Logic
+        function filterMatrixGroup(groupId, btnEl) {{
+            document.querySelectorAll('.matrix-filter-btn').forEach(b => b.classList.remove('active'));
+            if (btnEl) btnEl.classList.add('active');
+            
+            const rows = document.querySelectorAll('#matrix100Table tbody tr.matrix-acc-row');
+            rows.forEach(row => {{
+                const g = row.getAttribute('data-group');
+                const active = row.getAttribute('data-active');
+                
+                if (groupId === 'all') {{
+                    row.style.display = '';
+                }} else if (groupId === 'active') {{
+                    row.style.display = (active === '1') ? '' : 'none';
+                }} else {{
+                    row.style.display = (g === groupId) ? '' : 'none';
+                }}
+            }});
+        }}
+
+        function filterMatrixSearch() {{
+            const input = document.getElementById('matrixSearchInput').value.toLowerCase();
+            const rows = document.querySelectorAll('#matrix100Table tbody tr.matrix-acc-row');
+            rows.forEach(row => {{
+                const searchData = row.getAttribute('data-search') || '';
+                row.style.display = searchData.includes(input) ? '' : 'none';
+            }});
         }}
 
         // Restore active tab from localStorage or default to tab-monitoreo
