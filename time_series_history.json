@@ -1,42 +1,41 @@
 {
+  "NVDABUSDT": [
+    {
+      "timestamp": "2026-08-10 16:04:22",
+      "price": 219.32,
+      "score": 50,
+      "rsi": 47.66,
+      "macd": "Neutral",
+      "volume_surge": 0.08,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GALAUSDT": [
+    {
+      "timestamp": "2026-08-10 16:04:22",
+      "price": 0.001797,
+      "score": 0,
+      "rsi": 39.36,
+      "macd": "Neutral",
+      "volume_surge": 0.15,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
   "SYNUSDT": [
     {
-      "timestamp": "2026-08-10 21:04:10",
-      "price": 0.103,
+      "timestamp": "2026-08-10 16:04:22",
+      "price": 0.10295,
       "score": 30,
-      "rsi": 46.85,
+      "rsi": 46.29,
       "macd": "Neutral",
-      "volume_surge": 0.1,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "PLUMEUSDT": [
-    {
-      "timestamp": "2026-08-10 21:04:10",
-      "price": 0.01242,
-      "score": 50,
-      "rsi": 63.3,
-      "macd": "Neutral",
-      "volume_surge": 0.12,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "AXTIBUSDT": [
-    {
-      "timestamp": "2026-08-10 21:04:10",
-      "price": 73.92,
-      "score": 55,
-      "rsi": 29.27,
-      "macd": "Neutral",
-      "volume_surge": 0.02,
+      "volume_surge": 0.13,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}
 }
