@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-10 01:24:18",
+  "timestamp": "2026-08-10 01:26:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de aversión al riesgo con una distribución institucional agresiva. Ningún activo cumple con los criterios de seguridad y fuerza estructural exigidos por el comité, por lo que la orden es mantener la liquidez en espera de una mejor configuración.",
+  "reasoning": "El mercado presenta una debilidad estructural extrema sin soporte comprador institucional. Ninguno de los candidatos cumple con los criterios de riesgo A+ exigidos por el comité, por lo que se mantiene la liquidez en USDT para evitar pérdidas en un entorno de alta volatilidad especulativa.",
   "top_candidates": [
+    {
+      "symbol": "EPICUSDT",
+      "score": 70
+    },
     {
       "symbol": "SUNUSDT",
       "score": 70
     },
     {
-      "symbol": "PARTIUSDT",
+      "symbol": "GRAMUSDT",
       "score": 60
     },
     {
@@ -21,10 +25,6 @@
     {
       "symbol": "XPLUSDT",
       "score": 60
-    },
-    {
-      "symbol": "EPICUSDT",
-      "score": 55
     }
   ]
 }
