@@ -1,12 +1,38 @@
 {
   "SHELLUSDT": [
     {
-      "timestamp": "2026-08-10 23:04:07",
+      "timestamp": "2026-08-10 18:04:22",
       "price": 0.0197,
       "score": 0,
       "rsi": 37.35,
       "macd": "Neutral",
       "volume_surge": 1.2,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "COTIUSDT": [
+    {
+      "timestamp": "2026-08-10 18:04:22",
+      "price": 0.01146,
+      "score": 0,
+      "rsi": 44.56,
+      "macd": "Neutral",
+      "volume_surge": 0.27,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STRKUSDT": [
+    {
+      "timestamp": "2026-08-10 18:04:22",
+      "price": 0.02401,
+      "score": 30,
+      "rsi": 42.43,
+      "macd": "Neutral",
+      "volume_surge": 0.63,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
