@@ -307,6 +307,63 @@ def generate_web_dashboard():
 
     # 6. Real Money Entry Checklist Live Status Builder
     top_1 = top_candidates[0] if top_candidates else {}
+    # 6. Real Money Entry Checklist & Top 10 Evaluation Matrix Builder
+    usdt_free = data_payload.get("usdt_free", 0.0)
+    has_usdt = usdt_free >= 15.0
+    no_open_pos = pos_sym == "NINGUNA"
+    btc_ok = True
+    
+    top_10_eval_rows = ""
+    selected_candidate = None
+    
+    for idx, cand in enumerate(top_candidates[:10], 1):
+        cand_sym = cand.get("symbol", "—")
+        cand_score = cand.get("score", 0)
+        cand_vol = cand.get("vol_surge", 1.0)
+        cand_qual = cand.get("trade_quality", "C_NOISE")
+        cand_rsi_2m = cand.get("rsi_2m", cand.get("rsi_15m", 50.0))
+        cand_rsi_5m = cand.get("rsi_5m", cand.get("rsi_15m", 50.0))
+        cand_price = cand.get("price", 0.0)
+        cand_ma25 = cand.get("ma25_15m", 0.0)
+        
+        c_score_ok = cand_score >= 58
+        c_quant_ok = cand_qual in ("A+", "B") or cand_vol >= 1.20 or cand_sym in ("PAXGUSDT", "XAUTUSDT") or cand_score >= 60
+        c_rsi_ok = cand_rsi_2m <= 68 or cand_rsi_5m <= 68
+        c_ma_ok = cand_price >= cand_ma25 if (cand_price > 0 and cand_ma25 > 0) else True
+        
+        c_eligible = has_usdt and no_open_pos and c_score_ok and c_quant_ok and c_rsi_ok and c_ma_ok and btc_ok
+        
+        if c_eligible and not selected_candidate:
+            selected_candidate = cand
+            
+        rejection_reason = ""
+        if not c_score_ok:
+            rejection_reason = "Score < 58 Pts"
+        elif not c_ma_ok:
+            rejection_reason = "🟡 Trampa Mecha 15M (Bajo MA25)"
+        elif not c_quant_ok:
+            rejection_reason = f"VolSurge {cand_vol:.1f}x < 1.20x"
+        elif not c_rsi_ok:
+            rejection_reason = "Overbought RSI > 68"
+        else:
+            rejection_reason = "🟢 100% CUMPLIDO"
+            
+        status_style = "color: var(--accent-emerald); font-weight: 800;" if c_eligible else "color: var(--accent-amber); font-weight: 700;"
+        row_bg = "background: rgba(16, 185, 129, 0.08);" if c_eligible else ""
+        
+        top_10_eval_rows += f"""
+        <tr style="{row_bg}">
+            <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#{idx}</td>
+            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">{cand_sym}</td>
+            <td style="padding: 0.45rem 0.6rem;"><span class="score-badge {'score-high' if cand_score >= 60 else 'score-mid'}">{cand_score} Pts</span></td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">{cand_vol:.1f}x</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">{cand_rsi_2m:.1f}</td>
+            <td style="padding: 0.45rem 0.6rem;">{'🟢 > MA25' if c_ma_ok else '🟡 < MA25'}</td>
+            <td style="padding: 0.45rem 0.6rem; {status_style}">{'🚀 LISTO PARA COMPRAR' if c_eligible else rejection_reason}</td>
+        </tr>
+        """
+        
+    top_1 = top_candidates[0] if top_candidates else {}
     c1_sym = top_1.get("symbol", "—")
     c1_score = top_1.get("score", 0)
     c1_vol = top_1.get("vol_surge", 1.0)
@@ -317,27 +374,51 @@ def generate_web_dashboard():
     c1_ma25 = top_1.get("ma25_15m", 0.0)
     ma_structure_ok = c1_price >= c1_ma25 if (c1_price > 0 and c1_ma25 > 0) else True
     
-    usdt_free = data_payload.get("usdt_free", 0.0)
-    has_usdt = usdt_free >= 15.0
-    no_open_pos = pos_sym == "NINGUNA"
     score_ok = c1_score >= 58
-    quant_confirm = c1_qual in ("A+", "B") or c1_vol >= 1.20 or c1_sym in ("PAXGUSDT", "XAUTUSDT")
-    fast_rsi_ok = (c1_rsi_2m <= 68 or c1_rsi_5m <= 68) and ma_structure_ok
-    btc_ok = True
+    quant_confirm = c1_qual in ("A+", "B") or c1_vol >= 1.20 or c1_sym in ("PAXGUSDT", "XAUTUSDT") or c1_score >= 60
+    fast_rsi_ok = c1_rsi_2m <= 68 or c1_rsi_5m <= 68
     
-    all_ready = has_usdt and no_open_pos and score_ok and quant_confirm and fast_rsi_ok and btc_ok
+    c1_ready = has_usdt and no_open_pos and score_ok and quant_confirm and fast_rsi_ok and ma_structure_ok and btc_ok
+    any_ready = selected_candidate is not None
+    
+    header_badge_text = f"🚀 ¡COMPRANDO EN DINERO REAL: {selected_candidate.get('symbol')}!" if selected_candidate else ("🔒 TOP 10 EN PROTECCIÓN: NINGUNA MONEDA CUMPLE LAS 7 REGLAS" if no_open_pos else "🟡 POSICIÓN ABIERTA")
+    header_badge_class = "badge-long" if selected_candidate else "badge-hold"
     
     checklist_items_html = f"""
-    <!-- ============ CHECKLIST DE CONDICIONES PARA ENTRADA REAL ============ -->
+    <!-- ============ CHECKLIST & EVALUACIÓN TOP 10 EN TIEMPO REAL ============ -->
     <div class="checklist-card">
         <div class="card-header-row">
-            <div class="card-heading">📋 CHECKLIST DE CONDICIONES PARA ENTRADA REAL (BINANCE SPOT)</div>
-            <div class="badge {'badge-long' if all_ready else 'badge-hold'}">
-                {'🚀 ¡TODAS CUMPLIDAS! LISTO PARA COMPRAR' if all_ready else '🔎 ESCANEANDO MERCADO (ESPERANDO CONDICIONES)'}
+            <div class="card-heading">📋 EVALUACIÓN EN TIEMPO REAL DE LAS TOP 10 OPORTUNIDADES (DINERO REAL)</div>
+            <div class="badge {header_badge_class}" style="font-size: 0.78rem; padding: 0.35rem 0.85rem;">
+                {header_badge_text}
             </div>
         </div>
-        <div class="checklist-sub-title" style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.8rem;">
-            Candidata Top #1 Evaluada en Vivo: <strong style="color: var(--accent-cyan);">{c1_sym}</strong> ({c1_score} Pts)
+        
+        <!-- MATRIZ DE EVALUACIÓN DE LAS TOP 10 MONEDAS -->
+        <div style="margin-top: 0.6rem; margin-bottom: 1rem; overflow-x: auto; background: rgba(0,0,0,0.25); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); padding: 0.5rem;">
+            <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent-cyan); margin-bottom: 0.4rem; padding-left: 0.4rem;">
+                🔍 Escaneo Cuántico de las Top 10 Monedas del Mercado (Buscando la Primera 100% Elegible):
+            </div>
+            <table style="width: 100%; border-collapse: collapse; font-size: 0.76rem;">
+                <thead>
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.08); color: var(--text-dim); text-align: left;">
+                        <th style="padding: 0.4rem 0.6rem;">Rank</th>
+                        <th style="padding: 0.4rem 0.6rem;">Moneda</th>
+                        <th style="padding: 0.4rem 0.6rem;">Score</th>
+                        <th style="padding: 0.4rem 0.6rem;">VolSurge</th>
+                        <th style="padding: 0.4rem 0.6rem;">RSI 2m</th>
+                        <th style="padding: 0.4rem 0.6rem;">Media 15M (MA25)</th>
+                        <th style="padding: 0.4rem 0.6rem;">Dictamen para Dinero Real</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {top_10_eval_rows if top_10_eval_rows else '<tr><td colspan="7" style="text-align:center; padding: 0.8rem; color: var(--text-dim);">Escaneando candidatos...</td></tr>'}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card-heading" style="font-size: 0.8rem; margin-bottom: 0.5rem;">
+            🛡️ DESGLOSE DE LAS 7 REGLAS DE SEGURIDAD (EVALUANDO #{top_1.get('symbol', 'TOP 1')}):
         </div>
         <div class="checklist-grid">
             <div class="checklist-item {'checklist-pass' if has_usdt else 'checklist-fail'}">
