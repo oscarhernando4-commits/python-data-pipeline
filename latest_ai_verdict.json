@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 02:44:20",
+  "timestamp": "2026-08-10 02:46:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos, la falta de profundidad en el libro de órdenes y la inestabilidad macroeconómica actual no cumplen con los criterios de seguridad y rentabilidad exigidos. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "Tras deliberar, el comité ha determinado que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes, la inestabilidad macroeconómica y el historial de pérdidas en condiciones similares, no se cumplen los criterios de seguridad A+ para ejecutar una operación, por lo que se mantiene la liquidez en espera.",
   "top_candidates": [
     {
-      "symbol": "MORPHOUSDT",
-      "score": 85
+      "symbol": "PEPEUSDT",
+      "score": 75
     },
     {
       "symbol": "SHIBUSDT",
       "score": 75
     },
     {
+      "symbol": "XLMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "score": 75
+    },
+    {
       "symbol": "PENGUUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "REUSDT",
       "score": 75
     }
   ]
