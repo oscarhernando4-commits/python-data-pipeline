@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-10 15:20:23",
+  "timestamp": "2026-08-10 15:22:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que no existen activos que cumplan con los criterios de alta convicción (Score >= 55) y soporte de liquidez necesarios para operar, por lo que se mantiene la posición en efectivo para evitar pérdidas en un mercado de alta volatilidad y baja fuerza relativa.",
+  "reasoning": "El mercado actual presenta una estructura de alta fragilidad y falta de convicción institucional. Ninguno de los candidatos analizados alcanza el umbral de seguridad (Score >= 55) ni cuenta con una confirmación de soporte en el libro de órdenes, por lo que el comité ha decidido unánimemente mantener la posición en efectivo (HOLD) para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ALLOUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 50
     },
     {
+      "symbol": "WLDUSDT",
+      "score": 50
+    },
+    {
       "symbol": "PAXGUSDT",
       "score": 50
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "BICOUSDT",
       "score": 50
     }
   ]
