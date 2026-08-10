@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-10 14:24:24",
+  "timestamp": "2026-08-10 14:26:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual carece de la estructura técnica y la profundidad de liquidez necesaria para ejecutar una operación con alta probabilidad de éxito, priorizando la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y baja liquidez. Ninguno de los candidatos cumple con los requisitos estrictos de Score A+ y soporte institucional en el libro de órdenes, por lo que la estrategia más rentable es la preservación del capital.",
   "top_candidates": [
     {
       "symbol": "TUTUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "AVAXUSDT",
       "score": 70
     },
     {
@@ -15,16 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "SUIUSDT",
       "score": 60
     },
     {
-      "symbol": "XPLUSDT",
+      "symbol": "HOMEUSDT",
       "score": 60
-    },
-    {
-      "symbol": "AVAXUSDT",
-      "score": 55
     }
   ]
 }
