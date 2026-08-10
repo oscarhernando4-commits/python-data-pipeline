@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 00:50:20",
+  "timestamp": "2026-08-10 00:52:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de distribución institucional agresiva y debilidad estructural. Ninguno de los candidatos analizados cumple con el umbral de seguridad A+ (Score >= 55) ni con la confirmación de soporte institucional necesaria para mitigar el riesgo de 'trampa de valor'. Por lo tanto, el comité ha decidido unánimemente mantener la liquidez en espera de mejores condiciones.",
+  "reasoning": "El mercado se encuentra en un estado de estancamiento de pánico con alta correlación negativa. Ninguno de los candidatos cumple con los criterios estrictos de riesgo A+ exigidos por el comité, por lo que se prioriza la preservación de capital sobre la especulación en activos de baja profundidad.",
   "top_candidates": [
-    {
-      "symbol": "KAITOUSDT",
-      "score": 80
-    },
     {
       "symbol": "EPICUSDT",
       "score": 70
     },
     {
+      "symbol": "KAITOUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "BROCCOLI714USDT",
+      "score": 60
+    },
+    {
+      "symbol": "TRXUSDT",
+      "score": 60
+    },
+    {
       "symbol": "ESPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PARTIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "CRVUSDT",
       "score": 60
     }
   ]
