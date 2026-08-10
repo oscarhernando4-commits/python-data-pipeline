@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 15:42:23",
+  "timestamp": "2026-08-10 10:43:45",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad extrema con una correlación negativa generalizada. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital hasta que el entorno macro mejore.",
+  "reasoning": "Tras evaluar los candidatos, ninguno cumple con el umbral estricto de Score Técnico >= 55 combinado con una estructura de libro de órdenes robusta y un entorno macro favorable. La alta tasa de fallos en las simulaciones recientes bajo condiciones de mercado neutral refuerza la decisión de mantener la posición en efectivo para evitar el riesgo de 'falling knives'.",
   "top_candidates": [
     {
       "symbol": "BANKUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "SAGAUSDT",
+      "score": 60
+    },
+    {
       "symbol": "UNIUSDT",
       "score": 55
     },
     {
       "symbol": "AAVEUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "JUPUSDT",
       "score": 55
     }
   ]
