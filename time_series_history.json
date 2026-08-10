@@ -1,12 +1,64 @@
 {
-  "LUNCUSDT": [
+  "NEIROUSDT": [
     {
-      "timestamp": "2026-08-10 22:44:08",
-      "price": 4.979e-05,
-      "score": 0,
-      "rsi": 40.68,
+      "timestamp": "2026-08-10 22:46:09",
+      "price": 7.328e-05,
+      "score": 50,
+      "rsi": 54.65,
       "macd": "Neutral",
-      "volume_surge": 0.16,
+      "volume_surge": 0.02,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-10 22:46:09",
+      "price": 1.353,
+      "score": 0,
+      "rsi": 39.62,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-10 22:46:09",
+      "price": 0.1305,
+      "score": 0,
+      "rsi": 37.66,
+      "macd": "Neutral",
+      "volume_surge": 0.05,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-10 22:46:09",
+      "price": 0.091,
+      "score": 0,
+      "rsi": 43.31,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "C98USDT": [
+    {
+      "timestamp": "2026-08-10 22:46:09",
+      "price": 0.01434,
+      "score": 15,
+      "rsi": 45.19,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
