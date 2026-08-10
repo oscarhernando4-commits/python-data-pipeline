@@ -1,26 +1,62 @@
 {
-  "timestamp": "2026-08-10 12:12:44",
+  "timestamp": "2026-08-10 17:14:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ningún candidato cumple con el umbral mínimo de Score Técnico (>= 55) ni con la confirmación de soporte en el libro de órdenes, por lo que se prioriza la preservación de capital ante la alta volatilidad y el sentimiento de miedo del mercado.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. Ningún activo presenta un Score Técnico >= 55 con soporte de libro de órdenes, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
-      "symbol": "LDOUSDT",
+      "symbol": "JSTUSDT",
       "score": 60,
-      "price": 0.2939,
-      "rsi_15m": 53.48,
-      "vol_surge": 0.39,
+      "price": 0.10109,
+      "rsi_15m": 60.19,
+      "vol_surge": 2.05,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "ZROUSDT",
+      "score": 60,
+      "price": 0.872,
+      "rsi_15m": 60.78,
+      "vol_surge": 3.71,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "LUNCUSDT",
       "score": 60,
-      "price": 5.015e-05,
-      "rsi_15m": 50.92,
-      "vol_surge": 1.38,
+      "price": 5.016e-05,
+      "rsi_15m": 51.2,
+      "vol_surge": 1.39,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "BONKUSDT",
+      "score": 60,
+      "price": 2.47e-06,
+      "rsi_15m": 52.63,
+      "vol_surge": 1.59,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "LDOUSDT",
+      "score": 60,
+      "price": 0.2943,
+      "rsi_15m": 55.19,
+      "vol_surge": 0.42,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "OPUSDT",
+      "score": 60,
+      "price": 0.0916,
+      "rsi_15m": 60.12,
+      "vol_surge": 0.96,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -63,36 +99,36 @@
     {
       "symbol": "ZECUSDT",
       "score": 55,
-      "price": 497.23,
-      "rsi_15m": 30.76,
-      "vol_surge": 2.36,
+      "price": 497.25,
+      "rsi_15m": 30.8,
+      "vol_surge": 2.38,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "TUTUSDT",
       "score": 50,
-      "price": 0.13013,
-      "rsi_15m": 49.46,
-      "vol_surge": 0.32,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "MUBUSDT",
-      "score": 50,
-      "price": 882.42,
-      "rsi_15m": 58.27,
-      "vol_surge": 0.78,
+      "price": 0.002768,
+      "rsi_15m": 56.13,
+      "vol_surge": 0.61,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "ADAUSDT",
       "score": 50,
-      "price": 0.1963,
-      "rsi_15m": 54.34,
-      "vol_surge": 0.71,
+      "price": 0.1964,
+      "rsi_15m": 55.27,
+      "vol_surge": 0.75,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "MUBUSDT",
+      "score": 50,
+      "price": 882.26,
+      "rsi_15m": 58.13,
+      "vol_surge": 0.84,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
