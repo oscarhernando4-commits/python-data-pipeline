@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 14:14:21",
+  "timestamp": "2026-08-10 14:16:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad técnica. Ninguno de los candidatos cumple con los criterios estrictos de riesgo A+ establecidos por el comité, por lo que la decisión prudente es mantener la liquidez en espera de una estructura de mercado más favorable.",
+  "reasoning": "El mercado presenta una divergencia técnica severa y falta de soporte institucional claro en el libro de órdenes. Ningún activo cumple con los criterios estrictos de convicción A+ del comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos de baja probabilidad.",
   "top_candidates": [
-    {
-      "symbol": "AVAXUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "WLFIUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "ATOMUSDT",
-      "score": 70
-    },
     {
       "symbol": "SUIUSDT",
       "score": 60
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "AVAXUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "QNTUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "TRUMPUSDT",
       "score": 60
     }
   ]
