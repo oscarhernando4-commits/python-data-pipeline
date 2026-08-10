@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2327,
+    "total_trades": 2329,
     "wins": 428,
-    "losses": 1899,
-    "win_rate_pct": 18.39,
-    "total_pnl_usd": 112463.4990054546
+    "losses": 1901,
+    "win_rate_pct": 18.38,
+    "total_pnl_usd": 112462.91900545462
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on WLDUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BTCUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BTCUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on KITEUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BROCCOLI714USDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on PEOPLEUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ALTUSDT)",
-      "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on RENDERUSDT)"
+      "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on RENDERUSDT)",
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PUMPUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DOGEUSDT)",
@@ -38862,6 +38862,40 @@
       "context": {
         "score": 35,
         "rsi_15m": 22.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 23:00:23",
+      "account_id": "SIM-054",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "PUMPUSDT",
+      "side": "LONG",
+      "entry_price": 0.002835,
+      "exit_price": 0.002809,
+      "pnl_usd": -0.29,
+      "result": "LOSS",
+      "notes": "Hit SL on PUMPUSDT (-$0.29). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 52.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 23:00:23",
+      "account_id": "SIM-055",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "PUMPUSDT",
+      "side": "LONG",
+      "entry_price": 0.002835,
+      "exit_price": 0.002809,
+      "pnl_usd": -0.29,
+      "result": "LOSS",
+      "notes": "Hit SL on PUMPUSDT (-$0.29). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 52.48,
         "macro_trend_4h": "NEUTRAL"
       }
     }
