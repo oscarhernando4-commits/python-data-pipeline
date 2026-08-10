@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-10 08:20:20",
+  "timestamp": "2026-08-10 08:22:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y Bids > 55%) necesario para mitigar el riesgo en un entorno de mercado neutral y volátil, por lo que se prioriza la preservación del capital.",
+  "reasoning": "El mercado presenta un entorno de 'Cautela Selectiva' con alta incertidumbre. Ninguno de los candidatos cumple con los requisitos estrictos de gestión de riesgo (Score >= 55 y soporte de ballenas confirmado), por lo que se prioriza la protección del capital sobre la ejecución especulativa.",
   "top_candidates": [
-    {
-      "symbol": "WLFIUSDT",
-      "score": 75
-    },
     {
       "symbol": "POLUSDT",
       "score": 75
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "EPICUSDT",
+      "symbol": "ZECUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "TRXUSDT",
       "score": 65
     }
   ]
