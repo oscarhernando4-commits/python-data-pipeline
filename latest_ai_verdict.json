@@ -1,80 +1,98 @@
 {
-  "timestamp": "2026-08-10 11:46:35",
+  "timestamp": "2026-08-10 16:48:31",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Debido a la ausencia de activos con un Score Técnico >= 55 y la falta de muros de soporte en el libro de órdenes, el comité ha decidido mantener la liquidez en USDT para evitar el riesgo de 'caza de suelos' en un entorno de mercado bajista.",
+  "reasoning": "Tras evaluar los 15 candidatos, ninguno alcanza el umbral de Score Técnico de 55/100 ni presenta una dominancia de Bids superior al 55%. El entorno macroeconómico de alta volatilidad y la falta de convicción técnica obligan a la inacción para evitar pérdidas, manteniendo la liquidez total en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
-      "symbol": "WLFIUSDT",
-      "score": 60,
-      "price": 0.0534,
-      "rsi_15m": 67.44,
-      "vol_surge": 0.23,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "ZROUSDT",
-      "score": 60,
-      "price": 0.865,
-      "rsi_15m": 54.5,
-      "vol_surge": 0.15,
+      "symbol": "C98USDT",
+      "score": 55,
+      "price": 0.01431,
+      "rsi_15m": 31.65,
+      "vol_surge": 0.09,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "MMTUSDT",
       "score": 50,
-      "price": 0.2233,
-      "rsi_15m": 63.88,
-      "vol_surge": 0.15,
+      "price": 0.2231,
+      "rsi_15m": 63.5,
+      "vol_surge": 0.25,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "TUTUSDT",
       "score": 50,
-      "price": 0.196,
-      "rsi_15m": 51.29,
-      "vol_surge": 0.03,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "PENGUUSDT",
-      "score": 50,
-      "price": 0.00667,
-      "rsi_15m": 52.2,
-      "vol_surge": 0.09,
+      "price": 0.12929,
+      "rsi_15m": 48.58,
+      "vol_surge": 0.25,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "BROCCOLI714USDT",
       "score": 50,
-      "price": 0.01912,
-      "rsi_15m": 57.03,
+      "price": 0.01903,
+      "rsi_15m": 55.41,
       "vol_surge": 0.04,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "PENGUUSDT",
+      "score": 50,
+      "price": 0.006664,
+      "rsi_15m": 51.15,
+      "vol_surge": 0.22,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "NEIROUSDT",
       "score": 50,
-      "price": 7.274e-05,
-      "rsi_15m": 51.97,
-      "vol_surge": 0.02,
+      "price": 7.269e-05,
+      "rsi_15m": 51.38,
+      "vol_surge": 0.03,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "score": 50,
+      "price": 0.6799,
+      "rsi_15m": 50.36,
+      "vol_surge": 0.05,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "SOLVUSDT",
+      "score": 50,
+      "price": 0.00252,
+      "rsi_15m": 55.31,
+      "vol_surge": 0.27,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "ZBTUSDT",
+      "score": 50,
+      "price": 0.1052,
+      "rsi_15m": 67.48,
+      "vol_surge": 1.24,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "ORDIUSDT",
       "score": 50,
-      "price": 3.525,
-      "rsi_15m": 53.88,
-      "vol_surge": 0.05,
+      "price": 3.521,
+      "rsi_15m": 52.47,
+      "vol_surge": 0.06,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
