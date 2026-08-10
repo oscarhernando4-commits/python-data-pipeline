@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-10 13:42:22",
+  "timestamp": "2026-08-10 13:44:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado actual carece de la fortaleza institucional necesaria para una entrada de alta probabilidad. Ningún activo cumple con los criterios estrictos de riesgo y convicción, por lo que se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "confidence": 95,
+  "reasoning": "El comité ha determinado que el entorno actual es de alta fragilidad sistémica. Ningún activo cumple con el umbral de convicción A+ (Score >= 55 y Bids > 55%) necesario para mitigar el riesgo de pérdida, por lo que la orden es mantener la liquidez en efectivo.",
   "top_candidates": [
     {
       "symbol": "ASTERUSDT",
+      "score": 80
+    },
+    {
+      "symbol": "SKHYBUSDT",
       "score": 80
     },
     {
@@ -15,15 +19,11 @@
       "score": 70
     },
     {
+      "symbol": "PYTHUSDT",
+      "score": 70
+    },
+    {
       "symbol": "WLFIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ETCUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SKHYBUSDT",
       "score": 60
     }
   ]
