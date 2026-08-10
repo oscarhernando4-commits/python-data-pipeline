@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-10 16:46:30",
+  "timestamp": "2026-08-10 11:46:35",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
@@ -18,27 +18,18 @@
     {
       "symbol": "ZROUSDT",
       "score": 60,
-      "price": 0.864,
-      "rsi_15m": 53.21,
-      "vol_surge": 0.12,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "LUNCUSDT",
-      "score": 60,
-      "price": 5.022e-05,
-      "rsi_15m": 53.02,
-      "vol_surge": 0.01,
+      "price": 0.865,
+      "rsi_15m": 54.5,
+      "vol_surge": 0.15,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "MMTUSDT",
       "score": 50,
-      "price": 0.2235,
-      "rsi_15m": 64.27,
-      "vol_surge": 0.12,
+      "price": 0.2233,
+      "rsi_15m": 63.88,
+      "vol_surge": 0.15,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -54,9 +45,9 @@
     {
       "symbol": "PENGUUSDT",
       "score": 50,
-      "price": 0.006679,
-      "rsi_15m": 53.83,
-      "vol_surge": 0.06,
+      "price": 0.00667,
+      "rsi_15m": 52.2,
+      "vol_surge": 0.09,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -65,16 +56,7 @@
       "score": 50,
       "price": 0.01912,
       "rsi_15m": 57.03,
-      "vol_surge": 0.02,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "JSTUSDT",
-      "score": 50,
-      "price": 0.10082,
-      "rsi_15m": 54.06,
-      "vol_surge": 0.02,
+      "vol_surge": 0.04,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -83,7 +65,7 @@
       "score": 50,
       "price": 7.274e-05,
       "rsi_15m": 51.97,
-      "vol_surge": 0.0,
+      "vol_surge": 0.02,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -93,6 +75,24 @@
       "price": 3.525,
       "rsi_15m": 53.88,
       "vol_surge": 0.05,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "PNUTUSDT",
+      "score": 50,
+      "price": 0.0422,
+      "rsi_15m": 55.03,
+      "vol_surge": 0.0,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "CTSIUSDT",
+      "score": 50,
+      "price": 0.0264,
+      "rsi_15m": 50.63,
+      "vol_surge": 0.0,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
