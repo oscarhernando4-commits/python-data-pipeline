@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-10 12:50:26",
+  "timestamp": "2026-08-10 12:52:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un entorno de alta fragilidad con una presión de venta constante. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT y evitar la exposición a activos con baja convicción y alto riesgo de reversión.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score técnico (>= 55) ni con la confirmación de liquidez necesaria en el libro de órdenes, lo que obliga a mantener la posición en efectivo para evitar pérdidas en un entorno de capitulación.",
   "top_candidates": [
-    {
-      "symbol": "FETUSDT",
-      "score": 60
-    },
     {
       "symbol": "DOTUSDT",
       "score": 60
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "PYTHUSDT",
-      "score": 60
+      "symbol": "NILUSDT",
+      "score": 50
     },
     {
-      "symbol": "NILUSDT",
+      "symbol": "BROCCOLI714USDT",
+      "score": 50
+    },
+    {
+      "symbol": "ESPUSDT",
       "score": 50
     }
   ]
