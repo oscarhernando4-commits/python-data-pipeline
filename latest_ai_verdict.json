@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-10 15:34:25",
+  "timestamp": "2026-08-10 15:36:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado carece de fuerza relativa y convicción institucional. Todos los candidatos analizados tienen un Score Técnico de 50 o inferior, lo cual incumple el umbral mínimo de seguridad A+ (Score >= 55). Ante la alta probabilidad de ser una trampa de liquidez, el comité decide proteger el capital y no ejecutar ninguna operación.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica sin activos que cumplan con el umbral mínimo de Score Técnico (>= 55) y confirmación de volumen institucional. Se ha decidido mantener la posición en liquidez (USDT) para evitar el riesgo de 'cuchillos cayendo' y proteger el capital de posibles flash crashes.",
   "top_candidates": [
+    {
+      "symbol": "UNIUSDT",
+      "score": 55
+    },
     {
       "symbol": "PUMPUSDT",
       "score": 50
@@ -19,11 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "BANKUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "PEOPLEUSDT",
+      "symbol": "XAUTUSDT",
       "score": 50
     }
   ]
