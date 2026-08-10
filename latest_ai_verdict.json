@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-10 15:18:23",
+  "timestamp": "2026-08-10 15:20:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución avanzada y pánico institucional. Ninguno de los candidatos analizados cumple con el umbral de seguridad A+ (Score >= 55) ni con la profundidad de mercado necesaria para mitigar el riesgo de slippage. Se prioriza la preservación de capital sobre la especulación en un entorno de alta volatilidad y baja convicción.",
+  "reasoning": "El comité ha determinado por consenso unánime que no existen activos que cumplan con los criterios de alta convicción (Score >= 55) y soporte de liquidez necesarios para operar, por lo que se mantiene la posición en efectivo para evitar pérdidas en un mercado de alta volatilidad y baja fuerza relativa.",
   "top_candidates": [
-    {
-      "symbol": "TUTUSDT",
-      "score": 70
-    },
     {
       "symbol": "ATOMUSDT",
       "score": 60
@@ -19,7 +15,11 @@
       "score": 60
     },
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "XAUTUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "PAXGUSDT",
       "score": 50
     },
     {
