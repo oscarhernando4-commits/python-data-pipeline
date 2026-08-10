@@ -1762,3 +1762,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-32.62%)`, `2025-01-17 (-18.86%)`, `2025-11-02 (-17.21%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: DODOUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-15` hasta `2026-08-10` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.0233 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.3375 USD` (`2024-03-11`) | Distancia: `-93.09%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0126 USD` (`2026-02-06`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-07-12 (+44.31%)`, `2026-08-05 (+43.57%)`, `2025-02-12 (+36.73%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-34.77%)`, `2026-05-22 (-23.9%)`, `2024-04-12 (-22.65%)`
+
+---
