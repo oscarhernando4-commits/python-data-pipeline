@@ -1,12 +1,25 @@
 {
-  "EIGENUSDT": [
+  "VELODROMEUSDT": [
     {
-      "timestamp": "2026-08-10 12:44:21",
-      "price": 0.1822,
+      "timestamp": "2026-08-10 17:46:11",
+      "price": 0.01715,
       "score": 0,
-      "rsi": 44.98,
+      "rsi": 44.43,
       "macd": "Neutral",
-      "volume_surge": 0.43,
+      "volume_surge": 0.04,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "AEROUSDT": [
+    {
+      "timestamp": "2026-08-10 17:46:11",
+      "price": 0.4146,
+      "score": 0,
+      "rsi": 38.84,
+      "macd": "Neutral",
+      "volume_surge": 0.06,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +27,77 @@
   ],
   "TIAUSDT": [
     {
-      "timestamp": "2026-08-10 12:44:23",
-      "price": 0.3275,
+      "timestamp": "2026-08-10 17:46:11",
+      "price": 0.3273,
       "score": 50,
-      "rsi": 51.62,
+      "rsi": 50.77,
       "macd": "Neutral",
-      "volume_surge": 0.31,
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ZROUSDT": [
+    {
+      "timestamp": "2026-08-10 17:46:11",
+      "price": 0.866,
+      "score": 45,
+      "rsi": 53.35,
+      "macd": "Neutral",
+      "volume_surge": 0.06,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BIOUSDT": [
+    {
+      "timestamp": "2026-08-10 17:46:12",
+      "price": 0.02664,
+      "score": 0,
+      "rsi": 43.39,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "NIGHTUSDT": [
+    {
+      "timestamp": "2026-08-10 17:46:12",
+      "price": 0.01832,
+      "score": 0,
+      "rsi": 40.55,
+      "macd": "Neutral",
+      "volume_surge": 0.02,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "NEIROUSDT": [
+    {
+      "timestamp": "2026-08-10 17:46:12",
+      "price": 7.314e-05,
+      "score": 35,
+      "rsi": 55.15,
+      "macd": "Neutral",
+      "volume_surge": 0.02,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-10 17:46:13",
+      "price": 1.361,
+      "score": 30,
+      "rsi": 43.11,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
