@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-10 10:54:22",
+  "timestamp": "2026-08-10 10:56:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en un estado de alta fragilidad con una tendencia bajista predominante. Ninguno de los candidatos analizados cumple con el umbral de convicción A+ (Score >= 55 y confirmación de soporte institucional). Por lo tanto, el comité decide mantener la liquidez total en USDT para evitar pérdidas innecesarias en un entorno de alta volatilidad y baja probabilidad de éxito.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una fase de purga de liquidez con scores técnicos insuficientes. Ningún activo cumple con el umbral de convicción A+ exigido por el comité, por lo que se mantiene la posición en efectivo para evitar el riesgo de 'cuchillos cayendo'.",
   "top_candidates": [
+    {
+      "symbol": "POLUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "LUNCUSDT",
+      "score": 70
+    },
     {
       "symbol": "BNBUSDT",
       "score": 60
     },
     {
       "symbol": "WLFIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "POLUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "JUPUSDT",
       "score": 60
     },
     {
