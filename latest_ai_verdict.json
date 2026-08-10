@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 00:30:16",
+  "timestamp": "2026-08-10 00:32:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con una correlación de caída coordinada. Ningún activo cumple con los criterios de alta convicción (Score >= 55) y el riesgo de 'falling knives' es inaceptable bajo las reglas de protección de capital.",
+  "reasoning": "El mercado se encuentra en un estado de alta toxicidad y distribución institucional. Ninguno de los candidatos cumple con el umbral estricto de Score >= 55 y confirmación de volumen, por lo que la preservación de capital es la prioridad absoluta.",
   "top_candidates": [
     {
       "symbol": "EPICUSDT",
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "DYMUSDT",
+      "symbol": "ESPUSDT",
       "score": 60
     },
     {
-      "symbol": "ESPUSDT",
+      "symbol": "PARTIUSDT",
       "score": 60
     }
   ]
