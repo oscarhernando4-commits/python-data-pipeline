@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 08:58:18",
+  "timestamp": "2026-08-10 09:00:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido unánimemente mantener la liquidez en USDT. La combinación de un sentimiento de miedo, la falta de datos de profundidad en el libro de órdenes y la alta tasa de fallos en trades recientes bajo condiciones de mercado neutral, impide alcanzar el umbral de convicción A+ necesario para operar.",
+  "reasoning": "El comité ha decidido por unanimidad mantener la posición en efectivo (HOLD) debido a la falta de datos de profundidad en el libro de órdenes, la alta tasa de fallos en los activos analizados y la ausencia de una convicción A+ que cumpla con los estándares de gestión de riesgo del CRO.",
   "top_candidates": [
     {
-      "symbol": "TRXUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "WLFIUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "ORDIUSDT",
-      "score": 85
-    },
-    {
-      "symbol": "SUIUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "TRXUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "MORPHOUSDT",
       "score": 75
     }
   ]
