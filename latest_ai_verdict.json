@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 13:50:20",
+  "timestamp": "2026-08-10 13:52:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en un estado de estrés extremo con una correlación negativa generalizada. Ninguno de los candidatos analizados alcanza el umbral de calidad A+ requerido por el comité. La falta de soporte institucional en el libro de órdenes y la debilidad técnica observada en los scores sugieren que cualquier posición larga sería una trampa de liquidez. Se mantiene la liquidez en USDT para evitar pérdidas innecesarias.",
+  "confidence": 0,
+  "reasoning": "El comité ha determinado que el mercado carece de la solidez técnica y fundamental necesaria para una ejecución de compra. La ausencia de datos de profundidad, sumada a la fragilidad sistémica y el historial de pérdidas en condiciones similares, obliga a mantener una postura de liquidez total (HOLD) para proteger el capital institucional.",
   "top_candidates": [
+    {
+      "symbol": "ZAMAUSDT",
+      "score": 60
+    },
     {
       "symbol": "ZROUSDT",
       "score": 60
     },
     {
-      "symbol": "LDOUSDT",
-      "score": 60
+      "symbol": "ETHUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "MUBARAKUSDT",
+      "score": 50
     },
     {
       "symbol": "GRAMUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "MUBUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "SKHYBUSDT",
       "score": 50
     }
   ]
