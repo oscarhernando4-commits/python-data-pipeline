@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-10 07:36:21",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y Confianza >= 70%) bajo las condiciones actuales de mercado, por lo que se prioriza la preservación del capital.",
+  "timestamp": "2026-08-10 07:38:20",
+  "selected_symbol": "BTCUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "El comité ha alcanzado un consenso unánime para operar BTCUSDT. A pesar del sentimiento de miedo generalizado, los datos institucionales y el score técnico de 85/100 superan el umbral de convicción A+. Se prioriza la seguridad de los activos de alta capitalización frente a la volatilidad de las altcoins, aplicando una estrategia de acumulación en el líder del mercado.",
   "top_candidates": [
     {
-      "symbol": "GNOUSDT",
+      "symbol": "BTCUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ETHUSDT",
       "score": 85
     },
     {
@@ -15,15 +23,7 @@
       "score": 85
     },
     {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PEPEUSDT",
+      "symbol": "BCHUSDT",
       "score": 75
     }
   ]
