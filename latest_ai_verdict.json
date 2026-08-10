@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-10 13:08:25",
+  "timestamp": "2026-08-10 13:10:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55) ni con la confirmación de soporte en el libro de órdenes necesaria para mitigar el riesgo en un mercado de alta incertidumbre.",
+  "reasoning": "El mercado exhibe una tendencia de distribución institucional agresiva y falta de convicción compradora. Ningún activo cumple con los criterios de riesgo A+ exigidos por el comité, por lo que la estrategia óptima es la preservación de capital en efectivo (USDT) hasta que se observe una reversión clara en el sentimiento y el volumen.",
   "top_candidates": [
     {
+      "symbol": "LDOUSDT",
+      "score": 70
+    },
+    {
       "symbol": "NEARUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "AVAXUSDT",
       "score": 60
     },
     {
@@ -15,15 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ARBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PYTHUSDT",
+      "symbol": "GIGGLEUSDT",
       "score": 60
     }
   ]
