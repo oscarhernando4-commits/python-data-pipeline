@@ -63,6 +63,32 @@ def fetch_klines_public(symbol, interval, limit=30):
             pass
     return []
 
+def calculate_rsi(closes, period=14):
+    """Calculates Relative Strength Index (RSI) for a price series."""
+    if not closes or len(closes) < period + 1:
+        return 50.0
+    gains = []
+    losses = []
+    for i in range(1, len(closes)):
+        diff = closes[i] - closes[i-1]
+        if diff > 0:
+            gains.append(diff)
+            losses.append(0.0)
+        else:
+            gains.append(abs(diff))
+            losses.append(abs(diff))
+            
+    if len(gains) < period:
+        return 50.0
+        
+    avg_gain = sum(gains[-period:]) / period
+    avg_loss = sum(losses[-period:]) / period
+    
+    if avg_loss == 0:
+        return 100.0
+    rs = avg_gain / avg_loss
+    return round(100.0 - (100.0 / (1.0 + rs)), 1)
+
 def _aggregate_1m_to_2m(klines_1m):
     """Combines pairs of 1m klines into 2m klines [timestamp, open, high, low, close, volume]."""
     if not klines_1m or len(klines_1m) < 2:
@@ -82,7 +108,7 @@ def _aggregate_1m_to_2m(klines_1m):
 def analyze_multi_timeframe_candles(symbol):
     """
     Inspects 2m, 5m, 15m, 1h, 4h, 1d, and 7d historical candle behavior.
-    Calculates multi-timeframe trend alignment, volatility expansion, and anti-stablecoin verification.
+    Calculates multi-timeframe trend alignment, 3-tier RSI architecture, volatility expansion, and anti-stablecoin verification.
     Synced 1:1 with the 2-minute continuous execution loop.
     """
     # 1. Immediate Stablecoin Blacklist Guard
@@ -96,10 +122,10 @@ def analyze_multi_timeframe_candles(symbol):
     # 2. Fetch Multi-Timeframe Klines (1m->2m, 5m, 15m, 1h, 4h, 1d)
     klines_1m = fetch_klines_public(symbol, "1m", 40)
     klines_2m = _aggregate_1m_to_2m(klines_1m)
-    klines_5m = fetch_klines_public(symbol, "5m", 20)
-    klines_15m = fetch_klines_public(symbol, "15m", 20)
-    klines_1h = fetch_klines_public(symbol, "1h", 20)
-    klines_4h = fetch_klines_public(symbol, "4h", 20)
+    klines_5m = fetch_klines_public(symbol, "5m", 30)
+    klines_15m = fetch_klines_public(symbol, "15m", 30)
+    klines_1h = fetch_klines_public(symbol, "1h", 30)
+    klines_4h = fetch_klines_public(symbol, "4h", 30)
     klines_1d = fetch_klines_public(symbol, "1d", 14)
     
     if not klines_15m or not klines_1d:
@@ -129,7 +155,7 @@ def analyze_multi_timeframe_candles(symbol):
             "multi_tf_score": 0
         }
         
-    # Parse 2m, 5m and 15m trends
+    # Parse 2m, 5m, 15m, 1h, 4h closes & volumes
     closes_2m = [float(k[4]) for k in klines_2m] if klines_2m else []
     vols_2m = [float(k[5]) for k in klines_2m] if klines_2m else []
     closes_5m = [float(k[4]) for k in klines_5m]
@@ -144,6 +170,13 @@ def analyze_multi_timeframe_candles(symbol):
     tf_1h_up = closes_1h[-1] > closes_1h[0] if closes_1h else False
     tf_4h_up = closes_4h[-1] > closes_4h[0] if closes_4h else False
     tf_1d_up = d_closes[-1] > d_closes[0] if d_closes else False
+    
+    # Calculate 3-Tier Multi-Timeframe RSI Architecture
+    rsi_2m = calculate_rsi(closes_2m)
+    rsi_5m = calculate_rsi(closes_5m)
+    rsi_15m = calculate_rsi(closes_15m)
+    rsi_1h = calculate_rsi(closes_1h)
+    rsi_4h = calculate_rsi(closes_4h)
     
     # 2m Microstructure Volume Surge
     avg_vol_2m = sum(vols_2m[-5:]) / len(vols_2m[-5:]) if len(vols_2m) >= 5 else 1.0
@@ -207,6 +240,7 @@ def analyze_multi_timeframe_candles(symbol):
         yellow_arrow_status = "⚪ NEUTRAL"
 
     pattern_15m_summary = (
+        f"RSI Triggers: 2m={rsi_2m} | 5m={rsi_5m} || Contexto Medio: 15m={rsi_15m} || Contexto Macro: 1h={rsi_1h} | 4h={rsi_4h} | "
         f"2m={'UP' if tf_2m_up else 'DOWN'} (VolSurge2m={vol_surge_2m}x) | "
         f"Precio 15m=${closes_15m[-1]:.4f} | MA7_15m=${ma7_15m:.4f} (Distancia: {dist_from_15m_ma7_pct:+.2f}%) | "
         f"MA25_15m=${ma25_15m:.4f} | Por encima MA7/MA25={'SÍ' if price_above_15m_ma7 and price_above_15m_ma25 else 'NO'} | "
@@ -226,6 +260,13 @@ def analyze_multi_timeframe_candles(symbol):
         "vol_surge_2m": vol_surge_2m,
         "vol_surge_15m": vol_surge_15m,
         "pattern_15m_summary": pattern_15m_summary,
+        "rsi_structure": {
+            "rsi_2m": rsi_2m,
+            "rsi_5m": rsi_5m,
+            "rsi_15m": rsi_15m,
+            "rsi_1h": rsi_1h,
+            "rsi_4h": rsi_4h
+        },
         "timeframe_alignment": {
             "2m": "BULLISH" if tf_2m_up else "BEARISH",
             "5m": "BULLISH" if tf_5m_up else "BEARISH",
@@ -235,6 +276,10 @@ def analyze_multi_timeframe_candles(symbol):
             "1d": "BULLISH" if tf_1d_up else "BEARISH"
         }
     }
+
+if __name__ == "__main__":
+    print("Testing BTCUSDT:", analyze_multi_timeframe_candles("BTCUSDT"))
+
 
 if __name__ == "__main__":
     print("Testing UUSDT:", analyze_multi_timeframe_candles("UUSDT"))
