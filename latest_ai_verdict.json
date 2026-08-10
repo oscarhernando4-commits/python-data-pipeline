@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-10 17:38:22",
+  "timestamp": "2026-08-10 12:38:42",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
@@ -18,9 +18,9 @@
     {
       "symbol": "ARBUSDT",
       "score": 60,
-      "price": 0.0809,
-      "rsi_15m": 61.74,
-      "vol_surge": 0.33,
+      "price": 0.0808,
+      "rsi_15m": 60.51,
+      "vol_surge": 0.34,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -34,15 +34,6 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "ALTUSDT",
-      "score": 60,
-      "price": 0.00623,
-      "rsi_15m": 50.5,
-      "vol_surge": 0.13,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
       "symbol": "OPUSDT",
       "score": 60,
       "price": 0.0916,
@@ -52,11 +43,11 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "GRAMUSDT",
-      "score": 50,
-      "price": 1.33,
-      "rsi_15m": 49.02,
-      "vol_surge": 0.2,
+      "symbol": "ALTUSDT",
+      "score": 60,
+      "price": 0.00623,
+      "rsi_15m": 50.5,
+      "vol_surge": 0.13,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -70,6 +61,15 @@
       "macro_trend": "NEUTRAL"
     },
     {
+      "symbol": "PUMPUSDT",
+      "score": 50,
+      "price": 0.002812,
+      "rsi_15m": 62.62,
+      "vol_surge": 0.93,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "ADAUSDT",
       "score": 50,
       "price": 0.1958,
@@ -79,20 +79,20 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "MMTUSDT",
       "score": 50,
-      "price": 0.1627,
-      "rsi_15m": 48.23,
-      "vol_surge": 0.46,
+      "price": 0.2253,
+      "rsi_15m": 64.85,
+      "vol_surge": 0.38,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "MMTUSDT",
+      "symbol": "BANKUSDT",
       "score": 50,
-      "price": 0.2256,
-      "rsi_15m": 65.17,
-      "vol_surge": 0.36,
+      "price": 0.039,
+      "rsi_15m": 57.72,
+      "vol_surge": 0.88,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
