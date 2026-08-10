@@ -1,12 +1,77 @@
 {
-  "GALAUSDT": [
+  "GNOUSDT": [
     {
-      "timestamp": "2026-08-10 18:24:08",
-      "price": 0.1316,
-      "score": 35,
-      "rsi": 49.27,
+      "timestamp": "2026-08-10 18:26:10",
+      "price": 104.27,
+      "score": 30,
+      "rsi": 34.32,
       "macd": "Neutral",
-      "volume_surge": 0.05,
+      "volume_surge": 0.11,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-10 18:26:10",
+      "price": 0.1317,
+      "score": 50,
+      "rsi": 50.66,
+      "macd": "Neutral",
+      "volume_surge": 0.08,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "C98USDT": [
+    {
+      "timestamp": "2026-08-10 18:26:10",
+      "price": 0.01431,
+      "score": 30,
+      "rsi": 38.79,
+      "macd": "Neutral",
+      "volume_surge": 0.24,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PNUTUSDT": [
+    {
+      "timestamp": "2026-08-10 18:26:10",
+      "price": 0.0422,
+      "score": 50,
+      "rsi": 54.57,
+      "macd": "Neutral",
+      "volume_surge": 0.11,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ORDIUSDT": [
+    {
+      "timestamp": "2026-08-10 18:26:10",
+      "price": 3.509,
+      "score": 15,
+      "rsi": 47.44,
+      "macd": "Neutral",
+      "volume_surge": 0.04,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-10 18:26:10",
+      "price": 1.358,
+      "score": 0,
+      "rsi": 41.77,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

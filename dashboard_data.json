@@ -1,55 +1,61 @@
 {
-  "updated_at": "2026-08-10 18:24:22",
+  "updated_at": "2026-08-10 18:26:26",
   "total_balance_usd": 20.15,
   "usdt_free": 20.145419999999998,
   "bnb_free": 0.00409216,
   "bnb_usd": 2.46,
-  "status": "🔵 En Vivo LONG (WLFIUSDT @ $0.0538)",
-  "position": {
-    "symbol": "WLFIUSDT",
-    "quantity": 327.1,
-    "entry_price": 0.0535,
-    "highest_price": 0.0539,
-    "cost_usd": 17.6,
-    "side": "LONG",
-    "break_even": false,
-    "trailing_active": false,
-    "adaptive_sl_pct": 0.2,
-    "holding_cycles": 42,
-    "volatility_regime": "⏳ Escalera 45m: SL Apretado a -0.20%"
-  },
+  "status": "🟦 Buscando Entrada A+",
+  "position": {},
   "verdict": {
-    "timestamp": "2026-08-10 18:24:19",
+    "timestamp": "2026-08-10 18:26:24",
     "selected_symbol": "NONE",
     "action": "HOLD",
     "approved": false,
     "confidence": 0,
-    "reasoning": "El mercado se encuentra en un estado de capitulación técnica y alta incertidumbre macroeconómica. Ninguno de los activos analizados cumple con los criterios de alta convicción (Score >= 55 y soporte de ballenas confirmado), por lo que se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
+    "reasoning": "El mercado se encuentra en un estado de capitulación y alta incertidumbre. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 55) ni con una dominancia clara en el libro de órdenes. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
     "top_candidates": [
       {
-        "symbol": "QNTUSDT",
+        "symbol": "PAXGUSDT",
         "score": 60,
-        "price": 57.97,
-        "rsi_15m": 50.39,
-        "vol_surge": 1.94,
-        "trade_quality": "B",
+        "price": 4358.77,
+        "rsi_15m": 63.98,
+        "vol_surge": 0.34,
+        "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "INJUSDT",
+        "symbol": "XAUTUSDT",
         "score": 60,
-        "price": 4.46,
-        "rsi_15m": 54.81,
-        "vol_surge": 0.43,
+        "price": 4344.71,
+        "rsi_15m": 64.34,
+        "vol_surge": 0.07,
         "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "QNTUSDT",
+        "score": 60,
+        "price": 57.99,
+        "rsi_15m": 50.89,
+        "vol_surge": 1.95,
+        "trade_quality": "B",
         "macro_trend": "NEUTRAL"
       },
       {
         "symbol": "ZAMAUSDT",
         "score": 60,
-        "price": 0.04599,
-        "rsi_15m": 55.4,
-        "vol_surge": 0.09,
+        "price": 0.04596,
+        "rsi_15m": 54.63,
+        "vol_surge": 0.36,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "INJUSDT",
+        "score": 60,
+        "price": 4.459,
+        "rsi_15m": 54.51,
+        "vol_surge": 0.46,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
@@ -63,62 +69,144 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "LUNCUSDT",
-        "score": 60,
-        "price": 5.036e-05,
-        "rsi_15m": 57.42,
-        "vol_surge": 0.34,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
         "symbol": "ETHUSDT",
         "score": 55,
-        "price": 1873.43,
-        "rsi_15m": 27.64,
-        "vol_surge": 0.35,
+        "price": 1874.53,
+        "rsi_15m": 29.93,
+        "vol_surge": 0.38,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "EPICUSDT",
+        "symbol": "MUBARAKUSDT",
         "score": 50,
-        "price": 0.4604,
-        "rsi_15m": 47.47,
-        "vol_surge": 1.08,
+        "price": 0.02271,
+        "rsi_15m": 59.05,
+        "vol_surge": 0.39,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "BOMEUSDT",
+        "symbol": "AVAXUSDT",
         "score": 50,
-        "price": 0.0008277,
-        "rsi_15m": 62.54,
-        "vol_surge": 0.87,
+        "price": 6.496,
+        "rsi_15m": 49.57,
+        "vol_surge": 0.11,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "PUMPUSDT",
+        "symbol": "PEPEUSDT",
         "score": 50,
-        "price": 0.002815,
-        "rsi_15m": 62.42,
-        "vol_surge": 0.9,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "PENGUUSDT",
-        "score": 50,
-        "price": 0.006659,
-        "rsi_15m": 51.08,
-        "vol_surge": 0.15,
+        "price": 2.88e-06,
+        "rsi_15m": 53.01,
+        "vol_surge": 0.36,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }
     ]
   },
   "verdict_history": [
+    {
+      "timestamp": "2026-08-10 18:26:24",
+      "selected_symbol": "NONE",
+      "action": "HOLD",
+      "approved": false,
+      "confidence": 0,
+      "reasoning": "El mercado se encuentra en un estado de capitulación y alta incertidumbre. Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 55) ni con una dominancia clara en el libro de órdenes. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+      "top_candidates": [
+        {
+          "symbol": "PAXGUSDT",
+          "score": 60,
+          "price": 4358.77,
+          "rsi_15m": 63.98,
+          "vol_surge": 0.34,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "XAUTUSDT",
+          "score": 60,
+          "price": 4344.71,
+          "rsi_15m": 64.34,
+          "vol_surge": 0.07,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "QNTUSDT",
+          "score": 60,
+          "price": 57.99,
+          "rsi_15m": 50.89,
+          "vol_surge": 1.95,
+          "trade_quality": "B",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "ZAMAUSDT",
+          "score": 60,
+          "price": 0.04596,
+          "rsi_15m": 54.63,
+          "vol_surge": 0.36,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "INJUSDT",
+          "score": 60,
+          "price": 4.459,
+          "rsi_15m": 54.51,
+          "vol_surge": 0.46,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "SUNUSDT",
+          "score": 60,
+          "price": 0.0182,
+          "rsi_15m": 58.1,
+          "vol_surge": 0.03,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "ETHUSDT",
+          "score": 55,
+          "price": 1874.53,
+          "rsi_15m": 29.93,
+          "vol_surge": 0.38,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "MUBARAKUSDT",
+          "score": 50,
+          "price": 0.02271,
+          "rsi_15m": 59.05,
+          "vol_surge": 0.39,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "AVAXUSDT",
+          "score": 50,
+          "price": 6.496,
+          "rsi_15m": 49.57,
+          "vol_surge": 0.11,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "PEPEUSDT",
+          "score": 50,
+          "price": 2.88e-06,
+          "rsi_15m": 53.01,
+          "vol_surge": 0.36,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        }
+      ]
+    },
     {
       "timestamp": "2026-08-10 18:24:19",
       "selected_symbol": "NONE",
@@ -314,106 +402,6 @@
           "price": 0.0393,
           "rsi_15m": 63.22,
           "vol_surge": 0.56,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        }
-      ]
-    },
-    {
-      "timestamp": "2026-08-10 18:20:16",
-      "selected_symbol": "NONE",
-      "action": "HOLD",
-      "approved": false,
-      "confidence": 0,
-      "reasoning": "Ninguno de los candidatos analizados cumple con el umbral mínimo de Score Técnico (>= 55) ni con la profundidad de mercado necesaria para una operativa segura, por lo que se prioriza la preservación del capital.",
-      "top_candidates": [
-        {
-          "symbol": "QNTUSDT",
-          "score": 60,
-          "price": 57.96,
-          "rsi_15m": 50.14,
-          "vol_surge": 1.93,
-          "trade_quality": "B",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "INJUSDT",
-          "score": 60,
-          "price": 4.459,
-          "rsi_15m": 54.51,
-          "vol_surge": 0.27,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "ZAMAUSDT",
-          "score": 60,
-          "price": 0.0461,
-          "rsi_15m": 58.26,
-          "vol_surge": 0.07,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "SUNUSDT",
-          "score": 60,
-          "price": 0.0182,
-          "rsi_15m": 58.1,
-          "vol_surge": 0.02,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "LUNCUSDT",
-          "score": 60,
-          "price": 5.025e-05,
-          "rsi_15m": 54.3,
-          "vol_surge": 0.14,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "ETHUSDT",
-          "score": 55,
-          "price": 1871.74,
-          "rsi_15m": 23.82,
-          "vol_surge": 0.22,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "BOMEUSDT",
-          "score": 50,
-          "price": 0.0008196,
-          "rsi_15m": 57.47,
-          "vol_surge": 0.69,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "SKHYBUSDT",
-          "score": 50,
-          "price": 136.41,
-          "rsi_15m": 50.8,
-          "vol_surge": 0.03,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "BANKUSDT",
-          "score": 50,
-          "price": 0.0391,
-          "rsi_15m": 59.47,
-          "vol_surge": 0.45,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "PENGUUSDT",
-          "score": 50,
-          "price": 0.00665,
-          "rsi_15m": 49.81,
-          "vol_surge": 0.03,
           "trade_quality": "C_NOISE",
           "macro_trend": "NEUTRAL"
         }
