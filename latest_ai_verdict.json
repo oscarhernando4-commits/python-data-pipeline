@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-10 14:52:36",
+  "timestamp": "2026-08-10 14:54:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras el análisis exhaustivo de los 7 agentes, se concluye que ningún activo cumple con el umbral de Score Técnico >= 55 ni con la confirmación de volumen institucional necesaria. El mercado se encuentra en un régimen de alta incertidumbre y baja profundidad, lo que aumenta el riesgo de 'falling knives'. Se prioriza la preservación de capital sobre la especulación, manteniendo la posición en efectivo hasta que las condiciones macro y técnicas mejoren.",
+  "reasoning": "El mercado presenta una debilidad generalizada con scores técnicos mediocres y falta de soporte institucional. Dado que ningún activo alcanza el umbral de seguridad A+ y el entorno macro es de alta incertidumbre, la estrategia óptima es la preservación total del capital en stablecoins.",
   "top_candidates": [
     {
       "symbol": "SPYBUSDT",
-      "score": 70
+      "score": 55
     },
     {
-      "symbol": "QNTUSDT",
-      "score": 60
+      "symbol": "XAUTUSDT",
+      "score": 50
     },
     {
-      "symbol": "XPLUSDT",
-      "score": 60
+      "symbol": "MUBARAKUSDT",
+      "score": 50
     },
     {
-      "symbol": "LTCUSDT",
+      "symbol": "PAXGUSDT",
       "score": 50
     },
     {
