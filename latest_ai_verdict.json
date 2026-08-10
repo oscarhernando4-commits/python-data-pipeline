@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-10 05:30:22",
+  "timestamp": "2026-08-10 05:32:36",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura técnica que no cumple con los requisitos de convicción A+ exigidos por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
+    {
+      "symbol": "UNIUSDT",
+      "score": 75
+    },
     {
       "symbol": "XLMUSDT",
       "score": 75
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "ETCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "REUSDT",
+      "symbol": "PYTHUSDT",
       "score": 75
     }
   ]
