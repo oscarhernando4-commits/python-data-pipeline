@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 11:04:22",
+  "updated_at": "2026-08-10 11:06:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una debilidad sistémica generalizada con una alta correlación negativa. Ningún activo cumple con el umbral de Score Técnico >= 55 y la falta de datos de profundidad en el libro de órdenes aumenta el riesgo de slippage, por lo que se prioriza la preservación del capital."
+    "reasoning": "El mercado se encuentra en un estado de debilidad sistémica sin activos que cumplan con los criterios de alta convicción (Score >= 55). La falta de soporte en el libro de órdenes y la alta probabilidad de pérdidas basada en el historial de simulaciones dictan una postura de preservación de capital (HOLD) hasta que las condiciones macro mejoren."
   }
 }
