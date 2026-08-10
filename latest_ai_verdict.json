@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-10 15:52:23",
+  "timestamp": "2026-08-10 10:52:40",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una correlación bajista masiva. Ninguno de los candidatos analizados alcanza el umbral de seguridad A+ (Score >= 55) exigido por el comité, y la historia de trades recientes confirma que operar en estas condiciones de baja convicción resulta en pérdidas recurrentes. Se mantiene la posición en efectivo para preservar el capital.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ICPUSDT",
       "score": 60
     },
     {
@@ -19,11 +23,7 @@
       "score": 55
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "BICOUSDT",
+      "symbol": "PUMPUSDT",
       "score": 50
     }
   ]
