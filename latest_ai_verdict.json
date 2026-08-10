@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 11:08:22",
+  "timestamp": "2026-08-10 11:10:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de liquidación indiscriminada con scores técnicos mediocres y una alta probabilidad de error en las entradas. Ningún activo cumple con los criterios de seguridad A+ establecidos por el comité, por lo que la estrategia óptima es la preservación total del capital.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica con una correlación bajista predominante. Ninguno de los candidatos cumple con el umbral de calidad A+ (Score >= 55) ni con la confirmación de soporte en el libro de órdenes, por lo que la decisión institucional es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "TAOUSDT",
+      "score": 50
+    },
+    {
       "symbol": "BABYUSDT",
       "score": 50
     },
     {
       "symbol": "THEUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "NEIROUSDT",
       "score": 50
     }
   ]
