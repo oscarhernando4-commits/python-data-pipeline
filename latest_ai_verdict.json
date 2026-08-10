@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-10 04:30:21",
+  "timestamp": "2026-08-10 04:32:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral mínimo de Score Técnico (>= 55) ni con la confirmación de soporte en el libro de órdenes. La alta volatilidad y la falta de convicción institucional sugieren un entorno de alta probabilidad de pérdida, por lo que el comité decide mantener la posición en efectivo (HOLD) para evitar el riesgo de 'falling knives'.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación sistémica. Ninguno de los candidatos analizados alcanza el umbral técnico de 55/100 ni cuenta con el respaldo de volumen institucional necesario para mitigar el riesgo de pérdida. Se prioriza la preservación de capital sobre la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ETCUSDT",
+      "symbol": "ARBUSDT",
       "score": 60
     },
     {
@@ -23,7 +19,11 @@
       "score": 55
     },
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "BMTUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "XLMUSDT",
       "score": 50
     }
   ]
