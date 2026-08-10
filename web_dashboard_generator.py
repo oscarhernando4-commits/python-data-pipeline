@@ -427,7 +427,7 @@ def generate_web_dashboard():
     score_ok = c1_score >= 58
     ai_approved = verdict_data.get("approved", True)
     ai_reason = verdict_data.get("reasoning", "Veto de Seguridad IA")
-    quant_confirm = c1_qual in ("A+", "B") or c1_vol >= 1.20 or c1_sym in ("PAXGUSDT", "XAUTUSDT")
+    quant_confirm = c1_qual in ("A+", "B") or c1_vol >= 1.00 or c1_sym in ("PAXGUSDT", "XAUTUSDT")
     fast_rsi_ok = c1_rsi_2m <= 68 or c1_rsi_5m <= 68
     
     header_badge_text = f"🚀 ¡COMPRANDO EN DINERO REAL: {selected_candidate.get('symbol')}!" if (selected_candidate and ai_approved) else ("🔒 VETO DE SEGURIDAD IA: COMPRAS BLOQUEADAS (PRESERVANDO USDT)" if not ai_approved else ("🔒 TOP 10 EN PROTECCIÓN: NINGUNA MONEDA CUMPLE LAS 8 REGLAS" if no_open_pos else "🟡 POSICIÓN ABIERTA"))
