@@ -147,6 +147,10 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     # RAG: Extract ALL-TIME Super Detailed History Table
     super_detailed_table = learning_engine.get_super_detailed_table_str(mem)
 
+    import data_fetcher
+    binance_sent = data_fetcher.get_binance_institutional_sentiment(symbol)
+    binance_sent_str = f"Binance Trader Long/Short Ratio: {binance_sent.get('long_short_ratio', 1.0):.2f} (Long: {binance_sent.get('long_account_pct', 50):.1f}%, Short: {binance_sent.get('short_account_pct', 50):.1f}%) | Verdict: {binance_sent.get('sentiment_label', 'NEUTRAL')}"
+
     indicators = tech_data.get('indicators', {})
     risk_plan = tech_data.get('institutional_risk_plan', {})
     
@@ -192,6 +196,9 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     SESGO DEL MERCADO RECIENTE (AUTO-APRENDIZAJE DE PNL):
     - {market_bias_ctx if market_bias_ctx else "Sesgo de Mercado No Disponible."}
     ⚠️ IMPORTANTE: Si el sesgo reciente indica que el mercado está cayendo fuertemente y las compras (LONG) están perdiendo repetidamente, DEBES SER EXTREMADAMENTE SELECTIVO y solo aprobar compras si hay una confirmación técnica extrema de reversión. Alinear tus decisiones al dinero real (Real Money).
+
+    🐋 INTELIGENCIA DE SENTIMIENTO INSTITUCIONAL DE BINANCE (Top Traders Long/Short Ratio):
+    - {binance_sent_str}
 
     HISTORIAL SUPER DETALLADO (TABLA COMPLETA ALL-TIME DE TODAS LAS OPERACIONES):
     {super_detailed_table}

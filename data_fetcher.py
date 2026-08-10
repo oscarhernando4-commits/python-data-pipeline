@@ -120,8 +120,46 @@ def update_top_pairs():
     else:
         print("Failed to map any pairs.")
 
+def get_binance_institutional_sentiment(symbol):
+    """
+    Fetches Binance Official Institutional Sentiment Data:
+    - Global Long/Short Trader Account Ratio
+    - Top Trader Position Ratio
+    Returns: {"long_account_pct": float, "short_account_pct": float, "long_short_ratio": float, "sentiment_label": str}
+    """
+    try:
+        clean_sym = symbol.upper().strip()
+        if not clean_sym.endswith("USDT"):
+            clean_sym = f"{clean_sym}USDT"
+        url = f"https://fapi.binance.com/futures/data/globalLongShortAccountRatio?symbol={clean_sym}&period=15m&limit=1"
+        res = requests.get(url, timeout=5)
+        if res.status_code == 200:
+            data = res.json()
+            if data and isinstance(data, list) and len(data) > 0:
+                item = data[0]
+                long_pct = float(item.get("longAccount", 0.5)) * 100.0
+                short_pct = float(item.get("shortAccount", 0.5)) * 100.0
+                ratio = float(item.get("longShortRatio", 1.0))
+                
+                label = "🟢 INSTITUCIONAL MUY ALCISTA (Whales Long)" if ratio >= 1.5 else ("🔴 INSTITUCIONAL BAJISTA (Whales Short)" if ratio <= 0.7 else "⚪ NEUTRAL")
+                return {
+                    "long_account_pct": long_pct,
+                    "short_account_pct": short_pct,
+                    "long_short_ratio": ratio,
+                    "sentiment_label": label
+                }
+    except Exception:
+        pass
+    return {
+        "long_account_pct": 50.0,
+        "short_account_pct": 50.0,
+        "long_short_ratio": 1.0,
+        "sentiment_label": "⚪ NEUTRAL (Sin datos de futuros)"
+    }
+
 # Compatibility aliases
 fetch_top_100_pairs = update_top_pairs
 
 if __name__ == "__main__":
     update_top_pairs()
+
