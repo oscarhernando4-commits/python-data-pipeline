@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-10 02:58:20",
+  "timestamp": "2026-08-10 03:00:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y baja convicción técnica. Ninguno de los candidatos cumple con el umbral de seguridad A+ exigido por el Comité, y el riesgo de 'trampa de valor' es elevado. Se prioriza la preservación del capital sobre la especulación en un entorno de mercado lateral y volátil.",
+  "reasoning": "El mercado presenta una divergencia estructural y falta de soporte real en el libro de órdenes. Ningún activo cumple con los criterios de seguridad y convicción exigidos por el comité, por lo que se prioriza la preservación del capital sobre la operativa especulativa.",
   "top_candidates": [
     {
-      "symbol": "JSTUSDT",
-      "score": 100
-    },
-    {
       "symbol": "PEPEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "UNIUSDT",
       "score": 75
     },
     {
@@ -24,6 +16,14 @@
     },
     {
       "symbol": "SHIBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PENGUUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "MORPHOUSDT",
       "score": 75
     }
   ]
