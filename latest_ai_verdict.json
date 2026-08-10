@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 06:32:19",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la liquidez en USDT. Ninguno de los candidatos cumple con el umbral de seguridad A+ exigido por el CRO, especialmente ante la falta de profundidad en el libro de órdenes y la alta volatilidad en los activos con historial limitado. Se prioriza la preservación del capital sobre la especulación en un mercado con sesgo neutral y alta probabilidad de pérdidas.",
+  "timestamp": "2026-08-10 06:34:20",
+  "selected_symbol": "BCHUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "Tras analizar el mercado, el comité ha determinado que la mayoría de los activos presentan riesgos de 'trampa de valor'. BCHUSDT destaca como el único candidato con un Score Técnico de 85 y un volumen de 2.27x, lo que sugiere una acumulación institucional real. Se autoriza la entrada en largo con una gestión de riesgo estricta, priorizando la preservación del capital mediante un Trailing Stop dinámico.",
   "top_candidates": [
     {
       "symbol": "BCHUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "XLMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
       "symbol": "ETHUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ASTERUSDT",
       "score": 75
     }
   ]
