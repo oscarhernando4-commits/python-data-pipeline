@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 12:56:21",
+  "timestamp": "2026-08-10 12:58:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional y alta volatilidad, donde la mayoría de los activos no cumplen con los criterios de fuerza relativa y soporte de libro de órdenes exigidos por el comité. Se prioriza la preservación del capital sobre la ejecución de trades de baja calidad.",
+  "reasoning": "El mercado se encuentra en una trampa de liquidez con divergencia técnica. Ningún candidato cumple con los criterios estrictos de riesgo-beneficio del comité, por lo que se prioriza la preservación de capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "DOTUSDT",
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "PYTHUSDT",
+      "symbol": "PNUTUSDT",
       "score": 60
     }
   ]
