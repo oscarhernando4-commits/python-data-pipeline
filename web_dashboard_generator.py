@@ -318,7 +318,7 @@ def generate_web_dashboard():
     has_usdt = usdt_free >= 15.0
     no_open_pos = pos_sym == "NINGUNA"
     score_ok = c1_score >= 58
-    quant_confirm = c1_qual in ("A+", "B") or c1_vol >= 1.5 or c1_sym in ("PAXGUSDT", "XAUTUSDT")
+    quant_confirm = c1_qual in ("A+", "B") or c1_vol >= 1.20 or c1_sym in ("PAXGUSDT", "XAUTUSDT") or c1_score >= 60
     fast_rsi_ok = c1_rsi_2m <= 68 or c1_rsi_5m <= 68
     btc_ok = True
     
@@ -370,10 +370,10 @@ def generate_web_dashboard():
             <div class="checklist-item {'checklist-pass' if quant_confirm else 'checklist-pending'}">
                 <div>
                     <div class="checklist-title">4. Confirmación VolSurge / GBM</div>
-                    <div class="checklist-sub">VolSurge >= 1.5x O Grado GBM A+/B</div>
+                    <div class="checklist-sub">VolSurge >= 1.20x O Grado GBM A+/B</div>
                 </div>
                 <div class="checklist-sub" style="font-weight: 800; color: {'var(--accent-emerald)' if quant_confirm else 'var(--accent-amber)'};">
-                    {'🟢 CUMPLIDO (' + f"{c1_vol:.1f}" + 'x / ' + c1_qual + ')' if quant_confirm else '🟡 PENDIENTE (VolSurge ' + f"{c1_vol:.1f}" + 'x < 1.5x)'}
+                    {'🟢 CUMPLIDO (' + f"{c1_vol:.1f}" + 'x / ' + c1_qual + ')' if quant_confirm else '🟡 PENDIENTE (VolSurge ' + f"{c1_vol:.1f}" + 'x < 1.20x)'}
                 </div>
             </div>
 
