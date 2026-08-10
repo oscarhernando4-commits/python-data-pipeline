@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-10 15:48:25",
+  "timestamp": "2026-08-10 10:48:31",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta un estancamiento sistémico con una alta probabilidad de 'falling knife' en los activos analizados. Ningún candidato cumple con el umbral de seguridad (Score >= 55) ni con la confirmación de soporte institucional en el libro de órdenes, por lo que la estrategia óptima es la inacción para evitar pérdidas innecesarias.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
-      "symbol": "ICPUSDT",
+      "symbol": "GUNUSDT",
       "score": 60
     },
     {
-      "symbol": "GUNUSDT",
+      "symbol": "ICPUSDT",
       "score": 60
     },
     {
@@ -19,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "PAXGUSDT",
       "score": 50
     },
     {
-      "symbol": "BABYUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "MUBUSDT",
+      "symbol": "PUMPUSDT",
       "score": 50
     }
   ]
