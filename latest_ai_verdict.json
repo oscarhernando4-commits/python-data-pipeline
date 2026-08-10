@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-10 02:24:30",
+  "timestamp": "2026-08-10 02:26:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "El mercado actual presenta una configuración de alta fricción y riesgo sistémico. Ninguno de los candidatos cumple con los requisitos estrictos de Score Técnico (>= 55) y soporte de liquidez en el libro de órdenes. Se ha decidido mantener la posición en efectivo para evitar la exposición a la volatilidad bajista y proteger el capital institucional.",
   "top_candidates": [
     {
-      "symbol": "EPICUSDT",
-      "score": 55
+      "symbol": "JSTUSDT",
+      "score": 70
     },
     {
-      "symbol": "DYMUSDT",
+      "symbol": "REUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "EPICUSDT",
       "score": 55
     },
     {
@@ -19,11 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "SAGAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "KAITOUSDT",
+      "symbol": "SPYBUSDT",
       "score": 50
     }
   ]
