@@ -92,10 +92,12 @@ def main():
         # Hot-reload modules so any pulled git improvements take effect immediately
         try:
             import obsidian_sync
+            import web_dashboard_generator
             importlib.reload(obsidian_sync)
             importlib.reload(data_fetcher)
             importlib.reload(pipeline_processor)
             importlib.reload(master_dashboard_generator)
+            importlib.reload(web_dashboard_generator)
         except Exception:
             pass
         
