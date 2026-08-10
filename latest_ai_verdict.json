@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 11:40:02",
+  "timestamp": "2026-08-10 16:40:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 95,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 55 y Bids >= 55%) en un entorno de mercado caracterizado por la capitulación y el pánico. La estrategia institucional es preservar el capital en efectivo hasta que la volatilidad geopolítica disminuya y se observe una acumulación institucional real en el libro de órdenes.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad técnica. Ningún activo cumple con los criterios estrictos de calidad, profundidad y score técnico exigidos por el comité para una operación de bajo riesgo. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
@@ -12,15 +12,6 @@
       "price": 0.0534,
       "rsi_15m": 67.46,
       "vol_surge": 4.72,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "SOLVUSDT",
-      "score": 60,
-      "price": 0.00253,
-      "rsi_15m": 58.14,
-      "vol_surge": 1.62,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -34,11 +25,29 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "ZROUSDT",
+      "symbol": "LISTAUSDT",
       "score": 60,
-      "price": 0.867,
-      "rsi_15m": 57.07,
-      "vol_surge": 0.56,
+      "price": 0.01525,
+      "rsi_15m": 53.63,
+      "vol_surge": 0.59,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "LUNCUSDT",
+      "score": 60,
+      "price": 5.048e-05,
+      "rsi_15m": 60.2,
+      "vol_surge": 0.76,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "SOLVUSDT",
+      "score": 60,
+      "price": 0.00254,
+      "rsi_15m": 60.64,
+      "vol_surge": 1.71,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -54,9 +63,18 @@
     {
       "symbol": "XAUTUSDT",
       "score": 55,
-      "price": 4336.77,
-      "rsi_15m": 60.19,
-      "vol_surge": 2.35,
+      "price": 4335.29,
+      "rsi_15m": 58.66,
+      "vol_surge": 2.38,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "score": 55,
+      "price": 4348.26,
+      "rsi_15m": 57.73,
+      "vol_surge": 1.77,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -70,29 +88,11 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "BNBUSDT",
+      "symbol": "MMTUSDT",
       "score": 50,
-      "price": 602.23,
-      "rsi_15m": 48.91,
-      "vol_surge": 0.5,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "PUMPUSDT",
-      "score": 50,
-      "price": 0.002758,
-      "rsi_15m": 54.31,
-      "vol_surge": 0.59,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "SNXXBUSDT",
-      "score": 50,
-      "price": 9.74,
-      "rsi_15m": 65.59,
-      "vol_surge": 0.63,
+      "price": 0.2253,
+      "rsi_15m": 67.71,
+      "vol_surge": 0.91,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
