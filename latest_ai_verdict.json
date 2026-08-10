@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-10 06:50:23",
+  "timestamp": "2026-08-10 06:52:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión con un sesgo neutral predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes claro), y el historial de simulaciones sugiere que operar en este entorno neutral resulta en pérdidas recurrentes. Se prioriza la preservación del capital.",
+  "reasoning": "A pesar de tener activos con score técnico de 75, la falta de dominancia en el libro de órdenes (Bids 50%) y la alta tasa de fallos en condiciones de mercado neutrales (18.6% win rate) obligan a mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
       "symbol": "BCHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
