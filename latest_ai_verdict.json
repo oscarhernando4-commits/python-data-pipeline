@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-10 08:46:27",
+  "timestamp": "2026-08-10 08:48:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con los criterios estrictos de convicción A+ requeridos por el comité. La falta de soporte en el libro de órdenes y la alta tasa de fallos en condiciones de mercado neutral dictan una postura de preservación de capital (HOLD).",
+  "reasoning": "El mercado se encuentra en un estado de indecisión con alta volatilidad y falta de soporte institucional claro en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ necesario para mitigar el riesgo de pérdida, por lo que se prioriza la protección del capital.",
   "top_candidates": [
+    {
+      "symbol": "TRXUSDT",
+      "score": 85
+    },
     {
       "symbol": "WLFIUSDT",
       "score": 75
     },
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "GNOUSDT",
       "score": 75
     },
     {
-      "symbol": "MMTUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "TSTUSDT",
+      "symbol": "BICOUSDT",
       "score": 65
     },
     {
