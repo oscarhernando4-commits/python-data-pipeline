@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 03:24:19",
+  "timestamp": "2026-08-10 03:26:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 55 con soporte institucional claro). La alta tasa de pérdidas en trades recientes y la incertidumbre macroeconómica dictan una postura defensiva de preservación de capital (HOLD) hasta que el mercado muestre una estructura de acumulación institucional más definida.",
+  "confidence": 0,
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta probabilidad (A+) necesarios para una ejecución segura, optando por preservar el capital en lugar de arriesgarlo en un entorno de alta incertidumbre y baja liquidez.",
   "top_candidates": [
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "PEPEUSDT",
       "score": 85
     },
     {
       "symbol": "SHIBUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "PENGUUSDT",
       "score": 75
     },
     {
-      "symbol": "ARBUSDT",
+      "symbol": "POLUSDT",
       "score": 75
     },
     {
-      "symbol": "AEROUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "KITEUSDT",
+      "symbol": "QNTUSDT",
       "score": 75
     }
   ]
