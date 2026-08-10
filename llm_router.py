@@ -152,6 +152,14 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     binance_sent = data_fetcher.get_binance_institutional_sentiment(symbol)
     binance_sent_str = f"Binance Trader Long/Short Ratio: {binance_sent.get('long_short_ratio', 1.0):.2f} (Long: {binance_sent.get('long_account_pct', 50):.1f}%, Short: {binance_sent.get('short_account_pct', 50):.1f}%) | Verdict: {binance_sent.get('sentiment_label', 'NEUTRAL')}"
 
+    import beta_correlation_engine
+    beta_info = beta_correlation_engine.calculate_beta_correlation(symbol)
+    beta_str = f"Rho BTC: {beta_info.get('rho', 0.5):.2f} | Beta: {beta_info.get('beta', 1.0):.2f} | Clasificación: {beta_info.get('correlation_label')}"
+
+    import order_flow_analyzer
+    of_info = order_flow_analyzer.analyze_order_flow_cvd(symbol)
+    of_str = f"Velocidad: {of_info.get('trade_speed_per_sec', 1.0):.2f} trades/sec | Taker Buy: {of_info.get('buy_aggression_pct', 50):.1f}% | CVD Delta: {of_info.get('cvd_delta_usd', 0.0):+.2f} USD | Dictamen Order Flow: {of_info.get('verdict')}"
+
     indicators = tech_data.get('indicators', {})
     risk_plan = tech_data.get('institutional_risk_plan', {})
     
@@ -200,6 +208,14 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
 
     🐋 INTELIGENCIA DE SENTIMIENTO INSTITUCIONAL DE BINANCE (Top Traders Long/Short Ratio):
     - {binance_sent_str}
+
+    ⚡ MATRIZ DE CORRELACIÓN Y BETA DE BITCOIN:
+    - {beta_str}
+    ⚠️ REGLA DE RIESGO CORRELACIONAL: Si Bitcoin está débil o cayendo y {symbol} presenta una alta correlación (Rho >= 0.80), RECHAZA la compra para evitar caídas arrastradas. Prioriza activos descorrelacionados o refugio.
+
+    🎯 ORDER FLOW SPEED & CUMULATIVE VOLUME DELTA (CVD ANALYST):
+    - {of_str}
+    ⚠️ REGLA DE ORDER FLOW: Si hay absorción compradora A+ (Taker Buy >= 55% y CVD Delta +), AUMENTA la confianza de la compra. Si hay presión vendedora (Taker Buy <= 42%), RECHAZA la operación.
 
     🏆 CUENTAS CAMPEONAS EN TIEMPO REAL (REPLICACIÓN MATRIX 100):
     {matrix_champions}

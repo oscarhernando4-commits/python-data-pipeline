@@ -706,12 +706,23 @@ def run_infinite_trading_matrix_cycle():
             is_gold_refuge = bs_sym in ["PAXGUSDT", "XAUTUSDT"]
             is_quant_approved = bs_trade_qual in ("A+", "B") or target_vol_surge >= 1.00 or is_gold_refuge or bs_score >= 60
             
+            import beta_correlation_engine
+            import order_flow_analyzer
+            beta_res = beta_correlation_engine.calculate_beta_correlation(bs_sym)
+            of_res = order_flow_analyzer.analyze_order_flow_cvd(bs_sym)
+            
+            is_high_btc_risk = is_btc_crashing and beta_res.get("is_high_correlation", False)
+            is_order_flow_dump = of_res.get("is_bearish_dump", False)
+            
             if bs_score >= 58 and is_quant_approved:
-                if is_btc_crashing and bs_sym not in ["BTCUSDT", "PAXGUSDT", "XAUTUSDT"]:
-                    print(f"🛡️ [FILTRO CRASH BTC] Oportunidad {bs_sym} ({bs_score} Pts) bloqueada. BTC en crash activo ({btc_status_str}).")
+                if (is_btc_crashing or is_high_btc_risk) and bs_sym not in ["BTCUSDT", "PAXGUSDT", "XAUTUSDT"]:
+                    print(f"🛡️ [FILTRO CORRELACIÓN BETA BTC] Oportunidad {bs_sym} ({bs_score} Pts, Rho={beta_res.get('rho')}) bloqueada. BTC débil / Alta Correlación.")
+                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
+                elif is_order_flow_dump:
+                    print(f"🎯 [FILTRO ORDER FLOW CVD] Oportunidad {bs_sym} ({bs_score} Pts) bloqueada por presión vendedora a mercado (CVD Delta {of_res.get('cvd_delta_usd')} USD).")
                     api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
                 else:
-                    print(f"💰 [REAL HÍBRIDO] Ejecutando Top Oportunidad del Escáner en Dinero Real: {bs_sym} @ {bs_score} Pts (GBM: {bs_trade_qual}, VolSurge: {target_vol_surge:.2f}x)...")
+                    print(f"💰 [REAL HÍBRIDO] Ejecutando Top Oportunidad del Escáner en Dinero Real: {bs_sym} @ {bs_score} Pts (GBM: {bs_trade_qual}, VolSurge: {target_vol_surge:.2f}x, Rho: {beta_res.get('rho')}, OrderFlow: {of_res.get('verdict')})...")
                     api_connector.evaluate_and_trade_real_money(
                         best_symbol=bs_sym,
                         best_score=bs_score,
