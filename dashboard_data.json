@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 07:44:21",
+  "updated_at": "2026-08-10 07:46:26",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos superiores a 55, la falta de soporte en el libro de órdenes y el entorno de miedo global invalidan cualquier entrada. Se mantendrá la liquidez en espera de una configuración de mercado más clara y con mayor convicción institucional."
+    "reasoning": "El mercado se encuentra en una fase de indecisión estructural con una alta tasa de fallos en los trades recientes. Ningún activo cumple con los criterios de convicción A+ (Score >= 55 y Bids > 55%), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias."
   }
 }
