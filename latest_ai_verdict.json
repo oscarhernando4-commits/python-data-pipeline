@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 13:24:22",
+  "timestamp": "2026-08-10 13:26:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de parálisis institucional con una abrumadora mayoría de activos mostrando debilidad técnica. Ningún candidato cumple con los requisitos de seguridad y convicción exigidos por el comité, por lo que la estrategia óptima es el mantenimiento de la liquidez en efectivo para evitar pérdidas innecesarias en un entorno de baja liquidez y alta volatilidad algorítmica.",
+  "reasoning": "El mercado se encuentra en una fase de estancamiento con alta volatilidad y falta de convicción institucional. Ninguno de los candidatos analizados alcanza el umbral de seguridad (Score >= 55) exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
@@ -19,12 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "LDOUSDT",
+      "symbol": "PYTHUSDT",
       "score": 60
     },
     {
-      "symbol": "LTCUSDT",
-      "score": 50
+      "symbol": "LDOUSDT",
+      "score": 60
     }
   ]
 }
