@@ -1606,3 +1606,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-42.07%)`, `2024-12-09 (-25.4%)`, `2026-03-15 (-23.01%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: PEOPLEUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-15` hasta `2026-08-10` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.0090 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.1440 USD` (`2024-06-09`) | Distancia: `-93.78%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0048 USD` (`2026-06-30`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-01-05 (+69.92%)`, `2024-01-03 (+64.34%)`, `2025-05-13 (+52.18%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2024-07-04 (-33.19%)`, `2025-10-10 (-31.08%)`, `2025-05-15 (-25.17%)`
+
+---
