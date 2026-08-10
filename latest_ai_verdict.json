@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 11:28:21",
+  "timestamp": "2026-08-10 11:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con alta incertidumbre macroeconómica. Ninguno de los candidatos actuales supera el umbral de riesgo A+ exigido por el Comité, por lo que la estrategia óptima es mantener la liquidez total y evitar la exposición a activos con historiales insuficientes o alta volatilidad especulativa.",
+  "reasoning": "El comité ha determinado que, bajo las condiciones actuales de mercado, ningún activo cumple con el umbral mínimo de seguridad (Score >= 55) y la estructura de soporte necesaria. La estrategia institucional es de espera activa para evitar la exposición a 'trampas de valor' y volatilidad especulativa sin respaldo institucional.",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
       "score": 60
     },
     {
-      "symbol": "NEIROUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "CRVUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "BBUSDT",
+      "symbol": "JUPUSDT",
       "score": 60
     },
     {
       "symbol": "CAKEUSDT",
       "score": 60
+    },
+    {
+      "symbol": "ZAMAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SOLUSDT",
+      "score": 50
     }
   ]
 }
