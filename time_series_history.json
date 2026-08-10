@@ -1,12 +1,38 @@
 {
-  "MSTRBUSDT": [
+  "SAGAUSDT": [
     {
-      "timestamp": "2026-08-10 12:40:29",
-      "price": 97.01,
+      "timestamp": "2026-08-10 17:42:14",
+      "price": 0.01482,
       "score": 0,
-      "rsi": 34.43,
+      "rsi": 36.38,
       "macd": "Neutral",
-      "volume_surge": 0.23,
+      "volume_surge": 0.91,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ORDIUSDT": [
+    {
+      "timestamp": "2026-08-10 17:42:14",
+      "price": 3.515,
+      "score": 15,
+      "rsi": 49.38,
+      "macd": "Neutral",
+      "volume_surge": 0.11,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-10 17:42:14",
+      "price": 0.1318,
+      "score": 50,
+      "rsi": 52.03,
+      "macd": "Neutral",
+      "volume_surge": 0.71,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,25 +40,12 @@
   ],
   "VICUSDT": [
     {
-      "timestamp": "2026-08-10 12:40:29",
-      "price": 0.0324,
-      "score": 45,
-      "rsi": 63.93,
+      "timestamp": "2026-08-10 17:42:14",
+      "price": 0.1039,
+      "score": 30,
+      "rsi": 54.47,
       "macd": "Neutral",
-      "volume_surge": 6.39,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "CTSIUSDT": [
-    {
-      "timestamp": "2026-08-10 12:40:29",
-      "price": 0.0256,
-      "score": 0,
-      "rsi": 32.26,
-      "macd": "Neutral",
-      "volume_surge": 3.84,
+      "volume_surge": 1.02,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
