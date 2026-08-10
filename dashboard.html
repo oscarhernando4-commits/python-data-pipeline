@@ -329,42 +329,12 @@
     <!-- PESTAÑA 1: MONITOREO EN VIVO -->
     <div id="tab-monitoreo" class="tab-content active">
         
-        <!-- ============ SEGUIMIENTO EN TIEMPO REAL POSICIÓN ACTIVA ============ -->
-        <div class="active-pos-banner">
+        <div class="active-pos-banner active-pos-idle">
             <div class="active-pos-header">
                 <div class="active-pos-title">
-                    <span class="active-pos-pulse"></span>
-                    <span class="active-pos-symbol">🎯 POSICIÓN REAL EN VIVO: <b>WLFIUSDT</b></span>
-                    <span class="badge badge-long">BUY SPOT LONG</span>
+                    <span class="active-pos-symbol" style="color: var(--text-muted);">🔒 NINGUNA POSICIÓN ABIERTA (100% CAPITAL EN USDT)</span>
                 </div>
-                <div class="active-pos-time">⏱️ Tiempo Abierto: <b>88 min</b> / 75 min (Escalera Time-Decay)</div>
-            </div>
-            <div class="active-pos-grid">
-                <div class="pos-widget">
-                    <div class="pos-widget-label">Capital Invertido</div>
-                    <div class="pos-widget-val">$17.60 USD</div>
-                    <div class="pos-widget-sub">327.10 WLFI</div>
-                </div>
-                <div class="pos-widget">
-                    <div class="pos-widget-label">Precio de Entrada</div>
-                    <div class="pos-widget-val">$0.0535</div>
-                    <div class="pos-widget-sub">Binance Spot Live</div>
-                </div>
-                <div class="pos-widget">
-                    <div class="pos-widget-label">Máximo Pico Alcanzado</div>
-                    <div class="pos-widget-val" style="color: var(--accent-emerald);">$0.0539</div>
-                    <div class="pos-widget-sub">Pico Flotante: +0.75%</div>
-                </div>
-                <div class="pos-widget">
-                    <div class="pos-widget-label">Piso Stop-Loss ATR</div>
-                    <div class="pos-widget-val" style="color: var(--accent-rose);">$0.0534</div>
-                    <div class="pos-widget-sub">Límite Salida: -0.20%</div>
-                </div>
-            </div>
-            <div class="active-pos-footer">
-                <div class="pos-shield-tag">🛡️ BTC Circuit Breaker: <b>🟢 ACTIVO</b></div>
-                <div class="pos-shield-tag">🧱 Orderbook Muro: <b>🟢 OK</b></div>
-                <div class="pos-shield-tag">🚀 Trailing Stop: <b>⚪ Esperando +2.0%</b></div>
+                <div class="active-pos-time">🔎 Escaneando 120 Pares en Tiempo Real</div>
             </div>
         </div>
         
@@ -374,7 +344,7 @@
             <div class="wallet-card">
                 <div class="card-header-row">
                     <div class="card-heading">💰 MIS ACTIVOS — SPOT BINANCE</div>
-                    <div class="wallet-total-val">$20.15 <span class="wallet-total-currency">USD</span></div>
+                    <div class="wallet-total-val">$20.12 <span class="wallet-total-currency">USD</span></div>
                 </div>
                 <div class="asset-list">
                     <div class="asset-item">
@@ -386,8 +356,8 @@
                             </div>
                         </div>
                         <div class="asset-right">
-                            <div class="asset-qty-val">20.14542000</div>
-                            <div class="asset-usd-val">20.15 $</div>
+                            <div class="asset-qty-val">17.69360760</div>
+                            <div class="asset-usd-val">17.69 $</div>
                         </div>
                     </div>
                     <div class="asset-item">
@@ -399,8 +369,8 @@
                             </div>
                         </div>
                         <div class="asset-right">
-                            <div class="asset-qty-val">0.00409216</div>
-                            <div class="asset-usd-val">2.46 $</div>
+                            <div class="asset-qty-val">0.00404828</div>
+                            <div class="asset-usd-val">2.43 $</div>
                         </div>
                     </div>
                 </div>
@@ -412,17 +382,17 @@
                 <div class="stats-grid">
                     <div class="stat-box">
                         <div class="stat-label">Posición Activa</div>
-                        <div class="stat-value">WLFIUSDT</div>
-                        <div class="stat-sub">Entrada: $0.0535</div>
+                        <div class="stat-value">NINGUNA</div>
+                        <div class="stat-sub">🔒 100% USDT Preservado</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Historial Operatorio</div>
-                        <div class="stat-value">12 Trades</div>
-                        <div class="stat-sub">✅ 6W / ❌ 7L</div>
+                        <div class="stat-value">13 Trades</div>
+                        <div class="stat-sub">✅ 7W / ❌ 7L</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">PnL Neto Real</div>
-                        <div class="stat-value" style="color: var(--accent-emerald);">+$3.02</div>
+                        <div class="stat-value" style="color: var(--accent-emerald);">+$2.99</div>
                         <div class="stat-sub">Depósito original: $17.13</div>
                     </div>
                     <div class="stat-box">
@@ -477,7 +447,7 @@
         <div class="verdict-card verdict-past">
             <div class="verdict-header">
                 <div class="verdict-label">📋 ANÁLISIS ANTERIOR (#2)</div>
-                <div class="verdict-time">🕐 2026-08-10 13:26:48</div>
+                <div class="verdict-time">🕐 2026-08-10 18:28:15</div>
             </div>
             <div class="verdict-body">
                 <div class="verdict-decision">
@@ -499,7 +469,7 @@
                 <div class="candidates-row"><span class="candidates-label">Top Evaluados:</span> <span class="chip">XAUTUSDT <b>60 Pts</b></span><span class="chip">PAXGUSDT <b>60 Pts</b></span><span class="chip">BOMEUSDT <b>60 Pts</b></span><span class="chip">QNTUSDT <b>60 Pts</b></span><span class="chip">INJUSDT <b>60 Pts</b></span></div>
                 <div class="reasoning-section">
                     <div class="reasoning-label">💭 Dictamen y Razonamiento Cuántico:</div>
-                    <div class="reasoning-text">El mercado presenta una fragilidad sistémica con una alta correlación negativa y falta de soporte técnico en los activos analizados. Ningún candidato cumple con el umbral de seguridad (Score >= 55) ni con la confirmación de liquidez necesaria, por lo que la estrategia institucional es mantener la posición en efectivo para evitar pérdidas innecesarias.</div>
+                    <div class="reasoning-text">El mercado presenta una fragilidad sistémica con una alta correlación negativa y falta de soporte técnico en los activos analizados. Ningún candidato cumple con el umbral de seguridad (Score >= 55) ni con la confirmación...</div>
                 </div>
             </div>
         </div>
@@ -588,7 +558,7 @@
         
         <tr class="cand-row">
             <td class="cand-rank">#4</td>
-            <td class="cand-symbol"><b>QNTUSDT</b></td>
+            <td class="cand-symbol"><b>ZAMAUSDT</b></td>
             <td class="cand-score"><span class="score-badge score-high">60 Pts</span></td>
             <td class="cand-rsi">57.6</td>
             <td class="cand-vol">0.4x</td>
@@ -684,7 +654,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <span>Última actualización: <strong>2026-08-10 13:28:44</strong> | Algoritmo Cuántico Binance 24/7</span>
+        <span>Última actualización: <strong>2026-08-10 13:29:05</strong> | Algoritmo Cuántico Binance 24/7</span>
         <span class="countdown" id="countdown">Auto-refresh en: 30s</span>
         <button class="refresh-btn" onclick="window.location.reload()">🔄 Actualizar Ahora</button>
     </footer>
