@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-10 04:26:21",
+  "timestamp": "2026-08-10 04:28:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y volatilidad, donde los activos analizados no superan los umbrales de riesgo exigidos por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de 'espera de catalizador'.",
+  "confidence": 95,
+  "reasoning": "El comité ha determinado que el mercado actual es altamente frágil y carece de la convicción necesaria para una operativa de alta probabilidad. Se prioriza la preservación del capital (Regla #1) ante la falta de señales claras de soporte institucional y la alta probabilidad de 'bull traps' en los activos analizados.",
   "top_candidates": [
     {
-      "symbol": "SPYBUSDT",
-      "score": 85
+      "symbol": "GRAMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "score": 75
     },
     {
       "symbol": "ETCUSDT",
@@ -19,12 +23,8 @@
       "score": 70
     },
     {
-      "symbol": "1000CATUSDT",
+      "symbol": "SPYBUSDT",
       "score": 70
-    },
-    {
-      "symbol": "BTCUSDT",
-      "score": 65
     }
   ]
 }
