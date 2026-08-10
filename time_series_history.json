@@ -1,12 +1,52 @@
 {
-  "BONKUSDT": [
+  "KITEUSDT": [
     {
-      "timestamp": "2026-08-10 07:42:11",
-      "price": 2.47e-06,
-      "score": 15,
-      "rsi": 46.11,
+      "timestamp": "2026-08-10 07:44:10",
+      "price": 0.1017,
+      "score": 45,
+      "rsi": 57.5,
       "macd": "Neutral",
-      "volume_surge": 0.9,
+      "volume_surge": 1.03,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ]
+}
+  "GNOUSDT": [
+    {
+      "timestamp": "2026-08-10 07:44:10",
+      "price": 106.54,
+      "score": 75,
+      "rsi": 53.29,
+      "macd": "Neutral",
+      "volume_surge": 5.74,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "XPLUSDT": [
+    {
+      "timestamp": "2026-08-10 07:44:10",
+      "price": 0.07963,
+      "score": 50,
+      "rsi": 60.87,
+      "macd": "Neutral",
+      "volume_surge": 1.08,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LUNCUSDT": [
+    {
+      "timestamp": "2026-08-10 07:44:10",
+      "price": 5.009e-05,
+      "score": 60,
+      "rsi": 52.1,
+      "macd": "Neutral",
+      "volume_surge": 0.46,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,25 +54,12 @@
   ],
   "C98USDT": [
     {
-      "timestamp": "2026-08-10 07:42:11",
+      "timestamp": "2026-08-10 07:44:10",
       "price": 0.01582,
       "score": 15,
       "rsi": 46.67,
       "macd": "Neutral",
-      "volume_surge": 0.16,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "KITEUSDT": [
-    {
-      "timestamp": "2026-08-10 07:42:11",
-      "price": 0.1018,
-      "score": 45,
-      "rsi": 58.84,
-      "macd": "Neutral",
-      "volume_surge": 0.96,
+      "volume_surge": 0.17,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

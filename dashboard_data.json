@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 07:42:22",
+  "updated_at": "2026-08-10 07:44:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 55 y Bids > 55%) bajo las condiciones actuales de mercado. La alta volatilidad y la falta de soporte institucional en el libro de órdenes sugieren que el riesgo de 'falling knives' es demasiado elevado, por lo que se prioriza la preservación del capital."
+    "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos superiores a 55, la falta de soporte en el libro de órdenes y el entorno de miedo global invalidan cualquier entrada. Se mantendrá la liquidez en espera de una configuración de mercado más clara y con mayor convicción institucional."
   }
 }
