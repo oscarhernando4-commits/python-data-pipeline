@@ -313,15 +313,25 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
         res = requests.post(url, headers=headers, params=params, proxies=get_smart_proxy(), timeout=10)
         res_json = res.json()
         if "orderId" in res_json or res_json.get("status") == "FILLED":
-            # Real-Time Balance Sync via Fixie Proxy upon Trade Opening
-            print("🔄 [TRADE OPENED] Sincronizando balance real desde Binance API (Fixie Proxy)...")
+            print("🔄 [TRADE OPENED] Sincronizando balance real desde Binance API...")
             try:
                 diagnose_full_spot_wallet()
             except Exception as se:
                 print(f"Error re-syncing wallet after buy: {se}")
         return res_json
     except Exception as e:
-        return {"error": str(e)}
+        print(f"⚠️ [API RETRY] Error en proxy ({e}). Reintentando compra Spot vía conexión directa...")
+        try:
+            res = requests.post(url, headers=headers, params=params, proxies=None, timeout=10)
+            res_json = res.json()
+            if "orderId" in res_json or res_json.get("status") == "FILLED":
+                try:
+                    diagnose_full_spot_wallet()
+                except Exception:
+                    pass
+            return res_json
+        except Exception as e2:
+            return {"error": str(e2)}
 
 def execute_real_spot_market_sell(symbol, quantity=None):
     """
@@ -384,15 +394,25 @@ def execute_real_spot_market_sell(symbol, quantity=None):
         res = requests.post(url, headers=headers, params=params, proxies=get_smart_proxy(), timeout=10)
         res_json = res.json()
         if "orderId" in res_json or res_json.get("status") == "FILLED":
-            # Real-Time Balance Sync via Fixie Proxy upon Trade Closing
-            print("🔄 [TRADE CLOSED] Sincronizando balance real en vivo desde Binance API (Fixie Proxy)...")
+            print("🔄 [TRADE CLOSED] Sincronizando balance real en vivo desde Binance API...")
             try:
                 diagnose_full_spot_wallet()
             except Exception as se:
                 print(f"Error re-syncing wallet after sell: {se}")
         return res_json
     except Exception as e:
-        return {"error": str(e)}
+        print(f"⚠️ [API RETRY] Error en proxy ({e}). Reintentando venta Spot vía conexión directa...")
+        try:
+            res = requests.post(url, headers=headers, params=params, proxies=None, timeout=10)
+            res_json = res.json()
+            if "orderId" in res_json or res_json.get("status") == "FILLED":
+                try:
+                    diagnose_full_spot_wallet()
+                except Exception:
+                    pass
+            return res_json
+        except Exception as e2:
+            return {"error": str(e2)}
 
 def diagnose_full_spot_wallet():
     """

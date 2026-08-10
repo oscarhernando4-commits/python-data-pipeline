@@ -318,7 +318,7 @@ def generate_web_dashboard():
     has_usdt = usdt_free >= 15.0
     no_open_pos = pos_sym == "NINGUNA"
     score_ok = c1_score >= 58
-    quant_confirm = c1_qual in ("A+", "B") or c1_vol >= 1.5 or c1_sym in ("PAXGUSDT", "XAUTUSDT") or c1_score >= 60
+    quant_confirm = c1_qual in ("A+", "B") or c1_vol >= 1.5 or c1_sym in ("PAXGUSDT", "XAUTUSDT")
     fast_rsi_ok = c1_rsi_2m <= 68 or c1_rsi_5m <= 68
     btc_ok = True
     
