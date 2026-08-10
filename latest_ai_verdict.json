@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-10 13:34:22",
+  "timestamp": "2026-08-10 13:36:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que no existen activos que cumplan con los criterios estrictos de seguridad y rentabilidad exigidos. La alta fragilidad del mercado y la falta de soporte institucional en el libro de órdenes obligan a una postura defensiva para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una trampa de liquidez bajista con una alta correlación de debilidad. Ninguno de los candidatos cumple con los criterios estrictos de Score A+ (>= 55) y soporte de libro de órdenes, por lo que la decisión institucional es mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "SKHYBUSDT",
       "score": 80
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "ASTERUSDT",
       "score": 80
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "ZROUSDT",
       "score": 60
     },
     {
-      "symbol": "ZROUSDT",
+      "symbol": "PYTHUSDT",
       "score": 60
     }
   ]
