@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-10 10:40:23",
+  "timestamp": "2026-08-10 10:42:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una correlación bajista de alta intensidad y una falta de activos con convicción técnica A+. Dado que ningún candidato cumple con los umbrales mínimos de seguridad establecidos por el Chief Risk Officer, la decisión unánime es no operar y proteger la liquidez.",
+  "reasoning": "El mercado se encuentra en una fase de distribución por agotamiento con una configuración técnica deficiente. Ningún activo cumple con los requisitos de seguridad y convicción exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una mejor estructura de mercado.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SUNUSDT",
       "score": 60
     },
     {
@@ -17,14 +25,6 @@
     {
       "symbol": "BONKUSDT",
       "score": 60
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "BABYUSDT",
-      "score": 50
     }
   ]
 }
