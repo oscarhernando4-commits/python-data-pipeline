@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 04:10:23",
+  "updated_at": "2026-08-10 04:12:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y baja liquidez. Ninguno de los candidatos cumple con los criterios de convicción A+ exigidos por el comité, por lo que se prioriza la preservación del capital sobre la operativa especulativa."
+    "reasoning": "El mercado se encuentra en una fase de distribución terminal con alta correlación bajista. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 55 con soporte de liquidez confirmado). Se prioriza la preservación del capital sobre la especulación en un entorno de miedo extremo."
   }
 }
