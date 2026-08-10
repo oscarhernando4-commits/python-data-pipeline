@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-10 12:02:24",
+  "timestamp": "2026-08-10 12:04:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y soporte de libro de órdenes > 55%). La alta tasa de pérdidas en trades recientes bajo condiciones de mercado neutral obliga a mantener la liquidez en USDT para evitar trampas de valor.",
+  "reasoning": "El mercado presenta una estructura de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y Confianza >= 70%) ni con una confirmación clara de soporte en el libro de órdenes. Se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
+    {
+      "symbol": "POLUSDT",
+      "score": 85
+    },
     {
       "symbol": "LDOUSDT",
       "score": 85
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "AVAXUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ONDOUSDT",
+      "symbol": "ETCUSDT",
       "score": 75
     }
   ]
