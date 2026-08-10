@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 03:18:28",
+  "timestamp": "2026-08-10 03:20:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva y falta de tracción. Ningún activo cumple con el umbral mínimo de Score (>= 55) ni con la confirmación de soporte en el libro de órdenes, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la liquidez en USDT.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad, con una alta correlación negativa y falta de soporte institucional claro. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55 con confirmación de volumen y liquidez), por lo que la decisión unánime del comité es mantener la liquidez en espera de una mejor configuración.",
   "top_candidates": [
+    {
+      "symbol": "PEPEUSDT",
+      "score": 60
+    },
     {
       "symbol": "SHIBUSDT",
       "score": 60
     },
     {
-      "symbol": "JTOUSDT",
+      "symbol": "REUSDT",
       "score": 60
     },
     {
-      "symbol": "JSTUSDT",
-      "score": 55
+      "symbol": "NEXOUSDT",
+      "score": 60
     },
     {
-      "symbol": "MMTUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "SAGAUSDT",
-      "score": 50
+      "symbol": "ARBUSDT",
+      "score": 60
     }
   ]
 }
