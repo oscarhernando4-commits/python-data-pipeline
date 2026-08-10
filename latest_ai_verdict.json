@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-10 11:46:21",
+  "timestamp": "2026-08-10 11:48:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia estructural y una alta volatilidad en los activos propuestos. Ninguno de los candidatos cumple con el requisito de convicción A+ (Score >= 55 con soporte de libro de órdenes sólido). La estrategia de protección de capital prevalece sobre la especulación en un entorno de miedo (Fear & Greed 30).",
+  "reasoning": "El mercado se encuentra en una fase de alta fragilidad con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con confirmación de volumen y soporte de libro de órdenes). La estrategia institucional prioriza la preservación de capital ante la falta de una tendencia clara y la alta probabilidad de liquidaciones forzadas.",
   "top_candidates": [
     {
-      "symbol": "SUIUSDT",
-      "score": 60
+      "symbol": "ZAMAUSDT",
+      "score": 70
     },
     {
       "symbol": "AVAXUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SUIUSDT",
       "score": 60
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "PENGUUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "JUPUSDT",
       "score": 60
     }
   ]
