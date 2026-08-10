@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-10 15:32:19",
+  "timestamp": "2026-08-10 15:34:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica sin activos que cumplan con los criterios de alta convicción (Score >= 55). La estrategia institucional es la preservación total de capital hasta que se observe una reversión clara y una entrada de volumen institucional confirmada.",
+  "reasoning": "El mercado carece de fuerza relativa y convicción institucional. Todos los candidatos analizados tienen un Score Técnico de 50 o inferior, lo cual incumple el umbral mínimo de seguridad A+ (Score >= 55). Ante la alta probabilidad de ser una trampa de liquidez, el comité decide proteger el capital y no ejecutar ninguna operación.",
   "top_candidates": [
     {
-      "symbol": "WLDUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 50
-    },
-    {
       "symbol": "PUMPUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "BABYUSDT",
       "score": 50
     },
     {
@@ -23,7 +19,11 @@
       "score": 50
     },
     {
-      "symbol": "BICOUSDT",
+      "symbol": "BANKUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "PEOPLEUSDT",
       "score": 50
     }
   ]
