@@ -1,15 +1,54 @@
 {
-  "FILUSDT": [
+  "C98USDT": [
     {
-      "timestamp": "2026-08-10 17:04:14",
-      "price": 0.6948,
-      "score": 0,
-      "rsi": 36.44,
+      "timestamp": "2026-08-10 12:04:21",
+      "price": 0.01425,
+      "score": 55,
+      "rsi": 30.63,
       "macd": "Neutral",
-      "volume_surge": 0.11,
+      "volume_surge": 0.04,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SHIBUSDT": [
+    {
+      "timestamp": "2026-08-10 12:04:21",
+      "price": 4.64e-06,
+      "score": 0,
+      "rsi": 42.43,
+      "macd": "Neutral",
+      "volume_surge": 0.22,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "FORMUSDT": [
+    {
+      "timestamp": "2026-08-10 12:04:21",
+      "price": 0.2147,
+      "score": 15,
+      "rsi": 42.43,
+      "macd": "Neutral",
+      "volume_surge": 0.33,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PNUTUSDT": [
+    {
+      "timestamp": "2026-08-10 12:04:21",
+      "price": 0.0419,
+      "score": 0,
+      "rsi": 45.75,
+      "macd": "Neutral",
+      "volume_surge": 0.39,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}}
+}
