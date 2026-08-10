@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-10 03:50:24",
+  "timestamp": "2026-08-10 03:52:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una correlación bajista sistémica. Ninguno de los candidatos cumple con el umbral mínimo de Score A+ (>= 55) ni con la confirmación de volumen necesaria para mitigar el riesgo de 'falling knives'. Se prioriza la preservación del capital ante la falta de una tendencia clara y la fragilidad de la liquidez actual.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada con una ausencia total de activos que cumplan con los criterios de alta convicción (Score >= 55). La alta tasa de fallos en las simulaciones históricas bajo condiciones de mercado neutral y la falta de soporte institucional en el libro de órdenes dictan una postura defensiva de preservación de capital.",
   "top_candidates": [
     {
-      "symbol": "DYMUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 60
     },
     {
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "JSTUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "TUTUSDT",
+      "symbol": "BMTUSDT",
       "score": 50
     },
     {
-      "symbol": "BMTUSDT",
+      "symbol": "PUMPUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "BCHUSDT",
       "score": 50
     }
   ]
