@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 15:06:26",
+  "timestamp": "2026-08-10 15:08:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los requisitos mínimos de seguridad y rentabilidad exigidos. Ningún activo ha superado el umbral de Score A+ (55), y la volatilidad actual junto con la falta de datos de liquidez en el libro de órdenes aumenta el riesgo de pérdidas. Se mantiene la posición en efectivo para evitar la exposición a una posible capitulación técnica.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica sin confirmación de volumen institucional. Ningún activo cumple con el umbral de score técnico A+ (>= 55) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es preservar el capital.",
   "top_candidates": [
+    {
+      "symbol": "TUTUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "ETHUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 50
+    },
     {
       "symbol": "WLDUSDT",
       "score": 50
     },
     {
-      "symbol": "MUBARAKUSDT",
-      "score": 50
-    },
-    {
       "symbol": "PAXGUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "ADAUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "BICOUSDT",
       "score": 50
     }
   ]
