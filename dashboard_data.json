@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 10:18:20",
+  "updated_at": "2026-08-10 10:20:27",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que el mercado actual presenta una correlación bajista de alta intensidad y una falta de activos con fuerza relativa real. Dado que ningún candidato cumple con los requisitos estrictos de riesgo y convicción, la decisión unánime es no ejecutar ninguna operación para evitar la exposición a 'trampas de valor' y proteger la liquidez en USDT."
+    "reasoning": "El mercado se encuentra en un estado de capitulación generalizada con una correlación bajista masiva. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la operativa especulativa."
   }
 }

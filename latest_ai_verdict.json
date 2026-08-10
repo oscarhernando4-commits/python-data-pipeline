@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 10:18:20",
+  "timestamp": "2026-08-10 10:20:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El comité ha determinado que el mercado actual presenta una correlación bajista de alta intensidad y una falta de activos con fuerza relativa real. Dado que ningún candidato cumple con los requisitos estrictos de riesgo y convicción, la decisión unánime es no ejecutar ninguna operación para evitar la exposición a 'trampas de valor' y proteger la liquidez en USDT.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un estado de capitulación generalizada con una correlación bajista masiva. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la operativa especulativa.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "BANKUSDT",
+      "symbol": "LINKUSDT",
       "score": 50
     }
   ]
