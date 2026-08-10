@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-10 08:38:20",
+  "timestamp": "2026-08-10 08:40:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una alta volatilidad con una estructura técnica inestable y falta de soporte institucional claro en el libro de órdenes. Ningún activo cumple con la combinación estricta de Score A+ y confirmación de volumen, por lo que la estrategia de preservación de capital es la única opción viable para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta una divergencia estructural y falta de liquidez en los libros de órdenes para los activos con mejores scores técnicos. Ningún candidato cumple con el umbral de convicción A+ (Score >= 55 y Bids >= 55%) exigido por el comité para mitigar el riesgo de pérdida, por lo que se prioriza la preservación del capital en efectivo.",
   "top_candidates": [
     {
       "symbol": "GNOUSDT",
       "score": 85
+    },
+    {
+      "symbol": "NEIROUSDT",
+      "score": 75
     },
     {
       "symbol": "ETHFIUSDT",
@@ -17,10 +21,6 @@
     {
       "symbol": "SEIUSDT",
       "score": 70
-    },
-    {
-      "symbol": "MMTUSDT",
-      "score": 65
     },
     {
       "symbol": "BICOUSDT",
