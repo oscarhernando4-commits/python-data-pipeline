@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-10 07:58:20",
+  "timestamp": "2026-08-10 08:00:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de candidatos con scores técnicos de 75, la falta de profundidad en el libro de órdenes, la ausencia de un historial sólido y el entorno de miedo generalizado no cumplen con los estándares de seguridad y rentabilidad exigidos por el protocolo de riesgo.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y limpieza de activos. Ninguno de los candidatos cumple con los requisitos estrictos de riesgo y convicción establecidos por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo.",
   "top_candidates": [
     {
-      "symbol": "ETCUSDT",
-      "score": 75
-    },
-    {
       "symbol": "ASTERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "POLUSDT",
       "score": 75
     },
     {
@@ -23,8 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "SUNUSDT",
-      "score": 75
+      "symbol": "TSTUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "BOMEUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "EPICUSDT",
+      "score": 65
     }
   ]
 }
