@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 13:56:53",
+  "timestamp": "2026-08-10 13:58:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica generalizada con una falta de dispersión positiva. Ninguno de los candidatos analizados alcanza el umbral de convicción A+ (Score >= 55) requerido por el comité, y el riesgo de 'falling knives' es elevado. Se prioriza la preservación del capital en espera de una estructura de mercado más clara y con mayor profundidad de liquidez.",
+  "reasoning": "El mercado se encuentra en una fase de purga de liquidez con alta correlación negativa. Ninguno de los candidatos cumple con los criterios estrictos de riesgo y convicción del comité, por lo que se prioriza la preservación del capital (Regla #1) sobre la ejecución de operaciones de baja probabilidad.",
   "top_candidates": [
+    {
+      "symbol": "GIGGLEUSDT",
+      "score": 60
+    },
     {
       "symbol": "MUBUSDT",
       "score": 60
     },
     {
-      "symbol": "ZAMAUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
-      "symbol": "PYTHUSDT",
-      "score": 55
+      "symbol": "ZROUSDT",
+      "score": 60
     },
     {
-      "symbol": "BTCUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "MUBARAKUSDT",
-      "score": 50
+      "symbol": "ZAMAUSDT",
+      "score": 60
     }
   ]
 }
