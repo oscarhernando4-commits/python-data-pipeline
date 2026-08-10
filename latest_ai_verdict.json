@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-10 08:52:19",
+  "timestamp": "2026-08-10 08:54:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que TRX presenta un score técnico elevado, la ausencia de soporte en el libro de órdenes, el sentimiento de miedo generalizado y el historial de pérdidas en condiciones similares dictan una postura de preservación de capital. Se prioriza la protección de la liquidez sobre la ejecución especulativa.",
+  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ exigido por el Comité. La falta de profundidad en el libro de órdenes y la inestabilidad del sentimiento minorista (Fear 30) hacen que cualquier entrada sea prematura y de alto riesgo. Se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "ETHFIUSDT",
       "score": 85
     },
     {
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "ETHFIUSDT",
+      "symbol": "CAKEUSDT",
       "score": 75
     },
     {
       "symbol": "ORDIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "GNOUSDT",
       "score": 75
     }
   ]
