@@ -1,12 +1,38 @@
 {
-  "TIAUSDT": [
+  "MSTRBUSDT": [
     {
-      "timestamp": "2026-08-10 17:52:14",
-      "price": 0.3271,
-      "score": 50,
-      "rsi": 49.95,
+      "timestamp": "2026-08-10 12:52:21",
+      "price": 96.7,
+      "score": 0,
+      "rsi": 32.6,
       "macd": "Neutral",
-      "volume_surge": 0.04,
+      "volume_surge": 0.33,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "IOTXUSDT": [
+    {
+      "timestamp": "2026-08-10 12:52:21",
+      "price": 0.00269,
+      "score": 35,
+      "rsi": 50.28,
+      "macd": "Neutral",
+      "volume_surge": 0.06,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LISTAUSDT": [
+    {
+      "timestamp": "2026-08-10 12:52:21",
+      "price": 0.0631,
+      "score": 0,
+      "rsi": 33.2,
+      "macd": "Neutral",
+      "volume_surge": 0.53,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -53,10 +79,10 @@
   ],
   "RIFUSDT": [
     {
-      "timestamp": "2026-08-10 17:52:14",
-      "price": 0.0686,
+      "timestamp": "2026-08-10 12:52:21",
+      "price": 0.0685,
       "score": 25,
-      "rsi": 31.11,
+      "rsi": 30.71,
       "macd": "Neutral",
       "volume_surge": 0.32,
       "wyckoff": "Sin patron",
@@ -64,43 +90,18 @@
       "fear_greed": 50
     }
   ],
-  "LISTAUSDT": [
+  "EIGENUSDT": [
     {
-      "timestamp": "2026-08-10 17:52:14",
-      "price": 0.0631,
+      "timestamp": "2026-08-10 12:52:21",
+      "price": 0.182,
       "score": 0,
-      "rsi": 33.2,
+      "rsi": 43.82,
       "macd": "Neutral",
-      "volume_surge": 0.53,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "VICUSDT": [
-    {
-      "timestamp": "2026-08-10 17:52:14",
-      "price": 0.0303,
-      "score": 35,
-      "rsi": 52.42,
-      "macd": "Neutral",
-      "volume_surge": 0.99,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "IOTXUSDT": [
-    {
-      "timestamp": "2026-08-10 17:52:14",
-      "price": 0.00269,
-      "score": 35,
-      "rsi": 50.28,
-      "macd": "Neutral",
-      "volume_surge": 0.06,
+      "volume_surge": 0.16,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
+}
 }
