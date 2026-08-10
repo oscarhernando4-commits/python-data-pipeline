@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 07:06:23",
+  "updated_at": "2026-08-10 07:08:25",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de fragmentación defensiva con un sesgo NEUTRAL predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y Bids >= 65%) exigido por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la posición en efectivo."
+    "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de tener candidatos con scores técnicos aceptables, la falta de profundidad en el libro de órdenes y el entorno de miedo generalizado no cumplen con los estándares de seguridad A+ exigidos por el CRO."
   }
 }

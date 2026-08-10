@@ -1,18 +1,14 @@
 {
-  "timestamp": "2026-08-10 07:06:23",
+  "timestamp": "2026-08-10 07:08:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en un estado de fragmentación defensiva con un sesgo NEUTRAL predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y Bids >= 65%) exigido por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la posición en efectivo.",
+  "confidence": 0,
+  "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de tener candidatos con scores técnicos aceptables, la falta de profundidad en el libro de órdenes y el entorno de miedo generalizado no cumplen con los estándares de seguridad A+ exigidos por el CRO.",
   "top_candidates": [
     {
-      "symbol": "BTCUSDT",
-      "score": 75
-    },
-    {
       "symbol": "GRAMUSDT",
-      "score": 75
+      "score": 85
     },
     {
       "symbol": "AAVEUSDT",
@@ -23,7 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "MUBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "KAITOUSDT",
       "score": 65
     }
   ]

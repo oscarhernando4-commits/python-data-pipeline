@@ -1,16 +1,41 @@
 {
-  "JTOUSDT": [
+  "NIGHTUSDT": [
     {
-      "timestamp": "2026-08-10 07:06:11",
-      "price": 0.5617,
-      "score": 25,
-      "rsi": 72.7,
+      "timestamp": "2026-08-10 07:08:10",
+      "price": 0.01812,
+      "score": 30,
+      "rsi": 44.95,
       "macd": "Neutral",
-      "volume_surge": 0.19,
+      "volume_surge": 0.17,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LUNCUSDT": [
+    {
+      "timestamp": "2026-08-10 07:08:10",
+      "price": 5.014e-05,
+      "score": 60,
+      "rsi": 54.93,
+      "macd": "Neutral",
+      "volume_surge": 1.32,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CTSIUSDT": [
+    {
+      "timestamp": "2026-08-10 07:08:10",
+      "price": 0.02616,
+      "score": 15,
+      "rsi": 34.04,
+      "macd": "Neutral",
+      "volume_surge": 0.32,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}}]
 }
