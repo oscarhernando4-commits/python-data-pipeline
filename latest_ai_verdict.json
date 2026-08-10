@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-10 11:12:21",
+  "timestamp": "2026-08-10 11:14:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta fragilidad con una clara tendencia a la baja en los activos principales y una falta de convicción institucional en las altcoins. Ningún candidato cumple con los criterios estrictos de riesgo y fuerza relativa exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en efectivo (USDT) y esperar a que el mercado defina una tendencia clara o un catalizador macro positivo.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad estructural. Ninguno de los candidatos analizados cumple con los criterios estrictos de Score Técnico (>= 55) y confirmación de soporte en el libro de órdenes, lo que obliga al comité a mantener una postura de preservación de capital (HOLD) para evitar pérdidas por volatilidad o 'falling knives'.",
   "top_candidates": [
+    {
+      "symbol": "LUNCUSDT",
+      "score": 70
+    },
     {
       "symbol": "LINKUSDT",
       "score": 60
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
@@ -19,12 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "LUNCUSDT",
+      "symbol": "CAKEUSDT",
       "score": 60
-    },
-    {
-      "symbol": "TAOUSDT",
-      "score": 50
     }
   ]
 }
