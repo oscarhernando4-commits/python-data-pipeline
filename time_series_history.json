@@ -1,42 +1,54 @@
 {
-  "LISTAUSDT": [
+  "NIGHTUSDT": [
     {
-      "timestamp": "2026-08-10 12:22:24",
-      "price": 0.0648,
+      "timestamp": "2026-08-10 17:24:14",
+      "price": 0.01835,
       "score": 0,
-      "rsi": 39.64,
+      "rsi": 42.19,
       "macd": "Neutral",
-      "volume_surge": 0.07,
+      "volume_surge": 0.01,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "PLUMEUSDT": [
+  "ORDIUSDT": [
     {
-      "timestamp": "2026-08-10 12:22:24",
-      "price": 0.01206,
-      "score": 0,
-      "rsi": 40.34,
+      "timestamp": "2026-08-10 17:24:14",
+      "price": 3.527,
+      "score": 35,
+      "rsi": 54.17,
       "macd": "Neutral",
-      "volume_surge": 0.2,
+      "volume_surge": 0.53,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "ZROUSDT": [
+  "ZBTUSDT": [
     {
-      "timestamp": "2026-08-10 12:22:24",
-      "price": 0.868,
-      "score": 60,
-      "rsi": 55.59,
+      "timestamp": "2026-08-10 17:24:14",
+      "price": 0.1048,
+      "score": 35,
+      "rsi": 61.97,
       "macd": "Neutral",
-      "volume_surge": 0.33,
+      "volume_surge": 0.3,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-10 17:24:14",
+      "price": 2.47e-06,
+      "score": 50,
+      "rsi": 52.62,
+      "macd": "Neutral",
+      "volume_surge": 0.77,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}
 }
