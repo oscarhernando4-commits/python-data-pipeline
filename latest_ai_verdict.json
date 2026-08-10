@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-10 12:38:21",
+  "timestamp": "2026-08-10 12:40:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura técnica débil. Ninguno de los candidatos cumple con los requisitos estrictos de riesgo y scoring establecidos por el comité, por lo que la decisión es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y distribución. Ninguno de los candidatos cumple con los criterios estrictos de riesgo-beneficio establecidos por el comité. Se prioriza la protección del capital sobre la ejecución de trades especulativos de baja calidad.",
   "top_candidates": [
     {
-      "symbol": "POLUSDT",
-      "score": 60
+      "symbol": "QNTUSDT",
+      "score": 70
     },
     {
       "symbol": "DOTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "HOMEUSDT",
       "score": 60
     },
     {
@@ -23,8 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "LTCUSDT",
-      "score": 50
+      "symbol": "ETCUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "POLUSDT",
+      "score": 55
     }
   ]
 }
