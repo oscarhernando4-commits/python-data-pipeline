@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-10 02:34:20",
+  "timestamp": "2026-08-10 02:36:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta fragilidad y aversión al riesgo. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, y la falta de profundidad en el libro de órdenes junto con la tendencia bajista generalizada hace que cualquier operación sea una trampa de valor. Se prioriza la preservación de capital.",
+  "reasoning": "El mercado presenta una debilidad estructural extrema. Ninguno de los candidatos analizados cumple con los criterios de convicción A+ (Score >= 55 y Bids > 55%). La estrategia institucional es preservar capital ante la alta probabilidad de volatilidad bajista y falta de convicción compradora.",
   "top_candidates": [
     {
-      "symbol": "PENGUUSDT",
+      "symbol": "NEXOUSDT",
       "score": 60
     },
     {
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "GNOUSDT",
-      "score": 60
-    },
-    {
       "symbol": "EPICUSDT",
       "score": 55
     },
     {
-      "symbol": "ENAUSDT",
+      "symbol": "JSTUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "SAGAUSDT",
       "score": 50
     }
   ]
