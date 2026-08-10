@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-10 13:28:20",
+  "timestamp": "2026-08-10 13:30:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral mínimo de Score Técnico (>= 55) ni con la confirmación de soporte en el libro de órdenes. La alta volatilidad y la falta de convicción institucional sugieren que el mercado sigue en una fase de distribución, por lo que la estrategia más rentable es mantener la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "El mercado se encuentra en un estado de alta toxicidad con una asimetría de pánico sistémico. Ningún activo cumple con el umbral de convicción A+ (Score >= 55) exigido por el Comité, por lo que la estrategia de supervivencia dicta mantener 100% de liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "GRAMUSDT",
       "score": 60
     },
     {
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "PYTHUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "LDOUSDT",
       "score": 60
     }
   ]
