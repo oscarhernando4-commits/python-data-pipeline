@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-10 16:22:22",
+  "timestamp": "2026-08-10 16:24:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y alta incertidumbre. Ninguno de los candidatos analizados cumple con el umbral de seguridad A+ (Score >= 55) ni con una dominancia de Bids que garantice una entrada de bajo riesgo. Se prioriza la preservación del capital sobre la especulación en un entorno de alta correlación negativa.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en un entorno 'Risk-Off' con una clara ausencia de soporte institucional en los activos analizados. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 55) y la memoria histórica de trades sugiere que operar en estas condiciones de mercado neutral/bajista resulta en pérdidas recurrentes. Se prioriza la preservación de capital sobre la ejecución especulativa.",
   "top_candidates": [
-    {
-      "symbol": "PAXGUSDT",
-      "score": 60
-    },
     {
       "symbol": "XAUTUSDT",
       "score": 60
     },
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "PAXGUSDT",
       "score": 60
     },
     {
@@ -23,8 +19,12 @@
       "score": 60
     },
     {
-      "symbol": "BTCUSDT",
-      "score": 50
+      "symbol": "ZAMAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "LUNCUSDT",
+      "score": 60
     }
   ]
 }
