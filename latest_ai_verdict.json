@@ -1,53 +1,62 @@
 {
-  "timestamp": "2026-08-10 18:12:21",
+  "timestamp": "2026-08-10 18:14:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y alta incertidumbre macroeconómica. Ninguno de los activos analizados cumple con el umbral de calidad A+ (Score >= 55) exigido por el comité para garantizar la preservación del capital. Se prioriza la liquidez en USDT hasta que la estructura de mercado muestre una reversión clara y soporte institucional definido.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad sistémica. Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 55) combinado con una estructura de libro de órdenes que garantice una entrada segura. La estrategia institucional es proteger el capital en liquidez hasta que el momentum se estabilice.",
   "top_candidates": [
+    {
+      "symbol": "ZAMAUSDT",
+      "score": 70,
+      "price": 0.04608,
+      "rsi_15m": 57.85,
+      "vol_surge": 1.61,
+      "trade_quality": "A+",
+      "macro_trend": "NEUTRAL"
+    },
     {
       "symbol": "XAUTUSDT",
       "score": 60,
-      "price": 4342.5,
-      "rsi_15m": 62.66,
-      "vol_surge": 0.1,
+      "price": 4342.38,
+      "rsi_15m": 62.57,
+      "vol_surge": 0.11,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "PAXGUSDT",
       "score": 60,
-      "price": 4355.9,
-      "rsi_15m": 61.92,
-      "vol_surge": 0.37,
+      "price": 4355.78,
+      "rsi_15m": 61.83,
+      "vol_surge": 0.38,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "BOMEUSDT",
+      "score": 60,
+      "price": 0.0008263,
+      "rsi_15m": 61.71,
+      "vol_surge": 5.65,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "JSTUSDT",
       "score": 60,
-      "price": 0.10154,
-      "rsi_15m": 66.78,
-      "vol_surge": 1.68,
+      "price": 0.10151,
+      "rsi_15m": 66.3,
+      "vol_surge": 1.8,
       "trade_quality": "B",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "ARBUSDT",
-      "score": 60,
-      "price": 0.0806,
-      "rsi_15m": 56.06,
-      "vol_surge": 0.48,
-      "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "INJUSDT",
       "score": 60,
-      "price": 4.465,
-      "rsi_15m": 56.67,
-      "vol_surge": 0.78,
+      "price": 4.461,
+      "rsi_15m": 55.29,
+      "vol_surge": 0.85,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -63,36 +72,27 @@
     {
       "symbol": "PYTHUSDT",
       "score": 60,
-      "price": 0.04296,
-      "rsi_15m": 58.92,
-      "vol_surge": 0.41,
+      "price": 0.04293,
+      "rsi_15m": 58.29,
+      "vol_surge": 0.45,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "LUNCUSDT",
       "score": 60,
-      "price": 5.018e-05,
-      "rsi_15m": 52.14,
-      "vol_surge": 0.41,
+      "price": 5.022e-05,
+      "rsi_15m": 53.35,
+      "vol_surge": 0.51,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "ETHUSDT",
       "score": 55,
-      "price": 1873.91,
-      "rsi_15m": 25.62,
-      "vol_surge": 0.48,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "DOGEUSDT",
-      "score": 50,
-      "price": 0.06977,
-      "rsi_15m": 49.53,
-      "vol_surge": 0.37,
+      "price": 1872.6,
+      "rsi_15m": 24.31,
+      "vol_surge": 0.57,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
