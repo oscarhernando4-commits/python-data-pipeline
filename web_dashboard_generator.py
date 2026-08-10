@@ -597,6 +597,8 @@ def generate_web_dashboard():
         </div>
     </div>
 
+    {active_position_monitor_html}
+
     <!-- TOP GRID: MIS ACTIVOS (BINANCE SPOT) + TRADING STATS REALES -->
     <div class="top-grid">
         <!-- BILLETERA REAL BINANCE -->

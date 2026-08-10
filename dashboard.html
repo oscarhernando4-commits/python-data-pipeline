@@ -34,6 +34,49 @@
             padding: 1.25rem 1.75rem;
         }
 
+        /* ============ ACTIVE POSITION LIVE MONITOR BANNER ============ */
+        .active-pos-banner {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.12), rgba(16, 185, 129, 0.08));
+            border: 1px solid rgba(6, 182, 212, 0.35);
+            border-radius: 16px; padding: 1.25rem; margin-bottom: 1.25rem;
+            box-shadow: 0 0 30px rgba(6, 182, 212, 0.15);
+        }
+        .active-pos-idle {
+            background: rgba(30, 41, 59, 0.3); border: 1px solid var(--card-border);
+            box-shadow: none; padding: 1rem 1.25rem;
+        }
+        .active-pos-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;
+        }
+        .active-pos-idle .active-pos-header { margin-bottom: 0; }
+        .active-pos-title { display: flex; align-items: center; gap: 0.6rem; font-size: 1.05rem; font-weight: 800; }
+        .active-pos-pulse {
+            width: 12px; height: 12px; background: var(--accent-emerald); border-radius: 50%;
+            box-shadow: 0 0 14px var(--accent-emerald); animation: pulse 1.2s infinite;
+        }
+        .active-pos-time { font-size: 0.8rem; color: var(--text-muted); font-weight: 600; }
+
+        .active-pos-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.85rem; margin-bottom: 1rem;
+        }
+        .pos-widget {
+            background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px; padding: 0.85rem 1rem;
+        }
+        .pos-widget-label { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
+        .pos-widget-val { font-size: 1.35rem; font-weight: 900; color: var(--text-main); margin-top: 0.2rem; }
+        .pos-widget-sub { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.1rem; font-weight: 600; }
+
+        .active-pos-footer {
+            display: flex; gap: 1rem; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.06);
+            padding-top: 0.75rem; font-size: 0.75rem; color: var(--text-muted);
+        }
+        .pos-shield-tag {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);
+            padding: 0.3rem 0.75rem; border-radius: 8px; font-weight: 600;
+        }
+
         /* ============ HEADER ============ */
         .header {
             display: flex; justify-content: space-between; align-items: center;
@@ -244,6 +287,47 @@
         </div>
     </div>
 
+    
+        <!-- ============ SEGUIMIENTO EN TIEMPO REAL POSICIÓN ACTIVA ============ -->
+        <div class="active-pos-banner">
+            <div class="active-pos-header">
+                <div class="active-pos-title">
+                    <span class="active-pos-pulse"></span>
+                    <span class="active-pos-symbol">🎯 POSICIÓN REAL EN VIVO: <b>WLFIUSDT</b></span>
+                    <span class="badge badge-long">BUY SPOT LONG</span>
+                </div>
+                <div class="active-pos-time">⏱️ Tiempo Abierto: <b>10 min</b> / 75 min (Escalera Time-Decay)</div>
+            </div>
+            <div class="active-pos-grid">
+                <div class="pos-widget">
+                    <div class="pos-widget-label">Capital Invertido</div>
+                    <div class="pos-widget-val">$17.47 USD</div>
+                    <div class="pos-widget-sub">327.10 WLFI</div>
+                </div>
+                <div class="pos-widget">
+                    <div class="pos-widget-label">Precio de Entrada</div>
+                    <div class="pos-widget-val">$0.0535</div>
+                    <div class="pos-widget-sub">Binance Spot Live</div>
+                </div>
+                <div class="pos-widget">
+                    <div class="pos-widget-label">Máximo Pico Alcanzado</div>
+                    <div class="pos-widget-val" style="color: var(--accent-emerald);">$0.0535</div>
+                    <div class="pos-widget-sub">Pico Flotante: +0.00%</div>
+                </div>
+                <div class="pos-widget">
+                    <div class="pos-widget-label">Piso Stop-Loss ATR</div>
+                    <div class="pos-widget-val" style="color: var(--accent-rose);">$0.0530</div>
+                    <div class="pos-widget-sub">Límite Salida: -0.96%</div>
+                </div>
+            </div>
+            <div class="active-pos-footer">
+                <div class="pos-shield-tag">🛡️ BTC Circuit Breaker: <b>🟢 ACTIVO</b></div>
+                <div class="pos-shield-tag">🧱 Orderbook Muro: <b>🟢 OK</b></div>
+                <div class="pos-shield-tag">🚀 Trailing Stop: <b>⚪ Esperando +2.0%</b></div>
+            </div>
+        </div>
+        
+
     <!-- TOP GRID: MIS ACTIVOS (BINANCE SPOT) + TRADING STATS REALES -->
     <div class="top-grid">
         <!-- BILLETERA REAL BINANCE -->
@@ -422,13 +506,13 @@
                     <div class="matrix-pnl" style="color: var(--accent-rose);">$-320.87 PnL Net | Win Rate 18.1%</div>
                 </div>
                 <div style="text-align: right;">
-                    <span class="badge badge-long">97 Cuentas en Posición</span>
-                    <div style="font-size: 0.72rem; color: var(--accent-emerald); margin-top: 0.3rem; font-weight: 700;">4 Símbolos Diversificados</div>
+                    <span class="badge badge-long">94 Cuentas en Posición</span>
+                    <div style="font-size: 0.72rem; color: var(--accent-emerald); margin-top: 0.3rem; font-weight: 700;">3 Símbolos Diversificados</div>
                 </div>
             </div>
             <div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 0.5rem; font-weight: 600;">Símbolos Activos en Paralelo (Offset Rotativo):</div>
             <div class="matrix-tags-box">
-                <span class="matrix-tag"><b>BTCUSDT</b> <small>(60)</small></span><span class="matrix-tag"><b>ZECUSDT</b> <small>(20)</small></span><span class="matrix-tag"><b>ALLOUSDT</b> <small>(14)</small></span><span class="matrix-tag"><b>WLFIUSDT</b> <small>(3)</small></span>
+                <span class="matrix-tag"><b>BTCUSDT</b> <small>(60)</small></span><span class="matrix-tag"><b>ZECUSDT</b> <small>(20)</small></span><span class="matrix-tag"><b>ALLOUSDT</b> <small>(14)</small></span>
             </div>
         </div>
 
@@ -461,7 +545,7 @@
         
         <tr class="cand-row">
             <td class="cand-rank">#2</td>
-            <td class="cand-symbol"><b>JSTUSDT</b></td>
+            <td class="cand-symbol"><b>SAGAUSDT</b></td>
             <td class="cand-score"><span class="score-badge score-high">60 Pts</span></td>
             <td class="cand-rsi">53.0</td>
             <td class="cand-vol">1.7x</td>
@@ -556,8 +640,9 @@
 
     <!-- FOOTER -->
     <footer>
-        Última actualización: <strong>2026-08-10 16:46:32</strong> | Súper-Cerebro Cuántico 24/7 Binance Spot Engine
-        <button onclick="window.location.reload()" style="margin-left: 15px; padding: 6px 14px; background: rgba(6, 182, 212, 0.2); border: 1px solid rgba(6, 182, 212, 0.4); color: #06b6d4; border-radius: 8px; cursor: pointer; font-weight: 600;">🔄 Actualizar Ahora</button>
+        <span>Última actualización: <strong>2026-08-10 11:45:50</strong> | Algoritmo Cuántico Binance 24/7</span>
+        <span class="countdown" id="countdown">Auto-refresh en: 30s</span>
+        <button class="refresh-btn" onclick="window.location.reload()">🔄 Actualizar Ahora</button>
     </footer>
 
     <script>
