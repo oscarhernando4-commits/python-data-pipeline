@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-10 06:20:22",
+  "timestamp": "2026-08-10 06:22:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "A pesar de que varios activos presentan un score técnico de 75, el entorno macroeconómico de miedo, la falta de dominancia clara en el libro de órdenes y el historial de pérdidas en condiciones neutrales obligan al comité a mantener una postura defensiva de espera (HOLD) para preservar el capital.",
+  "reasoning": "El mercado se encuentra en una fase de compresión sin una dirección clara. Ninguno de los candidatos cumple con el umbral de convicción A+ exigido por el comité, y el riesgo de operar en un entorno de miedo (Fear 30) con baja dominancia de compradores en el libro de órdenes es demasiado elevado. Se prioriza la preservación del capital hasta que se observe una ruptura de rango con volumen institucional confirmado.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
       "score": 75
     },
     {
-      "symbol": "ADAUSDT",
+      "symbol": "LINKUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
@@ -19,11 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "UNIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XLMUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     }
   ]
