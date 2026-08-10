@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-10 18:32:16",
+  "timestamp": "2026-08-10 13:32:43",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
@@ -8,15 +8,6 @@
   "top_candidates": [
     {
       "symbol": "INJUSDT",
-      "score": 60,
-      "price": 4.454,
-      "rsi_15m": 52.8,
-      "vol_surge": 0.04,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "ZAMAUSDT",
       "score": 60,
       "price": 0.04613,
       "rsi_15m": 58.67,
@@ -54,8 +45,8 @@
     {
       "symbol": "TSTUSDT",
       "score": 50,
-      "price": 0.02206,
-      "rsi_15m": 52.87,
+      "price": 0.02202,
+      "rsi_15m": 52.55,
       "vol_surge": 0.06,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
@@ -63,18 +54,9 @@
     {
       "symbol": "BOMEUSDT",
       "score": 50,
-      "price": 0.0008257,
-      "rsi_15m": 61.14,
+      "price": 0.0008261,
+      "rsi_15m": 61.48,
       "vol_surge": 0.13,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "THEUSDT",
-      "score": 50,
-      "price": 0.0648,
-      "rsi_15m": 50.69,
-      "vol_surge": 0.01,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -88,6 +70,24 @@
       "macro_trend": "NEUTRAL"
     },
     {
+      "symbol": "PENGUUSDT",
+      "score": 50,
+      "price": 0.006648,
+      "rsi_15m": 49.57,
+      "vol_surge": 0.06,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "THEUSDT",
+      "score": 50,
+      "price": 0.0648,
+      "rsi_15m": 50.69,
+      "vol_surge": 0.01,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "FILUSDT",
       "score": 50,
       "price": 0.7029,
@@ -97,20 +97,20 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "FILUSDT",
+      "symbol": "CAKEUSDT",
       "score": 50,
-      "price": 0.7026,
-      "rsi_15m": 57.13,
-      "vol_surge": 0.05,
+      "price": 1.449,
+      "rsi_15m": 54.19,
+      "vol_surge": 0.19,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "DASHUSDT",
+      "symbol": "SEIUSDT",
       "score": 50,
-      "price": 31.22,
-      "rsi_15m": 56.53,
-      "vol_surge": 0.0,
+      "price": 0.04173,
+      "rsi_15m": 51.31,
+      "vol_surge": 0.18,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
