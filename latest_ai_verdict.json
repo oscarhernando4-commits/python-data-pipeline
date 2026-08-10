@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 03:28:22",
+  "timestamp": "2026-08-10 03:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido unánimemente mantener la liquidez en USDT. A pesar de que algunos activos tienen scores técnicos elevados, la ausencia de datos de profundidad de mercado (Orderbook) y la alta volatilidad en un entorno de miedo sistémico no cumplen con los criterios de seguridad A+ exigidos por el CRO.",
+  "reasoning": "El mercado se encuentra en un estado de distribución institucional y falta de convicción, con la mayoría de los activos mostrando scores técnicos mediocres (<= 50). Ningún candidato cumple con el umbral de seguridad A+ (Score >= 55) exigido por el comité, por lo que la estrategia óptima es la preservación total del capital hasta que surja una señal de acumulación clara.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
-      "score": 85
+      "symbol": "SUNUSDT",
+      "score": 60
     },
     {
-      "symbol": "PEPEUSDT",
-      "score": 85
+      "symbol": "JSTUSDT",
+      "score": 55
     },
     {
-      "symbol": "QNTUSDT",
-      "score": 75
+      "symbol": "SAGAUSDT",
+      "score": 50
     },
     {
-      "symbol": "NEXOUSDT",
-      "score": 75
+      "symbol": "TUTUSDT",
+      "score": 50
     },
     {
-      "symbol": "REUSDT",
-      "score": 75
+      "symbol": "BMTUSDT",
+      "score": 50
     }
   ]
 }
