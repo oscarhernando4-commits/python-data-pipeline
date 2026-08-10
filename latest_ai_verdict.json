@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 00:14:19",
+  "timestamp": "2026-08-10 00:16:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta fragilidad con una correlación bajista predominante. Ninguno de los candidatos analizados supera el umbral de riesgo A+ exigido por el comité, y la falta de soporte claro en el libro de órdenes junto con el sentimiento de miedo (Fear & Greed 30) dictamina una postura defensiva de preservación de capital.",
+  "confidence": 95,
+  "reasoning": "El comité ha determinado por consenso unánime que el entorno actual es de alta fragilidad. Ninguno de los candidatos cumple con los requisitos estrictos de riesgo (Score >= 55 y soporte de ballenas confirmado), por lo que se prioriza la preservación del capital sobre la especulación en activos de baja capitalización.",
   "top_candidates": [
     {
       "symbol": "EPICUSDT",
       "score": 85
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "WLFIUSDT",
       "score": 75
     },
     {
-      "symbol": "BROCCOLI714USDT",
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
-      "symbol": "KAITOUSDT",
+      "symbol": "REUSDT",
       "score": 75
     },
     {
-      "symbol": "DEXEUSDT",
+      "symbol": "PARTIUSDT",
       "score": 75
     }
   ]
