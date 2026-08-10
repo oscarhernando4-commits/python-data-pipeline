@@ -1,26 +1,26 @@
 {
-  "timestamp": "2026-08-10 15:22:24",
+  "timestamp": "2026-08-10 15:24:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una estructura de alta fragilidad y falta de convicción institucional. Ninguno de los candidatos analizados alcanza el umbral de seguridad (Score >= 55) ni cuenta con una confirmación de soporte en el libro de órdenes, por lo que el comité ha decidido unánimemente mantener la posición en efectivo (HOLD) para preservar el capital.",
+  "reasoning": "Tras evaluar los 10 candidatos, ninguno cumple con el umbral de Score Técnico >= 55 combinado con una dominancia de Bids > 55% necesaria para una ejecución A+. El mercado se encuentra en una fase de alta incertidumbre y distribución, por lo que el comité ha decidido mantener la posición en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "ZROUSDT",
       "score": 60
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 50
+      "symbol": "ALLOUSDT",
+      "score": 60
     },
     {
-      "symbol": "WLDUSDT",
-      "score": 50
+      "symbol": "UNIUSDT",
+      "score": 55
     },
     {
-      "symbol": "PAXGUSDT",
-      "score": 50
+      "symbol": "ETHUSDT",
+      "score": 55
     },
     {
       "symbol": "BICOUSDT",
