@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-10 01:42:17",
+  "timestamp": "2026-08-10 01:44:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un régimen de alta aversión al riesgo con una correlación negativa en los activos principales. Ningún candidato cumple con los criterios estrictos de calidad A+ exigidos por el comité, por lo que la preservación del capital es la prioridad absoluta.",
+  "reasoning": "El mercado presenta una estructura de fragilidad sistémica extrema y falta de profundidad en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 55 y confirmación de soporte), por lo que la decisión institucional es mantener la liquidez en espera de una mejor configuración técnica.",
   "top_candidates": [
     {
       "symbol": "NEXOUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "PYTHUSDT",
       "score": 70
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "PENGUUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SUNUSDT",
       "score": 60
     }
   ]
