@@ -702,9 +702,9 @@ def run_infinite_trading_matrix_cycle():
             bs_trade_qual = bs_inst.get("trade_quality", "C_NOISE")
             target_vol_surge = bs_tech.get("indicators", {}).get("volume_surge_ratio", 1.0)
             
-            # Condición Híbrida: Score >= 58 Y (GBM Calidad A+/B O VolSurge >= 1.5x O Refugio O Gold Token)
+            # Condición Híbrida Calibrada: Score >= 58 Y (GBM Calidad A+/B O VolSurge >= 1.20x O Refugio O Score >= 60)
             is_gold_refuge = bs_sym in ["PAXGUSDT", "XAUTUSDT"]
-            is_quant_approved = bs_trade_qual in ("A+", "B") or target_vol_surge >= 1.5 or is_gold_refuge or bs_score >= 60
+            is_quant_approved = bs_trade_qual in ("A+", "B") or target_vol_surge >= 1.20 or is_gold_refuge or bs_score >= 60
             
             if bs_score >= 58 and is_quant_approved:
                 if is_btc_crashing and bs_sym not in ["BTCUSDT", "PAXGUSDT", "XAUTUSDT"]:
