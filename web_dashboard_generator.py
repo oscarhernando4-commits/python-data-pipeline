@@ -313,13 +313,16 @@ def generate_web_dashboard():
     c1_qual = top_1.get("trade_quality", "C_NOISE")
     c1_rsi_2m = top_1.get("rsi_2m", 50.0)
     c1_rsi_5m = top_1.get("rsi_5m", 50.0)
+    c1_price = top_1.get("price", 0.0)
+    c1_ma25 = top_1.get("ma25_15m", 0.0)
+    ma_structure_ok = c1_price >= c1_ma25 if (c1_price > 0 and c1_ma25 > 0) else True
     
     usdt_free = data_payload.get("usdt_free", 0.0)
     has_usdt = usdt_free >= 15.0
     no_open_pos = pos_sym == "NINGUNA"
     score_ok = c1_score >= 58
-    quant_confirm = c1_qual in ("A+", "B") or c1_vol >= 1.20 or c1_sym in ("PAXGUSDT", "XAUTUSDT") or c1_score >= 60
-    fast_rsi_ok = c1_rsi_2m <= 68 or c1_rsi_5m <= 68
+    quant_confirm = c1_qual in ("A+", "B") or c1_vol >= 1.20 or c1_sym in ("PAXGUSDT", "XAUTUSDT")
+    fast_rsi_ok = (c1_rsi_2m <= 68 or c1_rsi_5m <= 68) and ma_structure_ok
     btc_ok = True
     
     all_ready = has_usdt and no_open_pos and score_ok and quant_confirm and fast_rsi_ok and btc_ok
@@ -379,11 +382,11 @@ def generate_web_dashboard():
 
             <div class="checklist-item {'checklist-pass' if fast_rsi_ok else 'checklist-pending'}">
                 <div>
-                    <div class="checklist-title">5. Gatillo Alcista RSI (2m / 5m)</div>
-                    <div class="checklist-sub">Sin sobre-extensión impulsiva previa</div>
+                    <div class="checklist-title">5. Gatillo Alcista RSI & Estructura 15M</div>
+                    <div class="checklist-sub">Sin mecha de trampa por debajo de MA25</div>
                 </div>
                 <div class="checklist-sub" style="font-weight: 800; color: {'var(--accent-emerald)' if fast_rsi_ok else 'var(--accent-amber)'};">
-                    {'🟢 CUMPLIDO (RSI2m=' + f"{c1_rsi_2m:.1f}" + ')' if fast_rsi_ok else '🟡 ESPERANDO GATILLO 2M/5M'}
+                    {'🟢 CUMPLIDO (RSI2m=' + f"{c1_rsi_2m:.1f}" + ')' if fast_rsi_ok else ('🟡 TRAMPA MECHA 15M (Bajo MA25)' if not ma_structure_ok else '🟡 ESPERANDO GATILLO 2M/5M')}
                 </div>
             </div>
 
