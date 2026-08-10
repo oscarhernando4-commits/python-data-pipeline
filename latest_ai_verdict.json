@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-10 12:32:24",
+  "timestamp": "2026-08-10 12:34:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ establecidos por el comité. La incertidumbre macroeconómica y la falta de profundidad en el libro de órdenes obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "confidence": 95,
+  "reasoning": "El mercado se encuentra en un estado de distribución silenciosa con una asimetría de pánico estructural. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
-      "symbol": "HOMEUSDT",
+      "symbol": "WLFIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "DOTUSDT",
       "score": 60
     },
     {
@@ -21,10 +25,6 @@
     {
       "symbol": "VIRTUALUSDT",
       "score": 60
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 50
     }
   ]
 }
