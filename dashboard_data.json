@@ -1,30 +1,30 @@
 {
-  "updated_at": "2026-08-10 23:30:18",
-  "total_balance_usd": 20.02,
+  "updated_at": "2026-08-10 18:30:49",
+  "total_balance_usd": 19.99,
   "usdt_free": 0.1909,
   "bnb_free": 0.00398283,
-  "bnb_usd": 2.39,
-  "status": "🔵 En Vivo LONG (LINKUSDT @ $8.2890)",
+  "bnb_usd": 2.38,
+  "status": "🔵 En Vivo LONG (LINKUSDT @ $8.2940)",
   "position": {
     "symbol": "LINKUSDT",
     "quantity": 2.1,
     "entry_price": 8.314,
     "highest_price": 8.318,
-    "cost_usd": 17.41,
+    "cost_usd": 17.42,
     "side": "LONG",
     "break_even": false,
     "trailing_active": false,
     "adaptive_sl_pct": 0.6,
-    "holding_cycles": 17,
+    "holding_cycles": 18,
     "volatility_regime": "⏳ Escalera 20m: SL Apretado a -0.60%"
   },
   "verdict": {
-    "timestamp": "2026-08-10 23:30:18",
+    "timestamp": "2026-08-10 18:30:42",
     "selected_symbol": "NONE",
     "action": "HOLD",
     "approved": false,
     "confidence": 0,
-    "reasoning": "El mercado se encuentra en un estado de agotamiento sistémico con scores técnicos mediocres. Ningún activo cumple con los criterios de alta convicción (A+) establecidos por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la liquidez en USDT.",
+    "reasoning": "El mercado presenta una debilidad sistémica extrema sin activos que cumplan con los criterios de alta convicción (Score >= 55). Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre y baja rotación sectorial.",
     "top_candidates": [
       {
         "symbol": "DOGEUSDT",
@@ -40,28 +40,15 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "MORPHOUSDT",
-        "score": 50,
-        "price": 1.929,
-        "rsi_2m": 51.1,
-        "rsi_5m": 51.1,
-        "rsi_15m": 51.1,
+        "symbol": "LINKUSDT",
+        "score": 45,
+        "price": 8.297,
+        "rsi_2m": 52.58,
+        "rsi_5m": 52.58,
+        "rsi_15m": 52.58,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.0,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "KAITOUSDT",
-        "score": 50,
-        "price": 0.6729,
-        "rsi_2m": 51.37,
-        "rsi_5m": 51.37,
-        "rsi_15m": 51.37,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.0,
+        "vol_surge": 0.01,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
@@ -92,6 +79,19 @@
         "macro_trend": "NEUTRAL"
       },
       {
+        "symbol": "TUTUSDT",
+        "score": 40,
+        "price": 0.11187,
+        "rsi_2m": 30.82,
+        "rsi_5m": 30.82,
+        "rsi_15m": 30.82,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.07,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
         "symbol": "HOMEUSDT",
         "score": 40,
         "price": 0.00914,
@@ -105,12 +105,12 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "TUTUSDT",
-        "score": 40,
-        "price": 0.11189,
-        "rsi_2m": 30.84,
-        "rsi_5m": 30.84,
-        "rsi_15m": 30.84,
+        "symbol": "NILUSDT",
+        "score": 35,
+        "price": 0.03968,
+        "rsi_2m": 51.07,
+        "rsi_5m": 51.07,
+        "rsi_15m": 51.07,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 0.02,
@@ -118,12 +118,12 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "NILUSDT",
+        "symbol": "VELODROMEUSDT",
         "score": 35,
-        "price": 0.03974,
-        "rsi_2m": 51.73,
-        "rsi_5m": 51.73,
-        "rsi_15m": 51.73,
+        "price": 0.01753,
+        "rsi_2m": 54.43,
+        "rsi_5m": 54.43,
+        "rsi_15m": 54.43,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 0.0,
@@ -144,15 +144,15 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "GRAMUSDT",
+        "symbol": "BANANAS31USDT",
         "score": 35,
-        "price": 1.326,
-        "rsi_2m": 52.42,
-        "rsi_5m": 52.42,
-        "rsi_15m": 52.42,
+        "price": 0.009119,
+        "rsi_2m": 58.04,
+        "rsi_5m": 58.04,
+        "rsi_15m": 58.04,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.0,
+        "vol_surge": 0.01,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }
@@ -160,12 +160,12 @@
   },
   "verdict_history": [
     {
-      "timestamp": "2026-08-10 23:30:18",
+      "timestamp": "2026-08-10 18:30:42",
       "selected_symbol": "NONE",
       "action": "HOLD",
       "approved": false,
       "confidence": 0,
-      "reasoning": "El mercado se encuentra en un estado de agotamiento sistémico con scores técnicos mediocres. Ningún activo cumple con los criterios de alta convicción (A+) establecidos por el comité, por lo que la estrategia óptima es la preservación de capital mediante el mantenimiento de la liquidez en USDT.",
+      "reasoning": "El mercado presenta una debilidad sistémica extrema sin activos que cumplan con los criterios de alta convicción (Score >= 55). Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre y baja rotación sectorial.",
       "top_candidates": [
         {
           "symbol": "DOGEUSDT",
@@ -181,28 +181,15 @@
           "macro_trend": "NEUTRAL"
         },
         {
-          "symbol": "MORPHOUSDT",
-          "score": 50,
-          "price": 1.929,
-          "rsi_2m": 51.1,
-          "rsi_5m": 51.1,
-          "rsi_15m": 51.1,
+          "symbol": "LINKUSDT",
+          "score": 45,
+          "price": 8.297,
+          "rsi_2m": 52.58,
+          "rsi_5m": 52.58,
+          "rsi_15m": 52.58,
           "rsi_1h": 50.0,
           "rsi_4h": 50.0,
-          "vol_surge": 0.0,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "KAITOUSDT",
-          "score": 50,
-          "price": 0.6729,
-          "rsi_2m": 51.37,
-          "rsi_5m": 51.37,
-          "rsi_15m": 51.37,
-          "rsi_1h": 50.0,
-          "rsi_4h": 50.0,
-          "vol_surge": 0.0,
+          "vol_surge": 0.01,
           "trade_quality": "C_NOISE",
           "macro_trend": "NEUTRAL"
         },
@@ -233,6 +220,19 @@
           "macro_trend": "NEUTRAL"
         },
         {
+          "symbol": "TUTUSDT",
+          "score": 40,
+          "price": 0.11187,
+          "rsi_2m": 30.82,
+          "rsi_5m": 30.82,
+          "rsi_15m": 30.82,
+          "rsi_1h": 50.0,
+          "rsi_4h": 50.0,
+          "vol_surge": 0.07,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
           "symbol": "HOMEUSDT",
           "score": 40,
           "price": 0.00914,
@@ -246,12 +246,12 @@
           "macro_trend": "NEUTRAL"
         },
         {
-          "symbol": "TUTUSDT",
-          "score": 40,
-          "price": 0.11189,
-          "rsi_2m": 30.84,
-          "rsi_5m": 30.84,
-          "rsi_15m": 30.84,
+          "symbol": "NILUSDT",
+          "score": 35,
+          "price": 0.03968,
+          "rsi_2m": 51.07,
+          "rsi_5m": 51.07,
+          "rsi_15m": 51.07,
           "rsi_1h": 50.0,
           "rsi_4h": 50.0,
           "vol_surge": 0.02,
@@ -259,12 +259,12 @@
           "macro_trend": "NEUTRAL"
         },
         {
-          "symbol": "NILUSDT",
+          "symbol": "VELODROMEUSDT",
           "score": 35,
-          "price": 0.03974,
-          "rsi_2m": 51.73,
-          "rsi_5m": 51.73,
-          "rsi_15m": 51.73,
+          "price": 0.01753,
+          "rsi_2m": 54.43,
+          "rsi_5m": 54.43,
+          "rsi_15m": 54.43,
           "rsi_1h": 50.0,
           "rsi_4h": 50.0,
           "vol_surge": 0.0,
@@ -285,22 +285,22 @@
           "macro_trend": "NEUTRAL"
         },
         {
-          "symbol": "GRAMUSDT",
+          "symbol": "BANANAS31USDT",
           "score": 35,
-          "price": 1.326,
-          "rsi_2m": 52.42,
-          "rsi_5m": 52.42,
-          "rsi_15m": 52.42,
+          "price": 0.009119,
+          "rsi_2m": 58.04,
+          "rsi_5m": 58.04,
+          "rsi_15m": 58.04,
           "rsi_1h": 50.0,
           "rsi_4h": 50.0,
-          "vol_surge": 0.0,
+          "vol_surge": 0.01,
           "trade_quality": "C_NOISE",
           "macro_trend": "NEUTRAL"
         }
       ]
     },
     {
-      "timestamp": "2026-08-10 23:28:22",
+      "timestamp": "2026-08-10 18:28:43",
       "selected_symbol": "NONE",
       "action": "HOLD",
       "approved": false,
