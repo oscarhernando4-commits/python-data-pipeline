@@ -1,14 +1,22 @@
 {
-  "timestamp": "2026-08-10 02:54:25",
+  "timestamp": "2026-08-10 02:56:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y Confianza >= 70%) ni con la dominancia de Bids necesaria para mitigar el riesgo sistémico actual.",
+  "reasoning": "El mercado presenta una estructura de alta incertidumbre y falta de soporte institucional claro. Ningún candidato cumple con los criterios estrictos de riesgo y convicción definidos por el comité, por lo que se prioriza la preservación del capital sobre la especulación en un entorno de baja probabilidad de éxito.",
   "top_candidates": [
     {
       "symbol": "JSTUSDT",
       "score": 100
+    },
+    {
+      "symbol": "XLMUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "UNIUSDT",
+      "score": 75
     },
     {
       "symbol": "SHIBUSDT",
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "MORPHOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PENGUUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "POLUSDT",
       "score": 75
     }
   ]
