@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-10 17:16:20",
+  "timestamp": "2026-08-10 12:16:41",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
@@ -7,56 +7,56 @@
   "reasoning": "El mercado se encuentra en una fase de purga de especulación con una correlación negativa frente a activos de riesgo. Ningún candidato cumple con los criterios de convicción A+ (Score >= 55) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la operativa especulativa.",
   "top_candidates": [
     {
+      "symbol": "TSTUSDT",
+      "score": 60,
+      "price": 0.0221,
+      "rsi_15m": 52.25,
+      "vol_surge": 0.03,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "ARBUSDT",
+      "score": 60,
+      "price": 0.0807,
+      "rsi_15m": 59.31,
+      "vol_surge": 0.07,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "XPLUSDT",
       "score": 60,
-      "price": 0.07972,
-      "rsi_15m": 53.91,
-      "vol_surge": 0.09,
+      "price": 0.07969,
+      "rsi_15m": 53.65,
+      "vol_surge": 0.1,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "LDOUSDT",
       "score": 60,
-      "price": 0.295,
-      "rsi_15m": 57.94,
-      "vol_surge": 0.05,
+      "price": 0.2951,
+      "rsi_15m": 58.33,
+      "vol_surge": 0.08,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 50,
-      "price": 0.06977,
-      "rsi_15m": 48.85,
+      "symbol": "LDOUSDT",
+      "score": 60,
+      "price": 0.0916,
+      "rsi_15m": 60.12,
       "vol_surge": 0.02,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "PUMPUSDT",
-      "score": 50,
-      "price": 0.002776,
-      "rsi_15m": 57.51,
-      "vol_surge": 0.1,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "SNXXBUSDT",
-      "score": 50,
-      "price": 882.35,
-      "rsi_15m": 58.26,
-      "vol_surge": 0.02,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "ADAUSDT",
-      "score": 50,
-      "price": 0.196,
-      "rsi_15m": 51.14,
-      "vol_surge": 0.02,
+      "symbol": "EULUSDT",
+      "score": 60,
+      "price": 1.237,
+      "rsi_15m": 57.25,
+      "vol_surge": 0.03,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -70,29 +70,29 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "APTUSDT",
+      "symbol": "ADAUSDT",
       "score": 50,
-      "price": 0.592,
-      "rsi_15m": 50.19,
-      "vol_surge": 0.01,
+      "price": 0.196,
+      "rsi_15m": 51.14,
+      "vol_surge": 0.02,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "PUMPUSDT",
       "score": 50,
-      "price": 136.5,
-      "rsi_15m": 51.45,
-      "vol_surge": 0.0,
+      "price": 0.002774,
+      "rsi_15m": 57.18,
+      "vol_surge": 0.1,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "BROCCOLI714USDT",
+      "symbol": "MUBUSDT",
       "score": 50,
-      "price": 0.01958,
-      "rsi_15m": 63.26,
-      "vol_surge": 0.08,
+      "price": 882.15,
+      "rsi_15m": 58.07,
+      "vol_surge": 0.02,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
