@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-10 08:12:21",
+  "timestamp": "2026-08-10 08:14:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con confirmación de soporte en el libro de órdenes y volumen institucional). El mercado se encuentra en una fase de alta incertidumbre y el riesgo de operar activos con historial limitado o baja profundidad es inaceptable bajo las reglas de gestión de riesgo.",
+  "reasoning": "El mercado presenta una fragmentación excesiva y una falta de profundidad en el libro de órdenes. Ningún activo cumple con los criterios de alta convicción (Score >= 55 y Bids > 55%) exigidos por el comité para mitigar el riesgo de 'trampas de valor' y 'limpieza de stops'.",
   "top_candidates": [
     {
-      "symbol": "SUNUSDT",
+      "symbol": "MUBUSDT",
       "score": 85
     },
     {
@@ -15,15 +15,15 @@
       "score": 85
     },
     {
-      "symbol": "ASTERUSDT",
-      "score": 75
-    },
-    {
       "symbol": "SKYUSDT",
       "score": 75
     },
     {
-      "symbol": "SEIUSDT",
+      "symbol": "SKHYBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ASTERUSDT",
       "score": 75
     }
   ]
