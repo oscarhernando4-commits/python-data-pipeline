@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-10 17:48:29",
+  "timestamp": "2026-08-10 12:48:40",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
@@ -25,29 +25,11 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "TAOUSDT",
+      "symbol": "BANKUSDT",
       "score": 50,
-      "price": 203.1,
-      "rsi_15m": 49.71,
-      "vol_surge": 0.02,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "JSTUSDT",
-      "score": 50,
-      "price": 0.10137,
-      "rsi_15m": 65.65,
-      "vol_surge": 0.05,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "PEOPLEUSDT",
-      "score": 50,
-      "price": 0.00869,
-      "rsi_15m": 48.26,
-      "vol_surge": 0.06,
+      "price": 0.0389,
+      "rsi_15m": 55.6,
+      "vol_surge": 0.11,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -56,33 +38,6 @@
       "score": 50,
       "price": 0.6999,
       "rsi_15m": 50.4,
-      "vol_surge": 0.07,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 50,
-      "price": 1.33,
-      "rsi_15m": 49.18,
-      "vol_surge": 0.0,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "APTUSDT",
-      "score": 50,
-      "price": 0.592,
-      "rsi_15m": 50.35,
-      "vol_surge": 0.0,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "NEIROUSDT",
-      "score": 50,
-      "price": 7.338e-05,
-      "rsi_15m": 57.97,
       "vol_surge": 0.07,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
@@ -99,9 +54,45 @@
     {
       "symbol": "CRVUSDT",
       "score": 50,
-      "price": 0.2471,
-      "rsi_15m": 65.56,
-      "vol_surge": 0.06,
+      "price": 0.247,
+      "rsi_15m": 65.08,
+      "vol_surge": 0.07,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "NEIROUSDT",
+      "score": 50,
+      "price": 7.338e-05,
+      "rsi_15m": 57.97,
+      "vol_surge": 0.07,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "FORMUSDT",
+      "score": 50,
+      "price": 0.2171,
+      "rsi_15m": 55.38,
+      "vol_surge": 0.31,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "JSTUSDT",
+      "score": 50,
+      "price": 0.10137,
+      "rsi_15m": 65.65,
+      "vol_surge": 0.05,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "APTUSDT",
+      "score": 50,
+      "price": 0.592,
+      "rsi_15m": 50.35,
+      "vol_surge": 0.0,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
