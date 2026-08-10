@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 07:56:19",
+  "timestamp": "2026-08-10 07:58:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ exigido por el comité. La falta de profundidad en el libro de órdenes y la inestabilidad del mercado actual dictan una postura de espera para evitar pérdidas innecesarias.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de candidatos con scores técnicos de 75, la falta de profundidad en el libro de órdenes, la ausencia de un historial sólido y el entorno de miedo generalizado no cumplen con los estándares de seguridad y rentabilidad exigidos por el protocolo de riesgo.",
   "top_candidates": [
+    {
+      "symbol": "ETCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "score": 75
+    },
     {
       "symbol": "POLUSDT",
       "score": 75
     },
     {
+      "symbol": "TRUMPUSDT",
+      "score": 75
+    },
+    {
       "symbol": "SUNUSDT",
       "score": 75
-    },
-    {
-      "symbol": "MUBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "GNOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 70
     }
   ]
 }
