@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-10 02:50:20",
+  "timestamp": "2026-08-10 02:52:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una alta volatilidad y una purga selectiva que no ofrece una ventaja estadística clara. Dado que no se cumplen los criterios de convicción A+ (Score >= 55 y confirmación de soporte en libro de órdenes), la estrategia institucional es mantener la liquidez en espera de una estructura de mercado más favorable.",
+  "reasoning": "Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ y el entorno macroeconómico actual, sumado a la falta de profundidad de mercado verificable, hace que la estrategia más rentable sea la preservación de capital mediante el mantenimiento de la posición en efectivo.",
   "top_candidates": [
     {
+      "symbol": "JSTUSDT",
+      "score": 100
+    },
+    {
       "symbol": "SHIBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "UNIUSDT",
       "score": 75
     },
     {
@@ -15,15 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
-      "score": 75
-    },
-    {
       "symbol": "PENGUUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "CRVUSDT",
       "score": 75
     }
   ]
