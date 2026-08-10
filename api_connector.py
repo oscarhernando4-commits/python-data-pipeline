@@ -189,12 +189,20 @@ def get_real_balances():
     
     url = f"{BASE_URL}/api/v3/account"
     try:
-        res = requests.get(url, headers=headers, params=params, proxies=get_smart_proxy(), timeout=10)
+        res = requests.get(url, headers=headers, params=params, proxies=get_smart_proxy(), timeout=6)
         if res.status_code == 200:
             return res.json().get("balances", [])
-        return None
     except Exception:
-        return None
+        pass
+        
+    # Direct Connection Fallback for Local PC
+    try:
+        res = requests.get(url, headers=headers, params=params, proxies=None, timeout=6)
+        if res.status_code == 200:
+            return res.json().get("balances", [])
+    except Exception:
+        pass
+    return None
 
 def get_real_usdt_balance():
     balances = get_real_balances()
