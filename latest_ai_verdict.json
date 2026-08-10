@@ -1,22 +1,18 @@
 {
-  "timestamp": "2026-08-10 14:10:24",
+  "timestamp": "2026-08-10 14:12:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El comité ha determinado por consenso unánime que el entorno actual de mercado es de alta fragilidad y distribución silenciosa. Ningún activo cumple con los criterios estrictos de riesgo-beneficio y fuerza relativa exigidos por el protocolo A+, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica generalizada. Ninguno de los candidatos analizados cumple con los criterios estrictos de convicción A+ establecidos por el Comité. La falta de soporte institucional en el libro de órdenes y la alta volatilidad sin tendencia clara hacen que cualquier operación de compra sea un riesgo inaceptable para la preservación del capital.",
   "top_candidates": [
+    {
+      "symbol": "AVAXUSDT",
+      "score": 70
+    },
     {
       "symbol": "ATOMUSDT",
       "score": 70
-    },
-    {
-      "symbol": "WLFIUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "AVAXUSDT",
-      "score": 60
     },
     {
       "symbol": "SUIUSDT",
@@ -24,6 +20,10 @@
     },
     {
       "symbol": "SKHYBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ZROUSDT",
       "score": 60
     }
   ]
