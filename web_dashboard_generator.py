@@ -603,7 +603,10 @@ def generate_web_dashboard():
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(html_content)
         
-    print(f"📊 Dashboard Web Interactivo generado en: {html_path}")
+    try:
+        print(f"Dashboard Web Interactivo generado en: {html_path}")
+    except Exception:
+        pass
     return html_path
 
 if __name__ == "__main__":
