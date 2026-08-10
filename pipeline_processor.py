@@ -268,7 +268,8 @@ def run_infinite_trading_matrix_cycle():
     
     # Sort strictly by highest score first (Top Bullish Setups)
     bullish_candidates.sort(key=lambda x: x["score"], reverse=True)
-    top_10_candidates = bullish_candidates[:10]
+    top_15_candidates = bullish_candidates[:15]
+    top_10_candidates = top_15_candidates[:10]
 
     
     import learning_engine
@@ -289,10 +290,10 @@ def run_infinite_trading_matrix_cycle():
             for trend, stats in optimal["trend_analysis"].items():
                 bias_str += f"\n    - Trend '{trend}': {stats['win_rate']}% win rate ({stats['total']} trades)"
     
-    # Evaluate Top 10 Candidates with Gemini Flash / Pro LLM Sentinel
+    # Evaluate Top 15 Candidates with Gemini Flash / Pro LLM Sentinel
     gemini_res = {}
     selected_opp = None
-    if top_10_candidates:
+    if top_15_candidates:
         try:
             import text_analyzer
             import llm_router
@@ -304,14 +305,14 @@ def run_infinite_trading_matrix_cycle():
             )
             
             specific_news_map = {}
-            for cand in top_10_candidates:
+            for cand in top_15_candidates:
                 c_sym = cand["symbol"]
                 s_news = fundamental_sentinel.fetch_coin_specific_news(c_sym)
                 if s_news:
                     specific_news_map[c_sym] = s_news
             
             gemini_res = llm_router.review_top_candidates(
-                candidates_data_list=top_10_candidates,
+                candidates_data_list=top_15_candidates,
                 news_data={"headlines": cached_fundamental_report.get("recent_headlines", []), "specific_news": specific_news_map},
                 fear_greed=cached_fundamental_report.get("fear_and_greed", {"score": 50, "sentiment": "Neutral"}),
                 macro_context=macro_ctx,
@@ -328,6 +329,24 @@ def run_infinite_trading_matrix_cycle():
             else:
                 print(f"🧠 [COMITÉ AI] Ninguna moneda fue aprobada (NONE). El mercado es demasiado tóxico. Razonamiento: {gemini_res.get('reasoning')}")
             
+            # Build rich top candidates metrics for dashboard persistence
+            top_candidates_rich = []
+            for c in top_15_candidates[:10]:
+                csym = c["symbol"]
+                cdata = symbol_analysis_map.get(csym, {})
+                ctech = cdata.get("tech", {})
+                cinds = ctech.get("indicators", {})
+                cinst = ctech.get("institutional_analysis", {})
+                top_candidates_rich.append({
+                    "symbol": csym,
+                    "score": c["score"],
+                    "price": cdata.get("price", 0.0),
+                    "rsi_15m": cinds.get("rsi_15m", 50.0),
+                    "vol_surge": cinds.get("volume_surge_ratio", 1.0),
+                    "trade_quality": cinst.get("trade_quality", "C_NOISE"),
+                    "macro_trend": ctech.get("macro_trend_4h", "NEUTRAL")
+                })
+
             # Persist AI Super-Brain Verdict to JSON for Dashboards and Obsidian
             try:
                 verdict_data = {
@@ -337,7 +356,7 @@ def run_infinite_trading_matrix_cycle():
                     "approved": gemini_res.get("approved", False),
                     "confidence": gemini_res.get("confidence", 0),
                     "reasoning": gemini_res.get("reasoning", "Análisis Cuantitativo Institucional"),
-                    "top_candidates": [{"symbol": c["symbol"], "score": c["score"]} for c in top_10_candidates[:5]]
+                    "top_candidates": top_candidates_rich
                 }
                 vpath = os.path.join(os.path.dirname(__file__), "latest_ai_verdict.json")
                 with open(vpath, "w", encoding="utf-8") as vf:

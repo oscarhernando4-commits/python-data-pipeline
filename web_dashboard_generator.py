@@ -212,22 +212,33 @@ def generate_web_dashboard():
     pnl_color = "var(--accent-emerald)" if matrix_pnl >= 0 else "var(--accent-rose)"
     pnl_sign = "+" if matrix_pnl >= 0 else ""
     
-    # Top candidates table rows
+    # Top candidates table rows (Top 10 Quantum Scanner Ranking)
     top_candidates = verdict_data.get("top_candidates", [])
     candidates_rows = ""
-    for idx, cand in enumerate(top_candidates[:5], 1):
+    for idx, cand in enumerate(top_candidates[:10], 1):
         cand_sym = cand.get("symbol", "—")
         cand_score = cand.get("score", 0)
+        cand_price = cand.get("price", 0.0)
+        cand_rsi = cand.get("rsi_15m", 50.0)
+        cand_vol = cand.get("vol_surge", 1.0)
+        cand_qual = cand.get("trade_quality", "C_NOISE")
+        
+        qual_color = "var(--accent-emerald)" if cand_qual in ("A+", "B") else "var(--text-dim)"
+        status_str = '🟢 AI Aprobado' if (cand_sym == verdict_data.get('selected_symbol') and verdict_data.get('approved')) else '🔍 Monitoreando'
+        
         candidates_rows += f"""
         <tr class="cand-row">
             <td class="cand-rank">#{idx}</td>
             <td class="cand-symbol"><b>{cand_sym}</b></td>
             <td class="cand-score"><span class="score-badge {'score-high' if cand_score >= 60 else 'score-mid'}">{cand_score} Pts</span></td>
-            <td class="cand-status">{'🟢 Aprobado' if idx == 1 and verdict_data.get('approved') else '🔍 Monitoreando'}</td>
+            <td class="cand-rsi">{cand_rsi:.1f}</td>
+            <td class="cand-vol">{cand_vol:.1f}x</td>
+            <td class="cand-qual"><b style="color: {qual_color};">{cand_qual}</b></td>
+            <td class="cand-status">{status_str}</td>
         </tr>
         """
     if not candidates_rows:
-        candidates_rows = '<tr><td colspan="4" style="text-align:center; color: var(--text-dim); padding: 1rem;">Analizando mercado...</td></tr>'
+        candidates_rows = '<tr><td colspan="7" style="text-align:center; color: var(--text-dim); padding: 1rem;">Analizando mercado...</td></tr>'
         
     # Generate HTML Dashboard
     html_content = f"""<!DOCTYPE html>
@@ -576,13 +587,16 @@ def generate_web_dashboard():
 
         <!-- TOP RANKING ESCÁNER -->
         <div class="candidates-card">
-            <div class="card-heading">📊 TOP OPORTUNIDADES DEL ESCÁNER CUÁNTICO</div>
+            <div class="card-heading">📊 TOP 10 OPORTUNIDADES DEL ESCÁNER CUÁNTICO</div>
             <table class="cand-table">
                 <thead>
                     <tr>
                         <th>#</th>
                         <th>Símbolo</th>
                         <th>Score</th>
+                        <th>RSI 15m</th>
+                        <th>Vol Surge</th>
+                        <th>Grado GBM</th>
                         <th>Estado</th>
                     </tr>
                 </thead>
