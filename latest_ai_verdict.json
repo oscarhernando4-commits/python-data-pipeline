@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 16:56:27",
+  "timestamp": "2026-08-10 11:56:48",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación generalizada con una correlación bajista extrema. Ningún activo cumple con el requisito de Score Técnico >= 55 ni presenta una estructura de soporte institucional en el libro de órdenes. La estrategia de preservación de capital dicta mantener la liquidez en USDT hasta que el mercado muestre una divergencia alcista clara y una rotación de capital definida.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "C98USDT",
@@ -18,18 +18,18 @@
     {
       "symbol": "TUTUSDT",
       "score": 50,
-      "price": 0.13042,
-      "rsi_15m": 49.6,
-      "vol_surge": 0.75,
+      "price": 0.13038,
+      "rsi_15m": 49.57,
+      "vol_surge": 0.76,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "KAITOUSDT",
       "score": 50,
-      "price": 0.6799,
-      "rsi_15m": 50.36,
-      "vol_surge": 0.16,
+      "price": 0.01925,
+      "rsi_15m": 58.97,
+      "vol_surge": 0.43,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -43,6 +43,24 @@
       "macro_trend": "NEUTRAL"
     },
     {
+      "symbol": "ACEUSDT",
+      "score": 50,
+      "price": 0.1184,
+      "rsi_15m": 54.37,
+      "vol_surge": 0.78,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "score": 50,
+      "price": 0.6799,
+      "rsi_15m": 50.36,
+      "vol_surge": 0.16,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "BANKUSDT",
       "score": 50,
       "price": 0.0388,
@@ -52,34 +70,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "JSTUSDT",
-      "score": 50,
-      "price": 0.10089,
-      "rsi_15m": 55.74,
-      "vol_surge": 0.8,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "REUSDT",
-      "score": 50,
-      "price": 0.1184,
-      "rsi_15m": 54.37,
-      "vol_surge": 0.78,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "BROCCOLI714USDT",
-      "score": 50,
-      "price": 0.0193,
-      "rsi_15m": 59.67,
-      "vol_surge": 0.42,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "ACEUSDT",
+      "symbol": "NEIROUSDT",
       "score": 50,
       "price": 7.261e-05,
       "rsi_15m": 50.46,
@@ -88,11 +79,20 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "WLFIUSDT",
-      "score": 45,
-      "price": 0.0535,
-      "rsi_15m": 70.69,
-      "vol_surge": 1.98,
+      "symbol": "SOLVUSDT",
+      "score": 50,
+      "price": 0.00251,
+      "rsi_15m": 51.55,
+      "vol_surge": 0.53,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "JSTUSDT",
+      "score": 50,
+      "price": 0.10091,
+      "rsi_15m": 56.19,
+      "vol_surge": 0.83,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
