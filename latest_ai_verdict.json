@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 08:26:22",
+  "timestamp": "2026-08-10 08:28:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de indecisión técnica y macroeconómica. Ninguno de los candidatos cumple con los requisitos de convicción A+ (Score >= 55 con soporte de libro de órdenes claro). La estrategia institucional prioriza la preservación del capital sobre la especulación en un entorno de baja profundidad y alta volatilidad, por lo que se mantiene la posición en efectivo.",
+  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos aceptables, la falta de dominancia compradora en el libro de órdenes y la alta probabilidad de 'trampas de valor' en el entorno actual de miedo (Fear 30) no cumplen con los criterios de convicción A+ exigidos por el Chief Risk Officer.",
   "top_candidates": [
-    {
-      "symbol": "SOLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
-      "score": 75
-    },
     {
       "symbol": "POLUSDT",
       "score": 75
     },
     {
-      "symbol": "APTUSDT",
+      "symbol": "VETUSDT",
       "score": 75
     },
     {
-      "symbol": "VETUSDT",
+      "symbol": "LUNCUSDT",
       "score": 75
+    },
+    {
+      "symbol": "XRPUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "SOLUSDT",
+      "score": 70
     }
   ]
 }
