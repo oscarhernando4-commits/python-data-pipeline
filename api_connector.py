@@ -113,8 +113,14 @@ def get_smart_proxy():
 PROXY_URL = FIXIE_POOL[0]
 PROXIES = get_proxy()
 
-API_KEY = os.getenv("BINANCE_REAL_API_KEY", "")
-API_SECRET = os.getenv("BINANCE_REAL_API_SECRET", "")
+def get_api_key():
+    return os.getenv("BINANCE_REAL_API_KEY", "").strip()
+
+def get_api_secret():
+    return os.getenv("BINANCE_REAL_API_SECRET", "").strip()
+
+API_KEY = get_api_key()
+API_SECRET = get_api_secret()
 BASE_URL = "https://api.binance.com"
 FAPI_URL = "https://fapi.binance.com"
 
@@ -314,9 +320,11 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
         "timestamp": timestamp
     }
     query_string = urlencode(params)
-    signature = hmac.new(API_SECRET.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
+    api_k = get_api_key()
+    api_s = get_api_secret()
+    signature = hmac.new(api_s.encode("utf-8"), query_string.encode("utf-8"), hashlib.sha256).hexdigest()
     params["signature"] = signature
-    headers = {"X-MBX-APIKEY": API_KEY}
+    headers = {"X-MBX-APIKEY": api_k}
     
     url = f"{BASE_URL}/api/v3/order"
     try:
