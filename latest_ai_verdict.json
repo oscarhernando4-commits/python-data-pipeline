@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-10 13:06:24",
+  "timestamp": "2026-08-10 13:08:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "Ninguno de los candidatos cumple con los criterios estrictos de calidad A+ (Score >= 55) y la estructura de mercado actual es altamente inestable. Se recomienda mantener 100% de la liquidez en USDT hasta que los datos macroeconómicos (IPC) proporcionen una dirección clara y los scores técnicos mejoren.",
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55) ni con la confirmación de soporte en el libro de órdenes necesaria para mitigar el riesgo en un mercado de alta incertidumbre.",
   "top_candidates": [
     {
-      "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ALGOUSDT",
+      "symbol": "NEARUSDT",
       "score": 60
     },
     {
@@ -19,11 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "PYTHUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     },
     {
       "symbol": "ARBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "PYTHUSDT",
       "score": 60
     }
   ]
