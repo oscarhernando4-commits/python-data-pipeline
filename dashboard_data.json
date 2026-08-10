@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 08:18:21",
+  "updated_at": "2026-08-10 08:20:20",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 55 con confirmación de volumen y soporte de libro de órdenes). La alta probabilidad de 'trampas de liquidez' en el entorno actual de mercado neutral obliga a la preservación total del capital mediante la política de 'HOLD'."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y Bids > 55%) necesario para mitigar el riesgo en un entorno de mercado neutral y volátil, por lo que se prioriza la preservación del capital."
   }
 }

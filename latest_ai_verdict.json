@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-10 08:18:21",
+  "timestamp": "2026-08-10 08:20:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 55 con confirmación de volumen y soporte de libro de órdenes). La alta probabilidad de 'trampas de liquidez' en el entorno actual de mercado neutral obliga a la preservación total del capital mediante la política de 'HOLD'.",
+  "confidence": 0,
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y Bids > 55%) necesario para mitigar el riesgo en un entorno de mercado neutral y volátil, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "WLFIUSDT",
       "score": 75
     },
     {
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "BICOUSDT",
+      "symbol": "EPICUSDT",
       "score": 65
     }
   ]
