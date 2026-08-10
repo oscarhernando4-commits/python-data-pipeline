@@ -1,11 +1,19 @@
 {
-  "timestamp": "2026-08-10 02:36:18",
+  "timestamp": "2026-08-10 02:38:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad estructural extrema. Ninguno de los candidatos analizados cumple con los criterios de convicción A+ (Score >= 55 y Bids > 55%). La estrategia institucional es preservar capital ante la alta probabilidad de volatilidad bajista y falta de convicción compradora.",
+  "confidence": 95,
+  "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 55) y la confirmación de volumen institucional necesaria. El mercado se encuentra en un estado de distribución forzada y alta incertidumbre, lo que hace que cualquier posición en largo sea estadísticamente desfavorable según nuestra memoria histórica.",
   "top_candidates": [
+    {
+      "symbol": "PENGUUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "POLUSDT",
+      "score": 60
+    },
     {
       "symbol": "NEXOUSDT",
       "score": 60
@@ -17,14 +25,6 @@
     {
       "symbol": "EPICUSDT",
       "score": 55
-    },
-    {
-      "symbol": "JSTUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "SAGAUSDT",
-      "score": 50
     }
   ]
 }

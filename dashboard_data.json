@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 02:36:18",
+  "updated_at": "2026-08-10 02:38:18",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado presenta una debilidad estructural extrema. Ninguno de los candidatos analizados cumple con los criterios de convicción A+ (Score >= 55 y Bids > 55%). La estrategia institucional es preservar capital ante la alta probabilidad de volatilidad bajista y falta de convicción compradora."
+    "reasoning": "Ningún candidato cumple con el umbral de convicción A+ (Score >= 55) y la confirmación de volumen institucional necesaria. El mercado se encuentra en un estado de distribución forzada y alta incertidumbre, lo que hace que cualquier posición en largo sea estadísticamente desfavorable según nuestra memoria histórica."
   }
 }
