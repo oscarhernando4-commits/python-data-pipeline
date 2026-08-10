@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-08-10 15:04:25",
+  "timestamp": "2026-08-10 15:06:26",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y debilidad institucional. Ninguno de los candidatos cumple con el umbral de Score A+ (>= 55) ni con la confirmación de soporte en el libro de órdenes. La estrategia institucional es preservar el capital en USDT hasta que la rotación de capital hacia sectores de valor sea evidente y no una trampa de liquidez.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los requisitos mínimos de seguridad y rentabilidad exigidos. Ningún activo ha superado el umbral de Score A+ (55), y la volatilidad actual junto con la falta de datos de liquidez en el libro de órdenes aumenta el riesgo de pérdidas. Se mantiene la posición en efectivo para evitar la exposición a una posible capitulación técnica.",
   "top_candidates": [
     {
       "symbol": "WLDUSDT",
-      "score": 60
+      "score": 50
     },
     {
-      "symbol": "SAGAUSDT",
-      "score": 60
+      "symbol": "MUBARAKUSDT",
+      "score": 50
     },
     {
       "symbol": "PAXGUSDT",
@@ -23,7 +23,7 @@
       "score": 50
     },
     {
-      "symbol": "XAUTUSDT",
+      "symbol": "BICOUSDT",
       "score": 50
     }
   ]
