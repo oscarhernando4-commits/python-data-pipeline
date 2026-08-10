@@ -1,38 +1,25 @@
 {
-  "1000CATUSDT": [
+  "LUNCUSDT": [
     {
-      "timestamp": "2026-08-10 04:28:10",
-      "price": 0.00197,
-      "score": 70,
-      "rsi": 55.29,
-      "macd": "Neutral",
-      "volume_surge": 1.97,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "JTOUSDT": [
-    {
-      "timestamp": "2026-08-10 04:28:10",
-      "price": 0.5419,
+      "timestamp": "2026-08-10 04:30:12",
+      "price": 5.007e-05,
       "score": 35,
-      "rsi": 74.08,
+      "rsi": 53.98,
       "macd": "Neutral",
-      "volume_surge": 2.89,
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "SYNUSDT": [
+  "TIAUSDT": [
     {
-      "timestamp": "2026-08-10 04:28:10",
-      "price": 0.10473,
+      "timestamp": "2026-08-10 04:30:12",
+      "price": 0.3222,
       "score": 15,
-      "rsi": 43.16,
+      "rsi": 43.46,
       "macd": "Neutral",
-      "volume_surge": 0.31,
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -40,12 +27,25 @@
   ],
   "ACTUSDT": [
     {
-      "timestamp": "2026-08-10 04:28:10",
-      "price": 0.01197,
-      "score": 65,
-      "rsi": 67.67,
+      "timestamp": "2026-08-10 04:30:12",
+      "price": 0.01199,
+      "score": 25,
+      "rsi": 68.05,
       "macd": "Neutral",
-      "volume_surge": 0.8,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-10 04:30:12",
+      "price": 0.5416,
+      "score": 25,
+      "rsi": 73.82,
+      "macd": "Neutral",
+      "volume_surge": 0.03,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -53,16 +53,28 @@
   ],
   "KITEUSDT": [
     {
-      "timestamp": "2026-08-10 04:28:10",
+      "timestamp": "2026-08-10 04:30:12",
       "price": 0.1014,
-      "score": 40,
-      "rsi": 71.49,
+      "score": 10,
+      "rsi": 70.34,
       "macd": "Neutral",
-      "volume_surge": 0.63,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SYNUSDT": [
+    {
+      "timestamp": "2026-08-10 04:30:13",
+      "price": 0.10438,
+      "score": 0,
+      "rsi": 41.21,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}
 }

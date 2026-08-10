@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 04:28:17",
+  "updated_at": "2026-08-10 04:30:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que el mercado actual es altamente frágil y carece de la convicción necesaria para una operativa de alta probabilidad. Se prioriza la preservación del capital (Regla #1) ante la falta de señales claras de soporte institucional y la alta probabilidad de 'bull traps' en los activos analizados."
+    "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral mínimo de Score Técnico (>= 55) ni con la confirmación de soporte en el libro de órdenes. La alta volatilidad y la falta de convicción institucional sugieren un entorno de alta probabilidad de pérdida, por lo que el comité decide mantener la posición en efectivo (HOLD) para evitar el riesgo de 'falling knives'."
   }
 }
