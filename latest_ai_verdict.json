@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 16:06:23",
-  "selected_symbol": "PAXGUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 72,
-  "reasoning": "El mercado cripto general se encuentra en una fase de capitulación técnica con scores bajos. PAXGUSDT es el único activo que cumple con el mandato de convicción A+ (Score 70), respaldado por la rotación de capital hacia activos de refugio (RWA) y un volumen de compra institucional significativo. Se prioriza la protección del capital mediante un estricto control de riesgo.",
+  "timestamp": "2026-08-10 11:06:35",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "PAXGUSDT",
@@ -15,15 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "WLFIUSDT",
+      "score": 60
+    },
+    {
       "symbol": "SPYBUSDT",
       "score": 60
     },
     {
       "symbol": "ZAMAUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XPLUSDT",
       "score": 60
     }
   ]

@@ -470,26 +470,74 @@ def generate_web_dashboard():
         </div>
     </div>
 
+    <!-- ============ MIS ACTIVOS (Binance-style) ============ -->
+    <div class="wallet-section">
+        <div class="section-title" style="background: linear-gradient(90deg, var(--accent-amber), var(--accent-emerald)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.75rem;">
+            <span style="-webkit-text-fill-color: initial;">💰</span> MIS ACTIVOS — BILLETERA SPOT BINANCE
+        </div>
+        <div class="wallet-total">
+            <div class="wallet-total-label">Saldo Total Estimado</div>
+            <div class="wallet-total-value">${data_payload['total_balance_usd']:.2f} <span class="wallet-total-currency">USD</span></div>
+        </div>
+        <div class="wallet-tabs">
+            <div class="wallet-tab wallet-tab-active">Vista de activos</div>
+            <div class="wallet-tab">Vista de cuenta</div>
+        </div>
+        <div class="assets-table">
+            <div class="assets-header">
+                <div class="assets-col-name">Activo</div>
+                <div class="assets-col-amount">Importe</div>
+            </div>
+            <div class="asset-row">
+                <div class="asset-info">
+                    <div class="asset-icon asset-icon-usdt">₮</div>
+                    <div>
+                        <div class="asset-name">USDT</div>
+                        <div class="asset-fullname">TetherUS</div>
+                    </div>
+                </div>
+                <div class="asset-amounts">
+                    <div class="asset-qty">{data_payload['usdt_free']:.8f}</div>
+                    <div class="asset-usd">{data_payload['usdt_free']:.2f} $</div>
+                </div>
+            </div>
+            <div class="asset-row">
+                <div class="asset-info">
+                    <div class="asset-icon asset-icon-bnb">B</div>
+                    <div>
+                        <div class="asset-name">BNB</div>
+                        <div class="asset-fullname">BNB</div>
+                    </div>
+                </div>
+                <div class="asset-amounts">
+                    <div class="asset-qty">{data_payload['bnb_free']:.8f}</div>
+                    <div class="asset-usd">{account_data.get('_cached_bnb_usd', 2.46):.2f} $</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ TRADING STATS ============ -->
     <div class="grid-metrics">
         <div class="card">
-            <div class="card-title">Capital Neto Real</div>
-            <div class="card-value">${data_payload['total_balance_usd']:.2f}</div>
-            <div class="card-sub">💵 USDT en Binance Spot</div>
-        </div>
-        <div class="card">
-            <div class="card-title">Posición Activa</div>
+            <div class="card-title">Posicion Activa</div>
             <div class="card-value">{data_payload['position']['symbol']}</div>
-            <div class="card-sub">💵 Entrada: ${data_payload['position']['entry_price']:.4f}</div>
+            <div class="card-sub">{'📈 Entrada: $' + f"{data_payload['position']['entry_price']:.4f}" if data_payload['position']['symbol'] != 'NINGUNA' else '🔒 100% Liquidez en USDT'}</div>
         </div>
         <div class="card">
-            <div class="card-title">Matrix Simulada (100 Cuentas)</div>
+            <div class="card-title">Trades Ejecutados</div>
+            <div class="card-value">{account_data.get('trades_count', 0)}</div>
+            <div class="card-sub" style="color: var(--accent-emerald);">✅ {account_data.get('wins', 0)}W / <span style="color: var(--accent-rose);">❌ {account_data.get('losses', 0)}L</span></div>
+        </div>
+        <div class="card">
+            <div class="card-title">PnL Neto Real</div>
+            <div class="card-value" style="color: {'var(--accent-emerald)' if account_data.get('net_pnl_usd', 0) >= 0 else 'var(--accent-rose)'};">{'+'  if account_data.get('net_pnl_usd', 0) >= 0 else ''}${account_data.get('net_pnl_usd', 0):.2f}</div>
+            <div class="card-sub">Desde deposito inicial ${account_data.get('initial_deposit_usdt', 17.13):.2f}</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Matrix 100 Cuentas</div>
             <div class="card-value">${matrix_total:,.2f}</div>
             <div class="card-sub" style="color: {pnl_color};">{pnl_sign}${matrix_pnl:,.2f} PnL | WR {matrix_wr:.1f}%</div>
-        </div>
-        <div class="card">
-            <div class="card-title">Stop-Loss / Trailing</div>
-            <div class="card-value">±{data_payload['position']['adaptive_sl_pct']}%</div>
-            <div class="card-sub">{data_payload['position']['volatility_regime']}</div>
         </div>
     </div>
 
