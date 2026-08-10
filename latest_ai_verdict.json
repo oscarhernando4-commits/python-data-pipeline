@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-10 18:36:17",
+  "timestamp": "2026-08-10 13:36:39",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
@@ -45,18 +45,9 @@
     {
       "symbol": "ETHUSDT",
       "score": 55,
-      "price": 1872.0,
+      "price": 1872.01,
       "rsi_15m": 24.55,
       "vol_surge": 0.12,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "EPICUSDT",
-      "score": 50,
-      "price": 0.458,
-      "rsi_15m": 47.05,
-      "vol_surge": 0.22,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -65,16 +56,16 @@
       "score": 50,
       "price": 0.02206,
       "rsi_15m": 52.87,
-      "vol_surge": 0.27,
+      "vol_surge": 0.28,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "THEUSDT",
+      "symbol": "EPICUSDT",
       "score": 50,
-      "price": 0.0649,
-      "rsi_15m": 51.46,
-      "vol_surge": 0.18,
+      "price": 0.4575,
+      "rsi_15m": 46.76,
+      "vol_surge": 0.23,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -88,11 +79,38 @@
       "macro_trend": "NEUTRAL"
     },
     {
+      "symbol": "THEUSDT",
+      "score": 50,
+      "price": 0.0649,
+      "rsi_15m": 51.46,
+      "vol_surge": 0.18,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "DASHUSDT",
       "score": 50,
       "price": 31.2,
       "rsi_15m": 55.08,
       "vol_surge": 0.2,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "SEIUSDT",
+      "score": 50,
+      "price": 0.04172,
+      "rsi_15m": 50.7,
+      "vol_surge": 0.44,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "PLUMEUSDT",
+      "score": 50,
+      "price": 0.01234,
+      "rsi_15m": 58.76,
+      "vol_surge": 0.49,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
