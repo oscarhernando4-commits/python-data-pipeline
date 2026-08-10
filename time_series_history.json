@@ -1,12 +1,38 @@
 {
-  "KITEUSDT": [
+  "XPLUSDT": [
     {
-      "timestamp": "2026-08-10 03:10:09",
-      "price": 0.0997,
-      "score": 30,
-      "rsi": 56.56,
+      "timestamp": "2026-08-10 03:12:10",
+      "price": 0.07879,
+      "score": 35,
+      "rsi": 57.92,
       "macd": "Neutral",
-      "volume_surge": 0.65,
+      "volume_surge": 0.33,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "FFUSDT": [
+    {
+      "timestamp": "2026-08-10 03:12:10",
+      "price": 0.06368,
+      "score": 35,
+      "rsi": 55.82,
+      "macd": "Neutral",
+      "volume_surge": 0.28,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SYNUSDT": [
+    {
+      "timestamp": "2026-08-10 03:12:10",
+      "price": 0.10445,
+      "score": 0,
+      "rsi": 40.64,
+      "macd": "Neutral",
+      "volume_surge": 0.35,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50

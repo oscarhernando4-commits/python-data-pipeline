@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-10 03:10:21",
+  "timestamp": "2026-08-10 03:12:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta toxicidad y dispersión. Ninguno de los candidatos cumple con el requisito estricto de Score A+ (>= 55) combinado con una dominancia de Bids superior al 55%. La estrategia institucional es proteger el capital y esperar una señal de mayor calidad.",
+  "reasoning": "El mercado se encuentra en un estado de estrés sistémico con una correlación bajista predominante. Ninguno de los activos analizados cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia de preservación de capital es la única opción viable.",
   "top_candidates": [
     {
       "symbol": "MMTUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XLMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PEPEUSDT",
       "score": 60
     },
     {
@@ -23,7 +15,15 @@
       "score": 60
     },
     {
+      "symbol": "SUNUSDT",
+      "score": 60
+    },
+    {
       "symbol": "ARBUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "REUSDT",
       "score": 60
     }
   ]
