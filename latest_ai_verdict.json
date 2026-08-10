@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-10 06:12:20",
+  "timestamp": "2026-08-10 06:14:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido unánimemente mantener la liquidez en USDT. A pesar de que algunos activos tienen scores técnicos de 85, la falta de profundidad en el libro de órdenes y la alta tasa de fallos en el historial reciente para condiciones de mercado neutrales impiden la ejecución de cualquier orden de compra bajo los estándares de riesgo A+.",
+  "reasoning": "El mercado se encuentra en una fase de consolidación con alta incertidumbre y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con los criterios de convicción A+ (Score >= 55 con soporte de ballenas confirmado), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar la exposición a una posible trampa de liquidez.",
   "top_candidates": [
     {
-      "symbol": "XLMUSDT",
+      "symbol": "EPICUSDT",
       "score": 85
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "XLMUSDT",
       "score": 85
     },
     {
