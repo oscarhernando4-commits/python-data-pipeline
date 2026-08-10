@@ -266,6 +266,17 @@ def analyze_institutional_grade(symbol='BTCUSDT', account_balance=10000.0, risk_
 
     volume_surge_ratio = round(curr_vol / avg_vol_15m, 2) if avg_vol_15m > 0 else 1.0
 
+    # 🏛️ ANÁLISIS INSTITUCIONAL: Movimiento Browniano + Ornstein-Uhlenbeck
+    try:
+        import quant_institutional
+        inst_analysis = quant_institutional.analyze_institutional(closes_15m, symbol)
+        gbm_data = inst_analysis.get('gbm', {})
+        ou_data = inst_analysis.get('ou', {})
+    except Exception:
+        gbm_data = {'gbm_zscore': 0.0, 'anomaly_type': 'ERROR', 'signal_strength': 'NOISE'}
+        ou_data = {'zscore': 0.0, 'half_life': 999, 'signal': 'NEUTRAL'}
+        inst_analysis = {'institutional_verdict': 'ERROR', 'is_brownian_noise': True, 'trade_quality': 'C_NOISE'}
+
     return {
         "symbol": symbol.upper(),
         "current_price": current_price,
@@ -281,7 +292,18 @@ def analyze_institutional_grade(symbol='BTCUSDT', account_balance=10000.0, risk_
             "volume_surge_ratio": volume_surge_ratio,
             "pump_24h_pct": round(pump_24h_pct, 2),
             "dump_1h_pct": round(dump_1h_pct, 2),
-            "pump_dump_exhaustion": pump_dump_exhaustion
+            "pump_dump_exhaustion": pump_dump_exhaustion,
+            "gbm_zscore": gbm_data.get('gbm_zscore', 0.0),
+            "gbm_anomaly_type": gbm_data.get('anomaly_type', 'UNKNOWN'),
+            "gbm_signal_strength": gbm_data.get('signal_strength', 'NOISE'),
+            "ou_zscore": ou_data.get('zscore', 0.0),
+            "ou_half_life": ou_data.get('half_life', 999),
+            "ou_signal": ou_data.get('signal', 'NEUTRAL')
+        },
+        "institutional_analysis": {
+            "verdict": inst_analysis.get('institutional_verdict', 'NEUTRAL'),
+            "is_brownian_noise": inst_analysis.get('is_brownian_noise', True),
+            "trade_quality": inst_analysis.get('trade_quality', 'C_NOISE')
         },
         "institutional_risk_plan": {
             "account_balance": account_balance,

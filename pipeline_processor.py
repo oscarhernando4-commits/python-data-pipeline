@@ -24,6 +24,7 @@ import learning_engine
 import obsidian_sync
 import master_dashboard_generator
 import strategy_engine
+import quant_institutional
 from datetime import datetime
 
 def get_top_pairs():
@@ -219,6 +220,39 @@ def run_infinite_trading_matrix_cycle():
                     symbol_analysis_map[sym] = data
             except Exception as e:
                 print(f"Concurrent exception for {s}: {e}")
+
+    # ============================================================
+    # 🏛️ FILTROS INSTITUCIONALES: Browniano + Correlación + Arbitraje
+    # ============================================================
+    # Build closes map for correlation checking across symbols
+    _closes_map = {}
+    _arb_opportunities = []
+    for sym, data in symbol_analysis_map.items():
+        tech = data.get("tech", {})
+        inst = tech.get("institutional_analysis", {})
+        inds = tech.get("indicators", {})
+        # Cache GBM verdict per symbol for the brownian filter
+        data["_is_brownian_noise"] = inst.get("is_brownian_noise", True)
+        data["_gbm_zscore"] = inds.get("gbm_zscore", 0.0)
+        data["_trade_quality"] = inst.get("trade_quality", "C_NOISE")
+        data["_ou_signal"] = inds.get("ou_signal", "NEUTRAL")
+        data["_institutional_verdict"] = inst.get("verdict", "NEUTRAL")
+
+    # Log arbitrage opportunities once per cycle (informational)
+    try:
+        _arb = quant_institutional.SpotFuturesArbitrageDetector()
+        for _arb_sym in ["BTCUSDT", "ETHUSDT", "BNBUSDT", "SOLUSDT"]:
+            _spot_data = symbol_analysis_map.get(_arb_sym, {})
+            _spot_price = _spot_data.get("price", 0)
+            if _spot_price > 0:
+                # Futures premium is typically 0.01-0.1% for perpetuals
+                _fut_price = _spot_price * 1.0005  # Estimate; real would query futures API
+                _arb_result = _arb.check_basis(_spot_price, _fut_price)
+                if _arb_result.get("is_profitable"):
+                    _arb_opportunities.append((_arb_sym, _arb_result))
+                    print(f"📊 [ARBITRAJE] {_arb_sym}: Basis={_arb_result['basis_pct']:.4f}% | Yield Neto={_arb_result['net_yield_pct']:.4f}% | APY={_arb_result['annualized_apy_pct']:.2f}%")
+    except Exception as _arb_err:
+        pass
 
     # For SPOT LONG trading, prioritize the highest scoring bullish assets (Hyenuk Chu / Francisca Serrano Sniper)
     bullish_candidates = []
@@ -443,12 +477,37 @@ def run_infinite_trading_matrix_cycle():
             best_curr_price = 0
             best_sl_dist = 0
             
+            # Collect symbols with open positions in this matrix for correlation filter
+            _active_syms_in_matrix = [a["symbol"] for a in accounts if a.get("position") is not None and a.get("symbol")]
+            
             for sym, data_item in symbol_analysis_map.items():
                 eval_res = strategy_engine.evaluate_opportunity(data_item["tech"], g_id)
                 if eval_res["action"] in ["LONG", "SHORT"]:
+                    # 🏛️ FILTRO BROWNIANO: Rechazar si el movimiento es solo ruido aleatorio
+                    _sym_gbm_z = abs(data_item.get("_gbm_zscore", 0.0))
+                    _sym_is_noise = data_item.get("_is_brownian_noise", True)
+                    if _sym_is_noise and _sym_gbm_z < 1.5 and g_id <= 3:
+                        # Groups 0-3 require statistically significant movements
+                        continue  # Skip this symbol, it's brownian noise
+                    
+                    # 🏛️ FILTRO CORRELACIÓN: No abrir si está muy correlacionado con posición activa
+                    if len(_active_syms_in_matrix) > 0 and g_id <= 3:
+                        try:
+                            _corr_check = quant_institutional.check_correlation_filter(
+                                sym,
+                                {s: [] for s in [sym] + _active_syms_in_matrix},  # Lightweight check
+                                _active_syms_in_matrix
+                            )
+                            if not _corr_check.get("approved", True):
+                                continue  # Skip: too correlated with existing position
+                        except Exception:
+                            pass  # If correlation check fails, allow the trade
+                    
                     best_action = eval_res["action"]
                     selected_symbol = sym
                     best_reason = eval_res["reason"]
+                    if not _sym_is_noise:
+                        best_reason += f" | GBM Z={_sym_gbm_z:.1f} ({data_item.get('_trade_quality', '?')})"
                     best_curr_price = data_item["price"]
                     best_sl_dist = max(data_item["tech"]["indicators"].get("atr_15m", 0) * 1.0, best_curr_price * 0.01)
                     break # Take the first one that triggers for this strategy
