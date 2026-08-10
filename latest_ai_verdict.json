@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-10 05:46:18",
+  "timestamp": "2026-08-10 05:48:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 95,
-  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 55 y Bids >= 55%). La falta de profundidad en el libro de órdenes y la alta volatilidad en el sector de activos digitales sugieren que el riesgo de una trampa de liquidez es demasiado elevado. Se mantiene la posición en efectivo para preservar el capital.",
+  "reasoning": "El comité ha determinado que, a pesar de los scores técnicos de 75, la falta de soporte real en el libro de órdenes, el sentimiento de miedo global y la alta tasa de fallos en trades similares durante periodos de mercado neutral, la estrategia más prudente es el HOLD para preservar el capital.",
   "top_candidates": [
+    {
+      "symbol": "UNIUSDT",
+      "score": 75
+    },
     {
       "symbol": "XLMUSDT",
       "score": 75
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "AAVEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETCUSDT",
-      "score": 75
-    },
-    {
       "symbol": "PYTHUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "REUSDT",
       "score": 75
     }
   ]
