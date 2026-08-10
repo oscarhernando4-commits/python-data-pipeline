@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 04:12:20",
+  "timestamp": "2026-08-10 04:14:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en una fase de distribución terminal con alta correlación bajista. Ningún candidato cumple con el umbral de seguridad A+ (Score >= 55 con soporte de liquidez confirmado). Se prioriza la preservación del capital sobre la especulación en un entorno de miedo extremo.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una divergencia estructural severa. Ninguno de los candidatos cumple con los criterios de convicción A+ (Score >= 55 con confirmación de liquidez y soporte). La prioridad es la preservación del capital ante la inestabilidad macroeconómica y la falta de profundidad en el libro de órdenes.",
   "top_candidates": [
     {
       "symbol": "SUNUSDT",
       "score": 85
     },
     {
-      "symbol": "TRUMPUSDT",
+      "symbol": "MORPHOUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "JSTUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "BTCUSDT",
       "score": 65
     },
     {
-      "symbol": "AEROUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "APTUSDT",
-      "score": 65
-    },
-    {
-      "symbol": "ALLOUSDT",
+      "symbol": "ETHUSDT",
       "score": 65
     }
   ]
