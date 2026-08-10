@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 09:28:19",
+  "timestamp": "2026-08-10 09:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado presenta un estrés sistémico con una capitulación generalizada. Ninguno de los candidatos cumple con los criterios estrictos de riesgo y convicción del comité, por lo que la estrategia óptima es mantener la liquidez en espera de una estabilización clara.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una fase de debilidad estructural generalizada sin soporte institucional. Ningún activo cumple con los criterios de alta convicción (Score >= 55) exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital en espera de una mejora en las condiciones de mercado.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "MORPHOUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "NILUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "MORPHOUSDT",
       "score": 60
     },
     {
       "symbol": "CRVUSDT",
       "score": 60
+    },
+    {
+      "symbol": "BANANAS31USDT",
+      "score": 55
     }
   ]
 }
