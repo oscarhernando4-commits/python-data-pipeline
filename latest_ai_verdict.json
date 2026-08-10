@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 05:06:22",
+  "timestamp": "2026-08-10 05:08:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una estructura de alta incertidumbre y baja convicción. Ninguno de los candidatos cumple con los requisitos estrictos de soporte de ballenas y confirmación técnica A+ necesarios para mitigar el riesgo de pérdida, por lo que la decisión institucional es mantenerse en liquidez (HOLD).",
+  "reasoning": "El mercado se encuentra en un estado de alta selectividad y miedo, con una falta de soporte institucional claro en el libro de órdenes. Tras analizar los 2155 trades históricos, el comité ha determinado que las condiciones actuales no cumplen con los criterios de alta probabilidad (Score >= 55 y confianza >= 70%), por lo que se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "SHIBUSDT",
@@ -15,15 +15,15 @@
       "score": 75
     },
     {
+      "symbol": "ONDOUSDT",
+      "score": 75
+    },
+    {
       "symbol": "AAVEUSDT",
       "score": 75
     },
     {
       "symbol": "DOTUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ONDOUSDT",
       "score": 75
     }
   ]
