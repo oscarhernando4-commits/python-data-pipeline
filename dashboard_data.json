@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 09:02:20",
+  "updated_at": "2026-08-10 09:04:18",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55 con confirmación de liquidez y soporte histórico). La alta volatilidad y la falta de profundidad en el libro de órdenes para los activos con mayor score sugieren un riesgo de manipulación elevado, por lo que se prioriza la preservación del capital."
+    "reasoning": "El mercado se encuentra en un régimen de alta incertidumbre con una rotación de capital ineficiente. Ninguno de los candidatos, a pesar de sus scores técnicos, presenta la profundidad de liquidez (Orderbook Bids >= 55%) ni la confirmación de volumen necesaria para cumplir con el protocolo de seguridad A+ del comité. Se prioriza la preservación del capital sobre la especulación en un entorno de miedo."
   }
 }
