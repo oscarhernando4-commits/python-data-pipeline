@@ -1,16 +1,41 @@
 {
   "KORUBUSDT": [
     {
-      "timestamp": "2026-08-10 07:28:12",
+      "timestamp": "2026-08-10 07:30:10",
       "price": 16.99,
       "score": 65,
       "rsi": 49.48,
       "macd": "Neutral",
-      "volume_surge": 0.2,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SPYBUSDT": [
+    {
+      "timestamp": "2026-08-10 07:30:11",
+      "price": 774.7,
+      "score": 45,
+      "rsi": 60.24,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CTSIUSDT": [
+    {
+      "timestamp": "2026-08-10 07:30:11",
+      "price": 0.02636,
+      "score": 15,
+      "rsi": 37.94,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}}
-}}
+}
