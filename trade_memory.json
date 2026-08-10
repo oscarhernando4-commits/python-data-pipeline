@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2293,
-    "wins": 426,
-    "losses": 1867,
-    "win_rate_pct": 18.58,
-    "total_pnl_usd": 112463.91230545455
+    "total_trades": 2292,
+    "wins": 428,
+    "losses": 1864,
+    "win_rate_pct": 18.67,
+    "total_pnl_usd": 112778.78230545456
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -38321,70 +38321,53 @@
       }
     },
     {
-      "timestamp": "2026-08-10 15:00:47",
-      "account_id": "SIM-044",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "HEIUSDT",
-      "side": "LONG",
-      "entry_price": 0.162,
-      "exit_price": 0.1592,
-      "pnl_usd": -0.52,
-      "result": "LOSS",
-      "notes": "Hit SL on HEIUSDT (-$0.52). Re-Trading!",
-      "context": {
-        "score": 50,
-        "rsi_15m": 58.96,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-10 15:00:47",
-      "account_id": "SIM-045",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "HEIUSDT",
-      "side": "LONG",
-      "entry_price": 0.162,
-      "exit_price": 0.1592,
-      "pnl_usd": -0.52,
-      "result": "LOSS",
-      "notes": "Hit SL on HEIUSDT (-$0.52). Re-Trading!",
-      "context": {
-        "score": 50,
-        "rsi_15m": 58.96,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-10 15:00:47",
-      "account_id": "SIM-046",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "HEIUSDT",
-      "side": "LONG",
-      "entry_price": 0.162,
-      "exit_price": 0.1592,
-      "pnl_usd": -0.52,
-      "result": "LOSS",
-      "notes": "Hit SL on HEIUSDT (-$0.52). Re-Trading!",
-      "context": {
-        "score": 50,
-        "rsi_15m": 58.96,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-10 15:00:47",
+      "timestamp": "2026-08-10 20:02:19",
       "account_id": "SIM-052",
       "group_name": "⚖️ GRUPO 3: Balanceado",
       "symbol": "SOXLBUSDT",
       "side": "LONG",
       "entry_price": 0.02373,
-      "exit_price": 130.58,
-      "pnl_usd": 111839.33,
+      "exit_price": 130.94,
+      "pnl_usd": 112147.72,
       "result": "WIN",
-      "notes": "Win on SOXLBUSDT (+$111839.33 net) -> Level 4 Re-Trading Started!",
+      "notes": "Win on SOXLBUSDT (+$112147.72 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 33.28,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 20:02:20",
+      "account_id": "SIM-054",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DODOUSDT",
+      "side": "LONG",
+      "entry_price": 0.02373,
+      "exit_price": 0.0258,
+      "pnl_usd": 2.46,
+      "result": "WIN",
+      "notes": "Win on DODOUSDT (+$2.46 net) -> Level 5 Re-Trading Started!",
       "context": {
         "score": 25,
-        "rsi_15m": 31.51,
+        "rsi_15m": 73.19,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 20:02:20",
+      "account_id": "SIM-055",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DODOUSDT",
+      "side": "LONG",
+      "entry_price": 0.02373,
+      "exit_price": 0.0258,
+      "pnl_usd": 2.46,
+      "result": "WIN",
+      "notes": "Win on DODOUSDT (+$2.46 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 73.19,
         "macro_trend_4h": "NEUTRAL"
       }
     }

@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-10 20:00:22
+date: 2026-08-10 20:02:20
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $20.13 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-10 20:00:22`
+> ⏱️ **Última Actualización:** `2026-08-10 20:02:20`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00404828 BNB` (`~$2.43 USD`)
@@ -30,10 +30,10 @@ date: 2026-08-10 20:00:22
 
 > [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
-> - 📈 **Capital Total Acumulado:** **`$10,628.20 USD`** (`$+628.20 USD`)  
-> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `6 Cuentas (6.0%)`  
+> - 📈 **Capital Total Acumulado:** **`$122,780.84 USD`** (`$+112,780.84 USD`)  
+> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `9 Cuentas (9.0%)`  
 > - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `0 Cuentas (0.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `94 Cuentas (94.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `91 Cuentas (91.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
@@ -116,32 +116,32 @@ date: 2026-08-10 20:00:22
 ## ⚖️ GRUPO 3: Balanceado (Permisividad Nivel 3 - Score >= 65 Pts)
 
 > [!TIP] 📊 **Resumen del ⚖️ GRUPO 3: Balanceado (Permisividad Nivel 3 - Score >= 65 Pts):**
-> - 💵 **Balance Total del Grupo:** `$2,981.87 USD` (`+$981.87`)
-> - 🎯 **Operaciones Totales:** `151` (`60 Ganadas / 86 Perdidas`)
-> - 📈 **Tasa de Acierto del Grupo:** `39.7% Win Rate`
+> - 💵 **Balance Total del Grupo:** `$115,134.51 USD` (`+$113134.51`)
+> - 🎯 **Operaciones Totales:** `154` (`63 Ganadas / 86 Perdidas`)
+> - 📈 **Tasa de Acierto del Grupo:** `40.9% Win Rate`
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-041** | **DODOUSDT** | `#11` | `4W/5L` | 26-08-10<br>20:00 | `🔴 Perdió -$0.13` | **`$208.48`** (`+$108.48`) | 🟢 Buscando |
-| **SIM-042** | **SOXLBUSDT** | `#14` | `5W/8L` | 26-08-10<br>19:58 | `🔵 En Curso` | **`$292.50`** (`+$192.50`) | 🔵 En Vivo |
-| **SIM-043** | **DODOUSDT** | `#11` | `4W/6L` | 26-08-10<br>20:00 | `🔴 Perdió -$0.13` | **`$208.48`** (`+$108.48`) | 🟢 Buscando |
+| **SIM-041** | **SOXLBUSDT** | `#11` | `4W/5L` | 26-08-10<br>20:02 | `🔴 Perdió -$0.13` | **`$208.48`** (`+$108.48`) | 🟢 Buscando |
+| **SIM-042** | **SOXLBUSDT** | `#14` | `5W/8L` | 26-08-10<br>14:58 | `🔵 En Curso` | **`$292.50`** (`+$192.50`) | 🔵 En Vivo |
+| **SIM-043** | **SOXLBUSDT** | `#11` | `4W/6L` | 26-08-10<br>20:02 | `🔴 Perdió -$0.13` | **`$208.48`** (`+$108.48`) | 🟢 Buscando |
 | **SIM-044** | **HEIUSDT** | `#9` | `3W/6L` | 26-08-10<br>14:42 | `🔵 En Curso` | **`$143.52`** (`+$43.52`) | 🔵 En Vivo |
 | **SIM-045** | **HEIUSDT** | `#9` | `3W/6L` | 26-08-10<br>14:42 | `🔵 En Curso` | **`$143.52`** (`+$43.52`) | 🔵 En Vivo |
 | **SIM-046** | **HEIUSDT** | `#9` | `3W/6L` | 26-08-10<br>14:42 | `🔵 En Curso` | **`$143.52`** (`+$43.52`) | 🔵 En Vivo |
 | **SIM-047** | **XAUTUSDT** | `#6` | `2W/4L` | 26-08-10<br>18:44 | `🔵 En Curso` | **`$100.94`** (`+$0.94`) | 🔵 En Vivo |
 | **SIM-048** | **XAUTUSDT** | `#7` | `3W/4L` | 26-08-10<br>18:44 | `🔵 En Curso` | **`$143.31`** (`+$43.31`) | 🔵 En Vivo |
 | **SIM-049** | **XAUTUSDT** | `#7` | `3W/4L` | 26-08-10<br>18:44 | `🔵 En Curso` | **`$143.31`** (`+$43.31`) | 🔵 En Vivo |
-| **SIM-050** | **DODOUSDT** | `#6` | `2W/3L` | 26-08-10<br>20:00 | `🔴 Perdió -$0.06` | **`$101.58`** (`+$1.58`) | 🟢 Buscando |
+| **SIM-050** | **DODOUSDT** | `#6` | `2W/3L` | 26-08-10<br>20:02 | `🔴 Perdió -$0.06` | **`$101.58`** (`+$1.58`) | 🟢 Buscando |
 | **SIM-051** | **XAUTUSDT** | `#6` | `3W/3L` | 26-08-10<br>13:44 | `🔵 En Curso` | **`$144.30`** (`+$44.30`) | 🔵 En Vivo |
-| **SIM-052** | **SOXLBUSDT** | `#5` | `2W/3L` | 26-08-10<br>19:58 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |
+| **SIM-052** | **SOXLBUSDT** | `#6` | `3W/3L` | 26-08-10<br>20:02 | `🟢 Ganó +$112147.72` | **`$112249.36`** (`+$112149.36`) | 🟢 Buscando |
 | **SIM-053** | **SOXLBUSDT** | `#7` | `3W/4L` | 26-08-10<br>19:58 | `🔵 En Curso` | **`$143.98`** (`+$43.98`) | 🔵 En Vivo |
-| **SIM-054** | **DODOUSDT** | `#7` | `3W/4L` | 26-08-10<br>14:56 | `🛡️ Protegida (BE)` | **`$142.75`** (`+$42.75`) | 🔵 En Vivo |
-| **SIM-055** | **DODOUSDT** | `#7` | `3W/4L` | 26-08-10<br>14:56 | `🛡️ Protegida (BE)` | **`$142.75`** (`+$42.75`) | 🔵 En Vivo |
-| **SIM-056** | **DODOUSDT** | `#7` | `3W/4L` | 26-08-10<br>20:00 | `🔴 Perdió -$0.75` | **`$142.75`** (`+$42.75`) | 🟢 Buscando |
-| **SIM-057** | **HEIUSDT** | `#5` | `2W/3L` | 26-08-10<br>20:00 | `🔴 Perdió -$0.06` | **`$101.64`** (`+$1.64`) | 🟢 Buscando |
+| **SIM-054** | **DODOUSDT** | `#8` | `4W/4L` | 26-08-10<br>20:02 | `🟢 Ganó +$2.46` | **`$145.21`** (`+$45.21`) | 🟢 Buscando |
+| **SIM-055** | **DODOUSDT** | `#8` | `4W/4L` | 26-08-10<br>20:02 | `🟢 Ganó +$2.46` | **`$145.21`** (`+$45.21`) | 🟢 Buscando |
+| **SIM-056** | **DODOUSDT** | `#7` | `3W/4L` | 26-08-10<br>20:02 | `🔴 Perdió -$0.75` | **`$142.75`** (`+$42.75`) | 🟢 Buscando |
+| **SIM-057** | **HEIUSDT** | `#5` | `2W/3L` | 26-08-10<br>20:02 | `🔴 Perdió -$0.06` | **`$101.64`** (`+$1.64`) | 🟢 Buscando |
 | **SIM-058** | **HEIUSDT** | `#6` | `3W/3L` | 26-08-10<br>19:42 | `🔵 En Curso` | **`$144.30`** (`+$44.30`) | 🔵 En Vivo |
 | **SIM-059** | **HEIUSDT** | `#6` | `3W/3L` | 26-08-10<br>19:42 | `🔵 En Curso` | **`$144.30`** (`+$44.30`) | 🔵 En Vivo |
-| **SIM-060** | **ALLOUSDT** | `#6` | `3W/3L` | 26-08-10<br>20:00 | `🟢 Ganó +$42.66` | **`$144.30`** (`+$44.30`) | 🟢 Buscando |
+| **SIM-060** | **ALLOUSDT** | `#6` | `3W/3L` | 26-08-10<br>20:02 | `🟢 Ganó +$42.66` | **`$144.30`** (`+$44.30`) | 🟢 Buscando |
 
 ---
 
