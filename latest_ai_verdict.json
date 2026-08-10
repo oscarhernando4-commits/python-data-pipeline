@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-10 00:38:15",
+  "timestamp": "2026-08-10 00:40:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una asimetría de riesgo extrema con una capitulación técnica generalizada. Ningún activo cumple con el umbral de seguridad A+ (Score >= 55) y la falta de profundidad en el libro de órdenes aumenta el riesgo de slippage. Se mantiene la posición en liquidez (USDT) para evitar pérdidas por 'trampas de toros'.",
+  "reasoning": "El mercado presenta una debilidad estructural generalizada y una falta de convicción técnica en los activos analizados. Ningún candidato cumple con el umbral mínimo de seguridad (Score >= 55) y la alta volatilidad especulativa en un entorno de miedo institucional hace que la estrategia más rentable sea la preservación de capital mediante el modo HOLD.",
   "top_candidates": [
+    {
+      "symbol": "EPICUSDT",
+      "score": 70
+    },
     {
       "symbol": "CRVUSDT",
       "score": 70
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "ESPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "PARTIUSDT",
       "score": 60
     }
   ]
