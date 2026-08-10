@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2275,
+    "total_trades": 2278,
     "wins": 422,
-    "losses": 1853,
-    "win_rate_pct": 18.55,
-    "total_pnl_usd": 271.03230545454414
+    "losses": 1856,
+    "win_rate_pct": 18.53,
+    "total_pnl_usd": 269.32230545454416
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -38028,6 +38028,57 @@
       "context": {
         "score": 20,
         "rsi_15m": 82.81,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 14:40:41",
+      "account_id": "SIM-044",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DODOUSDT",
+      "side": "LONG",
+      "entry_price": 0.026,
+      "exit_price": 0.02551,
+      "pnl_usd": -0.57,
+      "result": "LOSS",
+      "notes": "Hit SL on DODOUSDT (-$0.57). Re-Trading!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 82.26,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 14:40:41",
+      "account_id": "SIM-045",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DODOUSDT",
+      "side": "LONG",
+      "entry_price": 0.026,
+      "exit_price": 0.02551,
+      "pnl_usd": -0.57,
+      "result": "LOSS",
+      "notes": "Hit SL on DODOUSDT (-$0.57). Re-Trading!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 82.26,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 14:40:41",
+      "account_id": "SIM-046",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DODOUSDT",
+      "side": "LONG",
+      "entry_price": 0.026,
+      "exit_price": 0.02551,
+      "pnl_usd": -0.57,
+      "result": "LOSS",
+      "notes": "Hit SL on DODOUSDT (-$0.57). Re-Trading!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 82.26,
         "macro_trend_4h": "NEUTRAL"
       }
     }

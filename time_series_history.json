@@ -1,12 +1,25 @@
 {
-  "MEUSDT": [
+  "RIFUSDT": [
     {
-      "timestamp": "2026-08-10 19:40:08",
-      "price": 0.06654,
+      "timestamp": "2026-08-10 14:40:22",
+      "price": 0.0683,
       "score": 0,
-      "rsi": 46.2,
+      "rsi": 33.79,
       "macd": "Neutral",
-      "volume_surge": 0.54,
+      "volume_surge": 0.36,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SOLVUSDT": [
+    {
+      "timestamp": "2026-08-10 14:40:22",
+      "price": 0.00252,
+      "score": 35,
+      "rsi": 52.61,
+      "macd": "Neutral",
+      "volume_surge": 0.07,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,25 +27,25 @@
   ],
   "STXUSDT": [
     {
-      "timestamp": "2026-08-10 19:40:08",
-      "price": 0.1316,
-      "score": 15,
-      "rsi": 48.95,
+      "timestamp": "2026-08-10 14:40:22",
+      "price": 0.001804,
+      "score": 0,
+      "rsi": 43.54,
       "macd": "Neutral",
-      "volume_surge": 0.11,
+      "volume_surge": 0.42,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "PHAUSDT": [
+  "PLUMEUSDT": [
     {
-      "timestamp": "2026-08-10 19:40:08",
-      "price": 0.0252,
-      "score": 0,
-      "rsi": 44.98,
+      "timestamp": "2026-08-10 14:40:22",
+      "price": 0.01228,
+      "score": 35,
+      "rsi": 54.61,
       "macd": "Neutral",
-      "volume_surge": 0.41,
+      "volume_surge": 0.25,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
