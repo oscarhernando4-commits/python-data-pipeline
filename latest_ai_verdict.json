@@ -1,15 +1,11 @@
 {
-  "timestamp": "2026-08-10 06:38:26",
+  "timestamp": "2026-08-10 06:40:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sesgo de miedo predominante. Ningún activo cumple con la convicción A+ necesaria (Score >= 55 con confirmación de liquidez y tendencia clara) para justificar una entrada, por lo que la estrategia óptima es la preservación de capital.",
+  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 55 y Confianza >= 70%) bajo las condiciones actuales de mercado. La alta tasa de pérdidas en las simulaciones recientes y la falta de profundidad en el libro de órdenes obligan a mantener una postura de espera para preservar el capital.",
   "top_candidates": [
-    {
-      "symbol": "GRAMUSDT",
-      "score": 85
-    },
     {
       "symbol": "UNIUSDT",
       "score": 85
@@ -19,11 +15,15 @@
       "score": 85
     },
     {
-      "symbol": "BTCUSDT",
-      "score": 75
+      "symbol": "GRAMUSDT",
+      "score": 85
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "EPICUSDT",
+      "score": 85
+    },
+    {
+      "symbol": "BTCUSDT",
       "score": 75
     }
   ]

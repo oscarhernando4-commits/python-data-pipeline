@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 06:38:28",
+  "updated_at": "2026-08-10 06:40:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sesgo de miedo predominante. Ningún activo cumple con la convicción A+ necesaria (Score >= 55 con confirmación de liquidez y tendencia clara) para justificar una entrada, por lo que la estrategia óptima es la preservación de capital."
+    "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 55 y Confianza >= 70%) bajo las condiciones actuales de mercado. La alta tasa de pérdidas en las simulaciones recientes y la falta de profundidad en el libro de órdenes obligan a mantener una postura de espera para preservar el capital."
   }
 }
