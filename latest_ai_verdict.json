@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-10 00:24:16",
+  "timestamp": "2026-08-10 00:26:16",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución terminal con alta correlación negativa y falta de liquidez. Ningún activo cumple con los criterios de riesgo A+ (Score >= 55 y confianza >= 70%), por lo que se decide mantener la posición en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El entorno macroeconómico es altamente volátil y bajista, con una correlación sistémica negativa. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55 con confirmación de volumen y profundidad de mercado). Se decide mantener la liquidez en USDT para evitar el riesgo de 'cuchillos cayendo' y proteger el capital institucional.",
   "top_candidates": [
-    {
-      "symbol": "TRXUSDT",
-      "score": 70
-    },
     {
       "symbol": "EPICUSDT",
       "score": 70
     },
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "TRXUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "CRVUSDT",
       "score": 70
     },
     {
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "BROCCOLI714USDT",
       "score": 60
     }
   ]
