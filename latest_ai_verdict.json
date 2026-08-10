@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 08:40:21",
+  "timestamp": "2026-08-10 08:42:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una divergencia estructural y falta de liquidez en los libros de órdenes para los activos con mejores scores técnicos. Ningún candidato cumple con el umbral de convicción A+ (Score >= 55 y Bids >= 55%) exigido por el comité para mitigar el riesgo de pérdida, por lo que se prioriza la preservación del capital en efectivo.",
+  "reasoning": "El mercado se encuentra en una fase de compresión de alta incertidumbre con una mayoría de activos mostrando un comportamiento errático. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y Bids >= 55%) necesario para mitigar el riesgo de 'falling knives' observado en el historial de pérdidas recientes. Se prioriza la preservación del capital hasta que el volumen institucional confirme una dirección clara.",
   "top_candidates": [
     {
       "symbol": "GNOUSDT",
@@ -23,7 +23,7 @@
       "score": 70
     },
     {
-      "symbol": "BICOUSDT",
+      "symbol": "MMTUSDT",
       "score": 65
     }
   ]
