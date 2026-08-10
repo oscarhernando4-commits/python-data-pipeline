@@ -4,7 +4,7 @@
     "wins": 425,
     "losses": 1856,
     "win_rate_pct": 18.63,
-    "total_pnl_usd": 631.9323054545442
+    "total_pnl_usd": 632.0823054545442
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -38130,6 +38130,57 @@
       "context": {
         "score": 20,
         "rsi_15m": 83.32,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 14:42:35",
+      "account_id": "SIM-041",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "HEIUSDT",
+      "side": "LONG",
+      "entry_price": 0.02605,
+      "exit_price": 0.162,
+      "pnl_usd": 106.53,
+      "result": "WIN",
+      "notes": "Win on HEIUSDT (+$106.53 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 45,
+        "rsi_15m": 66.68,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 14:42:35",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "HEIUSDT",
+      "side": "LONG",
+      "entry_price": 0.02605,
+      "exit_price": 0.162,
+      "pnl_usd": 149.7,
+      "result": "WIN",
+      "notes": "Win on HEIUSDT (+$149.70 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 45,
+        "rsi_15m": 66.68,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 14:42:35",
+      "account_id": "SIM-043",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "HEIUSDT",
+      "side": "LONG",
+      "entry_price": 0.02605,
+      "exit_price": 0.162,
+      "pnl_usd": 106.53,
+      "result": "WIN",
+      "notes": "Win on HEIUSDT (+$106.53 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 45,
+        "rsi_15m": 66.68,
         "macro_trend_4h": "NEUTRAL"
       }
     }
