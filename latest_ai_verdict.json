@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-10 02:26:18",
+  "timestamp": "2026-08-10 02:28:17",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una configuración de alta fricción y riesgo sistémico. Ninguno de los candidatos cumple con los requisitos estrictos de Score Técnico (>= 55) y soporte de liquidez en el libro de órdenes. Se ha decidido mantener la posición en efectivo para evitar la exposición a la volatilidad bajista y proteger el capital institucional.",
+  "reasoning": "El mercado presenta una fragilidad sistémica extrema y una falta de convicción técnica en los activos analizados. Ningún candidato cumple con los requisitos mínimos de seguridad y rentabilidad exigidos por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de operaciones de alto riesgo.",
   "top_candidates": [
+    {
+      "symbol": "EPICUSDT",
+      "score": 70
+    },
     {
       "symbol": "JSTUSDT",
       "score": 70
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "EPICUSDT",
-      "score": 55
-    },
-    {
       "symbol": "BMTUSDT",
       "score": 50
     },
     {
-      "symbol": "SPYBUSDT",
+      "symbol": "SAGAUSDT",
       "score": 50
     }
   ]
