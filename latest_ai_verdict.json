@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 03:44:20",
+  "timestamp": "2026-08-10 03:46:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y desincronización, sin activos que cumplan con los criterios de calidad A+ exigidos por el comité. La prioridad absoluta es la preservación del capital ante la falta de una narrativa de acumulación institucional.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación y falta de convicción direccional. Ningún activo cumple con el requisito de Score Técnico >= 55 ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage, por lo que la estrategia óptima es la preservación total de capital.",
   "top_candidates": [
-    {
-      "symbol": "MORPHOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "SUNUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "NEXOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "JTOUSDT",
-      "score": 60
-    },
     {
       "symbol": "JSTUSDT",
       "score": 55
+    },
+    {
+      "symbol": "BMTUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "BCHUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "TUTUSDT",
+      "score": 50
     }
   ]
 }
