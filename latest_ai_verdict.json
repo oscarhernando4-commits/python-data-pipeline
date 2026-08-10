@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-10 08:02:23",
+  "timestamp": "2026-08-10 08:04:32",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de acumulación selectiva con alta volatilidad y falta de soporte institucional claro en el libro de órdenes. Ningún activo cumple con los criterios estrictos de riesgo A+ del comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
-      "symbol": "ETCUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SKYUSDT",
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -19,12 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "SKYUSDT",
       "score": 75
     },
     {
-      "symbol": "SEIUSDT",
-      "score": 70
+      "symbol": "SKHYBUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "score": 75
     }
   ]
 }
