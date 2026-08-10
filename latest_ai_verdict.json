@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-10 06:06:28",
+  "timestamp": "2026-08-10 06:08:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la liquidez en USDT. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes sólido). El mercado se encuentra en un estado de indecisión (Fear 30) y los patrones históricos recientes sugieren una alta probabilidad de pérdidas en condiciones de mercado neutral.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de riesgo A+ exigido por el comité. La alta volatilidad y la falta de soporte claro en el libro de órdenes, sumado al sentimiento de miedo, dictan una postura de preservación de capital (HOLD) hasta que las condiciones macro mejoren.",
   "top_candidates": [
+    {
+      "symbol": "WLFIUSDT",
+      "score": 85
+    },
     {
       "symbol": "BTCUSDT",
       "score": 75
@@ -15,15 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "UNIUSDT",
+      "symbol": "XLMUSDT",
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "WLFIUSDT",
+      "symbol": "AVAXUSDT",
       "score": 75
     }
   ]
