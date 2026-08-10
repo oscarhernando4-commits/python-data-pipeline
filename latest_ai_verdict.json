@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-10 05:08:22",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta selectividad y miedo, con una falta de soporte institucional claro en el libro de órdenes. Tras analizar los 2155 trades históricos, el comité ha determinado que las condiciones actuales no cumplen con los criterios de alta probabilidad (Score >= 55 y confianza >= 70%), por lo que se prioriza la preservación del capital sobre la ejecución especulativa.",
+  "timestamp": "2026-08-10 05:10:18",
+  "selected_symbol": "FETUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "Tras analizar la divergencia estructural del mercado, el comité ha decidido priorizar activos con alta resiliencia y respaldo sectorial. FETUSDT destaca por su pertenencia al sector AI (líder de capital) y un score técnico de 75, superando el umbral de riesgo A+ establecido por el CRO. Se descartan activos de bajo score para evitar trampas de valor.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "XLMUSDT",
       "score": 75
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
