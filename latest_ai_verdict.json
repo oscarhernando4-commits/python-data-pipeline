@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 08:06:20",
+  "timestamp": "2026-08-10 08:08:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha deliberado y, ante la ausencia de activos que cumplan estrictamente con el umbral de convicción A+ (Score >= 55 y soporte de libro de órdenes claro), se ha decidido mantener la liquidez en USDT para evitar la exposición a la alta probabilidad de pérdidas observada en el historial reciente.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios estrictos de seguridad y rentabilidad exigidos. La alta volatilidad, la falta de soporte en el libro de órdenes y el historial reciente de pérdidas en activos similares dictan una postura de preservación de capital (HOLD) hasta que aparezca un catalizador claro.",
   "top_candidates": [
     {
       "symbol": "SUNUSDT",
@@ -15,11 +15,11 @@
       "score": 85
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
-      "symbol": "ASTERUSDT",
+      "symbol": "SKHYBUSDT",
       "score": 75
     },
     {
