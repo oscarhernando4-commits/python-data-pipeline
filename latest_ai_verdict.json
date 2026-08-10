@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 04:46:33",
+  "timestamp": "2026-08-10 04:48:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con alta correlación negativa hacia el riesgo. Ningún activo cumple con los criterios estrictos de seguridad y fuerza relativa exigidos por el comité para una ejecución de compra, por lo que se prioriza la preservación de capital.",
+  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con un sesgo neutral predominante. Ninguno de los candidatos, a pesar de sus scores técnicos, presenta la confluencia necesaria de soporte institucional en el libro de órdenes y confirmación de volumen para justificar una operación de compra bajo los estrictos estándares de riesgo del comité.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
-      "score": 60
+      "symbol": "AAVEUSDT",
+      "score": 75
     },
     {
-      "symbol": "REUSDT",
-      "score": 60
+      "symbol": "JSTUSDT",
+      "score": 75
     },
     {
       "symbol": "ARBUSDT",
-      "score": 60
+      "score": 75
     },
     {
-      "symbol": "WLDUSDT",
-      "score": 50
+      "symbol": "REUSDT",
+      "score": 75
     },
     {
-      "symbol": "XLMUSDT",
-      "score": 50
+      "symbol": "BTCUSDT",
+      "score": 65
     }
   ]
 }
