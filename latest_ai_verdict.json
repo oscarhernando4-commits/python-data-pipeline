@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 15:02:23",
+  "timestamp": "2026-08-10 15:04:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución silenciosa con alta volatilidad y falta de soporte institucional. Ningún activo cumple con los criterios de alta convicción (Score >= 55) y profundidad de mercado necesarios para mitigar el riesgo de pérdida, por lo que se mantiene la liquidez en espera de mejores condiciones.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y debilidad institucional. Ninguno de los candidatos cumple con el umbral de Score A+ (>= 55) ni con la confirmación de soporte en el libro de órdenes. La estrategia institucional es preservar el capital en USDT hasta que la rotación de capital hacia sectores de valor sea evidente y no una trampa de liquidez.",
   "top_candidates": [
     {
-      "symbol": "TUTUSDT",
-      "score": 70
+      "symbol": "WLDUSDT",
+      "score": 60
     },
     {
       "symbol": "SAGAUSDT",
       "score": 60
     },
     {
-      "symbol": "VETUSDT",
-      "score": 55
-    },
-    {
       "symbol": "PAXGUSDT",
       "score": 50
     },
     {
-      "symbol": "THEUSDT",
+      "symbol": "ADAUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "XAUTUSDT",
       "score": 50
     }
   ]
