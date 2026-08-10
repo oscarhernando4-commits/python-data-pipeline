@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 11:44:25",
+  "updated_at": "2026-08-10 11:46:21",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una estructura de distribución defensiva con alta incertidumbre macroeconómica. Ninguno de los candidatos cumple con los requisitos de profundidad de mercado y convicción institucional necesarios para una entrada A+. Se prioriza la preservación del capital sobre la especulación en activos de baja liquidez."
+    "reasoning": "El mercado presenta una divergencia estructural y una alta volatilidad en los activos propuestos. Ninguno de los candidatos cumple con el requisito de convicción A+ (Score >= 55 con soporte de libro de órdenes sólido). La estrategia de protección de capital prevalece sobre la especulación en un entorno de miedo (Fear & Greed 30)."
   }
 }
