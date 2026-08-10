@@ -1,26 +1,38 @@
 {
-  "KITEUSDT": [
+  "NIGHTUSDT": [
     {
-      "timestamp": "2026-08-10 04:50:12",
-      "price": 0.1017,
-      "score": 10,
-      "rsi": 73.62,
+      "timestamp": "2026-08-10 04:52:11",
+      "price": 0.01809,
+      "score": 30,
+      "rsi": 40.97,
       "macd": "Neutral",
-      "volume_surge": 0.24,
+      "volume_surge": 0.93,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
-  ]
-},
+  ],
   "1000CATUSDT": [
     {
-      "timestamp": "2026-08-10 04:50:12",
-      "price": 0.0019,
+      "timestamp": "2026-08-10 04:52:11",
+      "price": 0.00188,
       "score": 0,
-      "rsi": 43.72,
+      "rsi": 41.13,
       "macd": "Neutral",
-      "volume_surge": 0.36,
+      "volume_surge": 0.5,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "KITEUSDT": [
+    {
+      "timestamp": "2026-08-10 04:52:11",
+      "price": 0.1015,
+      "score": 10,
+      "rsi": 70.95,
+      "macd": "Neutral",
+      "volume_surge": 0.42,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
