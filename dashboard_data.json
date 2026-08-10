@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 13:44:22",
+  "updated_at": "2026-08-10 13:46:25",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El comité ha determinado que el entorno actual es de alta fragilidad sistémica. Ningún activo cumple con el umbral de convicción A+ (Score >= 55 y Bids > 55%) necesario para mitigar el riesgo de pérdida, por lo que la orden es mantener la liquidez en efectivo."
+    "reasoning": "Tras evaluar los 10 candidatos, ninguno alcanza el umbral de seguridad (Score >= 55) ni presenta una estructura de libro de órdenes favorable. El entorno macro es de distribución institucional, por lo que el comité decide mantener la liquidez en espera de una configuración de alta convicción."
   }
 }
