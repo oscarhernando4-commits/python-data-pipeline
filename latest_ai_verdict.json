@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-10 04:24:18",
+  "timestamp": "2026-08-10 04:26:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (Score >= 55 y Confianza >= 70%) necesarios para ejecutar una operación de compra, priorizando la preservación del capital frente a la alta volatilidad y el riesgo de liquidación.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y volatilidad, donde los activos analizados no superan los umbrales de riesgo exigidos por el comité. Se prioriza la preservación del capital sobre la especulación en un entorno de 'espera de catalizador'.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
-      "score": 75
+      "symbol": "SPYBUSDT",
+      "score": 85
     },
     {
-      "symbol": "ARBUSDT",
+      "symbol": "ETCUSDT",
       "score": 75
     },
     {
@@ -19,11 +19,11 @@
       "score": 70
     },
     {
-      "symbol": "BTCUSDT",
-      "score": 65
+      "symbol": "1000CATUSDT",
+      "score": 70
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "BTCUSDT",
       "score": 65
     }
   ]
