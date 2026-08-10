@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 15:24:23",
+  "updated_at": "2026-08-10 15:26:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Tras evaluar los 10 candidatos, ninguno cumple con el umbral de Score Técnico >= 55 combinado con una dominancia de Bids > 55% necesaria para una ejecución A+. El mercado se encuentra en una fase de alta incertidumbre y distribución, por lo que el comité ha decidido mantener la posición en efectivo para evitar pérdidas innecesarias."
+    "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 55) ni con una dominancia de Bids superior al 55%, lo que invalida cualquier operación bajo las reglas de gestión de riesgo del comité."
   }
 }
