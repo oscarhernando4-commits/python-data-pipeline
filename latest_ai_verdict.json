@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-10 17:30:26",
+  "timestamp": "2026-08-10 12:30:40",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
@@ -34,6 +34,15 @@
       "macro_trend": "NEUTRAL"
     },
     {
+      "symbol": "TUTUSDT",
+      "score": 50,
+      "price": 0.13414,
+      "rsi_15m": 53.25,
+      "vol_surge": 0.03,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "ADAUSDT",
       "score": 50,
       "price": 0.1958,
@@ -43,20 +52,11 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "TUTUSDT",
-      "score": 50,
-      "price": 0.13523,
-      "rsi_15m": 54.34,
-      "vol_surge": 0.01,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
       "symbol": "PUMPUSDT",
       "score": 50,
-      "price": 0.002812,
-      "rsi_15m": 62.62,
-      "vol_surge": 0.04,
+      "price": 0.002815,
+      "rsi_15m": 63.12,
+      "vol_surge": 0.12,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -70,7 +70,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "MUBUSDT",
+      "symbol": "SKHYBUSDT",
       "score": 50,
       "price": 136.56,
       "rsi_15m": 51.94,
@@ -83,7 +83,7 @@
       "score": 50,
       "price": 0.0008159,
       "rsi_15m": 56.27,
-      "vol_surge": 0.0,
+      "vol_surge": 0.01,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
