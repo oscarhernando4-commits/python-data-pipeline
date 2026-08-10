@@ -8,13 +8,18 @@
   "trades_count": 12,
   "position": {
     "symbol": "WLFIUSDT",
+    "quantity": 327.1,
     "entry_price": 0.0535,
+    "highest_price": 0.0535,
     "cost_usd": 17.5,
     "side": "LONG",
-    "quantity": 327.1,
-    "break_even": false
+    "break_even": false,
+    "trailing_active": false,
+    "adaptive_sl_pct": 0.96,
+    "holding_cycles": 1,
+    "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
   },
-  "last_trade_time": "26-08-10<br>11:37",
+  "last_trade_time": "26-08-10<br>11:38",
   "status": "🔵 En Vivo LONG (WLFIUSDT @ $0.0535)",
   "daily_wins": 2,
   "daily_losses": 2,
@@ -23,5 +28,5 @@
   "_cached_bnb": 0.00409216,
   "_cached_bnb_usd": 2.46,
   "last_trading_day": "2026-08-03",
-  "_btc_last_price": 63800.47
+  "_btc_last_price": 64120.68
 }

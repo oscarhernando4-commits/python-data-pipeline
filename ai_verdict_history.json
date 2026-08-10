@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-08-10 11:19:04",
-    "selected_symbol": "NONE",
-    "action": "HOLD",
-    "approved": false,
-    "confidence": 0,
-    "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
-    "top_candidates": [
-      {
-        "symbol": "XAUTUSDT",
-        "score": 60
-      },
-      {
-        "symbol": "PAXGUSDT",
-        "score": 60
-      },
-      {
-        "symbol": "ZAMAUSDT",
-        "score": 60
-      },
-      {
-        "symbol": "SAGAUSDT",
-        "score": 60
-      },
-      {
-        "symbol": "XPLUSDT",
-        "score": 55
-      }
-    ]
-  },
-  {
     "timestamp": "2026-08-10 11:22:03",
     "selected_symbol": "NONE",
     "action": "HOLD",
@@ -574,6 +544,106 @@
         "price": 9.72,
         "rsi_15m": 65.05,
         "vol_surge": 0.6,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-08-10 11:38:36",
+    "selected_symbol": "NONE",
+    "action": "HOLD",
+    "approved": false,
+    "confidence": 0,
+    "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+    "top_candidates": [
+      {
+        "symbol": "ZROUSDT",
+        "score": 60,
+        "price": 0.866,
+        "rsi_15m": 55.75,
+        "vol_surge": 0.53,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "SAGAUSDT",
+        "score": 60,
+        "price": 0.01524,
+        "rsi_15m": 53.05,
+        "vol_surge": 0.46,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "LISTAUSDT",
+        "score": 60,
+        "price": 0.0673,
+        "rsi_15m": 51.86,
+        "vol_surge": 0.09,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "PAXGUSDT",
+        "score": 55,
+        "price": 4351.45,
+        "rsi_15m": 60.86,
+        "vol_surge": 1.63,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "XAUTUSDT",
+        "score": 55,
+        "price": 4338.04,
+        "rsi_15m": 61.58,
+        "vol_surge": 2.27,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "MMTUSDT",
+        "score": 50,
+        "price": 0.2245,
+        "rsi_15m": 66.13,
+        "vol_surge": 0.81,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "MUBUSDT",
+        "score": 50,
+        "price": 879.31,
+        "rsi_15m": 55.51,
+        "vol_surge": 1.01,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "PUMPUSDT",
+        "score": 50,
+        "price": 0.002754,
+        "rsi_15m": 53.6,
+        "vol_surge": 0.46,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "BICOUSDT",
+        "score": 50,
+        "price": 0.04262,
+        "rsi_15m": 52.75,
+        "vol_surge": 0.47,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "SNXXBUSDT",
+        "score": 50,
+        "price": 9.7,
+        "rsi_15m": 64.5,
+        "vol_surge": 0.61,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }
