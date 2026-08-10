@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-10 17:26:29",
+  "timestamp": "2026-08-10 12:26:35",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
@@ -18,18 +18,9 @@
     {
       "symbol": "ARBUSDT",
       "score": 60,
-      "price": 0.0808,
-      "rsi_15m": 60.52,
+      "price": 0.0807,
+      "rsi_15m": 59.31,
       "vol_surge": 0.87,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "ZROUSDT",
-      "score": 60,
-      "price": 0.868,
-      "rsi_15m": 55.59,
-      "vol_surge": 0.36,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -52,28 +43,28 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "ADAUSDT",
-      "score": 50,
-      "price": 0.196,
-      "rsi_15m": 51.14,
-      "vol_surge": 0.87,
+      "symbol": "ZROUSDT",
+      "score": 60,
+      "price": 0.868,
+      "rsi_15m": 55.59,
+      "vol_surge": 0.36,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "TUTUSDT",
       "score": 50,
-      "price": 0.13204,
-      "rsi_15m": 51.45,
-      "vol_surge": 0.54,
+      "price": 0.13207,
+      "rsi_15m": 51.48,
+      "vol_surge": 0.55,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "MMTUSDT",
       "score": 50,
-      "price": 0.2247,
-      "rsi_15m": 64.06,
+      "price": 0.2249,
+      "rsi_15m": 64.27,
       "vol_surge": 0.56,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
@@ -84,6 +75,15 @@
       "price": 0.06979,
       "rsi_15m": 49.67,
       "vol_surge": 0.14,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 50,
+      "price": 0.1959,
+      "rsi_15m": 50.0,
+      "vol_surge": 0.87,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
