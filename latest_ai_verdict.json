@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-10 13:58:23",
+  "timestamp": "2026-08-10 14:00:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de purga de liquidez con alta correlación negativa. Ninguno de los candidatos cumple con los criterios estrictos de riesgo y convicción del comité, por lo que se prioriza la preservación del capital (Regla #1) sobre la ejecución de operaciones de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en una fase de distribución agresiva con una correlación bajista sistémica. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55) y la falta de soporte institucional en el libro de órdenes hace que cualquier entrada sea una trampa de valor. Se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "GIGGLEUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "MUBUSDT",
-      "score": 60
-    },
-    {
       "symbol": "WLFIUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "ZAMAUSDT",
       "score": 60
     },
     {
@@ -23,8 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "ZAMAUSDT",
-      "score": 60
+      "symbol": "ADAUSDT",
+      "score": 50
     }
   ]
 }
