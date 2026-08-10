@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-10 22:24:21
+date: 2026-08-10 22:26:15
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-10 22:24:21`
+> ⏱️ **Última Actualización:** `2026-08-10 22:26:15`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -31,9 +31,9 @@ date: 2026-08-10 22:24:21
 > [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
 > - 📈 **Capital Total Acumulado:** **`$10,637.97 USD`** (`$+637.97 USD`)  
-> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `2 Cuentas (2.0%)`  
+> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `0 Cuentas (0.0%)`  
 > - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `0 Cuentas (0.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `98 Cuentas (98.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `100 Cuentas (100.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
@@ -140,8 +140,8 @@ date: 2026-08-10 22:24:21
 | **SIM-056** | **XRPUSDT** | `#7` | `3W/4L` | 26-08-10<br>22:06 | `🔵 En Curso` | **`$142.75`** (`+$42.75`) | 🔵 En Vivo |
 | **SIM-057** | **XRPUSDT** | `#5` | `2W/3L` | 26-08-10<br>22:06 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |
 | **SIM-058** | **XRPUSDT** | `#7` | `3W/3L` | 26-08-10<br>22:06 | `🔵 En Curso` | **`$143.74`** (`+$43.74`) | 🔵 En Vivo |
-| **SIM-059** | **HEIUSDT** | `#7` | `3W/3L` | 26-08-10<br>22:24 | `🔴 Perdió -$0.56` | **`$143.74`** (`+$43.74`) | 🟢 Buscando |
-| **SIM-060** | **ALLOUSDT** | `#6` | `3W/3L` | 26-08-10<br>22:24 | `🟢 Ganó +$42.66` | **`$144.30`** (`+$44.30`) | 🟢 Buscando |
+| **SIM-059** | **RENDERUSDT** | `#7` | `3W/3L` | 26-08-10<br>22:26 | `🔵 En Curso` | **`$143.74`** (`+$43.74`) | 🔵 En Vivo |
+| **SIM-060** | **RENDERUSDT** | `#6` | `3W/3L` | 26-08-10<br>22:26 | `🔵 En Curso` | **`$144.30`** (`+$44.30`) | 🔵 En Vivo |
 
 ---
 
