@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-08-10 02:12:22",
+  "timestamp": "2026-08-10 02:14:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de 'Neutralidad Activa' con alta volatilidad y falta de soporte institucional claro. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con confirmación de volumen y profundidad de libro), por lo que se prioriza la preservación del capital sobre la especulación.",
+  "reasoning": "El mercado presenta una divergencia estructural y una alta volatilidad especulativa sin soporte institucional claro. Dado que el win rate histórico en condiciones neutrales es desfavorable y ningún activo supera el umbral de riesgo A+, la decisión prudente es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "EPICUSDT",
       "score": 85
     },
     {
-      "symbol": "NEXOUSDT",
-      "score": 85
+      "symbol": "SHIBUSDT",
+      "score": 75
     },
     {
       "symbol": "PEPEUSDT",
@@ -23,7 +23,7 @@
       "score": 75
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "AAVEUSDT",
       "score": 75
     }
   ]
