@@ -971,9 +971,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 elif tf_align.get("15m") != "BULLISH":
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de alineación alcista en 15m (Alignment: {tf_align}).")
-                elif tf_align.get("5m") != "BULLISH" and best_score < 70:
+                elif tf_align.get("5m") != "BULLISH" and best_score < 58:
                     is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de alineación en 5m con Score < 70 (Score={best_score}, Alignment: {tf_align}).")
+                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de alineación en 5m con Score < 58 (Score={best_score}, Alignment: {tf_align}).")
                 else:
                     import orderbook_analyzer
                     ob_info = orderbook_analyzer.fetch_orderbook_depth(best_symbol, limit=20)

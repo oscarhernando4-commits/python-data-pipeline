@@ -1,34 +1,348 @@
 {
-  "updated_at": "2026-08-10 16:34:28",
+  "updated_at": "2026-08-10 11:34:47",
   "total_balance_usd": 20.08,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
+  "bnb_usd": 2.46,
   "status": "🟦 Buscando Entrada A+",
   "position": {
     "symbol": "NINGUNA",
     "quantity": 0.0,
     "entry_price": 0.0,
     "highest_price": 0.0,
-    "break_even": false,
-    "trailing_active": false,
     "adaptive_sl_pct": 1.0,
     "volatility_regime": "🔵 Standard ATR"
   },
-  "agents": {
-    "agent_1_macro": "Análisis de régimen macro y volumen de ballenas en vivo.",
-    "agent_2_tech": "Osciladores RSI, MACD, EMAs y mechas de absorción evaluadas.",
-    "agent_3_orderbook": "Rastro de liquidez del Orderbook y muros de soporte de ballenas.",
-    "agent_4_sector": "Evaluación de rotación de capital por cluster sectorial.",
-    "agent_5_memory": "Cruzamiento RAG con simulaciones históricas y patrones perdedores.",
-    "agent_6_risk": "Evaluación final de preservación de capital, ratio 1:2 y Trailing Stop ATR.",
-    "agent_7_ceo_anti_loss": "Consenso del CEO Supreme Anti-Loss Profit Maximizer."
-  },
   "verdict": {
-    "timestamp": "2026-08-10 11:32:41",
+    "timestamp": "2026-08-10 11:34:46",
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado se encuentra en un estado de liquidación sistémica con una mayoría de activos mostrando debilidad técnica. Ningún candidato cumple con los criterios de alta convicción (Score >= 55) exigidos por el comité para mitigar el riesgo de 'cuchillos cayendo'. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad bajista."
-  }
+    "confidence": 0,
+    "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+    "top_candidates": [
+      {
+        "symbol": "WLFIUSDT",
+        "score": 70,
+        "price": 0.0534,
+        "rsi_15m": 67.46,
+        "vol_surge": 4.17,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ZROUSDT",
+        "score": 60,
+        "price": 0.865,
+        "rsi_15m": 54.5,
+        "vol_surge": 0.45,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "LISTAUSDT",
+        "score": 60,
+        "price": 0.0673,
+        "rsi_15m": 51.86,
+        "vol_surge": 0.08,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "XAUTUSDT",
+        "score": 55,
+        "price": 4337.28,
+        "rsi_15m": 60.74,
+        "vol_surge": 2.11,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "MMTUSDT",
+        "score": 50,
+        "price": 0.2241,
+        "rsi_15m": 65.38,
+        "vol_surge": 0.51,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "TUTUSDT",
+        "score": 50,
+        "price": 0.13048,
+        "rsi_15m": 49.21,
+        "vol_surge": 0.2,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "KAITOUSDT",
+        "score": 50,
+        "price": 0.6809,
+        "rsi_15m": 51.61,
+        "vol_surge": 0.05,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "NEIROUSDT",
+        "score": 50,
+        "price": 7.258e-05,
+        "rsi_15m": 50.3,
+        "vol_surge": 0.27,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "REUSDT",
+        "score": 50,
+        "price": 0.4489,
+        "rsi_15m": 62.09,
+        "vol_surge": 0.17,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "BROCCOLI714USDT",
+        "score": 50,
+        "price": 0.01904,
+        "rsi_15m": 55.77,
+        "vol_surge": 0.66,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      }
+    ]
+  },
+  "verdict_history": [
+    {
+      "timestamp": "2026-08-10 11:34:46",
+      "selected_symbol": "NONE",
+      "action": "HOLD",
+      "approved": false,
+      "confidence": 0,
+      "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+      "top_candidates": [
+        {
+          "symbol": "WLFIUSDT",
+          "score": 70,
+          "price": 0.0534,
+          "rsi_15m": 67.46,
+          "vol_surge": 4.17,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "ZROUSDT",
+          "score": 60,
+          "price": 0.865,
+          "rsi_15m": 54.5,
+          "vol_surge": 0.45,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "LISTAUSDT",
+          "score": 60,
+          "price": 0.0673,
+          "rsi_15m": 51.86,
+          "vol_surge": 0.08,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "XAUTUSDT",
+          "score": 55,
+          "price": 4337.28,
+          "rsi_15m": 60.74,
+          "vol_surge": 2.11,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "MMTUSDT",
+          "score": 50,
+          "price": 0.2241,
+          "rsi_15m": 65.38,
+          "vol_surge": 0.51,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "TUTUSDT",
+          "score": 50,
+          "price": 0.13048,
+          "rsi_15m": 49.21,
+          "vol_surge": 0.2,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "KAITOUSDT",
+          "score": 50,
+          "price": 0.6809,
+          "rsi_15m": 51.61,
+          "vol_surge": 0.05,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "NEIROUSDT",
+          "score": 50,
+          "price": 7.258e-05,
+          "rsi_15m": 50.3,
+          "vol_surge": 0.27,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "REUSDT",
+          "score": 50,
+          "price": 0.4489,
+          "rsi_15m": 62.09,
+          "vol_surge": 0.17,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "BROCCOLI714USDT",
+          "score": 50,
+          "price": 0.01904,
+          "rsi_15m": 55.77,
+          "vol_surge": 0.66,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-08-10 11:32:41",
+      "selected_symbol": "NONE",
+      "action": "HOLD",
+      "approved": false,
+      "confidence": 0,
+      "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+      "top_candidates": [
+        {
+          "symbol": "WLFIUSDT",
+          "score": 70,
+          "price": 0.0533,
+          "rsi_15m": 63.72,
+          "vol_surge": 3.42,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "GUNUSDT",
+          "score": 60,
+          "price": 0.00359,
+          "rsi_15m": 56.02,
+          "vol_surge": 0.04,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "ZAMAUSDT",
+          "score": 60,
+          "price": 0.04582,
+          "rsi_15m": 50.09,
+          "vol_surge": 0.26,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "SAGAUSDT",
+          "score": 60,
+          "price": 0.01525,
+          "rsi_15m": 53.63,
+          "vol_surge": 0.21,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "ZROUSDT",
+          "score": 60,
+          "price": 0.865,
+          "rsi_15m": 54.5,
+          "vol_surge": 0.38,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "XAUTUSDT",
+          "score": 55,
+          "price": 4337.23,
+          "rsi_15m": 60.69,
+          "vol_surge": 1.62,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "C98USDT",
+          "score": 55,
+          "price": 0.01431,
+          "rsi_15m": 30.92,
+          "vol_surge": 0.29,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "TUTUSDT",
+          "score": 50,
+          "price": 0.1303,
+          "rsi_15m": 49.04,
+          "vol_surge": 0.08,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "BICOUSDT",
+          "score": 50,
+          "price": 0.04259,
+          "rsi_15m": 52.59,
+          "vol_surge": 0.25,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "BROCCOLI714USDT",
+          "score": 50,
+          "price": 0.01884,
+          "rsi_15m": 52.46,
+          "vol_surge": 0.16,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-08-10 11:30:43",
+      "selected_symbol": "NONE",
+      "action": "HOLD",
+      "approved": false,
+      "confidence": 0,
+      "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+      "top_candidates": [
+        {
+          "symbol": "GUNUSDT",
+          "score": 60
+        },
+        {
+          "symbol": "WLFIUSDT",
+          "score": 60
+        },
+        {
+          "symbol": "LUNCUSDT",
+          "score": 60
+        },
+        {
+          "symbol": "SAGAUSDT",
+          "score": 60
+        },
+        {
+          "symbol": "TUTUSDT",
+          "score": 50
+        }
+      ]
+    }
+  ]
 }
