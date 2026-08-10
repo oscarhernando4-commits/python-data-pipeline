@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 17:10:23",
+  "timestamp": "2026-08-10 12:10:40",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras analizar los candidatos, ninguno cumple con los criterios estrictos de calidad A+ (Score >= 55) ni con la profundidad de libro de órdenes necesaria para mitigar el slippage en un entorno de mercado defensivo. Se prioriza la preservación del capital sobre la especulación en activos de baja convicción.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "CRVUSDT",
@@ -18,8 +18,8 @@
     {
       "symbol": "LDOUSDT",
       "score": 60,
-      "price": 0.2937,
-      "rsi_15m": 52.57,
+      "price": 0.2938,
+      "rsi_15m": 53.03,
       "vol_surge": 0.36,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
@@ -30,7 +30,7 @@
       "price": 0.0913,
       "rsi_15m": 56.87,
       "vol_surge": 0.55,
-      "trade_quality": "C_NOISE",
+      "trade_quality": "B",
       "macro_trend": "NEUTRAL"
     },
     {
@@ -39,32 +39,23 @@
       "price": 0.871,
       "rsi_15m": 59.97,
       "vol_surge": 2.22,
-      "trade_quality": "C_NOISE",
+      "trade_quality": "B",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "ZECUSDT",
       "score": 55,
-      "price": 496.58,
-      "rsi_15m": 29.6,
+      "price": 496.78,
+      "rsi_15m": 29.95,
       "vol_surge": 2.26,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "C98USDT",
-      "score": 55,
-      "price": 0.01426,
-      "rsi_15m": 31.35,
-      "vol_surge": 0.11,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "MUBUSDT",
+      "symbol": "ADAUSDT",
       "score": 50,
-      "price": 0.02311,
-      "rsi_15m": 67.95,
+      "price": 0.1958,
+      "rsi_15m": 49.1,
       "vol_surge": 0.49,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
@@ -72,18 +63,36 @@
     {
       "symbol": "MUBARAKUSDT",
       "score": 50,
-      "price": 884.07,
-      "rsi_15m": 59.71,
+      "price": 0.02302,
+      "rsi_15m": 67.33,
+      "vol_surge": 0.5,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "MUBUSDT",
+      "score": 50,
+      "price": 884.15,
+      "rsi_15m": 59.78,
       "vol_surge": 0.41,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "SNXXBUSDT",
       "score": 50,
-      "price": 136.72,
-      "rsi_15m": 53.08,
-      "vol_surge": 0.05,
+      "price": 9.79,
+      "rsi_15m": 67.05,
+      "vol_surge": 0.14,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "PENGUUSDT",
+      "score": 50,
+      "price": 0.006673,
+      "rsi_15m": 52.52,
+      "vol_surge": 0.74,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
