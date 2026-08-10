@@ -1,21 +1,17 @@
 {
-  "timestamp": "2026-08-10 03:04:22",
+  "timestamp": "2026-08-10 03:06:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual exhibe una asimetría de riesgo extrema y una falta de convicción institucional. Ninguno de los candidatos cumple con el umbral de seguridad A+ exigido por el Comité, y el historial de pérdidas en condiciones similares obliga a mantener la liquidez en USDT para evitar la exposición a un posible 'flash crash'.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y alta incertidumbre regulatoria. Ninguno de los activos analizados cumple con los criterios de riesgo A+ exigidos por el comité, por lo que se prioriza la preservación del capital sobre la operativa especulativa.",
   "top_candidates": [
     {
       "symbol": "PEPEUSDT",
       "score": 60
     },
     {
-      "symbol": "MORPHOUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "CRVUSDT",
+      "symbol": "SHIBUSDT",
       "score": 60
     },
     {
@@ -25,6 +21,10 @@
     {
       "symbol": "JTOUSDT",
       "score": 60
+    },
+    {
+      "symbol": "JSTUSDT",
+      "score": 55
     }
   ]
 }
