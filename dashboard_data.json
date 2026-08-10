@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 10:06:20",
+  "updated_at": "2026-08-10 10:08:22",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,6 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado actual presenta una estructura de 'trampa de liquidez' con una correlación bajista sistémica. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55) ni con una dominancia de Bids en el libro de órdenes que garantice una entrada protegida. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja convicción."
+    "reasoning": "El mercado se encuentra en un estado de distribución forzada con una correlación bajista alta. Ninguno de los activos analizados cumple con el umbral de seguridad A+ (Score >= 55) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es mantener la liquidez en espera de mejores condiciones."
   }
 }
