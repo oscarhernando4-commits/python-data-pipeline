@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-10 12:00:24",
+  "timestamp": "2026-08-10 12:02:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, el comité concluye que, a pesar de los scores técnicos de 75, la falta de profundidad en el libro de órdenes y la inestabilidad macroeconómica no cumplen con los criterios de alta convicción (A+) exigidos por el Chief Risk Officer. Se prioriza la preservación del capital sobre la especulación en un mercado con sesgo neutral y alta probabilidad de volatilidad adversa.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y soporte de libro de órdenes > 55%). La alta tasa de pérdidas en trades recientes bajo condiciones de mercado neutral obliga a mantener la liquidez en USDT para evitar trampas de valor.",
   "top_candidates": [
     {
-      "symbol": "SOLUSDT",
-      "score": 75
+      "symbol": "LDOUSDT",
+      "score": 85
     },
     {
       "symbol": "SUIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "SOLUSDT",
       "score": 75
     },
     {
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "ONDOUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "PENGUUSDT",
       "score": 75
     }
   ]
