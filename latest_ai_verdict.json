@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-10 04:22:29",
+  "timestamp": "2026-08-10 04:24:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que, a pesar de la existencia de activos con scores técnicos de 75, el entorno macroeconómico y la falta de profundidad en el libro de órdenes no cumplen con los estándares de seguridad exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en un mercado de alta volatilidad y baja convicción.",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (Score >= 55 y Confianza >= 70%) necesarios para ejecutar una operación de compra, priorizando la preservación del capital frente a la alta volatilidad y el riesgo de liquidación.",
   "top_candidates": [
     {
       "symbol": "SHIBUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "AAVEUSDT",
       "score": 75
     },
     {
@@ -19,12 +15,16 @@
       "score": 75
     },
     {
-      "symbol": "SPYBUSDT",
-      "score": 75
-    },
-    {
       "symbol": "JSTUSDT",
       "score": 70
+    },
+    {
+      "symbol": "BTCUSDT",
+      "score": 65
+    },
+    {
+      "symbol": "ETHUSDT",
+      "score": 65
     }
   ]
 }
