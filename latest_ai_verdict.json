@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-10 17:22:27",
+  "timestamp": "2026-08-10 12:22:42",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
@@ -9,8 +9,8 @@
     {
       "symbol": "LDOUSDT",
       "score": 60,
-      "price": 0.2934,
-      "rsi_15m": 50.42,
+      "price": 0.2936,
+      "rsi_15m": 51.27,
       "vol_surge": 0.55,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
@@ -21,6 +21,15 @@
       "price": 0.0918,
       "rsi_15m": 62.17,
       "vol_surge": 2.52,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "JSTUSDT",
+      "score": 60,
+      "price": 0.10123,
+      "rsi_15m": 63.07,
+      "vol_surge": 1.71,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -43,29 +52,38 @@
       "macro_trend": "NEUTRAL"
     },
     {
+      "symbol": "MMTUSDT",
+      "score": 50,
+      "price": 0.2244,
+      "rsi_15m": 63.75,
+      "vol_surge": 0.43,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "TUTUSDT",
       "score": 50,
-      "price": 0.13173,
-      "rsi_15m": 51.15,
-      "vol_surge": 0.29,
+      "price": 0.13157,
+      "rsi_15m": 51.0,
+      "vol_surge": 0.3,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "PUMPUSDT",
       "score": 50,
-      "price": 0.002782,
-      "rsi_15m": 58.47,
-      "vol_surge": 0.31,
+      "price": 0.002778,
+      "rsi_15m": 57.83,
+      "vol_surge": 0.32,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "MMTUSDT",
+      "symbol": "TAOUSDT",
       "score": 50,
-      "price": 0.2245,
-      "rsi_15m": 63.85,
-      "vol_surge": 0.43,
+      "price": 203.1,
+      "rsi_15m": 49.94,
+      "vol_surge": 0.14,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -74,25 +92,7 @@
       "score": 50,
       "price": 0.1568,
       "rsi_15m": 56.55,
-      "vol_surge": 0.44,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "BANKUSDT",
-      "score": 50,
-      "price": 0.0388,
-      "rsi_15m": 53.24,
-      "vol_surge": 0.34,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "JSTUSDT",
-      "score": 50,
-      "price": 0.1014,
-      "rsi_15m": 65.99,
-      "vol_surge": 1.35,
+      "vol_surge": 0.45,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
