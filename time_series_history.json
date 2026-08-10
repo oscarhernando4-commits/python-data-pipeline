@@ -1,12 +1,25 @@
 {
-  "NVDABUSDT": [
+  "BONKUSDT": [
     {
-      "timestamp": "2026-08-10 15:24:22",
-      "price": 219.44,
-      "score": 50,
-      "rsi": 48.15,
+      "timestamp": "2026-08-10 20:26:09",
+      "price": 2.44e-06,
+      "score": 0,
+      "rsi": 40.29,
       "macd": "Neutral",
-      "volume_surge": 0.64,
+      "volume_surge": 0.25,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GNOUSDT": [
+    {
+      "timestamp": "2026-08-10 20:26:09",
+      "price": 104.17,
+      "score": 15,
+      "rsi": 39.28,
+      "macd": "Neutral",
+      "volume_surge": 0.06,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
