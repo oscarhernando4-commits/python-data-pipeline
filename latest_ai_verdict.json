@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 11:20:20",
+  "timestamp": "2026-08-10 11:22:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con una debilidad sistémica generalizada. Ningún activo cumple con los criterios de calidad A+ (Score >= 55) exigidos por el Comité. Se prioriza la protección del capital sobre la especulación en un entorno de baja liquidez y alta volatilidad bajista.",
+  "reasoning": "El mercado presenta una estructura de distribución masiva con una asimetría de liquidez negativa. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55) ni con una dominancia de Bids que garantice un soporte institucional, por lo que la decisión unánime es mantener la liquidez en espera de una mejor configuración.",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
@@ -23,8 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 50
+      "symbol": "MUBUSDT",
+      "score": 55
     }
   ]
 }
