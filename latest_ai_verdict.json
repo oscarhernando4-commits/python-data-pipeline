@@ -1,13 +1,21 @@
 {
-  "timestamp": "2026-08-10 15:26:21",
+  "timestamp": "2026-08-10 15:28:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con el umbral mínimo de Score Técnico (>= 55) ni con una dominancia de Bids superior al 55%, lo que invalida cualquier operación bajo las reglas de gestión de riesgo del comité.",
+  "reasoning": "El mercado se encuentra en una fase de estancamiento con scores técnicos mediocres y falta de profundidad en el libro de órdenes. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación de capital mediante la inacción.",
   "top_candidates": [
     {
-      "symbol": "ALLOUSDT",
+      "symbol": "DEXEUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "PYTHUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "SAGAUSDT",
       "score": 60
     },
     {
@@ -16,14 +24,6 @@
     },
     {
       "symbol": "BTCUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "XAUTUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "PAXGUSDT",
       "score": 50
     }
   ]
