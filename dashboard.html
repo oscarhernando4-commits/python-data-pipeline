@@ -6,7 +6,7 @@
     <title>⚡ SÚPER-CEREBRO CUÁNTICO | Dashboard de Trading 24/7</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #080c14;
@@ -17,704 +17,209 @@
             --accent-purple: #a855f7;
             --accent-amber: #f59e0b;
             --accent-rose: #f43f5e;
-            --accent-blue: #3b82f6;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
-            --text-dim: #64748b;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
         body {
-            background: var(--bg-color);
-            background-image: 
-                radial-gradient(circle at 15% 15%, rgba(168, 85, 247, 0.07) 0%, transparent 45%),
-                radial-gradient(circle at 85% 85%, rgba(6, 182, 212, 0.07) 0%, transparent 45%);
+            background: radial-gradient(circle at top right, #0f172a, #080c14 60%);
             color: var(--text-main);
             min-height: 100vh;
-            padding: 1.25rem 1.75rem;
+            padding: 2rem;
         }
-
-        /* ============ HEADER ============ */
         .header {
-            display: flex; justify-content: space-between; align-items: center;
-            padding-bottom: 1rem; border-bottom: 1px solid var(--card-border); margin-bottom: 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--card-border);
+            margin-bottom: 2rem;
         }
         .logo { display: flex; align-items: center; gap: 0.75rem; }
         .logo-icon {
-            width: 44px; height: 44px;
+            width: 42px; height: 42px;
             background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
-            border-radius: 12px; display: grid; place-items: center; font-size: 1.5rem;
-            box-shadow: 0 0 25px rgba(6, 182, 212, 0.4), 0 0 50px rgba(168, 85, 247, 0.2);
-            animation: icon-glow 3s ease-in-out infinite;
+            border-radius: 12px;
+            display: grid; place-items: center; font-size: 1.5rem;
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
         }
-        @keyframes icon-glow {
-            0%, 100% { box-shadow: 0 0 25px rgba(6, 182, 212, 0.4), 0 0 50px rgba(168, 85, 247, 0.2); }
-            50% { box-shadow: 0 0 35px rgba(6, 182, 212, 0.6), 0 0 70px rgba(168, 85, 247, 0.3); }
-        }
-        .title h1 { font-size: 1.35rem; font-weight: 900; letter-spacing: -0.5px; background: linear-gradient(90deg, var(--text-main), var(--accent-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .title p { font-size: 0.78rem; color: var(--text-muted); margin-top: 1px; }
-        .header-right { display: flex; align-items: center; gap: 0.75rem; }
+        .title h1 { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.5px; }
+        .title p { font-size: 0.85rem; color: var(--text-muted); }
         .live-badge {
             display: inline-flex; align-items: center; gap: 0.5rem;
-            background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.25);
-            color: var(--accent-emerald); padding: 0.35rem 0.85rem; border-radius: 20px; font-weight: 600; font-size: 0.78rem;
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: var(--accent-emerald);
+            padding: 0.4rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.85rem;
         }
         .pulse-dot {
             width: 8px; height: 8px; background: var(--accent-emerald); border-radius: 50%;
-            box-shadow: 0 0 10px var(--accent-emerald); animation: pulse 1.5s infinite;
+            box-shadow: 0 0 10px var(--accent-emerald);
+            animation: pulse 1.5s infinite;
         }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-        .mode-badge {
-            background: rgba(168, 85, 247, 0.12); border: 1px solid rgba(168, 85, 247, 0.25);
-            color: var(--accent-purple); padding: 0.35rem 0.85rem; border-radius: 20px; font-weight: 600; font-size: 0.75rem;
-        }
 
-        /* ============ MAIN INTERACTIVE TABS BAR ============ */
-        .main-tabs {
-            display: flex; gap: 0.75rem; border-bottom: 1px solid var(--card-border);
-            margin-bottom: 1.25rem; padding-bottom: 0.5rem; flex-wrap: wrap;
+        .grid-metrics {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;
         }
-        .tab-btn {
-            display: flex; align-items: center; gap: 0.55rem;
-            padding: 0.65rem 1.35rem; background: rgba(30, 41, 59, 0.4);
-            border: 1px solid var(--card-border); border-radius: 12px;
-            color: var(--text-muted); font-size: 0.85rem; font-weight: 700;
-            cursor: pointer; transition: all 0.2s ease;
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(12px);
+            border-radius: 16px; padding: 1.5rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .tab-btn:hover { background: rgba(6, 182, 212, 0.1); color: var(--text-main); transform: translateY(-1px); }
-        .tab-btn.active {
-            background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(6, 182, 212, 0.18));
-            border-color: var(--accent-purple); color: var(--text-main);
-            box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);
-        }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; animation: tabFadeIn 0.3s ease-out; }
-        @keyframes tabFadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+        .card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .card-title { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.5rem; }
+        .card-value { font-size: 1.8rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.25rem; }
+        .card-sub { font-size: 0.85rem; color: var(--accent-emerald); font-weight: 600; }
 
-        /* ============ ACTIVE POSITION LIVE MONITOR BANNER ============ */
-        .active-pos-banner {
-            background: linear-gradient(135deg, rgba(6, 182, 212, 0.12), rgba(16, 185, 129, 0.08));
-            border: 1px solid rgba(6, 182, 212, 0.35);
-            border-radius: 16px; padding: 1.25rem; margin-bottom: 1.25rem;
-            box-shadow: 0 0 30px rgba(6, 182, 212, 0.15);
+        .agents-section { margin-top: 2rem; }
+        .section-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .agents-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; }
+        .agent-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid var(--card-border);
+            border-radius: 14px; padding: 1.25rem;
         }
-        .active-pos-idle {
-            background: rgba(30, 41, 59, 0.3); border: 1px solid var(--card-border);
-            box-shadow: none; padding: 1rem 1.25rem;
+        .agent-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+        .agent-icon { font-size: 1.4rem; }
+        .agent-name { font-weight: 700; font-size: 0.95rem; }
+        .agent-role { font-size: 0.75rem; color: var(--accent-cyan); text-transform: uppercase; }
+        .agent-text { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
+        .ceo-card {
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(15, 23, 42, 0.8));
+            box-shadow: 0 0 25px rgba(168, 85, 247, 0.2);
         }
-        .active-pos-header {
-            display: flex; justify-content: space-between; align-items: center;
-            margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;
-        }
-        .active-pos-idle .active-pos-header { margin-bottom: 0; }
-        .active-pos-title { display: flex; align-items: center; gap: 0.6rem; font-size: 1.05rem; font-weight: 800; }
-        .active-pos-pulse {
-            width: 12px; height: 12px; background: var(--accent-emerald); border-radius: 50%;
-            box-shadow: 0 0 14px var(--accent-emerald); animation: pulse 1.2s infinite;
-        }
-        .active-pos-time { font-size: 0.8rem; color: var(--text-muted); font-weight: 600; }
+        .ceo-card .agent-name { color: var(--accent-purple); }
 
-        .active-pos-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.85rem; margin-bottom: 1rem;
-        }
-        .pos-widget {
-            background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 12px; padding: 0.85rem 1rem;
-        }
-        .pos-widget-label { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
-        .pos-widget-val { font-size: 1.35rem; font-weight: 900; color: var(--text-main); margin-top: 0.2rem; }
-        .pos-widget-sub { font-size: 0.72rem; color: var(--text-muted); margin-top: 0.1rem; font-weight: 600; }
-
-        .active-pos-footer {
-            display: flex; gap: 1rem; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.06);
-            padding-top: 0.75rem; font-size: 0.75rem; color: var(--text-muted);
-        }
-        .pos-shield-tag {
-            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);
-            padding: 0.3rem 0.75rem; border-radius: 8px; font-weight: 600;
-        }
-
-        /* ============ TOP DASHBOARD GRID (2 Columns) ============ */
-        .top-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;
-        }
-
-        /* WALLET ASSETS (Binance Style) */
-        .wallet-card {
-            background: var(--card-bg); border: 1px solid var(--card-border);
-            backdrop-filter: blur(12px); border-radius: 16px; padding: 1.25rem;
-        }
-        .card-header-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
-        .card-heading { font-size: 0.88rem; font-weight: 800; color: var(--text-main); display: flex; align-items: center; gap: 0.5rem; }
-        .wallet-total-val { font-size: 1.8rem; font-weight: 900; color: var(--text-main); letter-spacing: -0.5px; }
-        .wallet-total-currency { font-size: 0.9rem; color: var(--text-muted); font-weight: 600; }
-        .asset-list { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
-        .asset-item {
-            display: flex; justify-content: space-between; align-items: center;
-            background: rgba(255,255,255,0.03); border-radius: 10px; padding: 0.6rem 0.85rem;
-            border: 1px solid rgba(255,255,255,0.04);
-        }
-        .asset-left { display: flex; align-items: center; gap: 0.6rem; }
-        .asset-symbol-icon {
-            width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
-            font-size: 0.85rem; font-weight: 800; color: white;
-        }
-        .icon-usdt { background: linear-gradient(135deg, #26a17b, #1a8a6a); }
-        .icon-bnb { background: linear-gradient(135deg, #f0b90b, #d4a30a); }
-        .asset-title { font-size: 0.88rem; font-weight: 700; }
-        .asset-sub { font-size: 0.7rem; color: var(--text-dim); }
-        .asset-right { text-align: right; }
-        .asset-qty-val { font-size: 0.88rem; font-weight: 700; font-variant-numeric: tabular-nums; }
-        .asset-usd-val { font-size: 0.72rem; color: var(--text-muted); }
-
-        /* REAL TRADE STATS CARD */
-        .stats-card {
-            background: var(--card-bg); border: 1px solid var(--card-border);
-            backdrop-filter: blur(12px); border-radius: 16px; padding: 1.25rem;
-            display: flex; flex-direction: column; justify-content: space-between;
-        }
-        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 0.5rem; }
-        .stat-box {
-            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.04);
-            border-radius: 10px; padding: 0.75rem;
-        }
-        .stat-label { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
-        .stat-value { font-size: 1.25rem; font-weight: 800; margin-top: 0.2rem; }
-        .stat-sub { font-size: 0.7rem; color: var(--accent-emerald); margin-top: 0.1rem; font-weight: 600; }
-
-        /* ============ SÚPER-CEREBRO TIMELINE ============ */
-        .brain-section { margin-bottom: 1.25rem; }
-        .section-title {
-            font-size: 1.1rem; font-weight: 800; margin-bottom: 0.85rem;
-            display: flex; align-items: center; gap: 0.5rem;
-        }
-        .verdicts-timeline { display: flex; flex-direction: column; gap: 0.85rem; }
-
-        .verdict-card {
-            border-radius: 14px; overflow: hidden; transition: transform 0.2s ease;
-        }
-        .verdict-latest {
-            background: linear-gradient(135deg, rgba(168, 85, 247, 0.12), rgba(6, 182, 212, 0.08));
-            border: 1px solid rgba(168, 85, 247, 0.35);
-            box-shadow: 0 0 25px rgba(168, 85, 247, 0.15);
-        }
-        .verdict-past {
-            background: rgba(30, 41, 59, 0.35); border: 1px solid var(--card-border); opacity: 0.8;
-        }
-        .verdict-header {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 0.7rem 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-        .verdict-label { font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 0.4rem; }
-        .verdict-latest .verdict-label { color: var(--accent-purple); }
-        .verdict-past .verdict-label { color: var(--text-dim); }
-        .verdict-time { font-size: 0.72rem; color: var(--text-dim); }
-        .latest-pulse { width: 8px; height: 8px; background: var(--accent-purple); border-radius: 50%; box-shadow: 0 0 10px var(--accent-purple); animation: pulse 1.5s infinite; }
-
-        .verdict-body { padding: 1.1rem; }
-        .verdict-decision { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem; }
-        .verdict-symbol { font-size: 1.3rem; font-weight: 900; letter-spacing: -0.3px; }
-        .verdict-badges { display: flex; gap: 0.5rem; align-items: center; }
-        .badge { padding: 0.25rem 0.65rem; border-radius: 6px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
-        .badge-long { background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); color: var(--accent-emerald); }
-        .badge-short { background: rgba(244, 63, 94, 0.15); border: 1px solid rgba(244, 63, 94, 0.3); color: var(--accent-rose); }
-        .badge-hold { background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.25); color: var(--accent-amber); }
-        .approved-yes { color: var(--accent-emerald); font-size: 0.75rem; font-weight: 700; }
-        .approved-no { color: var(--accent-rose); font-size: 0.75rem; font-weight: 700; }
-
-        .confidence-section { margin-bottom: 0.75rem; }
-        .confidence-header { display: flex; justify-content: space-between; margin-bottom: 0.3rem; font-size: 0.72rem; }
-        .confidence-label { color: var(--text-dim); font-weight: 600; }
-        .confidence-value { font-weight: 800; }
-        .confidence-bar-bg { width: 100%; height: 6px; background: rgba(255,255,255,0.06); border-radius: 10px; overflow: hidden; }
-        .confidence-bar-fill { height: 100%; border-radius: 10px; transition: width 0.8s ease; }
-
-        .candidates-row { font-size: 0.72rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap; }
-        .candidates-label { color: var(--text-dim); font-weight: 600; }
-        .chip { background: rgba(59, 130, 246, 0.12); border: 1px solid rgba(59, 130, 246, 0.2); color: var(--accent-blue); padding: 0.15rem 0.5rem; border-radius: 5px; font-size: 0.68rem; }
-
-        .reasoning-label { font-size: 0.7rem; color: var(--text-dim); font-weight: 600; margin-bottom: 0.3rem; text-transform: uppercase; }
-        .reasoning-text {
-            font-size: 0.8rem; color: var(--text-muted); line-height: 1.6;
-            background: rgba(0,0,0,0.25); border-radius: 8px; padding: 0.75rem 0.9rem;
-            border-left: 3px solid var(--accent-purple);
-        }
-
-        /* ============ CANDIDATES & MATRIX STYLES ============ */
-        .matrix-card {
-            background: var(--card-bg); border: 1px solid var(--card-border);
-            backdrop-filter: blur(12px); border-radius: 16px; padding: 1.25rem; margin-bottom: 1.25rem;
-        }
-        .matrix-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
-        .matrix-title { font-size: 0.88rem; font-weight: 800; display: flex; align-items: center; gap: 0.4rem; }
-        .matrix-total-val { font-size: 1.5rem; font-weight: 900; color: var(--text-main); }
-        .matrix-pnl { font-size: 0.78rem; font-weight: 700; margin-top: 0.1rem; }
-        .matrix-tags-box {
-            display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.75rem; max-height: 200px; overflow-y: auto;
-            padding-right: 0.2rem;
-        }
-        .matrix-tag {
-            background: rgba(6, 182, 212, 0.08); border: 1px solid rgba(6, 182, 212, 0.2);
-            color: var(--accent-cyan); padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem;
-        }
-
-        .candidates-card {
-            background: var(--card-bg); border: 1px solid var(--card-border);
-            backdrop-filter: blur(12px); border-radius: 16px; padding: 1.25rem; margin-bottom: 1.25rem;
-        }
-        .cand-table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
-        .cand-table th { font-size: 0.68rem; color: var(--text-dim); text-transform: uppercase; text-align: left; padding: 0.5rem; border-bottom: 1px solid var(--card-border); }
-        .cand-row td { font-size: 0.8rem; padding: 0.6rem 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.03); }
-        .score-badge { padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 700; font-size: 0.7rem; }
-        .score-high { background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); border: 1px solid rgba(16, 185, 129, 0.3); }
-        .score-mid { background: rgba(245, 158, 11, 0.15); color: var(--accent-amber); border: 1px solid rgba(245, 158, 11, 0.3); }
-
-        /* ============ FOOTER ============ */
-        footer {
-            text-align: center; color: var(--text-dim); font-size: 0.75rem;
-            padding-top: 1rem; border-top: 1px solid var(--card-border); margin-top: 1.5rem;
-            display: flex; justify-content: center; align-items: center; gap: 1.25rem; flex-wrap: wrap;
-        }
-        .refresh-btn {
-            padding: 5px 14px; background: rgba(6, 182, 212, 0.12); border: 1px solid rgba(6, 182, 212, 0.3);
-            color: var(--accent-cyan); border-radius: 8px; cursor: pointer; font-weight: 600; font-size: 0.75rem;
-            transition: all 0.2s;
-        }
-        .refresh-btn:hover { background: rgba(6, 182, 212, 0.25); transform: scale(1.03); }
-        .countdown { color: var(--accent-cyan); font-weight: 600; font-size: 0.75rem; }
-
-        @media (max-width: 900px) {
-            .top-grid { grid-template-columns: 1fr; }
-        }
+        footer { text-align: center; margin-top: 3rem; color: var(--text-muted); font-size: 0.8rem; padding-top: 1.5rem; border-top: 1px solid var(--card-border); }
     </style>
 </head>
 <body>
-    <!-- HEADER -->
     <div class="header">
         <div class="logo">
             <div class="logo-icon">🧠</div>
             <div class="title">
                 <h1>SÚPER-CEREBRO CUÁNTICO 24/7</h1>
-                <p>Mesa de Operaciones & Algoritmo de Inteligencia Institucional Binance Spot</p>
+                <p>Mesa de Operaciones Cuantitativas & Comité Multi-Agente de Élite</p>
             </div>
         </div>
-        <div class="header-right">
-            <div class="mode-badge">🖥️ MODO LOCAL</div>
-            <div class="live-badge">
-                <div class="pulse-dot"></div>
-                BINANCE API ACTIVE
+        <div class="live-badge">
+            <div class="pulse-dot"></div>
+            BINANCE LIVE API ACTIVE
+        </div>
+    </div>
+
+    <div class="grid-metrics">
+        <div class="card">
+            <div class="card-title">Capital Neto Real (USD)</div>
+            <div class="card-value">$20.08 USD</div>
+            <div class="card-sub">🟢 Protegido y en Operación en Vivo</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Posición Activa en Binance</div>
+            <div class="card-value">NINGUNA</div>
+            <div class="card-sub">💵 Entrada: $0.0000 | Pico: $0.0000</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Stop-Loss Adaptativo ATR</div>
+            <div class="card-value">±1.0%</div>
+            <div class="card-sub">🔵 Standard ATR</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Trailing Stop ATR Status</div>
+            <div class="card-value">⚪ Esperando +2.0%</div>
+            <div class="card-sub">Cacería de Súper-Tendencia Dinámica</div>
+        </div>
+    </div>
+
+    <div class="agents-section">
+        <div class="section-title">🏛️ DELIBERACIÓN EN TIEMPO REAL DEL COMITÉ DE 7 AGENTES IA</div>
+        <div class="agents-grid">
+            <div class="agent-card">
+                <div class="agent-header">
+                    <span class="agent-icon">🕵️</span>
+                    <div>
+                        <div class="agent-name">Agente 1: Whale & Macro Sentinel</div>
+                        <div class="agent-role">Macro Regime & Whale Flow</div>
+                    </div>
+                </div>
+                <div class="agent-text">Análisis de régimen macro y volumen de ballenas en vivo.</div>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-header">
+                    <span class="agent-icon">📊</span>
+                    <div>
+                        <div class="agent-name">Agente 2: Technical Sniper</div>
+                        <div class="agent-role">Price Action & Oscillators</div>
+                    </div>
+                </div>
+                <div class="agent-text">Osciladores RSI, MACD, EMAs y mechas de absorción evaluadas.</div>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-header">
+                    <span class="agent-icon">🌊</span>
+                    <div>
+                        <div class="agent-name">Agente 3: Orderbook Depth Tracker</div>
+                        <div class="agent-role">Liquidity Bids/Asks Imbalance</div>
+                    </div>
+                </div>
+                <div class="agent-text">Rastro de liquidez del Orderbook y muros de soporte de ballenas.</div>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-header">
+                    <span class="agent-icon">🧩</span>
+                    <div>
+                        <div class="agent-name">Agente 4: Sector Cluster Analyst</div>
+                        <div class="agent-role">Capital Rotation & Narrative</div>
+                    </div>
+                </div>
+                <div class="agent-text">Evaluación de rotación de capital por cluster sectorial.</div>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-header">
+                    <span class="agent-icon">🧠</span>
+                    <div>
+                        <div class="agent-name">Agente 5: RAG Memory Historian</div>
+                        <div class="agent-role">100 Simulations History</div>
+                    </div>
+                </div>
+                <div class="agent-text">Cruzamiento RAG con simulaciones históricas y patrones perdedores.</div>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-header">
+                    <span class="agent-icon">🛡️</span>
+                    <div>
+                        <div class="agent-name">Agente 6: Chief Risk Officer</div>
+                        <div class="agent-role">Capital Preservation & Veto</div>
+                    </div>
+                </div>
+                <div class="agent-text">Evaluación final de preservación de capital, ratio 1:2 y Trailing Stop ATR.</div>
+            </div>
+
+            <div class="agent-card ceo-card">
+                <div class="agent-header">
+                    <span class="agent-icon">👑</span>
+                    <div>
+                        <div class="agent-name">Agente 7: CEO Supreme Anti-Loss</div>
+                        <div class="agent-role">Profit Maximizer & Master Decision</div>
+                    </div>
+                </div>
+                <div class="agent-text">Consenso del CEO Supreme Anti-Loss Profit Maximizer.</div>
             </div>
         </div>
     </div>
 
-    <!-- PESTAÑAS DE NAVEGACIÓN PROFESIONAL -->
-    <div class="main-tabs">
-        <button class="tab-btn active" data-tab="tab-monitoreo" onclick="switchTab('tab-monitoreo')">
-            <span>🎯</span> MONITOREO EN VIVO
-        </button>
-        <button class="tab-btn" data-tab="tab-cerebro" onclick="switchTab('tab-cerebro')">
-            <span>🧠</span> SÚPER-CEREBRO IA
-        </button>
-        <button class="tab-btn" data-tab="tab-escaner" onclick="switchTab('tab-escaner')">
-            <span>📊</span> ESCÁNER CUÁNTICO
-        </button>
-        <button class="tab-btn" data-tab="tab-matrix" onclick="switchTab('tab-matrix')">
-            <span>🌐</span> MATRIX 100 CUENTAS
-        </button>
-    </div>
-
-    <!-- PESTAÑA 1: MONITOREO EN VIVO -->
-    <div id="tab-monitoreo" class="tab-content active">
-        
-        <!-- ============ SEGUIMIENTO EN TIEMPO REAL POSICIÓN ACTIVA ============ -->
-        <div class="active-pos-banner">
-            <div class="active-pos-header">
-                <div class="active-pos-title">
-                    <span class="active-pos-pulse"></span>
-                    <span class="active-pos-symbol">🎯 POSICIÓN REAL EN VIVO: <b>WLFIUSDT</b></span>
-                    <span class="badge badge-long">BUY SPOT LONG</span>
-                </div>
-                <div class="active-pos-time">⏱️ Tiempo Abierto: <b>52 min</b> / 75 min (Escalera Time-Decay)</div>
-            </div>
-            <div class="active-pos-grid">
-                <div class="pos-widget">
-                    <div class="pos-widget-label">Capital Invertido</div>
-                    <div class="pos-widget-val">$17.60 USD</div>
-                    <div class="pos-widget-sub">327.10 WLFI</div>
-                </div>
-                <div class="pos-widget">
-                    <div class="pos-widget-label">Precio de Entrada</div>
-                    <div class="pos-widget-val">$0.0535</div>
-                    <div class="pos-widget-sub">Binance Spot Live</div>
-                </div>
-                <div class="pos-widget">
-                    <div class="pos-widget-label">Máximo Pico Alcanzado</div>
-                    <div class="pos-widget-val" style="color: var(--accent-emerald);">$0.0539</div>
-                    <div class="pos-widget-sub">Pico Flotante: +0.75%</div>
-                </div>
-                <div class="pos-widget">
-                    <div class="pos-widget-label">Piso Stop-Loss ATR</div>
-                    <div class="pos-widget-val" style="color: var(--accent-rose);">$0.0534</div>
-                    <div class="pos-widget-sub">Límite Salida: -0.20%</div>
-                </div>
-            </div>
-            <div class="active-pos-footer">
-                <div class="pos-shield-tag">🛡️ BTC Circuit Breaker: <b>🟢 ACTIVO</b></div>
-                <div class="pos-shield-tag">🧱 Orderbook Muro: <b>🟢 OK</b></div>
-                <div class="pos-shield-tag">🚀 Trailing Stop: <b>⚪ Esperando +2.0%</b></div>
-            </div>
-        </div>
-        
-        
-        <div class="top-grid">
-            <!-- BILLETERA REAL BINANCE -->
-            <div class="wallet-card">
-                <div class="card-header-row">
-                    <div class="card-heading">💰 MIS ACTIVOS — SPOT BINANCE</div>
-                    <div class="wallet-total-val">$20.08 <span class="wallet-total-currency">USD</span></div>
-                </div>
-                <div class="asset-list">
-                    <div class="asset-item">
-                        <div class="asset-left">
-                            <div class="asset-symbol-icon icon-usdt">₮</div>
-                            <div>
-                                <div class="asset-title">USDT</div>
-                                <div class="asset-sub">TetherUS</div>
-                            </div>
-                        </div>
-                        <div class="asset-right">
-                            <div class="asset-qty-val">0.00000000</div>
-                            <div class="asset-usd-val">0.00 $</div>
-                        </div>
-                    </div>
-                    <div class="asset-item">
-                        <div class="asset-left">
-                            <div class="asset-symbol-icon icon-bnb">B</div>
-                            <div>
-                                <div class="asset-title">BNB</div>
-                                <div class="asset-sub">Escudo de Comisiones</div>
-                            </div>
-                        </div>
-                        <div class="asset-right">
-                            <div class="asset-qty-val">0.00409216</div>
-                            <div class="asset-usd-val">2.46 $</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- MÉTRICAS REALES Y PROTECCIÓN -->
-            <div class="stats-card">
-                <div class="card-heading">🛡️ PROTECCIÓN DE CAPITAL Y ESTADO REAL</div>
-                <div class="stats-grid">
-                    <div class="stat-box">
-                        <div class="stat-label">Posición Activa</div>
-                        <div class="stat-value">WLFIUSDT</div>
-                        <div class="stat-sub">Entrada: $0.0535</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-label">Historial Operatorio</div>
-                        <div class="stat-value">12 Trades</div>
-                        <div class="stat-sub">✅ 5W / ❌ 7L</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-label">PnL Neto Real</div>
-                        <div class="stat-value" style="color: var(--accent-emerald);">+$2.95</div>
-                        <div class="stat-sub">Depósito original: $17.13</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-label">Filtros Cuánticos</div>
-                        <div class="stat-value" style="color: var(--accent-cyan); font-size: 1.05rem;">GBM + OU + Corr</div>
-                        <div class="stat-sub">🛡️ Escudo Anti-Ruido Activo</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- PESTAÑA 2: SÚPER-CEREBRO IA -->
-    <div id="tab-cerebro" class="tab-content">
-        <div class="brain-section">
-            <div class="section-title">
-                <span style="-webkit-text-fill-color: initial;">🧠⚡</span> 
-                <span style="background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">SÚPER-CEREBRO EN VIVO — DICTAMEN Y ANÁLISIS DE MERCADO</span>
-            </div>
-            <div class="verdicts-timeline">
-                
-        <div class="verdict-card verdict-latest">
-            <div class="verdict-header">
-                <div class="verdict-label"><div class="latest-pulse"></div>🔴 ÚLTIMO ANÁLISIS EN VIVO</div>
-                <div class="verdict-time">🕐 2026-08-10 12:26:35</div>
-            </div>
-            <div class="verdict-body">
-                <div class="verdict-decision">
-                    <div class="verdict-symbol">🔒 SIN ENTRADA (100% USDT)</div>
-                    <div class="verdict-badges">
-                        <span class="badge badge-hold">⏸️ HOLD / PROTECCIÓN</span>
-                        <span class="approved-no">🔒 CERO COMPRAS (VETO RIESGO)</span>
-                    </div>
-                </div>
-                <div class="confidence-section">
-                    <div class="confidence-header">
-                        <span class="confidence-label">Nivel de Confianza del Súper-Cerebro:</span>
-                        <span class="confidence-value" style="color: var(--accent-rose);">0%</span>
-                    </div>
-                    <div class="confidence-bar-bg">
-                        <div class="confidence-bar-fill" style="width: 0%; background: var(--accent-rose);"></div>
-                    </div>
-                </div>
-                <div class="candidates-row"><span class="candidates-label">Top Evaluados:</span> <span class="chip">JSTUSDT <b>60 Pts</b></span><span class="chip">ARBUSDT <b>60 Pts</b></span><span class="chip">LDOUSDT <b>60 Pts</b></span><span class="chip">OPUSDT <b>60 Pts</b></span><span class="chip">ZROUSDT <b>60 Pts</b></span></div>
-                <div class="reasoning-section">
-                    <div class="reasoning-label">💭 Dictamen y Razonamiento Cuántico:</div>
-                    <div class="reasoning-text">Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)</div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="verdict-card verdict-past">
-            <div class="verdict-header">
-                <div class="verdict-label">📋 ANÁLISIS ANTERIOR (#2)</div>
-                <div class="verdict-time">🕐 2026-08-10 12:24:52</div>
-            </div>
-            <div class="verdict-body">
-                <div class="verdict-decision">
-                    <div class="verdict-symbol">🔒 SIN ENTRADA (100% USDT)</div>
-                    <div class="verdict-badges">
-                        <span class="badge badge-hold">⏸️ HOLD / PROTECCIÓN</span>
-                        <span class="approved-no">🔒 CERO COMPRAS (VETO RIESGO)</span>
-                    </div>
-                </div>
-                <div class="confidence-section">
-                    <div class="confidence-header">
-                        <span class="confidence-label">Nivel de Confianza del Súper-Cerebro:</span>
-                        <span class="confidence-value" style="color: var(--accent-rose);">0%</span>
-                    </div>
-                    <div class="confidence-bar-bg">
-                        <div class="confidence-bar-fill" style="width: 0%; background: var(--accent-rose);"></div>
-                    </div>
-                </div>
-                <div class="candidates-row"><span class="candidates-label">Top Evaluados:</span> <span class="chip">ARBUSDT <b>60 Pts</b></span><span class="chip">LDOUSDT <b>60 Pts</b></span><span class="chip">OPUSDT <b>60 Pts</b></span><span class="chip">JSTUSDT <b>60 Pts</b></span><span class="chip">PUMPUSDT <b>50 Pts</b></span></div>
-                <div class="reasoning-section">
-                    <div class="reasoning-label">💭 Dictamen y Razonamiento Cuántico:</div>
-                    <div class="reasoning-text">Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)</div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="verdict-card verdict-past">
-            <div class="verdict-header">
-                <div class="verdict-label">📋 ANÁLISIS ANTERIOR (#1)</div>
-                <div class="verdict-time">🕐 2026-08-10 12:22:42</div>
-            </div>
-            <div class="verdict-body">
-                <div class="verdict-decision">
-                    <div class="verdict-symbol">🔒 SIN ENTRADA (100% USDT)</div>
-                    <div class="verdict-badges">
-                        <span class="badge badge-hold">⏸️ HOLD / PROTECCIÓN</span>
-                        <span class="approved-no">🔒 CERO COMPRAS (VETO RIESGO)</span>
-                    </div>
-                </div>
-                <div class="confidence-section">
-                    <div class="confidence-header">
-                        <span class="confidence-label">Nivel de Confianza del Súper-Cerebro:</span>
-                        <span class="confidence-value" style="color: var(--accent-rose);">0%</span>
-                    </div>
-                    <div class="confidence-bar-bg">
-                        <div class="confidence-bar-fill" style="width: 0%; background: var(--accent-rose);"></div>
-                    </div>
-                </div>
-                <div class="candidates-row"><span class="candidates-label">Top Evaluados:</span> <span class="chip">LDOUSDT <b>60 Pts</b></span><span class="chip">OPUSDT <b>60 Pts</b></span><span class="chip">JSTUSDT <b>60 Pts</b></span><span class="chip">EULUSDT <b>60 Pts</b></span><span class="chip">ZROUSDT <b>60 Pts</b></span></div>
-                <div class="reasoning-section">
-                    <div class="reasoning-label">💭 Dictamen y Razonamiento Cuántico:</div>
-                    <div class="reasoning-text">Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)</div>
-                </div>
-            </div>
-        </div>
-    
-            </div>
-        </div>
-    </div>
-
-    <!-- PESTAÑA 3: ESCÁNER CUÁNTICO -->
-    <div id="tab-escaner" class="tab-content">
-        <div class="candidates-card">
-            <div class="card-heading">📊 TOP 10 OPORTUNIDADES DEL ESCÁNER CUÁNTICO</div>
-            <table class="cand-table">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Símbolo</th>
-                        <th>Score</th>
-                        <th>RSI 15m</th>
-                        <th>Vol Surge</th>
-                        <th>Grado GBM</th>
-                        <th>Estado</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-        <tr class="cand-row">
-            <td class="cand-rank">#1</td>
-            <td class="cand-symbol"><b>JSTUSDT</b></td>
-            <td class="cand-score"><span class="score-badge score-high">60 Pts</span></td>
-            <td class="cand-rsi">62.7</td>
-            <td class="cand-vol">1.8x</td>
-            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
-            <td class="cand-status">🔍 Monitoreando</td>
-        </tr>
-        
-        <tr class="cand-row">
-            <td class="cand-rank">#2</td>
-            <td class="cand-symbol"><b>ARBUSDT</b></td>
-            <td class="cand-score"><span class="score-badge score-high">60 Pts</span></td>
-            <td class="cand-rsi">59.3</td>
-            <td class="cand-vol">0.9x</td>
-            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
-            <td class="cand-status">🔍 Monitoreando</td>
-        </tr>
-        
-        <tr class="cand-row">
-            <td class="cand-rank">#3</td>
-            <td class="cand-symbol"><b>LDOUSDT</b></td>
-            <td class="cand-score"><span class="score-badge score-high">60 Pts</span></td>
-            <td class="cand-rsi">51.7</td>
-            <td class="cand-vol">0.6x</td>
-            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
-            <td class="cand-status">🔍 Monitoreando</td>
-        </tr>
-        
-        <tr class="cand-row">
-            <td class="cand-rank">#4</td>
-            <td class="cand-symbol"><b>OPUSDT</b></td>
-            <td class="cand-score"><span class="score-badge score-high">60 Pts</span></td>
-            <td class="cand-rsi">63.1</td>
-            <td class="cand-vol">2.7x</td>
-            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
-            <td class="cand-status">🔍 Monitoreando</td>
-        </tr>
-        
-        <tr class="cand-row">
-            <td class="cand-rank">#5</td>
-            <td class="cand-symbol"><b>ZROUSDT</b></td>
-            <td class="cand-score"><span class="score-badge score-high">60 Pts</span></td>
-            <td class="cand-rsi">55.6</td>
-            <td class="cand-vol">0.4x</td>
-            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
-            <td class="cand-status">🔍 Monitoreando</td>
-        </tr>
-        
-        <tr class="cand-row">
-            <td class="cand-rank">#6</td>
-            <td class="cand-symbol"><b>TUTUSDT</b></td>
-            <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
-            <td class="cand-rsi">51.5</td>
-            <td class="cand-vol">0.6x</td>
-            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
-            <td class="cand-status">🔍 Monitoreando</td>
-        </tr>
-        
-        <tr class="cand-row">
-            <td class="cand-rank">#7</td>
-            <td class="cand-symbol"><b>MMTUSDT</b></td>
-            <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
-            <td class="cand-rsi">64.3</td>
-            <td class="cand-vol">0.6x</td>
-            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
-            <td class="cand-status">🔍 Monitoreando</td>
-        </tr>
-        
-        <tr class="cand-row">
-            <td class="cand-rank">#8</td>
-            <td class="cand-symbol"><b>DOGEUSDT</b></td>
-            <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
-            <td class="cand-rsi">49.7</td>
-            <td class="cand-vol">0.1x</td>
-            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
-            <td class="cand-status">🔍 Monitoreando</td>
-        </tr>
-        
-        <tr class="cand-row">
-            <td class="cand-rank">#9</td>
-            <td class="cand-symbol"><b>ADAUSDT</b></td>
-            <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
-            <td class="cand-rsi">50.0</td>
-            <td class="cand-vol">0.9x</td>
-            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
-            <td class="cand-status">🔍 Monitoreando</td>
-        </tr>
-        
-        <tr class="cand-row">
-            <td class="cand-rank">#10</td>
-            <td class="cand-symbol"><b>PUMPUSDT</b></td>
-            <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
-            <td class="cand-rsi">59.8</td>
-            <td class="cand-vol">0.5x</td>
-            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
-            <td class="cand-status">🔍 Monitoreando</td>
-        </tr>
-        
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- PESTAÑA 4: MATRIX 100 CUENTAS -->
-    <div id="tab-matrix" class="tab-content">
-        <div class="matrix-card">
-            <div class="matrix-header">
-                <div>
-                    <div class="matrix-title">🌐 MATRIX 100 CUENTAS — SIMULADOR EN VIVO</div>
-                    <div class="matrix-total-val">$10,275.41 USD</div>
-                    <div class="matrix-pnl" style="color: var(--accent-emerald);">+$275.41 PnL Net | Win Rate 18.5%</div>
-                </div>
-                <div style="text-align: right;">
-                    <span class="badge badge-long">80 Cuentas en Posición</span>
-                    <div style="font-size: 0.72rem; color: var(--accent-emerald); margin-top: 0.3rem; font-weight: 700;">2 Símbolos Diversificados</div>
-                </div>
-            </div>
-            <div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 0.5rem; font-weight: 600;">Símbolos Activos en Paralelo (Offset Rotativo):</div>
-            <div class="matrix-tags-box">
-                <span class="matrix-tag"><b>BTCUSDT</b> <small>(60)</small></span><span class="matrix-tag"><b>ZECUSDT</b> <small>(20)</small></span>
-            </div>
-        </div>
-    </div>
-
-    <!-- FOOTER -->
     <footer>
-        <span>Última actualización: <strong>2026-08-10 12:26:39</strong> | Algoritmo Cuántico Binance 24/7</span>
-        <span class="countdown" id="countdown">Auto-refresh en: 30s</span>
-        <button class="refresh-btn" onclick="window.location.reload()">🔄 Actualizar Ahora</button>
+        Última actualización: <strong>2026-08-10 17:28:20</strong> | Súper-Cerebro Cuántico 24/7 Binance Spot Engine
+        <button onclick="window.location.reload()" style="margin-left: 15px; padding: 6px 14px; background: rgba(6, 182, 212, 0.2); border: 1px solid rgba(6, 182, 212, 0.4); color: #06b6d4; border-radius: 8px; cursor: pointer; font-weight: 600;">🔄 Actualizar Ahora</button>
     </footer>
-
-    <script>
-        function switchTab(tabId) {
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-            
-            const targetBtn = document.querySelector(`.tab-btn[data-tab="${tabId}"]`);
-            const targetContent = document.getElementById(tabId);
-            
-            if (targetBtn && targetContent) {
-                targetBtn.classList.add('active');
-                targetContent.classList.add('active');
-                localStorage.setItem('activeDashboardTab', tabId);
-            }
-        }
-
-        // Restore active tab from localStorage or default to tab-monitoreo
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedTab = localStorage.getItem('activeDashboardTab') || 'tab-monitoreo';
-            switchTab(savedTab);
-        });
-
-        let remaining = 30;
-        const countdownEl = document.getElementById('countdown');
-        setInterval(() => {
-            remaining--;
-            if (remaining <= 0) {
-                window.location.reload();
-            }
-            countdownEl.textContent = 'Auto-refresh en: ' + remaining + 's';
-        }, 1000);
-    </script>
 </body>
 </html>
