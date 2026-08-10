@@ -1,12 +1,38 @@
 {
-  "NIGHTUSDT": [
+  "XPLUSDT": [
     {
-      "timestamp": "2026-08-10 02:30:11",
-      "price": 0.01822,
-      "score": 50,
-      "rsi": 47.95,
+      "timestamp": "2026-08-10 02:32:10",
+      "price": 0.07836,
+      "score": 45,
+      "rsi": 54.94,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.39,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-10 02:32:10",
+      "price": 0.5251,
+      "score": 60,
+      "rsi": 51.64,
+      "macd": "Neutral",
+      "volume_surge": 0.06,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "KITEUSDT": [
+    {
+      "timestamp": "2026-08-10 02:32:10",
+      "price": 0.0993,
+      "score": 30,
+      "rsi": 52.33,
+      "macd": "Neutral",
+      "volume_surge": 0.13,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
