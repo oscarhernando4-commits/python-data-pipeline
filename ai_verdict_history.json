@@ -58,5 +58,35 @@
         "score": 55
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-10 11:00:33",
+    "selected_symbol": "NONE",
+    "action": "HOLD",
+    "approved": false,
+    "confidence": 0,
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de un mercado en fase de distribución.",
+    "top_candidates": [
+      {
+        "symbol": "XAUTUSDT",
+        "score": 60
+      },
+      {
+        "symbol": "WLFIUSDT",
+        "score": 60
+      },
+      {
+        "symbol": "PAXGUSDT",
+        "score": 60
+      },
+      {
+        "symbol": "ICPUSDT",
+        "score": 60
+      },
+      {
+        "symbol": "SPYBUSDT",
+        "score": 60
+      }
+    ]
   }
 ]

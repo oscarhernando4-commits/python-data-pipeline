@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 16:02:21",
+  "updated_at": "2026-08-10 11:01:50",
   "total_balance_usd": 20.08,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -28,6 +28,98 @@
     "action": "HOLD",
     "confidence": 0,
     "approved": false,
-    "reasoning": "Tras evaluar los 10 candidatos, ninguno cumple con el umbral de Score Técnico A+ (>= 55) ni con la confirmación de soporte institucional en el libro de órdenes. La alta volatilidad y la debilidad sistémica observada en los activos de mayor capitalización dictan una postura de preservación de capital (HOLD) hasta que el mercado muestre una estructura de reversión clara y confirmada."
-  }
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de un mercado en fase de distribución."
+  },
+  "verdict_history": [
+    {
+      "timestamp": "2026-08-10 11:00:33",
+      "selected_symbol": "NONE",
+      "action": "HOLD",
+      "approved": false,
+      "confidence": 0,
+      "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de un mercado en fase de distribución.",
+      "top_candidates": [
+        {
+          "symbol": "XAUTUSDT",
+          "score": 60
+        },
+        {
+          "symbol": "WLFIUSDT",
+          "score": 60
+        },
+        {
+          "symbol": "PAXGUSDT",
+          "score": 60
+        },
+        {
+          "symbol": "ICPUSDT",
+          "score": 60
+        },
+        {
+          "symbol": "SPYBUSDT",
+          "score": 60
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-08-10 10:54:32",
+      "selected_symbol": "NONE",
+      "action": "HOLD",
+      "approved": false,
+      "confidence": 0,
+      "reasoning": "El mercado se encuentra en un estado de capitulación silenciosa sin activos que cumplan con los criterios de alta convicción (Score A+). Se prioriza la preservación del capital sobre la especulación en activos de baja calidad técnica.",
+      "top_candidates": [
+        {
+          "symbol": "WLFIUSDT",
+          "score": 60
+        },
+        {
+          "symbol": "SPYBUSDT",
+          "score": 60
+        },
+        {
+          "symbol": "XPLUSDT",
+          "score": 60
+        },
+        {
+          "symbol": "SAGAUSDT",
+          "score": 60
+        },
+        {
+          "symbol": "LISTAUSDT",
+          "score": 55
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-08-10 10:52:40",
+      "selected_symbol": "NONE",
+      "action": "HOLD",
+      "approved": false,
+      "confidence": 0,
+      "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+      "top_candidates": [
+        {
+          "symbol": "WLFIUSDT",
+          "score": 60
+        },
+        {
+          "symbol": "ICPUSDT",
+          "score": 60
+        },
+        {
+          "symbol": "SAGAUSDT",
+          "score": 60
+        },
+        {
+          "symbol": "LISTAUSDT",
+          "score": 55
+        },
+        {
+          "symbol": "PUMPUSDT",
+          "score": 50
+        }
+      ]
+    }
+  ]
 }
