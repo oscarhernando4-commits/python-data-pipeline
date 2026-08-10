@@ -1,17 +1,21 @@
 {
-  "timestamp": "2026-08-10 12:54:25",
+  "timestamp": "2026-08-10 12:56:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en una fase de alta fragilidad con una correlación bajista sistémica. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55) y la falta de profundidad en el libro de órdenes, sumada a la alta tasa de fallos en trades históricos bajo condiciones similares, obliga a mantener una postura defensiva total.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional y alta volatilidad, donde la mayoría de los activos no cumplen con los criterios de fuerza relativa y soporte de libro de órdenes exigidos por el comité. Se prioriza la preservación del capital sobre la ejecución de trades de baja calidad.",
   "top_candidates": [
     {
-      "symbol": "ARBUSDT",
+      "symbol": "DOTUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "ETCUSDT",
       "score": 60
     },
     {
-      "symbol": "PYTHUSDT",
+      "symbol": "ARBUSDT",
       "score": 60
     },
     {
@@ -19,12 +23,8 @@
       "score": 60
     },
     {
-      "symbol": "ZAMAUSDT",
-      "score": 55
-    },
-    {
-      "symbol": "NILUSDT",
-      "score": 50
+      "symbol": "PYTHUSDT",
+      "score": 60
     }
   ]
 }
