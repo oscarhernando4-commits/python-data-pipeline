@@ -1,29 +1,29 @@
 {
-  "timestamp": "2026-08-10 11:08:39",
+  "timestamp": "2026-08-10 16:10:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "El mercado se encuentra en un estado de pánico institucional con una rotación defensiva inestable. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y Bids >= 55%) necesario para mitigar el riesgo de pérdida, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
+    {
+      "symbol": "KAITOUSDT",
+      "score": 80
+    },
     {
       "symbol": "PAXGUSDT",
       "score": 70
     },
     {
-      "symbol": "XAUTUSDT",
-      "score": 60
-    },
-    {
       "symbol": "WLFIUSDT",
-      "score": 60
+      "score": 70
     },
     {
-      "symbol": "ZAMAUSDT",
-      "score": 60
+      "symbol": "SAGAUSDT",
+      "score": 70
     },
     {
-      "symbol": "XPLUSDT",
+      "symbol": "XAUTUSDT",
       "score": 60
     }
   ]
