@@ -1,21 +1,13 @@
 {
-  "timestamp": "2026-08-10 10:50:32",
+  "timestamp": "2026-08-10 15:52:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de aversión al riesgo sistémica. Ninguno de los candidatos cumple con los requisitos técnicos y de liquidez exigidos por el comité para una operación de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en activos de baja fuerza relativa.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una correlación bajista masiva. Ninguno de los candidatos analizados alcanza el umbral de seguridad A+ (Score >= 55) exigido por el comité, y la historia de trades recientes confirma que operar en estas condiciones de baja convicción resulta en pérdidas recurrentes. Se mantiene la posición en efectivo para preservar el capital.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "GUNUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "XPLUSDT",
       "score": 60
     },
     {
@@ -23,7 +15,15 @@
       "score": 60
     },
     {
-      "symbol": "PAXGUSDT",
+      "symbol": "LISTAUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "score": 50
+    },
+    {
+      "symbol": "BICOUSDT",
       "score": 50
     }
   ]
