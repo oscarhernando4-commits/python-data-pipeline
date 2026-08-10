@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-10 07:50:22",
+  "timestamp": "2026-08-10 07:52:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre con una clara tendencia a la capitulación en activos de baja capitalización. Ninguno de los candidatos cumple con los criterios estrictos de riesgo y convicción establecidos por el comité, por lo que la decisión es preservar el capital en espera de una configuración de mercado más favorable.",
+  "reasoning": "El mercado presenta una configuración de alta volatilidad sin dirección clara. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes sólido), por lo que la decisión institucional es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
       "symbol": "POLUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "MUBUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "REUSDT",
+      "symbol": "MUBUSDT",
       "score": 75
     },
     {
-      "symbol": "GNOUSDT",
+      "symbol": "TRUMPUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "REUSDT",
       "score": 75
     }
   ]
