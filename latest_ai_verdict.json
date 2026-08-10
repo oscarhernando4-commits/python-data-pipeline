@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-10 04:18:29",
+  "timestamp": "2026-08-10 04:20:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Debido a la alta volatilidad, la falta de soporte claro en el libro de órdenes y la alta tasa de fallos en condiciones de mercado neutral, el comité ha decidido mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado presenta una indecisión sistémica y una falta de profundidad en los datos de liquidez, lo que, sumado a la alta tasa de fallos en trades recientes, obliga al comité a mantener una postura defensiva y evitar la exposición al riesgo.",
   "top_candidates": [
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "PEPEUSDT",
       "score": 75
     },
     {
-      "symbol": "ETCUSDT",
+      "symbol": "SHIBUSDT",
       "score": 75
     },
     {
@@ -23,8 +23,8 @@
       "score": 75
     },
     {
-      "symbol": "JSTUSDT",
-      "score": 70
+      "symbol": "SPYBUSDT",
+      "score": 75
     }
   ]
 }
