@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-10 01:18:18",
+  "timestamp": "2026-08-10 01:20:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento sistémico con una alta correlación hacia la debilidad. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55) y la confirmación de volumen institucional necesaria para mitigar el riesgo de 'caza de stops'. Se prioriza la preservación del capital sobre la especulación en un entorno de baja liquidez.",
+  "confidence": 0,
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada y una falta de muros de soporte institucionales. Ningún activo cumple con los criterios estrictos de convicción A+ del comité, por lo que se prioriza la preservación del capital sobre la ejecución de operaciones de alto riesgo.",
   "top_candidates": [
     {
       "symbol": "SUNUSDT",
       "score": 70
     },
     {
-      "symbol": "XLMUSDT",
+      "symbol": "WLDUSDT",
       "score": 60
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "PARTIUSDT",
       "score": 60
     },
     {
