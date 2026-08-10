@@ -380,14 +380,17 @@ def generate_web_dashboard():
         c_quant_ok = cand_qual in ("A+", "B") or cand_vol >= 1.00 or cand_sym in ("PAXGUSDT", "XAUTUSDT")
         c_rsi_ok = cand_rsi_2m <= 68 or cand_rsi_5m <= 68
         c_ma_ok = cand_price >= cand_ma25 if (cand_price > 0 and cand_ma25 > 0) else True
+        ai_approved = verdict_data.get("approved", True)
         
-        c_eligible = has_usdt and no_open_pos and c_score_ok and c_quant_ok and c_rsi_ok and c_ma_ok and btc_ok
+        c_eligible = has_usdt and no_open_pos and c_score_ok and c_quant_ok and c_rsi_ok and c_ma_ok and btc_ok and ai_approved
         
         if c_eligible and not selected_candidate:
             selected_candidate = cand
             
         rejection_reason = ""
-        if not c_score_ok:
+        if not ai_approved:
+            rejection_reason = "🔒 VETO IA (Mercado Tóxico)"
+        elif not c_score_ok:
             rejection_reason = "Score < 58 Pts"
         elif not c_ma_ok:
             rejection_reason = "🟡 Trampa Mecha 15M (Bajo MA25)"
@@ -398,7 +401,7 @@ def generate_web_dashboard():
         else:
             rejection_reason = "🟢 100% CUMPLIDO"
             
-        status_style = "color: var(--accent-emerald); font-weight: 800;" if c_eligible else "color: var(--accent-amber); font-weight: 700;"
+        status_style = "color: var(--accent-emerald); font-weight: 800;" if c_eligible else ("color: var(--accent-rose); font-weight: 700;" if not ai_approved else "color: var(--accent-amber); font-weight: 700;")
         row_bg = "background: rgba(16, 185, 129, 0.08);" if c_eligible else ""
         
         top_10_eval_rows += f"""
