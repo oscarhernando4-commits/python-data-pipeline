@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-10 11:22:03",
+  "timestamp": "2026-08-10 16:22:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica y alta correlación bajista. Ninguno de los candidatos analizados cumple con los criterios estrictos de calidad A+ (Score >= 55) establecidos por el comité. La estrategia prioritaria es la preservación del capital (HOLD) hasta que las condiciones macroeconómicas y la profundidad del libro de órdenes mejoren significativamente.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y alta incertidumbre. Ninguno de los candidatos analizados cumple con el umbral de seguridad A+ (Score >= 55) ni con una dominancia de Bids que garantice una entrada de bajo riesgo. Se prioriza la preservación del capital sobre la especulación en un entorno de alta correlación negativa.",
   "top_candidates": [
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "PAXGUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
@@ -15,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "SAGAUSDT",
+      "symbol": "WLFIUSDT",
       "score": 60
     },
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "BTCUSDT",
       "score": 50
     }
   ]
