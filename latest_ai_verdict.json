@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 09:36:19",
+  "timestamp": "2026-08-10 09:38:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual se encuentra en un estado de debilidad sistémica extrema sin señales de acumulación institucional. Ninguno de los candidatos cumple con los requisitos de seguridad y convicción exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y falta de profundidad en el libro de órdenes. Ningún activo cumple con los criterios estrictos de seguridad y convicción exigidos por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja calidad.",
   "top_candidates": [
+    {
+      "symbol": "SUNUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "HBARUSDT",
+      "score": 60
+    },
     {
       "symbol": "TRXUSDT",
       "score": 60
     },
     {
-      "symbol": "NILUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     },
     {
       "symbol": "CRVUSDT",
       "score": 60
-    },
-    {
-      "symbol": "BANANAS31USDT",
-      "score": 55
-    },
-    {
-      "symbol": "MMTUSDT",
-      "score": 50
     }
   ]
 }
