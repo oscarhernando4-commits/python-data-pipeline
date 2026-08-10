@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 11:56:25",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con confirmación de soporte de ballenas y volumen institucional claro). La estrategia institucional es preservar el 100% de la liquidez en USDT hasta que el entorno macro y técnico ofrezca una ventaja estadística superior.",
+  "timestamp": "2026-08-10 11:58:22",
+  "selected_symbol": "TAOUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 75,
+  "reasoning": "TAOUSDT es el único candidato que combina un Score Técnico de 75/100, pertenencia al sector dominante (AI & Big Data) y noticias positivas de mercado, cumpliendo con los criterios de convicción A+ del comité.",
   "top_candidates": [
     {
       "symbol": "POLUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "TAOUSDT",
       "score": 75
     },
     {
-      "symbol": "SOLUSDT",
+      "symbol": "SUIUSDT",
       "score": 75
     }
   ]
