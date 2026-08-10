@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-10 19:38:29",
+  "timestamp": "2026-08-10 14:38:35",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
@@ -33,32 +33,6 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "DOGEUSDT",
-      "score": 50,
-      "price": 0.06986,
-      "rsi_2m": 54.59,
-      "rsi_5m": 54.59,
-      "rsi_15m": 54.59,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.7,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "UNIUSDT",
-      "score": 50,
-      "price": 3.952,
-      "rsi_2m": 49.12,
-      "rsi_5m": 49.12,
-      "rsi_15m": 49.12,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.43,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
       "symbol": "XRPUSDT",
       "score": 50,
       "price": 1.0219,
@@ -72,6 +46,19 @@
       "macro_trend": "NEUTRAL"
     },
     {
+      "symbol": "UNIUSDT",
+      "score": 50,
+      "price": 3.954,
+      "rsi_2m": 49.94,
+      "rsi_5m": 49.94,
+      "rsi_15m": 49.94,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.43,
+      "trade_quality": "B",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "SOLUSDT",
       "score": 50,
       "price": 76.14,
@@ -80,33 +67,7 @@
       "rsi_15m": 50.2,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.25,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "HBARUSDT",
-      "score": 50,
-      "price": 0.0681,
-      "rsi_2m": 48.09,
-      "rsi_5m": 48.09,
-      "rsi_15m": 48.09,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.37,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "XLMUSDT",
-      "score": 50,
-      "price": 0.1629,
-      "rsi_2m": 53.87,
-      "rsi_5m": 53.87,
-      "rsi_15m": 53.87,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.2,
+      "vol_surge": 0.26,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -124,15 +85,54 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "DOGEUSDT",
       "score": 50,
-      "price": 499.73,
-      "rsi_2m": 47.45,
-      "rsi_5m": 47.45,
-      "rsi_15m": 47.45,
+      "price": 0.06986,
+      "rsi_2m": 54.59,
+      "rsi_5m": 54.59,
+      "rsi_15m": 54.59,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.33,
+      "vol_surge": 0.72,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "score": 50,
+      "price": 0.054,
+      "rsi_2m": 65.91,
+      "rsi_5m": 65.91,
+      "rsi_15m": 65.91,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.34,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "score": 50,
+      "price": 2.87e-06,
+      "rsi_2m": 48.66,
+      "rsi_5m": 48.66,
+      "rsi_15m": 48.66,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.95,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "ACTUSDT",
+      "score": 50,
+      "price": 0.01107,
+      "rsi_2m": 49.47,
+      "rsi_5m": 49.47,
+      "rsi_15m": 49.47,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.22,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
