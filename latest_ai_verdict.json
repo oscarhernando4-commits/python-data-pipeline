@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 09:50:20",
+  "timestamp": "2026-08-10 09:52:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con los criterios estrictos de Score Técnico (>= 55) y confirmación de volumen institucional necesarios para una operación de alta probabilidad. El mercado se encuentra en una fase de capitulación técnica donde la preservación de capital es la estrategia óptima, evitando el riesgo de 'cuchillos cayendo' en activos sin soporte de ballenas.",
+  "confidence": 95,
+  "reasoning": "Tras la deliberación, el comité ha determinado que no existen activos que cumplan con el umbral de seguridad A+ (Score >= 55) y la confirmación de volumen institucional necesaria. La alta probabilidad de 'falling knives' y la falta de soporte claro en el orderbook obligan a la preservación total del capital en espera de una estructura de mercado más robusta.",
   "top_candidates": [
     {
       "symbol": "LINKUSDT",
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
+      "symbol": "SKYUSDT",
+      "score": 60
+    },
+    {
       "symbol": "ATOMUSDT",
       "score": 60
     },
     {
       "symbol": "CRVUSDT",
       "score": 60
-    },
-    {
-      "symbol": "LTCUSDT",
-      "score": 50
     }
   ]
 }
