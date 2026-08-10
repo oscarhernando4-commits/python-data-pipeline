@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-10 11:18:25",
+  "timestamp": "2026-08-10 11:20:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta toxicidad con una falta total de soporte institucional en los niveles actuales. Ninguno de los activos analizados cumple con el umbral de calidad A+ exigido por el comité, por lo que la estrategia de preservación de capital dicta una postura de espera (HOLD) para evitar pérdidas innecesarias en un entorno de baja convicción.",
+  "reasoning": "El mercado se encuentra en una fase de distribución forzada con una debilidad sistémica generalizada. Ningún activo cumple con los criterios de calidad A+ (Score >= 55) exigidos por el Comité. Se prioriza la protección del capital sobre la especulación en un entorno de baja liquidez y alta volatilidad bajista.",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "LINKUSDT",
       "score": 60
     },
     {
@@ -19,12 +15,16 @@
       "score": 60
     },
     {
-      "symbol": "LUNCUSDT",
+      "symbol": "CAKEUSDT",
       "score": 60
     },
     {
       "symbol": "NIGHTUSDT",
       "score": 60
+    },
+    {
+      "symbol": "TAOUSDT",
+      "score": 50
     }
   ]
 }
