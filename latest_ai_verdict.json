@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-10 09:42:20",
+  "timestamp": "2026-08-10 09:44:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una asimetría bajista severa y una falta de profundidad en el libro de órdenes. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55 con confirmación de volumen y soporte), por lo que la orden es mantener la liquidez en espera de una estructura de mercado más saludable.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación y alta incertidumbre. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ (Score >= 55 y soporte sólido en el libro de órdenes). La estrategia institucional es preservar el capital en efectivo (USDT) hasta que se disipe la presión vendedora y aparezcan patrones de acumulación validados por volumen institucional.",
   "top_candidates": [
     {
-      "symbol": "SUNUSDT",
+      "symbol": "CRVUSDT",
       "score": 70
     },
     {
@@ -15,11 +15,11 @@
       "score": 60
     },
     {
-      "symbol": "LINKUSDT",
+      "symbol": "HBARUSDT",
       "score": 60
     },
     {
-      "symbol": "HBARUSDT",
+      "symbol": "LINKUSDT",
       "score": 60
     },
     {
