@@ -1,11 +1,24 @@
 {
-  "timestamp": "2026-08-10 23:54:20",
+  "timestamp": "2026-08-10 18:54:55",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, el comité concluye que el mercado se encuentra en una fase de distribución institucional sin activos que cumplan con el umbral mínimo de seguridad (Score >= 55). Se prioriza la protección del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "Debido a que ningún activo analizado alcanza el umbral de seguridad A+ (Score >= 55) y el entorno macro es de alta incertidumbre, el comité ha decidido mantener la posición en efectivo para evitar la exposición a activos de baja calidad técnica.",
   "top_candidates": [
+    {
+      "symbol": "TRXUSDT",
+      "score": 50,
+      "price": 0.3309,
+      "rsi_2m": 50.03,
+      "rsi_5m": 50.03,
+      "rsi_15m": 50.03,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.18,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
     {
       "symbol": "BABYUSDT",
       "score": 50,
@@ -15,7 +28,7 @@
       "rsi_15m": 50.5,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 1.33,
+      "vol_surge": 1.34,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -30,6 +43,19 @@
       "rsi_4h": 50.0,
       "vol_surge": 0.32,
       "trade_quality": "B",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "QNTUSDT",
+      "score": 50,
+      "price": 58.25,
+      "rsi_2m": 64.52,
+      "rsi_5m": 64.52,
+      "rsi_15m": 64.52,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.7,
+      "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
@@ -54,7 +80,7 @@
       "rsi_15m": 48.98,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.68,
+      "vol_surge": 0.69,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -72,67 +98,41 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "NEXOUSDT",
+      "symbol": "XPLUSDT",
       "score": 50,
-      "price": 0.726,
-      "rsi_2m": 57.49,
-      "rsi_5m": 57.49,
-      "rsi_15m": 57.49,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.03,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "GRAMUSDT",
-      "score": 50,
-      "price": 1.327,
-      "rsi_2m": 55.26,
-      "rsi_5m": 55.26,
-      "rsi_15m": 55.26,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.11,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "QNTUSDT",
-      "score": 50,
-      "price": 58.25,
-      "rsi_2m": 64.52,
-      "rsi_5m": 64.52,
-      "rsi_15m": 64.52,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.7,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "AEROUSDT",
-      "score": 50,
-      "price": 0.4161,
-      "rsi_2m": 51.47,
-      "rsi_5m": 51.47,
-      "rsi_15m": 51.47,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.53,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "ARBUSDT",
-      "score": 50,
-      "price": 0.08,
-      "rsi_2m": 48.98,
-      "rsi_5m": 48.98,
-      "rsi_15m": 48.98,
+      "price": 0.07828,
+      "rsi_2m": 49.72,
+      "rsi_5m": 49.72,
+      "rsi_15m": 49.72,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.3,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "LUNCUSDT",
+      "score": 50,
+      "price": 5.005e-05,
+      "rsi_2m": 51.86,
+      "rsi_5m": 51.86,
+      "rsi_15m": 51.86,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.19,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "ORDIUSDT",
+      "score": 50,
+      "price": 3.514,
+      "rsi_2m": 59.43,
+      "rsi_5m": 59.43,
+      "rsi_15m": 59.43,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.37,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
