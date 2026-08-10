@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 17:36:26",
+  "timestamp": "2026-08-10 12:36:38",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una falta total de activos que cumplan con los criterios de alta convicción (Score A+). La prioridad institucional es la preservación de capital, por lo que se decide mantener la liquidez en espera de una mejor estructura de mercado.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "ARBUSDT",
@@ -25,29 +25,20 @@
       "macro_trend": "NEUTRAL"
     },
     {
+      "symbol": "ALTUSDT",
+      "score": 60,
+      "price": 0.00623,
+      "rsi_15m": 50.5,
+      "vol_surge": 0.13,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "ADAUSDT",
       "score": 50,
       "price": 0.196,
       "rsi_15m": 51.2,
       "vol_surge": 0.3,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "PUMPUSDT",
-      "score": 50,
-      "price": 0.226,
-      "rsi_15m": 65.59,
-      "vol_surge": 0.28,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "XLMUSDT",
-      "score": 50,
-      "price": 0.1627,
-      "rsi_15m": 48.23,
-      "vol_surge": 0.46,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -61,11 +52,20 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "GRAMUSDT",
+      "symbol": "MMTUSDT",
       "score": 50,
-      "price": 1.33,
-      "rsi_15m": 49.02,
-      "vol_surge": 0.13,
+      "price": 0.2262,
+      "rsi_15m": 65.8,
+      "vol_surge": 0.29,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "XLMUSDT",
+      "score": 50,
+      "price": 0.1627,
+      "rsi_15m": 48.23,
+      "vol_surge": 0.46,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -88,11 +88,11 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "SKHYBUSDT",
+      "symbol": "PEPEUSDT",
       "score": 50,
-      "price": 136.62,
-      "rsi_15m": 52.45,
-      "vol_surge": 0.04,
+      "price": 0.000817,
+      "rsi_15m": 56.87,
+      "vol_surge": 0.48,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
