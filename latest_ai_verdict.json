@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-10 12:36:25",
+  "timestamp": "2026-08-10 12:38:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un entorno de alta fragilidad sin señales de acumulación institucional significativa. Ningún activo cumple con los criterios de riesgo A+ exigidos por el comité, por lo que la estrategia prioritaria es la preservación de capital en USDT hasta que el volumen confirme una reversión real.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con una estructura técnica débil. Ninguno de los candidatos cumple con los requisitos estrictos de riesgo y scoring establecidos por el comité, por lo que la decisión es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "POLUSDT",
       "score": 60
     },
     {
@@ -15,16 +15,16 @@
       "score": 60
     },
     {
+      "symbol": "HOMEUSDT",
+      "score": 60
+    },
+    {
       "symbol": "ATOMUSDT",
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "HOMEUSDT",
-      "score": 60
+      "symbol": "LTCUSDT",
+      "score": 50
     }
   ]
 }
