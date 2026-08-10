@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-10 07:02:25",
+  "timestamp": "2026-08-10 07:04:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de compresión de volatilidad con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes claro y tendencia confirmada), por lo que la estrategia de preservación de capital dicta mantener la posición en efectivo.",
+  "reasoning": "Ninguno de los candidatos cumple con los criterios estrictos de convicción A+ establecidos por el comité. La alta volatilidad y la falta de soporte claro en el libro de órdenes, sumado a la alta tasa de fallos en condiciones de mercado neutral, dictan una postura de preservación de capital.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "GRAMUSDT",
       "score": 75
     },
     {
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "WLFIUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ASTERUSDT",
       "score": 75
     },
     {
