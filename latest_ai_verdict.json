@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 14:26:21",
+  "timestamp": "2026-08-10 14:28:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de capitulación técnica y baja liquidez. Ninguno de los candidatos cumple con los requisitos estrictos de Score A+ y soporte institucional en el libro de órdenes, por lo que la estrategia más rentable es la preservación del capital.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada y una falta de profundidad en el libro de órdenes. Ningún activo cumple con el umbral de convicción A+ (Score >= 55 y Confianza >= 70%) necesario para operar, por lo que el comité ha decidido mantener la liquidez en espera de una estructura de mercado más favorable.",
   "top_candidates": [
     {
       "symbol": "TUTUSDT",
@@ -15,15 +15,15 @@
       "score": 70
     },
     {
-      "symbol": "WLDUSDT",
+      "symbol": "HOMEUSDT",
+      "score": 70
+    },
+    {
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
       "symbol": "SUIUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "HOMEUSDT",
       "score": 60
     }
   ]
