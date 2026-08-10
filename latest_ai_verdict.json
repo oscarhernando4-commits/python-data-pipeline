@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-10 06:22:19",
+  "timestamp": "2026-08-10 06:24:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de compresión sin una dirección clara. Ninguno de los candidatos cumple con el umbral de convicción A+ exigido por el comité, y el riesgo de operar en un entorno de miedo (Fear 30) con baja dominancia de compradores en el libro de órdenes es demasiado elevado. Se prioriza la preservación del capital hasta que se observe una ruptura de rango con volumen institucional confirmado.",
+  "reasoning": "El mercado presenta una configuración de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral estricto de convicción A+ requerido por el comité, y el historial de trades recientes en condiciones similares ha sido mayoritariamente negativo. Se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
+    {
+      "symbol": "ETHUSDT",
+      "score": 85
+    },
     {
       "symbol": "BTCUSDT",
       "score": 75
@@ -15,11 +19,7 @@
       "score": 75
     },
     {
-      "symbol": "PEPEUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "ETHUSDT",
+      "symbol": "TRXUSDT",
       "score": 75
     },
     {
