@@ -1,25 +1,25 @@
 {
-  "timestamp": "2026-08-10 01:54:18",
-  "selected_symbol": "AAVEUSDT",
-  "action": "BUY_LONG",
-  "approved": true,
-  "confidence": 75,
-  "reasoning": "Tras deliberar, el comité ha determinado que AAVEUSDT es el único activo que cumple con los criterios de alta convicción (Score 85) y rotación sectorial hacia DeFi. Se prioriza la protección del capital mediante un Trailing Stop, evitando el resto de activos que no superan el umbral de riesgo A+.",
+  "timestamp": "2026-08-10 01:56:49",
+  "selected_symbol": "NONE",
+  "action": "HOLD",
+  "approved": false,
+  "confidence": 0,
+  "reasoning": "El mercado presenta una divergencia estructural y un entorno de alta incertidumbre. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ del comité, por lo que se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "AAVEUSDT",
       "score": 85
     },
     {
-      "symbol": "XRPUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "HBARUSDT",
+      "symbol": "BTCUSDT",
       "score": 75
     },
     {
       "symbol": "UNIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "XRPUSDT",
       "score": 75
     },
     {
