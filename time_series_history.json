@@ -1,12 +1,25 @@
 {
-  "STXUSDT": [
+  "RIFUSDT": [
     {
-      "timestamp": "2026-08-10 17:12:13",
-      "price": 0.1317,
-      "score": 30,
-      "rsi": 50.79,
+      "timestamp": "2026-08-10 12:12:24",
+      "price": 0.0711,
+      "score": 0,
+      "rsi": 44.39,
       "macd": "Neutral",
-      "volume_surge": 2.39,
+      "volume_surge": 1.33,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GALAUSDT": [
+    {
+      "timestamp": "2026-08-10 12:12:24",
+      "price": 0.001814,
+      "score": 30,
+      "rsi": 50.31,
+      "macd": "Neutral",
+      "volume_surge": 1.27,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
