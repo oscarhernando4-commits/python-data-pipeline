@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 10:48:22",
+  "updated_at": "2026-08-10 10:50:18",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 95,
+    "confidence": 0,
     "approved": false,
-    "reasoning": "El mercado presenta una fragilidad extrema con una tendencia bajista predominante. Ninguno de los candidatos cumple con los criterios estrictos de Score A+ y soporte de ballenas, por lo que la estrategia de preservación de capital dicta no operar."
+    "reasoning": "El mercado se encuentra en una fase de alta fragilidad sistémica y distribución institucional. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y volumen de soporte sólido). Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad."
   }
 }

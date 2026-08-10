@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-10 10:48:22",
+  "timestamp": "2026-08-10 10:50:18",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado presenta una fragilidad extrema con una tendencia bajista predominante. Ninguno de los candidatos cumple con los criterios estrictos de Score A+ y soporte de ballenas, por lo que la estrategia de preservación de capital dicta no operar.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en una fase de alta fragilidad sistémica y distribución institucional. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y volumen de soporte sólido). Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
+    {
+      "symbol": "BNBUSDT",
+      "score": 60
+    },
     {
       "symbol": "LINKUSDT",
       "score": 60
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "JUPUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "CAKEUSDT",
       "score": 60
     }
   ]
