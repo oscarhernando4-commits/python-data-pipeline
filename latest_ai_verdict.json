@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 10:28:22",
+  "timestamp": "2026-08-10 10:30:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual se encuentra en una fase de alta fragilidad y fragmentación, con una falta de soporte institucional claro en los libros de órdenes. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y Bids > 55%) necesario para mitigar el riesgo de 'trampas de liquidez'. Por lo tanto, la decisión institucional es mantener la liquidez en USDT para preservar el capital.",
+  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica extrema. Ninguno de los candidatos cumple con el umbral de seguridad A+ requerido por el comité. La estrategia institucional es preservar el capital y evitar la exposición a activos con historiales erráticos o falta de convicción compradora.",
   "top_candidates": [
-    {
-      "symbol": "LINKUSDT",
-      "score": 60
-    },
     {
       "symbol": "WLFIUSDT",
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "CRVUSDT",
       "score": 60
     },
     {
-      "symbol": "ZROUSDT",
+      "symbol": "PYTHUSDT",
       "score": 60
     },
     {
-      "symbol": "VETUSDT",
+      "symbol": "LUNCUSDT",
       "score": 60
+    },
+    {
+      "symbol": "HBARUSDT",
+      "score": 50
     }
   ]
 }
