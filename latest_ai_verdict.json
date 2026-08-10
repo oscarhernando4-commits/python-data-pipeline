@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 17:20:25",
+  "timestamp": "2026-08-10 12:20:38",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una falta generalizada de fuerza institucional. Ninguno de los candidatos analizados alcanza el umbral de Score 55 requerido por el comité, y el entorno macroeconómico es desfavorable para posiciones largas. Se prioriza la protección del capital sobre la especulación en activos de baja convicción.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "ARBUSDT",
@@ -25,29 +25,20 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "TUTUSDT",
-      "score": 50,
-      "price": 0.13139,
-      "rsi_15m": 50.82,
-      "vol_surge": 0.22,
+      "symbol": "OPUSDT",
+      "score": 60,
+      "price": 0.092,
+      "rsi_15m": 64.02,
+      "vol_surge": 2.33,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "PUMPUSDT",
-      "score": 50,
-      "price": 0.002764,
-      "rsi_15m": 55.35,
-      "vol_surge": 0.13,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "MMTUSDT",
-      "score": 50,
-      "price": 0.224,
-      "rsi_15m": 63.31,
-      "vol_surge": 0.29,
+      "symbol": "EULUSDT",
+      "score": 60,
+      "price": 1.238,
+      "rsi_15m": 58.04,
+      "vol_surge": 0.08,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -56,7 +47,34 @@
       "score": 50,
       "price": 203.2,
       "rsi_15m": 50.77,
-      "vol_surge": 0.11,
+      "vol_surge": 0.12,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "MMTUSDT",
+      "score": 50,
+      "price": 0.2249,
+      "rsi_15m": 64.27,
+      "vol_surge": 0.32,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "TUTUSDT",
+      "score": 50,
+      "price": 0.13136,
+      "rsi_15m": 50.79,
+      "vol_surge": 0.23,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "score": 50,
+      "price": 0.002764,
+      "rsi_15m": 55.35,
+      "vol_surge": 0.14,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -75,24 +93,6 @@
       "price": 0.1572,
       "rsi_15m": 57.29,
       "vol_surge": 0.33,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "BROCCOLI714USDT",
-      "score": 50,
-      "price": 0.01946,
-      "rsi_15m": 60.68,
-      "vol_surge": 0.98,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "KORUBUSDT",
-      "score": 50,
-      "price": 16.73,
-      "rsi_15m": 53.67,
-      "vol_surge": 0.03,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
