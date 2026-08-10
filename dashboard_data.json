@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 11:54:45",
+  "updated_at": "2026-08-10 11:55:58",
   "total_balance_usd": 20.08,
   "usdt_free": 0.0,
   "bnb_free": 0.00409216,
@@ -10,7 +10,12 @@
     "quantity": 327.1,
     "entry_price": 0.0535,
     "highest_price": 0.0536,
+    "cost_usd": 17.53,
+    "side": "LONG",
+    "break_even": false,
+    "trailing_active": false,
     "adaptive_sl_pct": 0.6,
+    "holding_cycles": 10,
     "volatility_regime": "⏳ Escalera 20m: SL Apretado a -0.60%"
   },
   "verdict": {
@@ -19,7 +24,7 @@
     "action": "HOLD",
     "approved": false,
     "confidence": 0,
-    "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+    "reasoning": "El mercado actual no cumple con los criterios de alta convicción establecidos por el comité. La mayoría de los activos presentan scores técnicos inferiores a 55 y una falta de soporte institucional en el libro de órdenes, lo que aumenta el riesgo de 'falling knives'. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja confianza.",
     "top_candidates": [
       {
         "symbol": "SAGAUSDT",

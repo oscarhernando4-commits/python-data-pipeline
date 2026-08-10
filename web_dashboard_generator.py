@@ -2,7 +2,10 @@
 Professional Web Dashboard & Real-Time Data Generator
 Generates `dashboard_data.json` and `dashboard.html` for real-time browser monitoring.
 Includes:
+- Multi-Tab Professional UI (Monitoreo en Vivo, Súper-Cerebro IA, Escáner Cuántico, Matrix 100)
+- Active Tab Persistence via localStorage
 - Mis Activos (Binance Spot Wallet: USDT & BNB exact values)
+- Live Active Position Monitor (WLFIUSDT real-time tracking)
 - Súper-Cerebro AI Decision Timeline (Last 3 decisions with glowing highlight on latest)
 - Top Scanner Opportunities (Quantitative Ranking & Institutional GBM Grades)
 - Matrix 100 Simulations (25+ Live Diversified Symbols Breakdown)
@@ -71,7 +74,6 @@ def _build_verdict_card_html(verdict, index, is_latest=False):
         action_badge = '<span class="badge badge-hold">⏸️ HOLD / PROTECCIÓN</span>'
     
     approval_html = '<span class="approved-yes">✅ APROBADO</span>' if approved else '<span class="approved-no">🔒 CERO COMPRAS (VETO RIESGO)</span>'
-    
     conf_color = "var(--accent-emerald)" if confidence >= 80 else ("var(--accent-amber)" if confidence >= 60 else "var(--accent-rose)")
     
     candidates_html = ""
@@ -163,7 +165,6 @@ def generate_web_dashboard():
     from collections import Counter
     symbol_counts = Counter(a.get("symbol", "?") for a in active_positions)
     
-    # Format symbol distribution tags
     matrix_symbol_tags = "".join(
         f'<span class="matrix-tag"><b>{sym}</b> <small>({count})</small></span>'
         for sym, count in symbol_counts.most_common(25)
@@ -172,7 +173,6 @@ def generate_web_dashboard():
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     pos = account_data.get("position") or {}
     
-    # Build data payload
     data_payload = {
         "updated_at": now_str,
         "total_balance_usd": account_data.get("current_balance_usd", 20.08),
@@ -180,35 +180,26 @@ def generate_web_dashboard():
         "bnb_free": account_data.get("_cached_bnb", 0.00409216),
         "bnb_usd": account_data.get("_cached_bnb_usd", 2.46),
         "status": account_data.get("status", "🟦 Buscando Entrada A+"),
-        "position": {
-            "symbol": pos.get("symbol", "NINGUNA") if pos else "NINGUNA",
-            "quantity": pos.get("quantity", 0.0) if pos else 0.0,
-            "entry_price": pos.get("entry_price", 0.0) if pos else 0.0,
-            "highest_price": pos.get("highest_price", pos.get("entry_price", 0.0)) if pos else 0.0,
-            "adaptive_sl_pct": pos.get("adaptive_sl_pct", 1.0),
-            "volatility_regime": pos.get("volatility_regime", "🔵 Standard ATR")
-        },
+        "position": pos,
         "verdict": verdict_data,
         "verdict_history": last_3
     }
     
-    # Save JSON data feed
     json_path = os.path.join(base_dir, "dashboard_data.json")
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(data_payload, f, indent=2, ensure_ascii=False)
     
-    # Build verdict history cards HTML
+    # Verdict history cards
     verdict_cards_html = ""
     for i, v in enumerate(last_3):
         verdict_cards_html += _build_verdict_card_html(v, len(last_3) - i, is_latest=(i == 0))
-    
     if not last_3:
         verdict_cards_html = '<div class="verdict-card verdict-past"><div class="verdict-body"><div class="reasoning-text">⏳ Esperando primer análisis del Súper-Cerebro...</div></div></div>'
     
     # Matrix stats
-    matrix_total = matrix_data.get("current_total_usd", 9679.13)
-    matrix_pnl = matrix_data.get("net_pnl_usd", -320.87)
-    matrix_wr = matrix_data.get("global_win_rate_pct", 0)
+    matrix_total = matrix_data.get("current_total_usd", 10276.37)
+    matrix_pnl = matrix_data.get("net_pnl_usd", 276.37)
+    matrix_wr = matrix_data.get("global_win_rate_pct", 18.6)
     pnl_color = "var(--accent-emerald)" if matrix_pnl >= 0 else "var(--accent-rose)"
     pnl_sign = "+" if matrix_pnl >= 0 else ""
     
@@ -316,8 +307,8 @@ def generate_web_dashboard():
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>⚡ SÚPER-CEREBRO CUÁNTICO | Dashboard de Trading 24/7</title>
-    <meta name="description" content="Dashboard en vivo del Súper-Cerebro Cuántico de Trading Binance Spot">
+    <title>⚡ SÚPER-CEREBRO CUÁNTICO | Terminal Profesional de Trading 24/7</title>
+    <meta name="description" content="Terminal Profesional de Trading Cuántico Binance Spot">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -346,6 +337,63 @@ def generate_web_dashboard():
             min-height: 100vh;
             padding: 1.25rem 1.75rem;
         }}
+
+        /* ============ HEADER ============ */
+        .header {{
+            display: flex; justify-content: space-between; align-items: center;
+            padding-bottom: 1rem; border-bottom: 1px solid var(--card-border); margin-bottom: 1.25rem;
+        }}
+        .logo {{ display: flex; align-items: center; gap: 0.75rem; }}
+        .logo-icon {{
+            width: 44px; height: 44px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            border-radius: 12px; display: grid; place-items: center; font-size: 1.5rem;
+            box-shadow: 0 0 25px rgba(6, 182, 212, 0.4), 0 0 50px rgba(168, 85, 247, 0.2);
+            animation: icon-glow 3s ease-in-out infinite;
+        }}
+        @keyframes icon-glow {{
+            0%, 100% {{ box-shadow: 0 0 25px rgba(6, 182, 212, 0.4), 0 0 50px rgba(168, 85, 247, 0.2); }}
+            50% {{ box-shadow: 0 0 35px rgba(6, 182, 212, 0.6), 0 0 70px rgba(168, 85, 247, 0.3); }}
+        }}
+        .title h1 {{ font-size: 1.35rem; font-weight: 900; letter-spacing: -0.5px; background: linear-gradient(90deg, var(--text-main), var(--accent-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }}
+        .title p {{ font-size: 0.78rem; color: var(--text-muted); margin-top: 1px; }}
+        .header-right {{ display: flex; align-items: center; gap: 0.75rem; }}
+        .live-badge {{
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.25);
+            color: var(--accent-emerald); padding: 0.35rem 0.85rem; border-radius: 20px; font-weight: 600; font-size: 0.78rem;
+        }}
+        .pulse-dot {{
+            width: 8px; height: 8px; background: var(--accent-emerald); border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-emerald); animation: pulse 1.5s infinite;
+        }}
+        @keyframes pulse {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0.3; }} }}
+        .mode-badge {{
+            background: rgba(168, 85, 247, 0.12); border: 1px solid rgba(168, 85, 247, 0.25);
+            color: var(--accent-purple); padding: 0.35rem 0.85rem; border-radius: 20px; font-weight: 600; font-size: 0.75rem;
+        }}
+
+        /* ============ MAIN INTERACTIVE TABS BAR ============ */
+        .main-tabs {{
+            display: flex; gap: 0.75rem; border-bottom: 1px solid var(--card-border);
+            margin-bottom: 1.25rem; padding-bottom: 0.5rem; flex-wrap: wrap;
+        }}
+        .tab-btn {{
+            display: flex; align-items: center; gap: 0.55rem;
+            padding: 0.65rem 1.35rem; background: rgba(30, 41, 59, 0.4);
+            border: 1px solid var(--card-border); border-radius: 12px;
+            color: var(--text-muted); font-size: 0.85rem; font-weight: 700;
+            cursor: pointer; transition: all 0.2s ease;
+        }}
+        .tab-btn:hover {{ background: rgba(6, 182, 212, 0.1); color: var(--text-main); transform: translateY(-1px); }}
+        .tab-btn.active {{
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(6, 182, 212, 0.18));
+            border-color: var(--accent-purple); color: var(--text-main);
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);
+        }}
+        .tab-content {{ display: none; }}
+        .tab-content.active {{ display: block; animation: tabFadeIn 0.3s ease-out; }}
+        @keyframes tabFadeIn {{ from {{ opacity: 0; transform: translateY(6px); }} to {{ opacity: 1; transform: translateY(0); }} }}
 
         /* ============ ACTIVE POSITION LIVE MONITOR BANNER ============ */
         .active-pos-banner {{
@@ -388,41 +436,6 @@ def generate_web_dashboard():
         .pos-shield-tag {{
             background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);
             padding: 0.3rem 0.75rem; border-radius: 8px; font-weight: 600;
-        }}
-
-        /* ============ HEADER ============ */
-        .header {{
-            display: flex; justify-content: space-between; align-items: center;
-            padding-bottom: 1.25rem; border-bottom: 1px solid var(--card-border); margin-bottom: 1.25rem;
-        }}
-        .logo {{ display: flex; align-items: center; gap: 0.75rem; }}
-        .logo-icon {{
-            width: 44px; height: 44px;
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
-            border-radius: 12px; display: grid; place-items: center; font-size: 1.5rem;
-            box-shadow: 0 0 25px rgba(6, 182, 212, 0.4), 0 0 50px rgba(168, 85, 247, 0.2);
-            animation: icon-glow 3s ease-in-out infinite;
-        }}
-        @keyframes icon-glow {{
-            0%, 100% {{ box-shadow: 0 0 25px rgba(6, 182, 212, 0.4), 0 0 50px rgba(168, 85, 247, 0.2); }}
-            50% {{ box-shadow: 0 0 35px rgba(6, 182, 212, 0.6), 0 0 70px rgba(168, 85, 247, 0.3); }}
-        }}
-        .title h1 {{ font-size: 1.35rem; font-weight: 900; letter-spacing: -0.5px; background: linear-gradient(90deg, var(--text-main), var(--accent-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }}
-        .title p {{ font-size: 0.78rem; color: var(--text-muted); margin-top: 1px; }}
-        .header-right {{ display: flex; align-items: center; gap: 0.75rem; }}
-        .live-badge {{
-            display: inline-flex; align-items: center; gap: 0.5rem;
-            background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.25);
-            color: var(--accent-emerald); padding: 0.35rem 0.85rem; border-radius: 20px; font-weight: 600; font-size: 0.78rem;
-        }}
-        .pulse-dot {{
-            width: 8px; height: 8px; background: var(--accent-emerald); border-radius: 50%;
-            box-shadow: 0 0 10px var(--accent-emerald); animation: pulse 1.5s infinite;
-        }}
-        @keyframes pulse {{ 0%, 100% {{ opacity: 1; }} 50% {{ opacity: 0.3; }} }}
-        .mode-badge {{
-            background: rgba(168, 85, 247, 0.12); border: 1px solid rgba(168, 85, 247, 0.25);
-            color: var(--accent-purple); padding: 0.35rem 0.85rem; border-radius: 20px; font-weight: 600; font-size: 0.75rem;
         }}
 
         /* ============ TOP DASHBOARD GRID (2 Columns) ============ */
@@ -531,33 +544,31 @@ def generate_web_dashboard():
             border-left: 3px solid var(--accent-purple);
         }}
 
-        /* ============ BOTTOM GRID (2 Columns: Matrix 100 & Candidates Ranking) ============ */
-        .bottom-grid {{ display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem; }}
-
+        /* ============ CANDIDATES & MATRIX STYLES ============ */
         .matrix-card {{
             background: var(--card-bg); border: 1px solid var(--card-border);
-            backdrop-filter: blur(12px); border-radius: 16px; padding: 1.25rem;
+            backdrop-filter: blur(12px); border-radius: 16px; padding: 1.25rem; margin-bottom: 1.25rem;
         }}
         .matrix-header {{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }}
         .matrix-title {{ font-size: 0.88rem; font-weight: 800; display: flex; align-items: center; gap: 0.4rem; }}
         .matrix-total-val {{ font-size: 1.5rem; font-weight: 900; color: var(--text-main); }}
         .matrix-pnl {{ font-size: 0.78rem; font-weight: 700; margin-top: 0.1rem; }}
         .matrix-tags-box {{
-            display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.75rem; max-height: 140px; overflow-y: auto;
+            display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.75rem; max-height: 200px; overflow-y: auto;
             padding-right: 0.2rem;
         }}
         .matrix-tag {{
             background: rgba(6, 182, 212, 0.08); border: 1px solid rgba(6, 182, 212, 0.2);
-            color: var(--accent-cyan); padding: 0.2rem 0.5rem; border-radius: 6px; font-size: 0.7rem;
+            color: var(--accent-cyan); padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem;
         }}
 
         .candidates-card {{
             background: var(--card-bg); border: 1px solid var(--card-border);
-            backdrop-filter: blur(12px); border-radius: 16px; padding: 1.25rem;
+            backdrop-filter: blur(12px); border-radius: 16px; padding: 1.25rem; margin-bottom: 1.25rem;
         }}
         .cand-table {{ width: 100%; border-collapse: collapse; margin-top: 0.5rem; }}
-        .cand-table th {{ font-size: 0.68rem; color: var(--text-dim); text-transform: uppercase; text-align: left; padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--card-border); }}
-        .cand-row td {{ font-size: 0.78rem; padding: 0.55rem 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.03); }}
+        .cand-table th {{ font-size: 0.68rem; color: var(--text-dim); text-transform: uppercase; text-align: left; padding: 0.5rem; border-bottom: 1px solid var(--card-border); }}
+        .cand-row td {{ font-size: 0.8rem; padding: 0.6rem 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.03); }}
         .score-badge {{ padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 700; font-size: 0.7rem; }}
         .score-high {{ background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); border: 1px solid rgba(16, 185, 129, 0.3); }}
         .score-mid {{ background: rgba(245, 158, 11, 0.15); color: var(--accent-amber); border: 1px solid rgba(245, 158, 11, 0.3); }}
@@ -565,7 +576,7 @@ def generate_web_dashboard():
         /* ============ FOOTER ============ */
         footer {{
             text-align: center; color: var(--text-dim); font-size: 0.75rem;
-            padding-top: 1rem; border-top: 1px solid var(--card-border);
+            padding-top: 1rem; border-top: 1px solid var(--card-border); margin-top: 1.5rem;
             display: flex; justify-content: center; align-items: center; gap: 1.25rem; flex-wrap: wrap;
         }}
         .refresh-btn {{
@@ -577,7 +588,7 @@ def generate_web_dashboard():
         .countdown {{ color: var(--accent-cyan); font-weight: 600; font-size: 0.75rem; }}
 
         @media (max-width: 900px) {{
-            .top-grid, .bottom-grid {{ grid-template-columns: 1fr; }}
+            .top-grid {{ grid-template-columns: 1fr; }}
         }}
     </style>
 </head>
@@ -600,107 +611,107 @@ def generate_web_dashboard():
         </div>
     </div>
 
-    {active_position_monitor_html}
+    <!-- PESTAÑAS DE NAVEGACIÓN PROFESIONAL -->
+    <div class="main-tabs">
+        <button class="tab-btn active" data-tab="tab-monitoreo" onclick="switchTab('tab-monitoreo')">
+            <span>🎯</span> MONITOREO EN VIVO
+        </button>
+        <button class="tab-btn" data-tab="tab-cerebro" onclick="switchTab('tab-cerebro')">
+            <span>🧠</span> SÚPER-CEREBRO IA
+        </button>
+        <button class="tab-btn" data-tab="tab-escaner" onclick="switchTab('tab-escaner')">
+            <span>📊</span> ESCÁNER CUÁNTICO
+        </button>
+        <button class="tab-btn" data-tab="tab-matrix" onclick="switchTab('tab-matrix')">
+            <span>🌐</span> MATRIX 100 CUENTAS
+        </button>
+    </div>
 
-    <!-- TOP GRID: MIS ACTIVOS (BINANCE SPOT) + TRADING STATS REALES -->
-    <div class="top-grid">
-        <!-- BILLETERA REAL BINANCE -->
-        <div class="wallet-card">
-            <div class="card-header-row">
-                <div class="card-heading">💰 MIS ACTIVOS — SPOT BINANCE</div>
-                <div class="wallet-total-val">${data_payload['total_balance_usd']:.2f} <span class="wallet-total-currency">USD</span></div>
-            </div>
-            <div class="asset-list">
-                <div class="asset-item">
-                    <div class="asset-left">
-                        <div class="asset-symbol-icon icon-usdt">₮</div>
-                        <div>
-                            <div class="asset-title">USDT</div>
-                            <div class="asset-sub">TetherUS</div>
+    <!-- PESTAÑA 1: MONITOREO EN VIVO -->
+    <div id="tab-monitoreo" class="tab-content active">
+        {active_position_monitor_html}
+        
+        <div class="top-grid">
+            <!-- BILLETERA REAL BINANCE -->
+            <div class="wallet-card">
+                <div class="card-header-row">
+                    <div class="card-heading">💰 MIS ACTIVOS — SPOT BINANCE</div>
+                    <div class="wallet-total-val">${data_payload['total_balance_usd']:.2f} <span class="wallet-total-currency">USD</span></div>
+                </div>
+                <div class="asset-list">
+                    <div class="asset-item">
+                        <div class="asset-left">
+                            <div class="asset-symbol-icon icon-usdt">₮</div>
+                            <div>
+                                <div class="asset-title">USDT</div>
+                                <div class="asset-sub">TetherUS</div>
+                            </div>
+                        </div>
+                        <div class="asset-right">
+                            <div class="asset-qty-val">{data_payload['usdt_free']:.8f}</div>
+                            <div class="asset-usd-val">{data_payload['usdt_free']:.2f} $</div>
                         </div>
                     </div>
-                    <div class="asset-right">
-                        <div class="asset-qty-val">{data_payload['usdt_free']:.8f}</div>
-                        <div class="asset-usd-val">{data_payload['usdt_free']:.2f} $</div>
-                    </div>
-                </div>
-                <div class="asset-item">
-                    <div class="asset-left">
-                        <div class="asset-symbol-icon icon-bnb">B</div>
-                        <div>
-                            <div class="asset-title">BNB</div>
-                            <div class="asset-sub">Escudo de Comisiones</div>
+                    <div class="asset-item">
+                        <div class="asset-left">
+                            <div class="asset-symbol-icon icon-bnb">B</div>
+                            <div>
+                                <div class="asset-title">BNB</div>
+                                <div class="asset-sub">Escudo de Comisiones</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="asset-right">
-                        <div class="asset-qty-val">{data_payload['bnb_free']:.8f}</div>
-                        <div class="asset-usd-val">{data_payload['bnb_usd']:.2f} $</div>
+                        <div class="asset-right">
+                            <div class="asset-qty-val">{data_payload['bnb_free']:.8f}</div>
+                            <div class="asset-usd-val">{data_payload['bnb_usd']:.2f} $</div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- MÉTRICAS REALES Y PROTECCIÓN -->
-        <div class="stats-card">
-            <div class="card-heading">🛡️ PROTECCIÓN DE CAPITAL Y ESTADO REAL</div>
-            <div class="stats-grid">
-                <div class="stat-box">
-                    <div class="stat-label">Posición Activa</div>
-                    <div class="stat-value">{data_payload['position']['symbol']}</div>
-                    <div class="stat-sub">{'Entrada: $' + f"{data_payload['position']['entry_price']:.4f}" if data_payload['position']['symbol'] != 'NINGUNA' else '🔒 100% USDT Preservado'}</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-label">Historial Operatorio</div>
-                    <div class="stat-value">{account_data.get('trades_count', 0)} Trades</div>
-                    <div class="stat-sub">✅ {account_data.get('wins', 0)}W / ❌ {account_data.get('losses', 0)}L</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-label">PnL Neto Real</div>
-                    <div class="stat-value" style="color: {'var(--accent-emerald)' if account_data.get('net_pnl_usd', 0) >= 0 else 'var(--accent-rose)'};">{'+' if account_data.get('net_pnl_usd', 0) >= 0 else ''}${account_data.get('net_pnl_usd', 0):.2f}</div>
-                    <div class="stat-sub">Depósito original: $17.13</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-label">Filtros Cuánticos</div>
-                    <div class="stat-value" style="color: var(--accent-cyan); font-size: 1.05rem;">GBM + OU + Corr</div>
-                    <div class="stat-sub">🛡️ Escudo Anti-Ruido Activo</div>
+            <!-- MÉTRICAS REALES Y PROTECCIÓN -->
+            <div class="stats-card">
+                <div class="card-heading">🛡️ PROTECCIÓN DE CAPITAL Y ESTADO REAL</div>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-label">Posición Activa</div>
+                        <div class="stat-value">{data_payload['position']['symbol'] if data_payload['position'] else 'NINGUNA'}</div>
+                        <div class="stat-sub">{'Entrada: $' + f"{data_payload['position']['entry_price']:.4f}" if data_payload['position'] and data_payload['position'].get('symbol') != 'NINGUNA' else '🔒 100% USDT Preservado'}</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Historial Operatorio</div>
+                        <div class="stat-value">{account_data.get('trades_count', 0)} Trades</div>
+                        <div class="stat-sub">✅ {account_data.get('wins', 0)}W / ❌ {account_data.get('losses', 0)}L</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">PnL Neto Real</div>
+                        <div class="stat-value" style="color: {'var(--accent-emerald)' if account_data.get('net_pnl_usd', 0) >= 0 else 'var(--accent-rose)'};">{'+' if account_data.get('net_pnl_usd', 0) >= 0 else ''}${account_data.get('net_pnl_usd', 0):.2f}</div>
+                        <div class="stat-sub">Depósito original: $17.13</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Filtros Cuánticos</div>
+                        <div class="stat-value" style="color: var(--accent-cyan); font-size: 1.05rem;">GBM + OU + Corr</div>
+                        <div class="stat-sub">🛡️ Escudo Anti-Ruido Activo</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- SÚPER-CEREBRO IA (HISTORIAL Y DICTAMEN) -->
-    <div class="brain-section">
-        <div class="section-title">
-            <span style="-webkit-text-fill-color: initial;">🧠⚡</span> 
-            <span style="background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">SÚPER-CEREBRO EN VIVO — DICTAMEN Y ANÁLISIS DE MERCADO</span>
-        </div>
-        <div class="verdicts-timeline">
-            {verdict_cards_html}
+    <!-- PESTAÑA 2: SÚPER-CEREBRO IA -->
+    <div id="tab-cerebro" class="tab-content">
+        <div class="brain-section">
+            <div class="section-title">
+                <span style="-webkit-text-fill-color: initial;">🧠⚡</span> 
+                <span style="background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">SÚPER-CEREBRO EN VIVO — DICTAMEN Y ANÁLISIS DE MERCADO</span>
+            </div>
+            <div class="verdicts-timeline">
+                {verdict_cards_html}
+            </div>
         </div>
     </div>
 
-    <!-- BOTTOM GRID: MATRIX 100 CUENTAS (25+ SÍMBOLOS DIVERSIFICADOS) + RANKING DE CANDIDATOS -->
-    <div class="bottom-grid">
-        <!-- MATRIX 100 CUENTAS -->
-        <div class="matrix-card">
-            <div class="matrix-header">
-                <div>
-                    <div class="matrix-title">🌐 MATRIX 100 CUENTAS — SIMULADOR EN VIVO</div>
-                    <div class="matrix-total-val">${matrix_total:,.2f} USD</div>
-                    <div class="matrix-pnl" style="color: {pnl_color};">{pnl_sign}${matrix_pnl:,.2f} PnL Net | Win Rate {matrix_wr:.1f}%</div>
-                </div>
-                <div style="text-align: right;">
-                    <span class="badge badge-long">{len(active_positions)} Cuentas en Posición</span>
-                    <div style="font-size: 0.72rem; color: var(--accent-emerald); margin-top: 0.3rem; font-weight: 700;">{len(symbol_counts)} Símbolos Diversificados</div>
-                </div>
-            </div>
-            <div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 0.5rem; font-weight: 600;">Símbolos Activos en Paralelo (Offset Rotativo):</div>
-            <div class="matrix-tags-box">
-                {matrix_symbol_tags}
-            </div>
-        </div>
-
-        <!-- TOP RANKING ESCÁNER -->
+    <!-- PESTAÑA 3: ESCÁNER CUÁNTICO -->
+    <div id="tab-escaner" class="tab-content">
         <div class="candidates-card">
             <div class="card-heading">📊 TOP 10 OPORTUNIDADES DEL ESCÁNER CUÁNTICO</div>
             <table class="cand-table">
@@ -722,6 +733,27 @@ def generate_web_dashboard():
         </div>
     </div>
 
+    <!-- PESTAÑA 4: MATRIX 100 CUENTAS -->
+    <div id="tab-matrix" class="tab-content">
+        <div class="matrix-card">
+            <div class="matrix-header">
+                <div>
+                    <div class="matrix-title">🌐 MATRIX 100 CUENTAS — SIMULADOR EN VIVO</div>
+                    <div class="matrix-total-val">${matrix_total:,.2f} USD</div>
+                    <div class="matrix-pnl" style="color: {pnl_color};">{pnl_sign}${matrix_pnl:,.2f} PnL Net | Win Rate {matrix_wr:.1f}%</div>
+                </div>
+                <div style="text-align: right;">
+                    <span class="badge badge-long">{len(active_positions)} Cuentas en Posición</span>
+                    <div style="font-size: 0.72rem; color: var(--accent-emerald); margin-top: 0.3rem; font-weight: 700;">{len(symbol_counts)} Símbolos Diversificados</div>
+                </div>
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 0.5rem; font-weight: 600;">Símbolos Activos en Paralelo (Offset Rotativo):</div>
+            <div class="matrix-tags-box">
+                {matrix_symbol_tags}
+            </div>
+        </div>
+    </div>
+
     <!-- FOOTER -->
     <footer>
         <span>Última actualización: <strong>{now_str}</strong> | Algoritmo Cuántico Binance 24/7</span>
@@ -730,6 +762,26 @@ def generate_web_dashboard():
     </footer>
 
     <script>
+        function switchTab(tabId) {{
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            const targetBtn = document.querySelector(`.tab-btn[data-tab="${{tabId}}"]`);
+            const targetContent = document.getElementById(tabId);
+            
+            if (targetBtn && targetContent) {{
+                targetBtn.classList.add('active');
+                targetContent.classList.add('active');
+                localStorage.setItem('activeDashboardTab', tabId);
+            }}
+        }}
+
+        // Restore active tab from localStorage or default to tab-monitoreo
+        document.addEventListener('DOMContentLoaded', () => {{
+            const savedTab = localStorage.getItem('activeDashboardTab') || 'tab-monitoreo';
+            switchTab(savedTab);
+        }});
+
         let remaining = 30;
         const countdownEl = document.getElementById('countdown');
         setInterval(() => {{

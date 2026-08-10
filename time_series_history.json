@@ -1,16 +1,28 @@
 {
-  "C98USDT": [
+  "PENGUUSDT": [
     {
-      "timestamp": "2026-08-10 11:54:21",
-      "price": 0.0143,
-      "score": 55,
-      "rsi": 31.31,
+      "timestamp": "2026-08-10 11:56:19",
+      "price": 0.006615,
+      "score": 0,
+      "rsi": 43.94,
       "macd": "Neutral",
-      "volume_surge": 0.13,
+      "volume_surge": 0.82,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BANKUSDT": [
+    {
+      "timestamp": "2026-08-10 11:56:19",
+      "price": 0.0388,
+      "score": 50,
+      "rsi": 52.92,
+      "macd": "Neutral",
+      "volume_surge": 0.62,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}]
 }
