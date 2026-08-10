@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-10 06:40:19",
+  "timestamp": "2026-08-10 06:42:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "Tras analizar los 10 candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 55 y Confianza >= 70%) bajo las condiciones actuales de mercado. La alta tasa de pérdidas en las simulaciones recientes y la falta de profundidad en el libro de órdenes obligan a mantener una postura de espera para preservar el capital.",
+  "confidence": 95,
+  "reasoning": "A pesar de que varios activos presentan scores técnicos de 85, la falta de profundidad en el libro de órdenes, la incertidumbre macroeconómica y el historial reciente de pérdidas en condiciones similares dictan una postura de preservación de capital (HOLD) hasta que se estabilice la estructura de mercado.",
   "top_candidates": [
     {
-      "symbol": "UNIUSDT",
+      "symbol": "SHIBUSDT",
       "score": 85
     },
     {
-      "symbol": "BCHUSDT",
+      "symbol": "ADAUSDT",
       "score": 85
     },
     {
@@ -19,7 +19,7 @@
       "score": 85
     },
     {
-      "symbol": "EPICUSDT",
+      "symbol": "BCHUSDT",
       "score": 85
     },
     {
