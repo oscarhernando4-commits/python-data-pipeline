@@ -1,17 +1,17 @@
 {
-  "timestamp": "2026-08-10 13:04:24",
+  "timestamp": "2026-08-10 13:06:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado presenta una debilidad sistémica generalizada. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y soporte de libro de órdenes claro). La estrategia de protección de capital prevalece sobre la especulación en un entorno de alta incertidumbre.",
+  "confidence": 95,
+  "reasoning": "Ninguno de los candidatos cumple con los criterios estrictos de calidad A+ (Score >= 55) y la estructura de mercado actual es altamente inestable. Se recomienda mantener 100% de la liquidez en USDT hasta que los datos macroeconómicos (IPC) proporcionen una dirección clara y los scores técnicos mejoren.",
   "top_candidates": [
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "ATOMUSDT",
       "score": 60
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "ALGOUSDT",
       "score": 60
     },
     {
@@ -19,11 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "PYTHUSDT",
       "score": 60
     },
     {
-      "symbol": "ALGOUSDT",
+      "symbol": "ARBUSDT",
       "score": 60
     }
   ]
