@@ -1,12 +1,64 @@
 {
-  "ZAMAUSDT": [
+  "ZROUSDT": [
     {
-      "timestamp": "2026-08-10 15:50:13",
-      "price": 0.04572,
+      "timestamp": "2026-08-10 10:50:17",
+      "price": 0.856,
       "score": 0,
-      "rsi": 47.87,
+      "rsi": 43.28,
       "macd": "Neutral",
-      "volume_surge": 0.02,
+      "volume_surge": 0.72,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LISTAUSDT": [
+    {
+      "timestamp": "2026-08-10 10:50:17",
+      "price": 0.0673,
+      "score": 45,
+      "rsi": 52.23,
+      "macd": "Neutral",
+      "volume_surge": 1.79,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GALAUSDT": [
+    {
+      "timestamp": "2026-08-10 10:50:17",
+      "price": 0.00181,
+      "score": 0,
+      "rsi": 43.75,
+      "macd": "Neutral",
+      "volume_surge": 0.36,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PLUMEUSDT": [
+    {
+      "timestamp": "2026-08-10 10:50:17",
+      "price": 0.0121,
+      "score": 0,
+      "rsi": 41.06,
+      "macd": "Neutral",
+      "volume_surge": 0.24,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "MSTRBUSDT": [
+    {
+      "timestamp": "2026-08-10 10:50:17",
+      "price": 97.2,
+      "score": 0,
+      "rsi": 32.64,
+      "macd": "Neutral",
+      "volume_surge": 0.24,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -233,4 +285,5 @@
       "fear_greed": 50
     }
   ]
+}
 }

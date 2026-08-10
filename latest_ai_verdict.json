@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-10 15:50:27",
+  "timestamp": "2026-08-10 10:50:32",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
   "reasoning": "El mercado se encuentra en un estado de aversión al riesgo sistémica. Ninguno de los candidatos cumple con los requisitos técnicos y de liquidez exigidos por el comité para una operación de alta probabilidad. Se prioriza la preservación del capital sobre la especulación en activos de baja fuerza relativa.",
   "top_candidates": [
+    {
+      "symbol": "WLFIUSDT",
+      "score": 60
+    },
     {
       "symbol": "GUNUSDT",
       "score": 60
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "PAXGUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "BABYUSDT",
       "score": 50
     }
   ]
