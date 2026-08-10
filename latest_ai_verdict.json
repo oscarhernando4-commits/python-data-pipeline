@@ -1,11 +1,15 @@
 {
-  "timestamp": "2026-08-10 08:08:20",
+  "timestamp": "2026-08-10 08:10:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios estrictos de seguridad y rentabilidad exigidos. La alta volatilidad, la falta de soporte en el libro de órdenes y el historial reciente de pérdidas en activos similares dictan una postura de preservación de capital (HOLD) hasta que aparezca un catalizador claro.",
+  "reasoning": "El mercado presenta una fragmentación severa y los candidatos, aunque tienen scores técnicos aceptables, carecen de la profundidad de libro de órdenes y la confirmación de tendencia necesaria para cumplir con nuestra política de riesgo A+. Se prioriza la preservación del capital ante la incertidumbre macroeconómica.",
   "top_candidates": [
+    {
+      "symbol": "MUBUSDT",
+      "score": 85
+    },
     {
       "symbol": "SUNUSDT",
       "score": 85
@@ -16,10 +20,6 @@
     },
     {
       "symbol": "ASTERUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "SKHYBUSDT",
       "score": 75
     },
     {
