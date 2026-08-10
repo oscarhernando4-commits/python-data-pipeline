@@ -1,12 +1,25 @@
 {
-  "C98USDT": [
+  "EIGENUSDT": [
     {
-      "timestamp": "2026-08-10 17:44:12",
-      "price": 0.01441,
-      "score": 30,
-      "rsi": 41.34,
+      "timestamp": "2026-08-10 12:44:21",
+      "price": 0.1822,
+      "score": 0,
+      "rsi": 44.98,
       "macd": "Neutral",
-      "volume_surge": 0.3,
+      "volume_surge": 0.43,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "TIAUSDT": [
+    {
+      "timestamp": "2026-08-10 12:44:23",
+      "price": 0.3275,
+      "score": 50,
+      "rsi": 51.62,
+      "macd": "Neutral",
+      "volume_surge": 0.31,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
