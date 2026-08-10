@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 00:56:19",
+  "timestamp": "2026-08-10 00:58:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Debido a la debilidad sistémica, la falta de activos con score técnico superior a 55 y la alta probabilidad de pérdidas basada en el historial de simulaciones, el comité ha decidido no ejecutar ninguna operación para evitar el riesgo de 'cuchillos cayendo'.",
+  "reasoning": "El entorno de mercado es altamente tóxico con una descorrelación forzada y falta de volumen institucional real. Ningún activo cumple con los criterios de riesgo A+ exigidos por el comité, por lo que se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "EPICUSDT",
@@ -15,15 +15,15 @@
       "score": 65
     },
     {
-      "symbol": "DYMUSDT",
-      "score": 60
-    },
-    {
       "symbol": "THEUSDT",
       "score": 60
     },
     {
-      "symbol": "PARTIUSDT",
+      "symbol": "ESPUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "DYMUSDT",
       "score": 60
     }
   ]
