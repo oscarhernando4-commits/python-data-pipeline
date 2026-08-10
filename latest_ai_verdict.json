@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 20:58:18",
+  "timestamp": "2026-08-10 15:58:41",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. La falta de soporte en el libro de órdenes, sumada a la alta probabilidad de 'trampas de liquidez' observada en el historial de simulaciones, obliga a mantener una postura defensiva (HOLD) para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de rebalanceo institucional con alta volatilidad y falta de confirmación técnica en los activos con mayor score. Ningún candidato cumple con los criterios estrictos de seguridad y convicción exigidos por el comité, por lo que la decisión es mantener la liquidez en espera de una estructura de mercado más clara.",
   "top_candidates": [
     {
       "symbol": "BBUSDT",
@@ -16,6 +16,19 @@
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 1.62,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "AXTIBUSDT",
+      "score": 70,
+      "price": 73.86,
+      "rsi_2m": 28.8,
+      "rsi_5m": 28.8,
+      "rsi_15m": 28.8,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.13,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -35,10 +48,10 @@
     {
       "symbol": "BICOUSDT",
       "score": 65,
-      "price": 0.04275,
-      "rsi_2m": 55.22,
-      "rsi_5m": 55.22,
-      "rsi_15m": 55.22,
+      "price": 0.04276,
+      "rsi_2m": 55.3,
+      "rsi_5m": 55.3,
+      "rsi_15m": 55.3,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.97,
@@ -59,41 +72,15 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "TAOUSDT",
-      "score": 65,
-      "price": 202.1,
-      "rsi_2m": 49.03,
-      "rsi_5m": 49.03,
-      "rsi_15m": 49.03,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.37,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "THEUSDT",
-      "score": 65,
-      "price": 0.0661,
-      "rsi_2m": 62.4,
-      "rsi_5m": 62.4,
-      "rsi_15m": 62.4,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.92,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
       "symbol": "KAITOUSDT",
       "score": 65,
-      "price": 0.6738,
-      "rsi_2m": 53.11,
-      "rsi_5m": 53.11,
-      "rsi_15m": 53.11,
+      "price": 0.6735,
+      "rsi_2m": 52.59,
+      "rsi_5m": 52.59,
+      "rsi_15m": 52.59,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.13,
+      "vol_surge": 0.14,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -111,6 +98,32 @@
       "macro_trend": "NEUTRAL"
     },
     {
+      "symbol": "THEUSDT",
+      "score": 65,
+      "price": 0.0661,
+      "rsi_2m": 62.4,
+      "rsi_5m": 62.4,
+      "rsi_15m": 62.4,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.92,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "AAOIBUSDT",
+      "score": 65,
+      "price": 134.14,
+      "rsi_2m": 48.01,
+      "rsi_5m": 48.01,
+      "rsi_15m": 48.01,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.46,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "ACEUSDT",
       "score": 65,
       "price": 0.1181,
@@ -120,19 +133,6 @@
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.35,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "BIOUSDT",
-      "score": 65,
-      "price": 0.02675,
-      "rsi_2m": 50.02,
-      "rsi_5m": 50.02,
-      "rsi_15m": 50.02,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.21,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
