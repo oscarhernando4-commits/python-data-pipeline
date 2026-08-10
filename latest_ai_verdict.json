@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 12:20:26",
+  "timestamp": "2026-08-10 12:22:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 55 combinado con una dominancia de Bids superior al 55%). La alta probabilidad de pérdidas basada en el historial de trades recientes y la falta de volumen institucional real obligan a la preservación total del capital.",
+  "confidence": 0,
+  "reasoning": "El comité ha determinado que, a pesar de que algunos activos presentan scores técnicos aceptables, la falta de profundidad en el libro de órdenes y la alta probabilidad de 'trampas de liquidez' en el entorno actual de mercado (Fear 30) hacen que ninguna operación cumpla con los estándares de seguridad exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación.",
   "top_candidates": [
     {
       "symbol": "ETCUSDT",
@@ -15,15 +15,15 @@
       "score": 70
     },
     {
-      "symbol": "QNTUSDT",
+      "symbol": "SUIUSDT",
       "score": 60
     },
     {
-      "symbol": "DOTUSDT",
+      "symbol": "AVAXUSDT",
       "score": 60
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "SOLUSDT",
       "score": 60
     }
   ]
