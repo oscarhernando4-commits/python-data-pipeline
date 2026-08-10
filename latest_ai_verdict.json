@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-10 05:36:20",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual no ofrece una configuración de alta probabilidad (A+) que cumpla con los criterios de riesgo. La falta de datos de profundidad en el libro de órdenes y la alta tasa de fallos en las simulaciones recientes para activos de score 75 sugieren que el capital institucional aún no ha consolidado una tendencia alcista clara, por lo que la decisión prudente es mantener la liquidez en espera de una mejor estructura de mercado.",
+  "timestamp": "2026-08-10 05:38:30",
+  "selected_symbol": "ENAUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "Tras analizar el mercado, se ha determinado que la mayoría de los activos presentan señales mixtas o de alto riesgo. ENAUSDT destaca por su fuerte volumen de entrada (1.81x), su pertenencia al sector DeFi (líder actual) y un score técnico de 75/100, cumpliendo con los requisitos de convicción A+ del comité para una posición de alta calidad.",
   "top_candidates": [
     {
       "symbol": "XLMUSDT",
-      "score": 75
-    },
-    {
-      "symbol": "UNIUSDT",
       "score": 75
     },
     {
@@ -19,11 +15,15 @@
       "score": 75
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "UNIUSDT",
       "score": 75
     },
     {
-      "symbol": "PENGUUSDT",
+      "symbol": "WLFIUSDT",
+      "score": 75
+    },
+    {
+      "symbol": "AAVEUSDT",
       "score": 75
     }
   ]
