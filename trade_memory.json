@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2269,
-    "wins": 419,
+    "total_trades": 2272,
+    "wins": 422,
     "losses": 1850,
-    "win_rate_pct": 18.47,
-    "total_pnl_usd": 265.7323054545442
+    "win_rate_pct": 18.57,
+    "total_pnl_usd": 272.1023054545442
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on FFUSDT)"
     ],
     "boosted_patterns": [
-      "Optimized Setup for ADAUSDT: Profit logged (+$1.97) -> Win on ADAUSDT (+$1.97 net) -> Level 2 Re-Trading Started!",
       "Optimized Setup for TRUMPUSDT: Profit logged (+$2.09) -> Win on TRUMPUSDT (+$2.09 net) -> Level 3 Re-Trading Started!",
       "Optimized Setup for TRUMPUSDT: Profit logged (+$2.09) -> Win on TRUMPUSDT (+$2.09 net) -> Level 2 Re-Trading Started!",
       "BOOST LONG when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DOGEUSDT)",
@@ -49,7 +48,8 @@
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BTCUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ACEUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TSTUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ALLOUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ALLOUSDT)",
+      "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DODOUSDT)"
     ]
   },
   "history": [
@@ -37926,6 +37926,57 @@
       "context": {
         "score": 10,
         "rsi_15m": 72.91,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 19:30:17",
+      "account_id": "SIM-041",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DODOUSDT",
+      "side": "LONG",
+      "entry_price": 0.02272,
+      "exit_price": 0.02486,
+      "pnl_usd": 1.87,
+      "result": "WIN",
+      "notes": "Win on DODOUSDT (+$1.87 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.97,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 19:30:17",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DODOUSDT",
+      "side": "LONG",
+      "entry_price": 0.02272,
+      "exit_price": 0.02486,
+      "pnl_usd": 2.63,
+      "result": "WIN",
+      "notes": "Win on DODOUSDT (+$2.63 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.97,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 19:30:17",
+      "account_id": "SIM-043",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DODOUSDT",
+      "side": "LONG",
+      "entry_price": 0.02272,
+      "exit_price": 0.02486,
+      "pnl_usd": 1.87,
+      "result": "WIN",
+      "notes": "Win on DODOUSDT (+$1.87 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 79.97,
         "macro_trend_4h": "NEUTRAL"
       }
     }
