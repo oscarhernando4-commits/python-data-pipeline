@@ -1,14 +1,18 @@
 {
-  "timestamp": "2026-08-10 14:20:26",
+  "timestamp": "2026-08-10 14:22:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de alta incertidumbre y debilidad sistémica. Ninguno de los candidatos cumple con los criterios estrictos de riesgo y convicción establecidos por el comité. Se prioriza la preservación del capital sobre la ejecución de operaciones de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva y alta volatilidad. Ningún activo cumple con los criterios estrictos de riesgo y convicción definidos por el comité, por lo que la estrategia óptima es mantener la liquidez en espera de una configuración de alta probabilidad.",
   "top_candidates": [
     {
       "symbol": "TUTUSDT",
       "score": 70
+    },
+    {
+      "symbol": "WLDUSDT",
+      "score": 60
     },
     {
       "symbol": "SUIUSDT",
@@ -20,10 +24,6 @@
     },
     {
       "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "TRUMPUSDT",
       "score": 60
     }
   ]
