@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10 12:18:20",
+  "updated_at": "2026-08-10 12:20:26",
   "total_balance_usd": 20.04,
   "usdt_free": 17.6282,
   "bnb_free": 0.00409216,
@@ -26,8 +26,8 @@
   "verdict": {
     "selected_symbol": "NONE",
     "action": "HOLD",
-    "confidence": 0,
+    "confidence": 95,
     "approved": false,
-    "reasoning": "El mercado se encuentra en una fase de rebalanceo institucional con alta incertidumbre. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ del comité, por lo que la estrategia óptima es mantener la liquidez en espera de una estructura de mercado más clara."
+    "reasoning": "El mercado se encuentra en una fase de distribución institucional con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral estricto de convicción A+ (Score >= 55 combinado con una dominancia de Bids superior al 55%). La alta probabilidad de pérdidas basada en el historial de trades recientes y la falta de volumen institucional real obligan a la preservación total del capital."
   }
 }
