@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 12:40:21",
+  "timestamp": "2026-08-10 12:42:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y distribución. Ninguno de los candidatos cumple con los criterios estrictos de riesgo-beneficio establecidos por el comité. Se prioriza la protección del capital sobre la ejecución de trades especulativos de baja calidad.",
+  "reasoning": "Ninguno de los candidatos cumple con el umbral de Score Técnico A+ (>= 55) combinado con una confirmación sólida de liquidez en el libro de órdenes, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
-      "symbol": "QNTUSDT",
-      "score": 70
+      "symbol": "ATOMUSDT",
+      "score": 60
     },
     {
       "symbol": "DOTUSDT",
       "score": 60
     },
     {
-      "symbol": "ATOMUSDT",
-      "score": 60
-    },
-    {
-      "symbol": "ETCUSDT",
-      "score": 60
-    },
-    {
       "symbol": "POLUSDT",
       "score": 55
+    },
+    {
+      "symbol": "VIRTUALUSDT",
+      "score": 55
+    },
+    {
+      "symbol": "BABYUSDT",
+      "score": 50
     }
   ]
 }
