@@ -1,30 +1,30 @@
 {
-  "timestamp": "2026-08-10 11:54:20",
+  "timestamp": "2026-08-10 11:56:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Ninguno de los candidatos cumple con la exigencia de convicción A+ (Score >= 55 y confirmación de soporte institucional). La alta volatilidad y el sentimiento de miedo sugieren que el riesgo de 'trampa alcista' es elevado, por lo que el comité ha decidido mantener la liquidez en espera de una estructura de mercado más clara.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre con un sentimiento de miedo predominante. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con confirmación de soporte de ballenas y volumen institucional claro). La estrategia institucional es preservar el 100% de la liquidez en USDT hasta que el entorno macro y técnico ofrezca una ventaja estadística superior.",
   "top_candidates": [
     {
       "symbol": "POLUSDT",
-      "score": 70
+      "score": 85
     },
     {
       "symbol": "ZAMAUSDT",
-      "score": 70
+      "score": 85
     },
     {
       "symbol": "AVAXUSDT",
-      "score": 60
+      "score": 75
     },
     {
       "symbol": "SUIUSDT",
-      "score": 60
+      "score": 75
     },
     {
-      "symbol": "PENGUUSDT",
-      "score": 60
+      "symbol": "SOLUSDT",
+      "score": 75
     }
   ]
 }
