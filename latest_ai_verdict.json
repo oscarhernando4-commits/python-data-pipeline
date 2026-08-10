@@ -1,17 +1,13 @@
 {
-  "timestamp": "2026-08-10 11:14:24",
+  "timestamp": "2026-08-10 11:16:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad estructural. Ninguno de los candidatos analizados cumple con los criterios estrictos de Score Técnico (>= 55) y confirmación de soporte en el libro de órdenes, lo que obliga al comité a mantener una postura de preservación de capital (HOLD) para evitar pérdidas por volatilidad o 'falling knives'.",
+  "reasoning": "El mercado presenta una fragilidad sistémica extrema. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité. La estrategia de preservación de capital dicta que, ante la ausencia de una configuración de alta probabilidad, la única acción prudente es mantenerse al margen (HOLD) para evitar la exposición a la volatilidad bajista.",
   "top_candidates": [
     {
-      "symbol": "LUNCUSDT",
-      "score": 70
-    },
-    {
-      "symbol": "LINKUSDT",
+      "symbol": "AVAXUSDT",
       "score": 60
     },
     {
@@ -23,7 +19,11 @@
       "score": 60
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "ZAMAUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "NIGHTUSDT",
       "score": 60
     }
   ]
