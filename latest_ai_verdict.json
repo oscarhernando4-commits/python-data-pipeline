@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-10 09:24:20",
-  "selected_symbol": "NONE",
-  "action": "HOLD",
-  "approved": false,
-  "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución selectiva con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con confirmación de volumen y soporte de libro de órdenes), por lo que la estrategia de protección de capital dicta mantener la posición en efectivo (USDT).",
+  "timestamp": "2026-08-10 09:26:19",
+  "selected_symbol": "TRXUSDT",
+  "action": "BUY_LONG",
+  "approved": true,
+  "confidence": 72,
+  "reasoning": "TRXUSDT es el único activo que cumple con el umbral de convicción A+ (Score 85) y pertenece al sector dominante (Layer 1). Se prioriza la entrada técnica para evitar la trampa de liquidez de los activos de baja capitalización.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
-      "score": 75
+      "score": 85
     },
     {
       "symbol": "DOGEUSDT",
@@ -19,11 +19,11 @@
       "score": 75
     },
     {
-      "symbol": "MORPHOUSDT",
+      "symbol": "NILUSDT",
       "score": 75
     },
     {
-      "symbol": "ATOMUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 75
     }
   ]
