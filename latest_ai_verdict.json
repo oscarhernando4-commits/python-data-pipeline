@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-08-10 04:08:21",
+  "timestamp": "2026-08-10 04:10:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que no existen activos que cumplan con el umbral mínimo de seguridad (Score >= 55) y la confirmación de volumen necesaria. Ante la debilidad sistémica y la alta probabilidad de 'trampas de liquidez', la orden es mantener el 100% de la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y baja liquidez. Ninguno de los candidatos cumple con los criterios de convicción A+ exigidos por el comité, por lo que se prioriza la preservación del capital sobre la operativa especulativa.",
   "top_candidates": [
     {
-      "symbol": "PUMPUSDT",
-      "score": 60
+      "symbol": "SUNUSDT",
+      "score": 70
     },
     {
       "symbol": "MORPHOUSDT",
@@ -19,7 +19,7 @@
       "score": 55
     },
     {
-      "symbol": "BMTUSDT",
+      "symbol": "GRAMUSDT",
       "score": 50
     },
     {
