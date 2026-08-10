@@ -329,7 +329,7 @@ def run_infinite_trading_matrix_cycle():
             else:
                 print(f"🧠 [COMITÉ AI] Ninguna moneda fue aprobada (NONE). El mercado es demasiado tóxico. Razonamiento: {gemini_res.get('reasoning')}")
             
-            # Build rich top candidates metrics for dashboard persistence
+            # Build rich top candidates metrics for dashboard persistence (3-tier RSI architecture)
             top_candidates_rich = []
             for c in top_15_candidates[:10]:
                 csym = c["symbol"]
@@ -337,11 +337,18 @@ def run_infinite_trading_matrix_cycle():
                 ctech = cdata.get("tech", {})
                 cinds = ctech.get("indicators", {})
                 cinst = ctech.get("institutional_analysis", {})
+                cmtf = ctech.get("mtf_analysis", {})
+                crsi = cmtf.get("rsi_structure", {})
+                
                 top_candidates_rich.append({
                     "symbol": csym,
                     "score": c["score"],
                     "price": cdata.get("price", 0.0),
-                    "rsi_15m": cinds.get("rsi_15m", 50.0),
+                    "rsi_2m": crsi.get("rsi_2m", cinds.get("rsi_15m", 50.0)),
+                    "rsi_5m": crsi.get("rsi_5m", cinds.get("rsi_15m", 50.0)),
+                    "rsi_15m": crsi.get("rsi_15m", cinds.get("rsi_15m", 50.0)),
+                    "rsi_1h": crsi.get("rsi_1h", 50.0),
+                    "rsi_4h": crsi.get("rsi_4h", 50.0),
                     "vol_surge": cinds.get("volume_surge_ratio", 1.0),
                     "trade_quality": cinst.get("trade_quality", "C_NOISE"),
                     "macro_trend": ctech.get("macro_trend_4h", "NEUTRAL")
