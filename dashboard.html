@@ -306,9 +306,383 @@
         </div>
     </div>
 
+    <!-- PESTAÑAS DE NAVEGACIÓN PROFESIONAL -->
+    <div class="main-tabs">
+        <button class="tab-btn active" data-tab="tab-monitoreo" onclick="switchTab('tab-monitoreo')">
+            <span>🎯</span> MONITOREO EN VIVO
+        </button>
+        <button class="tab-btn" data-tab="tab-cerebro" onclick="switchTab('tab-cerebro')">
+            <span>🧠</span> SÚPER-CEREBRO IA
+        </button>
+        <button class="tab-btn" data-tab="tab-escaner" onclick="switchTab('tab-escaner')">
+            <span>📊</span> ESCÁNER CUÁNTICO
+        </button>
+        <button class="tab-btn" data-tab="tab-matrix" onclick="switchTab('tab-matrix')">
+            <span>🌐</span> MATRIX 100 CUENTAS
+        </button>
+    </div>
+
+    <!-- PESTAÑA 1: MONITOREO EN VIVO -->
+    <div id="tab-monitoreo" class="tab-content active">
+        
+        <!-- ============ SEGUIMIENTO EN TIEMPO REAL POSICIÓN ACTIVA ============ -->
+        <div class="active-pos-banner">
+            <div class="active-pos-header">
+                <div class="active-pos-title">
+                    <span class="active-pos-pulse"></span>
+                    <span class="active-pos-symbol">🎯 POSICIÓN REAL EN VIVO: <b>WLFIUSDT</b></span>
+                    <span class="badge badge-long">BUY SPOT LONG</span>
+                </div>
+                <div class="active-pos-time">⏱️ Tiempo Abierto: <b>34 min</b> / 75 min (Escalera Time-Decay)</div>
+            </div>
+            <div class="active-pos-grid">
+                <div class="pos-widget">
+                    <div class="pos-widget-label">Capital Invertido</div>
+                    <div class="pos-widget-val">$17.57 USD</div>
+                    <div class="pos-widget-sub">327.10 WLFI</div>
+                </div>
+                <div class="pos-widget">
+                    <div class="pos-widget-label">Precio de Entrada</div>
+                    <div class="pos-widget-val">$0.0535</div>
+                    <div class="pos-widget-sub">Binance Spot Live</div>
+                </div>
+                <div class="pos-widget">
+                    <div class="pos-widget-label">Máximo Pico Alcanzado</div>
+                    <div class="pos-widget-val" style="color: var(--accent-emerald);">$0.0537</div>
+                    <div class="pos-widget-sub">Pico Flotante: +0.37%</div>
+                </div>
+                <div class="pos-widget">
+                    <div class="pos-widget-label">Piso Stop-Loss ATR</div>
+                    <div class="pos-widget-val" style="color: var(--accent-rose);">$0.0532</div>
+                    <div class="pos-widget-sub">Límite Salida: -0.60%</div>
+                </div>
+            </div>
+            <div class="active-pos-footer">
+                <div class="pos-shield-tag">🛡️ BTC Circuit Breaker: <b>🟢 ACTIVO</b></div>
+                <div class="pos-shield-tag">🧱 Orderbook Muro: <b>🟢 OK</b></div>
+                <div class="pos-shield-tag">🚀 Trailing Stop: <b>⚪ Esperando +2.0%</b></div>
+            </div>
+        </div>
+        
+        
+        <div class="top-grid">
+            <!-- BILLETERA REAL BINANCE -->
+            <div class="wallet-card">
+                <div class="card-header-row">
+                    <div class="card-heading">💰 MIS ACTIVOS — SPOT BINANCE</div>
+                    <div class="wallet-total-val">$20.08 <span class="wallet-total-currency">USD</span></div>
+                </div>
+                <div class="asset-list">
+                    <div class="asset-item">
+                        <div class="asset-left">
+                            <div class="asset-symbol-icon icon-usdt">₮</div>
+                            <div>
+                                <div class="asset-title">USDT</div>
+                                <div class="asset-sub">TetherUS</div>
+                            </div>
+                        </div>
+                        <div class="asset-right">
+                            <div class="asset-qty-val">0.00000000</div>
+                            <div class="asset-usd-val">0.00 $</div>
+                        </div>
+                    </div>
+                    <div class="asset-item">
+                        <div class="asset-left">
+                            <div class="asset-symbol-icon icon-bnb">B</div>
+                            <div>
+                                <div class="asset-title">BNB</div>
+                                <div class="asset-sub">Escudo de Comisiones</div>
+                            </div>
+                        </div>
+                        <div class="asset-right">
+                            <div class="asset-qty-val">0.00409216</div>
+                            <div class="asset-usd-val">2.46 $</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MÉTRICAS REALES Y PROTECCIÓN -->
+            <div class="stats-card">
+                <div class="card-heading">🛡️ PROTECCIÓN DE CAPITAL Y ESTADO REAL</div>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-label">Posición Activa</div>
+                        <div class="stat-value">WLFIUSDT</div>
+                        <div class="stat-sub">Entrada: $0.0535</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Historial Operatorio</div>
+                        <div class="stat-value">12 Trades</div>
+                        <div class="stat-sub">✅ 5W / ❌ 7L</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">PnL Neto Real</div>
+                        <div class="stat-value" style="color: var(--accent-emerald);">+$2.95</div>
+                        <div class="stat-sub">Depósito original: $17.13</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Filtros Cuánticos</div>
+                        <div class="stat-value" style="color: var(--accent-cyan); font-size: 1.05rem;">GBM + OU + Corr</div>
+                        <div class="stat-sub">🛡️ Escudo Anti-Ruido Activo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PESTAÑA 2: SÚPER-CEREBRO IA -->
+    <div id="tab-cerebro" class="tab-content">
+        <div class="brain-section">
+            <div class="section-title">
+                <span style="-webkit-text-fill-color: initial;">🧠⚡</span> 
+                <span style="background: linear-gradient(90deg, var(--accent-purple), var(--accent-cyan)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">SÚPER-CEREBRO EN VIVO — DICTAMEN Y ANÁLISIS DE MERCADO</span>
+            </div>
+            <div class="verdicts-timeline">
+                
+        <div class="verdict-card verdict-latest">
+            <div class="verdict-header">
+                <div class="verdict-label"><div class="latest-pulse"></div>🔴 ÚLTIMO ANÁLISIS EN VIVO</div>
+                <div class="verdict-time">🕐 2026-08-10 12:08:54</div>
+            </div>
+            <div class="verdict-body">
+                <div class="verdict-decision">
+                    <div class="verdict-symbol">🔒 SIN ENTRADA (100% USDT)</div>
+                    <div class="verdict-badges">
+                        <span class="badge badge-hold">⏸️ HOLD / PROTECCIÓN</span>
+                        <span class="approved-no">🔒 CERO COMPRAS (VETO RIESGO)</span>
+                    </div>
+                </div>
+                <div class="confidence-section">
+                    <div class="confidence-header">
+                        <span class="confidence-label">Nivel de Confianza del Súper-Cerebro:</span>
+                        <span class="confidence-value" style="color: var(--accent-rose);">0%</span>
+                    </div>
+                    <div class="confidence-bar-bg">
+                        <div class="confidence-bar-fill" style="width: 0%; background: var(--accent-rose);"></div>
+                    </div>
+                </div>
+                <div class="candidates-row"><span class="candidates-label">Top Evaluados:</span> <span class="chip">CRVUSDT <b>60 Pts</b></span><span class="chip">LDOUSDT <b>60 Pts</b></span><span class="chip">OPUSDT <b>60 Pts</b></span><span class="chip">ZROUSDT <b>60 Pts</b></span><span class="chip">ZECUSDT <b>55 Pts</b></span></div>
+                <div class="reasoning-section">
+                    <div class="reasoning-label">💭 Dictamen y Razonamiento Cuántico:</div>
+                    <div class="reasoning-text">Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)</div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="verdict-card verdict-past">
+            <div class="verdict-header">
+                <div class="verdict-label">📋 ANÁLISIS ANTERIOR (#2)</div>
+                <div class="verdict-time">🕐 2026-08-10 12:06:52</div>
+            </div>
+            <div class="verdict-body">
+                <div class="verdict-decision">
+                    <div class="verdict-symbol">🔒 SIN ENTRADA (100% USDT)</div>
+                    <div class="verdict-badges">
+                        <span class="badge badge-hold">⏸️ HOLD / PROTECCIÓN</span>
+                        <span class="approved-no">🔒 CERO COMPRAS (VETO RIESGO)</span>
+                    </div>
+                </div>
+                <div class="confidence-section">
+                    <div class="confidence-header">
+                        <span class="confidence-label">Nivel de Confianza del Súper-Cerebro:</span>
+                        <span class="confidence-value" style="color: var(--accent-rose);">0%</span>
+                    </div>
+                    <div class="confidence-bar-bg">
+                        <div class="confidence-bar-fill" style="width: 0%; background: var(--accent-rose);"></div>
+                    </div>
+                </div>
+                <div class="candidates-row"><span class="candidates-label">Top Evaluados:</span> <span class="chip">CRVUSDT <b>60 Pts</b></span><span class="chip">ZROUSDT <b>60 Pts</b></span><span class="chip">ZECUSDT <b>55 Pts</b></span><span class="chip">VETUSDT <b>55 Pts</b></span><span class="chip">C98USDT <b>55 Pts</b></span></div>
+                <div class="reasoning-section">
+                    <div class="reasoning-label">💭 Dictamen y Razonamiento Cuántico:</div>
+                    <div class="reasoning-text">Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)</div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="verdict-card verdict-past">
+            <div class="verdict-header">
+                <div class="verdict-label">📋 ANÁLISIS ANTERIOR (#1)</div>
+                <div class="verdict-time">🕐 2026-08-10 12:04:44</div>
+            </div>
+            <div class="verdict-body">
+                <div class="verdict-decision">
+                    <div class="verdict-symbol">🔒 SIN ENTRADA (100% USDT)</div>
+                    <div class="verdict-badges">
+                        <span class="badge badge-hold">⏸️ HOLD / PROTECCIÓN</span>
+                        <span class="approved-no">🔒 CERO COMPRAS (VETO RIESGO)</span>
+                    </div>
+                </div>
+                <div class="confidence-section">
+                    <div class="confidence-header">
+                        <span class="confidence-label">Nivel de Confianza del Súper-Cerebro:</span>
+                        <span class="confidence-value" style="color: var(--accent-rose);">0%</span>
+                    </div>
+                    <div class="confidence-bar-bg">
+                        <div class="confidence-bar-fill" style="width: 0%; background: var(--accent-rose);"></div>
+                    </div>
+                </div>
+                <div class="candidates-row"><span class="candidates-label">Top Evaluados:</span> <span class="chip">CRVUSDT <b>60 Pts</b></span><span class="chip">C98USDT <b>55 Pts</b></span><span class="chip">MUBARAKUSDT <b>50 Pts</b></span><span class="chip">BROCCOLI714USDT <b>50 Pts</b></span><span class="chip">NEIROUSDT <b>50 Pts</b></span></div>
+                <div class="reasoning-section">
+                    <div class="reasoning-label">💭 Dictamen y Razonamiento Cuántico:</div>
+                    <div class="reasoning-text">Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)</div>
+                </div>
+            </div>
+        </div>
+    
+            </div>
+        </div>
+    </div>
+
+    <!-- PESTAÑA 3: ESCÁNER CUÁNTICO -->
+    <div id="tab-escaner" class="tab-content">
+        <div class="candidates-card">
+            <div class="card-heading">📊 TOP 10 OPORTUNIDADES DEL ESCÁNER CUÁNTICO</div>
+            <table class="cand-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Símbolo</th>
+                        <th>Score</th>
+                        <th>RSI 15m</th>
+                        <th>Vol Surge</th>
+                        <th>Grado GBM</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr class="cand-row">
+            <td class="cand-rank">#1</td>
+            <td class="cand-symbol"><b>CRVUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-high">60 Pts</span></td>
+            <td class="cand-rsi">57.5</td>
+            <td class="cand-vol">0.4x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#2</td>
+            <td class="cand-symbol"><b>LDOUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-high">60 Pts</span></td>
+            <td class="cand-rsi">50.6</td>
+            <td class="cand-vol">0.3x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#3</td>
+            <td class="cand-symbol"><b>OPUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-high">60 Pts</span></td>
+            <td class="cand-rsi">54.4</td>
+            <td class="cand-vol">0.2x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#4</td>
+            <td class="cand-symbol"><b>ZROUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-high">60 Pts</span></td>
+            <td class="cand-rsi">60.0</td>
+            <td class="cand-vol">2.1x</td>
+            <td class="cand-qual"><b style="color: var(--accent-emerald);">B</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#5</td>
+            <td class="cand-symbol"><b>ZECUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-mid">55 Pts</span></td>
+            <td class="cand-rsi">26.4</td>
+            <td class="cand-vol">2.1x</td>
+            <td class="cand-qual"><b style="color: var(--accent-emerald);">B</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#6</td>
+            <td class="cand-symbol"><b>C98USDT</b></td>
+            <td class="cand-score"><span class="score-badge score-mid">55 Pts</span></td>
+            <td class="cand-rsi">29.1</td>
+            <td class="cand-vol">0.1x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#7</td>
+            <td class="cand-symbol"><b>MUBUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
+            <td class="cand-rsi">57.3</td>
+            <td class="cand-vol">0.1x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#8</td>
+            <td class="cand-symbol"><b>MUBARAKUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
+            <td class="cand-rsi">67.8</td>
+            <td class="cand-vol">0.4x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#9</td>
+            <td class="cand-symbol"><b>PENGUUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
+            <td class="cand-rsi">49.8</td>
+            <td class="cand-vol">0.5x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#10</td>
+            <td class="cand-symbol"><b>SKHYBUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-mid">50 Pts</span></td>
+            <td class="cand-rsi">52.9</td>
+            <td class="cand-vol">0.1x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- PESTAÑA 4: MATRIX 100 CUENTAS -->
+    <div id="tab-matrix" class="tab-content">
+        <div class="matrix-card">
+            <div class="matrix-header">
+                <div>
+                    <div class="matrix-title">🌐 MATRIX 100 CUENTAS — SIMULADOR EN VIVO</div>
+                    <div class="matrix-total-val">$10,276.37 USD</div>
+                    <div class="matrix-pnl" style="color: var(--accent-emerald);">+$276.37 PnL Net | Win Rate 18.6%</div>
+                </div>
+                <div style="text-align: right;">
+                    <span class="badge badge-long">81 Cuentas en Posición</span>
+                    <div style="font-size: 0.72rem; color: var(--accent-emerald); margin-top: 0.3rem; font-weight: 700;">3 Símbolos Diversificados</div>
+                </div>
+            </div>
+            <div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 0.5rem; font-weight: 600;">Símbolos Activos en Paralelo (Offset Rotativo):</div>
+            <div class="matrix-tags-box">
+                <span class="matrix-tag"><b>BTCUSDT</b> <small>(60)</small></span><span class="matrix-tag"><b>ZECUSDT</b> <small>(20)</small></span><span class="matrix-tag"><b>KITEUSDT</b> <small>(1)</small></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
     <footer>
-        Última actualización: <strong>2026-08-10 17:08:29</strong> | Súper-Cerebro Cuántico 24/7 Binance Spot Engine
-        <button onclick="window.location.reload()" style="margin-left: 15px; padding: 6px 14px; background: rgba(6, 182, 212, 0.2); border: 1px solid rgba(6, 182, 212, 0.4); color: #06b6d4; border-radius: 8px; cursor: pointer; font-weight: 600;">🔄 Actualizar Ahora</button>
+        <span>Última actualización: <strong>2026-08-10 12:08:58</strong> | Algoritmo Cuántico Binance 24/7</span>
+        <span class="countdown" id="countdown">Auto-refresh en: 30s</span>
+        <button class="refresh-btn" onclick="window.location.reload()">🔄 Actualizar Ahora</button>
     </footer>
 
     <script>
