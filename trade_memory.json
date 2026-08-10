@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2254,
-    "wins": 419,
+    "total_trades": 2255,
+    "wins": 420,
     "losses": 1835,
-    "win_rate_pct": 18.59,
-    "total_pnl_usd": 274.0823054545442
+    "win_rate_pct": 18.63,
+    "total_pnl_usd": 274.14772545454423
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -37660,6 +37660,19 @@
         "rsi_15m": 54.35,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-10 18:04:21",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "WLFIUSDT",
+      "side": "BUY",
+      "entry_price": 0.0535,
+      "exit_price": 0.0537,
+      "pnl_usd": 0.0654199999999996,
+      "result": "WIN",
+      "notes": "Real Money Trade closed with 0.37%",
+      "context": {}
     }
   ]
 }
