@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-10 12:34:22",
+  "timestamp": "2026-08-10 12:36:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en un estado de distribución silenciosa con una asimetría de pánico estructural. Ninguno de los candidatos cumple con el umbral de seguridad A+ (Score >= 55) ni con la dominancia de Bids necesaria para mitigar el riesgo de slippage. Se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "confidence": 0,
+  "reasoning": "El mercado se encuentra en un entorno de alta fragilidad sin señales de acumulación institucional significativa. Ningún activo cumple con los criterios de riesgo A+ exigidos por el comité, por lo que la estrategia prioritaria es la preservación de capital en USDT hasta que el volumen confirme una reversión real.",
   "top_candidates": [
     {
       "symbol": "WLFIUSDT",
@@ -23,7 +23,7 @@
       "score": 60
     },
     {
-      "symbol": "VIRTUALUSDT",
+      "symbol": "HOMEUSDT",
       "score": 60
     }
   ]
