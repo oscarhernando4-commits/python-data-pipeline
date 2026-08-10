@@ -1,13 +1,17 @@
 {
-  "timestamp": "2026-08-10 16:16:26",
+  "timestamp": "2026-08-10 16:18:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado se encuentra en una fase de capitulación sistémica donde la mayoría de los activos carecen de soporte institucional y fortaleza técnica. Ninguno de los candidatos analizados alcanza el umbral de Score 55, por lo que la estrategia de máxima rentabilidad es la inacción para evitar pérdidas por 'falling knives'.",
+  "confidence": 0,
+  "reasoning": "El mercado actual carece de la fuerza técnica y el soporte de liquidez necesarios para una ejecución segura. Todos los candidatos presentan scores técnicos por debajo del umbral de 55, lo que, sumado al entorno de pánico institucional, obliga a la preservación total del capital en espera de mejores condiciones.",
   "top_candidates": [
     {
-      "symbol": "INJUSDT",
+      "symbol": "PAXGUSDT",
+      "score": 60
+    },
+    {
+      "symbol": "XAUTUSDT",
       "score": 60
     },
     {
@@ -15,15 +19,11 @@
       "score": 60
     },
     {
+      "symbol": "INJUSDT",
+      "score": 60
+    },
+    {
       "symbol": "TUTUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "PUMPUSDT",
-      "score": 50
-    },
-    {
-      "symbol": "MMTUSDT",
       "score": 50
     }
   ]
