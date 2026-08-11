@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 01:36:21
+date: 2026-08-11 01:38:22
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 01:36:21`
+> ⏱️ **Última Actualización:** `2026-08-11 01:38:22`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -173,7 +173,7 @@ date: 2026-08-11 01:36:21
 | **SIM-077** | **SPYBUSDT** | `#54` | `8W/46L` | 26-08-10<br>21:40 | `🔵 En Curso` | **`$98.76`** (`-$1.24`) | 🔵 En Vivo |
 | **SIM-078** | **SPYBUSDT** | `#54` | `8W/46L` | 26-08-10<br>21:40 | `🔵 En Curso` | **`$98.76`** (`-$1.24`) | 🔵 En Vivo |
 | **SIM-079** | **SPYBUSDT** | `#54` | `8W/46L` | 26-08-10<br>21:40 | `🔵 En Curso` | **`$98.76`** (`-$1.24`) | 🔵 En Vivo |
-| **SIM-080** | **PROMUSDT** | `#56` | `8W/48L` | 26-08-11<br>01:36 | `🔴 Perdió -$0.27` | **`$98.62`** (`-$1.38`) | 🔴 Buscando |
+| **SIM-080** | **PROMUSDT** | `#56` | `8W/48L` | 26-08-11<br>01:38 | `🔴 Perdió -$0.27` | **`$98.62`** (`-$1.38`) | 🔴 Buscando |
 
 ---
 
