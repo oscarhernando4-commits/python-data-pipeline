@@ -1957,3 +1957,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-11-19 (-44.89%)`, `2025-10-10 (-29.18%)`, `2026-05-08 (-23.04%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: BOMEUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2024-03-15` hasta `2026-08-10` (879 Días de Historial)
+- 💵 **Precio Actual:** `$0.0008 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.0294 USD` (`2024-03-15`) | Distancia: `-97.4%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0003 USD` (`2026-02-05`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-03-15 (+183.94%)`, `2026-08-08 (+34.6%)`, `2024-10-13 (+31.16%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2024-03-17 (-42.37%)`, `2025-10-09 (-38.4%)`, `2024-04-11 (-21.74%)`
+
+---

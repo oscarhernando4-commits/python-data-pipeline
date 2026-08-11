@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2569,
+    "total_trades": 2571,
     "wins": 454,
-    "losses": 2115,
-    "win_rate_pct": 17.67,
-    "total_pnl_usd": 108268.1561554547
+    "losses": 2117,
+    "win_rate_pct": 17.66,
+    "total_pnl_usd": 108219.6261554547
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ONDOUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COOKIEUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on LUNAUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on RADUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BTCUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on FILUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on AAVEUSDT)",
-      "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on XLMUSDT)"
+      "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on XLMUSDT)",
+      "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on APTUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ACEUSDT)",
@@ -53,40 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-09 22:00:22",
-      "account_id": "SIM-077",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "MUBARAKUSDT",
-      "side": "SHORT",
-      "entry_price": 0.02481,
-      "exit_price": 0.02513,
-      "pnl_usd": -1.15,
-      "result": "LOSS",
-      "notes": "Hit SL on MUBARAKUSDT (-$1.15). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 62.3,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-09 22:00:22",
-      "account_id": "SIM-078",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "MUBARAKUSDT",
-      "side": "SHORT",
-      "entry_price": 0.02481,
-      "exit_price": 0.02513,
-      "pnl_usd": -1.15,
-      "result": "LOSS",
-      "notes": "Hit SL on MUBARAKUSDT (-$1.15). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 62.3,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-09 22:00:22",
       "account_id": "SIM-079",
@@ -8258,6 +8224,40 @@
       "context": {
         "score": 35,
         "rsi_15m": 28.55,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 09:56:39",
+      "account_id": "SIM-047",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "XLMUSDT",
+      "side": "LONG",
+      "entry_price": 87.56,
+      "exit_price": 0.1595,
+      "pnl_usd": -20.11,
+      "result": "LOSS",
+      "notes": "Hit SL on XLMUSDT (-$20.11). Re-Trading!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 31.44,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 09:56:39",
+      "account_id": "SIM-048",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "APTUSDT",
+      "side": "LONG",
+      "entry_price": 87.56,
+      "exit_price": 0.577,
+      "pnl_usd": -28.42,
+      "result": "LOSS",
+      "notes": "Hit SL on APTUSDT (-$28.42). Re-Trading!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 30.76,
         "macro_trend_4h": "NEUTRAL"
       }
     }
