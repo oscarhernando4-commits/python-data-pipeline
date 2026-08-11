@@ -7,7 +7,7 @@
   "reasoning": "El mercado se encuentra en una fase de distribución agresiva con scores técnicos mediocres. Ningún candidato cumple con el umbral mínimo de Score >= 55 ni con la confirmación de soporte en el libro de órdenes, por lo que la estrategia óptima es la preservación de capital.",
   "top_candidates": [
     {
-      "symbol": "ZROUSDT",
+      "symbol": "SKHYBUSDT",
       "score": 60,
       "price": 0.864,
       "rsi_2m": 56.55,
@@ -20,12 +20,38 @@
       "macro_trend": "NEUTRAL"
     },
     {
+      "symbol": "MORPHOUSDT",
+      "score": 60,
+      "price": 1.983,
+      "rsi_2m": 57.66,
+      "rsi_5m": 57.66,
+      "rsi_15m": 57.66,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.33,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "FILUSDT",
+      "score": 60,
+      "price": 0.706,
+      "rsi_2m": 57.62,
+      "rsi_5m": 57.62,
+      "rsi_15m": 57.62,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.17,
+      "trade_quality": "B",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "VIRTUALUSDT",
       "score": 55,
-      "price": 0.5198,
-      "rsi_2m": 27.62,
-      "rsi_5m": 27.62,
-      "rsi_15m": 27.62,
+      "price": 0.5204,
+      "rsi_2m": 29.28,
+      "rsi_5m": 29.28,
+      "rsi_15m": 29.28,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.09,
@@ -67,7 +93,7 @@
       "rsi_15m": 57.74,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.11,
+      "vol_surge": 0.18,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
