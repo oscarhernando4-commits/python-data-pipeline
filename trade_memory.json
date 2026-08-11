@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2754,
+    "total_trades": 2757,
     "wins": 491,
-    "losses": 2263,
-    "win_rate_pct": 17.83,
-    "total_pnl_usd": 101375.66615545479
+    "losses": 2266,
+    "win_rate_pct": 17.81,
+    "total_pnl_usd": 101375.2961554548
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ZAMAUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on PYTHUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NEIROUSDT)",
       "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LDOUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on INJUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on AUDIOUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DODOUSDT)",
-      "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on DODOUSDT)"
+      "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on DODOUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on 0GUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on KAITOUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-10 18:24:19",
-      "account_id": "SIM-047",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "CRVUSDT",
-      "side": "LONG",
-      "entry_price": 0.2554,
-      "exit_price": 0.2561,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on CRVUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 78.55,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-10 18:24:19",
-      "account_id": "SIM-048",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "CRVUSDT",
-      "side": "LONG",
-      "entry_price": 0.2554,
-      "exit_price": 0.2561,
-      "pnl_usd": -0.09,
-      "result": "LOSS",
-      "notes": "Hit SL on CRVUSDT (-$0.09). Re-Trading!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 78.55,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-10 18:24:19",
-      "account_id": "SIM-049",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "CRVUSDT",
-      "side": "LONG",
-      "entry_price": 0.2554,
-      "exit_price": 0.2561,
-      "pnl_usd": -0.09,
-      "result": "LOSS",
-      "notes": "Hit SL on CRVUSDT (-$0.09). Re-Trading!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 78.55,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-10 13:26:48",
       "account_id": "SIM-047",
@@ -8278,6 +8227,49 @@
       "context": {
         "score": 50,
         "rsi_15m": 65.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 18:48:22",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "HOLOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0798,
+      "exit_price": 0.0798,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on HOLOUSDT (-$0.06). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-11 18:48:22",
+      "account_id": "SIM-040",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "HOLOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0798,
+      "exit_price": 0.0798,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on HOLOUSDT (-$0.06). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-11 18:48:22",
+      "account_id": "SIM-085",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "0GUSDT",
+      "side": "SHORT",
+      "entry_price": 0.159,
+      "exit_price": 0.161,
+      "pnl_usd": -0.25,
+      "result": "LOSS",
+      "notes": "Hit SL on 0GUSDT (-$0.25). Re-Trading!",
+      "context": {
+        "score": 60,
+        "rsi_15m": 51.55,
         "macro_trend_4h": "NEUTRAL"
       }
     }
