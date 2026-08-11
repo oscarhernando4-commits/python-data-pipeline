@@ -7,20 +7,20 @@
   "reasoning": "Tras la deliberación unánime, se ha determinado que no existen activos que cumplan con los criterios de riesgo y convicción exigidos por el comité. La falta de soporte institucional en el libro de órdenes y los scores técnicos mediocres obligan a mantener la liquidez en espera de una mejor configuración de mercado.",
   "top_candidates": [
     {
-      "symbol": "WLDUSDT",
-      "score": 50,
-      "price": 0.3334,
-      "rsi_2m": 54.23,
-      "rsi_5m": 54.23,
-      "rsi_15m": 54.23,
+      "symbol": "MEGAUSDT",
+      "score": 55,
+      "price": 0.03342,
+      "rsi_2m": 30.13,
+      "rsi_5m": 30.13,
+      "rsi_15m": 30.13,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.05,
+      "vol_surge": 0.75,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "ENAUSDT",
+      "symbol": "WLDUSDT",
       "score": 50,
       "price": 1.0127,
       "rsi_2m": 59.94,
@@ -72,7 +72,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "FILUSDT",
+      "symbol": "ENAUSDT",
       "score": 50,
       "price": 45.19,
       "rsi_2m": 50.89,
