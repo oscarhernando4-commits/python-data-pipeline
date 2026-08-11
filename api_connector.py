@@ -841,8 +841,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             trailing_floor_pct = 1.0  # Lock +1.0% profit (net +0.8% after fees)
             phase_msg = f"💰 FASE 3: Ganancia Asegurada +1.0% (Pico +{highest_pnl_pct:.1f}%)"
             
-        # PHASE 2: Break-Even Safe (PnL reached +0.8%)
-        elif highest_pnl_pct >= 0.8 or phase >= 2:
+        # PHASE 2: Break-Even Safe (PnL reached +0.65% - lowered from +0.80% to lock protection faster)
+        elif highest_pnl_pct >= 0.65 or phase >= 2:
             phase = 2
             trailing_floor_pct = 0.35  # Covers 0.20% roundtrip fees + small profit
             phase_msg = f"🛡️ FASE 2: Break-Even Seguro +0.35% (Pico +{highest_pnl_pct:.1f}%)"
