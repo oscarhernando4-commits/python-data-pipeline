@@ -2100,3 +2100,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `Sin días < -10%`
 
 ---
+
+### 🪙 Profile Completo de Vida: DCRUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-16` hasta `2026-08-11` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$12.9900 USD`
+- 📈 **Máximo Histórico (ATH):** `$70.0000 USD` (`2025-11-04`) | Distancia: `-81.44%`
+- 📉 **Mínimo Histórico (ATL):** `$8.7500 USD` (`2024-08-05`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-11-03 (+49.95%)`, `2025-11-09 (+40.15%)`, `2025-11-04 (+29.09%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-11-07 (-19.9%)`, `2024-12-09 (-19.43%)`, `2025-11-21 (-16.55%)`
+
+---
