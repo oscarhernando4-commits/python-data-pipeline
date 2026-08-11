@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 00:14:32
+date: 2026-08-11 00:16:19
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 00:14:32`
+> ⏱️ **Última Actualización:** `2026-08-11 00:16:19`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -122,11 +122,11 @@ date: 2026-08-11 00:14:32
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-041** | **ACEUSDT** | `#12` | `5W/6L` | 26-08-11<br>00:14 | `🟢 Ganó +$1.07` | **`$209.55`** (`+$109.55`) | 🟢 Buscando |
+| **SIM-041** | **ACEUSDT** | `#12` | `5W/6L` | 26-08-11<br>00:16 | `🟢 Ganó +$1.07` | **`$209.55`** (`+$109.55`) | 🟢 Buscando |
 | **SIM-042** | **KAITOUSDT** | `#17` | `5W/10L` | 26-08-10<br>19:10 | `🔵 En Curso` | **`$233.92`** (`+$133.92`) | 🔵 En Vivo |
-| **SIM-043** | **ACEUSDT** | `#12` | `5W/7L` | 26-08-11<br>00:14 | `🟢 Ganó +$1.07` | **`$209.55`** (`+$109.55`) | 🟢 Buscando |
+| **SIM-043** | **ACEUSDT** | `#12` | `5W/7L` | 26-08-11<br>00:16 | `🟢 Ganó +$1.07` | **`$209.55`** (`+$109.55`) | 🟢 Buscando |
 | **SIM-044** | **FETUSDT** | `#11` | `3W/7L` | 26-08-10<br>22:06 | `🔵 En Curso` | **`$142.38`** (`+$42.38`) | 🔵 En Vivo |
-| **SIM-045** | **ACEUSDT** | `#11` | `4W/6L` | 26-08-11<br>00:14 | `🟢 Ganó +$0.73` | **`$143.73`** (`+$43.73`) | 🟢 Buscando |
+| **SIM-045** | **ACEUSDT** | `#11` | `4W/6L` | 26-08-11<br>00:16 | `🟢 Ganó +$0.73` | **`$143.73`** (`+$43.73`) | 🟢 Buscando |
 | **SIM-046** | **FETUSDT** | `#10` | `3W/6L` | 26-08-10<br>22:06 | `🔵 En Curso` | **`$143.00`** (`+$43.00`) | 🔵 En Vivo |
 | **SIM-047** | **XAUTUSDT** | `#6` | `2W/4L` | 26-08-10<br>18:44 | `🔵 En Curso` | **`$100.94`** (`+$0.94`) | 🔵 En Vivo |
 | **SIM-048** | **XAUTUSDT** | `#7` | `3W/4L` | 26-08-10<br>18:44 | `🔵 En Curso` | **`$143.31`** (`+$43.31`) | 🔵 En Vivo |
