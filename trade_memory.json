@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2767,
-    "wins": 492,
-    "losses": 2275,
-    "win_rate_pct": 17.78,
-    "total_pnl_usd": 101374.2061554548
+    "total_trades": 2771,
+    "wins": 495,
+    "losses": 2276,
+    "win_rate_pct": 17.86,
+    "total_pnl_usd": 101375.43615545481
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on VIRTUALUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on 0GUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MMTUSDT)",
       "BLOCK SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on VIRTUALUSDT)",
@@ -27,10 +26,10 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on HOLOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ETHFIUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NEXOUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on XPLUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on XPLUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ZROUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PROMUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PROMUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DODOUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on REUSDT)",
@@ -49,78 +48,11 @@
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on VIRTUALUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PHAUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on MITOUSDT)",
-      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on KAITOUSDT)"
+      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on KAITOUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ETHFIUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-10 13:54:48",
-      "account_id": "SIM-045",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "FFUSDT",
-      "side": "LONG",
-      "entry_price": 0.06725,
-      "exit_price": 0.06656,
-      "pnl_usd": -0.32,
-      "result": "LOSS",
-      "notes": "Hit SL on FFUSDT (-$0.32). Re-Trading!",
-      "context": {
-        "score": 10,
-        "rsi_15m": 72.91,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-10 13:54:48",
-      "account_id": "SIM-046",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "FFUSDT",
-      "side": "LONG",
-      "entry_price": 0.06725,
-      "exit_price": 0.06656,
-      "pnl_usd": -0.32,
-      "result": "LOSS",
-      "notes": "Hit SL on FFUSDT (-$0.32). Re-Trading!",
-      "context": {
-        "score": 10,
-        "rsi_15m": 72.91,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-10 14:30:42",
-      "account_id": "SIM-041",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "DODOUSDT",
-      "side": "LONG",
-      "entry_price": 0.023,
-      "exit_price": 0.02549,
-      "pnl_usd": 2.16,
-      "result": "WIN",
-      "notes": "Win on DODOUSDT (+$2.16 net) -> Level 5 Re-Trading Started!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 82.2,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-10 14:30:42",
-      "account_id": "SIM-042",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "DODOUSDT",
-      "side": "LONG",
-      "entry_price": 0.023,
-      "exit_price": 0.02549,
-      "pnl_usd": 3.03,
-      "result": "WIN",
-      "notes": "Win on DODOUSDT (+$3.03 net) -> Level 5 Re-Trading Started!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 82.2,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-10 14:30:42",
       "account_id": "SIM-043",
@@ -8266,6 +8198,74 @@
       "context": {
         "score": 50,
         "rsi_15m": 50.3,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 19:26:29",
+      "account_id": "SIM-024",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ETHFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.3704,
+      "exit_price": 0.3789,
+      "pnl_usd": 0.44,
+      "result": "WIN",
+      "notes": "Win on ETHFIUSDT (+$0.44 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 58.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 19:26:29",
+      "account_id": "SIM-025",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ETHFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.3704,
+      "exit_price": 0.3789,
+      "pnl_usd": 0.44,
+      "result": "WIN",
+      "notes": "Win on ETHFIUSDT (+$0.44 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 58.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 19:26:29",
+      "account_id": "SIM-026",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ETHFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.3704,
+      "exit_price": 0.3789,
+      "pnl_usd": 0.44,
+      "result": "WIN",
+      "notes": "Win on ETHFIUSDT (+$0.44 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 58.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 19:26:29",
+      "account_id": "SIM-074",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ZROUSDT",
+      "side": "SHORT",
+      "entry_price": 0.857,
+      "exit_price": 0.865,
+      "pnl_usd": -0.09,
+      "result": "LOSS",
+      "notes": "Hit SL on ZROUSDT (-$0.09). Re-Trading!",
+      "context": {
+        "score": 60,
+        "rsi_15m": 57.96,
         "macro_trend_4h": "NEUTRAL"
       }
     }
