@@ -8,7 +8,6 @@
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZECUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ROBOUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on FETUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SOXLBUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on LUNAUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on RADUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LUNAUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on COOKIEUSDT)"
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on COOKIEUSDT)",
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SOXLBUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on EPICUSDT)",
@@ -53,74 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-09 17:02:21",
-      "account_id": "SIM-069",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "TUTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.15365,
-      "exit_price": 0.15359,
-      "pnl_usd": -1.19,
-      "result": "LOSS",
-      "notes": "Hit SL on TUTUSDT (-$1.19). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 49.02,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-09 17:02:21",
-      "account_id": "SIM-070",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "TUTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.15365,
-      "exit_price": 0.15359,
-      "pnl_usd": -1.19,
-      "result": "LOSS",
-      "notes": "Hit SL on TUTUSDT (-$1.19). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 49.02,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-09 17:02:21",
-      "account_id": "SIM-071",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "TUTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.15365,
-      "exit_price": 0.15359,
-      "pnl_usd": -1.19,
-      "result": "LOSS",
-      "notes": "Hit SL on TUTUSDT (-$1.19). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 49.02,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-09 17:02:21",
-      "account_id": "SIM-072",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "TUTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.15365,
-      "exit_price": 0.15359,
-      "pnl_usd": -1.19,
-      "result": "LOSS",
-      "notes": "Hit SL on TUTUSDT (-$1.19). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 49.02,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-09 17:02:21",
       "account_id": "SIM-073",
