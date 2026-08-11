@@ -212,7 +212,7 @@ def generate_web_dashboard():
             pass
 
     # 5. Extract Matrix symbol distribution
-    matrix_accounts = matrix_data.get("accounts", [])
+    matrix_accounts = matrix_data.get("accounts", []) if isinstance(matrix_data, dict) else (matrix_data if isinstance(matrix_data, list) else [])
     active_positions = [a for a in matrix_accounts if a.get("position")]
     from collections import Counter
     symbol_counts = Counter(a.get("symbol", "?") for a in active_positions)
