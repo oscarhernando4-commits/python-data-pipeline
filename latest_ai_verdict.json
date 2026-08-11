@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-11 20:38:19",
+  "timestamp": "2026-08-11 20:40:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de consolidación lateral con alta incertidumbre. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 con confirmación de volumen y soporte de libro de órdenes > 55%). Se prioriza la preservación del capital sobre la especulación en un entorno de baja probabilidad de éxito.",
+  "reasoning": "Ninguno de los candidatos cumple con los criterios estrictos de riesgo y convicción establecidos por el comité; por lo tanto, se mantiene la liquidez en espera de mejores condiciones de mercado.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
@@ -35,13 +35,13 @@
     {
       "symbol": "BANANAS31USDT",
       "score": 75,
-      "price": 0.010093,
-      "rsi_2m": 51.29,
-      "rsi_5m": 51.29,
-      "rsi_15m": 51.29,
+      "price": 0.010067,
+      "rsi_2m": 50.34,
+      "rsi_5m": 50.34,
+      "rsi_15m": 50.34,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.16,
+      "vol_surge": 0.2,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
