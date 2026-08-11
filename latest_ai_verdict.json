@@ -46,7 +46,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "CAKEUSDT",
+      "symbol": "ZAMAUSDT",
       "score": 75,
       "price": 1.469,
       "rsi_2m": 62.11,
@@ -139,13 +139,39 @@
     {
       "symbol": "HOMEUSDT",
       "score": 65,
-      "price": 0.00894,
-      "rsi_2m": 48.96,
-      "rsi_5m": 48.96,
-      "rsi_15m": 48.96,
+      "price": 2.31,
+      "rsi_2m": 51.71,
+      "rsi_5m": 51.71,
+      "rsi_15m": 51.71,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.89,
+      "vol_surge": 0.8,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "score": 65,
+      "price": 4.51e-06,
+      "rsi_2m": 49.72,
+      "rsi_5m": 49.72,
+      "rsi_15m": 49.72,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.9,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "TUTUSDT",
+      "score": 65,
+      "price": 0.10375,
+      "rsi_2m": 52.62,
+      "rsi_5m": 52.62,
+      "rsi_15m": 52.62,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.45,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
