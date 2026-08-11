@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 11:02:20
+date: 2026-08-11 11:04:16
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 11:02:20`
+> ⏱️ **Última Actualización:** `2026-08-11 11:04:16`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -30,10 +30,10 @@ date: 2026-08-11 11:02:20
 
 > [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
-> - 📈 **Capital Total Acumulado:** **`$10,541.88 USD`** (`$+541.88 USD`)  
+> - 📈 **Capital Total Acumulado:** **`$10,540.68 USD`** (`$+540.68 USD`)  
 > - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `0 Cuentas (0.0%)`  
-> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `2 Cuentas (2.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `98 Cuentas (98.0%)`  
+> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `22 Cuentas (22.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `78 Cuentas (78.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
@@ -84,32 +84,32 @@ date: 2026-08-11 11:02:20
 ## 🔷 GRUPO 2: Moderado-Estricto (Permisividad Nivel 2 - Score >= 75 Pts)
 
 > [!NOTE] 📊 **Resumen del 🔷 GRUPO 2: Moderado-Estricto (Permisividad Nivel 2 - Score >= 75 Pts):**
-> - 💵 **Balance Total del Grupo:** `$1,999.20 USD` (`-$0.80`)
-> - 🎯 **Operaciones Totales:** `400` (`100 Ganadas / 300 Perdidas`)
-> - 📈 **Tasa de Acierto del Grupo:** `25.0% Win Rate`
+> - 💵 **Balance Total del Grupo:** `$1,998.00 USD` (`-$2.00`)
+> - 🎯 **Operaciones Totales:** `420` (`100 Ganadas / 320 Perdidas`)
+> - 📈 **Tasa de Acierto del Grupo:** `23.8% Win Rate`
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-021** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-022** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-023** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-024** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-025** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-026** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-027** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-028** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-029** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-030** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-031** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-032** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-033** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-034** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-035** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-036** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-037** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-038** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-039** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
-| **SIM-040** | **BTCUSDT** | `#20` | `5W/15L` | 26-08-10<br>13:50 | `🛡️ Protegida (BE)` | **`$99.96`** (`-$0.04`) | 🔵 En Vivo |
+| **SIM-021** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-022** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-023** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-024** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-025** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-026** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-027** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-028** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-029** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-030** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-031** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-032** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-033** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-034** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-035** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-036** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-037** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-038** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-039** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
+| **SIM-040** | **BTCUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.06` | **`$99.90`** (`-$0.10`) | 🔴 Buscando |
 
 ---
 
@@ -125,13 +125,13 @@ date: 2026-08-11 11:02:20
 | **SIM-041** | **ONDOUSDT** | `#12` | `5W/6L` | 26-08-11<br>00:20 | `🔵 En Curso` | **`$209.55`** (`+$109.55`) | 🔵 En Vivo |
 | **SIM-042** | **SPYBUSDT** | `#19` | `6W/11L` | 26-08-11<br>07:24 | `🔵 En Curso` | **`$234.35`** (`+$134.35`) | 🔵 En Vivo |
 | **SIM-043** | **ONDOUSDT** | `#12` | `5W/7L` | 26-08-11<br>00:20 | `🔵 En Curso` | **`$209.55`** (`+$109.55`) | 🔵 En Vivo |
-| **SIM-044** | **FETUSDT** | `#12` | `3W/8L` | 26-08-11<br>07:28 | `🔵 En Curso` | **`$142.05`** (`+$42.05`) | 🔵 En Vivo |
+| **SIM-044** | **FETUSDT** | `#12` | `3W/8L` | 26-08-11<br>07:28 | `🛡️ Protegida (BE)` | **`$142.05`** (`+$42.05`) | 🔵 En Vivo |
 | **SIM-045** | **ONDOUSDT** | `#11` | `4W/6L` | 26-08-11<br>00:20 | `🔵 En Curso` | **`$143.73`** (`+$43.73`) | 🔵 En Vivo |
-| **SIM-046** | **FETUSDT** | `#11` | `3W/7L` | 26-08-11<br>07:28 | `🔵 En Curso` | **`$142.67`** (`+$42.67`) | 🔵 En Vivo |
+| **SIM-046** | **FETUSDT** | `#11` | `3W/7L` | 26-08-11<br>07:28 | `🛡️ Protegida (BE)` | **`$142.67`** (`+$42.67`) | 🔵 En Vivo |
 | **SIM-047** | **AAVEUSDT** | `#7` | `2W/5L` | 26-08-11<br>05:28 | `🔵 En Curso` | **`$100.88`** (`+$0.88`) | 🔵 En Vivo |
 | **SIM-048** | **AAVEUSDT** | `#8` | `3W/5L` | 26-08-11<br>05:28 | `🔵 En Curso` | **`$143.22`** (`+$43.22`) | 🔵 En Vivo |
 | **SIM-049** | **AAVEUSDT** | `#8` | `3W/5L` | 26-08-11<br>05:28 | `🔵 En Curso` | **`$143.22`** (`+$43.22`) | 🔵 En Vivo |
-| **SIM-050** | **FETUSDT** | `#7` | `2W/4L` | 26-08-11<br>07:28 | `🔵 En Curso` | **`$101.35`** (`+$1.35`) | 🔵 En Vivo |
+| **SIM-050** | **FETUSDT** | `#7` | `2W/4L` | 26-08-11<br>07:28 | `🛡️ Protegida (BE)` | **`$101.35`** (`+$1.35`) | 🔵 En Vivo |
 | **SIM-051** | **SPYBUSDT** | `#10` | `3W/7L` | 26-08-11<br>07:24 | `🔵 En Curso` | **`$142.93`** (`+$42.93`) | 🔵 En Vivo |
 | **SIM-052** | **FORMUSDT** | `#10` | `3W/6L` | 26-08-10<br>19:10 | `🔵 En Curso` | **`$89.74`** (`-$10.26`) | 🔵 En Vivo |
 | **SIM-053** | **SPYBUSDT** | `#11` | `5W/6L` | 26-08-11<br>07:24 | `🔵 En Curso` | **`$148.71`** (`+$48.71`) | 🔵 En Vivo |
@@ -159,8 +159,8 @@ date: 2026-08-11 11:02:20
 | **SIM-063** | **PEPEUSDT** | `#59` | `11W/47L` | 26-08-11<br>05:16 | `🔵 En Curso` | **`$108.73`** (`+$8.73`) | 🔵 En Vivo |
 | **SIM-064** | **PEPEUSDT** | `#61` | `9W/52L` | 26-08-11<br>05:16 | `🔵 En Curso` | **`$98.10`** (`-$1.90`) | 🔵 En Vivo |
 | **SIM-065** | **HEIUSDT** | `#59` | `9W/50L` | 26-08-11<br>10:18 | `🛡️ Protegida (BE)` | **`$99.15`** (`-$0.85`) | 🔵 En Vivo |
-| **SIM-066** | **MAVUSDT** | `#64` | `8W/56L` | 26-08-11<br>11:02 | `🔴 Perdió -$0.96` | **`$93.53`** (`-$6.47`) | 🔴 Buscando |
-| **SIM-067** | **MAVUSDT** | `#64` | `8W/56L` | 26-08-11<br>11:02 | `🔴 Perdió -$0.96` | **`$93.53`** (`-$6.47`) | 🔴 Buscando |
+| **SIM-066** | **MAVUSDT** | `#64` | `8W/56L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.96` | **`$93.53`** (`-$6.47`) | 🔴 Buscando |
+| **SIM-067** | **MAVUSDT** | `#64` | `8W/56L` | 26-08-11<br>11:04 | `🔴 Perdió -$0.96` | **`$93.53`** (`-$6.47`) | 🔴 Buscando |
 | **SIM-068** | **ARBUSDT** | `#58` | `8W/50L` | 26-08-11<br>06:26 | `🔵 En Curso` | **`$97.73`** (`-$2.27`) | 🔵 En Vivo |
 | **SIM-069** | **FILUSDT** | `#60` | `8W/52L` | 26-08-11<br>05:20 | `🔵 En Curso` | **`$97.59`** (`-$2.41`) | 🔵 En Vivo |
 | **SIM-070** | **FILUSDT** | `#59` | `8W/51L` | 26-08-11<br>05:20 | `🔵 En Curso` | **`$98.04`** (`-$1.96`) | 🔵 En Vivo |
