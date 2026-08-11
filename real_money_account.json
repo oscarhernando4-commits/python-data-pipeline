@@ -1,27 +1,30 @@
 {
   "initial_deposit_usdt": 17.13,
   "initial_total_usd": 20.08,
-  "current_balance_usd": 19.14,
-  "net_pnl_usd": 2.01,
+  "current_balance_usd": 19.13,
+  "net_pnl_usd": 2.0,
   "wins": 7,
   "losses": 12,
   "trades_count": 18,
   "position": {
     "symbol": "XRPUSDT",
-    "entry_price": 1.0161,
-    "cost_usd": 16.56,
-    "side": "LONG",
     "quantity": 16.3,
-    "break_even": false
+    "entry_price": 1.0161,
+    "highest_price": 1.0165,
+    "cost_usd": 16.57,
+    "side": "LONG",
+    "phase": 1,
+    "holding_cycles": 1,
+    "volatility_regime": "⚡ FASE 1: Protección Inicial SL -2.5% (Esperando despegue)"
   },
-  "last_trade_time": "26-08-11<br>15:02",
-  "status": "🔵 En Vivo LONG (XRPUSDT @ $1.0161)",
+  "last_trade_time": "26-08-11<br>15:04",
+  "status": "🔵 En Vivo LONG (XRPUSDT @ $1.0165)",
   "daily_wins": 0,
   "daily_losses": 3,
-  "_cached_total_val": 19.14,
-  "_cached_usdt_free": 0.0,
-  "_cached_bnb": 0.00383464,
-  "_cached_bnb_usd": 2.35,
+  "_cached_total_val": 19.13,
+  "_cached_usdt_free": 0.2324,
+  "_cached_bnb": 0.00381433,
+  "_cached_bnb_usd": 2.33,
   "last_trading_day": "2026-08-11",
-  "_btc_last_price": 63429.64
+  "_btc_last_price": 63633.52
 }
