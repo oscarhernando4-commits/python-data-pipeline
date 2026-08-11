@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 14:44:35
+date: 2026-08-11 14:46:25
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 14:44:35`
+> ⏱️ **Última Actualización:** `2026-08-11 14:46:25`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -105,9 +105,9 @@ date: 2026-08-11 14:44:35
 | **SIM-033** | **SUIUSDT** | `#25` | `6W/18L` | 26-08-11<br>14:32 | `🔵 En Curso` | **`$100.01`** (`+$0.01`) | 🔵 En Vivo |
 | **SIM-034** | **SUIUSDT** | `#25` | `6W/18L` | 26-08-11<br>14:32 | `🔵 En Curso` | **`$100.01`** (`+$0.01`) | 🔵 En Vivo |
 | **SIM-035** | **SUIUSDT** | `#25` | `6W/18L` | 26-08-11<br>14:32 | `🔵 En Curso` | **`$100.01`** (`+$0.01`) | 🔵 En Vivo |
-| **SIM-036** | **MUBUSDT** | `#24` | `5W/19L` | 26-08-11<br>14:44 | `🔴 Perdió -$0.06` | **`$99.40`** (`-$0.60`) | 🔴 Buscando |
-| **SIM-037** | **MUBUSDT** | `#24` | `5W/19L` | 26-08-11<br>14:44 | `🔴 Perdió -$0.06` | **`$99.40`** (`-$0.60`) | 🔴 Buscando |
-| **SIM-038** | **MUBUSDT** | `#24` | `5W/19L` | 26-08-11<br>14:44 | `🔴 Perdió -$0.06` | **`$99.40`** (`-$0.60`) | 🔴 Buscando |
+| **SIM-036** | **MUBUSDT** | `#24` | `5W/19L` | 26-08-11<br>14:46 | `🔴 Perdió -$0.06` | **`$99.40`** (`-$0.60`) | 🔴 Buscando |
+| **SIM-037** | **MUBUSDT** | `#24` | `5W/19L` | 26-08-11<br>14:46 | `🔴 Perdió -$0.06` | **`$99.40`** (`-$0.60`) | 🔴 Buscando |
+| **SIM-038** | **MUBUSDT** | `#24` | `5W/19L` | 26-08-11<br>14:46 | `🔴 Perdió -$0.06` | **`$99.40`** (`-$0.60`) | 🔴 Buscando |
 | **SIM-039** | **RENDERUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
 | **SIM-040** | **RENDERUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
 
@@ -154,7 +154,7 @@ date: 2026-08-11 14:44:35
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-061** | **DEXEUSDT** | `#63` | `10W/52L` | 26-08-11<br>14:44 | `🔴 Perdió -$4082.85` | **`$-3981.94`** (`-$4081.94`) | 🔴 Buscando |
+| **SIM-061** | **DEXEUSDT** | `#63` | `10W/52L` | 26-08-11<br>14:46 | `🔴 Perdió -$4082.85` | **`$-3981.94`** (`-$4081.94`) | 🔴 Buscando |
 | **SIM-062** | **DEXEUSDT** | `#60` | `11W/47L` | 26-08-11<br>09:18 | `🔵 En Curso` | **`$108.66`** (`+$8.66`) | 🔵 En Vivo |
 | **SIM-063** | **DEXEUSDT** | `#60` | `11W/47L` | 26-08-11<br>09:18 | `🔵 En Curso` | **`$108.66`** (`+$8.66`) | 🔵 En Vivo |
 | **SIM-064** | **DEXEUSDT** | `#62` | `9W/52L` | 26-08-11<br>09:18 | `🔵 En Curso` | **`$98.04`** (`-$1.96`) | 🔵 En Vivo |
