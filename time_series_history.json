@@ -1,38 +1,25 @@
 {
-  "APTUSDT": [
-    {
-      "timestamp": "2026-08-11 18:06:11",
-      "price": 0.577,
-      "score": 30,
-      "rsi": 46.12,
-      "macd": "Neutral",
-      "volume_surge": 0.26,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
   "MSTRBUSDT": [
     {
-      "timestamp": "2026-08-11 18:06:11",
-      "price": 96.36,
+      "timestamp": "2026-08-11 13:12:24",
+      "price": 96.11,
       "score": 0,
-      "rsi": 43.84,
+      "rsi": 40.31,
       "macd": "Neutral",
-      "volume_surge": 0.03,
+      "volume_surge": 0.1,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "ATMUSDT": [
+  "APTUSDT": [
     {
-      "timestamp": "2026-08-11 18:06:11",
-      "price": 1.559,
-      "score": 35,
-      "rsi": 63.23,
+      "timestamp": "2026-08-11 13:12:24",
+      "price": 0.576,
+      "score": 30,
+      "rsi": 43.36,
       "macd": "Neutral",
-      "volume_surge": 0.49,
+      "volume_surge": 0.28,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -40,10 +27,10 @@
   ],
   "NVDABUSDT": [
     {
-      "timestamp": "2026-08-11 18:08:12",
-      "price": 217.29,
+      "timestamp": "2026-08-11 13:12:24",
+      "price": 217.51,
       "score": 0,
-      "rsi": 35.54,
+      "rsi": 36.9,
       "macd": "Neutral",
       "volume_surge": 0.17,
       "wyckoff": "Sin patron",
@@ -71,7 +58,20 @@
       "score": 25,
       "rsi": 29.9,
       "macd": "Neutral",
-      "volume_surge": 0.14,
+      "volume_surge": 0.16,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GOOGLBUSDT": [
+    {
+      "timestamp": "2026-08-11 13:12:24",
+      "price": 347.17,
+      "score": 35,
+      "rsi": 22.3,
+      "macd": "Neutral",
+      "volume_surge": 6.5,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -233,7 +233,7 @@
       "fear_greed": 50
     }
   ],
-  "EULUSDT": [
+  "ZBTUSDT": [
     {
       "timestamp": "2026-08-11 18:12:11",
       "price": 0.0939,
@@ -272,4 +272,4 @@
       "fear_greed": 50
     }
   ]
-}}
+}
