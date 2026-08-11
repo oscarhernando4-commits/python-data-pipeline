@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 01:38:22
+date: 2026-08-11 01:40:22
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 01:38:22`
+> ⏱️ **Última Actualización:** `2026-08-11 01:40:22`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -30,10 +30,10 @@ date: 2026-08-11 01:38:22
 
 > [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
-> - 📈 **Capital Total Acumulado:** **`$10,526.33 USD`** (`$+526.33 USD`)  
+> - 📈 **Capital Total Acumulado:** **`$10,523.81 USD`** (`$+523.81 USD`)  
 > - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `0 Cuentas (0.0%)`  
-> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `1 Cuentas (1.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `99 Cuentas (99.0%)`  
+> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `2 Cuentas (2.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `98 Cuentas (98.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
@@ -148,8 +148,8 @@ date: 2026-08-11 01:38:22
 ## ⚡ GRUPO 4: Frecuencia Alta (Permisividad Nivel 4 - Score >= 55 Pts)
 
 > [!WARNING] 📊 **Resumen del ⚡ GRUPO 4: Frecuencia Alta (Permisividad Nivel 4 - Score >= 55 Pts):**
-> - 💵 **Balance Total del Grupo:** `$1,973.16 USD` (`-$26.84`)
-> - 🎯 **Operaciones Totales:** `1099` (`161 Ganadas / 932 Perdidas`)
+> - 💵 **Balance Total del Grupo:** `$1,970.64 USD` (`-$29.36`)
+> - 🎯 **Operaciones Totales:** `1101` (`161 Ganadas / 934 Perdidas`)
 > - 📈 **Tasa de Acierto del Grupo:** `14.6% Win Rate`
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
@@ -159,9 +159,9 @@ date: 2026-08-11 01:38:22
 | **SIM-063** | **INJUSDT** | `#54` | `8W/45L` | 26-08-11<br>00:08 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
 | **SIM-064** | **EULUSDT** | `#58` | `8W/50L` | 26-08-11<br>01:28 | `🔵 En Curso` | **`$97.47`** (`-$2.53`) | 🔵 En Vivo |
 | **SIM-065** | **ALGOUSDT** | `#55` | `8W/47L` | 26-08-11<br>01:04 | `🔵 En Curso` | **`$98.73`** (`-$1.27`) | 🔵 En Vivo |
-| **SIM-066** | **PROMUSDT** | `#57` | `8W/49L` | 26-08-11<br>01:32 | `🔵 En Curso` | **`$97.13`** (`-$2.87`) | 🔵 En Vivo |
-| **SIM-067** | **PROMUSDT** | `#57` | `8W/49L` | 26-08-11<br>01:32 | `🔵 En Curso` | **`$97.13`** (`-$2.87`) | 🔵 En Vivo |
-| **SIM-068** | **RADUSDT** | `#55` | `8W/47L` | 26-08-11<br>00:48 | `🔵 En Curso` | **`$98.90`** (`-$1.10`) | 🔵 En Vivo |
+| **SIM-066** | **PROMUSDT** | `#58` | `8W/50L` | 26-08-11<br>01:40 | `🔴 Perdió -$1.26` | **`$95.87`** (`-$4.13`) | 🔴 Buscando |
+| **SIM-067** | **PROMUSDT** | `#58` | `8W/50L` | 26-08-11<br>01:40 | `🔴 Perdió -$1.26` | **`$95.87`** (`-$4.13`) | 🔴 Buscando |
+| **SIM-068** | **RADUSDT** | `#55` | `8W/47L` | 26-08-11<br>00:48 | `🛡️ Protegida (BE)` | **`$98.90`** (`-$1.10`) | 🔵 En Vivo |
 | **SIM-069** | **RADUSDT** | `#57` | `8W/49L` | 26-08-11<br>01:14 | `🛡️ Protegida (BE)` | **`$98.31`** (`-$1.69`) | 🔵 En Vivo |
 | **SIM-070** | **RADUSDT** | `#57` | `8W/49L` | 26-08-11<br>01:14 | `🛡️ Protegida (BE)` | **`$98.31`** (`-$1.69`) | 🔵 En Vivo |
 | **SIM-071** | **INJUSDT** | `#54` | `8W/45L` | 26-08-11<br>00:08 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
@@ -173,7 +173,7 @@ date: 2026-08-11 01:38:22
 | **SIM-077** | **SPYBUSDT** | `#54` | `8W/46L` | 26-08-10<br>21:40 | `🔵 En Curso` | **`$98.76`** (`-$1.24`) | 🔵 En Vivo |
 | **SIM-078** | **SPYBUSDT** | `#54` | `8W/46L` | 26-08-10<br>21:40 | `🔵 En Curso` | **`$98.76`** (`-$1.24`) | 🔵 En Vivo |
 | **SIM-079** | **SPYBUSDT** | `#54` | `8W/46L` | 26-08-10<br>21:40 | `🔵 En Curso` | **`$98.76`** (`-$1.24`) | 🔵 En Vivo |
-| **SIM-080** | **PROMUSDT** | `#56` | `8W/48L` | 26-08-11<br>01:38 | `🔴 Perdió -$0.27` | **`$98.62`** (`-$1.38`) | 🔴 Buscando |
+| **SIM-080** | **WLFIUSDT** | `#56` | `8W/48L` | 26-08-11<br>01:40 | `🔵 En Curso` | **`$98.62`** (`-$1.38`) | 🔵 En Vivo |
 
 ---
 
