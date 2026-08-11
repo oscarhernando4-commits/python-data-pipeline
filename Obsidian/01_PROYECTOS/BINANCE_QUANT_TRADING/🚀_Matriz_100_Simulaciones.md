@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 00:40:18
+date: 2026-08-11 00:42:23
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 00:40:18`
+> ⏱️ **Última Actualización:** `2026-08-11 00:42:23`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -159,8 +159,8 @@ date: 2026-08-11 00:40:18
 | **SIM-063** | **INJUSDT** | `#54` | `8W/45L` | 26-08-11<br>00:08 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
 | **SIM-064** | **HEIUSDT** | `#56` | `8W/48L` | 26-08-11<br>00:28 | `🛡️ Protegida (BE)` | **`$98.69`** (`-$1.31`) | 🔵 En Vivo |
 | **SIM-065** | **KAITOUSDT** | `#54` | `8W/46L` | 26-08-11<br>00:36 | `🔵 En Curso` | **`$98.95`** (`-$1.05`) | 🔵 En Vivo |
-| **SIM-066** | **RADUSDT** | `#54` | `8W/46L` | 26-08-11<br>00:36 | `🔵 En Curso` | **`$98.95`** (`-$1.05`) | 🔵 En Vivo |
-| **SIM-067** | **RADUSDT** | `#54` | `8W/46L` | 26-08-11<br>00:36 | `🔵 En Curso` | **`$98.95`** (`-$1.05`) | 🔵 En Vivo |
+| **SIM-066** | **RADUSDT** | `#54` | `8W/46L` | 26-08-11<br>00:36 | `🛡️ Protegida (BE)` | **`$98.95`** (`-$1.05`) | 🔵 En Vivo |
+| **SIM-067** | **RADUSDT** | `#54` | `8W/46L` | 26-08-11<br>00:36 | `🛡️ Protegida (BE)` | **`$98.95`** (`-$1.05`) | 🔵 En Vivo |
 | **SIM-068** | **KORUBUSDT** | `#54` | `8W/46L` | 26-08-11<br>00:32 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
 | **SIM-069** | **KORUBUSDT** | `#54` | `8W/46L` | 26-08-11<br>00:32 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
 | **SIM-070** | **KORUBUSDT** | `#54` | `8W/46L` | 26-08-11<br>00:32 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
