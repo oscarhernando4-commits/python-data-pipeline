@@ -15,13 +15,10 @@ if os.path.exists(env_path):
     except Exception:
         pass
 
-import urllib.request
 import json
-import time
 import analytics
 import fundamental_sentinel
 import learning_engine
-import obsidian_sync
 import master_dashboard_generator
 import strategy_engine
 import quant_institutional
@@ -171,10 +168,6 @@ def run_infinite_trading_matrix_cycle():
     symbol_analysis_map = {}
     # Cache fundamental sentinel ONCE per cycle (prevents 100 redundant HTTP calls)
     cached_fundamental_report = fundamental_sentinel.get_crypto_fundamental_sentinel()
-    best_market_opportunity = None
-    best_bearish_opportunity = None
-    max_market_score = -1
-    min_market_score = None
 
     import concurrent.futures
 
@@ -225,7 +218,6 @@ def run_infinite_trading_matrix_cycle():
     # 🏛️ FILTROS INSTITUCIONALES: Browniano + Correlación + Arbitraje
     # ============================================================
     # Build closes map for correlation checking across symbols
-    _closes_map = {}
     _arb_opportunities = []
     for sym, data in symbol_analysis_map.items():
         tech = data.get("tech", {})
@@ -269,7 +261,6 @@ def run_infinite_trading_matrix_cycle():
     # Sort strictly by highest score first (Top Bullish Setups)
     bullish_candidates.sort(key=lambda x: x["score"], reverse=True)
     top_15_candidates = bullish_candidates[:15]
-    top_10_candidates = top_15_candidates[:10]
 
     
     import learning_engine
@@ -576,7 +567,7 @@ def run_infinite_trading_matrix_cycle():
                         tp_min_target = best_curr_price - (best_sl_dist * 2.0)
                         tp_max_target = best_curr_price - (best_sl_dist * 3.5)
                         
-                    qty = round((curr_bal * 0.2) / best_curr_price, 4)
+                    qty = round((curr_bal * 0.2) / best_curr_price, 8)
                     
                     current_hour = datetime.now().hour
                     acc["symbol"] = selected_symbol
@@ -714,7 +705,9 @@ def run_infinite_trading_matrix_cycle():
             is_high_btc_risk = is_btc_crashing and beta_res.get("is_high_correlation", False)
             is_order_flow_dump = of_res.get("is_bearish_dump", False)
             
-            if bs_score >= 58 and is_quant_approved:
+            ai_veto_active = (ai_action == 'HOLD' and ai_symbol in ['NONE', ''])
+            
+            if bs_score >= 58 and is_quant_approved and (not ai_veto_active or (bs_score >= 75 and target_vol_surge >= 1.5)):
                 if (is_btc_crashing or is_high_btc_risk) and bs_sym not in ["BTCUSDT", "PAXGUSDT", "XAUTUSDT"]:
                     print(f"🛡️ [FILTRO CORRELACIÓN BETA BTC] Oportunidad {bs_sym} ({bs_score} Pts, Rho={beta_res.get('rho')}) bloqueada. BTC débil / Alta Correlación.")
                     api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)

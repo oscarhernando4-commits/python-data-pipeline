@@ -251,9 +251,9 @@ def generate_web_dashboard():
         verdict_cards_html = '<div class="verdict-card verdict-past"><div class="verdict-body"><div class="reasoning-text">⏳ Esperando primer análisis del Súper-Cerebro...</div></div></div>'
     
     # Matrix stats
-    matrix_total = matrix_data.get("current_total_usd", 10266.65)
-    matrix_pnl = matrix_data.get("net_pnl_usd", 266.65)
-    matrix_wr = matrix_data.get("global_win_rate_pct", 18.6)
+    matrix_total = matrix_data.get("current_total_usd", 10000.0) if isinstance(matrix_data, dict) else sum(a.get("balance", 100.0) for a in matrix_accounts)
+    matrix_pnl = matrix_data.get("net_pnl_usd", 0.0) if isinstance(matrix_data, dict) else sum(a.get("pnl_net_usd", 0.0) for a in matrix_accounts)
+    matrix_wr = matrix_data.get("global_win_rate_pct", 0.0) if isinstance(matrix_data, dict) else 0.0
     pnl_color = "var(--accent-emerald)" if matrix_pnl >= 0 else "var(--accent-rose)"
     pnl_sign = "+" if matrix_pnl >= 0 else ""
     
@@ -393,7 +393,7 @@ def generate_web_dashboard():
         elif not c_score_ok:
             rejection_reason = "Score < 58 Pts"
         elif not c_ma_ok:
-            rejection_reason = "🟡 Trampa Mecha 15M (Bajo MA25)"
+            rejection_reason = "🟡 Trampa Mecha 15M (Buffer MA25 +0.15% insuficiente)"
         elif not c_quant_ok:
             rejection_reason = f"VolSurge {cand_vol:.1f}x < 1.00x"
         elif not c_rsi_ok:
@@ -411,7 +411,7 @@ def generate_web_dashboard():
             <td style="padding: 0.45rem 0.6rem;"><span class="score-badge {'score-high' if cand_score >= 60 else 'score-mid'}">{cand_score} Pts</span></td>
             <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">{cand_vol:.1f}x</td>
             <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">{cand_rsi_2m:.1f}</td>
-            <td style="padding: 0.45rem 0.6rem;">{'🟢 > MA25' if c_ma_ok else '🟡 < MA25'}</td>
+            <td style="padding: 0.45rem 0.6rem;">{'🟢 > MA25+0.15%' if c_ma_ok else '🟡 < MA25+0.15%'}</td>
             <td style="padding: 0.45rem 0.6rem; {status_style}">{'🚀 LISTO PARA COMPRAR' if c_eligible else rejection_reason}</td>
         </tr>
         """
@@ -425,7 +425,7 @@ def generate_web_dashboard():
     c1_rsi_5m = top_1.get("rsi_5m", 50.0)
     c1_price = top_1.get("price", 0.0)
     c1_ma25 = top_1.get("ma25_15m", 0.0)
-    ma_structure_ok = c1_price >= c1_ma25 if (c1_price > 0 and c1_ma25 > 0) else True
+    ma_structure_ok = (c1_price >= c1_ma25 * 1.0015) if (c1_price > 0 and c1_ma25 > 0) else True
     
     score_ok = c1_score >= 58
     ai_approved = verdict_data.get("approved", True)

@@ -5,9 +5,8 @@ Rejects stablecoins, dollar synthetics, flat assets, and unconfirmed trends.
 """
 
 import requests
-import random
-import os
 import math
+import numpy as np
 from datetime import datetime
 
 # Comprehensive Blacklist of Stablecoins, Pegged Tokens, and Synthetic Dollars
@@ -184,18 +183,17 @@ def analyze_multi_timeframe_candles(symbol):
 
     # 15m Microstructure moving averages (MA7, MA25) & Volume Surge
     ma7_15m = sum(closes_15m[-7:]) / len(closes_15m[-7:]) if len(closes_15m) >= 7 else closes_15m[-1]
-    ma25_15m = sum(closes_15m[-20:]) / len(closes_15m[-20:]) if len(closes_15m) >= 20 else closes_15m[-1]
+    ma25_15m = sum(closes_15m[-25:]) / len(closes_15m[-25:]) if len(closes_15m) >= 25 else closes_15m[-1]
     
     # Strict MA25 calculation: Slope must be ascending and price must be strictly +0.15% above MA25
-    prev_ma25_15m = sum(closes_15m[-21:-1]) / len(closes_15m[-21:-1]) if len(closes_15m) >= 21 else ma25_15m
+    prev_ma25_15m = sum(closes_15m[-26:-1]) / len(closes_15m[-26:-1]) if len(closes_15m) >= 26 else ma25_15m
     ma25_slope_ok = ma25_15m >= (prev_ma25_15m * 0.9995)
     
     price_above_15m_ma7 = closes_15m[-1] > ma7_15m
     price_above_15m_ma25 = (closes_15m[-1] >= ma25_15m * 1.0015) and ma25_slope_ok
     dist_from_15m_ma7_pct = round(((closes_15m[-1] - ma7_15m) / ma7_15m) * 100.0, 2) if ma7_15m > 0 else 0.0
     
-    import numpy as np
-    std_15m = float(np.std(closes_15m[-20:])) if len(closes_15m) >= 20 else 0.001
+    std_15m = float(np.std(closes_15m[-25:])) if len(closes_15m) >= 25 else 0.001
     bb_upper = ma25_15m + (2.0 * std_15m)
     bb_lower = ma25_15m - (2.0 * std_15m)
     bb_range = bb_upper - bb_lower
@@ -218,6 +216,8 @@ def analyze_multi_timeframe_candles(symbol):
     # 4. Detect 15m Candle Over-extension / Parabolic Spike (Prevents buying tops like ZRO, ATOM)
     is_overextended_15m = False
     overextension_reason = None
+    is_yellow_arrow_pivot = False
+    yellow_arrow_status = "⚪ NEUTRAL 15M"
     if klines_15m and len(klines_15m) >= 2:
         last_15m = klines_15m[-1]
         open_15m = float(last_15m[1])
@@ -290,10 +290,6 @@ def analyze_multi_timeframe_candles(symbol):
             "1d": "BULLISH" if tf_1d_up else "BEARISH"
         }
     }
-
-if __name__ == "__main__":
-    print("Testing BTCUSDT:", analyze_multi_timeframe_candles("BTCUSDT"))
-
 
 if __name__ == "__main__":
     print("Testing UUSDT:", analyze_multi_timeframe_candles("UUSDT"))

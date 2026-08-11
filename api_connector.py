@@ -9,7 +9,6 @@ import requests
 import tempfile
 from urllib.parse import urlencode
 from datetime import datetime
-import random
 from dotenv import load_dotenv
 load_dotenv()
 

@@ -1894,14 +1894,14 @@ date: 2026-08-01 19:25:56
 ---
 
 ### 🪙 Profile Completo de Vida: BANANAS31USDT (Nuevo Activo Incorporado)
-- 📅 **Historial Rastreado:** Desde `2025-03-27` hasta `2026-08-11` (503 Días de Historial)
+- 📅 **Historial Rastreado:** Desde `2025-03-26` hasta `2026-08-10` (503 Días de Historial)
 - 💵 **Precio Actual:** `$0.0099 USD`
-- 📈 **Máximo Histórico (ATH):** `$0.0740 USD` (`2025-07-11`) | Distancia: `-86.55%`
-- 📉 **Mínimo Histórico (ATL):** `$0.0001 USD` (`2025-10-10`)
+- 📈 **Máximo Histórico (ATH):** `$0.0740 USD` (`2025-07-10`) | Distancia: `-86.6%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0001 USD` (`2025-10-09`)
 - 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
 - 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
 - ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
-- 🚀 **Mayores Explosiones de 1 Día:** `2025-11-26 (+65.63%)`, `2025-06-23 (+54.12%)`, `2025-11-16 (+51.51%)`
-- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-07-11 (-50.82%)`, `2025-06-26 (-47.83%)`, `2025-07-13 (-45.75%)`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-11-25 (+65.63%)`, `2025-06-22 (+54.12%)`, `2025-11-15 (+51.51%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-07-10 (-50.82%)`, `2025-06-25 (-47.83%)`, `2025-07-12 (-45.75%)`
 
 ---

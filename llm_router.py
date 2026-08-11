@@ -236,6 +236,10 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     - MACD Histograma 15M: {indicators.get('macd_hist_15m', 'N/A')}
     - ATR 15M: {indicators.get('atr_15m', 'N/A')}
     - Volume Surge: {indicators.get('volume_surge', 'N/A')}
+    - Bollinger Bands %%B 15M: {indicators.get('pct_b_15m', 'N/A')} (0.0=Banda Inferior/Sobreventa, 1.0=Banda Superior/Sobrecompra)
+    - Candidato a Rebote por Sobreventa: {indicators.get('is_oversold_bounce_candidate', False)}
+    - Agotamiento Alcista (Sobrecompra): {indicators.get('is_overbought_exhaustion', False)}
+    ⚠️ REGLA DE REVERSIÓN A LA MEDIA: Si %B <= 0.20 y RSI < 35, es una oportunidad A+ de REBOTE - APRUEBA con alta confianza. Si %B >= 0.90, el activo está agotado - RECHAZA para proteger capital.
     - Tendencia Macro 4H: {tech_data.get('macro_trend_4h', 'N/A')}
     - Rastreador de Ballenas: {tech_data.get('whale_flow', 'Dominancia Compradora 68% vs 32% Vendedora')}
     - Sentimiento del Mercado (Fear & Greed): {fear_greed.get('score')} ({fear_greed.get('sentiment')})
@@ -308,7 +312,7 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
                     mark_key_in_cooldown(key)
                     continue
                 else:
-                    break
+                    continue
             except Exception as e:
                 break
                 
@@ -467,7 +471,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
                     mark_key_in_cooldown(key)
                     continue
                 else:
-                    break
+                    continue
             except Exception:
                 break
     

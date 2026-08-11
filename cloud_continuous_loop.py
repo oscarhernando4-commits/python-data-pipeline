@@ -33,7 +33,7 @@ def run_git_push_sync(cycle_num: int):
             subprocess.run(["git", "commit", "-m", msg], check=False)
             
         # Rebase pull cleanly on committed working tree
-        subprocess.run(["git", "pull", "--rebase", "-X", "theirs", "origin", "main"], check=False)
+        subprocess.run(["git", "pull", "--rebase", "-X", "ours", "origin", "main"], check=False)
         
         # Push with retry
         for attempt in range(3):
@@ -43,7 +43,7 @@ def run_git_push_sync(cycle_num: int):
                 break
             else:
                 print(f"⚠️ [Cycle {cycle_num}] Push retry {attempt+1}/3: {res.stderr.strip()[:100]}")
-                subprocess.run(["git", "pull", "--rebase", "-X", "theirs", "origin", "main"], check=False)
+                subprocess.run(["git", "pull", "--rebase", "-X", "ours", "origin", "main"], check=False)
                 time.sleep(2)
     except Exception as e:
         print(f"⚠️ [Cycle {cycle_num}] Git sync warning: {e}")

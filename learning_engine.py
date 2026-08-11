@@ -38,6 +38,8 @@ def load_memory():
         return json.load(f)
 
 def save_memory(data):
+    if len(data.get("history", [])) > 500:
+        data["history"] = data["history"][-500:]
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
     sync_learning_note(data)
@@ -378,7 +380,7 @@ def get_matrix_champions_summary():
         with open(matrix_file, "r", encoding="utf-8") as f:
             data = json.load(f)
             
-        accounts = data.get("accounts", [])
+        accounts = data.get("accounts", []) if isinstance(data, dict) else (data if isinstance(data, list) else [])
         # Filter top accounts by PnL
         sorted_accs = sorted(accounts, key=lambda a: a.get("pnl_usd", 0.0), reverse=True)
         top_5 = sorted_accs[:5]
