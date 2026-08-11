@@ -4,18 +4,18 @@
   "usdt_free": 0.1354,
   "bnb_free": 0.00393967,
   "bnb_usd": 2.41,
-  "status": "🔵 En Vivo LONG (NVDABUSDT @ $221.2000)",
+  "status": "🔵 En Vivo LONG (NVDABUSDT @ $221.3200)",
   "position": {
     "symbol": "NVDABUSDT",
     "quantity": 0.079,
     "entry_price": 221.15,
     "highest_price": 221.61,
-    "cost_usd": 17.47,
+    "cost_usd": 17.48,
     "side": "LONG",
     "break_even": false,
     "trailing_active": false,
     "adaptive_sl_pct": 0.2,
-    "holding_cycles": 26,
+    "holding_cycles": 27,
     "volatility_regime": "⏳ Escalera 45m: SL Apretado a -0.20%"
   },
   "verdict": {
@@ -87,7 +87,20 @@
         "rsi_15m": 48.03,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.41,
+        "vol_surge": 0.64,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "MUBARAKUSDT",
+        "score": 65,
+        "price": 0.01846,
+        "rsi_2m": 53.82,
+        "rsi_5m": 53.82,
+        "rsi_15m": 53.82,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.12,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
