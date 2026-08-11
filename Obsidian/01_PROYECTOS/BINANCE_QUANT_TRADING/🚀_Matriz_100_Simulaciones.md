@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 01:40:22
+date: 2026-08-11 01:42:17
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 01:40:22`
+> ⏱️ **Última Actualización:** `2026-08-11 01:42:17`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -32,8 +32,8 @@ date: 2026-08-11 01:40:22
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
 > - 📈 **Capital Total Acumulado:** **`$10,523.81 USD`** (`$+523.81 USD`)  
 > - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `0 Cuentas (0.0%)`  
-> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `2 Cuentas (2.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `98 Cuentas (98.0%)`  
+> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `0 Cuentas (0.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `100 Cuentas (100.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
@@ -159,8 +159,8 @@ date: 2026-08-11 01:40:22
 | **SIM-063** | **INJUSDT** | `#54` | `8W/45L` | 26-08-11<br>00:08 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
 | **SIM-064** | **EULUSDT** | `#58` | `8W/50L` | 26-08-11<br>01:28 | `🔵 En Curso` | **`$97.47`** (`-$2.53`) | 🔵 En Vivo |
 | **SIM-065** | **ALGOUSDT** | `#55` | `8W/47L` | 26-08-11<br>01:04 | `🔵 En Curso` | **`$98.73`** (`-$1.27`) | 🔵 En Vivo |
-| **SIM-066** | **PROMUSDT** | `#58` | `8W/50L` | 26-08-11<br>01:40 | `🔴 Perdió -$1.26` | **`$95.87`** (`-$4.13`) | 🔴 Buscando |
-| **SIM-067** | **PROMUSDT** | `#58` | `8W/50L` | 26-08-11<br>01:40 | `🔴 Perdió -$1.26` | **`$95.87`** (`-$4.13`) | 🔴 Buscando |
+| **SIM-066** | **ALLOUSDT** | `#58` | `8W/50L` | 26-08-11<br>01:42 | `🔵 En Curso` | **`$95.87`** (`-$4.13`) | 🔵 En Vivo |
+| **SIM-067** | **ALLOUSDT** | `#58` | `8W/50L` | 26-08-11<br>01:42 | `🔵 En Curso` | **`$95.87`** (`-$4.13`) | 🔵 En Vivo |
 | **SIM-068** | **RADUSDT** | `#55` | `8W/47L` | 26-08-11<br>00:48 | `🛡️ Protegida (BE)` | **`$98.90`** (`-$1.10`) | 🔵 En Vivo |
 | **SIM-069** | **RADUSDT** | `#57` | `8W/49L` | 26-08-11<br>01:14 | `🛡️ Protegida (BE)` | **`$98.31`** (`-$1.69`) | 🔵 En Vivo |
 | **SIM-070** | **RADUSDT** | `#57` | `8W/49L` | 26-08-11<br>01:14 | `🛡️ Protegida (BE)` | **`$98.31`** (`-$1.69`) | 🔵 En Vivo |
