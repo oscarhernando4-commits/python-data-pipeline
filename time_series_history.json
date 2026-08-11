@@ -1,12 +1,25 @@
 {
-  "STXUSDT": [
+  "VICUSDT": [
     {
-      "timestamp": "2026-08-11 11:52:07",
-      "price": 0.1305,
-      "score": 30,
-      "rsi": 46.33,
+      "timestamp": "2026-08-11 11:54:09",
+      "price": 0.0289,
+      "score": 45,
+      "rsi": 47.25,
       "macd": "Neutral",
-      "volume_surge": 0.23,
+      "volume_surge": 0.53,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ]
+}  "GNOUSDT": [
+    {
+      "timestamp": "2026-08-11 11:54:09",
+      "price": 104.95,
+      "score": 35,
+      "rsi": 69.73,
+      "macd": "Neutral",
+      "volume_surge": 0.2,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,25 +27,25 @@
   ],
   "CVXUSDT": [
     {
-      "timestamp": "2026-08-11 11:52:07",
-      "price": 1.688,
-      "score": 40,
-      "rsi": 48.59,
+      "timestamp": "2026-08-11 11:54:09",
+      "price": 1.696,
+      "score": 60,
+      "rsi": 52.67,
       "macd": "Neutral",
-      "volume_surge": 8.09,
+      "volume_surge": 9.33,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "LUNCUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-11 11:52:07",
-      "price": 5e-05,
-      "score": 25,
-      "rsi": 43.73,
+      "timestamp": "2026-08-11 11:54:09",
+      "price": 0.1305,
+      "score": 30,
+      "rsi": 46.33,
       "macd": "Neutral",
-      "volume_surge": 3.47,
+      "volume_surge": 0.23,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
