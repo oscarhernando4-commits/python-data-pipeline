@@ -192,6 +192,8 @@ def analyze_multi_timeframe_candles(symbol):
     
     price_above_15m_ma7 = closes_15m[-1] > ma7_15m
     price_above_15m_ma25 = (closes_15m[-1] >= ma25_15m * 1.0015) and ma25_slope_ok
+    dist_from_15m_ma7_pct = round(((closes_15m[-1] - ma7_15m) / ma7_15m) * 100.0, 2) if ma7_15m > 0 else 0.0
+    
     import numpy as np
     std_15m = float(np.std(closes_15m[-20:])) if len(closes_15m) >= 20 else 0.001
     bb_upper = ma25_15m + (2.0 * std_15m)
@@ -245,9 +247,8 @@ def analyze_multi_timeframe_candles(symbol):
         elif not price_above_15m_ma7 or not price_above_15m_ma25:
             is_overextended_15m = True
             overextension_reason = f"Precio de 15m por debajo de medias móviles (Precio: {closes_15m[-1]} < MA7: {ma7_15m:.4f} / MA25: {ma25_15m:.4f})"
-    else:
-        is_yellow_arrow_pivot = False
-        yellow_arrow_status = "⚪ NEUTRAL"
+    avg_vol_15m = sum(vols_15m[-5:]) / len(vols_15m[-5:]) if len(vols_15m) >= 5 else 1.0
+    vol_surge_15m = round(vols_15m[-1] / avg_vol_15m, 2) if avg_vol_15m > 0 else 1.0
 
     pattern_15m_summary = (
         f"RSI Triggers: 2m={rsi_2m} | 5m={rsi_5m} || Contexto Medio: 15m={rsi_15m} || Contexto Macro: 1h={rsi_1h} | 4h={rsi_4h} | "
