@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-11 18:48:22",
+  "timestamp": "2026-08-11 18:50:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de apatía sistémica sin momentum técnico ni soporte institucional en el libro de órdenes. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar trampas de valor.",
+  "reasoning": "El mercado se encuentra en una fase de distribución sin convicción compradora institucional. Ningún activo cumple con el umbral de seguridad A+ requerido por el comité, por lo que la estrategia óptima es la preservación total del capital hasta que el volumen y la estructura técnica mejoren.",
   "top_candidates": [
     {
       "symbol": "LTCUSDT",
@@ -59,12 +59,12 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "HBARUSDT",
-      "score": 55,
-      "price": 0.06607,
-      "rsi_2m": 31.86,
-      "rsi_5m": 31.86,
-      "rsi_15m": 31.86,
+      "symbol": "0GUSDT",
+      "score": 60,
+      "price": 0.161,
+      "rsi_2m": 51.55,
+      "rsi_5m": 51.55,
+      "rsi_15m": 51.55,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.01,
