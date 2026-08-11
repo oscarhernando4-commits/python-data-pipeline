@@ -2061,3 +2061,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-32.84%)`, `2025-09-21 (-18.43%)`, `2026-02-04 (-17.84%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: ATMUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-16` hasta `2026-08-11` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$1.5700 USD`
+- 📈 **Máximo Histórico (ATH):** `$4.6800 USD` (`2024-04-10`) | Distancia: `-66.45%`
+- 📉 **Mínimo Histórico (ATL):** `$0.7470 USD` (`2026-02-06`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-02-10 (+52.99%)`, `2025-07-27 (+31.82%)`, `2026-06-24 (+28.86%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-18.28%)`, `2026-02-11 (-17.89%)`, `2026-07-22 (-16.81%)`
+
+---
