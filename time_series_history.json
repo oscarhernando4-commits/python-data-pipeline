@@ -69,7 +69,7 @@
       "timestamp": "2026-08-11 15:22:24",
       "price": 0.0101,
       "score": 45,
-      "rsi": 38.55,
+      "rsi": 37.42,
       "macd": "Neutral",
       "volume_surge": 0.01,
       "wyckoff": "Sin patron",
@@ -131,12 +131,25 @@
   ],
   "OPENUSDT": [
     {
-      "timestamp": "2026-08-11 20:22:11",
-      "price": 0.2114,
+      "timestamp": "2026-08-11 20:24:11",
+      "price": 0.2116,
       "score": 35,
-      "rsi": 65.09,
+      "rsi": 65.48,
       "macd": "Neutral",
-      "volume_surge": 0.18,
+      "volume_surge": 0.24,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GOOGLBUSDT": [
+    {
+      "timestamp": "2026-08-11 20:24:11",
+      "price": 345.27,
+      "score": 70,
+      "rsi": 27.72,
+      "macd": "Neutral",
+      "volume_surge": 0.4,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
