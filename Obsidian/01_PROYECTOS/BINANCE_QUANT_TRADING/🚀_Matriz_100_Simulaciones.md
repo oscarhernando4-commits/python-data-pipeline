@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 06:56:19
+date: 2026-08-11 06:58:21
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 06:56:19`
+> ⏱️ **Última Actualización:** `2026-08-11 06:58:21`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -159,8 +159,8 @@ date: 2026-08-11 06:56:19
 | **SIM-063** | **PEPEUSDT** | `#59` | `11W/47L` | 26-08-11<br>05:16 | `🔵 En Curso` | **`$108.73`** (`+$8.73`) | 🔵 En Vivo |
 | **SIM-064** | **PEPEUSDT** | `#61` | `9W/52L` | 26-08-11<br>05:16 | `🔵 En Curso` | **`$98.10`** (`-$1.90`) | 🔵 En Vivo |
 | **SIM-065** | **ALGOUSDT** | `#55` | `8W/47L` | 26-08-11<br>01:04 | `🛡️ Protegida (BE)` | **`$98.73`** (`-$1.27`) | 🔵 En Vivo |
-| **SIM-066** | **SOXLBUSDT** | `#60` | `8W/52L` | 26-08-11<br>06:26 | `🔵 En Curso` | **`$95.59`** (`-$4.41`) | 🔵 En Vivo |
-| **SIM-067** | **SOXLBUSDT** | `#60` | `8W/52L` | 26-08-11<br>06:26 | `🔵 En Curso` | **`$95.59`** (`-$4.41`) | 🔵 En Vivo |
+| **SIM-066** | **SOXLBUSDT** | `#60` | `8W/52L` | 26-08-11<br>06:26 | `🛡️ Protegida (BE)` | **`$95.59`** (`-$4.41`) | 🔵 En Vivo |
+| **SIM-067** | **SOXLBUSDT** | `#60` | `8W/52L` | 26-08-11<br>06:26 | `🛡️ Protegida (BE)` | **`$95.59`** (`-$4.41`) | 🔵 En Vivo |
 | **SIM-068** | **ARBUSDT** | `#58` | `8W/50L` | 26-08-11<br>06:26 | `🔵 En Curso` | **`$97.73`** (`-$2.27`) | 🔵 En Vivo |
 | **SIM-069** | **FILUSDT** | `#60` | `8W/52L` | 26-08-11<br>05:20 | `🔵 En Curso` | **`$97.59`** (`-$2.41`) | 🔵 En Vivo |
 | **SIM-070** | **FILUSDT** | `#59` | `8W/51L` | 26-08-11<br>05:20 | `🔵 En Curso` | **`$98.04`** (`-$1.96`) | 🔵 En Vivo |
