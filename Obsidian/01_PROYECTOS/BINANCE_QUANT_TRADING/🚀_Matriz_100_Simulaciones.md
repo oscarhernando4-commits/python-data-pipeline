@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 02:06:18
+date: 2026-08-11 02:08:21
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 02:06:18`
+> ⏱️ **Última Actualización:** `2026-08-11 02:08:21`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -32,8 +32,8 @@ date: 2026-08-11 02:06:18
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
 > - 📈 **Capital Total Acumulado:** **`$10,523.75 USD`** (`$+523.75 USD`)  
 > - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `0 Cuentas (0.0%)`  
-> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `1 Cuentas (1.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `99 Cuentas (99.0%)`  
+> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `0 Cuentas (0.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `100 Cuentas (100.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
@@ -157,7 +157,7 @@ date: 2026-08-11 02:06:18
 | **SIM-061** | **ALGOUSDT** | `#56` | `9W/46L` | 26-08-11<br>01:04 | `🔵 En Curso` | **`$99.30`** (`-$0.70`) | 🔵 En Vivo |
 | **SIM-062** | **INJUSDT** | `#54` | `8W/45L` | 26-08-11<br>00:08 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
 | **SIM-063** | **INJUSDT** | `#54` | `8W/45L` | 26-08-11<br>00:08 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
-| **SIM-064** | **EULUSDT** | `#59` | `8W/51L` | 26-08-11<br>02:06 | `🔴 Perdió -$0.06` | **`$97.41`** (`-$2.59`) | 🔴 Buscando |
+| **SIM-064** | **BICOUSDT** | `#59` | `8W/51L` | 26-08-11<br>02:08 | `🔵 En Curso` | **`$97.41`** (`-$2.59`) | 🔵 En Vivo |
 | **SIM-065** | **ALGOUSDT** | `#55` | `8W/47L` | 26-08-11<br>01:04 | `🔵 En Curso` | **`$98.73`** (`-$1.27`) | 🔵 En Vivo |
 | **SIM-066** | **ALLOUSDT** | `#58` | `8W/50L` | 26-08-11<br>01:42 | `🔵 En Curso` | **`$95.87`** (`-$4.13`) | 🔵 En Vivo |
 | **SIM-067** | **ALLOUSDT** | `#58` | `8W/50L` | 26-08-11<br>01:42 | `🔵 En Curso` | **`$95.87`** (`-$4.13`) | 🔵 En Vivo |
