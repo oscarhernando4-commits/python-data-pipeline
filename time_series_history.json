@@ -1,12 +1,38 @@
 {
-  "NIGHTUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-11 02:44:11",
-      "price": 0.01786,
-      "score": 30,
-      "rsi": 42.51,
+      "timestamp": "2026-08-11 02:46:11",
+      "price": 0.1312,
+      "score": 50,
+      "rsi": 50.38,
       "macd": "Neutral",
-      "volume_surge": 0.95,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-11 02:46:11",
+      "price": 1.36,
+      "score": 50,
+      "rsi": 51.83,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "VICUSDT": [
+    {
+      "timestamp": "2026-08-11 02:46:11",
+      "price": 0.029,
+      "score": 15,
+      "rsi": 44.26,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
