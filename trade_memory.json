@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2629,
+    "total_trades": 2631,
     "wins": 482,
-    "losses": 2147,
-    "win_rate_pct": 18.33,
-    "total_pnl_usd": 107866.69615545477
+    "losses": 2149,
+    "win_rate_pct": 18.32,
+    "total_pnl_usd": 107865.47615545477
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZROUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AAVEUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on XRPUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on RVNUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SNXXBUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MOVRUSDT)",
-      "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LDOUSDT)"
+      "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LDOUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GUNUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HEIUSDT)",
@@ -53,40 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-10 00:28:23",
-      "account_id": "SIM-076",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "PEOPLEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.00898,
-      "exit_price": 0.00898,
-      "pnl_usd": -1.12,
-      "result": "LOSS",
-      "notes": "Hit SL on PEOPLEUSDT (-$1.12). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 44.09,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-10 00:28:23",
-      "account_id": "SIM-077",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "PEOPLEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.00898,
-      "exit_price": 0.00898,
-      "pnl_usd": -1.12,
-      "result": "LOSS",
-      "notes": "Hit SL on PEOPLEUSDT (-$1.12). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 44.09,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-10 00:28:23",
       "account_id": "SIM-078",
@@ -8218,6 +8184,40 @@
       "context": {
         "score": 0,
         "rsi_15m": 33.94,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 15:26:22",
+      "account_id": "SIM-074",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GUNUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00329,
+      "exit_price": 0.00339,
+      "pnl_usd": -0.61,
+      "result": "LOSS",
+      "notes": "Hit SL on GUNUSDT (-$0.61). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 46.29,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 15:26:23",
+      "account_id": "SIM-075",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GUNUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00329,
+      "exit_price": 0.00339,
+      "pnl_usd": -0.61,
+      "result": "LOSS",
+      "notes": "Hit SL on GUNUSDT (-$0.61). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 46.29,
         "macro_trend_4h": "NEUTRAL"
       }
     }
