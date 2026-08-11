@@ -801,11 +801,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         highest_price = max(state["position"].get("highest_price", entry), active_current_price)
         highest_pnl_pct = ((highest_price - entry) / entry) * 100.0 if entry > 0 else 0.0
         
-        # Activate Break-Even at +1.0%
+        # Activate Break-Even at +1.0% (floor at +0.40% to cover Binance roundtrip fees)
         break_even_active = state["position"].get("break_even", False)
         if pnl_pct >= 1.0 and not break_even_active:
             break_even_active = True
-            print(f"🛡️ ESCUDO REAL ACTIVADO: El precio subió +{pnl_pct:.2f}%. Stop-loss asegurado en Break-Even (+0.2%).")
+            print(f"🛡️ ESCUDO REAL ACTIVADO: El precio subió +{pnl_pct:.2f}%. Stop-loss asegurado en Break-Even (+0.4%).")
             
         # Activate Dynamic Trailing Stop when PnL hits +2.0% (Rides mega-pumps up to +10%, +20%)
         trailing_active = state["position"].get("trailing_active", False)
@@ -819,22 +819,22 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         import orderbook_analyzer
         
         atr_info = atr_risk_calculator.calculate_adaptive_atr_stop_loss(entry, atr_15m=entry*0.008)
-        adaptive_sl_pct = min(1.0, atr_info.get("sl_pct", 1.0))
+        adaptive_sl_pct = min(1.8, atr_info.get("sl_pct", 1.0))
         trailing_offset = atr_risk_calculator.get_adaptive_trailing_offset(active_symbol, atr_info.get("atr_pct", 0.8))
 
-        # Progressive 1H-Synchronized Time-Decay Escalation Ladder:
-        # 1. 0 to 20m (cycles 1-9): SL capped at -1.0% (allows 1H candle lower wick formation)
-        # 2. 20m to 45m (cycles 10-22): SL tightens to -0.60% (protects during 1H candle buildup)
-        # 3. 45m to 75m (cycles 23-37): SL tightens to -0.20% (Break-Even style float protection)
-        # 4. > 75m (cycles >= 38 / 1h 15m): Market exit for capital release towards faster opportunities
+        # Progressive Time-Decay Escalation Ladder (RELAXED to survive normal crypto noise):
+        # 1. 0 to 20m (cycles 1-9): SL at adaptive ATR level (max -1.8%)
+        # 2. 20m to 45m (cycles 10-22): SL tightens to -1.2% (moderate protection)
+        # 3. 45m to 75m (cycles 23-37): SL tightens to -0.60% (tighter protection)
+        # 4. > 75m (cycles >= 38 / 1h 15m): Market exit for capital release
         time_regime_msg = ""
         if not break_even_active and not trailing_active:
-            if holding_cycles >= 23:    # 45 mins (cycle 23 * 2m = 46m)
-                adaptive_sl_pct = 0.2
-                time_regime_msg = "⏳ Escalera 45m: SL Apretado a -0.20%"
-            elif holding_cycles >= 10:   # 20 mins (cycle 10 * 2m = 20m)
-                adaptive_sl_pct = 0.6
-                time_regime_msg = "⏳ Escalera 20m: SL Apretado a -0.60%"
+            if holding_cycles >= 23:    # 45 mins
+                adaptive_sl_pct = min(adaptive_sl_pct, 0.6)
+                time_regime_msg = "⏳ Escalera 45m: SL Apretado a -0.60%"
+            elif holding_cycles >= 10:   # 20 mins
+                adaptive_sl_pct = min(adaptive_sl_pct, 1.2)
+                time_regime_msg = "⏳ Escalera 20m: SL Apretado a -1.20%"
 
         # ESCUDO 1: BTC Flash Crash Circuit Breaker
         btc_price_now = get_symbol_price("BTCUSDT", is_futures=False)
@@ -860,7 +860,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             trailing_active = True
             trailing_floor_pct = max(1.5, highest_pnl_pct - trailing_offset)
         elif break_even_active:
-            trailing_floor_pct = 0.2
+            trailing_floor_pct = 0.4  # +0.40% to cover 0.20% roundtrip Binance fees
         else:
             trailing_floor_pct = -abs(adaptive_sl_pct)
 

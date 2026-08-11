@@ -4,11 +4,11 @@ Computes dynamic, volatility-adjusted Stop Loss levels based on 15m Average True
 Prevents premature stop-outs on high-volatility alts while maintaining tight precision on low-volatility assets.
 """
 
-def calculate_adaptive_atr_stop_loss(current_price, atr_15m, min_sl_pct=0.5, max_sl_pct=1.0, multiplier=1.2):
+def calculate_adaptive_atr_stop_loss(current_price, atr_15m, min_sl_pct=0.5, max_sl_pct=1.8, multiplier=1.5):
     """
     Calculates adaptive Stop Loss percentage based on asset ATR volatility.
     - atr_pct: (atr_15m / current_price) * 100.0
-    - dynamic_sl_pct: strictly clamped between min_sl_pct (0.5%) and max_sl_pct (1.0% HARD CEILING)
+    - dynamic_sl_pct: strictly clamped between min_sl_pct (0.5%) and max_sl_pct (1.8% HARD CEILING)
     Returns dict with sl_pct, sl_price, tp1_price, tp2_price, and volatility_regime.
     """
     if current_price <= 0:
@@ -24,17 +24,19 @@ def calculate_adaptive_atr_stop_loss(current_price, atr_15m, min_sl_pct=0.5, max
     # Calculate raw adaptive SL
     raw_sl_pct = atr_pct * multiplier
     
-    # Clamp between min_sl_pct (0.5%) and max_sl_pct (1.0% HARD CEILING)
+    # Clamp between min_sl_pct (0.5%) and max_sl_pct (1.8% HARD CEILING)
     clamped_sl_pct = max(min_sl_pct, min(max_sl_pct, raw_sl_pct))
     clamped_sl_pct = round(clamped_sl_pct, 2)
     
     sl_price = current_price * (1.0 - (clamped_sl_pct / 100.0))
     tp1_price = current_price * (1.0 + ((clamped_sl_pct * 2.0) / 100.0))  # 1:2 R:R Ratio
     
-    if clamped_sl_pct <= 0.7:
-        vol_regime = "🟢 Volatilidad Ultra-Baja / Ajuste Estricto (0.5% - 0.7%)"
+    if clamped_sl_pct <= 0.8:
+        vol_regime = "🟢 Volatilidad Baja / Ajuste Moderado (0.5% - 0.8%)"
+    elif clamped_sl_pct <= 1.2:
+        vol_regime = "🟡 Volatilidad Media / Rango Normal (0.8% - 1.2%)"
     else:
-        vol_regime = "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
+        vol_regime = "🛡️ Tope Máximo de Riesgo Blindado (-1.8% Máx)"
         
     return {
         "sl_pct": clamped_sl_pct,
@@ -46,18 +48,19 @@ def calculate_adaptive_atr_stop_loss(current_price, atr_15m, min_sl_pct=0.5, max
 
 def get_adaptive_trailing_offset(symbol, atr_pct=0.8):
     """
-    Computes optimal trailing stop distance (0.15% to 0.25%) based on asset liquidity & volatility.
-    - Majors (BTC, ETH, SOL, BNB): 0.15% (tightest, ultra-high liquidity)
-    - Low/Mid Volatility (atr_pct <= 1.2%): 0.20%
-    - High Volatility (atr_pct > 1.2%): 0.25% (prevents spread noise stop-outs)
+    Computes optimal trailing stop distance (0.50% to 0.80%) based on asset liquidity & volatility.
+    Widened from 0.15-0.25% to prevent premature stop-outs from normal crypto micro-pullbacks.
+    - Majors (BTC, ETH, SOL, BNB): 0.50% (high liquidity, tighter)
+    - Low/Mid Volatility (atr_pct <= 1.2%): 0.60%
+    - High Volatility (atr_pct > 1.2%): 0.80% (prevents spread noise stop-outs)
     """
     sym_upper = str(symbol).upper()
     if sym_upper in ("BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT"):
-        return 0.15
+        return 0.50
     elif atr_pct > 1.2:
-        return 0.25
+        return 0.80
     else:
-        return 0.20
+        return 0.60
 
 if __name__ == "__main__":
     print("BTC Adaptativo:", calculate_adaptive_atr_stop_loss(63150.0, 320.0))
