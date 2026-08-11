@@ -1,12 +1,51 @@
 {
-  "APTUSDT": [
+  "CFXUSDT": [
     {
-      "timestamp": "2026-08-11 11:20:23",
-      "price": 0.576,
+      "timestamp": "2026-08-11 11:22:22",
+      "price": 0.04178,
       "score": 0,
-      "rsi": 40.23,
+      "rsi": 34.34,
       "macd": "Neutral",
-      "volume_surge": 0.07,
+      "volume_surge": 0.31,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ZBTUSDT": [
+    {
+      "timestamp": "2026-08-11 11:22:22",
+      "price": 0.0949,
+      "score": 20,
+      "rsi": 29.87,
+      "macd": "Neutral",
+      "volume_surge": 1.55,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ESPUSDT": [
+    {
+      "timestamp": "2026-08-11 11:22:22",
+      "price": 0.06998,
+      "score": 0,
+      "rsi": 43.74,
+      "macd": "Neutral",
+      "volume_surge": 0.31,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SAGAUSDT": [
+    {
+      "timestamp": "2026-08-11 11:22:22",
+      "price": 0.01432,
+      "score": 60,
+      "rsi": 51.28,
+      "macd": "Neutral",
+      "volume_surge": 3.51,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,25 +53,12 @@
   ],
   "AAOIBUSDT": [
     {
-      "timestamp": "2026-08-11 11:20:23",
-      "price": 132.3,
+      "timestamp": "2026-08-11 11:22:22",
+      "price": 132.48,
       "score": 45,
-      "rsi": 52.23,
+      "rsi": 52.8,
       "macd": "Neutral",
       "volume_surge": 0.01,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "POLUSDT": [
-    {
-      "timestamp": "2026-08-11 11:20:24",
-      "price": 0.07597,
-      "score": 15,
-      "rsi": 49.39,
-      "macd": "Neutral",
-      "volume_surge": 0.6,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
