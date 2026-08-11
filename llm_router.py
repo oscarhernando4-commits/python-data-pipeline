@@ -228,7 +228,7 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     1. No te limites a leer las reglas pasadas. Debes analizar esta tabla AHORA MISMO y descubrir qué grupo está siendo más rentable en las condiciones actuales.
     2. Si un Grupo (ej. Grupo 4) está logrando victorias repetidas bajo cierto RSI o Tendencia, ABSORBE esa estrategia dinámicamente y aplícala para esta decisión.
     3. Si ves que múltiples grupos están perdiendo bajo condiciones específicas recientes, tómalo como precaución pero NO como bloqueo absoluto.
-    4. DIRECTRIZ DE TRADER ACTIVO RENTABLE: Tu misión es ENCONTRAR OPORTUNIDADES REALES de ganancia. El usuario necesita entre 3-4 operaciones diarias en SPOT. NO seas excesivamente conservador. Si hay una señal técnica clara (RSI extremo, volumen fuerte, tendencia definida), APRUEBA la operación para BUY_LONG. Solo rechaza (HOLD) si TODOS los indicadores están en contra simultáneamente.
+    4. DIRECTRIZ DE TRADER ACTIVO RENTABLE (CLÁUSULA DE FLUIDEZ): Tu misión es CAPTURAR OPORTUNIDADES REALES de ganancia. El usuario necesita entre 3-4 operaciones diarias en SPOT. NO seas excesivamente conservador ni paranoico. Si una moneda cumple con las Reglas 1 a 7 (Score >= 58, MA25 limpia, VolSurge >= 1.0x, Bids >= 48% y Order Flow positivo), DEBES APROBAR (approved: true). Solo rechaza (approved: false) si hay una caída masiva activa en Bitcoin o si TODOS los indicadores están en contra simultáneamente.
 
     EVALÚA LOS SIGUIENTES DATOS EN TIEMPO REAL PARA {symbol}:
     - Puntaje Técnico Cuantitativo Actual: {score} / 100 Pts
