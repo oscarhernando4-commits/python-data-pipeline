@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 13:34:19
+date: 2026-08-11 13:36:24
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 13:34:19`
+> ⏱️ **Última Actualización:** `2026-08-11 13:36:24`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -102,9 +102,9 @@ date: 2026-08-11 13:34:19
 | **SIM-030** | **AAVEUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
 | **SIM-031** | **AAVEUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
 | **SIM-032** | **AAVEUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
-| **SIM-033** | **SOXLBUSDT** | `#22` | `5W/17L` | 26-08-11<br>13:34 | `🔴 Perdió -$0.21` | **`$99.69`** (`-$0.31`) | 🔴 Buscando |
-| **SIM-034** | **SOXLBUSDT** | `#22` | `5W/17L` | 26-08-11<br>13:34 | `🔴 Perdió -$0.21` | **`$99.69`** (`-$0.31`) | 🔴 Buscando |
-| **SIM-035** | **SOXLBUSDT** | `#22` | `5W/17L` | 26-08-11<br>13:34 | `🔴 Perdió -$0.21` | **`$99.69`** (`-$0.31`) | 🔴 Buscando |
+| **SIM-033** | **SOXLBUSDT** | `#22` | `5W/17L` | 26-08-11<br>13:36 | `🔴 Perdió -$0.21` | **`$99.69`** (`-$0.31`) | 🔴 Buscando |
+| **SIM-034** | **SOXLBUSDT** | `#22` | `5W/17L` | 26-08-11<br>13:36 | `🔴 Perdió -$0.21` | **`$99.69`** (`-$0.31`) | 🔴 Buscando |
+| **SIM-035** | **SOXLBUSDT** | `#22` | `5W/17L` | 26-08-11<br>13:36 | `🔴 Perdió -$0.21` | **`$99.69`** (`-$0.31`) | 🔴 Buscando |
 | **SIM-036** | **MORPHOUSDT** | `#22` | `5W/17L` | 26-08-11<br>12:06 | `🔵 En Curso` | **`$99.67`** (`-$0.33`) | 🔵 En Vivo |
 | **SIM-037** | **MORPHOUSDT** | `#22` | `5W/17L` | 26-08-11<br>12:06 | `🔵 En Curso` | **`$99.67`** (`-$0.33`) | 🔵 En Vivo |
 | **SIM-038** | **MORPHOUSDT** | `#22` | `5W/17L` | 26-08-11<br>12:06 | `🔵 En Curso` | **`$99.67`** (`-$0.33`) | 🔵 En Vivo |
