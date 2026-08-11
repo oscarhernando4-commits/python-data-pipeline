@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 04:16:22
+date: 2026-08-11 04:18:21
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 04:16:22`
+> ⏱️ **Última Actualización:** `2026-08-11 04:18:21`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -163,7 +163,7 @@ date: 2026-08-11 04:16:22
 | **SIM-067** | **ALLOUSDT** | `#58` | `8W/50L` | 26-08-11<br>01:42 | `🛡️ Protegida (BE)` | **`$95.87`** (`-$4.13`) | 🔵 En Vivo |
 | **SIM-068** | **CRVUSDT** | `#56` | `8W/48L` | 26-08-11<br>04:08 | `🔵 En Curso` | **`$98.41`** (`-$1.59`) | 🔵 En Vivo |
 | **SIM-069** | **CRVUSDT** | `#58` | `8W/50L` | 26-08-11<br>04:08 | `🔵 En Curso` | **`$98.25`** (`-$1.75`) | 🔵 En Vivo |
-| **SIM-070** | **RADUSDT** | `#58` | `8W/50L` | 26-08-11<br>04:16 | `🔴 Perdió -$0.06` | **`$98.25`** (`-$1.75`) | 🔴 Buscando |
+| **SIM-070** | **RADUSDT** | `#58` | `8W/50L` | 26-08-11<br>04:18 | `🔴 Perdió -$0.06` | **`$98.25`** (`-$1.75`) | 🔴 Buscando |
 | **SIM-071** | **CRVUSDT** | `#58` | `10W/47L` | 26-08-11<br>03:56 | `🛡️ Protegida (BE)` | **`$107.15`** (`+$7.15`) | 🔵 En Vivo |
 | **SIM-072** | **DASHUSDT** | `#54` | `8W/45L` | 26-08-11<br>00:08 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
 | **SIM-073** | **DASHUSDT** | `#54` | `8W/45L` | 26-08-11<br>00:08 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
