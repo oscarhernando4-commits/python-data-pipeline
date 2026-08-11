@@ -2113,3 +2113,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-11-07 (-19.9%)`, `2024-12-09 (-19.43%)`, `2025-11-21 (-16.55%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: LITEBUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2026-06-30` hasta `2026-08-11` (43 Días de Historial)
+- 💵 **Precio Actual:** `$837.8900 USD`
+- 📈 **Máximo Histórico (ATH):** `$936.6100 USD` (`2026-08-10`) | Distancia: `-10.54%`
+- 📉 **Mínimo Histórico (ATL):** `$584.1000 USD` (`2026-07-29`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-07-30 (+19.14%)`, `2026-07-09 (+11.62%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-07-27 (-10.69%)`
+
+---
