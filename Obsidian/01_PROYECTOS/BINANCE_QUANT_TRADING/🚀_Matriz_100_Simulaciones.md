@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 00:30:21
+date: 2026-08-11 00:32:18
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 00:30:21`
+> ⏱️ **Última Actualización:** `2026-08-11 00:32:18`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -32,8 +32,8 @@ date: 2026-08-11 00:30:21
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
 > - 📈 **Capital Total Acumulado:** **`$10,528.05 USD`** (`$+528.05 USD`)  
 > - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `0 Cuentas (0.0%)`  
-> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `3 Cuentas (3.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `97 Cuentas (97.0%)`  
+> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `0 Cuentas (0.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `100 Cuentas (100.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
@@ -157,13 +157,13 @@ date: 2026-08-11 00:30:21
 | **SIM-061** | **HEIUSDT** | `#54` | `8W/45L` | 26-08-11<br>00:08 | `🛡️ Protegida (BE)` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
 | **SIM-062** | **INJUSDT** | `#54` | `8W/45L` | 26-08-11<br>00:08 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
 | **SIM-063** | **INJUSDT** | `#54` | `8W/45L` | 26-08-11<br>00:08 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
-| **SIM-064** | **HEIUSDT** | `#56` | `8W/48L` | 26-08-11<br>00:28 | `🔵 En Curso` | **`$98.69`** (`-$1.31`) | 🔵 En Vivo |
+| **SIM-064** | **HEIUSDT** | `#56` | `8W/48L` | 26-08-11<br>00:28 | `🛡️ Protegida (BE)` | **`$98.69`** (`-$1.31`) | 🔵 En Vivo |
 | **SIM-065** | **DEXEUSDT** | `#53` | `8W/45L` | 26-08-10<br>21:02 | `🔵 En Curso` | **`$99.16`** (`-$0.84`) | 🔵 En Vivo |
 | **SIM-066** | **DEXEUSDT** | `#53` | `8W/45L` | 26-08-10<br>21:02 | `🔵 En Curso` | **`$99.16`** (`-$0.84`) | 🔵 En Vivo |
 | **SIM-067** | **DEXEUSDT** | `#53` | `8W/45L` | 26-08-10<br>21:02 | `🔵 En Curso` | **`$99.16`** (`-$0.84`) | 🔵 En Vivo |
-| **SIM-068** | **KITEUSDT** | `#54` | `8W/46L` | 26-08-11<br>00:30 | `🔴 Perdió -$0.06` | **`$99.10`** (`-$0.90`) | 🔴 Buscando |
-| **SIM-069** | **KITEUSDT** | `#54` | `8W/46L` | 26-08-11<br>00:30 | `🔴 Perdió -$0.06` | **`$99.10`** (`-$0.90`) | 🔴 Buscando |
-| **SIM-070** | **KITEUSDT** | `#54` | `8W/46L` | 26-08-11<br>00:30 | `🔴 Perdió -$0.06` | **`$99.10`** (`-$0.90`) | 🔴 Buscando |
+| **SIM-068** | **KORUBUSDT** | `#54` | `8W/46L` | 26-08-11<br>00:32 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
+| **SIM-069** | **KORUBUSDT** | `#54` | `8W/46L` | 26-08-11<br>00:32 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
+| **SIM-070** | **KORUBUSDT** | `#54` | `8W/46L` | 26-08-11<br>00:32 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
 | **SIM-071** | **INJUSDT** | `#54` | `8W/45L` | 26-08-11<br>00:08 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
 | **SIM-072** | **DASHUSDT** | `#54` | `8W/45L` | 26-08-11<br>00:08 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
 | **SIM-073** | **DASHUSDT** | `#54` | `8W/45L` | 26-08-11<br>00:08 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
