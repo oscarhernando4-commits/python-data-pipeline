@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-08-11 12:34:20",
-  "total_balance_usd": 20.02,
+  "updated_at": "2026-08-11 07:34:51",
+  "total_balance_usd": 20.01,
   "usdt_free": 0.1354,
   "bnb_free": 0.00393967,
   "bnb_usd": 2.41,
-  "status": "🔵 En Vivo LONG (NVDABUSDT @ $221.0900)",
+  "status": "🔵 En Vivo LONG (NVDABUSDT @ $221.0000)",
   "position": {
     "symbol": "NVDABUSDT",
     "quantity": 0.079,
@@ -15,24 +15,24 @@
     "break_even": false,
     "trailing_active": false,
     "adaptive_sl_pct": 0.96,
-    "holding_cycles": 2,
+    "holding_cycles": 3,
     "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
   },
   "verdict": {
-    "timestamp": "2026-08-11 12:34:20",
+    "timestamp": "2026-08-11 07:34:41",
     "selected_symbol": "NONE",
     "action": "HOLD",
     "approved": false,
     "confidence": 0,
-    "reasoning": "Ninguno de los candidatos actuales cumple con los criterios estrictos de convicción A+ (Score >= 55 y soporte de libro de órdenes > 55%). La alta tasa de fallos en las simulaciones recientes bajo condiciones de mercado similares obliga a mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+    "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y confianza >= 70%) bajo las condiciones actuales de mercado, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
     "top_candidates": [
       {
         "symbol": "JTOUSDT",
         "score": 75,
-        "price": 0.5509,
-        "rsi_2m": 56.17,
-        "rsi_5m": 56.17,
-        "rsi_15m": 56.17,
+        "price": 0.5508,
+        "rsi_2m": 55.86,
+        "rsi_5m": 55.86,
+        "rsi_15m": 55.86,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 0.47,
@@ -61,7 +61,7 @@
         "rsi_15m": 56.88,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 2.57,
+        "vol_surge": 2.59,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
@@ -75,32 +75,6 @@
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 0.41,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "ETCUSDT",
-        "score": 65,
-        "price": 6.4,
-        "rsi_2m": 50.8,
-        "rsi_5m": 50.8,
-        "rsi_15m": 50.8,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.01,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "MUBUSDT",
-        "score": 65,
-        "price": 875.04,
-        "rsi_2m": 60.53,
-        "rsi_5m": 60.53,
-        "rsi_15m": 60.53,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.36,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
@@ -133,13 +107,13 @@
       {
         "symbol": "ZAMAUSDT",
         "score": 65,
-        "price": 0.0474,
-        "rsi_2m": 62.97,
-        "rsi_5m": 62.97,
-        "rsi_15m": 62.97,
+        "price": 0.04741,
+        "rsi_2m": 63.1,
+        "rsi_5m": 63.1,
+        "rsi_15m": 63.1,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 1.1,
+        "vol_surge": 1.11,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
@@ -168,25 +142,38 @@
         "vol_surge": 0.2,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ETHUSDT",
+        "score": 60,
+        "price": 1890.69,
+        "rsi_2m": 61.39,
+        "rsi_5m": 61.39,
+        "rsi_15m": 61.39,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.4,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
       }
     ]
   },
   "verdict_history": [
     {
-      "timestamp": "2026-08-11 12:34:20",
+      "timestamp": "2026-08-11 07:34:41",
       "selected_symbol": "NONE",
       "action": "HOLD",
       "approved": false,
       "confidence": 0,
-      "reasoning": "Ninguno de los candidatos actuales cumple con los criterios estrictos de convicción A+ (Score >= 55 y soporte de libro de órdenes > 55%). La alta tasa de fallos en las simulaciones recientes bajo condiciones de mercado similares obliga a mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+      "reasoning": "Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y confianza >= 70%) bajo las condiciones actuales de mercado, por lo que se prioriza la preservación del capital sobre la ejecución de trades especulativos.",
       "top_candidates": [
         {
           "symbol": "JTOUSDT",
           "score": 75,
-          "price": 0.5509,
-          "rsi_2m": 56.17,
-          "rsi_5m": 56.17,
-          "rsi_15m": 56.17,
+          "price": 0.5508,
+          "rsi_2m": 55.86,
+          "rsi_5m": 55.86,
+          "rsi_15m": 55.86,
           "rsi_1h": 50.0,
           "rsi_4h": 50.0,
           "vol_surge": 0.47,
@@ -215,7 +202,7 @@
           "rsi_15m": 56.88,
           "rsi_1h": 50.0,
           "rsi_4h": 50.0,
-          "vol_surge": 2.57,
+          "vol_surge": 2.59,
           "trade_quality": "C_NOISE",
           "macro_trend": "NEUTRAL"
         },
@@ -229,19 +216,6 @@
           "rsi_1h": 50.0,
           "rsi_4h": 50.0,
           "vol_surge": 0.41,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "ETCUSDT",
-          "score": 65,
-          "price": 6.4,
-          "rsi_2m": 50.8,
-          "rsi_5m": 50.8,
-          "rsi_15m": 50.8,
-          "rsi_1h": 50.0,
-          "rsi_4h": 50.0,
-          "vol_surge": 0.01,
           "trade_quality": "C_NOISE",
           "macro_trend": "NEUTRAL"
         },
@@ -274,13 +248,13 @@
         {
           "symbol": "ZAMAUSDT",
           "score": 65,
-          "price": 0.0474,
-          "rsi_2m": 62.97,
-          "rsi_5m": 62.97,
-          "rsi_15m": 62.97,
+          "price": 0.04741,
+          "rsi_2m": 63.1,
+          "rsi_5m": 63.1,
+          "rsi_15m": 63.1,
           "rsi_1h": 50.0,
           "rsi_4h": 50.0,
-          "vol_surge": 1.1,
+          "vol_surge": 1.11,
           "trade_quality": "C_NOISE",
           "macro_trend": "NEUTRAL"
         },
@@ -309,11 +283,24 @@
           "vol_surge": 0.2,
           "trade_quality": "C_NOISE",
           "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "ETHUSDT",
+          "score": 60,
+          "price": 1890.69,
+          "rsi_2m": 61.39,
+          "rsi_5m": 61.39,
+          "rsi_15m": 61.39,
+          "rsi_1h": 50.0,
+          "rsi_4h": 50.0,
+          "vol_surge": 0.4,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
         }
       ]
     },
     {
-      "timestamp": "2026-08-11 12:32:20",
+      "timestamp": "2026-08-11 07:32:43",
       "selected_symbol": "NONE",
       "action": "HOLD",
       "approved": false,
