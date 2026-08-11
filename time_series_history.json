@@ -1,28 +1,41 @@
 {
-  "EULUSDT": [
+  "AAOIBUSDT": [
     {
-      "timestamp": "2026-08-11 11:37:26",
-      "price": 1.144,
-      "score": 25,
-      "rsi": 26.34,
+      "timestamp": "2026-08-11 16:40:11",
+      "price": 132.68,
+      "score": 45,
+      "rsi": 53.46,
       "macd": "Neutral",
-      "volume_surge": 0.15,
+      "volume_surge": 0.17,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "MUUBUSDT": [
+  "LAUSDT": [
     {
-      "timestamp": "2026-08-11 11:37:26",
-      "price": 25.42,
-      "score": 0,
-      "rsi": 44.86,
+      "timestamp": "2026-08-11 16:40:11",
+      "price": 0.0536,
+      "score": 25,
+      "rsi": 29.68,
       "macd": "Neutral",
-      "volume_surge": 0.05,
+      "volume_surge": 0.28,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "VICUSDT": [
+    {
+      "timestamp": "2026-08-11 16:40:11",
+      "price": 0.028,
+      "score": 30,
+      "rsi": 45.04,
+      "macd": "Neutral",
+      "volume_surge": 0.02,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}}
+}
