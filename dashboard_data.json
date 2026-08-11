@@ -4,16 +4,16 @@
   "usdt_free": 0.1641,
   "bnb_free": 0.00385504,
   "bnb_usd": 2.35,
-  "status": "🔵 En Vivo LONG (CRVUSDT @ $0.2664)",
+  "status": "🔵 En Vivo LONG (CRVUSDT @ $0.2660)",
   "position": {
     "symbol": "CRVUSDT",
     "quantity": 62.9,
     "entry_price": 0.2715,
     "highest_price": 0.2715,
-    "cost_usd": 16.76,
+    "cost_usd": 16.73,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 56,
+    "holding_cycles": 57,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -2.5% (Esperando despegue)"
   },
   "verdict": {
@@ -38,28 +38,15 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "MORPHOUSDT",
+        "symbol": "NEXOUSDT",
         "score": 60,
-        "price": 1.982,
-        "rsi_2m": 57.18,
-        "rsi_5m": 57.18,
-        "rsi_15m": 57.18,
+        "price": 0.724,
+        "rsi_2m": 54.77,
+        "rsi_5m": 54.77,
+        "rsi_15m": 54.77,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.1,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "SUNUSDT",
-        "score": 60,
-        "price": 0.01829,
-        "rsi_2m": 60.39,
-        "rsi_5m": 60.39,
-        "rsi_15m": 60.39,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.0,
+        "vol_surge": 0.69,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
@@ -150,20 +137,7 @@
         "rsi_15m": 29.73,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.03,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "MUBUSDT",
-        "score": 50,
-        "price": 857.56,
-        "rsi_2m": 49.08,
-        "rsi_5m": 49.08,
-        "rsi_15m": 49.08,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.01,
+        "vol_surge": 0.08,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
@@ -176,7 +150,7 @@
         "rsi_15m": 48.68,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.06,
+        "vol_surge": 0.26,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }
