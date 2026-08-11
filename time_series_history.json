@@ -25,14 +25,53 @@
       "fear_greed": 50
     }
   ],
-  "MSTRBUSDT": [
+  "PEOPLEUSDT": [
     {
-      "timestamp": "2026-08-11 19:06:11",
-      "price": 95.65,
-      "score": 0,
-      "rsi": 40.19,
+      "timestamp": "2026-08-11 19:12:11",
+      "price": 0.00864,
+      "score": 45,
+      "rsi": 54.1,
       "macd": "Neutral",
-      "volume_surge": 0.1,
+      "volume_surge": 0.5,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JUPUSDT": [
+    {
+      "timestamp": "2026-08-11 19:12:11",
+      "price": 0.1739,
+      "score": 25,
+      "rsi": 23.66,
+      "macd": "Neutral",
+      "volume_surge": 0.67,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CFXUSDT": [
+    {
+      "timestamp": "2026-08-11 19:12:11",
+      "price": 0.04144,
+      "score": 0,
+      "rsi": 32.72,
+      "macd": "Neutral",
+      "volume_surge": 0.25,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ESPUSDT": [
+    {
+      "timestamp": "2026-08-11 19:12:11",
+      "price": 0.07049,
+      "score": 0,
+      "rsi": 46.02,
+      "macd": "Neutral",
+      "volume_surge": 0.58,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
