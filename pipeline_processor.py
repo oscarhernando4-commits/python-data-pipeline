@@ -706,8 +706,9 @@ def run_infinite_trading_matrix_cycle():
             is_order_flow_dump = of_res.get("is_bearish_dump", False)
             
             ai_veto_active = (ai_action == 'HOLD' and ai_symbol in ['NONE', ''])
+            is_high_grade_setup = (bs_score >= 60 and target_vol_surge >= 1.2 and bs_trade_qual in ("A+", "B"))
             
-            if bs_score >= 58 and is_quant_approved and (not ai_veto_active or (bs_score >= 75 and target_vol_surge >= 1.5)):
+            if bs_score >= 58 and is_quant_approved and (not ai_veto_active or is_high_grade_setup or bs_score >= 70):
                 if (is_btc_crashing or is_high_btc_risk) and bs_sym not in ["BTCUSDT", "PAXGUSDT", "XAUTUSDT"]:
                     print(f"🛡️ [FILTRO CORRELACIÓN BETA BTC] Oportunidad {bs_sym} ({bs_score} Pts, Rho={beta_res.get('rho')}) bloqueada. BTC débil / Alta Correlación.")
                     api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
