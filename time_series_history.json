@@ -6,7 +6,20 @@
       "score": 45,
       "rsi": 54.03,
       "macd": "Neutral",
-      "volume_surge": 0.06,
+      "volume_surge": 1.18,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "APTUSDT": [
+    {
+      "timestamp": "2026-08-11 16:06:22",
+      "price": 0.582,
+      "score": 50,
+      "rsi": 57.74,
+      "macd": "Neutral",
+      "volume_surge": 0.91,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,28 +27,29 @@
   ],
   "GENIUSUSDT": [
     {
-      "timestamp": "2026-08-11 16:04:22",
-      "price": 0.3744,
+      "timestamp": "2026-08-11 16:06:22",
+      "price": 0.3756,
       "score": 45,
-      "rsi": 52.46,
+      "rsi": 54.17,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.07,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "EULUSDT": [
+  "ESPUSDT": [
     {
-      "timestamp": "2026-08-11 21:04:12",
-      "price": 1.154,
-      "score": 50,
-      "rsi": 49.1,
+      "timestamp": "2026-08-11 16:06:22",
+      "price": 0.07104,
+      "score": 45,
+      "rsi": 55.25,
       "macd": "Neutral",
-      "volume_surge": 0.16,
+      "volume_surge": 0.32,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
+}
 }
