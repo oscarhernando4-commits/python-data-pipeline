@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-11 14:30:27",
+  "timestamp": "2026-08-11 14:32:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una correlación bajista sistémica. Ningún activo cumple con los criterios de calidad A+ (Score >= 55) ni con la confirmación de volumen institucional necesaria para mitigar el riesgo de 'trampa de liquidez'. Se prioriza la protección del capital sobre la especulación en un entorno de alta volatilidad y baja convicción.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación sistémica con una correlación bajista dominante. Ninguno de los candidatos analizados alcanza el umbral de calidad A+ requerido por el comité, y la falta de soporte en el libro de órdenes junto con la debilidad técnica generalizada hace que cualquier operación sea una trampa de liquidez. Se mantiene la posición en efectivo para preservar el capital.",
   "top_candidates": [
     {
-      "symbol": "MMTUSDT",
-      "score": 60,
-      "price": 0.2214,
-      "rsi_2m": 52.0,
-      "rsi_5m": 52.0,
-      "rsi_15m": 52.0,
+      "symbol": "ICPUSDT",
+      "score": 50,
+      "price": 2.339,
+      "rsi_2m": 62.5,
+      "rsi_5m": 62.5,
+      "rsi_15m": 62.5,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.0,
+      "vol_surge": 0.74,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -111,7 +111,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "SOXLBUSDT",
+      "symbol": "BANKUSDT",
       "score": 50,
       "price": 135.77,
       "rsi_2m": 58.72,

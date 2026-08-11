@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 14:30:27
+date: 2026-08-11 14:32:25
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 14:30:27`
+> ⏱️ **Última Actualización:** `2026-08-11 14:32:25`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -30,9 +30,9 @@ date: 2026-08-11 14:30:27
 
 > [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
-> - 📈 **Capital Total Acumulado:** **`$6,450.07 USD`** (`$-3,549.93 USD`)  
-> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `3 Cuentas (3.0%)`  
-> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `1 Cuentas (1.0%)`  
+> - 📈 **Capital Total Acumulado:** **`$6,449.44 USD`** (`$-3,550.56 USD`)  
+> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `0 Cuentas (0.0%)`  
+> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `4 Cuentas (4.0%)`  
 > - 🔵 **Cuentas Operando en Vivo:** `96 Cuentas (96.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
@@ -84,9 +84,9 @@ date: 2026-08-11 14:30:27
 ## 🔷 GRUPO 2: Moderado-Estricto (Permisividad Nivel 2 - Score >= 75 Pts)
 
 > [!WARNING] 📊 **Resumen del 🔷 GRUPO 2: Moderado-Estricto (Permisividad Nivel 2 - Score >= 75 Pts):**
-> - 💵 **Balance Total del Grupo:** `$1,995.15 USD` (`-$4.85`)
-> - 🎯 **Operaciones Totales:** `447` (`103 Ganadas / 338 Perdidas`)
-> - 📈 **Tasa de Acierto del Grupo:** `23.0% Win Rate`
+> - 💵 **Balance Total del Grupo:** `$1,994.52 USD` (`-$5.48`)
+> - 🎯 **Operaciones Totales:** `450` (`103 Ganadas / 341 Perdidas`)
+> - 📈 **Tasa de Acierto del Grupo:** `22.9% Win Rate`
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
@@ -99,12 +99,12 @@ date: 2026-08-11 14:30:27
 | **SIM-027** | **MSTRBUSDT** | `#23` | `5W/18L` | 26-08-11<br>09:14 | `🛡️ Protegida (BE)` | **`$99.50`** (`-$0.50`) | 🔵 En Vivo |
 | **SIM-028** | **MSTRBUSDT** | `#23` | `5W/18L` | 26-08-11<br>09:14 | `🛡️ Protegida (BE)` | **`$99.50`** (`-$0.50`) | 🔵 En Vivo |
 | **SIM-029** | **MSTRBUSDT** | `#23` | `5W/18L` | 26-08-11<br>09:14 | `🛡️ Protegida (BE)` | **`$99.50`** (`-$0.50`) | 🔵 En Vivo |
-| **SIM-030** | **AAVEUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
-| **SIM-031** | **AAVEUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
-| **SIM-032** | **AAVEUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
-| **SIM-033** | **ZROUSDT** | `#25` | `6W/18L` | 26-08-11<br>14:30 | `🔴 Perdió -$0.20` | **`$100.01`** (`+$0.01`) | 🟢 Buscando |
-| **SIM-034** | **ZROUSDT** | `#25` | `6W/18L` | 26-08-11<br>14:30 | `🔴 Perdió -$0.20` | **`$100.01`** (`+$0.01`) | 🟢 Buscando |
-| **SIM-035** | **ZROUSDT** | `#25` | `6W/18L` | 26-08-11<br>14:30 | `🔴 Perdió -$0.20` | **`$100.01`** (`+$0.01`) | 🟢 Buscando |
+| **SIM-030** | **AAVEUSDT** | `#22` | `5W/17L` | 26-08-11<br>14:32 | `🔴 Perdió -$0.21` | **`$99.69`** (`-$0.31`) | 🔴 Buscando |
+| **SIM-031** | **AAVEUSDT** | `#22` | `5W/17L` | 26-08-11<br>14:32 | `🔴 Perdió -$0.21` | **`$99.69`** (`-$0.31`) | 🔴 Buscando |
+| **SIM-032** | **AAVEUSDT** | `#22` | `5W/17L` | 26-08-11<br>14:32 | `🔴 Perdió -$0.21` | **`$99.69`** (`-$0.31`) | 🔴 Buscando |
+| **SIM-033** | **SUIUSDT** | `#25` | `6W/18L` | 26-08-11<br>14:32 | `🔵 En Curso` | **`$100.01`** (`+$0.01`) | 🔵 En Vivo |
+| **SIM-034** | **SUIUSDT** | `#25` | `6W/18L` | 26-08-11<br>14:32 | `🔵 En Curso` | **`$100.01`** (`+$0.01`) | 🔵 En Vivo |
+| **SIM-035** | **SUIUSDT** | `#25` | `6W/18L` | 26-08-11<br>14:32 | `🔵 En Curso` | **`$100.01`** (`+$0.01`) | 🔵 En Vivo |
 | **SIM-036** | **MUBUSDT** | `#23` | `5W/18L` | 26-08-11<br>14:20 | `🛡️ Protegida (BE)` | **`$99.46`** (`-$0.54`) | 🔵 En Vivo |
 | **SIM-037** | **MUBUSDT** | `#23` | `5W/18L` | 26-08-11<br>14:20 | `🛡️ Protegida (BE)` | **`$99.46`** (`-$0.54`) | 🔵 En Vivo |
 | **SIM-038** | **MUBUSDT** | `#23` | `5W/18L` | 26-08-11<br>14:20 | `🛡️ Protegida (BE)` | **`$99.46`** (`-$0.54`) | 🔵 En Vivo |
@@ -154,7 +154,7 @@ date: 2026-08-11 14:30:27
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-061** | **DEXEUSDT** | `#63` | `10W/52L` | 26-08-11<br>14:30 | `🔴 Perdió -$4082.85` | **`$-3981.94`** (`-$4081.94`) | 🔴 Buscando |
+| **SIM-061** | **DEXEUSDT** | `#63` | `10W/52L` | 26-08-11<br>14:32 | `🔴 Perdió -$4082.85` | **`$-3981.94`** (`-$4081.94`) | 🔴 Buscando |
 | **SIM-062** | **DEXEUSDT** | `#60` | `11W/47L` | 26-08-11<br>09:18 | `🔵 En Curso` | **`$108.66`** (`+$8.66`) | 🔵 En Vivo |
 | **SIM-063** | **DEXEUSDT** | `#60` | `11W/47L` | 26-08-11<br>09:18 | `🔵 En Curso` | **`$108.66`** (`+$8.66`) | 🔵 En Vivo |
 | **SIM-064** | **DEXEUSDT** | `#62` | `9W/52L` | 26-08-11<br>09:18 | `🔵 En Curso` | **`$98.04`** (`-$1.96`) | 🔵 En Vivo |
