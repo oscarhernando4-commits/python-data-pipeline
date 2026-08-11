@@ -4,7 +4,7 @@
   "usdt_free": 0.1641,
   "bnb_free": 0.00385504,
   "bnb_usd": 2.35,
-  "status": "🔵 En Vivo LONG (CRVUSDT @ $0.2692)",
+  "status": "🔵 En Vivo LONG (CRVUSDT @ $0.2691)",
   "position": {
     "symbol": "CRVUSDT",
     "quantity": 62.9,
@@ -13,7 +13,7 @@
     "cost_usd": 16.93,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 36,
+    "holding_cycles": 37,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -2.5% (Esperando despegue)"
   },
   "verdict": {
@@ -168,15 +168,28 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "RENDERUSDT",
-        "score": 50,
-        "price": 1.245,
-        "rsi_2m": 47.72,
-        "rsi_5m": 47.72,
-        "rsi_15m": 47.72,
+        "symbol": "HBARUSDT",
+        "score": 55,
+        "price": 0.06605,
+        "rsi_2m": 30.51,
+        "rsi_5m": 30.51,
+        "rsi_15m": 30.51,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 0.21,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ASTERUSDT",
+        "score": 50,
+        "price": 0.602,
+        "rsi_2m": 49.76,
+        "rsi_5m": 49.76,
+        "rsi_15m": 49.76,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.03,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }
