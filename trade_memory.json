@@ -8,7 +8,6 @@
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SUIUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COOKIEUSDT)",
       "BLOCK SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on RVNUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SNXXBUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZBTUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ARBUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on UNIUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BROCCOLI714USDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BROCCOLI714USDT)",
+      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TRUMPUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PROMUSDT)",
