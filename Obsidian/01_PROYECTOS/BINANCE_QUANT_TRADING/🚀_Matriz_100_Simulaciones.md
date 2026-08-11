@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 12:04:26
+date: 2026-08-11 12:06:18
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 12:04:26`
+> ⏱️ **Última Actualización:** `2026-08-11 12:06:18`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -32,8 +32,8 @@ date: 2026-08-11 12:04:26
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
 > - 📈 **Capital Total Acumulado:** **`$10,541.80 USD`** (`$+541.80 USD`)  
 > - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `0 Cuentas (0.0%)`  
-> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `3 Cuentas (3.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `97 Cuentas (97.0%)`  
+> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `0 Cuentas (0.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `100 Cuentas (100.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
@@ -105,9 +105,9 @@ date: 2026-08-11 12:04:26
 | **SIM-033** | **SOXLBUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
 | **SIM-034** | **SOXLBUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
 | **SIM-035** | **SOXLBUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
-| **SIM-036** | **SNXXBUSDT** | `#22` | `5W/17L` | 26-08-11<br>12:04 | `🔴 Perdió -$0.23` | **`$99.67`** (`-$0.33`) | 🔴 Buscando |
-| **SIM-037** | **SNXXBUSDT** | `#22` | `5W/17L` | 26-08-11<br>12:04 | `🔴 Perdió -$0.23` | **`$99.67`** (`-$0.33`) | 🔴 Buscando |
-| **SIM-038** | **SNXXBUSDT** | `#22` | `5W/17L` | 26-08-11<br>12:04 | `🔴 Perdió -$0.23` | **`$99.67`** (`-$0.33`) | 🔴 Buscando |
+| **SIM-036** | **MORPHOUSDT** | `#22` | `5W/17L` | 26-08-11<br>12:06 | `🔵 En Curso` | **`$99.67`** (`-$0.33`) | 🔵 En Vivo |
+| **SIM-037** | **MORPHOUSDT** | `#22` | `5W/17L` | 26-08-11<br>12:06 | `🔵 En Curso` | **`$99.67`** (`-$0.33`) | 🔵 En Vivo |
+| **SIM-038** | **MORPHOUSDT** | `#22` | `5W/17L` | 26-08-11<br>12:06 | `🔵 En Curso` | **`$99.67`** (`-$0.33`) | 🔵 En Vivo |
 | **SIM-039** | **RENDERUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
 | **SIM-040** | **RENDERUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
 
