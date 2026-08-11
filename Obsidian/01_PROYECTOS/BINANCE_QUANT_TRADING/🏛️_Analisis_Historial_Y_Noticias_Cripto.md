@@ -1814,3 +1814,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-33.77%)`, `2024-12-09 (-19.91%)`, `2025-02-02 (-18.55%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: FORMUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-03-18` hasta `2026-08-10` (511 Días de Historial)
+- 💵 **Precio Actual:** `$0.2132 USD`
+- 📈 **Máximo Histórico (ATH):** `$4.2931 USD` (`2025-09-07`) | Distancia: `-95.03%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0861 USD` (`2025-10-09`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-12-15 (+46.3%)`, `2025-10-11 (+36.83%)`, `2025-09-27 (+36.08%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-34.14%)`, `2025-08-30 (-18.76%)`, `2025-09-21 (-18.58%)`
+
+---
