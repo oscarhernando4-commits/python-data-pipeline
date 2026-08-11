@@ -13,7 +13,7 @@
     "cost_usd": 16.13,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 38,
+    "holding_cycles": 39,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -52,6 +52,19 @@
       },
       {
         "symbol": "ARBUSDT",
+        "score": 50,
+        "price": 0.0794,
+        "rsi_2m": 63.78,
+        "rsi_5m": 63.78,
+        "rsi_15m": 63.78,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.25,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "BANKUSDT",
         "score": 50,
         "price": 0.0368,
         "rsi_2m": 48.67,
@@ -103,15 +116,15 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "BONKUSDT",
-        "score": 50,
-        "price": 2.33e-06,
-        "rsi_2m": 57.88,
-        "rsi_5m": 57.88,
-        "rsi_15m": 57.88,
+        "symbol": "XAUTUSDT",
+        "score": 45,
+        "price": 4350.91,
+        "rsi_2m": 42.38,
+        "rsi_5m": 42.38,
+        "rsi_15m": 42.38,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.04,
+        "vol_surge": 1.62,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
