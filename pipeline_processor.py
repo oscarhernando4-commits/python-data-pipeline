@@ -697,8 +697,17 @@ def run_infinite_trading_matrix_cycle():
             is_gold_refuge = bs_sym in ["PAXGUSDT", "XAUTUSDT"]
             is_quant_approved = bs_trade_qual in ("A+", "B") or target_vol_surge >= 1.00 or is_gold_refuge or bs_score >= 60
             
+            import multi_timeframe_analyzer
             import beta_correlation_engine
             import order_flow_analyzer
+            
+            mtf_bs = multi_timeframe_analyzer.analyze_multi_timeframe_candles(bs_sym)
+            is_overextended_bs = mtf_bs.get("is_overextended_15m", False)
+            overextension_reason_bs = mtf_bs.get("overextension_reason", "")
+            is_yellow_bs = mtf_bs.get("is_yellow_arrow_pivot", False)
+            is_bounce_bs = mtf_bs.get("is_oversold_bounce_candidate", False)
+            is_divergence_bs = mtf_bs.get("is_bullish_divergence", False)
+            
             beta_res = beta_correlation_engine.calculate_beta_correlation(bs_sym)
             of_res = order_flow_analyzer.analyze_order_flow_cvd(bs_sym)
             
@@ -709,14 +718,18 @@ def run_infinite_trading_matrix_cycle():
             is_high_grade_setup = (bs_score >= 60 and target_vol_surge >= 1.2 and bs_trade_qual in ("A+", "B"))
             
             if bs_score >= 58 and is_quant_approved and (not ai_veto_active or is_high_grade_setup or bs_score >= 70):
-                if (is_btc_crashing or is_high_btc_risk) and bs_sym not in ["BTCUSDT", "PAXGUSDT", "XAUTUSDT"]:
+                if is_overextended_bs:
+                    print(f"🛡️ [FILTRO ANTI-CIMA 15M] Oportunidad {bs_sym} ({bs_score} Pts) BLOQUEADA: Entrada en la cima ({overextension_reason_bs}). Exige compra en el suelo.")
+                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
+                elif (is_btc_crashing or is_high_btc_risk) and bs_sym not in ["BTCUSDT", "PAXGUSDT", "XAUTUSDT"]:
                     print(f"🛡️ [FILTRO CORRELACIÓN BETA BTC] Oportunidad {bs_sym} ({bs_score} Pts, Rho={beta_res.get('rho')}) bloqueada. BTC débil / Alta Correlación.")
                     api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
                 elif is_order_flow_dump:
                     print(f"🎯 [FILTRO ORDER FLOW CVD] Oportunidad {bs_sym} ({bs_score} Pts) bloqueada por presión vendedora a mercado (CVD Delta {of_res.get('cvd_delta_usd')} USD).")
                     api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
                 else:
-                    print(f"💰 [REAL HÍBRIDO] Ejecutando Top Oportunidad del Escáner en Dinero Real: {bs_sym} @ {bs_score} Pts (GBM: {bs_trade_qual}, VolSurge: {target_vol_surge:.2f}x, Rho: {beta_res.get('rho')}, OrderFlow: {of_res.get('verdict')})...")
+                    arrow_lbl = " 🎯 [PATRÓN FLECHAS AMARILLAS 15M PIVOT]" if is_yellow_bs else (" 🌊 [REBOTE SOBREVENTA %B]" if is_bounce_bs else (" 📈 [DIVERGENCIA ALCISTA RSI]" if is_divergence_bs else ""))
+                    print(f"💰 [REAL HÍBRIDO] Ejecutando Top Oportunidad del Escáner en Dinero Real: {bs_sym}{arrow_lbl} @ {bs_score} Pts (GBM: {bs_trade_qual}, VolSurge: {target_vol_surge:.2f}x, Rho: {beta_res.get('rho')}, OrderFlow: {of_res.get('verdict')})...")
                     api_connector.evaluate_and_trade_real_money(
                         best_symbol=bs_sym,
                         best_score=bs_score,

@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2791,
+    "total_trades": 2792,
     "wins": 497,
-    "losses": 2294,
-    "win_rate_pct": 17.81,
-    "total_pnl_usd": 101370.2895654548
+    "losses": 2295,
+    "win_rate_pct": 17.8,
+    "total_pnl_usd": 101370.19956545481
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on CRVUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COOKIEUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on INJUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on AUDIOUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on VIRTUALUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on AXTIBUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on AEROUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on KAITOUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on KAITOUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ARBUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on REUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-10 14:56:43",
-      "account_id": "SIM-053",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "INJUSDT",
-      "side": "LONG",
-      "entry_price": 4.526,
-      "exit_price": 4.48,
-      "pnl_usd": -0.32,
-      "result": "LOSS",
-      "notes": "Hit SL on INJUSDT (-$0.32). Re-Trading!",
-      "context": {
-        "score": 45,
-        "rsi_15m": 57.3,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-10 20:02:19",
       "account_id": "SIM-052",
@@ -8250,6 +8233,23 @@
       "context": {
         "score": 30,
         "rsi_15m": 40.4,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 15:06:55",
+      "account_id": "SIM-074",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ARBUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0778,
+      "exit_price": 0.0785,
+      "pnl_usd": -0.09,
+      "result": "LOSS",
+      "notes": "Hit SL on ARBUSDT (-$0.09). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 51.41,
         "macro_trend_4h": "NEUTRAL"
       }
     }
