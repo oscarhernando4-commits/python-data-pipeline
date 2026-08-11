@@ -1,12 +1,51 @@
 {
-  "ACEUSDT": [
+  "SPYBUSDT": [
     {
-      "timestamp": "2026-08-11 13:50:07",
-      "price": 0.1056,
-      "score": 25,
-      "rsi": 31.4,
+      "timestamp": "2026-08-11 13:52:06",
+      "price": 773.61,
+      "score": 0,
+      "rsi": 41.55,
       "macd": "Neutral",
-      "volume_surge": 0.21,
+      "volume_surge": 0.57,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "AXTIBUSDT": [
+    {
+      "timestamp": "2026-08-11 13:52:06",
+      "price": 73.12,
+      "score": 15,
+      "rsi": 45.55,
+      "macd": "Neutral",
+      "volume_surge": 1.21,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ESPUSDT": [
+    {
+      "timestamp": "2026-08-11 13:52:07",
+      "price": 0.06995,
+      "score": 0,
+      "rsi": 45.02,
+      "macd": "Neutral",
+      "volume_surge": 0.39,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "XPLUSDT": [
+    {
+      "timestamp": "2026-08-11 13:52:07",
+      "price": 0.07824,
+      "score": 0,
+      "rsi": 41.64,
+      "macd": "Neutral",
+      "volume_surge": 0.79,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +53,12 @@
   ],
   "COOKIEUSDT": [
     {
-      "timestamp": "2026-08-11 13:50:08",
-      "price": 0.0147,
+      "timestamp": "2026-08-11 13:52:07",
+      "price": 0.0146,
       "score": 35,
-      "rsi": 64.47,
+      "rsi": 63.59,
       "macd": "Neutral",
-      "volume_surge": 0.33,
+      "volume_surge": 0.45,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -27,12 +66,12 @@
   ],
   "JTOUSDT": [
     {
-      "timestamp": "2026-08-11 13:50:08",
-      "price": 0.5413,
-      "score": 0,
-      "rsi": 32.5,
+      "timestamp": "2026-08-11 13:52:08",
+      "price": 0.5404,
+      "score": 25,
+      "rsi": 29.26,
       "macd": "Neutral",
-      "volume_surge": 0.28,
+      "volume_surge": 0.3,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -40,25 +79,12 @@
   ],
   "0GUSDT": [
     {
-      "timestamp": "2026-08-11 13:50:08",
-      "price": 0.16,
+      "timestamp": "2026-08-11 13:52:08",
+      "price": 0.161,
       "score": 0,
-      "rsi": 43.2,
+      "rsi": 46.69,
       "macd": "Neutral",
-      "volume_surge": 0.27,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "LDOUSDT": [
-    {
-      "timestamp": "2026-08-11 13:50:08",
-      "price": 0.2924,
-      "score": 30,
-      "rsi": 44.83,
-      "macd": "Neutral",
-      "volume_surge": 1.07,
+      "volume_surge": 0.29,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -66,12 +92,12 @@
   ],
   "NEIROUSDT": [
     {
-      "timestamp": "2026-08-11 13:50:08",
-      "price": 6.647e-05,
+      "timestamp": "2026-08-11 13:52:08",
+      "price": 6.639e-05,
       "score": 25,
-      "rsi": 27.05,
+      "rsi": 26.3,
       "macd": "Neutral",
-      "volume_surge": 0.41,
+      "volume_surge": 0.65,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -79,7 +105,7 @@
   ],
   "STXUSDT": [
     {
-      "timestamp": "2026-08-11 13:50:08",
+      "timestamp": "2026-08-11 13:52:08",
       "price": 0.13,
       "score": 0,
       "rsi": 42.21,
@@ -90,14 +116,27 @@
       "fear_greed": 50
     }
   ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-11 13:52:08",
+      "price": 0.2923,
+      "score": 30,
+      "rsi": 44.24,
+      "macd": "Neutral",
+      "volume_surge": 1.29,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
   "PENDLEUSDT": [
     {
-      "timestamp": "2026-08-11 13:50:08",
-      "price": 1.355,
-      "score": 35,
-      "rsi": 53.1,
+      "timestamp": "2026-08-11 13:52:08",
+      "price": 1.351,
+      "score": 15,
+      "rsi": 48.43,
       "macd": "Neutral",
-      "volume_surge": 1.26,
+      "volume_surge": 1.32,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
