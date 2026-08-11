@@ -1,25 +1,38 @@
 {
-  "NBISBUSDT": [
+  "LAUSDT": [
     {
-      "timestamp": "2026-08-11 16:18:22",
-      "price": 205.55,
-      "score": 25,
-      "rsi": 75.59,
+      "timestamp": "2026-08-11 16:20:23",
+      "price": 0.0526,
+      "score": 40,
+      "rsi": 26.98,
       "macd": "Neutral",
-      "volume_surge": 0.07,
+      "volume_surge": 0.31,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "ESPUSDT": [
+  "NBISBUSDT": [
     {
-      "timestamp": "2026-08-11 16:18:22",
-      "price": 0.0711,
-      "score": 45,
-      "rsi": 56.41,
+      "timestamp": "2026-08-11 16:20:23",
+      "price": 204.65,
+      "score": 25,
+      "rsi": 72.56,
       "macd": "Neutral",
-      "volume_surge": 0.05,
+      "volume_surge": 0.13,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GOOGLBUSDT": [
+    {
+      "timestamp": "2026-08-11 16:20:23",
+      "price": 345.38,
+      "score": 80,
+      "rsi": 30.45,
+      "macd": "Neutral",
+      "volume_surge": 2.23,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
