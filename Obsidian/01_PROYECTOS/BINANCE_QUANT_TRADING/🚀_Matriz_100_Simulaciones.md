@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 08:42:23
+date: 2026-08-11 08:44:25
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 08:42:23`
+> ⏱️ **Última Actualización:** `2026-08-11 08:44:25`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -136,12 +136,12 @@ date: 2026-08-11 08:42:23
 | **SIM-052** | **FORMUSDT** | `#10` | `3W/6L` | 26-08-10<br>19:10 | `🔵 En Curso` | **`$89.74`** (`-$10.26`) | 🔵 En Vivo |
 | **SIM-053** | **SPYBUSDT** | `#11` | `5W/6L` | 26-08-11<br>07:24 | `🔵 En Curso` | **`$148.71`** (`+$48.71`) | 🔵 En Vivo |
 | **SIM-054** | **FORMUSDT** | `#12` | `4W/7L` | 26-08-10<br>19:10 | `🔵 En Curso` | **`$115.76`** (`+$15.76`) | 🔵 En Vivo |
-| **SIM-055** | **SNXXBUSDT** | `#12` | `4W/8L` | 26-08-11<br>08:36 | `🔵 En Curso` | **`$144.06`** (`+$44.06`) | 🔵 En Vivo |
+| **SIM-055** | **SNXXBUSDT** | `#12` | `4W/8L` | 26-08-11<br>08:36 | `🛡️ Protegida (BE)` | **`$144.06`** (`+$44.06`) | 🔵 En Vivo |
 | **SIM-056** | **XRPUSDT** | `#7` | `3W/4L` | 26-08-10<br>22:06 | `🔵 En Curso` | **`$142.75`** (`+$42.75`) | 🔵 En Vivo |
 | **SIM-057** | **XRPUSDT** | `#5` | `2W/3L` | 26-08-10<br>22:06 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |
 | **SIM-058** | **XRPUSDT** | `#7` | `3W/3L` | 26-08-10<br>22:06 | `🔵 En Curso` | **`$143.74`** (`+$43.74`) | 🔵 En Vivo |
-| **SIM-059** | **SNXXBUSDT** | `#10` | `3W/5L` | 26-08-11<br>08:36 | `🔵 En Curso` | **`$142.84`** (`+$42.84`) | 🔵 En Vivo |
-| **SIM-060** | **SNXXBUSDT** | `#9` | `3W/5L` | 26-08-11<br>08:36 | `🔵 En Curso` | **`$143.40`** (`+$43.40`) | 🔵 En Vivo |
+| **SIM-059** | **SNXXBUSDT** | `#10` | `3W/5L` | 26-08-11<br>08:36 | `🛡️ Protegida (BE)` | **`$142.84`** (`+$42.84`) | 🔵 En Vivo |
+| **SIM-060** | **SNXXBUSDT** | `#9` | `3W/5L` | 26-08-11<br>08:36 | `🛡️ Protegida (BE)` | **`$143.40`** (`+$43.40`) | 🔵 En Vivo |
 
 ---
 
