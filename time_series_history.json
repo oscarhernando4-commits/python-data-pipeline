@@ -1,53 +1,38 @@
 {
-  "OPUSDT": [
+  "TIAUSDT": [
     {
-      "timestamp": "2026-08-11 03:38:11",
-      "price": 0.0912,
-      "score": 15,
-      "rsi": 43.46,
+      "timestamp": "2026-08-11 03:40:12",
+      "price": 0.3212,
+      "score": 25,
+      "rsi": 32.01,
       "macd": "Neutral",
-      "volume_surge": 0.38,
+      "volume_surge": 2.6,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
-  ]
-}  }
+  ],
+  "ALTUSDT": [
+    {
+      "timestamp": "2026-08-11 03:40:12",
+      "price": 0.00608,
+      "score": 30,
+      "rsi": 39.7,
+      "macd": "Neutral",
+      "volume_surge": 0.35,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
   ],
   "THEUSDT": [
     {
-      "timestamp": "2026-08-11 03:38:10",
-      "price": 0.0656,
+      "timestamp": "2026-08-11 03:40:12",
+      "price": 0.0654,
       "score": 15,
-      "rsi": 48.89,
+      "rsi": 47.07,
       "macd": "Neutral",
-      "volume_surge": 0.11,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "TIAUSDT": [
-    {
-      "timestamp": "2026-08-11 03:38:10",
-      "price": 0.3207,
-      "score": 50,
-      "rsi": 29.72,
-      "macd": "Neutral",
-      "volume_surge": 2.42,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "LUNCUSDT": [
-    {
-      "timestamp": "2026-08-11 03:38:11",
-      "price": 5.02e-05,
-      "score": 15,
-      "rsi": 45.32,
-      "macd": "Neutral",
-      "volume_surge": 0.38,
+      "volume_surge": 0.14,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -55,12 +40,12 @@
   ],
   "VICUSDT": [
     {
-      "timestamp": "2026-08-11 03:38:11",
-      "price": 0.0308,
+      "timestamp": "2026-08-11 03:40:12",
+      "price": 0.0305,
       "score": 60,
-      "rsi": 61.54,
+      "rsi": 59.27,
       "macd": "Neutral",
-      "volume_surge": 2.29,
+      "volume_surge": 2.48,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -68,12 +53,64 @@
   ],
   "SAGAUSDT": [
     {
-      "timestamp": "2026-08-11 03:38:11",
-      "price": 0.01492,
+      "timestamp": "2026-08-11 03:40:12",
+      "price": 0.01496,
       "score": 15,
-      "rsi": 44.83,
+      "rsi": 46.99,
       "macd": "Neutral",
-      "volume_surge": 0.78,
+      "volume_surge": 0.89,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GNOUSDT": [
+    {
+      "timestamp": "2026-08-11 03:40:12",
+      "price": 104.07,
+      "score": 50,
+      "rsi": 49.56,
+      "macd": "Neutral",
+      "volume_surge": 1.04,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LUNCUSDT": [
+    {
+      "timestamp": "2026-08-11 03:40:12",
+      "price": 5.022e-05,
+      "score": 15,
+      "rsi": 45.82,
+      "macd": "Neutral",
+      "volume_surge": 0.38,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-11 03:40:12",
+      "price": 0.2994,
+      "score": 50,
+      "rsi": 66.03,
+      "macd": "Neutral",
+      "volume_surge": 0.46,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-11 03:40:12",
+      "price": 0.0913,
+      "score": 15,
+      "rsi": 44.85,
+      "macd": "Neutral",
+      "volume_surge": 0.44,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -81,12 +118,12 @@
   ],
   "PENDLEUSDT": [
     {
-      "timestamp": "2026-08-11 03:38:11",
+      "timestamp": "2026-08-11 03:40:12",
       "price": 1.359,
       "score": 50,
       "rsi": 50.42,
       "macd": "Neutral",
-      "volume_surge": 0.06,
+      "volume_surge": 0.3,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -94,7 +131,7 @@
   ],
   "STXUSDT": [
     {
-      "timestamp": "2026-08-11 03:38:11",
+      "timestamp": "2026-08-11 03:40:12",
       "price": 0.1313,
       "score": 50,
       "rsi": 50.91,
