@@ -3,7 +3,7 @@
   "total_balance_usd": 18.61,
   "usdt_free": 0.1836,
   "bnb_free": 0.00373397,
-  "bnb_usd": 2.29,
+  "bnb_usd": 2.3,
   "status": "🔵 En Vivo LONG (WLDUSDT @ $0.3357)",
   "position": {
     "symbol": "WLDUSDT",
@@ -13,7 +13,7 @@
     "cost_usd": 16.11,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 49,
+    "holding_cycles": 50,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -129,41 +129,15 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "ROBOUSDT",
+        "symbol": "CAKEUSDT",
         "score": 50,
-        "price": 0.01297,
-        "rsi_2m": 49.8,
-        "rsi_5m": 49.8,
-        "rsi_15m": 49.8,
+        "price": 1.456,
+        "rsi_2m": 52.83,
+        "rsi_5m": 52.83,
+        "rsi_15m": 52.83,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.15,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "GUNUSDT",
-        "score": 50,
-        "price": 0.00346,
-        "rsi_2m": 55.3,
-        "rsi_5m": 55.3,
-        "rsi_15m": 55.3,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.94,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "ROBOUSDT",
-        "score": 50,
-        "price": 0.01297,
-        "rsi_2m": 49.8,
-        "rsi_5m": 49.8,
-        "rsi_15m": 49.8,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.5,
+        "vol_surge": 0.0,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }
