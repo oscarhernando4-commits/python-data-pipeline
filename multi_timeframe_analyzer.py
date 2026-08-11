@@ -246,16 +246,22 @@ def analyze_multi_timeframe_candles(symbol):
         is_yellow_arrow_pivot = (0.0 <= dist_from_15m_ma7_pct <= 3.0) and (lower_wick_pct >= 20.0 or close_15m > open_15m) and (tf_5m_up or tf_2m_up)
         yellow_arrow_status = "🎯 PATRÓN FLECHAS AMARILLAS (REBOTE PIVOTE A+ EN MA7/MA25)" if is_yellow_arrow_pivot else "⚪ NEUTRAL 15M"
 
+        # Peak Proximity Guard: Check if price is within 1.5% of the 24h High
+        dist_from_24h_high_pct = round(((d_highs[-1] - close_15m) / close_15m) * 100.0, 2) if (d_highs and close_15m > 0) else 999.0
+
         # Spike up followed by rejection wick (buying top trap)
         if candle_range > 0 and (upper_wick / candle_range) > 0.35 and (high_15m - low_15m) / low_15m > 0.012:
             is_overextended_15m = True
             overextension_reason = f"Mecha superior de reversión en vela de 15m ({upper_wick/candle_range*100:.1f}% del rango)"
-        elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > 4.0:
+        elif dist_from_24h_high_pct <= 1.5 and price_expansion_pct >= 4.0:
+            is_overextended_15m = True
+            overextension_reason = f"Entrada en el Pico Máximo 24H (Precio a solo {dist_from_24h_high_pct}% del máximo 24H de ${d_highs[-1]:.4f}). Exige compra en el suelo."
+        elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > 3.0:
             is_overextended_15m = True
             overextension_reason = f"Vela de 15m sobre-extendida en la cima (+{((close_15m - open_15m) / open_15m) * 100.0:.2f}%)"
-        elif dist_from_15m_ma7_pct > 3.0:
+        elif dist_from_15m_ma7_pct > 1.8:
             is_overextended_15m = True
-            overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct}% sobre MA7). Exige ruptura fresca <= 3.0%"
+            overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct}% sobre MA7). Exige ruptura fresca <= 1.8%"
         elif not price_above_15m_ma7 or not price_above_15m_ma25:
             is_overextended_15m = True
             overextension_reason = f"Precio de 15m por debajo de medias móviles (Precio: {closes_15m[-1]} < MA7: {ma7_15m:.4f} / MA25: {ma25_15m:.4f})"
