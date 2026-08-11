@@ -2035,3 +2035,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-23.85%)`, `2026-08-10 (-20.06%)`, `2024-12-08 (-19.98%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: ZBTUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-10-17` hasta `2026-08-11` (299 Días de Historial)
+- 💵 **Precio Actual:** `$0.0949 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.8887 USD` (`2025-10-17`) | Distancia: `-89.32%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0566 USD` (`2026-02-06`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-12-29 (+71.24%)`, `2025-12-25 (+57.95%)`, `2026-08-06 (+47.95%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-08-07 (-39.16%)`, `2026-06-10 (-22.17%)`, `2026-07-14 (-21.96%)`
+
+---
