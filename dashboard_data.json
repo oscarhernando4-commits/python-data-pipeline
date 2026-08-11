@@ -4,16 +4,16 @@
   "usdt_free": 0.1641,
   "bnb_free": 0.00385504,
   "bnb_usd": 2.35,
-  "status": "🔵 En Vivo LONG (CRVUSDT @ $0.2666)",
+  "status": "🔵 En Vivo LONG (CRVUSDT @ $0.2668)",
   "position": {
     "symbol": "CRVUSDT",
     "quantity": 62.9,
     "entry_price": 0.2715,
     "highest_price": 0.2715,
-    "cost_usd": 16.77,
+    "cost_usd": 16.78,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 53,
+    "holding_cycles": 54,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -2.5% (Esperando despegue)"
   },
   "verdict": {
@@ -33,33 +33,7 @@
         "rsi_15m": 50.88,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.36,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "SUNUSDT",
-        "score": 60,
-        "price": 1.979,
-        "rsi_2m": 55.53,
-        "rsi_5m": 55.53,
-        "rsi_15m": 55.53,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.53,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "SUNUSDT",
-        "score": 60,
-        "price": 0.01829,
-        "rsi_2m": 60.4,
-        "rsi_5m": 60.4,
-        "rsi_15m": 60.4,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.01,
+        "vol_surge": 1.83,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
@@ -103,7 +77,7 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "STXUSDT",
+        "symbol": "VIRTUALUSDT",
         "score": 55,
         "price": 0.1257,
         "rsi_2m": 29.13,
@@ -129,7 +103,7 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "PUMPUSDT",
+        "symbol": "BABYUSDT",
         "score": 50,
         "price": 0.002718,
         "rsi_2m": 49.01,
