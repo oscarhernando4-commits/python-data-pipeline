@@ -33,7 +33,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "DASHUSDT",
+      "symbol": "SKYUSDT",
       "score": 75,
       "price": 30.7,
       "rsi_2m": 56.41,
@@ -237,6 +237,71 @@
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.48,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "score": 75,
+      "price": 1.336,
+      "rsi_2m": 58.45,
+      "rsi_5m": 58.45,
+      "rsi_15m": 58.45,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.89,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "DCRUSDT",
+      "score": 75,
+      "price": 13.02,
+      "rsi_2m": 63.07,
+      "rsi_5m": 63.07,
+      "rsi_15m": 63.07,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 3.86,
+      "trade_quality": "B",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "BMTUSDT",
+      "score": 65,
+      "price": 0.02357,
+      "rsi_2m": 58.22,
+      "rsi_5m": 58.22,
+      "rsi_15m": 58.22,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 1.4,
+      "trade_quality": "B",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "score": 65,
+      "price": 1.265,
+      "rsi_2m": 64.9,
+      "rsi_5m": 64.9,
+      "rsi_15m": 64.9,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.25,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "KORUBUSDT",
+      "score": 65,
+      "price": 17.94,
+      "rsi_2m": 61.75,
+      "rsi_5m": 61.75,
+      "rsi_15m": 61.75,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.68,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
