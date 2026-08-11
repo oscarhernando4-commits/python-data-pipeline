@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2745,
+    "total_trades": 2747,
     "wins": 491,
-    "losses": 2254,
-    "win_rate_pct": 17.89,
-    "total_pnl_usd": 101376.70615545478
+    "losses": 2256,
+    "win_rate_pct": 17.87,
+    "total_pnl_usd": 101376.48615545478
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,40 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-10 11:48:56",
-      "account_id": "SIM-058",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ALLOUSDT",
-      "side": "LONG",
-      "entry_price": 0.3226,
-      "exit_price": 1.0,
-      "pnl_usd": 42.66,
-      "result": "WIN",
-      "notes": "Win on ALLOUSDT (+$42.66 net) -> Level 4 Re-Trading Started!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 50.0,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-10 11:48:57",
-      "account_id": "SIM-059",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ALLOUSDT",
-      "side": "LONG",
-      "entry_price": 0.3226,
-      "exit_price": 1.0,
-      "pnl_usd": 42.66,
-      "result": "WIN",
-      "notes": "Win on ALLOUSDT (+$42.66 net) -> Level 4 Re-Trading Started!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 50.0,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-10 11:48:57",
       "account_id": "SIM-060",
@@ -8291,6 +8257,32 @@
       "pnl_usd": -0.08,
       "result": "LOSS",
       "notes": "Hit SL on ATMUSDT (-$0.08). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-11 13:20:41",
+      "account_id": "SIM-043",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "XLMUSDT",
+      "side": "LONG",
+      "entry_price": 0.1594,
+      "exit_price": 0.1594,
+      "pnl_usd": -0.13,
+      "result": "LOSS",
+      "notes": "Hit SL on XLMUSDT (-$0.13). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-11 13:20:41",
+      "account_id": "SIM-045",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "XLMUSDT",
+      "side": "LONG",
+      "entry_price": 0.1594,
+      "exit_price": 0.1594,
+      "pnl_usd": -0.09,
+      "result": "LOSS",
+      "notes": "Hit SL on XLMUSDT (-$0.09). Re-Trading!",
       "context": {}
     }
   ]
