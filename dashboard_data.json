@@ -10,10 +10,10 @@
     "quantity": 16.3,
     "entry_price": 1.0161,
     "highest_price": 1.024,
-    "cost_usd": 16.67,
+    "cost_usd": 16.64,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 5,
+    "holding_cycles": 6,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -2.5% (Esperando despegue)"
   },
   "verdict": {
@@ -25,7 +25,7 @@
     "reasoning": "Tras deliberar, el comité ha determinado que, a pesar de los scores técnicos de 75/100, la ausencia de una dominancia clara en el libro de órdenes (Bids < 55%) y la alta volatilidad en el entorno macro actual no cumplen con los estándares de seguridad A+ exigidos por el CRO. Se prioriza la preservación del capital sobre la especulación en un mercado con sesgo bajista histórico.",
     "top_candidates": [
       {
-        "symbol": "LINKUSDT",
+        "symbol": "DOGEUSDT",
         "score": 75,
         "price": 1.0212,
         "rsi_2m": 66.74,
@@ -92,10 +92,10 @@
       {
         "symbol": "WLDUSDT",
         "score": 75,
-        "price": 0.3378,
-        "rsi_2m": 63.67,
-        "rsi_5m": 63.67,
-        "rsi_15m": 63.67,
+        "price": 0.3372,
+        "rsi_2m": 61.34,
+        "rsi_5m": 61.34,
+        "rsi_15m": 61.34,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 2.22,
@@ -113,6 +113,19 @@
         "rsi_4h": 50.0,
         "vol_surge": 0.69,
         "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "XRPUSDT",
+        "score": 75,
+        "price": 1.0211,
+        "rsi_2m": 66.64,
+        "rsi_5m": 66.64,
+        "rsi_15m": 66.64,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.95,
+        "trade_quality": "B",
         "macro_trend": "NEUTRAL"
       },
       {
@@ -152,6 +165,45 @@
         "rsi_4h": 50.0,
         "vol_surge": 0.45,
         "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "XLMUSDT",
+        "score": 75,
+        "price": 0.162,
+        "rsi_2m": 65.8,
+        "rsi_5m": 65.8,
+        "rsi_15m": 65.8,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 3.97,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "HBARUSDT",
+        "score": 75,
+        "price": 0.06651,
+        "rsi_2m": 56.18,
+        "rsi_5m": 56.18,
+        "rsi_15m": 56.18,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 2.26,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "INJUSDT",
+        "score": 75,
+        "price": 4.539,
+        "rsi_2m": 65.38,
+        "rsi_5m": 65.38,
+        "rsi_15m": 65.38,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 7.32,
+        "trade_quality": "A+",
         "macro_trend": "NEUTRAL"
       }
     ]
