@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 03:34:23
+date: 2026-08-11 03:36:22
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 03:34:23`
+> ⏱️ **Última Actualización:** `2026-08-11 03:36:22`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -157,7 +157,7 @@ date: 2026-08-11 03:34:23
 | **SIM-061** | **ALGOUSDT** | `#56` | `9W/46L` | 26-08-11<br>01:04 | `🛡️ Protegida (BE)` | **`$99.30`** (`-$0.70`) | 🔵 En Vivo |
 | **SIM-062** | **PROMUSDT** | `#57` | `9W/47L` | 26-08-11<br>03:20 | `🛡️ Protegida (BE)` | **`$102.36`** (`+$2.36`) | 🔵 En Vivo |
 | **SIM-063** | **PROMUSDT** | `#57` | `9W/47L` | 26-08-11<br>03:20 | `🛡️ Protegida (BE)` | **`$102.36`** (`+$2.36`) | 🔵 En Vivo |
-| **SIM-064** | **BICOUSDT** | `#60` | `8W/52L` | 26-08-11<br>03:34 | `🔴 Perdió -$0.74` | **`$96.67`** (`-$3.33`) | 🔴 Buscando |
+| **SIM-064** | **BICOUSDT** | `#60` | `8W/52L` | 26-08-11<br>03:36 | `🔴 Perdió -$0.74` | **`$96.67`** (`-$3.33`) | 🔴 Buscando |
 | **SIM-065** | **ALGOUSDT** | `#55` | `8W/47L` | 26-08-11<br>01:04 | `🛡️ Protegida (BE)` | **`$98.73`** (`-$1.27`) | 🔵 En Vivo |
 | **SIM-066** | **ALLOUSDT** | `#58` | `8W/50L` | 26-08-11<br>01:42 | `🛡️ Protegida (BE)` | **`$95.87`** (`-$4.13`) | 🔵 En Vivo |
 | **SIM-067** | **ALLOUSDT** | `#58` | `8W/50L` | 26-08-11<br>01:42 | `🛡️ Protegida (BE)` | **`$95.87`** (`-$4.13`) | 🔵 En Vivo |
