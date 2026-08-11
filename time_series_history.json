@@ -1,12 +1,25 @@
 {
-  "ZROUSDT": [
+  "ETHFIUSDT": [
     {
-      "timestamp": "2026-08-11 11:02:22",
-      "price": 0.853,
-      "score": 0,
-      "rsi": 38.55,
+      "timestamp": "2026-08-11 11:04:23",
+      "price": 0.3709,
+      "score": 25,
+      "rsi": 15.3,
       "macd": "Neutral",
-      "volume_surge": 0.12,
+      "volume_surge": 1.26,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-11 11:04:23",
+      "price": 0.0883,
+      "score": 20,
+      "rsi": 26.59,
+      "macd": "Neutral",
+      "volume_surge": 1.69,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
