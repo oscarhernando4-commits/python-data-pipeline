@@ -4,11 +4,10 @@
     "wins": 449,
     "losses": 2045,
     "win_rate_pct": 18.0,
-    "total_pnl_usd": 112366.08700545483
+    "total_pnl_usd": 112365.82700545482
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on DEXEUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ESPUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PYTHUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZECUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SNXXBUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ONDOUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COOKIEUSDT)",
-      "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on LUNAUSDT)"
+      "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on LUNAUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on RADUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BNBUSDT)",
@@ -41597,36 +41597,36 @@
       }
     },
     {
-      "timestamp": "2026-08-11 12:54:17",
+      "timestamp": "2026-08-11 07:54:53",
       "account_id": "SIM-072",
       "group_name": "⚡ GRUPO 4: Frecuencia Alta",
       "symbol": "RADUSDT",
       "side": "SHORT",
       "entry_price": 0.29,
-      "exit_price": 0.291,
-      "pnl_usd": -0.09,
+      "exit_price": 0.293,
+      "pnl_usd": -0.22,
       "result": "LOSS",
-      "notes": "Hit SL on RADUSDT (-$0.09). Re-Trading!",
+      "notes": "Hit SL on RADUSDT (-$0.22). Re-Trading!",
       "context": {
-        "score": 15,
-        "rsi_15m": 51.0,
+        "score": 45,
+        "rsi_15m": 51.9,
         "macro_trend_4h": "NEUTRAL"
       }
     },
     {
-      "timestamp": "2026-08-11 12:54:18",
+      "timestamp": "2026-08-11 07:54:53",
       "account_id": "SIM-073",
       "group_name": "⚡ GRUPO 4: Frecuencia Alta",
       "symbol": "RADUSDT",
       "side": "SHORT",
       "entry_price": 0.29,
-      "exit_price": 0.291,
-      "pnl_usd": -0.09,
+      "exit_price": 0.293,
+      "pnl_usd": -0.22,
       "result": "LOSS",
-      "notes": "Hit SL on RADUSDT (-$0.09). Re-Trading!",
+      "notes": "Hit SL on RADUSDT (-$0.22). Re-Trading!",
       "context": {
-        "score": 15,
-        "rsi_15m": 51.0,
+        "score": 45,
+        "rsi_15m": 51.9,
         "macro_trend_4h": "NEUTRAL"
       }
     }
