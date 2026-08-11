@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-11 11:33:03",
+  "updated_at": "2026-08-11 11:35:00",
   "total_balance_usd": 19.6,
   "usdt_free": 17.2414,
   "bnb_free": 0.00387599,
@@ -14,32 +14,6 @@
     "confidence": 0,
     "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
     "top_candidates": [
-      {
-        "symbol": "CRVUSDT",
-        "score": 60,
-        "price": 0.2682,
-        "rsi_2m": 56.6,
-        "rsi_5m": 56.6,
-        "rsi_15m": 56.6,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.11,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "INJUSDT",
-        "score": 60,
-        "price": 4.502,
-        "rsi_2m": 54.36,
-        "rsi_5m": 54.36,
-        "rsi_15m": 54.36,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.0,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
       {
         "symbol": "XRPUSDT",
         "score": 50,
@@ -167,6 +141,71 @@
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 0.27,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "KAITOUSDT",
+        "score": 50,
+        "price": 0.6561,
+        "rsi_2m": 49.96,
+        "rsi_5m": 49.96,
+        "rsi_15m": 49.96,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.23,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ACEUSDT",
+        "score": 50,
+        "price": 0.1079,
+        "rsi_2m": 52.15,
+        "rsi_5m": 52.15,
+        "rsi_15m": 52.15,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.24,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "RVNUSDT",
+        "score": 50,
+        "price": 0.00292,
+        "rsi_2m": 51.01,
+        "rsi_5m": 51.01,
+        "rsi_15m": 51.01,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.27,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "BANANAS31USDT",
+        "score": 45,
+        "price": 0.010363,
+        "rsi_2m": 53.82,
+        "rsi_5m": 53.82,
+        "rsi_15m": 53.82,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.07,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "AAOIBUSDT",
+        "score": 45,
+        "price": 132.06,
+        "rsi_2m": 51.37,
+        "rsi_5m": 51.37,
+        "rsi_15m": 51.37,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.02,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }
