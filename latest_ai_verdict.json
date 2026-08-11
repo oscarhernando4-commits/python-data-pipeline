@@ -1,11 +1,24 @@
 {
-  "timestamp": "2026-08-11 21:22:36",
+  "timestamp": "2026-08-11 21:24:32",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta incertidumbre regulatoria. Ninguno de los candidatos cumple con los criterios estrictos de convicción A+ requeridos por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y apatía. Ninguno de los candidatos actuales cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes claro) exigido por el comité para mitigar el riesgo de 'trampa de valor' observado en las simulaciones históricas.",
   "top_candidates": [
+    {
+      "symbol": "ZROUSDT",
+      "score": 85,
+      "price": 0.865,
+      "rsi_2m": 57.32,
+      "rsi_5m": 57.32,
+      "rsi_15m": 57.32,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 1.5,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
     {
       "symbol": "GOOGLBUSDT",
       "score": 80,
@@ -165,13 +178,26 @@
     {
       "symbol": "ICPUSDT",
       "score": 65,
-      "price": 2.258,
-      "rsi_2m": 49.71,
-      "rsi_5m": 49.71,
-      "rsi_15m": 49.71,
+      "price": 2.259,
+      "rsi_2m": 50.17,
+      "rsi_5m": 50.17,
+      "rsi_15m": 50.17,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.11,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "TAOUSDT",
+      "score": 65,
+      "price": 200.3,
+      "rsi_2m": 57.7,
+      "rsi_5m": 57.7,
+      "rsi_15m": 57.7,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.81,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
