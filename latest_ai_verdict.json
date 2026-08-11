@@ -1,24 +1,11 @@
 {
-  "timestamp": "2026-08-11 18:16:19",
+  "timestamp": "2026-08-11 18:18:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de capitulación técnica con una divergencia peligrosa entre BTC y las altcoins; dado que ningún activo cumple con los criterios de alta convicción (Score >= 55) y el riesgo de 'trampa de liquidez' es elevado, la decisión institucional es preservar el capital en stablecoins.",
+  "reasoning": "El mercado presenta una parálisis de liquidez generalizada y una falta de activos con fuerza relativa suficiente. Ningún candidato cumple con los criterios de alta convicción (Score >= 55) establecidos por el comité, por lo que la estrategia óptima es mantener la liquidez y evitar la exposición en un entorno de alta probabilidad de pérdidas.",
   "top_candidates": [
-    {
-      "symbol": "CAKEUSDT",
-      "score": 60,
-      "price": 1.457,
-      "rsi_2m": 51.39,
-      "rsi_5m": 51.39,
-      "rsi_15m": 51.39,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.01,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
     {
       "symbol": "0GUSDT",
       "score": 60,
@@ -41,20 +28,7 @@
       "rsi_15m": 27.89,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.3,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "UNIUSDT",
-      "score": 55,
-      "price": 3.715,
-      "rsi_2m": 30.79,
-      "rsi_5m": 30.79,
-      "rsi_15m": 30.79,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.01,
+      "vol_surge": 0.03,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
