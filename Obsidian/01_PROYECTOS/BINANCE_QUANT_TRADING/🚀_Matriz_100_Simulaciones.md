@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 13:46:17
+date: 2026-08-11 13:48:20
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 13:46:17`
+> ⏱️ **Última Actualización:** `2026-08-11 13:48:20`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -32,8 +32,8 @@ date: 2026-08-11 13:46:17
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
 > - 📈 **Capital Total Acumulado:** **`$10,535.49 USD`** (`$+535.49 USD`)  
 > - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `3 Cuentas (3.0%)`  
-> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `3 Cuentas (3.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `94 Cuentas (94.0%)`  
+> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `0 Cuentas (0.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `97 Cuentas (97.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
@@ -96,15 +96,15 @@ date: 2026-08-11 13:46:17
 | **SIM-024** | **SUIUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
 | **SIM-025** | **SUIUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
 | **SIM-026** | **SUIUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
-| **SIM-027** | **MUBUSDT** | `#22` | `5W/17L` | 26-08-11<br>13:46 | `🔴 Perdió -$0.34` | **`$99.56`** (`-$0.44`) | 🔴 Buscando |
-| **SIM-028** | **MUBUSDT** | `#22` | `5W/17L` | 26-08-11<br>13:46 | `🔴 Perdió -$0.34` | **`$99.56`** (`-$0.44`) | 🔴 Buscando |
-| **SIM-029** | **MUBUSDT** | `#22` | `5W/17L` | 26-08-11<br>13:46 | `🔴 Perdió -$0.34` | **`$99.56`** (`-$0.44`) | 🔴 Buscando |
+| **SIM-027** | **MUBUSDT** | `#22` | `5W/17L` | 26-08-11<br>13:48 | `🔵 En Curso` | **`$99.56`** (`-$0.44`) | 🔵 En Vivo |
+| **SIM-028** | **MUBUSDT** | `#22` | `5W/17L` | 26-08-11<br>13:48 | `🔵 En Curso` | **`$99.56`** (`-$0.44`) | 🔵 En Vivo |
+| **SIM-029** | **MUBUSDT** | `#22` | `5W/17L` | 26-08-11<br>13:48 | `🔵 En Curso` | **`$99.56`** (`-$0.44`) | 🔵 En Vivo |
 | **SIM-030** | **AAVEUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
 | **SIM-031** | **AAVEUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
 | **SIM-032** | **AAVEUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
-| **SIM-033** | **SNXXBUSDT** | `#24` | `6W/17L` | 26-08-11<br>13:46 | `🟢 Ganó +$0.68` | **`$100.21`** (`+$0.21`) | 🟢 Buscando |
-| **SIM-034** | **SNXXBUSDT** | `#24` | `6W/17L` | 26-08-11<br>13:46 | `🟢 Ganó +$0.68` | **`$100.21`** (`+$0.21`) | 🟢 Buscando |
-| **SIM-035** | **SNXXBUSDT** | `#24` | `6W/17L` | 26-08-11<br>13:46 | `🟢 Ganó +$0.68` | **`$100.21`** (`+$0.21`) | 🟢 Buscando |
+| **SIM-033** | **SNXXBUSDT** | `#24` | `6W/17L` | 26-08-11<br>13:48 | `🟢 Ganó +$0.68` | **`$100.21`** (`+$0.21`) | 🟢 Buscando |
+| **SIM-034** | **SNXXBUSDT** | `#24` | `6W/17L` | 26-08-11<br>13:48 | `🟢 Ganó +$0.68` | **`$100.21`** (`+$0.21`) | 🟢 Buscando |
+| **SIM-035** | **SNXXBUSDT** | `#24` | `6W/17L` | 26-08-11<br>13:48 | `🟢 Ganó +$0.68` | **`$100.21`** (`+$0.21`) | 🟢 Buscando |
 | **SIM-036** | **MORPHOUSDT** | `#22` | `5W/17L` | 26-08-11<br>12:06 | `🔵 En Curso` | **`$99.67`** (`-$0.33`) | 🔵 En Vivo |
 | **SIM-037** | **MORPHOUSDT** | `#22` | `5W/17L` | 26-08-11<br>12:06 | `🔵 En Curso` | **`$99.67`** (`-$0.33`) | 🔵 En Vivo |
 | **SIM-038** | **MORPHOUSDT** | `#22` | `5W/17L` | 26-08-11<br>12:06 | `🔵 En Curso` | **`$99.67`** (`-$0.33`) | 🔵 En Vivo |
