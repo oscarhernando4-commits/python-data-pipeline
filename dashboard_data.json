@@ -4,16 +4,16 @@
   "usdt_free": 0.0,
   "bnb_free": 0.00387599,
   "bnb_usd": 2.36,
-  "status": "🔵 En Vivo LONG (CRVUSDT @ $0.2703)",
+  "status": "🔵 En Vivo LONG (CRVUSDT @ $0.2710)",
   "position": {
     "symbol": "CRVUSDT",
     "quantity": 62.9,
     "entry_price": 0.2715,
     "highest_price": 0.2715,
-    "cost_usd": 17.0,
+    "cost_usd": 17.05,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 4,
+    "holding_cycles": 5,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -2.5% (Esperando despegue)"
   },
   "verdict": {
@@ -34,32 +34,6 @@
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 0.03,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "0GUSDT",
-        "score": 60,
-        "price": 0.161,
-        "rsi_2m": 50.59,
-        "rsi_5m": 50.59,
-        "rsi_15m": 50.59,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.0,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "MEGAUSDT",
-        "score": 55,
-        "price": 0.03353,
-        "rsi_2m": 31.76,
-        "rsi_5m": 31.76,
-        "rsi_15m": 31.76,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.09,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
@@ -129,7 +103,7 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "BMTUSDT",
+        "symbol": "CRVUSDT",
         "score": 50,
         "price": 0.02149,
         "rsi_2m": 59.02,
