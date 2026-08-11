@@ -1,24 +1,11 @@
 {
-  "timestamp": "2026-08-11 15:08:25",
+  "timestamp": "2026-08-11 15:10:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado presenta una fragilidad sistémica extrema con una tendencia NEUTRAL predominante y falta de soporte institucional en el libro de órdenes. Ningún activo cumple con el umbral de seguridad A+ (Score >= 55), por lo que la estrategia de protección de capital exige evitar cualquier entrada para prevenir pérdidas por 'falling knives'.",
+  "reasoning": "El mercado presenta una debilidad sistémica generalizada con una ausencia total de activos que cumplan con el umbral de convicción A+ (Score >= 55). La estrategia institucional prioriza la preservación de capital sobre la especulación en un entorno de alta incertidumbre y falta de soporte en el libro de órdenes.",
   "top_candidates": [
-    {
-      "symbol": "BANKUSDT",
-      "score": 60,
-      "price": 0.0377,
-      "rsi_2m": 53.51,
-      "rsi_5m": 53.51,
-      "rsi_15m": 53.51,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 3.09,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
     {
       "symbol": "0GUSDT",
       "score": 60,
@@ -29,19 +16,6 @@
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.33,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "VIRTUALUSDT",
-      "score": 55,
-      "price": 0.5404,
-      "rsi_2m": 22.55,
-      "rsi_5m": 22.55,
-      "rsi_15m": 22.55,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 4.57,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -74,10 +48,10 @@
     {
       "symbol": "PUMPUSDT",
       "score": 50,
-      "price": 0.002743,
-      "rsi_2m": 50.14,
-      "rsi_5m": 50.14,
-      "rsi_15m": 50.14,
+      "price": 0.002741,
+      "rsi_2m": 49.63,
+      "rsi_5m": 49.63,
+      "rsi_15m": 49.63,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.85,
@@ -137,7 +111,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "POLUSDT",
+      "symbol": "ALLOUSDT",
       "score": 50,
       "price": 0.07633,
       "rsi_2m": 64.48,
