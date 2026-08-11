@@ -1970,3 +1970,55 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2024-03-17 (-42.37%)`, `2025-10-09 (-38.4%)`, `2024-04-11 (-21.74%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: MOVRUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-16` hasta `2026-08-11` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.9210 USD`
+- 📈 **Máximo Histórico (ATH):** `$44.0000 USD` (`2023-12-24`) | Distancia: `-97.91%`
+- 📉 **Mínimo Histórico (ATL):** `$0.8680 USD` (`2026-08-11`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2023-12-23 (+146.76%)`, `2026-04-17 (+101.94%)`, `2026-04-23 (+58.32%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-28.04%)`, `2026-04-18 (-25.99%)`, `2024-04-12 (-23.23%)`
+
+---
+
+### 🪙 Profile Completo de Vida: ACTUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2024-11-11` hasta `2026-08-11` (639 Días de Historial)
+- 💵 **Precio Actual:** `$0.0102 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.9500 USD` (`2024-11-14`) | Distancia: `-98.92%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0036 USD` (`2025-10-10`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-11-11 (+2179.08%)`, `2024-11-29 (+54.26%)`, `2026-06-28 (+40.25%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-04-01 (-56.97%)`, `2025-10-10 (-36.02%)`, `2025-04-02 (-35.64%)`
+
+---
+
+### 🪙 Profile Completo de Vida: 0GUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-09-22` hasta `2026-08-11` (324 Días de Historial)
+- 💵 **Precio Actual:** `$0.1620 USD`
+- 📈 **Máximo Histórico (ATH):** `$7.2600 USD` (`2025-09-22`) | Distancia: `-97.77%`
+- 📉 **Mínimo Histórico (ATL):** `$0.1360 USD` (`2026-08-03`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-09-22 (+383.9%)`, `2025-11-08 (+34.92%)`, `2025-12-25 (+30.01%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-09-29 (-22.53%)`, `2026-01-25 (-22.45%)`, `2025-09-25 (-21.75%)`
+
+---
+
+### 🪙 Profile Completo de Vida: CVXUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-16` hasta `2026-08-11` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$1.6610 USD`
+- 📈 **Máximo Histórico (ATH):** `$8.1520 USD` (`2024-12-04`) | Distancia: `-79.62%`
+- 📉 **Mínimo Histórico (ATL):** `$0.4990 USD` (`2025-10-10`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-06-16 (+50.12%)`, `2024-12-01 (+37.69%)`, `2026-01-03 (+37.31%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-33.9%)`, `2024-04-12 (-20.1%)`, `2025-02-24 (-18.27%)`
+
+---

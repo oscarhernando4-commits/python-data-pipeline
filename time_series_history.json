@@ -67,12 +67,38 @@
   ],
   "GENIUSUSDT": [
     {
-      "timestamp": "2026-08-11 14:58:10",
-      "price": 0.3661,
-      "score": 30,
-      "rsi": 52.16,
+      "timestamp": "2026-08-11 15:00:13",
+      "price": 0.3651,
+      "score": 0,
+      "rsi": 48.86,
       "macd": "Neutral",
-      "volume_surge": 1.21,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ORDIUSDT": [
+    {
+      "timestamp": "2026-08-11 15:00:13",
+      "price": 3.408,
+      "score": 25,
+      "rsi": 29.49,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LAUSDT": [
+    {
+      "timestamp": "2026-08-11 15:00:13",
+      "price": 0.0548,
+      "score": 0,
+      "rsi": 39.56,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
