@@ -801,40 +801,57 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         highest_price = max(state["position"].get("highest_price", entry), active_current_price)
         highest_pnl_pct = ((highest_price - entry) / entry) * 100.0 if entry > 0 else 0.0
         
-        # Activate Break-Even at +1.0% (floor at +0.40% to cover Binance roundtrip fees)
-        break_even_active = state["position"].get("break_even", False)
-        if pnl_pct >= 1.0 and not break_even_active:
-            break_even_active = True
-            print(f"🛡️ ESCUDO REAL ACTIVADO: El precio subió +{pnl_pct:.2f}%. Stop-loss asegurado en Break-Even (+0.4%).")
-            
-        # Activate Dynamic Trailing Stop when PnL hits +2.0% (Rides mega-pumps up to +10%, +20%)
-        trailing_active = state["position"].get("trailing_active", False)
-        if pnl_pct >= 2.0 and not trailing_active:
-            trailing_active = True
-            print(f"🚀 TRAILING STOP DINÁMICO ACTIVADO: El precio alcanzó +{pnl_pct:.2f}%. Persiguiendo super-tendencia...")
-            
         holding_cycles = state["position"].get("holding_cycles", 0) + 1
         
         import atr_risk_calculator
         import orderbook_analyzer
         
         atr_info = atr_risk_calculator.calculate_adaptive_atr_stop_loss(entry, atr_15m=entry*0.008)
-        adaptive_sl_pct = min(1.8, atr_info.get("sl_pct", 1.0))
         trailing_offset = atr_risk_calculator.get_adaptive_trailing_offset(active_symbol, atr_info.get("atr_pct", 0.8))
-
-        # Progressive Time-Decay Escalation Ladder (RELAXED to survive normal crypto noise):
-        # 1. 0 to 20m (cycles 1-9): SL at adaptive ATR level (max -1.8%)
-        # 2. 20m to 45m (cycles 10-22): SL tightens to -1.2% (moderate protection)
-        # 3. 45m to 75m (cycles 23-37): SL tightens to -0.60% (tighter protection)
-        # 4. > 75m (cycles >= 38 / 1h 15m): Market exit for capital release
-        time_regime_msg = ""
-        if not break_even_active and not trailing_active:
-            if holding_cycles >= 23:    # 45 mins
-                adaptive_sl_pct = min(adaptive_sl_pct, 0.6)
-                time_regime_msg = "⏳ Escalera 45m: SL Apretado a -0.60%"
-            elif holding_cycles >= 10:   # 20 mins
-                adaptive_sl_pct = min(adaptive_sl_pct, 1.2)
-                time_regime_msg = "⏳ Escalera 20m: SL Apretado a -1.20%"
+        
+        # ═══════════════════════════════════════════════════════════════
+        # 🧠 SISTEMA DE SALIDA POR FASES DE PRECIO (NO POR TIEMPO)
+        # ═══════════════════════════════════════════════════════════════
+        # DISEÑO: Los trades GANADORES nunca se venden por tiempo.
+        #         Solo los trades PERDEDORES estancados se liberan.
+        #
+        # FASE 1 - PROTECCIÓN INICIAL:     SL = -2.5% (sobrevive mechas normales)
+        # FASE 2 - BREAK-EVEN SEGURO:      Cuando PnL alcanza +0.8% → SL sube a +0.35% (cubre fees)
+        # FASE 3 - GANANCIA ASEGURADA:      Cuando PnL alcanza +1.5% → SL sube a +1.0% (lucro real)
+        # FASE 4 - TRAILING DE TENDENCIA:   Cuando PnL alcanza +3.0% → Trailing dinámico (pico - 1.0%)
+        #
+        # REGLA DE ESTANCAMIENTO: Si después de 2 HORAS (60 ciclos) el trade sigue
+        #   NEGATIVO y nunca ha estado en ganancia, se libera el capital.
+        #   Si el trade está en ganancia o alguna vez activó FASE 2+, NO SE TOCA.
+        # ═══════════════════════════════════════════════════════════════
+        
+        # Determine current phase based on PRICE, not time
+        phase = state["position"].get("phase", 1)
+        phase_msg = ""
+        
+        # PHASE 4: Trailing Ride (highest ever PnL reached +3.0%)
+        if highest_pnl_pct >= 3.0 or phase >= 4:
+            phase = 4
+            trailing_floor_pct = max(1.5, highest_pnl_pct - 1.0)  # Always keep at least +1.5% or (peak - 1.0%)
+            phase_msg = f"🚀 FASE 4: Cabalgando Tendencia (Pico +{highest_pnl_pct:.1f}%, Piso +{trailing_floor_pct:.1f}%)"
+            
+        # PHASE 3: Profit Lock (PnL reached +1.5%)
+        elif highest_pnl_pct >= 1.5 or phase >= 3:
+            phase = 3
+            trailing_floor_pct = 1.0  # Lock +1.0% profit (net +0.8% after fees)
+            phase_msg = f"💰 FASE 3: Ganancia Asegurada +1.0% (Pico +{highest_pnl_pct:.1f}%)"
+            
+        # PHASE 2: Break-Even Safe (PnL reached +0.8%)
+        elif highest_pnl_pct >= 0.8 or phase >= 2:
+            phase = 2
+            trailing_floor_pct = 0.35  # Covers 0.20% roundtrip fees + small profit
+            phase_msg = f"🛡️ FASE 2: Break-Even Seguro +0.35% (Pico +{highest_pnl_pct:.1f}%)"
+            
+        # PHASE 1: Initial Protection (wide SL to survive noise)
+        else:
+            phase = 1
+            trailing_floor_pct = -2.5  # Wide enough to survive normal crypto wicks
+            phase_msg = f"⚡ FASE 1: Protección Inicial SL -2.5% (Esperando despegue)"
 
         # ESCUDO 1: BTC Flash Crash Circuit Breaker
         btc_price_now = get_symbol_price("BTCUSDT", is_futures=False)
@@ -843,33 +860,29 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             btc_prev = state.get("_btc_last_price", btc_price_now)
             state["_btc_last_price"] = btc_price_now
             btc_drop_pct = ((btc_price_now - btc_prev) / btc_prev) * 100.0 if btc_prev > 0 else 0.0
-            if btc_drop_pct <= -1.2:
+            if btc_drop_pct <= -1.5:
                 btc_crash_emergency = True
-                print(f"🚨 ESCUDO 1 (BTC Flash Crash): BTC cayó {btc_drop_pct:.2f}%. Freno de emergencia activado!")
+                print(f"🚨 ESCUDO 1 (BTC Flash Crash): BTC cayó {btc_drop_pct:.2f}%. Freno de emergencia!")
 
         # ESCUDO 2: Guardia de Muro Inverso de Liquidez (Orderbook Wall Flip)
         ob_depth = orderbook_analyzer.fetch_orderbook_depth(active_symbol)
         ask_dominance = ob_depth.get("ask_dominance_pct", 50.0)
         orderbook_wall_emergency = False
-        if ask_dominance >= 65.0:
+        if ask_dominance >= 70.0:  # Raised from 65% to 70% to avoid false alarms
             orderbook_wall_emergency = True
-            print(f"🧱 ESCUDO 2 (Muro Inverso): Vendedores (Asks) dominan el {ask_dominance:.1f}%. Muro de ballena detectado!")
+            print(f"🧱 ESCUDO 2 (Muro Inverso): Vendedores dominan {ask_dominance:.1f}%!")
 
-        # Ultra-Precision Adaptive Trailing Stop (0.15% - 0.25% based on liquidity)
-        if trailing_active or highest_pnl_pct >= 2.0:
-            trailing_active = True
-            trailing_floor_pct = max(1.5, highest_pnl_pct - trailing_offset)
-        elif break_even_active:
-            trailing_floor_pct = 0.4  # +0.40% to cover 0.20% roundtrip Binance fees
-        else:
-            trailing_floor_pct = -abs(adaptive_sl_pct)
+        # Emergency override: Only in Phase 1 (before any profit was reached)
+        if (btc_crash_emergency or orderbook_wall_emergency) and phase == 1:
+            trailing_floor_pct = max(-1.0, trailing_floor_pct)
+            phase_msg = f"🛡️ ESCUDO DE EMERGENCIA: SL apretado a {trailing_floor_pct:+.2f}%"
 
-        # Apply Emergency Tightening if Shield 1 or Shield 2 triggered
-        if (btc_crash_emergency or orderbook_wall_emergency) and not trailing_active:
-            trailing_floor_pct = max(-0.20, trailing_floor_pct)
-            time_regime_msg = f"🛡️ ESCUDO DE EMERGENCIA ACTIVADO: Stop-Loss apretado a {trailing_floor_pct:+.2f}%"
+        # Stagnation Rule: Only applies to LOSING trades that never reached Phase 2+
+        stagnation_exit = False
+        if holding_cycles >= 60 and phase == 1 and pnl_pct < 0:  # 2 hours, still in Phase 1, still negative
+            stagnation_exit = True
 
-        tp_target = entry * (1.0 + (adaptive_sl_pct * 2.0 / 100.0))
+        tp_target = entry * (1.0 + (2.5 * 2.0 / 100.0))  # 1:2 R:R based on 2.5% SL
         sl_target = entry * (1.0 + (trailing_floor_pct / 100.0))
         
         state["position"] = {
@@ -879,11 +892,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             "highest_price": highest_price,
             "cost_usd": round(est_val, 2),
             "side": "LONG",
-            "break_even": break_even_active,
-            "trailing_active": trailing_active,
-            "adaptive_sl_pct": adaptive_sl_pct,
+            "phase": phase,
             "holding_cycles": holding_cycles,
-            "volatility_regime": time_regime_msg if time_regime_msg else atr_info.get("volatility_regime", "Estándar")
+            "volatility_regime": phase_msg
         }
         price_fmt = lambda p: f"${p:.8f}" if p < 0.01 else f"${p:.4f}"
         state["status"] = f"🔵 En Vivo LONG ({active_asset}USDT @ {price_fmt(active_current_price)})"
@@ -891,31 +902,26 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         # --- MONITOREO ACTIVO PRIORITARIO (CADA 2 MINUTOS) ---
         print("\n" + "="*65)
         print(f"📊 [SEGUIMIENTO DE POSICIÓN ACTIVA REAL - SPOT]")
-        print(f"🪙 Moneda: {active_symbol} | Cantidad: {active_qty:,.2f} {active_asset} (Tiempo Abierto: {holding_cycles*2}m / 75m)")
+        print(f"🪙 Moneda: {active_symbol} | Cantidad: {active_qty:,.2f} {active_asset} (Tiempo: {holding_cycles*2}m)")
         print(f"💵 Entrada: {price_fmt(entry)} USD | Máximo Pico: {price_fmt(highest_price)} USD (+{highest_pnl_pct:.2f}%)")
         print(f"📈 PnL Flotante Actual: {pnl_pct:+.2f}% (${pnl_usd:+.4f} USD)")
-        print(f"🚀 Modo Trailing Stop: {'🔥 ACTIVO (Distancia ' + str(trailing_offset) + '%)' if trailing_active else '⚪ Esperando +2.0%'}")
-        print(f"🛡️ Piso de Salida Dinámico: {price_fmt(sl_target)} USD ({trailing_floor_pct:+.2f}%)")
-        print(f"🏰 Trilogía de Escudos: BTC Circuit Breaker [{'🔴 ALERTA' if btc_crash_emergency else '🟢 OK'}] | Muro Orderbook [{'🔴 ALERTA' if orderbook_wall_emergency else '🟢 OK'}] | Trailing Adaptativo [{trailing_offset:.2f}%]")
-        if time_regime_msg:
-            print(f"⏳ Alerta Institucional: {time_regime_msg}")
+        print(f"🧠 {phase_msg}")
+        print(f"🛡️ Piso de Salida: {price_fmt(sl_target)} USD ({trailing_floor_pct:+.2f}%)")
+        print(f"🏰 Escudos: BTC [{'🔴' if btc_crash_emergency else '🟢'}] | Orderbook [{'🔴' if orderbook_wall_emergency else '🟢'}]")
         print("="*65 + "\n")
         
-        # Check for exit condition
+        # Check for exit condition (PRICE-DRIVEN, NOT TIME-DRIVEN)
         if entry and entry > 0:
             should_exit = False
-            if trailing_active and pnl_pct <= trailing_floor_pct:
+            if pnl_pct <= trailing_floor_pct:
                 should_exit = True
-                reason_str = f"Trailing Stop Dinámico Pico (+{highest_pnl_pct:.2f}% -> Venta en +{pnl_pct:.2f}%)"
-            elif not trailing_active and pnl_pct <= trailing_floor_pct:
+                if phase >= 2:
+                    reason_str = f"Protección de Ganancia Fase {phase} (Pico +{highest_pnl_pct:.2f}% → Venta en {pnl_pct:+.2f}%)"
+                else:
+                    reason_str = f"Stop Loss Fase 1 ({pnl_pct:.2f}% tocó piso de {trailing_floor_pct:+.2f}%)"
+            elif stagnation_exit:
                 should_exit = True
-                reason_str = f"Stop Loss Escalonado ({pnl_pct:.2f}%)"
-            elif state.get("ai_offline_cycles", 0) >= 5:
-                should_exit = True
-                reason_str = "Guardián de Seguridad: Súper-Cerebro IA Desconectado por 10 minutos (Venta de Emergencia)"
-            elif holding_cycles >= 38 and not break_even_active and not trailing_active:
-                should_exit = True
-                reason_str = f"Liberación Final por Estancamiento (75m / 1h 15m sin movimiento PnL={pnl_pct:+.2f}%)"
+                reason_str = f"Liberación por Estancamiento (2h en Fase 1, PnL={pnl_pct:+.2f}%)"
                 
             if should_exit:
                 print(f"🎯 ALERTA REAL: Salida LONG por {reason_str} en {active_symbol}. Vendiendo...")
