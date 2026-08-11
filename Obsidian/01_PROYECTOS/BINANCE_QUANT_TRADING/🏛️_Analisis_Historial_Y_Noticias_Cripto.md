@@ -1944,3 +1944,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2026-06-24 (-11.39%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: NILUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-03-24` hasta `2026-08-11` (506 Días de Historial)
+- 💵 **Precio Actual:** `$0.0362 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.9770 USD` (`2025-03-24`) | Distancia: `-96.29%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0273 USD` (`2026-08-01`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-05-07 (+111.59%)`, `2025-03-24 (+81.75%)`, `2026-05-20 (+27.78%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-11-19 (-44.89%)`, `2025-10-10 (-29.18%)`, `2026-05-08 (-23.04%)`
+
+---
