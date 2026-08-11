@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 12:02:15
+date: 2026-08-11 12:04:26
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 12:02:15`
+> ⏱️ **Última Actualización:** `2026-08-11 12:04:26`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -105,9 +105,9 @@ date: 2026-08-11 12:02:15
 | **SIM-033** | **SOXLBUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
 | **SIM-034** | **SOXLBUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
 | **SIM-035** | **SOXLBUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
-| **SIM-036** | **SNXXBUSDT** | `#22` | `5W/17L` | 26-08-11<br>12:02 | `🔴 Perdió -$0.23` | **`$99.67`** (`-$0.33`) | 🔴 Buscando |
-| **SIM-037** | **SNXXBUSDT** | `#22` | `5W/17L` | 26-08-11<br>12:02 | `🔴 Perdió -$0.23` | **`$99.67`** (`-$0.33`) | 🔴 Buscando |
-| **SIM-038** | **SNXXBUSDT** | `#22` | `5W/17L` | 26-08-11<br>12:02 | `🔴 Perdió -$0.23` | **`$99.67`** (`-$0.33`) | 🔴 Buscando |
+| **SIM-036** | **SNXXBUSDT** | `#22` | `5W/17L` | 26-08-11<br>12:04 | `🔴 Perdió -$0.23` | **`$99.67`** (`-$0.33`) | 🔴 Buscando |
+| **SIM-037** | **SNXXBUSDT** | `#22` | `5W/17L` | 26-08-11<br>12:04 | `🔴 Perdió -$0.23` | **`$99.67`** (`-$0.33`) | 🔴 Buscando |
+| **SIM-038** | **SNXXBUSDT** | `#22` | `5W/17L` | 26-08-11<br>12:04 | `🔴 Perdió -$0.23` | **`$99.67`** (`-$0.33`) | 🔴 Buscando |
 | **SIM-039** | **RENDERUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
 | **SIM-040** | **RENDERUSDT** | `#21` | `5W/16L` | 26-08-11<br>11:06 | `🔵 En Curso` | **`$99.90`** (`-$0.10`) | 🔵 En Vivo |
 
