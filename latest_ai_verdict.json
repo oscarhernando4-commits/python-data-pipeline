@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-11 20:46:24",
+  "timestamp": "2026-08-11 20:48:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual presenta una divergencia técnica y una falta de profundidad en el libro de órdenes que no cumple con los estándares de seguridad del comité. Se prioriza la preservación del capital sobre la ejecución especulativa en un entorno de alta volatilidad y baja convicción.",
+  "reasoning": "El mercado se encuentra en una fase de indecisión defensiva con falta de profundidad en el libro de órdenes y scores técnicos insuficientes. Ningún activo cumple con los requisitos de alta convicción del comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -54,7 +54,7 @@
       "rsi_15m": 30.2,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.0,
+      "vol_surge": 0.01,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
