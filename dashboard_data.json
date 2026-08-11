@@ -13,7 +13,7 @@
     "cost_usd": 16.12,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 56,
+    "holding_cycles": 57,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -144,13 +144,13 @@
       {
         "symbol": "EULUSDT",
         "score": 75,
-        "price": 30.68,
-        "rsi_2m": 54.92,
-        "rsi_5m": 54.92,
-        "rsi_15m": 54.92,
+        "price": 0.607,
+        "rsi_2m": 61.12,
+        "rsi_5m": 61.12,
+        "rsi_15m": 61.12,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.29,
+        "vol_surge": 0.07,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
@@ -163,20 +163,20 @@
         "rsi_15m": 50.75,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 3.84,
+        "vol_surge": 5.52,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "TAOUSDT",
-        "score": 65,
-        "price": 200.9,
-        "rsi_2m": 59.94,
-        "rsi_5m": 59.94,
-        "rsi_15m": 59.94,
+        "symbol": "ETCUSDT",
+        "score": 70,
+        "price": 6.38,
+        "rsi_2m": 54.86,
+        "rsi_5m": 54.86,
+        "rsi_15m": 54.86,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.23,
+        "vol_surge": 1.52,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }
