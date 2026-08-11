@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-11 20:48:19",
+  "timestamp": "2026-08-11 20:50:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de indecisión defensiva con falta de profundidad en el libro de órdenes y scores técnicos insuficientes. Ningún activo cumple con los requisitos de alta convicción del comité, por lo que se prioriza la preservación del capital sobre la ejecución de trades de baja probabilidad.",
+  "reasoning": "El mercado presenta una estructura de fragmentación defensiva sin una tendencia clara. Ninguno de los candidatos cumple con los requisitos estrictos de convicción A+ del comité, por lo que se prioriza la preservación del capital sobre la ejecución especulativa.",
   "top_candidates": [
     {
       "symbol": "TRXUSDT",
@@ -22,13 +22,13 @@
     {
       "symbol": "GOOGLBUSDT",
       "score": 70,
-      "price": 345.51,
-      "rsi_2m": 30.2,
-      "rsi_5m": 30.2,
-      "rsi_15m": 30.2,
+      "price": 345.5,
+      "rsi_2m": 30.15,
+      "rsi_5m": 30.15,
+      "rsi_15m": 30.15,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.01,
+      "vol_surge": 0.03,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -85,7 +85,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "LINKUSDT",
+      "symbol": "MMTUSDT",
       "score": 65,
       "price": 8.697,
       "rsi_2m": 66.75,
@@ -133,6 +133,71 @@
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.1,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "score": 65,
+      "price": 4.5e-06,
+      "rsi_2m": 60.66,
+      "rsi_5m": 60.66,
+      "rsi_15m": 60.66,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.11,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "LINKUSDT",
+      "score": 65,
+      "price": 8.683,
+      "rsi_2m": 64.18,
+      "rsi_5m": 64.18,
+      "rsi_15m": 64.18,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.37,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "BICOUSDT",
+      "score": 65,
+      "price": 0.03972,
+      "rsi_2m": 57.21,
+      "rsi_5m": 57.21,
+      "rsi_15m": 57.21,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.27,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "ZECUSDT",
+      "score": 65,
+      "price": 477.85,
+      "rsi_2m": 57.65,
+      "rsi_5m": 57.65,
+      "rsi_15m": 57.65,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.28,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "TSTUSDT",
+      "score": 65,
+      "price": 0.01673,
+      "rsi_2m": 57.72,
+      "rsi_5m": 57.72,
+      "rsi_15m": 57.72,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.07,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
