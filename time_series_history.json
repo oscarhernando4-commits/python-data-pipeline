@@ -1,10 +1,10 @@
 {
-  "ACTUSDT": [
+  "GENIUSUSDT": [
     {
-      "timestamp": "2026-08-11 14:24:21",
-      "price": 0.01004,
-      "score": 0,
-      "rsi": 33.0,
+      "timestamp": "2026-08-11 14:26:22",
+      "price": 0.375,
+      "score": 35,
+      "rsi": 55.58,
       "macd": "Neutral",
       "volume_surge": 0.36,
       "wyckoff": "Sin patron",
@@ -53,12 +53,25 @@
   ],
   "ZBTUSDT": [
     {
-      "timestamp": "2026-08-11 14:24:21",
-      "price": 0.094,
-      "score": 30,
-      "rsi": 32.49,
+      "timestamp": "2026-08-11 14:26:22",
+      "price": 0.0939,
+      "score": 55,
+      "rsi": 31.62,
       "macd": "Neutral",
-      "volume_surge": 0.18,
+      "volume_surge": 0.21,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "NVDABUSDT": [
+    {
+      "timestamp": "2026-08-11 14:26:22",
+      "price": 218.03,
+      "score": 0,
+      "rsi": 46.2,
+      "macd": "Neutral",
+      "volume_surge": 0.08,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
