@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2473,
+    "total_trades": 2474,
     "wins": 449,
-    "losses": 2024,
-    "win_rate_pct": 18.16,
-    "total_pnl_usd": 112369.03700545475
+    "losses": 2025,
+    "win_rate_pct": 18.15,
+    "total_pnl_usd": 112368.94700545476
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -41298,6 +41298,23 @@
       "context": {
         "score": 30,
         "rsi_15m": 37.47,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 11:52:18",
+      "account_id": "SIM-061",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "RADUSDT",
+      "side": "SHORT",
+      "entry_price": 0.289,
+      "exit_price": 0.29,
+      "pnl_usd": -0.09,
+      "result": "LOSS",
+      "notes": "Hit SL on RADUSDT (-$0.09). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 50.54,
         "macro_trend_4h": "NEUTRAL"
       }
     }

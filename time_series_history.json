@@ -1,12 +1,38 @@
 {
-  "LDOUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-11 11:50:09",
-      "price": 0.2925,
-      "score": 15,
-      "rsi": 37.24,
+      "timestamp": "2026-08-11 11:52:07",
+      "price": 0.1305,
+      "score": 30,
+      "rsi": 46.33,
       "macd": "Neutral",
-      "volume_surge": 0.08,
+      "volume_surge": 0.23,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CVXUSDT": [
+    {
+      "timestamp": "2026-08-11 11:52:07",
+      "price": 1.688,
+      "score": 40,
+      "rsi": 48.59,
+      "macd": "Neutral",
+      "volume_surge": 8.09,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LUNCUSDT": [
+    {
+      "timestamp": "2026-08-11 11:52:07",
+      "price": 5e-05,
+      "score": 25,
+      "rsi": 43.73,
+      "macd": "Neutral",
+      "volume_surge": 3.47,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
