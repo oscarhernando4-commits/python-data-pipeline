@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 03:22:21
+date: 2026-08-11 03:24:23
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 03:22:21`
+> ⏱️ **Última Actualización:** `2026-08-11 03:24:23`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -136,12 +136,12 @@ date: 2026-08-11 03:22:21
 | **SIM-052** | **FORMUSDT** | `#10` | `3W/6L` | 26-08-10<br>19:10 | `🔵 En Curso` | **`$89.74`** (`-$10.26`) | 🔵 En Vivo |
 | **SIM-053** | **ZECUSDT** | `#10` | `5W/5L` | 26-08-11<br>01:08 | `🔵 En Curso` | **`$149.02`** (`+$49.02`) | 🔵 En Vivo |
 | **SIM-054** | **FORMUSDT** | `#12` | `4W/7L` | 26-08-10<br>19:10 | `🔵 En Curso` | **`$115.76`** (`+$15.76`) | 🔵 En Vivo |
-| **SIM-055** | **POLUSDT** | `#11` | `4W/7L` | 26-08-11<br>03:22 | `🔴 Perdió -$0.29` | **`$144.37`** (`+$44.37`) | 🟢 Buscando |
+| **SIM-055** | **POLUSDT** | `#11` | `4W/7L` | 26-08-11<br>03:24 | `🔴 Perdió -$0.29` | **`$144.37`** (`+$44.37`) | 🟢 Buscando |
 | **SIM-056** | **XRPUSDT** | `#7` | `3W/4L` | 26-08-10<br>22:06 | `🔵 En Curso` | **`$142.75`** (`+$42.75`) | 🔵 En Vivo |
 | **SIM-057** | **XRPUSDT** | `#5` | `2W/3L` | 26-08-10<br>22:06 | `🔵 En Curso` | **`$101.64`** (`+$1.64`) | 🔵 En Vivo |
 | **SIM-058** | **XRPUSDT** | `#7` | `3W/3L` | 26-08-10<br>22:06 | `🔵 En Curso` | **`$143.74`** (`+$43.74`) | 🔵 En Vivo |
-| **SIM-059** | **POLUSDT** | `#9` | `3W/4L` | 26-08-11<br>03:22 | `🔴 Perdió -$0.29` | **`$143.15`** (`+$43.15`) | 🟢 Buscando |
-| **SIM-060** | **POLUSDT** | `#8` | `3W/4L` | 26-08-11<br>03:22 | `🔴 Perdió -$0.29` | **`$143.71`** (`+$43.71`) | 🟢 Buscando |
+| **SIM-059** | **POLUSDT** | `#9` | `3W/4L` | 26-08-11<br>03:24 | `🔴 Perdió -$0.29` | **`$143.15`** (`+$43.15`) | 🟢 Buscando |
+| **SIM-060** | **POLUSDT** | `#8` | `3W/4L` | 26-08-11<br>03:24 | `🔴 Perdió -$0.29` | **`$143.71`** (`+$43.71`) | 🟢 Buscando |
 
 ---
 
