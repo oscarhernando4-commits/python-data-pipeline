@@ -879,7 +879,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
 
         # Stagnation Rule: Only applies to LOSING trades that never reached Phase 2+
         stagnation_exit = False
-        if holding_cycles >= 60 and phase == 1 and pnl_pct < 0:  # 2 hours, still in Phase 1, still negative
+        if holding_cycles >= 120 and phase == 1 and pnl_pct < 0:  # 4 hours (120 cycles * 2m = 240m), still in Phase 1, still negative
             stagnation_exit = True
 
         tp_target = entry * (1.0 + (2.5 * 2.0 / 100.0))  # 1:2 R:R based on 2.5% SL
@@ -921,7 +921,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     reason_str = f"Stop Loss Fase 1 ({pnl_pct:.2f}% tocó piso de {trailing_floor_pct:+.2f}%)"
             elif stagnation_exit:
                 should_exit = True
-                reason_str = f"Liberación por Estancamiento (2h en Fase 1, PnL={pnl_pct:+.2f}%)"
+                reason_str = f"Liberación por Estancamiento (4h en Fase 1, PnL={pnl_pct:+.2f}%)"
                 
             if should_exit:
                 print(f"🎯 ALERTA REAL: Salida LONG por {reason_str} en {active_symbol}. Vendiendo...")
