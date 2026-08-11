@@ -202,16 +202,28 @@ def analyze_multi_timeframe_candles(symbol):
     is_oversold_bounce_candidate = (pct_b <= 0.25 or rsi_2m <= 35.0 or rsi_5m <= 38.0)
     is_overbought_exhaustion = (pct_b >= 0.85 or rsi_2m >= 68.0 or dist_from_15m_ma7_pct > 3.0)
 
-    # Multi-Timeframe Alignment Score (0 to 100) including 2m synchronization
+    # Detect RSI Bullish Divergence (Price Lower Low + RSI Higher Low = Early Floor Reversal)
+    is_bullish_divergence = False
+    if len(closes_15m) >= 10:
+        recent_low = min(closes_15m[-5:])
+        prev_low = min(closes_15m[-10:-5])
+        if recent_low < prev_low:
+            recent_rsi = calculate_rsi(closes_15m[-5:])
+            prev_rsi = calculate_rsi(closes_15m[-10:-5])
+            if recent_rsi > prev_rsi + 3.0:
+                is_bullish_divergence = True
+
+    # Multi-Timeframe Alignment Score (0 to 100) including 2m synchronization + Divergence Bonus
     score_components = [
         tf_2m_up * 10,
         tf_5m_up * 15,
         tf_15m_up * 25,
         tf_1h_up * 20,
         tf_4h_up * 15,
-        tf_1d_up * 15
+        tf_1d_up * 15,
+        15 if is_bullish_divergence else 0
     ]
-    multi_tf_score = sum(score_components)
+    multi_tf_score = min(100, sum(score_components))
     
     # 4. Detect 15m Candle Over-extension / Parabolic Spike (Prevents buying tops like ZRO, ATOM)
     is_overextended_15m = False
