@@ -1,27 +1,32 @@
 {
   "initial_deposit_usdt": 17.13,
   "initial_total_usd": 20.08,
-  "current_balance_usd": 19.98,
-  "net_pnl_usd": 2.85,
+  "current_balance_usd": 20.02,
+  "net_pnl_usd": 2.89,
   "wins": 7,
   "losses": 9,
   "trades_count": 15,
   "position": {
     "symbol": "NVDABUSDT",
+    "quantity": 0.079,
     "entry_price": 221.15,
+    "highest_price": 221.15,
     "cost_usd": 17.47,
     "side": "LONG",
-    "quantity": 0.079,
-    "break_even": false
+    "break_even": false,
+    "trailing_active": false,
+    "adaptive_sl_pct": 0.96,
+    "holding_cycles": 1,
+    "volatility_regime": "🛡️ Tope Máximo de Riesgo Blindado (-1.0% Máx)"
   },
-  "last_trade_time": "26-08-11<br>07:28",
-  "status": "🔵 En Vivo LONG (NVDABUSDT @ $221.1500)",
+  "last_trade_time": "26-08-11<br>07:30",
+  "status": "🔵 En Vivo LONG (NVDABUSDT @ $221.0900)",
   "daily_wins": 0,
   "daily_losses": 2,
-  "_cached_total_val": 19.98,
-  "_cached_usdt_free": 0.0,
-  "_cached_bnb": 0.00396102,
-  "_cached_bnb_usd": 2.38,
+  "_cached_total_val": 20.02,
+  "_cached_usdt_free": 0.1354,
+  "_cached_bnb": 0.00393967,
+  "_cached_bnb_usd": 2.41,
   "last_trading_day": "2026-08-10",
-  "_btc_last_price": 63941.87
+  "_btc_last_price": 64327.64
 }
