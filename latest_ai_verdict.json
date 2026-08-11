@@ -1,37 +1,11 @@
 {
-  "timestamp": "2026-08-11 15:18:30",
+  "timestamp": "2026-08-11 15:20:29",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras evaluar los candidatos, ninguno cumple con los criterios estrictos de Score Técnico (>= 55) y soporte de libro de órdenes. El mercado presenta un sesgo neutral con alta volatilidad y un historial reciente de pérdidas en activos similares, por lo que la decisión institucional es mantener el 100% de la liquidez en USDT para evitar el riesgo de 'falling knives'.",
+  "reasoning": "El comité ha evaluado a todos los candidatos y ha determinado que ninguno cumple con los criterios estrictos de riesgo y convicción técnica. La volatilidad actual y la falta de soporte institucional en el libro de órdenes sugieren que la preservación del capital es la estrategia óptima en este momento.",
   "top_candidates": [
-    {
-      "symbol": "GENIUSUSDT",
-      "score": 60,
-      "price": 0.3683,
-      "rsi_2m": 58.22,
-      "rsi_5m": 58.22,
-      "rsi_15m": 58.22,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.27,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "SKHYBUSDT",
-      "score": 55,
-      "price": 139.14,
-      "rsi_2m": 58.57,
-      "rsi_5m": 58.57,
-      "rsi_15m": 58.57,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 4.3,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
     {
       "symbol": "TUTUSDT",
       "score": 50,
@@ -46,12 +20,51 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "ENAUSDT",
       "score": 50,
-      "price": 0.002745,
-      "rsi_2m": 50.72,
-      "rsi_5m": 50.72,
-      "rsi_15m": 50.72,
+      "price": 0.09,
+      "rsi_2m": 54.13,
+      "rsi_5m": 54.13,
+      "rsi_15m": 54.13,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.8,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "REUSDT",
+      "score": 50,
+      "price": 0.423,
+      "rsi_2m": 56.09,
+      "rsi_5m": 56.09,
+      "rsi_15m": 56.09,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.29,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "GIGGLEUSDT",
+      "score": 50,
+      "price": 36.75,
+      "rsi_2m": 63.26,
+      "rsi_5m": 63.26,
+      "rsi_15m": 63.26,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.39,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "SNXXBUSDT",
+      "score": 50,
+      "price": 9.91,
+      "rsi_2m": 62.64,
+      "rsi_5m": 62.64,
+      "rsi_15m": 62.64,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.12,
@@ -72,7 +85,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "BMTUSDT",
+      "symbol": "BROCCOLI714USDT",
       "score": 50,
       "price": 0.02174,
       "rsi_2m": 67.1,
@@ -85,7 +98,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "ENAUSDT",
+      "symbol": "ACEUSDT",
       "score": 50,
       "price": 0.0897,
       "rsi_2m": 49.43,
