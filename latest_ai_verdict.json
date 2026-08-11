@@ -7,6 +7,19 @@
   "reasoning": "Tras deliberar, el comité ha determinado que el mercado actual carece de la fuerza institucional necesaria para justificar una entrada. Ningún activo cumple con el umbral de convicción A+ (Score >= 55 con soporte de libro de órdenes claro), y el historial de simulaciones advierte sobre el alto riesgo de pérdidas en entornos neutrales. Se prioriza la preservación del capital.",
   "top_candidates": [
     {
+      "symbol": "TRXUSDT",
+      "score": 75,
+      "price": 0.3354,
+      "rsi_2m": 56.93,
+      "rsi_5m": 56.93,
+      "rsi_15m": 56.93,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 1.07,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "XRPUSDT",
       "score": 75,
       "price": 1.0254,
@@ -87,10 +100,10 @@
     {
       "symbol": "MMTUSDT",
       "score": 65,
-      "price": 213.7,
-      "rsi_2m": 64.21,
-      "rsi_5m": 64.21,
-      "rsi_15m": 64.21,
+      "price": 0.2114,
+      "rsi_2m": 47.78,
+      "rsi_5m": 47.78,
+      "rsi_15m": 47.78,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.91,
