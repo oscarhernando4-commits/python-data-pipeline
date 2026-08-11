@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2614,
+    "total_trades": 2615,
     "wins": 482,
-    "losses": 2132,
-    "win_rate_pct": 18.44,
-    "total_pnl_usd": 108227.53615545474
+    "losses": 2133,
+    "win_rate_pct": 18.43,
+    "total_pnl_usd": 108227.47615545474
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SNXXBUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MUBUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BANANAS31USDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SUIUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ACTUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on FETUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ACEUSDT)",
-      "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SUIUSDT)"
+      "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SUIUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COOKIEUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HEIUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-10 00:28:22",
-      "account_id": "SIM-061",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "PEOPLEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.00898,
-      "exit_price": 0.00898,
-      "pnl_usd": -1.12,
-      "result": "LOSS",
-      "notes": "Hit SL on PEOPLEUSDT (-$1.12). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 44.09,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-10 00:28:22",
       "account_id": "SIM-062",
@@ -8250,6 +8233,23 @@
       "context": {
         "score": 35,
         "rsi_15m": 19.3,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 15:16:26",
+      "account_id": "SIM-092",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "COOKIEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0146,
+      "exit_price": 0.0146,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on COOKIEUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 60.77,
         "macro_trend_4h": "NEUTRAL"
       }
     }
