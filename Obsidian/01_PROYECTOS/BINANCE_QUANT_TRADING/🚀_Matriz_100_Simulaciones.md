@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 14:08:25
+date: 2026-08-11 14:10:26
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 14:08:25`
+> ⏱️ **Última Actualización:** `2026-08-11 14:10:26`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -154,7 +154,7 @@ date: 2026-08-11 14:08:25
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-061** | **DEXEUSDT** | `#63` | `10W/52L` | 26-08-11<br>14:08 | `🔴 Perdió -$4082.85` | **`$-3981.94`** (`-$4081.94`) | 🔴 Buscando |
+| **SIM-061** | **DEXEUSDT** | `#63` | `10W/52L` | 26-08-11<br>14:10 | `🔴 Perdió -$4082.85` | **`$-3981.94`** (`-$4081.94`) | 🔴 Buscando |
 | **SIM-062** | **PEPEUSDT** | `#59` | `11W/47L` | 26-08-11<br>05:16 | `🛡️ Protegida (BE)` | **`$108.73`** (`+$8.73`) | 🔵 En Vivo |
 | **SIM-063** | **PEPEUSDT** | `#59` | `11W/47L` | 26-08-11<br>05:16 | `🛡️ Protegida (BE)` | **`$108.73`** (`+$8.73`) | 🔵 En Vivo |
 | **SIM-064** | **PEPEUSDT** | `#61` | `9W/52L` | 26-08-11<br>05:16 | `🛡️ Protegida (BE)` | **`$98.10`** (`-$1.90`) | 🔵 En Vivo |
