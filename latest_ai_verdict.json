@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-11 20:42:22",
+  "timestamp": "2026-08-11 20:44:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un régimen de alta incertidumbre y baja convicción. Ninguno de los candidatos cumple con los requisitos estrictos de riesgo y volumen exigidos por el comité, por lo que la estrategia óptima es la preservación de capital mediante la neutralidad táctica.",
+  "reasoning": "Tras analizar los candidatos, ninguno cumple con los requisitos estrictos de convicción A+ y soporte de liquidez institucional. El mercado presenta una estructura de alta incertidumbre y los patrones históricos recientes sugieren una alta probabilidad de pérdida en condiciones de mercado neutral. Se mantiene la liquidez en espera de una señal de alta probabilidad.",
   "top_candidates": [
     {
       "symbol": "BNBUSDT",
@@ -85,7 +85,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "CRVUSDT",
       "score": 65,
       "price": 0.002789,
       "rsi_2m": 64.31,
@@ -98,7 +98,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "PUMPUSDT",
+      "symbol": "ZECUSDT",
       "score": 65,
       "price": 477.67,
       "rsi_2m": 57.07,
