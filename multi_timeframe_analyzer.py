@@ -184,9 +184,14 @@ def analyze_multi_timeframe_candles(symbol):
 
     # 15m Microstructure moving averages (MA7, MA25) & Volume Surge
     ma7_15m = sum(closes_15m[-7:]) / len(closes_15m[-7:]) if len(closes_15m) >= 7 else closes_15m[-1]
-    ma25_15m = sum(closes_15m[-20:]) / len(closes_15m[-20:]) if closes_15m else closes_15m[-1]
+    ma25_15m = sum(closes_15m[-20:]) / len(closes_15m[-20:]) if len(closes_15m) >= 20 else closes_15m[-1]
+    
+    # Strict MA25 calculation: Slope must be ascending and price must be strictly +0.15% above MA25
+    prev_ma25_15m = sum(closes_15m[-21:-1]) / len(closes_15m[-21:-1]) if len(closes_15m) >= 21 else ma25_15m
+    ma25_slope_ok = ma25_15m >= (prev_ma25_15m * 0.9995)
+    
     price_above_15m_ma7 = closes_15m[-1] > ma7_15m
-    price_above_15m_ma25 = closes_15m[-1] > ma25_15m
+    price_above_15m_ma25 = (closes_15m[-1] >= ma25_15m * 1.0015) and ma25_slope_ok
     dist_from_15m_ma7_pct = round(((closes_15m[-1] - ma7_15m) / ma7_15m) * 100.0, 2) if ma7_15m > 0 else 0.0
     
     avg_vol_15m = sum(vols_15m[-5:]) / len(vols_15m[-5:]) if len(vols_15m) >= 5 else 1.0

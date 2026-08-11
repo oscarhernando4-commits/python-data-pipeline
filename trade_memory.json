@@ -1,16 +1,13 @@
 {
   "stats": {
-    "total_trades": 2333,
+    "total_trades": 2342,
     "wins": 428,
-    "losses": 1905,
-    "win_rate_pct": 18.35,
-    "total_pnl_usd": 112462.30700545461
+    "losses": 1914,
+    "win_rate_pct": 18.27,
+    "total_pnl_usd": 112460.62700545462
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on KITEUSDT)",
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ZROUSDT)",
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on VICUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MEUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PHAUSDT)",
@@ -27,7 +24,10 @@
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on RENDERUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PUMPUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SOXLBUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on GUNUSDT)"
+      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on KORUBUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SNXXBUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on GUNUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on KORUBUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DOGEUSDT)",
@@ -38960,6 +38960,125 @@
       "context": {
         "score": 30,
         "rsi_15m": 45.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 19:04:48",
+      "account_id": "SIM-061",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SNXXBUSDT",
+      "side": "SHORT",
+      "entry_price": 9.49,
+      "exit_price": 9.47,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on SNXXBUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 50.72,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 19:04:48",
+      "account_id": "SIM-062",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SNXXBUSDT",
+      "side": "SHORT",
+      "entry_price": 9.49,
+      "exit_price": 9.47,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on SNXXBUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 50.72,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 19:04:48",
+      "account_id": "SIM-063",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SNXXBUSDT",
+      "side": "SHORT",
+      "entry_price": 9.49,
+      "exit_price": 9.47,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on SNXXBUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 50.72,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 19:04:48",
+      "account_id": "SIM-064",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GUNUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00326,
+      "exit_price": 0.00327,
+      "pnl_usd": -0.08,
+      "result": "LOSS",
+      "notes": "Hit SL on GUNUSDT (-$0.08). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 45.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 19:04:49",
+      "account_id": "SIM-071",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "KORUBUSDT",
+      "side": "SHORT",
+      "entry_price": 16.56,
+      "exit_price": 16.53,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on KORUBUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.71,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 19:04:49",
+      "account_id": "SIM-072",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "KORUBUSDT",
+      "side": "SHORT",
+      "entry_price": 16.56,
+      "exit_price": 16.53,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on KORUBUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.71,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-10 19:04:49",
+      "account_id": "SIM-073",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "KORUBUSDT",
+      "side": "SHORT",
+      "entry_price": 16.56,
+      "exit_price": 16.53,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on KORUBUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 48.71,
         "macro_trend_4h": "NEUTRAL"
       }
     }

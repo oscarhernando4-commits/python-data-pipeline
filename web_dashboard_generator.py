@@ -379,7 +379,7 @@ def generate_web_dashboard():
         c_score_ok = cand_score >= 58
         c_quant_ok = cand_qual in ("A+", "B") or cand_vol >= 1.00 or cand_sym in ("PAXGUSDT", "XAUTUSDT")
         c_rsi_ok = cand_rsi_2m <= 68 or cand_rsi_5m <= 68
-        c_ma_ok = cand_price >= cand_ma25 if (cand_price > 0 and cand_ma25 > 0) else True
+        c_ma_ok = (cand_price >= cand_ma25 * 1.0015) if (cand_price > 0 and cand_ma25 > 0) else True
         ai_approved = verdict_data.get("approved", True)
         
         c_eligible = has_usdt and no_open_pos and c_score_ok and c_quant_ok and c_rsi_ok and c_ma_ok and btc_ok and ai_approved
@@ -525,11 +525,11 @@ def generate_web_dashboard():
 
             <div class="checklist-item {'checklist-pass' if ma_structure_ok else 'checklist-pending'}">
                 <div>
-                    <div class="checklist-title">6. Filtro Anti-Trampa 15M (MA25)</div>
-                    <div class="checklist-sub">Precio sobre media móvil de 15m</div>
+                    <div class="checklist-title">6. Filtro Anti-Trampa 15M (MA25 Estricta)</div>
+                    <div class="checklist-sub">Precio >= MA25 (+0.15% Buffer + Pendiente Alcista)</div>
                 </div>
                 <div class="checklist-sub" style="font-weight: 800; color: {'var(--accent-emerald)' if ma_structure_ok else 'var(--accent-amber)'};">
-                    {'🟢 CUMPLIDO (Precio > MA25)' if ma_structure_ok else '🟡 TRAMPA MECHA (Bajo MA25)'}
+                    {'🟢 CUMPLIDO (Precio > MA25 +0.15%)' if ma_structure_ok else '🟡 TRAMPA MECHA (Insuficiente Buffer MA25)'}
                 </div>
             </div>
 
