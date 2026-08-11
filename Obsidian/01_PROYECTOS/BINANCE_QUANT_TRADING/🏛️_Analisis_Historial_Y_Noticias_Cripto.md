@@ -1840,3 +1840,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-22.72%)`, `2024-04-12 (-20.89%)`, `2026-02-01 (-16.83%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: PROMUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-16` hasta `2026-08-11` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$2.5290 USD`
+- 📈 **Máximo Histórico (ATH):** `$16.4220 USD` (`2024-03-08`) | Distancia: `-84.6%`
+- 📉 **Mínimo Histórico (ATL):** `$0.8360 USD` (`2026-06-03`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-02-14 (+67.75%)`, `2024-10-25 (+60.69%)`, `2026-04-18 (+47.71%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-05-18 (-34.85%)`, `2026-01-16 (-32.26%)`, `2024-10-26 (-22.51%)`
+
+---
