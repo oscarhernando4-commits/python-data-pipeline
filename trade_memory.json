@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2509,
-    "wins": 450,
-    "losses": 2059,
-    "win_rate_pct": 17.94,
-    "total_pnl_usd": 112360.7161554548
+    "total_trades": 2515,
+    "wins": 453,
+    "losses": 2062,
+    "win_rate_pct": 18.01,
+    "total_pnl_usd": 112361.73615545478
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on FETUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SOXLBUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ALGOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on RADUSDT)",
@@ -27,10 +26,10 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LUNAUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on COOKIEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SOXLBUSDT)",
-      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SNXXBUSDT)"
+      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SNXXBUSDT)",
+      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MUBUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on EPICUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BTCUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ACEUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TSTUSDT)",
@@ -49,7 +48,8 @@
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on REUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on AXTIBUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MAVUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HEIUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HEIUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SNXXBUSDT)"
     ]
   },
   "history": [
@@ -8258,6 +8258,108 @@
       "context": {
         "score": 20,
         "rsi_15m": 74.83,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 13:46:17",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MUBUSDT",
+      "side": "LONG",
+      "entry_price": 869.9,
+      "exit_price": 855.92,
+      "pnl_usd": -0.34,
+      "result": "LOSS",
+      "notes": "Hit SL on MUBUSDT (-$0.34). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 33.35,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 13:46:17",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MUBUSDT",
+      "side": "LONG",
+      "entry_price": 869.9,
+      "exit_price": 855.92,
+      "pnl_usd": -0.34,
+      "result": "LOSS",
+      "notes": "Hit SL on MUBUSDT (-$0.34). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 33.35,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 13:46:17",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MUBUSDT",
+      "side": "LONG",
+      "entry_price": 869.9,
+      "exit_price": 855.92,
+      "pnl_usd": -0.34,
+      "result": "LOSS",
+      "notes": "Hit SL on MUBUSDT (-$0.34). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 33.35,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 13:46:17",
+      "account_id": "SIM-033",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "SNXXBUSDT",
+      "side": "SHORT",
+      "entry_price": 9.97,
+      "exit_price": 9.62,
+      "pnl_usd": 0.68,
+      "result": "WIN",
+      "notes": "Win on SNXXBUSDT (+$0.68 net) -> Level 7 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 49.33,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 13:46:17",
+      "account_id": "SIM-034",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "SNXXBUSDT",
+      "side": "SHORT",
+      "entry_price": 9.97,
+      "exit_price": 9.62,
+      "pnl_usd": 0.68,
+      "result": "WIN",
+      "notes": "Win on SNXXBUSDT (+$0.68 net) -> Level 7 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 49.33,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 13:46:17",
+      "account_id": "SIM-035",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "SNXXBUSDT",
+      "side": "SHORT",
+      "entry_price": 9.97,
+      "exit_price": 9.62,
+      "pnl_usd": 0.68,
+      "result": "WIN",
+      "notes": "Win on SNXXBUSDT (+$0.68 net) -> Level 7 Re-Trading Started!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 49.33,
         "macro_trend_4h": "NEUTRAL"
       }
     }
