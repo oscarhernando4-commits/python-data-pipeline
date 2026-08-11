@@ -282,6 +282,7 @@ def analyze_multi_timeframe_candles(symbol):
         "pct_b_15m": round(pct_b, 2),
         "is_oversold_bounce_candidate": is_oversold_bounce_candidate,
         "is_overbought_exhaustion": is_overbought_exhaustion,
+        "is_bullish_divergence": is_bullish_divergence,
         "price_above_15m_mas": price_above_15m_ma7 and price_above_15m_ma25,
         "vol_surge_2m": vol_surge_2m,
         "vol_surge_15m": vol_surge_15m,
