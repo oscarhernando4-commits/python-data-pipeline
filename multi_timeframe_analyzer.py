@@ -192,11 +192,16 @@ def analyze_multi_timeframe_candles(symbol):
     
     price_above_15m_ma7 = closes_15m[-1] > ma7_15m
     price_above_15m_ma25 = (closes_15m[-1] >= ma25_15m * 1.0015) and ma25_slope_ok
-    dist_from_15m_ma7_pct = round(((closes_15m[-1] - ma7_15m) / ma7_15m) * 100.0, 2) if ma7_15m > 0 else 0.0
+    import numpy as np
+    std_15m = float(np.std(closes_15m[-20:])) if len(closes_15m) >= 20 else 0.001
+    bb_upper = ma25_15m + (2.0 * std_15m)
+    bb_lower = ma25_15m - (2.0 * std_15m)
+    bb_range = bb_upper - bb_lower
+    pct_b = float((closes_15m[-1] - bb_lower) / bb_range) if bb_range > 0 else 0.5
     
-    avg_vol_15m = sum(vols_15m[-5:]) / len(vols_15m[-5:]) if len(vols_15m) >= 5 else 1.0
-    vol_surge_15m = round(vols_15m[-1] / avg_vol_15m, 2) if avg_vol_15m > 0 else 1.0
-    
+    is_oversold_bounce_candidate = (pct_b <= 0.25 or rsi_2m <= 35.0 or rsi_5m <= 38.0)
+    is_overbought_exhaustion = (pct_b >= 0.85 or rsi_2m >= 68.0 or dist_from_15m_ma7_pct > 3.0)
+
     # Multi-Timeframe Alignment Score (0 to 100) including 2m synchronization
     score_components = [
         tf_2m_up * 10,
@@ -261,6 +266,9 @@ def analyze_multi_timeframe_candles(symbol):
         "is_overextended_15m": is_overextended_15m,
         "overextension_reason": overextension_reason,
         "is_yellow_arrow_pivot": is_yellow_arrow_pivot,
+        "pct_b_15m": round(pct_b, 2),
+        "is_oversold_bounce_candidate": is_oversold_bounce_candidate,
+        "is_overbought_exhaustion": is_overbought_exhaustion,
         "price_above_15m_mas": price_above_15m_ma7 and price_above_15m_ma25,
         "vol_surge_2m": vol_surge_2m,
         "vol_surge_15m": vol_surge_15m,
