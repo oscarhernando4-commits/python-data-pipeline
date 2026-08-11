@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2521,
+    "total_trades": 2524,
     "wins": 453,
-    "losses": 2068,
-    "win_rate_pct": 17.97,
-    "total_pnl_usd": 108277.92615545477
+    "losses": 2071,
+    "win_rate_pct": 17.95,
+    "total_pnl_usd": 108277.74615545478
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-09 18:04:20",
-      "account_id": "SIM-069",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "IOTXUSDT",
-      "side": "SHORT",
-      "entry_price": 0.00289,
-      "exit_price": 0.00289,
-      "pnl_usd": -1.18,
-      "result": "LOSS",
-      "notes": "Hit SL on IOTXUSDT (-$1.18). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 41.36,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-09 18:04:20",
-      "account_id": "SIM-070",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "IOTXUSDT",
-      "side": "SHORT",
-      "entry_price": 0.00289,
-      "exit_price": 0.00289,
-      "pnl_usd": -1.18,
-      "result": "LOSS",
-      "notes": "Hit SL on IOTXUSDT (-$1.18). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 41.36,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-09 18:04:20",
-      "account_id": "SIM-071",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "IOTXUSDT",
-      "side": "SHORT",
-      "entry_price": 0.00289,
-      "exit_price": 0.00289,
-      "pnl_usd": -1.18,
-      "result": "LOSS",
-      "notes": "Hit SL on IOTXUSDT (-$1.18). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 41.36,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-09 18:04:20",
       "account_id": "SIM-072",
@@ -8258,6 +8207,57 @@
       "context": {
         "score": 0,
         "rsi_15m": 36.2,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 09:12:51",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MUBUSDT",
+      "side": "LONG",
+      "entry_price": 856.09,
+      "exit_price": 856.82,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on MUBUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 34.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 09:12:51",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MUBUSDT",
+      "side": "LONG",
+      "entry_price": 856.09,
+      "exit_price": 856.82,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on MUBUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 34.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 09:12:51",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MUBUSDT",
+      "side": "LONG",
+      "entry_price": 856.09,
+      "exit_price": 856.82,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on MUBUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 34.0,
         "macro_trend_4h": "NEUTRAL"
       }
     }
