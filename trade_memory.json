@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2396,
+    "total_trades": 2397,
     "wins": 438,
-    "losses": 1958,
-    "win_rate_pct": 18.28,
-    "total_pnl_usd": 112358.99700545466
+    "losses": 1959,
+    "win_rate_pct": 18.27,
+    "total_pnl_usd": 112358.25700545465
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on GUNUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on KORUBUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ADAUSDT)",
       "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on INJUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PROMUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on INJUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PROMUSDT)",
-      "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on POLUSDT)"
+      "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on POLUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BICOUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BICOUSDT)",
@@ -39989,6 +39989,23 @@
       "context": {
         "score": 40,
         "rsi_15m": 24.24,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 03:34:23",
+      "account_id": "SIM-064",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BICOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.04267,
+      "exit_price": 0.04424,
+      "pnl_usd": -0.74,
+      "result": "LOSS",
+      "notes": "Hit SL on BICOUSDT (-$0.74). Re-Trading!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 60.66,
         "macro_trend_4h": "NEUTRAL"
       }
     }
