@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2832,
+    "total_trades": 2835,
     "wins": 511,
-    "losses": 2321,
-    "win_rate_pct": 18.04,
-    "total_pnl_usd": 101320.49347945483
+    "losses": 2324,
+    "win_rate_pct": 18.02,
+    "total_pnl_usd": 101320.31347945484
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,53 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-10 18:06:37",
-      "account_id": "SIM-052",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "RENDERUSDT",
-      "side": "LONG",
-      "entry_price": 1.273,
-      "exit_price": 1.259,
-      "pnl_usd": -0.27,
-      "result": "LOSS",
-      "notes": "Hit SL on RENDERUSDT (-$0.27). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 17.78,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-10 18:40:55",
-      "account_id": "R-01",
-      "group_name": "CUENTA REAL",
-      "symbol": "LINKUSDT",
-      "side": "BUY",
-      "entry_price": 8.314,
-      "exit_price": 8.294,
-      "pnl_usd": -0.04199999999999911,
-      "result": "LOSS",
-      "notes": "Real Money Trade closed with -0.24%",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-11 00:04:18",
-      "account_id": "SIM-064",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "GUNUSDT",
-      "side": "SHORT",
-      "entry_price": 0.00326,
-      "exit_price": 0.00327,
-      "pnl_usd": -0.08,
-      "result": "LOSS",
-      "notes": "Hit SL on GUNUSDT (-$0.08). Re-Trading!",
-      "context": {
-        "score": 30,
-        "rsi_15m": 45.48,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-10 19:04:48",
       "account_id": "SIM-061",
@@ -8304,6 +8257,45 @@
         "rsi_15m": 42.17,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-11 21:34:30",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "SMCIBUSDT",
+      "side": "SHORT",
+      "entry_price": 33.6,
+      "exit_price": 33.6,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on SMCIBUSDT (-$0.06). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-11 21:34:30",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "SMCIBUSDT",
+      "side": "SHORT",
+      "entry_price": 33.6,
+      "exit_price": 33.6,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on SMCIBUSDT (-$0.06). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-11 21:34:30",
+      "account_id": "SIM-033",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "SMCIBUSDT",
+      "side": "SHORT",
+      "entry_price": 33.6,
+      "exit_price": 33.6,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on SMCIBUSDT (-$0.06). Re-Trading!",
+      "context": {}
     }
   ]
 }
