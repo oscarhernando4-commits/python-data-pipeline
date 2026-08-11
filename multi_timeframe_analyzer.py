@@ -16,6 +16,14 @@ STABLECOIN_TICKERS = {
     "SNDK", "SNDKB", "CRCLB", "SPCXB", "QQQB", "USDT", "USTC", "FRAX", "USDK", "VAI"
 }
 
+# High-Risk Meme Tokens, Seed Tag Assets, and Ultra-Volatile Low-Liquidity Speculative Assets
+HIGH_RISK_MEME_TICKERS = {
+    "BANANAS31", "BANANAS31USDT", "1000CAT", "1000CHEEMS", "1000SATS", "1MBABYDOGE",
+    "BROCCOLI714", "SNXXB", "LUNA", "LUNC", "USTC", "NEIRO", "TURBO", "1000PEPE",
+    "1000SHIB", "1000BONK", "1000FLOKI", "1000RATS", "1000WHY", "1000MOG", "CHEEMS",
+    "1000CATUSDT", "1000SATSUSDT", "1MBABYDOGEUSDT", "BROCCOLI714USDT"
+}
+
 try:
     from api_connector import get_proxy
 except ImportError:
@@ -23,20 +31,24 @@ except ImportError:
 
 def is_stablecoin(symbol):
     """
-    Strictly checks if a symbol is a stablecoin or synthetic dollar.
-    Returns True if symbol is blocked.
+    Strictly checks if a symbol is a stablecoin, synthetic dollar, or high-risk meme/seed asset.
+    Returns True if symbol is blocked from real money trading.
     """
     sym_upper = str(symbol).upper().strip()
     asset = sym_upper.replace("USDT", "").replace("USD", "")
     
-    # 1. Direct Ticker Match
+    # 1. Direct Ticker Match (Stablecoins & Meme Blacklist)
     if sym_upper in STABLECOIN_TICKERS or asset in STABLECOIN_TICKERS:
         return True
+    if sym_upper in HIGH_RISK_MEME_TICKERS or asset in HIGH_RISK_MEME_TICKERS:
+        return True
         
-    # 2. Ticker Pattern Heuristics (single-letter or dollar synthetics)
+    # 2. Ticker Pattern Heuristics (single-letter, 1000-prefix meme tokens, or dollar synthetics)
     if len(asset) <= 1:
         return True
     if "USD" in asset or "EUR" in asset or "BUSD" in asset or "TUSD" in asset:
+        return True
+    if asset.startswith("1000") or asset.startswith("1M"):
         return True
         
     return False
