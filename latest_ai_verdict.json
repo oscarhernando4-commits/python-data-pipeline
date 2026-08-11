@@ -7,7 +7,7 @@
   "reasoning": "El mercado presenta una debilidad sistémica generalizada con una falta de convicción institucional. Ninguno de los candidatos cumple con los requisitos estrictos de Score A+ y soporte de libro de órdenes, por lo que se prioriza la preservación del capital sobre la especulación en activos de baja profundidad.",
   "top_candidates": [
     {
-      "symbol": "CRVUSDT",
+      "symbol": "ENAUSDT",
       "score": 60,
       "price": 0.0899,
       "rsi_2m": 55.82,
@@ -152,52 +152,13 @@
     {
       "symbol": "ROBOUSDT",
       "score": 50,
-      "price": 0.01295,
-      "rsi_2m": 48.14,
-      "rsi_5m": 48.14,
-      "rsi_15m": 48.14,
+      "price": 0.01297,
+      "rsi_2m": 49.8,
+      "rsi_5m": 49.8,
+      "rsi_15m": 49.8,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.35,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "RVNUSDT",
-      "score": 50,
-      "price": 0.00293,
-      "rsi_2m": 55.66,
-      "rsi_5m": 55.66,
-      "rsi_15m": 55.66,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.64,
-      "trade_quality": "B",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "BONKUSDT",
-      "score": 50,
-      "price": 2.33e-06,
-      "rsi_2m": 56.09,
-      "rsi_5m": 56.09,
-      "rsi_15m": 56.09,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.8,
-      "trade_quality": "B",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "TIAUSDT",
-      "score": 50,
-      "price": 0.3134,
-      "rsi_2m": 60.09,
-      "rsi_5m": 60.09,
-      "rsi_15m": 60.09,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.15,
+      "vol_surge": 0.5,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
