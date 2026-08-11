@@ -1,12 +1,51 @@
 {
-  "NEIROUSDT": [
+  "GNOUSDT": [
     {
-      "timestamp": "2026-08-11 08:02:16",
-      "price": 6.779e-05,
-      "score": 45,
-      "rsi": 37.84,
+      "timestamp": "2026-08-11 08:04:13",
+      "price": 103.8,
+      "score": 15,
+      "rsi": 38.11,
       "macd": "Neutral",
-      "volume_surge": 0.15,
+      "volume_surge": 0.98,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "VICUSDT": [
+    {
+      "timestamp": "2026-08-11 08:04:13",
+      "price": 0.029,
+      "score": 15,
+      "rsi": 43.29,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-11 08:04:13",
+      "price": 1.348,
+      "score": 15,
+      "rsi": 43.78,
+      "macd": "Neutral",
+      "volume_surge": 0.59,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CVXUSDT": [
+    {
+      "timestamp": "2026-08-11 08:04:13",
+      "price": 1.679,
+      "score": 45,
+      "rsi": 43.02,
+      "macd": "Neutral",
+      "volume_surge": 0.06,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,25 +53,12 @@
   ],
   "OPUSDT": [
     {
-      "timestamp": "2026-08-11 08:02:16",
+      "timestamp": "2026-08-11 08:04:13",
       "price": 0.0903,
       "score": 15,
       "rsi": 38.31,
       "macd": "Neutral",
-      "volume_surge": 0.17,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "TIAUSDT": [
-    {
-      "timestamp": "2026-08-11 08:02:16",
-      "price": 0.3183,
-      "score": 45,
-      "rsi": 43.01,
-      "macd": "Neutral",
-      "volume_surge": 0.21,
+      "volume_surge": 0.19,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
