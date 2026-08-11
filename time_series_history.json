@@ -12,14 +12,53 @@
       "fear_greed": 50
     }
   ],
-  "LAUSDT": [
+  "SYNUSDT": [
     {
-      "timestamp": "2026-08-11 09:56:21",
-      "price": 0.0548,
-      "score": 0,
-      "rsi": 42.64,
+      "timestamp": "2026-08-11 15:04:14",
+      "price": 0.10481,
+      "score": 50,
+      "rsi": 62.72,
       "macd": "Neutral",
-      "volume_surge": 0.19,
+      "volume_surge": 0.61,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ETHFIUSDT": [
+    {
+      "timestamp": "2026-08-11 15:04:14",
+      "price": 0.376,
+      "score": 25,
+      "rsi": 19.95,
+      "macd": "Neutral",
+      "volume_surge": 0.07,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "TIAUSDT": [
+    {
+      "timestamp": "2026-08-11 15:04:14",
+      "price": 0.3099,
+      "score": 25,
+      "rsi": 27.67,
+      "macd": "Neutral",
+      "volume_surge": 1.09,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CVXUSDT": [
+    {
+      "timestamp": "2026-08-11 15:04:14",
+      "price": 1.666,
+      "score": 0,
+      "rsi": 39.98,
+      "macd": "Neutral",
+      "volume_surge": 0.05,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
