@@ -1,23 +1,36 @@
 {
-  "MEUSDT": [
+  "NEIROUSDT": [
     {
-      "timestamp": "2026-08-11 19:40:12",
-      "price": 0.06119,
-      "score": 55,
-      "rsi": 31.45,
+      "timestamp": "2026-08-11 19:42:12",
+      "price": 6.661e-05,
+      "score": 15,
+      "rsi": 47.25,
       "macd": "Neutral",
-      "volume_surge": 1.01,
+      "volume_surge": 0.07,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "CVXUSDT": [
+  "SYNUSDT": [
     {
-      "timestamp": "2026-08-11 19:40:12",
-      "price": 1.654,
-      "score": 30,
-      "rsi": 46.64,
+      "timestamp": "2026-08-11 19:42:12",
+      "price": 0.11045,
+      "score": 50,
+      "rsi": 65.04,
+      "macd": "Neutral",
+      "volume_surge": 0.81,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-11 19:42:12",
+      "price": 1.338,
+      "score": 50,
+      "rsi": 59.76,
       "macd": "Neutral",
       "volume_surge": 0.36,
       "wyckoff": "Sin patron",
