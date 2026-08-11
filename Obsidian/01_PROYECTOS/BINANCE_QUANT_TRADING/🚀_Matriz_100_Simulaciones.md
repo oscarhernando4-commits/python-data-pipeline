@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 03:54:21
+date: 2026-08-11 03:56:18
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 03:54:21`
+> ⏱️ **Última Actualización:** `2026-08-11 03:56:18`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -31,9 +31,9 @@ date: 2026-08-11 03:54:21
 > [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
 > - 📈 **Capital Total Acumulado:** **`$10,546.29 USD`** (`$+546.29 USD`)  
-> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `1 Cuentas (1.0%)`  
+> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `0 Cuentas (0.0%)`  
 > - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `0 Cuentas (0.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `99 Cuentas (99.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `100 Cuentas (100.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
@@ -164,7 +164,7 @@ date: 2026-08-11 03:54:21
 | **SIM-068** | **RADUSDT** | `#55` | `8W/47L` | 26-08-11<br>00:48 | `🛡️ Protegida (BE)` | **`$98.90`** (`-$1.10`) | 🔵 En Vivo |
 | **SIM-069** | **RADUSDT** | `#57` | `8W/49L` | 26-08-11<br>01:14 | `🛡️ Protegida (BE)` | **`$98.31`** (`-$1.69`) | 🔵 En Vivo |
 | **SIM-070** | **RADUSDT** | `#57` | `8W/49L` | 26-08-11<br>01:14 | `🛡️ Protegida (BE)` | **`$98.31`** (`-$1.69`) | 🔵 En Vivo |
-| **SIM-071** | **PROMUSDT** | `#58` | `10W/47L` | 26-08-11<br>03:54 | `🟢 Ganó +$4.79` | **`$107.15`** (`+$7.15`) | 🟢 Buscando |
+| **SIM-071** | **CRVUSDT** | `#58` | `10W/47L` | 26-08-11<br>03:56 | `🔵 En Curso` | **`$107.15`** (`+$7.15`) | 🔵 En Vivo |
 | **SIM-072** | **DASHUSDT** | `#54` | `8W/45L` | 26-08-11<br>00:08 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
 | **SIM-073** | **DASHUSDT** | `#54` | `8W/45L` | 26-08-11<br>00:08 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
 | **SIM-074** | **APTUSDT** | `#53` | `8W/45L` | 26-08-10<br>21:02 | `🔵 En Curso` | **`$99.16`** (`-$0.84`) | 🔵 En Vivo |
