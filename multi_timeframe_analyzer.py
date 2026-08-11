@@ -262,9 +262,9 @@ def analyze_multi_timeframe_candles(symbol):
         elif dist_from_15m_ma7_pct > 1.8:
             is_overextended_15m = True
             overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct}% sobre MA7). Exige ruptura fresca <= 1.8%"
-        elif not price_above_15m_ma7 or not price_above_15m_ma25:
+        elif (not price_above_15m_ma7 or not price_above_15m_ma25) and not (is_oversold_bounce_candidate or is_yellow_arrow_pivot or is_bullish_divergence):
             is_overextended_15m = True
-            overextension_reason = f"Precio de 15m por debajo de medias móviles (Precio: {closes_15m[-1]} < MA7: {ma7_15m:.4f} / MA25: {ma25_15m:.4f})"
+            overextension_reason = f"Tendencia bajista sin estructura de rebote en el suelo"
     avg_vol_15m = sum(vols_15m[-5:]) / len(vols_15m[-5:]) if len(vols_15m) >= 5 else 1.0
     vol_surge_15m = round(vols_15m[-1] / avg_vol_15m, 2) if avg_vol_15m > 0 else 1.0
 
