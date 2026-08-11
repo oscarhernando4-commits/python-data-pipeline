@@ -1931,3 +1931,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-26.64%)`, `2026-04-17 (-21.73%)`, `2024-04-11 (-18.75%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: MSTRBUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2026-06-22` hasta `2026-08-10` (50 Días de Historial)
+- 💵 **Precio Actual:** `$99.0900 USD`
+- 📈 **Máximo Histórico (ATH):** `$109.7600 USD` (`2026-07-03`) | Distancia: `-9.72%`
+- 📉 **Mínimo Histórico (ATL):** `$80.0600 USD` (`2026-06-28`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-06-28 (+13.58%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-06-24 (-11.39%)`
+
+---
