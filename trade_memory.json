@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2827,
+    "total_trades": 2832,
     "wins": 511,
-    "losses": 2316,
-    "win_rate_pct": 18.08,
-    "total_pnl_usd": 101320.80347945483
+    "losses": 2321,
+    "win_rate_pct": 18.04,
+    "total_pnl_usd": 101320.49347945483
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on XPLUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ZROUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HOMEUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on KITEUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ALLOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ALLOUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on HOLOUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SKYUSDT)"
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SKYUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COOKIEUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ARBUSDT)",
@@ -53,91 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-10 22:54:18",
-      "account_id": "SIM-059",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "RENDERUSDT",
-      "side": "LONG",
-      "entry_price": 1.28,
-      "exit_price": 1.268,
-      "pnl_usd": -0.3,
-      "result": "LOSS",
-      "notes": "Hit SL on RENDERUSDT (-$0.30). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 22.34,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-10 22:54:18",
-      "account_id": "SIM-060",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "RENDERUSDT",
-      "side": "LONG",
-      "entry_price": 1.28,
-      "exit_price": 1.268,
-      "pnl_usd": -0.3,
-      "result": "LOSS",
-      "notes": "Hit SL on RENDERUSDT (-$0.30). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 22.34,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-10 18:00:49",
-      "account_id": "SIM-054",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "PUMPUSDT",
-      "side": "LONG",
-      "entry_price": 0.002835,
-      "exit_price": 0.002808,
-      "pnl_usd": -0.31,
-      "result": "LOSS",
-      "notes": "Hit SL on PUMPUSDT (-$0.31). Re-Trading!",
-      "context": {
-        "score": 30,
-        "rsi_15m": 52.27,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-10 18:00:49",
-      "account_id": "SIM-055",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "PUMPUSDT",
-      "side": "LONG",
-      "entry_price": 0.002835,
-      "exit_price": 0.002808,
-      "pnl_usd": -0.31,
-      "result": "LOSS",
-      "notes": "Hit SL on PUMPUSDT (-$0.31). Re-Trading!",
-      "context": {
-        "score": 30,
-        "rsi_15m": 52.27,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-10 18:02:43",
-      "account_id": "SIM-042",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "SOXLBUSDT",
-      "side": "LONG",
-      "entry_price": 130.27,
-      "exit_price": 130.66,
-      "pnl_usd": -0.18,
-      "result": "LOSS",
-      "notes": "Hit SL on SOXLBUSDT (-$0.18). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 35.32,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-10 18:06:37",
       "account_id": "SIM-052",
@@ -8306,6 +8221,87 @@
       "context": {
         "score": 65,
         "rsi_15m": 51.61,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 21:26:36",
+      "account_id": "SIM-049",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "PENGUUSDT",
+      "side": "LONG",
+      "entry_price": 0.006283,
+      "exit_price": 0.006283,
+      "pnl_usd": -0.07,
+      "result": "LOSS",
+      "notes": "Hit SL on PENGUUSDT (-$0.07). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-11 21:26:36",
+      "account_id": "SIM-064",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "COOKIEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0132,
+      "exit_price": 0.0132,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on COOKIEUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.17,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 21:26:36",
+      "account_id": "SIM-085",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "COOKIEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0132,
+      "exit_price": 0.0132,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on COOKIEUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.17,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 21:26:36",
+      "account_id": "SIM-086",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "COOKIEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0132,
+      "exit_price": 0.0132,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on COOKIEUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.17,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-11 21:26:36",
+      "account_id": "SIM-090",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "COOKIEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0132,
+      "exit_price": 0.0132,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on COOKIEUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 42.17,
         "macro_trend_4h": "NEUTRAL"
       }
     }
