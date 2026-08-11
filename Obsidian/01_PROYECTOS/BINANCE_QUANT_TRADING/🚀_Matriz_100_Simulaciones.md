@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 12:58:18
+date: 2026-08-11 13:00:22
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 12:58:18`
+> ⏱️ **Última Actualización:** `2026-08-11 13:00:22`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -126,7 +126,7 @@ date: 2026-08-11 12:58:18
 | **SIM-042** | **SPYBUSDT** | `#19` | `6W/11L` | 26-08-11<br>07:24 | `🔵 En Curso` | **`$234.35`** (`+$134.35`) | 🔵 En Vivo |
 | **SIM-043** | **LUNAUSDT** | `#13` | `5W/8L` | 26-08-11<br>07:44 | `🛡️ Protegida (BE)` | **`$209.12`** (`+$109.12`) | 🔵 En Vivo |
 | **SIM-044** | **FETUSDT** | `#12` | `3W/8L` | 26-08-11<br>07:28 | `🛡️ Protegida (BE)` | **`$142.05`** (`+$42.05`) | 🔵 En Vivo |
-| **SIM-045** | **LUNAUSDT** | `#13` | `4W/8L` | 26-08-11<br>12:58 | `🔴 Perdió -$0.09` | **`$143.35`** (`+$43.35`) | 🟢 Buscando |
+| **SIM-045** | **LUNAUSDT** | `#13` | `4W/8L` | 26-08-11<br>13:00 | `🔴 Perdió -$0.09` | **`$143.35`** (`+$43.35`) | 🟢 Buscando |
 | **SIM-046** | **FETUSDT** | `#11` | `3W/7L` | 26-08-11<br>07:28 | `🛡️ Protegida (BE)` | **`$142.67`** (`+$42.67`) | 🔵 En Vivo |
 | **SIM-047** | **AAVEUSDT** | `#7` | `2W/5L` | 26-08-11<br>05:28 | `🔵 En Curso` | **`$100.88`** (`+$0.88`) | 🔵 En Vivo |
 | **SIM-048** | **AAVEUSDT** | `#8` | `3W/5L` | 26-08-11<br>05:28 | `🔵 En Curso` | **`$143.22`** (`+$43.22`) | 🔵 En Vivo |
