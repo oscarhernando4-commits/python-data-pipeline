@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 00:58:20
+date: 2026-08-11 01:00:20
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 00:58:20`
+> ⏱️ **Última Actualización:** `2026-08-11 01:00:20`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -30,10 +30,10 @@ date: 2026-08-11 00:58:20
 
 > [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
-> - 📈 **Capital Total Acumulado:** **`$10,526.76 USD`** (`$+526.76 USD`)  
-> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `0 Cuentas (0.0%)`  
-> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `0 Cuentas (0.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `100 Cuentas (100.0%)`  
+> - 📈 **Capital Total Acumulado:** **`$10,527.81 USD`** (`$+527.81 USD`)  
+> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `1 Cuentas (1.0%)`  
+> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `2 Cuentas (2.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `97 Cuentas (97.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
@@ -116,9 +116,9 @@ date: 2026-08-11 00:58:20
 ## ⚖️ GRUPO 3: Balanceado (Permisividad Nivel 3 - Score >= 65 Pts)
 
 > [!TIP] 📊 **Resumen del ⚖️ GRUPO 3: Balanceado (Permisividad Nivel 3 - Score >= 65 Pts):**
-> - 💵 **Balance Total del Grupo:** `$2,885.89 USD` (`+$885.89`)
-> - 🎯 **Operaciones Totales:** `180` (`67 Ganadas / 100 Perdidas`)
-> - 📈 **Tasa de Acierto del Grupo:** `37.2% Win Rate`
+> - 💵 **Balance Total del Grupo:** `$2,890.32 USD` (`+$890.32`)
+> - 🎯 **Operaciones Totales:** `181` (`68 Ganadas / 100 Perdidas`)
+> - 📈 **Tasa de Acierto del Grupo:** `37.6% Win Rate`
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
@@ -134,7 +134,7 @@ date: 2026-08-11 00:58:20
 | **SIM-050** | **FETUSDT** | `#6` | `2W/3L` | 26-08-10<br>22:06 | `🔵 En Curso` | **`$101.58`** (`+$1.58`) | 🔵 En Vivo |
 | **SIM-051** | **XAUTUSDT** | `#6` | `3W/3L` | 26-08-10<br>13:44 | `🔵 En Curso` | **`$144.30`** (`+$44.30`) | 🔵 En Vivo |
 | **SIM-052** | **FORMUSDT** | `#10` | `3W/6L` | 26-08-10<br>19:10 | `🔵 En Curso` | **`$89.74`** (`-$10.26`) | 🔵 En Vivo |
-| **SIM-053** | **PROMUSDT** | `#9` | `4W/5L` | 26-08-11<br>00:48 | `🛡️ Protegida (BE)` | **`$144.59`** (`+$44.59`) | 🔵 En Vivo |
+| **SIM-053** | **PROMUSDT** | `#10` | `5W/5L` | 26-08-11<br>01:00 | `🟢 Ganó +$4.43` | **`$149.02`** (`+$49.02`) | 🟢 Buscando |
 | **SIM-054** | **FORMUSDT** | `#12` | `4W/7L` | 26-08-10<br>19:10 | `🔵 En Curso` | **`$115.76`** (`+$15.76`) | 🔵 En Vivo |
 | **SIM-055** | **POLUSDT** | `#10` | `4W/6L` | 26-08-10<br>18:26 | `🔵 En Curso` | **`$144.66`** (`+$44.66`) | 🔵 En Vivo |
 | **SIM-056** | **XRPUSDT** | `#7` | `3W/4L` | 26-08-10<br>22:06 | `🔵 En Curso` | **`$142.75`** (`+$42.75`) | 🔵 En Vivo |
@@ -148,8 +148,8 @@ date: 2026-08-11 00:58:20
 ## ⚡ GRUPO 4: Frecuencia Alta (Permisividad Nivel 4 - Score >= 55 Pts)
 
 > [!WARNING] 📊 **Resumen del ⚡ GRUPO 4: Frecuencia Alta (Permisividad Nivel 4 - Score >= 55 Pts):**
-> - 💵 **Balance Total del Grupo:** `$1,978.94 USD` (`-$21.06`)
-> - 🎯 **Operaciones Totales:** `1087` (`161 Ganadas / 920 Perdidas`)
+> - 💵 **Balance Total del Grupo:** `$1,975.56 USD` (`-$24.44`)
+> - 🎯 **Operaciones Totales:** `1089` (`161 Ganadas / 922 Perdidas`)
 > - 📈 **Tasa de Acierto del Grupo:** `14.8% Win Rate`
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
@@ -159,8 +159,8 @@ date: 2026-08-11 00:58:20
 | **SIM-063** | **INJUSDT** | `#54` | `8W/45L` | 26-08-11<br>00:08 | `🔵 En Curso` | **`$99.10`** (`-$0.90`) | 🔵 En Vivo |
 | **SIM-064** | **HEIUSDT** | `#56` | `8W/48L` | 26-08-11<br>00:28 | `🛡️ Protegida (BE)` | **`$98.69`** (`-$1.31`) | 🔵 En Vivo |
 | **SIM-065** | **KAITOUSDT** | `#54` | `8W/46L` | 26-08-11<br>00:36 | `🔵 En Curso` | **`$98.95`** (`-$1.05`) | 🔵 En Vivo |
-| **SIM-066** | **PROMUSDT** | `#55` | `8W/47L` | 26-08-11<br>00:56 | `🔵 En Curso` | **`$98.89`** (`-$1.11`) | 🔵 En Vivo |
-| **SIM-067** | **PROMUSDT** | `#55` | `8W/47L` | 26-08-11<br>00:56 | `🔵 En Curso` | **`$98.89`** (`-$1.11`) | 🔵 En Vivo |
+| **SIM-066** | **PROMUSDT** | `#56` | `8W/48L` | 26-08-11<br>01:00 | `🔴 Perdió -$1.69` | **`$97.20`** (`-$2.80`) | 🔴 Buscando |
+| **SIM-067** | **PROMUSDT** | `#56` | `8W/48L` | 26-08-11<br>01:00 | `🔴 Perdió -$1.69` | **`$97.20`** (`-$2.80`) | 🔴 Buscando |
 | **SIM-068** | **RADUSDT** | `#55` | `8W/47L` | 26-08-11<br>00:48 | `🔵 En Curso` | **`$98.90`** (`-$1.10`) | 🔵 En Vivo |
 | **SIM-069** | **RADUSDT** | `#56` | `8W/48L` | 26-08-11<br>00:54 | `🔵 En Curso` | **`$98.37`** (`-$1.63`) | 🔵 En Vivo |
 | **SIM-070** | **RADUSDT** | `#56` | `8W/48L` | 26-08-11<br>00:54 | `🔵 En Curso` | **`$98.37`** (`-$1.63`) | 🔵 En Vivo |
