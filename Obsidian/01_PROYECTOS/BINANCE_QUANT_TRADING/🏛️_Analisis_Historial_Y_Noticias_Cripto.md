@@ -1827,3 +1827,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-34.14%)`, `2025-08-30 (-18.76%)`, `2025-09-21 (-18.58%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: RADUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-16` hasta `2026-08-11` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.2550 USD`
+- 📈 **Máximo Histórico (ATH):** `$3.5960 USD` (`2024-03-29`) | Distancia: `-92.91%`
+- 📉 **Mínimo Histórico (ATL):** `$0.2000 USD` (`2026-06-06`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-03-10 (+39.02%)`, `2025-12-31 (+31.78%)`, `2026-08-10 (+31.1%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-22.72%)`, `2024-04-12 (-20.89%)`, `2026-02-01 (-16.83%)`
+
+---
