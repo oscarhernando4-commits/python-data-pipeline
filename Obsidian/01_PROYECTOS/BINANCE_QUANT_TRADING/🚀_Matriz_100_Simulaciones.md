@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-11 01:48:19
+date: 2026-08-11 01:50:24
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-11 01:48:19`
+> ⏱️ **Última Actualización:** `2026-08-11 01:50:24`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -132,7 +132,7 @@ date: 2026-08-11 01:48:19
 | **SIM-048** | **XAUTUSDT** | `#7` | `3W/4L` | 26-08-10<br>18:44 | `🔵 En Curso` | **`$143.31`** (`+$43.31`) | 🔵 En Vivo |
 | **SIM-049** | **XAUTUSDT** | `#7` | `3W/4L` | 26-08-10<br>18:44 | `🔵 En Curso` | **`$143.31`** (`+$43.31`) | 🔵 En Vivo |
 | **SIM-050** | **FETUSDT** | `#6` | `2W/3L` | 26-08-10<br>22:06 | `🔵 En Curso` | **`$101.58`** (`+$1.58`) | 🔵 En Vivo |
-| **SIM-051** | **XAUTUSDT** | `#6` | `3W/3L` | 26-08-10<br>13:44 | `🔵 En Curso` | **`$144.30`** (`+$44.30`) | 🔵 En Vivo |
+| **SIM-051** | **XAUTUSDT** | `#6` | `3W/3L` | 26-08-10<br>13:44 | `🛡️ Protegida (BE)` | **`$144.30`** (`+$44.30`) | 🔵 En Vivo |
 | **SIM-052** | **FORMUSDT** | `#10` | `3W/6L` | 26-08-10<br>19:10 | `🔵 En Curso` | **`$89.74`** (`-$10.26`) | 🔵 En Vivo |
 | **SIM-053** | **ZECUSDT** | `#10` | `5W/5L` | 26-08-11<br>01:08 | `🔵 En Curso` | **`$149.02`** (`+$49.02`) | 🔵 En Vivo |
 | **SIM-054** | **FORMUSDT** | `#12` | `4W/7L` | 26-08-10<br>19:10 | `🔵 En Curso` | **`$115.76`** (`+$15.76`) | 🔵 En Vivo |
