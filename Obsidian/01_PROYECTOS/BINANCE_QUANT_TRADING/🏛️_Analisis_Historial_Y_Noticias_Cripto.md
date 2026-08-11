@@ -1905,3 +1905,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-07-10 (-50.82%)`, `2025-06-25 (-47.83%)`, `2025-07-12 (-45.75%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: MITOUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-08-29` hasta `2026-08-11` (348 Días de Historial)
+- 💵 **Precio Actual:** `$0.0291 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.4462 USD` (`2025-09-14`) | Distancia: `-93.49%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0171 USD` (`2026-06-13`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-09-14 (+36.65%)`, `2025-11-05 (+35.93%)`, `2026-06-17 (+34.45%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-34.88%)`, `2025-11-06 (-23.9%)`, `2025-09-15 (-18.65%)`
+
+---
