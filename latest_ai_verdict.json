@@ -7,6 +7,32 @@
   "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los requisitos de seguridad y rentabilidad exigidos por la Regla #1 (No perder dinero). La falta de soporte institucional claro en el libro de órdenes y la alta volatilidad errática observada en el historial de simulaciones obligan a mantener una postura de espera (HOLD) hasta que se identifique una oportunidad con convicción A+.",
   "top_candidates": [
     {
+      "symbol": "ESPUSDT",
+      "score": 85,
+      "price": 0.07158,
+      "rsi_2m": 63.83,
+      "rsi_5m": 63.83,
+      "rsi_15m": 63.83,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 4.66,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "CRVUSDT",
+      "score": 75,
+      "price": 0.2696,
+      "rsi_2m": 55.54,
+      "rsi_5m": 55.54,
+      "rsi_15m": 55.54,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.21,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "BNBUSDT",
       "score": 75,
       "price": 613.96,
@@ -33,12 +59,12 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "GUNUSDT",
+      "symbol": "ZBTUSDT",
       "score": 75,
-      "price": 0.00343,
-      "rsi_2m": 52.23,
-      "rsi_5m": 52.23,
-      "rsi_15m": 52.23,
+      "price": 0.094,
+      "rsi_2m": 42.7,
+      "rsi_5m": 42.7,
+      "rsi_15m": 42.7,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.21,
@@ -126,10 +152,10 @@
     {
       "symbol": "DODOUSDT",
       "score": 65,
-      "price": 0.0224,
-      "rsi_2m": 66.12,
-      "rsi_5m": 66.12,
-      "rsi_15m": 66.12,
+      "price": 0.02239,
+      "rsi_2m": 65.98,
+      "rsi_5m": 65.98,
+      "rsi_15m": 65.98,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.2,
@@ -145,7 +171,7 @@
       "rsi_15m": 49.6,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.78,
+      "vol_surge": 0.13,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }

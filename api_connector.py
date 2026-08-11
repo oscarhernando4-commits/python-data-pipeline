@@ -847,11 +847,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             trailing_floor_pct = 0.35  # Covers 0.20% roundtrip fees + small profit
             phase_msg = f"🛡️ FASE 2: Break-Even Seguro +0.35% (Pico +{highest_pnl_pct:.1f}%)"
             
-        # PHASE 1: Initial Protection (wide SL to survive noise)
+        # PHASE 1: Initial Protection (wide -3.0% SL to survive normal crypto volatility)
         else:
             phase = 1
-            trailing_floor_pct = -2.5  # Wide enough to survive normal crypto wicks
-            phase_msg = f"⚡ FASE 1: Protección Inicial SL -2.5% (Esperando despegue)"
+            trailing_floor_pct = -3.0  # Wide -3.0% cushion requested to survive market wicks
+            phase_msg = f"⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
 
         # ESCUDO 1: BTC Flash Crash Circuit Breaker
         btc_price_now = get_symbol_price("BTCUSDT", is_futures=False)
@@ -874,15 +874,15 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
 
         # Emergency override: Only in Phase 1 (before any profit was reached)
         if (btc_crash_emergency or orderbook_wall_emergency) and phase == 1:
-            trailing_floor_pct = max(-1.0, trailing_floor_pct)
+            trailing_floor_pct = max(-1.5, trailing_floor_pct)
             phase_msg = f"🛡️ ESCUDO DE EMERGENCIA: SL apretado a {trailing_floor_pct:+.2f}%"
 
         # Stagnation Rule: Only applies to LOSING trades that never reached Phase 2+
         stagnation_exit = False
-        if holding_cycles >= 120 and phase == 1 and pnl_pct < 0:  # 4 hours (120 cycles * 2m = 240m), still in Phase 1, still negative
+        if holding_cycles >= 1440 and phase == 1 and pnl_pct < 0:  # 2 DAYS (1440 cycles * 2m = 2880m = 48 Hours)
             stagnation_exit = True
 
-        tp_target = entry * (1.0 + (2.5 * 2.0 / 100.0))  # 1:2 R:R based on 2.5% SL
+        tp_target = entry * (1.0 + (3.0 * 2.0 / 100.0))  # 1:2 R:R based on 3.0% SL
         sl_target = entry * (1.0 + (trailing_floor_pct / 100.0))
         
         state["position"] = {
@@ -902,7 +902,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         # --- MONITOREO ACTIVO PRIORITARIO (CADA 2 MINUTOS) ---
         print("\n" + "="*65)
         print(f"📊 [SEGUIMIENTO DE POSICIÓN ACTIVA REAL - SPOT]")
-        print(f"🪙 Moneda: {active_symbol} | Cantidad: {active_qty:,.2f} {active_asset} (Tiempo: {holding_cycles*2}m)")
+        print(f"🪙 Moneda: {active_symbol} | Cantidad: {active_qty:,.2f} {active_asset} (Tiempo: {holding_cycles*2}m / 2880m)")
         print(f"💵 Entrada: {price_fmt(entry)} USD | Máximo Pico: {price_fmt(highest_price)} USD (+{highest_pnl_pct:.2f}%)")
         print(f"📈 PnL Flotante Actual: {pnl_pct:+.2f}% (${pnl_usd:+.4f} USD)")
         print(f"🧠 {phase_msg}")
@@ -921,7 +921,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     reason_str = f"Stop Loss Fase 1 ({pnl_pct:.2f}% tocó piso de {trailing_floor_pct:+.2f}%)"
             elif stagnation_exit:
                 should_exit = True
-                reason_str = f"Liberación por Estancamiento (4h en Fase 1, PnL={pnl_pct:+.2f}%)"
+                reason_str = f"Liberación por Estancamiento (2 Días en Fase 1, PnL={pnl_pct:+.2f}%)"
                 
             if should_exit:
                 print(f"🎯 ALERTA REAL: Salida LONG por {reason_str} en {active_symbol}. Vendiendo...")

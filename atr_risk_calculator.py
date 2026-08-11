@@ -4,16 +4,16 @@ Computes dynamic, volatility-adjusted Stop Loss levels based on 15m Average True
 Prevents premature stop-outs on high-volatility alts while maintaining tight precision on low-volatility assets.
 """
 
-def calculate_adaptive_atr_stop_loss(current_price, atr_15m, min_sl_pct=0.5, max_sl_pct=1.8, multiplier=1.5):
+def calculate_adaptive_atr_stop_loss(current_price, atr_15m, min_sl_pct=0.5, max_sl_pct=3.0, multiplier=1.5):
     """
     Calculates adaptive Stop Loss percentage based on asset ATR volatility.
     - atr_pct: (atr_15m / current_price) * 100.0
-    - dynamic_sl_pct: strictly clamped between min_sl_pct (0.5%) and max_sl_pct (1.8% HARD CEILING)
+    - dynamic_sl_pct: strictly clamped between min_sl_pct (0.5%) and max_sl_pct (3.0% HARD CEILING)
     Returns dict with sl_pct, sl_price, tp1_price, tp2_price, and volatility_regime.
     """
     if current_price <= 0:
         return {
-            "sl_pct": 1.0,
+            "sl_pct": 3.0,
             "sl_price": 0.0,
             "volatility_regime": "⚪ Neutral (Fallback)"
         }
@@ -24,7 +24,7 @@ def calculate_adaptive_atr_stop_loss(current_price, atr_15m, min_sl_pct=0.5, max
     # Calculate raw adaptive SL
     raw_sl_pct = atr_pct * multiplier
     
-    # Clamp between min_sl_pct (0.5%) and max_sl_pct (1.8% HARD CEILING)
+    # Clamp between min_sl_pct (0.5%) and max_sl_pct (3.0% HARD CEILING)
     clamped_sl_pct = max(min_sl_pct, min(max_sl_pct, raw_sl_pct))
     clamped_sl_pct = round(clamped_sl_pct, 2)
     
