@@ -6,7 +6,20 @@
       "score": 0,
       "rsi": 43.57,
       "macd": "Neutral",
-      "volume_surge": 0.13,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PEOPLEUSDT": [
+    {
+      "timestamp": "2026-08-11 12:00:23",
+      "price": 0.00856,
+      "score": 0,
+      "rsi": 45.98,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -149,46 +162,7 @@
       "score": 25,
       "rsi": 28.51,
       "macd": "Neutral",
-      "volume_surge": 0.03,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "ESPUSDT": [
-    {
-      "timestamp": "2026-08-11 11:58:24",
-      "price": 0.0708,
-      "score": 50,
-      "rsi": 54.79,
-      "macd": "Neutral",
-      "volume_surge": 0.99,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "ZBTUSDT": [
-    {
-      "timestamp": "2026-08-11 11:58:24",
-      "price": 0.0945,
-      "score": 25,
-      "rsi": 28.79,
-      "macd": "Neutral",
-      "volume_surge": 0.52,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "PYRUSDT": [
-    {
-      "timestamp": "2026-08-11 11:58:24",
-      "price": 0.064,
-      "score": 10,
-      "rsi": 51.3,
-      "macd": "Neutral",
-      "volume_surge": 0.47,
+      "volume_surge": 0.01,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -196,12 +170,12 @@
   ],
   "AAOIBUSDT": [
     {
-      "timestamp": "2026-08-11 11:58:24",
-      "price": 131.85,
-      "score": 25,
-      "rsi": 50.46,
+      "timestamp": "2026-08-11 12:00:23",
+      "price": 131.55,
+      "score": 0,
+      "rsi": 49.35,
       "macd": "Neutral",
-      "volume_surge": 0.04,
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -209,12 +183,25 @@
   ],
   "JUPUSDT": [
     {
-      "timestamp": "2026-08-11 11:58:24",
+      "timestamp": "2026-08-11 12:00:23",
       "price": 0.1756,
       "score": 25,
-      "rsi": 27.79,
+      "rsi": 28.51,
       "macd": "Neutral",
-      "volume_surge": 0.19,
+      "volume_surge": 0.03,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PYRUSDT": [
+    {
+      "timestamp": "2026-08-11 12:00:23",
+      "price": 0.064,
+      "score": 10,
+      "rsi": 51.3,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
