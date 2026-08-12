@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-08-12 12:15:02",
+  "updated_at": "2026-08-12 12:16:56",
   "total_balance_usd": 18.55,
   "usdt_free": 0.1256,
   "bnb_free": 0.00369424,
   "bnb_usd": 2.26,
-  "status": "🔵 En Vivo LONG (GRAMUSDT @ $1.3410)",
+  "status": "🔵 En Vivo LONG (GRAMUSDT @ $1.3370)",
   "position": {
     "symbol": "GRAMUSDT",
     "quantity": 12.05,
     "entry_price": 1.352,
     "highest_price": 1.352,
-    "cost_usd": 16.16,
+    "cost_usd": 16.11,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 23,
+    "holding_cycles": 24,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -33,20 +33,7 @@
         "rsi_15m": 52.65,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.67,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "AAVEUSDT",
-        "score": 60,
-        "price": 89.38,
-        "rsi_2m": 50.08,
-        "rsi_5m": 50.08,
-        "rsi_15m": 50.08,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.13,
+        "vol_surge": 0.01,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
@@ -72,7 +59,7 @@
         "rsi_15m": 23.46,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.1,
+        "vol_surge": 0.03,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
@@ -85,7 +72,7 @@
         "rsi_15m": 57.93,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.45,
+        "vol_surge": 0.12,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
@@ -98,8 +85,8 @@
         "rsi_15m": 59.69,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.02,
-        "trade_quality": "C_NOISE",
+        "vol_surge": 0.42,
+        "trade_quality": "B",
         "macro_trend": "NEUTRAL"
       },
       {
@@ -111,20 +98,7 @@
         "rsi_15m": 49.26,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.23,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "UNIUSDT",
-        "score": 50,
-        "price": 0.03444,
-        "rsi_2m": 52.74,
-        "rsi_5m": 52.74,
-        "rsi_15m": 52.74,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.34,
+        "vol_surge": 0.07,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
@@ -142,41 +116,15 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "RENDERUSDT",
+        "symbol": "TRBUSDT",
         "score": 50,
-        "price": 1.258,
-        "rsi_2m": 49.81,
-        "rsi_5m": 49.81,
-        "rsi_15m": 49.81,
+        "price": 13.6,
+        "rsi_2m": 53.29,
+        "rsi_5m": 53.29,
+        "rsi_15m": 53.29,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.29,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "BICOUSDT",
-        "score": 50,
-        "price": 0.03442,
-        "rsi_2m": 52.53,
-        "rsi_5m": 52.53,
-        "rsi_15m": 52.53,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.34,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "RADUSDT",
-        "score": 50,
-        "price": 0.24,
-        "rsi_2m": 50.29,
-        "rsi_5m": 50.29,
-        "rsi_15m": 50.29,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.61,
+        "vol_surge": 0.11,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }
