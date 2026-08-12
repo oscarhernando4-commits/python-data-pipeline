@@ -1,5 +1,5 @@
 {
-  "PLUMEUSDT": [
+  "PYTHUSDT": [
     {
       "timestamp": "2026-08-12 19:24:09",
       "price": 0.1933,
@@ -14,12 +14,25 @@
   ]
 }}TIAUSDT": [
     {
-      "timestamp": "2026-08-12 19:22:08",
-      "price": 0.01174,
+      "timestamp": "2026-08-12 14:24:22",
+      "price": 0.01169,
       "score": 30,
-      "rsi": 35.73,
+      "rsi": 32.1,
       "macd": "Neutral",
-      "volume_surge": 0.16,
+      "volume_surge": 0.25,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SAGAUSDT": [
+    {
+      "timestamp": "2026-08-12 14:24:23",
+      "price": 0.0145,
+      "score": 25,
+      "rsi": 68.94,
+      "macd": "Neutral",
+      "volume_surge": 0.27,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
