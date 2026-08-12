@@ -192,15 +192,22 @@ def analyze_multi_timeframe_candles(symbol):
     # 2m Microstructure Volume Surge
     avg_vol_2m = sum(vols_2m[-5:]) / len(vols_2m[-5:]) if len(vols_2m) >= 5 else 1.0
     vol_surge_2m = round(vols_2m[-1] / avg_vol_2m, 2) if (vols_2m and avg_vol_2m > 0) else 1.0
-
-    # 15m Microstructure moving averages (MA7, MA25) & Volume Surge
+    
+    # 15m Microstructure moving averages (MA7, MA25, MA99) & Volume Surge
     ma7_15m = sum(closes_15m[-7:]) / len(closes_15m[-7:]) if len(closes_15m) >= 7 else closes_15m[-1]
     ma25_15m = sum(closes_15m[-25:]) / len(closes_15m[-25:]) if len(closes_15m) >= 25 else closes_15m[-1]
+    ma99_15m = sum(closes_15m[-99:]) / len(closes_15m[-99:]) if len(closes_15m) >= 99 else closes_15m[-1]
     
-    # Strict MA25 calculation: Slope must be ascending and price must be strictly +0.15% above MA25
+    # Strict MA25 & MA99 calculation: Slopes and Intersection
     prev_ma25_15m = sum(closes_15m[-26:-1]) / len(closes_15m[-26:-1]) if len(closes_15m) >= 26 else ma25_15m
     ma25_slope_ok = ma25_15m >= (prev_ma25_15m * 0.9995)
     
+    # User Intersect Directive:
+    # 1. MA25 (Pink) intersects MA99 (Purple) and trends UPWARD / stays on top -> Bullish Expansion (+20 Pts Bonus)
+    # 2. MA25 (Pink) after intersection trends DOWNWARD -> Bearish Drop (Automatic Disqualification / Veto)
+    is_ma25_above_ma99_upward = (ma25_15m >= ma99_15m * 0.999) and ma25_slope_ok
+    is_ma25_below_ma99_downward = (ma25_15m < ma99_15m) and (ma25_15m < prev_ma25_15m)
+
     price_above_15m_ma7 = closes_15m[-1] > ma7_15m
     price_above_15m_ma25 = (closes_15m[-1] >= ma25_15m * 1.0015) and ma25_slope_ok
     dist_from_15m_ma7_pct = round(((closes_15m[-1] - ma7_15m) / ma7_15m) * 100.0, 2) if ma7_15m > 0 else 0.0
@@ -233,7 +240,15 @@ def analyze_multi_timeframe_candles(symbol):
     vwap_lower_band = vwap_15m - (1.5 * vwap_std)
     is_vwap_floor_rebound = (closes_15m[-1] <= vwap_lower_band) or (closes_15m[-1] < vwap_15m and (float(klines_15m[-1][3]) <= vwap_lower_band))
 
-    # Multi-Timeframe Alignment Score (0 to 100) including 2m synchronization + Divergence & VWAP Bonus
+    # Calculate SuperTrend (10, 3) Pattern Indicator (As shown in Binance Charts)
+    is_supertrend_bullish = False
+    if len(klines_15m) >= 10:
+        atr_10 = sum(max(float(k[2]) - float(k[3]), abs(float(k[2]) - float(klines_15m[i-1][4])), abs(float(k[3]) - float(klines_15m[i-1][4]))) for i, k in enumerate(klines_15m[-10:], start=len(klines_15m)-10)) / 10.0
+        hl2 = (float(klines_15m[-1][2]) + float(klines_15m[-1][3])) / 2.0
+        st_lower = hl2 - (3.0 * atr_10)
+        is_supertrend_bullish = closes_15m[-1] > st_lower and closes_15m[-1] > ma7_15m
+
+    # Multi-Timeframe Alignment Score (0 to 100) including MA25/MA99 Intersect Bonus & Veto
     score_components = [
         tf_2m_up * 10,
         tf_5m_up * 20,
@@ -242,9 +257,14 @@ def analyze_multi_timeframe_candles(symbol):
         tf_4h_up * 10,
         tf_1d_up * 15,
         15 if is_bullish_divergence else 0,
-        15 if is_vwap_floor_rebound else 0
+        15 if is_vwap_floor_rebound else 0,
+        10 if is_supertrend_bullish else 0,
+        20 if is_ma25_above_ma99_upward else 0
     ]
     multi_tf_score = min(100, sum(score_components))
+    
+    if is_ma25_below_ma99_downward:
+        multi_tf_score = 0
     
     # 4. Detect 15m Candle Over-extension / Parabolic Spike (Prevents buying tops like ZRO, ATOM)
     is_overextended_15m = False
