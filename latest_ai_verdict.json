@@ -98,7 +98,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "BMTUSDT",
+      "symbol": "HOLOUSDT",
       "score": 50,
       "price": 0.01826,
       "rsi_2m": 56.68,
@@ -106,7 +106,20 @@
       "rsi_15m": 56.68,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.16,
+      "vol_surge": 0.11,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "ENAUSDT",
+      "score": 50,
+      "price": 0.0904,
+      "rsi_2m": 65.96,
+      "rsi_5m": 65.96,
+      "rsi_15m": 65.96,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.61,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
