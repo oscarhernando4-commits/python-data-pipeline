@@ -1,10 +1,36 @@
 {
   "LDOUSDT": [
     {
-      "timestamp": "2026-08-12 13:16:13",
-      "price": 0.2973,
+      "timestamp": "2026-08-12 13:18:11",
+      "price": 0.2976,
       "score": 10,
-      "rsi": 78.01,
+      "rsi": 78.75,
+      "macd": "Neutral",
+      "volume_surge": 0.41,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-12 13:18:11",
+      "price": 0.558,
+      "score": 35,
+      "rsi": 54.49,
+      "macd": "Neutral",
+      "volume_surge": 0.31,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-12 13:18:11",
+      "price": 1.343,
+      "score": 0,
+      "rsi": 48.95,
       "macd": "Neutral",
       "volume_surge": 0.02,
       "wyckoff": "Sin patron",
@@ -12,38 +38,12 @@
       "fear_greed": 50
     }
   ],
-  "AXTIBUSDT": [
+  "KITEUSDT": [
     {
-      "timestamp": "2026-08-12 13:16:13",
-      "price": 80.94,
-      "score": 25,
-      "rsi": 71.03,
-      "macd": "Neutral",
-      "volume_surge": 0.67,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "IMXUSDT": [
-    {
-      "timestamp": "2026-08-12 13:16:13",
-      "price": 0.1141,
-      "score": 45,
-      "rsi": 55.05,
-      "macd": "Neutral",
-      "volume_surge": 0.04,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "STXUSDT": [
-    {
-      "timestamp": "2026-08-12 13:16:13",
-      "price": 0.1248,
+      "timestamp": "2026-08-12 13:18:11",
+      "price": 0.1028,
       "score": 30,
-      "rsi": 43.33,
+      "rsi": 40.14,
       "macd": "Neutral",
       "volume_surge": 0.0,
       "wyckoff": "Sin patron",
