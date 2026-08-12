@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3139,
-    "wins": 554,
+    "total_trades": 3142,
+    "wins": 557,
     "losses": 2585,
-    "win_rate_pct": 17.65,
-    "total_pnl_usd": 101168.38989545498
+    "win_rate_pct": 17.73,
+    "total_pnl_usd": 101169.88989545498
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,53 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-11 10:34:53",
-      "account_id": "SIM-038",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "AVAXUSDT",
-      "side": "LONG",
-      "entry_price": 6.161,
-      "exit_price": 6.161,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on AVAXUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-11 15:38:25",
-      "account_id": "SIM-000 (Réplica Real)",
-      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
-      "symbol": "BTCUSDT",
-      "side": "SHORT",
-      "entry_price": 64866.02,
-      "exit_price": 63555.19,
-      "pnl_usd": 0.36,
-      "result": "WIN",
-      "notes": "Win on BTCUSDT (+$0.36 net) -> Level 4 Re-Trading Started!",
-      "context": {
-        "score": 40,
-        "rsi_15m": 25.22,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 15:38:25",
-      "account_id": "SIM-047",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "PENGUUSDT",
-      "side": "LONG",
-      "entry_price": 0.006395,
-      "exit_price": 0.006332,
-      "pnl_usd": -0.17,
-      "result": "LOSS",
-      "notes": "Hit SL on PENGUUSDT (-$0.17). Re-Trading!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 26.17,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-11 15:38:25",
       "account_id": "SIM-048",
@@ -8194,6 +8147,57 @@
       "context": {
         "score": 20,
         "rsi_15m": 49.67,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 17:50:00",
+      "account_id": "SIM-065",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "LSKUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0817,
+      "exit_price": 0.0796,
+      "pnl_usd": 0.49,
+      "result": "WIN",
+      "notes": "Win on LSKUSDT (+$0.49 net) -> Level 12 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 37.42,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 17:50:00",
+      "account_id": "SIM-076",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "PENGUUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00636,
+      "exit_price": 0.006189,
+      "pnl_usd": 0.51,
+      "result": "WIN",
+      "notes": "Win on PENGUUSDT (+$0.51 net) -> Level 10 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 26.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 17:50:00",
+      "account_id": "SIM-093",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "PENGUUSDT",
+      "side": "SHORT",
+      "entry_price": 0.006368,
+      "exit_price": 0.006189,
+      "pnl_usd": 0.5,
+      "result": "WIN",
+      "notes": "Win on PENGUUSDT (+$0.50 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 26.98,
         "macro_trend_4h": "NEUTRAL"
       }
     }
