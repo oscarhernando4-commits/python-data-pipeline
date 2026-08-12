@@ -1398,5 +1398,145 @@
         "macro_trend": "NEUTRAL"
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-12 08:54:45",
+    "selected_symbol": "NONE",
+    "action": "HOLD",
+    "approved": false,
+    "confidence": 0,
+    "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una correlación bajista predominante. Ninguno de los candidatos analizados cumple con los criterios estrictos de Score A+ (>= 55) y soporte de libro de órdenes (Bids > 65%) exigidos por el comité para mitigar el riesgo de pérdida de capital.",
+    "top_candidates": [
+      {
+        "symbol": "KAITOUSDT",
+        "score": 70,
+        "price": 0.4768,
+        "rsi_2m": 16.32,
+        "rsi_5m": 16.32,
+        "rsi_15m": 16.32,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.46,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "CFXUSDT",
+        "score": 70,
+        "price": 0.04226,
+        "rsi_2m": 63.96,
+        "rsi_5m": 63.96,
+        "rsi_15m": 63.96,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 2.0,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "XAUTUSDT",
+        "score": 60,
+        "price": 4413.16,
+        "rsi_2m": 60.77,
+        "rsi_5m": 60.77,
+        "rsi_15m": 60.77,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.5,
+        "trade_quality": "A+",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ICPUSDT",
+        "score": 60,
+        "price": 2.258,
+        "rsi_2m": 61.61,
+        "rsi_5m": 61.61,
+        "rsi_15m": 61.61,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.43,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "LTCUSDT",
+        "score": 60,
+        "price": 45.62,
+        "rsi_2m": 64.7,
+        "rsi_5m": 64.7,
+        "rsi_15m": 64.7,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.92,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "HOMEUSDT",
+        "score": 60,
+        "price": 0.00946,
+        "rsi_2m": 54.42,
+        "rsi_5m": 54.42,
+        "rsi_15m": 54.42,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.26,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "FETUSDT",
+        "score": 60,
+        "price": 0.1354,
+        "rsi_2m": 52.05,
+        "rsi_5m": 52.05,
+        "rsi_15m": 52.05,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.02,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "STXUSDT",
+        "score": 60,
+        "price": 0.1254,
+        "rsi_2m": 52.23,
+        "rsi_5m": 52.23,
+        "rsi_15m": 52.23,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.53,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "MMTUSDT",
+        "score": 50,
+        "price": 0.2018,
+        "rsi_2m": 57.41,
+        "rsi_5m": 57.41,
+        "rsi_15m": 57.41,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.32,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ONEUSDT",
+        "score": 50,
+        "price": 0.00081,
+        "rsi_2m": 51.28,
+        "rsi_5m": 51.28,
+        "rsi_15m": 51.28,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.6,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      }
+    ]
   }
 ]
