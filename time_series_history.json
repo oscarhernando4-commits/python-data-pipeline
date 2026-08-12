@@ -1,16 +1,54 @@
 {
-  "KITEUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-12 22:04:09",
-      "price": 0.1025,
-      "score": 65,
-      "rsi": 62.42,
+      "timestamp": "2026-08-12 22:06:10",
+      "price": 0.1208,
+      "score": 55,
+      "rsi": 31.95,
       "macd": "Neutral",
-      "volume_surge": 0.39,
+      "volume_surge": 2.35,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-12 22:06:10",
+      "price": 1.319,
+      "score": 0,
+      "rsi": 37.97,
+      "macd": "Neutral",
+      "volume_surge": 0.72,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ESPUSDT": [
+    {
+      "timestamp": "2026-08-12 22:06:10",
+      "price": 0.07102,
+      "score": 0,
+      "rsi": 46.99,
+      "macd": "Neutral",
+      "volume_surge": 0.93,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "TSMBUSDT": [
+    {
+      "timestamp": "2026-08-12 22:06:10",
+      "price": 431.01,
+      "score": 60,
+      "rsi": 57.11,
+      "macd": "Neutral",
+      "volume_surge": 0.11,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}
 }
