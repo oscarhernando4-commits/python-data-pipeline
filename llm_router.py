@@ -377,12 +377,19 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
     print(f"✅ [Comité Institucional 7 Agentes - CEO Supreme] Mercado filtrado y analizado. Consultando al Súper-Cerebro Gemini AI para el TOP {len(candidates_data_list)} simultáneo...")
 
+    try:
+        from data_fetcher import fetch_wall_street_macro_context
+        ws_data = fetch_wall_street_macro_context()
+        wall_street_str = f"{ws_data.get('macro_regime')} (S&P 500 {ws_data.get('sp_change_pct'):+.2f}%)"
+    except Exception:
+        wall_street_str = "⚪ Wall Street Neutral"
+
     prompt_text = f"""
     Eres el COMITÉ INSTITUCIONAL MULTI-AGENTE CUÁNTICO 24/7 (Súper-Cerebro de Élite).
     Tu estructura está compuesta por 7 AGENTES ESPECIALIZADOS DE INTELIGENCIA ARTIFICIAL que deben deliberar y lograr consenso unánime antes de ejecutar cualquier orden real:
     
     1. 🕵️ AGENTE 1 - ANALISTA MACRO & RASTRO DE BALLENAS (Whale & Macro Sentinel):
-       - Examina el sentimiento Fear & Greed ({fear_greed.get('score')} - {fear_greed.get('sentiment')}), noticias globales y volumen institucional (Volume Surge > 1.2x).
+       - Examina el sentimiento Fear & Greed ({fear_greed.get('score')} - {fear_greed.get('sentiment')}), Mercado Tradicional ({wall_street_str}), noticias globales y volumen institucional (Volume Surge > 1.2x).
     
     2. 📊 AGENTE 2 - INGENIERO TÉCNICO & PRICE ACTION (Chartist & Pattern Sniper):
        - Examina RSI (15m y 4h), MACD Histograma, EMAs (20, 50, 200), mechas de absorción y estructuras de volatilidad ATR.
@@ -403,9 +410,10 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
        - LÍDER SUPREMO Y ORQUESTADOR DE RENTABILIDAD. Sinteriza las opiniones de los otros 6 agentes. Bloquea absolutamente cualquier patrón que coincida con pérdidas pasadas y autoriza Trailing Stop ATR para exprimir súper-tendencias de +5%, +10% o +20%+.
 
     CONTEXTO GLOBAL MACRO Y ROTACIÓN SECTORIAL:
+    - Mercado Tradicional Wall Street: {wall_street_str}
     - Sector Liderando Entrada de Capital: {sector_summary['top_sector']} ({sector_summary['all_sectors'].get(sector_summary['top_sector'], {}).get('status', '')})
     - Sesgo de Aprendizaje: {market_bias_ctx}
-    - Entorno Macro: {macro_context}
+    - Entorno Macro Cripto: {macro_context}
     - Fear & Greed: {fear_greed.get('score')} ({fear_greed.get('sentiment')})
     - Noticias Globales: {json.dumps(news_data.get('headlines', [])[:3])}
 
