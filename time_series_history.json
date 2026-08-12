@@ -1,12 +1,12 @@
 {
-  "IMXUSDT": [
+  "MSTRBUSDT": [
     {
-      "timestamp": "2026-08-12 06:52:11",
-      "price": 0.1118,
+      "timestamp": "2026-08-12 06:54:10",
+      "price": 96.58,
       "score": 0,
-      "rsi": 41.36,
+      "rsi": 42.39,
       "macd": "Neutral",
-      "volume_surge": 0.37,
+      "volume_surge": 0.35,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +14,25 @@
   ],
   "DCRUSDT": [
     {
-      "timestamp": "2026-08-12 06:52:11",
+      "timestamp": "2026-08-12 06:54:10",
       "price": 13.0,
       "score": 30,
       "rsi": 54.1,
       "macd": "Neutral",
-      "volume_surge": 0.15,
+      "volume_surge": 0.43,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "IMXUSDT": [
+    {
+      "timestamp": "2026-08-12 06:54:10",
+      "price": 0.1118,
+      "score": 0,
+      "rsi": 41.36,
+      "macd": "Neutral",
+      "volume_surge": 0.45,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -27,25 +40,25 @@
   ],
   "MEGAUSDT": [
     {
-      "timestamp": "2026-08-12 06:52:11",
-      "price": 0.03287,
+      "timestamp": "2026-08-12 06:54:10",
+      "price": 0.03286,
       "score": 0,
-      "rsi": 33.57,
+      "rsi": 33.02,
       "macd": "Neutral",
-      "volume_surge": 0.09,
+      "volume_surge": 0.24,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "GUNUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-12 06:52:11",
-      "price": 0.0033,
-      "score": 30,
-      "rsi": 42.75,
+      "timestamp": "2026-08-12 06:54:10",
+      "price": 0.1261,
+      "score": 0,
+      "rsi": 40.47,
       "macd": "Neutral",
-      "volume_surge": 0.54,
+      "volume_surge": 0.17,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -53,12 +66,38 @@
   ],
   "OPENUSDT": [
     {
-      "timestamp": "2026-08-12 06:52:11",
-      "price": 0.2122,
-      "score": 30,
-      "rsi": 51.43,
+      "timestamp": "2026-08-12 06:54:10",
+      "price": 0.2121,
+      "score": 10,
+      "rsi": 51.05,
       "macd": "Neutral",
-      "volume_surge": 0.16,
+      "volume_surge": 0.17,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GUNUSDT": [
+    {
+      "timestamp": "2026-08-12 06:54:10",
+      "price": 0.00329,
+      "score": 0,
+      "rsi": 41.51,
+      "macd": "Neutral",
+      "volume_surge": 0.54,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "0GUSDT": [
+    {
+      "timestamp": "2026-08-12 06:54:10",
+      "price": 0.157,
+      "score": 0,
+      "rsi": 42.0,
+      "macd": "Neutral",
+      "volume_surge": 0.82,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
