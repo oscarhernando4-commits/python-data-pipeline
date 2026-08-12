@@ -2295,3 +2295,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2026-07-28 (-22.98%)`, `2026-07-30 (-19.65%)`, `2026-07-23 (-15.97%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: 2ZUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-10-02` hasta `2026-08-12` (315 Días de Historial)
+- 💵 **Precio Actual:** `$0.0585 USD`
+- 📈 **Máximo Histórico (ATH):** `$1.2800 USD` (`2025-10-02`) | Distancia: `-95.43%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0500 USD` (`2025-10-02`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-10-02 (+1096.0%)`, `2025-11-21 (+18.45%)`, `2026-05-20 (+16.82%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-28.48%)`, `2026-01-25 (-13.67%)`, `2026-02-05 (-13.57%)`
+
+---
