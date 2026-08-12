@@ -1,12 +1,51 @@
 {
-  "LDOUSDT": [
+  "IMXUSDT": [
     {
-      "timestamp": "2026-08-12 11:54:11",
-      "price": 0.292,
+      "timestamp": "2026-08-12 11:56:13",
+      "price": 0.1141,
       "score": 50,
-      "rsi": 58.16,
+      "rsi": 57.76,
       "macd": "Neutral",
-      "volume_surge": 0.5,
+      "volume_surge": 0.18,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "KITEUSDT": [
+    {
+      "timestamp": "2026-08-12 11:56:13",
+      "price": 0.1024,
+      "score": 15,
+      "rsi": 34.05,
+      "macd": "Neutral",
+      "volume_surge": 0.33,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "TSMBUSDT": [
+    {
+      "timestamp": "2026-08-12 11:56:13",
+      "price": 427.87,
+      "score": 20,
+      "rsi": 72.17,
+      "macd": "Neutral",
+      "volume_surge": 0.16,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CFXUSDT": [
+    {
+      "timestamp": "2026-08-12 11:56:13",
+      "price": 0.04191,
+      "score": 55,
+      "rsi": 54.99,
+      "macd": "Neutral",
+      "volume_surge": 2.4,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
