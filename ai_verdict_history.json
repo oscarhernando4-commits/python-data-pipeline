@@ -1398,5 +1398,145 @@
         "macro_trend": "NEUTRAL"
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-12 08:14:52",
+    "selected_symbol": "NONE",
+    "action": "HOLD",
+    "approved": false,
+    "confidence": 0,
+    "reasoning": "Tras evaluar a los candidatos, ninguno alcanza el umbral de Score Técnico >= 55 requerido por el Comité. La volatilidad actual y el sesgo estadístico desfavorable para posiciones largas en el entorno actual dictan una postura de preservación de capital (HOLD) hasta que surja una oportunidad con convicción A+.",
+    "top_candidates": [
+      {
+        "symbol": "KAITOUSDT",
+        "score": 70,
+        "price": 0.4899,
+        "rsi_2m": 19.13,
+        "rsi_5m": 19.13,
+        "rsi_15m": 19.13,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.83,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "SMCIBUSDT",
+        "score": 60,
+        "price": 34.61,
+        "rsi_2m": 56.9,
+        "rsi_5m": 56.9,
+        "rsi_15m": 56.9,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.26,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "IDUSDT",
+        "score": 60,
+        "price": 0.0288,
+        "rsi_2m": 64.55,
+        "rsi_5m": 64.55,
+        "rsi_15m": 64.55,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 3.64,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "SUIUSDT",
+        "score": 55,
+        "price": 0.6915,
+        "rsi_2m": 51.21,
+        "rsi_5m": 51.21,
+        "rsi_15m": 51.21,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 4.3,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "WLFIUSDT",
+        "score": 50,
+        "price": 0.0551,
+        "rsi_2m": 52.87,
+        "rsi_5m": 52.87,
+        "rsi_15m": 52.87,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.59,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "BMTUSDT",
+        "score": 50,
+        "price": 0.01846,
+        "rsi_2m": 61.79,
+        "rsi_5m": 61.79,
+        "rsi_15m": 61.79,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.22,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "PUMPUSDT",
+        "score": 50,
+        "price": 0.002734,
+        "rsi_2m": 58.69,
+        "rsi_5m": 58.69,
+        "rsi_15m": 58.69,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.15,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "HOMEUSDT",
+        "score": 50,
+        "price": 0.00937,
+        "rsi_2m": 49.96,
+        "rsi_5m": 49.96,
+        "rsi_15m": 49.96,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.48,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ENAUSDT",
+        "score": 50,
+        "price": 0.0904,
+        "rsi_2m": 65.96,
+        "rsi_5m": 65.96,
+        "rsi_15m": 65.96,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.19,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "BANKUSDT",
+        "score": 50,
+        "price": 0.0349,
+        "rsi_2m": 52.1,
+        "rsi_5m": 52.1,
+        "rsi_15m": 52.1,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.72,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      }
+    ]
   }
 ]
