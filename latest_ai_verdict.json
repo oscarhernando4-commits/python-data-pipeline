@@ -7,7 +7,7 @@
   "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral estricto de Score Técnico >= 55 combinado con una dominancia de Bids Compradores superior al 65%. El mercado presenta una volatilidad que, sumada al sesgo histórico de pérdidas en condiciones neutrales, hace que la estrategia más rentable sea mantener la liquidez en USDT hasta que aparezca una configuración de alta convicción.",
   "top_candidates": [
     {
-      "symbol": "AVAXUSDT",
+      "symbol": "TRXUSDT",
       "score": 60,
       "price": 6.391,
       "rsi_2m": 61.37,
@@ -72,41 +72,28 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "BABYUSDT",
-      "score": 55,
-      "price": 0.01067,
-      "rsi_2m": 25.33,
-      "rsi_5m": 25.33,
-      "rsi_15m": 25.33,
+      "symbol": "SUIUSDT",
+      "score": 50,
+      "price": 0.6876,
+      "rsi_2m": 52.96,
+      "rsi_5m": 52.96,
+      "rsi_15m": 52.96,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.05,
+      "vol_surge": 0.03,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "WLFIUSDT",
+      "symbol": "BMTUSDT",
       "score": 50,
-      "price": 0.0551,
-      "rsi_2m": 54.25,
-      "rsi_5m": 54.25,
-      "rsi_15m": 54.25,
+      "price": 0.01759,
+      "rsi_2m": 49.12,
+      "rsi_5m": 49.12,
+      "rsi_15m": 49.12,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.69,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "WLFIUSDT",
-      "score": 50,
-      "price": 0.0551,
-      "rsi_2m": 54.24,
-      "rsi_5m": 54.24,
-      "rsi_15m": 54.24,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.53,
+      "vol_surge": 0.04,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -124,7 +111,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "SUIUSDT",
+      "symbol": "GOOGLBUSDT",
       "score": 50,
       "price": 0.6878,
       "rsi_2m": 53.85,
