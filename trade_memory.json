@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3003,
+    "total_trades": 3006,
     "wins": 542,
-    "losses": 2461,
-    "win_rate_pct": 18.05,
-    "total_pnl_usd": 101155.60989545488
+    "losses": 2464,
+    "win_rate_pct": 18.03,
+    "total_pnl_usd": 101153.90989545487
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on JUPUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PROMUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ATOMUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PENGUUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PROMUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on TUTUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BANKUSDT)",
-      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BANKUSDT)"
+      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BANKUSDT)",
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ATMUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on AXTIBUSDT)",
@@ -53,53 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-11 13:34:19",
-      "account_id": "SIM-034",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "SOXLBUSDT",
-      "side": "LONG",
-      "entry_price": 134.68,
-      "exit_price": 133.41,
-      "pnl_usd": -0.21,
-      "result": "LOSS",
-      "notes": "Hit SL on SOXLBUSDT (-$0.21). Re-Trading!",
-      "context": {
-        "score": 10,
-        "rsi_15m": 46.78,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 13:34:19",
-      "account_id": "SIM-035",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "SOXLBUSDT",
-      "side": "LONG",
-      "entry_price": 134.68,
-      "exit_price": 133.41,
-      "pnl_usd": -0.21,
-      "result": "LOSS",
-      "notes": "Hit SL on SOXLBUSDT (-$0.21). Re-Trading!",
-      "context": {
-        "score": 10,
-        "rsi_15m": 46.78,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 08:37:16",
-      "account_id": "R-01",
-      "group_name": "CUENTA REAL",
-      "symbol": "NVDABUSDT",
-      "side": "BUY",
-      "entry_price": 221.15,
-      "exit_price": 220.0,
-      "pnl_usd": -0.09085000000000044,
-      "result": "LOSS",
-      "notes": "Real Money Trade closed with -0.52%",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-11 08:38:52",
       "account_id": "SIM-033",
@@ -8238,6 +8191,57 @@
       "context": {
         "score": 20,
         "rsi_15m": 68.77,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 16:02:32",
+      "account_id": "SIM-058",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ATMUSDT",
+      "side": "LONG",
+      "entry_price": 1.58,
+      "exit_price": 1.55,
+      "pnl_usd": -0.57,
+      "result": "LOSS",
+      "notes": "Hit SL on ATMUSDT (-$0.57). Re-Trading!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 57.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 16:02:32",
+      "account_id": "SIM-059",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ATMUSDT",
+      "side": "LONG",
+      "entry_price": 1.58,
+      "exit_price": 1.55,
+      "pnl_usd": -0.56,
+      "result": "LOSS",
+      "notes": "Hit SL on ATMUSDT (-$0.56). Re-Trading!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 57.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 16:02:32",
+      "account_id": "SIM-060",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ATMUSDT",
+      "side": "LONG",
+      "entry_price": 1.58,
+      "exit_price": 1.55,
+      "pnl_usd": -0.57,
+      "result": "LOSS",
+      "notes": "Hit SL on ATMUSDT (-$0.57). Re-Trading!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 57.25,
         "macro_trend_4h": "NEUTRAL"
       }
     }
