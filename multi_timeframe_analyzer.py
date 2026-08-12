@@ -208,6 +208,11 @@ def analyze_multi_timeframe_candles(symbol):
     is_ma25_above_ma99_upward = (ma25_15m >= ma99_15m * 0.999) and ma25_slope_ok
     is_ma25_below_ma99_downward = (ma25_15m < ma99_15m) and (ma25_15m < prev_ma25_15m)
 
+    # USER'S MA7 (Amarilla) / MA25 (Rosada) GOLDEN ROCKET PATTERN:
+    # MA7 intersects / stays above MA25 and MA7 slope is ascending (ma7_15m >= prev_ma7_15m)
+    prev_ma7_15m = sum(closes_15m[-8:-1]) / len(closes_15m[-8:-1]) if len(closes_15m) >= 8 else ma7_15m
+    is_ma7_above_ma25_upward = (ma7_15m >= ma25_15m) and (ma7_15m >= prev_ma7_15m * 0.9995)
+
     price_above_15m_ma7 = closes_15m[-1] > ma7_15m
     price_above_15m_ma25 = (closes_15m[-1] >= ma25_15m * 1.0015) and ma25_slope_ok
     dist_from_15m_ma7_pct = round(((closes_15m[-1] - ma7_15m) / ma7_15m) * 100.0, 2) if ma7_15m > 0 else 0.0
@@ -248,7 +253,7 @@ def analyze_multi_timeframe_candles(symbol):
         st_lower = hl2 - (3.0 * atr_10)
         is_supertrend_bullish = closes_15m[-1] > st_lower and closes_15m[-1] > ma7_15m
 
-    # Multi-Timeframe Alignment Score (0 to 100) including MA25/MA99 Intersect Bonus & Veto
+    # Multi-Timeframe Alignment Score (0 to 100) including MA7/MA25 & MA25/MA99 Intersect Bonus & Veto
     score_components = [
         tf_2m_up * 10,
         tf_5m_up * 20,
@@ -259,7 +264,8 @@ def analyze_multi_timeframe_candles(symbol):
         15 if is_bullish_divergence else 0,
         15 if is_vwap_floor_rebound else 0,
         10 if is_supertrend_bullish else 0,
-        20 if is_ma25_above_ma99_upward else 0
+        20 if is_ma25_above_ma99_upward else 0,
+        25 if is_ma7_above_ma25_upward else 0
     ]
     multi_tf_score = min(100, sum(score_components))
     
@@ -300,10 +306,10 @@ def analyze_multi_timeframe_candles(symbol):
         elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > 3.0:
             is_overextended_15m = True
             overextension_reason = f"Vela de 15m sobre-extendida en la cima (+{((close_15m - open_15m) / open_15m) * 100.0:.2f}%)"
-        elif dist_from_15m_ma7_pct > 1.8:
+        elif dist_from_15m_ma7_pct > 2.5:
             is_overextended_15m = True
-            overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct}% sobre MA7). Exige ruptura fresca <= 1.8%"
-        elif (not price_above_15m_ma7 or not price_above_15m_ma25) and not (is_oversold_bounce_candidate or is_yellow_arrow_pivot or is_bullish_divergence):
+            overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct}% sobre MA7). Exige ruptura fresca <= 2.5%"
+        elif (not price_above_15m_ma7 and not price_above_15m_ma25) and not (is_oversold_bounce_candidate or is_yellow_arrow_pivot or is_bullish_divergence or is_ma7_above_ma25_upward):
             is_overextended_15m = True
             overextension_reason = f"Tendencia bajista sin estructura de rebote en el suelo"
     avg_vol_15m = sum(vols_15m[-5:]) / len(vols_15m[-5:]) if len(vols_15m) >= 5 else 1.0
