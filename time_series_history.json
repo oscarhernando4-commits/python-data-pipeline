@@ -1,12 +1,38 @@
 {
+  "GUNUSDT": [
+    {
+      "timestamp": "2026-08-12 05:08:12",
+      "price": 0.00333,
+      "score": 0,
+      "rsi": 43.7,
+      "macd": "Neutral",
+      "volume_surge": 0.08,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
   "MEGAUSDT": [
     {
-      "timestamp": "2026-08-12 05:06:12",
-      "price": 0.03341,
-      "score": 35,
-      "rsi": 49.91,
+      "timestamp": "2026-08-12 05:08:12",
+      "price": 0.03343,
+      "score": 50,
+      "rsi": 50.85,
       "macd": "Neutral",
-      "volume_surge": 0.14,
+      "volume_surge": 0.15,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CFXUSDT": [
+    {
+      "timestamp": "2026-08-12 05:08:12",
+      "price": 0.04167,
+      "score": 50,
+      "rsi": 57.98,
+      "macd": "Neutral",
+      "volume_surge": 0.26,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
