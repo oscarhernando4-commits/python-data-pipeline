@@ -1,25 +1,51 @@
 {
-  "ACEUSDT": [
+  "NILUSDT": [
     {
-      "timestamp": "2026-08-12 01:48:13",
-      "price": 0.1059,
-      "score": 65,
-      "rsi": 54.44,
+      "timestamp": "2026-08-12 01:50:15",
+      "price": 0.03628,
+      "score": 35,
+      "rsi": 68.22,
       "macd": "Neutral",
-      "volume_surge": 0.04,
+      "volume_surge": 1.62,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ]
+}  "BOMEUSDT": [
+    {
+      "timestamp": "2026-08-12 01:50:15",
+      "price": 0.0007959,
+      "score": 45,
+      "rsi": 52.98,
+      "macd": "Neutral",
+      "volume_surge": 0.13,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "XTZUSDT": [
+  "ACEUSDT": [
     {
-      "timestamp": "2026-08-12 01:48:13",
-      "price": 0.1955,
-      "score": 65,
-      "rsi": 54.67,
+      "timestamp": "2026-08-12 01:50:15",
+      "price": 0.1048,
+      "score": 30,
+      "rsi": 44.39,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.98,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DCRUSDT": [
+    {
+      "timestamp": "2026-08-12 01:50:15",
+      "price": 12.92,
+      "score": 15,
+      "rsi": 49.45,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
