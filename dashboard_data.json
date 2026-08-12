@@ -4,16 +4,16 @@
   "usdt_free": 0.1256,
   "bnb_free": 0.00369424,
   "bnb_usd": 2.26,
-  "status": "🔵 En Vivo LONG (GRAMUSDT @ $1.3390)",
+  "status": "🔵 En Vivo LONG (GRAMUSDT @ $1.3380)",
   "position": {
     "symbol": "GRAMUSDT",
     "quantity": 12.05,
     "entry_price": 1.352,
     "highest_price": 1.352,
-    "cost_usd": 16.13,
+    "cost_usd": 16.12,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 111,
+    "holding_cycles": 112,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -25,12 +25,12 @@
     "reasoning": "El mercado se encuentra en una fase de alta incertidumbre y debilidad técnica. Ningún activo cumple con los criterios de selección A+ establecidos por el comité, por lo que la estrategia óptima es mantener la liquidez y evitar la exposición a activos con baja convicción y alto riesgo de volatilidad.",
     "top_candidates": [
       {
-        "symbol": "REUSDT",
-        "score": 60,
-        "price": 0.4251,
-        "rsi_2m": 53.36,
-        "rsi_5m": 53.36,
-        "rsi_15m": 53.36,
+        "symbol": "AXSUSDT",
+        "score": 55,
+        "price": 0.863,
+        "rsi_2m": 28.28,
+        "rsi_5m": 28.28,
+        "rsi_15m": 28.28,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 0.77,
