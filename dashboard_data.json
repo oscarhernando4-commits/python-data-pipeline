@@ -4,16 +4,16 @@
   "usdt_free": 0.1256,
   "bnb_free": 0.00369424,
   "bnb_usd": 2.26,
-  "status": "🔵 En Vivo LONG (GRAMUSDT @ $1.3530)",
+  "status": "🔵 En Vivo LONG (GRAMUSDT @ $1.3540)",
   "position": {
     "symbol": "GRAMUSDT",
     "quantity": 12.05,
     "entry_price": 1.352,
-    "highest_price": 1.353,
-    "cost_usd": 16.3,
+    "highest_price": 1.354,
+    "cost_usd": 16.32,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 120,
+    "holding_cycles": 121,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -61,6 +61,19 @@
         "rsi_4h": 50.0,
         "vol_surge": 0.78,
         "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "WLFIUSDT",
+        "score": 50,
+        "price": 0.0552,
+        "rsi_2m": 57.9,
+        "rsi_5m": 57.9,
+        "rsi_15m": 57.9,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.78,
+        "trade_quality": "B",
         "macro_trend": "NEUTRAL"
       },
       {
