@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-12 16:32:22",
+  "timestamp": "2026-08-12 16:34:32",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una fragilidad sistémica elevada. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55 y soporte de libro de órdenes > 55%), por lo que la estrategia óptima es preservar el capital y evitar la caza de suelos en un entorno de alta presión vendedora.",
+  "reasoning": "El mercado se encuentra en una zona de alta incertidumbre con scores técnicos mediocres y falta de soporte en el libro de órdenes; por tanto, la estrategia institucional es preservar el capital y esperar una configuración de mercado más clara.",
   "top_candidates": [
     {
       "symbol": "CRVUSDT",
@@ -46,51 +46,12 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "GRAMUSDT",
-      "score": 60,
-      "price": 1.351,
-      "rsi_2m": 56.96,
-      "rsi_5m": 56.96,
-      "rsi_15m": 56.96,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.06,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "SKYUSDT",
-      "score": 60,
-      "price": 0.05345,
-      "rsi_2m": 56.26,
-      "rsi_5m": 56.26,
-      "rsi_15m": 56.26,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.0,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "MORPHOUSDT",
-      "score": 60,
-      "price": 1.982,
-      "rsi_2m": 58.5,
-      "rsi_5m": 58.5,
-      "rsi_15m": 58.5,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.05,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
       "symbol": "AXTIBUSDT",
       "score": 60,
-      "price": 79.04,
-      "rsi_2m": 52.25,
-      "rsi_5m": 52.25,
-      "rsi_15m": 52.25,
+      "price": 78.98,
+      "rsi_2m": 52.02,
+      "rsi_5m": 52.02,
+      "rsi_15m": 52.02,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.24,
