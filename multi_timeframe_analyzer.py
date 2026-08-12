@@ -225,15 +225,24 @@ def analyze_multi_timeframe_candles(symbol):
             if recent_rsi > prev_rsi + 3.0:
                 is_bullish_divergence = True
 
-    # Multi-Timeframe Alignment Score (0 to 100) including 2m synchronization + Divergence Bonus
+    # Calculate VWAP (Volume-Weighted Average Price) & Standard Deviation Bands
+    cum_pv = sum(((float(k[2]) + float(k[3]) + float(k[4])) / 3.0) * float(k[5]) for k in klines_15m[-20:]) if klines_15m else 0.0
+    cum_vol = sum(float(k[5]) for k in klines_15m[-20:]) if klines_15m else 0.0
+    vwap_15m = (cum_pv / cum_vol) if cum_vol > 0 else closes_15m[-1]
+    vwap_std = float(np.std(closes_15m[-20:])) if len(closes_15m) >= 20 else 0.001
+    vwap_lower_band = vwap_15m - (1.5 * vwap_std)
+    is_vwap_floor_rebound = (closes_15m[-1] <= vwap_lower_band) or (closes_15m[-1] < vwap_15m and (float(klines_15m[-1][3]) <= vwap_lower_band))
+
+    # Multi-Timeframe Alignment Score (0 to 100) including 2m synchronization + Divergence & VWAP Bonus
     score_components = [
         tf_2m_up * 10,
-        tf_5m_up * 15,
+        tf_5m_up * 20,
         tf_15m_up * 25,
         tf_1h_up * 20,
-        tf_4h_up * 15,
+        tf_4h_up * 10,
         tf_1d_up * 15,
-        15 if is_bullish_divergence else 0
+        15 if is_bullish_divergence else 0,
+        15 if is_vwap_floor_rebound else 0
     ]
     multi_tf_score = min(100, sum(score_components))
     
