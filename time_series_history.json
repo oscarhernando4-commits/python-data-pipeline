@@ -1,10 +1,49 @@
 {
-  "JTOUSDT": [
+  "PENDLEUSDT": [
     {
-      "timestamp": "2026-08-12 09:58:22",
-      "price": 0.5627,
+      "timestamp": "2026-08-12 10:00:23",
+      "price": 1.318,
+      "score": 25,
+      "rsi": 26.56,
+      "macd": "Neutral",
+      "volume_surge": 0.26,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "KITEUSDT": [
+    {
+      "timestamp": "2026-08-12 10:00:23",
+      "price": 0.1006,
+      "score": 25,
+      "rsi": 22.57,
+      "macd": "Neutral",
+      "volume_surge": 0.03,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-12 10:00:23",
+      "price": 0.1232,
+      "score": 0,
+      "rsi": 32.48,
+      "macd": "Neutral",
+      "volume_surge": 0.16,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "FLOWUSDT": [
+    {
+      "timestamp": "2026-08-12 10:00:23",
+      "price": 0.0334,
       "score": 50,
-      "rsi": 57.84,
+      "rsi": 63.66,
       "macd": "Neutral",
       "volume_surge": 0.7,
       "wyckoff": "Sin patron",
