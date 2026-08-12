@@ -13,7 +13,7 @@
     "cost_usd": 16.13,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 113,
+    "holding_cycles": 114,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -24,19 +24,6 @@
     "confidence": 0,
     "reasoning": "El mercado se encuentra en una fase de distribución con alta fragilidad técnica. Ninguno de los candidatos cumple con los criterios estrictos de Score A+ (>= 55) ni con una dominancia de Bids en el libro de órdenes que mitigue el riesgo de slippage. Se prioriza la preservación del capital sobre la especulación en un entorno de baja convicción.",
     "top_candidates": [
-      {
-        "symbol": "AVAXUSDT",
-        "score": 60,
-        "price": 6.403,
-        "rsi_2m": 60.49,
-        "rsi_5m": 60.49,
-        "rsi_15m": 60.49,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.34,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
       {
         "symbol": "TRUMPUSDT",
         "score": 55,
@@ -176,7 +163,7 @@
         "rsi_15m": 54.76,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.03,
+        "vol_surge": 0.04,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }
