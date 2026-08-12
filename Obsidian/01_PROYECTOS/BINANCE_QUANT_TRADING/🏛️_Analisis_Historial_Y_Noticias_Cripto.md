@@ -2165,3 +2165,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2026-07-15 (-14.43%)`, `2026-07-23 (-13.57%)`, `2026-07-28 (-11.38%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: IDUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-16` hasta `2026-08-11` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.0314 USD`
+- 📈 **Máximo Histórico (ATH):** `$1.8402 USD` (`2024-03-16`) | Distancia: `-98.29%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0230 USD` (`2026-06-05`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-02-06 (+87.27%)`, `2024-03-09 (+59.71%)`, `2026-05-28 (+39.1%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-31.35%)`, `2024-03-20 (-30.96%)`, `2024-12-08 (-18.13%)`
+
+---
