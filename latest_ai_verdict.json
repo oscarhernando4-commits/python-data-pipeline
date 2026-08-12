@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-12 15:20:27",
+  "timestamp": "2026-08-12 15:22:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva sin activos que cumplan con los criterios de convicción A+ requeridos por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de operaciones de baja probabilidad.",
+  "reasoning": "El mercado se encuentra en un estado de capitulación técnica con una correlación bajista sistémica. Ninguno de los candidatos analizados cumple con los requisitos estrictos de Score Técnico (>= 55) ni con la profundidad de liquidez necesaria para una operación de bajo riesgo. Se prioriza la preservación de capital sobre la especulación en un entorno de alta volatilidad y baja convicción.",
   "top_candidates": [
     {
       "symbol": "BABYUSDT",
@@ -28,7 +28,46 @@
       "rsi_15m": 17.15,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.28,
+      "vol_surge": 0.5,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "score": 50,
+      "price": 0.002723,
+      "rsi_2m": 53.93,
+      "rsi_5m": 53.93,
+      "rsi_15m": 53.93,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.38,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "GRAMUSDT",
+      "score": 50,
+      "price": 1.349,
+      "rsi_2m": 52.55,
+      "rsi_5m": 52.55,
+      "rsi_15m": 52.55,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.83,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "MMTUSDT",
+      "score": 50,
+      "price": 0.2022,
+      "rsi_2m": 57.66,
+      "rsi_5m": 57.66,
+      "rsi_15m": 57.66,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.68,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
