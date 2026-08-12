@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-12 19:38:28",
+  "timestamp": "2026-08-12 19:40:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual se encuentra en una fase de desangrado por inercia sin activos que cumplan con los criterios de alta convicción (Score >= 55) y soporte de liquidez. Se prioriza la preservación de capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "El mercado actual carece de activos con fuerza relativa (Score >= 55) y soporte institucional en el libro de órdenes. La alta tasa de fallos en simulaciones pasadas bajo condiciones similares confirma que la estrategia óptima es mantener la liquidez en USDT hasta que aparezca una configuración A+.",
   "top_candidates": [
     {
       "symbol": "BABYUSDT",
@@ -113,13 +113,13 @@
     {
       "symbol": "BOMEUSDT",
       "score": 50,
-      "price": 0.0007707,
-      "rsi_2m": 54.35,
-      "rsi_5m": 54.35,
-      "rsi_15m": 54.35,
+      "price": 0.0007715,
+      "rsi_2m": 55.38,
+      "rsi_5m": 55.38,
+      "rsi_15m": 55.38,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.05,
+      "vol_surge": 0.09,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -137,16 +137,68 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "BTCUSDT",
+      "symbol": "AVAXUSDT",
       "score": 45,
-      "price": 63387.21,
-      "rsi_2m": 35.02,
-      "rsi_5m": 35.02,
-      "rsi_15m": 35.02,
+      "price": 6.382,
+      "rsi_2m": 57.37,
+      "rsi_5m": 57.37,
+      "rsi_15m": 57.37,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.21,
+      "vol_surge": 0.32,
       "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "score": 45,
+      "price": 1.984,
+      "rsi_2m": 54.52,
+      "rsi_5m": 54.52,
+      "rsi_15m": 54.52,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.44,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "INJUSDT",
+      "score": 45,
+      "price": 4.608,
+      "rsi_2m": 58.94,
+      "rsi_5m": 58.94,
+      "rsi_15m": 58.94,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.2,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "SPYBUSDT",
+      "score": 45,
+      "price": 773.36,
+      "rsi_2m": 52.24,
+      "rsi_5m": 52.24,
+      "rsi_15m": 52.24,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.18,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "ATMUSDT",
+      "score": 45,
+      "price": 1.544,
+      "rsi_2m": 51.24,
+      "rsi_5m": 51.24,
+      "rsi_15m": 51.24,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.58,
+      "trade_quality": "B",
       "macro_trend": "NEUTRAL"
     }
   ]
