@@ -157,6 +157,35 @@ def get_binance_institutional_sentiment(symbol):
         "sentiment_label": "⚪ NEUTRAL (Sin datos de futuros)"
     }
 
+def fetch_wall_street_macro_context():
+    """
+    Fetches real-time Wall Street Macro Indices (S&P 500 & NASDAQ) to enhance
+    the Super-Brain's market bias intelligence.
+    """
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    try:
+        res_nasdaq = requests.get('https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC', headers=headers, timeout=5)
+        meta_nasdaq = res_nasdaq.json()['chart']['result'][0]['meta']
+        nasdaq_price = meta_nasdaq['regularMarketPrice']
+        nasdaq_prev = meta_nasdaq['previousClose']
+        nasdaq_change_pct = round(((nasdaq_price - nasdaq_prev) / nasdaq_prev) * 100.0, 2)
+
+        res_sp = requests.get('https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC', headers=headers, timeout=5)
+        meta_sp = res_sp.json()['chart']['result'][0]['meta']
+        sp_price = meta_sp['regularMarketPrice']
+        sp_prev = meta_sp['previousClose']
+        sp_change_pct = round(((sp_price - sp_prev) / sp_prev) * 100.0, 2)
+
+        macro_regime = "🟢 WALL STREET ALCISTA (NASDAQ " + f"{nasdaq_change_pct:+.2f}%)" if nasdaq_change_pct > 0.3 else ("🔴 WALL STREET BAJISTA (NASDAQ " + f"{nasdaq_change_pct:+.2f}%)" if nasdaq_change_pct < -0.5 else "⚪ WALL STREET NEUTRAL (NASDAQ " + f"{nasdaq_change_pct:+.2f}%)")
+
+        return {
+            "nasdaq_change_pct": nasdaq_change_pct,
+            "sp_change_pct": sp_change_pct,
+            "macro_regime": macro_regime
+        }
+    except Exception:
+        return {"nasdaq_change_pct": 0.0, "sp_change_pct": 0.0, "macro_regime": "⚪ WALL STREET NEUTRAL"}
+
 # Compatibility aliases
 fetch_top_100_pairs = update_top_pairs
 
