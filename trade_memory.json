@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2994,
-    "wins": 539,
-    "losses": 2455,
-    "win_rate_pct": 18.0,
-    "total_pnl_usd": 101157.40989545488
+    "total_trades": 3000,
+    "wins": 542,
+    "losses": 2458,
+    "win_rate_pct": 18.07,
+    "total_pnl_usd": 101157.09989545488
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on HOLOUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on IDUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on JUPUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PROMUSDT)",
@@ -27,10 +26,10 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SEIUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on MUBARAKUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PROMUSDT)",
-      "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on TUTUSDT)"
+      "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on TUTUSDT)",
+      "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BANKUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on KAITOUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on AXTIBUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on NEARUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on KAITOUSDT)",
@@ -49,112 +48,11 @@
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on FILUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on FILUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on OPENUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PENGUUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PENGUUSDT)",
+      "BOOST SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BANKUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-11 13:02:22",
-      "account_id": "SIM-041",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "LUNAUSDT",
-      "side": "LONG",
-      "entry_price": 0.0482,
-      "exit_price": 0.0481,
-      "pnl_usd": -0.13,
-      "result": "LOSS",
-      "notes": "Hit SL on LUNAUSDT (-$0.13). Re-Trading!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 72.78,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 13:02:22",
-      "account_id": "SIM-043",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "LUNAUSDT",
-      "side": "LONG",
-      "entry_price": 0.0482,
-      "exit_price": 0.0481,
-      "pnl_usd": -0.13,
-      "result": "LOSS",
-      "notes": "Hit SL on LUNAUSDT (-$0.13). Re-Trading!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 72.78,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 13:02:22",
-      "account_id": "SIM-045",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "LUNAUSDT",
-      "side": "LONG",
-      "entry_price": 0.0503,
-      "exit_price": 0.0481,
-      "pnl_usd": -1.28,
-      "result": "LOSS",
-      "notes": "Hit SL on LUNAUSDT (-$1.28). Re-Trading!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 72.78,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 13:08:19",
-      "account_id": "SIM-065",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "HEIUSDT",
-      "side": "SHORT",
-      "entry_price": 0.1709,
-      "exit_price": 0.1518,
-      "pnl_usd": 2.2,
-      "result": "WIN",
-      "notes": "Win on HEIUSDT (+$2.20 net) -> Level 11 Re-Trading Started!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 40.04,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 13:28:17",
-      "account_id": "SIM-074",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "COOKIEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0139,
-      "exit_price": 0.0149,
-      "pnl_usd": -1.45,
-      "result": "LOSS",
-      "notes": "Hit SL on COOKIEUSDT (-$1.45). Re-Trading!",
-      "context": {
-        "score": 50,
-        "rsi_15m": 67.28,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 13:28:17",
-      "account_id": "SIM-075",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "COOKIEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0139,
-      "exit_price": 0.0149,
-      "pnl_usd": -1.45,
-      "result": "LOSS",
-      "notes": "Hit SL on COOKIEUSDT (-$1.45). Re-Trading!",
-      "context": {
-        "score": 50,
-        "rsi_15m": 67.28,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-11 13:28:17",
       "account_id": "SIM-080",
@@ -8238,6 +8136,108 @@
       "context": {
         "score": 40,
         "rsi_15m": 31.91,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 15:40:25",
+      "account_id": "SIM-021",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "BANKUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0378,
+      "exit_price": 0.0364,
+      "pnl_usd": 0.71,
+      "result": "WIN",
+      "notes": "Win on BANKUSDT (+$0.71 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 73.94,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 15:40:25",
+      "account_id": "SIM-023",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "BANKUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0378,
+      "exit_price": 0.0364,
+      "pnl_usd": 0.71,
+      "result": "WIN",
+      "notes": "Win on BANKUSDT (+$0.71 net) -> Level 7 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 73.94,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 15:40:25",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "BANKUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0378,
+      "exit_price": 0.0364,
+      "pnl_usd": 0.72,
+      "result": "WIN",
+      "notes": "Win on BANKUSDT (+$0.72 net) -> Level 10 Re-Trading Started!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 73.94,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 15:40:25",
+      "account_id": "SIM-048",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "BANKUSDT",
+      "side": "LONG",
+      "entry_price": 0.0378,
+      "exit_price": 0.0364,
+      "pnl_usd": -0.85,
+      "result": "LOSS",
+      "notes": "Hit SL on BANKUSDT (-$0.85). Re-Trading!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 73.94,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 15:40:25",
+      "account_id": "SIM-049",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "BANKUSDT",
+      "side": "LONG",
+      "entry_price": 0.0378,
+      "exit_price": 0.0364,
+      "pnl_usd": -0.85,
+      "result": "LOSS",
+      "notes": "Hit SL on BANKUSDT (-$0.85). Re-Trading!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 73.94,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 15:40:25",
+      "account_id": "SIM-050",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "BANKUSDT",
+      "side": "LONG",
+      "entry_price": 0.0378,
+      "exit_price": 0.0364,
+      "pnl_usd": -0.75,
+      "result": "LOSS",
+      "notes": "Hit SL on BANKUSDT (-$0.75). Re-Trading!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 73.94,
         "macro_trend_4h": "NEUTRAL"
       }
     }

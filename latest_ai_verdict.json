@@ -1,13 +1,13 @@
 {
-  "timestamp": "2026-08-12 15:38:32",
+  "timestamp": "2026-08-12 15:40:25",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 95,
-  "reasoning": "El mercado presenta una debilidad sistémica extrema con una correlación bajista dominante. Ninguno de los candidatos cumple con el umbral de Score A+ (>= 55) combinado con una profundidad de libro de órdenes favorable. La estrategia institucional es la preservación total de capital hasta que se observe una acumulación real de ballenas.",
+  "confidence": 0,
+  "reasoning": "El mercado presenta una estructura de distribución institucional agresiva y falta de convicción en los activos analizados. Ningún candidato cumple con el umbral de seguridad A+ requerido por el comité, por lo que se prioriza la protección del capital frente a la especulación en un entorno de alta incertidumbre.",
   "top_candidates": [
     {
-      "symbol": "AAOIBUSDT",
+      "symbol": "MORPHOUSDT",
       "score": 60,
       "price": 138.56,
       "rsi_2m": 52.07,
@@ -100,10 +100,10 @@
     {
       "symbol": "INJUSDT",
       "score": 50,
-      "price": 4.568,
-      "rsi_2m": 49.16,
-      "rsi_5m": 49.16,
-      "rsi_15m": 49.16,
+      "price": 4.567,
+      "rsi_2m": 48.81,
+      "rsi_5m": 48.81,
+      "rsi_15m": 48.81,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.08,
