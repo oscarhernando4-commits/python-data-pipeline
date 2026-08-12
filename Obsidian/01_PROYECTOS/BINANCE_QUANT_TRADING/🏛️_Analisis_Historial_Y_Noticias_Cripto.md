@@ -2204,3 +2204,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-31.53%)`, `2024-12-09 (-19.72%)`, `2026-07-27 (-18.46%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: RAREUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-17` hasta `2026-08-12` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.0150 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.3476 USD` (`2024-08-18`) | Distancia: `-95.68%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0081 USD` (`2025-10-10`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-04-17 (+50.31%)`, `2024-08-17 (+47.86%)`, `2024-08-16 (+47.44%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-34.96%)`, `2026-04-18 (-29.71%)`, `2024-08-26 (-23.91%)`
+
+---
