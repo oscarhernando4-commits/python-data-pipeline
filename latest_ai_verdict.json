@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-12 15:34:39",
+  "timestamp": "2026-08-12 15:36:34",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva con una correlación bajista sistémica. Ninguno de los candidatos cumple con los requisitos estrictos de Score A+ (>= 55) y soporte de libro de órdenes necesario para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un entorno de alta volatilidad y baja convicción.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
@@ -124,28 +124,15 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "DEXEUSDT",
+      "symbol": "BICOUSDT",
       "score": 50,
-      "price": 1.936,
-      "rsi_2m": 57.06,
-      "rsi_5m": 57.06,
-      "rsi_15m": 57.06,
+      "price": 0.03504,
+      "rsi_2m": 58.59,
+      "rsi_5m": 58.59,
+      "rsi_15m": 58.59,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.18,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "ESPUSDT",
-      "score": 50,
-      "price": 0.07045,
-      "rsi_2m": 52.04,
-      "rsi_5m": 52.04,
-      "rsi_15m": 52.04,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.14,
+      "vol_surge": 0.39,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
