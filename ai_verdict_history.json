@@ -1398,5 +1398,145 @@
         "macro_trend": "NEUTRAL"
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-12 07:58:51",
+    "selected_symbol": "NONE",
+    "action": "HOLD",
+    "approved": false,
+    "confidence": 0,
+    "reasoning": "Tras analizar los candidatos, ninguno cumple con la combinación estricta de Score A+ (>=55), soporte de libro de órdenes sólido y confirmación de tendencia. El mercado actual presenta una alta probabilidad de 'falling knives' y volatilidad impredecible, por lo que el comité decide mantener la liquidez en USDT para preservar el capital.",
+    "top_candidates": [
+      {
+        "symbol": "NEARUSDT",
+        "score": 75,
+        "price": 1.653,
+        "rsi_2m": 52.84,
+        "rsi_5m": 52.84,
+        "rsi_15m": 52.84,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.2,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ETHUSDT",
+        "score": 75,
+        "price": 1911.23,
+        "rsi_2m": 58.83,
+        "rsi_5m": 58.83,
+        "rsi_15m": 58.83,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.62,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ENAUSDT",
+        "score": 75,
+        "price": 0.0898,
+        "rsi_2m": 56.13,
+        "rsi_5m": 56.13,
+        "rsi_15m": 56.13,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.92,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "XLMUSDT",
+        "score": 75,
+        "price": 0.1618,
+        "rsi_2m": 56.38,
+        "rsi_5m": 56.38,
+        "rsi_15m": 56.38,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.29,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "FETUSDT",
+        "score": 75,
+        "price": 0.1357,
+        "rsi_2m": 57.46,
+        "rsi_5m": 57.46,
+        "rsi_15m": 57.46,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.88,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "DOTUSDT",
+        "score": 75,
+        "price": 0.794,
+        "rsi_2m": 62.34,
+        "rsi_5m": 62.34,
+        "rsi_15m": 62.34,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.81,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "SHIBUSDT",
+        "score": 75,
+        "price": 4.51e-06,
+        "rsi_2m": 60.62,
+        "rsi_5m": 60.62,
+        "rsi_15m": 60.62,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.04,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "SUIUSDT",
+        "score": 70,
+        "price": 0.6917,
+        "rsi_2m": 52.21,
+        "rsi_5m": 52.21,
+        "rsi_15m": 52.21,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.96,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ONDOUSDT",
+        "score": 70,
+        "price": 0.338,
+        "rsi_2m": 58.75,
+        "rsi_5m": 58.75,
+        "rsi_15m": 58.75,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.61,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "PUMPUSDT",
+        "score": 65,
+        "price": 0.002746,
+        "rsi_2m": 63.77,
+        "rsi_5m": 63.77,
+        "rsi_15m": 63.77,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.2,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      }
+    ]
   }
 ]
