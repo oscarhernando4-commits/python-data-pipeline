@@ -1,37 +1,11 @@
 {
-  "timestamp": "2026-08-12 15:14:31",
+  "timestamp": "2026-08-12 15:16:28",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado actual se encuentra en una fase de capitulación técnica con alta volatilidad y falta de soporte institucional claro. Ninguno de los candidatos cumple con los criterios estrictos de Score A+ (>= 55) y confirmación de liquidez, por lo que la decisión institucional es proteger el capital y evitar la exposición a activos de baja profundidad.",
+  "reasoning": "El mercado se encuentra en una fase de pánico institucional y trampa de liquidez. Ninguno de los activos analizados cumple con los requisitos mínimos de Score Técnico (>= 55) ni con la profundidad de mercado necesaria para una operación de alta probabilidad. La estrategia institucional es preservar el capital en stablecoins hasta que el entorno macroeconómico y la rotación sectorial ofrezcan una oportunidad con convicción A+.",
   "top_candidates": [
-    {
-      "symbol": "PUMPUSDT",
-      "score": 60,
-      "price": 0.00273,
-      "rsi_2m": 55.74,
-      "rsi_5m": 55.74,
-      "rsi_15m": 55.74,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 1.65,
-      "trade_quality": "B",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "DEXEUSDT",
-      "score": 60,
-      "price": 1.937,
-      "rsi_2m": 58.3,
-      "rsi_5m": 58.3,
-      "rsi_15m": 58.3,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 1.99,
-      "trade_quality": "B",
-      "macro_trend": "NEUTRAL"
-    },
     {
       "symbol": "KAITOUSDT",
       "score": 55,
