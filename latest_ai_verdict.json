@@ -7,6 +7,19 @@
   "reasoning": "El mercado se encuentra en una fase de distribución agresiva sin soporte estructural. Ningún activo cumple con los criterios de convicción A+ exigidos por el comité, por lo que la orden es mantener la liquidez total en efectivo para evitar pérdidas en un entorno de alta volatilidad bajista.",
   "top_candidates": [
     {
+      "symbol": "AAVEUSDT",
+      "score": 60,
+      "price": 89.51,
+      "rsi_2m": 52.73,
+      "rsi_5m": 52.73,
+      "rsi_15m": 52.73,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.11,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "AXTIBUSDT",
       "score": 60,
       "price": 79.3,
@@ -98,7 +111,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "REUSDT",
+      "symbol": "PUMPUSDT",
       "score": 50,
       "price": 0.4212,
       "rsi_2m": 49.37,
