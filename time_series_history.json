@@ -1,12 +1,64 @@
 {
-  "IMXUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-12 09:58:11",
-      "price": 0.114,
-      "score": 65,
-      "rsi": 59.04,
+      "timestamp": "2026-08-12 10:00:12",
+      "price": 0.126,
+      "score": 45,
+      "rsi": 47.97,
       "macd": "Neutral",
-      "volume_surge": 0.78,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CFXUSDT": [
+    {
+      "timestamp": "2026-08-12 10:00:12",
+      "price": 0.04186,
+      "score": 45,
+      "rsi": 53.38,
+      "macd": "Neutral",
+      "volume_surge": 0.07,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "KITEUSDT": [
+    {
+      "timestamp": "2026-08-12 10:00:12",
+      "price": 0.105,
+      "score": 65,
+      "rsi": 56.39,
+      "macd": "Neutral",
+      "volume_surge": 0.02,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ROBOUSDT": [
+    {
+      "timestamp": "2026-08-12 10:00:12",
+      "price": 0.01286,
+      "score": 45,
+      "rsi": 42.37,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "MAVUSDT": [
+    {
+      "timestamp": "2026-08-12 10:00:12",
+      "price": 0.00884,
+      "score": 15,
+      "rsi": 33.87,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
