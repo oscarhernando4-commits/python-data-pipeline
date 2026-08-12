@@ -2217,3 +2217,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-34.96%)`, `2026-04-18 (-29.71%)`, `2024-08-26 (-23.91%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: TRBUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-17` hasta `2026-08-12` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$13.6200 USD`
+- 📈 **Máximo Histórico (ATH):** `$629.0400 USD` (`2023-12-31`) | Distancia: `-97.83%`
+- 📉 **Mínimo Histórico (ATL):** `$7.5000 USD` (`2025-10-10`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-05-02 (+57.28%)`, `2025-05-27 (+51.46%)`, `2024-11-10 (+50.15%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-28.51%)`, `2023-12-31 (-26.38%)`, `2024-04-12 (-24.61%)`
+
+---
