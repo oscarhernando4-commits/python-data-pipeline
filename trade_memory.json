@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2968,
+    "total_trades": 2971,
     "wins": 538,
-    "losses": 2430,
-    "win_rate_pct": 18.13,
-    "total_pnl_usd": 101145.19989545485
+    "losses": 2433,
+    "win_rate_pct": 18.11,
+    "total_pnl_usd": 101145.01989545485
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PROMUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ACEUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on HEIUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on CAKEUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on DCRUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PROMUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on NBISBUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on STORJUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on STORJUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on XLMUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on KAITOUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-11 11:04:16",
-      "account_id": "SIM-037",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "BTCUSDT",
-      "side": "SHORT",
-      "entry_price": 64558.04,
-      "exit_price": 64385.58,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on BTCUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 75,
-        "rsi_15m": 67.6,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 11:04:16",
-      "account_id": "SIM-038",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "BTCUSDT",
-      "side": "SHORT",
-      "entry_price": 64558.04,
-      "exit_price": 64385.58,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on BTCUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 75,
-        "rsi_15m": 67.6,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 11:04:16",
-      "account_id": "SIM-039",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "BTCUSDT",
-      "side": "SHORT",
-      "entry_price": 64558.04,
-      "exit_price": 64385.58,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on BTCUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 75,
-        "rsi_15m": 67.6,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-11 11:04:16",
       "account_id": "SIM-040",
@@ -8246,6 +8195,57 @@
       "context": {
         "score": 35,
         "rsi_15m": 59.79,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 12:30:21",
+      "account_id": "SIM-030",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1626,
+      "exit_price": 0.1623,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XLMUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 64.31,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 12:30:21",
+      "account_id": "SIM-031",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1626,
+      "exit_price": 0.1623,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XLMUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 64.31,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 12:30:21",
+      "account_id": "SIM-032",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1626,
+      "exit_price": 0.1623,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XLMUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 75,
+        "rsi_15m": 64.31,
         "macro_trend_4h": "NEUTRAL"
       }
     }
