@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3100,
+    "total_trades": 3103,
     "wins": 550,
-    "losses": 2550,
-    "win_rate_pct": 17.74,
-    "total_pnl_usd": 101175.74989545494
+    "losses": 2553,
+    "win_rate_pct": 17.72,
+    "total_pnl_usd": 101175.56989545494
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-11 10:00:39",
-      "account_id": "SIM-038",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ARBUSDT",
-      "side": "LONG",
-      "entry_price": 0.0789,
-      "exit_price": 0.0781,
-      "pnl_usd": -0.22,
-      "result": "LOSS",
-      "notes": "Hit SL on ARBUSDT (-$0.22). Re-Trading!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 27.09,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 10:02:44",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "MSTRBUSDT",
-      "side": "SHORT",
-      "entry_price": 99.11,
-      "exit_price": 97.11,
-      "pnl_usd": 0.38,
-      "result": "WIN",
-      "notes": "Win on MSTRBUSDT (+$0.38 net) -> Level 8 Re-Trading Started!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 41.26,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 10:02:44",
-      "account_id": "SIM-028",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "MSTRBUSDT",
-      "side": "SHORT",
-      "entry_price": 99.11,
-      "exit_price": 97.11,
-      "pnl_usd": 0.38,
-      "result": "WIN",
-      "notes": "Win on MSTRBUSDT (+$0.38 net) -> Level 7 Re-Trading Started!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 41.26,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-11 10:02:44",
       "account_id": "SIM-029",
@@ -8159,6 +8108,45 @@
       "pnl_usd": -0.06,
       "result": "LOSS",
       "notes": "Hit SL on ZBTUSDT (-$0.06). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-12 20:34:24",
+      "account_id": "SIM-034",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ATMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.614,
+      "exit_price": 1.614,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on ATMUSDT (-$0.06). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-12 20:34:24",
+      "account_id": "SIM-035",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ATMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.614,
+      "exit_price": 1.614,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on ATMUSDT (-$0.06). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-12 20:34:24",
+      "account_id": "SIM-036",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ATMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.614,
+      "exit_price": 1.614,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on ATMUSDT (-$0.06). Re-Trading!",
       "context": {}
     }
   ]
