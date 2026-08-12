@@ -1,12 +1,25 @@
 {
-  "LDOUSDT": [
+  "IMXUSDT": [
     {
-      "timestamp": "2026-08-12 12:56:12",
-      "price": 0.2972,
-      "score": 35,
-      "rsi": 77.65,
+      "timestamp": "2026-08-12 12:58:09",
+      "price": 0.1143,
+      "score": 50,
+      "rsi": 57.18,
       "macd": "Neutral",
-      "volume_surge": 1.52,
+      "volume_surge": 0.36,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "POLUSDT": [
+    {
+      "timestamp": "2026-08-12 12:58:09",
+      "price": 0.0756,
+      "score": 65,
+      "rsi": 57.09,
+      "macd": "Neutral",
+      "volume_surge": 0.58,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
