@@ -1,10 +1,23 @@
 {
+  "CHIPUSDT": [
+    {
+      "timestamp": "2026-08-12 18:34:23",
+      "price": 0.02314,
+      "score": 0,
+      "rsi": 46.36,
+      "macd": "Neutral",
+      "volume_surge": 0.15,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
   "ASTERUSDT": [
     {
-      "timestamp": "2026-08-12 18:32:24",
-      "price": 0.603,
-      "score": 30,
-      "rsi": 52.44,
+      "timestamp": "2026-08-12 18:34:23",
+      "price": 0.602,
+      "score": 10,
+      "rsi": 46.96,
       "macd": "Neutral",
       "volume_surge": 3.47,
       "wyckoff": "Sin patron",
@@ -12,14 +25,27 @@
       "fear_greed": 50
     }
   ],
-  "PLUMEUSDT": [
+  "SAGAUSDT": [
     {
-      "timestamp": "2026-08-12 18:32:25",
-      "price": 0.01142,
-      "score": 55,
-      "rsi": 30.05,
+      "timestamp": "2026-08-12 18:34:23",
+      "price": 0.01422,
+      "score": 0,
+      "rsi": 46.83,
       "macd": "Neutral",
-      "volume_surge": 0.1,
+      "volume_surge": 0.11,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ETHFIUSDT": [
+    {
+      "timestamp": "2026-08-12 18:34:24",
+      "price": 0.3756,
+      "score": 30,
+      "rsi": 46.75,
+      "macd": "Neutral",
+      "volume_surge": 0.16,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
