@@ -1,16 +1,28 @@
 {
-  "LDOUSDT": [
+  "TIAUSDT": [
     {
-      "timestamp": "2026-08-12 22:16:10",
-      "price": 0.2877,
-      "score": 45,
-      "rsi": 45.89,
+      "timestamp": "2026-08-12 22:18:14",
+      "price": 0.3009,
+      "score": 15,
+      "rsi": 33.39,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.22,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-12 22:18:15",
+      "price": 0.1216,
+      "score": 15,
+      "rsi": 40.9,
+      "macd": "Neutral",
+      "volume_surge": 0.55,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}
 }
