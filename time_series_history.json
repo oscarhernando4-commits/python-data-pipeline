@@ -1,12 +1,25 @@
 {
+  "DCRUSDT": [
+    {
+      "timestamp": "2026-08-12 07:30:12",
+      "price": 12.99,
+      "score": 30,
+      "rsi": 52.5,
+      "macd": "Neutral",
+      "volume_surge": 0.02,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
   "CFXUSDT": [
     {
-      "timestamp": "2026-08-12 07:28:10",
-      "price": 0.04195,
-      "score": 35,
-      "rsi": 61.37,
+      "timestamp": "2026-08-12 07:30:12",
+      "price": 0.04193,
+      "score": 45,
+      "rsi": 60.28,
       "macd": "Neutral",
-      "volume_surge": 0.94,
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +27,25 @@
   ],
   "IMXUSDT": [
     {
-      "timestamp": "2026-08-12 07:28:10",
-      "price": 0.1121,
+      "timestamp": "2026-08-12 07:30:12",
+      "price": 0.1122,
       "score": 0,
-      "rsi": 44.5,
+      "rsi": 45.49,
       "macd": "Neutral",
-      "volume_surge": 0.65,
+      "volume_surge": 0.03,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-12 07:30:12",
+      "price": 1.333,
+      "score": 0,
+      "rsi": 38.74,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
