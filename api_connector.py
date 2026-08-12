@@ -743,6 +743,13 @@ def execute_real_futures_market_close(symbol, quantity):
 # MAIN EVALUATION & TRADING LOGIC
 # ============================================================
 
+def trunc_1d(val):
+    """Truncates a float to exactly 1 decimal place WITHOUT rounding."""
+    if val is None:
+        return 0.0
+    import math
+    return math.floor(float(val) * 10.0) / 10.0
+
 def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bearish=False, is_learned_signal=False):
     state = load_real_account_state()
     import math
@@ -751,11 +758,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
     if not current_price or current_price <= 0:
         current_price = 1.0
     
-    # CAPITAL ALLOCATION (SPOT ONLY - EXACTLY 1 POSITION AT A TIME)
-    # Truncate to 1 decimal place without rounding, then subtract 0.1 USD to stay safely below available capital
+    # AUTOMATIC COMPOUND INTEREST ALLOCATION (SPOT ONLY - EXACTLY 1 POSITION AT A TIME)
+    # Strictly truncated to 1 decimal place WITHOUT rounding, minus 0.1 USD buffer for Binance spot fees
     raw_usdt = state.get("_cached_usdt_free", state.get("current_balance_usd", 17.29))
-    truncated_1d = math.floor(float(raw_usdt) * 10) / 10.0
-    usdt_free = max(0.0, round(truncated_1d - 0.1, 1))
+    truncated_1d = trunc_1d(raw_usdt)
+    usdt_free = max(0.0, trunc_1d(truncated_1d - 0.1))
     
     crypto_balances = []
     
@@ -935,6 +942,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     reason_str = f"Protección de Ganancia Fase {phase} (Pico +{highest_pnl_pct:.2f}% → Venta en {pnl_pct:+.2f}%)"
                 else:
                     reason_str = f"Stop Loss Fase 1 ({pnl_pct:.2f}% tocó piso de {trailing_floor_pct:+.2f}%)"
+            elif phase >= 2 and orderbook_wall_emergency:
+                should_exit = True
+                reason_str = f"⚡ Salida Relámpago por Agotamiento CVD (Fase {phase}, Pico +{highest_pnl_pct:.2f}% → Vendedores dominan {ask_dominance:.1f}%)"
             elif stagnation_exit:
                 should_exit = True
                 reason_str = f"Liberación por Estancamiento (2 Días en Fase 1, PnL={pnl_pct:+.2f}%)"
