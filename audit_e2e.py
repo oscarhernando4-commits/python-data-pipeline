@@ -108,7 +108,7 @@ test("Módulo sector_analyzer funcional", "top_sector" in sec_rot)
 import atr_risk_calculator
 atr_res = atr_risk_calculator.calculate_adaptive_atr_stop_loss(63150.0, 320.0)
 test("Módulo atr_risk_calculator funcional (SL adaptativo)", "sl_pct" in atr_res and "volatility_regime" in atr_res)
-test("Escudo 3: Distancia Trailing Adaptativa (0.15% Majors / 0.20% Alts)", atr_risk_calculator.get_adaptive_trailing_offset("BTCUSDT") == 0.15 and atr_risk_calculator.get_adaptive_trailing_offset("INJUSDT") == 0.20)
+test("Escudo 3: Distancia Trailing Adaptativa (0.50% Majors / 0.60% Alts)", atr_risk_calculator.get_adaptive_trailing_offset("BTCUSDT") == 0.50 and atr_risk_calculator.get_adaptive_trailing_offset("INJUSDT") == 0.60)
 test("Escudo 1: BTC Flash Crash Circuit Breaker integrado en api_connector", hasattr(api_connector, "evaluate_and_trade_real_money"))
 import multi_timeframe_analyzer
 mtf_u = multi_timeframe_analyzer.analyze_multi_timeframe_candles("UUSDT")
