@@ -2152,3 +2152,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-11-30 (-22.22%)`, `2025-10-09 (-21.13%)`, `2025-11-11 (-19.05%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: NBISBUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2026-07-06` hasta `2026-08-11` (37 Días de Historial)
+- 💵 **Precio Actual:** `$210.0700 USD`
+- 📈 **Máximo Histórico (ATH):** `$231.9600 USD` (`2026-07-21`) | Distancia: `-9.44%`
+- 📉 **Mínimo Histórico (ATL):** `$141.7200 USD` (`2026-07-28`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-07-29 (+31.74%)`, `2026-07-20 (+15.76%)`, `2026-07-07 (+13.34%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-07-15 (-14.43%)`, `2026-07-23 (-13.57%)`, `2026-07-28 (-11.38%)`
+
+---
