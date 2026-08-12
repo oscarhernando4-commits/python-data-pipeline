@@ -1,7 +1,7 @@
 {
   "STXUSDT": [
     {
-      "timestamp": "2026-08-12 10:26:11",
+      "timestamp": "2026-08-12 10:28:11",
       "price": 0.1254,
       "score": 15,
       "rsi": 40.36,
@@ -12,14 +12,27 @@
       "fear_greed": 50
     }
   ],
-  "MEGAUSDT": [
+  "DCRUSDT": [
     {
-      "timestamp": "2026-08-12 10:26:11",
-      "price": 0.03285,
-      "score": 45,
-      "rsi": 46.24,
+      "timestamp": "2026-08-12 10:28:11",
+      "price": 12.93,
+      "score": 15,
+      "rsi": 45.19,
       "macd": "Neutral",
-      "volume_surge": 0.62,
+      "volume_surge": 0.07,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CFXUSDT": [
+    {
+      "timestamp": "2026-08-12 10:28:11",
+      "price": 0.04177,
+      "score": 15,
+      "rsi": 49.3,
+      "macd": "Neutral",
+      "volume_surge": 0.29,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
