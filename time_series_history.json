@@ -1,10 +1,36 @@
 {
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-12 13:54:29",
+      "price": 0.287,
+      "score": 25,
+      "rsi": 30.26,
+      "macd": "Neutral",
+      "volume_surge": 0.35,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CVXUSDT": [
+    {
+      "timestamp": "2026-08-12 13:54:29",
+      "price": 1.787,
+      "score": 0,
+      "rsi": 49.82,
+      "macd": "Neutral",
+      "volume_surge": 0.12,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
   "BONKUSDT": [
     {
-      "timestamp": "2026-08-12 13:52:22",
-      "price": 2.25e-06,
-      "score": 35,
-      "rsi": 49.18,
+      "timestamp": "2026-08-12 13:54:29",
+      "price": 2.24e-06,
+      "score": 15,
+      "rsi": 45.08,
       "macd": "Neutral",
       "volume_surge": 0.01,
       "wyckoff": "Sin patron",
@@ -12,44 +38,69 @@
       "fear_greed": 50
     }
   ],
-  "ASTERUSDT": [
+  "ZBTUSDT": [
     {
-      "timestamp": "2026-08-12 13:52:22",
-      "price": 0.603,
+      "timestamp": "2026-08-12 13:54:29",
+      "price": 0.0902,
       "score": 15,
-      "rsi": 47.6,
+      "rsi": 38.71,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.32,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "SAGAUSDT": [
+  "ETHFIUSDT": [
     {
-      "timestamp": "2026-08-12 13:52:22",
-      "price": 0.01435,
+      "timestamp": "2026-08-12 13:54:29",
+      "price": 0.381,
+      "score": 55,
+      "rsi": 55.56,
+      "macd": "Neutral",
+      "volume_surge": 1.61,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-12 13:54:30",
+      "price": 0.0896,
       "score": 35,
-      "rsi": 63.09,
+      "rsi": 49.97,
       "macd": "Neutral",
-      "volume_surge": 0.15,
+      "volume_surge": 0.08,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "ATMUSDT": [
+  "MITOUSDT": [
     {
-      "timestamp": "2026-08-12 13:52:22",
-      "price": 1.524,
+      "timestamp": "2026-08-12 13:54:30",
+      "price": 0.02393,
       "score": 0,
-      "rsi": 48.62,
+      "rsi": 46.73,
       "macd": "Neutral",
-      "volume_surge": 0.39,
+      "volume_surge": 0.87,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "NXPCUSDT": [
+    {
+      "timestamp": "2026-08-12 13:54:30",
+      "price": 0.1933,
+      "score": 25,
+      "rsi": 29.06,
+      "macd": "Neutral",
+      "volume_surge": 0.97,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}
 }
