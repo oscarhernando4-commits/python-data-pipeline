@@ -7,8 +7,21 @@
   "reasoning": "El comité ha determinado que el mercado actual carece de la convicción técnica y la profundidad de liquidez necesarias para ejecutar operaciones rentables. Dado que ningún activo supera el umbral de riesgo A+ (Score >= 55), la estrategia óptima es la preservación total del capital mediante la inacción.",
   "top_candidates": [
     {
+      "symbol": "REUSDT",
+      "score": 75,
+      "price": 0.4251,
+      "rsi_2m": 53.35,
+      "rsi_5m": 53.35,
+      "rsi_15m": 53.35,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.1,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "TRUMPUSDT",
-      "score": 55,
+      "score": 70,
       "price": 1.438,
       "rsi_2m": 27.91,
       "rsi_5m": 27.91,
@@ -86,7 +99,7 @@
     },
     {
       "symbol": "BONKUSDT",
-      "score": 50,
+      "score": 65,
       "price": 2.28e-06,
       "rsi_2m": 60.06,
       "rsi_5m": 60.06,
@@ -106,7 +119,46 @@
       "rsi_15m": 56.13,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.04,
+      "vol_surge": 0.06,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "score": 60,
+      "price": 6.398,
+      "rsi_2m": 59.48,
+      "rsi_5m": 59.48,
+      "rsi_15m": 59.48,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.48,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "INJUSDT",
+      "score": 60,
+      "price": 4.615,
+      "rsi_2m": 59.21,
+      "rsi_5m": 59.21,
+      "rsi_15m": 59.21,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.32,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "ONEUSDT",
+      "score": 50,
+      "price": 0.00085,
+      "rsi_2m": 57.18,
+      "rsi_5m": 57.18,
+      "rsi_15m": 57.18,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.24,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
