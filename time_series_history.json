@@ -1,12 +1,51 @@
 {
-  "ZBTUSDT": [
+  "LDOUSDT": [
     {
-      "timestamp": "2026-08-12 10:34:12",
-      "price": 0.0918,
-      "score": 45,
-      "rsi": 40.49,
+      "timestamp": "2026-08-12 10:36:10",
+      "price": 0.2902,
+      "score": 65,
+      "rsi": 51.86,
       "macd": "Neutral",
-      "volume_surge": 0.02,
+      "volume_surge": 0.44,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-12 10:36:10",
+      "price": 1.347,
+      "score": 75,
+      "rsi": 59.73,
+      "macd": "Neutral",
+      "volume_surge": 1.39,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DCRUSDT": [
+    {
+      "timestamp": "2026-08-12 10:36:10",
+      "price": 12.84,
+      "score": 25,
+      "rsi": 32.13,
+      "macd": "Neutral",
+      "volume_surge": 23.04,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "NILUSDT": [
+    {
+      "timestamp": "2026-08-12 10:36:10",
+      "price": 0.03909,
+      "score": 25,
+      "rsi": 73.74,
+      "macd": "Neutral",
+      "volume_surge": 0.33,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
