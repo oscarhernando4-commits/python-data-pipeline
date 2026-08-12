@@ -1,12 +1,51 @@
 {
-  "ROBOUSDT": [
+  "PENDLEUSDT": [
     {
-      "timestamp": "2026-08-12 08:10:11",
-      "price": 0.01281,
+      "timestamp": "2026-08-12 08:12:10",
+      "price": 1.336,
       "score": 15,
-      "rsi": 36.5,
+      "rsi": 45.48,
       "macd": "Neutral",
-      "volume_surge": 0.15,
+      "volume_surge": 0.19,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DCRUSDT": [
+    {
+      "timestamp": "2026-08-12 08:12:10",
+      "price": 12.94,
+      "score": 25,
+      "rsi": 42.66,
+      "macd": "Neutral",
+      "volume_surge": 4.55,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "IMXUSDT": [
+    {
+      "timestamp": "2026-08-12 08:12:10",
+      "price": 0.1122,
+      "score": 15,
+      "rsi": 46.16,
+      "macd": "Neutral",
+      "volume_surge": 0.42,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CFXUSDT": [
+    {
+      "timestamp": "2026-08-12 08:12:10",
+      "price": 0.04187,
+      "score": 55,
+      "rsi": 55.68,
+      "macd": "Neutral",
+      "volume_surge": 3.38,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
