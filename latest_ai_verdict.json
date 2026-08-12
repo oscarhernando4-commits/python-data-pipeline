@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-12 15:18:22",
+  "timestamp": "2026-08-12 15:20:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual se encuentra en una fase de alta volatilidad y baja calidad técnica, lo que impide la ejecución de cualquier operación de compra bajo los estrictos estándares de riesgo institucional establecidos.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva sin activos que cumplan con los criterios de convicción A+ requeridos por el comité, por lo que se prioriza la preservación del capital sobre la ejecución de operaciones de baja probabilidad.",
   "top_candidates": [
     {
       "symbol": "GRAMUSDT",
@@ -41,7 +41,20 @@
       "rsi_15m": 17.56,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.17,
+      "vol_surge": 0.28,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "score": 50,
+      "price": 0.055,
+      "rsi_2m": 50.69,
+      "rsi_5m": 50.69,
+      "rsi_15m": 50.69,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 1.46,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -87,10 +100,10 @@
     {
       "symbol": "GIGGLEUSDT",
       "score": 50,
-      "price": 35.56,
-      "rsi_2m": 49.61,
-      "rsi_5m": 49.61,
-      "rsi_15m": 49.61,
+      "price": 35.62,
+      "rsi_2m": 50.89,
+      "rsi_5m": 50.89,
+      "rsi_15m": 50.89,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.29,
