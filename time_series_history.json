@@ -1,18 +1,18 @@
 {
-  "OPUSDT": [
+  "ESPUSDT": [
     {
-      "timestamp": "2026-08-12 17:56:37",
-      "price": 0.0896,
-      "score": 50,
-      "rsi": 50.11,
+      "timestamp": "2026-08-12 17:58:07",
+      "price": 0.0712,
+      "score": 30,
+      "rsi": 55.55,
       "macd": "Neutral",
-      "volume_surge": 1.49,
+      "volume_surge": 1.52,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "APTUSDT": [
+  "ATUSDT": [
     {
       "timestamp": "2026-08-12 17:56:37",
       "price": 0.567,
@@ -82,22 +82,35 @@
       "timestamp": "2026-08-12 17:56:37",
       "price": 0.01448,
       "score": 20,
-      "rsi": 71.82,
+      "rsi": 59.4,
       "macd": "Neutral",
-      "volume_surge": 6.63,
+      "volume_surge": 0.2,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "GENIUSUSDT": [
+  "IMXUSDT": [
     {
-      "timestamp": "2026-08-12 17:56:37",
-      "price": 0.3876,
-      "score": 35,
-      "rsi": 57.38,
+      "timestamp": "2026-08-12 17:58:07",
+      "price": 0.1125,
+      "score": 0,
+      "rsi": 43.95,
       "macd": "Neutral",
-      "volume_surge": 0.22,
+      "volume_surge": 0.45,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SCRTUSDT": [
+    {
+      "timestamp": "2026-08-12 17:58:07",
+      "price": 0.0292,
+      "score": 0,
+      "rsi": 37.68,
+      "macd": "Neutral",
+      "volume_surge": 0.23,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
