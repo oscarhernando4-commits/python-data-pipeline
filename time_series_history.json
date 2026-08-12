@@ -1,12 +1,25 @@
 {
-  "ZBTUSDT": [
+  "AAOIBUSDT": [
     {
-      "timestamp": "2026-08-12 19:46:08",
-      "price": 0.0894,
-      "score": 25,
-      "rsi": 30.81,
+      "timestamp": "2026-08-12 14:48:21",
+      "price": 137.84,
+      "score": 0,
+      "rsi": 46.65,
       "macd": "Neutral",
-      "volume_surge": 0.02,
+      "volume_surge": 0.07,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PYTHUSDT": [
+    {
+      "timestamp": "2026-08-12 14:48:21",
+      "price": 0.03999,
+      "score": 0,
+      "rsi": 34.32,
+      "macd": "Neutral",
+      "volume_surge": 0.08,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,20 +27,20 @@
   ],
   "NXPCUSDT": [
     {
-      "timestamp": "2026-08-12 14:46:22",
-      "price": 0.1936,
+      "timestamp": "2026-08-12 14:48:21",
+      "price": 0.1939,
       "score": 30,
-      "rsi": 32.69,
+      "rsi": 34.91,
       "macd": "Neutral",
-      "volume_surge": 0.03,
+      "volume_surge": 0.34,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "JSTUSDT": [
+  "MITOUSDT": [
     {
-      "timestamp": "2026-08-12 14:46:22",
+      "timestamp": "2026-08-12 14:48:21",
       "price": 0.02414,
       "score": 50,
       "rsi": 51.75,
