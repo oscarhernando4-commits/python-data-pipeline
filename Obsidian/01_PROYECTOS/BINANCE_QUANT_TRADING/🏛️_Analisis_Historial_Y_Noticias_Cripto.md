@@ -2308,3 +2308,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-28.48%)`, `2026-01-25 (-13.67%)`, `2026-02-05 (-13.57%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: AXSUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-16` hasta `2026-08-11` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.8570 USD`
+- 📈 **Máximo Histórico (ATH):** `$13.5000 USD` (`2024-03-09`) | Distancia: `-93.65%`
+- 📉 **Mínimo Histórico (ATL):** `$0.5500 USD` (`2025-10-09`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-01-16 (+49.7%)`, `2026-04-24 (+39.15%)`, `2026-01-19 (+27.44%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-31.09%)`, `2026-01-24 (-22.18%)`, `2024-12-08 (-19.24%)`
+
+---
