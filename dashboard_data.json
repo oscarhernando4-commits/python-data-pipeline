@@ -4,16 +4,16 @@
   "usdt_free": 0.1836,
   "bnb_free": 0.00373397,
   "bnb_usd": 2.3,
-  "status": "🔵 En Vivo LONG (WLDUSDT @ $0.3376)",
+  "status": "🔵 En Vivo LONG (WLDUSDT @ $0.3384)",
   "position": {
     "symbol": "WLDUSDT",
     "quantity": 48.0,
     "entry_price": 0.337433,
-    "highest_price": 0.3376,
-    "cost_usd": 16.2,
+    "highest_price": 0.3384,
+    "cost_usd": 16.24,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 77,
+    "holding_cycles": 78,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -25,7 +25,7 @@
     "reasoning": "Tras analizar los candidatos, ninguno cumple con los criterios estrictos de convicción A+ exigidos por el comité. La falta de dominancia clara en el libro de órdenes y el entorno macro de miedo (Fear 27) dictan una postura de preservación de capital (HOLD) para evitar 'falling knives' y pérdidas innecesarias.",
     "top_candidates": [
       {
-        "symbol": "TRXUSDT",
+        "symbol": "PAXGUSDT",
         "score": 75,
         "price": 0.3356,
         "rsi_2m": 62.25,
@@ -77,7 +77,7 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "GOOGLBUSDT",
+        "symbol": "MUUBUSDT",
         "score": 75,
         "price": 346.11,
         "rsi_2m": 45.27,
@@ -92,39 +92,39 @@
       {
         "symbol": "BTCUSDT",
         "score": 65,
-        "price": 63649.87,
-        "rsi_2m": 49.95,
-        "rsi_5m": 49.95,
-        "rsi_15m": 49.95,
+        "price": 63685.4,
+        "rsi_2m": 52.51,
+        "rsi_5m": 52.51,
+        "rsi_15m": 52.51,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.41,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "ZECUSDT",
-        "score": 65,
-        "price": 482.4,
-        "rsi_2m": 62.47,
-        "rsi_5m": 62.47,
-        "rsi_15m": 62.47,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.45,
+        "vol_surge": 0.64,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
       {
         "symbol": "ENAUSDT",
         "score": 65,
-        "price": 0.0904,
-        "rsi_2m": 62.41,
-        "rsi_5m": 62.41,
-        "rsi_15m": 62.41,
+        "price": 0.0903,
+        "rsi_2m": 61.15,
+        "rsi_5m": 61.15,
+        "rsi_15m": 61.15,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.22,
+        "vol_surge": 0.23,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "TSTUSDT",
+        "score": 65,
+        "price": 0.01682,
+        "rsi_2m": 57.44,
+        "rsi_5m": 57.44,
+        "rsi_15m": 57.44,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.63,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }
