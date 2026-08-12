@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-12 19:52:18",
+  "timestamp": "2026-08-12 19:54:21",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que el mercado actual presenta una fragilidad extrema y una falta de activos con fuerza relativa real. Ningún candidato cumple con los criterios estrictos de Score Técnico (>= 55) y soporte de libro de órdenes, por lo que la estrategia de preservación de capital es la única opción viable para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de distribución institucional con alta fragilidad. Ningún activo cumple con los criterios estrictos de convicción A+ establecidos por el comité, por lo que se prioriza la protección del capital sobre la ejecución de trades especulativos.",
   "top_candidates": [
     {
       "symbol": "ASTERUSDT",
@@ -15,7 +15,7 @@
       "rsi_15m": 56.8,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 2.6,
+      "vol_surge": 2.63,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -28,21 +28,21 @@
       "rsi_15m": 55.89,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.48,
+      "vol_surge": 0.57,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "BONKUSDT",
       "score": 60,
-      "price": 2.26e-06,
-      "rsi_2m": 53.43,
-      "rsi_5m": 53.43,
-      "rsi_15m": 53.43,
+      "price": 2.27e-06,
+      "rsi_2m": 56.87,
+      "rsi_5m": 56.87,
+      "rsi_15m": 56.87,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 1.63,
-      "trade_quality": "C_NOISE",
+      "vol_surge": 1.84,
+      "trade_quality": "B",
       "macro_trend": "NEUTRAL"
     },
     {
@@ -54,7 +54,7 @@
       "rsi_15m": 31.75,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.0,
+      "vol_surge": 0.19,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -111,12 +111,12 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "BOMEUSDT",
+      "symbol": "MITOUSDT",
       "score": 50,
-      "price": 0.0007702,
-      "rsi_2m": 53.58,
-      "rsi_5m": 53.58,
-      "rsi_15m": 53.58,
+      "price": 0.02418,
+      "rsi_2m": 52.67,
+      "rsi_5m": 52.67,
+      "rsi_15m": 52.67,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.05,
@@ -124,41 +124,28 @@
       "macro_trend": "NEUTRAL"
     },
     {
+      "symbol": "KITEUSDT",
+      "score": 50,
+      "price": 0.1011,
+      "rsi_2m": 51.18,
+      "rsi_5m": 51.18,
+      "rsi_15m": 51.18,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.48,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "ESPUSDT",
       "score": 50,
-      "price": 0.07172,
-      "rsi_2m": 60.97,
-      "rsi_5m": 60.97,
-      "rsi_15m": 60.97,
+      "price": 0.07176,
+      "rsi_2m": 61.73,
+      "rsi_5m": 61.73,
+      "rsi_15m": 61.73,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.21,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "MITOUSDT",
-      "score": 50,
-      "price": 0.02417,
-      "rsi_2m": 52.45,
-      "rsi_5m": 52.45,
-      "rsi_15m": 52.45,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.02,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "BOMEUSDT",
-      "score": 50,
-      "price": 0.0007705,
-      "rsi_2m": 54.08,
-      "rsi_5m": 54.08,
-      "rsi_15m": 54.08,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.06,
+      "vol_surge": 0.24,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
