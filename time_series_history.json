@@ -1,12 +1,38 @@
 {
   "NXPCUSDT": [
     {
-      "timestamp": "2026-08-12 19:16:08",
-      "price": 0.1935,
+      "timestamp": "2026-08-12 19:18:09",
+      "price": 0.1932,
       "score": 25,
-      "rsi": 31.98,
+      "rsi": 30.89,
       "macd": "Neutral",
-      "volume_surge": 0.01,
+      "volume_surge": 0.22,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SAGAUSDT": [
+    {
+      "timestamp": "2026-08-12 19:18:10",
+      "price": 0.0144,
+      "score": 35,
+      "rsi": 64.9,
+      "macd": "Neutral",
+      "volume_surge": 0.03,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PLUMEUSDT": [
+    {
+      "timestamp": "2026-08-12 19:18:10",
+      "price": 0.01173,
+      "score": 30,
+      "rsi": 34.52,
+      "macd": "Neutral",
+      "volume_surge": 0.05,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
