@@ -1,12 +1,38 @@
 {
-  "OPUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-12 02:00:13",
-      "price": 0.0914,
-      "score": 45,
-      "rsi": 56.64,
+      "timestamp": "2026-08-12 02:02:12",
+      "price": 0.1267,
+      "score": 15,
+      "rsi": 45.07,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-12 02:02:12",
+      "price": 1.342,
+      "score": 15,
+      "rsi": 48.58,
+      "macd": "Neutral",
+      "volume_surge": 0.03,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "NILUSDT": [
+    {
+      "timestamp": "2026-08-12 02:02:12",
+      "price": 0.03626,
+      "score": 40,
+      "rsi": 68.05,
+      "macd": "Neutral",
+      "volume_surge": 0.71,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
