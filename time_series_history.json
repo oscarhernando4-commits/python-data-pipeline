@@ -1,12 +1,51 @@
 {
-  "PENDLEUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-12 08:00:12",
-      "price": 1.334,
+      "timestamp": "2026-08-12 08:02:13",
+      "price": 0.126,
       "score": 15,
-      "rsi": 42.45,
+      "rsi": 43.44,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "IMXUSDT": [
+    {
+      "timestamp": "2026-08-12 08:02:13",
+      "price": 0.1123,
+      "score": 15,
+      "rsi": 46.89,
+      "macd": "Neutral",
+      "volume_surge": 0.33,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ROBOUSDT": [
+    {
+      "timestamp": "2026-08-12 08:02:13",
+      "price": 0.01283,
+      "score": 15,
+      "rsi": 37.58,
+      "macd": "Neutral",
+      "volume_surge": 0.05,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ATUSDT": [
+    {
+      "timestamp": "2026-08-12 08:02:13",
+      "price": 0.1555,
+      "score": 45,
+      "rsi": 50.94,
+      "macd": "Neutral",
+      "volume_surge": 0.05,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
