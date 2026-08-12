@@ -1,12 +1,25 @@
 {
-  "AAOIBUSDT": [
+  "GENIUSUSDT": [
     {
-      "timestamp": "2026-08-12 11:26:21",
-      "price": 138.93,
-      "score": 60,
-      "rsi": 52.37,
+      "timestamp": "2026-08-12 11:28:23",
+      "price": 0.3834,
+      "score": 40,
+      "rsi": 54.66,
       "macd": "Neutral",
-      "volume_surge": 0.53,
+      "volume_surge": 2.96,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JSTUSDT": [
+    {
+      "timestamp": "2026-08-12 11:28:23",
+      "price": 0.10174,
+      "score": 25,
+      "rsi": 29.76,
+      "macd": "Neutral",
+      "volume_surge": 0.17,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,25 +27,12 @@
   ],
   "OPUSDT": [
     {
-      "timestamp": "2026-08-12 11:26:21",
-      "price": 0.0893,
+      "timestamp": "2026-08-12 11:28:23",
+      "price": 0.0894,
       "score": 0,
-      "rsi": 41.39,
+      "rsi": 42.85,
       "macd": "Neutral",
-      "volume_surge": 0.22,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "NXPCUSDT": [
-    {
-      "timestamp": "2026-08-12 11:26:21",
-      "price": 0.1965,
-      "score": 15,
-      "rsi": 38.69,
-      "macd": "Neutral",
-      "volume_surge": 0.31,
+      "volume_surge": 0.29,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -40,25 +40,38 @@
   ],
   "CVXUSDT": [
     {
-      "timestamp": "2026-08-12 11:26:21",
-      "price": 1.821,
+      "timestamp": "2026-08-12 11:28:23",
+      "price": 1.823,
       "score": 25,
-      "rsi": 71.48,
+      "rsi": 72.02,
       "macd": "Neutral",
-      "volume_surge": 0.7,
+      "volume_surge": 0.78,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "TIAUSDT": [
+  "APTUSDT": [
     {
-      "timestamp": "2026-08-12 11:26:21",
-      "price": 0.3074,
+      "timestamp": "2026-08-12 11:28:23",
+      "price": 0.567,
       "score": 0,
-      "rsi": 43.61,
+      "rsi": 41.87,
       "macd": "Neutral",
-      "volume_surge": 0.28,
+      "volume_surge": 0.21,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ATOMUSDT": [
+    {
+      "timestamp": "2026-08-12 11:28:23",
+      "price": 1.409,
+      "score": 0,
+      "rsi": 41.45,
+      "macd": "Neutral",
+      "volume_surge": 0.85,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
