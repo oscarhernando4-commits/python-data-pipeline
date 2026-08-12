@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-08-12 11:57:08",
+  "updated_at": "2026-08-12 11:59:03",
   "total_balance_usd": 18.65,
   "usdt_free": 0.1256,
   "bnb_free": 0.00369424,
   "bnb_usd": 2.26,
-  "status": "🔵 En Vivo LONG (GRAMUSDT @ $1.3430)",
+  "status": "🔵 En Vivo LONG (GRAMUSDT @ $1.3420)",
   "position": {
     "symbol": "GRAMUSDT",
     "quantity": 12.05,
     "entry_price": 1.352,
     "highest_price": 1.352,
-    "cost_usd": 16.18,
+    "cost_usd": 16.17,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 14,
+    "holding_cycles": 15,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -38,7 +38,7 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "NEXOUSDT",
+        "symbol": "AXTIBUSDT",
         "score": 60,
         "price": 0.723,
         "rsi_2m": 59.22,
@@ -92,10 +92,36 @@
       {
         "symbol": "GIGGLEUSDT",
         "score": 50,
-        "price": 35.53,
-        "rsi_2m": 51.23,
-        "rsi_5m": 51.23,
-        "rsi_15m": 51.23,
+        "price": 35.46,
+        "rsi_2m": 50.16,
+        "rsi_5m": 50.16,
+        "rsi_15m": 50.16,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.99,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "INJUSDT",
+        "score": 50,
+        "price": 4.579,
+        "rsi_2m": 53.37,
+        "rsi_5m": 53.37,
+        "rsi_15m": 53.37,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.17,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "TRBUSDT",
+        "score": 50,
+        "price": 13.54,
+        "rsi_2m": 47.86,
+        "rsi_5m": 47.86,
+        "rsi_15m": 47.86,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 0.98,
