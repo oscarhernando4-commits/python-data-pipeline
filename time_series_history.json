@@ -1,12 +1,25 @@
 {
   "NXPCUSDT": [
     {
-      "timestamp": "2026-08-12 11:30:21",
-      "price": 1.408,
-      "score": 0,
-      "rsi": 40.42,
+      "timestamp": "2026-08-12 11:34:02",
+      "price": 0.10172,
+      "score": 25,
+      "rsi": 29.39,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GENIUSUSDT": [
+    {
+      "timestamp": "2026-08-12 11:34:02",
+      "price": 0.3841,
+      "score": 35,
+      "rsi": 55.61,
+      "macd": "Neutral",
+      "volume_surge": 0.06,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,10 +27,10 @@
   ],
   "JTOUSDT": [
     {
-      "timestamp": "2026-08-12 11:32:21",
-      "price": 1.814,
-      "score": 25,
-      "rsi": 68.11,
+      "timestamp": "2026-08-12 11:34:02",
+      "price": 0.5674,
+      "score": 35,
+      "rsi": 62.68,
       "macd": "Neutral",
       "volume_surge": 0.0,
       "wyckoff": "Sin patron",
