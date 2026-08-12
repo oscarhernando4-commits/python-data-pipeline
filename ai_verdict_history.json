@@ -1398,5 +1398,145 @@
         "macro_trend": "NEUTRAL"
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-12 08:44:45",
+    "selected_symbol": "NONE",
+    "action": "HOLD",
+    "approved": false,
+    "confidence": 0,
+    "reasoning": "El comité ha determinado por consenso unánime que el entorno de mercado actual es de alta peligrosidad y baja probabilidad de éxito para posiciones largas. Ningún activo cumple con los criterios estrictos de Score Técnico y confirmación de volumen institucional, por lo que se prioriza la preservación del capital sobre la especulación.",
+    "top_candidates": [
+      {
+        "symbol": "KAITOUSDT",
+        "score": 70,
+        "price": 0.479,
+        "rsi_2m": 16.77,
+        "rsi_5m": 16.77,
+        "rsi_15m": 16.77,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.87,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "SHIBUSDT",
+        "score": 60,
+        "price": 4.51e-06,
+        "rsi_2m": 61.48,
+        "rsi_5m": 61.48,
+        "rsi_15m": 61.48,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.2,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "HOMEUSDT",
+        "score": 60,
+        "price": 0.00941,
+        "rsi_2m": 51.84,
+        "rsi_5m": 51.84,
+        "rsi_15m": 51.84,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.29,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "MSTRBUSDT",
+        "score": 60,
+        "price": 97.61,
+        "rsi_2m": 52.21,
+        "rsi_5m": 52.21,
+        "rsi_15m": 52.21,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 6.4,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "SEIUSDT",
+        "score": 60,
+        "price": 0.04056,
+        "rsi_2m": 65.43,
+        "rsi_5m": 65.43,
+        "rsi_15m": 65.43,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 2.39,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ENAUSDT",
+        "score": 55,
+        "price": 0.0901,
+        "rsi_2m": 58.46,
+        "rsi_5m": 58.46,
+        "rsi_15m": 58.46,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.54,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "TSTUSDT",
+        "score": 50,
+        "price": 0.01429,
+        "rsi_2m": 48.18,
+        "rsi_5m": 48.18,
+        "rsi_15m": 48.18,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.46,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ICPUSDT",
+        "score": 50,
+        "price": 2.257,
+        "rsi_2m": 61.48,
+        "rsi_5m": 61.48,
+        "rsi_15m": 61.48,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.46,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "EPICUSDT",
+        "score": 50,
+        "price": 0.3723,
+        "rsi_2m": 60.02,
+        "rsi_5m": 60.02,
+        "rsi_15m": 60.02,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.59,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "REUSDT",
+        "score": 50,
+        "price": 0.4227,
+        "rsi_2m": 50.78,
+        "rsi_5m": 50.78,
+        "rsi_15m": 50.78,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.28,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      }
+    ]
   }
 ]
