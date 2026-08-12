@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3167,
+    "total_trades": 3168,
     "wins": 558,
-    "losses": 2609,
-    "win_rate_pct": 17.62,
-    "total_pnl_usd": 101161.779895455
+    "losses": 2610,
+    "win_rate_pct": 17.61,
+    "total_pnl_usd": 101161.559895455
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHFIUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TRUMPUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DEXEUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on DEXEUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BICOUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BABYUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on JTOUSDT)",
-      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PEPEUSDT)"
+      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PEPEUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on KITEUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on COOKIEUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-11 15:54:25",
-      "account_id": "SIM-021",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "UNIUSDT",
-      "side": "LONG",
-      "entry_price": 3.75,
-      "exit_price": 3.714,
-      "pnl_usd": -0.21,
-      "result": "LOSS",
-      "notes": "Hit SL on UNIUSDT (-$0.21). Re-Trading!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 13.57,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-11 15:54:25",
       "account_id": "SIM-022",
@@ -8178,6 +8161,23 @@
       "context": {
         "score": 20,
         "rsi_15m": 14.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 23:34:22",
+      "account_id": "SIM-098",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "KITEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1011,
+      "exit_price": 0.1022,
+      "pnl_usd": -0.22,
+      "result": "LOSS",
+      "notes": "Hit SL on KITEUSDT (-$0.22). Re-Trading!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 56.43,
         "macro_trend_4h": "NEUTRAL"
       }
     }
