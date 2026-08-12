@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-12 20:26:19",
+  "timestamp": "2026-08-12 20:28:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha decidido mantener la liquidez en USDT. A pesar de que algunos activos tienen un score técnico de 65, la falta de dominancia en el libro de órdenes (Bids 50%) y la alta tasa de pérdidas en condiciones de mercado neutral (según la memoria histórica) impiden la ejecución de cualquier orden de compra bajo los estándares de riesgo A+.",
+  "reasoning": "El comité ha determinado que no existe ningún activo que cumpla con los criterios estrictos de riesgo y convicción A+. La falta de soporte institucional en el libro de órdenes y la volatilidad errática del mercado sugieren que la mejor estrategia es mantener la liquidez en USDT hasta que aparezca una oportunidad de alta probabilidad.",
   "top_candidates": [
     {
       "symbol": "AVAXUSDT",
@@ -61,10 +61,10 @@
     {
       "symbol": "BMTUSDT",
       "score": 65,
-      "price": 0.01822,
-      "rsi_2m": 58.44,
-      "rsi_5m": 58.44,
-      "rsi_15m": 58.44,
+      "price": 63514.0,
+      "rsi_2m": 48.03,
+      "rsi_5m": 48.03,
+      "rsi_15m": 48.03,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.92,
@@ -80,38 +80,12 @@
       "rsi_15m": 51.08,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.69,
+      "vol_surge": 0.49,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "BNBUSDT",
-      "score": 50,
-      "price": 611.03,
-      "rsi_2m": 50.47,
-      "rsi_5m": 50.47,
-      "rsi_15m": 50.47,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.34,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "WLFIUSDT",
-      "score": 50,
-      "price": 0.0551,
-      "rsi_2m": 54.7,
-      "rsi_5m": 54.7,
-      "rsi_15m": 54.7,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.01,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "ALGOUSDT",
       "score": 65,
       "price": 0.006377,
       "rsi_2m": 52.3,
