@@ -2178,3 +2178,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-31.35%)`, `2024-03-20 (-30.96%)`, `2024-12-08 (-18.13%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: OPENUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-09-08` hasta `2026-08-12` (339 Días de Historial)
+- 💵 **Precio Actual:** `$0.2211 USD`
+- 📈 **Máximo Histórico (ATH):** `$3.6500 USD` (`2025-09-08`) | Distancia: `-93.94%`
+- 📉 **Mínimo Histórico (ATL):** `$0.1234 USD` (`2025-10-10`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-09-08 (+617.35%)`, `2025-10-03 (+41.06%)`, `2026-01-24 (+18.74%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-33.86%)`, `2025-09-09 (-22.22%)`, `2025-09-22 (-21.29%)`
+
+---
