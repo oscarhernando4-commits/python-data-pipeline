@@ -1,34 +1,21 @@
 {
-  "timestamp": "2026-08-12 04:56:35",
+  "timestamp": "2026-08-12 04:58:31",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de purga de activos tóxicos con una divergencia estructural severa; ningún candidato cumple con el umbral de Score >= 55 y Bids > 55% exigido por el comité para una ejecución segura.",
+  "reasoning": "El mercado presenta una divergencia estructural severa con alta volatilidad y falta de convicción institucional. Ningún activo cumple con el umbral de seguridad A+ (Score >= 55 con confirmación de volumen y soporte de libro de órdenes), por lo que la estrategia óptima es mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de capitulación selectiva.",
   "top_candidates": [
     {
       "symbol": "ETHUSDT",
       "score": 75,
-      "price": 1889.7,
-      "rsi_2m": 63.58,
-      "rsi_5m": 63.58,
-      "rsi_15m": 63.58,
+      "price": 1889.52,
+      "rsi_2m": 63.27,
+      "rsi_5m": 63.27,
+      "rsi_15m": 63.27,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.69,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "MORPHOUSDT",
-      "score": 75,
-      "price": 1.975,
-      "rsi_2m": 53.56,
-      "rsi_5m": 53.56,
-      "rsi_15m": 53.56,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.18,
+      "vol_surge": 0.82,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -46,6 +33,19 @@
       "macro_trend": "NEUTRAL"
     },
     {
+      "symbol": "MORPHOUSDT",
+      "score": 75,
+      "price": 1.975,
+      "rsi_2m": 53.56,
+      "rsi_5m": 53.56,
+      "rsi_15m": 53.56,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.18,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "ALGOUSDT",
       "score": 75,
       "price": 0.0816,
@@ -54,7 +54,7 @@
       "rsi_15m": 64.14,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 1.16,
+      "vol_surge": 1.21,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -72,19 +72,6 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "GNOUSDT",
-      "score": 75,
-      "price": 104.48,
-      "rsi_2m": 65.09,
-      "rsi_5m": 65.09,
-      "rsi_15m": 65.09,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.47,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
       "symbol": "DCRUSDT",
       "score": 75,
       "price": 13.02,
@@ -93,20 +80,7 @@
       "rsi_15m": 61.61,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.14,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "AVAXUSDT",
-      "score": 65,
-      "price": 6.296,
-      "rsi_2m": 49.64,
-      "rsi_5m": 49.64,
-      "rsi_15m": 49.64,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.2,
+      "vol_surge": 0.17,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -119,21 +93,47 @@
       "rsi_15m": 51.29,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.33,
+      "vol_surge": 0.36,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "MMTUSDT",
+      "score": 65,
+      "price": 0.2045,
+      "rsi_2m": 48.18,
+      "rsi_5m": 48.18,
+      "rsi_15m": 48.18,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.88,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "REUSDT",
+      "score": 65,
+      "price": 0.4363,
+      "rsi_2m": 65.7,
+      "rsi_5m": 65.7,
+      "rsi_15m": 65.7,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 1.01,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "MUBARAKUSDT",
       "score": 65,
-      "price": 0.01761,
-      "rsi_2m": 51.03,
-      "rsi_5m": 51.03,
-      "rsi_15m": 51.03,
+      "price": 0.01748,
+      "rsi_2m": 48.61,
+      "rsi_5m": 48.61,
+      "rsi_15m": 48.61,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.36,
-      "trade_quality": "B",
+      "vol_surge": 0.45,
+      "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
   ]
