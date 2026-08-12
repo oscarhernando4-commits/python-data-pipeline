@@ -1,15 +1,54 @@
 {
-  "LDOUSDT": [
+  "IMXUSDT": [
     {
-      "timestamp": "2026-08-12 06:00:12",
-      "price": 0.2897,
+      "timestamp": "2026-08-12 06:02:13",
+      "price": 0.1122,
       "score": 15,
-      "rsi": 33.87,
+      "rsi": 40.88,
       "macd": "Neutral",
-      "volume_surge": 0.1,
+      "volume_surge": 0.6,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CFXUSDT": [
+    {
+      "timestamp": "2026-08-12 06:02:13",
+      "price": 0.04194,
+      "score": 50,
+      "rsi": 65.41,
+      "macd": "Neutral",
+      "volume_surge": 0.12,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GUNUSDT": [
+    {
+      "timestamp": "2026-08-12 06:02:13",
+      "price": 0.00331,
+      "score": 15,
+      "rsi": 41.94,
+      "macd": "Neutral",
+      "volume_surge": 0.18,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-12 06:02:13",
+      "price": 0.1266,
+      "score": 45,
+      "rsi": 47.64,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}}
+}
