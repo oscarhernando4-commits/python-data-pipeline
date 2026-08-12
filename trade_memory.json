@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2983,
+    "total_trades": 2986,
     "wins": 538,
-    "losses": 2445,
-    "win_rate_pct": 18.04,
-    "total_pnl_usd": 101143.63989545486
+    "losses": 2448,
+    "win_rate_pct": 18.02,
+    "total_pnl_usd": 101143.45989545487
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-11 07:36:48",
-      "account_id": "SIM-041",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ONDOUSDT",
-      "side": "LONG",
-      "entry_price": 0.339,
-      "exit_price": 0.3359,
-      "pnl_usd": -0.43,
-      "result": "LOSS",
-      "notes": "Hit SL on ONDOUSDT (-$0.43). Re-Trading!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 34.09,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 07:36:48",
-      "account_id": "SIM-043",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ONDOUSDT",
-      "side": "LONG",
-      "entry_price": 0.339,
-      "exit_price": 0.3359,
-      "pnl_usd": -0.43,
-      "result": "LOSS",
-      "notes": "Hit SL on ONDOUSDT (-$0.43). Re-Trading!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 34.09,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 07:36:48",
-      "account_id": "SIM-045",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ONDOUSDT",
-      "side": "LONG",
-      "entry_price": 0.339,
-      "exit_price": 0.3359,
-      "pnl_usd": -0.29,
-      "result": "LOSS",
-      "notes": "Hit SL on ONDOUSDT (-$0.29). Re-Trading!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 34.09,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-11 07:40:41",
       "account_id": "SIM-080",
@@ -8243,6 +8192,45 @@
       "pnl_usd": -0.06,
       "result": "LOSS",
       "notes": "Hit SL on ZAMAUSDT (-$0.06). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-12 09:54:45",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0262,
+      "exit_price": 1.0262,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$0.06). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-12 09:54:45",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0262,
+      "exit_price": 1.0262,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$0.06). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-12 09:54:46",
+      "account_id": "SIM-033",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.0262,
+      "exit_price": 1.0262,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on XRPUSDT (-$0.06). Re-Trading!",
       "context": {}
     }
   ]
