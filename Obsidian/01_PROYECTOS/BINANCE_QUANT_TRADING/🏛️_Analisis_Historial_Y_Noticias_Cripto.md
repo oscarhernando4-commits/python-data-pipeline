@@ -2230,3 +2230,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-28.51%)`, `2023-12-31 (-26.38%)`, `2024-04-12 (-24.61%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: SCRTUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-16` hasta `2026-08-11` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.0307 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.8700 USD` (`2024-03-12`) | Distancia: `-96.47%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0278 USD` (`2026-08-10`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-11-16 (+72.36%)`, `2024-11-21 (+65.89%)`, `2024-11-24 (+29.12%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-07-06 (-23.14%)`, `2025-11-07 (-20.3%)`, `2024-12-08 (-18.63%)`
+
+---
