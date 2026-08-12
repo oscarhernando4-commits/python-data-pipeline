@@ -1,12 +1,25 @@
 {
   "SAGAUSDT": [
     {
-      "timestamp": "2026-08-12 19:18:09",
-      "price": 0.1932,
-      "score": 25,
-      "rsi": 30.89,
+      "timestamp": "2026-08-12 19:20:09",
+      "price": 0.1702,
+      "score": 30,
+      "rsi": 39.41,
       "macd": "Neutral",
-      "volume_surge": 0.22,
+      "volume_surge": 0.52,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ATMUSDT": [
+    {
+      "timestamp": "2026-08-12 19:20:09",
+      "price": 1.543,
+      "score": 30,
+      "rsi": 51.95,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,25 +27,12 @@
   ],
   "SAGAUSDT": [
     {
-      "timestamp": "2026-08-12 19:18:10",
-      "price": 0.0144,
+      "timestamp": "2026-08-12 19:20:10",
+      "price": 0.01441,
       "score": 35,
-      "rsi": 64.9,
+      "rsi": 65.35,
       "macd": "Neutral",
-      "volume_surge": 0.03,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "PLUMEUSDT": [
-    {
-      "timestamp": "2026-08-12 19:18:10",
-      "price": 0.01173,
-      "score": 30,
-      "rsi": 34.52,
-      "macd": "Neutral",
-      "volume_surge": 0.05,
+      "volume_surge": 0.06,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
