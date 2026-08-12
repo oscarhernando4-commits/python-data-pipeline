@@ -13,7 +13,7 @@
     "cost_usd": 16.15,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 99,
+    "holding_cycles": 100,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -25,7 +25,7 @@
     "reasoning": "El mercado se encuentra en una fase de distribución institucional agresiva sin anclas de confianza. Ningún activo cumple con los criterios estrictos de Score Técnico, volumen y soporte en el libro de órdenes, por lo que la preservación de capital es la única estrategia viable.",
     "top_candidates": [
       {
-        "symbol": "REUSDT",
+        "symbol": "CRWVBUSDT",
         "score": 60,
         "price": 0.4265,
         "rsi_2m": 56.86,
@@ -64,12 +64,64 @@
         "macro_trend": "NEUTRAL"
       },
       {
+        "symbol": "TUTUSDT",
+        "score": 50,
+        "price": 0.07488,
+        "rsi_2m": 54.38,
+        "rsi_5m": 54.38,
+        "rsi_15m": 54.38,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.19,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "REUSDT",
+        "score": 50,
+        "price": 0.4268,
+        "rsi_2m": 57.43,
+        "rsi_5m": 57.43,
+        "rsi_15m": 57.43,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.26,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
         "symbol": "ACEUSDT",
         "score": 50,
         "price": 0.1096,
         "rsi_2m": 50.65,
         "rsi_5m": 50.65,
         "rsi_15m": 50.65,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.07,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ESPUSDT",
+        "score": 50,
+        "price": 0.07184,
+        "rsi_2m": 62.74,
+        "rsi_5m": 62.74,
+        "rsi_15m": 62.74,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.16,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "BOMEUSDT",
+        "score": 50,
+        "price": 0.0007702,
+        "rsi_2m": 53.58,
+        "rsi_5m": 53.58,
+        "rsi_15m": 53.58,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 0.05,
