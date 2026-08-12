@@ -1,10 +1,23 @@
 {
-  "PENDLEUSDT": [
+  "BONKUSDT": [
     {
-      "timestamp": "2026-08-12 13:50:41",
-      "price": 1.333,
+      "timestamp": "2026-08-12 13:52:22",
+      "price": 2.25e-06,
+      "score": 35,
+      "rsi": 49.18,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ASTERUSDT": [
+    {
+      "timestamp": "2026-08-12 13:52:22",
+      "price": 0.603,
       "score": 15,
-      "rsi": 45.84,
+      "rsi": 47.6,
       "macd": "Neutral",
       "volume_surge": 0.0,
       "wyckoff": "Sin patron",
@@ -12,30 +25,31 @@
       "fear_greed": 50
     }
   ],
-  "TSMBUSDT": [
+  "SAGAUSDT": [
     {
-      "timestamp": "2026-08-12 13:50:41",
-      "price": 431.7,
-      "score": 60,
-      "rsi": 62.21,
+      "timestamp": "2026-08-12 13:52:22",
+      "price": 0.01435,
+      "score": 35,
+      "rsi": 63.09,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.15,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "IMXUSDT": [
+  "ATMUSDT": [
     {
-      "timestamp": "2026-08-12 13:50:41",
-      "price": 0.1126,
+      "timestamp": "2026-08-12 13:52:22",
+      "price": 1.524,
       "score": 0,
-      "rsi": 46.17,
+      "rsi": 48.62,
       "macd": "Neutral",
-      "volume_surge": 0.09,
+      "volume_surge": 0.39,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
+}
 }

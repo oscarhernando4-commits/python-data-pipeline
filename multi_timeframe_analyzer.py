@@ -309,11 +309,15 @@ def analyze_multi_timeframe_candles(symbol):
     avg_vol_15m = sum(vols_15m[-5:]) / len(vols_15m[-5:]) if len(vols_15m) >= 5 else 1.0
     vol_surge_15m = round(vols_15m[-1] / avg_vol_15m, 2) if avg_vol_15m > 0 else 1.0
 
+    st_status = "🟢 SUPERTREND (10,3) VERDE ALCISTA" if is_supertrend_bullish else "🔴 SUPERTREND ROJO"
+    vwap_status = "🟢 REBOTE PISO VWAP (-1.5 StdDev)" if is_vwap_floor_rebound else "⚪ NORMAL VWAP"
+    ma99_status = "🚀 CRUCE ALCISTA MA25/MA99 (PULSO HACIA ARRIBA)" if is_ma25_above_ma99_upward else "⚪ NORMAL MA99"
+
     pattern_15m_summary = (
         f"RSI Triggers: 2m={rsi_2m} | 5m={rsi_5m} || Contexto Medio: 15m={rsi_15m} || Contexto Macro: 1h={rsi_1h} | 4h={rsi_4h} | "
         f"2m={'UP' if tf_2m_up else 'DOWN'} (VolSurge2m={vol_surge_2m}x) | "
         f"Precio 15m=${closes_15m[-1]:.4f} | MA7_15m=${ma7_15m:.4f} (Distancia: {dist_from_15m_ma7_pct:+.2f}%) | "
-        f"MA25_15m=${ma25_15m:.4f} | Por encima MA7/MA25={'SÍ' if price_above_15m_ma7 and price_above_15m_ma25 else 'NO'} | "
+        f"MA25_15m=${ma25_15m:.4f} | MA99_15m=${ma99_15m:.4f} | {ma99_status} | {st_status} | {vwap_status} | "
         f"Fase 15m={'RUPTURA_FRESCA (INICIO)' if 0.0 <= dist_from_15m_ma7_pct <= 3.0 else 'SOBRE_EXTENDIDO (CIMA)'} | "
         f"Patrón={yellow_arrow_status} | VolSurge 15m={vol_surge_15m}x"
     )
@@ -326,6 +330,9 @@ def analyze_multi_timeframe_candles(symbol):
         "is_overextended_15m": is_overextended_15m,
         "overextension_reason": overextension_reason,
         "is_yellow_arrow_pivot": is_yellow_arrow_pivot,
+        "is_supertrend_bullish": is_supertrend_bullish,
+        "is_vwap_floor_rebound": is_vwap_floor_rebound,
+        "is_ma25_above_ma99_upward": is_ma25_above_ma99_upward,
         "pct_b_15m": round(pct_b, 2),
         "is_oversold_bounce_candidate": is_oversold_bounce_candidate,
         "is_overbought_exhaustion": is_overbought_exhaustion,

@@ -392,7 +392,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
        - Examina el sentimiento Fear & Greed ({fear_greed.get('score')} - {fear_greed.get('sentiment')}), Mercado Tradicional ({wall_street_str}), noticias globales y volumen institucional (Volume Surge > 1.2x).
     
     2. 📊 AGENTE 2 - INGENIERO TÉCNICO & PRICE ACTION (Chartist & Pattern Sniper):
-       - Examina RSI (15m y 4h), MACD Histograma, EMAs (20, 50, 200), mechas de absorción y estructuras de volatilidad ATR.
+       - Examina Cruce MA25/MA99 (Inclinación de MA25 hacia arriba), SUPERTREND (10,3) Verde, Rebote de Suelo VWAP (-1.5 StdDev), RSI (15m y 4h), mechas de absorción Flechas Amarillas y ATR.
     
     3. 🌊 AGENTE 3 - RASTREADOR DE PROFUNDIDAD Y LIBRO DE ÓRDENES (Orderbook & Liquidity Depth Tracker):
        - Examina el Orderbook en tiempo real (Dominancia Bids Compradores vs Asks Vendedores), muros de soporte de ballenas (Bids > 65%) y riesgo de slippage.
