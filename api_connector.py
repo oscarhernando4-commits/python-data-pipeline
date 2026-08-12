@@ -837,23 +837,31 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         phase = state["position"].get("phase", 1)
         phase_msg = ""
         
-        # PHASE 4: Trailing Ride (highest ever PnL reached +3.0%)
+        # PHASE 4: Dynamic Trailing Ride (highest ever PnL reached +3.0%)
         if highest_pnl_pct >= 3.0 or phase >= 4:
             phase = 4
-            trailing_floor_pct = max(1.5, highest_pnl_pct - 1.0)  # Always keep at least +1.5% or (peak - 1.0%)
-            phase_msg = f"🚀 FASE 4: Cabalgando Tendencia (Pico +{highest_pnl_pct:.1f}%, Piso +{trailing_floor_pct:.1f}%)"
+            # Dynamic trailing offset: 0.80% for 3.0%-5.0% peaks, 0.50% for peaks > 5.0%
+            trailing_offset = 0.50 if highest_pnl_pct >= 5.0 else 0.80
+            trailing_floor_pct = max(2.0, highest_pnl_pct - trailing_offset)
+            phase_msg = f"🚀 FASE 4: Cabalgando Tendencia (Pico +{highest_pnl_pct:.2f}%, Piso Dinámico +{trailing_floor_pct:.2f}%)"
             
-        # PHASE 3: Profit Lock (PnL reached +1.5%)
+        # PHASE 3: High Profit Lock (PnL reached +1.5%)
         elif highest_pnl_pct >= 1.5 or phase >= 3:
             phase = 3
-            trailing_floor_pct = 1.0  # Lock +1.0% profit (net +0.8% after fees)
-            phase_msg = f"💰 FASE 3: Ganancia Asegurada +1.0% (Pico +{highest_pnl_pct:.1f}%)"
+            trailing_floor_pct = 1.15  # Lock +1.15% profit (net +0.95% after fees)
+            phase_msg = f"💰 FASE 3: Ganancia Asegurada +1.15% (Pico +{highest_pnl_pct:.2f}%)"
+
+        # PHASE 2.5: Mid Profit Lock (PnL reached +1.0%)
+        elif highest_pnl_pct >= 1.0 or phase >= 2.5:
+            phase = 2.5
+            trailing_floor_pct = 0.65  # Lock +0.65% profit (net +0.45% after fees)
+            phase_msg = f"💎 FASE 2.5: Candado de Lucro +0.65% (Pico +{highest_pnl_pct:.2f}%)"
             
-        # PHASE 2: Break-Even Safe (PnL reached +0.65% - lowered from +0.80% to lock protection faster)
+        # PHASE 2: Break-Even Safe (PnL reached +0.65%)
         elif highest_pnl_pct >= 0.65 or phase >= 2:
             phase = 2
             trailing_floor_pct = 0.35  # Covers 0.20% roundtrip fees + small profit
-            phase_msg = f"🛡️ FASE 2: Break-Even Seguro +0.35% (Pico +{highest_pnl_pct:.1f}%)"
+            phase_msg = f"🛡️ FASE 2: Break-Even Seguro +0.35% (Pico +{highest_pnl_pct:.2f}%)"
             
         # PHASE 1: Initial Protection (wide -3.0% SL to survive normal crypto volatility)
         else:
