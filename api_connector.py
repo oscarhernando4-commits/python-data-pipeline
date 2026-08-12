@@ -84,9 +84,17 @@ def set_execution_mode(mode):
     print(f"🔄 Modo de ejecución cambiado a: {emoji}")
 
 def get_proxy():
-    """Round-Robin equitativo: rota secuencialmente entre TODAS las 10 cuentas Fixie."""
+    """Round-Robin equitativo: rota secuencialmente entre cuentas Fixie activas (Prioriza #9 oscarhernando4)."""
     state = _load_proxy_state()
-    idx = state.get("current_index", 0) % len(FIXIE_POOL)
+    idx = state.get("current_index", 9) % len(FIXIE_POOL)
+    
+    # Lista de cuentas agotadas conocidas
+    exhausted_indices = {0, 1, 2, 3, 4, 5, 6, 7, 8}
+    attempts = 0
+    while idx in exhausted_indices and attempts < len(FIXIE_POOL):
+        idx = (idx + 1) % len(FIXIE_POOL)
+        attempts += 1
+        
     url = FIXIE_POOL[idx]
     
     # Avanzar al siguiente para la próxima llamada
