@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3135,
+    "total_trades": 3136,
     "wins": 554,
-    "losses": 2581,
+    "losses": 2582,
     "win_rate_pct": 17.67,
-    "total_pnl_usd": 101168.79989545497
+    "total_pnl_usd": 101168.56989545497
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on DASHUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NEXOUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SAGAUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on FETUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on VETUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ETCUSDT)",
-      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on FILUSDT)"
+      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on FILUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on DEXEUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on SUIUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-11 10:32:44",
-      "account_id": "SIM-029",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ALGOUSDT",
-      "side": "LONG",
-      "entry_price": 0.0809,
-      "exit_price": 0.0801,
-      "pnl_usd": -0.22,
-      "result": "LOSS",
-      "notes": "Hit SL on ALGOUSDT (-$0.22). Re-Trading!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 17.77,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-11 10:32:44",
       "account_id": "SIM-090",
@@ -8186,6 +8169,23 @@
       "context": {
         "score": 25,
         "rsi_15m": 24.14,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 22:08:25",
+      "account_id": "SIM-076",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "DEXEUSDT",
+      "side": "SHORT",
+      "entry_price": 1.974,
+      "exit_price": 1.995,
+      "pnl_usd": -0.23,
+      "result": "LOSS",
+      "notes": "Hit SL on DEXEUSDT (-$0.23). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 55.81,
         "macro_trend_4h": "NEUTRAL"
       }
     }
