@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3037,
+    "total_trades": 3040,
     "wins": 542,
-    "losses": 2495,
-    "win_rate_pct": 17.85,
-    "total_pnl_usd": 101147.56989545492
+    "losses": 2498,
+    "win_rate_pct": 17.83,
+    "total_pnl_usd": 101147.38989545492
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-11 09:50:50",
-      "account_id": "SIM-057",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "XRPUSDT",
-      "side": "LONG",
-      "entry_price": 1.0097,
-      "exit_price": 0.9976,
-      "pnl_usd": -0.26,
-      "result": "LOSS",
-      "notes": "Hit SL on XRPUSDT (-$0.26). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 29.63,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 09:50:50",
-      "account_id": "SIM-058",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "XRPUSDT",
-      "side": "LONG",
-      "entry_price": 1.0097,
-      "exit_price": 0.9976,
-      "pnl_usd": -0.37,
-      "result": "LOSS",
-      "notes": "Hit SL on XRPUSDT (-$0.37). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 29.63,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 09:52:43",
-      "account_id": "SIM-001",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "BTCUSDT",
-      "side": "LONG",
-      "entry_price": 64373.39,
-      "exit_price": 63744.89,
-      "pnl_usd": -0.19,
-      "result": "LOSS",
-      "notes": "Hit SL on BTCUSDT (-$0.19). Re-Trading!",
-      "context": {
-        "score": 40,
-        "rsi_15m": 26.15,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-11 09:52:43",
       "account_id": "SIM-002",
@@ -8224,6 +8173,45 @@
         "rsi_15m": 55.77,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-12 17:06:28",
+      "account_id": "SIM-021",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MITOUSDT",
+      "side": "LONG",
+      "entry_price": 0.02364,
+      "exit_price": 0.02364,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on MITOUSDT (-$0.06). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-12 17:06:28",
+      "account_id": "SIM-023",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MITOUSDT",
+      "side": "LONG",
+      "entry_price": 0.02364,
+      "exit_price": 0.02364,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on MITOUSDT (-$0.06). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-12 17:06:28",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MITOUSDT",
+      "side": "LONG",
+      "entry_price": 0.02364,
+      "exit_price": 0.02364,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on MITOUSDT (-$0.06). Re-Trading!",
+      "context": {}
     }
   ]
 }
