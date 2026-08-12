@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2890,
-    "wins": 523,
+    "total_trades": 2893,
+    "wins": 526,
     "losses": 2367,
-    "win_rate_pct": 18.1,
-    "total_pnl_usd": 101326.29989545482
+    "win_rate_pct": 18.18,
+    "total_pnl_usd": 101327.54989545484
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NILUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ROBOUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BTCUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on XPLUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on VIRTUALUSDT)",
@@ -49,61 +48,11 @@
       "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on COOKIEUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HEIUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on IDUSDT)",
-      "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on IDUSDT)"
+      "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on IDUSDT)",
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on INJUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-11 03:16:21",
-      "account_id": "SIM-062",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "PROMUSDT",
-      "side": "SHORT",
-      "entry_price": 2.598,
-      "exit_price": 2.135,
-      "pnl_usd": 3.5,
-      "result": "WIN",
-      "notes": "Win on PROMUSDT (+$3.50 net) -> Level 10 Re-Trading Started!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 38.74,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 03:16:21",
-      "account_id": "SIM-063",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "PROMUSDT",
-      "side": "SHORT",
-      "entry_price": 2.598,
-      "exit_price": 2.135,
-      "pnl_usd": 3.5,
-      "result": "WIN",
-      "notes": "Win on PROMUSDT (+$3.50 net) -> Level 10 Re-Trading Started!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 38.74,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 03:16:21",
-      "account_id": "SIM-071",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "PROMUSDT",
-      "side": "SHORT",
-      "entry_price": 2.598,
-      "exit_price": 2.135,
-      "pnl_usd": 3.5,
-      "result": "WIN",
-      "notes": "Win on PROMUSDT (+$3.50 net) -> Level 10 Re-Trading Started!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 38.74,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-11 03:20:18",
       "account_id": "SIM-055",
@@ -8274,6 +8223,57 @@
       "context": {
         "score": 60,
         "rsi_15m": 62.4,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 00:50:37",
+      "account_id": "SIM-047",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "INJUSDT",
+      "side": "LONG",
+      "entry_price": 4.584,
+      "exit_price": 4.681,
+      "pnl_usd": 0.32,
+      "result": "WIN",
+      "notes": "Win on INJUSDT (+$0.32 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 74.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 00:50:37",
+      "account_id": "SIM-048",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "INJUSDT",
+      "side": "LONG",
+      "entry_price": 4.584,
+      "exit_price": 4.681,
+      "pnl_usd": 0.46,
+      "result": "WIN",
+      "notes": "Win on INJUSDT (+$0.46 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 74.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-12 00:50:37",
+      "account_id": "SIM-055",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "INJUSDT",
+      "side": "LONG",
+      "entry_price": 4.584,
+      "exit_price": 4.681,
+      "pnl_usd": 0.47,
+      "result": "WIN",
+      "notes": "Win on INJUSDT (+$0.47 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 74.64,
         "macro_trend_4h": "NEUTRAL"
       }
     }
