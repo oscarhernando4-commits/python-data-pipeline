@@ -2191,3 +2191,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-33.86%)`, `2025-09-09 (-22.22%)`, `2025-09-22 (-21.29%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: STORJUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-17` hasta `2026-08-12` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.0478 USD`
+- 📈 **Máximo Histórico (ATH):** `$1.2335 USD` (`2023-12-21`) | Distancia: `-96.12%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0414 USD` (`2026-08-11`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-12-27 (+38.66%)`, `2024-08-05 (+29.74%)`, `2024-10-15 (+27.51%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-31.53%)`, `2024-12-09 (-19.72%)`, `2026-07-27 (-18.46%)`
+
+---
