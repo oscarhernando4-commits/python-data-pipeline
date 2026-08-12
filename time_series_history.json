@@ -1,5 +1,5 @@
 {
-  "CVXUSDT": [
+  "ZBTUSDT": [
     {
       "timestamp": "2026-08-12 18:28:17",
       "price": 0.1327,
@@ -686,14 +686,53 @@
       "fear_greed": 50
     }
   ],
-  "CVXUSDT": [
+  "BOMEUSDT": [
     {
       "timestamp": "2026-08-12 18:28:23",
       "price": 1.756,
       "score": 0,
       "rsi": 42.25,
       "macd": "Neutral",
-      "volume_surge": 0.37,
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ASTERUSDT": [
+    {
+      "timestamp": "2026-08-12 23:30:11",
+      "price": 0.602,
+      "score": 0,
+      "rsi": 46.96,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "AIXBTUSDT": [
+    {
+      "timestamp": "2026-08-12 23:30:11",
+      "price": 0.01874,
+      "score": 35,
+      "rsi": 56.1,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DASHUSDT": [
+    {
+      "timestamp": "2026-08-12 23:30:12",
+      "price": 30.01,
+      "score": 0,
+      "rsi": 33.72,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
