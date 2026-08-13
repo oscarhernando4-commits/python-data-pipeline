@@ -2373,3 +2373,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-37.99%)`, `2025-03-04 (-35.11%)`, `2026-02-24 (-25.64%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: INTCBUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2026-06-23` hasta `2026-08-13` (52 Días de Historial)
+- 💵 **Precio Actual:** `$104.3100 USD`
+- 📈 **Máximo Histórico (ATH):** `$142.5000 USD` (`2026-06-30`) | Distancia: `-26.8%`
+- 📉 **Mínimo Histórico (ATL):** `$79.2400 USD` (`2026-07-29`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-07-30 (+17.27%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-07-24 (-12.61%)`, `2026-07-07 (-10.57%)`
+
+---
