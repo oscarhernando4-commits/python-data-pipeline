@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3541,
-    "wins": 608,
+    "total_trades": 3542,
+    "wins": 609,
     "losses": 2933,
-    "win_rate_pct": 17.17,
-    "total_pnl_usd": 798686.0498954532
+    "win_rate_pct": 17.19,
+    "total_pnl_usd": 798686.7598954531
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 17:08:33",
-      "account_id": "SIM-039",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "COTIUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01058,
-      "exit_price": 0.01115,
-      "pnl_usd": -1.08,
-      "result": "LOSS",
-      "notes": "Hit SL on COTIUSDT (-$1.08). Re-Trading!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 90.06,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 17:08:33",
       "account_id": "SIM-040",
@@ -8210,6 +8193,23 @@
       "context": {
         "score": 25,
         "rsi_15m": 81.08,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 22:24:38",
+      "account_id": "SIM-065",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "HOMEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01067,
+      "exit_price": 0.01027,
+      "pnl_usd": 0.71,
+      "result": "WIN",
+      "notes": "Win on HOMEUSDT (+$0.71 net) -> Level 13 Re-Trading Started!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 35.59,
         "macro_trend_4h": "NEUTRAL"
       }
     }

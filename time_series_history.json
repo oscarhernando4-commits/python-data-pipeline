@@ -1,17 +1,54 @@
 {
-  "PNUTUSDT": [
+  "COHRBUSDT": [
     {
-      "timestamp": "2026-08-13 22:22:09",
-      "price": 0.0419,
-      "score": 15,
-      "rsi": 45.09,
+      "timestamp": "2026-08-13 22:24:09",
+      "price": 330.65,
+      "score": 45,
+      "rsi": 40.85,
       "macd": "Neutral",
-      "volume_surge": 0.2,
+      "volume_surge": 0.13,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "MEGAUSDT": [
+    {
+      "timestamp": "2026-08-13 22:24:09",
+      "price": 0.03253,
+      "score": 65,
+      "rsi": 50.34,
+      "macd": "Neutral",
+      "volume_surge": 0.41,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "FFUSDT": [
+    {
+      "timestamp": "2026-08-13 22:24:09",
+      "price": 0.0649,
+      "score": 50,
+      "rsi": 53.86,
+      "macd": "Neutral",
+      "volume_surge": 0.69,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "EULUSDT": [
+    {
+      "timestamp": "2026-08-13 22:24:09",
+      "price": 1.135,
+      "score": 15,
+      "rsi": 37.71,
+      "macd": "Neutral",
+      "volume_surge": 0.16,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}
-}
 }
