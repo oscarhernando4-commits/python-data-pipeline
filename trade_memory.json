@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3231,
+    "total_trades": 3232,
     "wins": 571,
-    "losses": 2660,
+    "losses": 2661,
     "win_rate_pct": 17.67,
-    "total_pnl_usd": 101162.00989545492
+    "total_pnl_usd": 101161.59989545491
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on KITEUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on EPICUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on LSKUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on TRBUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BANKUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on PENDLEUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TSTUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COTIUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COTIUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on NILUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on 0GUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-11 17:30:46",
-      "account_id": "SIM-050",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "BANKUSDT",
-      "side": "LONG",
-      "entry_price": 0.0365,
-      "exit_price": 0.0366,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on BANKUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 34.81,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-11 17:30:46",
       "account_id": "SIM-055",
@@ -8222,6 +8205,23 @@
       "context": {
         "score": 15,
         "rsi_15m": 44.72,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 06:14:22",
+      "account_id": "SIM-082",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "NILUSDT",
+      "side": "SHORT",
+      "entry_price": 0.04082,
+      "exit_price": 0.04168,
+      "pnl_usd": -0.41,
+      "result": "LOSS",
+      "notes": "Hit SL on NILUSDT (-$0.41). Re-Trading!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 50.26,
         "macro_trend_4h": "NEUTRAL"
       }
     }
