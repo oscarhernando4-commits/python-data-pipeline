@@ -9,10 +9,10 @@
     {
       "symbol": "ZAMAUSDT",
       "score": 60,
-      "price": 0.04761,
-      "rsi_2m": 55.51,
-      "rsi_5m": 55.51,
-      "rsi_15m": 55.51,
+      "price": 0.04765,
+      "rsi_2m": 56.28,
+      "rsi_5m": 56.28,
+      "rsi_15m": 56.28,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.98,
@@ -72,28 +72,15 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "EDENUSDT",
-      "score": 60,
-      "price": 0.04928,
-      "rsi_2m": 66.67,
-      "rsi_5m": 66.67,
-      "rsi_15m": 66.67,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 1.57,
-      "trade_quality": "B",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "CRVUSDT",
+      "symbol": "IDUSDT",
       "score": 50,
-      "price": 0.2547,
-      "rsi_2m": 52.11,
-      "rsi_5m": 52.11,
-      "rsi_15m": 52.11,
+      "price": 0.0293,
+      "rsi_2m": 56.37,
+      "rsi_5m": 56.37,
+      "rsi_15m": 56.37,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.1,
+      "vol_surge": 0.57,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -199,6 +186,32 @@
       "rsi_4h": 50.0,
       "vol_surge": 2.29,
       "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "WLDUSDT",
+      "score": 35,
+      "price": 0.3484,
+      "rsi_2m": 60.67,
+      "rsi_5m": 60.67,
+      "rsi_15m": 60.67,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.86,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "TUTUSDT",
+      "score": 35,
+      "price": 0.03999,
+      "rsi_2m": 12.22,
+      "rsi_5m": 12.22,
+      "rsi_15m": 12.22,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 2.3,
+      "trade_quality": "B",
       "macro_trend": "NEUTRAL"
     }
   ]
