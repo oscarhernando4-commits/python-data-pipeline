@@ -7,7 +7,20 @@
   "reasoning": "Tras deliberar, el comité ha determinado que, a pesar de tener candidatos con scores técnicos aceptables, ninguno cumple con los criterios de seguridad y convicción exigidos por el CRO. La alta volatilidad y la falta de profundidad en el libro de órdenes sugieren que el mercado aún no ha definido una tendencia clara, por lo que la decisión es mantener la liquidez en USDT para evitar pérdidas innecesarias.",
   "top_candidates": [
     {
-      "symbol": "LINKUSDT",
+      "symbol": "TUTUSDT",
+      "score": 85,
+      "price": 0.04029,
+      "rsi_2m": 31.27,
+      "rsi_5m": 31.27,
+      "rsi_15m": 31.27,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.2,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "PUMPUSDT",
       "score": 75,
       "price": 8.817,
       "rsi_2m": 60.74,
