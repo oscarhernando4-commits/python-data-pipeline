@@ -1,12 +1,12 @@
 {
-  "NIGHTUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-13 20:12:08",
-      "price": 0.01707,
-      "score": 30,
-      "rsi": 38.13,
+      "timestamp": "2026-08-13 20:14:09",
+      "price": 0.1236,
+      "score": 35,
+      "rsi": 56.16,
       "macd": "Neutral",
-      "volume_surge": 0.42,
+      "volume_surge": 1.19,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,9 +14,9 @@
   ],
   "RAREUSDT": [
     {
-      "timestamp": "2026-08-13 20:12:09",
+      "timestamp": "2026-08-13 20:14:09",
       "price": 0.01153,
-      "score": 25,
+      "score": 20,
       "rsi": 27.72,
       "macd": "Neutral",
       "volume_surge": 1.41,
@@ -79,12 +79,25 @@
   ],
   "CFXUSDT": [
     {
-      "timestamp": "2026-08-13 20:12:10",
-      "price": 0.04121,
+      "timestamp": "2026-08-13 20:14:10",
+      "price": 0.0412,
       "score": 50,
-      "rsi": 55.57,
+      "rsi": 55.02,
       "macd": "Neutral",
-      "volume_surge": 1.07,
+      "volume_surge": 1.24,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "XPLUSDT": [
+    {
+      "timestamp": "2026-08-13 20:14:10",
+      "price": 0.07448,
+      "score": 45,
+      "rsi": 49.56,
+      "macd": "Neutral",
+      "volume_surge": 1.68,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
