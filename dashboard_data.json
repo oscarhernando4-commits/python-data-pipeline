@@ -4,16 +4,16 @@
   "usdt_free": 0.1256,
   "bnb_free": 0.00369424,
   "bnb_usd": 2.25,
-  "status": "🔵 En Vivo LONG (GRAMUSDT @ $1.3390)",
+  "status": "🔵 En Vivo LONG (GRAMUSDT @ $1.3400)",
   "position": {
     "symbol": "GRAMUSDT",
     "quantity": 12.05,
     "entry_price": 1.352,
     "highest_price": 1.355,
-    "cost_usd": 16.13,
+    "cost_usd": 16.15,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 223,
+    "holding_cycles": 224,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -38,7 +38,7 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "HBARUSDT",
+        "symbol": "TIAUSDT",
         "score": 75,
         "price": 0.06664,
         "rsi_2m": 59.29,
@@ -64,7 +64,7 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "DASHUSDT",
+        "symbol": "SHIBUSDT",
         "score": 75,
         "price": 30.39,
         "rsi_2m": 54.26,
@@ -571,20 +571,7 @@
           "rsi_15m": 59.21,
           "rsi_1h": 50.0,
           "rsi_4h": 50.0,
-          "vol_surge": 0.06,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "SHIBUSDT",
-          "score": 75,
-          "price": 4.48e-06,
-          "rsi_2m": 53.11,
-          "rsi_5m": 53.11,
-          "rsi_15m": 53.11,
-          "rsi_1h": 50.0,
-          "rsi_4h": 50.0,
-          "vol_surge": 0.01,
+          "vol_surge": 0.12,
           "trade_quality": "C_NOISE",
           "macro_trend": "NEUTRAL"
         },
@@ -597,7 +584,20 @@
           "rsi_15m": 31.55,
           "rsi_1h": 50.0,
           "rsi_4h": 50.0,
-          "vol_surge": 0.49,
+          "vol_surge": 0.54,
+          "trade_quality": "C_NOISE",
+          "macro_trend": "NEUTRAL"
+        },
+        {
+          "symbol": "PUMPUSDT",
+          "score": 65,
+          "price": 0.00287,
+          "rsi_2m": 67.68,
+          "rsi_5m": 67.68,
+          "rsi_15m": 67.68,
+          "rsi_1h": 50.0,
+          "rsi_4h": 50.0,
+          "vol_surge": 0.31,
           "trade_quality": "C_NOISE",
           "macro_trend": "NEUTRAL"
         },
@@ -611,146 +611,6 @@
           "rsi_1h": 50.0,
           "rsi_4h": 50.0,
           "vol_surge": 0.82,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        }
-      ]
-    },
-    {
-      "timestamp": "2026-08-13 10:04:57",
-      "selected_symbol": "NONE",
-      "action": "HOLD",
-      "approved": false,
-      "confidence": 0,
-      "reasoning": "El mercado presenta una estructura de alta incertidumbre con una correlación fragmentada. Ningún activo cumple con el requisito estricto de Bids Compradores > 65% ni con la convicción A+ necesaria para una entrada de alta precisión, por lo que la decisión institucional es mantener la liquidez en espera de una mejor configuración técnica.",
-      "top_candidates": [
-        {
-          "symbol": "BTCUSDT",
-          "score": 75,
-          "price": 63920.01,
-          "rsi_2m": 59.84,
-          "rsi_5m": 59.84,
-          "rsi_15m": 59.84,
-          "rsi_1h": 50.0,
-          "rsi_4h": 50.0,
-          "vol_surge": 0.29,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "ZECUSDT",
-          "score": 75,
-          "price": 495.46,
-          "rsi_2m": 57.73,
-          "rsi_5m": 57.73,
-          "rsi_15m": 57.73,
-          "rsi_1h": 50.0,
-          "rsi_4h": 50.0,
-          "vol_surge": 2.01,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "ADAUSDT",
-          "score": 75,
-          "price": 0.1849,
-          "rsi_2m": 55.84,
-          "rsi_5m": 55.84,
-          "rsi_15m": 55.84,
-          "rsi_1h": 50.0,
-          "rsi_4h": 50.0,
-          "vol_surge": 0.32,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "HBARUSDT",
-          "score": 75,
-          "price": 0.06675,
-          "rsi_2m": 63.24,
-          "rsi_5m": 63.24,
-          "rsi_15m": 63.24,
-          "rsi_1h": 50.0,
-          "rsi_4h": 50.0,
-          "vol_surge": 0.4,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "XLMUSDT",
-          "score": 75,
-          "price": 0.1612,
-          "rsi_2m": 58.11,
-          "rsi_5m": 58.11,
-          "rsi_15m": 58.11,
-          "rsi_1h": 50.0,
-          "rsi_4h": 50.0,
-          "vol_surge": 0.35,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "PENGUUSDT",
-          "score": 75,
-          "price": 0.006328,
-          "rsi_2m": 56.15,
-          "rsi_5m": 56.15,
-          "rsi_15m": 56.15,
-          "rsi_1h": 50.0,
-          "rsi_4h": 50.0,
-          "vol_surge": 0.19,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "VETUSDT",
-          "score": 75,
-          "price": 0.004521,
-          "rsi_2m": 60.98,
-          "rsi_5m": 60.98,
-          "rsi_15m": 60.98,
-          "rsi_1h": 50.0,
-          "rsi_4h": 50.0,
-          "vol_surge": 0.59,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "DASHUSDT",
-          "score": 75,
-          "price": 30.45,
-          "rsi_2m": 59.21,
-          "rsi_5m": 59.21,
-          "rsi_15m": 59.21,
-          "rsi_1h": 50.0,
-          "rsi_4h": 50.0,
-          "vol_surge": 0.06,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "SHIBUSDT",
-          "score": 75,
-          "price": 4.48e-06,
-          "rsi_2m": 53.11,
-          "rsi_5m": 53.11,
-          "rsi_15m": 53.11,
-          "rsi_1h": 50.0,
-          "rsi_4h": 50.0,
-          "vol_surge": 0.01,
-          "trade_quality": "C_NOISE",
-          "macro_trend": "NEUTRAL"
-        },
-        {
-          "symbol": "MUBARAKUSDT",
-          "score": 70,
-          "price": 0.01708,
-          "rsi_2m": 31.04,
-          "rsi_5m": 31.04,
-          "rsi_15m": 31.04,
-          "rsi_1h": 50.0,
-          "rsi_4h": 50.0,
-          "vol_surge": 0.49,
           "trade_quality": "C_NOISE",
           "macro_trend": "NEUTRAL"
         }
