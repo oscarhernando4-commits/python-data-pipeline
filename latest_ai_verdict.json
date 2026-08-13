@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-13 17:12:18",
+  "timestamp": "2026-08-13 17:14:15",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado que el mercado actual carece de la convicción institucional necesaria para operar. Ningún activo cumple con los criterios de riesgo A+ y la alta probabilidad de pérdidas basada en el historial de simulaciones obliga a mantener una postura defensiva total.",
+  "reasoning": "El mercado se encuentra en una fase de distribución bajista con alta correlación negativa. Ninguno de los activos candidatos cumple con los criterios de calidad A+ (Score >= 55) ni con la confirmación de liquidez necesaria para mitigar el riesgo de slippage, por lo que la decisión institucional es proteger el capital y permanecer en modo espera (HOLD).",
   "top_candidates": [
     {
       "symbol": "2ZUSDT",
@@ -22,13 +22,13 @@
     {
       "symbol": "2ZUSDT",
       "score": 60,
-      "price": 0.04859,
-      "rsi_2m": 62.93,
-      "rsi_5m": 62.93,
-      "rsi_15m": 62.93,
+      "price": 0.04856,
+      "rsi_2m": 62.57,
+      "rsi_5m": 62.57,
+      "rsi_15m": 62.57,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 2.07,
+      "vol_surge": 2.44,
       "trade_quality": "A+",
       "macro_trend": "NEUTRAL"
     },
@@ -54,7 +54,7 @@
       "rsi_15m": 56.27,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.34,
+      "vol_surge": 0.56,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -93,20 +93,7 @@
       "rsi_15m": 47.77,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.45,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "ATUSDT",
-      "score": 50,
-      "price": 0.1525,
-      "rsi_2m": 53.23,
-      "rsi_5m": 53.23,
-      "rsi_15m": 53.23,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.15,
+      "vol_surge": 0.47,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -119,21 +106,60 @@
       "rsi_15m": 54.87,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.39,
+      "vol_surge": 0.43,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "AXTIBUSDT",
       "score": 50,
-      "price": 78.7,
-      "rsi_2m": 57.77,
-      "rsi_5m": 57.77,
-      "rsi_15m": 57.77,
+      "price": 78.73,
+      "rsi_2m": 57.95,
+      "rsi_5m": 57.95,
+      "rsi_15m": 57.95,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.07,
       "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "score": 50,
+      "price": 0.055,
+      "rsi_2m": 53.68,
+      "rsi_5m": 53.68,
+      "rsi_15m": 53.68,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.78,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "MMTUSDT",
+      "score": 45,
+      "price": 0.1711,
+      "rsi_2m": 53.3,
+      "rsi_5m": 53.3,
+      "rsi_15m": 53.3,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 3.33,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "EPICUSDT",
+      "score": 45,
+      "price": 0.346,
+      "rsi_2m": 64.56,
+      "rsi_5m": 64.56,
+      "rsi_15m": 64.56,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 1.95,
+      "trade_quality": "B",
       "macro_trend": "NEUTRAL"
     }
   ]
