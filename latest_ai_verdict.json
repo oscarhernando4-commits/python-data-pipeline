@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-13 20:18:41",
+  "timestamp": "2026-08-13 20:20:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
@@ -30,6 +30,45 @@
       "rsi_4h": 50.0,
       "vol_surge": 0.15,
       "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "LINKUSDT",
+      "score": 75,
+      "price": 8.845,
+      "rsi_2m": 64.37,
+      "rsi_5m": 64.37,
+      "rsi_15m": 64.37,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.31,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "NEXOUSDT",
+      "score": 75,
+      "price": 0.73,
+      "rsi_2m": 60.18,
+      "rsi_5m": 60.18,
+      "rsi_15m": 60.18,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.6,
+      "trade_quality": "B",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "AEROUSDT",
+      "score": 75,
+      "price": 0.413,
+      "rsi_2m": 59.68,
+      "rsi_5m": 59.68,
+      "rsi_15m": 59.68,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 1.97,
+      "trade_quality": "B",
       "macro_trend": "NEUTRAL"
     },
     {
@@ -124,7 +163,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "AAVEUSDT",
+      "symbol": "ADAUSDT",
       "score": 65,
       "price": 88.13,
       "rsi_2m": 55.75,
