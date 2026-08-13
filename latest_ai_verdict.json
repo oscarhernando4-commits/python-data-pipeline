@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-13 16:30:16",
+  "timestamp": "2026-08-13 16:32:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de debilidad sistémica extrema. Ningún activo cumple con los criterios de calidad A+ (Score >= 55) exigidos por el comité. Se mantiene la posición en efectivo para evitar la exposición a 'cuchillos cayendo' y proteger el capital contra la volatilidad bajista actual.",
+  "reasoning": "El mercado se encuentra en un estado de distribución institucional agresiva con una falta crítica de activos que cumplan con los criterios de fuerza relativa y soporte de ballenas. Se prioriza la preservación de capital sobre la especulación en activos de baja convicción.",
   "top_candidates": [
     {
       "symbol": "MMTUSDT",
@@ -113,13 +113,13 @@
     {
       "symbol": "HBARUSDT",
       "score": 45,
-      "price": 0.06664,
-      "rsi_2m": 54.97,
-      "rsi_5m": 54.97,
-      "rsi_15m": 54.97,
+      "price": 0.06666,
+      "rsi_2m": 55.64,
+      "rsi_5m": 55.64,
+      "rsi_15m": 55.64,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.0,
+      "vol_surge": 0.05,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -132,7 +132,7 @@
       "rsi_15m": 52.65,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.0,
+      "vol_surge": 0.07,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
