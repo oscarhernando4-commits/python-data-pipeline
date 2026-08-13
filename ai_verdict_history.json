@@ -1398,5 +1398,145 @@
         "macro_trend": "NEUTRAL"
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-13 11:10:49",
+    "selected_symbol": "NONE",
+    "action": "HOLD",
+    "approved": false,
+    "confidence": 0,
+    "reasoning": "El comité ha determinado que el entorno actual es de alta toxicidad. Ningún activo cumple con el umbral de seguridad A+ (Score >= 55) exigido por el Chief Risk Officer. Se prioriza la preservación de capital sobre la especulación en un mercado con sesgo bajista y falta de rotación de capital institucional sólida.",
+    "top_candidates": [
+      {
+        "symbol": "ZAMAUSDT",
+        "score": 60,
+        "price": 0.04752,
+        "rsi_2m": 53.0,
+        "rsi_5m": 53.0,
+        "rsi_15m": 53.0,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.57,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "IDUSDT",
+        "score": 60,
+        "price": 0.0292,
+        "rsi_2m": 52.65,
+        "rsi_5m": 52.65,
+        "rsi_15m": 52.65,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.46,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "WLFIUSDT",
+        "score": 60,
+        "price": 0.055,
+        "rsi_2m": 53.2,
+        "rsi_5m": 53.2,
+        "rsi_15m": 53.2,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.65,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "AXTIBUSDT",
+        "score": 50,
+        "price": 77.86,
+        "rsi_2m": 54.92,
+        "rsi_5m": 54.92,
+        "rsi_15m": 54.92,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.45,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "EDENUSDT",
+        "score": 50,
+        "price": 0.04944,
+        "rsi_2m": 65.38,
+        "rsi_5m": 65.38,
+        "rsi_15m": 65.38,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.74,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "BTCUSDT",
+        "score": 45,
+        "price": 63436.01,
+        "rsi_2m": 39.91,
+        "rsi_5m": 39.91,
+        "rsi_15m": 39.91,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.51,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "NEXOUSDT",
+        "score": 45,
+        "price": 0.724,
+        "rsi_2m": 55.18,
+        "rsi_5m": 55.18,
+        "rsi_15m": 55.18,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.82,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "INJUSDT",
+        "score": 45,
+        "price": 4.626,
+        "rsi_2m": 55.53,
+        "rsi_5m": 55.53,
+        "rsi_15m": 55.53,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.64,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "DODOUSDT",
+        "score": 45,
+        "price": 0.0233,
+        "rsi_2m": 63.37,
+        "rsi_5m": 63.37,
+        "rsi_15m": 63.37,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 2.27,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "TUTUSDT",
+        "score": 40,
+        "price": 0.04142,
+        "rsi_2m": 21.23,
+        "rsi_5m": 21.23,
+        "rsi_15m": 21.23,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.47,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      }
+    ]
   }
 ]
