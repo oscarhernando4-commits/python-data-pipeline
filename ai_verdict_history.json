@@ -1398,5 +1398,145 @@
         "macro_trend": "NEUTRAL"
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-13 11:12:59",
+    "selected_symbol": "NONE",
+    "action": "HOLD",
+    "approved": false,
+    "confidence": 0,
+    "reasoning": "El mercado exhibe una debilidad sistémica con una alta correlación bajista. Ninguno de los candidatos cumple con el umbral estricto de Score Técnico >= 55 y confirmación de volumen institucional necesaria para una entrada segura. Se prioriza la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+    "top_candidates": [
+      {
+        "symbol": "TRXUSDT",
+        "score": 60,
+        "price": 0.3347,
+        "rsi_2m": 49.26,
+        "rsi_5m": 49.26,
+        "rsi_15m": 49.26,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 2.36,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ZAMAUSDT",
+        "score": 60,
+        "price": 0.04758,
+        "rsi_2m": 54.44,
+        "rsi_5m": 54.44,
+        "rsi_15m": 54.44,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.58,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "IDUSDT",
+        "score": 60,
+        "price": 0.0292,
+        "rsi_2m": 52.65,
+        "rsi_5m": 52.65,
+        "rsi_15m": 52.65,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.47,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "WLFIUSDT",
+        "score": 60,
+        "price": 0.055,
+        "rsi_2m": 53.2,
+        "rsi_5m": 53.2,
+        "rsi_15m": 53.2,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.65,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "TUTUSDT",
+        "score": 55,
+        "price": 0.04086,
+        "rsi_2m": 18.59,
+        "rsi_5m": 18.59,
+        "rsi_15m": 18.59,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.72,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "SAGAUSDT",
+        "score": 55,
+        "price": 0.01362,
+        "rsi_2m": 31.0,
+        "rsi_5m": 31.0,
+        "rsi_15m": 31.0,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 3.09,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "COTIUSDT",
+        "score": 50,
+        "price": 0.01327,
+        "rsi_2m": 61.99,
+        "rsi_5m": 61.99,
+        "rsi_15m": 61.99,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.14,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "EDENUSDT",
+        "score": 50,
+        "price": 0.04955,
+        "rsi_2m": 67.03,
+        "rsi_5m": 67.03,
+        "rsi_15m": 67.03,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.93,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "BTCUSDT",
+        "score": 45,
+        "price": 63467.16,
+        "rsi_2m": 41.32,
+        "rsi_5m": 41.32,
+        "rsi_15m": 41.32,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.69,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "GNOUSDT",
+        "score": 45,
+        "price": 104.37,
+        "rsi_2m": 51.52,
+        "rsi_5m": 51.52,
+        "rsi_15m": 51.52,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.61,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      }
+    ]
   }
 ]
