@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3326,
+    "total_trades": 3327,
     "wins": 592,
-    "losses": 2734,
-    "win_rate_pct": 17.8,
-    "total_pnl_usd": 101154.7098954549
+    "losses": 2735,
+    "win_rate_pct": 17.79,
+    "total_pnl_usd": 101154.5798954549
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ALGOUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONEUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NIGHTUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ONEUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ATMUSDT)",
       "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MUBARAKUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHFIUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on COTIUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on COTIUSDT)",
+      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ATOMUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BANKUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-11 21:14:23",
-      "account_id": "SIM-050",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ICPUSDT",
-      "side": "LONG",
-      "entry_price": 2.217,
-      "exit_price": 2.262,
-      "pnl_usd": 0.39,
-      "result": "WIN",
-      "notes": "Win on ICPUSDT (+$0.39 net) -> Level 4 Re-Trading Started!",
-      "context": {
-        "score": 65,
-        "rsi_15m": 51.61,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-11 21:26:36",
       "account_id": "SIM-049",
@@ -8310,6 +8293,23 @@
       "context": {
         "score": 20,
         "rsi_15m": 26.38,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 11:44:23",
+      "account_id": "SIM-041",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ATOMUSDT",
+      "side": "LONG",
+      "entry_price": 1.445,
+      "exit_price": 1.442,
+      "pnl_usd": -0.13,
+      "result": "LOSS",
+      "notes": "Hit SL on ATOMUSDT (-$0.13). Re-Trading!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 68.5,
         "macro_trend_4h": "NEUTRAL"
       }
     }
