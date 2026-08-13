@@ -1,15 +1,13 @@
 {
   "stats": {
-    "total_trades": 3396,
+    "total_trades": 3400,
     "wins": 599,
-    "losses": 2797,
-    "win_rate_pct": 17.64,
-    "total_pnl_usd": 101140.1898954549
+    "losses": 2801,
+    "win_rate_pct": 17.62,
+    "total_pnl_usd": 101139.40989545488
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on GIGGLEUSDT)",
-      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on UNIUSDT)",
       "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ATUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BABYUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GIGGLEUSDT)",
@@ -27,7 +25,9 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PYTHUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BICOUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ACEUSDT)",
-      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BICOUSDT)"
+      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BICOUSDT)",
+      "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on NBISBUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HOMEUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on OPUSDT)",
@@ -53,74 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 01:12:34",
-      "account_id": "SIM-022",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "LITEBUSDT",
-      "side": "SHORT",
-      "entry_price": 839.45,
-      "exit_price": 852.43,
-      "pnl_usd": -0.33,
-      "result": "LOSS",
-      "notes": "Hit SL on LITEBUSDT (-$0.33). Re-Trading!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 71.45,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 01:12:34",
-      "account_id": "SIM-023",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "LITEBUSDT",
-      "side": "SHORT",
-      "entry_price": 839.45,
-      "exit_price": 852.43,
-      "pnl_usd": -0.33,
-      "result": "LOSS",
-      "notes": "Hit SL on LITEBUSDT (-$0.33). Re-Trading!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 71.45,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 01:12:34",
-      "account_id": "SIM-037",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "CRVUSDT",
-      "side": "SHORT",
-      "entry_price": 0.2775,
-      "exit_price": 0.2767,
-      "pnl_usd": -0.07,
-      "result": "LOSS",
-      "notes": "Hit SL on CRVUSDT (-$0.07). Re-Trading!",
-      "context": {
-        "score": 60,
-        "rsi_15m": 65.53,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 01:12:34",
-      "account_id": "SIM-072",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "CAKEUSDT",
-      "side": "SHORT",
-      "entry_price": 1.451,
-      "exit_price": 1.465,
-      "pnl_usd": -0.26,
-      "result": "LOSS",
-      "notes": "Hit SL on CAKEUSDT (-$0.26). Re-Trading!",
-      "context": {
-        "score": 75,
-        "rsi_15m": 64.88,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 01:14:35",
       "account_id": "SIM-071",
@@ -8302,6 +8234,74 @@
       "context": {
         "score": 15,
         "rsi_15m": 45.79,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 14:54:21",
+      "account_id": "SIM-043",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "NBISBUSDT",
+      "side": "LONG",
+      "entry_price": 270.4,
+      "exit_price": 271.13,
+      "pnl_usd": -0.13,
+      "result": "LOSS",
+      "notes": "Hit SL on NBISBUSDT (-$0.13). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 72.05,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 14:54:21",
+      "account_id": "SIM-047",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "NBISBUSDT",
+      "side": "LONG",
+      "entry_price": 270.5,
+      "exit_price": 271.13,
+      "pnl_usd": -0.05,
+      "result": "LOSS",
+      "notes": "Hit SL on NBISBUSDT (-$0.05). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 72.05,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 14:54:21",
+      "account_id": "SIM-059",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "NBISBUSDT",
+      "side": "LONG",
+      "entry_price": 270.4,
+      "exit_price": 271.13,
+      "pnl_usd": -0.08,
+      "result": "LOSS",
+      "notes": "Hit SL on NBISBUSDT (-$0.08). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 72.05,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 14:54:21",
+      "account_id": "SIM-099",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "HOMEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01085,
+      "exit_price": 0.01114,
+      "pnl_usd": -0.52,
+      "result": "LOSS",
+      "notes": "Hit SL on HOMEUSDT (-$0.52). Re-Trading!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 62.82,
         "macro_trend_4h": "NEUTRAL"
       }
     }
