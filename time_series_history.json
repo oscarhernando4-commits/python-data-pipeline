@@ -1,10 +1,49 @@
 {
   "AIXBTUSDT": [
     {
-      "timestamp": "2026-08-13 14:00:10",
-      "price": 0.01811,
+      "timestamp": "2026-08-13 14:02:09",
+      "price": 0.01812,
       "score": 15,
-      "rsi": 38.2,
+      "rsi": 39.17,
+      "macd": "Neutral",
+      "volume_surge": 0.38,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-13 14:02:09",
+      "price": 1.347,
+      "score": 15,
+      "rsi": 49.73,
+      "macd": "Neutral",
+      "volume_surge": 0.11,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "IMXUSDT": [
+    {
+      "timestamp": "2026-08-13 14:02:09",
+      "price": 0.1096,
+      "score": 15,
+      "rsi": 46.38,
+      "macd": "Neutral",
+      "volume_surge": 0.68,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-13 14:02:09",
+      "price": 0.1241,
+      "score": 75,
+      "rsi": 61.03,
       "macd": "Neutral",
       "volume_surge": 0.0,
       "wyckoff": "Sin patron",
