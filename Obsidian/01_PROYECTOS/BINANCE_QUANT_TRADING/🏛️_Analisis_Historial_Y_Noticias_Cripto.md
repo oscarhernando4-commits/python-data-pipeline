@@ -2347,3 +2347,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-35.78%)`, `2026-08-12 (-27.35%)`, `2024-12-09 (-20.41%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: ATUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-11-27` hasta `2026-08-13` (260 Días de Historial)
+- 💵 **Precio Actual:** `$0.1758 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.3660 USD` (`2025-11-27`) | Distancia: `-51.97%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0787 USD` (`2025-12-17`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-12-26 (+52.83%)`, `2026-06-12 (+24.64%)`, `2025-12-28 (+21.03%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-05-18 (-32.07%)`, `2025-12-01 (-22.85%)`, `2026-06-13 (-15.01%)`
+
+---
