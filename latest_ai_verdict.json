@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-13 16:38:20",
+  "timestamp": "2026-08-13 16:40:22",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución técnica con una ausencia total de soporte institucional en los activos analizados. Ningún candidato cumple con los criterios de calidad A+ exigidos por el comité, por lo que la orden es mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de alta volatilidad y baja profundidad.",
+  "reasoning": "El mercado se encuentra en una fase de contracción sistémica sin activos que cumplan con el umbral de calidad A+ (Score >= 55). La falta de soporte institucional en el libro de órdenes y la alta volatilidad en los activos analizados obligan a la preservación total del capital en stablecoins hasta que surja una señal de fortaleza clara.",
   "top_candidates": [
     {
       "symbol": "QNTUSDT",
@@ -93,7 +93,7 @@
       "rsi_15m": 52.68,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.5,
+      "vol_surge": 1.55,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -163,16 +163,68 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "MMTUSDT",
-      "score": 45,
-      "price": 0.1714,
-      "rsi_2m": 53.38,
-      "rsi_5m": 53.38,
-      "rsi_15m": 53.38,
+      "symbol": "DODOUSDT",
+      "score": 50,
+      "price": 0.02304,
+      "rsi_2m": 58.07,
+      "rsi_5m": 58.07,
+      "rsi_15m": 58.07,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 2.93,
+      "vol_surge": 0.69,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "MMTUSDT",
+      "score": 45,
+      "price": 0.1699,
+      "rsi_2m": 49.89,
+      "rsi_5m": 49.89,
+      "rsi_15m": 49.89,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 3.87,
       "trade_quality": "A+",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "NEXOUSDT",
+      "score": 45,
+      "price": 0.723,
+      "rsi_2m": 52.37,
+      "rsi_5m": 52.37,
+      "rsi_15m": 52.37,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.37,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "IDUSDT",
+      "score": 45,
+      "price": 0.0292,
+      "rsi_2m": 52.65,
+      "rsi_5m": 52.65,
+      "rsi_15m": 52.65,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 1.16,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "PROMUSDT",
+      "score": 40,
+      "price": 2.236,
+      "rsi_2m": 21.83,
+      "rsi_5m": 21.83,
+      "rsi_15m": 21.83,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.7,
+      "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
   ]
