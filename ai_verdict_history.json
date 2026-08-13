@@ -1398,5 +1398,145 @@
         "macro_trend": "NEUTRAL"
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-13 11:46:42",
+    "selected_symbol": "NONE",
+    "action": "HOLD",
+    "approved": false,
+    "confidence": 0,
+    "reasoning": "El comité ha determinado que no existe ningún activo que cumpla con el umbral mínimo de seguridad (Score >= 55) y las condiciones de mercado actuales. La alta volatilidad y la falta de convicción técnica exigen mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+    "top_candidates": [
+      {
+        "symbol": "GOOGLBUSDT",
+        "score": 60,
+        "price": 346.4,
+        "rsi_2m": 56.51,
+        "rsi_5m": 56.51,
+        "rsi_15m": 56.51,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.0,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "HOMEUSDT",
+        "score": 50,
+        "price": 0.01111,
+        "rsi_2m": 58.23,
+        "rsi_5m": 58.23,
+        "rsi_15m": 58.23,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.03,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "KAITOUSDT",
+        "score": 50,
+        "price": 0.4606,
+        "rsi_2m": 55.97,
+        "rsi_5m": 55.97,
+        "rsi_15m": 55.97,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.01,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "MMTUSDT",
+        "score": 50,
+        "price": 0.1698,
+        "rsi_2m": 49.72,
+        "rsi_5m": 49.72,
+        "rsi_15m": 49.72,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.14,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "DEXEUSDT",
+        "score": 50,
+        "price": 2.008,
+        "rsi_2m": 52.96,
+        "rsi_5m": 52.96,
+        "rsi_15m": 52.96,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.02,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ATUSDT",
+        "score": 50,
+        "price": 0.1521,
+        "rsi_2m": 52.01,
+        "rsi_5m": 52.01,
+        "rsi_15m": 52.01,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.01,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "HOLOUSDT",
+        "score": 50,
+        "price": 0.0709,
+        "rsi_2m": 51.77,
+        "rsi_5m": 51.77,
+        "rsi_15m": 51.77,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.01,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "AXTIBUSDT",
+        "score": 50,
+        "price": 78.98,
+        "rsi_2m": 59.47,
+        "rsi_5m": 59.47,
+        "rsi_15m": 59.47,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.0,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "EULUSDT",
+        "score": 50,
+        "price": 1.157,
+        "rsi_2m": 58.61,
+        "rsi_5m": 58.61,
+        "rsi_15m": 58.61,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.96,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "MOVRUSDT",
+        "score": 50,
+        "price": 0.843,
+        "rsi_2m": 59.76,
+        "rsi_5m": 59.76,
+        "rsi_15m": 59.76,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.17,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      }
+    ]
   }
 ]
