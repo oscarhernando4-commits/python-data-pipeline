@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3367,
+    "total_trades": 3370,
     "wins": 598,
-    "losses": 2769,
-    "win_rate_pct": 17.76,
-    "total_pnl_usd": 101156.5598954549
+    "losses": 2772,
+    "win_rate_pct": 17.74,
+    "total_pnl_usd": 101156.37989545491
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-11 23:06:41",
-      "account_id": "SIM-088",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "COOKIEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.013,
-      "exit_price": 0.0124,
-      "pnl_usd": 0.84,
-      "result": "WIN",
-      "notes": "Win on COOKIEUSDT (+$0.84 net) -> Level 5 Re-Trading Started!",
-      "context": {
-        "score": 40,
-        "rsi_15m": 31.73,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 23:12:37",
-      "account_id": "SIM-076",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "0GUSDT",
-      "side": "SHORT",
-      "entry_price": 0.159,
-      "exit_price": 0.159,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on 0GUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 45.49,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 23:24:41",
-      "account_id": "SIM-034",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "BMTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.02409,
-      "exit_price": 0.02402,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on BMTUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 65.33,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-11 23:24:41",
       "account_id": "SIM-035",
@@ -8296,6 +8245,45 @@
         "rsi_15m": 59.3,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-13 09:22:56",
+      "account_id": "SIM-021",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "PENDLEUSDT",
+      "side": "SHORT",
+      "entry_price": 1.358,
+      "exit_price": 1.358,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on PENDLEUSDT (-$0.06). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-13 09:22:57",
+      "account_id": "SIM-022",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "PENDLEUSDT",
+      "side": "SHORT",
+      "entry_price": 1.358,
+      "exit_price": 1.358,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on PENDLEUSDT (-$0.06). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-13 09:22:57",
+      "account_id": "SIM-023",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "PENDLEUSDT",
+      "side": "SHORT",
+      "entry_price": 1.358,
+      "exit_price": 1.358,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on PENDLEUSDT (-$0.06). Re-Trading!",
+      "context": {}
     }
   ]
 }
