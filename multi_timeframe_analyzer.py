@@ -258,6 +258,51 @@ def analyze_multi_timeframe_candles(symbol):
     is_oversold_bounce_candidate = (pct_b <= 0.25 or rsi_2m <= 35.0 or rsi_5m <= 38.0)
     is_overbought_exhaustion = (pct_b >= 0.85 or rsi_2m >= 68.0 or dist_from_15m_ma7_pct > 3.0)
 
+    # ========================================================================
+    # 🚀 PRE-PUMP MOMENTUM ANTICIPATOR (Identifies next EDEN +38%, SCRT +30%)
+    # Pattern: Volume Acceleration + Bollinger Squeeze Expansion + MA7 > MA25
+    # ========================================================================
+    vol_acceleration = 1.0
+    bb_squeeze_ratio = 1.0
+    if len(vols_15m) >= 20:
+        avg_vol_early = sum(vols_15m[:10]) / 10.0
+        avg_vol_late = sum(vols_15m[-10:]) / 10.0
+        vol_acceleration = round(avg_vol_late / avg_vol_early, 2) if avg_vol_early > 0 else 1.0
+    if len(closes_15m) >= 20:
+        std_early = float(np.std(closes_15m[:10])) if len(closes_15m) >= 10 else 0.001
+        std_late = float(np.std(closes_15m[-10:]))
+        bb_squeeze_ratio = round(std_late / std_early, 2) if std_early > 0 else 1.0
+
+    # Pre-Pump Signal: Volume accelerating + volatility expanding + MA7 crossing above MA25
+    is_pre_pump_signal = (
+        vol_acceleration >= 2.0 and        # Volume doubled or more (accumulation)
+        bb_squeeze_ratio >= 1.5 and         # Volatility expanding (breakout)
+        ma7_15m >= ma25_15m and             # MA7 above MA25 (bullish structure)
+        (tf_2m_up or tf_5m_up) and          # Micro-trend confirming upward
+        rsi_15m < 75.0                      # Not yet overbought (room to run)
+    )
+
+    # ========================================================================
+    # ⛔ ENHANCED FALLING KNIFE GUARD (Avoids TUT -47%, BICO -19%, ENSO -15%)
+    # Pattern: MA7 < MA25 + Price in bottom 25% of range + High volume selling
+    # ========================================================================
+    price_position_in_range = 50.0
+    if d_highs and d_lows:
+        h24 = max(d_highs)
+        l24 = min(d_lows)
+        rng = h24 - l24
+        price_position_in_range = round(((closes_15m[-1] - l24) / rng) * 100.0, 1) if rng > 0 else 50.0
+
+    # 24h price change approximation
+    price_change_24h_pct = round(((closes_15m[-1] - d_closes[0]) / d_closes[0]) * 100.0, 2) if (d_closes and d_closes[0] > 0) else 0.0
+
+    is_falling_knife = (
+        ma7_15m < ma25_15m and                  # MA7 below MA25 (bearish structure)
+        price_position_in_range < 25.0 and      # Price crushed to bottom of range
+        price_change_24h_pct < -8.0 and          # Dropped >8% in 24h
+        (not tf_1h_up) and (not tf_4h_up)        # 1h and 4h confirm bearish
+    )
+
     # Detect RSI Bullish Divergence (Price Lower Low + RSI Higher Low = Early Floor Reversal)
     is_bullish_divergence = False
     if len(closes_15m) >= 10:
@@ -320,7 +365,7 @@ def analyze_multi_timeframe_candles(symbol):
         st_lower_4h = hl2_4h - (3.0 * atr_4h_10)
         is_supertrend_4h_bullish = closes_4h[-1] > st_lower_4h
 
-    # Multi-Timeframe Alignment Score (0 to 100) including MACD, GBM, SuperTrend & Yellow Arrow
+    # Multi-Timeframe Alignment Score (0 to 100) including MACD, GBM, Pre-Pump, SuperTrend & Yellow Arrow
     score_components = [
         tf_2m_up * 10,
         tf_5m_up * 20,
@@ -337,13 +382,16 @@ def analyze_multi_timeframe_candles(symbol):
         15 if is_supertrend_4h_bullish else 0,
         15 if (is_yellow_arrow_1h or is_yellow_arrow_4h) else 0,
         10 if is_macd_bullish_cross else 0,
-        20 if is_crash_rebound else 0
+        20 if is_crash_rebound else 0,
+        25 if is_pre_pump_signal else 0
     ]
     multi_tf_score = min(100, sum(score_components))
     
     if is_ma25_below_ma99_downward:
         multi_tf_score = 0
     if is_active_dump:
+        multi_tf_score = 0
+    if is_falling_knife:
         multi_tf_score = 0
     
     # 4. Detect 15m Candle Over-extension / Parabolic Spike (Prevents buying tops like ZRO, ATOM)
