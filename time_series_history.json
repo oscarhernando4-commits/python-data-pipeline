@@ -1,12 +1,51 @@
 {
-  "EWYBUSDT": [
+  "ATMUSDT": [
     {
-      "timestamp": "2026-08-13 00:14:10",
-      "price": 178.37,
-      "score": 50,
-      "rsi": 74.34,
+      "timestamp": "2026-08-13 00:16:10",
+      "price": 1.55,
+      "score": 15,
+      "rsi": 49.98,
       "macd": "Neutral",
-      "volume_surge": 130.43,
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SAGAUSDT": [
+    {
+      "timestamp": "2026-08-13 00:16:10",
+      "price": 0.01426,
+      "score": 15,
+      "rsi": 49.54,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ZBTUSDT": [
+    {
+      "timestamp": "2026-08-13 00:16:10",
+      "price": 0.0904,
+      "score": 30,
+      "rsi": 49.55,
+      "macd": "Neutral",
+      "volume_surge": 0.06,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ASTERUSDT": [
+    {
+      "timestamp": "2026-08-13 00:16:11",
+      "price": 0.603,
+      "score": 65,
+      "rsi": 52.82,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
