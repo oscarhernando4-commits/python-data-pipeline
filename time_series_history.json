@@ -1,16 +1,41 @@
 {
-  "PNUTUSDT": [
+  "FFUSDT": [
     {
-      "timestamp": "2026-08-13 23:12:10",
-      "price": 0.0417,
-      "score": 15,
-      "rsi": 40.49,
+      "timestamp": "2026-08-13 23:14:11",
+      "price": 0.06484,
+      "score": 50,
+      "rsi": 49.39,
       "macd": "Neutral",
-      "volume_surge": 0.71,
+      "volume_surge": 0.84,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "KITEUSDT": [
+    {
+      "timestamp": "2026-08-13 23:14:11",
+      "price": 0.1001,
+      "score": 15,
+      "rsi": 43.38,
+      "macd": "Neutral",
+      "volume_surge": 1.14,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ZROUSDT": [
+    {
+      "timestamp": "2026-08-13 23:14:11",
+      "price": 0.797,
+      "score": 45,
+      "rsi": 37.32,
+      "macd": "Neutral",
+      "volume_surge": 2.25,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}}
 }
