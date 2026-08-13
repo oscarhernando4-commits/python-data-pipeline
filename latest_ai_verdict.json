@@ -46,6 +46,19 @@
       "macro_trend": "NEUTRAL"
     },
     {
+      "symbol": "ENAUSDT",
+      "score": 75,
+      "price": 0.0859,
+      "rsi_2m": 62.43,
+      "rsi_5m": 62.43,
+      "rsi_15m": 62.43,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 2.72,
+      "trade_quality": "B",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "ONDOUSDT",
       "score": 75,
       "price": 0.3357,
@@ -98,7 +111,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "BOMEUSDT",
+      "symbol": "INJUSDT",
       "score": 75,
       "price": 0.0007398,
       "rsi_2m": 46.09,
@@ -132,59 +145,7 @@
       "rsi_15m": 24.12,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.48,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "NEARUSDT",
-      "score": 65,
-      "price": 1.638,
-      "rsi_2m": 53.02,
-      "rsi_5m": 53.02,
-      "rsi_15m": 53.02,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.62,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "PUMPUSDT",
-      "score": 65,
-      "price": 0.5796,
-      "rsi_2m": 60.51,
-      "rsi_5m": 60.51,
-      "rsi_15m": 60.51,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.24,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "GPSUSDT",
-      "score": 65,
-      "price": 0.01089,
-      "rsi_2m": 61.77,
-      "rsi_5m": 61.77,
-      "rsi_15m": 61.77,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.6,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "NBISBUSDT",
-      "score": 65,
-      "price": 259.03,
-      "rsi_2m": 61.04,
-      "rsi_5m": 61.04,
-      "rsi_15m": 61.04,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.01,
+      "vol_surge": 0.51,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
