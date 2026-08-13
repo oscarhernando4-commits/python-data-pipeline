@@ -1,12 +1,25 @@
 {
-  "CFXUSDT": [
+  "EULUSDT": [
     {
-      "timestamp": "2026-08-13 13:50:11",
-      "price": 0.04135,
-      "score": 35,
-      "rsi": 50.95,
+      "timestamp": "2026-08-13 13:52:10",
+      "price": 1.141,
+      "score": 50,
+      "rsi": 52.04,
       "macd": "Neutral",
-      "volume_surge": 0.66,
+      "volume_surge": 0.49,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "IMXUSDT": [
+    {
+      "timestamp": "2026-08-13 13:52:10",
+      "price": 0.1095,
+      "score": 15,
+      "rsi": 42.69,
+      "macd": "Neutral",
+      "volume_surge": 0.09,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
