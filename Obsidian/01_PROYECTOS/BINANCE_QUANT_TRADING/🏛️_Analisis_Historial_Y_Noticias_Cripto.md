@@ -2425,3 +2425,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-33.22%)`, `2025-09-25 (-27.96%)`, `2025-09-29 (-23.97%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: NOTUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2024-05-15` hasta `2026-08-12` (820 Días de Historial)
+- 💵 **Precio Actual:** `$0.0004 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.0370 USD` (`2024-05-15`) | Distancia: `-98.96%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0002 USD` (`2025-10-09`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-05-15 (+878.05%)`, `2024-05-26 (+59.01%)`, `2024-06-01 (+42.76%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-41.37%)`, `2024-12-08 (-23.19%)`, `2025-02-01 (-21.16%)`
+
+---
