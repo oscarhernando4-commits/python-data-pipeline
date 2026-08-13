@@ -1398,5 +1398,145 @@
         "macro_trend": "NEUTRAL"
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-13 10:54:48",
+    "selected_symbol": "NONE",
+    "action": "HOLD",
+    "approved": false,
+    "confidence": 0,
+    "reasoning": "El mercado se encuentra en una fase de distribución persistente con una correlación bajista extrema. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la estrategia óptima es la preservación total del capital mediante el mantenimiento de la liquidez en USDT.",
+    "top_candidates": [
+      {
+        "symbol": "ZAMAUSDT",
+        "score": 60,
+        "price": 0.04754,
+        "rsi_2m": 53.97,
+        "rsi_5m": 53.97,
+        "rsi_15m": 53.97,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.29,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "IDUSDT",
+        "score": 60,
+        "price": 0.0292,
+        "rsi_2m": 53.29,
+        "rsi_5m": 53.29,
+        "rsi_15m": 53.29,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.08,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "COTIUSDT",
+        "score": 50,
+        "price": 0.01335,
+        "rsi_2m": 64.67,
+        "rsi_5m": 64.67,
+        "rsi_15m": 64.67,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.18,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "DODOUSDT",
+        "score": 50,
+        "price": 0.02265,
+        "rsi_2m": 51.2,
+        "rsi_5m": 51.2,
+        "rsi_15m": 51.2,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.19,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "JTOUSDT",
+        "score": 50,
+        "price": 0.5578,
+        "rsi_2m": 46.78,
+        "rsi_5m": 46.78,
+        "rsi_15m": 46.78,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.13,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "EDENUSDT",
+        "score": 50,
+        "price": 0.0494,
+        "rsi_2m": 67.63,
+        "rsi_5m": 67.63,
+        "rsi_15m": 67.63,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.28,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "TAOUSDT",
+        "score": 45,
+        "price": 201.0,
+        "rsi_2m": 53.55,
+        "rsi_5m": 53.55,
+        "rsi_15m": 53.55,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.04,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ONDOUSDT",
+        "score": 45,
+        "price": 0.3361,
+        "rsi_2m": 52.01,
+        "rsi_5m": 52.01,
+        "rsi_15m": 52.01,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.23,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "INJUSDT",
+        "score": 45,
+        "price": 4.635,
+        "rsi_2m": 59.28,
+        "rsi_5m": 59.28,
+        "rsi_15m": 59.28,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.28,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "TIAUSDT",
+        "score": 45,
+        "price": 0.311,
+        "rsi_2m": 52.96,
+        "rsi_5m": 52.96,
+        "rsi_15m": 52.96,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.14,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      }
+    ]
   }
 ]
