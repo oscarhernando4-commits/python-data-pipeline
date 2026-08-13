@@ -4,16 +4,16 @@
   "usdt_free": 0.1256,
   "bnb_free": 0.00369424,
   "bnb_usd": 2.24,
-  "status": "🔵 En Vivo LONG (GRAMUSDT @ $1.3300)",
+  "status": "🔵 En Vivo LONG (GRAMUSDT @ $1.3290)",
   "position": {
     "symbol": "GRAMUSDT",
     "quantity": 12.05,
     "entry_price": 1.352,
     "highest_price": 1.355,
-    "cost_usd": 16.03,
+    "cost_usd": 16.01,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 280,
+    "holding_cycles": 281,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -24,19 +24,6 @@
     "confidence": 0,
     "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de Score Técnico A+ (>= 55) ni con la confirmación de liquidez en el libro de órdenes. La alta volatilidad y el sentimiento de miedo en el mercado, sumado a la falta de datos de profundidad, obligan a mantener la posición en efectivo para evitar pérdidas innecesarias.",
     "top_candidates": [
-      {
-        "symbol": "QNTUSDT",
-        "score": 60,
-        "price": 58.43,
-        "rsi_2m": 57.77,
-        "rsi_5m": 57.77,
-        "rsi_15m": 57.77,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 1.1,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
       {
         "symbol": "IDUSDT",
         "score": 60,
@@ -64,20 +51,20 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "WLFIUSDT",
+        "symbol": "BMTUSDT",
         "score": 50,
-        "price": 0.055,
-        "rsi_2m": 53.68,
-        "rsi_5m": 53.68,
-        "rsi_15m": 53.68,
+        "price": 0.01669,
+        "rsi_2m": 47.89,
+        "rsi_5m": 47.89,
+        "rsi_15m": 47.89,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.0,
+        "vol_surge": 0.26,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "HOLOUSDT",
+        "symbol": "2ZUSDT",
         "score": 50,
         "price": 0.0713,
         "rsi_2m": 54.28,
