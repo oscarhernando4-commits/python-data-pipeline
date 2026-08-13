@@ -1,12 +1,25 @@
 {
-  "EULUSDT": [
+  "IMXUSDT": [
     {
-      "timestamp": "2026-08-13 14:42:10",
-      "price": 1.15,
+      "timestamp": "2026-08-13 14:44:09",
+      "price": 0.1104,
       "score": 65,
-      "rsi": 58.42,
+      "rsi": 62.36,
       "macd": "Neutral",
-      "volume_surge": 0.67,
+      "volume_surge": 0.1,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-13 14:44:09",
+      "price": 0.1245,
+      "score": 75,
+      "rsi": 65.81,
+      "macd": "Neutral",
+      "volume_surge": 1.22,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
