@@ -1,10 +1,10 @@
 {
-  "INTCBUSDT": [
+  "LDOUSDT": [
     {
-      "timestamp": "2026-08-13 21:02:09",
-      "price": 105.21,
-      "score": 30,
-      "rsi": 55.38,
+      "timestamp": "2026-08-13 21:04:08",
+      "price": 0.2975,
+      "score": 60,
+      "rsi": 58.38,
       "macd": "Neutral",
       "volume_surge": 0.0,
       "wyckoff": "Sin patron",
@@ -12,7 +12,7 @@
       "fear_greed": 50
     }
   ],
-  "IMXUSDT": [
+  "BONKUSDT": [
     {
       "timestamp": "2026-08-13 16:02:21",
       "price": 0.1092,
@@ -33,6 +33,32 @@
       "rsi": 67.08,
       "macd": "Neutral",
       "volume_surge": 0.07,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "IMXUSDT": [
+    {
+      "timestamp": "2026-08-13 21:04:09",
+      "price": 0.1092,
+      "score": 30,
+      "rsi": 47.07,
+      "macd": "Neutral",
+      "volume_surge": 0.64,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CFXUSDT": [
+    {
+      "timestamp": "2026-08-13 21:04:09",
+      "price": 0.04158,
+      "score": 40,
+      "rsi": 71.89,
+      "macd": "Neutral",
+      "volume_surge": 0.79,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
