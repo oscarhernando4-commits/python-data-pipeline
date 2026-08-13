@@ -1,15 +1,41 @@
 {
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-13 03:46:11",
+      "price": 0.0861,
+      "score": 65,
+      "rsi": 49.72,
+      "macd": "Neutral",
+      "volume_surge": 0.08,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GNOUSDT": [
+    {
+      "timestamp": "2026-08-13 03:46:11",
+      "price": 103.85,
+      "score": 65,
+      "rsi": 53.76,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
   "TIAUSDT": [
     {
-      "timestamp": "2026-08-13 03:44:12",
-      "price": 0.3073,
-      "score": 50,
-      "rsi": 58.32,
+      "timestamp": "2026-08-13 03:46:11",
+      "price": 0.3072,
+      "score": 60,
+      "rsi": 57.71,
       "macd": "Neutral",
-      "volume_surge": 0.29,
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}}
+}
