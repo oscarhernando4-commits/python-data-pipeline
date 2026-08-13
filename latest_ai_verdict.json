@@ -7,28 +7,15 @@
   "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral mínimo de Score Técnico (>= 55) ni con la dominancia de Bids necesaria para garantizar una entrada segura. El mercado presenta una alta volatilidad y una estructura de órdenes neutral, lo que aumenta el riesgo de 'falling knives'. Por lo tanto, el comité decide mantener la liquidez en USDT para preservar el capital hasta que surja una configuración A+.",
   "top_candidates": [
     {
-      "symbol": "TUTUSDT",
-      "score": 70,
-      "price": 0.0413,
-      "rsi_2m": 30.98,
-      "rsi_5m": 30.98,
-      "rsi_15m": 30.98,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.4,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
       "symbol": "GOOGLBUSDT",
       "score": 60,
-      "price": 346.64,
-      "rsi_2m": 56.85,
-      "rsi_5m": 56.85,
-      "rsi_15m": 56.85,
+      "price": 346.78,
+      "rsi_2m": 58.55,
+      "rsi_5m": 58.55,
+      "rsi_15m": 58.55,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.06,
+      "vol_surge": 0.0,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
