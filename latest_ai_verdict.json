@@ -7,6 +7,32 @@
   "reasoning": "El mercado se encuentra en una fase de indecisión defensiva con baja convicción institucional. Ninguno de los candidatos cumple con los criterios estrictos de riesgo y fuerza técnica exigidos por el comité para una ejecución segura, por lo que se prioriza la preservación del capital.",
   "top_candidates": [
     {
+      "symbol": "ARBUSDT",
+      "score": 75,
+      "price": 0.0754,
+      "rsi_2m": 58.45,
+      "rsi_5m": 58.45,
+      "rsi_15m": 58.45,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.16,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "DOTUSDT",
+      "score": 75,
+      "price": 0.774,
+      "rsi_2m": 55.55,
+      "rsi_5m": 55.55,
+      "rsi_15m": 55.55,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.22,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
       "symbol": "WLFIUSDT",
       "score": 75,
       "price": 0.0551,
@@ -48,10 +74,10 @@
     {
       "symbol": "GALAUSDT",
       "score": 75,
-      "price": 0.001676,
-      "rsi_2m": 56.24,
-      "rsi_5m": 56.24,
-      "rsi_15m": 56.24,
+      "price": 0.001675,
+      "rsi_2m": 54.99,
+      "rsi_5m": 54.99,
+      "rsi_15m": 54.99,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.47,
@@ -72,7 +98,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "ZECUSDT",
+      "symbol": "SUIUSDT",
       "score": 65,
       "price": 486.36,
       "rsi_2m": 47.7,
@@ -85,12 +111,12 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "SHIBUSDT",
+      "symbol": "ZECUSDT",
       "score": 65,
-      "price": 4.44e-06,
-      "rsi_2m": 50.56,
-      "rsi_5m": 50.56,
-      "rsi_15m": 50.56,
+      "price": 486.36,
+      "rsi_2m": 47.7,
+      "rsi_5m": 47.7,
+      "rsi_15m": 47.7,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.09,
@@ -132,7 +158,20 @@
       "rsi_15m": 53.63,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.13,
+      "vol_surge": 0.14,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "ADAUSDT",
+      "score": 65,
+      "price": 0.1823,
+      "rsi_2m": 51.06,
+      "rsi_5m": 51.06,
+      "rsi_15m": 51.06,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.19,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }

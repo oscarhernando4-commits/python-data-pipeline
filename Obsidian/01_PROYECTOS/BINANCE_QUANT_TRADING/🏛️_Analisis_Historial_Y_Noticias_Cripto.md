@@ -2438,3 +2438,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-41.37%)`, `2024-12-08 (-23.19%)`, `2025-02-01 (-21.16%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: MOVEUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2024-12-08` hasta `2026-08-12` (613 Días de Historial)
+- 💵 **Precio Actual:** `$0.0063 USD`
+- 📈 **Máximo Histórico (ATH):** `$1.4100 USD` (`2024-12-09`) | Distancia: `-99.55%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0060 USD` (`2026-08-11`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-12-08 (+3574.0%)`, `2024-12-19 (+42.62%)`, `2025-06-22 (+42.47%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-31.77%)`, `2025-04-30 (-24.2%)`, `2025-03-02 (-20.2%)`
+
+---
