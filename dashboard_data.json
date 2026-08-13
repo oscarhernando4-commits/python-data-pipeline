@@ -4,16 +4,16 @@
   "usdt_free": 0.0,
   "bnb_free": 0.00367447,
   "bnb_usd": 2.24,
-  "status": "🔵 En Vivo LONG (MORPHOUSDT @ $1.9500)",
+  "status": "🔵 En Vivo LONG (MORPHOUSDT @ $1.9540)",
   "position": {
     "symbol": "MORPHOUSDT",
     "quantity": 8.17,
     "entry_price": 1.957,
     "highest_price": 1.957,
-    "cost_usd": 15.93,
+    "cost_usd": 15.96,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 8,
+    "holding_cycles": 9,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -25,33 +25,20 @@
     "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
     "top_candidates": [
       {
-        "symbol": "TUTUSDT",
-        "score": 85,
-        "price": 0.04029,
-        "rsi_2m": 31.27,
-        "rsi_5m": 31.27,
-        "rsi_15m": 31.27,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.2,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
         "symbol": "PUMPUSDT",
         "score": 75,
-        "price": 8.817,
-        "rsi_2m": 60.74,
-        "rsi_5m": 60.74,
-        "rsi_15m": 60.74,
+        "price": 0.002864,
+        "rsi_2m": 56.65,
+        "rsi_5m": 56.65,
+        "rsi_15m": 56.65,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.2,
+        "vol_surge": 0.94,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "PUMPUSDT",
+        "symbol": "LINKUSDT",
         "score": 75,
         "price": 0.002866,
         "rsi_2m": 57.16,
@@ -163,7 +150,7 @@
         "rsi_15m": 58.27,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.09,
+        "vol_surge": 0.16,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
