@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3487,
-    "wins": 606,
+    "total_trades": 3489,
+    "wins": 608,
     "losses": 2881,
-    "win_rate_pct": 17.38,
-    "total_pnl_usd": 798694.1598954548
+    "win_rate_pct": 17.43,
+    "total_pnl_usd": 798696.2598954549
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,40 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 09:58:57",
-      "account_id": "SIM-091",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "PROMUSDT",
-      "side": "SHORT",
-      "entry_price": 3.453,
-      "exit_price": 3.45,
-      "pnl_usd": -0.05,
-      "result": "LOSS",
-      "notes": "Hit SL on PROMUSDT (-$0.05). Re-Trading!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 58.79,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 09:58:57",
-      "account_id": "SIM-095",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "PROMUSDT",
-      "side": "SHORT",
-      "entry_price": 3.453,
-      "exit_price": 3.45,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on PROMUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 58.79,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 10:04:48",
       "account_id": "SIM-089",
@@ -8246,6 +8212,40 @@
       "context": {
         "score": 35,
         "rsi_15m": 58.32,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 19:02:53",
+      "account_id": "SIM-085",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BANKUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0403,
+      "exit_price": 0.0379,
+      "pnl_usd": 1.05,
+      "result": "WIN",
+      "notes": "Win on BANKUSDT (+$1.05 net) -> Level 7 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 36.31,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 19:02:53",
+      "account_id": "SIM-086",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BANKUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0403,
+      "exit_price": 0.0379,
+      "pnl_usd": 1.05,
+      "result": "WIN",
+      "notes": "Win on BANKUSDT (+$1.05 net) -> Level 7 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 36.31,
         "macro_trend_4h": "NEUTRAL"
       }
     }
