@@ -1,21 +1,21 @@
 {
-  "timestamp": "2026-08-13 16:52:19",
+  "timestamp": "2026-08-13 16:54:30",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de estancamiento bajista con una fragilidad sistémica alta. Ninguno de los candidatos analizados alcanza el umbral de score técnico A+ (>= 55) ni presenta una estructura de libro de órdenes que mitigue el riesgo de slippage o caída libre. Se prioriza la preservación de capital evitando activos con historial insuficiente y scores mediocres.",
+  "reasoning": "El mercado se encuentra en un estado de distribución institucional agresiva con una correlación bajista extrema. Ninguno de los candidatos cumple con el umbral de convicción A+ (Score >= 55) ni con la profundidad de libro de órdenes necesaria para mitigar el riesgo de pérdida. Se prioriza la preservación del capital sobre la especulación en activos de baja liquidez.",
   "top_candidates": [
     {
       "symbol": "QNTUSDT",
       "score": 60,
-      "price": 58.46,
-      "rsi_2m": 58.45,
-      "rsi_5m": 58.45,
-      "rsi_15m": 58.45,
+      "price": 58.45,
+      "rsi_2m": 58.22,
+      "rsi_5m": 58.22,
+      "rsi_15m": 58.22,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.57,
+      "vol_surge": 0.6,
       "trade_quality": "B",
       "macro_trend": "NEUTRAL"
     },
