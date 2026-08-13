@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3405,
-    "wins": 601,
+    "total_trades": 3406,
+    "wins": 602,
     "losses": 2804,
-    "win_rate_pct": 17.65,
-    "total_pnl_usd": 101140.05989545488
+    "win_rate_pct": 17.67,
+    "total_pnl_usd": 101140.48989545487
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ZAMAUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MUUBUSDT)",
       "BOOST LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PEPEUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PEPEUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on XLMUSDT)",
@@ -49,23 +48,11 @@
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MSTRBUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on NBISBUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MUBARAKUSDT)",
-      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HOMEUSDT)"
+      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HOMEUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MSTRBUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 01:16:34",
-      "account_id": "SIM-058",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "CAKEUSDT",
-      "side": "LONG",
-      "entry_price": 1.45,
-      "exit_price": 1.45,
-      "pnl_usd": -0.09,
-      "result": "LOSS",
-      "notes": "Hit SL on CAKEUSDT (-$0.09). Re-Trading!",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-12 01:18:37",
       "account_id": "SIM-037",
@@ -8310,6 +8297,23 @@
       "context": {
         "score": 45,
         "rsi_15m": 49.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 15:26:19",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MSTRBUSDT",
+      "side": "SHORT",
+      "entry_price": 98.68,
+      "exit_price": 96.48,
+      "pnl_usd": 0.43,
+      "result": "WIN",
+      "notes": "Win on MSTRBUSDT (+$0.43 net) -> Level 12 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 50.87,
         "macro_trend_4h": "NEUTRAL"
       }
     }
