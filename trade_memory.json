@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3243,
+    "total_trades": 3246,
     "wins": 577,
-    "losses": 2666,
-    "win_rate_pct": 17.79,
-    "total_pnl_usd": 101162.15989545487
+    "losses": 2669,
+    "win_rate_pct": 17.78,
+    "total_pnl_usd": 101161.82989545487
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on FETUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on TIAUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on AXSUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on OPENUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on NILUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONEUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ALGOUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONEUSDT)"
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONEUSDT)",
+      "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NIGHTUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PYTHUSDT)",
@@ -53,45 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-11 18:00:25",
-      "account_id": "SIM-055",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ATMUSDT",
-      "side": "LONG",
-      "entry_price": 1.571,
-      "exit_price": 1.571,
-      "pnl_usd": -0.09,
-      "result": "LOSS",
-      "notes": "Hit SL on ATMUSDT (-$0.09). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-11 18:00:25",
-      "account_id": "SIM-059",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ATMUSDT",
-      "side": "LONG",
-      "entry_price": 1.571,
-      "exit_price": 1.571,
-      "pnl_usd": -0.08,
-      "result": "LOSS",
-      "notes": "Hit SL on ATMUSDT (-$0.08). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-11 13:20:41",
-      "account_id": "SIM-043",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "XLMUSDT",
-      "side": "LONG",
-      "entry_price": 0.1594,
-      "exit_price": 0.1594,
-      "pnl_usd": -0.13,
-      "result": "LOSS",
-      "notes": "Hit SL on XLMUSDT (-$0.13). Re-Trading!",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-11 13:20:41",
       "account_id": "SIM-045",
@@ -8230,6 +8191,57 @@
       "context": {
         "score": 40,
         "rsi_15m": 68.94,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 06:34:20",
+      "account_id": "SIM-041",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "NIGHTUSDT",
+      "side": "LONG",
+      "entry_price": 0.01801,
+      "exit_price": 0.01806,
+      "pnl_usd": -0.12,
+      "result": "LOSS",
+      "notes": "Hit SL on NIGHTUSDT (-$0.12). Re-Trading!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 61.74,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 06:34:20",
+      "account_id": "SIM-043",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "NIGHTUSDT",
+      "side": "LONG",
+      "entry_price": 0.01801,
+      "exit_price": 0.01806,
+      "pnl_usd": -0.13,
+      "result": "LOSS",
+      "notes": "Hit SL on NIGHTUSDT (-$0.13). Re-Trading!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 61.74,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 06:34:20",
+      "account_id": "SIM-044",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "NIGHTUSDT",
+      "side": "LONG",
+      "entry_price": 0.01801,
+      "exit_price": 0.01806,
+      "pnl_usd": -0.08,
+      "result": "LOSS",
+      "notes": "Hit SL on NIGHTUSDT (-$0.08). Re-Trading!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 61.74,
         "macro_trend_4h": "NEUTRAL"
       }
     }
