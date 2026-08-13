@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3380,
+    "total_trades": 3385,
     "wins": 599,
-    "losses": 2781,
-    "win_rate_pct": 17.72,
-    "total_pnl_usd": 101150.76989545491
+    "losses": 2786,
+    "win_rate_pct": 17.7,
+    "total_pnl_usd": 101149.2998954549
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,91 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 00:10:40",
-      "account_id": "SIM-099",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "KITEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.1044,
-      "exit_price": 0.1055,
-      "pnl_usd": -0.21,
-      "result": "LOSS",
-      "notes": "Hit SL on KITEUSDT (-$0.21). Re-Trading!",
-      "context": {
-        "score": 70,
-        "rsi_15m": 58.99,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 00:12:32",
-      "account_id": "SIM-073",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "HOLOUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0815,
-      "exit_price": 0.0854,
-      "pnl_usd": -1.0,
-      "result": "LOSS",
-      "notes": "Hit SL on HOLOUSDT (-$1.00). Re-Trading!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 56.93,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 00:12:32",
-      "account_id": "SIM-074",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "HOLOUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0815,
-      "exit_price": 0.0854,
-      "pnl_usd": -0.44,
-      "result": "LOSS",
-      "notes": "Hit SL on HOLOUSDT (-$0.44). Re-Trading!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 56.93,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 00:12:32",
-      "account_id": "SIM-075",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "HOLOUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0815,
-      "exit_price": 0.0854,
-      "pnl_usd": -0.44,
-      "result": "LOSS",
-      "notes": "Hit SL on HOLOUSDT (-$0.44). Re-Trading!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 56.93,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 00:14:33",
-      "account_id": "SIM-037",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "HEIUSDT",
-      "side": "SHORT",
-      "entry_price": 0.2777,
-      "exit_price": 0.1365,
-      "pnl_usd": 10.0,
-      "result": "WIN",
-      "notes": "Win on HEIUSDT (+$10.00 net) -> Level 7 Re-Trading Started!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 17.58,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 00:22:41",
       "account_id": "SIM-000 (Réplica Real)",
@@ -8294,6 +8209,91 @@
       "context": {
         "score": 40,
         "rsi_15m": 75.24,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 09:34:51",
+      "account_id": "SIM-021",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "NBISBUSDT",
+      "side": "SHORT",
+      "entry_price": 270.5,
+      "exit_price": 274.75,
+      "pnl_usd": -0.33,
+      "result": "LOSS",
+      "notes": "Hit SL on NBISBUSDT (-$0.33). Re-Trading!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 78.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 09:34:51",
+      "account_id": "SIM-022",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "NBISBUSDT",
+      "side": "SHORT",
+      "entry_price": 270.4,
+      "exit_price": 274.75,
+      "pnl_usd": -0.33,
+      "result": "LOSS",
+      "notes": "Hit SL on NBISBUSDT (-$0.33). Re-Trading!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 78.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 09:34:51",
+      "account_id": "SIM-023",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "NBISBUSDT",
+      "side": "SHORT",
+      "entry_price": 270.5,
+      "exit_price": 274.75,
+      "pnl_usd": -0.33,
+      "result": "LOSS",
+      "notes": "Hit SL on NBISBUSDT (-$0.33). Re-Trading!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 78.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 09:34:51",
+      "account_id": "SIM-075",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "PYTHUSDT",
+      "side": "SHORT",
+      "entry_price": 0.03997,
+      "exit_price": 0.04062,
+      "pnl_usd": -0.16,
+      "result": "LOSS",
+      "notes": "Hit SL on PYTHUSDT (-$0.16). Re-Trading!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 68.75,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 09:34:51",
+      "account_id": "SIM-099",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "PYTHUSDT",
+      "side": "SHORT",
+      "entry_price": 0.03997,
+      "exit_price": 0.04062,
+      "pnl_usd": -0.32,
+      "result": "LOSS",
+      "notes": "Hit SL on PYTHUSDT (-$0.32). Re-Trading!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 68.75,
         "macro_trend_4h": "NEUTRAL"
       }
     }
