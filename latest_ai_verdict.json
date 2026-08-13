@@ -1,11 +1,24 @@
 {
-  "timestamp": "2026-08-13 16:50:20",
+  "timestamp": "2026-08-13 16:52:19",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con una correlación bajista sistémica. Ningún activo candidato alcanza el umbral de calidad A+ (Score >= 55) requerido por el comité, y la falta de profundidad en el libro de órdenes junto con la inestabilidad macroeconómica hace que la única decisión prudente sea mantener la liquidez en USDT para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en un estado de estancamiento bajista con una fragilidad sistémica alta. Ninguno de los candidatos analizados alcanza el umbral de score técnico A+ (>= 55) ni presenta una estructura de libro de órdenes que mitigue el riesgo de slippage o caída libre. Se prioriza la preservación de capital evitando activos con historial insuficiente y scores mediocres.",
   "top_candidates": [
+    {
+      "symbol": "QNTUSDT",
+      "score": 60,
+      "price": 58.46,
+      "rsi_2m": 58.45,
+      "rsi_5m": 58.45,
+      "rsi_15m": 58.45,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.57,
+      "trade_quality": "B",
+      "macro_trend": "NEUTRAL"
+    },
     {
       "symbol": "GOOGLBUSDT",
       "score": 60,
@@ -59,7 +72,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "HOLOUSDT",
+      "symbol": "2ZUSDT",
       "score": 50,
       "price": 0.0715,
       "rsi_2m": 55.25,
