@@ -1,37 +1,11 @@
 {
-  "timestamp": "2026-08-13 22:38:27",
+  "timestamp": "2026-08-13 22:40:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Tras la deliberación unánime, se ha determinado que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos por el comité. La falta de datos precisos en el libro de órdenes (HTTP Error 451) y la alta volatilidad en los activos analizados presentan un riesgo inaceptable para el capital institucional, por lo que se mantiene la posición en efectivo (HOLD).",
+  "reasoning": "El comité ha deliberado y, tras evaluar los perfiles de los candidatos, ha determinado que ninguno cumple con los criterios estrictos de convicción A+ y soporte de liquidez necesarios para garantizar la protección del capital, optando por una postura de espera (HOLD) para evitar el riesgo de 'falling knives' en un mercado con alta volatilidad.",
   "top_candidates": [
-    {
-      "symbol": "SUIUSDT",
-      "score": 75,
-      "price": 0.6897,
-      "rsi_2m": 60.46,
-      "rsi_5m": 60.46,
-      "rsi_15m": 60.46,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.32,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "ARBUSDT",
-      "score": 75,
-      "price": 0.0757,
-      "rsi_2m": 60.58,
-      "rsi_5m": 60.58,
-      "rsi_15m": 60.58,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 3.76,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
     {
       "symbol": "FILUSDT",
       "score": 75,
@@ -41,7 +15,7 @@
       "rsi_15m": 63.66,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.38,
+      "vol_surge": 0.39,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -119,12 +93,12 @@
       "rsi_15m": 27.76,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.98,
+      "vol_surge": 1.25,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "ENSOUSDT",
+      "symbol": "ARBUSDT",
       "score": 70,
       "price": 0.0756,
       "rsi_2m": 58.18,
@@ -132,7 +106,7 @@
       "rsi_15m": 58.18,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 3.15,
+      "vol_surge": 4.28,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
