@@ -14,12 +14,25 @@
   ],
   "SYNUSDT": [
     {
-      "timestamp": "2026-08-13 19:06:09",
-      "price": 0.10579,
-      "score": 35,
-      "rsi": 56.42,
+      "timestamp": "2026-08-13 19:08:11",
+      "price": 0.10555,
+      "score": 50,
+      "rsi": 55.07,
       "macd": "Neutral",
-      "volume_surge": 0.71,
+      "volume_surge": 0.75,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PNUTUSDT": [
+    {
+      "timestamp": "2026-08-13 19:08:11",
+      "price": 0.0421,
+      "score": 15,
+      "rsi": 46.19,
+      "macd": "Neutral",
+      "volume_surge": 0.43,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
