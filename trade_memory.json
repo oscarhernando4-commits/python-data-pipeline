@@ -1,15 +1,13 @@
 {
   "stats": {
-    "total_trades": 3178,
+    "total_trades": 3180,
     "wins": 560,
-    "losses": 2618,
-    "win_rate_pct": 17.62,
-    "total_pnl_usd": 101161.149895455
+    "losses": 2620,
+    "win_rate_pct": 17.61,
+    "total_pnl_usd": 101160.769895455
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ENAUSDT)",
-      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ARBUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on WLDUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on VETUSDT)",
@@ -27,7 +25,9 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on EPICUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on LSKUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on TRBUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on FETUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on FETUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on TIAUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on AXSUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HEIUSDT)",
@@ -53,36 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-11 16:08:26",
-      "account_id": "SIM-041",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "FILUSDT",
-      "side": "LONG",
-      "entry_price": 0.6898,
-      "exit_price": 0.6898,
-      "pnl_usd": -0.12,
-      "result": "LOSS",
-      "notes": "Hit SL on FILUSDT (-$0.12). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-11 16:10:21",
-      "account_id": "SIM-064",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "AUDIOUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01246,
-      "exit_price": 0.01243,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on AUDIOUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 36.82,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-11 16:12:26",
       "account_id": "SIM-039",
@@ -8182,6 +8152,40 @@
       "context": {
         "score": 50,
         "rsi_15m": 69.96,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 00:10:23",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "TIAUSDT",
+      "side": "SHORT",
+      "entry_price": 0.3027,
+      "exit_price": 0.3056,
+      "pnl_usd": -0.19,
+      "result": "LOSS",
+      "notes": "Hit SL on TIAUSDT (-$0.19). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 55.32,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 00:10:23",
+      "account_id": "SIM-099",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "AXSUSDT",
+      "side": "SHORT",
+      "entry_price": 0.857,
+      "exit_price": 0.865,
+      "pnl_usd": -0.19,
+      "result": "LOSS",
+      "notes": "Hit SL on AXSUSDT (-$0.19). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 53.92,
         "macro_trend_4h": "NEUTRAL"
       }
     }
