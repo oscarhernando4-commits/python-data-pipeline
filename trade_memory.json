@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3431,
+    "total_trades": 3433,
     "wins": 605,
-    "losses": 2826,
-    "win_rate_pct": 17.63,
-    "total_pnl_usd": 99980.18989545488
+    "losses": 2828,
+    "win_rate_pct": 17.62,
+    "total_pnl_usd": 99979.68989545488
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,40 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 05:28:26",
-      "account_id": "SIM-089",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "LSKUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0864,
-      "exit_price": 0.0799,
-      "pnl_usd": 1.37,
-      "result": "WIN",
-      "notes": "Win on LSKUSDT (+$1.37 net) -> Level 4 Re-Trading Started!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 35.31,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 06:34:17",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "FILUSDT",
-      "side": "SHORT",
-      "entry_price": 0.7157,
-      "exit_price": 0.7013,
-      "pnl_usd": 0.38,
-      "result": "WIN",
-      "notes": "Win on FILUSDT (+$0.38 net) -> Level 9 Re-Trading Started!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 23.9,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 06:38:21",
       "account_id": "SIM-045",
@@ -8282,6 +8248,40 @@
       "context": {
         "score": 0,
         "rsi_15m": 40.95,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 11:17:01",
+      "account_id": "SIM-080",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.3321,
+      "exit_price": 0.3363,
+      "pnl_usd": -0.26,
+      "result": "LOSS",
+      "notes": "Hit SL on EPICUSDT (-$0.26). Re-Trading!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 49.6,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 11:17:01",
+      "account_id": "SIM-089",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EPICUSDT",
+      "side": "SHORT",
+      "entry_price": 0.3323,
+      "exit_price": 0.3363,
+      "pnl_usd": -0.24,
+      "result": "LOSS",
+      "notes": "Hit SL on EPICUSDT (-$0.24). Re-Trading!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 49.6,
         "macro_trend_4h": "NEUTRAL"
       }
     }
