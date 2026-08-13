@@ -2360,3 +2360,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2026-05-18 (-32.07%)`, `2025-12-01 (-22.85%)`, `2026-06-13 (-15.01%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: GPSUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-03-04` hasta `2026-08-13` (528 Días de Historial)
+- 💵 **Precio Actual:** `$0.0111 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.1510 USD` (`2025-03-04`) | Distancia: `-92.65%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0044 USD` (`2025-12-18`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-02-09 (+44.59%)`, `2025-09-07 (+41.35%)`, `2025-11-21 (+34.23%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-37.99%)`, `2025-03-04 (-35.11%)`, `2026-02-24 (-25.64%)`
+
+---
