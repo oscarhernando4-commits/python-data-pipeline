@@ -1398,5 +1398,145 @@
         "macro_trend": "NEUTRAL"
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-13 10:57:12",
+    "selected_symbol": "NONE",
+    "action": "HOLD",
+    "approved": false,
+    "confidence": 0,
+    "reasoning": "El mercado carece de la estructura de soporte y el volumen institucional necesario para una entrada segura. Ningún activo cumple con el umbral de calidad A+ (Score >= 55) exigido por el comité, por lo que la estrategia óptima es mantener la liquidez en USDT y evitar la exposición a activos de baja fuerza relativa.",
+    "top_candidates": [
+      {
+        "symbol": "ZAMAUSDT",
+        "score": 60,
+        "price": 0.04761,
+        "rsi_2m": 55.51,
+        "rsi_5m": 55.51,
+        "rsi_15m": 55.51,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.47,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "EDENUSDT",
+        "score": 60,
+        "price": 0.04928,
+        "rsi_2m": 66.67,
+        "rsi_5m": 66.67,
+        "rsi_15m": 66.67,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.57,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "CRVUSDT",
+        "score": 50,
+        "price": 0.2547,
+        "rsi_2m": 52.11,
+        "rsi_5m": 52.11,
+        "rsi_15m": 52.11,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.1,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "BOMEUSDT",
+        "score": 50,
+        "price": 0.0007751,
+        "rsi_2m": 49.76,
+        "rsi_5m": 49.76,
+        "rsi_15m": 49.76,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.68,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "EULUSDT",
+        "score": 50,
+        "price": 1.157,
+        "rsi_2m": 62.9,
+        "rsi_5m": 62.9,
+        "rsi_15m": 62.9,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.6,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ONDOUSDT",
+        "score": 45,
+        "price": 0.3361,
+        "rsi_2m": 52.01,
+        "rsi_5m": 52.01,
+        "rsi_15m": 52.01,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.27,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "RENDERUSDT",
+        "score": 45,
+        "price": 1.271,
+        "rsi_2m": 52.48,
+        "rsi_5m": 52.48,
+        "rsi_15m": 52.48,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.43,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "TIAUSDT",
+        "score": 45,
+        "price": 0.311,
+        "rsi_2m": 52.96,
+        "rsi_5m": 52.96,
+        "rsi_15m": 52.96,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.14,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "LDOUSDT",
+        "score": 45,
+        "price": 0.2967,
+        "rsi_2m": 55.09,
+        "rsi_5m": 55.09,
+        "rsi_15m": 55.09,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.28,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "OPUSDT",
+        "score": 45,
+        "price": 0.0871,
+        "rsi_2m": 53.01,
+        "rsi_5m": 53.01,
+        "rsi_15m": 53.01,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.78,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      }
+    ]
   }
 ]
