@@ -13,7 +13,7 @@
     "cost_usd": 16.11,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 206,
+    "holding_cycles": 207,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -24,6 +24,19 @@
     "confidence": 0,
     "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a que, a pesar de tener activos con score técnico de 75, la falta de confirmación en el libro de órdenes y la alta volatilidad histórica en condiciones neutrales no cumplen con los estándares de seguridad A+ exigidos por el CRO.",
     "top_candidates": [
+      {
+        "symbol": "DOGEUSDT",
+        "score": 95,
+        "price": 0.07022,
+        "rsi_2m": 49.26,
+        "rsi_5m": 49.26,
+        "rsi_15m": 49.26,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.56,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
       {
         "symbol": "BTCUSDT",
         "score": 75,
