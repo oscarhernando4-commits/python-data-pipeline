@@ -25,7 +25,7 @@
       "fear_greed": 50
     }
   ],
-  "STXUSDT": [
+  "MOVEUSDT": [
     {
       "timestamp": "2026-08-13 17:02:07",
       "price": 0.1219,
@@ -64,14 +64,40 @@
       "fear_greed": 50
     }
   ],
-  "IMXUSDT": [
+  "GALAUSDT": [
     {
       "timestamp": "2026-08-13 17:02:08",
       "price": 0.1089,
       "score": 0,
-      "rsi": 37.3,
+      "rsi": 43.08,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.53,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STORJUSDT": [
+    {
+      "timestamp": "2026-08-13 12:02:23",
+      "price": 0.0447,
+      "score": 0,
+      "rsi": 54.28,
+      "macd": "Neutral",
+      "volume_surge": 0.26,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "KITEUSDT": [
+    {
+      "timestamp": "2026-08-13 12:02:23",
+      "price": 0.1001,
+      "score": 0,
+      "rsi": 36.86,
+      "macd": "Neutral",
+      "volume_surge": 0.09,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
