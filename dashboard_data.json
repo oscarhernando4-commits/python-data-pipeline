@@ -13,7 +13,7 @@
     "cost_usd": 15.98,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 61,
+    "holding_cycles": 62,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -40,14 +40,14 @@
       {
         "symbol": "DOTUSDT",
         "score": 75,
-        "price": 0.774,
-        "rsi_2m": 55.56,
-        "rsi_5m": 55.56,
-        "rsi_15m": 55.56,
+        "price": 203.0,
+        "rsi_2m": 60.61,
+        "rsi_5m": 60.61,
+        "rsi_15m": 60.61,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.72,
-        "trade_quality": "B",
+        "vol_surge": 0.21,
+        "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
       {
@@ -131,23 +131,10 @@
       {
         "symbol": "ADAUSDT",
         "score": 65,
-        "price": 0.1821,
-        "rsi_2m": 48.43,
-        "rsi_5m": 48.43,
-        "rsi_15m": 48.43,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.12,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "SUIUSDT",
-        "score": 65,
-        "price": 0.6866,
-        "rsi_2m": 49.92,
-        "rsi_5m": 49.92,
-        "rsi_15m": 49.92,
+        "price": 0.1823,
+        "rsi_2m": 50.89,
+        "rsi_5m": 50.89,
+        "rsi_15m": 50.89,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 0.18,
