@@ -1,12 +1,38 @@
 {
-  "CBRSBUSDT": [
+  "CHIPUSDT": [
     {
-      "timestamp": "2026-08-13 09:30:22",
-      "price": 234.37,
-      "score": 40,
-      "rsi": 70.69,
+      "timestamp": "2026-08-13 09:32:22",
+      "price": 0.0228,
+      "score": 15,
+      "rsi": 40.29,
       "macd": "Neutral",
       "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ZROUSDT": [
+    {
+      "timestamp": "2026-08-13 09:32:22",
+      "price": 0.829,
+      "score": 55,
+      "rsi": 53.72,
+      "macd": "Neutral",
+      "volume_surge": 2.64,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "AIXBTUSDT": [
+    {
+      "timestamp": "2026-08-13 09:32:23",
+      "price": 0.01818,
+      "score": 45,
+      "rsi": 44.83,
+      "macd": "Neutral",
+      "volume_surge": 0.2,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
