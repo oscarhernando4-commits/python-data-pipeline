@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3296,
-    "wins": 581,
+    "total_trades": 3299,
+    "wins": 584,
     "losses": 2715,
-    "win_rate_pct": 17.63,
-    "total_pnl_usd": 101148.66989545486
+    "win_rate_pct": 17.7,
+    "total_pnl_usd": 101154.53989545486
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ENAUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on FILUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on OPENUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PENGUUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BANKUSDT)",
@@ -49,57 +48,11 @@
       "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ONEUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ATMUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ATUSDT)",
-      "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ATUSDT)"
+      "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ATUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TSTUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-11 15:12:48",
-      "account_id": "SIM-029",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ETCUSDT",
-      "side": "LONG",
-      "entry_price": 6.29,
-      "exit_price": 6.29,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on ETCUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-11 15:12:49",
-      "account_id": "SIM-055",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "AXTIBUSDT",
-      "side": "LONG",
-      "entry_price": 74.12,
-      "exit_price": 76.02,
-      "pnl_usd": 0.7,
-      "result": "WIN",
-      "notes": "Win on AXTIBUSDT (+$0.70 net) -> Level 7 Re-Trading Started!",
-      "context": {
-        "score": 60,
-        "rsi_15m": 66.77,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-11 15:12:49",
-      "account_id": "SIM-056",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "AXTIBUSDT",
-      "side": "LONG",
-      "entry_price": 74.12,
-      "exit_price": 76.02,
-      "pnl_usd": 0.7,
-      "result": "WIN",
-      "notes": "Win on AXTIBUSDT (+$0.70 net) -> Level 5 Re-Trading Started!",
-      "context": {
-        "score": 60,
-        "rsi_15m": 66.77,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-11 15:12:49",
       "account_id": "SIM-057",
@@ -8290,6 +8243,57 @@
       "context": {
         "score": 25,
         "rsi_15m": 39.79,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 08:30:22",
+      "account_id": "SIM-072",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01719,
+      "exit_price": 0.01553,
+      "pnl_usd": 2.31,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$2.31 net) -> Level 13 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 47.26,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 08:30:22",
+      "account_id": "SIM-094",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01719,
+      "exit_price": 0.01553,
+      "pnl_usd": 1.78,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$1.78 net) -> Level 4 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 47.26,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 08:30:22",
+      "account_id": "SIM-095",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01719,
+      "exit_price": 0.01553,
+      "pnl_usd": 1.78,
+      "result": "WIN",
+      "notes": "Win on TSTUSDT (+$1.78 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 47.26,
         "macro_trend_4h": "NEUTRAL"
       }
     }
