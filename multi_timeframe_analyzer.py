@@ -1,13 +1,15 @@
 """
 Multi-Timeframe Historical Candle Analyzer & Anti-Stablecoin Filter Engine
-Inspects 5m, 15m, 1h, 4h, 1d, and 7d historical candle behavior.
+Inspects 2m, 5m, 15m, 1h, 4h, 1d historical candle behavior.
 Rejects stablecoins, dollar synthetics, flat assets, and unconfirmed trends.
+Includes: MACD(12,26,9), GBM Crash Detector, SuperTrend(10,3), Yellow Arrow MA7/MA25, VWAP.
 """
 
 import requests
 import math
 import numpy as np
 from datetime import datetime
+from quant_institutional import GBMAnomalyDetector
 
 # Comprehensive Blacklist of Stablecoins, Pegged Tokens, and Synthetic Dollars
 STABLECOIN_TICKERS = {
@@ -99,6 +101,36 @@ def calculate_rsi(closes, period=14):
         return 100.0
     rs = avg_gain / avg_loss
     return round(100.0 - (100.0 / (1.0 + rs)), 1)
+
+def _ema(closes, period):
+    """Calculates Exponential Moving Average (EMA) for MACD computation."""
+    if not closes or len(closes) < period:
+        return closes[-1] if closes else 0.0
+    multiplier = 2.0 / (period + 1.0)
+    ema_val = sum(closes[:period]) / period
+    for price in closes[period:]:
+        ema_val = (price - ema_val) * multiplier + ema_val
+    return ema_val
+
+def calculate_macd(closes, fast=12, slow=26, signal=9):
+    """Calculates MACD Line, Signal Line, and Histogram for a price series."""
+    if not closes or len(closes) < slow + signal:
+        return 0.0, 0.0, 0.0
+    ema_fast = _ema(closes, fast)
+    ema_slow = _ema(closes, slow)
+    macd_line = ema_fast - ema_slow
+    # Build MACD series for signal line
+    macd_series = []
+    for i in range(slow, len(closes) + 1):
+        ef = _ema(closes[:i], fast)
+        es = _ema(closes[:i], slow)
+        macd_series.append(ef - es)
+    signal_line = _ema(macd_series, signal) if len(macd_series) >= signal else macd_line
+    histogram = macd_line - signal_line
+    return round(macd_line, 6), round(signal_line, 6), round(histogram, 6)
+
+# Singleton GBM Crash Detector (Z-Score threshold 2.5)
+_gbm_detector = GBMAnomalyDetector(window=30, z_threshold=2.5)
 
 def _aggregate_1m_to_2m(klines_1m):
     """Combines pairs of 1m klines into 2m klines [timestamp, open, high, low, close, volume]."""
@@ -245,6 +277,20 @@ def analyze_multi_timeframe_candles(symbol):
     vwap_lower_band = vwap_15m - (1.5 * vwap_std)
     is_vwap_floor_rebound = (closes_15m[-1] <= vwap_lower_band) or (closes_15m[-1] < vwap_15m and (float(klines_15m[-1][3]) <= vwap_lower_band))
 
+    # Calculate MACD (12, 26, 9) on 15m candles
+    macd_line_15m, macd_signal_15m, macd_hist_15m = calculate_macd(closes_15m)
+    is_macd_bullish_cross = (macd_hist_15m > 0) and (macd_line_15m > macd_signal_15m)
+
+    # GBM Crash Detector (Z-Score Anomaly Detection from quant_institutional.py)
+    gbm_result = _gbm_detector.analyze(closes_15m)
+    gbm_zscore = gbm_result.get('gbm_zscore', 0.0)
+    gbm_anomaly_type = gbm_result.get('anomaly_type', 'BROWNIAN_NOISE')
+    gbm_signal_strength = gbm_result.get('signal_strength', 'NOISE')
+    # Crash rebound = Z was deeply negative but price is now bouncing (oversold + bullish micro)
+    is_crash_rebound = (gbm_anomaly_type == 'DUMP_CRASH' or gbm_zscore < -2.0) and (tf_2m_up or tf_5m_up) and (is_oversold_bounce_candidate or is_vwap_floor_rebound)
+    # Active dump veto = deep crash with NO rebound signals
+    is_active_dump = (gbm_zscore < -3.0) and not is_crash_rebound and not is_bullish_divergence
+
     # Calculate SuperTrend (10, 3) Pattern Indicator on 15m, 1h, and 4h (As requested by user)
     is_supertrend_bullish = False
     if len(klines_15m) >= 10:
@@ -274,7 +320,7 @@ def analyze_multi_timeframe_candles(symbol):
         st_lower_4h = hl2_4h - (3.0 * atr_4h_10)
         is_supertrend_4h_bullish = closes_4h[-1] > st_lower_4h
 
-    # Multi-Timeframe Alignment Score (0 to 100) including 15m, 1H and 4H SuperTrend & Yellow Arrow Bonus
+    # Multi-Timeframe Alignment Score (0 to 100) including MACD, GBM, SuperTrend & Yellow Arrow
     score_components = [
         tf_2m_up * 10,
         tf_5m_up * 20,
@@ -289,11 +335,15 @@ def analyze_multi_timeframe_candles(symbol):
         25 if is_ma7_above_ma25_upward else 0,
         15 if is_supertrend_1h_bullish else 0,
         15 if is_supertrend_4h_bullish else 0,
-        15 if (is_yellow_arrow_1h or is_yellow_arrow_4h) else 0
+        15 if (is_yellow_arrow_1h or is_yellow_arrow_4h) else 0,
+        10 if is_macd_bullish_cross else 0,
+        20 if is_crash_rebound else 0
     ]
     multi_tf_score = min(100, sum(score_components))
     
     if is_ma25_below_ma99_downward:
+        multi_tf_score = 0
+    if is_active_dump:
         multi_tf_score = 0
     
     # 4. Detect 15m Candle Over-extension / Parabolic Spike (Prevents buying tops like ZRO, ATOM)
@@ -343,12 +393,15 @@ def analyze_multi_timeframe_candles(symbol):
     vwap_status = "🟢 REBOTE PISO VWAP (-1.5 StdDev)" if is_vwap_floor_rebound else "⚪ NORMAL VWAP"
     ma99_status = "🚀 CRUCE ALCISTA MA25/MA99 (PULSO HACIA ARRIBA)" if is_ma25_above_ma99_upward else "⚪ NORMAL MA99"
     yellow_arrow_macro = f" | 🎯 FLECHAS AMARILLAS MACRO 1H/4H" if (is_yellow_arrow_1h or is_yellow_arrow_4h) else ""
+    macd_status = "🟢 MACD CRUCE ALCISTA" if is_macd_bullish_cross else "🔴 MACD BAJISTA"
+    gbm_status = f"💥 REBOTE POST-CRASH (Z={gbm_zscore:.1f})" if is_crash_rebound else (f"⛔ DUMP ACTIVO (Z={gbm_zscore:.1f})" if is_active_dump else f"⚪ GBM NORMAL (Z={gbm_zscore:.1f})")
 
     pattern_15m_summary = (
         f"RSI Triggers: 2m={rsi_2m} | 5m={rsi_5m} || Contexto Medio: 15m={rsi_15m} || Contexto Macro: 1h={rsi_1h} | 4h={rsi_4h} | "
         f"2m={'UP' if tf_2m_up else 'DOWN'} (VolSurge2m={vol_surge_2m}x) | "
         f"Precio 15m=${closes_15m[-1]:.4f} | MA7_15m=${ma7_15m:.4f} (Distancia: {dist_from_15m_ma7_pct:+.2f}%) | "
         f"MA25_15m=${ma25_15m:.4f} | MA99_15m=${ma99_15m:.4f} | {ma99_status} | {st_status} | {vwap_status} | "
+        f"{macd_status} | {gbm_status} | "
         f"Fase 15m={'RUPTURA_FRESCA (INICIO)' if 0.0 <= dist_from_15m_ma7_pct <= 3.0 else 'SOBRE_EXTENDIDO (CIMA)'} | "
         f"Patrón={yellow_arrow_status}{yellow_arrow_macro} | VolSurge 15m={vol_surge_15m}x"
     )
@@ -368,6 +421,14 @@ def analyze_multi_timeframe_candles(symbol):
         "is_supertrend_4h_bullish": is_supertrend_4h_bullish,
         "is_vwap_floor_rebound": is_vwap_floor_rebound,
         "is_ma25_above_ma99_upward": is_ma25_above_ma99_upward,
+        "macd_hist_15m": macd_hist_15m,
+        "macd_line_15m": macd_line_15m,
+        "macd_signal_15m": macd_signal_15m,
+        "is_macd_bullish_cross": is_macd_bullish_cross,
+        "gbm_zscore": gbm_zscore,
+        "gbm_anomaly_type": gbm_anomaly_type,
+        "is_crash_rebound": is_crash_rebound,
+        "is_active_dump": is_active_dump,
         "pct_b_15m": round(pct_b, 2),
         "is_oversold_bounce_candidate": is_oversold_bounce_candidate,
         "is_overbought_exhaustion": is_overbought_exhaustion,
