@@ -13,7 +13,7 @@
     "cost_usd": 15.95,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 63,
+    "holding_cycles": 64,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -216,6 +216,32 @@
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 0.0,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "POLUSDT",
+        "score": 50,
+        "price": 0.07305,
+        "rsi_2m": 49.23,
+        "rsi_5m": 49.23,
+        "rsi_15m": 49.23,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.01,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "FETUSDT",
+        "score": 50,
+        "price": 0.1347,
+        "rsi_2m": 49.05,
+        "rsi_5m": 49.05,
+        "rsi_15m": 49.05,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.16,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }
