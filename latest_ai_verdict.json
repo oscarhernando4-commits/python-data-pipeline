@@ -7,15 +7,28 @@
   "reasoning": "El comité ha decidido unánimemente mantener la posición en efectivo (HOLD) debido a que el mercado actual no ofrece activos con la convicción A+ requerida, evitando así el riesgo de 'cuchillos cayendo' y protegiendo el capital institucional.",
   "top_candidates": [
     {
-      "symbol": "HBARUSDT",
+      "symbol": "TIAUSDT",
       "score": 75,
-      "price": 0.06675,
-      "rsi_2m": 63.3,
-      "rsi_5m": 63.3,
-      "rsi_15m": 63.3,
+      "price": 0.3127,
+      "rsi_2m": 63.05,
+      "rsi_5m": 63.05,
+      "rsi_15m": 63.05,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.03,
+      "vol_surge": 0.04,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "HBARUSDT",
+      "score": 75,
+      "price": 0.06677,
+      "rsi_2m": 63.91,
+      "rsi_5m": 63.91,
+      "rsi_15m": 63.91,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.22,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -54,7 +67,7 @@
       "rsi_15m": 31.22,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.06,
+      "vol_surge": 0.13,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
