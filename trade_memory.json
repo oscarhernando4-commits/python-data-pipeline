@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3548,
+    "total_trades": 3550,
     "wins": 611,
-    "losses": 2937,
-    "win_rate_pct": 17.22,
-    "total_pnl_usd": 798688.249895453
+    "losses": 2939,
+    "win_rate_pct": 17.21,
+    "total_pnl_usd": 798687.4498954529
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on IDUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ATMUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on INJUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on DODOUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on OPUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SAGAUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on GPSUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DASHUSDT)"
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DASHUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ATMUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ONEUSDT)",
@@ -53,40 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 17:10:31",
-      "account_id": "SIM-046",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "COTIUSDT",
-      "side": "LONG",
-      "entry_price": 0.01115,
-      "exit_price": 0.01252,
-      "pnl_usd": 3.41,
-      "result": "WIN",
-      "notes": "Win on COTIUSDT (+$3.41 net) -> Level 5 Re-Trading Started!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 94.18,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 17:10:31",
-      "account_id": "SIM-047",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "COTIUSDT",
-      "side": "LONG",
-      "entry_price": 0.01115,
-      "exit_price": 0.01252,
-      "pnl_usd": 1.94,
-      "result": "WIN",
-      "notes": "Win on COTIUSDT (+$1.94 net) -> Level 6 Re-Trading Started!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 94.18,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 17:20:28",
       "account_id": "SIM-076",
@@ -8198,6 +8164,40 @@
       "context": {
         "score": 55,
         "rsi_15m": 28.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 22:54:36",
+      "account_id": "SIM-085",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "ATMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.809,
+      "exit_price": 1.847,
+      "pnl_usd": -0.4,
+      "result": "LOSS",
+      "notes": "Hit SL on ATMUSDT (-$0.40). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 56.17,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 22:54:36",
+      "account_id": "SIM-086",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "ATMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.809,
+      "exit_price": 1.847,
+      "pnl_usd": -0.4,
+      "result": "LOSS",
+      "notes": "Hit SL on ATMUSDT (-$0.40). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 56.17,
         "macro_trend_4h": "NEUTRAL"
       }
     }
