@@ -1,12 +1,38 @@
 {
-  "LDOUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-13 13:36:11",
-      "price": 0.2958,
-      "score": 60,
-      "rsi": 61.83,
+      "timestamp": "2026-08-13 13:38:11",
+      "price": 0.1234,
+      "score": 15,
+      "rsi": 49.61,
       "macd": "Neutral",
-      "volume_surge": 0.86,
+      "volume_surge": 0.05,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "XPLUSDT": [
+    {
+      "timestamp": "2026-08-13 13:38:11",
+      "price": 0.07444,
+      "score": 15,
+      "rsi": 42.39,
+      "macd": "Neutral",
+      "volume_surge": 0.33,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "IMXUSDT": [
+    {
+      "timestamp": "2026-08-13 13:38:12",
+      "price": 0.1095,
+      "score": 15,
+      "rsi": 42.06,
+      "macd": "Neutral",
+      "volume_surge": 0.72,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
