@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3246,
+    "total_trades": 3249,
     "wins": 577,
-    "losses": 2669,
-    "win_rate_pct": 17.78,
-    "total_pnl_usd": 101161.82989545487
+    "losses": 2672,
+    "win_rate_pct": 17.76,
+    "total_pnl_usd": 101160.64989545486
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on TIAUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on AXSUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on OPENUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ARBUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONEUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ALGOUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONEUSDT)",
-      "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NIGHTUSDT)"
+      "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NIGHTUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ONEUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PYTHUSDT)",
@@ -53,45 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-11 13:20:41",
-      "account_id": "SIM-045",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "XLMUSDT",
-      "side": "LONG",
-      "entry_price": 0.1594,
-      "exit_price": 0.1594,
-      "pnl_usd": -0.09,
-      "result": "LOSS",
-      "notes": "Hit SL on XLMUSDT (-$0.09). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-11 18:26:18",
-      "account_id": "SIM-087",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "NILUSDT",
-      "side": "SHORT",
-      "entry_price": 0.03634,
-      "exit_price": 0.03634,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on NILUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-11 18:28:23",
-      "account_id": "SIM-085",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "MEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.06205,
-      "exit_price": 0.06205,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on MEUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-11 18:30:25",
       "account_id": "SIM-043",
@@ -8242,6 +8203,57 @@
       "context": {
         "score": 50,
         "rsi_15m": 61.74,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 06:40:22",
+      "account_id": "SIM-065",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ONEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00086,
+      "exit_price": 0.00088,
+      "pnl_usd": -0.48,
+      "result": "LOSS",
+      "notes": "Hit SL on ONEUSDT (-$0.48). Re-Trading!",
+      "context": {
+        "score": 60,
+        "rsi_15m": 59.77,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 06:40:22",
+      "account_id": "SIM-073",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ONEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00086,
+      "exit_price": 0.00088,
+      "pnl_usd": -0.49,
+      "result": "LOSS",
+      "notes": "Hit SL on ONEUSDT (-$0.49). Re-Trading!",
+      "context": {
+        "score": 60,
+        "rsi_15m": 59.77,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 06:40:22",
+      "account_id": "SIM-074",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ONEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00086,
+      "exit_price": 0.00088,
+      "pnl_usd": -0.21,
+      "result": "LOSS",
+      "notes": "Hit SL on ONEUSDT (-$0.21). Re-Trading!",
+      "context": {
+        "score": 60,
+        "rsi_15m": 59.77,
         "macro_trend_4h": "NEUTRAL"
       }
     }
