@@ -13,7 +13,7 @@
     "cost_usd": 15.98,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 58,
+    "holding_cycles": 59,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -129,15 +129,15 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "AAVEUSDT",
+        "symbol": "BTCUSDT",
         "score": 65,
-        "price": 88.34,
-        "rsi_2m": 58.83,
-        "rsi_5m": 58.83,
-        "rsi_15m": 58.83,
+        "price": 63462.38,
+        "rsi_2m": 52.73,
+        "rsi_5m": 52.73,
+        "rsi_15m": 52.73,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.06,
+        "vol_surge": 0.11,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
@@ -168,15 +168,15 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "TRUMPUSDT",
+        "symbol": "SHIBUSDT",
         "score": 65,
-        "price": 1.387,
-        "rsi_2m": 50.76,
-        "rsi_5m": 50.76,
-        "rsi_15m": 50.76,
+        "price": 4.44e-06,
+        "rsi_2m": 50.21,
+        "rsi_5m": 50.21,
+        "rsi_15m": 50.21,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.02,
+        "vol_surge": 0.08,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }
