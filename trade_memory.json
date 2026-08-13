@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3441,
-    "wins": 605,
-    "losses": 2836,
-    "win_rate_pct": 17.58,
-    "total_pnl_usd": 99979.12989545487
+    "total_trades": 3444,
+    "wins": 606,
+    "losses": 2838,
+    "win_rate_pct": 17.6,
+    "total_pnl_usd": 804997.1698954549
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PEPEUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on COTIUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PUMPUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ONEUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ATMUSDT)",
@@ -49,61 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MSTRBUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HOMEUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BANKUSDT)",
-      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GIGGLEUSDT)"
+      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GIGGLEUSDT)",
+      "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ETHUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 08:50:23",
-      "account_id": "SIM-039",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "FILUSDT",
-      "side": "SHORT",
-      "entry_price": 0.7137,
-      "exit_price": 0.6993,
-      "pnl_usd": 0.38,
-      "result": "WIN",
-      "notes": "Win on FILUSDT (+$0.38 net) -> Level 7 Re-Trading Started!",
-      "context": {
-        "score": 40,
-        "rsi_15m": 30.0,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 08:50:23",
-      "account_id": "SIM-040",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "FILUSDT",
-      "side": "SHORT",
-      "entry_price": 0.7137,
-      "exit_price": 0.6993,
-      "pnl_usd": 0.38,
-      "result": "WIN",
-      "notes": "Win on FILUSDT (+$0.38 net) -> Level 7 Re-Trading Started!",
-      "context": {
-        "score": 40,
-        "rsi_15m": 30.0,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 09:20:24",
-      "account_id": "SIM-091",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "PENGUUSDT",
-      "side": "SHORT",
-      "entry_price": 0.006412,
-      "exit_price": 0.006396,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on PENGUUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 50.63,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 09:40:22",
       "account_id": "SIM-086",
@@ -8267,6 +8216,49 @@
       "pnl_usd": -0.05,
       "result": "LOSS",
       "notes": "Hit SL on DASHUSDT (-$0.05). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-13 16:44:18",
+      "account_id": "SIM-021",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TAOUSDT",
+      "side": "SHORT",
+      "entry_price": 201.7,
+      "exit_price": 201.7,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on TAOUSDT (-$0.06). Re-Trading!",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-13 16:44:18",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 0.05244,
+      "exit_price": 1865.21,
+      "pnl_usd": 705018.16,
+      "result": "WIN",
+      "notes": "Win on ETHUSDT (+$705018.16 net) -> Level 13 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 30.37,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 16:44:18",
+      "account_id": "SIM-071",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BABYUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01032,
+      "exit_price": 0.01032,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on BABYUSDT (-$0.06). Re-Trading!",
       "context": {}
     }
   ]
