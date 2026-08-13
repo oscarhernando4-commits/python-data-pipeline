@@ -4,16 +4,16 @@
   "usdt_free": 0.1256,
   "bnb_free": 0.00369424,
   "bnb_usd": 2.26,
-  "status": "🔵 En Vivo LONG (GRAMUSDT @ $1.3390)",
+  "status": "🔵 En Vivo LONG (GRAMUSDT @ $1.3400)",
   "position": {
     "symbol": "GRAMUSDT",
     "quantity": 12.05,
     "entry_price": 1.352,
     "highest_price": 1.355,
-    "cost_usd": 16.13,
+    "cost_usd": 16.15,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 214,
+    "holding_cycles": 215,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -103,12 +103,12 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "APTUSDT",
+        "symbol": "STXUSDT",
         "score": 75,
-        "price": 0.566,
-        "rsi_2m": 58.91,
-        "rsi_5m": 58.91,
-        "rsi_15m": 58.91,
+        "price": 0.1245,
+        "rsi_2m": 65.84,
+        "rsi_5m": 65.84,
+        "rsi_15m": 65.84,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 6.85,
@@ -164,6 +164,32 @@
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 0.22,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "LTCUSDT",
+        "score": 65,
+        "price": 44.9,
+        "rsi_2m": 52.15,
+        "rsi_5m": 52.15,
+        "rsi_15m": 52.15,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.29,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "PEPEUSDT",
+        "score": 65,
+        "price": 2.71e-06,
+        "rsi_2m": 54.53,
+        "rsi_5m": 54.53,
+        "rsi_15m": 54.53,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.35,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }
