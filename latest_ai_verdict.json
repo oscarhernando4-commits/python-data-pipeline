@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-13 22:18:29",
+  "timestamp": "2026-08-13 22:20:54",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los criterios de alta convicción (A+) requeridos para una ejecución segura, priorizando la preservación del capital sobre la especulación en un entorno de alta incertidumbre.",
+  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
   "top_candidates": [
     {
       "symbol": "DOGEUSDT",
@@ -22,31 +22,44 @@
     {
       "symbol": "ARBUSDT",
       "score": 75,
-      "price": 76.43,
-      "rsi_2m": 64.64,
-      "rsi_5m": 64.64,
-      "rsi_15m": 64.64,
+      "price": 0.0756,
+      "rsi_2m": 61.12,
+      "rsi_5m": 61.12,
+      "rsi_15m": 61.12,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.06,
+      "vol_surge": 0.28,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "score": 75,
+      "price": 1.271,
+      "rsi_2m": 60.46,
+      "rsi_5m": 60.46,
+      "rsi_15m": 60.46,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.21,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
       "symbol": "FILUSDT",
       "score": 75,
-      "price": 1.0113,
-      "rsi_2m": 60.59,
-      "rsi_5m": 60.59,
-      "rsi_15m": 60.59,
+      "price": 0.6759,
+      "rsi_2m": 58.89,
+      "rsi_5m": 58.89,
+      "rsi_15m": 58.89,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.07,
+      "vol_surge": 0.29,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "ETHUSDT",
+      "symbol": "CAKEUSDT",
       "score": 75,
       "price": 1891.78,
       "rsi_2m": 62.29,
@@ -95,32 +108,6 @@
       "rsi_4h": 50.0,
       "vol_surge": 0.0,
       "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "SKYUSDT",
-      "score": 75,
-      "price": 0.05338,
-      "rsi_2m": 66.72,
-      "rsi_5m": 66.72,
-      "rsi_15m": 66.72,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.01,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "CAKEUSDT",
-      "score": 75,
-      "price": 1.443,
-      "rsi_2m": 66.05,
-      "rsi_5m": 66.05,
-      "rsi_15m": 66.05,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 7.41,
-      "trade_quality": "B",
       "macro_trend": "NEUTRAL"
     }
   ]
