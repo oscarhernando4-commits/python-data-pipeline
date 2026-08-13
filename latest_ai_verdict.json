@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-13 20:20:19",
+  "timestamp": "2026-08-13 20:22:38",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
@@ -20,7 +20,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "LINKUSDT",
+      "symbol": "SKYUSDT",
       "score": 75,
       "price": 8.846,
       "rsi_2m": 64.69,
@@ -48,13 +48,13 @@
     {
       "symbol": "NEXOUSDT",
       "score": 75,
-      "price": 0.73,
-      "rsi_2m": 60.18,
-      "rsi_5m": 60.18,
-      "rsi_15m": 60.18,
+      "price": 0.729,
+      "rsi_2m": 58.71,
+      "rsi_5m": 58.71,
+      "rsi_15m": 58.71,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.6,
+      "vol_surge": 0.83,
       "trade_quality": "B",
       "macro_trend": "NEUTRAL"
     },
@@ -124,7 +124,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "HOMEUSDT",
+      "symbol": "BNBUSDT",
       "score": 65,
       "price": 0.01109,
       "rsi_2m": 58.59,
@@ -165,39 +165,13 @@
     {
       "symbol": "ADAUSDT",
       "score": 65,
-      "price": 0.1821,
-      "rsi_2m": 48.11,
-      "rsi_5m": 48.11,
-      "rsi_15m": 48.11,
+      "price": 0.1823,
+      "rsi_2m": 50.12,
+      "rsi_5m": 50.12,
+      "rsi_15m": 50.12,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.1,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "TRUMPUSDT",
-      "score": 65,
-      "price": 1.386,
-      "rsi_2m": 48.54,
-      "rsi_5m": 48.54,
-      "rsi_15m": 48.54,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.01,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "ADAUSDT",
-      "score": 65,
-      "price": 88.13,
-      "rsi_2m": 55.75,
-      "rsi_5m": 55.75,
-      "rsi_15m": 55.75,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.16,
+      "vol_surge": 0.19,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
