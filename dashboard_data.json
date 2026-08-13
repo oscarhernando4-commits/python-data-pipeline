@@ -4,16 +4,16 @@
   "usdt_free": 0.1256,
   "bnb_free": 0.00369424,
   "bnb_usd": 2.25,
-  "status": "🔵 En Vivo LONG (GRAMUSDT @ $1.3290)",
+  "status": "🔵 En Vivo LONG (GRAMUSDT @ $1.3300)",
   "position": {
     "symbol": "GRAMUSDT",
     "quantity": 12.05,
     "entry_price": 1.352,
     "highest_price": 1.355,
-    "cost_usd": 16.01,
+    "cost_usd": 16.03,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 308,
+    "holding_cycles": 309,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -38,7 +38,7 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "INJUSDT",
+        "symbol": "GOOGLBUSDT",
         "score": 60,
         "price": 4.635,
         "rsi_2m": 58.46,
@@ -144,10 +144,10 @@
       {
         "symbol": "QNTUSDT",
         "score": 50,
-        "price": 58.78,
-        "rsi_2m": 65.03,
-        "rsi_5m": 65.03,
-        "rsi_15m": 65.03,
+        "price": 1.0073,
+        "rsi_2m": 51.82,
+        "rsi_5m": 51.82,
+        "rsi_15m": 51.82,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 0.01,
