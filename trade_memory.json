@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3482,
+    "total_trades": 3483,
     "wins": 606,
-    "losses": 2876,
+    "losses": 2877,
     "win_rate_pct": 17.4,
-    "total_pnl_usd": 803651.2098954547
+    "total_pnl_usd": 803650.7198954547
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,19 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 14:26:24",
-      "account_id": "SIM-082",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "ZAMAUSDT",
-      "side": "SHORT",
-      "entry_price": 0.04628,
-      "exit_price": 0.04628,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on ZAMAUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-12 09:54:45",
       "account_id": "SIM-028",
@@ -8230,6 +8217,23 @@
       "context": {
         "score": 50,
         "rsi_15m": 51.53,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 18:56:20",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "EDENUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0569,
+      "exit_price": 0.05826,
+      "pnl_usd": -0.49,
+      "result": "LOSS",
+      "notes": "Hit SL on EDENUSDT (-$0.49). Re-Trading!",
+      "context": {
+        "score": 20,
+        "rsi_15m": 86.69,
         "macro_trend_4h": "NEUTRAL"
       }
     }

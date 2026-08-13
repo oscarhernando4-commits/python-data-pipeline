@@ -1,11 +1,24 @@
 {
-  "timestamp": "2026-08-13 18:54:36",
+  "timestamp": "2026-08-13 18:56:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "reasoning": "El comité ha determinado por consenso unánime que las condiciones actuales del mercado no cumplen con los requisitos mínimos de seguridad y rentabilidad exigidos por nuestra estrategia de élite, optando por la preservación total del capital.",
   "top_candidates": [
+    {
+      "symbol": "TAOUSDT",
+      "score": 60,
+      "price": 201.9,
+      "rsi_2m": 57.36,
+      "rsi_5m": 57.36,
+      "rsi_15m": 57.36,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 1.08,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
     {
       "symbol": "LINKUSDT",
       "score": 75,
@@ -87,10 +100,10 @@
     {
       "symbol": "INJUSDT",
       "score": 60,
-      "price": 4.635,
-      "rsi_2m": 57.81,
-      "rsi_5m": 57.81,
-      "rsi_15m": 57.81,
+      "price": 4.63,
+      "rsi_2m": 56.06,
+      "rsi_5m": 56.06,
+      "rsi_15m": 56.06,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.72,
