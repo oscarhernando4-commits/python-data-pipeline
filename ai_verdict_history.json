@@ -1398,5 +1398,145 @@
         "macro_trend": "NEUTRAL"
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-13 10:43:02",
+    "selected_symbol": "NONE",
+    "action": "HOLD",
+    "approved": false,
+    "confidence": 0,
+    "reasoning": "Tras deliberar, el comité ha determinado que las condiciones actuales del mercado no cumplen con los estándares de seguridad y rentabilidad exigidos. Ningún activo candidato alcanzó el Score técnico de 55 ni la convicción necesaria para ejecutar una orden de compra, por lo que se mantiene la posición en efectivo para evitar pérdidas innecesarias.",
+    "top_candidates": [
+      {
+        "symbol": "RENDERUSDT",
+        "score": 60,
+        "price": 1.274,
+        "rsi_2m": 58.53,
+        "rsi_5m": 58.53,
+        "rsi_15m": 58.53,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.64,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "HBARUSDT",
+        "score": 55,
+        "price": 0.06674,
+        "rsi_2m": 62.02,
+        "rsi_5m": 62.02,
+        "rsi_15m": 62.02,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.92,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ALLOUSDT",
+        "score": 50,
+        "price": 0.2935,
+        "rsi_2m": 63.27,
+        "rsi_5m": 63.27,
+        "rsi_15m": 63.27,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.05,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "DOTUSDT",
+        "score": 50,
+        "price": 0.774,
+        "rsi_2m": 55.21,
+        "rsi_5m": 55.21,
+        "rsi_15m": 55.21,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.85,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "MORPHOUSDT",
+        "score": 50,
+        "price": 1.959,
+        "rsi_2m": 53.72,
+        "rsi_5m": 53.72,
+        "rsi_15m": 53.72,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.04,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "CRVUSDT",
+        "score": 50,
+        "price": 0.2546,
+        "rsi_2m": 51.99,
+        "rsi_5m": 51.99,
+        "rsi_15m": 51.99,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.22,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "WLFIUSDT",
+        "score": 50,
+        "price": 0.055,
+        "rsi_2m": 53.71,
+        "rsi_5m": 53.71,
+        "rsi_15m": 53.71,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.7,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "LINKUSDT",
+        "score": 45,
+        "price": 8.793,
+        "rsi_2m": 53.63,
+        "rsi_5m": 53.63,
+        "rsi_15m": 53.63,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.81,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "KAITOUSDT",
+        "score": 45,
+        "price": 0.4643,
+        "rsi_2m": 63.15,
+        "rsi_5m": 63.15,
+        "rsi_15m": 63.15,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 2.76,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ETHUSDT",
+        "score": 45,
+        "price": 1890.47,
+        "rsi_2m": 51.7,
+        "rsi_5m": 51.7,
+        "rsi_15m": 51.7,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.77,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      }
+    ]
   }
 ]
