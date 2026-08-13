@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-13 19:58:27",
+  "timestamp": "2026-08-13 20:00:34",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de distribución forzada con un entorno macro hostil. Ningún activo cumple con los criterios de convicción A+ (Score >= 55) ni con la profundidad de liquidez necesaria para mitigar el riesgo de pérdida, por lo que la decisión unánime es mantener la liquidez en USDT.",
+  "reasoning": "El mercado actual presenta una estructura de alta incertidumbre y falta de convicción institucional. Ninguno de los candidatos analizados cumple con los criterios estrictos de Score Técnico (>= 55) y soporte en el libro de órdenes necesarios para garantizar una operación de bajo riesgo. Se prioriza la preservación del capital sobre la especulación en un entorno de baja calidad técnica.",
   "top_candidates": [
     {
       "symbol": "BTCUSDT",
@@ -67,7 +67,7 @@
       "rsi_15m": 56.97,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.11,
+      "vol_surge": 0.0,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -88,12 +88,12 @@
       "symbol": "BCHUSDT",
       "score": 55,
       "price": 206.3,
-      "rsi_2m": 30.04,
-      "rsi_5m": 30.04,
-      "rsi_15m": 30.04,
+      "rsi_2m": 30.83,
+      "rsi_5m": 30.83,
+      "rsi_15m": 30.83,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.35,
+      "vol_surge": 0.01,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
