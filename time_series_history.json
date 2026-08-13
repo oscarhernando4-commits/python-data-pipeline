@@ -1,12 +1,38 @@
 {
-  "CFXUSDT": [
+  "IMXUSDT": [
     {
-      "timestamp": "2026-08-13 23:16:12",
-      "price": 0.04145,
-      "score": 60,
-      "rsi": 55.66,
+      "timestamp": "2026-08-13 23:18:13",
+      "price": 0.1095,
+      "score": 30,
+      "rsi": 49.73,
       "macd": "Neutral",
       "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ]
+}}  "STORJUSDT": [
+    {
+      "timestamp": "2026-08-13 23:18:13",
+      "price": 0.0473,
+      "score": 35,
+      "rsi": 63.7,
+      "macd": "Neutral",
+      "volume_surge": 0.53,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-13 23:18:13",
+      "price": 0.0878,
+      "score": 25,
+      "rsi": 70.55,
+      "macd": "Neutral",
+      "volume_surge": 0.06,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
