@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3394,
+    "total_trades": 3396,
     "wins": 599,
-    "losses": 2795,
-    "win_rate_pct": 17.65,
-    "total_pnl_usd": 101140.2898954549
+    "losses": 2797,
+    "win_rate_pct": 17.64,
+    "total_pnl_usd": 101140.1898954549
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,36 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 01:02:34",
-      "account_id": "SIM-080",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "ZROUSDT",
-      "side": "SHORT",
-      "entry_price": 0.86,
-      "exit_price": 0.86,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on ZROUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-12 01:12:34",
-      "account_id": "SIM-021",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "LITEBUSDT",
-      "side": "SHORT",
-      "entry_price": 839.45,
-      "exit_price": 852.43,
-      "pnl_usd": -0.33,
-      "result": "LOSS",
-      "notes": "Hit SL on LITEBUSDT (-$0.33). Re-Trading!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 71.45,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 01:12:34",
       "account_id": "SIM-022",
@@ -8298,6 +8268,40 @@
       "context": {
         "score": 25,
         "rsi_15m": 34.72,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 14:46:18",
+      "account_id": "SIM-085",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BANKUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0407,
+      "exit_price": 0.0406,
+      "pnl_usd": -0.05,
+      "result": "LOSS",
+      "notes": "Hit SL on BANKUSDT (-$0.05). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.79,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 14:46:18",
+      "account_id": "SIM-086",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BANKUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0407,
+      "exit_price": 0.0406,
+      "pnl_usd": -0.05,
+      "result": "LOSS",
+      "notes": "Hit SL on BANKUSDT (-$0.05). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 45.79,
         "macro_trend_4h": "NEUTRAL"
       }
     }
