@@ -4,16 +4,16 @@
   "usdt_free": 0.1634,
   "bnb_free": 0.00365481,
   "bnb_usd": 2.23,
-  "status": "🔵 En Vivo LONG (MORPHOUSDT @ $1.9620)",
+  "status": "🔵 En Vivo LONG (MORPHOUSDT @ $1.9610)",
   "position": {
     "symbol": "MORPHOUSDT",
     "quantity": 8.17,
     "entry_price": 1.957,
     "highest_price": 1.965,
-    "cost_usd": 16.03,
+    "cost_usd": 16.02,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 132,
+    "holding_cycles": 133,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -24,32 +24,6 @@
     "confidence": 0,
     "reasoning": "Tras la deliberación del comité, se ha determinado que el mercado actual presenta un riesgo elevado y una falta de convicción institucional. Ningún candidato cumple con los requisitos estrictos de seguridad y rentabilidad exigidos por el CRO, por lo que se mantiene la posición en liquidez (HOLD) para evitar pérdidas innecesarias.",
     "top_candidates": [
-      {
-        "symbol": "ICPUSDT",
-        "score": 75,
-        "price": 2.188,
-        "rsi_2m": 66.01,
-        "rsi_5m": 66.01,
-        "rsi_15m": 66.01,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.12,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "QNTUSDT",
-        "score": 75,
-        "price": 0.07549,
-        "rsi_2m": 53.29,
-        "rsi_5m": 53.29,
-        "rsi_15m": 53.29,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 0.0,
-        "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
       {
         "symbol": "ESPUSDT",
         "score": 75,
@@ -79,10 +53,10 @@
       {
         "symbol": "ALLOUSDT",
         "score": 70,
-        "price": 0.2684,
-        "rsi_2m": 29.35,
-        "rsi_5m": 29.35,
-        "rsi_15m": 29.35,
+        "price": 0.2688,
+        "rsi_2m": 31.15,
+        "rsi_5m": 31.15,
+        "rsi_15m": 31.15,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 0.07,
@@ -98,7 +72,7 @@
         "rsi_15m": 27.57,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.23,
+        "vol_surge": 0.56,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
