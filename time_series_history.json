@@ -1,12 +1,64 @@
 {
-  "GNOUSDT": [
+  "EWYBUSDT": [
     {
-      "timestamp": "2026-08-13 04:12:10",
-      "price": 103.85,
-      "score": 50,
-      "rsi": 53.4,
+      "timestamp": "2026-08-13 04:14:11",
+      "price": 177.47,
+      "score": 45,
+      "rsi": 57.55,
       "macd": "Neutral",
-      "volume_surge": 0.22,
+      "volume_surge": 0.32,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ESPUSDT": [
+    {
+      "timestamp": "2026-08-13 04:14:11",
+      "price": 0.07468,
+      "score": 50,
+      "rsi": 62.87,
+      "macd": "Neutral",
+      "volume_surge": 1.38,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-13 04:14:11",
+      "price": 1.333,
+      "score": 65,
+      "rsi": 56.05,
+      "macd": "Neutral",
+      "volume_surge": 0.43,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "RADUSDT": [
+    {
+      "timestamp": "2026-08-13 04:14:11",
+      "price": 0.244,
+      "score": 45,
+      "rsi": 54.4,
+      "macd": "Neutral",
+      "volume_surge": 0.37,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-13 04:14:11",
+      "price": 0.1232,
+      "score": 50,
+      "rsi": 53.39,
+      "macd": "Neutral",
+      "volume_surge": 0.5,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
