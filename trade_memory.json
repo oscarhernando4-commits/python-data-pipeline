@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3401,
-    "wins": 599,
+    "total_trades": 3403,
+    "wins": 601,
     "losses": 2802,
-    "win_rate_pct": 17.61,
-    "total_pnl_usd": 101139.10989545488
+    "win_rate_pct": 17.66,
+    "total_pnl_usd": 101141.23989545488
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZROUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on OPUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MUUBUSDT)",
       "BOOST LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PEPEUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PEPEUSDT)",
@@ -49,44 +48,11 @@
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ATUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MSTRBUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on NBISBUSDT)",
-      "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MUBARAKUSDT)"
+      "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MUBARAKUSDT)",
+      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HOMEUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 01:14:35",
-      "account_id": "SIM-076",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "CAKEUSDT",
-      "side": "SHORT",
-      "entry_price": 1.452,
-      "exit_price": 1.467,
-      "pnl_usd": -0.22,
-      "result": "LOSS",
-      "notes": "Hit SL on CAKEUSDT (-$0.22). Re-Trading!",
-      "context": {
-        "score": 75,
-        "rsi_15m": 66.97,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 01:14:35",
-      "account_id": "SIM-082",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "CAKEUSDT",
-      "side": "SHORT",
-      "entry_price": 1.452,
-      "exit_price": 1.467,
-      "pnl_usd": -0.21,
-      "result": "LOSS",
-      "notes": "Hit SL on CAKEUSDT (-$0.21). Re-Trading!",
-      "context": {
-        "score": 75,
-        "rsi_15m": 66.97,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 01:16:34",
       "account_id": "SIM-056",
@@ -8302,6 +8268,40 @@
       "context": {
         "score": 15,
         "rsi_15m": 43.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 10:15:04",
+      "account_id": "SIM-071",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "HOMEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01086,
+      "exit_price": 0.01026,
+      "pnl_usd": 1.16,
+      "result": "WIN",
+      "notes": "Win on HOMEUSDT (+$1.16 net) -> Level 13 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.83,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 10:15:04",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "HOMEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01086,
+      "exit_price": 0.01026,
+      "pnl_usd": 0.97,
+      "result": "WIN",
+      "notes": "Win on HOMEUSDT (+$0.97 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.83,
         "macro_trend_4h": "NEUTRAL"
       }
     }
