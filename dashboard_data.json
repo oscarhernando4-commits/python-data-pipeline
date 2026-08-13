@@ -4,16 +4,16 @@
   "usdt_free": 0.1256,
   "bnb_free": 0.00369424,
   "bnb_usd": 2.26,
-  "status": "🔵 En Vivo LONG (GRAMUSDT @ $1.3370)",
+  "status": "🔵 En Vivo LONG (GRAMUSDT @ $1.3380)",
   "position": {
     "symbol": "GRAMUSDT",
     "quantity": 12.05,
     "entry_price": 1.352,
     "highest_price": 1.355,
-    "cost_usd": 16.11,
+    "cost_usd": 16.12,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 207,
+    "holding_cycles": 208,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -90,6 +90,45 @@
         "macro_trend": "NEUTRAL"
       },
       {
+        "symbol": "SHIBUSDT",
+        "score": 75,
+        "price": 4.48e-06,
+        "rsi_2m": 53.1,
+        "rsi_5m": 53.1,
+        "rsi_15m": 53.1,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.17,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ETHUSDT",
+        "score": 75,
+        "price": 1897.33,
+        "rsi_2m": 61.86,
+        "rsi_5m": 61.86,
+        "rsi_15m": 61.86,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.98,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "HBARUSDT",
+        "score": 75,
+        "price": 0.0666,
+        "rsi_2m": 58.53,
+        "rsi_5m": 58.53,
+        "rsi_15m": 58.53,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.27,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
         "symbol": "NEARUSDT",
         "score": 75,
         "price": 1.668,
@@ -129,7 +168,7 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "RENDERUSDT",
+        "symbol": "SOLUSDT",
         "score": 75,
         "price": 1.273,
         "rsi_2m": 57.09,
