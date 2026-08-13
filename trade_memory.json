@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3473,
+    "total_trades": 3476,
     "wins": 606,
-    "losses": 2867,
-    "win_rate_pct": 17.45,
-    "total_pnl_usd": 804145.7098954547
+    "losses": 2870,
+    "win_rate_pct": 17.43,
+    "total_pnl_usd": 804145.1098954548
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HOMEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZROUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ZAMAUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on INJUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on DODOUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on EPICUSDT)",
-      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GIGGLEUSDT)"
+      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GIGGLEUSDT)",
+      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on POLUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PUMPUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 12:50:22",
-      "account_id": "SIM-086",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "RAREUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01526,
-      "exit_price": 0.01533,
-      "pnl_usd": -0.1,
-      "result": "LOSS",
-      "notes": "Hit SL on RAREUSDT (-$0.10). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 65.62,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 12:50:22",
-      "account_id": "SIM-088",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "RAREUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01526,
-      "exit_price": 0.01533,
-      "pnl_usd": -0.1,
-      "result": "LOSS",
-      "notes": "Hit SL on RAREUSDT (-$0.10). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 65.62,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 12:56:22",
-      "account_id": "SIM-091",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "STORJUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0472,
-      "exit_price": 0.0472,
-      "pnl_usd": -0.05,
-      "result": "LOSS",
-      "notes": "Hit SL on STORJUSDT (-$0.05). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 45.55,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 12:56:23",
       "account_id": "SIM-095",
@@ -8214,6 +8163,57 @@
       "context": {
         "score": 0,
         "rsi_15m": 36.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 13:32:53",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "POLUSDT",
+      "side": "LONG",
+      "entry_price": 0.07316,
+      "exit_price": 0.0725,
+      "pnl_usd": -0.2,
+      "result": "LOSS",
+      "notes": "Hit SL on POLUSDT (-$0.20). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 19.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 13:32:53",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "POLUSDT",
+      "side": "LONG",
+      "entry_price": 0.07316,
+      "exit_price": 0.0725,
+      "pnl_usd": -0.2,
+      "result": "LOSS",
+      "notes": "Hit SL on POLUSDT (-$0.20). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 19.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 13:32:53",
+      "account_id": "SIM-030",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "POLUSDT",
+      "side": "LONG",
+      "entry_price": 0.07316,
+      "exit_price": 0.0725,
+      "pnl_usd": -0.2,
+      "result": "LOSS",
+      "notes": "Hit SL on POLUSDT (-$0.20). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 19.98,
         "macro_trend_4h": "NEUTRAL"
       }
     }

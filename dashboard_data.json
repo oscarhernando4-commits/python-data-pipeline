@@ -3,7 +3,7 @@
   "total_balance_usd": 18.39,
   "usdt_free": 16.1521,
   "bnb_free": 0.00367447,
-  "bnb_usd": 2.23,
+  "bnb_usd": 2.24,
   "status": "🟦 Buscando Entrada A+",
   "position": {},
   "verdict": {
@@ -15,15 +15,15 @@
     "reasoning": "El mercado actual presenta una correlación negativa extrema y una falta de profundidad en el libro de órdenes. Ningún candidato cumple con los criterios estrictos de convicción A+ establecidos por el comité, por lo que la decisión es mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de alta volatilidad y baja confianza.",
     "top_candidates": [
       {
-        "symbol": "GOOGLBUSDT",
+        "symbol": "LINKUSDT",
         "score": 60,
-        "price": 346.78,
-        "rsi_2m": 58.55,
-        "rsi_5m": 58.55,
-        "rsi_15m": 58.55,
+        "price": 8.779,
+        "rsi_2m": 53.88,
+        "rsi_5m": 53.88,
+        "rsi_15m": 53.88,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.0,
+        "vol_surge": 0.01,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
