@@ -13,7 +13,7 @@
     "cost_usd": 16.0,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 295,
+    "holding_cycles": 296,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -64,7 +64,7 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "ATMUSDT",
+        "symbol": "MMTUSDT",
         "score": 50,
         "price": 0.1698,
         "rsi_2m": 49.71,
@@ -72,17 +72,43 @@
         "rsi_15m": 49.71,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.09,
+        "vol_surge": 0.13,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ATMUSDT",
+        "score": 50,
+        "price": 1.885,
+        "rsi_2m": 58.62,
+        "rsi_5m": 58.62,
+        "rsi_15m": 58.62,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.27,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ATUSDT",
+        "score": 50,
+        "price": 0.1552,
+        "rsi_2m": 60.92,
+        "rsi_5m": 60.92,
+        "rsi_15m": 60.92,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.75,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
       {
         "symbol": "DEXEUSDT",
         "score": 50,
-        "price": 1.914,
-        "rsi_2m": 61.91,
-        "rsi_5m": 61.91,
-        "rsi_15m": 61.91,
+        "price": 2.003,
+        "rsi_2m": 50.28,
+        "rsi_5m": 50.28,
+        "rsi_15m": 50.28,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 0.21,
