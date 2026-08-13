@@ -13,7 +13,7 @@
     "cost_usd": 16.0,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 122,
+    "holding_cycles": 123,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -116,6 +116,58 @@
         "macro_trend": "NEUTRAL"
       },
       {
+        "symbol": "WLDUSDT",
+        "score": 75,
+        "price": 0.3431,
+        "rsi_2m": 53.12,
+        "rsi_5m": 53.12,
+        "rsi_15m": 53.12,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.83,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "PAXGUSDT",
+        "score": 75,
+        "price": 4358.66,
+        "rsi_2m": 51.21,
+        "rsi_5m": 51.21,
+        "rsi_15m": 51.21,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.89,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ENAUSDT",
+        "score": 75,
+        "price": 0.0858,
+        "rsi_2m": 60.1,
+        "rsi_5m": 60.1,
+        "rsi_15m": 60.1,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 2.88,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "BOMEUSDT",
+        "score": 75,
+        "price": 0.0007405,
+        "rsi_2m": 47.08,
+        "rsi_5m": 47.08,
+        "rsi_15m": 47.08,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 2.06,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
         "symbol": "INJUSDT",
         "score": 75,
         "price": 0.0858,
@@ -131,13 +183,13 @@
       {
         "symbol": "ALLOUSDT",
         "score": 70,
-        "price": 0.2688,
-        "rsi_2m": 29.2,
-        "rsi_5m": 29.2,
-        "rsi_15m": 29.2,
+        "price": 0.6757,
+        "rsi_2m": 56.37,
+        "rsi_5m": 56.37,
+        "rsi_15m": 56.37,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.44,
+        "vol_surge": 5.14,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }
