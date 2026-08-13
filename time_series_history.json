@@ -1,12 +1,25 @@
 {
-  "LDOUSDT": [
+  "OPUSDT": [
     {
-      "timestamp": "2026-08-13 01:34:10",
-      "price": 0.2926,
-      "score": 35,
-      "rsi": 61.01,
+      "timestamp": "2026-08-13 01:36:10",
+      "price": 0.0851,
+      "score": 25,
+      "rsi": 26.17,
       "macd": "Neutral",
-      "volume_surge": 0.03,
+      "volume_surge": 0.17,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "KITEUSDT": [
+    {
+      "timestamp": "2026-08-13 01:36:10",
+      "price": 0.101,
+      "score": 0,
+      "rsi": 44.34,
+      "macd": "Neutral",
+      "volume_surge": 0.2,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
