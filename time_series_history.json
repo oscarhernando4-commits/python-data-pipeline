@@ -1,10 +1,23 @@
 {
-  "PENDLEUSDT": [
+  "OPUSDT": [
     {
-      "timestamp": "2026-08-13 04:00:14",
-      "price": 1.332,
+      "timestamp": "2026-08-13 04:02:14",
+      "price": 0.0864,
       "score": 65,
-      "rsi": 54.72,
+      "rsi": 53.92,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "TSMBUSDT": [
+    {
+      "timestamp": "2026-08-13 04:02:14",
+      "price": 430.05,
+      "score": 15,
+      "rsi": 48.34,
       "macd": "Neutral",
       "volume_surge": 0.0,
       "wyckoff": "Sin patron",
@@ -12,14 +25,27 @@
       "fear_greed": 50
     }
   ],
-  "EWYBUSDT": [
+  "STXUSDT": [
     {
-      "timestamp": "2026-08-13 04:00:14",
-      "price": 177.36,
-      "score": 45,
-      "rsi": 56.6,
+      "timestamp": "2026-08-13 04:02:14",
+      "price": 0.1233,
+      "score": 50,
+      "rsi": 54.94,
       "macd": "Neutral",
       "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "KITEUSDT": [
+    {
+      "timestamp": "2026-08-13 04:02:14",
+      "price": 0.1017,
+      "score": 65,
+      "rsi": 54.48,
+      "macd": "Neutral",
+      "volume_surge": 0.29,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -27,23 +53,23 @@
   ],
   "LDOUSDT": [
     {
-      "timestamp": "2026-08-13 04:00:14",
-      "price": 0.2923,
+      "timestamp": "2026-08-13 04:02:14",
+      "price": 0.2924,
       "score": 45,
-      "rsi": 55.34,
+      "rsi": 55.97,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.06,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "ESPUSDT": [
+  "PENDLEUSDT": [
     {
-      "timestamp": "2026-08-13 04:00:14",
-      "price": 0.07497,
-      "score": 50,
-      "rsi": 66.52,
+      "timestamp": "2026-08-13 04:02:14",
+      "price": 1.332,
+      "score": 65,
+      "rsi": 54.72,
       "macd": "Neutral",
       "volume_surge": 0.0,
       "wyckoff": "Sin patron",
