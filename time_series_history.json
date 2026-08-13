@@ -1,10 +1,49 @@
 {
-  "NXPCUSDT": [
+  "CHIPUSDT": [
     {
-      "timestamp": "2026-08-12 19:40:25",
-      "price": 0.1851,
+      "timestamp": "2026-08-12 19:42:25",
+      "price": 0.02296,
+      "score": 15,
+      "rsi": 39.84,
+      "macd": "Neutral",
+      "volume_surge": 0.45,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-12 19:42:25",
+      "price": 2.25e-06,
+      "score": 50,
+      "rsi": 50.36,
+      "macd": "Neutral",
+      "volume_surge": 1.45,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ASTERUSDT": [
+    {
+      "timestamp": "2026-08-12 19:42:25",
+      "price": 0.603,
+      "score": 65,
+      "rsi": 52.83,
+      "macd": "Neutral",
+      "volume_surge": 0.64,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-12 19:42:25",
+      "price": 0.0858,
       "score": 40,
-      "rsi": 21.26,
+      "rsi": 22.61,
       "macd": "Neutral",
       "volume_surge": 0.29,
       "wyckoff": "Sin patron",
@@ -116,7 +155,7 @@
       "fear_greed": 50
     }
   ],
-  "JTOUSDT": [
+  "PLUMEUSDT": [
     {
       "timestamp": "2026-08-13 00:42:10",
       "price": 0.5811,
