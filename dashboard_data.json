@@ -4,7 +4,7 @@
   "usdt_free": 0.0,
   "bnb_free": 0.00367447,
   "bnb_usd": 2.24,
-  "status": "🔵 En Vivo LONG (MORPHOUSDT @ $1.9540)",
+  "status": "🔵 En Vivo LONG (MORPHOUSDT @ $1.9530)",
   "position": {
     "symbol": "MORPHOUSDT",
     "quantity": 8.17,
@@ -13,7 +13,7 @@
     "cost_usd": 15.96,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 1,
+    "holding_cycles": 2,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -40,26 +40,26 @@
       {
         "symbol": "LINKUSDT",
         "score": 75,
-        "price": 8.826,
-        "rsi_2m": 63.39,
-        "rsi_5m": 63.39,
-        "rsi_15m": 63.39,
+        "price": 0.055,
+        "rsi_2m": 56.82,
+        "rsi_5m": 56.82,
+        "rsi_15m": 56.82,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.13,
+        "vol_surge": 3.99,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
       {
         "symbol": "TAOUSDT",
         "score": 75,
-        "price": 203.6,
-        "rsi_2m": 65.03,
-        "rsi_5m": 65.03,
-        "rsi_15m": 65.03,
+        "price": 203.2,
+        "rsi_2m": 63.47,
+        "rsi_5m": 63.47,
+        "rsi_15m": 63.47,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 2.83,
+        "vol_surge": 3.05,
         "trade_quality": "B",
         "macro_trend": "NEUTRAL"
       },
@@ -72,7 +72,7 @@
         "rsi_15m": 57.5,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.41,
+        "vol_surge": 0.44,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
