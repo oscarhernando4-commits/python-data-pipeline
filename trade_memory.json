@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3440,
+    "total_trades": 3441,
     "wins": 605,
-    "losses": 2835,
-    "win_rate_pct": 17.59,
-    "total_pnl_usd": 99979.17989545487
+    "losses": 2836,
+    "win_rate_pct": 17.58,
+    "total_pnl_usd": 99979.12989545487
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 08:18:22",
-      "account_id": "SIM-046",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ATOMUSDT",
-      "side": "LONG",
-      "entry_price": 1.433,
-      "exit_price": 1.42,
-      "pnl_usd": -0.28,
-      "result": "LOSS",
-      "notes": "Hit SL on ATOMUSDT (-$0.28). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 37.3,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 08:50:23",
       "account_id": "SIM-039",
@@ -8272,6 +8255,19 @@
         "rsi_15m": 27.44,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-13 16:42:21",
+      "account_id": "SIM-093",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DASHUSDT",
+      "side": "SHORT",
+      "entry_price": 30.31,
+      "exit_price": 30.31,
+      "pnl_usd": -0.05,
+      "result": "LOSS",
+      "notes": "Hit SL on DASHUSDT (-$0.05). Re-Trading!",
+      "context": {}
     }
   ]
 }
