@@ -2321,3 +2321,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-31.09%)`, `2026-01-24 (-22.18%)`, `2024-12-08 (-19.24%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: TSMBUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2026-07-15` hasta `2026-08-13` (30 Días de Historial)
+- 💵 **Precio Actual:** `$429.9000 USD`
+- 📈 **Máximo Histórico (ATH):** `$432.9100 USD` (`2026-08-12`) | Distancia: `-0.7%`
+- 📉 **Mínimo Histórico (ATL):** `$368.7900 USD` (`2026-07-29`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-07-30 (+10.03%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `Sin días < -10%`
+
+---
