@@ -1,5 +1,5 @@
 {
-  "GALAUSDT": [
+  "DASHUSDT": [
     {
       "timestamp": "2026-08-13 14:36:18",
       "price": 0.001675,
@@ -33,6 +33,45 @@
       "rsi": 36.48,
       "macd": "Neutral",
       "volume_surge": 0.4,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-13 14:38:21",
+      "price": 0.1237,
+      "score": 65,
+      "rsi": 58.97,
+      "macd": "Neutral",
+      "volume_surge": 0.13,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BONKUSDT": [
+    {
+      "timestamp": "2026-08-13 14:38:21",
+      "price": 2.33e-06,
+      "score": 15,
+      "rsi": 47.58,
+      "macd": "Neutral",
+      "volume_surge": 0.25,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CFXUSDT": [
+    {
+      "timestamp": "2026-08-13 14:38:21",
+      "price": 0.04117,
+      "score": 65,
+      "rsi": 53.37,
+      "macd": "Neutral",
+      "volume_surge": 0.76,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
