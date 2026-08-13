@@ -1,12 +1,38 @@
 {
-  "PENDLEUSDT": [
+  "LDOUSDT": [
     {
-      "timestamp": "2026-08-13 13:06:10",
-      "price": 1.346,
-      "score": 25,
-      "rsi": 48.34,
+      "timestamp": "2026-08-13 13:08:11",
+      "price": 0.2955,
+      "score": 75,
+      "rsi": 64.92,
       "macd": "Neutral",
-      "volume_surge": 1.57,
+      "volume_surge": 0.54,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "IMXUSDT": [
+    {
+      "timestamp": "2026-08-13 13:08:12",
+      "price": 0.1099,
+      "score": 65,
+      "rsi": 52.88,
+      "macd": "Neutral",
+      "volume_surge": 1.05,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "MOVRUSDT": [
+    {
+      "timestamp": "2026-08-13 13:08:12",
+      "price": 0.844,
+      "score": 50,
+      "rsi": 61.32,
+      "macd": "Neutral",
+      "volume_surge": 0.49,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
