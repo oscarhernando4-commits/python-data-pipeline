@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-13 16:32:22",
+  "timestamp": "2026-08-13 16:34:23",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de distribución institucional agresiva con una falta crítica de activos que cumplan con los criterios de fuerza relativa y soporte de ballenas. Se prioriza la preservación de capital sobre la especulación en activos de baja convicción.",
+  "reasoning": "Tras analizar los candidatos, ninguno cumple con el umbral de convicción A+ (Score >= 55) ni con la confirmación de soporte institucional necesaria en el libro de órdenes. El entorno macro es de alta incertidumbre y capitulación, por lo que la estrategia óptima es la preservación total de capital en liquidez (USDT) hasta que el mercado muestre una estructura alcista clara.",
   "top_candidates": [
     {
       "symbol": "QNTUSDT",
@@ -28,7 +28,7 @@
       "rsi_15m": 57.93,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.05,
+      "vol_surge": 0.31,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -159,6 +159,32 @@
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.2,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "MMTUSDT",
+      "score": 45,
+      "price": 0.1703,
+      "rsi_2m": 50.87,
+      "rsi_5m": 50.87,
+      "rsi_15m": 50.87,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 1.79,
+      "trade_quality": "A+",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "NEXOUSDT",
+      "score": 45,
+      "price": 0.725,
+      "rsi_2m": 56.62,
+      "rsi_5m": 56.62,
+      "rsi_15m": 56.62,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.1,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
