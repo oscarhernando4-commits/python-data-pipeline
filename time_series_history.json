@@ -1,12 +1,51 @@
 {
-  "BOMEUSDT": [
+  "ROBOUSDT": [
     {
-      "timestamp": "2026-08-13 12:46:10",
-      "price": 0.0007645,
+      "timestamp": "2026-08-13 12:48:10",
+      "price": 0.01314,
       "score": 0,
-      "rsi": 36.33,
+      "rsi": 43.47,
       "macd": "Neutral",
-      "volume_surge": 0.02,
+      "volume_surge": 0.06,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-13 12:48:10",
+      "price": 0.0862,
+      "score": 0,
+      "rsi": 42.9,
+      "macd": "Neutral",
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "MOVRUSDT": [
+    {
+      "timestamp": "2026-08-13 12:48:10",
+      "price": 0.854,
+      "score": 25,
+      "rsi": 70.34,
+      "macd": "Neutral",
+      "volume_surge": 0.35,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "IMXUSDT": [
+    {
+      "timestamp": "2026-08-13 12:48:10",
+      "price": 0.1098,
+      "score": 35,
+      "rsi": 49.93,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
