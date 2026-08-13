@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3550,
+    "total_trades": 3553,
     "wins": 611,
-    "losses": 2939,
-    "win_rate_pct": 17.21,
-    "total_pnl_usd": 798687.4498954529
+    "losses": 2942,
+    "win_rate_pct": 17.2,
+    "total_pnl_usd": 798687.2698954528
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ATMUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on INJUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on DODOUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on EPICUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SAGAUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DASHUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ATMUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ATMUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SCRTUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ONEUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 17:20:28",
-      "account_id": "SIM-076",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "NEXOUSDT",
-      "side": "SHORT",
-      "entry_price": 0.718,
-      "exit_price": 0.725,
-      "pnl_usd": -0.21,
-      "result": "LOSS",
-      "notes": "Hit SL on NEXOUSDT (-$0.21). Re-Trading!",
-      "context": {
-        "score": 50,
-        "rsi_15m": 62.96,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 17:20:28",
-      "account_id": "SIM-088",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "NEXOUSDT",
-      "side": "SHORT",
-      "entry_price": 0.718,
-      "exit_price": 0.725,
-      "pnl_usd": -0.2,
-      "result": "LOSS",
-      "notes": "Hit SL on NEXOUSDT (-$0.20). Re-Trading!",
-      "context": {
-        "score": 50,
-        "rsi_15m": 62.96,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 12:54:47",
-      "account_id": "SIM-093",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "SAGAUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01378,
-      "exit_price": 0.01439,
-      "pnl_usd": -0.84,
-      "result": "LOSS",
-      "notes": "Hit SL on SAGAUSDT (-$0.84). Re-Trading!",
-      "context": {
-        "score": 5,
-        "rsi_15m": 68.9,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 12:54:47",
       "account_id": "SIM-097",
@@ -8198,6 +8147,57 @@
       "context": {
         "score": 65,
         "rsi_15m": 56.17,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 23:00:24",
+      "account_id": "SIM-071",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SCRTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.037,
+      "exit_price": 0.037,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on SCRTUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 69.71,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 23:00:24",
+      "account_id": "SIM-073",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SCRTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.037,
+      "exit_price": 0.037,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on SCRTUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 69.71,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 23:00:24",
+      "account_id": "SIM-080",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SCRTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.037,
+      "exit_price": 0.037,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on SCRTUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 69.71,
         "macro_trend_4h": "NEUTRAL"
       }
     }
