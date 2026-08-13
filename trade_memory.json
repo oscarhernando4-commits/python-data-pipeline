@@ -1,15 +1,13 @@
 {
   "stats": {
-    "total_trades": 3327,
+    "total_trades": 3329,
     "wins": 592,
-    "losses": 2735,
-    "win_rate_pct": 17.79,
-    "total_pnl_usd": 101154.5798954549
+    "losses": 2737,
+    "win_rate_pct": 17.78,
+    "total_pnl_usd": 101154.1398954549
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONEUSDT)",
-      "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NIGHTUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ONEUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HOMEUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ATMUSDT)",
@@ -27,7 +25,9 @@
       "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MUBARAKUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHFIUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on COTIUSDT)",
-      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ATOMUSDT)"
+      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ATOMUSDT)",
+      "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GPSUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on GIGGLEUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BANKUSDT)",
@@ -53,36 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-11 21:26:36",
-      "account_id": "SIM-049",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "PENGUUSDT",
-      "side": "LONG",
-      "entry_price": 0.006283,
-      "exit_price": 0.006283,
-      "pnl_usd": -0.07,
-      "result": "LOSS",
-      "notes": "Hit SL on PENGUUSDT (-$0.07). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-11 21:26:36",
-      "account_id": "SIM-064",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "COOKIEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0132,
-      "exit_price": 0.0132,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on COOKIEUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 42.17,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-11 21:26:36",
       "account_id": "SIM-085",
@@ -8310,6 +8280,40 @@
       "context": {
         "score": 20,
         "rsi_15m": 68.5,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 12:02:38",
+      "account_id": "SIM-041",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "GPSUSDT",
+      "side": "LONG",
+      "entry_price": 0.01108,
+      "exit_price": 0.01104,
+      "pnl_usd": -0.19,
+      "result": "LOSS",
+      "notes": "Hit SL on GPSUSDT (-$0.19). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 76.55,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 12:02:38",
+      "account_id": "SIM-076",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GIGGLEUSDT",
+      "side": "SHORT",
+      "entry_price": 33.98,
+      "exit_price": 34.37,
+      "pnl_usd": -0.25,
+      "result": "LOSS",
+      "notes": "Hit SL on GIGGLEUSDT (-$0.25). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 47.09,
         "macro_trend_4h": "NEUTRAL"
       }
     }
