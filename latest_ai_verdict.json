@@ -152,13 +152,13 @@
     {
       "symbol": "VIRTUALUSDT",
       "score": 65,
-      "price": 0.5803,
-      "rsi_2m": 62.42,
-      "rsi_5m": 62.42,
-      "rsi_15m": 62.42,
+      "price": 0.5804,
+      "rsi_2m": 62.62,
+      "rsi_5m": 62.62,
+      "rsi_15m": 62.62,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.0,
+      "vol_surge": 0.16,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -171,7 +171,20 @@
       "rsi_15m": 60.87,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.01,
+      "vol_surge": 0.36,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "ATUSDT",
+      "score": 65,
+      "price": 0.155,
+      "rsi_2m": 55.79,
+      "rsi_5m": 55.79,
+      "rsi_15m": 55.79,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.0,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
