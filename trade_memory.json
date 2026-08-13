@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3518,
+    "total_trades": 3519,
     "wins": 608,
-    "losses": 2910,
+    "losses": 2911,
     "win_rate_pct": 17.28,
-    "total_pnl_usd": 798690.7498954537
+    "total_pnl_usd": 798689.4698954537
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 16:28:28",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ATMUSDT",
-      "side": "SHORT",
-      "entry_price": 1.58,
-      "exit_price": 1.582,
-      "pnl_usd": -0.05,
-      "result": "LOSS",
-      "notes": "Hit SL on ATMUSDT (-$0.05). Re-Trading!",
-      "context": {
-        "score": 45,
-        "rsi_15m": 62.41,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 16:28:28",
       "account_id": "SIM-082",
@@ -8206,6 +8189,23 @@
       "context": {
         "score": 0,
         "rsi_15m": 40.45,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 21:00:33",
+      "account_id": "SIM-071",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EDENUSDT",
+      "side": "SHORT",
+      "entry_price": 0.06137,
+      "exit_price": 0.065,
+      "pnl_usd": -1.28,
+      "result": "LOSS",
+      "notes": "Hit SL on EDENUSDT (-$1.28). Re-Trading!",
+      "context": {
+        "score": 10,
+        "rsi_15m": 81.81,
         "macro_trend_4h": "NEUTRAL"
       }
     }
