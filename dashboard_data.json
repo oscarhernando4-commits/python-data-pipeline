@@ -4,16 +4,16 @@
   "usdt_free": 0.0,
   "bnb_free": 0.00367447,
   "bnb_usd": 2.24,
-  "status": "🔵 En Vivo LONG (MORPHOUSDT @ $1.9510)",
+  "status": "🔵 En Vivo LONG (MORPHOUSDT @ $1.9500)",
   "position": {
     "symbol": "MORPHOUSDT",
     "quantity": 8.17,
     "entry_price": 1.957,
     "highest_price": 1.957,
-    "cost_usd": 15.94,
+    "cost_usd": 15.93,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 6,
+    "holding_cycles": 7,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -151,6 +151,32 @@
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 0.61,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "AVAXUSDT",
+        "score": 65,
+        "price": 6.432,
+        "rsi_2m": 47.31,
+        "rsi_5m": 47.31,
+        "rsi_15m": 47.31,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.14,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "XRPUSDT",
+        "score": 65,
+        "price": 1.01,
+        "rsi_2m": 58.51,
+        "rsi_5m": 58.51,
+        "rsi_15m": 58.51,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.09,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }
