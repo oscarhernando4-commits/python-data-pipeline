@@ -245,7 +245,7 @@ def analyze_multi_timeframe_candles(symbol):
     vwap_lower_band = vwap_15m - (1.5 * vwap_std)
     is_vwap_floor_rebound = (closes_15m[-1] <= vwap_lower_band) or (closes_15m[-1] < vwap_15m and (float(klines_15m[-1][3]) <= vwap_lower_band))
 
-    # Calculate SuperTrend (10, 3) Pattern Indicator (As shown in Binance Charts)
+    # Calculate SuperTrend (10, 3) Pattern Indicator on 15m, 1h, and 4h (As requested by user)
     is_supertrend_bullish = False
     if len(klines_15m) >= 10:
         atr_10 = sum(max(float(k[2]) - float(k[3]), abs(float(k[2]) - float(klines_15m[i-1][4])), abs(float(k[3]) - float(klines_15m[i-1][4]))) for i, k in enumerate(klines_15m[-10:], start=len(klines_15m)-10)) / 10.0
@@ -253,7 +253,28 @@ def analyze_multi_timeframe_candles(symbol):
         st_lower = hl2 - (3.0 * atr_10)
         is_supertrend_bullish = closes_15m[-1] > st_lower and closes_15m[-1] > ma7_15m
 
-    # Multi-Timeframe Alignment Score (0 to 100) including MA7/MA25 & MA25/MA99 Intersect Bonus & Veto
+    # 1H & 4H SuperTrend (10,3) & Yellow Arrow (MA7/MA25) Indicators
+    is_supertrend_1h_bullish = False
+    ma7_1h = sum(closes_1h[-7:]) / len(closes_1h[-7:]) if len(closes_1h) >= 7 else closes_1h[-1]
+    ma25_1h = sum(closes_1h[-25:]) / len(closes_1h[-25:]) if len(closes_1h) >= 25 else closes_1h[-1]
+    is_yellow_arrow_1h = (closes_1h[-1] >= ma7_1h) and (ma7_1h >= ma25_1h)
+    if len(klines_1h) >= 10:
+        atr_1h_10 = sum(max(float(k[2]) - float(k[3]), abs(float(k[2]) - float(klines_1h[i-1][4])), abs(float(k[3]) - float(klines_1h[i-1][4]))) for i, k in enumerate(klines_1h[-10:], start=len(klines_1h)-10)) / 10.0
+        hl2_1h = (float(klines_1h[-1][2]) + float(klines_1h[-1][3])) / 2.0
+        st_lower_1h = hl2_1h - (3.0 * atr_1h_10)
+        is_supertrend_1h_bullish = closes_1h[-1] > st_lower_1h
+
+    is_supertrend_4h_bullish = False
+    ma7_4h = sum(closes_4h[-7:]) / len(closes_4h[-7:]) if len(closes_4h) >= 7 else closes_4h[-1]
+    ma25_4h = sum(closes_4h[-25:]) / len(closes_4h[-25:]) if len(closes_4h) >= 25 else closes_4h[-1]
+    is_yellow_arrow_4h = (closes_4h[-1] >= ma7_4h) and (ma7_4h >= ma25_4h)
+    if len(klines_4h) >= 10:
+        atr_4h_10 = sum(max(float(k[2]) - float(k[3]), abs(float(k[2]) - float(klines_4h[i-1][4])), abs(float(k[3]) - float(klines_4h[i-1][4]))) for i, k in enumerate(klines_4h[-10:], start=len(klines_4h)-10)) / 10.0
+        hl2_4h = (float(klines_4h[-1][2]) + float(klines_4h[-1][3])) / 2.0
+        st_lower_4h = hl2_4h - (3.0 * atr_4h_10)
+        is_supertrend_4h_bullish = closes_4h[-1] > st_lower_4h
+
+    # Multi-Timeframe Alignment Score (0 to 100) including 15m, 1H and 4H SuperTrend & Yellow Arrow Bonus
     score_components = [
         tf_2m_up * 10,
         tf_5m_up * 20,
@@ -265,7 +286,10 @@ def analyze_multi_timeframe_candles(symbol):
         15 if is_vwap_floor_rebound else 0,
         10 if is_supertrend_bullish else 0,
         20 if is_ma25_above_ma99_upward else 0,
-        25 if is_ma7_above_ma25_upward else 0
+        25 if is_ma7_above_ma25_upward else 0,
+        15 if is_supertrend_1h_bullish else 0,
+        15 if is_supertrend_4h_bullish else 0,
+        15 if (is_yellow_arrow_1h or is_yellow_arrow_4h) else 0
     ]
     multi_tf_score = min(100, sum(score_components))
     
@@ -315,9 +339,10 @@ def analyze_multi_timeframe_candles(symbol):
     avg_vol_15m = sum(vols_15m[-5:]) / len(vols_15m[-5:]) if len(vols_15m) >= 5 else 1.0
     vol_surge_15m = round(vols_15m[-1] / avg_vol_15m, 2) if avg_vol_15m > 0 else 1.0
 
-    st_status = "🟢 SUPERTREND (10,3) VERDE ALCISTA" if is_supertrend_bullish else "🔴 SUPERTREND ROJO"
+    st_status = "🟢 SUPERTREND 15M/1H/4H VERDE ALCISTA" if (is_supertrend_bullish and is_supertrend_1h_bullish and is_supertrend_4h_bullish) else ("🟢 SUPERTREND 15M VERDE" if is_supertrend_bullish else "🔴 SUPERTREND ROJO")
     vwap_status = "🟢 REBOTE PISO VWAP (-1.5 StdDev)" if is_vwap_floor_rebound else "⚪ NORMAL VWAP"
     ma99_status = "🚀 CRUCE ALCISTA MA25/MA99 (PULSO HACIA ARRIBA)" if is_ma25_above_ma99_upward else "⚪ NORMAL MA99"
+    yellow_arrow_macro = f" | 🎯 FLECHAS AMARILLAS MACRO 1H/4H" if (is_yellow_arrow_1h or is_yellow_arrow_4h) else ""
 
     pattern_15m_summary = (
         f"RSI Triggers: 2m={rsi_2m} | 5m={rsi_5m} || Contexto Medio: 15m={rsi_15m} || Contexto Macro: 1h={rsi_1h} | 4h={rsi_4h} | "
@@ -325,7 +350,7 @@ def analyze_multi_timeframe_candles(symbol):
         f"Precio 15m=${closes_15m[-1]:.4f} | MA7_15m=${ma7_15m:.4f} (Distancia: {dist_from_15m_ma7_pct:+.2f}%) | "
         f"MA25_15m=${ma25_15m:.4f} | MA99_15m=${ma99_15m:.4f} | {ma99_status} | {st_status} | {vwap_status} | "
         f"Fase 15m={'RUPTURA_FRESCA (INICIO)' if 0.0 <= dist_from_15m_ma7_pct <= 3.0 else 'SOBRE_EXTENDIDO (CIMA)'} | "
-        f"Patrón={yellow_arrow_status} | VolSurge 15m={vol_surge_15m}x"
+        f"Patrón={yellow_arrow_status}{yellow_arrow_macro} | VolSurge 15m={vol_surge_15m}x"
     )
 
     return {
@@ -336,7 +361,11 @@ def analyze_multi_timeframe_candles(symbol):
         "is_overextended_15m": is_overextended_15m,
         "overextension_reason": overextension_reason,
         "is_yellow_arrow_pivot": is_yellow_arrow_pivot,
+        "is_yellow_arrow_1h": is_yellow_arrow_1h,
+        "is_yellow_arrow_4h": is_yellow_arrow_4h,
         "is_supertrend_bullish": is_supertrend_bullish,
+        "is_supertrend_1h_bullish": is_supertrend_1h_bullish,
+        "is_supertrend_4h_bullish": is_supertrend_4h_bullish,
         "is_vwap_floor_rebound": is_vwap_floor_rebound,
         "is_ma25_above_ma99_upward": is_ma25_above_ma99_upward,
         "pct_b_15m": round(pct_b, 2),
