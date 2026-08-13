@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-13 15:36:19",
+  "timestamp": "2026-08-13 15:38:27",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en un estado de distribución y alta aversión al riesgo. Ninguno de los candidatos analizados alcanza el umbral de calidad A+ requerido por el comité, por lo que la estrategia óptima es mantener la liquidez en efectivo para evitar la exposición a activos débiles.",
+  "reasoning": "El comité ha determinado por consenso unánime que el entorno actual de mercado es de alta incertidumbre y riesgo sistémico. Ningún activo cumple con los criterios estrictos de Score Técnico, soporte de liquidez y convicción institucional necesarios para una ejecución segura. Se prioriza la preservación del capital sobre la especulación en un mercado con sesgo bajista.",
   "top_candidates": [
     {
       "symbol": "RENDERUSDT",
@@ -15,7 +15,46 @@
       "rsi_15m": 58.53,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.52,
+      "vol_surge": 0.54,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "ZAMAUSDT",
+      "score": 60,
+      "price": 0.04767,
+      "rsi_2m": 56.53,
+      "rsi_5m": 56.53,
+      "rsi_15m": 56.53,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.6,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "MUBARAKUSDT",
+      "score": 55,
+      "price": 0.01704,
+      "rsi_2m": 31.54,
+      "rsi_5m": 31.54,
+      "rsi_15m": 31.54,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 0.43,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "HBARUSDT",
+      "score": 55,
+      "price": 0.06667,
+      "rsi_2m": 58.51,
+      "rsi_5m": 58.51,
+      "rsi_15m": 58.51,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 1.88,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -80,7 +119,20 @@
       "rsi_15m": 51.24,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.17,
+      "vol_surge": 0.18,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "score": 50,
+      "price": 0.4639,
+      "rsi_2m": 62.71,
+      "rsi_5m": 62.71,
+      "rsi_15m": 62.71,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 1.26,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -106,7 +158,7 @@
       "rsi_15m": 54.77,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 0.13,
+      "vol_surge": 0.14,
       "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     },
@@ -121,58 +173,6 @@
       "rsi_4h": 50.0,
       "vol_surge": 0.04,
       "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "JTOUSDT",
-      "score": 50,
-      "price": 0.559,
-      "rsi_2m": 48.79,
-      "rsi_5m": 48.79,
-      "rsi_15m": 48.79,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 1.43,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "BOMEUSDT",
-      "score": 50,
-      "price": 0.0007769,
-      "rsi_2m": 51.49,
-      "rsi_5m": 51.49,
-      "rsi_15m": 51.49,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.21,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "HBARUSDT",
-      "score": 45,
-      "price": 0.06673,
-      "rsi_2m": 61.49,
-      "rsi_5m": 61.49,
-      "rsi_15m": 61.49,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 1.21,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "WLFIUSDT",
-      "score": 50,
-      "price": 0.055,
-      "rsi_2m": 53.71,
-      "rsi_5m": 53.71,
-      "rsi_15m": 53.71,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.69,
-      "trade_quality": "B",
       "macro_trend": "NEUTRAL"
     }
   ]
