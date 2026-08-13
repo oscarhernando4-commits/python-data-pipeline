@@ -22,10 +22,10 @@
     {
       "symbol": "ZECUSDT",
       "score": 85,
-      "price": 495.74,
-      "rsi_2m": 62.84,
-      "rsi_5m": 62.84,
-      "rsi_15m": 62.84,
+      "price": 495.26,
+      "rsi_2m": 61.89,
+      "rsi_5m": 61.89,
+      "rsi_15m": 61.89,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 2.32,
@@ -93,8 +93,47 @@
       "rsi_15m": 59.65,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
-      "vol_surge": 2.06,
+      "vol_surge": 2.18,
       "trade_quality": "B",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "SOXLBUSDT",
+      "score": 75,
+      "price": 144.63,
+      "rsi_2m": 61.98,
+      "rsi_5m": 61.98,
+      "rsi_15m": 61.98,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 2.11,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "score": 75,
+      "price": 1.993,
+      "rsi_2m": 58.2,
+      "rsi_5m": 58.2,
+      "rsi_15m": 58.2,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 1.15,
+      "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "GNOUSDT",
+      "score": 75,
+      "price": 103.81,
+      "rsi_2m": 46.33,
+      "rsi_5m": 46.33,
+      "rsi_15m": 46.33,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 2.01,
+      "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
   ]
