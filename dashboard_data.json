@@ -4,7 +4,7 @@
   "usdt_free": 0.1634,
   "bnb_free": 0.00365481,
   "bnb_usd": 2.23,
-  "status": "🔵 En Vivo LONG (MORPHOUSDT @ $1.9590)",
+  "status": "🔵 En Vivo LONG (MORPHOUSDT @ $1.9600)",
   "position": {
     "symbol": "MORPHOUSDT",
     "quantity": 8.17,
@@ -13,7 +13,7 @@
     "cost_usd": 16.01,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 85,
+    "holding_cycles": 86,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -72,7 +72,33 @@
         "rsi_15m": 51.12,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.27,
+        "vol_surge": 0.0,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "AVNTUSDT",
+        "score": 65,
+        "price": 0.1109,
+        "rsi_2m": 57.36,
+        "rsi_5m": 57.36,
+        "rsi_15m": 57.36,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.01,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ENAUSDT",
+        "score": 65,
+        "price": 0.0855,
+        "rsi_2m": 53.19,
+        "rsi_5m": 53.19,
+        "rsi_15m": 53.19,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.08,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
