@@ -13,7 +13,7 @@
     "cost_usd": 16.0,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 283,
+    "holding_cycles": 284,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -25,12 +25,12 @@
     "reasoning": "El comité ha determinado que el mercado actual carece de la convicción institucional necesaria para operar. Ningún activo cumple con los criterios de riesgo A+ y la alta probabilidad de pérdidas basada en el historial de simulaciones obliga a mantener una postura defensiva total.",
     "top_candidates": [
       {
-        "symbol": "QNTUSDT",
+        "symbol": "2ZUSDT",
         "score": 60,
-        "price": 58.51,
-        "rsi_2m": 59.78,
-        "rsi_5m": 59.78,
-        "rsi_15m": 59.78,
+        "price": 0.04859,
+        "rsi_2m": 62.93,
+        "rsi_5m": 62.93,
+        "rsi_15m": 62.93,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 1.32,
@@ -90,7 +90,7 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "WLFIUSDT",
+        "symbol": "TRXUSDT",
         "score": 50,
         "price": 0.055,
         "rsi_2m": 53.68,
