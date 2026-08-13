@@ -1398,5 +1398,145 @@
         "macro_trend": "NEUTRAL"
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-13 09:11:55",
+    "selected_symbol": "FETUSDT",
+    "action": "BUY_LONG",
+    "approved": true,
+    "confidence": 75,
+    "reasoning": "Tras analizar el entorno de 'Acumulación Selectiva', el comité ha determinado que FET es el único activo que combina un score técnico superior (85), soporte de liquidez en el libro de órdenes (58.1%) y pertenencia al sector líder (AI), cumpliendo estrictamente con la política de riesgo A+.",
+    "top_candidates": [
+      {
+        "symbol": "GOOGLBUSDT",
+        "score": 85,
+        "price": 347.11,
+        "rsi_2m": 64.8,
+        "rsi_5m": 64.8,
+        "rsi_15m": 64.8,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 3.23,
+        "trade_quality": "A+",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "FETUSDT",
+        "score": 85,
+        "price": 0.1361,
+        "rsi_2m": 62.09,
+        "rsi_5m": 62.09,
+        "rsi_15m": 62.09,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 3.7,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "SUIUSDT",
+        "score": 75,
+        "price": 0.6913,
+        "rsi_2m": 60.01,
+        "rsi_5m": 60.01,
+        "rsi_15m": 60.01,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.3,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "TAOUSDT",
+        "score": 75,
+        "price": 201.2,
+        "rsi_2m": 63.79,
+        "rsi_5m": 63.79,
+        "rsi_15m": 63.79,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.45,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ADAUSDT",
+        "score": 75,
+        "price": 0.1846,
+        "rsi_2m": 54.85,
+        "rsi_5m": 54.85,
+        "rsi_15m": 54.85,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.58,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ONDOUSDT",
+        "score": 75,
+        "price": 0.3358,
+        "rsi_2m": 58.38,
+        "rsi_5m": 58.38,
+        "rsi_15m": 58.38,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.69,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ARBUSDT",
+        "score": 75,
+        "price": 0.0756,
+        "rsi_2m": 63.29,
+        "rsi_5m": 63.29,
+        "rsi_15m": 63.29,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.61,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "RENDERUSDT",
+        "score": 75,
+        "price": 1.272,
+        "rsi_2m": 57.41,
+        "rsi_5m": 57.41,
+        "rsi_15m": 57.41,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.56,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "LSKUSDT",
+        "score": 75,
+        "price": 0.0785,
+        "rsi_2m": 51.59,
+        "rsi_5m": 51.59,
+        "rsi_15m": 51.59,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.94,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "HBARUSDT",
+        "score": 75,
+        "price": 0.06647,
+        "rsi_2m": 54.87,
+        "rsi_5m": 54.87,
+        "rsi_15m": 54.87,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.36,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      }
+    ]
   }
 ]
