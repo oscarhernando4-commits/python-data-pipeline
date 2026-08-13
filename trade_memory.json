@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3538,
+    "total_trades": 3541,
     "wins": 608,
-    "losses": 2930,
-    "win_rate_pct": 17.18,
-    "total_pnl_usd": 798686.2298954533
+    "losses": 2933,
+    "win_rate_pct": 17.17,
+    "total_pnl_usd": 798686.0498954532
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,49 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 17:06:28",
-      "account_id": "SIM-023",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "MITOUSDT",
-      "side": "LONG",
-      "entry_price": 0.02364,
-      "exit_price": 0.02364,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on MITOUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-12 17:06:28",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "MITOUSDT",
-      "side": "LONG",
-      "entry_price": 0.02364,
-      "exit_price": 0.02364,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on MITOUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-12 17:08:33",
-      "account_id": "SIM-038",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "COTIUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01058,
-      "exit_price": 0.01115,
-      "pnl_usd": -1.07,
-      "result": "LOSS",
-      "notes": "Hit SL on COTIUSDT (-$1.07). Re-Trading!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 90.06,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 17:08:33",
       "account_id": "SIM-039",
@@ -8204,6 +8161,57 @@
       "result": "LOSS",
       "notes": "Hit SL on SAGAUSDT (-$0.06). Re-Trading!",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-13 17:21:01",
+      "account_id": "SIM-031",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "EDENUSDT",
+      "side": "SHORT",
+      "entry_price": 0.07184,
+      "exit_price": 0.07163,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on EDENUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 81.08,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 17:21:01",
+      "account_id": "SIM-032",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "EDENUSDT",
+      "side": "SHORT",
+      "entry_price": 0.07184,
+      "exit_price": 0.07163,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on EDENUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 81.08,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 17:21:01",
+      "account_id": "SIM-033",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "EDENUSDT",
+      "side": "SHORT",
+      "entry_price": 0.07184,
+      "exit_price": 0.07163,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on EDENUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 81.08,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
