@@ -40,12 +40,38 @@
   ],
   "SAGAUSDT": [
     {
-      "timestamp": "2026-08-13 10:22:23",
-      "price": 0.01375,
-      "score": 30,
-      "rsi": 45.09,
+      "timestamp": "2026-08-13 10:24:20",
+      "price": 0.01377,
+      "score": 65,
+      "rsi": 48.17,
       "macd": "Neutral",
-      "volume_surge": 0.32,
+      "volume_surge": 0.34,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CHIPUSDT": [
+    {
+      "timestamp": "2026-08-13 10:24:20",
+      "price": 0.02275,
+      "score": 15,
+      "rsi": 38.59,
+      "macd": "Neutral",
+      "volume_surge": 0.46,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "TLMUSDT": [
+    {
+      "timestamp": "2026-08-13 10:24:20",
+      "price": 0.001513,
+      "score": 40,
+      "rsi": 40.34,
+      "macd": "Neutral",
+      "volume_surge": 1.65,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
