@@ -293,8 +293,8 @@ def analyze_multi_timeframe_candles(symbol):
         rng = h24 - l24
         price_position_in_range = round(((closes_15m[-1] - l24) / rng) * 100.0, 1) if rng > 0 else 50.0
 
-    # 24h price change approximation
-    price_change_24h_pct = round(((closes_15m[-1] - d_closes[0]) / d_closes[0]) * 100.0, 2) if (d_closes and d_closes[0] > 0) else 0.0
+    # 24h price change approximation (using yesterday's close)
+    price_change_24h_pct = round(((closes_15m[-1] - d_closes[-2]) / d_closes[-2]) * 100.0, 2) if (len(d_closes) >= 2 and d_closes[-2] > 0) else 0.0
 
     is_falling_knife = (
         ma7_15m < ma25_15m and                  # MA7 below MA25 (bearish structure)
