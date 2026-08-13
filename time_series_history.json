@@ -17,7 +17,7 @@
       "timestamp": "2026-08-13 12:44:24",
       "price": 0.002057,
       "score": 30,
-      "rsi": 48.46,
+      "rsi": 48.2,
       "macd": "Neutral",
       "volume_surge": 0.82,
       "wyckoff": "Sin patron",
@@ -53,28 +53,68 @@
   ],
   "LITEBUSDT": [
     {
-      "timestamp": "2026-08-13 12:44:24",
-      "price": 913.42,
+      "timestamp": "2026-08-13 12:46:23",
+      "price": 912.29,
       "score": 0,
-      "rsi": 41.92,
+      "rsi": 40.95,
       "macd": "Neutral",
-      "volume_surge": 0.06,
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "MOVEUSDT": [
+  "NIGHTUSDT": [
     {
-      "timestamp": "2026-08-13 12:44:24",
-      "price": 0.0062,
-      "score": 0,
-      "rsi": 43.62,
+      "timestamp": "2026-08-13 12:46:23",
+      "price": 0.01707,
+      "score": 25,
+      "rsi": 27.27,
       "macd": "Neutral",
-      "volume_surge": 0.06,
+      "volume_surge": 0.03,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ZROUSDT": [
+    {
+      "timestamp": "2026-08-13 12:46:23",
+      "price": 0.799,
+      "score": 25,
+      "rsi": 31.15,
+      "macd": "Neutral",
+      "volume_surge": 0.5,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "MEGAUSDT": [
+    {
+      "timestamp": "2026-08-13 12:46:23",
+      "price": 0.03257,
+      "score": 25,
+      "rsi": 31.54,
+      "macd": "Neutral",
+      "volume_surge": 0.05,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GALAUSDT": [
+    {
+      "timestamp": "2026-08-13 12:46:23",
+      "price": 0.001662,
+      "score": 0,
+      "rsi": 43.98,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
+}
 }
