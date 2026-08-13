@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3406,
+    "total_trades": 3407,
     "wins": 602,
-    "losses": 2804,
+    "losses": 2805,
     "win_rate_pct": 17.67,
-    "total_pnl_usd": 101140.48989545487
+    "total_pnl_usd": 101140.41989545486
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 01:18:37",
-      "account_id": "SIM-037",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "PROMUSDT",
-      "side": "SHORT",
-      "entry_price": 0.2772,
-      "exit_price": 2.39,
-      "pnl_usd": -167.96,
-      "result": "LOSS",
-      "notes": "Hit SL on PROMUSDT (-$167.96). Re-Trading!",
-      "context": {
-        "score": 40,
-        "rsi_15m": 89.82,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 01:20:35",
       "account_id": "SIM-060",
@@ -8316,6 +8299,19 @@
         "rsi_15m": 50.87,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-13 15:28:18",
+      "account_id": "SIM-069",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "POLUSDT",
+      "side": "SHORT",
+      "entry_price": 0.07437,
+      "exit_price": 0.07437,
+      "pnl_usd": -0.07,
+      "result": "LOSS",
+      "notes": "Hit SL on POLUSDT (-$0.07). Re-Trading!",
+      "context": {}
     }
   ]
 }
