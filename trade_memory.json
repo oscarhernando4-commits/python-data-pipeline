@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3553,
+    "total_trades": 3554,
     "wins": 611,
-    "losses": 2942,
-    "win_rate_pct": 17.2,
-    "total_pnl_usd": 798687.2698954528
+    "losses": 2943,
+    "win_rate_pct": 17.19,
+    "total_pnl_usd": 798687.0398954528
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on INJUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on DODOUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on EPICUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GIGGLEUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DASHUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ATMUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SCRTUSDT)"
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SCRTUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on FETUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ONEUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 12:54:47",
-      "account_id": "SIM-097",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "SAGAUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01378,
-      "exit_price": 0.01439,
-      "pnl_usd": -0.84,
-      "result": "LOSS",
-      "notes": "Hit SL on SAGAUSDT (-$0.84). Re-Trading!",
-      "context": {
-        "score": 5,
-        "rsi_15m": 68.9,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 12:54:47",
       "account_id": "SIM-098",
@@ -8198,6 +8181,23 @@
       "context": {
         "score": 25,
         "rsi_15m": 69.71,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 23:02:32",
+      "account_id": "SIM-099",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "FETUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1344,
+      "exit_price": 0.1357,
+      "pnl_usd": -0.23,
+      "result": "LOSS",
+      "notes": "Hit SL on FETUSDT (-$0.23). Re-Trading!",
+      "context": {
+        "score": 85,
+        "rsi_15m": 63.89,
         "macro_trend_4h": "NEUTRAL"
       }
     }
