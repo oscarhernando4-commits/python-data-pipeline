@@ -1398,5 +1398,145 @@
         "macro_trend": "NEUTRAL"
       }
     ]
+  },
+  {
+    "timestamp": "2026-08-13 10:08:58",
+    "selected_symbol": "ZECUSDT",
+    "action": "BUY_LONG",
+    "approved": true,
+    "confidence": 72,
+    "reasoning": "ZECUSDT es el único candidato que combina un Score Técnico de 75/100 con una dominancia de Bids Compradores superior al 65%, cumpliendo estrictamente con los criterios de convicción A+ del comité para una entrada en largo.",
+    "top_candidates": [
+      {
+        "symbol": "ZECUSDT",
+        "score": 75,
+        "price": 494.86,
+        "rsi_2m": 56.24,
+        "rsi_5m": 56.24,
+        "rsi_15m": 56.24,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 2.14,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "AAVEUSDT",
+        "score": 75,
+        "price": 88.53,
+        "rsi_2m": 49.95,
+        "rsi_5m": 49.95,
+        "rsi_15m": 49.95,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.82,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "XLMUSDT",
+        "score": 75,
+        "price": 0.1609,
+        "rsi_2m": 53.85,
+        "rsi_5m": 53.85,
+        "rsi_15m": 53.85,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.47,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "TIAUSDT",
+        "score": 75,
+        "price": 0.3125,
+        "rsi_2m": 62.93,
+        "rsi_5m": 62.93,
+        "rsi_15m": 62.93,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.09,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "PENDLEUSDT",
+        "score": 75,
+        "price": 1.359,
+        "rsi_2m": 61.71,
+        "rsi_5m": 61.71,
+        "rsi_15m": 61.71,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.34,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "DASHUSDT",
+        "score": 75,
+        "price": 30.42,
+        "rsi_2m": 56.95,
+        "rsi_5m": 56.95,
+        "rsi_15m": 56.95,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.14,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "SAGAUSDT",
+        "score": 75,
+        "price": 0.0138,
+        "rsi_2m": 52.26,
+        "rsi_5m": 52.26,
+        "rsi_15m": 52.26,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.56,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "HBARUSDT",
+        "score": 75,
+        "price": 0.06665,
+        "rsi_2m": 59.78,
+        "rsi_5m": 59.78,
+        "rsi_15m": 59.78,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.98,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "FETUSDT",
+        "score": 70,
+        "price": 0.1358,
+        "rsi_2m": 52.65,
+        "rsi_5m": 52.65,
+        "rsi_15m": 52.65,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.65,
+        "trade_quality": "B",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "MUBARAKUSDT",
+        "score": 70,
+        "price": 0.01708,
+        "rsi_2m": 31.04,
+        "rsi_5m": 31.04,
+        "rsi_15m": 31.04,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.56,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      }
+    ]
   }
 ]
