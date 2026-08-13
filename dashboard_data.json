@@ -13,7 +13,7 @@
     "cost_usd": 15.96,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 66,
+    "holding_cycles": 67,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -25,15 +25,15 @@
     "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
     "top_candidates": [
       {
-        "symbol": "ARBUSDT",
+        "symbol": "SKYUSDT",
         "score": 75,
-        "price": 0.0753,
-        "rsi_2m": 56.35,
-        "rsi_5m": 56.35,
-        "rsi_15m": 56.35,
+        "price": 0.05312,
+        "rsi_2m": 58.46,
+        "rsi_5m": 58.46,
+        "rsi_15m": 58.46,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.05,
+        "vol_surge": 0.02,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
@@ -46,20 +46,20 @@
         "rsi_15m": 59.58,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.06,
+        "vol_surge": 0.13,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "AEROUSDT",
+        "symbol": "ARBUSDT",
         "score": 75,
-        "price": 0.4133,
-        "rsi_2m": 60.77,
-        "rsi_5m": 60.77,
-        "rsi_15m": 60.77,
+        "price": 0.0753,
+        "rsi_2m": 56.35,
+        "rsi_5m": 56.35,
+        "rsi_15m": 56.35,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 4.31,
+        "vol_surge": 0.05,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
@@ -202,12 +202,25 @@
         "rsi_15m": 52.36,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
+        "vol_surge": 0.07,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "SUIUSDT",
+        "score": 65,
+        "price": 0.6872,
+        "rsi_2m": 52.36,
+        "rsi_5m": 52.36,
+        "rsi_15m": 52.36,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
         "vol_surge": 0.05,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "PEPEUSDT",
+        "symbol": "ADAUSDT",
         "score": 65,
         "price": 0.602,
         "rsi_2m": 51.1,
@@ -215,7 +228,20 @@
         "rsi_15m": 51.1,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.1,
+        "vol_surge": 0.08,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "TAOUSDT",
+        "score": 65,
+        "price": 203.6,
+        "rsi_2m": 64.06,
+        "rsi_5m": 64.06,
+        "rsi_15m": 64.06,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.08,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }
