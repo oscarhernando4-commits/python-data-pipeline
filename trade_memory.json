@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3481,
+    "total_trades": 3482,
     "wins": 606,
-    "losses": 2875,
-    "win_rate_pct": 17.41,
-    "total_pnl_usd": 803651.2698954548
+    "losses": 2876,
+    "win_rate_pct": 17.4,
+    "total_pnl_usd": 803651.2098954547
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ZAMAUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on HOMEUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ONEUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SEIUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GIGGLEUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on POLUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on EDENUSDT)",
-      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHFIUSDT)"
+      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHFIUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on FILUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PUMPUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 09:16:53",
-      "account_id": "SIM-099",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "MUBARAKUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01794,
-      "exit_price": 0.01828,
-      "pnl_usd": -0.37,
-      "result": "LOSS",
-      "notes": "Hit SL on MUBARAKUSDT (-$0.37). Re-Trading!",
-      "context": {
-        "score": 50,
-        "rsi_15m": 58.05,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 14:26:24",
       "account_id": "SIM-082",
@@ -8230,6 +8213,23 @@
       "context": {
         "score": 25,
         "rsi_15m": 84.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 18:48:38",
+      "account_id": "SIM-065",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "FILUSDT",
+      "side": "SHORT",
+      "entry_price": 0.675,
+      "exit_price": 0.673,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on FILUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 50,
+        "rsi_15m": 51.53,
         "macro_trend_4h": "NEUTRAL"
       }
     }
