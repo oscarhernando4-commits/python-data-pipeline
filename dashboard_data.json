@@ -13,7 +13,7 @@
     "cost_usd": 15.98,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 299,
+    "holding_cycles": 300,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -116,12 +116,12 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "APTUSDT",
+        "symbol": "DODOUSDT",
         "score": 50,
-        "price": 0.562,
-        "rsi_2m": 50.43,
-        "rsi_5m": 50.43,
-        "rsi_15m": 50.43,
+        "price": 0.02346,
+        "rsi_2m": 63.1,
+        "rsi_5m": 63.1,
+        "rsi_15m": 63.1,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
         "vol_surge": 0.3,
@@ -152,6 +152,45 @@
         "rsi_4h": 50.0,
         "vol_surge": 1.38,
         "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "BONKUSDT",
+        "score": 50,
+        "price": 2.36e-06,
+        "rsi_2m": 62.32,
+        "rsi_5m": 62.32,
+        "rsi_15m": 62.32,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.89,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "TUTUSDT",
+        "score": 45,
+        "price": 0.04276,
+        "rsi_2m": 33.74,
+        "rsi_5m": 33.74,
+        "rsi_15m": 33.74,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.63,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "DEXEUSDT",
+        "score": 45,
+        "price": 2.028,
+        "rsi_2m": 61.26,
+        "rsi_5m": 61.26,
+        "rsi_15m": 61.26,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.7,
+        "trade_quality": "A+",
         "macro_trend": "NEUTRAL"
       }
     ]
