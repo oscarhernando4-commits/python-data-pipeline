@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3557,
+    "total_trades": 3558,
     "wins": 611,
-    "losses": 2946,
-    "win_rate_pct": 17.18,
-    "total_pnl_usd": 798685.4098954528
+    "losses": 2947,
+    "win_rate_pct": 17.17,
+    "total_pnl_usd": 798685.2898954528
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,19 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 13:02:52",
-      "account_id": "SIM-082",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "VETUSDT",
-      "side": "SHORT",
-      "entry_price": 0.004605,
-      "exit_price": 0.004605,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on VETUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-12 18:08:17",
       "account_id": "SIM-055",
@@ -8208,6 +8195,19 @@
         "rsi_15m": 68.66,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-13 23:16:38",
+      "account_id": "SIM-041",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.769,
+      "exit_price": 0.769,
+      "pnl_usd": -0.12,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$0.12). Re-Trading!",
+      "context": {}
     }
   ]
 }
