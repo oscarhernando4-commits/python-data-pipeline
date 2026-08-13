@@ -1,15 +1,28 @@
 {
-  "PNUTUSDT": [
+  "ZROUSDT": [
     {
-      "timestamp": "2026-08-13 22:10:09",
-      "price": 0.0419,
-      "score": 15,
-      "rsi": 44.84,
+      "timestamp": "2026-08-13 22:12:08",
+      "price": 0.797,
+      "score": 30,
+      "rsi": 36.24,
       "macd": "Neutral",
-      "volume_surge": 0.57,
+      "volume_surge": 0.6,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "FFUSDT": [
+    {
+      "timestamp": "2026-08-13 22:12:08",
+      "price": 0.06501,
+      "score": 75,
+      "rsi": 60.26,
+      "macd": "Neutral",
+      "volume_surge": 2.65,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
-}}
+}
