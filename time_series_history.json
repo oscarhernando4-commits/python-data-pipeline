@@ -1,10 +1,10 @@
 {
   "JUPUSDT": [
     {
-      "timestamp": "2026-08-13 10:14:21",
-      "price": 0.01376,
-      "score": 40,
-      "rsi": 46.5,
+      "timestamp": "2026-08-13 10:16:23",
+      "price": 0.829,
+      "score": 25,
+      "rsi": 50.67,
       "macd": "Neutral",
       "volume_surge": 0.04,
       "wyckoff": "Sin patron",
@@ -53,12 +53,51 @@
   ],
   "DASHUSDT": [
     {
-      "timestamp": "2026-08-13 10:14:21",
-      "price": 30.38,
-      "score": 60,
-      "rsi": 53.25,
+      "timestamp": "2026-08-13 10:16:23",
+      "price": 30.39,
+      "score": 75,
+      "rsi": 54.19,
       "macd": "Neutral",
-      "volume_surge": 0.36,
+      "volume_surge": 0.06,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SAGAUSDT": [
+    {
+      "timestamp": "2026-08-13 10:16:23",
+      "price": 0.01375,
+      "score": 30,
+      "rsi": 45.09,
+      "macd": "Neutral",
+      "volume_surge": 0.13,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CHIPUSDT": [
+    {
+      "timestamp": "2026-08-13 10:16:23",
+      "price": 0.02276,
+      "score": 15,
+      "rsi": 39.19,
+      "macd": "Neutral",
+      "volume_surge": 0.02,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "TLMUSDT": [
+    {
+      "timestamp": "2026-08-13 10:16:23",
+      "price": 0.001515,
+      "score": 30,
+      "rsi": 42.29,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
