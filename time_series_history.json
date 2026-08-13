@@ -1,12 +1,51 @@
 {
-  "ZROUSDT": [
+  "EULUSDT": [
     {
-      "timestamp": "2026-08-13 22:04:08",
-      "price": 0.233,
-      "score": 45,
-      "rsi": 44.63,
+      "timestamp": "2026-08-13 22:06:09",
+      "price": 1.139,
+      "score": 15,
+      "rsi": 41.09,
       "macd": "Neutral",
-      "volume_surge": 0.01,
+      "volume_surge": 0.26,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DASHUSDT": [
+    {
+      "timestamp": "2026-08-13 22:06:09",
+      "price": 30.28,
+      "score": 50,
+      "rsi": 59.88,
+      "macd": "Neutral",
+      "volume_surge": 0.21,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "FFUSDT": [
+    {
+      "timestamp": "2026-08-13 22:06:09",
+      "price": 0.06488,
+      "score": 50,
+      "rsi": 53.09,
+      "macd": "Neutral",
+      "volume_surge": 0.82,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "SCRTUSDT": [
+    {
+      "timestamp": "2026-08-13 22:06:09",
+      "price": 0.037,
+      "score": 40,
+      "rsi": 71.37,
+      "macd": "Neutral",
+      "volume_surge": 0.46,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
