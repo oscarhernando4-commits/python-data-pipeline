@@ -1,12 +1,38 @@
 {
-  "GNOUSDT": [
+  "IMXUSDT": [
     {
-      "timestamp": "2026-08-13 20:42:09",
-      "price": 104.51,
-      "score": 50,
-      "rsi": 60.07,
+      "timestamp": "2026-08-13 20:44:09",
+      "price": 0.1091,
+      "score": 25,
+      "rsi": 45.48,
       "macd": "Neutral",
-      "volume_surge": 1.18,
+      "volume_surge": 1.66,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "INTCBUSDT": [
+    {
+      "timestamp": "2026-08-13 20:44:09",
+      "price": 105.23,
+      "score": 30,
+      "rsi": 55.67,
+      "macd": "Neutral",
+      "volume_surge": 0.09,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "RAREUSDT": [
+    {
+      "timestamp": "2026-08-13 20:44:09",
+      "price": 0.01154,
+      "score": 25,
+      "rsi": 28.87,
+      "macd": "Neutral",
+      "volume_surge": 0.5,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
