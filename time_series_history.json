@@ -1,51 +1,77 @@
 {
-  "VANRYUSDT": [
+  "STORJUSDT": [
     {
-      "timestamp": "2026-08-13 10:50:24",
-      "price": 0.001993,
+      "timestamp": "2026-08-13 10:52:22",
+      "price": 0.0466,
+      "score": 10,
+      "rsi": 85.71,
+      "macd": "Neutral",
+      "volume_surge": 0.85,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "MOVRUSDT": [
+    {
+      "timestamp": "2026-08-13 10:52:23",
+      "price": 0.817,
       "score": 0,
-      "rsi": 39.73,
+      "rsi": 41.99,
       "macd": "Neutral",
-      "volume_surge": 0.11,
+      "volume_surge": 0.09,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "ENSOUSDT": [
+  "XPLUSDT": [
     {
-      "timestamp": "2026-08-13 10:50:24",
-      "price": 0.767,
+      "timestamp": "2026-08-13 10:52:23",
+      "price": 0.07426,
+      "score": 0,
+      "rsi": 40.32,
+      "macd": "Neutral",
+      "volume_surge": 0.32,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "TSLABUSDT": [
+    {
+      "timestamp": "2026-08-13 10:52:23",
+      "price": 333.3,
       "score": 35,
-      "rsi": 7.31,
+      "rsi": 66.71,
       "macd": "Neutral",
-      "volume_surge": 26.67,
+      "volume_surge": 0.42,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "CHIPUSDT": [
+  "SAGAUSDT": [
     {
-      "timestamp": "2026-08-13 10:50:24",
-      "price": 0.0226,
-      "score": 35,
-      "rsi": 30.87,
+      "timestamp": "2026-08-13 10:52:23",
+      "price": 0.01367,
+      "score": 15,
+      "rsi": 35.31,
       "macd": "Neutral",
-      "volume_surge": 1.6,
+      "volume_surge": 0.44,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "CBRSBUSDT": [
+  "LITEBUSDT": [
     {
-      "timestamp": "2026-08-13 10:50:24",
-      "price": 226.35,
-      "score": 20,
-      "rsi": 54.9,
+      "timestamp": "2026-08-13 10:52:23",
+      "price": 914.66,
+      "score": 0,
+      "rsi": 40.99,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.02,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -53,12 +79,12 @@
   ],
   "DASHUSDT": [
     {
-      "timestamp": "2026-08-13 10:50:24",
-      "price": 30.24,
+      "timestamp": "2026-08-13 10:52:23",
+      "price": 30.25,
       "score": 0,
-      "rsi": 40.9,
+      "rsi": 41.64,
       "macd": "Neutral",
-      "volume_surge": 0.63,
+      "volume_surge": 0.64,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
