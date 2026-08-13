@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-13 16:36:28",
+  "timestamp": "2026-08-13 16:38:20",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
   "confidence": 0,
-  "reasoning": "El mercado se encuentra en una fase de desapalancamiento sin señales claras de acumulación institucional. Ningún activo cumple con los criterios de calidad A+ exigidos por el comité, por lo que la decisión estratégica es mantener la liquidez en efectivo para evitar pérdidas innecesarias.",
+  "reasoning": "El mercado se encuentra en una fase de distribución técnica con una ausencia total de soporte institucional en los activos analizados. Ningún candidato cumple con los criterios de calidad A+ exigidos por el comité, por lo que la orden es mantener la liquidez en USDT para evitar pérdidas innecesarias en un entorno de alta volatilidad y baja profundidad.",
   "top_candidates": [
     {
       "symbol": "ZAMAUSDT",
@@ -22,10 +22,10 @@
     {
       "symbol": "GOOGLBUSDT",
       "score": 60,
-      "price": 346.42,
-      "rsi_2m": 56.67,
-      "rsi_5m": 56.67,
-      "rsi_15m": 56.67,
+      "price": 58.47,
+      "rsi_2m": 59.51,
+      "rsi_5m": 59.51,
+      "rsi_15m": 59.51,
       "rsi_1h": 50.0,
       "rsi_4h": 50.0,
       "vol_surge": 0.22,
@@ -121,45 +121,6 @@
       "rsi_4h": 50.0,
       "vol_surge": 2.93,
       "trade_quality": "A+",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "HBARUSDT",
-      "score": 45,
-      "price": 0.06655,
-      "rsi_2m": 51.5,
-      "rsi_5m": 51.5,
-      "rsi_15m": 51.5,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.47,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "PYTHUSDT",
-      "score": 45,
-      "price": 0.04062,
-      "rsi_2m": 53.55,
-      "rsi_5m": 53.55,
-      "rsi_15m": 53.55,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.14,
-      "trade_quality": "C_NOISE",
-      "macro_trend": "NEUTRAL"
-    },
-    {
-      "symbol": "ZAMAUSDT",
-      "score": 45,
-      "price": 0.04749,
-      "rsi_2m": 52.22,
-      "rsi_5m": 52.22,
-      "rsi_15m": 52.22,
-      "rsi_1h": 50.0,
-      "rsi_4h": 50.0,
-      "vol_surge": 0.5,
-      "trade_quality": "C_NOISE",
       "macro_trend": "NEUTRAL"
     }
   ]
