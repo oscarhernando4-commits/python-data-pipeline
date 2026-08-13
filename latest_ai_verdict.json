@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-08-13 19:50:38",
+  "timestamp": "2026-08-13 19:52:24",
   "selected_symbol": "NONE",
   "action": "HOLD",
   "approved": false,
-  "confidence": 0,
-  "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)",
+  "confidence": 45,
+  "reasoning": "El comité ha determinado por unanimidad que las condiciones actuales del mercado no cumplen con los estándares de seguridad y convicción exigidos por nuestra política de riesgo. La falta de muros de soporte claros en el libro de órdenes y la alta volatilidad en activos de baja capitalización sugieren que es preferible mantener la liquidez en USDT hasta que se observe una acumulación institucional confirmada en activos de alta fortaleza.",
   "top_candidates": [
     {
       "symbol": "SOLUSDT",
@@ -98,7 +98,7 @@
       "macro_trend": "NEUTRAL"
     },
     {
-      "symbol": "MUBARAKUSDT",
+      "symbol": "BCHUSDT",
       "score": 70,
       "price": 0.01615,
       "rsi_2m": 30.32,
@@ -108,6 +108,19 @@
       "rsi_4h": 50.0,
       "vol_surge": 0.06,
       "trade_quality": "C_NOISE",
+      "macro_trend": "NEUTRAL"
+    },
+    {
+      "symbol": "JSTUSDT",
+      "score": 70,
+      "price": 0.10481,
+      "rsi_2m": 65.69,
+      "rsi_5m": 65.69,
+      "rsi_15m": 65.69,
+      "rsi_1h": 50.0,
+      "rsi_4h": 50.0,
+      "vol_surge": 1.5,
+      "trade_quality": "B",
       "macro_trend": "NEUTRAL"
     },
     {
