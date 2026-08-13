@@ -1,12 +1,25 @@
 {
-  "TLMUSDT": [
+  "MOVRUSDT": [
     {
-      "timestamp": "2026-08-13 10:42:21",
-      "price": 0.001514,
+      "timestamp": "2026-08-13 10:44:25",
+      "price": 0.817,
       "score": 15,
-      "rsi": 41.13,
+      "rsi": 41.98,
       "macd": "Neutral",
-      "volume_surge": 0.27,
+      "volume_surge": 0.85,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "DASHUSDT": [
+    {
+      "timestamp": "2026-08-13 10:44:25",
+      "price": 30.3,
+      "score": 15,
+      "rsi": 45.72,
+      "macd": "Neutral",
+      "volume_surge": 1.26,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,38 +27,12 @@
   ],
   "TSLABUSDT": [
     {
-      "timestamp": "2026-08-13 10:42:21",
-      "price": 333.91,
-      "score": 10,
-      "rsi": 70.02,
+      "timestamp": "2026-08-13 10:44:25",
+      "price": 333.69,
+      "score": 25,
+      "rsi": 69.37,
       "macd": "Neutral",
-      "volume_surge": 0.45,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "AAOIBUSDT": [
-    {
-      "timestamp": "2026-08-13 10:42:21",
-      "price": 138.56,
-      "score": 35,
-      "rsi": 52.79,
-      "macd": "Neutral",
-      "volume_surge": 0.29,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "CBRSBUSDT": [
-    {
-      "timestamp": "2026-08-13 10:42:21",
-      "price": 226.2,
-      "score": 35,
-      "rsi": 54.69,
-      "macd": "Neutral",
-      "volume_surge": 0.01,
+      "volume_surge": 0.46,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
