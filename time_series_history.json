@@ -1,16 +1,106 @@
 {
-  "RADUSDT": [
+  "TSLABUSDT": [
     {
-      "timestamp": "2026-08-13 23:04:09",
-      "price": 0.1699,
-      "score": 50,
-      "rsi": 53.46,
+      "timestamp": "2026-08-13 23:06:10",
+      "price": 341.16,
+      "score": 45,
+      "rsi": 63.55,
       "macd": "Neutral",
-      "volume_surge": 0.14,
+      "volume_surge": 0.12,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-13 23:06:11",
+      "price": 0.0878,
+      "score": 25,
+      "rsi": 70.52,
+      "macd": "Neutral",
+      "volume_surge": 0.74,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "INTCBUSDT": [
+    {
+      "timestamp": "2026-08-13 23:06:12",
+      "price": 105.52,
+      "score": 45,
+      "rsi": 57.84,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-13 23:06:12",
+      "price": 0.2963,
+      "score": 15,
+      "rsi": 46.44,
+      "macd": "Neutral",
+      "volume_surge": 0.23,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-13 23:06:12",
+      "price": 0.1245,
+      "score": 60,
+      "rsi": 65.8,
+      "macd": "Neutral",
+      "volume_surge": 0.67,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "STORJUSDT": [
+    {
+      "timestamp": "2026-08-13 23:06:12",
+      "price": 0.0471,
+      "score": 35,
+      "rsi": 61.77,
+      "macd": "Neutral",
+      "volume_surge": 0.2,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "IMXUSDT": [
+    {
+      "timestamp": "2026-08-13 23:06:12",
+      "price": 0.1095,
+      "score": 30,
+      "rsi": 49.72,
+      "macd": "Neutral",
+      "volume_surge": 0.24,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CFXUSDT": [
+    {
+      "timestamp": "2026-08-13 23:06:12",
+      "price": 0.04143,
+      "score": 60,
+      "rsi": 54.55,
+      "macd": "Neutral",
+      "volume_surge": 0.51,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ]
 }
-}}
