@@ -166,7 +166,7 @@ def analyze_multi_timeframe_candles(symbol):
     klines_1m = fetch_klines_public(symbol, "1m", 40)
     klines_2m = _aggregate_1m_to_2m(klines_1m)
     klines_5m = fetch_klines_public(symbol, "5m", 30)
-    klines_15m = fetch_klines_public(symbol, "15m", 30)
+    klines_15m = fetch_klines_public(symbol, "15m", 50)
     klines_1h = fetch_klines_public(symbol, "1h", 30)
     klines_4h = fetch_klines_public(symbol, "4h", 30)
     klines_1d = fetch_klines_public(symbol, "1d", 14)
