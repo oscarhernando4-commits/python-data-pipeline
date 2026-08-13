@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3437,
+    "total_trades": 3440,
     "wins": 605,
-    "losses": 2832,
-    "win_rate_pct": 17.6,
-    "total_pnl_usd": 99979.43989545488
+    "losses": 2835,
+    "win_rate_pct": 17.59,
+    "total_pnl_usd": 99979.17989545487
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HOMEUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on AAOIBUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MSTRBUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on NBISBUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on TUTUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SEIUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on EPICUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ATMUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ATMUSDT)",
+      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PEPEUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on COTIUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 07:10:18",
-      "account_id": "SIM-099",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "PROMUSDT",
-      "side": "SHORT",
-      "entry_price": 2.705,
-      "exit_price": 2.781,
-      "pnl_usd": -0.55,
-      "result": "LOSS",
-      "notes": "Hit SL on PROMUSDT (-$0.55). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 58.42,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 08:18:22",
-      "account_id": "SIM-041",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ATOMUSDT",
-      "side": "LONG",
-      "entry_price": 1.433,
-      "exit_price": 1.42,
-      "pnl_usd": -0.42,
-      "result": "LOSS",
-      "notes": "Hit SL on ATOMUSDT (-$0.42). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 37.3,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 08:18:22",
-      "account_id": "SIM-044",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ATOMUSDT",
-      "side": "LONG",
-      "entry_price": 1.433,
-      "exit_price": 1.42,
-      "pnl_usd": -0.28,
-      "result": "LOSS",
-      "notes": "Hit SL on ATOMUSDT (-$0.28). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 37.3,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 08:18:22",
       "account_id": "SIM-046",
@@ -8270,6 +8219,57 @@
       "context": {
         "score": 0,
         "rsi_15m": 48.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 16:36:28",
+      "account_id": "SIM-043",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "PEPEUSDT",
+      "side": "LONG",
+      "entry_price": 2.64e-06,
+      "exit_price": 2.64e-06,
+      "pnl_usd": -0.13,
+      "result": "LOSS",
+      "notes": "Hit SL on PEPEUSDT (-$0.13). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 27.44,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 16:36:28",
+      "account_id": "SIM-047",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "PEPEUSDT",
+      "side": "LONG",
+      "entry_price": 2.64e-06,
+      "exit_price": 2.64e-06,
+      "pnl_usd": -0.05,
+      "result": "LOSS",
+      "notes": "Hit SL on PEPEUSDT (-$0.05). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 27.44,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-13 16:36:28",
+      "account_id": "SIM-059",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "PEPEUSDT",
+      "side": "LONG",
+      "entry_price": 2.64e-06,
+      "exit_price": 2.64e-06,
+      "pnl_usd": -0.08,
+      "result": "LOSS",
+      "notes": "Hit SL on PEPEUSDT (-$0.08). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 27.44,
         "macro_trend_4h": "NEUTRAL"
       }
     }
