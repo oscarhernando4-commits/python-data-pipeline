@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3871,
+    "total_trades": 3872,
     "wins": 670,
-    "losses": 3201,
-    "win_rate_pct": 17.31,
-    "total_pnl_usd": 791106.0898954523
+    "losses": 3202,
+    "win_rate_pct": 17.3,
+    "total_pnl_usd": 791105.6498954523
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on GIGGLEUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on CRVUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on HEIUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on PYTHUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SAGAUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on 2ZUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on INTCBUSDT)",
-      "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BCHUSDT)"
+      "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BCHUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PROMUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on STORJUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 09:25:04",
-      "account_id": "SIM-086",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "COTIUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01159,
-      "exit_price": 0.01258,
-      "pnl_usd": -1.58,
-      "result": "LOSS",
-      "notes": "Hit SL on COTIUSDT (-$1.58). Re-Trading!",
-      "context": {
-        "score": 65,
-        "rsi_15m": 60.51,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 09:25:04",
       "account_id": "SIM-097",
@@ -8298,6 +8281,23 @@
       "context": {
         "score": 41,
         "rsi_15m": 19.79,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 14:16:40",
+      "account_id": "SIM-066",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "PROMUSDT",
+      "side": "SHORT",
+      "entry_price": 2.613,
+      "exit_price": 2.673,
+      "pnl_usd": -0.44,
+      "result": "LOSS",
+      "notes": "Hit SL on PROMUSDT (-$0.44). Re-Trading!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 54.78,
         "macro_trend_4h": "NEUTRAL"
       }
     }
