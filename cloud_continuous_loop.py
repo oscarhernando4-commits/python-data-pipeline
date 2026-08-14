@@ -63,14 +63,17 @@ sleep_until_next_5m_boundary = sleep_until_next_2m_boundary
 def main():
     sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
     
-    # AUTO-CLOUD: Force cloud mode when running in GitHub Actions
-    # This ensures Fixie proxy is always used regardless of what was committed
+    # AUTO-CLOUD: Only force cloud mode when running inside GitHub Actions environment
     try:
         import api_connector
-        api_connector.set_execution_mode("cloud")
-        print("☁️ Modo NUBE activado automáticamente (GitHub Actions)", flush=True)
+        if os.getenv("GITHUB_ACTIONS") == "true" or os.getenv("CI") == "true":
+            api_connector.set_execution_mode("cloud")
+            print("☁️ Modo NUBE activado automáticamente (GitHub Actions)", flush=True)
+        else:
+            current_mode = api_connector.get_execution_mode()
+            print(f"🖥️ Modo actual respetado: {current_mode.upper()}", flush=True)
     except Exception as e:
-        print(f"⚠️ Could not set cloud mode: {e}", flush=True)
+        print(f"⚠️ Could not evaluate execution mode: {e}", flush=True)
     
     print("=" * 70, flush=True)
     print(f"🚀 INICIANDO RUNNER CONTINUO CUÁNTICO (4 HORAS / {TOTAL_CYCLES} CICLOS)", flush=True)
