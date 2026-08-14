@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3920,
+    "total_trades": 3921,
     "wins": 675,
-    "losses": 3245,
-    "win_rate_pct": 17.22,
-    "total_pnl_usd": 790785.789895452
+    "losses": 3246,
+    "win_rate_pct": 17.21,
+    "total_pnl_usd": 790785.579895452
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,19 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 16:00:28",
-      "account_id": "SIM-080",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "CAKEUSDT",
-      "side": "SHORT",
-      "entry_price": 1.447,
-      "exit_price": 1.447,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on CAKEUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-13 16:02:23",
       "account_id": "SIM-028",
@@ -8290,6 +8277,23 @@
       "context": {
         "score": 48,
         "rsi_15m": 45.02,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 15:38:42",
+      "account_id": "SIM-064",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TRUMPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.383,
+      "exit_price": 1.397,
+      "pnl_usd": -0.21,
+      "result": "LOSS",
+      "notes": "Hit SL on TRUMPUSDT (-$0.21). Re-Trading!",
+      "context": {
+        "score": 55,
+        "rsi_15m": 65.1,
         "macro_trend_4h": "NEUTRAL"
       }
     }
