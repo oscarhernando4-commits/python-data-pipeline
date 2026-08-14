@@ -1,25 +1,38 @@
 {
-  "LDOUSDT": [
+  "INTCBUSDT": [
     {
-      "timestamp": "2026-08-14 01:06:11",
-      "price": 0.3005,
-      "score": 50,
-      "rsi": 69.41,
+      "timestamp": "2026-08-14 01:08:11",
+      "price": 104.79,
+      "score": 15,
+      "rsi": 42.07,
       "macd": "Neutral",
-      "volume_surge": 7.72,
+      "volume_surge": 0.53,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ]
+}BOMEUSDT": [
+    {
+      "timestamp": "2026-08-14 01:08:11",
+      "price": 0.0007543,
+      "score": 50,
+      "rsi": 59.74,
+      "macd": "Neutral",
+      "volume_surge": 0.45,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "GNOUSDT": [
+  "BONKUSDT": [
     {
-      "timestamp": "2026-08-14 01:06:11",
-      "price": 104.63,
-      "score": 75,
-      "rsi": 62.62,
+      "timestamp": "2026-08-14 01:08:11",
+      "price": 2.29e-06,
+      "score": 40,
+      "rsi": 39.97,
       "macd": "Neutral",
-      "volume_surge": 0.26,
+      "volume_surge": 2.68,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -27,38 +40,51 @@
   ],
   "TIAUSDT": [
     {
-      "timestamp": "2026-08-14 01:06:11",
-      "price": 0.3124,
+      "timestamp": "2026-08-14 01:08:11",
+      "price": 0.3123,
       "score": 85,
-      "rsi": 62.49,
+      "rsi": 61.94,
       "macd": "Neutral",
-      "volume_surge": 2.49,
+      "volume_surge": 2.66,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "SYNUSDT": [
+  "NIGHTUSDT": [
     {
-      "timestamp": "2026-08-14 01:06:11",
-      "price": 0.10806,
-      "score": 45,
-      "rsi": 53.61,
+      "timestamp": "2026-08-14 01:08:11",
+      "price": 0.01741,
+      "score": 50,
+      "rsi": 60.85,
       "macd": "Neutral",
-      "volume_surge": 0.15,
+      "volume_surge": 0.2,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "IMXUSDT": [
+  "GNOUSDT": [
     {
-      "timestamp": "2026-08-14 01:06:11",
-      "price": 0.1095,
-      "score": 25,
-      "rsi": 49.15,
+      "timestamp": "2026-08-14 01:08:11",
+      "price": 104.39,
+      "score": 60,
+      "rsi": 55.8,
       "macd": "Neutral",
-      "volume_surge": 4.99,
+      "volume_surge": 0.32,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "LDOUSDT": [
+    {
+      "timestamp": "2026-08-14 01:08:11",
+      "price": 0.3011,
+      "score": 50,
+      "rsi": 71.29,
+      "macd": "Neutral",
+      "volume_surge": 10.07,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
