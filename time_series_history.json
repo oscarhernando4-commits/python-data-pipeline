@@ -1,12 +1,25 @@
 {
-  "PENDLEUSDT": [
+  "MUBARAKUSDT": [
     {
-      "timestamp": "2026-08-14 10:58:09",
-      "price": 1.326,
-      "score": 0,
-      "rsi": 33.54,
+      "timestamp": "2026-08-14 11:00:10",
+      "price": 0.0159,
+      "score": 50,
+      "rsi": 52.03,
       "macd": "Neutral",
-      "volume_surge": 1.3,
+      "volume_surge": 0.07,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ]
+}TUSDT": [
+    {
+      "timestamp": "2026-08-14 11:00:10",
+      "price": 0.000375,
+      "score": 30,
+      "rsi": 38.59,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +27,12 @@
   ],
   "STXUSDT": [
     {
-      "timestamp": "2026-08-14 10:58:09",
-      "price": 0.1212,
-      "score": 0,
-      "rsi": 32.47,
+      "timestamp": "2026-08-14 11:00:10",
+      "price": 0.1211,
+      "score": 25,
+      "rsi": 31.53,
       "macd": "Neutral",
-      "volume_surge": 0.36,
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -27,12 +40,12 @@
   ],
   "OPUSDT": [
     {
-      "timestamp": "2026-08-14 10:58:09",
-      "price": 0.0855,
+      "timestamp": "2026-08-14 11:00:10",
+      "price": 0.0856,
       "score": 25,
-      "rsi": 28.9,
+      "rsi": 30.19,
       "macd": "Neutral",
-      "volume_surge": 0.79,
+      "volume_surge": 0.0,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -40,51 +53,12 @@
   ],
   "CFXUSDT": [
     {
-      "timestamp": "2026-08-14 10:58:09",
+      "timestamp": "2026-08-14 11:00:10",
       "price": 0.04203,
       "score": 0,
-      "rsi": 44.47,
+      "rsi": 44.57,
       "macd": "Neutral",
-      "volume_surge": 0.43,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "NOTUSDT": [
-    {
-      "timestamp": "2026-08-14 10:58:09",
-      "price": 0.000377,
-      "score": 30,
-      "rsi": 45.56,
-      "macd": "Neutral",
-      "volume_surge": 0.65,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "MUBARAKUSDT": [
-    {
-      "timestamp": "2026-08-14 10:58:09",
-      "price": 0.0159,
-      "score": 50,
-      "rsi": 52.01,
-      "macd": "Neutral",
-      "volume_surge": 0.42,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "NILUSDT": [
-    {
-      "timestamp": "2026-08-14 10:58:09",
-      "price": 0.04261,
-      "score": 10,
-      "rsi": 50.09,
-      "macd": "Neutral",
-      "volume_surge": 0.6,
+      "volume_surge": 0.01,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
