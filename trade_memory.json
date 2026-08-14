@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3881,
+    "total_trades": 3882,
     "wins": 670,
-    "losses": 3211,
+    "losses": 3212,
     "win_rate_pct": 17.26,
-    "total_pnl_usd": 790789.7698954523
+    "total_pnl_usd": 790789.4198954523
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HEIUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on XAIUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on MUBARAKUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ALGOUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SKHYBUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ZROUSDT)",
       "BLOCK SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on KITEUSDT)",
-      "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on AXTIBUSDT)"
+      "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on AXTIBUSDT)",
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SOXLBUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on STORJUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 09:34:51",
-      "account_id": "SIM-022",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "NBISBUSDT",
-      "side": "SHORT",
-      "entry_price": 270.4,
-      "exit_price": 274.75,
-      "pnl_usd": -0.33,
-      "result": "LOSS",
-      "notes": "Hit SL on NBISBUSDT (-$0.33). Re-Trading!",
-      "context": {
-        "score": 40,
-        "rsi_15m": 78.11,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 09:34:51",
       "account_id": "SIM-023",
@@ -8286,6 +8269,23 @@
       "context": {
         "score": 74,
         "rsi_15m": 78.29,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 14:25:00",
+      "account_id": "SIM-053",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "SOXLBUSDT",
+      "side": "LONG",
+      "entry_price": 145.07,
+      "exit_price": 143.05,
+      "pnl_usd": -0.35,
+      "result": "LOSS",
+      "notes": "Hit SL on SOXLBUSDT (-$0.35). Re-Trading!",
+      "context": {
+        "score": 32,
+        "rsi_15m": 42.15,
         "macro_trend_4h": "NEUTRAL"
       }
     }
