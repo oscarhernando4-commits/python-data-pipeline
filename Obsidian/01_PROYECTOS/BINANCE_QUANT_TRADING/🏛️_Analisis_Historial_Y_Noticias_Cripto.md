@@ -2464,3 +2464,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `Sin días < -10%`
 
 ---
+
+### 🪙 Profile Completo de Vida: PLUMEUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-08-18` hasta `2026-08-14` (362 Días de Historial)
+- 💵 **Precio Actual:** `$0.0126 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.1413 USD` (`2025-09-15`) | Distancia: `-91.1%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0084 USD` (`2025-10-10`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-08-18 (+27.75%)`, `2025-10-06 (+24.72%)`, `2025-09-10 (+20.73%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-10 (-30.55%)`, `2025-11-13 (-18.13%)`, `2025-11-03 (-16.07%)`
+
+---
