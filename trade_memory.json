@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3829,
-    "wins": 660,
+    "total_trades": 3830,
+    "wins": 661,
     "losses": 3169,
-    "win_rate_pct": 17.24,
-    "total_pnl_usd": 791533.0698954525
+    "win_rate_pct": 17.26,
+    "total_pnl_usd": 791547.9598954525
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TSTUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on JTOUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JTOUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DODOUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DODOUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ZAMAUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SEIUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DASHUSDT)",
-      "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on LDOUSDT)"
+      "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on LDOUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ONEUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 12:18:38",
-      "account_id": "SIM-043",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "UNIUSDT",
-      "side": "LONG",
-      "entry_price": 3.547,
-      "exit_price": 3.508,
-      "pnl_usd": -0.5,
-      "result": "LOSS",
-      "notes": "Hit SL on UNIUSDT (-$0.50). Re-Trading!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 25.64,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 12:18:38",
       "account_id": "SIM-044",
@@ -8254,6 +8237,23 @@
       "context": {
         "score": 0,
         "rsi_15m": 49.26,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 13:06:21",
+      "account_id": "SIM-098",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "ONEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1208,
+      "exit_price": 0.00073,
+      "pnl_usd": 14.89,
+      "result": "WIN",
+      "notes": "Win on ONEUSDT (+$14.89 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 41.08,
         "macro_trend_4h": "NEUTRAL"
       }
     }
