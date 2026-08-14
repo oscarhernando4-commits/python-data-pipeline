@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3800,
+    "total_trades": 3801,
     "wins": 651,
-    "losses": 3149,
+    "losses": 3150,
     "win_rate_pct": 17.13,
-    "total_pnl_usd": 797826.3198954525
+    "total_pnl_usd": 797826.0598954525
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DODOUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on CRVUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TSTUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on REUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ROBOUSDT)",
       "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on STORJUSDT)",
-      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on STXUSDT)"
+      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on STXUSDT)",
+      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ENAUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on INJUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 08:42:31",
-      "account_id": "SIM-071",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "GMEBUSDT",
-      "side": "SHORT",
-      "entry_price": 18.61,
-      "exit_price": 18.78,
-      "pnl_usd": -0.22,
-      "result": "LOSS",
-      "notes": "Hit SL on GMEBUSDT (-$0.22). Re-Trading!",
-      "context": {
-        "score": 50,
-        "rsi_15m": 73.25,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 08:58:31",
       "account_id": "SIM-097",
@@ -8270,6 +8253,23 @@
       "context": {
         "score": 25,
         "rsi_15m": 27.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 11:50:19",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ENAUSDT",
+      "side": "LONG",
+      "entry_price": 0.0845,
+      "exit_price": 0.0836,
+      "pnl_usd": -0.26,
+      "result": "LOSS",
+      "notes": "Hit SL on ENAUSDT (-$0.26). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 26.46,
         "macro_trend_4h": "NEUTRAL"
       }
     }
