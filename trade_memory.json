@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3952,
-    "wins": 684,
+    "total_trades": 3953,
+    "wins": 685,
     "losses": 3268,
-    "win_rate_pct": 17.31,
-    "total_pnl_usd": 790366.9298954521
+    "win_rate_pct": 17.33,
+    "total_pnl_usd": 790367.4898954522
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on AEROUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ZAMAUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on NOTUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PYTHUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ZAMAUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DRAMBUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PROMUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MSTRBUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BONKUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BONKUSDT)",
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BONKUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 12:05:10",
-      "account_id": "SIM-073",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "ONEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.00079,
-      "exit_price": 0.0008,
-      "pnl_usd": -0.27,
-      "result": "LOSS",
-      "notes": "Hit SL on ONEUSDT (-$0.27). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 44.87,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 17:14:15",
       "account_id": "SIM-022",
@@ -8382,6 +8365,23 @@
       "context": {
         "score": 43,
         "rsi_15m": 48.32,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 17:16:46",
+      "account_id": "SIM-046",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "BONKUSDT",
+      "side": "LONG",
+      "entry_price": 2.35e-06,
+      "exit_price": 2.4e-06,
+      "pnl_usd": 0.56,
+      "result": "WIN",
+      "notes": "Win on BONKUSDT (+$0.56 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 46,
+        "rsi_15m": 70.75,
         "macro_trend_4h": "NEUTRAL"
       }
     }
