@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3765,
-    "wins": 647,
+    "total_trades": 3766,
+    "wins": 648,
     "losses": 3118,
-    "win_rate_pct": 17.18,
-    "total_pnl_usd": 799380.2698954525
+    "win_rate_pct": 17.21,
+    "total_pnl_usd": 799380.5898954525
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on CRVUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PROMUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on EDENUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ENSOUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on INJUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TAOUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ATMUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SCRTUSDT)",
-      "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on VIRTUALUSDT)"
+      "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on VIRTUALUSDT)",
+      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HOLOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 07:04:22",
-      "account_id": "SIM-040",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ATMUSDT",
-      "side": "SHORT",
-      "entry_price": 1.768,
-      "exit_price": 1.709,
-      "pnl_usd": 0.63,
-      "result": "WIN",
-      "notes": "Win on ATMUSDT (+$0.63 net) -> Level 8 Re-Trading Started!",
-      "context": {
-        "score": 60,
-        "rsi_15m": 65.61,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 07:10:21",
       "account_id": "SIM-043",
@@ -8270,6 +8253,23 @@
       "context": {
         "score": 0,
         "rsi_15m": 40.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 09:56:48",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "HOLOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0702,
+      "exit_price": 0.0686,
+      "pnl_usd": 0.32,
+      "result": "WIN",
+      "notes": "Win on HOLOUSDT (+$0.32 net) -> Level 7 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 33.79,
         "macro_trend_4h": "NEUTRAL"
       }
     }
