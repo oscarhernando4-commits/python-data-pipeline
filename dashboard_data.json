@@ -13,7 +13,7 @@
     "cost_usd": 16.02,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 153,
+    "holding_cycles": 154,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -168,15 +168,67 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "ALLOUSDT",
-        "score": 65,
-        "price": 0.2721,
-        "rsi_2m": 44.71,
-        "rsi_5m": 44.71,
-        "rsi_15m": 44.71,
+        "symbol": "ENSOUSDT",
+        "score": 70,
+        "price": 0.776,
+        "rsi_2m": 29.83,
+        "rsi_5m": 29.83,
+        "rsi_15m": 29.83,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.12,
+        "vol_surge": 0.54,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "ONEUSDT",
+        "score": 70,
+        "price": 0.00074,
+        "rsi_2m": 27.33,
+        "rsi_5m": 27.33,
+        "rsi_15m": 27.33,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.24,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "SAGAUSDT",
+        "score": 70,
+        "price": 0.01274,
+        "rsi_2m": 31.0,
+        "rsi_5m": 31.0,
+        "rsi_15m": 31.0,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.04,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "PLUMEUSDT",
+        "score": 65,
+        "price": 0.01266,
+        "rsi_2m": 61.49,
+        "rsi_5m": 61.49,
+        "rsi_15m": 61.49,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.5,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
+      {
+        "symbol": "MMTUSDT",
+        "score": 65,
+        "price": 0.1696,
+        "rsi_2m": 58.27,
+        "rsi_5m": 58.27,
+        "rsi_15m": 58.27,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 0.4,
         "trade_quality": "C_NOISE",
         "macro_trend": "NEUTRAL"
       }
