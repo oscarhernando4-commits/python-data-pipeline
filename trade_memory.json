@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3722,
+    "total_trades": 3725,
     "wins": 643,
-    "losses": 3079,
-    "win_rate_pct": 17.28,
-    "total_pnl_usd": 801466.6998954519
+    "losses": 3082,
+    "win_rate_pct": 17.26,
+    "total_pnl_usd": 799806.0998954519
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on EDENUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on CFXUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZAMAUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ACEUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on CRVUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on NOTUSDT)",
-      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on 2ZUSDT)"
+      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on 2ZUSDT)",
+      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on WLFIUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GIGGLEUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 06:08:22",
-      "account_id": "SIM-072",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "TSTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01667,
-      "exit_price": 0.01703,
-      "pnl_usd": -0.55,
-      "result": "LOSS",
-      "notes": "Hit SL on TSTUSDT (-$0.55). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 63.73,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 06:08:22",
-      "account_id": "SIM-073",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "TSTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01667,
-      "exit_price": 0.01703,
-      "pnl_usd": -0.46,
-      "result": "LOSS",
-      "notes": "Hit SL on TSTUSDT (-$0.46). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 63.73,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 06:08:22",
-      "account_id": "SIM-074",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "TSTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01667,
-      "exit_price": 0.01703,
-      "pnl_usd": -0.2,
-      "result": "LOSS",
-      "notes": "Hit SL on TSTUSDT (-$0.20). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 63.73,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 06:10:27",
       "account_id": "SIM-085",
@@ -8270,6 +8219,57 @@
       "context": {
         "score": 25,
         "rsi_15m": 26.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 07:48:29",
+      "account_id": "SIM-024",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "WLFIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0554,
+      "exit_price": 0.056,
+      "pnl_usd": -0.24,
+      "result": "LOSS",
+      "notes": "Hit SL on WLFIUSDT (-$0.24). Re-Trading!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 80.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 07:48:29",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "WLFIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0554,
+      "exit_price": 0.056,
+      "pnl_usd": -1660.12,
+      "result": "LOSS",
+      "notes": "Hit SL on WLFIUSDT (-$1660.12). Re-Trading!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 80.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 07:48:29",
+      "account_id": "SIM-030",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "WLFIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0554,
+      "exit_price": 0.056,
+      "pnl_usd": -0.24,
+      "result": "LOSS",
+      "notes": "Hit SL on WLFIUSDT (-$0.24). Re-Trading!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 80.43,
         "macro_trend_4h": "NEUTRAL"
       }
     }
