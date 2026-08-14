@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3752,
+    "total_trades": 3753,
     "wins": 643,
-    "losses": 3109,
-    "win_rate_pct": 17.14,
-    "total_pnl_usd": 799378.9998954523
+    "losses": 3110,
+    "win_rate_pct": 17.13,
+    "total_pnl_usd": 799378.8798954523
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 06:54:23",
-      "account_id": "SIM-041",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "HOMEUSDT",
-      "side": "LONG",
-      "entry_price": 0.01055,
-      "exit_price": 0.01035,
-      "pnl_usd": -0.82,
-      "result": "LOSS",
-      "notes": "Hit SL on HOMEUSDT (-$0.82). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 68.31,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 06:54:23",
       "account_id": "SIM-043",
@@ -8270,6 +8253,23 @@
       "context": {
         "score": 30,
         "rsi_15m": 56.72,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 09:28:27",
+      "account_id": "SIM-043",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ALLOUSDT",
+      "side": "LONG",
+      "entry_price": 0.2636,
+      "exit_price": 0.2639,
+      "pnl_usd": -0.12,
+      "result": "LOSS",
+      "notes": "Hit SL on ALLOUSDT (-$0.12). Re-Trading!",
+      "context": {
+        "score": 15,
+        "rsi_15m": 38.45,
         "macro_trend_4h": "NEUTRAL"
       }
     }
