@@ -2,6 +2,7 @@
 Continuous 4-Hour Cloud Quant Trading Loop
 - In Local Mode: Runs every 60 seconds (1 minute exact) for 240 cycles (4.0 hours).
 - In Cloud Mode: Runs every 120 seconds (2 minutes exact) for 120 cycles (4.0 hours) to conserve proxies.
+- Micro-Heartbeat: Runs a 10-second sub-cycle monitor during waits to capture price spikes immediately.
 """
 
 import time
@@ -32,6 +33,26 @@ def sleep_until_next_boundary(interval_secs=60):
 sleep_until_next_1m_boundary = lambda: sleep_until_next_boundary(60)
 sleep_until_next_2m_boundary = lambda: sleep_until_next_boundary(120)
 sleep_until_next_5m_boundary = sleep_until_next_1m_boundary
+
+def sleep_with_micro_heartbeat(sleep_secs: int):
+    """Sleeps in 10-second intervals while running the quick position heartbeat."""
+    import api_connector
+    end_time = time.time() + sleep_secs
+    while time.time() < end_time:
+        remaining = end_time - time.time()
+        if remaining <= 0:
+            break
+        chunk = min(10.0, remaining)
+        time.sleep(chunk)
+        # Run 10s micro-heartbeat for active position
+        try:
+            hb = api_connector.quick_position_heartbeat()
+            if hb and isinstance(hb, dict):
+                p_fmt = f"${hb['price']:.5f}" if hb['price'] < 0.05 else f"${hb['price']:.4f}"
+                if hb.get('highest_pnl', 0) >= 0.65 and hb.get('phase', 1) >= 2:
+                    print(f"💓 [HEARTBEAT 10s] {hb['symbol']} @ {p_fmt} | PnL: {hb['pnl_pct']:+.2f}% (Pico: +{hb['highest_pnl']:.2f}% | Fase {hb['phase']})", flush=True)
+        except Exception:
+            pass
 
 def run_git_push_sync(cycle_num: int, total_cycles: int = 240):
     """Safely commits and pushes updated matrix and account state to GitHub."""
@@ -88,6 +109,7 @@ def main():
     print("=" * 70, flush=True)
     print(f"🚀 INICIANDO RUNNER CONTINUO CUÁNTICO (4 HORAS / {total_cycles} CICLOS)", flush=True)
     print(f"⏱️ Intervalo: Cada {sleep_interval_secs} segundos exactos ({sleep_interval_secs // 60} min)", flush=True)
+    print(f"💓 Micro-Heartbeat de Posición: Activo cada 10 segundos", flush=True)
     print(f"🎯 Total Ciclos: {total_cycles} ejecuciones continuas sin colas de espera", flush=True)
     print("=" * 70, flush=True)
     
@@ -148,12 +170,12 @@ def main():
         # Step 5: Push changes to GitHub
         run_git_push_sync(cycle, total_cycles)
         
-        # Step 6: Sleep until next clock boundary
+        # Step 6: Sleep until next clock boundary with 10s micro-heartbeat
         if cycle < total_cycles:
             sleep_secs = sleep_until_next_boundary(sleep_interval_secs)
             target_time = datetime.fromtimestamp(time.time() + sleep_secs).strftime("%H:%M:%S")
             print(f"⏳ [Ciclo {cycle}] Completado. Esperando {sleep_secs}s hasta la marca en punto ({target_time}) para el Ciclo {cycle+1}...", flush=True)
-            time.sleep(sleep_secs)
+            sleep_with_micro_heartbeat(sleep_secs)
 
     print(f"\n🏁 [RUNNER CONTINUO FINALIZADO] Se completaron los {total_cycles} ciclos (4 horas).", flush=True)
     print("El siguiente disparador o cron tomará el relevo automáticamente.", flush=True)

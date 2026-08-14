@@ -772,16 +772,88 @@ def execute_real_futures_market_close(symbol, quantity):
     except Exception as e:
         return {"error": str(e)}
 
-# ============================================================
-# MAIN EVALUATION & TRADING LOGIC
-# ============================================================
-
-def trunc_1d(val):
-    """Truncates a float to exactly 1 decimal place WITHOUT rounding."""
-    if val is None:
-        return 0.0
-    import math
-    return math.floor(float(val) * 10.0) / 10.0
+def quick_position_heartbeat():
+    """
+    Sub-second micro-monitor for active real-money Spot position.
+    Runs every 5-10s between main matrix cycles.
+    Instantly updates highest_price, unlocks phases, and triggers emergency SL/TP.
+    """
+    try:
+        state = load_real_account_state()
+        pos = state.get("position")
+        if not pos or not pos.get("symbol"):
+            return None
+            
+        sym = pos.get("symbol")
+        qty = float(pos.get("quantity", 0))
+        entry = float(pos.get("entry_price", 0))
+        if qty <= 0 or entry <= 0:
+            return None
+            
+        # Fast direct price ticker
+        current_price = get_symbol_price(sym, is_futures=False)
+        if not current_price or current_price <= 0:
+            return None
+            
+        highest_price = max(pos.get("highest_price", entry), current_price)
+        highest_pnl_pct = ((highest_price - entry) / entry) * 100.0
+        current_pnl_pct = ((current_price - entry) / entry) * 100.0
+        current_phase = pos.get("phase", 1)
+        
+        # Advance phase dynamically if price spiked
+        new_phase = current_phase
+        if highest_pnl_pct >= 3.0:
+            new_phase = max(new_phase, 4)
+        elif highest_pnl_pct >= 1.5:
+            new_phase = max(new_phase, 3)
+        elif highest_pnl_pct >= 1.0:
+            new_phase = max(new_phase, 2.5)
+        elif highest_pnl_pct >= 0.65:
+            new_phase = max(new_phase, 2)
+            
+        # Calculate current SL threshold
+        if new_phase >= 4:
+            trailing_offset = 0.50 if highest_pnl_pct >= 5.0 else 0.80
+            sl_pct = max(2.0, highest_pnl_pct - trailing_offset)
+        elif new_phase >= 3:
+            sl_pct = 1.15
+        elif new_phase >= 2.5:
+            sl_pct = 0.65
+        elif new_phase >= 2:
+            sl_pct = 0.35
+        else:
+            sl_pct = -3.0
+            
+        # Update if changed
+        if highest_price > pos.get("highest_price", entry) or new_phase > current_phase:
+            pos["highest_price"] = highest_price
+            pos["phase"] = new_phase
+            state["position"] = pos
+            save_real_account_state(state)
+            
+        # Check if Stop Loss or Trailing Stop triggered
+        if current_pnl_pct <= sl_pct:
+            print(f"\n🚨 [MICRO-HEARTBEAT 10S] Salida Stop/Trailing ejecutada para {sym} @ ${current_price:.5f} (PnL: {current_pnl_pct:+.2f}%, SL: {sl_pct:+.2f}%)")
+            sell_res = execute_real_spot_market_sell(sym, qty)
+            print(f"🔄 Venta Mercado Ejecutada: {sell_res}")
+            state["position"] = None
+            state["status"] = f"🏁 Salida en Vivo ({sym} PnL: {current_pnl_pct:+.2f}%)"
+            save_real_account_state(state)
+            try:
+                sync_real_account_with_binance()
+            except Exception:
+                pass
+            return "EXIT"
+            
+        return {
+            "symbol": sym,
+            "price": current_price,
+            "pnl_pct": current_pnl_pct,
+            "highest_pnl": highest_pnl_pct,
+            "phase": new_phase
+        }
+    except Exception:
+        return None
 
 def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bearish=False, is_learned_signal=False):
     state = load_real_account_state()
