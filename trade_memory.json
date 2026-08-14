@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3751,
+    "total_trades": 3752,
     "wins": 643,
-    "losses": 3108,
+    "losses": 3109,
     "win_rate_pct": 17.14,
-    "total_pnl_usd": 799379.2098954523
+    "total_pnl_usd": 799378.9998954523
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SCRTUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AXTIBUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on DRAMBUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONEUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on LDOUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on UNIUSDT)",
-      "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on HEIUSDT)"
+      "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on HEIUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ATOMUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GIGGLEUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 06:48:21",
-      "account_id": "SIM-074",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "ONEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.00086,
-      "exit_price": 0.00086,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "Hit SL on ONEUSDT (-$0.03). Re-Trading!",
-      "context": {
-        "score": 50,
-        "rsi_15m": 54.93,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 06:54:23",
       "account_id": "SIM-041",
@@ -8270,6 +8253,23 @@
       "context": {
         "score": 50,
         "rsi_15m": 67.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 09:26:24",
+      "account_id": "SIM-065",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ATOMUSDT",
+      "side": "SHORT",
+      "entry_price": 1.537,
+      "exit_price": 1.552,
+      "pnl_usd": -0.21,
+      "result": "LOSS",
+      "notes": "Hit SL on ATOMUSDT (-$0.21). Re-Trading!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 56.72,
         "macro_trend_4h": "NEUTRAL"
       }
     }
