@@ -1,19 +1,29 @@
 import os
 import json
+import threading
 from datetime import datetime
 
 MEMORY_FILE = os.path.join(os.path.dirname(__file__), "time_series_history.json")
+_MEMORY_LOCK = threading.Lock()
+_MEMORY_CACHE = None
 
 def load_time_series_history():
+    global _MEMORY_CACHE
+    if _MEMORY_CACHE is not None:
+        return _MEMORY_CACHE
     if os.path.exists(MEMORY_FILE):
         try:
             with open(MEMORY_FILE, "r", encoding="utf-8") as f:
-                return json.load(f)
+                _MEMORY_CACHE = json.load(f)
+                return _MEMORY_CACHE
         except Exception:
             pass
-    return {}
+    _MEMORY_CACHE = {}
+    return _MEMORY_CACHE
 
 def save_time_series_history(history):
+    global _MEMORY_CACHE
+    _MEMORY_CACHE = history
     try:
         with open(MEMORY_FILE, "w", encoding="utf-8") as f:
             json.dump(history, f, indent=2, ensure_ascii=False)
@@ -22,31 +32,32 @@ def save_time_series_history(history):
 
 def record_5m_reading(symbol, price, score, rsi, macd, volume_surge, wyckoff, news_headline=None, fear_greed_score=50):
     """
-    Records a 5-minute reading snapshot for a symbol, retaining the last 12 cycles (1 hour)
-    to enable multi-cycle trend pattern recognition and news-correlation learning.
+    Records a 5-minute reading snapshot for a symbol in a thread-safe manner,
+    retaining the last 48 cycles (4 hours) to enable multi-cycle trend recognition.
     """
-    history = load_time_series_history()
-    if symbol not in history:
-        history[symbol] = []
+    with _MEMORY_LOCK:
+        history = load_time_series_history()
+        if symbol not in history:
+            history[symbol] = []
+            
+        now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        snapshot = {
+            "timestamp": now_str,
+            "price": price,
+            "score": score,
+            "rsi": rsi,
+            "macd": macd,
+            "volume_surge": volume_surge,
+            "wyckoff": wyckoff,
+            "news_headline": news_headline,
+            "fear_greed": fear_greed_score
+        }
         
-    now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    snapshot = {
-        "timestamp": now_str,
-        "price": price,
-        "score": score,
-        "rsi": rsi,
-        "macd": macd,
-        "volume_surge": volume_surge,
-        "wyckoff": wyckoff,
-        "news_headline": news_headline,
-        "fear_greed": fear_greed_score
-    }
-    
-    history[symbol].append(snapshot)
-    # Retain the last 48 snapshots (4 hours of 5m readings for deep structural context)
-    history[symbol] = history[symbol][-48:]
-    save_time_series_history(history)
-    return history[symbol]
+        history[symbol].append(snapshot)
+        # Retain the last 48 snapshots (4 hours of 5m readings for deep structural context)
+        history[symbol] = history[symbol][-48:]
+        save_time_series_history(history)
+        return history[symbol]
 
 def get_multi_cycle_pattern_summary(symbol):
     """

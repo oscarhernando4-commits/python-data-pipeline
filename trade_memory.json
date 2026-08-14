@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3828,
+    "total_trades": 3829,
     "wins": 660,
-    "losses": 3168,
+    "losses": 3169,
     "win_rate_pct": 17.24,
-    "total_pnl_usd": 791533.1298954525
+    "total_pnl_usd": 791533.0698954525
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 12:02:38",
-      "account_id": "SIM-076",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "GIGGLEUSDT",
-      "side": "SHORT",
-      "entry_price": 33.98,
-      "exit_price": 34.37,
-      "pnl_usd": -0.25,
-      "result": "LOSS",
-      "notes": "Hit SL on GIGGLEUSDT (-$0.25). Re-Trading!",
-      "context": {
-        "score": 30,
-        "rsi_15m": 47.09,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 12:18:38",
       "account_id": "SIM-043",
@@ -8254,6 +8237,23 @@
       "context": {
         "score": 20,
         "rsi_15m": 21.52,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 08:02:45",
+      "account_id": "SIM-099",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01402,
+      "exit_price": 0.01402,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on TSTUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 49.26,
         "macro_trend_4h": "NEUTRAL"
       }
     }
