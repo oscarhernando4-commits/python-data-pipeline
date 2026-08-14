@@ -1,25 +1,51 @@
 {
-  "STXUSDT": [
+  "BABYUSDT": [
     {
-      "timestamp": "2026-08-14 03:06:11",
-      "price": 0.123,
+      "timestamp": "2026-08-14 03:08:12",
+      "price": 0.01003,
       "score": 25,
-      "rsi": 31.9,
+      "rsi": 30.12,
       "macd": "Neutral",
-      "volume_surge": 0.12,
+      "volume_surge": 0.07,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "TIAUSDT": [
+  "OPUSDT": [
     {
-      "timestamp": "2026-08-14 03:06:11",
-      "price": 0.311,
+      "timestamp": "2026-08-14 03:08:12",
+      "price": 0.0878,
       "score": 0,
-      "rsi": 47.32,
+      "rsi": 47.62,
       "macd": "Neutral",
-      "volume_surge": 1.04,
+      "volume_surge": 0.18,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "INTCBUSDT": [
+    {
+      "timestamp": "2026-08-14 03:08:12",
+      "price": 105.38,
+      "score": 45,
+      "rsi": 53.03,
+      "macd": "Neutral",
+      "volume_surge": 0.04,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CFXUSDT": [
+    {
+      "timestamp": "2026-08-14 03:08:12",
+      "price": 0.04225,
+      "score": 35,
+      "rsi": 62.13,
+      "macd": "Neutral",
+      "volume_surge": 0.66,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
