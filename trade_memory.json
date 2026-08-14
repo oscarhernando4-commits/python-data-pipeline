@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3740,
+    "total_trades": 3742,
     "wins": 643,
-    "losses": 3097,
-    "win_rate_pct": 17.19,
-    "total_pnl_usd": 799382.399895452
+    "losses": 3099,
+    "win_rate_pct": 17.18,
+    "total_pnl_usd": 799381.539895452
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on STORJUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ROBOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BMTUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ROBOUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on HBARUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ALLOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PYTHUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ARBUSDT)"
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ARBUSDT)",
+      "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MORPHOUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GIGGLEUSDT)",
@@ -53,40 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 06:28:19",
-      "account_id": "SIM-039",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ONEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.00092,
-      "exit_price": 0.0009,
-      "pnl_usd": 0.4,
-      "result": "WIN",
-      "notes": "Win on ONEUSDT (+$0.40 net) -> Level 8 Re-Trading Started!",
-      "context": {
-        "score": 60,
-        "rsi_15m": 67.39,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 06:28:19",
-      "account_id": "SIM-065",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "ALGOUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0788,
-      "exit_price": 0.0796,
-      "pnl_usd": -0.22,
-      "result": "LOSS",
-      "notes": "Hit SL on ALGOUSDT (-$0.22). Re-Trading!",
-      "context": {
-        "score": 75,
-        "rsi_15m": 61.66,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 06:30:23",
       "account_id": "SIM-040",
@@ -8270,6 +8236,40 @@
       "context": {
         "score": 70,
         "rsi_15m": 62.58,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 08:54:32",
+      "account_id": "SIM-059",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "MORPHOUSDT",
+      "side": "LONG",
+      "entry_price": 1.95,
+      "exit_price": 1.922,
+      "pnl_usd": -0.42,
+      "result": "LOSS",
+      "notes": "Hit SL on MORPHOUSDT (-$0.42). Re-Trading!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 28.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 08:54:32",
+      "account_id": "SIM-060",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "MORPHOUSDT",
+      "side": "LONG",
+      "entry_price": 1.95,
+      "exit_price": 1.922,
+      "pnl_usd": -0.44,
+      "result": "LOSS",
+      "notes": "Hit SL on MORPHOUSDT (-$0.44). Re-Trading!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 28.69,
         "macro_trend_4h": "NEUTRAL"
       }
     }
