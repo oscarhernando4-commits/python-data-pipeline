@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3745,
+    "total_trades": 3748,
     "wins": 643,
-    "losses": 3102,
-    "win_rate_pct": 17.17,
-    "total_pnl_usd": 799380.869895452
+    "losses": 3105,
+    "win_rate_pct": 17.16,
+    "total_pnl_usd": 799380.6498954522
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BMTUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ROBOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SCRTUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AXTIBUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PYTHUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ARBUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on LDOUSDT)"
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on LDOUSDT)",
+      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on UNIUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GIGGLEUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 06:34:20",
-      "account_id": "SIM-044",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "NIGHTUSDT",
-      "side": "LONG",
-      "entry_price": 0.01801,
-      "exit_price": 0.01806,
-      "pnl_usd": -0.08,
-      "result": "LOSS",
-      "notes": "Hit SL on NIGHTUSDT (-$0.08). Re-Trading!",
-      "context": {
-        "score": 50,
-        "rsi_15m": 61.74,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 06:40:22",
-      "account_id": "SIM-065",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "ONEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.00086,
-      "exit_price": 0.00088,
-      "pnl_usd": -0.48,
-      "result": "LOSS",
-      "notes": "Hit SL on ONEUSDT (-$0.48). Re-Trading!",
-      "context": {
-        "score": 60,
-        "rsi_15m": 59.77,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 06:40:22",
-      "account_id": "SIM-073",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "ONEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.00086,
-      "exit_price": 0.00088,
-      "pnl_usd": -0.49,
-      "result": "LOSS",
-      "notes": "Hit SL on ONEUSDT (-$0.49). Re-Trading!",
-      "context": {
-        "score": 60,
-        "rsi_15m": 59.77,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 06:40:22",
       "account_id": "SIM-074",
@@ -8270,6 +8219,57 @@
       "context": {
         "score": 50,
         "rsi_15m": 64.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 09:04:32",
+      "account_id": "SIM-046",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "UNIUSDT",
+      "side": "LONG",
+      "entry_price": 3.44,
+      "exit_price": 3.447,
+      "pnl_usd": -0.08,
+      "result": "LOSS",
+      "notes": "Hit SL on UNIUSDT (-$0.08). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 36.12,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 09:04:32",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "UNIUSDT",
+      "side": "LONG",
+      "entry_price": 3.44,
+      "exit_price": 3.447,
+      "pnl_usd": -0.07,
+      "result": "LOSS",
+      "notes": "Hit SL on UNIUSDT (-$0.07). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 36.12,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 09:04:32",
+      "account_id": "SIM-053",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "UNIUSDT",
+      "side": "LONG",
+      "entry_price": 3.44,
+      "exit_price": 3.447,
+      "pnl_usd": -0.07,
+      "result": "LOSS",
+      "notes": "Hit SL on UNIUSDT (-$0.07). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 36.12,
         "macro_trend_4h": "NEUTRAL"
       }
     }
