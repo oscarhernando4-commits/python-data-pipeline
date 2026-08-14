@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3764,
+    "total_trades": 3765,
     "wins": 647,
-    "losses": 3117,
-    "win_rate_pct": 17.19,
-    "total_pnl_usd": 799380.3398954525
+    "losses": 3118,
+    "win_rate_pct": 17.18,
+    "total_pnl_usd": 799380.2698954525
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on CRVUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on NOTUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ATOMUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AEROUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DODOUSDT)",
-      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GPSUSDT)"
+      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GPSUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on CRVUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PROMUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 07:02:20",
-      "account_id": "SIM-099",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "ONEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.00084,
-      "exit_price": 0.00085,
-      "pnl_usd": -0.24,
-      "result": "LOSS",
-      "notes": "Hit SL on ONEUSDT (-$0.24). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 52.54,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 07:04:22",
       "account_id": "SIM-040",
@@ -8270,6 +8253,23 @@
       "context": {
         "score": 0,
         "rsi_15m": 38.09,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 09:54:34",
+      "account_id": "SIM-079",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "CRVUSDT",
+      "side": "SHORT",
+      "entry_price": 0.2492,
+      "exit_price": 0.2485,
+      "pnl_usd": -0.07,
+      "result": "LOSS",
+      "notes": "Hit SL on CRVUSDT (-$0.07). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 40.76,
         "macro_trend_4h": "NEUTRAL"
       }
     }
