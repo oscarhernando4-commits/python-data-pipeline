@@ -13,7 +13,7 @@
     "cost_usd": 16.03,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 150,
+    "holding_cycles": 151,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -24,6 +24,19 @@
     "confidence": 0,
     "reasoning": "A pesar de tener candidatos con scores técnicos de 85, la falta de confirmación en el libro de órdenes (Bids 50%) y la alta volatilidad histórica de los activos seleccionados no cumplen con el umbral de seguridad A+ exigido por el comité para una ejecución de compra.",
     "top_candidates": [
+      {
+        "symbol": "GOOGLBUSDT",
+        "score": 85,
+        "price": 347.47,
+        "rsi_2m": 64.19,
+        "rsi_5m": 64.19,
+        "rsi_15m": 64.19,
+        "rsi_1h": 50.0,
+        "rsi_4h": 50.0,
+        "vol_surge": 1.81,
+        "trade_quality": "C_NOISE",
+        "macro_trend": "NEUTRAL"
+      },
       {
         "symbol": "ICPUSDT",
         "score": 85,
@@ -131,14 +144,14 @@
       {
         "symbol": "BOMEUSDT",
         "score": 75,
-        "price": 0.000753,
-        "rsi_2m": 61.48,
-        "rsi_5m": 61.48,
-        "rsi_15m": 61.48,
+        "price": 0.0007505,
+        "rsi_2m": 59.16,
+        "rsi_5m": 59.16,
+        "rsi_15m": 59.16,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 1.02,
-        "trade_quality": "C_NOISE",
+        "vol_surge": 3.14,
+        "trade_quality": "B",
         "macro_trend": "NEUTRAL"
       },
       {
@@ -163,21 +176,8 @@
         "rsi_15m": 53.72,
         "rsi_1h": 50.0,
         "rsi_4h": 50.0,
-        "vol_surge": 0.9,
+        "vol_surge": 1.78,
         "trade_quality": "C_NOISE",
-        "macro_trend": "NEUTRAL"
-      },
-      {
-        "symbol": "TIAUSDT",
-        "score": 75,
-        "price": 0.0007526,
-        "rsi_2m": 61.13,
-        "rsi_5m": 61.13,
-        "rsi_15m": 61.13,
-        "rsi_1h": 50.0,
-        "rsi_4h": 50.0,
-        "vol_surge": 2.3,
-        "trade_quality": "B",
         "macro_trend": "NEUTRAL"
       }
     ]
