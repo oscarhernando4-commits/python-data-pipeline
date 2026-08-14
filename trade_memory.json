@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3577,
-    "wins": 611,
+    "total_trades": 3579,
+    "wins": 613,
     "losses": 2966,
-    "win_rate_pct": 17.08,
-    "total_pnl_usd": 798637.4998954528
+    "win_rate_pct": 17.13,
+    "total_pnl_usd": 798639.3898954527
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on EDENUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ONEUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ATMUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ATUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ATUSDT)",
@@ -49,44 +48,11 @@
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BANKUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GIGGLEUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ETHUSDT)",
-      "BOOST SHORT when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HOMEUSDT)"
+      "BOOST SHORT when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HOMEUSDT)",
+      "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PROMUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 14:01:59",
-      "account_id": "SIM-060",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "JSTUSDT",
-      "side": "LONG",
-      "entry_price": 0.102,
-      "exit_price": 0.10106,
-      "pnl_usd": -0.29,
-      "result": "LOSS",
-      "notes": "Hit SL on JSTUSDT (-$0.29). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 23.59,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 19:16:23",
-      "account_id": "SIM-057",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "DEXEUSDT",
-      "side": "LONG",
-      "entry_price": 0.735,
-      "exit_price": 2.051,
-      "pnl_usd": 29.45,
-      "result": "WIN",
-      "notes": "Win on DEXEUSDT (+$29.45 net) -> Level 5 Re-Trading Started!",
-      "context": {
-        "score": 10,
-        "rsi_15m": 75.85,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 19:22:29",
       "account_id": "SIM-065",
@@ -8198,6 +8164,40 @@
       "context": {
         "score": 0,
         "rsi_15m": 67.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 00:06:36",
+      "account_id": "SIM-032",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "PROMUSDT",
+      "side": "SHORT",
+      "entry_price": 2.738,
+      "exit_price": 2.604,
+      "pnl_usd": 0.95,
+      "result": "WIN",
+      "notes": "Win on PROMUSDT (+$0.95 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 45,
+        "rsi_15m": 64.73,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 00:06:36",
+      "account_id": "SIM-036",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "PROMUSDT",
+      "side": "SHORT",
+      "entry_price": 2.738,
+      "exit_price": 2.604,
+      "pnl_usd": 0.94,
+      "result": "WIN",
+      "notes": "Win on PROMUSDT (+$0.94 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 45,
+        "rsi_15m": 64.73,
         "macro_trend_4h": "NEUTRAL"
       }
     }
