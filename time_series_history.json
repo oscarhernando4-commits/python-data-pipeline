@@ -1,12 +1,25 @@
 {
   "STXUSDT": [
     {
-      "timestamp": "2026-08-14 12:10:08",
-      "price": 0.1206,
+      "timestamp": "2026-08-14 12:12:08",
+      "price": 0.1203,
       "score": 25,
-      "rsi": 26.73,
+      "rsi": 24.14,
       "macd": "Neutral",
-      "volume_surge": 0.46,
+      "volume_surge": 0.5,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "CFXUSDT": [
+    {
+      "timestamp": "2026-08-14 12:12:08",
+      "price": 0.04185,
+      "score": 0,
+      "rsi": 40.05,
+      "macd": "Neutral",
+      "volume_surge": 0.96,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +27,12 @@
   ],
   "ESPUSDT": [
     {
-      "timestamp": "2026-08-14 12:10:08",
+      "timestamp": "2026-08-14 12:12:08",
       "price": 0.0756,
       "score": 35,
       "rsi": 57.06,
       "macd": "Neutral",
-      "volume_surge": 0.81,
+      "volume_surge": 0.83,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
