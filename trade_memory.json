@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3915,
+    "total_trades": 3916,
     "wins": 675,
-    "losses": 3240,
+    "losses": 3241,
     "win_rate_pct": 17.24,
-    "total_pnl_usd": 790786.6698954521
+    "total_pnl_usd": 790786.249895452
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 10:48:59",
-      "account_id": "SIM-089",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "BANKUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0412,
-      "exit_price": 0.0381,
-      "pnl_usd": 1.35,
-      "result": "WIN",
-      "notes": "Win on BANKUSDT (+$1.35 net) -> Level 5 Re-Trading Started!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 34.34,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 15:52:26",
       "account_id": "SIM-027",
@@ -8290,6 +8273,23 @@
       "context": {
         "score": 36,
         "rsi_15m": 69.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 15:22:49",
+      "account_id": "SIM-016",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "KORUBUSDT",
+      "side": "LONG",
+      "entry_price": 22.38,
+      "exit_price": 21.87,
+      "pnl_usd": -0.42,
+      "result": "LOSS",
+      "notes": "Hit SL on KORUBUSDT (-$0.42). Re-Trading!",
+      "context": {
+        "score": 32,
+        "rsi_15m": 40.16,
         "macro_trend_4h": "NEUTRAL"
       }
     }
