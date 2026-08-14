@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3715,
-    "wins": 636,
+    "total_trades": 3718,
+    "wins": 639,
     "losses": 3079,
-    "win_rate_pct": 17.12,
-    "total_pnl_usd": 798648.3198954518
+    "win_rate_pct": 17.19,
+    "total_pnl_usd": 798652.0098954518
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on 2ZUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MSTRBUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HOMEUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BANKUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GIGGLEUSDT)",
@@ -49,61 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JTOUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DODOUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DODOUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on NILUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on NILUSDT)",
+      "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on STORJUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 04:34:21",
-      "account_id": "SIM-098",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "COTIUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01305,
-      "exit_price": 0.01196,
-      "pnl_usd": 1.5,
-      "result": "WIN",
-      "notes": "Win on COTIUSDT (+$1.50 net) -> Level 4 Re-Trading Started!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 38.61,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 04:34:21",
-      "account_id": "SIM-099",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "COTIUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01305,
-      "exit_price": 0.01196,
-      "pnl_usd": 1.54,
-      "result": "WIN",
-      "notes": "Win on COTIUSDT (+$1.54 net) -> Level 6 Re-Trading Started!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 38.61,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 04:54:18",
-      "account_id": "SIM-094",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "BANKUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0387,
-      "exit_price": 0.0387,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on BANKUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 48.75,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 04:54:18",
       "account_id": "SIM-095",
@@ -8270,6 +8219,57 @@
       "context": {
         "score": 30,
         "rsi_15m": 55.67,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 07:00:31",
+      "account_id": "SIM-084",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "STORJUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0478,
+      "exit_price": 0.0439,
+      "pnl_usd": 1.78,
+      "result": "WIN",
+      "notes": "Win on STORJUSDT (+$1.78 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 29.4,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 07:00:31",
+      "account_id": "SIM-093",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "STORJUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0464,
+      "exit_price": 0.0439,
+      "pnl_usd": 0.93,
+      "result": "WIN",
+      "notes": "Win on STORJUSDT (+$0.93 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 29.4,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 07:00:31",
+      "account_id": "SIM-098",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "STORJUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0471,
+      "exit_price": 0.0439,
+      "pnl_usd": 0.98,
+      "result": "WIN",
+      "notes": "Win on STORJUSDT (+$0.98 net) -> Level 5 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 29.4,
         "macro_trend_4h": "NEUTRAL"
       }
     }
