@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3758,
+    "total_trades": 3761,
     "wins": 646,
-    "losses": 3112,
-    "win_rate_pct": 17.19,
-    "total_pnl_usd": 799381.3398954523
+    "losses": 3115,
+    "win_rate_pct": 17.18,
+    "total_pnl_usd": 799381.1198954524
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on DRAMBUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONEUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on GPSUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on UNIUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on HEIUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ATOMUSDT)",
-      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AEROUSDT)"
+      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AEROUSDT)",
+      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DODOUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HOMEUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 07:02:20",
-      "account_id": "SIM-041",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "EPICUSDT",
-      "side": "LONG",
-      "entry_price": 0.3383,
-      "exit_price": 0.339,
-      "pnl_usd": -0.12,
-      "result": "LOSS",
-      "notes": "Hit SL on EPICUSDT (-$0.12). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 38.19,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 07:02:20",
-      "account_id": "SIM-043",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "EPICUSDT",
-      "side": "LONG",
-      "entry_price": 0.3383,
-      "exit_price": 0.339,
-      "pnl_usd": -0.12,
-      "result": "LOSS",
-      "notes": "Hit SL on EPICUSDT (-$0.12). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 38.19,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 07:02:20",
-      "account_id": "SIM-044",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "EPICUSDT",
-      "side": "LONG",
-      "entry_price": 0.3383,
-      "exit_price": 0.339,
-      "pnl_usd": -0.08,
-      "result": "LOSS",
-      "notes": "Hit SL on EPICUSDT (-$0.08). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 38.19,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 07:02:20",
       "account_id": "SIM-065",
@@ -8270,6 +8219,57 @@
       "context": {
         "score": 40,
         "rsi_15m": 24.85,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 09:42:23",
+      "account_id": "SIM-046",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DODOUSDT",
+      "side": "LONG",
+      "entry_price": 0.02168,
+      "exit_price": 0.02171,
+      "pnl_usd": -0.08,
+      "result": "LOSS",
+      "notes": "Hit SL on DODOUSDT (-$0.08). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 30.06,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 09:42:23",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DODOUSDT",
+      "side": "LONG",
+      "entry_price": 0.02168,
+      "exit_price": 0.02171,
+      "pnl_usd": -0.07,
+      "result": "LOSS",
+      "notes": "Hit SL on DODOUSDT (-$0.07). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 30.06,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 09:42:23",
+      "account_id": "SIM-053",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DODOUSDT",
+      "side": "LONG",
+      "entry_price": 0.02168,
+      "exit_price": 0.02171,
+      "pnl_usd": -0.07,
+      "result": "LOSS",
+      "notes": "Hit SL on DODOUSDT (-$0.07). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 30.06,
         "macro_trend_4h": "NEUTRAL"
       }
     }
