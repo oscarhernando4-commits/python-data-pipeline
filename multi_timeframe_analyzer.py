@@ -455,8 +455,8 @@ def analyze_multi_timeframe_candles(symbol):
         # Spike up followed by rejection wick (buying top trap)
         is_green_candle = close_15m >= open_15m
         upper_wick_ratio = (upper_wick / candle_range) if candle_range > 0 else 0.0
-        # Adaptive wick threshold: 50% for healthy green candles (Shooting Star standard), 35% for red/reversal candles
-        wick_threshold = 0.50 if is_green_candle else 0.35
+        # Adaptive wick threshold: 40% for healthy green candles, 35% for red/reversal candles
+        wick_threshold = 0.40 if is_green_candle else 0.35
         
         if candle_range > 0 and upper_wick_ratio > wick_threshold and (high_15m - low_15m) / low_15m > 0.012:
             is_overextended_15m = True
