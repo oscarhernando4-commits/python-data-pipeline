@@ -1,51 +1,25 @@
 {
-  "MUBARAKUSDT": [
+  "NILUSDT": [
     {
-      "timestamp": "2026-08-14 11:00:10",
-      "price": 0.0159,
-      "score": 50,
-      "rsi": 52.03,
+      "timestamp": "2026-08-14 11:02:07",
+      "price": 0.04235,
+      "score": 0,
+      "rsi": 47.22,
       "macd": "Neutral",
-      "volume_surge": 0.07,
+      "volume_surge": 0.09,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
-  ]
-}TUSDT": [
+  ],
+  "NOTUSDT": [
     {
-      "timestamp": "2026-08-14 11:00:10",
+      "timestamp": "2026-08-14 11:02:07",
       "price": 0.000375,
       "score": 30,
       "rsi": 38.59,
       "macd": "Neutral",
-      "volume_surge": 0.0,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "STXUSDT": [
-    {
-      "timestamp": "2026-08-14 11:00:10",
-      "price": 0.1211,
-      "score": 25,
-      "rsi": 31.53,
-      "macd": "Neutral",
-      "volume_surge": 0.0,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "OPUSDT": [
-    {
-      "timestamp": "2026-08-14 11:00:10",
-      "price": 0.0856,
-      "score": 25,
-      "rsi": 30.19,
-      "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.01,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -53,12 +27,25 @@
   ],
   "CFXUSDT": [
     {
-      "timestamp": "2026-08-14 11:00:10",
-      "price": 0.04203,
+      "timestamp": "2026-08-14 11:02:07",
+      "price": 0.04202,
       "score": 0,
-      "rsi": 44.57,
+      "rsi": 44.14,
       "macd": "Neutral",
-      "volume_surge": 0.01,
+      "volume_surge": 0.05,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "OPUSDT": [
+    {
+      "timestamp": "2026-08-14 11:02:07",
+      "price": 0.0856,
+      "score": 25,
+      "rsi": 30.19,
+      "macd": "Neutral",
+      "volume_surge": 0.27,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
