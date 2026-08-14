@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3795,
+    "total_trades": 3797,
     "wins": 651,
-    "losses": 3144,
+    "losses": 3146,
     "win_rate_pct": 17.15,
-    "total_pnl_usd": 797827.3598954525
+    "total_pnl_usd": 797827.2498954525
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ATOMUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AEROUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DODOUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GPSUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NEXOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ENSOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on REUSDT)",
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ROBOUSDT)"
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ROBOUSDT)",
+      "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on STORJUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on INJUSDT)",
@@ -53,40 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 08:10:30",
-      "account_id": "SIM-047",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ENAUSDT",
-      "side": "LONG",
-      "entry_price": 0.0867,
-      "exit_price": 0.0869,
-      "pnl_usd": -0.05,
-      "result": "LOSS",
-      "notes": "Hit SL on ENAUSDT (-$0.05). Re-Trading!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 39.79,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 08:30:22",
-      "account_id": "SIM-072",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "TSTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01719,
-      "exit_price": 0.01553,
-      "pnl_usd": 2.31,
-      "result": "WIN",
-      "notes": "Win on TSTUSDT (+$2.31 net) -> Level 13 Re-Trading Started!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 47.26,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 08:30:22",
       "account_id": "SIM-094",
@@ -8270,6 +8236,40 @@
       "context": {
         "score": 0,
         "rsi_15m": 51.07,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 11:36:26",
+      "account_id": "SIM-079",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "STORJUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0437,
+      "exit_price": 0.0436,
+      "pnl_usd": -0.07,
+      "result": "LOSS",
+      "notes": "Hit SL on STORJUSDT (-$0.07). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 37.47,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 11:36:26",
+      "account_id": "SIM-080",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "STORJUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0437,
+      "exit_price": 0.0436,
+      "pnl_usd": -0.04,
+      "result": "LOSS",
+      "notes": "Hit SL on STORJUSDT (-$0.04). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 37.47,
         "macro_trend_4h": "NEUTRAL"
       }
     }
