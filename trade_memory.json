@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3830,
-    "wins": 661,
-    "losses": 3169,
-    "win_rate_pct": 17.26,
-    "total_pnl_usd": 791547.9598954525
+    "total_trades": 3835,
+    "wins": 665,
+    "losses": 3170,
+    "win_rate_pct": 17.34,
+    "total_pnl_usd": 791549.3598954525
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TSTUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JTOUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DODOUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DODOUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on NILUSDT)",
@@ -49,91 +48,11 @@
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SEIUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DASHUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on LDOUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ONEUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ONEUSDT)",
+      "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BTCUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 12:18:38",
-      "account_id": "SIM-044",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "UNIUSDT",
-      "side": "LONG",
-      "entry_price": 3.547,
-      "exit_price": 3.508,
-      "pnl_usd": -0.34,
-      "result": "LOSS",
-      "notes": "Hit SL on UNIUSDT (-$0.34). Re-Trading!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 25.64,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 12:24:39",
-      "account_id": "SIM-075",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "ATUSDT",
-      "side": "SHORT",
-      "entry_price": 0.1529,
-      "exit_price": 0.1527,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "Hit SL on ATUSDT (-$0.03). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 38.34,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 12:34:32",
-      "account_id": "SIM-074",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "BABYUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01032,
-      "exit_price": 0.01042,
-      "pnl_usd": -0.09,
-      "result": "LOSS",
-      "notes": "Hit SL on BABYUSDT (-$0.09). Re-Trading!",
-      "context": {
-        "score": 50,
-        "rsi_15m": 55.77,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 12:46:38",
-      "account_id": "SIM-098",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "XPLUSDT",
-      "side": "SHORT",
-      "entry_price": 0.07503,
-      "exit_price": 0.07503,
-      "pnl_usd": -0.05,
-      "result": "LOSS",
-      "notes": "Hit SL on XPLUSDT (-$0.05). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-13 13:10:39",
-      "account_id": "SIM-033",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "GIGGLEUSDT",
-      "side": "LONG",
-      "entry_price": 34.0,
-      "exit_price": 34.05,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on GIGGLEUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 40.31,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 13:10:39",
       "account_id": "SIM-034",
@@ -8256,6 +8175,87 @@
         "rsi_15m": 41.08,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-14 13:08:27",
+      "account_id": "SIM-034",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "BTCUSDT",
+      "side": "SHORT",
+      "entry_price": 63954.93,
+      "exit_price": 62672.0,
+      "pnl_usd": 0.37,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$0.37 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 43,
+        "rsi_15m": 32.6,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 13:08:27",
+      "account_id": "SIM-035",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "BTCUSDT",
+      "side": "SHORT",
+      "entry_price": 63954.93,
+      "exit_price": 62672.0,
+      "pnl_usd": 0.37,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$0.37 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 43,
+        "rsi_15m": 32.6,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 13:08:27",
+      "account_id": "SIM-038",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "BTCUSDT",
+      "side": "SHORT",
+      "entry_price": 63957.67,
+      "exit_price": 62672.0,
+      "pnl_usd": 0.37,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$0.37 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 43,
+        "rsi_15m": 32.6,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 13:08:27",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "BTCUSDT",
+      "side": "SHORT",
+      "entry_price": 63957.67,
+      "exit_price": 62672.0,
+      "pnl_usd": 0.37,
+      "result": "WIN",
+      "notes": "Win on BTCUSDT (+$0.37 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 43,
+        "rsi_15m": 32.6,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 13:08:27",
+      "account_id": "SIM-046",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.753,
+      "exit_price": 0.753,
+      "pnl_usd": -0.08,
+      "result": "LOSS",
+      "notes": "Hit SL on DOTUSDT (-$0.08). Re-Trading!",
+      "context": {}
     }
   ]
 }
