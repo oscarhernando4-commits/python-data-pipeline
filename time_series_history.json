@@ -1,25 +1,38 @@
 {
-  "INJUSDT": [
+  "IMXUSDT": [
     {
-      "timestamp": "2026-08-14 00:30:10",
-      "price": 4.598,
+      "timestamp": "2026-08-14 00:32:12",
+      "price": 0.1095,
       "score": 0,
-      "rsi": 37.32,
+      "rsi": 48.74,
       "macd": "Neutral",
-      "volume_surge": 0.04,
+      "volume_surge": 0.01,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "STXUSDT": [
+  "IDUSDT": [
     {
-      "timestamp": "2026-08-14 00:30:10",
-      "price": 0.1239,
-      "score": 0,
-      "rsi": 47.27,
+      "timestamp": "2026-08-14 00:32:12",
+      "price": 0.03,
+      "score": 30,
+      "rsi": 57.19,
       "macd": "Neutral",
-      "volume_surge": 0.0,
+      "volume_surge": 0.01,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "INTCBUSDT": [
+    {
+      "timestamp": "2026-08-14 00:32:12",
+      "price": 105.41,
+      "score": 30,
+      "rsi": 54.19,
+      "macd": "Neutral",
+      "volume_surge": 0.37,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
