@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3687,
-    "wins": 629,
+    "total_trades": 3689,
+    "wins": 631,
     "losses": 3058,
-    "win_rate_pct": 17.06,
-    "total_pnl_usd": 798647.6198954523
+    "win_rate_pct": 17.1,
+    "total_pnl_usd": 798648.4298954523
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on QNTUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ATUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MSTRBUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on NBISBUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MUBARAKUSDT)",
@@ -49,44 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SPYBUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ZECUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on OPUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ETHFIUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ETHFIUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on JTOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 01:02:19",
-      "account_id": "SIM-034",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ARBUSDT",
-      "side": "LONG",
-      "entry_price": 0.0737,
-      "exit_price": 0.0739,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on ARBUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 70,
-        "rsi_15m": 23.27,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 01:02:19",
-      "account_id": "SIM-035",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ARBUSDT",
-      "side": "LONG",
-      "entry_price": 0.0737,
-      "exit_price": 0.0739,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on ARBUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 70,
-        "rsi_15m": 23.27,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 01:02:19",
       "account_id": "SIM-036",
@@ -8270,6 +8236,40 @@
       "context": {
         "score": 0,
         "rsi_15m": 35.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 04:06:26",
+      "account_id": "SIM-021",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "JTOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.577,
+      "exit_price": 0.5646,
+      "pnl_usd": 0.41,
+      "result": "WIN",
+      "notes": "Win on JTOUSDT (+$0.41 net) -> Level 12 Re-Trading Started!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 52.89,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 04:06:27",
+      "account_id": "SIM-033",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "JTOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.577,
+      "exit_price": 0.5646,
+      "pnl_usd": 0.4,
+      "result": "WIN",
+      "notes": "Win on JTOUSDT (+$0.40 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 30,
+        "rsi_15m": 52.89,
         "macro_trend_4h": "NEUTRAL"
       }
     }
