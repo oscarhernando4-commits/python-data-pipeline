@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3757,
-    "wins": 645,
+    "total_trades": 3758,
+    "wins": 646,
     "losses": 3112,
-    "win_rate_pct": 17.17,
-    "total_pnl_usd": 799380.2198954523
+    "win_rate_pct": 17.19,
+    "total_pnl_usd": 799381.3398954523
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AEROUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ETHUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HOMEUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PROMUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on EDENUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on STORJUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JUPUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TAOUSDT)",
-      "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ATMUSDT)"
+      "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ATMUSDT)",
+      "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SCRTUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 06:58:22",
-      "account_id": "SIM-035",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ATMUSDT",
-      "side": "SHORT",
-      "entry_price": 1.715,
-      "exit_price": 1.768,
-      "pnl_usd": -0.63,
-      "result": "LOSS",
-      "notes": "Hit SL on ATMUSDT (-$0.63). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 84.81,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 07:02:20",
       "account_id": "SIM-041",
@@ -8270,6 +8253,23 @@
       "context": {
         "score": 40,
         "rsi_15m": 25.37,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 09:40:40",
+      "account_id": "SIM-072",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "SCRTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0327,
+      "exit_price": 0.0309,
+      "pnl_usd": 1.12,
+      "result": "WIN",
+      "notes": "Win on SCRTUSDT (+$1.12 net) -> Level 15 Re-Trading Started!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 24.85,
         "macro_trend_4h": "NEUTRAL"
       }
     }
