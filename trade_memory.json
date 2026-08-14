@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3924,
-    "wins": 677,
+    "total_trades": 3927,
+    "wins": 680,
     "losses": 3247,
-    "win_rate_pct": 17.25,
-    "total_pnl_usd": 790786.1698954521
+    "win_rate_pct": 17.32,
+    "total_pnl_usd": 790787.8398954521
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on TRUMPUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on VIRTUALUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HOLOUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SYNUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ZAMAUSDT)",
@@ -49,49 +48,11 @@
       "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ENSOUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ALICEUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SHIBUSDT)",
-      "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DRAMBUSDT)"
+      "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DRAMBUSDT)",
+      "BOOST SHORT when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PROMUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 16:04:24",
-      "account_id": "SIM-030",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "SUNUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01831,
-      "exit_price": 0.01831,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on SUNUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-13 16:04:24",
-      "account_id": "SIM-031",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "SUNUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01831,
-      "exit_price": 0.01831,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on SUNUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-13 16:04:24",
-      "account_id": "SIM-032",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "SUNUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01831,
-      "exit_price": 0.01831,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on SUNUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-13 16:04:24",
       "account_id": "SIM-066",
@@ -8306,6 +8267,57 @@
       "context": {
         "score": 55,
         "rsi_15m": 66.65,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 16:00:43",
+      "account_id": "SIM-062",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "PROMUSDT",
+      "side": "SHORT",
+      "entry_price": 2.563,
+      "exit_price": 2.457,
+      "pnl_usd": 0.86,
+      "result": "WIN",
+      "notes": "Win on PROMUSDT (+$0.86 net) -> Level 15 Re-Trading Started!",
+      "context": {
+        "score": 52,
+        "rsi_15m": 27.61,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 16:00:43",
+      "account_id": "SIM-074",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "PROMUSDT",
+      "side": "SHORT",
+      "entry_price": 2.578,
+      "exit_price": 2.457,
+      "pnl_usd": 0.4,
+      "result": "WIN",
+      "notes": "Win on PROMUSDT (+$0.40 net) -> Level 12 Re-Trading Started!",
+      "context": {
+        "score": 52,
+        "rsi_15m": 27.61,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 16:00:43",
+      "account_id": "SIM-075",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "PROMUSDT",
+      "side": "SHORT",
+      "entry_price": 2.578,
+      "exit_price": 2.457,
+      "pnl_usd": 0.41,
+      "result": "WIN",
+      "notes": "Win on PROMUSDT (+$0.41 net) -> Level 13 Re-Trading Started!",
+      "context": {
+        "score": 52,
+        "rsi_15m": 27.61,
         "macro_trend_4h": "NEUTRAL"
       }
     }
