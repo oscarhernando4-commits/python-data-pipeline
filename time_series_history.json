@@ -1,12 +1,38 @@
 {
-  "CFXUSDT": [
+  "KITEUSDT": [
     {
-      "timestamp": "2026-08-14 13:48:15",
-      "price": 0.04215,
-      "score": 48,
-      "rsi": 52.41,
+      "timestamp": "2026-08-14 13:50:14",
+      "price": 0.0948,
+      "score": 41,
+      "rsi": 18.44,
       "macd": "Neutral",
-      "volume_surge": 0.18,
+      "volume_surge": 0.25,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BMTUSDT": [
+    {
+      "timestamp": "2026-08-14 13:50:14",
+      "price": 0.01578,
+      "score": 50,
+      "rsi": 64.87,
+      "macd": "Neutral",
+      "volume_surge": 1.16,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "INJUSDT": [
+    {
+      "timestamp": "2026-08-14 13:50:14",
+      "price": 4.412,
+      "score": 52,
+      "rsi": 28.97,
+      "macd": "Neutral",
+      "volume_surge": 0.11,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,51 +40,25 @@
   ],
   "OPUSDT": [
     {
-      "timestamp": "2026-08-14 13:48:16",
+      "timestamp": "2026-08-14 13:50:14",
       "price": 0.0855,
       "score": 43,
       "rsi": 41.41,
       "macd": "Neutral",
-      "volume_surge": 0.18,
+      "volume_surge": 0.32,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
     }
   ],
-  "STXUSDT": [
+  "CHIPUSDT": [
     {
-      "timestamp": "2026-08-14 13:48:16",
-      "price": 0.1217,
-      "score": 50,
-      "rsi": 53.08,
+      "timestamp": "2026-08-14 13:50:14",
+      "price": 0.02281,
+      "score": 32,
+      "rsi": 47.42,
       "macd": "Neutral",
-      "volume_surge": 0.03,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "AMATBUSDT": [
-    {
-      "timestamp": "2026-08-14 13:48:16",
-      "price": 522.47,
-      "score": 41,
-      "rsi": 71.67,
-      "macd": "Neutral",
-      "volume_surge": 0.03,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "KITEUSDT": [
-    {
-      "timestamp": "2026-08-14 13:48:16",
-      "price": 0.095,
-      "score": 41,
-      "rsi": 19.84,
-      "macd": "Neutral",
-      "volume_surge": 0.14,
+      "volume_surge": 0.07,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
