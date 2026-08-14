@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3903,
+    "total_trades": 3904,
     "wins": 671,
-    "losses": 3232,
+    "losses": 3233,
     "win_rate_pct": 17.19,
-    "total_pnl_usd": 790786.7198954525
+    "total_pnl_usd": 790786.4898954525
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MUBARAKUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on HEIUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SAGAUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on 2ZUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on TSLABUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HEIUSDT)",
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on KORUBUSDT)"
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on KORUBUSDT)",
+      "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MSTRBUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JUPUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 15:20:19",
-      "account_id": "SIM-071",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "GPSUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01018,
-      "exit_price": 0.0107,
-      "pnl_usd": -1.13,
-      "result": "LOSS",
-      "notes": "Hit SL on GPSUSDT (-$1.13). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 47.38,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 15:20:19",
       "account_id": "SIM-098",
@@ -8284,6 +8267,23 @@
       "result": "LOSS",
       "notes": "Hit SL on KITEUSDT (-$0.05). Re-Trading!",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-14 14:56:36",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MSTRBUSDT",
+      "side": "LONG",
+      "entry_price": 93.02,
+      "exit_price": 92.0,
+      "pnl_usd": -0.23,
+      "result": "LOSS",
+      "notes": "Hit SL on MSTRBUSDT (-$0.23). Re-Trading!",
+      "context": {
+        "score": 41,
+        "rsi_15m": 15.21,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
