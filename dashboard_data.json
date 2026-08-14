@@ -13,7 +13,7 @@
     "cost_usd": 16.02,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 155,
+    "holding_cycles": 156,
     "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
@@ -25,7 +25,7 @@
     "reasoning": "El comité ha decidido mantener la posición en efectivo (HOLD) debido a la imposibilidad técnica de verificar la profundidad del libro de órdenes y la alta tasa de fallos en los trades recientes bajo condiciones de mercado neutrales.",
     "top_candidates": [
       {
-        "symbol": "ICPUSDT",
+        "symbol": "GNOUSDT",
         "score": 85,
         "price": 2.194,
         "rsi_2m": 65.33,
@@ -116,7 +116,7 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "SEIUSDT",
+        "symbol": "FILUSDT",
         "score": 75,
         "price": 0.04118,
         "rsi_2m": 60.09,
@@ -129,7 +129,7 @@
         "macro_trend": "NEUTRAL"
       },
       {
-        "symbol": "GOOGLBUSDT",
+        "symbol": "FETUSDT",
         "score": 75,
         "price": 347.22,
         "rsi_2m": 60.89,
