@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3680,
+    "total_trades": 3686,
     "wins": 629,
-    "losses": 3051,
-    "win_rate_pct": 17.09,
-    "total_pnl_usd": 798649.5998954523
+    "losses": 3057,
+    "win_rate_pct": 17.06,
+    "total_pnl_usd": 798648.0498954523
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on EDENUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PROMUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on AVNTUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MMTUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on CFXUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZAMAUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ACEUSDT)",
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AVNTUSDT)"
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AVNTUSDT)",
+      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on APTUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ATUSDT)",
@@ -53,100 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 00:14:19",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "PEPEUSDT",
-      "side": "LONG",
-      "entry_price": 2.63e-06,
-      "exit_price": 2.69e-06,
-      "pnl_usd": 0.43,
-      "result": "WIN",
-      "notes": "Win on PEPEUSDT (+$0.43 net) -> Level 11 Re-Trading Started!",
-      "context": {
-        "score": 40,
-        "rsi_15m": 28.62,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 00:14:19",
-      "account_id": "SIM-032",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "PEPEUSDT",
-      "side": "LONG",
-      "entry_price": 2.63e-06,
-      "exit_price": 2.69e-06,
-      "pnl_usd": 0.43,
-      "result": "WIN",
-      "notes": "Win on PEPEUSDT (+$0.43 net) -> Level 8 Re-Trading Started!",
-      "context": {
-        "score": 40,
-        "rsi_15m": 28.62,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 00:22:22",
-      "account_id": "SIM-072",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "APTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.568,
-      "exit_price": 0.568,
-      "pnl_usd": -0.07,
-      "result": "LOSS",
-      "notes": "Hit SL on APTUSDT (-$0.07). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-13 00:22:22",
-      "account_id": "SIM-073",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "APTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.568,
-      "exit_price": 0.568,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on APTUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-13 00:24:20",
-      "account_id": "SIM-041",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "OPENUSDT",
-      "side": "LONG",
-      "entry_price": 0.1986,
-      "exit_price": 0.1967,
-      "pnl_usd": -0.44,
-      "result": "LOSS",
-      "notes": "Hit SL on OPENUSDT (-$0.44). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 20.72,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 00:24:20",
-      "account_id": "SIM-043",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "OPENUSDT",
-      "side": "LONG",
-      "entry_price": 0.1986,
-      "exit_price": 0.1967,
-      "pnl_usd": -0.44,
-      "result": "LOSS",
-      "notes": "Hit SL on OPENUSDT (-$0.44). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 20.72,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 00:24:20",
       "account_id": "SIM-044",
@@ -8262,6 +8168,108 @@
       "context": {
         "score": 15,
         "rsi_15m": 48.14,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 03:40:27",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "APTUSDT",
+      "side": "LONG",
+      "entry_price": 0.553,
+      "exit_price": 0.548,
+      "pnl_usd": -0.2,
+      "result": "LOSS",
+      "notes": "Hit SL on APTUSDT (-$0.20). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.37,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 03:40:27",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "APTUSDT",
+      "side": "LONG",
+      "entry_price": 0.553,
+      "exit_price": 0.548,
+      "pnl_usd": -0.2,
+      "result": "LOSS",
+      "notes": "Hit SL on APTUSDT (-$0.20). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.37,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 03:40:27",
+      "account_id": "SIM-032",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "APTUSDT",
+      "side": "LONG",
+      "entry_price": 0.553,
+      "exit_price": 0.548,
+      "pnl_usd": -0.21,
+      "result": "LOSS",
+      "notes": "Hit SL on APTUSDT (-$0.21). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.37,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 03:40:27",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "APTUSDT",
+      "side": "LONG",
+      "entry_price": 0.553,
+      "exit_price": 0.548,
+      "pnl_usd": -0.38,
+      "result": "LOSS",
+      "notes": "Hit SL on APTUSDT (-$0.38). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.37,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 03:40:27",
+      "account_id": "SIM-044",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "APTUSDT",
+      "side": "LONG",
+      "entry_price": 0.553,
+      "exit_price": 0.548,
+      "pnl_usd": -0.28,
+      "result": "LOSS",
+      "notes": "Hit SL on APTUSDT (-$0.28). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.37,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 03:40:27",
+      "account_id": "SIM-045",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "APTUSDT",
+      "side": "LONG",
+      "entry_price": 0.553,
+      "exit_price": 0.548,
+      "pnl_usd": -0.28,
+      "result": "LOSS",
+      "notes": "Hit SL on APTUSDT (-$0.28). Re-Trading!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 22.37,
         "macro_trend_4h": "NEUTRAL"
       }
     }
