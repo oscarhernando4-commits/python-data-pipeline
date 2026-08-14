@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3648,
+    "total_trades": 3649,
     "wins": 624,
-    "losses": 3024,
-    "win_rate_pct": 17.11,
-    "total_pnl_usd": 798653.2098954526
+    "losses": 3025,
+    "win_rate_pct": 17.1,
+    "total_pnl_usd": 798653.1498954525
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ACEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MMTUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on APTUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on EDENUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ACEUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SCRTUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BONKUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SCRTUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SCRTUSDT)",
+      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on STORJUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ATUSDT)",
@@ -53,19 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 22:52:23",
-      "account_id": "SIM-034",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ATMUSDT",
-      "side": "SHORT",
-      "entry_price": 1.614,
-      "exit_price": 1.614,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on ATMUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-12 22:52:23",
       "account_id": "SIM-035",
@@ -8234,6 +8221,23 @@
       "context": {
         "score": 65,
         "rsi_15m": 61.53,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 02:10:27",
+      "account_id": "SIM-033",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "STORJUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0513,
+      "exit_price": 0.0512,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on STORJUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 77.53,
         "macro_trend_4h": "NEUTRAL"
       }
     }
