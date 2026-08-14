@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3809,
-    "wins": 653,
+    "total_trades": 3810,
+    "wins": 654,
     "losses": 3156,
-    "win_rate_pct": 17.14,
-    "total_pnl_usd": 791532.2798954524
+    "win_rate_pct": 17.17,
+    "total_pnl_usd": 791532.7098954525
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PYTHUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DRAMBUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SPYBUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ZECUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on OPUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HOLOUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SYNUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ZAMAUSDT)",
-      "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on NOTUSDT)"
+      "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on NOTUSDT)",
+      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PYTHUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 10:50:31",
-      "account_id": "SIM-065",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "ATMUSDT",
-      "side": "SHORT",
-      "entry_price": 1.889,
-      "exit_price": 1.888,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on ATMUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 58.84,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 10:50:31",
       "account_id": "SIM-069",
@@ -8270,6 +8253,23 @@
       "context": {
         "score": 0,
         "rsi_15m": 32.87,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 12:18:16",
+      "account_id": "SIM-096",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "PYTHUSDT",
+      "side": "SHORT",
+      "entry_price": 0.03975,
+      "exit_price": 0.03894,
+      "pnl_usd": 0.43,
+      "result": "WIN",
+      "notes": "Win on PYTHUSDT (+$0.43 net) -> Level 7 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.7,
         "macro_trend_4h": "NEUTRAL"
       }
     }
