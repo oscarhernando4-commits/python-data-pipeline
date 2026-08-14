@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3667,
-    "wins": 626,
-    "losses": 3041,
-    "win_rate_pct": 17.07,
-    "total_pnl_usd": 798650.549895452
+    "total_trades": 3673,
+    "wins": 629,
+    "losses": 3044,
+    "win_rate_pct": 17.12,
+    "total_pnl_usd": 798652.7198954521
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on AEROUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on OPUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PAXGUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SPYBUSDT)",
@@ -27,10 +26,10 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on EPICUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PLUMEUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on GPSUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on EDENUSDT)"
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on EDENUSDT)",
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on CFXUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on NILUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ATUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MSTRBUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on NBISBUSDT)",
@@ -49,108 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DRAMBUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SPYBUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ZECUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on OPUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on OPUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ETHFIUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 23:34:22",
-      "account_id": "SIM-098",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "KITEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.1011,
-      "exit_price": 0.1022,
-      "pnl_usd": -0.22,
-      "result": "LOSS",
-      "notes": "Hit SL on KITEUSDT (-$0.22). Re-Trading!",
-      "context": {
-        "score": 50,
-        "rsi_15m": 56.43,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 18:40:43",
-      "account_id": "SIM-059",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "MUUBUSDT",
-      "side": "LONG",
-      "entry_price": 28.57,
-      "exit_price": 29.18,
-      "pnl_usd": 0.57,
-      "result": "WIN",
-      "notes": "Win on MUUBUSDT (+$0.57 net) -> Level 7 Re-Trading Started!",
-      "context": {
-        "score": 75,
-        "rsi_15m": 57.61,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 18:40:43",
-      "account_id": "SIM-060",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "MUUBUSDT",
-      "side": "LONG",
-      "entry_price": 28.57,
-      "exit_price": 29.18,
-      "pnl_usd": 0.58,
-      "result": "WIN",
-      "notes": "Win on MUUBUSDT (+$0.58 net) -> Level 9 Re-Trading Started!",
-      "context": {
-        "score": 75,
-        "rsi_15m": 57.61,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 23:44:21",
-      "account_id": "SIM-082",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "DASHUSDT",
-      "side": "SHORT",
-      "entry_price": 30.3,
-      "exit_price": 30.3,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on DASHUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-13 00:02:20",
-      "account_id": "SIM-076",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "EPICUSDT",
-      "side": "SHORT",
-      "entry_price": 0.3495,
-      "exit_price": 0.3554,
-      "pnl_usd": -0.35,
-      "result": "LOSS",
-      "notes": "Hit SL on EPICUSDT (-$0.35). Re-Trading!",
-      "context": {
-        "score": 65,
-        "rsi_15m": 56.61,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 00:02:20",
-      "account_id": "SIM-082",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "LSKUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0798,
-      "exit_price": 0.081,
-      "pnl_usd": -0.3,
-      "result": "LOSS",
-      "notes": "Hit SL on LSKUSDT (-$0.30). Re-Trading!",
-      "context": {
-        "score": 60,
-        "rsi_15m": 48.79,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 00:02:20",
       "account_id": "SIM-093",
@@ -8258,6 +8160,108 @@
       "context": {
         "score": 0,
         "rsi_15m": 47.62,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 03:10:18",
+      "account_id": "SIM-022",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ETHFIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.4468,
+      "exit_price": 0.4284,
+      "pnl_usd": 0.77,
+      "result": "WIN",
+      "notes": "Win on ETHFIUSDT (+$0.77 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 41.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 03:10:18",
+      "account_id": "SIM-023",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ETHFIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.4478,
+      "exit_price": 0.4284,
+      "pnl_usd": 0.82,
+      "result": "WIN",
+      "notes": "Win on ETHFIUSDT (+$0.82 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 41.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 03:10:18",
+      "account_id": "SIM-025",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ETHFIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.4468,
+      "exit_price": 0.4284,
+      "pnl_usd": 0.8,
+      "result": "WIN",
+      "notes": "Win on ETHFIUSDT (+$0.80 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 41.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 03:10:18",
+      "account_id": "SIM-046",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "CFXUSDT",
+      "side": "LONG",
+      "entry_price": 0.04211,
+      "exit_price": 0.04211,
+      "pnl_usd": -0.08,
+      "result": "LOSS",
+      "notes": "Hit SL on CFXUSDT (-$0.08). Re-Trading!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 57.13,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 03:10:18",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "CFXUSDT",
+      "side": "LONG",
+      "entry_price": 0.04211,
+      "exit_price": 0.04211,
+      "pnl_usd": -0.07,
+      "result": "LOSS",
+      "notes": "Hit SL on CFXUSDT (-$0.07). Re-Trading!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 57.13,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 03:10:18",
+      "account_id": "SIM-053",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "CFXUSDT",
+      "side": "LONG",
+      "entry_price": 0.04211,
+      "exit_price": 0.04211,
+      "pnl_usd": -0.07,
+      "result": "LOSS",
+      "notes": "Hit SL on CFXUSDT (-$0.07). Re-Trading!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 57.13,
         "macro_trend_4h": "NEUTRAL"
       }
     }
