@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3718,
-    "wins": 639,
+    "total_trades": 3719,
+    "wins": 640,
     "losses": 3079,
-    "win_rate_pct": 17.19,
-    "total_pnl_usd": 798652.0098954518
+    "win_rate_pct": 17.21,
+    "total_pnl_usd": 798652.4098954519
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on 2ZUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HOMEUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BANKUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GIGGLEUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ETHUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DODOUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DODOUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on NILUSDT)",
-      "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on STORJUSDT)"
+      "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on STORJUSDT)",
+      "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JUPUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 04:54:18",
-      "account_id": "SIM-095",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "BANKUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0387,
-      "exit_price": 0.0387,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on BANKUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 15,
-        "rsi_15m": 48.75,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 04:56:21",
       "account_id": "SIM-089",
@@ -8270,6 +8253,23 @@
       "context": {
         "score": 35,
         "rsi_15m": 29.4,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 07:22:25",
+      "account_id": "SIM-099",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "JUPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1694,
+      "exit_price": 0.166,
+      "pnl_usd": 0.4,
+      "result": "WIN",
+      "notes": "Win on JUPUSDT (+$0.40 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 19.91,
         "macro_trend_4h": "NEUTRAL"
       }
     }

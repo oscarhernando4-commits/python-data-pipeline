@@ -1,12 +1,51 @@
 {
-  "HEIUSDT": [
+  "LDOUSDT": [
     {
-      "timestamp": "2026-08-14 07:20:11",
-      "price": 0.1224,
-      "score": 15,
-      "rsi": 43.07,
+      "timestamp": "2026-08-14 07:22:14",
+      "price": 0.2978,
+      "score": 0,
+      "rsi": 41.71,
       "macd": "Neutral",
-      "volume_surge": 4.78,
+      "volume_surge": 0.23,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "AXTIBUSDT": [
+    {
+      "timestamp": "2026-08-14 07:22:14",
+      "price": 77.57,
+      "score": 35,
+      "rsi": 49.4,
+      "macd": "Neutral",
+      "volume_surge": 0.02,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "GNOUSDT": [
+    {
+      "timestamp": "2026-08-14 07:22:14",
+      "price": 103.44,
+      "score": 30,
+      "rsi": 43.29,
+      "macd": "Neutral",
+      "volume_surge": 0.0,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "ZROUSDT": [
+    {
+      "timestamp": "2026-08-14 07:22:14",
+      "price": 0.784,
+      "score": 0,
+      "rsi": 37.41,
+      "macd": "Neutral",
+      "volume_surge": 1.02,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,12 +53,38 @@
   ],
   "CFXUSDT": [
     {
-      "timestamp": "2026-08-14 07:20:11",
-      "price": 0.0424,
+      "timestamp": "2026-08-14 07:22:14",
+      "price": 0.04243,
       "score": 30,
-      "rsi": 52.72,
+      "rsi": 53.55,
       "macd": "Neutral",
-      "volume_surge": 0.17,
+      "volume_surge": 0.27,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "JTOUSDT": [
+    {
+      "timestamp": "2026-08-14 07:22:14",
+      "price": 0.5612,
+      "score": 30,
+      "rsi": 51.43,
+      "macd": "Neutral",
+      "volume_surge": 0.24,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "PENDLEUSDT": [
+    {
+      "timestamp": "2026-08-14 07:22:14",
+      "price": 1.339,
+      "score": 0,
+      "rsi": 40.41,
+      "macd": "Neutral",
+      "volume_surge": 1.39,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
