@@ -1,12 +1,25 @@
 {
-  "CFXUSDT": [
+  "GNOUSDT": [
     {
-      "timestamp": "2026-08-14 03:20:11",
-      "price": 0.04221,
-      "score": 50,
-      "rsi": 60.3,
+      "timestamp": "2026-08-14 03:22:11",
+      "price": 103.53,
+      "score": 15,
+      "rsi": 37.25,
       "macd": "Neutral",
-      "volume_surge": 0.43,
+      "volume_surge": 0.04,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ],
+  "BOMEUSDT": [
+    {
+      "timestamp": "2026-08-14 03:22:11",
+      "price": 0.0007512,
+      "score": 50,
+      "rsi": 52.26,
+      "macd": "Neutral",
+      "volume_surge": 0.18,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
