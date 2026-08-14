@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3927,
+    "total_trades": 3930,
     "wins": 680,
-    "losses": 3247,
-    "win_rate_pct": 17.32,
-    "total_pnl_usd": 790787.8398954521
+    "losses": 3250,
+    "win_rate_pct": 17.3,
+    "total_pnl_usd": 790787.1098954522
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ZROUSDT)",
       "BLOCK SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on KITEUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on AXTIBUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SOXLBUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on JUPUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MUBARAKUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PENGUUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on TRUMPUSDT)"
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on TRUMPUSDT)",
+      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ALGOUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HOLOUSDT)",
@@ -53,49 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 16:04:24",
-      "account_id": "SIM-066",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "SUNUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01831,
-      "exit_price": 0.01831,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on SUNUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-13 16:04:24",
-      "account_id": "SIM-067",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "SUNUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01831,
-      "exit_price": 0.01831,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on SUNUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-13 11:10:49",
-      "account_id": "SIM-071",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "GIGGLEUSDT",
-      "side": "SHORT",
-      "entry_price": 33.84,
-      "exit_price": 33.13,
-      "pnl_usd": 0.42,
-      "result": "WIN",
-      "notes": "Win on GIGGLEUSDT (+$0.42 net) -> Level 14 Re-Trading Started!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 31.47,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 11:14:56",
       "account_id": "SIM-071",
@@ -8318,6 +8275,57 @@
       "context": {
         "score": 52,
         "rsi_15m": 27.61,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 16:03:01",
+      "account_id": "SIM-022",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ALGOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0795,
+      "exit_price": 0.0804,
+      "pnl_usd": -0.24,
+      "result": "LOSS",
+      "notes": "Hit SL on ALGOUSDT (-$0.24). Re-Trading!",
+      "context": {
+        "score": 46,
+        "rsi_15m": 77.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 16:03:01",
+      "account_id": "SIM-023",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ALGOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0795,
+      "exit_price": 0.0804,
+      "pnl_usd": -0.24,
+      "result": "LOSS",
+      "notes": "Hit SL on ALGOUSDT (-$0.24). Re-Trading!",
+      "context": {
+        "score": 46,
+        "rsi_15m": 77.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 16:03:01",
+      "account_id": "SIM-025",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ALGOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0795,
+      "exit_price": 0.0804,
+      "pnl_usd": -0.25,
+      "result": "LOSS",
+      "notes": "Hit SL on ALGOUSDT (-$0.25). Re-Trading!",
+      "context": {
+        "score": 46,
+        "rsi_15m": 77.43,
         "macro_trend_4h": "NEUTRAL"
       }
     }
