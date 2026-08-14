@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3686,
+    "total_trades": 3687,
     "wins": 629,
-    "losses": 3057,
+    "losses": 3058,
     "win_rate_pct": 17.06,
-    "total_pnl_usd": 798648.0498954523
+    "total_pnl_usd": 798647.6198954523
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PROMUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on AVNTUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MMTUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONEUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZAMAUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ACEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AVNTUSDT)",
-      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on APTUSDT)"
+      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on APTUSDT)",
+      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on QNTUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ATUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 00:24:20",
-      "account_id": "SIM-044",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "OPENUSDT",
-      "side": "LONG",
-      "entry_price": 0.1986,
-      "exit_price": 0.1967,
-      "pnl_usd": -0.3,
-      "result": "LOSS",
-      "notes": "Hit SL on OPENUSDT (-$0.30). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 20.72,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 01:02:19",
       "account_id": "SIM-034",
@@ -8270,6 +8253,23 @@
       "context": {
         "score": 25,
         "rsi_15m": 22.37,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 03:52:27",
+      "account_id": "SIM-041",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "QNTUSDT",
+      "side": "LONG",
+      "entry_price": 59.15,
+      "exit_price": 58.59,
+      "pnl_usd": -0.43,
+      "result": "LOSS",
+      "notes": "Hit SL on QNTUSDT (-$0.43). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 35.9,
         "macro_trend_4h": "NEUTRAL"
       }
     }
