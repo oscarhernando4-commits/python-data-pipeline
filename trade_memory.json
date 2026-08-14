@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3731,
+    "total_trades": 3732,
     "wins": 643,
-    "losses": 3088,
+    "losses": 3089,
     "win_rate_pct": 17.23,
-    "total_pnl_usd": 799804.359895452
+    "total_pnl_usd": 799804.319895452
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZAMAUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ACEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AVNTUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on APTUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on NOTUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on 2ZUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on WLFIUSDT)",
-      "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on DOTUSDT)"
+      "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on DOTUSDT)",
+      "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ESPUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GIGGLEUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 06:14:22",
-      "account_id": "SIM-082",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "NILUSDT",
-      "side": "SHORT",
-      "entry_price": 0.04082,
-      "exit_price": 0.04168,
-      "pnl_usd": -0.41,
-      "result": "LOSS",
-      "notes": "Hit SL on NILUSDT (-$0.41). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 50.26,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 06:24:21",
       "account_id": "SIM-021",
@@ -8270,6 +8253,23 @@
       "context": {
         "score": 35,
         "rsi_15m": 27.53,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 08:14:28",
+      "account_id": "SIM-098",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "ESPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.07354,
+      "exit_price": 0.07333,
+      "pnl_usd": -0.04,
+      "result": "LOSS",
+      "notes": "Hit SL on ESPUSDT (-$0.04). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.93,
         "macro_trend_4h": "NEUTRAL"
       }
     }
