@@ -1,8 +1,8 @@
 {
   "initial_deposit_usdt": 17.13,
   "initial_total_usd": 20.08,
-  "current_balance_usd": 18.84,
-  "net_pnl_usd": 1.71,
+  "current_balance_usd": 18.87,
+  "net_pnl_usd": 1.74,
   "wins": 13,
   "losses": 13,
   "trades_count": 25,
@@ -10,21 +10,21 @@
     "symbol": "NEARUSDT",
     "quantity": 10.0,
     "entry_price": 1.612,
-    "highest_price": 1.621,
-    "cost_usd": 16.21,
+    "highest_price": 1.626,
+    "cost_usd": 16.24,
     "side": "LONG",
-    "phase": 1,
-    "holding_cycles": 15,
-    "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
+    "phase": 2,
+    "holding_cycles": 25,
+    "volatility_regime": "🛡️ FASE 2: Break-Even Seguro +0.35% (Pico +0.87%)"
   },
-  "last_trade_time": "26-08-14<br>17:21",
-  "status": "🔵 En Vivo LONG (NEARUSDT @ $1.6210)",
+  "last_trade_time": "26-08-14<br>17:47",
+  "status": "🔵 En Vivo LONG (NEARUSDT @ $1.6240)",
   "daily_wins": 4,
   "daily_losses": 0,
-  "_cached_total_val": 18.84,
+  "_cached_total_val": 18.87,
   "_cached_usdt_free": 0.2903,
   "_cached_bnb": 0.00385649,
   "_cached_bnb_usd": 2.34,
   "last_trading_day": "2026-08-14",
-  "_btc_last_price": 62837.38
+  "_btc_last_price": 62880.36
 }
