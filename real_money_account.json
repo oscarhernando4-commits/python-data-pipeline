@@ -1,8 +1,8 @@
 {
   "initial_deposit_usdt": 17.13,
   "initial_total_usd": 20.08,
-  "current_balance_usd": 18.8,
-  "net_pnl_usd": 1.67,
+  "current_balance_usd": 18.88,
+  "net_pnl_usd": 1.75,
   "wins": 12,
   "losses": 13,
   "trades_count": 24,
@@ -10,21 +10,21 @@
     "symbol": "ETHFIUSDT",
     "quantity": 36.3,
     "entry_price": 0.4451,
-    "highest_price": 0.4463,
-    "cost_usd": 16.19,
+    "highest_price": 0.4486,
+    "cost_usd": 16.27,
     "side": "LONG",
-    "phase": 1,
-    "holding_cycles": 7,
-    "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
+    "phase": 2,
+    "holding_cycles": 17,
+    "volatility_regime": "🛡️ FASE 2: Break-Even Seguro +0.35% (Pico +0.79%)"
   },
-  "last_trade_time": "26-08-14<br>16:16",
-  "status": "🔵 En Vivo LONG (ETHFIUSDT @ $0.4459)",
+  "last_trade_time": "26-08-14<br>16:39",
+  "status": "🔵 En Vivo LONG (ETHFIUSDT @ $0.4482)",
   "daily_wins": 3,
   "daily_losses": 0,
-  "_cached_total_val": 18.8,
+  "_cached_total_val": 18.88,
   "_cached_usdt_free": 0.247,
   "_cached_bnb": 0.00389632,
   "_cached_bnb_usd": 2.36,
   "last_trading_day": "2026-08-14",
-  "_btc_last_price": 62910.82
+  "_btc_last_price": 62888.29
 }
