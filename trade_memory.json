@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3955,
-    "wins": 685,
-    "losses": 3270,
-    "win_rate_pct": 17.32,
-    "total_pnl_usd": 790367.0698954521
+    "total_trades": 3959,
+    "wins": 688,
+    "losses": 3271,
+    "win_rate_pct": 17.38,
+    "total_pnl_usd": 790369.039895452
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on XAIUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on NOTUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PYTHUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ZAMAUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SEIUSDT)",
@@ -49,78 +48,11 @@
       "BOOST SHORT when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PROMUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MSTRBUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BONKUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BONKUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BONKUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MUBARAKUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 17:14:15",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "PROMUSDT",
-      "side": "LONG",
-      "entry_price": 2.282,
-      "exit_price": 2.287,
-      "pnl_usd": -423.07,
-      "result": "LOSS",
-      "notes": "Hit SL on PROMUSDT (-$423.07). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 35.47,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 17:14:16",
-      "account_id": "SIM-043",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "MMTUSDT",
-      "side": "LONG",
-      "entry_price": 0.1706,
-      "exit_price": 0.1711,
-      "pnl_usd": -0.13,
-      "result": "LOSS",
-      "notes": "Hit SL on MMTUSDT (-$0.13). Re-Trading!",
-      "context": {
-        "score": 45,
-        "rsi_15m": 53.3,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 17:14:16",
-      "account_id": "SIM-047",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "MMTUSDT",
-      "side": "LONG",
-      "entry_price": 0.1706,
-      "exit_price": 0.1711,
-      "pnl_usd": -0.05,
-      "result": "LOSS",
-      "notes": "Hit SL on MMTUSDT (-$0.05). Re-Trading!",
-      "context": {
-        "score": 45,
-        "rsi_15m": 53.3,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 17:14:16",
-      "account_id": "SIM-059",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "MMTUSDT",
-      "side": "LONG",
-      "entry_price": 0.1706,
-      "exit_price": 0.1711,
-      "pnl_usd": -0.08,
-      "result": "LOSS",
-      "notes": "Hit SL on MMTUSDT (-$0.08). Re-Trading!",
-      "context": {
-        "score": 45,
-        "rsi_15m": 53.3,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 17:20:18",
       "account_id": "SIM-097",
@@ -8382,6 +8314,74 @@
       "context": {
         "score": 55,
         "rsi_15m": 57.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 17:24:46",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MUBARAKUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01707,
+      "exit_price": 0.01643,
+      "pnl_usd": 0.71,
+      "result": "WIN",
+      "notes": "Win on MUBARAKUSDT (+$0.71 net) -> Level 10 Re-Trading Started!",
+      "context": {
+        "score": 38,
+        "rsi_15m": 49.5,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 17:24:46",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MUBARAKUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01707,
+      "exit_price": 0.01643,
+      "pnl_usd": 0.72,
+      "result": "WIN",
+      "notes": "Win on MUBARAKUSDT (+$0.72 net) -> Level 10 Re-Trading Started!",
+      "context": {
+        "score": 38,
+        "rsi_15m": 49.5,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 17:24:46",
+      "account_id": "SIM-031",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MUBARAKUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01707,
+      "exit_price": 0.01643,
+      "pnl_usd": 0.71,
+      "result": "WIN",
+      "notes": "Win on MUBARAKUSDT (+$0.71 net) -> Level 10 Re-Trading Started!",
+      "context": {
+        "score": 38,
+        "rsi_15m": 49.5,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 17:24:47",
+      "account_id": "SIM-064",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "HEIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1417,
+      "exit_price": 0.1428,
+      "pnl_usd": -0.17,
+      "result": "LOSS",
+      "notes": "Hit SL on HEIUSDT (-$0.17). Re-Trading!",
+      "context": {
+        "score": 48,
+        "rsi_15m": 51.66,
         "macro_trend_4h": "NEUTRAL"
       }
     }
