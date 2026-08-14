@@ -64,18 +64,30 @@ def get_obsidian_folder():
 OBSIDIAN_FOLDER = get_obsidian_folder()
 
 def get_group_info(index):
+    try:
+        import strategy_engine
+        dyn = strategy_engine.load_thresholds()
+    except Exception:
+        dyn = {}
+        
     if index == 0:
-        return {"group_id": 0, "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)", "threshold_score": 85, "risk_pct": 1.0, "label": "Ultra-Estricto A+"}
+        thresh = dyn.get("group_0", {}).get("long_score", 55)
+        return {"group_id": 0, "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)", "threshold_score": thresh, "risk_pct": 1.0, "label": f"Ultra-Estricto A+ (Score >= {thresh})"}
     elif 1 <= index <= 20:
-        return {"group_id": 1, "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)", "threshold_score": 85, "risk_pct": 1.0, "label": "Ultra-Estricto A+ (Score >= 85)"}
+        thresh = dyn.get("group_1", {}).get("long_score", 55)
+        return {"group_id": 1, "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)", "threshold_score": thresh, "risk_pct": 1.0, "label": f"Ultra-Estricto A+ (Score >= {thresh})"}
     elif 21 <= index <= 40:
-        return {"group_id": 2, "group_name": "🔷 GRUPO 2: Moderado-Estricto", "threshold_score": 75, "risk_pct": 1.0, "label": "Moderado-Estricto (Score >= 75)"}
+        thresh = dyn.get("group_2", {}).get("long_score", 55)
+        return {"group_id": 2, "group_name": "🔷 GRUPO 2: Moderado-Estricto", "threshold_score": thresh, "risk_pct": 1.0, "label": f"Moderado-Estricto (Score >= {thresh})"}
     elif 41 <= index <= 60:
-        return {"group_id": 3, "group_name": "⚖️ GRUPO 3: Balanceado", "threshold_score": 65, "risk_pct": 1.0, "label": "Balanceado (Score >= 65)"}
+        thresh = dyn.get("group_3", {}).get("long_score", 55)
+        return {"group_id": 3, "group_name": "⚖️ GRUPO 3: Balanceado", "threshold_score": thresh, "risk_pct": 1.0, "label": f"Balanceado (Score >= {thresh})"}
     elif 61 <= index <= 80:
-        return {"group_id": 4, "group_name": "⚡ GRUPO 4: Frecuencia Alta", "threshold_score": 55, "risk_pct": 2.0, "label": "Frecuencia Alta (Score >= 55)"}
+        thresh = dyn.get("group_4", {}).get("long_score", 55)
+        return {"group_id": 4, "group_name": "⚡ GRUPO 4: Frecuencia Alta", "threshold_score": thresh, "risk_pct": 2.0, "label": f"Frecuencia Alta (Score >= {thresh})"}
     else:
-        return {"group_id": 5, "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia", "threshold_score": 45, "risk_pct": 2.0, "label": "Exploratorio de Máxima Frecuencia (Score >= 45)"}
+        thresh = dyn.get("group_5", {}).get("long_score", 45)
+        return {"group_id": 5, "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia", "threshold_score": thresh, "risk_pct": 2.0, "label": f"Exploratorio de Máxima Frecuencia (Score >= {thresh})"}
 
 def load_live_matrix():
     now_date = datetime.now().strftime("%y-%m-%d")
@@ -173,24 +185,51 @@ def run_infinite_trading_matrix_cycle():
 
     def analyze_symbol(s):
         try:
+            import multi_timeframe_analyzer
+            mtf_res = multi_timeframe_analyzer.analyze_multi_timeframe_candles(s)
             tech = analytics.analyze_institutional_grade(s, account_balance=100.0, risk_percentage=1.0)
-            final_score = tech.get("confluence_score", 50)
             
-            # Record 5M Time-Series Reading for Pattern Recognition Learning
+            # Enrich tech with complete Multi-Timeframe Architecture
+            tech["mtf_analysis"] = mtf_res
+            if "indicators" not in tech:
+                tech["indicators"] = {}
+            tech["indicators"]["macd_hist_15m"] = mtf_res.get("macd_hist_15m", 0.0)
+            tech["indicators"]["gbm_zscore"] = mtf_res.get("gbm_zscore", 0.0)
+            tech["indicators"]["pct_b_15m"] = mtf_res.get("pct_b_15m", 0.5)
+            tech["indicators"]["vol_surge_2m"] = mtf_res.get("vol_surge_2m", 1.0)
+            tech["indicators"]["is_pre_pump_signal"] = mtf_res.get("is_pre_pump_signal", False)
+            tech["indicators"]["is_falling_knife"] = mtf_res.get("is_falling_knife", False)
+            tech["indicators"]["is_dead_cat_bounce"] = mtf_res.get("is_dead_cat_bounce", False)
+            tech["indicators"]["is_macro_bearish_dominance"] = mtf_res.get("is_macro_bearish_dominance", False)
+            
+            # Blended Multi-Timeframe Confluence Score
+            mtf_score = mtf_res.get("multi_tf_score", 50)
+            if mtf_res.get("is_falling_knife") or mtf_res.get("is_dead_cat_bounce"):
+                final_score = 0
+            else:
+                raw_blend = (tech.get("confluence_score", 50) * 0.35) + (mtf_score * 0.65)
+                if mtf_res.get("is_pre_pump_signal"):
+                    raw_blend = min(100, raw_blend + 15)
+                final_score = int(round(raw_blend))
+                
+            tech["confluence_score"] = final_score
+            
+            # Record 5M Time-Series Reading for Pattern Recognition Learning (Thread-Safe)
             try:
                 import time_series_memory
+                rsi_val = mtf_res.get("rsi_structure", {}).get("rsi_15m", tech.get("indicators", {}).get("rsi_15m", 50.0))
                 time_series_memory.record_5m_reading(
                     symbol=s,
                     price=tech.get("current_price", 0.0),
                     score=final_score,
-                    rsi=tech.get("indicators", {}).get("rsi_15m", 50.0),
-                    macd=tech.get("indicators", {}).get("macd_signal", "Neutral"),
-                    volume_surge=tech.get("indicators", {}).get("volume_surge_ratio", 1.0),
+                    rsi=rsi_val,
+                    macd="Bullish Cross" if mtf_res.get("is_macd_bullish_cross") else tech.get("indicators", {}).get("macd_signal", "Neutral"),
+                    volume_surge=mtf_res.get("vol_surge_15m", tech.get("indicators", {}).get("volume_surge_ratio", 1.0)),
                     wyckoff=tech.get("indicators", {}).get("wyckoff_phase", "Sin patron"),
                     news_headline=None,
                     fear_greed_score=50
                 )
-            except Exception as e:
+            except Exception:
                 pass
                 
             return s, {
@@ -660,7 +699,15 @@ def run_infinite_trading_matrix_cycle():
             target_vol_surge = ai_opp_data.get("tech", {}).get("indicators", {}).get("volume_surge_ratio", 1.0)
 
             # PRECISION SNIPER GATE (Francisca Serrano / Hyenuk Chu)
-            if ai_score < 55:
+            import multi_timeframe_analyzer
+            mtf_ai = multi_timeframe_analyzer.analyze_multi_timeframe_candles(ai_symbol)
+            is_fk_ai = mtf_ai.get("is_falling_knife", False)
+            is_dcb_ai = mtf_ai.get("is_dead_cat_bounce", False)
+
+            if is_fk_ai or is_dcb_ai:
+                print(f"🛡️ [VETO FALLING KNIFE REAL] Compra en {ai_symbol} VETADA: Activo en caída libre o trampa Dead Cat (Caída 24h: {mtf_ai.get('price_change_24h_pct', 0):+.1f}%).")
+                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
+            elif ai_score < 55:
                 print(f"🛡️ [ESCUDO CAPITAL REAL] Compra en {ai_symbol} bloqueada (Score {ai_score} < 55). Solo operamos Setups A+ para dinero real.")
                 api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
             elif is_btc_crashing and ai_symbol != "BTCUSDT":
@@ -707,6 +754,8 @@ def run_infinite_trading_matrix_cycle():
             is_yellow_bs = mtf_bs.get("is_yellow_arrow_pivot", False)
             is_bounce_bs = mtf_bs.get("is_oversold_bounce_candidate", False)
             is_divergence_bs = mtf_bs.get("is_bullish_divergence", False)
+            is_fk_bs = mtf_bs.get("is_falling_knife", False)
+            is_dcb_bs = mtf_bs.get("is_dead_cat_bounce", False)
             
             beta_res = beta_correlation_engine.calculate_beta_correlation(bs_sym)
             of_res = order_flow_analyzer.analyze_order_flow_cvd(bs_sym)
@@ -718,7 +767,10 @@ def run_infinite_trading_matrix_cycle():
             is_high_grade_setup = (bs_score >= 60 and target_vol_surge >= 1.2 and bs_trade_qual in ("A+", "B"))
             
             if bs_score >= 58 and is_quant_approved and (not ai_veto_active or is_high_grade_setup or bs_score >= 70):
-                if is_overextended_bs:
+                if is_fk_bs or is_dcb_bs:
+                    print(f"🛡️ [FILTRO FALLING KNIFE HÍBRIDO] Oportunidad {bs_sym} ({bs_score} Pts) BLOQUEADA: Falling Knife / Dead Cat detectado (Caída 24h: {mtf_bs.get('price_change_24h_pct', 0):+.1f}%).")
+                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
+                elif is_overextended_bs:
                     print(f"🛡️ [FILTRO ANTI-CIMA 15M] Oportunidad {bs_sym} ({bs_score} Pts) BLOQUEADA: Entrada en la cima ({overextension_reason_bs}). Exige compra en el suelo.")
                     api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
                 elif (is_btc_crashing or is_high_btc_risk) and bs_sym not in ["BTCUSDT", "PAXGUSDT", "XAUTUSDT"]:

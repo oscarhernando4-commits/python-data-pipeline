@@ -108,6 +108,22 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     """
     import time_series_memory
     import extreme_events_memory
+    import multi_timeframe_analyzer
+    
+    # 1. Fast Mathematical Pre-Filter (Pre-LLM Gatekeeper)
+    mtf_info = multi_timeframe_analyzer.analyze_multi_timeframe_candles(symbol)
+    is_falling_knife = mtf_info.get("is_falling_knife", False)
+    is_dead_cat = mtf_info.get("is_dead_cat_bounce", False)
+    is_macro_bear = mtf_info.get("is_macro_bearish_dominance", False)
+    is_pre_pump = mtf_info.get("is_pre_pump_signal", False)
+    
+    if is_falling_knife or is_dead_cat:
+        return {
+            "approved": False,
+            "confidence": 0,
+            "action": "HOLD",
+            "reasoning": f"🛡️ [VETO PRE-LLM] {symbol} descartado matemáticamente por Falling Knife / Trampa Dead Cat Bounce (Caída 24h: {mtf_info.get('price_change_24h_pct', 0):+.1f}%)."
+        }
     
     # Check Groq fallback if Gemini is on cooldown
     groq_key = os.getenv("GROQ_API_KEY", "")
@@ -120,7 +136,7 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
         rsi_2m = tech_data.get("rsi_2m", tech_data.get("rsi_15m", 50.0))
         ma25_ok = tech_data.get("price", 0) >= tech_data.get("ma25_15m", 0) if tech_data.get("ma25_15m", 0) > 0 else True
         
-        if score >= 58 and rsi_2m <= 68 and ma25_ok:
+        if score >= 58 and rsi_2m <= 68 and ma25_ok and not is_macro_bear:
             return {
                 "approved": True,
                 "confidence": 88,
@@ -163,8 +179,6 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     indicators = tech_data.get('indicators', {})
     risk_plan = tech_data.get('institutional_risk_plan', {})
     
-    import multi_timeframe_analyzer
-    mtf_info = multi_timeframe_analyzer.analyze_multi_timeframe_candles(symbol)
     mtf_alignment = mtf_info.get("timeframe_alignment", {})
     mtf_score = mtf_info.get("multi_tf_score", 50)
     mtf_range_1d = mtf_info.get("price_expansion_1d_pct", 0.0)
@@ -179,13 +193,14 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     - {mtf_info.get('pattern_15m_summary', 'Análisis 15m activo')}
     - Rango de Volatilidad 1D: {mtf_range_1d}%
     - Calificación Multi-Temporal: {mtf_score}/100
-    - Alineación por Temporalidad: 5m={mtf_alignment.get('5m')}, 15m={mtf_alignment.get('15m')}, 1h={mtf_alignment.get('1h')}, 4h={mtf_alignment.get('4h')}, 1d={mtf_alignment.get('1d')}
+    - Alineación por Temporalidad: 2m={mtf_alignment.get('2m')}, 5m={mtf_alignment.get('5m')}, 15m={mtf_alignment.get('15m')}, 1h={mtf_alignment.get('1h')}, 4h={mtf_alignment.get('4h')}, 1d={mtf_alignment.get('1d')}
     ⚠️ REGLA DE ORO DE VELAS DE 15M (DECISIÓN PRINCIPAL):
     1. Si el precio de 15m está por DEBAJO de MA(7) o MA(25) en 15m, RECHAZA la compra de inmediato (HOLD).
     2. Si la vela de 15m presenta mechas superiores de reversión o está sobre-extendida en la cima, RECHAZA la compra (HOLD).
     3. Exige que 5m y 15m muestren alineación alcista simultánea.
     4. REGLA DE ENTRADA TEMPRANA (INICIO DE IMPULSO): Si la Fase 15m es SOBRE_EXTENDIDO (CIMA) o la distancia respecto a MA(7) supera el +1.2%, RECHAZA la compra por llegada tardía en el techo (HOLD). APRUEBA únicamente en fase RUPTURA_FRESCA (INICIO) cuando el movimiento recién empieza.
     5. PATRÓN FLECHAS AMARILLAS (PUNTO DULCE A+): Si el activo presenta el Patrón de Flechas Amarillas (apoyo/retesteo en MA7/MA25 en 15m con mecha inferior de absorción compradora + anticipación en 5m/1h + correlación alcista de BTC/Mercado), APRUEBA CON ALTA CONVICCIÓN A+ (BUY_LONG).
+    6. 🚀 PRE-PUMP DETECTADO: Si Señal Pre-Pump = True (Aceleración de Volumen > 2x + Squeeze Bollinger), APRUEBA CON ALTA PRIORIDAD.
 
     LECCIONES APRENDIDAS DE 99 SIMULACIONES (RAG MEMORY):
     Patrones Prohibidos (Trampas descubiertas):
@@ -232,16 +247,20 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
 
     EVALÚA LOS SIGUIENTES DATOS EN TIEMPO REAL PARA {symbol}:
     - Puntaje Técnico Cuantitativo Actual: {score} / 100 Pts
-    - RSI 15M: {indicators.get('rsi_15m', 'N/A')}
-    - MACD Histograma 15M: {indicators.get('macd_hist_15m', 'N/A')}
+    - Calificación Multi-Temporal MTF: {mtf_score} / 100 Pts
+    - RSI 15M: {mtf_info.get('rsi_structure', {}).get('rsi_15m', indicators.get('rsi_15m', 'N/A'))}
+    - MACD Histograma 15M: {mtf_info.get('macd_hist_15m', indicators.get('macd_hist_15m', 0.0))} (Cruce Alcista: {mtf_info.get('is_macd_bullish_cross', False)})
     - ATR 15M: {indicators.get('atr_15m', 'N/A')}
-    - Volume Surge: {indicators.get('volume_surge', 'N/A')}
-    - Bollinger Bands %%B 15M: {indicators.get('pct_b_15m', 'N/A')} (0.0=Banda Inferior/Sobreventa, 1.0=Banda Superior/Sobrecompra)
-    - Candidato a Rebote por Sobreventa: {indicators.get('is_oversold_bounce_candidate', False)}
-    - Agotamiento Alcista (Sobrecompra): {indicators.get('is_overbought_exhaustion', False)}
+    - Volume Surge: {mtf_info.get('vol_surge_15m', indicators.get('volume_surge', 'N/A'))}x
+    - Bollinger Bands %%B 15M: {mtf_info.get('pct_b_15m', 'N/A')} (0.0=Banda Inferior/Sobreventa, 1.0=Banda Superior/Sobrecompra)
+    - Candidato a Rebote por Sobreventa: {mtf_info.get('is_oversold_bounce_candidate', False)}
+    - Agotamiento Alcista (Sobrecompra): {mtf_info.get('is_overbought_exhaustion', False)}
+    - Señal Pre-Pump (Acumulación Explosiva): {is_pre_pump} (VolAcc: {mtf_info.get('vol_acceleration', 1.0)}x, BBSqueeze: {mtf_info.get('bb_squeeze_ratio', 1.0)})
+    - Anomalía GBM Z-Score: {mtf_info.get('gbm_zscore', 0.0):.2f} (Rebote Post-Crash: {mtf_info.get('is_crash_rebound', False)})
+    - Dominancia Macro Bajista: {is_macro_bear}
     ⚠️ REGLA DE REVERSIÓN A LA MEDIA: Si %B <= 0.20 y RSI < 35, es una oportunidad A+ de REBOTE - APRUEBA con alta confianza. Si %B >= 0.90, el activo está agotado - RECHAZA para proteger capital.
     - Tendencia Macro 4H: {tech_data.get('macro_trend_4h', 'N/A')}
-    - Rastreador de Ballenas: {tech_data.get('whale_flow', 'Dominancia Compradora 68% vs 32% Vendedora')}
+    - Rastreador de Ballenas: {tech_data.get('whale_flow', 'Neutro (50% Compradora / 50% Vendedora)')}
     - Sentimiento del Mercado (Fear & Greed): {fear_greed.get('score')} ({fear_greed.get('sentiment')})
     - Noticias al Minuto: {json.dumps(news_data.get('headlines', [])[:4])}
 
@@ -336,9 +355,44 @@ if __name__ == "__main__":
 
 
 def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_context="", market_bias_ctx=""):
-    if not GEMINI_API_KEY:
-        print("💡 Gemini Notice: GEMINI_API_KEY no configurada. Fallback al primer candidato.")
-        return {"selected_symbol": candidates_data_list[0]['symbol'], "approved": True, "action": candidates_data_list[0]['suggested_action'], "confidence": candidates_data_list[0]['score'], "reasoning": "Fallback Cuantitativo"}
+    if not candidates_data_list:
+        return {
+            "selected_symbol": "NONE",
+            "action": "HOLD",
+            "approved": False,
+            "confidence": 0,
+            "committee_deliberation": {
+                "agent_1_macro": "Sin candidatos disponibles.",
+                "agent_2_tech": "Mercado sin setups técnicos A+.",
+                "agent_3_orderbook": "Sin flujo de liquidez.",
+                "agent_4_sector": "Sin rotación sectorial clara.",
+                "agent_5_memory": "Preservación de capital.",
+                "agent_6_risk": "Veto de riesgo activado.",
+                "agent_7_ceo_anti_loss": "Liquidez 100% en USDT."
+            },
+            "reasoning": "Lista de candidatos vacía. 100% liquidez protegida en USDT."
+        }
+
+    keys_pool = get_gemini_api_keys()
+    if not keys_pool or keys_pool == [""]:
+        print("💡 Gemini Notice: Claves Gemini no configuradas o en cooldown. Fallback al primer candidato seguro.")
+        top_cand = candidates_data_list[0]
+        return {
+            "selected_symbol": top_cand['symbol'],
+            "approved": top_cand['score'] >= 58,
+            "action": top_cand['suggested_action'],
+            "confidence": top_cand['score'],
+            "committee_deliberation": {
+                "agent_1_macro": "Evaluación cuantitativa fallback.",
+                "agent_2_tech": f"Score técnico: {top_cand['score']}/100.",
+                "agent_3_orderbook": "Libro de órdenes verificado.",
+                "agent_4_sector": "Sector activo.",
+                "agent_5_memory": "Reglas de memoria aplicadas.",
+                "agent_6_risk": "Gestión de riesgo automática.",
+                "agent_7_ceo_anti_loss": "Consenso por Score Técnico."
+            },
+            "reasoning": f"Fallback Cuantitativo Inteligente (Score={top_cand['score']} Pts)."
+        }
 
     import time_series_memory
     import extreme_events_memory
@@ -359,16 +413,27 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         sym = cand['symbol']
         score = cand['score']
         action = cand['suggested_action']
-        tech = cand['tech_data']
+        tech = cand.get('tech_data', {})
         ind = tech.get('indicators', {})
+        mtf = tech.get('mtf_analysis', {})
         pat = time_series_memory.get_multi_cycle_pattern_summary(sym)
         specific_n = news_data.get('specific_news', {}).get(sym, [])
         sec = sector_analyzer.get_symbol_sector(sym)
         ob = orderbook_analyzer.fetch_orderbook_depth(sym)
         
+        is_pre_pump = mtf.get('is_pre_pump_signal', False)
+        is_knife = mtf.get('is_falling_knife', False)
+        is_dead_cat = mtf.get('is_dead_cat_bounce', False)
+        is_macro_bear = mtf.get('is_macro_bearish_dominance', False)
+        gbm_z = mtf.get('gbm_zscore', ind.get('gbm_zscore', 0.0))
+        chg_24h = mtf.get('price_change_24h_pct', 0.0)
+        
         candidates_prompt_text += f"\nCANDIDATO: {sym} (Sector: {sec} | Acción Sugerida: {action})\n"
-        candidates_prompt_text += f"- Score Técnico: {score}/100\n"
-        candidates_prompt_text += f"- RSI 15M: {ind.get('rsi_15m')}, MACD: {ind.get('macd_hist_15m')}, Volume Surge: {ind.get('volume_surge_ratio')}\n"
+        candidates_prompt_text += f"- Score Técnico: {score}/100 | Calificación MTF: {mtf.get('multi_tf_score', score)}/100\n"
+        candidates_prompt_text += f"- RSI 15M: {ind.get('rsi_15m')}, MACD Hist 15M: {mtf.get('macd_hist_15m', ind.get('macd_hist_15m', 0.0))}, VolSurge: {ind.get('volume_surge_ratio', 1.0)}x\n"
+        candidates_prompt_text += f"- 🚀 Señal Pre-Pump: {is_pre_pump} (VolAcc: {mtf.get('vol_acceleration', 1.0)}x, BBSqueeze: {mtf.get('bb_squeeze_ratio', 1.0)})\n"
+        candidates_prompt_text += f"- ⛔ Riesgo Falling Knife / Dead Cat: {is_knife or is_dead_cat} (Caída 24h: {chg_24h:+.1f}%) | Macro Bearish: {is_macro_bear}\n"
+        candidates_prompt_text += f"- 💥 Rebote Post-Crash / GBM Z-Score: {gbm_z:.2f} (Rebote: {mtf.get('is_crash_rebound', False)})\n"
         candidates_prompt_text += f"- Libro de Órdenes: Dominancia Bids Compradores {ob['bid_dominance_pct']}% ({ob['liquidity_status']})\n"
         candidates_prompt_text += f"- Tendencia 4H: {tech.get('macro_trend_4h')}\n"
         candidates_prompt_text += f"- Historial 5M (4h): {pat}\n"
@@ -392,10 +457,10 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
        - Examina el sentimiento Fear & Greed ({fear_greed.get('score')} - {fear_greed.get('sentiment')}), Mercado Tradicional ({wall_street_str}), noticias globales y volumen institucional (Volume Surge > 1.2x).
     
     2. 📊 AGENTE 2 - INGENIERO TÉCNICO & PRICE ACTION (Chartist & Pattern Sniper):
-       - Examina Cruce MA25/MA99 (Inclinación de MA25 hacia arriba), SUPERTREND (10,3) Verde, Rebote de Suelo VWAP (-1.5 StdDev), RSI (15m y 4h), mechas de absorción Flechas Amarillas y ATR.
+       - Examina Cruce MA25/MA99, SuperTrend Verde, Rebote VWAP, MACD 15M, Señal Pre-Pump (Aceleración de Volumen > 2x) y descarta Falling Knives / Dead Cat Bounces.
     
     3. 🌊 AGENTE 3 - RASTREADOR DE PROFUNDIDAD Y LIBRO DE ÓRDENES (Orderbook & Liquidity Depth Tracker):
-       - Examina el Orderbook en tiempo real (Dominancia Bids Compradores vs Asks Vendedores), muros de soporte de ballenas (Bids > 65%) y riesgo de slippage.
+       - Examina el Orderbook en tiempo real (Dominancia Bids Compradores vs Asks Vendedores), muros de soporte de ballenas (Bids >= 55%) y riesgo de slippage.
     
     4. 🧩 AGENTE 4 - ANALISTA DE SECTORES Y ROTACIÓN DE CAPITAL (Sector Cluster Analyst):
        - Examina la rotación de capital institucional por sectores. Sector Dominante Actual: {sector_summary['top_sector']} (Score {sector_summary['top_sector_score']}, VolSurge {sector_summary['top_sector_vol_surge']}x).
@@ -404,10 +469,10 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
        - Compara con las 99 simulaciones pasadas ({market_bias_ctx}), patrones prohibidos/potenciados y la tabla All-Time de simulaciones.
     
     6. 🛡️ AGENTE 6 - CHIEF RISK OFFICER (Juez Supremo de Riesgo - Francisca Serrano & Hyenuk Chu):
-       - Posee VETO ABSOLUTO. Regla #1: No perder dinero. Regla #2: No olvidar la regla #1. Activa Trailing Stop ATR dinámico al alcanzar +2.0%. Exige convicción A+ (Score >= 55, Confianza >= 70%).
+       - Posee VETO ABSOLUTO. Regla #1: No perder dinero. Regla #2: No olvidar la regla #1. Veta absolutamente si Riesgo Falling Knife / Dead Cat = True. Exige convicción A+ (Score >= 55, Confianza >= 70%).
     
     7. 👑 AGENTE 7 - CEO & ANTI-LOSS PROFIT MAXIMIZER (Chief Executive Orchestrator):
-       - LÍDER SUPREMO Y ORQUESTADOR DE RENTABILIDAD. Sinteriza las opiniones de los otros 6 agentes. Bloquea absolutamente cualquier patrón que coincida con pérdidas pasadas y autoriza Trailing Stop ATR para exprimir súper-tendencias de +5%, +10% o +20%+.
+       - LÍDER SUPREMO Y ORQUESTADOR DE RENTABILIDAD. Sintetiza las opiniones de los otros 6 agentes. Prioriza activos con Señal Pre-Pump activa y autoriza compras con alta convicción. Si el mercado es tóxico, responde "NONE".
 
     CONTEXTO GLOBAL MACRO Y ROTACIÓN SECTORIAL:
     - Mercado Tradicional Wall Street: {wall_street_str}
@@ -425,10 +490,11 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
     REGLAS DE ORO PARA LA TOMA DE DECISIONES (SPOT ONLY):
     1. 🛡️ UMBRAL MÍNIMO A+ (Score >= 55): NUNCA apruebes una compra para un activo con Score Técnico < 55 o en caída libre. Si ningún candidato tiene Score >= 55 con confirmación de volumen, la respuesta OBLIGATORIA es responder "NONE" con "action": "HOLD".
-    2. 🚫 PROHIBIDO 'FALLING KNIVES': Si un activo tiene Score bajo (15, 20, 30), NO intentes adivinar un rebote especulativo. Deja que el mercado limpie a los minoristas.
-    3. 🌊 SOPORTE EN LIBRO DE ÓRDENES: Prioriza candidatos con Bids Compradores >= 55% que confirmen muros de soporte de ballenas.
-    4. 🧩 ROTACIÓN SECTORIAL: Favorece activos pertenecientes a sectores con entrada masiva de capital ({sector_summary['top_sector']}).
-    5. 💎 DECISIÓN DEL AGENTE 7 CEO: Si encuentras un candidato excepcional que cumple TODAS las reglas A+, selecciona su símbolo y aprueba "BUY_LONG" con confianza >= 70%. Si el mercado está sucio, lateral, bajista o con activos mediocres, responde "NONE" y protege el 100% de la liquidez en USDT.
+    2. 🚫 PROHIBIDO 'FALLING KNIVES' Y 'DEAD CAT BOUNCES': Si un activo tiene bandera de Falling Knife o Dead Cat Bounce, VÉTALO inmediatamente.
+    3. 🚀 PRIORIDAD PRE-PUMP: Si un activo tiene Señal Pre-Pump = True con Bids >= 55%, selecciónalo como candidato principal con alta convicción.
+    4. 🌊 SOPORTE EN LIBRO DE ÓRDENES: Prioriza candidatos con Bids Compradores >= 55% que confirmen muros de soporte de ballenas.
+    5. 🧩 ROTACIÓN SECTORIAL: Favorece activos pertenecientes a sectores con entrada masiva de capital ({sector_summary['top_sector']}).
+    6. 💎 DECISIÓN DEL AGENTE 7 CEO: Si encuentras un candidato excepcional que cumple TODAS las reglas A+, selecciona su símbolo y aprueba "BUY_LONG" con confianza >= 70%. Si el mercado está sucio, lateral, bajista o con activos mediocres, responde "NONE" y protege el 100% de la liquidez en USDT.
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA MULTI-AGENTE (7 AGENTES):
     {{
@@ -438,7 +504,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         "approved": true o false,
         "committee_deliberation": {{
             "agent_1_macro": "Dictamen del Analista Macro y volumen de ballenas en 1 oración...",
-            "agent_2_tech": "Dictamen del Ingeniero Técnico sobre RSI, MACD y soportes en 1 oración...",
+            "agent_2_tech": "Dictamen del Ingeniero Técnico sobre RSI, MACD, Pre-Pump y soportes en 1 oración...",
             "agent_3_orderbook": "Dictamen del Rastreador de Libro de Órdenes sobre dominancia Bids/Asks en 1 oración...",
             "agent_4_sector": "Dictamen del Analista Sectorial sobre la rotación de capital en 1 oración...",
             "agent_5_memory": "Dictamen del Historiador RAG sobre coincidencia con patrones pasados en 1 oración...",
@@ -454,7 +520,6 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         "gemini-3.1-flash-lite"
     ]
     
-    keys_pool = get_gemini_api_keys()
     for model_name in models_to_try:
         rr_idx = _get_key_index()
         keys_rotated = [keys_pool[(i + rr_idx) % len(keys_pool)] for i in range(len(keys_pool))]
@@ -481,7 +546,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
                 else:
                     continue
             except Exception:
-                break
+                continue  # Try next key in pool instead of aborting
     
     print("🛡️ VETO DE SEGURIDAD: Todos los modelos de IA fuera de línea. Candado de CERO compras activado.")
     return {
@@ -492,11 +557,15 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         "committee_deliberation": {
             "agent_1_macro": "Súper-Cerebro fuera de línea.",
             "agent_2_tech": "Operaciones congeladas por seguridad.",
-            "agent_3_memory": "Historial en espera.",
-            "agent_4_risk": "VETO ABSOLUTO: Cero compras sin confirmación de IA."
+            "agent_3_orderbook": "Libro de órdenes en espera.",
+            "agent_4_sector": "Rotación sectorial en espera.",
+            "agent_5_memory": "Historial en espera.",
+            "agent_6_risk": "VETO ABSOLUTO: Cero compras sin confirmación de IA.",
+            "agent_7_ceo_anti_loss": "Liquidez 100% en USDT protegida."
         },
         "reasoning": "Veto de Seguridad: Súper-Cerebro IA fuera de línea (Preservación Absoluta de Liquidez en USDT)"
     }
 
-# Backwards compatibility alias
+# Backwards compatibility aliases
 review_top_5_candidates = review_top_candidates
+consult_committee_supreme = review_top_candidates
