@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3868,
+    "total_trades": 3870,
     "wins": 670,
-    "losses": 3198,
-    "win_rate_pct": 17.32,
-    "total_pnl_usd": 791106.4498954524
+    "losses": 3200,
+    "win_rate_pct": 17.31,
+    "total_pnl_usd": 791106.3298954522
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LDOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TSTUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on GIGGLEUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on CRVUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MUBARAKUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on HEIUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SAGAUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on 2ZUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on 2ZUSDT)",
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on INTCBUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on STORJUSDT)",
@@ -53,32 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 09:22:57",
-      "account_id": "SIM-022",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "PENDLEUSDT",
-      "side": "SHORT",
-      "entry_price": 1.358,
-      "exit_price": 1.358,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on PENDLEUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-13 09:22:57",
-      "account_id": "SIM-023",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "PENDLEUSDT",
-      "side": "SHORT",
-      "entry_price": 1.358,
-      "exit_price": 1.358,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on PENDLEUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-13 09:25:04",
       "account_id": "SIM-085",
@@ -8290,6 +8264,40 @@
       "context": {
         "score": 65,
         "rsi_15m": 46.14,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 14:12:53",
+      "account_id": "SIM-005",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "INTCBUSDT",
+      "side": "LONG",
+      "entry_price": 105.56,
+      "exit_price": 105.33,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on INTCBUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 32,
+        "rsi_15m": 44.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 14:12:53",
+      "account_id": "SIM-006",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "INTCBUSDT",
+      "side": "LONG",
+      "entry_price": 105.56,
+      "exit_price": 105.33,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on INTCBUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 32,
+        "rsi_15m": 44.56,
         "macro_trend_4h": "NEUTRAL"
       }
     }
