@@ -1,27 +1,30 @@
 {
   "initial_deposit_usdt": 17.13,
   "initial_total_usd": 20.08,
-  "current_balance_usd": 18.31,
-  "net_pnl_usd": 1.18,
+  "current_balance_usd": 18.37,
+  "net_pnl_usd": 1.24,
   "wins": 9,
   "losses": 13,
   "trades_count": 21,
   "position": {
     "symbol": "ROBOUSDT",
-    "entry_price": 0.01529,
-    "cost_usd": 15.99,
-    "side": "LONG",
     "quantity": 1046.0,
-    "break_even": false
+    "entry_price": 0.01529,
+    "highest_price": 0.01536,
+    "cost_usd": 16.07,
+    "side": "LONG",
+    "phase": 1,
+    "holding_cycles": 1,
+    "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
-  "last_trade_time": "26-08-14<br>08:40",
-  "status": "🔵 En Vivo LONG (ROBOUSDT @ $0.0153)",
+  "last_trade_time": "26-08-14<br>08:44",
+  "status": "🔵 En Vivo LONG (ROBOUSDT @ $0.0154)",
   "daily_wins": 2,
   "daily_losses": 4,
-  "_cached_total_val": 18.31,
-  "_cached_usdt_free": 0.0,
-  "_cached_bnb": 0.00363525,
-  "_cached_bnb_usd": 2.2,
+  "_cached_total_val": 18.37,
+  "_cached_usdt_free": 0.1179,
+  "_cached_bnb": 0.00361532,
+  "_cached_bnb_usd": 2.19,
   "last_trading_day": "2026-08-11",
-  "_btc_last_price": 63535.47
+  "_btc_last_price": 62720.0
 }

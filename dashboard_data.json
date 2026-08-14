@@ -7,11 +7,14 @@
   "status": "🔵 En Vivo LONG (ROBOUSDT @ $0.0153)",
   "position": {
     "symbol": "ROBOUSDT",
-    "entry_price": 0.01529,
-    "cost_usd": 15.99,
-    "side": "LONG",
     "quantity": 1046.0,
-    "break_even": false
+    "entry_price": 0.01529,
+    "highest_price": 0.01536,
+    "cost_usd": 16.07,
+    "side": "LONG",
+    "phase": 1,
+    "holding_cycles": 1,
+    "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
   },
   "verdict": {
     "timestamp": "2026-08-14 13:42:28",

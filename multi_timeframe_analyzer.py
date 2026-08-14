@@ -453,13 +453,18 @@ def analyze_multi_timeframe_candles(symbol):
         dist_from_24h_high_pct = round(((d_highs[-1] - close_15m) / close_15m) * 100.0, 2) if (d_highs and close_15m > 0) else 999.0
 
         # Spike up followed by rejection wick (buying top trap)
-        if candle_range > 0 and (upper_wick / candle_range) > 0.35 and (high_15m - low_15m) / low_15m > 0.012:
+        is_green_candle = close_15m >= open_15m
+        upper_wick_ratio = (upper_wick / candle_range) if candle_range > 0 else 0.0
+        # Adaptive wick threshold: 50% for healthy green candles (Shooting Star standard), 35% for red/reversal candles
+        wick_threshold = 0.50 if is_green_candle else 0.35
+        
+        if candle_range > 0 and upper_wick_ratio > wick_threshold and (high_15m - low_15m) / low_15m > 0.012:
             is_overextended_15m = True
-            overextension_reason = f"Mecha superior de reversión en vela de 15m ({upper_wick/candle_range*100:.1f}% del rango)"
-        elif dist_from_24h_high_pct <= 1.5 and price_expansion_pct >= 4.0:
+            overextension_reason = f"Mecha superior de reversión en vela de 15m ({upper_wick_ratio*100:.1f}% del rango, umbral={wick_threshold*100:.0f}%)"
+        elif dist_from_24h_high_pct <= 1.0 and price_expansion_pct >= 6.0:
             is_overextended_15m = True
             overextension_reason = f"Entrada en el Pico Máximo 24H (Precio a solo {dist_from_24h_high_pct}% del máximo 24H de ${d_highs[-1]:.4f}). Exige compra en el suelo."
-        elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > 3.0:
+        elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > 4.0:
             is_overextended_15m = True
             overextension_reason = f"Vela de 15m sobre-extendida en la cima (+{((close_15m - open_15m) / open_15m) * 100.0:.2f}%)"
         elif dist_from_15m_ma7_pct > 2.5:
