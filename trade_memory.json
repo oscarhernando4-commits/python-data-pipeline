@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3853,
+    "total_trades": 3856,
     "wins": 669,
-    "losses": 3184,
-    "win_rate_pct": 17.36,
-    "total_pnl_usd": 791108.5598954523
+    "losses": 3187,
+    "win_rate_pct": 17.35,
+    "total_pnl_usd": 791108.3998954523
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ENAUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on JUPUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on XAIUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on MUBARAKUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ALGOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on DRAMBUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on TSTUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on TSTUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on INTCBUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on NILUSDT)",
@@ -53,49 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 14:16:25",
-      "account_id": "SIM-089",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "NEXOUSDT",
-      "side": "SHORT",
-      "entry_price": 0.714,
-      "exit_price": 0.721,
-      "pnl_usd": -0.2,
-      "result": "LOSS",
-      "notes": "Hit SL on NEXOUSDT (-$0.20). Re-Trading!",
-      "context": {
-        "score": 65,
-        "rsi_15m": 55.89,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 14:18:25",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "TRXUSDT",
-      "side": "SHORT",
-      "entry_price": 0.3374,
-      "exit_price": 0.3374,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on TRXUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-13 14:18:25",
-      "account_id": "SIM-028",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "TRXUSDT",
-      "side": "SHORT",
-      "entry_price": 0.3374,
-      "exit_price": 0.3374,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on TRXUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-13 14:18:25",
       "account_id": "SIM-029",
@@ -8246,6 +8203,57 @@
       "context": {
         "score": 32,
         "rsi_15m": 49.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 13:46:25",
+      "account_id": "SIM-079",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "INTCBUSDT",
+      "side": "SHORT",
+      "entry_price": 105.73,
+      "exit_price": 105.54,
+      "pnl_usd": -0.07,
+      "result": "LOSS",
+      "notes": "Hit SL on INTCBUSDT (-$0.07). Re-Trading!",
+      "context": {
+        "score": 32,
+        "rsi_15m": 46.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 13:46:25",
+      "account_id": "SIM-080",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "INTCBUSDT",
+      "side": "SHORT",
+      "entry_price": 105.73,
+      "exit_price": 105.54,
+      "pnl_usd": -0.04,
+      "result": "LOSS",
+      "notes": "Hit SL on INTCBUSDT (-$0.04). Re-Trading!",
+      "context": {
+        "score": 32,
+        "rsi_15m": 46.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 13:46:25",
+      "account_id": "SIM-093",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "INTCBUSDT",
+      "side": "SHORT",
+      "entry_price": 105.69,
+      "exit_price": 105.54,
+      "pnl_usd": -0.05,
+      "result": "LOSS",
+      "notes": "Hit SL on INTCBUSDT (-$0.05). Re-Trading!",
+      "context": {
+        "score": 32,
+        "rsi_15m": 46.9,
         "macro_trend_4h": "NEUTRAL"
       }
     }
