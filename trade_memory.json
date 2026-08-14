@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3791,
-    "wins": 650,
+    "total_trades": 3792,
+    "wins": 651,
     "losses": 3141,
-    "win_rate_pct": 17.15,
-    "total_pnl_usd": 797827.4298954525
+    "win_rate_pct": 17.17,
+    "total_pnl_usd": 797827.7098954525
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ENSOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ENSOUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on INJUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DRAMBUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SPYBUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SCRTUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on VIRTUALUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HOLOUSDT)",
-      "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SYNUSDT)"
+      "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SYNUSDT)",
+      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ZAMAUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 08:00:32",
-      "account_id": "SIM-099",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "BANKUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0388,
-      "exit_price": 0.0398,
-      "pnl_usd": -0.51,
-      "result": "LOSS",
-      "notes": "Hit SL on BANKUSDT (-$0.51). Re-Trading!",
-      "context": {
-        "score": 65,
-        "rsi_15m": 55.55,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 08:04:20",
       "account_id": "SIM-041",
@@ -8270,6 +8253,23 @@
       "context": {
         "score": 20,
         "rsi_15m": 48.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 11:12:17",
+      "account_id": "SIM-098",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "ZAMAUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0479,
+      "exit_price": 0.04694,
+      "pnl_usd": 0.28,
+      "result": "WIN",
+      "notes": "Win on ZAMAUSDT (+$0.28 net) -> Level 6 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.4,
         "macro_trend_4h": "NEUTRAL"
       }
     }
