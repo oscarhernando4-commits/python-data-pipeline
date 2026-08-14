@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3574,
+    "total_trades": 3577,
     "wins": 611,
-    "losses": 2963,
-    "win_rate_pct": 17.1,
-    "total_pnl_usd": 798638.1198954527
+    "losses": 2966,
+    "win_rate_pct": 17.08,
+    "total_pnl_usd": 798637.4998954528
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on EDENUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHFIUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on FILUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on 2ZUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SCRTUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ACEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MMTUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on APTUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on APTUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on EDENUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ONEUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 13:58:57",
-      "account_id": "SIM-040",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "2ZUSDT",
-      "side": "SHORT",
-      "entry_price": 0.05817,
-      "exit_price": 0.05816,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on 2ZUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 69.03,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 14:01:59",
-      "account_id": "SIM-058",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "JSTUSDT",
-      "side": "LONG",
-      "entry_price": 0.102,
-      "exit_price": 0.10106,
-      "pnl_usd": -0.29,
-      "result": "LOSS",
-      "notes": "Hit SL on JSTUSDT (-$0.29). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 23.59,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 14:01:59",
-      "account_id": "SIM-059",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "JSTUSDT",
-      "side": "LONG",
-      "entry_price": 0.102,
-      "exit_price": 0.10106,
-      "pnl_usd": -0.29,
-      "result": "LOSS",
-      "notes": "Hit SL on JSTUSDT (-$0.29). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 23.59,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 14:01:59",
       "account_id": "SIM-060",
@@ -8198,6 +8147,57 @@
       "context": {
         "score": 30,
         "rsi_15m": 50.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 00:03:01",
+      "account_id": "SIM-085",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EDENUSDT",
+      "side": "SHORT",
+      "entry_price": 0.07272,
+      "exit_price": 0.07353,
+      "pnl_usd": -0.22,
+      "result": "LOSS",
+      "notes": "Hit SL on EDENUSDT (-$0.22). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 67.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 00:03:01",
+      "account_id": "SIM-086",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EDENUSDT",
+      "side": "SHORT",
+      "entry_price": 0.07272,
+      "exit_price": 0.07353,
+      "pnl_usd": -0.22,
+      "result": "LOSS",
+      "notes": "Hit SL on EDENUSDT (-$0.22). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 67.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 00:03:01",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "EDENUSDT",
+      "side": "SHORT",
+      "entry_price": 0.07272,
+      "exit_price": 0.07353,
+      "pnl_usd": -0.18,
+      "result": "LOSS",
+      "notes": "Hit SL on EDENUSDT (-$0.18). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 67.48,
         "macro_trend_4h": "NEUTRAL"
       }
     }
