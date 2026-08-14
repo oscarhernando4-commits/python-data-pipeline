@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3582,
-    "wins": 613,
+    "total_trades": 3585,
+    "wins": 616,
     "losses": 2969,
-    "win_rate_pct": 17.11,
-    "total_pnl_usd": 798638.7898954527
+    "win_rate_pct": 17.18,
+    "total_pnl_usd": 798644.9898954526
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on IDUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ATMUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ATUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ATUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TSTUSDT)",
@@ -49,61 +48,11 @@
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GIGGLEUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ETHUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HOMEUSDT)",
-      "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PROMUSDT)"
+      "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PROMUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on EDENUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 19:24:24",
-      "account_id": "SIM-036",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "TRUMPUSDT",
-      "side": "LONG",
-      "entry_price": 1.452,
-      "exit_price": 1.438,
-      "pnl_usd": -0.21,
-      "result": "LOSS",
-      "notes": "Hit SL on TRUMPUSDT (-$0.21). Re-Trading!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 26.58,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 19:24:24",
-      "account_id": "SIM-082",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "MOVRUSDT",
-      "side": "SHORT",
-      "entry_price": 0.869,
-      "exit_price": 0.84,
-      "pnl_usd": 0.6,
-      "result": "WIN",
-      "notes": "Win on MOVRUSDT (+$0.60 net) -> Level 5 Re-Trading Started!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 32.43,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 19:26:19",
-      "account_id": "SIM-022",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "DEXEUSDT",
-      "side": "SHORT",
-      "entry_price": 2.069,
-      "exit_price": 2.063,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on DEXEUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 79.73,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 19:26:19",
       "account_id": "SIM-031",
@@ -8202,6 +8151,57 @@
       "context": {
         "score": 40,
         "rsi_15m": 54.53,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 00:18:22",
+      "account_id": "SIM-026",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "EDENUSDT",
+      "side": "SHORT",
+      "entry_price": 0.07722,
+      "exit_price": 0.06902,
+      "pnl_usd": 2.09,
+      "result": "WIN",
+      "notes": "Win on EDENUSDT (+$2.09 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 54.73,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 00:18:22",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "EDENUSDT",
+      "side": "SHORT",
+      "entry_price": 0.07722,
+      "exit_price": 0.06902,
+      "pnl_usd": 2.04,
+      "result": "WIN",
+      "notes": "Win on EDENUSDT (+$2.04 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 54.73,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 00:18:22",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "EDENUSDT",
+      "side": "SHORT",
+      "entry_price": 0.07722,
+      "exit_price": 0.06902,
+      "pnl_usd": 2.07,
+      "result": "WIN",
+      "notes": "Win on EDENUSDT (+$2.07 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 54.73,
         "macro_trend_4h": "NEUTRAL"
       }
     }
