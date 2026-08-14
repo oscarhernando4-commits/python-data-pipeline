@@ -2451,3 +2451,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-31.77%)`, `2025-04-30 (-24.2%)`, `2025-03-02 (-20.2%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: DRAMBUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2026-07-07` hasta `2026-08-14` (39 Días de Historial)
+- 💵 **Precio Actual:** `$57.3600 USD`
+- 📈 **Máximo Histórico (ATH):** `$66.2500 USD` (`2026-07-09`) | Distancia: `-13.42%`
+- 📉 **Mínimo Histórico (ATL):** `$42.6000 USD` (`2026-07-29`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-07-30 (+19.15%)`, `2026-07-21 (+12.57%)`, `2026-07-14 (+11.11%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `Sin días < -10%`
+
+---
