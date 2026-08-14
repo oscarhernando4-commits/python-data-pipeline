@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3698,
-    "wins": 634,
+    "total_trades": 3699,
+    "wins": 635,
     "losses": 3064,
-    "win_rate_pct": 17.14,
-    "total_pnl_usd": 798649.1598954521
+    "win_rate_pct": 17.17,
+    "total_pnl_usd": 798649.5598954521
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ROBOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MUBARAKUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HOMEUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MSTRBUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HOMEUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ETHFIUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on JTOUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JTOUSDT)",
-      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DODOUSDT)"
+      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DODOUSDT)",
+      "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DODOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 02:38:24",
-      "account_id": "SIM-055",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "MORPHOUSDT",
-      "side": "LONG",
-      "entry_price": 1.993,
-      "exit_price": 1.975,
-      "pnl_usd": -0.23,
-      "result": "LOSS",
-      "notes": "Hit SL on MORPHOUSDT (-$0.23). Re-Trading!",
-      "context": {
-        "score": 10,
-        "rsi_15m": 44.31,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 02:38:24",
       "account_id": "SIM-056",
@@ -8270,6 +8253,23 @@
       "context": {
         "score": 0,
         "rsi_15m": 41.7,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 05:16:30",
+      "account_id": "SIM-095",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DODOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0225,
+      "exit_price": 0.02201,
+      "pnl_usd": 0.4,
+      "result": "WIN",
+      "notes": "Win on DODOUSDT (+$0.40 net) -> Level 8 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 29.1,
         "macro_trend_4h": "NEUTRAL"
       }
     }
