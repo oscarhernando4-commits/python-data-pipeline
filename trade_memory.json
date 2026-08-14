@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3761,
-    "wins": 646,
+    "total_trades": 3762,
+    "wins": 647,
     "losses": 3115,
-    "win_rate_pct": 17.18,
-    "total_pnl_usd": 799381.1198954524
+    "win_rate_pct": 17.2,
+    "total_pnl_usd": 799381.5398954524
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DODOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HOMEUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PROMUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on EDENUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ENSOUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JUPUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TAOUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ATMUSDT)",
-      "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SCRTUSDT)"
+      "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SCRTUSDT)",
+      "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on VIRTUALUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 07:02:20",
-      "account_id": "SIM-065",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "ONEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.00084,
-      "exit_price": 0.00085,
-      "pnl_usd": -0.26,
-      "result": "LOSS",
-      "notes": "Hit SL on ONEUSDT (-$0.26). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 52.54,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 07:02:20",
       "account_id": "SIM-097",
@@ -8270,6 +8253,23 @@
       "context": {
         "score": 25,
         "rsi_15m": 30.06,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 09:44:19",
+      "account_id": "SIM-063",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "VIRTUALUSDT",
+      "side": "SHORT",
+      "entry_price": 0.5753,
+      "exit_price": 0.5635,
+      "pnl_usd": 0.42,
+      "result": "WIN",
+      "notes": "Win on VIRTUALUSDT (+$0.42 net) -> Level 14 Re-Trading Started!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 30.38,
         "macro_trend_4h": "NEUTRAL"
       }
     }
