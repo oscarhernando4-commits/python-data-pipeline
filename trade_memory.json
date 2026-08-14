@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3801,
+    "total_trades": 3804,
     "wins": 651,
-    "losses": 3150,
-    "win_rate_pct": 17.13,
-    "total_pnl_usd": 797826.0598954525
+    "losses": 3153,
+    "win_rate_pct": 17.11,
+    "total_pnl_usd": 791531.7898954524
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on CRVUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TSTUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on CRVUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ROBOUSDT)",
       "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on STORJUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on STXUSDT)",
-      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ENAUSDT)"
+      "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ENAUSDT)",
+      "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on GPSUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on INJUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 08:58:31",
-      "account_id": "SIM-097",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "TSTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01553,
-      "exit_price": 0.01638,
-      "pnl_usd": -1.03,
-      "result": "LOSS",
-      "notes": "Hit SL on TSTUSDT (-$1.03). Re-Trading!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 55.73,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 08:58:31",
-      "account_id": "SIM-098",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "TSTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01553,
-      "exit_price": 0.01638,
-      "pnl_usd": -1.02,
-      "result": "LOSS",
-      "notes": "Hit SL on TSTUSDT (-$1.02). Re-Trading!",
-      "context": {
-        "score": 20,
-        "rsi_15m": 55.73,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 09:57:02",
-      "account_id": "SIM-055",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "TRXUSDT",
-      "side": "LONG",
-      "entry_price": 0.3374,
-      "exit_price": 0.334,
-      "pnl_usd": -0.26,
-      "result": "LOSS",
-      "notes": "Hit SL on TRXUSDT (-$0.26). Re-Trading!",
-      "context": {
-        "score": 50,
-        "rsi_15m": 23.74,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 09:57:02",
       "account_id": "SIM-056",
@@ -8270,6 +8219,57 @@
       "context": {
         "score": 25,
         "rsi_15m": 26.46,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 11:54:29",
+      "account_id": "SIM-024",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "GPSUSDT",
+      "side": "LONG",
+      "entry_price": 0.01021,
+      "exit_price": 0.00976,
+      "pnl_usd": -0.9,
+      "result": "LOSS",
+      "notes": "Hit SL on GPSUSDT (-$0.90). Re-Trading!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 26.32,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 11:54:29",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "GPSUSDT",
+      "side": "LONG",
+      "entry_price": 0.01021,
+      "exit_price": 0.00976,
+      "pnl_usd": -6292.48,
+      "result": "LOSS",
+      "notes": "Hit SL on GPSUSDT (-$6292.48). Re-Trading!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 26.32,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 11:54:29",
+      "account_id": "SIM-030",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "GPSUSDT",
+      "side": "LONG",
+      "entry_price": 0.01021,
+      "exit_price": 0.00976,
+      "pnl_usd": -0.89,
+      "result": "LOSS",
+      "notes": "Hit SL on GPSUSDT (-$0.89). Re-Trading!",
+      "context": {
+        "score": 40,
+        "rsi_15m": 26.32,
         "macro_trend_4h": "NEUTRAL"
       }
     }
