@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3808,
+    "total_trades": 3809,
     "wins": 653,
-    "losses": 3155,
-    "win_rate_pct": 17.15,
-    "total_pnl_usd": 791532.5398954524
+    "losses": 3156,
+    "win_rate_pct": 17.14,
+    "total_pnl_usd": 791532.2798954524
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on CRVUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SYNUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on JSTUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONDOUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ENAUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on JUPUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on XAIUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on XAIUSDT)",
+      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PYTHUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DRAMBUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 10:50:31",
-      "account_id": "SIM-060",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "JSTUSDT",
-      "side": "LONG",
-      "entry_price": 0.10176,
-      "exit_price": 0.1038,
-      "pnl_usd": 0.54,
-      "result": "WIN",
-      "notes": "Win on JSTUSDT (+$0.54 net) -> Level 10 Re-Trading Started!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 85.11,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 10:50:31",
       "account_id": "SIM-065",
@@ -8270,6 +8253,23 @@
       "context": {
         "score": 0,
         "rsi_15m": 48.12,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 12:14:26",
+      "account_id": "SIM-053",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "PYTHUSDT",
+      "side": "LONG",
+      "entry_price": 0.03936,
+      "exit_price": 0.03896,
+      "pnl_usd": -0.26,
+      "result": "LOSS",
+      "notes": "Hit SL on PYTHUSDT (-$0.26). Re-Trading!",
+      "context": {
+        "score": 0,
+        "rsi_15m": 32.87,
         "macro_trend_4h": "NEUTRAL"
       }
     }
