@@ -1,12 +1,26 @@
 {
-  "PENDLEUSDT": [
+  "CFXUSDT": [
     {
-      "timestamp": "2026-08-14 00:22:12",
-      "price": 1.35,
-      "score": 25,
-      "rsi": 50.02,
+      "timestamp": "2026-08-14 00:24:12",
+      "price": 0.04163,
+      "score": 75,
+      "rsi": 59.11,
       "macd": "Neutral",
-      "volume_surge": 0.03,
+      "volume_surge": 0.5,
+      "wyckoff": "Sin patron",
+      "news_headline": null,
+      "fear_greed": 50
+    }
+  ]
+},
+  "STXUSDT": [
+    {
+      "timestamp": "2026-08-14 00:24:12",
+      "price": 0.1241,
+      "score": 25,
+      "rsi": 51.65,
+      "macd": "Neutral",
+      "volume_surge": 0.88,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -14,25 +28,12 @@
   ],
   "SYNUSDT": [
     {
-      "timestamp": "2026-08-14 00:22:12",
-      "price": 0.10856,
+      "timestamp": "2026-08-14 00:24:12",
+      "price": 0.10854,
       "score": 45,
-      "rsi": 58.42,
+      "rsi": 58.25,
       "macd": "Neutral",
-      "volume_surge": 0.56,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "STXUSDT": [
-    {
-      "timestamp": "2026-08-14 00:22:12",
-      "price": 0.1243,
-      "score": 45,
-      "rsi": 56.89,
-      "macd": "Neutral",
-      "volume_surge": 0.3,
+      "volume_surge": 0.62,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
@@ -40,25 +41,12 @@
   ],
   "IMXUSDT": [
     {
-      "timestamp": "2026-08-14 00:22:12",
+      "timestamp": "2026-08-14 00:24:12",
       "price": 0.1096,
       "score": 60,
       "rsi": 50.96,
       "macd": "Neutral",
       "volume_surge": 0.06,
-      "wyckoff": "Sin patron",
-      "news_headline": null,
-      "fear_greed": 50
-    }
-  ],
-  "CFXUSDT": [
-    {
-      "timestamp": "2026-08-14 00:22:13",
-      "price": 0.04162,
-      "score": 75,
-      "rsi": 58.78,
-      "macd": "Neutral",
-      "volume_surge": 0.43,
       "wyckoff": "Sin patron",
       "news_headline": null,
       "fear_greed": 50
