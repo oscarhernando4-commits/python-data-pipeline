@@ -7,13 +7,13 @@ aliases:
   - Matriz 100 Cuentas
 cssclasses:
   - matrix-report
-date: 2026-08-14 09:28:27
+date: 2026-08-14 09:30:30
 ---
 
 # 💰 INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS - $0.00 USD)
 
 > [!TIP] 🏦 **ESTADO DE LA CUENTA REAL**
-> ⏱️ **Última Actualización:** `2026-08-14 09:28:27`
+> ⏱️ **Última Actualización:** `2026-08-14 09:30:30`
 >
 > 🛡️ **Desglose de Fondos en Cuenta Real:**
 > - 🟡 **BNB Escudo Comisiones:** `0.00000000 BNB` (`~$0.00 USD`)
@@ -30,10 +30,10 @@ date: 2026-08-14 09:28:27
 
 > [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  
 > - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  
-> - 📈 **Capital Total Acumulado:** **`$695,063.36 USD`** (`$+685,063.36 USD`)  
-> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `1 Cuentas (1.0%)`  
-> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `28 Cuentas (28.0%)`  
-> - 🔵 **Cuentas Operando en Vivo:** `71 Cuentas (71.0%)`  
+> - 📈 **Capital Total Acumulado:** **`$695,064.70 USD`** (`$+685,064.70 USD`)  
+> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `4 Cuentas (4.0%)`  
+> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `29 Cuentas (29.0%)`  
+> - 🔵 **Cuentas Operando en Vivo:** `67 Cuentas (67.0%)`  
 > - ⚪ **Cuentas Neutras / En Espera:** `0 Cuentas (0.0%)`  
 
 ## 🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)
@@ -58,34 +58,34 @@ date: 2026-08-14 09:28:27
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-001** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-002** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-003** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-004** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-005** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-006** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-007** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-008** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-009** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-010** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-011** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-012** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-013** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-014** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-015** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-016** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-017** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-018** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-019** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
-| **SIM-020** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-001** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-002** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-003** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-004** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-005** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-006** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-007** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-008** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-009** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-010** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-011** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-012** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-013** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-014** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-015** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-016** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-017** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-018** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-019** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
+| **SIM-020** | **BTCUSDT** | `#24` | `4W/20L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.18` | **`$89.67`** (`-$10.33`) | 🔴 Buscando |
 
 ---
 
 ## 🔷 GRUPO 2: Moderado-Estricto (Permisividad Nivel 2 - Score >= 75 Pts)
 
 > [!TIP] 📊 **Resumen del 🔷 GRUPO 2: Moderado-Estricto (Permisividad Nivel 2 - Score >= 75 Pts):**
-> - 💵 **Balance Total del Grupo:** `$701,290.94 USD` (`+$699290.94`)
-> - 🎯 **Operaciones Totales:** `803` (`164 Ganadas / 612 Perdidas`)
+> - 💵 **Balance Total del Grupo:** `$701,290.50 USD` (`+$699290.50`)
+> - 🎯 **Operaciones Totales:** `805` (`164 Ganadas / 614 Perdidas`)
 > - 📈 **Tasa de Acierto del Grupo:** `20.4% Win Rate`
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
@@ -95,7 +95,7 @@ date: 2026-08-14 09:28:27
 | **SIM-023** | **LTCUSDT** | `#45` | `8W/37L` | 26-08-14<br>08:14 | `🔵 En Curso` | **`$97.80`** (`-$2.20`) | 🔵 En Vivo |
 | **SIM-024** | **CRVUSDT** | `#31` | `8W/22L` | 26-08-14<br>08:26 | `🔵 En Curso` | **`$99.61`** (`-$0.39`) | 🔵 En Vivo |
 | **SIM-025** | **LTCUSDT** | `#33` | `8W/24L` | 26-08-14<br>08:14 | `🔵 En Curso` | **`$100.11`** (`+$0.11`) | 🔵 En Vivo |
-| **SIM-026** | **AEROUSDT** | `#36` | `9W/26L` | 26-08-14<br>06:54 | `🔵 En Curso` | **`$101.88`** (`+$1.88`) | 🔵 En Vivo |
+| **SIM-026** | **AEROUSDT** | `#37` | `9W/27L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.22` | **`$101.66`** (`+$1.66`) | 🟢 Buscando |
 | **SIM-027** | **CRVUSDT** | `#47` | `12W/34L` | 26-08-14<br>08:26 | `🔵 En Curso` | **`$699557.03`** (`+$699457.03`) | 🔵 En Vivo |
 | **SIM-028** | **ONDOUSDT** | `#49` | `8W/40L` | 26-08-14<br>03:52 | `🔵 En Curso` | **`$98.88`** (`-$1.12`) | 🔵 En Vivo |
 | **SIM-029** | **ONDOUSDT** | `#46` | `8W/37L` | 26-08-14<br>03:52 | `🔵 En Curso` | **`$100.02`** (`+$0.02`) | 🔵 En Vivo |
@@ -105,8 +105,8 @@ date: 2026-08-14 09:28:27
 | **SIM-033** | **GNOUSDT** | `#44` | `8W/33L` | 26-08-14<br>04:54 | `🔵 En Curso` | **`$97.15`** (`-$2.85`) | 🔵 En Vivo |
 | **SIM-034** | **BTCUSDT** | `#40` | `7W/30L` | 26-08-13<br>14:36 | `🛡️ Protegida (BE)` | **`$97.25`** (`-$2.75`) | 🔵 En Vivo |
 | **SIM-035** | **BTCUSDT** | `#39` | `7W/29L` | 26-08-13<br>14:36 | `🛡️ Protegida (BE)` | **`$97.03`** (`-$2.97`) | 🔵 En Vivo |
-| **SIM-036** | **AEROUSDT** | `#46` | `9W/36L` | 26-08-14<br>06:54 | `🔵 En Curso` | **`$104.98`** (`+$4.98`) | 🔵 En Vivo |
-| **SIM-037** | **PROMUSDT** | `#34` | `8W/26L` | 26-08-14<br>09:28 | `🔴 Perdió -$163.83` | **`$-53.66`** (`-$153.66`) | 🔴 Buscando |
+| **SIM-036** | **AEROUSDT** | `#47` | `9W/37L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.22` | **`$104.76`** (`+$4.76`) | 🟢 Buscando |
+| **SIM-037** | **PROMUSDT** | `#34` | `8W/26L` | 26-08-14<br>09:30 | `🔴 Perdió -$163.83` | **`$-53.66`** (`-$153.66`) | 🔴 Buscando |
 | **SIM-038** | **BTCUSDT** | `#38` | `6W/31L` | 26-08-13<br>09:34 | `🛡️ Protegida (BE)` | **`$96.42`** (`-$3.58`) | 🔵 En Vivo |
 | **SIM-039** | **BTCUSDT** | `#37` | `7W/28L` | 26-08-13<br>09:34 | `🛡️ Protegida (BE)` | **`$97.43`** (`-$2.57`) | 🔵 En Vivo |
 | **SIM-040** | **GRAMUSDT** | `#37` | `8W/26L` | 26-08-13<br>10:56 | `🔵 En Curso` | **`$99.22`** (`-$0.78`) | 🔵 En Vivo |
@@ -124,7 +124,7 @@ date: 2026-08-14 09:28:27
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
 | **SIM-041** | **ONDOUSDT** | `#36` | `6W/28L` | 26-08-14<br>03:54 | `🔵 En Curso` | **`$203.14`** (`+$103.14`) | 🔵 En Vivo |
 | **SIM-042** | **STXUSDT** | `#23` | `6W/15L` | 26-08-14<br>08:14 | `🔵 En Curso` | **`$186.57`** (`+$86.57`) | 🔵 En Vivo |
-| **SIM-043** | **ALLOUSDT** | `#43` | `10W/32L` | 26-08-14<br>09:28 | `🔴 Perdió -$0.12` | **`$205.90`** (`+$105.90`) | 🟢 Buscando |
+| **SIM-043** | **ALLOUSDT** | `#43` | `10W/32L` | 26-08-14<br>09:30 | `🔴 Perdió -$0.12` | **`$205.90`** (`+$105.90`) | 🟢 Buscando |
 | **SIM-044** | **STXUSDT** | `#38` | `7W/30L` | 26-08-14<br>08:14 | `🔵 En Curso` | **`$138.07`** (`+$38.07`) | 🔵 En Vivo |
 | **SIM-045** | **STXUSDT** | `#32` | `6W/23L` | 26-08-14<br>08:14 | `🔵 En Curso` | **`$139.36`** (`+$39.36`) | 🔵 En Vivo |
 | **SIM-046** | **DODOUSDT** | `#31` | `4W/25L` | 26-08-14<br>09:22 | `🔵 En Curso` | **`$138.05`** (`+$38.05`) | 🔵 En Vivo |
@@ -148,28 +148,28 @@ date: 2026-08-14 09:28:27
 ## ⚡ GRUPO 4: Frecuencia Alta (Permisividad Nivel 4 - Score >= 55 Pts)
 
 > [!WARNING] 📊 **Resumen del ⚡ GRUPO 4: Frecuencia Alta (Permisividad Nivel 4 - Score >= 55 Pts):**
-> - 💵 **Balance Total del Grupo:** `$-12,163.38 USD` (`-$14163.38`)
-> - 🎯 **Operaciones Totales:** `1392` (`202 Ganadas / 1172 Perdidas`)
-> - 📈 **Tasa de Acierto del Grupo:** `14.5% Win Rate`
+> - 💵 **Balance Total del Grupo:** `$-12,161.60 USD` (`-$14161.60`)
+> - 🎯 **Operaciones Totales:** `1394` (`204 Ganadas / 1172 Perdidas`)
+> - 📈 **Tasa de Acierto del Grupo:** `14.6% Win Rate`
 
 | ID | Cripto | Ops | Racha | Última Hora | Último Resultado | Balance (PnL) | Estado |
 | :--- | :--- | :---: | :---: | :--- | :--- | :--- | :--- |
-| **SIM-061** | **DEXEUSDT** | `#63` | `10W/52L` | 26-08-14<br>09:28 | `🔴 Perdió -$4082.85` | **`$-3981.94`** (`-$4081.94`) | 🔴 Buscando |
-| **SIM-062** | **ATMUSDT** | `#69` | `12W/55L` | 26-08-14<br>09:00 | `🛡️ Protegida (BE)` | **`$105.86`** (`+$5.86`) | 🔵 En Vivo |
+| **SIM-061** | **DEXEUSDT** | `#63` | `10W/52L` | 26-08-14<br>09:30 | `🔴 Perdió -$4082.85` | **`$-3981.94`** (`-$4081.94`) | 🔴 Buscando |
+| **SIM-062** | **ATMUSDT** | `#70` | `13W/55L` | 26-08-14<br>09:30 | `🟢 Ganó +$0.94` | **`$106.80`** (`+$6.80`) | 🟢 Buscando |
 | **SIM-063** | **VIRTUALUSDT** | `#68` | `12W/54L` | 26-08-14<br>04:46 | `🛡️ Protegida (BE)` | **`$106.81`** (`+$6.81`) | 🔵 En Vivo |
-| **SIM-064** | **ATMUSDT** | `#76` | `10W/65L` | 26-08-14<br>09:00 | `🛡️ Protegida (BE)` | **`$94.57`** (`-$5.43`) | 🔵 En Vivo |
+| **SIM-064** | **ATMUSDT** | `#77` | `11W/65L` | 26-08-14<br>09:30 | `🟢 Ganó +$0.84` | **`$95.41`** (`-$4.59`) | 🔴 Buscando |
 | **SIM-065** | **CRVUSDT** | `#85` | `12W/73L` | 26-08-14<br>09:28 | `🔵 En Curso` | **`$97.54`** (`-$2.46`) | 🔵 En Vivo |
 | **SIM-066** | **ALGOUSDT** | `#69` | `8W/61L` | 26-08-14<br>04:46 | `🔵 En Curso` | **`$92.96`** (`-$7.04`) | 🔵 En Vivo |
 | **SIM-067** | **TRUMPUSDT** | `#70` | `8W/62L` | 26-08-14<br>06:38 | `🔵 En Curso` | **`$92.73`** (`-$7.27`) | 🔵 En Vivo |
-| **SIM-068** | **INJUSDT** | `#62` | `9W/53L` | 26-08-14<br>09:28 | `🔴 Perdió -$6343.84` | **`$-6245.81`** (`-$6345.81`) | 🔴 Buscando |
-| **SIM-069** | **SEIUSDT** | `#73` | `10W/63L` | 26-08-14<br>09:28 | `🔴 Perdió -$1175.51` | **`$-1059.01`** (`-$1159.01`) | 🔴 Buscando |
+| **SIM-068** | **INJUSDT** | `#62` | `9W/53L` | 26-08-14<br>09:30 | `🔴 Perdió -$6343.84` | **`$-6245.81`** (`-$6345.81`) | 🔴 Buscando |
+| **SIM-069** | **SEIUSDT** | `#73` | `10W/63L` | 26-08-14<br>09:30 | `🔴 Perdió -$1175.51` | **`$-1059.01`** (`-$1159.01`) | 🔴 Buscando |
 | **SIM-070** | **SUNUSDT** | `#62` | `8W/54L` | 26-08-11<br>19:58 | `🔵 En Curso` | **`$97.61`** (`-$2.39`) | 🔵 En Vivo |
-| **SIM-071** | **DODOUSDT** | `#85` | `14W/69L` | 26-08-14<br>09:28 | `🔴 Perdió -$898.35` | **`$-793.41`** (`-$893.41`) | 🔴 Buscando |
+| **SIM-071** | **DODOUSDT** | `#85` | `14W/69L` | 26-08-14<br>09:30 | `🔴 Perdió -$898.35` | **`$-793.41`** (`-$893.41`) | 🔴 Buscando |
 | **SIM-072** | **SCRTUSDT** | `#73` | `13W/57L` | 26-08-14<br>09:00 | `🛡️ Protegida (BE)` | **`$103.69`** (`+$3.69`) | 🔵 En Vivo |
-| **SIM-073** | **DODOUSDT** | `#78` | `12W/64L` | 26-08-14<br>09:28 | `🔴 Perdió -$850.84` | **`$-751.45`** (`-$851.45`) | 🔴 Buscando |
+| **SIM-073** | **DODOUSDT** | `#78` | `12W/64L` | 26-08-14<br>09:30 | `🔴 Perdió -$850.84` | **`$-751.45`** (`-$851.45`) | 🔴 Buscando |
 | **SIM-074** | **FILUSDT** | `#74` | `9W/65L` | 26-08-14<br>03:02 | `🛡️ Protegida (BE)` | **`$43.26`** (`-$56.74`) | 🔵 En Vivo |
 | **SIM-075** | **FILUSDT** | `#72` | `10W/62L` | 26-08-14<br>06:26 | `🔵 En Curso` | **`$44.89`** (`-$55.11`) | 🔵 En Vivo |
-| **SIM-076** | **DODOUSDT** | `#70` | `10W/58L` | 26-08-14<br>09:28 | `🔴 Perdió -$715.32` | **`$-631.76`** (`-$731.76`) | 🔴 Buscando |
+| **SIM-076** | **DODOUSDT** | `#70` | `10W/58L` | 26-08-14<br>09:30 | `🔴 Perdió -$715.32` | **`$-631.76`** (`-$731.76`) | 🔴 Buscando |
 | **SIM-077** | **NEXOUSDT** | `#57` | `9W/48L` | 26-08-14<br>03:04 | `🛡️ Protegida (BE)` | **`$117.66`** (`+$17.66`) | 🔵 En Vivo |
 | **SIM-078** | **NEXOUSDT** | `#57` | `9W/48L` | 26-08-14<br>03:04 | `🛡️ Protegida (BE)` | **`$117.66`** (`+$17.66`) | 🔵 En Vivo |
 | **SIM-079** | **CRVUSDT** | `#58` | `9W/49L` | 26-08-14<br>08:38 | `🔵 En Curso` | **`$117.42`** (`+$17.42`) | 🔵 En Vivo |
@@ -197,7 +197,7 @@ date: 2026-08-14 09:28:27
 | **SIM-089** | **SEIUSDT** | `#33` | `5W/28L` | 26-08-14<br>03:04 | `🛡️ Protegida (BE)` | **`$105.74`** (`+$5.74`) | 🔵 En Vivo |
 | **SIM-090** | **AUDIOUSDT** | `#19` | `6W/13L` | 26-08-12<br>05:04 | `🔵 En Curso` | **`$95.14`** (`-$4.86`) | 🔵 En Vivo |
 | **SIM-091** | **SUNUSDT** | `#23` | `3W/19L` | 26-08-12<br>15:00 | `🔵 En Curso` | **`$90.49`** (`-$9.51`) | 🔵 En Vivo |
-| **SIM-092** | **LDOUSDT** | `#14` | `2W/12L` | 26-08-14<br>09:28 | `🔴 Perdió -$358.82` | **`$-265.19`** (`-$365.19`) | 🔴 Buscando |
+| **SIM-092** | **LDOUSDT** | `#14` | `2W/12L` | 26-08-14<br>09:30 | `🔴 Perdió -$358.82` | **`$-265.19`** (`-$365.19`) | 🔴 Buscando |
 | **SIM-093** | **PYTHUSDT** | `#37` | `4W/33L` | 26-08-14<br>07:02 | `🔵 En Curso` | **`$88.97`** (`-$11.03`) | 🔵 En Vivo |
 | **SIM-094** | **SEIUSDT** | `#22` | `4W/18L` | 26-08-14<br>03:02 | `🛡️ Protegida (BE)` | **`$95.10`** (`-$4.90`) | 🔵 En Vivo |
 | **SIM-095** | **BONKUSDT** | `#28` | `7W/21L` | 26-08-14<br>05:18 | `🔵 En Curso` | **`$95.70`** (`-$4.30`) | 🔵 En Vivo |
