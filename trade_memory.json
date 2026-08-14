@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3652,
+    "total_trades": 3655,
     "wins": 624,
-    "losses": 3028,
-    "win_rate_pct": 17.09,
-    "total_pnl_usd": 798652.4498954525
+    "losses": 3031,
+    "win_rate_pct": 17.07,
+    "total_pnl_usd": 798652.2698954523
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on JTOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on IDUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on DODOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on AEROUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on STORJUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on VIRTUALUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NOTUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on EPICUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on EPICUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PLUMEUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ATUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 22:52:23",
-      "account_id": "SIM-043",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "VETUSDT",
-      "side": "LONG",
-      "entry_price": 0.00453,
-      "exit_price": 0.004417,
-      "pnl_usd": -1.09,
-      "result": "LOSS",
-      "notes": "Hit SL on VETUSDT (-$1.09). Re-Trading!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 18.38,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 22:52:23",
-      "account_id": "SIM-044",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "VETUSDT",
-      "side": "LONG",
-      "entry_price": 0.00453,
-      "exit_price": 0.004417,
-      "pnl_usd": -0.74,
-      "result": "LOSS",
-      "notes": "Hit SL on VETUSDT (-$0.74). Re-Trading!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 18.38,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 17:54:42",
-      "account_id": "SIM-099",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "OPUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0894,
-      "exit_price": 0.0856,
-      "pnl_usd": 0.77,
-      "result": "WIN",
-      "notes": "Win on OPUSDT (+$0.77 net) -> Level 5 Re-Trading Started!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 16.02,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 23:06:24",
       "account_id": "SIM-065",
@@ -8246,6 +8195,57 @@
       "context": {
         "score": 25,
         "rsi_15m": 50.8,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 02:52:22",
+      "account_id": "SIM-063",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "PLUMEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0126,
+      "exit_price": 0.01257,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on PLUMEUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 45,
+        "rsi_15m": 52.72,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 02:52:22",
+      "account_id": "SIM-066",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "PLUMEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0126,
+      "exit_price": 0.01257,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on PLUMEUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 45,
+        "rsi_15m": 52.72,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 02:52:22",
+      "account_id": "SIM-067",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "PLUMEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0126,
+      "exit_price": 0.01257,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on PLUMEUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 45,
+        "rsi_15m": 52.72,
         "macro_trend_4h": "NEUTRAL"
       }
     }
