@@ -84,23 +84,44 @@ def set_execution_mode(mode):
     print(f"🔄 Modo de ejecución cambiado a: {emoji}")
 
 def get_proxy():
-    """Round-Robin equitativo: rota secuencialmente entre cuentas Fixie activas (Prioriza #9 oscarhernando4)."""
+    """Round-Robin equitativo: rota secuencialmente entre cuentas Fixie activas con auto-renovación mensual."""
     state = _load_proxy_state()
     idx = state.get("current_index", 9) % len(FIXIE_POOL)
     
-    # Lista de cuentas agotadas conocidas
-    exhausted_indices = {0, 1, 2, 3, 4, 5, 6, 7, 8}
+    # Dynamic exhausted accounts (auto-clears on monthly renewal)
+    exhausted = state.get("exhausted", {})
+    current_month = datetime.now().strftime("%Y-%m")
+    
+    # Auto-renewal: if the month changed since last exhaustion, clear ALL exhausted flags
+    last_exhaust_month = state.get("last_exhaust_month", "")
+    if current_month != last_exhaust_month and exhausted:
+        print(f"🔄 [FIXIE AUTO-RENOVACIÓN] Nuevo mes detectado ({current_month}). Reactivando las {len(exhausted)} cuentas Fixie pausadas.")
+        exhausted = {}
+        state["exhausted"] = {}
+        state["last_exhaust_month"] = current_month
+        _save_proxy_state(state)
+    
+    exhausted_indices = set(exhausted.get("indices", []))
+    
+    # Find next available account
     attempts = 0
     while idx in exhausted_indices and attempts < len(FIXIE_POOL):
         idx = (idx + 1) % len(FIXIE_POOL)
         attempts += 1
+    
+    # If ALL accounts exhausted, force reset (emergency fallback)
+    if attempts >= len(FIXIE_POOL):
+        print("⚠️ [FIXIE] TODAS las cuentas agotadas. Forzando reset de emergencia...")
+        exhausted_indices = set()
+        state["exhausted"] = {}
+        idx = 9  # Start from primary account
         
     url = FIXIE_POOL[idx]
     
-    # Avanzar al siguiente para la próxima llamada
+    # Advance to next for next call
     state["current_index"] = (idx + 1) % len(FIXIE_POOL)
     
-    # Tracking de uso por cuenta
+    # Usage tracking per account
     usage = state.setdefault("usage", {})
     account_name = FIXIE_ACCOUNTS[idx]
     usage[account_name] = usage.get(account_name, 0) + 1
@@ -109,6 +130,18 @@ def get_proxy():
     
     _save_proxy_state(state)
     return {"http": url, "https": url}
+
+def mark_fixie_exhausted(account_index):
+    """Marks a Fixie account as exhausted (quota depleted). Auto-clears on monthly renewal."""
+    state = _load_proxy_state()
+    exhausted = state.setdefault("exhausted", {})
+    indices = exhausted.setdefault("indices", [])
+    if account_index not in indices:
+        indices.append(account_index)
+        state["last_exhaust_month"] = datetime.now().strftime("%Y-%m")
+        _save_proxy_state(state)
+        name = FIXIE_ACCOUNTS[account_index] if account_index < len(FIXIE_ACCOUNTS) else f"#{account_index}"
+        print(f"🚫 [FIXIE] Cuenta {name} marcada como agotada. Activas: {len(FIXIE_POOL) - len(indices)}/10")
 
 def get_smart_proxy():
     """Proxy inteligente: usa directo si modo local, Fixie Round-Robin si modo nube."""
