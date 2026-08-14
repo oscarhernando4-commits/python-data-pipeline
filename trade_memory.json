@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3922,
-    "wins": 676,
+    "total_trades": 3923,
+    "wins": 677,
     "losses": 3246,
-    "win_rate_pct": 17.24,
-    "total_pnl_usd": 790785.969895452
+    "win_rate_pct": 17.26,
+    "total_pnl_usd": 790786.359895452
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on TRUMPUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SCRTUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on VIRTUALUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HOLOUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SYNUSDT)",
@@ -49,23 +48,11 @@
       "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on CHIPUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ENSOUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ALICEUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SHIBUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SHIBUSDT)",
+      "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DRAMBUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 16:02:23",
-      "account_id": "SIM-029",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ONDOUSDT",
-      "side": "SHORT",
-      "entry_price": 0.339,
-      "exit_price": 0.339,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on ONDOUSDT (-$0.06). Re-Trading!",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-13 16:02:23",
       "account_id": "SIM-036",
@@ -8298,6 +8285,23 @@
       "context": {
         "score": 46,
         "rsi_15m": 76.78,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 15:50:42",
+      "account_id": "SIM-066",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "DRAMBUSDT",
+      "side": "SHORT",
+      "entry_price": 57.98,
+      "exit_price": 56.69,
+      "pnl_usd": 0.39,
+      "result": "WIN",
+      "notes": "Win on DRAMBUSDT (+$0.39 net) -> Level 10 Re-Trading Started!",
+      "context": {
+        "score": 38,
+        "rsi_15m": 32.44,
         "macro_trend_4h": "NEUTRAL"
       }
     }
