@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3719,
-    "wins": 640,
+    "total_trades": 3722,
+    "wins": 643,
     "losses": 3079,
-    "win_rate_pct": 17.21,
-    "total_pnl_usd": 798652.4098954519
+    "win_rate_pct": 17.28,
+    "total_pnl_usd": 801466.6998954519
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on 2ZUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BANKUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GIGGLEUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ETHUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HOMEUSDT)",
@@ -49,61 +48,11 @@
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DODOUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on NILUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on STORJUSDT)",
-      "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JUPUSDT)"
+      "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JUPUSDT)",
+      "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TAOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 04:56:21",
-      "account_id": "SIM-089",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "BANKUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0395,
-      "exit_price": 0.0395,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on BANKUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 45,
-        "rsi_15m": 53.73,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 05:08:23",
-      "account_id": "SIM-085",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "PENDLEUSDT",
-      "side": "SHORT",
-      "entry_price": 1.324,
-      "exit_price": 1.338,
-      "pnl_usd": -0.21,
-      "result": "LOSS",
-      "notes": "Hit SL on PENDLEUSDT (-$0.21). Re-Trading!",
-      "context": {
-        "score": 65,
-        "rsi_15m": 60.57,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 05:08:23",
-      "account_id": "SIM-093",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "PENDLEUSDT",
-      "side": "SHORT",
-      "entry_price": 1.324,
-      "exit_price": 1.338,
-      "pnl_usd": -0.21,
-      "result": "LOSS",
-      "notes": "Hit SL on PENDLEUSDT (-$0.21). Re-Trading!",
-      "context": {
-        "score": 65,
-        "rsi_15m": 60.57,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 06:08:22",
       "account_id": "SIM-072",
@@ -8270,6 +8219,57 @@
       "context": {
         "score": 25,
         "rsi_15m": 19.91,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 07:40:40",
+      "account_id": "SIM-024",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TAOUSDT",
+      "side": "SHORT",
+      "entry_price": 203.5,
+      "exit_price": 199.2,
+      "pnl_usd": 0.4,
+      "result": "WIN",
+      "notes": "Win on TAOUSDT (+$0.40 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 26.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 07:40:40",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TAOUSDT",
+      "side": "SHORT",
+      "entry_price": 203.5,
+      "exit_price": 199.2,
+      "pnl_usd": 2813.49,
+      "result": "WIN",
+      "notes": "Win on TAOUSDT (+$2813.49 net) -> Level 14 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 26.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 07:40:40",
+      "account_id": "SIM-030",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TAOUSDT",
+      "side": "SHORT",
+      "entry_price": 203.5,
+      "exit_price": 199.2,
+      "pnl_usd": 0.4,
+      "result": "WIN",
+      "notes": "Win on TAOUSDT (+$0.40 net) -> Level 9 Re-Trading Started!",
+      "context": {
+        "score": 25,
+        "rsi_15m": 26.99,
         "macro_trend_4h": "NEUTRAL"
       }
     }
