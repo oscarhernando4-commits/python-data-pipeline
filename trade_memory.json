@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3639,
+    "total_trades": 3641,
     "wins": 623,
-    "losses": 3016,
-    "win_rate_pct": 17.12,
-    "total_pnl_usd": 798654.0998954526
+    "losses": 3018,
+    "win_rate_pct": 17.11,
+    "total_pnl_usd": 798653.5898954526
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on FETUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SCRTUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ACEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MMTUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MMTUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONEUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ACEUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SCRTUSDT)"
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SCRTUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BONKUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JTOUSDT)",
@@ -53,40 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-12 17:50:00",
-      "account_id": "SIM-065",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "LSKUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0817,
-      "exit_price": 0.0796,
-      "pnl_usd": 0.49,
-      "result": "WIN",
-      "notes": "Win on LSKUSDT (+$0.49 net) -> Level 12 Re-Trading Started!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 37.42,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-12 17:50:00",
-      "account_id": "SIM-076",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "PENGUUSDT",
-      "side": "SHORT",
-      "entry_price": 0.00636,
-      "exit_price": 0.006189,
-      "pnl_usd": 0.51,
-      "result": "WIN",
-      "notes": "Win on PENGUUSDT (+$0.51 net) -> Level 10 Re-Trading Started!",
-      "context": {
-        "score": 25,
-        "rsi_15m": 26.98,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-12 17:50:00",
       "account_id": "SIM-093",
@@ -8234,6 +8200,40 @@
       "context": {
         "score": 35,
         "rsi_15m": 62.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 01:36:41",
+      "account_id": "SIM-089",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BONKUSDT",
+      "side": "SHORT",
+      "entry_price": 2.29e-06,
+      "exit_price": 2.32e-06,
+      "pnl_usd": -0.3,
+      "result": "LOSS",
+      "notes": "Hit SL on BONKUSDT (-$0.30). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 58.13,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 01:36:41",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BONKUSDT",
+      "side": "SHORT",
+      "entry_price": 2.29e-06,
+      "exit_price": 2.32e-06,
+      "pnl_usd": -0.21,
+      "result": "LOSS",
+      "notes": "Hit SL on BONKUSDT (-$0.21). Re-Trading!",
+      "context": {
+        "score": 65,
+        "rsi_15m": 58.13,
         "macro_trend_4h": "NEUTRAL"
       }
     }
