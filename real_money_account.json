@@ -1,8 +1,8 @@
 {
   "initial_deposit_usdt": 17.13,
   "initial_total_usd": 20.08,
-  "current_balance_usd": 18.21,
-  "net_pnl_usd": 1.08,
+  "current_balance_usd": 18.51,
+  "net_pnl_usd": 1.38,
   "wins": 9,
   "losses": 13,
   "trades_count": 21,
@@ -10,21 +10,21 @@
     "symbol": "NBISBUSDT",
     "quantity": 0.059,
     "entry_price": 268.33,
-    "highest_price": 268.33,
-    "cost_usd": 15.7,
+    "highest_price": 272.26,
+    "cost_usd": 16.0,
     "side": "LONG",
-    "phase": 1,
-    "holding_cycles": 8,
-    "volatility_regime": "⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
+    "phase": 2.5,
+    "holding_cycles": 18,
+    "volatility_regime": "💎 FASE 2.5: Candado de Lucro +0.65% (Pico +1.46%)"
   },
-  "last_trade_time": "26-08-14<br>10:49",
-  "status": "🔵 En Vivo LONG (NBISBUSDT @ $266.0400)",
+  "last_trade_time": "26-08-14<br>11:16",
+  "status": "🔵 En Vivo LONG (NBISBUSDT @ $271.2100)",
   "daily_wins": 2,
   "daily_losses": 4,
-  "_cached_total_val": 18.21,
+  "_cached_total_val": 18.51,
   "_cached_usdt_free": 0.3425,
   "_cached_bnb": 0.00357576,
   "_cached_bnb_usd": 2.17,
   "last_trading_day": "2026-08-11",
-  "_btc_last_price": 62982.28
+  "_btc_last_price": 63042.46
 }
