@@ -283,8 +283,8 @@ def analyze_multi_timeframe_candles(symbol):
     )
 
     # ========================================================================
-    # ⛔ ENHANCED FALLING KNIFE GUARD (Avoids TUT -47%, BICO -19%, ENSO -15%)
-    # Pattern: MA7 < MA25 + Price in bottom 25% of range + High volume selling
+    # ⛔ ENHANCED FALLING KNIFE GUARD V2 (Avoids TUT -45%, BICO -17%, BMT -13%)
+    # Uses REAL 24h change from Binance API + relaxed OR-logic conditions
     # ========================================================================
     price_position_in_range = 50.0
     if d_highs and d_lows:
@@ -293,14 +293,44 @@ def analyze_multi_timeframe_candles(symbol):
         rng = h24 - l24
         price_position_in_range = round(((closes_15m[-1] - l24) / rng) * 100.0, 1) if rng > 0 else 50.0
 
-    # 24h price change approximation (using yesterday's close)
-    price_change_24h_pct = round(((closes_15m[-1] - d_closes[-2]) / d_closes[-2]) * 100.0, 2) if (len(d_closes) >= 2 and d_closes[-2] > 0) else 0.0
+    # Fetch REAL 24h change from Binance /ticker/24hr API
+    price_change_24h_pct = 0.0
+    try:
+        ticker_res = requests.get("https://api.binance.com/api/v3/ticker/24hr", params={"symbol": symbol}, timeout=3)
+        if ticker_res.status_code == 200:
+            price_change_24h_pct = round(float(ticker_res.json().get("priceChangePercent", 0)), 2)
+    except Exception:
+        # Fallback to daily candle approximation
+        price_change_24h_pct = round(((closes_15m[-1] - d_closes[-2]) / d_closes[-2]) * 100.0, 2) if (len(d_closes) >= 2 and d_closes[-2] > 0) else 0.0
 
-    is_falling_knife = (
-        ma7_15m < ma25_15m and                  # MA7 below MA25 (bearish structure)
-        price_position_in_range < 25.0 and      # Price crushed to bottom of range
-        price_change_24h_pct < -8.0 and          # Dropped >8% in 24h
-        (not tf_1h_up) and (not tf_4h_up)        # 1h and 4h confirm bearish
+    # Macro bearish count: how many of 1h, 4h, 1d are bearish
+    macro_bearish_count = sum([not tf_1h_up, not tf_4h_up, not tf_1d_up])
+
+    # Falling Knife V2: Relaxed OR-logic (any 2 of these 4 conditions triggers the guard)
+    falling_knife_signals = 0
+    if price_change_24h_pct < -8.0:              # Real 24h drop > 8%
+        falling_knife_signals += 1
+    if price_position_in_range < 25.0:           # Price crushed to bottom of range
+        falling_knife_signals += 1
+    if ma7_15m < ma25_15m:                       # MA7 below MA25 (bearish structure)
+        falling_knife_signals += 1
+    if macro_bearish_count >= 2:                  # At least 2 of 3 macro TFs are bearish
+        falling_knife_signals += 1
+
+    is_falling_knife = (falling_knife_signals >= 2) and (price_change_24h_pct < -5.0)
+
+    # Dead Cat Bounce Filter: micro-bounces on 2m/5m during a crash are traps, NOT buy signals
+    is_dead_cat_bounce = (
+        price_change_24h_pct < -8.0 and         # Crashed > 8% in real 24h
+        price_position_in_range < 35.0 and      # Still near the bottom of the range
+        (tf_2m_up or tf_5m_up) and              # Micro-timeframe shows a bounce (the trap)
+        macro_bearish_count >= 2                  # But macro structure is still bearish
+    )
+
+    # Macro Bearish Dominance: 1h + 4h + 1d ALL bearish = heavy penalty
+    is_macro_bearish_dominance = (
+        macro_bearish_count == 3 and             # All three macro TFs bearish
+        price_position_in_range < 30.0           # Price in bottom 30% of range
     )
 
     # Detect RSI Bullish Divergence (Price Lower Low + RSI Higher Low = Early Floor Reversal)
@@ -393,6 +423,10 @@ def analyze_multi_timeframe_candles(symbol):
         multi_tf_score = 0
     if is_falling_knife:
         multi_tf_score = 0
+    if is_dead_cat_bounce:
+        multi_tf_score = 0
+    if is_macro_bearish_dominance and multi_tf_score > 30:
+        multi_tf_score = 30
     
     # 4. Detect 15m Candle Over-extension / Parabolic Spike (Prevents buying tops like ZRO, ATOM)
     is_overextended_15m = False
@@ -445,7 +479,7 @@ def analyze_multi_timeframe_candles(symbol):
     gbm_status = f"💥 REBOTE POST-CRASH (Z={gbm_zscore:.1f})" if is_crash_rebound else (f"⛔ DUMP ACTIVO (Z={gbm_zscore:.1f})" if is_active_dump else f"⚪ GBM NORMAL (Z={gbm_zscore:.1f})")
 
     pump_status = "🚀 PRE-PUMP DETECTADO (VolAcc=" + str(vol_acceleration) + "x, BBSqueeze=" + str(bb_squeeze_ratio) + ")" if is_pre_pump_signal else ""
-    knife_status = " | ⛔ FALLING KNIFE VETADO (Caída 24h=" + str(price_change_24h_pct) + "%)" if is_falling_knife else ""
+    knife_status = " | ⛔ FALLING KNIFE VETADO (Caída 24h=" + str(price_change_24h_pct) + "%)" if is_falling_knife else (" | 🪤 DEAD CAT BOUNCE TRAMPA (Caída 24h=" + str(price_change_24h_pct) + "%)" if is_dead_cat_bounce else (" | ⚠️ MACRO BAJISTA DOMINANTE" if is_macro_bearish_dominance else ""))
 
     pattern_15m_summary = (
         f"RSI Triggers: 2m={rsi_2m} | 5m={rsi_5m} || Contexto Medio: 15m={rsi_15m} || Contexto Macro: 1h={rsi_1h} | 4h={rsi_4h} | "
@@ -484,6 +518,8 @@ def analyze_multi_timeframe_candles(symbol):
         "vol_acceleration": vol_acceleration,
         "bb_squeeze_ratio": bb_squeeze_ratio,
         "is_falling_knife": is_falling_knife,
+        "is_dead_cat_bounce": is_dead_cat_bounce,
+        "is_macro_bearish_dominance": is_macro_bearish_dominance,
         "price_change_24h_pct": price_change_24h_pct,
         "price_position_in_range": price_position_in_range,
         "pct_b_15m": round(pct_b, 2),
