@@ -1,11 +1,18 @@
 {
   "updated_at": "2026-08-14 13:38:33",
   "total_balance_usd": 18.31,
-  "usdt_free": 16.1112,
+  "usdt_free": 0.0,
   "bnb_free": 0.00363525,
   "bnb_usd": 2.2,
-  "status": "🟦 Buscando Entrada A+",
-  "position": {},
+  "status": "🔵 En Vivo LONG (ROBOUSDT @ $0.0153)",
+  "position": {
+    "symbol": "ROBOUSDT",
+    "entry_price": 0.01529,
+    "cost_usd": 15.99,
+    "side": "LONG",
+    "quantity": 1046.0,
+    "break_even": false
+  },
   "verdict": {
     "timestamp": "2026-08-14 13:38:33",
     "selected_symbol": "NONE",
