@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3733,
+    "total_trades": 3736,
     "wins": 643,
-    "losses": 3090,
-    "win_rate_pct": 17.22,
-    "total_pnl_usd": 799803.859895452
+    "losses": 3093,
+    "win_rate_pct": 17.21,
+    "total_pnl_usd": 799383.7498954519
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-13 06:24:21",
-      "account_id": "SIM-022",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "PUMPUSDT",
-      "side": "SHORT",
-      "entry_price": 0.002832,
-      "exit_price": 0.002772,
-      "pnl_usd": 0.39,
-      "result": "WIN",
-      "notes": "Win on PUMPUSDT (+$0.39 net) -> Level 8 Re-Trading Started!",
-      "context": {
-        "score": 55,
-        "rsi_15m": 52.15,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 06:24:21",
-      "account_id": "SIM-023",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "PUMPUSDT",
-      "side": "SHORT",
-      "entry_price": 0.002832,
-      "exit_price": 0.002772,
-      "pnl_usd": 0.4,
-      "result": "WIN",
-      "notes": "Win on PUMPUSDT (+$0.40 net) -> Level 8 Re-Trading Started!",
-      "context": {
-        "score": 55,
-        "rsi_15m": 52.15,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-13 06:24:21",
-      "account_id": "SIM-033",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ONEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0009,
-      "exit_price": 0.00092,
-      "pnl_usd": -0.46,
-      "result": "LOSS",
-      "notes": "Hit SL on ONEUSDT (-$0.46). Re-Trading!",
-      "context": {
-        "score": 35,
-        "rsi_15m": 70.34,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-13 06:24:21",
       "account_id": "SIM-034",
@@ -8270,6 +8219,57 @@
       "context": {
         "score": 10,
         "rsi_15m": 33.68,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 08:24:27",
+      "account_id": "SIM-024",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "WLFIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.056,
+      "exit_price": 0.0559,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on WLFIUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 76.53,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 08:24:27",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "WLFIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.056,
+      "exit_price": 0.0559,
+      "pnl_usd": -419.99,
+      "result": "LOSS",
+      "notes": "Hit SL on WLFIUSDT (-$419.99). Re-Trading!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 76.53,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-14 08:24:27",
+      "account_id": "SIM-030",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "WLFIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.056,
+      "exit_price": 0.0559,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "Hit SL on WLFIUSDT (-$0.06). Re-Trading!",
+      "context": {
+        "score": 35,
+        "rsi_15m": 76.53,
         "macro_trend_4h": "NEUTRAL"
       }
     }
