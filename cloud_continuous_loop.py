@@ -1,8 +1,9 @@
 """
-Continuous 4-Hour Cloud Quant Trading Loop
-- In Local Mode: Runs every 60 seconds (1 minute exact) for 240 cycles (4.0 hours).
-- In Cloud Mode: Runs every 120 seconds (2 minutes exact) for 120 cycles (4.0 hours) to conserve proxies.
-- Micro-Heartbeat: Runs a 10-second sub-cycle monitor during waits to capture price spikes immediately.
+Continuous 4-Hour Cloud Quant Trading Loop (Optimized Lightweight Local Edition)
+- Runs every 60 seconds in Local Mode (240 cycles / 4 hours).
+- High-frequency 10-second Micro-Heartbeat for active real-money positions.
+- Zero dashboard rendering overhead (HTML / Markdown disabled for maximum PC speed).
+- Periodic git sync (every 10 cycles) to minimize disk I/O and CPU context switching.
 """
 
 import time
@@ -55,7 +56,12 @@ def sleep_with_micro_heartbeat(sleep_secs: int):
             pass
 
 def run_git_push_sync(cycle_num: int, total_cycles: int = 240):
-    """Safely commits and pushes updated matrix and account state to GitHub."""
+    """Safely commits and pushes state periodically to avoid CPU and disk thrashing."""
+    # In local mode, only sync to GitHub every 10 cycles (10 mins) or on final cycle
+    is_cloud = os.getenv("GITHUB_ACTIONS") == "true" or os.getenv("CI") == "true"
+    if not is_cloud and (cycle_num % 10 != 0 and cycle_num != total_cycles and cycle_num != 1):
+        return
+
     try:
         now_utc = datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")
         subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=False)
@@ -66,28 +72,25 @@ def run_git_push_sync(cycle_num: int, total_cycles: int = 240):
         if gh_token and gh_repo:
             subprocess.run(["git", "remote", "set-url", "origin", f"https://x-access-token:{gh_token}@github.com/{gh_repo}.git"], check=False)
 
-        # Add and commit local cycle updates first
-        subprocess.run(["git", "add", "."], check=False)
+        # Add and commit state files
+        subprocess.run(["git", "add", "real_money_account.json", "top_100_pairs.json", "dynamic_thresholds.json"], check=False)
         status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
         if status.stdout.strip():
             msg = f"chore: live sync [Cycle {cycle_num}/{total_cycles}] [{now_utc}]"
             subprocess.run(["git", "commit", "-m", msg], check=False)
             
-        # Rebase pull cleanly on committed working tree
         subprocess.run(["git", "pull", "--rebase", "-X", "ours", "origin", "main"], check=False)
         
-        # Push with retry
-        for attempt in range(3):
+        for attempt in range(2):
             res = subprocess.run(["git", "push", "origin", "main"], capture_output=True, text=True)
             if res.returncode == 0:
-                print(f"✅ [Cycle {cycle_num}] Git sync pushed successfully.", flush=True)
+                print(f"✅ [Cycle {cycle_num}] Git sync pushed.", flush=True)
                 break
             else:
-                print(f"⚠️ [Cycle {cycle_num}] Push retry {attempt+1}/3: {res.stderr.strip()[:100]}", flush=True)
                 subprocess.run(["git", "pull", "--rebase", "-X", "ours", "origin", "main"], check=False)
-                time.sleep(2)
+                time.sleep(1)
     except Exception as e:
-        print(f"⚠️ [Cycle {cycle_num}] Git sync warning: {e}", flush=True)
+        print(f"⚠️ [Cycle {cycle_num}] Git sync note: {e}", flush=True)
 
 def main():
     sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
@@ -100,23 +103,22 @@ def main():
             print("☁️ Modo NUBE activado automáticamente (GitHub Actions)", flush=True)
         else:
             current_mode = api_connector.get_execution_mode()
-            print(f"🖥️ Modo actual respetado: {current_mode.upper()}", flush=True)
+            print(f"🖥️ Modo actual respetado: {current_mode.upper()} (Ultra-Lightweight)", flush=True)
     except Exception as e:
         print(f"⚠️ Could not evaluate execution mode: {e}", flush=True)
     
     sleep_interval_secs, total_cycles = get_loop_interval()
     
     print("=" * 70, flush=True)
-    print(f"🚀 INICIANDO RUNNER CONTINUO CUÁNTICO (4 HORAS / {total_cycles} CICLOS)", flush=True)
-    print(f"⏱️ Intervalo: Cada {sleep_interval_secs} segundos exactos ({sleep_interval_secs // 60} min)", flush=True)
-    print(f"💓 Micro-Heartbeat de Posición: Activo cada 10 segundos", flush=True)
-    print(f"🎯 Total Ciclos: {total_cycles} ejecuciones continuas sin colas de espera", flush=True)
+    print(f"🚀 RUNNER CUÁNTICO ULTRA-LIGERO (4 HORAS / {total_cycles} CICLOS)", flush=True)
+    print(f"⏱️ Intervalo Escáner: Cada {sleep_interval_secs}s ({sleep_interval_secs // 60} min)")
+    print(f"💓 Micro-Heartbeat de Posición: Activo cada 10 segundos")
+    print(f"⚡ Optimización PC: Dashboards HTML/Markdown desactivados | 10 Threads")
     print("=" * 70, flush=True)
     
     import importlib
     import data_fetcher
     import pipeline_processor
-    import master_dashboard_generator
 
     for cycle in range(1, total_cycles + 1):
         now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -126,13 +128,8 @@ def main():
         
         # Hot-reload modules so any pulled git improvements take effect immediately
         try:
-            import obsidian_sync
-            import web_dashboard_generator
-            importlib.reload(obsidian_sync)
             importlib.reload(data_fetcher)
             importlib.reload(pipeline_processor)
-            importlib.reload(master_dashboard_generator)
-            importlib.reload(web_dashboard_generator)
         except Exception as e:
             print(f"⚠️ Reload note: {e}", flush=True)
         
@@ -145,7 +142,7 @@ def main():
         except Exception as e:
             print(f"⚠️ Error actualizando pares (Ciclo {cycle}): {e}", flush=True)
             
-        # Step 2: Run institutional trading matrix & AI execution
+        # Step 2: Run institutional trading matrix & AI execution (Streamlined)
         try:
             if hasattr(pipeline_processor, 'run_infinite_trading_matrix_cycle'):
                 pipeline_processor.run_infinite_trading_matrix_cycle()
@@ -153,24 +150,11 @@ def main():
                 pipeline_processor.run_optimized_pipeline()
         except Exception as e:
             print(f"⚠️ Error en pipeline_processor (Ciclo {cycle}): {e}", flush=True)
-            
-        # Step 3: Refresh Master Dashboard
-        try:
-            master_dashboard_generator.generate_master_dashboard()
-        except Exception as e:
-            print(f"⚠️ Error generando dashboards (Ciclo {cycle}): {e}", flush=True)
 
-        # Step 4: Refresh Web Dashboard & Data Feed (dashboard.html & dashboard_data.json)
-        try:
-            import web_dashboard_generator
-            web_dashboard_generator.generate_web_dashboard()
-        except Exception as e:
-            print(f"⚠️ Error generando web dashboard (Ciclo {cycle}): {e}", flush=True)
-
-        # Step 5: Push changes to GitHub
+        # Step 3: Lightweight periodic state sync to GitHub (every 10 cycles)
         run_git_push_sync(cycle, total_cycles)
         
-        # Step 6: Sleep until next clock boundary with 10s micro-heartbeat
+        # Step 4: Sleep until next clock boundary with 10s micro-heartbeat
         if cycle < total_cycles:
             sleep_secs = sleep_until_next_boundary(sleep_interval_secs)
             target_time = datetime.fromtimestamp(time.time() + sleep_secs).strftime("%H:%M:%S")
