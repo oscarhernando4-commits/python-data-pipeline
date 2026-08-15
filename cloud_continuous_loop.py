@@ -36,22 +36,22 @@ sleep_until_next_2m_boundary = lambda: sleep_until_next_boundary(120)
 sleep_until_next_5m_boundary = sleep_until_next_1m_boundary
 
 def sleep_with_micro_heartbeat(sleep_secs: int):
-    """Sleeps in 10-second intervals while running the quick position heartbeat."""
+    """Sleeps in 5-second intervals while running the ultra-lightweight position heartbeat."""
     import api_connector
     end_time = time.time() + sleep_secs
     while time.time() < end_time:
         remaining = end_time - time.time()
         if remaining <= 0:
             break
-        chunk = min(10.0, remaining)
+        chunk = min(5.0, remaining)
         time.sleep(chunk)
-        # Run 10s micro-heartbeat for active position
+        # Run 5s micro-heartbeat for active position (0.001% CPU)
         try:
             hb = api_connector.quick_position_heartbeat()
             if hb and isinstance(hb, dict):
                 p_fmt = f"${hb['price']:.5f}" if hb['price'] < 0.05 else f"${hb['price']:.4f}"
-                if hb.get('highest_pnl', 0) >= 0.65 and hb.get('phase', 1) >= 2:
-                    print(f"💓 [HEARTBEAT 10s] {hb['symbol']} @ {p_fmt} | PnL: {hb['pnl_pct']:+.2f}% (Pico: +{hb['highest_pnl']:.2f}% | Fase {hb['phase']})", flush=True)
+                if hb.get('highest_pnl', 0) >= 0.50 and hb.get('phase', 1) >= 2:
+                    print(f"💓 [HEARTBEAT 5s] {hb['symbol']} @ {p_fmt} | PnL: {hb['pnl_pct']:+.2f}% (Pico: +{hb['highest_pnl']:.2f}% | Fase {hb['phase']})", flush=True)
         except Exception:
             pass
 
@@ -107,6 +107,16 @@ def main():
     except Exception as e:
         print(f"⚠️ Could not evaluate execution mode: {e}", flush=True)
     
+    # Windows Process Priority: Set to BELOW_NORMAL to ensure user apps have 100% responsiveness
+    try:
+        import ctypes
+        kernel32 = ctypes.windll.kernel32
+        handle = kernel32.GetCurrentProcess()
+        kernel32.SetPriorityClass(handle, 0x00004000)  # BELOW_NORMAL_PRIORITY_CLASS
+        print("⚡ Prioridad Windows configurada en 'BELOW_NORMAL' (PC 100% silencioso y fluido)", flush=True)
+    except Exception:
+        pass
+    
     sleep_interval_secs, total_cycles = get_loop_interval()
     
     print("=" * 70, flush=True)
@@ -128,6 +138,12 @@ def main():
         
         # Hot-reload modules so any pulled git improvements take effect immediately
         try:
+            import api_connector
+            import multi_timeframe_analyzer
+            import llm_router
+            importlib.reload(api_connector)
+            importlib.reload(multi_timeframe_analyzer)
+            importlib.reload(llm_router)
             importlib.reload(data_fetcher)
             importlib.reload(pipeline_processor)
         except Exception as e:

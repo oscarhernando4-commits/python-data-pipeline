@@ -800,29 +800,33 @@ def quick_position_heartbeat():
         current_pnl_pct = ((current_price - entry) / entry) * 100.0
         current_phase = pos.get("phase", 1)
         
-        # Advance phase dynamically if price spiked
-        new_phase = current_phase
-        if highest_pnl_pct >= 3.0:
-            new_phase = max(new_phase, 4)
-        elif highest_pnl_pct >= 1.5:
-            new_phase = max(new_phase, 3)
-        elif highest_pnl_pct >= 1.0:
-            new_phase = max(new_phase, 2.5)
-        elif highest_pnl_pct >= 0.65:
-            new_phase = max(new_phase, 2)
-            
-        # Calculate current SL threshold
-        if new_phase >= 4:
-            trailing_offset = 0.50 if highest_pnl_pct >= 5.0 else 0.80
-            sl_pct = max(2.0, highest_pnl_pct - trailing_offset)
-        elif new_phase >= 3:
-            sl_pct = 1.15
-        elif new_phase >= 2.5:
-            sl_pct = 0.65
-        elif new_phase >= 2:
-            sl_pct = 0.35
+        # ═══════════════════════════════════════════════════════════════
+        # ESTRUCTURA MAESTRA DE 5 FASES CUÁNTICAS DEFINITIVAS:
+        # FASE 1: Antes de +0.35% -> SL -2.00% (Entrada).
+        #         Al tocar +0.35% -> SL sube a -0.50% (Mitigación temprana, corta 75% riesgo).
+        # FASE 2: Al tocar +0.50% -> SL sube a +0.25% (Seguridad Verde, comisión cubierta).
+        # FASE 3: Entre +0.50% y +2.00% -> Piso = Cima - 0.30% (mínimo +0.25%, Construcción).
+        # FASE 4: Superior a +2.00% Normal -> Piso = Cima - 0.25% (Cosecha 90%+ en punta).
+        # FASE 5: Superior a +2.00% Ballena (VolSurge >= 2.5x) -> Piso = Cima - 0.35% (Mega-Pump).
+        # ═══════════════════════════════════════════════════════════════
+        is_high_volume_runner = pos.get("vol_surge", 1.0) >= 2.5
+        
+        if highest_pnl_pct < 0.35:
+            sl_pct = -2.00
+            new_phase = 1
+        elif highest_pnl_pct < 0.50:
+            sl_pct = -0.50  # Mitigación temprana
+            new_phase = 1
+        elif highest_pnl_pct < 2.00:
+            sl_pct = max(0.25, round(highest_pnl_pct - 0.30, 2))
+            new_phase = 3 if highest_pnl_pct >= 0.55 else 2
         else:
-            sl_pct = -3.0
+            if is_high_volume_runner:
+                sl_pct = round(highest_pnl_pct - 0.35, 2)
+                new_phase = 5
+            else:
+                sl_pct = round(highest_pnl_pct - 0.25, 2)
+                new_phase = 4
             
         # Update if changed
         if highest_price > pos.get("highest_price", entry) or new_phase > current_phase:
@@ -832,8 +836,17 @@ def quick_position_heartbeat():
             save_real_account_state(state)
             
         # Check if Stop Loss or Trailing Stop triggered
-        if current_pnl_pct <= sl_pct:
-            print(f"\n🚨 [MICRO-HEARTBEAT 10S] Salida Stop/Trailing ejecutada para {sym} @ ${current_price:.5f} (PnL: {current_pnl_pct:+.2f}%, SL: {sl_pct:+.2f}%)")
+        should_exit = current_pnl_pct <= sl_pct
+        exit_reason = f"Stop/Trailing ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
+        
+        # SNIPER MEJORA: Detección de Agotamiento de Mecha en Cima (Wick Exhaustion Sniper)
+        # Si estamos en Fase 3 (Pico >= +1.0%) y el precio empieza a rechazar la cima (caída de micro-mecha >= 0.18%)
+        if not should_exit and new_phase >= 3 and highest_pnl_pct >= 1.20 and (highest_pnl_pct - current_pnl_pct) >= 0.18:
+            should_exit = True
+            exit_reason = f"🎯 SNIPER MECHA CIMA (Pico +{highest_pnl_pct:.2f}% -> Venta en {current_pnl_pct:+.2f}%)"
+            
+        if should_exit:
+            print(f"\n🚨 [MICRO-HEARTBEAT 5S] Salida Inteligente ejecutada para {sym} @ ${current_price:.5f} ({exit_reason})")
             sell_res = execute_real_spot_market_sell(sym, qty)
             print(f"🔄 Venta Mercado Ejecutada: {sell_res}")
             state["position"] = None
@@ -855,7 +868,14 @@ def quick_position_heartbeat():
     except Exception:
         return None
 
-def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bearish=False, is_learned_signal=False):
+def trunc_1d(val):
+    """Truncates a float to exactly 1 decimal place WITHOUT rounding."""
+    if val is None:
+        return 0.0
+    import math
+    return math.floor(float(val) * 10.0) / 10.0
+
+def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bearish=False, is_learned_signal=False, best_confidence=75):
     state = load_real_account_state()
     import math
     
@@ -930,56 +950,44 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         trailing_offset = atr_risk_calculator.get_adaptive_trailing_offset(active_symbol, atr_info.get("atr_pct", 0.8))
         
         # ═══════════════════════════════════════════════════════════════
-        # 🧠 SISTEMA DE SALIDA POR FASES DE PRECIO (NO POR TIEMPO)
+        # 🧠 SISTEMA DEFINITIVO DE 5 FASES CUÁNTICAS:
+        # FASE 1: Antes de +0.35% (SL -2.00%) | Toca +0.35% (SL -0.50% Mitigación)
+        # FASE 2: Toca +0.50% -> Seguridad Verde +0.25% (Comisión cubierta)
+        # FASE 3: +0.50% a +2.00% -> Construcción (Piso = Cima - 0.30%, min +0.25%)
+        # FASE 4: >= +2.00% Normal -> Cosecha Punta (Piso = Cima - 0.25%)
+        # FASE 5: >= +2.00% Ballena 🐳 (Vol >= 2.5x) -> Super-Pump (Piso = Cima - 0.35%)
         # ═══════════════════════════════════════════════════════════════
-        # DISEÑO: Los trades GANADORES nunca se venden por tiempo.
-        #         Solo los trades PERDEDORES estancados se liberan.
-        #
-        # FASE 1 - PROTECCIÓN INICIAL:     SL = -2.5% (sobrevive mechas normales)
-        # FASE 2 - BREAK-EVEN SEGURO:      Cuando PnL alcanza +0.8% → SL sube a +0.35% (cubre fees)
-        # FASE 3 - GANANCIA ASEGURADA:      Cuando PnL alcanza +1.5% → SL sube a +1.0% (lucro real)
-        # FASE 4 - TRAILING DE TENDENCIA:   Cuando PnL alcanza +3.0% → Trailing dinámico (pico - 1.0%)
-        #
-        # REGLA DE ESTANCAMIENTO: Si después de 2 HORAS (60 ciclos) el trade sigue
-        #   NEGATIVO y nunca ha estado en ganancia, se libera el capital.
-        #   Si el trade está en ganancia o alguna vez activó FASE 2+, NO SE TOCA.
-        # ═══════════════════════════════════════════════════════════════
+        is_high_volume_runner = state.get("position", {}).get("vol_surge", 1.0) >= 2.5
         
-        # Determine current phase based on PRICE, not time
-        phase = state["position"].get("phase", 1)
-        phase_msg = ""
-        
-        # PHASE 4: Dynamic Trailing Ride (highest ever PnL reached +3.0%)
-        if highest_pnl_pct >= 3.0 or phase >= 4:
-            phase = 4
-            # Dynamic trailing offset: 0.80% for 3.0%-5.0% peaks, 0.50% for peaks > 5.0%
-            trailing_offset = 0.50 if highest_pnl_pct >= 5.0 else 0.80
-            trailing_floor_pct = max(2.0, highest_pnl_pct - trailing_offset)
-            phase_msg = f"🚀 FASE 4: Cabalgando Tendencia (Pico +{highest_pnl_pct:.2f}%, Piso Dinámico +{trailing_floor_pct:.2f}%)"
-            
-        # PHASE 3: High Profit Lock (PnL reached +1.5%)
-        elif highest_pnl_pct >= 1.5 or phase >= 3:
-            phase = 3
-            trailing_floor_pct = 1.15  # Lock +1.15% profit (net +0.95% after fees)
-            phase_msg = f"💰 FASE 3: Ganancia Asegurada +1.15% (Pico +{highest_pnl_pct:.2f}%)"
-
-        # PHASE 2.5: Mid Profit Lock (PnL reached +1.0%)
-        elif highest_pnl_pct >= 1.0 or phase >= 2.5:
-            phase = 2.5
-            trailing_floor_pct = 0.65  # Lock +0.65% profit (net +0.45% after fees)
-            phase_msg = f"💎 FASE 2.5: Candado de Lucro +0.65% (Pico +{highest_pnl_pct:.2f}%)"
-            
-        # PHASE 2: Break-Even Safe (PnL reached +0.65%)
-        elif highest_pnl_pct >= 0.65 or phase >= 2:
-            phase = 2
-            trailing_floor_pct = 0.35  # Covers 0.20% roundtrip fees + small profit
-            phase_msg = f"🛡️ FASE 2: Break-Even Seguro +0.35% (Pico +{highest_pnl_pct:.2f}%)"
-            
-        # PHASE 1: Initial Protection (wide -3.0% SL to survive normal crypto volatility)
+        if highest_pnl_pct >= 2.00:
+            if is_high_volume_runner:
+                phase = 5
+                trailing_distance = 0.35
+                trailing_floor_pct = round(highest_pnl_pct - trailing_distance, 2)
+                phase_msg = f"🐳 FASE 5 (BALLENA SUPER-PUMP): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - 0.35%)"
+            else:
+                phase = 4
+                trailing_distance = 0.25
+                trailing_floor_pct = round(highest_pnl_pct - trailing_distance, 2)
+                phase_msg = f"💎 FASE 4 (COSECHA NORMAL): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - 0.25%)"
+        elif highest_pnl_pct >= 0.50:
+            if highest_pnl_pct < 0.55:
+                phase = 2
+                trailing_floor_pct = 0.25
+                phase_msg = f"🔒 FASE 2 (SEGURIDAD VERDE): Piso +0.25% (Cero Riesgo | Comisión Cubierta)"
+            else:
+                phase = 3
+                trailing_distance = 0.30
+                trailing_floor_pct = max(0.25, round(highest_pnl_pct - trailing_distance, 2))
+                phase_msg = f"🛡️ FASE 3 (CONSTRUCCIÓN): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - 0.30%)"
+        elif highest_pnl_pct >= 0.35:
+            phase = 1
+            trailing_floor_pct = -0.50
+            phase_msg = f"⚡ FASE 1 (MITIGACIÓN TEMPRANA): SL -0.50% (Pico +{highest_pnl_pct:.2f}% | Riesgo Cortado 75%)"
         else:
             phase = 1
-            trailing_floor_pct = -3.0  # Wide -3.0% cushion requested to survive market wicks
-            phase_msg = f"⚡ FASE 1: Protección Inicial SL -3.0% (Margen 2 Días / 48h)"
+            trailing_floor_pct = -2.00
+            phase_msg = f"⚡ FASE 1 (ENTRADA): SL -2.00% (Protección Estricta de Capital)"
 
         # ESCUDO 1: BTC Flash Crash Circuit Breaker
         btc_price_now = get_symbol_price("BTCUSDT", is_futures=False)
@@ -1005,10 +1013,16 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             trailing_floor_pct = max(-1.5, trailing_floor_pct)
             phase_msg = f"🛡️ ESCUDO DE EMERGENCIA: SL apretado a {trailing_floor_pct:+.2f}%"
 
-        # Stagnation Rule: Only applies to LOSING trades that never reached Phase 2+
+        # Stagnation & Smart Capital Rotation Rule:
         stagnation_exit = False
-        if holding_cycles >= 1440 and phase == 1 and pnl_pct < 0:  # 2 DAYS (1440 cycles * 2m = 2880m = 48 Hours)
+        reason_str = ""
+        if holding_cycles >= 60 and phase == 1:  # 2 Hours without leaving Phase 1
+            if best_symbol and best_symbol != active_symbol and best_score >= 85 and not is_bearish:
+                stagnation_exit = True
+                reason_str = f"🚀 Rotación Inteligente de Capital (Dormida por {holding_cycles*2}m -> Pasando a Cohete {best_symbol} @ {best_score} Pts)"
+        if not stagnation_exit and holding_cycles >= 1440 and phase == 1 and pnl_pct < 0:  # 2 DAYS flat
             stagnation_exit = True
+            reason_str = f"Liberación por Estancamiento (2 Días en Fase 1, PnL={pnl_pct:+.2f}%)"
 
         tp_target = entry * (1.0 + (3.0 * 2.0 / 100.0))  # 1:2 R:R based on 3.0% SL
         sl_target = entry * (1.0 + (trailing_floor_pct / 100.0))
@@ -1143,15 +1157,25 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 if not mtf_res.get("is_valid_tradable_asset", True):
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} descalificado por análisis histórico multi-temporal ({mtf_res.get('rejection_reason')}).")
-                elif mtf_res.get("is_overextended_15m"):
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} rechazado por vela de 15m sobre-extendida / mecha de trampa ({mtf_res.get('overextension_reason')}).")
                 elif tf_align.get("15m") != "BULLISH":
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de alineación alcista en 15m (Alignment: {tf_align}).")
+                    # Fast Ground Trigger: If 5m or 2m is BULLISH + Healthy RSI < 70 + High AI Conviction / Score >= 65
+                    is_micro_momentum = (
+                        (tf_align.get("5m") == "BULLISH" or tf_align.get("2m") == "BULLISH") and 
+                        mtf_res.get("rsi_15m", 50) < 70.0 and 
+                        mtf_res.get("price_change_24h_pct", 0) >= -4.0 and
+                        (best_score >= 65 or best_confidence >= 70 or mtf_res.get("vol_surge_2m", 1.0) >= 1.2 or mtf_res.get("is_macd_bullish_cross", False) or mtf_res.get("is_pre_pump_signal", False) or mtf_res.get("is_yellow_arrow_pivot", False))
+                    )
+                    if not is_micro_momentum:
+                        is_stable = True
+                        print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de alineación alcista en 15m (Alignment: {tf_align}).")
+                    else:
+                        print(f"⚡ [DISPARO CUÁNTICO DE SUELO] {best_symbol} despegando en el suelo (RSI 15m={mtf_res.get('rsi_15m')}, VolSurge 2m={mtf_res.get('vol_surge_2m')}x, Conf={best_confidence}%). Entrada A+ autorizada.")
                 elif tf_align.get("5m") != "BULLISH" and best_score < 58:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de alineación en 5m con Score < 58 (Score={best_score}, Alignment: {tf_align}).")
+                elif mtf_res.get("is_overextended_15m"):
+                    is_stable = True
+                    print(f"⛔ Compra rechazada: {best_symbol} rechazado por vela de 15m sobre-extendida / mecha de trampa ({mtf_res.get('overextension_reason')}).")
                 else:
                     import orderbook_analyzer
                     ob_info = orderbook_analyzer.fetch_orderbook_depth(best_symbol, limit=20)
@@ -1190,7 +1214,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         "cost_usd": actual_cost,
                         "side": "LONG",
                         "quantity": qty,
-                        "break_even": False
+                        "break_even": False,
+                        "highest_price": actual_entry_price,
+                        "phase": 1,
+                        "vol_surge": mtf_res.get("vol_surge_2m", 1.0) if 'mtf_res' in locals() else 1.0
                     }
                     state["status"] = f"🔵 En Vivo LONG ({best_symbol} @ ${actual_entry_price:.4f})"
                     state["_cached_usdt_free"] = 0.0

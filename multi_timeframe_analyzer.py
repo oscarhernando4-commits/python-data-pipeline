@@ -5,24 +5,53 @@ Rejects stablecoins, dollar synthetics, flat assets, and unconfirmed trends.
 Includes: MACD(12,26,9), GBM Crash Detector, SuperTrend(10,3), Yellow Arrow MA7/MA25, VWAP.
 """
 
+import time
 import requests
 import math
 import numpy as np
 from datetime import datetime
 from quant_institutional import GBMAnomalyDetector
 
+# Persistent HTTP connection pool to avoid TLS handshake overhead
+_SESSION = requests.Session()
+_ADAPTER = requests.adapters.HTTPAdapter(pool_connections=25, pool_maxsize=25, max_retries=1)
+_SESSION.mount("https://", _ADAPTER)
+_SESSION.mount("http://", _ADAPTER)
+
+# In-memory Candle & Ticker Cache: {(symbol, interval, limit): (timestamp, data)}
+_KLINE_CACHE = {}
+_TICKER_CACHE = {}
+
+# Time-To-Live for candle intervals (Macro candles change slowly)
+_CACHE_TTL = {
+    "1d": 600,  # 10 minutes
+    "4h": 300,  # 5 minutes
+    "1h": 180,  # 3 minutes
+    "15m": 35,  # 35 seconds
+    "5m": 15,   # 15 seconds
+    "1m": 10    # 10 seconds
+}
+
 # Comprehensive Blacklist of Stablecoins, Pegged Tokens, and Synthetic Dollars
 STABLECOIN_TICKERS = {
     "U", "UUSDT", "USD", "USDE", "USD0", "USDS", "USDF", "USDC", "FDUSD", "PYUSD",
     "TUSD", "BUSD", "DAI", "USDD", "RLUSD", "USD1", "EUR", "AEUR", "WBTC", "TBTC",
-    "SNDK", "SNDKB", "CRCLB", "SPCXB", "QQQB", "USDT", "USTC", "FRAX", "USDK", "VAI"
+    "USDT", "USTC", "FRAX", "USDK", "VAI", "EURI", "EURIOUSDT"
+}
+
+# Exhaustive Blacklist of bStocks (Tokenized Stocks / Equity Certificates / Digital Securities)
+BSTOCKS_BLACKLIST = {
+    "NBISB", "TSLAB", "SNDKB", "CRDOB", "AAOIB", "AMATB", "USARB", "SNXXB", "QQQB", "SPCXB", "CRCLB",
+    "NVDB", "AAPLB", "MSFTB", "AMZNB", "GOOGB", "GOOGLB", "GOOGLBUSDT", "MSTRB", "COINB", "METAB",
+    "PLTRB", "AVNTB", "BMTB", "HOODB", "NFB", "SOXLB", "SOXSB", "ARKB", "BITOB", "MSTX", "MSTZ", "MSTU",
+    "NBISBUSDT", "TSLABUSDT", "SNDKBUSDT", "CRDOBUSDT", "AAOIBUSDT", "AMATBUSDT", "USARBUSDT", "SNXXBUSDT"
 }
 
 # High-Risk Meme Tokens, Seed Tag Assets, and Ultra-Volatile Low-Liquidity Speculative Assets
 HIGH_RISK_MEME_TICKERS = {
     "BANANAS31", "BANANAS31USDT", "1000CAT", "1000CHEEMS", "1000SATS", "1MBABYDOGE",
-    "BROCCOLI714", "SNXXB", "LUNA", "LUNC", "USTC", "NEIRO", "TURBO", "1000PEPE",
-    "1000SHIB", "1000BONK", "1000FLOKI", "1000RATS", "1000WHY", "1000MOG", "CHEEMS",
+    "BROCCOLI714", "LUNA", "LUNC", "USTC", "NEIRO", "TURBO", "1000PEPE",
+    "1000BONK", "1000FLOKI", "1000RATS", "1000WHY", "1000MOG", "CHEEMS",
     "1000CATUSDT", "1000SATSUSDT", "1MBABYDOGEUSDT", "BROCCOLI714USDT"
 }
 
@@ -31,14 +60,36 @@ try:
 except ImportError:
     get_proxy = None
 
+def is_bstock(symbol):
+    """
+    Strictly checks if a symbol is a tokenized stock / bStock certificate.
+    bStocks have legal popups, geographical restrictions, and cannot be traded as native crypto.
+    """
+    sym_upper = str(symbol).upper().strip()
+    asset = sym_upper.replace("USDT", "").replace("USD", "")
+    
+    if sym_upper in BSTOCKS_BLACKLIST or asset in BSTOCKS_BLACKLIST:
+        return True
+        
+    # Pattern: Assets of 4+ letters ending in 'B' (e.g. NBISB, TSLAB, CRDOB) that are tokenized equities
+    KNOWN_GENUINE_CRYPTO_ENDING_IN_B = {"BNB", "SHIB", "SUB", "LUB", "MCB", "GUB", "RLB"}
+    if asset.endswith("B") and len(asset) >= 4 and asset not in KNOWN_GENUINE_CRYPTO_ENDING_IN_B:
+        return True
+        
+    return False
+
 def is_stablecoin(symbol):
     """
-    Strictly checks if a symbol is a stablecoin, synthetic dollar, or high-risk meme/seed asset.
+    Strictly checks if a symbol is a stablecoin, synthetic dollar, bStock, or high-risk meme/seed asset.
     Returns True if symbol is blocked from real money trading.
     """
     sym_upper = str(symbol).upper().strip()
     asset = sym_upper.replace("USDT", "").replace("USD", "")
     
+    # 0. Immediate bStock Blacklist Check
+    if is_bstock(sym_upper):
+        return True
+        
     # 1. Direct Ticker Match (Stablecoins & Meme Blacklist)
     if sym_upper in STABLECOIN_TICKERS or asset in STABLECOIN_TICKERS:
         return True
@@ -56,24 +107,43 @@ def is_stablecoin(symbol):
     return False
 
 def fetch_klines_public(symbol, interval, limit=30):
-    """Fetches Binance public klines without proxy if available, or using proxy rotation."""
+    """Fetches Binance public klines with high-speed in-memory caching and persistent connection pooling."""
+    cache_key = (symbol, interval, limit)
+    now = time.time()
+    ttl = _CACHE_TTL.get(interval, 20)
+    
+    if cache_key in _KLINE_CACHE:
+        cached_time, cached_data = _KLINE_CACHE[cache_key]
+        if now - cached_time < ttl and cached_data:
+            return cached_data
+            
     url = "https://api.binance.com/api/v3/klines"
     params = {"symbol": symbol, "interval": interval, "limit": limit}
     try:
-        res = requests.get(url, params=params, timeout=5)
+        res = _SESSION.get(url, params=params, timeout=4)
         if res.status_code == 200:
-            return res.json()
+            data = res.json()
+            if data:
+                _KLINE_CACHE[cache_key] = (now, data)
+                return data
     except Exception:
         pass
         
     # Fallback with proxy (dynamic rotation)
     if get_proxy:
         try:
-            res = requests.get(url, params=params, proxies=get_proxy(), timeout=8)
+            res = _SESSION.get(url, params=params, proxies=get_proxy(), timeout=6)
             if res.status_code == 200:
-                return res.json()
+                data = res.json()
+                if data:
+                    _KLINE_CACHE[cache_key] = (now, data)
+                    return data
         except Exception:
             pass
+            
+    # Return stale cached data if temporary network blip
+    if cache_key in _KLINE_CACHE:
+        return _KLINE_CACHE[cache_key][1]
     return []
 
 def calculate_rsi(closes, period=14):
@@ -225,6 +295,10 @@ def analyze_multi_timeframe_candles(symbol):
     avg_vol_2m = sum(vols_2m[-5:]) / len(vols_2m[-5:]) if len(vols_2m) >= 5 else 1.0
     vol_surge_2m = round(vols_2m[-1] / avg_vol_2m, 2) if (vols_2m and avg_vol_2m > 0) else 1.0
     
+    # 15m Microstructure Volume Surge
+    avg_vol_15m = sum(vols_15m[-5:]) / len(vols_15m[-5:]) if len(vols_15m) >= 5 else 1.0
+    vol_surge_15m = round(vols_15m[-1] / avg_vol_15m, 2) if (vols_15m and avg_vol_15m > 0) else 1.0
+    
     # 15m Microstructure moving averages (MA7, MA25, MA99) & Volume Surge
     ma7_15m = sum(closes_15m[-7:]) / len(closes_15m[-7:]) if len(closes_15m) >= 7 else closes_15m[-1]
     ma25_15m = sum(closes_15m[-25:]) / len(closes_15m[-25:]) if len(closes_15m) >= 25 else closes_15m[-1]
@@ -293,12 +367,20 @@ def analyze_multi_timeframe_candles(symbol):
         rng = h24 - l24
         price_position_in_range = round(((closes_15m[-1] - l24) / rng) * 100.0, 1) if rng > 0 else 50.0
 
-    # Fetch REAL 24h change from Binance /ticker/24hr API
+    # Fetch REAL 24h change from Binance /ticker/24hr API (Cached for 30s)
     price_change_24h_pct = 0.0
     try:
-        ticker_res = requests.get("https://api.binance.com/api/v3/ticker/24hr", params={"symbol": symbol}, timeout=3)
-        if ticker_res.status_code == 200:
-            price_change_24h_pct = round(float(ticker_res.json().get("priceChangePercent", 0)), 2)
+        now_t = time.time()
+        ticker_data = None
+        if symbol in _TICKER_CACHE and (now_t - _TICKER_CACHE[symbol][0] < 30):
+            ticker_data = _TICKER_CACHE[symbol][1]
+        else:
+            ticker_res = _SESSION.get("https://api.binance.com/api/v3/ticker/24hr", params={"symbol": symbol}, timeout=3)
+            if ticker_res.status_code == 200:
+                ticker_data = ticker_res.json()
+                _TICKER_CACHE[symbol] = (now_t, ticker_data)
+        if ticker_data:
+            price_change_24h_pct = round(float(ticker_data.get("priceChangePercent", 0)), 2)
     except Exception:
         # Fallback to daily candle approximation
         price_change_24h_pct = round(((closes_15m[-1] - d_closes[-2]) / d_closes[-2]) * 100.0, 2) if (len(d_closes) >= 2 and d_closes[-2] > 0) else 0.0
@@ -449,8 +531,26 @@ def analyze_multi_timeframe_candles(symbol):
         is_yellow_arrow_pivot = (0.0 <= dist_from_15m_ma7_pct <= 3.0) and (lower_wick_pct >= 20.0 or close_15m > open_15m) and (tf_5m_up or tf_2m_up)
         yellow_arrow_status = "🎯 PATRÓN FLECHAS AMARILLAS (REBOTE PIVOTE A+ EN MA7/MA25)" if is_yellow_arrow_pivot else "⚪ NEUTRAL 15M"
 
-        # Peak Proximity Guard: Check if price is within 1.5% of the 24h High
-        dist_from_24h_high_pct = round(((d_highs[-1] - close_15m) / close_15m) * 100.0, 2) if (d_highs and close_15m > 0) else 999.0
+        # Multi-Horizon Peak Proximity & Ceiling Shield (15M, 30M, 1H, 4H, 12H, 24H)
+        highs_15m = [float(k[2]) for k in klines_15m] if klines_15m else []
+        highs_1h = [float(k[2]) for k in klines_1h] if klines_1h else []
+        highs_4h = [float(k[2]) for k in klines_4h] if klines_4h else []
+        
+        high_15m_recent = max(highs_15m[-3:]) if len(highs_15m) >= 3 else close_15m
+        high_30m_recent = max(highs_15m[-6:]) if len(highs_15m) >= 6 else close_15m
+        high_1h_recent = max(highs_1h[-3:]) if len(highs_1h) >= 3 else close_15m
+        high_4h_recent = max(highs_4h[-3:]) if len(highs_4h) >= 3 else close_15m
+        high_12h_recent = max(highs_1h[-12:]) if len(highs_1h) >= 12 else close_15m
+        high_24h = d_highs[-1] if d_highs else close_15m
+
+        dist_15m_pct = round(((high_15m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
+        dist_30m_pct = round(((high_30m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
+        dist_1h_pct = round(((high_1h_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
+        dist_4h_pct = round(((high_4h_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
+        dist_12h_pct = round(((high_12h_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
+        dist_24h_pct = round(((high_24h - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
+
+        is_explosive_breakout = (vol_surge_2m >= 2.5 or vol_surge_15m >= 2.5)
 
         # Spike up followed by rejection wick (buying top trap)
         is_green_candle = close_15m >= open_15m
@@ -461,9 +561,24 @@ def analyze_multi_timeframe_candles(symbol):
         if candle_range > 0 and upper_wick_ratio > wick_threshold and (high_15m - low_15m) / low_15m > 0.012:
             is_overextended_15m = True
             overextension_reason = f"Mecha superior de reversión en vela de 15m ({upper_wick_ratio*100:.1f}% del rango, umbral={wick_threshold*100:.0f}%)"
-        elif dist_from_24h_high_pct <= 1.0 and price_expansion_pct >= 6.0:
+        elif dist_24h_pct <= 2.0 and not is_explosive_breakout and price_expansion_pct >= 4.0:
             is_overextended_15m = True
-            overextension_reason = f"Entrada en el Pico Máximo 24H (Precio a solo {dist_from_24h_high_pct}% del máximo 24H de ${d_highs[-1]:.4f}). Exige compra en el suelo."
+            overextension_reason = f"Techo 24H (Precio a solo {dist_24h_pct}% del máximo diario ${high_24h:.4f}, margen exigido >= 2.0%). Exige compra en el suelo."
+        elif dist_12h_pct <= 1.8 and not is_explosive_breakout:
+            is_overextended_15m = True
+            overextension_reason = f"Techo 12H (Precio a solo {dist_12h_pct}% del máximo de 12h ${high_12h_recent:.4f}, margen exigido >= 1.8%). Exige compra en el suelo."
+        elif dist_4h_pct <= 1.5 and not is_explosive_breakout:
+            is_overextended_15m = True
+            overextension_reason = f"Techo 4H (Precio a solo {dist_4h_pct}% del máximo de 4h ${high_4h_recent:.4f}, margen exigido >= 1.5%). Exige compra en el suelo."
+        elif dist_1h_pct <= 1.2 and not is_explosive_breakout:
+            is_overextended_15m = True
+            overextension_reason = f"Techo 1H (Precio a solo {dist_1h_pct}% del máximo de 3h ${high_1h_recent:.4f}, margen exigido >= 1.2%). Exige compra en el suelo."
+        elif dist_30m_pct <= 0.95 and not is_explosive_breakout:
+            is_overextended_15m = True
+            overextension_reason = f"Techo 30M (Precio a solo {dist_30m_pct}% del máximo de 30m ${high_30m_recent:.4f}, margen exigido >= 0.95%). Exige compra en el suelo."
+        elif dist_15m_pct <= 0.75 and not is_explosive_breakout:
+            is_overextended_15m = True
+            overextension_reason = f"Techo 15M (Precio a solo {dist_15m_pct}% del máximo de 15m ${high_15m_recent:.4f}, margen exigido >= 0.75%). Exige compra en el suelo."
         elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > 4.0:
             is_overextended_15m = True
             overextension_reason = f"Vela de 15m sobre-extendida en la cima (+{((close_15m - open_15m) / open_15m) * 100.0:.2f}%)"
