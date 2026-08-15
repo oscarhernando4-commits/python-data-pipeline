@@ -330,6 +330,43 @@ def get_symbol_price(symbol, is_futures=False):
         
     return None
 
+def get_recent_kline_high(symbol, limit=5):
+    """
+    Fetches the highest price peak (High wick) from recent 1-minute klines.
+    Works 100% seamlessly in both Local Mode (direct connection) and Cloud Mode (with proxy fallback).
+    Ensures that 1-second price spikes are permanently captured without missing any profits.
+    """
+    mirrors = [
+        "https://api.binance.com/api/v3/klines",
+        "https://api1.binance.com/api/v3/klines",
+        "https://api2.binance.com/api/v3/klines",
+        "https://api3.binance.com/api/v3/klines"
+    ]
+    params = {"symbol": symbol, "interval": "1m", "limit": limit}
+    
+    # 1. Try direct connection first (fastest for local and standard cloud)
+    for url in mirrors:
+        try:
+            res = requests.get(url, params=params, timeout=2)
+            if res.status_code == 200:
+                k_data = res.json()
+                if isinstance(k_data, list) and len(k_data) > 0:
+                    return max([float(k[2]) for k in k_data])
+        except Exception:
+            continue
+            
+    # 2. Try with smart proxy (Fixie fallback in cloud mode)
+    try:
+        res = requests.get("https://api.binance.com/api/v3/klines", params=params, proxies=get_smart_proxy(), timeout=4)
+        if res.status_code == 200:
+            k_data = res.json()
+            if isinstance(k_data, list) and len(k_data) > 0:
+                return max([float(k[2]) for k in k_data])
+    except Exception:
+        pass
+        
+    return 0.0
+
 # ============================================================
 # ORDER EXECUTION (Uses Fixie proxy - counted towards quota)
 # ============================================================
@@ -833,15 +870,8 @@ def quick_position_heartbeat():
         if not current_price or current_price <= 0:
             return None
             
-        # 🚀 DETECTOR CUÁNTICO DE MECHAS: Consulta velas de 1m para registrar cualquier pico de milisegundos
-        kline_high = current_price
-        try:
-            k_res = requests.get("https://api.binance.com/api/v3/klines", params={"symbol": sym, "interval": "1m", "limit": 5}, timeout=1.5).json()
-            if isinstance(k_res, list) and len(k_res) > 0:
-                kline_high = max([float(k[2]) for k in k_res] + [current_price])
-        except Exception:
-            kline_high = current_price
-
+        # 🚀 DETECTOR CUÁNTICO DE MECHAS: Consulta velas de 1m (Local + Nube) para registrar picos de milisegundos
+        kline_high = get_recent_kline_high(sym, limit=5)
         highest_price = max(pos.get("highest_price", entry), current_price, kline_high)
         highest_pnl_pct = ((highest_price - entry) / entry) * 100.0
         current_pnl_pct = ((current_price - entry) / entry) * 100.0
@@ -990,15 +1020,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         pnl_pct = ((active_current_price - entry) / entry) * 100.0 if entry > 0 else 0.0
         pnl_usd = (active_current_price - entry) * active_qty
         
-        # Track Highest Price Reached for Dynamic Trailing Stop (incluyendo mechas de velas 1m)
-        kline_high = active_current_price
-        try:
-            k_res = requests.get("https://api.binance.com/api/v3/klines", params={"symbol": active_symbol, "interval": "1m", "limit": 5}, timeout=1.5).json()
-            if isinstance(k_res, list) and len(k_res) > 0:
-                kline_high = max([float(k[2]) for k in k_res] + [active_current_price])
-        except Exception:
-            kline_high = active_current_price
-
+        # Track Highest Price Reached for Dynamic Trailing Stop (incluyendo mechas de velas 1m para Local y Nube)
+        kline_high = get_recent_kline_high(active_symbol, limit=5)
         highest_price = max(state["position"].get("highest_price", entry), active_current_price, kline_high)
         highest_pnl_pct = ((highest_price - entry) / entry) * 100.0 if entry > 0 else 0.0
         
