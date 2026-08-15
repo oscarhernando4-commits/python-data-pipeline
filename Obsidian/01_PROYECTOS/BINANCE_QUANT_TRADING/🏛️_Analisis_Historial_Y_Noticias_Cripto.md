@@ -2620,3 +2620,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-28.63%)`, `2025-02-23 (-18.01%)`, `2025-03-02 (-16.92%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: ONGUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-19` hasta `2026-08-14` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.0479 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.8280 USD` (`2024-04-22`) | Distancia: `-94.21%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0402 USD` (`2026-08-11`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-04-02 (+47.4%)`, `2024-04-10 (+37.56%)`, `2024-04-17 (+35.22%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-23.0%)`, `2024-04-12 (-22.95%)`, `2024-12-08 (-18.46%)`
+
+---

@@ -1104,17 +1104,18 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             trailing_floor_pct = max(-1.5, trailing_floor_pct)
             phase_msg = f"🛡️ ESCUDO DE EMERGENCIA: SL apretado a {trailing_floor_pct:+.2f}%"
 
-        # Stagnation & Alpha Fast Rotation Rule (Ampliación de Paciencia a 8-12 Horas):
+        # Stagnation & Alpha Fast Rotation Rule (Límite Máximo de 2 Horas):
         stagnation_exit = False
         reason_str = ""
-        # Paciencia amplia: Dar 8 a 12 Horas (480 ciclos) para que la vela de 4H complete su ciclo natural
-        if holding_cycles >= 480 and phase == 1 and abs(pnl_pct) <= 0.60:
-            if best_symbol and best_symbol != active_symbol and best_score >= 92 and not is_bearish:
-                stagnation_exit = True
-                reason_str = f"🚀 Rotación Cuántica Alpha (Posición lateral por {holding_cycles}m -> Rotando Capital a Super-Cohete {best_symbol} @ {best_score} Pts)"
-        if not stagnation_exit and holding_cycles >= 2880 and phase == 1 and pnl_pct < 0:  # 48 Horas flat
+        # 1. Liberación por Estancamiento Máximo (2 Horas / 120 ciclos sin salir de Fase 1 con PnL plano):
+        if holding_cycles >= 120 and phase == 1 and abs(pnl_pct) <= 0.60:
             stagnation_exit = True
-            reason_str = f"Liberación por Estancamiento Extremo (48 Horas en Fase 1, PnL={pnl_pct:+.2f}%)"
+            reason_str = f"🚀 Liberación por Estancamiento Máximo (2 Horas / 120m en Fase 1 sin movimiento, PnL={pnl_pct:+.2f}%)"
+        # 2. Rotación Ágil Alpha a los 60 minutos si aparece un candidato con Score >= 88:
+        elif holding_cycles >= 60 and phase == 1 and abs(pnl_pct) <= 0.50:
+            if best_symbol and best_symbol != active_symbol and best_score >= 88 and not is_bearish:
+                stagnation_exit = True
+                reason_str = f"🚀 Rotación Cuántica Alpha (Posición lateral por {holding_cycles}m -> Rotando Capital al Cohete {best_symbol} @ {best_score} Pts)"
 
         tp_target = entry * (1.0 + (3.0 * 2.0 / 100.0))  # 1:2 R:R based on 3.0% SL
         sl_target = entry * (1.0 + (trailing_floor_pct / 100.0))

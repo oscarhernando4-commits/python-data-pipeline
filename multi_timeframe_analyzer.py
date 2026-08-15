@@ -260,11 +260,11 @@ def analyze_multi_timeframe_candles(symbol):
     min_l = min(d_lows) if d_lows else avg_price
     price_expansion_pct = ((max_h - min_l) / min_l) * 100.0 if min_l > 0 else 0.0
     
-    # 3. Detect Pegged / Zero-Volatility Assets (Price ~ $1.00 and 1d Range < 1.5%)
-    if 0.95 <= avg_price <= 1.05 and price_expansion_pct < 1.5:
+    # 3. Detect Pegged / Zero-Volatility / Ultra-Slow Assets (TRX, Pegs, Range 1D < 2.20%)
+    if price_expansion_pct < 2.20 and symbol != "BTCUSDT":
         return {
             "is_valid_tradable_asset": False,
-            "rejection_reason": f"Asset {symbol} descalificado: Comportamiento plano de Stablecoin (Rango 1D: {price_expansion_pct:.2f}%)",
+            "rejection_reason": f"Asset {symbol} descalificado: Activo pesado sin elasticidad de ganancia (Rango 1D: {price_expansion_pct:.2f}% < 2.20%)",
             "multi_tf_score": 0
         }
         
