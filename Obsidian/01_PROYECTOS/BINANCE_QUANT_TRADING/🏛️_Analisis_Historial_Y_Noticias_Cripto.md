@@ -2555,3 +2555,42 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-22.06%)`, `2026-05-18 (-16.95%)`, `2024-12-08 (-15.06%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: TREEUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-07-28` hasta `2026-08-14` (383 Días de Historial)
+- 💵 **Precio Actual:** `$0.0340 USD`
+- 📈 **Máximo Histórico (ATH):** `$1.5000 USD` (`2025-07-28`) | Distancia: `-97.73%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0328 USD` (`2026-08-13`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-07-28 (+123.97%)`, `2025-08-27 (+27.32%)`, `2025-09-02 (+15.91%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-33.83%)`, `2025-07-29 (-20.8%)`, `2026-01-24 (-15.03%)`
+
+---
+
+### 🪙 Profile Completo de Vida: HUMAUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-05-25` hasta `2026-08-14` (447 Días de Historial)
+- 💵 **Precio Actual:** `$0.0214 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.1060 USD` (`2025-05-25`) | Distancia: `-79.8%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0098 USD` (`2025-10-09`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-05-25 (+569.3%)`, `2026-03-10 (+23.52%)`, `2026-03-07 (+22.51%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-02-04 (-29.23%)`, `2025-05-29 (-25.71%)`, `2025-10-09 (-22.69%)`
+
+---
+
+### 🪙 Profile Completo de Vida: WCTUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-04-14` hasta `2026-08-14` (488 Días de Historial)
+- 💵 **Precio Actual:** `$0.0340 USD`
+- 📈 **Máximo Histórico (ATH):** `$1.3941 USD` (`2025-05-29`) | Distancia: `-97.56%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0331 USD` (`2026-08-13`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-04-15 (+52.77%)`, `2025-04-18 (+43.99%)`, `2025-04-14 (+42.55%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-05-30 (-43.17%)`, `2025-10-09 (-37.74%)`, `2025-05-20 (-16.35%)`
+
+---

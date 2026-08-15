@@ -858,9 +858,12 @@ def quick_position_heartbeat():
         elif highest_pnl_pct < 0.50:
             sl_pct = 0.00   # Break-Even exacto (CERO pérdida al rozar +0.42% a +0.49%)
             new_phase = 1
+        elif highest_pnl_pct < 0.75:
+            sl_pct = 0.25   # Fase 2 (Seguridad Verde, comisión cubierta)
+            new_phase = 2
         elif highest_pnl_pct < 2.00:
-            sl_pct = max(0.25, round(highest_pnl_pct - 0.30, 2))
-            new_phase = 3 if highest_pnl_pct >= 0.55 else 2
+            sl_pct = max(0.40, round(highest_pnl_pct - 0.30, 2))  # Fase 2.5 / Fase 3 (Piso asegurado mínimo +0.40%)
+            new_phase = 3
         else:
             if is_high_volume_runner:
                 sl_pct = round(highest_pnl_pct - 0.35, 2)
@@ -1011,16 +1014,15 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 trailing_distance = 0.25
                 trailing_floor_pct = round(highest_pnl_pct - trailing_distance, 2)
                 phase_msg = f"💎 FASE 4 (COSECHA NORMAL): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - 0.25%)"
+        elif highest_pnl_pct >= 0.75:
+            phase = 3
+            trailing_distance = 0.30
+            trailing_floor_pct = max(0.40, round(highest_pnl_pct - trailing_distance, 2))
+            phase_msg = f"🛡️ FASE 2.5 (CONSTRUCCIÓN RÁPIDA): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% | Asegurado +0.40% Mínimo)"
         elif highest_pnl_pct >= 0.50:
-            if highest_pnl_pct < 0.55:
-                phase = 2
-                trailing_floor_pct = 0.25
-                phase_msg = f"🔒 FASE 2 (SEGURIDAD VERDE): Piso +0.25% (Cero Riesgo | Comisión Cubierta)"
-            else:
-                phase = 3
-                trailing_distance = 0.30
-                trailing_floor_pct = max(0.25, round(highest_pnl_pct - trailing_distance, 2))
-                phase_msg = f"🛡️ FASE 3 (CONSTRUCCIÓN): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - 0.30%)"
+            phase = 2
+            trailing_floor_pct = 0.25
+            phase_msg = f"🔒 FASE 2 (SEGURIDAD VERDE): Piso +0.25% (Cero Riesgo | Comisión Cubierta)"
         elif highest_pnl_pct >= 0.42:
             phase = 1
             trailing_floor_pct = 0.00
@@ -1058,13 +1060,18 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             trailing_floor_pct = max(-1.5, trailing_floor_pct)
             phase_msg = f"🛡️ ESCUDO DE EMERGENCIA: SL apretado a {trailing_floor_pct:+.2f}%"
 
-        # Stagnation & Smart Capital Rotation Rule:
+        # Stagnation & Alpha Fast Rotation Rule (Mejora 3):
         stagnation_exit = False
         reason_str = ""
-        if holding_cycles >= 60 and phase == 1:  # 2 Hours without leaving Phase 1
+        # Stagnant lateral exit after 45+ cycles (~45-90 mins) if a Super-Candidate appears:
+        if holding_cycles >= 45 and phase == 1 and abs(pnl_pct) <= 0.60:
+            if best_symbol and best_symbol != active_symbol and best_score >= 88 and not is_bearish:
+                stagnation_exit = True
+                reason_str = f"🚀 Rotación Cuántica Alpha (Posición lateral por {holding_cycles} ciclos -> Rotando 100% Capital al Cohete {best_symbol} @ {best_score} Pts)"
+        elif holding_cycles >= 60 and phase == 1:  # 1 Hour without leaving Phase 1
             if best_symbol and best_symbol != active_symbol and best_score >= 85 and not is_bearish:
                 stagnation_exit = True
-                reason_str = f"🚀 Rotación Inteligente de Capital (Dormida por {holding_cycles*2}m -> Pasando a Cohete {best_symbol} @ {best_score} Pts)"
+                reason_str = f"🚀 Rotación Inteligente de Capital (Dormida por {holding_cycles}m -> Pasando a Cohete {best_symbol} @ {best_score} Pts)"
         if not stagnation_exit and holding_cycles >= 1440 and phase == 1 and pnl_pct < 0:  # 2 DAYS flat
             stagnation_exit = True
             reason_str = f"Liberación por Estancamiento (2 Días en Fase 1, PnL={pnl_pct:+.2f}%)"
@@ -1232,15 +1239,28 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de muro comprador (Bids: {ob_info.get('bid_dominance_pct')}% < 48.0%).")
                     else:
                         vol_2m_now = mtf_res.get("vol_surge_2m", 1.0)
+                        vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
+                        vol_acc = mtf_res.get("vol_acc_15m", 1.0)
                         is_pre_pump = mtf_res.get("is_pre_pump_signal", False)
                         is_yellow = mtf_res.get("is_yellow_arrow_pivot", False)
                         
-                        if vol_2m_now < 0.35 and not is_pre_pump and not is_yellow and best_score < 75:
+                        # ═══════════════════════════════════════════════════════════
+                        # 🚀 FILTRO CUÁNTICO DOBLE TURBINA (15m + 2m Simultáneos):
+                        # Evita monedas dormidas sin volumen (<0.60x en 15m).
+                        # Exige aceleración institucional para asegurar despegues ganadores.
+                        # ═══════════════════════════════════════════════════════════
+                        has_15m_fuel = (vol_15m_now >= 0.60) or (vol_acc >= 1.5) or is_pre_pump or is_yellow
+                        has_2m_thrust = (vol_2m_now >= 0.70) or is_pre_pump or (best_score >= 95 and vol_2m_now >= 0.40)
+                        
+                        if not has_15m_fuel and best_score < 98:
                             is_stable = True
-                            print(f"⛔ Compra rechazada: {best_symbol} descalificado por volumen 2m demasiado seco ({vol_2m_now}x < 0.35x). Exige micro-volumen de empuje.")
+                            print(f"⛔ Compra rechazada: {best_symbol} descartado por falta de combustible 15m (VolSurge 15m={vol_15m_now:.2f}x < 0.60x). Evitando consolidación lenta.")
+                        elif not has_2m_thrust:
+                            is_stable = True
+                            print(f"⛔ Compra rechazada: {best_symbol} descartado por falta de empuje 2m (VolSurge 2m={vol_2m_now:.2f}x < 0.70x). Exige micro-aceleración de entrada.")
                         else:
                             arrow_lbl = " 🎯 [PATRÓN FLECHAS AMARILLAS 15M PIVOT REBOUND]" if is_yellow else ""
-                            print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}{arrow_lbl}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.75% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=48% OK) | VolSurge2m={vol_2m_now}x")
+                            print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}{arrow_lbl}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.75% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=48% OK) | 🚀 Doble Turbina: 15m={vol_15m_now:.2f}x, 2m={vol_2m_now:.2f}x")
                 
         if bias_ok and not is_stable:
             # 1. LONG Entry Signal (Operates with 100% of available USDT, strictly requires Score >= 55 Setup A+)
