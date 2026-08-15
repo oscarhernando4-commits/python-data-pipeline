@@ -36,22 +36,22 @@ sleep_until_next_2m_boundary = lambda: sleep_until_next_boundary(120)
 sleep_until_next_5m_boundary = sleep_until_next_1m_boundary
 
 def sleep_with_micro_heartbeat(sleep_secs: int):
-    """Sleeps in 5-second intervals while running the ultra-lightweight position heartbeat."""
+    """Sleeps in 2-second intervals while running the ultra-lightweight position heartbeat."""
     import api_connector
     end_time = time.time() + sleep_secs
     while time.time() < end_time:
         remaining = end_time - time.time()
         if remaining <= 0:
             break
-        chunk = min(5.0, remaining)
+        chunk = min(2.0, remaining)
         time.sleep(chunk)
-        # Run 5s micro-heartbeat for active position (0.001% CPU)
+        # Run 2s micro-heartbeat for active position (0.001% CPU)
         try:
             hb = api_connector.quick_position_heartbeat()
             if hb and isinstance(hb, dict):
                 p_fmt = f"${hb['price']:.5f}" if hb['price'] < 0.05 else f"${hb['price']:.4f}"
                 if hb.get('highest_pnl', 0) >= 0.50 and hb.get('phase', 1) >= 2:
-                    print(f"💓 [HEARTBEAT 5s] {hb['symbol']} @ {p_fmt} | PnL: {hb['pnl_pct']:+.2f}% (Pico: +{hb['highest_pnl']:.2f}% | Fase {hb['phase']})", flush=True)
+                    print(f"💓 [HEARTBEAT 2s] {hb['symbol']} @ {p_fmt} | PnL: {hb['pnl_pct']:+.2f}% (Pico: +{hb['highest_pnl']:.2f}% | Fase {hb['phase']})", flush=True)
         except Exception:
             pass
 
@@ -122,7 +122,7 @@ def main():
     print("=" * 70, flush=True)
     print(f"🚀 RUNNER CUÁNTICO ULTRA-LIGERO (4 HORAS / {total_cycles} CICLOS)", flush=True)
     print(f"⏱️ Intervalo Escáner: Cada {sleep_interval_secs}s ({sleep_interval_secs // 60} min)")
-    print(f"💓 Micro-Heartbeat de Posición: Activo cada 10 segundos")
+    print(f"💓 Micro-Heartbeat de Posición: Activo cada 2 segundos")
     print(f"⚡ Optimización PC: Dashboards HTML/Markdown desactivados | 10 Threads")
     print("=" * 70, flush=True)
     

@@ -814,8 +814,11 @@ def quick_position_heartbeat():
         if highest_pnl_pct < 0.35:
             sl_pct = -2.00
             new_phase = 1
+        elif highest_pnl_pct < 0.42:
+            sl_pct = -0.50  # Mitigación temprana (corta 75% riesgo)
+            new_phase = 1
         elif highest_pnl_pct < 0.50:
-            sl_pct = -0.50  # Mitigación temprana
+            sl_pct = 0.00   # Break-Even exacto (CERO pérdida al rozar +0.42% a +0.49%)
             new_phase = 1
         elif highest_pnl_pct < 2.00:
             sl_pct = max(0.25, round(highest_pnl_pct - 0.30, 2))
@@ -980,6 +983,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 trailing_distance = 0.30
                 trailing_floor_pct = max(0.25, round(highest_pnl_pct - trailing_distance, 2))
                 phase_msg = f"🛡️ FASE 3 (CONSTRUCCIÓN): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - 0.30%)"
+        elif highest_pnl_pct >= 0.42:
+            phase = 1
+            trailing_floor_pct = 0.00
+            phase_msg = f"⚡ FASE 1 (BREAK-EVEN CANDADO): SL 0.00% (Pico +{highest_pnl_pct:.2f}% | Cero Pérdida Garantizada)"
         elif highest_pnl_pct >= 0.35:
             phase = 1
             trailing_floor_pct = -0.50
@@ -1186,9 +1193,16 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         is_stable = True
                         print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de muro comprador (Bids: {ob_info.get('bid_dominance_pct')}% < 48.0%).")
                     else:
+                        vol_2m_now = mtf_res.get("vol_surge_2m", 1.0)
+                        is_pre_pump = mtf_res.get("is_pre_pump_signal", False)
                         is_yellow = mtf_res.get("is_yellow_arrow_pivot", False)
-                        arrow_lbl = " 🎯 [PATRÓN FLECHAS AMARILLAS 15M PIVOT REBOUND]" if is_yellow else ""
-                        print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}{arrow_lbl}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.75% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=48% OK)")
+                        
+                        if vol_2m_now < 0.35 and not is_pre_pump and not is_yellow and best_score < 75:
+                            is_stable = True
+                            print(f"⛔ Compra rechazada: {best_symbol} descalificado por volumen 2m demasiado seco ({vol_2m_now}x < 0.35x). Exige micro-volumen de empuje.")
+                        else:
+                            arrow_lbl = " 🎯 [PATRÓN FLECHAS AMARILLAS 15M PIVOT REBOUND]" if is_yellow else ""
+                            print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}{arrow_lbl}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.75% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=48% OK) | VolSurge2m={vol_2m_now}x")
                 
         if bias_ok and not is_stable:
             # 1. LONG Entry Signal (Operates with 100% of available USDT, strictly requires Score >= 55 Setup A+)
