@@ -472,13 +472,44 @@ def execute_real_spot_market_sell(symbol, quantity=None):
         except Exception as e2:
             return {"error": str(e2)}
 
+def get_exact_real_entry_price(symbol):
+    """
+    Queries Binance /api/v3/myTrades to extract the exact weighted average fill price
+    for the most recent BUY order of the specified symbol.
+    """
+    try:
+        api_k = get_api_key()
+        api_s = get_api_secret()
+        ts = int(time.time() * 1000)
+        params = {"symbol": symbol, "timestamp": ts, "limit": 10}
+        qs = urlencode(params)
+        sig = hmac.new(api_s.encode("utf-8"), qs.encode("utf-8"), hashlib.sha256).hexdigest()
+        params["signature"] = sig
+        headers = {"X-MBX-APIKEY": api_k}
+        
+        url = f"{BASE_URL}/api/v3/myTrades"
+        res = requests.get(url, headers=headers, params=params, proxies=get_smart_proxy(), timeout=5)
+        trades = res.json()
+        if isinstance(trades, list) and trades:
+            buy_trades = [t for t in trades if t.get("isBuyer", False)]
+            if buy_trades:
+                last_order_id = buy_trades[-1].get("orderId")
+                matching_fills = [t for t in buy_trades if t.get("orderId") == last_order_id]
+                total_qty = sum(float(t["qty"]) for t in matching_fills)
+                total_cost = sum(float(t["quoteQty"]) for t in matching_fills)
+                if total_qty > 0 and total_cost > 0:
+                    return round(total_cost / total_qty, 8), round(total_cost, 2), round(total_qty, 4)
+    except Exception as e:
+        print(f"Error fetching exact trades for {symbol}: {e}")
+    return None, None, None
+
 def diagnose_full_spot_wallet():
     """
     30-MINUTE COMPREHENSIVE SPOT WALLET DIAGNOSIS (via Fixie Proxy).
     Runs every 30 minutes to conserve Fixie proxy requests (~48 req/day).
     - Inspects ALL assets held in Spot (USDT, BNB, and active cryptos).
     - Computes exact USD value for every coin.
-    - Auto-detects and adopts active positions (> $5 USD) to ensure Take Profit (+2%) / Stop Loss.
+    - Auto-detects and adopts active positions (> $5 USD) using EXACT fill prices from myTrades.
     - Auto-clears positions if coin was manually sold/converted.
     - Updates real_money_account.json state.
     """
@@ -551,16 +582,23 @@ def diagnose_full_spot_wallet():
     if significant_cryptos:
         primary = significant_cryptos[0]
         if not current_pos or current_pos.get("symbol") != primary["symbol"]:
+            exact_entry, exact_cost, exact_qty = get_exact_real_entry_price(primary["symbol"])
+            final_entry = exact_entry if exact_entry else primary["price"]
+            final_cost = exact_cost if exact_cost else primary["usd_value"]
+            final_qty = exact_qty if exact_qty else primary["quantity"]
             state["position"] = {
                 "symbol": primary["symbol"],
-                "quantity": primary["quantity"],
-                "entry_price": primary["price"],
-                "cost_usd": primary["usd_value"],
+                "quantity": final_qty,
+                "entry_price": final_entry,
+                "highest_price": final_entry,
+                "cost_usd": final_cost,
                 "side": "LONG",
+                "phase": 1,
                 "break_even": False
             }
-            state["status"] = f"🔵 En Vivo LONG ({primary['symbol']} @ ${primary['price']:.4f})"
-            print(f"🎯 [AUTO-ADOPCIÓN] Posición en {primary['symbol']} adoptada automáticamente para gestión de Take Profit (+2%) / Stop Loss.")
+            price_fmt = lambda p: f"${p:.8f}" if p < 0.01 else f"${p:.4f}"
+            state["status"] = f"🔵 En Vivo LONG ({primary['symbol']} @ {price_fmt(final_entry)})"
+            print(f"🎯 [AUTO-ADOPCIÓN EXACTA] Posición en {primary['symbol']} adoptada con precio real Binance: {price_fmt(final_entry)} (Costo: ${final_cost} USD).")
     else:
         # If we thought we had a position but no non-stable crypto >= $4 USD exists in wallet
         if current_pos and current_pos.get("side") == "LONG":
@@ -1212,9 +1250,14 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"🚀 SEÑAL ALCISTA (LONG) ({best_symbol} @ {best_score} Pts - {trigger_reason}). Comprando con ${usdt_free:.1f} USDT (100% Capital)...")
                 buy_res = execute_real_spot_market_buy(best_symbol, usdt_free)
                 if isinstance(buy_res, dict) and "orderId" in buy_res:
-                    qty = float(buy_res.get("executedQty", 0))
-                    cum_quote = float(buy_res.get("cummulativeQuoteQty", 0))
-                    if qty > 0 and cum_quote > 0:
+                    time.sleep(0.5)
+                    exact_entry, exact_cost, exact_qty = get_exact_real_entry_price(best_symbol)
+                    qty = exact_qty if exact_qty else float(buy_res.get("executedQty", 0))
+                    cum_quote = exact_cost if exact_cost else float(buy_res.get("cummulativeQuoteQty", 0))
+                    if exact_entry:
+                        actual_entry_price = exact_entry
+                        actual_cost = exact_cost
+                    elif qty > 0 and cum_quote > 0:
                         actual_entry_price = round(cum_quote / qty, 6)
                         actual_cost = round(cum_quote, 2)
                     else:
