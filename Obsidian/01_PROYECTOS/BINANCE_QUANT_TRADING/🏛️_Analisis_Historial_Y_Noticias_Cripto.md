@@ -2594,3 +2594,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-05-30 (-43.17%)`, `2025-10-09 (-37.74%)`, `2025-05-20 (-16.35%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: LAUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-07-08` hasta `2026-08-14` (403 Días de Historial)
+- 💵 **Precio Actual:** `$0.0496 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.7060 USD` (`2025-07-08`) | Distancia: `-92.97%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0443 USD` (`2026-08-04`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-02-06 (+54.16%)`, `2025-07-08 (+28.73%)`, `2025-08-11 (+18.15%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-07-09 (-18.6%)`, `2026-07-26 (-17.94%)`, `2026-02-04 (-17.5%)`
+
+---
