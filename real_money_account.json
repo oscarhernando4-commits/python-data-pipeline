@@ -4,11 +4,21 @@
   "current_balance_usd": 19.0,
   "net_pnl_usd": 1.87,
   "wins": 16,
-  "losses": 15,
-  "trades_count": 30,
-  "position": null,
-  "last_trade_time": "26-08-15<br>17:30",
-  "status": "🟦 Buscando Entrada A+",
+  "losses": 14,
+  "trades_count": 29,
+  "position": {
+    "symbol": "TRXUSDT",
+    "quantity": 50.3,
+    "entry_price": 0.3318,
+    "highest_price": 0.3322,
+    "cost_usd": 16.67,
+    "side": "LONG",
+    "phase": 1,
+    "holding_cycles": 105,
+    "volatility_regime": "⚡ FASE 1 (ENTRADA): SL -2.00% (Protección Estricta de Capital)"
+  },
+  "last_trade_time": "26-08-15<br>22:29",
+  "status": "🔵 En Vivo LONG (TRXUSDT @ $0.3315)",
   "daily_wins": 2,
   "daily_losses": 2,
   "_cached_total_val": 19.0,
@@ -16,5 +26,5 @@
   "_cached_bnb": 0.00363691,
   "_cached_bnb_usd": 2.22,
   "last_trading_day": "2026-08-15",
-  "_btc_last_price": 63152.62
+  "_btc_last_price": 63142.31
 }
