@@ -9,8 +9,12 @@ import requests
 import tempfile
 from urllib.parse import urlencode
 from datetime import datetime
-from dotenv import load_dotenv
-load_dotenv()
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 try:
     sys.stdout.reconfigure(encoding='utf-8')

@@ -29,7 +29,7 @@ jobs:
 
       - name: 📦 Install Requirements Fast
         run: |
-          pip install requests numpy pandas ta urllib3
+          pip install -r requirements.txt
 
       - name: 🚀 Execute 4-Hour Continuous Quant Trading Loop (Every 5m)
         env:

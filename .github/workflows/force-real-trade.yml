@@ -23,7 +23,7 @@ jobs:
 
       - name: 📦 Install Requirements
         run: |
-          pip install requests numpy pandas ta urllib3
+          pip install -r requirements.txt
 
       - name: 🚀 EXECUTE MANUAL SPOT PIPELINE CYCLE
         env:

@@ -17,8 +17,11 @@ except Exception:
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-from dotenv import load_dotenv
-load_dotenv()
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 TESTS_PASSED = 0
 TESTS_FAILED = 0

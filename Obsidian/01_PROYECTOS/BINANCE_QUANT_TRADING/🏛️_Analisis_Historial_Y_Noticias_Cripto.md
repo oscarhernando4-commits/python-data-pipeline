@@ -2607,3 +2607,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-07-09 (-18.6%)`, `2026-07-26 (-17.94%)`, `2026-02-04 (-17.5%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: BANANAUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2024-07-19` hasta `2026-08-14` (757 Días de Historial)
+- 💵 **Precio Actual:** `$4.0320 USD`
+- 📈 **Máximo Histórico (ATH):** `$78.6800 USD` (`2024-07-19`) | Distancia: `-94.88%`
+- 📉 **Mínimo Histórico (ATL):** `$2.4710 USD` (`2026-06-24`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-07-19 (+60.43%)`, `2025-03-10 (+47.79%)`, `2025-12-23 (+34.04%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-28.63%)`, `2025-02-23 (-18.01%)`, `2025-03-02 (-16.92%)`
+
+---

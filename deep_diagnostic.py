@@ -4,10 +4,13 @@ import hmac
 import hashlib
 import urllib.parse
 import requests
-from dotenv import load_dotenv
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 sys.stdout.reconfigure(encoding='utf-8')
-load_dotenv()
 
 import api_connector
 
