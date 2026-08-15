@@ -833,7 +833,16 @@ def quick_position_heartbeat():
         if not current_price or current_price <= 0:
             return None
             
-        highest_price = max(pos.get("highest_price", entry), current_price)
+        # 🚀 DETECTOR CUÁNTICO DE MECHAS: Consulta velas de 1m para registrar cualquier pico de milisegundos
+        kline_high = current_price
+        try:
+            k_res = requests.get("https://api.binance.com/api/v3/klines", params={"symbol": sym, "interval": "1m", "limit": 5}, timeout=1.5).json()
+            if isinstance(k_res, list) and len(k_res) > 0:
+                kline_high = max([float(k[2]) for k in k_res] + [current_price])
+        except Exception:
+            kline_high = current_price
+
+        highest_price = max(pos.get("highest_price", entry), current_price, kline_high)
         highest_pnl_pct = ((highest_price - entry) / entry) * 100.0
         current_pnl_pct = ((current_price - entry) / entry) * 100.0
         current_phase = pos.get("phase", 1)
@@ -981,8 +990,16 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         pnl_pct = ((active_current_price - entry) / entry) * 100.0 if entry > 0 else 0.0
         pnl_usd = (active_current_price - entry) * active_qty
         
-        # Track Highest Price Reached for Dynamic Trailing Stop
-        highest_price = max(state["position"].get("highest_price", entry), active_current_price)
+        # Track Highest Price Reached for Dynamic Trailing Stop (incluyendo mechas de velas 1m)
+        kline_high = active_current_price
+        try:
+            k_res = requests.get("https://api.binance.com/api/v3/klines", params={"symbol": active_symbol, "interval": "1m", "limit": 5}, timeout=1.5).json()
+            if isinstance(k_res, list) and len(k_res) > 0:
+                kline_high = max([float(k[2]) for k in k_res] + [active_current_price])
+        except Exception:
+            kline_high = active_current_price
+
+        highest_price = max(state["position"].get("highest_price", entry), active_current_price, kline_high)
         highest_pnl_pct = ((highest_price - entry) / entry) * 100.0 if entry > 0 else 0.0
         
         holding_cycles = state["position"].get("holding_cycles", 0) + 1
