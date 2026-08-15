@@ -1278,29 +1278,31 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         is_stable = True
                         print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de muro comprador (Bids: {ob_info.get('bid_dominance_pct')}% < 48.0%).")
                     else:
+                        vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
                         vol_2m_now = mtf_res.get("vol_surge_2m", 1.0)
                         vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
+                        is_30s_burst = mtf_res.get("is_30s_micro_burst", False)
                         vol_acc = mtf_res.get("vol_acc_15m", 1.0)
                         is_pre_pump = mtf_res.get("is_pre_pump_signal", False)
                         is_yellow = mtf_res.get("is_yellow_arrow_pivot", False)
                         
                         # ═══════════════════════════════════════════════════════════
-                        # 🚀 FILTRO CUÁNTICO DOBLE TURBINA (15m + 2m Simultáneos):
+                        # 🚀 FILTRO CUÁNTICO TRIPLE TURBINA (15m + 2m + 1m/30s):
                         # Evita monedas dormidas sin volumen (<0.60x en 15m).
-                        # Exige aceleración institucional para asegurar despegues ganadores.
+                        # Exige aceleración institucional en micro (1m/30s) para asegurar despegues ganadores.
                         # ═══════════════════════════════════════════════════════════
                         has_15m_fuel = (vol_15m_now >= 0.60) or (vol_acc >= 1.5) or is_pre_pump or is_yellow
-                        has_2m_thrust = (vol_2m_now >= 0.70) or is_pre_pump or (best_score >= 95 and vol_2m_now >= 0.40)
+                        has_micro_thrust = (vol_2m_now >= 0.70) or (vol_1m_now >= 1.20) or is_30s_burst or is_pre_pump or (best_score >= 95 and vol_2m_now >= 0.40)
                         
                         if not has_15m_fuel and best_score < 98:
                             is_stable = True
                             print(f"⛔ Compra rechazada: {best_symbol} descartado por falta de combustible 15m (VolSurge 15m={vol_15m_now:.2f}x < 0.60x). Evitando consolidación lenta.")
-                        elif not has_2m_thrust:
+                        elif not has_micro_thrust:
                             is_stable = True
-                            print(f"⛔ Compra rechazada: {best_symbol} descartado por falta de empuje 2m (VolSurge 2m={vol_2m_now:.2f}x < 0.70x). Exige micro-aceleración de entrada.")
+                            print(f"⛔ Compra rechazada: {best_symbol} descartado por falta de empuje micro (1m={vol_1m_now:.2f}x, 2m={vol_2m_now:.2f}x, 30sBurst={is_30s_burst}). Exige micro-aceleración de entrada.")
                         else:
                             arrow_lbl = " 🎯 [PATRÓN FLECHAS AMARILLAS 15M PIVOT REBOUND]" if is_yellow else ""
-                            print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}{arrow_lbl}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.75% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=48% OK) | 🚀 Doble Turbina: 15m={vol_15m_now:.2f}x, 2m={vol_2m_now:.2f}x")
+                            print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}{arrow_lbl}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.75% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=48% OK) | 🚀 Triple Turbina: 15m={vol_15m_now:.2f}x, 2m={vol_2m_now:.2f}x, 1m={vol_1m_now:.2f}x, 30sBurst={is_30s_burst}")
                 
         if bias_ok and not is_stable:
             # 1. LONG Entry Signal (Operates with 100% of available USDT, strictly requires Score >= 55 Setup A+)

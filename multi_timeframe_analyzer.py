@@ -268,7 +268,9 @@ def analyze_multi_timeframe_candles(symbol):
             "multi_tf_score": 0
         }
         
-    # Parse 2m, 5m, 15m, 1h, 4h closes & volumes
+    # Parse 1m, 2m, 5m, 15m, 1h, 4h closes & volumes
+    closes_1m = [float(k[4]) for k in klines_1m] if klines_1m else []
+    vols_1m = [float(k[5]) for k in klines_1m] if klines_1m else []
     closes_2m = [float(k[4]) for k in klines_2m] if klines_2m else []
     vols_2m = [float(k[5]) for k in klines_2m] if klines_2m else []
     closes_5m = [float(k[4]) for k in klines_5m]
@@ -277,6 +279,12 @@ def analyze_multi_timeframe_candles(symbol):
     closes_1h = [float(k[4]) for k in klines_1h] if klines_1h else closes_15m
     closes_4h = [float(k[4]) for k in klines_4h] if klines_4h else closes_15m
     
+    # Micro Moving Averages for 1m (MA3 & MA7)
+    ma3_1m = sum(closes_1m[-3:]) / len(closes_1m[-3:]) if len(closes_1m) >= 3 else (closes_1m[-1] if closes_1m else 1.0)
+    ma7_1m = sum(closes_1m[-7:]) / len(closes_1m[-7:]) if len(closes_1m) >= 7 else (closes_1m[-1] if closes_1m else 1.0)
+    
+    tf_30s_up = (closes_1m[-1] >= ma3_1m) if closes_1m else False
+    tf_1m_up = (closes_1m[-1] >= closes_1m[-2] or closes_1m[-1] >= ma7_1m) if len(closes_1m) >= 2 else False
     tf_2m_up = closes_2m[-1] > closes_2m[0] if closes_2m else False
     tf_5m_up = closes_5m[-1] > closes_5m[0] if closes_5m else False
     tf_15m_up = closes_15m[-1] > closes_15m[0] if closes_15m else False
@@ -284,12 +292,18 @@ def analyze_multi_timeframe_candles(symbol):
     tf_4h_up = closes_4h[-1] > closes_4h[0] if closes_4h else False
     tf_1d_up = d_closes[-1] > d_closes[0] if d_closes else False
     
-    # Calculate 3-Tier Multi-Timeframe RSI Architecture
+    # Calculate Multi-Tier Multi-Timeframe RSI Architecture (1m, 2m, 5m, 15m, 1h, 4h)
+    rsi_1m = calculate_rsi(closes_1m)
     rsi_2m = calculate_rsi(closes_2m)
     rsi_5m = calculate_rsi(closes_5m)
     rsi_15m = calculate_rsi(closes_15m)
     rsi_1h = calculate_rsi(closes_1h)
     rsi_4h = calculate_rsi(closes_4h)
+    
+    # 1m & 30s Microstructure Volume Surge & Micro-Burst Detector
+    avg_vol_1m = sum(vols_1m[-10:-1]) / len(vols_1m[-10:-1]) if len(vols_1m) >= 10 else 1.0
+    vol_surge_1m = round(vols_1m[-1] / avg_vol_1m, 2) if (vols_1m and avg_vol_1m > 0) else 1.0
+    is_30s_micro_burst = bool((vols_1m and vols_1m[-1] >= avg_vol_1m * 0.70) and tf_30s_up)
     
     # 2m Microstructure Volume Surge
     avg_vol_2m = sum(vols_2m[-5:]) / len(vols_2m[-5:]) if len(vols_2m) >= 5 else 1.0
@@ -647,10 +661,13 @@ def analyze_multi_timeframe_candles(symbol):
         "is_overbought_exhaustion": is_overbought_exhaustion,
         "is_bullish_divergence": is_bullish_divergence,
         "price_above_15m_mas": price_above_15m_ma7 and price_above_15m_ma25,
+        "vol_surge_1m": vol_surge_1m,
+        "is_30s_micro_burst": is_30s_micro_burst,
         "vol_surge_2m": vol_surge_2m,
         "vol_surge_15m": vol_surge_15m,
         "pattern_15m_summary": pattern_15m_summary,
         "rsi_structure": {
+            "rsi_1m": rsi_1m,
             "rsi_2m": rsi_2m,
             "rsi_5m": rsi_5m,
             "rsi_15m": rsi_15m,
@@ -658,6 +675,8 @@ def analyze_multi_timeframe_candles(symbol):
             "rsi_4h": rsi_4h
         },
         "timeframe_alignment": {
+            "30s": "BULLISH" if tf_30s_up else "BEARISH",
+            "1m": "BULLISH" if tf_1m_up else "BEARISH",
             "2m": "BULLISH" if tf_2m_up else "BEARISH",
             "5m": "BULLISH" if tf_5m_up else "BEARISH",
             "15m": "BULLISH" if tf_15m_up else "BEARISH",
