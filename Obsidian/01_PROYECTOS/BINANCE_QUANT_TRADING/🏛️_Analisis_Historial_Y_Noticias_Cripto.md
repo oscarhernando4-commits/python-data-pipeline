@@ -2763,3 +2763,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-38.41%)`, `2025-05-21 (-22.11%)`, `2025-03-02 (-20.14%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: BIGTIMEUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-04-10` hasta `2026-08-15` (493 Días de Historial)
+- 💵 **Precio Actual:** `$0.0054 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.0919 USD` (`2025-05-12`) | Distancia: `-94.08%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0047 USD` (`2026-08-11`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-04-16 (+24.1%)`, `2025-04-10 (+16.9%)`, `2025-06-22 (+12.44%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-30.2%)`, `2026-02-04 (-18.67%)`, `2025-05-29 (-13.29%)`
+
+---
