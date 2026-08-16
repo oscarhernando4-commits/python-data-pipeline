@@ -882,34 +882,24 @@ def quick_position_heartbeat():
         current_phase = pos.get("phase", 1)
         
         # ═══════════════════════════════════════════════════════════════
-        # 🚀 ESCALERA CUÁNTICA DE MÁXIMA GANANCIA (OBJETIVO >= +1.50% A +10.00%):
-        # FASE 1: Antes de +1.00% -> SL -2.50% (Amplio espacio para desarrollo del impulso).
-        # FASE 2: Al tocar +1.00% -> SL sube a 0.00% (Break-Even, Cero Riesgo).
-        # FASE 3: Al tocar +2.00% -> SL sube a +1.00% NETO (Asegura +1.00% Mínimo).
-        # FASE 4: Al tocar +3.00% -> Trailing Cima - 0.60% (Cosecha Grande).
-        # FASE 5: Al tocar +5.00% Ballena -> Trailing Cima - 0.80% (Mega-Pump).
+        # 🎯 ESCALERA CUÁNTICA DINÁMICA PERSONALIZADA:
+        # FASE 1: Antes de +0.25% -> SL -1.50% (Colchón de seguridad inicial).
+        # FASE 2: +0.25% a +0.50% -> SL sube a +0.25% NETO (Comisión y ganancia verde asegurada).
+        # FASE 3: +0.50% a +2.00% -> Piso = Cima - 0.30% (mínimo +0.25% garantizado).
+        # FASE 4: Mayor a +2.00%  -> Piso = Cima - 0.35% (Cosecha en la Cima).
         # ═══════════════════════════════════════════════════════════════
-        is_high_volume_runner = pos.get("vol_surge", 1.0) >= 2.5
-        
-        if highest_pnl_pct < 1.00:
-            sl_pct = -2.50
+        if highest_pnl_pct < 0.25:
+            sl_pct = -1.50
             new_phase = 1
-        elif highest_pnl_pct < 2.00:
-            sl_pct = 0.00   # Break-Even al tocar +1.00% (CERO pérdida)
+        elif highest_pnl_pct < 0.50:
+            sl_pct = 0.25   # Fase 2: Al tocar +0.25%, asegura +0.25% NETO
             new_phase = 2
-        elif highest_pnl_pct < 3.00:
-            sl_pct = 1.00   # Fase 3: Al tocar +2.00%, asegura +1.00% NETO
+        elif highest_pnl_pct < 2.00:
+            sl_pct = max(0.25, round(highest_pnl_pct - 0.30, 2))  # Fase 3: Cima - 0.30%
             new_phase = 3
-        elif highest_pnl_pct < 5.00:
-            sl_pct = round(highest_pnl_pct - 0.60, 2)  # Fase 4: Trailing Cima - 0.60%
-            new_phase = 4
         else:
-            if is_high_volume_runner:
-                sl_pct = round(highest_pnl_pct - 0.80, 2)  # Fase 5: Mega-Pump
-                new_phase = 5
-            else:
-                sl_pct = round(highest_pnl_pct - 0.60, 2)  # Fase 4: Cosecha Grande
-                new_phase = 4
+            sl_pct = round(highest_pnl_pct - 0.35, 2)  # Fase 4: Cima - 0.35% en > +2.00%
+            new_phase = 4
             
         # Update if changed
         if highest_price > pos.get("highest_price", entry) or new_phase > current_phase:
@@ -923,8 +913,8 @@ def quick_position_heartbeat():
         exit_reason = f"Stop/Trailing ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
         
         # SNIPER MEJORA: Detección de Agotamiento de Mecha en Cima (Wick Exhaustion Sniper)
-        # Si estamos en Fase 3/4 (Pico >= +1.5%) y el precio empieza a rechazar la cima (caída de micro-mecha >= 0.35%)
-        if not should_exit and new_phase >= 4 and highest_pnl_pct >= 3.00 and (highest_pnl_pct - current_pnl_pct) >= 0.50:
+        # Si estamos en Fase 3/4 (Pico >= +0.80%) y el precio retrocede >= 0.30% desde la cima
+        if not should_exit and new_phase >= 3 and highest_pnl_pct >= 0.80 and (highest_pnl_pct - current_pnl_pct) >= 0.30:
             should_exit = True
             exit_reason = f"🎯 SNIPER MECHA CIMA (Pico +{highest_pnl_pct:.2f}% -> Venta en {current_pnl_pct:+.2f}%)"
             
@@ -1030,44 +1020,30 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         import orderbook_analyzer
         
         # ═══════════════════════════════════════════════════════════════
-        # 🚀 ESCALERA CUÁNTICA DE ALTO RENDIMIENTO (OBJETIVO >= +1.00% A +5.00%):
-        # FASE 1: Antes de +0.70% -> SL -2.00% (Entrada y espacio para respirar).
-        # FASE 1.5: Al tocar +0.70% -> SL sube a 0.00% (Break-Even exacto).
-        # FASE 2: Al tocar +1.00% -> SL sube a +0.50% NETO (Asegura +0.50% Mínimo).
-        # FASE 3: Al tocar +1.50% -> SL sube a +1.00% NETO (Asegura +1.00% Mínimo).
-        # FASE 4: Superior a +2.00% -> Trailing Cima - 0.40% (Cosecha en +1.60% a +5.00%).
-        # FASE 5: Superior a +3.00% Ballena -> Trailing Cima - 0.50% (Mega-Pump).
+        # 🎯 ESCALERA CUÁNTICA DINÁMICA PERSONALIZADA:
+        # FASE 1: Antes de +0.25% -> SL -1.50% (Colchón inicial).
+        # FASE 2: +0.25% a +0.50% -> SL +0.25% NETO (Comisión y ganancia cubierta).
+        # FASE 3: +0.50% a +2.00% -> Piso = Cima - 0.30% (mínimo +0.25%).
+        # FASE 4: Mayor a +2.00%  -> Piso = Cima - 0.35% (Cosecha en la Cima).
         # ═══════════════════════════════════════════════════════════════
-        is_high_volume_runner = state.get("position", {}).get("vol_surge", 1.0) >= 2.5
-        
-        if highest_pnl_pct >= 5.00:
-            if is_high_volume_runner:
-                phase = 5
-                trailing_distance = 0.80
-                trailing_floor_pct = round(highest_pnl_pct - trailing_distance, 2)
-                phase_msg = f"🐳 FASE 5 (BALLENA MEGA-PUMP): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - 0.80%)"
-            else:
-                phase = 4
-                trailing_distance = 0.60
-                trailing_floor_pct = round(highest_pnl_pct - trailing_distance, 2)
-                phase_msg = f"💎 FASE 4 (COSECHA GRANDE): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - 0.60%)"
-        elif highest_pnl_pct >= 3.00:
+        if highest_pnl_pct >= 2.00:
             phase = 4
-            trailing_distance = 0.60
+            trailing_distance = 0.35
             trailing_floor_pct = round(highest_pnl_pct - trailing_distance, 2)
-            phase_msg = f"💎 FASE 4 (COSECHA GRANDE): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - 0.60%)"
-        elif highest_pnl_pct >= 2.00:
+            phase_msg = f"💎 FASE 4 (> +2.00% COSECHA EN CIMA): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - 0.35%)"
+        elif highest_pnl_pct >= 0.50:
             phase = 3
-            trailing_floor_pct = 1.00
-            phase_msg = f"🛡️ FASE 3 (ALTO RENDIMIENTO): Piso +1.00% NETO (Cima +{highest_pnl_pct:.2f}% | Asegurado +1.00% Mínimo)"
-        elif highest_pnl_pct >= 1.00:
+            trailing_distance = 0.30
+            trailing_floor_pct = max(0.25, round(highest_pnl_pct - trailing_distance, 2))
+            phase_msg = f"🛡️ FASE 3 (+0.50% A +2.00%): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - 0.30%)"
+        elif highest_pnl_pct >= 0.25:
             phase = 2
-            trailing_floor_pct = 0.00
-            phase_msg = f"🔒 FASE 2 (BREAK-EVEN): Piso 0.00% (Cima +{highest_pnl_pct:.2f}% | Cero Pérdida Garantizada)"
+            trailing_floor_pct = 0.25
+            phase_msg = f"🔒 FASE 2 (+0.25% A +0.50%): Piso +0.25% NETO (Cima +{highest_pnl_pct:.2f}% | Comisión Cubierta)"
         else:
             phase = 1
-            trailing_floor_pct = -2.50
-            phase_msg = f"⚡ FASE 1 (ENTRADA Y DESARROLLO): SL -2.50% (Espacio Amplio para Impulso)"
+            trailing_floor_pct = -1.50
+            phase_msg = f"⚡ FASE 1 (ENTRADA Y DESARROLLO): SL -1.50% (Colchón de Seguridad Inicial)"
 
         # ESCUDO 1: BTC Flash Crash Circuit Breaker
         btc_price_now = get_symbol_price("BTCUSDT", is_futures=False)
