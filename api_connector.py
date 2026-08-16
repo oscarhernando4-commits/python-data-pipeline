@@ -338,11 +338,11 @@ def get_symbol_price(symbol, is_futures=False):
         
     return None
 
-def get_recent_kline_high(symbol, limit=5):
+def get_recent_kline_high(symbol, limit=5, start_time_ms=None):
     """
-    Fetches the highest price peak (High wick) from recent 1-minute klines.
+    Fetches the highest price peak (High wick) from recent 1-minute klines AFTER position entry.
     Works 100% seamlessly in both Local Mode (direct connection) and Cloud Mode (with proxy fallback).
-    Ensures that 1-second price spikes are permanently captured without missing any profits.
+    Ensures that 1-second price spikes are captured only during the active trade lifecycle.
     """
     mirrors = [
         "https://api.binance.com/api/v3/klines",
@@ -351,6 +351,8 @@ def get_recent_kline_high(symbol, limit=5):
         "https://api3.binance.com/api/v3/klines"
     ]
     params = {"symbol": symbol, "interval": "1m", "limit": limit}
+    if start_time_ms and start_time_ms > 0:
+        params["startTime"] = max(0, int(start_time_ms) - 60000)
     
     # 1. Try direct connection first (fastest for local and standard cloud)
     for url in mirrors:
@@ -359,6 +361,11 @@ def get_recent_kline_high(symbol, limit=5):
             if res.status_code == 200:
                 k_data = res.json()
                 if isinstance(k_data, list) and len(k_data) > 0:
+                    if start_time_ms and start_time_ms > 0:
+                        filtered = [k for k in k_data if int(k[0]) >= (int(start_time_ms) - 60000)]
+                        if filtered:
+                            return max([float(k[2]) for k in filtered])
+                        return 0.0
                     return max([float(k[2]) for k in k_data])
         except Exception:
             continue
@@ -369,6 +376,11 @@ def get_recent_kline_high(symbol, limit=5):
         if res.status_code == 200:
             k_data = res.json()
             if isinstance(k_data, list) and len(k_data) > 0:
+                if start_time_ms and start_time_ms > 0:
+                    filtered = [k for k in k_data if int(k[0]) >= (int(start_time_ms) - 60000)]
+                    if filtered:
+                        return max([float(k[2]) for k in filtered])
+                    return 0.0
                 return max([float(k[2]) for k in k_data])
     except Exception:
         pass
@@ -639,7 +651,8 @@ def diagnose_full_spot_wallet():
                 "cost_usd": final_cost,
                 "side": "LONG",
                 "phase": 1,
-                "break_even": False
+                "break_even": False,
+                "entry_time_ms": int(time.time() * 1000)
             }
             price_fmt = lambda p: f"${p:.8f}" if p < 0.01 else f"${p:.4f}"
             state["status"] = f"🔵 En Vivo LONG ({primary['symbol']} @ {price_fmt(final_entry)})"
@@ -878,27 +891,28 @@ def quick_position_heartbeat():
         if not current_price or current_price <= 0:
             return None
             
-        # 🚀 DETECTOR CUÁNTICO DE MECHAS: Consulta velas de 1m (Local + Nube) para registrar picos de milisegundos
-        kline_high = get_recent_kline_high(sym, limit=5)
-        highest_price = max(pos.get("highest_price", entry), current_price, kline_high)
+        # 🚀 DETECTOR CUÁNTICO DE MECHAS: Consulta velas de 1m (Local + Nube) solo DESPUÉS de la entrada
+        entry_time_ms = pos.get("entry_time_ms", 0)
+        kline_high = get_recent_kline_high(sym, limit=5, start_time_ms=entry_time_ms)
+        highest_price = max(pos.get("highest_price", entry), current_price, kline_high if kline_high > 0 else current_price)
         highest_pnl_pct = ((highest_price - entry) / entry) * 100.0
         current_pnl_pct = ((current_price - entry) / entry) * 100.0
         current_phase = pos.get("phase", 1)
         
         # ═══════════════════════════════════════════════════════════════
-        # 🎯 SISTEMA ULTRA-EFICIENTE DE 3 FASES CUÁNTICAS:
-        # FASE 1: Antes de +0.30% -> SL -1.50% (Colchón de arranque en soporte).
-        # FASE 2: +0.30% a +0.50% -> SL sube a +0.30% NETO (Candado verde asegurado).
-        # FASE 3: Superior a +0.50% -> Trailing Stop = CIMA - 0.30% (Cosecha dinámica continua).
+        # 🎯 SISTEMA DE SEGUROS DINÁMICOS CON HOLGURA DE RESPIRACIÓN:
+        # FASE 1 (< +0.30%): SL -1.50% (Colchón de inicio).
+        # FASE 2 (+0.30% a +0.60%): Piso Dinámico = max(+0.15% NETO, Pico - 0.25%) -> ¡0.25% de aire para respirar!
+        # FASE 3 (> +0.60%): Trailing Dinámico = CIMA - 0.25% (Piso mín +0.35% NETO) -> Cosecha rallies de +1% a +5%.
         # ═══════════════════════════════════════════════════════════════
         if highest_pnl_pct < 0.30:
             sl_pct = -1.50
             new_phase = 1
-        elif highest_pnl_pct < 0.50:
-            sl_pct = 0.30   # Fase 2: Al tocar +0.30%, asegura +0.30% NETO
+        elif highest_pnl_pct < 0.60:
+            sl_pct = max(0.15, round(highest_pnl_pct - 0.25, 2))   # Fase 2: Seguro dinámico con holgura de 0.25%
             new_phase = 2
         else:
-            sl_pct = max(0.30, round(highest_pnl_pct - 0.30, 2))  # Fase 3: Trailing Cima - 0.30%
+            sl_pct = max(0.35, round(highest_pnl_pct - 0.25, 2))  # Fase 3: Trailing Cima - 0.25%
             new_phase = 3
             
         # Update if changed
@@ -1300,7 +1314,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         "break_even": False,
                         "highest_price": actual_entry_price,
                         "phase": 1,
-                        "vol_surge": mtf_res.get("vol_surge_2m", 1.0) if 'mtf_res' in locals() else 1.0
+                        "vol_surge": mtf_res.get("vol_surge_2m", 1.0) if 'mtf_res' in locals() else 1.0,
+                        "entry_time_ms": int(time.time() * 1000)
                     }
                     state["status"] = f"🔵 En Vivo LONG ({best_symbol} @ ${actual_entry_price:.4f})"
                     state["_cached_usdt_free"] = 0.0
