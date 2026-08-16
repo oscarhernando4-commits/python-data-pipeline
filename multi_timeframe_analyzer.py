@@ -688,12 +688,15 @@ def analyze_multi_timeframe_candles(symbol):
         elif dist_15m_pct <= 0.40 and not is_explosive_breakout:
             is_overextended_15m = True
             overextension_reason = f"Techo 15M (Precio a solo {dist_15m_pct}% del máximo de 15m ${high_15m_recent:.4f}, margen exigido >= 0.40%). Exige compra en el suelo."
-        elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > 4.0:
+        elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > 1.50:
             is_overextended_15m = True
-            overextension_reason = f"Vela de 15m sobre-extendida en la cima (+{((close_15m - open_15m) / open_15m) * 100.0:.2f}%)"
-        elif dist_from_15m_ma7_pct > 2.5:
+            overextension_reason = f"Vela de 15m sobre-extendida en la cima (+{((close_15m - open_15m) / open_15m) * 100.0:.2f}% > 1.50%). Exige entrada en el nacimiento de la vela."
+        elif dist_from_15m_ma7_pct > 1.10:
             is_overextended_15m = True
-            overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct}% sobre MA7). Exige ruptura fresca <= 2.5%"
+            overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct}% sobre MA7). Exige compra en el suelo de la base (distancia <= 1.10%)"
+        elif rsi_15m > 64.0 and not is_explosive_breakout:
+            is_overextended_15m = True
+            overextension_reason = f"RSI 15m sobrecomprado ({rsi_15m:.1f} > 64.0). Exige entrada en zona de lanzamiento (RSI <= 64.0)."
         elif (not price_above_15m_ma7 and not price_above_15m_ma25) and not (is_oversold_bounce_candidate or is_yellow_arrow_pivot or is_bullish_divergence or is_ma7_above_ma25_upward):
             is_overextended_15m = True
             overextension_reason = f"Tendencia bajista sin estructura de rebote en el suelo"

@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 4445,
+    "total_trades": 4446,
     "wins": 786,
-    "losses": 3659,
+    "losses": 3660,
     "win_rate_pct": 17.68,
-    "total_pnl_usd": 236212.84496045392
+    "total_pnl_usd": 236212.59496045392
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on HOLOUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on NEARUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on TOWNSUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on HOLOUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on AIGENSYNUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MUBARAKUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ALICEUSDT)",
-      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AIGENSYNUSDT)"
+      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AIGENSYNUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on HOLOUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TREEUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-14 11:12:52",
-      "account_id": "SIM-067",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "STORJUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0429,
-      "exit_price": 0.0434,
-      "pnl_usd": -0.23,
-      "result": "LOSS",
-      "notes": "Hit SL on STORJUSDT (-$0.23). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 45.66,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-14 11:12:52",
       "account_id": "SIM-094",
@@ -8388,6 +8371,23 @@
       "result": "WIN",
       "notes": "Real Money Trade closed with 0.28%",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-16 10:18:40",
+      "account_id": "SIM-063",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "HOLOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0567,
+      "exit_price": 0.0573,
+      "pnl_usd": -0.25,
+      "result": "LOSS",
+      "notes": "Hit SL on HOLOUSDT (-$0.25). Re-Trading!",
+      "context": {
+        "score": 88,
+        "rsi_15m": 63.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
