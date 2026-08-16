@@ -2633,3 +2633,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-23.0%)`, `2024-04-12 (-22.95%)`, `2024-12-08 (-18.46%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: DOLOUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-08-26` hasta `2026-08-14` (354 Días de Historial)
+- 💵 **Precio Actual:** `$0.0214 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.3719 USD` (`2025-08-30`) | Distancia: `-94.24%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0199 USD` (`2026-07-28`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-01-11 (+73.91%)`, `2025-08-29 (+36.01%)`, `2025-12-25 (+20.83%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-08-31 (-34.23%)`, `2025-10-09 (-31.52%)`, `2026-01-12 (-18.62%)`
+
+---
