@@ -947,6 +947,9 @@ def quick_position_heartbeat():
             print(f"🔄 Venta Mercado Ejecutada: {sell_res}")
             state["position"] = None
             state["status"] = f"🏁 Salida en Vivo ({sym} PnL: {current_pnl_pct:+.2f}%)"
+            state["_last_closed_symbol"] = sym
+            state["_last_closed_time"] = time.time()
+            state["_last_exit_price"] = current_price
             save_real_account_state(state)
             try:
                 diagnose_full_spot_wallet()
@@ -1194,6 +1197,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         
                         state["position"] = None
                         state["status"] = "🟦 Buscando Entrada A+"
+                        state["_last_closed_symbol"] = active_symbol
+                        state["_last_closed_time"] = time.time()
+                        state["_last_exit_price"] = active_current_price
                         print(f"✅ LONG cerrado exitosamente: {res_type} ({pnl_pct:+.2f}% | ${pnl_usd:+.2f})")
                     else:
                         print(f"⚠️ Spot SELL rejected: {res_json}")
@@ -1229,10 +1235,22 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         is_stable = False
         if best_symbol:
             sym_clean = best_symbol.replace("USDT", "")
-            if sym_clean in stablecoins_blacklist or best_symbol in stablecoins_blacklist:
+            
+            # 🛡️ FILTRO DE COOLDOWN Y ANTI-FATIGA DE RE-ENTRADA (Evita comprar el techo del mismo activo tras salir)
+            last_closed_sym = state.get("_last_closed_symbol")
+            last_closed_time = state.get("_last_closed_time", 0)
+            last_exit_price = state.get("_last_exit_price", 0.0)
+            time_since_last_exit = time.time() - last_closed_time
+            
+            if best_symbol == last_closed_sym and time_since_last_exit < 1200: # 20 minutos de cooldown
+                if current_price > 0 and last_exit_price > 0 and current_price >= (last_exit_price * 0.985):
+                    is_stable = True
+                    print(f"⛔ Compra rechazada: {best_symbol} bloqueado por COOLDOWN DE RE-ENTRADA ({time_since_last_exit/60:.1f}m < 20m). Evitando sobre-operar el mismo activo en la cima.")
+            
+            if not is_stable and (sym_clean in stablecoins_blacklist or best_symbol in stablecoins_blacklist):
                 is_stable = True
                 print(f"⛔ Compra rechazada: {best_symbol} es una stablecoin / activo no volátil.")
-            else:
+            elif not is_stable:
                 import multi_timeframe_analyzer
                 mtf_res = multi_timeframe_analyzer.analyze_multi_timeframe_candles(best_symbol)
                 tf_align = mtf_res.get("timeframe_alignment", {})
