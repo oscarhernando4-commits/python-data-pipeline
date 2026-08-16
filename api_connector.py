@@ -882,37 +882,34 @@ def quick_position_heartbeat():
         current_phase = pos.get("phase", 1)
         
         # ═══════════════════════════════════════════════════════════════
-        # ESTRUCTURA MAESTRA DE 5 FASES CUÁNTICAS DEFINITIVAS:
-        # FASE 1: Antes de +0.35% -> SL -2.00% (Entrada).
-        #         Al tocar +0.35% -> SL sube a -0.50% (Mitigación temprana, corta 75% riesgo).
-        # FASE 2: Al tocar +0.50% -> SL sube a +0.25% (Seguridad Verde, comisión cubierta).
-        # FASE 3: Entre +0.50% y +2.00% -> Piso = Cima - 0.30% (mínimo +0.25%, Construcción).
-        # FASE 4: Superior a +2.00% Normal -> Piso = Cima - 0.25% (Cosecha 90%+ en punta).
-        # FASE 5: Superior a +2.00% Ballena (VolSurge >= 2.5x) -> Piso = Cima - 0.35% (Mega-Pump).
+        # 🚀 ESCALERA CUÁNTICA DE ALTO RENDIMIENTO (OBJETIVO >= +1.00% A +5.00%):
+        # FASE 1: Antes de +0.70% -> SL -2.00% (Entrada y espacio para respirar).
+        # FASE 1.5: Al tocar +0.70% -> SL sube a 0.00% (Break-Even exacto, Cero Riesgo).
+        # FASE 2: Al tocar +1.00% -> SL sube a +0.50% NETO (Asegura +0.50% Mínimo).
+        # FASE 3: Al tocar +1.50% -> SL sube a +1.00% NETO (Asegura +1.00% Mínimo).
+        # FASE 4: Superior a +2.00% -> Trailing Cima - 0.40% (Cosecha en +1.60% a +5.00%).
+        # FASE 5: Superior a +3.00% Ballena -> Trailing Cima - 0.50% (Mega-Pump).
         # ═══════════════════════════════════════════════════════════════
         is_high_volume_runner = pos.get("vol_surge", 1.0) >= 2.5
         
-        if highest_pnl_pct < 0.35:
+        if highest_pnl_pct < 0.70:
             sl_pct = -2.00
             new_phase = 1
-        elif highest_pnl_pct < 0.42:
-            sl_pct = -0.50  # Mitigación temprana (corta 75% riesgo)
+        elif highest_pnl_pct < 1.00:
+            sl_pct = 0.00   # Break-Even al rozar +0.70% (CERO pérdida)
             new_phase = 1
-        elif highest_pnl_pct < 0.50:
-            sl_pct = 0.00   # Break-Even exacto (CERO pérdida al rozar +0.42% a +0.49%)
-            new_phase = 1
-        elif highest_pnl_pct < 0.75:
-            sl_pct = 0.25   # Fase 2 (Seguridad Verde, comisión cubierta)
+        elif highest_pnl_pct < 1.50:
+            sl_pct = 0.50   # Fase 2: Al tocar +1.00%, asegura +0.50% NETO
             new_phase = 2
         elif highest_pnl_pct < 2.00:
-            sl_pct = max(0.40, round(highest_pnl_pct - 0.30, 2))  # Fase 2.5 / Fase 3 (Piso asegurado mínimo +0.40%)
+            sl_pct = 1.00   # Fase 3: Al tocar +1.50%, asegura +1.00% NETO
             new_phase = 3
         else:
-            if is_high_volume_runner:
-                sl_pct = round(highest_pnl_pct - 0.35, 2)
+            if is_high_volume_runner and highest_pnl_pct >= 3.00:
+                sl_pct = round(highest_pnl_pct - 0.50, 2)
                 new_phase = 5
             else:
-                sl_pct = round(highest_pnl_pct - 0.25, 2)
+                sl_pct = round(highest_pnl_pct - 0.40, 2)  # Fase 4: Cosecha en la cima (mínimo +1.60%)
                 new_phase = 4
             
         # Update if changed
@@ -927,8 +924,8 @@ def quick_position_heartbeat():
         exit_reason = f"Stop/Trailing ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
         
         # SNIPER MEJORA: Detección de Agotamiento de Mecha en Cima (Wick Exhaustion Sniper)
-        # Si estamos en Fase 3 (Pico >= +1.0%) y el precio empieza a rechazar la cima (caída de micro-mecha >= 0.18%)
-        if not should_exit and new_phase >= 3 and highest_pnl_pct >= 1.20 and (highest_pnl_pct - current_pnl_pct) >= 0.18:
+        # Si estamos en Fase 3/4 (Pico >= +1.5%) y el precio empieza a rechazar la cima (caída de micro-mecha >= 0.35%)
+        if not should_exit and new_phase >= 3 and highest_pnl_pct >= 1.50 and (highest_pnl_pct - current_pnl_pct) >= 0.35:
             should_exit = True
             exit_reason = f"🎯 SNIPER MECHA CIMA (Pico +{highest_pnl_pct:.2f}% -> Venta en {current_pnl_pct:+.2f}%)"
             
@@ -1048,37 +1045,32 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         is_high_volume_runner = state.get("position", {}).get("vol_surge", 1.0) >= 2.5
         
         if highest_pnl_pct >= 2.00:
-            if is_high_volume_runner:
+            if is_high_volume_runner and highest_pnl_pct >= 3.00:
                 phase = 5
-                trailing_distance = 0.35
+                trailing_distance = 0.50
                 trailing_floor_pct = round(highest_pnl_pct - trailing_distance, 2)
-                phase_msg = f"🐳 FASE 5 (BALLENA SUPER-PUMP): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - 0.35%)"
+                phase_msg = f"🐳 FASE 5 (BALLENA SUPER-PUMP): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - 0.50%)"
             else:
                 phase = 4
-                trailing_distance = 0.25
+                trailing_distance = 0.40
                 trailing_floor_pct = round(highest_pnl_pct - trailing_distance, 2)
-                phase_msg = f"💎 FASE 4 (COSECHA NORMAL): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - 0.25%)"
-        elif highest_pnl_pct >= 0.75:
+                phase_msg = f"💎 FASE 4 (COSECHA NORMAL): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - 0.40%)"
+        elif highest_pnl_pct >= 1.50:
             phase = 3
-            trailing_distance = 0.30
-            trailing_floor_pct = max(0.40, round(highest_pnl_pct - trailing_distance, 2))
-            phase_msg = f"🛡️ FASE 2.5 (CONSTRUCCIÓN RÁPIDA): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% | Asegurado +0.40% Mínimo)"
-        elif highest_pnl_pct >= 0.50:
+            trailing_floor_pct = 1.00
+            phase_msg = f"🛡️ FASE 3 (ALTO RENDIMIENTO): Piso +1.00% NETO (Cima +{highest_pnl_pct:.2f}% | Asegurado +1.00% Mínimo)"
+        elif highest_pnl_pct >= 1.00:
             phase = 2
-            trailing_floor_pct = 0.25
-            phase_msg = f"🔒 FASE 2 (SEGURIDAD VERDE): Piso +0.25% (Cero Riesgo | Comisión Cubierta)"
-        elif highest_pnl_pct >= 0.42:
+            trailing_floor_pct = 0.50
+            phase_msg = f"🔒 FASE 2 (SEGURIDAD VERDE +0.50%): Piso +0.50% NETO (Cima +{highest_pnl_pct:.2f}%)"
+        elif highest_pnl_pct >= 0.70:
             phase = 1
             trailing_floor_pct = 0.00
             phase_msg = f"⚡ FASE 1 (BREAK-EVEN CANDADO): SL 0.00% (Pico +{highest_pnl_pct:.2f}% | Cero Pérdida Garantizada)"
-        elif highest_pnl_pct >= 0.35:
-            phase = 1
-            trailing_floor_pct = -0.50
-            phase_msg = f"⚡ FASE 1 (MITIGACIÓN TEMPRANA): SL -0.50% (Pico +{highest_pnl_pct:.2f}% | Riesgo Cortado 75%)"
         else:
             phase = 1
             trailing_floor_pct = -2.00
-            phase_msg = f"⚡ FASE 1 (ENTRADA): SL -2.00% (Protección Estricta de Capital)"
+            phase_msg = f"⚡ FASE 1 (ENTRADA Y DESARROLLO): SL -2.00% (Protección Estricta de Capital)"
 
         # ESCUDO 1: BTC Flash Crash Circuit Breaker
         btc_price_now = get_symbol_price("BTCUSDT", is_futures=False)
