@@ -419,51 +419,70 @@ def run_infinite_trading_matrix_cycle():
 
         position = acc.get("position", None)
 
-        # 1. EVALUATE LIVE OPEN POSITION
+        # 1. EVALUATE LIVE OPEN POSITION (EXACT 3-PHASE DYNAMIC PARITY WITH REAL ACCOUNT)
         if position is not None:
             symbol = acc["symbol"]
             analysis = symbol_analysis_map.get(symbol)
             curr_price = analysis["price"] if analysis else position["entry_price"]
             
             entry_p = position["entry_price"]
-            tp_min_price = position.get("tp_min", position.get("tp", entry_p * 1.02))
-            sl_price = position["sl"]
             side = position.get("side", "LONG")
             
-            is_win = False
-            is_loss = False
-            unr_pct = 0.0
-            
+            # 🚀 3-PHASE DYNAMIC LADDER & HIGHEST PNL TRACKING
             if side == "LONG":
-                is_win = curr_price >= tp_min_price
-                # Simulate Mark Price wicks hitting SL 0.1% earlier
-                is_loss = curr_price <= (sl_price * 1.001)
+                highest_price = max(position.get("highest_price", entry_p), curr_price)
+                position["highest_price"] = highest_price
+                highest_pnl_pct = ((highest_price - entry_p) / entry_p) * 100.0
                 unr_pct = ((curr_price - entry_p) / entry_p) * 100.0
-            else: # SHORT
-                is_win = curr_price <= tp_min_price
-                is_loss = curr_price >= (sl_price * 0.999)
+            else:
+                lowest_price = min(position.get("lowest_price", entry_p), curr_price)
+                position["lowest_price"] = lowest_price
+                highest_pnl_pct = ((entry_p - lowest_price) / entry_p) * 100.0
                 unr_pct = ((entry_p - curr_price) / entry_p) * 100.0
-            
-            invested = curr_bal * 0.2  # 20% position size for fee calculation
-            friction_cost = invested * 0.001 # 0.1% round-trip fees + slippage on invested portion
-            
-            # WIN CASE: Hit Take-Profit
-            if is_win:
-                gain_ratio = max(unr_pct / 100.0, 0.02)
-                invested = curr_bal * 0.2  # Only 20% of balance is invested per position
-                pnl = round((invested * gain_ratio) - friction_cost, 2)
                 
-                acc["current_balance"] += pnl
-                acc["pnl_usd"] += pnl
-                acc["wins"] += 1
+            atr_pct = analysis.get("tech", {}).get("mtf_analysis", {}).get("atr_pct_15m", 0.30) if analysis else 0.30
+            
+            # 🎯 3 FASES CUÁNTICAS DINÁMICAS (Idéntico a Cuenta Real):
+            if highest_pnl_pct < 0.30:
+                sl_pct = -1.50
+                phase = 1
+            elif highest_pnl_pct < 0.60:
+                sl_pct = max(0.15, round(highest_pnl_pct - 0.25, 2))  # Fase 2: +0.15% NETO y 0.25% de holgura
+                phase = 2
+            else:
+                dynamic_trail = max(0.35, round(atr_pct * 1.2, 2))   # Fase 3: Trailing Adaptativo ATR
+                sl_pct = max(0.35, round(highest_pnl_pct - dynamic_trail, 2))
+                phase = 3
+                
+            position["phase"] = phase
+            should_close = unr_pct <= sl_pct
+            
+            invested = curr_bal * 0.20  # 20% position size
+            bnb_fee = invested * 0.00075 * 2  # 0.075% BNB discount fee (entrada + salida)
+            
+            if should_close:
+                pnl_ratio = unr_pct / 100.0
+                net_pnl = round((invested * pnl_ratio) - bnb_fee, 2)
+                acc["current_balance"] += net_pnl
+                acc["pnl_usd"] += net_pnl
                 acc["trades_count"] += 1
-                acc["consecutive_losses"] = 0
-                acc["last_result"] = f"🟢 Ganó +${pnl:.2f}"
                 acc["last_trade_time"] = now_br
                 acc["position"] = None
-                acc["current_level"] = acc.get("current_level", 1) + 1
                 acc["status"] = "BUSCANDO_OPORTUNIDAD"
                 
+                is_win = net_pnl >= 0.0
+                if is_win:
+                    acc["wins"] += 1
+                    acc["consecutive_losses"] = 0
+                    acc["last_result"] = f"🟢 Ganó +${net_pnl:.2f} (Fase {phase})"
+                    acc["current_level"] = acc.get("current_level", 1) + 1
+                    res_type = "WIN"
+                else:
+                    acc["losses"] += 1
+                    acc["consecutive_losses"] = acc.get("consecutive_losses", 0) + 1
+                    acc["last_result"] = f"🔴 Perdió -${abs(net_pnl):.2f}"
+                    res_type = "LOSS"
+                    
                 ctx = {}
                 if analysis:
                     ctx = {
@@ -474,54 +493,16 @@ def run_infinite_trading_matrix_cycle():
                     
                 learning_engine.record_trade_outcome(
                     symbol=symbol, side=side, entry_price=entry_p, exit_price=curr_price,
-                    pnl_usd=pnl, result_type="WIN", notes=f"Win on {symbol} (+${pnl:.2f} net) -> Level {acc['current_level']} Re-Trading Started!",
-                    account_id=acc.get("account_id", "Desconocida"), group_name=acc.get("group_name", "Sin Grupo"),
-                    context=ctx
-                )
-
-            # LOSS CASE: Hit Stop-Loss (-1.0%)
-            elif is_loss:
-                invested = curr_bal * 0.2  # Only 20% of balance is invested per position
-                # Calculate actual loss based on price distance, not fixed 1%
-                actual_loss_pct = abs(unr_pct) / 100.0 if unr_pct < 0 else 0.002  # Break-even = ~0.2% loss (fees)
-                loss = round((invested * actual_loss_pct) + friction_cost, 2)
-                acc["current_balance"] -= loss
-                acc["pnl_usd"] -= loss
-                acc["losses"] += 1
-                acc["trades_count"] += 1
-                acc["consecutive_losses"] = acc.get("consecutive_losses", 0) + 1
-                acc["last_result"] = f"🔴 Perdió -${loss:.2f}"
-                acc["last_trade_time"] = now_br
-                acc["position"] = None
-                acc["status"] = "BUSCANDO_OPORTUNIDAD"
-                
-                ctx = {}
-                if analysis:
-                    ctx = {
-                        "score": analysis.get("score"),
-                        "rsi_15m": analysis.get("tech", {}).get("indicators", {}).get("rsi_15m"),
-                        "macro_trend_4h": analysis.get("tech", {}).get("macro_trend_4h")
-                    }
-                    
-                learning_engine.record_trade_outcome(
-                    symbol=symbol, side=side, entry_price=entry_p, exit_price=curr_price,
-                    pnl_usd=-loss, result_type="LOSS", notes=f"Hit SL on {symbol} (-${loss:.2f}). Re-Trading!",
-                    account_id=acc.get("account_id", "Desconocida"), group_name=acc.get("group_name", "Sin Grupo"),
+                    pnl_usd=net_pnl, result_type=res_type,
+                    notes=f"{res_type} on {symbol} (PnL: {unr_pct:+.2f}%, Net: ${net_pnl:+.2f} Fase {phase})",
+                    account_id=acc.get("account_id", "Desconocida"),
+                    group_name=acc.get("group_name", "Sin Grupo"),
                     context=ctx
                 )
             else:
-                # Trailing Stop: Move SL to Break-Even (+0.2%) once profit reaches +1.0%
-                if unr_pct >= 1.0:
-                    if side == "LONG" and position.get("sl", 0) < entry_p:
-                        position["sl"] = entry_p * 1.002
-                        acc["last_result"] = "🛡️ Protegida (Break-Even)"
-                    elif side == "SHORT" and position.get("sl", 999999) > entry_p:
-                        position["sl"] = entry_p * 0.998
-                        acc["last_result"] = "🛡️ Protegida (Break-Even)"
-                    
                 acc["last_trade_time"] = position.get("open_time_br", now_br)
-                is_be = (side == "LONG" and position.get("sl", 0) > entry_p) or (side == "SHORT" and position.get("sl", 999999) < entry_p)
-                acc["last_result"] = f"🔵 En Curso" if not is_be else "🛡️ Protegida (BE)"
+                phase_badge = "⚡ Fase 1" if phase == 1 else ("🔒 Fase 2" if phase == 2 else "💎 Fase 3")
+                acc["last_result"] = f"🔵 {phase_badge} ({unr_pct:+.2f}%)"
                 acc["status"] = f"EN_OPERACION_VIVO ({symbol} {side} {unr_pct:+.1f}%)"
 
         # 2. DYNAMIC MARKET ROTATION: EVALUATE STRATEGIC PROFILE
