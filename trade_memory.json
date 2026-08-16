@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 4491,
+    "total_trades": 4492,
     "wins": 800,
-    "losses": 3691,
+    "losses": 3692,
     "win_rate_pct": 17.81,
-    "total_pnl_usd": 236871.34213715384
+    "total_pnl_usd": 236871.07753715385
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-14 13:48:31",
-      "account_id": "SIM-040",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "GRAMUSDT",
-      "side": "LONG",
-      "entry_price": 1.332,
-      "exit_price": 1.319,
-      "pnl_usd": -0.21,
-      "result": "LOSS",
-      "notes": "Hit SL on GRAMUSDT (-$0.21). Re-Trading!",
-      "context": {
-        "score": 49,
-        "rsi_15m": 32.75,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-14 14:00:03",
       "account_id": "SIM-024",
@@ -8383,6 +8366,19 @@
       "pnl_usd": 0.03066000000000088,
       "result": "WIN",
       "notes": "Real Money Trade closed with 0.19%",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-16 15:08:17",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "ONTUSDT",
+      "side": "BUY",
+      "entry_price": 0.03975,
+      "exit_price": 0.03912,
+      "pnl_usd": -0.2645999999999994,
+      "result": "LOSS",
+      "notes": "Real Money Trade closed with -1.58%",
       "context": {}
     }
   ]

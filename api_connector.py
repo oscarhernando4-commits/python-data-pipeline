@@ -352,7 +352,7 @@ def get_recent_kline_high(symbol, limit=5, start_time_ms=None):
     ]
     params = {"symbol": symbol, "interval": "1m", "limit": limit}
     if start_time_ms and start_time_ms > 0:
-        params["startTime"] = max(0, int(start_time_ms) - 60000)
+        params["startTime"] = int(start_time_ms)
     
     # 1. Try direct connection first (fastest for local and standard cloud)
     for url in mirrors:
@@ -362,7 +362,7 @@ def get_recent_kline_high(symbol, limit=5, start_time_ms=None):
                 k_data = res.json()
                 if isinstance(k_data, list) and len(k_data) > 0:
                     if start_time_ms and start_time_ms > 0:
-                        filtered = [k for k in k_data if int(k[0]) >= (int(start_time_ms) - 60000)]
+                        filtered = [k for k in k_data if int(k[0]) >= int(start_time_ms)]
                         if filtered:
                             return max([float(k[2]) for k in filtered])
                         return 0.0
@@ -377,7 +377,7 @@ def get_recent_kline_high(symbol, limit=5, start_time_ms=None):
             k_data = res.json()
             if isinstance(k_data, list) and len(k_data) > 0:
                 if start_time_ms and start_time_ms > 0:
-                    filtered = [k for k in k_data if int(k[0]) >= (int(start_time_ms) - 60000)]
+                    filtered = [k for k in k_data if int(k[0]) >= int(start_time_ms)]
                     if filtered:
                         return max([float(k[2]) for k in filtered])
                     return 0.0
