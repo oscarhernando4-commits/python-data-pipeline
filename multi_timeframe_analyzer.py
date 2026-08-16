@@ -702,6 +702,9 @@ def analyze_multi_timeframe_candles(symbol):
         elif rsi_15m > 64.0 and not is_explosive_breakout:
             is_overextended_15m = True
             overextension_reason = f"RSI 15m sobrecomprado ({rsi_15m:.1f} > 64.0). Exige entrada en zona de lanzamiento (RSI <= 64.0)."
+        elif not (tf_1h_up or tf_4h_up or is_yellow_arrow_1h or is_yellow_arrow_4h or rsi_1h <= 55.0):
+            is_overextended_15m = True
+            overextension_reason = f"Macro 1H/4H en caída libre sin soporte (RSI 1H={rsi_1h:.1f}, 4H={rsi_4h:.1f}). Exige base macro."
         elif (not price_above_15m_ma7 and not price_above_15m_ma25) and not (is_oversold_bounce_candidate or is_yellow_arrow_pivot or is_bullish_divergence or is_ma7_above_ma25_upward):
             is_overextended_15m = True
             overextension_reason = f"Tendencia bajista sin estructura de rebote en el suelo"
@@ -777,6 +780,7 @@ def analyze_multi_timeframe_candles(symbol):
         "atr_15m": round(atr_15m, 6),
         "atr_pct_15m": atr_pct_15m,
         "elasticity_score": elasticity_score,
+        "dist_from_15m_ma7_pct": dist_from_15m_ma7_pct,
         "ma25_5m": round(ma25_5m, 6),
         "relative_strength_vs_btc": relative_strength,
         "is_alt_outperforming_btc": is_alt_outperforming_btc,

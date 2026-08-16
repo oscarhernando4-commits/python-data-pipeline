@@ -1252,30 +1252,30 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"⛔ Compra rechazada: {best_symbol} es una stablecoin / activo no volátil.")
             elif not is_stable:
                 import multi_timeframe_analyzer
-                mtf_res = multi_timeframe_analyzer.analyze_multi_timeframe_candles(best_symbol)
-                tf_align = mtf_res.get("timeframe_alignment", {})
-                if not mtf_res.get("is_valid_tradable_asset", True):
+                # 🏛️ MATRIZ DE CONFLUENCIA DE BASE EN 7 TIMEFRAMES (30s, 1m, 2m, 5m, 15m, 1h, 4h)
+                # REGLA SUPREMA: Prohibido entrar en micro-rebotes de 1m/2m si 15m, 1h o 4h están en tendencia bajista o fuera de la base.
+                tf_15m = tf_align.get("15m", "BEARISH")
+                tf_1h = tf_align.get("1h", "BEARISH")
+                tf_4h = tf_align.get("4h", "BEARISH")
+                tf_5m = tf_align.get("5m", "BEARISH")
+                tf_2m = tf_align.get("2m", "BEARISH")
+                
+                is_macro_base = (tf_1h == "BULLISH" or tf_4h == "BULLISH" or mtf_res.get("is_yellow_arrow_1h") or mtf_res.get("is_yellow_arrow_4h") or mtf_res.get("rsi_1h", 50) <= 55.0)
+                is_structural_15m_base = (tf_15m == "BULLISH" or mtf_res.get("is_yellow_arrow_pivot") or mtf_res.get("is_ma7_above_ma25_upward") or mtf_res.get("is_cetus_rocket_pattern"))
+                is_micro_ignition = (tf_5m == "BULLISH" or tf_2m == "BULLISH")
+                
+                if not is_macro_base:
                     is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por análisis histórico multi-temporal ({mtf_res.get('rejection_reason')}).")
-                elif tf_align.get("15m") != "BULLISH":
-                    # Fast Ground Trigger: If 5m or 2m is BULLISH + Healthy RSI < 70 + High AI Conviction / Score >= 65
-                    is_micro_momentum = (
-                        (tf_align.get("5m") == "BULLISH" or tf_align.get("2m") == "BULLISH") and 
-                        mtf_res.get("rsi_15m", 50) < 70.0 and 
-                        mtf_res.get("price_change_24h_pct", 0) >= -4.0 and
-                        (best_score >= 65 or best_confidence >= 70 or mtf_res.get("vol_surge_2m", 1.0) >= 1.2 or mtf_res.get("is_macd_bullish_cross", False) or mtf_res.get("is_pre_pump_signal", False) or mtf_res.get("is_yellow_arrow_pivot", False))
-                    )
-                    if not is_micro_momentum:
-                        is_stable = True
-                        print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de alineación alcista en 15m (Alignment: {tf_align}).")
-                    else:
-                        print(f"⚡ [DISPARO CUÁNTICO DE SUELO] {best_symbol} despegando en el suelo (RSI 15m={mtf_res.get('rsi_15m')}, VolSurge 2m={mtf_res.get('vol_surge_2m')}x, Conf={best_confidence}%). Entrada A+ autorizada.")
-                elif tf_align.get("5m") != "BULLISH" and best_score < 58:
+                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por Macro 1H/4H bajista sin soporte (1H: {tf_1h}, 4H: {tf_4h}, RSI 1H: {mtf_res.get('rsi_1h')}). Exige base macro.")
+                elif not is_structural_15m_base:
                     is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de alineación en 5m con Score < 58 (Score={best_score}, Alignment: {tf_align}).")
+                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de estructura en 15M (15M: {tf_15m}, RSI: {mtf_res.get('rsi_15m')}). Exige rebote o soporte en 15M.")
+                elif not is_micro_ignition:
+                    is_stable = True
+                    print(f"⛔ Compra rechazada: {best_symbol} en base pero esperando ignición verde en 2M/5M (2M: {tf_2m}, 5M: {tf_5m}).")
                 elif mtf_res.get("is_overextended_15m"):
                     is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} rechazado por vela de 15m sobre-extendida / mecha de trampa ({mtf_res.get('overextension_reason')}).")
+                    print(f"⛔ Compra rechazada: {best_symbol} rechazado por vela sobre-extendida en la cima ({mtf_res.get('overextension_reason')}).")
                 else:
                     import orderbook_analyzer
                     ob_info = orderbook_analyzer.fetch_orderbook_depth(best_symbol, limit=20)
