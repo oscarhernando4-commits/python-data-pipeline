@@ -72,6 +72,7 @@ def fetch_orderbook_depth(symbol, limit=20, proxies=None):
             "bid_vol_usdt": round(bid_vol_usdt, 2),
             "ask_vol_usdt": round(ask_vol_usdt, 2),
             "bid_dominance_pct": bid_dominance_pct,
+            "ask_dominance_pct": round(100.0 - bid_dominance_pct, 1),
             "whale_wall_detected": is_genuine_whale_wall,
             "is_spoof_risk": is_spoof_risk,
             "top_bid_concentration": round(top_bid_concentration * 100.0, 1),

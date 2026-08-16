@@ -20,6 +20,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+          cache: 'pip'
 
       - name: 📦 Install Requirements
         run: |
@@ -27,9 +28,20 @@ jobs:
 
       - name: 🚀 EXECUTE MANUAL SPOT PIPELINE CYCLE
         env:
+          PYTHONUNBUFFERED: "1"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BINANCE_REAL_API_KEY: ${{ secrets.BINANCE_REAL_API_KEY }}
           BINANCE_REAL_API_SECRET: ${{ secrets.BINANCE_REAL_API_SECRET }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_02: ${{ secrets.GEMINI_API_KEY_02 }}
+          GEMINI_API_KEY_03: ${{ secrets.GEMINI_API_KEY_03 }}
+          GEMINI_API_KEY_04: ${{ secrets.GEMINI_API_KEY_04 }}
+          GEMINI_API_KEY_05: ${{ secrets.GEMINI_API_KEY_05 }}
+          GEMINI_API_KEY_06: ${{ secrets.GEMINI_API_KEY_06 }}
+          GEMINI_API_KEY_07: ${{ secrets.GEMINI_API_KEY_07 }}
+          GEMINI_API_KEY_08: ${{ secrets.GEMINI_API_KEY_08 }}
+          GEMINI_API_KEY_09: ${{ secrets.GEMINI_API_KEY_09 }}
+          GEMINI_API_KEY_10: ${{ secrets.GEMINI_API_KEY_10 }}
           CMC_API_KEY: ${{ secrets.CMC_API_KEY }}
         run: |
           python data_fetcher.py

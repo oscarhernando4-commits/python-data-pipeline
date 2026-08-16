@@ -4,6 +4,8 @@ on:
   workflow_dispatch: # Allows manual trigger from GitHub UI anytime
   repository_dispatch:
     types: [trigger_quant_trade] # External trigger from Cron-Job.org (set to Cada 4 horas a las :56)
+  schedule:
+    - cron: '0 */4 * * *' # Backup: native GitHub cron every 4 hours (safety net if Cron-Job.org fails)
 
 concurrency:
   group: "continuous-quant-engine"
@@ -26,12 +28,13 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+          cache: 'pip'
 
       - name: 📦 Install Requirements Fast
         run: |
           pip install -r requirements.txt
 
-      - name: 🚀 Execute 4-Hour Continuous Quant Trading Loop (Every 5m)
+      - name: 🚀 Execute 4-Hour Continuous Quant Trading Loop
         env:
           PYTHONUNBUFFERED: "1"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -50,4 +53,3 @@ jobs:
           CMC_API_KEY: ${{ secrets.CMC_API_KEY }}
         run: |
           python cloud_continuous_loop.py
-

@@ -937,7 +937,7 @@ def quick_position_heartbeat():
             state["status"] = f"🏁 Salida en Vivo ({sym} PnL: {current_pnl_pct:+.2f}%)"
             save_real_account_state(state)
             try:
-                sync_real_account_with_binance()
+                diagnose_full_spot_wallet()
             except Exception:
                 pass
             return "EXIT"
@@ -1028,19 +1028,16 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         
         holding_cycles = state["position"].get("holding_cycles", 0) + 1
         
-        import atr_risk_calculator
         import orderbook_analyzer
         
-        atr_info = atr_risk_calculator.calculate_adaptive_atr_stop_loss(entry, atr_15m=entry*0.008)
-        trailing_offset = atr_risk_calculator.get_adaptive_trailing_offset(active_symbol, atr_info.get("atr_pct", 0.8))
-        
         # ═══════════════════════════════════════════════════════════════
-        # 🧠 SISTEMA DEFINITIVO DE 5 FASES CUÁNTICAS:
-        # FASE 1: Antes de +0.35% (SL -2.00%) | Toca +0.35% (SL -0.50% Mitigación)
-        # FASE 2: Toca +0.50% -> Seguridad Verde +0.25% (Comisión cubierta)
-        # FASE 3: +0.50% a +2.00% -> Construcción (Piso = Cima - 0.30%, min +0.25%)
-        # FASE 4: >= +2.00% Normal -> Cosecha Punta (Piso = Cima - 0.25%)
-        # FASE 5: >= +2.00% Ballena 🐳 (Vol >= 2.5x) -> Super-Pump (Piso = Cima - 0.35%)
+        # 🚀 ESCALERA CUÁNTICA DE ALTO RENDIMIENTO (OBJETIVO >= +1.00% A +5.00%):
+        # FASE 1: Antes de +0.70% -> SL -2.00% (Entrada y espacio para respirar).
+        # FASE 1.5: Al tocar +0.70% -> SL sube a 0.00% (Break-Even exacto).
+        # FASE 2: Al tocar +1.00% -> SL sube a +0.50% NETO (Asegura +0.50% Mínimo).
+        # FASE 3: Al tocar +1.50% -> SL sube a +1.00% NETO (Asegura +1.00% Mínimo).
+        # FASE 4: Superior a +2.00% -> Trailing Cima - 0.40% (Cosecha en +1.60% a +5.00%).
+        # FASE 5: Superior a +3.00% Ballena -> Trailing Cima - 0.50% (Mega-Pump).
         # ═══════════════════════════════════════════════════════════════
         is_high_volume_runner = state.get("position", {}).get("vol_surge", 1.0) >= 2.5
         
@@ -1085,7 +1082,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
 
         # ESCUDO 2: Guardia de Muro Inverso de Liquidez (Orderbook Wall Flip)
         ob_depth = orderbook_analyzer.fetch_orderbook_depth(active_symbol)
-        ask_dominance = ob_depth.get("ask_dominance_pct", 50.0)
+        ask_dominance = 100.0 - ob_depth.get("bid_dominance_pct", 50.0)
         orderbook_wall_emergency = False
         if ask_dominance >= 70.0:  # Raised from 65% to 70% to avoid false alarms
             orderbook_wall_emergency = True
@@ -1109,7 +1106,6 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 stagnation_exit = True
                 reason_str = f"🚀 Rotación Cuántica Alpha (Posición lateral por {holding_cycles}m -> Rotando Capital al Cohete {best_symbol} @ {best_score} Pts)"
 
-        tp_target = entry * (1.0 + (3.0 * 2.0 / 100.0))  # 1:2 R:R based on 3.0% SL
         sl_target = entry * (1.0 + (trailing_floor_pct / 100.0))
         
         state["position"] = {
@@ -1181,7 +1177,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         save_real_account_state(state)
                         # Sync exact live balances from Binance API
                         try:
-                            sync_real_account_with_binance()
+                            diagnose_full_spot_wallet()
                         except Exception:
                             pass
                             
@@ -1275,7 +1271,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         vol_2m_now = mtf_res.get("vol_surge_2m", 1.0)
                         vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
                         is_30s_burst = mtf_res.get("is_30s_micro_burst", False)
-                        vol_acc = mtf_res.get("vol_acc_15m", 1.0)
+                        vol_acc = mtf_res.get("vol_acceleration", 1.0)
                         is_pre_pump = mtf_res.get("is_pre_pump_signal", False)
                         is_yellow = mtf_res.get("is_yellow_arrow_pivot", False)
                         
