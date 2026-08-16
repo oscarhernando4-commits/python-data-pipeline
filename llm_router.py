@@ -289,8 +289,7 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     
     # User Mandate: STRICTLY ONLY gemini-3.1-flash-lite (NO other model allowed)
     models_to_try = [
-        "gemini-3.1-flash-lite",
-        "gemini-2.0-flash-lite"
+        "gemini-3.1-flash-lite"
     ]
     
     max_retries_per_model = 2
@@ -528,8 +527,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
     payload = {"contents": [{"parts": [{"text": prompt_text}]}], "generationConfig": {"temperature": 0.1, "responseMimeType": "application/json"}}
     models_to_try = [
-        "gemini-3.1-flash-lite",
-        "gemini-2.0-flash-lite"
+        "gemini-3.1-flash-lite"
     ]
     
     for model_name in models_to_try:
