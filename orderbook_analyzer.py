@@ -6,7 +6,10 @@ and incorporates Anti-Spoofing Concentration analysis to filter fake liquidity w
 
 import os
 import json
-import urllib.request
+import requests
+
+session = requests.Session()
+session.headers.update({'User-Agent': 'Mozilla/5.0'})
 
 def fetch_orderbook_depth(symbol, limit=20, proxies=None):
     """
@@ -22,15 +25,8 @@ def fetch_orderbook_depth(symbol, limit=20, proxies=None):
     url = f"https://api.binance.com/api/v3/depth?symbol={symbol}&limit={limit}"
     
     try:
-        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-        if proxies:
-            handler = urllib.request.ProxyHandler(proxies)
-            opener = urllib.request.build_opener(handler)
-            response = opener.open(req, timeout=5)
-        else:
-            response = urllib.request.urlopen(req, timeout=5)
-            
-        data = json.loads(response.read().decode('utf-8'))
+        response = session.get(url, proxies=proxies, timeout=5)
+        data = response.json()
         
         bids = data.get("bids", [])
         asks = data.get("asks", [])

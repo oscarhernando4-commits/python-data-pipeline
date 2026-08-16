@@ -163,26 +163,19 @@ def fetch_klines_public(symbol, interval, limit=30):
     return []
 
 def calculate_rsi(closes, period=14):
-    """Calculates Relative Strength Index (RSI) for a price series."""
+    """Calculates RSI using Wilder's RMA smoothing (matches TradingView/Binance standard)."""
     if not closes or len(closes) < period + 1:
         return 50.0
-    gains = []
-    losses = []
-    for i in range(1, len(closes)):
-        diff = closes[i] - closes[i-1]
-        if diff > 0:
-            gains.append(diff)
-            losses.append(0.0)
-        else:
-            gains.append(abs(diff))
-            losses.append(abs(diff))
-            
-    if len(gains) < period:
-        return 50.0
-        
-    avg_gain = sum(gains[-period:]) / period
-    avg_loss = sum(losses[-period:]) / period
-    
+    deltas = [closes[i] - closes[i-1] for i in range(1, len(closes))]
+    gains = [d if d > 0 else 0.0 for d in deltas]
+    losses = [-d if d < 0 else 0.0 for d in deltas]
+    # First average using SMA
+    avg_gain = sum(gains[:period]) / period
+    avg_loss = sum(losses[:period]) / period
+    # Subsequent averages using Wilder's RMA (exponential smoothing)
+    for i in range(period, len(gains)):
+        avg_gain = (avg_gain * (period - 1) + gains[i]) / period
+        avg_loss = (avg_loss * (period - 1) + losses[i]) / period
     if avg_loss == 0:
         return 100.0
     rs = avg_gain / avg_loss
@@ -234,6 +227,46 @@ def _aggregate_1m_to_2m(klines_1m):
         klines_2m.append([k1[0], open_p, high_p, low_p, close_p, vol])
     return klines_2m
 
+def calculate_obv(closes, volumes):
+    """On-Balance Volume: detects accumulation/distribution divergence."""
+    if not closes or not volumes or len(closes) < 2:
+        return [], "NEUTRAL"
+    obv = [0.0]
+    for i in range(1, min(len(closes), len(volumes))):
+        if closes[i] > closes[i-1]:
+            obv.append(obv[-1] + volumes[i])
+        elif closes[i] < closes[i-1]:
+            obv.append(obv[-1] - volumes[i])
+        else:
+            obv.append(obv[-1])
+    # Trend: compare last 5 OBV vs first 5 OBV
+    if len(obv) >= 10:
+        early_avg = sum(obv[:5]) / 5
+        late_avg = sum(obv[-5:]) / 5
+        if late_avg > early_avg * 1.05:
+            return obv, "ACCUMULATING"
+        elif late_avg < early_avg * 0.95:
+            return obv, "DISTRIBUTING"
+    return obv, "NEUTRAL"
+
+def calculate_atr(highs, lows, closes, period=14):
+    """Average True Range for volatility measurement."""
+    if not highs or not lows or not closes or len(closes) < 2:
+        return 0.0
+    trs = []
+    for i in range(1, min(len(highs), len(lows), len(closes))):
+        tr = max(highs[i] - lows[i], abs(highs[i] - closes[i-1]), abs(lows[i] - closes[i-1]))
+        trs.append(tr)
+    if not trs:
+        return 0.0
+    if len(trs) < period:
+        return sum(trs) / len(trs)
+    # Wilder's smoothing for ATR
+    atr = sum(trs[:period]) / period
+    for i in range(period, len(trs)):
+        atr = (atr * (period - 1) + trs[i]) / period
+    return atr
+
 def analyze_multi_timeframe_candles(symbol):
     """
     Inspects 2m, 5m, 15m, 1h, 4h, 1d, and 7d historical candle behavior.
@@ -252,7 +285,7 @@ def analyze_multi_timeframe_candles(symbol):
     klines_1m = fetch_klines_public(symbol, "1m", 40)
     klines_2m = _aggregate_1m_to_2m(klines_1m)
     klines_5m = fetch_klines_public(symbol, "5m", 30)
-    klines_15m = fetch_klines_public(symbol, "15m", 50)
+    klines_15m = fetch_klines_public(symbol, "15m", 120)
     klines_1h = fetch_klines_public(symbol, "1h", 30)
     klines_4h = fetch_klines_public(symbol, "4h", 30)
     klines_1d = fetch_klines_public(symbol, "1d", 14)
@@ -301,11 +334,11 @@ def analyze_multi_timeframe_candles(symbol):
     
     tf_30s_up = (closes_1m[-1] >= ma3_1m) if closes_1m else False
     tf_1m_up = (closes_1m[-1] >= closes_1m[-2] or closes_1m[-1] >= ma7_1m) if len(closes_1m) >= 2 else False
-    tf_2m_up = closes_2m[-1] > closes_2m[0] if closes_2m else False
-    tf_5m_up = closes_5m[-1] > closes_5m[0] if closes_5m else False
-    tf_15m_up = closes_15m[-1] > closes_15m[0] if closes_15m else False
-    tf_1h_up = closes_1h[-1] > closes_1h[0] if closes_1h else False
-    tf_4h_up = closes_4h[-1] > closes_4h[0] if closes_4h else False
+    tf_2m_up = closes_2m[-1] > closes_2m[-3] if len(closes_2m) >= 3 else (closes_2m[-1] > closes_2m[0] if closes_2m else False)
+    tf_5m_up = closes_5m[-1] > closes_5m[-3] if len(closes_5m) >= 3 else (closes_5m[-1] > closes_5m[0] if closes_5m else False)
+    tf_15m_up = closes_15m[-1] > closes_15m[-3] if len(closes_15m) >= 3 else (closes_15m[-1] > closes_15m[0] if closes_15m else False)
+    tf_1h_up = closes_1h[-1] > closes_1h[-3] if len(closes_1h) >= 3 else (closes_1h[-1] > closes_1h[0] if closes_1h else False)
+    tf_4h_up = closes_4h[-1] > closes_4h[-3] if len(closes_4h) >= 3 else (closes_4h[-1] > closes_4h[0] if closes_4h else False)
     tf_1d_up = d_closes[-1] > d_closes[0] if d_closes else False
     
     # Calculate Multi-Tier Multi-Timeframe RSI Architecture (1m, 2m, 5m, 15m, 1h, 4h)
@@ -329,6 +362,29 @@ def analyze_multi_timeframe_candles(symbol):
     avg_vol_15m = sum(vols_15m[-5:]) / len(vols_15m[-5:]) if len(vols_15m) >= 5 else 1.0
     vol_surge_15m = round(vols_15m[-1] / avg_vol_15m, 2) if (vols_15m and avg_vol_15m > 0) else 1.0
     
+    # EMA Cross (9/21) - Fast momentum signal
+    ema9_15m = _ema(closes_15m, 9) if len(closes_15m) >= 9 else closes_15m[-1]
+    ema21_15m = _ema(closes_15m, 21) if len(closes_15m) >= 21 else closes_15m[-1]
+    is_ema_golden_cross = ema9_15m > ema21_15m
+    
+    # OBV (On-Balance Volume) - Accumulation/Distribution detection
+    obv_15m, obv_trend = calculate_obv(closes_15m, vols_15m)
+    is_obv_accumulating = obv_trend == "ACCUMULATING"
+    
+    # ATR(14) Normalized - Volatility filter
+    highs_15m = [float(k[2]) for k in klines_15m]
+    lows_15m = [float(k[3]) for k in klines_15m]
+    atr_15m = calculate_atr(highs_15m, lows_15m, closes_15m, 14)
+    atr_pct_15m = round((atr_15m / closes_15m[-1]) * 100.0, 3) if closes_15m[-1] > 0 else 0.0
+    
+    # BTC-ALT Correlation - Relative strength detection
+    btc_klines = fetch_klines_public("BTCUSDT", "15m", 20)
+    btc_closes = [float(k[4]) for k in btc_klines] if btc_klines else []
+    btc_change_pct = ((btc_closes[-1] - btc_closes[-3]) / btc_closes[-3]) * 100.0 if len(btc_closes) >= 3 else 0.0
+    alt_change_pct = ((closes_15m[-1] - closes_15m[-3]) / closes_15m[-3]) * 100.0 if len(closes_15m) >= 3 else 0.0
+    relative_strength = round(alt_change_pct - btc_change_pct, 3) if symbol != "BTCUSDT" else 0.0
+    is_alt_outperforming_btc = relative_strength > 0.15  # ALT gaining more than BTC
+
     # 15m Microstructure moving averages (MA7, MA25, MA99) & Volume Surge
     ma7_15m = sum(closes_15m[-7:]) / len(closes_15m[-7:]) if len(closes_15m) >= 7 else closes_15m[-1]
     ma25_15m = sum(closes_15m[-25:]) / len(closes_15m[-25:]) if len(closes_15m) >= 25 else closes_15m[-1]
@@ -417,6 +473,7 @@ def analyze_multi_timeframe_candles(symbol):
 
     # Macro bearish count: how many of 1h, 4h, 1d are bearish
     macro_bearish_count = sum([not tf_1h_up, not tf_4h_up, not tf_1d_up])
+    is_bearish = macro_bearish_count >= 2
 
     # Falling Knife V2: Relaxed OR-logic (any 2 of these 4 conditions triggers the guard)
     falling_knife_signals = 0
@@ -528,6 +585,15 @@ def analyze_multi_timeframe_candles(symbol):
         25 if is_pre_pump_signal else 0
     ]
     multi_tf_score = min(100, sum(score_components))
+    
+    if is_ema_golden_cross:
+        multi_tf_score += 10  # EMA(9) > EMA(21) bullish momentum
+    if is_obv_accumulating:
+        multi_tf_score += 12  # Smart money accumulating
+    if is_alt_outperforming_btc and not is_bearish:
+        multi_tf_score += 8  # Relative strength vs BTC
+        
+    multi_tf_score = min(100, multi_tf_score)  # Re-cap at 100 after bonuses
     
     if is_ma25_below_ma99_downward:
         multi_tf_score = 0
@@ -681,6 +747,20 @@ def analyze_multi_timeframe_candles(symbol):
         "is_30s_micro_burst": is_30s_micro_burst,
         "vol_surge_2m": vol_surge_2m,
         "vol_surge_15m": vol_surge_15m,
+        "ema9_15m": round(ema9_15m, 6),
+        "ema21_15m": round(ema21_15m, 6),
+        "is_ema_golden_cross": is_ema_golden_cross,
+        "obv_trend": obv_trend,
+        "is_obv_accumulating": is_obv_accumulating,
+        "atr_15m": round(atr_15m, 6),
+        "atr_pct_15m": atr_pct_15m,
+        "relative_strength_vs_btc": relative_strength,
+        "is_alt_outperforming_btc": is_alt_outperforming_btc,
+        "rsi_15m": rsi_15m,
+        "rsi_2m": rsi_2m,
+        "rsi_5m": rsi_5m,
+        "rsi_1h": rsi_1h,
+        "rsi_4h": rsi_4h,
         "pattern_15m_summary": pattern_15m_summary,
         "rsi_structure": {
             "rsi_1m": rsi_1m,

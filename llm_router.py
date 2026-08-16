@@ -128,8 +128,8 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     # Check Groq fallback if Gemini is on cooldown
     groq_key = os.getenv("GROQ_API_KEY", "")
     
-    current_key = get_next_gemini_key()
-    if not current_key and not groq_key:
+    all_keys = get_gemini_api_keys()
+    if not all_keys and not groq_key:
         print("💡 [EVALUADOR CUÁNTICO DE RESPALDO] Reemplazando IA en pausa por Evaluador Técnico Inteligente...")
         # Smart Quantitative Fallback Engine
         vol_surge = tech_data.get("volume_surge_ratio", 1.0)

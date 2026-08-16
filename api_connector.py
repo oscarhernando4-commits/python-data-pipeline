@@ -155,7 +155,7 @@ def get_smart_proxy():
 
 # Legacy compatibility (solo para imports externos)
 PROXY_URL = FIXIE_POOL[0]
-PROXIES = get_proxy()
+PROXIES = None  # Lazy: use get_smart_proxy() per-request instead of wasting Fixie quota on module reload
 
 def get_api_key():
     return os.getenv("BINANCE_REAL_API_KEY", "").strip()
@@ -258,6 +258,8 @@ def get_real_balances():
 
 def get_real_usdt_balance():
     balances = get_real_balances()
+    if not balances:
+        return 0.0
     return sum([float(b["free"]) for b in balances if b["asset"] in ["USDT", "USDC"]])
 
 def get_real_futures_balances():
@@ -297,6 +299,8 @@ def get_real_futures_positions():
 
 def get_real_futures_usdt_balance():
     assets = get_real_futures_balances()
+    if not assets:
+        return 0.0
     return sum([float(a["availableBalance"]) for a in assets if a["asset"] in ["USDT", "USDC"]])
 
 def get_symbol_price(symbol, is_futures=False):
@@ -453,7 +457,7 @@ def execute_real_spot_market_sell(symbol, quantity=None):
         return {"error": f"No available balance to sell for {symbol}"}
         
     try:
-        ex_info = requests.get(f"{BASE_URL}/api/v3/exchangeInfo?symbol={symbol}", timeout=5).json()
+        ex_info = requests.get(f"{BASE_URL}/api/v3/exchangeInfo?symbol={symbol}", proxies=get_smart_proxy(), timeout=5).json()
         symbol_info = ex_info.get("symbols", [{}])[0]
         step_size = 0.01
         qty_precision = 2
@@ -546,8 +550,8 @@ def get_exact_real_entry_price(symbol):
 
 def diagnose_full_spot_wallet():
     """
-    30-MINUTE COMPREHENSIVE SPOT WALLET DIAGNOSIS (via Fixie Proxy).
-    Runs every 30 minutes to conserve Fixie proxy requests (~48 req/day).
+    60-MINUTE COMPREHENSIVE SPOT WALLET DIAGNOSIS (via Fixie Proxy).
+    Runs every 60 minutes to conserve Fixie proxy requests (~24 req/day).
     - Inspects ALL assets held in Spot (USDT, BNB, and active cryptos).
     - Computes exact USD value for every coin.
     - Auto-detects and adopts active positions (> $5 USD) using EXACT fill prices from myTrades.
@@ -1091,7 +1095,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         # --- MONITOREO ACTIVO PRIORITARIO (CADA 2 MINUTOS) ---
         print("\n" + "="*65)
         print(f"📊 [SEGUIMIENTO DE POSICIÓN ACTIVA REAL - SPOT]")
-        print(f"🪙 Moneda: {active_symbol} | Cantidad: {active_qty:,.2f} {active_asset} (Tiempo: {holding_cycles*2}m / 2880m)")
+        print(f"🪙 Moneda: {active_symbol} | Cantidad: {active_qty:,.2f} {active_asset} (Tiempo: {holding_cycles}m / 2880m)")
         print(f"💵 Entrada: {price_fmt(entry)} USD | Máximo Pico: {price_fmt(highest_price)} USD (+{highest_pnl_pct:.2f}%)")
         print(f"📈 PnL Flotante Actual: {pnl_pct:+.2f}% (${pnl_usd:+.4f} USD)")
         print(f"🧠 {phase_msg}")

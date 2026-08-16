@@ -916,13 +916,13 @@ def sync_live_matrix_obsidian(matrix):
         
         # SMART PROXY SAVER: Adaptive based on execution mode
         # LOCAL: Sync every cycle (no proxy quota consumed)
-        # CLOUD: Sync every 30 min (at minute 0-4 and 30-34) to conserve Fixie quota
+        # CLOUD: Sync every 60 min (at minute 0-4 each hour) to conserve Fixie quota (~24 req/day)
         now = datetime.now()
         is_local_mode = api_connector.get_execution_mode() == "local"
-        is_sync_window = (now.minute in [0, 1, 2, 3, 4]) or (now.minute in [30, 31, 32, 33, 34])
+        is_sync_window = (now.minute in [0, 1, 2, 3, 4])
         
         if is_local_mode or is_sync_window:
-            mode_label = "LOCAL DIRECTO" if is_local_mode else "NUBE 30M"
+            mode_label = "LOCAL DIRECTO" if is_local_mode else "NUBE 60M"
             print(f"🔄 [SYNC {mode_label}] Ejecutando diagnóstico completo de billetera Spot desde Binance API...")
             real_st = api_connector.diagnose_full_spot_wallet()
             real_total_val = real_st.get("_cached_total_val", real_st.get("current_balance_usd", 0.0))
@@ -935,7 +935,7 @@ def sync_live_matrix_obsidian(matrix):
             real_usdt_free = real_st.get("_cached_usdt_free", 0.0)
             real_bnb = real_st.get("_cached_bnb", 0.0)
             real_bnb_usd = real_st.get("_cached_bnb_usd", 0.0)
-            print(f"💤 [CACHE] Usando balance cacheado (${real_total_val:.2f}). Diagnóstico API cada 30 minutos.")
+            print(f"💤 [CACHE] Usando balance cacheado (${real_total_val:.2f}). Diagnóstico API cada 60 minutos.")
     except Exception as e:
         print(f"Error cargando datos reales en matrix sync: {e}")
         # Usamos los datos guardados en state si la API falla

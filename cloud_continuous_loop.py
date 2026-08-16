@@ -73,7 +73,7 @@ def run_git_push_sync(cycle_num: int, total_cycles: int = 240):
             subprocess.run(["git", "remote", "set-url", "origin", f"https://x-access-token:{gh_token}@github.com/{gh_repo}.git"], check=False)
 
         # Add and commit state files
-        subprocess.run(["git", "add", "real_money_account.json", "top_100_pairs.json", "dynamic_thresholds.json"], check=False)
+        subprocess.run(["git", "add", "real_money_account.json", "top_100_pairs.json", "dynamic_thresholds.json", "proxy_state.json", "gemini_key_state.json"], check=False)
         status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
         if status.stdout.strip():
             msg = f"chore: live sync [Cycle {cycle_num}/{total_cycles}] [{now_utc}]"

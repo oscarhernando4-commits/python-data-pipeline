@@ -124,7 +124,7 @@ def main():
         print("\n☁️  ═══════════════════════════════════════════════")
         print("    MODO NUBE ACTIVADO")
         print("    🔄 Fixie proxy → Round-Robin equitativo")
-        print("    📊 Wallet sync cada 30 min (ahorro cuota)")
+        print("    📊 Wallet sync cada 60 min (ahorro cuota Fixie)")
         print("    🌐 GitHub Actions ejecuta automáticamente")
         print("    ═══════════════════════════════════════════════\n")
         
