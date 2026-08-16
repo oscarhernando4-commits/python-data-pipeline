@@ -500,11 +500,12 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     PERFILES DE LOS CANDIDATOS FINALISTAS (TOP BULLISH CON LIBRO DE ÓRDENES Y SECTOR):
     {candidates_prompt_text}
 
-    REGLAS SUPREMAS DE EJECUCIÓN (SPOT ONLY):
-    1. 🛡️ UMBRAL MÍNIMO A+ (Score >= 55): NUNCA apruebes activos en caída libre o con Score < 55.
-    2. 🚫 VETO TOTAL A TECHOS Y CAÍDAS: Prohibido comprar activos a más de +2.5% de su MA7 o con mechas de trampa.
-    3. 🚀 DISPARO EN EL SUELO: Si un candidato tiene Score >= 55, Bids >= 50%, suelo confirmado y micro-volumen de despegue, APRUEBA "BUY_LONG".
-    4. 💎 CONDICIÓN "NONE": Si ningún candidato ofrece una relación ganancia/riesgo limpia en el suelo, responde "NONE" con "action": "HOLD".
+    REGLAS SUPREMAS DE EJECUCIÓN DEL SÚPER-CEREBRO PARA GANAR SÍ O SÍ:
+    1. 🎯 EXCLUSIVIDAD A+ DE ALTO RENDIMIENTO: SOLO aprueba un candidato si tiene ALTO COMBUSTIBLE (VolSurge >= 0.7x, OBV Acumulando o Cruce EMA/Flechas Amarillas) y una probabilidad abrumadora de subir de inmediato.
+    2. 🚫 VETO TOTAL A MONEDAS DORMIDAS Y TRAMPAS: PROHIBIDO APROBAR MONEDAS LATERALES SIN VOLUMEN (< 0.5x) o activos que ya subieron +10% en el día y presentan mechas superiores de agotamiento.
+    3. 🧱 MURO COMPRADOR OBLIGATORIO: Exige Bids >= 50% en el libro de órdenes (órdenes de compra reales empujando el suelo).
+    4. 💎 CONDICIÓN "NONE" COMO VIRTUD DE ÉLITE: Si el mercado está en rango o ningún candidato tiene la fuerza para generar una ganancia rápida de +0.50% a +2.0%, responde "NONE" con "action": "HOLD". Preservar 100% USDT es 10 veces mejor que entrar en una moneda mediocre.
+    5. ⚡ CONVICCIÓN MÍNIMA (>= 80%): Solo aprueba con "confidence": >= 80 si el setup es indiscutiblemente un cohete en soporte.
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA MULTI-AGENTE (7 AGENTES):
     {{
