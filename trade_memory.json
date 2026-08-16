@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 4520,
+    "total_trades": 4521,
     "wins": 810,
-    "losses": 3710,
+    "losses": 3711,
     "win_rate_pct": 17.92,
-    "total_pnl_usd": 236828.8775371538
+    "total_pnl_usd": 236828.6865771538
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on NILUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on BBUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on TRUMPUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DUSKUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ENAUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SHIBUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TSTUSDT)",
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on CETUSUSDT)"
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on CETUSUSDT)",
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:BEARISH (Lost on WLFIUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on AVNTUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-14 15:03:34",
-      "account_id": "SIM-062",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "DEXEUSDT",
-      "side": "SHORT",
-      "entry_price": 1.914,
-      "exit_price": 1.932,
-      "pnl_usd": -0.22,
-      "result": "LOSS",
-      "notes": "Hit SL on DEXEUSDT (-$0.22). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 52.37,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-14 15:06:25",
       "account_id": "SIM-065",
@@ -8383,6 +8366,24 @@
         "score": 82,
         "rsi_15m": 50.56,
         "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-16 16:45:58",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "WLFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.0601,
+      "exit_price": 0.0594,
+      "pnl_usd": -0.1909599999999969,
+      "result": "LOSS",
+      "notes": "Cancelacion manual por usuario - Aprendizaje forzado (RSI 4H sobreextendido > 70 en WLFI)",
+      "context": {
+        "score": 97,
+        "rsi_15m": 40.0,
+        "rsi_4h": 70.3,
+        "macro_trend_4h": "BEARISH"
       }
     }
   ]

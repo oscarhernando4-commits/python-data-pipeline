@@ -702,6 +702,12 @@ def analyze_multi_timeframe_candles(symbol):
         elif rsi_15m > 64.0 and not is_explosive_breakout:
             is_overextended_15m = True
             overextension_reason = f"RSI 15m sobrecomprado ({rsi_15m:.1f} > 64.0). Exige entrada en zona de lanzamiento (RSI <= 64.0)."
+        elif rsi_4h >= 68.0:
+            is_overextended_15m = True
+            overextension_reason = f"Clímax Macro de 4H sobrecomprado (RSI 4H={rsi_4h:.1f} >= 68.0). Exige base macro no agotada."
+        elif rsi_1h >= 72.0:
+            is_overextended_15m = True
+            overextension_reason = f"Clímax de 1H sobrecomprado (RSI 1H={rsi_1h:.1f} >= 72.0). Exige base macro no agotada."
         elif not (tf_1h_up or tf_4h_up or is_yellow_arrow_1h or is_yellow_arrow_4h or rsi_1h <= 55.0):
             is_overextended_15m = True
             overextension_reason = f"Macro 1H/4H en caída libre sin soporte (RSI 1H={rsi_1h:.1f}, 4H={rsi_4h:.1f}). Exige base macro."
