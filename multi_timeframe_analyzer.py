@@ -55,6 +55,20 @@ HIGH_RISK_MEME_TICKERS = {
     "1000CATUSDT", "1000SATSUSDT", "1MBABYDOGEUSDT", "BROCCOLI714USDT"
 }
 
+# Binance Monitoring Tag, Seed Tag, and High Risk / Delisting Warning Tokens
+MONITORING_TAG_BLACKLIST = {
+    "NOM", "NOMUSDT", "WCT", "WCTUSDT", "BERA", "BERAUSDT", "EPX", "EPXUSDT", "VANRY", "VANRYUSDT",
+    "SCRT", "SCRTUSDT", "TREE", "TREEUSDT", "NXPC", "NXPCUSDT", "ALLO", "ALLOUSDT", "PLUME", "PLUMEUSDT",
+    "ACE", "ACEUSDT", "MMT", "MMTUSDT", "OG", "OGUSDT", "PROS", "PROSUSDT", "KP3R", "KP3RUSDT",
+    "GFT", "GFTUSDT", "OOKI", "OOKIUSDT", "AMB", "AMBUSDT", "BIFI", "BIFIUSDT", "VOXEL", "VOXELUSDT",
+    "WRX", "WRXUSDT", "DOCK", "DOCKUSDT", "POLS", "POLSUSDT", "MDX", "MDXUSDT", "FIRO", "FIROUSDT",
+    "NBS", "NBSUSDT", "LTO", "LTOUSDT", "FOR", "FORUSDT", "VITE", "VITEUSDT", "KEY", "KEYUSDT",
+    "CREAM", "CREAMUSDT", "MBL", "MBLUSDT", "AKRO", "AKROUSDT", "UNFI", "UNFIUSDT", "WING", "WINGUSDT",
+    "HARD", "HARDUSDT", "DREP", "DREPUSDT", "TROY", "TROYUSDT", "BURGER", "BURGERUSDT", "JUV", "JUVUSDT",
+    "CITY", "CITYUSDT", "PSG", "PSGUSDT", "ATM", "ATMUSDT", "BAR", "BARUSDT", "ASR", "ASRUSDT", "ACM", "ACMUSDT",
+    "CHIP", "CHIPUSDT", "UTK", "UTKUSDT", "BANANA", "BANANAUSDT"
+}
+
 try:
     from api_connector import get_proxy
 except ImportError:
@@ -80,14 +94,16 @@ def is_bstock(symbol):
 
 def is_stablecoin(symbol):
     """
-    Strictly checks if a symbol is a stablecoin, synthetic dollar, bStock, or high-risk meme/seed asset.
+    Strictly checks if a symbol is a stablecoin, synthetic dollar, bStock, Monitoring Tag token, or meme asset.
     Returns True if symbol is blocked from real money trading.
     """
     sym_upper = str(symbol).upper().strip()
     asset = sym_upper.replace("USDT", "").replace("USD", "")
     
-    # 0. Immediate bStock Blacklist Check
+    # 0. Immediate bStock & Monitoring Tag Blacklist Check
     if is_bstock(sym_upper):
+        return True
+    if sym_upper in MONITORING_TAG_BLACKLIST or asset in MONITORING_TAG_BLACKLIST:
         return True
         
     # 1. Direct Ticker Match (Stablecoins & Meme Blacklist)
