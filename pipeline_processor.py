@@ -298,7 +298,7 @@ def run_infinite_trading_matrix_cycle():
         })
     
     # Sort strictly by highest score first (Top Bullish Setups)
-    bullish_candidates.sort(key=lambda x: x["score"], reverse=True)
+    bullish_candidates.sort(key=lambda x: (x["score"] * 1.5 + x["tech_data"].get("mtf_analysis", {}).get("elasticity_score", 0.0) * 10), reverse=True)
     top_15_candidates = bullish_candidates[:15]
 
     

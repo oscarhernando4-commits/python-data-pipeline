@@ -323,6 +323,7 @@ def analyze_multi_timeframe_candles(symbol):
     closes_2m = [float(k[4]) for k in klines_2m] if klines_2m else []
     vols_2m = [float(k[5]) for k in klines_2m] if klines_2m else []
     closes_5m = [float(k[4]) for k in klines_5m]
+    ma25_5m = sum(closes_5m[-25:]) / 25.0 if len(closes_5m) >= 25 else closes_5m[-1] if closes_5m else 1.0
     closes_15m = [float(k[4]) for k in klines_15m]
     vols_15m = [float(k[5]) for k in klines_15m]
     closes_1h = [float(k[4]) for k in klines_1h] if klines_1h else closes_15m
@@ -593,6 +594,10 @@ def analyze_multi_timeframe_candles(symbol):
     if is_alt_outperforming_btc and not is_bearish:
         multi_tf_score += 8  # Relative strength vs BTC
         
+    elasticity_score = round(atr_pct_15m * (vol_acceleration if 'vol_acceleration' in locals() else 1.0) * (1.5 if is_obv_accumulating else 1.0), 3)
+    if atr_pct_15m >= 0.40 and is_obv_accumulating:
+        multi_tf_score += 10 # High-beta explosive elasticity bonus
+        
     multi_tf_score = min(100, multi_tf_score)  # Re-cap at 100 after bonuses
     
     if is_ma25_below_ma99_downward:
@@ -771,6 +776,8 @@ def analyze_multi_timeframe_candles(symbol):
         "is_obv_accumulating": is_obv_accumulating,
         "atr_15m": round(atr_15m, 6),
         "atr_pct_15m": atr_pct_15m,
+        "elasticity_score": elasticity_score,
+        "ma25_5m": round(ma25_5m, 6),
         "relative_strength_vs_btc": relative_strength,
         "is_alt_outperforming_btc": is_alt_outperforming_btc,
         "rsi_15m": rsi_15m,

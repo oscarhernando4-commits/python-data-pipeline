@@ -2711,3 +2711,42 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2026-06-01 (-16.18%)`, `2026-05-29 (-11.69%)`, `2026-06-05 (-11.19%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: DUSKUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-20` hasta `2026-08-15` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.0734 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.6858 USD` (`2024-03-27`) | Distancia: `-89.3%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0256 USD` (`2025-10-09`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-01-15 (+63.94%)`, `2026-02-07 (+43.78%)`, `2026-01-17 (+37.15%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-28.84%)`, `2026-02-04 (-22.12%)`, `2026-01-21 (-21.5%)`
+
+---
+
+### 🪙 Profile Completo de Vida: BELUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-20` hasta `2026-08-15` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.1089 USD`
+- 📈 **Máximo Histórico (ATH):** `$2.6880 USD` (`2024-04-09`) | Distancia: `-95.95%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0745 USD` (`2025-10-09`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-04-02 (+48.33%)`, `2025-10-10 (+40.76%)`, `2025-10-12 (+31.02%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-06-26 (-34.23%)`, `2025-10-09 (-33.79%)`, `2024-04-10 (-28.34%)`
+
+---
+
+### 🪙 Profile Completo de Vida: GMTUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-20` hasta `2026-08-15` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.0063 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.4495 USD` (`2024-01-06`) | Distancia: `-98.6%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0050 USD` (`2025-10-09`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-12-26 (+36.24%)`, `2026-05-22 (+26.88%)`, `2025-04-18 (+21.41%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-30.0%)`, `2024-12-08 (-19.26%)`, `2025-03-02 (-18.34%)`
+
+---

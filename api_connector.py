@@ -899,11 +899,14 @@ def quick_position_heartbeat():
         current_pnl_pct = ((current_price - entry) / entry) * 100.0
         current_phase = pos.get("phase", 1)
         
+        atr_15m_pct = pos.get("atr_pct_15m", 0.30)
+        ma25_5m = pos.get("ma25_5m", 0.0)
+        
         # ═══════════════════════════════════════════════════════════════
         # 🎯 SISTEMA DE SEGUROS DINÁMICOS CON HOLGURA DE RESPIRACIÓN:
         # FASE 1 (< +0.30%): SL -1.50% (Colchón de inicio).
         # FASE 2 (+0.30% a +0.60%): Piso Dinámico = max(+0.15% NETO, Pico - 0.25%) -> ¡0.25% de aire para respirar!
-        # FASE 3 (> +0.60%): Trailing Dinámico = CIMA - 0.25% (Piso mín +0.35% NETO) -> Cosecha rallies de +1% a +5%.
+        # FASE 3 (> +0.60%): Trailing Dinámico = CIMA - dynamic_trailing_distance.
         # ═══════════════════════════════════════════════════════════════
         if highest_pnl_pct < 0.30:
             sl_pct = -1.50
@@ -912,7 +915,8 @@ def quick_position_heartbeat():
             sl_pct = max(0.15, round(highest_pnl_pct - 0.25, 2))   # Fase 2: Seguro dinámico con holgura de 0.25%
             new_phase = 2
         else:
-            sl_pct = max(0.35, round(highest_pnl_pct - 0.25, 2))  # Fase 3: Trailing Cima - 0.25%
+            dynamic_trailing_distance = max(0.35, round(atr_15m_pct * 1.2, 2))
+            sl_pct = max(0.35, round(highest_pnl_pct - dynamic_trailing_distance, 2))
             new_phase = 3
             
         # Update if changed
@@ -925,6 +929,11 @@ def quick_position_heartbeat():
         # Check if Stop Loss or Trailing Stop triggered
         should_exit = current_pnl_pct <= sl_pct
         exit_reason = f"Stop/Trailing ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
+        
+        # Pillar 4: Trend Ride Guard
+        if new_phase >= 3 and should_exit and current_price > entry and ma25_5m > 0 and current_price >= ma25_5m * 0.999 and current_pnl_pct >= 0.30:
+            should_exit = False
+            exit_reason = f"Protegido por MA25 5m (Pnl: {current_pnl_pct:+.2f}%)"
         
         # SNIPER MEJORA: Detección de Agotamiento de Mecha en Cima (Wick Exhaustion Sniper)
         # Si estamos en Fase 3 (Pico >= +0.60%) y el precio retrocede >= 0.30% desde la cima
@@ -1031,19 +1040,22 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         
         holding_cycles = state["position"].get("holding_cycles", 0) + 1
         
+        atr_15m_pct = state["position"].get("atr_pct_15m", 0.30)
+        ma25_5m = state["position"].get("ma25_5m", 0.0)
+        
         import orderbook_analyzer
         
         # ═══════════════════════════════════════════════════════════════
         # 🎯 SISTEMA ULTRA-EFICIENTE DE 3 FASES CUÁNTICAS:
         # FASE 1: Antes de +0.30% -> SL -1.50% (Colchón inicial).
         # FASE 2: +0.30% a +0.50% -> SL +0.30% NETO (Candado verde asegurado).
-        # FASE 3: Superior a +0.50% -> Trailing = CIMA - 0.30% (Cosecha dinámica continua).
+        # FASE 3: Superior a +0.50% -> Trailing = CIMA - dynamic_trailing_distance.
         # ═══════════════════════════════════════════════════════════════
         if highest_pnl_pct >= 0.50:
             phase = 3
-            trailing_distance = 0.30
-            trailing_floor_pct = max(0.30, round(highest_pnl_pct - trailing_distance, 2))
-            phase_msg = f"💎 FASE 3 (> +0.50% COSECHA EN CIMA): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - 0.30%)"
+            dynamic_trailing_distance = max(0.35, round(atr_15m_pct * 1.2, 2))
+            trailing_floor_pct = max(0.30, round(highest_pnl_pct - dynamic_trailing_distance, 2))
+            phase_msg = f"💎 FASE 3 (> +0.50% COSECHA EN CIMA): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - {dynamic_trailing_distance:.2f}%)"
         elif highest_pnl_pct >= 0.30:
             phase = 2
             trailing_floor_pct = 0.30
@@ -1126,6 +1138,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     reason_str = f"Protección de Ganancia Fase {phase} (Pico +{highest_pnl_pct:.2f}% → Venta en {pnl_pct:+.2f}%)"
                 else:
                     reason_str = f"Stop Loss Fase 1 ({pnl_pct:.2f}% tocó piso de {trailing_floor_pct:+.2f}%)"
+                
+                # Pillar 4: Trend Ride Guard
+                if phase >= 3 and should_exit and active_current_price > entry and ma25_5m > 0 and active_current_price >= ma25_5m * 0.999 and pnl_pct >= 0.30:
+                    should_exit = False
+                    reason_str = f"Protegido por MA25 5m (Pnl: {pnl_pct:+.2f}%)"
             elif phase >= 2 and orderbook_wall_emergency:
                 should_exit = True
                 reason_str = f"⚡ Salida Relámpago por Agotamiento CVD (Fase {phase}, Pico +{highest_pnl_pct:.2f}% → Vendedores dominan {ask_dominance:.1f}%)"
@@ -1315,7 +1332,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         "highest_price": actual_entry_price,
                         "phase": 1,
                         "vol_surge": mtf_res.get("vol_surge_2m", 1.0) if 'mtf_res' in locals() else 1.0,
-                        "entry_time_ms": int(time.time() * 1000)
+                        "entry_time_ms": int(time.time() * 1000),
+                        "atr_pct_15m": mtf_res.get("atr_pct_15m", 0.30) if 'mtf_res' in locals() else 0.30,
+                        "ma25_5m": mtf_res.get("ma25_5m", current_price) if 'mtf_res' in locals() else current_price
                     }
                     state["status"] = f"🔵 En Vivo LONG ({best_symbol} @ ${actual_entry_price:.4f})"
                     state["_cached_usdt_free"] = 0.0
