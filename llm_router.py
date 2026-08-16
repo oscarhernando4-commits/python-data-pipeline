@@ -428,9 +428,12 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         gbm_z = mtf.get('gbm_zscore', ind.get('gbm_zscore', 0.0))
         chg_24h = mtf.get('price_change_24h_pct', 0.0)
         
-        candidates_prompt_text += f"\nCANDIDATO: {sym} (Sector: {sec} | Acción Sugerida: {action})\n"
-        candidates_prompt_text += f"- Score Técnico: {score}/100 | Calificación MTF: {mtf.get('multi_tf_score', score)}/100\n"
-        candidates_prompt_text += f"- RSI 15M: {ind.get('rsi_15m')}, MACD Hist 15M: {mtf.get('macd_hist_15m', ind.get('macd_hist_15m', 0.0))}, VolSurge: {ind.get('volume_surge_ratio', 1.0)}x\n"
+        is_cetus_pattern = mtf.get('is_cetus_rocket_pattern', False)
+        cetus_tag = " [🚀 PATRÓN COHETE TIPO CETUS IDENTIFICADO - PRIORIDAD MÁXIMA]" if is_cetus_pattern else ""
+        
+        candidates_prompt_text += f"\nCANDIDATO: {sym} (Sector: {sec} | Acción Sugerida: {action}){cetus_tag}\n"
+        candidates_prompt_text += f"- Score Técnico: {score}/100 | Calificación MTF: {mtf.get('multi_tf_score', score)}/100 | Patrón CETUS: {is_cetus_pattern}\n"
+        candidates_prompt_text += f"- RSI 15M: {ind.get('rsi_15m')}, MACD Hist 15M: {mtf.get('macd_hist_15m', ind.get('macd_hist_15m', 0.0))}, VolSurge: {ind.get('volume_surge_ratio', 1.0)}x, OBV: {mtf.get('obv_trend')}\n"
         candidates_prompt_text += f"- 🚀 Señal Pre-Pump: {is_pre_pump} (VolAcc: {mtf.get('vol_acceleration', 1.0)}x, BBSqueeze: {mtf.get('bb_squeeze_ratio', 1.0)})\n"
         candidates_prompt_text += f"- ⛔ Riesgo Falling Knife / Dead Cat: {is_knife or is_dead_cat} (Caída 24h: {chg_24h:+.1f}%) | Macro Bearish: {is_macro_bear}\n"
         candidates_prompt_text += f"- 💥 Rebote Post-Crash / GBM Z-Score: {gbm_z:.2f} (Rebote: {mtf.get('is_crash_rebound', False)})\n"

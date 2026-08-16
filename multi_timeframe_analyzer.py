@@ -627,6 +627,19 @@ def analyze_multi_timeframe_candles(symbol):
         is_yellow_arrow_pivot = (0.0 <= dist_from_15m_ma7_pct <= 3.0) and (lower_wick_pct >= 20.0 or close_15m > open_15m) and (tf_5m_up or tf_2m_up)
         yellow_arrow_status = "🎯 PATRÓN FLECHAS AMARILLAS (REBOTE PIVOTE A+ EN MA7/MA25)" if is_yellow_arrow_pivot else "⚪ NEUTRAL 15M"
 
+        # 🚀 PATRÓN COHETE DE ÉLITE TIPO CETUS (Despegues Rápidos de Alta Convicción)
+        # Combina: Rebote en Soporte + OBV Acumulando + Cruce EMA 9/21 + RSI en Zona de Lanzamiento (45-65) + Vela Verde
+        is_cetus_rocket_pattern = bool(
+            (is_yellow_arrow_pivot or is_ma7_above_ma25_upward or is_ema_golden_cross) and
+            is_obv_accumulating and
+            (42.0 <= rsi_15m <= 66.0) and
+            (close_15m >= open_15m or lower_wick_pct >= 25.0) and
+            (tf_15m_up and tf_5m_up) and
+            not is_overextended_15m
+        )
+        if is_cetus_rocket_pattern:
+            yellow_arrow_status = "🚀 [PATRÓN COHETE TIPO CETUS - DESPEGUE INMEDIATO A+]"
+
         # Multi-Horizon Peak Proximity & Ceiling Shield (15M, 30M, 1H, 4H, 12H, 24H)
         highs_15m = [float(k[2]) for k in klines_15m] if klines_15m else []
         highs_1h = [float(k[2]) for k in klines_1h] if klines_1h else []
@@ -715,6 +728,7 @@ def analyze_multi_timeframe_candles(symbol):
         "is_overextended_15m": is_overextended_15m,
         "overextension_reason": overextension_reason,
         "is_yellow_arrow_pivot": is_yellow_arrow_pivot,
+        "is_cetus_rocket_pattern": is_cetus_rocket_pattern,
         "is_yellow_arrow_1h": is_yellow_arrow_1h,
         "is_yellow_arrow_4h": is_yellow_arrow_4h,
         "is_supertrend_bullish": is_supertrend_bullish,
