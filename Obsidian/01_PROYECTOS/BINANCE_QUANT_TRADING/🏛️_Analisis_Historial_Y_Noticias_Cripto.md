@@ -2659,3 +2659,42 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2026-02-04 (-15.42%)`, `2025-10-09 (-14.82%)`, `2025-11-30 (-14.49%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: TOWNSUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-08-04` hasta `2026-08-15` (377 Días de Historial)
+- 💵 **Precio Actual:** `$0.0022 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.0750 USD` (`2025-08-04`) | Distancia: `-97.05%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0017 USD` (`2026-06-29`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-08-04 (+63.66%)`, `2025-10-17 (+23.05%)`, `2025-11-08 (+17.71%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-38.52%)`, `2025-08-05 (-19.21%)`, `2026-07-20 (-16.95%)`
+
+---
+
+### 🪙 Profile Completo de Vida: CFGUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2026-03-15` hasta `2026-08-15` (154 Días de Historial)
+- 💵 **Precio Actual:** `$0.1521 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.3500 USD` (`2026-05-08`) | Distancia: `-56.54%`
+- 📉 **Mínimo Histórico (ATL):** `$0.1000 USD` (`2026-03-15`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-03-15 (+86.0%)`, `2026-04-15 (+17.46%)`, `2026-05-05 (+15.5%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-06-04 (-15.0%)`, `2026-03-16 (-14.18%)`, `2026-05-21 (-12.36%)`
+
+---
+
+### 🪙 Profile Completo de Vida: OPGUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2026-05-21` hasta `2026-08-15` (87 Días de Historial)
+- 💵 **Precio Actual:** `$0.0974 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.3459 USD` (`2026-06-14`) | Distancia: `-71.84%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0884 USD` (`2026-08-02`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-06-13 (+71.2%)`, `2026-06-12 (+13.33%)`, `2026-06-18 (+12.6%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-06-14 (-46.65%)`, `2026-06-24 (-14.24%)`, `2026-06-23 (-10.76%)`
+
+---
