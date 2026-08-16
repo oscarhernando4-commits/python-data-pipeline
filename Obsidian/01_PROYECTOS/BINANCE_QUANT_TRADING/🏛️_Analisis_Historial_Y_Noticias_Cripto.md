@@ -2698,3 +2698,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2026-06-14 (-46.65%)`, `2026-06-24 (-14.24%)`, `2026-06-23 (-10.76%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: AIGENSYNUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2026-05-13` hasta `2026-08-15` (95 Días de Historial)
+- 💵 **Precio Actual:** `$0.0211 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.0531 USD` (`2026-05-13`) | Distancia: `-60.31%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0195 USD` (`2026-08-13`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-05-13 (+59.34%)`, `2026-06-28 (+35.52%)`, `2026-06-29 (+14.2%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-06-01 (-16.18%)`, `2026-05-29 (-11.69%)`, `2026-06-05 (-11.19%)`
+
+---
