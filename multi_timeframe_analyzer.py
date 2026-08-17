@@ -693,12 +693,12 @@ def analyze_multi_timeframe_candles(symbol):
         elif dist_15m_pct <= 0.40 and not is_explosive_breakout:
             is_overextended_15m = True
             overextension_reason = f"Techo 15M (Precio a solo {dist_15m_pct}% del máximo de 15m ${high_15m_recent:.4f}, margen exigido >= 0.40%). Exige compra en el suelo."
-        elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > 1.50:
+        elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > (2.60 if (is_explosive_breakout or is_cetus_rocket_pattern) else 1.80):
             is_overextended_15m = True
-            overextension_reason = f"Vela de 15m sobre-extendida en la cima (+{((close_15m - open_15m) / open_15m) * 100.0:.2f}% > 1.50%). Exige entrada en el nacimiento de la vela."
-        elif dist_from_15m_ma7_pct > 1.10:
+            overextension_reason = f"Vela de 15m sobre-extendida en la cima (+{((close_15m - open_15m) / open_15m) * 100.0:.2f}% > {2.60 if (is_explosive_breakout or is_cetus_rocket_pattern) else 1.80}%). Exige entrada en el nacimiento de la vela."
+        elif dist_from_15m_ma7_pct > (2.20 if (is_explosive_breakout or is_cetus_rocket_pattern) else 1.30):
             is_overextended_15m = True
-            overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct}% sobre MA7). Exige compra en el suelo de la base (distancia <= 1.10%)"
+            overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct}% sobre MA7). Exige compra en el suelo de la base (distancia <= {2.20 if (is_explosive_breakout or is_cetus_rocket_pattern) else 1.30}%)"
         elif rsi_15m > 64.0 and not is_explosive_breakout:
             is_overextended_15m = True
             overextension_reason = f"RSI 15m sobrecomprado ({rsi_15m:.1f} > 64.0). Exige entrada en zona de lanzamiento (RSI <= 64.0)."
