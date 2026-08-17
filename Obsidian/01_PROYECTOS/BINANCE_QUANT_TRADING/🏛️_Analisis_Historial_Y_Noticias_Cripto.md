@@ -2932,3 +2932,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-24.56%)`, `2024-12-08 (-21.08%)`, `2025-02-23 (-20.14%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: SOPHUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-05-27` hasta `2026-08-16` (447 Días de Historial)
+- 💵 **Precio Actual:** `$0.0034 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.0880 USD` (`2025-05-27`) | Distancia: `-96.12%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0034 USD` (`2026-08-13`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-05-27 (+121.7%)`, `2025-12-18 (+52.8%)`, `2025-06-22 (+14.59%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-29.01%)`, `2025-05-30 (-16.86%)`, `2026-02-04 (-14.74%)`
+
+---

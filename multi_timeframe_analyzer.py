@@ -648,11 +648,13 @@ def analyze_multi_timeframe_candles(symbol):
         multi_tf_score += 12  # Smart money accumulating
     if is_alt_outperforming_btc and not is_bearish:
         multi_tf_score += 8   # Fuerza relativa vs BTC
-    # Floor Injection Index bonus: si FII >= 60 el sistema da un bonus de entrada A+
+    # 🏔️ MEJORA 3: Floor Injection Index Super-Priority bonus
     if fii_score >= 60:
-        multi_tf_score += 15  # Inyección de capital confirmada en la base
-    elif fii_score >= 40:
-        multi_tf_score += 7   # Inyección parcial, señal prometedora
+        multi_tf_score += 25  # Inyección institucional confirmada en la base (Prioridad A+)
+    elif fii_score >= 45:
+        multi_tf_score += 15  # Inyección parcial de alta probabilidad
+    elif fii_score >= 30:
+        multi_tf_score += 7   # Inyección incipiente
         
     elasticity_score = round(atr_pct_15m * (vol_acceleration if 'vol_acceleration' in locals() else 1.0) * (1.5 if is_obv_accumulating else 1.0), 3)
     if atr_pct_15m >= 0.40 and is_obv_accumulating:
@@ -712,18 +714,20 @@ def analyze_multi_timeframe_candles(symbol):
 
         # Ground-Zero 10s/30s/1M/2M Rebound Ignition on Safe 15M/1H Support Base
         # Trigger when 10s, 30s, or 1M candle turns green from support (MA7/MA25/VWAP floor/Canal 1H base), BEFORE 5M/15M have extended!
-        is_sub_minute_ignition = bool((tf_10s_up and tf_30s_up) or (tf_10s_up and tf_1m_up) or (vol_surge_10s >= 1.4))
+        is_sub_minute_ignition = bool(
+            (tf_10s_up and tf_30s_up) or 
+            (tf_10s_up and tf_1m_up and vol_surge_10s >= 1.2) or 
+            (fii_score >= 60 and tf_10s_up)
+        )
         is_ground_zero_micro_ignition = bool(
             (is_sub_minute_ignition or tf_1m_up or tf_2m_up) and 
             (dist_from_15m_ma7_pct <= 1.50 or lower_wick_pct >= 15.0 or is_yellow_arrow_1h or range_position_1h <= 0.40)
         )
 
-        # Sub-Minute Active Bleeding Veto: if 10s and 30s are actively dumping, wait for the floor to form
+        # 🚫 MEJORA 4: Veto Estricto de Sangrado Activo Sub-Minuto (10s y 30s rojas cayendo sin absorción)
         is_sub_minute_bleeding = bool(
-            len(closes_10s) >= 3 and
-            not tf_10s_up and not tf_30s_up and not tf_1m_up and
-            closes_10s[-1] < closes_10s[-2] < closes_10s[-3] and
-            vol_surge_10s >= 1.2
+            (not tf_10s_up and not tf_30s_up and not tf_1m_up) or
+            (len(closes_10s) >= 2 and not tf_10s_up and not tf_30s_up and closes_10s[-1] < closes_10s[-2])
         )
         
         # Yellow Arrow 15M Pivot Rebound Pattern Detector

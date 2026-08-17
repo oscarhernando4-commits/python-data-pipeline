@@ -539,9 +539,10 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     3. 🧱 MURO COMPRADOR OBLIGATORIO: Exige Bids >= 50% en el libro de órdenes (órdenes de compra reales empujando el suelo).
     4. 💎 CONDICIÓN "NONE" COMO VIRTUD DE ÉLITE: Si el mercado está en colapso sistémico o ningún candidato tiene soporte, responde "NONE". Preservar USDT es prioritario ante caídas.
     5. ⚡ CONVICCIÓN INSTITUCIONAL ÁGIL (>= 70%): Si el candidato está en soporte limpio, con dominancia de Bids >= 50% y estructura de rebote verde, aprueba "BUY_LONG" con "confidence": >= 70 para capturar el movimiento de ganancia sin parálisis de análisis.
-    6. 🚀 DISPARO SNIPER EN EL SUELO 1M/2M: Si un activo está descansando en soporte sobre 15M/1H con Bids >= 50%, y su vela de 1M o 2M inicia el giro verde en la base (Ground-Zero Ignition), APRUEBA "BUY_LONG" para entrar exactamente en el nacimiento de la subida antes de que 5m/15m se extiendan.
-    7. 🏔️ FII A+ = ENTRADA PRIORITARIA (Floor Injection Index >= 60): Si el FII del candidato >= 60, significa que el dinero institucional está inyectando capital en el suelo AHORA MISMO. RSI 1M en 28-52 + vela 1M verde + OBV acumulando = APRUEBA inmediatamente si el Canal 1H está en la mitad inferior (< 50%). Este es el setup de mayor probabilidad del sistema.
-    8. 🔞 MÁXIMO MACRO = 1H: Las temporalidades de análisis son 1M, 2M, 5M, 15M y 1H. El 4H NO existe en este sistema. Si el RSI 1H < 70 y el precio está en el 20-60% inferior del canal de 1H, el contexto macro es FAVORABLE para entrar.
+    6. 🚀 MEJORA 2 - DOBLE IGNICIÓN EN SUB-MINUTO (10s + 30s): Si las velas de 10s y 30s cierran en VERDE sobre el soporte del Canal 1H con Bids >= 50%, este es el GATILLO EXACTO de despegue milimétrico. APRUEBA "BUY_LONG" para entrar en el segundo cero del impulso.
+    7. 🏔️ MEJORA 3 - SÚPER-PRIORIDAD FLOOR INJECTION (FII >= 60): Si el FII >= 60, significa inyección masiva de dinero inteligente en el piso (OBV acumulando + VolSurge + RSI en suelo). Este setup tiene PRIORIDAD MÁXIMA ABSOLUTA en la selección del activo ganador.
+    8. 🔞 MÁXIMO MACRO = 1H: Las temporalidades de análisis son 10s, 30s, 1M, 2M, 5M, 15M y 1H. El 4H NO se usa. Si el RSI 1H < 70 y el precio está en la mitad inferior del canal de 1H, el contexto macro es FAVORABLE.
+    9. 🚫 MEJORA 4 - VETO DE SANGRADO ACTIVO SUB-MINUTO: Si el activo muestra velas consecutivas de 10s y 30s rojas cayendo sin volumen comprador, VETA la entrada ("action": "HOLD") hasta que se dibuje la primera vela verde de soporte.
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA MULTI-AGENTE (7 AGENTES):
     {{

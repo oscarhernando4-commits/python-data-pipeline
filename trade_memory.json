@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 4900,
-    "wins": 969,
-    "losses": 3931,
-    "win_rate_pct": 19.78,
-    "total_pnl_usd": -8671178.615278859
+    "total_trades": 4906,
+    "wins": 974,
+    "losses": 3932,
+    "win_rate_pct": 19.85,
+    "total_pnl_usd": -8671178.47528886
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,8 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COWUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on CRVUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MORPHOUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ATOMUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XPLUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ETHUSDT)",
@@ -49,112 +47,12 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SYRUPUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TUTUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on AVAXUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOLOUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOLOUSDT)",
+      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ONTUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DIAUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-15 20:41:02",
-      "account_id": "SIM-098",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "TOWNSUSDT",
-      "side": "LONG",
-      "entry_price": 0.00221,
-      "exit_price": 0.00219,
-      "pnl_usd": -0.36,
-      "result": "LOSS",
-      "notes": "Hit SL on TOWNSUSDT (-$0.36). Re-Trading!",
-      "context": {
-        "score": 65,
-        "rsi_15m": 41.96,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-15 20:54:47",
-      "account_id": "SIM-045",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "HOLOUSDT",
-      "side": "LONG",
-      "entry_price": 0.0613,
-      "exit_price": 0.0613,
-      "pnl_usd": -0.05,
-      "result": "LOSS",
-      "notes": "Hit SL on HOLOUSDT (-$0.05). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 52.79,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-15 20:54:47",
-      "account_id": "SIM-046",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "HOLOUSDT",
-      "side": "LONG",
-      "entry_price": 0.0613,
-      "exit_price": 0.0613,
-      "pnl_usd": -0.1,
-      "result": "LOSS",
-      "notes": "Hit SL on HOLOUSDT (-$0.10). Re-Trading!",
-      "context": {
-        "score": 0,
-        "rsi_15m": 52.79,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-15 20:58:06",
-      "account_id": "SIM-000 (Réplica Real)",
-      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
-      "symbol": "BNBUSDT",
-      "side": "LONG",
-      "entry_price": 612.48,
-      "exit_price": 606.94,
-      "pnl_usd": -0.09,
-      "result": "LOSS",
-      "notes": "Hit SL on BNBUSDT (-$0.09). Re-Trading!",
-      "context": {
-        "score": 70,
-        "rsi_15m": 24.07,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-15 21:19:38",
-      "account_id": "SIM-001",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "TAOUSDT",
-      "side": "LONG",
-      "entry_price": 197.7,
-      "exit_price": 195.9,
-      "pnl_usd": -0.14,
-      "result": "LOSS",
-      "notes": "Hit SL on TAOUSDT (-$0.14). Re-Trading!",
-      "context": {
-        "score": 61,
-        "rsi_15m": 31.78,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-15 21:19:38",
-      "account_id": "SIM-002",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "TAOUSDT",
-      "side": "LONG",
-      "entry_price": 197.7,
-      "exit_price": 195.9,
-      "pnl_usd": -0.14,
-      "result": "LOSS",
-      "notes": "Hit SL on TAOUSDT (-$0.14). Re-Trading!",
-      "context": {
-        "score": 61,
-        "rsi_15m": 31.78,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-15 21:19:38",
       "account_id": "SIM-003",
@@ -8448,6 +8346,100 @@
       "pnl_usd": -0.0697500000000016,
       "result": "LOSS",
       "notes": "Real Money Trade closed with -0.43%",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-17 17:24:22",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "TSTUSDT",
+      "side": "BUY",
+      "entry_price": 0.01542,
+      "exit_price": 0.01542,
+      "pnl_usd": 0.0,
+      "result": "LOSS",
+      "notes": "Real Money Trade closed with 0.00%",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-17 17:28:45",
+      "account_id": "SIM-083",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "ONTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.03741,
+      "exit_price": 0.03731,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on ONTUSDT (PnL: +0.27%, Net: $+0.02 Fase 2)",
+      "context": {
+        "score": 21,
+        "rsi_15m": 35.26,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-17 17:30:50",
+      "account_id": "SIM-021",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "JSTUSDT",
+      "side": "LONG",
+      "entry_price": 0.10758,
+      "exit_price": 0.1079,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on JSTUSDT (PnL: +0.30%, Net: $+0.03 Fase 3)",
+      "context": {
+        "score": 22,
+        "rsi_15m": 41.14,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-17 17:30:50",
+      "account_id": "SIM-022",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "JSTUSDT",
+      "side": "LONG",
+      "entry_price": 0.10758,
+      "exit_price": 0.1079,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on JSTUSDT (PnL: +0.30%, Net: $+0.03 Fase 3)",
+      "context": {
+        "score": 22,
+        "rsi_15m": 41.14,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-17 17:34:45",
+      "account_id": "SIM-067",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "DIAUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1278,
+      "exit_price": 0.1274,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on DIAUSDT (PnL: +0.31%, Net: $+0.03 Fase 3)",
+      "context": {
+        "score": 70,
+        "rsi_15m": 41.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-17 17:38:57",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "AAVEUSDT",
+      "side": "BUY",
+      "entry_price": 88.80338889,
+      "exit_price": 88.97,
+      "pnl_usd": 0.02998999980000093,
+      "result": "WIN",
+      "notes": "Real Money Trade closed with 0.19%",
       "context": {}
     }
   ]
