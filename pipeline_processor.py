@@ -374,14 +374,16 @@ def run_infinite_trading_matrix_cycle():
                     "symbol": csym,
                     "score": c["score"],
                     "price": cdata.get("price", 0.0),
+                    "rsi_1m": crsi.get("rsi_1m", 50.0),
                     "rsi_2m": crsi.get("rsi_2m", cinds.get("rsi_15m", 50.0)),
                     "rsi_5m": crsi.get("rsi_5m", cinds.get("rsi_15m", 50.0)),
                     "rsi_15m": crsi.get("rsi_15m", cinds.get("rsi_15m", 50.0)),
                     "rsi_1h": crsi.get("rsi_1h", 50.0),
-                    "rsi_4h": crsi.get("rsi_4h", 50.0),
+                    "fii_score": cmtf.get("fii_score", 0),
+                    "vol_surge_1m": cmtf.get("vol_surge_1m", 1.0),
                     "vol_surge": cinds.get("volume_surge_ratio", 1.0),
                     "trade_quality": cinst.get("trade_quality", "C_NOISE"),
-                    "macro_trend": ctech.get("macro_trend_4h", "NEUTRAL")
+                    "macro_trend": ctech.get("macro_trend_1h", ctech.get("macro_trend_4h", "NEUTRAL"))
                 })
 
             # Persist AI Super-Brain Verdict to JSON for Dashboards and Obsidian

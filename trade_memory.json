@@ -1,15 +1,13 @@
 {
   "stats": {
-    "total_trades": 4771,
+    "total_trades": 4775,
     "wins": 926,
-    "losses": 3845,
-    "win_rate_pct": 19.41,
-    "total_pnl_usd": -8644764.206270857
+    "losses": 3849,
+    "win_rate_pct": 19.39,
+    "total_pnl_usd": -8644765.076270858
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on EULUSDT)",
-      "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on POLUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on KAITOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MOVRUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MUBUSDT)",
@@ -27,7 +25,9 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on EPICUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHFIUSDT)",
-      "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on TUTUSDT)"
+      "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on TUTUSDT)",
+      "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on EDENUSDT)",
+      "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on EDENUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ENSUSDT)",
@@ -53,74 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-15 10:56:43",
-      "account_id": "SIM-053",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "CHIPUSDT",
-      "side": "LONG",
-      "entry_price": 0.02513,
-      "exit_price": 0.02564,
-      "pnl_usd": 0.46,
-      "result": "WIN",
-      "notes": "Win on CHIPUSDT (+$0.46 net) -> Level 10 Re-Trading Started!",
-      "context": {
-        "score": 79,
-        "rsi_15m": 81.29,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-15 11:03:39",
-      "account_id": "SIM-048",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "TSTUSDT",
-      "side": "LONG",
-      "entry_price": 0.01451,
-      "exit_price": 0.01451,
-      "pnl_usd": -0.07,
-      "result": "LOSS",
-      "notes": "Hit SL on TSTUSDT (-$0.07). Re-Trading!",
-      "context": {
-        "score": 82,
-        "rsi_15m": 53.85,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-15 11:03:39",
-      "account_id": "SIM-049",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "TSTUSDT",
-      "side": "LONG",
-      "entry_price": 0.01451,
-      "exit_price": 0.01451,
-      "pnl_usd": -0.07,
-      "result": "LOSS",
-      "notes": "Hit SL on TSTUSDT (-$0.07). Re-Trading!",
-      "context": {
-        "score": 82,
-        "rsi_15m": 53.85,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-15 11:03:39",
-      "account_id": "SIM-050",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "TSTUSDT",
-      "side": "LONG",
-      "entry_price": 0.01451,
-      "exit_price": 0.01451,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "Hit SL on TSTUSDT (-$0.06). Re-Trading!",
-      "context": {
-        "score": 82,
-        "rsi_15m": 53.85,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-15 11:09:56",
       "account_id": "SIM-063",
@@ -8387,6 +8319,74 @@
       "context": {
         "score": 86,
         "rsi_15m": 66.03,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-17 10:43:41",
+      "account_id": "SIM-044",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "EDENUSDT",
+      "side": "LONG",
+      "entry_price": 0.05393,
+      "exit_price": 0.05331,
+      "pnl_usd": -0.23,
+      "result": "LOSS",
+      "notes": "LOSS on EDENUSDT (PnL: -1.15%, Net: $-0.23 Fase 3)",
+      "context": {
+        "score": 77,
+        "rsi_15m": 85.79,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-17 10:43:41",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "EDENUSDT",
+      "side": "LONG",
+      "entry_price": 0.05393,
+      "exit_price": 0.05331,
+      "pnl_usd": -0.24,
+      "result": "LOSS",
+      "notes": "LOSS on EDENUSDT (PnL: -1.15%, Net: $-0.24 Fase 3)",
+      "context": {
+        "score": 77,
+        "rsi_15m": 85.79,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-17 10:43:41",
+      "account_id": "SIM-054",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "EDENUSDT",
+      "side": "LONG",
+      "entry_price": 0.05393,
+      "exit_price": 0.05331,
+      "pnl_usd": -0.3,
+      "result": "LOSS",
+      "notes": "LOSS on EDENUSDT (PnL: -1.15%, Net: $-0.30 Fase 3)",
+      "context": {
+        "score": 77,
+        "rsi_15m": 85.79,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-17 10:47:46",
+      "account_id": "SIM-036",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "EDENUSDT",
+      "side": "SHORT",
+      "entry_price": 0.05431,
+      "exit_price": 0.05449,
+      "pnl_usd": -0.1,
+      "result": "LOSS",
+      "notes": "LOSS on EDENUSDT (PnL: -0.33%, Net: $-0.10 Fase 3)",
+      "context": {
+        "score": 79,
+        "rsi_15m": 87.7,
         "macro_trend_4h": "NEUTRAL"
       }
     }

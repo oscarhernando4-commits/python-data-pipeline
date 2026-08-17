@@ -472,9 +472,9 @@ def analyze_multi_timeframe_candles(symbol):
         # Fallback to daily candle approximation
         price_change_24h_pct = round(((closes_15m[-1] - d_closes[-2]) / d_closes[-2]) * 100.0, 2) if (len(d_closes) >= 2 and d_closes[-2] > 0) else 0.0
 
-    # Macro bearish count: how many of 1h, 4h, 1d are bearish
-    macro_bearish_count = sum([not tf_1h_up, not tf_4h_up, not tf_1d_up])
-    is_bearish = macro_bearish_count >= 2
+    # Macro bearish: solo 1H + 1D (4H eliminado — 1H es el máximo macro por directiva del usuario)
+    macro_bearish_count = sum([not tf_1h_up, not tf_1d_up])
+    is_bearish = macro_bearish_count >= 2  # Ambos 1H y 1D deben ser bajistas
 
     # Falling Knife V2: Relaxed OR-logic (any 2 of these 4 conditions triggers the guard)
     falling_knife_signals = 0
@@ -484,7 +484,7 @@ def analyze_multi_timeframe_candles(symbol):
         falling_knife_signals += 1
     if ma7_15m < ma25_15m:                       # MA7 below MA25 (bearish structure)
         falling_knife_signals += 1
-    if macro_bearish_count >= 2:                  # At least 2 of 3 macro TFs are bearish
+    if macro_bearish_count >= 2:                  # Both 1H and 1D are bearish
         falling_knife_signals += 1
 
     is_falling_knife = (falling_knife_signals >= 2) and (price_change_24h_pct < -5.0)
@@ -494,12 +494,12 @@ def analyze_multi_timeframe_candles(symbol):
         price_change_24h_pct < -8.0 and         # Crashed > 8% in real 24h
         price_position_in_range < 35.0 and      # Still near the bottom of the range
         (tf_2m_up or tf_5m_up) and              # Micro-timeframe shows a bounce (the trap)
-        macro_bearish_count >= 2                  # But macro structure is still bearish
+        macro_bearish_count >= 2                  # Both 1H and 1D still bearish (macro context)
     )
 
-    # Macro Bearish Dominance: 1h + 4h + 1d ALL bearish = heavy penalty
+    # Macro Bearish Dominance: 1H + 1D both bearish = heavy penalty
     is_macro_bearish_dominance = (
-        macro_bearish_count == 3 and             # All three macro TFs bearish
+        macro_bearish_count == 2 and             # Both 1H and 1D are bearish
         price_position_in_range < 30.0           # Price in bottom 30% of range
     )
 
@@ -536,7 +536,7 @@ def analyze_multi_timeframe_candles(symbol):
     # Active dump veto = deep crash with NO rebound signals
     is_active_dump = (gbm_zscore < -3.0) and not is_crash_rebound and not is_bullish_divergence
 
-    # Calculate SuperTrend (10, 3) Pattern Indicator on 15m, 1h, and 4h (As requested by user)
+    # Calculate SuperTrend (10, 3) Pattern Indicator on 15m, 1h
     is_supertrend_bullish = False
     if len(klines_15m) >= 10:
         atr_10 = sum(max(float(k[2]) - float(k[3]), abs(float(k[2]) - float(klines_15m[i-1][4])), abs(float(k[3]) - float(klines_15m[i-1][4]))) for i, k in enumerate(klines_15m[-10:], start=len(klines_15m)-10)) / 10.0
@@ -544,7 +544,7 @@ def analyze_multi_timeframe_candles(symbol):
         st_lower = hl2 - (3.0 * atr_10)
         is_supertrend_bullish = closes_15m[-1] > st_lower and closes_15m[-1] > ma7_15m
 
-    # 1H & 4H SuperTrend (10,3) & Yellow Arrow (MA7/MA25) Indicators
+    # 1H SuperTrend (10,3) & Yellow Arrow (MA7/MA25) Indicators
     is_supertrend_1h_bullish = False
     ma7_1h = sum(closes_1h[-7:]) / len(closes_1h[-7:]) if len(closes_1h) >= 7 else closes_1h[-1]
     ma25_1h = sum(closes_1h[-25:]) / len(closes_1h[-25:]) if len(closes_1h) >= 25 else closes_1h[-1]
@@ -555,32 +555,47 @@ def analyze_multi_timeframe_candles(symbol):
         st_lower_1h = hl2_1h - (3.0 * atr_1h_10)
         is_supertrend_1h_bullish = closes_1h[-1] > st_lower_1h
 
-    is_supertrend_4h_bullish = False
-    ma7_4h = sum(closes_4h[-7:]) / len(closes_4h[-7:]) if len(closes_4h) >= 7 else closes_4h[-1]
-    ma25_4h = sum(closes_4h[-25:]) / len(closes_4h[-25:]) if len(closes_4h) >= 25 else closes_4h[-1]
-    is_yellow_arrow_4h = (closes_4h[-1] >= ma7_4h) and (ma7_4h >= ma25_4h)
-    if len(klines_4h) >= 10:
-        atr_4h_10 = sum(max(float(k[2]) - float(k[3]), abs(float(k[2]) - float(klines_4h[i-1][4])), abs(float(k[3]) - float(klines_4h[i-1][4]))) for i, k in enumerate(klines_4h[-10:], start=len(klines_4h)-10)) / 10.0
-        hl2_4h = (float(klines_4h[-1][2]) + float(klines_4h[-1][3])) / 2.0
-        st_lower_4h = hl2_4h - (3.0 * atr_4h_10)
-        is_supertrend_4h_bullish = closes_4h[-1] > st_lower_4h
+    # ========================================================================
+    # 🏔️ FLOOR INJECTION INDEX (FII) — Inyección Institucional en la Base
+    # Detecta el momento exacto en que el dinero inteligente entra en el piso:
+    # OBV 1M acumulando + Volume Surge 1M + RSI 1M en suelo + vela 1M verde
+    # ========================================================================
+    fii_score = 0
+    if is_obv_accumulating:
+        fii_score += 20  # Smart money acumulando en OBV
+    if vol_surge_1m >= 1.3:
+        fii_score += 15  # Inyección de volumen detectada en 1M
+    if 28 <= rsi_1m <= 52:
+        fii_score += 15  # RSI 1M en zona de suelo / lanzamiento
+    if tf_1m_up:
+        fii_score += 15  # Vela de 1M gira verde: gatillo exacto de despegue
+    if is_vwap_floor_rebound:
+        fii_score += 10  # Precio en el piso del VWAP (-1.5 StdDev)
+    if is_bullish_divergence:
+        fii_score += 15  # Divergencia alcista: precio bajo pero RSI sube
+    if rsi_2m <= 48 and tf_2m_up:
+        fii_score += 10  # Confirmación 2M en zona de suelo
+    fii_score = min(100, fii_score)
 
-    # Multi-Timeframe Alignment Score (0 to 100) including MACD, GBM, Pre-Pump, SuperTrend & Yellow Arrow
+    # ========================================================================
+    # 📊 SCORE MULTI-TIMEFRAME 5 CAPAS: 1M (gatillo) → 2M → 5M → 15M → 1H
+    # Máximo macro: 1H. El 4H queda ELIMINADO por directiva del usuario.
+    # ========================================================================
     score_components = [
-        tf_2m_up * 10,
-        tf_5m_up * 20,
-        tf_15m_up * 25,
-        tf_1h_up * 20,
-        tf_4h_up * 10,
-        tf_1d_up * 15,
+        tf_1m_up * 15,    # 🔥 GATILLO: Vela de 1M gira desde el suelo
+        tf_2m_up * 15,    # Confirmación micro 2M
+        tf_5m_up * 20,    # Impulso 5M
+        tf_15m_up * 20,   # Contexto medio 15M
+        tf_1h_up * 20,    # 🏔️ Macro máximo: 1H (ya NO se usa 4H)
+        tf_1d_up * 10,    # Tendencia diaria de fondo (peso reducido)
         15 if is_bullish_divergence else 0,
         15 if is_vwap_floor_rebound else 0,
         10 if is_supertrend_bullish else 0,
         20 if is_ma25_above_ma99_upward else 0,
         25 if is_ma7_above_ma25_upward else 0,
         15 if is_supertrend_1h_bullish else 0,
-        15 if is_supertrend_4h_bullish else 0,
-        15 if (is_yellow_arrow_1h or is_yellow_arrow_4h) else 0,
+        # 4H SuperTrend y Yellow Arrow 4H ELIMINADOS:
+        15 if is_yellow_arrow_1h else 0,   # Solo 1H Yellow Arrow
         10 if is_macd_bullish_cross else 0,
         20 if is_crash_rebound else 0,
         25 if is_pre_pump_signal else 0
@@ -592,7 +607,12 @@ def analyze_multi_timeframe_candles(symbol):
     if is_obv_accumulating:
         multi_tf_score += 12  # Smart money accumulating
     if is_alt_outperforming_btc and not is_bearish:
-        multi_tf_score += 8  # Relative strength vs BTC
+        multi_tf_score += 8   # Fuerza relativa vs BTC
+    # Floor Injection Index bonus: si FII >= 60 el sistema da un bonus de entrada A+
+    if fii_score >= 60:
+        multi_tf_score += 15  # Inyección de capital confirmada en la base
+    elif fii_score >= 40:
+        multi_tf_score += 7   # Inyección parcial, señal prometedora
         
     elasticity_score = round(atr_pct_15m * (vol_acceleration if 'vol_acceleration' in locals() else 1.0) * (1.5 if is_obv_accumulating else 1.0), 3)
     if atr_pct_15m >= 0.40 and is_obv_accumulating:
@@ -648,35 +668,25 @@ def analyze_multi_timeframe_candles(symbol):
         if is_cetus_rocket_pattern:
             yellow_arrow_status = "🚀 [PATRÓN COHETE EN SUELO 1M/2M - DESPEGUE INMEDIATO A+]"
 
-        # Multi-Horizon Peak Proximity & Ceiling Shield (15M, 30M, 1H, 4H, 12H, 24H)
+        # Multi-Horizon Peak Proximity & Ceiling Shield (15M, 30M, 1H, 24H)
         highs_15m = [float(k[2]) for k in klines_15m] if klines_15m else []
         highs_1h = [float(k[2]) for k in klines_1h] if klines_1h else []
-        highs_4h = [float(k[2]) for k in klines_4h] if klines_4h else []
         lows_1h = [float(k[3]) for k in klines_1h] if klines_1h else []
-        lows_4h = [float(k[3]) for k in klines_4h] if klines_4h else []
         
         high_15m_recent = max(highs_15m[-3:]) if len(highs_15m) >= 3 else close_15m
         high_30m_recent = max(highs_15m[-6:]) if len(highs_15m) >= 6 else close_15m
         high_1h_recent = max(highs_1h[-6:]) if len(highs_1h) >= 6 else close_15m
         low_1h_recent = min(lows_1h[-6:]) if len(lows_1h) >= 6 else close_15m
-        high_4h_recent = max(highs_4h[-6:]) if len(highs_4h) >= 6 else close_15m
-        low_4h_recent = min(lows_4h[-6:]) if len(lows_4h) >= 6 else close_15m
-        high_12h_recent = max(highs_1h[-12:]) if len(highs_1h) >= 12 else close_15m
         high_24h = d_highs[-1] if d_highs else close_15m
 
         channel_height_1h = high_1h_recent - low_1h_recent
         range_position_1h = ((close_15m - low_1h_recent) / channel_height_1h) if channel_height_1h > 0 else 0.5
-        channel_height_4h = high_4h_recent - low_4h_recent
-        range_position_4h = ((close_15m - low_4h_recent) / channel_height_4h) if channel_height_4h > 0 else 0.5
         
-        is_at_range_ceiling_1h = (range_position_1h >= 0.85 and rsi_15m >= 58.0)
-        is_at_range_ceiling_4h = (range_position_4h >= 0.85 and rsi_15m >= 58.0)
+        is_at_range_ceiling_1h = (range_position_1h >= 0.80 and rsi_15m >= 55.0)
 
         dist_15m_pct = round(((high_15m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
         dist_30m_pct = round(((high_30m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
         dist_1h_pct = round(((high_1h_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
-        dist_4h_pct = round(((high_4h_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
-        dist_12h_pct = round(((high_12h_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
         dist_24h_pct = round(((high_24h - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
 
         is_explosive_breakout = (vol_surge_2m >= 2.0 or vol_surge_15m >= 2.0)
@@ -732,9 +742,9 @@ def analyze_multi_timeframe_candles(symbol):
         elif is_at_5m_candle_peak:
             is_overextended_15m = True
             overextension_reason = f"Cima de Vela 5M (Impulso extendido +{exp_5m:.2f}% en 5m). Exige entrada en la base de la vela."
-        elif (is_at_range_ceiling_1h or is_at_range_ceiling_4h) and not is_explosive_breakout:
+        elif is_at_range_ceiling_1h and not is_explosive_breakout:
             is_overextended_15m = True
-            overextension_reason = f"Techo de Canal 1H/4H (Precio en el {max(range_position_1h, range_position_4h)*100:.0f}% superior del rango con RSI={rsi_15m:.1f}). Exige compra en el suelo del canal."
+            overextension_reason = f"Techo de Canal 1H (Precio en el {range_position_1h*100:.0f}% superior del rango con RSI=15M={rsi_15m:.1f}). Exige compra en el suelo."
         elif dist_24h_pct <= 0.40 and rsi_15m >= 68.0 and not is_explosive_breakout:
             is_overextended_15m = True
             overextension_reason = f"Techo 24H Sobrecomprado (Precio a solo {dist_24h_pct}% del máximo diario ${high_24h:.4f} con RSI 15M={rsi_15m:.1f} >= 68.0). Exige compra en la base."
@@ -747,25 +757,22 @@ def analyze_multi_timeframe_candles(symbol):
         elif rsi_15m > 64.0 and not is_explosive_breakout:
             is_overextended_15m = True
             overextension_reason = f"RSI 15m sobrecomprado ({rsi_15m:.1f} > 64.0). Exige entrada en zona de lanzamiento (RSI <= 64.0)."
-        elif rsi_4h >= 68.0:
+        elif rsi_1h >= 70.0 and not is_explosive_breakout:
             is_overextended_15m = True
-            overextension_reason = f"Clímax Macro de 4H sobrecomprado (RSI 4H={rsi_4h:.1f} >= 68.0). Exige base macro no agotada."
-        elif rsi_1h >= 72.0:
+            overextension_reason = f"Clímax Macro 1H sobrecomprado (RSI 1H={rsi_1h:.1f} >= 70.0). Exige base macro no agotada."
+        elif not (tf_1h_up or is_yellow_arrow_1h or rsi_1h <= 55.0 or is_vwap_floor_rebound or is_bullish_divergence):
             is_overextended_15m = True
-            overextension_reason = f"Clímax de 1H sobrecomprado (RSI 1H={rsi_1h:.1f} >= 72.0). Exige base macro no agotada."
-        elif not (tf_1h_up or tf_4h_up or is_yellow_arrow_1h or is_yellow_arrow_4h or rsi_1h <= 55.0):
-            is_overextended_15m = True
-            overextension_reason = f"Macro 1H/4H en caída libre sin soporte (RSI 1H={rsi_1h:.1f}, 4H={rsi_4h:.1f}). Exige base macro."
+            overextension_reason = f"Macro 1H sin soporte (RSI 1H={rsi_1h:.1f}). Exige: 1H alcista, rebote VWAP, o divergencia alcista."
         elif (not price_above_15m_ma7 and not price_above_15m_ma25) and not (is_oversold_bounce_candidate or is_yellow_arrow_pivot or is_bullish_divergence or is_ma7_above_ma25_upward):
             is_overextended_15m = True
             overextension_reason = f"Tendencia bajista sin estructura de rebote en el suelo"
     avg_vol_15m = sum(vols_15m[-5:]) / len(vols_15m[-5:]) if len(vols_15m) >= 5 else 1.0
     vol_surge_15m = round(vols_15m[-1] / avg_vol_15m, 2) if avg_vol_15m > 0 else 1.0
 
-    st_status = "🟢 SUPERTREND 15M/1H/4H VERDE ALCISTA" if (is_supertrend_bullish and is_supertrend_1h_bullish and is_supertrend_4h_bullish) else ("🟢 SUPERTREND 15M VERDE" if is_supertrend_bullish else "🔴 SUPERTREND ROJO")
+    st_status = "🟢 SUPERTREND 15M/1H VERDE ALCISTA" if (is_supertrend_bullish and is_supertrend_1h_bullish) else ("🟢 SUPERTREND 15M VERDE" if is_supertrend_bullish else "🔴 SUPERTREND ROJO")
     vwap_status = "🟢 REBOTE PISO VWAP (-1.5 StdDev)" if is_vwap_floor_rebound else "⚪ NORMAL VWAP"
     ma99_status = "🚀 CRUCE ALCISTA MA25/MA99 (PULSO HACIA ARRIBA)" if is_ma25_above_ma99_upward else "⚪ NORMAL MA99"
-    yellow_arrow_macro = f" | 🎯 FLECHAS AMARILLAS MACRO 1H/4H" if (is_yellow_arrow_1h or is_yellow_arrow_4h) else ""
+    yellow_arrow_macro = f" | 🎯 FLECHAS AMARILLAS MACRO 1H" if is_yellow_arrow_1h else ""
     macd_status = "🟢 MACD CRUCE ALCISTA" if is_macd_bullish_cross else "🔴 MACD BAJISTA"
     gbm_status = f"💥 REBOTE POST-CRASH (Z={gbm_zscore:.1f})" if is_crash_rebound else (f"⛔ DUMP ACTIVO (Z={gbm_zscore:.1f})" if is_active_dump else f"⚪ GBM NORMAL (Z={gbm_zscore:.1f})")
 
@@ -773,29 +780,30 @@ def analyze_multi_timeframe_candles(symbol):
     knife_status = " | ⛔ FALLING KNIFE VETADO (Caída 24h=" + str(price_change_24h_pct) + "%)" if is_falling_knife else (" | 🪤 DEAD CAT BOUNCE TRAMPA (Caída 24h=" + str(price_change_24h_pct) + "%)" if is_dead_cat_bounce else (" | ⚠️ MACRO BAJISTA DOMINANTE" if is_macro_bearish_dominance else ""))
 
     pattern_15m_summary = (
-        f"RSI Triggers: 2m={rsi_2m} | 5m={rsi_5m} || Contexto Medio: 15m={rsi_15m} || Contexto Macro: 1h={rsi_1h} | 4h={rsi_4h} | "
-        f"2m={'UP' if tf_2m_up else 'DOWN'} (VolSurge2m={vol_surge_2m}x) | "
-        f"Precio 15m=${closes_15m[-1]:.4f} | MA7_15m=${ma7_15m:.4f} (Distancia: {dist_from_15m_ma7_pct:+.2f}%) | "
+        f"RSI 1M={rsi_1m} | 2M={rsi_2m} | 5M={rsi_5m} | 15M={rsi_15m} | 1H={rsi_1h} (MAX MACRO) | "
+        f"TF: 1m={'UP' if tf_1m_up else 'DN'} 2m={'UP' if tf_2m_up else 'DN'} 5m={'UP' if tf_5m_up else 'DN'} 15m={'UP' if tf_15m_up else 'DN'} 1h={'UP' if tf_1h_up else 'DN'} | "
+        f"FII={fii_score}/100 | VolSurge1M={vol_surge_1m}x VolSurge2M={vol_surge_2m}x | "
+        f"Precio 15m=${closes_15m[-1]:.4f} | MA7_15m=${ma7_15m:.4f} (Dist: {dist_from_15m_ma7_pct:+.2f}%) | "
         f"MA25_15m=${ma25_15m:.4f} | MA99_15m=${ma99_15m:.4f} | {ma99_status} | {st_status} | {vwap_status} | "
         f"{macd_status} | {gbm_status} | {pump_status}{knife_status} | "
-        f"Fase 15m={'RUPTURA_FRESCA (INICIO)' if 0.0 <= dist_from_15m_ma7_pct <= 3.0 else 'SOBRE_EXTENDIDO (CIMA)'} | "
-        f"Patrón={yellow_arrow_status}{yellow_arrow_macro} | VolSurge 15m={vol_surge_15m}x"
+        f"Fase={'BASE/LANZAMIENTO' if 0.0 <= dist_from_15m_ma7_pct <= 3.0 else 'SOBRE_EXTENDIDO/CIMA'} | "
+        f"Patrón={yellow_arrow_status}{yellow_arrow_macro} | Canal1H={range_position_1h*100:.0f}%"
     )
 
     return {
         "is_valid_tradable_asset": True,
         "rejection_reason": None,
         "multi_tf_score": multi_tf_score,
+        "fii_score": fii_score,
         "price_expansion_1d_pct": round(price_expansion_pct, 2),
         "is_overextended_15m": is_overextended_15m,
         "overextension_reason": overextension_reason,
         "is_yellow_arrow_pivot": is_yellow_arrow_pivot,
         "is_cetus_rocket_pattern": is_cetus_rocket_pattern,
+        "is_ground_zero_micro_ignition": is_ground_zero_micro_ignition,
         "is_yellow_arrow_1h": is_yellow_arrow_1h,
-        "is_yellow_arrow_4h": is_yellow_arrow_4h,
         "is_supertrend_bullish": is_supertrend_bullish,
         "is_supertrend_1h_bullish": is_supertrend_1h_bullish,
-        "is_supertrend_4h_bullish": is_supertrend_4h_bullish,
         "is_vwap_floor_rebound": is_vwap_floor_rebound,
         "is_ma25_above_ma99_upward": is_ma25_above_ma99_upward,
         "macd_hist_15m": macd_hist_15m,
@@ -814,6 +822,7 @@ def analyze_multi_timeframe_candles(symbol):
         "is_macro_bearish_dominance": is_macro_bearish_dominance,
         "price_change_24h_pct": price_change_24h_pct,
         "price_position_in_range": price_position_in_range,
+        "range_position_1h": round(range_position_1h, 3),
         "pct_b_15m": round(pct_b, 2),
         "is_oversold_bounce_candidate": is_oversold_bounce_candidate,
         "is_overbought_exhaustion": is_overbought_exhaustion,
@@ -835,9 +844,10 @@ def analyze_multi_timeframe_candles(symbol):
         "ma25_5m": round(ma25_5m, 6),
         "relative_strength_vs_btc": relative_strength,
         "is_alt_outperforming_btc": is_alt_outperforming_btc,
-        "rsi_15m": rsi_15m,
+        "rsi_1m": rsi_1m,
         "rsi_2m": rsi_2m,
         "rsi_5m": rsi_5m,
+        "rsi_15m": rsi_15m,
         "rsi_1h": rsi_1h,
         "rsi_4h": rsi_4h,
         "pattern_15m_summary": pattern_15m_summary,
@@ -847,7 +857,6 @@ def analyze_multi_timeframe_candles(symbol):
             "rsi_5m": rsi_5m,
             "rsi_15m": rsi_15m,
             "rsi_1h": rsi_1h,
-            "rsi_4h": rsi_4h
         },
         "timeframe_alignment": {
             "30s": "BULLISH" if tf_30s_up else "BEARISH",
@@ -856,7 +865,6 @@ def analyze_multi_timeframe_candles(symbol):
             "5m": "BULLISH" if tf_5m_up else "BEARISH",
             "15m": "BULLISH" if tf_15m_up else "BEARISH",
             "1h": "BULLISH" if tf_1h_up else "BEARISH",
-            "4h": "BULLISH" if tf_4h_up else "BEARISH",
             "1d": "BULLISH" if tf_1d_up else "BEARISH"
         }
     }

@@ -1256,27 +1256,46 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 mtf_res = multi_timeframe_analyzer.analyze_multi_timeframe_candles(best_symbol)
                 tf_align = mtf_res.get("timeframe_alignment", {})
                 
-                # 🏛️ MATRIZ DE CONFLUENCIA DE BASE EN 7 TIMEFRAMES (30s, 1m, 2m, 5m, 15m, 1h, 4h)
-                # REGLA SUPREMA: Prohibido entrar en micro-rebotes de 1m/2m si 15m, 1h o 4h están en tendencia bajista o fuera de la base.
+                # 🏛️ MATRIZ DE CONFLUENCIA DE BASE EN 5 TIMEFRAMES (1m, 2m, 5m, 15m, 1h - MÁXIMO 1H)
+                # REGLA SUPREMA: Entrar en el suelo de 1M/2M cuando hay soporte en 15M/1H y FII positivo.
+                tf_1m = tf_align.get("1m", "BEARISH")
+                tf_2m = tf_align.get("2m", "BEARISH")
+                tf_5m = tf_align.get("5m", "BEARISH")
                 tf_15m = tf_align.get("15m", "BEARISH")
                 tf_1h = tf_align.get("1h", "BEARISH")
-                tf_4h = tf_align.get("4h", "BEARISH")
-                tf_5m = tf_align.get("5m", "BEARISH")
-                tf_2m = tf_align.get("2m", "BEARISH")
                 
-                is_macro_base = (tf_1h == "BULLISH" or tf_4h == "BULLISH" or mtf_res.get("is_yellow_arrow_1h") or mtf_res.get("is_yellow_arrow_4h") or mtf_res.get("rsi_1h", 50) <= 55.0)
-                is_structural_15m_base = (tf_15m == "BULLISH" or mtf_res.get("is_yellow_arrow_pivot") or mtf_res.get("is_ma7_above_ma25_upward") or mtf_res.get("is_cetus_rocket_pattern"))
-                is_micro_ignition = (tf_5m == "BULLISH" or tf_2m == "BULLISH")
+                is_macro_base = (
+                    tf_1h == "BULLISH" or 
+                    mtf_res.get("is_yellow_arrow_1h") or 
+                    mtf_res.get("rsi_1h", 50) <= 55.0 or 
+                    mtf_res.get("range_position_1h", 0.5) <= 0.50 or 
+                    mtf_res.get("is_vwap_floor_rebound") or
+                    mtf_res.get("is_bullish_divergence")
+                )
+                is_structural_15m_base = (
+                    tf_15m == "BULLISH" or 
+                    mtf_res.get("is_yellow_arrow_pivot") or 
+                    mtf_res.get("is_ma7_above_ma25_upward") or 
+                    mtf_res.get("is_cetus_rocket_pattern") or
+                    mtf_res.get("is_ground_zero_micro_ignition")
+                )
+                is_micro_ignition = (
+                    tf_1m == "BULLISH" or 
+                    tf_2m == "BULLISH" or 
+                    tf_5m == "BULLISH" or 
+                    mtf_res.get("is_ground_zero_micro_ignition") or 
+                    mtf_res.get("fii_score", 0) >= 40
+                )
                 
                 if not is_macro_base:
                     is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por Macro 1H/4H bajista sin soporte (1H: {tf_1h}, 4H: {tf_4h}, RSI 1H: {mtf_res.get('rsi_1h')}). Exige base macro.")
+                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por Macro 1H sin soporte (1H: {tf_1h}, RSI 1H: {mtf_res.get('rsi_1h')}, Canal 1H: {mtf_res.get('range_position_1h')}). Exige base macro.")
                 elif not is_structural_15m_base:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de estructura en 15M (15M: {tf_15m}, RSI: {mtf_res.get('rsi_15m')}). Exige rebote o soporte en 15M.")
                 elif not is_micro_ignition:
                     is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} en base pero esperando ignición verde en 2M/5M (2M: {tf_2m}, 5M: {tf_5m}).")
+                    print(f"⛔ Compra rechazada: {best_symbol} en base pero esperando ignición verde en 1M/2M/5M (1M: {tf_1m}, 2M: {tf_2m}, 5M: {tf_5m}).")
                 elif mtf_res.get("is_overextended_15m"):
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} rechazado por vela sobre-extendida en la cima ({mtf_res.get('overextension_reason')}).")

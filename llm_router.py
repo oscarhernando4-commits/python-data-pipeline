@@ -433,24 +433,38 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         is_pre_pump = mtf.get('is_pre_pump_signal', False)
         is_knife = mtf.get('is_falling_knife', False)
         is_dead_cat = mtf.get('is_dead_cat_bounce', False)
-        is_macro_bear = mtf.get('is_macro_bearish_dominance', False)
-        gbm_z = mtf.get('gbm_zscore', ind.get('gbm_zscore', 0.0))
-        chg_24h = mtf.get('price_change_24h_pct', 0.0)
-        
         is_cetus_pattern = mtf.get('is_cetus_rocket_pattern', False)
         cetus_tag = " [🚀 PATRÓN COHETE TIPO CETUS IDENTIFICADO - PRIORIDAD MÁXIMA]" if is_cetus_pattern else ""
+        fii = mtf.get('fii_score', 0)
+        fii_tag = " [🏔️ FII A+ >= 60 - INYECCIÓN DE CAPITAL EN SUELO CONFIRMADA]" if fii >= 60 else (
+            " [⚡ FII 40-59 - INYECCIÓN PARCIAL EN BASE]" if fii >= 40 else "")
         
-        candidates_prompt_text += f"\nCANDIDATO: {sym} (Sector: {sec} | Acción Sugerida: {action}){cetus_tag}\n"
-        candidates_prompt_text += f"- Score Técnico: {score}/100 | Calificación MTF: {mtf.get('multi_tf_score', score)}/100 | Patrón CETUS: {is_cetus_pattern}\n"
-        candidates_prompt_text += f"- RSI 15M: {ind.get('rsi_15m')}, MACD Hist 15M: {mtf.get('macd_hist_15m', ind.get('macd_hist_15m', 0.0))}, VolSurge: {ind.get('volume_surge_ratio', 1.0)}x, OBV: {mtf.get('obv_trend')}\n"
-        candidates_prompt_text += f"- 🚀 Señal Pre-Pump: {is_pre_pump} (VolAcc: {mtf.get('vol_acceleration', 1.0)}x, BBSqueeze: {mtf.get('bb_squeeze_ratio', 1.0)})\n"
+        candidates_prompt_text += f"\nCANDIDATO: {sym} (Sector: {sec} | Acción Sugerida: {action}){cetus_tag}{fii_tag}\n"
+        candidates_prompt_text += f"- Score Técnico: {score}/100 | Score MTF: {mtf.get('multi_tf_score', score)}/100 | FII (Inyección Capital Suelo): {fii}/100\n"
+        candidates_prompt_text += (
+            f"- RSI 5 Capas: 1M={mtf.get('rsi_1m', ind.get('rsi_1m', '?'))} | "
+            f"2M={mtf.get('rsi_2m', ind.get('rsi_2m', '?'))} | "
+            f"5M={mtf.get('rsi_5m', ind.get('rsi_5m', '?'))} | "
+            f"15M={ind.get('rsi_15m', '?')} | "
+            f"1H={mtf.get('rsi_1h', ind.get('rsi_1h', '?'))} [MAX MACRO]\n"
+        )
+        candidates_prompt_text += (
+            f"- TF Alignment: "
+            f"1m={'UP' if mtf.get('timeframe_alignment', {}).get('1m') == 'BULLISH' else 'DN'} "
+            f"2m={'UP' if mtf.get('timeframe_alignment', {}).get('2m') == 'BULLISH' else 'DN'} "
+            f"5m={'UP' if mtf.get('timeframe_alignment', {}).get('5m') == 'BULLISH' else 'DN'} "
+            f"15m={'UP' if mtf.get('timeframe_alignment', {}).get('15m') == 'BULLISH' else 'DN'} "
+            f"1h={'UP' if mtf.get('timeframe_alignment', {}).get('1h') == 'BULLISH' else 'DN'} "
+            f"| Canal1H={mtf.get('range_position_1h', 0.5)*100:.0f}%\n"
+        )
+        candidates_prompt_text += f"- MACD Hist 15M: {mtf.get('macd_hist_15m', ind.get('macd_hist_15m', 0.0)):.4f} | OBV: {mtf.get('obv_trend')} | VolSurge 1M={mtf.get('vol_surge_1m', 1.0):.2f}x 2M={mtf.get('vol_surge_2m', 1.0):.2f}x\n"
+        candidates_prompt_text += f"- 🚀 Señal Pre-Pump: {is_pre_pump} (VolAcc: {mtf.get('vol_acceleration', 1.0):.2f}x, BBSqueeze: {mtf.get('bb_squeeze_ratio', 1.0):.2f})\n"
         candidates_prompt_text += f"- ⛔ Riesgo Falling Knife / Dead Cat: {is_knife or is_dead_cat} (Caída 24h: {chg_24h:+.1f}%) | Macro Bearish: {is_macro_bear}\n"
         candidates_prompt_text += f"- 💥 Rebote Post-Crash / GBM Z-Score: {gbm_z:.2f} (Rebote: {mtf.get('is_crash_rebound', False)})\n"
         candidates_prompt_text += f"- Libro de Órdenes: Dominancia Bids Compradores {ob['bid_dominance_pct']}% ({ob['liquidity_status']})\n"
-        candidates_prompt_text += f"- Tendencia 4H: {tech.get('macro_trend_4h')}\n"
         candidates_prompt_text += f"- Historial 5M (4h): {pat}\n"
         candidates_prompt_text += f"- NOTICIAS ESPECÍFICAS ÚLTIMAS 24H: {json.dumps(specific_n)}\n"
-        candidates_prompt_text += "------------------------------------"
+        candidates_prompt_text += "------------------------------------\n"
 
     print(f"✅ [Comité Institucional 7 Agentes - CEO Supreme] Mercado filtrado y analizado. Consultando al Súper-Cerebro Gemini AI para el TOP {len(candidates_data_list)} simultáneo...")
 
@@ -519,6 +533,8 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     4. 💎 CONDICIÓN "NONE" COMO VIRTUD DE ÉLITE: Si el mercado está en colapso sistémico o ningún candidato tiene soporte, responde "NONE". Preservar USDT es prioritario ante caídas.
     5. ⚡ CONVICCIÓN INSTITUCIONAL ÁGIL (>= 70%): Si el candidato está en soporte limpio, con dominancia de Bids >= 50% y estructura de rebote verde, aprueba "BUY_LONG" con "confidence": >= 70 para capturar el movimiento de ganancia sin parálisis de análisis.
     6. 🚀 DISPARO SNIPER EN EL SUELO 1M/2M: Si un activo está descansando en soporte sobre 15M/1H con Bids >= 50%, y su vela de 1M o 2M inicia el giro verde en la base (Ground-Zero Ignition), APRUEBA "BUY_LONG" para entrar exactamente en el nacimiento de la subida antes de que 5m/15m se extiendan.
+    7. 🏔️ FII A+ = ENTRADA PRIORITARIA (Floor Injection Index >= 60): Si el FII del candidato >= 60, significa que el dinero institucional está inyectando capital en el suelo AHORA MISMO. RSI 1M en 28-52 + vela 1M verde + OBV acumulando = APRUEBA inmediatamente si el Canal 1H está en la mitad inferior (< 50%). Este es el setup de mayor probabilidad del sistema.
+    8. 🔞 MÁXIMO MACRO = 1H: Las temporalidades de análisis son 1M, 2M, 5M, 15M y 1H. El 4H NO existe en este sistema. Si el RSI 1H < 70 y el precio está en el 20-60% inferior del canal de 1H, el contexto macro es FAVORABLE para entrar.
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA MULTI-AGENTE (7 AGENTES):
     {{
