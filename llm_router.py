@@ -4,8 +4,17 @@ import json
 import time
 import urllib.request
 
+# Load .env automatically so all 10 GEMINI keys are available in local execution
+try:
+    from dotenv import load_dotenv
+    _env_path = os.path.join(os.path.dirname(__file__), '.env')
+    load_dotenv(_env_path)
+except ImportError:
+    pass
+
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 _KEY_COOLDOWN = {}  # key -> timestamp when marked in cooldown
+
 
 # ============================================================
 # ROUND-ROBIN EQUITATIVO PERSISTENTE PARA GEMINI API KEYS

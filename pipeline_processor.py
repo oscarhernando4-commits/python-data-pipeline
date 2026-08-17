@@ -412,9 +412,14 @@ def run_infinite_trading_matrix_cycle():
         curr_bal = acc["current_balance"]
         curr_level = acc.get("current_level", 1)
 
+        # Hard floor: clamp to 0 to prevent negative balance compounding bug
+        if curr_bal < 0:
+            acc["current_balance"] = 0.0
+            curr_bal = 0.0
         if curr_bal <= 5.0:
             acc["status"] = "💀 Bancarrota"
-            total_balance += curr_bal
+            acc["position"] = None  # Force close any open position on bankrupt accounts
+            total_balance += max(curr_bal, 0.0)
             continue
 
         position = acc.get("position", None)
