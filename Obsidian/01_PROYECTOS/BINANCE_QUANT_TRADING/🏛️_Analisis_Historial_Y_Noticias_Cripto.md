@@ -2776,3 +2776,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-30.2%)`, `2026-02-04 (-18.67%)`, `2025-05-29 (-13.29%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: HFTUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-21` hasta `2026-08-16` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.0074 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.5500 USD` (`2024-03-13`) | Distancia: `-98.66%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0060 USD` (`2026-08-15`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-06-29 (+85.88%)`, `2026-08-05 (+66.14%)`, `2026-08-04 (+55.1%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-08-06 (-57.46%)`, `2025-10-09 (-32.08%)`, `2025-11-21 (-21.97%)`
+
+---

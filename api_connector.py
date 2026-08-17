@@ -1252,6 +1252,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"⛔ Compra rechazada: {best_symbol} es una stablecoin / activo no volátil.")
             elif not is_stable:
                 import multi_timeframe_analyzer
+                mtf_res = multi_timeframe_analyzer.analyze_multi_timeframe_candles(best_symbol)
+                tf_align = mtf_res.get("timeframe_alignment", {})
+                
                 # 🏛️ MATRIZ DE CONFLUENCIA DE BASE EN 7 TIMEFRAMES (30s, 1m, 2m, 5m, 15m, 1h, 4h)
                 # REGLA SUPREMA: Prohibido entrar en micro-rebotes de 1m/2m si 15m, 1h o 4h están en tendencia bajista o fuera de la base.
                 tf_15m = tf_align.get("15m", "BEARISH")
