@@ -688,6 +688,28 @@ def analyze_multi_timeframe_candles(symbol):
         lower_wick = min(open_15m, close_15m) - low_15m
         lower_wick_pct = round((lower_wick / candle_range) * 100.0, 1) if candle_range > 0 else 0.0
         
+        # Multi-Horizon Peak Proximity & Ceiling Shield (15M, 30M, 1H, 24H)
+        highs_15m = [float(k[2]) for k in klines_15m] if klines_15m else []
+        highs_1h = [float(k[2]) for k in klines_1h] if klines_1h else []
+        lows_1h = [float(k[3]) for k in klines_1h] if klines_1h else []
+        
+        high_15m_recent = max(highs_15m[-3:]) if len(highs_15m) >= 3 else close_15m
+        high_30m_recent = max(highs_15m[-6:]) if len(highs_15m) >= 6 else close_15m
+        high_1h_recent = max(highs_1h[-6:]) if len(highs_1h) >= 6 else close_15m
+        low_1h_recent = min(lows_1h[-6:]) if len(lows_1h) >= 6 else close_15m
+        high_24h = d_highs[-1] if d_highs else close_15m
+
+        channel_height_1h = high_1h_recent - low_1h_recent
+        range_position_1h = ((close_15m - low_1h_recent) / channel_height_1h) if channel_height_1h > 0 else 0.5
+        is_at_range_ceiling_1h = (range_position_1h >= 0.80 and rsi_15m >= 55.0)
+
+        dist_15m_pct = round(((high_15m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
+        dist_30m_pct = round(((high_30m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
+        dist_1h_pct = round(((high_1h_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
+        dist_24h_pct = round(((high_24h - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
+
+        is_explosive_breakout = (vol_surge_2m >= 2.0 or vol_surge_15m >= 2.0)
+
         # Ground-Zero 10s/30s/1M/2M Rebound Ignition on Safe 15M/1H Support Base
         # Trigger when 10s, 30s, or 1M candle turns green from support (MA7/MA25/VWAP floor/Canal 1H base), BEFORE 5M/15M have extended!
         is_sub_minute_ignition = bool((tf_10s_up and tf_30s_up) or (tf_10s_up and tf_1m_up) or (vol_surge_10s >= 1.4))
@@ -719,29 +741,6 @@ def analyze_multi_timeframe_candles(symbol):
         )
         if is_cetus_rocket_pattern:
             yellow_arrow_status = "🚀 [PATRÓN COHETE EN SUELO 10s/1M - DESPEGUE INMEDIATO A+]"
-
-        # Multi-Horizon Peak Proximity & Ceiling Shield (15M, 30M, 1H, 24H)
-        highs_15m = [float(k[2]) for k in klines_15m] if klines_15m else []
-        highs_1h = [float(k[2]) for k in klines_1h] if klines_1h else []
-        lows_1h = [float(k[3]) for k in klines_1h] if klines_1h else []
-        
-        high_15m_recent = max(highs_15m[-3:]) if len(highs_15m) >= 3 else close_15m
-        high_30m_recent = max(highs_15m[-6:]) if len(highs_15m) >= 6 else close_15m
-        high_1h_recent = max(highs_1h[-6:]) if len(highs_1h) >= 6 else close_15m
-        low_1h_recent = min(lows_1h[-6:]) if len(lows_1h) >= 6 else close_15m
-        high_24h = d_highs[-1] if d_highs else close_15m
-
-        channel_height_1h = high_1h_recent - low_1h_recent
-        range_position_1h = ((close_15m - low_1h_recent) / channel_height_1h) if channel_height_1h > 0 else 0.5
-        
-        is_at_range_ceiling_1h = (range_position_1h >= 0.80 and rsi_15m >= 55.0)
-
-        dist_15m_pct = round(((high_15m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
-        dist_30m_pct = round(((high_30m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
-        dist_1h_pct = round(((high_1h_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
-        dist_24h_pct = round(((high_24h - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
-
-        is_explosive_breakout = (vol_surge_2m >= 2.0 or vol_surge_15m >= 2.0)
 
         # 1M, 2M, 5M Intra-Candle Peak / Extended Spike Detectors (Anti-Cima Micro)
         last_1m = klines_1m[-1] if klines_1m else []
