@@ -678,6 +678,40 @@ def analyze_multi_timeframe_candles(symbol):
 
         is_explosive_breakout = (vol_surge_2m >= 2.0 or vol_surge_15m >= 2.0)
 
+        # 1M, 2M, 5M Intra-Candle Peak / Extended Spike Detectors (Anti-Cima Micro)
+        last_1m = klines_1m[-1] if klines_1m else []
+        last_2m = klines_2m[-1] if klines_2m else []
+        last_5m = klines_5m[-1] if klines_5m else []
+        
+        is_at_1m_candle_peak = False
+        is_at_2m_candle_peak = False
+        is_at_5m_candle_peak = False
+        exp_1m, exp_2m, exp_5m = 0.0, 0.0, 0.0
+        
+        if last_1m and len(last_1m) >= 5:
+            open_1m, high_1m, low_1m, close_1m = float(last_1m[1]), float(last_1m[2]), float(last_1m[3]), float(last_1m[4])
+            exp_1m = ((close_1m - open_1m) / open_1m) * 100.0 if open_1m > 0 else 0.0
+            range_1m = high_1m - low_1m
+            upper_wick_1m = (high_1m - max(open_1m, close_1m)) / range_1m if range_1m > 0 else 0.0
+            if exp_1m > 1.10 and (upper_wick_1m > 0.35 or ((high_1m - close_1m) / close_1m) * 100.0 < 0.10):
+                is_at_1m_candle_peak = True
+
+        if last_2m and len(last_2m) >= 5:
+            open_2m, high_2m, low_2m, close_2m = float(last_2m[1]), float(last_2m[2]), float(last_2m[3]), float(last_2m[4])
+            exp_2m = ((close_2m - open_2m) / open_2m) * 100.0 if open_2m > 0 else 0.0
+            range_2m = high_2m - low_2m
+            upper_wick_2m = (high_2m - max(open_2m, close_2m)) / range_2m if range_2m > 0 else 0.0
+            if exp_2m > 1.40 and (upper_wick_2m > 0.35 or ((high_2m - close_2m) / close_2m) * 100.0 < 0.12):
+                is_at_2m_candle_peak = True
+
+        if last_5m and len(last_5m) >= 5:
+            open_5m, high_5m, low_5m, close_5m = float(last_5m[1]), float(last_5m[2]), float(last_5m[3]), float(last_5m[4])
+            exp_5m = ((close_5m - open_5m) / open_5m) * 100.0 if open_5m > 0 else 0.0
+            range_5m = high_5m - low_5m
+            upper_wick_5m = (high_5m - max(open_5m, close_5m)) / range_5m if range_5m > 0 else 0.0
+            if exp_5m > 1.80 and (upper_wick_5m > 0.35 or ((high_5m - close_5m) / close_5m) * 100.0 < 0.15):
+                is_at_5m_candle_peak = True
+
         # Spike up followed by rejection wick (buying top trap)
         is_green_candle = close_15m >= open_15m
         upper_wick_ratio = (upper_wick / candle_range) if candle_range > 0 else 0.0
@@ -686,6 +720,15 @@ def analyze_multi_timeframe_candles(symbol):
         if candle_range > 0 and upper_wick_ratio > wick_threshold and (high_15m - low_15m) / low_15m > 0.012:
             is_overextended_15m = True
             overextension_reason = f"Mecha superior de reversión en vela de 15m ({upper_wick_ratio*100:.1f}% del rango, umbral={wick_threshold*100:.0f}%)"
+        elif is_at_1m_candle_peak:
+            is_overextended_15m = True
+            overextension_reason = f"Cima de Vela 1M (Impulso extendido +{exp_1m:.2f}% en 1m). Exige entrada en la base de la vela."
+        elif is_at_2m_candle_peak:
+            is_overextended_15m = True
+            overextension_reason = f"Cima de Vela 2M (Impulso extendido +{exp_2m:.2f}% en 2m). Exige entrada en la base de la vela."
+        elif is_at_5m_candle_peak:
+            is_overextended_15m = True
+            overextension_reason = f"Cima de Vela 5M (Impulso extendido +{exp_5m:.2f}% en 5m). Exige entrada en la base de la vela."
         elif (is_at_range_ceiling_1h or is_at_range_ceiling_4h) and not is_explosive_breakout:
             is_overextended_15m = True
             overextension_reason = f"Techo de Canal 1H/4H (Precio en el {max(range_position_1h, range_position_4h)*100:.0f}% superior del rango con RSI={rsi_15m:.1f}). Exige compra en el suelo del canal."
