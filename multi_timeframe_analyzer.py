@@ -649,13 +649,25 @@ def analyze_multi_timeframe_candles(symbol):
         highs_15m = [float(k[2]) for k in klines_15m] if klines_15m else []
         highs_1h = [float(k[2]) for k in klines_1h] if klines_1h else []
         highs_4h = [float(k[2]) for k in klines_4h] if klines_4h else []
+        lows_1h = [float(k[3]) for k in klines_1h] if klines_1h else []
+        lows_4h = [float(k[3]) for k in klines_4h] if klines_4h else []
         
         high_15m_recent = max(highs_15m[-3:]) if len(highs_15m) >= 3 else close_15m
         high_30m_recent = max(highs_15m[-6:]) if len(highs_15m) >= 6 else close_15m
-        high_1h_recent = max(highs_1h[-3:]) if len(highs_1h) >= 3 else close_15m
-        high_4h_recent = max(highs_4h[-3:]) if len(highs_4h) >= 3 else close_15m
+        high_1h_recent = max(highs_1h[-6:]) if len(highs_1h) >= 6 else close_15m
+        low_1h_recent = min(lows_1h[-6:]) if len(lows_1h) >= 6 else close_15m
+        high_4h_recent = max(highs_4h[-6:]) if len(highs_4h) >= 6 else close_15m
+        low_4h_recent = min(lows_4h[-6:]) if len(lows_4h) >= 6 else close_15m
         high_12h_recent = max(highs_1h[-12:]) if len(highs_1h) >= 12 else close_15m
         high_24h = d_highs[-1] if d_highs else close_15m
+
+        channel_height_1h = high_1h_recent - low_1h_recent
+        range_position_1h = ((close_15m - low_1h_recent) / channel_height_1h) if channel_height_1h > 0 else 0.5
+        channel_height_4h = high_4h_recent - low_4h_recent
+        range_position_4h = ((close_15m - low_4h_recent) / channel_height_4h) if channel_height_4h > 0 else 0.5
+        
+        is_at_range_ceiling_1h = (range_position_1h >= 0.85 and rsi_15m >= 58.0)
+        is_at_range_ceiling_4h = (range_position_4h >= 0.85 and rsi_15m >= 58.0)
 
         dist_15m_pct = round(((high_15m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
         dist_30m_pct = round(((high_30m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
@@ -664,17 +676,19 @@ def analyze_multi_timeframe_candles(symbol):
         dist_12h_pct = round(((high_12h_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
         dist_24h_pct = round(((high_24h - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
 
-        is_explosive_breakout = (vol_surge_2m >= 1.5 or vol_surge_15m >= 1.5)
+        is_explosive_breakout = (vol_surge_2m >= 2.0 or vol_surge_15m >= 2.0)
 
         # Spike up followed by rejection wick (buying top trap)
         is_green_candle = close_15m >= open_15m
         upper_wick_ratio = (upper_wick / candle_range) if candle_range > 0 else 0.0
-        # Adaptive wick threshold: 40% for healthy green candles, 35% for red/reversal candles
         wick_threshold = 0.40 if is_green_candle else 0.35
         
         if candle_range > 0 and upper_wick_ratio > wick_threshold and (high_15m - low_15m) / low_15m > 0.012:
             is_overextended_15m = True
             overextension_reason = f"Mecha superior de reversión en vela de 15m ({upper_wick_ratio*100:.1f}% del rango, umbral={wick_threshold*100:.0f}%)"
+        elif (is_at_range_ceiling_1h or is_at_range_ceiling_4h) and not is_explosive_breakout:
+            is_overextended_15m = True
+            overextension_reason = f"Techo de Canal 1H/4H (Precio en el {max(range_position_1h, range_position_4h)*100:.0f}% superior del rango con RSI={rsi_15m:.1f}). Exige compra en el suelo del canal."
         elif dist_24h_pct <= 0.40 and rsi_15m >= 68.0 and not is_explosive_breakout:
             is_overextended_15m = True
             overextension_reason = f"Techo 24H Sobrecomprado (Precio a solo {dist_24h_pct}% del máximo diario ${high_24h:.4f} con RSI 15M={rsi_15m:.1f} >= 68.0). Exige compra en la base."

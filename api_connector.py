@@ -1213,10 +1213,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         state["position"] = None
         state["status"] = "🟦 Buscando Entrada A+"
         
-        # Stablecoin filter check
+        # Stablecoin & Pegged Low-Volatility Commodity filter check
         stablecoins_blacklist = {
             "USDT", "USDC", "FDUSD", "TUSD", "BUSD", "DAI", "USDD", "USDE", "RLUSD", "USD1",
-            "EUR", "AEUR", "WBTC", "TBTC", "USDS", "USTC", "FRAX", "PYUSD", "USD0", "SNDKB", "SNDK", "USD"
+            "EUR", "AEUR", "WBTC", "TBTC", "USDS", "USTC", "FRAX", "PYUSD", "USD0", "SNDKB", "SNDK", "USD",
+            "PAXG", "XAUT", "XAUt", "GOLD"
         }
         
         # --- ENTRY DECISION LOGIC (SPOT ONLY) ---
