@@ -628,22 +628,25 @@ def analyze_multi_timeframe_candles(symbol):
         lower_wick = min(open_15m, close_15m) - low_15m
         lower_wick_pct = round((lower_wick / candle_range) * 100.0, 1) if candle_range > 0 else 0.0
         
+        # Ground-Zero 1M/2M Rebound Ignition on Safe 15M/1H Support Base
+        # Trigger when 1M or 2M candle turns green from support (MA7/MA25/VWAP floor), BEFORE 5M/15M have extended!
+        is_ground_zero_micro_ignition = (tf_1m_up or tf_2m_up) and (dist_from_15m_ma7_pct <= 1.50 or lower_wick_pct >= 15.0 or is_yellow_arrow_1h)
+        
         # Yellow Arrow 15M Pivot Rebound Pattern Detector
-        is_yellow_arrow_pivot = (0.0 <= dist_from_15m_ma7_pct <= 3.0) and (lower_wick_pct >= 20.0 or close_15m > open_15m) and (tf_5m_up or tf_2m_up)
+        is_yellow_arrow_pivot = (dist_from_15m_ma7_pct <= 2.0) and (lower_wick_pct >= 15.0 or close_15m >= open_15m or is_ground_zero_micro_ignition) and (tf_1m_up or tf_2m_up or tf_5m_up)
         yellow_arrow_status = "🎯 PATRÓN FLECHAS AMARILLAS (REBOTE PIVOTE A+ EN MA7/MA25)" if is_yellow_arrow_pivot else "⚪ NEUTRAL 15M"
 
-        # 🚀 PATRÓN COHETE DE ÉLITE TIPO CETUS (Despegues Rápidos de Alta Convicción)
-        # Combina: Rebote en Soporte + OBV Acumulando + Cruce EMA 9/21 + RSI en Zona de Lanzamiento (45-65) + Vela Verde
+        # 🚀 PATRÓN COHETE DE ÉLITE TIPO CETUS (Despegues Rápidos de Alta Convicción en la Base)
+        # Combina: Base en Soporte 15M/1H + OBV Acumulando + Giro en 1M/2M + RSI en Suelo (38-62) + Anti-Cima Activo
         is_cetus_rocket_pattern = bool(
-            (is_yellow_arrow_pivot or is_ma7_above_ma25_upward or is_ema_golden_cross) and
+            (is_yellow_arrow_pivot or is_ma7_above_ma25_upward or is_ema_golden_cross or is_ground_zero_micro_ignition) and
             is_obv_accumulating and
-            (42.0 <= rsi_15m <= 66.0) and
-            (close_15m >= open_15m or lower_wick_pct >= 25.0) and
-            (tf_15m_up and tf_5m_up) and
+            (38.0 <= rsi_15m <= 62.0) and
+            (tf_1m_up or tf_2m_up or tf_5m_up) and
             not is_overextended_15m
         )
         if is_cetus_rocket_pattern:
-            yellow_arrow_status = "🚀 [PATRÓN COHETE TIPO CETUS - DESPEGUE INMEDIATO A+]"
+            yellow_arrow_status = "🚀 [PATRÓN COHETE EN SUELO 1M/2M - DESPEGUE INMEDIATO A+]"
 
         # Multi-Horizon Peak Proximity & Ceiling Shield (15M, 30M, 1H, 4H, 12H, 24H)
         highs_15m = [float(k[2]) for k in klines_15m] if klines_15m else []
