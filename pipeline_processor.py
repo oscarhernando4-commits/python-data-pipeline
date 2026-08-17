@@ -297,8 +297,26 @@ def run_infinite_trading_matrix_cycle():
             "suggested_action": action
         })
     
-    # Sort strictly by highest score first (Top Bullish Setups)
-    bullish_candidates.sort(key=lambda x: (x["score"] * 1.5 + x["tech_data"].get("mtf_analysis", {}).get("elasticity_score", 0.0) * 10), reverse=True)
+    # Sort by True Composite Ground-Zero Quality (Prioritizing FII >= 60 & Ground-Zero in Floor, deprioritizing overextended coins)
+    def _candidate_rank_key(cand):
+        mtf = cand.get("tech_data", {}).get("mtf_analysis", {})
+        fii = mtf.get("fii_score", 0)
+        is_overextended = mtf.get("is_overextended_15m", False)
+        is_gz = mtf.get("is_ground_zero_micro_ignition", False)
+        c1h = mtf.get("range_position_1h", 0.5)
+        
+        rank = cand["score"]
+        if fii >= 60:
+            rank += 40
+        elif fii >= 40:
+            rank += 20
+        if is_gz and c1h <= 0.40:
+            rank += 30
+        if is_overextended:
+            rank -= 150  # Overextended coins must not block genuine ground-zero setups
+        return rank
+
+    bullish_candidates.sort(key=_candidate_rank_key, reverse=True)
     top_15_candidates = bullish_candidates[:15]
 
     
