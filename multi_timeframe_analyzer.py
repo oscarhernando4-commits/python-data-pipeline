@@ -688,25 +688,37 @@ def analyze_multi_timeframe_candles(symbol):
         lower_wick = min(open_15m, close_15m) - low_15m
         lower_wick_pct = round((lower_wick / candle_range) * 100.0, 1) if candle_range > 0 else 0.0
         
-        # Ground-Zero 1M/2M Rebound Ignition on Safe 15M/1H Support Base
-        # Trigger when 1M or 2M candle turns green from support (MA7/MA25/VWAP floor), BEFORE 5M/15M have extended!
-        is_ground_zero_micro_ignition = (tf_1m_up or tf_2m_up) and (dist_from_15m_ma7_pct <= 1.50 or lower_wick_pct >= 15.0 or is_yellow_arrow_1h)
+        # Ground-Zero 10s/30s/1M/2M Rebound Ignition on Safe 15M/1H Support Base
+        # Trigger when 10s, 30s, or 1M candle turns green from support (MA7/MA25/VWAP floor/Canal 1H base), BEFORE 5M/15M have extended!
+        is_sub_minute_ignition = bool((tf_10s_up and tf_30s_up) or (tf_10s_up and tf_1m_up) or (vol_surge_10s >= 1.4))
+        is_ground_zero_micro_ignition = bool(
+            (is_sub_minute_ignition or tf_1m_up or tf_2m_up) and 
+            (dist_from_15m_ma7_pct <= 1.50 or lower_wick_pct >= 15.0 or is_yellow_arrow_1h or range_position_1h <= 0.40)
+        )
+
+        # Sub-Minute Active Bleeding Veto: if 10s and 30s are actively dumping, wait for the floor to form
+        is_sub_minute_bleeding = bool(
+            len(closes_10s) >= 3 and
+            not tf_10s_up and not tf_30s_up and not tf_1m_up and
+            closes_10s[-1] < closes_10s[-2] < closes_10s[-3] and
+            vol_surge_10s >= 1.2
+        )
         
         # Yellow Arrow 15M Pivot Rebound Pattern Detector
         is_yellow_arrow_pivot = (dist_from_15m_ma7_pct <= 2.0) and (lower_wick_pct >= 15.0 or close_15m >= open_15m or is_ground_zero_micro_ignition) and (tf_1m_up or tf_2m_up or tf_5m_up)
         yellow_arrow_status = "🎯 PATRÓN FLECHAS AMARILLAS (REBOTE PIVOTE A+ EN MA7/MA25)" if is_yellow_arrow_pivot else "⚪ NEUTRAL 15M"
 
         # 🚀 PATRÓN COHETE DE ÉLITE TIPO CETUS (Despegues Rápidos de Alta Convicción en la Base)
-        # Combina: Base en Soporte 15M/1H + OBV Acumulando + Giro en 1M/2M + RSI en Suelo (38-62) + Anti-Cima Activo
+        # Combina: Base en Soporte 15M/1H + OBV Acumulando + Giro en 10s/30s/1M + RSI en Suelo (38-62) + Anti-Cima Activo
         is_cetus_rocket_pattern = bool(
             (is_yellow_arrow_pivot or is_ma7_above_ma25_upward or is_ema_golden_cross or is_ground_zero_micro_ignition) and
             is_obv_accumulating and
             (38.0 <= rsi_15m <= 62.0) and
-            (tf_1m_up or tf_2m_up or tf_5m_up) and
+            (tf_10s_up or tf_1m_up or tf_2m_up or tf_5m_up) and
             not is_overextended_15m
         )
         if is_cetus_rocket_pattern:
-            yellow_arrow_status = "🚀 [PATRÓN COHETE EN SUELO 1M/2M - DESPEGUE INMEDIATO A+]"
+            yellow_arrow_status = "🚀 [PATRÓN COHETE EN SUELO 10s/1M - DESPEGUE INMEDIATO A+]"
 
         # Multi-Horizon Peak Proximity & Ceiling Shield (15M, 30M, 1H, 24H)
         highs_15m = [float(k[2]) for k in klines_15m] if klines_15m else []
@@ -804,6 +816,9 @@ def analyze_multi_timeframe_candles(symbol):
         elif dist_from_15m_ma7_pct > (2.20 if (is_explosive_breakout or is_cetus_rocket_pattern) else 1.30):
             is_overextended_15m = True
             overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct}% sobre MA7). Exige compra en el suelo de la base (distancia <= {2.20 if (is_explosive_breakout or is_cetus_rocket_pattern) else 1.30}%)"
+        elif is_sub_minute_bleeding and not is_bullish_divergence:
+            is_overextended_15m = True
+            overextension_reason = "Micro-caída activa en 10s/30s (Ventas agresivas en sub-minuto). Esperando freno y giro verde en 10s."
         elif is_1m_death_cascade and not (is_bullish_divergence or is_vwap_floor_rebound):
             is_overextended_15m = True
             overextension_reason = f"Cascada Bajista 1M (Precio < MA7 < MA25 y SuperTrend 1M Rojo). Caída en curso sin absorción."
