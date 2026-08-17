@@ -690,20 +690,27 @@ def analyze_multi_timeframe_candles(symbol):
         lower_wick = min(open_15m, close_15m) - low_15m
         lower_wick_pct = round((lower_wick / candle_range) * 100.0, 1) if candle_range > 0 else 0.0
         
-        # Multi-Horizon Peak Proximity & Ceiling Shield (15M, 30M, 1H, 24H)
+        # Multi-Horizon Peak Proximity & 24H Macro Channel Ceiling Shield (15M, 30M, 1H, 24H)
         highs_15m = [float(k[2]) for k in klines_15m] if klines_15m else []
         highs_1h = [float(k[2]) for k in klines_1h] if klines_1h else []
         lows_1h = [float(k[3]) for k in klines_1h] if klines_1h else []
         
         high_15m_recent = max(highs_15m[-3:]) if len(highs_15m) >= 3 else close_15m
         high_30m_recent = max(highs_15m[-6:]) if len(highs_15m) >= 6 else close_15m
-        high_1h_recent = max(highs_1h[-6:]) if len(highs_1h) >= 6 else close_15m
-        low_1h_recent = min(lows_1h[-6:]) if len(lows_1h) >= 6 else close_15m
-        high_24h = d_highs[-1] if d_highs else close_15m
+        
+        # 🏔️ DETECTOR MACRO DE 24 HORAS EN VELAS DE 1H (Visión Completa del Suelo y Techo Real):
+        high_1h_recent = max(highs_1h[-24:]) if len(highs_1h) >= 24 else (max(highs_1h) if highs_1h else close_15m)
+        low_1h_recent = min(lows_1h[-24:]) if len(lows_1h) >= 24 else (min(lows_1h) if lows_1h else close_15m)
+        high_24h = d_highs[-1] if d_highs else high_1h_recent
 
         channel_height_1h = high_1h_recent - low_1h_recent
         range_position_1h = ((close_15m - low_1h_recent) / channel_height_1h) if channel_height_1h > 0 else 0.5
-        is_at_range_ceiling_1h = (range_position_1h >= 0.80 and rsi_15m >= 55.0)
+        
+        # Distancia sobre la Media MA25 de 1 Hora:
+        dist_from_1h_ma25_pct = ((close_15m - ma25_1h) / ma25_1h) * 100.0 if ma25_1h > 0 else 0.0
+        
+        # 🚫 VETO TOTAL ANTI-CIMA: Si el precio está en la mitad superior del canal de 24H (>= 50%) o RSI 1H >= 62.0:
+        is_at_range_ceiling_1h = bool(range_position_1h >= 0.50 or dist_from_1h_ma25_pct > 1.80 or rsi_1h >= 62.0)
 
         dist_15m_pct = round(((high_15m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
         dist_30m_pct = round(((high_30m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
@@ -807,30 +814,30 @@ def analyze_multi_timeframe_candles(symbol):
         elif is_at_5m_candle_peak:
             is_overextended_15m = True
             overextension_reason = f"Cima de Vela 5M (Impulso extendido +{exp_5m:.2f}% en 5m). Exige entrada en la base de la vela."
-        elif is_at_range_ceiling_1h and not is_explosive_breakout:
+        elif is_at_range_ceiling_1h:
             is_overextended_15m = True
-            overextension_reason = f"Techo de Canal 1H (Precio en el {range_position_1h*100:.0f}% superior del rango con RSI=15M={rsi_15m:.1f}). Exige compra en el suelo."
-        elif dist_24h_pct <= 0.40 and rsi_15m >= 68.0 and not is_explosive_breakout:
+            overextension_reason = f"⛔ TECHO MACRO 1H/24H: Precio en el {range_position_1h*100:.0f}% del canal con RSI 1H={rsi_1h:.1f} y +{dist_from_1h_ma25_pct:.2f}% sobre MA25 1H. Exige compra en el suelo (Canal <= 45%)."
+        elif dist_24h_pct <= 0.40 and rsi_15m >= 68.0:
             is_overextended_15m = True
             overextension_reason = f"Techo 24H Sobrecomprado (Precio a solo {dist_24h_pct}% del máximo diario ${high_24h:.4f} con RSI 15M={rsi_15m:.1f} >= 68.0). Exige compra en la base."
-        elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > (2.60 if (is_explosive_breakout or is_cetus_rocket_pattern) else 1.80):
+        elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > (2.60 if is_cetus_rocket_pattern else 1.80):
             is_overextended_15m = True
-            overextension_reason = f"Vela de 15m sobre-extendida en la cima (+{((close_15m - open_15m) / open_15m) * 100.0:.2f}% > {2.60 if (is_explosive_breakout or is_cetus_rocket_pattern) else 1.80}%). Exige entrada en el nacimiento de la vela."
-        elif dist_from_15m_ma7_pct > (2.20 if (is_explosive_breakout or is_cetus_rocket_pattern) else 1.30):
+            overextension_reason = f"Vela de 15m sobre-extendida en la cima (+{((close_15m - open_15m) / open_15m) * 100.0:.2f}% > {2.60 if is_cetus_rocket_pattern else 1.80}%). Exige entrada en el nacimiento de la vela."
+        elif dist_from_15m_ma7_pct > (2.20 if is_cetus_rocket_pattern else 1.30):
             is_overextended_15m = True
-            overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct}% sobre MA7). Exige compra en el suelo de la base (distancia <= {2.20 if (is_explosive_breakout or is_cetus_rocket_pattern) else 1.30}%)"
+            overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct}% sobre MA7). Exige compra en el suelo de la base (distancia <= {2.20 if is_cetus_rocket_pattern else 1.30}%)"
         elif is_sub_minute_bleeding and not is_bullish_divergence:
             is_overextended_15m = True
             overextension_reason = "Micro-caída activa en 10s/30s (Ventas agresivas en sub-minuto). Esperando freno y giro verde en 10s."
         elif is_1m_death_cascade and not (is_bullish_divergence or is_vwap_floor_rebound):
             is_overextended_15m = True
             overextension_reason = f"Cascada Bajista 1M (Precio < MA7 < MA25 y SuperTrend 1M Rojo). Caída en curso sin absorción."
-        elif rsi_15m > 64.0 and not is_explosive_breakout:
+        elif rsi_15m > 62.0:
             is_overextended_15m = True
-            overextension_reason = f"RSI 15m sobrecomprado ({rsi_15m:.1f} > 64.0). Exige entrada en zona de lanzamiento (RSI <= 64.0)."
-        elif rsi_1h >= 70.0 and not is_explosive_breakout:
+            overextension_reason = f"RSI 15m sobrecomprado ({rsi_15m:.1f} > 62.0). Exige entrada en zona de lanzamiento (RSI <= 62.0)."
+        elif rsi_1h >= 62.0:
             is_overextended_15m = True
-            overextension_reason = f"Clímax Macro 1H sobrecomprado (RSI 1H={rsi_1h:.1f} >= 70.0). Exige base macro no agotada."
+            overextension_reason = f"⛔ CLÍMAX MACRO 1H SOBRECOMPRADO: RSI 1H={rsi_1h:.1f} >= 62.0. Exige base macro no agotada (RSI <= 60.0)."
         elif not (tf_1h_up or is_yellow_arrow_1h or rsi_1h <= 55.0 or is_vwap_floor_rebound or is_bullish_divergence):
             is_overextended_15m = True
             overextension_reason = f"Macro 1H sin soporte (RSI 1H={rsi_1h:.1f}). Exige: 1H alcista, rebote VWAP, o divergencia alcista."
