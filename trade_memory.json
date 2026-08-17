@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 4911,
-    "wins": 978,
+    "total_trades": 4912,
+    "wins": 979,
     "losses": 3933,
-    "win_rate_pct": 19.91,
-    "total_pnl_usd": -8671179.65528886
+    "win_rate_pct": 19.93,
+    "total_pnl_usd": -8671179.50528886
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HEIUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TRUMPUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PENDLEUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TUTUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ASTERUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SAGAUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SOPHUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SUIUSDT)",
-      "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ZAMAUSDT)"
+      "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ZAMAUSDT)",
+      "BOOST LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ROBOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-15 21:47:51",
-      "account_id": "SIM-093",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "SEIUSDT",
-      "side": "LONG",
-      "entry_price": 0.04029,
-      "exit_price": 0.03982,
-      "pnl_usd": -28.46,
-      "result": "LOSS",
-      "notes": "Hit SL on SEIUSDT (-$28.46). Re-Trading!",
-      "context": {
-        "score": 42,
-        "rsi_15m": 49.42,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-15 21:47:51",
       "account_id": "SIM-099",
@@ -8447,6 +8430,23 @@
       "context": {
         "score": 12,
         "rsi_15m": 27.33,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-17 18:39:42",
+      "account_id": "SIM-060",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ROBOUSDT",
+      "side": "LONG",
+      "entry_price": 0.01297,
+      "exit_price": 0.01301,
+      "pnl_usd": 0.15,
+      "result": "WIN",
+      "notes": "WIN on ROBOUSDT (PnL: +0.31%, Net: $+0.15 Fase 3)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 37.36,
         "macro_trend_4h": "NEUTRAL"
       }
     }
