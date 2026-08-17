@@ -508,7 +508,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     2. 🚫 VETO TOTAL A MONEDAS DORMIDAS Y TRAMPAS: PROHIBIDO APROBAR MONEDAS LATERALES SIN VOLUMEN (< 0.5x) o activos que ya subieron +10% en el día y presentan mechas superiores de agotamiento.
     3. 🧱 MURO COMPRADOR OBLIGATORIO: Exige Bids >= 50% en el libro de órdenes (órdenes de compra reales empujando el suelo).
     4. 💎 CONDICIÓN "NONE" COMO VIRTUD DE ÉLITE: Si el mercado está en rango o ningún candidato tiene la fuerza para generar una ganancia rápida de +0.50% a +2.0%, responde "NONE" con "action": "HOLD". Preservar 100% USDT es 10 veces mejor que entrar en una moneda mediocre.
-    5. ⚡ CONVICCIÓN MÍNIMA (>= 80%): Solo aprueba con "confidence": >= 80 si el setup es indiscutiblemente un cohete en soporte.
+    5. ⚡ CONVICCIÓN INSTITUCIONAL ÁGIL (>= 70%): Si el candidato está en soporte limpio, con dominancia de Bids >= 50% y estructura de rebote verde, aprueba "BUY_LONG" con "confidence": >= 70 para capturar el movimiento de ganancia sin parálisis de análisis.
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA MULTI-AGENTE (7 AGENTES):
     {{

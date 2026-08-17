@@ -675,24 +675,9 @@ def analyze_multi_timeframe_candles(symbol):
         if candle_range > 0 and upper_wick_ratio > wick_threshold and (high_15m - low_15m) / low_15m > 0.012:
             is_overextended_15m = True
             overextension_reason = f"Mecha superior de reversión en vela de 15m ({upper_wick_ratio*100:.1f}% del rango, umbral={wick_threshold*100:.0f}%)"
-        elif dist_24h_pct <= 1.20 and not is_explosive_breakout and price_expansion_pct >= 4.0:
+        elif dist_24h_pct <= 0.40 and rsi_15m >= 68.0 and not is_explosive_breakout:
             is_overextended_15m = True
-            overextension_reason = f"Techo 24H (Precio a solo {dist_24h_pct}% del máximo diario ${high_24h:.4f}, margen exigido >= 1.20%). Exige compra en el suelo."
-        elif dist_12h_pct <= 1.8 and not is_explosive_breakout:
-            is_overextended_15m = True
-            overextension_reason = f"Techo 12H (Precio a solo {dist_12h_pct}% del máximo de 12h ${high_12h_recent:.4f}, margen exigido >= 1.8%). Exige compra en el suelo."
-        elif dist_4h_pct <= 1.00 and not is_explosive_breakout:
-            is_overextended_15m = True
-            overextension_reason = f"Techo 4H (Precio a solo {dist_4h_pct}% del máximo de 4h ${high_4h_recent:.4f}, margen exigido >= 1.00%). Exige compra en el suelo."
-        elif dist_1h_pct <= 0.70 and not is_explosive_breakout:
-            is_overextended_15m = True
-            overextension_reason = f"Techo 1H (Precio a solo {dist_1h_pct}% del máximo de 3h ${high_1h_recent:.4f}, margen exigido >= 0.70%). Exige compra en el suelo."
-        elif dist_30m_pct <= 0.95 and not is_explosive_breakout:
-            is_overextended_15m = True
-            overextension_reason = f"Techo 30M (Precio a solo {dist_30m_pct}% del máximo de 30m ${high_30m_recent:.4f}, margen exigido >= 0.95%). Exige compra en el suelo."
-        elif dist_15m_pct <= 0.40 and not is_explosive_breakout:
-            is_overextended_15m = True
-            overextension_reason = f"Techo 15M (Precio a solo {dist_15m_pct}% del máximo de 15m ${high_15m_recent:.4f}, margen exigido >= 0.40%). Exige compra en el suelo."
+            overextension_reason = f"Techo 24H Sobrecomprado (Precio a solo {dist_24h_pct}% del máximo diario ${high_24h:.4f} con RSI 15M={rsi_15m:.1f} >= 68.0). Exige compra en la base."
         elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > (2.60 if (is_explosive_breakout or is_cetus_rocket_pattern) else 1.80):
             is_overextended_15m = True
             overextension_reason = f"Vela de 15m sobre-extendida en la cima (+{((close_15m - open_15m) / open_15m) * 100.0:.2f}% > {2.60 if (is_explosive_breakout or is_cetus_rocket_pattern) else 1.80}%). Exige entrada en el nacimiento de la vela."
