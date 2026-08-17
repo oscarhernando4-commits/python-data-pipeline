@@ -906,7 +906,7 @@ def quick_position_heartbeat():
         # 🎯 SISTEMA DE SEGUROS DINÁMICOS CON HOLGURA DE RESPIRACIÓN:
         # FASE 1 (< +0.30%): SL -1.50% (Colchón de inicio).
         # FASE 2 (+0.30% a +0.60%): Piso Dinámico = max(+0.15% NETO, Pico - 0.25%) -> ¡0.25% de aire para respirar!
-        # FASE 3 (> +0.60%): Trailing Dinámico = CIMA - dynamic_trailing_distance.
+        # FASE 3 (> +0.60%): Trailing Holgado ATR = CIMA - dynamic_trailing_distance.
         # ═══════════════════════════════════════════════════════════════
         if highest_pnl_pct < 0.30:
             sl_pct = -1.50
@@ -915,8 +915,9 @@ def quick_position_heartbeat():
             sl_pct = max(0.15, round(highest_pnl_pct - 0.25, 2))   # Fase 2: Seguro dinámico con holgura de 0.25%
             new_phase = 2
         else:
-            dynamic_trailing_distance = max(0.35, round(atr_15m_pct * 1.2, 2))
-            sl_pct = max(0.35, round(highest_pnl_pct - dynamic_trailing_distance, 2))
+            # 🌊 MEJORA B: Trailing Holgado adaptativo por ATR(15M) para Megapumps
+            dynamic_trailing_distance = max(0.40, round(atr_15m_pct * 1.3, 2))
+            sl_pct = max(0.30, round(highest_pnl_pct - dynamic_trailing_distance, 2))
             new_phase = 3
             
         # Update if changed
@@ -935,9 +936,9 @@ def quick_position_heartbeat():
             should_exit = False
             exit_reason = f"Protegido por MA25 5m (Pnl: {current_pnl_pct:+.2f}%)"
         
-        # SNIPER MEJORA: Detección de Agotamiento de Mecha en Cima (Wick Exhaustion Sniper)
-        # Si estamos en Fase 3 (Pico >= +0.60%) y el precio retrocede >= 0.30% desde la cima
-        if not should_exit and new_phase >= 3 and highest_pnl_pct >= 0.60 and (highest_pnl_pct - current_pnl_pct) >= 0.30:
+        # SNIPER MEJORA B: Detección de Agotamiento de Mecha en Cima con holgura adaptativa
+        wick_pullback_threshold = max(0.40, round(dynamic_trailing_distance if new_phase >= 3 else 0.40, 2))
+        if not should_exit and new_phase >= 3 and highest_pnl_pct >= 0.80 and (highest_pnl_pct - current_pnl_pct) >= wick_pullback_threshold:
             should_exit = True
             exit_reason = f"🎯 SNIPER MECHA CIMA (Pico +{highest_pnl_pct:.2f}% -> Venta en {current_pnl_pct:+.2f}%)"
             
@@ -1051,18 +1052,18 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         # ═══════════════════════════════════════════════════════════════
         # 🎯 SISTEMA ULTRA-EFICIENTE DE 3 FASES CUÁNTICAS:
         # FASE 1: Antes de +0.30% -> SL -1.50% (Colchón inicial).
-        # FASE 2: +0.30% a +0.50% -> SL +0.30% NETO (Candado verde asegurado).
-        # FASE 3: Superior a +0.50% -> Trailing = CIMA - dynamic_trailing_distance.
+        # FASE 2: +0.30% a +0.60% -> Piso = max(+0.15% NETO, Cima - 0.25%).
+        # FASE 3: Superior a +0.60% -> Trailing Holgado ATR = CIMA - dynamic_trailing_distance.
         # ═══════════════════════════════════════════════════════════════
-        if highest_pnl_pct >= 0.50:
+        if highest_pnl_pct >= 0.60:
             phase = 3
-            dynamic_trailing_distance = max(0.35, round(atr_15m_pct * 1.2, 2))
+            dynamic_trailing_distance = max(0.40, round(atr_15m_pct * 1.3, 2))
             trailing_floor_pct = max(0.30, round(highest_pnl_pct - dynamic_trailing_distance, 2))
-            phase_msg = f"💎 FASE 3 (> +0.50% COSECHA EN CIMA): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - {dynamic_trailing_distance:.2f}%)"
+            phase_msg = f"💎 FASE 3 (COSECHA ADAPTATIVA ATR): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - {dynamic_trailing_distance:.2f}%)"
         elif highest_pnl_pct >= 0.30:
             phase = 2
-            trailing_floor_pct = 0.30
-            phase_msg = f"🔒 FASE 2 (+0.30% A +0.50%): Piso +0.30% NETO (Cima +{highest_pnl_pct:.2f}% | Ganancia Verde Asegurada)"
+            trailing_floor_pct = max(0.15, round(highest_pnl_pct - 0.25, 2))
+            phase_msg = f"🔒 FASE 2 (+0.30% A +0.60%): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% | Ganancia Verde Asegurada)"
         else:
             phase = 1
             trailing_floor_pct = -1.50
@@ -1237,21 +1238,24 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         if best_symbol:
             sym_clean = best_symbol.replace("USDT", "")
             
-            # 🛡️ FILTRO DE COOLDOWN Y ANTI-FATIGA DE RE-ENTRADA (Evita comprar el techo del mismo activo tras salir)
+            # 🛡️ MEJORA C: COOLDOWN INTELIGENTE POR DESCUENTO REAL Y PISO DE SUELO
             last_closed_sym = state.get("_last_closed_symbol")
             last_closed_time = state.get("_last_closed_time", 0)
             last_exit_price = state.get("_last_exit_price", 0.0)
             time_since_last_exit = time.time() - last_closed_time
             
-            # Si pasaron menos de 3 minutos, bloqueo estricto anti-rebote inmediato
-            if best_symbol == last_closed_sym and time_since_last_exit < 180:
-                is_stable = True
-                print(f"⛔ Compra rechazada: {best_symbol} en cooldown inmediato ({time_since_last_exit:.0f}s < 180s).")
-            # Entre 3 y 15 minutos: solo autoriza si el precio cayó significativamente a la base y NO está en la cima de salida
-            elif best_symbol == last_closed_sym and time_since_last_exit < 900:
-                if current_price > 0 and last_exit_price > 0 and current_price >= (last_exit_price * 0.995):
+            if best_symbol == last_closed_sym:
+                discount_from_exit_pct = ((last_exit_price - current_price) / last_exit_price) * 100.0 if (last_exit_price > 0 and current_price > 0) else 0.0
+                
+                # Si el activo cayó >= 1.20% respecto a donde salimos y tiene descuento real, se levanta el cooldown inmediatamente:
+                if discount_from_exit_pct >= 1.20 and time_since_last_exit >= 60:
+                    print(f"🟢 Cooldown levantado inteligentemente: {best_symbol} con descuento de -{discount_from_exit_pct:.2f}% respecto a salida (${last_exit_price:.6f} -> ${current_price:.6f}).")
+                elif time_since_last_exit < 120:
                     is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} bloqueado por COOLDOWN ({time_since_last_exit/60:.1f}m < 15m). Precio (${current_price:.6f}) no ha tenido retroceso suficiente respecto a salida (${last_exit_price:.6f}).")
+                    print(f"⛔ Compra rechazada: {best_symbol} en cooldown inmediato de 2 minutos ({time_since_last_exit:.0f}s < 120s).")
+                elif time_since_last_exit < 600 and current_price >= (last_exit_price * 0.995):
+                    is_stable = True
+                    print(f"⛔ Compra rechazada: {best_symbol} en cooldown de 10m sin descuento suficiente (${current_price:.6f} vs salida ${last_exit_price:.6f}).")
             
             if not is_stable and (sym_clean in stablecoins_blacklist or best_symbol in stablecoins_blacklist):
                 is_stable = True
