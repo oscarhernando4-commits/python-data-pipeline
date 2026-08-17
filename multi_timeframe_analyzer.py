@@ -22,14 +22,15 @@ _SESSION.mount("http://", _ADAPTER)
 _KLINE_CACHE = {}
 _TICKER_CACHE = {}
 
-# Time-To-Live for candle intervals (Macro candles change slowly)
+# Time-To-Live for candle intervals (Macro candles change slowly, micro candles update fast)
 _CACHE_TTL = {
     "1d": 600,  # 10 minutes
     "4h": 300,  # 5 minutes
     "1h": 180,  # 3 minutes
     "15m": 35,  # 35 seconds
     "5m": 15,   # 15 seconds
-    "1m": 10    # 10 seconds
+    "1m": 10,   # 10 seconds
+    "1s": 4     # 4 seconds for sub-minute 10s/30s precision
 }
 
 # Comprehensive Blacklist of Stablecoins, Pegged Tokens, and Synthetic Dollars
@@ -227,6 +228,23 @@ def _aggregate_1m_to_2m(klines_1m):
         klines_2m.append([k1[0], open_p, high_p, low_p, close_p, vol])
     return klines_2m
 
+def _aggregate_1s_to_bars(klines_1s, seconds=10):
+    """Aggregates 1s klines into custom sub-minute bars (10s, 30s) [timestamp, open, high, low, close, volume]."""
+    if not klines_1s:
+        return []
+    bars = []
+    for i in range(0, len(klines_1s), seconds):
+        chunk = klines_1s[i:i+seconds]
+        if not chunk:
+            continue
+        open_p = float(chunk[0][1])
+        high_p = max(float(k[2]) for k in chunk)
+        low_p = min(float(k[3]) for k in chunk)
+        close_p = float(chunk[-1][4])
+        vol = sum(float(k[5]) for k in chunk)
+        bars.append([chunk[0][0], open_p, high_p, low_p, close_p, vol])
+    return bars
+
 def calculate_obv(closes, volumes):
     """On-Balance Volume: detects accumulation/distribution divergence."""
     if not closes or not volumes or len(closes) < 2:
@@ -281,7 +299,10 @@ def analyze_multi_timeframe_candles(symbol):
             "multi_tf_score": 0
         }
         
-    # 2. Fetch Multi-Timeframe Klines (1m->2m, 5m, 15m, 1h, 4h, 1d)
+    # 2. Fetch Multi-Timeframe Klines (1s->10s/30s, 1m->2m, 5m, 15m, 1h, 4h, 1d)
+    klines_1s = fetch_klines_public(symbol, "1s", 120)
+    klines_10s = _aggregate_1s_to_bars(klines_1s, 10)
+    klines_30s = _aggregate_1s_to_bars(klines_1s, 30)
     klines_1m = fetch_klines_public(symbol, "1m", 40)
     klines_2m = _aggregate_1m_to_2m(klines_1m)
     klines_5m = fetch_klines_public(symbol, "5m", 30)
@@ -317,7 +338,11 @@ def analyze_multi_timeframe_candles(symbol):
             "multi_tf_score": 0
         }
         
-    # Parse 1m, 2m, 5m, 15m, 1h, 4h closes & volumes
+    # Parse 10s, 30s, 1m, 2m, 5m, 15m, 1h closes & volumes
+    closes_10s = [float(k[4]) for k in klines_10s] if klines_10s else []
+    vols_10s = [float(k[5]) for k in klines_10s] if klines_10s else []
+    closes_30s = [float(k[4]) for k in klines_30s] if klines_30s else []
+    vols_30s = [float(k[5]) for k in klines_30s] if klines_30s else []
     closes_1m = [float(k[4]) for k in klines_1m] if klines_1m else []
     vols_1m = [float(k[5]) for k in klines_1m] if klines_1m else []
     closes_2m = [float(k[4]) for k in klines_2m] if klines_2m else []
@@ -333,7 +358,9 @@ def analyze_multi_timeframe_candles(symbol):
     ma3_1m = sum(closes_1m[-3:]) / len(closes_1m[-3:]) if len(closes_1m) >= 3 else (closes_1m[-1] if closes_1m else 1.0)
     ma7_1m = sum(closes_1m[-7:]) / len(closes_1m[-7:]) if len(closes_1m) >= 7 else (closes_1m[-1] if closes_1m else 1.0)
     
-    tf_30s_up = (closes_1m[-1] >= ma3_1m) if closes_1m else False
+    # Micro Directional Trends (10s, 30s, 1m, 2m, 5m, 15m, 1h, 1d)
+    tf_10s_up = (closes_10s[-1] >= closes_10s[-2]) if len(closes_10s) >= 2 else False
+    tf_30s_up = (closes_30s[-1] >= closes_30s[-2]) if len(closes_30s) >= 2 else (closes_1m[-1] >= ma3_1m if closes_1m else False)
     tf_1m_up = (closes_1m[-1] >= closes_1m[-2] or closes_1m[-1] >= ma7_1m) if len(closes_1m) >= 2 else False
     tf_2m_up = closes_2m[-1] > closes_2m[-3] if len(closes_2m) >= 3 else (closes_2m[-1] > closes_2m[0] if closes_2m else False)
     tf_5m_up = closes_5m[-1] > closes_5m[-3] if len(closes_5m) >= 3 else (closes_5m[-1] > closes_5m[0] if closes_5m else False)
@@ -342,7 +369,9 @@ def analyze_multi_timeframe_candles(symbol):
     tf_4h_up = closes_4h[-1] > closes_4h[-3] if len(closes_4h) >= 3 else (closes_4h[-1] > closes_4h[0] if closes_4h else False)
     tf_1d_up = d_closes[-1] > d_closes[0] if d_closes else False
     
-    # Calculate Multi-Tier Multi-Timeframe RSI Architecture (1m, 2m, 5m, 15m, 1h, 4h)
+    # Calculate Multi-Tier RSI Architecture (10s, 30s, 1m, 2m, 5m, 15m, 1h)
+    rsi_10s = calculate_rsi(closes_10s, period=6) if len(closes_10s) >= 7 else (rsi_1m if 'rsi_1m' in locals() else 50.0)
+    rsi_30s = calculate_rsi(closes_30s, period=6) if len(closes_30s) >= 7 else (rsi_1m if 'rsi_1m' in locals() else 50.0)
     rsi_1m = calculate_rsi(closes_1m)
     rsi_2m = calculate_rsi(closes_2m)
     rsi_5m = calculate_rsi(closes_5m)
@@ -350,7 +379,14 @@ def analyze_multi_timeframe_candles(symbol):
     rsi_1h = calculate_rsi(closes_1h)
     rsi_4h = calculate_rsi(closes_4h)
     
-    # 1m & 30s Microstructure Volume Surge & Micro-Burst Detector
+    # 10s & 30s Microstructure Volume Surge
+    avg_vol_10s = sum(vols_10s[-5:-1]) / len(vols_10s[-5:-1]) if len(vols_10s) >= 5 else 1.0
+    vol_surge_10s = round(vols_10s[-1] / avg_vol_10s, 2) if (vols_10s and avg_vol_10s > 0) else 1.0
+
+    avg_vol_30s = sum(vols_30s[-3:-1]) / len(vols_30s[-3:-1]) if len(vols_30s) >= 3 else 1.0
+    vol_surge_30s = round(vols_30s[-1] / avg_vol_30s, 2) if (vols_30s and avg_vol_30s > 0) else 1.0
+    
+    # 1m Microstructure Volume Surge & Micro-Burst Detector
     avg_vol_1m = sum(vols_1m[-10:-1]) / len(vols_1m[-10:-1]) if len(vols_1m) >= 10 else 1.0
     vol_surge_1m = round(vols_1m[-1] / avg_vol_1m, 2) if (vols_1m and avg_vol_1m > 0) else 1.0
     is_30s_micro_burst = bool((vols_1m and vols_1m[-1] >= avg_vol_1m * 0.70) and tf_30s_up)
@@ -558,7 +594,7 @@ def analyze_multi_timeframe_candles(symbol):
     # ========================================================================
     # 🏔️ FLOOR INJECTION INDEX (FII) — Inyección Institucional en la Base
     # Detecta el momento exacto en que el dinero inteligente entra en el piso:
-    # OBV 1M acumulando + Volume Surge 1M + RSI 1M en suelo + vela 1M verde
+    # 10s/30s ignición + OBV 1M acumulando + VolSurge 1M + RSI 1M en suelo + vela 1M verde
     # ========================================================================
     fii_score = 0
     if is_obv_accumulating:
@@ -569,6 +605,10 @@ def analyze_multi_timeframe_candles(symbol):
         fii_score += 15  # RSI 1M en zona de suelo / lanzamiento
     if tf_1m_up:
         fii_score += 15  # Vela de 1M gira verde: gatillo exacto de despegue
+    if tf_10s_up and tf_30s_up:
+        fii_score += 10  # Micro-ignición sincronizada en 10s y 30s (despegue milimétrico)
+    if rsi_10s <= 45 and rsi_30s <= 45:
+        fii_score += 5   # Suelo en sub-minuto confirmado
     if is_vwap_floor_rebound:
         fii_score += 10  # Precio en el piso del VWAP (-1.5 StdDev)
     if is_bullish_divergence:
@@ -793,9 +833,9 @@ def analyze_multi_timeframe_candles(symbol):
     knife_status = " | ⛔ FALLING KNIFE VETADO (Caída 24h=" + str(price_change_24h_pct) + "%)" if is_falling_knife else (" | 🪤 DEAD CAT BOUNCE TRAMPA (Caída 24h=" + str(price_change_24h_pct) + "%)" if is_dead_cat_bounce else (" | ⚠️ MACRO BAJISTA DOMINANTE" if is_macro_bearish_dominance else ""))
 
     pattern_15m_summary = (
-        f"RSI 1M={rsi_1m} | 2M={rsi_2m} | 5M={rsi_5m} | 15M={rsi_15m} | 1H={rsi_1h} (MAX MACRO) | "
-        f"TF: 1m={'UP' if tf_1m_up else 'DN'} 2m={'UP' if tf_2m_up else 'DN'} 5m={'UP' if tf_5m_up else 'DN'} 15m={'UP' if tf_15m_up else 'DN'} 1h={'UP' if tf_1h_up else 'DN'} | "
-        f"FII={fii_score}/100 | VolSurge1M={vol_surge_1m}x VolSurge2M={vol_surge_2m}x | "
+        f"RSI 10S={rsi_10s:.1f} | 30S={rsi_30s:.1f} | 1M={rsi_1m} | 2M={rsi_2m} | 5M={rsi_5m} | 15M={rsi_15m} | 1H={rsi_1h} | "
+        f"TF: 10s={'UP' if tf_10s_up else 'DN'} 30s={'UP' if tf_30s_up else 'DN'} 1m={'UP' if tf_1m_up else 'DN'} 2m={'UP' if tf_2m_up else 'DN'} 5m={'UP' if tf_5m_up else 'DN'} 15m={'UP' if tf_15m_up else 'DN'} 1h={'UP' if tf_1h_up else 'DN'} | "
+        f"FII={fii_score}/100 | VolSurge 10S={vol_surge_10s}x 30S={vol_surge_30s}x 1M={vol_surge_1m}x | "
         f"Precio 15m=${closes_15m[-1]:.4f} | MA7_15m=${ma7_15m:.4f} (Dist: {dist_from_15m_ma7_pct:+.2f}%) | "
         f"MA25_15m=${ma25_15m:.4f} | MA99_15m=${ma99_15m:.4f} | {ma99_status} | {st_status} | {vwap_status} | "
         f"{macd_status} | {gbm_status} | {pump_status}{knife_status} | "
@@ -841,6 +881,9 @@ def analyze_multi_timeframe_candles(symbol):
         "is_overbought_exhaustion": is_overbought_exhaustion,
         "is_bullish_divergence": is_bullish_divergence,
         "price_above_15m_mas": price_above_15m_ma7 and price_above_15m_ma25,
+        # Volúmenes sub-minuto y micro
+        "vol_surge_10s": vol_surge_10s,
+        "vol_surge_30s": vol_surge_30s,
         "vol_surge_1m": vol_surge_1m,
         "is_30s_micro_burst": is_30s_micro_burst,
         "vol_surge_2m": vol_surge_2m,
@@ -857,6 +900,9 @@ def analyze_multi_timeframe_candles(symbol):
         "ma25_5m": round(ma25_5m, 6),
         "relative_strength_vs_btc": relative_strength,
         "is_alt_outperforming_btc": is_alt_outperforming_btc,
+        # RSI Arquitectura Completa (10s, 30s, 1m, 2m, 5m, 15m, 1h)
+        "rsi_10s": rsi_10s,
+        "rsi_30s": rsi_30s,
         "rsi_1m": rsi_1m,
         "rsi_2m": rsi_2m,
         "rsi_5m": rsi_5m,
@@ -865,6 +911,8 @@ def analyze_multi_timeframe_candles(symbol):
         "rsi_4h": rsi_4h,
         "pattern_15m_summary": pattern_15m_summary,
         "rsi_structure": {
+            "rsi_10s": rsi_10s,
+            "rsi_30s": rsi_30s,
             "rsi_1m": rsi_1m,
             "rsi_2m": rsi_2m,
             "rsi_5m": rsi_5m,
@@ -872,6 +920,7 @@ def analyze_multi_timeframe_candles(symbol):
             "rsi_1h": rsi_1h,
         },
         "timeframe_alignment": {
+            "10s": "BULLISH" if tf_10s_up else "BEARISH",
             "30s": "BULLISH" if tf_30s_up else "BEARISH",
             "1m": "BULLISH" if tf_1m_up else "BEARISH",
             "2m": "BULLISH" if tf_2m_up else "BEARISH",

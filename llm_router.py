@@ -442,7 +442,9 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         candidates_prompt_text += f"\nCANDIDATO: {sym} (Sector: {sec} | Acción Sugerida: {action}){cetus_tag}{fii_tag}\n"
         candidates_prompt_text += f"- Score Técnico: {score}/100 | Score MTF: {mtf.get('multi_tf_score', score)}/100 | FII (Inyección Capital Suelo): {fii}/100\n"
         candidates_prompt_text += (
-            f"- RSI 5 Capas: 1M={mtf.get('rsi_1m', ind.get('rsi_1m', '?'))} | "
+            f"- RSI 7 Capas: 10S={mtf.get('rsi_10s', '?')} | "
+            f"30S={mtf.get('rsi_30s', '?')} | "
+            f"1M={mtf.get('rsi_1m', ind.get('rsi_1m', '?'))} | "
             f"2M={mtf.get('rsi_2m', ind.get('rsi_2m', '?'))} | "
             f"5M={mtf.get('rsi_5m', ind.get('rsi_5m', '?'))} | "
             f"15M={ind.get('rsi_15m', '?')} | "
@@ -450,6 +452,8 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         )
         candidates_prompt_text += (
             f"- TF Alignment: "
+            f"10s={'UP' if mtf.get('timeframe_alignment', {}).get('10s') == 'BULLISH' else 'DN'} "
+            f"30s={'UP' if mtf.get('timeframe_alignment', {}).get('30s') == 'BULLISH' else 'DN'} "
             f"1m={'UP' if mtf.get('timeframe_alignment', {}).get('1m') == 'BULLISH' else 'DN'} "
             f"2m={'UP' if mtf.get('timeframe_alignment', {}).get('2m') == 'BULLISH' else 'DN'} "
             f"5m={'UP' if mtf.get('timeframe_alignment', {}).get('5m') == 'BULLISH' else 'DN'} "
@@ -457,7 +461,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
             f"1h={'UP' if mtf.get('timeframe_alignment', {}).get('1h') == 'BULLISH' else 'DN'} "
             f"| Canal1H={mtf.get('range_position_1h', 0.5)*100:.0f}%\n"
         )
-        candidates_prompt_text += f"- MACD Hist 15M: {mtf.get('macd_hist_15m', ind.get('macd_hist_15m', 0.0)):.4f} | OBV: {mtf.get('obv_trend')} | VolSurge 1M={mtf.get('vol_surge_1m', 1.0):.2f}x 2M={mtf.get('vol_surge_2m', 1.0):.2f}x\n"
+        candidates_prompt_text += f"- MACD Hist 15M: {mtf.get('macd_hist_15m', ind.get('macd_hist_15m', 0.0)):.4f} | OBV: {mtf.get('obv_trend')} | VolSurge 10S={mtf.get('vol_surge_10s', 1.0):.2f}x 30S={mtf.get('vol_surge_30s', 1.0):.2f}x 1M={mtf.get('vol_surge_1m', 1.0):.2f}x\n"
         candidates_prompt_text += f"- 🚀 Señal Pre-Pump: {is_pre_pump} (VolAcc: {mtf.get('vol_acceleration', 1.0):.2f}x, BBSqueeze: {mtf.get('bb_squeeze_ratio', 1.0):.2f})\n"
         candidates_prompt_text += f"- ⛔ Riesgo Falling Knife / Dead Cat: {is_knife or is_dead_cat} (Caída 24h: {chg_24h:+.1f}%) | Macro Bearish: {is_macro_bear}\n"
         candidates_prompt_text += f"- 💥 Rebote Post-Crash / GBM Z-Score: {gbm_z:.2f} (Rebote: {mtf.get('is_crash_rebound', False)})\n"
