@@ -730,6 +730,16 @@ def analyze_multi_timeframe_candles(symbol):
         upper_wick_ratio = (upper_wick / candle_range) if candle_range > 0 else 0.0
         wick_threshold = 0.40 if is_green_candle else 0.35
         
+        # 1M Bearish Cascade & SuperTrend 1M Indicator:
+        ma25_1m = sum(closes_1m[-25:]) / len(closes_1m[-25:]) if len(closes_1m) >= 25 else ma7_1m
+        is_supertrend_1m_bullish = False
+        if len(klines_1m) >= 10:
+            atr_1m_10 = sum(max(float(k[2]) - float(k[3]), abs(float(k[2]) - float(klines_1m[i-1][4])), abs(float(k[3]) - float(klines_1m[i-1][4]))) for i, k in enumerate(klines_1m[-10:], start=len(klines_1m)-10)) / 10.0
+            hl2_1m = (float(klines_1m[-1][2]) + float(klines_1m[-1][3])) / 2.0
+            st_lower_1m = hl2_1m - (3.0 * atr_1m_10)
+            is_supertrend_1m_bullish = bool(closes_1m[-1] > st_lower_1m)
+        is_1m_death_cascade = bool(closes_1m[-1] < ma7_1m and ma7_1m < ma25_1m and not is_supertrend_1m_bullish and vol_surge_1m < 1.4)
+
         if candle_range > 0 and upper_wick_ratio > wick_threshold and (high_15m - low_15m) / low_15m > 0.012:
             is_overextended_15m = True
             overextension_reason = f"Mecha superior de reversión en vela de 15m ({upper_wick_ratio*100:.1f}% del rango, umbral={wick_threshold*100:.0f}%)"
@@ -754,6 +764,9 @@ def analyze_multi_timeframe_candles(symbol):
         elif dist_from_15m_ma7_pct > (2.20 if (is_explosive_breakout or is_cetus_rocket_pattern) else 1.30):
             is_overextended_15m = True
             overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct}% sobre MA7). Exige compra en el suelo de la base (distancia <= {2.20 if (is_explosive_breakout or is_cetus_rocket_pattern) else 1.30}%)"
+        elif is_1m_death_cascade and not (is_bullish_divergence or is_vwap_floor_rebound):
+            is_overextended_15m = True
+            overextension_reason = f"Cascada Bajista 1M (Precio < MA7 < MA25 y SuperTrend 1M Rojo). Caída en curso sin absorción."
         elif rsi_15m > 64.0 and not is_explosive_breakout:
             is_overextended_15m = True
             overextension_reason = f"RSI 15m sobrecomprado ({rsi_15m:.1f} > 64.0). Exige entrada en zona de lanzamiento (RSI <= 64.0)."
