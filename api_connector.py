@@ -1243,10 +1243,15 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             last_exit_price = state.get("_last_exit_price", 0.0)
             time_since_last_exit = time.time() - last_closed_time
             
-            if best_symbol == last_closed_sym and time_since_last_exit < 1200: # 20 minutos de cooldown
-                if current_price > 0 and last_exit_price > 0 and current_price >= (last_exit_price * 0.985):
+            # Si pasaron menos de 3 minutos, bloqueo estricto anti-rebote inmediato
+            if best_symbol == last_closed_sym and time_since_last_exit < 180:
+                is_stable = True
+                print(f"⛔ Compra rechazada: {best_symbol} en cooldown inmediato ({time_since_last_exit:.0f}s < 180s).")
+            # Entre 3 y 15 minutos: solo autoriza si el precio cayó significativamente a la base y NO está en la cima de salida
+            elif best_symbol == last_closed_sym and time_since_last_exit < 900:
+                if current_price > 0 and last_exit_price > 0 and current_price >= (last_exit_price * 0.995):
                     is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} bloqueado por COOLDOWN DE RE-ENTRADA ({time_since_last_exit/60:.1f}m < 20m). Evitando sobre-operar el mismo activo en la cima.")
+                    print(f"⛔ Compra rechazada: {best_symbol} bloqueado por COOLDOWN ({time_since_last_exit/60:.1f}m < 15m). Precio (${current_price:.6f}) no ha tenido retroceso suficiente respecto a salida (${last_exit_price:.6f}).")
             
             if not is_stable and (sym_clean in stablecoins_blacklist or best_symbol in stablecoins_blacklist):
                 is_stable = True
