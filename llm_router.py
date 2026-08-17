@@ -433,6 +433,9 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         is_pre_pump = mtf.get('is_pre_pump_signal', False)
         is_knife = mtf.get('is_falling_knife', False)
         is_dead_cat = mtf.get('is_dead_cat_bounce', False)
+        is_macro_bear = mtf.get('is_macro_bearish_dominance', False)
+        gbm_z = mtf.get('gbm_zscore', ind.get('gbm_zscore', 0.0))
+        chg_24h = mtf.get('price_change_24h_pct', 0.0)
         is_cetus_pattern = mtf.get('is_cetus_rocket_pattern', False)
         cetus_tag = " [🚀 PATRÓN COHETE TIPO CETUS IDENTIFICADO - PRIORIDAD MÁXIMA]" if is_cetus_pattern else ""
         fii = mtf.get('fii_score', 0)
