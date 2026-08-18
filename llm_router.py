@@ -572,12 +572,10 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         }
     }
     
-    # 🏎️ SUPER-CEREBRO TURBO: Modelo Principal + Fallback automático
-    # gemini-3.1-flash-lite: Ultra-rápido, gratis, ideal para decisiones cuantitativas estructuradas
-    # gemini-2.0-flash:      Fallback Tier 2 si flash-lite falla o devuelve JSON inválido
+    # 🏎️ SUPER-CEREBRO TURBO: gemini-3.1-flash-lite exclusivo
+    # Ultra-rápido, gratis, 10 keys en paralelo → primera en responder gana
     models_to_try = [
-        "gemini-3.1-flash-lite",   # Tier 1: Más rápido, menor latencia, gratis
-        "gemini-2.0-flash",        # Tier 2: Fallback si flash-lite devuelve error o JSON malformado
+        "gemini-3.1-flash-lite",
     ]
     
     def _try_one_key(args):
