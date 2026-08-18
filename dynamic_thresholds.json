@@ -1,7 +1,13 @@
 {
   "group_0": {
-    "long_score": 61,
-    "short_score": 40
+    "long_score": 58,
+    "short_score": 40,
+    "min_fii": 45,
+    "max_canal_1h": 0.45,
+    "max_rsi_15m": 60,
+    "min_vol_surge": 0.6,
+    "cooldown_min": 3600,
+    "max_rsi_4h": 68
   },
   "group_1": {
     "long_score": 80,
@@ -14,14 +20,14 @@
     "short_rsi": 80
   },
   "group_3": {
-    "long_score": 70,
-    "vol_surge": 3.0,
+    "long_score": 58,
+    "vol_surge": 0.6,
     "long_rsi": 20
   },
   "group_4": {
     "long_score": 65,
     "short_rsi": 80,
-    "short_score": 20
+    "short_score": 16
   },
   "group_5": {
     "long_score": 57,

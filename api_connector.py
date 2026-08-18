@@ -1250,6 +1250,32 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             "PAXG", "XAUT", "XAUt", "GOLD"
         }
         
+        # 🚫 BLACKLIST EMPÍRICA: Símbolos que destruyeron capital en 4,924 simulaciones
+        # Fuente: Análisis estadístico de trade_memory.json — PROHIBIDO operar estos pares
+        toxic_symbols_blacklist = {
+            "PEPEUSDT", "PEPE",         # -$8,857,228 (catastrófico)
+            "BARDUSDT", "BARD",         # -$23,999
+            "APTUSDT", "APT",           # -$16,317
+            "PENGUUSDT", "PENGU",       # -$7,027
+            "POLUSDT", "POL",           # -$1,074
+            "EULUSDT", "EUL",           # -$282
+            "BICOUSDT", "BICO",         # -$320
+            "KITEUSDT", "KITE",         # -$598
+            "EDENUSDT", "EDEN",         # -$359
+            "KAITOUSDT", "KAITO",       # -$310
+        }
+        
+        # 🏆 WHITELIST PRIORITARIA: Símbolos con 100% Win Rate o WR >= 65% en historial
+        # Estos pares reciben bonus de score +20 si cumplen los filtros base
+        priority_whitelist = {
+            "BNBUSDT", "BNB",           # 100% WR, +$204
+            "2ZUSDT", "2Z",             # 100% WR, +$10
+            "HOMEUSDT", "HOME",         # 100% WR, +$1.37
+            "XPLUSDT", "XPLUS",         # 66.7% WR, +$659
+            "DEXEUSDT", "DEXE",         # 80% WR, +$4.5
+            "ATOMUSDT", "ATOM",         # 66.7% WR, +$15
+        }
+        
         # --- ENTRY DECISION LOGIC (SPOT ONLY) ---
         import strategy_engine
         dyn_t = strategy_engine.load_thresholds()
@@ -1287,7 +1313,16 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             if not is_stable and (sym_clean in stablecoins_blacklist or best_symbol in stablecoins_blacklist):
                 is_stable = True
                 print(f"⛔ Compra rechazada: {best_symbol} es una stablecoin / activo no volátil.")
-            elif not is_stable:
+            elif not is_stable and (sym_clean in toxic_symbols_blacklist or best_symbol in toxic_symbols_blacklist):
+                # 🚫 BLACKLIST EMPÍRICA: Símbolo destruyó capital en 4,924 simulaciones
+                is_stable = True
+                print(f"☠️ Compra rechazada: {best_symbol} está en la BLACKLIST EMPÍRICA (destruyó capital histórico). PROHIBIDO operar.")
+            else:
+                # 🏆 WHITELIST PRIORITARIA: Bonus de score para símbolos con WR >= 65% histórico
+                if sym_clean in priority_whitelist or best_symbol in priority_whitelist:
+                    best_score = min(100, best_score + 20)
+                    print(f"⭐ [WHITELIST PRIORITARIA] {best_symbol} tiene historial ganador (WR >= 65%). Bonus score aplicado: {best_score}/100.")
+
                 import multi_timeframe_analyzer
                 mtf_res = multi_timeframe_analyzer.analyze_multi_timeframe_candles(best_symbol)
                 tf_align = mtf_res.get("timeframe_alignment", {})
