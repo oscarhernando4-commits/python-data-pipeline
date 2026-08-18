@@ -662,6 +662,70 @@ def analyze_multi_timeframe_candles(symbol):
         
     multi_tf_score = min(100, multi_tf_score)  # Re-cap at 100 after bonuses
     
+    # Extract 15m candle baseline values
+    close_15m = closes_15m[-1] if closes_15m else 0.0
+    
+    # Multi-Horizon Peak Proximity & 24H Macro Channel Ceiling Shield (15M, 30M, 1H, 24H)
+    highs_15m = [float(k[2]) for k in klines_15m] if klines_15m else []
+    highs_1h = [float(k[2]) for k in klines_1h] if klines_1h else []
+    lows_1h = [float(k[3]) for k in klines_1h] if klines_1h else []
+    
+    high_15m_recent = max(highs_15m[-3:]) if len(highs_15m) >= 3 else close_15m
+    high_30m_recent = max(highs_15m[-6:]) if len(highs_15m) >= 6 else close_15m
+    
+    # 🏔️ MATRIZ FRACTAL DE SUELO EN 5 NIVELES (1M, 2M, 5M, 15M, 1H):
+    def _calc_range_pos(klines, lookback=24):
+        if not klines or len(klines) < 2: return 0.5
+        subset = klines[-lookback:] if len(klines) >= lookback else klines
+        c = float(subset[-1][4])
+        h = max(float(k[2]) for k in subset)
+        l = min(float(k[3]) for k in subset)
+        return ((c - l) / (h - l)) if (h - l) > 0 else 0.5
+
+    range_position_1m = _calc_range_pos(klines_1m, 24)
+    range_position_2m = _calc_range_pos(klines_2m, 24)
+    range_position_5m = _calc_range_pos(klines_5m, 24)
+    range_position_15m = _calc_range_pos(klines_15m, 24)
+    range_position_1h = _calc_range_pos(klines_1h, 24)
+
+    high_1h_recent = max(highs_1h[-24:]) if len(highs_1h) >= 24 else (max(highs_1h) if highs_1h else close_15m)
+    low_1h_recent = min(lows_1h[-24:]) if len(lows_1h) >= 24 else (min(lows_1h) if lows_1h else close_15m)
+    high_24h = d_highs[-1] if d_highs else high_1h_recent
+
+    # Distancia sobre la Media MA25 de 1 Hora:
+    dist_from_1h_ma25_pct = ((close_15m - ma25_1h) / ma25_1h) * 100.0 if ma25_1h > 0 else 0.0
+    
+    # 🚫 VETO TOTAL ANTI-CIMA EN CADA TEMPORALIDAD (Exige estar en el suelo de 1M, 2M, 5M, 15M y 1H):
+    is_at_range_ceiling_1h = bool(range_position_1h >= 0.48 or dist_from_1h_ma25_pct > 1.80 or rsi_1h >= 60.0)
+    is_at_range_ceiling_15m = bool(range_position_15m >= 0.50 or rsi_15m >= 58.0)
+    is_at_range_ceiling_5m = bool(range_position_5m >= 0.55 or rsi_5m >= 60.0)
+    is_at_range_ceiling_2m = bool(range_position_2m >= 0.60 or rsi_2m >= 62.0)
+    is_at_range_ceiling_1m = bool(range_position_1m >= 0.60 or rsi_1m >= 62.0)
+
+    dist_15m_pct = round(((high_15m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
+    dist_30m_pct = round(((high_30m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
+    dist_1h_pct = round(((high_1h_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
+    dist_24h_pct = round(((high_24h - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
+
+    is_explosive_breakout = (vol_surge_2m >= 2.0 or vol_surge_15m >= 2.0)
+
+    # Ground-Zero 10s/30s/1M/2M Rebound Ignition on Safe 15M/1H Support Base
+    is_sub_minute_ignition = bool(
+        (tf_10s_up and tf_30s_up) or 
+        (tf_10s_up and tf_1m_up and vol_surge_10s >= 1.2) or 
+        (fii_score >= 60 and tf_10s_up)
+    )
+    is_ground_zero_micro_ignition = bool(
+        (is_sub_minute_ignition or tf_1m_up or tf_2m_up) and 
+        (dist_from_15m_ma7_pct <= 1.50 or is_yellow_arrow_1h or range_position_1h <= 0.40)
+    )
+
+    # 🚫 MEJORA 4: Veto Estricto de Sangrado Activo Sub-Minuto
+    is_sub_minute_bleeding = bool(
+        (not tf_10s_up and not tf_30s_up and not tf_1m_up) or
+        (len(closes_10s) >= 2 and not tf_10s_up and not tf_30s_up and closes_10s[-1] < closes_10s[-2])
+    )
+    
     if is_ma25_below_ma99_downward:
         if fii_score < 45 and not (is_ground_zero_micro_ignition or is_vwap_floor_rebound or is_bullish_divergence):
             multi_tf_score = 0
@@ -693,68 +757,6 @@ def analyze_multi_timeframe_candles(symbol):
         upper_wick = high_15m - max(open_15m, close_15m)
         lower_wick = min(open_15m, close_15m) - low_15m
         lower_wick_pct = round((lower_wick / candle_range) * 100.0, 1) if candle_range > 0 else 0.0
-        
-        # Multi-Horizon Peak Proximity & 24H Macro Channel Ceiling Shield (15M, 30M, 1H, 24H)
-        highs_15m = [float(k[2]) for k in klines_15m] if klines_15m else []
-        highs_1h = [float(k[2]) for k in klines_1h] if klines_1h else []
-        lows_1h = [float(k[3]) for k in klines_1h] if klines_1h else []
-        
-        high_15m_recent = max(highs_15m[-3:]) if len(highs_15m) >= 3 else close_15m
-        high_30m_recent = max(highs_15m[-6:]) if len(highs_15m) >= 6 else close_15m
-        
-        # 🏔️ MATRIZ FRACTAL DE SUELO EN 5 NIVELES (1M, 2M, 5M, 15M, 1H):
-        def _calc_range_pos(klines, lookback=24):
-            if not klines or len(klines) < 2: return 0.5
-            subset = klines[-lookback:] if len(klines) >= lookback else klines
-            c = float(subset[-1][4])
-            h = max(float(k[2]) for k in subset)
-            l = min(float(k[3]) for k in subset)
-            return ((c - l) / (h - l)) if (h - l) > 0 else 0.5
-
-        range_position_1m = _calc_range_pos(klines_1m, 24)
-        range_position_2m = _calc_range_pos(klines_2m, 24)
-        range_position_5m = _calc_range_pos(klines_5m, 24)
-        range_position_15m = _calc_range_pos(klines_15m, 24)
-        range_position_1h = _calc_range_pos(klines_1h, 24)
-
-        high_1h_recent = max(highs_1h[-24:]) if len(highs_1h) >= 24 else (max(highs_1h) if highs_1h else close_15m)
-        low_1h_recent = min(lows_1h[-24:]) if len(lows_1h) >= 24 else (min(lows_1h) if lows_1h else close_15m)
-        high_24h = d_highs[-1] if d_highs else high_1h_recent
-
-        # Distancia sobre la Media MA25 de 1 Hora:
-        dist_from_1h_ma25_pct = ((close_15m - ma25_1h) / ma25_1h) * 100.0 if ma25_1h > 0 else 0.0
-        
-        # 🚫 VETO TOTAL ANTI-CIMA EN CADA TEMPORALIDAD (Exige estar en el suelo de 1M, 2M, 5M, 15M y 1H):
-        is_at_range_ceiling_1h = bool(range_position_1h >= 0.48 or dist_from_1h_ma25_pct > 1.80 or rsi_1h >= 60.0)
-        is_at_range_ceiling_15m = bool(range_position_15m >= 0.50 or rsi_15m >= 58.0)
-        is_at_range_ceiling_5m = bool(range_position_5m >= 0.55 or rsi_5m >= 60.0)
-        is_at_range_ceiling_2m = bool(range_position_2m >= 0.60 or rsi_2m >= 62.0)
-        is_at_range_ceiling_1m = bool(range_position_1m >= 0.60 or rsi_1m >= 62.0)
-
-        dist_15m_pct = round(((high_15m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
-        dist_30m_pct = round(((high_30m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
-        dist_1h_pct = round(((high_1h_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
-        dist_24h_pct = round(((high_24h - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
-
-        is_explosive_breakout = (vol_surge_2m >= 2.0 or vol_surge_15m >= 2.0)
-
-        # Ground-Zero 10s/30s/1M/2M Rebound Ignition on Safe 15M/1H Support Base
-        # Trigger when 10s, 30s, or 1M candle turns green from support (MA7/MA25/VWAP floor/Canal 1H base), BEFORE 5M/15M have extended!
-        is_sub_minute_ignition = bool(
-            (tf_10s_up and tf_30s_up) or 
-            (tf_10s_up and tf_1m_up and vol_surge_10s >= 1.2) or 
-            (fii_score >= 60 and tf_10s_up)
-        )
-        is_ground_zero_micro_ignition = bool(
-            (is_sub_minute_ignition or tf_1m_up or tf_2m_up) and 
-            (dist_from_15m_ma7_pct <= 1.50 or lower_wick_pct >= 15.0 or is_yellow_arrow_1h or range_position_1h <= 0.40)
-        )
-
-        # 🚫 MEJORA 4: Veto Estricto de Sangrado Activo Sub-Minuto (10s y 30s rojas cayendo sin absorción)
-        is_sub_minute_bleeding = bool(
-            (not tf_10s_up and not tf_30s_up and not tf_1m_up) or
-            (len(closes_10s) >= 2 and not tf_10s_up and not tf_30s_up and closes_10s[-1] < closes_10s[-2])
-        )
         
         # Yellow Arrow 15M Pivot Rebound Pattern Detector
         is_yellow_arrow_pivot = (dist_from_15m_ma7_pct <= 2.0) and (lower_wick_pct >= 15.0 or close_15m >= open_15m or is_ground_zero_micro_ignition) and (tf_1m_up or tf_2m_up or tf_5m_up)
