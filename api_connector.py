@@ -1293,30 +1293,48 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             "PAXG", "XAUT", "XAUt", "GOLD"
         }
         
-        # 🚫 BLACKLIST EMPÍRICA: Símbolos que destruyeron capital en 4,924 simulaciones
-        # Fuente: Análisis estadístico de trade_memory.json — PROHIBIDO operar estos pares
+        # 🚫 BLACKLIST EMPÍRICA v2: Actualizada con análisis real de 4,823 trades en matrix
+        # REGLA: Si PnL < -$100 USD en matrix → PROHIBIDO. Si WR < 17% → PROHIBIDO.
         toxic_symbols_blacklist = {
-            "PEPEUSDT", "PEPE",         # -$8,857,228 (catastrófico)
-            "BARDUSDT", "BARD",         # -$23,999
-            "APTUSDT", "APT",           # -$16,317
-            "PENGUUSDT", "PENGU",       # -$7,027
-            "POLUSDT", "POL",           # -$1,074
-            "EULUSDT", "EUL",           # -$282
-            "BICOUSDT", "BICO",         # -$320
-            "KITEUSDT", "KITE",         # -$598
-            "EDENUSDT", "EDEN",         # -$359
-            "KAITOUSDT", "KAITO",       # -$310
+            # ── CATASTRÓFICOS (pérdidas masivas) ──────────────────────────
+            "PEPEUSDT",  "PEPE",        # -$8,857,228 (catastrófico por mechas)
+            "BARDUSDT",  "BARD",        # -$10,225 USD, WR=19.6%
+            "APTUSDT",   "APT",         # -$16,317 USD
+            "PENGUUSDT", "PENGU",       # -$7,018 USD, WR=20.7%
+            "DEXEUSDT",  "DEXE",        # -$4,082 USD, WR=16.1% ← ERA WHITELIST, CORREGIDO
+            "INJUSDT",   "INJ",         # -$6,346 USD en Grupo4 (muy volátil sin control)
+            # ── DESTRUCTORES MEDIANOS (WR < 17%) ──────────────────────────
+            "STORJUSDT", "STORJ",       # -$987 USD, WR=13.6% ← NUEVO
+            "JSTUSDT",   "JST",         # -$403 USD, WR=13.5% ← NUEVO
+            "GIGGLEUSDT","GIGGLE",      # -$436 USD, WR=18.9% ← NUEVO
+            "SEIUSDT",   "SEI",         # -$1,159 USD, WR=13.7% ← NUEVO
+            "DODOUSDT",  "DODO",        # -$2,477 USD, WR=15.9% ← NUEVO
+            # ── OTROS CONFIRMADOS ─────────────────────────────────────────
+            "POLUSDT",   "POL",         # -$891 USD, WR=22.4%
+            "EULUSDT",   "EUL",         # -$282 USD
+            "BICOUSDT",  "BICO",        # -$320 USD
+            "EDENUSDT",  "EDEN",        # -$359 USD
+            "KAITOUSDT", "KAITO",       # -$310 USD
         }
         
-        # 🏆 WHITELIST PRIORITARIA: Símbolos con 100% Win Rate o WR >= 65% en historial
-        # Estos pares reciben bonus de score +20 si cumplen los filtros base
+        # 🏆 WHITELIST PRIORITARIA v2: Solo pares con PnL > +$50 confirmado en matrix
+        # Bonus de score +20 aplicado al pasar todos los filtros base
         priority_whitelist = {
-            "BNBUSDT", "BNB",           # 100% WR, +$204
-            "2ZUSDT", "2Z",             # 100% WR, +$10
-            "HOMEUSDT", "HOME",         # 100% WR, +$1.37
-            "XPLUSDT", "XPLUS",         # 66.7% WR, +$659
-            "DEXEUSDT", "DEXE",         # 80% WR, +$4.5
-            "ATOMUSDT", "ATOM",         # 66.7% WR, +$15
+            # ── PnL > $10,000 (élite absoluta) ──────────────────────────
+            "KITEUSDT",  "KITE",        # +$22,487 USD, WR=23.5% ← ERA BLACKLIST, CORREGIDO
+            # ── PnL $100-$1,000 (sólidos) ───────────────────────────────
+            "BNBUSDT",   "BNB",         # +$204 USD, WR alta
+            "ARBUSDT",   "ARB",         # +$420 USD, WR=16.1% pero ganancia/trade alta ← NUEVO
+            "BCHUSDT",   "BCH",         # +$358 USD, WR=22.1% ← NUEVO
+            "ONTUSDT",   "ONT",         # +$353 USD, WR=19.6% ← NUEVO
+            "LDOUSDT",   "LDO",         # +$212 USD, WR=22.6% ← NUEVO
+            "NOTUSDT",   "NOT",         # +$69  USD, WR=19.2% ← NUEVO
+            "PROMUSDT",  "PROM",        # +$46  USD, WR=26.8% (mejor WR del universo) ← NUEVO
+            # ── PnL < $100 pero WR > 65% (consistentes) ─────────────────
+            "XPLUSDT",   "XPLUS",       # 66.7% WR, +$659
+            "ATOMUSDT",  "ATOM",        # 66.7% WR, +$15
+            "2ZUSDT",    "2Z",          # 100% WR (pocos trades)
+            "HOMEUSDT",  "HOME",        # 100% WR (pocos trades)
         }
         
         # --- ENTRY DECISION LOGIC (SPOT ONLY) ---
