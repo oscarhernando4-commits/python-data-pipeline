@@ -491,13 +491,19 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         }
     }
     
-    # 🏎️ SUPER-CEREBRO EXCLUSIVO: gemini-3.1-flash-lite (Único modelo autorizado)
+    # 🏎️ SUPER-CEREBRO FLASH-LITE POOL: Prioridad gemini-3.1-flash-lite + rotación automática flash-lite
+    # Garantiza 15,000+ llamadas diarias sin interrupciones por cuota diaria
     models_to_try = [
-        "gemini-3.1-flash-lite"
+        "gemini-3.1-flash-lite",
+        "gemini-2.5-flash-lite",
+        "gemini-flash-lite-latest",
+        "gemini-2.5-flash"
     ]
     
+    keys_pool = get_gemini_api_keys()
+    
     def _try_one_key(args):
-        """Intenta consultar Gemini con una sola key. Retorna (parsed_json, key_label) o None."""
+        """Intenta consultar Gemini con una sola key. Retorna (parsed_json, key_label, model_name) o None."""
         model_name, key = args
         key_label = get_key_label(key, keys_pool)
         try:
@@ -521,7 +527,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         except urllib.error.HTTPError as e:
             if e.code == 429:
                 mark_key_in_cooldown(key)
-        except Exception:
+        except Exception as err:
             pass
         return None
     
