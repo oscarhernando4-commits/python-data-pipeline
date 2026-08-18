@@ -1557,7 +1557,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         "vol_surge": mtf_res.get("vol_surge_2m", 1.0) if 'mtf_res' in locals() else 1.0,
                         "entry_time_ms": int(time.time() * 1000),
                         "atr_pct_15m": mtf_res.get("atr_pct_15m", 0.30) if 'mtf_res' in locals() else 0.30,
-                        "ma25_5m": mtf_res.get("ma25_5m", current_price) if 'mtf_res' in locals() else current_price
+                        "ma25_5m": mtf_res.get("ma25_5m", current_price) if 'mtf_res' in locals() else current_price,
+                        "dna_tier": mtf_res.get("dna_profile", {}).get("dna_tier", "BALANCED_SWING") if 'mtf_res' in locals() else "BALANCED_SWING",
+                        "optimal_trailing_slack_pct": mtf_res.get("dna_profile", {}).get("optimal_trailing_slack_pct", 0.45) if 'mtf_res' in locals() else 0.45,
+                        "target_resistance_price": mtf_res.get("predictive_dna", {}).get("medium_term_horizon", {}).get("target_resistance_price", actual_entry_price * 1.03) if 'mtf_res' in locals() else actual_entry_price * 1.03,
+                        "pump_probability_pct": mtf_res.get("predictive_dna", {}).get("pump_probability_pct", 50) if 'mtf_res' in locals() else 50
                     }
                     state["status"] = f"🔵 En Vivo LONG ({best_symbol} @ ${actual_entry_price:.4f})"
                     state["_cached_usdt_free"] = 0.0

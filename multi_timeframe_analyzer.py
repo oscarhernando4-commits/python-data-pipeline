@@ -11,6 +11,7 @@ import math
 import numpy as np
 from datetime import datetime
 from quant_institutional import GBMAnomalyDetector
+import asset_dna_predictive_engine
 
 # Persistent HTTP connection pool to avoid TLS handshake overhead
 _SESSION = requests.Session()
@@ -992,6 +993,15 @@ def analyze_multi_timeframe_candles(symbol):
         "atr_pct_15m": atr_pct_15m,
         "atr_pct_1h": atr_pct_1h,
         "dna_profile": dna_profile,
+        "predictive_dna": asset_dna_predictive_engine.analyze_multi_horizon_predictive_dna(
+            symbol=symbol,
+            klines_multi_tf={
+                "1m": klines_1m, "2m": klines_2m, "5m": klines_5m,
+                "15m": klines_15m, "1h": klines_1h, "4h": klines_4h, "1d": klines_1d
+            },
+            orderbook_info={},
+            fii_score=fii_score
+        ),
         "elasticity_score": elasticity_score,
         "dist_from_15m_ma7_pct": dist_from_15m_ma7_pct,
         "dist_from_1m_ema9_pct": dist_from_1m_ema9_pct,

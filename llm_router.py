@@ -401,8 +401,17 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         dna = mtf.get('dna_profile', {})
         dna_str = f"{dna.get('dna_label', 'Estándar')} | Reputación: {dna.get('reputation', 'Neutral')} | Holgura Óptima: {dna.get('optimal_trailing_slack_pct', 0.50):.2f}% | Expansión Objetivo: +{dna.get('optimal_target_expansion_pct', 2.50):.2f}%"
 
+        pred = mtf.get('predictive_dna', {})
+        pump_prob = pred.get('pump_probability_pct', 50)
+        dump_risk = pred.get('dump_risk_pct', 20)
+        pred_label = pred.get('predictive_label', 'Neutral')
+        catalysts_str = ", ".join(pred.get('active_pump_catalysts', [])) if pred.get('active_pump_catalysts') else "En desarrollo"
+        warnings_str = ", ".join(pred.get('active_dump_warnings', [])) if pred.get('active_dump_warnings') else "Ninguna advertencia"
+
         candidates_prompt_text += f"\nCANDIDATO: {sym} (Sector: {sec} | Acción Sugerida: {action}){cetus_tag}{fii_tag}\n"
         candidates_prompt_text += f"- Score: {score}/100 | MTF Score: {mtf.get('multi_tf_score', score)}/100 | FII (Inyección Suelo): {fii}/100\n"
+        candidates_prompt_text += f"- 🔮 Radar Predictivo Multi-Horizonte: {pred_label} | Prob. Pump={pump_prob}% | Riesgo Dump={dump_risk}%\n"
+        candidates_prompt_text += f"- 🚀 Catalizadores Activos: [{catalysts_str}] | Advertencias: [{warnings_str}]\n"
         candidates_prompt_text += f"- 🧬 ADN & Elasticidad: {dna_str}\n"
         candidates_prompt_text += f"- 🏔️ MATRIZ FRACTAL DE SUELO 7D (% Canal desde el piso): 1D={c1d}% | 4H={c4h}% | 1H={c1h}% | 15M={c15m}% | 5M={c5m}% | 2M={c2m}% | 1M={c1m}%\n"
         candidates_prompt_text += f"- 🎯 Gatillo 1M Sniper: Distancia EMA9={dist_1m_ema9:+.2f}% | Retesteo Base={is_sniper_pb} | Anti-FOMO={not is_fomo}\n"
@@ -426,17 +435,17 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         wall_street_str = "⚪ Wall Street Neutral"
 
     prompt_text = f"""
-    Eres el COMITÉ INSTITUCIONAL MULTI-AGENTE CUÁNTICO (Súper-Cerebro Supremo y Cazador Activo de Alpha en el Suelo 7D).
-    Tu misión suprema es: OPERAR DE FORMA DINÁMICA, APRENDER CONTINUAMENTE Y MAXIMIZAR EL WIN-RATE MINIMIZANDO EL RIESGO.
+    Eres el COMITÉ INSTITUCIONAL MULTI-AGENTE CUÁNTICO (Súper-Cerebro Supremo, Predictor de Catalizadores y Cazador de Alpha en el Suelo 7D).
+    Tu misión suprema es: EVALUAR EL ADN PREDICTIVO MULTI-HORIZONTE, IDENTIFICAR CATALIZADORES DE PUMP, VETAR RIESGOS DE DUMP Y APROBAR LA MONEDA #1.
 
     ESTRUCTURA DE LOS 7 AGENTES INSTITUCIONALES EN DELIBERACIÓN CUÁNTICA:
-    1. 🕵️ AGENTE 1 (Macro & Guardián de Bitcoin): Evalúa régimen Wall Street ({wall_street_str}), Fear&Greed ({fear_greed.get('score')}) y estabilidad de BTC. Si BTC no está en cascada bajista activa (-1.5% en 15m), el mercado es OPERABLE.
-    2. 📊 AGENTE 2 (Sniper de Suelo 7D & Retesteo 1M): VERIFICA EL PISO MACRO (Canal 1D <= 48%, Canal 4H <= 48%, Canal 1H <= 48%) Y GATILLO MICRO (Precio retesteando EMA9 1M sin FOMO). VETA toda compra en techos.
-    3. 🌊 AGENTE 3 (Auditor de Libro & Flujo CVD Taker): Exige Bids >= 44% y confirma que el flujo CVD Taker sea positivo (inyección real de compras a mercado, descartando spoofing).
+    1. 🕵️ AGENTE 1 (Macro 1D & Guardián de Bitcoin): Evalúa el ciclo macro 1D ({wall_street_str}), Fear&Greed ({fear_greed.get('score')}) y estabilidad de BTC.
+    2. 📊 AGENTE 2 (Sniper de Suelo 7D & Resistencia Predictiva): Verifica Suelo 7D (1D, 4H, 1H <= 48%), retesteo 1M sin FOMO y recorrido proyectado >= +2.5%.
+    3. 🌊 AGENTE 3 (Auditor de Libro, CVD & Squeeze Micro): Exige Bids >= 44%, CVD Taker positivo y confirma compresión de volatilidad (Squeeze de Bollinger).
     4. 🧩 AGENTE 4 (Analista Sectorial Dinámico): Prioriza el sector líder: {sector_summary['top_sector']}.
-    5. 🧠 AGENTE 5 (Memoria RAG & Auto-Aprendizaje Dinámico): Aplica las lecciones de trades pasados, potencia monedas élite y bloquea activos con historial de pérdidas repetidas.
-    6. 🛡️ AGENTE 6 (Chief Risk Officer & Candado Pérdida Cero): Valida que el Candado de Pérdida Cero (Break-Even a +0.50% -> SL +0.18% neto) y el Trailing Proporcional protejan el 100% del capital.
-    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza la deliberación de los 6 agentes. Si hay una oportunidad A+ en el suelo con volumen, APRUEBA "BUY_LONG" (confianza >= 85-95%) para ejecución inmediata en Binance Spot.
+    5. 🧠 AGENTE 5 (Memoria RAG & Auto-Aprendizaje Cuántico): Valida el ADN de la moneda, reputación histórica y patrones de catalizadores ganadores aprendidos.
+    6. 🛡️ AGENTE 6 (Chief Risk Officer & Veto de Dump): Veta cualquier activo con Riesgo de Dump >= 45% o libro descompensado.
+    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza el consenso del comité. Si hay una oportunidad A+ con alta probabilidad de pump (>= 70%) y bajo riesgo (<= 25%), APRUEBA "BUY_LONG" (confianza >= 85-95%) para ejecución inmediata en Binance Spot.
 
     {exec_learning_summary}
 
