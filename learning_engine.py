@@ -290,12 +290,19 @@ def get_executive_learning_summary(data=None):
     blocked_str = "\n".join([f"    - 🛑 {b}" for b in blocked]) if blocked else "    - Ninguna trampa activa."
     boosted_str = "\n".join([f"    - ⚡ {b}" for b in boosted]) if boosted else "    - Reversión en suelo + FII >= 50 + Bids >= 45%."
     
-    # 5. Champions from Matrix
+    # 5. Dynamic Token Intelligence
+    token_intel = get_dynamic_token_intelligence(data)
+    elite_str = ", ".join(token_intel["elite_tokens"][:4]) if token_intel["elite_tokens"] else "SUI, NIL, AVAX, XPL"
+    blocked_tok_str = ", ".join(token_intel["blocked_tokens"][:4]) if token_intel["blocked_tokens"] else "PEPE, BARD, DEXE, APT"
+
+    # 6. Champions from Matrix
     matrix_champs = get_matrix_champions_summary()
     
     summary = f"""=== SÍNTESIS DE AUTO-APRENDIZAJE EN TIEMPO REAL (RAG QUANT) ===
 - Estadísticas Generales: {total_trades} operaciones | Win Rate Global: {wr}% | Cuenta Real WR: {real_wr}% ({len(real_trades)} ops)
 - Rango Óptimo de Entrada Validado: RSI 15M en [{best_rsi}] | Score Cuántico en [{best_score}]
+- 🌟 Monedas Élite Validadas (WR >= 65%): [{elite_str}]
+- ☠️ Monedas en Blacklist Dinámica (Pérdidas repetidas): [{blocked_tok_str}]
 - Patrones Potenciados (ALTA PROBABILIDAD DE VICTORIA):
 {boosted_str}
 - Trampas Aprendidas (PROHIBIDO REPETIR):
@@ -304,6 +311,45 @@ def get_executive_learning_summary(data=None):
 {matrix_champs}
 ==============================================================="""
     return summary
+
+def get_dynamic_token_intelligence(data=None):
+    """
+    Analyzes historical trade outcomes per token to generate dynamic elite whitelists
+    and dynamic token blacklists based on empirical win-rate evidence.
+    """
+    if data is None:
+        data = load_memory()
+    trades = data.get("history", [])
+    token_stats = {}
+    for t in trades:
+        sym = t.get("symbol")
+        if not sym:
+            continue
+        res = t.get("result", "LOSS")
+        pnl = float(t.get("pnl_usd", 0.0))
+        if sym not in token_stats:
+            token_stats[sym] = {"w": 0, "l": 0, "pnl": 0.0}
+        if res == "WIN":
+            token_stats[sym]["w"] += 1
+        else:
+            token_stats[sym]["l"] += 1
+        token_stats[sym]["pnl"] += pnl
+        
+    elite = []
+    blocked = []
+    for s, st in token_stats.items():
+        tot = st["w"] + st["l"]
+        wr = (st["w"] / tot * 100.0) if tot > 0 else 0.0
+        if tot >= 2 and wr >= 65.0:
+            elite.append(f"{s} (WR {wr:.0f}%, +${st['pnl']:.2f})")
+        elif (tot >= 2 and wr <= 25.0) or st["pnl"] <= -50.0:
+            blocked.append(f"{s} (WR {wr:.0f}%, -${abs(st['pnl']):.2f})")
+            
+    return {
+        "elite_tokens": elite,
+        "blocked_tokens": blocked,
+        "token_stats": token_stats
+    }
 
 def get_super_detailed_table_str(data=None):
     if data is None:

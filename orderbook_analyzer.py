@@ -1,7 +1,7 @@
 """
 Orderbook Liquidity Depth & Imbalance Analyzer for Binance
 Calculates Bid/Ask volume ratios across top orderbook depth levels to detect whale walls,
-and incorporates Anti-Spoofing Concentration analysis to filter fake liquidity walls.
+incorporates Anti-Spoofing Concentration analysis, and Live CVD (Cumulative Volume Delta) flow.
 """
 
 import os
@@ -11,18 +11,67 @@ import requests
 session = requests.Session()
 session.headers.update({'User-Agent': 'Mozilla/5.0'})
 
+def fetch_live_cvd_flow(symbol, limit=60, proxies=None):
+    """
+    Fetches real-time aggressive market trades (Taker Volume) via Binance aggTrades.
+    Calculates Cumulative Volume Delta (CVD) to separate real buying from passive spoofing:
+    - m == False: Taker Buy (Aggressive market buy hitting the ask)
+    - m == True:  Taker Sell (Aggressive market sell dumping into the bid)
+    """
+    mirrors = [
+        f"https://data-api.binance.vision/api/v3/aggTrades?symbol={symbol}&limit={limit}",
+        f"https://api.binance.com/api/v3/aggTrades?symbol={symbol}&limit={limit}",
+        f"https://api1.binance.com/api/v3/aggTrades?symbol={symbol}&limit={limit}"
+    ]
+    
+    for url in mirrors:
+        try:
+            res = session.get(url, proxies=proxies, timeout=3)
+            if res.status_code == 200:
+                trades = res.json()
+                if isinstance(trades, list) and len(trades) > 0:
+                    buy_vols = [float(t['p']) * float(t['q']) for t in trades if not t.get('m', False)]
+                    sell_vols = [float(t['p']) * float(t['q']) for t in trades if t.get('m', False)]
+                    
+                    buy_vol_usdt = sum(buy_vols)
+                    sell_vol_usdt = sum(sell_vols)
+                    total_vol = buy_vol_usdt + sell_vol_usdt
+                    
+                    buy_ratio = round((buy_vol_usdt / total_vol) * 100.0, 1) if total_vol > 0 else 50.0
+                    delta_usdt = round(buy_vol_usdt - sell_vol_usdt, 2)
+                    is_bullish_cvd = buy_ratio >= 55.0
+                    
+                    cvd_status = (
+                        f"🟢 Inyección Taker Compradora ({buy_ratio:.1f}% Compras | Delta +${delta_usdt:,.0f})"
+                        if buy_ratio >= 58.0 else (
+                            f"🔴 Presión Taker Vendedora ({100.0 - buy_ratio:.1f}% Ventas | Delta -${abs(delta_usdt):,.0f})"
+                            if buy_ratio <= 42.0 else f"⚪ Flujo Taker Equilibrado ({buy_ratio:.1f}%)"
+                        )
+                    )
+                    
+                    return {
+                        "cvd_buy_ratio": buy_ratio,
+                        "cvd_delta_usdt": delta_usdt,
+                        "is_bullish_cvd": is_bullish_cvd,
+                        "cvd_status": cvd_status
+                    }
+        except Exception:
+            continue
+            
+    return {
+        "cvd_buy_ratio": 50.0,
+        "cvd_delta_usdt": 0.0,
+        "is_bullish_cvd": False,
+        "cvd_status": "⚪ Flujo Taker Neutral (Sin datos)"
+    }
+
 def fetch_orderbook_depth(symbol, limit=20, proxies=None):
     """
-    Fetches live orderbook depth for a symbol and calculates Bid/Ask Imbalance Ratio + Anti-Spoofing.
-    Returns:
-    - bid_volume: Total USDT volume on buy side
-    - ask_volume: Total USDT volume on sell side
-    - imbalance_ratio: bid_volume / (bid_volume + ask_volume)
-    - bid_dominance_pct: percentage of bid dominance
-    - whale_wall_detected: True if bid_dominance_pct >= 65% and not spoofed
-    - is_spoof_risk: True if a single level contains > 70% of total volume
+    Fetches live orderbook depth for a symbol and calculates Bid/Ask Imbalance Ratio + Anti-Spoofing + Live CVD Flow.
     """
     url = f"https://api.binance.com/api/v3/depth?symbol={symbol}&limit={limit}"
+    
+    cvd_data = fetch_live_cvd_flow(symbol, limit=60, proxies=proxies)
     
     try:
         response = session.get(url, proxies=proxies, timeout=5)
@@ -51,11 +100,11 @@ def fetch_orderbook_depth(symbol, limit=20, proxies=None):
         top_bid_concentration = (max_single_bid / bid_vol_usdt) if bid_vol_usdt > 0 else 0.0
         is_spoof_risk = top_bid_concentration > 0.70 and len(bids) >= 10
         
-        is_genuine_whale_wall = (bid_dominance_pct >= 65.0) and not is_spoof_risk
+        is_genuine_whale_wall = (bid_dominance_pct >= 62.0) and not is_spoof_risk
         
-        liquidity_status = "🔥 Muro de Ballenas Genuino" if is_genuine_whale_wall else (
-            "⚠️ Muro Sospechoso (Posible Spoofing)" if (bid_dominance_pct >= 65.0 and is_spoof_risk) else (
-                "🔴 Presión Vendedora" if bid_dominance_pct <= 35.0 else "🔵 Liquidez Neutral"
+        liquidity_status = "🔥 Muro de Ballenas Genuino" if (is_genuine_whale_wall and cvd_data["is_bullish_cvd"]) else (
+            "⚠️ Muro Sospechoso (Posible Spoofing)" if (bid_dominance_pct >= 62.0 and is_spoof_risk) else (
+                "🔴 Presión Vendedora" if bid_dominance_pct <= 38.0 else "🔵 Liquidez Neutral"
             )
         )
         
@@ -72,7 +121,11 @@ def fetch_orderbook_depth(symbol, limit=20, proxies=None):
             "whale_wall_detected": is_genuine_whale_wall,
             "is_spoof_risk": is_spoof_risk,
             "top_bid_concentration": round(top_bid_concentration * 100.0, 1),
-            "liquidity_status": liquidity_status
+            "liquidity_status": liquidity_status,
+            "cvd_buy_ratio": cvd_data["cvd_buy_ratio"],
+            "cvd_delta_usdt": cvd_data["cvd_delta_usdt"],
+            "is_bullish_cvd": cvd_data["is_bullish_cvd"],
+            "cvd_status": cvd_data["cvd_status"]
         }
     except Exception as e:
         return {
@@ -83,7 +136,11 @@ def fetch_orderbook_depth(symbol, limit=20, proxies=None):
             "whale_wall_detected": False,
             "is_spoof_risk": False,
             "top_bid_concentration": 0.0,
-            "liquidity_status": f"⚪ Neutral (Fallback: {e})"
+            "liquidity_status": f"⚪ Neutral (Fallback: {e})",
+            "cvd_buy_ratio": cvd_data["cvd_buy_ratio"],
+            "cvd_delta_usdt": cvd_data["cvd_delta_usdt"],
+            "is_bullish_cvd": cvd_data["is_bullish_cvd"],
+            "cvd_status": cvd_data["cvd_status"]
         }
 
 if __name__ == "__main__":

@@ -390,21 +390,25 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         c2m = round(mtf.get('range_position_2m', 0.5) * 100)
         c1m = round(mtf.get('range_position_1m', 0.5) * 100)
         dist_ma7 = mtf.get('dist_from_15m_ma7_pct', 0.0)
+        dist_1m_ema9 = mtf.get('dist_from_1m_ema9_pct', 0.0)
+        is_sniper_pb = mtf.get('is_1m_sniper_pullback', True)
+        is_fomo = mtf.get('is_1m_fomo_extension', False)
         is_overext = mtf.get('is_overextended_15m', False)
         tf_10s = mtf.get('timeframe_alignment', {}).get('10s', 'BEARISH')
         tf_30s = mtf.get('timeframe_alignment', {}).get('30s', 'BEARISH')
+        cvd_str = ob.get('cvd_status', '⚪ CVD Neutral')
         
         candidates_prompt_text += f"\nCANDIDATO: {sym} (Sector: {sec} | Acción Sugerida: {action}){cetus_tag}{fii_tag}\n"
         candidates_prompt_text += f"- Score: {score}/100 | MTF Score: {mtf.get('multi_tf_score', score)}/100 | FII (Inyección Suelo): {fii}/100\n"
         candidates_prompt_text += f"- 🏔️ MATRIZ FRACTAL DE SUELO 7D (% Canal desde el piso): 1D={c1d}% | 4H={c4h}% | 1H={c1h}% | 15M={c15m}% | 5M={c5m}% | 2M={c2m}% | 1M={c1m}%\n"
-        candidates_prompt_text += f"- Distancia a MA7 15M: {dist_ma7:+.2f}% | Sobre-extendido (Cima): {is_overext} | Ignición: 10s={tf_10s}, 30s={tf_30s}\n"
+        candidates_prompt_text += f"- 🎯 Gatillo 1M Sniper: Distancia EMA9={dist_1m_ema9:+.2f}% | Retesteo Base={is_sniper_pb} | Anti-FOMO={not is_fomo}\n"
+        candidates_prompt_text += f"- 🌊 Flujo CVD & Libro: Bids {ob['bid_dominance_pct']}% ({ob['liquidity_status']}) | {cvd_str}\n"
         candidates_prompt_text += (
             f"- RSI 7 Capas: 1M={mtf.get('rsi_1m', ind.get('rsi_1m', '?'))} | 2M={mtf.get('rsi_2m', ind.get('rsi_2m', '?'))} | "
             f"5M={mtf.get('rsi_5m', ind.get('rsi_5m', '?'))} | 15M={ind.get('rsi_15m', '?')} | 1H={mtf.get('rsi_1h', ind.get('rsi_1h', '?'))} | "
             f"4H={mtf.get('rsi_4h', ind.get('rsi_4h', '?'))} | 1D={mtf.get('rsi_1d', '?')}\n"
         )
-        candidates_prompt_text += f"- VolSurge: 10S={mtf.get('vol_surge_10s', 1.0):.1f}x | 30S={mtf.get('vol_surge_30s', 1.0):.1f}x | 1M={mtf.get('vol_surge_1m', 1.0):.1f}x | 15M={ind.get('volume_surge', 1.0):.1f}x\n"
-        candidates_prompt_text += f"- Libro de Órdenes: Bids {ob['bid_dominance_pct']}% ({ob['liquidity_status']}) | Riesgo FallingKnife: {is_knife or is_dead_cat}\n"
+        candidates_prompt_text += f"- VolSurge: 10S={mtf.get('vol_surge_10s', 1.0):.1f}x | 30S={mtf.get('vol_surge_30s', 1.0):.1f}x | 1M={mtf.get('vol_surge_1m', 1.0):.1f}x | 15M={ind.get('volume_surge', 1.0):.1f}x | Cima={is_overext}\n"
         candidates_prompt_text += "------------------------------------\n"
 
     print(f"✅ [Comité Institucional 7 Agentes] Consultando al Súper-Cerebro Gemini AI (Flash-Lite) para el TOP {len(candidates_data_list)} simultáneo...")
@@ -418,16 +422,16 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
     prompt_text = f"""
     Eres el COMITÉ INSTITUCIONAL MULTI-AGENTE CUÁNTICO (Súper-Cerebro Supremo y Cazador Activo de Alpha en el Suelo 7D).
-    Tu misión suprema es: EJECUTAR EL PROTOCOLO JERÁRQUICO DE SUELO 7D, IDENTIFICAR LA MEJOR OPORTUNIDAD EN LA BASE Y APROBARLA PARA GANAR.
+    Tu misión suprema es: OPERAR DE FORMA DINÁMICA, APRENDER CONTINUAMENTE Y MAXIMIZAR EL WIN-RATE MINIMIZANDO EL RIESGO.
 
-    ESTRUCTURA DE LOS 7 AGENTES INSTITUCIONALES EN DELIBERACIÓN:
-    1. 🕵️ AGENTE 1 (Macro & Ballenas): Evalúa régimen macro ({wall_street_str}, Fear&Greed: {fear_greed.get('score')}). Si no hay colapso sistémico de BTC (-5% en 1h), el mercado es OPERABLE.
-    2. 📊 AGENTE 2 (Sniper de Suelo Fractal 7D): VERIFICA QUE EL ACTIVO ESTÉ EN EL PISO MACRO (Canal 1D <= 48%, Canal 4H <= 48%, Canal 1H <= 48%, Canal 15M <= 50%, Distancia MA7 <= 1.5%). VETA toda compra en la cima.
-    3. 🌊 AGENTE 3 (Auditor de Libro & CVD): Exige Bids >= 44% y absorción compradora real.
-    4. 🧩 AGENTE 4 (Analista Sectorial): Prioriza el sector líder: {sector_summary['top_sector']}.
-    5. 🧠 AGENTE 5 (Memoria & Auto-Aprendizaje): Aplica los patrones estadísticos ganadores y bloquea trampas.
-    6. 🛡️ AGENTE 6 (Chief Risk Officer): Veta trampas de caída libre (Falling Knife). Si el suelo 7D está confirmado, AUTORIZA.
-    7. 👑 AGENTE 7 (CEO Profit Scalp): Sintetiza el consenso. Si hay un candidato A+ en el suelo con volumen, APRUEBA "BUY_LONG" (confidence >= 80-95).
+    ESTRUCTURA DE LOS 7 AGENTES INSTITUCIONALES EN DELIBERACIÓN CUÁNTICA:
+    1. 🕵️ AGENTE 1 (Macro & Guardián de Bitcoin): Evalúa régimen Wall Street ({wall_street_str}), Fear&Greed ({fear_greed.get('score')}) y estabilidad de BTC. Si BTC no está en cascada bajista activa (-1.5% en 15m), el mercado es OPERABLE.
+    2. 📊 AGENTE 2 (Sniper de Suelo 7D & Retesteo 1M): VERIFICA EL PISO MACRO (Canal 1D <= 48%, Canal 4H <= 48%, Canal 1H <= 48%) Y GATILLO MICRO (Precio retesteando EMA9 1M sin FOMO). VETA toda compra en techos.
+    3. 🌊 AGENTE 3 (Auditor de Libro & Flujo CVD Taker): Exige Bids >= 44% y confirma que el flujo CVD Taker sea positivo (inyección real de compras a mercado, descartando spoofing).
+    4. 🧩 AGENTE 4 (Analista Sectorial Dinámico): Prioriza el sector líder: {sector_summary['top_sector']}.
+    5. 🧠 AGENTE 5 (Memoria RAG & Auto-Aprendizaje Dinámico): Aplica las lecciones de trades pasados, potencia monedas élite y bloquea activos con historial de pérdidas repetidas.
+    6. 🛡️ AGENTE 6 (Chief Risk Officer & Candado Pérdida Cero): Valida que el Candado de Pérdida Cero (Break-Even a +0.50% -> SL +0.18% neto) y el Trailing Proporcional protejan el 100% del capital.
+    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza la deliberación de los 6 agentes. Si hay una oportunidad A+ en el suelo con volumen, APRUEBA "BUY_LONG" (confianza >= 85-95%) para ejecución inmediata en Binance Spot.
 
     {exec_learning_summary}
 
@@ -436,26 +440,28 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     - Fear & Greed: {fear_greed.get('score')} ({fear_greed.get('sentiment')})
     - Noticias: {json.dumps(news_data.get('headlines', [])[:2])}
 
-    CANDIDATOS FINALISTAS EVALUADOS:
+    CANDIDATOS FINALISTAS EVALUADOS (TABLA MULTI-MONEDA SIMULTÁNEA):
     {candidates_prompt_text}
 
-    🏛️ PROTOCOLO MANDATORIO DE DECISIÓN DEL SÚPER-CEREBRO EN 3 PASOS:
+    🏛️ PROTOCOLO DINÁMICO DE DECISIÓN DEL SÚPER-CEREBRO EN 3 PASOS:
     
-    PASO 1 🏔️ FILTRO MANDATORIO DE SUELO 7D (VETO AUTOMÁTICO DE CIMAS MACRO Y MICRO):
+    PASO 1 🏔️ FILTRO MANDATORIO DE SUELO 7D & GATILLO 1M (CERO COMPRAS EN CIMA O FOMO):
     - Revisa la MATRIZ FRACTAL DE SUELO 7D de cada candidato (1D, 4H, 1H, 15M, 5M, 2M, 1M).
-    - REGLA DEL PISO MACRO INSTITUCIONAL: El candidato DEBE estar en zona de descuento institucional (Canal 1D <= 48%, Canal 4H <= 48%, Canal 1H <= 48%, Canal 15M <= 50%, y Distancia MA7 <= 1.5%).
-    - VETO A LAS CIMAS: Si 1D > 48% o 4H > 48% o 1H > 48% o Sobre-extendido=True, el activo está en el TECHO. RECHÁZALO de inmediato.
+    - REGLA DEL PISO MACRO: El candidato DEBE estar en zona de descuento institucional (1D <= 48%, 4H <= 48%, 1H <= 48%).
+    - REGLA ANTI-FOMO 1M: Exige que el precio esté retesteando la base de 1M (Anti-FOMO=True, cerca de EMA9 1M).
+    - VETO: Si 1D > 48% o 4H > 48% o Sobre-extendido=True o Fomo=True, RECHÁZALO de inmediato.
     
-    PASO 2 ⚡ ANÁLISIS DE CONFLUENCIA Y DINERO INTELIGENTE (SOLO SI ESTÁ EN EL SUELO):
-    - Para los candidatos que están en el suelo real:
+    PASO 2 ⚡ ANÁLISIS DE CONFLUENCIA, DINERO INTELIGENTE Y CVD (SOLO EN EL SUELO):
+    - Para los candidatos en el suelo real:
       * Exige FII >= 45-60 (Inyección de capital en el piso / OBV acumulando).
-      * Exige Bids en Libro >= 44% y VolSurge >= 0.7x.
+      * Exige Bids >= 44% y Flujo CVD Taker positivo o equilibrado.
       * Prioriza micro-ignición sub-minuto (10s o 30s en BULLISH).
     
-    PASO 3 👑 SELECCIÓN Y APROBACIÓN EJECUTIVA:
-    - Selecciona el mejor candidato que cumpla el Suelo 7D + Inyección de Volumen y APRUEBA ("BUY_LONG", approved: true, confidence: 80-95).
-    - Tu decisión es la autoridad final y se ejecutará directamente en Binance Spot con protección de Trailing Proporcional Continuo.
-    - Si NINGÚN candidato está en el suelo o el mercado está en crash, responde "selected_symbol": "NONE", "action": "HOLD".
+    PASO 3 👑 SELECCIÓN DINÁMICA DEL CAMPEÓN #1 Y APROBACIÓN EJECUTIVA:
+    - Compara todos los candidatos finalistas y selecciona al MEJOR ACTIVO ABSOLUTO DE TODO EL MERCADO.
+    - Emite tu veredicto final con "BUY_LONG", approved: true, confidence: 85-95.
+    - Tu decisión es la autoridad final que ejecutará la orden en Binance Spot con protección de Trailing Proporcional Continuo.
+    - Si NINGÚN candidato está en el suelo o el mercado está en crash de BTC, responde "selected_symbol": "NONE", "action": "HOLD".
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA (7 AGENTES):
     {{

@@ -3036,3 +3036,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-09-30 (-73.25%)`, `2025-10-09 (-32.31%)`, `2025-08-11 (-20.28%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: REDUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-02-27` hasta `2026-08-17` (537 Días de Historial)
+- 💵 **Precio Actual:** `$0.0924 USD`
+- 📈 **Máximo Histórico (ATH):** `$1.4609 USD` (`2025-03-02`) | Distancia: `-93.68%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0823 USD` (`2026-08-16`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-02-27 (+100.0%)`, `2026-04-05 (+77.51%)`, `2025-09-04 (+63.65%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-25.11%)`, `2025-03-03 (-24.8%)`, `2025-03-05 (-22.28%)`
+
+---

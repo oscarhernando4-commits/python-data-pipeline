@@ -831,6 +831,12 @@ def analyze_multi_timeframe_candles(symbol):
             is_supertrend_1m_bullish = bool(closes_1m[-1] > st_lower_1m)
         is_1m_death_cascade = bool(closes_1m[-1] < ma7_1m and ma7_1m < ma25_1m and not is_supertrend_1m_bullish and vol_surge_1m < 1.4)
 
+        # 🎯 PILAR 4: Sniper Pullback 1M & Detección Anti-FOMO
+        ema9_1m = _ema(closes_1m, 9) if len(closes_1m) >= 9 else (ma7_1m if ma7_1m > 0 else close_15m)
+        dist_from_1m_ema9_pct = round(((closes_1m[-1] - ema9_1m) / ema9_1m) * 100.0, 2) if ema9_1m > 0 else 0.0
+        is_1m_sniper_pullback = bool(-0.40 <= dist_from_1m_ema9_pct <= 0.45 and rsi_1m <= 54.0)
+        is_1m_fomo_extension = bool(dist_from_1m_ema9_pct > 1.15)
+
         if candle_range > 0 and upper_wick_ratio > wick_threshold and (high_15m - low_15m) / low_15m > 0.012:
             is_overextended_15m = True
             overextension_reason = f"Mecha superior de reversión en vela de 15m ({upper_wick_ratio*100:.1f}% del rango, umbral={wick_threshold*100:.0f}%)"
@@ -970,6 +976,9 @@ def analyze_multi_timeframe_candles(symbol):
         "atr_pct_15m": atr_pct_15m,
         "elasticity_score": elasticity_score,
         "dist_from_15m_ma7_pct": dist_from_15m_ma7_pct,
+        "dist_from_1m_ema9_pct": dist_from_1m_ema9_pct,
+        "is_1m_sniper_pullback": is_1m_sniper_pullback,
+        "is_1m_fomo_extension": is_1m_fomo_extension,
         "ma25_5m": round(ma25_5m, 6),
         "relative_strength_vs_btc": relative_strength,
         "is_alt_outperforming_btc": is_alt_outperforming_btc,
