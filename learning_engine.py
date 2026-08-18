@@ -351,6 +351,62 @@ def get_dynamic_token_intelligence(data=None):
         "token_stats": token_stats
     }
 
+def calculate_asset_dna_profile(symbol: str, atr_15m_pct: float = 0.30, atr_1h_pct: float = 0.60, data=None):
+    """
+    🎯 MODELACIÓN CUÁNTICA DE ADN Y COMPORTAMIENTO POR MONEDA:
+    Calcula el perfil de volatilidad histórica, elasticidad y memoria RAG específica del activo,
+    determinando la holgura óptima del trailing stop y el objetivo de recorrido a resistencia.
+    """
+    if data is None:
+        data = load_memory()
+        
+    trades = data.get("history", [])
+    token_trades = [t for t in trades if t.get("symbol") == symbol]
+    
+    tot = len(token_trades)
+    wins = len([t for t in token_trades if t.get("result") == "WIN"])
+    pnl = sum([float(t.get("pnl_usd", 0.0)) for t in token_trades])
+    wr = (wins / tot * 100.0) if tot > 0 else 50.0
+    
+    mean_vol = (atr_15m_pct + atr_1h_pct) / 2.0
+    
+    if mean_vol >= 0.85:
+        tier = "HIGH_BETA_RUNNER"
+        tier_label = "🚀 ALTA ELASTICIDAD / RUNNER"
+        opt_slack = max(0.55, round(atr_15m_pct * 1.3, 2))
+        opt_target = max(3.50, round(atr_1h_pct * 3.5, 2))
+        opt_sl = -1.10
+    elif mean_vol >= 0.45:
+        tier = "BALANCED_SWING"
+        tier_label = "💎 VOLATILIDAD BALANCEADA"
+        opt_slack = max(0.45, round(atr_15m_pct * 1.1, 2))
+        opt_target = max(2.20, round(atr_1h_pct * 2.8, 2))
+        opt_sl = -0.90
+    else:
+        tier = "LOW_BETA_STABLE"
+        tier_label = "🔒 BAJA VOLATILIDAD / ESTABLE"
+        opt_slack = max(0.35, round(atr_15m_pct * 1.0, 2))
+        opt_target = max(1.20, round(atr_1h_pct * 2.0, 2))
+        opt_sl = -0.75
+        
+    reputation = "🌟 ÉLITE HISTÓRICO" if (tot >= 2 and wr >= 65.0) else (
+        "☠️ ALERTA PÉRDIDAS" if (tot >= 2 and wr <= 30.0) else "🔵 NEUTRAL"
+    )
+    
+    return {
+        "symbol": symbol,
+        "dna_tier": tier,
+        "dna_label": tier_label,
+        "reputation": reputation,
+        "historical_trades_count": tot,
+        "historical_win_rate": round(wr, 1),
+        "historical_pnl_usd": round(pnl, 4),
+        "optimal_trailing_slack_pct": opt_slack,
+        "optimal_target_expansion_pct": opt_target,
+        "optimal_sl_floor_pct": opt_sl,
+        "mean_volatility_pct": round(mean_vol, 2)
+    }
+
 def get_super_detailed_table_str(data=None):
     if data is None:
         data = load_memory()

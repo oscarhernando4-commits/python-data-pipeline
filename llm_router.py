@@ -398,8 +398,12 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         tf_30s = mtf.get('timeframe_alignment', {}).get('30s', 'BEARISH')
         cvd_str = ob.get('cvd_status', '⚪ CVD Neutral')
         
+        dna = mtf.get('dna_profile', {})
+        dna_str = f"{dna.get('dna_label', 'Estándar')} | Reputación: {dna.get('reputation', 'Neutral')} | Holgura Óptima: {dna.get('optimal_trailing_slack_pct', 0.50):.2f}% | Expansión Objetivo: +{dna.get('optimal_target_expansion_pct', 2.50):.2f}%"
+
         candidates_prompt_text += f"\nCANDIDATO: {sym} (Sector: {sec} | Acción Sugerida: {action}){cetus_tag}{fii_tag}\n"
         candidates_prompt_text += f"- Score: {score}/100 | MTF Score: {mtf.get('multi_tf_score', score)}/100 | FII (Inyección Suelo): {fii}/100\n"
+        candidates_prompt_text += f"- 🧬 ADN & Elasticidad: {dna_str}\n"
         candidates_prompt_text += f"- 🏔️ MATRIZ FRACTAL DE SUELO 7D (% Canal desde el piso): 1D={c1d}% | 4H={c4h}% | 1H={c1h}% | 15M={c15m}% | 5M={c5m}% | 2M={c2m}% | 1M={c1m}%\n"
         candidates_prompt_text += f"- 🎯 Gatillo 1M Sniper: Distancia EMA9={dist_1m_ema9:+.2f}% | Retesteo Base={is_sniper_pb} | Anti-FOMO={not is_fomo}\n"
         candidates_prompt_text += f"- 🎯 Proyección de Recorrido: Resistencia Techo 1H=+{mtf.get('target_resistance_1h_pct', 2.5):.2f}% | Soporte Piso=-{mtf.get('major_support_floor_1h_pct', 0.9):.2f}% | Ratio R:R={mtf.get('expected_rr_ratio', 2.5)}:1\n"

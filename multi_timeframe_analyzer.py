@@ -408,11 +408,19 @@ def analyze_multi_timeframe_candles(symbol):
     obv_15m, obv_trend = calculate_obv(closes_15m, vols_15m)
     is_obv_accumulating = obv_trend == "ACCUMULATING"
     
-    # ATR(14) Normalized - Volatility filter
+    # ATR(14) Normalized 15M & 1H - Volatility & DNA filter
     highs_15m = [float(k[2]) for k in klines_15m]
     lows_15m = [float(k[3]) for k in klines_15m]
     atr_15m = calculate_atr(highs_15m, lows_15m, closes_15m, 14)
     atr_pct_15m = round((atr_15m / closes_15m[-1]) * 100.0, 3) if closes_15m[-1] > 0 else 0.0
+
+    highs_1h = [float(k[2]) for k in klines_1h]
+    lows_1h = [float(k[3]) for k in klines_1h]
+    atr_1h = calculate_atr(highs_1h, lows_1h, closes_1h, 14) if klines_1h else atr_15m * 1.5
+    atr_pct_1h = round((atr_1h / closes_1h[-1]) * 100.0, 3) if (closes_1h and closes_1h[-1] > 0) else atr_pct_15m * 1.4
+
+    import learning_engine
+    dna_profile = learning_engine.calculate_asset_dna_profile(symbol, atr_15m_pct=atr_pct_15m, atr_1h_pct=atr_pct_1h)
     
     # BTC-ALT Correlation - Relative strength detection
     btc_klines = fetch_klines_public("BTCUSDT", "15m", 20)
@@ -982,6 +990,8 @@ def analyze_multi_timeframe_candles(symbol):
         "is_obv_accumulating": is_obv_accumulating,
         "atr_15m": round(atr_15m, 6),
         "atr_pct_15m": atr_pct_15m,
+        "atr_pct_1h": atr_pct_1h,
+        "dna_profile": dna_profile,
         "elasticity_score": elasticity_score,
         "dist_from_15m_ma7_pct": dist_from_15m_ma7_pct,
         "dist_from_1m_ema9_pct": dist_from_1m_ema9_pct,
