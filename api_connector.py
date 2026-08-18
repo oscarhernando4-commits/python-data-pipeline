@@ -870,58 +870,53 @@ def execute_real_futures_market_close(symbol, quantity):
 
 def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: float, holding_cycles: int = 0, current_pnl_pct: float = 0.0):
     """
-    🎯 MODELO MATEMÁTICO PROPORCIONAL CONTINUO BASADO EN CIMA ALCANZADA (H):
-    Calcula el Stop Loss / Piso Trailing de forma 100% dinámica proporcional al pico máximo:
+    🎯 MODELACIÓN INSTITUCIONAL DE COMPORTAMIENTO REAL Y MAXIMIZACIÓN DE GANANCIAS:
+    Permite que el activo respire en la base para capturar el recorrido completo hacia la resistencia,
+    blindando el capital con Break-Even en +0.50% sin asfixiar la tendencia.
     
-    1. ZONA MEGAPUMP (H >= 3.00%): 
-       Retiene el 82% de la Cima alcanzada (Retroceso máx tolerado: 18%).
-       Piso = max(+2.20%, H * 0.82, H - max(0.50%, ATR * 1.5))
+    1. ZONA MEGAPUMP (H >= 3.50%): 
+       Retiene el 85% de la Cima alcanzada (Cosecha máxima en clímax).
+       Piso = max(+2.80%, H * 0.85, H - max(0.60%, atr * 1.5))
        
-    2. ZONA IMPULSO FUERTE (1.00% <= H < 3.00%):
-       Retiene el 75% de la Cima alcanzada (Retroceso máx tolerado: 25%).
-       Piso = max(+0.60%, H * 0.75, H - max(0.35%, ATR * 1.2))
+    2. ZONA EXPANSIÓN FUERTE (1.50% <= H < 3.50%):
+       Retiene el 70% de la Cima alcanzada (Holgura para desarrollo macro).
+       Piso = max(+1.00%, H * 0.70, H - max(0.45%, atr * 1.2))
        
-    3. ZONA DESPEGUE & BREAKEVEN (0.45% <= H < 1.00%):
-       Retiene el 55% de la Cima alcanzada con piso verde neto garantizado (+0.18%).
-       Piso = max(+0.18%, H * 0.55, H - 0.28%)
+    3. ZONA DESPEGUE & BREAK-EVEN ORGÁNICO (0.50% <= H < 1.50%):
+       Garantiza Cero Pérdida (+0.15% neto mínimo) con holgura de respiración (0.45% - 0.55%).
+       Piso = max(+0.15%, H * 0.50, H - 0.50%)
        
-    4. ZONA ENTRADA & DESARROLLO (H < 0.45%):
-       Fase 0 (primeros 3 ciclos / ~15s): Si cae <= -0.60% aborta inmediato.
-       Fase 1 normal: SL estricto de -0.90% (máx pérdida ~$0.14 USD).
+    4. ZONA ENTRADA & SOPORTE (H < 0.50%):
+       SL de Protección en la Base: -0.90% (Espacio institucional para absorción del rebote).
     """
     atr = max(0.20, min(1.50, atr_pct if atr_pct and atr_pct > 0 else 0.30))
     
-    if highest_pnl_pct >= 3.00:
-        # 🚀 Zona Megapump: Protege el 82% de la cima
-        floor_by_ratio = highest_pnl_pct * 0.82
-        floor_by_atr = highest_pnl_pct - max(0.50, round(atr * 1.5, 2))
-        sl_pct = round(max(2.20, floor_by_ratio, floor_by_atr), 2)
+    if highest_pnl_pct >= 3.50:
+        # 🚀 Zona Megapump: Protege el 85% de la cima
+        floor_by_ratio = highest_pnl_pct * 0.85
+        floor_by_atr = highest_pnl_pct - max(0.60, round(atr * 1.5, 2))
+        sl_pct = round(max(2.80, floor_by_ratio, floor_by_atr), 2)
         phase = 3
-        phase_label = f"🚀 FASE 3 MEGAPUMP (Cima +{highest_pnl_pct:.2f}% | Retención 82% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 1.00:
-        # 💎 Zona Impulso Fuerte: Protege el 75% de la cima
-        floor_by_ratio = highest_pnl_pct * 0.75
-        floor_by_atr = highest_pnl_pct - max(0.35, round(atr * 1.2, 2))
-        sl_pct = round(max(0.60, floor_by_ratio, floor_by_atr), 2)
+        phase_label = f"🚀 FASE 3 MEGAPUMP (Cima +{highest_pnl_pct:.2f}% | Retención 85% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 1.50:
+        # 💎 Zona Expansión: Protege el 70% de la cima
+        floor_by_ratio = highest_pnl_pct * 0.70
+        floor_by_atr = highest_pnl_pct - max(0.45, round(atr * 1.2, 2))
+        sl_pct = round(max(1.00, floor_by_ratio, floor_by_atr), 2)
         phase = 3
-        phase_label = f"💎 FASE 3 EXPANSION (Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.45:
-        # 🔒 Zona Despegue: Protege el 55% de la cima con mínimo +0.18% neto
-        floor_by_ratio = highest_pnl_pct * 0.55
-        floor_by_slack = highest_pnl_pct - 0.28
-        sl_pct = round(max(0.18, floor_by_ratio, floor_by_slack), 2)
+        phase_label = f"💎 FASE 3 EXPANSIÓN (Cima +{highest_pnl_pct:.2f}% | Retención 70% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 0.50:
+        # 🔒 Zona Despegue & Break-Even Orgánico: Cero Pérdida (+0.15% neto garantizado) con holgura
+        floor_by_ratio = highest_pnl_pct * 0.50
+        floor_by_slack = highest_pnl_pct - 0.50
+        sl_pct = round(max(0.15, floor_by_ratio, floor_by_slack), 2)
         phase = 2
-        phase_label = f"🔒 FASE 2 VERDE (Cima +{highest_pnl_pct:.2f}% | Retención 55% -> Piso +{sl_pct:.2f}%)"
+        phase_label = f"🔒 FASE 2 BREAK-EVEN (Cima +{highest_pnl_pct:.2f}% | Holgura Tendencia -> Piso +{sl_pct:.2f}%)"
     else:
-        # 🛡️ Zona Entrada y Desarrollo Inicial
-        if holding_cycles <= 3 and current_pnl_pct <= -0.60:
-            sl_pct = -0.60
-            phase = 1
-            phase_label = f"⚡ FASE 0 (Freno Ultra-Rápido 15s @ -0.60%)"
-        else:
-            sl_pct = -0.90
-            phase = 1
-            phase_label = f"🛡️ FASE 1 (Entrada y Desarrollo: SL -0.90%)"
+        # 🛡️ Zona Entrada y Soporte: SL -0.90% permitiendo absorción natural en la base
+        sl_pct = -0.90
+        phase = 1
+        phase_label = f"🛡️ FASE 1 (Entrada y Soporte: SL -0.90%)"
             
     return sl_pct, phase, phase_label
 

@@ -715,6 +715,11 @@ def analyze_multi_timeframe_candles(symbol):
     dist_1h_pct = round(((high_1h_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
     dist_24h_pct = round(((high_24h - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
 
+    # 🎯 MODELACIÓN DE COMPORTAMIENTO INSTITUCIONAL (Resistencia Objetivo vs Soporte de Absorción)
+    target_resistance_1h_pct = round(((high_1h_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 2.50
+    major_support_floor_1h_pct = round(((close_15m - low_1h_recent) / close_15m) * 100.0, 2) if close_15m > 0 else 0.90
+    expected_rr_ratio = round(target_resistance_1h_pct / max(0.40, major_support_floor_1h_pct), 2)
+
     is_explosive_breakout = (vol_surge_2m >= 2.0 or vol_surge_15m >= 2.0)
 
     # Ground-Zero 10s/30s/1M/2M Rebound Ignition on Safe 15M/1H Support Base
@@ -949,6 +954,9 @@ def analyze_multi_timeframe_candles(symbol):
         "range_position_1d": round(range_position_1d, 3),
         "range_position_4h": round(range_position_4h, 3),
         "range_position_1h": round(range_position_1h, 3),
+        "target_resistance_1h_pct": target_resistance_1h_pct,
+        "major_support_floor_1h_pct": major_support_floor_1h_pct,
+        "expected_rr_ratio": expected_rr_ratio,
         "range_position_15m": round(range_position_15m, 3),
         "range_position_5m": round(range_position_5m, 3),
         "range_position_2m": round(range_position_2m, 3),
