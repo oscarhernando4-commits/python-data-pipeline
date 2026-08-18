@@ -946,8 +946,37 @@ def quick_position_heartbeat():
             print(f"\n🚨 [MICRO-HEARTBEAT 5S] Salida Inteligente ejecutada para {sym} @ ${current_price:.5f} ({exit_reason})")
             sell_res = execute_real_spot_market_sell(sym, qty)
             print(f"🔄 Venta Mercado Ejecutada: {sell_res}")
+            
+            # 📚 BUG FIX: Registrar win/loss correctamente + notificar learning engine
+            pnl_usd = round((current_price - entry) * qty, 4)
+            is_win_exit = current_pnl_pct > 0
+            if is_win_exit:
+                state["wins"] = state.get("wins", 0) + 1
+                state["daily_wins"] = state.get("daily_wins", 0) + 1
+            else:
+                state["losses"] = state.get("losses", 0) + 1
+                state["daily_losses"] = state.get("daily_losses", 0) + 1
+            state["trades_count"] = state.get("trades_count", 0) + 1
+            state["net_pnl_usd"] = round(state.get("net_pnl_usd", 0.0) + pnl_usd, 4)
+            
+            # 📖 Guardar en Learning Engine para memoria de futuros trades
+            try:
+                import learning_engine
+                learning_engine.record_trade_outcome(
+                    symbol=sym,
+                    entry_price=entry,
+                    exit_price=current_price,
+                    qty=qty,
+                    pnl_pct=current_pnl_pct,
+                    pnl_usd=pnl_usd,
+                    exit_reason=exit_reason,
+                    phase=new_phase
+                )
+            except Exception as le_err:
+                print(f"⚠️ Learning Engine registro fallido: {le_err}")
+            
             state["position"] = None
-            state["status"] = f"🏁 Salida en Vivo ({sym} PnL: {current_pnl_pct:+.2f}%)"
+            state["status"] = f"{'🟢 WIN' if is_win_exit else '🔴 LOSS'} Cerrado ({sym} PnL: {current_pnl_pct:+.2f}% / ${pnl_usd:+.4f})"
             state["_last_closed_symbol"] = sym
             state["_last_closed_time"] = time.time()
             state["_last_exit_price"] = current_price
@@ -1247,15 +1276,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             if best_symbol == last_closed_sym:
                 discount_from_exit_pct = ((last_exit_price - current_price) / last_exit_price) * 100.0 if (last_exit_price > 0 and current_price > 0) else 0.0
                 
-                # Si el activo cayó >= 1.20% respecto a donde salimos y tiene descuento real, se levanta el cooldown inmediatamente:
-                if discount_from_exit_pct >= 1.20 and time_since_last_exit >= 60:
-                    print(f"🟢 Cooldown levantado inteligentemente: {best_symbol} con descuento de -{discount_from_exit_pct:.2f}% respecto a salida (${last_exit_price:.6f} -> ${current_price:.6f}).")
-                elif time_since_last_exit < 120:
+                # Si el activo cayó >= 2.00% respecto a donde salimos, se levanta el cooldown inmediatamente:
+                if discount_from_exit_pct >= 2.00 and time_since_last_exit >= 120:
+                    print(f"🟢 Cooldown levantado inteligentemente: {best_symbol} con descuento real de -{discount_from_exit_pct:.2f}% (${last_exit_price:.6f} -> ${current_price:.6f}).")
+                elif time_since_last_exit < 3600:
+                    # 🚫 MEJORA A: Anti-Re-Entry 60 Min (previene el error de ONTUSDT x3)
                     is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} en cooldown inmediato de 2 minutos ({time_since_last_exit:.0f}s < 120s).")
-                elif time_since_last_exit < 600 and current_price >= (last_exit_price * 0.995):
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} en cooldown de 10m sin descuento suficiente (${current_price:.6f} vs salida ${last_exit_price:.6f}).")
+                    print(f"⛔ Compra rechazada: {best_symbol} en cooldown anti-re-entrada ({time_since_last_exit:.0f}s de los 3600s requeridos). Descuento actual: {discount_from_exit_pct:.2f}%. Evitando over-trading.")
             
             if not is_stable and (sym_clean in stablecoins_blacklist or best_symbol in stablecoins_blacklist):
                 is_stable = True
@@ -1324,12 +1351,15 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 else:
                     import orderbook_analyzer
                     ob_info = orderbook_analyzer.fetch_orderbook_depth(best_symbol, limit=20)
-                    if ob_info.get("spread_pct", 0.0) > 0.75:
+                    
+                    # 🚫 MEJORA B: Veto RSI 4H Sobreextendido (> 68) — previene el error de WLFIUSDT
+                    rsi_4h = mtf_res.get("rsi_4h", 50.0)
+                    if rsi_4h >= 68.0:
+                        is_stable = True
+                        print(f"⛔ Compra rechazada: {best_symbol} con RSI 4H sobreextendido ({rsi_4h:.1f} >= 68.0). Riesgo alto de agotamiento macro.")
+                    elif ob_info.get("spread_pct", 0.0) > 0.75:
                         is_stable = True
                         print(f"⛔ Compra rechazada: {best_symbol} descalificado por Spread elevado ({ob_info.get('spread_pct'):.3f}% > 0.75%). Evitando deslizamiento de precio.")
-                    elif ob_info.get("bid_dominance_pct", 50.0) < 42.0:
-                        is_stable = True
-                        print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de muro comprador (Bids: {ob_info.get('bid_dominance_pct')}% < 42.0%).")
                     else:
                         vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
                         vol_2m_now = mtf_res.get("vol_surge_2m", 1.0)
@@ -1355,12 +1385,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         elif not has_micro_thrust:
                             is_stable = True
                             print(f"⛔ Compra rechazada: {best_symbol} descartado por falta de empuje micro (1m={vol_1m_now:.2f}x, 2m={vol_2m_now:.2f}x, 30sBurst={is_30s_burst}). Exige micro-aceleración de entrada.")
-                        elif ob_info.get("bid_dominance_pct", 50.0) < 50.0:
+                        elif ob_info.get("bid_dominance_pct", 50.0) < 44.0:
+                            # 🧹 MEJORA D: Unificado en un solo umbral del 44% (elimina redundancia de 42%/50%)
                             is_stable = True
-                            print(f"⛔ Compra rechazada: {best_symbol} descartado por Bids insuficientes ({ob_info.get('bid_dominance_pct'):.1f}% < 50.0%). Exige mayoría compradora en libro.")
+                            print(f"⛔ Compra rechazada: {best_symbol} descartado por Bids insuficientes ({ob_info.get('bid_dominance_pct'):.1f}% < 44.0%). Exige mayoría compradora en libro.")
                         else:
                             arrow_lbl = " 🎯 [PATRÓN FLECHAS AMARILLAS 15M PIVOT REBOUND]" if is_yellow else ""
-                            print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}{arrow_lbl}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.75% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=50% OK) | 🚀 Turbinas de Volumen: 15m={vol_15m_now:.2f}x, 2m={vol_2m_now:.2f}x, 1m={vol_1m_now:.2f}x, OBV_Acc={is_obv_acc}, EMA_Cross={is_ema_cross}")
+                            print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}{arrow_lbl}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.75% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=44% OK) | RSI4H={rsi_4h:.1f} | 🚀 Turbinas: 15m={vol_15m_now:.2f}x, 2m={vol_2m_now:.2f}x, 1m={vol_1m_now:.2f}x, OBV={is_obv_acc}, EMA={is_ema_cross}")
                 
         if bias_ok and not is_stable:
             # 1. LONG Entry Signal (Operates with 100% of available USDT, strictly requires Score >= 55 Setup A+)
