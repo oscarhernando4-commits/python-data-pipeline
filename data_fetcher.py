@@ -41,16 +41,18 @@ def get_cmc_top_coins():
         return []
 
 def get_binance_top_volume_coins(valid_pairs):
-    """Fetches top coins by 24H Volume from Binance directly (100% Free)."""
-    print("Obteniendo clasificación por volumen 24H nativo de Binance...")
+    """Fetches top coins by 24H Volume from Binance directly (100% Free).
+    Enforces minimum $2,000,000 USD volume to avoid illiquid chop and manipulation."""
+    print("Obteniendo clasificación por volumen 24H nativo de Binance (Mínimo $2M USD)...")
     try:
         ticker_res = requests.get('https://data-api.binance.vision/api/v3/ticker/24hr', timeout=10)
         tickers = ticker_res.json()
-        usdt_tickers = [t for t in tickers if t['symbol'] in valid_pairs]
+        # Exclude coins with 24h volume < $2,000,000 USD
+        usdt_tickers = [t for t in tickers if t['symbol'] in valid_pairs and float(t.get('quoteVolume', 0)) >= 2000000.0]
         usdt_tickers.sort(key=lambda x: float(x['quoteVolume']), reverse=True)
-        # Take top 150 by volume
-        vol_symbols = [t['symbol'].replace('USDT', '') for t in usdt_tickers[:150]]
-        print(f"Binance API exitosa. Se obtuvieron {len(vol_symbols)} símbolos (Volumen).")
+        # Take top 120 by volume
+        vol_symbols = [t['symbol'].replace('USDT', '') for t in usdt_tickers[:120]]
+        print(f"Binance API exitosa. Se obtuvieron {len(vol_symbols)} símbolos con Volumen >= $2M USD.")
         return vol_symbols
     except Exception as e:
         print(f"Fallo Binance 24H Volume: {e}")

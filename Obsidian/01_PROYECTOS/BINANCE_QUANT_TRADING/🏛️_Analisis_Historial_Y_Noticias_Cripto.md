@@ -2945,3 +2945,81 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-29.01%)`, `2025-05-30 (-16.86%)`, `2026-02-04 (-14.74%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: ZKUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2024-06-16` hasta `2026-08-17` (793 Días de Historial)
+- 💵 **Precio Actual:** `$0.0075 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.2950 USD` (`2024-06-16`) | Distancia: `-97.44%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0037 USD` (`2025-10-09`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-06-16 (+124.21%)`, `2025-10-31 (+79.54%)`, `2026-01-31 (+39.06%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-27.57%)`, `2024-07-03 (-22.13%)`, `2024-12-08 (-18.29%)`
+
+---
+
+### 🪙 Profile Completo de Vida: COMPUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-22` hasta `2026-08-17` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$17.3500 USD`
+- 📈 **Máximo Histórico (ATH):** `$144.0000 USD` (`2024-12-03`) | Distancia: `-87.95%`
+- 📉 **Mínimo Histórico (ATL):** `$9.8100 USD` (`2025-10-09`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-12-03 (+37.71%)`, `2026-02-12 (+28.62%)`, `2024-11-21 (+19.94%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-28.65%)`, `2024-12-08 (-17.55%)`, `2026-02-04 (-16.04%)`
+
+---
+
+### 🪙 Profile Completo de Vida: BEBUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2026-07-28` hasta `2026-08-17` (21 Días de Historial)
+- 💵 **Precio Actual:** `$212.9400 USD`
+- 📈 **Máximo Histórico (ATH):** `$253.6000 USD` (`2026-08-12`) | Distancia: `-16.03%`
+- 📉 **Mínimo Histórico (ATL):** `$155.3200 USD` (`2026-07-29`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-07-29 (+30.94%)`, `2026-08-11 (+12.32%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `Sin días < -10%`
+
+---
+
+### 🪙 Profile Completo de Vida: SENTUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2026-01-21` hasta `2026-08-17` (209 Días de Historial)
+- 💵 **Precio Actual:** `$0.0118 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.0495 USD` (`2026-01-31`) | Distancia: `-76.12%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0110 USD` (`2026-01-21`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-01-21 (+171.45%)`, `2026-01-30 (+36.92%)`, `2026-01-28 (+32.5%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-01-31 (-17.38%)`, `2026-07-09 (-14.21%)`, `2026-06-16 (-11.57%)`
+
+---
+
+### 🪙 Profile Completo de Vida: OPNUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2026-03-04` hasta `2026-08-17` (167 Días de Historial)
+- 💵 **Precio Actual:** `$0.0623 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.6000 USD` (`2026-03-04`) | Distancia: `-89.62%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0448 USD` (`2026-07-29`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2026-03-04 (+267.5%)`, `2026-06-02 (+89.38%)`, `2026-04-23 (+27.19%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2026-06-05 (-39.24%)`, `2026-06-06 (-19.73%)`, `2026-06-07 (-16.82%)`
+
+---
+
+### 🪙 Profile Completo de Vida: ZENUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-22` hasta `2026-08-17` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$3.9110 USD`
+- 📈 **Máximo Histórico (ATH):** `$46.2800 USD` (`2024-12-24`) | Distancia: `-91.55%`
+- 📉 **Mínimo Histórico (ATL):** `$3.7340 USD` (`2026-07-28`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-12-19 (+64.79%)`, `2024-02-16 (+44.76%)`, `2025-10-31 (+37.88%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-11-07 (-27.71%)`, `2024-04-11 (-21.33%)`, `2024-12-26 (-21.04%)`
+
+---

@@ -905,30 +905,30 @@ def quick_position_heartbeat():
         holding_cycles_hb = pos.get("holding_cycles", 0)
         
         # ═══════════════════════════════════════════════════════════════════════
-        # 🎯 SISTEMA DE 4 FASES MEJORADO CON CEREBRO ADAPTATIVO:
-        # FASE 0 (primeros 3 ciclos / ~15s): SL ultra-rápido -0.80% si el libro colapsa
-        # FASE 1 (< +0.30%): SL -1.50% (Colchón de inicio)
-        # FASE 2 (+0.30% a +0.60%): Piso ATR-adaptativo max(+0.15%, Pico - holgura)
-        # FASE 3 (> +0.60%): Trailing Holgado ATR = CIMA - dynamic_trailing_distance
+        # 🎯 SISTEMA ASIMÉTRICO DE 4 FASES (CERO MICRO-CHOP, PROFIT AMPLIFICADO):
+        # FASE 0 (primeros 3 ciclos / ~15s): SL ultra-rápido -0.60% si no arranca
+        # FASE 1 (< +0.55%): SL -1.00% (Apretado para evitar sangrado de capital)
+        # FASE 2 (+0.55% a +1.10%): Piso = max(+0.18% NETO tras comisiones, Cima - holgura)
+        # FASE 3 (> +1.10%): Trailing Holgado ATR = CIMA - dynamic_trailing_distance (+2% a +8% target)
         # ═══════════════════════════════════════════════════════════════════════
-        dynamic_trailing_distance = max(0.40, round(atr_15m_pct * 1.3, 2))
+        dynamic_trailing_distance = max(0.40, round(atr_15m_pct * 1.2, 2))
         
-        if highest_pnl_pct >= 0.60:
-            sl_pct = max(0.30, round(highest_pnl_pct - dynamic_trailing_distance, 2))
+        if highest_pnl_pct >= 1.10:
+            sl_pct = max(0.60, round(highest_pnl_pct - dynamic_trailing_distance, 2))
             new_phase = 3
-        elif highest_pnl_pct >= 0.30:
-            # 🔬 MEJORA 2: Holgura Fase 2 ATR-adaptativa (0.10% - 0.25% según volatilidad del par)
-            holgura_f2 = min(0.25, max(0.10, round(atr_15m_pct * 0.5, 2)))
-            sl_pct = max(0.15, round(highest_pnl_pct - holgura_f2, 2))
+        elif highest_pnl_pct >= 0.55:
+            # 🔬 Fase 2: Piso con ganancia verde neta (+0.18% mínimo que cubre 100% comisiones BNB)
+            holgura_f2 = min(0.30, max(0.15, round(atr_15m_pct * 0.5, 2)))
+            sl_pct = max(0.18, round(highest_pnl_pct - holgura_f2, 2))
             new_phase = 2
         else:
-            sl_pct = -1.50
+            sl_pct = -1.00  # Apretado de -1.50% a -1.00% para limitar pérdida máxima a ~$0.15 USD
             new_phase = 1
             
-        # 🚀 MEJORA 1: FASE 0 — Freno Rápido en Ventana de los Primeros 3 Ciclos (~15s)
-        # Si en los primeros 15s el precio ya cae -0.80%, el setup era incorrecto → salir YA
-        if holding_cycles_hb <= 3 and current_pnl_pct <= -0.80 and new_phase == 1:
-            sl_pct = -0.80
+        # 🚀 MEJORA 1: FASE 0 — Freno Ultra-Rápido en Primeros 3 Ciclos (~15s)
+        # Si en los primeros 15s el precio ya cae -0.60%, abortar de inmediato
+        if holding_cycles_hb <= 3 and current_pnl_pct <= -0.60 and new_phase == 1:
+            sl_pct = -0.60
             new_phase = 1
             
         # Update if changed
@@ -1103,26 +1103,26 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         import orderbook_analyzer
         
         # ═══════════════════════════════════════════════════════════════
-        # 🎯 SISTEMA ULTRA-EFICIENTE DE 3 FASES CUÁNTICAS:
-        # FASE 1: Antes de +0.30% -> SL -1.50% (Colchón inicial).
-        # FASE 2: +0.30% a +0.60% -> Piso = max(+0.15% NETO, Cima - 0.25%).
-        # FASE 3: Superior a +0.60% -> Trailing Holgado ATR = CIMA - dynamic_trailing_distance.
+        # 🎯 SISTEMA ULTRA-EFICIENTE DE 3 FASES ASIMÉTRICAS:
+        # FASE 1: Antes de +0.55% -> SL -1.00% (Apretado para blindar capital).
+        # FASE 2: +0.55% a +1.10% -> Piso = max(+0.18% NETO, Cima - holgura).
+        # FASE 3: Superior a +1.10% -> Trailing Holgado ATR = CIMA - dynamic_trailing_distance.
         # ═══════════════════════════════════════════════════════════════
-        if highest_pnl_pct >= 0.60:
+        if highest_pnl_pct >= 1.10:
             phase = 3
-            dynamic_trailing_distance = max(0.40, round(atr_15m_pct * 1.3, 2))
-            trailing_floor_pct = max(0.30, round(highest_pnl_pct - dynamic_trailing_distance, 2))
+            dynamic_trailing_distance = max(0.40, round(atr_15m_pct * 1.2, 2))
+            trailing_floor_pct = max(0.60, round(highest_pnl_pct - dynamic_trailing_distance, 2))
             phase_msg = f"💎 FASE 3 (COSECHA ADAPTATIVA ATR): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - {dynamic_trailing_distance:.2f}%)"
-        elif highest_pnl_pct >= 0.30:
+        elif highest_pnl_pct >= 0.55:
             phase = 2
-            # 🔬 MEJORA 2: Holgura ATR-Adaptativa en Fase 2 (0.10%-0.25% según volatilidad del par)
-            holgura_f2 = min(0.25, max(0.10, round(atr_15m_pct * 0.5, 2)))
-            trailing_floor_pct = max(0.15, round(highest_pnl_pct - holgura_f2, 2))
-            phase_msg = f"🔒 FASE 2 (+0.30% A +0.60%): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% | ATR-Holgura={holgura_f2:.2f}% | Ganancia Verde)"
+            # 🔬 Fase 2: Piso con ganancia verde neta (+0.18% mínimo)
+            holgura_f2 = min(0.30, max(0.15, round(atr_15m_pct * 0.5, 2)))
+            trailing_floor_pct = max(0.18, round(highest_pnl_pct - holgura_f2, 2))
+            phase_msg = f"🔒 FASE 2 (+0.55% A +1.10%): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% | Ganancia Verde Neta)"
         else:
             phase = 1
-            trailing_floor_pct = -1.50
-            phase_msg = f"⚡ FASE 1 (ENTRADA Y DESARROLLO): SL -1.50% (Colchón de Seguridad Inicial)"
+            trailing_floor_pct = -1.00
+            phase_msg = f"⚡ FASE 1 (ENTRADA Y DESARROLLO): SL -1.00% (Colchón Apretado Anti-Sangrado)"
 
         # ESCUDO 1: BTC Flash Crash Circuit Breaker
         btc_price_now = get_symbol_price("BTCUSDT", is_futures=False)
