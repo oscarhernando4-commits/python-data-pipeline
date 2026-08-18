@@ -673,7 +673,7 @@ def analyze_multi_timeframe_candles(symbol):
     high_15m_recent = max(highs_15m[-3:]) if len(highs_15m) >= 3 else close_15m
     high_30m_recent = max(highs_15m[-6:]) if len(highs_15m) >= 6 else close_15m
     
-    # 🏔️ MATRIZ FRACTAL DE SUELO EN 5 NIVELES (1M, 2M, 5M, 15M, 1H):
+    # 🏔️ MATRIZ FRACTAL DE SUELO EN 7 NIVELES (1M, 2M, 5M, 15M, 1H, 4H, 1D):
     def _calc_range_pos(klines, lookback=24):
         if not klines or len(klines) < 2: return 0.5
         subset = klines[-lookback:] if len(klines) >= lookback else klines
@@ -687,15 +687,23 @@ def analyze_multi_timeframe_candles(symbol):
     range_position_5m = _calc_range_pos(klines_5m, 24)
     range_position_15m = _calc_range_pos(klines_15m, 24)
     range_position_1h = _calc_range_pos(klines_1h, 24)
+    range_position_4h = _calc_range_pos(klines_4h, 24)
+    range_position_1d = _calc_range_pos(klines_1d, 14)
+    
+    rsi_1d = calculate_rsi(d_closes) if len(d_closes) >= 7 else 50.0
 
     high_1h_recent = max(highs_1h[-24:]) if len(highs_1h) >= 24 else (max(highs_1h) if highs_1h else close_15m)
     low_1h_recent = min(lows_1h[-24:]) if len(lows_1h) >= 24 else (min(lows_1h) if lows_1h else close_15m)
     high_24h = d_highs[-1] if d_highs else high_1h_recent
 
-    # Distancia sobre la Media MA25 de 1 Hora:
+    # Distancia sobre la Media MA25 de 1 Hora y 4 Horas:
+    ma25_4h = sum(closes_4h[-25:]) / len(closes_4h[-25:]) if len(closes_4h) >= 25 else (closes_4h[-1] if closes_4h else close_15m)
     dist_from_1h_ma25_pct = ((close_15m - ma25_1h) / ma25_1h) * 100.0 if ma25_1h > 0 else 0.0
+    dist_from_4h_ma25_pct = ((close_15m - ma25_4h) / ma25_4h) * 100.0 if ma25_4h > 0 else 0.0
     
-    # 🚫 VETO TOTAL ANTI-CIMA EN CADA TEMPORALIDAD (Exige estar en el suelo de 1M, 2M, 5M, 15M y 1H):
+    # 🚫 VETO TOTAL ANTI-CIMA EN CADA TEMPORALIDAD DE LA MATRIZ 7D:
+    is_at_range_ceiling_1d = bool(range_position_1d >= 0.48 or rsi_1d >= 62.0)
+    is_at_range_ceiling_4h = bool(range_position_4h >= 0.48 or dist_from_4h_ma25_pct > 2.50 or rsi_4h >= 62.0)
     is_at_range_ceiling_1h = bool(range_position_1h >= 0.48 or dist_from_1h_ma25_pct > 1.80 or rsi_1h >= 60.0)
     is_at_range_ceiling_15m = bool(range_position_15m >= 0.50 or rsi_15m >= 58.0)
     is_at_range_ceiling_5m = bool(range_position_5m >= 0.55 or rsi_5m >= 60.0)
@@ -834,7 +842,12 @@ def analyze_multi_timeframe_candles(symbol):
             overextension_reason = f"Cima de Vela 2M (Impulso extendido +{exp_2m:.2f}% en 2m). Exige entrada en la base de la vela."
         elif is_at_5m_candle_peak:
             is_overextended_15m = True
-            overextension_reason = f"Cima de Vela 5M (Impulso extendido +{exp_5m:.2f}% en 5m). Exige entrada en la base de la vela."
+        if is_at_range_ceiling_1d:
+            is_overextended_15m = True
+            overextension_reason = f"⛔ TECHO 1D (Macro Diario): Precio en el {range_position_1d*100:.0f}% del canal 1D con RSI 1D={rsi_1d:.1f}. Exige compra en el suelo de 1D (< 48%)."
+        elif is_at_range_ceiling_4h:
+            is_overextended_15m = True
+            overextension_reason = f"⛔ TECHO 4H (Macro Institucional): Precio en el {range_position_4h*100:.0f}% del canal 4H con RSI 4H={rsi_4h:.1f}. Exige compra en el suelo de 4H (< 48%)."
         elif is_at_range_ceiling_1h:
             is_overextended_15m = True
             overextension_reason = f"⛔ TECHO 1H (Macro 24h): Precio en el {range_position_1h*100:.0f}% del canal 1H con RSI 1H={rsi_1h:.1f}. Exige compra en el suelo real (< 48%)."
@@ -927,7 +940,15 @@ def analyze_multi_timeframe_candles(symbol):
         "is_macro_bearish_dominance": is_macro_bearish_dominance,
         "price_change_24h_pct": price_change_24h_pct,
         "price_position_in_range": price_position_in_range,
+        "range_position_1d": round(range_position_1d, 3),
+        "range_position_4h": round(range_position_4h, 3),
         "range_position_1h": round(range_position_1h, 3),
+        "range_position_15m": round(range_position_15m, 3),
+        "range_position_5m": round(range_position_5m, 3),
+        "range_position_2m": round(range_position_2m, 3),
+        "range_position_1m": round(range_position_1m, 3),
+        "rsi_1d": rsi_1d,
+        "rsi_4h": rsi_4h,
         "pct_b_15m": round(pct_b, 2),
         "is_oversold_bounce_candidate": is_oversold_bounce_candidate,
         "is_overbought_exhaustion": is_overbought_exhaustion,

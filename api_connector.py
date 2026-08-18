@@ -1464,8 +1464,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 
                 if is_learned_signal:
                     # 👑 AUTORIDAD SUPREMA DEL SÚPER-CEREBRO: El Comité Institucional de 7 Agentes
-                    # ya evaluó la Matriz de Suelo 5D, FII, Bids y Momentum en el Paso 1 y Paso 2.
-                    print(f"👑 [SÚPER-CEREBRO APROBADO] {best_symbol} validado por IA en el Suelo 5D. Procediendo a verificación de libro...")
+                    # ya evaluó la Matriz de Suelo 7D (1D, 4H, 1H, 15M, 5M, 2M, 1M), FII, Bids y Momentum.
+                    print(f"👑 [SÚPER-CEREBRO APROBADO] {best_symbol} validado por IA en el Suelo 7D. Procediendo a verificación de libro...")
                 elif not is_macro_base:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} descalificado por Macro 1H sin soporte (1H: {tf_1h}, RSI 1H: {mtf_res.get('rsi_1h')}, Canal 1H: {mtf_res.get('range_position_1h')}). Exige base macro.")

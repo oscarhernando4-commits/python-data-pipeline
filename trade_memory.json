@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 478,
-    "wins": 221,
+    "total_trades": 483,
+    "wins": 226,
     "losses": 257,
-    "win_rate_pct": 46.23,
-    "total_pnl_usd": 479.72028000000006
+    "win_rate_pct": 46.79,
+    "total_pnl_usd": 482.90028
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,9 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on OPGUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XRPUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOGEUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LTCUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on AVAXUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on OPGUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SEIUSDT)",
@@ -49,7 +46,10 @@
       "BOOST LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TRXUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOTUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on CRVUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on GPSUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on GPSUSDT)",
+      "BOOST SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on KAITOUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PENGUUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TUTUSDT)"
     ]
   },
   "history": [
@@ -8072,6 +8072,91 @@
       "context": {
         "score": 68,
         "rsi_15m": 44.82,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-18 11:17:32",
+      "account_id": "SIM-026",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "KAITOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.3488,
+      "exit_price": 0.3482,
+      "pnl_usd": 0.0,
+      "result": "WIN",
+      "notes": "WIN on KAITOUSDT (PnL: +0.17%, Net: $+0.00 Fase 2)",
+      "context": {
+        "score": 82,
+        "rsi_15m": 61.37,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-18 11:17:32",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "KAITOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.3488,
+      "exit_price": 0.3482,
+      "pnl_usd": 3.14,
+      "result": "WIN",
+      "notes": "WIN on KAITOUSDT (PnL: +0.17%, Net: $+3.14 Fase 2)",
+      "context": {
+        "score": 82,
+        "rsi_15m": 61.37,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-18 11:17:32",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "KAITOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.3488,
+      "exit_price": 0.3482,
+      "pnl_usd": 0.0,
+      "result": "WIN",
+      "notes": "WIN on KAITOUSDT (PnL: +0.17%, Net: $+0.00 Fase 2)",
+      "context": {
+        "score": 82,
+        "rsi_15m": 61.37,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-18 11:21:36",
+      "account_id": "SIM-047",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "PENGUUSDT",
+      "side": "LONG",
+      "entry_price": 0.006044,
+      "exit_price": 0.006069,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on PENGUUSDT (PnL: +0.41%, Net: $+0.03 Fase 3)",
+      "context": {
+        "score": 81,
+        "rsi_15m": 53.22,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-18 11:23:26",
+      "account_id": "SIM-067",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.04409,
+      "exit_price": 0.04399,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on TUTUSDT (PnL: +0.23%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 53.47,
         "macro_trend_4h": "NEUTRAL"
       }
     }
