@@ -1462,7 +1462,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     fii < 65
                 )
                 
-                if not is_macro_base:
+                if is_learned_signal:
+                    # 👑 AUTORIDAD SUPREMA DEL SÚPER-CEREBRO: El Comité Institucional de 7 Agentes
+                    # ya evaluó la Matriz de Suelo 5D, FII, Bids y Momentum en el Paso 1 y Paso 2.
+                    print(f"👑 [SÚPER-CEREBRO APROBADO] {best_symbol} validado por IA en el Suelo 5D. Procediendo a verificación de libro...")
+                elif not is_macro_base:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} descalificado por Macro 1H sin soporte (1H: {tf_1h}, RSI 1H: {mtf_res.get('rsi_1h')}, Canal 1H: {mtf_res.get('range_position_1h')}). Exige base macro.")
                 elif not is_structural_15m_base:
@@ -1477,7 +1481,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 elif mtf_res.get("is_overextended_15m"):
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} rechazado por vela sobre-extendida en la cima ({mtf_res.get('overextension_reason')}).")
-                else:
+                
+                if not is_stable:
                     import orderbook_analyzer
                     ob_info = orderbook_analyzer.fetch_orderbook_depth(best_symbol, limit=20)
                     

@@ -382,16 +382,23 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         fii = mtf.get('fii_score', 0)
         fii_tag = " [🏔️ FII A+ >= 60 - INYECCIÓN SUELO]" if fii >= 60 else (" [⚡ FII 40-59]" if fii >= 40 else "")
         
+        c1h = round(mtf.get('range_position_1h', 0.5) * 100)
+        c15m = round(mtf.get('range_position_15m', 0.5) * 100)
+        c5m = round(mtf.get('range_position_5m', 0.5) * 100)
+        c2m = round(mtf.get('range_position_2m', 0.5) * 100)
+        c1m = round(mtf.get('range_position_1m', 0.5) * 100)
+        dist_ma7 = mtf.get('dist_from_15m_ma7_pct', 0.0)
+        is_overext = mtf.get('is_overextended_15m', False)
+        tf_10s = mtf.get('timeframe_alignment', {}).get('10s', 'BEARISH')
+        tf_30s = mtf.get('timeframe_alignment', {}).get('30s', 'BEARISH')
+        
         candidates_prompt_text += f"\nCANDIDATO: {sym} (Sector: {sec} | Acción Sugerida: {action}){cetus_tag}{fii_tag}\n"
-        candidates_prompt_text += f"- Score: {score}/100 | MTF Score: {mtf.get('multi_tf_score', score)}/100 | FII: {fii}/100 | Canal1H: {mtf.get('range_position_1h', 0.5)*100:.0f}%\n"
-        candidates_prompt_text += (
-            f"- RSI: 10S={mtf.get('rsi_10s', '?')} | 30S={mtf.get('rsi_30s', '?')} | "
-            f"1M={mtf.get('rsi_1m', ind.get('rsi_1m', '?'))} | 5M={mtf.get('rsi_5m', ind.get('rsi_5m', '?'))} | "
-            f"15M={ind.get('rsi_15m', '?')} | 1H={mtf.get('rsi_1h', ind.get('rsi_1h', '?'))}\n"
-        )
+        candidates_prompt_text += f"- Score: {score}/100 | MTF Score: {mtf.get('multi_tf_score', score)}/100 | FII (Inyección Suelo): {fii}/100\n"
+        candidates_prompt_text += f"- 🏔️ MATRIZ FRACTAL DE SUELO 5D (% Canal desde el piso): 1H={c1h}% | 15M={c15m}% | 5M={c5m}% | 2M={c2m}% | 1M={c1m}%\n"
+        candidates_prompt_text += f"- Distancia a MA7 15M: {dist_ma7:+.2f}% | Sobre-extendido (Cima): {is_overext} | Ignición: 10s={tf_10s}, 30s={tf_30s}\n"
+        candidates_prompt_text += f"- RSI 5 Capas: 1M={mtf.get('rsi_1m', ind.get('rsi_1m', '?'))} | 2M={mtf.get('rsi_2m', ind.get('rsi_2m', '?'))} | 5M={mtf.get('rsi_5m', ind.get('rsi_5m', '?'))} | 15M={ind.get('rsi_15m', '?')} | 1H={mtf.get('rsi_1h', ind.get('rsi_1h', '?'))}\n"
         candidates_prompt_text += f"- VolSurge: 10S={mtf.get('vol_surge_10s', 1.0):.1f}x | 30S={mtf.get('vol_surge_30s', 1.0):.1f}x | 1M={mtf.get('vol_surge_1m', 1.0):.1f}x | 15M={ind.get('volume_surge', 1.0):.1f}x\n"
-        candidates_prompt_text += f"- Libro de Órdenes: Bids Compradores {ob['bid_dominance_pct']}% ({ob['liquidity_status']})\n"
-        candidates_prompt_text += f"- Riesgo Falling Knife: {is_knife or is_dead_cat} (24h: {chg_24h:+.1f}%) | Pre-Pump: {is_pre_pump}\n"
+        candidates_prompt_text += f"- Libro de Órdenes: Bids {ob['bid_dominance_pct']}% ({ob['liquidity_status']}) | Riesgo FallingKnife: {is_knife or is_dead_cat}\n"
         candidates_prompt_text += "------------------------------------\n"
 
     print(f"✅ [Comité Institucional 7 Agentes] Consultando al Súper-Cerebro Gemini AI (Flash-Lite) para el TOP {len(candidates_data_list)} simultáneo...")
@@ -404,17 +411,17 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         wall_street_str = "⚪ Wall Street Neutral"
 
     prompt_text = f"""
-    Eres el COMITÉ INSTITUCIONAL MULTI-AGENTE CUÁNTICO (Súper-Cerebro de Élite y Cazador Activo de Alpha).
-    Tu misión suprema es: IDENTIFICAR, SELECCIONAR Y APROBAR LA MEJOR OPORTUNIDAD SPOT LONG EN DINERO REAL PARA GANAR.
+    Eres el COMITÉ INSTITUCIONAL MULTI-AGENTE CUÁNTICO (Súper-Cerebro Supremo y Cazador Activo de Alpha en el Suelo).
+    Tu misión suprema es: EJECUTAR EL PROTOCOLO DE SUELO 5D, IDENTIFICAR LA MEJOR OPORTUNIDAD EN LA BASE Y APROBARLA PARA GANAR.
 
     ESTRUCTURA DE LOS 7 AGENTES INSTITUCIONALES EN DELIBERACIÓN:
     1. 🕵️ AGENTE 1 (Macro & Ballenas): Evalúa régimen macro ({wall_street_str}, Fear&Greed: {fear_greed.get('score')}). Si no hay colapso sistémico de BTC (-5% en 1h), el mercado es OPERABLE.
-    2. 📊 AGENTE 2 (Sniper Micro-Momentum): Busca rebotes en soporte, subidas frescas 10s/30s y FII en piso. Exige no comprar techos (>2.5% de MA7).
-    3. 🌊 AGENTE 3 (Auditor de Libro): Exige Bids >= 44% y absorción compradora real.
+    2. 📊 AGENTE 2 (Sniper de Suelo Fractal 5D): VERIFICA QUE EL ACTIVO ESTÉ EN EL PISO (Canal 1H <= 45%, Canal 15M <= 50%, Distancia MA7 <= 1.5%). VETA toda compra en la cima.
+    3. 🌊 AGENTE 3 (Auditor de Libro & CVD): Exige Bids >= 44% y absorción compradora real.
     4. 🧩 AGENTE 4 (Analista Sectorial): Prioriza el sector líder: {sector_summary['top_sector']}.
     5. 🧠 AGENTE 5 (Memoria & Auto-Aprendizaje): Aplica los patrones estadísticos ganadores y bloquea trampas.
-    6. 🛡️ AGENTE 6 (Chief Risk Officer): Veta trampas de caída libre (Falling Knife). Si el suelo es real y hay stop loss, AUTORIZA.
-    7. 👑 AGENTE 7 (CEO Profit Scalp): Sintetiza el consenso. Si hay un candidato A+ con suelo y volumen, APRUEBA "BUY_LONG" (confidence >= 75-95).
+    6. 🛡️ AGENTE 6 (Chief Risk Officer): Veta trampas de caída libre (Falling Knife). Si el suelo 5D está confirmado, AUTORIZA.
+    7. 👑 AGENTE 7 (CEO Profit Scalp): Sintetiza el consenso. Si hay un candidato A+ en el suelo con volumen, APRUEBA "BUY_LONG" (confidence >= 80-95).
 
     {exec_learning_summary}
 
@@ -426,11 +433,23 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     CANDIDATOS FINALISTAS EVALUADOS:
     {candidates_prompt_text}
 
-    REGLAS DE ORO DEL SÚPER-CEREBRO PARA CAZAR OPORTUNIDADES:
-    1. 🎯 MANDATO DE CAZADOR ACTIVO: Tu objetivo es encontrar la MEJOR entrada del grupo. Si un candidato cumple con (Score >= 58, FII >= 45 o Soporte 15M/1H, Bids >= 44%, VolSurge >= 0.7x y NO es Falling Knife), DEBES APROBARLO ('approved': true, 'action': 'BUY_LONG', 'confidence': 75-95).
-    2. 🛡️ PROTECCIÓN AUTOMÁTICA DE 3 FASES: No temas autorizar una compra válida. El bot cuenta con Stop Loss automático de 3 Fases (-0.80% en 3min, SL -1.50% máx, trailing profit ATR) que protege el saldo 100% en tiempo real.
-    3. 🏔️ PRIORIDAD FII: Si un activo tiene FII >= 50-60 (inyección de capital en suelo) y Canal 1H <= 45%, es el candidato favorito de máxima convicción.
-    4. ⛔ CONDICIÓN "NONE": Responde "selected_symbol": "NONE", "action": "HOLD" ÚNICAMENTE si TODO el mercado está en pánico bajista extremo o ningún candidato tiene soporte comprador mínimo.
+    🏛️ PROTOCOLO MANDATORIO DE DECISIÓN DEL SÚPER-CEREBRO EN 3 PASOS:
+    
+    PASO 1 🏔️ FILTRO MANDATORIO DE SUELO 5D (VETO AUTOMÁTICO DE CIMAS):
+    - Revisa la MATRIZ FRACTAL DE SUELO 5D de cada candidato (1H, 15M, 5M, 2M, 1M).
+    - REGLA DEL PISO: El candidato DEBE estar en el suelo (Canal 1H <= 45% y Canal 15M <= 50%, y Distancia MA7 <= 1.5%).
+    - VETO A LAS CIMAS: Si Canal 1H > 45% o Canal 15M > 50% o Sobre-extendido=True, el activo está en el TECHO. RECHÁZALO de inmediato.
+    
+    PASO 2 ⚡ ANÁLISIS DE CONFLUENCIA Y DINERO INTELIGENTE (SOLO SI ESTÁ EN EL SUELO):
+    - Para los candidatos que están en el suelo real:
+      * Exige FII >= 45-60 (Inyección de capital en el piso / OBV acumulando).
+      * Exige Bids en Libro >= 44% y VolSurge >= 0.7x.
+      * Prioriza micro-ignición sub-minuto (10s o 30s en BULLISH).
+    
+    PASO 3 👑 SELECCIÓN Y APROBACIÓN EJECUTIVA:
+    - Selecciona el mejor candidato que cumpla el Suelo 5D + Inyección de Volumen y APRUEBA ("BUY_LONG", approved: true, confidence: 80-95).
+    - Tu decisión es la autoridad final y se ejecutará directamente en Binance Spot con protección de Trailing Proporcional Continuo.
+    - Si NINGÚN candidato está en el suelo o el mercado está en crash, responde "selected_symbol": "NONE", "action": "HOLD".
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA (7 AGENTES):
     {{
@@ -440,12 +459,12 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         "approved": true o false,
         "committee_deliberation": {{
             "agent_1_macro": "Dictamen macro en 1 oración...",
-            "agent_2_tech": "Dictamen técnico y momentum en 1 oración...",
+            "agent_2_tech": "Dictamen del suelo 5D (1H, 15M, 5M, 2M, 1M) y posición del canal en 1 oración...",
             "agent_3_orderbook": "Dictamen de libro de órdenes y Bids en 1 oración...",
             "agent_4_sector": "Dictamen de rotación sectorial en 1 oración...",
             "agent_5_memory": "Dictamen de memoria RAG y patrones ganadores en 1 oración...",
-            "agent_6_risk": "Dictamen de riesgo y validación de seguridad en 1 oración...",
-            "agent_7_ceo_anti_loss": "Dictamen final del CEO autorizando compra o preservando USDT en 1 oración..."
+            "agent_6_risk": "Dictamen de validación de seguridad anti-cima en 1 oración...",
+            "agent_7_ceo_anti_loss": "Dictamen final del CEO autorizando compra en el suelo o preservando USDT en 1 oración..."
         }},
         "reasoning": "Resumen ejecutivo del consenso institucional..."
     }}

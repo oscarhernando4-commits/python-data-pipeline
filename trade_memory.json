@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 474,
-    "wins": 218,
-    "losses": 256,
-    "win_rate_pct": 45.99,
-    "total_pnl_usd": 479.06028000000003
+    "total_trades": 478,
+    "wins": 221,
+    "losses": 257,
+    "win_rate_pct": 46.23,
+    "total_pnl_usd": 479.72028000000006
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ALICEUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on HEIUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on COMPUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on HEIUSDT)",
@@ -27,11 +26,10 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on OPGUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on BONKUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on LINKUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PROMUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PROMUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on OPGUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on CFGUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MORPHOUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XRPUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOGEUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LTCUSDT)",
@@ -49,7 +47,9 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PEOPLEUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on VIRTUALUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TRXUSDT)",
-      "BOOST SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOTUSDT)"
+      "BOOST SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOTUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on CRVUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on GPSUSDT)"
     ]
   },
   "history": [
@@ -8004,6 +8004,74 @@
       "context": {
         "score": 79,
         "rsi_15m": 73.09,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-18 11:01:35",
+      "account_id": "SIM-021",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "CRVUSDT",
+      "side": "LONG",
+      "entry_price": 0.237,
+      "exit_price": 0.2412,
+      "pnl_usd": 0.29,
+      "result": "WIN",
+      "notes": "WIN on CRVUSDT (PnL: +1.77%, Net: $+0.29 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 46.28,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-18 11:01:35",
+      "account_id": "SIM-022",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "CRVUSDT",
+      "side": "LONG",
+      "entry_price": 0.237,
+      "exit_price": 0.2412,
+      "pnl_usd": 0.36,
+      "result": "WIN",
+      "notes": "WIN on CRVUSDT (PnL: +1.77%, Net: $+0.36 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 46.28,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-18 11:11:26",
+      "account_id": "SIM-067",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "OPGUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1022,
+      "exit_price": 0.1021,
+      "pnl_usd": -0.01,
+      "result": "LOSS",
+      "notes": "LOSS on OPGUSDT (PnL: +0.10%, Net: $-0.01 Fase 2)",
+      "context": {
+        "score": 91,
+        "rsi_15m": 52.38,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-18 11:13:37",
+      "account_id": "SIM-083",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "GPSUSDT",
+      "side": "LONG",
+      "entry_price": 0.01736,
+      "exit_price": 0.0174,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on GPSUSDT (PnL: +0.23%, Net: $+0.02 Fase 3)",
+      "context": {
+        "score": 68,
+        "rsi_15m": 44.82,
         "macro_trend_4h": "NEUTRAL"
       }
     }
