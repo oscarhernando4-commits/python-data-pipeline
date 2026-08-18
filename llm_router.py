@@ -563,38 +563,76 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     }}
     """
 
-    payload = {"contents": [{"parts": [{"text": prompt_text}]}], "generationConfig": {"temperature": 0.1, "responseMimeType": "application/json"}}
+    payload = {
+        "contents": [{"parts": [{"text": prompt_text}]}],
+        "generationConfig": {
+            "temperature": 0.10,          # Baja temperatura = decisiones más consistentes
+            "maxOutputTokens": 1024,       # Cap explícito para gemini-3.1-flash-lite (más rápido)
+            "responseMimeType": "application/json"
+        }
+    }
+    
+    # 🏎️ SUPER-CEREBRO TURBO: Modelo Principal + Fallback automático
+    # gemini-3.1-flash-lite: Ultra-rápido, gratis, ideal para decisiones cuantitativas estructuradas
+    # gemini-2.0-flash:      Fallback Tier 2 si flash-lite falla o devuelve JSON inválido
     models_to_try = [
-        "gemini-3.1-flash-lite"
+        "gemini-3.1-flash-lite",   # Tier 1: Más rápido, menor latencia, gratis
+        "gemini-2.0-flash",        # Tier 2: Fallback si flash-lite devuelve error o JSON malformado
     ]
+    
+    def _try_one_key(args):
+        """Intenta consultar Gemini con una sola key. Retorna (parsed_json, key_label) o None."""
+        model_name, key = args
+        key_label = get_key_label(key, keys_pool)
+        try:
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={key}"
+            req = urllib.request.Request(
+                url,
+                data=json.dumps(payload).encode('utf-8'),
+                headers={'Content-Type': 'application/json'}
+            )
+            with urllib.request.urlopen(req, timeout=12) as response:
+                res_data = json.loads(response.read().decode('utf-8'))
+                if "candidates" in res_data and len(res_data["candidates"]) > 0:
+                    text_res = res_data["candidates"][0]["content"]["parts"][0]["text"]
+                    if "```json" in text_res:
+                        text_res = text_res.split("```json")[1].split("```")[0]
+                    elif "```" in text_res:
+                        text_res = text_res.split("```")[1].split("```")[0]
+                    parsed = json.loads(text_res.strip())
+                    if "selected_symbol" in parsed:
+                        return (parsed, key_label, model_name)
+        except urllib.error.HTTPError as e:
+            if e.code == 429:
+                mark_key_in_cooldown(key)
+        except Exception:
+            pass
+        return None
+    
+    # 🚀 MODO CONCURRENTE: Las 10 keys lanzan peticiones en paralelo por modelo
+    # La primera en responder con JSON válido gana (race condition controlado)
+    import concurrent.futures
     
     for model_name in models_to_try:
         rr_idx = _get_key_index()
         keys_rotated = [keys_pool[(i + rr_idx) % len(keys_pool)] for i in range(len(keys_pool))]
-        for key in keys_rotated:
-            key_label = get_key_label(key, keys_pool)
-            try:
-                url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={key}"
-                req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers={'Content-Type': 'application/json'})
-                with urllib.request.urlopen(req, timeout=15) as response:
-                    res_data = json.loads(response.read().decode('utf-8'))
-                    if "candidates" in res_data and len(res_data["candidates"]) > 0:
-                        text_res = res_data["candidates"][0]["content"]["parts"][0]["text"]
-                        if "```json" in text_res: text_res = text_res.split("```json")[1].split("```")[0]
-                        elif "```" in text_res: text_res = text_res.split("```")[1].split("```")[0]
-                        
-                        parsed = json.loads(text_res.strip())
-                        if "selected_symbol" in parsed:
-                            _advance_key_index(key_label)  # Track successful usage
-                            return parsed
-            except urllib.error.HTTPError as e:
-                if e.code == 429:
-                    mark_key_in_cooldown(key)
-                    continue
-                else:
-                    continue
-            except Exception:
-                continue  # Try next key in pool instead of aborting
+        tasks = [(model_name, k) for k in keys_rotated]
+        
+        try:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=len(keys_rotated)) as executor:
+                futures = {executor.submit(_try_one_key, t): t for t in tasks}
+                for future in concurrent.futures.as_completed(futures, timeout=14):
+                    result = future.result()
+                    if result is not None:
+                        parsed, key_label, used_model = result
+                        _advance_key_index(key_label)
+                        print(f"✅ [{used_model}] Respuesta recibida de {key_label} (concurrente).")
+                        return parsed
+        except concurrent.futures.TimeoutError:
+            print(f"⏱️ [{model_name}] Timeout concurrente (14s). Probando Tier 2...")
+            continue
+        except Exception:
+            continue
     
     print("🛡️ VETO DE SEGURIDAD: Todos los modelos de IA fuera de línea. Candado de CERO compras activado.")
     return {

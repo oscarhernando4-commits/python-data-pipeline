@@ -902,23 +902,34 @@ def quick_position_heartbeat():
         atr_15m_pct = pos.get("atr_pct_15m", 0.30)
         ma25_5m = pos.get("ma25_5m", 0.0)
         
-        # ═══════════════════════════════════════════════════════════════
-        # 🎯 SISTEMA DE SEGUROS DINÁMICOS CON HOLGURA DE RESPIRACIÓN:
-        # FASE 1 (< +0.30%): SL -1.50% (Colchón de inicio).
-        # FASE 2 (+0.30% a +0.60%): Piso Dinámico = max(+0.15% NETO, Pico - 0.25%) -> ¡0.25% de aire para respirar!
-        # FASE 3 (> +0.60%): Trailing Holgado ATR = CIMA - dynamic_trailing_distance.
-        # ═══════════════════════════════════════════════════════════════
-        if highest_pnl_pct < 0.30:
-            sl_pct = -1.50
-            new_phase = 1
-        elif highest_pnl_pct < 0.60:
-            sl_pct = max(0.15, round(highest_pnl_pct - 0.25, 2))   # Fase 2: Seguro dinámico con holgura de 0.25%
-            new_phase = 2
-        else:
-            # 🌊 MEJORA B: Trailing Holgado adaptativo por ATR(15M) para Megapumps
-            dynamic_trailing_distance = max(0.40, round(atr_15m_pct * 1.3, 2))
+        holding_cycles_hb = pos.get("holding_cycles", 0)
+        
+        # ═══════════════════════════════════════════════════════════════════════
+        # 🎯 SISTEMA DE 4 FASES MEJORADO CON CEREBRO ADAPTATIVO:
+        # FASE 0 (primeros 3 ciclos / ~15s): SL ultra-rápido -0.80% si el libro colapsa
+        # FASE 1 (< +0.30%): SL -1.50% (Colchón de inicio)
+        # FASE 2 (+0.30% a +0.60%): Piso ATR-adaptativo max(+0.15%, Pico - holgura)
+        # FASE 3 (> +0.60%): Trailing Holgado ATR = CIMA - dynamic_trailing_distance
+        # ═══════════════════════════════════════════════════════════════════════
+        dynamic_trailing_distance = max(0.40, round(atr_15m_pct * 1.3, 2))
+        
+        if highest_pnl_pct >= 0.60:
             sl_pct = max(0.30, round(highest_pnl_pct - dynamic_trailing_distance, 2))
             new_phase = 3
+        elif highest_pnl_pct >= 0.30:
+            # 🔬 MEJORA 2: Holgura Fase 2 ATR-adaptativa (0.10% - 0.25% según volatilidad del par)
+            holgura_f2 = min(0.25, max(0.10, round(atr_15m_pct * 0.5, 2)))
+            sl_pct = max(0.15, round(highest_pnl_pct - holgura_f2, 2))
+            new_phase = 2
+        else:
+            sl_pct = -1.50
+            new_phase = 1
+            
+        # 🚀 MEJORA 1: FASE 0 — Freno Rápido en Ventana de los Primeros 3 Ciclos (~15s)
+        # Si en los primeros 15s el precio ya cae -0.80%, el setup era incorrecto → salir YA
+        if holding_cycles_hb <= 3 and current_pnl_pct <= -0.80 and new_phase == 1:
+            sl_pct = -0.80
+            new_phase = 1
             
         # Update if changed
         if highest_price > pos.get("highest_price", entry) or new_phase > current_phase:
@@ -941,6 +952,19 @@ def quick_position_heartbeat():
         if not should_exit and new_phase >= 3 and highest_pnl_pct >= 0.80 and (highest_pnl_pct - current_pnl_pct) >= wick_pullback_threshold:
             should_exit = True
             exit_reason = f"🎯 SNIPER MECHA CIMA (Pico +{highest_pnl_pct:.2f}% -> Venta en {current_pnl_pct:+.2f}%)"
+        
+        # 🧱 MEJORA 4: Cancelación Preventiva de 30s — Libro de órdenes colapsó tras entrada
+        # Si en el primer ciclo el libro cae < 38% Bids y tenemos pérdida > -0.20% → salir flat
+        if not should_exit and holding_cycles_hb <= 1 and current_pnl_pct < -0.20:
+            try:
+                import orderbook_analyzer as _ob
+                ob_check = _ob.fetch_orderbook_depth(sym, limit=20)
+                bids_now = ob_check.get("bid_dominance_pct", 50.0)
+                if bids_now < 38.0:
+                    should_exit = True
+                    exit_reason = f"⚡ CANCELACIÓN PREVENTIVA 30s: Libro colapsó (Bids={bids_now:.1f}% < 38%). Setup inválido."
+            except Exception:
+                pass
             
         if should_exit:
             print(f"\n🚨 [MICRO-HEARTBEAT 5S] Salida Inteligente ejecutada para {sym} @ ${current_price:.5f} ({exit_reason})")
@@ -1091,8 +1115,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             phase_msg = f"💎 FASE 3 (COSECHA ADAPTATIVA ATR): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% - {dynamic_trailing_distance:.2f}%)"
         elif highest_pnl_pct >= 0.30:
             phase = 2
-            trailing_floor_pct = max(0.15, round(highest_pnl_pct - 0.25, 2))
-            phase_msg = f"🔒 FASE 2 (+0.30% A +0.60%): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% | Ganancia Verde Asegurada)"
+            # 🔬 MEJORA 2: Holgura ATR-Adaptativa en Fase 2 (0.10%-0.25% según volatilidad del par)
+            holgura_f2 = min(0.25, max(0.10, round(atr_15m_pct * 0.5, 2)))
+            trailing_floor_pct = max(0.15, round(highest_pnl_pct - holgura_f2, 2))
+            phase_msg = f"🔒 FASE 2 (+0.30% A +0.60%): Piso +{trailing_floor_pct:.2f}% (Cima +{highest_pnl_pct:.2f}% | ATR-Holgura={holgura_f2:.2f}% | Ganancia Verde)"
         else:
             phase = 1
             trailing_floor_pct = -1.50
@@ -1129,11 +1155,28 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         if holding_cycles >= 60 and phase == 1 and abs(pnl_pct) <= 0.60:
             stagnation_exit = True
             reason_str = f"🚀 Liberación por Estancamiento (60m en Fase 1 sin despegue, PnL={pnl_pct:+.2f}%)"
-        # 2. Rotación Ágil Alpha a los 30 minutos si aparece un candidato con Score >= 88:
-        elif holding_cycles >= 30 and phase == 1 and abs(pnl_pct) <= 0.50:
-            if best_symbol and best_symbol != active_symbol and best_score >= 88 and not is_bearish:
-                stagnation_exit = True
-                reason_str = f"🚀 Rotación Cuántica Alpha (Posición lateral por {holding_cycles}m -> Rotando Capital al Cohete {best_symbol} @ {best_score} Pts)"
+        # 2. 🔄 MEJORA 5: Rotación Alpha Dinámica — Score Relativo en lugar de Score Fijo 88
+        # Antes exigía 88pts (muy raro), ahora acepta 72pts con delta >= 14 sobre el umbral base
+        elif holding_cycles >= 25 and phase == 1 and abs(pnl_pct) <= 0.40:
+            if best_symbol and best_symbol != active_symbol and best_score >= 72 and not is_bearish:
+                score_delta = best_score - 58  # Delta sobre el umbral mínimo de entrada
+                if score_delta >= 14:
+                    stagnation_exit = True
+                    reason_str = f"🔄 Rotación Alpha Dinámica ({holding_cycles}m plano → {best_symbol} @ {best_score}pts, delta={score_delta}pts)"
+        
+        # 🧠 MEJORA 6: FII en Tiempo Real durante el Holding — Re-evalúa cada 5 ciclos
+        # Si el dinero institucional salió (FII < 25) y estamos en pérdida, salir antes del SL
+        if not stagnation_exit and phase == 1 and holding_cycles >= 5 and holding_cycles % 5 == 0 and pnl_pct < -0.60:
+            try:
+                import multi_timeframe_analyzer as _mtf_live
+                mtf_live_data = _mtf_live.analyze_multi_timeframe_candles(active_symbol)
+                fii_live = mtf_live_data.get("fii_score", 50)
+                if fii_live < 25:
+                    stagnation_exit = True
+                    reason_str = f"🧠 FII COLAPSÓ EN TIEMPO REAL ({fii_live}/100 < 25): Capital institucional salió. Salida anticipada al SL."
+                    print(f"⚠️ [FII LIVE] {active_symbol} FII={fii_live}/100. Capital institucional salió → salida preventiva.")
+            except Exception:
+                pass
 
         sl_target = entry * (1.0 + (trailing_floor_pct / 100.0))
         
