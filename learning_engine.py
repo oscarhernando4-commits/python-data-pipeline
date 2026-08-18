@@ -250,6 +250,61 @@ def record_trade_outcome(symbol, side, entry_price, exit_price, pnl_usd, result_
     save_memory(data)
     return trade_entry
 
+def get_executive_learning_summary(data=None):
+    """
+    Synthesizes ALL historical and recent trade outcomes into a concise, high-impact
+    Executive Intelligence Matrix (~400-800 tokens) for Gemini Flash-Lite.
+    Provides statistical sweet-spots, winning archetypes, and empirical traps.
+    """
+    if data is None:
+        data = load_memory()
+    
+    stats = data.get("stats", {})
+    history = data.get("history", [])
+    recent = history[-50:] if history else []
+    
+    # 1. Real & Recent Statistics
+    total_trades = stats.get("total_trades", len(history))
+    wins = stats.get("wins", sum(1 for t in history if t.get("result") == "WIN"))
+    wr = stats.get("win_rate_pct", round((wins / max(total_trades, 1)) * 100, 1))
+    
+    # 2. Extract recent real performance
+    real_trades = [t for t in history if "REAL" in str(t.get("group_name", "")).upper() or "R-01" in str(t.get("account_id", "")).upper()]
+    real_wins = sum(1 for t in real_trades if t.get("result") == "WIN")
+    real_wr = round((real_wins / max(len(real_trades), 1)) * 100, 1) if real_trades else wr
+    
+    # 3. Discover dynamic statistical sweet spots
+    optimal = get_optimal_entry_conditions(data)
+    best_rsi = "30-55 (Suelo Acumulación)"
+    best_score = "60-85 (Confluencia A+)"
+    if optimal:
+        rsi_an = optimal.get("rsi_analysis", {})
+        high_wr_rsi = [k for k, v in rsi_an.items() if v.get("win_rate", 0) >= 40.0]
+        if high_wr_rsi:
+            best_rsi = ", ".join(high_wr_rsi)
+            
+    # 4. Learned Rule Summaries
+    blocked = data.get("learned_rules", {}).get("blocked_patterns", [])[-4:]
+    boosted = data.get("learned_rules", {}).get("boosted_patterns", [])[-4:]
+    
+    blocked_str = "\n".join([f"    - 🛑 {b}" for b in blocked]) if blocked else "    - Ninguna trampa activa."
+    boosted_str = "\n".join([f"    - ⚡ {b}" for b in boosted]) if boosted else "    - Reversión en suelo + FII >= 50 + Bids >= 45%."
+    
+    # 5. Champions from Matrix
+    matrix_champs = get_matrix_champions_summary()
+    
+    summary = f"""=== SÍNTESIS DE AUTO-APRENDIZAJE EN TIEMPO REAL (RAG QUANT) ===
+- Estadísticas Generales: {total_trades} operaciones | Win Rate Global: {wr}% | Cuenta Real WR: {real_wr}% ({len(real_trades)} ops)
+- Rango Óptimo de Entrada Validado: RSI 15M en [{best_rsi}] | Score Cuántico en [{best_score}]
+- Patrones Potenciados (ALTA PROBABILIDAD DE VICTORIA):
+{boosted_str}
+- Trampas Aprendidas (PROHIBIDO REPETIR):
+{blocked_str}
+- Campeones Líderes de la Simulación Matrix:
+{matrix_champs}
+==============================================================="""
+    return summary
+
 def get_super_detailed_table_str(data=None):
     if data is None:
         data = load_memory()
@@ -257,7 +312,9 @@ def get_super_detailed_table_str(data=None):
     table = "| Fecha | Grupo | Par | Lado | Entrada | Salida | PnL | Score | RSI | Tendencia | Resultado |\n"
     table += "| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |\n"
     
-    for t in data.get("history", []):
+    # Only return last 30 trades if requested, to prevent prompt explosion
+    trades_slice = data.get("history", [])[-30:]
+    for t in trades_slice:
         ctx = t.get("context", {})
         score = ctx.get("score", "N/A")
         rsi = ctx.get("rsi_15m", "N/A")
