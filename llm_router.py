@@ -74,8 +74,8 @@ def get_gemini_api_keys():
         if val and val not in raw_keys:
             raw_keys.append(val)
             
-    # Filter out keys in 5-minute cooldown (300 seconds)
-    healthy_keys = [k for k in raw_keys if (now - _KEY_COOLDOWN.get(k, 0)) >= 300]
+    # Filter out keys in 30-second cooldown (30 seconds allows RPM rate limit to reset naturally)
+    healthy_keys = [k for k in raw_keys if (now - _KEY_COOLDOWN.get(k, 0)) >= 30]
     
     # If all keys happen to be in cooldown, clear cooldown to prevent hard lock
     if not healthy_keys and raw_keys:
@@ -94,11 +94,11 @@ def get_key_label(key, keys_pool):
         return f"Key_XX"
 
 def mark_key_in_cooldown(key):
-    """Puts a key in 5-minute cooldown blacklist when it encounters HTTP 429 Rate Limit."""
+    """Puts a key in 30-second cooldown blacklist when it encounters HTTP 429 Rate Limit."""
     if key and key != "":
         _KEY_COOLDOWN[key] = time.time()
         healthy = len(get_gemini_api_keys())
-        print(f"🚫 Clave Gemini en pausa temporal (5 min) por Rate Limit 429. Claves saludables en pool: {healthy}")
+        print(f"🚫 Clave Gemini en pausa breve (30s) por Rate Limit 429. Claves saludables en pool: {healthy}")
 
 def get_next_gemini_key():
     """Returns the next API key in round-robin sequence across the healthy key pool."""
