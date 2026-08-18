@@ -485,10 +485,9 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         }
     }
     
-    # 🏎️ SUPER-CEREBRO TURBO: gemini-3.1-flash-lite exclusivo
-    # Ultra-rápido, gratis, 10 keys en paralelo → primera en responder gana
+    # 🏎️ SUPER-CEREBRO EXCLUSIVO: gemini-3.1-flash-lite (Único modelo autorizado)
     models_to_try = [
-        "gemini-3.1-flash-lite",
+        "gemini-3.1-flash-lite"
     ]
     
     def _try_one_key(args):
@@ -520,30 +519,37 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
             pass
         return None
     
-    # 🚀 MODO CONCURRENTE: Las 10 keys lanzan peticiones en paralelo por modelo
-    # La primera en responder con JSON válido gana (race condition controlado)
+    # 🚀 MODO CONCURRENTE ÁGIL: Dispara en grupos de 3 keys con failover instantáneo
+    # Evita quemar la cuota de las 10 keys a la vez y obtiene respuesta en < 2.0s
     import concurrent.futures
     
     for model_name in models_to_try:
+        keys_available = get_gemini_api_keys()
+        if not keys_available or keys_available == [""]:
+            continue
         rr_idx = _get_key_index()
-        keys_rotated = [keys_pool[(i + rr_idx) % len(keys_pool)] for i in range(len(keys_pool))]
-        tasks = [(model_name, k) for k in keys_rotated]
+        keys_rotated = [keys_available[(i + rr_idx) % len(keys_available)] for i in range(len(keys_available))]
         
-        try:
-            with concurrent.futures.ThreadPoolExecutor(max_workers=len(keys_rotated)) as executor:
-                futures = {executor.submit(_try_one_key, t): t for t in tasks}
-                for future in concurrent.futures.as_completed(futures, timeout=14):
-                    result = future.result()
-                    if result is not None:
-                        parsed, key_label, used_model = result
-                        _advance_key_index(key_label)
-                        print(f"✅ [{used_model}] Respuesta recibida de {key_label} (concurrente).")
-                        return parsed
-        except concurrent.futures.TimeoutError:
-            print(f"⏱️ [{model_name}] Timeout concurrente (14s). Probando Tier 2...")
-            continue
-        except Exception:
-            continue
+        # Test in agile bursts of 3 keys
+        batch_size = min(3, len(keys_rotated))
+        for b_start in range(0, len(keys_rotated), batch_size):
+            batch_keys = keys_rotated[b_start:b_start + batch_size]
+            tasks = [(model_name, k) for k in batch_keys]
+            
+            try:
+                with concurrent.futures.ThreadPoolExecutor(max_workers=len(batch_keys)) as executor:
+                    futures = {executor.submit(_try_one_key, t): t for t in tasks}
+                    for future in concurrent.futures.as_completed(futures, timeout=10):
+                        result = future.result()
+                        if result is not None:
+                            parsed, key_label, used_model = result
+                            _advance_key_index(key_label)
+                            print(f"✅ [{used_model}] Respuesta recibida de {key_label} (ágil).")
+                            return parsed
+            except concurrent.futures.TimeoutError:
+                continue
+            except Exception:
+                continue
     
     print("🛡️ VETO DE SEGURIDAD: Todos los modelos de IA fuera de línea. Candado de CERO compras activado.")
     return {
