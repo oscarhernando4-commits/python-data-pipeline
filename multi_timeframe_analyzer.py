@@ -663,14 +663,18 @@ def analyze_multi_timeframe_candles(symbol):
     multi_tf_score = min(100, multi_tf_score)  # Re-cap at 100 after bonuses
     
     if is_ma25_below_ma99_downward:
-        multi_tf_score = 0
+        if fii_score < 45 and not (is_ground_zero_micro_ignition or is_vwap_floor_rebound or is_bullish_divergence):
+            multi_tf_score = 0
     if is_active_dump:
-        multi_tf_score = 0
+        if fii_score < 60 and not (is_crash_rebound or is_bullish_divergence):
+            multi_tf_score = 0
     if is_falling_knife:
-        multi_tf_score = 0
+        if fii_score < 60 and not (is_crash_rebound or is_bullish_divergence):
+            multi_tf_score = 0
     if is_dead_cat_bounce:
-        multi_tf_score = 0
-    if is_macro_bearish_dominance and multi_tf_score > 30:
+        if fii_score < 60 and not is_bullish_divergence:
+            multi_tf_score = 0
+    if is_macro_bearish_dominance and multi_tf_score > 30 and fii_score < 50:
         multi_tf_score = 30
     
     # 4. Detect 15m Candle Over-extension / Parabolic Spike (Prevents buying tops like ZRO, ATOM)
