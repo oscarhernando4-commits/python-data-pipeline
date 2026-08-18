@@ -3023,3 +3023,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-11-07 (-27.71%)`, `2024-04-11 (-21.33%)`, `2024-12-26 (-21.04%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: ALPINEUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-22` hasta `2026-08-17` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.4080 USD`
+- 📈 **Máximo Histórico (ATH):** `$15.3500 USD` (`2025-09-29`) | Distancia: `-97.34%`
+- 📉 **Mínimo Histórico (ATL):** `$0.2510 USD` (`2025-10-09`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-09-25 (+120.85%)`, `2025-08-14 (+68.72%)`, `2025-05-05 (+40.05%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-09-30 (-73.25%)`, `2025-10-09 (-32.31%)`, `2025-08-11 (-20.28%)`
+
+---
