@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 963,
-    "wins": 416,
-    "losses": 547,
-    "win_rate_pct": 43.2,
-    "total_pnl_usd": -3980.7183030000015
+    "total_trades": 965,
+    "wins": 417,
+    "losses": 548,
+    "win_rate_pct": 43.21,
+    "total_pnl_usd": -3980.7583030000014
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,40 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-18 11:17:32",
-      "account_id": "SIM-026",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "KAITOUSDT",
-      "side": "SHORT",
-      "entry_price": 0.3488,
-      "exit_price": 0.3482,
-      "pnl_usd": 0.0,
-      "result": "WIN",
-      "notes": "WIN on KAITOUSDT (PnL: +0.17%, Net: $+0.00 Fase 2)",
-      "context": {
-        "score": 82,
-        "rsi_15m": 61.37,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-18 11:17:32",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "KAITOUSDT",
-      "side": "SHORT",
-      "entry_price": 0.3488,
-      "exit_price": 0.3482,
-      "pnl_usd": 3.14,
-      "result": "WIN",
-      "notes": "WIN on KAITOUSDT (PnL: +0.17%, Net: $+3.14 Fase 2)",
-      "context": {
-        "score": 82,
-        "rsi_15m": 61.37,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-18 11:17:32",
       "account_id": "SIM-028",
@@ -8218,6 +8184,32 @@
         "rsi_15m": 72.45,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-19 18:11:28",
+      "account_id": "SIM-038",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "DYDXUSDT",
+      "side": "LONG",
+      "entry_price": 0.10098,
+      "exit_price": 0.10098,
+      "pnl_usd": -0.04,
+      "result": "LOSS",
+      "notes": "LOSS on DYDXUSDT (PnL: +0.00%, Net: $-0.04 Fase 3)",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-19 18:11:28",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "DYDXUSDT",
+      "side": "LONG",
+      "entry_price": 0.10098,
+      "exit_price": 0.10098,
+      "pnl_usd": -0.0,
+      "result": "WIN",
+      "notes": "WIN on DYDXUSDT (PnL: +0.00%, Net: $-0.00 Fase 3)",
+      "context": {}
     }
   ]
 }
