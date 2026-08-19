@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 834,
+    "total_trades": 837,
     "wins": 378,
-    "losses": 456,
-    "win_rate_pct": 45.32,
-    "total_pnl_usd": -3258.2179129999977
+    "losses": 459,
+    "win_rate_pct": 45.16,
+    "total_pnl_usd": -3698.8579129999976
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on KITEUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HEIUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on LINKUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on AAVEUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on REUSDT)",
       "BLOCK SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on HEIUSDT)",
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ONGUSDT)"
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ONGUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on HEIUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HEMIUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-17 21:17:51",
-      "account_id": "SIM-059",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "PEPEUSDT",
-      "side": "LONG",
-      "entry_price": 2.56e-06,
-      "exit_price": 2.56e-06,
-      "pnl_usd": -0.14,
-      "result": "LOSS",
-      "notes": "LOSS on PEPEUSDT (PnL: +0.00%, Net: $-0.14 Fase 3)",
-      "context": {
-        "score": 60,
-        "rsi_15m": 35.2,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-17 21:20:51",
-      "account_id": "SIM-043",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "COWUSDT",
-      "side": "LONG",
-      "entry_price": 0.1128,
-      "exit_price": 0.1129,
-      "pnl_usd": -0.02,
-      "result": "LOSS",
-      "notes": "LOSS on COWUSDT (PnL: +0.09%, Net: $-0.02 Fase 3)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 63.21,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-17 21:20:51",
-      "account_id": "SIM-044",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "COWUSDT",
-      "side": "LONG",
-      "entry_price": 0.1128,
-      "exit_price": 0.1129,
-      "pnl_usd": -0.01,
-      "result": "LOSS",
-      "notes": "LOSS on COWUSDT (PnL: +0.09%, Net: $-0.01 Fase 3)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 63.21,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-17 21:20:51",
       "account_id": "SIM-047",
@@ -8310,6 +8259,57 @@
       "result": "LOSS",
       "notes": "Real Money Trade closed with -0.97%",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-19 12:07:14",
+      "account_id": "SIM-026",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "HEIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.145,
+      "exit_price": 0.1493,
+      "pnl_usd": -0.62,
+      "result": "LOSS",
+      "notes": "LOSS on HEIUSDT (PnL: -2.97%, Net: $-0.62 Fase 1)",
+      "context": {
+        "score": 54,
+        "rsi_15m": 68.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 12:07:14",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "HEIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.145,
+      "exit_price": 0.1493,
+      "pnl_usd": -439.43,
+      "result": "LOSS",
+      "notes": "LOSS on HEIUSDT (PnL: -2.97%, Net: $-439.43 Fase 1)",
+      "context": {
+        "score": 54,
+        "rsi_15m": 68.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 12:07:14",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "HEIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.145,
+      "exit_price": 0.1493,
+      "pnl_usd": -0.59,
+      "result": "LOSS",
+      "notes": "LOSS on HEIUSDT (PnL: -2.97%, Net: $-0.59 Fase 1)",
+      "context": {
+        "score": 54,
+        "rsi_15m": 68.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
