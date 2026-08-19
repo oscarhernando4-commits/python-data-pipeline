@@ -2,11 +2,298 @@
 Asset DNA Predictive Engine for Binance Crypto Assets
 Multi-Horizon Predictive Modeling (Short-Term, Medium-Term, Long-Term),
 Volatility Squeeze Detection, Order Flow CVD Acceleration, Thin Ask Vacuums,
-and Pump/Dump Catalyst Modeling for the Gemini Super-Brain.
+Pump/Dump Catalyst Modeling, BTC Dominance Guard, Funding Rate Analysis,
+Sector Rotation Heat Map, and Time-of-Day Session Intelligence.
 """
 
 import math
-from typing import Dict, Any, List
+import time
+import requests
+from datetime import datetime, timezone, timedelta
+from typing import Dict, Any, List, Optional
+
+# ─── Persistent HTTP session for Binance API calls ────────────────────────────
+_DNA_SESSION = requests.Session()
+_DNA_ADAPTER = requests.adapters.HTTPAdapter(pool_connections=5, pool_maxsize=5, max_retries=1)
+_DNA_SESSION.mount("https://", _DNA_ADAPTER)
+
+# ─── Cache for funding rates and BTC dominance (TTL 5 min) ───────────────────
+_FUNDING_CACHE: Dict[str, Any] = {}
+_BTC_DOM_CACHE: Dict[str, Any] = {}
+_BTC_DOM_TTL = 300  # 5 minutes
+_FUNDING_TTL = 180  # 3 minutes
+
+# ─── Token → Sector mapping ──────────────────────────────────────────────────
+TOKEN_SECTOR_MAP = {
+    # DeFi
+    "AAVE": "DeFi", "UNI": "DeFi", "LINK": "Oracle/DeFi", "MKR": "DeFi",
+    "COMP": "DeFi", "CRV": "DeFi", "SNX": "DeFi", "BAL": "DeFi",
+    "SUSHI": "DeFi", "1INCH": "DeFi", "DYDX": "DeFi", "PENDLE": "DeFi",
+    # Layer 1
+    "ETH": "L1", "SOL": "L1", "ADA": "L1", "AVAX": "L1", "DOT": "L1",
+    "ATOM": "L1", "NEAR": "L1", "ALGO": "L1", "FTM": "L1", "ONE": "L1",
+    "HBAR": "L1", "XLM": "L1", "XRP": "L1", "BNB": "L1",
+    # Layer 2
+    "MATIC": "L2", "POL": "L2", "ARB": "L2", "OP": "L2", "IMX": "L2",
+    "LRC": "L2", "ZK": "L2", "STRK": "L2",
+    # AI & Data
+    "FET": "AI", "AGIX": "AI", "OCEAN": "AI", "TAO": "AI", "WLD": "AI",
+    "NMR": "AI", "GRT": "AI",
+    # Privacy
+    "ZEC": "Privacy", "XMR": "Privacy", "SCRT": "Privacy",
+    # Payments
+    "LTC": "Payments", "BCH": "Payments", "DASH": "Payments", "XLM": "Payments",
+    # Gaming / Metaverse
+    "AXS": "Gaming", "SAND": "Gaming", "MANA": "Gaming", "GALA": "Gaming",
+    "ENJ": "Gaming", "ILV": "Gaming",
+    # Infrastructure
+    "FIL": "Infrastructure", "AR": "Infrastructure", "ANKR": "Infrastructure",
+    "BAND": "Oracle", "API3": "Oracle",
+    # Move ecosystem
+    "SUI": "Move", "APT": "Move",
+    # TON ecosystem
+    "TON": "TON", "NOT": "TON",
+}
+
+# ─── Sector strength tracking (updated each cycle) ───────────────────────────
+_SECTOR_SCORES: Dict[str, List[float]] = {}
+_TRADED_TODAY: List[str] = []  # Symbols already traded today (anti-reentry)
+_TRADED_TODAY_DATE: str = ""
+
+
+def get_btc_dominance_guard() -> Dict[str, Any]:
+    """
+    Checks BTC Dominance trend from Binance BTC 1h vs total stablecoins.
+    If BTC.D rising aggressively (>0.3% in 1h), altcoins typically dump.
+    Uses BTC/USDT price momentum as a proxy for dominance shift.
+    """
+    global _BTC_DOM_CACHE
+    now = time.time()
+    if _BTC_DOM_CACHE and (now - _BTC_DOM_CACHE.get("ts", 0)) < _BTC_DOM_TTL:
+        return _BTC_DOM_CACHE["data"]
+    
+    try:
+        # Get BTC 1h klines (last 4 hours) to detect dominance shift
+        resp = _DNA_SESSION.get(
+            "https://api.binance.com/api/v3/klines",
+            params={"symbol": "BTCUSDT", "interval": "1h", "limit": 6},
+            timeout=5
+        )
+        klines = resp.json()
+        if not klines or not isinstance(klines, list):
+            raise ValueError("No BTC klines")
+        
+        closes = [float(k[4]) for k in klines]
+        current_btc = closes[-1]
+        btc_1h_change = (closes[-1] - closes[-2]) / closes[-2] * 100 if len(closes) >= 2 else 0
+        btc_4h_change = (closes[-1] - closes[0]) / closes[0] * 100 if len(closes) >= 4 else 0
+        
+        # BTC RSI (14 periods using 1h closes)
+        btc_rsi = 50.0
+        if len(closes) >= 6:
+            gains = [max(0, closes[i] - closes[i-1]) for i in range(1, len(closes))]
+            losses = [abs(min(0, closes[i] - closes[i-1])) for i in range(1, len(closes))]
+            avg_gain = sum(gains) / len(gains) if gains else 0.001
+            avg_loss = sum(losses) / len(losses) if losses else 0.001
+            rs = avg_gain / avg_loss if avg_loss > 0 else 100
+            btc_rsi = round(100 - (100 / (1 + rs)), 1)
+        
+        # Dominance guard logic:
+        # If BTC surging (>1.5% in 1h) → capital rotating INTO BTC → altcoins dump
+        # If BTC crashing (<-1.5% in 1h) → fear → altcoins also dump
+        # If BTC stable (±0.5%) → altcoins can move independently
+        btc_status = "NEUTRAL"
+        altcoin_impact = "NEUTRAL"
+        
+        if btc_1h_change > 1.5:
+            btc_status = "PUMP_DOMINANCE"
+            altcoin_impact = "CAUTION"  # Capital flowing into BTC, altcoins may lag
+        elif btc_1h_change > 0.8:
+            btc_status = "BTC_LEADING"
+            altcoin_impact = "POSITIVE"  # Healthy BTC rally often pulls altcoins up
+        elif btc_1h_change < -1.5:
+            btc_status = "BTC_CRASH"
+            altcoin_impact = "AVOID"  # Fear spreading to all alts
+        elif btc_1h_change < -0.8:
+            btc_status = "BTC_DECLINING"
+            altcoin_impact = "CAUTION"
+        else:
+            btc_status = "BTC_STABLE"
+            altcoin_impact = "POSITIVE"  # Best environment for altcoin alpha
+        
+        # RSI extremes add additional risk signals
+        if btc_rsi > 80:
+            altcoin_impact = "CAUTION"  # BTC overbought → potential correction risk
+        elif btc_rsi < 25:
+            altcoin_impact = "AVOID"  # BTC oversold → panic selling, don't catch falling knife
+        
+        result = {
+            "btc_price": current_btc,
+            "btc_1h_change_pct": round(btc_1h_change, 2),
+            "btc_4h_change_pct": round(btc_4h_change, 2),
+            "btc_rsi_6h": btc_rsi,
+            "btc_status": btc_status,
+            "altcoin_impact": altcoin_impact,
+            "should_avoid_altcoins": altcoin_impact == "AVOID",
+            "should_be_cautious": altcoin_impact == "CAUTION",
+        }
+        _BTC_DOM_CACHE = {"ts": now, "data": result}
+        return result
+    except Exception as e:
+        return {
+            "btc_price": 0, "btc_1h_change_pct": 0, "btc_4h_change_pct": 0,
+            "btc_rsi_6h": 50, "btc_status": "UNKNOWN", "altcoin_impact": "NEUTRAL",
+            "should_avoid_altcoins": False, "should_be_cautious": False,
+            "error": str(e)
+        }
+
+
+def get_funding_rate(symbol: str) -> Dict[str, Any]:
+    """
+    Fetches the latest perpetual futures funding rate for a symbol from Binance.
+    Funding rate intelligence:
+    - Positive rate (>0.02%): Longs paying shorts → market is overleveraged LONG → dump risk
+    - Negative rate (<-0.02%): Shorts paying longs → bearish sentiment → potential SHORT SQUEEZE opportunity
+    - Near zero (±0.01%): Neutral, no directional pressure from perps
+    """
+    global _FUNDING_CACHE
+    cache_key = symbol.upper()
+    now = time.time()
+    
+    if cache_key in _FUNDING_CACHE:
+        cached = _FUNDING_CACHE[cache_key]
+        if (now - cached.get("ts", 0)) < _FUNDING_TTL:
+            return cached["data"]
+    
+    try:
+        perp_symbol = symbol.upper()
+        if not perp_symbol.endswith("USDT"):
+            perp_symbol = perp_symbol + "USDT"
+        
+        resp = _DNA_SESSION.get(
+            "https://fapi.binance.com/fapi/v1/fundingRate",
+            params={"symbol": perp_symbol, "limit": 3},
+            timeout=5
+        )
+        if resp.status_code != 200:
+            # Symbol might not have perpetual futures (e.g. ZEC, BCH have limited perps)
+            result = {"symbol": symbol, "funding_rate": 0.0, "funding_signal": "NO_PERPS",
+                      "dump_risk_from_funding": False, "squeeze_opportunity": False, "error": f"HTTP {resp.status_code}"}
+            _FUNDING_CACHE[cache_key] = {"ts": now, "data": result}
+            return result
+        
+        rates = resp.json()
+        if not rates:
+            raise ValueError("Empty funding rate response")
+        
+        latest_rate = float(rates[-1].get("fundingRate", 0))
+        rate_pct = round(latest_rate * 100, 4)
+        
+        if rate_pct > 0.05:
+            funding_signal = "EXTREME_LONGS_OVERLEVERAGED"
+            dump_risk = True
+            squeeze_opp = False
+        elif rate_pct > 0.02:
+            funding_signal = "LONGS_DOMINANT_CAUTION"
+            dump_risk = True
+            squeeze_opp = False
+        elif rate_pct < -0.05:
+            funding_signal = "EXTREME_SHORTS_SQUEEZE_INCOMING"
+            dump_risk = False
+            squeeze_opp = True
+        elif rate_pct < -0.02:
+            funding_signal = "SHORTS_DOMINANT_POTENTIAL_SQUEEZE"
+            dump_risk = False
+            squeeze_opp = True
+        else:
+            funding_signal = "NEUTRAL_BALANCED"
+            dump_risk = False
+            squeeze_opp = False
+        
+        result = {
+            "symbol": symbol,
+            "funding_rate_pct": rate_pct,
+            "funding_signal": funding_signal,
+            "dump_risk_from_funding": dump_risk,
+            "squeeze_opportunity": squeeze_opp,
+        }
+        _FUNDING_CACHE[cache_key] = {"ts": now, "data": result}
+        return result
+    except Exception as e:
+        result = {"symbol": symbol, "funding_rate_pct": 0.0, "funding_signal": "UNKNOWN",
+                  "dump_risk_from_funding": False, "squeeze_opportunity": False, "error": str(e)}
+        _FUNDING_CACHE[cache_key] = {"ts": now, "data": result}
+        return result
+
+
+def get_sector_heat(symbol: str, score: float) -> Dict[str, Any]:
+    """
+    Tracks sector momentum: registers this token's score into its sector bucket.
+    Returns which sector is hottest today and whether this token is in a hot sector.
+    """
+    global _SECTOR_SCORES
+    asset = str(symbol).upper().replace("USDT", "").replace("USD", "")
+    sector = TOKEN_SECTOR_MAP.get(asset, "Other")
+    
+    if sector not in _SECTOR_SCORES:
+        _SECTOR_SCORES[sector] = []
+    _SECTOR_SCORES[sector].append(score)
+    # Keep only last 10 scores per sector
+    _SECTOR_SCORES[sector] = _SECTOR_SCORES[sector][-10:]
+    
+    # Compute sector averages
+    sector_avgs = {s: sum(scores) / len(scores) for s, scores in _SECTOR_SCORES.items() if scores}
+    hottest_sector = max(sector_avgs, key=sector_avgs.get) if sector_avgs else "Unknown"
+    hottest_avg = sector_avgs.get(hottest_sector, 0)
+    my_sector_avg = sector_avgs.get(sector, score)
+    
+    is_in_hot_sector = (sector == hottest_sector) or (my_sector_avg >= 65)
+    
+    return {
+        "token_sector": sector,
+        "sector_avg_score": round(my_sector_avg, 1),
+        "hottest_sector": hottest_sector,
+        "hottest_sector_avg": round(hottest_avg, 1),
+        "is_in_hot_sector": is_in_hot_sector,
+        "sector_rotation_bonus": 10 if is_in_hot_sector else 0
+    }
+
+
+def check_already_traded_today(symbol: str) -> Dict[str, Any]:
+    """
+    Tracks symbols already traded today to avoid re-entry into exhausted tokens.
+    A token that already ran +1.5% today has likely exhausted its intraday momentum.
+    """
+    global _TRADED_TODAY, _TRADED_TODAY_DATE
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    
+    if _TRADED_TODAY_DATE != today:
+        _TRADED_TODAY = []
+        _TRADED_TODAY_DATE = today
+    
+    sym = str(symbol).upper()
+    was_traded = sym in _TRADED_TODAY
+    
+    return {
+        "symbol": sym,
+        "already_traded_today": was_traded,
+        "tokens_traded_today_count": len(_TRADED_TODAY),
+        "tokens_traded_today": _TRADED_TODAY.copy()
+    }
+
+
+def register_trade_today(symbol: str):
+    """Registers a symbol as traded today to prevent re-entry."""
+    global _TRADED_TODAY, _TRADED_TODAY_DATE
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    if _TRADED_TODAY_DATE != today:
+        _TRADED_TODAY = []
+        _TRADED_TODAY_DATE = today
+    sym = str(symbol).upper()
+    if sym not in _TRADED_TODAY:
+        _TRADED_TODAY.append(sym)
+
+
 
 def calculate_bollinger_squeeze_ratio(closes: List[float], period: int = 20, num_std: float = 2.0) -> float:
     """

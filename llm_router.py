@@ -408,6 +408,35 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         catalysts_str = ", ".join(pred.get('active_pump_catalysts', [])) if pred.get('active_pump_catalysts') else "En desarrollo"
         warnings_str = ", ".join(pred.get('active_dump_warnings', [])) if pred.get('active_dump_warnings') else "Ninguna advertencia"
 
+        # ── ADN v2: Time-of-Day, BTC Guard, Funding Rate, Sector Heat ──────────
+        time_dna = mtf.get('time_of_day_dna', {})
+        time_mult = time_dna.get('final_time_multiplier', 1.0)
+        time_sess = time_dna.get('session_label', 'N/A')
+        time_blackout = time_dna.get('is_blackout_hour', False)
+        time_peak = time_dna.get('is_token_peak_hour', False)
+        time_veto = time_dna.get('hard_veto_entry', False)
+        time_expl = time_dna.get('explanation', '')
+
+        btc_guard = mtf.get('btc_dominance_guard', {})
+        btc_status = btc_guard.get('btc_status', 'UNKNOWN')
+        btc_impact = btc_guard.get('altcoin_impact', 'NEUTRAL')
+        btc_1h_chg = btc_guard.get('btc_1h_change_pct', 0)
+        btc_avoid = btc_guard.get('should_avoid_altcoins', False)
+
+        fund_dna = mtf.get('funding_rate_dna', {})
+        fund_signal = fund_dna.get('funding_signal', 'UNKNOWN')
+        fund_rate = fund_dna.get('funding_rate_pct', 0.0)
+        fund_dump_risk = fund_dna.get('dump_risk_from_funding', False)
+        fund_squeeze = fund_dna.get('squeeze_opportunity', False)
+
+        sector_heat = mtf.get('sector_heat_dna', {})
+        token_sector = sector_heat.get('token_sector', 'Other')
+        sector_hot = sector_heat.get('is_in_hot_sector', False)
+        hottest_sec = sector_heat.get('hottest_sector', 'N/A')
+
+        anti_reentry = mtf.get('anti_reentry_check', {})
+        already_traded = anti_reentry.get('already_traded_today', False)
+
         candidates_prompt_text += f"\nCANDIDATO: {sym} (Sector: {sec} | Acción Sugerida: {action}){cetus_tag}{fii_tag}\n"
         candidates_prompt_text += f"- Score: {score}/100 | MTF Score: {mtf.get('multi_tf_score', score)}/100 | FII (Inyección Suelo): {fii}/100\n"
         candidates_prompt_text += f"- 🔮 Radar Predictivo Multi-Horizonte: {pred_label} | Prob. Pump={pump_prob}% | Riesgo Dump={dump_risk}%\n"
@@ -423,6 +452,16 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
             f"4H={mtf.get('rsi_4h', ind.get('rsi_4h', '?'))} | 1D={mtf.get('rsi_1d', '?')}\n"
         )
         candidates_prompt_text += f"- VolSurge: 10S={mtf.get('vol_surge_10s', 1.0):.1f}x | 30S={mtf.get('vol_surge_30s', 1.0):.1f}x | 1M={mtf.get('vol_surge_1m', 1.0):.1f}x | 15M={ind.get('volume_surge', 1.0):.1f}x | Cima={is_overext}\n"
+        # ── ADN v2 NEW LINES ────────────────────────────────────────────────────
+        time_veto_str = " ⛔VETO_TEMPORAL" if time_veto else (" ⚠️BLACKOUT" if time_blackout else (" ⭐HORA_PICO" if time_peak else ""))
+        candidates_prompt_text += f"- ⏰ ADN TEMPORAL: Sesion={time_sess} | Multiplicador={time_mult:.2f}x{time_veto_str} | {time_expl}\n"
+        btc_avoid_str = " ⛔EVITAR_ALTCOINS" if btc_avoid else ""
+        candidates_prompt_text += f"- 🟠 BTC GUARD: BTC 1H={btc_1h_chg:+.2f}% ({btc_status}) | Impacto Altcoins={btc_impact}{btc_avoid_str}\n"
+        fund_risk_str = " ⛔DUMP_RISK_FUNDING" if fund_dump_risk else (" 🔥SHORT_SQUEEZE" if fund_squeeze else "")
+        candidates_prompt_text += f"- 💰 FUNDING PERPS: {fund_signal} ({fund_rate:+.4f}%){fund_risk_str}\n"
+        sector_hot_str = " 🔥SECTOR_CALIENTE" if sector_hot else ""
+        already_str = " ⛔YA_OPERADO_HOY" if already_traded else ""
+        candidates_prompt_text += f"- 🏭 SECTOR: {token_sector} (Sector mas caliente hoy: {hottest_sec}){sector_hot_str}{already_str}\n"
         candidates_prompt_text += "------------------------------------\n"
 
     print(f"✅ [Comité Institucional 7 Agentes] Consultando al Súper-Cerebro Gemini AI (Flash-Lite) para el TOP {len(candidates_data_list)} simultáneo...")
@@ -439,13 +478,13 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     Tu misión suprema es: EVALUAR EL ADN PREDICTIVO MULTI-HORIZONTE, IDENTIFICAR CATALIZADORES DE PUMP, VETAR RIESGOS DE DUMP Y APROBAR LA MONEDA #1.
 
     ESTRUCTURA DE LOS 7 AGENTES INSTITUCIONALES EN DELIBERACIÓN CUÁNTICA:
-    1. 🕵️ AGENTE 1 (Macro 1D & Guardián de Bitcoin): Evalúa el ciclo macro 1D ({wall_street_str}), Fear&Greed ({fear_greed.get('score')}) y estabilidad de BTC.
-    2. 📊 AGENTE 2 (Sniper de Suelo 7D & Resistencia Predictiva): Verifica Suelo 7D (1D, 4H, 1H <= 48%), retesteo 1M sin FOMO y recorrido proyectado >= +2.5%.
+    1. 🕵️ AGENTE 1 (Macro 1D & Guardián de Bitcoin): Evalúa el ciclo macro 1D ({wall_street_str}), Fear&Greed ({fear_greed.get('score')}), estabilidad de BTC (BTC Guard). VETA si altcoin_impact=AVOID.
+    2. 📊 AGENTE 2 (Sniper de Suelo 7D & Resistencia Predictiva): Verifica Suelo 7D (1D, 4H, 1H <= 48%), retesteo 1M sin FOMO y recorrido proyectado >= +2.5%. VETA si YA_OPERADO_HOY.
     3. 🌊 AGENTE 3 (Auditor de Libro, CVD & Squeeze Micro): Exige Bids >= 44%, CVD Taker positivo y confirma compresión de volatilidad (Squeeze de Bollinger).
-    4. 🧩 AGENTE 4 (Analista Sectorial Dinámico): Prioriza el sector líder: {sector_summary['top_sector']}.
+    4. 🧩 AGENTE 4 (Analista Sectorial & Temporal): Prioriza sector líder ({sector_summary['top_sector']}) y valida la SESION TEMPORAL. VETO si VETO_TEMPORAL o BLACKOUT con multiplicador < 0.60. Premia tokens en HORA_PICO y SECTOR_CALIENTE.
     5. 🧠 AGENTE 5 (Memoria RAG & Auto-Aprendizaje Cuántico): Valida el ADN de la moneda, reputación histórica y patrones de catalizadores ganadores aprendidos.
-    6. 🛡️ AGENTE 6 (Chief Risk Officer & Veto de Dump): Veta cualquier activo con Riesgo de Dump >= 45% o libro descompensado.
-    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza el consenso del comité. Si hay una oportunidad A+ con alta probabilidad de pump (>= 70%) y bajo riesgo (<= 25%), APRUEBA "BUY_LONG" (confianza >= 85-95%) para ejecución inmediata en Binance Spot.
+    6. 🛡️ AGENTE 6 (Chief Risk Officer & Veto de Dump): Veta cualquier activo con Riesgo de Dump >= 45%, libro descompensado, DUMP_RISK_FUNDING (funding positivo extremo > 0.05%), o BTC en CRASH.
+    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza el consenso del comité. Si hay una oportunidad A+ con alta probabilidad de pump (>= 70%), bajo riesgo (<= 25%), sesión favorable (multiplicador >= 0.80), funding neutral o squeeze, APRUEBA "BUY_LONG" (confianza >= 85-95%) para ejecución inmediata en Binance Spot.
 
     {exec_learning_summary}
 
@@ -457,25 +496,31 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     CANDIDATOS FINALISTAS EVALUADOS (TABLA MULTI-MONEDA SIMULTÁNEA):
     {candidates_prompt_text}
 
-    🏛️ PROTOCOLO DINÁMICO DE DECISIÓN DEL SÚPER-CEREBRO EN 3 PASOS:
+    🏛️ PROTOCOLO DINÁMICO DE DECISIÓN DEL SÚPER-CEREBRO EN 4 PASOS:
     
     PASO 1 🏔️ FILTRO MANDATORIO DE SUELO 7D & GATILLO 1M (CERO COMPRAS EN CIMA O FOMO):
     - Revisa la MATRIZ FRACTAL DE SUELO 7D de cada candidato (1D, 4H, 1H, 15M, 5M, 2M, 1M).
     - REGLA DEL PISO MACRO: El candidato DEBE estar en zona de descuento institucional (1D <= 48%, 4H <= 48%, 1H <= 48%).
     - REGLA ANTI-FOMO 1M: Exige que el precio esté retesteando la base de 1M (Anti-FOMO=True, cerca de EMA9 1M).
-    - VETO: Si 1D > 48% o 4H > 48% o Sobre-extendido=True o Fomo=True, RECHÁZALO de inmediato.
+    - VETO: Si 1D > 48% o 4H > 48% o Sobre-extendido=True o Fomo=True o YA_OPERADO_HOY, RECHÁZALO de inmediato.
     
-    PASO 2 ⚡ ANÁLISIS DE CONFLUENCIA, DINERO INTELIGENTE Y CVD (SOLO EN EL SUELO):
+    PASO 2 ⏰ FILTRO TEMPORAL Y MACROECONÓMICO (ADN v2 NUEVO):
+    - VETO TEMPORAL: Si un candidato tiene VETO_TEMPORAL o BLACKOUT con mult < 0.60, RECHAZAR. Sesión Asiática Muerta (00-06 UTC) = baja liquidez, spreads amplios, alta tasa de falsas señales.
+    - VETO BTC CRASH: Si BTC_GUARD muestra altcoin_impact=AVOID (BTC cayendo > 1.5% en 1H), HOLD obligatorio.
+    - VETO FUNDING: Si FUNDING_PERPS muestra DUMP_RISK_FUNDING (funding > 0.05%), evitar. Longs overleveraged = fácil dump.
+    - BONUS: Tokens en HORA_PICO + SECTOR_CALIENTE + BTC_STABLE tienen prioridad máxima.
+    
+    PASO 3 ⚡ ANÁLISIS DE CONFLUENCIA, DINERO INTELIGENTE Y CVD (SOLO EN EL SUELO):
     - Para los candidatos en el suelo real:
       * Exige FII >= 45-60 (Inyección de capital en el piso / OBV acumulando).
       * Exige Bids >= 44% y Flujo CVD Taker positivo o equilibrado.
       * Prioriza micro-ignición sub-minuto (10s o 30s en BULLISH).
     
-    PASO 3 👑 SELECCIÓN DINÁMICA DEL CAMPEÓN #1 Y APROBACIÓN EJECUTIVA:
+    PASO 4 👑 SELECCIÓN DINÁMICA DEL CAMPEÓN #1 Y APROBACIÓN EJECUTIVA:
     - Compara todos los candidatos finalistas y selecciona al MEJOR ACTIVO ABSOLUTO DE TODO EL MERCADO.
     - Emite tu veredicto final con "BUY_LONG", approved: true, confidence: 85-95.
     - Tu decisión es la autoridad final que ejecutará la orden en Binance Spot con protección de Trailing Proporcional Continuo.
-    - Si NINGÚN candidato está en el suelo o el mercado está en crash de BTC, responde "selected_symbol": "NONE", "action": "HOLD".
+    - Si NINGÚN candidato está en el suelo, el mercado está en crash de BTC, o todos están en VETO_TEMPORAL, responde "selected_symbol": "NONE", "action": "HOLD".
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA (7 AGENTES):
     {{

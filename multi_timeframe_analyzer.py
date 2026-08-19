@@ -286,6 +286,38 @@ def calculate_atr(highs, lows, closes, period=14):
         atr = (atr * (period - 1) + trs[i]) / period
     return atr
 
+
+# ─── ADN v2 Safe Wrappers ────────────────────────────────────────────────────
+def _get_time_dna_safe(symbol):
+    """Safe wrapper for time_of_day_dna — returns neutral defaults on error."""
+    try:
+        import time_of_day_dna
+        return time_of_day_dna.get_token_time_score(symbol)
+    except Exception:
+        return {"session_name": "UNKNOWN", "final_time_multiplier": 1.0,
+                "is_blackout_hour": False, "hard_veto_entry": False,
+                "is_token_peak_hour": False, "explanation": "N/A"}
+
+
+def _get_btc_guard_safe():
+    """Safe wrapper for BTC dominance guard — returns neutral defaults on error."""
+    try:
+        return asset_dna_predictive_engine.get_btc_dominance_guard()
+    except Exception:
+        return {"btc_status": "UNKNOWN", "altcoin_impact": "NEUTRAL",
+                "should_avoid_altcoins": False, "should_be_cautious": False,
+                "btc_1h_change_pct": 0.0}
+
+
+def _get_funding_safe(symbol):
+    """Safe wrapper for funding rate — returns neutral defaults on error."""
+    try:
+        return asset_dna_predictive_engine.get_funding_rate(symbol)
+    except Exception:
+        return {"funding_signal": "UNKNOWN", "funding_rate_pct": 0.0,
+                "dump_risk_from_funding": False, "squeeze_opportunity": False}
+
+
 def analyze_multi_timeframe_candles(symbol):
     """
     Inspects 2m, 5m, 15m, 1h, 4h, 1d, and 7d historical candle behavior.
@@ -1038,7 +1070,13 @@ def analyze_multi_timeframe_candles(symbol):
             "15m": "BULLISH" if tf_15m_up else "BEARISH",
             "1h": "BULLISH" if tf_1h_up else "BEARISH",
             "1d": "BULLISH" if tf_1d_up else "BEARISH"
-        }
+        },
+        # ─── NUEVAS DIMENSIONES ADN v2 — Time-of-Day + BTC Guard + Funding + Sector ───
+        "time_of_day_dna": _get_time_dna_safe(symbol),
+        "btc_dominance_guard": _get_btc_guard_safe(),
+        "funding_rate_dna": _get_funding_safe(symbol),
+        "sector_heat_dna": asset_dna_predictive_engine.get_sector_heat(symbol, fii_score),
+        "anti_reentry_check": asset_dna_predictive_engine.check_already_traded_today(symbol),
     }
 
 if __name__ == "__main__":

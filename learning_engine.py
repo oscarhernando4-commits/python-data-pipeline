@@ -208,12 +208,42 @@ def record_trade_outcome(symbol, side, entry_price, exit_price, pnl_usd, result_
     data = load_memory()
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
+    # ─────────────────────────────────────────────────────────────────────────
+    # 🛡️ DEDUPLICACIÓN ANTI-TRIPLICACIÓN: Evita registrar el mismo trade de la
+    # cuenta real (R-01) más de una vez dentro de una ventana de 90 segundos.
+    # Causa: pipeline_processor.py corre 100 cuentas del matrix y cada una que
+    # tuvo el mismo símbolo invoca record_trade_outcome independientemente.
+    # ─────────────────────────────────────────────────────────────────────────
+    is_real_account = ("R-01" in str(account_id)) or ("REAL" in str(group_name).upper())
+    history = data.get("history", [])
+    
+    if not is_real_account:
+        # For simulation (matrix) accounts: check if R-01 already logged this symbol in last 90s
+        try:
+            from datetime import datetime as _dt, timedelta as _td
+            cutoff = _dt.now() - _td(seconds=90)
+            for recent in reversed(history[-20:]):
+                ts_str = recent.get("timestamp", "")
+                acc = str(recent.get("account_id", ""))
+                sym_r = str(recent.get("symbol", ""))
+                res_r = str(recent.get("result", ""))
+                if "R-01" in acc or "REAL" in str(recent.get("group_name", "")).upper():
+                    try:
+                        ts = _dt.strptime(ts_str, "%Y-%m-%d %H:%M:%S")
+                        if ts >= cutoff and sym_r == symbol.upper() and res_r == result_type.upper():
+                            # Real account already logged this — skip simulation duplicate
+                            return None
+                    except Exception:
+                        pass
+        except Exception:
+            pass
+    
     trade_entry = {
         "timestamp": now_str,
         "account_id": account_id,
         "group_name": group_name,
         "symbol": symbol.upper(),
-        "side": side.upper(),
+        "side": side.upper() if side else "LONG",
         "entry_price": entry_price,
         "exit_price": exit_price,
         "pnl_usd": pnl_usd,
@@ -233,7 +263,7 @@ def record_trade_outcome(symbol, side, entry_price, exit_price, pnl_usd, result_
     stats["win_rate_pct"] = round((stats["wins"] / stats["total_trades"]) * 100.0, 2)
     
     # Generate ABSTRACT technical rules (not trade-specific strings)
-    tech_rule = _extract_technical_rule(symbol, side, result_type, context)
+    tech_rule = _extract_technical_rule(symbol, side or "LONG", result_type, context)
     if tech_rule:
         if result_type.upper() == "LOSS":
             if tech_rule not in data["learned_rules"]["blocked_patterns"]:
@@ -246,7 +276,7 @@ def record_trade_outcome(symbol, side, entry_price, exit_price, pnl_usd, result_
                 data["learned_rules"]["boosted_patterns"].append(tech_rule)
                 if len(data["learned_rules"]["boosted_patterns"]) > 20:
                     data["learned_rules"]["boosted_patterns"] = data["learned_rules"]["boosted_patterns"][-20:]
-            
+        
     save_memory(data)
     return trade_entry
 

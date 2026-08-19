@@ -62,6 +62,7 @@ import multi_timeframe_analyzer
 
 # Exhaustive Blacklist of Stablecoins, Fiat-Pegged Assets, and Synthetic Collateral
 STABLECOIN_BLACKLIST = {
+    "PAXG", "PAXGUSDT", "XAUT", "XAUTUSDT", "GRAM", "GRAMUSDT", "PORTAL", "PORTALUSDT",
     "U", "UUSDT", "USD", "USDE", "USD0", "USDS", "USDF", "USDC", "FDUSD", "TUSD", "BUSD", "DAI", "USDD", "RLUSD", "USD1",
     "EUR", "AEUR", "WBTC", "TBTC", "USDS", "USTC", "FRAX", "PYUSD", "USD0", "SNDKB", "SNDK", "USD", "EURUSDT", "AEURUSDT",
     "RLUSDUSDT", "USD1USDT", "USDCUSDT", "FDUSDUSDT", "TUSDUSDT", "BUSDUSDT", "DAIUSDT", "USDDUSDT", "USDEUSDT", "FRAXUSDT",

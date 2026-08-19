@@ -1327,8 +1327,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             "PAXG", "XAUT", "XAUt", "GOLD"
         }
         
-        # 🚫 BLACKLIST EMPÍRICA v2: Actualizada con análisis real de 4,823 trades en matrix
+        # 🚫 BLACKLIST EMPÍRICA v3: Actualizada con análisis forense real 2026-08-19
         # REGLA: Si PnL < -$100 USD en matrix → PROHIBIDO. Si WR < 17% → PROHIBIDO.
+        # NUEVA REGLA: Tokens con múltiples LOSSES reales en la cuenta R-01 → BLOQUEADOS
         toxic_symbols_blacklist = {
             # ── CATASTRÓFICOS (pérdidas masivas) ──────────────────────────
             "PEPEUSDT",  "PEPE",        # -$8,857,228 (catastrófico por mechas)
@@ -1348,8 +1349,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             "EULUSDT",   "EUL",         # -$282 USD
             "BICOUSDT",  "BICO",        # -$320 USD
             "EDENUSDT",  "EDEN",        # -$359 USD
-            "KAITOUSDT", "KAITO",       # -$310 USD
+            "KAITOUSDT", "KAITO",       # -$310 USD + 5 LOSSES reales 2026-08-19
+            # ── VALIDADOS EMPÍRICAMENTE HOY (2026-08-19) ──────────────────
+            "HEIUSDT",   "HEI",         # 6 LOSSES reales: -1.60%, -1.66%, -0.20% (memes pump/dump)
         }
+
         
         # 🏆 WHITELIST PRIORITARIA v2: Solo pares con PnL > +$50 confirmado en matrix
         # Bonus de score +20 aplicado al pasar todos los filtros base
@@ -1577,6 +1581,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     state["_cached_usdt_free"] = 0.0
                     save_real_account_state(state)
                     print(f"✅ SPOT LONG ejecutado exitosamente: {best_symbol} ({qty} @ ${actual_entry_price:.4f} = ${actual_cost} USD)")
+                    # 📅 Registrar en anti-reentry ADN v2 — evita re-entrar hoy en el mismo token
+                    try:
+                        import asset_dna_predictive_engine as _adna
+                        _adna.register_trade_today(best_symbol)
+                    except Exception:
+                        pass
+
                 else:
                     print(f"⚠️ LONG no ejecutado: {buy_res}")
 
