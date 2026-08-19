@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 823,
+    "total_trades": 824,
     "wins": 374,
-    "losses": 449,
-    "win_rate_pct": 45.44,
-    "total_pnl_usd": -3258.4073429999967
+    "losses": 450,
+    "win_rate_pct": 45.39,
+    "total_pnl_usd": -3258.437342999997
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-17 20:54:44",
-      "account_id": "SIM-022",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "REUSDT",
-      "side": "LONG",
-      "entry_price": 0.4068,
-      "exit_price": 0.4006,
-      "pnl_usd": -0.38,
-      "result": "LOSS",
-      "notes": "LOSS on REUSDT (PnL: -1.52%, Net: $-0.38 Fase 1)",
-      "context": {
-        "score": 39,
-        "rsi_15m": 30.08,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-17 20:54:44",
       "account_id": "SIM-053",
@@ -8322,6 +8305,19 @@
         "rsi_15m": 71.44,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-19 11:45:15",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "CRVUSDT",
+      "side": "LONG",
+      "entry_price": 0.2377,
+      "exit_price": 0.2377,
+      "pnl_usd": -0.03,
+      "result": "LOSS",
+      "notes": "LOSS on CRVUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
+      "context": {}
     }
   ]
 }
