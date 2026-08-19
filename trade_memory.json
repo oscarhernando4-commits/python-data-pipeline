@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 947,
-    "wins": 413,
+    "total_trades": 948,
+    "wins": 414,
     "losses": 534,
-    "win_rate_pct": 43.61,
-    "total_pnl_usd": -3993.348303
+    "win_rate_pct": 43.67,
+    "total_pnl_usd": -3992.798303
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on GPSUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SOLUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LINKUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ADAUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on GRAMUSDT)",
@@ -49,23 +48,11 @@
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLDUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LINKUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEARUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HEMIUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HEMIUSDT)",
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on WLDUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-18 10:51:32",
-      "account_id": "SIM-048",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "MORPHOUSDT",
-      "side": "LONG",
-      "entry_price": 2.17,
-      "exit_price": 2.17,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on MORPHOUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-18 10:51:32",
       "account_id": "SIM-049",
@@ -8182,6 +8169,23 @@
       "result": "WIN",
       "notes": "WIN on DYDXUSDT (PnL: +0.00%, Net: $-0.00 Fase 3)",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-19 17:23:16",
+      "account_id": "SIM-093",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "WLDUSDT",
+      "side": "LONG",
+      "entry_price": 0.3435,
+      "exit_price": 0.3441,
+      "pnl_usd": 0.55,
+      "result": "WIN",
+      "notes": "WIN on WLDUSDT (PnL: +0.17%, Net: $+0.55 Fase 3)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 72.5,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
