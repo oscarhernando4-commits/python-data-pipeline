@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 937,
+    "total_trades": 938,
     "wins": 408,
-    "losses": 529,
-    "win_rate_pct": 43.54,
-    "total_pnl_usd": -3896.4583030000003
+    "losses": 530,
+    "win_rate_pct": 43.5,
+    "total_pnl_usd": -3946.1283030000004
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on BTCUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SUIUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DOGEUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ONDOUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on HEMIUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ADAUSDT)",
-      "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SUIUSDT)"
+      "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SUIUSDT)",
+      "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on WLDUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on UNIUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-18 10:21:47",
-      "account_id": "SIM-043",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "PEOPLEUSDT",
-      "side": "LONG",
-      "entry_price": 0.0077,
-      "exit_price": 0.00771,
-      "pnl_usd": -0.01,
-      "result": "LOSS",
-      "notes": "LOSS on PEOPLEUSDT (PnL: +0.13%, Net: $-0.01 Fase 3)",
-      "context": {
-        "score": 74,
-        "rsi_15m": 53.13,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-18 10:21:47",
       "account_id": "SIM-044",
@@ -8188,6 +8171,23 @@
       "context": {
         "score": 81,
         "rsi_15m": 63.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 10:59:17",
+      "account_id": "SIM-093",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "WLDUSDT",
+      "side": "LONG",
+      "entry_price": 0.3435,
+      "exit_price": 0.3364,
+      "pnl_usd": -49.67,
+      "result": "LOSS",
+      "notes": "LOSS on WLDUSDT (PnL: -2.07%, Net: $-49.67 Fase 1)",
+      "context": {
+        "score": 72,
+        "rsi_15m": 68.74,
         "macro_trend_4h": "NEUTRAL"
       }
     }
