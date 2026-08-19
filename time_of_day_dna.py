@@ -2,21 +2,21 @@ import datetime
 
 # 1. SESSIONS dict mapping session names to UTC start/end hours, labels, signal_multiplier, and blackout bool
 SESSIONS = {
-    "ASIAN_DEAD_ZONE": {"start": 0, "end": 4, "label": "Asian Dead Zone (Low Vol)", "signal_multiplier": 0.5, "blackout": True},
-    "ASIAN_MORNING": {"start": 4, "end": 8, "label": "Asian Morning (Medium Vol)", "signal_multiplier": 0.8, "blackout": False},
+    "ASIAN_DEAD_ZONE": {"start": 0, "end": 4, "label": "Asian Early Session (Asian High-Beta)", "signal_multiplier": 0.85, "blackout": False},
+    "ASIAN_MORNING": {"start": 4, "end": 8, "label": "Asian Morning (Tokyo/Singapore Active)", "signal_multiplier": 0.95, "blackout": False},
     "LONDON_OPEN": {"start": 8, "end": 12, "label": "London Open (High Vol)", "signal_multiplier": 1.15, "blackout": False},
-    "LONDON_LUNCH": {"start": 12, "end": 14, "label": "London Lunch / Pre-NYSE (Med Vol)", "signal_multiplier": 0.9, "blackout": False},
-    "NYSE_OPEN": {"start": 14, "end": 18, "label": "NYSE Open (Max Vol)", "signal_multiplier": 1.3, "blackout": False},
-    "NYSE_LUNCH": {"start": 18, "end": 21, "label": "NYSE Lunch / Close (Med Vol)", "signal_multiplier": 0.9, "blackout": False},
-    "US_OVERNIGHT": {"start": 21, "end": 24, "label": "US Overnight (Low Vol)", "signal_multiplier": 0.6, "blackout": True},
+    "LONDON_LUNCH": {"start": 12, "end": 14, "label": "London Lunch / Pre-NYSE (Med Vol)", "signal_multiplier": 1.00, "blackout": False},
+    "NYSE_OPEN": {"start": 14, "end": 18, "label": "NYSE Open (Max Vol)", "signal_multiplier": 1.30, "blackout": False},
+    "NYSE_LUNCH": {"start": 18, "end": 21, "label": "NYSE Lunch / Close (Med Vol)", "signal_multiplier": 1.00, "blackout": False},
+    "US_OVERNIGHT": {"start": 21, "end": 24, "label": "US Evening / Pacific Session", "signal_multiplier": 0.90, "blackout": False},
 }
 
 # 2. HOURLY_PUMP_MULTIPLIERS dict with hours 0-23 mapping to floats
 HOURLY_PUMP_MULTIPLIERS = {
-    0: 0.35, 1: 0.40, 2: 0.45, 3: 0.45, 4: 0.50, 5: 0.70, 6: 0.80, 7: 0.90,
+    0: 0.85, 1: 0.85, 2: 0.90, 3: 0.90, 4: 0.90, 5: 0.95, 6: 0.95, 7: 1.00,
     8: 1.10, 9: 1.15, 10: 1.20, 11: 1.20, 12: 1.10, 13: 1.05,
-    14: 1.25, 15: 1.35, 16: 1.30, 17: 1.25, 18: 1.10, 19: 1.00, 20: 0.90,
-    21: 0.70, 22: 0.60, 23: 0.50
+    14: 1.25, 15: 1.35, 16: 1.30, 17: 1.25, 18: 1.10, 19: 1.00, 20: 0.95,
+    21: 0.90, 22: 0.90, 23: 0.85
 }
 
 # 3. TOKEN_PEAK_HOURS dict

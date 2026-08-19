@@ -512,17 +512,17 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
     🏛️ PROTOCOLO DINÁMICO DE DECISIÓN DEL SÚPER-CEREBRO EN 4 PASOS:
     
-    PASO 1 🏔️ FILTRO MANDATORIO DE SUELO 7D & GATILLO 1M (CERO COMPRAS EN CIMA O FOMO):
+    PASO 1 🏔️ FILTRO MANDATORIO DE SUELO INTRADÍA & GATILLO 1M (CERO COMPRAS EN CIMA O FOMO):
     - Revisa la MATRIZ FRACTAL DE SUELO 7D de cada candidato (1D, 4H, 1H, 15M, 5M, 2M, 1M).
-    - REGLA DEL PISO MACRO: El candidato DEBE estar en zona de descuento institucional (1D <= 48%, 4H <= 48%, 1H <= 48%).
+    - REGLA DEL PISO INTRADÍA: El candidato DEBE estar en zona de descuento o pullback a soporte (1H <= 55% y 15M <= 50%).
+    - REGLA MACRO: Si 1D o 4H están en tendencia alcista saludable (1D <= 65%), es VÁLIDO siempre que 15M/1H estén en la base de descuento.
     - REGLA ANTI-FOMO 1M: Exige que el precio esté retesteando la base de 1M (Anti-FOMO=True, cerca de EMA9 1M).
-    - VETO: Si 1D > 48% o 4H > 48% o Sobre-extendido=True o Fomo=True o YA_OPERADO_HOY, RECHÁZALO de inmediato.
+    - VETO ESTRICTO: Solo si 1D > 75% o 4H > 75% (techo extremo) o Sobre-extendido=True o Fomo=True o YA_OPERADO_HOY, RECHÁZALO.
     
-    PASO 2 ⏰ FILTRO TEMPORAL Y MACROECONÓMICO (ADN v2 NUEVO):
-    - VETO TEMPORAL: Si un candidato tiene VETO_TEMPORAL o BLACKOUT con mult < 0.60, RECHAZAR. Sesión Asiática Muerta (00-06 UTC) = baja liquidez, spreads amplios, alta tasa de falsas señales.
+    PASO 2 ⏰ FILTRO MACROECONÓMICO Y VOLUMEN REAL:
     - VETO BTC CRASH: Si BTC_GUARD muestra altcoin_impact=AVOID (BTC cayendo > 1.5% en 1H), HOLD obligatorio.
     - VETO FUNDING: Si FUNDING_PERPS muestra DUMP_RISK_FUNDING (funding > 0.05%), evitar. Longs overleveraged = fácil dump.
-    - BONUS: Tokens en HORA_PICO + SECTOR_CALIENTE + BTC_STABLE tienen prioridad máxima.
+    - PRIORIDAD: Tokens con FII >= 50-60, volumen real (> 0.60x), libro comprador (Bids >= 46%) y giro verde confirmado en 1M/2M.
     
     PASO 2B 🧬 EVALUACIÓN ESPECÍFICA SEGÚN ARQUETIPO DE ADN (SIN VETOS CIEGOS):
     - 🐆 SPRINT HIPER-VOLÁTIL (Memes / High-Beta: PEPE, DOGE, HEI, PENGU, BARD): Exige ignición de volumen sub-minuto brutal (10s/30s/1m >= 1.8x) y Bids >= 52%. Cosecha rápida (+1% a +2%).
