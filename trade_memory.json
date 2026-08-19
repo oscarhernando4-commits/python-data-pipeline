@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 745,
-    "wins": 331,
+    "total_trades": 748,
+    "wins": 334,
     "losses": 414,
-    "win_rate_pct": 44.43,
-    "total_pnl_usd": -2663.5073429999975
+    "win_rate_pct": 44.65,
+    "total_pnl_usd": -2633.2773429999975
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on KITEUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SUNUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LINKUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZAMAUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on FETUSDT)",
@@ -49,61 +48,11 @@
       "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HEMIUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ZAMAUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ARBUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TUTUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TUTUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on LINKUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-17 16:49:32",
-      "account_id": "SIM-089",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "JTOUSDT",
-      "side": "LONG",
-      "entry_price": 0.5913,
-      "exit_price": 0.5815,
-      "pnl_usd": -1.3,
-      "result": "LOSS",
-      "notes": "LOSS on JTOUSDT (PnL: -1.66%, Net: $-1.30 Fase 1)",
-      "context": {
-        "score": 19,
-        "rsi_15m": 28.64,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-17 16:53:36",
-      "account_id": "SIM-028",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "AAVEUSDT",
-      "side": "SHORT",
-      "entry_price": 87.18,
-      "exit_price": 88.6,
-      "pnl_usd": -0.34,
-      "result": "LOSS",
-      "notes": "LOSS on AAVEUSDT (PnL: -1.63%, Net: $-0.34 Fase 1)",
-      "context": {
-        "score": 91,
-        "rsi_15m": 66.95,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-17 17:05:51",
-      "account_id": "SIM-000 (Réplica Real)",
-      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
-      "symbol": "TUTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.05072,
-      "exit_price": 0.04648,
-      "pnl_usd": 0.76,
-      "result": "WIN",
-      "notes": "WIN on TUTUSDT (PnL: +8.36%, Net: $+0.76 Fase 3)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 54.16,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-17 17:07:50",
       "account_id": "SIM-023",
@@ -8300,6 +8249,57 @@
       "context": {
         "score": 50,
         "rsi_15m": 54.72,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 06:19:34",
+      "account_id": "SIM-026",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "LINKUSDT",
+      "side": "SHORT",
+      "entry_price": 9.639,
+      "exit_price": 9.604,
+      "pnl_usd": 0.04,
+      "result": "WIN",
+      "notes": "WIN on LINKUSDT (PnL: +0.36%, Net: $+0.04 Fase 3)",
+      "context": {
+        "score": 43,
+        "rsi_15m": 53.57,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 06:19:34",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "LINKUSDT",
+      "side": "SHORT",
+      "entry_price": 9.639,
+      "exit_price": 9.604,
+      "pnl_usd": 30.15,
+      "result": "WIN",
+      "notes": "WIN on LINKUSDT (PnL: +0.36%, Net: $+30.15 Fase 3)",
+      "context": {
+        "score": 43,
+        "rsi_15m": 53.57,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 06:19:34",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "LINKUSDT",
+      "side": "SHORT",
+      "entry_price": 9.639,
+      "exit_price": 9.604,
+      "pnl_usd": 0.04,
+      "result": "WIN",
+      "notes": "WIN on LINKUSDT (PnL: +0.36%, Net: $+0.04 Fase 3)",
+      "context": {
+        "score": 43,
+        "rsi_15m": 53.57,
         "macro_trend_4h": "NEUTRAL"
       }
     }
