@@ -870,43 +870,51 @@ def execute_real_futures_market_close(symbol, quantity):
 
 def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: float, holding_cycles: int = 0, current_pnl_pct: float = 0.0, custom_slack: float = None):
     """
-    🎯 PROTOCOLO HÍBRIDO FRACTAL 15M: MAXIMIZACIÓN DE TENDENCIAS Y PÉRDIDA CERO
-    1. ZONA MEGAPUMP (H >= 4.00%): 
-       Retiene el 85% de la Cima alcanzada en clímax.
-       Piso = max(+3.20%, H * 0.85, H - 0.70%)
+    🎯 ESCALERA CUÁNTICA DE RETENCIÓN DE GANANCIA MÁXIMA (75% a 90%):
+    Reduce el margen de devolución y retiene la mayor parte de la cima de forma dinámica:
+    
+    1. ZONA MEGAPUMP (H >= 5.00%): 
+       Retiene el 90% de la Cima (Piso = max(+4.50%, H * 0.90, H - 0.40%))
        
-    2. ZONA EXPANSIÓN FRACTAL 15M (1.80% <= H < 4.00%):
-       Retiene el 65% de la Cima alcanzada (Holgura para desarrollo de ondas 15M).
-       Piso = max(+1.15%, H * 0.65, H - max(0.60%, atr * 1.3))
+    2. ZONA EXPANSIÓN FUERTE (2.50% <= H < 5.00%):
+       Retiene el 85% de la Cima (Piso = max(+2.12%, H * 0.85, H - 0.35%))
        
-    3. ZONA DESPEGUE & BREAK-EVEN BLINDADO (0.60% <= H < 1.80%):
-       Garantiza Cero Pérdida (+0.15% neto mínimo) con holgura fractal de respiración (0.60% - 0.80%).
-       Piso = max(+0.15%, H * 0.50, H - (custom_slack or 0.65))
+    3. ZONA IMPULSO CONSOLIDADO (1.20% <= H < 2.50%):
+       Retiene el 80% de la Cima (Piso = max(+0.96%, H * 0.80, H - 0.28%))
        
-    4. ZONA ENTRADA & SOPORTE (H < 0.60%):
-       SL en Soporte de Base: -0.90% (Espacio institucional para absorción).
+    4. ZONA BREAK-EVEN AJUSTADO (0.55% <= H < 1.20%):
+       Retiene el 75% de la Cima (Piso = max(+0.20%, H * 0.75, H - 0.26%))
+       (Ejemplo: con cima de +1.14%, el piso sube a +0.86% asegurando el 75% del pico).
+       
+    5. ZONA ENTRADA & SOPORTE (H < 0.55%):
+       SL en Soporte de Base: -0.90% (Espacio para absorción inicial).
     """
     atr = max(0.20, min(1.50, atr_pct if atr_pct and atr_pct > 0 else 0.30))
-    slack = custom_slack if (custom_slack and custom_slack > 0) else 0.65
     
-    if highest_pnl_pct >= 4.00:
+    if highest_pnl_pct >= 5.00:
+        floor_by_ratio = highest_pnl_pct * 0.90
+        floor_by_slack = highest_pnl_pct - 0.40
+        sl_pct = round(max(4.50, floor_by_ratio, floor_by_slack), 2)
+        phase = 4
+        phase_label = f"🚀 FASE 4 MEGAPUMP (Cima +{highest_pnl_pct:.2f}% | Retención 90% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 2.50:
         floor_by_ratio = highest_pnl_pct * 0.85
-        floor_by_slack = highest_pnl_pct - 0.70
-        sl_pct = round(max(3.20, floor_by_ratio, floor_by_slack), 2)
+        floor_by_slack = highest_pnl_pct - 0.35
+        sl_pct = round(max(2.12, floor_by_ratio, floor_by_slack), 2)
         phase = 3
-        phase_label = f"🚀 FASE 4 MEGAPUMP (Cima +{highest_pnl_pct:.2f}% | Retención 85% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 1.80:
-        floor_by_ratio = highest_pnl_pct * 0.65
-        floor_by_atr = highest_pnl_pct - max(0.60, round(atr * 1.3, 2))
-        sl_pct = round(max(1.15, floor_by_ratio, floor_by_atr), 2)
-        phase = 3
-        phase_label = f"💎 FASE 3 EXPANSIÓN 15M (Cima +{highest_pnl_pct:.2f}% | Retención 65% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.60:
-        floor_by_ratio = highest_pnl_pct * 0.50
-        floor_by_slack = highest_pnl_pct - slack
-        sl_pct = round(max(0.15, floor_by_ratio, floor_by_slack), 2)
+        phase_label = f"💎 FASE 3 EXPANSIÓN (Cima +{highest_pnl_pct:.2f}% | Retención 85% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 1.20:
+        floor_by_ratio = highest_pnl_pct * 0.80
+        floor_by_slack = highest_pnl_pct - 0.28
+        sl_pct = round(max(0.96, floor_by_ratio, floor_by_slack), 2)
         phase = 2
-        phase_label = f"🔒 FASE 2 BREAK-EVEN (Cima +{highest_pnl_pct:.2f}% | Onda 15M -> Piso +{sl_pct:.2f}%)"
+        phase_label = f"🔒 FASE 2 ALTO RENDIMIENTO (Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 0.55:
+        floor_by_ratio = highest_pnl_pct * 0.75
+        floor_by_slack = highest_pnl_pct - 0.26
+        sl_pct = round(max(0.20, floor_by_ratio, floor_by_slack), 2)
+        phase = 2
+        phase_label = f"🔒 FASE 2 BREAK-EVEN AJUSTADO (Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
     else:
         sl_pct = -0.90
         phase = 1
