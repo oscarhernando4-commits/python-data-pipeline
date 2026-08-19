@@ -1,16 +1,13 @@
 {
   "stats": {
-    "total_trades": 926,
+    "total_trades": 930,
     "wins": 405,
-    "losses": 521,
-    "win_rate_pct": 43.74,
-    "total_pnl_usd": -3792.1583030000006
+    "losses": 525,
+    "win_rate_pct": 43.55,
+    "total_pnl_usd": -3793.8583030000004
   },
   "learned_rules": {
     "blocked_patterns": [
-      "🛑 VETO MICRO-CAPS ILÍQUIDAS: Prohibido comprar tokens con volumen 24h <  o Bids < ,000 USDT (Caso BMTUSDT - Slippage por libro delgado).",
-      "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on HEMIUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on LTCUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on LINKUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on PEPEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on HBARUSDT)",
@@ -27,7 +24,10 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DOGEUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ONDOUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on PEPEUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ADAUSDT)"
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ADAUSDT)",
+      "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ENAUSDT)",
+      "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on XLMUSDT)",
+      "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on FETUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MORPHOUSDT)",
@@ -53,74 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-18 10:00:54",
-      "account_id": "SIM-081",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "ROBOUSDT",
-      "side": "LONG",
-      "entry_price": 0.01357,
-      "exit_price": 0.01336,
-      "pnl_usd": -1.02,
-      "result": "LOSS",
-      "notes": "LOSS on ROBOUSDT (PnL: -1.55%, Net: $-1.02 Fase 1)",
-      "context": {
-        "score": 46,
-        "rsi_15m": 41.83,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-18 10:06:51",
-      "account_id": "SIM-026",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "BMTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01651,
-      "exit_price": 0.01663,
-      "pnl_usd": -0.18,
-      "result": "LOSS",
-      "notes": "LOSS on BMTUSDT (PnL: -0.73%, Net: $-0.18 Fase 3)",
-      "context": {
-        "score": 100,
-        "rsi_15m": 66.72,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-18 10:06:51",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "XAIUSDT",
-      "side": "LONG",
-      "entry_price": 0.00708,
-      "exit_price": 0.0071,
-      "pnl_usd": 18.89,
-      "result": "WIN",
-      "notes": "WIN on XAIUSDT (PnL: +0.28%, Net: $+18.89 Fase 2)",
-      "context": {
-        "score": 70,
-        "rsi_15m": 42.67,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-18 10:06:51",
-      "account_id": "SIM-028",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "XAIUSDT",
-      "side": "LONG",
-      "entry_price": 0.00708,
-      "exit_price": 0.0071,
-      "pnl_usd": 0.03,
-      "result": "WIN",
-      "notes": "WIN on XAIUSDT (PnL: +0.28%, Net: $+0.03 Fase 2)",
-      "context": {
-        "score": 70,
-        "rsi_15m": 42.67,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-18 10:06:51",
       "account_id": "SIM-043",
@@ -8186,6 +8118,74 @@
       "result": "LOSS",
       "notes": "LOSS on AVAXUSDT (PnL: +0.00%, Net: $-0.02 Fase 3)",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-19 10:32:50",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ENAUSDT",
+      "side": "SHORT",
+      "entry_price": 0.087,
+      "exit_price": 0.0885,
+      "pnl_usd": -0.44,
+      "result": "LOSS",
+      "notes": "LOSS on ENAUSDT (PnL: -1.72%, Net: $-0.44 Fase 1)",
+      "context": {
+        "score": 79,
+        "rsi_15m": 76.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 10:32:50",
+      "account_id": "SIM-031",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "XLMUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1633,
+      "exit_price": 0.1672,
+      "pnl_usd": -0.49,
+      "result": "LOSS",
+      "notes": "LOSS on XLMUSDT (PnL: -2.39%, Net: $-0.49 Fase 1)",
+      "context": {
+        "score": 79,
+        "rsi_15m": 89.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 10:32:50",
+      "account_id": "SIM-032",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "FETUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1243,
+      "exit_price": 0.1266,
+      "pnl_usd": -0.41,
+      "result": "LOSS",
+      "notes": "LOSS on FETUSDT (PnL: -1.85%, Net: $-0.41 Fase 1)",
+      "context": {
+        "score": 79,
+        "rsi_15m": 78.59,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 10:32:50",
+      "account_id": "SIM-033",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ENAUSDT",
+      "side": "SHORT",
+      "entry_price": 0.087,
+      "exit_price": 0.0885,
+      "pnl_usd": -0.36,
+      "result": "LOSS",
+      "notes": "LOSS on ENAUSDT (PnL: -1.72%, Net: $-0.36 Fase 1)",
+      "context": {
+        "score": 79,
+        "rsi_15m": 76.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
