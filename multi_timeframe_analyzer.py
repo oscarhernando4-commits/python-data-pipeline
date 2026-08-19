@@ -898,59 +898,32 @@ def analyze_multi_timeframe_candles(symbol):
         is_1m_sniper_pullback = bool(-0.40 <= dist_from_1m_ema9_pct <= 0.45 and rsi_1m <= 54.0)
         is_1m_fomo_extension = bool(dist_from_1m_ema9_pct > 1.15)
 
-        if candle_range > 0 and upper_wick_ratio > wick_threshold and (high_15m - low_15m) / low_15m > 0.012:
+        # 🎯 Detección de Sobre-Extensión Parabólica Genuina (Cima de Clímax):
+        # Solo se activa si el activo está en sobrecompra extrema real (RSI >= 78 o distancia MA7 > 3.5%)
+        is_parabolic_blowoff = (rsi_15m >= 78.0) or (rsi_4h >= 75.0) or (dist_from_15m_ma7_pct > 3.50)
+        is_major_rejection_wick = (candle_range > 0 and upper_wick_ratio > 0.55 and (high_15m - low_15m) / low_15m > 0.02)
+        
+        if is_parabolic_blowoff:
             is_overextended_15m = True
-            overextension_reason = f"Mecha superior de reversión en vela de 15m ({upper_wick_ratio*100:.1f}% del rango, umbral={wick_threshold*100:.0f}%)"
-        elif is_at_1m_candle_peak:
+            overextension_reason = f"Sobrecompra Parabólica Extrema (RSI 15M={rsi_15m:.1f}, RSI 4H={rsi_4h:.1f}, Dist MA7={dist_from_15m_ma7_pct:+.2f}%). Esperando pullback a soporte."
+        elif is_major_rejection_wick:
             is_overextended_15m = True
-            overextension_reason = f"Cima de Vela 1M (Impulso extendido +{exp_1m:.2f}% en 1m). Exige entrada en la base de la vela."
-        elif is_at_2m_candle_peak:
+            overextension_reason = f"Mecha superior de reversión violenta en 15M ({upper_wick_ratio*100:.1f}% del rango). Vendedores rechazaron la cima."
+        elif dist_24h_pct <= 0.20 and rsi_15m >= 75.0:
             is_overextended_15m = True
-            overextension_reason = f"Cima de Vela 2M (Impulso extendido +{exp_2m:.2f}% en 2m). Exige entrada en la base de la vela."
-        elif is_at_5m_candle_peak:
+            overextension_reason = f"Techo 24H Sobrecomprado (Precio al 99.8% del máximo diario con RSI={rsi_15m:.1f})."
+        elif dist_from_15m_ma7_pct > 3.80:
             is_overextended_15m = True
-        if is_at_range_ceiling_1d:
-            is_overextended_15m = True
-            overextension_reason = f"⛔ TECHO 1D (Macro Diario): Precio en el {range_position_1d*100:.0f}% del canal 1D con RSI 1D={rsi_1d:.1f}. Exige compra en el suelo de 1D (< 48%)."
-        elif is_at_range_ceiling_4h:
-            is_overextended_15m = True
-            overextension_reason = f"⛔ TECHO 4H (Macro Institucional): Precio en el {range_position_4h*100:.0f}% del canal 4H con RSI 4H={rsi_4h:.1f}. Exige compra en el suelo de 4H (< 48%)."
-        elif is_at_range_ceiling_1h:
-            is_overextended_15m = True
-            overextension_reason = f"⛔ TECHO 1H (Macro 24h): Precio en el {range_position_1h*100:.0f}% del canal 1H con RSI 1H={rsi_1h:.1f}. Exige compra en el suelo real (< 48%)."
-        elif is_at_range_ceiling_15m:
-            is_overextended_15m = True
-            overextension_reason = f"⛔ TECHO 15M (Medio Plazo): Precio en el {range_position_15m*100:.0f}% del canal 15M con RSI 15M={rsi_15m:.1f}. Exige compra en la base de 15M (< 50%)."
-        elif is_at_range_ceiling_5m:
-            is_overextended_15m = True
-            overextension_reason = f"⛔ TECHO 5M (Corto Plazo): Precio en el {range_position_5m*100:.0f}% del canal 5M con RSI 5M={rsi_5m:.1f}. Exige compra en la base de 5M (< 55%)."
-        elif is_at_range_ceiling_2m:
-            is_overextended_15m = True
-            overextension_reason = f"⛔ TECHO 2M (Micro): Precio en el {range_position_2m*100:.0f}% del canal 2M con RSI 2M={rsi_2m:.1f}. Exige compra en el suelo de 2M (< 60%)."
-        elif is_at_range_ceiling_1m:
-            is_overextended_15m = True
-            overextension_reason = f"⛔ TECHO 1M (Gatillo): Precio en el {range_position_1m*100:.0f}% del canal 1M con RSI 1M={rsi_1m:.1f}. Exige compra en el suelo de 1M (< 60%)."
-        elif dist_24h_pct <= 0.40 and rsi_15m >= 68.0:
-            is_overextended_15m = True
-            overextension_reason = f"Techo 24H Sobrecomprado (Precio a solo {dist_24h_pct}% del máximo diario ${high_24h:.4f} con RSI 15M={rsi_15m:.1f} >= 68.0). Exige compra en la base."
-        elif close_15m > open_15m and ((close_15m - open_15m) / open_15m) * 100.0 > (2.60 if is_cetus_rocket_pattern else 1.80):
-            is_overextended_15m = True
-            overextension_reason = f"Vela de 15m sobre-extendida en la cima (+{((close_15m - open_15m) / open_15m) * 100.0:.2f}% > {2.60 if is_cetus_rocket_pattern else 1.80}%). Exige entrada en el nacimiento de la vela."
-        elif dist_from_15m_ma7_pct > (2.20 if is_cetus_rocket_pattern else 1.30):
-            is_overextended_15m = True
-            overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct}% sobre MA7). Exige compra en el suelo de la base (distancia <= {2.20 if is_cetus_rocket_pattern else 1.30}%)"
-        elif is_sub_minute_bleeding and not is_bullish_divergence:
+            overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct:.2f}% sobre MA7). Exige compra en el soporte."
+        elif is_sub_minute_bleeding and not (is_bullish_divergence or is_vwap_floor_rebound):
             is_overextended_15m = True
             overextension_reason = "Micro-caída activa en 10s/30s (Ventas agresivas en sub-minuto). Esperando freno y giro verde en 10s."
         elif is_1m_death_cascade and not (is_bullish_divergence or is_vwap_floor_rebound):
             is_overextended_15m = True
             overextension_reason = f"Cascada Bajista 1M (Precio < MA7 < MA25 y SuperTrend 1M Rojo). Caída en curso sin absorción."
-        elif not (tf_1h_up or is_yellow_arrow_1h or rsi_1h <= 55.0 or is_vwap_floor_rebound or is_bullish_divergence):
+        elif not (tf_1h_up or is_yellow_arrow_1h or rsi_1h <= 60.0 or is_vwap_floor_rebound or is_bullish_divergence):
             is_overextended_15m = True
             overextension_reason = f"Macro 1H sin soporte (RSI 1H={rsi_1h:.1f}). Exige: 1H alcista, rebote VWAP, o divergencia alcista."
-        elif (not price_above_15m_ma7 and not price_above_15m_ma25) and not (is_oversold_bounce_candidate or is_yellow_arrow_pivot or is_bullish_divergence or is_ma7_above_ma25_upward):
-            is_overextended_15m = True
-            overextension_reason = f"Tendencia bajista sin estructura de rebote en el suelo"
     avg_vol_15m = sum(vols_15m[-5:]) / len(vols_15m[-5:]) if len(vols_15m) >= 5 else 1.0
     vol_surge_15m = round(vols_15m[-1] / avg_vol_15m, 2) if avg_vol_15m > 0 else 1.0
 
