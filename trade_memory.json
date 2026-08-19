@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 936,
+    "total_trades": 937,
     "wins": 408,
-    "losses": 528,
-    "win_rate_pct": 43.59,
-    "total_pnl_usd": -3788.7683030000003
+    "losses": 529,
+    "win_rate_pct": 43.54,
+    "total_pnl_usd": -3896.4583030000003
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SUIUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on BTCUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SUIUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DOGEUSDT)",
@@ -27,7 +26,8 @@
       "BONUS SECTOR CALIENTE: Priorizar tokens en el sector con mayor momentum acumulado del dia sector_heat_dna",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on HEMIUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GPSUSDT)",
-      "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ADAUSDT)"
+      "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ADAUSDT)",
+      "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SUIUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on UNIUSDT)",
@@ -53,19 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-18 10:18:50",
-      "account_id": "SIM-070",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "TLMUSDT",
-      "side": "SHORT",
-      "entry_price": 0.001415,
-      "exit_price": 0.001415,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on TLMUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-18 10:21:47",
       "account_id": "SIM-043",
@@ -8184,6 +8171,23 @@
       "context": {
         "score": 77,
         "rsi_15m": 73.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 10:57:13",
+      "account_id": "SIM-094",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "SUIUSDT",
+      "side": "LONG",
+      "entry_price": 0.6976,
+      "exit_price": 0.6822,
+      "pnl_usd": -107.69,
+      "result": "LOSS",
+      "notes": "LOSS on SUIUSDT (PnL: -2.21%, Net: $-107.69 Fase 1)",
+      "context": {
+        "score": 81,
+        "rsi_15m": 63.76,
         "macro_trend_4h": "NEUTRAL"
       }
     }

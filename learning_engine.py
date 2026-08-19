@@ -405,19 +405,19 @@ def calculate_asset_dna_profile(symbol: str, atr_15m_pct: float = 0.30, atr_1h_p
         tier_label = "🚀 ALTA ELASTICIDAD / RUNNER"
         opt_slack = max(0.55, round(atr_15m_pct * 1.3, 2))
         opt_target = max(3.50, round(atr_1h_pct * 3.5, 2))
-        opt_sl = -1.10
+        opt_sl = -2.20
     elif mean_vol >= 0.45:
         tier = "BALANCED_SWING"
         tier_label = "💎 VOLATILIDAD BALANCEADA"
         opt_slack = max(0.45, round(atr_15m_pct * 1.1, 2))
         opt_target = max(2.20, round(atr_1h_pct * 2.8, 2))
-        opt_sl = -0.90
+        opt_sl = -2.00
     else:
         tier = "LOW_BETA_STABLE"
         tier_label = "🔒 BAJA VOLATILIDAD / ESTABLE"
         opt_slack = max(0.35, round(atr_15m_pct * 1.0, 2))
         opt_target = max(1.20, round(atr_1h_pct * 2.0, 2))
-        opt_sl = -0.75
+        opt_sl = -1.80
         
     reputation = "🌟 ÉLITE HISTÓRICO" if (tot >= 2 and wr >= 65.0) else (
         "☠️ ALERTA PÉRDIDAS" if (tot >= 2 and wr <= 30.0) else "🔵 NEUTRAL"

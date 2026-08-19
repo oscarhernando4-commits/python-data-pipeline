@@ -916,9 +916,9 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
         phase = 2
         phase_label = f"🔒 FASE 2 BREAK-EVEN AJUSTADO (Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
     else:
-        sl_pct = -0.90
+        sl_pct = -2.00
         phase = 1
-        phase_label = f"🛡️ FASE 1 (Entrada y Soporte: SL -0.90%)"
+        phase_label = f"🛡️ FASE 1 (Entrada y Soporte: SL -2.00%)"
             
     return sl_pct, phase, phase_label
 
@@ -992,16 +992,16 @@ def quick_position_heartbeat():
             should_exit = True
             exit_reason = f"🎯 SNIPER MECHA CIMA (Pico +{highest_pnl_pct:.2f}% -> Venta en {current_pnl_pct:+.2f}%)"
         
-        # 🧱 MEJORA 4: Cancelación Preventiva de 30s — Libro de órdenes colapsó tras entrada
-        # Si en el primer ciclo el libro cae < 38% Bids y tenemos pérdida > -0.20% → salir flat
-        if not should_exit and holding_cycles_hb <= 1 and current_pnl_pct < -0.20:
+        # 🧱 MEJORA 4: Cancelación Preventiva — Solo si el libro de órdenes colapsa severamente
+        # Requiere pérdida > -1.50% y Bids < 30% para evitar falsas salidas por ruido de micro-spread
+        if not should_exit and holding_cycles_hb <= 1 and current_pnl_pct < -1.50:
             try:
                 import orderbook_analyzer as _ob
                 ob_check = _ob.fetch_orderbook_depth(sym, limit=20)
                 bids_now = ob_check.get("bid_dominance_pct", 50.0)
-                if bids_now < 38.0:
+                if bids_now < 30.0:
                     should_exit = True
-                    exit_reason = f"⚡ CANCELACIÓN PREVENTIVA 30s: Libro colapsó (Bids={bids_now:.1f}% < 38%). Setup inválido."
+                    exit_reason = f"⚡ CANCELACIÓN PREVENTIVA: Libro colapsó severamente (Bids={bids_now:.1f}% < 30%, PnL={current_pnl_pct:+.2f}%). Setup inválido."
             except Exception:
                 pass
             
@@ -1143,7 +1143,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         
         # ═══════════════════════════════════════════════════════════════
         # 🎯 SISTEMA ULTRA-EFICIENTE DE 3 FASES ASIMÉTRICAS:
-        # FASE 1: Antes de +0.55% -> SL -1.00% (Apretado para blindar capital).
+        # FASE 1: Antes de +0.55% -> SL -2.00% (Margen amplio para absorber volatilidad y permitir despegue).
         # FASE 2: +0.55% a +1.10% -> Piso = max(+0.18% NETO, Cima - holgura).
         # FASE 3: Superior a +1.10% -> Trailing Holgado ATR = CIMA - dynamic_trailing_distance.
         # ═══════════════════════════════════════════════════════════════
@@ -1173,14 +1173,14 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         ob_depth = orderbook_analyzer.fetch_orderbook_depth(active_symbol)
         ask_dominance = 100.0 - ob_depth.get("bid_dominance_pct", 50.0)
         orderbook_wall_emergency = False
-        if ask_dominance >= 70.0:  # Raised from 65% to 70% to avoid false alarms
+        if ask_dominance >= 75.0:  # Raised to 75% to avoid false alarms
             orderbook_wall_emergency = True
             print(f"🧱 ESCUDO 2 (Muro Inverso): Vendedores dominan {ask_dominance:.1f}%!")
 
         # Emergency override: Only in Phase 1 (before any profit was reached)
         if (btc_crash_emergency or orderbook_wall_emergency) and phase == 1:
-            trailing_floor_pct = max(-1.5, trailing_floor_pct)
-            phase_msg = f"🛡️ ESCUDO DE EMERGENCIA: SL apretado a {trailing_floor_pct:+.2f}%"
+            trailing_floor_pct = max(-2.00, trailing_floor_pct)
+            phase_msg = f"🛡️ ESCUDO DE EMERGENCIA: SL ajustado a {trailing_floor_pct:+.2f}%"
 
         # Stagnation & Alpha Fast Rotation Rule (Límite Ágil de 60 Minutos):
         stagnation_exit = False
@@ -1199,15 +1199,15 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     reason_str = f"🔄 Rotación Alpha Dinámica ({holding_cycles}m plano → {best_symbol} @ {best_score}pts, delta={score_delta}pts)"
         
         # 🧠 MEJORA 6: FII en Tiempo Real durante el Holding — Re-evalúa cada 5 ciclos
-        # Si el dinero institucional salió (FII < 25) y estamos en pérdida, salir antes del SL
-        if not stagnation_exit and phase == 1 and holding_cycles >= 5 and holding_cycles % 5 == 0 and pnl_pct < -0.60:
+        # Si el dinero institucional salió (FII < 20) y tenemos pérdida severa (> -1.50%), salir
+        if not stagnation_exit and phase == 1 and holding_cycles >= 10 and holding_cycles % 5 == 0 and pnl_pct < -1.50:
             try:
                 import multi_timeframe_analyzer as _mtf_live
                 mtf_live_data = _mtf_live.analyze_multi_timeframe_candles(active_symbol)
                 fii_live = mtf_live_data.get("fii_score", 50)
-                if fii_live < 25:
+                if fii_live < 20:
                     stagnation_exit = True
-                    reason_str = f"🧠 FII COLAPSÓ EN TIEMPO REAL ({fii_live}/100 < 25): Capital institucional salió. Salida anticipada al SL."
+                    reason_str = f"🧠 FII COLAPSÓ EN TIEMPO REAL ({fii_live}/100 < 20): Capital institucional salió. Salida anticipada al SL."
                     print(f"⚠️ [FII LIVE] {active_symbol} FII={fii_live}/100. Capital institucional salió → salida preventiva.")
             except Exception:
                 pass

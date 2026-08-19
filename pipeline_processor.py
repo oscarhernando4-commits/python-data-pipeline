@@ -483,7 +483,7 @@ def run_infinite_trading_matrix_cycle():
             
             # 🎯 3 FASES CUÁNTICAS DINÁMICAS (Idéntico a Cuenta Real):
             if highest_pnl_pct < 0.30:
-                sl_pct = -1.50
+                sl_pct = -2.00
                 phase = 1
             elif highest_pnl_pct < 0.60:
                 sl_pct = max(0.15, round(highest_pnl_pct - 0.25, 2))  # Fase 2: +0.15% NETO y 0.25% de holgura
