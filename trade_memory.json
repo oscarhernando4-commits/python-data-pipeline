@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 753,
-    "wins": 336,
+    "total_trades": 756,
+    "wins": 339,
     "losses": 417,
-    "win_rate_pct": 44.62,
-    "total_pnl_usd": -2633.9073429999976
+    "win_rate_pct": 44.84,
+    "total_pnl_usd": -2633.827342999997
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on AAVEUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on FETUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on KAITOUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LDOUSDT)",
       "BOOST LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HOMEUSDT)",
@@ -49,57 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TUTUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on LINKUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on LDOUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on JUPUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on JUPUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on JSTUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-17 17:13:44",
-      "account_id": "SIM-059",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "COWUSDT",
-      "side": "LONG",
-      "entry_price": 0.111,
-      "exit_price": 0.1091,
-      "pnl_usd": -1.69,
-      "result": "LOSS",
-      "notes": "LOSS on COWUSDT (PnL: -1.71%, Net: $-1.69 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 41.69,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-17 17:15:30",
-      "account_id": "SIM-097",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "DOLOUSDT",
-      "side": "LONG",
-      "entry_price": 0.02345,
-      "exit_price": 0.02426,
-      "pnl_usd": 0.41,
-      "result": "WIN",
-      "notes": "WIN on DOLOUSDT (PnL: +3.45%, Net: $+0.41 Fase 3)",
-      "context": {
-        "score": 74,
-        "rsi_15m": 71.75,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-17 17:18:10",
-      "account_id": "R-01",
-      "group_name": "CUENTA REAL",
-      "symbol": "VIRTUALUSDT",
-      "side": "BUY",
-      "entry_price": 0.5804,
-      "exit_price": 0.5779,
-      "pnl_usd": -0.0697500000000016,
-      "result": "LOSS",
-      "notes": "Real Money Trade closed with -0.43%",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-17 17:24:22",
       "account_id": "R-01",
@@ -8300,6 +8253,57 @@
       "context": {
         "score": 48,
         "rsi_15m": 53.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 08:17:25",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "JSTUSDT",
+      "side": "LONG",
+      "entry_price": 0.10729,
+      "exit_price": 0.10753,
+      "pnl_usd": 0.05,
+      "result": "WIN",
+      "notes": "WIN on JSTUSDT (PnL: +0.22%, Net: $+0.05 Fase 2)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 49.61,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 08:17:25",
+      "account_id": "SIM-045",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "JSTUSDT",
+      "side": "LONG",
+      "entry_price": 0.10729,
+      "exit_price": 0.10753,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on JSTUSDT (PnL: +0.22%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 49.61,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 08:17:25",
+      "account_id": "SIM-046",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "JSTUSDT",
+      "side": "LONG",
+      "entry_price": 0.10729,
+      "exit_price": 0.10753,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on JSTUSDT (PnL: +0.22%, Net: $+0.02 Fase 2)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 49.61,
         "macro_trend_4h": "NEUTRAL"
       }
     }
