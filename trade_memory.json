@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 841,
+    "total_trades": 842,
     "wins": 381,
-    "losses": 460,
-    "win_rate_pct": 45.3,
-    "total_pnl_usd": -3698.7779129999976
+    "losses": 461,
+    "win_rate_pct": 45.25,
+    "total_pnl_usd": -3698.7979129999976
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on LINKUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on AAVEUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PROMUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on PROMUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on HEIUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ONGUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on HEIUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MUBARAKUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MUBARAKUSDT)",
+      "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on 2ZUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ZAMAUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-17 21:30:55",
-      "account_id": "SIM-016",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "ARBUSDT",
-      "side": "LONG",
-      "entry_price": 0.0757,
-      "exit_price": 0.0745,
-      "pnl_usd": -0.83,
-      "result": "LOSS",
-      "notes": "LOSS on ARBUSDT (PnL: -1.59%, Net: $-0.83 Fase 1)",
-      "context": {
-        "score": 52,
-        "rsi_15m": 31.48,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-17 21:30:55",
       "account_id": "SIM-018",
@@ -8308,6 +8291,23 @@
       "context": {
         "score": 59,
         "rsi_15m": 62.37,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 12:15:15",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "2ZUSDT",
+      "side": "LONG",
+      "entry_price": 0.04724,
+      "exit_price": 0.04726,
+      "pnl_usd": -0.02,
+      "result": "LOSS",
+      "notes": "LOSS on 2ZUSDT (PnL: +0.04%, Net: $-0.02 Fase 2)",
+      "context": {
+        "score": 59,
+        "rsi_15m": 62.0,
         "macro_trend_4h": "NEUTRAL"
       }
     }
