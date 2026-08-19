@@ -450,8 +450,12 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         arch_sl = arch_dna.get('initial_sl_pct', -2.00)
         arch_tmax = arch_dna.get('max_stagnation_minutes', 60)
 
+        floor_lbl = mtf.get('floor_structure_label', '⚪ ESPERANDO GIRO')
+        is_15m_casc = mtf.get('is_15m_red_cascade', False)
+
         candidates_prompt_text += f"\nCANDIDATO: {sym} (Sector: {sec} | Acción Sugerida: {action}){cetus_tag}{fii_tag}\n"
         candidates_prompt_text += f"- Score: {score}/100 | MTF Score: {mtf.get('multi_tf_score', score)}/100 | FII (Inyección Suelo): {fii}/100\n"
+        candidates_prompt_text += f"- 🏔️ ESTRUCTURA DE SUELO 15M: {floor_lbl} | Cascada Roja 15M={is_15m_casc}\n"
         candidates_prompt_text += f"- 🧬 ARQUETIPO ADN: {arch_lbl} (SL={arch_sl}%, MaxT={arch_tmax}m) | Guía: {arch_guide}\n"
         candidates_prompt_text += f"- 🔮 Radar Predictivo Multi-Horizonte: {pred_label} | Prob. Pump={pump_prob}% | Riesgo Dump={dump_risk}%\n"
         candidates_prompt_text += f"- 🚀 Catalizadores Activos: [{catalysts_str}] | Advertencias: [{warnings_str}]\n"
@@ -512,12 +516,12 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
     🏛️ PROTOCOLO DINÁMICO DE DECISIÓN DEL SÚPER-CEREBRO EN 4 PASOS:
     
-    PASO 1 🏔️ FILTRO MANDATORIO DE SUELO INTRADÍA & GATILLO 1M (CERO COMPRAS EN CIMA O FOMO):
-    - Revisa la MATRIZ FRACTAL DE SUELO 7D de cada candidato (1D, 4H, 1H, 15M, 5M, 2M, 1M).
-    - REGLA DEL PISO INTRADÍA: El candidato DEBE estar en zona de descuento o pullback a soporte (1H <= 55% y 15M <= 50%).
-    - REGLA MACRO: Si 1D o 4H están en tendencia alcista saludable (1D <= 65%), es VÁLIDO siempre que 15M/1H estén en la base de descuento.
+    PASO 1 🏔️ FILTRO MANDATORIO DE SUELO ESTRUCTURAL & GATILLO 1M (CERO CUCHILLOS CAYENDO):
+    - Revisa la ESTRUCTURA DE SUELO 15M y la MATRIZ FRACTAL DE SUELO 7D de cada candidato.
+    - REGLA DEL PISO INTRADÍA: El candidato DEBE estar en zona de soporte o pullback (1H <= 58% y 15M <= 52%).
+    - VETO ANTI-CASCADA: Si el candidato tiene "🔴 CASCADA 15M EN CURSO" (3+ velas rojas consecutivas en 15M sin mecha de absorción), RECHÁZALO de inmediato. PROHIBIDO comprar mientras sigue cayendo.
     - REGLA ANTI-FOMO 1M: Exige que el precio esté retesteando la base de 1M (Anti-FOMO=True, cerca de EMA9 1M).
-    - VETO ESTRICTO: Solo si 1D > 75% o 4H > 75% (techo extremo) o Sobre-extendido=True o Fomo=True o YA_OPERADO_HOY, RECHÁZALO.
+    - VETO TECHO: Si 1D > 75% o 4H > 75% (techo extremo) o Sobre-extendido=True o Fomo=True o YA_OPERADO_HOY, RECHÁZALO.
     
     PASO 2 ⏰ FILTRO MACROECONÓMICO Y VOLUMEN REAL:
     - VETO BTC CRASH: Si BTC_GUARD muestra altcoin_impact=AVOID (BTC cayendo > 1.5% en 1H), HOLD obligatorio.

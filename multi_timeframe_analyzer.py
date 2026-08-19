@@ -614,6 +614,36 @@ def analyze_multi_timeframe_candles(symbol):
     vwap_lower_band = vwap_15m - (1.5 * vwap_std)
     is_vwap_floor_rebound = (closes_15m[-1] <= vwap_lower_band) or (closes_15m[-1] < vwap_15m and (float(klines_15m[-1][3]) <= vwap_lower_band))
 
+    # 🏔️ DETECCIÓN DE CASCADA ROJA 15M Y SUELO ESTRUCTURAL CONFIRMADO:
+    # 1. Detecta si el activo lleva 3+ velas de 15m rojas consecutivas sin freno
+    is_15m_red_cascade = False
+    lower_wick_pct_15m = 0.0
+    if len(klines_15m) >= 3:
+        red_count_15m = sum(1 for k in klines_15m[-3:] if float(k[4]) < float(k[1]))
+        if red_count_15m >= 3:
+            last_k = klines_15m[-1]
+            k_rng = float(last_k[2]) - float(last_k[3])
+            lower_wick = min(float(last_k[1]), float(last_k[4])) - float(last_k[3])
+            lower_wick_pct_15m = (lower_wick / k_rng) * 100.0 if k_rng > 0 else 0.0
+            # Si la mecha inferior de absorción es menor al 30% y no hay divergencia, sigue cayendo
+            if lower_wick_pct_15m < 30.0 and not is_bullish_divergence:
+                is_15m_red_cascade = True
+
+    # 2. Confirmación de Giro Estructural en 5M/15M (Higher Low o vela verde)
+    is_5m_higher_low = False
+    if len(klines_5m) >= 2:
+        is_5m_higher_low = (float(klines_5m[-1][3]) >= float(klines_5m[-2][3]) * 0.998) or (float(klines_5m[-1][4]) >= float(klines_5m[-1][1]))
+
+    has_reversal_confirmation = (
+        is_bullish_divergence or 
+        is_vwap_floor_rebound or 
+        (tf_15m_up and is_5m_higher_low) or 
+        (fii_score >= 60 and tf_5m_up if 'fii_score' in locals() else False) or
+        (tf_1m_up and is_5m_higher_low and lower_wick_pct_15m >= 25.0)
+    )
+    is_true_structural_floor = has_reversal_confirmation and not is_15m_red_cascade
+    floor_structure_label = "🟢 SUELO ESTRUCTURAL CONFIRMADO" if is_true_structural_floor else ("🔴 CASCADA 15M EN CURSO (PROHIBIDO ENTRAR)" if is_15m_red_cascade else "⚪ ESPERANDO GIRO")
+
     # Calculate MACD (12, 26, 9) on 15m candles
     macd_line_15m, macd_signal_15m, macd_hist_15m = calculate_macd(closes_15m)
     is_macd_bullish_cross = (macd_hist_15m > 0) and (macd_line_15m > macd_signal_15m)
@@ -996,6 +1026,9 @@ def analyze_multi_timeframe_candles(symbol):
         "is_oversold_bounce_candidate": is_oversold_bounce_candidate,
         "is_overbought_exhaustion": is_overbought_exhaustion,
         "is_bullish_divergence": is_bullish_divergence,
+        "is_15m_red_cascade": is_15m_red_cascade,
+        "is_true_structural_floor": is_true_structural_floor,
+        "floor_structure_label": floor_structure_label,
         "price_above_15m_mas": price_above_15m_ma7 and price_above_15m_ma25,
         # Volúmenes sub-minuto y micro
         "vol_surge_10s": vol_surge_10s,

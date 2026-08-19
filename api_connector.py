@@ -1457,7 +1457,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     not mtf_res.get("is_vwap_floor_rebound")
                 )
                 
-                if is_active_falling_knife:
+                # 🚫 VETO MANDATORIO DE CASCADA ROJA 15M:
+                is_15m_cascade = mtf_res.get("is_15m_red_cascade", False)
+                
+                if is_15m_cascade:
+                    is_stable = True
+                    print(f"⛔ Compra rechazada: {best_symbol} bloqueado por CASCADA ROJA 15M (3+ velas de 15m rojas consecutivas sin mecha de absorción). Prohibido comprar mientras sigue cayendo.")
+                elif is_active_falling_knife:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} bloqueado por CUCHILLO CAYENDO / SANGRADO ACTIVO (10s: DN, 30s: DN, 1M: DN). Prohibido comprar mientras sigue cayendo. Esperando freno.")
                 elif not has_floor_turnaround:
