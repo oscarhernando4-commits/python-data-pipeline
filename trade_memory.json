@@ -1,9 +1,9 @@
 {
   "stats": {
-    "total_trades": 721,
-    "wins": 322,
+    "total_trades": 724,
+    "wins": 325,
     "losses": 399,
-    "win_rate_pct": 44.66,
+    "win_rate_pct": 44.89,
     "total_pnl_usd": -2619.6673429999973
   },
   "learned_rules": {
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on LINKUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on GPSUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SUNUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on WLFIUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SUNUSDT)",
@@ -49,61 +48,11 @@
       "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MORPHOUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on OPUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on LTCUSDT)",
-      "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HEMIUSDT)"
+      "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HEMIUSDT)",
+      "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ZAMAUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-17 14:08:32",
-      "account_id": "SIM-003",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "XPLUSDT",
-      "side": "LONG",
-      "entry_price": 0.07669,
-      "exit_price": 0.07688,
-      "pnl_usd": 0.01,
-      "result": "WIN",
-      "notes": "WIN on XPLUSDT (PnL: +0.25%, Net: $+0.01 Fase 2)",
-      "context": {
-        "score": 95,
-        "rsi_15m": 56.34,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-17 14:08:32",
-      "account_id": "SIM-021",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "POLUSDT",
-      "side": "SHORT",
-      "entry_price": 0.08197,
-      "exit_price": 0.08335,
-      "pnl_usd": -0.33,
-      "result": "LOSS",
-      "notes": "LOSS on POLUSDT (PnL: -1.68%, Net: $-0.33 Fase 1)",
-      "context": {
-        "score": 79,
-        "rsi_15m": 85.3,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-17 14:08:32",
-      "account_id": "SIM-022",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "POLUSDT",
-      "side": "SHORT",
-      "entry_price": 0.08197,
-      "exit_price": 0.08335,
-      "pnl_usd": -0.42,
-      "result": "LOSS",
-      "notes": "LOSS on POLUSDT (PnL: -1.68%, Net: $-0.42 Fase 1)",
-      "context": {
-        "score": 79,
-        "rsi_15m": 85.3,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-17 14:08:32",
       "account_id": "SIM-023",
@@ -8300,6 +8249,57 @@
       "context": {
         "score": 41,
         "rsi_15m": 83.82,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 05:43:19",
+      "account_id": "SIM-050",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ZAMAUSDT",
+      "side": "LONG",
+      "entry_price": 0.04083,
+      "exit_price": 0.0409,
+      "pnl_usd": 0.0,
+      "result": "WIN",
+      "notes": "WIN on ZAMAUSDT (PnL: +0.17%, Net: $+0.00 Fase 2)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 32.09,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 05:43:19",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ZAMAUSDT",
+      "side": "LONG",
+      "entry_price": 0.04083,
+      "exit_price": 0.0409,
+      "pnl_usd": 0.0,
+      "result": "WIN",
+      "notes": "WIN on ZAMAUSDT (PnL: +0.17%, Net: $+0.00 Fase 2)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 32.09,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 05:43:19",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ZAMAUSDT",
+      "side": "LONG",
+      "entry_price": 0.04083,
+      "exit_price": 0.0409,
+      "pnl_usd": 0.0,
+      "result": "WIN",
+      "notes": "WIN on ZAMAUSDT (PnL: +0.17%, Net: $+0.00 Fase 2)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 32.09,
         "macro_trend_4h": "NEUTRAL"
       }
     }
