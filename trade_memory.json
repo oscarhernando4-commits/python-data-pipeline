@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 963,
-    "wins": 419,
+    "total_trades": 964,
+    "wins": 420,
     "losses": 544,
-    "win_rate_pct": 43.51,
-    "total_pnl_usd": -3994.3350230000005
+    "win_rate_pct": 43.57,
+    "total_pnl_usd": -3994.3150230000006
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DOGEUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PAXGUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on POLUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on AVAXUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MUBUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on WLDUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on WLFIUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ETHFIUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MUBARAKUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MUBARAKUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOTUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-18 11:17:32",
-      "account_id": "SIM-026",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "KAITOUSDT",
-      "side": "SHORT",
-      "entry_price": 0.3488,
-      "exit_price": 0.3482,
-      "pnl_usd": 0.0,
-      "result": "WIN",
-      "notes": "WIN on KAITOUSDT (PnL: +0.17%, Net: $+0.00 Fase 2)",
-      "context": {
-        "score": 82,
-        "rsi_15m": 61.37,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-18 11:17:32",
       "account_id": "SIM-027",
@@ -8204,6 +8187,23 @@
       "context": {
         "score": 65,
         "rsi_15m": 42.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 15:20:16",
+      "account_id": "SIM-083",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.776,
+      "exit_price": 0.778,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on DOTUSDT (PnL: +0.26%, Net: $+0.02 Fase 3)",
+      "context": {
+        "score": 86,
+        "rsi_15m": 53.53,
         "macro_trend_4h": "NEUTRAL"
       }
     }
