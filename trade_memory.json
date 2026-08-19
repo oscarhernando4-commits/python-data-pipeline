@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 737,
-    "wins": 327,
+    "total_trades": 741,
+    "wins": 331,
     "losses": 410,
-    "win_rate_pct": 44.37,
-    "total_pnl_usd": -2662.7073429999978
+    "win_rate_pct": 44.67,
+    "total_pnl_usd": -2661.5773429999977
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ALICEUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on WLFIUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SUNUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LINKUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZAMAUSDT)",
@@ -49,78 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on LTCUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HEMIUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ZAMAUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ARBUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ARBUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TUTUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-17 14:28:35",
-      "account_id": "SIM-031",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "PAXGUSDT",
-      "side": "SHORT",
-      "entry_price": 4379.7,
-      "exit_price": 4411.95,
-      "pnl_usd": -0.17,
-      "result": "LOSS",
-      "notes": "LOSS on PAXGUSDT (PnL: -0.74%, Net: $-0.17 Fase 3)",
-      "context": {
-        "score": 81,
-        "rsi_15m": 55.12,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-17 14:28:35",
-      "account_id": "SIM-067",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "PAXGUSDT",
-      "side": "SHORT",
-      "entry_price": 4378.24,
-      "exit_price": 4411.95,
-      "pnl_usd": -0.17,
-      "result": "LOSS",
-      "notes": "LOSS on PAXGUSDT (PnL: -0.77%, Net: $-0.17 Fase 3)",
-      "context": {
-        "score": 81,
-        "rsi_15m": 55.12,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-17 14:28:35",
-      "account_id": "SIM-070",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "PAXGUSDT",
-      "side": "SHORT",
-      "entry_price": 4378.24,
-      "exit_price": 4411.95,
-      "pnl_usd": -0.18,
-      "result": "LOSS",
-      "notes": "LOSS on PAXGUSDT (PnL: -0.77%, Net: $-0.18 Fase 3)",
-      "context": {
-        "score": 81,
-        "rsi_15m": 55.12,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-17 14:28:35",
-      "account_id": "SIM-083",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "PAXGUSDT",
-      "side": "SHORT",
-      "entry_price": 4375.28,
-      "exit_price": 4411.95,
-      "pnl_usd": -0.19,
-      "result": "LOSS",
-      "notes": "LOSS on PAXGUSDT (PnL: -0.84%, Net: $-0.19 Fase 3)",
-      "context": {
-        "score": 81,
-        "rsi_15m": 55.12,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-17 14:36:32",
       "account_id": "SIM-060",
@@ -8300,6 +8232,74 @@
       "context": {
         "score": 38,
         "rsi_15m": 49.3,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 06:05:39",
+      "account_id": "SIM-047",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ARBUSDT",
+      "side": "LONG",
+      "entry_price": 0.075,
+      "exit_price": 0.0754,
+      "pnl_usd": 0.05,
+      "result": "WIN",
+      "notes": "WIN on ARBUSDT (PnL: +0.53%, Net: $+0.05 Fase 3)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 44.42,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 06:05:39",
+      "account_id": "SIM-050",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "TUTUSDT",
+      "side": "LONG",
+      "entry_price": 0.03994,
+      "exit_price": 0.04071,
+      "pnl_usd": 0.34,
+      "result": "WIN",
+      "notes": "WIN on TUTUSDT (PnL: +1.93%, Net: $+0.34 Fase 3)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 56.21,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 06:05:39",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "TUTUSDT",
+      "side": "LONG",
+      "entry_price": 0.03994,
+      "exit_price": 0.04071,
+      "pnl_usd": 0.33,
+      "result": "WIN",
+      "notes": "WIN on TUTUSDT (PnL: +1.93%, Net: $+0.33 Fase 3)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 56.21,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 06:05:39",
+      "account_id": "SIM-054",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "TUTUSDT",
+      "side": "LONG",
+      "entry_price": 0.03994,
+      "exit_price": 0.04071,
+      "pnl_usd": 0.41,
+      "result": "WIN",
+      "notes": "WIN on TUTUSDT (PnL: +1.93%, Net: $+0.41 Fase 3)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 56.21,
         "macro_trend_4h": "NEUTRAL"
       }
     }
