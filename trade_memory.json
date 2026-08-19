@@ -8090,130 +8090,36 @@
       }
     },
     {
-      "timestamp": "2026-08-19 14:18:48",
-      "account_id": "SIM-047",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ARBUSDT",
-      "side": "LONG",
-      "entry_price": 0.075,
-      "exit_price": 0.075,
-      "pnl_usd": -0.02,
-      "result": "LOSS",
-      "notes": "LOSS on ARBUSDT (PnL: +0.00%, Net: $-0.02 Fase 3)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-19 14:18:48",
-      "account_id": "SIM-054",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "PENDLEUSDT",
-      "side": "LONG",
-      "entry_price": 1.294,
-      "exit_price": 1.294,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on PENDLEUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-19 14:27:32",
-      "account_id": "SIM-000 (Réplica Real)",
-      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
-      "symbol": "HEMIUSDT",
-      "side": "SHORT",
-      "entry_price": 0.00877,
-      "exit_price": 0.009,
-      "pnl_usd": -0.26,
-      "result": "LOSS",
-      "notes": "LOSS on HEMIUSDT (PnL: -2.62%, Net: $-0.26 Fase 1)",
-      "context": {
-        "score": 32,
-        "rsi_15m": 53.25,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 14:29:24",
-      "account_id": "SIM-030",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "POLUSDT",
-      "side": "LONG",
-      "entry_price": 0.08097,
-      "exit_price": 0.08124,
-      "pnl_usd": 0.0,
-      "result": "WIN",
-      "notes": "WIN on POLUSDT (PnL: +0.33%, Net: $+0.00 Fase 3)",
-      "context": {
-        "score": 43,
-        "rsi_15m": 41.52,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 14:29:24",
-      "account_id": "SIM-032",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "POLUSDT",
-      "side": "LONG",
-      "entry_price": 0.08097,
-      "exit_price": 0.08124,
-      "pnl_usd": 0.04,
-      "result": "WIN",
-      "notes": "WIN on POLUSDT (PnL: +0.33%, Net: $+0.04 Fase 3)",
-      "context": {
-        "score": 43,
-        "rsi_15m": 41.52,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 14:29:24",
-      "account_id": "SIM-033",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "POLUSDT",
-      "side": "LONG",
-      "entry_price": 0.08097,
-      "exit_price": 0.08124,
-      "pnl_usd": 0.04,
-      "result": "WIN",
-      "notes": "WIN on POLUSDT (PnL: +0.33%, Net: $+0.04 Fase 3)",
-      "context": {
-        "score": 43,
-        "rsi_15m": 41.52,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 14:33:25",
+      "timestamp": "2026-08-19 09:31:35",
       "account_id": "SIM-021",
       "group_name": "🔷 GRUPO 2: Moderado-Estricto",
       "symbol": "LTCUSDT",
       "side": "SHORT",
       "entry_price": 44.42,
-      "exit_price": 45.09,
+      "exit_price": 45.1,
       "pnl_usd": -0.3,
       "result": "LOSS",
-      "notes": "LOSS on LTCUSDT (PnL: -1.51%, Net: $-0.30 Fase 1)",
+      "notes": "LOSS on LTCUSDT (PnL: -1.53%, Net: $-0.30 Fase 1)",
       "context": {
-        "score": 59,
-        "rsi_15m": 65.65,
+        "score": 91,
+        "rsi_15m": 66.1,
         "macro_trend_4h": "NEUTRAL"
       }
     },
     {
-      "timestamp": "2026-08-19 14:33:25",
+      "timestamp": "2026-08-19 09:31:35",
       "account_id": "SIM-022",
       "group_name": "🔷 GRUPO 2: Moderado-Estricto",
       "symbol": "LTCUSDT",
       "side": "SHORT",
       "entry_price": 44.42,
-      "exit_price": 45.09,
-      "pnl_usd": -0.37,
+      "exit_price": 45.1,
+      "pnl_usd": -0.38,
       "result": "LOSS",
-      "notes": "LOSS on LTCUSDT (PnL: -1.51%, Net: $-0.37 Fase 1)",
+      "notes": "LOSS on LTCUSDT (PnL: -1.53%, Net: $-0.38 Fase 1)",
       "context": {
-        "score": 59,
-        "rsi_15m": 65.65,
+        "score": 91,
+        "rsi_15m": 66.1,
         "macro_trend_4h": "NEUTRAL"
       }
     },
