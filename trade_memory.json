@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 790,
-    "wins": 352,
+    "total_trades": 793,
+    "wins": 355,
     "losses": 438,
-    "win_rate_pct": 44.56,
-    "total_pnl_usd": -2926.1473429999987
+    "win_rate_pct": 44.77,
+    "total_pnl_usd": -2925.9373429999982
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on REUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on VIRTUALUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOTUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GALAUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ETHFIUSDT)",
@@ -49,61 +48,11 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on SOLUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on TAOUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on KAITOUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on OPUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on OPUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on SKYUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-17 20:00:47",
-      "account_id": "SIM-052",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "PROMUSDT",
-      "side": "LONG",
-      "entry_price": 1.92,
-      "exit_price": 1.93,
-      "pnl_usd": 0.07,
-      "result": "WIN",
-      "notes": "WIN on PROMUSDT (PnL: +0.52%, Net: $+0.07 Fase 3)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 35.52,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-17 20:05:06",
-      "account_id": "SIM-000 (Réplica Real)",
-      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
-      "symbol": "ZECUSDT",
-      "side": "LONG",
-      "entry_price": 516.43,
-      "exit_price": 517.08,
-      "pnl_usd": -0.0,
-      "result": "WIN",
-      "notes": "WIN on ZECUSDT (PnL: +0.13%, Net: $-0.00 Fase 2)",
-      "context": {
-        "score": 86,
-        "rsi_15m": 56.78,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-17 20:05:06",
-      "account_id": "SIM-053",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "XAIUSDT",
-      "side": "LONG",
-      "entry_price": 0.00693,
-      "exit_price": 0.00693,
-      "pnl_usd": -0.04,
-      "result": "LOSS",
-      "notes": "LOSS on XAIUSDT (PnL: +0.00%, Net: $-0.04 Fase 2)",
-      "context": {
-        "score": 62,
-        "rsi_15m": 48.54,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-17 20:05:06",
       "account_id": "SIM-054",
@@ -8312,6 +8261,57 @@
       "context": {
         "score": 48,
         "rsi_15m": 62.47,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 10:29:21",
+      "account_id": "SIM-050",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "SKYUSDT",
+      "side": "LONG",
+      "entry_price": 0.05686,
+      "exit_price": 0.05716,
+      "pnl_usd": 0.07,
+      "result": "WIN",
+      "notes": "WIN on SKYUSDT (PnL: +0.53%, Net: $+0.07 Fase 3)",
+      "context": {
+        "score": 59,
+        "rsi_15m": 66.22,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 10:29:21",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "SKYUSDT",
+      "side": "LONG",
+      "entry_price": 0.05686,
+      "exit_price": 0.05716,
+      "pnl_usd": 0.07,
+      "result": "WIN",
+      "notes": "WIN on SKYUSDT (PnL: +0.53%, Net: $+0.07 Fase 3)",
+      "context": {
+        "score": 59,
+        "rsi_15m": 66.22,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 10:29:21",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "SKYUSDT",
+      "side": "LONG",
+      "entry_price": 0.05686,
+      "exit_price": 0.05716,
+      "pnl_usd": 0.07,
+      "result": "WIN",
+      "notes": "WIN on SKYUSDT (PnL: +0.53%, Net: $+0.07 Fase 3)",
+      "context": {
+        "score": 59,
+        "rsi_15m": 66.22,
         "macro_trend_4h": "NEUTRAL"
       }
     }
