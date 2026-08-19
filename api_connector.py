@@ -1352,6 +1352,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             "KAITOUSDT", "KAITO",       # -$310 USD + 5 LOSSES reales 2026-08-19
             # ── VALIDADOS EMPÍRICAMENTE HOY (2026-08-19) ──────────────────
             "HEIUSDT",   "HEI",         # 6 LOSSES reales: -1.60%, -1.66%, -0.20% (memes pump/dump)
+            "MUBUSDT",   "MUB",         # -$937/token ilíquido, estancamiento de 60m sin volumen institucional
         }
 
         
