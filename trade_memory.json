@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 961,
-    "wins": 417,
+    "total_trades": 963,
+    "wins": 419,
     "losses": 544,
-    "win_rate_pct": 43.39,
-    "total_pnl_usd": -3997.7150230000007
+    "win_rate_pct": 43.51,
+    "total_pnl_usd": -3994.3350230000005
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,8 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DOGEUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on GRAMUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XRPUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PAXGUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on POLUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on AVAXUSDT)",
@@ -49,44 +47,12 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HEMIUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TRXUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on WLDUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on WLFIUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on WLFIUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ETHFIUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MUBARAKUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-18 11:11:26",
-      "account_id": "SIM-067",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "OPGUSDT",
-      "side": "SHORT",
-      "entry_price": 0.1022,
-      "exit_price": 0.1021,
-      "pnl_usd": -0.01,
-      "result": "LOSS",
-      "notes": "LOSS on OPGUSDT (PnL: +0.10%, Net: $-0.01 Fase 2)",
-      "context": {
-        "score": 91,
-        "rsi_15m": 52.38,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-18 11:13:37",
-      "account_id": "SIM-083",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "GPSUSDT",
-      "side": "LONG",
-      "entry_price": 0.01736,
-      "exit_price": 0.0174,
-      "pnl_usd": 0.02,
-      "result": "WIN",
-      "notes": "WIN on GPSUSDT (PnL: +0.23%, Net: $+0.02 Fase 3)",
-      "context": {
-        "score": 68,
-        "rsi_15m": 44.82,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-18 11:17:32",
       "account_id": "SIM-026",
@@ -8206,6 +8172,40 @@
       "result": "WIN",
       "notes": "WIN on DYDXUSDT (PnL: +0.00%, Net: $-0.00 Fase 3)",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-19 15:04:08",
+      "account_id": "SIM-093",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "ETHFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.4987,
+      "exit_price": 0.5002,
+      "pnl_usd": 3.35,
+      "result": "WIN",
+      "notes": "WIN on ETHFIUSDT (PnL: +0.30%, Net: $+3.35 Fase 3)",
+      "context": {
+        "score": 70,
+        "rsi_15m": 49.96,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 15:12:21",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "MUBARAKUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02031,
+      "exit_price": 0.02025,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on MUBARAKUSDT (PnL: +0.30%, Net: $+0.03 Fase 3)",
+      "context": {
+        "score": 65,
+        "rsi_15m": 42.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
