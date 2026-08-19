@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 728,
+    "total_trades": 731,
     "wins": 326,
-    "losses": 402,
-    "win_rate_pct": 44.78,
-    "total_pnl_usd": -2660.867342999997
+    "losses": 405,
+    "win_rate_pct": 44.6,
+    "total_pnl_usd": -2662.2073429999973
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PAXGUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on BMTUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on WLFIUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on NEARUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HEMIUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HEMIUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on LINKUSDT)",
-      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ALICEUSDT)"
+      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ALICEUSDT)",
+      "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ALICEUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on WLFIUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-17 14:23:05",
-      "account_id": "SIM-045",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "EPICUSDT",
-      "side": "LONG",
-      "entry_price": 0.361,
-      "exit_price": 0.3624,
-      "pnl_usd": 0.04,
-      "result": "WIN",
-      "notes": "WIN on EPICUSDT (PnL: +0.39%, Net: $+0.04 Fase 3)",
-      "context": {
-        "score": 37,
-        "rsi_15m": 60.16,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-17 14:23:05",
-      "account_id": "SIM-046",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "EPICUSDT",
-      "side": "LONG",
-      "entry_price": 0.361,
-      "exit_price": 0.3624,
-      "pnl_usd": 0.08,
-      "result": "WIN",
-      "notes": "WIN on EPICUSDT (PnL: +0.39%, Net: $+0.08 Fase 3)",
-      "context": {
-        "score": 37,
-        "rsi_15m": 60.16,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-17 14:26:23",
-      "account_id": "SIM-001",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "XPLUSDT",
-      "side": "LONG",
-      "entry_price": 0.07693,
-      "exit_price": 0.07704,
-      "pnl_usd": -0.0,
-      "result": "WIN",
-      "notes": "WIN on XPLUSDT (PnL: +0.14%, Net: $-0.00 Fase 2)",
-      "context": {
-        "score": 95,
-        "rsi_15m": 58.15,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-17 14:26:23",
       "account_id": "SIM-002",
@@ -8300,6 +8249,57 @@
       "context": {
         "score": 40,
         "rsi_15m": 73.86,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 05:55:16",
+      "account_id": "SIM-050",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ALICEUSDT",
+      "side": "LONG",
+      "entry_price": 0.1415,
+      "exit_price": 0.1383,
+      "pnl_usd": -0.46,
+      "result": "LOSS",
+      "notes": "LOSS on ALICEUSDT (PnL: -2.26%, Net: $-0.46 Fase 1)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 60.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 05:55:16",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ALICEUSDT",
+      "side": "LONG",
+      "entry_price": 0.1415,
+      "exit_price": 0.1383,
+      "pnl_usd": -0.44,
+      "result": "LOSS",
+      "notes": "LOSS on ALICEUSDT (PnL: -2.26%, Net: $-0.44 Fase 1)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 60.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 05:55:16",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ALICEUSDT",
+      "side": "LONG",
+      "entry_price": 0.1415,
+      "exit_price": 0.1383,
+      "pnl_usd": -0.44,
+      "result": "LOSS",
+      "notes": "LOSS on ALICEUSDT (PnL: -2.26%, Net: $-0.44 Fase 1)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 60.0,
         "macro_trend_4h": "NEUTRAL"
       }
     }
