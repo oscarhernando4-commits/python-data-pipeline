@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 902,
+    "total_trades": 905,
     "wins": 403,
-    "losses": 499,
-    "win_rate_pct": 44.68,
-    "total_pnl_usd": -3507.7127129999994
+    "losses": 502,
+    "win_rate_pct": 44.53,
+    "total_pnl_usd": -3758.612712999999
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on REUSDT)",
       "BLOCK SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on HEIUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ONGUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on LTCUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on EDENUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SUIUSDT)",
-      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on FLOKIUSDT)"
+      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on FLOKIUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on LINKUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on SKYUSDT)",
@@ -53,53 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-18 09:22:11",
-      "account_id": "R-01",
-      "group_name": "CUENTA REAL",
-      "symbol": "ZKUSDT",
-      "side": "BUY",
-      "entry_price": 0.00755,
-      "exit_price": 0.00754,
-      "pnl_usd": -0.020794000000000958,
-      "result": "LOSS",
-      "notes": "Real Money Trade closed with -0.13%",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-18 09:26:43",
-      "account_id": "SIM-067",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "CRVUSDT",
-      "side": "SHORT",
-      "entry_price": 0.2431,
-      "exit_price": 0.2386,
-      "pnl_usd": 0.31,
-      "result": "WIN",
-      "notes": "WIN on CRVUSDT (PnL: +1.85%, Net: $+0.31 Fase 3)",
-      "context": {
-        "score": 79,
-        "rsi_15m": 31.37,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-18 09:28:41",
-      "account_id": "SIM-026",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "BMTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01625,
-      "exit_price": 0.01655,
-      "pnl_usd": -0.41,
-      "result": "LOSS",
-      "notes": "LOSS on BMTUSDT (PnL: -1.85%, Net: $-0.41 Fase 1)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 72.34,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-18 09:30:43",
       "account_id": "SIM-000 (Réplica Real)",
@@ -8244,6 +8197,57 @@
       "context": {
         "score": 45,
         "rsi_15m": 90.02,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 14:57:22",
+      "account_id": "SIM-026",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "LINKUSDT",
+      "side": "SHORT",
+      "entry_price": 9.639,
+      "exit_price": 9.795,
+      "pnl_usd": -0.35,
+      "result": "LOSS",
+      "notes": "LOSS on LINKUSDT (PnL: -1.62%, Net: $-0.35 Fase 1)",
+      "context": {
+        "score": 52,
+        "rsi_15m": 58.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 14:57:22",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "LINKUSDT",
+      "side": "SHORT",
+      "entry_price": 9.639,
+      "exit_price": 9.795,
+      "pnl_usd": -250.22,
+      "result": "LOSS",
+      "notes": "LOSS on LINKUSDT (PnL: -1.62%, Net: $-250.22 Fase 1)",
+      "context": {
+        "score": 52,
+        "rsi_15m": 58.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 14:57:22",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "LINKUSDT",
+      "side": "SHORT",
+      "entry_price": 9.639,
+      "exit_price": 9.795,
+      "pnl_usd": -0.33,
+      "result": "LOSS",
+      "notes": "LOSS on LINKUSDT (PnL: -1.62%, Net: $-0.33 Fase 1)",
+      "context": {
+        "score": 52,
+        "rsi_15m": 58.69,
         "macro_trend_4h": "NEUTRAL"
       }
     }
