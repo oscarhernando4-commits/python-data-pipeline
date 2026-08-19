@@ -1443,32 +1443,44 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     (fii >= 60 and tf_10s == "BULLISH")
                 )
                 
-                # 🚫 MEJORA 4: Veto de Sangrado Activo en Sub-Minuto
-                is_sub_minute_bleeding = bool(
-                    (tf_10s == "BEARISH" and tf_30s == "BEARISH" and tf_1m == "BEARISH") and
-                    not mtf_res.get("is_bullish_divergence") and
-                    fii < 65
+                # 🛡️ GATILLO MANDATORIO DE SUELO CONFIRMADO Y FRENO DE SANGRADO (Anti-Cuchillo Cayendo):
+                # Para ser un suelo real, el activo NO puede estar en cascada roja cayendo.
+                # Exige al menos 1 confirmación de giro o absorción institucional:
+                has_floor_turnaround = bool(
+                    tf_1m == "BULLISH" or
+                    tf_2m == "BULLISH" or
+                    mtf_res.get("is_bullish_divergence") or
+                    mtf_res.get("is_yellow_arrow_pivot") or
+                    mtf_res.get("is_vwap_floor_rebound") or
+                    mtf_res.get("is_ema_golden_cross") or
+                    has_dual_sub_minute_ignition
                 )
                 
-                if is_learned_signal:
-                    # 👑 AUTORIDAD SUPREMA DEL SÚPER-CEREBRO: El Comité Institucional de 7 Agentes
-                    # ya evaluó la Matriz de Suelo 7D (1D, 4H, 1H, 15M, 5M, 2M, 1M), FII, Bids y Momentum.
-                    print(f"👑 [SÚPER-CEREBRO APROBADO] {best_symbol} validado por IA en el Suelo 7D. Procediendo a verificación de libro...")
-                elif not is_macro_base:
+                # 🚫 VETO DE SANGRADO ACTIVO: Si 10s, 30s y 1m son todos rojos sin divergencia, está CAYENDO
+                is_active_falling_knife = bool(
+                    (tf_10s == "BEARISH" and tf_30s == "BEARISH" and tf_1m == "BEARISH") and
+                    not mtf_res.get("is_bullish_divergence") and
+                    not mtf_res.get("is_vwap_floor_rebound")
+                )
+                
+                if is_active_falling_knife:
                     is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por Macro 1H sin soporte (1H: {tf_1h}, RSI 1H: {mtf_res.get('rsi_1h')}, Canal 1H: {mtf_res.get('range_position_1h')}). Exige base macro.")
-                elif not is_structural_15m_base:
+                    print(f"⛔ Compra rechazada: {best_symbol} bloqueado por CUCHILLO CAYENDO / SANGRADO ACTIVO (10s: DN, 30s: DN, 1M: DN). Prohibido comprar mientras sigue cayendo. Esperando freno.")
+                elif not has_floor_turnaround:
                     is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de estructura en 15M (15M: {tf_15m}, RSI: {mtf_res.get('rsi_15m')}). Exige rebote o soporte en 15M.")
-                elif is_sub_minute_bleeding:
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} bloqueado por VETO DE SANGRADO SUB-MINUTO (10s: DN, 30s: DN, 1M: DN). Esperando freno.")
-                elif not has_dual_sub_minute_ignition and fii < 60:
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} en base pero esperando GATILLO DE DOBLE IGNICIÓN (10s: {tf_10s}, 30s: {tf_30s}, FII: {fii}/100). Exige 10s+30s verdes.")
+                    print(f"⛔ Compra rechazada: {best_symbol} en zona baja pero SIN GIRO CONFIRMADO (1M: {tf_1m}, 2M: {tf_2m}, Divergencia: {mtf_res.get('is_bullish_divergence')}). Exige vela verde de confirmación.")
                 elif mtf_res.get("is_overextended_15m"):
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} rechazado por vela sobre-extendida en la cima ({mtf_res.get('overextension_reason')}).")
+                elif not is_learned_signal and not is_macro_base:
+                    is_stable = True
+                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por Macro 1H sin soporte (1H: {tf_1h}, RSI 1H: {mtf_res.get('rsi_1h')}, Canal 1H: {mtf_res.get('range_position_1h')}). Exige base macro.")
+                elif not is_learned_signal and not is_structural_15m_base:
+                    is_stable = True
+                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de estructura en 15M (15M: {tf_15m}, RSI: {mtf_res.get('rsi_15m')}). Exige rebote o soporte en 15M.")
+                else:
+                    if is_learned_signal:
+                        print(f"👑 [SÚPER-CEREBRO APROBADO] {best_symbol} validado por IA con GIRO DE SUELO CONFIRMADO. Procediendo a libro...")
                 
                 if not is_stable:
                     import orderbook_analyzer

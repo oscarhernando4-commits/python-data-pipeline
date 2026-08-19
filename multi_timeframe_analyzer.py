@@ -563,9 +563,9 @@ def analyze_multi_timeframe_candles(symbol):
     macro_bearish_count = sum([not tf_1h_up, not tf_1d_up])
     is_bearish = macro_bearish_count >= 2  # Ambos 1H y 1D deben ser bajistas
 
-    # Falling Knife V2: Relaxed OR-logic (any 2 of these 4 conditions triggers the guard)
+    # Falling Knife V3: Detects active plunges & unconfirmed bottoms
     falling_knife_signals = 0
-    if price_change_24h_pct < -8.0:              # Real 24h drop > 8%
+    if price_change_24h_pct < -6.0:              # Real 24h drop > 6%
         falling_knife_signals += 1
     if price_position_in_range < 25.0:           # Price crushed to bottom of range
         falling_knife_signals += 1
@@ -573,8 +573,13 @@ def analyze_multi_timeframe_candles(symbol):
         falling_knife_signals += 1
     if macro_bearish_count >= 2:                  # Both 1H and 1D are bearish
         falling_knife_signals += 1
+    # Active cascade check: 3 consecutive lower closes on 15m without a green micro bounce
+    is_consecutive_drop_15m = len(closes_15m) >= 3 and (closes_15m[-1] < closes_15m[-2] < closes_15m[-3]) and not (tf_1m_up or tf_2m_up)
+    if is_consecutive_drop_15m:
+        falling_knife_signals += 2
 
-    is_falling_knife = (falling_knife_signals >= 2) and (price_change_24h_pct < -5.0)
+    is_falling_knife = (falling_knife_signals >= 2) and (price_change_24h_pct < -3.0 or is_consecutive_drop_15m)
+
 
     # Dead Cat Bounce Filter: micro-bounces on 2m/5m during a crash are traps, NOT buy signals
     is_dead_cat_bounce = (

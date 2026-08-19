@@ -783,38 +783,11 @@ def run_infinite_trading_matrix_cycle():
             is_high_btc_risk = is_btc_crashing and beta_res.get("is_high_correlation", False)
             is_order_flow_dump = of_res.get("is_bearish_dump", False)
             
-            ai_veto_active = (ai_action == 'HOLD' or ai_symbol in ['NONE', '', None] or not gemini_res.get('approved', False))
-            
-            # 🧠 FALLBACK CUÁNTICO AUTÓNOMO (Grupo 3 Balanceado):
-            # Si la IA veta, pero el top candidato cuántico tiene Score >= 65 + FII >= 60 + Suelo 1H <= 42%,
-            # el sistema opera autónomamente con los filtros de seguridad de api_connector.py
-            fii_bs = mtf_bs.get("fii_score", 0)
-            canal_1h_bs = mtf_bs.get("range_position_1h", 0.5)
-            rsi_15m_bs = mtf_bs.get("rsi_15m", 50)
-            is_quant_high_conviction = (
-                bs_score >= 65 and
-                fii_bs >= 60 and
-                canal_1h_bs <= 0.42 and
-                rsi_15m_bs <= 60 and
-                not is_fk_bs and not is_dcb_bs and not is_overextended_bs
-            )
-            
-            # 🛡️ MANDATO SUPREMO: El Comité de IA tiene PODER DE VETO ABSOLUTO...
-            # ...EXCEPTO cuando hay un setup Cuántico A+ de máxima convicción (Grupo 3 Balanceado).
+            # 🛡️ MANDATO SUPREMO: El Comité de IA tiene PODER DE VETO ABSOLUTO (100% SUPREMO).
+            # Si la IA vota HOLD o NONE, NINGUNA orden se ejecuta y se preserva el 100% del USDT.
             if ai_veto_active:
-                if is_quant_high_conviction and top_15_candidates and not is_high_btc_risk and not is_order_flow_dump:
-                    # 💎 FALLBACK CUÁNTICO: IA vetó pero el Grupo 3 detecta setup A+ irreprochable
-                    print(f"💎 [FALLBACK CUÁNTICO AUTÓNOMO] IA votó {ai_action}, pero {bs_sym} es Setup A+ (Score={bs_score}, FII={fii_bs}/100, Canal1H={canal_1h_bs*100:.1f}%). Ejecutando con filtros de seguridad...")
-                    api_connector.evaluate_and_trade_real_money(
-                        best_symbol=bs_sym,
-                        best_score=bs_score,
-                        current_price=bs_price,
-                        is_bearish=False,
-                        is_learned_signal=True
-                    )
-                else:
-                    print(f"🔒 [VETO SUPREMO IA] Comité Gemini AI votó {ai_action} ({gemini_res.get('reasoning', 'Mercado no seguro')}). CERO compras ejecutadas. 100% USDT protegido.")
-                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=False)
+                print(f"🔒 [VETO SUPREMO IA] Comité Gemini AI votó {ai_action} ({gemini_res.get('reasoning', 'Mercado no seguro')}). CERO compras ejecutadas. 100% USDT protegido.")
+                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=False)
             elif bs_score >= 58 and is_quant_approved:
                 if is_fk_bs or is_dcb_bs:
                     print(f"🛡️ [FILTRO FALLING KNIFE HÍBRIDO] Oportunidad {bs_sym} ({bs_score} Pts) BLOQUEADA: Falling Knife / Dead Cat detectado (Caída 24h: {mtf_bs.get('price_change_24h_pct', 0):+.1f}%).")
