@@ -780,8 +780,7 @@ def run_infinite_trading_matrix_cycle():
             beta_res = beta_correlation_engine.calculate_beta_correlation(bs_sym)
             of_res = order_flow_analyzer.analyze_order_flow_cvd(bs_sym)
             
-            is_high_btc_risk = is_btc_crashing and beta_res.get("is_high_correlation", False)
-            is_order_flow_dump = of_res.get("is_bearish_dump", False)
+            ai_veto_active = (ai_action == 'HOLD' or ai_symbol in ['NONE', '', None] or not gemini_res.get('approved', False))
             
             # 🛡️ MANDATO SUPREMO: El Comité de IA tiene PODER DE VETO ABSOLUTO (100% SUPREMO).
             # Si la IA vota HOLD o NONE, NINGUNA orden se ejecuta y se preserva el 100% del USDT.
