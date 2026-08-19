@@ -505,13 +505,10 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         }
     }
     
-    # 🏎️ SUPER-CEREBRO FLASH-LITE POOL: Prioridad gemini-3.1-flash-lite + rotación automática flash-lite
-    # Garantiza 15,000+ llamadas diarias sin interrupciones por cuota diaria
+    # 🏎️ SUPER-CEREBRO GEMINI-3.1-FLASH-LITE (Modelo Oficial Único y Exclusivo)
+    # Rota a través de las 10 claves Gemini usando estrictamente gemini-3.1-flash-lite
     models_to_try = [
-        "gemini-3.1-flash-lite",
-        "gemini-2.5-flash-lite",
-        "gemini-flash-lite-latest",
-        "gemini-2.5-flash"
+        "gemini-3.1-flash-lite"
     ]
     
     keys_pool = get_gemini_api_keys()
