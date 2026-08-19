@@ -1524,9 +1524,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                             # 🧹 MEJORA D: Unificado en un solo umbral del 44% (elimina redundancia de 42%/50%)
                             is_stable = True
                             print(f"⛔ Compra rechazada: {best_symbol} descartado por Bids insuficientes ({ob_info.get('bid_dominance_pct'):.1f}% < 44.0%). Exige mayoría compradora en libro.")
+                        elif ob_info.get("bid_vol_usdt", 0.0) > 0 and ob_info.get("bid_vol_usdt", 0.0) < 12000.0:
+                            # 🛡️ MEJORA F: Filtro Anti-Monedas Micro-Cap Ilíquidas (mínimo $12k USDT en Bids)
+                            is_stable = True
+                            print(f"⛔ Compra rechazada: {best_symbol} descartado por LIBRO DE ÓRDENES MUY DELGADO (Bids=${ob_info.get('bid_vol_usdt', 0.0):,.0f} < $12,000 USDT). Evitando riesgo de deslizamiento.")
                         else:
                             arrow_lbl = " 🎯 [PATRÓN FLECHAS AMARILLAS 15M PIVOT REBOUND]" if is_yellow else ""
-                            print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}{arrow_lbl}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.75% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=44% OK) | RSI4H={rsi_4h:.1f} | 🚀 Turbinas: 15m={vol_15m_now:.2f}x, 2m={vol_2m_now:.2f}x, 1m={vol_1m_now:.2f}x, OBV={is_obv_acc}, EMA={is_ema_cross}")
+                            print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}{arrow_lbl}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.75% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=44% OK) | Muro=${ob_info.get('bid_vol_usdt'):,.0f} USDT | RSI4H={rsi_4h:.1f} | 🚀 Turbinas: 15m={vol_15m_now:.2f}x, 2m={vol_2m_now:.2f}x, 1m={vol_1m_now:.2f}x, OBV={is_obv_acc}, EMA={is_ema_cross}")
                 
         if bias_ok and not is_stable:
             # 1. LONG Entry Signal (Operates with 100% of available USDT, strictly requires Score >= 55 Setup A+)

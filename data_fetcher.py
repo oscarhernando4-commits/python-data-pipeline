@@ -47,12 +47,12 @@ def get_binance_top_volume_coins(valid_pairs):
     try:
         ticker_res = requests.get('https://data-api.binance.vision/api/v3/ticker/24hr', timeout=10)
         tickers = ticker_res.json()
-        # Exclude coins with 24h volume < $2,000,000 USD
-        usdt_tickers = [t for t in tickers if t['symbol'] in valid_pairs and float(t.get('quoteVolume', 0)) >= 2000000.0]
+        # Exclude coins with 24h volume < $4,000,000 USD (Ensures deep institutional liquidity)
+        usdt_tickers = [t for t in tickers if t['symbol'] in valid_pairs and float(t.get('quoteVolume', 0)) >= 4000000.0]
         usdt_tickers.sort(key=lambda x: float(x['quoteVolume']), reverse=True)
-        # Take top 120 by volume
-        vol_symbols = [t['symbol'].replace('USDT', '') for t in usdt_tickers[:120]]
-        print(f"Binance API exitosa. Se obtuvieron {len(vol_symbols)} símbolos con Volumen >= $2M USD.")
+        # Take top 100 by volume
+        vol_symbols = [t['symbol'].replace('USDT', '') for t in usdt_tickers[:100]]
+        print(f"Binance API exitosa. Se obtuvieron {len(vol_symbols)} símbolos con Volumen >= $4M USD.")
         return vol_symbols
     except Exception as e:
         print(f"Fallo Binance 24H Volume: {e}")
@@ -66,7 +66,7 @@ STABLECOIN_BLACKLIST = {
     "EUR", "AEUR", "WBTC", "TBTC", "USDS", "USTC", "FRAX", "PYUSD", "USD0", "SNDKB", "SNDK", "USD", "EURUSDT", "AEURUSDT",
     "RLUSDUSDT", "USD1USDT", "USDCUSDT", "FDUSDUSDT", "TUSDUSDT", "BUSDUSDT", "DAIUSDT", "USDDUSDT", "USDEUSDT", "FRAXUSDT",
     "PYUSDUSDT", "WBTCUSDT", "TBTCUSDT", "EURI", "EURIOUSDT", "CRCLB", "CRCLBUSDT", "SPCXB", "SPCXBUSDT", "QQQB", "QQQBUSDT",
-    "NOM", "NOMUSDT", "WCT", "WCTUSDT", "BERA", "BERAUSDT", "EPX", "EPXUSDT", "VANRY", "VANRYUSDT",
+    "BMT", "BMTUSDT", "NOM", "NOMUSDT", "WCT", "WCTUSDT", "BERA", "BERAUSDT", "EPX", "EPXUSDT", "VANRY", "VANRYUSDT",
     "SCRT", "SCRTUSDT", "TREE", "TREEUSDT", "NXPC", "NXPCUSDT", "ALLO", "ALLOUSDT", "PLUME", "PLUMEUSDT",
     "ACE", "ACEUSDT", "MMT", "MMTUSDT", "OG", "OGUSDT", "PROS", "PROSUSDT", "KP3R", "KP3RUSDT",
     "GFT", "GFTUSDT", "OOKI", "OOKIUSDT", "AMB", "AMBUSDT", "BIFI", "BIFIUSDT", "VOXEL", "VOXELUSDT",
