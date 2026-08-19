@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 885,
+    "total_trades": 886,
     "wins": 400,
-    "losses": 485,
-    "win_rate_pct": 45.2,
-    "total_pnl_usd": -3503.8327129999984
+    "losses": 486,
+    "win_rate_pct": 45.15,
+    "total_pnl_usd": -3504.0927129999986
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on LTCUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on REUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on AAVEUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on AAVEUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZECUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MUBUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on HEIUSDT)",
-      "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on GPSUSDT)"
+      "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on GPSUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HEMIUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on OPUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-18 09:04:47",
-      "account_id": "SIM-015",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "ZAMAUSDT",
-      "side": "LONG",
-      "entry_price": 0.04032,
-      "exit_price": 0.04276,
-      "pnl_usd": 0.67,
-      "result": "WIN",
-      "notes": "WIN on ZAMAUSDT (PnL: +6.05%, Net: $+0.67 Fase 3)",
-      "context": {
-        "score": 74,
-        "rsi_15m": 69.48,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-18 09:04:47",
       "account_id": "SIM-016",
@@ -8250,6 +8233,23 @@
       "result": "LOSS",
       "notes": "LOSS on PENDLEUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-19 14:27:32",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "HEMIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00877,
+      "exit_price": 0.009,
+      "pnl_usd": -0.26,
+      "result": "LOSS",
+      "notes": "LOSS on HEMIUSDT (PnL: -2.62%, Net: $-0.26 Fase 1)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 53.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
