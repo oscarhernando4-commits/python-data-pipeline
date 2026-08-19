@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 893,
+    "total_trades": 896,
     "wins": 403,
-    "losses": 490,
-    "win_rate_pct": 45.13,
-    "total_pnl_usd": -3505.7327129999985
+    "losses": 493,
+    "win_rate_pct": 44.98,
+    "total_pnl_usd": -3505.822712999999
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -8156,6 +8156,45 @@
         "rsi_15m": 77.86,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-19 14:40:41",
+      "account_id": "SIM-050",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "VETUSDT",
+      "side": "LONG",
+      "entry_price": 0.004506,
+      "exit_price": 0.004506,
+      "pnl_usd": -0.03,
+      "result": "LOSS",
+      "notes": "LOSS on VETUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-19 14:40:41",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "VETUSDT",
+      "side": "LONG",
+      "entry_price": 0.004506,
+      "exit_price": 0.004506,
+      "pnl_usd": -0.03,
+      "result": "LOSS",
+      "notes": "LOSS on VETUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-19 14:40:41",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "VETUSDT",
+      "side": "LONG",
+      "entry_price": 0.004506,
+      "exit_price": 0.004506,
+      "pnl_usd": -0.03,
+      "result": "LOSS",
+      "notes": "LOSS on VETUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
+      "context": {}
     }
   ]
 }
