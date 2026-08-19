@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 759,
+    "total_trades": 762,
     "wins": 339,
-    "losses": 420,
-    "win_rate_pct": 44.66,
-    "total_pnl_usd": -2635.9173429999973
+    "losses": 423,
+    "win_rate_pct": 44.49,
+    "total_pnl_usd": -2636.697342999997
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on FETUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DEXEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on LINKUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on HEIUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HEIUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on LINKUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on AAVEUSDT)",
-      "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PROMUSDT)"
+      "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PROMUSDT)",
+      "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on PROMUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on KAITOUSDT)",
@@ -53,53 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-17 17:30:50",
-      "account_id": "SIM-022",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "JSTUSDT",
-      "side": "LONG",
-      "entry_price": 0.10758,
-      "exit_price": 0.1079,
-      "pnl_usd": 0.03,
-      "result": "WIN",
-      "notes": "WIN on JSTUSDT (PnL: +0.30%, Net: $+0.03 Fase 3)",
-      "context": {
-        "score": 22,
-        "rsi_15m": 41.14,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-17 17:34:45",
-      "account_id": "SIM-067",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "DIAUSDT",
-      "side": "SHORT",
-      "entry_price": 0.1278,
-      "exit_price": 0.1274,
-      "pnl_usd": 0.03,
-      "result": "WIN",
-      "notes": "WIN on DIAUSDT (PnL: +0.31%, Net: $+0.03 Fase 3)",
-      "context": {
-        "score": 70,
-        "rsi_15m": 41.48,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-17 17:38:57",
-      "account_id": "R-01",
-      "group_name": "CUENTA REAL",
-      "symbol": "AAVEUSDT",
-      "side": "BUY",
-      "entry_price": 88.80338889,
-      "exit_price": 88.97,
-      "pnl_usd": 0.02998999980000093,
-      "result": "WIN",
-      "notes": "Real Money Trade closed with 0.19%",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-17 17:57:40",
       "account_id": "SIM-060",
@@ -8308,6 +8261,57 @@
       "context": {
         "score": 48,
         "rsi_15m": 63.82,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 08:35:54",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "PROMUSDT",
+      "side": "LONG",
+      "entry_price": 2.05,
+      "exit_price": 2.04,
+      "pnl_usd": -0.47,
+      "result": "LOSS",
+      "notes": "LOSS on PROMUSDT (PnL: -0.49%, Net: $-0.47 Fase 3)",
+      "context": {
+        "score": 55,
+        "rsi_15m": 66.03,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 08:35:54",
+      "account_id": "SIM-045",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "PROMUSDT",
+      "side": "LONG",
+      "entry_price": 2.05,
+      "exit_price": 2.04,
+      "pnl_usd": -0.11,
+      "result": "LOSS",
+      "notes": "LOSS on PROMUSDT (PnL: -0.49%, Net: $-0.11 Fase 3)",
+      "context": {
+        "score": 55,
+        "rsi_15m": 66.03,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 08:35:54",
+      "account_id": "SIM-046",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "PROMUSDT",
+      "side": "LONG",
+      "entry_price": 2.05,
+      "exit_price": 2.04,
+      "pnl_usd": -0.2,
+      "result": "LOSS",
+      "notes": "LOSS on PROMUSDT (PnL: -0.49%, Net: $-0.20 Fase 3)",
+      "context": {
+        "score": 55,
+        "rsi_15m": 66.03,
         "macro_trend_4h": "NEUTRAL"
       }
     }
