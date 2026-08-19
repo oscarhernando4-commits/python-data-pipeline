@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 749,
-    "wins": 334,
-    "losses": 415,
-    "win_rate_pct": 44.59,
-    "total_pnl_usd": -2635.0273429999975
+    "total_trades": 751,
+    "wins": 335,
+    "losses": 416,
+    "win_rate_pct": 44.61,
+    "total_pnl_usd": -2633.8873429999976
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PEPEUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ENAUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on FETUSDT)",
@@ -27,10 +26,10 @@
       "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BCHUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ADAUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on KITEUSDT)",
-      "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HEIUSDT)"
+      "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HEIUSDT)",
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on LINKUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LINKUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZAMAUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on FETUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on KAITOUSDT)",
@@ -49,44 +48,11 @@
       "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ZAMAUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ARBUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TUTUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on LINKUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on LINKUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on LDOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-17 17:07:50",
-      "account_id": "SIM-032",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "AVAXUSDT",
-      "side": "LONG",
-      "entry_price": 6.321,
-      "exit_price": 6.334,
-      "pnl_usd": 0.01,
-      "result": "WIN",
-      "notes": "WIN on AVAXUSDT (PnL: +0.21%, Net: $+0.01 Fase 2)",
-      "context": {
-        "score": 25,
-        "rsi_15m": 49.1,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-17 17:07:50",
-      "account_id": "SIM-033",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "AVAXUSDT",
-      "side": "LONG",
-      "entry_price": 6.321,
-      "exit_price": 6.334,
-      "pnl_usd": 0.01,
-      "result": "WIN",
-      "notes": "WIN on AVAXUSDT (PnL: +0.21%, Net: $+0.01 Fase 2)",
-      "context": {
-        "score": 25,
-        "rsi_15m": 49.1,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-17 17:13:44",
       "account_id": "SIM-053",
@@ -8300,6 +8266,40 @@
       "context": {
         "score": 48,
         "rsi_15m": 67.04,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 07:03:39",
+      "account_id": "SIM-003",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "LINKUSDT",
+      "side": "LONG",
+      "entry_price": 9.639,
+      "exit_price": 9.646,
+      "pnl_usd": -0.01,
+      "result": "LOSS",
+      "notes": "LOSS on LINKUSDT (PnL: +0.07%, Net: $-0.01 Fase 2)",
+      "context": {
+        "score": 43,
+        "rsi_15m": 56.84,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 07:03:39",
+      "account_id": "SIM-060",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "LDOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3041,
+      "exit_price": 0.3083,
+      "pnl_usd": 1.15,
+      "result": "WIN",
+      "notes": "WIN on LDOUSDT (PnL: +1.38%, Net: $+1.15 Fase 3)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 69.1,
         "macro_trend_4h": "NEUTRAL"
       }
     }
