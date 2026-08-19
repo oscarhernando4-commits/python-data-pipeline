@@ -868,52 +868,46 @@ def execute_real_futures_market_close(symbol, quantity):
     except Exception as e:
         return {"error": str(e)}
 
-def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: float, holding_cycles: int = 0, current_pnl_pct: float = 0.0):
+def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: float, holding_cycles: int = 0, current_pnl_pct: float = 0.0, custom_slack: float = None):
     """
-    🎯 MODELACIÓN INSTITUCIONAL DE COMPORTAMIENTO REAL Y MAXIMIZACIÓN DE GANANCIAS:
-    Permite que el activo respire en la base para capturar el recorrido completo hacia la resistencia,
-    blindando el capital con Break-Even en +0.50% sin asfixiar la tendencia.
-    
-    1. ZONA MEGAPUMP (H >= 3.50%): 
-       Retiene el 85% de la Cima alcanzada (Cosecha máxima en clímax).
-       Piso = max(+2.80%, H * 0.85, H - max(0.60%, atr * 1.5))
+    🎯 PROTOCOLO HÍBRIDO FRACTAL 15M: MAXIMIZACIÓN DE TENDENCIAS Y PÉRDIDA CERO
+    1. ZONA MEGAPUMP (H >= 4.00%): 
+       Retiene el 85% de la Cima alcanzada en clímax.
+       Piso = max(+3.20%, H * 0.85, H - 0.70%)
        
-    2. ZONA EXPANSIÓN FUERTE (1.50% <= H < 3.50%):
-       Retiene el 70% de la Cima alcanzada (Holgura para desarrollo macro).
-       Piso = max(+1.00%, H * 0.70, H - max(0.45%, atr * 1.2))
+    2. ZONA EXPANSIÓN FRACTAL 15M (1.80% <= H < 4.00%):
+       Retiene el 65% de la Cima alcanzada (Holgura para desarrollo de ondas 15M).
+       Piso = max(+1.15%, H * 0.65, H - max(0.60%, atr * 1.3))
        
-    3. ZONA DESPEGUE & BREAK-EVEN ORGÁNICO (0.50% <= H < 1.50%):
-       Garantiza Cero Pérdida (+0.15% neto mínimo) con holgura de respiración (0.45% - 0.55%).
-       Piso = max(+0.15%, H * 0.50, H - 0.50%)
+    3. ZONA DESPEGUE & BREAK-EVEN BLINDADO (0.60% <= H < 1.80%):
+       Garantiza Cero Pérdida (+0.15% neto mínimo) con holgura fractal de respiración (0.60% - 0.80%).
+       Piso = max(+0.15%, H * 0.50, H - (custom_slack or 0.65))
        
-    4. ZONA ENTRADA & SOPORTE (H < 0.50%):
-       SL de Protección en la Base: -0.90% (Espacio institucional para absorción del rebote).
+    4. ZONA ENTRADA & SOPORTE (H < 0.60%):
+       SL en Soporte de Base: -0.90% (Espacio institucional para absorción).
     """
     atr = max(0.20, min(1.50, atr_pct if atr_pct and atr_pct > 0 else 0.30))
+    slack = custom_slack if (custom_slack and custom_slack > 0) else 0.65
     
-    if highest_pnl_pct >= 3.50:
-        # 🚀 Zona Megapump: Protege el 85% de la cima
+    if highest_pnl_pct >= 4.00:
         floor_by_ratio = highest_pnl_pct * 0.85
-        floor_by_atr = highest_pnl_pct - max(0.60, round(atr * 1.5, 2))
-        sl_pct = round(max(2.80, floor_by_ratio, floor_by_atr), 2)
+        floor_by_slack = highest_pnl_pct - 0.70
+        sl_pct = round(max(3.20, floor_by_ratio, floor_by_slack), 2)
         phase = 3
-        phase_label = f"🚀 FASE 3 MEGAPUMP (Cima +{highest_pnl_pct:.2f}% | Retención 85% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 1.50:
-        # 💎 Zona Expansión: Protege el 70% de la cima
-        floor_by_ratio = highest_pnl_pct * 0.70
-        floor_by_atr = highest_pnl_pct - max(0.45, round(atr * 1.2, 2))
-        sl_pct = round(max(1.00, floor_by_ratio, floor_by_atr), 2)
+        phase_label = f"🚀 FASE 4 MEGAPUMP (Cima +{highest_pnl_pct:.2f}% | Retención 85% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 1.80:
+        floor_by_ratio = highest_pnl_pct * 0.65
+        floor_by_atr = highest_pnl_pct - max(0.60, round(atr * 1.3, 2))
+        sl_pct = round(max(1.15, floor_by_ratio, floor_by_atr), 2)
         phase = 3
-        phase_label = f"💎 FASE 3 EXPANSIÓN (Cima +{highest_pnl_pct:.2f}% | Retención 70% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.50:
-        # 🔒 Zona Despegue & Break-Even Orgánico: Cero Pérdida (+0.15% neto garantizado) con holgura
+        phase_label = f"💎 FASE 3 EXPANSIÓN 15M (Cima +{highest_pnl_pct:.2f}% | Retención 65% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 0.60:
         floor_by_ratio = highest_pnl_pct * 0.50
-        floor_by_slack = highest_pnl_pct - 0.50
+        floor_by_slack = highest_pnl_pct - slack
         sl_pct = round(max(0.15, floor_by_ratio, floor_by_slack), 2)
         phase = 2
-        phase_label = f"🔒 FASE 2 BREAK-EVEN (Cima +{highest_pnl_pct:.2f}% | Holgura Tendencia -> Piso +{sl_pct:.2f}%)"
+        phase_label = f"🔒 FASE 2 BREAK-EVEN (Cima +{highest_pnl_pct:.2f}% | Onda 15M -> Piso +{sl_pct:.2f}%)"
     else:
-        # 🛡️ Zona Entrada y Soporte: SL -0.90% permitiendo absorción natural en la base
         sl_pct = -0.90
         phase = 1
         phase_label = f"🛡️ FASE 1 (Entrada y Soporte: SL -0.90%)"
@@ -954,15 +948,17 @@ def quick_position_heartbeat():
         atr_15m_pct = pos.get("atr_pct_15m", 0.30)
         ma25_5m = pos.get("ma25_5m", 0.0)
         holding_cycles_hb = pos.get("holding_cycles", 0)
+        custom_slack = float(pos.get("optimal_trailing_slack_pct", 0.65))
         
         # ═══════════════════════════════════════════════════════════════════════
-        # 🎯 SISTEMA PROPORCIONAL DINÁMICO CONTINUO BASADO EN CIMA ALCANZADA:
+        # 🎯 SISTEMA PROPORCIONAL DINÁMICO FRACTAL 15M BASADO EN CIMA ALCANZADA:
         # ═══════════════════════════════════════════════════════════════════════
         sl_pct, new_phase, phase_label = calculate_dynamic_proportional_trailing(
             highest_pnl_pct=highest_pnl_pct,
             atr_pct=atr_15m_pct,
             holding_cycles=holding_cycles_hb,
-            current_pnl_pct=current_pnl_pct
+            current_pnl_pct=current_pnl_pct,
+            custom_slack=custom_slack
         )
         pos["volatility_regime"] = phase_label
             
@@ -977,14 +973,14 @@ def quick_position_heartbeat():
         should_exit = current_pnl_pct <= sl_pct
         exit_reason = f"Stop/Trailing ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
         
-        # Pillar 4: Trend Ride Guard
-        if new_phase >= 3 and should_exit and current_price > entry and ma25_5m > 0 and current_price >= ma25_5m * 0.999 and current_pnl_pct >= 0.30:
+        # Pillar 4: Trend Ride Guard (Protege si está sobre MA25 de 5m/15m)
+        if new_phase >= 2 and should_exit and current_price > entry and ma25_5m > 0 and current_price >= ma25_5m * 0.998 and current_pnl_pct >= 0.25:
             should_exit = False
-            exit_reason = f"Protegido por MA25 5m (Pnl: {current_pnl_pct:+.2f}%)"
+            exit_reason = f"Protegido por Estructura MA25 (PnL: {current_pnl_pct:+.2f}%)"
         
         # SNIPER MEJORA B: Detección de Agotamiento de Mecha en Cima con holgura adaptativa
-        wick_pullback_threshold = max(0.40, round(dynamic_trailing_distance if new_phase >= 3 else 0.40, 2))
-        if not should_exit and new_phase >= 3 and highest_pnl_pct >= 0.80 and (highest_pnl_pct - current_pnl_pct) >= wick_pullback_threshold:
+        wick_pullback_threshold = max(0.70, round(custom_slack * 1.3, 2))
+        if not should_exit and new_phase >= 3 and highest_pnl_pct >= 2.00 and (highest_pnl_pct - current_pnl_pct) >= wick_pullback_threshold:
             should_exit = True
             exit_reason = f"🎯 SNIPER MECHA CIMA (Pico +{highest_pnl_pct:.2f}% -> Venta en {current_pnl_pct:+.2f}%)"
         
@@ -1145,11 +1141,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         # ═══════════════════════════════════════════════════════════════
         # 🎯 SISTEMA PROPORCIONAL DINÁMICO CONTINUO BASADO EN CIMA ALCANZADA:
         # ═══════════════════════════════════════════════════════════════
+        custom_slack = float(state["position"].get("optimal_trailing_slack_pct", 0.65))
         trailing_floor_pct, phase, phase_msg = calculate_dynamic_proportional_trailing(
             highest_pnl_pct=highest_pnl_pct,
             atr_pct=atr_15m_pct,
             holding_cycles=holding_cycles,
-            current_pnl_pct=pnl_pct
+            current_pnl_pct=pnl_pct,
+            custom_slack=custom_slack
         )
 
         # ESCUDO 1: BTC Flash Crash Circuit Breaker
