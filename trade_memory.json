@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 762,
+    "total_trades": 763,
     "wins": 339,
-    "losses": 423,
-    "win_rate_pct": 44.49,
-    "total_pnl_usd": -2636.697342999997
+    "losses": 424,
+    "win_rate_pct": 44.43,
+    "total_pnl_usd": -2674.087342999997
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DEXEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on LINKUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on HEIUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on HEIUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on LINKUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on AAVEUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PROMUSDT)",
-      "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on PROMUSDT)"
+      "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on PROMUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on AAVEUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on KAITOUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-17 17:57:40",
-      "account_id": "SIM-060",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "HEIUSDT",
-      "side": "LONG",
-      "entry_price": 0.1323,
-      "exit_price": 0.1301,
-      "pnl_usd": -1.7,
-      "result": "LOSS",
-      "notes": "LOSS on HEIUSDT (PnL: -1.66%, Net: $-1.70 Fase 1)",
-      "context": {
-        "score": 31,
-        "rsi_15m": 39.4,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-17 18:03:56",
       "account_id": "SIM-097",
@@ -8312,6 +8295,23 @@
       "context": {
         "score": 55,
         "rsi_15m": 66.03,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 08:40:06",
+      "account_id": "SIM-093",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "AAVEUSDT",
+      "side": "SHORT",
+      "entry_price": 87.14,
+      "exit_price": 88.46,
+      "pnl_usd": -37.39,
+      "result": "LOSS",
+      "notes": "LOSS on AAVEUSDT (PnL: -1.51%, Net: $-37.39 Fase 1)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 68.06,
         "macro_trend_4h": "NEUTRAL"
       }
     }
