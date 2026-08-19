@@ -1,9 +1,9 @@
 {
   "stats": {
-    "total_trades": 1055,
-    "wins": 446,
+    "total_trades": 1056,
+    "wins": 447,
     "losses": 609,
-    "win_rate_pct": 42.27,
+    "win_rate_pct": 42.33,
     "total_pnl_usd": -5152.199823000005
   },
   "learned_rules": {
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-18 14:45:13",
-      "account_id": "SIM-049",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "PROMUSDT",
-      "side": "LONG",
-      "entry_price": 1.879,
-      "exit_price": 1.849,
-      "pnl_usd": -0.3,
-      "result": "LOSS",
-      "notes": "LOSS on PROMUSDT (PnL: -1.60%, Net: $-0.30 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 41.3,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-18 14:57:24",
       "account_id": "SIM-091",
@@ -8196,6 +8179,23 @@
       "context": {
         "score": 79,
         "rsi_15m": 30.49,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 18:32:22",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "ETHFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.5205,
+      "exit_price": 0.5211,
+      "pnl_usd": -0.0,
+      "result": "WIN",
+      "notes": "WIN on ETHFIUSDT (PnL: +0.12%, Net: $-0.00 Fase 3)",
+      "context": {
+        "score": 82,
+        "rsi_15m": 64.55,
         "macro_trend_4h": "NEUTRAL"
       }
     }
