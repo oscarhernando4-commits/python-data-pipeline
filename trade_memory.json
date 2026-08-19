@@ -8304,6 +8304,21 @@
         "rsi_15m": 60.17,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-18 22:24:39",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "AAVEUSDT",
+      "side": "SELL",
+      "entry_price": 87.18,
+      "exit_price": 87.56,
+      "pnl_usd": 0.07,
+      "result": "WIN",
+      "notes": "Manual standby close in profit (PnL: +0.44%, Net: $+0.07 USD)",
+      "context": {
+        "exit_reason": "User switching to cloud standby"
+      }
     }
   ]
 }
