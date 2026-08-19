@@ -8141,16 +8141,50 @@
       }
     },
     {
-      "timestamp": "2026-08-19 09:37:25",
-      "account_id": "R-01",
-      "group_name": "CUENTA REAL",
-      "symbol": "ALPINEUSDT",
-      "side": "BUY",
-      "entry_price": 0.325,
-      "exit_price": 0.326,
-      "pnl_usd": 0.04646000000000004,
-      "result": "WIN",
-      "notes": "Real Money Trade closed with 0.31%",
+      "timestamp": "2026-08-19 14:39:31",
+      "account_id": "SIM-021",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "EDENUSDT",
+      "side": "SHORT",
+      "entry_price": 0.06041,
+      "exit_price": 0.06189,
+      "pnl_usd": -0.47,
+      "result": "LOSS",
+      "notes": "LOSS on EDENUSDT (PnL: -2.45%, Net: $-0.47 Fase 1)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 77.86,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 14:39:31",
+      "account_id": "SIM-022",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "EDENUSDT",
+      "side": "SHORT",
+      "entry_price": 0.06041,
+      "exit_price": 0.06189,
+      "pnl_usd": -0.58,
+      "result": "LOSS",
+      "notes": "LOSS on EDENUSDT (PnL: -2.45%, Net: $-0.58 Fase 1)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 77.86,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 14:40:41",
+      "account_id": "SIM-050",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "VETUSDT",
+      "side": "LONG",
+      "entry_price": 0.004506,
+      "exit_price": 0.004506,
+      "pnl_usd": -0.03,
+      "result": "LOSS",
+      "notes": "LOSS on VETUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
       "context": {}
     },
     {
