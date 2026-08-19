@@ -891,32 +891,26 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             atr_pct=atr_pct
         )
     except Exception as e:
-        # Fallback to standard 4-Phase Proportional Ladder
+        # Fallback to standard 4-Phase Proportional Ladder (75% en Fase 2, 70% en Fase 3, 65% en Fase 4)
         atr = max(0.20, min(1.50, atr_pct if atr_pct and atr_pct > 0 else 0.30))
         if highest_pnl_pct >= 5.00:
-            floor_by_ratio = highest_pnl_pct * 0.90
-            floor_by_slack = highest_pnl_pct - 0.40
-            sl_pct = round(max(4.50, floor_by_ratio, floor_by_slack), 2)
+            floor_by_ratio = highest_pnl_pct * 0.65
+            floor_by_slack = highest_pnl_pct - 0.80
+            sl_pct = round(max(3.25, floor_by_ratio, floor_by_slack), 2)
             phase = 4
-            phase_label = f"🚀 FASE 4 MEGAPUMP (Cima +{highest_pnl_pct:.2f}% | Retención 90% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 2.50:
-            floor_by_ratio = highest_pnl_pct * 0.85
-            floor_by_slack = highest_pnl_pct - 0.35
-            sl_pct = round(max(2.12, floor_by_ratio, floor_by_slack), 2)
+            phase_label = f"🚀 FASE 4 MEGAPUMP (Cima +{highest_pnl_pct:.2f}% | Retención 65% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 2.20:
+            floor_by_ratio = highest_pnl_pct * 0.70
+            floor_by_slack = highest_pnl_pct - 0.55
+            sl_pct = round(max(1.54, floor_by_ratio, floor_by_slack), 2)
             phase = 3
-            phase_label = f"💎 FASE 3 EXPANSIÓN (Cima +{highest_pnl_pct:.2f}% | Retención 85% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 1.20:
-            floor_by_ratio = highest_pnl_pct * 0.80
-            floor_by_slack = highest_pnl_pct - 0.28
-            sl_pct = round(max(0.96, floor_by_ratio, floor_by_slack), 2)
-            phase = 2
-            phase_label = f"🔒 FASE 2 ALTO RENDIMIENTO (Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.55:
+            phase_label = f"💎 FASE 3 EXPANSIÓN (Cima +{highest_pnl_pct:.2f}% | Retención 70% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 0.50:
             floor_by_ratio = highest_pnl_pct * 0.75
-            floor_by_slack = highest_pnl_pct - 0.26
-            sl_pct = round(max(0.20, floor_by_ratio, floor_by_slack), 2)
+            floor_by_slack = highest_pnl_pct - 0.35
+            sl_pct = round(max(0.18, floor_by_ratio, floor_by_slack), 2)
             phase = 2
-            phase_label = f"🔒 FASE 2 BREAK-EVEN AJUSTADO (Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
+            phase_label = f"🔒 FASE 2 RENDIMIENTO (Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
         else:
             sl_pct = -2.00
             phase = 1

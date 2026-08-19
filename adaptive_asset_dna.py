@@ -66,15 +66,16 @@ ARCHETYPE_CONFIGS = {
         "emoji": "🐆",
         "initial_sl_pct": -2.80,          # Margen amplio para absorber mechazos de microcentavos
         "max_stagnation_minutes": 240,    # Mínimo 4 horas de paciencia para permitir despegue
-        "phase_2_trigger_pct": 0.45,      # Asegura ganancias rápidamente al subir +0.45%
-        "phase_2_retention_ratio": 0.85,  # Retiene el 85% de la cima alcanzada
-        "phase_3_trigger_pct": 1.50,      # Cosecha agresiva
-        "phase_3_retention_ratio": 0.90,
+        "phase_2_trigger_pct": 0.45,      # Asegura ganancias al subir +0.45%
+        "phase_2_retention_ratio": 0.75,  # Retiene el 75% de la cima alcanzada
+        "phase_3_trigger_pct": 1.50,      # Expansión de impulso
+        "phase_3_retention_ratio": 0.70,  # Retiene el 70% de la cima alcanzada
+        "phase_4_retention_ratio": 0.65,  # Retiene el 65% de la cima alcanzada en megapump
         "required_vol_surge_1m": 1.8,     # Exige ignición de volumen sub-minuto brutal
         "required_min_bids_pct": 52.0,    # Libro con clara dominancia de compradores
-        "trend_ride_enabled": False,      # No hacer swing holding; tomar ganancias rápido
-        "wick_slack": 0.25,
-        "guideline_for_ai": "Trata este activo como un SPRINT. Exige volumen explosivo en 1M/10s. Cosecha ganancias rápido en +1.0% a +2.0% y dale hasta 4h de paciencia en Fase 1."
+        "trend_ride_enabled": False,      # Tomar ganancias en retrocesos
+        "wick_slack": 0.35,
+        "guideline_for_ai": "Trata este activo como un SPRINT. Exige volumen explosivo en 1M/10s. Cosecha ganancias con retención escalonada (75% -> 70% -> 65%) y dale hasta 4h de paciencia en Fase 1."
     },
     "BLUE_CHIP_CORE": {
         "archetype": "BLUE_CHIP_CORE",
@@ -83,13 +84,14 @@ ARCHETYPE_CONFIGS = {
         "initial_sl_pct": -2.00,          # Soporte estructural estándar
         "max_stagnation_minutes": 360,    # 6 horas para maduración completa de tendencia macro 4H
         "phase_2_trigger_pct": 0.55,      # Break-even estándar
-        "phase_2_retention_ratio": 0.75,  # Permite retrocesos saludables sin asustarse
+        "phase_2_retention_ratio": 0.75,  # Retiene el 75% de la cima alcanzada
         "phase_3_trigger_pct": 2.50,      # Expansión de tendencia
-        "phase_3_retention_ratio": 0.85,
+        "phase_3_retention_ratio": 0.70,  # Retiene el 70% de la cima alcanzada
+        "phase_4_retention_ratio": 0.65,  # Retiene el 65% de la cima alcanzada
         "required_vol_surge_1m": 0.8,     # Volumen orgánico institucional
         "required_min_bids_pct": 46.0,
         "trend_ride_enabled": True,       # Acompañar tendencia con MA25 de 5m/15m
-        "wick_slack": 0.35,
+        "wick_slack": 0.45,
         "guideline_for_ai": "Trata este activo como un CORE INSTITUCIONAL. Valida confluencia con Suelo 7D y FII. Dale hasta 6 horas de respiración y monta la tendencia con medias móviles."
     },
     "SECTOR_ROTATION": {
@@ -99,13 +101,14 @@ ARCHETYPE_CONFIGS = {
         "initial_sl_pct": -2.00,          # Margen estándar
         "max_stagnation_minutes": 300,    # 5 horas para capturar rotación completa de sesión
         "phase_2_trigger_pct": 0.50,
-        "phase_2_retention_ratio": 0.80,  # Retiene 80% de la cima
+        "phase_2_retention_ratio": 0.75,  # Retiene 75% de la cima
         "phase_3_trigger_pct": 2.20,
-        "phase_3_retention_ratio": 0.85,
+        "phase_3_retention_ratio": 0.70,  # Retiene 70% de la cima
+        "phase_4_retention_ratio": 0.65,  # Retiene 65% de la cima
         "required_vol_surge_1m": 1.1,
         "required_min_bids_pct": 48.0,
         "trend_ride_enabled": True,
-        "wick_slack": 0.30,
+        "wick_slack": 0.40,
         "guideline_for_ai": "Trata este activo como ROTACIÓN SECTORIAL. Prioriza si su sector está CALIENTE hoy. Dale hasta 5 horas buscando expansiones de +2% a +4%."
     },
     "THIN_BOOK_MICRO": {
@@ -114,14 +117,15 @@ ARCHETYPE_CONFIGS = {
         "emoji": "🎯",
         "initial_sl_pct": -1.50,          # SL ajustado porque los libros delgados caen rápido
         "max_stagnation_minutes": 240,    # Mínimo 4 horas de paciencia
-        "phase_2_trigger_pct": 0.40,      # Bloqueo ultra-rápido de ganancia
-        "phase_2_retention_ratio": 0.85,
+        "phase_2_trigger_pct": 0.40,      # Bloqueo de ganancia
+        "phase_2_retention_ratio": 0.75,  # Retiene 75% de la cima
         "phase_3_trigger_pct": 1.20,
-        "phase_3_retention_ratio": 0.90,
+        "phase_3_retention_ratio": 0.70,  # Retiene 70% de la cima
+        "phase_4_retention_ratio": 0.65,  # Retiene 65% de la cima
         "required_vol_surge_1m": 1.5,
         "required_min_bids_pct": 54.0,    # Exige fuerte muro comprador
         "trend_ride_enabled": False,
-        "wick_slack": 0.20,
+        "wick_slack": 0.30,
         "guideline_for_ai": "Trata este activo como LIBRO DELGADO. Exige volumen real y muro de Bids. Dale hasta 4 horas para desarrollar el movimiento."
     }
 }
@@ -174,27 +178,28 @@ def calculate_archetype_trailing(
 ) -> Tuple[float, int, str]:
     """
     Calculates dynamic stop-loss, trailing floor, and execution phase tailored
-    specifically to the asset's behavioral DNA.
+    specifically to the asset's behavioral DNA (75% en Fase 2, 70% en Fase 3, 65% en Fase 4).
     """
     arch = archetype_dna.get("archetype", "SECTOR_ROTATION")
     initial_sl = float(archetype_dna.get("initial_sl_pct", -2.00))
     p2_trigger = float(archetype_dna.get("phase_2_trigger_pct", 0.50))
-    p2_ratio = float(archetype_dna.get("phase_2_retention_ratio", 0.80))
+    p2_ratio = float(archetype_dna.get("phase_2_retention_ratio", 0.75))
     p3_trigger = float(archetype_dna.get("phase_3_trigger_pct", 2.20))
-    p3_ratio = float(archetype_dna.get("phase_3_retention_ratio", 0.85))
-    wick_slack = float(archetype_dna.get("wick_slack", 0.30))
+    p3_ratio = float(archetype_dna.get("phase_3_retention_ratio", 0.70))
+    p4_ratio = float(archetype_dna.get("phase_4_retention_ratio", 0.65))
+    wick_slack = float(archetype_dna.get("wick_slack", 0.35))
     emoji = archetype_dna.get("emoji", "🧬")
     label = archetype_dna.get("label", arch)
 
     if highest_pnl_pct >= 5.00:
-        floor_by_ratio = highest_pnl_pct * 0.90
-        floor_by_slack = highest_pnl_pct - 0.40
-        sl_pct = round(max(4.50, floor_by_ratio, floor_by_slack), 2)
+        floor_by_ratio = highest_pnl_pct * p4_ratio
+        floor_by_slack = highest_pnl_pct - (wick_slack + 0.50)
+        sl_pct = round(max(3.25, floor_by_ratio, floor_by_slack), 2)
         phase = 4
-        phase_label = f"🚀 FASE 4 MEGAPUMP ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 90% -> Piso +{sl_pct:.2f}%)"
+        phase_label = f"🚀 FASE 4 MEGAPUMP ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {int(p4_ratio*100)}% -> Piso +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= p3_trigger:
         floor_by_ratio = highest_pnl_pct * p3_ratio
-        floor_by_slack = highest_pnl_pct - (wick_slack + 0.05)
+        floor_by_slack = highest_pnl_pct - (wick_slack + 0.20)
         sl_pct = round(max(p3_trigger * p3_ratio, floor_by_ratio, floor_by_slack), 2)
         phase = 3
         phase_label = f"💎 FASE 3 EXPANSIÓN ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {int(p3_ratio*100)}% -> Piso +{sl_pct:.2f}%)"
