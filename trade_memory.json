@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 797,
+    "total_trades": 798,
     "wins": 356,
-    "losses": 441,
-    "win_rate_pct": 44.67,
-    "total_pnl_usd": -3166.247342999998
+    "losses": 442,
+    "win_rate_pct": 44.61,
+    "total_pnl_usd": -3166.407342999998
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HEMIUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HEMIUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on LINKUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ALICEUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on AXSUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on TUTUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on LTCUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on REUSDT)"
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on REUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on AAVEUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOTUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-17 20:18:52",
-      "account_id": "SIM-049",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "AVAXUSDT",
-      "side": "LONG",
-      "entry_price": 6.35,
-      "exit_price": 6.386,
-      "pnl_usd": 0.07,
-      "result": "WIN",
-      "notes": "WIN on AVAXUSDT (PnL: +0.57%, Net: $+0.07 Fase 3)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 68.48,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-17 20:18:52",
       "account_id": "SIM-051",
@@ -8312,6 +8295,23 @@
       "context": {
         "score": 45,
         "rsi_15m": 63.59,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 10:57:16",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "AAVEUSDT",
+      "side": "SHORT",
+      "entry_price": 86.86,
+      "exit_price": 88.18,
+      "pnl_usd": -0.16,
+      "result": "LOSS",
+      "notes": "LOSS on AAVEUSDT (PnL: -1.52%, Net: $-0.16 Fase 1)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 56.68,
         "macro_trend_4h": "NEUTRAL"
       }
     }
