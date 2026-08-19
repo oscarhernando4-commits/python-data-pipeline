@@ -1199,19 +1199,22 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             trailing_floor_pct = max(-2.00, trailing_floor_pct)
             phase_msg = f"🛡️ ESCUDO DE EMERGENCIA: SL ajustado a {trailing_floor_pct:+.2f}%"
 
-        # Stagnation & Alpha Fast Rotation Rule (Límite Ágil de 60 Minutos):
+        # ⏱️ Liberación Dinámica por Estancamiento según ADN (Mínimo 4 Horas / 240 Minutos):
         stagnation_exit = False
         reason_str = ""
-        # 1. Liberación por Estancamiento Máximo (60 Minutos / 60 ciclos en Fase 1 sin movimiento):
-        if holding_cycles >= 60 and phase == 1 and abs(pnl_pct) <= 0.60:
+        import adaptive_asset_dna
+        arch_dna_track = adaptive_asset_dna.get_asset_dna_archetype(active_symbol, atr_15m_pct)
+        max_stag_mins = int(arch_dna_track.get("max_stagnation_minutes", 240))
+        
+        # 1. Liberación por Estancamiento Máximo (Mínimo 4h / 240m en Fase 1 sin movimiento):
+        if holding_cycles >= max_stag_mins and phase == 1 and abs(pnl_pct) <= 0.75:
             stagnation_exit = True
-            reason_str = f"🚀 Liberación por Estancamiento (60m en Fase 1 sin despegue, PnL={pnl_pct:+.2f}%)"
-        # 2. 🔄 MEJORA 5: Rotación Alpha Dinámica — Score Relativo en lugar de Score Fijo 88
-        # Antes exigía 88pts (muy raro), ahora acepta 72pts con delta >= 14 sobre el umbral base
-        elif holding_cycles >= 25 and phase == 1 and abs(pnl_pct) <= 0.40:
-            if best_symbol and best_symbol != active_symbol and best_score >= 72 and not is_bearish:
+            reason_str = f"🚀 Liberación por Estancamiento ({holding_cycles}m >= {max_stag_mins}m en Fase 1 sin despegue, PnL={pnl_pct:+.2f}%)"
+        # 2. 🔄 MEJORA 5: Rotación Alpha Dinámica — Solo tras al menos 120 minutos (2 horas) si hay un alpha masivo
+        elif holding_cycles >= 120 and phase == 1 and abs(pnl_pct) <= 0.40:
+            if best_symbol and best_symbol != active_symbol and best_score >= 75 and not is_bearish:
                 score_delta = best_score - 58  # Delta sobre el umbral mínimo de entrada
-                if score_delta >= 14:
+                if score_delta >= 16:
                     stagnation_exit = True
                     reason_str = f"🔄 Rotación Alpha Dinámica ({holding_cycles}m plano → {best_symbol} @ {best_score}pts, delta={score_delta}pts)"
         

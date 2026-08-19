@@ -65,7 +65,7 @@ ARCHETYPE_CONFIGS = {
         "label": "🐆 SPRINT HIPER-VOLÁTIL (Meme / High-Beta)",
         "emoji": "🐆",
         "initial_sl_pct": -2.80,          # Margen amplio para absorber mechazos de microcentavos
-        "max_stagnation_minutes": 12,     # Si no despega en 12m, salir flat de inmediato
+        "max_stagnation_minutes": 240,    # Mínimo 4 horas de paciencia para permitir despegue
         "phase_2_trigger_pct": 0.45,      # Asegura ganancias rápidamente al subir +0.45%
         "phase_2_retention_ratio": 0.85,  # Retiene el 85% de la cima alcanzada
         "phase_3_trigger_pct": 1.50,      # Cosecha agresiva
@@ -74,14 +74,14 @@ ARCHETYPE_CONFIGS = {
         "required_min_bids_pct": 52.0,    # Libro con clara dominancia de compradores
         "trend_ride_enabled": False,      # No hacer swing holding; tomar ganancias rápido
         "wick_slack": 0.25,
-        "guideline_for_ai": "Trata este activo como un SPRINT RÁPIDO. Exige volumen explosivo en 1M/10s. Cosecha ganancias rápido en +1.0% a +2.0% y nunca permitas estancamientos largos."
+        "guideline_for_ai": "Trata este activo como un SPRINT. Exige volumen explosivo en 1M/10s. Cosecha ganancias rápido en +1.0% a +2.0% y dale hasta 4h de paciencia en Fase 1."
     },
     "BLUE_CHIP_CORE": {
         "archetype": "BLUE_CHIP_CORE",
         "label": "🏛️ BLUE-CHIP INSTITUCIONAL (L1 / Core)",
         "emoji": "🏛️",
         "initial_sl_pct": -2.00,          # Soporte estructural estándar
-        "max_stagnation_minutes": 60,     # Permite a la tendencia 1H desarrollarse con paciencia
+        "max_stagnation_minutes": 360,    # 6 horas para maduración completa de tendencia macro 4H
         "phase_2_trigger_pct": 0.55,      # Break-even estándar
         "phase_2_retention_ratio": 0.75,  # Permite retrocesos saludables sin asustarse
         "phase_3_trigger_pct": 2.50,      # Expansión de tendencia
@@ -90,14 +90,14 @@ ARCHETYPE_CONFIGS = {
         "required_min_bids_pct": 46.0,
         "trend_ride_enabled": True,       # Acompañar tendencia con MA25 de 5m/15m
         "wick_slack": 0.35,
-        "guideline_for_ai": "Trata este activo como un CORE INSTITUCIONAL. Valida confluencia con Suelo 7D y FII. Dale tiempo de respirar (hasta 60 min) y monta la tendencia con medias móviles."
+        "guideline_for_ai": "Trata este activo como un CORE INSTITUCIONAL. Valida confluencia con Suelo 7D y FII. Dale hasta 6 horas de respiración y monta la tendencia con medias móviles."
     },
     "SECTOR_ROTATION": {
         "archetype": "SECTOR_ROTATION",
         "label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
         "emoji": "🧩",
         "initial_sl_pct": -2.00,          # Margen estándar
-        "max_stagnation_minutes": 35,     # Paciencia intermedia (35m)
+        "max_stagnation_minutes": 300,    # 5 horas para capturar rotación completa de sesión
         "phase_2_trigger_pct": 0.50,
         "phase_2_retention_ratio": 0.80,  # Retiene 80% de la cima
         "phase_3_trigger_pct": 2.20,
@@ -106,14 +106,14 @@ ARCHETYPE_CONFIGS = {
         "required_min_bids_pct": 48.0,
         "trend_ride_enabled": True,
         "wick_slack": 0.30,
-        "guideline_for_ai": "Trata este activo como ROTACIÓN SECTORIAL. Prioriza si su sector está CALIENTE hoy. Acompáñalo durante 25-35 minutos buscando expansiones de +2% a +4%."
+        "guideline_for_ai": "Trata este activo como ROTACIÓN SECTORIAL. Prioriza si su sector está CALIENTE hoy. Dale hasta 5 horas buscando expansiones de +2% a +4%."
     },
     "THIN_BOOK_MICRO": {
         "archetype": "THIN_BOOK_MICRO",
         "label": "🎯 MICRO-CAP / LIBRO DELGADO",
         "emoji": "🎯",
         "initial_sl_pct": -1.50,          # SL ajustado porque los libros delgados caen rápido
-        "max_stagnation_minutes": 15,     # Max 15m de espera (¡Nunca 60 minutos!)
+        "max_stagnation_minutes": 240,    # Mínimo 4 horas de paciencia
         "phase_2_trigger_pct": 0.40,      # Bloqueo ultra-rápido de ganancia
         "phase_2_retention_ratio": 0.85,
         "phase_3_trigger_pct": 1.20,
@@ -122,7 +122,7 @@ ARCHETYPE_CONFIGS = {
         "required_min_bids_pct": 54.0,    # Exige fuerte muro comprador
         "trend_ride_enabled": False,
         "wick_slack": 0.20,
-        "guideline_for_ai": "Trata este activo como LIBRO DELGADO. Exige volumen real y muro de Bids. Si el volumen no entra en 15 minutos, sal de inmediato con micro-ajuste."
+        "guideline_for_ai": "Trata este activo como LIBRO DELGADO. Exige volumen real y muro de Bids. Dale hasta 4 horas para desarrollar el movimiento."
     }
 }
 
