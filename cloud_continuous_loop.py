@@ -73,13 +73,14 @@ def run_git_push_sync(cycle_num: int, total_cycles: int = 240):
             subprocess.run(["git", "remote", "set-url", "origin", f"https://x-access-token:{gh_token}@github.com/{gh_repo}.git"], check=False)
 
         # Add and commit state files
-        subprocess.run(["git", "add", "real_money_account.json", "top_100_pairs.json", "dynamic_thresholds.json", "proxy_state.json", "gemini_key_state.json"], check=False)
+        subprocess.run(["git", "add", "real_money_account.json", "top_100_pairs.json", "dynamic_thresholds.json", "proxy_state.json", "gemini_key_state.json", "trade_memory.json"], check=False)
         status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
         if status.stdout.strip():
             msg = f"chore: live sync [Cycle {cycle_num}/{total_cycles}] [{now_utc}]"
             subprocess.run(["git", "commit", "-m", msg], check=False)
             
-        subprocess.run(["git", "pull", "--rebase", "-X", "ours", "origin", "main"], check=False)
+        # Smooth rebase without unstaged noise
+        subprocess.run(["git", "pull", "--no-rebase", "-X", "ours", "origin", "main"], capture_output=True, text=True)
         
         for attempt in range(2):
             res = subprocess.run(["git", "push", "origin", "main"], capture_output=True, text=True)
@@ -87,7 +88,7 @@ def run_git_push_sync(cycle_num: int, total_cycles: int = 240):
                 print(f"✅ [Cycle {cycle_num}] Git sync pushed.", flush=True)
                 break
             else:
-                subprocess.run(["git", "pull", "--rebase", "-X", "ours", "origin", "main"], check=False)
+                subprocess.run(["git", "pull", "--no-rebase", "-X", "ours", "origin", "main"], capture_output=True, text=True)
                 time.sleep(1)
     except Exception as e:
         print(f"⚠️ [Cycle {cycle_num}] Git sync note: {e}", flush=True)
