@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 793,
-    "wins": 355,
+    "total_trades": 794,
+    "wins": 356,
     "losses": 438,
-    "win_rate_pct": 44.77,
-    "total_pnl_usd": -2925.9373429999982
+    "win_rate_pct": 44.84,
+    "total_pnl_usd": -2925.637342999998
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-17 20:05:06",
-      "account_id": "SIM-054",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "XAIUSDT",
-      "side": "LONG",
-      "entry_price": 0.00693,
-      "exit_price": 0.00693,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on XAIUSDT (PnL: +0.00%, Net: $-0.03 Fase 2)",
-      "context": {
-        "score": 62,
-        "rsi_15m": 48.54,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-17 20:05:06",
       "account_id": "SIM-059",
@@ -8312,6 +8295,23 @@
       "context": {
         "score": 59,
         "rsi_15m": 66.22,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-19 10:31:12",
+      "account_id": "SIM-047",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ARBUSDT",
+      "side": "LONG",
+      "entry_price": 0.075,
+      "exit_price": 0.0769,
+      "pnl_usd": 0.3,
+      "result": "WIN",
+      "notes": "WIN on ARBUSDT (PnL: +2.53%, Net: $+0.30 Fase 3)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 59.75,
         "macro_trend_4h": "NEUTRAL"
       }
     }
