@@ -318,6 +318,16 @@ def _get_funding_safe(symbol):
                 "dump_risk_from_funding": False, "squeeze_opportunity": False}
 
 
+def _get_archetype_dna_safe(symbol, atr_pct_15m=0.30, price=1.0):
+    """Safe wrapper for adaptive_asset_dna archetype classification."""
+    try:
+        import adaptive_asset_dna
+        return adaptive_asset_dna.get_asset_dna_archetype(symbol, atr_pct_15m, price)
+    except Exception:
+        return {"archetype": "SECTOR_ROTATION", "label": "General", "initial_sl_pct": -2.00,
+                "max_stagnation_minutes": 35, "trend_ride_enabled": True}
+
+
 def analyze_multi_timeframe_candles(symbol):
     """
     Inspects 2m, 5m, 15m, 1h, 4h, 1d, and 7d historical candle behavior.
@@ -1025,6 +1035,7 @@ def analyze_multi_timeframe_candles(symbol):
         "atr_pct_15m": atr_pct_15m,
         "atr_pct_1h": atr_pct_1h,
         "dna_profile": dna_profile,
+        "archetype_dna": _get_archetype_dna_safe(symbol, atr_pct_15m, close_15m),
         "predictive_dna": asset_dna_predictive_engine.analyze_multi_horizon_predictive_dna(
             symbol=symbol,
             klines_multi_tf={

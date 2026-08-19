@@ -868,59 +868,61 @@ def execute_real_futures_market_close(symbol, quantity):
     except Exception as e:
         return {"error": str(e)}
 
-def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: float, holding_cycles: int = 0, current_pnl_pct: float = 0.0, custom_slack: float = None):
+def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: float, holding_cycles: int = 0, current_pnl_pct: float = 0.0, custom_slack: float = None, symbol: str = None):
     """
-    🎯 ESCALERA CUÁNTICA DE RETENCIÓN DE GANANCIA MÁXIMA (75% a 90%):
-    Reduce el margen de devolución y retiene la mayor parte de la cima de forma dinámica:
-    
-    1. ZONA MEGAPUMP (H >= 5.00%): 
-       Retiene el 90% de la Cima (Piso = max(+4.50%, H * 0.90, H - 0.40%))
-       
-    2. ZONA EXPANSIÓN FUERTE (2.50% <= H < 5.00%):
-       Retiene el 85% de la Cima (Piso = max(+2.12%, H * 0.85, H - 0.35%))
-       
-    3. ZONA IMPULSO CONSOLIDADO (1.20% <= H < 2.50%):
-       Retiene el 80% de la Cima (Piso = max(+0.96%, H * 0.80, H - 0.28%))
-       
-    4. ZONA BREAK-EVEN AJUSTADO (0.55% <= H < 1.20%):
-       Retiene el 75% de la Cima (Piso = max(+0.20%, H * 0.75, H - 0.26%))
-       (Ejemplo: con cima de +1.14%, el piso sube a +0.86% asegurando el 75% del pico).
-       
-    5. ZONA ENTRADA & SOPORTE (H < 0.55%):
-       SL en Soporte de Base: -0.90% (Espacio para absorción inicial).
+    🎯 ESCALERA CUÁNTICA DINÁMICA BASADA EN ADN DEL ACTIVO (4 ARQUETIPOS):
+    Adapta el Stop-Loss, tiempo y trailing floor específicamente según el perfil fenotípico:
+    - 🐆 HYPER_VOLATILE_SPRINT (Memes / High-Beta: PEPE, DOGE, HEI, PENGU, BARD) -> SL -2.80%, Cosecha Rápida +1.50%
+    - 🏛️ BLUE_CHIP_CORE (Institucional: BTC, ETH, SOL, BNB, BCH, LINK) -> SL -2.00%, Trend Ride
+    - 🧩 SECTOR_ROTATION (L2 / DeFi / AI: ARB, OP, AAVE, UNI, FET) -> SL -2.00%, Paciencia 35m
+    - 🎯 THIN_BOOK_MICRO (Micro-Caps: MUB, TUT, GPS, DEXE) -> SL -1.50%, Salida rápida 15m
     """
-    atr = max(0.20, min(1.50, atr_pct if atr_pct and atr_pct > 0 else 0.30))
-    
-    if highest_pnl_pct >= 5.00:
-        floor_by_ratio = highest_pnl_pct * 0.90
-        floor_by_slack = highest_pnl_pct - 0.40
-        sl_pct = round(max(4.50, floor_by_ratio, floor_by_slack), 2)
-        phase = 4
-        phase_label = f"🚀 FASE 4 MEGAPUMP (Cima +{highest_pnl_pct:.2f}% | Retención 90% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 2.50:
-        floor_by_ratio = highest_pnl_pct * 0.85
-        floor_by_slack = highest_pnl_pct - 0.35
-        sl_pct = round(max(2.12, floor_by_ratio, floor_by_slack), 2)
-        phase = 3
-        phase_label = f"💎 FASE 3 EXPANSIÓN (Cima +{highest_pnl_pct:.2f}% | Retención 85% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 1.20:
-        floor_by_ratio = highest_pnl_pct * 0.80
-        floor_by_slack = highest_pnl_pct - 0.28
-        sl_pct = round(max(0.96, floor_by_ratio, floor_by_slack), 2)
-        phase = 2
-        phase_label = f"🔒 FASE 2 ALTO RENDIMIENTO (Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.55:
-        floor_by_ratio = highest_pnl_pct * 0.75
-        floor_by_slack = highest_pnl_pct - 0.26
-        sl_pct = round(max(0.20, floor_by_ratio, floor_by_slack), 2)
-        phase = 2
-        phase_label = f"🔒 FASE 2 BREAK-EVEN AJUSTADO (Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
-    else:
-        sl_pct = -2.00
-        phase = 1
-        phase_label = f"🛡️ FASE 1 (Entrada y Soporte: SL -2.00%)"
-            
-    return sl_pct, phase, phase_label
+    try:
+        import adaptive_asset_dna
+        if symbol:
+            archetype_dna = adaptive_asset_dna.get_asset_dna_archetype(symbol, atr_pct)
+        else:
+            archetype_dna = adaptive_asset_dna.ARCHETYPE_CONFIGS["SECTOR_ROTATION"]
+        return adaptive_asset_dna.calculate_archetype_trailing(
+            archetype_dna=archetype_dna,
+            highest_pnl_pct=highest_pnl_pct,
+            current_pnl_pct=current_pnl_pct,
+            holding_minutes=holding_cycles,
+            atr_pct=atr_pct
+        )
+    except Exception as e:
+        # Fallback to standard 4-Phase Proportional Ladder
+        atr = max(0.20, min(1.50, atr_pct if atr_pct and atr_pct > 0 else 0.30))
+        if highest_pnl_pct >= 5.00:
+            floor_by_ratio = highest_pnl_pct * 0.90
+            floor_by_slack = highest_pnl_pct - 0.40
+            sl_pct = round(max(4.50, floor_by_ratio, floor_by_slack), 2)
+            phase = 4
+            phase_label = f"🚀 FASE 4 MEGAPUMP (Cima +{highest_pnl_pct:.2f}% | Retención 90% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 2.50:
+            floor_by_ratio = highest_pnl_pct * 0.85
+            floor_by_slack = highest_pnl_pct - 0.35
+            sl_pct = round(max(2.12, floor_by_ratio, floor_by_slack), 2)
+            phase = 3
+            phase_label = f"💎 FASE 3 EXPANSIÓN (Cima +{highest_pnl_pct:.2f}% | Retención 85% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 1.20:
+            floor_by_ratio = highest_pnl_pct * 0.80
+            floor_by_slack = highest_pnl_pct - 0.28
+            sl_pct = round(max(0.96, floor_by_ratio, floor_by_slack), 2)
+            phase = 2
+            phase_label = f"🔒 FASE 2 ALTO RENDIMIENTO (Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 0.55:
+            floor_by_ratio = highest_pnl_pct * 0.75
+            floor_by_slack = highest_pnl_pct - 0.26
+            sl_pct = round(max(0.20, floor_by_ratio, floor_by_slack), 2)
+            phase = 2
+            phase_label = f"🔒 FASE 2 BREAK-EVEN AJUSTADO (Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
+        else:
+            sl_pct = -2.00
+            phase = 1
+            phase_label = f"🛡️ FASE 1 (Entrada y Soporte: SL -2.00%)"
+                
+        return sl_pct, phase, phase_label
 
 def quick_position_heartbeat():
     """
@@ -959,14 +961,15 @@ def quick_position_heartbeat():
         custom_slack = float(pos.get("optimal_trailing_slack_pct", 0.65))
         
         # ═══════════════════════════════════════════════════════════════════════
-        # 🎯 SISTEMA PROPORCIONAL DINÁMICO FRACTAL 15M BASADO EN CIMA ALCANZADA:
+        # 🎯 SISTEMA PROPORCIONAL DINÁMICO FRACTAL BASADO EN ADN DEL ACTIVO:
         # ═══════════════════════════════════════════════════════════════════════
         sl_pct, new_phase, phase_label = calculate_dynamic_proportional_trailing(
             highest_pnl_pct=highest_pnl_pct,
             atr_pct=atr_15m_pct,
             holding_cycles=holding_cycles_hb,
             current_pnl_pct=current_pnl_pct,
-            custom_slack=custom_slack
+            custom_slack=custom_slack,
+            symbol=sym
         )
         pos["volatility_regime"] = phase_label
             
@@ -981,16 +984,30 @@ def quick_position_heartbeat():
         should_exit = current_pnl_pct <= sl_pct
         exit_reason = f"Stop/Trailing ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
         
-        # Pillar 4: Trend Ride Guard (Protege si está sobre MA25 de 5m/15m)
-        if new_phase >= 2 and should_exit and current_price > entry and ma25_5m > 0 and current_price >= ma25_5m * 0.998 and current_pnl_pct >= 0.25:
+        # Pillar 4: Trend Ride Guard (Protege si está sobre MA25 de 5m/15m para Blue-Chips y Sector)
+        import adaptive_asset_dna
+        arch_dna = adaptive_asset_dna.get_asset_dna_archetype(sym, atr_15m_pct)
+        if arch_dna.get("trend_ride_enabled", True) and new_phase >= 2 and should_exit and current_price > entry and ma25_5m > 0 and current_price >= ma25_5m * 0.998 and current_pnl_pct >= 0.25:
             should_exit = False
             exit_reason = f"Protegido por Estructura MA25 (PnL: {current_pnl_pct:+.2f}%)"
         
         # SNIPER MEJORA B: Detección de Agotamiento de Mecha en Cima con holgura adaptativa
-        wick_pullback_threshold = max(0.70, round(custom_slack * 1.3, 2))
-        if not should_exit and new_phase >= 3 and highest_pnl_pct >= 2.00 and (highest_pnl_pct - current_pnl_pct) >= wick_pullback_threshold:
+        wick_pullback_threshold = max(0.60, round(custom_slack * 1.2, 2))
+        if not should_exit and new_phase >= 3 and highest_pnl_pct >= 1.80 and (highest_pnl_pct - current_pnl_pct) >= wick_pullback_threshold:
             should_exit = True
             exit_reason = f"🎯 SNIPER MECHA CIMA (Pico +{highest_pnl_pct:.2f}% -> Venta en {current_pnl_pct:+.2f}%)"
+            
+        # ⏱️ LIBERACIÓN DINÁMICA POR ESTANCAMIENTO SEGÚN ADN (12m Meme, 15m Thin, 35m Sector, 60m Core)
+        if not should_exit and new_phase == 1:
+            is_stag, stag_msg = adaptive_asset_dna.check_archetype_stagnation_exit(
+                archetype_dna=arch_dna,
+                holding_minutes=holding_cycles_hb,
+                pnl_pct=current_pnl_pct,
+                phase=new_phase
+            )
+            if is_stag:
+                should_exit = True
+                exit_reason = stag_msg
         
         # 🧱 MEJORA 4: Cancelación Preventiva — Solo si el libro de órdenes colapsa severamente
         # Requiere pérdida > -1.50% y Bids < 30% para evitar falsas salidas por ruido de micro-spread
@@ -1320,60 +1337,18 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         state["position"] = None
         state["status"] = "🟦 Buscando Entrada A+"
         
-        # Stablecoin & Pegged Low-Volatility Commodity filter check
+        # 🚫 Stablecoin & Non-Speculative Commodity Peg filter (USDT, USDC, PAXG, XAUT, etc.)
         stablecoins_blacklist = {
             "USDT", "USDC", "FDUSD", "TUSD", "BUSD", "DAI", "USDD", "USDE", "RLUSD", "USD1",
             "EUR", "AEUR", "WBTC", "TBTC", "USDS", "USTC", "FRAX", "PYUSD", "USD0", "SNDKB", "SNDK", "USD",
             "PAXG", "XAUT", "XAUt", "GOLD"
         }
         
-        # 🚫 BLACKLIST EMPÍRICA v3: Actualizada con análisis forense real 2026-08-19
-        # REGLA: Si PnL < -$100 USD en matrix → PROHIBIDO. Si WR < 17% → PROHIBIDO.
-        # NUEVA REGLA: Tokens con múltiples LOSSES reales en la cuenta R-01 → BLOQUEADOS
-        toxic_symbols_blacklist = {
-            # ── CATASTRÓFICOS (pérdidas masivas) ──────────────────────────
-            "PEPEUSDT",  "PEPE",        # -$8,857,228 (catastrófico por mechas)
-            "BARDUSDT",  "BARD",        # -$10,225 USD, WR=19.6%
-            "APTUSDT",   "APT",         # -$16,317 USD
-            "PENGUUSDT", "PENGU",       # -$7,018 USD, WR=20.7%
-            "DEXEUSDT",  "DEXE",        # -$4,082 USD, WR=16.1% ← ERA WHITELIST, CORREGIDO
-            "INJUSDT",   "INJ",         # -$6,346 USD en Grupo4 (muy volátil sin control)
-            # ── DESTRUCTORES MEDIANOS (WR < 17%) ──────────────────────────
-            "STORJUSDT", "STORJ",       # -$987 USD, WR=13.6% ← NUEVO
-            "JSTUSDT",   "JST",         # -$403 USD, WR=13.5% ← NUEVO
-            "GIGGLEUSDT","GIGGLE",      # -$436 USD, WR=18.9% ← NUEVO
-            "SEIUSDT",   "SEI",         # -$1,159 USD, WR=13.7% ← NUEVO
-            "DODOUSDT",  "DODO",        # -$2,477 USD, WR=15.9% ← NUEVO
-            # ── OTROS CONFIRMADOS ─────────────────────────────────────────
-            "POLUSDT",   "POL",         # -$891 USD, WR=22.4%
-            "EULUSDT",   "EUL",         # -$282 USD
-            "BICOUSDT",  "BICO",        # -$320 USD
-            "EDENUSDT",  "EDEN",        # -$359 USD
-            "KAITOUSDT", "KAITO",       # -$310 USD + 5 LOSSES reales 2026-08-19
-            # ── VALIDADOS EMPÍRICAMENTE HOY (2026-08-19) ──────────────────
-            "HEIUSDT",   "HEI",         # 6 LOSSES reales: -1.60%, -1.66%, -0.20% (memes pump/dump)
-            "MUBUSDT",   "MUB",         # -$937/token ilíquido, estancamiento de 60m sin volumen institucional
-        }
-
-        
-        # 🏆 WHITELIST PRIORITARIA v2: Solo pares con PnL > +$50 confirmado en matrix
-        # Bonus de score +20 aplicado al pasar todos los filtros base
+        # 🏆 WHITELIST PRIORITARIA v2: Bonus de score para símbolos con alto rendimiento histórico
         priority_whitelist = {
-            # ── PnL > $10,000 (élite absoluta) ──────────────────────────
-            "KITEUSDT",  "KITE",        # +$22,487 USD, WR=23.5% ← ERA BLACKLIST, CORREGIDO
-            # ── PnL $100-$1,000 (sólidos) ───────────────────────────────
-            "BNBUSDT",   "BNB",         # +$204 USD, WR alta
-            "ARBUSDT",   "ARB",         # +$420 USD, WR=16.1% pero ganancia/trade alta ← NUEVO
-            "BCHUSDT",   "BCH",         # +$358 USD, WR=22.1% ← NUEVO
-            "ONTUSDT",   "ONT",         # +$353 USD, WR=19.6% ← NUEVO
-            "LDOUSDT",   "LDO",         # +$212 USD, WR=22.6% ← NUEVO
-            "NOTUSDT",   "NOT",         # +$69  USD, WR=19.2% ← NUEVO
-            "PROMUSDT",  "PROM",        # +$46  USD, WR=26.8% (mejor WR del universo) ← NUEVO
-            # ── PnL < $100 pero WR > 65% (consistentes) ─────────────────
-            "XPLUSDT",   "XPLUS",       # 66.7% WR, +$659
-            "ATOMUSDT",  "ATOM",        # 66.7% WR, +$15
-            "2ZUSDT",    "2Z",          # 100% WR (pocos trades)
-            "HOMEUSDT",  "HOME",        # 100% WR (pocos trades)
+            "KITEUSDT", "KITE", "BNBUSDT", "BNB", "ARBUSDT", "ARB", "BCHUSDT", "BCH",
+            "ONTUSDT", "ONT", "LDOUSDT", "LDO", "NOTUSDT", "NOT", "PROMUSDT", "PROM",
+            "XPLUSDT", "XPLUS", "ATOMUSDT", "ATOM", "2ZUSDT", "2Z", "HOMEUSDT", "HOME"
         }
         
         # --- ENTRY DECISION LOGIC (SPOT ONLY) ---
@@ -1406,18 +1381,22 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 if discount_from_exit_pct >= 2.00 and time_since_last_exit >= 120:
                     print(f"🟢 Cooldown levantado inteligentemente: {best_symbol} con descuento real de -{discount_from_exit_pct:.2f}% (${last_exit_price:.6f} -> ${current_price:.6f}).")
                 elif time_since_last_exit < 3600:
-                    # 🚫 MEJORA A: Anti-Re-Entry 60 Min (previene el error de ONTUSDT x3)
+                    # 🚫 MEJORA A: Anti-Re-Entry 60 Min (previene over-trading)
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} en cooldown anti-re-entrada ({time_since_last_exit:.0f}s de los 3600s requeridos). Descuento actual: {discount_from_exit_pct:.2f}%. Evitando over-trading.")
             
             if not is_stable and (sym_clean in stablecoins_blacklist or best_symbol in stablecoins_blacklist):
                 is_stable = True
                 print(f"⛔ Compra rechazada: {best_symbol} es una stablecoin / activo no volátil.")
-            elif not is_stable and (sym_clean in toxic_symbols_blacklist or best_symbol in toxic_symbols_blacklist):
-                # 🚫 BLACKLIST EMPÍRICA: Símbolo destruyó capital en 4,924 simulaciones
-                is_stable = True
-                print(f"☠️ Compra rechazada: {best_symbol} está en la BLACKLIST EMPÍRICA (destruyó capital histórico). PROHIBIDO operar.")
             else:
+                # 🧬 ADN ADAPTATIVO: Carga el Arquetipo de Comportamiento especializado para el token
+                import adaptive_asset_dna
+                best_archetype = adaptive_asset_dna.get_asset_dna_archetype(
+                    symbol=best_symbol,
+                    price=current_price
+                )
+                print(f"🧬 [ADN ACTIVO] {best_symbol} clasificado como {best_archetype.get('label')} (SL={best_archetype.get('initial_sl_pct')}%, MaxT={best_archetype.get('max_stagnation_minutes')}m)")
+                
                 # 🏆 WHITELIST PRIORITARIA: Bonus de score para símbolos con WR >= 65% histórico
                 if sym_clean in priority_whitelist or best_symbol in priority_whitelist:
                     best_score = min(100, best_score + 20)
@@ -1560,6 +1539,12 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         actual_cost = round(usdt_free, 2)
                     if qty == 0:
                         qty = round(usdt_free / current_price, 5)  # Fallback
+                    import adaptive_asset_dna
+                    arch_profile = adaptive_asset_dna.get_asset_dna_archetype(
+                        symbol=best_symbol,
+                        atr_15m_pct=mtf_res.get("atr_pct_15m", 0.30) if 'mtf_res' in locals() else 0.30,
+                        price=actual_entry_price
+                    )
                     state["position"] = {
                         "symbol": best_symbol,
                         "entry_price": actual_entry_price,
@@ -1569,6 +1554,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         "break_even": False,
                         "highest_price": actual_entry_price,
                         "phase": 1,
+                        "archetype": arch_profile.get("archetype", "SECTOR_ROTATION"),
+                        "archetype_label": arch_profile.get("label", "General"),
+                        "initial_sl_pct": arch_profile.get("initial_sl_pct", -2.00),
+                        "max_stagnation_minutes": arch_profile.get("max_stagnation_minutes", 60),
                         "vol_surge": mtf_res.get("vol_surge_2m", 1.0) if 'mtf_res' in locals() else 1.0,
                         "entry_time_ms": int(time.time() * 1000),
                         "atr_pct_15m": mtf_res.get("atr_pct_15m", 0.30) if 'mtf_res' in locals() else 0.30,

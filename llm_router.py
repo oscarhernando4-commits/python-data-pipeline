@@ -437,11 +437,25 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         anti_reentry = mtf.get('anti_reentry_check', {})
         already_traded = anti_reentry.get('already_traded_today', False)
 
+        # ── ADN v3: Dynamic Asset Phenotype & Operational Guidelines ──────────
+        arch_dna = mtf.get('archetype_dna', {})
+        if not arch_dna:
+            try:
+                import adaptive_asset_dna
+                arch_dna = adaptive_asset_dna.get_asset_dna_archetype(sym, mtf.get('atr_pct_15m', 0.30))
+            except Exception:
+                arch_dna = {"label": "General", "initial_sl_pct": -2.00, "max_stagnation_minutes": 35, "guideline_for_ai": "Estándar"}
+        arch_lbl = arch_dna.get('label', 'General')
+        arch_guide = arch_dna.get('guideline_for_ai', '')
+        arch_sl = arch_dna.get('initial_sl_pct', -2.00)
+        arch_tmax = arch_dna.get('max_stagnation_minutes', 60)
+
         candidates_prompt_text += f"\nCANDIDATO: {sym} (Sector: {sec} | Acción Sugerida: {action}){cetus_tag}{fii_tag}\n"
         candidates_prompt_text += f"- Score: {score}/100 | MTF Score: {mtf.get('multi_tf_score', score)}/100 | FII (Inyección Suelo): {fii}/100\n"
+        candidates_prompt_text += f"- 🧬 ARQUETIPO ADN: {arch_lbl} (SL={arch_sl}%, MaxT={arch_tmax}m) | Guía: {arch_guide}\n"
         candidates_prompt_text += f"- 🔮 Radar Predictivo Multi-Horizonte: {pred_label} | Prob. Pump={pump_prob}% | Riesgo Dump={dump_risk}%\n"
         candidates_prompt_text += f"- 🚀 Catalizadores Activos: [{catalysts_str}] | Advertencias: [{warnings_str}]\n"
-        candidates_prompt_text += f"- 🧬 ADN & Elasticidad: {dna_str}\n"
+        candidates_prompt_text += f"- 🧬 Elasticidad Histórica: {dna_str}\n"
         candidates_prompt_text += f"- 🏔️ MATRIZ FRACTAL DE SUELO 7D (% Canal desde el piso): 1D={c1d}% | 4H={c4h}% | 1H={c1h}% | 15M={c15m}% | 5M={c5m}% | 2M={c2m}% | 1M={c1m}%\n"
         candidates_prompt_text += f"- 🎯 Gatillo 1M Sniper: Distancia EMA9={dist_1m_ema9:+.2f}% | Retesteo Base={is_sniper_pb} | Anti-FOMO={not is_fomo}\n"
         candidates_prompt_text += f"- 🎯 Proyección de Recorrido: Resistencia Techo 1H=+{mtf.get('target_resistance_1h_pct', 2.5):.2f}% | Soporte Piso=-{mtf.get('major_support_floor_1h_pct', 0.9):.2f}% | Ratio R:R={mtf.get('expected_rr_ratio', 2.5)}:1\n"
@@ -509,6 +523,12 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     - VETO BTC CRASH: Si BTC_GUARD muestra altcoin_impact=AVOID (BTC cayendo > 1.5% en 1H), HOLD obligatorio.
     - VETO FUNDING: Si FUNDING_PERPS muestra DUMP_RISK_FUNDING (funding > 0.05%), evitar. Longs overleveraged = fácil dump.
     - BONUS: Tokens en HORA_PICO + SECTOR_CALIENTE + BTC_STABLE tienen prioridad máxima.
+    
+    PASO 2B 🧬 EVALUACIÓN ESPECÍFICA SEGÚN ARQUETIPO DE ADN (SIN VETOS CIEGOS):
+    - 🐆 SPRINT HIPER-VOLÁTIL (Memes / High-Beta: PEPE, DOGE, HEI, PENGU, BARD): Exige ignición de volumen sub-minuto brutal (10s/30s/1m >= 1.8x) y Bids >= 52%. Cosecha rápida (+1% a +2%).
+    - 🏛️ BLUE-CHIP CORE (BTC, ETH, SOL, BNB, BCH, LINK): Exige suelo 7D profundo y FII >= 50. Dale tiempo de maduración (60 min) con Trend Ride.
+    - 🧩 ROTACIÓN SECTORIAL (L2, DeFi, AI: ARB, OP, AAVE, UNI, FET): Exige que su sector esté activo o con catalizador.
+    - 🎯 MICRO-CAP / LIBRO DELGADO (MUB, TUT, GPS, DEXE): Exige Bids >= 54% y volumen real creciente.
     
     PASO 3 ⚡ ANÁLISIS DE CONFLUENCIA, DINERO INTELIGENTE Y CVD (SOLO EN EL SUELO):
     - Para los candidatos en el suelo real:
