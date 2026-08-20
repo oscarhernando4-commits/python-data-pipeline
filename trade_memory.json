@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1419,
-    "wins": 689,
-    "losses": 730,
-    "win_rate_pct": 48.56,
-    "total_pnl_usd": -4268.869823000003
+    "total_trades": 1423,
+    "wins": 692,
+    "losses": 731,
+    "win_rate_pct": 48.63,
+    "total_pnl_usd": -4269.349823000002
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,58 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 10:24:20",
-      "account_id": "SIM-060",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "PUMPUSDT",
-      "side": "LONG",
-      "entry_price": 0.003016,
-      "exit_price": 0.003016,
-      "pnl_usd": -0.14,
-      "result": "LOSS",
-      "notes": "LOSS on PUMPUSDT (PnL: +0.00%, Net: $-0.14 Fase 3)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-19 10:24:20",
-      "account_id": "SIM-091",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "ZECUSDT",
-      "side": "LONG",
-      "entry_price": 544.87,
-      "exit_price": 544.87,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on ZECUSDT (PnL: +0.00%, Net: $-0.03 Fase 2)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-19 10:24:20",
-      "account_id": "SIM-093",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "TUTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.03727,
-      "exit_price": 0.03727,
-      "pnl_usd": -3.36,
-      "result": "LOSS",
-      "notes": "LOSS on TUTUSDT (PnL: +0.00%, Net: $-3.36 Fase 3)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-19 10:24:20",
-      "account_id": "SIM-094",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "SUIUSDT",
-      "side": "LONG",
-      "entry_price": 0.6576,
-      "exit_price": 0.6576,
-      "pnl_usd": -6.85,
-      "result": "LOSS",
-      "notes": "LOSS on SUIUSDT (PnL: +0.00%, Net: $-6.85 Fase 3)",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-19 10:24:20",
       "account_id": "SIM-097",
@@ -8474,6 +8422,74 @@
       "context": {
         "score": 48,
         "rsi_15m": 66.91,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 13:43:21",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "WIFUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1556,
+      "exit_price": 0.1554,
+      "pnl_usd": -0.0,
+      "result": "WIN",
+      "notes": "WIN on WIFUSDT (PnL: +0.13%, Net: $-0.00 Fase 3)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 54.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 13:43:21",
+      "account_id": "SIM-083",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "WIFUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1556,
+      "exit_price": 0.1554,
+      "pnl_usd": -0.0,
+      "result": "WIN",
+      "notes": "WIN on WIFUSDT (PnL: +0.13%, Net: $-0.00 Fase 3)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 54.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 13:43:21",
+      "account_id": "SIM-093",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "WIFUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1556,
+      "exit_price": 0.1554,
+      "pnl_usd": -0.48,
+      "result": "LOSS",
+      "notes": "LOSS on WIFUSDT (PnL: +0.13%, Net: $-0.48 Fase 3)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 54.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 13:43:21",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "WIFUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1556,
+      "exit_price": 0.1554,
+      "pnl_usd": -0.0,
+      "result": "WIN",
+      "notes": "WIN on WIFUSDT (PnL: +0.13%, Net: $-0.00 Fase 3)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 54.56,
         "macro_trend_4h": "NEUTRAL"
       }
     }
