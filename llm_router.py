@@ -518,35 +518,36 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
     🏛️ PROTOCOLO DINÁMICO DE DECISIÓN DEL SÚPER-CEREBRO EN 4 PASOS:
     
-    PASO 1 🏔️ FILTRO MANDATORIO DE SUELO ESTRUCTURAL & GATILLO 1M (CERO CUCHILLOS CAYENDO):
+    PASO 1 🏔️ FILTRO MANDATORIO DE SUELO ESTRUCTURAL & MOMENTUM DORADO:
     - Revisa la ESTRUCTURA DE SUELO 15M, el GATILLO SNIPER 1M/5M y la MATRIZ FRACTAL DE SUELO 7D de cada candidato.
-    - REGLA DEL PISO INTRADÍA: El candidato DEBE estar en zona de soporte o pullback (1H <= 58% y 15M <= 52%).
-    - GATILLO SNIPER OBLIGATORIO: Exige que el GATILLO SNIPER muestre '🟢 LISTO PARA DISPARAR' (o equivalente alcista). Prohibido comprar antes de que el sniper 1M confirme el giro.
-    - VETO ANTI-CASCADA: Si el candidato tiene "🔴 CASCADA 15M EN CURSO" (3+ velas rojas consecutivas en 15M sin mecha de absorción), RECHÁZALO de inmediato. PROHIBIDO comprar mientras sigue cayendo.
-    - REGLA ANTI-FOMO 1M: Exige que el precio esté retesteando la base de 1M (Anti-FOMO=True, cerca de EMA9 1M).
-    - VETO TECHO: Si 1D > 75% o 4H > 75% (techo extremo) o Sobre-extendido=True o Fomo=True o YA_OPERADO_HOY, RECHÁZALO.
+    - REGLA DEL PISO INTRADÍA: El candidato DEBE estar en zona de soporte o pullback constructivo (1H <= 62% y 15M <= 55%).
+    - ZONA DORADA DE MOMENTUM (WR 70%+): Prioriza candidatos con RSI 15M entre 52 y 75 (tendencia activa con fuerza institucional).
+    - VETO TRAMPA SOBREVENTA (Cuchillo Cayendo): Si RSI 15M < 42 y NO hay divergencia alcista confirmada, RECHÁZALO (evita comprar activos en caída libre).
+    - GATILLO SNIPER OBLIGATORIO: Exige que el GATILLO SNIPER muestre '🟢 LISTO PARA DISPARAR' (vela verde 1M sobre EMA9 + mínimo mayor en 5M). Prohibido comprar antes de que el sniper 1M confirme el giro.
+    - VETO ANTI-CASCADA: Si el candidato tiene "🔴 CASCADA 15M EN CURSO", RECHÁZALO.
+    - VETO TECHO: Si 1D > 75% o 4H > 75% o Sobre-extendido=True o Fomo=True o YA_OPERADO_HOY, RECHÁZALO.
     
     PASO 2 ⏰ FILTRO MACROECONÓMICO Y VOLUMEN REAL:
     - VETO BTC CRASH: Si BTC_GUARD muestra altcoin_impact=AVOID (BTC cayendo > 1.5% en 1H), HOLD obligatorio.
     - VETO FUNDING: Si FUNDING_PERPS muestra DUMP_RISK_FUNDING (funding > 0.05%), evitar. Longs overleveraged = fácil dump.
-    - PRIORIDAD: Tokens con FII >= 50-60, volumen real (> 0.60x), libro comprador (Bids >= 46%) y giro verde confirmado en 1M/2M.
+    - PRIORIDAD: Tokens con FII >= 55-70, volumen real creciente (> 0.60x), libro comprador (Bids >= 48%) y giro verde confirmado en 1M/2M.
     
-    PASO 2B 🧬 EVALUACIÓN ESPECÍFICA SEGÚN ARQUETIPO DE ADN (SIN VETOS CIEGOS):
-    - 🐆 SPRINT HIPER-VOLÁTIL (Memes / High-Beta: PEPE, DOGE, HEI, PENGU, BARD): Exige ignición de volumen sub-minuto brutal (10s/30s/1m >= 1.8x) y Bids >= 52%. Cosecha rápida (+1% a +2%).
-    - 🏛️ BLUE-CHIP CORE (BTC, ETH, SOL, BNB, BCH, LINK): Exige suelo 7D profundo y FII >= 50. Dale tiempo de maduración (60 min) con Trend Ride.
-    - 🧩 ROTACIÓN SECTORIAL (L2, DeFi, AI: ARB, OP, AAVE, UNI, FET): Exige que su sector esté activo o con catalizador.
+    PASO 2B 🧬 EVALUACIÓN ESPECÍFICA SEGÚN ARQUETIPO DE ADN:
+    - 🐆 SPRINT HIPER-VOLÁTIL (Memes / High-Beta: PEPE, DOGE, HEI, PENGU, BARD): Exige ignición de volumen sub-minuto brutal (10s/30s/1m >= 1.8x) y Bids >= 52%.
+    - 🏛️ BLUE-CHIP CORE (BTC, ETH, SOL, BNB, BCH, LINK): Exige suelo 7D profundo y FII >= 50. Dale tiempo de maduración (30-60 min) con Trend Ride.
+    - 🧩 ROTACIÓN SECTORIAL (L2, DeFi, AI: ARB, OP, AAVE, UNI, FET, CRV, ZRO): Exige que su sector esté activo o con catalizador y Bids >= 48%.
     - 🎯 MICRO-CAP / LIBRO DELGADO (MUB, TUT, GPS, DEXE): Exige Bids >= 54% y volumen real creciente.
     
     PASO 3 ⚡ ANÁLISIS DE CONFLUENCIA, DINERO INTELIGENTE Y CVD (SOLO EN EL SUELO):
     - Para los candidatos en el suelo real:
-      * Exige FII >= 45-60 (Inyección de capital en el piso / OBV acumulando).
-      * Exige Bids >= 44% y Flujo CVD Taker positivo o equilibrado.
+      * Exige FII >= 50-70 (Inyección de capital en el piso / OBV acumulando).
+      * Exige Bids >= 48% y Flujo CVD Taker positivo o equilibrado.
       * Exige confirmación de vela verde 1M sobre EMA9 (Gatillo Sniper).
     
     PASO 4 👑 SELECCIÓN DINÁMICA DEL CAMPEÓN #1 Y APROBACIÓN EJECUTIVA:
     - Compara todos los candidatos finalistas y selecciona al MEJOR ACTIVO ABSOLUTO DE TODO EL MERCADO.
     - Emite tu veredicto final con "BUY_LONG", approved: true, confidence: 85-95.
-    - Tu decisión es la autoridad final que ejecutará la orden en Binance Spot con protección de Trailing Proporcional Continuo.
+    - Tu decisión es la autoridad final que ejecutará la orden en Binance Spot con la nueva Arquitectura de Respiración Amplia y Captura de Rallies (+0.50% Break-Even y Trailing al 70%-80%).
     - Si NINGÚN candidato está en el suelo, no tienen el gatillo Sniper 1M listo, el mercado está en crash de BTC, o todos están en VETO_TEMPORAL, responde "selected_symbol": "NONE", "action": "HOLD".
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA (7 AGENTES):

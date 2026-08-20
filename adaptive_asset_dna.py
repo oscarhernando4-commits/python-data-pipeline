@@ -177,65 +177,40 @@ def calculate_archetype_trailing(
     atr_pct: float = 0.30
 ) -> Tuple[float, int, str]:
     """
-    Sistema Dinámico Cuántico de 5 FASES Escaladas:
-    - FASE 1 (Cima < +0.05%): Entrada y absorción base con Stop-Loss defensivo (-2.00%).
-    - FASE 2 (+0.05% <= Cima < +0.50%): 10 Micro-Subpartes Cuánticas de Reducción Progresiva y Cosecha Temprana.
-    - FASE 3 (+0.50% <= Cima < +1.00%): Trailing Proporcional Dinámico retiene el 70% de la cima (Piso = Cima * 0.70).
-    - FASE 4 (+1.00% <= Cima < +2.00%): Trailing Proporcional Dinámico retiene el 75% de la cima (Piso = Cima * 0.75).
-    - FASE 5 (Cima >= +2.00%): Trailing Proporcional Dinámico retiene el 80% de la cima (Piso = Cima * 0.80).
+    Sistema Dinámico Cuántico de Respiración Amplia y Captura de Rallies:
+    - FASE 1 (Cima < +0.50%): Espacio de respiración y absorción de ruido con Stop-Loss defensivo (-2.00%). Cero asfixia.
+    - FASE 2 (+0.50% <= Cima < +1.00%): Break-Even Blindado (+0.15% neto) y Trailing al 60% de la cima.
+    - FASE 3 (+1.00% <= Cima < +2.00%): Expansión Media con retención del 70% de la cima (Piso = Cima * 0.70).
+    - FASE 4 (+2.00% <= Cima < +4.00%): Tendencia Fuerte con retención del 75% de la cima (Piso = Cima * 0.75).
+    - FASE 5 (Cima >= +4.00%): Mega Rally con retención del 80% de la cima (Piso = Cima * 0.80).
     """
     arch = archetype_dna.get("archetype", "SECTOR_ROTATION")
     initial_sl = float(archetype_dna.get("initial_sl_pct", -2.00))
     emoji = archetype_dna.get("emoji", "🧬")
     label = archetype_dna.get("label", arch)
 
-    if highest_pnl_pct >= 2.00:
+    if highest_pnl_pct >= 4.00:
         sl_pct = round(highest_pnl_pct * 0.80, 4)
         phase = 5
-        phase_label = f"👑 FASE 5 TENDENCIA FUERTE ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 1.00:
+        phase_label = f"👑 FASE 5 MEGA RALLY ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 2.00:
         sl_pct = round(highest_pnl_pct * 0.75, 4)
         phase = 4
-        phase_label = f"🚀 FASE 4 EXPANSIÓN MEDIA ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.50:
+        phase_label = f"🚀 FASE 4 TENDENCIA FUERTE ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 1.00:
         sl_pct = round(highest_pnl_pct * 0.70, 4)
         phase = 3
-        phase_label = f"💎 FASE 3 RENDIMIENTO ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 70% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.05:
+        phase_label = f"💎 FASE 3 EXPANSIÓN MEDIA ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 70% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 0.50:
+        # Al tocar +0.50%, salto inmediato a Break-Even (+0.15% neto) o retención del 60%
+        sl_pct = max(0.15, round(highest_pnl_pct * 0.60, 4))
         phase = 2
-        # 10 Micro-Subpartes Cuánticas de Fase 2
-        if highest_pnl_pct >= 0.45:
-            sl_pct = round(highest_pnl_pct * 0.60, 4)
-            sub = "2.10 (Cima >= +0.45%)"
-        elif highest_pnl_pct >= 0.40:
-            sl_pct = round(highest_pnl_pct * 0.40, 4)
-            sub = "2.9 (Cima >= +0.40%)"
-        elif highest_pnl_pct >= 0.35:
-            sl_pct = round(highest_pnl_pct * 0.30, 4)
-            sub = "2.8 (Cima >= +0.35%)"
-        elif highest_pnl_pct >= 0.30:
-            sl_pct = 0.06  # Factor 0.20 -> SL +0.06% (Comisiones Cubiertas)
-            sub = "2.6 (Cima >= +0.30%)"
-        elif highest_pnl_pct >= 0.25:
-            sl_pct = -0.25  # Factor -1.0 -> SL -0.25%
-            sub = "2.5 (Cima >= +0.25%)"
-        elif highest_pnl_pct >= 0.20:
-            sl_pct = -0.40  # Factor -2.0 -> SL -0.40%
-            sub = "2.4 (Cima >= +0.20%)"
-        elif highest_pnl_pct >= 0.15:
-            sl_pct = -0.60  # Factor -4.0 -> SL -0.60%
-            sub = "2.3 (Cima >= +0.15%)"
-        elif highest_pnl_pct >= 0.10:
-            sl_pct = -0.80  # Factor -8.0 -> SL -0.80%
-            sub = "2.2 (Cima >= +0.10%)"
-        else:  # >= 0.05
-            sl_pct = -1.00  # Factor -20.0 -> SL -1.00%
-            sub = "2.1 (Cima >= +0.05%)"
-        phase_label = f"🔒 FASE {sub} ({emoji} Cima +{highest_pnl_pct:.3f}% -> SL {sl_pct:+.3f}%)"
+        phase_label = f"🔒 FASE 2 BREAK-EVEN BLINDADO ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}%)"
     else:
+        # Cima < +0.50%: Respiración completa sin asfixiar la operación
         sl_pct = initial_sl
         phase = 1
-        phase_label = f"🛡️ FASE 1 ENTRADA ({emoji} {label}: SL {initial_sl:.2f}%)"
+        phase_label = f"🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN ({emoji} {label}: Cima +{highest_pnl_pct:.2f}% | SL Defensivo {initial_sl:.2f}%)"
 
     return sl_pct, phase, phase_label
 
