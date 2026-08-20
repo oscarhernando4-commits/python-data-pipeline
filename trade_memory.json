@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1207,
-    "wins": 544,
+    "total_trades": 1210,
+    "wins": 547,
     "losses": 663,
-    "win_rate_pct": 45.07,
-    "total_pnl_usd": -4398.959823000005
+    "win_rate_pct": 45.21,
+    "total_pnl_usd": -4398.4098230000045
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,8 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NEXOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on WLFIUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on JTOUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HEMIUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BBUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HBARUSDT)",
@@ -49,61 +47,12 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on KITEUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on REDUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BOMEUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on AVAXUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on AVAXUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BONKUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on FLOKIUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 05:43:19",
-      "account_id": "SIM-051",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ZAMAUSDT",
-      "side": "LONG",
-      "entry_price": 0.04083,
-      "exit_price": 0.0409,
-      "pnl_usd": 0.0,
-      "result": "WIN",
-      "notes": "WIN on ZAMAUSDT (PnL: +0.17%, Net: $+0.00 Fase 2)",
-      "context": {
-        "score": 32,
-        "rsi_15m": 32.09,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 05:43:19",
-      "account_id": "SIM-052",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ZAMAUSDT",
-      "side": "LONG",
-      "entry_price": 0.04083,
-      "exit_price": 0.0409,
-      "pnl_usd": 0.0,
-      "result": "WIN",
-      "notes": "WIN on ZAMAUSDT (PnL: +0.17%, Net: $+0.00 Fase 2)",
-      "context": {
-        "score": 32,
-        "rsi_15m": 32.09,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 05:45:14",
-      "account_id": "SIM-047",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ARBUSDT",
-      "side": "LONG",
-      "entry_price": 0.075,
-      "exit_price": 0.0759,
-      "pnl_usd": 0.13,
-      "result": "WIN",
-      "notes": "WIN on ARBUSDT (PnL: +1.20%, Net: $+0.13 Fase 3)",
-      "context": {
-        "score": 48,
-        "rsi_15m": 58.57,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 05:49:12",
       "account_id": "SIM-026",
@@ -8346,6 +8295,57 @@
       "context": {
         "score": 57,
         "rsi_15m": 61.67,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 07:57:17",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "BONKUSDT",
+      "side": "LONG",
+      "entry_price": 2.48e-06,
+      "exit_price": 2.49e-06,
+      "pnl_usd": 0.05,
+      "result": "WIN",
+      "notes": "WIN on BONKUSDT (PnL: +0.40%, Net: $+0.05 Fase 3)",
+      "context": {
+        "score": 55,
+        "rsi_15m": 60.83,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 07:57:17",
+      "account_id": "SIM-054",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "FLOKIUSDT",
+      "side": "LONG",
+      "entry_price": 2.191e-05,
+      "exit_price": 2.219e-05,
+      "pnl_usd": 0.26,
+      "result": "WIN",
+      "notes": "WIN on FLOKIUSDT (PnL: +1.28%, Net: $+0.26 Fase 3)",
+      "context": {
+        "score": 40,
+        "rsi_15m": 68.79,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 07:57:17",
+      "account_id": "SIM-060",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "BONKUSDT",
+      "side": "LONG",
+      "entry_price": 2.48e-06,
+      "exit_price": 2.49e-06,
+      "pnl_usd": 0.24,
+      "result": "WIN",
+      "notes": "WIN on BONKUSDT (PnL: +0.40%, Net: $+0.24 Fase 3)",
+      "context": {
+        "score": 55,
+        "rsi_15m": 60.83,
         "macro_trend_4h": "NEUTRAL"
       }
     }
