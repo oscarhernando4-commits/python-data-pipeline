@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1409,
-    "wins": 680,
+    "total_trades": 1412,
+    "wins": 683,
     "losses": 729,
-    "win_rate_pct": 48.26,
-    "total_pnl_usd": -4100.249823000002
+    "win_rate_pct": 48.37,
+    "total_pnl_usd": -4085.549823000002
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SYRUPUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ARBUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on FLOKIUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PENGUUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on XPLUSDT)",
@@ -49,49 +48,11 @@
       "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BOMEUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on AEROUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on WIFUSDT)",
-      "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)"
+      "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on WBETHUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 10:24:19",
-      "account_id": "SIM-000 (Réplica Real)",
-      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
-      "symbol": "GRAMUSDT",
-      "side": "LONG",
-      "entry_price": 1.327,
-      "exit_price": 1.327,
-      "pnl_usd": -0.01,
-      "result": "LOSS",
-      "notes": "LOSS on GRAMUSDT (PnL: +0.00%, Net: $-0.01 Fase 3)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-19 10:24:19",
-      "account_id": "SIM-001",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "BTCUSDT",
-      "side": "LONG",
-      "entry_price": 65206.01,
-      "exit_price": 65206.01,
-      "pnl_usd": -0.02,
-      "result": "LOSS",
-      "notes": "LOSS on BTCUSDT (PnL: +0.00%, Net: $-0.02 Fase 3)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-19 10:24:19",
-      "account_id": "SIM-002",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "BTCUSDT",
-      "side": "LONG",
-      "entry_price": 65206.01,
-      "exit_price": 65206.01,
-      "pnl_usd": -0.02,
-      "result": "LOSS",
-      "notes": "LOSS on BTCUSDT (PnL: +0.00%, Net: $-0.02 Fase 3)",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-19 10:24:19",
       "account_id": "SIM-003",
@@ -8434,6 +8395,57 @@
       "context": {
         "score": 32,
         "rsi_15m": 56.48,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 13:27:24",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "WBETHUSDT",
+      "side": "LONG",
+      "entry_price": 2518.23,
+      "exit_price": 2524.66,
+      "pnl_usd": 14.66,
+      "result": "WIN",
+      "notes": "WIN on WBETHUSDT (PnL: +0.26%, Net: $+14.66 Fase 3)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 54.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 13:27:24",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "WBETHUSDT",
+      "side": "LONG",
+      "entry_price": 2518.23,
+      "exit_price": 2524.66,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on WBETHUSDT (PnL: +0.26%, Net: $+0.02 Fase 3)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 54.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 13:27:24",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "WBETHUSDT",
+      "side": "LONG",
+      "entry_price": 2518.23,
+      "exit_price": 2524.66,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on WBETHUSDT (PnL: +0.26%, Net: $+0.02 Fase 3)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 54.64,
         "macro_trend_4h": "NEUTRAL"
       }
     }
