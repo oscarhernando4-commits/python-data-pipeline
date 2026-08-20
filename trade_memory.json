@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1127,
-    "wins": 490,
+    "total_trades": 1130,
+    "wins": 493,
     "losses": 637,
-    "win_rate_pct": 43.48,
-    "total_pnl_usd": -4784.099823000006
+    "win_rate_pct": 43.63,
+    "total_pnl_usd": -4783.719823000006
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HBARUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLFIUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GPSUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ENAUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on WLFIUSDT)",
@@ -49,57 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HEMIUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on AVAXUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ICPUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TRUMPUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TRUMPUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on STXUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-18 18:32:12",
-      "account_id": "SIM-052",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "WLFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.0605,
-      "exit_price": 0.0605,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on WLFIUSDT (PnL: +0.00%, Net: $-0.03 Fase 2)",
-      "context": {
-        "score": 51,
-        "rsi_15m": 47.35,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-18 18:32:12",
-      "account_id": "SIM-054",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "WLFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.0605,
-      "exit_price": 0.0605,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on WLFIUSDT (PnL: +0.00%, Net: $-0.03 Fase 2)",
-      "context": {
-        "score": 51,
-        "rsi_15m": 47.35,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-18 18:34:26",
-      "account_id": "SIM-018",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "EULUSDT",
-      "side": "LONG",
-      "entry_price": 1.168,
-      "exit_price": 1.168,
-      "pnl_usd": -0.07,
-      "result": "LOSS",
-      "notes": "LOSS on EULUSDT (PnL: +0.00%, Net: $-0.07 Fase 2)",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-18 18:36:29",
       "account_id": "SIM-048",
@@ -8320,6 +8273,57 @@
       "context": {
         "score": 32,
         "rsi_15m": 44.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 04:11:25",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "STXUSDT",
+      "side": "LONG",
+      "entry_price": 0.1314,
+      "exit_price": 0.132,
+      "pnl_usd": 0.23,
+      "result": "WIN",
+      "notes": "WIN on STXUSDT (PnL: +0.46%, Net: $+0.23 Fase 3)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 66.82,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 04:11:25",
+      "account_id": "SIM-045",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "STXUSDT",
+      "side": "LONG",
+      "entry_price": 0.1314,
+      "exit_price": 0.132,
+      "pnl_usd": 0.05,
+      "result": "WIN",
+      "notes": "WIN on STXUSDT (PnL: +0.46%, Net: $+0.05 Fase 3)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 66.82,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 04:11:25",
+      "account_id": "SIM-046",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "STXUSDT",
+      "side": "LONG",
+      "entry_price": 0.1314,
+      "exit_price": 0.132,
+      "pnl_usd": 0.1,
+      "result": "WIN",
+      "notes": "WIN on STXUSDT (PnL: +0.46%, Net: $+0.10 Fase 3)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 66.82,
         "macro_trend_4h": "NEUTRAL"
       }
     }
