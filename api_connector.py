@@ -891,23 +891,49 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             atr_pct=atr_pct
         )
     except Exception as e:
-        # Fallback to standard 5-Phase Escalation Architecture
+        # Fallback to standard 5-Phase Escalation Architecture with 10 Micro-Subparts in Phase 2
         if highest_pnl_pct >= 2.00:
-            sl_pct = round(highest_pnl_pct * 0.80, 2)
+            sl_pct = round(highest_pnl_pct * 0.80, 4)
             phase = 5
             phase_label = f"👑 FASE 5 TENDENCIA FUERTE (Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
         elif highest_pnl_pct >= 1.00:
-            sl_pct = round(highest_pnl_pct * 0.75, 2)
+            sl_pct = round(highest_pnl_pct * 0.75, 4)
             phase = 4
             phase_label = f"🚀 FASE 4 EXPANSIÓN MEDIA (Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
         elif highest_pnl_pct >= 0.50:
-            sl_pct = round(highest_pnl_pct * 0.70, 2)
+            sl_pct = round(highest_pnl_pct * 0.70, 4)
             phase = 3
             phase_label = f"💎 FASE 3 RENDIMIENTO (Cima +{highest_pnl_pct:.2f}% | Retención 70% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.20:
-            sl_pct = -0.80
+        elif highest_pnl_pct >= 0.05:
             phase = 2
-            phase_label = f"🔒 FASE 2 PROTECCIÓN (Cima +{highest_pnl_pct:.2f}% | Riesgo Reducido -> SL -0.80%)"
+            if highest_pnl_pct >= 0.45:
+                sl_pct = round(highest_pnl_pct * 0.60, 4)
+                sub = "2.10"
+            elif highest_pnl_pct >= 0.40:
+                sl_pct = round(highest_pnl_pct * 0.40, 4)
+                sub = "2.9"
+            elif highest_pnl_pct >= 0.35:
+                sl_pct = round(highest_pnl_pct * 0.30, 4)
+                sub = "2.8"
+            elif highest_pnl_pct >= 0.30:
+                sl_pct = 0.00
+                sub = "2.7"
+            elif highest_pnl_pct >= 0.25:
+                sl_pct = round(highest_pnl_pct * 0.80, 4)
+                sub = "2.6"
+            elif highest_pnl_pct >= 0.20:
+                sl_pct = -0.40
+                sub = "2.4"
+            elif highest_pnl_pct >= 0.15:
+                sl_pct = -0.60
+                sub = "2.3"
+            elif highest_pnl_pct >= 0.10:
+                sl_pct = -0.80
+                sub = "2.2"
+            else:
+                sl_pct = -1.00
+                sub = "2.1"
+            phase_label = f"🔒 FASE {sub} PROTECCIÓN (Cima +{highest_pnl_pct:.3f}% -> SL {sl_pct:+.3f}%)"
         else:
             sl_pct = -2.00
             phase = 1
