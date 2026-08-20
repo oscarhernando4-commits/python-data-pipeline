@@ -1,9 +1,9 @@
 {
   "stats": {
-    "total_trades": 1177,
-    "wins": 521,
+    "total_trades": 1179,
+    "wins": 523,
     "losses": 656,
-    "win_rate_pct": 44.27,
+    "win_rate_pct": 44.36,
     "total_pnl_usd": -4401.009823000006
   },
   "learned_rules": {
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MUBARAKUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XPLUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BBUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOTUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BBUSDT)",
@@ -49,44 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HEMIUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BBUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HBARUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ASTERUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ASTERUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BIOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-18 21:56:19",
-      "account_id": "SIM-030",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "OPGUSDT",
-      "side": "SHORT",
-      "entry_price": 0.1041,
-      "exit_price": 0.1001,
-      "pnl_usd": 0.09,
-      "result": "WIN",
-      "notes": "WIN on OPGUSDT (PnL: +3.84%, Net: $+0.09 Fase 3)",
-      "context": {
-        "score": 65,
-        "rsi_15m": 40.67,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-18 22:06:25",
-      "account_id": "SIM-026",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "HEIUSDT",
-      "side": "SHORT",
-      "entry_price": 0.1372,
-      "exit_price": 0.1398,
-      "pnl_usd": -0.41,
-      "result": "LOSS",
-      "notes": "LOSS on HEIUSDT (PnL: -1.90%, Net: $-0.41 Fase 1)",
-      "context": {
-        "score": 96,
-        "rsi_15m": 63.98,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-18 22:06:25",
       "account_id": "SIM-027",
@@ -8344,6 +8310,40 @@
       "context": {
         "score": 38,
         "rsi_15m": 45.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 06:29:56",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "BIOUSDT",
+      "side": "LONG",
+      "entry_price": 0.02985,
+      "exit_price": 0.02989,
+      "pnl_usd": -0.0,
+      "result": "WIN",
+      "notes": "WIN on BIOUSDT (PnL: +0.13%, Net: $-0.00 Fase 2)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 69.26,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 06:29:56",
+      "account_id": "SIM-054",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "BIOUSDT",
+      "side": "LONG",
+      "entry_price": 0.02985,
+      "exit_price": 0.02989,
+      "pnl_usd": -0.0,
+      "result": "WIN",
+      "notes": "WIN on BIOUSDT (PnL: +0.13%, Net: $-0.00 Fase 2)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 69.26,
         "macro_trend_4h": "NEUTRAL"
       }
     }
