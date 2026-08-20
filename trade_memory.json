@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1126,
-    "wins": 489,
+    "total_trades": 1127,
+    "wins": 490,
     "losses": 637,
-    "win_rate_pct": 43.43,
-    "total_pnl_usd": -4784.259823000006
+    "win_rate_pct": 43.48,
+    "total_pnl_usd": -4784.099823000006
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HBARUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on UNIUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLFIUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GPSUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ENAUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on REUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HEMIUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on AVAXUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ICPUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ICPUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TRUMPUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-18 18:32:12",
-      "account_id": "SIM-050",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "WLFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.0605,
-      "exit_price": 0.0605,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on WLFIUSDT (PnL: +0.00%, Net: $-0.03 Fase 2)",
-      "context": {
-        "score": 51,
-        "rsi_15m": 47.35,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-18 18:32:12",
       "account_id": "SIM-052",
@@ -8320,6 +8303,23 @@
       "context": {
         "score": 32,
         "rsi_15m": 45.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 04:03:33",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TRUMPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.686,
+      "exit_price": 1.669,
+      "pnl_usd": 0.16,
+      "result": "WIN",
+      "notes": "WIN on TRUMPUSDT (PnL: +1.01%, Net: $+0.16 Fase 3)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 44.99,
         "macro_trend_4h": "NEUTRAL"
       }
     }
