@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1366,
-    "wins": 650,
+    "total_trades": 1368,
+    "wins": 652,
     "losses": 716,
-    "win_rate_pct": 47.58,
-    "total_pnl_usd": -4061.059823000003
+    "win_rate_pct": 47.66,
+    "total_pnl_usd": -4060.9098230000027
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BIOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ZROUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on FLOKIUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ENAUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on REUSDT)",
@@ -49,44 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ARBUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on FLOKIUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PENGUUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on XPLUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on XPLUSDT)",
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 13:58:22",
-      "account_id": "SIM-093",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "UNIUSDT",
-      "side": "LONG",
-      "entry_price": 3.384,
-      "exit_price": 3.378,
-      "pnl_usd": -7.31,
-      "result": "LOSS",
-      "notes": "LOSS on UNIUSDT (PnL: -0.18%, Net: $-7.31 Fase 2)",
-      "context": {
-        "score": 50,
-        "rsi_15m": 58.81,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 13:58:22",
-      "account_id": "SIM-094",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "LTCUSDT",
-      "side": "SHORT",
-      "entry_price": 44.22,
-      "exit_price": 44.95,
-      "pnl_usd": -82.56,
-      "result": "LOSS",
-      "notes": "LOSS on LTCUSDT (PnL: -1.65%, Net: $-82.56 Fase 1)",
-      "context": {
-        "score": 48,
-        "rsi_15m": 59.28,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 14:09:15",
       "account_id": "SIM-003",
@@ -8406,6 +8372,40 @@
       "context": {
         "score": 50,
         "rsi_15m": 59.52,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 12:01:28",
+      "account_id": "SIM-043",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ROBOUSDT",
+      "side": "LONG",
+      "entry_price": 0.01345,
+      "exit_price": 0.01351,
+      "pnl_usd": 0.1,
+      "result": "WIN",
+      "notes": "WIN on ROBOUSDT (PnL: +0.45%, Net: $+0.10 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 71.15,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 12:01:28",
+      "account_id": "SIM-044",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ROBOUSDT",
+      "side": "LONG",
+      "entry_price": 0.01345,
+      "exit_price": 0.01351,
+      "pnl_usd": 0.05,
+      "result": "WIN",
+      "notes": "WIN on ROBOUSDT (PnL: +0.45%, Net: $+0.05 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 71.15,
         "macro_trend_4h": "NEUTRAL"
       }
     }
