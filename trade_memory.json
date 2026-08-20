@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1755,
-    "wins": 834,
+    "total_trades": 1758,
+    "wins": 837,
     "losses": 921,
-    "win_rate_pct": 47.52,
-    "total_pnl_usd": -5414.2386771511965
+    "win_rate_pct": 47.61,
+    "total_pnl_usd": -5413.628677151197
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BOMEUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LTCUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOGEUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BICOUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on METUSDT)",
@@ -49,61 +48,11 @@
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ONGUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ORDIUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ICPUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on AVAXUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on AVAXUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ZROUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 08:55:22",
-      "account_id": "SIM-046",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "BOMEUSDT",
-      "side": "LONG",
-      "entry_price": 0.0011138,
-      "exit_price": 0.0011438,
-      "pnl_usd": 0.82,
-      "result": "WIN",
-      "notes": "WIN on BOMEUSDT (PnL: +2.69%, Net: $+0.82 Fase 3)",
-      "context": {
-        "score": 41,
-        "rsi_15m": 78.87,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 08:59:29",
-      "account_id": "SIM-031",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ZROUSDT",
-      "side": "LONG",
-      "entry_price": 0.902,
-      "exit_price": 0.913,
-      "pnl_usd": 0.2,
-      "result": "WIN",
-      "notes": "WIN on ZROUSDT (PnL: +1.22%, Net: $+0.20 Fase 3)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 68.75,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 08:59:29",
-      "account_id": "SIM-052",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "FLOKIUSDT",
-      "side": "LONG",
-      "entry_price": 2.285e-05,
-      "exit_price": 2.289e-05,
-      "pnl_usd": 0.0,
-      "result": "WIN",
-      "notes": "WIN on FLOKIUSDT (PnL: +0.18%, Net: $+0.00 Fase 3)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 79.85,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 08:59:29",
       "account_id": "SIM-054",
@@ -8478,6 +8427,57 @@
       "context": {
         "score": 38,
         "rsi_15m": 44.86,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 21:47:22",
+      "account_id": "SIM-048",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ZROUSDT",
+      "side": "LONG",
+      "entry_price": 0.866,
+      "exit_price": 0.877,
+      "pnl_usd": 0.2,
+      "result": "WIN",
+      "notes": "WIN on ZROUSDT (PnL: +1.27%, Net: $+0.20 Fase 3)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 58.13,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 21:47:22",
+      "account_id": "SIM-049",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ZROUSDT",
+      "side": "LONG",
+      "entry_price": 0.866,
+      "exit_price": 0.877,
+      "pnl_usd": 0.19,
+      "result": "WIN",
+      "notes": "WIN on ZROUSDT (PnL: +1.27%, Net: $+0.19 Fase 3)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 58.13,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 21:47:22",
+      "account_id": "SIM-050",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ZROUSDT",
+      "side": "LONG",
+      "entry_price": 0.866,
+      "exit_price": 0.877,
+      "pnl_usd": 0.22,
+      "result": "WIN",
+      "notes": "WIN on ZROUSDT (PnL: +1.27%, Net: $+0.22 Fase 3)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 58.13,
         "macro_trend_4h": "NEUTRAL"
       }
     }
