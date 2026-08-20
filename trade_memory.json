@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1605,
-    "wins": 769,
+    "total_trades": 1608,
+    "wins": 772,
     "losses": 836,
-    "win_rate_pct": 47.91,
-    "total_pnl_usd": -5182.645847151198
+    "win_rate_pct": 48.01,
+    "total_pnl_usd": -5181.405847151197
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PEOPLEUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DASHUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ASTERUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TRXUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XRPUSDT)",
@@ -49,61 +48,11 @@
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PEOPLEUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on FETUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLDUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on AAVEUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on AAVEUSDT)",
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on FETUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 02:09:42",
-      "account_id": "SIM-000 (Réplica Real)",
-      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
-      "symbol": "WLDUSDT",
-      "side": "LONG",
-      "entry_price": 0.3616,
-      "exit_price": 0.363,
-      "pnl_usd": 0.02,
-      "result": "WIN",
-      "notes": "WIN on WLDUSDT (PnL: +0.39%, Net: $+0.02 Fase 3)",
-      "context": {
-        "score": 48,
-        "rsi_15m": 56.88,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 02:09:42",
-      "account_id": "SIM-093",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "PENGUUSDT",
-      "side": "LONG",
-      "entry_price": 0.006488,
-      "exit_price": 0.00651,
-      "pnl_usd": 4.22,
-      "result": "WIN",
-      "notes": "WIN on PENGUUSDT (PnL: +0.34%, Net: $+4.22 Fase 3)",
-      "context": {
-        "score": 48,
-        "rsi_15m": 57.69,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 21:01:23",
-      "account_id": "SIM-039",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "XPLUSDT",
-      "side": "SHORT",
-      "entry_price": 0.08179,
-      "exit_price": 0.08182,
-      "pnl_usd": -0.0,
-      "result": "WIN",
-      "notes": "WIN on XPLUSDT (PnL: -0.04%, Net: $-0.00 Fase 2)",
-      "context": {
-        "score": 88,
-        "rsi_15m": 63.05,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 21:01:23",
       "account_id": "SIM-093",
@@ -8516,6 +8465,57 @@
       "result": "LOSS",
       "notes": "LOSS on OPUSDT (PnL: +0.00%, Net: $-0.02 Fase 2)",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-20 17:51:21",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "FETUSDT",
+      "side": "LONG",
+      "entry_price": 0.1418,
+      "exit_price": 0.1435,
+      "pnl_usd": 0.77,
+      "result": "WIN",
+      "notes": "WIN on FETUSDT (PnL: +1.20%, Net: $+0.77 Fase 5)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 77.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 17:51:21",
+      "account_id": "SIM-046",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "FETUSDT",
+      "side": "LONG",
+      "entry_price": 0.1418,
+      "exit_price": 0.1435,
+      "pnl_usd": 0.33,
+      "result": "WIN",
+      "notes": "WIN on FETUSDT (PnL: +1.20%, Net: $+0.33 Fase 5)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 77.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 17:51:21",
+      "account_id": "SIM-047",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "FETUSDT",
+      "side": "LONG",
+      "entry_price": 0.1418,
+      "exit_price": 0.1435,
+      "pnl_usd": 0.14,
+      "result": "WIN",
+      "notes": "WIN on FETUSDT (PnL: +1.20%, Net: $+0.14 Fase 5)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 77.0,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
