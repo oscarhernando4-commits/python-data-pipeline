@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1634,
-    "wins": 788,
+    "total_trades": 1635,
+    "wins": 789,
     "losses": 846,
-    "win_rate_pct": 48.23,
-    "total_pnl_usd": -5079.895847151197
+    "win_rate_pct": 48.26,
+    "total_pnl_usd": -5079.865847151197
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on AAVEUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZECUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HEIUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HBARUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEARUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on NEARUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on RAYUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PENGUUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on UNIUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on UNIUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ORDIUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 04:23:19",
-      "account_id": "SIM-013",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "MUBUSDT",
-      "side": "LONG",
-      "entry_price": 953.76,
-      "exit_price": 955.01,
-      "pnl_usd": -0.0,
-      "result": "WIN",
-      "notes": "WIN on MUBUSDT (PnL: +0.13%, Net: $-0.00 Fase 2)",
-      "context": {
-        "score": 54,
-        "rsi_15m": 60.18,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 04:23:19",
       "account_id": "SIM-018",
@@ -8514,6 +8497,23 @@
       "context": {
         "score": 50,
         "rsi_15m": 60.83,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:07:28",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ORDIUSDT",
+      "side": "SHORT",
+      "entry_price": 4.166,
+      "exit_price": 4.152,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on ORDIUSDT (PnL: +0.34%, Net: $+0.03 Fase 3)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 47.7,
         "macro_trend_4h": "NEUTRAL"
       }
     }
