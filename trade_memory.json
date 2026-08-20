@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1320,
-    "wins": 624,
+    "total_trades": 1321,
+    "wins": 625,
     "losses": 696,
-    "win_rate_pct": 47.27,
-    "total_pnl_usd": -4134.489823000001
+    "win_rate_pct": 47.31,
+    "total_pnl_usd": -4134.469823
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on THETAUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on XPLUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on REDUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BOMEUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on NEXOUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BBUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ORDIUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HBARUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on XRPUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on XRPUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PENDLEUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 07:15:28",
-      "account_id": "SIM-000 (Réplica Real)",
-      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
-      "symbol": "HEIUSDT",
-      "side": "LONG",
-      "entry_price": 0.1451,
-      "exit_price": 0.1451,
-      "pnl_usd": -0.01,
-      "result": "LOSS",
-      "notes": "LOSS on HEIUSDT (PnL: +0.00%, Net: $-0.01 Fase 3)",
-      "context": {
-        "score": 86,
-        "rsi_15m": 62.14,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 07:20:59",
       "account_id": "SIM-047",
@@ -8362,6 +8345,23 @@
       "context": {
         "score": 40,
         "rsi_15m": 74.59,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 10:25:27",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "PENDLEUSDT",
+      "side": "LONG",
+      "entry_price": 1.439,
+      "exit_price": 1.454,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on PENDLEUSDT (PnL: +1.04%, Net: $+0.02 Fase 3)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 43.43,
         "macro_trend_4h": "NEUTRAL"
       }
     }
