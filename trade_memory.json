@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1448,
+    "total_trades": 1449,
     "wins": 693,
-    "losses": 755,
-    "win_rate_pct": 47.86,
-    "total_pnl_usd": -4215.990623000001
+    "losses": 756,
+    "win_rate_pct": 47.83,
+    "total_pnl_usd": -4216.016803
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 12:23:20",
-      "account_id": "SIM-014",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "TRXUSDT",
-      "side": "LONG",
-      "entry_price": 0.3327,
-      "exit_price": 0.3331,
-      "pnl_usd": -0.0,
-      "result": "WIN",
-      "notes": "WIN on TRXUSDT (PnL: +0.12%, Net: $-0.00 Fase 2)",
-      "context": {
-        "score": 76,
-        "rsi_15m": 49.74,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 12:23:20",
       "account_id": "SIM-015",
@@ -8492,6 +8475,19 @@
         "rsi_15m": 49.22,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-20 09:58:19",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "POLUSDT",
+      "side": "BUY",
+      "entry_price": 0.08179,
+      "exit_price": 0.08165,
+      "pnl_usd": -0.02618000000000023,
+      "result": "LOSS",
+      "notes": "Real Money Trade closed with -0.17%",
+      "context": {}
     }
   ]
 }
