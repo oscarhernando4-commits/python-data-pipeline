@@ -8084,197 +8084,168 @@
       }
     },
     {
-      "timestamp": "2026-08-20 13:10:27",
-      "account_id": "SIM-093",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "ENAUSDT",
+      "timestamp": "2026-08-20 18:33:21",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "IOTAUSDT",
+      "side": "LONG",
+      "entry_price": 0.0367,
+      "exit_price": 0.0374,
+      "pnl_usd": 0.04,
+      "result": "WIN",
+      "notes": "WIN on IOTAUSDT (PnL: +1.91%, Net: $+0.04 Fase 5)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 58.49,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:35:01",
+      "account_id": "SIM-023",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "WLDUSDT",
+      "side": "LONG",
+      "entry_price": 0.3679,
+      "exit_price": 0.364,
+      "pnl_usd": -0.26,
+      "result": "LOSS",
+      "notes": "LOSS on WLDUSDT (PnL: -1.06%, Net: $-0.26 Fase 2)",
+      "context": {
+        "score": 43,
+        "rsi_15m": 47.28,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:35:01",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TWTUSDT",
       "side": "SHORT",
-      "entry_price": 0.1069,
-      "exit_price": 0.1068,
-      "pnl_usd": -1.28,
+      "entry_price": 0.4153,
+      "exit_price": 0.4153,
+      "pnl_usd": -0.03,
       "result": "LOSS",
-      "notes": "LOSS on ENAUSDT (PnL: +0.09%, Net: $-1.28 Fase 3)",
-      "context": {
-        "score": 74,
-        "rsi_15m": 78.27,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 13:12:25",
-      "account_id": "SIM-011",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "GPSUSDT",
-      "side": "LONG",
-      "entry_price": 0.01197,
-      "exit_price": 0.01175,
-      "pnl_usd": -0.35,
-      "result": "LOSS",
-      "notes": "LOSS on GPSUSDT (PnL: -1.84%, Net: $-0.35 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 43.45,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 13:12:25",
-      "account_id": "SIM-013",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "GPSUSDT",
-      "side": "LONG",
-      "entry_price": 0.01197,
-      "exit_price": 0.01175,
-      "pnl_usd": -0.22,
-      "result": "LOSS",
-      "notes": "LOSS on GPSUSDT (PnL: -1.84%, Net: $-0.22 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 43.45,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 13:12:25",
-      "account_id": "SIM-014",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "GPSUSDT",
-      "side": "LONG",
-      "entry_price": 0.01197,
-      "exit_price": 0.01175,
-      "pnl_usd": -0.23,
-      "result": "LOSS",
-      "notes": "LOSS on GPSUSDT (PnL: -1.84%, Net: $-0.23 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 43.45,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 13:18:35",
-      "account_id": "R-01",
-      "group_name": "CUENTA REAL",
-      "symbol": "REDUSDT",
-      "side": "BUY",
-      "entry_price": 0.1044,
-      "exit_price": 0.1041,
-      "pnl_usd": -0.042510000000001213,
-      "result": "LOSS",
-      "notes": "Real Money Trade closed with -0.29%",
+      "notes": "LOSS on TWTUSDT (PnL: +0.00%, Net: $-0.03 Fase 4)",
       "context": {}
     },
     {
-      "timestamp": "2026-08-20 13:23:23",
-      "account_id": "SIM-000 (Réplica Real)",
-      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
-      "symbol": "XPLUSDT",
-      "side": "SHORT",
-      "entry_price": 0.08773,
-      "exit_price": 0.08733,
-      "pnl_usd": 0.02,
-      "result": "WIN",
-      "notes": "WIN on XPLUSDT (PnL: +0.46%, Net: $+0.02 Fase 3)",
+      "timestamp": "2026-08-20 18:35:03",
+      "account_id": "SIM-050",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "SEIUSDT",
+      "side": "LONG",
+      "entry_price": 0.0429,
+      "exit_price": 0.04262,
+      "pnl_usd": -0.16,
+      "result": "LOSS",
+      "notes": "LOSS on SEIUSDT (PnL: -0.65%, Net: $-0.16 Fase 2)",
       "context": {
-        "score": 92,
-        "rsi_15m": 56.04,
+        "score": 38,
+        "rsi_15m": 48.37,
         "macro_trend_4h": "NEUTRAL"
       }
     },
     {
-      "timestamp": "2026-08-20 13:25:27",
+      "timestamp": "2026-08-20 18:35:03",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "SEIUSDT",
+      "side": "LONG",
+      "entry_price": 0.0429,
+      "exit_price": 0.04262,
+      "pnl_usd": -0.15,
+      "result": "LOSS",
+      "notes": "LOSS on SEIUSDT (PnL: -0.65%, Net: $-0.15 Fase 2)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 48.37,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:35:03",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "SEIUSDT",
+      "side": "LONG",
+      "entry_price": 0.0429,
+      "exit_price": 0.04262,
+      "pnl_usd": -0.15,
+      "result": "LOSS",
+      "notes": "LOSS on SEIUSDT (PnL: -0.65%, Net: $-0.15 Fase 2)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 48.37,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:35:03",
+      "account_id": "SIM-091",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "STXUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1409,
+      "exit_price": 0.1409,
+      "pnl_usd": -0.03,
+      "result": "LOSS",
+      "notes": "LOSS on STXUSDT (PnL: +0.00%, Net: $-0.03 Fase 2)",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-20 18:35:03",
       "account_id": "SIM-093",
       "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "XLMUSDT",
+      "symbol": "XTZUSDT",
       "side": "SHORT",
-      "entry_price": 0.1831,
-      "exit_price": 0.1836,
-      "pnl_usd": -9.57,
+      "entry_price": 0.2214,
+      "exit_price": 0.2214,
+      "pnl_usd": -3.39,
       "result": "LOSS",
-      "notes": "LOSS on XLMUSDT (PnL: -0.27%, Net: $-9.57 Fase 2)",
-      "context": {
-        "score": 80,
-        "rsi_15m": 52.48,
-        "macro_trend_4h": "NEUTRAL"
-      }
+      "notes": "LOSS on XTZUSDT (PnL: +0.00%, Net: $-3.39 Fase 2)",
+      "context": {}
     },
     {
-      "timestamp": "2026-08-20 13:29:38",
-      "account_id": "SIM-015",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "TAOUSDT",
-      "side": "LONG",
-      "entry_price": 210.8,
-      "exit_price": 212.7,
+      "timestamp": "2026-08-20 18:35:03",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "FFUSDT",
+      "side": "SHORT",
+      "entry_price": 0.06425,
+      "exit_price": 0.06425,
+      "pnl_usd": -0.02,
+      "result": "LOSS",
+      "notes": "LOSS on FFUSDT (PnL: +0.00%, Net: $-0.02 Fase 3)",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-20 18:45:30",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "GALAUSDT",
+      "side": "SHORT",
+      "entry_price": 0.001579,
+      "exit_price": 0.001569,
       "pnl_usd": 0.09,
       "result": "WIN",
-      "notes": "WIN on TAOUSDT (PnL: +0.90%, Net: $+0.09 Fase 4)",
+      "notes": "WIN on GALAUSDT (PnL: +0.63%, Net: $+0.09 Fase 3)",
       "context": {
-        "score": 82,
-        "rsi_15m": 58.36,
+        "score": 41,
+        "rsi_15m": 51.85,
         "macro_trend_4h": "NEUTRAL"
       }
     },
     {
-      "timestamp": "2026-08-20 13:29:38",
-      "account_id": "SIM-016",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "TAOUSDT",
-      "side": "LONG",
-      "entry_price": 210.8,
-      "exit_price": 212.7,
-      "pnl_usd": 0.37,
-      "result": "WIN",
-      "notes": "WIN on TAOUSDT (PnL: +0.90%, Net: $+0.37 Fase 4)",
-      "context": {
-        "score": 82,
-        "rsi_15m": 58.36,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 13:29:38",
-      "account_id": "SIM-018",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "TAOUSDT",
-      "side": "LONG",
-      "entry_price": 210.8,
-      "exit_price": 212.7,
-      "pnl_usd": 0.36,
-      "result": "WIN",
-      "notes": "WIN on TAOUSDT (PnL: +0.90%, Net: $+0.36 Fase 4)",
-      "context": {
-        "score": 82,
-        "rsi_15m": 58.36,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 13:29:38",
-      "account_id": "SIM-031",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "PENGUUSDT",
-      "side": "LONG",
-      "entry_price": 0.00715,
-      "exit_price": 0.007161,
-      "pnl_usd": 0.0,
-      "result": "WIN",
-      "notes": "WIN on PENGUUSDT (PnL: +0.15%, Net: $+0.00 Fase 2)",
-      "context": {
-        "score": 89,
-        "rsi_15m": 53.46,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 13:32:38",
-      "account_id": "R-01",
-      "group_name": "CUENTA REAL",
-      "symbol": "ZECUSDT",
-      "side": "BUY",
-      "entry_price": 566.98,
-      "exit_price": 565.3,
-      "pnl_usd": -0.043680000000001655,
+      "timestamp": "2026-08-20 18:45:30",
+      "account_id": "SIM-091",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "STXUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1406,
+      "exit_price": 0.1413,
+      "pnl_usd": -0.11,
       "result": "LOSS",
       "notes": "Real Money Trade closed with -0.30%",
       "context": {}
