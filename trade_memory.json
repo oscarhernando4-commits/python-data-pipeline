@@ -1,9 +1,9 @@
 {
   "stats": {
-    "total_trades": 1259,
-    "wins": 583,
+    "total_trades": 1260,
+    "wins": 584,
     "losses": 676,
-    "win_rate_pct": 46.31,
+    "win_rate_pct": 46.35,
     "total_pnl_usd": -4432.459823000002
   },
   "learned_rules": {
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 09:55:07",
-      "account_id": "SIM-032",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "OPUSDT",
-      "side": "LONG",
-      "entry_price": 0.0815,
-      "exit_price": 0.0818,
-      "pnl_usd": 0.05,
-      "result": "WIN",
-      "notes": "WIN on OPUSDT (PnL: +0.37%, Net: $+0.05 Fase 3)",
-      "context": {
-        "score": 50,
-        "rsi_15m": 50.67,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 09:55:07",
       "account_id": "SIM-050",
@@ -8346,6 +8329,23 @@
       "context": {
         "score": 45,
         "rsi_15m": 79.85,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 09:01:36",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ETHFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.5727,
+      "exit_price": 0.5744,
+      "pnl_usd": 0.0,
+      "result": "WIN",
+      "notes": "WIN on ETHFIUSDT (PnL: +0.30%, Net: $+0.00 Fase 3)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 76.4,
         "macro_trend_4h": "NEUTRAL"
       }
     }
