@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1138,
-    "wins": 499,
+    "total_trades": 1139,
+    "wins": 500,
     "losses": 639,
-    "win_rate_pct": 43.85,
-    "total_pnl_usd": -4755.339823000005
+    "win_rate_pct": 43.9,
+    "total_pnl_usd": -4755.019823000005
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on FFUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HBARUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZROUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ASTERUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GPSUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on STXUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on XPLUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MUBUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ASTERUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ASTERUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on METUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-18 19:20:40",
-      "account_id": "SIM-015",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "ZAMAUSDT",
-      "side": "LONG",
-      "entry_price": 0.04134,
-      "exit_price": 0.04141,
-      "pnl_usd": 0.0,
-      "result": "WIN",
-      "notes": "WIN on ZAMAUSDT (PnL: +0.17%, Net: $+0.00 Fase 3)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 49.34,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-18 19:20:40",
       "account_id": "SIM-031",
@@ -8328,6 +8311,23 @@
       "context": {
         "score": 45,
         "rsi_15m": 72.08,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 04:47:32",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "METUSDT",
+      "side": "SHORT",
+      "entry_price": 0.2155,
+      "exit_price": 0.2115,
+      "pnl_usd": 0.32,
+      "result": "WIN",
+      "notes": "WIN on METUSDT (PnL: +1.86%, Net: $+0.32 Fase 3)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 51.3,
         "macro_trend_4h": "NEUTRAL"
       }
     }
