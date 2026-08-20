@@ -177,32 +177,23 @@ def calculate_archetype_trailing(
     atr_pct: float = 0.30
 ) -> Tuple[float, int, str]:
     """
-    Calculates dynamic stop-loss and trailing floor.
-    - Fase 1 (Cima < +0.50%): Stop-loss defensivo base (-2.00%).
-    - Fase 2, 3 y 4 (Cima >= +0.50%): Trailing Proporcional Dinámico reteniendo exactamente el 75% de la cima máxima alcanzada (sl_pct = highest * 0.75).
+    Sistema Dinámico Cuántico de 2 FASES:
+    - FASE 1 (Cima < +0.50%): Entrada y absorción base con Stop-Loss defensivo (-2.00%).
+    - FASE 2 (Cima >= +0.50%): Trailing Proporcional Dinámico retiene el 80% de la cima alcanzada (Piso = Cima * 0.80).
     """
     arch = archetype_dna.get("archetype", "SECTOR_ROTATION")
     initial_sl = float(archetype_dna.get("initial_sl_pct", -2.00))
     p2_trigger = float(archetype_dna.get("phase_2_trigger_pct", 0.50))
-    p3_trigger = float(archetype_dna.get("phase_3_trigger_pct", 2.20))
     emoji = archetype_dna.get("emoji", "🧬")
     label = archetype_dna.get("label", arch)
 
-    # 🎯 FÓRMULA PROPORCIONAL DINÁMICA: Retiene el 75% exacto de la cima (Tolera un 25% de retroceso)
-    retention_ratio = 0.75
+    # 🎯 FÓRMULA PROPORCIONAL DINÁMICA: Retiene el 80% de la cima más alta (Tolera 20% de retroceso)
+    retention_ratio = 0.80
 
-    if highest_pnl_pct >= 5.00:
-        sl_pct = round(highest_pnl_pct * retention_ratio, 2)
-        phase = 4
-        phase_label = f"🚀 FASE 4 MEGAPUMP ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= p3_trigger:
-        sl_pct = round(highest_pnl_pct * retention_ratio, 2)
-        phase = 3
-        phase_label = f"💎 FASE 3 EXPANSIÓN ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= p2_trigger:
+    if highest_pnl_pct >= p2_trigger:
         sl_pct = round(highest_pnl_pct * retention_ratio, 2)
         phase = 2
-        phase_label = f"🔒 FASE 2 RENDIMIENTO ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
+        phase_label = f"🚀 FASE 2 TRAILING 80% ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
     else:
         sl_pct = initial_sl
         phase = 1
