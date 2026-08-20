@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1712,
-    "wins": 816,
+    "total_trades": 1715,
+    "wins": 819,
     "losses": 896,
-    "win_rate_pct": 47.66,
-    "total_pnl_usd": -5394.208677151196
+    "win_rate_pct": 47.76,
+    "total_pnl_usd": -5394.018677151195
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MORPHOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZECUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ENAUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XPLUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TAOUSDT)",
@@ -49,61 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on REDUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ENAUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on CVXUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on CRVUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on CRVUSDT)",
+      "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TUTUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 08:01:40",
-      "account_id": "SIM-042",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ETHFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.5361,
-      "exit_price": 0.5648,
-      "pnl_usd": 3.83,
-      "result": "WIN",
-      "notes": "WIN on ETHFIUSDT (PnL: +5.35%, Net: $+3.83 Fase 3)",
-      "context": {
-        "score": 46,
-        "rsi_15m": 80.51,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 08:01:40",
-      "account_id": "SIM-045",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ETHFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.5417,
-      "exit_price": 0.5648,
-      "pnl_usd": 0.71,
-      "result": "WIN",
-      "notes": "WIN on ETHFIUSDT (PnL: +4.26%, Net: $+0.71 Fase 3)",
-      "context": {
-        "score": 46,
-        "rsi_15m": 80.51,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 08:01:40",
-      "account_id": "SIM-046",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ETHFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.5417,
-      "exit_price": 0.5648,
-      "pnl_usd": 1.3,
-      "result": "WIN",
-      "notes": "WIN on ETHFIUSDT (PnL: +4.26%, Net: $+1.30 Fase 3)",
-      "context": {
-        "score": 46,
-        "rsi_15m": 80.51,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 08:11:50",
       "account_id": "SIM-070",
@@ -8494,6 +8443,57 @@
       "context": {
         "score": 45,
         "rsi_15m": 90.99,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 20:17:32",
+      "account_id": "SIM-026",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.03597,
+      "exit_price": 0.03581,
+      "pnl_usd": 0.06,
+      "result": "WIN",
+      "notes": "WIN on TUTUSDT (PnL: +0.44%, Net: $+0.06 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 76.55,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 20:17:32",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.03597,
+      "exit_price": 0.03581,
+      "pnl_usd": 0.07,
+      "result": "WIN",
+      "notes": "WIN on TUTUSDT (PnL: +0.44%, Net: $+0.07 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 76.55,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 20:17:32",
+      "account_id": "SIM-031",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.03597,
+      "exit_price": 0.03581,
+      "pnl_usd": 0.06,
+      "result": "WIN",
+      "notes": "WIN on TUTUSDT (PnL: +0.44%, Net: $+0.06 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 76.55,
         "macro_trend_4h": "NEUTRAL"
       }
     }
