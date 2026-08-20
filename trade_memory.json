@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1413,
-    "wins": 680,
+    "total_trades": 1416,
+    "wins": 683,
     "losses": 733,
-    "win_rate_pct": 48.12,
-    "total_pnl_usd": -4163.360622999999
+    "win_rate_pct": 48.23,
+    "total_pnl_usd": -4163.350622999998
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on LTCUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HBARUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on XRPUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PENDLEUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on AVAXUSDT)",
@@ -49,49 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HEMIUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BBUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MUBUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HBARUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HBARUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XLMUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 10:24:19",
-      "account_id": "SIM-003",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "XRPUSDT",
-      "side": "LONG",
-      "entry_price": 1.0178,
-      "exit_price": 1.0178,
-      "pnl_usd": -0.02,
-      "result": "LOSS",
-      "notes": "LOSS on XRPUSDT (PnL: +0.00%, Net: $-0.02 Fase 3)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-19 10:24:19",
-      "account_id": "SIM-011",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "XPLUSDT",
-      "side": "LONG",
-      "entry_price": 0.07748,
-      "exit_price": 0.07748,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on XPLUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-19 10:24:19",
-      "account_id": "SIM-016",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "XRPUSDT",
-      "side": "LONG",
-      "entry_price": 1.0178,
-      "exit_price": 1.0178,
-      "pnl_usd": -0.07,
-      "result": "LOSS",
-      "notes": "LOSS on XRPUSDT (PnL: +0.00%, Net: $-0.07 Fase 3)",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-19 10:24:19",
       "account_id": "SIM-018",
@@ -8442,6 +8403,57 @@
       "context": {
         "score": 81,
         "rsi_15m": 59.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 09:21:28",
+      "account_id": "SIM-011",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "XLMUSDT",
+      "side": "LONG",
+      "entry_price": 0.1819,
+      "exit_price": 0.1822,
+      "pnl_usd": 0.0,
+      "result": "WIN",
+      "notes": "WIN on XLMUSDT (PnL: +0.16%, Net: $+0.00 Fase 2)",
+      "context": {
+        "score": 72,
+        "rsi_15m": 65.33,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 09:21:28",
+      "account_id": "SIM-013",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "XLMUSDT",
+      "side": "LONG",
+      "entry_price": 0.1819,
+      "exit_price": 0.1822,
+      "pnl_usd": 0.0,
+      "result": "WIN",
+      "notes": "WIN on XLMUSDT (PnL: +0.16%, Net: $+0.00 Fase 2)",
+      "context": {
+        "score": 72,
+        "rsi_15m": 65.33,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 09:21:28",
+      "account_id": "SIM-018",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "XLMUSDT",
+      "side": "LONG",
+      "entry_price": 0.1819,
+      "exit_price": 0.1822,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on XLMUSDT (PnL: +0.16%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 72,
+        "rsi_15m": 65.33,
         "macro_trend_4h": "NEUTRAL"
       }
     }
