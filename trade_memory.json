@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1412,
-    "wins": 683,
-    "losses": 729,
-    "win_rate_pct": 48.37,
-    "total_pnl_usd": -4085.549823000002
+    "total_trades": 1415,
+    "wins": 685,
+    "losses": 730,
+    "win_rate_pct": 48.41,
+    "total_pnl_usd": -4269.139823000002
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SYRUPUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on FLOKIUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PENGUUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on XPLUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)",
@@ -49,49 +48,11 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on AEROUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on WIFUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on WBETHUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on WBETHUSDT)",
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SYRUPUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 10:24:19",
-      "account_id": "SIM-003",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "XRPUSDT",
-      "side": "LONG",
-      "entry_price": 1.0178,
-      "exit_price": 1.0178,
-      "pnl_usd": -0.02,
-      "result": "LOSS",
-      "notes": "LOSS on XRPUSDT (PnL: +0.00%, Net: $-0.02 Fase 3)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-19 10:24:19",
-      "account_id": "SIM-011",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "XPLUSDT",
-      "side": "LONG",
-      "entry_price": 0.07748,
-      "exit_price": 0.07748,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on XPLUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-19 10:24:19",
-      "account_id": "SIM-016",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "XRPUSDT",
-      "side": "LONG",
-      "entry_price": 1.0178,
-      "exit_price": 1.0178,
-      "pnl_usd": -0.07,
-      "result": "LOSS",
-      "notes": "LOSS on XRPUSDT (PnL: +0.00%, Net: $-0.07 Fase 3)",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-19 10:24:19",
       "account_id": "SIM-018",
@@ -8446,6 +8407,57 @@
       "context": {
         "score": 48,
         "rsi_15m": 54.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 13:31:25",
+      "account_id": "SIM-023",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "SYRUPUSDT",
+      "side": "LONG",
+      "entry_price": 0.173,
+      "exit_price": 0.1742,
+      "pnl_usd": 0.12,
+      "result": "WIN",
+      "notes": "WIN on SYRUPUSDT (PnL: +0.69%, Net: $+0.12 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 76.49,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 13:31:25",
+      "account_id": "SIM-026",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "SYRUPUSDT",
+      "side": "LONG",
+      "entry_price": 0.173,
+      "exit_price": 0.1742,
+      "pnl_usd": 0.11,
+      "result": "WIN",
+      "notes": "WIN on SYRUPUSDT (PnL: +0.69%, Net: $+0.11 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 76.49,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 13:31:25",
+      "account_id": "SIM-094",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BOMEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0012141,
+      "exit_price": 0.0012623,
+      "pnl_usd": -183.82,
+      "result": "LOSS",
+      "notes": "LOSS on BOMEUSDT (PnL: -3.97%, Net: $-183.82 Fase 1)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 62.22,
         "macro_trend_4h": "NEUTRAL"
       }
     }
