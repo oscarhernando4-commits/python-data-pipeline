@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1251,
-    "wins": 575,
+    "total_trades": 1255,
+    "wins": 579,
     "losses": 676,
-    "win_rate_pct": 45.96,
-    "total_pnl_usd": -4435.959823000002
+    "win_rate_pct": 46.14,
+    "total_pnl_usd": -4432.689823000002
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,74 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 09:29:35",
-      "account_id": "SIM-002",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "SOLUSDT",
-      "side": "LONG",
-      "entry_price": 77.07,
-      "exit_price": 77.33,
-      "pnl_usd": 0.02,
-      "result": "WIN",
-      "notes": "WIN on SOLUSDT (PnL: +0.34%, Net: $+0.02 Fase 2)",
-      "context": {
-        "score": 54,
-        "rsi_15m": 60.75,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 09:31:53",
-      "account_id": "SIM-026",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "AXSUSDT",
-      "side": "SHORT",
-      "entry_price": 0.853,
-      "exit_price": 0.853,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on AXSUSDT (PnL: +0.00%, Net: $-0.03 Fase 2)",
-      "context": {
-        "score": 48,
-        "rsi_15m": 58.18,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 09:31:53",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "AXSUSDT",
-      "side": "SHORT",
-      "entry_price": 0.853,
-      "exit_price": 0.853,
-      "pnl_usd": -21.23,
-      "result": "LOSS",
-      "notes": "LOSS on AXSUSDT (PnL: +0.00%, Net: $-21.23 Fase 2)",
-      "context": {
-        "score": 48,
-        "rsi_15m": 58.18,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 09:31:53",
-      "account_id": "SIM-028",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "AXSUSDT",
-      "side": "SHORT",
-      "entry_price": 0.853,
-      "exit_price": 0.853,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on AXSUSDT (PnL: +0.00%, Net: $-0.03 Fase 2)",
-      "context": {
-        "score": 48,
-        "rsi_15m": 58.18,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 09:41:19",
       "account_id": "SIM-051",
@@ -8346,6 +8278,74 @@
       "context": {
         "score": 48,
         "rsi_15m": 52.83,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 08:55:21",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "BOMEUSDT",
+      "side": "LONG",
+      "entry_price": 0.0010983,
+      "exit_price": 0.0011438,
+      "pnl_usd": 0.1,
+      "result": "WIN",
+      "notes": "WIN on BOMEUSDT (PnL: +4.14%, Net: $+0.10 Fase 3)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 78.87,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 08:55:22",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "BOMEUSDT",
+      "side": "LONG",
+      "entry_price": 0.0011138,
+      "exit_price": 0.0011438,
+      "pnl_usd": 1.9,
+      "result": "WIN",
+      "notes": "WIN on BOMEUSDT (PnL: +2.69%, Net: $+1.90 Fase 3)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 78.87,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 08:55:22",
+      "account_id": "SIM-045",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "BOMEUSDT",
+      "side": "LONG",
+      "entry_price": 0.0011138,
+      "exit_price": 0.0011438,
+      "pnl_usd": 0.45,
+      "result": "WIN",
+      "notes": "WIN on BOMEUSDT (PnL: +2.69%, Net: $+0.45 Fase 3)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 78.87,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 08:55:22",
+      "account_id": "SIM-046",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "BOMEUSDT",
+      "side": "LONG",
+      "entry_price": 0.0011138,
+      "exit_price": 0.0011438,
+      "pnl_usd": 0.82,
+      "result": "WIN",
+      "notes": "WIN on BOMEUSDT (PnL: +2.69%, Net: $+0.82 Fase 3)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 78.87,
         "macro_trend_4h": "NEUTRAL"
       }
     }
