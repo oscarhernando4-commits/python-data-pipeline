@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1697,
+    "total_trades": 1699,
     "wins": 810,
-    "losses": 887,
-    "win_rate_pct": 47.73,
-    "total_pnl_usd": -5391.218677151195
+    "losses": 889,
+    "win_rate_pct": 47.68,
+    "total_pnl_usd": -5392.8586771511955
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,40 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 07:17:49",
-      "account_id": "SIM-039",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ETHFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.5333,
-      "exit_price": 0.538,
-      "pnl_usd": 0.02,
-      "result": "WIN",
-      "notes": "WIN on ETHFIUSDT (PnL: +0.88%, Net: $+0.02 Fase 3)",
-      "context": {
-        "score": 46,
-        "rsi_15m": 71.02,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 07:17:49",
-      "account_id": "SIM-054",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ETHFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.5333,
-      "exit_price": 0.538,
-      "pnl_usd": 0.17,
-      "result": "WIN",
-      "notes": "WIN on ETHFIUSDT (PnL: +0.88%, Net: $+0.17 Fase 3)",
-      "context": {
-        "score": 46,
-        "rsi_15m": 71.02,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 07:25:56",
       "account_id": "SIM-060",
@@ -8494,6 +8460,40 @@
       "context": {
         "score": 46,
         "rsi_15m": 84.18,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 20:03:34",
+      "account_id": "SIM-026",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ONGUSDT",
+      "side": "SHORT",
+      "entry_price": 0.09522,
+      "exit_price": 0.09872,
+      "pnl_usd": -0.76,
+      "result": "LOSS",
+      "notes": "LOSS on ONGUSDT (PnL: -3.68%, Net: $-0.76 Fase 1)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 85.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 20:03:34",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ONGUSDT",
+      "side": "SHORT",
+      "entry_price": 0.09522,
+      "exit_price": 0.09872,
+      "pnl_usd": -0.88,
+      "result": "LOSS",
+      "notes": "LOSS on ONGUSDT (PnL: -3.68%, Net: $-0.88 Fase 1)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 85.9,
         "macro_trend_4h": "NEUTRAL"
       }
     }
