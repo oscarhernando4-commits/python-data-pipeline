@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1476,
+    "total_trades": 1477,
     "wins": 703,
-    "losses": 773,
-    "win_rate_pct": 47.63,
-    "total_pnl_usd": -4227.684963
+    "losses": 774,
+    "win_rate_pct": 47.6,
+    "total_pnl_usd": -4228.0380071512
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 15:53:40",
-      "account_id": "SIM-070",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "AVAXUSDT",
-      "side": "SHORT",
-      "entry_price": 6.6,
-      "exit_price": 6.746,
-      "pnl_usd": -0.45,
-      "result": "LOSS",
-      "notes": "LOSS on AVAXUSDT (PnL: -2.21%, Net: $-0.45 Fase 1)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 78.97,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 15:55:17",
       "account_id": "SIM-042",
@@ -8520,6 +8503,19 @@
         "rsi_15m": 56.61,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-20 11:04:07",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "BICOUSDT",
+      "side": "BUY",
+      "entry_price": 0.01965656,
+      "exit_price": 0.0192,
+      "pnl_usd": -0.3530441512000013,
+      "result": "LOSS",
+      "notes": "Real Money Trade closed with -2.32%",
+      "context": {}
     }
   ]
 }
