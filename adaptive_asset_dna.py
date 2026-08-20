@@ -215,21 +215,21 @@ def calculate_archetype_trailing(
             sub = "2.8 (Cima >= +0.35%)"
         elif highest_pnl_pct >= 0.30:
             sl_pct = 0.00  # Break-Even
-            sub = "2.7 (Cima >= +0.30%)"
+            sub = "2.6 (Cima >= +0.30%)"
         elif highest_pnl_pct >= 0.25:
-            sl_pct = round(highest_pnl_pct * 0.80, 4)
-            sub = "2.6 (Cima >= +0.25%)"
+            sl_pct = -0.25  # Factor -1.0 -> SL -0.25%
+            sub = "2.5 (Cima >= +0.25%)"
         elif highest_pnl_pct >= 0.20:
-            sl_pct = -0.40
+            sl_pct = -0.40  # Factor -2.0 -> SL -0.40%
             sub = "2.4 (Cima >= +0.20%)"
         elif highest_pnl_pct >= 0.15:
-            sl_pct = -0.60
+            sl_pct = -0.60  # Factor -4.0 -> SL -0.60%
             sub = "2.3 (Cima >= +0.15%)"
         elif highest_pnl_pct >= 0.10:
-            sl_pct = -0.80
+            sl_pct = -0.80  # Factor -8.0 -> SL -0.80%
             sub = "2.2 (Cima >= +0.10%)"
         else:  # >= 0.05
-            sl_pct = -1.00
+            sl_pct = -1.00  # Factor -20.0 -> SL -1.00%
             sub = "2.1 (Cima >= +0.05%)"
         phase_label = f"🔒 FASE {sub} ({emoji} Cima +{highest_pnl_pct:.3f}% -> SL {sl_pct:+.3f}%)"
     else:
