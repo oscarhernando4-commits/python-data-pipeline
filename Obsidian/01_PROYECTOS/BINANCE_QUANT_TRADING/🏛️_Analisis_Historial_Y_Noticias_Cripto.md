@@ -3127,3 +3127,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2026-06-04 (-14.04%)`, `2026-02-04 (-13.26%)`, `2025-11-19 (-11.5%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: MANAUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-24` hasta `2026-08-19` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.0705 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.8556 USD` (`2024-12-03`) | Distancia: `-91.76%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0465 USD` (`2025-10-09`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-11-23 (+37.74%)`, `2024-11-15 (+24.96%)`, `2026-06-19 (+16.29%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-27.1%)`, `2024-04-12 (-19.12%)`, `2024-12-08 (-18.64%)`
+
+---
