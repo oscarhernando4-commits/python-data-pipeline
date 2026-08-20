@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 1368,
-    "wins": 652,
-    "losses": 716,
-    "win_rate_pct": 47.66,
-    "total_pnl_usd": -4060.9098230000027
+    "total_trades": 1374,
+    "wins": 655,
+    "losses": 719,
+    "win_rate_pct": 47.67,
+    "total_pnl_usd": -3981.529823000003
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BOMEUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on 2ZUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MUBUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on JTOUSDT)",
@@ -27,10 +26,10 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ORDIUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on METUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on NIGHTUSDT)",
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BIOUSDT)"
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BIOUSDT)",
+      "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on XLMUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on FLOKIUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ENAUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on REUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PYTHUSDT)",
@@ -49,100 +48,11 @@
       "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on FLOKIUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PENGUUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on XPLUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on SYRUPUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 14:09:15",
-      "account_id": "SIM-003",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "LINKUSDT",
-      "side": "LONG",
-      "entry_price": 9.639,
-      "exit_price": 9.693,
-      "pnl_usd": 0.05,
-      "result": "WIN",
-      "notes": "WIN on LINKUSDT (PnL: +0.56%, Net: $+0.05 Fase 3)",
-      "context": {
-        "score": 38,
-        "rsi_15m": 45.92,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 14:09:15",
-      "account_id": "SIM-050",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "MUBARAKUSDT",
-      "side": "LONG",
-      "entry_price": 0.01868,
-      "exit_price": 0.01868,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on MUBARAKUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-19 14:09:15",
-      "account_id": "SIM-051",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "MUBARAKUSDT",
-      "side": "LONG",
-      "entry_price": 0.01868,
-      "exit_price": 0.01868,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on MUBARAKUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-19 14:09:15",
-      "account_id": "SIM-052",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "MUBARAKUSDT",
-      "side": "LONG",
-      "entry_price": 0.01868,
-      "exit_price": 0.01868,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on MUBARAKUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-19 14:09:15",
-      "account_id": "SIM-093",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "UNIUSDT",
-      "side": "LONG",
-      "entry_price": 3.384,
-      "exit_price": 3.389,
-      "pnl_usd": -0.05,
-      "result": "LOSS",
-      "notes": "LOSS on UNIUSDT (PnL: +0.15%, Net: $-0.05 Fase 2)",
-      "context": {
-        "score": 50,
-        "rsi_15m": 61.54,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 14:09:15",
-      "account_id": "SIM-094",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "LTCUSDT",
-      "side": "SHORT",
-      "entry_price": 44.22,
-      "exit_price": 45.04,
-      "pnl_usd": -91.89,
-      "result": "LOSS",
-      "notes": "LOSS on LTCUSDT (PnL: -1.85%, Net: $-91.89 Fase 1)",
-      "context": {
-        "score": 59,
-        "rsi_15m": 63.83,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 08:59:03",
       "account_id": "SIM-054",
@@ -8406,6 +8316,108 @@
       "context": {
         "score": 46,
         "rsi_15m": 71.15,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 12:05:25",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "SYRUPUSDT",
+      "side": "LONG",
+      "entry_price": 0.1667,
+      "exit_price": 0.1679,
+      "pnl_usd": 79.2,
+      "result": "WIN",
+      "notes": "WIN on SYRUPUSDT (PnL: +0.72%, Net: $+79.20 Fase 3)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 62.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 12:05:25",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "SYRUPUSDT",
+      "side": "LONG",
+      "entry_price": 0.1667,
+      "exit_price": 0.1679,
+      "pnl_usd": 0.11,
+      "result": "WIN",
+      "notes": "WIN on SYRUPUSDT (PnL: +0.72%, Net: $+0.11 Fase 3)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 62.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 12:05:25",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "SYRUPUSDT",
+      "side": "LONG",
+      "entry_price": 0.1667,
+      "exit_price": 0.1679,
+      "pnl_usd": 0.13,
+      "result": "WIN",
+      "notes": "WIN on SYRUPUSDT (PnL: +0.72%, Net: $+0.13 Fase 3)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 62.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 12:05:25",
+      "account_id": "SIM-053",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "XLMUSDT",
+      "side": "LONG",
+      "entry_price": 0.1813,
+      "exit_price": 0.1815,
+      "pnl_usd": -0.01,
+      "result": "LOSS",
+      "notes": "LOSS on XLMUSDT (PnL: +0.11%, Net: $-0.01 Fase 2)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 81.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 12:05:25",
+      "account_id": "SIM-054",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "XLMUSDT",
+      "side": "LONG",
+      "entry_price": 0.1813,
+      "exit_price": 0.1815,
+      "pnl_usd": -0.01,
+      "result": "LOSS",
+      "notes": "LOSS on XLMUSDT (PnL: +0.11%, Net: $-0.01 Fase 2)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 81.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 12:05:25",
+      "account_id": "SIM-060",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "XLMUSDT",
+      "side": "LONG",
+      "entry_price": 0.1813,
+      "exit_price": 0.1815,
+      "pnl_usd": -0.04,
+      "result": "LOSS",
+      "notes": "LOSS on XLMUSDT (PnL: +0.11%, Net: $-0.04 Fase 2)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 81.69,
         "macro_trend_4h": "NEUTRAL"
       }
     }
