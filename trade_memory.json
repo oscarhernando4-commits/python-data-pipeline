@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 1779,
+    "total_trades": 1780,
     "wins": 854,
-    "losses": 925,
-    "win_rate_pct": 48.0,
-    "total_pnl_usd": -5414.773317151195
+    "losses": 926,
+    "win_rate_pct": 47.98,
+    "total_pnl_usd": -5415.183317151195
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on BICOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on LINKUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on FILUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on INJUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONTUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BOMEUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PUMPUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ALGOUSDT)"
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ALGOUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONGUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on REDUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 09:55:46",
-      "account_id": "SIM-054",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "WLFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.062,
-      "exit_price": 0.0607,
-      "pnl_usd": -0.51,
-      "result": "LOSS",
-      "notes": "LOSS on WLFIUSDT (PnL: -2.10%, Net: $-0.51 Fase 1)",
-      "context": {
-        "score": 55,
-        "rsi_15m": 51.13,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 09:55:46",
       "account_id": "SIM-060",
@@ -8474,6 +8457,23 @@
       "context": {
         "score": 50,
         "rsi_15m": 66.32,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 22:09:20",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "ONGUSDT",
+      "side": "SHORT",
+      "entry_price": 0.13668,
+      "exit_price": 0.14526,
+      "pnl_usd": -0.41,
+      "result": "LOSS",
+      "notes": "LOSS on ONGUSDT (PnL: -6.28%, Net: $-0.41 Fase 1)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 64.74,
         "macro_trend_4h": "NEUTRAL"
       }
     }
