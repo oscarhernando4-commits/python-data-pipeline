@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1389,
-    "wins": 663,
+    "total_trades": 1391,
+    "wins": 665,
     "losses": 726,
-    "win_rate_pct": 47.73,
-    "total_pnl_usd": -3981.359823000003
+    "win_rate_pct": 47.81,
+    "total_pnl_usd": -3981.109823000003
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BOMEUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ICPUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HEMIUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ASTERUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BBUSDT)",
@@ -49,40 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ETHFIUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ARBUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on IOTAUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PYTHUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PYTHUSDT)",
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DOTUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 09:48:59",
-      "account_id": "SIM-031",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "SUIUSDT",
-      "side": "SHORT",
-      "entry_price": 0.6531,
-      "exit_price": 0.6631,
-      "pnl_usd": -0.32,
-      "result": "LOSS",
-      "notes": "LOSS on SUIUSDT (PnL: -1.53%, Net: $-0.32 Fase 1)",
-      "context": {
-        "score": 91,
-        "rsi_15m": 64.93,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 10:01:13",
-      "account_id": "SIM-011",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "BCHUSDT",
-      "side": "LONG",
-      "entry_price": 205.5,
-      "exit_price": 205.5,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on BCHUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-19 10:01:13",
       "account_id": "SIM-060",
@@ -8422,6 +8392,40 @@
       "context": {
         "score": 36,
         "rsi_15m": 46.77,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 12:45:22",
+      "account_id": "SIM-023",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.819,
+      "exit_price": 0.825,
+      "pnl_usd": 0.13,
+      "result": "WIN",
+      "notes": "WIN on DOTUSDT (PnL: +0.73%, Net: $+0.13 Fase 3)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 75.54,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 12:45:22",
+      "account_id": "SIM-026",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 0.819,
+      "exit_price": 0.825,
+      "pnl_usd": 0.12,
+      "result": "WIN",
+      "notes": "WIN on DOTUSDT (PnL: +0.73%, Net: $+0.12 Fase 3)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 75.54,
         "macro_trend_4h": "NEUTRAL"
       }
     }
