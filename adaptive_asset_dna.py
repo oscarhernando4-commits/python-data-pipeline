@@ -177,23 +177,29 @@ def calculate_archetype_trailing(
     atr_pct: float = 0.30
 ) -> Tuple[float, int, str]:
     """
-    Sistema Dinámico Cuántico de 2 FASES:
-    - FASE 1 (Cima < +0.50%): Entrada y absorción base con Stop-Loss defensivo (-2.00%).
-    - FASE 2 (Cima >= +0.50%): Trailing Proporcional Dinámico retiene el 80% de la cima alcanzada (Piso = Cima * 0.80).
+    Sistema Dinámico Cuántico de 3 FASES:
+    - FASE 1 (Cima < +0.20%): Entrada y absorción base con Stop-Loss defensivo (-2.00%).
+    - FASE 2 (Cima >= +0.20%): Reducción Temprana de Riesgo (Stop-Loss se ajusta de -2.00% a -0.80%).
+    - FASE 3 (Cima >= +0.50%): Trailing Proporcional Dinámico retiene el 80% de la cima alcanzada (Piso = Cima * 0.80).
     """
     arch = archetype_dna.get("archetype", "SECTOR_ROTATION")
     initial_sl = float(archetype_dna.get("initial_sl_pct", -2.00))
-    p2_trigger = float(archetype_dna.get("phase_2_trigger_pct", 0.50))
+    p2_trigger = 0.20  # Activa reducción temprana de riesgo
+    p3_trigger = 0.50  # Activa Trailing 80% en verde
     emoji = archetype_dna.get("emoji", "🧬")
     label = archetype_dna.get("label", arch)
 
-    # 🎯 FÓRMULA PROPORCIONAL DINÁMICA: Retiene el 80% de la cima más alta (Tolera 20% de retroceso)
+    # 🎯 FÓRMULA PROPORCIONAL DINÁMICA: Retiene el 80% de la cima en Fase 3
     retention_ratio = 0.80
 
-    if highest_pnl_pct >= p2_trigger:
+    if highest_pnl_pct >= p3_trigger:
         sl_pct = round(highest_pnl_pct * retention_ratio, 2)
+        phase = 3
+        phase_label = f"🚀 FASE 3 TRAILING 80% ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= p2_trigger:
+        sl_pct = -0.80  # Riesgo recortado al tocar +0.20%
         phase = 2
-        phase_label = f"🚀 FASE 2 TRAILING 80% ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
+        phase_label = f"🔒 FASE 2 PROTECCIÓN ({emoji} Cima +{highest_pnl_pct:.2f}% | Riesgo Reducido -> SL -0.80%)"
     else:
         sl_pct = initial_sl
         phase = 1
