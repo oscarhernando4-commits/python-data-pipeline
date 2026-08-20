@@ -8261,53 +8261,155 @@
       }
     },
     {
-      "timestamp": "2026-08-20 16:30:26",
-      "account_id": "SIM-053",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "AVAXUSDT",
+      "timestamp": "2026-08-20 21:31:27",
+      "account_id": "SIM-011",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ICPUSDT",
       "side": "LONG",
-      "entry_price": 7.139,
-      "exit_price": 7.181,
-      "pnl_usd": 0.09,
+      "entry_price": 2.37,
+      "exit_price": 2.38,
+      "pnl_usd": 0.05,
       "result": "WIN",
-      "notes": "WIN on AVAXUSDT (PnL: +0.59%, Net: $+0.09 Fase 3)",
+      "notes": "WIN on ICPUSDT (PnL: +0.42%, Net: $+0.05 Fase 2)",
       "context": {
-        "score": 0,
-        "rsi_15m": 55.98,
+        "score": 59,
+        "rsi_15m": 60.23,
         "macro_trend_4h": "NEUTRAL"
       }
     },
     {
-      "timestamp": "2026-08-20 16:30:26",
-      "account_id": "SIM-054",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "AVAXUSDT",
+      "timestamp": "2026-08-20 21:31:27",
+      "account_id": "SIM-013",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ICPUSDT",
       "side": "LONG",
-      "entry_price": 7.139,
-      "exit_price": 7.181,
+      "entry_price": 2.37,
+      "exit_price": 2.38,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on ICPUSDT (PnL: +0.42%, Net: $+0.03 Fase 2)",
+      "context": {
+        "score": 59,
+        "rsi_15m": 60.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 21:31:27",
+      "account_id": "SIM-014",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ICPUSDT",
+      "side": "LONG",
+      "entry_price": 2.37,
+      "exit_price": 2.38,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on ICPUSDT (PnL: +0.42%, Net: $+0.03 Fase 2)",
+      "context": {
+        "score": 59,
+        "rsi_15m": 60.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 21:45:21",
+      "account_id": "SIM-091",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BOMEUSDT",
+      "side": "LONG",
+      "entry_price": 0.0011725,
+      "exit_price": 0.0011385,
+      "pnl_usd": -0.07,
+      "result": "LOSS",
+      "notes": "LOSS on BOMEUSDT (PnL: -2.90%, Net: $-0.07 Fase 1)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 44.86,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 21:47:22",
+      "account_id": "SIM-048",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ZROUSDT",
+      "side": "LONG",
+      "entry_price": 0.866,
+      "exit_price": 0.877,
+      "pnl_usd": 0.2,
+      "result": "WIN",
+      "notes": "WIN on ZROUSDT (PnL: +1.27%, Net: $+0.20 Fase 3)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 58.13,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 21:47:22",
+      "account_id": "SIM-049",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ZROUSDT",
+      "side": "LONG",
+      "entry_price": 0.866,
+      "exit_price": 0.877,
+      "pnl_usd": 0.19,
+      "result": "WIN",
+      "notes": "WIN on ZROUSDT (PnL: +1.27%, Net: $+0.19 Fase 3)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 58.13,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 21:47:22",
+      "account_id": "SIM-050",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ZROUSDT",
+      "side": "LONG",
+      "entry_price": 0.866,
+      "exit_price": 0.877,
+      "pnl_usd": 0.22,
+      "result": "WIN",
+      "notes": "WIN on ZROUSDT (PnL: +1.27%, Net: $+0.22 Fase 3)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 58.13,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 21:51:23",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "ONTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0526,
+      "exit_price": 0.05063,
+      "pnl_usd": 0.23,
+      "result": "WIN",
+      "notes": "WIN on ONTUSDT (PnL: +3.75%, Net: $+0.23 Fase 5)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 54.85,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 21:51:24",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "RAYUSDT",
+      "side": "LONG",
+      "entry_price": 0.685,
+      "exit_price": 0.6903,
       "pnl_usd": 0.08,
       "result": "WIN",
-      "notes": "WIN on AVAXUSDT (PnL: +0.59%, Net: $+0.08 Fase 3)",
+      "notes": "WIN on RAYUSDT (PnL: +0.77%, Net: $+0.08 Fase 3)",
       "context": {
-        "score": 0,
-        "rsi_15m": 55.98,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 16:30:26",
-      "account_id": "SIM-060",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "AVAXUSDT",
-      "side": "LONG",
-      "entry_price": 7.139,
-      "exit_price": 7.181,
-      "pnl_usd": 0.35,
-      "result": "WIN",
-      "notes": "WIN on AVAXUSDT (PnL: +0.59%, Net: $+0.35 Fase 3)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 55.98,
+        "score": 59,
+        "rsi_15m": 54.12,
         "macro_trend_4h": "NEUTRAL"
       }
     },
