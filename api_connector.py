@@ -891,26 +891,20 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             atr_pct=atr_pct
         )
     except Exception as e:
-        # Fallback to standard 4-Phase Proportional Ladder (75% en Fase 2, 70% en Fase 3, 65% en Fase 4)
-        atr = max(0.20, min(1.50, atr_pct if atr_pct and atr_pct > 0 else 0.30))
+        # Fallback to standard 4-Phase Trailing Stop (-0.75% desde la cima máxima en Fase 2, 3 y 4)
+        trailing_delta = 0.75
         if highest_pnl_pct >= 5.00:
-            floor_by_ratio = highest_pnl_pct * 0.65
-            floor_by_slack = highest_pnl_pct - 0.80
-            sl_pct = round(max(3.25, floor_by_ratio, floor_by_slack), 2)
+            sl_pct = round(highest_pnl_pct - trailing_delta, 2)
             phase = 4
-            phase_label = f"🚀 FASE 4 MEGAPUMP (Cima +{highest_pnl_pct:.2f}% | Retención 65% -> Piso +{sl_pct:.2f}%)"
+            phase_label = f"🚀 FASE 4 MEGAPUMP (Cima +{highest_pnl_pct:.2f}% | Trailing -0.75% -> Piso +{sl_pct:.2f}%)"
         elif highest_pnl_pct >= 2.20:
-            floor_by_ratio = highest_pnl_pct * 0.70
-            floor_by_slack = highest_pnl_pct - 0.55
-            sl_pct = round(max(1.54, floor_by_ratio, floor_by_slack), 2)
+            sl_pct = round(highest_pnl_pct - trailing_delta, 2)
             phase = 3
-            phase_label = f"💎 FASE 3 EXPANSIÓN (Cima +{highest_pnl_pct:.2f}% | Retención 70% -> Piso +{sl_pct:.2f}%)"
+            phase_label = f"💎 FASE 3 EXPANSIÓN (Cima +{highest_pnl_pct:.2f}% | Trailing -0.75% -> Piso +{sl_pct:.2f}%)"
         elif highest_pnl_pct >= 0.50:
-            floor_by_ratio = highest_pnl_pct * 0.75
-            floor_by_slack = highest_pnl_pct - 0.35
-            sl_pct = round(max(0.18, floor_by_ratio, floor_by_slack), 2)
+            sl_pct = round(highest_pnl_pct - trailing_delta, 2)
             phase = 2
-            phase_label = f"🔒 FASE 2 RENDIMIENTO (Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
+            phase_label = f"🔒 FASE 2 RENDIMIENTO (Cima +{highest_pnl_pct:.2f}% | Trailing -0.75% -> Piso +{sl_pct:.2f}%)"
         else:
             sl_pct = -2.00
             phase = 1

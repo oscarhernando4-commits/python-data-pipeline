@@ -177,38 +177,32 @@ def calculate_archetype_trailing(
     atr_pct: float = 0.30
 ) -> Tuple[float, int, str]:
     """
-    Calculates dynamic stop-loss, trailing floor, and execution phase tailored
-    specifically to the asset's behavioral DNA (75% en Fase 2, 70% en Fase 3, 65% en Fase 4).
+    Calculates dynamic stop-loss and trailing floor.
+    - Fase 1 (Cima < +0.50%): Stop-loss defensivo base (-2.00%).
+    - Fase 2, 3 y 4 (Cima >= +0.50%): Trailing Stop exacto a -0.75% de la cima máxima alcanzada.
     """
     arch = archetype_dna.get("archetype", "SECTOR_ROTATION")
     initial_sl = float(archetype_dna.get("initial_sl_pct", -2.00))
     p2_trigger = float(archetype_dna.get("phase_2_trigger_pct", 0.50))
-    p2_ratio = float(archetype_dna.get("phase_2_retention_ratio", 0.75))
     p3_trigger = float(archetype_dna.get("phase_3_trigger_pct", 2.20))
-    p3_ratio = float(archetype_dna.get("phase_3_retention_ratio", 0.70))
-    p4_ratio = float(archetype_dna.get("phase_4_retention_ratio", 0.65))
-    wick_slack = float(archetype_dna.get("wick_slack", 0.35))
     emoji = archetype_dna.get("emoji", "🧬")
     label = archetype_dna.get("label", arch)
 
+    # Regla Maestra: -0.75% de holgura fija desde el punto más alto
+    trailing_delta = 0.75
+
     if highest_pnl_pct >= 5.00:
-        floor_by_ratio = highest_pnl_pct * p4_ratio
-        floor_by_slack = highest_pnl_pct - (wick_slack + 0.50)
-        sl_pct = round(max(3.25, floor_by_ratio, floor_by_slack), 2)
+        sl_pct = round(highest_pnl_pct - trailing_delta, 2)
         phase = 4
-        phase_label = f"🚀 FASE 4 MEGAPUMP ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {int(p4_ratio*100)}% -> Piso +{sl_pct:.2f}%)"
+        phase_label = f"🚀 FASE 4 MEGAPUMP ({emoji} Cima +{highest_pnl_pct:.2f}% | Trailing -0.75% -> Piso +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= p3_trigger:
-        floor_by_ratio = highest_pnl_pct * p3_ratio
-        floor_by_slack = highest_pnl_pct - (wick_slack + 0.20)
-        sl_pct = round(max(p3_trigger * p3_ratio, floor_by_ratio, floor_by_slack), 2)
+        sl_pct = round(highest_pnl_pct - trailing_delta, 2)
         phase = 3
-        phase_label = f"💎 FASE 3 EXPANSIÓN ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {int(p3_ratio*100)}% -> Piso +{sl_pct:.2f}%)"
+        phase_label = f"💎 FASE 3 EXPANSIÓN ({emoji} Cima +{highest_pnl_pct:.2f}% | Trailing -0.75% -> Piso +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= p2_trigger:
-        floor_by_ratio = highest_pnl_pct * p2_ratio
-        floor_by_slack = highest_pnl_pct - wick_slack
-        sl_pct = round(max(0.18, floor_by_ratio, floor_by_slack), 2)
+        sl_pct = round(highest_pnl_pct - trailing_delta, 2)
         phase = 2
-        phase_label = f"🔒 FASE 2 RENDIMIENTO ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {int(p2_ratio*100)}% -> Piso +{sl_pct:.2f}%)"
+        phase_label = f"🔒 FASE 2 RENDIMIENTO ({emoji} Cima +{highest_pnl_pct:.2f}% | Trailing -0.75% -> Piso +{sl_pct:.2f}%)"
     else:
         sl_pct = initial_sl
         phase = 1
