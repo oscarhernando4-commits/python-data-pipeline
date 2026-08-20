@@ -487,6 +487,7 @@ def run_infinite_trading_matrix_cycle():
             sl_pct, phase, phase_label = adaptive_asset_dna.calculate_archetype_trailing(
                 archetype_dna=arch_dna,
                 highest_pnl_pct=highest_pnl_pct,
+                current_pnl_pct=unr_pct,
                 holding_minutes=position.get("holding_minutes", 1),
                 atr_pct=atr_pct
             )
