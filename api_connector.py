@@ -1393,17 +1393,17 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             last_closed_time = state.get("_last_closed_time", 0)
             last_exit_price = state.get("_last_exit_price", 0.0)
             time_since_last_exit = time.time() - last_closed_time
-            
             if best_symbol == last_closed_sym:
                 discount_from_exit_pct = ((last_exit_price - current_price) / last_exit_price) * 100.0 if (last_exit_price > 0 and current_price > 0) else 0.0
-                
-                # Si el activo cayó >= 2.00% respecto a donde salimos, se levanta el cooldown inmediatamente:
-                if discount_from_exit_pct >= 2.00 and time_since_last_exit >= 120:
+                # Si el Súper-Cerebro validó explícitamente la entrada con giro de suelo (5+ min), o si hay descuento:
+                if is_learned_signal and time_since_last_exit >= 300:
+                    print(f"🟢 Cooldown superado: {best_symbol} re-aprobado explícitamente por el Súper-Cerebro IA tras {time_since_last_exit:.0f}s de enfriamiento.")
+                elif discount_from_exit_pct >= 1.00 and time_since_last_exit >= 120:
                     print(f"🟢 Cooldown levantado inteligentemente: {best_symbol} con descuento real de -{discount_from_exit_pct:.2f}% (${last_exit_price:.6f} -> ${current_price:.6f}).")
-                elif time_since_last_exit < 3600:
-                    # 🚫 MEJORA A: Anti-Re-Entry 60 Min (previene over-trading)
+                elif time_since_last_exit < 600:
+                    # Anti-Re-Entry 10 Min (previene over-trading pero no bloquea oportunidades válidas)
                     is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} en cooldown anti-re-entrada ({time_since_last_exit:.0f}s de los 3600s requeridos). Descuento actual: {discount_from_exit_pct:.2f}%. Evitando over-trading.")
+                    print(f"⛔ Compra rechazada: {best_symbol} en cooldown anti-re-entrada ({time_since_last_exit:.0f}s de los 600s requeridos). Descuento actual: {discount_from_exit_pct:.2f}%. Evitando over-trading.")
             
             if not is_stable and (sym_clean in stablecoins_blacklist or best_symbol in stablecoins_blacklist):
                 is_stable = True
