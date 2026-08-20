@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 1649,
-    "wins": 796,
-    "losses": 853,
-    "win_rate_pct": 48.27,
-    "total_pnl_usd": -5089.155847151198
+    "total_trades": 1653,
+    "wins": 798,
+    "losses": 855,
+    "win_rate_pct": 48.28,
+    "total_pnl_usd": -5130.085847151197
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ROBOUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DASHUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on DEXEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TUTUSDT)",
@@ -27,10 +26,10 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on AAVEUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PEOPLEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SEIUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on STXUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on STXUSDT)",
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ASTERUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZECUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HEIUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HBARUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEARUSDT)",
@@ -49,7 +48,8 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DOGEUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on FILUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on STXUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on TUTUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on TUTUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ASTERUSDT)"
     ]
   },
   "history": [
@@ -8454,6 +8454,74 @@
       "context": {
         "score": 45,
         "rsi_15m": 57.91,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:27:37",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ASTERUSDT",
+      "side": "LONG",
+      "entry_price": 0.653,
+      "exit_price": 0.652,
+      "pnl_usd": -41.03,
+      "result": "LOSS",
+      "notes": "LOSS on ASTERUSDT (PnL: -0.15%, Net: $-41.03 Fase 2)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 41.77,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:27:37",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ASTERUSDT",
+      "side": "LONG",
+      "entry_price": 0.653,
+      "exit_price": 0.652,
+      "pnl_usd": -0.05,
+      "result": "LOSS",
+      "notes": "LOSS on ASTERUSDT (PnL: -0.15%, Net: $-0.05 Fase 2)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 41.77,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:27:37",
+      "account_id": "SIM-043",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ASTERUSDT",
+      "side": "LONG",
+      "entry_price": 0.649,
+      "exit_price": 0.652,
+      "pnl_usd": 0.1,
+      "result": "WIN",
+      "notes": "WIN on ASTERUSDT (PnL: +0.46%, Net: $+0.10 Fase 4)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 41.77,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:27:37",
+      "account_id": "SIM-044",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ASTERUSDT",
+      "side": "LONG",
+      "entry_price": 0.649,
+      "exit_price": 0.652,
+      "pnl_usd": 0.05,
+      "result": "WIN",
+      "notes": "WIN on ASTERUSDT (PnL: +0.46%, Net: $+0.05 Fase 4)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 41.77,
         "macro_trend_4h": "NEUTRAL"
       }
     }
