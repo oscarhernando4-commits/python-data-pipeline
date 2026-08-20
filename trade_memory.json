@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1449,
-    "wins": 693,
-    "losses": 756,
-    "win_rate_pct": 47.83,
-    "total_pnl_usd": -4216.016803
+    "total_trades": 1452,
+    "wins": 695,
+    "losses": 757,
+    "win_rate_pct": 47.87,
+    "total_pnl_usd": -4216.036163000001
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TUTUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on XPLUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on SYRUPUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BONKUSDT)",
@@ -49,61 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GPSUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ROBOUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ICPUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ONDOUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ONDOUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on UNIUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 12:23:20",
-      "account_id": "SIM-015",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "TRXUSDT",
-      "side": "LONG",
-      "entry_price": 0.3327,
-      "exit_price": 0.3331,
-      "pnl_usd": -0.0,
-      "result": "WIN",
-      "notes": "WIN on TRXUSDT (PnL: +0.12%, Net: $-0.00 Fase 2)",
-      "context": {
-        "score": 76,
-        "rsi_15m": 49.74,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 12:23:20",
-      "account_id": "SIM-070",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "TRUMPUSDT",
-      "side": "SHORT",
-      "entry_price": 1.408,
-      "exit_price": 1.45,
-      "pnl_usd": -0.6,
-      "result": "LOSS",
-      "notes": "LOSS on TRUMPUSDT (PnL: -2.98%, Net: $-0.60 Fase 1)",
-      "context": {
-        "score": 98,
-        "rsi_15m": 63.5,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 12:23:20",
-      "account_id": "SIM-083",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "TRXUSDT",
-      "side": "LONG",
-      "entry_price": 0.3327,
-      "exit_price": 0.3331,
-      "pnl_usd": -0.01,
-      "result": "LOSS",
-      "notes": "LOSS on TRXUSDT (PnL: +0.12%, Net: $-0.01 Fase 2)",
-      "context": {
-        "score": 76,
-        "rsi_15m": 49.74,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 12:31:20",
       "account_id": "SIM-020",
@@ -8487,6 +8436,53 @@
       "pnl_usd": -0.02618000000000023,
       "result": "LOSS",
       "notes": "Real Money Trade closed with -0.17%",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-20 10:08:53",
+      "account_id": "SIM-019",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "UNIUSDT",
+      "side": "LONG",
+      "entry_price": 3.678,
+      "exit_price": 3.684,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on UNIUSDT (PnL: +0.16%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 81,
+        "rsi_15m": 50.75,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 10:08:53",
+      "account_id": "SIM-020",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "UNIUSDT",
+      "side": "LONG",
+      "entry_price": 3.678,
+      "exit_price": 3.684,
+      "pnl_usd": 0.0,
+      "result": "WIN",
+      "notes": "WIN on UNIUSDT (PnL: +0.16%, Net: $+0.00 Fase 2)",
+      "context": {
+        "score": 81,
+        "rsi_15m": 50.75,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 10:09:10",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "REDUSDT",
+      "side": "BUY",
+      "entry_price": 0.1042,
+      "exit_price": 0.104,
+      "pnl_usd": -0.029360000000000844,
+      "result": "LOSS",
+      "notes": "Real Money Trade closed with -0.19%",
       "context": {}
     }
   ]

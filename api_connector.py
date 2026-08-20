@@ -916,7 +916,7 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
                 sl_pct = round(highest_pnl_pct * 0.30, 4)
                 sub = "2.8"
             elif highest_pnl_pct >= 0.30:
-                sl_pct = 0.00
+                sl_pct = 0.06
                 sub = "2.6"
             elif highest_pnl_pct >= 0.25:
                 sl_pct = -0.25

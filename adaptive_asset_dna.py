@@ -214,7 +214,7 @@ def calculate_archetype_trailing(
             sl_pct = round(highest_pnl_pct * 0.30, 4)
             sub = "2.8 (Cima >= +0.35%)"
         elif highest_pnl_pct >= 0.30:
-            sl_pct = 0.00  # Break-Even
+            sl_pct = 0.06  # Factor 0.20 -> SL +0.06% (Comisiones Cubiertas)
             sub = "2.6 (Cima >= +0.30%)"
         elif highest_pnl_pct >= 0.25:
             sl_pct = -0.25  # Factor -1.0 -> SL -0.25%
