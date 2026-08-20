@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 1423,
+    "total_trades": 1426,
     "wins": 692,
-    "losses": 731,
-    "win_rate_pct": 48.63,
-    "total_pnl_usd": -4269.349823000002
+    "losses": 734,
+    "win_rate_pct": 48.53,
+    "total_pnl_usd": -4269.429823000002
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on THETAUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on KAIAUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on AXSUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PEPEUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BOMEUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ENSUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on WIFUSDT)",
-      "BLOCK SHORT when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SYRUPUSDT)"
+      "BLOCK SHORT when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SYRUPUSDT)",
+      "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ROBOUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)",
@@ -53,53 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 10:24:20",
-      "account_id": "SIM-097",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "AVAXUSDT",
-      "side": "LONG",
-      "entry_price": 6.364,
-      "exit_price": 6.364,
-      "pnl_usd": -0.02,
-      "result": "LOSS",
-      "notes": "LOSS on AVAXUSDT (PnL: +0.00%, Net: $-0.02 Fase 3)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-19 10:32:50",
-      "account_id": "SIM-029",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ENAUSDT",
-      "side": "SHORT",
-      "entry_price": 0.087,
-      "exit_price": 0.0885,
-      "pnl_usd": -0.44,
-      "result": "LOSS",
-      "notes": "LOSS on ENAUSDT (PnL: -1.72%, Net: $-0.44 Fase 1)",
-      "context": {
-        "score": 79,
-        "rsi_15m": 76.25,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 10:32:50",
-      "account_id": "SIM-031",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "XLMUSDT",
-      "side": "SHORT",
-      "entry_price": 0.1633,
-      "exit_price": 0.1672,
-      "pnl_usd": -0.49,
-      "result": "LOSS",
-      "notes": "LOSS on XLMUSDT (PnL: -2.39%, Net: $-0.49 Fase 1)",
-      "context": {
-        "score": 79,
-        "rsi_15m": 89.01,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 10:32:50",
       "account_id": "SIM-032",
@@ -8490,6 +8443,57 @@
       "context": {
         "score": 48,
         "rsi_15m": 54.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 13:45:31",
+      "account_id": "SIM-047",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ROBOUSDT",
+      "side": "LONG",
+      "entry_price": 0.01473,
+      "exit_price": 0.01473,
+      "pnl_usd": -0.02,
+      "result": "LOSS",
+      "notes": "LOSS on ROBOUSDT (PnL: +0.00%, Net: $-0.02 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 85.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 13:45:31",
+      "account_id": "SIM-048",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ROBOUSDT",
+      "side": "LONG",
+      "entry_price": 0.01473,
+      "exit_price": 0.01473,
+      "pnl_usd": -0.03,
+      "result": "LOSS",
+      "notes": "LOSS on ROBOUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 85.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 13:45:31",
+      "account_id": "SIM-049",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ROBOUSDT",
+      "side": "LONG",
+      "entry_price": 0.01473,
+      "exit_price": 0.01473,
+      "pnl_usd": -0.03,
+      "result": "LOSS",
+      "notes": "LOSS on ROBOUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 85.98,
         "macro_trend_4h": "NEUTRAL"
       }
     }
