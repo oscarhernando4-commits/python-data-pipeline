@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1731,
+    "total_trades": 1734,
     "wins": 822,
-    "losses": 909,
-    "win_rate_pct": 47.49,
-    "total_pnl_usd": -5422.158677151195
+    "losses": 912,
+    "win_rate_pct": 47.4,
+    "total_pnl_usd": -5422.538677151195
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 08:23:42",
-      "account_id": "SIM-050",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ALGOUSDT",
-      "side": "LONG",
-      "entry_price": 0.0841,
-      "exit_price": 0.0847,
-      "pnl_usd": 0.11,
-      "result": "WIN",
-      "notes": "WIN on ALGOUSDT (PnL: +0.71%, Net: $+0.11 Fase 3)",
-      "context": {
-        "score": 59,
-        "rsi_15m": 65.56,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 08:23:42",
-      "account_id": "SIM-051",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ALGOUSDT",
-      "side": "LONG",
-      "entry_price": 0.0841,
-      "exit_price": 0.0847,
-      "pnl_usd": 0.1,
-      "result": "WIN",
-      "notes": "WIN on ALGOUSDT (PnL: +0.71%, Net: $+0.10 Fase 3)",
-      "context": {
-        "score": 59,
-        "rsi_15m": 65.56,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 08:23:42",
-      "account_id": "SIM-052",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "RAYUSDT",
-      "side": "LONG",
-      "entry_price": 0.6893,
-      "exit_price": 0.6955,
-      "pnl_usd": 0.14,
-      "result": "WIN",
-      "notes": "WIN on RAYUSDT (PnL: +0.90%, Net: $+0.14 Fase 3)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 89.32,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 08:23:42",
       "account_id": "SIM-054",
@@ -8478,6 +8427,57 @@
       "context": {
         "score": 46,
         "rsi_15m": 71.02,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 20:41:25",
+      "account_id": "SIM-026",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ONGUSDT",
+      "side": "SHORT",
+      "entry_price": 0.14606,
+      "exit_price": 0.14673,
+      "pnl_usd": -0.12,
+      "result": "LOSS",
+      "notes": "LOSS on ONGUSDT (PnL: -0.46%, Net: $-0.12 Fase 4)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 95.24,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 20:41:25",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ONGUSDT",
+      "side": "SHORT",
+      "entry_price": 0.14606,
+      "exit_price": 0.14673,
+      "pnl_usd": -0.14,
+      "result": "LOSS",
+      "notes": "LOSS on ONGUSDT (PnL: -0.46%, Net: $-0.14 Fase 4)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 95.24,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 20:41:25",
+      "account_id": "SIM-031",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ONGUSDT",
+      "side": "SHORT",
+      "entry_price": 0.14606,
+      "exit_price": 0.14673,
+      "pnl_usd": -0.12,
+      "result": "LOSS",
+      "notes": "LOSS on ONGUSDT (PnL: -0.46%, Net: $-0.12 Fase 4)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 95.24,
         "macro_trend_4h": "NEUTRAL"
       }
     }
