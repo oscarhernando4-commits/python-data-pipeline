@@ -1509,11 +1509,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     import orderbook_analyzer
                     ob_info = orderbook_analyzer.fetch_orderbook_depth(best_symbol, limit=20)
                     
-                    # 🚫 MEJORA B: Veto RSI 4H Sobreextendido (> 68) — previene el error de WLFIUSDT
+                    # 🚫 MEJORA B: Veto RSI 4H Sobreextendido (> 75) — previene comprar la cima parabólica extrema
                     rsi_4h = mtf_res.get("rsi_4h", 50.0)
-                    if rsi_4h >= 68.0:
+                    if rsi_4h >= 75.0:
                         is_stable = True
-                        print(f"⛔ Compra rechazada: {best_symbol} con RSI 4H sobreextendido ({rsi_4h:.1f} >= 68.0). Riesgo alto de agotamiento macro.")
+                        print(f"⛔ Compra rechazada: {best_symbol} con RSI 4H sobreextendido ({rsi_4h:.1f} >= 75.0). Riesgo alto de agotamiento macro.")
                     elif ob_info.get("spread_pct", 0.0) > 0.75:
                         is_stable = True
                         print(f"⛔ Compra rechazada: {best_symbol} descalificado por Spread elevado ({ob_info.get('spread_pct'):.3f}% > 0.75%). Evitando deslizamiento de precio.")
@@ -1530,18 +1530,16 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         
                         # ═══════════════════════════════════════════════════════════
                         # 🚀 FILTRO CUÁNTICO DE VOLUMEN REAL Y MOMENTUM GANADOR:
-                        # PROHIBIDO comprar monedas dormidas o sin combustible (Volumen < 0.60x).
-                        # Exige aceleración institucional real (OBV / VolSurge / EMA Cross) para garantizar despegue inmediato.
                         # ═══════════════════════════════════════════════════════════
-                        has_real_volume = (vol_15m_now >= 0.60) or (vol_2m_now >= 0.75) or (vol_1m_now >= 0.90) or is_obv_acc or is_pre_pump or (vol_acc >= 1.5)
-                        has_micro_thrust = (vol_2m_now >= 0.50) or (vol_1m_now >= 0.80) or is_30s_burst or is_pre_pump or is_obv_acc or is_ema_cross
+                        has_real_volume = (vol_15m_now >= 0.45) or (vol_2m_now >= 0.50) or (vol_1m_now >= 0.60) or is_obv_acc or is_pre_pump or (vol_acc >= 1.3) or (is_learned_signal and fii >= 50)
+                        has_micro_thrust = (vol_2m_now >= 0.40) or (vol_1m_now >= 0.50) or is_30s_burst or is_pre_pump or is_obv_acc or is_ema_cross or is_learned_signal
                         
                         if not has_real_volume:
                             is_stable = True
-                            print(f"⛔ Compra rechazada: {best_symbol} descartado por FALTA DE VOLUMEN REAL (15m={vol_15m_now:.2f}x, 2m={vol_2m_now:.2f}x, OBV={is_obv_acc}). Prohibido comprar monedas dormidas.")
+                            print(f"⛔ Compra rechazada: {best_symbol} descartado por FALTA DE VOLUMEN REAL (15m={vol_15m_now:.2f}x, 2m={vol_2m_now:.2f}x, OBV={is_obv_acc}).")
                         elif not has_micro_thrust:
                             is_stable = True
-                            print(f"⛔ Compra rechazada: {best_symbol} descartado por falta de empuje micro (1m={vol_1m_now:.2f}x, 2m={vol_2m_now:.2f}x, 30sBurst={is_30s_burst}). Exige micro-aceleración de entrada.")
+                            print(f"⛔ Compra rechazada: {best_symbol} descartado por falta de empuje micro (1m={vol_1m_now:.2f}x, 2m={vol_2m_now:.2f}x, 30sBurst={is_30s_burst}).")
                         elif ob_info.get("bid_dominance_pct", 50.0) < 44.0:
                             # 🧹 MEJORA D: Unificado en un solo umbral del 44% (elimina redundancia de 42%/50%)
                             is_stable = True
