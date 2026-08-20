@@ -1,9 +1,9 @@
 {
   "stats": {
-    "total_trades": 1664,
-    "wins": 793,
+    "total_trades": 1665,
+    "wins": 794,
     "losses": 871,
-    "win_rate_pct": 47.66,
+    "win_rate_pct": 47.69,
     "total_pnl_usd": -5451.718677151195
   },
   "learned_rules": {
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on WIFUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BICOUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ADAUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PENGUUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BOMEUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ICPUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LTCUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOGEUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BICOUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BICOUSDT)",
+      "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MUBUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 06:03:25",
-      "account_id": "SIM-060",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "WLFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.062,
-      "exit_price": 0.062,
-      "pnl_usd": -0.14,
-      "result": "LOSS",
-      "notes": "LOSS on WLFIUSDT (PnL: +0.00%, Net: $-0.14 Fase 2)",
-      "context": {
-        "score": 48,
-        "rsi_15m": 54.22,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 06:07:33",
       "account_id": "SIM-000 (Réplica Real)",
@@ -8498,6 +8481,23 @@
       "context": {
         "score": 45,
         "rsi_15m": 57.81,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 19:25:33",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "MUBUSDT",
+      "side": "SHORT",
+      "entry_price": 965.3,
+      "exit_price": 965.34,
+      "pnl_usd": -0.0,
+      "result": "WIN",
+      "notes": "WIN on MUBUSDT (PnL: -0.00%, Net: $-0.00 Fase 2)",
+      "context": {
+        "score": 55,
+        "rsi_15m": 63.52,
         "macro_trend_4h": "NEUTRAL"
       }
     }
