@@ -1,9 +1,9 @@
 {
   "stats": {
-    "total_trades": 1399,
-    "wins": 672,
+    "total_trades": 1400,
+    "wins": 673,
     "losses": 727,
-    "win_rate_pct": 48.03,
+    "win_rate_pct": 48.07,
     "total_pnl_usd": -3976.3898230000023
   },
   "learned_rules": {
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ENSUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HBARUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on XRPUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PENDLEUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on AVAXUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BOMEUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ENAUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on GIGGLEUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SYRUPUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SYRUPUSDT)",
+      "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BOMEUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 10:09:06",
-      "account_id": "SIM-023",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "DOGEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.07085,
-      "exit_price": 0.07198,
-      "pnl_usd": -0.39,
-      "result": "LOSS",
-      "notes": "LOSS on DOGEUSDT (PnL: -1.59%, Net: $-0.39 Fase 1)",
-      "context": {
-        "score": 82,
-        "rsi_15m": 91.46,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 10:09:07",
       "account_id": "SIM-029",
@@ -8434,6 +8417,23 @@
       "context": {
         "score": 48,
         "rsi_15m": 55.67,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 12:57:22",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "BOMEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0012552,
+      "exit_price": 0.0012531,
+      "pnl_usd": 0.0,
+      "result": "WIN",
+      "notes": "WIN on BOMEUSDT (PnL: +0.17%, Net: $+0.00 Fase 2)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 61.57,
         "macro_trend_4h": "NEUTRAL"
       }
     }
