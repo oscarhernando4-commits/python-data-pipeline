@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 1336,
+    "total_trades": 1337,
     "wins": 636,
-    "losses": 700,
-    "win_rate_pct": 47.6,
-    "total_pnl_usd": -4059.5798230000005
+    "losses": 701,
+    "win_rate_pct": 47.57,
+    "total_pnl_usd": -4060.0398230000005
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NEXOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on REDUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ENSUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on HBARUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on VIRTUALUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on THETAUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on KAIAUSDT)",
-      "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on AXSUSDT)"
+      "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on AXSUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PEPEUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ENAUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 08:03:15",
-      "account_id": "SIM-003",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "LINKUSDT",
-      "side": "LONG",
-      "entry_price": 9.639,
-      "exit_price": 9.737,
-      "pnl_usd": 0.1,
-      "result": "WIN",
-      "notes": "WIN on LINKUSDT (PnL: +1.02%, Net: $+0.10 Fase 3)",
-      "context": {
-        "score": 74,
-        "rsi_15m": 51.06,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 08:05:30",
       "account_id": "SIM-018",
@@ -8386,6 +8369,23 @@
       "context": {
         "score": 50,
         "rsi_15m": 63.21,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 11:23:19",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "PEPEUSDT",
+      "side": "SHORT",
+      "entry_price": 3.07e-06,
+      "exit_price": 3.14e-06,
+      "pnl_usd": -0.46,
+      "result": "LOSS",
+      "notes": "LOSS on PEPEUSDT (PnL: -2.28%, Net: $-0.46 Fase 1)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 65.45,
         "macro_trend_4h": "NEUTRAL"
       }
     }
