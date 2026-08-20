@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1418,
-    "wins": 688,
+    "total_trades": 1419,
+    "wins": 689,
     "losses": 730,
-    "win_rate_pct": 48.52,
-    "total_pnl_usd": -4269.059823000002
+    "win_rate_pct": 48.56,
+    "total_pnl_usd": -4268.869823000003
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SYRUPUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on XPLUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on SYRUPUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BONKUSDT)",
@@ -49,23 +48,11 @@
       "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on WBETHUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SYRUPUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TRXUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TRXUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TRXUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 10:24:20",
-      "account_id": "SIM-054",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ETHUSDT",
-      "side": "LONG",
-      "entry_price": 1938.73,
-      "exit_price": 1938.73,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on ETHUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-19 10:24:20",
       "account_id": "SIM-060",
@@ -8470,6 +8457,23 @@
       "context": {
         "score": 40,
         "rsi_15m": 71.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 13:39:24",
+      "account_id": "SIM-091",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "TRXUSDT",
+      "side": "LONG",
+      "entry_price": 0.3338,
+      "exit_price": 0.3378,
+      "pnl_usd": 0.19,
+      "result": "WIN",
+      "notes": "WIN on TRXUSDT (PnL: +1.20%, Net: $+0.19 Fase 3)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 66.91,
         "macro_trend_4h": "NEUTRAL"
       }
     }
