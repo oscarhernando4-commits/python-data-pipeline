@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 1386,
+    "total_trades": 1387,
     "wins": 661,
-    "losses": 725,
-    "win_rate_pct": 47.69,
-    "total_pnl_usd": -3981.139823000003
+    "losses": 726,
+    "win_rate_pct": 47.66,
+    "total_pnl_usd": -3981.549823000003
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on WLFIUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on AVAXUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on LTCUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on VIRTUALUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on VIRTUALUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MUBUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BOMEUSDT)",
-      "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on STRKUSDT)"
+      "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on STRKUSDT)",
+      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BOMEUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on QNTUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 09:45:32",
-      "account_id": "SIM-033",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ZECUSDT",
-      "side": "SHORT",
-      "entry_price": 513.61,
-      "exit_price": 524.3,
-      "pnl_usd": -0.43,
-      "result": "LOSS",
-      "notes": "LOSS on ZECUSDT (PnL: -2.08%, Net: $-0.43 Fase 1)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 82.5,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 09:48:59",
       "account_id": "SIM-023",
@@ -8422,6 +8405,23 @@
       "context": {
         "score": 38,
         "rsi_15m": 41.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 12:29:13",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "BOMEUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0012573,
+      "exit_price": 0.0012826,
+      "pnl_usd": -0.41,
+      "result": "LOSS",
+      "notes": "LOSS on BOMEUSDT (PnL: -2.01%, Net: $-0.41 Fase 1)",
+      "context": {
+        "score": 36,
+        "rsi_15m": 71.95,
         "macro_trend_4h": "NEUTRAL"
       }
     }
