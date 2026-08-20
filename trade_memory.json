@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1758,
-    "wins": 837,
+    "total_trades": 1760,
+    "wins": 839,
     "losses": 921,
-    "win_rate_pct": 47.61,
-    "total_pnl_usd": -5413.628677151197
+    "win_rate_pct": 47.67,
+    "total_pnl_usd": -5413.318677151197
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,8 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BOMEUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOGEUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BICOUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on METUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on METUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XLMUSDT)",
@@ -49,44 +47,12 @@
       "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ORDIUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ICPUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on AVAXUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ZROUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ZROUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ONTUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on RAYUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 08:59:29",
-      "account_id": "SIM-054",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "FLOKIUSDT",
-      "side": "LONG",
-      "entry_price": 2.285e-05,
-      "exit_price": 2.289e-05,
-      "pnl_usd": 0.01,
-      "result": "WIN",
-      "notes": "WIN on FLOKIUSDT (PnL: +0.18%, Net: $+0.01 Fase 3)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 79.85,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 08:59:29",
-      "account_id": "SIM-060",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "FLOKIUSDT",
-      "side": "LONG",
-      "entry_price": 2.285e-05,
-      "exit_price": 2.289e-05,
-      "pnl_usd": 0.02,
-      "result": "WIN",
-      "notes": "WIN on FLOKIUSDT (PnL: +0.18%, Net: $+0.02 Fase 3)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 79.85,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 09:01:36",
       "account_id": "SIM-039",
@@ -8478,6 +8444,40 @@
       "context": {
         "score": 50,
         "rsi_15m": 58.13,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 21:51:23",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "ONTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0526,
+      "exit_price": 0.05063,
+      "pnl_usd": 0.23,
+      "result": "WIN",
+      "notes": "WIN on ONTUSDT (PnL: +3.75%, Net: $+0.23 Fase 5)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 54.85,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 21:51:24",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "RAYUSDT",
+      "side": "LONG",
+      "entry_price": 0.685,
+      "exit_price": 0.6903,
+      "pnl_usd": 0.08,
+      "result": "WIN",
+      "notes": "WIN on RAYUSDT (PnL: +0.77%, Net: $+0.08 Fase 3)",
+      "context": {
+        "score": 59,
+        "rsi_15m": 54.12,
         "macro_trend_4h": "NEUTRAL"
       }
     }
