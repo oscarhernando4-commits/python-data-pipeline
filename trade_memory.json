@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1392,
-    "wins": 666,
+    "total_trades": 1395,
+    "wins": 669,
     "losses": 726,
-    "win_rate_pct": 47.84,
-    "total_pnl_usd": -3980.879823000003
+    "win_rate_pct": 47.96,
+    "total_pnl_usd": -3979.769823000003
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 10:03:07",
-      "account_id": "SIM-091",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "LTCUSDT",
-      "side": "LONG",
-      "entry_price": 44.37,
-      "exit_price": 45.2,
-      "pnl_usd": 0.31,
-      "result": "WIN",
-      "notes": "WIN on LTCUSDT (PnL: +1.87%, Net: $+0.31 Fase 3)",
-      "context": {
-        "score": 86,
-        "rsi_15m": 65.27,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 10:07:21",
-      "account_id": "SIM-026",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "BTCUSDT",
-      "side": "SHORT",
-      "entry_price": 65303.58,
-      "exit_price": 66373.28,
-      "pnl_usd": -0.36,
-      "result": "LOSS",
-      "notes": "LOSS on BTCUSDT (PnL: -1.64%, Net: $-0.36 Fase 1)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 92.09,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 10:07:21",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "BTCUSDT",
-      "side": "SHORT",
-      "entry_price": 65303.58,
-      "exit_price": 66373.28,
-      "pnl_usd": -252.31,
-      "result": "LOSS",
-      "notes": "LOSS on BTCUSDT (PnL: -1.64%, Net: $-252.31 Fase 1)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 92.09,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 10:07:21",
       "account_id": "SIM-028",
@@ -8430,6 +8379,57 @@
       "context": {
         "score": 32,
         "rsi_15m": 57.31,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 12:49:28",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ROBOUSDT",
+      "side": "LONG",
+      "entry_price": 0.01434,
+      "exit_price": 0.01449,
+      "pnl_usd": 0.67,
+      "result": "WIN",
+      "notes": "WIN on ROBOUSDT (PnL: +1.05%, Net: $+0.67 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 89.32,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 12:49:28",
+      "account_id": "SIM-043",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ROBOUSDT",
+      "side": "LONG",
+      "entry_price": 0.01434,
+      "exit_price": 0.01449,
+      "pnl_usd": 0.29,
+      "result": "WIN",
+      "notes": "WIN on ROBOUSDT (PnL: +1.05%, Net: $+0.29 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 89.32,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 12:49:28",
+      "account_id": "SIM-044",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ROBOUSDT",
+      "side": "LONG",
+      "entry_price": 0.01434,
+      "exit_price": 0.01449,
+      "pnl_usd": 0.15,
+      "result": "WIN",
+      "notes": "WIN on ROBOUSDT (PnL: +1.05%, Net: $+0.15 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 89.32,
         "macro_trend_4h": "NEUTRAL"
       }
     }
