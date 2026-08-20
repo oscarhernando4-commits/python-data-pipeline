@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 1638,
-    "wins": 789,
-    "losses": 849,
-    "win_rate_pct": 48.17,
-    "total_pnl_usd": -5086.855847151198
+    "total_trades": 1645,
+    "wins": 793,
+    "losses": 852,
+    "win_rate_pct": 48.21,
+    "total_pnl_usd": -5085.6758471511985
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BBUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEARUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ROBOUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DASHUSDT)",
@@ -27,11 +26,10 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ZECUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on TAOUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on AAVEUSDT)",
-      "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PEOPLEUSDT)"
+      "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PEOPLEUSDT)",
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SEIUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TRXUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XRPUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HEMIUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PNUTUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZECUSDT)",
@@ -49,7 +47,9 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLDUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on AAVEUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZECUSDT)",
-      "BOOST SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ENAUSDT)"
+      "BOOST SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ENAUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DOGEUSDT)",
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on FILUSDT)"
     ]
   },
   "history": [
@@ -8267,6 +8267,125 @@
       "context": {
         "score": 32,
         "rsi_15m": 69.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:13:33",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "DOGEUSDT",
+      "side": "LONG",
+      "entry_price": 0.07738,
+      "exit_price": 0.08149,
+      "pnl_usd": 0.39,
+      "result": "WIN",
+      "notes": "WIN on DOGEUSDT (PnL: +5.31%, Net: $+0.39 Fase 5)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 62.68,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:13:33",
+      "account_id": "SIM-001",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "FILUSDT",
+      "side": "LONG",
+      "entry_price": 0.7321,
+      "exit_price": 0.7586,
+      "pnl_usd": 0.41,
+      "result": "WIN",
+      "notes": "WIN on FILUSDT (PnL: +3.62%, Net: $+0.41 Fase 5)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 78.96,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:13:33",
+      "account_id": "SIM-002",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "FILUSDT",
+      "side": "LONG",
+      "entry_price": 0.7321,
+      "exit_price": 0.7586,
+      "pnl_usd": 0.41,
+      "result": "WIN",
+      "notes": "WIN on FILUSDT (PnL: +3.62%, Net: $+0.41 Fase 5)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 78.96,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:13:33",
+      "account_id": "SIM-003",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "FILUSDT",
+      "side": "LONG",
+      "entry_price": 0.7321,
+      "exit_price": 0.7586,
+      "pnl_usd": 0.41,
+      "result": "WIN",
+      "notes": "WIN on FILUSDT (PnL: +3.62%, Net: $+0.41 Fase 5)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 78.96,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:13:33",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "SEIUSDT",
+      "side": "LONG",
+      "entry_price": 0.04299,
+      "exit_price": 0.0429,
+      "pnl_usd": -0.26,
+      "result": "LOSS",
+      "notes": "LOSS on SEIUSDT (PnL: -0.21%, Net: $-0.26 Fase 2)",
+      "context": {
+        "score": 52,
+        "rsi_15m": 56.02,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:13:33",
+      "account_id": "SIM-043",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "SEIUSDT",
+      "side": "LONG",
+      "entry_price": 0.04299,
+      "exit_price": 0.0429,
+      "pnl_usd": -0.12,
+      "result": "LOSS",
+      "notes": "LOSS on SEIUSDT (PnL: -0.21%, Net: $-0.12 Fase 2)",
+      "context": {
+        "score": 52,
+        "rsi_15m": 56.02,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:13:33",
+      "account_id": "SIM-044",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "SEIUSDT",
+      "side": "LONG",
+      "entry_price": 0.04299,
+      "exit_price": 0.0429,
+      "pnl_usd": -0.06,
+      "result": "LOSS",
+      "notes": "LOSS on SEIUSDT (PnL: -0.21%, Net: $-0.06 Fase 2)",
+      "context": {
+        "score": 52,
+        "rsi_15m": 56.02,
         "macro_trend_4h": "NEUTRAL"
       }
     }
