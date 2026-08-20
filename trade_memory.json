@@ -1,9 +1,9 @@
 {
   "stats": {
-    "total_trades": 1185,
-    "wins": 526,
+    "total_trades": 1186,
+    "wins": 527,
     "losses": 659,
-    "win_rate_pct": 44.39,
+    "win_rate_pct": 44.44,
     "total_pnl_usd": -4401.089823000006
   },
   "learned_rules": {
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on REUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOTUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BBUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on REUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HEMIUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HBARUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ASTERUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BIOUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on REDUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on REDUSDT)",
+      "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TUTUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-18 22:16:12",
-      "account_id": "SIM-002",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "HEIUSDT",
-      "side": "LONG",
-      "entry_price": 0.1389,
-      "exit_price": 0.1389,
-      "pnl_usd": -0.02,
-      "result": "LOSS",
-      "notes": "LOSS on HEIUSDT (PnL: +0.00%, Net: $-0.02 Fase 3)",
-      "context": {
-        "score": 82,
-        "rsi_15m": 60.17,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-18 22:16:13",
       "account_id": "SIM-003",
@@ -8344,6 +8327,23 @@
       "context": {
         "score": 38,
         "rsi_15m": 42.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 06:55:43",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "TUTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.03067,
+      "exit_price": 0.03062,
+      "pnl_usd": 0.0,
+      "result": "WIN",
+      "notes": "WIN on TUTUSDT (PnL: +0.16%, Net: $+0.00 Fase 3)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 33.26,
         "macro_trend_4h": "NEUTRAL"
       }
     }
