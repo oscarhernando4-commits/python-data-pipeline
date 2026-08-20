@@ -1,9 +1,9 @@
 {
   "stats": {
-    "total_trades": 1665,
-    "wins": 794,
+    "total_trades": 1666,
+    "wins": 795,
     "losses": 871,
-    "win_rate_pct": 47.69,
+    "win_rate_pct": 47.72,
     "total_pnl_usd": -5451.718677151195
   },
   "learned_rules": {
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on WIFUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ADAUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PENGUUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BOMEUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PEOPLEUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LTCUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOGEUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BICOUSDT)",
-      "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MUBUSDT)"
+      "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MUBUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ETCUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 06:07:33",
-      "account_id": "SIM-000 (Réplica Real)",
-      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
-      "symbol": "REUSDT",
-      "side": "SHORT",
-      "entry_price": 0.5294,
-      "exit_price": 0.5177,
-      "pnl_usd": 0.19,
-      "result": "WIN",
-      "notes": "WIN on REUSDT (PnL: +2.21%, Net: $+0.19 Fase 3)",
-      "context": {
-        "score": 32,
-        "rsi_15m": 41.14,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 06:07:33",
       "account_id": "SIM-047",
@@ -8498,6 +8481,23 @@
       "context": {
         "score": 55,
         "rsi_15m": 63.52,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 19:29:25",
+      "account_id": "SIM-026",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ETCUSDT",
+      "side": "LONG",
+      "entry_price": 6.82,
+      "exit_price": 6.83,
+      "pnl_usd": -0.0,
+      "result": "WIN",
+      "notes": "WIN on ETCUSDT (PnL: +0.15%, Net: $-0.00 Fase 3)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 50.72,
         "macro_trend_4h": "NEUTRAL"
       }
     }
