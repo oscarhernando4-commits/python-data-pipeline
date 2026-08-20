@@ -955,9 +955,40 @@ def analyze_multi_timeframe_candles(symbol):
             is_overextended_15m = True
             overextension_reason = f"Macro 1H sin soporte (RSI 1H={rsi_1h:.1f}). Exige: 1H alcista, rebote VWAP, o divergencia alcista."
     avg_vol_15m = sum(vols_15m[-5:]) / len(vols_15m[-5:]) if len(vols_15m) >= 5 else 1.0
-    vol_surge_15m = round(vols_15m[-1] / avg_vol_15m, 2) if avg_vol_15m > 0 else 1.0
-
     st_status = "🟢 SUPERTREND 15M/1H VERDE ALCISTA" if (is_supertrend_bullish and is_supertrend_1h_bullish) else ("🟢 SUPERTREND 15M VERDE" if is_supertrend_bullish else "🔴 SUPERTREND ROJO")
+
+    # 🎯 GATILLO SNIPER 1M/5M V5 (Cero entradas prematuras / Cero cuchillos cayendo):
+    open_1m_last = float(klines_1m[-1][1]) if klines_1m else close_15m
+    is_1m_green_candle = bool(closes_1m[-1] >= open_1m_last) if closes_1m else False
+    is_1m_above_ema9 = bool(closes_1m[-1] >= (ema9_1m * 0.9995)) if ema9_1m > 0 else False
+    is_1m_green_ignition = bool(is_1m_green_candle and is_1m_above_ema9 and vol_surge_1m >= 0.70)
+    
+    is_5m_higher_low = False
+    if klines_5m and len(klines_5m) >= 2:
+        low_5m_curr = float(klines_5m[-1][3])
+        low_5m_prev = float(klines_5m[-2][3])
+        is_5m_higher_low = bool(low_5m_curr >= (low_5m_prev * 0.9990))
+    else:
+        is_5m_higher_low = True
+
+    is_sniper_timing_ready = bool(
+        is_1m_green_ignition and 
+        is_5m_higher_low and 
+        not is_15m_red_cascade and 
+        (rsi_15m >= 38.0 or is_bullish_divergence or is_vwap_floor_rebound) and
+        not is_overextended_15m
+    )
+    
+    if is_sniper_timing_ready:
+        sniper_timing_label = "🟢 LISTO PARA DISPARAR (1M Sobre EMA9 + 5M Mínimo Mayor)"
+    elif is_15m_red_cascade:
+        sniper_timing_label = "🔴 CASCADA 15M (Prohibido Entrar)"
+    elif not is_5m_higher_low:
+        sniper_timing_label = "⏳ ESPERANDO DOBLE SUELO 5M (Aún haciendo nuevos mínimos)"
+    elif not is_1m_above_ema9:
+        sniper_timing_label = "⏳ ESPERANDO GIRO 1M (Precio bajo EMA9 1M)"
+    else:
+        sniper_timing_label = "⏳ CONSOLIDANDO BASE"
     vwap_status = "🟢 REBOTE PISO VWAP (-1.5 StdDev)" if is_vwap_floor_rebound else "⚪ NORMAL VWAP"
     ma99_status = "🚀 CRUCE ALCISTA MA25/MA99 (PULSO HACIA ARRIBA)" if is_ma25_above_ma99_upward else "⚪ NORMAL MA99"
     yellow_arrow_macro = f" | 🎯 FLECHAS AMARILLAS MACRO 1H" if is_yellow_arrow_1h else ""
@@ -1025,10 +1056,13 @@ def analyze_multi_timeframe_candles(symbol):
         "pct_b_15m": round(pct_b, 2),
         "is_oversold_bounce_candidate": is_oversold_bounce_candidate,
         "is_overbought_exhaustion": is_overbought_exhaustion,
-        "is_bullish_divergence": is_bullish_divergence,
         "is_15m_red_cascade": is_15m_red_cascade,
         "is_true_structural_floor": is_true_structural_floor,
         "floor_structure_label": floor_structure_label,
+        "is_sniper_timing_ready": is_sniper_timing_ready,
+        "sniper_timing_label": sniper_timing_label,
+        "is_1m_green_ignition": is_1m_green_ignition,
+        "is_5m_higher_low": is_5m_higher_low,
         "price_above_15m_mas": price_above_15m_ma7 and price_above_15m_ma25,
         # Volúmenes sub-minuto y micro
         "vol_surge_10s": vol_surge_10s,

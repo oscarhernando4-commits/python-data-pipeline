@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1475,
-    "wins": 702,
+    "total_trades": 1476,
+    "wins": 703,
     "losses": 773,
-    "win_rate_pct": 47.59,
-    "total_pnl_usd": -4227.744963
+    "win_rate_pct": 47.63,
+    "total_pnl_usd": -4227.684963
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on RENDERUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on GIGGLEUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XPLUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TRXUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HEMIUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on AVAXUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BCHUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BOMEUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on RENDERUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on RENDERUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on KAITOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 15:53:40",
-      "account_id": "SIM-038",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "LINKUSDT",
-      "side": "SHORT",
-      "entry_price": 10.392,
-      "exit_price": 10.611,
-      "pnl_usd": -0.61,
-      "result": "LOSS",
-      "notes": "LOSS on LINKUSDT (PnL: -2.11%, Net: $-0.61 Fase 1)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 84.28,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 15:53:40",
       "account_id": "SIM-070",
@@ -8518,6 +8501,23 @@
       "context": {
         "score": 82,
         "rsi_15m": 62.26,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 11:00:38",
+      "account_id": "SIM-019",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "KAITOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3623,
+      "exit_price": 0.3633,
+      "pnl_usd": 0.06,
+      "result": "WIN",
+      "notes": "WIN on KAITOUSDT (PnL: +0.28%, Net: $+0.06 Fase 3)",
+      "context": {
+        "score": 77,
+        "rsi_15m": 56.61,
         "macro_trend_4h": "NEUTRAL"
       }
     }

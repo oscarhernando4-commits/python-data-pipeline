@@ -452,10 +452,12 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
         floor_lbl = mtf.get('floor_structure_label', '⚪ ESPERANDO GIRO')
         is_15m_casc = mtf.get('is_15m_red_cascade', False)
+        sniper_lbl = mtf.get('sniper_timing_label', '⏳ CONSOLIDANDO BASE')
 
         candidates_prompt_text += f"\nCANDIDATO: {sym} (Sector: {sec} | Acción Sugerida: {action}){cetus_tag}{fii_tag}\n"
         candidates_prompt_text += f"- Score: {score}/100 | MTF Score: {mtf.get('multi_tf_score', score)}/100 | FII (Inyección Suelo): {fii}/100\n"
         candidates_prompt_text += f"- 🏔️ ESTRUCTURA DE SUELO 15M: {floor_lbl} | Cascada Roja 15M={is_15m_casc}\n"
+        candidates_prompt_text += f"- 🎯 GATILLO SNIPER 1M/5M: {sniper_lbl}\n"
         candidates_prompt_text += f"- 🧬 ARQUETIPO ADN: {arch_lbl} (SL={arch_sl}%, MaxT={arch_tmax}m) | Guía: {arch_guide}\n"
         candidates_prompt_text += f"- 🔮 Radar Predictivo Multi-Horizonte: {pred_label} | Prob. Pump={pump_prob}% | Riesgo Dump={dump_risk}%\n"
         candidates_prompt_text += f"- 🚀 Catalizadores Activos: [{catalysts_str}] | Advertencias: [{warnings_str}]\n"
@@ -517,8 +519,9 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     🏛️ PROTOCOLO DINÁMICO DE DECISIÓN DEL SÚPER-CEREBRO EN 4 PASOS:
     
     PASO 1 🏔️ FILTRO MANDATORIO DE SUELO ESTRUCTURAL & GATILLO 1M (CERO CUCHILLOS CAYENDO):
-    - Revisa la ESTRUCTURA DE SUELO 15M y la MATRIZ FRACTAL DE SUELO 7D de cada candidato.
+    - Revisa la ESTRUCTURA DE SUELO 15M, el GATILLO SNIPER 1M/5M y la MATRIZ FRACTAL DE SUELO 7D de cada candidato.
     - REGLA DEL PISO INTRADÍA: El candidato DEBE estar en zona de soporte o pullback (1H <= 58% y 15M <= 52%).
+    - GATILLO SNIPER OBLIGATORIO: Exige que el GATILLO SNIPER muestre '🟢 LISTO PARA DISPARAR' (o equivalente alcista). Prohibido comprar antes de que el sniper 1M confirme el giro.
     - VETO ANTI-CASCADA: Si el candidato tiene "🔴 CASCADA 15M EN CURSO" (3+ velas rojas consecutivas en 15M sin mecha de absorción), RECHÁZALO de inmediato. PROHIBIDO comprar mientras sigue cayendo.
     - REGLA ANTI-FOMO 1M: Exige que el precio esté retesteando la base de 1M (Anti-FOMO=True, cerca de EMA9 1M).
     - VETO TECHO: Si 1D > 75% o 4H > 75% (techo extremo) o Sobre-extendido=True o Fomo=True o YA_OPERADO_HOY, RECHÁZALO.
@@ -538,13 +541,13 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     - Para los candidatos en el suelo real:
       * Exige FII >= 45-60 (Inyección de capital en el piso / OBV acumulando).
       * Exige Bids >= 44% y Flujo CVD Taker positivo o equilibrado.
-      * Prioriza micro-ignición sub-minuto (10s o 30s en BULLISH).
+      * Exige confirmación de vela verde 1M sobre EMA9 (Gatillo Sniper).
     
     PASO 4 👑 SELECCIÓN DINÁMICA DEL CAMPEÓN #1 Y APROBACIÓN EJECUTIVA:
     - Compara todos los candidatos finalistas y selecciona al MEJOR ACTIVO ABSOLUTO DE TODO EL MERCADO.
     - Emite tu veredicto final con "BUY_LONG", approved: true, confidence: 85-95.
     - Tu decisión es la autoridad final que ejecutará la orden en Binance Spot con protección de Trailing Proporcional Continuo.
-    - Si NINGÚN candidato está en el suelo, el mercado está en crash de BTC, o todos están en VETO_TEMPORAL, responde "selected_symbol": "NONE", "action": "HOLD".
+    - Si NINGÚN candidato está en el suelo, no tienen el gatillo Sniper 1M listo, el mercado está en crash de BTC, o todos están en VETO_TEMPORAL, responde "selected_symbol": "NONE", "action": "HOLD".
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA (7 AGENTES):
     {{
