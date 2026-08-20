@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1210,
-    "wins": 547,
+    "total_trades": 1214,
+    "wins": 551,
     "losses": 663,
-    "win_rate_pct": 45.21,
-    "total_pnl_usd": -4398.4098230000045
+    "win_rate_pct": 45.39,
+    "total_pnl_usd": -4392.439823000004
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,74 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 05:49:12",
-      "account_id": "SIM-026",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ALICEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.1415,
-      "exit_price": 0.1417,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "LOSS on ALICEUSDT (PnL: -0.14%, Net: $-0.06 Fase 3)",
-      "context": {
-        "score": 40,
-        "rsi_15m": 73.86,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 05:49:12",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ALICEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.1415,
-      "exit_price": 0.1417,
-      "pnl_usd": -41.21,
-      "result": "LOSS",
-      "notes": "LOSS on ALICEUSDT (PnL: -0.14%, Net: $-41.21 Fase 3)",
-      "context": {
-        "score": 40,
-        "rsi_15m": 73.86,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 05:49:12",
-      "account_id": "SIM-028",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ALICEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.1415,
-      "exit_price": 0.1417,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "LOSS on ALICEUSDT (PnL: -0.14%, Net: $-0.06 Fase 3)",
-      "context": {
-        "score": 40,
-        "rsi_15m": 73.86,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 05:55:16",
-      "account_id": "SIM-050",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ALICEUSDT",
-      "side": "LONG",
-      "entry_price": 0.1415,
-      "exit_price": 0.1383,
-      "pnl_usd": -0.46,
-      "result": "LOSS",
-      "notes": "LOSS on ALICEUSDT (PnL: -2.26%, Net: $-0.46 Fase 1)",
-      "context": {
-        "score": 48,
-        "rsi_15m": 60.0,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 05:55:16",
       "account_id": "SIM-051",
@@ -8346,6 +8278,74 @@
       "context": {
         "score": 55,
         "rsi_15m": 60.83,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 08:01:40",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ETHFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.5361,
+      "exit_price": 0.5648,
+      "pnl_usd": 0.13,
+      "result": "WIN",
+      "notes": "WIN on ETHFIUSDT (PnL: +5.35%, Net: $+0.13 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 80.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 08:01:40",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.5361,
+      "exit_price": 0.5648,
+      "pnl_usd": 3.83,
+      "result": "WIN",
+      "notes": "WIN on ETHFIUSDT (PnL: +5.35%, Net: $+3.83 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 80.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 08:01:40",
+      "account_id": "SIM-045",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.5417,
+      "exit_price": 0.5648,
+      "pnl_usd": 0.71,
+      "result": "WIN",
+      "notes": "WIN on ETHFIUSDT (PnL: +4.26%, Net: $+0.71 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 80.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 08:01:40",
+      "account_id": "SIM-046",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.5417,
+      "exit_price": 0.5648,
+      "pnl_usd": 1.3,
+      "result": "WIN",
+      "notes": "WIN on ETHFIUSDT (PnL: +4.26%, Net: $+1.30 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 80.51,
         "macro_trend_4h": "NEUTRAL"
       }
     }
