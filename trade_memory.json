@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 1192,
-    "wins": 533,
-    "losses": 659,
-    "win_rate_pct": 44.71,
-    "total_pnl_usd": -4400.839823000006
+    "total_trades": 1195,
+    "wins": 535,
+    "losses": 660,
+    "win_rate_pct": 44.77,
+    "total_pnl_usd": -4400.849823000006
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on HEMIUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on HEMIUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ONDOUSDT)",
@@ -27,10 +26,10 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on AVAXUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MUBARAKUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on NEXOUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on REUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on REUSDT)",
+      "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on JTOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ICPUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TRUMPUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on STXUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on XPLUSDT)",
@@ -49,61 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MUBUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on THETAUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on VIRTUALUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ETHFIUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ETHFIUSDT)",
+      "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on JTOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 05:18:40",
-      "account_id": "SIM-050",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "TUTUSDT",
-      "side": "LONG",
-      "entry_price": 0.03994,
-      "exit_price": 0.03862,
-      "pnl_usd": -0.67,
-      "result": "LOSS",
-      "notes": "LOSS on TUTUSDT (PnL: -3.30%, Net: $-0.67 Fase 1)",
-      "context": {
-        "score": 32,
-        "rsi_15m": 33.49,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 05:18:40",
-      "account_id": "SIM-051",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "OPUSDT",
-      "side": "LONG",
-      "entry_price": 0.0815,
-      "exit_price": 0.0816,
-      "pnl_usd": -0.0,
-      "result": "WIN",
-      "notes": "WIN on OPUSDT (PnL: +0.12%, Net: $-0.00 Fase 3)",
-      "context": {
-        "score": 32,
-        "rsi_15m": 45.08,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 05:18:40",
-      "account_id": "SIM-052",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "TUTUSDT",
-      "side": "LONG",
-      "entry_price": 0.03994,
-      "exit_price": 0.03862,
-      "pnl_usd": -0.63,
-      "result": "LOSS",
-      "notes": "LOSS on TUTUSDT (PnL: -3.30%, Net: $-0.63 Fase 1)",
-      "context": {
-        "score": 32,
-        "rsi_15m": 33.49,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 05:18:40",
       "account_id": "SIM-054",
@@ -8346,6 +8295,57 @@
       "context": {
         "score": 45,
         "rsi_15m": 69.17,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 07:13:35",
+      "account_id": "SIM-045",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "JTOUSDT",
+      "side": "LONG",
+      "entry_price": 0.5623,
+      "exit_price": 0.563,
+      "pnl_usd": -0.0,
+      "result": "WIN",
+      "notes": "WIN on JTOUSDT (PnL: +0.12%, Net: $-0.00 Fase 2)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 33.96,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 07:13:35",
+      "account_id": "SIM-046",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "JTOUSDT",
+      "side": "LONG",
+      "entry_price": 0.5623,
+      "exit_price": 0.563,
+      "pnl_usd": -0.01,
+      "result": "LOSS",
+      "notes": "LOSS on JTOUSDT (PnL: +0.12%, Net: $-0.01 Fase 2)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 33.96,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 07:13:35",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "JTOUSDT",
+      "side": "LONG",
+      "entry_price": 0.5623,
+      "exit_price": 0.563,
+      "pnl_usd": -0.0,
+      "result": "WIN",
+      "notes": "WIN on JTOUSDT (PnL: +0.12%, Net: $-0.00 Fase 2)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 33.96,
         "macro_trend_4h": "NEUTRAL"
       }
     }
