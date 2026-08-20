@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1205,
-    "wins": 542,
+    "total_trades": 1207,
+    "wins": 544,
     "losses": 663,
-    "win_rate_pct": 44.98,
-    "total_pnl_usd": -4399.139823000005
+    "win_rate_pct": 45.07,
+    "total_pnl_usd": -4398.959823000005
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NEXOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on METUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on WLFIUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on JTOUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HEMIUSDT)",
@@ -49,44 +48,11 @@
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SFPUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on KITEUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on REDUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BOMEUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BOMEUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on AVAXUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 05:33:10",
-      "account_id": "SIM-033",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "HEMIUSDT",
-      "side": "SHORT",
-      "entry_price": 0.00844,
-      "exit_price": 0.00813,
-      "pnl_usd": 0.67,
-      "result": "WIN",
-      "notes": "WIN on HEMIUSDT (PnL: +3.67%, Net: $+0.67 Fase 3)",
-      "context": {
-        "score": 41,
-        "rsi_15m": 83.82,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 05:43:19",
-      "account_id": "SIM-050",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ZAMAUSDT",
-      "side": "LONG",
-      "entry_price": 0.04083,
-      "exit_price": 0.0409,
-      "pnl_usd": 0.0,
-      "result": "WIN",
-      "notes": "WIN on ZAMAUSDT (PnL: +0.17%, Net: $+0.00 Fase 2)",
-      "context": {
-        "score": 32,
-        "rsi_15m": 32.09,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 05:43:19",
       "account_id": "SIM-051",
@@ -8346,6 +8312,40 @@
       "context": {
         "score": 57,
         "rsi_15m": 51.31,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 07:54:05",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "REDUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1152,
+      "exit_price": 0.114,
+      "pnl_usd": 0.17,
+      "result": "WIN",
+      "notes": "WIN on REDUSDT (PnL: +1.04%, Net: $+0.17 Fase 3)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 60.57,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 07:54:05",
+      "account_id": "SIM-083",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "AVAXUSDT",
+      "side": "LONG",
+      "entry_price": 6.789,
+      "exit_price": 6.804,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on AVAXUSDT (PnL: +0.22%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 57,
+        "rsi_15m": 61.67,
         "macro_trend_4h": "NEUTRAL"
       }
     }
