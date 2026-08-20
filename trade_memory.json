@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1130,
-    "wins": 493,
+    "total_trades": 1133,
+    "wins": 496,
     "losses": 637,
-    "win_rate_pct": 43.63,
-    "total_pnl_usd": -4783.719823000006
+    "win_rate_pct": 43.78,
+    "total_pnl_usd": -4783.6598230000045
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HBARUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GPSUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ENAUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on WLFIUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HBARUSDT)",
@@ -49,61 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on AVAXUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ICPUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TRUMPUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on STXUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on STXUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on XPLUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-18 18:36:29",
-      "account_id": "SIM-048",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "SUNUSDT",
-      "side": "LONG",
-      "entry_price": 0.01712,
-      "exit_price": 0.01716,
-      "pnl_usd": 0.01,
-      "result": "WIN",
-      "notes": "WIN on SUNUSDT (PnL: +0.23%, Net: $+0.01 Fase 2)",
-      "context": {
-        "score": 35,
-        "rsi_15m": 38.51,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-18 18:36:29",
-      "account_id": "SIM-049",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "SUNUSDT",
-      "side": "LONG",
-      "entry_price": 0.01712,
-      "exit_price": 0.01716,
-      "pnl_usd": 0.01,
-      "result": "WIN",
-      "notes": "WIN on SUNUSDT (PnL: +0.23%, Net: $+0.01 Fase 2)",
-      "context": {
-        "score": 35,
-        "rsi_15m": 38.51,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-18 18:36:29",
-      "account_id": "SIM-053",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "SUNUSDT",
-      "side": "LONG",
-      "entry_price": 0.01712,
-      "exit_price": 0.01716,
-      "pnl_usd": 0.02,
-      "result": "WIN",
-      "notes": "WIN on SUNUSDT (PnL: +0.23%, Net: $+0.02 Fase 2)",
-      "context": {
-        "score": 35,
-        "rsi_15m": 38.51,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-18 18:48:45",
       "account_id": "R-01",
@@ -8324,6 +8273,57 @@
       "context": {
         "score": 45,
         "rsi_15m": 66.82,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 04:15:31",
+      "account_id": "SIM-001",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "XPLUSDT",
+      "side": "LONG",
+      "entry_price": 0.08179,
+      "exit_price": 0.08206,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on XPLUSDT (PnL: +0.33%, Net: $+0.02 Fase 3)",
+      "context": {
+        "score": 59,
+        "rsi_15m": 62.85,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 04:15:31",
+      "account_id": "SIM-002",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "XPLUSDT",
+      "side": "LONG",
+      "entry_price": 0.08179,
+      "exit_price": 0.08206,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on XPLUSDT (PnL: +0.33%, Net: $+0.02 Fase 3)",
+      "context": {
+        "score": 59,
+        "rsi_15m": 62.85,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 04:15:31",
+      "account_id": "SIM-003",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "XPLUSDT",
+      "side": "LONG",
+      "entry_price": 0.08179,
+      "exit_price": 0.08206,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on XPLUSDT (PnL: +0.33%, Net: $+0.02 Fase 3)",
+      "context": {
+        "score": 59,
+        "rsi_15m": 62.85,
         "macro_trend_4h": "NEUTRAL"
       }
     }
