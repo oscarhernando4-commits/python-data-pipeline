@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 1201,
+    "total_trades": 1202,
     "wins": 540,
-    "losses": 661,
-    "win_rate_pct": 44.96,
-    "total_pnl_usd": -4399.409823000005
+    "losses": 662,
+    "win_rate_pct": 44.93,
+    "total_pnl_usd": -4399.649823000005
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on HEMIUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ONDOUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ONDOUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on XRPUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on NEXOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on REUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on JTOUSDT)",
-      "BLOCK LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NEXOUSDT)"
+      "BLOCK LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NEXOUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NEXOUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MUBUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 05:29:16",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "LINKUSDT",
-      "side": "SHORT",
-      "entry_price": 9.639,
-      "exit_price": 9.642,
-      "pnl_usd": -25.63,
-      "result": "LOSS",
-      "notes": "LOSS on LINKUSDT (PnL: -0.03%, Net: $-25.63 Fase 2)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 60.52,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 05:29:16",
       "account_id": "SIM-028",
@@ -8346,6 +8329,23 @@
       "context": {
         "score": 38,
         "rsi_15m": 43.66,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 07:33:44",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "NEXOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.734,
+      "exit_price": 0.752,
+      "pnl_usd": -0.24,
+      "result": "LOSS",
+      "notes": "LOSS on NEXOUSDT (PnL: -2.45%, Net: $-0.24 Fase 1)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 55.61,
         "macro_trend_4h": "NEUTRAL"
       }
     }
