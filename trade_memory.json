@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1645,
-    "wins": 793,
+    "total_trades": 1646,
+    "wins": 794,
     "losses": 852,
-    "win_rate_pct": 48.21,
-    "total_pnl_usd": -5085.6758471511985
+    "win_rate_pct": 48.24,
+    "total_pnl_usd": -5085.625847151198
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SEIUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HEMIUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PNUTUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZECUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HEIUSDT)",
@@ -49,7 +48,8 @@
       "BOOST SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZECUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ENAUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DOGEUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on FILUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on FILUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on STXUSDT)"
     ]
   },
   "history": [
@@ -8386,6 +8386,23 @@
       "context": {
         "score": 52,
         "rsi_15m": 56.02,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:19:22",
+      "account_id": "SIM-091",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "STXUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1415,
+      "exit_price": 0.1409,
+      "pnl_usd": 0.05,
+      "result": "WIN",
+      "notes": "WIN on STXUSDT (PnL: +0.42%, Net: $+0.05 Fase 3)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 57.13,
         "macro_trend_4h": "NEUTRAL"
       }
     }
