@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONTUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ICPUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LTCUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOGEUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BICOUSDT)",
@@ -49,7 +48,8 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on AAVEUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ONGUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ORDIUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ICPUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ICPUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on AVAXUSDT)"
     ]
   },
   "history": [
@@ -8380,52 +8380,52 @@
       }
     },
     {
-      "timestamp": "2026-08-20 21:23:31",
-      "account_id": "SIM-000 (Réplica Real)",
-      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
-      "symbol": "ONTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.05415,
-      "exit_price": 0.05589,
-      "pnl_usd": -0.21,
-      "result": "LOSS",
-      "notes": "LOSS on ONTUSDT (PnL: -3.21%, Net: $-0.21 Fase 1)",
-      "context": {
-        "score": 32,
-        "rsi_15m": 69.86,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 21:23:31",
-      "account_id": "SIM-043",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "timestamp": "2026-08-20 16:26:29",
+      "account_id": "SIM-011",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
       "symbol": "ICPUSDT",
       "side": "LONG",
-      "entry_price": 2.372,
+      "entry_price": 2.37,
       "exit_price": 2.383,
-      "pnl_usd": 0.1,
+      "pnl_usd": 0.07,
       "result": "WIN",
-      "notes": "WIN on ICPUSDT (PnL: +0.46%, Net: $+0.10 Fase 2)",
+      "notes": "WIN on ICPUSDT (PnL: +0.55%, Net: $+0.07 Fase 2)",
       "context": {
-        "score": 62,
+        "score": 95,
         "rsi_15m": 61.64,
         "macro_trend_4h": "NEUTRAL"
       }
     },
     {
-      "timestamp": "2026-08-20 21:23:31",
-      "account_id": "SIM-044",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "timestamp": "2026-08-20 16:26:29",
+      "account_id": "SIM-013",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
       "symbol": "ICPUSDT",
       "side": "LONG",
-      "entry_price": 2.372,
+      "entry_price": 2.37,
+      "exit_price": 2.383,
+      "pnl_usd": 0.04,
+      "result": "WIN",
+      "notes": "WIN on ICPUSDT (PnL: +0.55%, Net: $+0.04 Fase 2)",
+      "context": {
+        "score": 95,
+        "rsi_15m": 61.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 16:26:29",
+      "account_id": "SIM-014",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ICPUSDT",
+      "side": "LONG",
+      "entry_price": 2.37,
       "exit_price": 2.383,
       "pnl_usd": 0.05,
       "result": "WIN",
-      "notes": "WIN on ICPUSDT (PnL: +0.46%, Net: $+0.05 Fase 2)",
+      "notes": "WIN on ICPUSDT (PnL: +0.55%, Net: $+0.05 Fase 2)",
       "context": {
-        "score": 62,
+        "score": 95,
         "rsi_15m": 61.64,
         "macro_trend_4h": "NEUTRAL"
       }
