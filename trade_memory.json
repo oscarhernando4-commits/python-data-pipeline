@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1673,
-    "wins": 802,
+    "total_trades": 1674,
+    "wins": 803,
     "losses": 871,
-    "win_rate_pct": 47.94,
-    "total_pnl_usd": -5208.355847151197
+    "win_rate_pct": 47.97,
+    "total_pnl_usd": -5208.245847151197
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on KAITOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on UNIUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BICOUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ADAUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PENGUUSDT)",
@@ -49,7 +48,8 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on TAOUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on IOTAUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on GALAUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on CFXUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on CFXUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on UNIUSDT)"
     ]
   },
   "history": [
@@ -8455,6 +8455,23 @@
       "context": {
         "score": 38,
         "rsi_15m": 34.83,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:55:34",
+      "account_id": "SIM-023",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "UNIUSDT",
+      "side": "LONG",
+      "entry_price": 3.708,
+      "exit_price": 3.733,
+      "pnl_usd": 0.11,
+      "result": "WIN",
+      "notes": "WIN on UNIUSDT (PnL: +0.67%, Net: $+0.11 Fase 4)",
+      "context": {
+        "score": 54,
+        "rsi_15m": 54.73,
         "macro_trend_4h": "NEUTRAL"
       }
     }
