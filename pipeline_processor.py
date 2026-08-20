@@ -481,19 +481,18 @@ def run_infinite_trading_matrix_cycle():
                 
             atr_pct = analysis.get("tech", {}).get("mtf_analysis", {}).get("atr_pct_15m", 0.30) if analysis else 0.30
             
-            # 🎯 3 FASES CUÁNTICAS DINÁMICAS (Idéntico a Cuenta Real):
-            if highest_pnl_pct < 0.30:
-                sl_pct = -2.00
-                phase = 1
-            elif highest_pnl_pct < 0.60:
-                sl_pct = max(0.15, round(highest_pnl_pct - 0.25, 2))  # Fase 2: +0.15% NETO y 0.25% de holgura
-                phase = 2
-            else:
-                dynamic_trail = max(0.35, round(atr_pct * 1.2, 2))   # Fase 3: Trailing Adaptativo ATR
-                sl_pct = max(0.35, round(highest_pnl_pct - dynamic_trail, 2))
-                phase = 3
+            # 🎯 SISTEMA DINÁMICO DE 5 FASES ESCALADAS (10 Micro-Subpartes Cuánticas Idéntico a Cuenta Real):
+            import adaptive_asset_dna
+            arch_dna = adaptive_asset_dna.get_asset_dna_archetype(symbol, atr_pct, curr_price)
+            sl_pct, phase, phase_label = adaptive_asset_dna.calculate_archetype_trailing(
+                archetype_dna=arch_dna,
+                highest_pnl_pct=highest_pnl_pct,
+                holding_minutes=position.get("holding_minutes", 1),
+                atr_pct=atr_pct
+            )
                 
             position["phase"] = phase
+            position["phase_label"] = phase_label
             should_close = unr_pct <= sl_pct
             
             invested = curr_bal * 0.20  # 20% position size
