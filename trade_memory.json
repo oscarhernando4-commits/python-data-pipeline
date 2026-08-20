@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 1724,
+    "total_trades": 1725,
     "wins": 816,
-    "losses": 908,
-    "win_rate_pct": 47.33,
-    "total_pnl_usd": -5405.298677151194
+    "losses": 909,
+    "win_rate_pct": 47.3,
+    "total_pnl_usd": -5424.428677151194
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on XLMUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on XLMUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PENDLEUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ONGUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GIGGLEUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on CRVUSDT)",
-      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONGUSDT)"
+      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONGUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on CFXUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XPLUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 08:23:42",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ALGOUSDT",
-      "side": "LONG",
-      "entry_price": 0.0843,
-      "exit_price": 0.0847,
-      "pnl_usd": 45.15,
-      "result": "WIN",
-      "notes": "WIN on ALGOUSDT (PnL: +0.47%, Net: $+45.15 Fase 3)",
-      "context": {
-        "score": 59,
-        "rsi_15m": 65.56,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 08:23:42",
       "account_id": "SIM-028",
@@ -8478,6 +8461,23 @@
       "context": {
         "score": 45,
         "rsi_15m": 94.53,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 20:27:35",
+      "account_id": "SIM-093",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "CFXUSDT",
+      "side": "SHORT",
+      "entry_price": 0.04449,
+      "exit_price": 0.0448,
+      "pnl_usd": -19.13,
+      "result": "LOSS",
+      "notes": "LOSS on CFXUSDT (PnL: -0.70%, Net: $-19.13 Fase 2)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 55.25,
         "macro_trend_4h": "NEUTRAL"
       }
     }
