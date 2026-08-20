@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1274,
-    "wins": 598,
+    "total_trades": 1275,
+    "wins": 599,
     "losses": 676,
-    "win_rate_pct": 46.94,
-    "total_pnl_usd": -4302.859823000002
+    "win_rate_pct": 46.98,
+    "total_pnl_usd": -4302.829823000002
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 10:07:08",
-      "account_id": "SIM-070",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "REUSDT",
-      "side": "SHORT",
-      "entry_price": 0.3915,
-      "exit_price": 0.4016,
-      "pnl_usd": -0.53,
-      "result": "LOSS",
-      "notes": "LOSS on REUSDT (PnL: -2.58%, Net: $-0.53 Fase 1)",
-      "context": {
-        "score": 48,
-        "rsi_15m": 62.47,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 10:29:21",
       "account_id": "SIM-050",
@@ -8346,6 +8329,23 @@
       "context": {
         "score": 46,
         "rsi_15m": 75.92,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 09:35:55",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "REUSDT",
+      "side": "SHORT",
+      "entry_price": 0.5316,
+      "exit_price": 0.5288,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on REUSDT (PnL: +0.53%, Net: $+0.03 Fase 3)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 47.15,
         "macro_trend_4h": "NEUTRAL"
       }
     }
