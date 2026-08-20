@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 1662,
+    "total_trades": 1663,
     "wins": 793,
-    "losses": 869,
-    "win_rate_pct": 47.71,
-    "total_pnl_usd": -5451.518677151194
+    "losses": 870,
+    "win_rate_pct": 47.68,
+    "total_pnl_usd": -5451.538677151195
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on PEOPLEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ROBOUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TUTUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ROBOUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on XLMUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PENDLEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on APTUSDT)",
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ADAUSDT)"
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ADAUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on LINKUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BICOUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 06:03:25",
-      "account_id": "SIM-052",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "WLFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.062,
-      "exit_price": 0.062,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on WLFIUSDT (PnL: +0.00%, Net: $-0.03 Fase 2)",
-      "context": {
-        "score": 48,
-        "rsi_15m": 54.22,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 06:03:25",
       "account_id": "SIM-054",
@@ -8500,6 +8483,23 @@
       "result": "LOSS",
       "notes": "Real Money Trade closed with -0.11%",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-20 19:19:17",
+      "account_id": "SIM-083",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "LINKUSDT",
+      "side": "SHORT",
+      "entry_price": 10.659,
+      "exit_price": 10.653,
+      "pnl_usd": -0.02,
+      "result": "LOSS",
+      "notes": "LOSS on LINKUSDT (PnL: +0.06%, Net: $-0.02 Fase 2)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 47.3,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
