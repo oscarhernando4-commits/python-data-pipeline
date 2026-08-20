@@ -1,9 +1,9 @@
 {
   "stats": {
-    "total_trades": 1385,
-    "wins": 660,
+    "total_trades": 1386,
+    "wins": 661,
     "losses": 725,
-    "win_rate_pct": 47.65,
+    "win_rate_pct": 47.69,
     "total_pnl_usd": -3981.139823000003
   },
   "learned_rules": {
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on STRKUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PYTHUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on QNTUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on GIGGLEUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ICPUSDT)",
@@ -49,44 +48,11 @@
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on SYRUPUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BONKUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ETHFIUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ETHFIUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ARBUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 09:45:32",
-      "account_id": "SIM-030",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ZECUSDT",
-      "side": "SHORT",
-      "entry_price": 513.61,
-      "exit_price": 524.3,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "LOSS on ZECUSDT (PnL: -2.08%, Net: $-0.06 Fase 1)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 82.5,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 09:45:32",
-      "account_id": "SIM-032",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ZECUSDT",
-      "side": "SHORT",
-      "entry_price": 513.61,
-      "exit_price": 524.3,
-      "pnl_usd": -0.47,
-      "result": "LOSS",
-      "notes": "LOSS on ZECUSDT (PnL: -2.08%, Net: $-0.47 Fase 1)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 82.5,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 09:45:32",
       "account_id": "SIM-033",
@@ -8439,6 +8405,23 @@
       "context": {
         "score": 46,
         "rsi_15m": 82.21,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 12:25:13",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "ARBUSDT",
+      "side": "SHORT",
+      "entry_price": 0.088,
+      "exit_price": 0.0879,
+      "pnl_usd": -0.0,
+      "result": "WIN",
+      "notes": "WIN on ARBUSDT (PnL: +0.11%, Net: $-0.00 Fase 2)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 41.34,
         "macro_trend_4h": "NEUTRAL"
       }
     }
