@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1415,
-    "wins": 685,
+    "total_trades": 1418,
+    "wins": 688,
     "losses": 730,
-    "win_rate_pct": 48.41,
-    "total_pnl_usd": -4269.139823000002
+    "win_rate_pct": 48.52,
+    "total_pnl_usd": -4269.059823000002
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SYRUPUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PENGUUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on XPLUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on SYRUPUSDT)",
@@ -49,49 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on WIFUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on WBETHUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SYRUPUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SYRUPUSDT)",
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TRXUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 10:24:19",
-      "account_id": "SIM-018",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "BTCUSDT",
-      "side": "LONG",
-      "entry_price": 65206.01,
-      "exit_price": 65206.01,
-      "pnl_usd": -0.07,
-      "result": "LOSS",
-      "notes": "LOSS on BTCUSDT (PnL: +0.00%, Net: $-0.07 Fase 3)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-19 10:24:19",
-      "account_id": "SIM-019",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "XRPUSDT",
-      "side": "LONG",
-      "entry_price": 1.0178,
-      "exit_price": 1.0178,
-      "pnl_usd": -0.07,
-      "result": "LOSS",
-      "notes": "LOSS on XRPUSDT (PnL: +0.00%, Net: $-0.07 Fase 3)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-19 10:24:19",
-      "account_id": "SIM-052",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "HBARUSDT",
-      "side": "LONG",
-      "entry_price": 0.06798,
-      "exit_price": 0.06798,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on HBARUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-19 10:24:20",
       "account_id": "SIM-054",
@@ -8458,6 +8419,57 @@
       "context": {
         "score": 45,
         "rsi_15m": 62.22,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 13:33:26",
+      "account_id": "SIM-047",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "TRXUSDT",
+      "side": "LONG",
+      "entry_price": 0.3371,
+      "exit_price": 0.3381,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on TRXUSDT (PnL: +0.30%, Net: $+0.02 Fase 2)",
+      "context": {
+        "score": 40,
+        "rsi_15m": 71.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 13:33:26",
+      "account_id": "SIM-048",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "TRXUSDT",
+      "side": "LONG",
+      "entry_price": 0.3371,
+      "exit_price": 0.3381,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on TRXUSDT (PnL: +0.30%, Net: $+0.03 Fase 2)",
+      "context": {
+        "score": 40,
+        "rsi_15m": 71.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 13:33:26",
+      "account_id": "SIM-049",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "TRXUSDT",
+      "side": "LONG",
+      "entry_price": 0.3371,
+      "exit_price": 0.3381,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on TRXUSDT (PnL: +0.30%, Net: $+0.03 Fase 2)",
+      "context": {
+        "score": 40,
+        "rsi_15m": 71.11,
         "macro_trend_4h": "NEUTRAL"
       }
     }
