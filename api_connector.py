@@ -891,20 +891,20 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             atr_pct=atr_pct
         )
     except Exception as e:
-        # Fallback to standard 4-Phase Trailing Stop (-0.25% desde la cima máxima en Fase 2, 3 y 4)
-        trailing_delta = 0.25
+        # Fallback to standard 4-Phase Proportional Ladder (75% de retención de la cima máxima en Fase 2, 3 y 4)
+        retention_ratio = 0.75
         if highest_pnl_pct >= 5.00:
-            sl_pct = round(highest_pnl_pct - trailing_delta, 2)
+            sl_pct = round(highest_pnl_pct * retention_ratio, 2)
             phase = 4
-            phase_label = f"🚀 FASE 4 MEGAPUMP (Cima +{highest_pnl_pct:.2f}% | Trailing -0.25% -> Piso +{sl_pct:.2f}%)"
+            phase_label = f"🚀 FASE 4 MEGAPUMP (Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
         elif highest_pnl_pct >= 2.20:
-            sl_pct = round(highest_pnl_pct - trailing_delta, 2)
+            sl_pct = round(highest_pnl_pct * retention_ratio, 2)
             phase = 3
-            phase_label = f"💎 FASE 3 EXPANSIÓN (Cima +{highest_pnl_pct:.2f}% | Trailing -0.25% -> Piso +{sl_pct:.2f}%)"
+            phase_label = f"💎 FASE 3 EXPANSIÓN (Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
         elif highest_pnl_pct >= 0.50:
-            sl_pct = round(highest_pnl_pct - trailing_delta, 2)
+            sl_pct = round(highest_pnl_pct * retention_ratio, 2)
             phase = 2
-            phase_label = f"🔒 FASE 2 RENDIMIENTO (Cima +{highest_pnl_pct:.2f}% | Trailing -0.25% -> Piso +{sl_pct:.2f}%)"
+            phase_label = f"🔒 FASE 2 RENDIMIENTO (Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
         else:
             sl_pct = -2.00
             phase = 1
