@@ -3062,3 +3062,29 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-34.18%)`, `2024-12-08 (-21.04%)`, `2024-04-11 (-19.07%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: IOTAUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-24` hasta `2026-08-19` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.0368 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.6328 USD` (`2024-12-03`) | Distancia: `-94.18%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0310 USD` (`2026-07-30`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2023-11-28 (+47.83%)`, `2023-12-01 (+29.82%)`, `2024-12-02 (+27.68%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-03-02 (-19.88%)`, `2025-10-09 (-18.15%)`, `2024-12-08 (-17.34%)`
+
+---
+
+### 🪙 Profile Completo de Vida: RAYUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-24` hasta `2026-08-19` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.6851 USD`
+- 📈 **Máximo Histórico (ATH):** `$8.7000 USD` (`2025-01-22`) | Distancia: `-92.13%`
+- 📉 **Mínimo Histórico (ATL):** `$0.3417 USD` (`2023-11-26`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2023-12-20 (+52.54%)`, `2023-12-07 (+45.42%)`, `2024-11-05 (+33.96%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-02-23 (-28.7%)`, `2025-10-09 (-26.18%)`, `2025-03-02 (-22.79%)`
+
+---
