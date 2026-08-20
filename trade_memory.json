@@ -1,9 +1,9 @@
 {
   "stats": {
-    "total_trades": 1407,
-    "wins": 674,
+    "total_trades": 1410,
+    "wins": 677,
     "losses": 733,
-    "win_rate_pct": 47.9,
+    "win_rate_pct": 48.01,
     "total_pnl_usd": -4165.210622999999
   },
   "learned_rules": {
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on LTCUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BBUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ORDIUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HBARUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on XRPUSDT)",
@@ -49,61 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XPLUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TRXUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HEMIUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BBUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BBUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MUBUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 10:23:12",
-      "account_id": "SIM-026",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ADAUSDT",
-      "side": "SHORT",
-      "entry_price": 0.1783,
-      "exit_price": 0.1783,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on ADAUSDT (PnL: +0.00%, Net: $-0.03 Fase 2)",
-      "context": {
-        "score": 98,
-        "rsi_15m": 69.05,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 10:23:12",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ADAUSDT",
-      "side": "SHORT",
-      "entry_price": 0.1783,
-      "exit_price": 0.1783,
-      "pnl_usd": -21.09,
-      "result": "LOSS",
-      "notes": "LOSS on ADAUSDT (PnL: +0.00%, Net: $-21.09 Fase 2)",
-      "context": {
-        "score": 98,
-        "rsi_15m": 69.05,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 10:23:12",
-      "account_id": "SIM-028",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ADAUSDT",
-      "side": "SHORT",
-      "entry_price": 0.1783,
-      "exit_price": 0.1783,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on ADAUSDT (PnL: +0.00%, Net: $-0.03 Fase 2)",
-      "context": {
-        "score": 98,
-        "rsi_15m": 69.05,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 10:24:19",
       "account_id": "SIM-000 (Réplica Real)",
@@ -8430,6 +8379,57 @@
       "context": {
         "score": 0,
         "rsi_15m": 62.17,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 09:17:02",
+      "account_id": "SIM-001",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "MUBUSDT",
+      "side": "LONG",
+      "entry_price": 947.47,
+      "exit_price": 949.0,
+      "pnl_usd": 0.0,
+      "result": "WIN",
+      "notes": "WIN on MUBUSDT (PnL: +0.16%, Net: $+0.00 Fase 2)",
+      "context": {
+        "score": 88,
+        "rsi_15m": 56.35,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 09:17:02",
+      "account_id": "SIM-002",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "MUBUSDT",
+      "side": "LONG",
+      "entry_price": 947.47,
+      "exit_price": 949.0,
+      "pnl_usd": 0.0,
+      "result": "WIN",
+      "notes": "WIN on MUBUSDT (PnL: +0.16%, Net: $+0.00 Fase 2)",
+      "context": {
+        "score": 88,
+        "rsi_15m": 56.35,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 09:17:02",
+      "account_id": "SIM-003",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "MUBUSDT",
+      "side": "LONG",
+      "entry_price": 947.47,
+      "exit_price": 949.0,
+      "pnl_usd": 0.0,
+      "result": "WIN",
+      "notes": "WIN on MUBUSDT (PnL: +0.16%, Net: $+0.00 Fase 2)",
+      "context": {
+        "score": 88,
+        "rsi_15m": 56.35,
         "macro_trend_4h": "NEUTRAL"
       }
     }
