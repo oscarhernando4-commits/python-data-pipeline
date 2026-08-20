@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1250,
-    "wins": 574,
+    "total_trades": 1251,
+    "wins": 575,
     "losses": 676,
-    "win_rate_pct": 45.92,
-    "total_pnl_usd": -4435.969823000002
+    "win_rate_pct": 45.96,
+    "total_pnl_usd": -4435.959823000002
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MUBUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MUBUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on THETAUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on VIRTUALUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ETHFIUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on REDUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BOMEUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on NEXOUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ENAUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ENAUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on GNOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 09:29:35",
-      "account_id": "SIM-001",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "SOLUSDT",
-      "side": "LONG",
-      "entry_price": 77.07,
-      "exit_price": 77.33,
-      "pnl_usd": 0.02,
-      "result": "WIN",
-      "notes": "WIN on SOLUSDT (PnL: +0.34%, Net: $+0.02 Fase 2)",
-      "context": {
-        "score": 54,
-        "rsi_15m": 60.75,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 09:29:35",
       "account_id": "SIM-002",
@@ -8346,6 +8329,23 @@
       "context": {
         "score": 38,
         "rsi_15m": 38.82,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 08:49:51",
+      "account_id": "SIM-083",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "GNOUSDT",
+      "side": "SHORT",
+      "entry_price": 122.9,
+      "exit_price": 122.66,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on GNOUSDT (PnL: +0.20%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 52.83,
         "macro_trend_4h": "NEUTRAL"
       }
     }
