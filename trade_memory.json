@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 1669,
+    "total_trades": 1670,
     "wins": 802,
-    "losses": 867,
-    "win_rate_pct": 48.05,
-    "total_pnl_usd": -5130.135847151197
+    "losses": 868,
+    "win_rate_pct": 48.02,
+    "total_pnl_usd": -5130.145847151197
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TUTUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on PEOPLEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ROBOUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TUTUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on XLMUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on WLDUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SEIUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on STXUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on STXUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SOLUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on UNIUSDT)",
@@ -8387,6 +8387,23 @@
       "context": {
         "score": 38,
         "rsi_15m": 47.72,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 18:47:32",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "SOLUSDT",
+      "side": "SHORT",
+      "entry_price": 87.0,
+      "exit_price": 86.95,
+      "pnl_usd": -0.01,
+      "result": "LOSS",
+      "notes": "LOSS on SOLUSDT (PnL: +0.06%, Net: $-0.01 Fase 2)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 47.84,
         "macro_trend_4h": "NEUTRAL"
       }
     }
