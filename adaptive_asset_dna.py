@@ -177,27 +177,32 @@ def calculate_archetype_trailing(
     atr_pct: float = 0.30
 ) -> Tuple[float, int, str]:
     """
-    Sistema Dinámico Cuántico de 3 FASES:
+    Sistema Dinámico Cuántico de 5 FASES Escaladas:
     - FASE 1 (Cima < +0.20%): Entrada y absorción base con Stop-Loss defensivo (-2.00%).
-    - FASE 2 (Cima >= +0.20%): Reducción Temprana de Riesgo (Stop-Loss se ajusta de -2.00% a -0.80%).
-    - FASE 3 (Cima >= +0.50%): Trailing Proporcional Dinámico retiene el 80% de la cima alcanzada (Piso = Cima * 0.80).
+    - FASE 2 (+0.20% <= Cima < +0.50%): Reducción Temprana de Riesgo (Stop-Loss se ajusta a -0.80%).
+    - FASE 3 (+0.50% <= Cima < +1.00%): Trailing Proporcional Dinámico retiene el 70% de la cima (Piso = Cima * 0.70).
+    - FASE 4 (+1.00% <= Cima < +2.00%): Trailing Proporcional Dinámico retiene el 75% de la cima (Piso = Cima * 0.75).
+    - FASE 5 (Cima >= +2.00%): Trailing Proporcional Dinámico retiene el 80% de la cima (Piso = Cima * 0.80).
     """
     arch = archetype_dna.get("archetype", "SECTOR_ROTATION")
     initial_sl = float(archetype_dna.get("initial_sl_pct", -2.00))
-    p2_trigger = 0.20  # Activa reducción temprana de riesgo
-    p3_trigger = 0.50  # Activa Trailing 80% en verde
     emoji = archetype_dna.get("emoji", "🧬")
     label = archetype_dna.get("label", arch)
 
-    # 🎯 FÓRMULA PROPORCIONAL DINÁMICA: Retiene el 80% de la cima en Fase 3
-    retention_ratio = 0.80
-
-    if highest_pnl_pct >= p3_trigger:
-        sl_pct = round(highest_pnl_pct * retention_ratio, 2)
+    if highest_pnl_pct >= 2.00:
+        sl_pct = round(highest_pnl_pct * 0.80, 2)
+        phase = 5
+        phase_label = f"👑 FASE 5 TENDENCIA FUERTE ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 1.00:
+        sl_pct = round(highest_pnl_pct * 0.75, 2)
+        phase = 4
+        phase_label = f"🚀 FASE 4 EXPANSIÓN MEDIA ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 0.50:
+        sl_pct = round(highest_pnl_pct * 0.70, 2)
         phase = 3
-        phase_label = f"🚀 FASE 3 TRAILING 80% ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= p2_trigger:
-        sl_pct = -0.80  # Riesgo recortado al tocar +0.20%
+        phase_label = f"💎 FASE 3 RENDIMIENTO ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 70% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 0.20:
+        sl_pct = -0.80  # Riesgo recortado de -2.00% a -0.80%
         phase = 2
         phase_label = f"🔒 FASE 2 PROTECCIÓN ({emoji} Cima +{highest_pnl_pct:.2f}% | Riesgo Reducido -> SL -0.80%)"
     else:

@@ -3088,3 +3088,16 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-02-23 (-28.7%)`, `2025-10-09 (-26.18%)`, `2025-03-02 (-22.79%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: PNUTUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2024-11-10` hasta `2026-08-19` (648 Días de Historial)
+- 💵 **Precio Actual:** `$0.0515 USD`
+- 📈 **Máximo Histórico (ATH):** `$2.5000 USD` (`2024-11-13`) | Distancia: `-97.94%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0296 USD` (`2025-12-10`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-11-12 (+282.65%)`, `2024-11-10 (+273.26%)`, `2025-05-08 (+74.46%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-34.09%)`, `2024-12-18 (-23.08%)`, `2025-01-17 (-21.63%)`
+
+---

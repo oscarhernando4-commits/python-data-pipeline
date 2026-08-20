@@ -891,12 +891,19 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             atr_pct=atr_pct
         )
     except Exception as e:
-        # Fallback to standard 3-Phase System (SL -0.80% al tocar +0.20% y Trailing 80% al tocar +0.50%)
-        retention_ratio = 0.80
-        if highest_pnl_pct >= 0.50:
-            sl_pct = round(highest_pnl_pct * retention_ratio, 2)
+        # Fallback to standard 5-Phase Escalation Architecture
+        if highest_pnl_pct >= 2.00:
+            sl_pct = round(highest_pnl_pct * 0.80, 2)
+            phase = 5
+            phase_label = f"👑 FASE 5 TENDENCIA FUERTE (Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 1.00:
+            sl_pct = round(highest_pnl_pct * 0.75, 2)
+            phase = 4
+            phase_label = f"🚀 FASE 4 EXPANSIÓN MEDIA (Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 0.50:
+            sl_pct = round(highest_pnl_pct * 0.70, 2)
             phase = 3
-            phase_label = f"🚀 FASE 3 TRAILING 80% (Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
+            phase_label = f"💎 FASE 3 RENDIMIENTO (Cima +{highest_pnl_pct:.2f}% | Retención 70% -> Piso +{sl_pct:.2f}%)"
         elif highest_pnl_pct >= 0.20:
             sl_pct = -0.80
             phase = 2
