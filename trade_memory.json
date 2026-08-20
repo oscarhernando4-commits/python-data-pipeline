@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1222,
-    "wins": 551,
+    "total_trades": 1223,
+    "wins": 552,
     "losses": 671,
-    "win_rate_pct": 45.09,
-    "total_pnl_usd": -4492.529823000004
+    "win_rate_pct": 45.13,
+    "total_pnl_usd": -4492.509823000004
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 06:05:39",
-      "account_id": "SIM-047",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ARBUSDT",
-      "side": "LONG",
-      "entry_price": 0.075,
-      "exit_price": 0.0754,
-      "pnl_usd": 0.05,
-      "result": "WIN",
-      "notes": "WIN on ARBUSDT (PnL: +0.53%, Net: $+0.05 Fase 3)",
-      "context": {
-        "score": 32,
-        "rsi_15m": 44.42,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 06:05:39",
       "account_id": "SIM-050",
@@ -8346,6 +8329,23 @@
       "context": {
         "score": 48,
         "rsi_15m": 57.27,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 08:21:36",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "SFPUSDT",
+      "side": "LONG",
+      "entry_price": 0.271,
+      "exit_price": 0.2736,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on SFPUSDT (PnL: +0.96%, Net: $+0.02 Fase 3)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 76.54,
         "macro_trend_4h": "NEUTRAL"
       }
     }
