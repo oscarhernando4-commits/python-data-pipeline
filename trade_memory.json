@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1354,
+    "total_trades": 1357,
     "wins": 644,
-    "losses": 710,
-    "win_rate_pct": 47.56,
-    "total_pnl_usd": -4061.9198230000015
+    "losses": 713,
+    "win_rate_pct": 47.46,
+    "total_pnl_usd": -4063.669823000002
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-19 08:37:13",
-      "account_id": "SIM-032",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "POLUSDT",
-      "side": "LONG",
-      "entry_price": 0.08097,
-      "exit_price": 0.08177,
-      "pnl_usd": 0.18,
-      "result": "WIN",
-      "notes": "WIN on POLUSDT (PnL: +0.99%, Net: $+0.18 Fase 3)",
-      "context": {
-        "score": 18,
-        "rsi_15m": 51.32,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 08:37:13",
-      "account_id": "SIM-033",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "POLUSDT",
-      "side": "LONG",
-      "entry_price": 0.08097,
-      "exit_price": 0.08177,
-      "pnl_usd": 0.16,
-      "result": "WIN",
-      "notes": "WIN on POLUSDT (PnL: +0.99%, Net: $+0.16 Fase 3)",
-      "context": {
-        "score": 18,
-        "rsi_15m": 51.32,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-19 08:37:13",
-      "account_id": "SIM-052",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "PAXGUSDT",
-      "side": "LONG",
-      "entry_price": 4378.81,
-      "exit_price": 4438.71,
-      "pnl_usd": 0.22,
-      "result": "WIN",
-      "notes": "WIN on PAXGUSDT (PnL: +1.37%, Net: $+0.22 Fase 3)",
-      "context": {
-        "score": 74,
-        "rsi_15m": 78.72,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-19 08:37:13",
       "account_id": "SIM-054",
@@ -8386,6 +8335,57 @@
       "context": {
         "score": 32,
         "rsi_15m": 40.23,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 11:49:19",
+      "account_id": "SIM-011",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "MUBUSDT",
+      "side": "LONG",
+      "entry_price": 953.76,
+      "exit_price": 933.61,
+      "pnl_usd": -0.4,
+      "result": "LOSS",
+      "notes": "LOSS on MUBUSDT (PnL: -2.11%, Net: $-0.40 Fase 1)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 33.52,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 11:49:19",
+      "account_id": "SIM-013",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "MUBUSDT",
+      "side": "LONG",
+      "entry_price": 953.76,
+      "exit_price": 933.61,
+      "pnl_usd": -0.26,
+      "result": "LOSS",
+      "notes": "LOSS on MUBUSDT (PnL: -2.11%, Net: $-0.26 Fase 1)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 33.52,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 11:49:19",
+      "account_id": "SIM-018",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "MUBUSDT",
+      "side": "LONG",
+      "entry_price": 953.76,
+      "exit_price": 933.61,
+      "pnl_usd": -1.09,
+      "result": "LOSS",
+      "notes": "LOSS on MUBUSDT (PnL: -2.11%, Net: $-1.09 Fase 1)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 33.52,
         "macro_trend_4h": "NEUTRAL"
       }
     }
