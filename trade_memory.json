@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 1930,
+    "total_trades": 1933,
     "wins": 955,
-    "losses": 975,
-    "win_rate_pct": 49.48,
-    "total_pnl_usd": -7439.160525451198
+    "losses": 978,
+    "win_rate_pct": 49.41,
+    "total_pnl_usd": -7442.000525451198
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PENDLEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on BTCUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on TAOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ZAMAUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEARUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ENSUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZAMAUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BCHUSDT)"
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BCHUSDT)",
+      "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HEMIUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on UNIUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 09:36:52",
-      "account_id": "SIM-045",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ONGUSDT",
-      "side": "LONG",
-      "entry_price": 0.08417,
-      "exit_price": 0.08158,
-      "pnl_usd": -0.56,
-      "result": "LOSS",
-      "notes": "LOSS on ONGUSDT (PnL: -3.08%, Net: $-0.56 Fase 1)",
-      "context": {
-        "score": 74,
-        "rsi_15m": 87.39,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 09:36:52",
-      "account_id": "SIM-046",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ONGUSDT",
-      "side": "LONG",
-      "entry_price": 0.08417,
-      "exit_price": 0.08158,
-      "pnl_usd": -1.02,
-      "result": "LOSS",
-      "notes": "LOSS on ONGUSDT (PnL: -3.08%, Net: $-1.02 Fase 1)",
-      "context": {
-        "score": 74,
-        "rsi_15m": 87.39,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 09:40:30",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ICPUSDT",
-      "side": "SHORT",
-      "entry_price": 2.354,
-      "exit_price": 2.336,
-      "pnl_usd": 85.16,
-      "result": "WIN",
-      "notes": "WIN on ICPUSDT (PnL: +0.76%, Net: $+85.16 Fase 3)",
-      "context": {
-        "score": 76,
-        "rsi_15m": 53.34,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 09:40:30",
       "account_id": "SIM-028",
@@ -8434,6 +8383,57 @@
       "context": {
         "score": 46,
         "rsi_15m": 69.31,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 03:55:34",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "HEMIUSDT",
+      "side": "LONG",
+      "entry_price": 0.0116,
+      "exit_price": 0.01133,
+      "pnl_usd": -1.89,
+      "result": "LOSS",
+      "notes": "LOSS on HEMIUSDT (PnL: -2.33%, Net: $-1.89 Fase 1)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 79.44,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 03:55:34",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "HEMIUSDT",
+      "side": "LONG",
+      "entry_price": 0.0116,
+      "exit_price": 0.01133,
+      "pnl_usd": -0.48,
+      "result": "LOSS",
+      "notes": "LOSS on HEMIUSDT (PnL: -2.33%, Net: $-0.48 Fase 1)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 79.44,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 03:55:34",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "HEMIUSDT",
+      "side": "LONG",
+      "entry_price": 0.0116,
+      "exit_price": 0.01133,
+      "pnl_usd": -0.47,
+      "result": "LOSS",
+      "notes": "LOSS on HEMIUSDT (PnL: -2.33%, Net: $-0.47 Fase 1)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 79.44,
         "macro_trend_4h": "NEUTRAL"
       }
     }
