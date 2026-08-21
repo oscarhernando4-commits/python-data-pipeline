@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2222,
+    "total_trades": 2225,
     "wins": 1117,
-    "losses": 1105,
-    "win_rate_pct": 50.27,
-    "total_pnl_usd": -9202.13052545121
+    "losses": 1108,
+    "win_rate_pct": 50.2,
+    "total_pnl_usd": -9202.190525451211
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 20:33:27",
-      "account_id": "SIM-048",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "CRVUSDT",
-      "side": "LONG",
-      "entry_price": 0.2772,
-      "exit_price": 0.2812,
-      "pnl_usd": 0.23,
-      "result": "WIN",
-      "notes": "WIN on CRVUSDT (PnL: +1.44%, Net: $+0.23 Fase 5)",
-      "context": {
-        "score": 46,
-        "rsi_15m": 71.02,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 20:33:27",
-      "account_id": "SIM-049",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "CRVUSDT",
-      "side": "LONG",
-      "entry_price": 0.2772,
-      "exit_price": 0.2812,
-      "pnl_usd": 0.23,
-      "result": "WIN",
-      "notes": "WIN on CRVUSDT (PnL: +1.44%, Net: $+0.23 Fase 5)",
-      "context": {
-        "score": 46,
-        "rsi_15m": 71.02,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 20:33:27",
-      "account_id": "SIM-050",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "CRVUSDT",
-      "side": "LONG",
-      "entry_price": 0.2772,
-      "exit_price": 0.2812,
-      "pnl_usd": 0.25,
-      "result": "WIN",
-      "notes": "WIN on CRVUSDT (PnL: +1.44%, Net: $+0.25 Fase 5)",
-      "context": {
-        "score": 46,
-        "rsi_15m": 71.02,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 20:41:25",
       "account_id": "SIM-026",
@@ -8436,6 +8385,45 @@
         "rsi_15m": 76.67,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-21 09:59:13",
+      "account_id": "SIM-001",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BCHUSDT",
+      "side": "LONG",
+      "entry_price": 227.9,
+      "exit_price": 227.9,
+      "pnl_usd": -0.02,
+      "result": "LOSS",
+      "notes": "LOSS on BCHUSDT (PnL: +0.00%, Net: $-0.02 Fase 5)",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-21 09:59:13",
+      "account_id": "SIM-002",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BCHUSDT",
+      "side": "LONG",
+      "entry_price": 227.9,
+      "exit_price": 227.9,
+      "pnl_usd": -0.02,
+      "result": "LOSS",
+      "notes": "LOSS on BCHUSDT (PnL: +0.00%, Net: $-0.02 Fase 5)",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-21 09:59:13",
+      "account_id": "SIM-003",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BCHUSDT",
+      "side": "LONG",
+      "entry_price": 227.9,
+      "exit_price": 227.9,
+      "pnl_usd": -0.02,
+      "result": "LOSS",
+      "notes": "LOSS on BCHUSDT (PnL: +0.00%, Net: $-0.02 Fase 5)",
+      "context": {}
     }
   ]
 }
