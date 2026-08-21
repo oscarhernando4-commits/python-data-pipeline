@@ -1473,6 +1473,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         print(f"👑 [SÚPER-CEREBRO APROBADO] {best_symbol} validado por IA con GIRO DE SUELO CONFIRMADO. Procediendo a libro...")
                 
                 if not is_stable:
+                    if arch_dna.get("is_blacklisted_fan_token", False):
+                        is_stable = True
+                        print(f"⛔ Compra rechazada: {best_symbol} bloqueado por ser Fan Token / Activo Ilíquido con libros de spoofing fantasma.")
+                    
+                if not is_stable:
                     import orderbook_analyzer
                     ob_info = orderbook_analyzer.fetch_orderbook_depth(best_symbol, limit=20)
                     

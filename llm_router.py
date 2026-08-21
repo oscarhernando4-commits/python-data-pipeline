@@ -522,6 +522,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     - Revisa la ESTRUCTURA DE SUELO 15M, el GATILLO SNIPER 1M/5M y la MATRIZ FRACTAL DE SUELO 7D de cada candidato.
     - REGLA DEL PISO INTRADÍA: El candidato DEBE estar en zona de soporte o pullback constructivo (1H <= 62% y 15M <= 55%).
     - ZONA DORADA DE MOMENTUM (WR 70%+): Prioriza candidatos con RSI 15M entre 52 y 75 (tendencia activa con fuerza institucional).
+    - VETO PROHIBICIÓN TOTAL DE FAN TOKENS E ILÍQUIDOS (SANTOS, ALPINE, LAZIO, PORTO, BAR, CITY, PSG, OG, JUV, ATM, ASR): Estos tokens carecen de volumen institucional real y sus muros de Bids son órdenes fantasma (spoofing). PROHIBIDO COMPRAR FAN TOKENS.
     - VETO TRAMPA SOBREVENTA (Cuchillo Cayendo): Si RSI 15M < 42 y NO hay divergencia alcista confirmada, RECHÁZALO (evita comprar activos en caída libre).
     - GATILLO SNIPER OBLIGATORIO: Exige que el GATILLO SNIPER muestre '🟢 LISTO PARA DISPARAR' (vela verde 1M sobre EMA9 + mínimo mayor en 5M). Prohibido comprar antes de que el sniper 1M confirme el giro.
     - VETO ANTI-CASCADA: Si el candidato tiene "🔴 CASCADA 15M EN CURSO", RECHÁZALO.

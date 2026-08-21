@@ -53,7 +53,14 @@ THIN_BOOK_MICRO_TOKENS = {
     "MUB", "MUBUSDT", "TUT", "TUTUSDT", "GPS", "GPSUSDT", "DEXE", "DEXEUSDT",
     "PROM", "PROMUSDT", "ASTER", "ASTERUSDT", "BICO", "BICOUSDT", "EDEN", "EDENUSDT",
     "KAITO", "KAITOUSDT", "STORJ", "STORJUSDT", "JST", "JSTUSDT", "DODO", "DODOUSDT",
-    "EUL", "EULUSDT", "ALPINE", "ALPINEUSDT", "ONG", "ONGUSDT", "BMT", "BMTUSDT"
+    "EUL", "EULUSDT", "ONG", "ONGUSDT", "BMT", "BMTUSDT"
+}
+
+# 🚫 BLACKLIST DE FAN TOKENS E ILÍQUIDOS CON LIBROS DE SPOOFING FANTASMA
+ILLIQUID_FAN_TOKENS = {
+    "SANTOS", "SANTOSUSDT", "ALPINE", "ALPINEUSDT", "LAZIO", "LAZIOUSDT", 
+    "PORTO", "PORTOUSDT", "BAR", "BARUSDT", "CITY", "CITYUSDT", "PSG", "PSGUSDT", 
+    "ATM", "ATMUSDT", "ASR", "ASRUSDT", "OG", "OGUSDT", "JUV", "JUVUSDT"
 }
 
 
@@ -142,7 +149,13 @@ def get_asset_dna_archetype(symbol: str, atr_15m_pct: float = 0.30, price: float
     clean_sym = symbol.replace("USDT", "").replace("USDC", "").replace("FDUSD", "").upper()
     
     # Check explicit mappings
-    if clean_sym in SPRINT_MEME_TOKENS or symbol in SPRINT_MEME_TOKENS:
+    if clean_sym in ILLIQUID_FAN_TOKENS or symbol in ILLIQUID_FAN_TOKENS:
+        config = dict(ARCHETYPE_CONFIGS["THIN_BOOK_MICRO"])
+        config["is_blacklisted_fan_token"] = True
+        config["symbol"] = symbol
+        config["clean_symbol"] = clean_sym
+        return config
+    elif clean_sym in SPRINT_MEME_TOKENS or symbol in SPRINT_MEME_TOKENS:
         arch_key = "HYPER_VOLATILE_SPRINT"
     elif clean_sym in BLUE_CHIP_CORE_TOKENS or symbol in BLUE_CHIP_CORE_TOKENS:
         arch_key = "BLUE_CHIP_CORE"
@@ -164,6 +177,7 @@ def get_asset_dna_archetype(symbol: str, atr_15m_pct: float = 0.30, price: float
     config = dict(ARCHETYPE_CONFIGS[arch_key])
     config["symbol"] = symbol
     config["clean_symbol"] = clean_sym
+    config["is_blacklisted_fan_token"] = False
     return config
 
 
