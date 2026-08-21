@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2214,
-    "wins": 1090,
+    "total_trades": 2217,
+    "wins": 1093,
     "losses": 1124,
-    "win_rate_pct": 49.23,
-    "total_pnl_usd": -12226.7405254512
+    "win_rate_pct": 49.3,
+    "total_pnl_usd": -12225.2305254512
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MORPHOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on XRPUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DASHUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DOGEUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HEMIUSDT)",
@@ -49,7 +48,8 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TRUMPUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TRXUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TAOUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DEXEUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DEXEUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BTCUSDT)"
     ]
   },
   "history": [
@@ -8377,6 +8377,57 @@
       "result": "LOSS",
       "notes": "LOSS on MUBARAKUSDT (PnL: +0.00%, Net: $-0.03 Fase 5)",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-21 14:21:47",
+      "account_id": "SIM-053",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 75497.91,
+      "exit_price": 76639.71,
+      "pnl_usd": 0.26,
+      "result": "WIN",
+      "notes": "WIN on BTCUSDT (PnL: +1.51%, Net: $+0.26 Fase 4)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 45.59,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 14:21:47",
+      "account_id": "SIM-054",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 75497.91,
+      "exit_price": 76639.71,
+      "pnl_usd": 0.25,
+      "result": "WIN",
+      "notes": "WIN on BTCUSDT (PnL: +1.51%, Net: $+0.25 Fase 4)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 45.59,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 14:21:47",
+      "account_id": "SIM-060",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 75497.91,
+      "exit_price": 76639.71,
+      "pnl_usd": 1.0,
+      "result": "WIN",
+      "notes": "WIN on BTCUSDT (PnL: +1.51%, Net: $+1.00 Fase 4)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 45.59,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
