@@ -1393,6 +1393,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 mtf_res = multi_timeframe_analyzer.analyze_multi_timeframe_candles(best_symbol)
                 tf_align = mtf_res.get("timeframe_alignment", {})
                 
+                import adaptive_asset_dna
+                arch_dna = adaptive_asset_dna.get_asset_dna_archetype(best_symbol, mtf_res.get("atr_15m_pct", 0.30))
+                
                 # 🏛️ MATRIZ DE CONFLUENCIA DE BASE EN 5 TIMEFRAMES (1m, 2m, 5m, 15m, 1h - MÁXIMO 1H)
                 # REGLA SUPREMA: Entrar en el suelo de 1M/2M cuando hay soporte en 15M/1H y FII positivo.
                 tf_1m = tf_align.get("1m", "BEARISH")
