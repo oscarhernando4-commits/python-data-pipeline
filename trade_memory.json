@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2423,
-    "wins": 1244,
+    "total_trades": 2426,
+    "wins": 1247,
     "losses": 1179,
-    "win_rate_pct": 51.34,
-    "total_pnl_usd": -8219.03217545121
+    "win_rate_pct": 51.4,
+    "total_pnl_usd": -8218.872175451212
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on WLFIUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DEXEUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on AVAXUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PEOPLEUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ADAUSDT)",
@@ -49,61 +48,11 @@
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DASHUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DOTUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ETHUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZECUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZECUSDT)",
+      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SOLUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 21:15:47",
-      "account_id": "SIM-094",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "TAOUSDT",
-      "side": "LONG",
-      "entry_price": 217.1,
-      "exit_price": 217.6,
-      "pnl_usd": 1.89,
-      "result": "WIN",
-      "notes": "WIN on TAOUSDT (PnL: +0.23%, Net: $+1.89 Fase 2)",
-      "context": {
-        "score": 91,
-        "rsi_15m": 64.54,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 21:24:36",
-      "account_id": "SIM-018",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "PENGUUSDT",
-      "side": "LONG",
-      "entry_price": 0.007355,
-      "exit_price": 0.007409,
-      "pnl_usd": 0.28,
-      "result": "WIN",
-      "notes": "WIN on PENGUUSDT (PnL: +0.73%, Net: $+0.28 Fase 3)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 72.94,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 21:24:36",
-      "account_id": "SIM-019",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "PENGUUSDT",
-      "side": "LONG",
-      "entry_price": 0.007355,
-      "exit_price": 0.007409,
-      "pnl_usd": 0.22,
-      "result": "WIN",
-      "notes": "WIN on PENGUUSDT (PnL: +0.73%, Net: $+0.22 Fase 3)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 72.94,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 21:26:39",
       "account_id": "SIM-094",
@@ -8462,6 +8411,57 @@
       "context": {
         "score": 74,
         "rsi_15m": 70.63,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 22:49:07",
+      "account_id": "SIM-048",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "SOLUSDT",
+      "side": "LONG",
+      "entry_price": 93.6,
+      "exit_price": 94.03,
+      "pnl_usd": 0.05,
+      "result": "WIN",
+      "notes": "WIN on SOLUSDT (PnL: +0.46%, Net: $+0.05 Fase 2)",
+      "context": {
+        "score": 74,
+        "rsi_15m": 72.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 22:49:07",
+      "account_id": "SIM-049",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "SOLUSDT",
+      "side": "LONG",
+      "entry_price": 93.6,
+      "exit_price": 94.03,
+      "pnl_usd": 0.05,
+      "result": "WIN",
+      "notes": "WIN on SOLUSDT (PnL: +0.46%, Net: $+0.05 Fase 2)",
+      "context": {
+        "score": 74,
+        "rsi_15m": 72.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 22:49:07",
+      "account_id": "SIM-050",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "SOLUSDT",
+      "side": "LONG",
+      "entry_price": 93.6,
+      "exit_price": 94.03,
+      "pnl_usd": 0.06,
+      "result": "WIN",
+      "notes": "WIN on SOLUSDT (PnL: +0.46%, Net: $+0.06 Fase 2)",
+      "context": {
+        "score": 74,
+        "rsi_15m": 72.41,
         "macro_trend_4h": "NEUTRAL"
       }
     }
