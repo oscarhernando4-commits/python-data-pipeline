@@ -344,10 +344,10 @@ def get_symbol_price(symbol, is_futures=False):
     """
     endpoints = [
         f"https://data-api.binance.vision/api/v3/ticker/price?symbol={symbol}",
-        f"https://api.binance.com/api/v3/ticker/price?symbol={symbol}",
         f"https://api1.binance.com/api/v3/ticker/price?symbol={symbol}",
         f"https://api2.binance.com/api/v3/ticker/price?symbol={symbol}",
-        f"https://api3.binance.com/api/v3/ticker/price?symbol={symbol}"
+        f"https://api3.binance.com/api/v3/ticker/price?symbol={symbol}",
+        f"https://api.binance.com/api/v3/ticker/price?symbol={symbol}"
     ]
     
     for url in endpoints:
@@ -360,39 +360,27 @@ def get_symbol_price(symbol, is_futures=False):
         except Exception:
             continue
             
-    # Fallback to proxy if direct access has networking issues
-    try:
-        url = f"https://api.binance.com/api/v3/ticker/price?symbol={symbol}"
-        res = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, proxies=get_smart_proxy(), timeout=6)
-        if res.status_code == 200:
-            p = float(res.json().get("price", 0))
-            if p > 0:
-                return p
-    except Exception:
-        pass
-        
     return None
 
 def get_recent_kline_high(symbol, limit=5, start_time_ms=None):
     """
     Fetches the highest price peak (High wick) from recent 1-minute klines AFTER position entry.
-    Works 100% seamlessly in both Local Mode (direct connection) and Cloud Mode (with proxy fallback).
-    Ensures that 1-second price spikes are captured only during the active trade lifecycle.
+    Uses 100% public high-throughput endpoints with 0 Fixie proxy consumption.
     """
     mirrors = [
-        "https://api.binance.com/api/v3/klines",
+        "https://data-api.binance.vision/api/v3/klines",
         "https://api1.binance.com/api/v3/klines",
         "https://api2.binance.com/api/v3/klines",
-        "https://api3.binance.com/api/v3/klines"
+        "https://api3.binance.com/api/v3/klines",
+        "https://api.binance.com/api/v3/klines"
     ]
     params = {"symbol": symbol, "interval": "1m", "limit": limit}
     if start_time_ms and start_time_ms > 0:
         params["startTime"] = int(start_time_ms)
     
-    # 1. Try direct connection first (fastest for local and standard cloud)
     for url in mirrors:
         try:
-            res = requests.get(url, params=params, timeout=2)
+            res = requests.get(url, params=params, timeout=3)
             if res.status_code == 200:
                 k_data = res.json()
                 if isinstance(k_data, list) and len(k_data) > 0:
@@ -405,21 +393,6 @@ def get_recent_kline_high(symbol, limit=5, start_time_ms=None):
         except Exception:
             continue
             
-    # 2. Try with smart proxy (Fixie fallback in cloud mode)
-    try:
-        res = requests.get("https://api.binance.com/api/v3/klines", params=params, proxies=get_smart_proxy(), timeout=4)
-        if res.status_code == 200:
-            k_data = res.json()
-            if isinstance(k_data, list) and len(k_data) > 0:
-                if start_time_ms and start_time_ms > 0:
-                    filtered = [k for k in k_data if int(k[0]) >= int(start_time_ms)]
-                    if filtered:
-                        return max([float(k[2]) for k in filtered])
-                    return 0.0
-                return max([float(k[2]) for k in k_data])
-    except Exception:
-        pass
-        
     return 0.0
 
 # ============================================================

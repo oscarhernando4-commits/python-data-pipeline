@@ -68,15 +68,30 @@ def fetch_live_cvd_flow(symbol, limit=60, proxies=None):
 def fetch_orderbook_depth(symbol, limit=20, proxies=None):
     """
     Fetches live orderbook depth for a symbol and calculates Bid/Ask Imbalance Ratio + Anti-Spoofing + Live CVD Flow.
+    Uses public multi-mirror endpoints (0 Fixie Quota).
     """
-    url = f"https://api.binance.com/api/v3/depth?symbol={symbol}&limit={limit}"
+    cvd_data = fetch_live_cvd_flow(symbol, limit=60, proxies=None)
     
-    cvd_data = fetch_live_cvd_flow(symbol, limit=60, proxies=proxies)
+    mirrors = [
+        f"https://data-api.binance.vision/api/v3/depth?symbol={symbol}&limit={limit}",
+        f"https://api1.binance.com/api/v3/depth?symbol={symbol}&limit={limit}",
+        f"https://api2.binance.com/api/v3/depth?symbol={symbol}&limit={limit}",
+        f"https://api3.binance.com/api/v3/depth?symbol={symbol}&limit={limit}",
+        f"https://api.binance.com/api/v3/depth?symbol={symbol}&limit={limit}"
+    ]
     
-    try:
-        response = session.get(url, proxies=proxies, timeout=5)
-        data = response.json()
+    data = {}
+    for url in mirrors:
+        try:
+            response = session.get(url, timeout=3)
+            if response.status_code == 200:
+                data = response.json()
+                if "bids" in data and "asks" in data:
+                    break
+        except Exception:
+            continue
         
+    try:
         bids = data.get("bids", [])
         asks = data.get("asks", [])
         
