@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2049,
-    "wins": 1021,
+    "total_trades": 2052,
+    "wins": 1024,
     "losses": 1028,
-    "win_rate_pct": 49.83,
-    "total_pnl_usd": -7739.840525451197
+    "win_rate_pct": 49.9,
+    "total_pnl_usd": -7739.710525451197
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONGUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SUIUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MANAUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on LDOUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ZECUSDT)",
@@ -49,61 +48,11 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ONDOUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on GALAUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BNBUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BCHUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BCHUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on SUNUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 12:12:23",
-      "account_id": "SIM-049",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "DASHUSDT",
-      "side": "LONG",
-      "entry_price": 33.38,
-      "exit_price": 33.23,
-      "pnl_usd": -0.1,
-      "result": "LOSS",
-      "notes": "LOSS on DASHUSDT (PnL: -0.45%, Net: $-0.10 Fase 2)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 69.36,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 12:12:23",
-      "account_id": "SIM-050",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "DASHUSDT",
-      "side": "LONG",
-      "entry_price": 33.38,
-      "exit_price": 33.23,
-      "pnl_usd": -0.12,
-      "result": "LOSS",
-      "notes": "LOSS on DASHUSDT (PnL: -0.45%, Net: $-0.12 Fase 2)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 69.36,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 12:12:23",
-      "account_id": "SIM-093",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "NEARUSDT",
-      "side": "LONG",
-      "entry_price": 1.729,
-      "exit_price": 1.755,
-      "pnl_usd": 30.49,
-      "result": "WIN",
-      "notes": "WIN on NEARUSDT (PnL: +1.50%, Net: $+30.49 Fase 5)",
-      "context": {
-        "score": 88,
-        "rsi_15m": 59.1,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 12:16:55",
       "account_id": "SIM-005",
@@ -8446,6 +8395,57 @@
       "context": {
         "score": 41,
         "rsi_15m": 68.87,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 09:09:26",
+      "account_id": "SIM-048",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "SUNUSDT",
+      "side": "LONG",
+      "entry_price": 0.01739,
+      "exit_price": 0.01746,
+      "pnl_usd": 0.04,
+      "result": "WIN",
+      "notes": "WIN on SUNUSDT (PnL: +0.40%, Net: $+0.04 Fase 2)",
+      "context": {
+        "score": 57,
+        "rsi_15m": 60.26,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 09:09:26",
+      "account_id": "SIM-049",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "SUNUSDT",
+      "side": "LONG",
+      "entry_price": 0.01739,
+      "exit_price": 0.01746,
+      "pnl_usd": 0.04,
+      "result": "WIN",
+      "notes": "WIN on SUNUSDT (PnL: +0.40%, Net: $+0.04 Fase 2)",
+      "context": {
+        "score": 57,
+        "rsi_15m": 60.26,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 09:09:26",
+      "account_id": "SIM-050",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "SUNUSDT",
+      "side": "LONG",
+      "entry_price": 0.01739,
+      "exit_price": 0.01746,
+      "pnl_usd": 0.05,
+      "result": "WIN",
+      "notes": "WIN on SUNUSDT (PnL: +0.40%, Net: $+0.05 Fase 2)",
+      "context": {
+        "score": 57,
+        "rsi_15m": 60.26,
         "macro_trend_4h": "NEUTRAL"
       }
     }
