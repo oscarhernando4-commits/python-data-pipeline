@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2085,
-    "wins": 1043,
+    "total_trades": 2088,
+    "wins": 1046,
     "losses": 1042,
-    "win_rate_pct": 50.02,
-    "total_pnl_usd": -7532.450525451197
+    "win_rate_pct": 50.1,
+    "total_pnl_usd": -7532.3505254511965
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 12:42:27",
-      "account_id": "SIM-023",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "FETUSDT",
-      "side": "LONG",
-      "entry_price": 0.1418,
-      "exit_price": 0.1439,
-      "pnl_usd": 0.29,
-      "result": "WIN",
-      "notes": "WIN on FETUSDT (PnL: +1.48%, Net: $+0.29 Fase 4)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 84.89,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 12:42:27",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "FETUSDT",
-      "side": "LONG",
-      "entry_price": 0.1418,
-      "exit_price": 0.1439,
-      "pnl_usd": 180.11,
-      "result": "WIN",
-      "notes": "WIN on FETUSDT (PnL: +1.48%, Net: $+180.11 Fase 4)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 84.89,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 12:42:27",
-      "account_id": "SIM-028",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "RENDERUSDT",
-      "side": "LONG",
-      "entry_price": 1.407,
-      "exit_price": 1.407,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on RENDERUSDT (PnL: +0.00%, Net: $-0.03 Fase 2)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 50.64,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 12:42:27",
       "account_id": "SIM-048",
@@ -8446,6 +8395,57 @@
       "context": {
         "score": 41,
         "rsi_15m": 74.01,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 09:55:24",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "IMXUSDT",
+      "side": "LONG",
+      "entry_price": 0.123,
+      "exit_price": 0.1233,
+      "pnl_usd": 0.07,
+      "result": "WIN",
+      "notes": "WIN on IMXUSDT (PnL: +0.24%, Net: $+0.07 Fase 4)",
+      "context": {
+        "score": 40,
+        "rsi_15m": 79.36,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 09:55:24",
+      "account_id": "SIM-045",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "IMXUSDT",
+      "side": "LONG",
+      "entry_price": 0.123,
+      "exit_price": 0.1233,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on IMXUSDT (PnL: +0.24%, Net: $+0.01 Fase 4)",
+      "context": {
+        "score": 40,
+        "rsi_15m": 79.36,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 09:55:24",
+      "account_id": "SIM-046",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "IMXUSDT",
+      "side": "LONG",
+      "entry_price": 0.123,
+      "exit_price": 0.1233,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on IMXUSDT (PnL: +0.24%, Net: $+0.02 Fase 4)",
+      "context": {
+        "score": 40,
+        "rsi_15m": 79.36,
         "macro_trend_4h": "NEUTRAL"
       }
     }
