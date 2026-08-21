@@ -3166,3 +3166,29 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-34.51%)`, `2024-04-11 (-23.08%)`, `2024-03-15 (-20.8%)`
 
 ---
+
+### 🪙 Profile Completo de Vida: SPKUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-06-16` hasta `2026-08-20` (431 Días de Historial)
+- 💵 **Precio Actual:** `$0.0180 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.2022 USD` (`2025-07-22`) | Distancia: `-91.08%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0100 USD` (`2025-06-16`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2025-06-16 (+476.45%)`, `2025-07-22 (+96.38%)`, `2025-07-20 (+66.77%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-07-23 (-38.63%)`, `2025-10-09 (-25.15%)`, `2025-06-23 (-17.61%)`
+
+---
+
+### 🪙 Profile Completo de Vida: BFUSDUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2025-08-12` hasta `2026-08-20` (374 Días de Historial)
+- 💵 **Precio Actual:** `$1.0002 USD`
+- 📈 **Máximo Histórico (ATH):** `$1.0800 USD` (`2025-08-12`) | Distancia: `-7.39%`
+- 📉 **Mínimo Histórico (ATL):** `$0.9950 USD` (`2025-08-12`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `Sin días > +10%`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `Sin días < -10%`
+
+---

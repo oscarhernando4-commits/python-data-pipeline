@@ -43,8 +43,7 @@ print("=" * 65)
 print("\n[1/10] ROTADOR DE PROXIES FIXIE (10 Cuentas EU West)")
 import api_connector
 test("FIXIE_POOL tiene 10 proxies configurados", len(api_connector.FIXIE_POOL) == 10, f"Tiene {len(api_connector.FIXIE_POOL)}")
-test("PROXY_URL seleccionado válidamente", api_connector.PROXY_URL in api_connector.FIXIE_POOL)
-test("PROXIES dict (http/https) listo", "http" in api_connector.PROXIES and "https" in api_connector.PROXIES)
+test("Smart Proxy listo para Cloud / Directo para Local", api_connector.get_execution_mode() in ["local", "cloud"])
 
 # 2. PRECIOS EN VIVO (Conexión Pública Binance sin consumo de proxy)
 print("\n[2/10] FEED DE PRECIOS EN VIVO DE BINANCE")

@@ -28,6 +28,7 @@ _CACHE_TTL = {
     "1d": 600,  # 10 minutes
     "4h": 300,  # 5 minutes
     "1h": 180,  # 3 minutes
+    "30m": 60,  # 1 minute for 30m intermediate macro
     "15m": 35,  # 35 seconds
     "5m": 15,   # 15 seconds
     "1m": 10,   # 10 seconds
@@ -342,7 +343,7 @@ def analyze_multi_timeframe_candles(symbol):
             "multi_tf_score": 0
         }
         
-    # 2. Fetch Multi-Timeframe Klines (1s->10s/30s, 1m->2m, 5m, 15m, 1h, 4h, 1d)
+    # 2. Fetch Multi-Timeframe Klines (1s->10s/30s, 1m->2m, 5m, 15m, 30m, 1h, 4h, 1d)
     klines_1s = fetch_klines_public(symbol, "1s", 120)
     klines_10s = _aggregate_1s_to_bars(klines_1s, 10)
     klines_30s = _aggregate_1s_to_bars(klines_1s, 30)
@@ -350,6 +351,7 @@ def analyze_multi_timeframe_candles(symbol):
     klines_2m = _aggregate_1m_to_2m(klines_1m)
     klines_5m = fetch_klines_public(symbol, "5m", 30)
     klines_15m = fetch_klines_public(symbol, "15m", 120)
+    klines_30m = fetch_klines_public(symbol, "30m", 30)
     klines_1h = fetch_klines_public(symbol, "1h", 30)
     klines_4h = fetch_klines_public(symbol, "4h", 30)
     klines_1d = fetch_klines_public(symbol, "1d", 14)
@@ -381,7 +383,7 @@ def analyze_multi_timeframe_candles(symbol):
             "multi_tf_score": 0
         }
         
-    # Parse 10s, 30s, 1m, 2m, 5m, 15m, 1h closes & volumes
+    # Parse 10s, 30s, 1m, 2m, 5m, 15m, 30m, 1h closes & volumes
     closes_10s = [float(k[4]) for k in klines_10s] if klines_10s else []
     vols_10s = [float(k[5]) for k in klines_10s] if klines_10s else []
     closes_30s = [float(k[4]) for k in klines_30s] if klines_30s else []
@@ -394,6 +396,11 @@ def analyze_multi_timeframe_candles(symbol):
     ma25_5m = sum(closes_5m[-25:]) / 25.0 if len(closes_5m) >= 25 else closes_5m[-1] if closes_5m else 1.0
     closes_15m = [float(k[4]) for k in klines_15m]
     vols_15m = [float(k[5]) for k in klines_15m]
+    closes_30m = [float(k[4]) for k in klines_30m] if klines_30m else closes_15m
+    vols_30m = [float(k[5]) for k in klines_30m] if klines_30m else vols_15m
+    highs_30m = [float(k[2]) for k in klines_30m] if klines_30m else []
+    lows_30m = [float(k[3]) for k in klines_30m] if klines_30m else []
+    ma25_30m = sum(closes_30m[-25:]) / len(closes_30m[-25:]) if len(closes_30m) >= 25 else (closes_30m[-1] if closes_30m else 1.0)
     closes_1h = [float(k[4]) for k in klines_1h] if klines_1h else closes_15m
     closes_4h = [float(k[4]) for k in klines_4h] if klines_4h else closes_15m
     
@@ -401,24 +408,26 @@ def analyze_multi_timeframe_candles(symbol):
     ma3_1m = sum(closes_1m[-3:]) / len(closes_1m[-3:]) if len(closes_1m) >= 3 else (closes_1m[-1] if closes_1m else 1.0)
     ma7_1m = sum(closes_1m[-7:]) / len(closes_1m[-7:]) if len(closes_1m) >= 7 else (closes_1m[-1] if closes_1m else 1.0)
     
-    # Micro Directional Trends (10s, 30s, 1m, 2m, 5m, 15m, 1h, 1d)
+    # Micro Directional Trends (10s, 30s, 1m, 2m, 5m, 15m, 30m, 1h, 1d)
     tf_10s_up = (closes_10s[-1] >= closes_10s[-2]) if len(closes_10s) >= 2 else False
     tf_30s_up = (closes_30s[-1] >= closes_30s[-2]) if len(closes_30s) >= 2 else (closes_1m[-1] >= ma3_1m if closes_1m else False)
     tf_1m_up = (closes_1m[-1] >= closes_1m[-2] or closes_1m[-1] >= ma7_1m) if len(closes_1m) >= 2 else False
     tf_2m_up = closes_2m[-1] > closes_2m[-3] if len(closes_2m) >= 3 else (closes_2m[-1] > closes_2m[0] if closes_2m else False)
     tf_5m_up = closes_5m[-1] > closes_5m[-3] if len(closes_5m) >= 3 else (closes_5m[-1] > closes_5m[0] if closes_5m else False)
     tf_15m_up = closes_15m[-1] > closes_15m[-3] if len(closes_15m) >= 3 else (closes_15m[-1] > closes_15m[0] if closes_15m else False)
+    tf_30m_up = closes_30m[-1] > closes_30m[-3] if len(closes_30m) >= 3 else (closes_30m[-1] > closes_30m[0] if closes_30m else False)
     tf_1h_up = closes_1h[-1] > closes_1h[-3] if len(closes_1h) >= 3 else (closes_1h[-1] > closes_1h[0] if closes_1h else False)
     tf_4h_up = closes_4h[-1] > closes_4h[-3] if len(closes_4h) >= 3 else (closes_4h[-1] > closes_4h[0] if closes_4h else False)
     tf_1d_up = d_closes[-1] > d_closes[0] if d_closes else False
     
-    # Calculate Multi-Tier RSI Architecture (10s, 30s, 1m, 2m, 5m, 15m, 1h)
+    # Calculate Multi-Tier RSI Architecture (10s, 30s, 1m, 2m, 5m, 15m, 30m, 1h, 4h)
     rsi_10s = calculate_rsi(closes_10s, period=6) if len(closes_10s) >= 7 else (rsi_1m if 'rsi_1m' in locals() else 50.0)
     rsi_30s = calculate_rsi(closes_30s, period=6) if len(closes_30s) >= 7 else (rsi_1m if 'rsi_1m' in locals() else 50.0)
     rsi_1m = calculate_rsi(closes_1m)
     rsi_2m = calculate_rsi(closes_2m)
     rsi_5m = calculate_rsi(closes_5m)
     rsi_15m = calculate_rsi(closes_15m)
+    rsi_30m = calculate_rsi(closes_30m)
     rsi_1h = calculate_rsi(closes_1h)
     rsi_4h = calculate_rsi(closes_4h)
     
@@ -759,7 +768,7 @@ def analyze_multi_timeframe_candles(symbol):
     high_15m_recent = max(highs_15m[-3:]) if len(highs_15m) >= 3 else close_15m
     high_30m_recent = max(highs_15m[-6:]) if len(highs_15m) >= 6 else close_15m
     
-    # 🏔️ MATRIZ FRACTAL DE SUELO EN 7 NIVELES (1M, 2M, 5M, 15M, 1H, 4H, 1D):
+    # 🏔️ MATRIZ FRACTAL DE SUELO EN 8 NIVELES (1M, 2M, 5M, 15M, 30M, 1H, 4H, 1D):
     def _calc_range_pos(klines, lookback=24):
         if not klines or len(klines) < 2: return 0.5
         subset = klines[-lookback:] if len(klines) >= lookback else klines
@@ -772,29 +781,39 @@ def analyze_multi_timeframe_candles(symbol):
     range_position_2m = _calc_range_pos(klines_2m, 24)
     range_position_5m = _calc_range_pos(klines_5m, 24)
     range_position_15m = _calc_range_pos(klines_15m, 24)
+    range_position_30m = _calc_range_pos(klines_30m, 24)
     range_position_1h = _calc_range_pos(klines_1h, 24)
     range_position_4h = _calc_range_pos(klines_4h, 24)
     range_position_1d = _calc_range_pos(klines_1d, 14)
     
     rsi_1d = calculate_rsi(d_closes) if len(d_closes) >= 7 else 50.0
 
+    high_15m_recent = max(highs_15m[-24:]) if 'highs_15m' in locals() and len(highs_15m) >= 24 else close_15m
+    high_30m_recent = max(highs_30m[-24:]) if len(highs_30m) >= 24 else (max(highs_30m) if highs_30m else close_15m)
+    low_30m_recent = min(lows_30m[-24:]) if len(lows_30m) >= 24 else (min(lows_30m) if lows_30m else close_15m)
     high_1h_recent = max(highs_1h[-24:]) if len(highs_1h) >= 24 else (max(highs_1h) if highs_1h else close_15m)
     low_1h_recent = min(lows_1h[-24:]) if len(lows_1h) >= 24 else (min(lows_1h) if lows_1h else close_15m)
     high_24h = d_highs[-1] if d_highs else high_1h_recent
 
-    # Distancia sobre la Media MA25 de 1 Hora y 4 Horas:
+    # Distancia sobre la Media MA25 de 30m, 1 Hora y 4 Horas:
     ma25_4h = sum(closes_4h[-25:]) / len(closes_4h[-25:]) if len(closes_4h) >= 25 else (closes_4h[-1] if closes_4h else close_15m)
+    dist_from_30m_ma25_pct = ((close_15m - ma25_30m) / ma25_30m) * 100.0 if ma25_30m > 0 else 0.0
     dist_from_1h_ma25_pct = ((close_15m - ma25_1h) / ma25_1h) * 100.0 if ma25_1h > 0 else 0.0
     dist_from_4h_ma25_pct = ((close_15m - ma25_4h) / ma25_4h) * 100.0 if ma25_4h > 0 else 0.0
     
-    # 🚫 VETO TOTAL ANTI-CIMA EN CADA TEMPORALIDAD DE LA MATRIZ 7D:
+    # 🚫 VETO TOTAL ANTI-CIMA EN CADA TEMPORALIDAD DE LA MATRIZ 8D:
     is_at_range_ceiling_1d = bool(range_position_1d >= 0.48 or rsi_1d >= 62.0)
     is_at_range_ceiling_4h = bool(range_position_4h >= 0.48 or dist_from_4h_ma25_pct > 2.50 or rsi_4h >= 62.0)
     is_at_range_ceiling_1h = bool(range_position_1h >= 0.48 or dist_from_1h_ma25_pct > 1.80 or rsi_1h >= 60.0)
+    is_at_range_ceiling_30m = bool(range_position_30m >= 0.50 or dist_from_30m_ma25_pct > 1.50 or rsi_30m >= 58.0)
     is_at_range_ceiling_15m = bool(range_position_15m >= 0.50 or rsi_15m >= 58.0)
     is_at_range_ceiling_5m = bool(range_position_5m >= 0.55 or rsi_5m >= 60.0)
     is_at_range_ceiling_2m = bool(range_position_2m >= 0.60 or rsi_2m >= 62.0)
     is_at_range_ceiling_1m = bool(range_position_1m >= 0.60 or rsi_1m >= 62.0)
+
+    # 🚫 VETO CRÍTICO ANTI-MÁXIMO DEL DÍA (Previene comprar la cima de 30m / techos de resistencia):
+    dist_to_24h_high_pct = round(((high_24h - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
+    is_at_daily_resistance_ceiling = bool(dist_to_24h_high_pct <= 0.45 or range_position_30m >= 0.78 or range_position_1h >= 0.78)
 
     dist_15m_pct = round(((high_15m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
     dist_30m_pct = round(((high_30m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
@@ -1044,15 +1063,21 @@ def analyze_multi_timeframe_candles(symbol):
         "range_position_1d": round(range_position_1d, 3),
         "range_position_4h": round(range_position_4h, 3),
         "range_position_1h": round(range_position_1h, 3),
-        "target_resistance_1h_pct": target_resistance_1h_pct,
-        "major_support_floor_1h_pct": major_support_floor_1h_pct,
-        "expected_rr_ratio": expected_rr_ratio,
+        "range_position_30m": round(range_position_30m, 3),
         "range_position_15m": round(range_position_15m, 3),
         "range_position_5m": round(range_position_5m, 3),
         "range_position_2m": round(range_position_2m, 3),
         "range_position_1m": round(range_position_1m, 3),
+        "target_resistance_1h_pct": target_resistance_1h_pct,
+        "major_support_floor_1h_pct": major_support_floor_1h_pct,
+        "expected_rr_ratio": expected_rr_ratio,
+        "dist_to_24h_high_pct": dist_to_24h_high_pct,
+        "is_at_daily_resistance_ceiling": is_at_daily_resistance_ceiling,
         "rsi_1d": rsi_1d,
         "rsi_4h": rsi_4h,
+        "rsi_1h": rsi_1h,
+        "rsi_30m": rsi_30m,
+        "rsi_15m": rsi_15m,
         "pct_b_15m": round(pct_b, 2),
         "is_oversold_bounce_candidate": is_oversold_bounce_candidate,
         "is_overbought_exhaustion": is_overbought_exhaustion,
@@ -1085,7 +1110,7 @@ def analyze_multi_timeframe_candles(symbol):
             symbol=symbol,
             klines_multi_tf={
                 "1m": klines_1m, "2m": klines_2m, "5m": klines_5m,
-                "15m": klines_15m, "1h": klines_1h, "4h": klines_4h, "1d": klines_1d
+                "15m": klines_15m, "30m": klines_30m, "1h": klines_1h, "4h": klines_4h, "1d": klines_1d
             },
             orderbook_info={},
             fii_score=fii_score
@@ -1098,13 +1123,14 @@ def analyze_multi_timeframe_candles(symbol):
         "ma25_5m": round(ma25_5m, 6),
         "relative_strength_vs_btc": relative_strength,
         "is_alt_outperforming_btc": is_alt_outperforming_btc,
-        # RSI Arquitectura Completa (10s, 30s, 1m, 2m, 5m, 15m, 1h)
+        # RSI Arquitectura Completa (10s, 30s, 1m, 2m, 5m, 15m, 30m, 1h)
         "rsi_10s": rsi_10s,
         "rsi_30s": rsi_30s,
         "rsi_1m": rsi_1m,
         "rsi_2m": rsi_2m,
         "rsi_5m": rsi_5m,
         "rsi_15m": rsi_15m,
+        "rsi_30m": rsi_30m,
         "rsi_1h": rsi_1h,
         "rsi_4h": rsi_4h,
         "pattern_15m_summary": pattern_15m_summary,
@@ -1115,6 +1141,7 @@ def analyze_multi_timeframe_candles(symbol):
             "rsi_2m": rsi_2m,
             "rsi_5m": rsi_5m,
             "rsi_15m": rsi_15m,
+            "rsi_30m": rsi_30m,
             "rsi_1h": rsi_1h,
         },
         "timeframe_alignment": {
@@ -1124,6 +1151,7 @@ def analyze_multi_timeframe_candles(symbol):
             "2m": "BULLISH" if tf_2m_up else "BEARISH",
             "5m": "BULLISH" if tf_5m_up else "BEARISH",
             "15m": "BULLISH" if tf_15m_up else "BEARISH",
+            "30m": "BULLISH" if tf_30m_up else "BEARISH",
             "1h": "BULLISH" if tf_1h_up else "BEARISH",
             "1d": "BULLISH" if tf_1d_up else "BEARISH"
         },

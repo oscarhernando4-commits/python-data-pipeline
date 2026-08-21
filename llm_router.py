@@ -385,10 +385,13 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         c1d = round(mtf.get('range_position_1d', 0.5) * 100)
         c4h = round(mtf.get('range_position_4h', 0.5) * 100)
         c1h = round(mtf.get('range_position_1h', 0.5) * 100)
+        c30m = round(mtf.get('range_position_30m', 0.5) * 100)
         c15m = round(mtf.get('range_position_15m', 0.5) * 100)
         c5m = round(mtf.get('range_position_5m', 0.5) * 100)
         c2m = round(mtf.get('range_position_2m', 0.5) * 100)
         c1m = round(mtf.get('range_position_1m', 0.5) * 100)
+        dist_to_24h_high = mtf.get('dist_to_24h_high_pct', 999.0)
+        is_at_daily_ceiling = mtf.get('is_at_daily_resistance_ceiling', False)
         dist_ma7 = mtf.get('dist_from_15m_ma7_pct', 0.0)
         dist_1m_ema9 = mtf.get('dist_from_1m_ema9_pct', 0.0)
         is_sniper_pb = mtf.get('is_1m_sniper_pullback', True)
@@ -462,13 +465,14 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         candidates_prompt_text += f"- 🔮 Radar Predictivo Multi-Horizonte: {pred_label} | Prob. Pump={pump_prob}% | Riesgo Dump={dump_risk}%\n"
         candidates_prompt_text += f"- 🚀 Catalizadores Activos: [{catalysts_str}] | Advertencias: [{warnings_str}]\n"
         candidates_prompt_text += f"- 🧬 Elasticidad Histórica: {dna_str}\n"
-        candidates_prompt_text += f"- 🏔️ MATRIZ FRACTAL DE SUELO 7D (% Canal desde el piso): 1D={c1d}% | 4H={c4h}% | 1H={c1h}% | 15M={c15m}% | 5M={c5m}% | 2M={c2m}% | 1M={c1m}%\n"
+        candidates_prompt_text += f"- 🏔️ MATRIZ FRACTAL DE SUELO 8D (% Canal desde el piso): 1D={c1d}% | 4H={c4h}% | 1H={c1h}% | 30M={c30m}% | 15M={c15m}% | 5M={c5m}% | 2M={c2m}% | 1M={c1m}%\n"
+        candidates_prompt_text += f"- 🎯 Distancia a Máximo 24H: +{dist_to_24h_high:.2f}% | Alerta Techo 30M/24H={is_at_daily_ceiling}\n"
         candidates_prompt_text += f"- 🎯 Gatillo 1M Sniper: Distancia EMA9={dist_1m_ema9:+.2f}% | Retesteo Base={is_sniper_pb} | Anti-FOMO={not is_fomo}\n"
         candidates_prompt_text += f"- 🎯 Proyección de Recorrido: Resistencia Techo 1H=+{mtf.get('target_resistance_1h_pct', 2.5):.2f}% | Soporte Piso=-{mtf.get('major_support_floor_1h_pct', 0.9):.2f}% | Ratio R:R={mtf.get('expected_rr_ratio', 2.5)}:1\n"
         candidates_prompt_text += f"- 🌊 Flujo CVD & Libro: Bids {ob['bid_dominance_pct']}% ({ob['liquidity_status']}) | {cvd_str}\n"
         candidates_prompt_text += (
-            f"- RSI 7 Capas: 1M={mtf.get('rsi_1m', ind.get('rsi_1m', '?'))} | 2M={mtf.get('rsi_2m', ind.get('rsi_2m', '?'))} | "
-            f"5M={mtf.get('rsi_5m', ind.get('rsi_5m', '?'))} | 15M={ind.get('rsi_15m', '?')} | 1H={mtf.get('rsi_1h', ind.get('rsi_1h', '?'))} | "
+            f"- RSI 8 Capas: 1M={mtf.get('rsi_1m', ind.get('rsi_1m', '?'))} | 2M={mtf.get('rsi_2m', ind.get('rsi_2m', '?'))} | "
+            f"5M={mtf.get('rsi_5m', ind.get('rsi_5m', '?'))} | 15M={ind.get('rsi_15m', '?')} | 30M={mtf.get('rsi_30m', '?')} | 1H={mtf.get('rsi_1h', ind.get('rsi_1h', '?'))} | "
             f"4H={mtf.get('rsi_4h', ind.get('rsi_4h', '?'))} | 1D={mtf.get('rsi_1d', '?')}\n"
         )
         candidates_prompt_text += f"- VolSurge: 10S={mtf.get('vol_surge_10s', 1.0):.1f}x | 30S={mtf.get('vol_surge_30s', 1.0):.1f}x | 1M={mtf.get('vol_surge_1m', 1.0):.1f}x | 15M={ind.get('volume_surge', 1.0):.1f}x | Cima={is_overext}\n"
@@ -519,9 +523,10 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     🏛️ PROTOCOLO DINÁMICO DE DECISIÓN DEL SÚPER-CEREBRO EN 4 PASOS:
     
     PASO 1 🏔️ FILTRO MANDATORIO DE SUELO ESTRUCTURAL & MOMENTUM DORADO:
-    - Revisa la ESTRUCTURA DE SUELO 15M, el GATILLO SNIPER 1M/5M y la MATRIZ FRACTAL DE SUELO 7D de cada candidato.
-    - REGLA DEL PISO INTRADÍA: El candidato DEBE estar en zona de soporte o pullback constructivo (1H <= 62% y 15M <= 55%).
+    - Revisa la ESTRUCTURA DE SUELO 15M, el GATILLO SNIPER 1M/5M y la MATRIZ FRACTAL DE SUELO 8D de cada candidato.
+    - REGLA DEL PISO INTRADÍA: El candidato DEBE estar en zona de soporte o pullback constructivo (1H <= 62%, 30M <= 60% y 15M <= 55%).
     - ZONA DORADA DE MOMENTUM (WR 70%+): Prioriza candidatos con RSI 15M entre 52 y 75 (tendencia activa con fuerza institucional).
+    - 🚫 VETO TOTAL ANTI-TECHO 30M / 24H HIGH: Si el activo tiene Alerta Techo 30M/24H=True o Distancia a Máximo 24H <= +0.50% o Canal 30M >= 78% o Canal 1H >= 78%, PROHIBIDO COMPRAR (es una compra en la cima / techo diario de resistencia como ocurrió en TRX). Solo compra en la base o tras un retroceso sano.
     - VETO PROHIBICIÓN TOTAL DE FAN TOKENS E ILÍQUIDOS (SANTOS, ALPINE, LAZIO, PORTO, BAR, CITY, PSG, OG, JUV, ATM, ASR): Estos tokens carecen de volumen institucional real y sus muros de Bids son órdenes fantasma (spoofing). PROHIBIDO COMPRAR FAN TOKENS.
     - VETO TRAMPA SOBREVENTA (Cuchillo Cayendo): Si RSI 15M < 42 y NO hay divergencia alcista confirmada, RECHÁZALO (evita comprar activos en caída libre).
     - GATILLO SNIPER OBLIGATORIO: Exige que el GATILLO SNIPER muestre '🟢 LISTO PARA DISPARAR' (vela verde 1M sobre EMA9 + mínimo mayor en 5M). Prohibido comprar antes de que el sniper 1M confirme el giro.

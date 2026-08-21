@@ -1452,8 +1452,14 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 
                 # 🚫 VETO MANDATORIO DE CASCADA ROJA 15M:
                 is_15m_cascade = mtf_res.get("is_15m_red_cascade", False)
+                range_pos_30m = mtf_res.get("range_position_30m", 0.5)
+                dist_24h_high = mtf_res.get("dist_to_24h_high_pct", 999.0)
+                is_at_daily_ceiling = mtf_res.get("is_at_daily_resistance_ceiling", False)
                 
-                if is_15m_cascade:
+                if is_at_daily_ceiling:
+                    is_stable = True
+                    print(f"⛔ Compra rechazada: {best_symbol} bloqueado por TECHO DE RESISTENCIA 30M/24H (Canal 30M: {range_pos_30m*100:.0f}%, Distancia a Máximo 24H: +{dist_24h_high:.2f}%). Prohibido comprar la cima.")
+                elif is_15m_cascade:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} bloqueado por CASCADA ROJA 15M (3+ velas de 15m rojas consecutivas sin mecha de absorción). Prohibido comprar mientras sigue cayendo.")
                 elif is_active_falling_knife:
