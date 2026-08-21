@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2149,
-    "wins": 1076,
+    "total_trades": 2150,
+    "wins": 1077,
     "losses": 1073,
-    "win_rate_pct": 50.07,
-    "total_pnl_usd": -8043.490525451201
+    "win_rate_pct": 50.09,
+    "total_pnl_usd": -8043.390525451201
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on HEMIUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PNUTUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on WLDUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on AAVEUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on THETAUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DASHUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DOGEUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HEMIUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on XPLUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on XPLUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on KAIAUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 13:59:19",
-      "account_id": "SIM-014",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "LTCUSDT",
-      "side": "LONG",
-      "entry_price": 47.94,
-      "exit_price": 48.06,
-      "pnl_usd": 0.01,
-      "result": "WIN",
-      "notes": "WIN on LTCUSDT (PnL: +0.25%, Net: $+0.01 Fase 3)",
-      "context": {
-        "score": 81,
-        "rsi_15m": 55.23,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 13:59:19",
       "account_id": "SIM-015",
@@ -8454,6 +8437,23 @@
       "context": {
         "score": 32,
         "rsi_15m": 54.66,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 12:35:48",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "KAIAUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0286,
+      "exit_price": 0.0284,
+      "pnl_usd": 0.1,
+      "result": "WIN",
+      "notes": "WIN on KAIAUSDT (PnL: +0.70%, Net: $+0.10 Fase 3)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 49.59,
         "macro_trend_4h": "NEUTRAL"
       }
     }
