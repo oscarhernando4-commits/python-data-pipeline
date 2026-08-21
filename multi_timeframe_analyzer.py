@@ -797,19 +797,19 @@ def analyze_multi_timeframe_candles(symbol):
     dist_from_1h_ma25_pct = ((close_15m - ma25_1h) / ma25_1h) * 100.0 if ma25_1h > 0 else 0.0
     dist_from_4h_ma25_pct = ((close_15m - ma25_4h) / ma25_4h) * 100.0 if ma25_4h > 0 else 0.0
     
-    # 🚫 VETO TOTAL ANTI-CIMA EN CADA TEMPORALIDAD DE LA MATRIZ 8D:
-    is_at_range_ceiling_1d = bool(range_position_1d >= 0.48 or rsi_1d >= 62.0)
-    is_at_range_ceiling_4h = bool(range_position_4h >= 0.48 or dist_from_4h_ma25_pct > 2.50 or rsi_4h >= 62.0)
-    is_at_range_ceiling_1h = bool(range_position_1h >= 0.48 or dist_from_1h_ma25_pct > 1.80 or rsi_1h >= 60.0)
-    is_at_range_ceiling_30m = bool(range_position_30m >= 0.50 or dist_from_30m_ma25_pct > 1.50 or rsi_30m >= 58.0)
-    is_at_range_ceiling_15m = bool(range_position_15m >= 0.50 or rsi_15m >= 58.0)
-    is_at_range_ceiling_5m = bool(range_position_5m >= 0.55 or rsi_5m >= 60.0)
-    is_at_range_ceiling_2m = bool(range_position_2m >= 0.60 or rsi_2m >= 62.0)
-    is_at_range_ceiling_1m = bool(range_position_1m >= 0.60 or rsi_1m >= 62.0)
+    # 🚫 VETO TOTAL ANTI-CIMA EN CADA TEMPORALIDAD DE LA MATRIZ 8D (Techos reales >= 75% con RSI Sobrecomprado):
+    is_at_range_ceiling_1d = bool(range_position_1d >= 0.80 and rsi_1d >= 68.0)
+    is_at_range_ceiling_4h = bool(range_position_4h >= 0.78 and rsi_4h >= 68.0)
+    is_at_range_ceiling_1h = bool(range_position_1h >= 0.75 and rsi_1h >= 66.0)
+    is_at_range_ceiling_30m = bool(range_position_30m >= 0.75 and rsi_30m >= 66.0)
+    is_at_range_ceiling_15m = bool(range_position_15m >= 0.75 and rsi_15m >= 66.0)
+    is_at_range_ceiling_5m = bool(range_position_5m >= 0.80 and rsi_5m >= 70.0)
+    is_at_range_ceiling_2m = bool(range_position_2m >= 0.85 and rsi_2m >= 75.0)
+    is_at_range_ceiling_1m = bool(range_position_1m >= 0.85 and rsi_1m >= 75.0)
 
-    # 🚫 VETO CRÍTICO ANTI-MÁXIMO DEL DÍA (Previene comprar la cima de 30m / techos de resistencia):
+    # 🚫 VETO CRÍTICO ANTI-MÁXIMO DEL DÍA (Previene comprar la cima sin volumen):
     dist_to_24h_high_pct = round(((high_24h - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
-    is_at_daily_resistance_ceiling = bool(dist_to_24h_high_pct <= 0.45 or range_position_30m >= 0.78 or range_position_1h >= 0.78)
+    is_at_daily_resistance_ceiling = bool((dist_to_24h_high_pct <= 0.35 or range_position_30m >= 0.82 or range_position_1h >= 0.82) and not (vol_surge_2m >= 1.5 or vol_surge_15m >= 1.5))
 
     dist_15m_pct = round(((high_15m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
     dist_30m_pct = round(((high_30m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
