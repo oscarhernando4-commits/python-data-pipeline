@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2150,
-    "wins": 1077,
+    "total_trades": 2153,
+    "wins": 1080,
     "losses": 1073,
-    "win_rate_pct": 50.09,
-    "total_pnl_usd": -8043.390525451201
+    "win_rate_pct": 50.16,
+    "total_pnl_usd": -8043.3405254512
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 13:59:19",
-      "account_id": "SIM-015",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "LTCUSDT",
-      "side": "LONG",
-      "entry_price": 47.94,
-      "exit_price": 48.06,
-      "pnl_usd": 0.01,
-      "result": "WIN",
-      "notes": "WIN on LTCUSDT (PnL: +0.25%, Net: $+0.01 Fase 3)",
-      "context": {
-        "score": 81,
-        "rsi_15m": 55.23,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 13:59:19",
-      "account_id": "SIM-016",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "ADAUSDT",
-      "side": "LONG",
-      "entry_price": 0.1963,
-      "exit_price": 0.1956,
-      "pnl_usd": -0.25,
-      "result": "LOSS",
-      "notes": "LOSS on ADAUSDT (PnL: -0.36%, Net: $-0.25 Fase 2)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 47.87,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 13:59:19",
-      "account_id": "SIM-018",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "ADAUSDT",
-      "side": "LONG",
-      "entry_price": 0.1963,
-      "exit_price": 0.1956,
-      "pnl_usd": -0.25,
-      "result": "LOSS",
-      "notes": "LOSS on ADAUSDT (PnL: -0.36%, Net: $-0.25 Fase 2)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 47.87,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 14:05:33",
       "account_id": "SIM-070",
@@ -8454,6 +8403,57 @@
       "context": {
         "score": 32,
         "rsi_15m": 49.59,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 12:37:47",
+      "account_id": "SIM-047",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "THETAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1817,
+      "exit_price": 0.1822,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on THETAUSDT (PnL: +0.28%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 40,
+        "rsi_15m": 87.35,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 12:37:47",
+      "account_id": "SIM-048",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "THETAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1817,
+      "exit_price": 0.1822,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on THETAUSDT (PnL: +0.28%, Net: $+0.02 Fase 2)",
+      "context": {
+        "score": 40,
+        "rsi_15m": 87.35,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 12:37:47",
+      "account_id": "SIM-049",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "THETAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1817,
+      "exit_price": 0.1822,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on THETAUSDT (PnL: +0.28%, Net: $+0.02 Fase 2)",
+      "context": {
+        "score": 40,
+        "rsi_15m": 87.35,
         "macro_trend_4h": "NEUTRAL"
       }
     }
