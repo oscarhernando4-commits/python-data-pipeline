@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2021,
-    "wins": 1006,
+    "total_trades": 2022,
+    "wins": 1007,
     "losses": 1015,
-    "win_rate_pct": 49.78,
-    "total_pnl_usd": -8129.9305254511955
+    "win_rate_pct": 49.8,
+    "total_pnl_usd": -8129.870525451195
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on SYRUPUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on REUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on REUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MORPHOUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BCHUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on FETUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on STXUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on LTCUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)",
+      "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DASHUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 11:46:27",
-      "account_id": "SIM-043",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "HEIUSDT",
-      "side": "LONG",
-      "entry_price": 0.1393,
-      "exit_price": 0.1406,
-      "pnl_usd": 0.26,
-      "result": "WIN",
-      "notes": "WIN on HEIUSDT (PnL: +0.93%, Net: $+0.26 Fase 4)",
-      "context": {
-        "score": 82,
-        "rsi_15m": 65.6,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 11:46:28",
       "account_id": "SIM-044",
@@ -8442,6 +8425,23 @@
       "context": {
         "score": 46,
         "rsi_15m": 81.65,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 08:35:25",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "DASHUSDT",
+      "side": "SHORT",
+      "entry_price": 35.28,
+      "exit_price": 35.14,
+      "pnl_usd": 0.06,
+      "result": "WIN",
+      "notes": "WIN on DASHUSDT (PnL: +0.40%, Net: $+0.06 Fase 2)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 84.8,
         "macro_trend_4h": "NEUTRAL"
       }
     }
