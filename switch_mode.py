@@ -56,8 +56,8 @@ def show_status():
         print(f"  📊 Análisis: DETALLADO (sync cada ciclo)")
     else:
         print(f"  ☁️  Modo Actual: NUBE (Fixie Proxy)")
-        print(f"  🔄 Proxy Fixie: ROUND-ROBIN EQUITATIVO (10 cuentas)")
-        print(f"  📊 Análisis: EFICIENTE (sync cada 30 min)")
+        print(f"  🔄 Proxy Fixie: ROUND-ROBIN EQUITATIVO (12 a 22 cuentas)")
+        print(f"  📊 Zero-Polling: Solo consume proxy al comprar/vender (0 req/hora en espera)")
     
     print(f"  ⏰ Último cambio: {mode_data.get('switched_at', 'N/A')}")
     print(f"  👤 Cambiado por: {mode_data.get('switched_by', 'N/A')}")
