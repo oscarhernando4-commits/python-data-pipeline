@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 1924,
+    "total_trades": 1927,
     "wins": 953,
-    "losses": 971,
-    "win_rate_pct": 49.53,
-    "total_pnl_usd": -7438.255035451198
+    "losses": 974,
+    "win_rate_pct": 49.46,
+    "total_pnl_usd": -7439.740525451198
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SANTOSUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on HBARUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PENDLEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on BTCUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on UNIUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on BNBUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEARUSDT)",
-      "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ENSUSDT)"
+      "BLOCK LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ENSUSDT)",
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZAMAUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SOLUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 09:34:38",
-      "account_id": "SIM-003",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "KAITOUSDT",
-      "side": "LONG",
-      "entry_price": 0.3674,
-      "exit_price": 0.3648,
-      "pnl_usd": -0.1,
-      "result": "LOSS",
-      "notes": "LOSS on KAITOUSDT (PnL: -0.71%, Net: $-0.10 Fase 3)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 62.28,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 09:34:38",
-      "account_id": "SIM-023",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "BOMEUSDT",
-      "side": "LONG",
-      "entry_price": 0.0011412,
-      "exit_price": 0.0011335,
-      "pnl_usd": -0.18,
-      "result": "LOSS",
-      "notes": "LOSS on BOMEUSDT (PnL: -0.67%, Net: $-0.18 Fase 3)",
-      "context": {
-        "score": 65,
-        "rsi_15m": 42.76,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 09:34:38",
-      "account_id": "SIM-031",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "GPSUSDT",
-      "side": "LONG",
-      "entry_price": 0.01153,
-      "exit_price": 0.01195,
-      "pnl_usd": 0.66,
-      "result": "WIN",
-      "notes": "WIN on GPSUSDT (PnL: +3.64%, Net: $+0.66 Fase 3)",
-      "context": {
-        "score": 12,
-        "rsi_15m": 54.46,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 09:36:52",
       "account_id": "SIM-042",
@@ -8440,6 +8389,53 @@
         "rsi_15m": 78.5,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-20 22:07:35",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ZAMAUSDT",
+      "side": "LONG",
+      "entry_price": 0.04755,
+      "exit_price": 0.04618,
+      "pnl_usd": -0.59,
+      "result": "LOSS",
+      "notes": "LOSS on ZAMAUSDT (PnL: -2.88%, Net: $-0.59 Fase 1)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.91,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 22:07:35",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ZAMAUSDT",
+      "side": "LONG",
+      "entry_price": 0.04755,
+      "exit_price": 0.04618,
+      "pnl_usd": -0.57,
+      "result": "LOSS",
+      "notes": "LOSS on ZAMAUSDT (PnL: -2.88%, Net: $-0.57 Fase 1)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.91,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 22:08:05",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "SANTOSUSDT",
+      "side": "BUY",
+      "entry_price": 0.517,
+      "exit_price": 0.506,
+      "pnl_usd": -0.3254900000000003,
+      "result": "LOSS",
+      "notes": "Real Money Trade closed with -2.13%",
+      "context": {}
     }
   ]
 }
