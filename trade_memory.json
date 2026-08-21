@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2054,
-    "wins": 1026,
+    "total_trades": 2055,
+    "wins": 1027,
     "losses": 1028,
-    "win_rate_pct": 49.95,
-    "total_pnl_usd": -7739.570525451197
+    "win_rate_pct": 49.98,
+    "total_pnl_usd": -7739.540525451197
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONGUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ZECUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on POLUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ETCUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SHIBUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BCHUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on SUNUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SHIBUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PYTHUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PYTHUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on AAVEUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 12:16:55",
-      "account_id": "SIM-007",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "DEXEUSDT",
-      "side": "LONG",
-      "entry_price": 1.921,
-      "exit_price": 1.918,
-      "pnl_usd": -0.05,
-      "result": "LOSS",
-      "notes": "LOSS on DEXEUSDT (PnL: -0.16%, Net: $-0.05 Fase 2)",
-      "context": {
-        "score": 35,
-        "rsi_15m": 53.99,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 12:16:55",
       "account_id": "SIM-023",
@@ -8446,6 +8429,23 @@
       "context": {
         "score": 45,
         "rsi_15m": 55.25,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 09:13:32",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "AAVEUSDT",
+      "side": "LONG",
+      "entry_price": 106.78,
+      "exit_price": 107.08,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on AAVEUSDT (PnL: +0.28%, Net: $+0.03 Fase 2)",
+      "context": {
+        "score": 48,
+        "rsi_15m": 67.91,
         "macro_trend_4h": "NEUTRAL"
       }
     }
