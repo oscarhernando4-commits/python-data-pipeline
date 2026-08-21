@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2369,
+    "total_trades": 2371,
     "wins": 1200,
-    "losses": 1169,
-    "win_rate_pct": 50.65,
-    "total_pnl_usd": -9374.682175451213
+    "losses": 1171,
+    "win_rate_pct": 50.61,
+    "total_pnl_usd": -9425.322175451214
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SPKUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on WLDUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on INJUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on BICOUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BICOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on PEPEUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ENAUSDT)",
-      "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PEOPLEUSDT)"
+      "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PEOPLEUSDT)",
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BCHUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SOLUSDT)",
@@ -8233,6 +8233,40 @@
       "context": {
         "score": 72,
         "rsi_15m": 56.91,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 14:52:34",
+      "account_id": "SIM-094",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BCHUSDT",
+      "side": "LONG",
+      "entry_price": 292.5,
+      "exit_price": 286.6,
+      "pnl_usd": -50.28,
+      "result": "LOSS",
+      "notes": "LOSS on BCHUSDT (PnL: -2.02%, Net: $-50.28 Fase 1)",
+      "context": {
+        "score": 68,
+        "rsi_15m": 52.67,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 14:56:29",
+      "account_id": "SIM-083",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BCHUSDT",
+      "side": "LONG",
+      "entry_price": 292.0,
+      "exit_price": 285.4,
+      "pnl_usd": -0.36,
+      "result": "LOSS",
+      "notes": "LOSS on BCHUSDT (PnL: -2.26%, Net: $-0.36 Fase 1)",
+      "context": {
+        "score": 65,
+        "rsi_15m": 50.52,
         "macro_trend_4h": "NEUTRAL"
       }
     }
