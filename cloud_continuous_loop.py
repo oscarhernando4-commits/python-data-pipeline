@@ -43,15 +43,15 @@ def sleep_with_micro_heartbeat(sleep_secs: int):
         remaining = end_time - time.time()
         if remaining <= 0:
             break
-        chunk = min(2.0, remaining)
+        chunk = min(1.0, remaining)
         time.sleep(chunk)
-        # Run 2s micro-heartbeat for active position (0.001% CPU)
+        # Run 1s ultra-fast micro-heartbeat for active position (0.001% CPU)
         try:
             hb = api_connector.quick_position_heartbeat()
             if hb and isinstance(hb, dict):
                 p_fmt = f"${hb['price']:.5f}" if hb['price'] < 0.05 else f"${hb['price']:.4f}"
                 if hb.get('highest_pnl', 0) >= 0.50 and hb.get('phase', 1) >= 2:
-                    print(f"💓 [HEARTBEAT 2s] {hb['symbol']} @ {p_fmt} | PnL: {hb['pnl_pct']:+.2f}% (Pico: +{hb['highest_pnl']:.2f}% | Fase {hb['phase']})", flush=True)
+                    print(f"💓 [HEARTBEAT 1s] {hb['symbol']} @ {p_fmt} | PnL: {hb['pnl_pct']:+.2f}% (Pico: +{hb['highest_pnl']:.2f}% | Fase {hb['phase']})", flush=True)
         except Exception:
             pass
 

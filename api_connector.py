@@ -971,16 +971,9 @@ def quick_position_heartbeat():
             state["position"] = pos
             save_real_account_state(state)
             
-        # Check if Stop Loss or Trailing Stop triggered
+        # Check if Stop Loss or Trailing Stop triggered (STRICT INVIOLABLE FLOOR)
         should_exit = current_pnl_pct <= sl_pct
-        exit_reason = f"Stop/Trailing ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
-        
-        # Pillar 4: Trend Ride Guard (Protege si está sobre MA25 de 5m/15m para Blue-Chips y Sector)
-        import adaptive_asset_dna
-        arch_dna = adaptive_asset_dna.get_asset_dna_archetype(sym, atr_15m_pct)
-        if arch_dna.get("trend_ride_enabled", True) and new_phase >= 2 and should_exit and current_price > entry and ma25_5m > 0 and current_price >= ma25_5m * 0.998 and current_pnl_pct >= 0.25:
-            should_exit = False
-            exit_reason = f"Protegido por Estructura MA25 (PnL: {current_pnl_pct:+.2f}%)"
+        exit_reason = f"🎯 Trailing Floor Activado ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
         
         # SNIPER MEJORA B: Detección de Agotamiento de Mecha en Cima con holgura adaptativa
         wick_pullback_threshold = max(0.60, round(custom_slack * 1.2, 2))
