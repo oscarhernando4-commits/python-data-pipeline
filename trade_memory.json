@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2219,
-    "wins": 1095,
+    "total_trades": 2220,
+    "wins": 1096,
     "losses": 1124,
-    "win_rate_pct": 49.35,
-    "total_pnl_usd": -12223.7605254512
+    "win_rate_pct": 49.37,
+    "total_pnl_usd": -12223.7505254512
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MORPHOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DOGEUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HEMIUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on XPLUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on KAIAUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TAOUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DEXEUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BTCUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ASTERUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ASTERUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on WLFIUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 15:48:00",
-      "account_id": "SIM-023",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ONGUSDT",
-      "side": "SHORT",
-      "entry_price": 0.14581,
-      "exit_price": 0.17846,
-      "pnl_usd": -4.81,
-      "result": "LOSS",
-      "notes": "LOSS on ONGUSDT (PnL: -22.39%, Net: $-4.81 Fase 1)",
-      "context": {
-        "score": 79,
-        "rsi_15m": 96.77,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 15:48:00",
       "account_id": "SIM-026",
@@ -8426,6 +8409,23 @@
       "context": {
         "score": 32,
         "rsi_15m": 48.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 14:27:45",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "WLFIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0612,
+      "exit_price": 0.0609,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on WLFIUSDT (PnL: +0.49%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 44.29,
         "macro_trend_4h": "NEUTRAL"
       }
     }
