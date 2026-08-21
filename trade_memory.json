@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 1896,
-    "wins": 927,
-    "losses": 969,
-    "win_rate_pct": 48.89,
-    "total_pnl_usd": -7765.665675451199
+    "total_trades": 1900,
+    "wins": 930,
+    "losses": 970,
+    "win_rate_pct": 48.95,
+    "total_pnl_usd": -7764.425675451199
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on WLDUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on WLDUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SANTOSUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on HBARUSDT)",
@@ -27,10 +26,10 @@
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BOMEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on GIGGLEUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on UNIUSDT)",
-      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ADAUSDT)"
+      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ADAUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ALGOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BCHUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TAOUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HEMIUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SUIUSDT)",
@@ -49,78 +48,11 @@
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BTCUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on METUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on METUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEARUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEARUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on METUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 09:05:33",
-      "account_id": "SIM-046",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "HEMIUSDT",
-      "side": "LONG",
-      "entry_price": 0.00842,
-      "exit_price": 0.00904,
-      "pnl_usd": 2.25,
-      "result": "WIN",
-      "notes": "WIN on HEMIUSDT (PnL: +7.36%, Net: $+2.25 Fase 3)",
-      "context": {
-        "score": 70,
-        "rsi_15m": 46.51,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 09:13:07",
-      "account_id": "SIM-023",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "LTCUSDT",
-      "side": "SHORT",
-      "entry_price": 46.52,
-      "exit_price": 47.5,
-      "pnl_usd": -0.5,
-      "result": "LOSS",
-      "notes": "LOSS on LTCUSDT (PnL: -2.11%, Net: $-0.50 Fase 1)",
-      "context": {
-        "score": 81,
-        "rsi_15m": 58.35,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 09:13:07",
-      "account_id": "SIM-026",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "LTCUSDT",
-      "side": "SHORT",
-      "entry_price": 46.52,
-      "exit_price": 47.5,
-      "pnl_usd": -0.45,
-      "result": "LOSS",
-      "notes": "LOSS on LTCUSDT (PnL: -2.11%, Net: $-0.45 Fase 1)",
-      "context": {
-        "score": 81,
-        "rsi_15m": 58.35,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 09:13:07",
-      "account_id": "SIM-047",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "BBUSDT",
-      "side": "LONG",
-      "entry_price": 0.00829,
-      "exit_price": 0.0095,
-      "pnl_usd": 1.84,
-      "result": "WIN",
-      "notes": "WIN on BBUSDT (PnL: +14.60%, Net: $+1.84 Fase 3)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 62.17,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 09:13:07",
       "account_id": "SIM-050",
@@ -8442,6 +8374,74 @@
       "context": {
         "score": 46,
         "rsi_15m": 77.85,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 02:01:23",
+      "account_id": "SIM-053",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "METUSDT",
+      "side": "LONG",
+      "entry_price": 0.2142,
+      "exit_price": 0.2184,
+      "pnl_usd": 0.34,
+      "result": "WIN",
+      "notes": "WIN on METUSDT (PnL: +1.96%, Net: $+0.34 Fase 4)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 60.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 02:01:23",
+      "account_id": "SIM-054",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "METUSDT",
+      "side": "LONG",
+      "entry_price": 0.2142,
+      "exit_price": 0.2184,
+      "pnl_usd": 0.32,
+      "result": "WIN",
+      "notes": "WIN on METUSDT (PnL: +1.96%, Net: $+0.32 Fase 4)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 60.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 02:01:23",
+      "account_id": "SIM-060",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "METUSDT",
+      "side": "LONG",
+      "entry_price": 0.2142,
+      "exit_price": 0.2184,
+      "pnl_usd": 1.32,
+      "result": "WIN",
+      "notes": "WIN on METUSDT (PnL: +1.96%, Net: $+1.32 Fase 4)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 60.11,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 02:01:23",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "ALGOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0857,
+      "exit_price": 0.089,
+      "pnl_usd": -0.74,
+      "result": "LOSS",
+      "notes": "LOSS on ALGOUSDT (PnL: -3.85%, Net: $-0.74 Fase 1)",
+      "context": {
+        "score": 55,
+        "rsi_15m": 64.24,
         "macro_trend_4h": "NEUTRAL"
       }
     }
