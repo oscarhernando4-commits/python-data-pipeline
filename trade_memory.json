@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2107,
+    "total_trades": 2108,
     "wins": 1049,
-    "losses": 1058,
-    "win_rate_pct": 49.79,
-    "total_pnl_usd": -8079.950525451199
+    "losses": 1059,
+    "win_rate_pct": 49.76,
+    "total_pnl_usd": -8079.960525451199
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on CFXUSDT)",
       "BLOCK SHORT when RSI<30(Oversold) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONGUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on VETUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on OPUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on WLDUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BCHUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PENGUUSDT)",
-      "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on NEXOUSDT)"
+      "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on NEXOUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PENDLEUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DASHUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 13:03:48",
-      "account_id": "SIM-005",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "POLUSDT",
-      "side": "LONG",
-      "entry_price": 0.08146,
-      "exit_price": 0.08134,
-      "pnl_usd": -0.05,
-      "result": "LOSS",
-      "notes": "LOSS on POLUSDT (PnL: -0.15%, Net: $-0.05 Fase 2)",
-      "context": {
-        "score": 67,
-        "rsi_15m": 42.61,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 13:03:48",
       "account_id": "SIM-006",
@@ -8434,6 +8417,23 @@
       "context": {
         "score": 45,
         "rsi_15m": 56.17,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 10:29:39",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "PENDLEUSDT",
+      "side": "SHORT",
+      "entry_price": 1.564,
+      "exit_price": 1.566,
+      "pnl_usd": -0.01,
+      "result": "LOSS",
+      "notes": "LOSS on PENDLEUSDT (PnL: -0.13%, Net: $-0.01 Fase 2)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 50.45,
         "macro_trend_4h": "NEUTRAL"
       }
     }
