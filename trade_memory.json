@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2426,
-    "wins": 1247,
+    "total_trades": 2427,
+    "wins": 1248,
     "losses": 1179,
-    "win_rate_pct": 51.4,
-    "total_pnl_usd": -8218.872175451212
+    "win_rate_pct": 51.42,
+    "total_pnl_usd": -8218.862175451211
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on WLFIUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on AVAXUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PEOPLEUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ADAUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PROMUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DOTUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ETHUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZECUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SOLUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SOLUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZAMAUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 21:26:39",
-      "account_id": "SIM-094",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "NEARUSDT",
-      "side": "LONG",
-      "entry_price": 1.784,
-      "exit_price": 1.785,
-      "pnl_usd": -2.22,
-      "result": "LOSS",
-      "notes": "LOSS on NEARUSDT (PnL: +0.06%, Net: $-2.22 Fase 2)",
-      "context": {
-        "score": 91,
-        "rsi_15m": 63.61,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 21:28:41",
       "account_id": "SIM-039",
@@ -8462,6 +8445,23 @@
       "context": {
         "score": 74,
         "rsi_15m": 72.41,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 23:07:06",
+      "account_id": "SIM-091",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "ZAMAUSDT",
+      "side": "LONG",
+      "entry_price": 0.04875,
+      "exit_price": 0.04903,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on ZAMAUSDT (PnL: +0.57%, Net: $+0.01 Fase 3)",
+      "context": {
+        "score": 86,
+        "rsi_15m": 66.34,
         "macro_trend_4h": "NEUTRAL"
       }
     }
