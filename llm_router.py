@@ -503,12 +503,12 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
     ESTRUCTURA DE LOS 7 AGENTES INSTITUCIONALES EN DELIBERACIÓN CUÁNTICA:
     1. 🕵️ AGENTE 1 (Macro 1D & Guardián de Bitcoin): Evalúa el ciclo macro 1D ({wall_street_str}), Fear&Greed ({fear_greed.get('score')}), estabilidad de BTC (BTC Guard). VETA si altcoin_impact=AVOID.
-    2. 📊 AGENTE 2 (Sniper de Suelo 7D & Resistencia Predictiva): Verifica Suelo 7D (1D, 4H, 1H <= 48%), retesteo 1M sin FOMO y recorrido proyectado >= +2.5%. VETA si YA_OPERADO_HOY.
-    3. 🌊 AGENTE 3 (Auditor de Libro, CVD & Squeeze Micro): Exige Bids >= 44%, CVD Taker positivo y confirma compresión de volatilidad (Squeeze de Bollinger).
+    2. 📊 AGENTE 2 (Sniper de Suelo 7D & Resistencia Predictiva): Verifica Suelo o Pullback Constructivo (1D, 4H <= 65%, 1H <= 62%, 30M <= 60%, 15M <= 55%), retesteo 1M sobre EMA9 sin FOMO y recorrido proyectado >= +2.0%. VETA si YA_OPERADO_HOY o si está a menos de 0.50% del Máximo 24H.
+    3. 🌊 AGENTE 3 (Auditor de Libro, CVD & Squeeze Micro): Exige Bids >= 44%, CVD Taker positivo o neutral y confirma absorción de ventas.
     4. 🧩 AGENTE 4 (Analista Sectorial & Temporal): Prioriza sector líder ({sector_summary['top_sector']}) y valida la SESION TEMPORAL. VETO si VETO_TEMPORAL o BLACKOUT con multiplicador < 0.60. Premia tokens en HORA_PICO y SECTOR_CALIENTE.
     5. 🧠 AGENTE 5 (Memoria RAG & Auto-Aprendizaje Cuántico): Valida el ADN de la moneda, reputación histórica y patrones de catalizadores ganadores aprendidos.
-    6. 🛡️ AGENTE 6 (Chief Risk Officer & Veto de Dump): Veta cualquier activo con Riesgo de Dump >= 45%, libro descompensado, DUMP_RISK_FUNDING (funding positivo extremo > 0.05%), o BTC en CRASH.
-    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza el consenso del comité. Si hay una oportunidad A+ con alta probabilidad de pump (>= 70%), bajo riesgo (<= 25%), sesión favorable (multiplicador >= 0.80), funding neutral o squeeze, APRUEBA "BUY_LONG" (confianza >= 85-95%) para ejecución inmediata en Binance Spot.
+    6. 🛡️ AGENTE 6 (Chief Risk Officer & Veto de Dump): Veta cualquier activo con Riesgo de Dump >= 45%, libro descompensado (Bids < 40%), DUMP_RISK_FUNDING (funding > 0.05%), o compra en la cima del día.
+    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza el consenso del comité. Si el mejor candidato está en zona de soporte/pullback constructivo, con gatillo sniper 1M activo y libre de vetos de techo, APRUEBA "BUY_LONG" (confianza >= 75-90%, approved: true) para ejecución inmediata en Binance Spot.
 
     {exec_learning_summary}
 
