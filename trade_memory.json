@@ -26,8 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on INJUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on BICOUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on TAOUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on AAVEUSDT)",
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BANKUSDT)"
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on TAOUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SOLUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TUTUSDT)",
