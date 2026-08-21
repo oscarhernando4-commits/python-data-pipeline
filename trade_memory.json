@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2135,
-    "wins": 1066,
+    "total_trades": 2136,
+    "wins": 1067,
     "losses": 1069,
-    "win_rate_pct": 49.93,
-    "total_pnl_usd": -8041.170525451201
+    "win_rate_pct": 49.95,
+    "total_pnl_usd": -8041.140525451201
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on LDOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on AAVEUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on KAIAUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on IMXUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BBUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TUTUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BTCUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on AVAXUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MORPHOUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MORPHOUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on XRPUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 13:39:18",
-      "account_id": "SIM-028",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "PENDLEUSDT",
-      "side": "LONG",
-      "entry_price": 1.499,
-      "exit_price": 1.469,
-      "pnl_usd": -0.39,
-      "result": "LOSS",
-      "notes": "LOSS on PENDLEUSDT (PnL: -2.00%, Net: $-0.39 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 43.85,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 13:41:29",
       "account_id": "SIM-042",
@@ -8454,6 +8437,23 @@
       "context": {
         "score": 45,
         "rsi_15m": 61.02,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 11:39:31",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "XRPUSDT",
+      "side": "SHORT",
+      "entry_price": 1.3835,
+      "exit_price": 1.3793,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on XRPUSDT (PnL: +0.30%, Net: $+0.03 Fase 2)",
+      "context": {
+        "score": 40,
+        "rsi_15m": 58.02,
         "macro_trend_4h": "NEUTRAL"
       }
     }
