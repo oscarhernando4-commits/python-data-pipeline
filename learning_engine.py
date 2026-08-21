@@ -204,7 +204,11 @@ def get_optimal_entry_conditions(data=None):
         "total_trades_analyzed": len(history)
     }
 
-def record_trade_outcome(symbol, side, entry_price, exit_price, pnl_usd, result_type, notes="", account_id="Histórico", group_name="Sin Grupo", context=None):
+def record_trade_outcome(symbol, side="LONG", entry_price=0.0, exit_price=0.0, pnl_usd=0.0, result_type=None, notes="", account_id="Histórico", group_name="Sin Grupo", context=None, **kwargs):
+    if result_type is None:
+        result_type = "WIN" if pnl_usd > 0 else "LOSS"
+    if not notes and "exit_reason" in kwargs:
+        notes = kwargs["exit_reason"]
     data = load_memory()
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     

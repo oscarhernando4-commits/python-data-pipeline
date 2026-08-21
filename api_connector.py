@@ -1036,13 +1036,14 @@ def quick_position_heartbeat():
                 import learning_engine
                 learning_engine.record_trade_outcome(
                     symbol=sym,
+                    side="LONG",
                     entry_price=entry,
                     exit_price=current_price,
-                    qty=qty,
-                    pnl_pct=current_pnl_pct,
                     pnl_usd=pnl_usd,
-                    exit_reason=exit_reason,
-                    phase=new_phase
+                    result_type="WIN" if is_win_exit else "LOSS",
+                    notes=f"Real Money Trade exited via {exit_reason} (Fase {new_phase}, PnL: {current_pnl_pct:+.2f}%)",
+                    account_id="R-01",
+                    group_name="CUENTA REAL"
                 )
             except Exception as le_err:
                 print(f"⚠️ Learning Engine registro fallido: {le_err}")
