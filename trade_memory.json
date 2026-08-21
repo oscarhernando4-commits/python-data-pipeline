@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 1979,
+    "total_trades": 1980,
     "wins": 985,
-    "losses": 994,
-    "win_rate_pct": 49.77,
-    "total_pnl_usd": -7437.990525451198
+    "losses": 995,
+    "win_rate_pct": 49.75,
+    "total_pnl_usd": -7438.080525451198
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on PENDLEUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on HEMIUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on METUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on METUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on STXUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PYTHUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BCHUSDT)",
-      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on JASMYUSDT)"
+      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on JASMYUSDT)",
+      "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BTCUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MANAUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 11:17:25",
-      "account_id": "SIM-023",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ROBOUSDT",
-      "side": "LONG",
-      "entry_price": 0.015,
-      "exit_price": 0.01522,
-      "pnl_usd": 0.29,
-      "result": "WIN",
-      "notes": "WIN on ROBOUSDT (PnL: +1.47%, Net: $+0.29 Fase 5)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 71.28,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 11:17:25",
       "account_id": "SIM-027",
@@ -8438,6 +8421,23 @@
       "context": {
         "score": 54,
         "rsi_15m": 58.45,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 07:13:34",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "BTCUSDT",
+      "side": "SHORT",
+      "entry_price": 74441.45,
+      "exit_price": 75983.06,
+      "pnl_usd": -0.09,
+      "result": "LOSS",
+      "notes": "LOSS on BTCUSDT (PnL: -2.07%, Net: $-0.09 Fase 1)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 76.02,
         "macro_trend_4h": "NEUTRAL"
       }
     }
