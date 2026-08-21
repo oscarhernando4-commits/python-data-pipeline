@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1936,
-    "wins": 957,
+    "total_trades": 1939,
+    "wins": 960,
     "losses": 979,
-    "win_rate_pct": 49.43,
-    "total_pnl_usd": -7442.020525451198
+    "win_rate_pct": 49.51,
+    "total_pnl_usd": -7441.770525451198
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MORPHOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on METUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on METUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEARUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ROBOUSDT)",
@@ -49,61 +48,11 @@
       "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on CRVUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on REUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PYTHUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DCRUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DCRUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BCHUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 09:49:31",
-      "account_id": "SIM-054",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "WLFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.062,
-      "exit_price": 0.0618,
-      "pnl_usd": -0.11,
-      "result": "LOSS",
-      "notes": "LOSS on WLFIUSDT (PnL: -0.32%, Net: $-0.11 Fase 2)",
-      "context": {
-        "score": 98,
-        "rsi_15m": 57.52,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 09:49:31",
-      "account_id": "SIM-060",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "WLFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.062,
-      "exit_price": 0.0618,
-      "pnl_usd": -0.44,
-      "result": "LOSS",
-      "notes": "LOSS on WLFIUSDT (PnL: -0.32%, Net: $-0.44 Fase 2)",
-      "context": {
-        "score": 98,
-        "rsi_15m": 57.52,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 09:49:31",
-      "account_id": "SIM-070",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "PNUTUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0514,
-      "exit_price": 0.0525,
-      "pnl_usd": -0.43,
-      "result": "LOSS",
-      "notes": "LOSS on PNUTUSDT (PnL: -2.14%, Net: $-0.43 Fase 1)",
-      "context": {
-        "score": 87,
-        "rsi_15m": 60.57,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 09:49:31",
       "account_id": "SIM-094",
@@ -8434,6 +8383,57 @@
       "context": {
         "score": 38,
         "rsi_15m": 42.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 05:05:24",
+      "account_id": "SIM-001",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BCHUSDT",
+      "side": "LONG",
+      "entry_price": 227.9,
+      "exit_price": 229.9,
+      "pnl_usd": 0.08,
+      "result": "WIN",
+      "notes": "WIN on BCHUSDT (PnL: +0.88%, Net: $+0.08 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 68.57,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 05:05:24",
+      "account_id": "SIM-002",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BCHUSDT",
+      "side": "LONG",
+      "entry_price": 227.9,
+      "exit_price": 229.9,
+      "pnl_usd": 0.08,
+      "result": "WIN",
+      "notes": "WIN on BCHUSDT (PnL: +0.88%, Net: $+0.08 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 68.57,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 05:05:24",
+      "account_id": "SIM-003",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "BCHUSDT",
+      "side": "LONG",
+      "entry_price": 227.9,
+      "exit_price": 229.9,
+      "pnl_usd": 0.09,
+      "result": "WIN",
+      "notes": "WIN on BCHUSDT (PnL: +0.88%, Net: $+0.09 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 68.57,
         "macro_trend_4h": "NEUTRAL"
       }
     }
