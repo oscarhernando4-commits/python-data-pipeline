@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2445,
+    "total_trades": 2448,
     "wins": 1265,
-    "losses": 1180,
-    "win_rate_pct": 51.74,
-    "total_pnl_usd": -8060.6421754512085
+    "losses": 1183,
+    "win_rate_pct": 51.67,
+    "total_pnl_usd": -8061.652175451209
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on TAOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SOLUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on RENDERUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on CRVUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on COTIUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
-      "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on WLFIUSDT)"
+      "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on WLFIUSDT)",
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LTCUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOGEUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 03:43:28",
-      "account_id": "SIM-016",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "REUSDT",
-      "side": "LONG",
-      "entry_price": 0.5146,
-      "exit_price": 0.5223,
-      "pnl_usd": 0.65,
-      "result": "WIN",
-      "notes": "WIN on REUSDT (PnL: +1.50%, Net: $+0.65 Fase 4)",
-      "context": {
-        "score": 54,
-        "rsi_15m": 60.68,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 03:45:34",
-      "account_id": "SIM-097",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "BCHUSDT",
-      "side": "SHORT",
-      "entry_price": 223.7,
-      "exit_price": 228.2,
-      "pnl_usd": -0.23,
-      "result": "LOSS",
-      "notes": "LOSS on BCHUSDT (PnL: -2.01%, Net: $-0.23 Fase 1)",
-      "context": {
-        "score": 46,
-        "rsi_15m": 69.31,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 03:55:34",
-      "account_id": "SIM-042",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "HEMIUSDT",
-      "side": "LONG",
-      "entry_price": 0.0116,
-      "exit_price": 0.01133,
-      "pnl_usd": -1.89,
-      "result": "LOSS",
-      "notes": "LOSS on HEMIUSDT (PnL: -2.33%, Net: $-1.89 Fase 1)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 79.44,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 03:55:34",
       "account_id": "SIM-051",
@@ -8466,6 +8415,57 @@
       "context": {
         "score": 96,
         "rsi_15m": 62.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 23:51:08",
+      "account_id": "SIM-005",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "LTCUSDT",
+      "side": "LONG",
+      "entry_price": 54.08,
+      "exit_price": 52.96,
+      "pnl_usd": -0.34,
+      "result": "LOSS",
+      "notes": "LOSS on LTCUSDT (PnL: -2.07%, Net: $-0.34 Fase 1)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 57.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 23:51:08",
+      "account_id": "SIM-006",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "LTCUSDT",
+      "side": "LONG",
+      "entry_price": 54.08,
+      "exit_price": 52.96,
+      "pnl_usd": -0.34,
+      "result": "LOSS",
+      "notes": "LOSS on LTCUSDT (PnL: -2.07%, Net: $-0.34 Fase 1)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 57.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 23:51:08",
+      "account_id": "SIM-007",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "LTCUSDT",
+      "side": "LONG",
+      "entry_price": 54.08,
+      "exit_price": 52.96,
+      "pnl_usd": -0.33,
+      "result": "LOSS",
+      "notes": "LOSS on LTCUSDT (PnL: -2.07%, Net: $-0.33 Fase 1)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 57.43,
         "macro_trend_4h": "NEUTRAL"
       }
     }
