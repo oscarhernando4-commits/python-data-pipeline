@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1968,
-    "wins": 974,
+    "total_trades": 1971,
+    "wins": 977,
     "losses": 994,
-    "win_rate_pct": 49.49,
-    "total_pnl_usd": -7442.750525451199
+    "win_rate_pct": 49.57,
+    "total_pnl_usd": -7442.360525451199
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on JASMYUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TAOUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PENGUUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZAMAUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SOLUSDT)",
@@ -49,61 +48,11 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on REUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on REUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MORPHOUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BCHUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BCHUSDT)",
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on JASMYUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 10:48:37",
-      "account_id": "SIM-028",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "RENDERUSDT",
-      "side": "LONG",
-      "entry_price": 1.412,
-      "exit_price": 1.414,
-      "pnl_usd": -0.0,
-      "result": "WIN",
-      "notes": "WIN on RENDERUSDT (PnL: +0.14%, Net: $-0.00 Fase 2)",
-      "context": {
-        "score": 82,
-        "rsi_15m": 62.26,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 10:48:37",
-      "account_id": "SIM-029",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "RENDERUSDT",
-      "side": "LONG",
-      "entry_price": 1.412,
-      "exit_price": 1.414,
-      "pnl_usd": -0.0,
-      "result": "WIN",
-      "notes": "WIN on RENDERUSDT (PnL: +0.14%, Net: $-0.00 Fase 2)",
-      "context": {
-        "score": 82,
-        "rsi_15m": 62.26,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 11:00:38",
-      "account_id": "SIM-019",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "KAITOUSDT",
-      "side": "LONG",
-      "entry_price": 0.3623,
-      "exit_price": 0.3633,
-      "pnl_usd": 0.06,
-      "result": "WIN",
-      "notes": "WIN on KAITOUSDT (PnL: +0.28%, Net: $+0.06 Fase 3)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 56.61,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 11:04:07",
       "account_id": "R-01",
@@ -8434,6 +8383,57 @@
       "context": {
         "score": 46,
         "rsi_15m": 75.26,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 06:31:25",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "JASMYUSDT",
+      "side": "LONG",
+      "entry_price": 0.00409,
+      "exit_price": 0.00411,
+      "pnl_usd": 0.26,
+      "result": "WIN",
+      "notes": "WIN on JASMYUSDT (PnL: +0.49%, Net: $+0.26 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 72.22,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 06:31:25",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "JASMYUSDT",
+      "side": "LONG",
+      "entry_price": 0.00409,
+      "exit_price": 0.00411,
+      "pnl_usd": 0.07,
+      "result": "WIN",
+      "notes": "WIN on JASMYUSDT (PnL: +0.49%, Net: $+0.07 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 72.22,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 06:31:25",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "JASMYUSDT",
+      "side": "LONG",
+      "entry_price": 0.00409,
+      "exit_price": 0.00411,
+      "pnl_usd": 0.06,
+      "result": "WIN",
+      "notes": "WIN on JASMYUSDT (PnL: +0.49%, Net: $+0.06 Fase 3)",
+      "context": {
+        "score": 46,
+        "rsi_15m": 72.22,
         "macro_trend_4h": "NEUTRAL"
       }
     }
