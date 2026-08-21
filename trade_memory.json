@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2073,
-    "wins": 1038,
-    "losses": 1035,
-    "win_rate_pct": 50.07,
-    "total_pnl_usd": -7739.140525451196
+    "total_trades": 2076,
+    "wins": 1040,
+    "losses": 1036,
+    "win_rate_pct": 50.1,
+    "total_pnl_usd": -7531.490525451196
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ROBOUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PENGUUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on JTOUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on WLDUSDT)",
@@ -27,11 +26,10 @@
       "BLOCK SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ONGUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on GALAUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ASTERUSDT)",
-      "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BBUSDT)"
+      "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on BBUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on PROMUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on FLOKIUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on FETUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on STXUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on LTCUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)",
@@ -49,61 +47,12 @@
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on IMXUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BBUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BTCUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PNUTUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PNUTUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on WLDUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on AAVEUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 12:21:17",
-      "account_id": "SIM-093",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "BOMEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0011465,
-      "exit_price": 0.0011355,
-      "pnl_usd": 18.28,
-      "result": "WIN",
-      "notes": "WIN on BOMEUSDT (PnL: +0.96%, Net: $+18.28 Fase 4)",
-      "context": {
-        "score": 65,
-        "rsi_15m": 44.62,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 12:23:23",
-      "account_id": "SIM-023",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "TUTUSDT",
-      "side": "LONG",
-      "entry_price": 0.03316,
-      "exit_price": 0.03248,
-      "pnl_usd": -0.48,
-      "result": "LOSS",
-      "notes": "LOSS on TUTUSDT (PnL: -2.05%, Net: $-0.48 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 60.15,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 12:23:23",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ROBOUSDT",
-      "side": "LONG",
-      "entry_price": 0.01412,
-      "exit_price": 0.01317,
-      "pnl_usd": -943.74,
-      "result": "LOSS",
-      "notes": "LOSS on ROBOUSDT (PnL: -6.73%, Net: $-943.74 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 29.33,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 12:23:23",
       "account_id": "SIM-028",
@@ -8446,6 +8395,57 @@
       "context": {
         "score": 38,
         "rsi_15m": 47.42,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 09:43:26",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "WLDUSDT",
+      "side": "LONG",
+      "entry_price": 0.3819,
+      "exit_price": 0.3883,
+      "pnl_usd": 207.65,
+      "result": "WIN",
+      "notes": "WIN on WLDUSDT (PnL: +1.68%, Net: $+207.65 Fase 4)",
+      "context": {
+        "score": 55,
+        "rsi_15m": 64.16,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 09:43:26",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "AAVEUSDT",
+      "side": "LONG",
+      "entry_price": 106.84,
+      "exit_price": 107.25,
+      "pnl_usd": 0.05,
+      "result": "WIN",
+      "notes": "WIN on AAVEUSDT (PnL: +0.38%, Net: $+0.05 Fase 2)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 65.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 09:43:26",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "PROMUSDT",
+      "side": "SHORT",
+      "entry_price": 2.434,
+      "exit_price": 2.437,
+      "pnl_usd": -0.05,
+      "result": "LOSS",
+      "notes": "LOSS on PROMUSDT (PnL: -0.12%, Net: $-0.05 Fase 2)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 60.88,
         "macro_trend_4h": "NEUTRAL"
       }
     }
