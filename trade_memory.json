@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2105,
-    "wins": 1047,
+    "total_trades": 2107,
+    "wins": 1049,
     "losses": 1058,
-    "win_rate_pct": 49.74,
-    "total_pnl_usd": -8081.470525451198
+    "win_rate_pct": 49.79,
+    "total_pnl_usd": -8079.950525451199
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on NEXOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DASHUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on RUNEUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ONDOUSDT)",
@@ -49,44 +48,11 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on WLDUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on AAVEUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on THETAUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MORPHOUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MORPHOUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ONDOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 12:59:25",
-      "account_id": "SIM-031",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "FETUSDT",
-      "side": "LONG",
-      "entry_price": 0.1435,
-      "exit_price": 0.1428,
-      "pnl_usd": -0.12,
-      "result": "LOSS",
-      "notes": "LOSS on FETUSDT (PnL: -0.49%, Net: $-0.12 Fase 2)",
-      "context": {
-        "score": 74,
-        "rsi_15m": 72.88,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 12:59:25",
-      "account_id": "SIM-094",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "ONDOUSDT",
-      "side": "LONG",
-      "entry_price": 0.3595,
-      "exit_price": 0.3595,
-      "pnl_usd": -6.74,
-      "result": "LOSS",
-      "notes": "LOSS on ONDOUSDT (PnL: +0.00%, Net: $-6.74 Fase 2)",
-      "context": {
-        "score": 82,
-        "rsi_15m": 65.81,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 13:03:48",
       "account_id": "SIM-005",
@@ -8436,6 +8402,40 @@
       "result": "LOSS",
       "notes": "LOSS on MANAUSDT (PnL: +0.00%, Net: $-0.01 Fase 5)",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-21 10:27:31",
+      "account_id": "SIM-018",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ONDOUSDT",
+      "side": "LONG",
+      "entry_price": 0.367,
+      "exit_price": 0.374,
+      "pnl_usd": 0.86,
+      "result": "WIN",
+      "notes": "WIN on ONDOUSDT (PnL: +1.91%, Net: $+0.86 Fase 4)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 56.17,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 10:27:31",
+      "account_id": "SIM-019",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "ONDOUSDT",
+      "side": "LONG",
+      "entry_price": 0.367,
+      "exit_price": 0.374,
+      "pnl_usd": 0.66,
+      "result": "WIN",
+      "notes": "WIN on ONDOUSDT (PnL: +1.91%, Net: $+0.66 Fase 4)",
+      "context": {
+        "score": 45,
+        "rsi_15m": 56.17,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
