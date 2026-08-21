@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1998,
-    "wins": 994,
+    "total_trades": 1999,
+    "wins": 995,
     "losses": 1004,
-    "win_rate_pct": 49.75,
-    "total_pnl_usd": -7925.370525451197
+    "win_rate_pct": 49.77,
+    "total_pnl_usd": -7925.360525451197
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ZAMAUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PYTHUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DCRUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BCHUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on KAITOUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on POLUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ETCUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SHIBUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BTCUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BTCUSDT)",
+      "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on SHIBUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 11:21:44",
-      "account_id": "SIM-006",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "TRXUSDT",
-      "side": "LONG",
-      "entry_price": 0.3378,
-      "exit_price": 0.3389,
-      "pnl_usd": 0.03,
-      "result": "WIN",
-      "notes": "WIN on TRXUSDT (PnL: +0.33%, Net: $+0.03 Fase 3)",
-      "context": {
-        "score": 81,
-        "rsi_15m": 62.07,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 11:21:44",
       "account_id": "SIM-007",
@@ -8438,6 +8421,23 @@
       "context": {
         "score": 55,
         "rsi_15m": 56.26,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 07:57:23",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "SHIBUSDT",
+      "side": "SHORT",
+      "entry_price": 5.19e-06,
+      "exit_price": 5.17e-06,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on SHIBUSDT (PnL: +0.39%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 40,
+        "rsi_15m": 76.04,
         "macro_trend_4h": "NEUTRAL"
       }
     }
