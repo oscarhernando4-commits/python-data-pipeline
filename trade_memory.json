@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2101,
-    "wins": 1046,
+    "total_trades": 2102,
+    "wins": 1047,
     "losses": 1055,
-    "win_rate_pct": 49.79,
-    "total_pnl_usd": -8081.4805254511975
+    "win_rate_pct": 49.81,
+    "total_pnl_usd": -8081.410525451198
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on NEXOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on LTCUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ROBOUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DASHUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on RUNEUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PNUTUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on WLDUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on AAVEUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on THETAUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on THETAUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MORPHOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 12:53:26",
-      "account_id": "SIM-070",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "ZECUSDT",
-      "side": "SHORT",
-      "entry_price": 582.33,
-      "exit_price": 581.35,
-      "pnl_usd": 0.0,
-      "result": "WIN",
-      "notes": "WIN on ZECUSDT (PnL: +0.17%, Net: $+0.00 Fase 3)",
-      "context": {
-        "score": 98,
-        "rsi_15m": 60.01,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 12:55:32",
       "account_id": "SIM-093",
@@ -8446,6 +8429,23 @@
       "context": {
         "score": 45,
         "rsi_15m": 79.86,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 10:15:38",
+      "account_id": "SIM-070",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "MORPHOUSDT",
+      "side": "SHORT",
+      "entry_price": 2.284,
+      "exit_price": 2.272,
+      "pnl_usd": 0.07,
+      "result": "WIN",
+      "notes": "WIN on MORPHOUSDT (PnL: +0.53%, Net: $+0.07 Fase 3)",
+      "context": {
+        "score": 38,
+        "rsi_15m": 44.14,
         "macro_trend_4h": "NEUTRAL"
       }
     }
