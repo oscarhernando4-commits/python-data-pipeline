@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2427,
-    "wins": 1248,
+    "total_trades": 2428,
+    "wins": 1249,
     "losses": 1179,
-    "win_rate_pct": 51.42,
-    "total_pnl_usd": -8218.862175451211
+    "win_rate_pct": 51.44,
+    "total_pnl_usd": -8218.852175451211
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on WLFIUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PEOPLEUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ADAUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PROMUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on GALAUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ETHUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZECUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SOLUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZAMAUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZAMAUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SKYUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 21:28:41",
-      "account_id": "SIM-039",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ZAMAUSDT",
-      "side": "SHORT",
-      "entry_price": 0.04695,
-      "exit_price": 0.04678,
-      "pnl_usd": 0.01,
-      "result": "WIN",
-      "notes": "WIN on ZAMAUSDT (PnL: +0.36%, Net: $+0.01 Fase 2)",
-      "context": {
-        "score": 82,
-        "rsi_15m": 55.96,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 21:43:34",
       "account_id": "SIM-000 (Réplica Real)",
@@ -8462,6 +8445,23 @@
       "context": {
         "score": 86,
         "rsi_15m": 66.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 23:19:09",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "SKYUSDT",
+      "side": "SHORT",
+      "entry_price": 0.06797,
+      "exit_price": 0.06774,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on SKYUSDT (PnL: +0.34%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 96,
+        "rsi_15m": 54.81,
         "macro_trend_4h": "NEUTRAL"
       }
     }
