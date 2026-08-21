@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1915,
-    "wins": 942,
+    "total_trades": 1916,
+    "wins": 943,
     "losses": 973,
-    "win_rate_pct": 49.19,
-    "total_pnl_usd": -7759.265675451197
+    "win_rate_pct": 49.22,
+    "total_pnl_usd": -7759.255675451197
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on REUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BTCUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on GPSUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LINKUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ONGUSDT)",
@@ -49,7 +48,8 @@
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HEMIUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on GALAUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ORDIUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TAOUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TAOUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ZAMAUSDT)"
     ]
   },
   "history": [
@@ -8319,6 +8319,23 @@
       "context": {
         "score": 59,
         "rsi_15m": 54.02,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 02:23:19",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ZAMAUSDT",
+      "side": "SHORT",
+      "entry_price": 0.04695,
+      "exit_price": 0.04678,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on ZAMAUSDT (PnL: +0.36%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 55.96,
         "macro_trend_4h": "NEUTRAL"
       }
     }
