@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2316,
-    "wins": 1172,
+    "total_trades": 2317,
+    "wins": 1173,
     "losses": 1144,
-    "win_rate_pct": 50.6,
-    "total_pnl_usd": -8919.212175451214
+    "win_rate_pct": 50.63,
+    "total_pnl_usd": -8918.402175451214
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on TAOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ETHUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MORPHOUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on UNIUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TUTUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WIFUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PROMUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on ONDOUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TAOUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TAOUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on WLFIUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 18:37:42",
-      "account_id": "SIM-054",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "RENDERUSDT",
-      "side": "LONG",
-      "entry_price": 1.407,
-      "exit_price": 1.0,
-      "pnl_usd": -5.53,
-      "result": "LOSS",
-      "notes": "LOSS on RENDERUSDT (PnL: -28.93%, Net: $-5.53 Fase 1)",
-      "context": {
-        "score": 43,
-        "rsi_15m": 50.0,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 18:37:42",
       "account_id": "SIM-083",
@@ -8450,6 +8433,23 @@
       "context": {
         "score": 41,
         "rsi_15m": 51.07,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 18:05:31",
+      "account_id": "SIM-018",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "WLFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.0611,
+      "exit_price": 0.0622,
+      "pnl_usd": 0.81,
+      "result": "WIN",
+      "notes": "WIN on WLFIUSDT (PnL: +1.80%, Net: $+0.81 Fase 4)",
+      "context": {
+        "score": 54,
+        "rsi_15m": 52.34,
         "macro_trend_4h": "NEUTRAL"
       }
     }
