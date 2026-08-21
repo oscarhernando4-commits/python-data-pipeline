@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1971,
-    "wins": 977,
+    "total_trades": 1972,
+    "wins": 978,
     "losses": 994,
-    "win_rate_pct": 49.57,
-    "total_pnl_usd": -7442.360525451199
+    "win_rate_pct": 49.59,
+    "total_pnl_usd": -7439.470525451198
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on JASMYUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PENGUUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZAMAUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SOLUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MUBUSDT)",
@@ -49,23 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on REUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on MORPHOUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on BCHUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on JASMYUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on JASMYUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on AVAXUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 11:04:07",
-      "account_id": "R-01",
-      "group_name": "CUENTA REAL",
-      "symbol": "BICOUSDT",
-      "side": "BUY",
-      "entry_price": 0.01965656,
-      "exit_price": 0.0192,
-      "pnl_usd": -0.3530441512000013,
-      "result": "LOSS",
-      "notes": "Real Money Trade closed with -2.32%",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-20 11:07:22",
       "account_id": "SIM-020",
@@ -8434,6 +8421,23 @@
       "context": {
         "score": 46,
         "rsi_15m": 72.22,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 06:37:28",
+      "account_id": "SIM-093",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "AVAXUSDT",
+      "side": "LONG",
+      "entry_price": 7.345,
+      "exit_price": 7.374,
+      "pnl_usd": 2.89,
+      "result": "WIN",
+      "notes": "WIN on AVAXUSDT (PnL: +0.39%, Net: $+2.89 Fase 3)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 61.7,
         "macro_trend_4h": "NEUTRAL"
       }
     }
