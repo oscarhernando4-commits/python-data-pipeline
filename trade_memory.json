@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2209,
-    "wins": 1087,
+    "total_trades": 2212,
+    "wins": 1090,
     "losses": 1122,
-    "win_rate_pct": 49.21,
-    "total_pnl_usd": -12226.7105254512
+    "win_rate_pct": 49.28,
+    "total_pnl_usd": -12226.6605254512
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MORPHOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Won on MORPHOUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on XRPUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DASHUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DOGEUSDT)",
@@ -49,7 +48,8 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on AVAXUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TRUMPUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TRXUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TAOUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TAOUSDT)",
+      "BOOST LONG when RSI>70(Overbought) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DEXEUSDT)"
     ]
   },
   "history": [
@@ -8300,6 +8300,57 @@
       "result": "LOSS",
       "notes": "LOSS on MANAUSDT (PnL: +0.00%, Net: $-0.01 Fase 5)",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-21 14:15:31",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DEXEUSDT",
+      "side": "LONG",
+      "entry_price": 2.049,
+      "exit_price": 2.053,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on DEXEUSDT (PnL: +0.20%, Net: $+0.03 Fase 2)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 84.32,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 14:15:31",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DEXEUSDT",
+      "side": "LONG",
+      "entry_price": 2.049,
+      "exit_price": 2.053,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on DEXEUSDT (PnL: +0.20%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 84.32,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 14:15:31",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "DEXEUSDT",
+      "side": "LONG",
+      "entry_price": 2.049,
+      "exit_price": 2.053,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on DEXEUSDT (PnL: +0.20%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 41,
+        "rsi_15m": 84.32,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
