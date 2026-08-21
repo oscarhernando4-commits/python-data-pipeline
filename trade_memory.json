@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1865,
-    "wins": 906,
+    "total_trades": 1868,
+    "wins": 909,
     "losses": 959,
-    "win_rate_pct": 48.58,
-    "total_pnl_usd": -7791.475675451199
+    "win_rate_pct": 48.66,
+    "total_pnl_usd": -7712.485675451198
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on METUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on CRVUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BCHUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on FILUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on GPSUSDT)",
@@ -49,61 +48,11 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on GPSUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LINKUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ONGUSDT)",
-      "BOOST SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SOLUSDT)"
+      "BOOST SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SOLUSDT)",
+      "BOOST SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ADAUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 12:05:25",
-      "account_id": "SIM-029",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "SYRUPUSDT",
-      "side": "LONG",
-      "entry_price": 0.1667,
-      "exit_price": 0.1679,
-      "pnl_usd": 0.13,
-      "result": "WIN",
-      "notes": "WIN on SYRUPUSDT (PnL: +0.72%, Net: $+0.13 Fase 3)",
-      "context": {
-        "score": 50,
-        "rsi_15m": 62.41,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 12:05:25",
-      "account_id": "SIM-053",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "XLMUSDT",
-      "side": "LONG",
-      "entry_price": 0.1813,
-      "exit_price": 0.1815,
-      "pnl_usd": -0.01,
-      "result": "LOSS",
-      "notes": "LOSS on XLMUSDT (PnL: +0.11%, Net: $-0.01 Fase 2)",
-      "context": {
-        "score": 41,
-        "rsi_15m": 81.69,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 12:05:25",
-      "account_id": "SIM-054",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "XLMUSDT",
-      "side": "LONG",
-      "entry_price": 0.1813,
-      "exit_price": 0.1815,
-      "pnl_usd": -0.01,
-      "result": "LOSS",
-      "notes": "LOSS on XLMUSDT (PnL: +0.11%, Net: $-0.01 Fase 2)",
-      "context": {
-        "score": 41,
-        "rsi_15m": 81.69,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 12:05:25",
       "account_id": "SIM-060",
@@ -8444,6 +8393,57 @@
       "result": "WIN",
       "notes": "Real Money Trade closed with 0.62%",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-20 20:13:06",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "entry_price": 0.2057,
+      "exit_price": 0.2042,
+      "pnl_usd": 78.75,
+      "result": "WIN",
+      "notes": "WIN on ADAUSDT (PnL: +0.73%, Net: $+78.75 Fase 3)",
+      "context": {
+        "score": 77,
+        "rsi_15m": 71.57,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 20:13:06",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "entry_price": 0.2057,
+      "exit_price": 0.2042,
+      "pnl_usd": 0.1,
+      "result": "WIN",
+      "notes": "WIN on ADAUSDT (PnL: +0.73%, Net: $+0.10 Fase 3)",
+      "context": {
+        "score": 77,
+        "rsi_15m": 71.57,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-20 20:13:06",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "entry_price": 0.2057,
+      "exit_price": 0.2042,
+      "pnl_usd": 0.14,
+      "result": "WIN",
+      "notes": "WIN on ADAUSDT (PnL: +0.73%, Net: $+0.14 Fase 3)",
+      "context": {
+        "score": 77,
+        "rsi_15m": 71.57,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
