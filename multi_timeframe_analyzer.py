@@ -126,7 +126,7 @@ def is_stablecoin(symbol):
     return False
 
 def fetch_klines_public(symbol, interval, limit=30):
-    """Fetches Binance public klines with high-speed in-memory caching and persistent connection pooling."""
+    """Fetches Binance public klines with high-speed in-memory caching and multi-mirror failover (0 Fixie Quota)."""
     cache_key = (symbol, interval, limit)
     now = time.time()
     ttl = _CACHE_TTL.get(interval, 20)
@@ -136,29 +136,25 @@ def fetch_klines_public(symbol, interval, limit=30):
         if now - cached_time < ttl and cached_data:
             return cached_data
             
-    url = "https://api.binance.com/api/v3/klines"
+    mirrors = [
+        "https://data-api.binance.vision/api/v3/klines",
+        "https://api1.binance.com/api/v3/klines",
+        "https://api2.binance.com/api/v3/klines",
+        "https://api3.binance.com/api/v3/klines",
+        "https://api.binance.com/api/v3/klines"
+    ]
     params = {"symbol": symbol, "interval": interval, "limit": limit}
-    try:
-        res = _SESSION.get(url, params=params, timeout=4)
-        if res.status_code == 200:
-            data = res.json()
-            if data:
-                _KLINE_CACHE[cache_key] = (now, data)
-                return data
-    except Exception:
-        pass
-        
-    # Fallback with proxy (dynamic rotation)
-    if get_proxy:
+    
+    for url in mirrors:
         try:
-            res = _SESSION.get(url, params=params, proxies=get_proxy(), timeout=6)
+            res = _SESSION.get(url, params=params, timeout=3)
             if res.status_code == 200:
                 data = res.json()
-                if data:
+                if data and isinstance(data, list) and len(data) > 0:
                     _KLINE_CACHE[cache_key] = (now, data)
                     return data
         except Exception:
-            pass
+            continue
             
     # Return stale cached data if temporary network blip
     if cache_key in _KLINE_CACHE:
