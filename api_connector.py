@@ -21,26 +21,61 @@ try:
 except Exception:
     pass
 
-# Dynamic Proxy Rotator for 24/7 Cloud Execution (10 Fixie EU West accounts, 5,000 requests/month)
-FIXIE_POOL = [
+# ============================================================
+# MEGA-POOL FIXIE DINÁMICO DE 22 CUENTAS (HASTA 11,000 REQ/MES)
+# Cuentas 1-12: NUEVAS y activas HOY con 6,000 peticiones limpias (500 c/u).
+# Cuentas 13-22: Se integran automáticamente el 2 de Septiembre (+5,000 peticiones).
+# ============================================================
+
+FIXIE_POOL_NEW_12 = [
+    "http://fixie:9xFQOu1aMBiQTPF@ventoux.usefixie.com:80",   # oscarhernando4_outlook_2
+    "http://fixie:DKSf05uih9mtlUk@ventoux.usefixie.com:80",   # oscarhernando4_gmail_2
+    "http://fixie:yf5uJwPKISXERoo@ventoux.usefixie.com:80",   # utn_sig_2
+    "http://fixie:8Tk4o3sTwwWNzrg@ventoux.usefixie.com:80",   # forestalutn_2
+    "http://fixie:gKSekvjfRLL0aGz@ventoux.usefixie.com:80",   # oscarhernandot11es_2
+    "http://fixie:LIF3ht3W6Su0HSN@ventoux.usefixie.com:80",   # oscarhernando4ec_2
+    "http://fixie:yDT6fBrHaPovbZT@ventoux.usefixie.com:80",   # sconcienciautn_2
+    "http://fixie:RyM46ZJsdjkPpc1@ventoux.usefixie.com:80",   # utn2024a_2
+    "http://fixie:lMTVDtkyP9z5L3C@ventoux.usefixie.com:80",   # observatorioforestalutn_2
+    "http://fixie:MzJwbpHPPkPUP4n@ventoux.usefixie.com:80",   # utnagp_2
+    "http://fixie:N8Q2thJQNHQ3z7X@ventoux.usefixie.com:80",   # dronforestalutn_2
+    "http://fixie:QPG9Y4o5bzzgQMB@ventoux.usefixie.com:80",   # oscarhernando4_outlook_3
+]
+
+FIXIE_ACCOUNTS_NEW_12 = [
+    "oscarhernando4_outlook_2", "oscarhernando4_gmail_2", "utn_sig_2",
+    "forestalutn_2", "oscarhernandot11es_2", "oscarhernando4ec_2",
+    "sconcienciautn_2", "utn2024a_2", "observatorioforestalutn_2",
+    "utnagp_2", "dronforestalutn_2", "oscarhernando4_outlook_3"
+]
+
+FIXIE_POOL_SEPT2_10 = [
+    "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80",   # oscarhernando4
+    "http://fixie:ak4QPysr5gnUAQW@ventoux.usefixie.com:80",   # utn.sig
+    "http://fixie:ygTezfOLKeqEhhF@ventoux.usefixie.com:80",   # forestalutn
+    "http://fixie:zW3cwceDZ64c1lE@ventoux.usefixie.com:80",   # oscarhernandot11es
+    "http://fixie:SIOQ4x5oF0pbFju@ventoux.usefixie.com:80",   # oscarhernando4ec
+    "http://fixie:V9uciGagtBF2MJc@ventoux.usefixie.com:80",   # sconcienciautn
+    "http://fixie:gnvJakG6jyBrS04@ventoux.usefixie.com:80",   # utn2024a
     "http://fixie:YOtqrUO1HVYG2xM@ventoux.usefixie.com:80",   # observatorioforestalutn
     "http://fixie:WWaxRExXfmPL05s@ventoux.usefixie.com:80",   # utnagp
     "http://fixie:f9ibnMDQHLjZTpM@ventoux.usefixie.com:80",   # dronforestalutn
-    "http://fixie:zW3cwceDZ64c1lE@ventoux.usefixie.com:80",   # oscarhernandot11es
-    "http://fixie:ygTezfOLKeqEhhF@ventoux.usefixie.com:80",   # forestalutn
-    "http://fixie:V9uciGagtBF2MJc@ventoux.usefixie.com:80",   # sconcienciautn
-    "http://fixie:gnvJakG6jyBrS04@ventoux.usefixie.com:80",   # utn2024a
-    "http://fixie:ak4QPysr5gnUAQW@ventoux.usefixie.com:80",   # utn.sig
-    "http://fixie:SIOQ4x5oF0pbFju@ventoux.usefixie.com:80",   # oscarhernando4ec
-    "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80",   # oscarhernando4
 ]
 
-# Nombres legibles para tracking de uso por cuenta
-FIXIE_ACCOUNTS = [
-    "observatorioforestalutn", "utnagp", "dronforestalutn",
-    "oscarhernandot11es", "forestalutn", "sconcienciautn",
-    "utn2024a", "utn.sig", "oscarhernando4ec", "oscarhernando4"
+FIXIE_ACCOUNTS_SEPT2_10 = [
+    "oscarhernando4", "utn.sig", "forestalutn", "oscarhernandot11es",
+    "oscarhernando4ec", "sconcienciautn", "utn2024a", "observatorioforestalutn",
+    "utnagp", "dronforestalutn"
 ]
+
+def get_active_fixie_pool_and_accounts():
+    """Retorna el pool activo: 12 cuentas nuevas hoy (6,000 req), o 22 cuentas a partir del 2 de Septiembre (11,000 req)."""
+    now = datetime.now()
+    if now.year > 2026 or (now.year == 2026 and (now.month > 9 or (now.month == 9 and now.day >= 2))):
+        return FIXIE_POOL_NEW_12 + FIXIE_POOL_SEPT2_10, FIXIE_ACCOUNTS_NEW_12 + FIXIE_ACCOUNTS_SEPT2_10
+    return FIXIE_POOL_NEW_12, FIXIE_ACCOUNTS_NEW_12
+
+FIXIE_POOL, FIXIE_ACCOUNTS = get_active_fixie_pool_and_accounts()
 
 # ============================================================
 # SISTEMA HÍBRIDO LOCAL/NUBE + ROUND-ROBIN EQUITATIVO

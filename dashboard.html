@@ -365,42 +365,12 @@
     <!-- PESTAÑA 1: MONITOREO EN VIVO -->
     <div id="tab-monitoreo" class="tab-content active">
         
-        <!-- ============ SEGUIMIENTO EN TIEMPO REAL POSICIÓN ACTIVA ============ -->
-        <div class="active-pos-banner">
+        <div class="active-pos-banner active-pos-idle">
             <div class="active-pos-header">
                 <div class="active-pos-title">
-                    <span class="active-pos-pulse"></span>
-                    <span class="active-pos-symbol">🎯 POSICIÓN REAL EN VIVO: <b>TRXUSDT</b></span>
-                    <span class="badge badge-long">BUY SPOT LONG</span>
+                    <span class="active-pos-symbol" style="color: var(--text-muted);">🔒 NINGUNA POSICIÓN ABIERTA (100% CAPITAL EN USDT)</span>
                 </div>
-                <div class="active-pos-time">⏱️ Tiempo Abierto: <b>82 min</b> / 75 min (Escalera Time-Decay)</div>
-            </div>
-            <div class="active-pos-grid">
-                <div class="pos-widget">
-                    <div class="pos-widget-label">Capital Invertido</div>
-                    <div class="pos-widget-val">$15.28 USD</div>
-                    <div class="pos-widget-sub">44.90 TRX</div>
-                </div>
-                <div class="pos-widget">
-                    <div class="pos-widget-label">Precio de Entrada</div>
-                    <div class="pos-widget-val">$0.3401</div>
-                    <div class="pos-widget-sub">Binance Spot Live</div>
-                </div>
-                <div class="pos-widget">
-                    <div class="pos-widget-label">Máximo Pico Alcanzado</div>
-                    <div class="pos-widget-val" style="color: var(--accent-emerald);">$0.3404</div>
-                    <div class="pos-widget-sub">Pico Flotante: +0.09%</div>
-                </div>
-                <div class="pos-widget">
-                    <div class="pos-widget-label">Piso Stop-Loss ATR</div>
-                    <div class="pos-widget-val" style="color: var(--accent-rose);">$0.3367</div>
-                    <div class="pos-widget-sub">Límite Salida: -1.00%</div>
-                </div>
-            </div>
-            <div class="active-pos-footer">
-                <div class="pos-shield-tag">🛡️ BTC Circuit Breaker: <b>🟢 ACTIVO</b></div>
-                <div class="pos-shield-tag">🧱 Orderbook Muro: <b>🟢 OK</b></div>
-                <div class="pos-shield-tag">🚀 Trailing Stop: <b>⚪ Esperando +2.0%</b></div>
+                <div class="active-pos-time">🔎 Escaneando 120 Pares en Tiempo Real</div>
             </div>
         </div>
         
@@ -435,10 +405,100 @@
                     
         <tr style="">
             <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#1</td>
-            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">BFUSDUSDT</td>
-            <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-mid">16 Pts</span></td>
+            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">SANTOSUSDT</td>
+            <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-high">72 Pts</span></td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.2x</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">47.1</td>
+            <td style="padding: 0.45rem 0.6rem;">🟢 > MA25+0.15%</td>
+            <td style="padding: 0.45rem 0.6rem; color: var(--accent-rose); font-weight: 700;">🔒 VETO IA (Mercado Tóxico)</td>
+        </tr>
+        
+        <tr style="">
+            <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#2</td>
+            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">BBUSDT</td>
+            <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-high">76 Pts</span></td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.4x</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">58.2</td>
+            <td style="padding: 0.45rem 0.6rem;">🟢 > MA25+0.15%</td>
+            <td style="padding: 0.45rem 0.6rem; color: var(--accent-rose); font-weight: 700;">🔒 VETO IA (Mercado Tóxico)</td>
+        </tr>
+        
+        <tr style="">
+            <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#3</td>
+            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">ASTERUSDT</td>
+            <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-high">74 Pts</span></td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.5x</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">54.4</td>
+            <td style="padding: 0.45rem 0.6rem;">🟢 > MA25+0.15%</td>
+            <td style="padding: 0.45rem 0.6rem; color: var(--accent-rose); font-weight: 700;">🔒 VETO IA (Mercado Tóxico)</td>
+        </tr>
+        
+        <tr style="">
+            <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#4</td>
+            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">MORPHOUSDT</td>
+            <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-high">74 Pts</span></td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.1x</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">46.3</td>
+            <td style="padding: 0.45rem 0.6rem;">🟢 > MA25+0.15%</td>
+            <td style="padding: 0.45rem 0.6rem; color: var(--accent-rose); font-weight: 700;">🔒 VETO IA (Mercado Tóxico)</td>
+        </tr>
+        
+        <tr style="">
+            <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#5</td>
+            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">TRXUSDT</td>
+            <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-high">65 Pts</span></td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.6x</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">50.0</td>
+            <td style="padding: 0.45rem 0.6rem;">🟢 > MA25+0.15%</td>
+            <td style="padding: 0.45rem 0.6rem; color: var(--accent-rose); font-weight: 700;">🔒 VETO IA (Mercado Tóxico)</td>
+        </tr>
+        
+        <tr style="">
+            <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#6</td>
+            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">ZROUSDT</td>
+            <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-high">65 Pts</span></td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.3x</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">47.9</td>
+            <td style="padding: 0.45rem 0.6rem;">🟢 > MA25+0.15%</td>
+            <td style="padding: 0.45rem 0.6rem; color: var(--accent-rose); font-weight: 700;">🔒 VETO IA (Mercado Tóxico)</td>
+        </tr>
+        
+        <tr style="">
+            <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#7</td>
+            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">PROMUSDT</td>
+            <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-high">65 Pts</span></td>
             <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.0x</td>
-            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">56.5</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">54.1</td>
+            <td style="padding: 0.45rem 0.6rem;">🟢 > MA25+0.15%</td>
+            <td style="padding: 0.45rem 0.6rem; color: var(--accent-rose); font-weight: 700;">🔒 VETO IA (Mercado Tóxico)</td>
+        </tr>
+        
+        <tr style="background: rgba(16, 185, 129, 0.08);">
+            <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#8</td>
+            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">GPSUSDT</td>
+            <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-high">65 Pts</span></td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">1.4x</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">30.1</td>
+            <td style="padding: 0.45rem 0.6rem;">🟢 > MA25+0.15%</td>
+            <td style="padding: 0.45rem 0.6rem; color: var(--accent-emerald); font-weight: 800;">🚀 LISTO PARA COMPRAR</td>
+        </tr>
+        
+        <tr style="">
+            <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#9</td>
+            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">REDUSDT</td>
+            <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-high">65 Pts</span></td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.1x</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">39.4</td>
+            <td style="padding: 0.45rem 0.6rem;">🟢 > MA25+0.15%</td>
+            <td style="padding: 0.45rem 0.6rem; color: var(--accent-rose); font-weight: 700;">🔒 VETO IA (Mercado Tóxico)</td>
+        </tr>
+        
+        <tr style="">
+            <td style="padding: 0.45rem 0.6rem; font-weight: 700;">#10</td>
+            <td style="padding: 0.45rem 0.6rem; font-weight: 800; color: var(--text-main);">ONTUSDT</td>
+            <td style="padding: 0.45rem 0.6rem;"><span class="score-badge score-high">65 Pts</span></td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">0.8x</td>
+            <td style="padding: 0.45rem 0.6rem; font-variant-numeric: tabular-nums;">48.9</td>
             <td style="padding: 0.45rem 0.6rem;">🟢 > MA25+0.15%</td>
             <td style="padding: 0.45rem 0.6rem; color: var(--accent-rose); font-weight: 700;">🔒 VETO IA (Mercado Tóxico)</td>
         </tr>
@@ -448,36 +508,36 @@
         </div>
 
         <div class="card-heading" style="font-size: 0.8rem; margin-bottom: 0.5rem;">
-            🛡️ DESGLOSE DE LAS 8 REGLAS DE SEGURIDAD (EVALUANDO #BFUSDUSDT):
+            🛡️ DESGLOSE DE LAS 8 REGLAS DE SEGURIDAD (EVALUANDO #SANTOSUSDT):
         </div>
         <div class="checklist-grid">
-            <div class="checklist-item checklist-fail">
+            <div class="checklist-item checklist-pass">
                 <div>
                     <div class="checklist-title">1. Liquidez USDT Disponible</div>
                     <div class="checklist-sub">Depósito mínimo >= $15.00 USDT</div>
                 </div>
-                <div class="checklist-sub" style="font-weight: 800; color: var(--accent-rose);">
-                    🔴 REQUERIDO ($15.00)
+                <div class="checklist-sub" style="font-weight: 800; color: var(--accent-emerald);">
+                    🟢 CUMPLIDO ($15.45)
                 </div>
             </div>
             
-            <div class="checklist-item checklist-pending">
+            <div class="checklist-item checklist-pass">
                 <div>
                     <div class="checklist-title">2. Sin Posición Real Abierta</div>
                     <div class="checklist-sub">100% liquidez disponible en Spot</div>
                 </div>
-                <div class="checklist-sub" style="font-weight: 800; color: var(--accent-amber);">
-                    🟡 POSICIÓN ACTIVA
+                <div class="checklist-sub" style="font-weight: 800; color: var(--accent-emerald);">
+                    🟢 CUMPLIDO (Liquidez Libre)
                 </div>
             </div>
 
-            <div class="checklist-item checklist-pending">
+            <div class="checklist-item checklist-pass">
                 <div>
                     <div class="checklist-title">3. Puntaje Escáner (Score >= 58)</div>
                     <div class="checklist-sub">Fuerza técnica cuántica de confluencia</div>
                 </div>
-                <div class="checklist-sub" style="font-weight: 800; color: var(--accent-amber);">
-                    🟡 PENDIENTE (16 < 58 Pts)
+                <div class="checklist-sub" style="font-weight: 800; color: var(--accent-emerald);">
+                    🟢 CUMPLIDO (72 Pts)
                 </div>
             </div>
 
@@ -487,7 +547,7 @@
                     <div class="checklist-sub">VolSurge >= 1.00x O Grado GBM A+/B</div>
                 </div>
                 <div class="checklist-sub" style="font-weight: 800; color: var(--accent-amber);">
-                    🟡 PENDIENTE (VolSurge 0.0x < 1.00x)
+                    🟡 PENDIENTE (VolSurge 0.2x < 1.00x)
                 </div>
             </div>
 
@@ -497,7 +557,7 @@
                     <div class="checklist-sub">Sin sobre-extensión impulsiva previa</div>
                 </div>
                 <div class="checklist-sub" style="font-weight: 800; color: var(--accent-emerald);">
-                    🟢 CUMPLIDO (RSI2m=56.5)
+                    🟢 CUMPLIDO (RSI2m=47.1)
                 </div>
             </div>
 
@@ -539,7 +599,7 @@
             <div class="wallet-card">
                 <div class="card-header-row">
                     <div class="card-heading">💰 MIS ACTIVOS — SPOT BINANCE</div>
-                    <div class="wallet-total-val">$16.00 <span class="wallet-total-currency">USD</span></div>
+                    <div class="wallet-total-val">$15.95 <span class="wallet-total-currency">USD</span></div>
                 </div>
                 <div class="asset-list">
                     <div class="asset-item">
@@ -551,8 +611,8 @@
                             </div>
                         </div>
                         <div class="asset-right">
-                            <div class="asset-qty-val">0.21780000</div>
-                            <div class="asset-usd-val">0.22 $</div>
+                            <div class="asset-qty-val">15.45430000</div>
+                            <div class="asset-usd-val">15.45 $</div>
                         </div>
                     </div>
                     <div class="asset-item">
@@ -564,8 +624,8 @@
                             </div>
                         </div>
                         <div class="asset-right">
-                            <div class="asset-qty-val">0.00074920</div>
-                            <div class="asset-usd-val">0.51 $</div>
+                            <div class="asset-qty-val">0.00073222</div>
+                            <div class="asset-usd-val">0.49 $</div>
                         </div>
                     </div>
                 </div>
@@ -577,8 +637,8 @@
                 <div class="stats-grid">
                     <div class="stat-box">
                         <div class="stat-label">Posición Activa</div>
-                        <div class="stat-value">TRXUSDT</div>
-                        <div class="stat-sub">Entrada: $0.3401</div>
+                        <div class="stat-value">NINGUNA</div>
+                        <div class="stat-sub">🔒 100% USDT Preservado</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Historial Operatorio</div>
@@ -587,7 +647,7 @@
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">PnL Neto Real</div>
-                        <div class="stat-value" style="color: var(--accent-emerald);">+$0.53</div>
+                        <div class="stat-value" style="color: var(--accent-emerald);">+$0.48</div>
                         <div class="stat-sub">Depósito original: $17.13</div>
                     </div>
                     <div class="stat-box">
@@ -612,6 +672,36 @@
         <div class="verdict-card verdict-latest">
             <div class="verdict-header">
                 <div class="verdict-label"><div class="latest-pulse"></div>🔴 ÚLTIMO ANÁLISIS EN VIVO</div>
+                <div class="verdict-time">🕐 2026-08-21 15:10:28</div>
+            </div>
+            <div class="verdict-body">
+                <div class="verdict-decision">
+                    <div class="verdict-symbol">🔒 SIN ENTRADA (100% USDT)</div>
+                    <div class="verdict-badges">
+                        <span class="badge badge-hold">⏸️ HOLD / PROTECCIÓN</span>
+                        <span class="approved-no">🔒 CERO COMPRAS (VETO RIESGO)</span>
+                    </div>
+                </div>
+                <div class="confidence-section">
+                    <div class="confidence-header">
+                        <span class="confidence-label">Nivel de Confianza del Súper-Cerebro:</span>
+                        <span class="confidence-value" style="color: var(--accent-rose);">0%</span>
+                    </div>
+                    <div class="confidence-bar-bg">
+                        <div class="confidence-bar-fill" style="width: 0%; background: var(--accent-rose);"></div>
+                    </div>
+                </div>
+                <div class="candidates-row"><span class="candidates-label">Top Evaluados:</span> <span class="chip">SANTOSUSDT <b>72 Pts</b></span><span class="chip">BBUSDT <b>76 Pts</b></span><span class="chip">ASTERUSDT <b>74 Pts</b></span><span class="chip">MORPHOUSDT <b>74 Pts</b></span><span class="chip">TRXUSDT <b>65 Pts</b></span></div>
+                <div class="reasoning-section">
+                    <div class="reasoning-label">💭 Dictamen y Razonamiento Cuántico:</div>
+                    <div class="reasoning-text">Tras la evaluación del comité, se determina que ningún candidato cumple con la confluencia estricta de suelo estructural, gatillo sniper 1M y ausencia de alertas de techo. Se prioriza la preservación del capital ante la falta de una oportunidad A+.</div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="verdict-card verdict-past">
+            <div class="verdict-header">
+                <div class="verdict-label">📋 ANÁLISIS ANTERIOR (#2)</div>
                 <div class="verdict-time">🕐 2026-08-21 14:39:50</div>
             </div>
             <div class="verdict-body">
@@ -634,14 +724,14 @@
                 <div class="candidates-row"><span class="candidates-label">Top Evaluados:</span> <span class="chip">BFUSDUSDT <b>16 Pts</b></span></div>
                 <div class="reasoning-section">
                     <div class="reasoning-label">💭 Dictamen y Razonamiento Cuántico:</div>
-                    <div class="reasoning-text">El candidato BFUSDUSDT no cumple con los criterios mínimos de entrada: carece de Bids institucionales (requerido >= 48%), presenta un flujo CVD Taker altamente vendedor y no ha activado el gatillo Sniper 1M. Se mantiene la posición en HOLD para evitar riesgos innecesarios.</div>
+                    <div class="reasoning-text">El candidato BFUSDUSDT no cumple con los criterios mínimos de entrada: carece de Bids institucionales (requerido >= 48%), presenta un flujo CVD Taker altamente vendedor y no ha activado el gatillo Sniper 1M. Se mantiene ...</div>
                 </div>
             </div>
         </div>
     
         <div class="verdict-card verdict-past">
             <div class="verdict-header">
-                <div class="verdict-label">📋 ANÁLISIS ANTERIOR (#2)</div>
+                <div class="verdict-label">📋 ANÁLISIS ANTERIOR (#1)</div>
                 <div class="verdict-time">🕐 2026-08-21 10:07:39</div>
             </div>
             <div class="verdict-body">
@@ -665,36 +755,6 @@
                 <div class="reasoning-section">
                     <div class="reasoning-label">💭 Dictamen y Razonamiento Cuántico:</div>
                     <div class="reasoning-text">Tras la evaluación exhaustiva de los 12 candidatos, ninguno cumple simultáneamente con el filtro de suelo estructural, el gatillo sniper 1M (EMA9) y la profundidad de libro (Bids >= 48%). Se prioriza la preservación del ...</div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="verdict-card verdict-past">
-            <div class="verdict-header">
-                <div class="verdict-label">📋 ANÁLISIS ANTERIOR (#1)</div>
-                <div class="verdict-time">🕐 2026-08-14 16:23:29</div>
-            </div>
-            <div class="verdict-body">
-                <div class="verdict-decision">
-                    <div class="verdict-symbol">🔒 SIN ENTRADA (100% USDT)</div>
-                    <div class="verdict-badges">
-                        <span class="badge badge-hold">⏸️ HOLD / PROTECCIÓN</span>
-                        <span class="approved-no">🔒 CERO COMPRAS (VETO RIESGO)</span>
-                    </div>
-                </div>
-                <div class="confidence-section">
-                    <div class="confidence-header">
-                        <span class="confidence-label">Nivel de Confianza del Súper-Cerebro:</span>
-                        <span class="confidence-value" style="color: var(--accent-rose);">0%</span>
-                    </div>
-                    <div class="confidence-bar-bg">
-                        <div class="confidence-bar-fill" style="width: 0%; background: var(--accent-rose);"></div>
-                    </div>
-                </div>
-                <div class="candidates-row"><span class="candidates-label">Top Evaluados:</span> <span class="chip">WLFIUSDT <b>92 Pts</b></span><span class="chip">TRUMPUSDT <b>92 Pts</b></span><span class="chip">NILUSDT <b>92 Pts</b></span><span class="chip">NBISBUSDT <b>87 Pts</b></span><span class="chip">HEIUSDT <b>86 Pts</b></span></div>
-                <div class="reasoning-section">
-                    <div class="reasoning-label">💭 Dictamen y Razonamiento Cuántico:</div>
-                    <div class="reasoning-text">El comité ha deliberado y, a pesar de identificar candidatos con scores técnicos elevados, ninguno cumple con la convicción A+ requerida debido a la debilidad macroeconómica, la falta de volumen institucional real y el r...</div>
                 </div>
             </div>
         </div>
@@ -725,12 +785,120 @@
                     
         <tr class="cand-row">
             <td class="cand-rank">#1</td>
-            <td class="cand-symbol"><b>BFUSDUSDT</b></td>
-            <td class="cand-score"><span class="score-badge score-mid">16 Pts</span></td>
-            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>56.5</b> <small style="color:var(--text-muted);">(2m)</small> / <b>56.5</b> <small style="color:var(--text-muted);">(5m)</small></td>
-            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>56.5</b> <small style="color:var(--text-muted);">(15m)</small></td>
-            <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>50.0</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
+            <td class="cand-symbol"><b>SANTOSUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-high">72 Pts</span></td>
+            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>47.1</b> <small style="color:var(--text-muted);">(2m)</small> / <b>48.6</b> <small style="color:var(--text-muted);">(5m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>50.2</b> <small style="color:var(--text-muted);">(15m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>51.5</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
+            <td class="cand-vol">0.2x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#2</td>
+            <td class="cand-symbol"><b>BBUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-high">76 Pts</span></td>
+            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>58.2</b> <small style="color:var(--text-muted);">(2m)</small> / <b>54.4</b> <small style="color:var(--text-muted);">(5m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>45.8</b> <small style="color:var(--text-muted);">(15m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>52.6</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
+            <td class="cand-vol">0.4x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#3</td>
+            <td class="cand-symbol"><b>ASTERUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-high">74 Pts</span></td>
+            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>54.4</b> <small style="color:var(--text-muted);">(2m)</small> / <b>42.9</b> <small style="color:var(--text-muted);">(5m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>31.9</b> <small style="color:var(--text-muted);">(15m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>43.6</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
+            <td class="cand-vol">0.5x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#4</td>
+            <td class="cand-symbol"><b>MORPHOUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-high">74 Pts</span></td>
+            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>46.3</b> <small style="color:var(--text-muted);">(2m)</small> / <b>29.8</b> <small style="color:var(--text-muted);">(5m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>31.6</b> <small style="color:var(--text-muted);">(15m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>44.1</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
+            <td class="cand-vol">0.1x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#5</td>
+            <td class="cand-symbol"><b>TRXUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-high">65 Pts</span></td>
+            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>50.0</b> <small style="color:var(--text-muted);">(2m)</small> / <b>52.3</b> <small style="color:var(--text-muted);">(5m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>51.8</b> <small style="color:var(--text-muted);">(15m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>55.1</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
+            <td class="cand-vol">0.6x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#6</td>
+            <td class="cand-symbol"><b>ZROUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-high">65 Pts</span></td>
+            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>47.9</b> <small style="color:var(--text-muted);">(2m)</small> / <b>29.7</b> <small style="color:var(--text-muted);">(5m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>39.0</b> <small style="color:var(--text-muted);">(15m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>56.6</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
+            <td class="cand-vol">0.3x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#7</td>
+            <td class="cand-symbol"><b>PROMUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-high">65 Pts</span></td>
+            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>54.1</b> <small style="color:var(--text-muted);">(2m)</small> / <b>43.6</b> <small style="color:var(--text-muted);">(5m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>50.3</b> <small style="color:var(--text-muted);">(15m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>68.1</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
             <td class="cand-vol">0.0x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#8</td>
+            <td class="cand-symbol"><b>GPSUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-high">65 Pts</span></td>
+            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>30.1</b> <small style="color:var(--text-muted);">(2m)</small> / <b>31.5</b> <small style="color:var(--text-muted);">(5m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>42.7</b> <small style="color:var(--text-muted);">(15m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>53.7</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
+            <td class="cand-vol">1.4x</td>
+            <td class="cand-qual"><b style="color: var(--accent-emerald);">B</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#9</td>
+            <td class="cand-symbol"><b>REDUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-high">65 Pts</span></td>
+            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>39.4</b> <small style="color:var(--text-muted);">(2m)</small> / <b>36.1</b> <small style="color:var(--text-muted);">(5m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>50.6</b> <small style="color:var(--text-muted);">(15m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>69.2</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
+            <td class="cand-vol">0.1x</td>
+            <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
+            <td class="cand-status">🔍 Monitoreando</td>
+        </tr>
+        
+        <tr class="cand-row">
+            <td class="cand-rank">#10</td>
+            <td class="cand-symbol"><b>ONTUSDT</b></td>
+            <td class="cand-score"><span class="score-badge score-high">65 Pts</span></td>
+            <td class="cand-rsi" style="color: var(--accent-cyan);">⚡ <b>48.9</b> <small style="color:var(--text-muted);">(2m)</small> / <b>46.2</b> <small style="color:var(--text-muted);">(5m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-amber);">📌 <b>42.9</b> <small style="color:var(--text-muted);">(15m)</small></td>
+            <td class="cand-rsi" style="color: var(--accent-purple);">🌐 <b>54.6</b> <small style="color:var(--text-muted);">(1h)</small> / <b>50.0</b> <small style="color:var(--text-muted);">(4h)</small></td>
+            <td class="cand-vol">0.8x</td>
             <td class="cand-qual"><b style="color: var(--text-dim);">C_NOISE</b></td>
             <td class="cand-status">🔍 Monitoreando</td>
         </tr>
@@ -746,12 +914,12 @@
             <div class="matrix-header">
                 <div>
                     <div class="matrix-title">🌐 MATRIX 100 CUENTAS — ANÁLISIS COMPLETO DE SIMULACIONES EN VIVO</div>
-                    <div class="matrix-total-val">$93,299.10 USD</div>
-                    <div class="matrix-pnl" style="color: var(--accent-emerald);">+$83,299.10 PnL Neto Total | Win Rate 29.3%</div>
+                    <div class="matrix-total-val">$93,247.90 USD</div>
+                    <div class="matrix-pnl" style="color: var(--accent-emerald);">+$83,247.90 PnL Neto Total | Win Rate 29.3%</div>
                 </div>
                 <div style="text-align: right;">
-                    <span class="badge badge-long">54 Cuentas en Posición Activa</span>
-                    <div style="font-size: 0.72rem; color: var(--accent-emerald); margin-top: 0.3rem; font-weight: 700;">28 Símbolos Diversificados</div>
+                    <span class="badge badge-long">72 Cuentas en Posición Activa</span>
+                    <div style="font-size: 0.72rem; color: var(--accent-emerald); margin-top: 0.3rem; font-weight: 700;">32 Símbolos Diversificados</div>
                 </div>
             </div>
 
@@ -759,7 +927,7 @@
             <div class="matrix-filter-bar" style="margin-top: 1rem;">
                 <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
                     <button class="matrix-filter-btn active" onclick="filterMatrixGroup('all', this)">Todas (100)</button>
-                    <button class="matrix-filter-btn" onclick="filterMatrixGroup('active', this)">🔥 En Posición (54)</button>
+                    <button class="matrix-filter-btn" onclick="filterMatrixGroup('active', this)">🔥 En Posición (72)</button>
                     <button class="matrix-filter-btn" onclick="filterMatrixGroup('0', this)">G0 Réplica Real</button>
                     <button class="matrix-filter-btn" onclick="filterMatrixGroup('1', this)">G1 Ultra-Estricto</button>
                     <button class="matrix-filter-btn" onclick="filterMatrixGroup('2', this)">G2 Mean Reversion</button>
@@ -800,46 +968,46 @@
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-79.25</td>
             <td style="font-variant-numeric: tabular-nums;"><b>45.2%</b> <small style="color:var(--text-dim);">(38W/46L)</small></td>
             <td>84</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (-0.17%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="1" data-active="0" data-search="sim-001 suiusdt 🛡️ grupo 1: ultra-estricto (estrategia real a+)">
+        <tr class="matrix-acc-row" data-group="1" data-active="1" data-search="sim-001 ethfiusdt 🛡️ grupo 1: ultra-estricto (estrategia real a+)">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-001</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)</td>
-            <td style="font-weight: 700; color: var(--text-main);">SUIUSDT</td>
-            <td><span class="badge badge-hold">100% USDT</span></td>
-            <td style="font-variant-numeric: tabular-nums;">—</td>
-            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$54.90</td>
-            <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-45.10</td>
-            <td style="font-variant-numeric: tabular-nums;"><b>36.5%</b> <small style="color:var(--text-dim);">(27W/47L)</small></td>
-            <td>74</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔴 Perdió -$0.02</td>
+            <td style="font-weight: 700; color: var(--text-main);">ETHFIUSDT</td>
+            <td><span class="badge badge-long">BUY LONG</span></td>
+            <td style="font-variant-numeric: tabular-nums;">$0.5887</td>
+            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$54.99</td>
+            <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-45.01</td>
+            <td style="font-variant-numeric: tabular-nums;"><b>37.3%</b> <small style="color:var(--text-dim);">(28W/47L)</small></td>
+            <td>75</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (-0.56%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="1" data-active="0" data-search="sim-002 suiusdt 🛡️ grupo 1: ultra-estricto (estrategia real a+)">
+        <tr class="matrix-acc-row" data-group="1" data-active="1" data-search="sim-002 ethfiusdt 🛡️ grupo 1: ultra-estricto (estrategia real a+)">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-002</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)</td>
-            <td style="font-weight: 700; color: var(--text-main);">SUIUSDT</td>
-            <td><span class="badge badge-hold">100% USDT</span></td>
-            <td style="font-variant-numeric: tabular-nums;">—</td>
-            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$54.61</td>
-            <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-45.39</td>
-            <td style="font-variant-numeric: tabular-nums;"><b>34.7%</b> <small style="color:var(--text-dim);">(25W/47L)</small></td>
-            <td>72</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔴 Perdió -$0.02</td>
+            <td style="font-weight: 700; color: var(--text-main);">ETHFIUSDT</td>
+            <td><span class="badge badge-long">BUY LONG</span></td>
+            <td style="font-variant-numeric: tabular-nums;">$0.5887</td>
+            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$54.70</td>
+            <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-45.30</td>
+            <td style="font-variant-numeric: tabular-nums;"><b>35.6%</b> <small style="color:var(--text-dim);">(26W/47L)</small></td>
+            <td>73</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (-0.56%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="1" data-active="0" data-search="sim-003 suiusdt 🛡️ grupo 1: ultra-estricto (estrategia real a+)">
+        <tr class="matrix-acc-row" data-group="1" data-active="1" data-search="sim-003 ethfiusdt 🛡️ grupo 1: ultra-estricto (estrategia real a+)">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-003</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)</td>
-            <td style="font-weight: 700; color: var(--text-main);">SUIUSDT</td>
-            <td><span class="badge badge-hold">100% USDT</span></td>
-            <td style="font-variant-numeric: tabular-nums;">—</td>
-            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$58.82</td>
-            <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-41.18</td>
-            <td style="font-variant-numeric: tabular-nums;"><b>38.9%</b> <small style="color:var(--text-dim);">(28W/44L)</small></td>
-            <td>72</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔴 Perdió -$0.02</td>
+            <td style="font-weight: 700; color: var(--text-main);">ETHFIUSDT</td>
+            <td><span class="badge badge-long">BUY LONG</span></td>
+            <td style="font-variant-numeric: tabular-nums;">$0.5887</td>
+            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$58.92</td>
+            <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-41.08</td>
+            <td style="font-variant-numeric: tabular-nums;"><b>39.7%</b> <small style="color:var(--text-dim);">(29W/44L)</small></td>
+            <td>73</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (-0.56%)</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="1" data-active="1" data-search="sim-004 spybusdt 🛡️ grupo 1: ultra-estricto (estrategia real a+)">
@@ -865,7 +1033,7 @@
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-23.71</td>
             <td style="font-variant-numeric: tabular-nums;"><b>36.0%</b> <small style="color:var(--text-dim);">(18W/32L)</small></td>
             <td>50</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (-0.30%)</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="1" data-active="1" data-search="sim-006 morphousdt 🛡️ grupo 1: ultra-estricto (estrategia real a+)">
@@ -878,7 +1046,7 @@
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-23.96</td>
             <td style="font-variant-numeric: tabular-nums;"><b>36.0%</b> <small style="color:var(--text-dim);">(18W/32L)</small></td>
             <td>50</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (-0.30%)</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="1" data-active="1" data-search="sim-007 morphousdt 🛡️ grupo 1: ultra-estricto (estrategia real a+)">
@@ -891,7 +1059,7 @@
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-25.65</td>
             <td style="font-variant-numeric: tabular-nums;"><b>33.3%</b> <small style="color:var(--text-dim);">(15W/30L)</small></td>
             <td>45</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (-0.30%)</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="1" data-active="1" data-search="sim-008 notusdt 🛡️ grupo 1: ultra-estricto (estrategia real a+)">
@@ -933,17 +1101,17 @@
             <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="1" data-active="0" data-search="sim-011 pepeusdt 🛡️ grupo 1: ultra-estricto (estrategia real a+)">
+        <tr class="matrix-acc-row" data-group="1" data-active="1" data-search="sim-011 mubusdt 🛡️ grupo 1: ultra-estricto (estrategia real a+)">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-011</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)</td>
-            <td style="font-weight: 700; color: var(--text-main);">PEPEUSDT</td>
-            <td><span class="badge badge-hold">100% USDT</span></td>
-            <td style="font-variant-numeric: tabular-nums;">—</td>
+            <td style="font-weight: 700; color: var(--text-main);">MUBUSDT</td>
+            <td><span class="badge badge-long">BUY LONG</span></td>
+            <td style="font-variant-numeric: tabular-nums;">$968.10</td>
             <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$71.09</td>
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-28.91</td>
             <td style="font-variant-numeric: tabular-nums;"><b>32.1%</b> <small style="color:var(--text-dim);">(18W/38L)</small></td>
             <td>56</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔴 Perdió -$0.02</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (-0.42%)</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="1" data-active="1" data-search="sim-012 spybusdt 🛡️ grupo 1: ultra-estricto (estrategia real a+)">
@@ -959,17 +1127,17 @@
             <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="1" data-active="1" data-search="sim-013 peopleusdt 🛡️ grupo 1: ultra-estricto (estrategia real a+)">
+        <tr class="matrix-acc-row" data-group="1" data-active="1" data-search="sim-013 mubusdt 🛡️ grupo 1: ultra-estricto (estrategia real a+)">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-013</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)</td>
-            <td style="font-weight: 700; color: var(--text-main);">PEOPLEUSDT</td>
+            <td style="font-weight: 700; color: var(--text-main);">MUBUSDT</td>
             <td><span class="badge badge-long">BUY LONG</span></td>
-            <td style="font-variant-numeric: tabular-nums;">$0.0114</td>
-            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$46.02</td>
-            <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-53.98</td>
-            <td style="font-variant-numeric: tabular-nums;"><b>43.8%</b> <small style="color:var(--text-dim);">(32W/41L)</small></td>
-            <td>73</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
+            <td style="font-variant-numeric: tabular-nums;">$968.10</td>
+            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$45.75</td>
+            <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-54.25</td>
+            <td style="font-variant-numeric: tabular-nums;"><b>43.2%</b> <small style="color:var(--text-dim);">(32W/42L)</small></td>
+            <td>74</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (-0.42%)</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="1" data-active="1" data-search="sim-014 pnutusdt 🛡️ grupo 1: ultra-estricto (estrategia real a+)">
@@ -1034,7 +1202,7 @@
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-emerald);">+$146.73</td>
             <td style="font-variant-numeric: tabular-nums;"><b>37.1%</b> <small style="color:var(--text-dim);">(23W/39L)</small></td>
             <td>62</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 💎 Fase 3 (+1.13%)</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="1" data-active="1" data-search="sim-019 mubusdt 🛡️ grupo 1: ultra-estricto (estrategia real a+)">
@@ -1047,7 +1215,7 @@
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-emerald);">+$89.18</td>
             <td style="font-variant-numeric: tabular-nums;"><b>35.0%</b> <small style="color:var(--text-dim);">(21W/39L)</small></td>
             <td>60</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (-0.81%)</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="1" data-active="1" data-search="sim-020 edenusdt 🛡️ grupo 1: ultra-estricto (estrategia real a+)">
@@ -1141,43 +1309,43 @@
             <td style="font-size: 0.72rem; color: var(--text-muted);">🔴 Perdió -$387.01</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="2" data-active="0" data-search="sim-027 asterusdt 🔷 grupo 2: moderado-estricto">
+        <tr class="matrix-acc-row" data-group="2" data-active="1" data-search="sim-027 peopleusdt 🔷 grupo 2: moderado-estricto">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-027</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">🔷 GRUPO 2: Moderado-Estricto</td>
-            <td style="font-weight: 700; color: var(--text-main);">ASTERUSDT</td>
-            <td><span class="badge badge-hold">100% USDT</span></td>
-            <td style="font-variant-numeric: tabular-nums;">—</td>
+            <td style="font-weight: 700; color: var(--text-main);">PEOPLEUSDT</td>
+            <td><span class="badge badge-long">BUY LONG</span></td>
+            <td style="font-variant-numeric: tabular-nums;">$0.0111</td>
             <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$67356.42</td>
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-emerald);">+$67256.42</td>
             <td style="font-variant-numeric: tabular-nums;"><b>33.0%</b> <small style="color:var(--text-dim);">(37W/74L)</small></td>
             <td>112</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔴 Perdió -$20.21</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 💎 Fase 3 (+1.62%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="2" data-active="0" data-search="sim-028 asterusdt 🔷 grupo 2: moderado-estricto">
+        <tr class="matrix-acc-row" data-group="2" data-active="1" data-search="sim-028 peopleusdt 🔷 grupo 2: moderado-estricto">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-028</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">🔷 GRUPO 2: Moderado-Estricto</td>
-            <td style="font-weight: 700; color: var(--text-main);">ASTERUSDT</td>
-            <td><span class="badge badge-hold">100% USDT</span></td>
-            <td style="font-variant-numeric: tabular-nums;">—</td>
+            <td style="font-weight: 700; color: var(--text-main);">PEOPLEUSDT</td>
+            <td><span class="badge badge-long">BUY LONG</span></td>
+            <td style="font-variant-numeric: tabular-nums;">$0.0111</td>
             <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$89.73</td>
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-10.27</td>
             <td style="font-variant-numeric: tabular-nums;"><b>30.1%</b> <small style="color:var(--text-dim);">(34W/78L)</small></td>
             <td>113</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔴 Perdió -$0.03</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 💎 Fase 3 (+1.62%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="2" data-active="0" data-search="sim-029 morphousdt 🔷 grupo 2: moderado-estricto">
+        <tr class="matrix-acc-row" data-group="2" data-active="1" data-search="sim-029 peopleusdt 🔷 grupo 2: moderado-estricto">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-029</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">🔷 GRUPO 2: Moderado-Estricto</td>
-            <td style="font-weight: 700; color: var(--text-main);">MORPHOUSDT</td>
-            <td><span class="badge badge-hold">100% USDT</span></td>
-            <td style="font-variant-numeric: tabular-nums;">—</td>
+            <td style="font-weight: 700; color: var(--text-main);">PEOPLEUSDT</td>
+            <td><span class="badge badge-long">BUY LONG</span></td>
+            <td style="font-variant-numeric: tabular-nums;">$0.0111</td>
             <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$116.69</td>
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-emerald);">+$16.69</td>
             <td style="font-variant-numeric: tabular-nums;"><b>33.6%</b> <small style="color:var(--text-dim);">(36W/70L)</small></td>
             <td>107</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔴 Perdió -$0.04</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 💎 Fase 3 (+1.62%)</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="2" data-active="1" data-search="sim-030 gramusdt 🔷 grupo 2: moderado-estricto">
@@ -1336,121 +1504,121 @@
             <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="3" data-active="0" data-search="sim-042 kaitousdt ⚖️ grupo 3: balanceado">
+        <tr class="matrix-acc-row" data-group="3" data-active="1" data-search="sim-042 dotusdt ⚖️ grupo 3: balanceado">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-042</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">⚖️ GRUPO 3: Balanceado</td>
-            <td style="font-weight: 700; color: var(--text-main);">KAITOUSDT</td>
-            <td><span class="badge badge-hold">100% USDT</span></td>
-            <td style="font-variant-numeric: tabular-nums;">—</td>
+            <td style="font-weight: 700; color: var(--text-main);">DOTUSDT</td>
+            <td><span class="badge badge-long">BUY LONG</span></td>
+            <td style="font-variant-numeric: tabular-nums;">$0.8920</td>
             <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$384.45</td>
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-emerald);">+$284.45</td>
             <td style="font-variant-numeric: tabular-nums;"><b>33.8%</b> <small style="color:var(--text-dim);">(27W/51L)</small></td>
             <td>80</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔴 Perdió -$0.44</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 🔒 Fase 2 (+0.45%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="3" data-active="0" data-search="sim-043 kaitousdt ⚖️ grupo 3: balanceado">
+        <tr class="matrix-acc-row" data-group="3" data-active="1" data-search="sim-043 dotusdt ⚖️ grupo 3: balanceado">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-043</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">⚖️ GRUPO 3: Balanceado</td>
-            <td style="font-weight: 700; color: var(--text-main);">KAITOUSDT</td>
-            <td><span class="badge badge-hold">100% USDT</span></td>
-            <td style="font-variant-numeric: tabular-nums;">—</td>
+            <td style="font-weight: 700; color: var(--text-main);">DOTUSDT</td>
+            <td><span class="badge badge-long">BUY LONG</span></td>
+            <td style="font-variant-numeric: tabular-nums;">$0.8920</td>
             <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$164.84</td>
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-emerald);">+$64.84</td>
             <td style="font-variant-numeric: tabular-nums;"><b>30.9%</b> <small style="color:var(--text-dim);">(25W/55L)</small></td>
             <td>81</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔴 Perdió -$0.19</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 🔒 Fase 2 (+0.45%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="3" data-active="0" data-search="sim-044 kaitousdt ⚖️ grupo 3: balanceado">
+        <tr class="matrix-acc-row" data-group="3" data-active="1" data-search="sim-044 dotusdt ⚖️ grupo 3: balanceado">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-044</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">⚖️ GRUPO 3: Balanceado</td>
-            <td style="font-weight: 700; color: var(--text-main);">KAITOUSDT</td>
-            <td><span class="badge badge-hold">100% USDT</span></td>
-            <td style="font-variant-numeric: tabular-nums;">—</td>
+            <td style="font-weight: 700; color: var(--text-main);">DOTUSDT</td>
+            <td><span class="badge badge-long">BUY LONG</span></td>
+            <td style="font-variant-numeric: tabular-nums;">$0.8920</td>
             <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$86.95</td>
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-13.05</td>
             <td style="font-variant-numeric: tabular-nums;"><b>30.8%</b> <small style="color:var(--text-dim);">(28W/62L)</small></td>
             <td>91</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔴 Perdió -$0.10</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 🔒 Fase 2 (+0.45%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="3" data-active="0" data-search="sim-045 wifusdt ⚖️ grupo 3: balanceado">
+        <tr class="matrix-acc-row" data-group="3" data-active="1" data-search="sim-045 mubusdt ⚖️ grupo 3: balanceado">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-045</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">⚖️ GRUPO 3: Balanceado</td>
-            <td style="font-weight: 700; color: var(--text-main);">WIFUSDT</td>
-            <td><span class="badge badge-hold">100% USDT</span></td>
-            <td style="font-variant-numeric: tabular-nums;">—</td>
+            <td style="font-weight: 700; color: var(--text-main);">MUBUSDT</td>
+            <td><span class="badge badge-long">BUY LONG</span></td>
+            <td style="font-variant-numeric: tabular-nums;">$968.10</td>
             <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$53.51</td>
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-46.49</td>
             <td style="font-variant-numeric: tabular-nums;"><b>20.9%</b> <small style="color:var(--text-dim);">(18W/65L)</small></td>
             <td>86</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔴 Perdió -$0.34</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (-0.42%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="3" data-active="0" data-search="sim-046 wifusdt ⚖️ grupo 3: balanceado">
+        <tr class="matrix-acc-row" data-group="3" data-active="1" data-search="sim-046 mubusdt ⚖️ grupo 3: balanceado">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-046</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">⚖️ GRUPO 3: Balanceado</td>
-            <td style="font-weight: 700; color: var(--text-main);">WIFUSDT</td>
-            <td><span class="badge badge-hold">100% USDT</span></td>
-            <td style="font-variant-numeric: tabular-nums;">—</td>
+            <td style="font-weight: 700; color: var(--text-main);">MUBUSDT</td>
+            <td><span class="badge badge-long">BUY LONG</span></td>
+            <td style="font-variant-numeric: tabular-nums;">$968.10</td>
             <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$98.10</td>
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-1.90</td>
             <td style="font-variant-numeric: tabular-nums;"><b>20.9%</b> <small style="color:var(--text-dim);">(18W/66L)</small></td>
             <td>86</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔴 Perdió -$0.63</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (-0.42%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="3" data-active="0" data-search="sim-047 wifusdt ⚖️ grupo 3: balanceado">
+        <tr class="matrix-acc-row" data-group="3" data-active="1" data-search="sim-047 mubusdt ⚖️ grupo 3: balanceado">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-047</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">⚖️ GRUPO 3: Balanceado</td>
-            <td style="font-weight: 700; color: var(--text-main);">WIFUSDT</td>
-            <td><span class="badge badge-hold">100% USDT</span></td>
-            <td style="font-variant-numeric: tabular-nums;">—</td>
+            <td style="font-weight: 700; color: var(--text-main);">MUBUSDT</td>
+            <td><span class="badge badge-long">BUY LONG</span></td>
+            <td style="font-variant-numeric: tabular-nums;">$968.10</td>
             <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$41.07</td>
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-58.93</td>
             <td style="font-variant-numeric: tabular-nums;"><b>27.3%</b> <small style="color:var(--text-dim);">(15W/39L)</small></td>
             <td>55</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔴 Perdió -$0.26</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (-0.42%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="3" data-active="0" data-search="sim-048 kaitousdt ⚖️ grupo 3: balanceado">
+        <tr class="matrix-acc-row" data-group="3" data-active="1" data-search="sim-048 dexeusdt ⚖️ grupo 3: balanceado">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-048</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">⚖️ GRUPO 3: Balanceado</td>
-            <td style="font-weight: 700; color: var(--text-main);">KAITOUSDT</td>
-            <td><span class="badge badge-hold">100% USDT</span></td>
-            <td style="font-variant-numeric: tabular-nums;">—</td>
-            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$87.96</td>
-            <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-12.04</td>
-            <td style="font-variant-numeric: tabular-nums;"><b>39.7%</b> <small style="color:var(--text-dim);">(25W/37L)</small></td>
-            <td>63</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🟢 Ganó +$0.05 (Fase 2)</td>
+            <td style="font-weight: 700; color: var(--text-main);">DEXEUSDT</td>
+            <td><span class="badge badge-long">BUY LONG</span></td>
+            <td style="font-variant-numeric: tabular-nums;">$2.0580</td>
+            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$87.77</td>
+            <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-12.23</td>
+            <td style="font-variant-numeric: tabular-nums;"><b>39.1%</b> <small style="color:var(--text-dim);">(25W/38L)</small></td>
+            <td>64</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 🔒 Fase 2 (+0.53%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="3" data-active="0" data-search="sim-049 kaitousdt ⚖️ grupo 3: balanceado">
+        <tr class="matrix-acc-row" data-group="3" data-active="1" data-search="sim-049 dexeusdt ⚖️ grupo 3: balanceado">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-049</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">⚖️ GRUPO 3: Balanceado</td>
-            <td style="font-weight: 700; color: var(--text-main);">KAITOUSDT</td>
-            <td><span class="badge badge-hold">100% USDT</span></td>
-            <td style="font-variant-numeric: tabular-nums;">—</td>
-            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$86.89</td>
-            <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-13.11</td>
-            <td style="font-variant-numeric: tabular-nums;"><b>34.9%</b> <small style="color:var(--text-dim);">(22W/40L)</small></td>
-            <td>63</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🟢 Ganó +$0.05 (Fase 2)</td>
+            <td style="font-weight: 700; color: var(--text-main);">DEXEUSDT</td>
+            <td><span class="badge badge-long">BUY LONG</span></td>
+            <td style="font-variant-numeric: tabular-nums;">$2.0580</td>
+            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$86.71</td>
+            <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-13.29</td>
+            <td style="font-variant-numeric: tabular-nums;"><b>34.4%</b> <small style="color:var(--text-dim);">(22W/41L)</small></td>
+            <td>64</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 🔒 Fase 2 (+0.53%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="3" data-active="0" data-search="sim-050 kaitousdt ⚖️ grupo 3: balanceado">
+        <tr class="matrix-acc-row" data-group="3" data-active="1" data-search="sim-050 dexeusdt ⚖️ grupo 3: balanceado">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-050</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">⚖️ GRUPO 3: Balanceado</td>
-            <td style="font-weight: 700; color: var(--text-main);">KAITOUSDT</td>
-            <td><span class="badge badge-hold">100% USDT</span></td>
-            <td style="font-variant-numeric: tabular-nums;">—</td>
-            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$96.41</td>
-            <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-3.59</td>
-            <td style="font-variant-numeric: tabular-nums;"><b>33.8%</b> <small style="color:var(--text-dim);">(24W/45L)</small></td>
-            <td>71</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🟢 Ganó +$0.05 (Fase 2)</td>
+            <td style="font-weight: 700; color: var(--text-main);">DEXEUSDT</td>
+            <td><span class="badge badge-long">BUY LONG</span></td>
+            <td style="font-variant-numeric: tabular-nums;">$2.0580</td>
+            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$96.21</td>
+            <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-3.79</td>
+            <td style="font-variant-numeric: tabular-nums;"><b>33.3%</b> <small style="color:var(--text-dim);">(24W/46L)</small></td>
+            <td>72</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 🔒 Fase 2 (+0.53%)</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="3" data-active="1" data-search="sim-051 ethusdt ⚖️ grupo 3: balanceado">
@@ -1463,7 +1631,7 @@
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-3.77</td>
             <td style="font-variant-numeric: tabular-nums;"><b>40.7%</b> <small style="color:var(--text-dim);">(22W/32L)</small></td>
             <td>54</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.40%)</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="3" data-active="1" data-search="sim-052 ethusdt ⚖️ grupo 3: balanceado">
@@ -1476,7 +1644,7 @@
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-6.39</td>
             <td style="font-variant-numeric: tabular-nums;"><b>42.9%</b> <small style="color:var(--text-dim);">(24W/31L)</small></td>
             <td>56</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.40%)</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="3" data-active="1" data-search="sim-053 ethusdt ⚖️ grupo 3: balanceado">
@@ -1489,20 +1657,20 @@
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-6.05</td>
             <td style="font-variant-numeric: tabular-nums;"><b>36.8%</b> <small style="color:var(--text-dim);">(25W/43L)</small></td>
             <td>68</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.40%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="3" data-active="0" data-search="sim-054 bankusdt ⚖️ grupo 3: balanceado">
+        <tr class="matrix-acc-row" data-group="3" data-active="1" data-search="sim-054 ordiusdt ⚖️ grupo 3: balanceado">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-054</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">⚖️ GRUPO 3: Balanceado</td>
-            <td style="font-weight: 700; color: var(--text-main);">BANKUSDT</td>
-            <td><span class="badge badge-hold">100% USDT</span></td>
-            <td style="font-variant-numeric: tabular-nums;">—</td>
+            <td style="font-weight: 700; color: var(--text-main);">ORDIUSDT</td>
+            <td><span class="badge badge-long">BUY LONG</span></td>
+            <td style="font-variant-numeric: tabular-nums;">$4.3630</td>
             <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$90.89</td>
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-9.11</td>
             <td style="font-variant-numeric: tabular-nums;"><b>39.3%</b> <small style="color:var(--text-dim);">(22W/33L)</small></td>
             <td>56</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🟢 Ganó +$0.31 (Fase 4)</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.16%)</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="3" data-active="1" data-search="sim-055 gmtusdt ⚖️ grupo 3: balanceado">
@@ -1570,17 +1738,17 @@
             <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="3" data-active="0" data-search="sim-060 bankusdt ⚖️ grupo 3: balanceado">
+        <tr class="matrix-acc-row" data-group="3" data-active="1" data-search="sim-060 ordiusdt ⚖️ grupo 3: balanceado">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-060</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">⚖️ GRUPO 3: Balanceado</td>
-            <td style="font-weight: 700; color: var(--text-main);">BANKUSDT</td>
-            <td><span class="badge badge-hold">100% USDT</span></td>
-            <td style="font-variant-numeric: tabular-nums;">—</td>
+            <td style="font-weight: 700; color: var(--text-main);">ORDIUSDT</td>
+            <td><span class="badge badge-long">BUY LONG</span></td>
+            <td style="font-variant-numeric: tabular-nums;">$4.3630</td>
             <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$368.08</td>
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-emerald);">+$268.08</td>
             <td style="font-variant-numeric: tabular-nums;"><b>31.4%</b> <small style="color:var(--text-dim);">(22W/45L)</small></td>
             <td>70</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🟢 Ganó +$1.26 (Fase 4)</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.16%)</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="4" data-active="0" data-search="sim-061 dexeusdt ⚡ grupo 4: frecuencia alta">
@@ -1869,17 +2037,17 @@
             <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="5" data-active="1" data-search="sim-083 bchusdt 🔥 grupo 5: exploratorio de máxima frecuencia">
+        <tr class="matrix-acc-row" data-group="5" data-active="1" data-search="sim-083 bnbusdt 🔥 grupo 5: exploratorio de máxima frecuencia">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-083</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">🔥 GRUPO 5: Exploratorio de Máxima Frecuencia</td>
-            <td style="font-weight: 700; color: var(--text-main);">BCHUSDT</td>
+            <td style="font-weight: 700; color: var(--text-main);">BNBUSDT</td>
             <td><span class="badge badge-long">BUY LONG</span></td>
-            <td style="font-variant-numeric: tabular-nums;">$292.00</td>
-            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$73.84</td>
-            <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-26.16</td>
-            <td style="font-variant-numeric: tabular-nums;"><b>43.8%</b> <small style="color:var(--text-dim);">(32W/41L)</small></td>
-            <td>73</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
+            <td style="font-variant-numeric: tabular-nums;">$673.21</td>
+            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$73.48</td>
+            <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-26.52</td>
+            <td style="font-variant-numeric: tabular-nums;"><b>43.2%</b> <small style="color:var(--text-dim);">(32W/42L)</small></td>
+            <td>74</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (-0.02%)</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="5" data-active="1" data-search="sim-084 tslabusdt 🔥 grupo 5: exploratorio de máxima frecuencia">
@@ -1983,7 +2151,7 @@
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-rose);">$-88.10</td>
             <td style="font-variant-numeric: tabular-nums;"><b>41.9%</b> <small style="color:var(--text-dim);">(26W/35L)</small></td>
             <td>62</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.41%)</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="5" data-active="0" data-search="sim-092 ldousdt 🔥 grupo 5: exploratorio de máxima frecuencia">
@@ -2009,20 +2177,20 @@
             <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-emerald);">+$5823.61</td>
             <td style="font-variant-numeric: tabular-nums;"><b>31.9%</b> <small style="color:var(--text-dim);">(30W/64L)</small></td>
             <td>94</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.05%)</td>
         </tr>
         
-        <tr class="matrix-acc-row" data-group="5" data-active="1" data-search="sim-094 bchusdt 🔥 grupo 5: exploratorio de máxima frecuencia">
+        <tr class="matrix-acc-row" data-group="5" data-active="1" data-search="sim-094 nearusdt 🔥 grupo 5: exploratorio de máxima frecuencia">
             <td style="font-weight: 800; color: var(--accent-cyan);">SIM-094</td>
             <td style="font-size: 0.74rem; color: var(--text-muted);">🔥 GRUPO 5: Exploratorio de Máxima Frecuencia</td>
-            <td style="font-weight: 700; color: var(--text-main);">BCHUSDT</td>
+            <td style="font-weight: 700; color: var(--text-main);">NEARUSDT</td>
             <td><span class="badge badge-long">BUY LONG</span></td>
-            <td style="font-variant-numeric: tabular-nums;">$292.50</td>
-            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$11601.89</td>
-            <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-emerald);">+$11501.89</td>
-            <td style="font-variant-numeric: tabular-nums;"><b>38.4%</b> <small style="color:var(--text-dim);">(33W/53L)</small></td>
-            <td>86</td>
-            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 ⚡ Fase 1 (+0.00%)</td>
+            <td style="font-variant-numeric: tabular-nums;">$1.8740</td>
+            <td style="font-weight: 700; font-variant-numeric: tabular-nums;">$11551.61</td>
+            <td style="font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent-emerald);">+$11451.61</td>
+            <td style="font-variant-numeric: tabular-nums;"><b>37.9%</b> <small style="color:var(--text-dim);">(33W/54L)</small></td>
+            <td>87</td>
+            <td style="font-size: 0.72rem; color: var(--text-muted);">🔵 🔒 Fase 2 (+0.69%)</td>
         </tr>
         
         <tr class="matrix-acc-row" data-group="5" data-active="1" data-search="sim-095 spybusdt 🔥 grupo 5: exploratorio de máxima frecuencia">
@@ -2096,14 +2264,14 @@
 
             <div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 1rem; font-weight: 600;">Símbolos Diversificados Activos en Paralelo (Offset Rotativo):</div>
             <div class="matrix-tags-box">
-                <span class="matrix-tag"><b>SPYBUSDT</b> <small>(5)</small></span><span class="matrix-tag"><b>MORPHOUSDT</b> <small>(4)</small></span><span class="matrix-tag"><b>GMTUSDT</b> <small>(4)</small></span><span class="matrix-tag"><b>AAOIBUSDT</b> <small>(4)</small></span><span class="matrix-tag"><b>NOTUSDT</b> <small>(3)</small></span><span class="matrix-tag"><b>PNUTUSDT</b> <small>(3)</small></span><span class="matrix-tag"><b>GRAMUSDT</b> <small>(3)</small></span><span class="matrix-tag"><b>HOMEUSDT</b> <small>(3)</small></span><span class="matrix-tag"><b>ETHUSDT</b> <small>(3)</small></span><span class="matrix-tag"><b>TRXUSDT</b> <small>(2)</small></span><span class="matrix-tag"><b>BCHUSDT</b> <small>(2)</small></span><span class="matrix-tag"><b>TSLABUSDT</b> <small>(2)</small></span><span class="matrix-tag"><b>PEOPLEUSDT</b> <small>(1)</small></span><span class="matrix-tag"><b>SHIBUSDT</b> <small>(1)</small></span><span class="matrix-tag"><b>MUBUSDT</b> <small>(1)</small></span><span class="matrix-tag"><b>EDENUSDT</b> <small>(1)</small></span><span class="matrix-tag"><b>MSTRBUSDT</b> <small>(1)</small></span><span class="matrix-tag"><b>WCTUSDT</b> <small>(1)</small></span><span class="matrix-tag"><b>TSMBUSDT</b> <small>(1)</small></span><span class="matrix-tag"><b>COWUSDT</b> <small>(1)</small></span><span class="matrix-tag"><b>EULUSDT</b> <small>(1)</small></span><span class="matrix-tag"><b>BFUSDUSDT</b> <small>(1)</small></span><span class="matrix-tag"><b>ZENUSDT</b> <small>(1)</small></span><span class="matrix-tag"><b>ACTUSDT</b> <small>(1)</small></span><span class="matrix-tag"><b>DODOUSDT</b> <small>(1)</small></span>
+                <span class="matrix-tag"><b>MUBUSDT</b> <small>(6)</small></span><span class="matrix-tag"><b>SPYBUSDT</b> <small>(5)</small></span><span class="matrix-tag"><b>MORPHOUSDT</b> <small>(4)</small></span><span class="matrix-tag"><b>GMTUSDT</b> <small>(4)</small></span><span class="matrix-tag"><b>AAOIBUSDT</b> <small>(4)</small></span><span class="matrix-tag"><b>ETHFIUSDT</b> <small>(3)</small></span><span class="matrix-tag"><b>NOTUSDT</b> <small>(3)</small></span><span class="matrix-tag"><b>PNUTUSDT</b> <small>(3)</small></span><span class="matrix-tag"><b>GRAMUSDT</b> <small>(3)</small></span><span class="matrix-tag"><b>PEOPLEUSDT</b> <small>(3)</small></span><span class="matrix-tag"><b>HOMEUSDT</b> <small>(3)</small></span><span class="matrix-tag"><b>DOTUSDT</b> <small>(3)</small></span><span class="matrix-tag"><b>DEXEUSDT</b> <small>(3)</small></span><span class="matrix-tag"><b>ETHUSDT</b> <small>(3)</small></span><span class="matrix-tag"><b>TRXUSDT</b> <small>(2)</small></span><span class="matrix-tag"><b>ORDIUSDT</b> <small>(2)</small></span><span class="matrix-tag"><b>TSLABUSDT</b> <small>(2)</small></span><span class="matrix-tag"><b>NEARUSDT</b> <small>(2)</small></span><span class="matrix-tag"><b>SHIBUSDT</b> <small>(1)</small></span><span class="matrix-tag"><b>EDENUSDT</b> <small>(1)</small></span><span class="matrix-tag"><b>MSTRBUSDT</b> <small>(1)</small></span><span class="matrix-tag"><b>WCTUSDT</b> <small>(1)</small></span><span class="matrix-tag"><b>TSMBUSDT</b> <small>(1)</small></span><span class="matrix-tag"><b>COWUSDT</b> <small>(1)</small></span><span class="matrix-tag"><b>EULUSDT</b> <small>(1)</small></span>
             </div>
         </div>
     </div>
 
     <!-- FOOTER -->
     <footer>
-        <span>Última actualización: <strong>2026-08-21 14:41:05</strong> | Algoritmo Cuántico Binance 24/7</span>
+        <span>Última actualización: <strong>2026-08-21 15:12:29</strong> | Algoritmo Cuántico Binance 24/7</span>
         <span class="countdown" id="countdown">Auto-refresh en: 30s</span>
         <button class="refresh-btn" onclick="window.location.reload()">🔄 Actualizar Ahora</button>
     </footer>
