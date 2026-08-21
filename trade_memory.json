@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2273,
-    "wins": 1150,
+    "total_trades": 2277,
+    "wins": 1154,
     "losses": 1123,
-    "win_rate_pct": 50.59,
-    "total_pnl_usd": -9009.780525451211
+    "win_rate_pct": 50.68,
+    "total_pnl_usd": -9008.510525451213
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,70 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 17:11:35",
-      "account_id": "SIM-091",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "PUMPUSDT",
-      "side": "LONG",
-      "entry_price": 0.003715,
-      "exit_price": 0.003747,
-      "pnl_usd": 0.02,
-      "result": "WIN",
-      "notes": "WIN on PUMPUSDT (PnL: +0.86%, Net: $+0.02 Fase 3)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 58.74,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 17:13:32",
-      "account_id": "SIM-083",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "PUMPUSDT",
-      "side": "SHORT",
-      "entry_price": 0.003663,
-      "exit_price": 0.00377,
-      "pnl_usd": -0.58,
-      "result": "LOSS",
-      "notes": "LOSS on PUMPUSDT (PnL: -2.92%, Net: $-0.58 Fase 1)",
-      "context": {
-        "score": 72,
-        "rsi_15m": 60.83,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 22:16:52",
-      "account_id": "SIM-097",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "RAYUSDT",
-      "side": "LONG",
-      "entry_price": 0.685,
-      "exit_price": 0.685,
-      "pnl_usd": -0.02,
-      "result": "LOSS",
-      "notes": "LOSS on RAYUSDT (PnL: +0.00%, Net: $-0.02 Fase 2)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-20 17:20:14",
-      "account_id": "SIM-051",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ENAUSDT",
-      "side": "LONG",
-      "entry_price": 0.1107,
-      "exit_price": 0.1142,
-      "pnl_usd": 0.58,
-      "result": "WIN",
-      "notes": "WIN on ENAUSDT (PnL: +3.16%, Net: $+0.58 Fase 5)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 67.84,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 17:20:14",
       "account_id": "SIM-052",
@@ -8434,6 +8370,74 @@
       "context": {
         "score": 65,
         "rsi_15m": 51.15,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 11:39:31",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "WLFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.0626,
+      "exit_price": 0.0628,
+      "pnl_usd": 0.13,
+      "result": "WIN",
+      "notes": "WIN on WLFIUSDT (PnL: +0.32%, Net: $+0.13 Fase 2)",
+      "context": {
+        "score": 82,
+        "rsi_15m": 67.28,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 11:39:31",
+      "account_id": "SIM-043",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "WLFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.0626,
+      "exit_price": 0.0628,
+      "pnl_usd": 0.06,
+      "result": "WIN",
+      "notes": "WIN on WLFIUSDT (PnL: +0.32%, Net: $+0.06 Fase 2)",
+      "context": {
+        "score": 82,
+        "rsi_15m": 67.28,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 11:39:31",
+      "account_id": "SIM-044",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "WLFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.0626,
+      "exit_price": 0.0628,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on WLFIUSDT (PnL: +0.32%, Net: $+0.03 Fase 2)",
+      "context": {
+        "score": 82,
+        "rsi_15m": 67.28,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 11:41:32",
+      "account_id": "SIM-018",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "WLFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.0611,
+      "exit_price": 0.0625,
+      "pnl_usd": 1.05,
+      "result": "WIN",
+      "notes": "WIN on WLFIUSDT (PnL: +2.29%, Net: $+1.05 Fase 4)",
+      "context": {
+        "score": 77,
+        "rsi_15m": 61.79,
         "macro_trend_4h": "NEUTRAL"
       }
     }
