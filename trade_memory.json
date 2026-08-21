@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2212,
+    "total_trades": 2214,
     "wins": 1090,
-    "losses": 1122,
-    "win_rate_pct": 49.28,
-    "total_pnl_usd": -12226.6605254512
+    "losses": 1124,
+    "win_rate_pct": 49.23,
+    "total_pnl_usd": -12226.7405254512
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -8351,6 +8351,32 @@
         "rsi_15m": 84.32,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-21 14:19:46",
+      "account_id": "SIM-043",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "MUBARAKUSDT",
+      "side": "LONG",
+      "entry_price": 0.01921,
+      "exit_price": 0.01921,
+      "pnl_usd": -0.05,
+      "result": "LOSS",
+      "notes": "LOSS on MUBARAKUSDT (PnL: +0.00%, Net: $-0.05 Fase 5)",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-21 14:19:46",
+      "account_id": "SIM-044",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "MUBARAKUSDT",
+      "side": "LONG",
+      "entry_price": 0.01921,
+      "exit_price": 0.01921,
+      "pnl_usd": -0.03,
+      "result": "LOSS",
+      "notes": "LOSS on MUBARAKUSDT (PnL: +0.00%, Net: $-0.03 Fase 5)",
+      "context": {}
     }
   ]
 }
