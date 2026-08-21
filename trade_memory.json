@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2319,
-    "wins": 1174,
+    "total_trades": 2322,
+    "wins": 1177,
     "losses": 1145,
-    "win_rate_pct": 50.63,
-    "total_pnl_usd": -8918.792175451214
+    "win_rate_pct": 50.69,
+    "total_pnl_usd": -8445.712175451215
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SOLUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MORPHOUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on UNIUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TUTUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on TUTUSDT)",
@@ -49,61 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TAOUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on FETUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BICOUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on AVAXUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on AVAXUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on WIFUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-20 19:02:19",
-      "account_id": "SIM-006",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "GPSUSDT",
-      "side": "LONG",
-      "entry_price": 0.01156,
-      "exit_price": 0.01169,
-      "pnl_usd": 0.15,
-      "result": "WIN",
-      "notes": "WIN on GPSUSDT (PnL: +1.12%, Net: $+0.15 Fase 5)",
-      "context": {
-        "score": 88,
-        "rsi_15m": 56.47,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 19:02:19",
-      "account_id": "SIM-007",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "GPSUSDT",
-      "side": "LONG",
-      "entry_price": 0.01156,
-      "exit_price": 0.01169,
-      "pnl_usd": 0.15,
-      "result": "WIN",
-      "notes": "WIN on GPSUSDT (PnL: +1.12%, Net: $+0.15 Fase 5)",
-      "context": {
-        "score": 88,
-        "rsi_15m": 56.47,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-20 19:02:19",
-      "account_id": "SIM-015",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "REDUSDT",
-      "side": "LONG",
-      "entry_price": 0.1057,
-      "exit_price": 0.1045,
-      "pnl_usd": -0.15,
-      "result": "LOSS",
-      "notes": "LOSS on REDUSDT (PnL: -1.14%, Net: $-0.15 Fase 5)",
-      "context": {
-        "score": 67,
-        "rsi_15m": 45.95,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-20 19:02:19",
       "account_id": "SIM-016",
@@ -8450,6 +8399,57 @@
       "context": {
         "score": 43,
         "rsi_15m": 54.65,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 18:25:40",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "WIFUSDT",
+      "side": "LONG",
+      "entry_price": 0.1814,
+      "exit_price": 0.188,
+      "pnl_usd": 471.63,
+      "result": "WIN",
+      "notes": "WIN on WIFUSDT (PnL: +3.64%, Net: $+471.63 Fase 5)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 57.55,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 18:25:40",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "WIFUSDT",
+      "side": "LONG",
+      "entry_price": 0.1814,
+      "exit_price": 0.188,
+      "pnl_usd": 0.63,
+      "result": "WIN",
+      "notes": "WIN on WIFUSDT (PnL: +3.64%, Net: $+0.63 Fase 5)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 57.55,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-21 18:25:40",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "WIFUSDT",
+      "side": "LONG",
+      "entry_price": 0.1814,
+      "exit_price": 0.188,
+      "pnl_usd": 0.82,
+      "result": "WIN",
+      "notes": "WIN on WIFUSDT (PnL: +3.64%, Net: $+0.82 Fase 5)",
+      "context": {
+        "score": 50,
+        "rsi_15m": 57.55,
         "macro_trend_4h": "NEUTRAL"
       }
     }
