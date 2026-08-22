@@ -51,10 +51,13 @@ def sleep_with_micro_heartbeat(sleep_secs: int):
         try:
             hb = api_connector.quick_position_heartbeat()
             if hb and isinstance(hb, dict):
-                # Print live heartbeat pulse every 5s or on positive movement
-                if tick_count % 5 == 0 or hb.get("highest_pnl", 0) >= 0.40:
+                # Print live heartbeat pulse every 3s so user sees continuous second-by-second updates
+                if tick_count % 3 == 0 or hb.get("highest_pnl", 0) >= 0.30:
                     p_fmt = f"${hb['price']:.5f}" if hb['price'] < 0.05 else f"${hb['price']:.4f}"
-                    print(f"💓 [HEARTBEAT 1s] {hb['symbol']} @ {p_fmt} | PnL: {hb['pnl_pct']:+.2f}% (Pico: +{hb.get('highest_pnl', 0):.2f}% | Fase {hb.get('phase', 1)})", flush=True)
+                    pnl_sign = "+" if hb['pnl_pct'] >= 0 else ""
+                    print(f"💓 [HEARTBEAT 1s | T+{tick_count}s] {hb['symbol']} @ {p_fmt} | PnL: {pnl_sign}{hb['pnl_pct']:.2f}% (Pico: +{hb.get('highest_pnl', 0):.2f}% | Fase {hb.get('phase', 1)})", flush=True)
+            elif tick_count % 30 == 0:
+                print(f"📡 [RADAR 1s | T+{tick_count}s/{sleep_secs}s] Monitoreo activo de 120 pares en espera de la siguiente señal...", flush=True)
         except Exception:
             pass
 
@@ -100,9 +103,10 @@ def main():
     sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
     
     # AUTO-CLOUD: Only force cloud mode when running inside GitHub Actions environment
+    is_cloud_env = os.getenv("GITHUB_ACTIONS") == "true" or os.getenv("CI") == "true"
     try:
         import api_connector
-        if os.getenv("GITHUB_ACTIONS") == "true" or os.getenv("CI") == "true":
+        if is_cloud_env:
             api_connector.set_execution_mode("cloud")
             print("☁️ Modo NUBE activado automáticamente (GitHub Actions)", flush=True)
         else:
@@ -112,22 +116,24 @@ def main():
         print(f"⚠️ Could not evaluate execution mode: {e}", flush=True)
     
     # Windows Process Priority: Set to BELOW_NORMAL to ensure user apps have 100% responsiveness
-    try:
-        import ctypes
-        kernel32 = ctypes.windll.kernel32
-        handle = kernel32.GetCurrentProcess()
-        kernel32.SetPriorityClass(handle, 0x00004000)  # BELOW_NORMAL_PRIORITY_CLASS
-        print("⚡ Prioridad Windows configurada en 'BELOW_NORMAL' (PC 100% silencioso y fluido)", flush=True)
-    except Exception:
-        pass
+    if not is_cloud_env:
+        try:
+            import ctypes
+            kernel32 = ctypes.windll.kernel32
+            handle = kernel32.GetCurrentProcess()
+            kernel32.SetPriorityClass(handle, 0x00004000)  # BELOW_NORMAL_PRIORITY_CLASS
+            print("⚡ Prioridad Windows configurada en 'BELOW_NORMAL' (PC 100% silencioso y fluido)", flush=True)
+        except Exception:
+            pass
     
     sleep_interval_secs, total_cycles = get_loop_interval()
     
+    infra_label = "☁️ Servidor de Nube de Alta Velocidad (GitHub Actions)" if is_cloud_env else "⚡ Optimización PC Local: Dashboards en Background | 10 Threads"
     print("=" * 70, flush=True)
     print(f"🚀 RUNNER CUÁNTICO ULTRA-LIGERO (4 HORAS / {total_cycles} CICLOS)", flush=True)
     print(f"⏱️ Intervalo Escáner: Cada {sleep_interval_secs}s ({sleep_interval_secs // 60} min)")
-    print(f"💓 Micro-Heartbeat de Posición: Activo cada 2 segundos")
-    print(f"⚡ Optimización PC: Dashboards HTML/Markdown desactivados | 10 Threads")
+    print(f"💓 Micro-Heartbeat de Posición: Activo cada 1.0 segundo (Sub-segundo / Cero Latencia)")
+    print(f"{infra_label}")
     print("=" * 70, flush=True)
     
     import importlib
