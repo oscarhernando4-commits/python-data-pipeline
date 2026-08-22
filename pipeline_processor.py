@@ -355,7 +355,21 @@ def run_infinite_trading_matrix_cycle():
     # Evaluate Top 15 Candidates with Gemini Flash / Pro LLM Sentinel
     gemini_res = {}
     selected_opp = None
-    if top_15_candidates:
+    real_st_check = api_connector.load_real_account_state()
+    has_active_real_pos = bool(real_st_check.get("position") and real_st_check.get("position", {}).get("symbol"))
+    
+    if has_active_real_pos:
+        act_sym = real_st_check["position"].get("symbol")
+        act_entry = real_st_check["position"].get("entry_price", 0)
+        print(f"🛡️ [SÚPER-CEREBRO EN MODO GESTIÓN ACTIVA] Posición abierta en {act_sym} @ ${act_entry:.4f}. 100% de recursos enfocados en monitorear la salida y cosechar ganancias...")
+        gemini_res = {
+            "selected_symbol": "NONE",
+            "action": "HOLD",
+            "approved": False,
+            "confidence": 100,
+            "reasoning": f"Posición real activa en {act_sym}. Súper-Cerebro vigilando segundo a segundo para salida óptima."
+        }
+    elif top_15_candidates:
         try:
             import text_analyzer
             import llm_router
