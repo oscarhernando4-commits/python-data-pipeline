@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2968,
-    "wins": 1577,
+    "total_trades": 2969,
+    "wins": 1578,
     "losses": 1391,
-    "win_rate_pct": 53.13,
-    "total_pnl_usd": 1708.4223765487905
+    "win_rate_pct": 53.15,
+    "total_pnl_usd": 1708.5364765487905
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 00:17:11",
-      "account_id": "SIM-007",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "REUSDT",
-      "side": "LONG",
-      "entry_price": 0.5307,
-      "exit_price": 0.552,
-      "pnl_usd": 0.57,
-      "result": "WIN",
-      "notes": "WIN on REUSDT (PnL: +4.01%, Net: $+0.57 Fase 5)",
-      "context": {
-        "score": 94,
-        "rsi_15m": 73.35,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 00:21:13",
       "account_id": "SIM-048",
@@ -8487,6 +8470,19 @@
       "pnl_usd": -3.47,
       "result": "LOSS",
       "notes": "LOSS on JTOUSDT (PnL: +0.00%, Net: $-3.47 Fase 2)",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-22 16:49:09",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "XTZUSDT",
+      "side": "LONG",
+      "entry_price": 0.235,
+      "exit_price": 0.2368,
+      "pnl_usd": 0.1141,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.77% <= +0.80%) (Fase 3, PnL: +0.77%)",
       "context": {}
     }
   ]
