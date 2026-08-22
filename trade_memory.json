@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2484,
+    "total_trades": 2487,
     "wins": 1286,
-    "losses": 1198,
-    "win_rate_pct": 51.77,
-    "total_pnl_usd": -8055.072033451208
+    "losses": 1201,
+    "win_rate_pct": 51.71,
+    "total_pnl_usd": -8056.732033451208
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ICPUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ZROUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on KAITOUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ONGUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ONGUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ZAMAUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEOUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on XRPUSDT)"
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on XRPUSDT)",
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ETHFIUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZECUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 06:19:39",
-      "account_id": "SIM-097",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "JASMYUSDT",
-      "side": "SHORT",
-      "entry_price": 0.00403,
-      "exit_price": 0.00412,
-      "pnl_usd": -0.25,
-      "result": "LOSS",
-      "notes": "LOSS on JASMYUSDT (PnL: -2.23%, Net: $-0.25 Fase 1)",
-      "context": {
-        "score": 46,
-        "rsi_15m": 75.26,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 06:31:25",
-      "account_id": "SIM-042",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "JASMYUSDT",
-      "side": "LONG",
-      "entry_price": 0.00409,
-      "exit_price": 0.00411,
-      "pnl_usd": 0.26,
-      "result": "WIN",
-      "notes": "WIN on JASMYUSDT (PnL: +0.49%, Net: $+0.26 Fase 3)",
-      "context": {
-        "score": 46,
-        "rsi_15m": 72.22,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 06:31:25",
-      "account_id": "SIM-051",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "JASMYUSDT",
-      "side": "LONG",
-      "entry_price": 0.00409,
-      "exit_price": 0.00411,
-      "pnl_usd": 0.07,
-      "result": "WIN",
-      "notes": "WIN on JASMYUSDT (PnL: +0.49%, Net: $+0.07 Fase 3)",
-      "context": {
-        "score": 46,
-        "rsi_15m": 72.22,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 06:31:25",
       "account_id": "SIM-052",
@@ -8470,6 +8419,57 @@
       "context": {
         "score": 88,
         "rsi_15m": 54.53,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 01:02:48",
+      "account_id": "SIM-048",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.6244,
+      "exit_price": 0.6061,
+      "pnl_usd": -0.54,
+      "result": "LOSS",
+      "notes": "LOSS on ETHFIUSDT (PnL: -2.93%, Net: $-0.54 Fase 1)",
+      "context": {
+        "score": 81,
+        "rsi_15m": 52.28,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 01:02:48",
+      "account_id": "SIM-049",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.6244,
+      "exit_price": 0.6061,
+      "pnl_usd": -0.53,
+      "result": "LOSS",
+      "notes": "LOSS on ETHFIUSDT (PnL: -2.93%, Net: $-0.53 Fase 1)",
+      "context": {
+        "score": 81,
+        "rsi_15m": 52.28,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 01:02:48",
+      "account_id": "SIM-050",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETHFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.6244,
+      "exit_price": 0.6061,
+      "pnl_usd": -0.59,
+      "result": "LOSS",
+      "notes": "LOSS on ETHFIUSDT (PnL: -2.93%, Net: $-0.59 Fase 1)",
+      "context": {
+        "score": 81,
+        "rsi_15m": 52.28,
         "macro_trend_4h": "NEUTRAL"
       }
     }
