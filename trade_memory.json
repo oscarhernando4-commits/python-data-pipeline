@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2631,
-    "wins": 1380,
+    "total_trades": 2632,
+    "wins": 1381,
     "losses": 1251,
-    "win_rate_pct": 52.45,
-    "total_pnl_usd": -984.3464234512081
+    "win_rate_pct": 52.47,
+    "total_pnl_usd": -984.3364234512081
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 10:43:35",
-      "account_id": "SIM-052",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ROBOUSDT",
-      "side": "LONG",
-      "entry_price": 0.01529,
-      "exit_price": 0.01535,
-      "pnl_usd": 0.05,
-      "result": "WIN",
-      "notes": "WIN on ROBOUSDT (PnL: +0.39%, Net: $+0.05 Fase 2)",
-      "context": {
-        "score": 41,
-        "rsi_15m": 78.66,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 10:47:20",
       "account_id": "SIM-048",
@@ -8454,6 +8437,23 @@
       "context": {
         "score": 31,
         "rsi_15m": 65.4,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 06:20:32",
+      "account_id": "SIM-091",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "PROMUSDT",
+      "side": "SHORT",
+      "entry_price": 2.844,
+      "exit_price": 2.833,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on PROMUSDT (PnL: +0.39%, Net: $+0.01 Fase 3)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 62.04,
         "macro_trend_4h": "NEUTRAL"
       }
     }
