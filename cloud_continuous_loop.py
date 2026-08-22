@@ -84,6 +84,13 @@ def run_focused_position_guardian(max_duration_secs: int = 14400):
         tick += 1
         time.sleep(1.0)
         
+        # 🔄 Sincronización periódica de repositorio cada 15s para detectar cierres externos de inmediato
+        if tick % 15 == 0:
+            try:
+                subprocess.run(["git", "pull", "--rebase"], check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            except Exception:
+                pass
+        
         try:
             hb = api_connector.quick_position_heartbeat()
             if not hb or not isinstance(hb, dict) or not hb.get("symbol"):

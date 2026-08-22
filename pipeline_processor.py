@@ -195,6 +195,12 @@ def run_infinite_trading_matrix_cycle():
         while True:
             tick += 1
             _t.sleep(1.0)
+            if tick % 15 == 0:
+                try:
+                    import subprocess as _sp
+                    _sp.run(["git", "pull", "--rebase"], check=False, stdout=_sp.DEVNULL, stderr=_sp.DEVNULL)
+                except Exception:
+                    pass
             try:
                 hb = api_connector.quick_position_heartbeat()
                 if not hb or not isinstance(hb, dict) or not hb.get("symbol"):
