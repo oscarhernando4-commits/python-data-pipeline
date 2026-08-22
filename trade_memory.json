@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2964,
-    "wins": 1576,
-    "losses": 1388,
-    "win_rate_pct": 53.17,
-    "total_pnl_usd": 1713.6323765487905
+    "total_trades": 2968,
+    "wins": 1577,
+    "losses": 1391,
+    "win_rate_pct": 53.13,
+    "total_pnl_usd": 1708.4223765487905
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,74 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 00:13:06",
-      "account_id": "SIM-091",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "XTZUSDT",
-      "side": "SHORT",
-      "entry_price": 0.2425,
-      "exit_price": 0.2411,
-      "pnl_usd": 0.01,
-      "result": "WIN",
-      "notes": "WIN on XTZUSDT (PnL: +0.58%, Net: $+0.01 Fase 3)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 65.95,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 00:15:05",
-      "account_id": "SIM-083",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "ZAMAUSDT",
-      "side": "SHORT",
-      "entry_price": 0.05096,
-      "exit_price": 0.05093,
-      "pnl_usd": -0.01,
-      "result": "LOSS",
-      "notes": "LOSS on ZAMAUSDT (PnL: +0.06%, Net: $-0.01 Fase 2)",
-      "context": {
-        "score": 67,
-        "rsi_15m": 69.1,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 00:17:10",
-      "account_id": "SIM-005",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "REUSDT",
-      "side": "LONG",
-      "entry_price": 0.5307,
-      "exit_price": 0.552,
-      "pnl_usd": 0.59,
-      "result": "WIN",
-      "notes": "WIN on REUSDT (PnL: +4.01%, Net: $+0.59 Fase 5)",
-      "context": {
-        "score": 94,
-        "rsi_15m": 73.35,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 00:17:11",
-      "account_id": "SIM-006",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "REUSDT",
-      "side": "LONG",
-      "entry_price": 0.5307,
-      "exit_price": 0.552,
-      "pnl_usd": 0.58,
-      "result": "WIN",
-      "notes": "WIN on REUSDT (PnL: +4.01%, Net: $+0.58 Fase 5)",
-      "context": {
-        "score": 94,
-        "rsi_15m": 73.35,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 00:17:11",
       "account_id": "SIM-007",
@@ -8504,6 +8436,58 @@
         "rsi_15m": 63.16,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-22 16:14:13",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "MORPHOUSDT",
+      "side": "SHORT",
+      "entry_price": 2.314,
+      "exit_price": 2.314,
+      "pnl_usd": -0.01,
+      "result": "LOSS",
+      "notes": "LOSS on MORPHOUSDT (PnL: +0.00%, Net: $-0.01 Fase 5)",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-22 16:14:14",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "TRXUSDT",
+      "side": "LONG",
+      "entry_price": 0.3401,
+      "exit_price": 0.3401,
+      "pnl_usd": -0.0,
+      "result": "WIN",
+      "notes": "WIN on TRXUSDT (PnL: +0.00%, Net: $-0.00 Fase 3)",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-22 16:14:14",
+      "account_id": "SIM-093",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "GNOUSDT",
+      "side": "SHORT",
+      "entry_price": 138.73,
+      "exit_price": 138.73,
+      "pnl_usd": -1.73,
+      "result": "LOSS",
+      "notes": "LOSS on GNOUSDT (PnL: +0.00%, Net: $-1.73 Fase 5)",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-22 16:14:14",
+      "account_id": "SIM-094",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "JTOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.6008,
+      "exit_price": 0.6008,
+      "pnl_usd": -3.47,
+      "result": "LOSS",
+      "notes": "LOSS on JTOUSDT (PnL: +0.00%, Net: $-3.47 Fase 2)",
+      "context": {}
     }
   ]
 }
