@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2936,
+    "total_trades": 2939,
     "wins": 1562,
-    "losses": 1374,
-    "win_rate_pct": 53.2,
-    "total_pnl_usd": 1715.6523765487905
+    "losses": 1377,
+    "win_rate_pct": 53.15,
+    "total_pnl_usd": 1714.6423765487907
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TUTUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LDOUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on COTIUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MUBARAKUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on NEXOUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ONGUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COTIUSDT)",
-      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GNOUSDT)"
+      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GNOUSDT)",
+      "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GNOUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on GNOUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 23:37:14",
-      "account_id": "SIM-054",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ORDIUSDT",
-      "side": "LONG",
-      "entry_price": 4.363,
-      "exit_price": 4.544,
-      "pnl_usd": 0.73,
-      "result": "WIN",
-      "notes": "WIN on ORDIUSDT (PnL: +4.15%, Net: $+0.73 Fase 5)",
-      "context": {
-        "score": 82,
-        "rsi_15m": 64.02,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 23:37:14",
-      "account_id": "SIM-060",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ORDIUSDT",
-      "side": "LONG",
-      "entry_price": 4.363,
-      "exit_price": 4.544,
-      "pnl_usd": 2.94,
-      "result": "WIN",
-      "notes": "WIN on ORDIUSDT (PnL: +4.15%, Net: $+2.94 Fase 5)",
-      "context": {
-        "score": 82,
-        "rsi_15m": 64.02,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 23:43:04",
-      "account_id": "SIM-051",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "COMPUSDT",
-      "side": "LONG",
-      "entry_price": 19.95,
-      "exit_price": 20.01,
-      "pnl_usd": 0.03,
-      "result": "WIN",
-      "notes": "WIN on COMPUSDT (PnL: +0.30%, Net: $+0.03 Fase 2)",
-      "context": {
-        "score": 72,
-        "rsi_15m": 71.8,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 23:43:04",
       "account_id": "SIM-052",
@@ -8498,6 +8447,57 @@
       "context": {
         "score": 7,
         "rsi_15m": 89.17,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 15:28:47",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "GNOUSDT",
+      "side": "LONG",
+      "entry_price": 139.1,
+      "exit_price": 136.77,
+      "pnl_usd": -0.34,
+      "result": "LOSS",
+      "notes": "LOSS on GNOUSDT (PnL: -1.68%, Net: $-0.34 Fase 1)",
+      "context": {
+        "score": 7,
+        "rsi_15m": 87.73,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 15:28:47",
+      "account_id": "SIM-053",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "GNOUSDT",
+      "side": "LONG",
+      "entry_price": 139.1,
+      "exit_price": 136.77,
+      "pnl_usd": -0.34,
+      "result": "LOSS",
+      "notes": "LOSS on GNOUSDT (PnL: -1.68%, Net: $-0.34 Fase 1)",
+      "context": {
+        "score": 7,
+        "rsi_15m": 87.73,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 15:28:47",
+      "account_id": "SIM-054",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "GNOUSDT",
+      "side": "LONG",
+      "entry_price": 139.1,
+      "exit_price": 136.77,
+      "pnl_usd": -0.33,
+      "result": "LOSS",
+      "notes": "LOSS on GNOUSDT (PnL: -1.68%, Net: $-0.33 Fase 1)",
+      "context": {
+        "score": 7,
+        "rsi_15m": 87.73,
         "macro_trend_4h": "NEUTRAL"
       }
     }
