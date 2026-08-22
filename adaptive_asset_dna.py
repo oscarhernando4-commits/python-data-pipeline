@@ -71,69 +71,69 @@ ARCHETYPE_CONFIGS = {
         "archetype": "HYPER_VOLATILE_SPRINT",
         "label": "🐆 SPRINT HIPER-VOLÁTIL (Meme / High-Beta)",
         "emoji": "🐆",
-        "initial_sl_pct": -2.80,          # Margen amplio para absorber mechazos de microcentavos
-        "max_stagnation_minutes": 240,    # Mínimo 4 horas de paciencia para permitir despegue
+        "initial_sl_pct": -1.15,          # SL Asimétrico de Precisión (Máx -1.15%)
+        "max_stagnation_minutes": 25,     # Máximo 25 min: Si no despega rápido, salida
         "phase_2_trigger_pct": 0.45,      # Asegura ganancias al subir +0.45%
         "phase_2_retention_ratio": 0.75,  # Retiene el 75% de la cima alcanzada
-        "phase_3_trigger_pct": 1.50,      # Expansión de impulso
+        "phase_3_trigger_pct": 1.20,      # Expansión de impulso
         "phase_3_retention_ratio": 0.70,  # Retiene el 70% de la cima alcanzada
         "phase_4_retention_ratio": 0.65,  # Retiene el 65% de la cima alcanzada en megapump
-        "required_vol_surge_1m": 1.8,     # Exige ignición de volumen sub-minuto brutal
+        "required_vol_surge_1m": 1.5,     # Exige ignición de volumen sub-minuto real
         "required_min_bids_pct": 52.0,    # Libro con clara dominancia de compradores
         "trend_ride_enabled": False,      # Tomar ganancias en retrocesos
-        "wick_slack": 0.35,
-        "guideline_for_ai": "Trata este activo como un SPRINT. Exige volumen explosivo en 1M/10s. Cosecha ganancias con retención escalonada (75% -> 70% -> 65%) y dale hasta 4h de paciencia en Fase 1."
+        "wick_slack": 0.30,
+        "guideline_for_ai": "Trata este activo como un SPRINT. Exige volumen explosivo en 1M/10s. Cosecha ganancias rápido y dale máximo 25m de paciencia."
     },
     "BLUE_CHIP_CORE": {
         "archetype": "BLUE_CHIP_CORE",
         "label": "🏛️ BLUE-CHIP INSTITUCIONAL (L1 / Core)",
         "emoji": "🏛️",
-        "initial_sl_pct": -2.00,          # Soporte estructural estándar
-        "max_stagnation_minutes": 360,    # 6 horas para maduración completa de tendencia macro 4H
-        "phase_2_trigger_pct": 0.55,      # Break-even estándar
+        "initial_sl_pct": -0.95,          # SL Estricto de Soporte (Máx -0.95%)
+        "max_stagnation_minutes": 45,     # Máximo 45 min para evitar monedas zombi estancadas
+        "phase_2_trigger_pct": 0.45,      # Break-even estándar al tocar +0.45%
         "phase_2_retention_ratio": 0.75,  # Retiene el 75% de la cima alcanzada
-        "phase_3_trigger_pct": 2.50,      # Expansión de tendencia
+        "phase_3_trigger_pct": 1.50,      # Expansión de tendencia
         "phase_3_retention_ratio": 0.70,  # Retiene el 70% de la cima alcanzada
         "phase_4_retention_ratio": 0.65,  # Retiene el 65% de la cima alcanzada
         "required_vol_surge_1m": 0.8,     # Volumen orgánico institucional
-        "required_min_bids_pct": 46.0,
-        "trend_ride_enabled": True,       # Acompañar tendencia con MA25 de 5m/15m
-        "wick_slack": 0.45,
-        "guideline_for_ai": "Trata este activo como un CORE INSTITUCIONAL. Valida confluencia con Suelo 7D y FII. Dale hasta 6 horas de respiración y monta la tendencia con medias móviles."
+        "required_min_bids_pct": 48.0,
+        "trend_ride_enabled": False,      # Cosecha de precisión (cero retrasos)
+        "wick_slack": 0.32,
+        "guideline_for_ai": "Trata este activo como CORE. Exige confluencia y ATR >= 0.35%. Máximo 45m de paciencia."
     },
     "SECTOR_ROTATION": {
         "archetype": "SECTOR_ROTATION",
         "label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
         "emoji": "🧩",
-        "initial_sl_pct": -2.00,          # Margen estándar
-        "max_stagnation_minutes": 300,    # 5 horas para capturar rotación completa de sesión
-        "phase_2_trigger_pct": 0.50,
+        "initial_sl_pct": -0.95,          # SL Estricto de Soporte (Máx -0.95%)
+        "max_stagnation_minutes": 40,     # Máximo 40 min para confirmar rotación
+        "phase_2_trigger_pct": 0.45,
         "phase_2_retention_ratio": 0.75,  # Retiene 75% de la cima
-        "phase_3_trigger_pct": 2.20,
+        "phase_3_trigger_pct": 1.50,
         "phase_3_retention_ratio": 0.70,  # Retiene 70% de la cima
         "phase_4_retention_ratio": 0.65,  # Retiene 65% de la cima
-        "required_vol_surge_1m": 1.1,
-        "required_min_bids_pct": 48.0,
-        "trend_ride_enabled": True,
-        "wick_slack": 0.40,
-        "guideline_for_ai": "Trata este activo como ROTACIÓN SECTORIAL. Prioriza si su sector está CALIENTE hoy. Dale hasta 5 horas buscando expansiones de +2% a +4%."
+        "required_vol_surge_1m": 1.0,
+        "required_min_bids_pct": 50.0,
+        "trend_ride_enabled": False,
+        "wick_slack": 0.32,
+        "guideline_for_ai": "Trata este activo como ROTACIÓN SECTORIAL. Exige sector caliente y volumen. Máximo 40m de paciencia."
     },
     "THIN_BOOK_MICRO": {
         "archetype": "THIN_BOOK_MICRO",
         "label": "🎯 MICRO-CAP / LIBRO DELGADO",
         "emoji": "🎯",
-        "initial_sl_pct": -1.50,          # SL ajustado porque los libros delgados caen rápido
-        "max_stagnation_minutes": 240,    # Mínimo 4 horas de paciencia
-        "phase_2_trigger_pct": 0.40,      # Bloqueo de ganancia
+        "initial_sl_pct": -0.90,          # SL Ajustado -0.90% porque libros delgados caen rápido
+        "max_stagnation_minutes": 25,     # Máximo 25 min de paciencia
+        "phase_2_trigger_pct": 0.40,      # Bloqueo de ganancia rápido
         "phase_2_retention_ratio": 0.75,  # Retiene 75% de la cima
-        "phase_3_trigger_pct": 1.20,
+        "phase_3_trigger_pct": 1.10,
         "phase_3_retention_ratio": 0.70,  # Retiene 70% de la cima
         "phase_4_retention_ratio": 0.65,  # Retiene 65% de la cima
-        "required_vol_surge_1m": 1.5,
+        "required_vol_surge_1m": 1.3,
         "required_min_bids_pct": 54.0,    # Exige fuerte muro comprador
         "trend_ride_enabled": False,
-        "wick_slack": 0.30,
-        "guideline_for_ai": "Trata este activo como LIBRO DELGADO. Exige volumen real y muro de Bids. Dale hasta 4 horas para desarrollar el movimiento."
+        "wick_slack": 0.28,
+        "guideline_for_ai": "Trata este activo como LIBRO DELGADO. Exige volumen real y muro de Bids > $25k. Máximo 25m."
     }
 }
 
@@ -178,6 +178,9 @@ def get_asset_dna_archetype(symbol: str, atr_15m_pct: float = 0.30, price: float
     config["symbol"] = symbol
     config["clean_symbol"] = clean_sym
     config["is_blacklisted_fan_token"] = False
+    config["is_low_volatility_zombie"] = bool(atr_15m_pct < 0.30 and clean_sym not in ["BTC", "ETH"])
+    if config["is_low_volatility_zombie"]:
+        config["guideline_for_ai"] = "⛔ VETO ACTIVO: Volatilidad insuficiente (ATR 15M < 0.30%). Prohibido comprar activos zombi sin momentum."
     return config
 
 

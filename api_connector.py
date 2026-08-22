@@ -917,9 +917,9 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             phase = 2
             phase_label = f"🔒 FASE 2 BREAK-EVEN BLINDADO (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}%)"
         else:
-            sl_pct = -2.00
+            sl_pct = -0.95
             phase = 1
-            phase_label = f"🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (Cima +{highest_pnl_pct:.2f}% | SL Defensivo -2.00%)"
+            phase_label = f"🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (Cima +{highest_pnl_pct:.2f}% | SL Defensivo -0.95%)"
                 
         return sl_pct, phase, phase_label
 
@@ -1469,7 +1469,18 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 dist_24h_high = mtf_res.get("dist_to_24h_high_pct", 999.0)
                 is_at_daily_ceiling = mtf_res.get("is_at_daily_resistance_ceiling", False)
                 
-                if is_at_daily_ceiling:
+                # 🚫 1. COOLDOWN DE 2 HORAS ANTI-RESACA POST-TRADE (Evita re-entrar en trampas como COTI)
+                last_closed_sym = state.get("_last_closed_symbol")
+                last_closed_time = state.get("_last_closed_time", 0)
+                now_epoch = time.time()
+                if best_symbol == last_closed_sym and (now_epoch - last_closed_time) < 7200:
+                    mins_passed = int((now_epoch - last_closed_time) / 60)
+                    is_stable = True
+                    print(f"⛔ Compra rechazada: {best_symbol} en COOLDOWN OBLIGATORIO DE 2 HORAS (cerrado hace {mins_passed}m, faltan {120-mins_passed}m). Prohibido reentrar en resaca.")
+                elif arch_dna.get("is_low_volatility_zombie", False):
+                    is_stable = True
+                    print(f"⛔ Compra rechazada: {best_symbol} descartado por VOLATILIDAD INSUFICIENTE (ATR 15M < 0.30%). Prohibido operar activos zombi sin movimiento.")
+                elif is_at_daily_ceiling:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} bloqueado por TECHO DE RESISTENCIA 30M/24H (Canal 30M: {range_pos_30m*100:.0f}%, Distancia a Máximo 24H: +{dist_24h_high:.2f}%). Prohibido comprar la cima.")
                 elif is_15m_cascade:
