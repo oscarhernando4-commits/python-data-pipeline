@@ -1,40 +1,28 @@
 {
   "initial_deposit_usdt": 15.47,
   "initial_total_usd": 20.07,
-  "current_balance_usd": 15.77,
-  "net_pnl_usd": 0.3,
-  "wins": 39,
-  "losses": 34,
-  "trades_count": 73,
-  "daily_wins": 3,
-  "daily_losses": 1,
-<<<<<<< Updated upstream
-  "position": null,
-  "last_trade_time": "26-08-22<br>02:42",
-  "status": "🟦 Buscando Entrada A+",
-=======
+  "current_balance_usd": 15.78,
+  "net_pnl_usd": 0.31,
+  "wins": 0,
+  "losses": 0,
+  "trades_count": 0,
+  "daily_wins": 0,
+  "daily_losses": 0,
   "position": {
     "symbol": "BBUSDT",
     "quantity": 1389.6,
     "entry_price": 0.01101,
-    "highest_price": 0.01106,
+    "highest_price": 0.01101,
     "cost_usd": 15.3,
     "side": "LONG",
     "phase": 1,
     "break_even": false,
-    "entry_time_ms": 1787366300098,
-    "volatility_regime": "🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (🧩 Cima +0.45% | SL Defensivo -2.00%)"
+    "entry_time_ms": 1787366725923
   },
-  "last_trade_time": "26-08-22<br>02:35",
+  "last_trade_time": "26-08-21<br>21:45",
   "status": "🔵 En Vivo LONG (BBUSDT @ $0.0110)",
->>>>>>> Stashed changes
-  "_cached_total_val": 15.77,
+  "_cached_total_val": 15.78,
   "_cached_usdt_free": 0.1233,
   "_cached_bnb": 0.00048276,
-  "_cached_bnb_usd": 0.34,
-  "_btc_last_price": 78300.0,
-  "last_trading_day": "2026-08-22",
-  "_last_closed_symbol": "RUNEUSDT",
-  "_last_closed_time": 1787366136.044,
-  "_last_exit_price": 0.473
+  "_cached_bnb_usd": 0.34
 }
