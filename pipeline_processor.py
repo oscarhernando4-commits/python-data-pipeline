@@ -190,17 +190,22 @@ def run_infinite_trading_matrix_cycle():
         print(f"\n🛡️ [SÚPER-CEREBRO EN GESTIÓN 100% EXCLUSIVA] Posición activa en {sym}.")
         print("⚡ Monitoreo ininterrumpido segundo a segundo activo hasta la salida.\n", flush=True)
         
-        import time as _t
+        import time as _t, threading
+        def _async_git_pull_local():
+            try:
+                import os, subprocess as _sp
+                _env = os.environ.copy()
+                _env["GIT_TERMINAL_PROMPT"] = "0"
+                _sp.run(["git", "pull", "--rebase"], check=False, stdout=_sp.DEVNULL, stderr=_sp.DEVNULL, timeout=5, env=_env)
+            except Exception:
+                pass
+
         tick = 0
         while True:
             tick += 1
             _t.sleep(1.0)
-            if tick % 15 == 0:
-                try:
-                    import subprocess as _sp
-                    _sp.run(["git", "pull", "--rebase"], check=False, stdout=_sp.DEVNULL, stderr=_sp.DEVNULL)
-                except Exception:
-                    pass
+            if tick % 30 == 0:
+                threading.Thread(target=_async_git_pull_local, daemon=True).start()
             try:
                 hb = api_connector.quick_position_heartbeat()
                 if not hb or not isinstance(hb, dict) or not hb.get("symbol"):

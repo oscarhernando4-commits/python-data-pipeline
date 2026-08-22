@@ -78,21 +78,31 @@ def run_focused_position_guardian(max_duration_secs: int = 14400):
     print("💓 Monitoreo en vivo SUB-SEGUNDO (1s) para cosechar la cima o ejecutar SL.", flush=True)
     print("=" * 70 + "\n", flush=True)
     
+    import threading
+    def _async_git_pull():
+        try:
+            import os
+            _env = os.environ.copy()
+            _env["GIT_TERMINAL_PROMPT"] = "0"
+            subprocess.run(["git", "pull", "--rebase"], check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=5, env=_env)
+        except Exception:
+            pass
+
+    def _async_git_push():
+        try:
+            run_git_push_sync(1, 1)
+        except Exception:
+            pass
+
     start_t = time.time()
     tick = 0
     while time.time() - start_t < max_duration_secs:
         tick += 1
         time.sleep(1.0)
         
-        # 🔄 Sincronización periódica de repositorio cada 30s para detectar cierres externos de inmediato
+        # 🔄 Sincronización en segundo plano (0ms de bloqueo para garantizar pulso ininterrumpido cada 1s)
         if tick % 30 == 0:
-            try:
-                import os
-                _env = os.environ.copy()
-                _env["GIT_TERMINAL_PROMPT"] = "0"
-                subprocess.run(["git", "pull", "--rebase"], check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=5, env=_env)
-            except Exception:
-                pass
+            threading.Thread(target=_async_git_pull, daemon=True).start()
         
         try:
             hb = api_connector.quick_position_heartbeat()
@@ -110,9 +120,9 @@ def run_focused_position_guardian(max_duration_secs: int = 14400):
             pnl_sign = "+" if hb['pnl_pct'] >= 0 else ""
             print(f"💓 [HEARTBEAT 1s | T+{tick}s] {hb['symbol']} @ {p_fmt} | PnL: {pnl_sign}{hb['pnl_pct']:.2f}% (Pico: +{hb.get('highest_pnl', 0):.2f}% | Fase {hb.get('phase', 1)})", flush=True)
             
-            # Sincronización periódica ligera de estado a git cada 300s (5m) para respaldar en GitHub
+            # Sincronización periódica ligera de estado a git cada 300s en hilo secundario (0ms de retraso)
             if tick % 300 == 0:
-                run_git_push_sync(1, 1)
+                threading.Thread(target=_async_git_push, daemon=True).start()
         except Exception as e:
             print(f"⚠️ Nota en Heartbeat Guardian: {e}", flush=True)
             time.sleep(1.0)
