@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2789,
+    "total_trades": 2790,
     "wins": 1483,
-    "losses": 1306,
-    "win_rate_pct": 53.17,
-    "total_pnl_usd": 2005.8635765487918
+    "losses": 1307,
+    "win_rate_pct": 53.15,
+    "total_pnl_usd": 2005.3635765487918
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COTIUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DCRUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COTIUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on STXUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ONGUSDT)",
       "BLOCK SHORT when RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on LDOUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on GPSUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PROMUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PROMUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on COTIUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on POLUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 11:20:27",
-      "account_id": "SIM-070",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "PUMPUSDT",
-      "side": "SHORT",
-      "entry_price": 0.004105,
-      "exit_price": 0.004095,
-      "pnl_usd": 0.02,
-      "result": "WIN",
-      "notes": "WIN on PUMPUSDT (PnL: +0.24%, Net: $+0.02 Fase 3)",
-      "context": {
-        "score": 65,
-        "rsi_15m": 51.15,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 11:39:31",
       "account_id": "SIM-042",
@@ -8510,6 +8493,23 @@
       "context": {
         "score": 0,
         "rsi_15m": 48.74,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 10:50:33",
+      "account_id": "SIM-081",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01196,
+      "exit_price": 0.01205,
+      "pnl_usd": -0.5,
+      "result": "LOSS",
+      "notes": "LOSS on COTIUSDT (PnL: -0.75%, Net: $-0.50 Fase 3)",
+      "context": {
+        "score": 92,
+        "rsi_15m": 55.24,
         "macro_trend_4h": "NEUTRAL"
       }
     }
