@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2510,
-    "wins": 1303,
+    "total_trades": 2511,
+    "wins": 1304,
     "losses": 1207,
-    "win_rate_pct": 51.91,
-    "total_pnl_usd": -8107.152823451208
+    "win_rate_pct": 51.93,
+    "total_pnl_usd": -8107.109323451208
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 07:55:23",
-      "account_id": "SIM-029",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ASTERUSDT",
-      "side": "SHORT",
-      "entry_price": 0.692,
-      "exit_price": 0.709,
-      "pnl_usd": -0.61,
-      "result": "LOSS",
-      "notes": "LOSS on ASTERUSDT (PnL: -2.46%, Net: $-0.61 Fase 1)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 77.04,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 07:55:23",
       "account_id": "SIM-053",
@@ -8456,6 +8439,19 @@
         "rsi_15m": 76.44,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-22 03:50:50",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "JSTUSDT",
+      "side": "BUY",
+      "entry_price": 0.10461,
+      "exit_price": 0.1049,
+      "pnl_usd": 0.04349999999999979,
+      "result": "WIN",
+      "notes": "Real Money Trade closed with 0.28%",
+      "context": {}
     }
   ]
 }
