@@ -1,49 +1,29 @@
 {
   "initial_deposit_usdt": 15.47,
   "initial_total_usd": 20.07,
-<<<<<<< Updated upstream
-  "current_balance_usd": 15.37,
-  "net_pnl_usd": -0.1,
-  "wins": 46,
-=======
-  "current_balance_usd": 15.43,
-  "net_pnl_usd": -0.04,
-  "wins": 43,
->>>>>>> Stashed changes
-  "losses": 36,
-  "trades_count": 82,
-  "daily_wins": 10,
-  "daily_losses": 3,
+  "current_balance_usd": 15.38,
+  "net_pnl_usd": -0.09,
+  "wins": 0,
+  "losses": 0,
+  "trades_count": 0,
+  "daily_wins": 0,
+  "daily_losses": 0,
   "position": {
     "symbol": "CAKEUSDT",
     "quantity": 8.83,
     "entry_price": 1.71,
-    "highest_price": 1.716,
-    "cost_usd": 15.08,
+    "highest_price": 1.71,
+    "cost_usd": 15.07,
     "side": "LONG",
     "phase": 1,
-    "holding_cycles": 9,
-    "volatility_regime": "🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (🧩 Cima +0.35% | SL Defensivo -0.95%)"
+    "holding_cycles": 1,
+    "volatility_regime": "🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (🧩 Cima +0.00% | SL Defensivo -0.95%)"
   },
-<<<<<<< Updated upstream
-  "last_trade_time": "26-08-22<br>14:56",
-  "status": "🔵 En Vivo LONG (CAKEUSDT @ $1.7060)",
-  "_cached_total_val": 15.37,
+  "last_trade_time": "26-08-22<br>15:00",
+  "status": "🔵 En Vivo LONG (CAKEUSDT @ $1.7070)",
+  "_cached_total_val": 15.38,
   "_cached_usdt_free": 0.0565,
   "_cached_bnb": 0.0003573,
   "_cached_bnb_usd": 0.25,
-  "_btc_last_price": 77023.4,
-=======
-  "last_trade_time": "26-08-22<br>13:10",
-  "status": "🔵 En Vivo LONG (DEXEUSDT @ $1.9190)",
-  "_cached_total_val": 15.43,
-  "_cached_usdt_free": 0.0542,
-  "_cached_bnb": 0.00045487,
-  "_cached_bnb_usd": 0.32,
-  "_btc_last_price": 77247.24,
->>>>>>> Stashed changes
-  "last_trading_day": "2026-08-22",
-  "_last_closed_symbol": "COMPUSDT",
-  "_last_closed_time": 1787409573.379663,
-  "_last_exit_price": 19.71
+  "_btc_last_price": 76992.01
 }
