@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2609,
+    "total_trades": 2610,
     "wins": 1368,
-    "losses": 1241,
-    "win_rate_pct": 52.43,
-    "total_pnl_usd": -1153.2820234512076
+    "losses": 1242,
+    "win_rate_pct": 52.41,
+    "total_pnl_usd": -1153.5964234512076
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 09:57:59",
-      "account_id": "SIM-091",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "TRUMPUSDT",
-      "side": "SHORT",
-      "entry_price": 1.64,
-      "exit_price": 1.767,
-      "pnl_usd": -0.19,
-      "result": "LOSS",
-      "notes": "LOSS on TRUMPUSDT (PnL: -7.74%, Net: $-0.19 Fase 1)",
-      "context": {
-        "score": 55,
-        "rsi_15m": 63.99,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 09:57:59",
       "account_id": "SIM-094",
@@ -8448,6 +8431,19 @@
         "rsi_15m": 32.87,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-22 05:43:06",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "COTIUSDT",
+      "side": "LONG",
+      "entry_price": 0.01084,
+      "exit_price": 0.01062,
+      "pnl_usd": -0.3144,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (-2.03% <= -2.00%) (Fase 1, PnL: -2.03%)",
+      "context": {}
     }
   ]
 }
