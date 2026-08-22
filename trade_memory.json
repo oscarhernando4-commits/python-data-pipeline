@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2455,
+    "total_trades": 2458,
     "wins": 1269,
-    "losses": 1186,
-    "win_rate_pct": 51.69,
-    "total_pnl_usd": -8061.632175451209
+    "losses": 1189,
+    "win_rate_pct": 51.63,
+    "total_pnl_usd": -8061.722175451208
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on RENDERUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AVAXUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on WIFUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on WLFIUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LTCUSDT)",
-      "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZAMAUSDT)"
+      "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZAMAUSDT)",
+      "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ETCUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ORDIUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 05:05:24",
-      "account_id": "SIM-003",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "BCHUSDT",
-      "side": "LONG",
-      "entry_price": 227.9,
-      "exit_price": 229.9,
-      "pnl_usd": 0.09,
-      "result": "WIN",
-      "notes": "WIN on BCHUSDT (PnL: +0.88%, Net: $+0.09 Fase 3)",
-      "context": {
-        "score": 46,
-        "rsi_15m": 68.57,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 05:15:30",
-      "account_id": "SIM-039",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "POLUSDT",
-      "side": "SHORT",
-      "entry_price": 0.08299,
-      "exit_price": 0.08465,
-      "pnl_usd": -0.05,
-      "result": "LOSS",
-      "notes": "LOSS on POLUSDT (PnL: -2.00%, Net: $-0.05 Fase 1)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 84.16,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 05:19:39",
-      "account_id": "SIM-091",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "TRUMPUSDT",
-      "side": "SHORT",
-      "entry_price": 1.64,
-      "exit_price": 1.694,
-      "pnl_usd": -0.08,
-      "result": "LOSS",
-      "notes": "LOSS on TRUMPUSDT (PnL: -3.29%, Net: $-0.08 Fase 1)",
-      "context": {
-        "score": 55,
-        "rsi_15m": 67.57,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 05:33:49",
       "account_id": "SIM-042",
@@ -8466,6 +8415,57 @@
       "context": {
         "score": 74,
         "rsi_15m": 73.7,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 00:05:05",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETCUSDT",
+      "side": "LONG",
+      "entry_price": 8.34,
+      "exit_price": 8.34,
+      "pnl_usd": -0.03,
+      "result": "LOSS",
+      "notes": "LOSS on ETCUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
+      "context": {
+        "score": 74,
+        "rsi_15m": 84.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 00:05:05",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETCUSDT",
+      "side": "LONG",
+      "entry_price": 8.34,
+      "exit_price": 8.34,
+      "pnl_usd": -0.03,
+      "result": "LOSS",
+      "notes": "LOSS on ETCUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
+      "context": {
+        "score": 74,
+        "rsi_15m": 84.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 00:05:05",
+      "account_id": "SIM-053",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ETCUSDT",
+      "side": "LONG",
+      "entry_price": 8.34,
+      "exit_price": 8.34,
+      "pnl_usd": -0.03,
+      "result": "LOSS",
+      "notes": "LOSS on ETCUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
+      "context": {
+        "score": 74,
+        "rsi_15m": 84.98,
         "macro_trend_4h": "NEUTRAL"
       }
     }
