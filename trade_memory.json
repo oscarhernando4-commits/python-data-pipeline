@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2676,
+    "total_trades": 2677,
     "wins": 1418,
-    "losses": 1258,
-    "win_rate_pct": 52.99,
-    "total_pnl_usd": -1036.2664234512083
+    "losses": 1259,
+    "win_rate_pct": 52.97,
+    "total_pnl_usd": -1036.2764234512083
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 07:47:46",
-      "account_id": "SIM-091",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "TRUMPUSDT",
-      "side": "SHORT",
-      "entry_price": 1.64,
-      "exit_price": 1.849,
-      "pnl_usd": -0.31,
-      "result": "LOSS",
-      "notes": "LOSS on TRUMPUSDT (PnL: -12.74%, Net: $-0.31 Fase 1)",
-      "context": {
-        "score": 79,
-        "rsi_15m": 70.01,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 07:47:46",
       "account_id": "SIM-094",
@@ -8454,6 +8437,23 @@
       "context": {
         "score": 76,
         "rsi_15m": 43.1,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 07:56:30",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "ZAMAUSDT",
+      "side": "SHORT",
+      "entry_price": 0.06433,
+      "exit_price": 0.06438,
+      "pnl_usd": -0.01,
+      "result": "LOSS",
+      "notes": "LOSS on ZAMAUSDT (PnL: -0.08%, Net: $-0.01 Fase 2)",
+      "context": {
+        "score": 24,
+        "rsi_15m": 71.04,
         "macro_trend_4h": "NEUTRAL"
       }
     }
