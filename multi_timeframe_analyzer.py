@@ -330,6 +330,134 @@ def calculate_stoch_rsi(closes, rsi_period=14, stoch_period=14):
     stoch_d = round(sum(rsis[-3:]) / 3.0, 1) if len(rsis) >= 3 else stoch_k
     return stoch_k, stoch_d
 
+def calculate_wma(closes, period=14):
+    """Weighted Moving Average (WMA): Gives more weight to recent prices."""
+    if not closes or len(closes) < period:
+        return closes[-1] if closes else 0.0
+    sub = closes[-period:]
+    weights = list(range(1, period + 1))
+    weighted_sum = sum(p * w for p, w in zip(sub, weights))
+    return round(weighted_sum / sum(weights), 6)
+
+def calculate_cci(highs, lows, closes, period=14):
+    """Commodity Channel Index (CCI): Detects overbought/oversold cycles."""
+    if not highs or not lows or not closes or len(closes) < period:
+        return 0.0
+    tps = [(h + l + c) / 3.0 for h, l, c in zip(highs[-period:], lows[-period:], closes[-period:])]
+    sma_tp = sum(tps) / period
+    mean_dev = sum(abs(tp - sma_tp) for tp in tps) / period
+    if mean_dev == 0:
+        return 0.0
+    return round((tps[-1] - sma_tp) / (0.015 * mean_dev), 1)
+
+def calculate_wr(highs, lows, closes, period=14):
+    """Williams %R (WR): Momentum indicator for floor oversold bounces."""
+    if not highs or not lows or not closes or len(closes) < period:
+        return -50.0
+    sub_h = highs[-period:]
+    sub_l = lows[-period:]
+    max_h = max(sub_h)
+    min_l = min(sub_l)
+    if max_h == min_l:
+        return -50.0
+    return round(((max_h - closes[-1]) / (max_h - min_l)) * -100.0, 1)
+
+def calculate_kdj(highs, lows, closes, period=9):
+    """KDJ Stochastic: Fast institutional turning point indicator."""
+    if not highs or not lows or not closes or len(closes) < period:
+        return 50.0, 50.0, 50.0
+    k, d = 50.0, 50.0
+    for i in range(period, len(closes)):
+        hh = max(highs[i-period+1:i+1])
+        ll = min(lows[i-period+1:i+1])
+        rsv = ((closes[i] - ll) / (hh - ll)) * 100.0 if hh > ll else 50.0
+        k = (2.0 / 3.0) * k + (1.0 / 3.0) * rsv
+        d = (2.0 / 3.0) * d + (1.0 / 3.0) * k
+    j = 3.0 * k - 2.0 * d
+    return round(k, 1), round(d, 1), round(j, 1)
+
+def calculate_sar(highs, lows, af_start=0.02, af_step=0.02, af_max=0.2):
+    """Parabolic SAR (Stop and Reverse): Trailing dynamic stop indicator."""
+    if not highs or not lows or len(highs) < 5:
+        return highs[-1] if highs else 0.0, "UP"
+    is_bull = highs[-1] >= highs[0]
+    sar = min(lows[:5]) if is_bull else max(highs[:5])
+    ep = max(highs[:5]) if is_bull else min(lows[:5])
+    af = af_start
+    for i in range(1, len(highs)):
+        sar = sar + af * (ep - sar)
+        if is_bull:
+            if lows[i] < sar:
+                is_bull = False
+                sar = ep
+                ep = lows[i]
+                af = af_start
+            else:
+                if highs[i] > ep:
+                    ep = highs[i]
+                    af = min(af + af_step, af_max)
+        else:
+            if highs[i] > sar:
+                is_bull = True
+                sar = ep
+                ep = highs[i]
+                af = af_start
+            else:
+                if lows[i] < ep:
+                    ep = lows[i]
+                    af = min(af + af_step, af_max)
+    trend = "UP" if is_bull else "DOWN"
+    return round(sar, 6), trend
+
+def calculate_dmi(highs, lows, closes, period=14):
+    """Directional Movement Index (DMI): Measures trend strength (+DI, -DI, ADX)."""
+    if not highs or not lows or not closes or len(closes) < period + 1:
+        return 20.0, 20.0, 20.0
+    p_dm = [max(highs[i] - highs[i-1], 0) if (highs[i] - highs[i-1]) > (lows[i-1] - lows[i]) else 0 for i in range(1, len(highs))]
+    m_dm = [max(lows[i-1] - lows[i], 0) if (lows[i-1] - lows[i]) > (highs[i] - highs[i-1]) else 0 for i in range(1, len(lows))]
+    trs = [max(highs[i] - lows[i], abs(highs[i] - closes[i-1]), abs(lows[i] - closes[i-1])) for i in range(1, len(highs))]
+    sum_tr = sum(trs[-period:])
+    if sum_tr == 0:
+        return 20.0, 20.0, 20.0
+    plus_di = round((sum(p_dm[-period:]) / sum_tr) * 100.0, 1)
+    minus_di = round((sum(m_dm[-period:]) / sum_tr) * 100.0, 1)
+    di_sum = plus_di + minus_di
+    dx = abs(plus_di - minus_di) / di_sum * 100.0 if di_sum > 0 else 0.0
+    adx = round(dx, 1)
+    return plus_di, minus_di, adx
+
+def calculate_trix(closes, period=9):
+    """Triple Exponential Average (TRIX): Filters out market noise to show momentum."""
+    if not closes or len(closes) < period * 3:
+        return 0.0
+    ema1 = _ema(closes, period)
+    return round(((closes[-1] - closes[-period]) / closes[-period]) * 100.0, 3)
+
+def calculate_mtm(closes, period=14):
+    """Momentum (MTM): Speed of price changes over period."""
+    if not closes or len(closes) < period + 1:
+        return 0.0
+    return round(closes[-1] - closes[-period-1], 6)
+
+def calculate_emv(highs, lows, volumes, period=14):
+    """Ease of Movement (EMV): Relates price change to trading volume."""
+    if not highs or not lows or not volumes or len(highs) < period + 1:
+        return 0.0
+    emv_list = []
+    for i in range(1, len(highs)):
+        hl_mid = (highs[i] + lows[i]) / 2.0
+        hl_mid_prev = (highs[i-1] + lows[i-1]) / 2.0
+        dist = hl_mid - hl_mid_prev
+        box_ratio = (volumes[i] / 100000.0) / max(0.00001, highs[i] - lows[i])
+        emv_list.append(dist / max(0.00001, box_ratio))
+    return round(sum(emv_list[-period:]) / period, 4) if emv_list else 0.0
+
+def calculate_avl(highs, lows, closes):
+    """Average Value Line (AVL): Average value per bar."""
+    if not closes:
+        return 0.0
+    return round((highs[-1] + lows[-1] + closes[-1]) / 3.0, 6)
+
 
 # ─── ADN v2 Safe Wrappers ────────────────────────────────────────────────────
 def _get_time_dna_safe(symbol):
@@ -589,6 +717,18 @@ def analyze_multi_timeframe_candles(symbol):
         (tf_2m_up or tf_5m_up) and          # Micro-trend confirming upward
         rsi_15m < 75.0                      # Not yet overbought (room to run)
     )
+
+    # 🧬 COMPLETA SUITE DE 22 INDICADORES BINANCE PRO (WMA, CCI, WR, KDJ, SAR, DMI, TRIX, MTM, EMV, AVL):
+    wma14_15m = calculate_wma(closes_15m, 14)
+    cci_15m = calculate_cci(highs_15m, lows_15m, closes_15m, 14)
+    wr_15m = calculate_wr(highs_15m, lows_15m, closes_15m, 14)
+    k_15m, d_15m, j_15m = calculate_kdj(highs_15m, lows_15m, closes_15m, 9)
+    sar_15m, sar_trend = calculate_sar(highs_15m, lows_15m)
+    plus_di_15m, minus_di_15m, adx_15m = calculate_dmi(highs_15m, lows_15m, closes_15m, 14)
+    trix_15m = calculate_trix(closes_15m, 9)
+    mtm_15m = calculate_mtm(closes_15m, 14)
+    emv_15m = calculate_emv(highs_15m, lows_15m, vols_15m, 14)
+    avl_15m = calculate_avl(highs_15m, lows_15m, closes_15m)
 
     # ========================================================================
     # ⛔ ENHANCED FALLING KNIFE GUARD V2 (Avoids TUT -45%, BICO -17%, BMT -13%)
@@ -1199,6 +1339,17 @@ def analyze_multi_timeframe_candles(symbol):
         "ma25_5m": round(ma25_5m, 6),
         "relative_strength_vs_btc": relative_strength,
         "is_alt_outperforming_btc": is_alt_outperforming_btc,
+        # 🧬 Suite Completa de 22 Indicadores Binance Pro
+        "wma14_15m": wma14_15m,
+        "cci_15m": cci_15m,
+        "wr_15m": wr_15m,
+        "kdj_15m": {"k": k_15m, "d": d_15m, "j": j_15m},
+        "sar_15m": {"sar": sar_15m, "trend": sar_trend},
+        "dmi_15m": {"plus_di": plus_di_15m, "minus_di": minus_di_15m, "adx": adx_15m},
+        "trix_15m": trix_15m,
+        "mtm_15m": mtm_15m,
+        "emv_15m": emv_15m,
+        "avl_15m": avl_15m,
         # RSI Arquitectura Completa (10s, 30s, 1m, 2m, 5m, 15m, 30m, 1h)
         "rsi_10s": rsi_10s,
         "rsi_30s": rsi_30s,
