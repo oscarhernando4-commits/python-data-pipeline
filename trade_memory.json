@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2763,
+    "total_trades": 2764,
     "wins": 1467,
-    "losses": 1296,
-    "win_rate_pct": 53.09,
-    "total_pnl_usd": 458.94357654879184
+    "losses": 1297,
+    "win_rate_pct": 53.08,
+    "total_pnl_usd": 456.2835765487918
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 10:41:37",
-      "account_id": "SIM-015",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "PROMUSDT",
-      "side": "LONG",
-      "entry_price": 2.77,
-      "exit_price": 2.768,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on PROMUSDT (PnL: -0.07%, Net: $-0.03 Fase 2)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 85.27,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 10:41:37",
       "account_id": "SIM-016",
@@ -8510,6 +8493,23 @@
       "context": {
         "score": 60,
         "rsi_15m": 33.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 10:06:32",
+      "account_id": "SIM-081",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01276,
+      "exit_price": 0.01335,
+      "pnl_usd": -2.66,
+      "result": "LOSS",
+      "notes": "LOSS on COTIUSDT (PnL: -4.62%, Net: $-2.66 Fase 1)",
+      "context": {
+        "score": 31,
+        "rsi_15m": 65.35,
         "macro_trend_4h": "NEUTRAL"
       }
     }
