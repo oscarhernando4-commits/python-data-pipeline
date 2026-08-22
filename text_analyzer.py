@@ -100,10 +100,8 @@ def get_market_macro_context(symbol_analysis_map, fear_greed, news_headlines):
             except urllib.error.HTTPError as e:
                 if e.code == 429:
                     llm_router.mark_key_in_cooldown(key)
-                    continue
-                else:
-                    break
+                continue
             except Exception:
-                break
+                continue
             
     return "Macro Analyst Fallback: Alta volatilidad detectada (Modelos IA Ocupados)."
