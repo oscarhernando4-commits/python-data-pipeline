@@ -57,6 +57,10 @@ def sleep_with_micro_heartbeat(sleep_secs: int):
                 print(f"💓 [HEARTBEAT 1s | T+{tick_count}s] {hb['symbol']} @ {p_fmt} | PnL: {pnl_sign}{hb['pnl_pct']:.2f}% (Pico: +{hb.get('highest_pnl', 0):.2f}% | Fase {hb.get('phase', 1)})", flush=True)
             elif tick_count % 15 == 0:
                 print(f"📡 [RADAR 1s | T+{tick_count}s/{sleep_secs}s] Monitoreo activo de 120 pares en espera de la siguiente señal...", flush=True)
+        except Exception:
+            pass
+
+
 def run_focused_position_guardian(max_duration_secs: int = 14400):
     """
     🎯 GUARDIÁN SNIPER DEDICADO AL 100% (Modo Cero Latencia / 1s Heartbeat):
