@@ -1700,21 +1700,24 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 elif is_active_falling_knife:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} bloqueado por CUCHILLO CAYENDO / SANGRADO ACTIVO (10s: DN, 30s: DN, 1M: DN). Prohibido comprar mientras sigue cayendo. Esperando freno.")
-                elif not is_learned_signal and not has_floor_turnaround:
+                elif mtf_res.get("obv_trend") == "DISTRIBUTING":
+                    is_stable = True
+                    print(f"⛔ Compra rechazada: {best_symbol} bloqueado por DISTRIBUCIÓN INSTITUCIONAL (OBV = DISTRIBUTING). El dinero inteligente está vendiendo.")
+                elif not has_floor_turnaround:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} en zona baja pero SIN GIRO CONFIRMADO (1M: {tf_1m}, 2M: {tf_2m}, Divergencia: {mtf_res.get('is_bullish_divergence')}). Exige vela verde de confirmación.")
-                elif not is_learned_signal and mtf_res.get("is_overextended_15m"):
+                elif mtf_res.get("is_overextended_15m"):
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} rechazado por vela sobre-extendida en la cima ({mtf_res.get('overextension_reason')}).")
-                elif not is_learned_signal and not is_macro_base:
+                elif not is_macro_base:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} descalificado por Macro 1H sin soporte (1H: {tf_1h}, RSI 1H: {mtf_res.get('rsi_1h')}, Canal 1H: {mtf_res.get('range_position_1h')}). Exige base macro.")
-                elif not is_learned_signal and not is_structural_15m_base:
+                elif not is_structural_15m_base:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de estructura en 15M (15M: {tf_15m}, RSI: {mtf_res.get('rsi_15m')}). Exige rebote o soporte en 15M.")
                 else:
                     if is_learned_signal:
-                        print(f"👑 [SÚPER-CEREBRO APROBADO] {best_symbol} validado por IA institucional. Procediendo a ejecución con Escalera Cuántica de 5 Fases...")
+                        print(f"👑 [SÚPER-CEREBRO APROBADO] {best_symbol} validado por IA institucional con confluencia técnica confirmada. Procediendo a ejecución con Escalera Cuántica...")
                 
                 if not is_stable:
                     if arch_dna.get("is_blacklisted_fan_token", False):
@@ -1745,32 +1748,36 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         is_ema_cross = mtf_res.get("is_ema_golden_cross", False)
                         
                         # ═══════════════════════════════════════════════════════════
-                        # 🚀 FILTRO CUÁNTICO DE VOLUMEN REAL Y MOMENTUM GANADOR:
+                        # 🚀 FILTRO CUÁNTICO DE VOLUMEN REAL Y MOMENTUM GANADOR (ESTRICTO):
                         # ═══════════════════════════════════════════════════════════
-                        has_real_volume = (vol_15m_now >= 0.45) or (vol_2m_now >= 0.50) or (vol_1m_now >= 0.60) or is_obv_acc or is_pre_pump or (vol_acc >= 1.3) or (is_learned_signal and fii >= 50)
-                        has_micro_thrust = (vol_2m_now >= 0.40) or (vol_1m_now >= 0.50) or is_30s_burst or is_pre_pump or is_obv_acc or is_ema_cross or is_learned_signal
+                        has_real_volume = (vol_15m_now >= 0.70) or (vol_2m_now >= 0.75) or (vol_1m_now >= 0.80) or is_obv_acc or is_pre_pump or (vol_acc >= 1.4)
+                        has_micro_thrust = (vol_2m_now >= 0.50) or (vol_1m_now >= 0.50) or is_30s_burst or is_pre_pump or is_obv_acc or is_ema_cross
+                        
+                        # Anti-Vela Muerta: Exigir que 1M o 2M tengan volumen activo (> 0.20x)
+                        has_active_candles = (vol_1m_now >= 0.20 or vol_2m_now >= 0.20)
                         
                         if not has_real_volume:
                             is_stable = True
-                            print(f"⛔ Compra rechazada: {best_symbol} descartado por FALTA DE VOLUMEN REAL (15m={vol_15m_now:.2f}x, 2m={vol_2m_now:.2f}x, OBV={is_obv_acc}).")
+                            print(f"⛔ Compra rechazada: {best_symbol} descartado por FALTA DE VOLUMEN REAL (15m={vol_15m_now:.2f}x, 2m={vol_2m_now:.2f}x, 1m={vol_1m_now:.2f}x, OBV={is_obv_acc}).")
+                        elif not has_active_candles:
+                            is_stable = True
+                            print(f"⛔ Compra rechazada: {best_symbol} descartado por VELA MUERTA SUB-MINUTO (1m={vol_1m_now:.2f}x, 2m={vol_2m_now:.2f}x sin actividad real).")
                         elif not has_micro_thrust:
                             is_stable = True
                             print(f"⛔ Compra rechazada: {best_symbol} descartado por falta de empuje micro (1m={vol_1m_now:.2f}x, 2m={vol_2m_now:.2f}x, 30sBurst={is_30s_burst}).")
-                        elif ob_info.get("bid_dominance_pct", 50.0) < 44.0:
-                            # 🧹 MEJORA D: Unificado en un solo umbral del 44% (elimina redundancia de 42%/50%)
+                        elif ob_info.get("bid_dominance_pct", 50.0) < 46.0:
                             is_stable = True
-                            print(f"⛔ Compra rechazada: {best_symbol} descartado por Bids insuficientes ({ob_info.get('bid_dominance_pct'):.1f}% < 44.0%). Exige mayoría compradora en libro.")
-                        elif ob_info.get("bid_vol_usdt", 0.0) > 0 and ob_info.get("bid_vol_usdt", 0.0) < 12000.0:
-                            # 🛡️ MEJORA F: Filtro Anti-Monedas Micro-Cap Ilíquidas (mínimo $12k USDT en Bids)
+                            print(f"⛔ Compra rechazada: {best_symbol} descartado por Bids insuficientes ({ob_info.get('bid_dominance_pct'):.1f}% < 46.0%). Exige mayoría compradora en libro.")
+                        elif ob_info.get("bid_vol_usdt", 0.0) > 0 and ob_info.get("bid_vol_usdt", 0.0) < 15000.0:
                             is_stable = True
-                            print(f"⛔ Compra rechazada: {best_symbol} descartado por LIBRO DE ÓRDENES MUY DELGADO (Bids=${ob_info.get('bid_vol_usdt', 0.0):,.0f} < $12,000 USDT). Evitando riesgo de deslizamiento.")
+                            print(f"⛔ Compra rechazada: {best_symbol} descartado por LIBRO DE ÓRDENES MUY DELGADO (Bids=${ob_info.get('bid_vol_usdt', 0.0):,.0f} < $15,000 USDT). Evitando riesgo de deslizamiento.")
                         else:
                             arrow_lbl = " 🎯 [PATRÓN FLECHAS AMARILLAS 15M PIVOT REBOUND]" if is_yellow else ""
-                            print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}{arrow_lbl}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.75% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=44% OK) | Muro=${ob_info.get('bid_vol_usdt'):,.0f} USDT | RSI4H={rsi_4h:.1f} | 🚀 Turbinas: 15m={vol_15m_now:.2f}x, 2m={vol_2m_now:.2f}x, 1m={vol_1m_now:.2f}x, OBV={is_obv_acc}, EMA={is_ema_cross}")
+                            print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}{arrow_lbl}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.75% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=46% OK) | Muro=${ob_info.get('bid_vol_usdt'):,.0f} USDT | RSI4H={rsi_4h:.1f} | 🚀 Turbinas: 15m={vol_15m_now:.2f}x, 2m={vol_2m_now:.2f}x, 1m={vol_1m_now:.2f}x, OBV={is_obv_acc}, EMA={is_ema_cross}")
                 
         if bias_ok and not is_stable:
-            # 1. LONG Entry Signal (Operates with 100% of available USDT, strictly requires Score >= 55 Setup A+)
-            min_required_score = max(55, real_long_score) if not is_learned_signal else 55
+            # 1. LONG Entry Signal (Operates with 100% of available USDT, strictly requires Score >= 70 Setup A+)
+            min_required_score = max(70, real_long_score)
             if best_symbol and not is_bearish and best_score >= min_required_score:
                 # 🔍 PRE-FLIGHT LIVE CHECK: Verificar balance real directamente en Binance antes de comprar
                 try:

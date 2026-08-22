@@ -1,11 +1,21 @@
 {
-  "updated_at": "2026-08-22 15:33:24",
-  "total_balance_usd": 15.66,
-  "usdt_free": 15.5176,
-  "bnb_free": 0.00021018,
-  "bnb_usd": 0.15,
-  "status": "🟢 WIN Cerrado (CAKEUSDT PnL: +0.06% / $+0.0090)",
-  "position": {},
+  "updated_at": "2026-08-22 16:10:36",
+  "total_balance_usd": 15.42,
+  "usdt_free": 0.0292,
+  "bnb_free": 0.00018461,
+  "bnb_usd": 0.13,
+  "status": "🔵 En Vivo LONG (NEXOUSDT @ $0.8270)",
+  "position": {
+    "symbol": "NEXOUSDT",
+    "quantity": 18.5,
+    "entry_price": 0.827,
+    "highest_price": 0.827,
+    "cost_usd": 15.3,
+    "side": "LONG",
+    "phase": 1,
+    "break_even": false,
+    "entry_time_ms": 1787432775635
+  },
   "verdict": {
     "timestamp": "2026-08-22 12:29:25",
     "selected_symbol": "COMPUSDT",
