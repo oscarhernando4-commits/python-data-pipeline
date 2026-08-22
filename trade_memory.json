@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2833,
+    "total_trades": 2839,
     "wins": 1515,
-    "losses": 1318,
-    "win_rate_pct": 53.48,
-    "total_pnl_usd": 1928.083576548791
+    "losses": 1324,
+    "win_rate_pct": 53.36,
+    "total_pnl_usd": 1342.103576548791
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ZAMAUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COTIUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on PENDLEUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PUMPUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TUTUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LDOUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LDOUSDT)",
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on COTIUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DASHUSDT)",
@@ -53,108 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 12:58:42",
-      "account_id": "SIM-028",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "FETUSDT",
-      "side": "LONG",
-      "entry_price": 0.1628,
-      "exit_price": 0.1637,
-      "pnl_usd": 0.07,
-      "result": "WIN",
-      "notes": "WIN on FETUSDT (PnL: +0.55%, Net: $+0.07 Fase 2)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 64.46,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 13:00:23",
-      "account_id": "SIM-014",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "BICOUSDT",
-      "side": "LONG",
-      "entry_price": 0.02154,
-      "exit_price": 0.0219,
-      "pnl_usd": 0.14,
-      "result": "WIN",
-      "notes": "WIN on BICOUSDT (PnL: +1.67%, Net: $+0.14 Fase 4)",
-      "context": {
-        "score": 74,
-        "rsi_15m": 82.78,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 13:00:23",
-      "account_id": "SIM-015",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "BICOUSDT",
-      "side": "LONG",
-      "entry_price": 0.02154,
-      "exit_price": 0.0219,
-      "pnl_usd": 0.18,
-      "result": "WIN",
-      "notes": "WIN on BICOUSDT (PnL: +1.67%, Net: $+0.18 Fase 4)",
-      "context": {
-        "score": 74,
-        "rsi_15m": 82.78,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 13:00:23",
-      "account_id": "SIM-016",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "BICOUSDT",
-      "side": "LONG",
-      "entry_price": 0.02154,
-      "exit_price": 0.0219,
-      "pnl_usd": 0.74,
-      "result": "WIN",
-      "notes": "WIN on BICOUSDT (PnL: +1.67%, Net: $+0.74 Fase 4)",
-      "context": {
-        "score": 74,
-        "rsi_15m": 82.78,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 13:02:30",
-      "account_id": "SIM-029",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "BANKUSDT",
-      "side": "LONG",
-      "entry_price": 0.0382,
-      "exit_price": 0.0371,
-      "pnl_usd": -0.71,
-      "result": "LOSS",
-      "notes": "LOSS on BANKUSDT (PnL: -2.88%, Net: $-0.71 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 46.7,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 13:10:33",
-      "account_id": "SIM-005",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "KAITOUSDT",
-      "side": "LONG",
-      "entry_price": 0.3639,
-      "exit_price": 0.3671,
-      "pnl_usd": 0.11,
-      "result": "WIN",
-      "notes": "WIN on KAITOUSDT (PnL: +0.88%, Net: $+0.11 Fase 3)",
-      "context": {
-        "score": 88,
-        "rsi_15m": 67.15,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 13:10:33",
       "account_id": "SIM-006",
@@ -8514,6 +8412,108 @@
       "context": {
         "score": 82,
         "rsi_15m": 48.72,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 12:46:32",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "LONG",
+      "entry_price": 0.01254,
+      "exit_price": 0.01203,
+      "pnl_usd": -581.94,
+      "result": "LOSS",
+      "notes": "LOSS on COTIUSDT (PnL: -4.07%, Net: $-581.94 Fase 1)",
+      "context": {
+        "score": 88,
+        "rsi_15m": 54.27,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 12:46:32",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "LONG",
+      "entry_price": 0.01254,
+      "exit_price": 0.01203,
+      "pnl_usd": -0.78,
+      "result": "LOSS",
+      "notes": "LOSS on COTIUSDT (PnL: -4.07%, Net: $-0.78 Fase 1)",
+      "context": {
+        "score": 88,
+        "rsi_15m": 54.27,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 12:46:32",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "COTIUSDT",
+      "side": "LONG",
+      "entry_price": 0.01254,
+      "exit_price": 0.01203,
+      "pnl_usd": -1.01,
+      "result": "LOSS",
+      "notes": "LOSS on COTIUSDT (PnL: -4.07%, Net: $-1.01 Fase 1)",
+      "context": {
+        "score": 88,
+        "rsi_15m": 54.27,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 12:46:32",
+      "account_id": "SIM-048",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "COTIUSDT",
+      "side": "LONG",
+      "entry_price": 0.01254,
+      "exit_price": 0.01203,
+      "pnl_usd": -0.73,
+      "result": "LOSS",
+      "notes": "LOSS on COTIUSDT (PnL: -4.07%, Net: $-0.73 Fase 1)",
+      "context": {
+        "score": 88,
+        "rsi_15m": 54.27,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 12:46:32",
+      "account_id": "SIM-049",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "COTIUSDT",
+      "side": "LONG",
+      "entry_price": 0.01254,
+      "exit_price": 0.01203,
+      "pnl_usd": -0.72,
+      "result": "LOSS",
+      "notes": "LOSS on COTIUSDT (PnL: -4.07%, Net: $-0.72 Fase 1)",
+      "context": {
+        "score": 88,
+        "rsi_15m": 54.27,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 12:46:32",
+      "account_id": "SIM-050",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "COTIUSDT",
+      "side": "LONG",
+      "entry_price": 0.01254,
+      "exit_price": 0.01203,
+      "pnl_usd": -0.8,
+      "result": "LOSS",
+      "notes": "LOSS on COTIUSDT (PnL: -4.07%, Net: $-0.80 Fase 1)",
+      "context": {
+        "score": 88,
+        "rsi_15m": 54.27,
         "macro_trend_4h": "NEUTRAL"
       }
     }
