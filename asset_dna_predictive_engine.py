@@ -481,6 +481,97 @@ def analyze_multi_horizon_predictive_dna(
         "recommended_trailing_slack_pct": recommended_trailing_slack
     }
 
+def calculate_asset_behavioral_xray(
+    symbol: str,
+    klines_multi_tf: Dict[str, List[Any]],
+    btc_15m_closes: List[float] = None
+) -> Dict[str, Any]:
+    """
+    🔬 RADIOGRAFÍA CONDUCTUAL HOLOGRÁFICA 360° DEL ADN DEL ACTIVO:
+    Analiza con precisión milimétrica:
+    1. Canal Fractal (% desde el suelo) en 1M, 5M, 15M, 1H, 4H, 1D.
+    2. Comportamiento y Arquetipo Dinámico (Sprinter, Trend Runner, Mean Reverter, Zombi).
+    3. Alpha y Desacoplamiento vs Bitcoin (Relative Strength Divergence).
+    4. Absorción de Compradores en Suelo (Mecha Inferior en 1M/5M).
+    """
+    klines_1m = klines_multi_tf.get("1m", [])
+    klines_5m = klines_multi_tf.get("5m", [])
+    klines_15m = klines_multi_tf.get("15m", [])
+    klines_1h = klines_multi_tf.get("1h", [])
+    klines_4h = klines_multi_tf.get("4h", [])
+    klines_1d = klines_multi_tf.get("1d", [])
+
+    closes_1m = [float(k[4]) for k in klines_1m] if klines_1m else []
+    closes_15m = [float(k[4]) for k in klines_15m] if klines_15m else []
+    
+    def get_channel_pos(klines, period=20):
+        if not klines or len(klines) < 2: return 50.0
+        h = max([float(k[2]) for k in klines[-period:]])
+        l = min([float(k[3]) for k in klines[-period:]])
+        c = float(klines[-1][4])
+        rng = h - l
+        return round(((c - l) / rng) * 100.0, 1) if rng > 0 else 50.0
+
+    pos_1m = get_channel_pos(klines_1m, 15)
+    pos_5m = get_channel_pos(klines_5m, 15)
+    pos_15m = get_channel_pos(klines_15m, 20)
+    pos_1h = get_channel_pos(klines_1h, 24)
+    pos_4h = get_channel_pos(klines_4h, 20)
+    pos_1d = get_channel_pos(klines_1d, 14)
+
+    # Lower Wick Absorption on 1m (Dip Buying Intensity)
+    wicks_1m = []
+    for k in klines_1m[-5:]:
+        o, h, l, c = float(k[1]), float(k[2]), float(k[3]), float(k[4])
+        body_bottom = min(o, c)
+        candle_rng = h - l
+        lower_wick = (body_bottom - l) / candle_rng if candle_rng > 0 else 0.0
+        wicks_1m.append(lower_wick)
+    avg_wick_1m = round((sum(wicks_1m) / len(wicks_1m)) * 100.0, 1) if wicks_1m else 0.0
+
+    # Alpha Divergence vs BTC
+    alpha_divergence = 0.0
+    if btc_15m_closes and len(btc_15m_closes) >= 3 and len(closes_15m) >= 3 and symbol != "BTCUSDT":
+        btc_15m_chg = ((btc_15m_closes[-1] - btc_15m_closes[-3]) / btc_15m_closes[-3]) * 100.0
+        alt_15m_chg = ((closes_15m[-1] - closes_15m[-3]) / closes_15m[-3]) * 100.0
+        alpha_divergence = round(alt_15m_chg - btc_15m_chg, 2)
+
+    # Volatility Elasticity ATR 15M
+    atr_pct_15m = 0.30
+    if len(klines_15m) >= 14:
+        highs_15m = [float(k[2]) for k in klines_15m]
+        lows_15m = [float(k[3]) for k in klines_15m]
+        trs = [max(highs_15m[i] - lows_15m[i], abs(highs_15m[i] - closes_15m[i-1]), abs(lows_15m[i] - closes_15m[i-1])) for i in range(1, len(closes_15m))]
+        if trs:
+            atr = sum(trs[-14:]) / min(len(trs), 14)
+            atr_pct_15m = round((atr / closes_15m[-1]) * 100.0, 3) if closes_15m[-1] > 0 else 0.30
+
+    # Dynamic Behavioral Categorization
+    if atr_pct_15m < 0.25:
+        behavior_type = "ZOMBI_LENTO (Baja Volatilidad)"
+        timing_advice = "⛔ Evitar: Rango insuficiente para scalping."
+    elif atr_pct_15m >= 0.70 or pos_1m > 80:
+        behavior_type = "SPRINT_EXPLOSIVO (Alta Elasticidad)"
+        timing_advice = "⚡ Entrada rápida en base 1M con salida Wick Sniper."
+    elif pos_1h <= 45 and pos_15m <= 50 and alpha_divergence > 0:
+        behavior_type = "BASE_INSTITUCIONAL_ELITE (Suelo con Alpha)"
+        timing_advice = "💎 Setup A+: Suelo 1H + Fuerza Relativa frente a Bitcoin."
+    else:
+        behavior_type = "ROTACIÓN_ESTRUCTURAL (Onda Normal)"
+        timing_advice = "🎯 Entrada constructiva en soporte con R:R > 2:1."
+
+    return {
+        "behavior_type": behavior_type,
+        "timing_advice": timing_advice,
+        "fractal_channel_pct": {
+            "1m": pos_1m, "5m": pos_5m, "15m": pos_15m,
+            "1h": pos_1h, "4h": pos_4h, "1d": pos_1d
+        },
+        "lower_wick_absorption_1m_pct": avg_wick_1m,
+        "alpha_vs_btc_15m_pct": alpha_divergence,
+        "atr_15m_pct": atr_pct_15m
+    }
+
 if __name__ == "__main__":
     test_res = analyze_multi_horizon_predictive_dna(
         "SUIUSDT",
