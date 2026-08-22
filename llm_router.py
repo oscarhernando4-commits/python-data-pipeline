@@ -482,8 +482,9 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         candidates_prompt_text += f"- 🏔️ MATRIZ FRACTAL DE SUELO 8D (% Canal desde el piso): 1D={c1d}% | 4H={c4h}% | 1H={c1h}% | 30M={c30m}% | 15M={c15m}% | 5M={c5m}% | 2M={c2m}% | 1M={c1m}%\n"
         candidates_prompt_text += f"- 🎯 Distancia a Máximo 24H: +{dist_to_24h_high:.2f}% | Alerta Techo 30M/24H={is_at_daily_ceiling}\n"
         candidates_prompt_text += f"- 🎯 Gatillo 1M Sniper: Distancia EMA9={dist_1m_ema9:+.2f}% | Retesteo Base={is_sniper_pb} | Anti-FOMO={not is_fomo}\n"
-        candidates_prompt_text += f"- 🎯 Proyección de Recorrido: Resistencia Techo 1H=+{mtf.get('target_resistance_1h_pct', 2.5):.2f}% | Soporte Piso=-{mtf.get('major_support_floor_1h_pct', 0.9):.2f}% | Ratio R:R={mtf.get('expected_rr_ratio', 2.5)}:1\n"
-        candidates_prompt_text += f"- 🌊 Flujo CVD & Libro: Bids {ob['bid_dominance_pct']}% ({ob['liquidity_status']}) | {cvd_str}\n"
+        obv_trend_sym = mtf.get("obv_trend", "NEUTRAL")
+        bid_vol_depth = ob.get("bid_vol_usdt", 0.0)
+        candidates_prompt_text += f"- 🌊 Flujo CVD, OBV & Libro: OBV={obv_trend_sym} | Bids={ob['bid_dominance_pct']}% (Muro Bids=${bid_vol_depth:,.0f} USDT) | {cvd_str}\n"
         candidates_prompt_text += (
             f"- RSI 8 Capas: 1M={mtf.get('rsi_1m', ind.get('rsi_1m', '?'))} | 2M={mtf.get('rsi_2m', ind.get('rsi_2m', '?'))} | "
             f"5M={mtf.get('rsi_5m', ind.get('rsi_5m', '?'))} | 15M={ind.get('rsi_15m', '?')} | 30M={mtf.get('rsi_30m', '?')} | 1H={mtf.get('rsi_1h', ind.get('rsi_1h', '?'))} | "
@@ -518,10 +519,10 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     ESTRUCTURA DE LOS 7 AGENTES INSTITUCIONALES EN DELIBERACIÓN CUÁNTICA:
     1. 🕵️ AGENTE 1 (Macro 1D & Guardián de Bitcoin): Evalúa el ciclo macro 1D ({wall_street_str}), Fear&Greed ({fear_greed.get('score')}), estabilidad de BTC (BTC Guard). VETA si altcoin_impact=AVOID o si BTC cae con fuerza.
     2. 📊 AGENTE 2 (Sniper de Suelo 2M & Elasticidad ADN): Exige entrada en el PISO de 2 Minutos (RSI 2M <= 52.0 y primera vela 2M verde sobre soporte). VETA categóricamente entradas tardías donde el rebote de 2M ya ocurrió (RSI 2M >= 60.0). Exige comprar en la base exacta, jamás perseguir velas verdes ya estiradas.
-    3. 🌊 AGENTE 3 (Auditor de Libro, CVD & Squeeze Micro): Exige Bids >= 48%, Muro comprador > $25k USDT, CVD Taker positivo/neutral y confirma absorción de ventas.
+    3. 🌊 AGENTE 3 (Auditor de Libro, CVD & Squeeze Micro): Exige Bids >= 46%, Muro comprador > $15k USDT, CVD Taker positivo/neutral y OBV != DISTRIBUTING. VETA si OBV=DISTRIBUTING o si Muro Bids < $15k USDT (libro delgado / spoofing).
     4. 🧩 AGENTE 4 (Analista Sectorial & Temporal): Prioriza sector líder ({sector_summary['top_sector']}) y valida la SESION TEMPORAL. VETO si VETO_TEMPORAL o BLACKOUT con multiplicador < 0.60.
     5. 🧠 AGENTE 5 (Memoria RAG & Auto-Aprendizaje Cuántico): Valida el ADN de la moneda, reputación histórica y patrones de catalizadores ganadores aprendidos. VETA patrones de pérdida recurrentes (ej: sangrado post-pump sin volumen).
-    6. 🛡️ AGENTE 6 (Chief Risk Officer & Veto de Dump): Veta cualquier activo con Riesgo de Dump >= 40%, libro descompensado (Bids < 45%), DUMP_RISK_FUNDING, o activo en cuarentena/cooldown de 2 horas.
+    6. 🛡️ AGENTE 6 (Chief Risk Officer & Veto de Dump): Veta cualquier activo con Riesgo de Dump >= 40%, libro descompensado (Bids < 45% o Muro < $15k), OBV=DISTRIBUTING, DUMP_RISK_FUNDING, o activo en cuarentena/cooldown de 2 horas.
     7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza el consenso. Si el mejor candidato está en zona de soporte/pullback con volumen fresco y libre de vetos, APRUEBA "BUY_LONG" con Stop Loss Asimétrico de -0.95% para ejecución inmediata.
 
     {exec_learning_summary}
