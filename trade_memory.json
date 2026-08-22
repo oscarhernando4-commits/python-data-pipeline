@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2972,
-    "wins": 1578,
+    "total_trades": 2973,
+    "wins": 1579,
     "losses": 1394,
-    "win_rate_pct": 53.1,
-    "total_pnl_usd": 1707.4064765487904
+    "win_rate_pct": 53.11,
+    "total_pnl_usd": 1707.4915765487904
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 00:23:10",
-      "account_id": "SIM-051",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ETCUSDT",
-      "side": "LONG",
-      "entry_price": 8.46,
-      "exit_price": 8.56,
-      "pnl_usd": 0.2,
-      "result": "WIN",
-      "notes": "WIN on ETCUSDT (PnL: +1.18%, Net: $+0.20 Fase 3)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 89.59,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 00:23:10",
       "account_id": "SIM-052",
@@ -8484,6 +8467,19 @@
         "rsi_15m": 42.52,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-22 17:20:55",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "DCRUSDT",
+      "side": "LONG",
+      "entry_price": 14.19,
+      "exit_price": 14.27,
+      "pnl_usd": 0.0851,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.56% <= +0.84%) (Fase 3, PnL: +0.56%)",
+      "context": {}
     }
   ]
 }
