@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2963,
+    "total_trades": 2964,
     "wins": 1576,
-    "losses": 1387,
-    "win_rate_pct": 53.19,
-    "total_pnl_usd": 1714.5023765487904
+    "losses": 1388,
+    "win_rate_pct": 53.17,
+    "total_pnl_usd": 1713.6323765487905
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on HEMIUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TUTUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PUMPUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GNOUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on CRVUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DCRUSDT)",
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on MUBARAKUSDT)"
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on MUBARAKUSDT)",
+      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TUTUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on NEARUSDT)",
@@ -53,19 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 00:11:21",
-      "account_id": "R-01",
-      "group_name": "CUENTA REAL",
-      "symbol": "BICOUSDT",
-      "side": "BUY",
-      "entry_price": 0.02057,
-      "exit_price": 0.02061,
-      "pnl_usd": 0.029751999999998786,
-      "result": "WIN",
-      "notes": "Real Money Trade closed with 0.19%",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-22 00:13:06",
       "account_id": "SIM-091",
@@ -8498,6 +8485,23 @@
       "context": {
         "score": 16,
         "rsi_15m": 58.55,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 16:12:31",
+      "account_id": "SIM-060",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "TUTUSDT",
+      "side": "LONG",
+      "entry_price": 0.04608,
+      "exit_price": 0.0456,
+      "pnl_usd": -0.87,
+      "result": "LOSS",
+      "notes": "LOSS on TUTUSDT (PnL: -1.04%, Net: $-0.87 Fase 2)",
+      "context": {
+        "score": 16,
+        "rsi_15m": 63.16,
         "macro_trend_4h": "NEUTRAL"
       }
     }
