@@ -1163,7 +1163,10 @@ def analyze_multi_timeframe_candles(symbol):
         is_parabolic_blowoff = (rsi_15m >= 78.0) or (rsi_4h >= 75.0) or (dist_from_15m_ma7_pct > 3.50)
         is_major_rejection_wick = (candle_range > 0 and upper_wick_ratio > 0.55 and (high_15m - low_15m) / low_15m > 0.02)
         
-        if is_parabolic_blowoff:
+        if is_at_daily_resistance_ceiling:
+            is_overextended_15m = True
+            overextension_reason = f"Veto Anti-Techo Fractal: Activo en cresta del canal (1H={range_position_1h*100:.1f}%, 15M={range_position_15m*100:.1f}%, 1M={range_position_1m*100:.1f}%). Prohibido comprar techos."
+        elif is_parabolic_blowoff:
             is_overextended_15m = True
             overextension_reason = f"Sobrecompra Parabólica Extrema (RSI 15M={rsi_15m:.1f}, RSI 4H={rsi_4h:.1f}, Dist MA7={dist_from_15m_ma7_pct:+.2f}%). Esperando pullback a soporte."
         elif is_major_rejection_wick:
@@ -1239,10 +1242,14 @@ def analyze_multi_timeframe_candles(symbol):
         f"Patrón={yellow_arrow_status}{yellow_arrow_macro} | Canal1H={range_position_1h*100:.0f}%"
     )
 
+    is_tradable = not (is_overextended_15m or is_at_daily_resistance_ceiling)
+    final_score = 0 if not is_tradable else multi_tf_score
+    rejection = overextension_reason if not is_tradable else None
+
     return {
-        "is_valid_tradable_asset": True,
-        "rejection_reason": None,
-        "multi_tf_score": multi_tf_score,
+        "is_valid_tradable_asset": is_tradable,
+        "rejection_reason": rejection,
+        "multi_tf_score": final_score,
         "fii_score": fii_score,
         "price_expansion_1d_pct": round(price_expansion_pct, 2),
         "is_overextended_15m": is_overextended_15m,
