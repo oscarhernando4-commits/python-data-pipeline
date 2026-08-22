@@ -1151,9 +1151,17 @@ def quick_position_heartbeat():
         
         atr_15m_pct = pos.get("atr_pct_15m", 0.30)
         ma25_5m = pos.get("ma25_5m", 0.0)
-        holding_cycles_hb = pos.get("holding_cycles", 0)
         custom_slack = float(pos.get("optimal_trailing_slack_pct", 0.65))
         arch_dna = pos.get("archetype_dna", {}) or adaptive_asset_dna.get_asset_dna_archetype(sym, atr_15m_pct, current_price)
+        
+        # ⏱️ CÁLCULO EXACTO DE TIEMPO TRANSCURRIDO (Segundo a Segundo en Minutos Reales)
+        import time as _t
+        now_ms = _t.time() * 1000.0
+        if entry_time_ms > 0:
+            holding_minutes_hb = int((now_ms - entry_time_ms) / 60000.0)
+        else:
+            holding_minutes_hb = int(pos.get("holding_cycles", 0) * 2)
+        pos["holding_cycles"] = holding_minutes_hb // 2
         
         # ═══════════════════════════════════════════════════════════════════════
         # 🎯 SISTEMA PROPORCIONAL DINÁMICO FRACTAL BASADO EN ADN DEL ACTIVO:
@@ -1161,7 +1169,7 @@ def quick_position_heartbeat():
         sl_pct, new_phase, phase_label = calculate_dynamic_proportional_trailing(
             highest_pnl_pct=highest_pnl_pct,
             atr_pct=atr_15m_pct,
-            holding_cycles=holding_cycles_hb,
+            holding_cycles=holding_minutes_hb // 2,
             current_pnl_pct=current_pnl_pct,
             custom_slack=custom_slack,
             symbol=sym
@@ -1185,17 +1193,21 @@ def quick_position_heartbeat():
             should_exit = True
             exit_reason = f"🎯 SNIPER MECHA CIMA (Pico +{highest_pnl_pct:.2f}% -> Venta Inmediata en {current_pnl_pct:+.2f}% tras retroceso de -{wick_pullback_threshold:.2f}%)"
             
-        # ⏱️ LIBERACIÓN DINÁMICA POR ESTANCAMIENTO SEGÚN ADN (12m Meme, 15m Thin, 35m Sector, 60m Core)
+        # ⏱️ LIBERACIÓN ESTRICTA POR TIEMPO Y ESTANCAMIENTO (Máximo 35m Sector / 25m Thin / 15m Meme)
+        max_stag_mins = int(arch_dna.get("max_stagnation_minutes", 35))
         if not should_exit and new_phase == 1:
             is_stag, stag_msg = adaptive_asset_dna.check_archetype_stagnation_exit(
                 archetype_dna=arch_dna,
-                holding_minutes=holding_cycles_hb,
+                holding_minutes=holding_minutes_hb,
                 pnl_pct=current_pnl_pct,
                 phase=new_phase
             )
             if is_stag:
                 should_exit = True
                 exit_reason = stag_msg
+            elif holding_minutes_hb >= max_stag_mins and abs(current_pnl_pct) <= 0.65:
+                should_exit = True
+                exit_reason = f"⏱️ LÍMITE DE TIEMPO ESTRICTO: {sym} lleva {holding_minutes_hb}m sin despegue (PnL {current_pnl_pct:+.2f}% | Límite={max_stag_mins}m). Liberando 100% USDT para rotar a nuevo Setup A+."
         
         # 🧱 MEJORA 4: Cancelación Preventiva — Solo si el libro de órdenes colapsa severamente
         # Requiere pérdida > -1.50% y Bids < 30% para evitar falsas salidas por ruido de micro-spread
@@ -1390,24 +1402,29 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             trailing_floor_pct = max(-2.00, trailing_floor_pct)
             phase_msg = f"🛡️ ESCUDO DE EMERGENCIA: SL ajustado a {trailing_floor_pct:+.2f}%"
 
-        # ⏱️ Liberación Dinámica por Estancamiento según ADN (Mínimo 4 Horas / 240 Minutos):
+        # ⏱️ Liberación Estricta por Estancamiento y Tiempo Límite según ADN (35m Sector / 25m Thin / 15m Meme):
         stagnation_exit = False
         reason_str = ""
         import adaptive_asset_dna
         arch_dna_track = adaptive_asset_dna.get_asset_dna_archetype(active_symbol, atr_15m_pct)
-        max_stag_mins = int(arch_dna_track.get("max_stagnation_minutes", 240))
+        max_stag_mins = int(arch_dna_track.get("max_stagnation_minutes", 35))
         
-        # 1. Liberación por Estancamiento Máximo (Mínimo 4h / 240m en Fase 1 sin movimiento):
-        if holding_cycles >= max_stag_mins and phase == 1 and abs(pnl_pct) <= 0.75:
+        entry_ts_ms = pos_data.get("entry_time_ms", 0)
+        import time as _t
+        now_ts_ms = _t.time() * 1000.0
+        real_holding_minutes = int((now_ts_ms - entry_ts_ms) / 60000.0) if entry_ts_ms > 0 else int(holding_cycles * 2)
+        
+        # 1. Liberación por Estancamiento Máximo según ADN (Fase 1 plana sin despegue):
+        if real_holding_minutes >= max_stag_mins and phase == 1 and abs(pnl_pct) <= 0.65:
             stagnation_exit = True
-            reason_str = f"🚀 Liberación por Estancamiento ({holding_cycles}m >= {max_stag_mins}m en Fase 1 sin despegue, PnL={pnl_pct:+.2f}%)"
-        # 2. 🔄 MEJORA 5: Rotación Alpha Dinámica — Solo tras al menos 120 minutos (2 horas) si hay un alpha masivo
-        elif holding_cycles >= 120 and phase == 1 and abs(pnl_pct) <= 0.40:
+            reason_str = f"⏱️ Liberación por Tiempo Límite ({real_holding_minutes}m >= {max_stag_mins}m en Fase 1 sin despegue, PnL={pnl_pct:+.2f}%)"
+        # 2. 🔄 Rotación Alpha Dinámica — Tras 30 minutos si hay un alpha de oportunidad superior:
+        elif real_holding_minutes >= 30 and phase == 1 and abs(pnl_pct) <= 0.40:
             if best_symbol and best_symbol != active_symbol and best_score >= 75 and not is_bearish:
                 score_delta = best_score - 58  # Delta sobre el umbral mínimo de entrada
                 if score_delta >= 16:
                     stagnation_exit = True
-                    reason_str = f"🔄 Rotación Alpha Dinámica ({holding_cycles}m plano → {best_symbol} @ {best_score}pts, delta={score_delta}pts)"
+                    reason_str = f"🔄 Rotación Alpha Dinámica ({real_holding_minutes}m plano → {best_symbol} @ {best_score}pts, delta={score_delta}pts)"
         
         # 🧠 MEJORA 6: FII en Tiempo Real durante el Holding — Re-evalúa cada 5 ciclos
         # Si el dinero institucional salió (FII < 20) y tenemos pérdida severa (> -1.50%), salir

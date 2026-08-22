@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2987,
-    "wins": 1583,
+    "total_trades": 2988,
+    "wins": 1584,
     "losses": 1404,
-    "win_rate_pct": 53.0,
-    "total_pnl_usd": 1677.79157654879
+    "win_rate_pct": 53.01,
+    "total_pnl_usd": 1677.80057654879
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 01:16:50",
-      "account_id": "SIM-048",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "XECUSDT",
-      "side": "LONG",
-      "entry_price": 7.92e-06,
-      "exit_price": 8.01e-06,
-      "pnl_usd": 0.17,
-      "result": "WIN",
-      "notes": "WIN on XECUSDT (PnL: +1.14%, Net: $+0.17 Fase 3)",
-      "context": {
-        "score": 79,
-        "rsi_15m": 78.35,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 01:16:50",
       "account_id": "SIM-049",
@@ -8484,6 +8467,19 @@
         "rsi_15m": 44.54,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-22 15:32:52",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "CAKEUSDT",
+      "side": "LONG",
+      "entry_price": 1.713,
+      "exit_price": 1.714,
+      "pnl_usd": 0.009,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🚀 Liberación por Estancamiento ADN 🧩 (99m en Fase 1 sin despegue para SECTOR_ROTATION, PnL=+0.06%) (Fase 1, PnL: +0.06%)",
+      "context": {}
     }
   ]
 }
