@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2863,
-    "wins": 1530,
+    "total_trades": 2864,
+    "wins": 1531,
     "losses": 1333,
-    "win_rate_pct": 53.44,
-    "total_pnl_usd": 752.2527765487907
+    "win_rate_pct": 53.46,
+    "total_pnl_usd": 752.2627765487907
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on HEMIUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on NIGHTUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on COTIUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on TRXUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on GPSUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on CVXUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HEMIUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JSTUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JSTUSDT)",
+      "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PUMPUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 14:19:25",
-      "account_id": "SIM-007",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "ENAUSDT",
-      "side": "LONG",
-      "entry_price": 0.1398,
-      "exit_price": 0.1358,
-      "pnl_usd": -0.45,
-      "result": "LOSS",
-      "notes": "LOSS on ENAUSDT (PnL: -2.86%, Net: $-0.45 Fase 1)",
-      "context": {
-        "score": 60,
-        "rsi_15m": 33.97,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 14:19:25",
       "account_id": "SIM-097",
@@ -8510,6 +8493,23 @@
       "context": {
         "score": 9,
         "rsi_15m": 48.27,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 13:30:34",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "PUMPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.004822,
+      "exit_price": 0.004808,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on PUMPUSDT (PnL: +0.29%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 65.7,
         "macro_trend_4h": "NEUTRAL"
       }
     }
