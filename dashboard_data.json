@@ -1,11 +1,21 @@
 {
-  "updated_at": "2026-08-22 11:36:43",
-  "total_balance_usd": 20.12,
-  "usdt_free": 17.6936,
-  "bnb_free": 0.004048,
-  "bnb_usd": 2.43,
-  "status": "🟦 Buscando Entrada A+",
-  "position": {},
+  "updated_at": "2026-08-22 11:42:25",
+  "total_balance_usd": 15.31,
+  "usdt_free": 0.0979,
+  "bnb_free": 0.0003249,
+  "bnb_usd": 0.23,
+  "status": "🔵 En Vivo LONG (XTZUSDT @ $0.2364)",
+  "position": {
+    "symbol": "XTZUSDT",
+    "quantity": 63.4,
+    "entry_price": 0.235,
+    "highest_price": 0.2364,
+    "cost_usd": 14.99,
+    "side": "LONG",
+    "phase": 2,
+    "holding_cycles": 1,
+    "volatility_regime": "🔒 FASE 2 BREAK-EVEN BLINDADO (🧩 Cima +0.60% | Retención 60% -> Piso +0.36%)"
+  },
   "verdict": {
     "timestamp": "2026-08-21 15:37:56",
     "selected_symbol": "NONE",

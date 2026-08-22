@@ -179,14 +179,37 @@ def run_infinite_trading_matrix_cycle():
     matrix = load_live_matrix()
     accounts = matrix["accounts"]
     
-    # 🎯 FAST-TRACK INSTITUCIONAL: Si la cuenta real ya tiene una posición abierta,
-    # CANCELAR el escaneo pesado de 120 pares y Gemini para dedicar el 100% de recursos al Heartbeat 1s.
+    # 🎯 MODO GUARDIÁN 100% ININTERRUMPIDO EN PRIMER PLANO:
+    # Si la cuenta real tiene una posición abierta, SUSPENDER el escaneo de 120 pares y Gemini,
+    # y quedarse en un bucle continuo segundo a segundo (T+1s, T+2s, T+3s...) hasta que se cierre la posición.
     real_st_pre = api_connector.load_real_account_state()
     active_pos_pre = real_st_pre.get("position")
     if active_pos_pre and active_pos_pre.get("symbol"):
-        print(f"\n🛡️ [SÚPER-CEREBRO EN GESTIÓN 100% EXCLUSIVA] Posición activa en {active_pos_pre.get('symbol')}.")
-        print("⚡ Escaneo de 120 pares y consultas a Gemini PAUSADOS para enfocar el 100% de CPU en el Heartbeat 1s.")
-        api_connector.evaluate_and_trade_real_money([], {}, 50)
+        sym = active_pos_pre.get("symbol")
+        print(f"\n🛡️ [SÚPER-CEREBRO EN GESTIÓN 100% EXCLUSIVA] Posición activa en {sym}.")
+        print("⚡ Monitoreo ininterrumpido segundo a segundo activo hasta la salida.\n", flush=True)
+        
+        import time as _t
+        tick = 0
+        while True:
+            tick += 1
+            _t.sleep(1.0)
+            try:
+                hb = api_connector.quick_position_heartbeat()
+                if not hb or not isinstance(hb, dict) or not hb.get("symbol"):
+                    print(f"\n🎯 [OPERACIÓN FINALIZADA TRAS {tick}s] Salida ejecutada con éxito.", flush=True)
+                    print("🔄 Sincronizando billetera y reactivando Radar Cuántico de 120 Pares...\n", flush=True)
+                    try:
+                        api_connector.diagnose_full_spot_wallet()
+                    except Exception:
+                        pass
+                    break
+                
+                p_fmt = f"${hb['price']:.5f}" if hb['price'] < 0.05 else f"${hb['price']:.4f}"
+                pnl_sign = "+" if hb['pnl_pct'] >= 0 else ""
+                print(f"💓 [HEARTBEAT 1s | T+{tick}s] {hb['symbol']} @ {p_fmt} | PnL: {pnl_sign}{hb['pnl_pct']:.2f}% (Pico: +{hb.get('highest_pnl', 0):.2f}% | Fase {hb.get('phase', 1)})", flush=True)
+            except Exception:
+                _t.sleep(1.0)
         return
 
     symbol_analysis_map = {}
