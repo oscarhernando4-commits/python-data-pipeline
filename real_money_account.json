@@ -1,8 +1,13 @@
 {
   "initial_deposit_usdt": 15.47,
   "initial_total_usd": 20.07,
+<<<<<<< Updated upstream
   "current_balance_usd": 15.3,
   "net_pnl_usd": -0.17,
+=======
+  "current_balance_usd": 15.33,
+  "net_pnl_usd": -0.14,
+>>>>>>> Stashed changes
   "wins": 2,
   "losses": 2,
   "trades_count": 4,
@@ -10,11 +15,18 @@
   "daily_losses": 2,
   "position": {
     "symbol": "KAIAUSDT",
+<<<<<<< Updated upstream
     "entry_price": 0.0315,
+=======
+    "quantity": 479.3,
+    "entry_price": 0.0315,
+    "highest_price": 0.0315,
+>>>>>>> Stashed changes
     "cost_usd": 15.1,
     "side": "LONG",
     "quantity": 479.3,
     "break_even": false,
+<<<<<<< Updated upstream
     "highest_price": 0.0316,
     "phase": 1,
     "archetype": "HYPER_VOLATILE_SPRINT",
@@ -42,4 +54,14 @@
   "_last_closed_time": 1787434966.3408363,
   "_last_exit_price": 0.819,
   "_last_wallet_sync_ts": 1787437499.46297
+=======
+    "entry_time_ms": 1787438340676
+  },
+  "last_trade_time": "26-08-22<br>16:06",
+  "status": "🔵 En Vivo LONG (KAIAUSDT @ $0.0315)",
+  "_cached_total_val": 15.33,
+  "_cached_usdt_free": 0.0828,
+  "_cached_bnb": 0.00015225,
+  "_cached_bnb_usd": 0.11
+>>>>>>> Stashed changes
 }
