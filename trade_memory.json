@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2861,
-    "wins": 1528,
+    "total_trades": 2862,
+    "wins": 1529,
     "losses": 1333,
-    "win_rate_pct": 53.41,
-    "total_pnl_usd": 752.1827765487908
+    "win_rate_pct": 53.42,
+    "total_pnl_usd": 752.2427765487907
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on HEMIUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on MORPHOUSDT)",
       "BOOST LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ONGUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on NIGHTUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on COTIUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LDOUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on GNOUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on CVXUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HEMIUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HEMIUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 14:19:25",
-      "account_id": "SIM-005",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "ENAUSDT",
-      "side": "LONG",
-      "entry_price": 0.1398,
-      "exit_price": 0.1358,
-      "pnl_usd": -0.46,
-      "result": "LOSS",
-      "notes": "LOSS on ENAUSDT (PnL: -2.86%, Net: $-0.46 Fase 1)",
-      "context": {
-        "score": 60,
-        "rsi_15m": 33.97,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 14:19:25",
       "account_id": "SIM-006",
@@ -8512,6 +8495,23 @@
       "result": "WIN",
       "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.26% <= +0.35%) (Fase 2, PnL: +0.26%)",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-22 13:24:32",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "NEXOUSDT",
+      "side": "SHORT",
+      "entry_price": 0.833,
+      "exit_price": 0.82,
+      "pnl_usd": 0.06,
+      "result": "WIN",
+      "notes": "WIN on NEXOUSDT (PnL: +1.56%, Net: $+0.06 Fase 4)",
+      "context": {
+        "score": 77,
+        "rsi_15m": 49.59,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
