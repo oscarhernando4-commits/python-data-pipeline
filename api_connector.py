@@ -1549,7 +1549,17 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         if bias_ok and not is_stable:
             # 1. LONG Entry Signal (Operates with 100% of available USDT, strictly requires Score >= 55 Setup A+)
             min_required_score = max(55, real_long_score) if not is_learned_signal else 55
-            if best_symbol and not is_bearish and best_score >= min_required_score and usdt_free >= 5.1:
+            if best_symbol and not is_bearish and best_score >= min_required_score:
+                # 🔍 PRE-FLIGHT LIVE CHECK: Verificar balance real directamente en Binance antes de comprar
+                try:
+                    live_diag = diagnose_full_spot_wallet()
+                    live_usdt = live_diag.get("_cached_usdt_free", 0.0)
+                    if live_usdt < 5.1:
+                        print(f"⚠️ [PRE-FLIGHT] Solo hay ${live_usdt:.2f} USDT libres en Binance Spot. Compra de {best_symbol} cancelada para evitar errores.")
+                        return
+                    usdt_free = live_usdt
+                except Exception:
+                    pass
                 trigger_reason = "AUTO-APRENDIZAJE A+" if is_learned_signal else f"Score {real_long_score}+"
                 print(f"🚀 SEÑAL ALCISTA (LONG) ({best_symbol} @ {best_score} Pts - {trigger_reason}). Comprando con ${usdt_free:.1f} USDT (100% Capital)...")
                 buy_res = execute_real_spot_market_buy(best_symbol, usdt_free)
