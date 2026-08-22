@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2738,
-    "wins": 1455,
+    "total_trades": 2739,
+    "wins": 1456,
     "losses": 1283,
-    "win_rate_pct": 53.14,
-    "total_pnl_usd": 428.9235765487918
+    "win_rate_pct": 53.16,
+    "total_pnl_usd": 429.4235765487918
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 14:53:43",
-      "account_id": "SIM-039",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ROBOUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01744,
-      "exit_price": 0.01737,
-      "pnl_usd": 0.01,
-      "result": "WIN",
-      "notes": "WIN on ROBOUSDT (PnL: +0.40%, Net: $+0.01 Fase 2)",
-      "context": {
-        "score": 46,
-        "rsi_15m": 76.67,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 09:59:13",
       "account_id": "SIM-001",
@@ -8498,6 +8481,23 @@
       "context": {
         "score": 61,
         "rsi_15m": 31.89,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 09:50:33",
+      "account_id": "SIM-083",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BNBUSDT",
+      "side": "LONG",
+      "entry_price": 673.21,
+      "exit_price": 697.32,
+      "pnl_usd": 0.5,
+      "result": "WIN",
+      "notes": "WIN on BNBUSDT (PnL: +3.58%, Net: $+0.50 Fase 5)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 45.01,
         "macro_trend_4h": "NEUTRAL"
       }
     }
