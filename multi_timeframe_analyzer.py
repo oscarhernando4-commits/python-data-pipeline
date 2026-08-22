@@ -283,6 +283,53 @@ def calculate_atr(highs, lows, closes, period=14):
         atr = (atr * (period - 1) + trs[i]) / period
     return atr
 
+def calculate_mfi(highs, lows, closes, volumes, period=14):
+    """Money Flow Index (MFI): Volume-weighted RSI detecting institutional capital injection."""
+    if not highs or not lows or not closes or not volumes or len(closes) < period + 1:
+        return 50.0
+    typical_prices = [(h + l + c) / 3.0 for h, l, c in zip(highs, lows, closes)]
+    raw_money_flow = [tp * v for tp, v in zip(typical_prices, volumes)]
+    pos_flow = []
+    neg_flow = []
+    for i in range(1, len(typical_prices)):
+        if typical_prices[i] > typical_prices[i-1]:
+            pos_flow.append(raw_money_flow[i])
+            neg_flow.append(0.0)
+        elif typical_prices[i] < typical_prices[i-1]:
+            pos_flow.append(0.0)
+            neg_flow.append(raw_money_flow[i])
+        else:
+            pos_flow.append(0.0)
+            neg_flow.append(0.0)
+    if len(pos_flow) < period:
+        return 50.0
+    sum_pos = sum(pos_flow[-period:])
+    sum_neg = sum(neg_flow[-period:])
+    if sum_neg == 0:
+        return 100.0
+    money_ratio = sum_pos / sum_neg
+    return round(100.0 - (100.0 / (1.0 + money_ratio)), 1)
+
+def calculate_stoch_rsi(closes, rsi_period=14, stoch_period=14):
+    """Stochastic RSI: Ultra-sensitive oscillator detecting floor exhaustion and ignition."""
+    if not closes or len(closes) < rsi_period + stoch_period:
+        return 50.0, 50.0
+    # Calculate rolling RSIs
+    rsis = []
+    for i in range(rsi_period + 1, len(closes) + 1):
+        rsis.append(calculate_rsi(closes[:i], period=rsi_period))
+    if len(rsis) < stoch_period:
+        return 50.0, 50.0
+    sub_rsi = rsis[-stoch_period:]
+    min_rsi = min(sub_rsi)
+    max_rsi = max(sub_rsi)
+    if max_rsi == min_rsi:
+        stoch_k = 50.0
+    else:
+        stoch_k = round(((sub_rsi[-1] - min_rsi) / (max_rsi - min_rsi)) * 100.0, 1)
+    stoch_d = round(sum(rsis[-3:]) / 3.0, 1) if len(rsis) >= 3 else stoch_k
+    return stoch_k, stoch_d
+
 
 # ─── ADN v2 Safe Wrappers ────────────────────────────────────────────────────
 def _get_time_dna_safe(symbol):
@@ -466,6 +513,14 @@ def analyze_multi_timeframe_candles(symbol):
     lows_1h = [float(k[3]) for k in klines_1h]
     atr_1h = calculate_atr(highs_1h, lows_1h, closes_1h, 14) if klines_1h else atr_15m * 1.5
     atr_pct_1h = round((atr_1h / closes_1h[-1]) * 100.0, 3) if (closes_1h and closes_1h[-1] > 0) else atr_pct_15m * 1.4
+
+    # MFI (Money Flow Index) - Volume-Weighted Institutional Cash Flow
+    mfi_15m = calculate_mfi(highs_15m, lows_15m, closes_15m, vols_15m, period=14)
+    is_mfi_oversold_floor = (mfi_15m <= 35.0)  # Institutional floor accumulation
+    
+    # StochRSI (Stochastic RSI) - Ultra-sensitive bottom exhaustion
+    stoch_k_15m, stoch_d_15m = calculate_stoch_rsi(closes_15m, rsi_period=14, stoch_period=14)
+    is_stoch_rsi_floor_pivot = (stoch_k_15m <= 25.0 and stoch_k_15m >= stoch_d_15m)
 
     import learning_engine
     dna_profile = learning_engine.calculate_asset_dna_profile(symbol, atr_15m_pct=atr_pct_15m, atr_1h_pct=atr_pct_1h)
@@ -702,6 +757,10 @@ def analyze_multi_timeframe_candles(symbol):
         fii_score += 5   # Suelo en sub-minuto confirmado
     if is_vwap_floor_rebound:
         fii_score += 10  # Precio en el piso del VWAP (-1.5 StdDev)
+    if is_mfi_oversold_floor:
+        fii_score += 10  # MFI (Money Flow Index) en sobreventa institucional (absorción de liquidez)
+    if is_stoch_rsi_floor_pivot:
+        fii_score += 10  # StochRSI giro alcista en suelo
     if is_bullish_divergence:
         fii_score += 15  # Divergencia alcista: precio bajo pero RSI sube
     if rsi_2m <= 48 and tf_2m_up:
@@ -1116,6 +1175,11 @@ def analyze_multi_timeframe_candles(symbol):
         "atr_15m": round(atr_15m, 6),
         "atr_pct_15m": atr_pct_15m,
         "atr_pct_1h": atr_pct_1h,
+        "mfi_15m": mfi_15m,
+        "is_mfi_oversold_floor": is_mfi_oversold_floor,
+        "stoch_k_15m": stoch_k_15m,
+        "stoch_d_15m": stoch_d_15m,
+        "is_stoch_rsi_floor_pivot": is_stoch_rsi_floor_pivot,
         "dna_profile": dna_profile,
         "archetype_dna": _get_archetype_dna_safe(symbol, atr_pct_15m, close_15m),
         "predictive_dna": asset_dna_predictive_engine.analyze_multi_horizon_predictive_dna(
