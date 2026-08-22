@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2508,
-    "wins": 1302,
+    "total_trades": 2509,
+    "wins": 1303,
     "losses": 1206,
-    "win_rate_pct": 51.91,
-    "total_pnl_usd": -8107.066253451208
+    "win_rate_pct": 51.93,
+    "total_pnl_usd": -8107.052823451208
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 07:53:20",
-      "account_id": "SIM-046",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "SHIBUSDT",
-      "side": "LONG",
-      "entry_price": 5.08e-06,
-      "exit_price": 5.17e-06,
-      "pnl_usd": 0.33,
-      "result": "WIN",
-      "notes": "WIN on SHIBUSDT (PnL: +1.77%, Net: $+0.33 Fase 4)",
-      "context": {
-        "score": 40,
-        "rsi_15m": 76.04,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 07:53:20",
       "account_id": "SIM-047",
@@ -8460,6 +8443,19 @@
         "rsi_15m": 76.9,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-22 03:20:52",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "COTIUSDT",
+      "side": "BUY",
+      "entry_price": 0.01169,
+      "exit_price": 0.0117,
+      "pnl_usd": 0.013429999999999453,
+      "result": "WIN",
+      "notes": "Real Money Trade closed with 0.09%",
+      "context": {}
     }
   ]
 }
