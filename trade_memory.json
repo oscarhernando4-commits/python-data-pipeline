@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3015,
-    "wins": 1597,
+    "total_trades": 3016,
+    "wins": 1598,
     "losses": 1418,
-    "win_rate_pct": 52.97,
-    "total_pnl_usd": 3581.36737654879
+    "win_rate_pct": 52.98,
+    "total_pnl_usd": 3581.57737654879
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on JUPUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ROBOUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XTZUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on JTOUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on NEXOUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DCRUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DOGEUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DASHUSDT)",
-      "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DOTUSDT)"
+      "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DOTUSDT)",
+      "BOOST SHORT when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on TIAUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 04:01:08",
-      "account_id": "SIM-049",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ETHFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.6244,
-      "exit_price": 0.6258,
-      "pnl_usd": 0.01,
-      "result": "WIN",
-      "notes": "WIN on ETHFIUSDT (PnL: +0.22%, Net: $+0.01 Fase 3)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 60.24,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 04:01:08",
       "account_id": "SIM-050",
@@ -8490,6 +8473,23 @@
       "context": {
         "score": 36,
         "rsi_15m": 39.28,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 21:44:59",
+      "account_id": "SIM-081",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "TIAUSDT",
+      "side": "SHORT",
+      "entry_price": 0.3736,
+      "exit_price": 0.3716,
+      "pnl_usd": 0.21,
+      "result": "WIN",
+      "notes": "WIN on TIAUSDT (PnL: +0.54%, Net: $+0.21 Fase 2)",
+      "context": {
+        "score": 65,
+        "rsi_15m": 34.61,
         "macro_trend_4h": "NEUTRAL"
       }
     }
