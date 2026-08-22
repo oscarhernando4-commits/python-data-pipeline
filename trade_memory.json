@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2724,
-    "wins": 1442,
+    "total_trades": 2725,
+    "wins": 1443,
     "losses": 1282,
-    "win_rate_pct": 52.94,
-    "total_pnl_usd": 315.16357654879175
+    "win_rate_pct": 52.95,
+    "total_pnl_usd": 315.2535765487917
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COTIUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on JTOUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on MORPHOUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PENDLEUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PROMUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on TRXUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on LDOUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on JTOUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on POLUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on POLUSDT)",
+      "BOOST SHORT when RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MORPHOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 09:13:52",
-      "account_id": "SIM-029",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ZROUSDT",
-      "side": "SHORT",
-      "entry_price": 1.019,
-      "exit_price": 1.016,
-      "pnl_usd": 0.03,
-      "result": "WIN",
-      "notes": "WIN on ZROUSDT (PnL: +0.29%, Net: $+0.03 Fase 2)",
-      "context": {
-        "score": 68,
-        "rsi_15m": 70.66,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 09:16:36",
       "account_id": "SIM-005",
@@ -8486,6 +8469,23 @@
       "context": {
         "score": 0,
         "rsi_15m": 47.06,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 09:14:30",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "MORPHOUSDT",
+      "side": "SHORT",
+      "entry_price": 2.314,
+      "exit_price": 2.263,
+      "pnl_usd": 0.09,
+      "result": "WIN",
+      "notes": "WIN on MORPHOUSDT (PnL: +2.20%, Net: $+0.09 Fase 4)",
+      "context": {
+        "score": 76,
+        "rsi_15m": 38.98,
         "macro_trend_4h": "NEUTRAL"
       }
     }
