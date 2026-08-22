@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2641,
-    "wins": 1390,
+    "total_trades": 2642,
+    "wins": 1391,
     "losses": 1251,
-    "win_rate_pct": 52.63,
-    "total_pnl_usd": -960.3764234512082
+    "win_rate_pct": 52.65,
+    "total_pnl_usd": -960.2564234512082
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PROMUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on CRVUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLFIUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ONGUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MUBARAKUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DOTUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on JTOUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on MORPHOUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PENDLEUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PENDLEUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PROMUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 11:15:30",
-      "account_id": "SIM-053",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "BTCUSDT",
-      "side": "LONG",
-      "entry_price": 75497.91,
-      "exit_price": 77411.93,
-      "pnl_usd": 0.45,
-      "result": "WIN",
-      "notes": "WIN on BTCUSDT (PnL: +2.54%, Net: $+0.45 Fase 4)",
-      "context": {
-        "score": 48,
-        "rsi_15m": 57.16,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 11:15:30",
       "account_id": "SIM-054",
@@ -8454,6 +8437,23 @@
       "context": {
         "score": 60,
         "rsi_15m": 43.09,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 06:42:30",
+      "account_id": "SIM-091",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "PROMUSDT",
+      "side": "SHORT",
+      "entry_price": 2.832,
+      "exit_price": 2.681,
+      "pnl_usd": 0.12,
+      "result": "WIN",
+      "notes": "WIN on PROMUSDT (PnL: +5.33%, Net: $+0.12 Fase 5)",
+      "context": {
+        "score": 85,
+        "rsi_15m": 48.07,
         "macro_trend_4h": "NEUTRAL"
       }
     }
