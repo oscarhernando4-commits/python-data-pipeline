@@ -942,10 +942,14 @@ def sync_live_matrix_obsidian(matrix):
         # NUBE (Fixie): CERO consultas periódicas (0 requests/hora).
         # Únicamente consulta al INICIO (si no hay cache) o por EVENTO (al COMPRAR o VENDER).
         is_local_mode = api_connector.get_execution_mode() == "local"
-        has_cached_balance = real_st.get("_cached_total_val") is not None and real_st.get("_cached_total_val", 0) > 0
+        has_cached_balance = (
+            real_st.get("_cached_total_val") is not None and 
+            real_st.get("_cached_total_val", 0) > 0 and
+            (real_st.get("position") is not None or real_st.get("_cached_usdt_free", 0) >= 5.0)
+        )
         
         if is_local_mode or not has_cached_balance:
-            mode_label = "LOCAL DIRECTO" if is_local_mode else "NUBE INICIO"
+            mode_label = "LOCAL DIRECTO" if is_local_mode else "NUBE AUTO-SYNC"
             print(f"🔄 [SYNC {mode_label}] Sincronizando balance Spot desde Binance API...")
             real_st = api_connector.diagnose_full_spot_wallet()
             real_total_val = real_st.get("_cached_total_val", real_st.get("current_balance_usd", 0.0))
@@ -953,7 +957,7 @@ def sync_live_matrix_obsidian(matrix):
             real_bnb = real_st.get("_cached_bnb", 0.0)
             real_bnb_usd = real_st.get("_cached_bnb_usd", 0.0)
         else:
-            # 💤 NUBE: 100% Cero consumo de cuota Fixie mientras espera oportunidades.
+            # 💤 NUBE: Cero consumo innecesario de cuota Fixie mientras espera oportunidades.
             real_total_val = real_st.get("_cached_total_val", real_st.get("current_balance_usd", 0.0))
             real_usdt_free = real_st.get("_cached_usdt_free", 0.0)
             real_bnb = real_st.get("_cached_bnb", 0.0)
