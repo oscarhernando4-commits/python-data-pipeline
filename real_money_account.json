@@ -1,37 +1,23 @@
 {
   "initial_deposit_usdt": 15.47,
   "initial_total_usd": 20.07,
-  "current_balance_usd": 15.85,
-  "net_pnl_usd": 0.38,
+  "current_balance_usd": 15.77,
+  "net_pnl_usd": 0.30,
   "wins": 39,
-  "losses": 33,
-  "trades_count": 71,
+  "losses": 34,
+  "trades_count": 73,
   "daily_wins": 3,
-  "daily_losses": 0,
-  "position": {
-    "symbol": "RUNEUSDT",
-    "quantity": 32.2,
-    "entry_price": 0.475,
-    "highest_price": 0.477,
-    "cost_usd": 15.29,
-    "side": "LONG",
-    "phase": 1,
-<<<<<<< Updated upstream
-    "holding_cycles": 5,
-=======
-    "holding_cycles": 3,
->>>>>>> Stashed changes
-    "volatility_regime": "🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (🧩 Cima +0.42% | SL Defensivo -2.00%)"
-  },
-  "last_trade_time": "26-08-22<br>02:34",
-  "status": "🔵 En Vivo LONG (RUNEUSDT @ $0.4750)",
-  "_cached_total_val": 15.85,
-  "_cached_usdt_free": 0.1922,
-  "_cached_bnb": 0.00051553,
-  "_cached_bnb_usd": 0.36,
-  "_btc_last_price": 78302.76,
+  "daily_losses": 1,
+  "position": null,
+  "last_trade_time": "26-08-22<br>02:35",
+  "status": "🟦 Buscando Entrada A+",
+  "_cached_total_val": 15.77,
+  "_cached_usdt_free": 15.4228,
+  "_cached_bnb": 0.00049916,
+  "_cached_bnb_usd": 0.35,
+  "_btc_last_price": 78300.0,
   "last_trading_day": "2026-08-22",
-  "_last_closed_symbol": "COTIUSDT",
-  "_last_closed_time": 1787365145.935128,
-  "_last_exit_price": 0.01123
+  "_last_closed_symbol": "RUNEUSDT",
+  "_last_closed_time": 1787366136.044,
+  "_last_exit_price": 0.473
 }
