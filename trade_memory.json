@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2730,
+    "total_trades": 2731,
     "wins": 1448,
-    "losses": 1282,
-    "win_rate_pct": 53.04,
-    "total_pnl_usd": 421.91357654879175
+    "losses": 1283,
+    "win_rate_pct": 53.02,
+    "total_pnl_usd": 420.90357654879176
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZENUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PROMUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PROMUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COTIUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZAMAUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ZAMAUSDT)",
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COTIUSDT)"
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COTIUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on GPSUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PROMUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 09:20:51",
-      "account_id": "SIM-014",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "TUTUSDT",
-      "side": "LONG",
-      "entry_price": 0.04126,
-      "exit_price": 0.04157,
-      "pnl_usd": 0.06,
-      "result": "WIN",
-      "notes": "WIN on TUTUSDT (PnL: +0.75%, Net: $+0.06 Fase 3)",
-      "context": {
-        "score": 68,
-        "rsi_15m": 74.65,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 09:20:54",
       "account_id": "SIM-093",
@@ -8486,6 +8469,23 @@
       "context": {
         "score": 0,
         "rsi_15m": 40.3,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 09:38:31",
+      "account_id": "SIM-081",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "GPSUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01208,
+      "exit_price": 0.01228,
+      "pnl_usd": -1.01,
+      "result": "LOSS",
+      "notes": "LOSS on GPSUSDT (PnL: -1.66%, Net: $-1.01 Fase 1)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 57.18,
         "macro_trend_4h": "NEUTRAL"
       }
     }
