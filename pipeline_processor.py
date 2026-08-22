@@ -356,6 +356,7 @@ def run_infinite_trading_matrix_cycle():
     # Evaluate Top 15 Candidates with Gemini Flash / Pro LLM Sentinel
     gemini_res = {}
     selected_opp = None
+    import api_connector
     real_st_check = api_connector.load_real_account_state()
     has_active_real_pos = bool(real_st_check.get("position") and real_st_check.get("position", {}).get("symbol"))
     
