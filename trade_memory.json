@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2953,
+    "total_trades": 2954,
     "wins": 1573,
-    "losses": 1380,
-    "win_rate_pct": 53.27,
-    "total_pnl_usd": 1716.5423765487906
+    "losses": 1381,
+    "win_rate_pct": 53.25,
+    "total_pnl_usd": 1716.3423765487905
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on COTIUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on MUBARAKUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on HEMIUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TUTUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COTIUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GNOUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GNOUSDT)",
-      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on CRVUSDT)"
+      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on CRVUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DCRUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ETHUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 00:03:03",
-      "account_id": "SIM-049",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ZAMAUSDT",
-      "side": "LONG",
-      "entry_price": 0.05091,
-      "exit_price": 0.05127,
-      "pnl_usd": 0.1,
-      "result": "WIN",
-      "notes": "WIN on ZAMAUSDT (PnL: +0.71%, Net: $+0.10 Fase 4)",
-      "context": {
-        "score": 74,
-        "rsi_15m": 73.7,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 00:03:03",
       "account_id": "SIM-050",
@@ -8498,6 +8481,23 @@
       "context": {
         "score": 65,
         "rsi_15m": 46.84,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 16:08:32",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "DCRUSDT",
+      "side": "SHORT",
+      "entry_price": 13.96,
+      "exit_price": 14.21,
+      "pnl_usd": -0.2,
+      "result": "LOSS",
+      "notes": "LOSS on DCRUSDT (PnL: -1.79%, Net: $-0.20 Fase 1)",
+      "context": {
+        "score": 96,
+        "rsi_15m": 63.81,
         "macro_trend_4h": "NEUTRAL"
       }
     }
