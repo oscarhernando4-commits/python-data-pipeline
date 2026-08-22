@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2610,
-    "wins": 1368,
+    "total_trades": 2611,
+    "wins": 1369,
     "losses": 1242,
-    "win_rate_pct": 52.41,
-    "total_pnl_usd": -1153.5964234512076
+    "win_rate_pct": 52.43,
+    "total_pnl_usd": -1153.3264234512076
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on GPSUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DASHUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DOTUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ETHUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BNBUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ONGUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MUBARAKUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PUMPUSDT)",
-      "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ASTERUSDT)"
+      "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ASTERUSDT)",
+      "BOOST SHORT when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on COTIUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 09:57:59",
-      "account_id": "SIM-094",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "WLDUSDT",
-      "side": "SHORT",
-      "entry_price": 0.3714,
-      "exit_price": 0.3916,
-      "pnl_usd": -131.81,
-      "result": "LOSS",
-      "notes": "LOSS on WLDUSDT (PnL: -5.44%, Net: $-131.81 Fase 1)",
-      "context": {
-        "score": 55,
-        "rsi_15m": 66.03,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 09:57:59",
       "account_id": "SIM-097",
@@ -8444,6 +8427,23 @@
       "result": "LOSS",
       "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (-2.03% <= -2.00%) (Fase 1, PnL: -2.03%)",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-22 05:47:05",
+      "account_id": "SIM-081",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0108,
+      "exit_price": 0.01073,
+      "pnl_usd": 0.27,
+      "result": "WIN",
+      "notes": "WIN on COTIUSDT (PnL: +0.65%, Net: $+0.27 Fase 3)",
+      "context": {
+        "score": 65,
+        "rsi_15m": 34.22,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
