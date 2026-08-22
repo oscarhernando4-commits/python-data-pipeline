@@ -84,10 +84,13 @@ def run_focused_position_guardian(max_duration_secs: int = 14400):
         tick += 1
         time.sleep(1.0)
         
-        # 🔄 Sincronización periódica de repositorio cada 15s para detectar cierres externos de inmediato
-        if tick % 15 == 0:
+        # 🔄 Sincronización periódica de repositorio cada 30s para detectar cierres externos de inmediato
+        if tick % 30 == 0:
             try:
-                subprocess.run(["git", "pull", "--rebase"], check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                import os
+                _env = os.environ.copy()
+                _env["GIT_TERMINAL_PROMPT"] = "0"
+                subprocess.run(["git", "pull", "--rebase"], check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=5, env=_env)
             except Exception:
                 pass
         
@@ -123,31 +126,34 @@ def run_git_push_sync(cycle_num: int, total_cycles: int = 240):
 
     try:
         now_utc = datetime.now().strftime("%Y-%m-%d %H:%M:%S UTC")
-        subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=False)
-        subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"], check=False)
+        _env = os.environ.copy()
+        _env["GIT_TERMINAL_PROMPT"] = "0"
+        
+        subprocess.run(["git", "config", "--global", "user.name", "github-actions[bot]"], check=False, timeout=5, env=_env)
+        subprocess.run(["git", "config", "--global", "user.email", "github-actions[bot]@users.noreply.github.com"], check=False, timeout=5, env=_env)
         
         gh_token = os.getenv("GITHUB_TOKEN")
         gh_repo = os.getenv("GITHUB_REPOSITORY")
         if gh_token and gh_repo:
-            subprocess.run(["git", "remote", "set-url", "origin", f"https://x-access-token:{gh_token}@github.com/{gh_repo}.git"], check=False)
+            subprocess.run(["git", "remote", "set-url", "origin", f"https://x-access-token:{gh_token}@github.com/{gh_repo}.git"], check=False, timeout=5, env=_env)
 
         # Add and commit state files
-        subprocess.run(["git", "add", "real_money_account.json", "top_100_pairs.json", "dynamic_thresholds.json", "proxy_state.json", "gemini_key_state.json", "trade_memory.json"], check=False)
-        status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
+        subprocess.run(["git", "add", "real_money_account.json", "top_100_pairs.json", "dynamic_thresholds.json", "proxy_state.json", "gemini_key_state.json", "trade_memory.json"], check=False, timeout=5, env=_env)
+        status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True, timeout=5, env=_env)
         if status.stdout.strip():
             msg = f"chore: live sync [Cycle {cycle_num}/{total_cycles}] [{now_utc}]"
-            subprocess.run(["git", "commit", "-m", msg], check=False)
+            subprocess.run(["git", "commit", "-m", msg], check=False, timeout=5, env=_env)
             
         # Smooth merge preferring origin updates
-        subprocess.run(["git", "pull", "--no-rebase", "-X", "theirs", "origin", "main"], capture_output=True, text=True)
+        subprocess.run(["git", "pull", "--no-rebase", "-X", "theirs", "origin", "main"], capture_output=True, text=True, timeout=8, env=_env)
         
         for attempt in range(2):
-            res = subprocess.run(["git", "push", "origin", "main"], capture_output=True, text=True)
+            res = subprocess.run(["git", "push", "origin", "main"], capture_output=True, text=True, timeout=8, env=_env)
             if res.returncode == 0:
                 print(f"✅ [Cycle {cycle_num}] Git sync pushed.", flush=True)
                 break
             else:
-                subprocess.run(["git", "pull", "--no-rebase", "-X", "theirs", "origin", "main"], capture_output=True, text=True)
+                subprocess.run(["git", "pull", "--no-rebase", "-X", "theirs", "origin", "main"], capture_output=True, text=True, timeout=8, env=_env)
                 time.sleep(1)
     except Exception as e:
         print(f"⚠️ [Cycle {cycle_num}] Git sync note: {e}", flush=True)
