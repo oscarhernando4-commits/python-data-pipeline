@@ -1211,7 +1211,7 @@ def quick_position_heartbeat():
         
         # 🧱 MEJORA 4: Cancelación Preventiva — Solo si el libro de órdenes colapsa severamente
         # Requiere pérdida > -1.50% y Bids < 30% para evitar falsas salidas por ruido de micro-spread
-        if not should_exit and holding_cycles_hb <= 1 and current_pnl_pct < -1.50:
+        if not should_exit and holding_minutes_hb <= 2 and current_pnl_pct < -1.50:
             try:
                 import orderbook_analyzer as _ob
                 ob_check = _ob.fetch_orderbook_depth(sym, limit=20)
