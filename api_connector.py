@@ -793,7 +793,7 @@ def diagnose_full_spot_wallet():
     }
     
     print("\n" + "="*60)
-    print("🔍 [DIAGNÓSTICO INTEGRAL DE BILLETERA SPOT (FIXIE 30-MIN)]")
+    print("🔍 [DIAGNÓSTICO INTEGRAL DE BILLETERA SPOT (FIXIE 60-MIN / EVENTO)]")
     print("="*60)
     
     for b in balances:
