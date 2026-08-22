@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2541,
-    "wins": 1323,
+    "total_trades": 2542,
+    "wins": 1324,
     "losses": 1218,
-    "win_rate_pct": 52.07,
-    "total_pnl_usd": -4698.612023451207
+    "win_rate_pct": 52.08,
+    "total_pnl_usd": -4698.562023451207
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SOLUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZAMAUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ADAUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PENDLEUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XTZUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ETCUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ZAMAUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SUIUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DOTUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DOTUSDT)",
+      "BOOST SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on IMXUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 08:51:22",
-      "account_id": "SIM-091",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "ONGUSDT",
-      "side": "SHORT",
-      "entry_price": 0.08461,
-      "exit_price": 0.08631,
-      "pnl_usd": -0.05,
-      "result": "LOSS",
-      "notes": "LOSS on ONGUSDT (PnL: -2.01%, Net: $-0.05 Fase 1)",
-      "context": {
-        "score": 32,
-        "rsi_15m": 29.48,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 08:51:22",
       "account_id": "SIM-093",
@@ -8448,6 +8431,23 @@
       "result": "LOSS",
       "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (-1.67% <= -1.50%) (Fase 1, PnL: -1.67%)",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-22 04:46:58",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "IMXUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1332,
+      "exit_price": 0.1323,
+      "pnl_usd": 0.05,
+      "result": "WIN",
+      "notes": "WIN on IMXUSDT (PnL: +0.68%, Net: $+0.05 Fase 3)",
+      "context": {
+        "score": 9,
+        "rsi_15m": 72.31,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
