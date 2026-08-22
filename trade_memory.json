@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3003,
+    "total_trades": 3004,
     "wins": 1588,
-    "losses": 1415,
-    "win_rate_pct": 52.88,
-    "total_pnl_usd": 1752.16537654879
+    "losses": 1416,
+    "win_rate_pct": 52.86,
+    "total_pnl_usd": 1752.01737654879
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 03:09:01",
-      "account_id": "SIM-048",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ETHFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.6244,
-      "exit_price": 0.6258,
-      "pnl_usd": 0.01,
-      "result": "WIN",
-      "notes": "WIN on ETHFIUSDT (PnL: +0.22%, Net: $+0.01 Fase 2)",
-      "context": {
-        "score": 23,
-        "rsi_15m": 64.24,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 03:09:01",
       "account_id": "SIM-049",
@@ -8488,6 +8471,19 @@
         "rsi_15m": 50.91,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-22 21:42:46",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.827,
+      "exit_price": 0.819,
+      "pnl_usd": -0.148,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (-0.97% <= -0.95%) (Fase 1, PnL: -0.97%)",
+      "context": {}
     }
   ]
 }
