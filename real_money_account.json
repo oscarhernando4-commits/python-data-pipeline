@@ -1,13 +1,8 @@
 {
   "initial_deposit_usdt": 15.47,
   "initial_total_usd": 20.07,
-<<<<<<< Updated upstream
-  "current_balance_usd": 15.68,
-  "net_pnl_usd": 0.21,
-=======
   "current_balance_usd": 15.67,
   "net_pnl_usd": 0.2,
->>>>>>> Stashed changes
   "wins": 2,
   "losses": 0,
   "trades_count": 2,
@@ -15,34 +10,6 @@
   "daily_losses": 0,
   "position": {
     "symbol": "GALAUSDT",
-<<<<<<< Updated upstream
-    "entry_price": 0.00197,
-    "cost_usd": 15.5,
-    "side": "LONG",
-    "quantity": 7868.0,
-    "break_even": false,
-    "highest_price": 0.00197,
-    "phase": 1,
-    "archetype": "SECTOR_ROTATION",
-    "archetype_label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
-    "initial_sl_pct": -0.95,
-    "max_stagnation_minutes": 40,
-    "vol_surge": 1.96,
-    "entry_time_ms": 1787431324229,
-    "atr_pct_15m": 1.118,
-    "ma25_5m": 0.001973,
-    "dna_tier": "HIGH_BETA_RUNNER",
-    "optimal_trailing_slack_pct": 1.45,
-    "target_resistance_price": 0.002281,
-    "pump_probability_pct": 45
-  },
-  "last_trade_time": "26-08-22<br>20:41",
-  "status": "🔵 En Vivo LONG (GALAUSDT @ $0.0020)",
-  "_cached_total_val": 15.68,
-  "_cached_usdt_free": 0.0,
-  "_cached_bnb": 0.00023419,
-  "_cached_bnb_usd": 0.16,
-=======
     "quantity": 7868.0,
     "entry_price": 0.00197,
     "highest_price": 0.00197,
@@ -52,15 +19,10 @@
     "break_even": false,
     "entry_time_ms": 1787431329223
   },
-  "last_trade_time": "26-08-22<br>15:32",
-  "status": "🔵 En Vivo LONG (GALAUSDT @ $0.00197000)",
+  "last_trade_time": "26-08-22<br>15:42",
+  "status": "\ud83d\udd35 En Vivo LONG (GALAUSDT @ .00197000)",
   "_cached_total_val": 15.67,
   "_cached_usdt_free": 0.0176,
   "_cached_bnb": 0.00021756,
-  "_cached_bnb_usd": 0.15,
->>>>>>> Stashed changes
-  "_last_closed_symbol": "CAKEUSDT",
-  "_last_closed_time": 1787430768.442,
-  "_last_exit_price": 1.714,
-  "_last_wallet_sync_ts": 1787431316.9413788
+  "_cached_bnb_usd": 0.15
 }
