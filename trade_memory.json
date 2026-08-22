@@ -1,9 +1,9 @@
 {
   "stats": {
-    "total_trades": 2662,
-    "wins": 1409,
+    "total_trades": 2663,
+    "wins": 1410,
     "losses": 1253,
-    "win_rate_pct": 52.93,
+    "win_rate_pct": 52.95,
     "total_pnl_usd": -956.796423451208
   },
   "learned_rules": {
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 12:23:41",
-      "account_id": "SIM-045",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "THETAUSDT",
-      "side": "LONG",
-      "entry_price": 0.1767,
-      "exit_price": 0.1777,
-      "pnl_usd": 0.05,
-      "result": "WIN",
-      "notes": "WIN on THETAUSDT (PnL: +0.57%, Net: $+0.05 Fase 2)",
-      "context": {
-        "score": 36,
-        "rsi_15m": 81.43,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 12:23:41",
       "account_id": "SIM-046",
@@ -8454,6 +8437,23 @@
       "context": {
         "score": 27,
         "rsi_15m": 64.04,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 07:36:31",
+      "account_id": "SIM-091",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "PROMUSDT",
+      "side": "SHORT",
+      "entry_price": 2.776,
+      "exit_price": 2.772,
+      "pnl_usd": -0.0,
+      "result": "WIN",
+      "notes": "WIN on PROMUSDT (PnL: +0.14%, Net: $-0.00 Fase 2)",
+      "context": {
+        "score": 12,
+        "rsi_15m": 53.98,
         "macro_trend_4h": "NEUTRAL"
       }
     }
