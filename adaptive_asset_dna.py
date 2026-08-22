@@ -216,10 +216,10 @@ def calculate_archetype_trailing(
         phase = 3
         phase_label = f"💎 FASE 3 EXPANSIÓN MEDIA ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 70% -> Piso +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= 0.50:
-        # Al tocar +0.50%, salto a Break-Even blindado (+0.12% neto) y Trailing proporcional
-        sl_pct = max(0.12, round(highest_pnl_pct * 0.55, 4))
+        # Al tocar +0.50%, salto a Break-Even blindado (+0.12% neto) y Trailing al 60% de retención
+        sl_pct = max(0.12, round(highest_pnl_pct * 0.60, 4))
         phase = 2
-        phase_label = f"🔒 FASE 2 BREAK-EVEN BLINDADO ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}%)"
+        phase_label = f"🔒 FASE 2 BREAK-EVEN BLINDADO ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 60% -> Piso +{sl_pct:.2f}%)"
     else:
         # Cima < +0.50%: Fase 1 respiración amplia defensiva
         sl_pct = initial_sl
