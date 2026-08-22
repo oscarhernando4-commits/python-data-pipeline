@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2461,
-    "wins": 1269,
+    "total_trades": 2464,
+    "wins": 1272,
     "losses": 1192,
-    "win_rate_pct": 51.56,
-    "total_pnl_usd": -8062.592175451208
+    "win_rate_pct": 51.62,
+    "total_pnl_usd": -8057.592423451208
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,8 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ONGUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ORDIUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BNBUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MORPHOUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on STXUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DASHUSDT)",
@@ -49,61 +47,12 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEARUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SHIBUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on STXUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZAMAUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZAMAUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ADAUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PENDLEUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 05:33:49",
-      "account_id": "SIM-070",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "KAITOUSDT",
-      "side": "SHORT",
-      "entry_price": 0.3457,
-      "exit_price": 0.3434,
-      "pnl_usd": 0.09,
-      "result": "WIN",
-      "notes": "WIN on KAITOUSDT (PnL: +0.67%, Net: $+0.09 Fase 3)",
-      "context": {
-        "score": 38,
-        "rsi_15m": 38.0,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 05:43:39",
-      "account_id": "SIM-013",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "ASTERUSDT",
-      "side": "LONG",
-      "entry_price": 0.667,
-      "exit_price": 0.67,
-      "pnl_usd": 0.03,
-      "result": "WIN",
-      "notes": "WIN on ASTERUSDT (PnL: +0.45%, Net: $+0.03 Fase 2)",
-      "context": {
-        "score": 59,
-        "rsi_15m": 55.94,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 05:43:39",
-      "account_id": "SIM-014",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "ASTERUSDT",
-      "side": "LONG",
-      "entry_price": 0.667,
-      "exit_price": 0.67,
-      "pnl_usd": 0.03,
-      "result": "WIN",
-      "notes": "WIN on ASTERUSDT (PnL: +0.45%, Net: $+0.03 Fase 2)",
-      "context": {
-        "score": 59,
-        "rsi_15m": 55.94,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 05:45:33",
       "account_id": "SIM-039",
@@ -8468,6 +8417,53 @@
         "rsi_15m": 56.52,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-22 00:11:05",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "entry_price": 0.2287,
+      "exit_price": 0.2273,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on ADAUSDT (PnL: +0.61%, Net: $+0.02 Fase 3)",
+      "context": {
+        "score": 92,
+        "rsi_15m": 57.72,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 00:11:06",
+      "account_id": "SIM-094",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "PENDLEUSDT",
+      "side": "SHORT",
+      "entry_price": 1.655,
+      "exit_price": 1.649,
+      "pnl_usd": 4.95,
+      "result": "WIN",
+      "notes": "WIN on PENDLEUSDT (PnL: +0.36%, Net: $+4.95 Fase 2)",
+      "context": {
+        "score": 90,
+        "rsi_15m": 53.72,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 00:11:21",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "BICOUSDT",
+      "side": "BUY",
+      "entry_price": 0.02057,
+      "exit_price": 0.02061,
+      "pnl_usd": 0.029751999999998786,
+      "result": "WIN",
+      "notes": "Real Money Trade closed with 0.19%",
+      "context": {}
     }
   ]
 }
