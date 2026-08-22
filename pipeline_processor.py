@@ -438,9 +438,27 @@ def run_infinite_trading_matrix_cycle():
                 top_side = gemini_res.get("action", "BUY_LONG")
                 selected_opp = (winner_sym, top_data, top_side)
                 
-                print(f"🧠 [COMITÉ AI ELIGIÓ {top_side}] {winner_sym} (Score Original {top_data['score']} Pts): Approved={gemini_res.get('approved')} | Conf={gemini_res.get('confidence')}% | Razonamiento: {gemini_res.get('reasoning')}")
+                delib = gemini_res.get("committee_deliberation", {})
+                print(f"\n🏛️ ═══════════════════════════════════════════════════════════════════")
+                print(f"👑 [COMITÉ INSTITUCIONAL 7 AGENTES - DICTAMEN SUPREMO: {winner_sym}]")
+                print(f"═══════════════════════════════════════════════════════════════════════")
+                if delib:
+                    if delib.get("agent_1_macro"): print(f"  🕵️ Agente 1 (Macro & BTC): {delib.get('agent_1_macro')}")
+                    if delib.get("agent_2_tech"): print(f"  📊 Agente 2 (Suelo 7D & DNA): {delib.get('agent_2_tech')}")
+                    if delib.get("agent_3_orderbook"): print(f"  🌊 Agente 3 (Libro & Bids): {delib.get('agent_3_orderbook')}")
+                    if delib.get("agent_4_sector"): print(f"  🧩 Agente 4 (Sector & Tiempo): {delib.get('agent_4_sector')}")
+                    if delib.get("agent_5_memory"): print(f"  🧠 Agente 5 (Memoria RAG): {delib.get('agent_5_memory')}")
+                    if delib.get("agent_6_risk"): print(f"  🛡️ Agente 6 (Riesgo & Anti-Cima): {delib.get('agent_6_risk')}")
+                    if delib.get("agent_7_ceo_anti_loss"): print(f"  👑 Agente 7 (CEO Scalp): {delib.get('agent_7_ceo_anti_loss')}")
+                print(f"  🎯 Dictamen Final: {top_side} | Aprobado={gemini_res.get('approved')} | Confianza={gemini_res.get('confidence')}%")
+                print(f"  💡 Consenso: {gemini_res.get('reasoning')}")
+                print(f"═══════════════════════════════════════════════════════════════════════\n")
             else:
-                print(f"🧠 [COMITÉ AI] Ninguna moneda fue aprobada (NONE). El mercado es demasiado tóxico. Razonamiento: {gemini_res.get('reasoning')}")
+                delib = gemini_res.get("committee_deliberation", {})
+                print(f"\n🏛️ [COMITÉ INSTITUCIONAL 7 AGENTES] Veredicto: HOLD (Preservar 100% USDT)")
+                if delib and delib.get("agent_7_ceo_anti_loss"):
+                    print(f"  👑 Dictamen del CEO: {delib.get('agent_7_ceo_anti_loss')}")
+                print(f"  💡 Razonamiento: {gemini_res.get('reasoning')}\n")
             
             # Build rich top candidates metrics for dashboard persistence (3-tier RSI architecture)
             top_candidates_rich = []
