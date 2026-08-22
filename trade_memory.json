@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2502,
-    "wins": 1298,
+    "total_trades": 2503,
+    "wins": 1299,
     "losses": 1204,
-    "win_rate_pct": 51.88,
-    "total_pnl_usd": -8077.398353451208
+    "win_rate_pct": 51.9,
+    "total_pnl_usd": -8077.206253451208
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 07:39:17",
-      "account_id": "SIM-029",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "PENGUUSDT",
-      "side": "SHORT",
-      "entry_price": 0.007355,
-      "exit_price": 0.007564,
-      "pnl_usd": -0.71,
-      "result": "LOSS",
-      "notes": "LOSS on PENGUUSDT (PnL: -2.84%, Net: $-0.71 Fase 1)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 64.97,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 07:41:25",
       "account_id": "SIM-000 (Réplica Real)",
@@ -8463,6 +8446,19 @@
       "pnl_usd": 0.139,
       "result": "WIN",
       "notes": "Real Money Trade exited via 🎯 SNIPER MECHA CIMA (Pico +1.27% -> Venta Inmediata en +0.91% tras retroceso de -0.33%) (Fase 3, PnL: +0.91%)",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-08-22 03:01:13",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "HEMIUSDT",
+      "side": "LONG",
+      "entry_price": 0.01049,
+      "exit_price": 0.01062,
+      "pnl_usd": 0.1921,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 SNIPER MECHA CIMA (Pico +1.62% -> Venta Inmediata en +1.24% tras retroceso de -0.33%) (Fase 3, PnL: +1.24%)",
       "context": {}
     }
   ]
