@@ -1465,15 +1465,15 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 dist_24h_high = mtf_res.get("dist_to_24h_high_pct", 999.0)
                 is_at_daily_ceiling = mtf_res.get("is_at_daily_resistance_ceiling", False)
                 
-                if is_15m_cascade:
+                if is_at_daily_ceiling:
+                    is_stable = True
+                    print(f"⛔ Compra rechazada: {best_symbol} bloqueado por TECHO DE RESISTENCIA 30M/24H (Canal 30M: {range_pos_30m*100:.0f}%, Distancia a Máximo 24H: +{dist_24h_high:.2f}%). Prohibido comprar la cima.")
+                elif is_15m_cascade:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} bloqueado por CASCADA ROJA 15M (3+ velas de 15m rojas consecutivas sin mecha de absorción). Prohibido comprar mientras sigue cayendo.")
                 elif is_active_falling_knife:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} bloqueado por CUCHILLO CAYENDO / SANGRADO ACTIVO (10s: DN, 30s: DN, 1M: DN). Prohibido comprar mientras sigue cayendo. Esperando freno.")
-                elif not is_learned_signal and is_at_daily_ceiling:
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} bloqueado por TECHO DE RESISTENCIA 30M/24H (Canal 30M: {range_pos_30m*100:.0f}%, Distancia a Máximo 24H: +{dist_24h_high:.2f}%). Prohibido comprar la cima.")
                 elif not is_learned_signal and not has_floor_turnaround:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} en zona baja pero SIN GIRO CONFIRMADO (1M: {tf_1m}, 2M: {tf_2m}, Divergencia: {mtf_res.get('is_bullish_divergence')}). Exige vela verde de confirmación.")

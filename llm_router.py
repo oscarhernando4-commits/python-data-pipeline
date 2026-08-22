@@ -525,9 +525,9 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     PASO 1 🏔️ EVALUACIÓN DE ESTRUCTURA Y MOMENTUM GANADOR:
     - Evalúa el SCORE CUÁNTICO (>= 65-75), la confluencia multi-temporal y el volumen de cada candidato.
     - ZONA GANADORA DE MOMENTUM (WR 70%+): Prioriza candidatos con RSI 15M entre 45 y 75 (tendencia activa con fuerza compradora).
+    - 🚫 VETO TOTAL ANTI-CIMA / TECHO 1H (Canal 1H >= 80% o Distancia a Máximo 24H <= 0.40%): PROHIBIDO COMPRAR en la cima de la vela o techo de resistencia. Solo compra en la BASE del canal o tras un retroceso constructivo (Canal 1H <= 75%).
     - VETO FAN TOKENS E ILÍQUIDOS (SANTOS, ALPINE, LAZIO, PORTO, BAR, CITY, PSG, OG, JUV, ATM, ASR): PROHIBIDO COMPRAR FAN TOKENS.
     - VETO CUCHILLO CAYENDO: Si RSI 15M < 38 y no hay divergencia alcista ni rebote, recházalo (evita comprar caídas libres).
-    - VETO CLÍMAX EXTREMO: Si el activo está en el 90%+ de su rango diario con RSI > 80, recházalo para no comprar el pico absoluto.
     
     PASO 2 ⏰ FILTRO MACROECONÓMICO Y VOLUMEN REAL:
     - VETO BTC CRASH: Si BTC_GUARD muestra altcoin_impact=AVOID (BTC cayendo violentamente), HOLD obligatorio.
