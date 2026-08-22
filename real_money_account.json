@@ -8,13 +8,30 @@
   "trades_count": 73,
   "daily_wins": 3,
   "daily_losses": 1,
+<<<<<<< Updated upstream
   "position": null,
   "last_trade_time": "26-08-22<br>02:45",
   "status": "🟦 Buscando Entrada A+",
+=======
+  "position": {
+    "symbol": "BBUSDT",
+    "quantity": 1389.6,
+    "entry_price": 0.01101,
+    "highest_price": 0.01106,
+    "cost_usd": 15.3,
+    "side": "LONG",
+    "phase": 1,
+    "break_even": false,
+    "entry_time_ms": 1787366300098,
+    "volatility_regime": "🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (🧩 Cima +0.45% | SL Defensivo -2.00%)"
+  },
+  "last_trade_time": "26-08-22<br>02:35",
+  "status": "🔵 En Vivo LONG (BBUSDT @ $0.0110)",
+>>>>>>> Stashed changes
   "_cached_total_val": 15.77,
-  "_cached_usdt_free": 15.4228,
-  "_cached_bnb": 0.00049916,
-  "_cached_bnb_usd": 0.35,
+  "_cached_usdt_free": 0.1233,
+  "_cached_bnb": 0.00048276,
+  "_cached_bnb_usd": 0.34,
   "_btc_last_price": 78300.0,
   "last_trading_day": "2026-08-22",
   "_last_closed_symbol": "RUNEUSDT",

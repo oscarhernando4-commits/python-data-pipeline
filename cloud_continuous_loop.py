@@ -51,12 +51,11 @@ def sleep_with_micro_heartbeat(sleep_secs: int):
         try:
             hb = api_connector.quick_position_heartbeat()
             if hb and isinstance(hb, dict):
-                # Print live heartbeat pulse every 3s so user sees continuous second-by-second updates
-                if tick_count % 3 == 0 or hb.get("highest_pnl", 0) >= 0.30:
-                    p_fmt = f"${hb['price']:.5f}" if hb['price'] < 0.05 else f"${hb['price']:.4f}"
-                    pnl_sign = "+" if hb['pnl_pct'] >= 0 else ""
-                    print(f"💓 [HEARTBEAT 1s | T+{tick_count}s] {hb['symbol']} @ {p_fmt} | PnL: {pnl_sign}{hb['pnl_pct']:.2f}% (Pico: +{hb.get('highest_pnl', 0):.2f}% | Fase {hb.get('phase', 1)})", flush=True)
-            elif tick_count % 30 == 0:
+                # Imprime el pulso en vivo CADA SEGUNDO EXACTO (T+1s, T+2s, T+3s...)
+                p_fmt = f"${hb['price']:.5f}" if hb['price'] < 0.05 else f"${hb['price']:.4f}"
+                pnl_sign = "+" if hb['pnl_pct'] >= 0 else ""
+                print(f"💓 [HEARTBEAT 1s | T+{tick_count}s] {hb['symbol']} @ {p_fmt} | PnL: {pnl_sign}{hb['pnl_pct']:.2f}% (Pico: +{hb.get('highest_pnl', 0):.2f}% | Fase {hb.get('phase', 1)})", flush=True)
+            elif tick_count % 15 == 0:
                 print(f"📡 [RADAR 1s | T+{tick_count}s/{sleep_secs}s] Monitoreo activo de 120 pares en espera de la siguiente señal...", flush=True)
         except Exception:
             pass
