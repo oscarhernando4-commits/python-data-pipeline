@@ -8,41 +8,14 @@
   "trades_count": 2,
   "daily_wins": 2,
   "daily_losses": 0,
-<<<<<<< Updated upstream
-  "position": {
-    "symbol": "CAKEUSDT",
-    "entry_price": 1.713,
-    "cost_usd": 15.49,
-    "side": "LONG",
-    "quantity": 9.04,
-    "break_even": false,
-    "highest_price": 1.721,
-    "phase": 1,
-    "archetype": "SECTOR_ROTATION",
-    "archetype_label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
-    "initial_sl_pct": -0.95,
-    "max_stagnation_minutes": 40,
-    "vol_surge": 1.75,
-    "entry_time_ms": 1787424788247,
-    "atr_pct_15m": 0.487,
-    "ma25_5m": 1.71108,
-    "dna_tier": "HIGH_BETA_RUNNER",
-    "optimal_trailing_slack_pct": 0.63,
-    "target_resistance_price": 1.857,
-    "pump_probability_pct": 65,
-    "volatility_regime": "🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (🧩 Cima +0.47% | SL Defensivo -0.95%)"
-  },
-=======
   "position": null,
->>>>>>> Stashed changes
-  "last_trade_time": "26-08-22<br>18:53",
-  "status": "🟢 WIN Cerrado (CAKEUSDT PnL: +0.06% / $+0.0090)",
+  "last_trade_time": "26-08-22<br>15:32",
+  "status": "\ud83d\udfe2 WIN Cerrado (CAKEUSDT PnL: +0.06% / $+0.0090)",
   "_cached_total_val": 15.66,
   "_cached_usdt_free": 15.5176,
-  "_cached_bnb": 0.00021018,
+  "_cached_bnb": 0.00021,
   "_cached_bnb_usd": 0.15,
   "_last_closed_symbol": "CAKEUSDT",
-  "_last_closed_time": 1787430772.2903907,
-  "_last_exit_price": 1.714,
-  "_last_wallet_sync_ts": 1787424780.9937353
+  "_last_closed_time": 1787430768.442,
+  "_last_exit_price": 1.714
 }
