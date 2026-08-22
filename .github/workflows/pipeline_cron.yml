@@ -1,6 +1,8 @@
 name: 🤖 Quant Trading Engine (4-Hour Continuous Runner)
 
 on:
+  push:
+    branches: [ main ]
   workflow_dispatch: # Permite ejecución manual desde GitHub UI si se desea
   repository_dispatch:
     types: [trigger_quant_trade] # Disparador Maestro Oficial desde Cron-Job.org (Cada 4 horas a las :56)
