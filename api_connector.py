@@ -983,11 +983,11 @@ def quick_position_heartbeat():
         should_exit = current_pnl_pct <= sl_pct
         exit_reason = f"🎯 Trailing Floor Activado ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
         
-        # SNIPER MEJORA B: Detección de Agotamiento de Mecha en Cima con holgura adaptativa
-        wick_pullback_threshold = max(0.60, round(custom_slack * 1.2, 2))
-        if not should_exit and new_phase >= 3 and highest_pnl_pct >= 1.80 and (highest_pnl_pct - current_pnl_pct) >= wick_pullback_threshold:
+        # SNIPER MEJORA B: Detección de Agotamiento de Mecha en Cima (Cosecha el 80% del pico)
+        wick_pullback_threshold = max(0.28, min(0.38, round(custom_slack * 0.5, 2)))
+        if not should_exit and new_phase >= 2 and highest_pnl_pct >= 0.70 and (highest_pnl_pct - current_pnl_pct) >= wick_pullback_threshold:
             should_exit = True
-            exit_reason = f"🎯 SNIPER MECHA CIMA (Pico +{highest_pnl_pct:.2f}% -> Venta en {current_pnl_pct:+.2f}%)"
+            exit_reason = f"🎯 SNIPER MECHA CIMA (Pico +{highest_pnl_pct:.2f}% -> Venta Inmediata en {current_pnl_pct:+.2f}% tras retroceso de -{wick_pullback_threshold:.2f}%)"
             
         # ⏱️ LIBERACIÓN DINÁMICA POR ESTANCAMIENTO SEGÚN ADN (12m Meme, 15m Thin, 35m Sector, 60m Core)
         if not should_exit and new_phase == 1:
@@ -1255,17 +1255,17 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         # Check for exit condition (PRICE-DRIVEN, NOT TIME-DRIVEN)
         if entry and entry > 0:
             should_exit = False
-            if pnl_pct <= trailing_floor_pct:
+            # SNIPER AGOTAMIENTO DE MECHA EN CIMA (Asegura el 80% del pico en Fase >= 2)
+            wick_pullback_threshold = max(0.28, min(0.38, round(custom_slack * 0.5, 2)))
+            if phase >= 2 and highest_pnl_pct >= 0.70 and (highest_pnl_pct - pnl_pct) >= wick_pullback_threshold:
+                should_exit = True
+                reason_str = f"🎯 SNIPER MECHA CIMA (Pico +{highest_pnl_pct:.2f}% → Venta Inmediata en {pnl_pct:+.2f}% tras retroceso de -{wick_pullback_threshold:.2f}%)"
+            elif pnl_pct <= trailing_floor_pct:
                 should_exit = True
                 if phase >= 2:
                     reason_str = f"Protección de Ganancia Fase {phase} (Pico +{highest_pnl_pct:.2f}% → Venta en {pnl_pct:+.2f}%)"
                 else:
                     reason_str = f"Stop Loss Fase 1 ({pnl_pct:.2f}% tocó piso de {trailing_floor_pct:+.2f}%)"
-                
-                # Pillar 4: Trend Ride Guard
-                if phase >= 3 and should_exit and active_current_price > entry and ma25_5m > 0 and active_current_price >= ma25_5m * 0.999 and pnl_pct >= 0.30:
-                    should_exit = False
-                    reason_str = f"Protegido por MA25 5m (Pnl: {pnl_pct:+.2f}%)"
             elif phase >= 2 and orderbook_wall_emergency:
                 should_exit = True
                 reason_str = f"⚡ Salida Relámpago por Agotamiento CVD (Fase {phase}, Pico +{highest_pnl_pct:.2f}% → Vendedores dominan {ask_dominance:.1f}%)"
