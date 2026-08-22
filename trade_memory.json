@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3030,
-    "wins": 1608,
+    "total_trades": 3031,
+    "wins": 1609,
     "losses": 1422,
-    "win_rate_pct": 53.07,
-    "total_pnl_usd": 3591.9373765487903
+    "win_rate_pct": 53.08,
+    "total_pnl_usd": 3592.0273765487905
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NEARUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on FFUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SANDUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BNBUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on CFXUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on SHIBUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DOTUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on NEARUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TSTUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TSTUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on KAIAUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 04:21:06",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ASTERUSDT",
-      "side": "LONG",
-      "entry_price": 0.749,
-      "exit_price": 0.735,
-      "pnl_usd": -286.38,
-      "result": "LOSS",
-      "notes": "LOSS on ASTERUSDT (PnL: -1.87%, Net: $-286.38 Fase 1)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 53.69,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 04:30:42",
       "account_id": "SIM-005",
@@ -8490,6 +8473,23 @@
       "context": {
         "score": 42,
         "rsi_15m": 53.69,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 22:20:58",
+      "account_id": "SIM-018",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "KAIAUSDT",
+      "side": "LONG",
+      "entry_price": 0.0309,
+      "exit_price": 0.031,
+      "pnl_usd": 0.09,
+      "result": "WIN",
+      "notes": "WIN on KAIAUSDT (PnL: +0.32%, Net: $+0.09 Fase 2)",
+      "context": {
+        "score": 18,
+        "rsi_15m": 55.64,
         "macro_trend_4h": "NEUTRAL"
       }
     }
