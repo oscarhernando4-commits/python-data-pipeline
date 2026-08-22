@@ -186,12 +186,8 @@ def main():
     import data_fetcher
     import pipeline_processor
 
-    for cycle in range(1, total_cycles + 1):
-        now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        print(f"\n[{now_str}] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", flush=True)
-        print(f"🔄 CICLO [{cycle}/{total_cycles}] - ESCANEO Y OPERACIÓN CUÁNTICA EN VIVO", flush=True)
-        print(f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", flush=True)
-        
+    cycle = 0
+    while cycle < total_cycles:
         # Hot-reload modules so any pulled git improvements take effect immediately
         try:
             import api_connector
@@ -208,8 +204,9 @@ def main():
             importlib.reload(pipeline_processor)
         except Exception as e:
             print(f"⚠️ Reload note: {e}", flush=True)
-        
-        # 🎯 FAST-TRACK: Si hay posición activa, ENFOCAR EL 100% DE RECURSOS EN EL GUARDIÁN 1S
+
+        # 🎯 MODO GUARDIÁN 100% EN PRIMER PLANO: Si hay posición real abierta en Binance Spot,
+        # SUSPENDER los ciclos de 2 minutos y enfocar el 100% de la consola y CPU en el Heartbeat 1s continuo
         has_active_real_pos = False
         try:
             st_check = api_connector.load_real_account_state()
@@ -218,12 +215,20 @@ def main():
             pass
 
         if has_active_real_pos:
-            # Cancela escaneos pesados de 120 pares y Gemini; corre el Guardián 1s exclusivo hasta la salida
+            # Monitoreo exclusivo segundo a segundo sin interrupción de ciclos hasta la salida
             run_focused_position_guardian()
             run_git_push_sync(cycle, total_cycles)
+            # Tras la salida y liberación de capital a USDT, continuar de inmediato al radar
             continue
 
-        # Step 1: Update market universe SOLO cuando estamos buscando entrada
+        # 📡 MODO RADAR: Solo cuando NO hay posición activa (Buscando Entrada A+)
+        cycle += 1
+        now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"\n[{now_str}] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", flush=True)
+        print(f"🔄 CICLO [{cycle}/{total_cycles}] - ESCANEO Y OPERACIÓN CUÁNTICA EN VIVO", flush=True)
+        print(f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", flush=True)
+
+        # Step 1: Update market universe
         try:
             if hasattr(data_fetcher, 'fetch_top_100_pairs'):
                 data_fetcher.fetch_top_100_pairs()
@@ -232,7 +237,7 @@ def main():
         except Exception as e:
             print(f"⚠️ Error actualizando pares (Ciclo {cycle}): {e}", flush=True)
             
-        # Step 2: Run institutional trading matrix & AI execution (Streamlined)
+        # Step 2: Run institutional trading matrix & AI execution
         try:
             if hasattr(pipeline_processor, 'run_infinite_trading_matrix_cycle'):
                 pipeline_processor.run_infinite_trading_matrix_cycle()
@@ -244,7 +249,7 @@ def main():
         # Step 3: Lightweight periodic state sync to GitHub (every 10 cycles)
         run_git_push_sync(cycle, total_cycles)
         
-        # Step 4: Sleep until next clock boundary with 10s micro-heartbeat
+        # Step 4: Sleep until next clock boundary with 1s radar heartbeat
         if cycle < total_cycles:
             sleep_secs = sleep_until_next_boundary(sleep_interval_secs)
             target_time = datetime.fromtimestamp(time.time() + sleep_secs).strftime("%H:%M:%S")
