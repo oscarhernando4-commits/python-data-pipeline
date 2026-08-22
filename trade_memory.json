@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2487,
-    "wins": 1286,
+    "total_trades": 2490,
+    "wins": 1289,
     "losses": 1201,
-    "win_rate_pct": 51.71,
-    "total_pnl_usd": -8056.732033451208
+    "win_rate_pct": 51.77,
+    "total_pnl_usd": -8056.202033451208
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ETHFIUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZECUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SOLUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZAMAUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SKYUSDT)",
@@ -49,61 +48,11 @@
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on REUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ETCUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on KAITOUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PENGUUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PENGUUSDT)",
+      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XECUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 06:31:25",
-      "account_id": "SIM-052",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "JASMYUSDT",
-      "side": "LONG",
-      "entry_price": 0.00409,
-      "exit_price": 0.00411,
-      "pnl_usd": 0.06,
-      "result": "WIN",
-      "notes": "WIN on JASMYUSDT (PnL: +0.49%, Net: $+0.06 Fase 3)",
-      "context": {
-        "score": 46,
-        "rsi_15m": 72.22,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 06:37:28",
-      "account_id": "SIM-093",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "AVAXUSDT",
-      "side": "LONG",
-      "entry_price": 7.345,
-      "exit_price": 7.374,
-      "pnl_usd": 2.89,
-      "result": "WIN",
-      "notes": "WIN on AVAXUSDT (PnL: +0.39%, Net: $+2.89 Fase 3)",
-      "context": {
-        "score": 50,
-        "rsi_15m": 61.7,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 06:47:29",
-      "account_id": "SIM-005",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "SUIUSDT",
-      "side": "LONG",
-      "entry_price": 0.7484,
-      "exit_price": 0.7697,
-      "pnl_usd": 0.41,
-      "result": "WIN",
-      "notes": "WIN on SUIUSDT (PnL: +2.85%, Net: $+0.41 Fase 4)",
-      "context": {
-        "score": 41,
-        "rsi_15m": 73.6,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 06:47:29",
       "account_id": "SIM-006",
@@ -8470,6 +8419,57 @@
       "context": {
         "score": 81,
         "rsi_15m": 52.28,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 01:16:50",
+      "account_id": "SIM-048",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "XECUSDT",
+      "side": "LONG",
+      "entry_price": 7.92e-06,
+      "exit_price": 8.01e-06,
+      "pnl_usd": 0.17,
+      "result": "WIN",
+      "notes": "WIN on XECUSDT (PnL: +1.14%, Net: $+0.17 Fase 3)",
+      "context": {
+        "score": 79,
+        "rsi_15m": 78.35,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 01:16:50",
+      "account_id": "SIM-049",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "XECUSDT",
+      "side": "LONG",
+      "entry_price": 7.92e-06,
+      "exit_price": 8.01e-06,
+      "pnl_usd": 0.17,
+      "result": "WIN",
+      "notes": "WIN on XECUSDT (PnL: +1.14%, Net: $+0.17 Fase 3)",
+      "context": {
+        "score": 79,
+        "rsi_15m": 78.35,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 01:16:50",
+      "account_id": "SIM-050",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "XECUSDT",
+      "side": "LONG",
+      "entry_price": 7.92e-06,
+      "exit_price": 8.01e-06,
+      "pnl_usd": 0.19,
+      "result": "WIN",
+      "notes": "WIN on XECUSDT (PnL: +1.14%, Net: $+0.19 Fase 3)",
+      "context": {
+        "score": 79,
+        "rsi_15m": 78.35,
         "macro_trend_4h": "NEUTRAL"
       }
     }
