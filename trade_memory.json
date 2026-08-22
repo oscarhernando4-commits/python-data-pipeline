@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2540,
+    "total_trades": 2541,
     "wins": 1323,
-    "losses": 1217,
-    "win_rate_pct": 52.09,
-    "total_pnl_usd": -4698.349323451207
+    "losses": 1218,
+    "win_rate_pct": 52.07,
+    "total_pnl_usd": -4698.612023451207
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 08:47:24",
-      "account_id": "SIM-093",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "CFXUSDT",
-      "side": "SHORT",
-      "entry_price": 0.04611,
-      "exit_price": 0.04719,
-      "pnl_usd": -29.35,
-      "result": "LOSS",
-      "notes": "LOSS on CFXUSDT (PnL: -2.34%, Net: $-29.35 Fase 1)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 83.9,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 08:51:22",
       "account_id": "SIM-091",
@@ -8452,6 +8435,19 @@
         "rsi_15m": 91.17,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-22 04:42:58",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "GPSUSDT",
+      "side": "LONG",
+      "entry_price": 0.01315,
+      "exit_price": 0.01293,
+      "pnl_usd": -0.2627,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (-1.67% <= -1.50%) (Fase 1, PnL: -1.67%)",
+      "context": {}
     }
   ]
 }
