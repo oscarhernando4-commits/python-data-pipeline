@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2898,
+    "total_trades": 2901,
     "wins": 1546,
-    "losses": 1352,
-    "win_rate_pct": 53.35,
-    "total_pnl_usd": 762.7477765487907
+    "losses": 1355,
+    "win_rate_pct": 53.29,
+    "total_pnl_usd": 761.9677765487908
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 21:40:57",
-      "account_id": "SIM-083",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "BNBUSDT",
-      "side": "LONG",
-      "entry_price": 673.21,
-      "exit_price": 678.64,
-      "pnl_usd": 0.1,
-      "result": "WIN",
-      "notes": "WIN on BNBUSDT (PnL: +0.81%, Net: $+0.10 Fase 3)",
-      "context": {
-        "score": 95,
-        "rsi_15m": 53.63,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 21:42:47",
-      "account_id": "SIM-005",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "MORPHOUSDT",
-      "side": "LONG",
-      "entry_price": 2.325,
-      "exit_price": 2.343,
-      "pnl_usd": 0.1,
-      "result": "WIN",
-      "notes": "WIN on MORPHOUSDT (PnL: +0.77%, Net: $+0.10 Fase 3)",
-      "context": {
-        "score": 70,
-        "rsi_15m": 43.25,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 21:42:47",
-      "account_id": "SIM-006",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "MORPHOUSDT",
-      "side": "LONG",
-      "entry_price": 2.325,
-      "exit_price": 2.343,
-      "pnl_usd": 0.09,
-      "result": "WIN",
-      "notes": "WIN on MORPHOUSDT (PnL: +0.77%, Net: $+0.09 Fase 3)",
-      "context": {
-        "score": 70,
-        "rsi_15m": 43.25,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 21:42:47",
       "account_id": "SIM-007",
@@ -8506,6 +8455,57 @@
       "context": {
         "score": 60,
         "rsi_15m": 45.67,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 14:22:32",
+      "account_id": "SIM-005",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "PUMPUSDT",
+      "side": "LONG",
+      "entry_price": 0.004713,
+      "exit_price": 0.004638,
+      "pnl_usd": -0.26,
+      "result": "LOSS",
+      "notes": "LOSS on PUMPUSDT (PnL: -1.59%, Net: $-0.26 Fase 1)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 52.88,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 14:22:32",
+      "account_id": "SIM-006",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "PUMPUSDT",
+      "side": "LONG",
+      "entry_price": 0.004713,
+      "exit_price": 0.004638,
+      "pnl_usd": -0.26,
+      "result": "LOSS",
+      "notes": "LOSS on PUMPUSDT (PnL: -1.59%, Net: $-0.26 Fase 1)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 52.88,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 14:22:32",
+      "account_id": "SIM-007",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "PUMPUSDT",
+      "side": "LONG",
+      "entry_price": 0.004713,
+      "exit_price": 0.004638,
+      "pnl_usd": -0.26,
+      "result": "LOSS",
+      "notes": "LOSS on PUMPUSDT (PnL: -1.59%, Net: $-0.26 Fase 1)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 52.88,
         "macro_trend_4h": "NEUTRAL"
       }
     }
