@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 2546,
+    "total_trades": 2549,
     "wins": 1328,
-    "losses": 1218,
-    "win_rate_pct": 52.16,
-    "total_pnl_usd": -4698.482023451207
+    "losses": 1221,
+    "win_rate_pct": 52.1,
+    "total_pnl_usd": -4728.862023451207
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on WLFIUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LTCUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZAMAUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ETCUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on OPUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ASTERUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TRXUSDT)",
-      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SOLUSDT)"
+      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SOLUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZENUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XTZUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 09:01:19",
-      "account_id": "SIM-045",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "RUNEUSDT",
-      "side": "LONG",
-      "entry_price": 0.467,
-      "exit_price": 0.474,
-      "pnl_usd": 0.15,
-      "result": "WIN",
-      "notes": "WIN on RUNEUSDT (PnL: +1.50%, Net: $+0.15 Fase 4)",
-      "context": {
-        "score": 41,
-        "rsi_15m": 79.14,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 09:01:19",
-      "account_id": "SIM-046",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "RUNEUSDT",
-      "side": "LONG",
-      "entry_price": 0.467,
-      "exit_price": 0.474,
-      "pnl_usd": 0.27,
-      "result": "WIN",
-      "notes": "WIN on RUNEUSDT (PnL: +1.50%, Net: $+0.27 Fase 4)",
-      "context": {
-        "score": 41,
-        "rsi_15m": 79.14,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 09:01:19",
-      "account_id": "SIM-047",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "RUNEUSDT",
-      "side": "LONG",
-      "entry_price": 0.467,
-      "exit_price": 0.474,
-      "pnl_usd": 0.11,
-      "result": "WIN",
-      "notes": "WIN on RUNEUSDT (PnL: +1.50%, Net: $+0.11 Fase 4)",
-      "context": {
-        "score": 41,
-        "rsi_15m": 79.14,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 09:01:19",
       "account_id": "SIM-053",
@@ -8446,6 +8395,57 @@
       "context": {
         "score": 12,
         "rsi_15m": 78.05,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 05:07:01",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "MORPHOUSDT",
+      "side": "SHORT",
+      "entry_price": 2.314,
+      "exit_price": 2.449,
+      "pnl_usd": -0.25,
+      "result": "LOSS",
+      "notes": "LOSS on MORPHOUSDT (PnL: -5.83%, Net: $-0.25 Fase 1)",
+      "context": {
+        "score": 18,
+        "rsi_15m": 63.22,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 05:07:01",
+      "account_id": "SIM-081",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "ZENUSDT",
+      "side": "SHORT",
+      "entry_price": 3.911,
+      "exit_price": 5.852,
+      "pnl_usd": -29.82,
+      "result": "LOSS",
+      "notes": "LOSS on ZENUSDT (PnL: -49.63%, Net: $-29.82 Fase 1)",
+      "context": {
+        "score": 12,
+        "rsi_15m": 63.3,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 05:07:01",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "TRXUSDT",
+      "side": "SHORT",
+      "entry_price": 0.3401,
+      "exit_price": 0.3501,
+      "pnl_usd": -0.31,
+      "result": "LOSS",
+      "notes": "LOSS on TRXUSDT (PnL: -2.94%, Net: $-0.31 Fase 1)",
+      "context": {
+        "score": 14,
+        "rsi_15m": 87.3,
         "macro_trend_4h": "NEUTRAL"
       }
     }
