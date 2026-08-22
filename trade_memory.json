@@ -1,9 +1,9 @@
 {
   "stats": {
-    "total_trades": 2542,
-    "wins": 1324,
+    "total_trades": 2543,
+    "wins": 1325,
     "losses": 1218,
-    "win_rate_pct": 52.08,
+    "win_rate_pct": 52.1,
     "total_pnl_usd": -4698.562023451207
   },
   "learned_rules": {
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SOLUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ADAUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PENDLEUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XTZUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on REUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ZAMAUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SUIUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DOTUSDT)",
-      "BOOST SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on IMXUSDT)"
+      "BOOST SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on IMXUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on LINKUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 08:51:22",
-      "account_id": "SIM-093",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "ONGUSDT",
-      "side": "SHORT",
-      "entry_price": 0.08461,
-      "exit_price": 0.08631,
-      "pnl_usd": -25.3,
-      "result": "LOSS",
-      "notes": "LOSS on ONGUSDT (PnL: -2.01%, Net: $-25.30 Fase 1)",
-      "context": {
-        "score": 32,
-        "rsi_15m": 29.48,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 08:53:19",
       "account_id": "SIM-070",
@@ -8446,6 +8429,23 @@
       "context": {
         "score": 9,
         "rsi_15m": 72.31,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 04:49:04",
+      "account_id": "SIM-005",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "LINKUSDT",
+      "side": "LONG",
+      "entry_price": 12.484,
+      "exit_price": 12.504,
+      "pnl_usd": 0.0,
+      "result": "WIN",
+      "notes": "WIN on LINKUSDT (PnL: +0.16%, Net: $+0.00 Fase 2)",
+      "context": {
+        "score": 32,
+        "rsi_15m": 67.04,
         "macro_trend_4h": "NEUTRAL"
       }
     }
