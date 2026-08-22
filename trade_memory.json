@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2500,
-    "wins": 1296,
+    "total_trades": 2501,
+    "wins": 1297,
     "losses": 1204,
-    "win_rate_pct": 51.84,
-    "total_pnl_usd": -8077.547353451208
+    "win_rate_pct": 51.86,
+    "total_pnl_usd": -8077.537353451208
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on OPUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SKYUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SHIBUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DOGEUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on CVXUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PENGUUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XECUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MORPHOUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BNBUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BNBUSDT)",
+      "BOOST SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on FFUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 07:39:17",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "PENGUUSDT",
-      "side": "SHORT",
-      "entry_price": 0.007355,
-      "exit_price": 0.007564,
-      "pnl_usd": -407.55,
-      "result": "LOSS",
-      "notes": "LOSS on PENGUUSDT (PnL: -2.84%, Net: $-407.55 Fase 1)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 64.97,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 07:39:17",
       "account_id": "SIM-028",
@@ -8466,6 +8449,23 @@
       "context": {
         "score": 14,
         "rsi_15m": 77.37,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 02:44:59",
+      "account_id": "SIM-091",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "FFUSDT",
+      "side": "SHORT",
+      "entry_price": 0.07579,
+      "exit_price": 0.07541,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on FFUSDT (PnL: +0.50%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 22,
+        "rsi_15m": 68.28,
         "macro_trend_4h": "NEUTRAL"
       }
     }
