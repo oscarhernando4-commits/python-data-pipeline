@@ -22,60 +22,254 @@ except Exception:
     pass
 
 # ============================================================
-# MEGA-POOL FIXIE DINÁMICO DE 22 CUENTAS (HASTA 11,000 REQ/MES)
-# Cuentas 1-12: NUEVAS y activas HOY con 6,000 peticiones limpias (500 c/u).
-# Cuentas 13-22: Se integran automáticamente el 2 de Septiembre (+5,000 peticiones).
+# MEGA-POOL FIXIE DINÁMICO DE 110 CUENTAS (HASTA 55,000 REQ/MES)
+# Cuentas 11-110 (100 cuentas): NUEVAS y activas HOY con 50,000 peticiones limpias (500 c/u).
+# Cuentas 1-10 (10 cuentas): Se integran automáticamente el 2 de Septiembre (+5,000 peticiones).
 # ============================================================
 
-FIXIE_POOL_NEW_12 = [
-    "http://fixie:9xFQOu1aMBiQTPF@ventoux.usefixie.com:80",   # oscarhernando4_outlook_2
-    "http://fixie:DKSf05uih9mtlUk@ventoux.usefixie.com:80",   # oscarhernando4_gmail_2
-    "http://fixie:yf5uJwPKISXERoo@ventoux.usefixie.com:80",   # utn_sig_2
-    "http://fixie:8Tk4o3sTwwWNzrg@ventoux.usefixie.com:80",   # forestalutn_2
-    "http://fixie:gKSekvjfRLL0aGz@ventoux.usefixie.com:80",   # oscarhernandot11es_2
-    "http://fixie:LIF3ht3W6Su0HSN@ventoux.usefixie.com:80",   # oscarhernando4ec_2
-    "http://fixie:yDT6fBrHaPovbZT@ventoux.usefixie.com:80",   # sconcienciautn_2
-    "http://fixie:RyM46ZJsdjkPpc1@ventoux.usefixie.com:80",   # utn2024a_2
-    "http://fixie:lMTVDtkyP9z5L3C@ventoux.usefixie.com:80",   # observatorioforestalutn_2
-    "http://fixie:MzJwbpHPPkPUP4n@ventoux.usefixie.com:80",   # utnagp_2
-    "http://fixie:N8Q2thJQNHQ3z7X@ventoux.usefixie.com:80",   # dronforestalutn_2
-    "http://fixie:QPG9Y4o5bzzgQMB@ventoux.usefixie.com:80",   # oscarhernando4_outlook_3
+# POOL ACTIVO DE 100 CUENTAS FIXIE (50,000 PETICIONES/MES)
+FIXIE_POOL_ACTIVE_100 = [
+    "http://fixie:9xFQOu1aMBiQTPF@ventoux.usefixie.com:80",   # [11] oscarhernando4@outlook.com
+    "http://fixie:DKSf05uih9mtlUk@ventoux.usefixie.com:80",   # [12] oscarhernando4@gmail.com
+    "http://fixie:yf5uJwPKISXERoo@ventoux.usefixie.com:80",   # [13] utn.sig@gmail.com
+    "http://fixie:8Tk4o3sTwwWNzrg@ventoux.usefixie.com:80",   # [14] forestalutn@gmail.com
+    "http://fixie:gKSekvjfRLL0aGz@ventoux.usefixie.com:80",   # [15] oscarhernandot11es@gmail.com
+    "http://fixie:LIF3ht3W6Su0HSN@ventoux.usefixie.com:80",   # [16] oscarhernando4ec@gmail.com
+    "http://fixie:yDT6fBrHaPovbZT@ventoux.usefixie.com:80",   # [17] sconcienciautn@gmail.com
+    "http://fixie:RyM46ZJsdjkPpc1@ventoux.usefixie.com:80",   # [18] utn2024a@gmail.com
+    "http://fixie:lMTVDtkyP9z5L3C@ventoux.usefixie.com:80",   # [19] observatorioforestalutn@gmail.com
+    "http://fixie:MzJwbpHPPkPUP4n@ventoux.usefixie.com:80",   # [20] utnagp@gmail.com
+    "http://fixie:N8Q2thJQNHQ3z7X@ventoux.usefixie.com:80",   # [21] dronforestalutn@gmail.com
+    "http://fixie:QPG9Y4o5bzzgQMB@ventoux.usefixie.com:80",   # [22] oscarhernando4@outlook.com
+    "http://fixie:4dmxiL6T14QDrCU@ventoux.usefixie.com:80",   # [23] oscarhernando4@outlook.com v3
+    "http://fixie:8AtYO51OoEFRo0f@ventoux.usefixie.com:80",   # [24] oscarhernando4@gmail.com v3
+    "http://fixie:FSytVSP03izcAVP@ventoux.usefixie.com:80",   # [25] utn.sig@gmail.com v3
+    "http://fixie:PuQ03wtaIPgSBH1@ventoux.usefixie.com:80",   # [26] forestalutn@gmail.com v3
+    "http://fixie:u92WjCG7m69dHA5@ventoux.usefixie.com:80",   # [27] oscarhernandot11es@gmail.com v3
+    "http://fixie:8vBYarKudfOmzF3@ventoux.usefixie.com:80",   # [28] oscarhernando4ec@gmail.com V3
+    "http://fixie:NgudJ1GXr9ieiQX@ventoux.usefixie.com:80",   # [29] sconcienciautn@gmail.com V3
+    "http://fixie:7loizt3CZ3jUPhF@ventoux.usefixie.com:80",   # [30] utn2024a@gmail.com V3
+    "http://fixie:MUWNFEVfZaUNmJa@ventoux.usefixie.com:80",   # [31] observatorioforestalutn@gmail.com V3
+    "http://fixie:knXCZulVWM5k0VE@ventoux.usefixie.com:80",   # [32] utnagp@gmail.com V3
+    "http://fixie:VKyAMpwQRjqrrYC@ventoux.usefixie.com:80",   # [33] dronforestalutn@gmail.com V3
+    "http://fixie:SlL5HdagGw0byiw@ventoux.usefixie.com:80",   # [34] oscarhernando4@outlook.com V4
+    "http://fixie:aPQ5bGoNrGMaBQv@ventoux.usefixie.com:80",   # [35] oscarhernando4@outlook.com V5
+    "http://fixie:s5ujI6Bt1sdFkoi@ventoux.usefixie.com:80",   # [36] oscarhernando4@outlook.com V6
+    "http://fixie:3QFYO7P7RvZfSwE@ventoux.usefixie.com:80",   # [37] oscarhernando4@outlook.com V7
+    "http://fixie:YAEqGbRkdbJF1xc@ventoux.usefixie.com:80",   # [38] oscarhernando4@outlook.com V8
+    "http://fixie:Tzt082RmWVjmq3h@ventoux.usefixie.com:80",   # [39] oscarhernando4@outlook.com V9
+    "http://fixie:X12q3RXyEFDjyLi@ventoux.usefixie.com:80",   # [40] oscarhernando4@outlook.com V10
+    "http://fixie:QfGXr1jMNMHfreR@ventoux.usefixie.com:80",   # [41] oscarhernando4@gmail.com V4
+    "http://fixie:mXm0pZ7raygtMbS@ventoux.usefixie.com:80",   # [42] oscarhernando4@gmail.com V5
+    "http://fixie:4DhMVGlEAwsrWjy@ventoux.usefixie.com:80",   # [43] oscarhernando4@gmail.com V6
+    "http://fixie:nYCWFS4P2w1NmuA@ventoux.usefixie.com:80",   # [44] oscarhernando4@gmail.com V7
+    "http://fixie:7vcJzgGFyqRp1JZ@ventoux.usefixie.com:80",   # [45] oscarhernando4@gmail.com V8
+    "http://fixie:JzaNxHMbT6lDbeO@ventoux.usefixie.com:80",   # [46] oscarhernando4@gmail.com V9
+    "http://fixie:s9Am4KgrKvnC4Lp@ventoux.usefixie.com:80",   # [47] oscarhernando4@gmail.com V10
+    "http://fixie:TbQs1jiB5DX3Ck2@ventoux.usefixie.com:80",   # [48] utn.sig@gmail.com V4
+    "http://fixie:tujOpotr8B9lFmS@ventoux.usefixie.com:80",   # [49] utn.sig@gmail.com V5
+    "http://fixie:EMbi6wqyJt133y2@ventoux.usefixie.com:80",   # [50] utn.sig@gmail.com V6
+    "http://fixie:sAYyvrw2Z1pYuYd@ventoux.usefixie.com:80",   # [51] utn.sig@gmail.com V7
+    "http://fixie:PonwpNOqHbW8KTU@ventoux.usefixie.com:80",   # [52] utn.sig@gmail.com V8
+    "http://fixie:wrNjVWjGpN0FtDg@ventoux.usefixie.com:80",   # [53] utn.sig@gmail.com V9
+    "http://fixie:VvRuxBU3YlBHDOu@ventoux.usefixie.com:80",   # [54] utn.sig@gmail.com V10
+    "http://fixie:of87MTT1vKk9VZE@ventoux.usefixie.com:80",   # [55] forestalutn@gmail.com V4
+    "http://fixie:TopFxImxU2kBwRb@ventoux.usefixie.com:80",   # [56] forestalutn@gmail.com V5
+    "http://fixie:7pseBSFfWAIn4cE@ventoux.usefixie.com:80",   # [57] forestalutn@gmail.com V6
+    "http://fixie:dNHCOhJgXWNuEpb@ventoux.usefixie.com:80",   # [58] forestalutn@gmail.com V7
+    "http://fixie:QmmXmlwFyoWljxt@ventoux.usefixie.com:80",   # [59] forestalutn@gmail.com V8
+    "http://fixie:JR51qhrugxAyUrv@ventoux.usefixie.com:80",   # [60] forestalutn@gmail.com V9
+    "http://fixie:nbbEI7WLkZqOABq@ventoux.usefixie.com:80",   # [61] forestalutn@gmail.com V10
+    "http://fixie:OlCBNNigi0jlSzq@ventoux.usefixie.com:80",   # [62] oscarhernandot11es@gmail.com V4
+    "http://fixie:tyfFexDViWW9EdJ@ventoux.usefixie.com:80",   # [63] oscarhernandot11es@gmail.com V5
+    "http://fixie:iXf3ZBUTst5sQI8@ventoux.usefixie.com:80",   # [64] oscarhernandot11es@gmail.com V6
+    "http://fixie:R5re8pwPrUWMMRH@ventoux.usefixie.com:80",   # [65] oscarhernandot11es@gmail.com V7
+    "http://fixie:9Bjb1RDuNbl9aPN@ventoux.usefixie.com:80",   # [66] oscarhernandot11es@gmail.com V8
+    "http://fixie:2dzTvtRV5zzsE3H@ventoux.usefixie.com:80",   # [67] oscarhernandot11es@gmail.com V9
+    "http://fixie:KXMQryFsT15FYG0@ventoux.usefixie.com:80",   # [68] oscarhernandot11es@gmail.com V10
+    "http://fixie:TE959r3guJd6MNH@ventoux.usefixie.com:80",   # [69] oscarhernando4ec@gmail.com V4
+    "http://fixie:rIymdfiB2mGLnsh@ventoux.usefixie.com:80",   # [70] oscarhernando4ec@gmail.com V5
+    "http://fixie:zMuLwhByrapBn0p@ventoux.usefixie.com:80",   # [71] oscarhernando4ec@gmail.com V6
+    "http://fixie:JuHWvIE7c6UuTgU@ventoux.usefixie.com:80",   # [72] oscarhernando4ec@gmail.com V7
+    "http://fixie:hqoh6jFi87Msju6@ventoux.usefixie.com:80",   # [73] oscarhernando4ec@gmail.com V8
+    "http://fixie:TGCu9JxgluBKrXG@ventoux.usefixie.com:80",   # [74] oscarhernando4ec@gmail.com V9
+    "http://fixie:4sBk6tCzQxYVAnp@ventoux.usefixie.com:80",   # [75] oscarhernando4ec@gmail.com V10
+    "http://fixie:SCKlgu158eTDESE@ventoux.usefixie.com:80",   # [76] sconcienciautn@gmail.com V4
+    "http://fixie:c2n0JOjKOH6BtHZ@ventoux.usefixie.com:80",   # [77] sconcienciautn@gmail.com V5
+    "http://fixie:lVBepd02P78PKa7@ventoux.usefixie.com:80",   # [78] sconcienciautn@gmail.com V6
+    "http://fixie:0zSa5YgvhNHvB4c@ventoux.usefixie.com:80",   # [79] sconcienciautn@gmail.com V7
+    "http://fixie:twlErm51o6cSMSj@ventoux.usefixie.com:80",   # [80] sconcienciautn@gmail.com V8
+    "http://fixie:6X4EuzNoxY1rMCR@ventoux.usefixie.com:80",   # [81] sconcienciautn@gmail.com V9
+    "http://fixie:lT7M8teKC2O4CHO@ventoux.usefixie.com:80",   # [82] sconcienciautn@gmail.com V10
+    "http://fixie:Apa00rv3GvDPtuU@ventoux.usefixie.com:80",   # [83] utn2024a@gmail.com V4
+    "http://fixie:98AmV4aWdS94zKW@ventoux.usefixie.com:80",   # [84] utn2024a@gmail.com V5
+    "http://fixie:rTaZ4OoGypA7FtJ@ventoux.usefixie.com:80",   # [85] utn2024a@gmail.com V6
+    "http://fixie:jG7Y64tpC61l1XR@ventoux.usefixie.com:80",   # [86] utn2024a@gmail.com V7
+    "http://fixie:6n2ETd69fOuQDwb@ventoux.usefixie.com:80",   # [87] utn2024a@gmail.com V8
+    "http://fixie:g2m2HQuEw3r8XGA@ventoux.usefixie.com:80",   # [88] utn2024a@gmail.com V9
+    "http://fixie:3HKojEzIFPjXdWu@ventoux.usefixie.com:80",   # [89] utn2024a@gmail.com V10
+    "http://fixie:ihFw1MEyw67j4Sb@ventoux.usefixie.com:80",   # [90] observatorioforestalutn@gmail.com V4
+    "http://fixie:xTjAESW0BCuXYRT@ventoux.usefixie.com:80",   # [91] observatorioforestalutn@gmail.com V5
+    "http://fixie:16RZbIbGND7Upa7@ventoux.usefixie.com:80",   # [92] observatorioforestalutn@gmail.com V6
+    "http://fixie:Fr1czdAIrtazgSa@ventoux.usefixie.com:80",   # [93] observatorioforestalutn@gmail.com V7
+    "http://fixie:W539B33fqP0NeoO@ventoux.usefixie.com:80",   # [94] observatorioforestalutn@gmail.com V8
+    "http://fixie:8aMbL796jGzEvYY@ventoux.usefixie.com:80",   # [95] observatorioforestalutn@gmail.com V9
+    "http://fixie:FwVgD9z373Bf8So@ventoux.usefixie.com:80",   # [96] observatorioforestalutn@gmail.com V10
+    "http://fixie:AHLdbG345IhRCX8@ventoux.usefixie.com:80",   # [97] utnagp@gmail.com V4
+    "http://fixie:66Krdxu7COau0tl@ventoux.usefixie.com:80",   # [98] utnagp@gmail.com V5
+    "http://fixie:WdoiyEBCAkGqV2y@ventoux.usefixie.com:80",   # [99] utnagp@gmail.com V6
+    "http://fixie:MpAgavL7JY8eTzc@ventoux.usefixie.com:80",   # [100] utnagp@gmail.com V7
+    "http://fixie:ss2BY11b67SoTJw@ventoux.usefixie.com:80",   # [101] utnagp@gmail.com V8
+    "http://fixie:U1juZsE977WMFa2@ventoux.usefixie.com:80",   # [102] utnagp@gmail.com V9
+    "http://fixie:yn6Vre4nVz0o6ai@ventoux.usefixie.com:80",   # [103] utnagp@gmail.com V10
+    "http://fixie:rdVhxQRBYIZBFhd@ventoux.usefixie.com:80",   # [104] dronforestalutn@gmail.com V4
+    "http://fixie:ycuo8c76hn2NFyX@ventoux.usefixie.com:80",   # [105] dronforestalutn@gmail.com V5
+    "http://fixie:cgkrvkO9VOAL2QO@ventoux.usefixie.com:80",   # [106] dronforestalutn@gmail.com V6
+    "http://fixie:G9uoaEDykw9G0zL@ventoux.usefixie.com:80",   # [107] dronforestalutn@gmail.com V7
+    "http://fixie:pTkcVI1KumODv7q@ventoux.usefixie.com:80",   # [108] dronforestalutn@gmail.com V8
+    "http://fixie:2jegAv8VundxGI3@ventoux.usefixie.com:80",   # [109] dronforestalutn@gmail.com V9
+    "http://fixie:TXQSQqu0lQVe3xY@ventoux.usefixie.com:80",   # [110] dronforestalutn@gmail.com V10
 ]
 
-FIXIE_ACCOUNTS_NEW_12 = [
-    "oscarhernando4_outlook_2", "oscarhernando4_gmail_2", "utn_sig_2",
-    "forestalutn_2", "oscarhernandot11es_2", "oscarhernando4ec_2",
-    "sconcienciautn_2", "utn2024a_2", "observatorioforestalutn_2",
-    "utnagp_2", "dronforestalutn_2", "oscarhernando4_outlook_3"
+FIXIE_ACCOUNTS_ACTIVE_100 = [
+    "fixie_011_oscarhernando4_outlook_com",
+    "fixie_012_oscarhernando4_gmail_com",
+    "fixie_013_utn_sig_gmail_com",
+    "fixie_014_forestalutn_gmail_com",
+    "fixie_015_oscarhernandot11es_gmail_com",
+    "fixie_016_oscarhernando4ec_gmail_com",
+    "fixie_017_sconcienciautn_gmail_com",
+    "fixie_018_utn2024a_gmail_com",
+    "fixie_019_observatorioforestalutn_gmail_com",
+    "fixie_020_utnagp_gmail_com",
+    "fixie_021_dronforestalutn_gmail_com",
+    "fixie_022_oscarhernando4_outlook_com",
+    "fixie_023_oscarhernando4_outlook_com_v3",
+    "fixie_024_oscarhernando4_gmail_com_v3",
+    "fixie_025_utn_sig_gmail_com_v3",
+    "fixie_026_forestalutn_gmail_com_v3",
+    "fixie_027_oscarhernandot11es_gmail_com_v3",
+    "fixie_028_oscarhernando4ec_gmail_com_V3",
+    "fixie_029_sconcienciautn_gmail_com_V3",
+    "fixie_030_utn2024a_gmail_com_V3",
+    "fixie_031_observatorioforestalutn_gmail_com_V3",
+    "fixie_032_utnagp_gmail_com_V3",
+    "fixie_033_dronforestalutn_gmail_com_V3",
+    "fixie_034_oscarhernando4_outlook_com_V4",
+    "fixie_035_oscarhernando4_outlook_com_V5",
+    "fixie_036_oscarhernando4_outlook_com_V6",
+    "fixie_037_oscarhernando4_outlook_com_V7",
+    "fixie_038_oscarhernando4_outlook_com_V8",
+    "fixie_039_oscarhernando4_outlook_com_V9",
+    "fixie_040_oscarhernando4_outlook_com_V10",
+    "fixie_041_oscarhernando4_gmail_com_V4",
+    "fixie_042_oscarhernando4_gmail_com_V5",
+    "fixie_043_oscarhernando4_gmail_com_V6",
+    "fixie_044_oscarhernando4_gmail_com_V7",
+    "fixie_045_oscarhernando4_gmail_com_V8",
+    "fixie_046_oscarhernando4_gmail_com_V9",
+    "fixie_047_oscarhernando4_gmail_com_V10",
+    "fixie_048_utn_sig_gmail_com_V4",
+    "fixie_049_utn_sig_gmail_com_V5",
+    "fixie_050_utn_sig_gmail_com_V6",
+    "fixie_051_utn_sig_gmail_com_V7",
+    "fixie_052_utn_sig_gmail_com_V8",
+    "fixie_053_utn_sig_gmail_com_V9",
+    "fixie_054_utn_sig_gmail_com_V10",
+    "fixie_055_forestalutn_gmail_com_V4",
+    "fixie_056_forestalutn_gmail_com_V5",
+    "fixie_057_forestalutn_gmail_com_V6",
+    "fixie_058_forestalutn_gmail_com_V7",
+    "fixie_059_forestalutn_gmail_com_V8",
+    "fixie_060_forestalutn_gmail_com_V9",
+    "fixie_061_forestalutn_gmail_com_V10",
+    "fixie_062_oscarhernandot11es_gmail_com_V4",
+    "fixie_063_oscarhernandot11es_gmail_com_V5",
+    "fixie_064_oscarhernandot11es_gmail_com_V6",
+    "fixie_065_oscarhernandot11es_gmail_com_V7",
+    "fixie_066_oscarhernandot11es_gmail_com_V8",
+    "fixie_067_oscarhernandot11es_gmail_com_V9",
+    "fixie_068_oscarhernandot11es_gmail_com_V10",
+    "fixie_069_oscarhernando4ec_gmail_com_V4",
+    "fixie_070_oscarhernando4ec_gmail_com_V5",
+    "fixie_071_oscarhernando4ec_gmail_com_V6",
+    "fixie_072_oscarhernando4ec_gmail_com_V7",
+    "fixie_073_oscarhernando4ec_gmail_com_V8",
+    "fixie_074_oscarhernando4ec_gmail_com_V9",
+    "fixie_075_oscarhernando4ec_gmail_com_V10",
+    "fixie_076_sconcienciautn_gmail_com_V4",
+    "fixie_077_sconcienciautn_gmail_com_V5",
+    "fixie_078_sconcienciautn_gmail_com_V6",
+    "fixie_079_sconcienciautn_gmail_com_V7",
+    "fixie_080_sconcienciautn_gmail_com_V8",
+    "fixie_081_sconcienciautn_gmail_com_V9",
+    "fixie_082_sconcienciautn_gmail_com_V10",
+    "fixie_083_utn2024a_gmail_com_V4",
+    "fixie_084_utn2024a_gmail_com_V5",
+    "fixie_085_utn2024a_gmail_com_V6",
+    "fixie_086_utn2024a_gmail_com_V7",
+    "fixie_087_utn2024a_gmail_com_V8",
+    "fixie_088_utn2024a_gmail_com_V9",
+    "fixie_089_utn2024a_gmail_com_V10",
+    "fixie_090_observatorioforestalutn_gmail_com_V4",
+    "fixie_091_observatorioforestalutn_gmail_com_V5",
+    "fixie_092_observatorioforestalutn_gmail_com_V6",
+    "fixie_093_observatorioforestalutn_gmail_com_V7",
+    "fixie_094_observatorioforestalutn_gmail_com_V8",
+    "fixie_095_observatorioforestalutn_gmail_com_V9",
+    "fixie_096_observatorioforestalutn_gmail_com_V10",
+    "fixie_097_utnagp_gmail_com_V4",
+    "fixie_098_utnagp_gmail_com_V5",
+    "fixie_099_utnagp_gmail_com_V6",
+    "fixie_100_utnagp_gmail_com_V7",
+    "fixie_101_utnagp_gmail_com_V8",
+    "fixie_102_utnagp_gmail_com_V9",
+    "fixie_103_utnagp_gmail_com_V10",
+    "fixie_104_dronforestalutn_gmail_com_V4",
+    "fixie_105_dronforestalutn_gmail_com_V5",
+    "fixie_106_dronforestalutn_gmail_com_V6",
+    "fixie_107_dronforestalutn_gmail_com_V7",
+    "fixie_108_dronforestalutn_gmail_com_V8",
+    "fixie_109_dronforestalutn_gmail_com_V9",
+    "fixie_110_dronforestalutn_gmail_com_V10",
 ]
 
+# POOL DE LAS 10 CUENTAS QUE SE REACTIVAN EL 2 DE SEPTIEMBRE (+5,000 PETICIONES/MES)
 FIXIE_POOL_SEPT2_10 = [
-    "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80",   # oscarhernando4
-    "http://fixie:ak4QPysr5gnUAQW@ventoux.usefixie.com:80",   # utn.sig
-    "http://fixie:ygTezfOLKeqEhhF@ventoux.usefixie.com:80",   # forestalutn
-    "http://fixie:zW3cwceDZ64c1lE@ventoux.usefixie.com:80",   # oscarhernandot11es
-    "http://fixie:SIOQ4x5oF0pbFju@ventoux.usefixie.com:80",   # oscarhernando4ec
-    "http://fixie:V9uciGagtBF2MJc@ventoux.usefixie.com:80",   # sconcienciautn
-    "http://fixie:gnvJakG6jyBrS04@ventoux.usefixie.com:80",   # utn2024a
-    "http://fixie:YOtqrUO1HVYG2xM@ventoux.usefixie.com:80",   # observatorioforestalutn
-    "http://fixie:WWaxRExXfmPL05s@ventoux.usefixie.com:80",   # utnagp
-    "http://fixie:f9ibnMDQHLjZTpM@ventoux.usefixie.com:80",   # dronforestalutn
+    "http://fixie:yqYN8TxTpLkrqC0@ventoux.usefixie.com:80",   # [1] oscarhernando4@gmail.com
+    "http://fixie:ak4QPysr5gnUAQW@ventoux.usefixie.com:80",   # [2] utn.sig@gmail.com
+    "http://fixie:ygTezfOLKeqEhhF@ventoux.usefixie.com:80",   # [3] forestalutn@gmail.com
+    "http://fixie:zW3cwceDZ64c1lE@ventoux.usefixie.com:80",   # [4] oscarhernandot11es@gmail.com
+    "http://fixie:SIOQ4x5oF0pbFju@ventoux.usefixie.com:80",   # [5] oscarhernando4ec@gmail.com
+    "http://fixie:V9uciGagtBF2MJc@ventoux.usefixie.com:80",   # [6] sconcienciautn@gmail.com
+    "http://fixie:gnvJakG6jyBrS04@ventoux.usefixie.com:80",   # [7] utn2024a@gmail.com
+    "http://fixie:YOtqrUO1HVYG2xM@ventoux.usefixie.com:80",   # [8] observatorioforestalutn@gmail.com
+    "http://fixie:WWaxRExXfmPL05s@ventoux.usefixie.com:80",   # [9] utnagp@gmail.com
+    "http://fixie:f9ibnMDQHLjZTpM@ventoux.usefixie.com:80",   # [10] dronforestalutn@gmail.com
 ]
 
 FIXIE_ACCOUNTS_SEPT2_10 = [
-    "oscarhernando4", "utn.sig", "forestalutn", "oscarhernandot11es",
-    "oscarhernando4ec", "sconcienciautn", "utn2024a", "observatorioforestalutn",
-    "utnagp", "dronforestalutn"
+    "fixie_001_oscarhernando4_gmail_com",
+    "fixie_002_utn_sig_gmail_com",
+    "fixie_003_forestalutn_gmail_com",
+    "fixie_004_oscarhernandot11es_gmail_com",
+    "fixie_005_oscarhernando4ec_gmail_com",
+    "fixie_006_sconcienciautn_gmail_com",
+    "fixie_007_utn2024a_gmail_com",
+    "fixie_008_observatorioforestalutn_gmail_com",
+    "fixie_009_utnagp_gmail_com",
+    "fixie_010_dronforestalutn_gmail_com",
 ]
 
 def get_active_fixie_pool_and_accounts():
-    """Retorna el pool activo: 12 cuentas nuevas hoy (6,000 req), o 22 cuentas a partir del 2 de Septiembre (11,000 req)."""
+    """Retorna el pool activo: 100 cuentas nuevas hoy (50,000 req), o 110 cuentas a partir del 2 de Septiembre (55,000 req)."""
     now = datetime.now()
     if now.year > 2026 or (now.year == 2026 and (now.month > 9 or (now.month == 9 and now.day >= 2))):
-        return FIXIE_POOL_NEW_12 + FIXIE_POOL_SEPT2_10, FIXIE_ACCOUNTS_NEW_12 + FIXIE_ACCOUNTS_SEPT2_10
-    return FIXIE_POOL_NEW_12, FIXIE_ACCOUNTS_NEW_12
+        return FIXIE_POOL_ACTIVE_100 + FIXIE_POOL_SEPT2_10, FIXIE_ACCOUNTS_ACTIVE_100 + FIXIE_ACCOUNTS_SEPT2_10
+    return FIXIE_POOL_ACTIVE_100, FIXIE_ACCOUNTS_ACTIVE_100
 
 FIXIE_POOL, FIXIE_ACCOUNTS = get_active_fixie_pool_and_accounts()
+
 
 # ============================================================
 # SISTEMA HÍBRIDO LOCAL/NUBE + ROUND-ROBIN EQUITATIVO
@@ -180,7 +374,7 @@ def mark_fixie_exhausted(account_index):
         state["last_exhaust_month"] = datetime.now().strftime("%Y-%m")
         _save_proxy_state(state)
         name = FIXIE_ACCOUNTS[account_index] if account_index < len(FIXIE_ACCOUNTS) else f"#{account_index}"
-        print(f"🚫 [FIXIE] Cuenta {name} marcada como agotada. Activas: {len(FIXIE_POOL) - len(indices)}/10")
+        print(f"🚫 [FIXIE] Cuenta {name} marcada como agotada. Activas: {len(FIXIE_POOL) - len(indices)}/{len(FIXIE_POOL)}")
 
 def get_smart_proxy():
     """Proxy inteligente: usa directo si modo local, Fixie Round-Robin si modo nube."""

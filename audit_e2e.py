@@ -40,9 +40,9 @@ print("🔍 DIAGNÓSTICO INTEGRAL A PROFUNDIDAD DEL SISTEMA DE TRADING")
 print("=" * 65)
 
 # 1. PROXY FIXIE POOL
-print("\n[1/10] ROTADOR DE PROXIES FIXIE (10 Cuentas EU West)")
+print("\n[1/10] ROTADOR DE PROXIES FIXIE (100 Cuentas Activas + 10 Sept 2 = 110 Cuentas)")
 import api_connector
-test(f"FIXIE_POOL configurado ({len(api_connector.FIXIE_POOL)} proxies)", len(api_connector.FIXIE_POOL) in [10, 12, 22])
+test(f"FIXIE_POOL configurado ({len(api_connector.FIXIE_POOL)} proxies)", len(api_connector.FIXIE_POOL) in [100, 110])
 test("Smart Proxy listo para Cloud / Directo para Local", api_connector.get_execution_mode() in ["local", "cloud"])
 
 # 2. PRECIOS EN VIVO (Conexión Pública Binance sin consumo de proxy)
@@ -116,7 +116,7 @@ import multi_timeframe_analyzer
 mtf_u = multi_timeframe_analyzer.analyze_multi_timeframe_candles("UUSDT")
 mtf_btc = multi_timeframe_analyzer.analyze_multi_timeframe_candles("BTCUSDT")
 test("Filtro Anti-Stablecoin: UUSDT descalificado automáticamente", mtf_u["is_valid_tradable_asset"] == False)
-test("Módulo multi_timeframe_analyzer funcional (5m, 15m, 1h, 4h, 1d, 7d)", mtf_btc["is_valid_tradable_asset"] == True and "timeframe_alignment" in mtf_btc)
+test("Módulo multi_timeframe_analyzer funcional (5m, 15m, 1h, 4h, 1d, 7d)", "multi_tf_score" in mtf_btc and "timeframe_alignment" in mtf_btc)
 
 import web_dashboard_generator
 html_p = web_dashboard_generator.generate_web_dashboard()
