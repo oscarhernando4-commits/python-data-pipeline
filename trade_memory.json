@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2832,
-    "wins": 1514,
+    "total_trades": 2833,
+    "wins": 1515,
     "losses": 1318,
-    "win_rate_pct": 53.46,
-    "total_pnl_usd": 1928.063576548791
+    "win_rate_pct": 53.48,
+    "total_pnl_usd": 1928.083576548791
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LDOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BNBUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DASHUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LDOUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PENDLEUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MUBARAKUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on STXUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on POLUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DCRUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DCRUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NIGHTUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 12:58:42",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "FETUSDT",
-      "side": "LONG",
-      "entry_price": 0.1628,
-      "exit_price": 0.1637,
-      "pnl_usd": 54.6,
-      "result": "WIN",
-      "notes": "WIN on FETUSDT (PnL: +0.55%, Net: $+54.60 Fase 2)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 64.46,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 12:58:42",
       "account_id": "SIM-028",
@@ -8514,6 +8497,23 @@
       "context": {
         "score": 91,
         "rsi_15m": 52.66,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 12:38:31",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "NIGHTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.02124,
+      "exit_price": 0.0211,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on NIGHTUSDT (PnL: +0.66%, Net: $+0.02 Fase 3)",
+      "context": {
+        "score": 82,
+        "rsi_15m": 48.72,
         "macro_trend_4h": "NEUTRAL"
       }
     }
