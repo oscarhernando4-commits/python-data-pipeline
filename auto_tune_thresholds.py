@@ -59,16 +59,8 @@ def auto_tune():
             continue
             
         if not stats or total == 0:
-            print(f"[{gk}] INACTIVITY DETECTED! Relaxing constraints to force trades.")
-            if "long_score" in t[gk]: t[gk]["long_score"] = max(20, t[gk]["long_score"] - 2)
-            if "short_score" in t[gk]: t[gk]["short_score"] = min(80, t[gk]["short_score"] + 2)
-            if "rsi_min" in t[gk]: t[gk]["rsi_min"] = max(10, t[gk]["rsi_min"] - 2)
-            if "rsi_max" in t[gk]: t[gk]["rsi_max"] = min(90, t[gk]["rsi_max"] + 2)
-            if "long_rsi" in t[gk]: t[gk]["long_rsi"] = min(80, t[gk]["long_rsi"] + 2)
-            if "short_rsi" in t[gk]: t[gk]["short_rsi"] = max(20, t[gk]["short_rsi"] - 2)
-            if "vol_surge" in t[gk]: t[gk]["vol_surge"] = max(1.0, t[gk]["vol_surge"] - 0.1)
-            if "macd_long" in t[gk]: t[gk]["macd_long"] = min(0.0, t[gk]["macd_long"] + 0.1)
-            if "macd_short" in t[gk]: t[gk]["macd_short"] = max(0.0, t[gk]["macd_short"] - 0.1)
+            # Mantener umbrales estándar disciplinados sin forzar operaciones
+            pass
         elif wr >= 0.65:
             # Relax (Decrease long_score, increase short_score, etc.)
             if "long_score" in t[gk]: t[gk]["long_score"] = max(20, t[gk]["long_score"] - 1)
