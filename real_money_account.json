@@ -1,32 +1,29 @@
 {
   "initial_deposit_usdt": 15.47,
   "initial_total_usd": 20.07,
-  "current_balance_usd": 15.23,
-  "net_pnl_usd": -0.24,
+  "current_balance_usd": 15.21,
+  "net_pnl_usd": -0.26,
   "wins": 0,
-  "losses": 1,
-  "trades_count": 1,
+  "losses": 0,
+  "trades_count": 0,
   "daily_wins": 0,
-<<<<<<< Updated upstream
-  "daily_losses": 1,
-  "position": null,
-  "last_trade_time": "26-08-22<br>15:26",
-=======
   "daily_losses": 0,
-  "position": null,
-  "last_trade_time": "26-08-22<br>15:22",
->>>>>>> Stashed changes
-  "status": "🟦 Buscando Entrada A+",
-  "_cached_total_val": 15.23,
-  "_cached_usdt_free": 0.0,
-  "_cached_bnb": 0.00034107,
-  "_cached_bnb_usd": 0.24,
-<<<<<<< Updated upstream
-  "_btc_last_price": 76925.43,
-  "_last_closed_symbol": "CAKEUSDT",
-  "_last_closed_time": 1787412175.8138843,
-  "_last_exit_price": 1.693
-=======
-  "_btc_last_price": 76925.43
->>>>>>> Stashed changes
+  "position": {
+    "symbol": "XTZUSDT",
+    "quantity": 63.4,
+    "entry_price": 0.235,
+    "highest_price": 0.235,
+    "cost_usd": 14.89,
+    "side": "LONG",
+    "phase": 1,
+    "holding_cycles": 1,
+    "volatility_regime": "🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (🧩 Cima +0.00% | SL Defensivo -0.95%)"
+  },
+  "last_trade_time": "26-08-22<br>15:30",
+  "status": "🔵 En Vivo LONG (XTZUSDT @ $0.2349)",
+  "_cached_total_val": 15.21,
+  "_cached_usdt_free": 0.0979,
+  "_cached_bnb": 0.0003249,
+  "_cached_bnb_usd": 0.22,
+  "_btc_last_price": 76996.75
 }
