@@ -158,14 +158,23 @@ def main():
         except Exception as e:
             print(f"⚠️ Reload note: {e}", flush=True)
         
-        # Step 1: Update market universe
+        # Fast-Track: Si hay posición activa, omitir escaneos pesados de CMC/120 pares para CERO latencia
+        has_active_real_pos = False
         try:
-            if hasattr(data_fetcher, 'fetch_top_100_pairs'):
-                data_fetcher.fetch_top_100_pairs()
-            elif hasattr(data_fetcher, 'update_top_pairs'):
-                data_fetcher.update_top_pairs()
-        except Exception as e:
-            print(f"⚠️ Error actualizando pares (Ciclo {cycle}): {e}", flush=True)
+            st_check = api_connector.load_real_account_state()
+            has_active_real_pos = bool(st_check.get("position"))
+        except Exception:
+            pass
+
+        # Step 1: Update market universe SOLO si estamos buscando entrada (ahorra 100% de tiempo cuando hay trade abierto)
+        if not has_active_real_pos:
+            try:
+                if hasattr(data_fetcher, 'fetch_top_100_pairs'):
+                    data_fetcher.fetch_top_100_pairs()
+                elif hasattr(data_fetcher, 'update_top_pairs'):
+                    data_fetcher.update_top_pairs()
+            except Exception as e:
+                print(f"⚠️ Error actualizando pares (Ciclo {cycle}): {e}", flush=True)
             
         # Step 2: Run institutional trading matrix & AI execution (Streamlined)
         try:
