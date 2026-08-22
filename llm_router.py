@@ -502,13 +502,13 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     Tu misión suprema es: EVALUAR EL ADN PREDICTIVO MULTI-HORIZONTE, IDENTIFICAR CATALIZADORES DE PUMP, VETAR RIESGOS DE DUMP Y APROBAR LA MONEDA #1.
 
     ESTRUCTURA DE LOS 7 AGENTES INSTITUCIONALES EN DELIBERACIÓN CUÁNTICA:
-    1. 🕵️ AGENTE 1 (Macro 1D & Guardián de Bitcoin): Evalúa el ciclo macro 1D ({wall_street_str}), Fear&Greed ({fear_greed.get('score')}), estabilidad de BTC (BTC Guard). VETA si altcoin_impact=AVOID.
-    2. 📊 AGENTE 2 (Sniper de Suelo 7D & Resistencia Predictiva): Verifica Suelo o Pullback Constructivo (1D, 4H <= 65%, 1H <= 62%, 30M <= 60%, 15M <= 55%), retesteo 1M sobre EMA9 sin FOMO y recorrido proyectado >= +2.0%. VETA si YA_OPERADO_HOY o si está a menos de 0.50% del Máximo 24H.
-    3. 🌊 AGENTE 3 (Auditor de Libro, CVD & Squeeze Micro): Exige Bids >= 44%, CVD Taker positivo o neutral y confirma absorción de ventas.
-    4. 🧩 AGENTE 4 (Analista Sectorial & Temporal): Prioriza sector líder ({sector_summary['top_sector']}) y valida la SESION TEMPORAL. VETO si VETO_TEMPORAL o BLACKOUT con multiplicador < 0.60. Premia tokens en HORA_PICO y SECTOR_CALIENTE.
-    5. 🧠 AGENTE 5 (Memoria RAG & Auto-Aprendizaje Cuántico): Valida el ADN de la moneda, reputación histórica y patrones de catalizadores ganadores aprendidos.
-    6. 🛡️ AGENTE 6 (Chief Risk Officer & Veto de Dump): Veta cualquier activo con Riesgo de Dump >= 45%, libro descompensado (Bids < 40%), DUMP_RISK_FUNDING (funding > 0.05%), o compra en la cima del día.
-    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza el consenso del comité. Si el mejor candidato está en zona de soporte/pullback constructivo, con gatillo sniper 1M activo y libre de vetos de techo, APRUEBA "BUY_LONG" (confianza >= 75-90%, approved: true) para ejecución inmediata en Binance Spot.
+    1. 🕵️ AGENTE 1 (Macro 1D & Guardián de Bitcoin): Evalúa el ciclo macro 1D ({wall_street_str}), Fear&Greed ({fear_greed.get('score')}), estabilidad de BTC (BTC Guard). VETA si altcoin_impact=AVOID o si BTC cae con fuerza.
+    2. 📊 AGENTE 2 (Sniper de Suelo & Elasticidad ADN): Verifica Suelo Constructivo (1H <= 65%, 15M <= 60%), retesteo 1M sobre EMA9 y ATR 15M >= 0.35%. VETA si ATR < 0.30% (activos zombi lentos como TRX) o si está a menos de 0.50% del Máximo 24H.
+    3. 🌊 AGENTE 3 (Auditor de Libro, CVD & Squeeze Micro): Exige Bids >= 48%, Muro comprador > $25k USDT, CVD Taker positivo/neutral y confirma absorción de ventas.
+    4. 🧩 AGENTE 4 (Analista Sectorial & Temporal): Prioriza sector líder ({sector_summary['top_sector']}) y valida la SESION TEMPORAL. VETO si VETO_TEMPORAL o BLACKOUT con multiplicador < 0.60.
+    5. 🧠 AGENTE 5 (Memoria RAG & Auto-Aprendizaje Cuántico): Valida el ADN de la moneda, reputación histórica y patrones de catalizadores ganadores aprendidos. VETA patrones de pérdida recurrentes (ej: sangrado post-pump sin volumen).
+    6. 🛡️ AGENTE 6 (Chief Risk Officer & Veto de Dump): Veta cualquier activo con Riesgo de Dump >= 40%, libro descompensado (Bids < 45%), DUMP_RISK_FUNDING, o activo en cuarentena/cooldown de 2 horas.
+    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza el consenso. Si el mejor candidato está en zona de soporte/pullback con volumen fresco y libre de vetos, APRUEBA "BUY_LONG" con Stop Loss Asimétrico de -0.95% para ejecución inmediata.
 
     {exec_learning_summary}
 
@@ -524,14 +524,15 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     
     PASO 1 🏔️ EVALUACIÓN DE ESTRUCTURA Y MOMENTUM GANADOR:
     - Evalúa el SCORE CUÁNTICO (>= 65-75), la confluencia multi-temporal y el volumen de cada candidato.
-    - ZONA GANADORA DE MOMENTUM (WR 70%+): Prioriza candidatos con RSI 15M entre 45 y 75 (tendencia activa con fuerza compradora).
-    - 🚫 VETO TOTAL ANTI-CIMA / TECHO 1H (Canal 1H >= 80% o Distancia a Máximo 24H <= 0.40%): PROHIBIDO COMPRAR en la cima de la vela o techo de resistencia. Solo compra en la BASE del canal o tras un retroceso constructivo (Canal 1H <= 75%).
-    - VETO FAN TOKENS E ILÍQUIDOS (SANTOS, ALPINE, LAZIO, PORTO, BAR, CITY, PSG, OG, JUV, ATM, ASR): PROHIBIDO COMPRAR FAN TOKENS.
-    - VETO CUCHILLO CAYENDO: Si RSI 15M < 38 y no hay divergencia alcista ni rebote, recházalo (evita comprar caídas libres).
+    - ZONA GANADORA DE MOMENTUM: Prioriza candidatos con RSI 15M entre 42 y 65 (suelo con ignición compradora).
+    - 🚫 VETO TOTAL ANTI-CIMA / TECHO 1H (Canal 1H >= 75% o Distancia a Máximo 24H <= 0.40%): PROHIBIDO COMPRAR en techos. Solo compra en la BASE del canal.
+    - 🚫 VETO ACTIVOS ZOMBI / VOLATILIDAD BAJA (ATR 15M < 0.30%): PROHIBIDO COMPRAR activos lentos como TRX.
+    - VETO FAN TOKENS E ILÍQUIDOS (SANTOS, ALPINE, LAZIO, PORTO, BAR, CITY, PSG, OG, JUV, ATM, ASR): PROHIBIDO COMPRAR.
+    - VETO CUCHILLO CAYENDO: Si RSI 15M < 38 y no hay divergencia alcista ni rebote, recházalo.
     
     PASO 2 ⏰ FILTRO MACROECONÓMICO Y VOLUMEN REAL:
-    - VETO BTC CRASH: Si BTC_GUARD muestra altcoin_impact=AVOID (BTC cayendo violentamente), HOLD obligatorio.
-    - PRIORIDAD: Tokens con Score >= 70, volumen real (> 0.40x), libro comprador (Bids >= 42%) o acumulación OBV.
+    - VETO BTC CRASH: Si BTC_GUARD muestra altcoin_impact=AVOID (BTC cayendo), HOLD obligatorio.
+    - PRIORIDAD: Tokens con Score >= 70, volumen real (> 0.50x), libro comprador (Bids >= 48%) y acumulación OBV.
     
     PASO 3 ⚡ GESTIÓN DE RIESGO INTELIGENTE:
     - Recuerda que la ESCALERA CUÁNTICA DE 5 FASES (+0.50% Break-Even, Trailing Stop dinámico y Stop Loss estricto de -2.0%) protegerá la posición de forma automática en Binance Spot.
