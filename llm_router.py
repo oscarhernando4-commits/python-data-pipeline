@@ -517,7 +517,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
     ESTRUCTURA DE LOS 7 AGENTES INSTITUCIONALES EN DELIBERACIÓN CUÁNTICA:
     1. 🕵️ AGENTE 1 (Macro 1D & Guardián de Bitcoin): Evalúa el ciclo macro 1D ({wall_street_str}), Fear&Greed ({fear_greed.get('score')}), estabilidad de BTC (BTC Guard). VETA si altcoin_impact=AVOID o si BTC cae con fuerza.
-    2. 📊 AGENTE 2 (Sniper de Suelo & Elasticidad ADN): Verifica Suelo Constructivo (1H <= 65%, 15M <= 60%), retesteo 1M sobre EMA9 y ATR 15M >= 0.35%. VETA si ATR < 0.30% (activos zombi lentos como TRX) o si está a menos de 0.50% del Máximo 24H.
+    2. 📊 AGENTE 2 (Sniper de Suelo 2M & Elasticidad ADN): Exige entrada en el PISO de 2 Minutos (RSI 2M <= 52.0 y primera vela 2M verde sobre soporte). VETA categóricamente entradas tardías donde el rebote de 2M ya ocurrió (RSI 2M >= 60.0). Exige comprar en la base exacta, jamás perseguir velas verdes ya estiradas.
     3. 🌊 AGENTE 3 (Auditor de Libro, CVD & Squeeze Micro): Exige Bids >= 48%, Muro comprador > $25k USDT, CVD Taker positivo/neutral y confirma absorción de ventas.
     4. 🧩 AGENTE 4 (Analista Sectorial & Temporal): Prioriza sector líder ({sector_summary['top_sector']}) y valida la SESION TEMPORAL. VETO si VETO_TEMPORAL o BLACKOUT con multiplicador < 0.60.
     5. 🧠 AGENTE 5 (Memoria RAG & Auto-Aprendizaje Cuántico): Valida el ADN de la moneda, reputación histórica y patrones de catalizadores ganadores aprendidos. VETA patrones de pérdida recurrentes (ej: sangrado post-pump sin volumen).
@@ -539,6 +539,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     PASO 1 🔬 LECTURA DE LA RADIOGRAFÍA 360° Y CANAL FRACTAL:
     - Revisa la RADIOGRAFÍA 360° ADN y el CANAL FRACTAL (% Suelo a Cima).
     - 💎 ARQUETIPO DCR / OLA 2 GOLDEN RETEST: Si un activo muestra "PATRÓN FRACTAL DCR" (Retesteo de Oro Ola 2 en MA25 o Resorte Comprimido 1M), dale MÁXIMA PRIORIDAD de compra porque ofrece el ratio Riesgo/Beneficio más asimétrico del mercado (>3:1).
+    - 🎯 REGLA DE ORO DE PISO 2M (Comprar en el Suelo Real): Exige que las velas de 2M estén en el PISO (RSI 2M <= 52.0 y soporte activo). Si el RSI 2M ya superó 60.0 tras una vela verde grande, ese micro-impulso ya se consumió: VÉTALO por entrada tardía.
     - ZONA ÓPTIMA DE COMPRA (Sweet-Spot): Prioriza activos en la BASE o Pullback Constructivo (1H <= 55%, 15M <= 55%, 1M <= 50%).
     - ALPHA & ABSORCIÓN: Premia fuertemente activos con Alpha vs BTC > +0.20% y Mecha de Absorción 1M >= 15% (compradores comprando el dip).
     - 🚫 VETO TOTAL CIMA / TECHO: PROHIBIDO comprar si Canal 1H >= 75% o si está a menos de 0.40% del Máximo 24H.

@@ -1706,6 +1706,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 elif not has_floor_turnaround:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} en zona baja pero SIN GIRO CONFIRMADO (1M: {tf_1m}, 2M: {tf_2m}, Divergencia: {mtf_res.get('is_bullish_divergence')}). Exige vela verde de confirmación.")
+                elif mtf_res.get("rsi_2m", 50.0) >= 60.0 and mtf_res.get("rsi_1m", 50.0) >= 56.0 and not mtf_res.get("spring_coiling", {}).get("is_spring_compressed", False):
+                    is_stable = True
+                    print(f"⛔ Compra rechazada: {best_symbol} llegó tarde al rebote de 2M (RSI 2M={mtf_res.get('rsi_2m'):.1f} >= 60.0, RSI 1M={mtf_res.get('rsi_1m'):.1f} >= 56.0). Exige entrada cuando las velas de 2M están en el PISO (RSI 2M <= 52.0).")
                 elif mtf_res.get("is_overextended_15m"):
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} rechazado por vela sobre-extendida en la cima ({mtf_res.get('overextension_reason')}).")
