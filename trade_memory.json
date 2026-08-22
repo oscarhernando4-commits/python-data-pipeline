@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2632,
-    "wins": 1381,
+    "total_trades": 2635,
+    "wins": 1384,
     "losses": 1251,
-    "win_rate_pct": 52.47,
-    "total_pnl_usd": -984.3364234512081
+    "win_rate_pct": 52.52,
+    "total_pnl_usd": -984.3064234512082
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PROMUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XPLUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LINKUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PYTHUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLDUSDT)",
@@ -49,61 +48,11 @@
       "BOOST LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SHIBUSDT)",
       "BOOST LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ETHUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on NEARUSDT)",
-      "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PROMUSDT)"
+      "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on PROMUSDT)",
+      "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HEMIUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 10:47:20",
-      "account_id": "SIM-048",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "SUNUSDT",
-      "side": "LONG",
-      "entry_price": 0.01739,
-      "exit_price": 0.01757,
-      "pnl_usd": 0.16,
-      "result": "WIN",
-      "notes": "WIN on SUNUSDT (PnL: +1.04%, Net: $+0.16 Fase 3)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 70.72,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 10:47:20",
-      "account_id": "SIM-049",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "SUNUSDT",
-      "side": "LONG",
-      "entry_price": 0.01739,
-      "exit_price": 0.01757,
-      "pnl_usd": 0.15,
-      "result": "WIN",
-      "notes": "WIN on SUNUSDT (PnL: +1.04%, Net: $+0.15 Fase 3)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 70.72,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 10:47:20",
-      "account_id": "SIM-050",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "SUNUSDT",
-      "side": "LONG",
-      "entry_price": 0.01739,
-      "exit_price": 0.01757,
-      "pnl_usd": 0.17,
-      "result": "WIN",
-      "notes": "WIN on SUNUSDT (PnL: +1.04%, Net: $+0.17 Fase 3)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 70.72,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 10:47:20",
       "account_id": "SIM-070",
@@ -8454,6 +8403,57 @@
       "context": {
         "score": 32,
         "rsi_15m": 62.04,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 06:22:30",
+      "account_id": "SIM-005",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "HEMIUSDT",
+      "side": "LONG",
+      "entry_price": 0.00981,
+      "exit_price": 0.00983,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on HEMIUSDT (PnL: +0.20%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 64,
+        "rsi_15m": 32.57,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 06:22:30",
+      "account_id": "SIM-006",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "HEMIUSDT",
+      "side": "LONG",
+      "entry_price": 0.00981,
+      "exit_price": 0.00983,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on HEMIUSDT (PnL: +0.20%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 64,
+        "rsi_15m": 32.57,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 06:22:30",
+      "account_id": "SIM-007",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "HEMIUSDT",
+      "side": "LONG",
+      "entry_price": 0.00981,
+      "exit_price": 0.00983,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on HEMIUSDT (PnL: +0.20%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 64,
+        "rsi_15m": 32.57,
         "macro_trend_4h": "NEUTRAL"
       }
     }
