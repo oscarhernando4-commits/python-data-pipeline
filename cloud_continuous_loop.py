@@ -191,8 +191,12 @@ def main():
         # Hot-reload modules so any pulled git improvements take effect immediately
         try:
             import api_connector
+            import asset_dna_predictive_engine
             import multi_timeframe_analyzer
             import llm_router
+            import data_fetcher
+            import pipeline_processor
+            importlib.reload(asset_dna_predictive_engine)
             importlib.reload(api_connector)
             importlib.reload(multi_timeframe_analyzer)
             importlib.reload(llm_router)

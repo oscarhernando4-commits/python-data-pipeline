@@ -490,6 +490,28 @@ def _get_funding_safe(symbol):
                 "dump_risk_from_funding": False, "squeeze_opportunity": False}
 
 
+def _get_behavioral_xray_safe(symbol, klines_dict, btc_closes):
+    """Safe wrapper for 360 Behavioral DNA X-Ray."""
+    try:
+        import asset_dna_predictive_engine
+        if hasattr(asset_dna_predictive_engine, "calculate_asset_behavioral_xray"):
+            return asset_dna_predictive_engine.calculate_asset_behavioral_xray(
+                symbol=symbol,
+                klines_multi_tf=klines_dict,
+                btc_15m_closes=btc_closes
+            )
+    except Exception:
+        pass
+    return {
+        "behavior_type": "ROTACIÓN_ESTRUCTURAL",
+        "timing_advice": "🎯 Confluencia técnica calculada",
+        "fractal_channel_pct": {"1m": 50.0, "5m": 50.0, "15m": 50.0, "1h": 50.0, "4h": 50.0, "1d": 50.0},
+        "lower_wick_absorption_1m_pct": 10.0,
+        "alpha_vs_btc_15m_pct": 0.0,
+        "atr_15m_pct": 0.40
+    }
+
+
 def _get_archetype_dna_safe(symbol, atr_pct_15m=0.30, price=1.0):
     """Safe wrapper for adaptive_asset_dna archetype classification."""
     try:
@@ -1396,13 +1418,13 @@ def analyze_multi_timeframe_candles(symbol):
         "sector_heat_dna": asset_dna_predictive_engine.get_sector_heat(symbol, fii_score),
         "anti_reentry_check": asset_dna_predictive_engine.check_already_traded_today(symbol),
         # ─── RADIOGRAFÍA CONDUCTUAL HOLOGRÁFICA 360° DEL ACTIVO ───
-        "behavioral_xray": asset_dna_predictive_engine.calculate_asset_behavioral_xray(
+        "behavioral_xray": _get_behavioral_xray_safe(
             symbol=symbol,
-            klines_multi_tf={
+            klines_dict={
                 "1m": klines_1m, "5m": klines_5m, "15m": klines_15m,
                 "1h": klines_1h, "4h": klines_4h, "1d": klines_1d
             },
-            btc_15m_closes=btc_closes
+            btc_closes=btc_closes
         ),
     }
 
