@@ -1465,19 +1465,19 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 dist_24h_high = mtf_res.get("dist_to_24h_high_pct", 999.0)
                 is_at_daily_ceiling = mtf_res.get("is_at_daily_resistance_ceiling", False)
                 
-                if is_at_daily_ceiling:
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} bloqueado por TECHO DE RESISTENCIA 30M/24H (Canal 30M: {range_pos_30m*100:.0f}%, Distancia a Máximo 24H: +{dist_24h_high:.2f}%). Prohibido comprar la cima.")
-                elif is_15m_cascade:
+                if is_15m_cascade:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} bloqueado por CASCADA ROJA 15M (3+ velas de 15m rojas consecutivas sin mecha de absorción). Prohibido comprar mientras sigue cayendo.")
                 elif is_active_falling_knife:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} bloqueado por CUCHILLO CAYENDO / SANGRADO ACTIVO (10s: DN, 30s: DN, 1M: DN). Prohibido comprar mientras sigue cayendo. Esperando freno.")
-                elif not has_floor_turnaround:
+                elif not is_learned_signal and is_at_daily_ceiling:
+                    is_stable = True
+                    print(f"⛔ Compra rechazada: {best_symbol} bloqueado por TECHO DE RESISTENCIA 30M/24H (Canal 30M: {range_pos_30m*100:.0f}%, Distancia a Máximo 24H: +{dist_24h_high:.2f}%). Prohibido comprar la cima.")
+                elif not is_learned_signal and not has_floor_turnaround:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} en zona baja pero SIN GIRO CONFIRMADO (1M: {tf_1m}, 2M: {tf_2m}, Divergencia: {mtf_res.get('is_bullish_divergence')}). Exige vela verde de confirmación.")
-                elif mtf_res.get("is_overextended_15m"):
+                elif not is_learned_signal and mtf_res.get("is_overextended_15m"):
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} rechazado por vela sobre-extendida en la cima ({mtf_res.get('overextension_reason')}).")
                 elif not is_learned_signal and not is_macro_base:
@@ -1488,7 +1488,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de estructura en 15M (15M: {tf_15m}, RSI: {mtf_res.get('rsi_15m')}). Exige rebote o soporte en 15M.")
                 else:
                     if is_learned_signal:
-                        print(f"👑 [SÚPER-CEREBRO APROBADO] {best_symbol} validado por IA con GIRO DE SUELO CONFIRMADO. Procediendo a libro...")
+                        print(f"👑 [SÚPER-CEREBRO APROBADO] {best_symbol} validado por IA institucional. Procediendo a ejecución con Escalera Cuántica de 5 Fases...")
                 
                 if not is_stable:
                     if arch_dna.get("is_blacklisted_fan_token", False):
