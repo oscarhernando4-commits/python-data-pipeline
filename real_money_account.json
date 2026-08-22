@@ -1,8 +1,8 @@
 {
   "initial_deposit_usdt": 15.47,
   "initial_total_usd": 20.07,
-  "current_balance_usd": 15.36,
-  "net_pnl_usd": -0.11,
+  "current_balance_usd": 15.49,
+  "net_pnl_usd": 0.02,
   "wins": 0,
   "losses": 0,
   "trades_count": 0,
@@ -10,51 +10,19 @@
   "daily_losses": 0,
   "position": {
     "symbol": "COMPUSDT",
-<<<<<<< Updated upstream
     "quantity": 0.769,
     "entry_price": 19.62,
-    "highest_price": 19.69,
-    "cost_usd": 15.11,
-    "side": "LONG",
-    "phase": 1,
-    "holding_cycles": 1,
-    "volatility_regime": "🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (🧩 Cima +0.36% | SL Defensivo -0.95%)"
-  },
-  "last_trade_time": "26-08-22<br>17:30",
-  "status": "🔵 En Vivo LONG (COMPUSDT @ $19.6500)",
-  "_cached_total_val": 15.36,
-  "_cached_usdt_free": 0.0701,
-  "_cached_bnb": 0.00025999,
-  "_cached_bnb_usd": 0.18,
-  "_last_wallet_sync_ts": 1787419849.6587102,
-  "_btc_last_price": 77146.33
-=======
-    "entry_price": 19.62,
+    "highest_price": 19.62,
     "cost_usd": 15.09,
     "side": "LONG",
-    "quantity": 0.769,
-    "break_even": false,
-    "highest_price": 19.62,
     "phase": 1,
-    "archetype": "SECTOR_ROTATION",
-    "archetype_label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
-    "initial_sl_pct": -0.95,
-    "max_stagnation_minutes": 40,
-    "vol_surge": 2.04,
-    "entry_time_ms": 1787419783761,
-    "atr_pct_15m": 0.694,
-    "ma25_5m": 19.5296,
-    "dna_tier": "HIGH_BETA_RUNNER",
-    "optimal_trailing_slack_pct": 0.9,
-    "target_resistance_price": 20.92,
-    "pump_probability_pct": 45
+    "break_even": false,
+    "entry_time_ms": 1787420905309
   },
-  "last_trade_time": "26-08-22<br>12:29",
+  "last_trade_time": "26-08-22<br>12:48",
   "status": "🔵 En Vivo LONG (COMPUSDT @ $19.6200)",
-  "_cached_total_val": 15.35,
-  "_cached_usdt_free": 0.0,
-  "_cached_bnb": 0.00027628,
-  "_cached_bnb_usd": 0.19,
-  "_last_wallet_sync_ts": 1787419769.166095
->>>>>>> Stashed changes
+  "_cached_total_val": 15.49,
+  "_cached_usdt_free": 0.0701,
+  "_cached_bnb": 0.00025999,
+  "_cached_bnb_usd": 0.18
 }
