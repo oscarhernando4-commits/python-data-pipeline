@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2811,
-    "wins": 1498,
+    "total_trades": 2812,
+    "wins": 1499,
     "losses": 1313,
-    "win_rate_pct": 53.29,
-    "total_pnl_usd": 1745.2035765487913
+    "win_rate_pct": 53.31,
+    "total_pnl_usd": 1745.5035765487912
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 12:22:25",
-      "account_id": "SIM-083",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "SOLUSDT",
-      "side": "LONG",
-      "entry_price": 91.05,
-      "exit_price": 91.47,
-      "pnl_usd": 0.05,
-      "result": "WIN",
-      "notes": "WIN on SOLUSDT (PnL: +0.46%, Net: $+0.05 Fase 2)",
-      "context": {
-        "score": 76,
-        "rsi_15m": 53.23,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 12:22:25",
       "account_id": "SIM-097",
@@ -8514,6 +8497,23 @@
       "context": {
         "score": 7,
         "rsi_15m": 68.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 11:48:34",
+      "account_id": "SIM-081",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01173,
+      "exit_price": 0.01165,
+      "pnl_usd": 0.3,
+      "result": "WIN",
+      "notes": "WIN on COTIUSDT (PnL: +0.68%, Net: $+0.30 Fase 3)",
+      "context": {
+        "score": 80,
+        "rsi_15m": 50.39,
         "macro_trend_4h": "NEUTRAL"
       }
     }
