@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2808,
-    "wins": 1495,
+    "total_trades": 2811,
+    "wins": 1498,
     "losses": 1313,
-    "win_rate_pct": 53.24,
-    "total_pnl_usd": 1745.1735765487913
+    "win_rate_pct": 53.29,
+    "total_pnl_usd": 1745.2035765487913
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 12:20:36",
-      "account_id": "SIM-045",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "SPKUSDT",
-      "side": "LONG",
-      "entry_price": 0.018079,
-      "exit_price": 0.017493,
-      "pnl_usd": -0.37,
-      "result": "LOSS",
-      "notes": "LOSS on SPKUSDT (PnL: -3.24%, Net: $-0.37 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 48.72,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 12:20:36",
-      "account_id": "SIM-046",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "SPKUSDT",
-      "side": "LONG",
-      "entry_price": 0.018079,
-      "exit_price": 0.017493,
-      "pnl_usd": -0.67,
-      "result": "LOSS",
-      "notes": "LOSS on SPKUSDT (PnL: -3.24%, Net: $-0.67 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 48.72,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 12:20:36",
-      "account_id": "SIM-047",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "SPKUSDT",
-      "side": "LONG",
-      "entry_price": 0.018079,
-      "exit_price": 0.017493,
-      "pnl_usd": -0.28,
-      "result": "LOSS",
-      "notes": "LOSS on SPKUSDT (PnL: -3.24%, Net: $-0.28 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 48.72,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 12:22:25",
       "account_id": "SIM-083",
@@ -8514,6 +8463,57 @@
       "context": {
         "score": 7,
         "rsi_15m": 57.57,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 11:44:34",
+      "account_id": "SIM-048",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "TUTUSDT",
+      "side": "LONG",
+      "entry_price": 0.04312,
+      "exit_price": 0.04321,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on TUTUSDT (PnL: +0.21%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 7,
+        "rsi_15m": 68.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 11:44:34",
+      "account_id": "SIM-049",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "TUTUSDT",
+      "side": "LONG",
+      "entry_price": 0.04312,
+      "exit_price": 0.04321,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on TUTUSDT (PnL: +0.21%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 7,
+        "rsi_15m": 68.98,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 11:44:34",
+      "account_id": "SIM-050",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "TUTUSDT",
+      "side": "LONG",
+      "entry_price": 0.04312,
+      "exit_price": 0.04321,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on TUTUSDT (PnL: +0.21%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 7,
+        "rsi_15m": 68.98,
         "macro_trend_4h": "NEUTRAL"
       }
     }
