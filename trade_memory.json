@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3036,
-    "wins": 1612,
+    "total_trades": 3039,
+    "wins": 1615,
     "losses": 1424,
-    "win_rate_pct": 53.1,
-    "total_pnl_usd": 3573.787076548791
+    "win_rate_pct": 53.14,
+    "total_pnl_usd": 3573.847076548791
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BIOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SANDUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BNBUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on CFXUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PROMUSDT)",
@@ -49,61 +48,11 @@
       "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DOTUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on NEARUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on TSTUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on KAIAUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on KAIAUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on HBARUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 04:40:40",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "DOTUSDT",
-      "side": "LONG",
-      "entry_price": 1.003,
-      "exit_price": 1.023,
-      "pnl_usd": 260.49,
-      "result": "WIN",
-      "notes": "WIN on DOTUSDT (PnL: +1.99%, Net: $+260.49 Fase 4)",
-      "context": {
-        "score": 14,
-        "rsi_15m": 78.68,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 04:40:40",
-      "account_id": "SIM-028",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "DOTUSDT",
-      "side": "LONG",
-      "entry_price": 1.007,
-      "exit_price": 1.023,
-      "pnl_usd": 0.27,
-      "result": "WIN",
-      "notes": "WIN on DOTUSDT (PnL: +1.59%, Net: $+0.27 Fase 4)",
-      "context": {
-        "score": 14,
-        "rsi_15m": 78.68,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 04:40:41",
-      "account_id": "SIM-029",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "DOTUSDT",
-      "side": "LONG",
-      "entry_price": 1.007,
-      "exit_price": 1.023,
-      "pnl_usd": 0.35,
-      "result": "WIN",
-      "notes": "WIN on DOTUSDT (PnL: +1.59%, Net: $+0.35 Fase 4)",
-      "context": {
-        "score": 14,
-        "rsi_15m": 78.68,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 04:42:41",
       "account_id": "SIM-000 (Réplica Real)",
@@ -8486,6 +8435,57 @@
       "context": {
         "score": 10,
         "rsi_15m": 42.39,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 23:02:59",
+      "account_id": "SIM-005",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "HBARUSDT",
+      "side": "LONG",
+      "entry_price": 0.07739,
+      "exit_price": 0.07762,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on HBARUSDT (PnL: +0.30%, Net: $+0.02 Fase 2)",
+      "context": {
+        "score": 77,
+        "rsi_15m": 50.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 23:02:59",
+      "account_id": "SIM-006",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "HBARUSDT",
+      "side": "LONG",
+      "entry_price": 0.07739,
+      "exit_price": 0.07762,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on HBARUSDT (PnL: +0.30%, Net: $+0.02 Fase 2)",
+      "context": {
+        "score": 77,
+        "rsi_15m": 50.76,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 23:02:59",
+      "account_id": "SIM-007",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "HBARUSDT",
+      "side": "LONG",
+      "entry_price": 0.07739,
+      "exit_price": 0.07762,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on HBARUSDT (PnL: +0.30%, Net: $+0.02 Fase 2)",
+      "context": {
+        "score": 77,
+        "rsi_15m": 50.76,
         "macro_trend_4h": "NEUTRAL"
       }
     }
