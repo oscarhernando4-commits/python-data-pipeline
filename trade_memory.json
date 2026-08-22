@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2775,
-    "wins": 1475,
+    "total_trades": 2776,
+    "wins": 1476,
     "losses": 1300,
-    "win_rate_pct": 53.15,
-    "total_pnl_usd": 1979.6835765487917
+    "win_rate_pct": 53.17,
+    "total_pnl_usd": 1982.6435765487918
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on COTIUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on COTIUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on TRXUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on LDOUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on JTOUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BNBUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DASHUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LDOUSDT)",
-      "BOOST SHORT when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PENDLEUSDT)"
+      "BOOST SHORT when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PENDLEUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on COTIUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 11:03:35",
-      "account_id": "SIM-015",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "TUTUSDT",
-      "side": "LONG",
-      "entry_price": 0.04028,
-      "exit_price": 0.04287,
-      "pnl_usd": 0.73,
-      "result": "WIN",
-      "notes": "WIN on TUTUSDT (PnL: +6.43%, Net: $+0.73 Fase 5)",
-      "context": {
-        "score": 82,
-        "rsi_15m": 64.68,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 11:03:35",
       "account_id": "SIM-016",
@@ -8510,6 +8493,23 @@
       "context": {
         "score": 65,
         "rsi_15m": 44.32,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 10:22:32",
+      "account_id": "SIM-081",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "COTIUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01269,
+      "exit_price": 0.01199,
+      "pnl_usd": 2.96,
+      "result": "WIN",
+      "notes": "WIN on COTIUSDT (PnL: +5.52%, Net: $+2.96 Fase 5)",
+      "context": {
+        "score": 92,
+        "rsi_15m": 54.8,
         "macro_trend_4h": "NEUTRAL"
       }
     }
