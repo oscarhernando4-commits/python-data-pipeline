@@ -807,9 +807,25 @@ def analyze_multi_timeframe_candles(symbol):
     is_at_range_ceiling_2m = bool(range_position_2m >= 0.85 and rsi_2m >= 75.0)
     is_at_range_ceiling_1m = bool(range_position_1m >= 0.85 and rsi_1m >= 75.0)
 
-    # 🚫 VETO CRÍTICO ANTI-MÁXIMO DEL DÍA (Previene comprar la cima sin volumen):
+    # 🚫 VETO CRÍTICO ANTI-TECHO FRACTAL TOTAL (1M, 2M, 5M, 15M, 30M, 1H y Máximo 24H):
     dist_to_24h_high_pct = round(((high_24h - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
-    is_at_daily_resistance_ceiling = bool((dist_to_24h_high_pct <= 0.35 or range_position_30m >= 0.82 or range_position_1h >= 0.82) and not (vol_surge_2m >= 1.5 or vol_surge_15m >= 1.5))
+    is_at_daily_resistance_ceiling = bool(
+        (
+            dist_to_24h_high_pct <= 0.35 or 
+            range_position_1h >= 0.80 or 
+            range_position_30m >= 0.80 or 
+            range_position_15m >= 0.80 or 
+            range_position_5m >= 0.82 or 
+            range_position_2m >= 0.85 or 
+            range_position_1m >= 0.85 or
+            is_at_range_ceiling_1m or
+            is_at_range_ceiling_2m or
+            is_at_range_ceiling_5m or
+            is_at_range_ceiling_15m or
+            is_at_range_ceiling_30m or
+            is_at_range_ceiling_1h
+        ) and not (vol_surge_2m >= 2.0 or vol_surge_15m >= 2.0)
+    )
 
     dist_15m_pct = round(((high_15m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
     dist_30m_pct = round(((high_30m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
