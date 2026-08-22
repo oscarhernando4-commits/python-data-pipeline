@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2498,
-    "wins": 1295,
+    "total_trades": 2499,
+    "wins": 1296,
     "losses": 1203,
-    "win_rate_pct": 51.84,
-    "total_pnl_usd": -8077.552033451208
+    "win_rate_pct": 51.86,
+    "total_pnl_usd": -8077.497353451208
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 07:19:32",
-      "account_id": "SIM-070",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "ROBOUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0131,
-      "exit_price": 0.01338,
-      "pnl_usd": -0.42,
-      "result": "LOSS",
-      "notes": "LOSS on ROBOUSDT (PnL: -2.14%, Net: $-0.42 Fase 1)",
-      "context": {
-        "score": 50,
-        "rsi_15m": 68.82,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 07:37:23",
       "account_id": "SIM-039",
@@ -8472,6 +8455,19 @@
         "rsi_15m": 51.75,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-22 02:19:05",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "COTIUSDT",
+      "side": "BUY",
+      "entry_price": 0.01119,
+      "exit_price": 0.01123,
+      "pnl_usd": 0.054680000000000145,
+      "result": "WIN",
+      "notes": "Real Money Trade closed with 0.36%",
+      "context": {}
     }
   ]
 }
