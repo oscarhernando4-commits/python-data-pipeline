@@ -512,6 +512,28 @@ def _get_behavioral_xray_safe(symbol, klines_dict, btc_closes):
     }
 
 
+def _detect_spring_safe(klines_1m):
+    """Safe wrapper for Spring Coiling Compression."""
+    try:
+        import asset_dna_predictive_engine
+        if hasattr(asset_dna_predictive_engine, "detect_spring_coiling_compression"):
+            return asset_dna_predictive_engine.detect_spring_coiling_compression(klines_1m)
+    except Exception:
+        pass
+    return {"is_spring_compressed": False, "spread_pct": 1.0, "spring_bonus": 0, "label": "Normal"}
+
+
+def _detect_wave2_safe(klines_15m):
+    """Safe wrapper for Wave 2 MA25 Retest."""
+    try:
+        import asset_dna_predictive_engine
+        if hasattr(asset_dna_predictive_engine, "detect_wave2_ma25_retest_support"):
+            return asset_dna_predictive_engine.detect_wave2_ma25_retest_support(klines_15m)
+    except Exception:
+        pass
+    return {"is_wave2_retest": False, "peak_expansion_pct": 0.0, "dist_to_ma25_pct": 0.0, "retest_bonus": 0, "label": "Estructura Estándar"}
+
+
 def _get_archetype_dna_safe(symbol, atr_pct_15m=0.30, price=1.0):
     """Safe wrapper for adaptive_asset_dna archetype classification."""
     try:
@@ -973,8 +995,8 @@ def analyze_multi_timeframe_candles(symbol):
         multi_tf_score += 10 # High-beta explosive elasticity bonus
 
     # 🧬 PATRONES CUÁNTICOS DE ADN FRACTAL (Arquetipo DCR/USDT: Ruptura Macro + Retesteo MA25 + Compresión 1M)
-    spring_coiling_info = asset_dna_predictive_engine.detect_spring_coiling_compression(klines_1m)
-    wave2_retest_info = asset_dna_predictive_engine.detect_wave2_ma25_retest_support(klines_15m)
+    spring_coiling_info = _detect_spring_safe(klines_1m)
+    wave2_retest_info = _detect_wave2_safe(klines_15m)
     
     if spring_coiling_info.get("is_spring_compressed"):
         multi_tf_score += spring_coiling_info.get("spring_bonus", 15)  # 🚀 Resorte comprimido 1M listo para Ola 3
