@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2649,
-    "wins": 1398,
+    "total_trades": 2656,
+    "wins": 1405,
     "losses": 1251,
-    "win_rate_pct": 52.77,
-    "total_pnl_usd": -959.596423451208
+    "win_rate_pct": 52.9,
+    "total_pnl_usd": -955.3064234512082
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PROMUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PUMPUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ASTERUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on COTIUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BNBUSDT)",
@@ -49,129 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PROMUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PUMPUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on POLUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PROMUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PROMUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DOGEUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 11:35:33",
-      "account_id": "SIM-050",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "LDOUSDT",
-      "side": "LONG",
-      "entry_price": 0.3696,
-      "exit_price": 0.3611,
-      "pnl_usd": -0.47,
-      "result": "LOSS",
-      "notes": "LOSS on LDOUSDT (PnL: -2.30%, Net: $-0.47 Fase 1)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 61.02,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 11:35:33",
-      "account_id": "SIM-051",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "LDOUSDT",
-      "side": "LONG",
-      "entry_price": 0.3696,
-      "exit_price": 0.3611,
-      "pnl_usd": -0.47,
-      "result": "LOSS",
-      "notes": "LOSS on LDOUSDT (PnL: -2.30%, Net: $-0.47 Fase 1)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 61.02,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 11:35:33",
-      "account_id": "SIM-052",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "LDOUSDT",
-      "side": "LONG",
-      "entry_price": 0.3696,
-      "exit_price": 0.3611,
-      "pnl_usd": -0.46,
-      "result": "LOSS",
-      "notes": "LOSS on LDOUSDT (PnL: -2.30%, Net: $-0.46 Fase 1)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 61.02,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 11:39:31",
-      "account_id": "SIM-070",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "XRPUSDT",
-      "side": "SHORT",
-      "entry_price": 1.3835,
-      "exit_price": 1.3793,
-      "pnl_usd": 0.03,
-      "result": "WIN",
-      "notes": "WIN on XRPUSDT (PnL: +0.30%, Net: $+0.03 Fase 2)",
-      "context": {
-        "score": 40,
-        "rsi_15m": 58.02,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 11:41:36",
-      "account_id": "SIM-000 (Réplica Real)",
-      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
-      "symbol": "DASHUSDT",
-      "side": "SHORT",
-      "entry_price": 35.41,
-      "exit_price": 34.73,
-      "pnl_usd": 0.07,
-      "result": "WIN",
-      "notes": "WIN on DASHUSDT (PnL: +1.92%, Net: $+0.07 Fase 4)",
-      "context": {
-        "score": 43,
-        "rsi_15m": 53.35,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 11:53:41",
-      "account_id": "SIM-000 (Réplica Real)",
-      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
-      "symbol": "DOGEUSDT",
-      "side": "SHORT",
-      "entry_price": 0.08333,
-      "exit_price": 0.0831,
-      "pnl_usd": 0.01,
-      "result": "WIN",
-      "notes": "WIN on DOGEUSDT (PnL: +0.28%, Net: $+0.01 Fase 2)",
-      "context": {
-        "score": 32,
-        "rsi_15m": 45.67,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 11:55:34",
-      "account_id": "SIM-070",
-      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
-      "symbol": "PROMUSDT",
-      "side": "SHORT",
-      "entry_price": 2.371,
-      "exit_price": 2.422,
-      "pnl_usd": -0.42,
-      "result": "LOSS",
-      "notes": "LOSS on PROMUSDT (PnL: -2.15%, Net: $-0.42 Fase 1)",
-      "context": {
-        "score": 40,
-        "rsi_15m": 58.56,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 11:57:28",
       "account_id": "SIM-042",
@@ -8454,6 +8335,125 @@
       "context": {
         "score": 0,
         "rsi_15m": 57.02,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 07:18:30",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "PROMUSDT",
+      "side": "LONG",
+      "entry_price": 2.658,
+      "exit_price": 2.781,
+      "pnl_usd": 0.19,
+      "result": "WIN",
+      "notes": "WIN on PROMUSDT (PnL: +4.63%, Net: $+0.19 Fase 5)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 54.78,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 07:18:30",
+      "account_id": "SIM-001",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "DOGEUSDT",
+      "side": "LONG",
+      "entry_price": 0.08644,
+      "exit_price": 0.09185,
+      "pnl_usd": 0.68,
+      "result": "WIN",
+      "notes": "WIN on DOGEUSDT (PnL: +6.26%, Net: $+0.68 Fase 5)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 47.21,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 07:18:30",
+      "account_id": "SIM-002",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "DOGEUSDT",
+      "side": "LONG",
+      "entry_price": 0.08644,
+      "exit_price": 0.09185,
+      "pnl_usd": 0.67,
+      "result": "WIN",
+      "notes": "WIN on DOGEUSDT (PnL: +6.26%, Net: $+0.67 Fase 5)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 47.21,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 07:18:30",
+      "account_id": "SIM-003",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "DOGEUSDT",
+      "side": "LONG",
+      "entry_price": 0.08644,
+      "exit_price": 0.09185,
+      "pnl_usd": 0.73,
+      "result": "WIN",
+      "notes": "WIN on DOGEUSDT (PnL: +6.26%, Net: $+0.73 Fase 5)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 47.21,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 07:18:30",
+      "account_id": "SIM-005",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "PROMUSDT",
+      "side": "LONG",
+      "entry_price": 2.658,
+      "exit_price": 2.781,
+      "pnl_usd": 0.68,
+      "result": "WIN",
+      "notes": "WIN on PROMUSDT (PnL: +4.63%, Net: $+0.68 Fase 5)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 54.78,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 07:18:30",
+      "account_id": "SIM-006",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "PROMUSDT",
+      "side": "LONG",
+      "entry_price": 2.658,
+      "exit_price": 2.781,
+      "pnl_usd": 0.68,
+      "result": "WIN",
+      "notes": "WIN on PROMUSDT (PnL: +4.63%, Net: $+0.68 Fase 5)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 54.78,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 07:18:30",
+      "account_id": "SIM-007",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "PROMUSDT",
+      "side": "LONG",
+      "entry_price": 2.658,
+      "exit_price": 2.781,
+      "pnl_usd": 0.66,
+      "result": "WIN",
+      "notes": "WIN on PROMUSDT (PnL: +4.63%, Net: $+0.66 Fase 5)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 54.78,
         "macro_trend_4h": "NEUTRAL"
       }
     }
