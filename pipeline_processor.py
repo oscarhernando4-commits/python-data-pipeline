@@ -174,10 +174,21 @@ def run_infinite_trading_matrix_cycle():
     
     import strategy_engine
     import fundamental_sentinel
+    import api_connector
     
     matrix = load_live_matrix()
     accounts = matrix["accounts"]
     
+    # 🎯 FAST-TRACK INSTITUCIONAL: Si la cuenta real ya tiene una posición abierta,
+    # CANCELAR el escaneo pesado de 120 pares y Gemini para dedicar el 100% de recursos al Heartbeat 1s.
+    real_st_pre = api_connector.load_real_account_state()
+    active_pos_pre = real_st_pre.get("position")
+    if active_pos_pre and active_pos_pre.get("symbol"):
+        print(f"\n🛡️ [SÚPER-CEREBRO EN GESTIÓN 100% EXCLUSIVA] Posición activa en {active_pos_pre.get('symbol')}.")
+        print("⚡ Escaneo de 120 pares y consultas a Gemini PAUSADOS para enfocar el 100% de CPU en el Heartbeat 1s.")
+        api_connector.evaluate_and_trade_real_money([], {}, 50)
+        return
+
     symbol_analysis_map = {}
     # Cache fundamental sentinel ONCE per cycle (prevents 100 redundant HTTP calls)
     cached_fundamental_report = fundamental_sentinel.get_crypto_fundamental_sentinel()
