@@ -971,6 +971,15 @@ def analyze_multi_timeframe_candles(symbol):
     elasticity_score = round(atr_pct_15m * (vol_acceleration if 'vol_acceleration' in locals() else 1.0) * (1.5 if is_obv_accumulating else 1.0), 3)
     if atr_pct_15m >= 0.40 and is_obv_accumulating:
         multi_tf_score += 10 # High-beta explosive elasticity bonus
+
+    # 🧬 PATRONES CUÁNTICOS DE ADN FRACTAL (Arquetipo DCR/USDT: Ruptura Macro + Retesteo MA25 + Compresión 1M)
+    spring_coiling_info = asset_dna_predictive_engine.detect_spring_coiling_compression(klines_1m)
+    wave2_retest_info = asset_dna_predictive_engine.detect_wave2_ma25_retest_support(klines_15m)
+    
+    if spring_coiling_info.get("is_spring_compressed"):
+        multi_tf_score += spring_coiling_info.get("spring_bonus", 15)  # 🚀 Resorte comprimido 1M listo para Ola 3
+    if wave2_retest_info.get("is_wave2_retest"):
+        multi_tf_score += wave2_retest_info.get("retest_bonus", 20)    # 💎 Retesteo de oro Ola 2 apoyado en MA25
         
     multi_tf_score = min(100, multi_tf_score)  # Re-cap at 100 after bonuses
     
@@ -1361,6 +1370,8 @@ def analyze_multi_timeframe_candles(symbol):
             fii_score=fii_score
         ),
         "elasticity_score": elasticity_score,
+        "spring_coiling": spring_coiling_info,
+        "wave2_retest": wave2_retest_info,
         "dist_from_15m_ma7_pct": dist_from_15m_ma7_pct,
         "dist_from_1m_ema9_pct": dist_from_1m_ema9_pct,
         "is_1m_sniper_pullback": is_1m_sniper_pullback,

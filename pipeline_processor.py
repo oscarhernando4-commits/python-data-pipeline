@@ -986,16 +986,15 @@ def sync_live_matrix_obsidian(matrix):
         import api_connector
         real_st = api_connector.load_real_account_state()
         
-        # SMART PROXY SAVER: Adaptive based on execution mode
-        # 🌐 ESTRATEGIA FIXIE ULTRA-EFICIENTE (Event-Driven Zero-Polling):
-        # LOCAL: Sincroniza cada ciclo (conexión directa sin costo de proxy).
-        # NUBE (Fixie): CERO consultas periódicas (0 requests/hora).
-        # Únicamente consulta al INICIO (si no hay cache) o por EVENTO (al COMPRAR o VENDER).
+        # 🌐 BILLETERA EN VIVO: Sincroniza en cada ciclo de 2 minutos distribuyendo entre las 100 cuentas Fixie
+        # Consumo: 7.2 req/día por cuenta (usamos solo 216 de las 500 mensuales -> 56.8% de margen libre)
         is_local_mode = api_connector.get_execution_mode() == "local"
-        # 🌐 BILLETERA EN VIVO: Consulta siempre el estado real de Binance para CERO desincronizaciones
-        mode_label = "LOCAL DIRECTO" if is_local_mode else "NUBE AUTO-SYNC"
+        mode_label = "LOCAL DIRECTO" if is_local_mode else "NUBE 100-PROXIES"
         print(f"🔄 [SYNC {mode_label}] Sincronizando balance Spot desde Binance API...")
         real_st = api_connector.diagnose_full_spot_wallet()
+        real_st["_last_wallet_sync_ts"] = time.time()
+        api_connector.save_real_account_state(real_st)
+            
         real_total_val = real_st.get("_cached_total_val", real_st.get("current_balance_usd", 0.0))
         real_usdt_free = real_st.get("_cached_usdt_free", 0.0)
         real_bnb = real_st.get("_cached_bnb", 0.0)

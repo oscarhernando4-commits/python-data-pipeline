@@ -468,8 +468,12 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         xray_alpha = xray.get("alpha_vs_btc_15m_pct", 0.0)
         xray_wick = xray.get("lower_wick_absorption_1m_pct", 0.0)
         xray_chan = xray.get("fractal_channel_pct", {})
+        spring_info = mtf.get("spring_coiling", {})
+        wave2_info = mtf.get("wave2_retest", {})
 
         candidates_prompt_text += f"- 🔬 RADIOGRAFÍA 360° ADN: {xray_behav} | {xray_advice}\n"
+        if spring_info.get("is_spring_compressed") or wave2_info.get("is_wave2_retest"):
+            candidates_prompt_text += f"- 🧬 PATRÓN FRACTAL DCR: {spring_info.get('label', 'Normal')} | {wave2_info.get('label', 'Estándar')}\n"
         candidates_prompt_text += f"- 📊 CANAL FRACTAL (% Suelo a Cima): 1M={xray_chan.get('1m', c1m)}% | 5M={xray_chan.get('5m', c5m)}% | 15M={xray_chan.get('15m', c15m)}% | 1H={xray_chan.get('1h', c1h)}% | 4H={xray_chan.get('4h', c4h)}% | 1D={xray_chan.get('1d', c1d)}%\n"
         candidates_prompt_text += f"- ⚡ ALPHA & ABSORCIÓN: Alpha vs BTC={xray_alpha:+.2f}% | Mecha Absorción 1M={xray_wick:.1f}%\n"
         candidates_prompt_text += f"- 🔮 Radar Predictivo Multi-Horizonte: {pred_label} | Prob. Pump={pump_prob}% | Riesgo Dump={dump_risk}%\n"
@@ -534,6 +538,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     
     PASO 1 🔬 LECTURA DE LA RADIOGRAFÍA 360° Y CANAL FRACTAL:
     - Revisa la RADIOGRAFÍA 360° ADN y el CANAL FRACTAL (% Suelo a Cima).
+    - 💎 ARQUETIPO DCR / OLA 2 GOLDEN RETEST: Si un activo muestra "PATRÓN FRACTAL DCR" (Retesteo de Oro Ola 2 en MA25 o Resorte Comprimido 1M), dale MÁXIMA PRIORIDAD de compra porque ofrece el ratio Riesgo/Beneficio más asimétrico del mercado (>3:1).
     - ZONA ÓPTIMA DE COMPRA (Sweet-Spot): Prioriza activos en la BASE o Pullback Constructivo (1H <= 55%, 15M <= 55%, 1M <= 50%).
     - ALPHA & ABSORCIÓN: Premia fuertemente activos con Alpha vs BTC > +0.20% y Mecha de Absorción 1M >= 15% (compradores comprando el dip).
     - 🚫 VETO TOTAL CIMA / TECHO: PROHIBIDO comprar si Canal 1H >= 75% o si está a menos de 0.40% del Máximo 24H.

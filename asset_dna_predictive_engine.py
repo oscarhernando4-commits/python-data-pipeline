@@ -481,6 +481,96 @@ def analyze_multi_horizon_predictive_dna(
         "recommended_trailing_slack_pct": recommended_trailing_slack
     }
 
+def detect_spring_coiling_compression(klines_1m: List[Any], klines_2m: List[Any] = None) -> Dict[str, Any]:
+    """
+    ⚡ DETECTOR DE COMPRESIÓN DE RESORTE (SPRING COILING) EN MICRO-TIMEFRAMES (1M / 2M):
+    Inspirado en la anatomía fractal de DCR/USDT:
+    Cuando MA7, MA25 y MA99 en 1m o 2m convergen en un rango estrecho (distancia <= 0.35%),
+    la volatilidad se comprime al máximo antes del estallido de la Ola 3.
+    """
+    if not klines_1m or len(klines_1m) < 25:
+        return {"is_spring_compressed": False, "spread_pct": 1.0, "spring_bonus": 0, "label": "Normal"}
+    
+    closes_1m = [float(k[4]) for k in klines_1m]
+    ma7_1m = sum(closes_1m[-7:]) / 7.0
+    ma25_1m = sum(closes_1m[-25:]) / 25.0
+    ma99_1m = sum(closes_1m[-99:]) / 99.0 if len(closes_1m) >= 99 else ma25_1m
+    
+    # Measure spread between MA7 and MA25
+    spread_7_25 = abs(ma7_1m - ma25_1m) / ma25_1m * 100.0 if ma25_1m > 0 else 1.0
+    spread_25_99 = abs(ma25_1m - ma99_1m) / ma99_1m * 100.0 if ma99_1m > 0 else 1.0
+    
+    is_tight_squeeze = spread_7_25 <= 0.35
+    is_full_squeeze = spread_7_25 <= 0.35 and spread_25_99 <= 0.85
+    
+    # Check if price is above MA25/MA99 floor
+    c_now = closes_1m[-1]
+    is_bullish_aligned = c_now >= ma25_1m * 0.998
+    
+    if is_full_squeeze and is_bullish_aligned:
+        return {
+            "is_spring_compressed": True,
+            "spread_pct": round(spread_7_25, 2),
+            "spring_bonus": 25,
+            "label": "🚀 RESORTE COMPRIMIDO TOTAL (MA7 ≈ MA25 ≈ MA99 en 1M)"
+        }
+    elif is_tight_squeeze and is_bullish_aligned:
+        return {
+            "is_spring_compressed": True,
+            "spread_pct": round(spread_7_25, 2),
+            "spring_bonus": 15,
+            "label": "⚡ COMPRESIÓN ACTIVA (MA7 ≈ MA25 en 1M)"
+        }
+    
+    return {"is_spring_compressed": False, "spread_pct": round(spread_7_25, 2), "spring_bonus": 0, "label": "Disperso"}
+
+
+def detect_wave2_ma25_retest_support(klines_15m: List[Any]) -> Dict[str, Any]:
+    """
+    💎 DETECTOR DE RETESTEO SANO A LA MA25 EN OLA 2 (ARQUETIPO DCR/USDT):
+    Identifica activos que tuvieron una expansión inicial (Ola 1), retrocedieron ordenadamente
+    y ahora se apoyan con firmeza sobre la MA25 de 15m/30m sin perforarla.
+    Punto de entrada con máximo ratio Beneficio/Riesgo (R:R > 3:1).
+    """
+    if not klines_15m or len(klines_15m) < 25:
+        return {"is_wave2_retest": False, "dist_to_ma25_pct": 1.0, "retest_bonus": 0, "label": "Sin retesteo"}
+    
+    closes_15m = [float(k[4]) for k in klines_15m]
+    highs_15m = [float(k[2]) for k in klines_15m]
+    
+    ma25_15m = sum(closes_15m[-25:]) / 25.0
+    ma99_15m = sum(closes_15m[-99:]) / 99.0 if len(closes_15m) >= 99 else ma25_15m * 0.95
+    c_now = closes_15m[-1]
+    
+    # 1. Check if there was an expansion wave in recent 20 candles
+    recent_peak = max(highs_15m[-20:])
+    peak_expansion_pct = ((recent_peak - ma25_15m) / ma25_15m) * 100.0 if ma25_15m > 0 else 0.0
+    had_prior_expansion = peak_expansion_pct >= 3.0  # Impulso previo >= +3.0%
+    
+    # 2. Check if price is currently resting on MA25 (within -0.5% to +1.2%)
+    dist_to_ma25 = ((c_now - ma25_15m) / ma25_15m) * 100.0 if ma25_15m > 0 else 0.0
+    is_resting_on_ma25 = -0.6 <= dist_to_ma25 <= 1.3
+    
+    # 3. Check if MA25 is above MA99 (Macro Bullish Structure)
+    is_macro_bullish = ma25_15m > ma99_15m
+    
+    if had_prior_expansion and is_resting_on_ma25 and is_macro_bullish:
+        return {
+            "is_wave2_retest": True,
+            "peak_expansion_pct": round(peak_expansion_pct, 2),
+            "dist_to_ma25_pct": round(dist_to_ma25, 2),
+            "retest_bonus": 25,
+            "label": f"💎 RETESTEO DE ORO OLA 2 (Pico previo +{peak_expansion_pct:.1f}% | Apoyo en MA25 a {dist_to_ma25:+.2f}%)"
+        }
+    
+    return {
+        "is_wave2_retest": False,
+        "peak_expansion_pct": round(peak_expansion_pct, 2),
+        "dist_to_ma25_pct": round(dist_to_ma25, 2),
+        "retest_bonus": 0,
+        "label": "Estructura Estándar"
+    }
+
 def calculate_asset_behavioral_xray(
     symbol: str,
     klines_multi_tf: Dict[str, List[Any]],
@@ -546,8 +636,18 @@ def calculate_asset_behavioral_xray(
             atr = sum(trs[-14:]) / min(len(trs), 14)
             atr_pct_15m = round((atr / closes_15m[-1]) * 100.0, 3) if closes_15m[-1] > 0 else 0.30
 
-    # Dynamic Behavioral Categorization
-    if atr_pct_15m < 0.25:
+    # DCR Fractal Patterns: Spring Coiling & Wave 2 MA25 Retest
+    spring_res = detect_spring_coiling_compression(klines_1m)
+    wave2_res = detect_wave2_ma25_retest_support(klines_15m)
+
+    # Dynamic Behavioral Categorization (Enriched with DCR Multi-Timeframe Patterns)
+    if wave2_res.get("is_wave2_retest"):
+        behavior_type = "PULLBACK_INSTITUCIONAL_ELITE (Retesteo MA25 Ola 2)"
+        timing_advice = "💎 Setup A+ (Arquetipo DCR): Soporte firme en MA25 tras rotura macro. R:R óptimo > 3:1."
+    elif spring_res.get("is_spring_compressed"):
+        behavior_type = "RESORTE_COMPRIMIDO (Spring Coiling 1M)"
+        timing_advice = "🚀 Setup A+ (Arquetipo DCR): Medias comprimidas en micro-base. Disparo de Ola 3 inminente."
+    elif atr_pct_15m < 0.25:
         behavior_type = "ZOMBI_LENTO (Baja Volatilidad)"
         timing_advice = "⛔ Evitar: Rango insuficiente para scalping."
     elif atr_pct_15m >= 0.70 or pos_1m > 80:
@@ -563,6 +663,8 @@ def calculate_asset_behavioral_xray(
     return {
         "behavior_type": behavior_type,
         "timing_advice": timing_advice,
+        "spring_coiling": spring_res,
+        "wave2_retest": wave2_res,
         "fractal_channel_pct": {
             "1m": pos_1m, "5m": pos_5m, "15m": pos_15m,
             "1h": pos_1h, "4h": pos_4h, "1d": pos_1d
