@@ -1,13 +1,8 @@
 {
   "initial_deposit_usdt": 15.47,
   "initial_total_usd": 20.07,
-<<<<<<< Updated upstream
-  "current_balance_usd": 15.3,
-  "net_pnl_usd": -0.17,
-=======
   "current_balance_usd": 15.33,
   "net_pnl_usd": -0.14,
->>>>>>> Stashed changes
   "wins": 2,
   "losses": 2,
   "trades_count": 4,
@@ -15,53 +10,19 @@
   "daily_losses": 2,
   "position": {
     "symbol": "KAIAUSDT",
-<<<<<<< Updated upstream
-    "entry_price": 0.0315,
-=======
     "quantity": 479.3,
     "entry_price": 0.0315,
-    "highest_price": 0.0315,
->>>>>>> Stashed changes
-    "cost_usd": 15.1,
-    "side": "LONG",
-    "quantity": 479.3,
-    "break_even": false,
-<<<<<<< Updated upstream
     "highest_price": 0.0316,
+    "cost_usd": 15.15,
+    "side": "LONG",
     "phase": 1,
-    "archetype": "HYPER_VOLATILE_SPRINT",
-    "archetype_label": "🐆 SPRINT HIPER-VOLÁTIL (Meme / High-Beta)",
-    "initial_sl_pct": -1.15,
-    "max_stagnation_minutes": 25,
-    "vol_surge": 4.92,
-    "entry_time_ms": 1787437506532,
-    "atr_pct_15m": 1.046,
-    "ma25_5m": 0.030804,
-    "dna_tier": "HIGH_BETA_RUNNER",
-    "optimal_trailing_slack_pct": 1.36,
-    "target_resistance_price": 0.0347,
-    "pump_probability_pct": 35,
-    "holding_cycles": 2,
-    "volatility_regime": "🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (🐆 Cima +0.32% | SL Defensivo -1.15%)"
-  },
-  "last_trade_time": "26-08-22<br>22:24",
-  "status": "🔵 En Vivo LONG (KAIAUSDT @ $0.0315)",
-  "_cached_total_val": 15.3,
-  "_cached_usdt_free": 0.0,
-  "_cached_bnb": 0.00016824,
-  "_cached_bnb_usd": 0.12,
-  "_last_closed_symbol": "NEXOUSDT",
-  "_last_closed_time": 1787434966.3408363,
-  "_last_exit_price": 0.819,
-  "_last_wallet_sync_ts": 1787437499.46297
-=======
+    "break_even": false,
     "entry_time_ms": 1787438340676
   },
-  "last_trade_time": "26-08-22<br>16:06",
-  "status": "🔵 En Vivo LONG (KAIAUSDT @ $0.0315)",
+  "last_trade_time": "26-08-22<br>17:38",
+  "status": "\ud83d\udd35 En Vivo LONG (KAIAUSDT @ .0315)",
   "_cached_total_val": 15.33,
   "_cached_usdt_free": 0.0828,
-  "_cached_bnb": 0.00015225,
+  "_cached_bnb": 0.000152,
   "_cached_bnb_usd": 0.11
->>>>>>> Stashed changes
 }
