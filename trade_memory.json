@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2490,
-    "wins": 1289,
+    "total_trades": 2492,
+    "wins": 1291,
     "losses": 1201,
-    "win_rate_pct": 51.77,
-    "total_pnl_usd": -8056.202033451208
+    "win_rate_pct": 51.81,
+    "total_pnl_usd": -8050.512033451208
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,40 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 06:47:29",
-      "account_id": "SIM-006",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "SUIUSDT",
-      "side": "LONG",
-      "entry_price": 0.7484,
-      "exit_price": 0.7697,
-      "pnl_usd": 0.41,
-      "result": "WIN",
-      "notes": "WIN on SUIUSDT (PnL: +2.85%, Net: $+0.41 Fase 4)",
-      "context": {
-        "score": 41,
-        "rsi_15m": 73.6,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-21 06:47:29",
-      "account_id": "SIM-011",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "SUIUSDT",
-      "side": "LONG",
-      "entry_price": 0.7484,
-      "exit_price": 0.7697,
-      "pnl_usd": 0.38,
-      "result": "WIN",
-      "notes": "WIN on SUIUSDT (PnL: +2.85%, Net: $+0.38 Fase 4)",
-      "context": {
-        "score": 41,
-        "rsi_15m": 73.6,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 06:51:32",
       "account_id": "SIM-045",
@@ -8470,6 +8436,40 @@
       "context": {
         "score": 79,
         "rsi_15m": 78.35,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 01:48:49",
+      "account_id": "SIM-054",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ORDIUSDT",
+      "side": "LONG",
+      "entry_price": 4.363,
+      "exit_price": 4.64,
+      "pnl_usd": 1.13,
+      "result": "WIN",
+      "notes": "WIN on ORDIUSDT (PnL: +6.35%, Net: $+1.13 Fase 5)",
+      "context": {
+        "score": 77,
+        "rsi_15m": 64.15,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 01:48:49",
+      "account_id": "SIM-060",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ORDIUSDT",
+      "side": "LONG",
+      "entry_price": 4.363,
+      "exit_price": 4.64,
+      "pnl_usd": 4.56,
+      "result": "WIN",
+      "notes": "WIN on ORDIUSDT (PnL: +6.35%, Net: $+4.56 Fase 5)",
+      "context": {
+        "score": 77,
+        "rsi_15m": 64.15,
         "macro_trend_4h": "NEUTRAL"
       }
     }
