@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 2448,
-    "wins": 1265,
+    "total_trades": 2449,
+    "wins": 1266,
     "losses": 1183,
-    "win_rate_pct": 51.67,
-    "total_pnl_usd": -8061.652175451209
+    "win_rate_pct": 51.69,
+    "total_pnl_usd": -8061.6421754512085
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LTCUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DOGEUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEARUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ORDIUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BNBUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ORDIUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on COMPUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEARUSDT)",
-      "BOOST SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SHIBUSDT)"
+      "BOOST SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SHIBUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on STXUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-21 03:55:34",
-      "account_id": "SIM-051",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "HEMIUSDT",
-      "side": "LONG",
-      "entry_price": 0.0116,
-      "exit_price": 0.01133,
-      "pnl_usd": -0.48,
-      "result": "LOSS",
-      "notes": "LOSS on HEMIUSDT (PnL: -2.33%, Net: $-0.48 Fase 1)",
-      "context": {
-        "score": 45,
-        "rsi_15m": 79.44,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-21 03:55:34",
       "account_id": "SIM-052",
@@ -8466,6 +8449,23 @@
       "context": {
         "score": 0,
         "rsi_15m": 57.43,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-22 00:01:19",
+      "account_id": "SIM-091",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "STXUSDT",
+      "side": "LONG",
+      "entry_price": 0.1879,
+      "exit_price": 0.1888,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on STXUSDT (PnL: +0.48%, Net: $+0.01 Fase 3)",
+      "context": {
+        "score": 92,
+        "rsi_15m": 66.69,
         "macro_trend_4h": "NEUTRAL"
       }
     }
