@@ -961,7 +961,8 @@ def sync_live_matrix_obsidian(matrix):
         has_cached_balance = (
             real_st.get("_cached_total_val") is not None and 
             real_st.get("_cached_total_val", 0) > 0 and
-            (real_st.get("position") is not None or real_st.get("_cached_usdt_free", 0) >= 5.0)
+            real_st.get("position") is None and
+            real_st.get("_cached_usdt_free", 0) >= 5.0
         )
         
         if is_local_mode or not has_cached_balance:
