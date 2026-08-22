@@ -461,7 +461,17 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         candidates_prompt_text += f"- Score: {score}/100 | MTF Score: {mtf.get('multi_tf_score', score)}/100 | FII (Inyección Suelo): {fii}/100\n"
         candidates_prompt_text += f"- 🏔️ ESTRUCTURA DE SUELO 15M: {floor_lbl} | Cascada Roja 15M={is_15m_casc}\n"
         candidates_prompt_text += f"- 🎯 GATILLO SNIPER 1M/5M: {sniper_lbl}\n"
-        candidates_prompt_text += f"- 🧬 ARQUETIPO ADN: {arch_lbl} (SL={arch_sl}%, MaxT={arch_tmax}m) | Guía: {arch_guide}\n"
+        # ── 🔬 RADIOGRAFÍA CONDUCTUAL HOLOGRÁFICA 360° DEL ACTIVO ──────────────
+        xray = mtf.get("behavioral_xray", {})
+        xray_behav = xray.get("behavior_type", "ROTACIÓN_ESTRUCTURAL")
+        xray_advice = xray.get("timing_advice", "")
+        xray_alpha = xray.get("alpha_vs_btc_15m_pct", 0.0)
+        xray_wick = xray.get("lower_wick_absorption_1m_pct", 0.0)
+        xray_chan = xray.get("fractal_channel_pct", {})
+
+        candidates_prompt_text += f"- 🔬 RADIOGRAFÍA 360° ADN: {xray_behav} | {xray_advice}\n"
+        candidates_prompt_text += f"- 📊 CANAL FRACTAL (% Suelo a Cima): 1M={xray_chan.get('1m', c1m)}% | 5M={xray_chan.get('5m', c5m)}% | 15M={xray_chan.get('15m', c15m)}% | 1H={xray_chan.get('1h', c1h)}% | 4H={xray_chan.get('4h', c4h)}% | 1D={xray_chan.get('1d', c1d)}%\n"
+        candidates_prompt_text += f"- ⚡ ALPHA & ABSORCIÓN: Alpha vs BTC={xray_alpha:+.2f}% | Mecha Absorción 1M={xray_wick:.1f}%\n"
         candidates_prompt_text += f"- 🔮 Radar Predictivo Multi-Horizonte: {pred_label} | Prob. Pump={pump_prob}% | Riesgo Dump={dump_risk}%\n"
         candidates_prompt_text += f"- 🚀 Catalizadores Activos: [{catalysts_str}] | Advertencias: [{warnings_str}]\n"
         candidates_prompt_text += f"- 🧬 Elasticidad Histórica: {dna_str}\n"
@@ -520,28 +530,27 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     CANDIDATOS FINALISTAS EVALUADOS (TABLA MULTI-MONEDA SIMULTÁNEA):
     {candidates_prompt_text}
 
-    🏛️ PROTOCOLO DINÁMICO DE DECISIÓN DEL SÚPER-CEREBRO EN 4 PASOS:
+    🏛️ PROTOCOLO DINÁMICO Y AUTO-ADAPTATIVO DEL SÚPER-CEREBRO EN 4 PASOS:
     
-    PASO 1 🏔️ EVALUACIÓN DE ESTRUCTURA Y MOMENTUM GANADOR:
-    - Evalúa el SCORE CUÁNTICO (>= 65-75), la confluencia multi-temporal y el volumen de cada candidato.
-    - ZONA GANADORA DE MOMENTUM: Prioriza candidatos con RSI 15M entre 42 y 65 (suelo con ignición compradora).
-    - 🚫 VETO TOTAL ANTI-CIMA / TECHO 1H (Canal 1H >= 75% o Distancia a Máximo 24H <= 0.40%): PROHIBIDO COMPRAR en techos. Solo compra en la BASE del canal.
-    - 🚫 VETO ACTIVOS ZOMBI / VOLATILIDAD BAJA (ATR 15M < 0.30%): PROHIBIDO COMPRAR activos lentos como TRX.
-    - VETO FAN TOKENS E ILÍQUIDOS (SANTOS, ALPINE, LAZIO, PORTO, BAR, CITY, PSG, OG, JUV, ATM, ASR): PROHIBIDO COMPRAR.
-    - VETO CUCHILLO CAYENDO: Si RSI 15M < 38 y no hay divergencia alcista ni rebote, recházalo.
+    PASO 1 🔬 LECTURA DE LA RADIOGRAFÍA 360° Y CANAL FRACTAL:
+    - Revisa la RADIOGRAFÍA 360° ADN y el CANAL FRACTAL (% Suelo a Cima).
+    - ZONA ÓPTIMA DE COMPRA (Sweet-Spot): Prioriza activos en la BASE o Pullback Constructivo (1H <= 55%, 15M <= 55%, 1M <= 50%).
+    - ALPHA & ABSORCIÓN: Premia fuertemente activos con Alpha vs BTC > +0.20% y Mecha de Absorción 1M >= 15% (compradores comprando el dip).
+    - 🚫 VETO TOTAL CIMA / TECHO: PROHIBIDO comprar si Canal 1H >= 75% o si está a menos de 0.40% del Máximo 24H.
+    - 🚫 VETO ZOMBI: Veta activos con ATR 15M < 0.30% (ej: TRX) o Fan Tokens ilíquidos.
     
-    PASO 2 ⏰ FILTRO MACROECONÓMICO Y VOLUMEN REAL:
-    - VETO BTC CRASH: Si BTC_GUARD muestra altcoin_impact=AVOID (BTC cayendo), HOLD obligatorio.
-    - PRIORIDAD: Tokens con Score >= 70, volumen real (> 0.50x), libro comprador (Bids >= 48%) y acumulación OBV.
+    PASO 2 ⏰ CONTEXTO MACRO Y DESACOPLAMIENTO INTELIGENTE:
+    - Si BTC está en caída libre (altcoin_impact=AVOID), HOLD general obligatorio.
+    - EXCEPCIÓN CUÁNTICA: Si un activo muestra desacoplamiento positivo masivo (Alpha vs BTC >= +1.0% con FII >= 75 y CVD > 60%), puede ser aprobado como líder de rotación.
     
-    PASO 3 ⚡ GESTIÓN DE RIESGO INTELIGENTE:
-    - Recuerda que la ESCALERA CUÁNTICA DE 5 FASES (+0.50% Break-Even, Trailing Stop dinámico y Stop Loss estricto de -2.0%) protegerá la posición de forma automática en Binance Spot.
-    - Por lo tanto, si el activo #1 tiene fuerza, tendencia y volumen, SÉ DECISIVO Y APRUÉBALO.
+    PASO 3 ⚡ GESTIÓN DE RIESGO ASIMÉTRICO (SL -0.95% + WICK SNIPER):
+    - Recuerda que el sistema cuenta con Stop Loss Estricto de -0.95% y Wick Sniper de toma de ganancias rápida.
+    - Por lo tanto, no seas ultra-rígido: si el activo #1 está en una buena base fractal con volumen fresco, SÉ ÁGIL, DINÁMICO Y DECISIVO.
     
-    PASO 4 👑 SELECCIÓN DEL CAMPEÓN #1 Y APROBACIÓN EJECUTIVA:
+    PASO 4 👑 SELECCIÓN DEL CAMPEÓN #1 Y VEREDICTO EJECUTIVO:
     - Compara a los finalistas y selecciona al MEJOR ACTIVO DE TODO EL MERCADO.
-    - Si el mejor candidato tiene Score >= 65, RSI saludable (45-75), y no está en crash ni en un clímax extremo, EMITE TU VEREDICTO CON "BUY_LONG", approved: true, confidence: 85-95.
-    - Si todo el mercado está en crash de BTC o todos los candidatos son fan tokens, responde "selected_symbol": "NONE", "action": "HOLD".
+    - Si el campeón tiene Score >= 65, RSI saludable (40-70), base fractal sólida y libre de techos, EMITE TU VEREDICTO CON "BUY_LONG", approved: true, confidence: 85-95.
+    - Si todo el mercado está en pánico o no hay ningún candidato viable, responde "selected_symbol": "NONE", "action": "HOLD".
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA (7 AGENTES):
     {{

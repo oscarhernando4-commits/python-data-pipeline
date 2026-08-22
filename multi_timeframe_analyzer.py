@@ -1395,6 +1395,15 @@ def analyze_multi_timeframe_candles(symbol):
         "funding_rate_dna": _get_funding_safe(symbol),
         "sector_heat_dna": asset_dna_predictive_engine.get_sector_heat(symbol, fii_score),
         "anti_reentry_check": asset_dna_predictive_engine.check_already_traded_today(symbol),
+        # ─── RADIOGRAFÍA CONDUCTUAL HOLOGRÁFICA 360° DEL ACTIVO ───
+        "behavioral_xray": asset_dna_predictive_engine.calculate_asset_behavioral_xray(
+            symbol=symbol,
+            klines_multi_tf={
+                "1m": klines_1m, "5m": klines_5m, "15m": klines_15m,
+                "1h": klines_1h, "4h": klines_4h, "1d": klines_1d
+            },
+            btc_15m_closes=btc_closes
+        ),
     }
 
 if __name__ == "__main__":
