@@ -79,8 +79,8 @@ def run_git_push_sync(cycle_num: int, total_cycles: int = 240):
             msg = f"chore: live sync [Cycle {cycle_num}/{total_cycles}] [{now_utc}]"
             subprocess.run(["git", "commit", "-m", msg], check=False)
             
-        # Smooth rebase without unstaged noise
-        subprocess.run(["git", "pull", "--no-rebase", "-X", "ours", "origin", "main"], capture_output=True, text=True)
+        # Smooth merge preferring origin updates
+        subprocess.run(["git", "pull", "--no-rebase", "-X", "theirs", "origin", "main"], capture_output=True, text=True)
         
         for attempt in range(2):
             res = subprocess.run(["git", "push", "origin", "main"], capture_output=True, text=True)
@@ -88,7 +88,7 @@ def run_git_push_sync(cycle_num: int, total_cycles: int = 240):
                 print(f"✅ [Cycle {cycle_num}] Git sync pushed.", flush=True)
                 break
             else:
-                subprocess.run(["git", "pull", "--no-rebase", "-X", "ours", "origin", "main"], capture_output=True, text=True)
+                subprocess.run(["git", "pull", "--no-rebase", "-X", "theirs", "origin", "main"], capture_output=True, text=True)
                 time.sleep(1)
     except Exception as e:
         print(f"⚠️ [Cycle {cycle_num}] Git sync note: {e}", flush=True)
