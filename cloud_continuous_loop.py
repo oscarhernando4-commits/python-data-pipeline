@@ -57,8 +57,51 @@ def sleep_with_micro_heartbeat(sleep_secs: int):
                 print(f"💓 [HEARTBEAT 1s | T+{tick_count}s] {hb['symbol']} @ {p_fmt} | PnL: {pnl_sign}{hb['pnl_pct']:.2f}% (Pico: +{hb.get('highest_pnl', 0):.2f}% | Fase {hb.get('phase', 1)})", flush=True)
             elif tick_count % 15 == 0:
                 print(f"📡 [RADAR 1s | T+{tick_count}s/{sleep_secs}s] Monitoreo activo de 120 pares en espera de la siguiente señal...", flush=True)
-        except Exception:
-            pass
+def run_focused_position_guardian(max_duration_secs: int = 14400):
+    """
+    🎯 GUARDIÁN SNIPER DEDICADO AL 100% (Modo Cero Latencia / 1s Heartbeat):
+    Cuando hay una posición real abierta en Binance Spot:
+    1. Cancela el 100% de los escaneos de 120 pares y consultas AI a Gemini (ahorra cuota y CPU).
+    2. Dedica el 100% de la CPU al Heartbeat de 1 segundo (T+1s, T+2s, T+3s...).
+    3. Vigila segundo a segundo el PnL, Trailing Stop y Wick Sniper.
+    4. En cuanto la posición se cierra (Take Profit o Stop Loss), sincroniza balance en Binance
+       y DEVUELVE el control instantáneamente al radar para el siguiente escaneo.
+    """
+    import api_connector
+    print("\n" + "=" * 70, flush=True)
+    print("🛡️ [MODO GUARDIÁN SNIPER 100% DEDICADO ACTIVADO]", flush=True)
+    print("⚡ Escaneos de 120 pares y Gemini AI PAUSADOS para enfocar el 100% de recursos.")
+    print("💓 Monitoreo en vivo SUB-SEGUNDO (1s) para cosechar la cima o ejecutar SL.", flush=True)
+    print("=" * 70 + "\n", flush=True)
+    
+    start_t = time.time()
+    tick = 0
+    while time.time() - start_t < max_duration_secs:
+        tick += 1
+        time.sleep(1.0)
+        
+        try:
+            hb = api_connector.quick_position_heartbeat()
+            if not hb or not isinstance(hb, dict) or not hb.get("symbol"):
+                # La posición se ha cerrado
+                print(f"\n🎯 [OPERACIÓN FINALIZADA TRAS {tick}s] Salida ejecutada con éxito.", flush=True)
+                print("🔄 Sincronizando billetera y reactivando Radar Cuántico de 120 Pares...\n", flush=True)
+                try:
+                    api_connector.diagnose_full_spot_wallet()
+                except Exception:
+                    pass
+                break
+            
+            p_fmt = f"${hb['price']:.5f}" if hb['price'] < 0.05 else f"${hb['price']:.4f}"
+            pnl_sign = "+" if hb['pnl_pct'] >= 0 else ""
+            print(f"💓 [HEARTBEAT 1s | T+{tick}s] {hb['symbol']} @ {p_fmt} | PnL: {pnl_sign}{hb['pnl_pct']:.2f}% (Pico: +{hb.get('highest_pnl', 0):.2f}% | Fase {hb.get('phase', 1)})", flush=True)
+            
+            # Sincronización periódica ligera de estado a git cada 300s (5m) para respaldar en GitHub
+            if tick % 300 == 0:
+                run_git_push_sync(1, 1)
+        except Exception as e:
+            print(f"⚠️ Nota en Heartbeat Guardian: {e}", flush=True)
+            time.sleep(1.0)
 
 def run_git_push_sync(cycle_num: int, total_cycles: int = 240):
     """Safely commits and pushes state periodically to avoid CPU and disk thrashing."""
@@ -158,7 +201,7 @@ def main():
         except Exception as e:
             print(f"⚠️ Reload note: {e}", flush=True)
         
-        # Fast-Track: Si hay posición activa, omitir escaneos pesados de CMC/120 pares para CERO latencia
+        # 🎯 FAST-TRACK: Si hay posición activa, ENFOCAR EL 100% DE RECURSOS EN EL GUARDIÁN 1S
         has_active_real_pos = False
         try:
             st_check = api_connector.load_real_account_state()
@@ -166,15 +209,20 @@ def main():
         except Exception:
             pass
 
-        # Step 1: Update market universe SOLO si estamos buscando entrada (ahorra 100% de tiempo cuando hay trade abierto)
-        if not has_active_real_pos:
-            try:
-                if hasattr(data_fetcher, 'fetch_top_100_pairs'):
-                    data_fetcher.fetch_top_100_pairs()
-                elif hasattr(data_fetcher, 'update_top_pairs'):
-                    data_fetcher.update_top_pairs()
-            except Exception as e:
-                print(f"⚠️ Error actualizando pares (Ciclo {cycle}): {e}", flush=True)
+        if has_active_real_pos:
+            # Cancela escaneos pesados de 120 pares y Gemini; corre el Guardián 1s exclusivo hasta la salida
+            run_focused_position_guardian()
+            run_git_push_sync(cycle, total_cycles)
+            continue
+
+        # Step 1: Update market universe SOLO cuando estamos buscando entrada
+        try:
+            if hasattr(data_fetcher, 'fetch_top_100_pairs'):
+                data_fetcher.fetch_top_100_pairs()
+            elif hasattr(data_fetcher, 'update_top_pairs'):
+                data_fetcher.update_top_pairs()
+        except Exception as e:
+            print(f"⚠️ Error actualizando pares (Ciclo {cycle}): {e}", flush=True)
             
         # Step 2: Run institutional trading matrix & AI execution (Streamlined)
         try:
