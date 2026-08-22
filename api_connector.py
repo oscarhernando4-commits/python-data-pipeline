@@ -930,6 +930,7 @@ def quick_position_heartbeat():
     Instantly updates highest_price, unlocks phases, and triggers emergency SL/TP.
     """
     try:
+        import adaptive_asset_dna
         state = load_real_account_state()
         pos = state.get("position")
         if not pos or not pos.get("symbol"):
@@ -958,6 +959,7 @@ def quick_position_heartbeat():
         ma25_5m = pos.get("ma25_5m", 0.0)
         holding_cycles_hb = pos.get("holding_cycles", 0)
         custom_slack = float(pos.get("optimal_trailing_slack_pct", 0.65))
+        arch_dna = pos.get("archetype_dna", {}) or adaptive_asset_dna.get_asset_dna_archetype(sym, atr_15m_pct, current_price)
         
         # ═══════════════════════════════════════════════════════════════════════
         # 🎯 SISTEMA PROPORCIONAL DINÁMICO FRACTAL BASADO EN ADN DEL ACTIVO:
@@ -1067,7 +1069,9 @@ def quick_position_heartbeat():
             "highest_pnl": highest_pnl_pct,
             "phase": new_phase
         }
-    except Exception:
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
         return None
 
 def trunc_1d(val):
