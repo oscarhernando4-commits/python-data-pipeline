@@ -517,7 +517,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     Tu misión suprema es: EVALUAR EL ADN PREDICTIVO MULTI-HORIZONTE, IDENTIFICAR CATALIZADORES DE PUMP, VETAR RIESGOS DE DUMP Y APROBAR LA MONEDA #1.
 
     ESTRUCTURA DE LOS 7 AGENTES INSTITUCIONALES EN DELIBERACIÓN CUÁNTICA:
-    1. 🕵️ AGENTE 1 (Macro 1D & Guardián de Bitcoin): Evalúa el ciclo macro 1D ({wall_street_str}), Fear&Greed ({fear_greed.get('score')}), estabilidad de BTC (BTC Guard). VETA si altcoin_impact=AVOID o si BTC cae con fuerza.
+    1. 🕵️ AGENTE 1 (Macro 1D & Guardián de Bitcoin): Evalúa el Semáforo Macro ({macro_context}), Wall Street ({wall_street_str}), Fear&Greed ({fear_greed.get('score')}), y estabilidad de BTC (BTC Guard). VETA categóricamente si el Semáforo es DEFENSIVO, altcoin_impact=AVOID o si BTC está en cascada roja.
     2. 📊 AGENTE 2 (Sniper de Suelo 2M & Elasticidad High-Beta): Exige entrada en el PISO de 2 Minutos (RSI 2M <= 52.0 y soporte activo) y Alta Elasticidad (ATR 15M >= 0.45%). VETA categóricamente entradas tardías donde el rebote de 2M ya ocurrió (RSI 2M >= 54.0) o tokens lentos con ATR < 0.40%.
     3. 🌊 AGENTE 3 (Auditor de Libro, CVD & Squeeze Micro): Exige Bids >= 46%, Muro comprador > $15k USDT, CVD Taker positivo/neutral y OBV != DISTRIBUTING. VETA si OBV=DISTRIBUTING o si Muro Bids < $15k USDT (libro delgado / spoofing).
     4. 🧩 AGENTE 4 (Analista Sectorial & Temporal): Prioriza sector líder ({sector_summary['top_sector']}) y valida la SESION TEMPORAL. VETO si VETO_TEMPORAL o BLACKOUT con multiplicador < 0.60.
@@ -527,7 +527,8 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
     {exec_learning_summary}
 
-    CONTEXTO DE MERCADO ACTUAL:
+    CONTEXTO DE MERCADO ACTUAL (MATRIZ MACRO CUÁNTICA):
+    - {macro_context}
     - Wall Street: {wall_street_str} | Sector Líder: {sector_summary['top_sector']}
     - Fear & Greed: {fear_greed.get('score')} ({fear_greed.get('sentiment')})
     - Noticias: {json.dumps(news_data.get('headlines', [])[:2])}

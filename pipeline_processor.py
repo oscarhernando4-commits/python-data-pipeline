@@ -436,11 +436,12 @@ def run_infinite_trading_matrix_cycle():
                 if s_news:
                     specific_news_map[c_sym] = s_news
             
+            macro_summary = macro_ctx.get("summary_text", str(macro_ctx)) if isinstance(macro_ctx, dict) else str(macro_ctx)
             gemini_res = llm_router.review_top_candidates(
                 candidates_data_list=top_15_candidates,
                 news_data={"headlines": cached_fundamental_report.get("recent_headlines", []), "specific_news": specific_news_map},
                 fear_greed=cached_fundamental_report.get("fear_and_greed", {"score": 50, "sentiment": "Neutral"}),
-                macro_context=macro_ctx,
+                macro_context=macro_summary,
                 market_bias_ctx=bias_str
             )
             
