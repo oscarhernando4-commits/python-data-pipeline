@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3217,
+    "total_trades": 3220,
     "wins": 1701,
-    "losses": 1516,
-    "win_rate_pct": 52.88,
-    "total_pnl_usd": 6264.275076548794
+    "losses": 1519,
+    "win_rate_pct": 52.83,
+    "total_pnl_usd": 6168.275076548794
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COTIUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COTIUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BCHUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SEIUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TUTUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SHIBUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on DOTUSDT)",
-      "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on NEARUSDT)"
+      "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on NEARUSDT)",
+      "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ENSUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Won on JTOUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 08:52:30",
-      "account_id": "SIM-002",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "ZAMAUSDT",
-      "side": "LONG",
-      "entry_price": 0.05522,
-      "exit_price": 0.05322,
-      "pnl_usd": -0.43,
-      "result": "LOSS",
-      "notes": "LOSS on ZAMAUSDT (PnL: -3.62%, Net: $-0.43 Fase 1)",
-      "context": {
-        "score": 65,
-        "rsi_15m": 41.35,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 08:52:30",
-      "account_id": "SIM-003",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "ZAMAUSDT",
-      "side": "LONG",
-      "entry_price": 0.05522,
-      "exit_price": 0.05322,
-      "pnl_usd": -0.46,
-      "result": "LOSS",
-      "notes": "LOSS on ZAMAUSDT (PnL: -3.62%, Net: $-0.46 Fase 1)",
-      "context": {
-        "score": 65,
-        "rsi_15m": 41.35,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 08:54:31",
-      "account_id": "SIM-039",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "POLUSDT",
-      "side": "LONG",
-      "entry_price": 0.11621,
-      "exit_price": 0.11845,
-      "pnl_usd": 0.04,
-      "result": "WIN",
-      "notes": "WIN on POLUSDT (PnL: +1.93%, Net: $+0.04 Fase 4)",
-      "context": {
-        "score": 24,
-        "rsi_15m": 71.94,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 09:02:31",
       "account_id": "SIM-001",
@@ -8458,6 +8407,57 @@
       "context": {
         "score": 45,
         "rsi_15m": 38.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 06:02:58",
+      "account_id": "SIM-027",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ENSUSDT",
+      "side": "LONG",
+      "entry_price": 5.52,
+      "exit_price": 5.49,
+      "pnl_usd": -95.7,
+      "result": "LOSS",
+      "notes": "LOSS on ENSUSDT (PnL: -0.54%, Net: $-95.70 Fase 1)",
+      "context": {
+        "score": 40,
+        "rsi_15m": 38.03,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 06:02:58",
+      "account_id": "SIM-028",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ENSUSDT",
+      "side": "LONG",
+      "entry_price": 5.52,
+      "exit_price": 5.49,
+      "pnl_usd": -0.13,
+      "result": "LOSS",
+      "notes": "LOSS on ENSUSDT (PnL: -0.54%, Net: $-0.13 Fase 1)",
+      "context": {
+        "score": 40,
+        "rsi_15m": 38.03,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 06:02:58",
+      "account_id": "SIM-029",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "ENSUSDT",
+      "side": "LONG",
+      "entry_price": 5.52,
+      "exit_price": 5.49,
+      "pnl_usd": -0.17,
+      "result": "LOSS",
+      "notes": "LOSS on ENSUSDT (PnL: -0.54%, Net: $-0.17 Fase 1)",
+      "context": {
+        "score": 40,
+        "rsi_15m": 38.03,
         "macro_trend_4h": "NEUTRAL"
       }
     }
