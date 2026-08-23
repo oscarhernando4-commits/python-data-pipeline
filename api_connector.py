@@ -1761,16 +1761,24 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     break
                 continue
                 
-            # 🎯 VETO DE CENTRO DE CANAL 1M (Regla de Oro de Suelo Real):
-            # Prohibido entrar cuando el precio está en el CENTRO (42%-75%) del canal de 1M.
-            # Exige que el activo esté en el SUELO de 1 minuto (<= 40%), en rebote de suelo, o absorción con mecha inferior.
+            # 🎯 VETO DE CONFLUENCIA FRACTAL DE SUELO (1M + 2M + 5M + 15M + 30M + 1H):
+            # Prohibido entrar si el precio está en el centro o techo de 5M/15M/30M.
+            # Exige que el activo esté en el PISO SIMULTÁNEO en todas las escalas temporales.
             range_pos_1m = mtf_res.get("range_position_1m", 0.50)
-            is_1m_floor = mtf_res.get("is_1m_true_floor", False)
+            range_pos_2m = mtf_res.get("range_position_2m", 0.50)
+            range_pos_5m = mtf_res.get("range_position_5m", 0.50)
+            range_pos_15m = mtf_res.get("range_position_15m", 0.50)
+            range_pos_30m = mtf_res.get("range_position_30m", 0.50)
+            range_pos_1h = mtf_res.get("range_position_1h", 0.50)
+            is_confluent_floor = mtf_res.get("is_confluent_fractal_floor", False)
+            vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
+            vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
             
-            if not is_1m_floor and not (mtf_res.get("vol_surge_1m", 1.0) >= 2.5):
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Precio en el CENTRO del Canal 1M (Posición 1M={range_pos_1m*100:.0f}% > 40%).")
+            if not is_confluent_floor and not (vol_1m_now >= 3.0 or vol_15m_now >= 2.8):
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Falta de Suelo Fractal Confluente:")
+                print(f"     Canales: [1M: {range_pos_1m*100:.0f}% | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% | 15M: {range_pos_15m*100:.0f}% | 30M: {range_pos_30m*100:.0f}% | 1H: {range_pos_1h*100:.0f}%]")
                 if is_ai_top:
-                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro 1M Floor. NO se cascadea.")
+                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} no está en Suelo Confluente (1M/5M/15M). NO se cascadea.")
                     break
                 continue
                 
@@ -1813,15 +1821,18 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 
             # 7. Orderbook Depth & Micro-Surge Checks
             ob_info = orderbook_analyzer.fetch_orderbook_depth(cand_sym, limit=20)
-            if ob_info.get("spread_pct", 0.0) > 0.75:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Spread elevado ({ob_info.get('spread_pct'):.3f}% > 0.75%).")
+            spread_now = ob_info.get("spread_pct", 0.0)
+            bid_dom_now = ob_info.get("bid_dominance_pct", 50.0)
+            
+            if spread_now > 0.28:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Spread elevado ({spread_now:.3f}% > 0.28%).")
                 if is_ai_top:
                     print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro técnico (Spread alto). NO se cascadea.")
                     break
                 continue
                 
-            if ob_info.get("bid_dominance_pct", 50.0) < 46.0:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Bids insuficientes ({ob_info.get('bid_dominance_pct'):.1f}% < 46.0%).")
+            if bid_dom_now < 49.5:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Bids insuficientes ({bid_dom_now:.1f}% < 49.5%).")
                 if is_ai_top:
                     print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro técnico (Bids bajas). NO se cascadea.")
                     break

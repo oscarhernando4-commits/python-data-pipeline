@@ -1118,19 +1118,19 @@ def analyze_multi_timeframe_candles(symbol):
     is_at_daily_resistance_ceiling = bool(
         (
             dist_to_24h_high_pct <= 0.35 or 
-            range_position_1h >= 0.75 or     # Cima de las últimas 24 velas 1H (24 horas)
-            range_position_30m >= 0.75 or    # Cima de las últimas 24 velas 30M (12 horas)
-            range_position_15m >= 0.75 or    # Cima de las últimas 24 velas 15M (6 horas)
-            range_position_5m >= 0.78 or     # Cima de las últimas 24 velas 5M (2 horas)
-            range_position_2m >= 0.80 or     # Cima de las últimas 24 velas 2M (48 minutos)
-            range_position_1m >= 0.80 or     # Cima de las últimas 24 velas 1M (24 minutos)
+            range_position_1h >= 0.70 or     # Cima de las últimas 24 velas 1H (24 horas)
+            range_position_30m >= 0.65 or    # Cima de las últimas 24 velas 30M (12 horas)
+            range_position_15m >= 0.60 or    # Cima de las últimas 24 velas 15M (6 horas)
+            range_position_5m >= 0.60 or     # Cima de las últimas 24 velas 5M (2 horas)
+            range_position_2m >= 0.70 or     # Cima de las últimas 24 velas 2M (48 minutos)
+            range_position_1m >= 0.70 or     # Cima de las últimas 24 velas 1M (24 minutos)
             is_at_range_ceiling_1m or
             is_at_range_ceiling_2m or
             is_at_range_ceiling_5m or
             is_at_range_ceiling_15m or
             is_at_range_ceiling_30m or
             is_at_range_ceiling_1h
-        ) and not (vol_surge_2m >= 2.0 or vol_surge_15m >= 2.0)
+        ) and not (vol_surge_2m >= 2.5 or vol_surge_15m >= 2.5)
     )
 
     dist_15m_pct = round(((high_15m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
@@ -1143,7 +1143,7 @@ def analyze_multi_timeframe_candles(symbol):
     major_support_floor_1h_pct = round(((close_15m - low_1h_recent) / close_15m) * 100.0, 2) if close_15m > 0 else 0.90
     expected_rr_ratio = round(target_resistance_1h_pct / max(0.40, major_support_floor_1h_pct), 2)
 
-    is_explosive_breakout = (vol_surge_2m >= 2.0 or vol_surge_15m >= 2.0)
+    is_explosive_breakout = (vol_surge_2m >= 2.5 or vol_surge_15m >= 2.5)
 
     # Ground-Zero 10s/30s/1M/2M Rebound Ignition on Safe 15M/1H Support Base
     is_sub_minute_ignition = bool(
@@ -1162,12 +1162,20 @@ def analyze_multi_timeframe_candles(symbol):
         (len(closes_10s) >= 2 and not tf_10s_up and not tf_30s_up and closes_10s[-1] < closes_10s[-2])
     )
     
-    # 🎯 PATRÓN FRACTAL DE SUELO 1 MINUTO (Anti-Centro / Suelo Real de Oscilación):
-    # Detecta si el precio está en el piso de la oscilación de 1m (0% a 40%), con mecha inferior o rebote:
-    is_1m_floor_zone = bool(range_position_1m <= 0.40)
-    is_1m_center_zone = bool(0.40 < range_position_1m < 0.70)
-    is_1m_ceiling_zone = bool(range_position_1m >= 0.70)
+    # ═══════════════════════════════════════════════════════════════════════
+    # 🌌 MATRIZ DE CONFLUENCIA FRACTAL DE SUELO MULTITEMPORAL:
+    # Garantiza entrada en el SUELO CONFLUENTE de 1M, 2M, 5M, 15M, 30M y 1H
+    # ═══════════════════════════════════════════════════════════════════════
+    is_1m_floor_zone = bool(range_position_1m <= 0.45)
+    is_1m_center_zone = bool(0.45 < range_position_1m < 0.65)
+    is_1m_ceiling_zone = bool(range_position_1m >= 0.65)
     
+    is_2m_floor_zone = bool(range_position_2m <= 0.50)
+    is_5m_floor_zone = bool(range_position_5m <= 0.50)
+    is_15m_floor_zone = bool(range_position_15m <= 0.55)
+    is_30m_floor_zone = bool(range_position_30m <= 0.60)
+    is_1h_floor_zone = bool(range_position_1h <= 0.60)
+
     # Detección de Mecha Inferior en Vela de 1M (Absorción de Suelo):
     lower_wick_1m_pct = 0.0
     if klines_1m and len(klines_1m) >= 1:
@@ -1181,11 +1189,31 @@ def analyze_multi_timeframe_candles(symbol):
             
     is_1m_lower_wick_absorption = bool(lower_wick_1m_pct >= 20.0 and tf_1m_up)
     
+    # Suelo Micro 1M / 2M
     is_1m_true_floor = bool(
         is_1m_floor_zone or 
         is_1m_lower_wick_absorption or 
         (rsi_1m <= 42.0 and tf_1m_up) or
-        (range_position_2m <= 0.40 and tf_2m_up)
+        (range_position_2m <= 0.45 and tf_2m_up)
+    )
+    
+    # Suelo Estructural & Contextual (5M / 15M / 30M / 1H)
+    is_structural_floor_ok = bool(
+        range_position_5m <= 0.50 and
+        range_position_15m <= 0.55 and
+        range_position_30m <= 0.60 and
+        range_position_1h <= 0.60
+    )
+
+    # Confluencia Fractal Suprema de Suelo (TODAS las escalas en la base):
+    is_confluent_fractal_floor = bool(
+        is_1m_true_floor and
+        is_structural_floor_ok and
+        rsi_1m <= 55.0 and
+        rsi_5m <= 60.0 and
+        rsi_15m <= 62.0 and
+        not is_15m_red_cascade and
+        not is_at_daily_resistance_ceiling
     )
     
     if is_ma25_below_ma99_downward:
@@ -1524,11 +1552,18 @@ def analyze_multi_timeframe_candles(symbol):
             "1h": "BULLISH" if tf_1h_up else "BEARISH",
             "1d": "BULLISH" if tf_1d_up else "BEARISH"
         },
-        # ─── PATRÓN DE SUELO 1 MINUTO (Anti-Centro / Entrada en la Base) ───
+        # ─── PATRÓN DE SUELO FRACTAL MULTITEMPORAL (1M, 2M, 5M, 15M, 30M, 1H) ───
+        "is_confluent_fractal_floor": is_confluent_fractal_floor,
+        "is_structural_floor_ok": is_structural_floor_ok,
         "is_1m_true_floor": is_1m_true_floor,
         "is_1m_floor_zone": is_1m_floor_zone,
         "is_1m_center_zone": is_1m_center_zone,
         "is_1m_ceiling_zone": is_1m_ceiling_zone,
+        "is_2m_floor_zone": is_2m_floor_zone,
+        "is_5m_floor_zone": is_5m_floor_zone,
+        "is_15m_floor_zone": is_15m_floor_zone,
+        "is_30m_floor_zone": is_30m_floor_zone,
+        "is_1h_floor_zone": is_1h_floor_zone,
         "lower_wick_1m_pct": lower_wick_1m_pct,
         "is_1m_lower_wick_absorption": is_1m_lower_wick_absorption,
         # ─── ADX + CCI INTELIGENCIA DE TENDENCIA (Conectados al ADN) ───

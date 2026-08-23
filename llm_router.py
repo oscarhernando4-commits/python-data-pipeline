@@ -518,12 +518,12 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
     ESTRUCTURA DE LOS 7 AGENTES INSTITUCIONALES EN DELIBERACIÓN CUÁNTICA:
     1. 🕵️ AGENTE 1 (Macro 1D & Guardián de Bitcoin): Evalúa el Semáforo Macro ({macro_context}), Wall Street ({wall_street_str}), Fear&Greed ({fear_greed.get('score')}), y estabilidad de BTC (BTC Guard). VETA categóricamente si el Semáforo es DEFENSIVO, altcoin_impact=AVOID o si BTC está en cascada roja.
-    2. 📊 AGENTE 2 (Sniper de Suelo 1M/2M & Elasticidad High-Beta): Exige entrada ESTRICTAMENTE en el SUELO de 1 Minuto (Canal 1M <= 40% o mecha de absorción) y PISO de 2 Minutos (RSI 2M <= 52.0). VETA categóricamente entradas en el CENTRO del rango 1M (42%-75% alrededor de las medias móviles) o activos lentos con ATR < 0.40%.
-    3. 🌊 AGENTE 3 (Auditor de Libro, CVD & Squeeze Micro): Exige Bids >= 46%, Muro comprador > $15k USDT, CVD Taker positivo/neutral y OBV != DISTRIBUTING. VETA si OBV=DISTRIBUTING o si Muro Bids < $15k USDT (libro delgado / spoofing).
+    2. 📊 AGENTE 2 (Sniper de Suelo Fractal Confluente 1M/2M/5M/15M/30M): Exige entrada ESTRICTAMENTE en el SUELO CONFLUENTE (Canal 1M <= 45%, Canal 2M <= 50%, Canal 5M <= 50%, Canal 15M <= 55%, Canal 30M <= 60%). VETA categóricamente si el precio está en el CENTRO o TECHO de 5M o 15M (Canal > 55%) o si el activo es lento (ATR < 0.40%).
+    3. 🌊 AGENTE 3 (Auditor de Libro, CVD & Squeeze Micro): Exige Bids >= 49.5%, Muro comprador > $15k USDT, CVD Taker positivo/neutral, Spread <= 0.28% y OBV != DISTRIBUTING. VETA si OBV=DISTRIBUTING o si Muro Bids < $15k USDT (libro delgado / spoofing).
     4. 🧩 AGENTE 4 (Analista Sectorial & Temporal): Prioriza sector líder ({sector_summary['top_sector']}) y valida la SESION TEMPORAL. VETO si VETO_TEMPORAL o BLACKOUT con multiplicador < 0.60.
-    5. 🧠 AGENTE 5 (Memoria RAG & Auto-Aprendizaje Cuántico): Valida el ADN de la moneda, reputación histórica y patrones aprendidos. VETA permanentemente: (a) Mega-Caps / Zombis (TRX, BNB, BTC, ETH), (b) Micro-volumen muerto (<0.70x), (c) Distribución institucional, (d) Re-entradas en la misma moneda en menos de 4h. PREMIA cohetes con Vol1M >= 2.0x, FII >= 60 y Retesteo Ola 2 (como XLM, KAIA, COMP, DCR).
-    6. 🛡️ AGENTE 6 (Chief Risk Officer & Veto de Dump): Veta cualquier activo con Riesgo de Dump >= 40%, libro descompensado (Bids < 45% o Muro < $15k), OBV=DISTRIBUTING, DUMP_RISK_FUNDING, o activo en cuarentena/cooldown de 4 horas.
-    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza el consenso. Si el mejor candidato es un activo de Alta Elasticidad (ATR >= 0.45%) en zona de soporte/pullback con volumen fresco y libre de vetos, APRUEBA "BUY_LONG" con Stop Loss Asimétrico de -0.50% para ejecución inmediata.
+    5. 🧠 AGENTE 5 (Memoria RAG & Auto-Aprendizaje Cuántico): Valida el ADN de la moneda, reputación histórica y patrones aprendidos. VETA permanentemente: (a) Monedas en Blacklist Dinámica (WR < 30%), (b) Mega-Caps / Zombis (TRX, BNB, BTC, ETH), (c) Micro-volumen muerto (<0.70x), (d) Distribución institucional, (e) Re-entradas en la misma moneda en menos de 4h. PREMIA cohetes con Vol1M >= 2.0x, FII >= 60 y Retesteo Ola 2 (como XLM, KAIA, COMP, DCR).
+    6. 🛡️ AGENTE 6 (Chief Risk Officer & Veto de Dump): Veta cualquier activo con Riesgo de Dump >= 40%, libro descompensado (Bids < 49.5% o Muro < $15k), OBV=DISTRIBUTING, DUMP_RISK_FUNDING, o activo en cuarentena/cooldown de 4 horas.
+    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza el consenso. Si el mejor candidato es un activo de Alta Elasticidad (ATR >= 0.45%) en SUELO CONFLUENTE FRACTAL con volumen fresco y libre de vetos, APRUEBA "BUY_LONG" con Stop Loss Asimétrico de -0.50% para ejecución inmediata.
 
     {exec_learning_summary}
 
@@ -538,13 +538,13 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
     🏛️ PROTOCOLO DINÁMICO Y AUTO-ADAPTATIVO DEL SÚPER-CEREBRO EN 4 PASOS:
     
-    PASO 1 🔬 LECTURA DE LA RADIOGRAFÍA 360° Y CANAL FRACTAL:
-    - Revisa la RADIOGRAFÍA 360° ADN y el CANAL FRACTAL (% Suelo a Cima).
+    PASO 1 🔬 LECTURA DE LA RADIOGRAFÍA 360° Y CANAL FRACTAL CONFLUENTE:
+    - Revisa la RADIOGRAFÍA 360° ADN y el CANAL FRACTAL (% Suelo a Cima en 1M, 5M, 15M, 1H).
     - 💎 ARQUETIPO DCR / OLA 2 GOLDEN RETEST: Si un activo muestra "PATRÓN FRACTAL DCR" (Retesteo de Oro Ola 2 en MA25 o Resorte Comprimido 1M), dale MÁXIMA PRIORIDAD de compra porque ofrece el ratio Riesgo/Beneficio más asimétrico del mercado (>3:1).
-    - 🎯 REGLA DE ORO DE PISO 1M Y 2M (Comprar en el Suelo Real): Exige que las velas de 1M y 2M estén en la PARTE BAJA (Canal 1M <= 40%, RSI 2M <= 52.0 y soporte activo). Si el precio está flotando en el CENTRO (42%-75%) o el RSI 2M superó 54.0 tras una vela verde, ese micro-impulso ya está en medio del camino: VÉTALO por entrada en el centro.
-    - ZONA ÓPTIMA DE COMPRA (Sweet-Spot): Prioriza activos en la BASE o Pullback Constructivo (1H <= 55%, 15M <= 55%, 1M <= 40%).
-    - ALPHA & ABSORCIÓN: Premia fuertemente activos con Alpha vs BTC > +0.20% y Mecha de Absorción 1M >= 15% (compradores comprando el dip).
-    - 🚫 VETO TOTAL CIMA / TECHO: PROHIBIDO comprar si Canal 1H >= 75% o si está a menos de 0.40% del Máximo 24H.
+    - 🎯 REGLA DE ORO DE SUELO FRACTAL CONFLUENTE (Comprar en el Suelo Real): Exige que el precio esté en la PARTE BAJA simultáneamente en 1M (<= 45%), 2M (<= 50%), 5M (<= 50%), 15M (<= 55%) y 30M (<= 60%). Si el precio está flotando en el CENTRO o TECHO de 5M/15M (Canal > 55%), ese activo está en medio o final de un rally previo: VÉTALO categóricamente por riesgo de corrección contra el Stop Loss de -0.50%.
+    - ZONA ÓPTIMA DE COMPRA (Sweet-Spot): Prioriza activos en la BASE o Pullback Constructivo (1H <= 55%, 15M <= 50%, 5M <= 50%, 1M <= 40%).
+    - ALPHA & ABSORCIÓN: Premia fuertemente activos con Alpha vs BTC > +0.20% y Mecha de Absorción 1M >= 15% (compradores comprando el dip en soporte).
+    - 🚫 VETO TOTAL CIMA / TECHO: PROHIBIDO comprar si Canal 1H >= 70% o Canal 15M >= 60% o si está a menos de 0.40% del Máximo 24H.
     - 🚫 VETO ZOMBI / MEGA-CAP: Veta activos con ATR 15M < 0.40% (ej: TRX, BNB, ADA, BTC, ETH) o Fan Tokens ilíquidos. Exige alta elasticidad (ATR >= 0.45%) para scalping rentable.
     
     PASO 2 ⏰ CONTEXTO MACRO Y DESACOPLAMIENTO INTELIGENTE:
