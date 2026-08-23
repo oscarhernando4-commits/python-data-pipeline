@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3154,
+    "total_trades": 3155,
     "wins": 1668,
-    "losses": 1486,
-    "win_rate_pct": 52.89,
-    "total_pnl_usd": 4856.985076548791
+    "losses": 1487,
+    "win_rate_pct": 52.87,
+    "total_pnl_usd": 4854.865076548791
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on PEOPLEUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SHIBUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on DOTUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ONGUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BCHUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SEIUSDT)",
       "BLOCK LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on RAYUSDT)",
-      "BLOCK LONG when RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZENUSDT)"
+      "BLOCK LONG when RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZENUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on EULUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MORPHOUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 07:18:30",
-      "account_id": "SIM-006",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "PROMUSDT",
-      "side": "LONG",
-      "entry_price": 2.658,
-      "exit_price": 2.781,
-      "pnl_usd": 0.68,
-      "result": "WIN",
-      "notes": "WIN on PROMUSDT (PnL: +4.63%, Net: $+0.68 Fase 5)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 54.78,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 07:18:30",
       "account_id": "SIM-007",
@@ -8458,6 +8441,23 @@
       "context": {
         "score": 9,
         "rsi_15m": 29.75,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 05:14:47",
+      "account_id": "SIM-067",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "EULUSDT",
+      "side": "SHORT",
+      "entry_price": 1.159,
+      "exit_price": 1.294,
+      "pnl_usd": -2.12,
+      "result": "LOSS",
+      "notes": "LOSS on EULUSDT (PnL: -11.65%, Net: $-2.12 Fase 1)",
+      "context": {
+        "score": 47,
+        "rsi_15m": 45.32,
         "macro_trend_4h": "NEUTRAL"
       }
     }
