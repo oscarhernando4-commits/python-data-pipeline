@@ -1,9 +1,9 @@
 {
   "stats": {
-    "total_trades": 3226,
-    "wins": 1707,
+    "total_trades": 3227,
+    "wins": 1708,
     "losses": 1519,
-    "win_rate_pct": 52.91,
+    "win_rate_pct": 52.93,
     "total_pnl_usd": 6280.215076548793
   },
   "learned_rules": {
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 09:28:31",
-      "account_id": "SIM-006",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "ENSUSDT",
-      "side": "LONG",
-      "entry_price": 5.63,
-      "exit_price": 5.68,
-      "pnl_usd": 0.11,
-      "result": "WIN",
-      "notes": "WIN on ENSUSDT (PnL: +0.89%, Net: $+0.11 Fase 3)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 37.49,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 09:28:31",
       "account_id": "SIM-007",
@@ -8460,6 +8443,19 @@
         "rsi_15m": 63.84,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-23 06:11:07",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "GENIUSUSDT",
+      "side": "LONG",
+      "entry_price": 0.3147,
+      "exit_price": 0.3147,
+      "pnl_usd": -0.0,
+      "result": "WIN",
+      "notes": "WIN on GENIUSUSDT (PnL: +0.00%, Net: $-0.00 Fase 2)",
+      "context": {}
     }
   ]
 }
