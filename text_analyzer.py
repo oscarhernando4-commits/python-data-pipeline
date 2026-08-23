@@ -34,7 +34,20 @@ def get_market_macro_context(symbol_analysis_map: Dict[str, Any], fear_greed: Di
     btc_cascade = btc_mtf.get("is_15m_red_cascade", False)
     
     # Bitcoin Regime determination
-    if btc_score < 25 or btc_rsi_15m < 32.0 or btc_cascade:
+    # DEFENSIVO requiere CONFIRMACIÓN DOBLE: Score bajo + (RSI bajo o Cascada Roja)
+    # Un score bajo solo (sin RSI bajo ni cascada) = CAUTELOSO, no DEFENSIVO
+    is_btc_score_crash = btc_score < 25
+    is_btc_rsi_crash = btc_rsi_15m < 32.0
+    is_btc_cascade = btc_cascade
+    
+    if is_btc_score_crash and (is_btc_rsi_crash or is_btc_cascade):
+        # Confirmación doble: Score bajo + RSI bajo o Cascada = CRASH REAL
+        btc_status_label = "🔴 CASCADA / ALERTA DE DUMP (Prohibido Comprar Altcoins)"
+        btc_regime = "BEARISH_DUMP"
+        semaphore = "🔴 DEFENSIVO (HOLD 100% USDT)"
+        is_trade_authorized = False
+    elif is_btc_rsi_crash and is_btc_cascade:
+        # RSI bajo + Cascada (incluso con score normal) = CRASH REAL
         btc_status_label = "🔴 CASCADA / ALERTA DE DUMP (Prohibido Comprar Altcoins)"
         btc_regime = "BEARISH_DUMP"
         semaphore = "🔴 DEFENSIVO (HOLD 100% USDT)"
