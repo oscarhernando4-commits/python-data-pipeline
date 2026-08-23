@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 5939,
-    "wins": 2880,
+    "total_trades": 5940,
+    "wins": 2881,
     "losses": 3059,
-    "win_rate_pct": 48.49,
-    "total_pnl_usd": 9500.73857654917
+    "win_rate_pct": 48.5,
+    "total_pnl_usd": 9500.88527654917
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on RAYUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TIAUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PENDLEUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on CRVUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on CFXUSDT)",
@@ -49,34 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on XLMUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ASTERUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on RUNEUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JUPUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JUPUSDT)",
+      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ENAUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-23 20:12:47",
-      "account_id": "SIM-875",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "ZAMAUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0584,
-      "exit_price": 0.05827,
-      "pnl_usd": 0.01,
-      "result": "WIN",
-      "notes": "WIN on ZAMAUSDT (PnL: +0.22%, Net: $+0.01 Fase 2)",
-      "context": {
-        "score": 15,
-        "rsi_15m": 58.51,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-23 20:12:47",
       "account_id": "SIM-879",
@@ -12018,6 +11994,28 @@
         "adx_15m": null,
         "cci_15m": null,
         "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-23 21:07:41",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "ENAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1645,
+      "exit_price": 0.1662,
+      "pnl_usd": 0.1467,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 SNIPER COSECHA GANANCIA (Pico +1.40% -> Venta Asegurada en +1.03% tras retroceso de -0.35%) (Fase 3, PnL: +1.03%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 41.0,
+        "atr_pct_15m": 1.433,
+        "vol_surge": 0.89,
+        "vol_surge_1m": 0.95,
+        "fii_score": 70,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
       }
     }
   ]
