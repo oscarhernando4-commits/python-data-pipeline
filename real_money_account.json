@@ -15,7 +15,7 @@
     "side": "LONG",
     "quantity": 14.13,
     "break_even": false,
-    "highest_price": 1.012,
+    "highest_price": 1.013,
     "phase": 1,
     "archetype": "SECTOR_ROTATION",
     "archetype_label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
@@ -33,7 +33,9 @@
     "dna_tier": "HIGH_BETA_RUNNER",
     "optimal_trailing_slack_pct": 0.98,
     "target_resistance_price": 1.025,
-    "pump_probability_pct": 25
+    "pump_probability_pct": 25,
+    "holding_cycles": 9,
+    "volatility_regime": "🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (🧩 Cima +0.10% | SL Defensivo -0.50%)"
   },
   "last_trade_time": "26-08-23<br>19:26",
   "status": "🔵 En Vivo LONG (AXSUSDT @ $1.0120)",
