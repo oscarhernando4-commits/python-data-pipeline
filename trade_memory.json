@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3349,
+    "total_trades": 3350,
     "wins": 1760,
-    "losses": 1589,
-    "win_rate_pct": 52.55,
-    "total_pnl_usd": 7014.139976548799
+    "losses": 1590,
+    "win_rate_pct": 52.54,
+    "total_pnl_usd": 7014.0513765487985
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 13:06:31",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "TUTUSDT",
-      "side": "LONG",
-      "entry_price": 0.04474,
-      "exit_price": 0.04394,
-      "pnl_usd": -263.33,
-      "result": "LOSS",
-      "notes": "LOSS on TUTUSDT (PnL: -1.79%, Net: $-263.33 Fase 1)",
-      "context": {
-        "score": 18,
-        "rsi_15m": 66.44,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 13:06:31",
       "account_id": "SIM-028",
@@ -8416,6 +8399,19 @@
         "rsi_15m": 50.39,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-23 12:00:19",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.824,
+      "exit_price": 0.819,
+      "pnl_usd": -0.0886,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (-0.61% <= -0.50%) (Fase 1, PnL: -0.61%)",
+      "context": {}
     }
   ]
 }
