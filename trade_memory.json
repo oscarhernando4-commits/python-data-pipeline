@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3325,
-    "wins": 1746,
+    "total_trades": 3326,
+    "wins": 1747,
     "losses": 1579,
-    "win_rate_pct": 52.51,
-    "total_pnl_usd": 7013.788076548797
+    "win_rate_pct": 52.53,
+    "total_pnl_usd": 7014.1380765487975
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHFIUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DASHUSDT)",
       "BOOST LONG when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Won on TRXUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BNBUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on COTIUSDT)",
@@ -49,27 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JASMYUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HEMIUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SHIBUSDT)",
-      "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DOTUSDT)"
+      "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DOTUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BNBUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 12:24:33",
-      "account_id": "SIM-081",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "COTIUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0118,
-      "exit_price": 0.01176,
-      "pnl_usd": 0.1,
-      "result": "WIN",
-      "notes": "WIN on COTIUSDT (PnL: +0.34%, Net: $+0.10 Fase 3)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 51.45,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 12:28:33",
       "account_id": "SIM-027",
@@ -8418,6 +8401,23 @@
       "context": {
         "score": 9,
         "rsi_15m": 78.49,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 10:48:55",
+      "account_id": "SIM-083",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "BNBUSDT",
+      "side": "LONG",
+      "entry_price": 673.21,
+      "exit_price": 690.34,
+      "pnl_usd": 0.35,
+      "result": "WIN",
+      "notes": "WIN on BNBUSDT (PnL: +2.54%, Net: $+0.35 Fase 4)",
+      "context": {
+        "score": 18,
+        "rsi_15m": 54.93,
         "macro_trend_4h": "NEUTRAL"
       }
     }
