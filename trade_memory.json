@@ -1,15 +1,13 @@
 {
   "stats": {
-    "total_trades": 3054,
+    "total_trades": 3056,
     "wins": 1628,
-    "losses": 1426,
-    "win_rate_pct": 53.31,
-    "total_pnl_usd": 3610.89927654879
+    "losses": 1428,
+    "win_rate_pct": 53.27,
+    "total_pnl_usd": 3609.93927654879
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on CRVUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DCRUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on MUBARAKUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TUTUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AEROUSDT)",
@@ -27,7 +25,9 @@
       "BLOCK LONG when RSI<30(Oversold) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ORDIUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NEARUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PEOPLEUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BIOUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BIOUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GPSUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on XTZUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ETHUSDT)",
@@ -53,40 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 05:11:00",
-      "account_id": "SIM-005",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "MORPHOUSDT",
-      "side": "LONG",
-      "entry_price": 2.325,
-      "exit_price": 2.347,
-      "pnl_usd": 0.12,
-      "result": "WIN",
-      "notes": "WIN on MORPHOUSDT (PnL: +0.95%, Net: $+0.12 Fase 5)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 37.74,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 05:11:00",
-      "account_id": "SIM-006",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "MORPHOUSDT",
-      "side": "LONG",
-      "entry_price": 2.325,
-      "exit_price": 2.347,
-      "pnl_usd": 0.12,
-      "result": "WIN",
-      "notes": "WIN on MORPHOUSDT (PnL: +0.95%, Net: $+0.12 Fase 5)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 37.74,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 05:11:00",
       "account_id": "SIM-007",
@@ -8488,6 +8454,40 @@
       "result": "LOSS",
       "notes": "Real Money Trade exited via 🚀 Liberación por Estancamiento ADN 🧩 (40m en Fase 1 sin despegue para SECTOR_ROTATION, PnL=-0.12%) (Fase 1, PnL: -0.12%)",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-23 00:42:06",
+      "account_id": "SIM-081",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "GPSUSDT",
+      "side": "SHORT",
+      "entry_price": 0.01222,
+      "exit_price": 0.01239,
+      "pnl_usd": -0.84,
+      "result": "LOSS",
+      "notes": "LOSS on GPSUSDT (PnL: -1.39%, Net: $-0.84 Fase 1)",
+      "context": {
+        "score": 5,
+        "rsi_15m": 44.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 00:42:06",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "XTZUSDT",
+      "side": "SHORT",
+      "entry_price": 0.2329,
+      "exit_price": 0.2353,
+      "pnl_usd": -0.12,
+      "result": "LOSS",
+      "notes": "LOSS on XTZUSDT (PnL: -1.03%, Net: $-0.12 Fase 1)",
+      "context": {
+        "score": 91,
+        "rsi_15m": 56.65,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
