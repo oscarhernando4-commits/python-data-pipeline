@@ -826,7 +826,8 @@ def run_infinite_trading_matrix_cycle():
                     best_score=ai_score,
                     current_price=ai_price,
                     is_bearish=False,
-                    is_learned_signal=True
+                    is_learned_signal=True,
+                    candidates_list=top_15_candidates
                 )
         # CALIBRACIÓN HÍBRIDA REAL: Evaluar la Top Oportunidad del Escáner (Score >= 58) con Confirmación Cuántica (GBM A+/B o Refugio)
         elif top_15_candidates:
@@ -866,7 +867,7 @@ def run_infinite_trading_matrix_cycle():
             # Si la IA vota HOLD o NONE, NINGUNA orden se ejecuta y se preserva el 100% del USDT.
             if ai_veto_active:
                 print(f"🔒 [VETO SUPREMO IA] Comité Gemini AI votó {ai_action} ({gemini_res.get('reasoning', 'Mercado no seguro')}). CERO compras ejecutadas. 100% USDT protegido.")
-                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=False)
+                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=False, candidates_list=top_15_candidates)
             elif bs_score >= 58 and is_quant_approved:
                 if is_fk_bs or is_dcb_bs:
                     print(f"🛡️ [FILTRO FALLING KNIFE HÍBRIDO] Oportunidad {bs_sym} ({bs_score} Pts) BLOQUEADA: Falling Knife / Dead Cat detectado (Caída 24h: {mtf_bs.get('price_change_24h_pct', 0):+.1f}%).")
@@ -888,12 +889,13 @@ def run_infinite_trading_matrix_cycle():
                         best_score=bs_score,
                         current_price=bs_price,
                         is_bearish=False,
-                        is_learned_signal=True
+                        is_learned_signal=True,
+                        candidates_list=top_15_candidates
                     )
 
             else:
                 print(f"🔒 [REAL HÍBRIDO] Top Escáner {bs_sym} ({bs_score} Pts, GBM {bs_trade_qual}) no alcanza umbral híbrido (Score>=58 y Calidad A+/B). Preservando capital.")
-                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=False)
+                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=False, candidates_list=top_15_candidates)
         else:
             if ai_symbol and ai_symbol != "NONE":
                 print(f"🔒 [REAL] Mercado sin setup A+ (Top={ai_symbol}, Score={ai_score}, Acción={ai_action}). Protegiendo 100% de capital en USDT.")
@@ -901,7 +903,7 @@ def run_infinite_trading_matrix_cycle():
                 print(f"🔒 [REAL] Ningún activo califica como Setup A+. Manteniendo 100% liquidez en USDT.")
             # Always run the trader to manage OPEN positions (check TP/SL), even if no new entry
             api_connector.evaluate_and_trade_real_money(
-                best_symbol=None, best_score=50, current_price=0.0, is_bearish=False
+                best_symbol=None, best_score=50, current_price=0.0, is_bearish=False, candidates_list=top_15_candidates
             )
             
     except Exception as e_real:
