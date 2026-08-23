@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3477,
+    "total_trades": 3478,
     "wins": 1819,
-    "losses": 1658,
-    "win_rate_pct": 52.32,
-    "total_pnl_usd": 9505.0111765488
+    "losses": 1659,
+    "win_rate_pct": 52.3,
+    "total_pnl_usd": 9504.3411765488
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 12:29:26",
-      "account_id": "SIM-049",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ETHFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.6244,
-      "exit_price": 0.6108,
-      "pnl_usd": -0.4,
-      "result": "LOSS",
-      "notes": "LOSS on ETHFIUSDT (PnL: -2.18%, Net: $-0.40 Fase 1)",
-      "context": {
-        "score": 23,
-        "rsi_15m": 65.9,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 12:29:26",
       "account_id": "SIM-050",
@@ -8603,6 +8586,30 @@
         "fii_score": 75,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 16:36:23",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "MORPHOUSDT",
+      "side": "SHORT",
+      "entry_price": 2.314,
+      "exit_price": 2.683,
+      "pnl_usd": -0.67,
+      "result": "LOSS",
+      "notes": "LOSS on MORPHOUSDT (PnL: -15.95%, Net: $-0.67 Fase 4)",
+      "context": {
+        "score": 24,
+        "rsi_15m": 70.85,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
       }
     }
   ]
