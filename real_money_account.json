@@ -1,6 +1,7 @@
 {
   "initial_deposit_usdt": 15.47,
   "initial_total_usd": 20.07,
+<<<<<<< Updated upstream
   "current_balance_usd": 14.96,
   "net_pnl_usd": -0.51,
   "wins": 1,
@@ -19,4 +20,35 @@
   "_last_closed_symbol": "COMPUSDT",
   "_last_closed_time": 1787497239.6668463,
   "_last_exit_price": 20.73
+=======
+  "current_balance_usd": 15.06,
+  "net_pnl_usd": -0.41,
+  "wins": 0,
+  "losses": 2,
+  "trades_count": 2,
+  "daily_wins": 0,
+  "daily_losses": 2,
+  "position": {
+    "symbol": "NEXOUSDT",
+    "quantity": 17.58,
+    "entry_price": 0.819,
+    "highest_price": 0.822,
+    "cost_usd": 14.45,
+    "side": "LONG",
+    "phase": 1,
+    "holding_cycles": 1,
+    "volatility_regime": "🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (🧩 Cima +0.37% | SL Defensivo -0.50%)"
+  },
+  "last_trade_time": "26-08-23<br>10:03",
+  "status": "🔵 En Vivo LONG (NEXOUSDT @ $0.8220)",
+  "_cached_total_val": 15.06,
+  "_cached_usdt_free": 0.0,
+  "_cached_bnb": 0.00089962,
+  "_cached_bnb_usd": 0.62,
+  "_last_wallet_sync_ts": 1787496225.0199409,
+  "_last_closed_symbol": "ENAUSDT",
+  "_last_closed_time": 1787496159.0721533,
+  "_last_exit_price": 0.1673,
+  "_btc_last_price": 77249.65
+>>>>>>> Stashed changes
 }

@@ -429,6 +429,29 @@ def run_infinite_trading_matrix_cycle():
                 top_candidates=top_15_candidates
             )
             
+            # ═══════════════════════════════════════════════════════════════════
+            # 🔴 GATE MACRO PROGRAMÁTICO (ANTES de gastar tokens de Gemini):
+            # Bloqueo duro en Python — NO depende de obediencia del LLM.
+            # ═══════════════════════════════════════════════════════════════════
+            macro_is_authorized = macro_ctx.get("is_authorized", True) if isinstance(macro_ctx, dict) else True
+            if not macro_is_authorized:
+                print(f"🔴 [VETO MACRO PROGRAMÁTICO] Semáforo DEFENSIVO. is_authorized=False. Saltando consulta a Gemini AI. CERO operaciones.")
+                import api_connector
+                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
+                return
+            
+            # BTC Guard programático
+            try:
+                import asset_dna_predictive_engine
+                btc_guard = asset_dna_predictive_engine.get_btc_dominance_guard()
+                if btc_guard.get("should_avoid_altcoins", False):
+                    print(f"🔴 [VETO BTC GUARD PROGRAMÁTICO] BTC dominancia activa. should_avoid_altcoins=True. Saltando consulta a Gemini AI. CERO operaciones.")
+                    import api_connector
+                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
+                    return
+            except Exception as e_btc_guard:
+                print(f"⚠️ BTC Guard check error (non-blocking): {e_btc_guard}")
+            
             specific_news_map = {}
             for cand in top_15_candidates:
                 c_sym = cand["symbol"]
@@ -760,18 +783,6 @@ def run_infinite_trading_matrix_cycle():
         ai_opp_data = symbol_analysis_map.get(ai_symbol, {}) if ai_symbol and ai_symbol != "NONE" else {}
         ai_price = ai_opp_data.get("price", 0)
         ai_score = ai_opp_data.get("score", 50)
-        
-        # --- AUTO-LEARNING FROM TESTNET: Feed winning patterns to real money decisions ---
-        testnet_boost = False
-        try:
-            import learning_engine
-            bias = learning_engine.get_market_bias()
-            testnet_wr = bias.get("long_win_rate", 0) if ai_action == "BUY_LONG" else bias.get("short_win_rate", 0)
-            if testnet_wr > 55:  # Testnet shows >55% win rate for this direction
-                testnet_boost = True
-                print(f"🧠 [APRENDIZAJE] Testnet WR={testnet_wr:.1f}% para {ai_action} — Confianza reforzada")
-        except:
-            pass
         
         # --- BITCOIN (BTC) MASTER REGIME & CORRELATION GATEKEEPER ---
         btc_data = symbol_analysis_map.get("BTCUSDT", {})

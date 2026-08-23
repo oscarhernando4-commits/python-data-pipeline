@@ -763,16 +763,16 @@ def analyze_multi_timeframe_candles(symbol):
     )
 
     # 🧬 COMPLETA SUITE DE 22 INDICADORES BINANCE PRO (WMA, CCI, WR, KDJ, SAR, DMI, TRIX, MTM, EMV, AVL):
-    wma14_15m = calculate_wma(closes_15m, 14)
-    cci_15m = calculate_cci(highs_15m, lows_15m, closes_15m, 14)
-    wr_15m = calculate_wr(highs_15m, lows_15m, closes_15m, 14)
-    k_15m, d_15m, j_15m = calculate_kdj(highs_15m, lows_15m, closes_15m, 9)
-    sar_15m, sar_trend = calculate_sar(highs_15m, lows_15m)
-    plus_di_15m, minus_di_15m, adx_15m = calculate_dmi(highs_15m, lows_15m, closes_15m, 14)
-    trix_15m = calculate_trix(closes_15m, 9)
-    mtm_15m = calculate_mtm(closes_15m, 14)
-    emv_15m = calculate_emv(highs_15m, lows_15m, vols_15m, 14)
-    avl_15m = calculate_avl(highs_15m, lows_15m, closes_15m)
+    wma14_15m = None
+    cci_15m = None
+    wr_15m = None
+    k_15m, d_15m, j_15m = None, None, None
+    sar_15m, sar_trend = None, None
+    plus_di_15m, minus_di_15m, adx_15m = None, None, None
+    trix_15m = None
+    mtm_15m = None
+    emv_15m = None
+    avl_15m = None
 
     # ========================================================================
     # ⛔ ENHANCED FALLING KNIFE GUARD V2 (Avoids TUT -45%, BICO -17%, BMT -13%)
