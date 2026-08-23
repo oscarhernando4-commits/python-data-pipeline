@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3303,
+    "total_trades": 3304,
     "wins": 1742,
-    "losses": 1561,
-    "win_rate_pct": 52.74,
-    "total_pnl_usd": 7014.0659765488
+    "losses": 1562,
+    "win_rate_pct": 52.72,
+    "total_pnl_usd": 7014.0480765488
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 11:30:34",
-      "account_id": "SIM-048",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "TUTUSDT",
-      "side": "LONG",
-      "entry_price": 0.04127,
-      "exit_price": 0.04145,
-      "pnl_usd": 0.05,
-      "result": "WIN",
-      "notes": "WIN on TUTUSDT (PnL: +0.44%, Net: $+0.05 Fase 2)",
-      "context": {
-        "score": 18,
-        "rsi_15m": 61.63,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 11:30:34",
       "account_id": "SIM-049",
@@ -8424,6 +8407,19 @@
         "rsi_15m": 47.19,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-23 10:35:19",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.821,
+      "exit_price": 0.82,
+      "pnl_usd": -0.0179,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🚀 Liberación por Estancamiento ADN 🧩 (40m en Fase 1 sin despegue para SECTOR_ROTATION, PnL=-0.12%) (Fase 1, PnL: -0.12%)",
+      "context": {}
     }
   ]
 }
