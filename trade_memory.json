@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3476,
-    "wins": 1818,
+    "total_trades": 3477,
+    "wins": 1819,
     "losses": 1658,
-    "win_rate_pct": 52.3,
-    "total_pnl_usd": 9504.9039765488
+    "win_rate_pct": 52.32,
+    "total_pnl_usd": 9505.0111765488
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on SHIBUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TWTUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on IOTAUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLFIUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SHIBUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEARUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEARUSDT)",
+      "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on CVXUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 12:29:26",
-      "account_id": "SIM-048",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "ETHFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.6244,
-      "exit_price": 0.6108,
-      "pnl_usd": -0.41,
-      "result": "LOSS",
-      "notes": "LOSS on ETHFIUSDT (PnL: -2.18%, Net: $-0.41 Fase 1)",
-      "context": {
-        "score": 23,
-        "rsi_15m": 65.9,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 12:29:26",
       "account_id": "SIM-049",
@@ -8598,6 +8581,28 @@
         "adx_15m": null,
         "cci_15m": null,
         "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-23 16:35:24",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "CVXUSDT",
+      "side": "LONG",
+      "entry_price": 2.12,
+      "exit_price": 2.136,
+      "pnl_usd": 0.1072,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.75% <= +0.83%) (Fase 3, PnL: +0.75%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 51.0,
+        "atr_pct_15m": 1.015,
+        "vol_surge": 1.21,
+        "vol_surge_1m": 2.13,
+        "fii_score": 75,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
       }
     }
   ]
