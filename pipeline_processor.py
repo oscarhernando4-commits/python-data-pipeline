@@ -75,30 +75,32 @@ def get_group_info(index):
     if index == 0:
         thresh = dyn.get("group_0", {}).get("long_score", 55)
         return {"group_id": 0, "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)", "threshold_score": thresh, "risk_pct": 1.0, "label": f"Ultra-Estricto A+ (Score >= {thresh})"}
-    elif 1 <= index <= 20:
+    elif 1 <= index <= 200:
         thresh = dyn.get("group_1", {}).get("long_score", 55)
-        return {"group_id": 1, "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)", "threshold_score": thresh, "risk_pct": 1.0, "label": f"Ultra-Estricto A+ (Score >= {thresh})"}
-    elif 21 <= index <= 40:
+        return {"group_id": 1, "group_name": "🛡️ GRUPO 1: Ultra-Estricto A+ & Suelo Fractal", "threshold_score": thresh, "risk_pct": 1.0, "label": f"Ultra-Estricto A+ (Score >= {thresh})"}
+    elif 201 <= index <= 400:
         thresh = dyn.get("group_2", {}).get("long_score", 55)
-        return {"group_id": 2, "group_name": "🔷 GRUPO 2: Moderado-Estricto", "threshold_score": thresh, "risk_pct": 1.0, "label": f"Moderado-Estricto (Score >= {thresh})"}
-    elif 41 <= index <= 60:
+        return {"group_id": 2, "group_name": "🔷 GRUPO 2: Elasticidad High-Beta", "threshold_score": thresh, "risk_pct": 1.0, "label": f"Moderado-Estricto (Score >= {thresh})"}
+    elif 401 <= index <= 600:
         thresh = dyn.get("group_3", {}).get("long_score", 55)
-        return {"group_id": 3, "group_name": "⚖️ GRUPO 3: Balanceado", "threshold_score": thresh, "risk_pct": 1.0, "label": f"Balanceado (Score >= {thresh})"}
-    elif 61 <= index <= 80:
+        return {"group_id": 3, "group_name": "⚖️ GRUPO 3: Rotación Sectorial", "threshold_score": thresh, "risk_pct": 1.0, "label": f"Balanceado (Score >= {thresh})"}
+    elif 601 <= index <= 800:
         thresh = dyn.get("group_4", {}).get("long_score", 55)
-        return {"group_id": 4, "group_name": "⚡ GRUPO 4: Frecuencia Alta", "threshold_score": thresh, "risk_pct": 2.0, "label": f"Frecuencia Alta (Score >= {thresh})"}
+        return {"group_id": 4, "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback", "threshold_score": thresh, "risk_pct": 2.0, "label": f"Frecuencia Alta (Score >= {thresh})"}
     else:
         thresh = dyn.get("group_5", {}).get("long_score", 45)
-        return {"group_id": 5, "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia", "threshold_score": thresh, "risk_pct": 2.0, "label": f"Exploratorio de Máxima Frecuencia (Score >= {thresh})"}
+        return {"group_id": 5, "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros", "threshold_score": thresh, "risk_pct": 2.0, "label": f"Exploratorio Extremo (Score >= {thresh})"}
 
 def load_live_matrix():
     now_date = datetime.now().strftime("%y-%m-%d")
     now_time = datetime.now().strftime("%H:%M")
     now_br = f"{now_date}<br>{now_time}"
     
+    total_target_accounts = 1000
+    
     if not os.path.exists(DATA_MATRIX_FILE):
         accounts = []
-        for i in range(0, 100):
+        for i in range(0, total_target_accounts):
             assigned_pair = TOP_PAIRS[i % len(TOP_PAIRS)]
             acc_id = "SIM-000 (Réplica Real)" if i == 0 else f"SIM-{i:03d}"
             g_info = get_group_info(i)
@@ -124,8 +126,8 @@ def load_live_matrix():
                 "status": "BUSCANDO_OPORTUNIDAD"
             })
         data = {
-            "total_fund_usd": 10000.0,
-            "current_total_usd": 10000.0,
+            "total_fund_usd": 100000.0,
+            "current_total_usd": 100000.0,
             "net_pnl_usd": 0.0,
             "global_win_rate_pct": 0.0,
             "accounts": accounts
@@ -133,9 +135,43 @@ def load_live_matrix():
         with open(DATA_MATRIX_FILE, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
         return data
+        
     with open(DATA_MATRIX_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
         accounts = data.get("accounts", [])
+        
+        # Expand seamlessly if fewer than 1000 accounts
+        if len(accounts) < total_target_accounts:
+            existing_count = len(accounts)
+            for i in range(existing_count, total_target_accounts):
+                assigned_pair = TOP_PAIRS[i % len(TOP_PAIRS)]
+                acc_id = f"SIM-{i:03d}"
+                g_info = get_group_info(i)
+                accounts.append({
+                    "account_id": acc_id,
+                    "symbol": assigned_pair,
+                    "group_id": g_info["group_id"],
+                    "group_name": g_info["group_name"],
+                    "threshold_score": g_info["threshold_score"],
+                    "risk_pct": g_info["risk_pct"],
+                    "permissiveness_label": g_info["label"],
+                    "initial_capital": 100.0,
+                    "current_balance": 100.0,
+                    "pnl_usd": 0.0,
+                    "current_level": 1,
+                    "consecutive_losses": 0,
+                    "last_result": "Esperando",
+                    "last_trade_time": now_br,
+                    "position": None,
+                    "trades_count": 0,
+                    "wins": 0,
+                    "losses": 0,
+                    "status": "BUSCANDO_OPORTUNIDAD"
+                })
+            data["accounts"] = accounts
+            data["total_fund_usd"] = 100000.0
+            data["current_total_usd"] = sum(a.get("current_balance", 100.0) for a in accounts)
+            
         for i, acc in enumerate(accounts):
             g_info = get_group_info(i)
             acc["group_id"] = g_info["group_id"]
@@ -171,7 +207,7 @@ def run_infinite_trading_matrix_cycle():
     now_date = datetime.now().strftime("%y-%m-%d")
     now_time = datetime.now().strftime("%H:%M")
     now_br = f"{now_date}<br>{now_time}"
-    print(f"[{now_str}] 🚀 Running Screen-Optimized Matrix Cycle (100 Accounts)...")
+    print(f"[{now_str}] 🚀 Running Screen-Optimized Matrix Cycle (1000 Accounts Genetic Engine)...")
     
     import strategy_engine
     import fundamental_sentinel
@@ -665,10 +701,10 @@ def run_infinite_trading_matrix_cycle():
             for sym, data_item in _rotated_symbols:
                 eval_res = strategy_engine.evaluate_opportunity(data_item["tech"], g_id)
                 if eval_res["action"] in ["LONG", "SHORT"]:
-                    # 🚫 ANTI-CONCENTRACIÓN: Máximo 3 cuentas del mismo grupo por símbolo
+                    # 🚫 ANTI-CONCENTRACIÓN: Máximo 8 cuentas del mismo grupo por símbolo en matriz 1000
                     _sym_count_same_group = sum(1 for a in accounts if a.get("position") and a.get("symbol") == sym and a.get("group_id") == g_id)
-                    if _sym_count_same_group >= 3:
-                        continue  # Ya hay 3 cuentas de este grupo en este símbolo
+                    if _sym_count_same_group >= 8:
+                        continue  # Ya hay 8 cuentas de este grupo explorando este símbolo
                     
                     # 🏛️ FILTRO BROWNIANO: Rechazar si el movimiento es solo ruido aleatorio
                     _sym_gbm_z = abs(data_item.get("_gbm_zscore", 0.0))
