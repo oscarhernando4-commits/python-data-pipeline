@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3424,
+    "total_trades": 3425,
     "wins": 1794,
-    "losses": 1630,
-    "win_rate_pct": 52.39,
-    "total_pnl_usd": 7105.461376548802
+    "losses": 1631,
+    "win_rate_pct": 52.38,
+    "total_pnl_usd": 7105.4260765488025
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on WIFUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on KAIAUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on COMPUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DASHUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GNOUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on NEXOUSDT)",
-      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHFIUSDT)"
+      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHFIUSDT)",
+      "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEXOUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SCUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 15:10:33",
-      "account_id": "SIM-029",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "NEXOUSDT",
-      "side": "LONG",
-      "entry_price": 0.823,
-      "exit_price": 0.824,
-      "pnl_usd": -0.01,
-      "result": "LOSS",
-      "notes": "LOSS on NEXOUSDT (PnL: +0.12%, Net: $-0.01 Fase 2)",
-      "context": {
-        "score": 16,
-        "rsi_15m": 54.05,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 15:10:33",
       "account_id": "SIM-051",
@@ -8422,6 +8405,28 @@
       "context": {
         "score": 12,
         "rsi_15m": 83.51,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 14:37:16",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.821,
+      "exit_price": 0.819,
+      "pnl_usd": -0.0353,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (-0.24% <= +0.32%) (Fase 2, PnL: -0.24%)",
+      "context": {
+        "score": 80,
+        "rsi_15m": 50.0,
+        "atr_pct_15m": 0.45,
+        "vol_surge": 1.0,
+        "vol_surge_1m": 1.0,
+        "fii_score": 60,
+        "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
     }
