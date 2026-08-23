@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3239,
-    "wins": 1712,
+    "total_trades": 3240,
+    "wins": 1713,
     "losses": 1527,
-    "win_rate_pct": 52.86,
-    "total_pnl_usd": 6417.415076548793
+    "win_rate_pct": 52.87,
+    "total_pnl_usd": 6417.425076548793
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DEXEUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on GALAUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GNOUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XTZUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DCRUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BNBUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on COTIUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on MORPHOUSDT)",
-      "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on COTIUSDT)"
+      "BOOST SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on COTIUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on NEXOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 09:52:30",
-      "account_id": "SIM-091",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "PROMUSDT",
-      "side": "SHORT",
-      "entry_price": 2.684,
-      "exit_price": 2.683,
-      "pnl_usd": -0.0,
-      "result": "WIN",
-      "notes": "WIN on PROMUSDT (PnL: +0.04%, Net: $-0.00 Fase 2)",
-      "context": {
-        "score": 65,
-        "rsi_15m": 46.24,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 09:52:30",
       "account_id": "SIM-094",
@@ -8454,6 +8437,23 @@
       "context": {
         "score": 32,
         "rsi_15m": 62.75,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 06:26:59",
+      "account_id": "SIM-039",
+      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.812,
+      "exit_price": 0.815,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on NEXOUSDT (PnL: +0.37%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 65,
+        "rsi_15m": 40.13,
         "macro_trend_4h": "NEUTRAL"
       }
     }
