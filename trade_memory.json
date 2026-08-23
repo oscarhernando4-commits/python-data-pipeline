@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3402,
-    "wins": 1784,
+    "total_trades": 3403,
+    "wins": 1785,
     "losses": 1618,
-    "win_rate_pct": 52.44,
-    "total_pnl_usd": 7108.121376548801
+    "win_rate_pct": 52.45,
+    "total_pnl_usd": 7108.211376548801
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MANAUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when OBV = ACCUMULATING + CVD Taker > 55% (Institutional Liquidity Absorption)",
       "BOOST LONG when Sector in [DeFi, AI, Layer2] + Alpha vs BTC > +0.20% (Hot Sector Alpha Leader)",
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SHIBUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DOTUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TWTUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on IOTAUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLFIUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ETHUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ETHUSDT)",
+      "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on MORPHOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 14:34:32",
-      "account_id": "SIM-091",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "PENDLEUSDT",
-      "side": "SHORT",
-      "entry_price": 1.657,
-      "exit_price": 1.674,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on PENDLEUSDT (PnL: -1.03%, Net: $-0.03 Fase 1)",
-      "context": {
-        "score": 82,
-        "rsi_15m": 56.83,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 14:34:32",
       "account_id": "SIM-093",
@@ -8418,6 +8401,23 @@
       "context": {
         "score": 14,
         "rsi_15m": 71.15,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 13:36:58",
+      "account_id": "SIM-018",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "MORPHOUSDT",
+      "side": "LONG",
+      "entry_price": 2.487,
+      "exit_price": 2.495,
+      "pnl_usd": 0.09,
+      "result": "WIN",
+      "notes": "WIN on MORPHOUSDT (PnL: +0.32%, Net: $+0.09 Fase 2)",
+      "context": {
+        "score": 14,
+        "rsi_15m": 73.5,
         "macro_trend_4h": "NEUTRAL"
       }
     }
