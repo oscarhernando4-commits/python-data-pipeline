@@ -240,6 +240,7 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     }
     
     models_to_try = [
+        "gemini-3.6-flash",
         "gemini-3.1-flash-lite"
     ]
     
@@ -503,7 +504,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         candidates_prompt_text += f"- 🏭 SECTOR: {token_sector} (Sector mas caliente hoy: {hottest_sec}){sector_hot_str}{already_str}\n"
         candidates_prompt_text += "------------------------------------\n"
 
-    print(f"✅ [Comité Institucional 7 Agentes] Consultando al Súper-Cerebro Gemini AI (Flash-Lite) para el TOP {len(candidates_data_list)} simultáneo...")
+    print(f"✅ [Comité Institucional 7 Agentes] Consultando al Súper-Cerebro Gemini AI (Gemini 3.6 Flash) para el TOP {len(candidates_data_list)} simultáneo...", flush=True)
 
     try:
         from data_fetcher import fetch_wall_street_macro_context
@@ -589,9 +590,10 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         }
     }
     
-    # 🏎️ SUPER-CEREBRO GEMINI-3.1-FLASH-LITE (Modelo Oficial Único y Exclusivo)
-    # Rota a través de las 10 claves Gemini usando estrictamente gemini-3.1-flash-lite
+    # 🏎️ SUPER-CEREBRO GEMINI-3.6-FLASH (Modelo de Razonamiento Cuántico de Alta Precisión)
+    # Rota a través de las 10 claves Gemini con fallback automático a gemini-3.1-flash-lite
     models_to_try = [
+        "gemini-3.6-flash",
         "gemini-3.1-flash-lite"
     ]
     
