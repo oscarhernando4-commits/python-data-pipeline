@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3290,
-    "wins": 1737,
-    "losses": 1553,
-    "win_rate_pct": 52.8,
-    "total_pnl_usd": 6362.731976548799
+    "total_trades": 3293,
+    "wins": 1738,
+    "losses": 1555,
+    "win_rate_pct": 52.78,
+    "total_pnl_usd": 6363.101976548799
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SHIBUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on DOTUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on NEARUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ENSUSDT)",
@@ -27,10 +26,10 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ENSUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on JASMYUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on STXUSDT)",
-      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on XPLUSDT)"
+      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on XPLUSDT)",
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZROUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on IMXUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HBARUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TSTUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DOGEUSDT)",
@@ -49,61 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on THETAUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on MUBARAKUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SYRUPUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on JASMYUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on JASMYUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JASMYUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 10:52:33",
-      "account_id": "SIM-001",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "NIGHTUSDT",
-      "side": "LONG",
-      "entry_price": 0.02091,
-      "exit_price": 0.02103,
-      "pnl_usd": 0.05,
-      "result": "WIN",
-      "notes": "WIN on NIGHTUSDT (PnL: +0.57%, Net: $+0.05 Fase 3)",
-      "context": {
-        "score": 10,
-        "rsi_15m": 45.35,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 10:52:33",
-      "account_id": "SIM-002",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "NIGHTUSDT",
-      "side": "LONG",
-      "entry_price": 0.02091,
-      "exit_price": 0.02103,
-      "pnl_usd": 0.05,
-      "result": "WIN",
-      "notes": "WIN on NIGHTUSDT (PnL: +0.57%, Net: $+0.05 Fase 3)",
-      "context": {
-        "score": 10,
-        "rsi_15m": 45.35,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 10:52:33",
-      "account_id": "SIM-003",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "NIGHTUSDT",
-      "side": "LONG",
-      "entry_price": 0.02091,
-      "exit_price": 0.02103,
-      "pnl_usd": 0.05,
-      "result": "WIN",
-      "notes": "WIN on NIGHTUSDT (PnL: +0.57%, Net: $+0.05 Fase 3)",
-      "context": {
-        "score": 10,
-        "rsi_15m": 45.35,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 10:54:33",
       "account_id": "SIM-091",
@@ -8426,6 +8375,57 @@
       "context": {
         "score": 18,
         "rsi_15m": 60.34,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 09:30:58",
+      "account_id": "SIM-054",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ZROUSDT",
+      "side": "LONG",
+      "entry_price": 1.219,
+      "exit_price": 1.212,
+      "pnl_usd": -0.13,
+      "result": "LOSS",
+      "notes": "LOSS on ZROUSDT (PnL: -0.57%, Net: $-0.13 Fase 1)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.29,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 09:30:58",
+      "account_id": "SIM-060",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ZROUSDT",
+      "side": "LONG",
+      "entry_price": 1.219,
+      "exit_price": 1.212,
+      "pnl_usd": -0.53,
+      "result": "LOSS",
+      "notes": "LOSS on ZROUSDT (PnL: -0.57%, Net: $-0.53 Fase 1)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 56.29,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 09:30:58",
+      "account_id": "SIM-093",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "JASMYUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0042,
+      "exit_price": 0.00419,
+      "pnl_usd": 1.03,
+      "result": "WIN",
+      "notes": "WIN on JASMYUSDT (PnL: +0.24%, Net: $+1.03 Fase 2)",
+      "context": {
+        "score": 18,
+        "rsi_15m": 54.13,
         "macro_trend_4h": "NEUTRAL"
       }
     }
