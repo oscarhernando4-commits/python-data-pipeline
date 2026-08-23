@@ -114,11 +114,23 @@ def _extract_technical_rule(symbol, side, result_type, context):
     rsi = context.get("rsi_15m")
     score = context.get("score")
     trend = context.get("macro_trend_4h", "")
-    
-    if rsi is None and score is None:
-        return None
+    vol_surge_1m = context.get("vol_surge_1m")
+    fii_score = context.get("fii_score")
+    obv_trend = context.get("obv_trend")
+    atr_pct = context.get("atr_pct_15m")
     
     parts = []
+    if vol_surge_1m is not None:
+        if vol_surge_1m >= 2.0: parts.append("Vol1M:Explosive(>=2.0x)")
+        elif vol_surge_1m < 0.70: parts.append("Vol1M:Dead(<0.70x)")
+    if obv_trend:
+        parts.append(f"OBV:{obv_trend}")
+    if fii_score is not None:
+        if fii_score >= 60: parts.append("FII:Institutional(>=60)")
+        elif fii_score < 45: parts.append("FII:Weak(<45)")
+    if atr_pct is not None:
+        if atr_pct < 0.40: parts.append("ATR:Zombie(<0.40%)")
+        elif atr_pct >= 0.45: parts.append("ATR:HighBeta(>=0.45%)")
     if rsi is not None:
         if rsi < 30: parts.append("RSI<30(Oversold)")
         elif rsi < 40: parts.append("RSI:30-40(Weak)")
@@ -133,6 +145,8 @@ def _extract_technical_rule(symbol, side, result_type, context):
     if trend:
         parts.append(f"Trend:{trend}")
     
+    if not parts:
+        return None
     condition = " + ".join(parts)
     
     if result_type.upper() == "LOSS":

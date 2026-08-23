@@ -178,9 +178,13 @@ def get_asset_dna_archetype(symbol: str, atr_15m_pct: float = 0.30, price: float
     config["symbol"] = symbol
     config["clean_symbol"] = clean_sym
     config["is_blacklisted_fan_token"] = False
-    config["is_low_volatility_zombie"] = bool(atr_15m_pct < 0.30 and clean_sym not in ["BTC", "ETH"])
+    
+    # 🚫 VETO ESTRICTO ANTI-ZOMBI Y ANTI-MEGA-CAP PESADA:
+    # Para scalping de $15 USD y meta >= +2% diario, activos con ATR < 0.40% o Blue-Chips lentas están descalificados.
+    is_slow_major = bool(clean_sym in BLUE_CHIP_CORE_TOKENS and atr_15m_pct < 0.45)
+    config["is_low_volatility_zombie"] = bool(atr_15m_pct < 0.40 or is_slow_major)
     if config["is_low_volatility_zombie"]:
-        config["guideline_for_ai"] = "⛔ VETO ACTIVO: Volatilidad insuficiente (ATR 15M < 0.30%). Prohibido comprar activos zombi sin momentum."
+        config["guideline_for_ai"] = "⛔ VETO ACTIVO: Volatilidad/Elasticidad insuficiente (ATR 15M < 0.40% o Mega-Cap lenta). Prohibido para scalping spot."
     return config
 
 

@@ -518,12 +518,12 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
     ESTRUCTURA DE LOS 7 AGENTES INSTITUCIONALES EN DELIBERACIÓN CUÁNTICA:
     1. 🕵️ AGENTE 1 (Macro 1D & Guardián de Bitcoin): Evalúa el ciclo macro 1D ({wall_street_str}), Fear&Greed ({fear_greed.get('score')}), estabilidad de BTC (BTC Guard). VETA si altcoin_impact=AVOID o si BTC cae con fuerza.
-    2. 📊 AGENTE 2 (Sniper de Suelo 2M & Elasticidad ADN): Exige entrada en el PISO de 2 Minutos (RSI 2M <= 52.0 y primera vela 2M verde sobre soporte). VETA categóricamente entradas tardías donde el rebote de 2M ya ocurrió (RSI 2M >= 60.0). Exige comprar en la base exacta, jamás perseguir velas verdes ya estiradas.
+    2. 📊 AGENTE 2 (Sniper de Suelo 2M & Elasticidad High-Beta): Exige entrada en el PISO de 2 Minutos (RSI 2M <= 52.0 y soporte activo) y Alta Elasticidad (ATR 15M >= 0.45%). VETA categóricamente entradas tardías donde el rebote de 2M ya ocurrió (RSI 2M >= 54.0) o tokens lentos con ATR < 0.40%.
     3. 🌊 AGENTE 3 (Auditor de Libro, CVD & Squeeze Micro): Exige Bids >= 46%, Muro comprador > $15k USDT, CVD Taker positivo/neutral y OBV != DISTRIBUTING. VETA si OBV=DISTRIBUTING o si Muro Bids < $15k USDT (libro delgado / spoofing).
     4. 🧩 AGENTE 4 (Analista Sectorial & Temporal): Prioriza sector líder ({sector_summary['top_sector']}) y valida la SESION TEMPORAL. VETO si VETO_TEMPORAL o BLACKOUT con multiplicador < 0.60.
-    5. 🧠 AGENTE 5 (Memoria RAG & Auto-Aprendizaje Cuántico): Valida el ADN de la moneda, reputación histórica y patrones de catalizadores ganadores aprendidos. VETA patrones de pérdida recurrentes (ej: sangrado post-pump sin volumen).
-    6. 🛡️ AGENTE 6 (Chief Risk Officer & Veto de Dump): Veta cualquier activo con Riesgo de Dump >= 40%, libro descompensado (Bids < 45% o Muro < $15k), OBV=DISTRIBUTING, DUMP_RISK_FUNDING, o activo en cuarentena/cooldown de 2 horas.
-    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza el consenso. Si el mejor candidato está en zona de soporte/pullback con volumen fresco y libre de vetos, APRUEBA "BUY_LONG" con Stop Loss Asimétrico de -0.50% para ejecución inmediata.
+    5. 🧠 AGENTE 5 (Memoria RAG & Auto-Aprendizaje Cuántico): Valida el ADN de la moneda, reputación histórica y patrones aprendidos. VETA permanentemente: (a) Mega-Caps / Zombis (TRX, BNB, BTC, ETH), (b) Micro-volumen muerto (<0.70x), (c) Distribución institucional, (d) Re-entradas en la misma moneda en menos de 4h. PREMIA cohetes con Vol1M >= 2.0x, FII >= 60 y Retesteo Ola 2 (como XLM, KAIA, COMP, DCR).
+    6. 🛡️ AGENTE 6 (Chief Risk Officer & Veto de Dump): Veta cualquier activo con Riesgo de Dump >= 40%, libro descompensado (Bids < 45% o Muro < $15k), OBV=DISTRIBUTING, DUMP_RISK_FUNDING, o activo en cuarentena/cooldown de 4 horas.
+    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza el consenso. Si el mejor candidato es un activo de Alta Elasticidad (ATR >= 0.45%) en zona de soporte/pullback con volumen fresco y libre de vetos, APRUEBA "BUY_LONG" con Stop Loss Asimétrico de -0.50% para ejecución inmediata.
 
     {exec_learning_summary}
 
@@ -540,11 +540,11 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     PASO 1 🔬 LECTURA DE LA RADIOGRAFÍA 360° Y CANAL FRACTAL:
     - Revisa la RADIOGRAFÍA 360° ADN y el CANAL FRACTAL (% Suelo a Cima).
     - 💎 ARQUETIPO DCR / OLA 2 GOLDEN RETEST: Si un activo muestra "PATRÓN FRACTAL DCR" (Retesteo de Oro Ola 2 en MA25 o Resorte Comprimido 1M), dale MÁXIMA PRIORIDAD de compra porque ofrece el ratio Riesgo/Beneficio más asimétrico del mercado (>3:1).
-    - 🎯 REGLA DE ORO DE PISO 2M (Comprar en el Suelo Real): Exige que las velas de 2M estén en el PISO (RSI 2M <= 52.0 y soporte activo). Si el RSI 2M ya superó 60.0 tras una vela verde grande, ese micro-impulso ya se consumió: VÉTALO por entrada tardía.
+    - 🎯 REGLA DE ORO DE PISO 2M (Comprar en el Suelo Real): Exige que las velas de 2M estén en el PISO (RSI 2M <= 52.0 y soporte activo). Si el RSI 2M ya superó 54.0 tras una vela verde grande, ese micro-impulso ya se consumió: VÉTALO por entrada tardía.
     - ZONA ÓPTIMA DE COMPRA (Sweet-Spot): Prioriza activos en la BASE o Pullback Constructivo (1H <= 55%, 15M <= 55%, 1M <= 50%).
     - ALPHA & ABSORCIÓN: Premia fuertemente activos con Alpha vs BTC > +0.20% y Mecha de Absorción 1M >= 15% (compradores comprando el dip).
     - 🚫 VETO TOTAL CIMA / TECHO: PROHIBIDO comprar si Canal 1H >= 75% o si está a menos de 0.40% del Máximo 24H.
-    - 🚫 VETO ZOMBI: Veta activos con ATR 15M < 0.30% (ej: TRX) o Fan Tokens ilíquidos.
+    - 🚫 VETO ZOMBI / MEGA-CAP: Veta activos con ATR 15M < 0.40% (ej: TRX, BNB, ADA, BTC, ETH) o Fan Tokens ilíquidos. Exige alta elasticidad (ATR >= 0.45%) para scalping rentable.
     
     PASO 2 ⏰ CONTEXTO MACRO Y DESACOPLAMIENTO INTELIGENTE:
     - Si BTC está en caída libre (altcoin_impact=AVOID), HOLD general obligatorio.
@@ -552,11 +552,11 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     
     PASO 3 ⚡ GESTIÓN DE RIESGO ASIMÉTRICO (SL -0.50% + WICK SNIPER):
     - Recuerda que el sistema cuenta con Stop Loss Estricto de -0.50% y Wick Sniper de toma de ganancias rápida.
-    - Por lo tanto, no seas ultra-rígido: si el activo #1 está en una buena base fractal con volumen fresco, SÉ ÁGIL, DINÁMICO Y DECISIVO.
+    - Por lo tanto, no seas ultra-rígido: si el activo #1 está en una buena base fractal con volumen fresco y alta elasticidad, SÉ ÁGIL, DINÁMICO Y DECISIVO.
     
     PASO 4 👑 SELECCIÓN DEL CAMPEÓN #1 Y VEREDICTO EJECUTIVO:
     - Compara a los finalistas y selecciona al MEJOR ACTIVO DE TODO EL MERCADO.
-    - Si el campeón tiene Score >= 65, RSI saludable (40-70), base fractal sólida y libre de techos, EMITE TU VEREDICTO CON "BUY_LONG", approved: true, confidence: 85-95.
+    - Si el campeón tiene Score >= 70, RSI saludable (35-54 en micro / 40-60 en macro), alta elasticidad y libre de vetos, EMITE TU VEREDICTO CON "BUY_LONG", approved: true, confidence: 85-95.
     - Si todo el mercado está en pánico o no hay ningún candidato viable, responde "selected_symbol": "NONE", "action": "HOLD".
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA (7 AGENTES):

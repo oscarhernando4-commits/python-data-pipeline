@@ -1239,9 +1239,19 @@ def quick_position_heartbeat():
             state["trades_count"] = state.get("trades_count", 0) + 1
             state["net_pnl_usd"] = round(state.get("net_pnl_usd", 0.0) + pnl_usd, 4)
             
-            # 📖 Guardar en Learning Engine para memoria de futuros trades
+            # 📖 Guardar en Learning Engine para memoria y aprendizaje de futuros trades
             try:
                 import learning_engine
+                trade_ctx = {
+                    "score": pos.get("score", 80),
+                    "rsi_15m": pos.get("rsi_15m", 50.0),
+                    "atr_pct_15m": pos.get("atr_pct_15m", 0.45),
+                    "vol_surge": pos.get("vol_surge", 1.0),
+                    "vol_surge_1m": pos.get("vol_surge_1m", 1.0),
+                    "fii_score": pos.get("fii_score", 60),
+                    "obv_trend": pos.get("obv_trend", "ACCUMULATING"),
+                    "macro_trend_4h": "NEUTRAL"
+                }
                 learning_engine.record_trade_outcome(
                     symbol=sym,
                     side="LONG",
@@ -1251,7 +1261,8 @@ def quick_position_heartbeat():
                     result_type="WIN" if is_win_exit else "LOSS",
                     notes=f"Real Money Trade exited via {exit_reason} (Fase {new_phase}, PnL: {current_pnl_pct:+.2f}%)",
                     account_id="R-01",
-                    group_name="CUENTA REAL"
+                    group_name="CUENTA REAL",
+                    context=trade_ctx
                 )
             except Exception as le_err:
                 print(f"⚠️ Learning Engine registro fallido: {le_err}")
@@ -1522,10 +1533,20 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                             
                         try:
                             import learning_engine
+                            trade_ctx = {
+                                "score": state.get("position", {}).get("score", 80),
+                                "rsi_15m": state.get("position", {}).get("rsi_15m", 50.0),
+                                "atr_pct_15m": state.get("position", {}).get("atr_pct_15m", 0.45),
+                                "vol_surge": state.get("position", {}).get("vol_surge", 1.0),
+                                "vol_surge_1m": state.get("position", {}).get("vol_surge_1m", 1.0),
+                                "fii_score": state.get("position", {}).get("fii_score", 60),
+                                "obv_trend": state.get("position", {}).get("obv_trend", "ACCUMULATING"),
+                                "macro_trend_4h": "NEUTRAL"
+                            }
                             learning_engine.record_trade_outcome(
                                 symbol=active_symbol, side="BUY", entry_price=entry, exit_price=active_current_price,
                                 pnl_usd=pnl_usd, result_type=res_type, notes=f"Real Money Trade closed with {pnl_pct:.2f}%",
-                                account_id="R-01", group_name="CUENTA REAL"
+                                account_id="R-01", group_name="CUENTA REAL", context=trade_ctx
                             )
                         except Exception as le:
                             print(f"Learning engine error: {le}")
@@ -1680,17 +1701,17 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 dist_24h_high = mtf_res.get("dist_to_24h_high_pct", 999.0)
                 is_at_daily_ceiling = mtf_res.get("is_at_daily_resistance_ceiling", False)
                 
-                # 🚫 1. COOLDOWN DE 2 HORAS ANTI-RESACA POST-TRADE (Evita re-entrar en trampas como COTI)
+                # 🚫 1. COOLDOWN DE 4 HORAS ANTI-RESACA POST-TRADE (Evita re-entrar en trampas como NEXO o COTI)
                 last_closed_sym = state.get("_last_closed_symbol")
                 last_closed_time = state.get("_last_closed_time", 0)
                 now_epoch = time.time()
-                if best_symbol == last_closed_sym and (now_epoch - last_closed_time) < 7200:
+                if best_symbol == last_closed_sym and (now_epoch - last_closed_time) < 14400:
                     mins_passed = int((now_epoch - last_closed_time) / 60)
                     is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} en COOLDOWN OBLIGATORIO DE 2 HORAS (cerrado hace {mins_passed}m, faltan {120-mins_passed}m). Prohibido reentrar en resaca.")
+                    print(f"⛔ Compra rechazada: {best_symbol} en COOLDOWN OBLIGATORIO DE 4 HORAS (cerrado hace {mins_passed}m, faltan {240-mins_passed}m). Prohibido reentrar en resaca.")
                 elif arch_dna.get("is_low_volatility_zombie", False):
                     is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} descartado por VOLATILIDAD INSUFICIENTE (ATR 15M < 0.30%). Prohibido operar activos zombi sin movimiento.")
+                    print(f"⛔ Compra rechazada: {best_symbol} descartado por VOLATILIDAD INSUFICIENTE (ATR 15M < 0.40% o Mega-Cap lenta). Prohibido operar activos zombi sin movimiento.")
                 elif is_at_daily_ceiling:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} bloqueado por TECHO DE RESISTENCIA 30M/24H (Canal 30M: {range_pos_30m*100:.0f}%, Distancia a Máximo 24H: +{dist_24h_high:.2f}%). Prohibido comprar la cima.")
@@ -1834,8 +1855,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         "initial_sl_pct": arch_profile.get("initial_sl_pct", -0.50),
                         "max_stagnation_minutes": arch_profile.get("max_stagnation_minutes", 60),
                         "vol_surge": mtf_res.get("vol_surge_2m", 1.0) if 'mtf_res' in locals() else 1.0,
+                        "vol_surge_1m": mtf_res.get("vol_surge_1m", 1.0) if 'mtf_res' in locals() else 1.0,
+                        "score": mtf_res.get("multi_tf_score", 80) if 'mtf_res' in locals() else 80,
+                        "rsi_15m": mtf_res.get("rsi_15m", 50.0) if 'mtf_res' in locals() else 50.0,
+                        "fii_score": mtf_res.get("fii_score", 60) if 'mtf_res' in locals() else 60,
+                        "obv_trend": mtf_res.get("obv_trend", "ACCUMULATING") if 'mtf_res' in locals() else "ACCUMULATING",
                         "entry_time_ms": int(time.time() * 1000),
-                        "atr_pct_15m": mtf_res.get("atr_pct_15m", 0.30) if 'mtf_res' in locals() else 0.30,
+                        "atr_pct_15m": mtf_res.get("atr_pct_15m", 0.45) if 'mtf_res' in locals() else 0.45,
                         "ma25_5m": mtf_res.get("ma25_5m", current_price) if 'mtf_res' in locals() else current_price,
                         "dna_tier": mtf_res.get("dna_profile", {}).get("dna_tier", "BALANCED_SWING") if 'mtf_res' in locals() else "BALANCED_SWING",
                         "optimal_trailing_slack_pct": mtf_res.get("dna_profile", {}).get("optimal_trailing_slack_pct", 0.45) if 'mtf_res' in locals() else 0.45,
