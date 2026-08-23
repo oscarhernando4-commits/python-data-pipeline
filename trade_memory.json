@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3361,
+    "total_trades": 3362,
     "wins": 1763,
-    "losses": 1598,
-    "win_rate_pct": 52.45,
-    "total_pnl_usd": 7090.5113765487995
+    "losses": 1599,
+    "win_rate_pct": 52.44,
+    "total_pnl_usd": 7090.381376548799
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on STXUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on XPLUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZROUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LDOUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on WIFUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on KAIAUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on COMPUSDT)",
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DASHUSDT)"
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on DASHUSDT)",
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ORDIUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ORDIUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 13:24:32",
-      "account_id": "SIM-000 (Réplica Real)",
-      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
-      "symbol": "NEXOUSDT",
-      "side": "SHORT",
-      "entry_price": 0.833,
-      "exit_price": 0.82,
-      "pnl_usd": 0.06,
-      "result": "WIN",
-      "notes": "WIN on NEXOUSDT (PnL: +1.56%, Net: $+0.06 Fase 4)",
-      "context": {
-        "score": 77,
-        "rsi_15m": 49.59,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 13:28:32",
       "account_id": "SIM-039",
@@ -8414,6 +8397,23 @@
       "context": {
         "score": 0,
         "rsi_15m": 63.86,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 12:36:54",
+      "account_id": "SIM-044",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "ORDIUSDT",
+      "side": "LONG",
+      "entry_price": 4.098,
+      "exit_price": 4.074,
+      "pnl_usd": -0.13,
+      "result": "LOSS",
+      "notes": "LOSS on ORDIUSDT (PnL: -0.59%, Net: $-0.13 Fase 1)",
+      "context": {
+        "score": 76,
+        "rsi_15m": 58.87,
         "macro_trend_4h": "NEUTRAL"
       }
     }
