@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3079,
-    "wins": 1641,
+    "total_trades": 3080,
+    "wins": 1642,
     "losses": 1438,
-    "win_rate_pct": 53.3,
-    "total_pnl_usd": 3603.8369765487905
+    "win_rate_pct": 53.31,
+    "total_pnl_usd": 3603.8469765487907
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on PEOPLEUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DCRUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DOGEUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DASHUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on DOTUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on TSTUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on NEARUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on IMXUSDT)",
-      "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on TRXUSDT)"
+      "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on TRXUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GIGGLEUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 05:15:06",
-      "account_id": "SIM-094",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "CFXUSDT",
-      "side": "SHORT",
-      "entry_price": 0.04809,
-      "exit_price": 0.04946,
-      "pnl_usd": -70.1,
-      "result": "LOSS",
-      "notes": "LOSS on CFXUSDT (PnL: -2.85%, Net: $-70.10 Fase 1)",
-      "context": {
-        "score": 80,
-        "rsi_15m": 38.0,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 05:15:06",
       "account_id": "SIM-097",
@@ -8470,6 +8453,23 @@
       "context": {
         "score": 62,
         "rsi_15m": 32.64,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 03:18:58",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "GIGGLEUSDT",
+      "side": "SHORT",
+      "entry_price": 37.87,
+      "exit_price": 37.75,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on GIGGLEUSDT (PnL: +0.32%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 7,
+        "rsi_15m": 58.65,
         "macro_trend_4h": "NEUTRAL"
       }
     }
