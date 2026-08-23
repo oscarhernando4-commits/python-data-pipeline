@@ -15,7 +15,7 @@
     "side": "LONG",
     "quantity": 42.8,
     "break_even": false,
-    "highest_price": 0.3454,
+    "highest_price": 0.3455,
     "phase": 1,
     "archetype": "BLUE_CHIP_CORE",
     "archetype_label": "🏛️ BLUE-CHIP INSTITUCIONAL (L1 / Core)",
@@ -28,7 +28,9 @@
     "dna_tier": "LOW_BETA_STABLE",
     "optimal_trailing_slack_pct": 0.35,
     "target_resistance_price": 0.3502,
-    "pump_probability_pct": 45
+    "pump_probability_pct": 45,
+    "holding_cycles": 1,
+    "volatility_regime": "🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (🏛️ Cima +0.03% | SL Defensivo -0.95%)"
   },
   "last_trade_time": "26-08-23<br>01:34",
   "status": "🔵 En Vivo LONG (TRXUSDT @ $0.3454)",
