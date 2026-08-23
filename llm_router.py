@@ -503,7 +503,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         candidates_prompt_text += f"- 🏭 SECTOR: {token_sector} (Sector mas caliente hoy: {hottest_sec}){sector_hot_str}{already_str}\n"
         candidates_prompt_text += "------------------------------------\n"
 
-    print(f"✅ [Comité Institucional 7 Agentes] Consultando al Súper-Cerebro Gemini AI (Gemini 3.6 Flash) para el TOP {len(candidates_data_list)} simultáneo...", flush=True)
+    print(f"✅ [Comité Institucional 7 Agentes] Consultando al Súper-Cerebro Gemini AI (Gemini 3.1 Flash Lite) para el TOP {len(candidates_data_list)} simultáneo...", flush=True)
 
     try:
         from data_fetcher import fetch_wall_street_macro_context
@@ -545,18 +545,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     - ZONA ÓPTIMA DE COMPRA (Sweet-Spot): Prioriza activos en la BASE o Pullback Constructivo (1H <= 55%, 15M <= 50%, 5M <= 50%, 1M <= 40%).
     - ALPHA & ABSORCIÓN: Premia fuertemente activos con Alpha vs BTC > +0.20% y Mecha de Absorción 1M >= 15% (compradores comprando el dip en soporte).
     - 🚫 VETO DE VOLUMEN MUERTO (Anti-Estancamiento): PROHIBIDO comprar si el candidato tiene volumen muerto (Vol1M < 0.80x o Vol15M < 0.80x). Exige compradores reales activos (Vol1M >= 1.0x o Vol15M >= 1.2x).
-    - 🚫 VETO TOTAL CIMA / TECHO: PROHIBIDO comprar si Canal 1H >= 70% o Canal 15M >= 60% o si está a menos de 0.40% del Máximo 24H.
-    - 🚫 VETO ZOMBI / MEGA-CAP: Veta activos con ATR 15M < 0.40% (ej: TRX, BNB, ADA, BTC, ETH) o Fan Tokens ilíquidos. Exige alta elasticidad (ATR >= 0.45%) para scalping rentable.
-    
-    PASO 2 ⏰ CONTEXTO MACRO Y DESACOPLAMIENTO INTELIGENTE:
-    - Si BTC está en caída libre (altcoin_impact=AVOID), HOLD general obligatorio.
-    - EXCEPCIÓN CUÁNTICA: Si un activo muestra desacoplamiento positivo masivo (Alpha vs BTC >= +1.0% con FII >= 75 y CVD > 60%), puede ser aprobado como líder de rotación.
-    
-    PASO 3 ⚡ GESTIÓN DE RIESGO ASIMÉTRICO (SL -0.50% + WICK SNIPER):
-    - Recuerda que el sistema cuenta con Stop Loss Estricto de -0.50% y Wick Sniper de toma de ganancias rápida.
-    - Por lo tanto, no seas ultra-rígido: si el activo #1 está en una buena base fractal con volumen fresco y alta elasticidad, SÉ ÁGIL, DINÁMICO Y DECISIVO.
-    
-    PASO 4 👑 SELECCIÓN DEL CAMPEÓN #1 Y VEREDICTO EJECUTIVO:
+    REGLAS DE DECISIÓN DEL CEO:
     - Compara a los finalistas y selecciona al MEJOR ACTIVO DE TODO EL MERCADO.
     - Si el campeón tiene Score >= 70, RSI saludable (35-54 en micro / 40-60 en macro), alta elasticidad y libre de vetos, EMITE TU VEREDICTO CON "BUY_LONG", approved: true, confidence: 85-95.
     - Si todo el mercado está en pánico o no hay ningún candidato viable, responde "selected_symbol": "NONE", "action": "HOLD".
@@ -583,15 +572,16 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     payload = {
         "contents": [{"parts": [{"text": prompt_text}]}],
         "generationConfig": {
-            "temperature": 0.10,          # Baja temperatura = decisiones más consistentes
-            "maxOutputTokens": 2500,       # Cap óptimo para que Gemini 3.6 Flash complete la deliberación sin truncar JSON
+            "temperature": 0.10,          # Baja temperatura = decisiones consistentes
+            "maxOutputTokens": 2500,       # Cap óptimo para deliberación completa
             "responseMimeType": "application/json"
         }
     }
     
-    # 🏎️ SUPER-CEREBRO GEMINI-3.6-FLASH (Modelo Oficial Único de Razonamiento Cuántico)
-    # Rota a través de las 10 claves Gemini con timeout y tokens óptimos
+    # 🏎️ SUPER-CEREBRO GEMINI FLASH LITE (Ultra-Rápido, 30 RPM, Máxima Disponibilidad Libre de 429)
     models_to_try = [
+        "gemini-3.1-flash-lite",
+        "gemini-2.5-flash-lite",
         "gemini-3.6-flash"
     ]
     
@@ -608,7 +598,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
                 data=json.dumps(payload).encode('utf-8'),
                 headers={'Content-Type': 'application/json'}
             )
-            with urllib.request.urlopen(req, timeout=18) as response:
+            with urllib.request.urlopen(req, timeout=12) as response:
                 res_data = json.loads(response.read().decode('utf-8'))
                 if "candidates" in res_data and len(res_data["candidates"]) > 0:
                     text_res = res_data["candidates"][0]["content"]["parts"][0]["text"]
@@ -626,39 +616,21 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
             pass
         return None
     
-    # 🚀 MODO CONCURRENTE ÁGIL: Dispara en grupos de 3 keys con failover instantáneo
-    # Evita quemar la cuota de las 10 keys a la vez y obtiene respuesta en < 3.5s
-    import concurrent.futures
-    
+    # 🚀 MODO SECUENCIAL INTELIGENTE CON FAILOVER ULTRA-RÁPIDO:
+    # Rota 1 clave por ciclo para no saturar RPM; si una da 429, salta inmediatamente a la siguiente
     for model_name in models_to_try:
         keys_available = get_gemini_api_keys()
         if not keys_available or keys_available == [""]:
             continue
         rr_idx = _get_key_index()
         keys_rotated = [keys_available[(i + rr_idx) % len(keys_available)] for i in range(len(keys_available))]
-        
-        # Test in agile bursts of 3 keys
-        batch_size = min(3, len(keys_rotated))
-        for b_start in range(0, len(keys_rotated), batch_size):
-            batch_keys = keys_rotated[b_start:b_start + batch_size]
-            tasks = [(model_name, k) for k in batch_keys]
-            
-            try:
-                with concurrent.futures.ThreadPoolExecutor(max_workers=len(batch_keys)) as executor:
-                    futures = {executor.submit(_try_one_key, t): t for t in tasks}
-                    for future in concurrent.futures.as_completed(futures, timeout=18):
-                        result = future.result()
-                        if result is not None:
-                            parsed, key_label, used_model = result
-                            _advance_key_index(key_label)
-                            print(f"✅ [{used_model}] Respuesta recibida de {key_label} (ágil).", flush=True)
-                            return parsed
-            except concurrent.futures.TimeoutError:
-                continue
-            except Exception:
-                continue
-    
-    print("🛡️ VETO DE SEGURIDAD: Todos los modelos de IA fuera de línea. Candado de CERO compras activado.")
+        for key in keys_rotated:
+            res = _try_one_key((model_name, key))
+            if res is not None:
+                parsed, key_label, used_model = res
+                _advance_key_index(key_label)
+                print(f"✅ [{used_model}] Respuesta recibida de {key_label} (ágil).", flush=True)
+                return parsed
     return {
         "selected_symbol": "NONE",
         "action": "HOLD",
