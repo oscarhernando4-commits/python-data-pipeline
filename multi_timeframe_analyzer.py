@@ -1198,11 +1198,12 @@ def analyze_multi_timeframe_candles(symbol):
     )
     
     # Suelo Estructural & Contextual (5M / 15M / 30M / 1H)
+    # Permite pullbacks constructivos en base (15M <= 55%, 5M <= 55%, 1H <= 72%)
     is_structural_floor_ok = bool(
-        range_position_5m <= 0.50 and
+        range_position_5m <= 0.55 and
         range_position_15m <= 0.55 and
-        range_position_30m <= 0.60 and
-        range_position_1h <= 0.60
+        range_position_30m <= 0.65 and
+        range_position_1h <= 0.72
     )
 
     # Confluencia Fractal Suprema de Suelo (TODAS las escalas en la base):

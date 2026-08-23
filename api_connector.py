@@ -1765,7 +1765,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
             vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
             
-            if not is_confluent_floor and not (vol_1m_now >= 3.0 or vol_15m_now >= 2.8):
+            is_deep_pullback_base = bool(range_pos_15m <= 0.45 and range_pos_5m <= 0.45 and range_pos_1m <= 0.45)
+            if not is_confluent_floor and not is_deep_pullback_base and not (vol_1m_now >= 2.5 or vol_15m_now >= 2.0):
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Falta de Suelo Fractal Confluente:")
                 print(f"     Canales: [1M: {range_pos_1m*100:.0f}% | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% | 15M: {range_pos_15m*100:.0f}% | 30M: {range_pos_30m*100:.0f}% | 1H: {range_pos_1h*100:.0f}%]")
                 continue
@@ -1785,16 +1786,17 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             spread_now = ob_info.get("spread_pct", 0.0)
             bid_dom_now = ob_info.get("bid_dominance_pct", 50.0)
             
-            if spread_now > 0.18:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Spread excesivo ({spread_now:.3f}% > 0.180%).")
+            max_allowed_spread = 0.30 if ob_info.get("bid_vol_usdt", 0.0) >= 35000.0 else 0.26
+            if spread_now > max_allowed_spread:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Spread excesivo ({spread_now:.3f}% > {max_allowed_spread:.3f}%).")
                 continue
                 
-            if bid_dom_now < 50.0:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Bids insuficientes ({bid_dom_now:.1f}% < 50.0%).")
+            if bid_dom_now < 49.0:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Bids insuficientes ({bid_dom_now:.1f}% < 49.0%).")
                 continue
                 
-            if ob_info.get("bid_vol_usdt", 0.0) > 0 and ob_info.get("bid_vol_usdt", 0.0) < 20000.0:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Muro Bids delgado (${ob_info.get('bid_vol_usdt', 0.0):,.0f} < $20k).")
+            if ob_info.get("bid_vol_usdt", 0.0) > 0 and ob_info.get("bid_vol_usdt", 0.0) < 15000.0:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Muro Bids delgado (${ob_info.get('bid_vol_usdt', 0.0):,.0f} < $15k).")
                 continue
                 
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
@@ -1806,14 +1808,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             tf_1m_up = mtf_res.get("tf_1m_up", False)
             is_1m_wick = mtf_res.get("is_1m_lower_wick_absorption", False)
             
-            # 🚀 REGLA DE ORO DE IGNICIÓN DE VOLUMEN MICRO (Elimina pérdidas por estancamiento tipo NEXO/AXS):
-            # PROHIBIDO comprar si el volumen de 1M o 15M está muerto (< 0.70x)
-            is_dead_volume = (vol_1m_now < 0.70 and vol_15m_now < 0.70)
-            has_active_ignition = (vol_1m_now >= 1.00 or vol_2m_now >= 1.10 or vol_15m_now >= 1.20 or vol_acc >= 1.40 or is_pre_pump or is_30s_burst)
-            has_trigger_candle = (tf_1m_up or is_1m_wick)
+            # 🚀 REGLA DE IGNICIÓN DE VOLUMEN INTELIGENTE (Equilibrio perfecto: protege contra estancamiento sin frenar setups A+):
+            is_dead_volume = (vol_1m_now < 0.40 and vol_15m_now < 0.50 and fii < 65)
+            has_active_ignition = (vol_1m_now >= 0.80 or vol_2m_now >= 0.90 or vol_15m_now >= 1.10 or vol_acc >= 1.30 or is_pre_pump or is_30s_burst or fii >= 65)
+            has_trigger_candle = (tf_1m_up or is_1m_wick or mtf_res.get("is_ground_zero_micro_ignition", False))
             
             if is_dead_volume or not has_active_ignition:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Volumen Muerto/Sin Ignición (1M={vol_1m_now:.2f}x, 15M={vol_15m_now:.2f}x). Exige compradores activos.")
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Volumen Muerto/Sin Ignición (1M={vol_1m_now:.2f}x, 15M={vol_15m_now:.2f}x, FII={fii}). Exige compradores activos.")
                 continue
                 
             if not has_trigger_candle:
