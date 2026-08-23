@@ -15,7 +15,7 @@
     "side": "LONG",
     "quantity": 17.9,
     "break_even": false,
-    "highest_price": 0.821,
+    "highest_price": 0.825,
     "phase": 1,
     "archetype": "SECTOR_ROTATION",
     "archetype_label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
@@ -28,7 +28,9 @@
     "dna_tier": "HIGH_BETA_RUNNER",
     "optimal_trailing_slack_pct": 0.86,
     "target_resistance_price": 0.86,
-    "pump_probability_pct": 30
+    "pump_probability_pct": 30,
+    "holding_cycles": 5,
+    "volatility_regime": "🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (🧩 Cima +0.49% | SL Defensivo -0.50%)"
   },
   "last_trade_time": "26-08-23<br>09:55",
   "status": "🔵 En Vivo LONG (NEXOUSDT @ $0.8210)",
