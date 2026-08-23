@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3331,
+    "total_trades": 3332,
     "wins": 1751,
-    "losses": 1580,
-    "win_rate_pct": 52.57,
-    "total_pnl_usd": 7015.769976548798
+    "losses": 1581,
+    "win_rate_pct": 52.55,
+    "total_pnl_usd": 7015.669976548797
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BONKUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on HEMIUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TRBUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on IMXUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on IMXUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHFIUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GIGGLEUSDT)",
-      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHFIUSDT)"
+      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHFIUSDT)",
+      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ENAUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on COTIUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 12:32:33",
-      "account_id": "SIM-060",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "DCRUSDT",
-      "side": "LONG",
-      "entry_price": 13.75,
-      "exit_price": 13.91,
-      "pnl_usd": 0.74,
-      "result": "WIN",
-      "notes": "WIN on DCRUSDT (PnL: +1.16%, Net: $+0.74 Fase 3)",
-      "context": {
-        "score": 91,
-        "rsi_15m": 52.66,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 12:38:31",
       "account_id": "SIM-000 (Réplica Real)",
@@ -8416,6 +8399,23 @@
       "result": "LOSS",
       "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (-0.53% <= -0.50%) (Fase 1, PnL: -0.53%)",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-23 11:07:39",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "ENAUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1728,
+      "exit_price": 0.1768,
+      "pnl_usd": -0.1,
+      "result": "LOSS",
+      "notes": "LOSS on ENAUSDT (PnL: -2.31%, Net: $-0.10 Fase 1)",
+      "context": {
+        "score": 9,
+        "rsi_15m": 75.16,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
