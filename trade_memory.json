@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3484,
+    "total_trades": 3487,
     "wins": 1821,
-    "losses": 1663,
-    "win_rate_pct": 52.27,
-    "total_pnl_usd": 9505.0911765488
+    "losses": 1666,
+    "win_rate_pct": 52.22,
+    "total_pnl_usd": 9504.5711765488
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 12:29:26",
-      "account_id": "SIM-081",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "ZENUSDT",
-      "side": "SHORT",
-      "entry_price": 3.911,
-      "exit_price": 5.566,
-      "pnl_usd": -25.44,
-      "result": "LOSS",
-      "notes": "LOSS on ZENUSDT (PnL: -42.32%, Net: $-25.44 Fase 1)",
-      "context": {
-        "score": 12,
-        "rsi_15m": 73.84,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 12:29:26",
-      "account_id": "SIM-097",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "TRXUSDT",
-      "side": "SHORT",
-      "entry_price": 0.3401,
-      "exit_price": 0.3444,
-      "pnl_usd": -0.14,
-      "result": "LOSS",
-      "notes": "LOSS on TRXUSDT (PnL: -1.26%, Net: $-0.14 Fase 1)",
-      "context": {
-        "score": 21,
-        "rsi_15m": 61.68,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 18:52:58",
-      "account_id": "SIM-018",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "SHIBUSDT",
-      "side": "LONG",
-      "entry_price": 5.32e-06,
-      "exit_price": 5.48e-06,
-      "pnl_usd": 1.41,
-      "result": "WIN",
-      "notes": "WIN on SHIBUSDT (PnL: +3.01%, Net: $+1.41 Fase 5)",
-      "context": {
-        "score": 42,
-        "rsi_15m": 44.54,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 15:32:52",
       "account_id": "R-01",
@@ -8644,6 +8593,78 @@
       "context": {
         "score": 38,
         "rsi_15m": 63.78,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-23 16:50:46",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "PENGUUSDT",
+      "side": "LONG",
+      "entry_price": 0.00934,
+      "exit_price": 0.009268,
+      "pnl_usd": -0.18,
+      "result": "LOSS",
+      "notes": "LOSS on PENGUUSDT (PnL: -0.77%, Net: $-0.18 Fase 1)",
+      "context": {
+        "score": 9,
+        "rsi_15m": 73.43,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-23 16:50:46",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "PENGUUSDT",
+      "side": "LONG",
+      "entry_price": 0.00934,
+      "exit_price": 0.009268,
+      "pnl_usd": -0.17,
+      "result": "LOSS",
+      "notes": "LOSS on PENGUUSDT (PnL: -0.77%, Net: $-0.17 Fase 1)",
+      "context": {
+        "score": 9,
+        "rsi_15m": 73.43,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-23 16:50:46",
+      "account_id": "SIM-053",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "PENGUUSDT",
+      "side": "LONG",
+      "entry_price": 0.00934,
+      "exit_price": 0.009268,
+      "pnl_usd": -0.17,
+      "result": "LOSS",
+      "notes": "LOSS on PENGUUSDT (PnL: -0.77%, Net: $-0.17 Fase 1)",
+      "context": {
+        "score": 9,
+        "rsi_15m": 73.43,
         "macro_trend_4h": "NEUTRAL",
         "fii_score": null,
         "atr_pct_15m": null,
