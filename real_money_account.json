@@ -15,8 +15,8 @@
     "side": "LONG",
     "quantity": 74.0,
     "break_even": false,
-    "highest_price": 0.1972,
-    "phase": 1,
+    "highest_price": 0.1989,
+    "phase": 2,
     "archetype": "HYPER_VOLATILE_SPRINT",
     "archetype_label": "🐆 SPRINT HIPER-VOLÁTIL (Meme / High-Beta)",
     "initial_sl_pct": -1.15,
@@ -28,7 +28,9 @@
     "dna_tier": "HIGH_BETA_RUNNER",
     "optimal_trailing_slack_pct": 1.09,
     "target_resistance_price": 0.2226,
-    "pump_probability_pct": 45
+    "pump_probability_pct": 45,
+    "holding_cycles": 5,
+    "volatility_regime": "🔒 FASE 2 BREAK-EVEN BLINDADO (🐆 Cima +0.86% | Retención 60% -> Piso +0.52%)"
   },
   "last_trade_time": "26-08-23<br>00:42",
   "status": "🔵 En Vivo LONG (XLMUSDT @ $0.1972)",
