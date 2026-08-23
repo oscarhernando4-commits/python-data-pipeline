@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3179,
-    "wins": 1673,
+    "total_trades": 3182,
+    "wins": 1676,
     "losses": 1506,
-    "win_rate_pct": 52.63,
-    "total_pnl_usd": 4855.75507654879
+    "win_rate_pct": 52.67,
+    "total_pnl_usd": 4855.855076548791
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BOMEUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on NEARUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on IMXUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on TRXUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GIGGLEUSDT)",
@@ -49,61 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on GALAUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on GNOUSDT)",
       "BOOST SHORT when RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XTZUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DCRUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DCRUSDT)",
+      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on INJUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 08:16:31",
-      "account_id": "SIM-081",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "GPSUSDT",
-      "side": "SHORT",
-      "entry_price": 0.01128,
-      "exit_price": 0.01157,
-      "pnl_usd": -1.51,
-      "result": "LOSS",
-      "notes": "LOSS on GPSUSDT (PnL: -2.57%, Net: $-1.51 Fase 1)",
-      "context": {
-        "score": 10,
-        "rsi_15m": 43.97,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 08:18:30",
-      "account_id": "SIM-001",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "PUMPUSDT",
-      "side": "LONG",
-      "entry_price": 0.004573,
-      "exit_price": 0.004606,
-      "pnl_usd": 0.06,
-      "result": "WIN",
-      "notes": "WIN on PUMPUSDT (PnL: +0.72%, Net: $+0.06 Fase 3)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 63.55,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 08:18:30",
-      "account_id": "SIM-002",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "PUMPUSDT",
-      "side": "LONG",
-      "entry_price": 0.004573,
-      "exit_price": 0.004606,
-      "pnl_usd": 0.06,
-      "result": "WIN",
-      "notes": "WIN on PUMPUSDT (PnL: +0.72%, Net: $+0.06 Fase 3)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 63.55,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 08:18:30",
       "account_id": "SIM-003",
@@ -8458,6 +8407,57 @@
       "context": {
         "score": 0,
         "rsi_15m": 46.81,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 05:30:46",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "INJUSDT",
+      "side": "LONG",
+      "entry_price": 4.81,
+      "exit_price": 4.821,
+      "pnl_usd": 0.06,
+      "result": "WIN",
+      "notes": "WIN on INJUSDT (PnL: +0.23%, Net: $+0.06 Fase 2)",
+      "context": {
+        "score": 51,
+        "rsi_15m": 43.36,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 05:30:46",
+      "account_id": "SIM-043",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "INJUSDT",
+      "side": "LONG",
+      "entry_price": 4.81,
+      "exit_price": 4.821,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on INJUSDT (PnL: +0.23%, Net: $+0.03 Fase 2)",
+      "context": {
+        "score": 51,
+        "rsi_15m": 43.36,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 05:30:46",
+      "account_id": "SIM-044",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "INJUSDT",
+      "side": "LONG",
+      "entry_price": 4.81,
+      "exit_price": 4.821,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on INJUSDT (PnL: +0.23%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 51,
+        "rsi_15m": 43.36,
         "macro_trend_4h": "NEUTRAL"
       }
     }
