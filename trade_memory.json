@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3464,
+    "total_trades": 3465,
     "wins": 1814,
-    "losses": 1650,
-    "win_rate_pct": 52.37,
-    "total_pnl_usd": 9466.995976548798
+    "losses": 1651,
+    "win_rate_pct": 52.35,
+    "total_pnl_usd": 9466.933976548798
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PENDLEUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AEROUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COMPUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on JTOUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on COMPUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PENGUUSDT)",
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZECUSDT)",
-      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PENGUUSDT)"
+      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PENGUUSDT)",
+      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on IOTAUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on NEARUSDT)",
@@ -53,19 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 16:14:13",
-      "account_id": "SIM-000 (Réplica Real)",
-      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
-      "symbol": "MORPHOUSDT",
-      "side": "SHORT",
-      "entry_price": 2.314,
-      "exit_price": 2.314,
-      "pnl_usd": -0.01,
-      "result": "LOSS",
-      "notes": "LOSS on MORPHOUSDT (PnL: +0.00%, Net: $-0.01 Fase 5)",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-22 16:14:14",
       "account_id": "SIM-039",
@@ -8492,6 +8479,28 @@
         "adx_15m": null,
         "cci_15m": null,
         "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-23 16:15:59",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "IOTAUSDT",
+      "side": "LONG",
+      "entry_price": 0.046,
+      "exit_price": 0.0458,
+      "pnl_usd": -0.062,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🚀 Liberación por Estancamiento ADN 🐆 (25m en Fase 1 sin despegue para HYPER_VOLATILE_SPRINT, PnL=-0.43%) (Fase 1, PnL: -0.43%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 55.4,
+        "atr_pct_15m": 0.866,
+        "vol_surge": 4.71,
+        "vol_surge_1m": 22.49,
+        "fii_score": 60,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
       }
     }
   ]
