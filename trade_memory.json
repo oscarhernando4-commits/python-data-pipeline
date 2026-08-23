@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 7730,
-    "wins": 3510,
+    "total_trades": 7731,
+    "wins": 3511,
     "losses": 4220,
     "win_rate_pct": 45.41,
-    "total_pnl_usd": 9448.583176549411
+    "total_pnl_usd": 9448.597376549411
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GRTUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SFPUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on IMXUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ARUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on VIRTUALUSDT)",
@@ -49,34 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JUPUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on RENDERUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on INJUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PROMUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PROMUSDT)",
+      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XLMUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-23 21:49:04",
-      "account_id": "SIM-123",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto A+ & Suelo Fractal",
-      "symbol": "ATOMUSDT",
-      "side": "LONG",
-      "entry_price": 1.619,
-      "exit_price": 1.609,
-      "pnl_usd": -0.15,
-      "result": "LOSS",
-      "notes": "LOSS on ATOMUSDT (PnL: -0.62%, Net: $-0.15 Fase 1)",
-      "context": {
-        "score": 16,
-        "rsi_15m": 52.08,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-23 21:49:04",
       "account_id": "SIM-124",
@@ -12016,6 +11992,28 @@
         "adx_15m": null,
         "cci_15m": null,
         "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-23 22:25:31",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "XLMUSDT",
+      "side": "LONG",
+      "entry_price": 0.1985,
+      "exit_price": 0.1987,
+      "pnl_usd": 0.0142,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.10% <= +0.11%) (Fase 2, PnL: +0.10%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 47.3,
+        "atr_pct_15m": 0.754,
+        "vol_surge": 2.83,
+        "vol_surge_1m": 1.37,
+        "fii_score": 75,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
       }
     }
   ]
