@@ -1862,14 +1862,59 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     break
                 continue
                 
+            # ═══════════════════════════════════════════════════════════════════════
+            # 🎯 VERIFICACIÓN ADX/CCI + ADN HISTÓRICO DEL TOKEN (Inteligencia Final):
+            # ═══════════════════════════════════════════════════════════════════════
+            is_cci_overbought = mtf_res.get("is_cci_overbought", False)
+            is_ranging = mtf_res.get("is_ranging_market", False)
+            is_strong_trend = mtf_res.get("is_strong_trend", False)
+            is_bullish_adx = mtf_res.get("is_bullish_trend_adx", False)
+            is_cci_floor = mtf_res.get("is_cci_deep_oversold", False)
+            adx_val = mtf_res.get("adx_15m_value")
+            cci_val = mtf_res.get("cci_15m_value")
+            
+            # Veto CCI Overbought: Si el CCI está por encima de +150, el activo ya subió demasiado
+            if is_cci_overbought and not (vol_1m_now >= 2.5):
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] CCI Sobrecomprado ({cci_val:.0f} >= 150). Entrada prohibida en cima.")
+                if is_ai_top:
+                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro CCI. NO se cascadea.")
+                    break
+                continue
+            
+            # 🧬 CONSULTA DE ADN HISTÓRICO DEL TOKEN (Aprendizaje de las Simulaciones):
+            token_dna_label = ""
+            try:
+                import learning_engine
+                token_profile = learning_engine.get_token_dna_profile(cand_sym)
+                token_wr = token_profile.get("win_rate", 50.0)
+                token_trades = token_profile.get("total_trades", 0)
+                
+                if token_trades >= 3 and token_wr < 30.0:
+                    print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] ADN Histórico TÓXICO: WR={token_wr:.0f}% en {token_trades} trades. Blacklist dinámica.")
+                    if is_ai_top:
+                        print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} tiene ADN perdedor. NO se cascadea.")
+                        break
+                    continue
+                elif token_trades >= 3 and token_wr >= 65.0:
+                    token_dna_label = f" | 🌟 ADN Élite ({token_wr:.0f}% WR en {token_trades} ops)"
+                elif token_trades >= 3:
+                    token_dna_label = f" | 📊 ADN ({token_wr:.0f}% WR en {token_trades} ops)"
+            except Exception:
+                pass
+            
             # ═════════════════════════════════════════════════════════════════════════
             # 🎯 GANADOR APROBADO: EL ACTIVO SUPERÓ EL 100% DE LOS FILTROS INSTITUCIONALES
             # ═════════════════════════════════════════════════════════════════════════
+            trend_label = "📈 TENDENCIA FUERTE" if is_bullish_adx else ("📊 RANGO" if is_ranging else "📈 NEUTRAL")
+            cci_label = f"CCI={cci_val:.0f}" if cci_val is not None else "CCI=N/A"
+            adx_label = f"ADX={adx_val:.0f}" if adx_val is not None else "ADX=N/A"
+            
             print(f"\n💎 ═══════════════════════════════════════════════════════════════════")
             print(f"🚀 [ACTIVO A+ SELECCIONADO: FINALISTA #{cand_idx}/15 -> {cand_sym}]")
-            print(f"🧬 Arquetipo: {cand_archetype.get('label')} | SL={cand_archetype.get('initial_sl_pct')}%")
+            print(f"🧬 Arquetipo: {cand_archetype.get('label')} | SL={cand_archetype.get('initial_sl_pct')}%{token_dna_label}")
             print(f"📊 Score MTF: {final_cand_score}/100 | FII: {fii}/100 | ATR: {atr_15m:.2f}% | Spread: {ob_info.get('spread_pct'):.3f}%")
             print(f"🌊 Muro Bids: ${ob_info.get('bid_vol_usdt', 0):,.0f} USDT (Bids={ob_info.get('bid_dominance_pct'):.1f}%) | OBV={mtf_res.get('obv_trend')}")
+            print(f"📈 Tendencia: {trend_label} ({adx_label}) | {cci_label} | {'🟢 CCI Suelo' if is_cci_floor else '⚪ CCI Normal'}")
             print(f"═══════════════════════════════════════════════════════════════════════\n")
             
             # Pre-flight check live balance

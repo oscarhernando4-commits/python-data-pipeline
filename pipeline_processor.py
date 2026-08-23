@@ -629,10 +629,18 @@ def run_infinite_trading_matrix_cycle():
                     
                 ctx = {}
                 if analysis:
+                    _indicators = analysis.get("tech", {}).get("indicators", {})
                     ctx = {
                         "score": analysis.get("score"),
-                        "rsi_15m": analysis.get("tech", {}).get("indicators", {}).get("rsi_15m"),
-                        "macro_trend_4h": analysis.get("tech", {}).get("macro_trend_4h")
+                        "rsi_15m": _indicators.get("rsi_15m"),
+                        "macro_trend_4h": analysis.get("tech", {}).get("macro_trend_4h"),
+                        "fii_score": _indicators.get("fii_score"),
+                        "atr_pct_15m": _indicators.get("atr_pct_15m"),
+                        "obv_trend": _indicators.get("obv_trend"),
+                        "vol_surge_1m": _indicators.get("vol_surge_1m"),
+                        "adx_15m": _indicators.get("adx_15m_value"),
+                        "cci_15m": _indicators.get("cci_15m_value"),
+                        "range_position_1m": _indicators.get("range_position_1m"),
                     }
                     
                 learning_engine.record_trade_outcome(

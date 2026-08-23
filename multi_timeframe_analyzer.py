@@ -762,17 +762,71 @@ def analyze_multi_timeframe_candles(symbol):
         rsi_15m < 75.0                      # Not yet overbought (room to run)
     )
 
-    # 🧬 COMPLETA SUITE DE 22 INDICADORES BINANCE PRO (WMA, CCI, WR, KDJ, SAR, DMI, TRIX, MTM, EMV, AVL):
+    # 🧬 INDICADORES PRO ACTIVOS (Solo ADX + CCI — los únicos que alimentan decisiones):
+    # Los demás 20 indicadores se eliminaron por ser peso muerto computacional.
     wma14_15m = None
-    cci_15m = None
     wr_15m = None
     k_15m, d_15m, j_15m = None, None, None
     sar_15m, sar_trend = None, None
-    plus_di_15m, minus_di_15m, adx_15m = None, None, None
     trix_15m = None
     mtm_15m = None
     emv_15m = None
     avl_15m = None
+    
+    # 📊 ADX (Fuerza de Tendencia) — Confirma si hay tendencia real o solo ruido lateral:
+    plus_di_15m, minus_di_15m, adx_15m = None, None, None
+    try:
+        if len(closes_15m) >= 14 and len(highs_15m) >= 14 and len(lows_15m) >= 14:
+            period_adx = 14
+            tr_list = []
+            plus_dm_list = []
+            minus_dm_list = []
+            for i in range(1, len(closes_15m)):
+                h = highs_15m[i]
+                l = lows_15m[i]
+                pc = closes_15m[i - 1]
+                tr_list.append(max(h - l, abs(h - pc), abs(l - pc)))
+                up_move = highs_15m[i] - highs_15m[i - 1]
+                down_move = lows_15m[i - 1] - lows_15m[i]
+                plus_dm_list.append(up_move if up_move > down_move and up_move > 0 else 0.0)
+                minus_dm_list.append(down_move if down_move > up_move and down_move > 0 else 0.0)
+            if len(tr_list) >= period_adx:
+                atr_sum = sum(tr_list[:period_adx])
+                plus_dm_sum = sum(plus_dm_list[:period_adx])
+                minus_dm_sum = sum(minus_dm_list[:period_adx])
+                for i in range(period_adx, len(tr_list)):
+                    atr_sum = atr_sum - atr_sum / period_adx + tr_list[i]
+                    plus_dm_sum = plus_dm_sum - plus_dm_sum / period_adx + plus_dm_list[i]
+                    minus_dm_sum = minus_dm_sum - minus_dm_sum / period_adx + minus_dm_list[i]
+                if atr_sum > 0:
+                    plus_di_15m = round((plus_dm_sum / atr_sum) * 100, 2)
+                    minus_di_15m = round((minus_dm_sum / atr_sum) * 100, 2)
+                    di_sum = plus_di_15m + minus_di_15m
+                    dx = abs(plus_di_15m - minus_di_15m) / di_sum * 100 if di_sum > 0 else 0
+                    adx_15m = round(dx, 2)
+    except Exception:
+        pass
+    
+    # 📊 CCI (Commodity Channel Index) — Detecta sobreventa profunda complementando RSI:
+    cci_15m = None
+    try:
+        cci_period = 20
+        if len(closes_15m) >= cci_period and len(highs_15m) >= cci_period and len(lows_15m) >= cci_period:
+            tp_list = [(highs_15m[i] + lows_15m[i] + closes_15m[i]) / 3.0 for i in range(len(closes_15m))]
+            tp_recent = tp_list[-cci_period:]
+            tp_mean = sum(tp_recent) / cci_period
+            mean_dev = sum(abs(tp - tp_mean) for tp in tp_recent) / cci_period
+            if mean_dev > 0:
+                cci_15m = round((tp_list[-1] - tp_mean) / (0.015 * mean_dev), 2)
+    except Exception:
+        pass
+    
+    # 🎯 SEÑALES DERIVADAS DE ADX + CCI (Conectadas al ADN del Activo):
+    is_strong_trend = bool(adx_15m is not None and adx_15m >= 25.0)
+    is_bullish_trend_adx = bool(is_strong_trend and plus_di_15m is not None and minus_di_15m is not None and plus_di_15m > minus_di_15m)
+    is_ranging_market = bool(adx_15m is not None and adx_15m < 20.0)
+    is_cci_deep_oversold = bool(cci_15m is not None and cci_15m <= -100.0)
+    is_cci_overbought = bool(cci_15m is not None and cci_15m >= 150.0)
 
     # ========================================================================
     # ⛔ ENHANCED FALLING KNIFE GUARD V2 (Avoids TUT -45%, BICO -17%, BMT -13%)
@@ -1477,6 +1531,14 @@ def analyze_multi_timeframe_candles(symbol):
         "is_1m_ceiling_zone": is_1m_ceiling_zone,
         "lower_wick_1m_pct": lower_wick_1m_pct,
         "is_1m_lower_wick_absorption": is_1m_lower_wick_absorption,
+        # ─── ADX + CCI INTELIGENCIA DE TENDENCIA (Conectados al ADN) ───
+        "is_strong_trend": is_strong_trend,
+        "is_bullish_trend_adx": is_bullish_trend_adx,
+        "is_ranging_market": is_ranging_market,
+        "is_cci_deep_oversold": is_cci_deep_oversold,
+        "is_cci_overbought": is_cci_overbought,
+        "adx_15m_value": adx_15m,
+        "cci_15m_value": cci_15m,
         # ─── NUEVAS DIMENSIONES ADN v2 — Time-of-Day + BTC Guard + Funding + Sector ───
         "time_of_day_dna": _get_time_dna_safe(symbol),
         "btc_dominance_guard": _get_btc_guard_safe(),

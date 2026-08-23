@@ -455,6 +455,78 @@ def calculate_asset_dna_profile(symbol: str, atr_15m_pct: float = 0.30, atr_1h_p
         "mean_volatility_pct": round(mean_vol, 2)
     }
 
+def get_token_dna_profile(symbol: str, data=None):
+    """
+    🧬 PERFIL ADN POR TOKEN (Alimentado por simulaciones + operaciones reales):
+    Retorna el perfil histórico completo de un token específico, incluyendo:
+    - Win rate, total trades, PnL acumulado
+    - Condiciones promedio de entrada (RSI, Score, FII)
+    - Tiempo promedio de holding
+    - Racha actual (últimas 3 operaciones)
+    
+    Consumido por api_connector.py para VETO (WR < 30%, 3+ trades) 
+    o BOOST (WR >= 65%, 3+ trades) en la evaluación de candidatos.
+    """
+    if data is None:
+        data = load_memory()
+    
+    trades = data.get("history", [])
+    token_trades = [t for t in trades if t.get("symbol", "").upper() == symbol.upper().replace("USDT", "") + "USDT" or t.get("symbol", "").upper() == symbol.upper()]
+    
+    if not token_trades:
+        return {"symbol": symbol, "total_trades": 0, "win_rate": 50.0, "pnl_usd": 0.0, 
+                "avg_entry_rsi": None, "avg_entry_score": None, "streak": "NEUTRAL", "is_elite": False, "is_toxic": False}
+    
+    tot = len(token_trades)
+    wins = sum(1 for t in token_trades if t.get("result") == "WIN")
+    losses = tot - wins
+    pnl = sum(float(t.get("pnl_usd", 0.0)) for t in token_trades)
+    wr = (wins / tot * 100.0) if tot > 0 else 50.0
+    
+    # Condiciones promedio de entrada (del contexto técnico guardado)
+    rsi_vals = [t.get("context", {}).get("rsi_15m") for t in token_trades if t.get("context", {}).get("rsi_15m") is not None]
+    score_vals = [t.get("context", {}).get("score") for t in token_trades if t.get("context", {}).get("score") is not None]
+    fii_vals = [t.get("context", {}).get("fii_score") for t in token_trades if t.get("context", {}).get("fii_score") is not None]
+    
+    avg_rsi = round(sum(rsi_vals) / len(rsi_vals), 1) if rsi_vals else None
+    avg_score = round(sum(score_vals) / len(score_vals), 1) if score_vals else None
+    avg_fii = round(sum(fii_vals) / len(fii_vals), 1) if fii_vals else None
+    
+    # Condiciones promedio de las operaciones GANADORAS vs PERDEDORAS
+    win_rsis = [t.get("context", {}).get("rsi_15m") for t in token_trades if t.get("result") == "WIN" and t.get("context", {}).get("rsi_15m") is not None]
+    loss_rsis = [t.get("context", {}).get("rsi_15m") for t in token_trades if t.get("result") == "LOSS" and t.get("context", {}).get("rsi_15m") is not None]
+    
+    avg_win_rsi = round(sum(win_rsis) / len(win_rsis), 1) if win_rsis else None
+    avg_loss_rsi = round(sum(loss_rsis) / len(loss_rsis), 1) if loss_rsis else None
+    
+    # Racha de las últimas 3 operaciones
+    recent_3 = token_trades[-3:]
+    recent_results = [t.get("result", "LOSS") for t in recent_3]
+    if all(r == "WIN" for r in recent_results) and len(recent_3) >= 3:
+        streak = "HOT_STREAK"
+    elif all(r == "LOSS" for r in recent_results) and len(recent_3) >= 3:
+        streak = "COLD_STREAK"
+    else:
+        streak = "NEUTRAL"
+    
+    return {
+        "symbol": symbol,
+        "total_trades": tot,
+        "wins": wins,
+        "losses": losses,
+        "win_rate": round(wr, 1),
+        "pnl_usd": round(pnl, 4),
+        "avg_entry_rsi": avg_rsi,
+        "avg_entry_score": avg_score,
+        "avg_entry_fii": avg_fii,
+        "avg_win_rsi": avg_win_rsi,
+        "avg_loss_rsi": avg_loss_rsi,
+        "streak": streak,
+        "is_elite": bool(tot >= 3 and wr >= 65.0),
+        "is_toxic": bool(tot >= 3 and wr < 30.0),
+        "recent_results": recent_results
+    }
+
 def get_super_detailed_table_str(data=None):
     if data is None:
         data = load_memory()
