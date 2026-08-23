@@ -1,15 +1,13 @@
 {
   "stats": {
-    "total_trades": 3465,
+    "total_trades": 3469,
     "wins": 1814,
-    "losses": 1651,
-    "win_rate_pct": 52.35,
-    "total_pnl_usd": 9466.933976548798
+    "losses": 1655,
+    "win_rate_pct": 52.29,
+    "total_pnl_usd": 9466.0239765488
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AEROUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COMPUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on JTOUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COMPUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
@@ -27,7 +25,9 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PENGUUSDT)",
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZECUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PENGUUSDT)",
-      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on IOTAUSDT)"
+      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on IOTAUSDT)",
+      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TAOUSDT)",
+      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AEROUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on NEARUSDT)",
@@ -53,58 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 16:14:14",
-      "account_id": "SIM-039",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "TRXUSDT",
-      "side": "LONG",
-      "entry_price": 0.3401,
-      "exit_price": 0.3401,
-      "pnl_usd": -0.0,
-      "result": "WIN",
-      "notes": "WIN on TRXUSDT (PnL: +0.00%, Net: $-0.00 Fase 3)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-22 16:14:14",
-      "account_id": "SIM-093",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "GNOUSDT",
-      "side": "SHORT",
-      "entry_price": 138.73,
-      "exit_price": 138.73,
-      "pnl_usd": -1.73,
-      "result": "LOSS",
-      "notes": "LOSS on GNOUSDT (PnL: +0.00%, Net: $-1.73 Fase 5)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-22 16:14:14",
-      "account_id": "SIM-094",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "JTOUSDT",
-      "side": "SHORT",
-      "entry_price": 0.6008,
-      "exit_price": 0.6008,
-      "pnl_usd": -3.47,
-      "result": "LOSS",
-      "notes": "LOSS on JTOUSDT (PnL: +0.00%, Net: $-3.47 Fase 2)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-22 16:49:09",
-      "account_id": "R-01",
-      "group_name": "CUENTA REAL",
-      "symbol": "XTZUSDT",
-      "side": "LONG",
-      "entry_price": 0.235,
-      "exit_price": 0.2368,
-      "pnl_usd": 0.1141,
-      "result": "WIN",
-      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.77% <= +0.80%) (Fase 3, PnL: +0.77%)",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-22 16:50:48",
       "account_id": "SIM-081",
@@ -8501,6 +8449,102 @@
         "fii_score": 60,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 16:17:02",
+      "account_id": "SIM-005",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "TAOUSDT",
+      "side": "LONG",
+      "entry_price": 233.9,
+      "exit_price": 232.2,
+      "pnl_usd": -0.13,
+      "result": "LOSS",
+      "notes": "LOSS on TAOUSDT (PnL: -0.73%, Net: $-0.13 Fase 1)",
+      "context": {
+        "score": 12,
+        "rsi_15m": 60.2,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-23 16:17:02",
+      "account_id": "SIM-006",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "TAOUSDT",
+      "side": "LONG",
+      "entry_price": 233.9,
+      "exit_price": 232.2,
+      "pnl_usd": -0.13,
+      "result": "LOSS",
+      "notes": "LOSS on TAOUSDT (PnL: -0.73%, Net: $-0.13 Fase 1)",
+      "context": {
+        "score": 12,
+        "rsi_15m": 60.2,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-23 16:17:02",
+      "account_id": "SIM-007",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "TAOUSDT",
+      "side": "LONG",
+      "entry_price": 233.9,
+      "exit_price": 232.2,
+      "pnl_usd": -0.13,
+      "result": "LOSS",
+      "notes": "LOSS on TAOUSDT (PnL: -0.73%, Net: $-0.13 Fase 1)",
+      "context": {
+        "score": 12,
+        "rsi_15m": 60.2,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-23 16:17:02",
+      "account_id": "SIM-018",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "AEROUSDT",
+      "side": "LONG",
+      "entry_price": 0.4803,
+      "exit_price": 0.476,
+      "pnl_usd": -0.52,
+      "result": "LOSS",
+      "notes": "LOSS on AEROUSDT (PnL: -0.90%, Net: $-0.52 Fase 1)",
+      "context": {
+        "score": 18,
+        "rsi_15m": 65.48,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
       }
     }
   ]
