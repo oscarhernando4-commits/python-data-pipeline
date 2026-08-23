@@ -222,25 +222,8 @@ def run_infinite_trading_matrix_cycle():
                 curr_phase = hb.get('phase', 1)
                 curr_highest = hb.get('highest_pnl', 0.0)
                 
-                # Smart-throttle: Imprime cada 10s, o al cambiar de fase, o al alcanzar nuevo pico, o si PnL varía >= 0.05%
-                last_pnl = getattr(run_infinite_trading_matrix_cycle, "_last_pnl", None)
-                last_phase = getattr(run_infinite_trading_matrix_cycle, "_last_phase", None)
-                last_high = getattr(run_infinite_trading_matrix_cycle, "_last_high", None)
-                
-                should_log = (
-                    tick == 1 or 
-                    tick % 10 == 0 or 
-                    curr_phase != last_phase or 
-                    curr_highest > (last_high or 0) + 0.05 or
-                    last_pnl is None or 
-                    abs(hb['pnl_pct'] - last_pnl) >= 0.05
-                )
-                
-                if should_log:
-                    print(f"💓 [GUARDIÁN 1s | T+{tick}s] {hb['symbol']} @ {p_fmt} | PnL: {pnl_sign}{hb['pnl_pct']:.2f}% (Pico: +{curr_highest:.2f}% | Fase {curr_phase})", flush=True)
-                    run_infinite_trading_matrix_cycle._last_pnl = hb['pnl_pct']
-                    run_infinite_trading_matrix_cycle._last_phase = curr_phase
-                    run_infinite_trading_matrix_cycle._last_high = curr_highest
+                # 💓 Monitoreo en Vivo Segundo a Segundo en Tiempo Real (flush=True inmediato)
+                print(f"💓 [HEARTBEAT 1s | T+{tick}s] {hb['symbol']} @ {p_fmt} | PnL: {pnl_sign}{hb['pnl_pct']:.2f}% (Pico: +{curr_highest:.2f}% | Fase {curr_phase})", flush=True)
             except Exception:
                 _t.sleep(1.0)
         return
