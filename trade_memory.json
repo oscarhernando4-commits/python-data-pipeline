@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3350,
+    "total_trades": 3352,
     "wins": 1760,
-    "losses": 1590,
-    "win_rate_pct": 52.54,
-    "total_pnl_usd": 7014.0513765487985
+    "losses": 1592,
+    "win_rate_pct": 52.51,
+    "total_pnl_usd": 7013.8813765487985
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on IMXUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ENSUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on JASMYUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on STXUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on EIGENUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PENDLEUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LDOUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on WIFUSDT)"
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on WIFUSDT)",
+      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on KAIAUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DCRUSDT)",
@@ -53,40 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 13:06:31",
-      "account_id": "SIM-028",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "TUTUSDT",
-      "side": "LONG",
-      "entry_price": 0.04474,
-      "exit_price": 0.04394,
-      "pnl_usd": -0.35,
-      "result": "LOSS",
-      "notes": "LOSS on TUTUSDT (PnL: -1.79%, Net: $-0.35 Fase 1)",
-      "context": {
-        "score": 18,
-        "rsi_15m": 66.44,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 13:06:31",
-      "account_id": "SIM-029",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "TUTUSDT",
-      "side": "LONG",
-      "entry_price": 0.04474,
-      "exit_price": 0.04394,
-      "pnl_usd": -0.46,
-      "result": "LOSS",
-      "notes": "LOSS on TUTUSDT (PnL: -1.79%, Net: $-0.46 Fase 1)",
-      "context": {
-        "score": 18,
-        "rsi_15m": 66.44,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 13:08:33",
       "account_id": "SIM-083",
@@ -8412,6 +8378,40 @@
       "result": "LOSS",
       "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (-0.61% <= -0.50%) (Fase 1, PnL: -0.61%)",
       "context": {}
+    },
+    {
+      "timestamp": "2026-08-23 12:01:24",
+      "account_id": "SIM-042",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "KAIAUSDT",
+      "side": "LONG",
+      "entry_price": 0.0318,
+      "exit_price": 0.0318,
+      "pnl_usd": -0.12,
+      "result": "LOSS",
+      "notes": "LOSS on KAIAUSDT (PnL: +0.00%, Net: $-0.12 Fase 2)",
+      "context": {
+        "score": 18,
+        "rsi_15m": 63.79,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 12:01:24",
+      "account_id": "SIM-043",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "KAIAUSDT",
+      "side": "LONG",
+      "entry_price": 0.0318,
+      "exit_price": 0.0318,
+      "pnl_usd": -0.05,
+      "result": "LOSS",
+      "notes": "LOSS on KAIAUSDT (PnL: +0.00%, Net: $-0.05 Fase 2)",
+      "context": {
+        "score": 18,
+        "rsi_15m": 63.79,
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ]
 }
