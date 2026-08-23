@@ -518,7 +518,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
     ESTRUCTURA DE LOS 7 AGENTES INSTITUCIONALES EN DELIBERACIÓN CUÁNTICA:
     1. 🕵️ AGENTE 1 (Macro 1D & Guardián de Bitcoin): Evalúa el Semáforo Macro ({macro_context}), Wall Street ({wall_street_str}), Fear&Greed ({fear_greed.get('score')}), y estabilidad de BTC (BTC Guard). VETA categóricamente si el Semáforo es DEFENSIVO, altcoin_impact=AVOID o si BTC está en cascada roja.
-    2. 📊 AGENTE 2 (Sniper de Suelo 2M & Elasticidad High-Beta): Exige entrada en el PISO de 2 Minutos (RSI 2M <= 52.0 y soporte activo) y Alta Elasticidad (ATR 15M >= 0.45%). VETA categóricamente entradas tardías donde el rebote de 2M ya ocurrió (RSI 2M >= 54.0) o tokens lentos con ATR < 0.40%.
+    2. 📊 AGENTE 2 (Sniper de Suelo 1M/2M & Elasticidad High-Beta): Exige entrada ESTRICTAMENTE en el SUELO de 1 Minuto (Canal 1M <= 40% o mecha de absorción) y PISO de 2 Minutos (RSI 2M <= 52.0). VETA categóricamente entradas en el CENTRO del rango 1M (42%-75% alrededor de las medias móviles) o activos lentos con ATR < 0.40%.
     3. 🌊 AGENTE 3 (Auditor de Libro, CVD & Squeeze Micro): Exige Bids >= 46%, Muro comprador > $15k USDT, CVD Taker positivo/neutral y OBV != DISTRIBUTING. VETA si OBV=DISTRIBUTING o si Muro Bids < $15k USDT (libro delgado / spoofing).
     4. 🧩 AGENTE 4 (Analista Sectorial & Temporal): Prioriza sector líder ({sector_summary['top_sector']}) y valida la SESION TEMPORAL. VETO si VETO_TEMPORAL o BLACKOUT con multiplicador < 0.60.
     5. 🧠 AGENTE 5 (Memoria RAG & Auto-Aprendizaje Cuántico): Valida el ADN de la moneda, reputación histórica y patrones aprendidos. VETA permanentemente: (a) Mega-Caps / Zombis (TRX, BNB, BTC, ETH), (b) Micro-volumen muerto (<0.70x), (c) Distribución institucional, (d) Re-entradas en la misma moneda en menos de 4h. PREMIA cohetes con Vol1M >= 2.0x, FII >= 60 y Retesteo Ola 2 (como XLM, KAIA, COMP, DCR).
@@ -541,8 +541,8 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     PASO 1 🔬 LECTURA DE LA RADIOGRAFÍA 360° Y CANAL FRACTAL:
     - Revisa la RADIOGRAFÍA 360° ADN y el CANAL FRACTAL (% Suelo a Cima).
     - 💎 ARQUETIPO DCR / OLA 2 GOLDEN RETEST: Si un activo muestra "PATRÓN FRACTAL DCR" (Retesteo de Oro Ola 2 en MA25 o Resorte Comprimido 1M), dale MÁXIMA PRIORIDAD de compra porque ofrece el ratio Riesgo/Beneficio más asimétrico del mercado (>3:1).
-    - 🎯 REGLA DE ORO DE PISO 2M (Comprar en el Suelo Real): Exige que las velas de 2M estén en el PISO (RSI 2M <= 52.0 y soporte activo). Si el RSI 2M ya superó 54.0 tras una vela verde grande, ese micro-impulso ya se consumió: VÉTALO por entrada tardía.
-    - ZONA ÓPTIMA DE COMPRA (Sweet-Spot): Prioriza activos en la BASE o Pullback Constructivo (1H <= 55%, 15M <= 55%, 1M <= 50%).
+    - 🎯 REGLA DE ORO DE PISO 1M Y 2M (Comprar en el Suelo Real): Exige que las velas de 1M y 2M estén en la PARTE BAJA (Canal 1M <= 40%, RSI 2M <= 52.0 y soporte activo). Si el precio está flotando en el CENTRO (42%-75%) o el RSI 2M superó 54.0 tras una vela verde, ese micro-impulso ya está en medio del camino: VÉTALO por entrada en el centro.
+    - ZONA ÓPTIMA DE COMPRA (Sweet-Spot): Prioriza activos en la BASE o Pullback Constructivo (1H <= 55%, 15M <= 55%, 1M <= 40%).
     - ALPHA & ABSORCIÓN: Premia fuertemente activos con Alpha vs BTC > +0.20% y Mecha de Absorción 1M >= 15% (compradores comprando el dip).
     - 🚫 VETO TOTAL CIMA / TECHO: PROHIBIDO comprar si Canal 1H >= 75% o si está a menos de 0.40% del Máximo 24H.
     - 🚫 VETO ZOMBI / MEGA-CAP: Veta activos con ATR 15M < 0.40% (ej: TRX, BNB, ADA, BTC, ETH) o Fan Tokens ilíquidos. Exige alta elasticidad (ATR >= 0.45%) para scalping rentable.

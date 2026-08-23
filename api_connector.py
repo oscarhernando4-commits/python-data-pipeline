@@ -1752,6 +1752,16 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Distribución Institucional (OBV=DISTRIBUTING). Pasando al siguiente...")
                 continue
                 
+            # 🎯 VETO DE CENTRO DE CANAL 1M (Regla de Oro de Suelo Real):
+            # Prohibido entrar cuando el precio está en el CENTRO (42%-75%) del canal de 1M.
+            # Exige que el activo esté en el SUELO de 1 minuto (<= 40%), en rebote de suelo, o absorción con mecha inferior.
+            range_pos_1m = mtf_res.get("range_position_1m", 0.50)
+            is_1m_floor = mtf_res.get("is_1m_true_floor", False)
+            
+            if not is_1m_floor and not (mtf_res.get("vol_surge_1m", 1.0) >= 2.5):
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Precio en el CENTRO del Canal 1M (Posición 1M={range_pos_1m*100:.0f}% > 40%). Exige compra en el SUELO (0%-40%). Pasando al siguiente finalista...")
+                continue
+                
             if not has_floor_turnaround:
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Falta de Giro de Suelo en 1M/2M. Pasando al siguiente...")
                 continue

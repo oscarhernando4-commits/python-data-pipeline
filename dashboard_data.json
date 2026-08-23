@@ -1,11 +1,21 @@
 {
-  "updated_at": "2026-08-23 09:04:19",
-  "total_balance_usd": 15.04,
-  "usdt_free": 14.5921,
-  "bnb_free": 0.00063883,
-  "bnb_usd": 0.44,
-  "status": "🟦 Buscando Entrada A+",
-  "position": {},
+  "updated_at": "2026-08-23 09:19:30",
+  "total_balance_usd": 15.2,
+  "usdt_free": 0.0933,
+  "bnb_free": 0.00094627,
+  "bnb_usd": 0.66,
+  "status": "🔵 En Vivo LONG (NEXOUSDT @ $0.8210)",
+  "position": {
+    "symbol": "NEXOUSDT",
+    "quantity": 17.66,
+    "entry_price": 0.821,
+    "highest_price": 0.821,
+    "cost_usd": 14.5,
+    "side": "LONG",
+    "phase": 1,
+    "break_even": false,
+    "entry_time_ms": 1787494467297
+  },
   "verdict": {
     "timestamp": "2026-08-22 12:29:25",
     "selected_symbol": "COMPUSDT",

@@ -1108,6 +1108,32 @@ def analyze_multi_timeframe_candles(symbol):
         (len(closes_10s) >= 2 and not tf_10s_up and not tf_30s_up and closes_10s[-1] < closes_10s[-2])
     )
     
+    # 🎯 PATRÓN FRACTAL DE SUELO 1 MINUTO (Anti-Centro / Suelo Real de Oscilación):
+    # Detecta si el precio está en el piso de la oscilación de 1m (0% a 40%), con mecha inferior o rebote:
+    is_1m_floor_zone = bool(range_position_1m <= 0.40)
+    is_1m_center_zone = bool(0.40 < range_position_1m < 0.70)
+    is_1m_ceiling_zone = bool(range_position_1m >= 0.70)
+    
+    # Detección de Mecha Inferior en Vela de 1M (Absorción de Suelo):
+    lower_wick_1m_pct = 0.0
+    if klines_1m and len(klines_1m) >= 1:
+        last_k = klines_1m[-1]
+        o_1m, h_1m, l_1m, c_1m = float(last_k[1]), float(last_k[2]), float(last_k[3]), float(last_k[4])
+        rng_1m = h_1m - l_1m
+        if rng_1m > 0:
+            body_bottom = min(o_1m, c_1m)
+            lower_wick = body_bottom - l_1m
+            lower_wick_1m_pct = round((lower_wick / rng_1m) * 100.0, 1)
+            
+    is_1m_lower_wick_absorption = bool(lower_wick_1m_pct >= 20.0 and tf_1m_up)
+    
+    is_1m_true_floor = bool(
+        is_1m_floor_zone or 
+        is_1m_lower_wick_absorption or 
+        (rsi_1m <= 42.0 and tf_1m_up) or
+        (range_position_2m <= 0.40 and tf_2m_up)
+    )
+    
     if is_ma25_below_ma99_downward:
         if fii_score < 45 and not (is_ground_zero_micro_ignition or is_vwap_floor_rebound or is_bullish_divergence):
             multi_tf_score = 0
@@ -1444,6 +1470,13 @@ def analyze_multi_timeframe_candles(symbol):
             "1h": "BULLISH" if tf_1h_up else "BEARISH",
             "1d": "BULLISH" if tf_1d_up else "BEARISH"
         },
+        # ─── PATRÓN DE SUELO 1 MINUTO (Anti-Centro / Entrada en la Base) ───
+        "is_1m_true_floor": is_1m_true_floor,
+        "is_1m_floor_zone": is_1m_floor_zone,
+        "is_1m_center_zone": is_1m_center_zone,
+        "is_1m_ceiling_zone": is_1m_ceiling_zone,
+        "lower_wick_1m_pct": lower_wick_1m_pct,
+        "is_1m_lower_wick_absorption": is_1m_lower_wick_absorption,
         # ─── NUEVAS DIMENSIONES ADN v2 — Time-of-Day + BTC Guard + Funding + Sector ───
         "time_of_day_dna": _get_time_dna_safe(symbol),
         "btc_dominance_guard": _get_btc_guard_safe(),
