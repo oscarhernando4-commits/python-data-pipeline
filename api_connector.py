@@ -1691,9 +1691,6 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             # 6. Veto Zombi / Mega-Cap lenta (ATR < 0.35%)
             if arch_dna.get("is_low_volatility_zombie", False):
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por ATR insuficiente ({atr_15m:.2f}% < 0.35% o Mega-Cap lenta).")
-                if is_ai_top:
-                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro técnico (Zombi). NO se cascadea a candidatos no aprobados.")
-                    break
                 continue
                 
             tf_1m = tf_align.get("1m", "BEARISH")
@@ -1749,16 +1746,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             
             if is_at_daily_ceiling or is_15m_cascade or is_active_falling_knife:
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Techo/Cascada/Cuchillo.")
-                if is_ai_top:
-                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro técnico (Techo/Cascada). NO se cascadea.")
-                    break
                 continue
                 
             if mtf_res.get("obv_trend") == "DISTRIBUTING":
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Distribución Institucional (OBV=DISTRIBUTING).")
-                if is_ai_top:
-                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro técnico (OBV Distributing). NO se cascadea.")
-                    break
                 continue
                 
             # 🎯 VETO DE CONFLUENCIA FRACTAL DE SUELO (1M + 2M + 5M + 15M + 30M + 1H):
@@ -1777,25 +1768,16 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             if not is_confluent_floor and not (vol_1m_now >= 3.0 or vol_15m_now >= 2.8):
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Falta de Suelo Fractal Confluente:")
                 print(f"     Canales: [1M: {range_pos_1m*100:.0f}% | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% | 15M: {range_pos_15m*100:.0f}% | 30M: {range_pos_30m*100:.0f}% | 1H: {range_pos_1h*100:.0f}%]")
-                if is_ai_top:
-                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} no está en Suelo Confluente (1M/5M/15M). NO se cascadea.")
-                    break
                 continue
                 
             if not has_floor_turnaround:
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Falta de Giro de Suelo en 1M/2M.")
-                if is_ai_top:
-                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro técnico (Sin Giro). NO se cascadea.")
-                    break
                 continue
                 
             is_spring = mtf_res.get("spring_coiling", {}).get("is_spring_compressed", False)
             is_wave2 = mtf_res.get("wave2_retest", {}).get("is_wave2_retest", False)
             if (mtf_res.get("rsi_2m", 50.0) > 54.0 or mtf_res.get("rsi_1m", 50.0) > 54.0) and not (is_spring or is_wave2):
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Entrada Tardía (RSI 2M={mtf_res.get('rsi_2m'):.1f} > 54.0).")
-                if is_ai_top:
-                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro técnico (RSI Tardío). NO se cascadea.")
-                    break
                 continue
                 
             # 7. Orderbook Depth & Micro-Surge Checks
@@ -1805,23 +1787,14 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             
             if spread_now > 0.18:
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Spread excesivo ({spread_now:.3f}% > 0.180%).")
-                if is_ai_top:
-                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro técnico (Spread alto). NO se cascadea.")
-                    break
                 continue
                 
             if bid_dom_now < 50.0:
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Bids insuficientes ({bid_dom_now:.1f}% < 50.0%).")
-                if is_ai_top:
-                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro técnico (Bids bajas). NO se cascadea.")
-                    break
                 continue
                 
             if ob_info.get("bid_vol_usdt", 0.0) > 0 and ob_info.get("bid_vol_usdt", 0.0) < 20000.0:
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Muro Bids delgado (${ob_info.get('bid_vol_usdt', 0.0):,.0f} < $20k).")
-                if is_ai_top:
-                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro técnico (Muro delgado). NO se cascadea.")
-                    break
                 continue
                 
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
@@ -1841,24 +1814,15 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             
             if is_dead_volume or not has_active_ignition:
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Volumen Muerto/Sin Ignición (1M={vol_1m_now:.2f}x, 15M={vol_15m_now:.2f}x). Exige compradores activos.")
-                if is_ai_top:
-                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro de ignición de volumen. NO se cascadea.")
-                    break
                 continue
                 
             if not has_trigger_candle:
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Vela 1M Roja en caída sin mecha de absorción. Exige giro verde.")
-                if is_ai_top:
-                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} está en caída 1M sin giro verde. NO se cascadea.")
-                    break
                 continue
                 
             final_cand_score = max(cand_score, mtf_res.get("multi_tf_score", 50))
             if final_cand_score < min_required_score:
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Score insuficiente ({final_cand_score} < {min_required_score}).")
-                if is_ai_top:
-                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro técnico (Score bajo). NO se cascadea.")
-                    break
                 continue
                 
             # ═══════════════════════════════════════════════════════════════════════
@@ -1875,9 +1839,6 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             # Veto CCI Overbought: Si el CCI está por encima de +150, el activo ya subió demasiado
             if is_cci_overbought and not (vol_1m_now >= 2.5):
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] CCI Sobrecomprado ({cci_val:.0f} >= 150). Entrada prohibida en cima.")
-                if is_ai_top:
-                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro CCI. NO se cascadea.")
-                    break
                 continue
             
             # 🧬 CONSULTA DE ADN HISTÓRICO DEL TOKEN (Aprendizaje de las Simulaciones):
@@ -1890,9 +1851,6 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 
                 if token_trades >= 3 and token_wr < 30.0:
                     print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] ADN Histórico TÓXICO: WR={token_wr:.0f}% en {token_trades} trades. Blacklist dinámica.")
-                    if is_ai_top:
-                        print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} tiene ADN perdedor. NO se cascadea.")
-                        break
                     continue
                 elif token_trades >= 3 and token_wr >= 65.0:
                     token_dna_label = f" | 🌟 ADN Élite ({token_wr:.0f}% WR en {token_trades} ops)"
