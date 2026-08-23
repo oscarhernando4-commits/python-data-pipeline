@@ -479,10 +479,9 @@ def run_infinite_trading_matrix_cycle():
                 print(f"═══════════════════════════════════════════════════════════════════════\n")
             else:
                 delib = gemini_res.get("committee_deliberation", {})
-                print(f"\n🏛️ [COMITÉ INSTITUCIONAL 7 AGENTES] Veredicto: HOLD (Preservar 100% USDT)")
-                if delib and delib.get("agent_7_ceo_anti_loss"):
-                    print(f"  👑 Dictamen del CEO: {delib.get('agent_7_ceo_anti_loss')}")
-                print(f"  💡 Razonamiento: {gemini_res.get('reasoning')}\n")
+                ceo_verdict = delib.get("agent_7_ceo_anti_loss", gemini_res.get("reasoning", "Preservando 100% USDT"))
+                print(f"\n🏛️ [COMITÉ 7 AGENTES] Veredicto: 🛡️ HOLD (100% USDT Protegido)")
+                print(f"  💡 Razón del CEO: {ceo_verdict}\n")
             
             # Build rich top candidates metrics for dashboard persistence (3-tier RSI architecture)
             top_candidates_rich = []

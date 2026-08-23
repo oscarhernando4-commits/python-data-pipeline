@@ -1914,19 +1914,21 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 pass
             
             # ═════════════════════════════════════════════════════════════════════════
-            # 🎯 GANADOR APROBADO: EL ACTIVO SUPERÓ EL 100% DE LOS FILTROS INSTITUCIONALES
+            # 💎 TARJETA EJECUTIVA CUÁNTICA UNIFICADA (DICTAMEN IA + EJECUCIÓN SPOT)
             # ═════════════════════════════════════════════════════════════════════════
             trend_label = "📈 TENDENCIA FUERTE" if is_bullish_adx else ("📊 RANGO" if is_ranging else "📈 NEUTRAL")
             cci_label = f"CCI={cci_val:.0f}" if cci_val is not None else "CCI=N/A"
             adx_label = f"ADX={adx_val:.0f}" if adx_val is not None else "ADX=N/A"
             
-            print(f"\n💎 ═══════════════════════════════════════════════════════════════════")
-            print(f"🚀 [ACTIVO A+ SELECCIONADO: FINALISTA #{cand_idx}/15 -> {cand_sym}]")
-            print(f"🧬 Arquetipo: {cand_archetype.get('label')} | SL={cand_archetype.get('initial_sl_pct')}%{token_dna_label}")
-            print(f"📊 Score MTF: {final_cand_score}/100 | FII: {fii}/100 | ATR: {atr_15m:.2f}% | Spread: {ob_info.get('spread_pct'):.3f}%")
-            print(f"🌊 Muro Bids: ${ob_info.get('bid_vol_usdt', 0):,.0f} USDT (Bids={ob_info.get('bid_dominance_pct'):.1f}%) | OBV={mtf_res.get('obv_trend')}")
+            print(f"\n💎 ═══════════════════════════════════════════════════════════════════════════════════")
+            print(f"🚀 [DICTAMEN & EJECUCIÓN CUÁNTICA SPOT: #{cand_idx}/15 -> {cand_sym}]")
+            print(f"═══════════════════════════════════════════════════════════════════════════════════════")
+            print(f"🧬 Arquetipo ADN: {cand_archetype.get('label')} | SL Inicial: -0.50% | Cosecha Fase 2: +0.44%{token_dna_label}")
+            print(f"📊 Score MTF: {final_cand_score}/100 | FII Suelo: {fii}/100 | ATR: {atr_15m:.2f}% | Spread: {ob_info.get('spread_pct'):.3f}%")
+            print(f"🌌 Canales Fractales: [1M: {range_pos_1m*100:.0f}% | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% | 15M: {range_pos_15m*100:.0f}% | 30M: {range_pos_30m*100:.0f}% | 1H: {range_pos_1h*100:.0f}%]")
+            print(f"🌊 Muro Comprador: ${ob_info.get('bid_vol_usdt', 0):,.0f} USDT (Bids={ob_info.get('bid_dominance_pct'):.1f}%) | OBV={mtf_res.get('obv_trend')}")
             print(f"📈 Tendencia: {trend_label} ({adx_label}) | {cci_label} | {'🟢 CCI Suelo' if is_cci_floor else '⚪ CCI Normal'}")
-            print(f"═══════════════════════════════════════════════════════════════════════\n")
+            print(f"═══════════════════════════════════════════════════════════════════════════════════════\n")
             
             # Pre-flight check live balance
             try:
