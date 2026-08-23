@@ -1596,16 +1596,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         min_required_score = max(70, real_long_score)
         
         # Check learning engine bias before entering
-        bias_ok = True
         if market_bias:
             bias_direction = market_bias.get("recommended_bias", "NEUTRAL")
-            if not is_bearish and bias_direction == "STRONG_SHORT":
-                bias_ok = False
-                print(f"🧠 Learning Engine BLOCKED LONG: Market bias is STRONG_SHORT")
-        
-        if not bias_ok or is_bearish:
-            print("🔒 [ESCUDO MERCADO] Mercado bajista o sesgo en corto. Preservando 100% USDT.")
-            return
+            if bias_direction == "STRONG_SHORT":
+                print(f"⚠️ [LEARNING ENGINE] Sesgo de mercado: {bias_direction} (Exigiendo confluencia A+ estricta en los 15 finalistas)")
             
         # ═════════════════════════════════════════════════════════════════════════
         # 🧬 ANÁLISIS EN CASCADA DE ADN ACTIVO PARA LOS 15 FINALISTAS DEL MERCADO:
