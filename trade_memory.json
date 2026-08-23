@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3391,
+    "total_trades": 3392,
     "wins": 1776,
-    "losses": 1615,
-    "win_rate_pct": 52.37,
-    "total_pnl_usd": 7107.391376548801
+    "losses": 1616,
+    "win_rate_pct": 52.36,
+    "total_pnl_usd": 7106.751376548801
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GIGGLEUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHFIUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ENAUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on LDOUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PENDLEUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AEROUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COMPUSDT)",
-      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on JTOUSDT)"
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on JTOUSDT)",
+      "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COMPUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SHIBUSDT)",
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 14:08:32",
-      "account_id": "SIM-018",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "SHIBUSDT",
-      "side": "LONG",
-      "entry_price": 5.32e-06,
-      "exit_price": 5.47e-06,
-      "pnl_usd": 1.32,
-      "result": "WIN",
-      "notes": "WIN on SHIBUSDT (PnL: +2.82%, Net: $+1.32 Fase 4)",
-      "context": {
-        "score": 36,
-        "rsi_15m": 39.9,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 14:08:32",
       "account_id": "SIM-042",
@@ -8418,6 +8401,23 @@
       "context": {
         "score": 23,
         "rsi_15m": 62.2,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 13:10:53",
+      "account_id": "SIM-093",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "COMPUSDT",
+      "side": "LONG",
+      "entry_price": 20.72,
+      "exit_price": 20.74,
+      "pnl_usd": -0.64,
+      "result": "LOSS",
+      "notes": "LOSS on COMPUSDT (PnL: +0.10%, Net: $-0.64 Fase 2)",
+      "context": {
+        "score": 12,
+        "rsi_15m": 73.19,
         "macro_trend_4h": "NEUTRAL"
       }
     }
