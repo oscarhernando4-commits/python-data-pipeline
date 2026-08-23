@@ -218,21 +218,21 @@ def calculate_archetype_trailing(
 
     if highest_pnl_pct >= 4.00:
         sl_pct = round(highest_pnl_pct * 0.80, 4)
-        phase = 5
-        phase_label = f"👑 FASE 5 MEGA RALLY ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
+        phase = 6
+        phase_label = f"👑 FASE 6 MEGA RALLY ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= 2.00:
         sl_pct = round(highest_pnl_pct * 0.75, 4)
-        phase = 4
-        phase_label = f"🚀 FASE 4 TENDENCIA FUERTE ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
+        phase = 5
+        phase_label = f"🚀 FASE 5 TENDENCIA FUERTE ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= 1.00:
         sl_pct = round(highest_pnl_pct * 0.70, 4)
-        phase = 3
-        phase_label = f"💎 FASE 3 EXPANSIÓN MEDIA ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 70% -> Piso +{sl_pct:.2f}%)"
+        phase = 4
+        phase_label = f"💎 FASE 4 EXPANSIÓN MEDIA ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 70% -> Piso +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= 0.44:
         # 🔒 AL TOCAR +0.44%, SALTO INMEDIATO A SEGURO DE GANANCIA +0.20% NETO (CERO RIESGO & COMISIONES PAGADAS):
         sl_pct = max(0.20, round(highest_pnl_pct * 0.65, 4))
-        phase = 2
-        phase_label = f"🔒 FASE 2 SEGURO DE GANANCIA +0.20% NETO ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 65% -> Piso +{sl_pct:.2f}%)"
+        phase = 3
+        phase_label = f"🔒 FASE 3 SEGURO DE GANANCIA +0.20% NETO ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 65% -> Piso +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= 0.35:
         # 🛡️ AL TOCAR +0.35%, CANDADO PREVENTIVO A BREAK-EVEN +0.08% (PROTEGE COMISIONES Y EVITA QUE UN GANADOR SE VUELVA PERDEDOR):
         sl_pct = max(0.08, round(highest_pnl_pct * 0.30, 4))

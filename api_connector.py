@@ -1096,20 +1096,24 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
         # Fallback to Wide Slack Trailing & Rally Capture Architecture
         if highest_pnl_pct >= 4.00:
             sl_pct = round(highest_pnl_pct * 0.80, 4)
-            phase = 5
-            phase_label = f"👑 FASE 5 MEGA RALLY (Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
+            phase = 6
+            phase_label = f"👑 FASE 6 MEGA RALLY (Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
         elif highest_pnl_pct >= 2.00:
             sl_pct = round(highest_pnl_pct * 0.75, 4)
-            phase = 4
-            phase_label = f"🚀 FASE 4 TENDENCIA FUERTE (Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
+            phase = 5
+            phase_label = f"🚀 FASE 5 TENDENCIA FUERTE (Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
         elif highest_pnl_pct >= 1.00:
             sl_pct = round(highest_pnl_pct * 0.70, 4)
-            phase = 3
-            phase_label = f"💎 FASE 3 EXPANSIÓN MEDIA (Cima +{highest_pnl_pct:.2f}% | Retención 70% -> Piso +{sl_pct:.2f}%)"
+            phase = 4
+            phase_label = f"💎 FASE 4 EXPANSIÓN MEDIA (Cima +{highest_pnl_pct:.2f}% | Retención 70% -> Piso +{sl_pct:.2f}%)"
         elif highest_pnl_pct >= 0.44:
-            sl_pct = max(0.15, round(highest_pnl_pct * 0.65, 4))
+            sl_pct = max(0.20, round(highest_pnl_pct * 0.65, 4))
+            phase = 3
+            phase_label = f"🔒 FASE 3 SEGURO DE GANANCIA +0.20% NETO (Cima +{highest_pnl_pct:.2f}% | Retención 65% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 0.35:
+            sl_pct = max(0.08, round(highest_pnl_pct * 0.30, 4))
             phase = 2
-            phase_label = f"🔒 FASE 2 SEGURO DE GANANCIA +0.15% NETO (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}%)"
+            phase_label = f"🛡️ FASE 2 BREAK-EVEN BLINDADO (+0.08% NETO | Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
         else:
             sl_pct = -0.50
             phase = 1
@@ -1188,9 +1192,9 @@ def quick_position_heartbeat():
         exit_reason = f"🎯 Trailing Floor Activado ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
         
         # 🎯 SNIPER COSECHA GANANCIA TEMPRANA (+0.44% A +0.70%):
-        # Si tocó >= +0.44% y retrocede >= 0.18% o cae cerca del piso neto, cosechar inmediatamente
+        # Si tocó >= +0.44% (Fase 3) y retrocede >= 0.18% o cae cerca del piso neto, cosechar inmediatamente
         wick_pullback_threshold = max(0.18, min(0.35, round(custom_slack * 0.40, 2)))
-        if not should_exit and new_phase >= 2 and highest_pnl_pct >= 0.44:
+        if not should_exit and new_phase >= 3 and highest_pnl_pct >= 0.44:
             if (highest_pnl_pct - current_pnl_pct) >= wick_pullback_threshold or current_pnl_pct <= 0.15:
                 should_exit = True
                 exit_reason = f"🎯 SNIPER COSECHA GANANCIA (Pico +{highest_pnl_pct:.2f}% -> Venta Asegurada en {current_pnl_pct:+.2f}% tras retroceso de -{wick_pullback_threshold:.2f}%)"
