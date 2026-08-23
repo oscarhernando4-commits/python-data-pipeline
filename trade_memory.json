@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3202,
-    "wins": 1692,
+    "total_trades": 3203,
+    "wins": 1693,
     "losses": 1510,
-    "win_rate_pct": 52.84,
-    "total_pnl_usd": 4857.765076548794
+    "win_rate_pct": 52.86,
+    "total_pnl_usd": 4857.7750765487945
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TUTUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI<30(Oversold) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ASTERUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on HEMIUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on COTIUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on PEOPLEUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on GNOUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on QNTUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on IMXUSDT)",
-      "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HBARUSDT)"
+      "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HBARUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TSTUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 08:42:30",
-      "account_id": "SIM-005",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "COTIUSDT",
-      "side": "LONG",
-      "entry_price": 0.01242,
-      "exit_price": 0.01296,
-      "pnl_usd": 0.65,
-      "result": "WIN",
-      "notes": "WIN on COTIUSDT (PnL: +4.35%, Net: $+0.65 Fase 5)",
-      "context": {
-        "score": 7,
-        "rsi_15m": 76.93,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 08:42:30",
       "account_id": "SIM-006",
@@ -8458,6 +8441,23 @@
       "context": {
         "score": 36,
         "rsi_15m": 38.24,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 05:54:48",
+      "account_id": "SIM-067",
+      "group_name": "⚡ GRUPO 4: Frecuencia Alta",
+      "symbol": "TSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.0165,
+      "exit_price": 0.01647,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on TSTUSDT (PnL: +0.18%, Net: $+0.01 Fase 3)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 46.54,
         "macro_trend_4h": "NEUTRAL"
       }
     }
