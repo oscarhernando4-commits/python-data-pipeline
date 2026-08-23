@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3107,
+    "total_trades": 3108,
     "wins": 1653,
-    "losses": 1454,
-    "win_rate_pct": 53.2,
-    "total_pnl_usd": 5047.187576548791
+    "losses": 1455,
+    "win_rate_pct": 53.19,
+    "total_pnl_usd": 5047.115076548791
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 05:40:41",
-      "account_id": "SIM-007",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "PUMPUSDT",
-      "side": "LONG",
-      "entry_price": 0.004066,
-      "exit_price": 0.004265,
-      "pnl_usd": 0.71,
-      "result": "WIN",
-      "notes": "WIN on PUMPUSDT (PnL: +4.89%, Net: $+0.71 Fase 5)",
-      "context": {
-        "score": 5,
-        "rsi_15m": 54.03,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 05:42:42",
       "account_id": "SIM-027",
@@ -8460,6 +8443,19 @@
         "rsi_15m": 34.9,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-23 04:35:42",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "BNBUSDT",
+      "side": "LONG",
+      "entry_price": 689.62,
+      "exit_price": 686.17,
+      "pnl_usd": -0.0725,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (-0.50% <= -0.50%) (Fase 1, PnL: -0.50%)",
+      "context": {}
     }
   ]
 }
