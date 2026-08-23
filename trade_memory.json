@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3053,
+    "total_trades": 3054,
     "wins": 1628,
-    "losses": 1425,
-    "win_rate_pct": 53.32,
-    "total_pnl_usd": 3610.91707654879
+    "losses": 1426,
+    "win_rate_pct": 53.31,
+    "total_pnl_usd": 3610.89927654879
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 05:11:00",
-      "account_id": "SIM-003",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "DOGEUSDT",
-      "side": "LONG",
-      "entry_price": 0.08644,
-      "exit_price": 0.09098,
-      "pnl_usd": 0.61,
-      "result": "WIN",
-      "notes": "WIN on DOGEUSDT (PnL: +5.25%, Net: $+0.61 Fase 5)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 43.65,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 05:11:00",
       "account_id": "SIM-005",
@@ -8492,6 +8475,19 @@
         "rsi_15m": 39.37,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-23 00:41:05",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.824,
+      "exit_price": 0.823,
+      "pnl_usd": -0.0178,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🚀 Liberación por Estancamiento ADN 🧩 (40m en Fase 1 sin despegue para SECTOR_ROTATION, PnL=-0.12%) (Fase 1, PnL: -0.12%)",
+      "context": {}
     }
   ]
 }
