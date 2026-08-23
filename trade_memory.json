@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3403,
-    "wins": 1785,
+    "total_trades": 3404,
+    "wins": 1786,
     "losses": 1618,
-    "win_rate_pct": 52.45,
-    "total_pnl_usd": 7108.211376548801
+    "win_rate_pct": 52.47,
+    "total_pnl_usd": 7108.231376548802
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MANAUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when Sector in [DeFi, AI, Layer2] + Alpha vs BTC > +0.20% (Hot Sector Alpha Leader)",
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SHIBUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DOTUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on BNBUSDT)",
@@ -49,27 +48,11 @@
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on IOTAUSDT)",
       "BOOST LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLFIUSDT)",
       "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ETHUSDT)",
-      "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on MORPHOUSDT)"
+      "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on MORPHOUSDT)",
+      "BOOST LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on AXSUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 14:34:32",
-      "account_id": "SIM-093",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "GNOUSDT",
-      "side": "SHORT",
-      "entry_price": 124.02,
-      "exit_price": 123.81,
-      "pnl_usd": 0.23,
-      "result": "WIN",
-      "notes": "WIN on GNOUSDT (PnL: +0.17%, Net: $+0.23 Fase 2)",
-      "context": {
-        "score": 82,
-        "rsi_15m": 52.05,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 14:36:32",
       "account_id": "SIM-081",
@@ -8418,6 +8401,23 @@
       "context": {
         "score": 14,
         "rsi_15m": 73.5,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 13:40:59",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "AXSUSDT",
+      "side": "LONG",
+      "entry_price": 1.003,
+      "exit_price": 1.007,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on AXSUSDT (PnL: +0.40%, Net: $+0.02 Fase 2)",
+      "context": {
+        "score": 14,
+        "rsi_15m": 75.28,
         "macro_trend_4h": "NEUTRAL"
       }
     }
