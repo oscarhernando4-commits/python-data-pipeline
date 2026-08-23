@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3073,
-    "wins": 1639,
-    "losses": 1434,
-    "win_rate_pct": 53.34,
+    "total_trades": 3075,
+    "wins": 1640,
+    "losses": 1435,
+    "win_rate_pct": 53.33,
     "total_pnl_usd": 3605.3818765487904
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AEROUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on PROMUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NIGHTUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
@@ -27,10 +26,10 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on GPSUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on XTZUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on JUPUSDT)",
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NEARUSDT)"
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on NEARUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on GIGGLEUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on MORPHOUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on NEARUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on DCRUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on DOGEUSDT)",
@@ -49,44 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DOTUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on MORPHOUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on TSTUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on NEARUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on NEARUSDT)",
+      "BOOST SHORT when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Won on IMXUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 05:13:13",
-      "account_id": "SIM-011",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "MUBUSDT",
-      "side": "LONG",
-      "entry_price": 968.1,
-      "exit_price": 947.65,
-      "pnl_usd": -0.32,
-      "result": "LOSS",
-      "notes": "LOSS on MUBUSDT (PnL: -2.11%, Net: $-0.32 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 13.1,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 05:13:13",
-      "account_id": "SIM-013",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "MUBUSDT",
-      "side": "LONG",
-      "entry_price": 968.1,
-      "exit_price": 947.65,
-      "pnl_usd": -0.21,
-      "result": "LOSS",
-      "notes": "LOSS on MUBUSDT (PnL: -2.11%, Net: $-0.21 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 13.1,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 05:13:13",
       "account_id": "SIM-019",
@@ -8474,6 +8440,40 @@
       "context": {
         "score": 65,
         "rsi_15m": 40.26,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 02:27:00",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "GIGGLEUSDT",
+      "side": "SHORT",
+      "entry_price": 38.14,
+      "exit_price": 38.17,
+      "pnl_usd": -0.01,
+      "result": "LOSS",
+      "notes": "LOSS on GIGGLEUSDT (PnL: -0.08%, Net: $-0.01 Fase 2)",
+      "context": {
+        "score": 31,
+        "rsi_15m": 64.56,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 02:27:01",
+      "account_id": "SIM-097",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "IMXUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1199,
+      "exit_price": 0.1196,
+      "pnl_usd": 0.01,
+      "result": "WIN",
+      "notes": "WIN on IMXUSDT (PnL: +0.25%, Net: $+0.01 Fase 2)",
+      "context": {
+        "score": 65,
+        "rsi_15m": 33.21,
         "macro_trend_4h": "NEUTRAL"
       }
     }
