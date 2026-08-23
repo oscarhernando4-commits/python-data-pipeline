@@ -118,7 +118,28 @@ def run_focused_position_guardian(max_duration_secs: int = 14400):
             
             p_fmt = f"${hb['price']:.5f}" if hb['price'] < 0.05 else f"${hb['price']:.4f}"
             pnl_sign = "+" if hb['pnl_pct'] >= 0 else ""
-            print(f"💓 [HEARTBEAT 1s | T+{tick}s] {hb['symbol']} @ {p_fmt} | PnL: {pnl_sign}{hb['pnl_pct']:.2f}% (Pico: +{hb.get('highest_pnl', 0):.2f}% | Fase {hb.get('phase', 1)})", flush=True)
+            curr_phase = hb.get('phase', 1)
+            curr_highest = hb.get('highest_pnl', 0.0)
+            
+            # Smart-throttle: Imprime cada 10s, o al cambiar de fase, o al alcanzar nuevo pico, o si PnL varía >= 0.05%
+            last_pnl = getattr(monitor_open_position_heartbeat, "_last_pnl", None)
+            last_phase = getattr(monitor_open_position_heartbeat, "_last_phase", None)
+            last_high = getattr(monitor_open_position_heartbeat, "_last_high", None)
+            
+            should_log = (
+                tick == 1 or 
+                tick % 10 == 0 or 
+                curr_phase != last_phase or 
+                curr_highest > (last_high or 0) + 0.05 or
+                last_pnl is None or 
+                abs(hb['pnl_pct'] - last_pnl) >= 0.05
+            )
+            
+            if should_log:
+                print(f"💓 [GUARDIÁN 1s | T+{tick}s] {hb['symbol']} @ {p_fmt} | PnL: {pnl_sign}{hb['pnl_pct']:.2f}% (Pico: +{curr_highest:.2f}% | Fase {curr_phase})", flush=True)
+                monitor_open_position_heartbeat._last_pnl = hb['pnl_pct']
+                monitor_open_position_heartbeat._last_phase = curr_phase
+                monitor_open_position_heartbeat._last_high = curr_highest
             
             # Sincronización periódica ligera de estado a git cada 300s en hilo secundario (0ms de retraso)
             if tick % 300 == 0:

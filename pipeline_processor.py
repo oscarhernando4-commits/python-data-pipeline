@@ -219,7 +219,28 @@ def run_infinite_trading_matrix_cycle():
                 
                 p_fmt = f"${hb['price']:.5f}" if hb['price'] < 0.05 else f"${hb['price']:.4f}"
                 pnl_sign = "+" if hb['pnl_pct'] >= 0 else ""
-                print(f"💓 [HEARTBEAT 1s | T+{tick}s] {hb['symbol']} @ {p_fmt} | PnL: {pnl_sign}{hb['pnl_pct']:.2f}% (Pico: +{hb.get('highest_pnl', 0):.2f}% | Fase {hb.get('phase', 1)})", flush=True)
+                curr_phase = hb.get('phase', 1)
+                curr_highest = hb.get('highest_pnl', 0.0)
+                
+                # Smart-throttle: Imprime cada 10s, o al cambiar de fase, o al alcanzar nuevo pico, o si PnL varía >= 0.05%
+                last_pnl = getattr(run_infinite_trading_matrix_cycle, "_last_pnl", None)
+                last_phase = getattr(run_infinite_trading_matrix_cycle, "_last_phase", None)
+                last_high = getattr(run_infinite_trading_matrix_cycle, "_last_high", None)
+                
+                should_log = (
+                    tick == 1 or 
+                    tick % 10 == 0 or 
+                    curr_phase != last_phase or 
+                    curr_highest > (last_high or 0) + 0.05 or
+                    last_pnl is None or 
+                    abs(hb['pnl_pct'] - last_pnl) >= 0.05
+                )
+                
+                if should_log:
+                    print(f"💓 [GUARDIÁN 1s | T+{tick}s] {hb['symbol']} @ {p_fmt} | PnL: {pnl_sign}{hb['pnl_pct']:.2f}% (Pico: +{curr_highest:.2f}% | Fase {curr_phase})", flush=True)
+                    run_infinite_trading_matrix_cycle._last_pnl = hb['pnl_pct']
+                    run_infinite_trading_matrix_cycle._last_phase = curr_phase
+                    run_infinite_trading_matrix_cycle._last_high = curr_highest
             except Exception:
                 _t.sleep(1.0)
         return
@@ -315,22 +336,6 @@ def run_infinite_trading_matrix_cycle():
         data["_trade_quality"] = inst.get("trade_quality", "C_NOISE")
         data["_ou_signal"] = inds.get("ou_signal", "NEUTRAL")
         data["_institutional_verdict"] = inst.get("verdict", "NEUTRAL")
-
-    # Log arbitrage opportunities once per cycle (informational)
-    try:
-        _arb = quant_institutional.SpotFuturesArbitrageDetector()
-        for _arb_sym in ["BTCUSDT", "ETHUSDT", "BNBUSDT", "SOLUSDT"]:
-            _spot_data = symbol_analysis_map.get(_arb_sym, {})
-            _spot_price = _spot_data.get("price", 0)
-            if _spot_price > 0:
-                # Futures premium is typically 0.01-0.1% for perpetuals
-                _fut_price = _spot_price * 1.0005  # Estimate; real would query futures API
-                _arb_result = _arb.check_basis(_spot_price, _fut_price)
-                if _arb_result.get("is_profitable"):
-                    _arb_opportunities.append((_arb_sym, _arb_result))
-                    print(f"📊 [ARBITRAJE] {_arb_sym}: Basis={_arb_result['basis_pct']:.4f}% | Yield Neto={_arb_result['net_yield_pct']:.4f}% | APY={_arb_result['annualized_apy_pct']:.2f}%")
-    except Exception as _arb_err:
-        pass
 
     # For SPOT LONG trading, prioritize the highest scoring bullish assets (Hyenuk Chu / Francisca Serrano Sniper)
     bullish_candidates = []
