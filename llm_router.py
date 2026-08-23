@@ -523,7 +523,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     4. 🧩 AGENTE 4 (Analista Sectorial & Temporal): Prioriza sector líder ({sector_summary['top_sector']}) y valida la SESION TEMPORAL. VETO si VETO_TEMPORAL o BLACKOUT con multiplicador < 0.60.
     5. 🧠 AGENTE 5 (Memoria RAG & Auto-Aprendizaje Cuántico): Valida el ADN de la moneda, reputación histórica y patrones de catalizadores ganadores aprendidos. VETA patrones de pérdida recurrentes (ej: sangrado post-pump sin volumen).
     6. 🛡️ AGENTE 6 (Chief Risk Officer & Veto de Dump): Veta cualquier activo con Riesgo de Dump >= 40%, libro descompensado (Bids < 45% o Muro < $15k), OBV=DISTRIBUTING, DUMP_RISK_FUNDING, o activo en cuarentena/cooldown de 2 horas.
-    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza el consenso. Si el mejor candidato está en zona de soporte/pullback con volumen fresco y libre de vetos, APRUEBA "BUY_LONG" con Stop Loss Asimétrico de -0.95% para ejecución inmediata.
+    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza el consenso. Si el mejor candidato está en zona de soporte/pullback con volumen fresco y libre de vetos, APRUEBA "BUY_LONG" con Stop Loss Asimétrico de -0.50% para ejecución inmediata.
 
     {exec_learning_summary}
 
@@ -550,8 +550,8 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     - Si BTC está en caída libre (altcoin_impact=AVOID), HOLD general obligatorio.
     - EXCEPCIÓN CUÁNTICA: Si un activo muestra desacoplamiento positivo masivo (Alpha vs BTC >= +1.0% con FII >= 75 y CVD > 60%), puede ser aprobado como líder de rotación.
     
-    PASO 3 ⚡ GESTIÓN DE RIESGO ASIMÉTRICO (SL -0.95% + WICK SNIPER):
-    - Recuerda que el sistema cuenta con Stop Loss Estricto de -0.95% y Wick Sniper de toma de ganancias rápida.
+    PASO 3 ⚡ GESTIÓN DE RIESGO ASIMÉTRICO (SL -0.50% + WICK SNIPER):
+    - Recuerda que el sistema cuenta con Stop Loss Estricto de -0.50% y Wick Sniper de toma de ganancias rápida.
     - Por lo tanto, no seas ultra-rígido: si el activo #1 está en una buena base fractal con volumen fresco, SÉ ÁGIL, DINÁMICO Y DECISIVO.
     
     PASO 4 👑 SELECCIÓN DEL CAMPEÓN #1 Y VEREDICTO EJECUTIVO:

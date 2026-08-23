@@ -365,42 +365,12 @@
     <!-- PESTAÑA 1: MONITOREO EN VIVO -->
     <div id="tab-monitoreo" class="tab-content active">
         
-        <!-- ============ SEGUIMIENTO EN TIEMPO REAL POSICIÓN ACTIVA ============ -->
-        <div class="active-pos-banner">
+        <div class="active-pos-banner active-pos-idle">
             <div class="active-pos-header">
                 <div class="active-pos-title">
-                    <span class="active-pos-pulse"></span>
-                    <span class="active-pos-symbol">🎯 POSICIÓN REAL EN VIVO: <b>KAIAUSDT</b></span>
-                    <span class="badge badge-long">BUY SPOT LONG</span>
+                    <span class="active-pos-symbol" style="color: var(--text-muted);">🔒 NINGUNA POSICIÓN ABIERTA (100% CAPITAL EN USDT)</span>
                 </div>
-                <div class="active-pos-time">⏱️ Tiempo Abierto: <b>2 min</b> / 75 min (Escalera Time-Decay)</div>
-            </div>
-            <div class="active-pos-grid">
-                <div class="pos-widget">
-                    <div class="pos-widget-label">Capital Invertido</div>
-                    <div class="pos-widget-val">$15.10 USD</div>
-                    <div class="pos-widget-sub">479.30 KAIA</div>
-                </div>
-                <div class="pos-widget">
-                    <div class="pos-widget-label">Precio de Entrada</div>
-                    <div class="pos-widget-val">$0.0315</div>
-                    <div class="pos-widget-sub">Binance Spot Live</div>
-                </div>
-                <div class="pos-widget">
-                    <div class="pos-widget-label">Máximo Pico Alcanzado</div>
-                    <div class="pos-widget-val" style="color: var(--accent-emerald);">$0.0315</div>
-                    <div class="pos-widget-sub">Pico Flotante: +0.00%</div>
-                </div>
-                <div class="pos-widget">
-                    <div class="pos-widget-label">Piso Stop-Loss ATR</div>
-                    <div class="pos-widget-val" style="color: var(--accent-rose);">$0.0312</div>
-                    <div class="pos-widget-sub">Límite Salida: -1.00%</div>
-                </div>
-            </div>
-            <div class="active-pos-footer">
-                <div class="pos-shield-tag">🛡️ BTC Circuit Breaker: <b>🟢 ACTIVO</b></div>
-                <div class="pos-shield-tag">🧱 Orderbook Muro: <b>🟢 OK</b></div>
-                <div class="pos-shield-tag">🚀 Trailing Stop: <b>⚪ Esperando +2.0%</b></div>
+                <div class="active-pos-time">🔎 Escaneando 120 Pares en Tiempo Real</div>
             </div>
         </div>
         
@@ -410,7 +380,7 @@
         <div class="card-header-row">
             <div class="card-heading">📋 EVALUACIÓN EN TIEMPO REAL DE LAS TOP 10 OPORTUNIDADES (DINERO REAL)</div>
             <div class="badge badge-hold" style="font-size: 0.78rem; padding: 0.35rem 0.85rem;">
-                🟡 POSICIÓN ABIERTA
+                🔒 TOP 10 EN PROTECCIÓN: NINGUNA MONEDA CUMPLE LAS 8 REGLAS
             </div>
         </div>
         
@@ -551,13 +521,13 @@
                 </div>
             </div>
             
-            <div class="checklist-item checklist-pending">
+            <div class="checklist-item checklist-pass">
                 <div>
                     <div class="checklist-title">2. Sin Posición Real Abierta</div>
                     <div class="checklist-sub">100% liquidez disponible en Spot</div>
                 </div>
-                <div class="checklist-sub" style="font-weight: 800; color: var(--accent-amber);">
-                    🟡 POSICIÓN ACTIVA
+                <div class="checklist-sub" style="font-weight: 800; color: var(--accent-emerald);">
+                    🟢 CUMPLIDO (Liquidez Libre)
                 </div>
             </div>
 
@@ -629,7 +599,7 @@
             <div class="wallet-card">
                 <div class="card-header-row">
                     <div class="card-heading">💰 MIS ACTIVOS — SPOT BINANCE</div>
-                    <div class="wallet-total-val">$15.33 <span class="wallet-total-currency">USD</span></div>
+                    <div class="wallet-total-val">$15.49 <span class="wallet-total-currency">USD</span></div>
                 </div>
                 <div class="asset-list">
                     <div class="asset-item">
@@ -641,8 +611,8 @@
                             </div>
                         </div>
                         <div class="asset-right">
-                            <div class="asset-qty-val">0.08280000</div>
-                            <div class="asset-usd-val">0.08 $</div>
+                            <div class="asset-qty-val">14.71720000</div>
+                            <div class="asset-usd-val">14.72 $</div>
                         </div>
                     </div>
                     <div class="asset-item">
@@ -654,8 +624,8 @@
                             </div>
                         </div>
                         <div class="asset-right">
-                            <div class="asset-qty-val">0.00015225</div>
-                            <div class="asset-usd-val">0.11 $</div>
+                            <div class="asset-qty-val">0.00110344</div>
+                            <div class="asset-usd-val">0.77 $</div>
                         </div>
                     </div>
                 </div>
@@ -667,17 +637,17 @@
                 <div class="stats-grid">
                     <div class="stat-box">
                         <div class="stat-label">Posición Activa</div>
-                        <div class="stat-value">KAIAUSDT</div>
-                        <div class="stat-sub">Entrada: $0.0315</div>
+                        <div class="stat-value">NINGUNA</div>
+                        <div class="stat-sub">🔒 100% USDT Preservado</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Historial Operatorio</div>
-                        <div class="stat-value">3 Trades</div>
-                        <div class="stat-sub">✅ 2W / ❌ 1L</div>
+                        <div class="stat-value">4 Trades</div>
+                        <div class="stat-sub">✅ 2W / ❌ 2L</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">PnL Neto Real</div>
-                        <div class="stat-value" style="color: var(--accent-rose);">$-0.14</div>
+                        <div class="stat-value" style="color: var(--accent-emerald);">+$0.02</div>
                         <div class="stat-sub">Depósito original: $17.13</div>
                     </div>
                     <div class="stat-box">
@@ -2301,7 +2271,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <span>Última actualización: <strong>2026-08-22 17:40:50</strong> | Algoritmo Cuántico Binance 24/7</span>
+        <span>Última actualización: <strong>2026-08-22 22:40:16</strong> | Algoritmo Cuántico Binance 24/7</span>
         <span class="countdown" id="countdown">Auto-refresh en: 30s</span>
         <button class="refresh-btn" onclick="window.location.reload()">🔄 Actualizar Ahora</button>
     </footer>

@@ -1111,9 +1111,9 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             phase = 2
             phase_label = f"🔒 FASE 2 BREAK-EVEN BLINDADO (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}%)"
         else:
-            sl_pct = -0.95
+            sl_pct = -0.50
             phase = 1
-            phase_label = f"🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (Cima +{highest_pnl_pct:.2f}% | SL Defensivo -0.95%)"
+            phase_label = f"🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (Cima +{highest_pnl_pct:.2f}% | SL Defensivo -0.50%)"
                 
         return sl_pct, phase, phase_label
 
@@ -1706,9 +1706,12 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 elif not has_floor_turnaround:
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} en zona baja pero SIN GIRO CONFIRMADO (1M: {tf_1m}, 2M: {tf_2m}, Divergencia: {mtf_res.get('is_bullish_divergence')}). Exige vela verde de confirmación.")
-                elif mtf_res.get("rsi_2m", 50.0) >= 60.0 and mtf_res.get("rsi_1m", 50.0) >= 56.0 and not mtf_res.get("spring_coiling", {}).get("is_spring_compressed", False):
+                elif (mtf_res.get("rsi_2m", 50.0) > 54.0 or mtf_res.get("rsi_1m", 50.0) > 54.0) and not (mtf_res.get("spring_coiling", {}).get("is_spring_compressed", False) or mtf_res.get("wave2_retest", {}).get("is_wave2_retest", False)):
                     is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} llegó tarde al rebote de 2M (RSI 2M={mtf_res.get('rsi_2m'):.1f} >= 60.0, RSI 1M={mtf_res.get('rsi_1m'):.1f} >= 56.0). Exige entrada cuando las velas de 2M están en el PISO (RSI 2M <= 52.0).")
+                    print(f"⛔ Compra rechazada: {best_symbol} llegó tarde al rebote (RSI 2M={mtf_res.get('rsi_2m'):.1f}, RSI 1M={mtf_res.get('rsi_1m'):.1f} > 54.0). Exige entrada en el PISO REAL (RSI <= 52.0).")
+                elif mtf_res.get("fii_score", 0) < 50 and not mtf_res.get("is_ground_zero_micro_ignition", False):
+                    is_stable = True
+                    print(f"⛔ Compra rechazada: {best_symbol} descartado por FII insuficiente ({mtf_res.get('fii_score')}/100 < 50). Exige inyección institucional confirmada.")
                 elif mtf_res.get("is_overextended_15m"):
                     is_stable = True
                     print(f"⛔ Compra rechazada: {best_symbol} rechazado por vela sobre-extendida en la cima ({mtf_res.get('overextension_reason')}).")
@@ -1779,8 +1782,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                             print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}{arrow_lbl}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.75% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=46% OK) | Muro=${ob_info.get('bid_vol_usdt'):,.0f} USDT | RSI4H={rsi_4h:.1f} | 🚀 Turbinas: 15m={vol_15m_now:.2f}x, 2m={vol_2m_now:.2f}x, 1m={vol_1m_now:.2f}x, OBV={is_obv_acc}, EMA={is_ema_cross}")
                 
         if bias_ok and not is_stable:
-            # 1. LONG Entry Signal (Operates with 100% of available USDT, strictly requires Score >= 70 Setup A+)
-            min_required_score = max(70, real_long_score)
+            # 1. LONG Entry Signal (Operates with 100% of available USDT, strictly requires Score >= 75 Setup A+)
+            min_required_score = max(75, real_long_score)
             if best_symbol and not is_bearish and best_score >= min_required_score:
                 # 🔍 PRE-FLIGHT LIVE CHECK: Verificar balance real directamente en Binance antes de comprar
                 try:
@@ -1828,7 +1831,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         "phase": 1,
                         "archetype": arch_profile.get("archetype", "SECTOR_ROTATION"),
                         "archetype_label": arch_profile.get("label", "General"),
-                        "initial_sl_pct": arch_profile.get("initial_sl_pct", -2.00),
+                        "initial_sl_pct": arch_profile.get("initial_sl_pct", -0.50),
                         "max_stagnation_minutes": arch_profile.get("max_stagnation_minutes", 60),
                         "vol_surge": mtf_res.get("vol_surge_2m", 1.0) if 'mtf_res' in locals() else 1.0,
                         "entry_time_ms": int(time.time() * 1000),

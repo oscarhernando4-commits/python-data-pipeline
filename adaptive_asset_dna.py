@@ -71,7 +71,7 @@ ARCHETYPE_CONFIGS = {
         "archetype": "HYPER_VOLATILE_SPRINT",
         "label": "🐆 SPRINT HIPER-VOLÁTIL (Meme / High-Beta)",
         "emoji": "🐆",
-        "initial_sl_pct": -1.15,          # SL Asimétrico de Precisión (Máx -1.15%)
+        "initial_sl_pct": -0.50,          # SL Estricto de -0.50% por directiva de usuario
         "max_stagnation_minutes": 25,     # Máximo 25 min: Si no despega rápido, salida
         "phase_2_trigger_pct": 0.45,      # Asegura ganancias al subir +0.45%
         "phase_2_retention_ratio": 0.75,  # Retiene el 75% de la cima alcanzada
@@ -88,7 +88,7 @@ ARCHETYPE_CONFIGS = {
         "archetype": "BLUE_CHIP_CORE",
         "label": "🏛️ BLUE-CHIP INSTITUCIONAL (L1 / Core)",
         "emoji": "🏛️",
-        "initial_sl_pct": -0.95,          # SL Estricto de Soporte (Máx -0.95%)
+        "initial_sl_pct": -0.50,          # SL Estricto de -0.50% por directiva de usuario
         "max_stagnation_minutes": 45,     # Máximo 45 min para evitar monedas zombi estancadas
         "phase_2_trigger_pct": 0.45,      # Break-even estándar al tocar +0.45%
         "phase_2_retention_ratio": 0.75,  # Retiene el 75% de la cima alcanzada
@@ -105,7 +105,7 @@ ARCHETYPE_CONFIGS = {
         "archetype": "SECTOR_ROTATION",
         "label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
         "emoji": "🧩",
-        "initial_sl_pct": -0.95,          # SL Estricto de Soporte (Máx -0.95%)
+        "initial_sl_pct": -0.50,          # SL Estricto de -0.50% por directiva de usuario
         "max_stagnation_minutes": 40,     # Máximo 40 min para confirmar rotación
         "phase_2_trigger_pct": 0.45,
         "phase_2_retention_ratio": 0.75,  # Retiene 75% de la cima
@@ -122,7 +122,7 @@ ARCHETYPE_CONFIGS = {
         "archetype": "THIN_BOOK_MICRO",
         "label": "🎯 MICRO-CAP / LIBRO DELGADO",
         "emoji": "🎯",
-        "initial_sl_pct": -0.90,          # SL Ajustado -0.90% porque libros delgados caen rápido
+        "initial_sl_pct": -0.50,          # SL Estricto de -0.50% por directiva de usuario
         "max_stagnation_minutes": 25,     # Máximo 25 min de paciencia
         "phase_2_trigger_pct": 0.40,      # Bloqueo de ganancia rápido
         "phase_2_retention_ratio": 0.75,  # Retiene 75% de la cima
@@ -202,7 +202,7 @@ def calculate_archetype_trailing(
     - FASE 5 (Cima >= +4.00%): Mega Rally con retención del 80% de la cima (Piso = Cima * 0.80).
     """
     arch = archetype_dna.get("archetype", "SECTOR_ROTATION")
-    initial_sl = float(archetype_dna.get("initial_sl_pct", -2.00))
+    initial_sl = float(archetype_dna.get("initial_sl_pct", -0.50))
     emoji = archetype_dna.get("emoji", "🧬")
     label = archetype_dna.get("label", arch)
 
