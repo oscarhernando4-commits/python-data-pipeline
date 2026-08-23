@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3277,
-    "wins": 1735,
+    "total_trades": 3278,
+    "wins": 1736,
     "losses": 1542,
-    "win_rate_pct": 52.94,
-    "total_pnl_usd": 6434.458776548796
+    "win_rate_pct": 52.96,
+    "total_pnl_usd": 6434.601976548796
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 10:26:32",
-      "account_id": "SIM-028",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "ONGUSDT",
-      "side": "LONG",
-      "entry_price": 0.07421,
-      "exit_price": 0.07412,
-      "pnl_usd": -0.05,
-      "result": "LOSS",
-      "notes": "LOSS on ONGUSDT (PnL: -0.12%, Net: $-0.05 Fase 2)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 23.47,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 10:26:32",
       "account_id": "SIM-029",
@@ -8436,6 +8419,19 @@
         "rsi_15m": 60.44,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-23 09:14:28",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "NEOUSDT",
+      "side": "LONG",
+      "entry_price": 2.051,
+      "exit_price": 2.071,
+      "pnl_usd": 0.1432,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.98% <= +1.09%) (Fase 3, PnL: +0.98%)",
+      "context": {}
     }
   ]
 }
