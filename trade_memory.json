@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3392,
-    "wins": 1776,
-    "losses": 1616,
+    "total_trades": 3394,
+    "wins": 1777,
+    "losses": 1617,
     "win_rate_pct": 52.36,
-    "total_pnl_usd": 7106.751376548801
+    "total_pnl_usd": 7107.861376548801
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHFIUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ENAUSDT)",
       "BLOCK SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on LDOUSDT)",
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on EIGENUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on AEROUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COMPUSDT)",
       "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on JTOUSDT)",
-      "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COMPUSDT)"
+      "BLOCK LONG when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COMPUSDT)",
+      "BLOCK SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MORPHOUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when VolSurge 1M >= 2.0x + FII >= 60 + ATR >= 0.45% (High-Beta Momentum Rocket - Like XLM, KAIA, COMP, DCR)",
@@ -52,40 +52,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 14:08:32",
-      "account_id": "SIM-042",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "DOTUSDT",
-      "side": "LONG",
-      "entry_price": 0.892,
-      "exit_price": 0.923,
-      "pnl_usd": 2.56,
-      "result": "WIN",
-      "notes": "WIN on DOTUSDT (PnL: +3.48%, Net: $+2.56 Fase 5)",
-      "context": {
-        "score": 48,
-        "rsi_15m": 42.46,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 14:08:32",
-      "account_id": "SIM-043",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "DOTUSDT",
-      "side": "LONG",
-      "entry_price": 0.892,
-      "exit_price": 0.923,
-      "pnl_usd": 1.1,
-      "result": "WIN",
-      "notes": "WIN on DOTUSDT (PnL: +3.48%, Net: $+1.10 Fase 5)",
-      "context": {
-        "score": 48,
-        "rsi_15m": 42.46,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 14:08:32",
       "account_id": "SIM-044",
@@ -8417,6 +8383,40 @@
       "context": {
         "score": 12,
         "rsi_15m": 73.19,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 13:13:54",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "MORPHOUSDT",
+      "side": "SHORT",
+      "entry_price": 2.314,
+      "exit_price": 2.425,
+      "pnl_usd": -0.21,
+      "result": "LOSS",
+      "notes": "LOSS on MORPHOUSDT (PnL: -4.80%, Net: $-0.21 Fase 4)",
+      "context": {
+        "score": 12,
+        "rsi_15m": 62.33,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 13:13:54",
+      "account_id": "SIM-018",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "SHIBUSDT",
+      "side": "LONG",
+      "entry_price": 5.32e-06,
+      "exit_price": 5.47e-06,
+      "pnl_usd": 1.32,
+      "result": "WIN",
+      "notes": "WIN on SHIBUSDT (PnL: +2.82%, Net: $+1.32 Fase 5)",
+      "context": {
+        "score": 18,
+        "rsi_15m": 67.91,
         "macro_trend_4h": "NEUTRAL"
       }
     }
