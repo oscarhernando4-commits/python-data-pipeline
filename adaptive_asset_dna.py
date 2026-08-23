@@ -229,12 +229,17 @@ def calculate_archetype_trailing(
         phase = 3
         phase_label = f"💎 FASE 3 EXPANSIÓN MEDIA ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 70% -> Piso +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= 0.44:
-        # 🔒 AL TOCAR +0.44%, SALTO INMEDIATO A SEGURO DE GANANCIA +0.15% NETO (CERO RIESGO & COMISIONES PAGADAS):
-        sl_pct = max(0.15, round(highest_pnl_pct * 0.65, 4))
+        # 🔒 AL TOCAR +0.44%, SALTO INMEDIATO A SEGURO DE GANANCIA +0.20% NETO (CERO RIESGO & COMISIONES PAGADAS):
+        sl_pct = max(0.20, round(highest_pnl_pct * 0.65, 4))
         phase = 2
-        phase_label = f"🔒 FASE 2 SEGURO DE GANANCIA +0.15% NETO ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 65% -> Piso +{sl_pct:.2f}%)"
+        phase_label = f"🔒 FASE 2 SEGURO DE GANANCIA +0.20% NETO ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 65% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 0.35:
+        # 🛡️ AL TOCAR +0.35%, CANDADO PREVENTIVO A BREAK-EVEN +0.08% (PROTEGE COMISIONES Y EVITA QUE UN GANADOR SE VUELVA PERDEDOR):
+        sl_pct = max(0.08, round(highest_pnl_pct * 0.30, 4))
+        phase = 2
+        phase_label = f"🛡️ FASE 2 BREAK-EVEN BLINDADO (+0.08% NETO | {emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
     else:
-        # Cima < +0.44%: Fase 1 respiración amplia defensiva
+        # Cima < +0.35%: Fase 1 respiración defensiva
         sl_pct = initial_sl
         phase = 1
         phase_label = f"🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN ({emoji} Cima +{highest_pnl_pct:.2f}% | SL Defensivo {initial_sl:.2f}%)"
