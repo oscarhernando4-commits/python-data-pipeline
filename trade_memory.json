@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 3293,
+    "total_trades": 3296,
     "wins": 1738,
-    "losses": 1555,
-    "win_rate_pct": 52.78,
-    "total_pnl_usd": 6363.101976548799
+    "losses": 1558,
+    "win_rate_pct": 52.73,
+    "total_pnl_usd": 6362.6519765488
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on DOTUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on NEARUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ENSUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on COTIUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on JASMYUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on STXUSDT)",
       "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on XPLUSDT)",
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZROUSDT)"
+      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZROUSDT)",
+      "BLOCK LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LDOUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Won on HBARUSDT)",
@@ -53,57 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 10:54:33",
-      "account_id": "SIM-091",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "PROMUSDT",
-      "side": "SHORT",
-      "entry_price": 2.683,
-      "exit_price": 2.683,
-      "pnl_usd": -0.0,
-      "result": "WIN",
-      "notes": "WIN on PROMUSDT (PnL: +0.00%, Net: $-0.00 Fase 2)",
-      "context": {
-        "score": 65,
-        "rsi_15m": 47.28,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 10:58:32",
-      "account_id": "SIM-027",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "GPSUSDT",
-      "side": "LONG",
-      "entry_price": 0.01229,
-      "exit_price": 0.0121,
-      "pnl_usd": -234.13,
-      "result": "LOSS",
-      "notes": "LOSS on GPSUSDT (PnL: -1.55%, Net: $-234.13 Fase 1)",
-      "context": {
-        "score": 64,
-        "rsi_15m": 49.68,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 10:58:32",
-      "account_id": "SIM-028",
-      "group_name": "🔷 GRUPO 2: Moderado-Estricto",
-      "symbol": "GPSUSDT",
-      "side": "LONG",
-      "entry_price": 0.01229,
-      "exit_price": 0.0121,
-      "pnl_usd": -0.31,
-      "result": "LOSS",
-      "notes": "LOSS on GPSUSDT (PnL: -1.55%, Net: $-0.31 Fase 1)",
-      "context": {
-        "score": 64,
-        "rsi_15m": 49.68,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 10:58:32",
       "account_id": "SIM-029",
@@ -8426,6 +8375,57 @@
       "context": {
         "score": 18,
         "rsi_15m": 54.13,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 09:32:59",
+      "account_id": "SIM-051",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "LDOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3675,
+      "exit_price": 0.3651,
+      "pnl_usd": -0.15,
+      "result": "LOSS",
+      "notes": "LOSS on LDOUSDT (PnL: -0.65%, Net: $-0.15 Fase 1)",
+      "context": {
+        "score": 18,
+        "rsi_15m": 62.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 09:32:59",
+      "account_id": "SIM-052",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "LDOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3675,
+      "exit_price": 0.3651,
+      "pnl_usd": -0.15,
+      "result": "LOSS",
+      "notes": "LOSS on LDOUSDT (PnL: -0.65%, Net: $-0.15 Fase 1)",
+      "context": {
+        "score": 18,
+        "rsi_15m": 62.9,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 09:32:59",
+      "account_id": "SIM-053",
+      "group_name": "⚖️ GRUPO 3: Balanceado",
+      "symbol": "LDOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3675,
+      "exit_price": 0.3651,
+      "pnl_usd": -0.15,
+      "result": "LOSS",
+      "notes": "LOSS on LDOUSDT (PnL: -0.65%, Net: $-0.15 Fase 1)",
+      "context": {
+        "score": 18,
+        "rsi_15m": 62.9,
         "macro_trend_4h": "NEUTRAL"
       }
     }
