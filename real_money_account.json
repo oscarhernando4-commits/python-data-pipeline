@@ -15,8 +15,8 @@
     "side": "LONG",
     "quantity": 0.744,
     "break_even": false,
-    "highest_price": 19.61,
-    "phase": 1,
+    "highest_price": 19.76,
+    "phase": 2,
     "archetype": "SECTOR_ROTATION",
     "archetype_label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
     "initial_sl_pct": -0.5,
@@ -28,7 +28,9 @@
     "dna_tier": "HIGH_BETA_RUNNER",
     "optimal_trailing_slack_pct": 0.87,
     "target_resistance_price": 20.25,
-    "pump_probability_pct": 35
+    "pump_probability_pct": 35,
+    "holding_cycles": 3,
+    "volatility_regime": "🔒 FASE 2 BREAK-EVEN BLINDADO (🧩 Cima +0.76% | Retención 60% -> Piso +0.46%)"
   },
   "last_trade_time": "26-08-23<br>07:27",
   "status": "🔵 En Vivo LONG (COMPUSDT @ $19.6100)",
