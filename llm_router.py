@@ -234,14 +234,13 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
         "contents": [{"parts": [{"text": prompt_text}]}],
         "generationConfig": {
             "temperature": 0.10,
-            "maxOutputTokens": 512,
+            "maxOutputTokens": 2048,
             "responseMimeType": "application/json"
         }
     }
     
     models_to_try = [
-        "gemini-3.6-flash",
-        "gemini-3.1-flash-lite"
+        "gemini-3.6-flash"
     ]
     
     keys_pool = get_gemini_api_keys()
@@ -585,16 +584,15 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         "contents": [{"parts": [{"text": prompt_text}]}],
         "generationConfig": {
             "temperature": 0.10,          # Baja temperatura = decisiones más consistentes
-            "maxOutputTokens": 1024,       # Cap explícito para gemini-3.1-flash-lite (más rápido)
+            "maxOutputTokens": 2500,       # Cap óptimo para que Gemini 3.6 Flash complete la deliberación sin truncar JSON
             "responseMimeType": "application/json"
         }
     }
     
-    # 🏎️ SUPER-CEREBRO GEMINI-3.6-FLASH (Modelo de Razonamiento Cuántico de Alta Precisión)
-    # Rota a través de las 10 claves Gemini con fallback automático a gemini-3.1-flash-lite
+    # 🏎️ SUPER-CEREBRO GEMINI-3.6-FLASH (Modelo Oficial Único de Razonamiento Cuántico)
+    # Rota a través de las 10 claves Gemini con timeout y tokens óptimos
     models_to_try = [
-        "gemini-3.6-flash",
-        "gemini-3.1-flash-lite"
+        "gemini-3.6-flash"
     ]
     
     keys_pool = get_gemini_api_keys()
@@ -610,7 +608,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
                 data=json.dumps(payload).encode('utf-8'),
                 headers={'Content-Type': 'application/json'}
             )
-            with urllib.request.urlopen(req, timeout=12) as response:
+            with urllib.request.urlopen(req, timeout=18) as response:
                 res_data = json.loads(response.read().decode('utf-8'))
                 if "candidates" in res_data and len(res_data["candidates"]) > 0:
                     text_res = res_data["candidates"][0]["content"]["parts"][0]["text"]
@@ -629,7 +627,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         return None
     
     # 🚀 MODO CONCURRENTE ÁGIL: Dispara en grupos de 3 keys con failover instantáneo
-    # Evita quemar la cuota de las 10 keys a la vez y obtiene respuesta en < 2.0s
+    # Evita quemar la cuota de las 10 keys a la vez y obtiene respuesta en < 3.5s
     import concurrent.futures
     
     for model_name in models_to_try:
@@ -648,12 +646,12 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
             try:
                 with concurrent.futures.ThreadPoolExecutor(max_workers=len(batch_keys)) as executor:
                     futures = {executor.submit(_try_one_key, t): t for t in tasks}
-                    for future in concurrent.futures.as_completed(futures, timeout=10):
+                    for future in concurrent.futures.as_completed(futures, timeout=18):
                         result = future.result()
                         if result is not None:
                             parsed, key_label, used_model = result
                             _advance_key_index(key_label)
-                            print(f"✅ [{used_model}] Respuesta recibida de {key_label} (ágil).")
+                            print(f"✅ [{used_model}] Respuesta recibida de {key_label} (ágil).", flush=True)
                             return parsed
             except concurrent.futures.TimeoutError:
                 continue
