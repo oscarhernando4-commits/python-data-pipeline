@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3426,
+    "total_trades": 3427,
     "wins": 1794,
-    "losses": 1632,
-    "win_rate_pct": 52.36,
-    "total_pnl_usd": 7104.976076548803
+    "losses": 1633,
+    "win_rate_pct": 52.35,
+    "total_pnl_usd": 7104.526076548803
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 15:10:33",
-      "account_id": "SIM-052",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "NEXOUSDT",
-      "side": "LONG",
-      "entry_price": 0.823,
-      "exit_price": 0.824,
-      "pnl_usd": -0.01,
-      "result": "LOSS",
-      "notes": "LOSS on NEXOUSDT (PnL: +0.12%, Net: $-0.01 Fase 2)",
-      "context": {
-        "score": 16,
-        "rsi_15m": 54.05,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 15:10:33",
       "account_id": "SIM-053",
@@ -8427,6 +8410,23 @@
       "context": {
         "score": 0,
         "rsi_15m": 71.49,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 14:41:46",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "MORPHOUSDT",
+      "side": "SHORT",
+      "entry_price": 2.314,
+      "exit_price": 2.561,
+      "pnl_usd": -0.45,
+      "result": "LOSS",
+      "notes": "LOSS on MORPHOUSDT (PnL: -10.67%, Net: $-0.45 Fase 4)",
+      "context": {
+        "score": 9,
+        "rsi_15m": 71.25,
         "macro_trend_4h": "NEUTRAL"
       }
     }
