@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3455,
-    "wins": 1811,
-    "losses": 1644,
+    "total_trades": 3457,
+    "wins": 1812,
+    "losses": 1645,
     "win_rate_pct": 52.42,
-    "total_pnl_usd": 9466.851176548798
+    "total_pnl_usd": 9467.501176548798
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,40 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 16:10:33",
-      "account_id": "SIM-002",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "MUBARAKUSDT",
-      "side": "LONG",
-      "entry_price": 0.02427,
-      "exit_price": 0.02389,
-      "pnl_usd": -0.19,
-      "result": "LOSS",
-      "notes": "LOSS on MUBARAKUSDT (PnL: -1.57%, Net: $-0.19 Fase 1)",
-      "context": {
-        "score": 61,
-        "rsi_15m": 45.77,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 16:10:33",
-      "account_id": "SIM-003",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "MUBARAKUSDT",
-      "side": "LONG",
-      "entry_price": 0.02427,
-      "exit_price": 0.02389,
-      "pnl_usd": -0.21,
-      "result": "LOSS",
-      "notes": "LOSS on MUBARAKUSDT (PnL: -1.57%, Net: $-0.21 Fase 1)",
-      "context": {
-        "score": 61,
-        "rsi_15m": 45.77,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 16:10:33",
       "account_id": "SIM-042",
@@ -8446,6 +8412,40 @@
         "vol_surge_1m": 0.06,
         "fii_score": 70,
         "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 15:14:44",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "MORPHOUSDT",
+      "side": "SHORT",
+      "entry_price": 2.314,
+      "exit_price": 2.628,
+      "pnl_usd": -0.57,
+      "result": "LOSS",
+      "notes": "LOSS on MORPHOUSDT (PnL: -13.57%, Net: $-0.57 Fase 4)",
+      "context": {
+        "score": 12,
+        "rsi_15m": 75.91,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 15:14:44",
+      "account_id": "SIM-018",
+      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
+      "symbol": "SHIBUSDT",
+      "side": "LONG",
+      "entry_price": 5.32e-06,
+      "exit_price": 5.46e-06,
+      "pnl_usd": 1.22,
+      "result": "WIN",
+      "notes": "WIN on SHIBUSDT (PnL: +2.63%, Net: $+1.22 Fase 5)",
+      "context": {
+        "score": 81,
+        "rsi_15m": 53.42,
         "macro_trend_4h": "NEUTRAL"
       }
     }
