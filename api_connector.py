@@ -1106,10 +1106,10 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             sl_pct = round(highest_pnl_pct * 0.70, 4)
             phase = 3
             phase_label = f"💎 FASE 3 EXPANSIÓN MEDIA (Cima +{highest_pnl_pct:.2f}% | Retención 70% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.50:
-            sl_pct = max(0.15, round(highest_pnl_pct * 0.60, 4))
+        elif highest_pnl_pct >= 0.44:
+            sl_pct = max(0.15, round(highest_pnl_pct * 0.65, 4))
             phase = 2
-            phase_label = f"🔒 FASE 2 BREAK-EVEN BLINDADO (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}%)"
+            phase_label = f"🔒 FASE 2 SEGURO DE GANANCIA +0.15% NETO (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}%)"
         else:
             sl_pct = -0.50
             phase = 1
@@ -1187,11 +1187,13 @@ def quick_position_heartbeat():
         should_exit = current_pnl_pct <= sl_pct
         exit_reason = f"🎯 Trailing Floor Activado ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
         
-        # SNIPER MEJORA B: Detección de Agotamiento de Mecha en Cima (Cosecha el 80% del pico)
-        wick_pullback_threshold = max(0.28, min(0.38, round(custom_slack * 0.5, 2)))
-        if not should_exit and new_phase >= 2 and highest_pnl_pct >= 0.70 and (highest_pnl_pct - current_pnl_pct) >= wick_pullback_threshold:
-            should_exit = True
-            exit_reason = f"🎯 SNIPER MECHA CIMA (Pico +{highest_pnl_pct:.2f}% -> Venta Inmediata en {current_pnl_pct:+.2f}% tras retroceso de -{wick_pullback_threshold:.2f}%)"
+        # 🎯 SNIPER COSECHA GANANCIA TEMPRANA (+0.44% A +0.70%):
+        # Si tocó >= +0.44% y retrocede >= 0.18% o cae cerca del piso neto, cosechar inmediatamente
+        wick_pullback_threshold = max(0.18, min(0.35, round(custom_slack * 0.40, 2)))
+        if not should_exit and new_phase >= 2 and highest_pnl_pct >= 0.44:
+            if (highest_pnl_pct - current_pnl_pct) >= wick_pullback_threshold or current_pnl_pct <= 0.15:
+                should_exit = True
+                exit_reason = f"🎯 SNIPER COSECHA GANANCIA (Pico +{highest_pnl_pct:.2f}% -> Venta Asegurada en {current_pnl_pct:+.2f}% tras retroceso de -{wick_pullback_threshold:.2f}%)"
             
         # ⏱️ LIBERACIÓN ESTRICTA POR TIEMPO Y ESTANCAMIENTO (Máximo 35m Sector / 25m Thin / 15m Meme)
         max_stag_mins = int(arch_dna.get("max_stagnation_minutes", 35))
