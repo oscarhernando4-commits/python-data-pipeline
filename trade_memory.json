@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3490,
+    "total_trades": 3491,
     "wins": 1824,
-    "losses": 1666,
-    "win_rate_pct": 52.26,
-    "total_pnl_usd": 9505.431176548802
+    "losses": 1667,
+    "win_rate_pct": 52.25,
+    "total_pnl_usd": 9504.781176548802
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,19 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 21:02:13",
-      "account_id": "R-01",
-      "group_name": "CUENTA REAL",
-      "symbol": "GALAUSDT",
-      "side": "LONG",
-      "entry_price": 0.00197,
-      "exit_price": 0.001949,
-      "pnl_usd": -0.1652,
-      "result": "LOSS",
-      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (-1.07% <= -0.95%) (Fase 1, PnL: -1.07%)",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-22 21:03:12",
       "account_id": "SIM-005",
@@ -8690,6 +8677,30 @@
       "context": {
         "score": 10,
         "rsi_15m": 32.3,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-23 16:56:42",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "MORPHOUSDT",
+      "side": "SHORT",
+      "entry_price": 2.314,
+      "exit_price": 2.675,
+      "pnl_usd": -0.65,
+      "result": "LOSS",
+      "notes": "LOSS on MORPHOUSDT (PnL: -15.60%, Net: $-0.65 Fase 4)",
+      "context": {
+        "score": 24,
+        "rsi_15m": 70.22,
         "macro_trend_4h": "NEUTRAL",
         "fii_score": null,
         "atr_pct_15m": null,
