@@ -5,9 +5,10 @@ import time
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 
-def get_market_macro_context(symbol_analysis_map, fear_greed, news_headlines):
+def get_market_macro_context(symbol_analysis_map, fear_greed, news_headlines, top_candidates=None):
     """
-    Uses Gemini Lite to perform a macro scan of ALL 30 cryptos and return a global context string.
+    Uses Gemini Lite to perform a macro scan of ALL cryptos and return a global context string,
+    fully synchronized with the Top 15 Finalists ranked by Ground-Zero confluence.
     """
     if not GEMINI_API_KEY:
         return "Macro Analyst Offline (No API Key). Mercado evaluado solo cuantitativamente."
@@ -22,11 +23,28 @@ def get_market_macro_context(symbol_analysis_map, fear_greed, news_headlines):
     except ImportError:
         time_series_memory = None
     
-    # Sort symbols by score to only include rich history for top 5 and bottom 5 (to save tokens)
-    sorted_symbols = sorted(symbol_analysis_map.items(), key=lambda x: x[1].get("score", 50), reverse=True)
-    symbols_to_detail = sorted_symbols[:5] + sorted_symbols[-5:] if len(sorted_symbols) > 10 else sorted_symbols
-    detailed_syms = set([s[0] for s in symbols_to_detail])
-    
+    # Use top_candidates order if provided to guarantee 100% synchronization
+    if top_candidates:
+        detailed_syms = set([c["symbol"] for c in top_candidates[:10]])
+        top_list_text = []
+        for rank_idx, c in enumerate(top_candidates[:15], 1):
+            sym = c["symbol"]
+            score = c.get("score", 50)
+            data = symbol_analysis_map.get(sym, {})
+            trend = data.get("tech", {}).get("macro_trend_4h", "N/A")
+            fii = data.get("tech", {}).get("mtf_analysis", {}).get("fii_score", 0)
+            vol_s = data.get("tech", {}).get("indicators", {}).get("volume_surge_ratio", 1.0)
+            history_str = ""
+            if time_series_memory:
+                hist = time_series_memory.get_multi_cycle_pattern_summary(sym)
+                if hist:
+                    history_str = f" | HISTORIAL: {hist}"
+            top_list_text.append(f"  #{rank_idx} [{sym}] Score: {score}/100, FII: {fii}/100, VolSurge: {vol_s:.2f}x, Tendencia 4H: {trend}{history_str}")
+        candidates_section = "TOP 15 FINALISTAS DEL MERCADO (Ordenados por Confluencia Ground-Zero):\n" + "\n".join(top_list_text)
+    else:
+        detailed_syms = set()
+        candidates_section = ""
+
     for sym, data in symbol_analysis_map.items():
         score = data.get("score", 50)
         trend = data.get("tech", {}).get("macro_trend_4h", "N/A")
@@ -43,7 +61,7 @@ def get_market_macro_context(symbol_analysis_map, fear_greed, news_headlines):
                 
         market_summary.append(f"[{sym}] Score: {score}/100, Tendencia: {trend}{history_str}")
         
-    market_text = "\n".join(market_summary)
+    market_text = "\n".join(market_summary[:30])  # Sample first 30 to stay within token budget
     
     prompt_text = f"""
     Eres el "Jefe de Riesgo Macro e Inteligencia Histórica" de un fondo cuantitativo.
@@ -55,15 +73,17 @@ def get_market_macro_context(symbol_analysis_map, fear_greed, news_headlines):
     - Monedas Débiles (Score <= 40): {bearish_count}
     - Noticias Recientes: {json.dumps(news_headlines[:5])}
     
-    ESTADO DE LAS MONEDAS (Contexto en Tiempo Real e Historial 4H):
+    {candidates_section}
+    
+    ESTADO GENERAL DEL MERCADO:
     {market_text}
     
     REGLAS DE ANÁLISIS SÚPER DETALLADO:
     1. Analiza profundamente si el mercado está correlacionado (¿están todas cayendo juntas o es mixto?).
-    2. Usa el "HISTORIAL" de las monedas principales para identificar si estamos en fase de acumulación de ballenas, distribución o pánico institucional.
+    2. Evalúa los TOP 15 FINALISTAS en su orden exacto (#1, #2, #3...) usando el historial para identificar acumulación o distribución de ballenas.
     3. Identifica riesgos sistémicos ocultos (ej. Bitcoin cae mientras altcoins suben = trampa).
-    4. Escribe un análisis RICO Y DETALLADO de 2 a 3 párrafos completos que sirva como "Mapa de Guerra" para el Agente Ejecutor que operará la moneda Top 1.
-    5. Termina con un Veredicto Global (Ej: "VEREDICTO: Entorno favorable solo para Shorts rápidos").
+    4. Escribe un análisis RICO Y DETALLADO de 2 a 3 párrafos completos que sirva como "Mapa de Guerra" para el Comité de Ejecución.
+    5. Termina con un Veredicto Global (Ej: "VEREDICTO: Favorable para scalp en líderes de rotación").
     """
     
     payload = {

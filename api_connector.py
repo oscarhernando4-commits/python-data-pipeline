@@ -1667,7 +1667,6 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 symbol=cand_sym,
                 price=cand_price
             )
-            print(f"🧬 [ADN ACTIVO #{cand_idx}/15] {cand_sym} ({cand_score} Pts) -> {cand_archetype.get('label')} (SL={cand_archetype.get('initial_sl_pct')}%, MaxT={cand_archetype.get('max_stagnation_minutes')}m)")
             
             # 4. Cooldown 4H Anti-Resaca
             if cand_sym == last_closed_sym and (now_epoch - last_closed_time) < 14400:
@@ -1678,20 +1677,18 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] En Cooldown 4H ({mins_passed}m transcurridos). Pasando al siguiente finalista...")
                     continue
             
-            # 5. Veto Zombi / Mega-Cap lenta
-            if cand_archetype.get("is_low_volatility_zombie", False):
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Baja Volatilidad (ATR < 0.40% o Mega-Cap lenta). Pasando al siguiente finalista...")
-                continue
-                
-            # 6. Multi-Timeframe Institutional Analysis (1m, 2m, 5m, 15m, 1h)
+            # 5. Multi-Timeframe Institutional Analysis (1m, 2m, 5m, 15m, 1h)
             mtf_res = multi_timeframe_analyzer.analyze_multi_timeframe_candles(cand_sym)
             tf_align = mtf_res.get("timeframe_alignment", {})
             atr_15m = mtf_res.get("atr_pct_15m", 0.45)
             
-            # Re-check archetype with real 15M ATR
+            # Re-evaluate archetype with live 15M ATR
             arch_dna = adaptive_asset_dna.get_asset_dna_archetype(cand_sym, atr_15m, cand_price)
+            print(f"🧬 [ADN ACTIVO #{cand_idx}/15] {cand_sym} ({cand_score} Pts) -> {arch_dna.get('label')} (ATR={atr_15m:.2f}%, SL={arch_dna.get('initial_sl_pct')}%, MaxT={arch_dna.get('max_stagnation_minutes')}m)")
+            
+            # 6. Veto Zombi / Mega-Cap lenta (ATR < 0.35%)
             if arch_dna.get("is_low_volatility_zombie", False):
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por ATR insuficiente ({atr_15m:.2f}% < 0.40%). Pasando al siguiente finalista...")
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por ATR insuficiente ({atr_15m:.2f}% < 0.35% o Mega-Cap lenta). Pasando al siguiente finalista...")
                 continue
                 
             tf_1m = tf_align.get("1m", "BEARISH")

@@ -425,7 +425,8 @@ def run_infinite_trading_matrix_cycle():
             macro_ctx = text_analyzer.get_market_macro_context(
                 symbol_analysis_map, 
                 cached_fundamental_report.get("fear_and_greed", {"score": 50, "sentiment": "Neutral"}),
-                cached_fundamental_report.get("recent_headlines", [])
+                cached_fundamental_report.get("recent_headlines", []),
+                top_candidates=top_15_candidates
             )
             
             specific_news_map = {}

@@ -140,13 +140,15 @@ ARCHETYPE_CONFIGS = {
 
 # ─── 3. CLASIFICADOR DINÁMICO DE ADN ──────────────────────────────────────────
 
-def get_asset_dna_archetype(symbol: str, atr_15m_pct: float = 0.30, price: float = 1.0, volume_24h_usd: float = 10000000.0) -> Dict[str, Any]:
+def get_asset_dna_archetype(symbol: str, atr_15m_pct: float = None, price: float = 1.0, volume_24h_usd: float = 10000000.0) -> Dict[str, Any]:
     """
     Classifies any crypto symbol into its specialized DNA Archetype.
     1. Checks explicit token registry.
     2. If unlisted, uses volatility (ATR), unit price, and 24h volume to classify dynamically.
     """
     clean_sym = symbol.replace("USDT", "").replace("USDC", "").replace("FDUSD", "").upper()
+    
+    effective_atr = atr_15m_pct if (atr_15m_pct is not None and atr_15m_pct > 0) else 0.50
     
     # Check explicit mappings
     if clean_sym in ILLIQUID_FAN_TOKENS or symbol in ILLIQUID_FAN_TOKENS:
@@ -165,11 +167,11 @@ def get_asset_dna_archetype(symbol: str, atr_15m_pct: float = 0.30, price: float
         arch_key = "THIN_BOOK_MICRO"
     else:
         # Dynamic phenotypic classification based on market structure
-        if atr_15m_pct >= 0.70 or clean_sym.startswith("1000") or "DOGE" in clean_sym or "PEPE" in clean_sym or "CAT" in clean_sym:
+        if effective_atr >= 0.70 or clean_sym.startswith("1000") or "DOGE" in clean_sym or "PEPE" in clean_sym or "CAT" in clean_sym:
             arch_key = "HYPER_VOLATILE_SPRINT"
         elif price >= 100.0 and volume_24h_usd < 8000000.0:
             arch_key = "THIN_BOOK_MICRO"
-        elif volume_24h_usd >= 50000000.0 and atr_15m_pct <= 0.45:
+        elif volume_24h_usd >= 50000000.0 and effective_atr <= 0.45:
             arch_key = "BLUE_CHIP_CORE"
         else:
             arch_key = "SECTOR_ROTATION"
@@ -180,11 +182,15 @@ def get_asset_dna_archetype(symbol: str, atr_15m_pct: float = 0.30, price: float
     config["is_blacklisted_fan_token"] = False
     
     # 🚫 VETO ESTRICTO ANTI-ZOMBI Y ANTI-MEGA-CAP PESADA:
-    # Para scalping de $15 USD y meta >= +2% diario, activos con ATR < 0.40% o Blue-Chips lentas están descalificados.
-    is_slow_major = bool(clean_sym in BLUE_CHIP_CORE_TOKENS and atr_15m_pct < 0.45)
-    config["is_low_volatility_zombie"] = bool(atr_15m_pct < 0.40 or is_slow_major)
+    # Para scalping de $15 USD y meta >= +2% diario, activos con ATR < 0.35% o Blue-Chips lentas están descalificados.
+    is_slow_major = bool(clean_sym in BLUE_CHIP_CORE_TOKENS and effective_atr < 0.40)
+    if atr_15m_pct is not None:
+        config["is_low_volatility_zombie"] = bool(atr_15m_pct < 0.35 or is_slow_major)
+    else:
+        config["is_low_volatility_zombie"] = bool(clean_sym in BLUE_CHIP_CORE_TOKENS)  # By default, blue chips require live ATR verification
+        
     if config["is_low_volatility_zombie"]:
-        config["guideline_for_ai"] = "⛔ VETO ACTIVO: Volatilidad/Elasticidad insuficiente (ATR 15M < 0.40% o Mega-Cap lenta). Prohibido para scalping spot."
+        config["guideline_for_ai"] = "⛔ VETO ACTIVO: Volatilidad/Elasticidad insuficiente (ATR 15M < 0.35% o Mega-Cap lenta). Prohibido para scalping spot."
     return config
 
 
