@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3407,
+    "total_trades": 3408,
     "wins": 1788,
-    "losses": 1619,
-    "win_rate_pct": 52.48,
-    "total_pnl_usd": 7107.951376548802
+    "losses": 1620,
+    "win_rate_pct": 52.46,
+    "total_pnl_usd": 7107.901376548802
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 14:44:32",
-      "account_id": "SIM-001",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto (Estrategia Real A+)",
-      "symbol": "AEROUSDT",
-      "side": "LONG",
-      "entry_price": 0.4674,
-      "exit_price": 0.4617,
-      "pnl_usd": -0.15,
-      "result": "LOSS",
-      "notes": "LOSS on AEROUSDT (PnL: -1.22%, Net: $-0.15 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 37.71,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 14:44:32",
       "account_id": "SIM-002",
@@ -8422,6 +8405,23 @@
       "context": {
         "score": 0,
         "rsi_15m": 49.78,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 13:48:59",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "PENDLEUSDT",
+      "side": "SHORT",
+      "entry_price": 1.905,
+      "exit_price": 1.927,
+      "pnl_usd": -0.05,
+      "result": "LOSS",
+      "notes": "LOSS on PENDLEUSDT (PnL: -1.15%, Net: $-0.05 Fase 1)",
+      "context": {
+        "score": 14,
+        "rsi_15m": 94.42,
         "macro_trend_4h": "NEUTRAL"
       }
     }
