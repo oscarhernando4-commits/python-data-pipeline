@@ -15,7 +15,7 @@
     "side": "LONG",
     "quantity": 690.0,
     "break_even": false,
-    "highest_price": 0.02071,
+    "highest_price": 0.02077,
     "phase": 1,
     "archetype": "HYPER_VOLATILE_SPRINT",
     "archetype_label": "🐆 SPRINT HIPER-VOLÁTIL (Meme / High-Beta)",
@@ -33,7 +33,9 @@
     "dna_tier": "HIGH_BETA_RUNNER",
     "optimal_trailing_slack_pct": 0.95,
     "target_resistance_price": 0.0212,
-    "pump_probability_pct": 25
+    "pump_probability_pct": 25,
+    "holding_cycles": 10,
+    "volatility_regime": "🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (🐆 Cima +0.29% | SL Defensivo -0.75%)"
   },
   "last_trade_time": "26-08-23<br>23:36",
   "status": "🔵 En Vivo LONG (NIGHTUSDT @ $0.0207)",
