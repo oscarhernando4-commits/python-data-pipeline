@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3080,
+    "total_trades": 3081,
     "wins": 1642,
-    "losses": 1438,
-    "win_rate_pct": 53.31,
-    "total_pnl_usd": 3603.8469765487907
+    "losses": 1439,
+    "win_rate_pct": 53.29,
+    "total_pnl_usd": 3603.8289765487907
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 05:15:06",
-      "account_id": "SIM-097",
-      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
-      "symbol": "XTZUSDT",
-      "side": "SHORT",
-      "entry_price": 0.2493,
-      "exit_price": 0.2385,
-      "pnl_usd": 0.42,
-      "result": "WIN",
-      "notes": "WIN on XTZUSDT (PnL: +4.33%, Net: $+0.42 Fase 5)",
-      "context": {
-        "score": 80,
-        "rsi_15m": 36.57,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 05:17:07",
       "account_id": "SIM-081",
@@ -8472,6 +8455,19 @@
         "rsi_15m": 58.65,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-23 04:01:23",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.823,
+      "exit_price": 0.822,
+      "pnl_usd": -0.018,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🚀 Liberación por Estancamiento ADN 🧩 (40m en Fase 1 sin despegue para SECTOR_ROTATION, PnL=-0.12%) (Fase 1, PnL: -0.12%)",
+      "context": {}
     }
   ]
 }
