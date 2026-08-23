@@ -1812,13 +1812,25 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             tf_1m_up = mtf_res.get("tf_1m_up", False)
             is_1m_wick = mtf_res.get("is_1m_lower_wick_absorption", False)
             
-            # 🚀 REGLA DE IGNICIÓN DE VOLUMEN INTELIGENTE (Equilibrio perfecto: protege contra estancamiento sin frenar setups A+):
-            is_dead_volume = (vol_1m_now < 0.40 and vol_15m_now < 0.50 and fii < 65)
-            has_active_ignition = (vol_1m_now >= 0.80 or vol_2m_now >= 0.90 or vol_15m_now >= 1.10 or vol_acc >= 1.30 or is_pre_pump or is_30s_burst or fii >= 65)
+            # 🚀 REGLA DE ORO DE LIQUIDEZ Y VOLUMEN ACTIVO (Elimina trampas de liquidez muerta como COMP):
+            # 1. Prohibido comprar si el volumen de 15M está muerto (< 0.40x) sin importar otros indicadores
+            if vol_15m_now < 0.40 and vol_1m_now < 1.5:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Volumen 15M Muerto ({vol_15m_now:.2f}x < 0.40x). Exige liquidez activa real.")
+                continue
+                
+            is_dead_volume = (vol_1m_now < 0.50 and vol_15m_now < 0.60)
+            has_active_ignition = (
+                (vol_1m_now >= 0.85 and vol_15m_now >= 0.50) or 
+                (vol_2m_now >= 1.00 and vol_15m_now >= 0.50) or 
+                (vol_15m_now >= 1.20) or 
+                (vol_1m_now >= 1.80) or
+                (vol_acc >= 1.40 and vol_15m_now >= 0.40) or 
+                is_pre_pump or is_30s_burst
+            )
             has_trigger_candle = (tf_1m_up or is_1m_wick or mtf_res.get("is_ground_zero_micro_ignition", False))
             
             if is_dead_volume or not has_active_ignition:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Volumen Muerto/Sin Ignición (1M={vol_1m_now:.2f}x, 15M={vol_15m_now:.2f}x, FII={fii}). Exige compradores activos.")
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Volumen Insuficiente/Sin Ignición (1M={vol_1m_now:.2f}x, 15M={vol_15m_now:.2f}x). Exige compradores activos.")
                 continue
                 
             if not has_trigger_candle:
