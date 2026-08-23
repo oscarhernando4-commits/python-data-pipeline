@@ -1,6 +1,11 @@
 import os
 import sys
 
+try:
+    sys.stdout.reconfigure(line_buffering=True, encoding='utf-8')
+except Exception:
+    pass
+
 # Auto-load .env into environment
 env_path = os.path.join(os.path.dirname(__file__), ".env")
 if os.path.exists(env_path):
