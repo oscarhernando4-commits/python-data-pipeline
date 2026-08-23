@@ -1798,48 +1798,27 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     break
                 continue
                 
-            if fii < 50 and not mtf_res.get("is_ground_zero_micro_ignition", False):
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por FII insuficiente ({fii}/100 < 50).")
-                if is_ai_top:
-                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro técnico (FII bajo). NO se cascadea.")
-                    break
-                continue
-                
-            if mtf_res.get("is_overextended_15m"):
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Sobre-Extensión 15M.")
-                if is_ai_top:
-                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro técnico (Sobreextendido). NO se cascadea.")
-                    break
-                continue
-                
-            if not is_macro_base or not is_structural_15m_base:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Falta de Base Macro/15M.")
-                if is_ai_top:
-                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro técnico (Sin Base). NO se cascadea.")
-                    break
-                continue
-                
             # 7. Orderbook Depth & Micro-Surge Checks
             ob_info = orderbook_analyzer.fetch_orderbook_depth(cand_sym, limit=20)
             spread_now = ob_info.get("spread_pct", 0.0)
             bid_dom_now = ob_info.get("bid_dominance_pct", 50.0)
             
-            if spread_now > 0.28:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Spread elevado ({spread_now:.3f}% > 0.28%).")
+            if spread_now > 0.18:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Spread excesivo ({spread_now:.3f}% > 0.180%).")
                 if is_ai_top:
                     print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro técnico (Spread alto). NO se cascadea.")
                     break
                 continue
                 
-            if bid_dom_now < 49.5:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Bids insuficientes ({bid_dom_now:.1f}% < 49.5%).")
+            if bid_dom_now < 50.0:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Bids insuficientes ({bid_dom_now:.1f}% < 50.0%).")
                 if is_ai_top:
                     print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro técnico (Bids bajas). NO se cascadea.")
                     break
                 continue
                 
-            if ob_info.get("bid_vol_usdt", 0.0) > 0 and ob_info.get("bid_vol_usdt", 0.0) < 15000.0:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Muro Bids delgado (${ob_info.get('bid_vol_usdt', 0.0):,.0f} < $15k).")
+            if ob_info.get("bid_vol_usdt", 0.0) > 0 and ob_info.get("bid_vol_usdt", 0.0) < 20000.0:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Muro Bids delgado (${ob_info.get('bid_vol_usdt', 0.0):,.0f} < $20k).")
                 if is_ai_top:
                     print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro técnico (Muro delgado). NO se cascadea.")
                     break
@@ -1851,17 +1830,26 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             is_30s_burst = mtf_res.get("is_30s_micro_burst", False)
             vol_acc = mtf_res.get("vol_acceleration", 1.0)
             is_pre_pump = mtf_res.get("is_pre_pump_signal", False)
-            is_obv_acc = mtf_res.get("is_obv_accumulating", False)
-            is_ema_cross = mtf_res.get("is_ema_golden_cross", False)
+            tf_1m_up = mtf_res.get("tf_1m_up", False)
+            is_1m_wick = mtf_res.get("is_1m_lower_wick_absorption", False)
             
-            has_real_volume = (vol_15m_now >= 0.70) or (vol_2m_now >= 0.75) or (vol_1m_now >= 0.80) or is_obv_acc or is_pre_pump or (vol_acc >= 1.4)
-            has_micro_thrust = (vol_2m_now >= 0.50) or (vol_1m_now >= 0.50) or is_30s_burst or is_pre_pump or is_obv_acc or is_ema_cross
-            has_active_candles = (vol_1m_now >= 0.20 or vol_2m_now >= 0.20)
+            # 🚀 REGLA DE ORO DE IGNICIÓN DE VOLUMEN MICRO (Elimina pérdidas por estancamiento tipo NEXO/AXS):
+            # PROHIBIDO comprar si el volumen de 1M o 15M está muerto (< 0.70x)
+            is_dead_volume = (vol_1m_now < 0.70 and vol_15m_now < 0.70)
+            has_active_ignition = (vol_1m_now >= 1.00 or vol_2m_now >= 1.10 or vol_15m_now >= 1.20 or vol_acc >= 1.40 or is_pre_pump or is_30s_burst)
+            has_trigger_candle = (tf_1m_up or is_1m_wick)
             
-            if not has_real_volume or not has_active_candles or not has_micro_thrust:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Volumen/Empuje Insuficiente (15m={vol_15m_now:.2f}x, 1m={vol_1m_now:.2f}x).")
+            if is_dead_volume or not has_active_ignition:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Volumen Muerto/Sin Ignición (1M={vol_1m_now:.2f}x, 15M={vol_15m_now:.2f}x). Exige compradores activos.")
                 if is_ai_top:
-                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro técnico (Sin Volumen). NO se cascadea.")
+                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} falló filtro de ignición de volumen. NO se cascadea.")
+                    break
+                continue
+                
+            if not has_trigger_candle:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Vela 1M Roja en caída sin mecha de absorción. Exige giro verde.")
+                if is_ai_top:
+                    print(f"  ⛔ [VETO CASCADA] El campeón IA {cand_sym} está en caída 1M sin giro verde. NO se cascadea.")
                     break
                 continue
                 
