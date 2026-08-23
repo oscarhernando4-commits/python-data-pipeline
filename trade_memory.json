@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3330,
+    "total_trades": 3331,
     "wins": 1751,
-    "losses": 1579,
-    "win_rate_pct": 52.58,
-    "total_pnl_usd": 7015.8480765487975
+    "losses": 1580,
+    "win_rate_pct": 52.57,
+    "total_pnl_usd": 7015.769976548798
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,23 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 12:32:33",
-      "account_id": "SIM-054",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "DCRUSDT",
-      "side": "LONG",
-      "entry_price": 13.75,
-      "exit_price": 13.91,
-      "pnl_usd": 0.18,
-      "result": "WIN",
-      "notes": "WIN on DCRUSDT (PnL: +1.16%, Net: $+0.18 Fase 3)",
-      "context": {
-        "score": 91,
-        "rsi_15m": 52.66,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 12:32:33",
       "account_id": "SIM-060",
@@ -8420,6 +8403,19 @@
         "rsi_15m": 74.13,
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-08-23 11:06:34",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "LINKUSDT",
+      "side": "LONG",
+      "entry_price": 11.426,
+      "exit_price": 11.365,
+      "pnl_usd": -0.0781,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (-0.53% <= -0.50%) (Fase 1, PnL: -0.53%)",
+      "context": {}
     }
   ]
 }
