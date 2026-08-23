@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 3354,
-    "wins": 1761,
-    "losses": 1593,
+    "total_trades": 3356,
+    "wins": 1762,
+    "losses": 1594,
     "win_rate_pct": 52.5,
-    "total_pnl_usd": 7013.571376548799
+    "total_pnl_usd": 7013.2313765488
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when RSI:60-70(Strong) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on COMPUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on CRVUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ASTERUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ORDIUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on THETAUSDT)",
@@ -49,44 +48,11 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SCUSDT)",
       "BOOST SHORT when RSI>70(Overbought) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LDOUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on LINKUSDT)",
-      "BOOST SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on EIGENUSDT)"
+      "BOOST SHORT when RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Won on EIGENUSDT)",
+      "BOOST LONG when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on KMNOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-22 13:10:33",
-      "account_id": "SIM-051",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "CVXUSDT",
-      "side": "LONG",
-      "entry_price": 2.094,
-      "exit_price": 2.101,
-      "pnl_usd": 0.04,
-      "result": "WIN",
-      "notes": "WIN on CVXUSDT (PnL: +0.33%, Net: $+0.04 Fase 2)",
-      "context": {
-        "score": 18,
-        "rsi_15m": 61.18,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
-    {
-      "timestamp": "2026-08-22 13:10:33",
-      "account_id": "SIM-052",
-      "group_name": "⚖️ GRUPO 3: Balanceado",
-      "symbol": "CVXUSDT",
-      "side": "LONG",
-      "entry_price": 2.094,
-      "exit_price": 2.101,
-      "pnl_usd": 0.03,
-      "result": "WIN",
-      "notes": "WIN on CVXUSDT (PnL: +0.33%, Net: $+0.03 Fase 2)",
-      "context": {
-        "score": 18,
-        "rsi_15m": 61.18,
-        "macro_trend_4h": "NEUTRAL"
-      }
-    },
     {
       "timestamp": "2026-08-22 13:10:33",
       "account_id": "SIM-053",
@@ -8410,6 +8376,40 @@
       "context": {
         "score": 9,
         "rsi_15m": 77.54,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 12:25:02",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "KMNOUSDT",
+      "side": "LONG",
+      "entry_price": 0.02454,
+      "exit_price": 0.02467,
+      "pnl_usd": 0.02,
+      "result": "WIN",
+      "notes": "WIN on KMNOUSDT (PnL: +0.53%, Net: $+0.02 Fase 3)",
+      "context": {
+        "score": 7,
+        "rsi_15m": 68.26,
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-23 12:25:02",
+      "account_id": "SIM-081",
+      "group_name": "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia",
+      "symbol": "LDOUSDT",
+      "side": "LONG",
+      "entry_price": 0.3782,
+      "exit_price": 0.3763,
+      "pnl_usd": -0.36,
+      "result": "LOSS",
+      "notes": "LOSS on LDOUSDT (PnL: -0.50%, Net: $-0.36 Fase 1)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 68.71,
         "macro_trend_4h": "NEUTRAL"
       }
     }
