@@ -1298,7 +1298,7 @@ def trunc_1d(val):
     import math
     return math.floor(float(val) * 10.0) / 10.0
 
-def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bearish=False, is_learned_signal=False, best_confidence=75):
+def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bearish=False, is_learned_signal=False, best_confidence=75, candidates_list=None):
     state = load_real_account_state()
     import math
     
@@ -1563,7 +1563,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     print(f"Error ejecutando venta real: {e}")
                     
     # ========================================
-    # CASE 2: No active position - Look for SPOT LONG Entry
+    # CASE 2: No active position - Look for SPOT LONG Entry (15-FINALIST CASCADE)
     # ========================================
     else:
         state["position"] = None
@@ -1587,6 +1587,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         import strategy_engine
         dyn_t = strategy_engine.load_thresholds()
         real_long_score = dyn_t.get("group_0", {}).get("long_score", 65)
+        min_required_score = max(70, real_long_score)
         
         # Check learning engine bias before entering
         bias_ok = True
@@ -1596,291 +1597,306 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 bias_ok = False
                 print(f"🧠 Learning Engine BLOCKED LONG: Market bias is STRONG_SHORT")
         
-        is_stable = False
-        if best_symbol:
-            sym_clean = best_symbol.replace("USDT", "")
+        if not bias_ok or is_bearish:
+            print("🔒 [ESCUDO MERCADO] Mercado bajista o sesgo en corto. Preservando 100% USDT.")
+            return
             
-            # 🛡️ MEJORA C: COOLDOWN INTELIGENTE POR DESCUENTO REAL Y PISO DE SUELO
-            last_closed_sym = state.get("_last_closed_symbol")
-            last_closed_time = state.get("_last_closed_time", 0)
-            last_exit_price = state.get("_last_exit_price", 0.0)
-            time_since_last_exit = time.time() - last_closed_time
-            if best_symbol == last_closed_sym:
-                discount_from_exit_pct = ((last_exit_price - current_price) / last_exit_price) * 100.0 if (last_exit_price > 0 and current_price > 0) else 0.0
-                # Si el Súper-Cerebro validó explícitamente la entrada con giro de suelo (5+ min), o si hay descuento:
-                if is_learned_signal and time_since_last_exit >= 300:
-                    print(f"🟢 Cooldown superado: {best_symbol} re-aprobado explícitamente por el Súper-Cerebro IA tras {time_since_last_exit:.0f}s de enfriamiento.")
-                elif discount_from_exit_pct >= 1.00 and time_since_last_exit >= 120:
-                    print(f"🟢 Cooldown levantado inteligentemente: {best_symbol} con descuento real de -{discount_from_exit_pct:.2f}% (${last_exit_price:.6f} -> ${current_price:.6f}).")
-                elif time_since_last_exit < 600:
-                    # Anti-Re-Entry 10 Min (previene over-trading pero no bloquea oportunidades válidas)
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} en cooldown anti-re-entrada ({time_since_last_exit:.0f}s de los 600s requeridos). Descuento actual: {discount_from_exit_pct:.2f}%. Evitando over-trading.")
+        # ═════════════════════════════════════════════════════════════════════════
+        # 🧬 ANÁLISIS EN CASCADA DE ADN ACTIVO PARA LOS 15 FINALISTAS DEL MERCADO:
+        # Evalúa en orden de calidad institucional hasta encontrar el ganador 100% A+
+        # ═════════════════════════════════════════════════════════════════════════
+        candidate_queue = []
+        if best_symbol and best_symbol != "NONE":
+            candidate_queue.append({
+                "symbol": best_symbol,
+                "score": best_score,
+                "price": current_price,
+                "is_ai_champion": is_learned_signal
+            })
             
-            if not is_stable and (sym_clean in stablecoins_blacklist or best_symbol in stablecoins_blacklist):
-                is_stable = True
-                print(f"⛔ Compra rechazada: {best_symbol} es una stablecoin / activo no volátil.")
-            else:
-                # 🧬 ADN ADAPTATIVO: Carga el Arquetipo de Comportamiento especializado para el token
-                import adaptive_asset_dna
-                best_archetype = adaptive_asset_dna.get_asset_dna_archetype(
-                    symbol=best_symbol,
-                    price=current_price
-                )
-                print(f"🧬 [ADN ACTIVO] {best_symbol} clasificado como {best_archetype.get('label')} (SL={best_archetype.get('initial_sl_pct')}%, MaxT={best_archetype.get('max_stagnation_minutes')}m)")
+        if candidates_list:
+            for c in candidates_list:
+                csym = c.get("symbol")
+                if csym and csym not in [q["symbol"] for q in candidate_queue]:
+                    cscore = c.get("score", 50)
+                    cprice = c.get("tech_data", {}).get("current_price", 0.0)
+                    candidate_queue.append({
+                        "symbol": csym,
+                        "score": cscore,
+                        "price": cprice,
+                        "is_ai_champion": False
+                    })
+        
+        # Limit to top 15 finalists
+        candidate_queue = candidate_queue[:15]
+        
+        if not candidate_queue:
+            return
+            
+        print(f"\n🔬 [SÚPER-CEREBRO 15 FINALISTAS] Iniciando escaneo secuencial de ADN Activo y Confluencia 5-TF en {len(candidate_queue)} activos...")
+        
+        executed_trade = False
+        import adaptive_asset_dna
+        import multi_timeframe_analyzer
+        import orderbook_analyzer
+        
+        last_closed_sym = state.get("_last_closed_symbol")
+        last_closed_time = state.get("_last_closed_time", 0)
+        last_exit_price = state.get("_last_exit_price", 0.0)
+        now_epoch = time.time()
+        
+        for cand_idx, cand_info in enumerate(candidate_queue, 1):
+            cand_sym = cand_info["symbol"]
+            cand_score = cand_info["score"]
+            cand_price = cand_info["price"]
+            is_ai_top = cand_info.get("is_ai_champion", False)
+            sym_clean = cand_sym.replace("USDT", "")
+            
+            # 1. Skip Stablecoins
+            if sym_clean in stablecoins_blacklist or cand_sym in stablecoins_blacklist:
+                continue
                 
-                # 🏆 WHITELIST PRIORITARIA: Bonus de score para símbolos con WR >= 65% histórico
-                if sym_clean in priority_whitelist or best_symbol in priority_whitelist:
-                    best_score = min(100, best_score + 20)
-                    print(f"⭐ [WHITELIST PRIORITARIA] {best_symbol} tiene historial ganador (WR >= 65%). Bonus score aplicado: {best_score}/100.")
-
-                import multi_timeframe_analyzer
-                mtf_res = multi_timeframe_analyzer.analyze_multi_timeframe_candles(best_symbol)
-                tf_align = mtf_res.get("timeframe_alignment", {})
+            # 2. Get live price if missing
+            if not cand_price or cand_price <= 0:
+                cand_price = get_symbol_price(cand_sym)
+                if not cand_price or cand_price <= 0:
+                    continue
+                    
+            # 3. 🧬 ADN ADAPTATIVO & CLASIFICACIÓN FENOTÍPICA
+            cand_archetype = adaptive_asset_dna.get_asset_dna_archetype(
+                symbol=cand_sym,
+                price=cand_price
+            )
+            print(f"🧬 [ADN ACTIVO #{cand_idx}/15] {cand_sym} ({cand_score} Pts) -> {cand_archetype.get('label')} (SL={cand_archetype.get('initial_sl_pct')}%, MaxT={cand_archetype.get('max_stagnation_minutes')}m)")
+            
+            # 4. Cooldown 4H Anti-Resaca
+            if cand_sym == last_closed_sym and (now_epoch - last_closed_time) < 14400:
+                discount_from_exit_pct = ((last_exit_price - cand_price) / last_exit_price) * 100.0 if (last_exit_price > 0 and cand_price > 0) else 0.0
+                time_since_last_exit = now_epoch - last_closed_time
+                if not (is_ai_top and time_since_last_exit >= 300) and not (discount_from_exit_pct >= 1.50 and time_since_last_exit >= 180):
+                    mins_passed = int(time_since_last_exit / 60)
+                    print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] En Cooldown 4H ({mins_passed}m transcurridos). Pasando al siguiente finalista...")
+                    continue
+            
+            # 5. Veto Zombi / Mega-Cap lenta
+            if cand_archetype.get("is_low_volatility_zombie", False):
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Baja Volatilidad (ATR < 0.40% o Mega-Cap lenta). Pasando al siguiente finalista...")
+                continue
                 
-                import adaptive_asset_dna
-                arch_dna = adaptive_asset_dna.get_asset_dna_archetype(best_symbol, mtf_res.get("atr_15m_pct", 0.30))
+            # 6. Multi-Timeframe Institutional Analysis (1m, 2m, 5m, 15m, 1h)
+            mtf_res = multi_timeframe_analyzer.analyze_multi_timeframe_candles(cand_sym)
+            tf_align = mtf_res.get("timeframe_alignment", {})
+            atr_15m = mtf_res.get("atr_pct_15m", 0.45)
+            
+            # Re-check archetype with real 15M ATR
+            arch_dna = adaptive_asset_dna.get_asset_dna_archetype(cand_sym, atr_15m, cand_price)
+            if arch_dna.get("is_low_volatility_zombie", False):
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por ATR insuficiente ({atr_15m:.2f}% < 0.40%). Pasando al siguiente finalista...")
+                continue
                 
-                # 🏛️ MATRIZ DE CONFLUENCIA DE BASE EN 5 TIMEFRAMES (1m, 2m, 5m, 15m, 1h - MÁXIMO 1H)
-                # REGLA SUPREMA: Entrar en el suelo de 1M/2M cuando hay soporte en 15M/1H y FII positivo.
-                tf_1m = tf_align.get("1m", "BEARISH")
-                tf_2m = tf_align.get("2m", "BEARISH")
-                tf_5m = tf_align.get("5m", "BEARISH")
-                tf_15m = tf_align.get("15m", "BEARISH")
-                tf_1h = tf_align.get("1h", "BEARISH")
+            tf_1m = tf_align.get("1m", "BEARISH")
+            tf_2m = tf_align.get("2m", "BEARISH")
+            tf_5m = tf_align.get("5m", "BEARISH")
+            tf_15m = tf_align.get("15m", "BEARISH")
+            tf_1h = tf_align.get("1h", "BEARISH")
+            tf_10s = tf_align.get("10s", "BEARISH")
+            tf_30s = tf_align.get("30s", "BEARISH")
+            fii = mtf_res.get("fii_score", 0)
+            
+            # Macro Base Check
+            is_macro_base = (
+                tf_1h == "BULLISH" or 
+                mtf_res.get("is_yellow_arrow_1h") or 
+                mtf_res.get("rsi_1h", 50) <= 55.0 or 
+                mtf_res.get("range_position_1h", 0.5) <= 0.50 or 
+                mtf_res.get("is_vwap_floor_rebound") or
+                mtf_res.get("is_bullish_divergence")
+            )
+            is_structural_15m_base = (
+                tf_15m == "BULLISH" or 
+                mtf_res.get("is_yellow_arrow_pivot") or 
+                mtf_res.get("is_ma7_above_ma25_upward") or 
+                mtf_res.get("is_cetus_rocket_pattern") or
+                mtf_res.get("is_ground_zero_micro_ignition")
+            )
+            
+            has_dual_sub_minute_ignition = bool(
+                (tf_10s == "BULLISH" and tf_30s == "BULLISH") or
+                (tf_10s == "BULLISH" and tf_1m == "BULLISH" and mtf_res.get("vol_surge_10s", 1.0) >= 1.2) or
+                (fii >= 60 and tf_10s == "BULLISH")
+            )
+            
+            has_floor_turnaround = bool(
+                tf_1m == "BULLISH" or
+                tf_2m == "BULLISH" or
+                mtf_res.get("is_bullish_divergence") or
+                mtf_res.get("is_yellow_arrow_pivot") or
+                mtf_res.get("is_vwap_floor_rebound") or
+                mtf_res.get("is_ema_golden_cross") or
+                has_dual_sub_minute_ignition
+            )
+            
+            is_active_falling_knife = bool(
+                (tf_10s == "BEARISH" and tf_30s == "BEARISH" and tf_1m == "BEARISH") and
+                not mtf_res.get("is_bullish_divergence") and
+                not mtf_res.get("is_vwap_floor_rebound")
+            )
+            
+            is_15m_cascade = mtf_res.get("is_15m_red_cascade", False)
+            is_at_daily_ceiling = mtf_res.get("is_at_daily_resistance_ceiling", False)
+            
+            if is_at_daily_ceiling or is_15m_cascade or is_active_falling_knife:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Techo/Cascada/Cuchillo. Pasando al siguiente finalista...")
+                continue
                 
-                is_macro_base = (
-                    tf_1h == "BULLISH" or 
-                    mtf_res.get("is_yellow_arrow_1h") or 
-                    mtf_res.get("rsi_1h", 50) <= 55.0 or 
-                    mtf_res.get("range_position_1h", 0.5) <= 0.50 or 
-                    mtf_res.get("is_vwap_floor_rebound") or
-                    mtf_res.get("is_bullish_divergence")
-                )
-                is_structural_15m_base = (
-                    tf_15m == "BULLISH" or 
-                    mtf_res.get("is_yellow_arrow_pivot") or 
-                    mtf_res.get("is_ma7_above_ma25_upward") or 
-                    mtf_res.get("is_cetus_rocket_pattern") or
-                    mtf_res.get("is_ground_zero_micro_ignition")
-                )
-                tf_10s = tf_align.get("10s", "BEARISH")
-                tf_30s = tf_align.get("30s", "BEARISH")
-                fii = mtf_res.get("fii_score", 0)
+            if mtf_res.get("obv_trend") == "DISTRIBUTING":
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Distribución Institucional (OBV=DISTRIBUTING). Pasando al siguiente...")
+                continue
                 
-                # 🎯 MEJORA 2: Gatillo de Doble Ignición Sub-Minuto Obligatorio
-                has_dual_sub_minute_ignition = bool(
-                    (tf_10s == "BULLISH" and tf_30s == "BULLISH") or
-                    (tf_10s == "BULLISH" and tf_1m == "BULLISH" and mtf_res.get("vol_surge_10s", 1.0) >= 1.2) or
-                    (fii >= 60 and tf_10s == "BULLISH")
-                )
+            if not has_floor_turnaround:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Falta de Giro de Suelo en 1M/2M. Pasando al siguiente...")
+                continue
                 
-                # 🛡️ GATILLO MANDATORIO DE SUELO CONFIRMADO Y FRENO DE SANGRADO (Anti-Cuchillo Cayendo):
-                # Para ser un suelo real, el activo NO puede estar en cascada roja cayendo.
-                # Exige al menos 1 confirmación de giro o absorción institucional:
-                has_floor_turnaround = bool(
-                    tf_1m == "BULLISH" or
-                    tf_2m == "BULLISH" or
-                    mtf_res.get("is_bullish_divergence") or
-                    mtf_res.get("is_yellow_arrow_pivot") or
-                    mtf_res.get("is_vwap_floor_rebound") or
-                    mtf_res.get("is_ema_golden_cross") or
-                    has_dual_sub_minute_ignition
-                )
+            is_spring = mtf_res.get("spring_coiling", {}).get("is_spring_compressed", False)
+            is_wave2 = mtf_res.get("wave2_retest", {}).get("is_wave2_retest", False)
+            if (mtf_res.get("rsi_2m", 50.0) > 54.0 or mtf_res.get("rsi_1m", 50.0) > 54.0) and not (is_spring or is_wave2):
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Entrada Tardía (RSI 2M={mtf_res.get('rsi_2m'):.1f} > 54.0). Pasando al siguiente...")
+                continue
                 
-                # 🚫 VETO DE SANGRADO ACTIVO: Si 10s, 30s y 1m son todos rojos sin divergencia, está CAYENDO
-                is_active_falling_knife = bool(
-                    (tf_10s == "BEARISH" and tf_30s == "BEARISH" and tf_1m == "BEARISH") and
-                    not mtf_res.get("is_bullish_divergence") and
-                    not mtf_res.get("is_vwap_floor_rebound")
-                )
+            if fii < 50 and not mtf_res.get("is_ground_zero_micro_ignition", False):
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por FII insuficiente ({fii}/100 < 50). Pasando al siguiente...")
+                continue
                 
-                # 🚫 VETO MANDATORIO DE CASCADA ROJA 15M:
-                is_15m_cascade = mtf_res.get("is_15m_red_cascade", False)
-                range_pos_30m = mtf_res.get("range_position_30m", 0.5)
-                dist_24h_high = mtf_res.get("dist_to_24h_high_pct", 999.0)
-                is_at_daily_ceiling = mtf_res.get("is_at_daily_resistance_ceiling", False)
+            if mtf_res.get("is_overextended_15m"):
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Sobre-Extensión 15M. Pasando al siguiente...")
+                continue
                 
-                # 🚫 1. COOLDOWN DE 4 HORAS ANTI-RESACA POST-TRADE (Evita re-entrar en trampas como NEXO o COTI)
-                last_closed_sym = state.get("_last_closed_symbol")
-                last_closed_time = state.get("_last_closed_time", 0)
-                now_epoch = time.time()
-                if best_symbol == last_closed_sym and (now_epoch - last_closed_time) < 14400:
-                    mins_passed = int((now_epoch - last_closed_time) / 60)
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} en COOLDOWN OBLIGATORIO DE 4 HORAS (cerrado hace {mins_passed}m, faltan {240-mins_passed}m). Prohibido reentrar en resaca.")
-                elif arch_dna.get("is_low_volatility_zombie", False):
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} descartado por VOLATILIDAD INSUFICIENTE (ATR 15M < 0.40% o Mega-Cap lenta). Prohibido operar activos zombi sin movimiento.")
-                elif is_at_daily_ceiling:
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} bloqueado por TECHO DE RESISTENCIA 30M/24H (Canal 30M: {range_pos_30m*100:.0f}%, Distancia a Máximo 24H: +{dist_24h_high:.2f}%). Prohibido comprar la cima.")
-                elif is_15m_cascade:
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} bloqueado por CASCADA ROJA 15M (3+ velas de 15m rojas consecutivas sin mecha de absorción). Prohibido comprar mientras sigue cayendo.")
-                elif is_active_falling_knife:
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} bloqueado por CUCHILLO CAYENDO / SANGRADO ACTIVO (10s: DN, 30s: DN, 1M: DN). Prohibido comprar mientras sigue cayendo. Esperando freno.")
-                elif mtf_res.get("obv_trend") == "DISTRIBUTING":
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} bloqueado por DISTRIBUCIÓN INSTITUCIONAL (OBV = DISTRIBUTING). El dinero inteligente está vendiendo.")
-                elif not has_floor_turnaround:
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} en zona baja pero SIN GIRO CONFIRMADO (1M: {tf_1m}, 2M: {tf_2m}, Divergencia: {mtf_res.get('is_bullish_divergence')}). Exige vela verde de confirmación.")
-                elif (mtf_res.get("rsi_2m", 50.0) > 54.0 or mtf_res.get("rsi_1m", 50.0) > 54.0) and not (mtf_res.get("spring_coiling", {}).get("is_spring_compressed", False) or mtf_res.get("wave2_retest", {}).get("is_wave2_retest", False)):
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} llegó tarde al rebote (RSI 2M={mtf_res.get('rsi_2m'):.1f}, RSI 1M={mtf_res.get('rsi_1m'):.1f} > 54.0). Exige entrada en el PISO REAL (RSI <= 52.0).")
-                elif mtf_res.get("fii_score", 0) < 50 and not mtf_res.get("is_ground_zero_micro_ignition", False):
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} descartado por FII insuficiente ({mtf_res.get('fii_score')}/100 < 50). Exige inyección institucional confirmada.")
-                elif mtf_res.get("is_overextended_15m"):
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} rechazado por vela sobre-extendida en la cima ({mtf_res.get('overextension_reason')}).")
-                elif not is_macro_base:
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por Macro 1H sin soporte (1H: {tf_1h}, RSI 1H: {mtf_res.get('rsi_1h')}, Canal 1H: {mtf_res.get('range_position_1h')}). Exige base macro.")
-                elif not is_structural_15m_base:
-                    is_stable = True
-                    print(f"⛔ Compra rechazada: {best_symbol} descalificado por falta de estructura en 15M (15M: {tf_15m}, RSI: {mtf_res.get('rsi_15m')}). Exige rebote o soporte en 15M.")
+            if not is_macro_base or not is_structural_15m_base:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Falta de Base Macro/15M. Pasando al siguiente...")
+                continue
+                
+            # 7. Orderbook Depth & Micro-Surge Checks
+            ob_info = orderbook_analyzer.fetch_orderbook_depth(cand_sym, limit=20)
+            if ob_info.get("spread_pct", 0.0) > 0.75:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Spread elevado ({ob_info.get('spread_pct'):.3f}% > 0.75%). Pasando al siguiente...")
+                continue
+                
+            if ob_info.get("bid_dominance_pct", 50.0) < 46.0:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Bids insuficientes ({ob_info.get('bid_dominance_pct'):.1f}% < 46.0%). Pasando al siguiente...")
+                continue
+                
+            if ob_info.get("bid_vol_usdt", 0.0) > 0 and ob_info.get("bid_vol_usdt", 0.0) < 15000.0:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Muro Bids delgado (${ob_info.get('bid_vol_usdt', 0.0):,.0f} < $15k). Pasando al siguiente...")
+                continue
+                
+            vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
+            vol_2m_now = mtf_res.get("vol_surge_2m", 1.0)
+            vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
+            is_30s_burst = mtf_res.get("is_30s_micro_burst", False)
+            vol_acc = mtf_res.get("vol_acceleration", 1.0)
+            is_pre_pump = mtf_res.get("is_pre_pump_signal", False)
+            is_obv_acc = mtf_res.get("is_obv_accumulating", False)
+            is_ema_cross = mtf_res.get("is_ema_golden_cross", False)
+            
+            has_real_volume = (vol_15m_now >= 0.70) or (vol_2m_now >= 0.75) or (vol_1m_now >= 0.80) or is_obv_acc or is_pre_pump or (vol_acc >= 1.4)
+            has_micro_thrust = (vol_2m_now >= 0.50) or (vol_1m_now >= 0.50) or is_30s_burst or is_pre_pump or is_obv_acc or is_ema_cross
+            has_active_candles = (vol_1m_now >= 0.20 or vol_2m_now >= 0.20)
+            
+            if not has_real_volume or not has_active_candles or not has_micro_thrust:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Volumen/Empuje Insuficiente (15m={vol_15m_now:.2f}x, 1m={vol_1m_now:.2f}x). Pasando al siguiente...")
+                continue
+                
+            final_cand_score = max(cand_score, mtf_res.get("multi_tf_score", 50))
+            if final_cand_score < min_required_score:
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Score insuficiente ({final_cand_score} < {min_required_score}). Pasando al siguiente...")
+                continue
+                
+            # ═════════════════════════════════════════════════════════════════════════
+            # 🎯 GANADOR APROBADO: EL ACTIVO SUPERÓ EL 100% DE LOS FILTROS INSTITUCIONALES
+            # ═════════════════════════════════════════════════════════════════════════
+            print(f"\n💎 ═══════════════════════════════════════════════════════════════════")
+            print(f"🚀 [ACTIVO A+ SELECCIONADO: FINALISTA #{cand_idx}/15 -> {cand_sym}]")
+            print(f"🧬 Arquetipo: {cand_archetype.get('label')} | SL={cand_archetype.get('initial_sl_pct')}%")
+            print(f"📊 Score MTF: {final_cand_score}/100 | FII: {fii}/100 | ATR: {atr_15m:.2f}% | Spread: {ob_info.get('spread_pct'):.3f}%")
+            print(f"🌊 Muro Bids: ${ob_info.get('bid_vol_usdt', 0):,.0f} USDT (Bids={ob_info.get('bid_dominance_pct'):.1f}%) | OBV={mtf_res.get('obv_trend')}")
+            print(f"═══════════════════════════════════════════════════════════════════════\n")
+            
+            # Pre-flight check live balance
+            try:
+                live_diag = diagnose_full_spot_wallet()
+                live_usdt = live_diag.get("_cached_usdt_free", 0.0)
+                if live_usdt < 5.1:
+                    print(f"⚠️ [PRE-FLIGHT] Solo hay ${live_usdt:.2f} USDT libres en Binance Spot. Compra cancelada.")
+                    return
+                usdt_free = live_usdt
+            except Exception:
+                pass
+                
+            print(f"🚀 Ejecutando SPOT BUY en {cand_sym} con ${usdt_free:.2f} USDT (100% Capital)...")
+            buy_res = execute_real_spot_market_buy(cand_sym, usdt_free)
+            if isinstance(buy_res, dict) and "orderId" in buy_res:
+                time.sleep(0.5)
+                exact_entry, exact_cost, exact_qty = get_exact_real_entry_price(cand_sym)
+                qty = exact_qty if exact_qty else float(buy_res.get("executedQty", 0))
+                cum_quote = exact_cost if exact_cost else float(buy_res.get("cummulativeQuoteQty", 0))
+                if exact_entry:
+                    actual_entry_price = exact_entry
+                    actual_cost = exact_cost
+                elif qty > 0 and cum_quote > 0:
+                    actual_entry_price = round(cum_quote / qty, 6)
+                    actual_cost = round(cum_quote, 2)
                 else:
-                    if is_learned_signal:
-                        print(f"👑 [SÚPER-CEREBRO APROBADO] {best_symbol} validado por IA institucional con confluencia técnica confirmada. Procediendo a ejecución con Escalera Cuántica...")
-                
-                if not is_stable:
-                    if arch_dna.get("is_blacklisted_fan_token", False):
-                        is_stable = True
-                        print(f"⛔ Compra rechazada: {best_symbol} bloqueado por ser Fan Token / Activo Ilíquido con libros de spoofing fantasma.")
+                    actual_entry_price = cand_price
+                    actual_cost = round(usdt_free, 2)
+                if qty == 0:
+                    qty = round(usdt_free / cand_price, 5)
                     
-                if not is_stable:
-                    import orderbook_analyzer
-                    ob_info = orderbook_analyzer.fetch_orderbook_depth(best_symbol, limit=20)
-                    
-                    # 🚫 MEJORA B: Veto RSI 4H Sobreextendido (> 75) — previene comprar la cima parabólica extrema
-                    rsi_4h = mtf_res.get("rsi_4h", 50.0)
-                    if rsi_4h >= 75.0:
-                        is_stable = True
-                        print(f"⛔ Compra rechazada: {best_symbol} con RSI 4H sobreextendido ({rsi_4h:.1f} >= 75.0). Riesgo alto de agotamiento macro.")
-                    elif ob_info.get("spread_pct", 0.0) > 0.75:
-                        is_stable = True
-                        print(f"⛔ Compra rechazada: {best_symbol} descalificado por Spread elevado ({ob_info.get('spread_pct'):.3f}% > 0.75%). Evitando deslizamiento de precio.")
-                    else:
-                        vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
-                        vol_2m_now = mtf_res.get("vol_surge_2m", 1.0)
-                        vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
-                        is_30s_burst = mtf_res.get("is_30s_micro_burst", False)
-                        vol_acc = mtf_res.get("vol_acceleration", 1.0)
-                        is_pre_pump = mtf_res.get("is_pre_pump_signal", False)
-                        is_yellow = mtf_res.get("is_yellow_arrow_pivot", False)
-                        is_obv_acc = mtf_res.get("is_obv_accumulating", False)
-                        is_ema_cross = mtf_res.get("is_ema_golden_cross", False)
-                        
-                        # ═══════════════════════════════════════════════════════════
-                        # 🚀 FILTRO CUÁNTICO DE VOLUMEN REAL Y MOMENTUM GANADOR (ESTRICTO):
-                        # ═══════════════════════════════════════════════════════════
-                        has_real_volume = (vol_15m_now >= 0.70) or (vol_2m_now >= 0.75) or (vol_1m_now >= 0.80) or is_obv_acc or is_pre_pump or (vol_acc >= 1.4)
-                        has_micro_thrust = (vol_2m_now >= 0.50) or (vol_1m_now >= 0.50) or is_30s_burst or is_pre_pump or is_obv_acc or is_ema_cross
-                        
-                        # Anti-Vela Muerta: Exigir que 1M o 2M tengan volumen activo (> 0.20x)
-                        has_active_candles = (vol_1m_now >= 0.20 or vol_2m_now >= 0.20)
-                        
-                        if not has_real_volume:
-                            is_stable = True
-                            print(f"⛔ Compra rechazada: {best_symbol} descartado por FALTA DE VOLUMEN REAL (15m={vol_15m_now:.2f}x, 2m={vol_2m_now:.2f}x, 1m={vol_1m_now:.2f}x, OBV={is_obv_acc}).")
-                        elif not has_active_candles:
-                            is_stable = True
-                            print(f"⛔ Compra rechazada: {best_symbol} descartado por VELA MUERTA SUB-MINUTO (1m={vol_1m_now:.2f}x, 2m={vol_2m_now:.2f}x sin actividad real).")
-                        elif not has_micro_thrust:
-                            is_stable = True
-                            print(f"⛔ Compra rechazada: {best_symbol} descartado por falta de empuje micro (1m={vol_1m_now:.2f}x, 2m={vol_2m_now:.2f}x, 30sBurst={is_30s_burst}).")
-                        elif ob_info.get("bid_dominance_pct", 50.0) < 46.0:
-                            is_stable = True
-                            print(f"⛔ Compra rechazada: {best_symbol} descartado por Bids insuficientes ({ob_info.get('bid_dominance_pct'):.1f}% < 46.0%). Exige mayoría compradora en libro.")
-                        elif ob_info.get("bid_vol_usdt", 0.0) > 0 and ob_info.get("bid_vol_usdt", 0.0) < 15000.0:
-                            is_stable = True
-                            print(f"⛔ Compra rechazada: {best_symbol} descartado por LIBRO DE ÓRDENES MUY DELGADO (Bids=${ob_info.get('bid_vol_usdt', 0.0):,.0f} < $15,000 USDT). Evitando riesgo de deslizamiento.")
-                        else:
-                            arrow_lbl = " 🎯 [PATRÓN FLECHAS AMARILLAS 15M PIVOT REBOUND]" if is_yellow else ""
-                            print(f"📊 Análisis Multi-Temporal & Libro de Órdenes {best_symbol}{arrow_lbl}: Score MTF={mtf_res.get('multi_tf_score')}/100 | Spread={ob_info.get('spread_pct')}% (<=0.75% OK) | Bids={ob_info.get('bid_dominance_pct')}% (>=46% OK) | Muro=${ob_info.get('bid_vol_usdt'):,.0f} USDT | RSI4H={rsi_4h:.1f} | 🚀 Turbinas: 15m={vol_15m_now:.2f}x, 2m={vol_2m_now:.2f}x, 1m={vol_1m_now:.2f}x, OBV={is_obv_acc}, EMA={is_ema_cross}")
-                
-        if bias_ok and not is_stable:
-            # 1. LONG Entry Signal (Operates with 100% of available USDT, strictly requires Score >= 75 Setup A+)
-            min_required_score = max(75, real_long_score)
-            if best_symbol and not is_bearish and best_score >= min_required_score:
-                # 🔍 PRE-FLIGHT LIVE CHECK: Verificar balance real directamente en Binance antes de comprar
+                arch_profile = adaptive_asset_dna.get_asset_dna_archetype(
+                    symbol=cand_sym,
+                    atr_15m_pct=atr_15m,
+                    price=actual_entry_price
+                )
+                state["position"] = {
+                    "symbol": cand_sym,
+                    "entry_price": actual_entry_price,
+                    "cost_usd": actual_cost,
+                    "side": "LONG",
+                    "quantity": qty,
+                    "break_even": False,
+                    "highest_price": actual_entry_price,
+                    "phase": 1,
+                    "archetype": arch_profile.get("archetype", "SECTOR_ROTATION"),
+                    "archetype_label": arch_profile.get("label", "General"),
+                    "initial_sl_pct": arch_profile.get("initial_sl_pct", -0.50),
+                    "max_stagnation_minutes": arch_profile.get("max_stagnation_minutes", 60),
+                    "vol_surge": mtf_res.get("vol_surge_2m", 1.0),
+                    "vol_surge_1m": mtf_res.get("vol_surge_1m", 1.0),
+                    "score": final_cand_score,
+                    "rsi_15m": mtf_res.get("rsi_15m", 50.0),
+                    "fii_score": fii,
+                    "obv_trend": mtf_res.get("obv_trend", "ACCUMULATING"),
+                    "entry_time_ms": int(time.time() * 1000),
+                    "atr_pct_15m": atr_15m,
+                    "ma25_5m": mtf_res.get("ma25_5m", cand_price),
+                    "dna_tier": mtf_res.get("dna_profile", {}).get("dna_tier", "HIGH_BETA_RUNNER"),
+                    "optimal_trailing_slack_pct": mtf_res.get("dna_profile", {}).get("optimal_trailing_slack_pct", 0.45),
+                    "target_resistance_price": mtf_res.get("predictive_dna", {}).get("medium_term_horizon", {}).get("target_resistance_price", actual_entry_price * 1.03),
+                    "pump_probability_pct": mtf_res.get("predictive_dna", {}).get("pump_probability_pct", 50)
+                }
+                state["status"] = f"🔵 En Vivo LONG ({cand_sym} @ ${actual_entry_price:.4f})"
+                state["_cached_usdt_free"] = 0.0
+                save_real_account_state(state)
+                print(f"✅ SPOT LONG ejecutado exitosamente: {cand_sym} ({qty} @ ${actual_entry_price:.4f} = ${actual_cost} USD)")
                 try:
-                    live_diag = diagnose_full_spot_wallet()
-                    live_usdt = live_diag.get("_cached_usdt_free", 0.0)
-                    if live_usdt < 5.1:
-                        print(f"⚠️ [PRE-FLIGHT] Solo hay ${live_usdt:.2f} USDT libres en Binance Spot. Compra de {best_symbol} cancelada para evitar errores.")
-                        return
-                    usdt_free = live_usdt
+                    import asset_dna_predictive_engine as _adna
+                    _adna.register_trade_today(cand_sym)
                 except Exception:
                     pass
-                trigger_reason = "AUTO-APRENDIZAJE A+" if is_learned_signal else f"Score {real_long_score}+"
-                print(f"🚀 SEÑAL ALCISTA (LONG) ({best_symbol} @ {best_score} Pts - {trigger_reason}). Comprando con ${usdt_free:.1f} USDT (100% Capital)...")
-                buy_res = execute_real_spot_market_buy(best_symbol, usdt_free)
-                if isinstance(buy_res, dict) and "orderId" in buy_res:
-                    time.sleep(0.5)
-                    exact_entry, exact_cost, exact_qty = get_exact_real_entry_price(best_symbol)
-                    qty = exact_qty if exact_qty else float(buy_res.get("executedQty", 0))
-                    cum_quote = exact_cost if exact_cost else float(buy_res.get("cummulativeQuoteQty", 0))
-                    if exact_entry:
-                        actual_entry_price = exact_entry
-                        actual_cost = exact_cost
-                    elif qty > 0 and cum_quote > 0:
-                        actual_entry_price = round(cum_quote / qty, 6)
-                        actual_cost = round(cum_quote, 2)
-                    else:
-                        actual_entry_price = current_price
-                        actual_cost = round(usdt_free, 2)
-                    if qty == 0:
-                        qty = round(usdt_free / current_price, 5)  # Fallback
-                    import adaptive_asset_dna
-                    arch_profile = adaptive_asset_dna.get_asset_dna_archetype(
-                        symbol=best_symbol,
-                        atr_15m_pct=mtf_res.get("atr_pct_15m", 0.30) if 'mtf_res' in locals() else 0.30,
-                        price=actual_entry_price
-                    )
-                    state["position"] = {
-                        "symbol": best_symbol,
-                        "entry_price": actual_entry_price,
-                        "cost_usd": actual_cost,
-                        "side": "LONG",
-                        "quantity": qty,
-                        "break_even": False,
-                        "highest_price": actual_entry_price,
-                        "phase": 1,
-                        "archetype": arch_profile.get("archetype", "SECTOR_ROTATION"),
-                        "archetype_label": arch_profile.get("label", "General"),
-                        "initial_sl_pct": arch_profile.get("initial_sl_pct", -0.50),
-                        "max_stagnation_minutes": arch_profile.get("max_stagnation_minutes", 60),
-                        "vol_surge": mtf_res.get("vol_surge_2m", 1.0) if 'mtf_res' in locals() else 1.0,
-                        "vol_surge_1m": mtf_res.get("vol_surge_1m", 1.0) if 'mtf_res' in locals() else 1.0,
-                        "score": mtf_res.get("multi_tf_score", 80) if 'mtf_res' in locals() else 80,
-                        "rsi_15m": mtf_res.get("rsi_15m", 50.0) if 'mtf_res' in locals() else 50.0,
-                        "fii_score": mtf_res.get("fii_score", 60) if 'mtf_res' in locals() else 60,
-                        "obv_trend": mtf_res.get("obv_trend", "ACCUMULATING") if 'mtf_res' in locals() else "ACCUMULATING",
-                        "entry_time_ms": int(time.time() * 1000),
-                        "atr_pct_15m": mtf_res.get("atr_pct_15m", 0.45) if 'mtf_res' in locals() else 0.45,
-                        "ma25_5m": mtf_res.get("ma25_5m", current_price) if 'mtf_res' in locals() else current_price,
-                        "dna_tier": mtf_res.get("dna_profile", {}).get("dna_tier", "BALANCED_SWING") if 'mtf_res' in locals() else "BALANCED_SWING",
-                        "optimal_trailing_slack_pct": mtf_res.get("dna_profile", {}).get("optimal_trailing_slack_pct", 0.45) if 'mtf_res' in locals() else 0.45,
-                        "target_resistance_price": mtf_res.get("predictive_dna", {}).get("medium_term_horizon", {}).get("target_resistance_price", actual_entry_price * 1.03) if 'mtf_res' in locals() else actual_entry_price * 1.03,
-                        "pump_probability_pct": mtf_res.get("predictive_dna", {}).get("pump_probability_pct", 50) if 'mtf_res' in locals() else 50
-                    }
-                    state["status"] = f"🔵 En Vivo LONG ({best_symbol} @ ${actual_entry_price:.4f})"
-                    state["_cached_usdt_free"] = 0.0
-                    save_real_account_state(state)
-                    print(f"✅ SPOT LONG ejecutado exitosamente: {best_symbol} ({qty} @ ${actual_entry_price:.4f} = ${actual_cost} USD)")
-                    # 📅 Registrar en anti-reentry ADN v2 — evita re-entrar hoy en el mismo token
-                    try:
-                        import asset_dna_predictive_engine as _adna
-                        _adna.register_trade_today(best_symbol)
-                    except Exception:
-                        pass
-
-                else:
-                    print(f"⚠️ LONG no ejecutado: {buy_res}")
+                executed_trade = True
+                break
+                
+        if not executed_trade:
+            print(f"🔒 [CASCADE EVALUATION 15 FINALISTAS] Se evaluaron los {len(candidate_queue)} finalistas con ADN Activo y 5-TF. Ninguno superó el 100% de los filtros en este ciclo. 100% USDT protegido.")
 
     state["current_balance_usd"] = round(state.get("current_balance_usd", 20.07), 2)
     state["net_pnl_usd"] = round(state["current_balance_usd"] - state.get("initial_deposit_usdt", 17.13), 2)
