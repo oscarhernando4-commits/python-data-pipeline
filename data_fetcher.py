@@ -42,17 +42,17 @@ def get_cmc_top_coins():
 
 def get_binance_top_volume_coins(valid_pairs):
     """Fetches top coins by 24H Volume from Binance directly (100% Free).
-    Enforces minimum $2,000,000 USD volume to avoid illiquid chop and manipulation."""
-    print("Obteniendo clasificación por volumen 24H nativo de Binance (Mínimo $2M USD)...")
+    Enforces minimum $5,000,000 USD volume to ensure deep institutional liquidity and tight spreads."""
+    print("Obteniendo clasificación por volumen 24H nativo de Binance (Mínimo $5M USD)...")
     try:
         ticker_res = requests.get('https://data-api.binance.vision/api/v3/ticker/24hr', timeout=10)
         tickers = ticker_res.json()
-        # Exclude coins with 24h volume < $4,000,000 USD (Ensures deep institutional liquidity)
-        usdt_tickers = [t for t in tickers if t['symbol'] in valid_pairs and float(t.get('quoteVolume', 0)) >= 4000000.0]
+        # Exclude coins with 24h volume < $5,000,000 USD (Ensures deep institutional liquidity & 0.02% spread)
+        usdt_tickers = [t for t in tickers if t['symbol'] in valid_pairs and float(t.get('quoteVolume', 0)) >= 5000000.0]
         usdt_tickers.sort(key=lambda x: float(x['quoteVolume']), reverse=True)
         # Take top 100 by volume
         vol_symbols = [t['symbol'].replace('USDT', '') for t in usdt_tickers[:100]]
-        print(f"Binance API exitosa. Se obtuvieron {len(vol_symbols)} símbolos con Volumen >= $4M USD.")
+        print(f"Binance API exitosa. Se obtuvieron {len(vol_symbols)} símbolos con Volumen >= $5M USD.")
         return vol_symbols
     except Exception as e:
         print(f"Fallo Binance 24H Volume: {e}")
@@ -60,8 +60,9 @@ def get_binance_top_volume_coins(valid_pairs):
 
 import multi_timeframe_analyzer
 
-# Exhaustive Blacklist of Stablecoins, Fiat-Pegged Assets, and Synthetic Collateral
+# Exhaustive Blacklist of Stablecoins, Fiat-Pegged Assets, Synthetic Collateral, and Risky/Hacked tokens
 STABLECOIN_BLACKLIST = {
+    "NIGHT", "NIGHTUSDT", "COMP", "COMPUSDT",
     "PAXG", "PAXGUSDT", "XAUT", "XAUTUSDT", "GRAM", "GRAMUSDT", "PORTAL", "PORTALUSDT",
     "U", "UUSDT", "USD", "USDE", "USD0", "USDS", "USDF", "USDC", "FDUSD", "TUSD", "BUSD", "DAI", "USDD", "RLUSD", "USD1",
     "EUR", "AEUR", "WBTC", "TBTC", "USDS", "USTC", "FRAX", "PYUSD", "USD0", "SNDKB", "SNDK", "USD", "EURUSDT", "AEURUSDT",

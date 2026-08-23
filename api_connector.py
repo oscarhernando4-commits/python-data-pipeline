@@ -1115,9 +1115,9 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             phase = 2
             phase_label = f"🛡️ FASE 2 BREAK-EVEN BLINDADO (+0.08% NETO | Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
         else:
-            sl_pct = -0.50
+            sl_pct = -0.75
             phase = 1
-            phase_label = f"🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (Cima +{highest_pnl_pct:.2f}% | SL Defensivo -0.50%)"
+            phase_label = f"🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (Cima +{highest_pnl_pct:.2f}% | SL Defensivo -0.75%)"
                 
         return sl_pct, phase, phase_label
 
@@ -1763,7 +1763,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
             vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
             
-            is_deep_pullback_base = bool(range_pos_15m <= 0.45 and range_pos_5m <= 0.45 and range_pos_1m <= 0.45)
+            is_deep_pullback_base = bool(range_pos_15m <= 0.45 and range_pos_5m <= 0.45 and range_pos_1m <= 0.35)
             if not is_confluent_floor and not is_deep_pullback_base and not (vol_1m_now >= 2.5 or vol_15m_now >= 2.0):
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Falta de Suelo Fractal Confluente:")
                 print(f"     Canales: [1M: {range_pos_1m*100:.0f}% | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% | 15M: {range_pos_15m*100:.0f}% | 30M: {range_pos_30m*100:.0f}% | 1H: {range_pos_1h*100:.0f}%]")

@@ -523,7 +523,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     4. 🧩 AGENTE 4 (Analista Sectorial & Temporal): Prioriza sector líder ({sector_summary['top_sector']}) y valida la SESION TEMPORAL. VETO si VETO_TEMPORAL o BLACKOUT con multiplicador < 0.60.
     5. 🧠 AGENTE 5 (Memoria RAG & Auto-Aprendizaje Cuántico): Valida el ADN de la moneda, reputación histórica y patrones aprendidos. VETA permanentemente: (a) Monedas en Blacklist Dinámica (WR < 30%), (b) Mega-Caps / Zombis (TRX, BNB, BTC, ETH), (c) Volumen 15M muerto (<0.40x), (d) Distribución institucional, (e) Re-entradas en la misma moneda en menos de 4h. PREMIA cohetes con Vol1M >= 1.2x, Vol15M >= 0.80x, FII >= 60 y Retesteo Ola 2 (como ENA, KAIA, SUI, DCR).
     6. 🛡️ AGENTE 6 (Chief Risk Officer & Veto de Dump): Veta cualquier activo con Riesgo de Dump >= 40%, libro descompensado (Bids < 50.0% o Muro < $20k), OBV=DISTRIBUTING, DUMP_RISK_FUNDING, o activo en cuarentena/cooldown de 4 horas.
-    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza el consenso. Si el mejor candidato es un activo de Alta Elasticidad (ATR >= 0.45%) en SUELO CONFLUENTE FRACTAL con IGNICIÓN DE VOLUMEN (Vol1M >= 1.0x o Vol15M >= 1.2x) y vela 1M verde, APRUEBA "BUY_LONG" con Stop Loss Asimétrico de -0.50% y Cosecha Dinámica para ejecución inmediata.
+    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza el consenso. Si el mejor candidato es un activo de Alta Elasticidad (ATR >= 0.45%) en SUELO CONFLUENTE FRACTAL con IGNICIÓN DE VOLUMEN (Vol1M >= 1.0x o Vol15M >= 1.2x) y vela 1M verde, APRUEBA "BUY_LONG" con Stop Loss Asimétrico de -0.75% y Cosecha Dinámica para ejecución inmediata.
 
     {exec_learning_summary}
 
