@@ -1182,28 +1182,26 @@ def analyze_multi_timeframe_candles(symbol):
     is_at_range_ceiling_2m = bool(range_position_2m >= 0.80 and rsi_2m >= 70.0)
     is_at_range_ceiling_1m = bool(range_position_1m >= 0.80 and rsi_1m >= 70.0)
 
-    # 🚫 VETO CRÍTICO ANTI-TECHO FRACTAL TOTAL (Analiza canales y velas de 5M, 10M, 15M, 30M, 1H, 2H y 24H):
+    # 🚫 VETO CRÍTICO ANTI-TECHO FRACTAL TOTAL (ABSOLUTO: CERO bypasses por volumen):
     dist_to_24h_high_pct = round(((high_24h - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
     is_at_daily_resistance_ceiling = bool(
-        (
-            dist_to_24h_high_pct <= 0.35 or 
-            range_position_2h >= 0.68 or     # Cima de las últimas 24 velas 2H (48 horas)
-            range_position_1h >= 0.68 or     # Cima de las últimas 24 velas 1H (24 horas)
-            range_position_30m >= 0.65 or    # Cima de las últimas 24 velas 30M (12 horas)
-            range_position_15m >= 0.60 or    # Cima de las últimas 24 velas 15M (6 horas)
-            range_position_10m >= 0.65 or    # Cima de las últimas 24 velas 10M (4 horas)
-            range_position_5m >= 0.65 or     # Cima de las últimas 24 velas 5M (2 horas)
-            range_position_2m >= 0.75 or     # Cima de las últimas 24 velas 2M (48 minutos)
-            range_position_1m >= 0.75 or     # Cima de las últimas 24 velas 1M (24 minutos)
-            is_at_range_ceiling_1m or
-            is_at_range_ceiling_2m or
-            is_at_range_ceiling_5m or
-            is_at_range_ceiling_10m or
-            is_at_range_ceiling_15m or
-            is_at_range_ceiling_30m or
-            is_at_range_ceiling_1h or
-            is_at_range_ceiling_2h
-        ) and not (vol_surge_2m >= 2.5 or vol_surge_15m >= 2.5)
+        dist_to_24h_high_pct <= 0.35 or 
+        range_position_2h >= 0.55 or     # Techo/Medio-Alto en 2H (>55%)
+        range_position_1h >= 0.52 or     # Techo/Medio-Alto en 1H (>52%)
+        range_position_30m >= 0.50 or    # Techo/Medio-Alto en 30M (>50%)
+        range_position_15m >= 0.48 or    # Techo/Medio-Alto en 15M (>48%)
+        range_position_10m >= 0.48 or    # Techo/Medio-Alto en 10M (>48%)
+        range_position_5m >= 0.45 or     # Techo/Medio-Alto en 5M (>45%)
+        range_position_2m >= 0.50 or     # Techo en 2M (>50%)
+        range_position_1m >= 0.50 or     # Techo en 1M (>50%)
+        is_at_range_ceiling_1m or
+        is_at_range_ceiling_2m or
+        is_at_range_ceiling_5m or
+        is_at_range_ceiling_10m or
+        is_at_range_ceiling_15m or
+        is_at_range_ceiling_30m or
+        is_at_range_ceiling_1h or
+        is_at_range_ceiling_2h
     )
 
     dist_15m_pct = round(((high_15m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
