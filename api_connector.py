@@ -1220,12 +1220,13 @@ def quick_position_heartbeat():
         exit_reason = f"🎯 Trailing Floor Activado ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
         
         # 🎯 SNIPER COSECHA GANANCIA DINÁMICA POR RETROCESO DE MECHA (WICK SNATCHING):
-        # Solo se activa en ganancias sustanciales (>= +0.70%) para dejar respirar y madurar el breakout (+0.30% a +0.60%)
-        if not should_exit and highest_pnl_pct >= 0.70:
-            wick_pullback_threshold = 0.25 if highest_pnl_pct < 1.50 else max(0.35, round(highest_pnl_pct * 0.25, 2))
+        # Solo se activa en ganancias fuertes (>= +1.00%) para dejar respirar y madurar las Fases 1, 2 y 3 (+0.40% a +0.99%)
+        if not should_exit and highest_pnl_pct >= 1.00:
+            wick_pullback_threshold = max(0.30, round(highest_pnl_pct * 0.25, 2))
             if (highest_pnl_pct - current_pnl_pct) >= wick_pullback_threshold:
                 should_exit = True
                 exit_reason = f"🎯 SNIPER COSECHA GANANCIA EN PICO (Pico +{highest_pnl_pct:.2f}% -> Venta Asegurada en {current_pnl_pct:+.2f}% tras retroceso de -{(highest_pnl_pct - current_pnl_pct):.2f}%)"
+
             
         # 🪙 ESCUDO BITCOIN SUB-SEGUNDO (Circuit Breaker Instantáneo):
         # Si Bitcoin se desploma >= 0.35% desde el momento de nuestra entrada, eyectar la posición de inmediato

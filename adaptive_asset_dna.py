@@ -198,47 +198,46 @@ def calculate_archetype_trailing(
     atr_pct: float = 0.30
 ) -> Tuple[float, int, str]:
     """
-    Sistema Dinámico Cuántico de Respiración Amplia y Captura de Rallies:
-    - FASE 1 (Cima < +0.50%): Espacio de respiración y absorción de ruido con Stop-Loss defensivo (-2.00%). Cero asfixia.
-    - FASE 2 (+0.50% <= Cima < +1.00%): Break-Even Blindado (+0.15% neto) y Trailing al 60% de la cima.
-    - FASE 3 (+1.00% <= Cima < +2.00%): Expansión Media con retención del 70% de la cima (Piso = Cima * 0.70).
-    - FASE 4 (+2.00% <= Cima < +4.00%): Tendencia Fuerte con retención del 75% de la cima (Piso = Cima * 0.75).
-    - FASE 5 (Cima >= +4.00%): Mega Rally con retención del 80% de la cima (Piso = Cima * 0.80).
+    Sistema Dinámico Cuántico de 6 Fases para Maximizar Ganancias:
+    - FASE 1 (0.00% a +0.399%): Espacio de respiración y absorción con SL Defensivo (-0.70%).
+    - FASE 2 (+0.40% a +0.499%): Break-Even Blindado a +0.15% neto (Comisiones 100% cubiertas).
+    - FASE 3 (+0.50% a +0.999%): Seguro de Ganancia con Retención del 65% del pico (mínimo +0.45%).
+    - FASE 4 (+1.00% a +1.999%): Modo Cohete Meta Diaria con Retención del 75% del pico (mínimo +0.90%).
+    - FASE 5 (+2.00% a +3.999%): Tendencia Fuerte Doble Meta con Retención del 80% del pico (mínimo +1.60%).
+    - FASE 6 (>= +4.00%): Mega Rally Cuántico con Retención del 85% del pico (mínimo +3.40%).
     """
     arch = archetype_dna.get("archetype", "SECTOR_ROTATION")
-    initial_sl = float(archetype_dna.get("initial_sl_pct", -0.50))
     emoji = archetype_dna.get("emoji", "🧬")
     label = archetype_dna.get("label", arch)
 
     if highest_pnl_pct >= 4.00:
-        sl_pct = round(highest_pnl_pct * 0.80, 4)
+        sl_pct = max(3.40, round(highest_pnl_pct * 0.85, 4))
         phase = 6
-        phase_label = f"👑 FASE 6 MEGA RALLY ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
+        phase_label = f"👑 FASE 6 MEGA RALLY ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 85% (mín +3.40%) -> Piso +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= 2.00:
-        sl_pct = round(highest_pnl_pct * 0.75, 4)
+        sl_pct = max(1.60, round(highest_pnl_pct * 0.80, 4))
         phase = 5
-        phase_label = f"🚀 FASE 5 TENDENCIA FUERTE ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
+        phase_label = f"🚀 FASE 5 TENDENCIA FUERTE ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 80% (mín +1.60%) -> Piso +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= 1.00:
-        sl_pct = round(highest_pnl_pct * 0.70, 4)
+        sl_pct = max(0.90, round(highest_pnl_pct * 0.75, 4))
         phase = 4
-        phase_label = f"💎 FASE 4 EXPANSIÓN MEDIA ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 70% -> Piso +{sl_pct:.2f}%)"
+        phase_label = f"💎 FASE 4 MODO COHETE 🎯 ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 75% (mín +0.90%) -> Piso +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= 0.50:
-        # 🔒 FASE 3: AL TOCAR +0.50%, ASEGURA +0.25% NETO Y DEJA CORRER AL COHETE (+1.0% / +2.0%):
-        sl_pct = max(0.20, round(highest_pnl_pct * 0.65, 4))
+        sl_pct = max(0.45, round(highest_pnl_pct * 0.65, 4))
         phase = 3
-        phase_label = f"🔒 FASE 3 SEGURO DE GANANCIA +0.20% NETO ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 65% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.32:
-        # 🛡️ FASE 2: AL TOCAR +0.32%, BREAK-EVEN BLINDADO A +0.10% (COMISIONES CUBIERTAS Y ESPACIO DE RESPIRACIÓN):
-        sl_pct = 0.10
+        phase_label = f"🔒 FASE 3 SEGURO DE DÍA ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención 65% (mín +0.45%) -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 0.40:
+        sl_pct = 0.15
         phase = 2
-        phase_label = f"🛡️ FASE 2 BREAK-EVEN BLINDADO (+0.10% NETO | {emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +0.10%)"
+        phase_label = f"🛡️ FASE 2 BREAK-EVEN BLINDADO (+0.15% NETO | {emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Fijo +0.15%)"
     else:
-        # Cima < +0.32%: Fase 1 respiración defensiva
-        sl_pct = initial_sl
+        # Cima < +0.40%: Fase 1 respiración defensiva (SL inicial -0.70%)
+        sl_pct = -0.70
         phase = 1
-        phase_label = f"🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN ({emoji} Cima +{highest_pnl_pct:.2f}% | SL Defensivo {initial_sl:.2f}%)"
+        phase_label = f"🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN ({emoji} Cima +{highest_pnl_pct:.2f}% | SL Defensivo -0.70%)"
 
     return sl_pct, phase, phase_label
+
 
 
 # ─── 5. VERIFICACIÓN DE ESTANCAMIENTO POR ARQUETIPO ──────────────────────────
