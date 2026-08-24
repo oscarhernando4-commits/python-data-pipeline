@@ -532,16 +532,19 @@ def run_infinite_trading_matrix_cycle():
                 r4h_r = round(r4h, 1)
                 r1d_r = round(r1d, 1)
                 
-                # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL COMPLETA (1M a 1D):
-                # 1M<=38%, 2M<=40%, 5M<=42%, 10M<=45%, 15M<=48%, 30M<=52%, 1H<=55%, 2H<=60%, 4H<=65%, 1D<=70%
+                # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL CALIBRADA EXACTA (1M a 1D):
+                # 1M<=35%, 2M<=36%, 5M<=38%, 10M<=40%, 15M<=42%, 30M<=46%, 1H<=50%, 2H<=54%, 4H<=58%, 1D<=65%
                 diag_reasons = []
-                if r1m_r > 38.0: diag_reasons.append(f"1M={r1m:.0f}% > 38%")
-                if r5m_r > 42.0: diag_reasons.append(f"5M={r5m:.0f}% > 42%")
-                if r15m_r > 48.0: diag_reasons.append(f"15M={r15m:.0f}% > 48%")
-                if r1h_r > 55.0: diag_reasons.append(f"1H={r1h:.0f}% > 55%")
-                if r2h_r > 60.0: diag_reasons.append(f"2H={r2h:.0f}% > 60%")
-                if r4h_r > 65.0: diag_reasons.append(f"4H={r4h:.0f}% > 65%")
-                if r1d_r > 70.0: diag_reasons.append(f"1D={r1d:.0f}% > 70%")
+                if r1m_r > 35.0: diag_reasons.append(f"1M={r1m:.0f}% > 35%")
+                if r2m_r > 36.0: diag_reasons.append(f"2M={r2m:.0f}% > 36%")
+                if r5m_r > 38.0: diag_reasons.append(f"5M={r5m:.0f}% > 38%")
+                if r10m_r > 40.0: diag_reasons.append(f"10M={r10m:.0f}% > 40%")
+                if r15m_r > 42.0: diag_reasons.append(f"15M={r15m:.0f}% > 42%")
+                if r30m_r > 46.0: diag_reasons.append(f"30M={r30m:.0f}% > 46%")
+                if r1h_r > 50.0: diag_reasons.append(f"1H={r1h:.0f}% > 50%")
+                if r2h_r > 54.0: diag_reasons.append(f"2H={r2h:.0f}% > 54%")
+                if r4h_r > 58.0: diag_reasons.append(f"4H={r4h:.0f}% > 58%")
+                if r1d_r > 65.0: diag_reasons.append(f"1D={r1d:.0f}% > 65%")
                 if obv_t == "DISTRIBUTING": diag_reasons.append("OBV=DISTRIBUCIÓN")
                 if fii_sc < 50: diag_reasons.append(f"FII={fii_sc} bajo < 50")
                 elif rsi_15m >= 40.0 and fii_sc < 65: diag_reasons.append(f"FII={fii_sc} < 65 con RSI={rsi_15m:.0f}")
@@ -553,6 +556,7 @@ def run_infinite_trading_matrix_cycle():
                 
                 is_truly_valid = len(diag_reasons) == 0 and not is_knife and not is_dead_cat
                 status_icon = "🟢 BASE A+ VÁLIDA" if is_truly_valid else "🔴 DESCARTADO"
+
                 diag_str = " | ".join(diag_reasons) if diag_reasons else "Cumple Base 8D + Macro 1D"
                 
                 if is_truly_valid:

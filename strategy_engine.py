@@ -72,7 +72,7 @@ def evaluate_opportunity(tech, group_id=0):
             "reason": "⛔ Descartado por Distribución Institucional (OBV=DISTRIBUTING)"
         }
 
-    # 3. 8D Harmonic Base Matrix Check
+    # 3. 8D Harmonic Base Matrix Check (Multi-Temporal Proportional)
     r1m = mtf.get("range_position_1m", 0.50)
     r2m = mtf.get("range_position_2m", 0.50)
     r5m = mtf.get("range_position_5m", 0.50)
@@ -81,31 +81,39 @@ def evaluate_opportunity(tech, group_id=0):
     r30m = mtf.get("range_position_30m", 0.50)
     r1h = mtf.get("range_position_1h", 0.50)
     r2h = mtf.get("range_position_2h", 0.50)
+    r4h = mtf.get("range_position_4h", 0.50)
+    r1d = mtf.get("range_position_1d", 0.50)
 
     # Convert to 0.0-1.0 float if in 0-100 scale
     r1m = r1m / 100.0 if r1m > 1.0 else r1m
+    r2m = r2m / 100.0 if r2m > 1.0 else r2m
     r5m = r5m / 100.0 if r5m > 1.0 else r5m
     r10m = r10m / 100.0 if r10m > 1.0 else r10m
     r15m = r15m / 100.0 if r15m > 1.0 else r15m
     r30m = r30m / 100.0 if r30m > 1.0 else r30m
     r1h = r1h / 100.0 if r1h > 1.0 else r1h
     r2h = r2h / 100.0 if r2h > 1.0 else r2h
+    r4h = r4h / 100.0 if r4h > 1.0 else r4h
+    r1d = r1d / 100.0 if r1d > 1.0 else r1d
 
     is_8d_base = (
-        r1m <= 0.38 and
-        r5m <= 0.42 and
-        r10m <= 0.45 and
-        r15m <= 0.48 and
-        r30m <= 0.52 and
-        r1h <= 0.55 and
-        r2h <= 0.60
+        r1m <= 0.35 and
+        r2m <= 0.36 and
+        r5m <= 0.38 and
+        r10m <= 0.40 and
+        r15m <= 0.42 and
+        r30m <= 0.46 and
+        r1h <= 0.50 and
+        r2h <= 0.54 and
+        r4h <= 0.58 and
+        r1d <= 0.65
     )
 
     if not is_8d_base:
         return {
             "action": "HOLD",
             "use_ai": False,
-            "reason": f"⛔ Fuera de Matriz 8D [1M={r1m*100:.0f}% 5M={r5m*100:.0f}% 15M={r15m*100:.0f}% 1H={r1h*100:.0f}%]"
+            "reason": f"⛔ Fuera de Matriz 8D [1M={r1m*100:.0f}% 5M={r5m*100:.0f}% 15M={r15m*100:.0f}% 1H={r1h*100:.0f}% 1D={r1d*100:.0f}%]"
         }
 
     # 4. Floor Turnaround

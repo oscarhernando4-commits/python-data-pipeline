@@ -544,7 +544,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     
     REGLAS DE DECISIÓN DEL CEO:
     - Compara a los finalistas y selecciona al MEJOR ACTIVO DE LA LISTA.
-    - 🎯 REGLA DE DISPARO EN BASE: Si un candidato cumple con la BASE FRACTAL (1M <= 38%, 5M <= 42%, 15M <= 48%, 1H <= 55%), tiene Score >= 55, FII >= 46, Bids >= 46%, VolSurge >= 0.25x, OBV != DISTRIBUTING, y no tiene vetos duros de dump, APRUÉBALO con "BUY_LONG", approved: true, confidence: 85-95.
+    - 🎯 REGLA DE DISPARO EN BASE: Si un candidato cumple con la BASE FRACTAL (1M<=35%, 5M<=38%, 15M<=42%, 1H<=50%, 2H<=54%, 4H<=58%, 1D<=65%), tiene Score >= 75, FII >= 50, Bids >= 46%, VolSurge >= 0.20x, OBV != DISTRIBUTING, y no tiene vetos duros de dump, APRUÉBALO con "BUY_LONG", approved: true, confidence: 85-95.
     - Si absolutamente ningún candidato cumple con la base de suelo o Bitcoin está en caída activa, responde "selected_symbol": "NONE", "action": "HOLD".
     - 🔍 REGLA DE TRANSPARENCIA: En tu 'reasoning', menciona OBLIGATORIAMENTE los activos principales evaluados y el motivo técnico específico.
 
@@ -556,13 +556,14 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         "approved": true o false,
         "committee_deliberation": {{
             "agent_1_macro": "Dictamen macro en 1 oración...",
-            "agent_2_tech": "Dictamen del suelo 8D (1M<=35%, 5M<=40%, 15M<=50%, 1H<=60%) y posición del canal en 1 oración...",
+            "agent_2_tech": "Dictamen del suelo 8D (1M<=35%, 5M<=38%, 15M<=42%, 1H<=50%, 1D<=65%) y posición del canal en 1 oración...",
             "agent_3_orderbook": "Dictamen de libro de órdenes y Bids en 1 oración...",
             "agent_4_sector": "Dictamen de rotación sectorial en 1 oración...",
             "agent_5_memory": "Dictamen de memoria RAG y patrones ganadores en 1 oración...",
             "agent_6_risk": "Dictamen de validación de seguridad anti-cima en 1 oración...",
             "agent_7_ceo_anti_loss": "Dictamen final del CEO autorizando compra en el suelo o preservando USDT en 1 oración..."
         }},
+
         "reasoning": "Resumen técnico nombrando las monedas evaluadas y razones individuales..."
     }}
     """

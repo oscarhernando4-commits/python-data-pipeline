@@ -1960,26 +1960,32 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             range_pos_30m = mtf_res.get("range_position_30m", 0.50)
             range_pos_1h = mtf_res.get("range_position_1h", 0.50)
             range_pos_2h = mtf_res.get("range_position_2h", 0.50)
+            range_pos_4h = mtf_res.get("range_position_4h", 0.50)
+            range_pos_1d = mtf_res.get("range_position_1d", 0.50)
             is_confluent_floor = mtf_res.get("is_confluent_fractal_floor", False)
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
             vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
             
-            # 🎯 MATRIZ ARMÓNICA DE BASE 8D (1M<=38%, 5M<=42%, 10M<=45%, 15M<=48%, 30M<=52%, 1H<=55%, 2H<=60%)
-            max_1m_base_cap = 0.38
+            # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL CALIBRADA EXACTA (1M<=35%, 2M<=36%, 5M<=38%, 10M<=40%, 15M<=42%, 30M<=46%, 1H<=50%, 2H<=54%, 4H<=58%, 1D<=65%)
+            max_1m_base_cap = 0.35
             is_macro_base_valid = bool(
-                range_pos_2h <= 0.60 and
-                range_pos_1h <= 0.55 and
-                range_pos_30m <= 0.52 and
-                range_pos_15m <= 0.48 and
-                range_pos_10m <= 0.45 and
-                range_pos_5m <= 0.42 and
-                range_pos_1m <= 0.38
+                range_pos_1d <= 0.65 and
+                range_pos_4h <= 0.58 and
+                range_pos_2h <= 0.54 and
+                range_pos_1h <= 0.50 and
+                range_pos_30m <= 0.46 and
+                range_pos_15m <= 0.42 and
+                range_pos_10m <= 0.40 and
+                range_pos_5m <= 0.38 and
+                range_pos_2m <= 0.36 and
+                range_pos_1m <= 0.35
             )
             
             if not is_macro_base_valid or is_at_daily_ceiling:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado: Fuera de la Matriz Armónica 8D o en Techo:")
-                print(f"     Canales: [1M: {range_pos_1m*100:.0f}% (max 38) | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% (max 42) | 10M: {range_pos_10m*100:.0f}% (max 45) | 15M: {range_pos_15m*100:.0f}% (max 48) | 30M: {range_pos_30m*100:.0f}% (max 52) | 1H: {range_pos_1h*100:.0f}% (max 55) | 2H: {range_pos_2h*100:.0f}% (max 60)]")
+                print(f"     Canales: [1M: {range_pos_1m*100:.0f}% (max 35) | 2M: {range_pos_2m*100:.0f}% (max 36) | 5M: {range_pos_5m*100:.0f}% (max 38) | 10M: {range_pos_10m*100:.0f}% (max 40) | 15M: {range_pos_15m*100:.0f}% (max 42) | 30M: {range_pos_30m*100:.0f}% (max 46) | 1H: {range_pos_1h*100:.0f}% (max 50) | 2H: {range_pos_2h*100:.0f}% (max 54) | 4H: {range_pos_4h*100:.0f}% (max 58) | 1D: {range_pos_1d*100:.0f}% (max 65)]")
                 continue
+
                 
             if not has_floor_turnaround:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Falta de Giro de Suelo en 1M/2M.")
