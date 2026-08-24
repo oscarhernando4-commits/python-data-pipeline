@@ -1,3 +1,12 @@
+"""
+Unified Quantitative Strategy Engine — Real Account Parity
+===========================================================
+Eliminates fragmented groups and sub-groups.
+All 1,000 parallel accounts execute under the EXACT same ecosystem, rules,
+8D Harmonic Base Matrix, FII, OBV, and Volume filters as the Real Account
+(standard A+ mode, without extreme sniper constraints).
+"""
+
 import os
 import json
 
@@ -5,143 +14,189 @@ THRESHOLDS_FILE = os.path.join(os.path.dirname(__file__), "dynamic_thresholds.js
 
 def load_thresholds():
     default_t = {
-      "group_0": {"long_score": 50, "short_score": 50},
-      "group_1": {"long_score": 70, "rsi_min": 30, "rsi_max": 70, "require_trend": True},
-      "group_2": {"long_rsi": 40, "short_rsi": 60, "macd_long": -0.5, "macd_short": 0.5},
-      "group_3": {"vol_surge": 1.2, "long_rsi": 45, "require_trend": False},
-      "group_4": {"short_rsi": 60, "short_score": 40, "require_trend": False},
-      "group_5": {"long_score": 50, "short_score": 50}
+        "group_0": {
+            "long_score": 55,
+            "min_fii": 46,
+            "max_canal_1h": 0.55,
+            "max_rsi_15m": 60,
+            "min_vol_surge": 0.20
+        }
     }
     if not os.path.exists(THRESHOLDS_FILE):
         return default_t
     try:
         with open(THRESHOLDS_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
+            data = json.load(f)
+            if "group_0" in data:
+                return data
+            return default_t
     except Exception:
         return default_t
 
-def evaluate_opportunity(tech, group_id):
+def evaluate_opportunity(tech, group_id=0):
     """
-    Evaluates a symbol's technical data against the specific strategic profile of a given group.
-    Integrates 3-Tier Multi-Timeframe RSI Architecture (2m/5m triggers, 15m medium context, 1h/4h macro context).
-    Integrates Ornstein-Uhlenbeck mean reversion and GBM anomaly signals from quant_institutional.
-    Returns: {"action": "LONG"|"SHORT"|"HOLD", "use_ai": bool, "reason": str}
+    Evaluates a symbol's technical data against the UNIFIED Real Account A+ Standard Strategy.
+    All 1,000 parallel simulation accounts evaluate under identical conditions:
+    1. 8D Harmonic Base Matrix (1M<=38%, 5M<=42%, 10M<=45%, 15M<=48%, 30M<=52%, 1H<=55%, 2H<=60%)
+    2. Floor Turnaround (1M/2M green, lower wick absorption, VWAP floor rebound, bullish divergence)
+    3. Floor Injection Index (FII >= 46, and FII >= 65 if RSI 15M >= 40)
+    4. OBV Accumulation (not distributing)
+    5. Active Volume & Ignition (vol_1m >= 0.20x and active volume surge/ignition)
+    6. Vetoes: Not falling knife, not dead cat bounce, not at daily resistance ceiling, not 5M dump
+    7. Spot LONG only (Score >= 55)
+
+    Returns: {"action": "LONG"|"HOLD", "use_ai": bool, "reason": str}
     """
-    score = tech.get("confluence_score", 50)
     inds = tech.get("indicators", {})
     mtf = tech.get("mtf_analysis", {})
-    rsi_struct = mtf.get("rsi_structure", {})
+    score = tech.get("confluence_score", 50)
     
-    # 3-Tier Multi-Timeframe RSI Architecture
-    rsi_2m = rsi_struct.get("rsi_2m", inds.get("rsi_15m", 50.0))
-    rsi_5m = rsi_struct.get("rsi_5m", inds.get("rsi_15m", 50.0))
-    rsi_15m = rsi_struct.get("rsi_15m", inds.get("rsi_15m", 50.0))
-    rsi_1h = rsi_struct.get("rsi_1h", 50.0)
-    rsi_4h = rsi_struct.get("rsi_4h", 50.0)
+    # 1. Check Falling Knife / Dead Cat / Daily Ceiling
+    is_knife = inds.get("is_falling_knife", False) or mtf.get("is_falling_knife", False)
+    is_dead_cat = inds.get("is_dead_cat_bounce", False) or mtf.get("is_dead_cat_bounce", False)
+    is_daily_ceiling = mtf.get("is_at_daily_resistance_ceiling", False)
     
-    align = mtf.get("timeframe_alignment", {})
-    tf_2m_up = align.get("2m") == "BULLISH"
-    tf_5m_up = align.get("5m") == "BULLISH"
-    
-    rsi = rsi_15m  # Medium context fallback
-    macd_hist = inds.get("macd_hist_15m", 0)
-    vol_surge = inds.get("volume_surge_ratio", 1.0)
-    vol_surge_2m = mtf.get("vol_surge_2m", 1.0)
-    trend = tech.get("macro_trend_4h", "Neutral")
-    
-    # 🏛️ Institutional Quant Indicators
-    ou_zscore = inds.get("ou_zscore", 0.0)
-    ou_signal = inds.get("ou_signal", "NEUTRAL")
-    ou_half_life = inds.get("ou_half_life", 999)
-    gbm_zscore = inds.get("gbm_zscore", 0.0)
-    inst_analysis = tech.get("institutional_analysis", {})
-    inst_verdict = inst_analysis.get("verdict", "NEUTRAL")
-    trade_quality = inst_analysis.get("trade_quality", "C_NOISE")
-    
-    t = load_thresholds()
-    
-    # GROUP 0: Replica Real (Algoritmo actual de alta confluencia + 2m/5m Fast Triggers + Institutional Filter)
-    if group_id == 0:
-        if inds.get("pump_dump_exhaustion", False):
-            return {"action": "SHORT", "use_ai": True, "reason": f"🩸 Pump & Dump Exhaustion: Subida agresiva (+{inds.get('pump_24h_pct', 0)}%) y colapso ({inds.get('dump_1h_pct', 0)}%) detectado (G-0)"}
-        elif score >= t["group_0"]["long_score"] and (tf_2m_up or tf_5m_up):
-            _reason = f"Score >= {t['group_0']['long_score']} | RSI 2m={rsi_2m}/5m={rsi_5m} | 15m={rsi_15m} | Macro 1h={rsi_1h}/4h={rsi_4h} (G-0)"
-            if trade_quality in ("A+", "B"):
-                _reason += f" | 🏛️ GBM Calidad {trade_quality}"
-            return {"action": "LONG", "use_ai": True, "reason": _reason}
-        elif score <= t["group_0"]["short_score"]:
-            return {"action": "SHORT", "use_ai": True, "reason": f"Score <= {t['group_0']['short_score']} (G-0)"}
-            
-    # GROUP 1: Ultra-Estricto (Tendencia Fuerte Pullback + Multi-RSI Alignment)
-    elif group_id == 1:
-        trend_ok = (trend == "BULLISH") if t.get("group_1", {}).get("require_trend", False) else True
-        if trend_ok and score >= t["group_1"]["long_score"] and (t["group_1"]["rsi_min"] <= rsi_15m <= t["group_1"]["rsi_max"]) and (tf_2m_up or tf_5m_up):
-            _reason = f"Trend Alcista + Pullback RSI 15m={rsi_15m} (Gatillos 2m={rsi_2m}/5m={rsi_5m}) (G-1)"
-            if inst_verdict == "BREAKOUT_CONFIRMED":
-                _reason += " | 🏛️ GBM Breakout Confirmado"
-            return {"action": "LONG", "use_ai": True, "reason": _reason}
-            
-    # GROUP 2: Reversión a la Media (Caza-Rebotes RSI 2m/5m + OU Mean Reversion + IA)
-    elif group_id == 2:
-        macd_l = t.get("group_2", {}).get("macd_long", -0.1)
-        macd_s = t.get("group_2", {}).get("macd_short", 0.1)
-        
-        # 🏛️ ORNSTEIN-UHLENBECK SIGNAL: Reversión rápida usando RSI 2m/5m sobrevendido
-        if ou_signal == "LONG" and ou_half_life < 24 and (rsi_2m <= 40 or rsi_5m <= 40):
-            return {"action": "LONG", "use_ai": True, "reason": f"🏛️ OU Mean Reversion LONG: Z={ou_zscore:.1f}, HalfLife={ou_half_life:.0f}v + RSI 2m={rsi_2m}/5m={rsi_5m} (G-2)"}
-        elif ou_signal == "SHORT" and ou_half_life < 24 and (rsi_2m >= 60 or rsi_5m >= 60):
-            return {"action": "SHORT", "use_ai": True, "reason": f"🏛️ OU Mean Reversion SHORT: Z={ou_zscore:.1f}, HalfLife={ou_half_life:.0f}v + RSI 2m={rsi_2m}/5m={rsi_5m} (G-2)"}
-        
-        # Fast RSI-based mean reversion
-        if (rsi_2m <= t["group_2"]["long_rsi"] or rsi_5m <= t["group_2"]["long_rsi"]) and macd_hist > macd_l:
-            _reason = f"Oversold Fast RSI (2m={rsi_2m}/5m={rsi_5m}) Bounce (G-2)"
-            if ou_signal == "LONG":
-                _reason += f" | 🏛️ OU confirma (Z={ou_zscore:.1f})"
-            return {"action": "LONG", "use_ai": True, "reason": _reason}
-        elif (rsi_2m >= t["group_2"]["short_rsi"] or rsi_5m >= t["group_2"]["short_rsi"]) and macd_hist < macd_s:
-            _reason = f"Overbought Fast RSI (2m={rsi_2m}/5m={rsi_5m}) Bounce (G-2)"
-            if ou_signal == "SHORT":
-                _reason += f" | 🏛️ OU confirma (Z={ou_zscore:.1f})"
-            return {"action": "SHORT", "use_ai": True, "reason": _reason}
-            
-    # GROUP 3: Breakout por Volumen (2m Volume Surge + 2m/5m RSI Impulse + IA)
-    elif group_id == 3:
-        trend_ok = (trend == "BULLISH") if t.get("group_3", {}).get("require_trend", False) else True
-        if (vol_surge >= t["group_3"]["vol_surge"] or vol_surge_2m >= 1.5) and (rsi_2m > t["group_3"]["long_rsi"] or rsi_5m > t["group_3"]["long_rsi"]) and trend_ok:
-            _reason = f"Volume Surge (2m={vol_surge_2m}x/15m={vol_surge}x) Breakout + RSI 2m={rsi_2m} (G-3)"
-            if inst_verdict == "BREAKOUT_CONFIRMED":
-                _reason += f" | 🏛️ GBM Anomalía Confirmada (Z={gbm_zscore:.1f})"
-            return {"action": "LONG", "use_ai": True, "reason": _reason}
-            
-    # GROUP 4: Enfoque Bajista (Short-Seller + GBM Crash Detection + Fast RSI)
-    elif group_id == 4:
-        trend_ok = (trend == "BEARISH") if t.get("group_4", {}).get("require_trend", False) else True
-        if inds.get("pump_dump_exhaustion", False):
-            return {"action": "SHORT", "use_ai": True, "reason": f"🩸 Pump & Dump Exhaustion: Subida agresiva (+{inds.get('pump_24h_pct', 0)}%) y colapso ({inds.get('dump_1h_pct', 0)}%) detectado (G-4)"}
-        elif inst_verdict == "CRASH_DETECTED" and rsi_2m >= 50:
-            return {"action": "SHORT", "use_ai": True, "reason": f"🏛️ GBM Crash Detectado (Z={gbm_zscore:.1f}) + RSI 2m={rsi_2m} (G-4)"}
-        elif (rsi_2m >= t["group_4"]["short_rsi"] or rsi_5m >= t["group_4"]["short_rsi"]) and macd_hist < 0 and trend_ok:
-            return {"action": "SHORT", "use_ai": True, "reason": f"Overbought RSI (2m={rsi_2m}/5m={rsi_5m}) + Bear Trend (G-4)"}
-        elif score <= t["group_4"]["short_score"]:
-            return {"action": "SHORT", "use_ai": True, "reason": f"Score <= {t['group_4']['short_score']} (G-4)"}
-            
-    # GROUP 5: Kamikaze (Relajado, Gatillos Rápido 2m/5m)
-    elif group_id == 5:
-        if score >= t["group_5"]["long_score"] and (tf_2m_up or tf_5m_up):
-            return {"action": "LONG", "use_ai": True, "reason": f"Score >= {t['group_5']['long_score']} + 2m/5m Bullish (Kamikaze G-5)"}
-        elif score <= t["group_5"]["short_score"]:
-            return {"action": "SHORT", "use_ai": True, "reason": f"Score <= {t['group_5']['short_score']} (Kamikaze G-5)"}
+    if is_knife or is_dead_cat or is_daily_ceiling:
+        return {
+            "action": "HOLD",
+            "use_ai": False,
+            "reason": "⛔ Descartado por Cuchillo Cayendo, Rebote Gato Muerto o Techo Diario"
+        }
 
-    # GROUP 6: Tokens Apalancados Tier-1 (BTCUP, ETHUP, SOLUP, BNBUP con 4 Cláusulas de Hierro)
-    elif group_id == 6:
-        min_score = t.get("group_6", {}).get("long_score", 75)
-        min_vol = t.get("group_6", {}).get("vol_surge", 1.5)
-        if score >= min_score and (vol_surge >= min_vol or trade_quality == "A+") and (tf_2m_up or tf_5m_up):
-            return {
-                "action": "LONG",
-                "use_ai": True,
-                "reason": f"⚡ [TOKENS APALANCADOS TIER-1] Confluencia Máxima Score={score} (>={min_score} Pts), VolSurge={vol_surge:.1f}x, GBM={trade_quality} (G-6)",
-                "tight_sl_pct": 0.75
-            }
+    # 2. OBV Flow Check
+    obv_trend = mtf.get("obv_trend", inds.get("obv_trend", "NEUTRAL"))
+    if obv_trend == "DISTRIBUTING":
+        return {
+            "action": "HOLD",
+            "use_ai": False,
+            "reason": "⛔ Descartado por Distribución Institucional (OBV=DISTRIBUTING)"
+        }
 
-    return {"action": "HOLD", "use_ai": False, "reason": ""}
+    # 3. 8D Harmonic Base Matrix Check
+    r1m = mtf.get("range_position_1m", 0.50)
+    r2m = mtf.get("range_position_2m", 0.50)
+    r5m = mtf.get("range_position_5m", 0.50)
+    r10m = mtf.get("range_position_10m", 0.50)
+    r15m = mtf.get("range_position_15m", 0.50)
+    r30m = mtf.get("range_position_30m", 0.50)
+    r1h = mtf.get("range_position_1h", 0.50)
+    r2h = mtf.get("range_position_2h", 0.50)
+
+    # Convert to 0.0-1.0 float if in 0-100 scale
+    r1m = r1m / 100.0 if r1m > 1.0 else r1m
+    r5m = r5m / 100.0 if r5m > 1.0 else r5m
+    r10m = r10m / 100.0 if r10m > 1.0 else r10m
+    r15m = r15m / 100.0 if r15m > 1.0 else r15m
+    r30m = r30m / 100.0 if r30m > 1.0 else r30m
+    r1h = r1h / 100.0 if r1h > 1.0 else r1h
+    r2h = r2h / 100.0 if r2h > 1.0 else r2h
+
+    is_8d_base = (
+        r1m <= 0.38 and
+        r5m <= 0.42 and
+        r10m <= 0.45 and
+        r15m <= 0.48 and
+        r30m <= 0.52 and
+        r1h <= 0.55 and
+        r2h <= 0.60
+    )
+
+    if not is_8d_base:
+        return {
+            "action": "HOLD",
+            "use_ai": False,
+            "reason": f"⛔ Fuera de Matriz 8D [1M={r1m*100:.0f}% 5M={r5m*100:.0f}% 15M={r15m*100:.0f}% 1H={r1h*100:.0f}%]"
+        }
+
+    # 4. Floor Turnaround
+    tf_1m_up = mtf.get("tf_1m_up", False)
+    tf_2m_up = mtf.get("tf_2m_up", False)
+    is_1m_wick = mtf.get("is_1m_lower_wick_absorption", False)
+    is_vwap_rebound = mtf.get("is_vwap_floor_rebound", False)
+    is_bullish_div = mtf.get("is_bullish_divergence", False)
+    is_yellow_arrow = mtf.get("is_yellow_arrow_pivot", False)
+    is_ema_cross = mtf.get("is_ema_golden_cross", False)
+
+    has_floor_turnaround = (
+        tf_1m_up or tf_2m_up or is_1m_wick or is_vwap_rebound or
+        is_bullish_div or is_yellow_arrow or is_ema_cross
+    )
+
+    if not has_floor_turnaround:
+        return {
+            "action": "HOLD",
+            "use_ai": False,
+            "reason": "⛔ Falta de Giro de Suelo en 1M/2M"
+        }
+
+    # 5. Floor Injection Index (FII) & Anti-RENDER Filter
+    fii = mtf.get("fii_score", inds.get("fii_score", 0))
+    rsi_15m = mtf.get("rsi_15m", inds.get("rsi_15m", 50.0))
+
+    if fii < 46:
+        return {
+            "action": "HOLD",
+            "use_ai": False,
+            "reason": f"⛔ FII bajo ({fii} < 46)"
+        }
+
+    if rsi_15m >= 40.0 and fii < 65:
+        return {
+            "action": "HOLD",
+            "use_ai": False,
+            "reason": f"⛔ FII insuficiente con RSI neutral (RSI15M={rsi_15m:.1f}, FII={fii} < 65)"
+        }
+
+    # 6. Volume & Ignition Check
+    vol_1m = mtf.get("vol_surge_1m", inds.get("vol_surge_1m", 1.0))
+    vol_15m = mtf.get("vol_surge_15m", inds.get("vol_surge_15m", 1.0))
+    vol_2m = mtf.get("vol_surge_2m", inds.get("vol_surge_2m", 1.0))
+    vol_acc = mtf.get("vol_acceleration", 1.0)
+    is_spring = mtf.get("spring_coiling", {}).get("is_spring_compressed", False)
+    is_wave2 = mtf.get("wave2_retest", {}).get("is_wave2_retest", False)
+    is_pre_pump = mtf.get("is_pre_pump_signal", False)
+    is_30s_burst = mtf.get("is_30s_micro_burst", False)
+
+    if vol_1m < 0.20:
+        return {
+            "action": "HOLD",
+            "use_ai": False,
+            "reason": f"⛔ Volumen 1M muerto ({vol_1m:.2f}x < 0.20x)"
+        }
+
+    has_active_ignition = (
+        (vol_1m >= 0.50 and vol_15m >= 0.15) or
+        (vol_2m >= 0.50 and vol_15m >= 0.15) or
+        (vol_15m >= 0.50) or
+        (vol_1m >= 0.80) or
+        (vol_acc >= 1.10 and vol_15m >= 0.15) or
+        (fii >= 60 and vol_1m >= 0.25) or
+        is_spring or is_wave2 or is_pre_pump or is_30s_burst
+    )
+
+    if not has_active_ignition:
+        return {
+            "action": "HOLD",
+            "use_ai": False,
+            "reason": "⛔ Sin ignición activa de volumen"
+        }
+
+    # 7. Confluence Score Check
+    if score < 55:
+        return {
+            "action": "HOLD",
+            "use_ai": False,
+            "reason": f"⛔ Score insuficiente ({score} < 55)"
+        }
+
+    # 🎯 ALL UNIFIED REAL A+ STANDARD CRITERIA MET -> LONG
+    reason_str = (
+        f"💎 REAL A+ CONFLUENCIA: 8D Base [1M:{r1m*100:.0f}% 5M:{r5m*100:.0f}% 15M:{r15m*100:.0f}% 1H:{r1h*100:.0f}%] "
+        f"| FII={fii} | Vol={vol_1m:.2f}x | RSI15m={rsi_15m:.1f} | Score={score}/100 | OBV={obv_trend}"
+    )
+
+    return {
+        "action": "LONG",
+        "use_ai": False,
+        "reason": reason_str
+    }

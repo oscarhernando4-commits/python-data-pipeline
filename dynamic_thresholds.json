@@ -1,41 +1,9 @@
 {
   "group_0": {
-    "long_score": 85,
-    "short_score": 15,
-    "min_fii": 45,
-    "max_canal_1h": 0.45,
+    "long_score": 55,
+    "min_fii": 46,
+    "max_canal_1h": 0.55,
     "max_rsi_15m": 60,
-    "min_vol_surge": 0.6,
-    "cooldown_min": 3600,
-    "max_rsi_4h": 68
-  },
-  "group_1": {
-    "long_score": 41,
-    "rsi_min": 31,
-    "rsi_max": 69
-  },
-  "group_2": {
-    "long_score": 20,
-    "long_rsi": 80,
-    "short_rsi": 20
-  },
-  "group_3": {
-    "long_score": 70,
-    "vol_surge": 3.0,
-    "long_rsi": 20
-  },
-  "group_4": {
-    "long_score": 100,
-    "short_rsi": 20,
-    "short_score": 80
-  },
-  "group_5": {
-    "long_score": 41,
-    "short_score": 19
-  },
-  "group_6": {
-    "long_score": 75,
-    "vol_surge": 1.5,
-    "tight_sl_pct": 0.75
+    "min_vol_surge": 0.20
   }
 }

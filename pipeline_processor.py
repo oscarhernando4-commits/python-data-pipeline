@@ -65,30 +65,14 @@ def get_obsidian_folder():
 OBSIDIAN_FOLDER = get_obsidian_folder()
 
 def get_group_info(index):
-    try:
-        import strategy_engine
-        dyn = strategy_engine.load_thresholds()
-    except Exception:
-        dyn = {}
-        
-    if index == 0:
-        thresh = dyn.get("group_0", {}).get("long_score", 55)
-        return {"group_id": 0, "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)", "threshold_score": thresh, "risk_pct": 1.0, "label": f"Ultra-Estricto A+ (Score >= {thresh})"}
-    elif 1 <= index <= 200:
-        thresh = dyn.get("group_1", {}).get("long_score", 55)
-        return {"group_id": 1, "group_name": "🛡️ GRUPO 1: Ultra-Estricto A+ & Suelo Fractal", "threshold_score": thresh, "risk_pct": 1.0, "label": f"Ultra-Estricto A+ (Score >= {thresh})"}
-    elif 201 <= index <= 400:
-        thresh = dyn.get("group_2", {}).get("long_score", 55)
-        return {"group_id": 2, "group_name": "🔷 GRUPO 2: Elasticidad High-Beta", "threshold_score": thresh, "risk_pct": 1.0, "label": f"Moderado-Estricto (Score >= {thresh})"}
-    elif 401 <= index <= 600:
-        thresh = dyn.get("group_3", {}).get("long_score", 55)
-        return {"group_id": 3, "group_name": "⚖️ GRUPO 3: Rotación Sectorial", "threshold_score": thresh, "risk_pct": 1.0, "label": f"Balanceado (Score >= {thresh})"}
-    elif 601 <= index <= 800:
-        thresh = dyn.get("group_4", {}).get("long_score", 55)
-        return {"group_id": 4, "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback", "threshold_score": thresh, "risk_pct": 2.0, "label": f"Frecuencia Alta (Score >= {thresh})"}
-    else:
-        thresh = dyn.get("group_5", {}).get("long_score", 45)
-        return {"group_id": 5, "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros", "threshold_score": thresh, "risk_pct": 2.0, "label": f"Exploratorio Extremo (Score >= {thresh})"}
+    return {
+        "group_id": 0,
+        "group_name": "💎 MATRIZ CUÁNTICA A+ (Condición Real)",
+        "threshold_score": 55,
+        "risk_pct": 1.0,
+        "label": "Ecosistema Real A+ (Base 8D + FII + Vol + Trailing)"
+    }
+
 
 def load_live_matrix():
     now_date = datetime.now().strftime("%y-%m-%d")
@@ -695,46 +679,48 @@ def run_infinite_trading_matrix_cycle():
 
         position = acc.get("position", None)
 
-        # 1. EVALUATE LIVE OPEN POSITION (EXACT 3-PHASE DYNAMIC PARITY WITH REAL ACCOUNT)
+        # 1. EVALUATE LIVE OPEN POSITION (EXACT REAL ACCOUNT PARITY: 6-PHASE TRAILING + 60M MICRO-SCRATCH)
         if position is not None:
             symbol = acc["symbol"]
             analysis = symbol_analysis_map.get(symbol)
             curr_price = analysis["price"] if analysis else position["entry_price"]
             
             entry_p = position["entry_price"]
-            side = position.get("side", "LONG")
+            side = "LONG"
             
-            # 🚀 3-PHASE DYNAMIC LADDER & HIGHEST PNL TRACKING
-            if side == "LONG":
-                highest_price = max(position.get("highest_price", entry_p), curr_price)
-                position["highest_price"] = highest_price
-                highest_pnl_pct = ((highest_price - entry_p) / entry_p) * 100.0
-                unr_pct = ((curr_price - entry_p) / entry_p) * 100.0
-            else:
-                lowest_price = min(position.get("lowest_price", entry_p), curr_price)
-                position["lowest_price"] = lowest_price
-                highest_pnl_pct = ((entry_p - lowest_price) / entry_p) * 100.0
-                unr_pct = ((entry_p - curr_price) / entry_p) * 100.0
+            # Increment holding minutes (~2 minutes per cycle)
+            holding_mins = position.get("holding_minutes", 0) + 2
+            position["holding_minutes"] = holding_mins
+            
+            highest_price = max(position.get("highest_price", entry_p), curr_price)
+            position["highest_price"] = highest_price
+            highest_pnl_pct = ((highest_price - entry_p) / entry_p) * 100.0
+            unr_pct = ((curr_price - entry_p) / entry_p) * 100.0
                 
             atr_pct = analysis.get("tech", {}).get("mtf_analysis", {}).get("atr_pct_15m", 0.30) if analysis else 0.30
             
-            # 🎯 SISTEMA DINÁMICO DE 5 FASES ESCALADAS (10 Micro-Subpartes Cuánticas Idéntico a Cuenta Real):
+            # 🎯 EXACT REPLICA: Adaptive Asset DNA 6-Phase Trailing Ladder
             import adaptive_asset_dna
             arch_dna = adaptive_asset_dna.get_asset_dna_archetype(symbol, atr_pct, curr_price)
             sl_pct, phase, phase_label = adaptive_asset_dna.calculate_archetype_trailing(
                 archetype_dna=arch_dna,
                 highest_pnl_pct=highest_pnl_pct,
                 current_pnl_pct=unr_pct,
-                holding_minutes=position.get("holding_minutes", 1),
+                holding_minutes=holding_mins,
                 atr_pct=atr_pct
             )
                 
             position["phase"] = phase
             position["phase_label"] = phase_label
-            should_close = unr_pct <= sl_pct
             
-            invested = curr_bal * 0.20  # 20% position size
-            bnb_fee = invested * 0.00075 * 2  # 0.075% BNB discount fee (entrada + salida)
+            # Exit Conditions: Trailing Stop OR 60m Micro-Scratch at <= -0.50%
+            should_close = unr_pct <= sl_pct
+            if not should_close and holding_mins >= 60 and unr_pct <= -0.50:
+                should_close = True
+                phase_label = f"🚪 Micro-Scratch 60m ({unr_pct:+.2f}%)"
+            
+            invested = curr_bal * 0.20  # 20% position size per simulation trade
+            bnb_fee = invested * 0.00075 * 2  # 0.075% BNB discount fee (entrada + salida = 0.15%)
             
             if should_close:
                 pnl_ratio = unr_pct / 100.0
@@ -762,138 +748,78 @@ def run_infinite_trading_matrix_cycle():
                 ctx = {}
                 if analysis:
                     _indicators = analysis.get("tech", {}).get("indicators", {})
+                    _mtf = analysis.get("tech", {}).get("mtf_analysis", {})
                     ctx = {
                         "score": analysis.get("score"),
                         "rsi_15m": _indicators.get("rsi_15m"),
                         "macro_trend_4h": analysis.get("tech", {}).get("macro_trend_4h"),
-                        "fii_score": _indicators.get("fii_score"),
-                        "atr_pct_15m": _indicators.get("atr_pct_15m"),
-                        "obv_trend": _indicators.get("obv_trend"),
-                        "vol_surge_1m": _indicators.get("vol_surge_1m"),
-                        "adx_15m": _indicators.get("adx_15m_value"),
-                        "cci_15m": _indicators.get("cci_15m_value"),
-                        "range_position_1m": _indicators.get("range_position_1m"),
+                        "fii_score": _mtf.get("fii_score", _indicators.get("fii_score", 0)),
+                        "atr_pct_15m": _mtf.get("atr_pct_15m", 0.30),
+                        "obv_trend": _mtf.get("obv_trend", "NEUTRAL"),
+                        "vol_surge_1m": _mtf.get("vol_surge_1m", 1.0),
+                        "vol_surge": _indicators.get("volume_surge_ratio", 1.0),
+                        "range_position_1m": _mtf.get("range_position_1m", 0.50),
                     }
                     
                 learning_engine.record_trade_outcome(
-                    symbol=symbol, side=side, entry_price=entry_p, exit_price=curr_price,
+                    symbol=symbol, side="LONG", entry_price=entry_p, exit_price=curr_price,
                     pnl_usd=net_pnl, result_type=res_type,
-                    notes=f"{res_type} on {symbol} (PnL: {unr_pct:+.2f}%, Net: ${net_pnl:+.2f} Fase {phase})",
-                    account_id=acc.get("account_id", "Desconocida"),
-                    group_name=acc.get("group_name", "Sin Grupo"),
+                    notes=f"{res_type} on {symbol} (PnL: {unr_pct:+.2f}%, Net: ${net_pnl:+.2f} Fase {phase} | {phase_label})",
+                    account_id=acc.get("account_id", "SIM-000"),
+                    group_name=acc.get("group_name", "💎 MATRIZ CUÁNTICA A+"),
                     context=ctx
                 )
             else:
                 acc["last_trade_time"] = position.get("open_time_br", now_br)
-                phase_badge = "⚡ Fase 1" if phase == 1 else ("🔒 Fase 2" if phase == 2 else "💎 Fase 3")
+                phase_badge = f"⚡ Fase {phase}" if phase <= 2 else f"💎 Fase {phase}"
                 acc["last_result"] = f"🔵 {phase_badge} ({unr_pct:+.2f}%)"
-                acc["status"] = f"EN_OPERACION_VIVO ({symbol} {side} {unr_pct:+.1f}%)"
+                acc["status"] = f"EN_OPERACION_VIVO ({symbol} LONG {unr_pct:+.1f}%)"
 
-        # 2. DYNAMIC MARKET ROTATION: EVALUATE STRATEGIC PROFILE
+        # 2. DYNAMIC MARKET ROTATION: EVALUATE UNIFIED REAL ACCOUNT A+ STRATEGY
         else:
-            g_id = acc.get("group_id", 0)
             best_action = "HOLD"
             selected_symbol = acc["symbol"]
             best_reason = ""
             best_curr_price = 0
-            best_sl_dist = 0
             
-            # Collect symbols with open positions in this matrix for correlation filter
-            _active_syms_in_matrix = [a["symbol"] for a in accounts if a.get("position") is not None and a.get("symbol")]
-            
-            # 🔀 DISPERSIÓN DE SÍMBOLOS: Cada cuenta empieza en un offset diferente
-            # para que no todas elijan el mismo primer símbolo
+            # 🔀 DISPERSIÓN DE SÍMBOLOS: Distribuye las 1000 cuentas en los 67 pares del Top 100 CMC
             _symbols_list = list(symbol_analysis_map.items())
             _account_offset = acc_idx % max(len(_symbols_list), 1)
             _rotated_symbols = _symbols_list[_account_offset:] + _symbols_list[:_account_offset]
             
             for sym, data_item in _rotated_symbols:
-                eval_res = strategy_engine.evaluate_opportunity(data_item["tech"], g_id)
-                if eval_res["action"] in ["LONG", "SHORT"]:
-                    # 🚫 ANTI-CONCENTRACIÓN: Máximo 8 cuentas del mismo grupo por símbolo en matriz 1000
-                    _sym_count_same_group = sum(1 for a in accounts if a.get("position") and a.get("symbol") == sym and a.get("group_id") == g_id)
-                    if _sym_count_same_group >= 8:
-                        continue  # Ya hay 8 cuentas de este grupo explorando este símbolo
+                eval_res = strategy_engine.evaluate_opportunity(data_item["tech"])
+                if eval_res["action"] == "LONG":
+                    # 🚫 ANTI-CONCENTRACIÓN: Máximo 15 cuentas simultáneas por símbolo
+                    _sym_active_count = sum(1 for a in accounts if a.get("position") and a.get("symbol") == sym)
+                    if _sym_active_count >= 15:
+                        continue  # Símbolo ya cubierto por 15 cuentas, evaluar siguiente par
                     
-                    # 🏛️ FILTRO BROWNIANO: Rechazar si el movimiento es solo ruido aleatorio
-                    _sym_gbm_z = abs(data_item.get("_gbm_zscore", 0.0))
-                    _sym_is_noise = data_item.get("_is_brownian_noise", True)
-                    if _sym_is_noise and _sym_gbm_z < 1.5 and g_id <= 3:
-                        # Groups 0-3 require statistically significant movements
-                        continue  # Skip this symbol, it's brownian noise
-                    
-                    # 🏛️ FILTRO CORRELACIÓN: No abrir si está muy correlacionado con posición activa
-                    if len(_active_syms_in_matrix) > 0 and g_id <= 3:
-                        try:
-                            _corr_check = quant_institutional.check_correlation_filter(
-                                sym,
-                                {s: [] for s in [sym] + _active_syms_in_matrix},  # Lightweight check
-                                _active_syms_in_matrix
-                            )
-                            if not _corr_check.get("approved", True):
-                                continue  # Skip: too correlated with existing position
-                        except Exception:
-                            pass  # If correlation check fails, allow the trade
-                    
-                    best_action = eval_res["action"]
+                    best_action = "LONG"
                     selected_symbol = sym
                     best_reason = eval_res["reason"]
-                    if not _sym_is_noise:
-                        best_reason += f" | GBM Z={_sym_gbm_z:.1f} ({data_item.get('_trade_quality', '?')})"
                     best_curr_price = data_item["price"]
-                    best_sl_dist = max(data_item["tech"]["indicators"].get("atr_15m", 0) * 1.0, best_curr_price * 0.01)
-                    break # Take the first one that triggers for this strategy
+                    break
                     
-            if best_action != "HOLD":
-                # AI Sentinel override (if strategy uses AI)
-                use_ai = eval_res["use_ai"]
-                ai_approved = True
-                if use_ai:
-                    # In a real deep simulation we'd call the oracle here, 
-                    # but to save API limits on 100 accounts, we assume the initial macro/score filtering is the AI.
-                    pass 
-                
-                if cached_fundamental_report.get("macro_risk_level") == "HIGH_RISK" and g_id != 5:
-                    acc["status"] = f"🛑 Riesgo Noticias ({cached_fundamental_report.get('sentiment_label')})"
-                elif ai_approved:
-                    try:
-                        import historical_catalyst_analyzer
-                        historical_catalyst_analyzer.ensure_symbol_historically_analyzed(selected_symbol)
-                    except Exception as e:
-                        pass
-                        
-                    if best_action == "LONG":
-                        sl_target = best_curr_price - best_sl_dist
-                        tp_min_target = best_curr_price + (best_sl_dist * 2.0)
-                        tp_max_target = best_curr_price + (best_sl_dist * 3.5)
-                    else: # SHORT
-                        sl_target = best_curr_price + best_sl_dist
-                        tp_min_target = best_curr_price - (best_sl_dist * 2.0)
-                        tp_max_target = best_curr_price - (best_sl_dist * 3.5)
-                        
-                    qty = round((curr_bal * 0.2) / best_curr_price, 8)
-                    
-                    current_hour = datetime.now().hour
-                    acc["symbol"] = selected_symbol
-                    acc["last_trade_time"] = now_br
-                    acc["last_result"] = "🔵 En Curso"
-                    acc["position"] = {
-                        "side": best_action,
-                        "entry_price": best_curr_price,
-                        "qty": qty,
-                        "sl": sl_target,
-                        "tp_min": tp_min_target,
-                        "tp_max": tp_max_target,
-                        "open_time": now_str,
-                        "open_time_br": now_br,
-                        "open_hour": current_hour
-                    }
-                    acc["status"] = f"EN_OPERACION_VIVO ({selected_symbol} {best_action} @ ${best_curr_price:.2f})"
-                    
-                    # (Removed auto-learning bypass to strictly enforce Gemini Zero-Loss rule for all Real Money trades)
+            if best_action == "LONG" and best_curr_price > 0:
+                qty = round((curr_bal * 0.2) / best_curr_price, 8)
+                current_hour = datetime.now().hour
+                acc["symbol"] = selected_symbol
+                acc["last_trade_time"] = now_br
+                acc["last_result"] = "🔵 En Curso"
+                acc["position"] = {
+                    "side": "LONG",
+                    "entry_price": best_curr_price,
+                    "qty": qty,
+                    "open_time": now_str,
+                    "open_time_br": now_br,
+                    "open_hour": current_hour,
+                    "holding_minutes": 1,
+                    "highest_price": best_curr_price
+                }
+                acc["status"] = f"EN_OPERACION_VIVO ({selected_symbol} LONG @ ${best_curr_price:.2f})"
             else:
-                top_sym = selected_symbol
-                acc["status"] = f"BUSCANDO_OPORTUNIDAD (Estrategia G-{g_id})"
+                acc["status"] = "BUSCANDO_OPORTUNIDAD (Ecosistema Real A+)"
 
         total_balance += acc["current_balance"]
         global_trades += acc["trades_count"]
@@ -902,6 +828,7 @@ def run_infinite_trading_matrix_cycle():
     matrix["current_total_usd"] = round(total_balance, 2)
     matrix["net_pnl_usd"] = round(total_balance - matrix.get("total_fund_usd", 100000.0), 2)
     matrix["global_win_rate_pct"] = round((global_wins / global_trades * 100.0), 2) if global_trades > 0 else 0.0
+
 
     save_live_matrix(matrix)
     
