@@ -1642,7 +1642,26 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         state["_last_closed_symbol"] = active_symbol
                         state["_last_closed_time"] = time.time()
                         state["_last_exit_price"] = active_current_price
+
+                        # ── Consecutive Loss Counter & Daily PnL Tracker ──────────────────
+                        from datetime import datetime as _dt2
+                        today_key = _dt2.now().strftime("%Y-%m-%d")
+                        if state.get("_daily_pnl_date") != today_key:
+                            state["_daily_pnl_date"] = today_key
+                            state["_daily_pnl_usd"] = 0.0
+                        state["_daily_pnl_usd"] = round(state.get("_daily_pnl_usd", 0.0) + pnl_usd, 4)
+
+                        if res_type == "LOSS":
+                            state["_consecutive_losses"] = state.get("_consecutive_losses", 0) + 1
+                            state["_last_loss_time"] = time.time()
+                            print(f"📊 [RACHA] Pérdidas consecutivas: {state['_consecutive_losses']} | PnL hoy: ${state['_daily_pnl_usd']:.3f}")
+                        else:
+                            state["_consecutive_losses"] = 0  # Reset on any win
+                            print(f"📊 [RACHA] Racha ganadora activa ✅ | PnL hoy: ${state['_daily_pnl_usd']:.3f}")
+                        # ─────────────────────────────────────────────────────────────────
+
                         print(f"✅ LONG cerrado exitosamente: {res_type} ({pnl_pct:+.2f}% | ${pnl_usd:+.2f})")
+
                     else:
                         print(f"⚠️ Spot SELL rejected: {res_json}")
                 except Exception as e:
@@ -1709,9 +1728,76 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         
         if not candidate_queue:
             return
-            
+
+        # ═══════════════════════════════════════════════════════════════════════
+        # 🛡️ ESCUDO 1: CIRCUIT BREAKER DE RACHAS PERDEDORAS
+        # Si perdemos 2 trades consecutivos → pausa 25 minutos antes del siguiente.
+        # Rachas de pérdida = condiciones de mercado adversas, no error del bot.
+        # ═══════════════════════════════════════════════════════════════════════
+        consec_losses = state.get("_consecutive_losses", 0)
+        last_loss_time = state.get("_last_loss_time", 0)
+        if consec_losses >= 2:
+            minutes_since_loss = (time.time() - last_loss_time) / 60.0
+            cooldown_needed = 25.0  # 25 min cooling period after 2 consecutive losses
+            if minutes_since_loss < cooldown_needed:
+                remaining = cooldown_needed - minutes_since_loss
+                print(f"🛑 [CIRCUIT BREAKER RACHA] {consec_losses} pérdidas consecutivas detectadas. Enfriamiento: {remaining:.0f}m restantes. Protegiendo capital.")
+                return
+            else:
+                print(f"✅ [CIRCUIT BREAKER] Cooldown completado ({minutes_since_loss:.0f}m). Reactivando búsqueda A+.")
+
+        # ═══════════════════════════════════════════════════════════════════════
+        # 🛡️ ESCUDO 2: LÍMITE DIARIO DE PÉRDIDA (Daily Loss Limit)
+        # Máximo $0.40 de pérdida neta en el día. Si se supera → STOP por hoy.
+        # Protege el capital de días de mercado adverso sostenido.
+        # ═══════════════════════════════════════════════════════════════════════
+        try:
+            from datetime import datetime as _dt
+            today_str = _dt.now().strftime("%Y-%m-%d")
+            if state.get("_daily_pnl_date") != today_str:
+                state["_daily_pnl_date"] = today_str
+                state["_daily_pnl_usd"] = 0.0
+            daily_pnl = state.get("_daily_pnl_usd", 0.0)
+            daily_loss_limit = -0.40  # Max $0.40 loss per day
+            if daily_pnl <= daily_loss_limit:
+                print(f"🛑 [LÍMITE DIARIO] Pérdida acumulada hoy: ${daily_pnl:.3f}. Límite: ${daily_loss_limit}. Operaciones pausadas hasta mañana. Preservando capital.")
+                return
+            elif daily_pnl < -0.20:
+                print(f"⚠️ [ALERTA DIARIA] Pérdida acumulada hoy: ${daily_pnl:.3f}. Cerca del límite diario. Modo ultra-selectivo activado.")
+        except Exception:
+            pass
+
+        # ═══════════════════════════════════════════════════════════════════════
+        # 🛡️ ESCUDO 3: FILTRO DE AMPLITUD DE MERCADO (Market Breadth)
+        # Verifica si el mercado de altcoins en general está bajando.
+        # Si >= 7 de los 10 alts de referencia están en vela 15M roja → HOLD.
+        # Esto detecta cuando todo el mercado se voltea — no solo Bitcoin.
+        # ═══════════════════════════════════════════════════════════════════════
+        try:
+            breadth_symbols = ["ETHUSDT", "BNBUSDT", "SOLUSDT", "XRPUSDT", "ADAUSDT",
+                               "DOTUSDT", "LINKUSDT", "LTCUSDT", "AVAXUSDT", "MATICUSDT"]
+            bearish_count = 0
+            for bsym in breadth_symbols:
+                bkl = get_klines(bsym, "15m", 2)
+                if bkl and len(bkl) >= 1:
+                    bc = float(bkl[-1][4]); bo = float(bkl[-1][1])
+                    if bc < bo:
+                        bearish_count += 1
+            if bearish_count >= 7:
+                print(f"🛑 [AMPLITUD DE MERCADO] {bearish_count}/10 alts de referencia en vela 15M roja. Mercado en corrección generalizada. No abrir longs.")
+                return
+            elif bearish_count >= 5:
+                print(f"⚠️ [AMPLITUD NEUTRAL] {bearish_count}/10 alts en rojo 15M. Mercado mixto — solo entradas con FII >= 70.")
+                # Temporarily raise FII bar when market is mixed
+                state["_breadth_warning"] = True
+            else:
+                state["_breadth_warning"] = False
+        except Exception:
+            state["_breadth_warning"] = False
+
         # 🪙 GUARDIÁN BITCOIN PRE-ENTRADA (Anti-Cascada de Mercado):
         # Si Bitcoin está en caída activa en 5M (vela roja > -0.15% o 2 velas rojas consecutivas), frenar compras
+
         try:
             btc_kl = get_klines("BTCUSDT", "5m", 3)
             if btc_kl and len(btc_kl) >= 2:
