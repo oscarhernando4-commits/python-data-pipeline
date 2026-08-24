@@ -1,15 +1,13 @@
 {
   "stats": {
-    "total_trades": 9216,
-    "wins": 4053,
-    "losses": 5163,
-    "win_rate_pct": 43.98,
-    "total_pnl_usd": 11753.783276549368
+    "total_trades": 9219,
+    "wins": 4054,
+    "losses": 5165,
+    "win_rate_pct": 43.97,
+    "total_pnl_usd": 11753.423276549367
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BCHUSDT)",
-      "BLOCK LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on PEPEUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BONKUSDT)",
       "BLOCK SHORT when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on STXUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on IMXUSDT)",
@@ -27,7 +25,9 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ASTERUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on WLFIUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ICPUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on NEXOUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on NEXOUSDT)",
+      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on VETUSDT)",
+      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZROUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on EIGENUSDT)",
@@ -53,78 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 00:46:40",
-      "account_id": "SIM-976",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "XLMUSDT",
-      "side": "LONG",
-      "entry_price": 0.1972,
-      "exit_price": 0.1953,
-      "pnl_usd": -0.22,
-      "result": "LOSS",
-      "notes": "LOSS on XLMUSDT (PnL: -0.96%, Net: $-0.22 Fase 1)",
-      "context": {
-        "score": 26,
-        "rsi_15m": 33.7,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
-    {
-      "timestamp": "2026-08-24 00:46:40",
-      "account_id": "SIM-990",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "ONDOUSDT",
-      "side": "LONG",
-      "entry_price": 0.3758,
-      "exit_price": 0.3727,
-      "pnl_usd": -0.19,
-      "result": "LOSS",
-      "notes": "LOSS on ONDOUSDT (PnL: -0.82%, Net: $-0.19 Fase 1)",
-      "context": {
-        "score": 39,
-        "rsi_15m": 29.91,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
-    {
-      "timestamp": "2026-08-24 00:48:38",
-      "account_id": "SIM-039",
-      "group_name": "🛡️ GRUPO 1: Ultra-Estricto A+ & Suelo Fractal",
-      "symbol": "TRXUSDT",
-      "side": "LONG",
-      "entry_price": 0.3401,
-      "exit_price": 0.3431,
-      "pnl_usd": 0.02,
-      "result": "WIN",
-      "notes": "WIN on TRXUSDT (PnL: +0.88%, Net: $+0.02 Fase 4)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 34.07,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 00:48:39",
       "account_id": "SIM-226",
@@ -11432,6 +11360,78 @@
       "context": {
         "score": 5,
         "rsi_15m": 41.22,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 02:24:31",
+      "account_id": "SIM-912",
+      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
+      "symbol": "VETUSDT",
+      "side": "LONG",
+      "entry_price": 0.005688,
+      "exit_price": 0.00564,
+      "pnl_usd": -0.2,
+      "result": "LOSS",
+      "notes": "LOSS on VETUSDT (PnL: -0.84%, Net: $-0.20 Fase 1)",
+      "context": {
+        "score": 5,
+        "rsi_15m": 39.91,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 02:24:31",
+      "account_id": "SIM-948",
+      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
+      "symbol": "INJUSDT",
+      "side": "LONG",
+      "entry_price": 5.366,
+      "exit_price": 5.386,
+      "pnl_usd": 0.04,
+      "result": "WIN",
+      "notes": "WIN on INJUSDT (PnL: +0.37%, Net: $+0.04 Fase 3)",
+      "context": {
+        "score": 16,
+        "rsi_15m": 56.4,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 02:24:31",
+      "account_id": "SIM-954",
+      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
+      "symbol": "ZROUSDT",
+      "side": "LONG",
+      "entry_price": 1.158,
+      "exit_price": 1.148,
+      "pnl_usd": -0.2,
+      "result": "LOSS",
+      "notes": "LOSS on ZROUSDT (PnL: -0.86%, Net: $-0.20 Fase 1)",
+      "context": {
+        "score": 5,
+        "rsi_15m": 34.62,
         "macro_trend_4h": "NEUTRAL",
         "fii_score": null,
         "atr_pct_15m": null,
