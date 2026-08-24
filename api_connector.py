@@ -1787,7 +1787,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
             vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
             
-            # 🎯 MATRIZ ARMÓNICA DE BASE 8D (1M<=38%, 5M<=45%, 10M<=50%, 15M<=55%, 30M<=60%, 1H<=65%, 2H<=70%)
+            # 🎯 MATRIZ ARMÓNICA DE BASE 8D (1M<=38-48%, 5M<=45%, 10M<=50%, 15M<=55%, 30M<=60%, 1H<=65%, 2H<=70%)
+            max_1m_base_cap = 0.48 if (fii >= 45 or mtf_res.get("obv_trend") == "ACCUMULATING") else 0.38
             is_macro_base_valid = bool(
                 range_pos_2h <= 0.70 and
                 range_pos_1h <= 0.65 and
@@ -1795,12 +1796,12 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 range_pos_15m <= 0.55 and
                 range_pos_10m <= 0.50 and
                 range_pos_5m <= 0.45 and
-                range_pos_1m <= 0.38
+                range_pos_1m <= max_1m_base_cap
             )
             
             if not is_macro_base_valid or is_at_daily_ceiling:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado: Fuera de la Matriz Armónica 8D o en Techo:")
-                print(f"     Canales: [1M: {range_pos_1m*100:.0f}% (max 38) | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% (max 45) | 10M: {range_pos_10m*100:.0f}% (max 50) | 15M: {range_pos_15m*100:.0f}% (max 55) | 30M: {range_pos_30m*100:.0f}% (max 60) | 1H: {range_pos_1h*100:.0f}% (max 65) | 2H: {range_pos_2h*100:.0f}% (max 70)]")
+                print(f"     Canales: [1M: {range_pos_1m*100:.0f}% (max {max_1m_base_cap*100:.0f}) | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% (max 45) | 10M: {range_pos_10m*100:.0f}% (max 50) | 15M: {range_pos_15m*100:.0f}% (max 55) | 30M: {range_pos_30m*100:.0f}% (max 60) | 1H: {range_pos_1h*100:.0f}% (max 65) | 2H: {range_pos_2h*100:.0f}% (max 70)]")
                 continue
                 
             if not has_floor_turnaround:
@@ -1826,8 +1827,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Spread excesivo ({spread_now:.3f}% > {max_allowed_spread:.3f}%).")
                 continue
                 
-            if bid_dom_now < 48.0:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Bids insuficientes ({bid_dom_now:.1f}% < 48.0%).")
+            min_bid_dom = 40.0 if (fii >= 45 and ob_info.get("bid_vol_usdt", 0.0) >= 15000.0) else 44.0
+            if bid_dom_now < min_bid_dom:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Bids insuficientes ({bid_dom_now:.1f}% < {min_bid_dom:.1f}%).")
                 continue
                 
             if ob_info.get("bid_vol_usdt", 0.0) > 0 and ob_info.get("bid_vol_usdt", 0.0) < 10000.0:
