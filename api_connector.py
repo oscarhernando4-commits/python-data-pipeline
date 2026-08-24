@@ -1777,23 +1777,25 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Distribución Institucional (OBV=DISTRIBUTING).")
                 continue
                 
-            # 🎯 VETO DE CONFLUENCIA FRACTAL DE SUELO (1M + 2M + 5M + 15M + 30M + 1H):
-            # Prohibido entrar si el precio está en el centro o techo de 5M/15M/30M.
+            # 🎯 VETO DE CONFLUENCIA FRACTAL DE SUELO (1M + 2M + 5M + 10M + 15M + 30M + 1H + 2H):
+            # Prohibido entrar si el precio está en el centro o techo de 5M/10M/15M/30M/1H/2H.
             # Exige que el activo esté en el PISO SIMULTÁNEO en todas las escalas temporales.
             range_pos_1m = mtf_res.get("range_position_1m", 0.50)
             range_pos_2m = mtf_res.get("range_position_2m", 0.50)
             range_pos_5m = mtf_res.get("range_position_5m", 0.50)
+            range_pos_10m = mtf_res.get("range_position_10m", 0.50)
             range_pos_15m = mtf_res.get("range_position_15m", 0.50)
             range_pos_30m = mtf_res.get("range_position_30m", 0.50)
             range_pos_1h = mtf_res.get("range_position_1h", 0.50)
+            range_pos_2h = mtf_res.get("range_position_2h", 0.50)
             is_confluent_floor = mtf_res.get("is_confluent_fractal_floor", False)
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
             vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
             
-            is_deep_pullback_base = bool(range_pos_15m <= 0.45 and range_pos_5m <= 0.45 and range_pos_1m <= 0.35)
+            is_deep_pullback_base = bool(range_pos_15m <= 0.50 and range_pos_10m <= 0.50 and range_pos_5m <= 0.50 and range_pos_1m <= 0.38)
             if not is_confluent_floor and not is_deep_pullback_base and not (vol_1m_now >= 2.5 or vol_15m_now >= 2.0):
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Falta de Suelo Fractal Confluente:")
-                print(f"     Canales: [1M: {range_pos_1m*100:.0f}% | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% | 15M: {range_pos_15m*100:.0f}% | 30M: {range_pos_30m*100:.0f}% | 1H: {range_pos_1h*100:.0f}%]")
+                print(f"     Canales: [1M: {range_pos_1m*100:.0f}% | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% | 10M: {range_pos_10m*100:.0f}% | 15M: {range_pos_15m*100:.0f}% | 30M: {range_pos_30m*100:.0f}% | 1H: {range_pos_1h*100:.0f}% | 2H: {range_pos_2h*100:.0f}%]")
                 continue
                 
             if not has_floor_turnaround:
@@ -1926,7 +1928,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             print(f"═══════════════════════════════════════════════════════════════════════════════════════")
             print(f"🧬 Arquetipo ADN: {cand_archetype.get('label')} | SL Inicial: {arch_dna.get('initial_sl_pct', -0.75)}% | Cosecha Fase 2: +0.44%{token_dna_label}")
             print(f"📊 Score MTF: {final_cand_score}/100 | FII Suelo: {fii}/100 | ATR: {atr_15m:.2f}% | Spread: {ob_info.get('spread_pct'):.3f}%")
-            print(f"🌌 Canales Fractales: [1M: {range_pos_1m*100:.0f}% | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% | 15M: {range_pos_15m*100:.0f}% | 30M: {range_pos_30m*100:.0f}% | 1H: {range_pos_1h*100:.0f}%]")
+            print(f"🌌 Canales Fractales: [1M: {range_pos_1m*100:.0f}% | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% | 10M: {range_pos_10m*100:.0f}% | 15M: {range_pos_15m*100:.0f}% | 30M: {range_pos_30m*100:.0f}% | 1H: {range_pos_1h*100:.0f}% | 2H: {range_pos_2h*100:.0f}%]")
             print(f"🌊 Muro Comprador: ${ob_info.get('bid_vol_usdt', 0):,.0f} USDT (Bids={ob_info.get('bid_dominance_pct'):.1f}%) | OBV={mtf_res.get('obv_trend')}")
             print(f"📈 Tendencia: {trend_label} ({adx_label}) | {cci_label} | {'🟢 CCI Suelo' if is_cci_floor else '⚪ CCI Normal'}")
             print(f"═══════════════════════════════════════════════════════════════════════════════════════\n")

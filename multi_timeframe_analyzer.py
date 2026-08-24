@@ -226,6 +226,38 @@ def _aggregate_1m_to_2m(klines_1m):
         klines_2m.append([k1[0], open_p, high_p, low_p, close_p, vol])
     return klines_2m
 
+def _aggregate_5m_to_10m(klines_5m):
+    """Combines pairs of 5m klines into 10m klines [timestamp, open, high, low, close, volume]."""
+    if not klines_5m or len(klines_5m) < 2:
+        return []
+    klines_10m = []
+    for i in range(0, len(klines_5m) - 1, 2):
+        k1 = klines_5m[i]
+        k2 = klines_5m[i+1]
+        open_p = float(k1[1])
+        high_p = max(float(k1[2]), float(k2[2]))
+        low_p = min(float(k1[3]), float(k2[3]))
+        close_p = float(k2[4])
+        vol = float(k1[5]) + float(k2[5])
+        klines_10m.append([k1[0], open_p, high_p, low_p, close_p, vol])
+    return klines_10m
+
+def _aggregate_1h_to_2h(klines_1h):
+    """Combines pairs of 1h klines into 2h klines [timestamp, open, high, low, close, volume]."""
+    if not klines_1h or len(klines_1h) < 2:
+        return []
+    klines_2h = []
+    for i in range(0, len(klines_1h) - 1, 2):
+        k1 = klines_1h[i]
+        k2 = klines_1h[i+1]
+        open_p = float(k1[1])
+        high_p = max(float(k1[2]), float(k2[2]))
+        low_p = min(float(k1[3]), float(k2[3]))
+        close_p = float(k2[4])
+        vol = float(k1[5]) + float(k2[5])
+        klines_2h.append([k1[0], open_p, high_p, low_p, close_p, vol])
+    return klines_2h
+
 def _aggregate_1s_to_bars(klines_1s, seconds=10):
     """Aggregates 1s klines into custom sub-minute bars (10s, 30s) [timestamp, open, high, low, close, volume]."""
     if not klines_1s:
@@ -570,9 +602,11 @@ def analyze_multi_timeframe_candles(symbol):
     klines_1m = fetch_klines_public(symbol, "1m", 40)
     klines_2m = _aggregate_1m_to_2m(klines_1m)
     klines_5m = fetch_klines_public(symbol, "5m", 30)
+    klines_10m = _aggregate_5m_to_10m(klines_5m)
     klines_15m = fetch_klines_public(symbol, "15m", 120)
     klines_30m = fetch_klines_public(symbol, "30m", 30)
     klines_1h = fetch_klines_public(symbol, "1h", 30)
+    klines_2h = _aggregate_1h_to_2h(klines_1h)
     klines_4h = fetch_klines_public(symbol, "4h", 30)
     klines_1d = fetch_klines_public(symbol, "1d", 14)
     
@@ -1093,9 +1127,11 @@ def analyze_multi_timeframe_candles(symbol):
     range_position_1m = _calc_range_pos(klines_1m, 24)
     range_position_2m = _calc_range_pos(klines_2m, 24)
     range_position_5m = _calc_range_pos(klines_5m, 24)
+    range_position_10m = _calc_range_pos(klines_10m, 24)
     range_position_15m = _calc_range_pos(klines_15m, 24)
     range_position_30m = _calc_range_pos(klines_30m, 24)
     range_position_1h = _calc_range_pos(klines_1h, 24)
+    range_position_2h = _calc_range_pos(klines_2h, 24)
     range_position_4h = _calc_range_pos(klines_4h, 24)
     range_position_1d = _calc_range_pos(klines_1d, 14)
     
@@ -1114,33 +1150,59 @@ def analyze_multi_timeframe_candles(symbol):
     dist_from_1h_ma25_pct = ((close_15m - ma25_1h) / ma25_1h) * 100.0 if ma25_1h > 0 else 0.0
     dist_from_4h_ma25_pct = ((close_15m - ma25_4h) / ma25_4h) * 100.0 if ma25_4h > 0 else 0.0
     
-    # 🚫 VETO TOTAL ANTI-CIMA EN CADA TEMPORALIDAD DE LA MATRIZ 8D (Techos reales >= 75% con RSI Sobrecomprado):
+    # 🕯️ DETECCIÓN DE AGOTAMIENTO Y MECHA SUPERIOR EN VELA ACTIVA (5M, 10M, 15M, 30M, 1H, 2H)
+    def _is_candle_top_rejection(kline):
+        if not kline: return False
+        open_p = float(kline[1])
+        high_p = float(kline[2])
+        low_p = float(kline[3])
+        close_p = float(kline[4])
+        rng = high_p - low_p
+        if rng <= 0: return False
+        upper_wick = high_p - max(open_p, close_p)
+        upper_wick_pct = (upper_wick / rng) * 100.0
+        return bool(upper_wick_pct >= 40.0 or (close_p < open_p and upper_wick_pct >= 30.0))
+
+    is_top_wick_5m = _is_candle_top_rejection(klines_5m[-1]) if klines_5m else False
+    is_top_wick_10m = _is_candle_top_rejection(klines_10m[-1]) if klines_10m else False
+    is_top_wick_15m = _is_candle_top_rejection(klines_15m[-1]) if klines_15m else False
+    is_top_wick_30m = _is_candle_top_rejection(klines_30m[-1]) if klines_30m else False
+    is_top_wick_1h = _is_candle_top_rejection(klines_1h[-1]) if klines_1h else False
+    is_top_wick_2h = _is_candle_top_rejection(klines_2h[-1]) if klines_2h else False
+
+    # 🚫 VETO TOTAL ANTI-CIMA EN CADA TEMPORALIDAD (5M, 10M, 15M, 30M, 1H, 2H, 4H, 1D):
     is_at_range_ceiling_1d = bool(range_position_1d >= 0.80 and rsi_1d >= 68.0)
     is_at_range_ceiling_4h = bool(range_position_4h >= 0.78 and rsi_4h >= 68.0)
-    is_at_range_ceiling_1h = bool(range_position_1h >= 0.75 and rsi_1h >= 66.0)
-    is_at_range_ceiling_30m = bool(range_position_30m >= 0.75 and rsi_30m >= 66.0)
-    is_at_range_ceiling_15m = bool(range_position_15m >= 0.75 and rsi_15m >= 66.0)
-    is_at_range_ceiling_5m = bool(range_position_5m >= 0.80 and rsi_5m >= 70.0)
-    is_at_range_ceiling_2m = bool(range_position_2m >= 0.85 and rsi_2m >= 75.0)
-    is_at_range_ceiling_1m = bool(range_position_1m >= 0.85 and rsi_1m >= 75.0)
+    is_at_range_ceiling_2h = bool(range_position_2h >= 0.68 or (range_position_2h >= 0.55 and rsi_1h >= 60.0) or is_top_wick_2h)
+    is_at_range_ceiling_1h = bool(range_position_1h >= 0.68 or (range_position_1h >= 0.55 and rsi_1h >= 60.0) or is_top_wick_1h)
+    is_at_range_ceiling_30m = bool(range_position_30m >= 0.65 or (range_position_30m >= 0.52 and rsi_30m >= 60.0) or is_top_wick_30m)
+    is_at_range_ceiling_15m = bool(range_position_15m >= 0.60 or (range_position_15m >= 0.50 and rsi_15m >= 60.0) or is_top_wick_15m)
+    is_at_range_ceiling_10m = bool(range_position_10m >= 0.65 or (range_position_10m >= 0.52 and rsi_15m >= 62.0) or is_top_wick_10m)
+    is_at_range_ceiling_5m = bool(range_position_5m >= 0.65 or (range_position_5m >= 0.55 and rsi_5m >= 62.0) or is_top_wick_5m)
+    is_at_range_ceiling_2m = bool(range_position_2m >= 0.80 and rsi_2m >= 70.0)
+    is_at_range_ceiling_1m = bool(range_position_1m >= 0.80 and rsi_1m >= 70.0)
 
-    # 🚫 VETO CRÍTICO ANTI-TECHO FRACTAL TOTAL (Analiza las últimas 24 velas de 1M, 2M, 5M, 15M, 30M, 1H y 24H):
+    # 🚫 VETO CRÍTICO ANTI-TECHO FRACTAL TOTAL (Analiza canales y velas de 5M, 10M, 15M, 30M, 1H, 2H y 24H):
     dist_to_24h_high_pct = round(((high_24h - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
     is_at_daily_resistance_ceiling = bool(
         (
             dist_to_24h_high_pct <= 0.35 or 
-            range_position_1h >= 0.70 or     # Cima de las últimas 24 velas 1H (24 horas)
+            range_position_2h >= 0.68 or     # Cima de las últimas 24 velas 2H (48 horas)
+            range_position_1h >= 0.68 or     # Cima de las últimas 24 velas 1H (24 horas)
             range_position_30m >= 0.65 or    # Cima de las últimas 24 velas 30M (12 horas)
             range_position_15m >= 0.60 or    # Cima de las últimas 24 velas 15M (6 horas)
-            range_position_5m >= 0.60 or     # Cima de las últimas 24 velas 5M (2 horas)
-            range_position_2m >= 0.70 or     # Cima de las últimas 24 velas 2M (48 minutos)
-            range_position_1m >= 0.70 or     # Cima de las últimas 24 velas 1M (24 minutos)
+            range_position_10m >= 0.65 or    # Cima de las últimas 24 velas 10M (4 horas)
+            range_position_5m >= 0.65 or     # Cima de las últimas 24 velas 5M (2 horas)
+            range_position_2m >= 0.75 or     # Cima de las últimas 24 velas 2M (48 minutos)
+            range_position_1m >= 0.75 or     # Cima de las últimas 24 velas 1M (24 minutos)
             is_at_range_ceiling_1m or
             is_at_range_ceiling_2m or
             is_at_range_ceiling_5m or
+            is_at_range_ceiling_10m or
             is_at_range_ceiling_15m or
             is_at_range_ceiling_30m or
-            is_at_range_ceiling_1h
+            is_at_range_ceiling_1h or
+            is_at_range_ceiling_2h
         ) and not (vol_surge_2m >= 2.5 or vol_surge_15m >= 2.5)
     )
 
@@ -1453,9 +1515,11 @@ def analyze_multi_timeframe_candles(symbol):
         "price_position_in_range": price_position_in_range,
         "range_position_1d": round(range_position_1d, 3),
         "range_position_4h": round(range_position_4h, 3),
+        "range_position_2h": round(range_position_2h, 3),
         "range_position_1h": round(range_position_1h, 3),
         "range_position_30m": round(range_position_30m, 3),
         "range_position_15m": round(range_position_15m, 3),
+        "range_position_10m": round(range_position_10m, 3),
         "range_position_5m": round(range_position_5m, 3),
         "range_position_2m": round(range_position_2m, 3),
         "range_position_1m": round(range_position_1m, 3),
