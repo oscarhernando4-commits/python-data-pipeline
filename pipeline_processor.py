@@ -520,29 +520,29 @@ def run_infinite_trading_matrix_cycle():
                 r15m_r = round(r15m, 1)
                 r1h_r = round(r1h, 1)
                 
-                # 🎯 CALIBRACIÓN ULTRA-SELECTIVA ÉLITE: 2 a máximo 3 finalistas
-                # 1. 8D Matrix Tight: 1M<=35%, 5M<=38%, 15M<=42%, 1H<=50%
-                # 2. FII >= 60 (y FII >= 70 si RSI15M >= 38)
-                # 3. Volumen Vivo Obligatorio: vol_1m >= 0.35x y vol_15m >= 0.20x
+                # 🎯 CALIBRACIÓN ESTÁNDAR 8D + TOP 2-3 FINALISTAS
+                # 1. 8D Matrix: 1M<=38%, 5M<=42%, 15M<=48%, 1H<=55%
+                # 2. FII >= 50 (y FII >= 65 si RSI15M >= 40)
+                # 3. Volumen Vivo: vol_1m >= 0.20x y vol_15m >= 0.15x
                 # 4. Giro de Suelo Activo (1M/2M verde o mecha absorción)
-                # 5. Score >= 80 (Élite A+)
+                # 5. Score >= 75 (Confluencia A+)
                 diag_reasons = []
-                if r1m_r > 35.0: diag_reasons.append(f"1M={r1m:.1f}% > 35%")
-                if r5m_r > 38.0: diag_reasons.append(f"5M={r5m:.1f}% > 38%")
-                if r15m_r > 42.0: diag_reasons.append(f"15M={r15m:.1f}% > 42%")
-                if r1h_r > 50.0: diag_reasons.append(f"1H={r1h:.1f}% > 50%")
+                if r1m_r > 38.0: diag_reasons.append(f"1M={r1m:.1f}% > 38%")
+                if r5m_r > 42.0: diag_reasons.append(f"5M={r5m:.1f}% > 42%")
+                if r15m_r > 48.0: diag_reasons.append(f"15M={r15m:.1f}% > 48%")
+                if r1h_r > 55.0: diag_reasons.append(f"1H={r1h:.1f}% > 55%")
                 if obv_t == "DISTRIBUTING": diag_reasons.append("OBV=DISTRIBUCIÓN")
-                if fii_sc < 60: diag_reasons.append(f"FII={fii_sc} bajo < 60")
-                elif rsi_15m >= 38.0 and fii_sc < 70: diag_reasons.append(f"FII={fii_sc} < 70 con RSI={rsi_15m:.0f}")
-                if vol_1m < 0.35: diag_reasons.append(f"Vol1M={vol_1m:.2f}x < 0.35x")
-                if vol_15m < 0.20: diag_reasons.append(f"Vol15M={vol_15m:.2f}x < 0.20x")
+                if fii_sc < 50: diag_reasons.append(f"FII={fii_sc} bajo < 50")
+                elif rsi_15m >= 40.0 and fii_sc < 65: diag_reasons.append(f"FII={fii_sc} < 65 con RSI={rsi_15m:.0f}")
+                if vol_1m < 0.20: diag_reasons.append(f"Vol1M={vol_1m:.2f}x < 0.20x")
                 if not has_turnaround: diag_reasons.append("Sin giro verde 1M/2M")
-                if c_score < 80: diag_reasons.append(f"Score={c_score} < 80")
+                if c_score < 75: diag_reasons.append(f"Score={c_score} < 75")
                 if is_knife: diag_reasons.append("⛔ Cuchillo Cayendo")
                 if is_dead_cat: diag_reasons.append("🪤 Rebote Gato Muerto")
                 
                 is_truly_valid = len(diag_reasons) == 0 and not is_knife and not is_dead_cat
-                status_icon = "🟢 BASE A+ ÉLITE" if is_truly_valid else "🔴 DESCARTADO"
+                status_icon = "🟢 BASE A+ VÁLIDA" if is_truly_valid else "🔴 DESCARTADO"
+
                 diag_str = " | ".join(diag_reasons) if diag_reasons else "Cumple Base 8D Élite + Score 80+"
                 
                 if is_truly_valid:

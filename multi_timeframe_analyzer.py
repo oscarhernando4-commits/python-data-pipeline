@@ -693,9 +693,10 @@ def analyze_multi_timeframe_candles(symbol):
     vol_surge_30s = round(vols_30s[-1] / avg_vol_30s, 2) if (vols_30s and avg_vol_30s > 0) else 1.0
     
     # 1m Microstructure Volume Surge & Micro-Burst Detector
-    avg_vol_1m = sum(vols_1m[-10:-1]) / len(vols_1m[-10:-1]) if len(vols_1m) >= 10 else 1.0
-    vol_surge_1m = round(vols_1m[-1] / avg_vol_1m, 2) if (vols_1m and avg_vol_1m > 0) else 1.0
-    is_30s_micro_burst = bool((vols_1m and vols_1m[-1] >= avg_vol_1m * 0.70) and tf_30s_up)
+    avg_vol_1m = sum(vols_1m[-11:-1]) / len(vols_1m[-11:-1]) if len(vols_1m) >= 11 else (sum(vols_1m) / len(vols_1m) if vols_1m else 1.0)
+    recent_1m_vol = max(vols_1m[-1], vols_1m[-2]) if len(vols_1m) >= 2 else (vols_1m[-1] if vols_1m else 1.0)
+    vol_surge_1m = round(recent_1m_vol / avg_vol_1m, 2) if (recent_1m_vol and avg_vol_1m > 0) else 1.0
+    is_30s_micro_burst = bool((vols_1m and recent_1m_vol >= avg_vol_1m * 0.70) and tf_30s_up)
     
     # 2m Microstructure Volume Surge
     avg_vol_2m = sum(vols_2m[-5:]) / len(vols_2m[-5:]) if len(vols_2m) >= 5 else 1.0
