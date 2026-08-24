@@ -10,13 +10,10 @@ except ImportError:
     api_connector = None
 
 def _get_obsidian_folder():
-    local_path = r"C:\Users\hosca\Documents\Antigravity\Obsidian\01_PROYECTOS\BINANCE_QUANT_TRADING"
-    if os.path.exists(os.path.dirname(local_path)):
-        os.makedirs(local_path, exist_ok=True)
-        return local_path
-    rel_path = os.path.join(os.getcwd(), "Obsidian", "01_PROYECTOS", "BINANCE_QUANT_TRADING")
-    os.makedirs(rel_path, exist_ok=True)
-    return rel_path
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    obs_path = os.path.join(base_dir, "Obsidian", "01_PROYECTOS", "BINANCE_QUANT_TRADING")
+    os.makedirs(obs_path, exist_ok=True)
+    return obs_path
 
 OBSIDIAN_FOLDER = _get_obsidian_folder()
 

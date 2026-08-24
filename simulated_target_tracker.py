@@ -4,7 +4,13 @@ from datetime import datetime
 import obsidian_sync
 import learning_engine
 
-OBSIDIAN_FOLDER = r"C:\Users\hosca\Documents\Antigravity\Obsidian\01_PROYECTOS\BINANCE_QUANT_TRADING"
+def _get_obsidian_folder():
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    obs_path = os.path.join(base_dir, "Obsidian", "01_PROYECTOS", "BINANCE_QUANT_TRADING")
+    os.makedirs(obs_path, exist_ok=True)
+    return obs_path
+
+OBSIDIAN_FOLDER = _get_obsidian_folder()
 
 def generate_progress_bar(current, target, length=15):
     pct = min(max(current / target, 0.0), 1.0)
