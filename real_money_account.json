@@ -15,7 +15,7 @@
     "side": "LONG",
     "quantity": 1936813.0,
     "break_even": false,
-    "highest_price": 7.28e-06,
+    "highest_price": 7.29e-06,
     "phase": 1,
     "archetype": "SECTOR_ROTATION",
     "archetype_label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
@@ -33,7 +33,9 @@
     "dna_tier": "BALANCED_SWING",
     "optimal_trailing_slack_pct": 0.45,
     "target_resistance_price": 7.37e-06,
-    "pump_probability_pct": 45
+    "pump_probability_pct": 45,
+    "holding_cycles": 2,
+    "volatility_regime": "🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (🧩 Cima +0.14% | SL Defensivo -0.75%)"
   },
   "last_trade_time": "26-08-24<br>00:05",
   "status": "🔵 En Vivo LONG (XECUSDT @ $0.0000)",
