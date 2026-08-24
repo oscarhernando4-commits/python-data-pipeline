@@ -1203,6 +1203,17 @@ def quick_position_heartbeat():
                 should_exit = True
                 exit_reason = f"🎯 SNIPER COSECHA GANANCIA EN PICO (Pico +{highest_pnl_pct:.2f}% -> Venta Asegurada en {current_pnl_pct:+.2f}% tras retroceso de -{(highest_pnl_pct - current_pnl_pct):.2f}%)"
             
+        # 🪙 ESCUDO BITCOIN SUB-SEGUNDO (Circuit Breaker Instantáneo):
+        # Si Bitcoin se desploma >= 0.35% desde el momento de nuestra entrada, eyectar la posición de inmediato
+        btc_entry = float(pos.get("btc_entry_price", 0.0))
+        if not should_exit and btc_entry > 0 and holding_minutes_hb <= 45:
+            btc_now = get_symbol_price("BTCUSDT", is_futures=False)
+            if btc_now and btc_now > 0:
+                btc_drop_pct = ((btc_now - btc_entry) / btc_entry) * 100.0
+                if btc_drop_pct <= -0.35:
+                    should_exit = True
+                    exit_reason = f"🚨 ESCUDO BITCOIN ACTIVO: BTC cayó {btc_drop_pct:+.2f}% desde la entrada. Eyectando {sym} para evitar contagio de la caída general."
+            
         # ⏱️ LIBERACIÓN ESTRICTA POR TIEMPO Y ESTANCAMIENTO / SCRATCH PREVENTIVO:
         max_stag_mins = int(arch_dna.get("max_stagnation_minutes", 35))
         if not should_exit and new_phase == 1:
@@ -2029,7 +2040,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     "dna_tier": mtf_res.get("dna_profile", {}).get("dna_tier", "HIGH_BETA_RUNNER"),
                     "optimal_trailing_slack_pct": mtf_res.get("dna_profile", {}).get("optimal_trailing_slack_pct", 0.45),
                     "target_resistance_price": mtf_res.get("predictive_dna", {}).get("medium_term_horizon", {}).get("target_resistance_price", actual_entry_price * 1.03),
-                    "pump_probability_pct": mtf_res.get("predictive_dna", {}).get("pump_probability_pct", 50)
+                    "pump_probability_pct": mtf_res.get("predictive_dna", {}).get("pump_probability_pct", 50),
+                    "btc_entry_price": get_symbol_price("BTCUSDT", is_futures=False) or 0.0
                 }
                 state["status"] = f"🔵 En Vivo LONG ({cand_sym} @ ${actual_entry_price:.4f})"
                 state["_cached_usdt_free"] = 0.0
