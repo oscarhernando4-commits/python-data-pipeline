@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 10124,
-    "wins": 4633,
+    "total_trades": 10125,
+    "wins": 4634,
     "losses": 5491,
-    "win_rate_pct": 45.76,
-    "total_pnl_usd": 11762.478176549394
+    "win_rate_pct": 45.77,
+    "total_pnl_usd": 11762.530376549394
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,30 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 02:56:32",
-      "account_id": "SIM-851",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "DASHUSDT",
-      "side": "SHORT",
-      "entry_price": 41.69,
-      "exit_price": 41.63,
-      "pnl_usd": -0.0,
-      "result": "WIN",
-      "notes": "WIN on DASHUSDT (PnL: +0.14%, Net: $-0.00 Fase 3)",
-      "context": {
-        "score": 5,
-        "rsi_15m": 45.03,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 02:56:32",
       "account_id": "SIM-858",
@@ -12023,6 +11999,28 @@
     },
     {
       "timestamp": "2026-08-24 14:29:06",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "SHIBUSDT",
+      "side": "LONG",
+      "entry_price": 5.4e-06,
+      "exit_price": 5.42e-06,
+      "pnl_usd": 0.0522,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.37% <= +0.39%) (Fase 3, PnL: +0.37%)",
+      "context": {
+        "score": 80,
+        "rsi_15m": 50.0,
+        "atr_pct_15m": 0.45,
+        "vol_surge": 1.0,
+        "vol_surge_1m": 1.0,
+        "fii_score": 60,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-24 14:29:43",
       "account_id": "R-01",
       "group_name": "CUENTA REAL",
       "symbol": "SHIBUSDT",
