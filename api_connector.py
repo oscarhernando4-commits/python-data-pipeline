@@ -1191,29 +1191,34 @@ def quick_position_heartbeat():
         should_exit = current_pnl_pct <= sl_pct
         exit_reason = f"🎯 Trailing Floor Activado ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
         
-        # 🎯 SNIPER COSECHA GANANCIA TEMPRANA (+0.44% A +0.70%):
-        # Si tocó >= +0.44% (Fase 3) y retrocede >= 0.18% o cae cerca del piso neto, cosechar inmediatamente
-        wick_pullback_threshold = max(0.18, min(0.35, round(custom_slack * 0.40, 2)))
-        if not should_exit and new_phase >= 3 and highest_pnl_pct >= 0.44:
-            if (highest_pnl_pct - current_pnl_pct) >= wick_pullback_threshold or current_pnl_pct <= 0.15:
+        # 🎯 SNIPER COSECHA GANANCIA DINÁMICA POR RETROCESO DE MECHA (WICK SNATCHING):
+        # Si el pico tocó >= +0.30% y el precio retrocede >= 0.10% desde su punto más alto, cosechar de inmediato
+        if not should_exit and highest_pnl_pct >= 0.30:
+            wick_pullback_threshold = 0.10 if highest_pnl_pct < 0.60 else 0.16
+            if (highest_pnl_pct - current_pnl_pct) >= wick_pullback_threshold:
                 should_exit = True
-                exit_reason = f"🎯 SNIPER COSECHA GANANCIA (Pico +{highest_pnl_pct:.2f}% -> Venta Asegurada en {current_pnl_pct:+.2f}% tras retroceso de -{wick_pullback_threshold:.2f}%)"
+                exit_reason = f"🎯 SNIPER COSECHA GANANCIA EN PICO (Pico +{highest_pnl_pct:.2f}% -> Venta Asegurada en {current_pnl_pct:+.2f}% tras retroceso de -{(highest_pnl_pct - current_pnl_pct):.2f}%)"
             
-        # ⏱️ LIBERACIÓN ESTRICTA POR TIEMPO Y ESTANCAMIENTO (Máximo 35m Sector / 25m Thin / 15m Meme)
+        # ⏱️ LIBERACIÓN ESTRICTA POR TIEMPO Y ESTANCAMIENTO / SCRATCH PREVENTIVO:
         max_stag_mins = int(arch_dna.get("max_stagnation_minutes", 35))
         if not should_exit and new_phase == 1:
-            is_stag, stag_msg = adaptive_asset_dna.check_archetype_stagnation_exit(
-                archetype_dna=arch_dna,
-                holding_minutes=holding_minutes_hb,
-                pnl_pct=current_pnl_pct,
-                phase=new_phase
-            )
-            if is_stag:
+            # Scratch temprano a los 4m si el PnL está en negativo (-0.18% a -0.40%) sin despegue
+            if holding_minutes_hb >= 4 and current_pnl_pct <= -0.18:
                 should_exit = True
-                exit_reason = stag_msg
-            elif holding_minutes_hb >= max_stag_mins and abs(current_pnl_pct) <= 0.65:
-                should_exit = True
-                exit_reason = f"⏱️ LÍMITE DE TIEMPO ESTRICTO: {sym} lleva {holding_minutes_hb}m sin despegue (PnL {current_pnl_pct:+.2f}% | Límite={max_stag_mins}m). Liberando 100% USDT para rotar a nuevo Setup A+."
+                exit_reason = f"🚪 MICRO-SCRATCH PREVENTIVO: {sym} lleva {holding_minutes_hb}m sin arranque (PnL {current_pnl_pct:+.2f}%). Liberando USDT con pérdida mínima."
+            else:
+                is_stag, stag_msg = adaptive_asset_dna.check_archetype_stagnation_exit(
+                    archetype_dna=arch_dna,
+                    holding_minutes=holding_minutes_hb,
+                    pnl_pct=current_pnl_pct,
+                    phase=new_phase
+                )
+                if is_stag:
+                    should_exit = True
+                    exit_reason = stag_msg
+                elif holding_minutes_hb >= max_stag_mins and abs(current_pnl_pct) <= 0.65:
+                    should_exit = True
+                    exit_reason = f"⏱️ LÍMITE DE TIEMPO ESTRICTO: {sym} lleva {holding_minutes_hb}m sin despegue (PnL {current_pnl_pct:+.2f}% | Límite={max_stag_mins}m). Liberando 100% USDT para rotar a nuevo Setup A+."
         
         # 🧱 MEJORA 4: Cancelación Preventiva — Solo si el libro de órdenes colapsa severamente
         # Requiere pérdida > -1.50% y Bids < 30% para evitar falsas salidas por ruido de micro-spread

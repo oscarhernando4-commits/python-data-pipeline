@@ -504,6 +504,7 @@ def run_infinite_trading_matrix_cycle():
             print("\n🔬 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════")
             print(f"📊 [DIAGNÓSTICO INDIVIDUAL DETALLADO — LOS {len(top_all_candidates)} PARES DEL TOP 100 CMC]")
             print("═══════════════════════════════════════════════════════════════════════════════════════════════════════════")
+            valid_base_candidates = []
             for idx, cand in enumerate(top_all_candidates, 1):
                 csym = cand["symbol"]
                 cdata = symbol_analysis_map.get(csym, {})
@@ -541,20 +542,31 @@ def run_infinite_trading_matrix_cycle():
                 status_icon = "🟢 BASE A+ VÁLIDA" if is_truly_valid else "🔴 DESCARTADO"
                 diag_str = " | ".join(diag_reasons) if diag_reasons else "Cumple Base 8D + Score A+"
                 
+                if is_truly_valid:
+                    valid_base_candidates.append(cand)
+                
                 print(f"  #{idx:02d} {csym:<10} | Score: {c_score:>2}/100 | FII: {fii_sc:>2} | OBV: {obv_t:<12} | RSI 1M: {rsi_1m:>4.1f} | Canales: [1M:{r1m:>4.1f}% 5M:{r5m:>4.1f}% 15M:{r15m:>4.1f}% 1H:{r1h:>4.1f}%] -> {status_icon} ({diag_str})")
             print("═══════════════════════════════════════════════════════════════════════════════════════════════════════════\n")
 
+            # 🎯 REGLA SUPREMA: Pasar a Gemini AI EXCLUSIVAMENTE los candidatos que SÍ están en BASE A+
+            if valid_base_candidates:
+                candidates_for_gemini = valid_base_candidates[:5]
+                print(f"🎯 [FINALISTAS BASE A+] Se detectaron {len(valid_base_candidates)} activos en Suelo Fractal 8D ({[c['symbol'] for c in candidates_for_gemini]}). Consultando al Comité para seleccionar el Cohete #1...\n", flush=True)
+            else:
+                candidates_for_gemini = top_all_candidates[:3]
+                print(f"ℹ️ [MERCADO EN EXTENSIÓN] 0 activos en Suelo 8D exacto. Evaluando los 3 más cercanos para confirmación de HOLD...\n", flush=True)
+
             specific_news_map = {}
-            for cand in top_all_candidates:  # Notícias específicas para todos los pares
+            for cand in candidates_for_gemini:  # Noticias específicas para los finalistas
                 c_sym = cand["symbol"]
                 s_news = fundamental_sentinel.fetch_coin_specific_news(c_sym)
                 if s_news:
                     specific_news_map[c_sym] = s_news
             
             macro_summary = macro_ctx.get("summary_text", str(macro_ctx)) if isinstance(macro_ctx, dict) else str(macro_ctx)
-            print(f"✅ [Comité Institucional 7 Agentes] Consultando al Súper-Cerebro Gemini AI (Gemini 3.1 Flash Lite) para los {len(top_all_candidates)} activos del Top 100 CMC...")
+            print(f"✅ [Comité Institucional 7 Agentes] Consultando al Súper-Cerebro Gemini AI (Gemini 3.1 Flash Lite) para los {len(candidates_for_gemini)} finalistas seleccionados...")
             gemini_res = llm_router.review_top_candidates(
-                candidates_data_list=top_all_candidates,
+                candidates_data_list=candidates_for_gemini,
                 news_data={"headlines": cached_fundamental_report.get("recent_headlines", []), "specific_news": specific_news_map},
                 fear_greed=cached_fundamental_report.get("fear_and_greed", {"score": 50, "sentiment": "Neutral"}),
                 macro_context=macro_summary,
