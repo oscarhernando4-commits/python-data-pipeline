@@ -320,14 +320,19 @@ def calculate_stoch_rsi(closes, rsi_period=14, stoch_period=14):
         rsis.append(calculate_rsi(closes[:i], period=rsi_period))
     if len(rsis) < stoch_period:
         return 50.0, 50.0
-    sub_rsi = rsis[-stoch_period:]
-    min_rsi = min(sub_rsi)
-    max_rsi = max(sub_rsi)
-    if max_rsi == min_rsi:
-        stoch_k = 50.0
-    else:
-        stoch_k = round(((sub_rsi[-1] - min_rsi) / (max_rsi - min_rsi)) * 100.0, 1)
-    stoch_d = round(sum(rsis[-3:]) / 3.0, 1) if len(rsis) >= 3 else stoch_k
+    # Calculate rolling stoch_k values for %D smoothing
+    stoch_k_series = []
+    for j in range(stoch_period, len(rsis) + 1):
+        sub_rsi = rsis[j - stoch_period:j]
+        min_rsi = min(sub_rsi)
+        max_rsi = max(sub_rsi)
+        if max_rsi == min_rsi:
+            stoch_k_series.append(50.0)
+        else:
+            stoch_k_series.append(round(((sub_rsi[-1] - min_rsi) / (max_rsi - min_rsi)) * 100.0, 1))
+    stoch_k = stoch_k_series[-1] if stoch_k_series else 50.0
+    # %D = SMA of last 3 stoch_k values (NOT raw RSIs)
+    stoch_d = round(sum(stoch_k_series[-3:]) / min(3, len(stoch_k_series)), 1) if stoch_k_series else stoch_k
     return stoch_k, stoch_d
 
 def calculate_wma(closes, period=14):
@@ -895,12 +900,13 @@ def analyze_multi_timeframe_candles(symbol):
 
     # Detect RSI Bullish Divergence (Price Lower Low + RSI Higher Low = Early Floor Reversal)
     is_bullish_divergence = False
-    if len(closes_15m) >= 10:
+    if len(closes_15m) >= 20:
         recent_low = min(closes_15m[-5:])
         prev_low = min(closes_15m[-10:-5])
         if recent_low < prev_low:
-            recent_rsi = calculate_rsi(closes_15m[-5:])
-            prev_rsi = calculate_rsi(closes_15m[-10:-5])
+            # Use full closes array up to each window for proper RSI calculation (needs 15+ data points)
+            recent_rsi = calculate_rsi(closes_15m[-19:])   # RSI using last 19 candles (includes recent window)
+            prev_rsi = calculate_rsi(closes_15m[-24:-5])    # RSI using earlier window (excludes last 5)
             if recent_rsi > prev_rsi + 3.0:
                 is_bullish_divergence = True
 
@@ -936,7 +942,6 @@ def analyze_multi_timeframe_candles(symbol):
         is_bullish_divergence or 
         is_vwap_floor_rebound or 
         (tf_15m_up and is_5m_higher_low) or 
-        (fii_score >= 60 and tf_5m_up if 'fii_score' in locals() else False) or
         (tf_1m_up and is_5m_higher_low and lower_wick_pct_15m >= 25.0)
     )
     is_true_structural_floor = has_reversal_confirmation and not is_15m_red_cascade
@@ -1004,6 +1009,12 @@ def analyze_multi_timeframe_candles(symbol):
     if rsi_2m <= 48 and tf_2m_up:
         fii_score += 10  # Confirmación 2M en zona de suelo
     fii_score = min(100, fii_score)
+
+    # Re-evaluate reversal confirmation now that FII is computed (was broken when referenced before definition)
+    if not has_reversal_confirmation and fii_score >= 60 and tf_5m_up:
+        has_reversal_confirmation = True
+        is_true_structural_floor = has_reversal_confirmation and not is_15m_red_cascade
+        floor_structure_label = "🟢 SUELO ESTRUCTURAL CONFIRMADO (FII)" if is_true_structural_floor else floor_structure_label
 
     # ========================================================================
     # 📊 SCORE MULTI-TIMEFRAME 5 CAPAS: 1M (gatillo) → 2M → 5M → 15M → 1H

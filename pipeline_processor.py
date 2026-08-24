@@ -796,7 +796,7 @@ def run_infinite_trading_matrix_cycle():
         global_wins += acc["wins"]
 
     matrix["current_total_usd"] = round(total_balance, 2)
-    matrix["net_pnl_usd"] = round(total_balance - 10000.0, 2)
+    matrix["net_pnl_usd"] = round(total_balance - matrix.get("total_fund_usd", 100000.0), 2)
     matrix["global_win_rate_pct"] = round((global_wins / global_trades * 100.0), 2) if global_trades > 0 else 0.0
 
     save_live_matrix(matrix)
@@ -914,6 +914,7 @@ def run_infinite_trading_matrix_cycle():
             
             # 🛡️ MANDATO SUPREMO: El Comité de IA y el Semáforo Macro tienen PODER DE VETO ABSOLUTO (100% SUPREMO).
             # Si la IA vota HOLD o el Semáforo es DEFENSIVO, NINGUNA orden se ejecuta y se preserva el 100% del USDT.
+            # CRITICAL FIX: Pass candidates_list=None to prevent api_connector from scanning and buying behind the AI's back
             if ai_veto_active:
                 print(f"🔒 [VETO SUPREMO IA] Comité Gemini AI votó {ai_action} ({gemini_res.get('reasoning', 'Mercado no seguro')}). CERO compras ejecutadas. 100% USDT protegido.")
                 api_connector.evaluate_and_trade_real_money(
@@ -921,7 +922,7 @@ def run_infinite_trading_matrix_cycle():
                     best_score=50,
                     current_price=0.0,
                     is_bearish=True,
-                    candidates_list=top_15_candidates
+                    candidates_list=None
                 )
             elif bs_score >= 58 and is_quant_approved:
                 if is_fk_bs or is_dcb_bs:

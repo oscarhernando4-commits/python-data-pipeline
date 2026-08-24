@@ -176,11 +176,12 @@ def get_asset_dna_archetype(symbol: str, atr_15m_pct: float = None, price: float
     
     # 🚫 VETO ESTRICTO ANTI-ZOMBI Y ANTI-MEGA-CAP PESADA:
     # Para scalping de $15 USD y meta >= +2% diario, activos con ATR < 0.35% o Blue-Chips lentas están descalificados.
+    # CRITICAL: When atr_15m_pct is None (pre-MTF first call), do NOT veto — let the pipeline fetch live ATR first.
     is_slow_major = bool(clean_sym in BLUE_CHIP_CORE_TOKENS and effective_atr < 0.40)
     if atr_15m_pct is not None:
         config["is_low_volatility_zombie"] = bool(atr_15m_pct < 0.35 or is_slow_major)
     else:
-        config["is_low_volatility_zombie"] = bool(clean_sym in BLUE_CHIP_CORE_TOKENS)  # By default, blue chips require live ATR verification
+        config["is_low_volatility_zombie"] = False  # Allow pipeline to fetch live ATR before vetoing
         
     if config["is_low_volatility_zombie"]:
         config["guideline_for_ai"] = "⛔ VETO ACTIVO: Volatilidad/Elasticidad insuficiente (ATR 15M < 0.35% o Mega-Cap lenta). Prohibido para scalping spot."

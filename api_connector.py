@@ -1233,6 +1233,32 @@ def quick_position_heartbeat():
             sell_res = execute_real_spot_market_sell(sym, qty)
             print(f"🔄 Venta Mercado Ejecutada: {sell_res}")
             
+            # Verify sell order was actually executed before clearing position
+            if isinstance(sell_res, dict) and ("orderId" in sell_res or sell_res.get("status") == "FILLED"):
+                sell_succeeded = True
+            elif isinstance(sell_res, dict) and sell_res.get("code"):
+                print(f"⚠️ [HEARTBEAT] Venta rechazada por Binance (code={sell_res.get('code')}). Reintentando con balance real...")
+                try:
+                    live_diag = diagnose_full_spot_wallet()
+                    actual_qty = 0.0
+                    for asset_key in live_diag:
+                        if isinstance(live_diag[asset_key], dict) and live_diag[asset_key].get("symbol") == sym:
+                            actual_qty = live_diag[asset_key].get("qty", 0.0)
+                            break
+                    if actual_qty > 0:
+                        sell_res2 = execute_real_spot_market_sell(sym, actual_qty)
+                        sell_succeeded = isinstance(sell_res2, dict) and ("orderId" in sell_res2 or sell_res2.get("status") == "FILLED")
+                    else:
+                        sell_succeeded = True  # No tokens found, position already sold
+                except Exception:
+                    sell_succeeded = False
+            else:
+                sell_succeeded = True  # Assume success if no error code
+                
+            if not sell_succeeded:
+                print(f"🚨 [HEARTBEAT] VENTA FALLIDA - Posición {sym} mantenida. Se reintentará en el próximo heartbeat.")
+                return None
+            
             # 📚 BUG FIX: Registrar win/loss correctamente + notificar learning engine
             pnl_usd = round((current_price - entry) * qty, 4)
             is_win_exit = current_pnl_pct > 0
@@ -1392,7 +1418,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             atr_pct=atr_15m_pct,
             holding_cycles=holding_cycles,
             current_pnl_pct=pnl_pct,
-            custom_slack=custom_slack
+            custom_slack=custom_slack,
+            symbol=active_symbol
         )
 
         # ESCUDO 1: BTC Flash Crash Circuit Breaker
@@ -1776,8 +1803,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             is_spring = mtf_res.get("spring_coiling", {}).get("is_spring_compressed", False)
             is_wave2 = mtf_res.get("wave2_retest", {}).get("is_wave2_retest", False)
             if (mtf_res.get("rsi_2m", 50.0) > 54.0 or mtf_res.get("rsi_1m", 50.0) > 54.0) and not (is_spring or is_wave2):
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Entrada Tardía (RSI 2M={mtf_res.get('rsi_2m'):.1f} > 54.0).")
-                continue
+                # Allow entries up to RSI 60 if there is strong volume ignition or FII confirmation
+                rsi_hard_cap = 60.0 if (vol_1m_now >= 1.5 or fii >= 50 or has_dual_sub_minute_ignition) else 54.0
+                if mtf_res.get("rsi_2m", 50.0) > rsi_hard_cap or mtf_res.get("rsi_1m", 50.0) > rsi_hard_cap:
+                    print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Entrada Tardía (RSI 2M={mtf_res.get('rsi_2m'):.1f} > {rsi_hard_cap:.0f}).")
+                    continue
                 
             # 7. Orderbook Depth & Micro-Surge Checks
             ob_info = orderbook_analyzer.fetch_orderbook_depth(cand_sym, limit=20)
@@ -1880,7 +1910,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             print(f"\n💎 ═══════════════════════════════════════════════════════════════════════════════════")
             print(f"🚀 [DICTAMEN & EJECUCIÓN CUÁNTICA SPOT: #{cand_idx}/15 -> {cand_sym}]")
             print(f"═══════════════════════════════════════════════════════════════════════════════════════")
-            print(f"🧬 Arquetipo ADN: {cand_archetype.get('label')} | SL Inicial: -0.50% | Cosecha Fase 2: +0.44%{token_dna_label}")
+            print(f"🧬 Arquetipo ADN: {cand_archetype.get('label')} | SL Inicial: {arch_dna.get('initial_sl_pct', -0.75)}% | Cosecha Fase 2: +0.44%{token_dna_label}")
             print(f"📊 Score MTF: {final_cand_score}/100 | FII Suelo: {fii}/100 | ATR: {atr_15m:.2f}% | Spread: {ob_info.get('spread_pct'):.3f}%")
             print(f"🌌 Canales Fractales: [1M: {range_pos_1m*100:.0f}% | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% | 15M: {range_pos_15m*100:.0f}% | 30M: {range_pos_30m*100:.0f}% | 1H: {range_pos_1h*100:.0f}%]")
             print(f"🌊 Muro Comprador: ${ob_info.get('bid_vol_usdt', 0):,.0f} USDT (Bids={ob_info.get('bid_dominance_pct'):.1f}%) | OBV={mtf_res.get('obv_trend')}")

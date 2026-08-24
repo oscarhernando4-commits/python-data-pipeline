@@ -90,11 +90,12 @@ OFFICIAL_TOP_100_CMC_SYMBOLS = [
     'ATOM', 'JST', 'GT', 'KAS', 'VVV', 'QNT', 'RENDER', 'JUP', 'ARB',
     'TRUMP', 'FIL', 'FLR', 'ETHFI', 'PENGU', 'XDC', 'CAKE', 'APT', 'DASH', 'INJ',
     'NEXO', 'CRV', 'VET', 'VIRTUAL', 'AERO', 'ZRO', 'SPX', 'STX',
-    'PYTH', 'FET', 'MON', 'SEI', 'TIA', 'BSV', 'SUN'
+    'PYTH', 'FET', 'MON', 'SEI', 'TIA', 'BSV', 'SUN',
+    'BONK', 'FLOKI', 'WIF', 'IMX', 'OP', 'STRK'
 ]
 
 def update_top_pairs():
-    print(f"Fetching valid Binance USDT pairs for Top 100 Market Universe...")
+    print(f"Fetching valid Binance USDT pairs for Top 100 Market Universe (IMMUTABLE LIST — NO backfill)...")
     try:
         binance_res = requests.get('https://data-api.binance.vision/api/v3/exchangeInfo', timeout=10)
         binance_res.raise_for_status()
@@ -103,28 +104,16 @@ def update_top_pairs():
         print(f"Failed to fetch Binance exchange info: {e}")
         return
 
-    cmc_live = get_cmc_top_coins()
-    binance_vol_symbols = get_binance_top_volume_coins(valid_binance_pairs)
-    
-    # Priority order: 1) User's Top 100 CMC list, 2) CMC Live, 3) Binance Top Volume (>= $5M)
-    candidate_symbols = list(OFFICIAL_TOP_100_CMC_SYMBOLS)
-    for s in cmc_live:
-        if s not in candidate_symbols:
-            candidate_symbols.append(s)
-    for s in binance_vol_symbols:
-        if s not in candidate_symbols:
-            candidate_symbols.append(s)
-    
+    # IMMUTABLE: ONLY use the user's official Top 100 CMC list. NO backfill from CMC Live or Binance volume.
     top_100_pairs = []
     mapping = {"IOTA": "IOTA"}
     
-    for sym in candidate_symbols:
+    for sym in OFFICIAL_TOP_100_CMC_SYMBOLS:
         clean_sym = sym.upper().strip()
         if clean_sym in STABLECOIN_BLACKLIST or f"{clean_sym}USDT" in STABLECOIN_BLACKLIST:
             continue
         if multi_timeframe_analyzer.is_stablecoin(clean_sym) or multi_timeframe_analyzer.is_stablecoin(f"{clean_sym}USDT"):
             continue
-        # Filter out non-ASCII
         if not all(ord(c) < 128 for c in sym):
             continue
             
@@ -135,14 +124,11 @@ def update_top_pairs():
         # Must exist in Binance Spot
         if binance_sym in valid_binance_pairs and binance_sym not in top_100_pairs:
             top_100_pairs.append(binance_sym)
-                
-        if len(top_100_pairs) >= 100:
-            break
             
     if len(top_100_pairs) > 0:
         with open("top_100_pairs.json", "w", encoding="utf-8") as f:
             json.dump(top_100_pairs, f, indent=4)
-        print(f"Successfully saved {len(top_100_pairs)} TOP 100 pairs to top_100_pairs.json")
+        print(f"✅ Saved {len(top_100_pairs)} OFFICIAL Top 100 CMC pairs (NO backfill). Non-Binance tokens excluded.")
         print(f"Top 5 Oficial: {top_100_pairs[:5]}")
         print(f"Últimas 5: {top_100_pairs[-5:]}")
     else:
