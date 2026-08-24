@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 9560,
-    "wins": 4319,
-    "losses": 5241,
-    "win_rate_pct": 45.18,
-    "total_pnl_usd": 11771.40327654937
+    "total_trades": 9565,
+    "wins": 4322,
+    "losses": 5243,
+    "win_rate_pct": 45.19,
+    "total_pnl_usd": 11771.503276549369
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PUMPUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZECUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TRUMPUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on JSTUSDT)",
@@ -27,10 +26,10 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DOGEUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TIAUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on NEARUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DOTUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DOTUSDT)",
+      "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on JSTUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ENAUSDT)",
       "BOOST SHORT when RSI:60-70(Strong) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ASTERUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TRUMPUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on SOLUSDT)",
@@ -49,86 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PEPEUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on IMXUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PUMPUSDT)",
-      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on WLDUSDT)"
+      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on WLDUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on ADAUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 01:22:04",
-      "account_id": "SIM-859",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "TIAUSDT",
-      "side": "LONG",
-      "entry_price": 0.3759,
-      "exit_price": 0.3762,
-      "pnl_usd": -0.01,
-      "result": "LOSS",
-      "notes": "LOSS on TIAUSDT (PnL: +0.08%, Net: $-0.01 Fase 3)",
-      "context": {
-        "score": 65,
-        "rsi_15m": 40.86,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
-    {
-      "timestamp": "2026-08-24 01:22:04",
-      "account_id": "SIM-863",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "PENDLEUSDT",
-      "side": "SHORT",
-      "entry_price": 1.893,
-      "exit_price": 1.893,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on PENDLEUSDT (PnL: +0.00%, Net: $-0.03 Fase 5)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-24 01:22:04",
-      "account_id": "SIM-864",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "PENDLEUSDT",
-      "side": "SHORT",
-      "entry_price": 1.893,
-      "exit_price": 1.893,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on PENDLEUSDT (PnL: +0.00%, Net: $-0.03 Fase 5)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-24 01:22:04",
-      "account_id": "SIM-865",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "PENDLEUSDT",
-      "side": "SHORT",
-      "entry_price": 1.893,
-      "exit_price": 1.893,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on PENDLEUSDT (PnL: +0.00%, Net: $-0.03 Fase 5)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-24 01:22:04",
-      "account_id": "SIM-866",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "PENDLEUSDT",
-      "side": "SHORT",
-      "entry_price": 1.893,
-      "exit_price": 1.893,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on PENDLEUSDT (PnL: +0.00%, Net: $-0.03 Fase 5)",
-      "context": {}
-    },
     {
       "timestamp": "2026-08-24 01:22:04",
       "account_id": "SIM-869",
@@ -11876,6 +11800,126 @@
       "context": {
         "score": 0,
         "rsi_15m": 44.02,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 02:54:27",
+      "account_id": "SIM-000 (Réplica Real)",
+      "group_name": "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel)",
+      "symbol": "IMXUSDT",
+      "side": "SHORT",
+      "entry_price": 0.1308,
+      "exit_price": 0.1284,
+      "pnl_usd": 0.07,
+      "result": "WIN",
+      "notes": "WIN on IMXUSDT (PnL: +1.83%, Net: $+0.07 Fase 5)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 36.67,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 02:54:29",
+      "account_id": "SIM-638",
+      "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
+      "symbol": "JSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.10079,
+      "exit_price": 0.10078,
+      "pnl_usd": -0.03,
+      "result": "LOSS",
+      "notes": "LOSS on JSTUSDT (PnL: +0.01%, Net: $-0.03 Fase 2)",
+      "context": {
+        "score": 9,
+        "rsi_15m": 30.69,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 02:54:29",
+      "account_id": "SIM-639",
+      "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
+      "symbol": "JSTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.10079,
+      "exit_price": 0.10078,
+      "pnl_usd": -0.03,
+      "result": "LOSS",
+      "notes": "LOSS on JSTUSDT (PnL: +0.01%, Net: $-0.03 Fase 2)",
+      "context": {
+        "score": 9,
+        "rsi_15m": 30.69,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 02:54:29",
+      "account_id": "SIM-875",
+      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "entry_price": 0.2212,
+      "exit_price": 0.2203,
+      "pnl_usd": 0.05,
+      "result": "WIN",
+      "notes": "WIN on ADAUSDT (PnL: +0.41%, Net: $+0.05 Fase 3)",
+      "context": {
+        "score": 65,
+        "rsi_15m": 40.17,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 02:54:29",
+      "account_id": "SIM-942",
+      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
+      "symbol": "ADAUSDT",
+      "side": "SHORT",
+      "entry_price": 0.2211,
+      "exit_price": 0.2203,
+      "pnl_usd": 0.04,
+      "result": "WIN",
+      "notes": "WIN on ADAUSDT (PnL: +0.36%, Net: $+0.04 Fase 3)",
+      "context": {
+        "score": 65,
+        "rsi_15m": 40.17,
         "macro_trend_4h": "NEUTRAL",
         "fii_score": null,
         "atr_pct_15m": null,
