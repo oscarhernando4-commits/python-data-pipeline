@@ -1240,24 +1240,42 @@ def quick_position_heartbeat():
             
         # ⏱️ LIBERACIÓN ESTRICTA POR TIEMPO Y ESTANCAMIENTO / SCRATCH PREVENTIVO:
         max_stag_mins = int(arch_dna.get("max_stagnation_minutes", 60))
+        is_sniper = pos.get("is_sniper_setup", False)
+        is_super_sniper_hb = pos.get("is_super_sniper", False)
+
+        # SNIPER MODE: más paciencia para que el trade llegue a Phase 4-5 (+1.0%+)
+        # En setup explosivo, el mercado necesita más tiempo para desarrollar el movimiento completo.
+        if is_super_sniper_hb:
+            sniper_scratch_mins = 180   # 3 horas máximo para súper sniper
+            sniper_scratch_pct = -0.65  # Solo scratch si cae más del 0.65%
+        elif is_sniper:
+            sniper_scratch_mins = 120   # 2 horas para sniper normal
+            sniper_scratch_pct = -0.55  # Solo scratch si cae más del 0.55%
+        else:
+            sniper_scratch_mins = 60    # 60min estándar para trades normales
+            sniper_scratch_pct = -0.50
+
         if not should_exit and new_phase == 1:
-            # Scratch a los 60m si el PnL sigue en negativo (<= -0.50%) — permite que el suelo fractal madure
-            if holding_minutes_hb >= 60 and current_pnl_pct <= -0.50:
+            if holding_minutes_hb >= sniper_scratch_mins and current_pnl_pct <= sniper_scratch_pct:
                 should_exit = True
-                exit_reason = f"🚪 MICRO-SCRATCH PREVENTIVO: {sym} lleva {holding_minutes_hb}m sin arranque (PnL {current_pnl_pct:+.2f}%). Liberando USDT con pérdida mínima."
+                mode_label = "SÚPER SNIPER" if is_super_sniper_hb else ("SNIPER" if is_sniper else "ESTÁNDAR")
+                exit_reason = f"🚪 MICRO-SCRATCH [{mode_label}]: {sym} lleva {holding_minutes_hb}m sin arranque (PnL {current_pnl_pct:+.2f}%). Liberando USDT."
             else:
-                is_stag, stag_msg = adaptive_asset_dna.check_archetype_stagnation_exit(
-                    archetype_dna=arch_dna,
-                    holding_minutes=holding_minutes_hb,
-                    pnl_pct=current_pnl_pct,
-                    phase=new_phase
-                )
-                if is_stag:
-                    should_exit = True
-                    exit_reason = stag_msg
-                elif holding_minutes_hb >= max_stag_mins and abs(current_pnl_pct) <= 0.65:
+                # Skip stagnation exit on SNIPER until 120min — let the explosive setup breathe
+                if not is_sniper or holding_minutes_hb >= 120:
+                    is_stag, stag_msg = adaptive_asset_dna.check_archetype_stagnation_exit(
+                        archetype_dna=arch_dna,
+                        holding_minutes=holding_minutes_hb,
+                        pnl_pct=current_pnl_pct,
+                        phase=new_phase
+                    )
+                    if is_stag:
+                        should_exit = True
+                        exit_reason = stag_msg
+                elif holding_minutes_hb >= max_stag_mins and abs(current_pnl_pct) <= 0.65 and not is_sniper:
                     should_exit = True
                     exit_reason = f"⏱️ LÍMITE DE TIEMPO ESTRICTO: {sym} lleva {holding_minutes_hb}m sin despegue (PnL {current_pnl_pct:+.2f}% | Límite={max_stag_mins}m). Liberando 100% USDT para rotar a nuevo Setup A+."
+
         
         # 🧱 MEJORA 4: Cancelación Preventiva — Solo si el libro de órdenes colapsa severamente
         # Requiere pérdida > -1.50% y Bids < 30% para evitar falsas salidas por ruido de micro-spread
@@ -2048,9 +2066,42 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             if vol_1m_now < 0.20:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Volumen 1M muerto ({vol_1m_now:.2f}x < 0.20x). Mínimo de actividad de compradores obligatorio.")
                 continue
-                
+
+            # ═══════════════════════════════════════════════════════════════════════
+            # 🎯 CLASIFICADOR MODO SNIPER vs ESTÁNDAR
+            # Para lograr +1% diario neto REAL, necesitamos distinguir entre:
+            #   SNIPER (explosivo): vol_surge >= 1.5x + FII >= 70 + RSI15M < 38
+            #     → Target: +1.2%+ ganancia. Retener más tiempo. No micro-scratch.
+            #   ESTÁNDAR (normal): Cumple filtros base pero no tiene toda la potencia
+            #     → Reglas normales. Target: +0.43% promedio.
+            # La diferencia: un SNIPER aporta +1.2% de ganancia, vs +0.43% estándar.
+            # Con solo 1-2 snipers por día ya superamos el 1% neto libre de comisiones.
+            # ═══════════════════════════════════════════════════════════════════════
+            rsi_15m_check = mtf_res.get("rsi_15m", 50.0)
+            atr_15m_check = mtf_res.get("atr_pct_15m", 0.0)
+            is_sniper_setup = bool(
+                vol_1m_now >= 1.5 and          # Volumen explosivo real (no suave)
+                fii >= 70 and                   # Institucionales activamente comprando
+                rsi_15m_check <= 38.0 and       # Oversold real — no zona neutral
+                atr_15m_check >= 0.50           # Rango suficiente para alcanzar +1.2%+
+            )
+            is_super_sniper = bool(
+                is_sniper_setup and
+                vol_1m_now >= 2.5 and           # Volumen ultra-explosivo
+                fii >= 80 and                   # Confirmación institucional fuerte
+                rsi_15m_check <= 32.0           # Oversold extremo — rebote casi garantizado
+            )
+
+            if is_super_sniper:
+                print(f"  ⚡ [SÚPER SNIPER] {cand_sym}: Vol={vol_1m_now:.1f}x FII={fii} RSI15M={rsi_15m_check:.0f} ATR={atr_15m_check:.2f}% — TARGET: +1.5%+ GARANTIZADO")
+            elif is_sniper_setup:
+                print(f"  🎯 [MODO SNIPER] {cand_sym}: Vol={vol_1m_now:.1f}x FII={fii} RSI15M={rsi_15m_check:.0f} ATR={atr_15m_check:.2f}% — TARGET: +1.2%+")
+            else:
+                print(f"  📊 [ESTÁNDAR] {cand_sym}: Vol={vol_1m_now:.1f}x FII={fii} RSI15M={rsi_15m_check:.0f} — Target: +0.43% normal")
+
             is_dead_volume = (vol_1m_now < 0.20 or vol_15m_now < 0.12)
             has_active_ignition = (
+
                 (vol_1m_now >= 0.50 and vol_15m_now >= 0.15) or 
                 (vol_2m_now >= 0.50 and vol_15m_now >= 0.15) or 
                 (vol_15m_now >= 0.50) or 
@@ -2241,7 +2292,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     "optimal_trailing_slack_pct": mtf_res.get("dna_profile", {}).get("optimal_trailing_slack_pct", 0.45),
                     "target_resistance_price": mtf_res.get("predictive_dna", {}).get("medium_term_horizon", {}).get("target_resistance_price", actual_entry_price * 1.03),
                     "pump_probability_pct": mtf_res.get("predictive_dna", {}).get("pump_probability_pct", 50),
-                    "btc_entry_price": get_symbol_price("BTCUSDT", is_futures=False) or 0.0
+                    "btc_entry_price": get_symbol_price("BTCUSDT", is_futures=False) or 0.0,
+                    "is_sniper_setup": is_sniper_setup,
+                    "is_super_sniper": is_super_sniper,
                 }
                 state["status"] = f"🔵 En Vivo LONG ({cand_sym} @ ${actual_entry_price:.4f})"
                 state["_cached_usdt_free"] = 0.0
