@@ -1171,29 +1171,27 @@ def analyze_multi_timeframe_candles(symbol):
     is_top_wick_2h = _is_candle_top_rejection(klines_2h[-1]) if klines_2h else False
 
     # 🚫 VETO TOTAL ANTI-CIMA EN CADA TEMPORALIDAD (5M, 10M, 15M, 30M, 1H, 2H, 4H, 1D):
-    is_at_range_ceiling_1d = bool(range_position_1d >= 0.80 and rsi_1d >= 68.0)
-    is_at_range_ceiling_4h = bool(range_position_4h >= 0.78 and rsi_4h >= 68.0)
-    is_at_range_ceiling_2h = bool(range_position_2h >= 0.68 or (range_position_2h >= 0.55 and rsi_1h >= 60.0) or is_top_wick_2h)
-    is_at_range_ceiling_1h = bool(range_position_1h >= 0.68 or (range_position_1h >= 0.55 and rsi_1h >= 60.0) or is_top_wick_1h)
-    is_at_range_ceiling_30m = bool(range_position_30m >= 0.65 or (range_position_30m >= 0.52 and rsi_30m >= 60.0) or is_top_wick_30m)
-    is_at_range_ceiling_15m = bool(range_position_15m >= 0.60 or (range_position_15m >= 0.50 and rsi_15m >= 60.0) or is_top_wick_15m)
-    is_at_range_ceiling_10m = bool(range_position_10m >= 0.65 or (range_position_10m >= 0.52 and rsi_15m >= 62.0) or is_top_wick_10m)
-    is_at_range_ceiling_5m = bool(range_position_5m >= 0.65 or (range_position_5m >= 0.55 and rsi_5m >= 62.0) or is_top_wick_5m)
-    is_at_range_ceiling_2m = bool(range_position_2m >= 0.80 and rsi_2m >= 70.0)
-    is_at_range_ceiling_1m = bool(range_position_1m >= 0.80 and rsi_1m >= 70.0)
+    is_at_range_ceiling_1d = bool(range_position_1d >= 0.85 and rsi_1d >= 70.0)
+    is_at_range_ceiling_4h = bool(range_position_4h >= 0.80 and rsi_4h >= 70.0)
+    is_at_range_ceiling_2h = bool(range_position_2h >= 0.72 or (range_position_2h >= 0.65 and rsi_1h >= 66.0) or is_top_wick_2h)
+    is_at_range_ceiling_1h = bool(range_position_1h >= 0.70 or (range_position_1h >= 0.62 and rsi_1h >= 65.0) or is_top_wick_1h)
+    is_at_range_ceiling_30m = bool(range_position_30m >= 0.68 or (range_position_30m >= 0.60 and rsi_30m >= 65.0) or is_top_wick_30m)
+    is_at_range_ceiling_15m = bool(range_position_15m >= 0.65 or (range_position_15m >= 0.58 and rsi_15m >= 65.0) or is_top_wick_15m)
+    is_at_range_ceiling_10m = bool(range_position_10m >= 0.68 or (range_position_10m >= 0.60 and rsi_15m >= 66.0) or is_top_wick_10m)
+    is_at_range_ceiling_5m = bool(range_position_5m >= 0.70 or (range_position_5m >= 0.62 and rsi_5m >= 68.0) or is_top_wick_5m)
+    is_at_range_ceiling_2m = bool(range_position_2m >= 0.80 and rsi_2m >= 72.0)
+    is_at_range_ceiling_1m = bool(range_position_1m >= 0.80 and rsi_1m >= 72.0)
 
-    # 🚫 VETO CRÍTICO ANTI-TECHO FRACTAL TOTAL (ABSOLUTO: CERO bypasses por volumen):
+    # 🚫 VETO CRÍTICO ANTI-TECHO FRACTAL TOTAL (ABSOLUTO: Techos reales donde se agotan compradores):
     dist_to_24h_high_pct = round(((high_24h - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
     is_at_daily_resistance_ceiling = bool(
-        dist_to_24h_high_pct <= 0.35 or 
-        range_position_2h >= 0.55 or     # Techo/Medio-Alto en 2H (>55%)
-        range_position_1h >= 0.52 or     # Techo/Medio-Alto en 1H (>52%)
-        range_position_30m >= 0.50 or    # Techo/Medio-Alto en 30M (>50%)
-        range_position_15m >= 0.48 or    # Techo/Medio-Alto en 15M (>48%)
-        range_position_10m >= 0.48 or    # Techo/Medio-Alto en 10M (>48%)
-        range_position_5m >= 0.45 or     # Techo/Medio-Alto en 5M (>45%)
-        range_position_2m >= 0.50 or     # Techo en 2M (>50%)
-        range_position_1m >= 0.50 or     # Techo en 1M (>50%)
+        dist_to_24h_high_pct <= 0.30 or 
+        range_position_2h >= 0.72 or     # Techo real en 2H (últimas 48h)
+        range_position_1h >= 0.70 or     # Techo real en 1H (últimas 24h)
+        range_position_30m >= 0.68 or    # Techo real en 30M
+        range_position_15m >= 0.65 or    # Techo real en 15M
+        range_position_10m >= 0.68 or    # Techo real en 10M
+        range_position_5m >= 0.70 or     # Techo real en 5M
         is_at_range_ceiling_1m or
         is_at_range_ceiling_2m or
         is_at_range_ceiling_5m or
@@ -1224,7 +1222,7 @@ def analyze_multi_timeframe_candles(symbol):
     )
     is_ground_zero_micro_ignition = bool(
         (is_sub_minute_ignition or tf_1m_up or tf_2m_up) and 
-        (dist_from_15m_ma7_pct <= 1.50 or is_yellow_arrow_1h or range_position_1h <= 0.40)
+        (dist_from_15m_ma7_pct <= 1.50 or is_yellow_arrow_1h or range_position_1h <= 0.50)
     )
 
     # 🚫 MEJORA 4: Veto Estricto de Sangrado Activo Sub-Minuto
@@ -1235,16 +1233,16 @@ def analyze_multi_timeframe_candles(symbol):
     
     # ═══════════════════════════════════════════════════════════════════════
     # 🌌 MATRIZ DE CONFLUENCIA FRACTAL DE SUELO 8D (1M, 2M, 5M, 10M, 15M, 30M, 1H, 2H):
-    # Garantiza entrada ESTRICTAMENTE en la BASE/PISO de todas las velas y canales
+    # Calibrado: Base micro estricta + espacio saludable para consolidaciones macro
     # ═══════════════════════════════════════════════════════════════════════
-    is_1m_floor_zone = bool(range_position_1m <= 0.35)
-    is_2m_floor_zone = bool(range_position_2m <= 0.38)
-    is_5m_floor_zone = bool(range_position_5m <= 0.42)
-    is_10m_floor_zone = bool(range_position_10m <= 0.45)
-    is_15m_floor_zone = bool(range_position_15m <= 0.45)
-    is_30m_floor_zone = bool(range_position_30m <= 0.48)
-    is_1h_floor_zone = bool(range_position_1h <= 0.50)
-    is_2h_floor_zone = bool(range_position_2h <= 0.52)
+    is_1m_floor_zone = bool(range_position_1m <= 0.40)
+    is_2m_floor_zone = bool(range_position_2m <= 0.45)
+    is_5m_floor_zone = bool(range_position_5m <= 0.48)
+    is_10m_floor_zone = bool(range_position_10m <= 0.52)
+    is_15m_floor_zone = bool(range_position_15m <= 0.55)
+    is_30m_floor_zone = bool(range_position_30m <= 0.58)
+    is_1h_floor_zone = bool(range_position_1h <= 0.60)
+    is_2h_floor_zone = bool(range_position_2h <= 0.65)
 
     # Detección de Mecha Inferior en Vela de 1M (Absorción de Suelo):
     lower_wick_1m_pct = 0.0
@@ -1259,32 +1257,32 @@ def analyze_multi_timeframe_candles(symbol):
             
     is_1m_lower_wick_absorption = bool(lower_wick_1m_pct >= 20.0 and tf_1m_up)
     
-    # Suelo Micro 1M / 2M (Solo gatilla si está en base real con absorción o giro verde)
+    # Suelo Micro 1M / 2M (Gatillo de Entrada)
     is_1m_true_floor = bool(
         is_1m_floor_zone or 
         is_1m_lower_wick_absorption or 
-        (rsi_1m <= 40.0 and tf_1m_up) or
-        (range_position_2m <= 0.38 and tf_2m_up)
+        (rsi_1m <= 45.0 and tf_1m_up) or
+        (range_position_2m <= 0.45 and tf_2m_up)
     )
     
     # Suelo Estructural & Contextual en 8D (5M, 10M, 15M, 30M, 1H, 2H)
-    # Exige que el precio esté en la mitad inferior de TODAS las escalas temporales
+    # Permite entrar en la zona baja/media-baja y rebotes a soporte
     is_structural_floor_ok = bool(
-        range_position_5m <= 0.45 and
-        range_position_10m <= 0.45 and
-        range_position_15m <= 0.45 and
-        range_position_30m <= 0.50 and
-        range_position_1h <= 0.52 and
-        range_position_2h <= 0.55
+        range_position_5m <= 0.50 and
+        range_position_10m <= 0.52 and
+        range_position_15m <= 0.55 and
+        range_position_30m <= 0.58 and
+        range_position_1h <= 0.60 and
+        range_position_2h <= 0.65
     )
 
     # Confluencia Fractal Suprema de Suelo (TODAS las escalas en la base):
     is_confluent_fractal_floor = bool(
         is_1m_true_floor and
         is_structural_floor_ok and
-        rsi_1m <= 50.0 and
-        rsi_5m <= 55.0 and
-        rsi_15m <= 58.0 and
+        rsi_1m <= 55.0 and
+        rsi_5m <= 58.0 and
+        rsi_15m <= 60.0 and
         not is_15m_red_cascade and
         not is_at_daily_resistance_ceiling
     )

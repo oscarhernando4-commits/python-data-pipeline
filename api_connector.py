@@ -1792,21 +1792,20 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
             vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
             
-            # 🎯 REQUISITO INVIOLABLE: La moneda DEBE estar en la BASE MACRO (15M <= 45%, 30M <= 48%, 1H <= 50%, 2H <= 52%)
-            # CERO bypasses por volumen 1M. Un pico de volumen 1M en el techo o en el aire es VETO ABSOLUTO.
+            # 🎯 REQUISITO DE ENTRADA: Base Micro (1M<=40%, 5M<=50%) + Zona de Soporte Macro (15M<=55%, 30M<=58%, 1H<=60%, 2H<=65%)
             is_macro_base_valid = bool(
-                range_pos_2h <= 0.52 and
-                range_pos_1h <= 0.50 and
-                range_pos_30m <= 0.48 and
-                range_pos_15m <= 0.45 and
-                range_pos_10m <= 0.45 and
-                range_pos_5m <= 0.45 and
-                range_pos_1m <= 0.35
+                range_pos_2h <= 0.65 and
+                range_pos_1h <= 0.60 and
+                range_pos_30m <= 0.58 and
+                range_pos_15m <= 0.55 and
+                range_pos_10m <= 0.52 and
+                range_pos_5m <= 0.50 and
+                range_pos_1m <= 0.40
             )
             
             if not is_macro_base_valid or is_at_daily_ceiling:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado: NO está en la BASE MACRO 8D:")
-                print(f"     Canales: [1M: {range_pos_1m*100:.0f}% (max 35) | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% (max 45) | 10M: {range_pos_10m*100:.0f}% | 15M: {range_pos_15m*100:.0f}% (max 45) | 30M: {range_pos_30m*100:.0f}% (max 48) | 1H: {range_pos_1h*100:.0f}% (max 50) | 2H: {range_pos_2h*100:.0f}% (max 52)]")
+                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado: Fuera de la Zona Base 8D o en Techo:")
+                print(f"     Canales: [1M: {range_pos_1m*100:.0f}% (max 40) | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% (max 50) | 10M: {range_pos_10m*100:.0f}% | 15M: {range_pos_15m*100:.0f}% (max 55) | 30M: {range_pos_30m*100:.0f}% (max 58) | 1H: {range_pos_1h*100:.0f}% (max 60) | 2H: {range_pos_2h*100:.0f}% (max 65)]")
                 continue
                 
             if not has_floor_turnaround:
