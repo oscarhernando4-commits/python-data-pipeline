@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 9402,
-    "wins": 4196,
+    "total_trades": 9403,
+    "wins": 4197,
     "losses": 5206,
     "win_rate_pct": 44.63,
-    "total_pnl_usd": 11770.183276549355
+    "total_pnl_usd": 11770.343276549354
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,30 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 01:03:20",
-      "account_id": "SIM-703",
-      "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
-      "symbol": "SUIUSDT",
-      "side": "SHORT",
-      "entry_price": 0.8349,
-      "exit_price": 0.8432,
-      "pnl_usd": -0.23,
-      "result": "LOSS",
-      "notes": "LOSS on SUIUSDT (PnL: -0.99%, Net: $-0.23 Fase 1)",
-      "context": {
-        "score": 16,
-        "rsi_15m": 52.8,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 01:03:20",
       "account_id": "SIM-704",
@@ -11434,6 +11410,30 @@
       "context": {
         "score": 16,
         "rsi_15m": 42.18,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 02:38:31",
+      "account_id": "SIM-756",
+      "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
+      "symbol": "PYTHUSDT",
+      "side": "SHORT",
+      "entry_price": 0.05127,
+      "exit_price": 0.05077,
+      "pnl_usd": 0.16,
+      "result": "WIN",
+      "notes": "WIN on PYTHUSDT (PnL: +0.98%, Net: $+0.16 Fase 4)",
+      "context": {
+        "score": 4,
+        "rsi_15m": 37.93,
         "macro_trend_4h": "NEUTRAL",
         "fii_score": null,
         "atr_pct_15m": null,
