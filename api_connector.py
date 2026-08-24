@@ -1639,7 +1639,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             })
             
         if candidates_list:
-            for c in candidates_list:
+            for c in candidates_list[:3]:  # Máximo los 3 finalistas Base A+ pre-filtrados
                 csym = c.get("symbol")
                 if csym and csym not in [q["symbol"] for q in candidate_queue]:
                     cscore = c.get("score", 50)
@@ -1655,7 +1655,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             return
             
         total_cands = len(candidate_queue)
-        print(f"\n🔬 [SÚPER-CEREBRO TOP 100 CMC] Iniciando escaneo secuencial de ADN Activo y Confluencia 8D en {total_cands} activos...")
+        print(f"\n🔬 [EJECUCIÓN DE PRECISIÓN A+] Verificando confluencia 8D en {total_cands} finalistas seleccionados...")
         
         executed_trade = False
         import adaptive_asset_dna

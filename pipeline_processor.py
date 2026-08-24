@@ -548,68 +548,85 @@ def run_infinite_trading_matrix_cycle():
                 print(f"  #{idx:02d} {csym:<10} | Score: {c_score:>2}/100 | FII: {fii_sc:>2} | OBV: {obv_t:<12} | RSI 1M: {rsi_1m:>4.1f} | Canales: [1M:{r1m:>4.1f}% 5M:{r5m:>4.1f}% 15M:{r15m:>4.1f}% 1H:{r1h:>4.1f}%] -> {status_icon} ({diag_str})")
             print("═══════════════════════════════════════════════════════════════════════════════════════════════════════════\n")
 
-            # 🎯 REGLA SUPREMA: Pasar a Gemini AI EXCLUSIVAMENTE los candidatos que SÍ están en BASE A+
-            if valid_base_candidates:
+            # 🎯 REGLA SUPREMA: Consultar a Gemini AI EXCLUSIVAMENTE cuando hay candidatos en BASE A+
+            if not valid_base_candidates:
+                print(f"🛡️ [PRESERVACIÓN CUÁNTICA] 0 de {len(top_all_candidates)} activos en Suelo Fractal 8D (1M<=38%, 5M<=45%, FII>=45). Manteniendo 100% liquidez en USDT.\n", flush=True)
+                gemini_res = {
+                    "selected_symbol": "NONE",
+                    "action": "HOLD",
+                    "approved": False,
+                    "confidence": 98,
+                    "committee_deliberation": {
+                        "agent_1_macro": "Mercado sin activos en suelo fractal.",
+                        "agent_2_tech": "Los 67 pares del Top 100 CMC están en zona media/techo (>38% en 1M).",
+                        "agent_3_orderbook": "Sin confluencia de volumen en soporte.",
+                        "agent_4_sector": "Esperando rotación limpia al piso.",
+                        "agent_5_memory": "Regla RAG: Prohibido comprar en techos o sin base A+.",
+                        "agent_6_risk": "Veto de sobreextensión activo.",
+                        "agent_7_ceo_anti_loss": "100% USDT preservado en liquidez."
+                    },
+                    "reasoning": "Todos los 67 activos analizados están fuera de la base de suelo (1M > 38% o 5M > 45%). Preservando capital."
+                }
+                winner_sym = "NONE"
+                selected_opp = None
+            else:
                 candidates_for_gemini = valid_base_candidates[:5]
                 print(f"🎯 [FINALISTAS BASE A+] Se detectaron {len(valid_base_candidates)} activos en Suelo Fractal 8D ({[c['symbol'] for c in candidates_for_gemini]}). Consultando al Comité para seleccionar el Cohete #1...\n", flush=True)
-            else:
-                candidates_for_gemini = top_all_candidates[:3]
-                print(f"ℹ️ [MERCADO EN EXTENSIÓN] 0 activos en Suelo 8D exacto. Evaluando los 3 más cercanos para confirmación de HOLD...\n", flush=True)
 
-            specific_news_map = {}
-            for cand in candidates_for_gemini:  # Noticias específicas para los finalistas
-                c_sym = cand["symbol"]
-                s_news = fundamental_sentinel.fetch_coin_specific_news(c_sym)
-                if s_news:
-                    specific_news_map[c_sym] = s_news
-            
-            macro_summary = macro_ctx.get("summary_text", str(macro_ctx)) if isinstance(macro_ctx, dict) else str(macro_ctx)
-            print(f"✅ [Comité Institucional 7 Agentes] Consultando al Súper-Cerebro Gemini AI (Gemini 3.1 Flash Lite) para los {len(candidates_for_gemini)} finalistas seleccionados...")
-            gemini_res = llm_router.review_top_candidates(
-                candidates_data_list=candidates_for_gemini,
-                news_data={"headlines": cached_fundamental_report.get("recent_headlines", []), "specific_news": specific_news_map},
-                fear_greed=cached_fundamental_report.get("fear_and_greed", {"score": 50, "sentiment": "Neutral"}),
-                macro_context=macro_summary,
-                market_bias_ctx=bias_str
-            )
-            
-            winner_sym = gemini_res.get("selected_symbol")
-            delib = gemini_res.get("committee_deliberation", {})
-            if winner_sym and winner_sym != "NONE" and winner_sym in symbol_analysis_map:
-                top_data = symbol_analysis_map[winner_sym]
-                top_side = gemini_res.get("action", "BUY_LONG")
-                selected_opp = (winner_sym, top_data, top_side)
+                specific_news_map = {}
+                for cand in candidates_for_gemini:
+                    c_sym = cand["symbol"]
+                    s_news = fundamental_sentinel.fetch_coin_specific_news(c_sym)
+                    if s_news:
+                        specific_news_map[c_sym] = s_news
                 
-                print(f"\n🏛️ ═══════════════════════════════════════════════════════════════════")
-                print(f"👑 [COMITÉ INSTITUCIONAL 7 AGENTES - DICTAMEN SUPREMO: {winner_sym}]")
-                print(f"═══════════════════════════════════════════════════════════════════════")
-                if delib:
-                    if delib.get("agent_1_macro"): print(f"  🕵️ Agente 1 (Macro & BTC): {delib.get('agent_1_macro')}")
-                    if delib.get("agent_2_tech"): print(f"  📊 Agente 2 (Suelo 8D & DNA): {delib.get('agent_2_tech')}")
-                    if delib.get("agent_3_orderbook"): print(f"  🌊 Agente 3 (Libro & Bids): {delib.get('agent_3_orderbook')}")
-                    if delib.get("agent_4_sector"): print(f"  🧩 Agente 4 (Sector & Tiempo): {delib.get('agent_4_sector')}")
-                    if delib.get("agent_5_memory"): print(f"  🧠 Agente 5 (Memoria RAG): {delib.get('agent_5_memory')}")
-                    if delib.get("agent_6_risk"): print(f"  🛡️ Agente 6 (Riesgo & Anti-Cima): {delib.get('agent_6_risk')}")
-                    if delib.get("agent_7_ceo_anti_loss"): print(f"  👑 Agente 7 (CEO Scalp): {delib.get('agent_7_ceo_anti_loss')}")
-                print(f"  🎯 Dictamen Final: {top_side} | Aprobado={gemini_res.get('approved')} | Confianza={gemini_res.get('confidence')}%")
-                print(f"  💡 Consenso: {gemini_res.get('reasoning')}")
-                print(f"═══════════════════════════════════════════════════════════════════════\n")
-            else:
-                ceo_verdict = delib.get("agent_7_ceo_anti_loss", gemini_res.get("reasoning", "Preservando 100% USDT"))
-                print(f"\n🏛️ ═══════════════════════════════════════════════════════════════════")
-                print(f"🛡️ [COMITÉ INSTITUCIONAL 7 AGENTES - DICTAMEN DE PROTECCIÓN: HOLD]")
-                print(f"═══════════════════════════════════════════════════════════════════════")
-                if delib:
-                    if delib.get("agent_1_macro"): print(f"  🕵️ Agente 1 (Macro & BTC): {delib.get('agent_1_macro')}")
-                    if delib.get("agent_2_tech"): print(f"  📊 Agente 2 (Suelo 8D & DNA): {delib.get('agent_2_tech')}")
-                    if delib.get("agent_3_orderbook"): print(f"  🌊 Agente 3 (Libro & Bids): {delib.get('agent_3_orderbook')}")
-                    if delib.get("agent_4_sector"): print(f"  🧩 Agente 4 (Sector & Tiempo): {delib.get('agent_4_sector')}")
-                    if delib.get("agent_5_memory"): print(f"  🧠 Agente 5 (Memoria RAG): {delib.get('agent_5_memory')}")
-                    if delib.get("agent_6_risk"): print(f"  🛡️ Agente 6 (Riesgo & Anti-Cima): {delib.get('agent_6_risk')}")
-                    if delib.get("agent_7_ceo_anti_loss"): print(f"  👑 Agente 7 (CEO Scalp): {delib.get('agent_7_ceo_anti_loss')}")
-                print(f"  🎯 Dictamen Final: 🛡️ HOLD (100% USDT Protegido) | Confianza={gemini_res.get('confidence', 100)}%")
-                print(f"  💡 Consenso: {gemini_res.get('reasoning')}")
-                print(f"═══════════════════════════════════════════════════════════════════════\n")
+                macro_summary = macro_ctx.get("summary_text", str(macro_ctx)) if isinstance(macro_ctx, dict) else str(macro_ctx)
+                print(f"✅ [Comité Institucional 7 Agentes] Consultando al Súper-Cerebro Gemini AI (Gemini 3.1 Flash Lite) para los {len(candidates_for_gemini)} finalistas seleccionados...")
+                gemini_res = llm_router.review_top_candidates(
+                    candidates_data_list=candidates_for_gemini,
+                    news_data={"headlines": cached_fundamental_report.get("recent_headlines", []), "specific_news": specific_news_map},
+                    fear_greed=cached_fundamental_report.get("fear_and_greed", {"score": 50, "sentiment": "Neutral"}),
+                    macro_context=macro_summary,
+                    market_bias_ctx=bias_str
+                )
+                
+                winner_sym = gemini_res.get("selected_symbol")
+                delib = gemini_res.get("committee_deliberation", {})
+                if winner_sym and winner_sym != "NONE" and winner_sym in symbol_analysis_map:
+                    top_data = symbol_analysis_map[winner_sym]
+                    top_side = gemini_res.get("action", "BUY_LONG")
+                    selected_opp = (winner_sym, top_data, top_side)
+                    
+                    print(f"\n🏛️ ═══════════════════════════════════════════════════════════════════")
+                    print(f"👑 [COMITÉ INSTITUCIONAL 7 AGENTES - DICTAMEN SUPREMO: {winner_sym}]")
+                    print(f"═══════════════════════════════════════════════════════════════════════")
+                    if delib:
+                        if delib.get("agent_1_macro"): print(f"  🕵️ Agente 1 (Macro & BTC): {delib.get('agent_1_macro')}")
+                        if delib.get("agent_2_tech"): print(f"  📊 Agente 2 (Suelo 8D & DNA): {delib.get('agent_2_tech')}")
+                        if delib.get("agent_3_orderbook"): print(f"  🌊 Agente 3 (Libro & Bids): {delib.get('agent_3_orderbook')}")
+                        if delib.get("agent_4_sector"): print(f"  🧩 Agente 4 (Sector & Tiempo): {delib.get('agent_4_sector')}")
+                        if delib.get("agent_5_memory"): print(f"  🧠 Agente 5 (Memoria RAG): {delib.get('agent_5_memory')}")
+                        if delib.get("agent_6_risk"): print(f"  🛡️ Agente 6 (Riesgo & Anti-Cima): {delib.get('agent_6_risk')}")
+                        if delib.get("agent_7_ceo_anti_loss"): print(f"  👑 Agente 7 (CEO Scalp): {delib.get('agent_7_ceo_anti_loss')}")
+                    print(f"  🎯 Dictamen Final: {top_side} | Aprobado={gemini_res.get('approved')} | Confianza={gemini_res.get('confidence')}%")
+                    print(f"  💡 Consenso: {gemini_res.get('reasoning')}")
+                    print(f"═══════════════════════════════════════════════════════════════════════\n")
+                else:
+                    ceo_verdict = delib.get("agent_7_ceo_anti_loss", gemini_res.get("reasoning", "Preservando 100% USDT"))
+                    print(f"\n🏛️ ═══════════════════════════════════════════════════════════════════")
+                    print(f"🛡️ [COMITÉ INSTITUCIONAL 7 AGENTES - DICTAMEN DE PROTECCIÓN: HOLD]")
+                    print(f"═══════════════════════════════════════════════════════════════════════")
+                    if delib:
+                        if delib.get("agent_1_macro"): print(f"  🕵️ Agente 1 (Macro & BTC): {delib.get('agent_1_macro')}")
+                        if delib.get("agent_2_tech"): print(f"  📊 Agente 2 (Suelo 8D & DNA): {delib.get('agent_2_tech')}")
+                        if delib.get("agent_3_orderbook"): print(f"  🌊 Agente 3 (Libro & Bids): {delib.get('agent_3_orderbook')}")
+                        if delib.get("agent_4_sector"): print(f"  🧩 Agente 4 (Sector & Tiempo): {delib.get('agent_4_sector')}")
+                        if delib.get("agent_5_memory"): print(f"  🧠 Agente 5 (Memoria RAG): {delib.get('agent_5_memory')}")
+                        if delib.get("agent_6_risk"): print(f"  🛡️ Agente 6 (Riesgo & Anti-Cima): {delib.get('agent_6_risk')}")
+                        if delib.get("agent_7_ceo_anti_loss"): print(f"  👑 Agente 7 (CEO Scalp): {delib.get('agent_7_ceo_anti_loss')}")
+                    print(f"  🎯 Dictamen Final: 🛡️ HOLD (100% USDT Protegido) | Confianza={gemini_res.get('confidence', 100)}%")
+                    print(f"  💡 Consenso: {gemini_res.get('reasoning')}")
+                    print(f"═══════════════════════════════════════════════════════════════════════\n")
             
             # Build rich top candidates metrics for dashboard persistence (3-tier RSI architecture)
             top_candidates_rich = []
