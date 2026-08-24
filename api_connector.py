@@ -1121,31 +1121,22 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             atr_pct=atr_pct
         )
     except Exception as e:
-        # Fallback to Wide Slack Trailing & Rally Capture Architecture
-        if highest_pnl_pct >= 4.00:
-            sl_pct = round(highest_pnl_pct * 0.80, 4)
-            phase = 6
-            phase_label = f"👑 FASE 6 MEGA RALLY (Cima +{highest_pnl_pct:.2f}% | Retención 80% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 2.00:
-            sl_pct = round(highest_pnl_pct * 0.75, 4)
-            phase = 5
-            phase_label = f"🚀 FASE 5 TENDENCIA FUERTE (Cima +{highest_pnl_pct:.2f}% | Retención 75% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 1.00:
-            sl_pct = round(highest_pnl_pct * 0.70, 4)
-            phase = 4
-            phase_label = f"💎 FASE 4 EXPANSIÓN MEDIA (Cima +{highest_pnl_pct:.2f}% | Retención 70% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.44:
-            sl_pct = max(0.20, round(highest_pnl_pct * 0.65, 4))
-            phase = 3
-            phase_label = f"🔒 FASE 3 SEGURO DE GANANCIA +0.20% NETO (Cima +{highest_pnl_pct:.2f}% | Retención 65% -> Piso +{sl_pct:.2f}%)"
+        # Fallback to Dynamic Curve Trailing Architecture
+        if highest_pnl_pct >= 0.40:
+            retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
+            retention_ratio = retention_pct / 100.0
+            sl_pct = round(highest_pnl_pct * retention_ratio, 4)
+            phase = 6 if highest_pnl_pct >= 4.0 else (5 if highest_pnl_pct >= 2.0 else (4 if highest_pnl_pct >= 1.0 else 3))
+            tag = "👑 MEGA RALLY" if phase == 6 else ("🚀 TENDENCIA FUERTE" if phase == 5 else ("💎 MODO COHETE 🎯" if phase == 4 else "🔒 CURVA DINÁMICA"))
+            phase_label = f"{tag} (Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
         elif highest_pnl_pct >= 0.35:
-            sl_pct = max(0.08, round(highest_pnl_pct * 0.30, 4))
+            sl_pct = 0.10
             phase = 2
-            phase_label = f"🛡️ FASE 2 BREAK-EVEN BLINDADO (+0.08% NETO | Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
+            phase_label = f"🛡️ FASE 2 BREAK-EVEN BLINDADO (+0.10% NETO | Cima +{highest_pnl_pct:.2f}% -> Piso Fijo +0.10%)"
         else:
-            sl_pct = -0.75
+            sl_pct = -0.50
             phase = 1
-            phase_label = f"🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (Cima +{highest_pnl_pct:.2f}% | SL Defensivo -0.75%)"
+            phase_label = f"🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (Cima +{highest_pnl_pct:.2f}% | SL Defensivo -0.50%)"
                 
         return sl_pct, phase, phase_label
 
