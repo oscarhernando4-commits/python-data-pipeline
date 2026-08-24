@@ -526,19 +526,19 @@ def run_infinite_trading_matrix_cycle():
                 r5m_r = round(r5m, 1)
                 r15m_r = round(r15m, 1)
                 r1h_r = round(r1h, 1)
-                is_base = (r1m_r <= 38.0 and r5m_r <= 45.0 and r15m_r <= 55.0 and r1h_r <= 65.0)
+                is_base = (r1m_r <= 38.0 and r5m_r <= 42.0 and r15m_r <= 48.0 and r1h_r <= 55.0)
                 diag_reasons = []
                 if r1m_r > 38.0: diag_reasons.append(f"1M={r1m:.1f}% > 38%")
-                if r5m_r > 45.0: diag_reasons.append(f"5M={r5m:.1f}% > 45%")
-                if r15m_r > 55.0: diag_reasons.append(f"15M={r15m:.1f}% > 55%")
-                if r1h_r > 65.0: diag_reasons.append(f"1H={r1h:.1f}% > 65%")
+                if r5m_r > 42.0: diag_reasons.append(f"5M={r5m:.1f}% > 42%")
+                if r15m_r > 48.0: diag_reasons.append(f"15M={r15m:.1f}% > 48%")
+                if r1h_r > 55.0: diag_reasons.append(f"1H={r1h:.1f}% > 55%")
                 if obv_t == "DISTRIBUTING": diag_reasons.append("OBV=DISTRIBUCIÓN")
-                if fii_sc < 45: diag_reasons.append(f"FII={fii_sc} bajo")
+                if fii_sc < 46: diag_reasons.append(f"FII={fii_sc} bajo < 46")
                 if c_score < 55: diag_reasons.append(f"Score={c_score} insuficiente")
                 if is_knife: diag_reasons.append("⛔ Cuchillo Cayendo")
                 if is_dead_cat: diag_reasons.append("🪤 Rebote Gato Muerto")
                 
-                is_truly_valid = (is_base and obv_t != "DISTRIBUTING" and fii_sc >= 45 and c_score >= 55 and not is_knife and not is_dead_cat)
+                is_truly_valid = (is_base and obv_t != "DISTRIBUTING" and fii_sc >= 46 and c_score >= 55 and not is_knife and not is_dead_cat)
                 status_icon = "🟢 BASE A+ VÁLIDA" if is_truly_valid else "🔴 DESCARTADO"
                 diag_str = " | ".join(diag_reasons) if diag_reasons else "Cumple Base 8D + Score A+"
                 
@@ -550,7 +550,7 @@ def run_infinite_trading_matrix_cycle():
 
             # 🎯 REGLA SUPREMA: Consultar a Gemini AI EXCLUSIVAMENTE cuando hay candidatos en BASE A+
             if not valid_base_candidates:
-                print(f"🛡️ [PRESERVACIÓN CUÁNTICA] 0 de {len(top_all_candidates)} activos en Suelo Fractal 8D (1M<=38%, 5M<=45%, FII>=45). Manteniendo 100% liquidez en USDT.\n", flush=True)
+                print(f"🛡️ [PRESERVACIÓN CUÁNTICA] 0 de {len(top_all_candidates)} activos en Suelo Fractal 8D (1M<=38%, 5M<=42%, 15M<=48%, 1H<=55%, FII>=46). Manteniendo 100% liquidez en USDT.\n", flush=True)
                 gemini_res = {
                     "selected_symbol": "NONE",
                     "action": "HOLD",
