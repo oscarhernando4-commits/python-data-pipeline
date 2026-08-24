@@ -1882,21 +1882,35 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] CCI Sobrecomprado ({cci_val:.0f} >= 150). Entrada prohibida en cima.")
                 continue
             
-            # 🧬 CONSULTA DE ADN HISTÓRICO DEL TOKEN (Aprendizaje de las Simulaciones):
+            # 🧬 BLACKLIST DINÁMICA TIERED + WHITELIST ÉLITE (Aprendizaje de Simulaciones + Cuenta Real):
             token_dna_label = ""
             try:
                 import learning_engine
-                token_profile = learning_engine.get_token_dna_profile(cand_sym)
-                token_wr = token_profile.get("win_rate", 50.0)
-                token_trades = token_profile.get("total_trades", 0)
+                # Load blacklist and elite once per candidate evaluation cycle (cached)
+                _dyn_bl = learning_engine.get_dynamic_blacklist()
+                _dyn_elite = learning_engine.get_dynamic_elite()
                 
-                if token_trades >= 3 and token_wr < 30.0:
-                    print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] ADN Histórico TÓXICO: WR={token_wr:.0f}% en {token_trades} trades. Blacklist dinámica.")
+                bl_entry = _dyn_bl.get(cand_sym)
+                if bl_entry:
+                    tier = bl_entry["tier"]
+                    tier_label = {"HARD": "☠️ TÓXICO HARD", "MID": "🔴 TÓXICO MID", "SOFT": "🟠 TÓXICO SOFT"}.get(tier, "⛔ TÓXICO")
+                    print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] ADN {tier_label}: WR={bl_entry['win_rate']:.0f}% en {bl_entry['total_trades']} trades (PnL acum: ${bl_entry['pnl_usd']:.2f}). Blacklist dinámica activa.")
                     continue
-                elif token_trades >= 3 and token_wr >= 65.0:
-                    token_dna_label = f" | 🌟 ADN Élite ({token_wr:.0f}% WR en {token_trades} ops)"
-                elif token_trades >= 3:
-                    token_dna_label = f" | 📊 ADN ({token_wr:.0f}% WR en {token_trades} ops)"
+                
+                elite_entry = _dyn_elite.get(cand_sym)
+                if elite_entry:
+                    token_dna_label = f" | 🌟 ADN ÉLITE ({elite_entry['win_rate']:.0f}% WR en {elite_entry['total_trades']} ops | +${elite_entry['pnl_usd']:.2f})"
+                    # Boost score for elite tokens
+                    final_cand_score = min(100, final_cand_score + 10)
+                else:
+                    # Standard DNA label from profile
+                    token_profile = learning_engine.get_token_dna_profile(cand_sym)
+                    token_wr = token_profile.get("win_rate", 50.0)
+                    token_trades = token_profile.get("total_trades", 0)
+                    if token_trades >= 3:
+                        streak = token_profile.get("streak", "NEUTRAL")
+                        streak_icon = "🔥" if streak == "HOT_STREAK" else ("❄️" if streak == "COLD_STREAK" else "📊")
+                        token_dna_label = f" | {streak_icon} ADN ({token_wr:.0f}% WR en {token_trades} ops)"
             except Exception:
                 pass
             

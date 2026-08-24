@@ -373,8 +373,13 @@ def run_infinite_trading_matrix_cycle():
             "suggested_action": action
         })
     
-    # 🏔️ MEJORAS 2, 3 Y 4: Ranking por Calidad Ground-Zero (Súper-Prioridad FII >= 60, Dual Ignición 10s+30s y Filtro de Sangrado)
+    # 🏔️ RANKING POR CALIDAD GROUND-ZERO + ADN HISTÓRICO DINÁMICO
+    import learning_engine
+    _dyn_bl = learning_engine.get_dynamic_blacklist()
+    _dyn_elite = learning_engine.get_dynamic_elite()
+
     def _candidate_rank_key(cand):
+        sym = cand["symbol"]
         mtf = cand.get("tech_data", {}).get("mtf_analysis", {})
         fii = mtf.get("fii_score", 0)
         is_overextended = mtf.get("is_overextended_15m", False)
@@ -384,13 +389,24 @@ def run_infinite_trading_matrix_cycle():
         tf_30s = mtf.get("timeframe_alignment", {}).get("30s", "BEARISH")
         
         rank = cand["score"]
-        # MEJORA 3: Súper-Prioridad a inyección de capital en suelo (FII >= 60)
+
+        # 🚫 BLACKLIST DINÁMICA: Penalización severa para no desperdiciar cupos en Top 15
+        if sym in _dyn_bl:
+            bl_tier = _dyn_bl[sym]["tier"]
+            penalty = 300 if bl_tier == "HARD" else (200 if bl_tier == "MID" else 100)
+            rank -= penalty
+
+        # 🌟 WHITELIST ÉLITE DINÁMICA: Impulso a activos con historial comprobado (WR >= 65%)
+        if sym in _dyn_elite:
+            rank += 35
+
+        # Súper-Prioridad a inyección de capital en suelo (FII >= 60)
         if fii >= 60:
             rank += 60
         elif fii >= 45:
             rank += 30
             
-        # MEJORA 2: Bonus por Doble Ignición 10s + 30s en Verde
+        # Bonus por Doble Ignición 10s + 30s en Verde
         if tf_10s == "BULLISH" and tf_30s == "BULLISH":
             rank += 30
         elif tf_10s == "BULLISH":
@@ -399,7 +415,7 @@ def run_infinite_trading_matrix_cycle():
         if is_gz and c1h <= 0.35:
             rank += 25
             
-        # MEJORA 4: Penalización de Sangrado Activo Sub-Minuto
+        # Penalización de Sangrado Activo Sub-Minuto
         if tf_10s == "BEARISH" and tf_30s == "BEARISH" and fii < 50:
             rank -= 50
         if is_overextended:

@@ -367,36 +367,18 @@ def get_dynamic_token_intelligence(data=None):
     """
     if data is None:
         data = load_memory()
-    trades = data.get("history", [])
-    token_stats = {}
-    for t in trades:
-        sym = t.get("symbol")
-        if not sym:
-            continue
-        res = t.get("result", "LOSS")
-        pnl = float(t.get("pnl_usd", 0.0))
-        if sym not in token_stats:
-            token_stats[sym] = {"w": 0, "l": 0, "pnl": 0.0}
-        if res == "WIN":
-            token_stats[sym]["w"] += 1
-        else:
-            token_stats[sym]["l"] += 1
-        token_stats[sym]["pnl"] += pnl
-        
-    elite = []
-    blocked = []
-    for s, st in token_stats.items():
-        tot = st["w"] + st["l"]
-        wr = (st["w"] / tot * 100.0) if tot > 0 else 0.0
-        if tot >= 2 and wr >= 65.0:
-            elite.append(f"{s} (WR {wr:.0f}%, +${st['pnl']:.2f})")
-        elif (tot >= 2 and wr <= 25.0) or st["pnl"] <= -50.0:
-            blocked.append(f"{s} (WR {wr:.0f}%, -${abs(st['pnl']):.2f})")
+    
+    bl_map = get_dynamic_blacklist(data)
+    elite_map = get_dynamic_elite(data)
+    
+    elite = [f"{s} (WR {d['win_rate']:.0f}%, +${d['pnl_usd']:.2f})" for s, d in sorted(elite_map.items(), key=lambda x: x[1]['win_rate'], reverse=True)]
+    blocked = [f"{s} [TIER:{d['tier']}] (WR {d['win_rate']:.0f}%, -${abs(d['pnl_usd']):.2f})" for s, d in sorted(bl_map.items(), key=lambda x: x[1]['win_rate'])]
             
     return {
         "elite_tokens": elite,
         "blocked_tokens": blocked,
-        "token_stats": token_stats
+        "blacklist_map": bl_map,
+        "elite_map": elite_map
     }
 
 def calculate_asset_dna_profile(symbol: str, atr_15m_pct: float = 0.30, atr_1h_pct: float = 0.60, data=None):
@@ -526,6 +508,86 @@ def get_token_dna_profile(symbol: str, data=None):
         "is_toxic": bool(tot >= 3 and wr < 30.0),
         "recent_results": recent_results
     }
+
+def get_dynamic_blacklist(data=None, min_trades_hard=10, wr_hard=25.0,
+                          min_trades_mid=5, wr_mid=20.0,
+                          min_trades_soft=3, wr_soft=15.0):
+    """
+    BLACKLIST DINAMICA basada en evidencia historica tiered:
+    HARD:  >= 10 trades con WR < 25%  (ej: AVAXUSDT 12% / 16 trades)
+    MID:   >=  5 trades con WR < 20%  (ej: TIAUSDT  15% /  9 trades)
+    SOFT:  >=  3 trades con WR < 15%  (ej: BTCUSDT  11% /  3 trades)
+    Returns: {symbol -> {win_rate, total_trades, pnl_usd, tier}}
+    """
+    if data is None:
+        data = load_memory()
+    trades = data.get("history", [])
+    token_stats = {}
+    for t in trades:
+        sym = t.get("symbol", "").upper().strip()
+        if not sym:
+            continue
+        if not sym.endswith("USDT"):
+            sym = sym + "USDT"
+        res = t.get("result", "LOSS")
+        pnl = float(t.get("pnl_usd", 0.0))
+        if sym not in token_stats:
+            token_stats[sym] = {"w": 0, "l": 0, "pnl": 0.0}
+        if res == "WIN":
+            token_stats[sym]["w"] += 1
+        else:
+            token_stats[sym]["l"] += 1
+        token_stats[sym]["pnl"] += pnl
+    blacklist = {}
+    for sym, st in token_stats.items():
+        tot = st["w"] + st["l"]
+        wr = (st["w"] / tot * 100.0) if tot > 0 else 50.0
+        tier = None
+        if tot >= min_trades_hard and wr < wr_hard:
+            tier = "HARD"
+        elif tot >= min_trades_mid and wr < wr_mid:
+            tier = "MID"
+        elif tot >= min_trades_soft and wr < wr_soft:
+            tier = "SOFT"
+        if tier:
+            blacklist[sym] = {"win_rate": round(wr, 1), "total_trades": tot,
+                              "pnl_usd": round(st["pnl"], 4), "tier": tier}
+    return blacklist
+
+
+def get_dynamic_elite(data=None, min_trades=5, wr_threshold=65.0):
+    """
+    WHITELIST ELITE DINAMICA: tokens con WR >= 65% en >= 5 trades.
+    Reciben boost de score en la evaluacion de candidatos.
+    """
+    if data is None:
+        data = load_memory()
+    trades = data.get("history", [])
+    token_stats = {}
+    for t in trades:
+        sym = t.get("symbol", "").upper().strip()
+        if not sym:
+            continue
+        if not sym.endswith("USDT"):
+            sym = sym + "USDT"
+        res = t.get("result", "LOSS")
+        pnl = float(t.get("pnl_usd", 0.0))
+        if sym not in token_stats:
+            token_stats[sym] = {"w": 0, "l": 0, "pnl": 0.0}
+        if res == "WIN":
+            token_stats[sym]["w"] += 1
+        else:
+            token_stats[sym]["l"] += 1
+        token_stats[sym]["pnl"] += pnl
+    elite = {}
+    for sym, st in token_stats.items():
+        tot = st["w"] + st["l"]
+        wr = (st["w"] / tot * 100.0) if tot > 0 else 0.0
+        if tot >= min_trades and wr >= wr_threshold:
+            elite[sym] = {"win_rate": round(wr, 1), "total_trades": tot,
+                          "pnl_usd": round(st["pnl"], 4)}
+    return elite
+
 
 def get_super_detailed_table_str(data=None):
     if data is None:
