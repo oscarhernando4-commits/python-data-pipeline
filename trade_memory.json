@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 10121,
-    "wins": 4631,
+    "total_trades": 10122,
+    "wins": 4632,
     "losses": 5490,
     "win_rate_pct": 45.76,
-    "total_pnl_usd": 11762.272376549394
+    "total_pnl_usd": 11762.425976549393
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,30 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 02:56:32",
-      "account_id": "SIM-846",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "FILUSDT",
-      "side": "SHORT",
-      "entry_price": 0.7635,
-      "exit_price": 0.7647,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "LOSS on FILUSDT (PnL: -0.16%, Net: $-0.06 Fase 2)",
-      "context": {
-        "score": 5,
-        "rsi_15m": 47.08,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 02:56:32",
       "account_id": "SIM-849",
@@ -12045,6 +12021,28 @@
         "vol_surge": 0.75,
         "vol_surge_1m": 0.23,
         "fii_score": 70,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-24 14:19:20",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "LINKUSDT",
+      "side": "LONG",
+      "entry_price": 11.54110656,
+      "exit_price": 11.667,
+      "pnl_usd": 0.1536,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 SNIPER COSECHA GANANCIA EN PICO (Pico +1.27% -> Venta Asegurada en +1.09% tras retroceso de -0.18%) (Fase 4, PnL: +1.09%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 45.9,
+        "atr_pct_15m": 0.791,
+        "vol_surge": 1.09,
+        "vol_surge_1m": 1.13,
+        "fii_score": 60,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
