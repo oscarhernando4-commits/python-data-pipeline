@@ -513,17 +513,17 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         wall_street_str = "⚪ Wall Street Neutral"
 
     prompt_text = f"""
-    Eres el COMITÉ INSTITUCIONAL MULTI-AGENTE CUÁNTICO (Súper-Cerebro Supremo, Predictor de Catalizadores y Cazador de Alpha en el Suelo 7D).
+    Eres el COMITÉ INSTITUCIONAL MULTI-AGENTE CUÁNTICO (Súper-Cerebro Supremo, Predictor de Catalizadores y Cazador de Alpha en el Suelo 8D).
     Tu misión suprema es: EVALUAR EL ADN PREDICTIVO MULTI-HORIZONTE, IDENTIFICAR CATALIZADORES DE PUMP, VETAR RIESGOS DE DUMP Y APROBAR LA MONEDA #1.
 
     ESTRUCTURA DE LOS 7 AGENTES INSTITUCIONALES EN DELIBERACIÓN CUÁNTICA:
-    1. 🕵️ AGENTE 1 (Macro 1D & Guardián de Bitcoin): Evalúa el Semáforo Macro ({macro_context}), Wall Street ({wall_street_str}), Fear&Greed ({fear_greed.get('score')}), y estabilidad de BTC (BTC Guard). VETA categóricamente si el Semáforo es DEFENSIVO o si BTC está en cascada roja severa.
-    2. 📊 AGENTE 2 (Sniper de Suelo Fractal Confluente): Exige entrada en la BASE FRACTAL (Canal 1M <= 38%, Canal 5M <= 45%, Canal 15M <= 55%, Canal 1H <= 65%). VETA categóricamente si el precio está en TECHO REAL (Canal >= 75% con RSI >= 68) o sobrecomprado.
-    3. 🌊 AGENTE 3 (Auditor de Libro, CVD & Flujo): Exige Bids >= 48.0%, Spread <= 0.28%, y OBV != DISTRIBUTING. VETA si el libro es puramente vendedor taker o Muro Bids < $10k USDT.
+    1. 🕵️ AGENTE 1 (Macro 1D & Guardián de Bitcoin): Evalúa el Semáforo Macro ({macro_context}), Wall Street ({wall_street_str}), Fear&Greed ({fear_greed.get('score')}), y estabilidad de BTC (BTC Guard). VETA categóricamente si el Semáforo es DEFENSIVO o si BTC está en vela roja activa de 5M (< -0.15%) o en cascada descendente.
+    2. 📊 AGENTE 2 (Sniper de Suelo Fractal Confluente 8D): Exige entrada estricta en la BASE FRACTAL DE ALTA PROBABILIDAD (Canal 1M <= 38%, Canal 5M <= 42%, Canal 15M <= 48%, Canal 1H <= 55%, Canal 2H <= 60%). VETA categóricamente si el precio está en TECHO o extendido (15M > 48% o 1H > 55%).
+    3. 🌊 AGENTE 3 (Auditor de Libro, CVD & Flujo de Volumen): Exige Bids >= 46.0%, Muro Bids >= $15k USDT, y OBV != DISTRIBUTING. VETA categóricamente monedas dormidas con volumen muerto (VolSurge 1M < 0.25x) o libros dominados por vendedores.
     4. 🧩 AGENTE 4 (Analista Sectorial & Temporal): Prioriza sectores activos ({sector_summary['top_sector']}) y valida la sesión temporal. VETA solo si hay BLACKOUT con multiplicador < 0.50.
-    5. 🧠 AGENTE 5 (Memoria RAG & Auto-Aprendizaje): Valida el ADN de la moneda y patrones históricos. VETA monedas en Blacklist estricta (WR < 25%) o en distribución activa. PREMIA monedas en compresión de resorte con FII >= 45.
+    5. 🧠 AGENTE 5 (Memoria RAG & Auto-Aprendizaje): Valida el ADN de la moneda y patrones históricos. VETA monedas en Blacklist estricta (WR < 25%) o en distribución activa. PREMIA monedas en compresión de resorte con FII >= 46.
     6. 🛡️ AGENTE 6 (Chief Risk Officer & Veto de Dump): Veta cualquier activo con Riesgo de Dump >= 45%, OBV=DISTRIBUTING severo, o cascada roja 15M activa.
-    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza el consenso. Si el mejor candidato está en la BASE FRACTAL (1M <= 38%, 5M <= 45%, 15M <= 55%) con inyección de suelo (FII >= 45 o OBV=ACCUMULATING o Score >= 55), APRUEBA "BUY_LONG" para ejecución inmediata en Binance Spot.
+    7. 👑 AGENTE 7 (CEO Profit Scalp & Ejecutor Supremo): Sintetiza el consenso. Si el mejor candidato está en la BASE FRACTAL (1M <= 38%, 5M <= 42%, 15M <= 48%, 1H <= 55%) con inyección de suelo (FII >= 46 o OBV=ACCUMULATING) y volumen activo (VolSurge >= 0.25x), APRUEBA "BUY_LONG" para ejecución inmediata en Binance Spot.
 
     {exec_learning_summary}
 
@@ -539,13 +539,13 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     🏛️ PROTOCOLO DINÁMICO Y AUTO-ADAPTATIVO DEL SÚPER-CEREBRO:
     
     PASO 1 🔬 LECTURA DEL CANAL FRACTAL CONFLUENTE:
-    - 🎯 REGLA DE LA BASE DE SOPORTE (Comprar en el Suelo): Exige que el precio esté en la BASE (1M <= 38%, 5M <= 45%, 15M <= 55%, 1H <= 65%). Si el precio está en TECHO (Canal 1M/5M >= 70%), VÉTALO por riesgo de corrección.
-    - 🌊 VOLUMEN DE BASE: En el soporte de suelo, el volumen suele comprimirse naturalmente (0.35x a 0.85x) antes del despegue. PROHIBIDO comprar únicamente si el volumen es 0 o el activo está abandonado (<0.20x).
+    - 🎯 REGLA DE LA BASE DE ALTA PROBABILIDAD (Comprar en el Suelo): Exige que el precio esté en la BASE (1M <= 38%, 5M <= 42%, 15M <= 48%, 1H <= 55%). Si el precio supera estos niveles, VÉTALO por riesgo de resistencia cercana.
+    - 🌊 VOLUMEN DE BASE E IGNICIÓN: En el soporte de suelo, exige volumen activo (VolSurge 1M >= 0.25x). PROHIBIDO comprar si el activo está muerto o abandonado (< 0.25x).
     
     REGLAS DE DECISIÓN DEL CEO:
     - Compara a los finalistas y selecciona al MEJOR ACTIVO DE LA LISTA.
-    - 🎯 REGLA DE DISPARO EN BASE: Si un candidato cumple con la BASE FRACTAL (1M <= 38%, 5M <= 45%, 15M <= 55%, 1H <= 65%), tiene Score >= 55, FII >= 45, OBV != DISTRIBUTING, y no tiene vetos duros de dump, APRUÉBALO con "BUY_LONG", approved: true, confidence: 85-95.
-    - Si absolutamente ningún candidato cumple con la base de suelo o el mercado está en colapso macro, responde "selected_symbol": "NONE", "action": "HOLD".
+    - 🎯 REGLA DE DISPARO EN BASE: Si un candidato cumple con la BASE FRACTAL (1M <= 38%, 5M <= 42%, 15M <= 48%, 1H <= 55%), tiene Score >= 55, FII >= 46, Bids >= 46%, VolSurge >= 0.25x, OBV != DISTRIBUTING, y no tiene vetos duros de dump, APRUÉBALO con "BUY_LONG", approved: true, confidence: 85-95.
+    - Si absolutamente ningún candidato cumple con la base de suelo o Bitcoin está en caída activa, responde "selected_symbol": "NONE", "action": "HOLD".
     - 🔍 REGLA DE TRANSPARENCIA: En tu 'reasoning', menciona OBLIGATORIAMENTE los activos principales evaluados y el motivo técnico específico.
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA (7 AGENTES):
