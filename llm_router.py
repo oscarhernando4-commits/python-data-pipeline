@@ -546,8 +546,9 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     - 🚫 VETO DE VOLUMEN MUERTO (Anti-Estancamiento): PROHIBIDO comprar si el candidato tiene volumen muerto (Vol1M < 0.80x o Vol15M < 0.80x). Exige compradores reales activos (Vol1M >= 1.0x o Vol15M >= 1.2x).
     REGLAS DE DECISIÓN DEL CEO:
     - Compara a los finalistas y selecciona al MEJOR ACTIVO DE TODO EL MERCADO.
-    - Si el campeón tiene Score >= 70, RSI saludable (35-54 en micro / 40-60 en macro), alta elasticidad y libre de vetos, EMITE TU VEREDICTO CON "BUY_LONG", approved: true, confidence: 85-95.
-    - Si todo el mercado está en pánico o no hay ningún candidato viable, responde "selected_symbol": "NONE", "action": "HOLD".
+    - 🎯 REGLA DE DISPARO EN BASE ARMÓNICA: Si un candidato cumple con la BASE ARMÓNICA 8D (1M <= 35%, 5M <= 40%, 10M <= 45%, 15M <= 50%, 30M <= 55%, 1H <= 60%), tiene Score >= 60, FII >= 50, OBV=ACCUMULATING, y no tiene vetos duros, APRUÉBALO con "BUY_LONG", approved: true, confidence: 85-95.
+    - Si ningún candidato cumple con la confluencia de base y volumen, o el mercado está en dump macro, responde "selected_symbol": "NONE", "action": "HOLD".
+    - 🔍 REGLA DE TRANSPARENCIA: En tu 'reasoning', menciona OBLIGATORIAMENTE los activos principales evaluados (ej: QNTUSDT, ZECUSDT, DASHUSDT) y el motivo técnico específico de por qué se aprueba o se veta cada uno.
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA (7 AGENTES):
     {{
@@ -557,14 +558,14 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         "approved": true o false,
         "committee_deliberation": {{
             "agent_1_macro": "Dictamen macro en 1 oración...",
-            "agent_2_tech": "Dictamen del suelo 7D (1D, 4H, 1H, 15M, 5M, 2M, 1M) y posición del canal en 1 oración...",
+            "agent_2_tech": "Dictamen del suelo 8D (1M<=35%, 5M<=40%, 15M<=50%, 1H<=60%) y posición del canal en 1 oración...",
             "agent_3_orderbook": "Dictamen de libro de órdenes y Bids en 1 oración...",
             "agent_4_sector": "Dictamen de rotación sectorial en 1 oración...",
             "agent_5_memory": "Dictamen de memoria RAG y patrones ganadores en 1 oración...",
             "agent_6_risk": "Dictamen de validación de seguridad anti-cima en 1 oración...",
             "agent_7_ceo_anti_loss": "Dictamen final del CEO autorizando compra en el suelo o preservando USDT en 1 oración..."
         }},
-        "reasoning": "Resumen ejecutivo del consenso institucional..."
+        "reasoning": "Resumen técnico nombrando las monedas evaluadas y razones individuales..."
     }}
     """
 
