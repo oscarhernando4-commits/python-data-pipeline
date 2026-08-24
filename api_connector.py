@@ -1880,9 +1880,43 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             if not has_floor_turnaround:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Falta de Giro de Suelo en 1M/2M.")
                 continue
-                
+
+            # ═══════════════════════════════════════════════════════════════════
+            # 🛡️ FILTRO ANTI-RENDER: FII mínimo aumentado cuando RSI 15M > 40
+            # RENDER entró con FII=60 + RSI15m=43 — no es suficiente confirmación institucional
+            # para un activo en zona de consolidación bajista. Exigir FII >= 65.
+            # ═══════════════════════════════════════════════════════════════════
+            rsi_15m_val = mtf_res.get("rsi_15m", 50.0)
+            if rsi_15m_val >= 40.0 and fii < 65:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por FII Insuficiente con RSI 15M neutral (RSI15M={rsi_15m_val:.1f} >= 40 pero FII={fii} < 65). Exige FII >= 65 para zona no-oversold.")
+                continue
+
+            # ═══════════════════════════════════════════════════════════════════
+            # 🛡️ FILTRO ANTI-RENDER: Momentum 5M bajista activo
+            # Si los últimas 5 velas de 5M tienen >= 3 rojas con mayor volumen en rojas
+            # que en verdes → distribución activa → entrada prohibida aunque la 8D diga base.
+            # ═══════════════════════════════════════════════════════════════════
+            try:
+                import api_connector as _self
+                kl_5m = _self.get_klines(cand_sym, "5m", 5)
+                if kl_5m and len(kl_5m) >= 4:
+                    reds = [(float(k[2]) - float(k[3])) for k in kl_5m if float(k[4]) < float(k[1])]
+                    greens = [(float(k[2]) - float(k[3])) for k in kl_5m if float(k[4]) >= float(k[1])]
+                    red_vol = sum(float(k[5]) * float(k[4]) for k in kl_5m if float(k[4]) < float(k[1]))
+                    green_vol = sum(float(k[5]) * float(k[4]) for k in kl_5m if float(k[4]) >= float(k[1]))
+                    red_count = len([k for k in kl_5m if float(k[4]) < float(k[1])])
+                    # Block if: 3+ red candles AND red volume dominates (>= 58% of total volume)
+                    total_vol_5m = red_vol + green_vol
+                    red_vol_pct = (red_vol / total_vol_5m * 100) if total_vol_5m > 0 else 50.0
+                    if red_count >= 3 and red_vol_pct >= 58.0 and not (fii >= 75 or is_spring):
+                        print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Momentum 5M Bajista Activo ({red_count}/5 velas rojas | VolRojo={red_vol_pct:.0f}% del flujo). Distribución activa — esperar reversión real.")
+                        continue
+            except Exception:
+                pass
+
             is_spring = mtf_res.get("spring_coiling", {}).get("is_spring_compressed", False)
             is_wave2 = mtf_res.get("wave2_retest", {}).get("is_wave2_retest", False)
+
             if (mtf_res.get("rsi_2m", 50.0) > 56.0 or mtf_res.get("rsi_1m", 50.0) > 56.0) and not (is_spring or is_wave2):
                 # Allow entries up to RSI 62 if there is strong volume ignition or FII confirmation
                 rsi_hard_cap = 62.0 if (vol_1m_now >= 1.2 or fii >= 45 or has_dual_sub_minute_ignition) else 56.0
