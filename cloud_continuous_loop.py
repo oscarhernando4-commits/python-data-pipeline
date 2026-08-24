@@ -56,7 +56,7 @@ def sleep_with_micro_heartbeat(sleep_secs: int):
                 pnl_sign = "+" if hb['pnl_pct'] >= 0 else ""
                 print(f"💓 [HEARTBEAT 1s | T+{tick_count}s] {hb['symbol']} @ {p_fmt} | PnL: {pnl_sign}{hb['pnl_pct']:.2f}% (Pico: +{hb.get('highest_pnl', 0):.2f}% | Fase {hb.get('phase', 1)})", flush=True)
             elif tick_count % 15 == 0:
-                print(f"📡 [RADAR 1s | T+{tick_count}s/{sleep_secs}s] Monitoreo activo de 120 pares en espera de la siguiente señal...", flush=True)
+                print(f"📡 [RADAR 1s | T+{tick_count}s/{sleep_secs}s] Monitoreo activo de 67 pares Top 100 CMC en espera de la siguiente señal...", flush=True)
         except Exception:
             pass
 
@@ -65,7 +65,7 @@ def run_focused_position_guardian(max_duration_secs: int = 14400):
     """
     🎯 GUARDIÁN SNIPER DEDICADO AL 100% (Modo Cero Latencia / 1s Heartbeat):
     Cuando hay una posición real abierta en Binance Spot:
-    1. Cancela el 100% de los escaneos de 120 pares y consultas AI a Gemini (ahorra cuota y CPU).
+    1. Cancela los escaneos del Top 100 y consultas AI a Gemini (ahorra cuota y CPU).
     2. Dedica el 100% de la CPU al Heartbeat de 1 segundo (T+1s, T+2s, T+3s...).
     3. Vigila segundo a segundo el PnL, Trailing Stop y Wick Sniper.
     4. En cuanto la posición se cierra (Take Profit o Stop Loss), sincroniza balance en Binance
@@ -74,7 +74,7 @@ def run_focused_position_guardian(max_duration_secs: int = 14400):
     import api_connector
     print("\n" + "=" * 70, flush=True)
     print("🛡️ [MODO GUARDIÁN SNIPER 100% DEDICADO ACTIVADO]", flush=True)
-    print("⚡ Escaneos de 120 pares y Gemini AI PAUSADOS para enfocar el 100% de recursos.")
+    print("⚡ Escaneos de 67 pares Top 100 y Gemini AI PAUSADOS para enfocar el 100% de recursos.")
     print("💓 Monitoreo en vivo SUB-SEGUNDO (1s) para cosechar la cima o ejecutar SL.", flush=True)
     print("=" * 70 + "\n", flush=True)
     
@@ -109,7 +109,7 @@ def run_focused_position_guardian(max_duration_secs: int = 14400):
             if not hb or not isinstance(hb, dict) or not hb.get("symbol"):
                 # La posición se ha cerrado
                 print(f"\n🎯 [OPERACIÓN FINALIZADA TRAS {tick}s] Salida ejecutada con éxito.", flush=True)
-                print("🔄 Sincronizando billetera y reactivando Radar Cuántico de 120 Pares...\n", flush=True)
+                print("🔄 Sincronizando billetera y reactivando Radar Cuántico de 67 Pares Top 100 CMC...\n", flush=True)
                 try:
                     api_connector.diagnose_full_spot_wallet()
                 except Exception:

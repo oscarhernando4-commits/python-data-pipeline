@@ -132,7 +132,7 @@ def get_market_macro_context(symbol_analysis_map: Dict[str, Any], fear_greed: Di
         f"  🪙 Guardián Bitcoin: ${btc_price:,.0f} (RSI 15M: {btc_rsi_15m:.1f} | Score: {btc_score}) -> {btc_status_label}",
         f"  📊 Amplitud de Mercado: {breadth_label} ({bullish_pct}% Fuertes de {total} analizados)",
         f"  🔥 Sector Líder Institucional: {top_sector} (Score Promedio: {top_sector_score}/100 | Prioridad Alta)",
-        f"  🎯 Top 3 Finalistas Alpha: [{top_str}] | Fear & Greed: {fg_val} ({fg_label})",
+        f"  🎯 Top 3 Líderes del Escáner (de {total} Pares Top 100 CMC): [{top_str}] | Fear & Greed: {fg_val} ({fg_label})",
         "═══════════════════════════════════════════════════════════════════════\n"
     ]
     for line in dashboard_lines:

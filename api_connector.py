@@ -1654,13 +1654,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         "is_ai_champion": False
                     })
         
-        # Limit to top 15 finalists
-        candidate_queue = candidate_queue[:15]
-        
         if not candidate_queue:
             return
             
-        print(f"\n🔬 [SÚPER-CEREBRO 15 FINALISTAS] Iniciando escaneo secuencial de ADN Activo y Confluencia 5-TF en {len(candidate_queue)} activos...")
+        total_cands = len(candidate_queue)
+        print(f"\n🔬 [SÚPER-CEREBRO TOP 100 CMC] Iniciando escaneo secuencial de ADN Activo y Confluencia 8D en {total_cands} activos...")
         
         executed_trade = False
         import adaptive_asset_dna
@@ -1701,7 +1699,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 time_since_last_exit = now_epoch - last_closed_time
                 if not (is_ai_top and time_since_last_exit >= 300) and not (discount_from_exit_pct >= 1.50 and time_since_last_exit >= 180):
                     mins_passed = int(time_since_last_exit / 60)
-                    print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] En Cooldown 4H ({mins_passed}m transcurridos). Pasando al siguiente finalista...")
+                    print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] En Cooldown 4H ({mins_passed}m transcurridos). Pasando al siguiente finalista...")
                     continue  # Cooldown is temporal, cascading is OK
             
             # 5. Multi-Timeframe Institutional Analysis (1m, 2m, 5m, 15m, 1h)
@@ -1711,11 +1709,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             
             # Re-evaluate archetype with live 15M ATR
             arch_dna = adaptive_asset_dna.get_asset_dna_archetype(cand_sym, atr_15m, cand_price)
-            print(f"🧬 [ADN ACTIVO #{cand_idx}/15] {cand_sym} ({cand_score} Pts) -> {arch_dna.get('label')} (ATR={atr_15m:.2f}%, SL={arch_dna.get('initial_sl_pct')}%, MaxT={arch_dna.get('max_stagnation_minutes')}m)")
+            print(f"🧬 [ADN ACTIVO #{cand_idx}/{total_cands}] {cand_sym} ({cand_score} Pts) -> {arch_dna.get('label')} (ATR={atr_15m:.2f}%, SL={arch_dna.get('initial_sl_pct')}%, MaxT={arch_dna.get('max_stagnation_minutes')}m)")
             
             # 6. Veto Zombi / Mega-Cap lenta (ATR < 0.35%)
             if arch_dna.get("is_low_volatility_zombie", False):
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por ATR insuficiente ({atr_15m:.2f}% < 0.35% o Mega-Cap lenta).")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por ATR insuficiente ({atr_15m:.2f}% < 0.35% o Mega-Cap lenta).")
                 continue
                 
             tf_1m = tf_align.get("1m", "BEARISH")
@@ -1770,11 +1768,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             is_at_daily_ceiling = mtf_res.get("is_at_daily_resistance_ceiling", False)
             
             if is_at_daily_ceiling or is_15m_cascade or is_active_falling_knife:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Techo/Cascada/Cuchillo.")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Techo/Cascada/Cuchillo.")
                 continue
                 
             if mtf_res.get("obv_trend") == "DISTRIBUTING":
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Distribución Institucional (OBV=DISTRIBUTING).")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Distribución Institucional (OBV=DISTRIBUTING).")
                 continue
                 
             # 🎯 VETO DE CONFLUENCIA FRACTAL DE SUELO (1M + 2M + 5M + 10M + 15M + 30M + 1H + 2H):
@@ -1804,12 +1802,12 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             )
             
             if not is_macro_base_valid or is_at_daily_ceiling:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado: Fuera de la Matriz Armónica 8D o en Techo:")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado: Fuera de la Matriz Armónica 8D o en Techo:")
                 print(f"     Canales: [1M: {range_pos_1m*100:.0f}% (max 35) | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% (max 40) | 10M: {range_pos_10m*100:.0f}% (max 45) | 15M: {range_pos_15m*100:.0f}% (max 50) | 30M: {range_pos_30m*100:.0f}% (max 55) | 1H: {range_pos_1h*100:.0f}% (max 60) | 2H: {range_pos_2h*100:.0f}% (max 60)]")
                 continue
                 
             if not has_floor_turnaround:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Falta de Giro de Suelo en 1M/2M.")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Falta de Giro de Suelo en 1M/2M.")
                 continue
                 
             is_spring = mtf_res.get("spring_coiling", {}).get("is_spring_compressed", False)
@@ -1818,7 +1816,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 # Allow entries up to RSI 60 if there is strong volume ignition or FII confirmation
                 rsi_hard_cap = 60.0 if (vol_1m_now >= 1.5 or fii >= 50 or has_dual_sub_minute_ignition) else 54.0
                 if mtf_res.get("rsi_2m", 50.0) > rsi_hard_cap or mtf_res.get("rsi_1m", 50.0) > rsi_hard_cap:
-                    print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Entrada Tardía (RSI 2M={mtf_res.get('rsi_2m'):.1f} > {rsi_hard_cap:.0f}).")
+                    print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Entrada Tardía (RSI 2M={mtf_res.get('rsi_2m'):.1f} > {rsi_hard_cap:.0f}).")
                     continue
                 
             # 7. Orderbook Depth & Micro-Surge Checks
@@ -1828,15 +1826,15 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             
             max_allowed_spread = 0.30 if ob_info.get("bid_vol_usdt", 0.0) >= 35000.0 else 0.26
             if spread_now > max_allowed_spread:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Spread excesivo ({spread_now:.3f}% > {max_allowed_spread:.3f}%).")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Spread excesivo ({spread_now:.3f}% > {max_allowed_spread:.3f}%).")
                 continue
                 
             if bid_dom_now < 49.0:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Bids insuficientes ({bid_dom_now:.1f}% < 49.0%).")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Bids insuficientes ({bid_dom_now:.1f}% < 49.0%).")
                 continue
                 
             if ob_info.get("bid_vol_usdt", 0.0) > 0 and ob_info.get("bid_vol_usdt", 0.0) < 15000.0:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Muro Bids delgado (${ob_info.get('bid_vol_usdt', 0.0):,.0f} < $15k).")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Muro Bids delgado (${ob_info.get('bid_vol_usdt', 0.0):,.0f} < $15k).")
                 continue
                 
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
@@ -1851,7 +1849,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             # 🚀 REGLA DE ORO DE LIQUIDEZ Y VOLUMEN ACTIVO (Elimina trampas de liquidez muerta como COMP):
             # 1. Prohibido comprar si el volumen de 15M está muerto (< 0.40x) sin importar otros indicadores
             if vol_15m_now < 0.40 and vol_1m_now < 1.5:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Volumen 15M Muerto ({vol_15m_now:.2f}x < 0.40x). Exige liquidez activa real.")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Volumen 15M Muerto ({vol_15m_now:.2f}x < 0.40x). Exige liquidez activa real.")
                 continue
                 
             is_dead_volume = (vol_1m_now < 0.50 and vol_15m_now < 0.60)
@@ -1866,16 +1864,16 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             has_trigger_candle = (tf_1m_up or is_1m_wick or mtf_res.get("is_ground_zero_micro_ignition", False))
             
             if is_dead_volume or not has_active_ignition:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Volumen Insuficiente/Sin Ignición (1M={vol_1m_now:.2f}x, 15M={vol_15m_now:.2f}x). Exige compradores activos.")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Volumen Insuficiente/Sin Ignición (1M={vol_1m_now:.2f}x, 15M={vol_15m_now:.2f}x). Exige compradores activos.")
                 continue
                 
             if not has_trigger_candle:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Descartado por Vela 1M Roja en caída sin mecha de absorción. Exige giro verde.")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Vela 1M Roja en caída sin mecha de absorción. Exige giro verde.")
                 continue
                 
             final_cand_score = max(cand_score, mtf_res.get("multi_tf_score", 50))
             if final_cand_score < min_required_score:
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] Score insuficiente ({final_cand_score} < {min_required_score}).")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Score insuficiente ({final_cand_score} < {min_required_score}).")
                 continue
                 
             # ═══════════════════════════════════════════════════════════════════════
@@ -1891,7 +1889,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             
             # Veto CCI Overbought: Si el CCI está por encima de +150, el activo ya subió demasiado
             if is_cci_overbought and not (vol_1m_now >= 2.5):
-                print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] CCI Sobrecomprado ({cci_val:.0f} >= 150). Entrada prohibida en cima.")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] CCI Sobrecomprado ({cci_val:.0f} >= 150). Entrada prohibida en cima.")
                 continue
             
             # 🧬 BLACKLIST DINÁMICA TIERED + WHITELIST ÉLITE (Aprendizaje de Simulaciones + Cuenta Real):
@@ -1906,7 +1904,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 if bl_entry:
                     tier = bl_entry["tier"]
                     tier_label = {"HARD": "☠️ TÓXICO HARD", "MID": "🔴 TÓXICO MID", "SOFT": "🟠 TÓXICO SOFT"}.get(tier, "⛔ TÓXICO")
-                    print(f"  ⛔ [#{cand_idx}/15 {cand_sym}] ADN {tier_label}: WR={bl_entry['win_rate']:.0f}% en {bl_entry['total_trades']} trades (PnL acum: ${bl_entry['pnl_usd']:.2f}). Blacklist dinámica activa.")
+                    print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] ADN {tier_label}: WR={bl_entry['win_rate']:.0f}% en {bl_entry['total_trades']} trades (PnL acum: ${bl_entry['pnl_usd']:.2f}). Blacklist dinámica activa.")
                     continue
                 
                 elite_entry = _dyn_elite.get(cand_sym)
@@ -1934,7 +1932,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             adx_label = f"ADX={adx_val:.0f}" if adx_val is not None else "ADX=N/A"
             
             print(f"\n💎 ═══════════════════════════════════════════════════════════════════════════════════")
-            print(f"🚀 [DICTAMEN & EJECUCIÓN CUÁNTICA SPOT: #{cand_idx}/15 -> {cand_sym}]")
+            print(f"🚀 [DICTAMEN & EJECUCIÓN CUÁNTICA SPOT: #{cand_idx}/{total_cands} -> {cand_sym}]")
             print(f"═══════════════════════════════════════════════════════════════════════════════════════")
             print(f"🧬 Arquetipo ADN: {cand_archetype.get('label')} | SL Inicial: {arch_dna.get('initial_sl_pct', -0.75)}% | Cosecha Fase 2: +0.44%{token_dna_label}")
             print(f"📊 Score MTF: {final_cand_score}/100 | FII Suelo: {fii}/100 | ATR: {atr_15m:.2f}% | Spread: {ob_info.get('spread_pct'):.3f}%")
@@ -2018,7 +2016,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 break
                 
         if not executed_trade:
-            print(f"🔒 [CASCADE EVALUATION 15 FINALISTAS] Se evaluaron los {len(candidate_queue)} finalistas con ADN Activo y 5-TF. Ninguno superó el 100% de los filtros en este ciclo. 100% USDT protegido.")
+            print(f"🔒 [CASCADE EVALUATION TOP 100 CMC] Se evaluaron los {len(candidate_queue)} candidatos con ADN Activo y Confluencia 8D. Ninguno superó el 100% de los filtros en este ciclo. 100% USDT protegido.")
 
     state["current_balance_usd"] = round(state.get("current_balance_usd", 20.07), 2)
     state["net_pnl_usd"] = round(state["current_balance_usd"] - state.get("initial_deposit_usdt", 17.13), 2)
