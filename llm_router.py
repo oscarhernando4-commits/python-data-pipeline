@@ -540,9 +540,8 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     
     PASO 1 🔬 LECTURA DE LA RADIOGRAFÍA 360° Y CANAL FRACTAL CONFLUENTE:
     - Revisa la RADIOGRAFÍA 360° ADN y el CANAL FRACTAL (% Suelo a Cima en 1M, 5M, 15M, 1H).
-    - 💎 ARQUETIPO DCR / OLA 2 GOLDEN RETEST: Si un activo muestra "PATRÓN FRACTAL DCR" (Retesteo de Oro Ola 2 en MA25 o Resorte Comprimido 1M), dale MÁXIMA PRIORIDAD de compra porque ofrece el ratio Riesgo/Beneficio más asimétrico del mercado (>3:1).
-    - 🎯 REGLA DE ORO DE SUELO FRACTAL CONFLUENTE (Comprar en el Suelo Real): Exige que el precio esté en la PARTE BAJA simultáneamente en 1M (<= 45%), 2M (<= 50%), 5M (<= 50%), 15M (<= 55%) y 30M (<= 60%). Si el precio está flotando en el CENTRO o TECHO de 5M/15M (Canal > 55%), ese activo está en medio o final de un rally previo: VÉTALO categóricamente por riesgo de corrección contra el Stop Loss de -0.50%.
-    - ZONA ÓPTIMA DE COMPRA (Sweet-Spot): Prioriza activos en la BASE o Pullback Constructivo (1H <= 55%, 15M <= 50%, 5M <= 50%, 1M <= 40%).
+    - 🎯 REGLA DE ORO DE LA MATRIZ ARMÓNICA 8D (Comprar en el Suelo Real): Exige que el precio esté en la BASE simultáneamente: 1M (<= 35%), 2M (<= 38%), 5M (<= 40%), 10M (<= 45%), 15M (<= 50%), 30M (<= 55%), 1H (<= 60%) y 2H (<= 60%). Si el precio está flotando en el TECHO de 1H/2H (Canal >= 68%), VÉTALO categóricamente.
+    - ZONA ÓPTIMA DE COMPRA (Sweet-Spot): Prioriza activos en la BASE exacta (1M <= 35%, 5M <= 40%, 15M <= 50%, 1H <= 60%).
     - ALPHA & ABSORCIÓN: Premia fuertemente activos con Alpha vs BTC > +0.20% y Mecha de Absorción 1M >= 15% (compradores comprando el dip en soporte).
     - 🚫 VETO DE VOLUMEN MUERTO (Anti-Estancamiento): PROHIBIDO comprar si el candidato tiene volumen muerto (Vol1M < 0.80x o Vol15M < 0.80x). Exige compradores reales activos (Vol1M >= 1.0x o Vol15M >= 1.2x).
     REGLAS DE DECISIÓN DEL CEO:
