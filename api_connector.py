@@ -1827,7 +1827,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Spread excesivo ({spread_now:.3f}% > {max_allowed_spread:.3f}%).")
                 continue
                 
-            min_bid_dom = 44.5 if (fii >= 45 and ob_info.get("bid_vol_usdt", 0.0) >= 15000.0) else 48.0
+            min_bid_dom = 45.0 if (fii >= 45 and ob_info.get("bid_vol_usdt", 0.0) >= 15000.0) else 48.0
             if bid_dom_now < min_bid_dom:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Bids insuficientes ({bid_dom_now:.1f}% < {min_bid_dom:.1f}%).")
                 continue
