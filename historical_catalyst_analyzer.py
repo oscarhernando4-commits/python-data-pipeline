@@ -224,7 +224,7 @@ date: {now_str}
 
 ## 🔗 NAVEGACIÓN RÁPIDA
 - [[📊_MASTER_DASHBOARD_TRADING|Ver Master Dashboard]]
-- [[🚀_Matriz_100_Simulaciones|Ver Matriz de 100 Cuentas]]
+- [[🚀_Matriz_1000_Simulaciones|Ver Matriz de 1000 Cuentas]]
 - [[🧠_Matriz_De_Aprendizaje|Ver Matriz de IA y Reglas]]
 - [[🛡️_Escudo_Anti_Caidas_Y_Riesgo|Ver Escudo Anti-Caídas]]
 """

@@ -917,7 +917,7 @@ def generate_web_dashboard():
             <span>📊</span> ESCÁNER CUÁNTICO
         </button>
         <button class="tab-btn" data-tab="tab-matrix" onclick="switchTab('tab-matrix')">
-            <span>🌐</span> MATRIX 100 CUENTAS
+            <span>🌐</span> MATRIX 1000 CUENTAS
         </button>
     </div>
 
@@ -1030,12 +1030,12 @@ def generate_web_dashboard():
         </div>
     </div>
 
-    <!-- PESTAÑA 4: MATRIX 100 CUENTAS (ANÁLISIS COMPLETO EN VIVO) -->
+    <!-- PESTAÑA 4: MATRIX 1000 CUENTAS (ANÁLISIS COMPLETO EN VIVO) -->
     <div id="tab-matrix" class="tab-content">
         <div class="matrix-card">
             <div class="matrix-header">
                 <div>
-                    <div class="matrix-title">🌐 MATRIX 100 CUENTAS — ANÁLISIS COMPLETO DE SIMULACIONES EN VIVO</div>
+                    <div class="matrix-title">🌐 MATRIX 1000 CUENTAS — ANÁLISIS COMPLETO DE SIMULACIONES EN VIVO</div>
                     <div class="matrix-total-val">${matrix_total:,.2f} USD</div>
                     <div class="matrix-pnl" style="color: {pnl_color};">{pnl_sign}${matrix_pnl:,.2f} PnL Neto Total | Win Rate {matrix_wr:.1f}%</div>
                 </div>

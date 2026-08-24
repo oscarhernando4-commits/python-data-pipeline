@@ -1133,15 +1133,15 @@ def sync_live_matrix_obsidian(matrix):
         f"  - trading\n"
         f"  - simulacion\n"
         f"aliases:\n"
-        f"  - Matriz 100 Cuentas\n"
+        f"  - Matriz 1000 Cuentas\n"
         f"cssclasses:\n"
         f"  - matrix-report\n"
         f"date: {now_str}\n"
         f"---\n\n"
         f"{real_section}"
-        f"# 🚀 MATRIZ CLASIFICADA EN 5 GRUPOS PROGRESIVOS (100 CUENTAS TESTNET)\n\n"
-        f"> [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ:**  \n"
-        f"> - 💵 **Fondo Inicial:** `$10,000.00 USD` (100 Cuentas x $100)  \n"
+        f"# 🚀 MATRIZ CLASIFICADA EN 6 GRUPOS PROGRESIVOS (1000 CUENTAS TESTNET / $100,000 USD)\n\n"
+        f"> [!IMPORTANT] 📊 **RESUMEN GLOBAL DE LA MATRIZ (1000 CUENTAS GENÉTICAS):**  \n"
+        f"> - 💵 **Fondo Inicial:** `$100,000.00 USD` (1,000 Cuentas x $100)  \n"
         f"> - 📈 **Capital Total Acumulado:** **`${matrix['current_total_usd']:,.2f} USD`** (`${matrix['net_pnl_usd']:+,.2f} USD`)  \n"
         f"> - 🟢 **Cuentas Ganadoras (+2% Meta Cumplida):** `{winning_accs} Cuentas ({pct_winning}%)`  \n"
         f"> - 🔴 **Cuentas en Pérdida (-1.0% Stop Loss):** `{losing_accs} Cuentas ({pct_losing}%)`  \n"
@@ -1156,7 +1156,7 @@ def sync_live_matrix_obsidian(matrix):
         f"- [[🛡️_Escudo_Anti_Caidas_Y_Riesgo|Ver Escudo Anti-Caídas]]\n"
     )
     
-    file_path = os.path.join(OBSIDIAN_FOLDER, "🚀_Matriz_100_Simulaciones.md")
+    file_path = os.path.join(OBSIDIAN_FOLDER, "🚀_Matriz_1000_Simulaciones.md")
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(matrix_md)
     return file_path

@@ -189,7 +189,7 @@ def generate_super_cerebro_report():
 ---
 ## 🔗 NAVEGACIÓN RÁPIDA DE OBSIDIAN
 - [[📊_MASTER_DASHBOARD_TRADING|Volver al Master Dashboard]]
-- [[🚀_Matriz_100_Simulaciones|Ver Matriz de 100 Cuentas]]
+- [[🚀_Matriz_1000_Simulaciones|Ver Matriz de 1000 Cuentas]]
 - [[🎯_Seguimiento_De_Metas|Ver Metas $100 USD]]
 - [[🛡️_Escudo_Anti_Caidas_Y_Riesgo|Ver Escudo Anti-Caídas]]
 """

@@ -119,9 +119,9 @@ date: {now_str}
 
 | Métrica | Valor Actual | ¿Qué Significa? |
 | :--- | :--- | :--- |
-| 💵 **Capital Total (Fondo $10k):** | **`${total_fund:,.2f} USD`** | Balance de las 100 cuentas de prueba |
+| 💵 **Capital Total (Fondo $100k):** | **`${total_fund:,.2f} USD`** | Balance de las 1,000 cuentas de prueba |
 | 💰 **Ganancia Neta Total:** | **`${net_pnl:+,.2f} USD`** | Resultado global acumulado |
-| 🎯 **Cuentas que cumplieron la meta:** | **`{goals_reached} de 100 Cuentas`** | Cuentas que alcanzaron el +3% esta semana |
+| 🎯 **Cuentas que cumplieron la meta:** | **`{goals_reached} de 1000 Cuentas`** | Cuentas que alcanzaron el +3% esta semana |
 | 📈 **Tasa de Acierto de la IA:** | **`{win_rate}% Win Rate`** | Efectividad actual de las estrategias |
 
 ---
@@ -138,16 +138,26 @@ date: {now_str}
 ## 🎯 3. PROGRESO HACIA LA META SEMANAL (+3% SOBRE $100)
 
 > [!IMPORTANT] 🏆 META SEMANA 1: $103.00 USD (Promedio)
-> **Progreso Actual:** `[{bar_str}] {progress_pct:.1f}%`
-> 
-> - 💵 **Capital Base (Promedio):** `$100.00 USD`
-> - 🎯 **Meta Semanal (Promedio):** `$103.00 USD`
-> - 💰 **Capital Promedio Actual:** `${avg_bal:.2f} USD`
-> - 🟡 **Estado:** `🟡 EN PROCESO - Buscando el +3% de ganancia en operaciones filtradas`
+> - **Capital Inicial Promedio:** `$100.00 USD`
+> - **Capital Actual Promedio:** **`${avg_balance:,.2f} USD`**
+> - **Ganancia Neta Promedio:** **`{total_growth_pct:+.2f}%`**
+> - **Estado:** `{status_emoji} {status_text}`
 
 ---
 
-## 💰 4. INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS)
+## 📊 4. COMPARATIVA POR GRUPOS ESTRATÉGICOS (DE MEJOR A PEOR)
+
+{group_rows}
+
+---
+
+## 🔗 NAVEGACIÓN RÁPIDA DE OBSIDIAN
+
+- [[🚀_Matriz_1000_Simulaciones|Ver Lista Completa de las 1000 Cuentas]]
+
+---
+
+## 💰 5. INVERSIÓN REAL EN VIVO (BINANCE SPOT & FUTUROS)
 
 > [!TIP] 🏦 ESTADO DE LA CUENTA REAL
 > - 💵 **Balance Real Actual:** `${real_bal:.2f} USD` (`{real_pnl:+.2f} USD`)
@@ -181,7 +191,7 @@ date: {now_str}
 ---
 
 ## 🔗 8. NAVEGACIÓN EN 1-CLIC (DETALLES Y TABLAS COMPLETAS)
-- [[🚀_Matriz_100_Simulaciones|Ver Lista Completa de las 100 Cuentas]]
+- [[🚀_Matriz_1000_Simulaciones|Ver Lista Completa de las 1000 Cuentas]]
 - [[🎯_Seguimiento_De_Metas|Ver Tabla de Metas Semana a Semana]]
 - [[📊_Dashboard_Interes_Compuesto|Ver Proyección de Interés Compuesto]]
 - [[📚_Historial_Super_Detallado|Ver Historial Súper Detallado de Trades (Contexto IA)]]
@@ -219,10 +229,10 @@ Análisis de rendimiento detallado a 1D, 3D, 1W, 2W, y 1M:
     except Exception as e:
         print(f"Error generating subreports: {e}")
         
-    # NEW: Also regenerate the Matriz 100 Simulaciones markdown locally!
+    # NEW: Also regenerate the Matriz 1000 Simulaciones markdown locally!
     try:
         pipeline_processor.sync_live_matrix_obsidian(matrix)
-        print("Matriz de 100 Simulaciones actualizada localmente.")
+        print("Matriz de 1000 Simulaciones actualizada localmente.")
     except Exception as e:
         print(f"Error generando matriz local: {e}")
         
