@@ -65,7 +65,7 @@ ARCHETYPE_CONFIGS = {
         "label": "🐆 SPRINT HIPER-VOLÁTIL (Meme / High-Beta)",
         "emoji": "🐆",
         "initial_sl_pct": -0.75,          # SL Asimétrico de -0.75% para respiración amplia
-        "max_stagnation_minutes": 50,     # 50 min para confirmar despegue en Top 100 Memes
+        "max_stagnation_minutes": 90,     # 90 min (1.5h) para madurar el despegue en Top 100 Memes
         "phase_2_trigger_pct": 0.45,      # Asegura ganancias al subir +0.45%
         "phase_2_retention_ratio": 0.75,  # Retiene el 75% de la cima alcanzada
         "phase_3_trigger_pct": 1.20,      # Expansión de impulso
@@ -75,14 +75,14 @@ ARCHETYPE_CONFIGS = {
         "required_min_bids_pct": 52.0,    # Libro con clara dominancia de compradores
         "trend_ride_enabled": False,      # Tomar ganancias en retrocesos
         "wick_slack": 0.30,
-        "guideline_for_ai": "Trata este activo como un SPRINT. Exige volumen explosivo en 1M/10s. Cosecha ganancias rápido y dale 50m de paciencia."
+        "guideline_for_ai": "Trata este activo como un SPRINT. Exige volumen explosivo en 1M/10s. Cosecha ganancias y dale 90m de paciencia."
     },
     "BLUE_CHIP_CORE": {
         "archetype": "BLUE_CHIP_CORE",
         "label": "🏛️ BLUE-CHIP INSTITUCIONAL (L1 / Core)",
         "emoji": "🏛️",
         "initial_sl_pct": -0.65,          # SL Defensivo de -0.65%
-        "max_stagnation_minutes": 90,     # 90 min (1.5h) para maduración fractal completa de ciclo 15M/1H
+        "max_stagnation_minutes": 180,    # 180 min (3.0h) para maduración fractal completa de ciclo 15M/1H/2H
         "phase_2_trigger_pct": 0.45,      # Break-even estándar al tocar +0.45%
         "phase_2_retention_ratio": 0.75,  # Retiene el 75% de la cima alcanzada
         "phase_3_trigger_pct": 1.50,      # Expansión de tendencia
@@ -92,14 +92,14 @@ ARCHETYPE_CONFIGS = {
         "required_min_bids_pct": 48.0,
         "trend_ride_enabled": False,      # Cosecha de precisión (cero retrasos)
         "wick_slack": 0.32,
-        "guideline_for_ai": "Trata este activo como CORE. Exige confluencia y ATR >= 0.35%. Dale 90m de paciencia para madurar el ciclo institucional."
+        "guideline_for_ai": "Trata este activo como CORE. Exige confluencia y ATR >= 0.35%. Dale 180m (3h) de paciencia para madurar el ciclo institucional."
     },
     "SECTOR_ROTATION": {
         "archetype": "SECTOR_ROTATION",
         "label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
         "emoji": "🧩",
         "initial_sl_pct": -0.75,          # SL Asimétrico de -0.75% para respiración óptima
-        "max_stagnation_minutes": 75,     # 75 min (1h 15m) para confirmar rotación sectorial
+        "max_stagnation_minutes": 150,    # 150 min (2.5h) para confirmar rotación sectorial y expansión
         "phase_2_trigger_pct": 0.45,
         "phase_2_retention_ratio": 0.75,  # Retiene 75% de la cima
         "phase_3_trigger_pct": 1.50,
@@ -109,14 +109,14 @@ ARCHETYPE_CONFIGS = {
         "required_min_bids_pct": 50.0,
         "trend_ride_enabled": False,
         "wick_slack": 0.32,
-        "guideline_for_ai": "Trata este activo como ROTACIÓN SECTORIAL. Exige sector caliente y volumen. Dale 75m de paciencia."
+        "guideline_for_ai": "Trata este activo como ROTACIÓN SECTORIAL. Exige sector caliente y volumen. Dale 150m (2.5h) de paciencia."
     },
     "THIN_BOOK_MICRO": {
         "archetype": "THIN_BOOK_MICRO",
         "label": "🎯 MICRO-CAP / LIBRO DELGADO",
         "emoji": "🎯",
         "initial_sl_pct": -0.65,          # SL Defensivo de -0.65%
-        "max_stagnation_minutes": 45,     # 45 min de paciencia
+        "max_stagnation_minutes": 75,     # 75 min (1h 15m) de paciencia
         "phase_2_trigger_pct": 0.40,      # Bloqueo de ganancia rápido
         "phase_2_retention_ratio": 0.75,  # Retiene 75% de la cima
         "phase_3_trigger_pct": 1.10,
@@ -126,7 +126,7 @@ ARCHETYPE_CONFIGS = {
         "required_min_bids_pct": 54.0,    # Exige fuerte muro comprador
         "trend_ride_enabled": False,
         "wick_slack": 0.28,
-        "guideline_for_ai": "Trata este activo como LIBRO DELGADO. Exige volumen real y muro de Bids > $25k. Dale 45m de paciencia."
+        "guideline_for_ai": "Trata este activo como LIBRO DELGADO. Exige volumen real y muro de Bids > $25k. Dale 75m de paciencia."
     }
 }
 

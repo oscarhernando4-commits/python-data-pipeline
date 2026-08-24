@@ -1236,18 +1236,17 @@ def analyze_multi_timeframe_candles(symbol):
     )
     
     # ═══════════════════════════════════════════════════════════════════════
-    # 🌌 MATRIZ DE CONFLUENCIA FRACTAL DE SUELO MULTITEMPORAL:
-    # Garantiza entrada en el SUELO CONFLUENTE de 1M, 2M, 5M, 15M, 30M y 1H
+    # 🌌 MATRIZ DE CONFLUENCIA FRACTAL DE SUELO 8D (1M, 2M, 5M, 10M, 15M, 30M, 1H, 2H):
+    # Garantiza entrada ESTRICTAMENTE en la BASE/PISO de todas las velas y canales
     # ═══════════════════════════════════════════════════════════════════════
-    is_1m_floor_zone = bool(range_position_1m <= 0.45)
-    is_1m_center_zone = bool(0.45 < range_position_1m < 0.65)
-    is_1m_ceiling_zone = bool(range_position_1m >= 0.65)
-    
-    is_2m_floor_zone = bool(range_position_2m <= 0.50)
-    is_5m_floor_zone = bool(range_position_5m <= 0.50)
-    is_15m_floor_zone = bool(range_position_15m <= 0.55)
-    is_30m_floor_zone = bool(range_position_30m <= 0.60)
-    is_1h_floor_zone = bool(range_position_1h <= 0.60)
+    is_1m_floor_zone = bool(range_position_1m <= 0.35)
+    is_2m_floor_zone = bool(range_position_2m <= 0.38)
+    is_5m_floor_zone = bool(range_position_5m <= 0.42)
+    is_10m_floor_zone = bool(range_position_10m <= 0.45)
+    is_15m_floor_zone = bool(range_position_15m <= 0.45)
+    is_30m_floor_zone = bool(range_position_30m <= 0.48)
+    is_1h_floor_zone = bool(range_position_1h <= 0.50)
+    is_2h_floor_zone = bool(range_position_2h <= 0.52)
 
     # Detección de Mecha Inferior en Vela de 1M (Absorción de Suelo):
     lower_wick_1m_pct = 0.0
@@ -1262,30 +1261,32 @@ def analyze_multi_timeframe_candles(symbol):
             
     is_1m_lower_wick_absorption = bool(lower_wick_1m_pct >= 20.0 and tf_1m_up)
     
-    # Suelo Micro 1M / 2M
+    # Suelo Micro 1M / 2M (Solo gatilla si está en base real con absorción o giro verde)
     is_1m_true_floor = bool(
         is_1m_floor_zone or 
         is_1m_lower_wick_absorption or 
-        (rsi_1m <= 42.0 and tf_1m_up) or
-        (range_position_2m <= 0.45 and tf_2m_up)
+        (rsi_1m <= 40.0 and tf_1m_up) or
+        (range_position_2m <= 0.38 and tf_2m_up)
     )
     
-    # Suelo Estructural & Contextual (5M / 15M / 30M / 1H)
-    # Permite pullbacks constructivos en base (15M <= 55%, 5M <= 55%, 1H <= 72%)
+    # Suelo Estructural & Contextual en 8D (5M, 10M, 15M, 30M, 1H, 2H)
+    # Exige que el precio esté en la mitad inferior de TODAS las escalas temporales
     is_structural_floor_ok = bool(
-        range_position_5m <= 0.55 and
-        range_position_15m <= 0.55 and
-        range_position_30m <= 0.65 and
-        range_position_1h <= 0.72
+        range_position_5m <= 0.45 and
+        range_position_10m <= 0.45 and
+        range_position_15m <= 0.45 and
+        range_position_30m <= 0.50 and
+        range_position_1h <= 0.52 and
+        range_position_2h <= 0.55
     )
 
     # Confluencia Fractal Suprema de Suelo (TODAS las escalas en la base):
     is_confluent_fractal_floor = bool(
         is_1m_true_floor and
         is_structural_floor_ok and
-        rsi_1m <= 55.0 and
-        rsi_5m <= 60.0 and
-        rsi_15m <= 62.0 and
+        rsi_1m <= 50.0 and
+        rsi_5m <= 55.0 and
+        rsi_15m <= 58.0 and
         not is_15m_red_cascade and
         not is_at_daily_resistance_ceiling
     )
@@ -1628,18 +1629,18 @@ def analyze_multi_timeframe_candles(symbol):
             "1h": "BULLISH" if tf_1h_up else "BEARISH",
             "1d": "BULLISH" if tf_1d_up else "BEARISH"
         },
-        # ─── PATRÓN DE SUELO FRACTAL MULTITEMPORAL (1M, 2M, 5M, 15M, 30M, 1H) ───
+        # ─── PATRÓN DE SUELO FRACTAL MULTITEMPORAL 8D (1M, 2M, 5M, 10M, 15M, 30M, 1H, 2H) ───
         "is_confluent_fractal_floor": is_confluent_fractal_floor,
         "is_structural_floor_ok": is_structural_floor_ok,
         "is_1m_true_floor": is_1m_true_floor,
         "is_1m_floor_zone": is_1m_floor_zone,
-        "is_1m_center_zone": is_1m_center_zone,
-        "is_1m_ceiling_zone": is_1m_ceiling_zone,
         "is_2m_floor_zone": is_2m_floor_zone,
         "is_5m_floor_zone": is_5m_floor_zone,
+        "is_10m_floor_zone": is_10m_floor_zone,
         "is_15m_floor_zone": is_15m_floor_zone,
         "is_30m_floor_zone": is_30m_floor_zone,
         "is_1h_floor_zone": is_1h_floor_zone,
+        "is_2h_floor_zone": is_2h_floor_zone,
         "lower_wick_1m_pct": lower_wick_1m_pct,
         "is_1m_lower_wick_absorption": is_1m_lower_wick_absorption,
         # ─── ADX + CCI INTELIGENCIA DE TENDENCIA (Conectados al ADN) ───
