@@ -15,8 +15,8 @@
     "side": "LONG",
     "quantity": 71.2,
     "break_even": false,
-    "highest_price": 0.198,
-    "phase": 1,
+    "highest_price": 0.1991,
+    "phase": 3,
     "archetype": "HYPER_VOLATILE_SPRINT",
     "archetype_label": "🐆 SPRINT HIPER-VOLÁTIL (Meme / High-Beta)",
     "initial_sl_pct": -0.75,
@@ -33,7 +33,9 @@
     "dna_tier": "HIGH_BETA_RUNNER",
     "optimal_trailing_slack_pct": 1.08,
     "target_resistance_price": 0.2056,
-    "pump_probability_pct": 35
+    "pump_probability_pct": 35,
+    "holding_cycles": 5,
+    "volatility_regime": "🔒 FASE 3 SEGURO DE GANANCIA +0.20% NETO (🐆 Cima +0.56% | Retención 65% -> Piso +0.36%)"
   },
   "last_trade_time": "26-08-24<br>00:50",
   "status": "🔵 En Vivo LONG (SYRUPUSDT @ $0.1980)",
