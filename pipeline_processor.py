@@ -750,11 +750,12 @@ def run_infinite_trading_matrix_cycle():
             position["phase"] = phase
             position["phase_label"] = phase_label
             
-            # Exit Conditions: Trailing Stop OR 60m Micro-Scratch at <= -0.50%
+            # Exit Conditions: Trailing Stop OR 4 Hours (240m) Limit in Phase 1
             should_close = unr_pct <= sl_pct
-            if not should_close and holding_mins >= 60 and unr_pct <= -0.50:
+            if not should_close and holding_mins >= 240 and unr_pct <= -0.50:
                 should_close = True
-                phase_label = f"🚪 Micro-Scratch 60m ({unr_pct:+.2f}%)"
+                phase_label = f"🚪 Límite 4 Horas ({unr_pct:+.2f}%)"
+
             
             invested = curr_bal * 0.20  # 20% position size per simulation trade
             bnb_fee = invested * 0.00075 * 2  # 0.075% BNB discount fee (entrada + salida = 0.15%)

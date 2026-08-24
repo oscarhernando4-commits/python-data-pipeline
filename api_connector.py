@@ -1230,43 +1230,24 @@ def quick_position_heartbeat():
                     should_exit = True
                     exit_reason = f"🚨 ESCUDO BITCOIN ACTIVO: BTC cayó {btc_drop_pct:+.2f}% desde la entrada. Eyectando {sym} para evitar contagio de la caída general."
             
-        # ⏱️ LIBERACIÓN ESTRICTA POR TIEMPO Y ESTANCAMIENTO / SCRATCH PREVENTIVO:
-        max_stag_mins = int(arch_dna.get("max_stagnation_minutes", 60))
-        is_sniper = pos.get("is_sniper_setup", False)
-        is_super_sniper_hb = pos.get("is_super_sniper", False)
-
-        # SNIPER MODE: más paciencia para que el trade llegue a Phase 4-5 (+1.0%+)
-        # En setup explosivo, el mercado necesita más tiempo para desarrollar el movimiento completo.
-        if is_super_sniper_hb:
-            sniper_scratch_mins = 180   # 3 horas máximo para súper sniper
-            sniper_scratch_pct = -0.65  # Solo scratch si cae más del 0.65%
-        elif is_sniper:
-            sniper_scratch_mins = 120   # 2 horas para sniper normal
-            sniper_scratch_pct = -0.55  # Solo scratch si cae más del 0.55%
-        else:
-            sniper_scratch_mins = 60    # 60min estándar para trades normales
-            sniper_scratch_pct = -0.50
-
+        # ⏱️ LIBERACIÓN ESTRICTA POR TIEMPO EN FASE 1: 4 HORAS (240 MINUTOS) DE PACIENCIA:
+        # El activo tiene 4 horas completas para madurar el despegue fractal sin interrupciones prematuras.
+        max_stag_mins = 240
         if not should_exit and new_phase == 1:
-            if holding_minutes_hb >= sniper_scratch_mins and current_pnl_pct <= sniper_scratch_pct:
+            if holding_minutes_hb >= max_stag_mins and current_pnl_pct <= -0.50:
                 should_exit = True
-                mode_label = "SÚPER SNIPER" if is_super_sniper_hb else ("SNIPER" if is_sniper else "ESTÁNDAR")
-                exit_reason = f"🚪 MICRO-SCRATCH [{mode_label}]: {sym} lleva {holding_minutes_hb}m sin arranque (PnL {current_pnl_pct:+.2f}%). Liberando USDT."
+                exit_reason = f"⏱️ LÍMITE DE 4 HORAS EN FASE 1: {sym} lleva {holding_minutes_hb}m sin despegue (PnL {current_pnl_pct:+.2f}%). Liberando 100% USDT para rotar a nuevo Setup A+."
             else:
-                # Skip stagnation exit on SNIPER until 120min — let the explosive setup breathe
-                if not is_sniper or holding_minutes_hb >= 120:
-                    is_stag, stag_msg = adaptive_asset_dna.check_archetype_stagnation_exit(
-                        archetype_dna=arch_dna,
-                        holding_minutes=holding_minutes_hb,
-                        pnl_pct=current_pnl_pct,
-                        phase=new_phase
-                    )
-                    if is_stag:
-                        should_exit = True
-                        exit_reason = stag_msg
-                elif holding_minutes_hb >= max_stag_mins and abs(current_pnl_pct) <= 0.65 and not is_sniper:
+                is_stag, stag_msg = adaptive_asset_dna.check_archetype_stagnation_exit(
+                    archetype_dna=arch_dna,
+                    holding_minutes=holding_minutes_hb,
+                    pnl_pct=current_pnl_pct,
+                    phase=new_phase
+                )
+                if is_stag:
                     should_exit = True
-                    exit_reason = f"⏱️ LÍMITE DE TIEMPO ESTRICTO: {sym} lleva {holding_minutes_hb}m sin despegue (PnL {current_pnl_pct:+.2f}% | Límite={max_stag_mins}m). Liberando 100% USDT para rotar a nuevo Setup A+."
+                    exit_reason = stag_msg
+
 
         
         # 🧱 MEJORA 4: Cancelación Preventiva — Solo si el libro de órdenes colapsa severamente
