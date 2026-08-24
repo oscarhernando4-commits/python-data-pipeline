@@ -22,12 +22,12 @@ except Exception:
     pass
 
 # ============================================================
-# MEGA-POOL FIXIE DINÁMICO DE 110 CUENTAS (HASTA 55,000 REQ/MES)
-# Cuentas 11-110 (100 cuentas): NUEVAS y activas HOY con 50,000 peticiones limpias (500 c/u).
-# Cuentas 1-10 (10 cuentas): Se integran automáticamente el 2 de Septiembre (+5,000 peticiones).
+# MEGA-POOL FIXIE DINÁMICO DE 110 PROXIES HTTP (HASTA 55,000 REQ/MES)
+# Proxies 11-110 (100 proxies): NUEVAS y activas HOY con 50,000 peticiones limpias (500 c/u).
+# Proxies 1-10 (10 proxies): Se integran automáticamente el 2 de Septiembre (+5,000 peticiones).
 # ============================================================
 
-# POOL ACTIVO DE 100 CUENTAS FIXIE (50,000 PETICIONES/MES)
+# POOL ACTIVO DE 100 PROXIES FIXIE (50,000 PETICIONES/MES)
 FIXIE_POOL_ACTIVE_100 = [
     "http://fixie:9xFQOu1aMBiQTPF@ventoux.usefixie.com:80",   # [11] oscarhernando4@outlook.com
     "http://fixie:DKSf05uih9mtlUk@ventoux.usefixie.com:80",   # [12] oscarhernando4@gmail.com

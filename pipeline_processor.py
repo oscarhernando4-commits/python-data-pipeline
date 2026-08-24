@@ -391,7 +391,7 @@ def run_infinite_trading_matrix_cycle():
         
         rank = cand["score"]
 
-        # 🚫 BLACKLIST DINÁMICA: Penalización severa para no desperdiciar cupos en Top 15
+        # 🚫 BLACKLIST DINÁMICA: Penalización severa para no desperdiciar cupos en el ranking de candidatos
         if sym in _dyn_bl:
             bl_tier = _dyn_bl[sym]["tier"]
             penalty = 300 if bl_tier == "HARD" else (200 if bl_tier == "MID" else 100)

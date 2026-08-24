@@ -6,9 +6,9 @@ Includes:
   1. 🎯 MONITOREO EN VIVO (Real Money Spot Position & Live Safety Escudos)
   2. 🧠 SÚPER-CEREBRO IA (AI Verdict Timeline & Institutional Reasoning)
   3. 📊 ESCÁNER CUÁNTICO (Top 10 Quantum Scanner Ranking & 3-Tier RSI Architecture)
-  4. 🌐 MATRIX 100 CUENTAS (Complete 100-Account Testnet Simulation Analysis Engine)
+  4. 🌐 MATRIX 1000 CUENTAS (Complete 1,000-Account Testnet Simulation Analysis Engine)
 - Live Top 10 Real Money Evaluation Matrix Table (Checks all 10 candidates against 7 safety rules)
-- Full 100 Matrix Accounts Interactive Table with Search & Group Filtering (G0-G5, Active Positions)
+- Full 1000 Matrix Accounts Interactive Table with Search & Group Filtering (G0-G5, Active Positions)
 - Active Tab Persistence via localStorage
 - Anti-Cache Headers
 """
@@ -1061,7 +1061,7 @@ def generate_web_dashboard():
                 <input type="text" id="matrixSearchInput" class="matrix-search-input" placeholder="🔍 Buscar símbolo (BTC, ZAMA) o ID..." onkeyup="filterMatrixSearch()">
             </div>
 
-            <!-- TABLA INTERACTIVA DE LAS 100 CUENTAS MATRIX -->
+            <!-- TABLA INTERACTIVA DE LAS 1000 CUENTAS MATRIX -->
             <div style="overflow-x: auto; background: rgba(0,0,0,0.25); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); padding: 0.5rem; max-height: 550px; overflow-y: auto;">
                 <table class="cand-table" id="matrix100Table">
                     <thead>

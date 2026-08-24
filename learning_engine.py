@@ -226,7 +226,7 @@ def record_trade_outcome(symbol, side="LONG", entry_price=0.0, exit_price=0.0, p
     # ─────────────────────────────────────────────────────────────────────────
     # 🛡️ DEDUPLICACIÓN ANTI-TRIPLICACIÓN: Evita registrar el mismo trade de la
     # cuenta real (R-01) más de una vez dentro de una ventana de 90 segundos.
-    # Causa: pipeline_processor.py corre 100 cuentas del matrix y cada una que
+    # Causa: pipeline_processor.py corre 1000 cuentas del matrix y cada una que
     # tuvo el mismo símbolo invoca record_trade_outcome independientemente.
     # ─────────────────────────────────────────────────────────────────────────
     is_real_account = ("R-01" in str(account_id)) or ("REAL" in str(group_name).upper())
