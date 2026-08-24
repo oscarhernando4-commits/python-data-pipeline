@@ -352,7 +352,7 @@ def generate_web_dashboard():
                 <div class="active-pos-title">
                     <span class="active-pos-symbol" style="color: var(--text-muted);">🔒 NINGUNA POSICIÓN ABIERTA (100% CAPITAL EN USDT)</span>
                 </div>
-                <div class="active-pos-time">🔎 Escaneando 120 Pares en Tiempo Real</div>
+                <div class="active-pos-time">🔎 Escaneando 67 Pares Top 100 CMC en Tiempo Real</div>
             </div>
         </div>
         """

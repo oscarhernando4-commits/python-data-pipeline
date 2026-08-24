@@ -222,7 +222,7 @@ def run_infinite_trading_matrix_cycle():
     accounts = matrix["accounts"]
     
     # 🎯 MODO GUARDIÁN 100% ININTERRUMPIDO EN PRIMER PLANO:
-    # Si la cuenta real tiene una posición abierta, SUSPENDER el escaneo de 120 pares y Gemini,
+    # Si la cuenta real tiene una posición abierta, SUSPENDER el escaneo del Top 100 y Gemini,
     # y quedarse en un bucle continuo segundo a segundo (T+1s, T+2s, T+3s...) hasta que se cierre la posición.
     real_st_pre = api_connector.load_real_account_state()
     active_pos_pre = real_st_pre.get("position")
@@ -251,7 +251,7 @@ def run_infinite_trading_matrix_cycle():
                 hb = api_connector.quick_position_heartbeat()
                 if not hb or not isinstance(hb, dict) or not hb.get("symbol"):
                     print(f"\n🎯 [OPERACIÓN FINALIZADA TRAS {tick}s] Salida ejecutada con éxito.", flush=True)
-                    print("🔄 Sincronizando billetera y reactivando Radar Cuántico de 120 Pares...\n", flush=True)
+                    print("🔄 Sincronizando billetera y reactivando Radar Cuántico de 67 Pares Top 100 CMC...\n", flush=True)
                     try:
                         api_connector.diagnose_full_spot_wallet()
                     except Exception:
@@ -423,8 +423,7 @@ def run_infinite_trading_matrix_cycle():
         return rank
 
     bullish_candidates.sort(key=_candidate_rank_key, reverse=True)
-    top_15_candidates = bullish_candidates[:15]
-
+    top_all_candidates = bullish_candidates  # Analiza el Universo Completo de los 67 Pares Top 100 CMC
     
     import learning_engine
     bias_data = learning_engine.get_market_bias()
@@ -444,7 +443,7 @@ def run_infinite_trading_matrix_cycle():
             for trend, stats in optimal["trend_analysis"].items():
                 bias_str += f"\n    - Trend '{trend}': {stats['win_rate']}% win rate ({stats['total']} trades)"
     
-    # Evaluate Top 15 Candidates with Gemini Flash / Pro LLM Sentinel
+    # Evaluate All Candidates from Top 100 CMC with Gemini Flash / Pro LLM Sentinel
     gemini_res = {}
     selected_opp = None
     import api_connector
@@ -462,7 +461,7 @@ def run_infinite_trading_matrix_cycle():
             "confidence": 100,
             "reasoning": f"Posición real activa en {act_sym}. Súper-Cerebro vigilando segundo a segundo para salida óptima."
         }
-    elif top_15_candidates:
+    elif top_all_candidates:
         try:
             import text_analyzer
             import llm_router
@@ -471,7 +470,7 @@ def run_infinite_trading_matrix_cycle():
                 symbol_analysis_map, 
                 cached_fundamental_report.get("fear_and_greed", {"score": 50, "sentiment": "Neutral"}),
                 cached_fundamental_report.get("recent_headlines", []),
-                top_candidates=top_15_candidates
+                top_candidates=top_all_candidates
             )
             
             # ═══════════════════════════════════════════════════════════════════
@@ -498,15 +497,16 @@ def run_infinite_trading_matrix_cycle():
                 print(f"⚠️ BTC Guard check error (non-blocking): {e_btc_guard}")
             
             specific_news_map = {}
-            for cand in top_15_candidates:
+            for cand in top_all_candidates[:25]:  # Notícias específicas para los 25 principales
                 c_sym = cand["symbol"]
                 s_news = fundamental_sentinel.fetch_coin_specific_news(c_sym)
                 if s_news:
                     specific_news_map[c_sym] = s_news
             
             macro_summary = macro_ctx.get("summary_text", str(macro_ctx)) if isinstance(macro_ctx, dict) else str(macro_ctx)
+            print(f"✅ [Comité Institucional 7 Agentes] Consultando al Súper-Cerebro Gemini AI (Gemini 3.1 Flash Lite) para los {len(top_all_candidates)} activos del Top 100 CMC...")
             gemini_res = llm_router.review_top_candidates(
-                candidates_data_list=top_15_candidates,
+                candidates_data_list=top_all_candidates,
                 news_data={"headlines": cached_fundamental_report.get("recent_headlines", []), "specific_news": specific_news_map},
                 fear_greed=cached_fundamental_report.get("fear_and_greed", {"score": 50, "sentiment": "Neutral"}),
                 macro_context=macro_summary,
@@ -892,11 +892,11 @@ def run_infinite_trading_matrix_cycle():
                     current_price=ai_price,
                     is_bearish=False,
                     is_learned_signal=True,
-                    candidates_list=top_15_candidates
+                    candidates_list=top_all_candidates
                 )
         # CALIBRACIÓN HÍBRIDA REAL: Evaluar la Top Oportunidad del Escáner (Score >= 58) con Confirmación Cuántica (GBM A+/B o Refugio)
-        elif top_15_candidates:
-            top_cand = top_15_candidates[0]
+        elif top_all_candidates:
+            top_cand = top_all_candidates[0]
             bs_sym = top_cand["symbol"]
             bs_score = top_cand["score"]
             bs_data = symbol_analysis_map.get(bs_sym, {})
@@ -943,16 +943,16 @@ def run_infinite_trading_matrix_cycle():
             elif bs_score >= 58 and is_quant_approved:
                 if is_fk_bs or is_dcb_bs:
                     print(f"🛡️ [FILTRO FALLING KNIFE HÍBRIDO] Oportunidad {bs_sym} ({bs_score} Pts) BLOQUEADA: Falling Knife / Dead Cat detectado (Caída 24h: {mtf_bs.get('price_change_24h_pct', 0):+.1f}%).")
-                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=top_15_candidates)
+                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=top_all_candidates)
                 elif is_overextended_bs:
                     print(f"🛡️ [FILTRO ANTI-CIMA 15M] Oportunidad {bs_sym} ({bs_score} Pts) BLOQUEADA: Entrada en la cima ({overextension_reason_bs}). Exige compra en el suelo.")
-                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=top_15_candidates)
+                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=top_all_candidates)
                 elif (is_btc_crashing or is_high_btc_risk) and bs_sym not in ["BTCUSDT", "PAXGUSDT", "XAUTUSDT"]:
                     print(f"🛡️ [FILTRO CORRELACIÓN BETA BTC] Oportunidad {bs_sym} ({bs_score} Pts, Rho={beta_res.get('rho')}) bloqueada. BTC débil / Alta Correlación.")
-                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=top_15_candidates)
+                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=top_all_candidates)
                 elif is_order_flow_dump:
                     print(f"🎯 [FILTRO ORDER FLOW CVD] Oportunidad {bs_sym} ({bs_score} Pts) bloqueada por presión vendedora a mercado (CVD Delta {of_res.get('cvd_delta_usd')} USD).")
-                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=top_15_candidates)
+                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=top_all_candidates)
                 else:
                     arrow_lbl = " 🎯 [PATRÓN FLECHAS AMARILLAS 15M PIVOT]" if is_yellow_bs else (" 🌊 [REBOTE SOBREVENTA %B]" if is_bounce_bs else (" 📈 [DIVERGENCIA ALCISTA RSI]" if is_divergence_bs else ""))
                     print(f"💰 [REAL A+ APROBADO POR IA] Ejecutando Top Oportunidad del Escáner en Dinero Real: {bs_sym}{arrow_lbl} @ {bs_score} Pts (GBM: {bs_trade_qual}, VolSurge: {target_vol_surge:.2f}x, Rho: {beta_res.get('rho')}, OrderFlow: {of_res.get('verdict')})...")
@@ -962,12 +962,12 @@ def run_infinite_trading_matrix_cycle():
                         current_price=bs_price,
                         is_bearish=False,
                         is_learned_signal=True,
-                        candidates_list=top_15_candidates
+                        candidates_list=top_all_candidates
                     )
 
             else:
                 print(f"🔒 [REAL HÍBRIDO] Top Escáner {bs_sym} ({bs_score} Pts, GBM {bs_trade_qual}) no alcanza umbral híbrido (Score>=58 y Calidad A+/B). Preservando capital.")
-                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=top_15_candidates)
+                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=top_all_candidates)
         else:
             if ai_symbol and ai_symbol != "NONE":
                 print(f"🔒 [REAL] Mercado sin setup A+ (Top={ai_symbol}, Score={ai_score}, Acción={ai_action}). Protegiendo 100% de capital en USDT.")
@@ -975,7 +975,7 @@ def run_infinite_trading_matrix_cycle():
                 print(f"🔒 [REAL] Ningún activo califica como Setup A+. Manteniendo 100% liquidez en USDT.")
             # Always run the trader to manage OPEN positions (check TP/SL), even if no new entry
             api_connector.evaluate_and_trade_real_money(
-                best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=top_15_candidates
+                best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=top_all_candidates
             )
             
     except Exception as e_real:
