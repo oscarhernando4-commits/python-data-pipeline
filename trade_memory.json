@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 9105,
-    "wins": 4012,
+    "total_trades": 9106,
+    "wins": 4013,
     "losses": 5093,
-    "win_rate_pct": 44.06,
-    "total_pnl_usd": 11764.025776549392
+    "win_rate_pct": 44.07,
+    "total_pnl_usd": 11764.073276549392
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK SHORT when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on STXUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on VETUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on FLOKIUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JASMYUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on XTZUSDT)",
@@ -49,34 +48,11 @@
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on AAVEUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on WIFUSDT)",
       "BOOST LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on CRVUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TIAUSDT)"
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TIAUSDT)",
+      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on AEROUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 00:44:41",
-      "account_id": "SIM-386",
-      "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
-      "symbol": "AVAXUSDT",
-      "side": "LONG",
-      "entry_price": 7.516,
-      "exit_price": 7.513,
-      "pnl_usd": -0.04,
-      "result": "LOSS",
-      "notes": "LOSS on AVAXUSDT (PnL: -0.04%, Net: $-0.04 Fase 2)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 36.64,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 00:44:41",
       "account_id": "SIM-387",
@@ -11101,6 +11077,28 @@
         "adx_15m": null,
         "cci_15m": null,
         "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 02:18:07",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "AEROUSDT",
+      "side": "LONG",
+      "entry_price": 0.4706,
+      "exit_price": 0.4722,
+      "pnl_usd": 0.0475,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.34% <= +0.35%) (Fase 3, PnL: +0.34%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 37.8,
+        "atr_pct_15m": 0.757,
+        "vol_surge": 0.6,
+        "vol_surge_1m": 1.06,
+        "fii_score": 80,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
       }
     }
   ]
