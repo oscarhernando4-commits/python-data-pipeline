@@ -5110,7 +5110,7 @@
     },
     {
       "account_id": "SIM-224",
-      "symbol": "ONDOUSDT",
+      "symbol": "PEPEUSDT",
       "group_id": 2,
       "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
       "threshold_score": 20,
@@ -5137,7 +5137,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (ONDOUSDT LONG @ $0.38)"
+      "status": "EN_OPERACION_VIVO (PEPEUSDT LONG @ $0.00)"
     },
     {
       "account_id": "SIM-225",
@@ -6195,6 +6195,37 @@
     },
     {
       "account_id": "SIM-241",
+      "symbol": "SEIUSDT",
+      "group_id": 2,
+      "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
+      "threshold_score": 20,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Moderado-Estricto (Score >= 20)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.04691,
+        "qty": 426.34832658,
+        "sl": 0.0464409,
+        "tp_min": 0.0478482,
+        "tp_max": 0.04855185,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (SEIUSDT LONG @ $0.05)"
+    },
+    {
+      "account_id": "SIM-256",
       "symbol": "TIAUSDT",
       "group_id": 2,
       "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
@@ -6908,7 +6939,7 @@
     },
     {
       "account_id": "SIM-278",
-      "symbol": "AVAXUSDT",
+      "symbol": "SUIUSDT",
       "group_id": 2,
       "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
       "threshold_score": 20,
@@ -7497,7 +7528,7 @@
     },
     {
       "account_id": "SIM-297",
-      "symbol": "ALGOUSDT",
+      "symbol": "POLUSDT",
       "group_id": 2,
       "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
       "threshold_score": 20,
@@ -7993,7 +8024,7 @@
     },
     {
       "account_id": "SIM-313",
-      "symbol": "VETUSDT",
+      "symbol": "CRVUSDT",
       "group_id": 2,
       "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
       "threshold_score": 20,
@@ -8024,7 +8055,7 @@
     },
     {
       "account_id": "SIM-314",
-      "symbol": "VETUSDT",
+      "symbol": "CRVUSDT",
       "group_id": 2,
       "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
       "threshold_score": 20,
@@ -9574,7 +9605,7 @@
     },
     {
       "account_id": "SIM-364",
-      "symbol": "ALGOUSDT",
+      "symbol": "POLUSDT",
       "group_id": 2,
       "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
       "threshold_score": 20,
@@ -10132,7 +10163,7 @@
     },
     {
       "account_id": "SIM-382",
-      "symbol": "VIRTUALUSDT",
+      "symbol": "VETUSDT",
       "group_id": 2,
       "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
       "threshold_score": 20,
@@ -10938,7 +10969,7 @@
     },
     {
       "account_id": "SIM-408",
-      "symbol": "AVAXUSDT",
+      "symbol": "XLMUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -10969,7 +11000,7 @@
     },
     {
       "account_id": "SIM-409",
-      "symbol": "AVAXUSDT",
+      "symbol": "BCHUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -11000,7 +11031,7 @@
     },
     {
       "account_id": "SIM-410",
-      "symbol": "AVAXUSDT",
+      "symbol": "HBARUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -11031,7 +11062,7 @@
     },
     {
       "account_id": "SIM-411",
-      "symbol": "AVAXUSDT",
+      "symbol": "HBARUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -11062,6 +11093,37 @@
     },
     {
       "account_id": "SIM-412",
+      "symbol": "SUIUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.8156,
+        "qty": 24.52182442,
+        "sl": 0.8057,
+        "tp_min": 0.8354,
+        "tp_max": 0.85025,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (SUIUSDT LONG @ $0.82)"
+    },
+    {
+      "account_id": "SIM-413",
       "symbol": "AVAXUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
@@ -12612,7 +12674,7 @@
     },
     {
       "account_id": "SIM-462",
-      "symbol": "BTCUSDT",
+      "symbol": "OPUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13325,7 +13387,7 @@
     },
     {
       "account_id": "SIM-485",
-      "symbol": "ETHUSDT",
+      "symbol": "POLUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13342,11 +13404,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (POLUSDT LONG @ $0.11)"
     },
     {
       "account_id": "SIM-486",
-      "symbol": "ETHUSDT",
+      "symbol": "POLUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13363,11 +13425,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (POLUSDT LONG @ $0.11)"
     },
     {
       "account_id": "SIM-487",
-      "symbol": "ETHUSDT",
+      "symbol": "ALGOUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13384,11 +13446,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ALGOUSDT LONG @ $0.09)"
     },
     {
       "account_id": "SIM-488",
-      "symbol": "ETHUSDT",
+      "symbol": "ALGOUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13405,11 +13467,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ALGOUSDT LONG @ $0.09)"
     },
     {
       "account_id": "SIM-489",
-      "symbol": "DOGEUSDT",
+      "symbol": "ALGOUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13426,11 +13488,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ALGOUSDT LONG @ $0.09)"
     },
     {
       "account_id": "SIM-490",
-      "symbol": "DOGEUSDT",
+      "symbol": "ALGOUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13447,11 +13509,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ALGOUSDT LONG @ $0.09)"
     },
     {
       "account_id": "SIM-491",
-      "symbol": "DOGEUSDT",
+      "symbol": "ALGOUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13468,11 +13530,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ALGOUSDT LONG @ $0.09)"
     },
     {
       "account_id": "SIM-492",
-      "symbol": "DOGEUSDT",
+      "symbol": "ALGOUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13489,11 +13551,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ALGOUSDT LONG @ $0.09)"
     },
     {
       "account_id": "SIM-493",
-      "symbol": "DOGEUSDT",
+      "symbol": "ALGOUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13510,11 +13572,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ALGOUSDT LONG @ $0.09)"
     },
     {
       "account_id": "SIM-494",
-      "symbol": "DOGEUSDT",
+      "symbol": "ATOMUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13531,11 +13593,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ATOMUSDT LONG @ $1.55)"
     },
     {
       "account_id": "SIM-495",
-      "symbol": "BCHUSDT",
+      "symbol": "ATOMUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13552,11 +13614,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ATOMUSDT LONG @ $1.55)"
     },
     {
       "account_id": "SIM-496",
-      "symbol": "BCHUSDT",
+      "symbol": "ATOMUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13573,11 +13635,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ATOMUSDT LONG @ $1.55)"
     },
     {
       "account_id": "SIM-497",
-      "symbol": "BCHUSDT",
+      "symbol": "ATOMUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13594,11 +13656,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ATOMUSDT LONG @ $1.55)"
     },
     {
       "account_id": "SIM-498",
-      "symbol": "BCHUSDT",
+      "symbol": "ATOMUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13615,11 +13677,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ATOMUSDT LONG @ $1.55)"
     },
     {
       "account_id": "SIM-499",
-      "symbol": "BCHUSDT",
+      "symbol": "ATOMUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13636,11 +13698,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ATOMUSDT LONG @ $1.55)"
     },
     {
       "account_id": "SIM-500",
-      "symbol": "BCHUSDT",
+      "symbol": "ATOMUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13657,11 +13719,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ATOMUSDT LONG @ $1.55)"
     },
     {
       "account_id": "SIM-501",
-      "symbol": "RENDERUSDT",
+      "symbol": "ARBUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13678,7 +13740,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ARBUSDT LONG @ $0.10)"
     },
     {
       "account_id": "SIM-502",
@@ -13699,7 +13761,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ARBUSDT LONG @ $0.10)"
     },
     {
       "account_id": "SIM-503",
@@ -13720,11 +13782,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ARBUSDT LONG @ $0.10)"
     },
     {
       "account_id": "SIM-504",
-      "symbol": "ARBUSDT",
+      "symbol": "FILUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13741,11 +13803,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (FILUSDT LONG @ $0.75)"
     },
     {
       "account_id": "SIM-505",
-      "symbol": "ARBUSDT",
+      "symbol": "FILUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13762,11 +13824,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (FILUSDT LONG @ $0.75)"
     },
     {
       "account_id": "SIM-506",
-      "symbol": "CAKEUSDT",
+      "symbol": "FILUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13783,11 +13845,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (FILUSDT LONG @ $0.75)"
     },
     {
       "account_id": "SIM-507",
-      "symbol": "CAKEUSDT",
+      "symbol": "FILUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13804,10 +13866,41 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (FILUSDT LONG @ $0.75)"
     },
     {
       "account_id": "SIM-508",
+      "symbol": "ETHFIUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.6176,
+        "qty": 32.38341969,
+        "sl": 0.6075,
+        "tp_min": 0.6378,
+        "tp_max": 0.65295,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (ETHFIUSDT LONG @ $0.62)"
+    },
+    {
+      "account_id": "SIM-509",
       "symbol": "CAKEUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
@@ -13850,7 +13943,7 @@
     },
     {
       "account_id": "SIM-510",
-      "symbol": "PYTHUSDT",
+      "symbol": "CAKEUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13867,11 +13960,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (CAKEUSDT LONG @ $1.75)"
     },
     {
       "account_id": "SIM-511",
-      "symbol": "PYTHUSDT",
+      "symbol": "APTUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13888,11 +13981,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (APTUSDT LONG @ $0.61)"
     },
     {
       "account_id": "SIM-512",
-      "symbol": "PYTHUSDT",
+      "symbol": "VETUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13909,11 +14002,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (VETUSDT LONG @ $0.01)"
     },
     {
       "account_id": "SIM-513",
-      "symbol": "PYTHUSDT",
+      "symbol": "VETUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13930,11 +14023,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (VETUSDT LONG @ $0.01)"
     },
     {
       "account_id": "SIM-514",
-      "symbol": "FETUSDT",
+      "symbol": "VETUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13951,11 +14044,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (VETUSDT LONG @ $0.01)"
     },
     {
       "account_id": "SIM-515",
-      "symbol": "FETUSDT",
+      "symbol": "AEROUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13972,11 +14065,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (AEROUSDT LONG @ $0.50)"
     },
     {
       "account_id": "SIM-516",
-      "symbol": "FETUSDT",
+      "symbol": "AEROUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -13993,11 +14086,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (AEROUSDT LONG @ $0.50)"
     },
     {
       "account_id": "SIM-517",
-      "symbol": "FETUSDT",
+      "symbol": "AEROUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -14014,11 +14107,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (AEROUSDT LONG @ $0.50)"
     },
     {
       "account_id": "SIM-518",
-      "symbol": "FETUSDT",
+      "symbol": "AEROUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -14035,11 +14128,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (AEROUSDT LONG @ $0.50)"
     },
     {
       "account_id": "SIM-519",
-      "symbol": "FETUSDT",
+      "symbol": "ZROUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -14056,11 +14149,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ZROUSDT LONG @ $1.12)"
     },
     {
       "account_id": "SIM-520",
-      "symbol": "FETUSDT",
+      "symbol": "STXUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -14077,11 +14170,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (STXUSDT LONG @ $0.24)"
     },
     {
       "account_id": "SIM-521",
-      "symbol": "IMXUSDT",
+      "symbol": "TIAUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -14098,11 +14191,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (TIAUSDT LONG @ $0.37)"
     },
     {
       "account_id": "SIM-522",
-      "symbol": "BTCUSDT",
+      "symbol": "TIAUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -14119,11 +14212,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (TIAUSDT LONG @ $0.37)"
     },
     {
       "account_id": "SIM-523",
-      "symbol": "DOGEUSDT",
+      "symbol": "TIAUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -14140,11 +14233,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (TIAUSDT LONG @ $0.37)"
     },
     {
       "account_id": "SIM-524",
-      "symbol": "DOGEUSDT",
+      "symbol": "TIAUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -14161,11 +14254,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (TIAUSDT LONG @ $0.37)"
     },
     {
       "account_id": "SIM-525",
-      "symbol": "DOGEUSDT",
+      "symbol": "FLOKIUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -14182,11 +14275,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (FLOKIUSDT LONG @ $0.00)"
     },
     {
       "account_id": "SIM-526",
-      "symbol": "DOGEUSDT",
+      "symbol": "FLOKIUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -14203,11 +14296,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (FLOKIUSDT LONG @ $0.00)"
     },
     {
       "account_id": "SIM-527",
-      "symbol": "DOGEUSDT",
+      "symbol": "FLOKIUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -14224,7 +14317,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (FLOKIUSDT LONG @ $0.00)"
     },
     {
       "account_id": "SIM-528",
@@ -14371,11 +14464,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (OPUSDT LONG @ $0.11)"
     },
     {
-      "account_id": "SIM-535",
-      "symbol": "STRKUSDT",
+      "account_id": "SIM-529",
+      "symbol": "OPUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -14392,10 +14485,41 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (OPUSDT LONG @ $0.11)"
     },
     {
-      "account_id": "SIM-536",
+      "account_id": "SIM-530",
+      "symbol": "OPUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.1078,
+        "qty": 185.52875696,
+        "sl": 0.1067,
+        "tp_min": 0.11,
+        "tp_max": 0.11165000000000001,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (OPUSDT LONG @ $0.11)"
+    },
+    {
+      "account_id": "SIM-531",
       "symbol": "BTCUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
@@ -14413,11 +14537,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (BTCUSDT LONG @ $78333.32)"
     },
     {
-      "account_id": "SIM-537",
-      "symbol": "ETHUSDT",
+      "account_id": "SIM-532",
+      "symbol": "BTCUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -14434,7 +14558,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (BTCUSDT LONG @ $78333.32)"
     },
     {
       "account_id": "SIM-538",
@@ -14476,10 +14600,41 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (BNBUSDT LONG @ $699.04)"
     },
     {
-      "account_id": "SIM-540",
+      "account_id": "SIM-534",
+      "symbol": "BNBUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 699.04,
+        "qty": 0.02861067,
+        "sl": 692.0495999999999,
+        "tp_min": 713.0208,
+        "tp_max": 723.5064,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (BNBUSDT LONG @ $699.04)"
+    },
+    {
+      "account_id": "SIM-535",
       "symbol": "SOLUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
@@ -14497,7 +14652,162 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (SOLUSDT LONG @ $94.87)"
+    },
+    {
+      "account_id": "SIM-536",
+      "symbol": "DOGEUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.09104,
+        "qty": 219.68365554,
+        "sl": 0.09012959999999999,
+        "tp_min": 0.0928608,
+        "tp_max": 0.0942264,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (DOGEUSDT LONG @ $0.09)"
+    },
+    {
+      "account_id": "SIM-537",
+      "symbol": "LINKUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 11.555,
+        "qty": 1.73085244,
+        "sl": 11.439449999999999,
+        "tp_min": 11.7861,
+        "tp_max": 11.959425,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (LINKUSDT LONG @ $11.55)"
+    },
+    {
+      "account_id": "SIM-538",
+      "symbol": "ADAUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.2211,
+        "qty": 90.45680687,
+        "sl": 0.2186,
+        "tp_min": 0.2261,
+        "tp_max": 0.22985,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (ADAUSDT LONG @ $0.22)"
+    },
+    {
+      "account_id": "SIM-539",
+      "symbol": "XRPUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 1.4898,
+        "qty": 13.42462075,
+        "sl": 1.474902,
+        "tp_min": 1.519596,
+        "tp_max": 1.541943,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (XRPUSDT LONG @ $1.49)"
+    },
+    {
+      "account_id": "SIM-540",
+      "symbol": "TRXUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.3441,
+        "qty": 58.12263877,
+        "sl": 0.340659,
+        "tp_min": 0.350982,
+        "tp_max": 0.3561435,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (TRXUSDT LONG @ $0.34)"
     },
     {
       "account_id": "SIM-541",
@@ -14518,7 +14828,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (TRXUSDT LONG @ $0.34)"
     },
     {
       "account_id": "SIM-542",
@@ -14623,10 +14933,10 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (XLMUSDT LONG @ $0.19)"
     },
     {
-      "account_id": "SIM-547",
+      "account_id": "SIM-543",
       "symbol": "BCHUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
@@ -14644,7 +14954,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (BCHUSDT LONG @ $274.90)"
     },
     {
       "account_id": "SIM-548",
@@ -14686,10 +14996,41 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (HBARUSDT LONG @ $0.08)"
     },
     {
-      "account_id": "SIM-550",
+      "account_id": "SIM-545",
+      "symbol": "HBARUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.07937,
+        "qty": 251.98437697,
+        "sl": 0.0785763,
+        "tp_min": 0.0809574,
+        "tp_max": 0.08214795,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (HBARUSDT LONG @ $0.08)"
+    },
+    {
+      "account_id": "SIM-546",
       "symbol": "SUIUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
@@ -14707,10 +15048,10 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (SUIUSDT LONG @ $0.82)"
     },
     {
-      "account_id": "SIM-551",
+      "account_id": "SIM-547",
       "symbol": "AVAXUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
@@ -14728,7 +15069,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (AVAXUSDT LONG @ $7.49)"
     },
     {
       "account_id": "SIM-552",
@@ -15295,10 +15636,41 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (FILUSDT LONG @ $0.75)"
     },
     {
-      "account_id": "SIM-579",
+      "account_id": "SIM-549",
+      "symbol": "FILUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.7501,
+        "qty": 26.66311159,
+        "sl": 0.742599,
+        "tp_min": 0.765102,
+        "tp_max": 0.7763535,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (FILUSDT LONG @ $0.75)"
+    },
+    {
+      "account_id": "SIM-550",
       "symbol": "ETHFIUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
@@ -15316,11 +15688,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ETHFIUSDT LONG @ $0.62)"
     },
     {
-      "account_id": "SIM-580",
-      "symbol": "PENGUUSDT",
+      "account_id": "SIM-551",
+      "symbol": "ETHFIUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -15337,10 +15709,134 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ETHFIUSDT LONG @ $0.62)"
     },
     {
-      "account_id": "SIM-581",
+      "account_id": "SIM-552",
+      "symbol": "ETHFIUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.6176,
+        "qty": 32.38341969,
+        "sl": 0.6075,
+        "tp_min": 0.6378,
+        "tp_max": 0.65295,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (ETHFIUSDT LONG @ $0.62)"
+    },
+    {
+      "account_id": "SIM-553",
+      "symbol": "ETHFIUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.6176,
+        "qty": 32.38341969,
+        "sl": 0.6075,
+        "tp_min": 0.6378,
+        "tp_max": 0.65295,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (ETHFIUSDT LONG @ $0.62)"
+    },
+    {
+      "account_id": "SIM-554",
+      "symbol": "ETHFIUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.6176,
+        "qty": 32.38341969,
+        "sl": 0.6075,
+        "tp_min": 0.6378,
+        "tp_max": 0.65295,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (ETHFIUSDT LONG @ $0.62)"
+    },
+    {
+      "account_id": "SIM-555",
+      "symbol": "ETHFIUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.6176,
+        "qty": 32.38341969,
+        "sl": 0.6075,
+        "tp_min": 0.6378,
+        "tp_max": 0.65295,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (ETHFIUSDT LONG @ $0.62)"
+    },
+    {
+      "account_id": "SIM-556",
       "symbol": "CAKEUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
@@ -15358,10 +15854,103 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (CAKEUSDT LONG @ $1.75)"
     },
     {
-      "account_id": "SIM-582",
+      "account_id": "SIM-557",
+      "symbol": "CAKEUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 1.751,
+        "qty": 11.42204455,
+        "sl": 1.73349,
+        "tp_min": 1.78602,
+        "tp_max": 1.812285,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (CAKEUSDT LONG @ $1.75)"
+    },
+    {
+      "account_id": "SIM-558",
+      "symbol": "CAKEUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 1.751,
+        "qty": 11.42204455,
+        "sl": 1.73349,
+        "tp_min": 1.78602,
+        "tp_max": 1.812285,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (CAKEUSDT LONG @ $1.75)"
+    },
+    {
+      "account_id": "SIM-559",
+      "symbol": "CAKEUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 1.751,
+        "qty": 11.42204455,
+        "sl": 1.73349,
+        "tp_min": 1.78602,
+        "tp_max": 1.812285,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (CAKEUSDT LONG @ $1.75)"
+    },
+    {
+      "account_id": "SIM-560",
       "symbol": "APTUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
@@ -15379,11 +15968,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (APTUSDT LONG @ $0.61)"
     },
     {
-      "account_id": "SIM-583",
-      "symbol": "DASHUSDT",
+      "account_id": "SIM-561",
+      "symbol": "APTUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -15400,11 +15989,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (APTUSDT LONG @ $0.61)"
     },
     {
-      "account_id": "SIM-584",
-      "symbol": "INJUSDT",
+      "account_id": "SIM-562",
+      "symbol": "APTUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -15421,11 +16010,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (APTUSDT LONG @ $0.61)"
     },
     {
-      "account_id": "SIM-585",
-      "symbol": "NEXOUSDT",
+      "account_id": "SIM-563",
+      "symbol": "APTUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -15442,11 +16031,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (APTUSDT LONG @ $0.61)"
     },
     {
-      "account_id": "SIM-586",
-      "symbol": "CRVUSDT",
+      "account_id": "SIM-564",
+      "symbol": "APTUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -15463,11 +16052,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (APTUSDT LONG @ $0.61)"
     },
     {
-      "account_id": "SIM-587",
-      "symbol": "VETUSDT",
+      "account_id": "SIM-565",
+      "symbol": "APTUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -15484,7 +16073,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (APTUSDT LONG @ $0.61)"
     },
     {
       "account_id": "SIM-588",
@@ -15526,10 +16115,41 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (AEROUSDT LONG @ $0.50)"
     },
     {
-      "account_id": "SIM-590",
+      "account_id": "SIM-567",
+      "symbol": "AEROUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.501,
+        "qty": 39.92015968,
+        "sl": 0.4935,
+        "tp_min": 0.516,
+        "tp_max": 0.52725,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (AEROUSDT LONG @ $0.50)"
+    },
+    {
+      "account_id": "SIM-568",
       "symbol": "ZROUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
@@ -15547,10 +16167,165 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (ZROUSDT LONG @ $1.12)"
     },
     {
-      "account_id": "SIM-591",
+      "account_id": "SIM-569",
+      "symbol": "ZROUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 1.123,
+        "qty": 17.809439,
+        "sl": 1.1069,
+        "tp_min": 1.1552,
+        "tp_max": 1.17935,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (ZROUSDT LONG @ $1.12)"
+    },
+    {
+      "account_id": "SIM-570",
+      "symbol": "ZROUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 1.123,
+        "qty": 17.809439,
+        "sl": 1.1069,
+        "tp_min": 1.1552,
+        "tp_max": 1.17935,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (ZROUSDT LONG @ $1.12)"
+    },
+    {
+      "account_id": "SIM-571",
+      "symbol": "ZROUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 1.123,
+        "qty": 17.809439,
+        "sl": 1.1069,
+        "tp_min": 1.1552,
+        "tp_max": 1.17935,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (ZROUSDT LONG @ $1.12)"
+    },
+    {
+      "account_id": "SIM-572",
+      "symbol": "ZROUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 1.123,
+        "qty": 17.809439,
+        "sl": 1.1069,
+        "tp_min": 1.1552,
+        "tp_max": 1.17935,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (ZROUSDT LONG @ $1.12)"
+    },
+    {
+      "account_id": "SIM-573",
+      "symbol": "ZROUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 1.123,
+        "qty": 17.809439,
+        "sl": 1.1069,
+        "tp_min": 1.1552,
+        "tp_max": 1.17935,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (ZROUSDT LONG @ $1.12)"
+    },
+    {
+      "account_id": "SIM-574",
       "symbol": "STXUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
@@ -15568,11 +16343,538 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (STXUSDT LONG @ $0.24)"
+    },
+    {
+      "account_id": "SIM-575",
+      "symbol": "STXUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.2359,
+        "qty": 84.78168716,
+        "sl": 0.232,
+        "tp_min": 0.2437,
+        "tp_max": 0.24955,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (STXUSDT LONG @ $0.24)"
+    },
+    {
+      "account_id": "SIM-576",
+      "symbol": "STXUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.2359,
+        "qty": 84.78168716,
+        "sl": 0.232,
+        "tp_min": 0.2437,
+        "tp_max": 0.24955,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (STXUSDT LONG @ $0.24)"
+    },
+    {
+      "account_id": "SIM-577",
+      "symbol": "STXUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.2359,
+        "qty": 84.78168716,
+        "sl": 0.232,
+        "tp_min": 0.2437,
+        "tp_max": 0.24955,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (STXUSDT LONG @ $0.24)"
+    },
+    {
+      "account_id": "SIM-578",
+      "symbol": "STXUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.2359,
+        "qty": 84.78168716,
+        "sl": 0.232,
+        "tp_min": 0.2437,
+        "tp_max": 0.24955,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (STXUSDT LONG @ $0.24)"
+    },
+    {
+      "account_id": "SIM-579",
+      "symbol": "STXUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.2359,
+        "qty": 84.78168716,
+        "sl": 0.232,
+        "tp_min": 0.2437,
+        "tp_max": 0.24955,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (STXUSDT LONG @ $0.24)"
+    },
+    {
+      "account_id": "SIM-580",
+      "symbol": "FLOKIUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 2.69e-05,
+        "qty": 743494.42379182,
+        "sl": 2.6631e-05,
+        "tp_min": 2.7438e-05,
+        "tp_max": 2.78415e-05,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (FLOKIUSDT LONG @ $0.00)"
+    },
+    {
+      "account_id": "SIM-581",
+      "symbol": "FLOKIUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 2.69e-05,
+        "qty": 743494.42379182,
+        "sl": 2.6631e-05,
+        "tp_min": 2.7438e-05,
+        "tp_max": 2.78415e-05,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (FLOKIUSDT LONG @ $0.00)"
+    },
+    {
+      "account_id": "SIM-582",
+      "symbol": "OPUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.1078,
+        "qty": 185.52875696,
+        "sl": 0.1067,
+        "tp_min": 0.11,
+        "tp_max": 0.11165000000000001,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (OPUSDT LONG @ $0.11)"
+    },
+    {
+      "account_id": "SIM-583",
+      "symbol": "OPUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 0.1078,
+        "qty": 185.52875696,
+        "sl": 0.1067,
+        "tp_min": 0.11,
+        "tp_max": 0.11165000000000001,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (OPUSDT LONG @ $0.11)"
+    },
+    {
+      "account_id": "SIM-584",
+      "symbol": "BTCUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 78333.32,
+        "qty": 0.00025532,
+        "sl": 77549.98680000001,
+        "tp_min": 79899.98640000001,
+        "tp_max": 81074.98620000001,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (BTCUSDT LONG @ $78333.32)"
+    },
+    {
+      "account_id": "SIM-585",
+      "symbol": "BTCUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 78333.32,
+        "qty": 0.00025532,
+        "sl": 77549.98680000001,
+        "tp_min": 79899.98640000001,
+        "tp_max": 81074.98620000001,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (BTCUSDT LONG @ $78333.32)"
+    },
+    {
+      "account_id": "SIM-586",
+      "symbol": "BNBUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 699.04,
+        "qty": 0.02861067,
+        "sl": 692.0495999999999,
+        "tp_min": 713.0208,
+        "tp_max": 723.5064,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (BNBUSDT LONG @ $699.04)"
+    },
+    {
+      "account_id": "SIM-587",
+      "symbol": "BNBUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 699.04,
+        "qty": 0.02861067,
+        "sl": 692.0495999999999,
+        "tp_min": 713.0208,
+        "tp_max": 723.5064,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (BNBUSDT LONG @ $699.04)"
+    },
+    {
+      "account_id": "SIM-588",
+      "symbol": "SOLUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 94.87,
+        "qty": 0.2108148,
+        "sl": 93.9213,
+        "tp_min": 96.76740000000001,
+        "tp_max": 98.19045,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (SOLUSDT LONG @ $94.87)"
+    },
+    {
+      "account_id": "SIM-589",
+      "symbol": "SOLUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 94.87,
+        "qty": 0.2108148,
+        "sl": 93.9213,
+        "tp_min": 96.76740000000001,
+        "tp_max": 98.19045,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (SOLUSDT LONG @ $94.87)"
+    },
+    {
+      "account_id": "SIM-590",
+      "symbol": "SOLUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 94.87,
+        "qty": 0.2108148,
+        "sl": 93.9213,
+        "tp_min": 96.76740000000001,
+        "tp_max": 98.19045,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (SOLUSDT LONG @ $94.87)"
+    },
+    {
+      "account_id": "SIM-591",
+      "symbol": "SOLUSDT",
+      "group_id": 3,
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "threshold_score": 70,
+      "risk_pct": 1.0,
+      "permissiveness_label": "Balanceado (Score >= 70)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "LONG",
+        "entry_price": 94.87,
+        "qty": 0.2108148,
+        "sl": 93.9213,
+        "tp_min": 96.76740000000001,
+        "tp_max": 98.19045,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (SOLUSDT LONG @ $94.87)"
     },
     {
       "account_id": "SIM-592",
-      "symbol": "PYTHUSDT",
+      "symbol": "SOLUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -15589,11 +16891,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (SOLUSDT LONG @ $94.87)"
     },
     {
       "account_id": "SIM-593",
-      "symbol": "FETUSDT",
+      "symbol": "DOGEUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -15610,11 +16912,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (DOGEUSDT LONG @ $0.09)"
     },
     {
       "account_id": "SIM-594",
-      "symbol": "SEIUSDT",
+      "symbol": "DOGEUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -15631,11 +16933,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (DOGEUSDT LONG @ $0.09)"
     },
     {
       "account_id": "SIM-595",
-      "symbol": "TIAUSDT",
+      "symbol": "DOGEUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -15652,11 +16954,11 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (DOGEUSDT LONG @ $0.09)"
     },
     {
       "account_id": "SIM-596",
-      "symbol": "SUNUSDT",
+      "symbol": "DOGEUSDT",
       "group_id": 3,
       "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
       "threshold_score": 70,
@@ -15673,7 +16975,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-3)"
+      "status": "EN_OPERACION_VIVO (DOGEUSDT LONG @ $0.09)"
     },
     {
       "account_id": "SIM-597",
@@ -16076,7 +17378,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (XLMUSDT SHORT @ $0.20)"
+      "status": "EN_OPERACION_VIVO (XLMUSDT SHORT @ $0.19)"
     },
     {
       "account_id": "SIM-610",
@@ -16390,7 +17692,7 @@
     },
     {
       "account_id": "SIM-620",
-      "symbol": "PUMPUSDT",
+      "symbol": "ONDOUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -16417,7 +17719,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (PUMPUSDT SHORT @ $0.00)"
+      "status": "EN_OPERACION_VIVO (ONDOUSDT SHORT @ $0.38)"
     },
     {
       "account_id": "SIM-621",
@@ -16452,7 +17754,7 @@
     },
     {
       "account_id": "SIM-622",
-      "symbol": "ONDOUSDT",
+      "symbol": "PEPEUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -16479,7 +17781,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (ONDOUSDT SHORT @ $0.38)"
+      "status": "EN_OPERACION_VIVO (PEPEUSDT SHORT @ $0.00)"
     },
     {
       "account_id": "SIM-623",
@@ -16514,7 +17816,7 @@
     },
     {
       "account_id": "SIM-624",
-      "symbol": "PEPEUSDT",
+      "symbol": "ASTERUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -16541,7 +17843,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (PEPEUSDT SHORT @ $0.00)"
+      "status": "EN_OPERACION_VIVO (ASTERUSDT SHORT @ $0.68)"
     },
     {
       "account_id": "SIM-625",
@@ -16979,7 +18281,7 @@
     },
     {
       "account_id": "SIM-639",
-      "symbol": "ARBUSDT",
+      "symbol": "TRUMPUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -17006,7 +18308,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (ARBUSDT SHORT @ $0.10)"
+      "status": "EN_OPERACION_VIVO (TRUMPUSDT SHORT @ $2.46)"
     },
     {
       "account_id": "SIM-640",
@@ -17041,7 +18343,7 @@
     },
     {
       "account_id": "SIM-641",
-      "symbol": "FILUSDT",
+      "symbol": "ETHFIUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -17196,7 +18498,7 @@
     },
     {
       "account_id": "SIM-646",
-      "symbol": "APTUSDT",
+      "symbol": "DASHUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -17661,7 +18963,7 @@
     },
     {
       "account_id": "SIM-661",
-      "symbol": "FLOKIUSDT",
+      "symbol": "WIFUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -17688,7 +18990,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (FLOKIUSDT SHORT @ $0.00)"
+      "status": "EN_OPERACION_VIVO (WIFUSDT SHORT @ $0.20)"
     },
     {
       "account_id": "SIM-662",
@@ -18153,7 +19455,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (XLMUSDT SHORT @ $0.20)"
+      "status": "EN_OPERACION_VIVO (XLMUSDT SHORT @ $0.19)"
     },
     {
       "account_id": "SIM-677",
@@ -18467,7 +19769,7 @@
     },
     {
       "account_id": "SIM-687",
-      "symbol": "PUMPUSDT",
+      "symbol": "ONDOUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -18494,7 +19796,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (PUMPUSDT SHORT @ $0.00)"
+      "status": "EN_OPERACION_VIVO (ONDOUSDT SHORT @ $0.38)"
     },
     {
       "account_id": "SIM-688",
@@ -18529,7 +19831,7 @@
     },
     {
       "account_id": "SIM-689",
-      "symbol": "ONDOUSDT",
+      "symbol": "PEPEUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -18556,7 +19858,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (ONDOUSDT SHORT @ $0.38)"
+      "status": "EN_OPERACION_VIVO (PEPEUSDT SHORT @ $0.00)"
     },
     {
       "account_id": "SIM-690",
@@ -18591,7 +19893,7 @@
     },
     {
       "account_id": "SIM-691",
-      "symbol": "PEPEUSDT",
+      "symbol": "ASTERUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -18618,7 +19920,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (PEPEUSDT SHORT @ $0.00)"
+      "status": "EN_OPERACION_VIVO (ASTERUSDT SHORT @ $0.68)"
     },
     {
       "account_id": "SIM-692",
@@ -19056,7 +20358,7 @@
     },
     {
       "account_id": "SIM-706",
-      "symbol": "ARBUSDT",
+      "symbol": "TRUMPUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -19083,7 +20385,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (ARBUSDT SHORT @ $0.10)"
+      "status": "EN_OPERACION_VIVO (TRUMPUSDT SHORT @ $2.46)"
     },
     {
       "account_id": "SIM-707",
@@ -19118,7 +20420,7 @@
     },
     {
       "account_id": "SIM-708",
-      "symbol": "FILUSDT",
+      "symbol": "ETHFIUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -19273,7 +20575,7 @@
     },
     {
       "account_id": "SIM-713",
-      "symbol": "APTUSDT",
+      "symbol": "DASHUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -19738,7 +21040,7 @@
     },
     {
       "account_id": "SIM-728",
-      "symbol": "FLOKIUSDT",
+      "symbol": "WIFUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -19765,7 +21067,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (FLOKIUSDT SHORT @ $0.00)"
+      "status": "EN_OPERACION_VIVO (WIFUSDT SHORT @ $0.20)"
     },
     {
       "account_id": "SIM-729",
@@ -19920,7 +21222,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (XLMUSDT SHORT @ $0.20)"
+      "status": "EN_OPERACION_VIVO (XLMUSDT SHORT @ $0.19)"
     },
     {
       "account_id": "SIM-734",
@@ -20544,7 +21846,7 @@
     },
     {
       "account_id": "SIM-754",
-      "symbol": "PUMPUSDT",
+      "symbol": "ONDOUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -20571,7 +21873,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (PUMPUSDT SHORT @ $0.00)"
+      "status": "EN_OPERACION_VIVO (ONDOUSDT SHORT @ $0.38)"
     },
     {
       "account_id": "SIM-755",
@@ -20606,7 +21908,7 @@
     },
     {
       "account_id": "SIM-756",
-      "symbol": "ONDOUSDT",
+      "symbol": "PEPEUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -20633,7 +21935,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (ONDOUSDT SHORT @ $0.38)"
+      "status": "EN_OPERACION_VIVO (PEPEUSDT SHORT @ $0.00)"
     },
     {
       "account_id": "SIM-757",
@@ -20668,7 +21970,7 @@
     },
     {
       "account_id": "SIM-758",
-      "symbol": "PEPEUSDT",
+      "symbol": "ASTERUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -20695,7 +21997,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (PEPEUSDT SHORT @ $0.00)"
+      "status": "EN_OPERACION_VIVO (ASTERUSDT SHORT @ $0.68)"
     },
     {
       "account_id": "SIM-759",
@@ -21133,7 +22435,7 @@
     },
     {
       "account_id": "SIM-773",
-      "symbol": "ARBUSDT",
+      "symbol": "TRUMPUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -21160,7 +22462,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (ARBUSDT SHORT @ $0.10)"
+      "status": "EN_OPERACION_VIVO (TRUMPUSDT SHORT @ $2.46)"
     },
     {
       "account_id": "SIM-774",
@@ -21195,7 +22497,7 @@
     },
     {
       "account_id": "SIM-775",
-      "symbol": "FILUSDT",
+      "symbol": "ETHFIUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -21350,7 +22652,7 @@
     },
     {
       "account_id": "SIM-780",
-      "symbol": "APTUSDT",
+      "symbol": "DASHUSDT",
       "group_id": 4,
       "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
       "threshold_score": 100,
@@ -21780,7 +23082,7 @@
       "trades_count": 0,
       "wins": 0,
       "losses": 0,
-      "status": "EN_OPERACION_VIVO (FLOKIUSDT SHORT @ $0.00)"
+      "status": "EN_OPERACION_VIVO (WIFUSDT SHORT @ $0.20)"
     },
     {
       "account_id": "SIM-794",
@@ -23489,7 +24791,7 @@
     },
     {
       "account_id": "SIM-849",
-      "symbol": "VIRTUALUSDT",
+      "symbol": "NEXOUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -23520,7 +24822,7 @@
     },
     {
       "account_id": "SIM-850",
-      "symbol": "VIRTUALUSDT",
+      "symbol": "CRVUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -25454,7 +26756,7 @@
     },
     {
       "account_id": "SIM-914",
-      "symbol": "APTUSDT",
+      "symbol": "DASHUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -25475,7 +26777,7 @@
     },
     {
       "account_id": "SIM-915",
-      "symbol": "VIRTUALUSDT",
+      "symbol": "INJUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -25496,7 +26798,7 @@
     },
     {
       "account_id": "SIM-916",
-      "symbol": "VIRTUALUSDT",
+      "symbol": "NEXOUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -25517,6 +26819,37 @@
     },
     {
       "account_id": "SIM-917",
+      "symbol": "CRVUSDT",
+      "group_id": 5,
+      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
+      "threshold_score": 41,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Exploratorio Extremo (Score >= 41)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "SHORT",
+        "entry_price": 0.3268,
+        "qty": 61.1995104,
+        "sl": 0.3302,
+        "tp_min": 0.32,
+        "tp_max": 0.31489999999999996,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (CRVUSDT SHORT @ $0.33)"
+    },
+    {
+      "account_id": "SIM-918",
       "symbol": "VIRTUALUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
@@ -25559,7 +26892,7 @@
     },
     {
       "account_id": "SIM-919",
-      "symbol": "AEROUSDT",
+      "symbol": "VIRTUALUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -25580,7 +26913,7 @@
     },
     {
       "account_id": "SIM-920",
-      "symbol": "AEROUSDT",
+      "symbol": "ZROUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -25769,7 +27102,7 @@
     },
     {
       "account_id": "SIM-929",
-      "symbol": "FLOKIUSDT",
+      "symbol": "WIFUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -25853,7 +27186,7 @@
     },
     {
       "account_id": "SIM-933",
-      "symbol": "BTCUSDT",
+      "symbol": "STRKUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -25895,7 +27228,7 @@
     },
     {
       "account_id": "SIM-935",
-      "symbol": "ADAUSDT",
+      "symbol": "ZECUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -25916,7 +27249,7 @@
     },
     {
       "account_id": "SIM-936",
-      "symbol": "DOGEUSDT",
+      "symbol": "BNBUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -25999,8 +27332,8 @@
       "status": "BUSCANDO_OPORTUNIDAD (Estrategia G-5)"
     },
     {
-      "account_id": "SIM-940",
-      "symbol": "XRPUSDT",
+      "account_id": "SIM-938",
+      "symbol": "DOGEUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26042,7 +27375,7 @@
     },
     {
       "account_id": "SIM-942",
-      "symbol": "ZECUSDT",
+      "symbol": "ETHUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26063,7 +27396,7 @@
     },
     {
       "account_id": "SIM-943",
-      "symbol": "ZECUSDT",
+      "symbol": "TRXUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26084,7 +27417,7 @@
     },
     {
       "account_id": "SIM-944",
-      "symbol": "XLMUSDT",
+      "symbol": "BCHUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26147,6 +27480,37 @@
     },
     {
       "account_id": "SIM-947",
+      "symbol": "HBARUSDT",
+      "group_id": 5,
+      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
+      "threshold_score": 41,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Exploratorio Extremo (Score >= 41)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "SHORT",
+        "entry_price": 0.07937,
+        "qty": 251.98437697,
+        "sl": 0.08016369999999999,
+        "tp_min": 0.0777826,
+        "tp_max": 0.07659205,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (HBARUSDT SHORT @ $0.08)"
+    },
+    {
+      "account_id": "SIM-948",
       "symbol": "SUIUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
@@ -26210,7 +27574,7 @@
     },
     {
       "account_id": "SIM-950",
-      "symbol": "UNIUSDT",
+      "symbol": "SHIBUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26273,7 +27637,7 @@
     },
     {
       "account_id": "SIM-953",
-      "symbol": "AAVEUSDT",
+      "symbol": "NEARUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26294,7 +27658,7 @@
     },
     {
       "account_id": "SIM-954",
-      "symbol": "AAVEUSDT",
+      "symbol": "ONDOUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26315,7 +27679,7 @@
     },
     {
       "account_id": "SIM-955",
-      "symbol": "PUMPUSDT",
+      "symbol": "ONDOUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26357,7 +27721,7 @@
     },
     {
       "account_id": "SIM-957",
-      "symbol": "ONDOUSDT",
+      "symbol": "PEPEUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26399,7 +27763,7 @@
     },
     {
       "account_id": "SIM-959",
-      "symbol": "PEPEUSDT",
+      "symbol": "ASTERUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26504,7 +27868,7 @@
     },
     {
       "account_id": "SIM-964",
-      "symbol": "ETCUSDT",
+      "symbol": "WLDUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26588,7 +27952,7 @@
     },
     {
       "account_id": "SIM-968",
-      "symbol": "JUPUSDT",
+      "symbol": "ATOMUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26609,7 +27973,7 @@
     },
     {
       "account_id": "SIM-969",
-      "symbol": "JUPUSDT",
+      "symbol": "ATOMUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26630,7 +27994,7 @@
     },
     {
       "account_id": "SIM-970",
-      "symbol": "JUPUSDT",
+      "symbol": "JSTUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26651,6 +28015,68 @@
     },
     {
       "account_id": "SIM-971",
+      "symbol": "QNTUSDT",
+      "group_id": 5,
+      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
+      "threshold_score": 41,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Exploratorio Extremo (Score >= 41)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "SHORT",
+        "entry_price": 64.08,
+        "qty": 0.31210986,
+        "sl": 64.7208,
+        "tp_min": 62.7984,
+        "tp_max": 61.837199999999996,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (QNTUSDT SHORT @ $64.08)"
+    },
+    {
+      "account_id": "SIM-972",
+      "symbol": "RENDERUSDT",
+      "group_id": 5,
+      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
+      "threshold_score": 41,
+      "risk_pct": 2.0,
+      "permissiveness_label": "Exploratorio Extremo (Score >= 41)",
+      "initial_capital": 100.0,
+      "current_balance": 100.0,
+      "pnl_usd": 0.0,
+      "current_level": 1,
+      "consecutive_losses": 0,
+      "last_result": "🔵 En Curso",
+      "last_trade_time": "26-08-24<br>13:44",
+      "position": {
+        "side": "SHORT",
+        "entry_price": 1.479,
+        "qty": 13.52265044,
+        "sl": 1.4937900000000002,
+        "tp_min": 1.4494200000000002,
+        "tp_max": 1.427235,
+        "open_time": "2026-08-24 13:44:00",
+        "open_time_br": "26-08-24<br>13:44",
+        "open_hour": 13
+      },
+      "trades_count": 0,
+      "wins": 0,
+      "losses": 0,
+      "status": "EN_OPERACION_VIVO (RENDERUSDT SHORT @ $1.48)"
+    },
+    {
+      "account_id": "SIM-973",
       "symbol": "JUPUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
@@ -26714,7 +28140,7 @@
     },
     {
       "account_id": "SIM-974",
-      "symbol": "ARBUSDT",
+      "symbol": "TRUMPUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26861,7 +28287,7 @@
     },
     {
       "account_id": "SIM-981",
-      "symbol": "APTUSDT",
+      "symbol": "DASHUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26882,7 +28308,7 @@
     },
     {
       "account_id": "SIM-982",
-      "symbol": "AEROUSDT",
+      "symbol": "INJUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26903,7 +28329,7 @@
     },
     {
       "account_id": "SIM-983",
-      "symbol": "AEROUSDT",
+      "symbol": "NEXOUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26924,7 +28350,7 @@
     },
     {
       "account_id": "SIM-984",
-      "symbol": "AEROUSDT",
+      "symbol": "CRVUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26945,7 +28371,7 @@
     },
     {
       "account_id": "SIM-985",
-      "symbol": "AEROUSDT",
+      "symbol": "VIRTUALUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -26966,7 +28392,7 @@
     },
     {
       "account_id": "SIM-986",
-      "symbol": "ZROUSDT",
+      "symbol": "VIRTUALUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
@@ -27176,7 +28602,7 @@
     },
     {
       "account_id": "SIM-996",
-      "symbol": "FLOKIUSDT",
+      "symbol": "WIFUSDT",
       "group_id": 5,
       "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
       "threshold_score": 41,
