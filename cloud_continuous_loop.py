@@ -237,7 +237,10 @@ def main():
         has_active_real_pos = False
         try:
             st_check = api_connector.load_real_account_state()
-            has_active_real_pos = bool(st_check.get("position"))
+            if st_check.get("position"):
+                api_connector.diagnose_full_spot_wallet()
+                st_check = api_connector.load_real_account_state()
+                has_active_real_pos = bool(st_check.get("position"))
         except Exception:
             pass
 
