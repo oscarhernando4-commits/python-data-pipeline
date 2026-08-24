@@ -1272,7 +1272,27 @@ def quick_position_heartbeat():
             except Exception:
                 pass
             
+        # ⚡ VOLUME DELTA EXIT SIGNAL — Detects sell waves before price drops
+        # In Phase 2+: if aggressive sellers flood in and we have profit, exit immediately
+        # In Phase 1: only flag but don't force exit (let trailing SL handle it)
+        if not should_exit and new_phase >= 2 and holding_minutes_hb >= 2:
+            try:
+                import volume_delta_engine as _vde
+                vd_exit = _vde.get_volume_delta_signal(sym, window_seconds=20)
+                vd_sell_ratio = vd_exit.get("sell_ratio_pct", 50.0)
+                vd_accel = vd_exit.get("delta_acceleration", 0.0)
+                vd_is_sell_wave = vd_exit.get("sell_wave", False)
+                vd_label = vd_exit.get("signal_label", "")
+                # Exit on sell wave if: sellers > 62% of flow AND momentum accelerating bearish
+                if vd_is_sell_wave and vd_accel <= -5.0 and current_pnl_pct >= 0.10:
+                    should_exit = True
+                    exit_reason = f"⚡ VOLUME DELTA: Ola Vendedora detectada (Sell={vd_sell_ratio:.0f}%, Accel={vd_accel:+.1f}%). Cosechando ganancia en Fase {new_phase} antes del retroceso."
+                    print(f"⚡ [VOL DELTA EXIT] {sym}: {vd_label}")
+            except Exception:
+                pass
+
         if should_exit:
+
             print(f"\n🚨 [MICRO-HEARTBEAT 5S] Salida Inteligente ejecutada para {sym} @ ${current_price:.5f} ({exit_reason})")
             sell_res = execute_real_spot_market_sell(sym)
             print(f"🔄 Venta Mercado Ejecutada: {sell_res}")
@@ -2023,6 +2043,35 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 pass
                 
             print(f"🚀 Ejecutando SPOT BUY en {cand_sym} con ${usdt_free:.2f} USDT (100% Capital)...")
+
+            # ═══════════════════════════════════════════════════════════════════════
+            # ⚡ VOLUME DELTA PRECISION GATE — Sub-Second Entry Timing
+            # Checks aggressive Taker Buy vs Taker Sell flow in the last 30 seconds.
+            # Like the green/red bar indicator on TradingView — it anticipates moves 1-5s early.
+            # ═══════════════════════════════════════════════════════════════════════
+            try:
+                import volume_delta_engine
+                vd = volume_delta_engine.get_volume_delta_signal(cand_sym, window_seconds=30)
+                vd_buy = vd.get("buy_ratio_pct", 50.0)
+                vd_sell_wave = vd.get("sell_wave", False)
+                vd_entry_ok = vd.get("entry_approved", True)
+                vd_label = vd.get("signal_label", "Sin datos")
+                vd_delta = vd.get("delta_usdt", 0.0)
+                vd_accel = vd.get("delta_acceleration", 0.0)
+                print(f"⚡ [VOLUME DELTA] {cand_sym}: {vd_label}")
+
+                # VETO: If sell takers are flooding in (>= 60% sell dominance), wait for reversal
+                if vd_sell_wave and vd_buy <= 40.0 and not (fii >= 70):
+                    print(f"  🛑 [VOLUME DELTA VETO] {cand_sym} descartado: Ola vendedora activa (Buy={vd_buy:.0f}%, Delta={vd_delta:+,.0f} USDT). Esperando reversión de flujo.")
+                    continue
+
+                # BOOST: Strong buy delta unlocks entry even at moderate score
+                if vd.get("strong_buy", False):
+                    print(f"  🚀 [VOLUME DELTA BOOST] Flujo comprador explosivo confirmado. Entrada de máxima precisión.")
+            except Exception as _vde:
+                print(f"  ⚠️ [VOLUME DELTA] Sin datos de flujo ({_vde}). Continuando con filtros estándar.")
+
+
             buy_res = execute_real_spot_market_buy(cand_sym, usdt_free)
             if isinstance(buy_res, dict) and "orderId" in buy_res:
                 time.sleep(0.5)
