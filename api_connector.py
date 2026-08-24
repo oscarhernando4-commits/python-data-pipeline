@@ -1215,10 +1215,10 @@ def quick_position_heartbeat():
                     exit_reason = f"🚨 ESCUDO BITCOIN ACTIVO: BTC cayó {btc_drop_pct:+.2f}% desde la entrada. Eyectando {sym} para evitar contagio de la caída general."
             
         # ⏱️ LIBERACIÓN ESTRICTA POR TIEMPO Y ESTANCAMIENTO / SCRATCH PREVENTIVO:
-        max_stag_mins = int(arch_dna.get("max_stagnation_minutes", 35))
+        max_stag_mins = int(arch_dna.get("max_stagnation_minutes", 60))
         if not should_exit and new_phase == 1:
-            # Scratch temprano a los 8m si el PnL está en negativo (<= -0.30%) tras dar tiempo a dos velas de 5m
-            if holding_minutes_hb >= 8 and current_pnl_pct <= -0.30:
+            # Scratch a los 60m si el PnL sigue en negativo (<= -0.50%) — permite que el suelo fractal madure
+            if holding_minutes_hb >= 60 and current_pnl_pct <= -0.50:
                 should_exit = True
                 exit_reason = f"🚪 MICRO-SCRATCH PREVENTIVO: {sym} lleva {holding_minutes_hb}m sin arranque (PnL {current_pnl_pct:+.2f}%). Liberando USDT con pérdida mínima."
             else:
