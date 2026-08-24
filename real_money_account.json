@@ -15,7 +15,7 @@
     "side": "LONG",
     "quantity": 29.7,
     "break_even": false,
-    "highest_price": 0.4706,
+    "highest_price": 0.471,
     "phase": 1,
     "archetype": "SECTOR_ROTATION",
     "archetype_label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
@@ -33,7 +33,9 @@
     "dna_tier": "HIGH_BETA_RUNNER",
     "optimal_trailing_slack_pct": 0.98,
     "target_resistance_price": 0.4859,
-    "pump_probability_pct": 35
+    "pump_probability_pct": 35,
+    "holding_cycles": 8,
+    "volatility_regime": "🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (🧩 Cima +0.08% | SL Defensivo -0.75%)"
   },
   "last_trade_time": "26-08-24<br>01:28",
   "status": "🔵 En Vivo LONG (AEROUSDT @ $0.4706)",
