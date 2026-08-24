@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 10136,
+    "total_trades": 10137,
     "wins": 4644,
-    "losses": 5492,
-    "win_rate_pct": 45.82,
-    "total_pnl_usd": 11763.054076549393
+    "losses": 5493,
+    "win_rate_pct": 45.81,
+    "total_pnl_usd": 11763.028476549393
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on RENDERUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on UNIUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SKYUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LTCUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on POLUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZROUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SHIBUSDT)",
-      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MORPHOUSDT)"
+      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
+      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on CRVUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on OPUSDT)",
@@ -53,30 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 02:56:32",
-      "account_id": "SIM-949",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "BCHUSDT",
-      "side": "SHORT",
-      "entry_price": 272.4,
-      "exit_price": 272.8,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "LOSS on BCHUSDT (PnL: -0.15%, Net: $-0.06 Fase 2)",
-      "context": {
-        "score": 5,
-        "rsi_15m": 48.19,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 02:56:32",
       "account_id": "SIM-956",
@@ -12015,6 +11991,28 @@
         "vol_surge": 1.56,
         "vol_surge_1m": 1.96,
         "fii_score": 100,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-24 16:34:50",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "CRVUSDT",
+      "side": "LONG",
+      "entry_price": 0.3272,
+      "exit_price": 0.3266,
+      "pnl_usd": -0.0256,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🚪 MICRO-SCRATCH PREVENTIVO: CRVUSDT lleva 4m sin arranque (PnL -0.18%). Liberando USDT con pérdida mínima. (Fase 1, PnL: -0.18%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 45.8,
+        "atr_pct_15m": 1.046,
+        "vol_surge": 0.3,
+        "vol_surge_1m": 0.4,
+        "fii_score": 60,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
