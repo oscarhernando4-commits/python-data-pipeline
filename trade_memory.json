@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 10137,
+    "total_trades": 10138,
     "wins": 4644,
-    "losses": 5493,
+    "losses": 5494,
     "win_rate_pct": 45.81,
-    "total_pnl_usd": 11763.028476549393
+    "total_pnl_usd": 11763.008956549393
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on UNIUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SKYUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LTCUSDT)",
       "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on STRKUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZROUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SHIBUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
-      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on CRVUSDT)"
+      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on CRVUSDT)",
+      "BLOCK BUY when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZECUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on OPUSDT)",
@@ -53,30 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 02:56:32",
-      "account_id": "SIM-956",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "TAOUSDT",
-      "side": "SHORT",
-      "entry_price": 236.2,
-      "exit_price": 236.5,
-      "pnl_usd": -0.06,
-      "result": "LOSS",
-      "notes": "LOSS on TAOUSDT (PnL: -0.13%, Net: $-0.06 Fase 2)",
-      "context": {
-        "score": 5,
-        "rsi_15m": 45.67,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 02:56:32",
       "account_id": "SIM-962",
@@ -12012,6 +11988,28 @@
         "atr_pct_15m": 1.046,
         "vol_surge": 0.3,
         "vol_surge_1m": 0.4,
+        "fii_score": 60,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-24 16:40:16",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "ZECUSDT",
+      "side": "BUY",
+      "entry_price": 841.32,
+      "exit_price": 840.1,
+      "pnl_usd": -0.019520000000000436,
+      "result": "LOSS",
+      "notes": "Real Money Trade closed with -0.15%",
+      "context": {
+        "score": 80,
+        "rsi_15m": 50.0,
+        "atr_pct_15m": 0.45,
+        "vol_surge": 1.0,
+        "vol_surge_1m": 1.0,
         "fii_score": 60,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
