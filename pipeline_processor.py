@@ -1033,12 +1033,12 @@ def run_infinite_trading_matrix_cycle():
                         current_price=bs_price,
                         is_bearish=False,
                         is_learned_signal=True,
-                        candidates_list=top_all_candidates
+                        candidates_list=candidates_for_gemini
                     )
 
             else:
                 print(f"🔒 [REAL HÍBRIDO] Top Escáner {bs_sym} ({bs_score} Pts, GBM {bs_trade_qual}) no alcanza umbral híbrido (Score>=58 y Calidad A+/B). Preservando capital.")
-                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=top_all_candidates)
+                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=candidates_for_gemini)
         else:
             if ai_symbol and ai_symbol != "NONE":
                 print(f"🔒 [REAL] Mercado sin setup A+ (Top={ai_symbol}, Score={ai_score}, Acción={ai_action}). Protegiendo 100% de capital en USDT.")
@@ -1046,7 +1046,7 @@ def run_infinite_trading_matrix_cycle():
                 print(f"🔒 [REAL] Ningún activo califica como Setup A+. Manteniendo 100% liquidez en USDT.")
             # Always run the trader to manage OPEN positions (check TP/SL), even if no new entry
             api_connector.evaluate_and_trade_real_money(
-                best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=top_all_candidates
+                best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=candidates_for_gemini
             )
             
     except Exception as e_real:

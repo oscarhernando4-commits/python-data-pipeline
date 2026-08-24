@@ -1851,19 +1851,24 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             tf_1m_up = mtf_res.get("tf_1m_up", False)
             is_1m_wick = mtf_res.get("is_1m_lower_wick_absorption", False)
             
-            # 🚀 REGLA DE LIQUIDEZ Y VOLUMEN ACTIVO (Permite consolidación natural en base):
-            if vol_15m_now < 0.25 and vol_1m_now < 0.8:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Volumen 15M Abandonado ({vol_15m_now:.2f}x < 0.25x).")
+            # 🚀 REGLA DE LIQUIDEZ Y VOLUMEN ACTIVO (Permite compresión natural en soporte con FII >= 50):
+            if vol_15m_now < 0.10 and vol_1m_now < 0.25 and fii < 50:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Volumen Abandonado ({vol_15m_now:.2f}x < 0.10x).")
                 continue
                 
-            is_dead_volume = (vol_1m_now < 0.30 and vol_15m_now < 0.35)
+            is_dead_volume = (vol_1m_now < 0.20 and vol_15m_now < 0.15 and fii < 50)
             has_active_ignition = (
-                (vol_1m_now >= 0.60 and vol_15m_now >= 0.35) or 
-                (vol_2m_now >= 0.70 and vol_15m_now >= 0.35) or 
-                (vol_15m_now >= 0.80) or 
-                (vol_1m_now >= 1.20) or
-                (vol_acc >= 1.20 and vol_15m_now >= 0.30) or 
-                is_pre_pump or is_30s_burst or (fii >= 45)
+                (vol_1m_now >= 0.50 and vol_15m_now >= 0.15) or 
+                (vol_2m_now >= 0.50 and vol_15m_now >= 0.15) or 
+                (vol_15m_now >= 0.50) or 
+                (vol_1m_now >= 0.80) or
+                (vol_acc >= 1.10 and vol_15m_now >= 0.15) or
+                fii >= 50 or
+                is_spring or
+                is_wave2 or
+                is_cetus_rocket or
+                is_pre_pump or
+                is_30s_burst
             )
             has_trigger_candle = (tf_1m_up or is_1m_wick or mtf_res.get("is_ground_zero_micro_ignition", False))
             
