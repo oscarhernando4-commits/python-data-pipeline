@@ -80,8 +80,21 @@ STABLECOIN_BLACKLIST = {
     "CHIP", "CHIPUSDT", "UTK", "UTKUSDT", "BANANA", "BANANAUSDT"
 }
 
+OFFICIAL_TOP_100_CMC_SYMBOLS = [
+    'BTC', 'ETH', 'XRP', 'BNB', 'SOL', 'TRX', 'HYPE', 'DOGE',
+    'ZEC', 'LEO', 'LINK', 'ADA', 'XMR', 'XLM', 'BCH', 'CC', 'GRAM',
+    'LTC', 'HBAR', 'SUI', 'AVAX', 'SHIB', 'CRO',
+    'UNI', 'TAO', 'NEAR', 'OKB', 'AAVE', 'PUMP', 'WLFI',
+    'ONDO', 'ASTER', 'MNT', 'PEPE', 'SKY', 'ENA', 'DOT', 'M', 'MORPHO',
+    'WLD', 'BGB', 'ICP', 'ETC', 'POL', 'KCS', 'PI', 'LIT', 'ALGO',
+    'ATOM', 'JST', 'GT', 'KAS', 'VVV', 'QNT', 'RENDER', 'JUP', 'ARB',
+    'TRUMP', 'FIL', 'FLR', 'ETHFI', 'PENGU', 'XDC', 'CAKE', 'APT', 'DASH', 'INJ',
+    'NEXO', 'CRV', 'VET', 'VIRTUAL', 'AERO', 'ZRO', 'SPX', 'STX',
+    'PYTH', 'FET', 'MON', 'SEI', 'TIA', 'BSV', 'SUN'
+]
+
 def update_top_pairs():
-    print(f"Fetching valid Binance USDT pairs...")
+    print(f"Fetching valid Binance USDT pairs for Top 100 Market Universe...")
     try:
         binance_res = requests.get('https://data-api.binance.vision/api/v3/exchangeInfo', timeout=10)
         binance_res.raise_for_status()
@@ -90,28 +103,28 @@ def update_top_pairs():
         print(f"Failed to fetch Binance exchange info: {e}")
         return
 
-    cmc_symbols = get_cmc_top_coins()
+    cmc_live = get_cmc_top_coins()
     binance_vol_symbols = get_binance_top_volume_coins(valid_binance_pairs)
     
-    # Merge both lists to get the ultimate list (Market Cap + High Volume)
-    raw_symbols = []
-    max_len = max(len(cmc_symbols), len(binance_vol_symbols))
-    for i in range(max_len):
-        if i < len(cmc_symbols) and cmc_symbols[i] not in raw_symbols:
-            raw_symbols.append(cmc_symbols[i])
-        if i < len(binance_vol_symbols) and binance_vol_symbols[i] not in raw_symbols:
-            raw_symbols.append(binance_vol_symbols[i])
+    # Priority order: 1) User's Top 100 CMC list, 2) CMC Live, 3) Binance Top Volume (>= $5M)
+    candidate_symbols = list(OFFICIAL_TOP_100_CMC_SYMBOLS)
+    for s in cmc_live:
+        if s not in candidate_symbols:
+            candidate_symbols.append(s)
+    for s in binance_vol_symbols:
+        if s not in candidate_symbols:
+            candidate_symbols.append(s)
     
     top_100_pairs = []
     mapping = {"IOTA": "IOTA"}
     
-    for sym in raw_symbols:
+    for sym in candidate_symbols:
         clean_sym = sym.upper().strip()
         if clean_sym in STABLECOIN_BLACKLIST or f"{clean_sym}USDT" in STABLECOIN_BLACKLIST:
             continue
         if multi_timeframe_analyzer.is_stablecoin(clean_sym) or multi_timeframe_analyzer.is_stablecoin(f"{clean_sym}USDT"):
             continue
-        # Filter out weird ASCII/Chinese symbols
+        # Filter out non-ASCII
         if not all(ord(c) < 128 for c in sym):
             continue
             
@@ -119,18 +132,19 @@ def update_top_pairs():
         if binance_sym in STABLECOIN_BLACKLIST or multi_timeframe_analyzer.is_stablecoin(binance_sym):
             continue
         
-        # Must exist in Spot
+        # Must exist in Binance Spot
         if binance_sym in valid_binance_pairs and binance_sym not in top_100_pairs:
             top_100_pairs.append(binance_sym)
                 
-        if len(top_100_pairs) >= 120:  # Expanded to 120 pairs for more opportunities!
+        if len(top_100_pairs) >= 100:
             break
             
     if len(top_100_pairs) > 0:
         with open("top_100_pairs.json", "w", encoding="utf-8") as f:
             json.dump(top_100_pairs, f, indent=4)
-        print(f"Successfully saved {len(top_100_pairs)} HIBRID pairs to top_100_pairs.json")
-        print(f"Top 5 Híbrido: {top_100_pairs[:5]}")
+        print(f"Successfully saved {len(top_100_pairs)} TOP 100 pairs to top_100_pairs.json")
+        print(f"Top 5 Oficial: {top_100_pairs[:5]}")
+        print(f"Últimas 5: {top_100_pairs[-5:]}")
     else:
         print("Failed to map any pairs.")
 
