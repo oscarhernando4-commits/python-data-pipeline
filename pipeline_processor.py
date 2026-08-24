@@ -514,19 +514,23 @@ def run_infinite_trading_matrix_cycle():
                 fii_sc = cmtf.get("fii_score", 0) if cmtf else 0
                 rsi_1m = cmtf.get("rsi_1m", 50.0) if cmtf else 50.0
                 
-                is_base = (r1m <= 35 and r5m <= 40 and r15m <= 50 and r1h <= 60)
+                r1m_r = round(r1m, 1)
+                r5m_r = round(r5m, 1)
+                r15m_r = round(r15m, 1)
+                r1h_r = round(r1h, 1)
+                is_base = (r1m_r <= 35.0 and r5m_r <= 40.0 and r15m_r <= 50.0 and r1h_r <= 60.0)
                 diag_reasons = []
-                if r1m > 35: diag_reasons.append(f"1M={r1m:.0f}% > 35%")
-                if r5m > 40: diag_reasons.append(f"5M={r5m:.0f}% > 40%")
-                if r15m > 50: diag_reasons.append(f"15M={r15m:.0f}% > 50%")
-                if r1h > 60: diag_reasons.append(f"1H={r1h:.0f}% > 60%")
+                if r1m_r > 35.0: diag_reasons.append(f"1M={r1m:.1f}% > 35%")
+                if r5m_r > 40.0: diag_reasons.append(f"5M={r5m:.1f}% > 40%")
+                if r15m_r > 50.0: diag_reasons.append(f"15M={r15m:.1f}% > 50%")
+                if r1h_r > 60.0: diag_reasons.append(f"1H={r1h:.1f}% > 60%")
                 if obv_t == "DISTRIBUTING": diag_reasons.append("OBV=DISTRIBUCIÓN")
                 if fii_sc < 40: diag_reasons.append(f"FII={fii_sc} bajo")
                 
                 status_icon = "🟢 BASE A+ VÁLIDA" if (is_base and obv_t != "DISTRIBUTING") else "🔴 DESCARTADO"
                 diag_str = " | ".join(diag_reasons) if diag_reasons else "Cumple Base 8D + Volumen"
                 
-                print(f"  #{idx} {csym:<10} | Score: {cand['score']:>2}/100 | FII: {fii_sc:>2} | OBV: {obv_t:<12} | RSI 1M: {rsi_1m:>4.1f} | Canales: [1M:{r1m:>2.0f}% 5M:{r5m:>2.0f}% 15M:{r15m:>2.0f}% 1H:{r1h:>2.0f}%] -> {status_icon} ({diag_str})")
+                print(f"  #{idx} {csym:<10} | Score: {cand['score']:>2}/100 | FII: {fii_sc:>2} | OBV: {obv_t:<12} | RSI 1M: {rsi_1m:>4.1f} | Canales: [1M:{r1m:>4.1f}% 5M:{r5m:>4.1f}% 15M:{r15m:>4.1f}% 1H:{r1h:>4.1f}%] -> {status_icon} ({diag_str})")
             print("═══════════════════════════════════════════════════════════════════════════════════════════════════════════\n")
 
             specific_news_map = {}
