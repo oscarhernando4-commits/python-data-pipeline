@@ -96,25 +96,28 @@ def evaluate_opportunity(tech, group_id=0):
     r4h = r4h / 100.0 if r4h > 1.0 else r4h
     r1d = r1d / 100.0 if r1d > 1.0 else r1d
 
+    # 3. 8D Harmonic Base Matrix Check (Matriz Cuántica Simulaciones: Inicia en 1M <= 38%)
+    # Las 1,000 simulaciones operan a partir de 38% para recopilar experiencia y aprendizaje continuo.
     is_8d_base = (
-        r1m <= 0.35 and
-        r2m <= 0.36 and
-        r5m <= 0.38 and
-        r10m <= 0.40 and
-        r15m <= 0.42 and
-        r30m <= 0.46 and
-        r1h <= 0.50 and
-        r2h <= 0.54 and
-        r4h <= 0.58 and
-        r1d <= 0.65
+        r1m <= 0.38 and
+        r2m <= 0.40 and
+        r5m <= 0.42 and
+        r10m <= 0.45 and
+        r15m <= 0.48 and
+        r30m <= 0.52 and
+        r1h <= 0.55 and
+        r2h <= 0.60 and
+        r4h <= 0.65 and
+        r1d <= 0.70
     )
 
     if not is_8d_base:
         return {
             "action": "HOLD",
             "use_ai": False,
-            "reason": f"⛔ Fuera de Matriz 8D [1M={r1m*100:.0f}% 5M={r5m*100:.0f}% 15M={r15m*100:.0f}% 1H={r1h*100:.0f}% 1D={r1d*100:.0f}%]"
+            "reason": f"⛔ Fuera de Matriz 8D [1M={r1m*100:.0f}% (max 38) 5M={r5m*100:.0f}% 15M={r15m*100:.0f}% 1H={r1h*100:.0f}%]"
         }
+
 
     # 4. Floor Turnaround
     tf_1m_up = mtf.get("tf_1m_up", False)
