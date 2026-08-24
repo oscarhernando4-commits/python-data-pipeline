@@ -172,6 +172,13 @@ def load_live_matrix():
             data["current_total_usd"] = sum(a.get("current_balance", 100.0) for a in accounts)
             
         for i, acc in enumerate(accounts):
+            # Enforce strict 67 Top 100 CMC pairs on every single account
+            if acc.get("symbol") not in TOP_PAIRS:
+                acc["symbol"] = TOP_PAIRS[i % len(TOP_PAIRS)]
+            if acc.get("position") and acc["position"].get("symbol") not in TOP_PAIRS:
+                acc["position"] = None
+                acc["status"] = "BUSCANDO_OPORTUNIDAD"
+                
             g_info = get_group_info(i)
             acc["group_id"] = g_info["group_id"]
             acc["group_name"] = g_info["group_name"]
