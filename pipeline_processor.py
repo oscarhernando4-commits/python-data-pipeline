@@ -514,6 +514,10 @@ def run_infinite_trading_matrix_cycle():
                 fii_sc = cmtf.get("fii_score", 0) if cmtf else 0
                 rsi_1m = cmtf.get("rsi_1m", 50.0) if cmtf else 50.0
                 
+                c_score = cand.get("score", 0)
+                is_knife = ctech.get("indicators", {}).get("is_falling_knife", False)
+                is_dead_cat = ctech.get("indicators", {}).get("is_dead_cat_bounce", False)
+                
                 r1m_r = round(r1m, 1)
                 r5m_r = round(r5m, 1)
                 r15m_r = round(r15m, 1)
@@ -525,12 +529,16 @@ def run_infinite_trading_matrix_cycle():
                 if r15m_r > 50.0: diag_reasons.append(f"15M={r15m:.1f}% > 50%")
                 if r1h_r > 60.0: diag_reasons.append(f"1H={r1h:.1f}% > 60%")
                 if obv_t == "DISTRIBUTING": diag_reasons.append("OBV=DISTRIBUCIÓN")
-                if fii_sc < 40: diag_reasons.append(f"FII={fii_sc} bajo")
+                if fii_sc < 45: diag_reasons.append(f"FII={fii_sc} bajo")
+                if c_score < 55: diag_reasons.append(f"Score={c_score} insuficiente")
+                if is_knife: diag_reasons.append("⛔ Cuchillo Cayendo")
+                if is_dead_cat: diag_reasons.append("🪤 Rebote Gato Muerto")
                 
-                status_icon = "🟢 BASE A+ VÁLIDA" if (is_base and obv_t != "DISTRIBUTING") else "🔴 DESCARTADO"
-                diag_str = " | ".join(diag_reasons) if diag_reasons else "Cumple Base 8D + Volumen"
+                is_truly_valid = (is_base and obv_t != "DISTRIBUTING" and fii_sc >= 45 and c_score >= 55 and not is_knife and not is_dead_cat)
+                status_icon = "🟢 BASE A+ VÁLIDA" if is_truly_valid else "🔴 DESCARTADO"
+                diag_str = " | ".join(diag_reasons) if diag_reasons else "Cumple Base 8D + Score A+"
                 
-                print(f"  #{idx:02d} {csym:<10} | Score: {cand['score']:>2}/100 | FII: {fii_sc:>2} | OBV: {obv_t:<12} | RSI 1M: {rsi_1m:>4.1f} | Canales: [1M:{r1m:>4.1f}% 5M:{r5m:>4.1f}% 15M:{r15m:>4.1f}% 1H:{r1h:>4.1f}%] -> {status_icon} ({diag_str})")
+                print(f"  #{idx:02d} {csym:<10} | Score: {c_score:>2}/100 | FII: {fii_sc:>2} | OBV: {obv_t:<12} | RSI 1M: {rsi_1m:>4.1f} | Canales: [1M:{r1m:>4.1f}% 5M:{r5m:>4.1f}% 15M:{r15m:>4.1f}% 1H:{r1h:>4.1f}%] -> {status_icon} ({diag_str})")
             print("═══════════════════════════════════════════════════════════════════════════════════════════════════════════\n")
 
             specific_news_map = {}
@@ -538,7 +546,6 @@ def run_infinite_trading_matrix_cycle():
                 c_sym = cand["symbol"]
                 s_news = fundamental_sentinel.fetch_coin_specific_news(c_sym)
                 if s_news:
-                    specific_news_map[c_sym] = s_news
                     specific_news_map[c_sym] = s_news
             
             macro_summary = macro_ctx.get("summary_text", str(macro_ctx)) if isinstance(macro_ctx, dict) else str(macro_ctx)

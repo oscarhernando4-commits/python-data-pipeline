@@ -915,7 +915,8 @@ def analyze_multi_timeframe_candles(symbol):
     if is_consecutive_drop_15m:
         falling_knife_signals += 2
 
-    is_falling_knife = (falling_knife_signals >= 2) and (price_change_24h_pct < -3.0 or is_consecutive_drop_15m)
+    # Falling knife: require strong signals and no institutional accumulation
+    is_falling_knife = (falling_knife_signals >= 3) and (price_change_24h_pct < -5.0 or (is_consecutive_drop_15m and not tf_1m_up))
 
 
     # Dead Cat Bounce Filter: micro-bounces on 2m/5m during a crash are traps, NOT buy signals
