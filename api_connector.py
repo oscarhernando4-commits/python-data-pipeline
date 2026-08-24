@@ -1862,7 +1862,15 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 is_pre_pump or
                 is_30s_burst
             )
-            has_trigger_candle = (tf_1m_up or is_1m_wick or mtf_res.get("is_ground_zero_micro_ignition", False))
+            tf_2m_up = mtf_res.get("tf_2m_up", False)
+            tf_5m_up = mtf_res.get("tf_5m_up", False)
+            has_trigger_candle = (
+                tf_1m_up or 
+                is_1m_wick or 
+                tf_2m_up or
+                (fii >= 55 and tf_5m_up) or
+                mtf_res.get("is_ground_zero_micro_ignition", False)
+            )
             
             if is_dead_volume or not has_active_ignition:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Volumen Insuficiente/Sin Ignición (1M={vol_1m_now:.2f}x, 15M={vol_15m_now:.2f}x). Exige compradores activos.")
