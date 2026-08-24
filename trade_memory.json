@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 9555,
-    "wins": 4317,
-    "losses": 5238,
+    "total_trades": 9560,
+    "wins": 4319,
+    "losses": 5241,
     "win_rate_pct": 45.18,
-    "total_pnl_usd": 11771.453276549371
+    "total_pnl_usd": 11771.40327654937
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZROUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on PUMPUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZECUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TRUMPUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DOGEUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TIAUSDT)",
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on NEARUSDT)"
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on NEARUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DOTUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ENAUSDT)",
@@ -53,104 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 01:22:04",
-      "account_id": "SIM-825",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "PEPEUSDT",
-      "side": "LONG",
-      "entry_price": 4.03e-06,
-      "exit_price": 4.02e-06,
-      "pnl_usd": -0.08,
-      "result": "LOSS",
-      "notes": "LOSS on PEPEUSDT (PnL: -0.25%, Net: $-0.08 Fase 3)",
-      "context": {
-        "score": 46,
-        "rsi_15m": 39.13,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
-    {
-      "timestamp": "2026-08-24 01:22:04",
-      "account_id": "SIM-828",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "DOTUSDT",
-      "side": "LONG",
-      "entry_price": 0.916,
-      "exit_price": 0.913,
-      "pnl_usd": -0.1,
-      "result": "LOSS",
-      "notes": "LOSS on DOTUSDT (PnL: -0.33%, Net: $-0.10 Fase 2)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 37.5,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
-    {
-      "timestamp": "2026-08-24 01:22:04",
-      "account_id": "SIM-853",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "PENDLEUSDT",
-      "side": "SHORT",
-      "entry_price": 1.891,
-      "exit_price": 1.891,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on PENDLEUSDT (PnL: +0.00%, Net: $-0.03 Fase 5)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-24 01:22:04",
-      "account_id": "SIM-854",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "PENDLEUSDT",
-      "side": "SHORT",
-      "entry_price": 1.891,
-      "exit_price": 1.891,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on PENDLEUSDT (PnL: +0.00%, Net: $-0.03 Fase 5)",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-08-24 01:22:04",
-      "account_id": "SIM-855",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "SEIUSDT",
-      "side": "LONG",
-      "entry_price": 0.04743,
-      "exit_price": 0.04732,
-      "pnl_usd": -0.08,
-      "result": "LOSS",
-      "notes": "LOSS on SEIUSDT (PnL: -0.23%, Net: $-0.08 Fase 3)",
-      "context": {
-        "score": 65,
-        "rsi_15m": 37.04,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 01:22:04",
       "account_id": "SIM-859",
@@ -11854,6 +11756,126 @@
       "context": {
         "score": 0,
         "rsi_15m": 41.81,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 02:52:30",
+      "account_id": "SIM-624",
+      "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
+      "symbol": "PUMPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00508,
+      "exit_price": 0.005073,
+      "pnl_usd": -0.0,
+      "result": "WIN",
+      "notes": "WIN on PUMPUSDT (PnL: +0.14%, Net: $-0.00 Fase 3)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.02,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 02:52:30",
+      "account_id": "SIM-630",
+      "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
+      "symbol": "DOTUSDT",
+      "side": "SHORT",
+      "entry_price": 0.91,
+      "exit_price": 0.909,
+      "pnl_usd": -0.01,
+      "result": "LOSS",
+      "notes": "LOSS on DOTUSDT (PnL: +0.11%, Net: $-0.01 Fase 2)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 40.2,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 02:52:30",
+      "account_id": "SIM-758",
+      "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
+      "symbol": "PUMPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.00508,
+      "exit_price": 0.005073,
+      "pnl_usd": -0.0,
+      "result": "WIN",
+      "notes": "WIN on PUMPUSDT (PnL: +0.14%, Net: $-0.00 Fase 3)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.02,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 02:52:30",
+      "account_id": "SIM-829",
+      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
+      "symbol": "PUMPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.005075,
+      "exit_price": 0.005073,
+      "pnl_usd": -0.02,
+      "result": "LOSS",
+      "notes": "LOSS on PUMPUSDT (PnL: +0.04%, Net: $-0.02 Fase 3)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.02,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 02:52:30",
+      "account_id": "SIM-963",
+      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
+      "symbol": "PUMPUSDT",
+      "side": "SHORT",
+      "entry_price": 0.005075,
+      "exit_price": 0.005073,
+      "pnl_usd": -0.02,
+      "result": "LOSS",
+      "notes": "LOSS on PUMPUSDT (PnL: +0.04%, Net: $-0.02 Fase 3)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 44.02,
         "macro_trend_4h": "NEUTRAL",
         "fii_score": null,
         "atr_pct_15m": null,
