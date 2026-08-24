@@ -497,11 +497,11 @@ def run_infinite_trading_matrix_cycle():
             except Exception as e_btc_guard:
                 print(f"⚠️ BTC Guard check error (non-blocking): {e_btc_guard}")
             
-            # 🔬 DIAGNÓSTICO INDIVIDUAL DETALLADO DE LOS TOP CANDIDATOS DEL ESCÁNER:
+            # 🔬 DIAGNÓSTICO INDIVIDUAL DETALLADO DE TODOS LOS 67 PARES DEL TOP 100 CMC:
             print("\n🔬 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════")
-            print(f"📊 [DIAGNÓSTICO INDIVIDUAL DETALLADO — TOP ACTIVOS DE LOS {len(top_all_candidates)} PARES TOP 100 CMC]")
+            print(f"📊 [DIAGNÓSTICO INDIVIDUAL DETALLADO — LOS {len(top_all_candidates)} PARES DEL TOP 100 CMC]")
             print("═══════════════════════════════════════════════════════════════════════════════════════════════════════════")
-            for idx, cand in enumerate(top_all_candidates[:5], 1):
+            for idx, cand in enumerate(top_all_candidates, 1):
                 csym = cand["symbol"]
                 cdata = symbol_analysis_map.get(csym, {})
                 ctech = cdata.get("tech", {})
@@ -530,14 +530,15 @@ def run_infinite_trading_matrix_cycle():
                 status_icon = "🟢 BASE A+ VÁLIDA" if (is_base and obv_t != "DISTRIBUTING") else "🔴 DESCARTADO"
                 diag_str = " | ".join(diag_reasons) if diag_reasons else "Cumple Base 8D + Volumen"
                 
-                print(f"  #{idx} {csym:<10} | Score: {cand['score']:>2}/100 | FII: {fii_sc:>2} | OBV: {obv_t:<12} | RSI 1M: {rsi_1m:>4.1f} | Canales: [1M:{r1m:>4.1f}% 5M:{r5m:>4.1f}% 15M:{r15m:>4.1f}% 1H:{r1h:>4.1f}%] -> {status_icon} ({diag_str})")
+                print(f"  #{idx:02d} {csym:<10} | Score: {cand['score']:>2}/100 | FII: {fii_sc:>2} | OBV: {obv_t:<12} | RSI 1M: {rsi_1m:>4.1f} | Canales: [1M:{r1m:>4.1f}% 5M:{r5m:>4.1f}% 15M:{r15m:>4.1f}% 1H:{r1h:>4.1f}%] -> {status_icon} ({diag_str})")
             print("═══════════════════════════════════════════════════════════════════════════════════════════════════════════\n")
 
             specific_news_map = {}
-            for cand in top_all_candidates[:25]:  # Notícias específicas para los 25 principales
+            for cand in top_all_candidates:  # Notícias específicas para todos los pares
                 c_sym = cand["symbol"]
                 s_news = fundamental_sentinel.fetch_coin_specific_news(c_sym)
                 if s_news:
+                    specific_news_map[c_sym] = s_news
                     specific_news_map[c_sym] = s_news
             
             macro_summary = macro_ctx.get("summary_text", str(macro_ctx)) if isinstance(macro_ctx, dict) else str(macro_ctx)
@@ -590,7 +591,7 @@ def run_infinite_trading_matrix_cycle():
             
             # Build rich top candidates metrics for dashboard persistence (3-tier RSI architecture)
             top_candidates_rich = []
-            for c in top_all_candidates[:10]:
+            for c in top_all_candidates:
                 csym = c["symbol"]
                 cdata = symbol_analysis_map.get(csym, {})
                 ctech = cdata.get("tech", {})
