@@ -1206,8 +1206,8 @@ def quick_position_heartbeat():
         # ⏱️ LIBERACIÓN ESTRICTA POR TIEMPO Y ESTANCAMIENTO / SCRATCH PREVENTIVO:
         max_stag_mins = int(arch_dna.get("max_stagnation_minutes", 35))
         if not should_exit and new_phase == 1:
-            # Scratch temprano a los 4m si el PnL está en negativo (-0.18% a -0.40%) sin despegue
-            if holding_minutes_hb >= 4 and current_pnl_pct <= -0.18:
+            # Scratch temprano a los 8m si el PnL está en negativo (<= -0.30%) tras dar tiempo a dos velas de 5m
+            if holding_minutes_hb >= 8 and current_pnl_pct <= -0.30:
                 should_exit = True
                 exit_reason = f"🚪 MICRO-SCRATCH PREVENTIVO: {sym} lleva {holding_minutes_hb}m sin arranque (PnL {current_pnl_pct:+.2f}%). Liberando USDT con pérdida mínima."
             else:
@@ -1654,6 +1654,23 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         if not candidate_queue:
             return
             
+        # 🪙 GUARDIÁN BITCOIN PRE-ENTRADA (Anti-Cascada de Mercado):
+        # Si Bitcoin está en caída activa en 5M (vela roja > -0.15% o 2 velas rojas consecutivas), frenar compras
+        try:
+            btc_kl = get_klines("BTCUSDT", "5m", 3)
+            if btc_kl and len(btc_kl) >= 2:
+                c_now = float(btc_kl[-1][4])
+                o_now = float(btc_kl[-1][1])
+                c_prev = float(btc_kl[-2][4])
+                o_prev = float(btc_kl[-2][1])
+                btc_5m_pct = ((c_now - o_now) / o_now) * 100.0
+                btc_2candles_red = (c_now < o_now) and (c_prev < o_prev)
+                if btc_5m_pct <= -0.18 or (btc_2candles_red and btc_5m_pct < -0.08):
+                    print(f"🛑 [GUARDIÁN BITCOIN] BTC en caída activa en 5M ({btc_5m_pct:+.2f}%). Prohibido abrir longs en altcoins durante la corrección de mercado.")
+                    return
+        except Exception:
+            pass
+
         total_cands = len(candidate_queue)
         print(f"\n🔬 [EJECUCIÓN DE PRECISIÓN A+] Verificando confluencia 8D en {total_cands} finalistas seleccionados...")
         
