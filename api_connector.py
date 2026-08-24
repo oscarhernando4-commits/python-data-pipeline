@@ -653,22 +653,26 @@ def execute_real_spot_market_buy(symbol, usdt_amount):
 def execute_real_spot_market_sell(symbol, quantity=None):
     """
     Executes a SPOT MARKET SELL.
-    - If quantity is None, fetches the entire free balance of the asset.
+    - Always clamps to live available free balance from Binance to avoid -2010 insufficient balance errors.
     - Dynamically gets LOT_SIZE and stepSize precision to prevent API rejects.
     """
     import math
     asset = symbol.replace("USDT", "")
     
-    if quantity is None:
-        balances = get_real_balances()
-        if balances:
-            for b in balances:
-                if b.get("asset") == asset:
-                    quantity = float(b.get("free", 0))
-                    break
-                    
-    if not quantity or quantity <= 0:
+    # Always query live free balance from Binance Spot
+    live_free = 0.0
+    balances = get_real_balances()
+    if balances:
+        for b in balances:
+            if b.get("asset") == asset:
+                live_free = float(b.get("free", 0))
+                break
+                
+    if live_free <= 0:
         return {"error": f"No available balance to sell for {symbol}"}
+        
+    if quantity is None or quantity > live_free:
+        quantity = live_free
         
     try:
         ex_info = requests.get(f"{BASE_URL}/api/v3/exchangeInfo?symbol={symbol}", proxies=get_smart_proxy(), timeout=5).json()
@@ -1235,7 +1239,7 @@ def quick_position_heartbeat():
             
         if should_exit:
             print(f"\n🚨 [MICRO-HEARTBEAT 5S] Salida Inteligente ejecutada para {sym} @ ${current_price:.5f} ({exit_reason})")
-            sell_res = execute_real_spot_market_sell(sym, qty)
+            sell_res = execute_real_spot_market_sell(sym)
             print(f"🔄 Venta Mercado Ejecutada: {sell_res}")
             
             # Verify sell order was actually executed before clearing position
@@ -1243,22 +1247,10 @@ def quick_position_heartbeat():
                 sell_succeeded = True
             elif isinstance(sell_res, dict) and sell_res.get("code"):
                 print(f"⚠️ [HEARTBEAT] Venta rechazada por Binance (code={sell_res.get('code')}). Reintentando con balance real...")
-                try:
-                    live_diag = diagnose_full_spot_wallet()
-                    actual_qty = 0.0
-                    for asset_key in live_diag:
-                        if isinstance(live_diag[asset_key], dict) and live_diag[asset_key].get("symbol") == sym:
-                            actual_qty = live_diag[asset_key].get("qty", 0.0)
-                            break
-                    if actual_qty > 0:
-                        sell_res2 = execute_real_spot_market_sell(sym, actual_qty)
-                        sell_succeeded = isinstance(sell_res2, dict) and ("orderId" in sell_res2 or sell_res2.get("status") == "FILLED")
-                    else:
-                        sell_succeeded = True  # No tokens found, position already sold
-                except Exception:
-                    sell_succeeded = False
+                sell_res2 = execute_real_spot_market_sell(sym)
+                sell_succeeded = isinstance(sell_res2, dict) and ("orderId" in sell_res2 or sell_res2.get("status") == "FILLED")
             else:
-                sell_succeeded = True  # Assume success if no error code
+                sell_succeeded = True
                 
             if not sell_succeeded:
                 print(f"🚨 [HEARTBEAT] VENTA FALLIDA - Posición {sym} mantenida. Se reintentará en el próximo heartbeat.")
@@ -1541,7 +1533,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"🎯 ALERTA REAL: Salida LONG por {reason_str} en {active_symbol}. Vendiendo...")
                 
                 try:
-                    res_json = execute_real_spot_market_sell(active_symbol, active_qty)
+                    res_json = execute_real_spot_market_sell(active_symbol)
                     if "orderId" in res_json or res_json.get("status") == "FILLED":
                         pnl_usd = (active_current_price - entry) * active_qty
                         
