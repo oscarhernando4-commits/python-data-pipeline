@@ -1626,10 +1626,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         if market_bias:
             bias_direction = market_bias.get("recommended_bias", "NEUTRAL")
             if bias_direction == "STRONG_SHORT":
-                print(f"⚠️ [LEARNING ENGINE] Sesgo de mercado: {bias_direction} (Exigiendo confluencia A+ estricta en los 15 finalistas)")
+                print(f"⚠️ [LEARNING ENGINE] Sesgo de mercado: {bias_direction} (Exigiendo confluencia A+ estricta en los 67 pares del Top 100 CMC)")
             
         # ═════════════════════════════════════════════════════════════════════════
-        # 🧬 ANÁLISIS EN CASCADA DE ADN ACTIVO PARA LOS 15 FINALISTAS DEL MERCADO:
+        # 🧬 ANÁLISIS EN CASCADA DE ADN ACTIVO PARA LOS 67 PARES DEL TOP 100 CMC:
         # Evalúa en orden de calidad institucional hasta encontrar el ganador 100% A+
         # ═════════════════════════════════════════════════════════════════════════
         candidate_queue = []

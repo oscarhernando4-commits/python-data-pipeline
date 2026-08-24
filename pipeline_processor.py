@@ -542,7 +542,7 @@ def run_infinite_trading_matrix_cycle():
             
             # Build rich top candidates metrics for dashboard persistence (3-tier RSI architecture)
             top_candidates_rich = []
-            for c in top_15_candidates[:10]:
+            for c in top_all_candidates[:10]:
                 csym = c["symbol"]
                 cdata = symbol_analysis_map.get(csym, {})
                 ctech = cdata.get("tech", {})
