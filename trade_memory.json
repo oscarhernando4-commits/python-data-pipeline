@@ -1,15 +1,13 @@
 {
   "stats": {
-    "total_trades": 9654,
+    "total_trades": 9656,
     "wins": 4372,
-    "losses": 5282,
-    "win_rate_pct": 45.29,
-    "total_pnl_usd": 11771.31327654938
+    "losses": 5284,
+    "win_rate_pct": 45.28,
+    "total_pnl_usd": 11770.923276549378
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DOGEUSDT)",
-      "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TIAUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on NEARUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DOTUSDT)",
       "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on JSTUSDT)",
@@ -27,7 +25,9 @@
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on FILUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on VETUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on TAOUSDT)",
-      "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETCUSDT)"
+      "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETCUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on WLDUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on NEARUSDT)",
@@ -53,54 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 02:18:46",
-      "account_id": "SIM-627",
-      "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
-      "symbol": "WLFIUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0595,
-      "exit_price": 0.0582,
-      "pnl_usd": 0.41,
-      "result": "WIN",
-      "notes": "WIN on WLFIUSDT (PnL: +2.18%, Net: $+0.41 Fase 5)",
-      "context": {
-        "score": 5,
-        "rsi_15m": 44.42,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
-    {
-      "timestamp": "2026-08-24 02:18:46",
-      "account_id": "SIM-628",
-      "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
-      "symbol": "WLFIUSDT",
-      "side": "SHORT",
-      "entry_price": 0.0595,
-      "exit_price": 0.0582,
-      "pnl_usd": 0.4,
-      "result": "WIN",
-      "notes": "WIN on WLFIUSDT (PnL: +2.18%, Net: $+0.40 Fase 5)",
-      "context": {
-        "score": 5,
-        "rsi_15m": 44.42,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 02:18:46",
       "account_id": "SIM-629",
@@ -12043,6 +11995,54 @@
       "context": {
         "score": 5,
         "rsi_15m": 39.56,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 03:00:34",
+      "account_id": "SIM-833",
+      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
+      "symbol": "MORPHOUSDT",
+      "side": "SHORT",
+      "entry_price": 2.703,
+      "exit_price": 2.725,
+      "pnl_usd": -0.19,
+      "result": "LOSS",
+      "notes": "LOSS on MORPHOUSDT (PnL: -0.81%, Net: $-0.19 Fase 1)",
+      "context": {
+        "score": 5,
+        "rsi_15m": 44.91,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 03:00:34",
+      "account_id": "SIM-968",
+      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
+      "symbol": "WLDUSDT",
+      "side": "SHORT",
+      "entry_price": 0.3924,
+      "exit_price": 0.3957,
+      "pnl_usd": -0.2,
+      "result": "LOSS",
+      "notes": "LOSS on WLDUSDT (PnL: -0.84%, Net: $-0.20 Fase 1)",
+      "context": {
+        "score": 5,
+        "rsi_15m": 41.93,
         "macro_trend_4h": "NEUTRAL",
         "fii_score": null,
         "atr_pct_15m": null,
