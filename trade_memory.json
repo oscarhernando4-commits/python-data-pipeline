@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 9098,
-    "wins": 4008,
-    "losses": 5090,
-    "win_rate_pct": 44.05,
-    "total_pnl_usd": 11764.23577654939
+    "total_trades": 9103,
+    "wins": 4012,
+    "losses": 5091,
+    "win_rate_pct": 44.07,
+    "total_pnl_usd": 11764.295776549392
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on STXUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on VIRTUALUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BTCUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
@@ -27,11 +26,10 @@
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on DOGEUSDT)",
       "BLOCK LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on XLMUSDT)",
       "BLOCK LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BCHUSDT)",
-      "BLOCK LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on PEPEUSDT)"
+      "BLOCK LONG when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on PEPEUSDT)",
+      "BLOCK SHORT when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on BONKUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on DASHUSDT)",
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on AVAXUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on VETUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on FLOKIUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on JASMYUSDT)",
@@ -49,130 +47,12 @@
       "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on INJUSDT)",
       "BOOST LONG when RSI:40-60(Neutral) + Score:50-70(Mild) + Trend:NEUTRAL (Won on BCHUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on AAVEUSDT)",
-      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on WIFUSDT)"
+      "BOOST LONG when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on WIFUSDT)",
+      "BOOST LONG when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on CRVUSDT)",
+      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on TIAUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 00:44:40",
-      "account_id": "SIM-330",
-      "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
-      "symbol": "CVXUSDT",
-      "side": "LONG",
-      "entry_price": 2.094,
-      "exit_price": 2.078,
-      "pnl_usd": -0.18,
-      "result": "LOSS",
-      "notes": "LOSS on CVXUSDT (PnL: -0.76%, Net: $-0.18 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 33.46,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
-    {
-      "timestamp": "2026-08-24 00:44:40",
-      "account_id": "SIM-331",
-      "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
-      "symbol": "CVXUSDT",
-      "side": "LONG",
-      "entry_price": 2.094,
-      "exit_price": 2.078,
-      "pnl_usd": -0.18,
-      "result": "LOSS",
-      "notes": "LOSS on CVXUSDT (PnL: -0.76%, Net: $-0.18 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 33.46,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
-    {
-      "timestamp": "2026-08-24 00:44:40",
-      "account_id": "SIM-332",
-      "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
-      "symbol": "CVXUSDT",
-      "side": "LONG",
-      "entry_price": 2.094,
-      "exit_price": 2.078,
-      "pnl_usd": -0.18,
-      "result": "LOSS",
-      "notes": "LOSS on CVXUSDT (PnL: -0.76%, Net: $-0.18 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 33.46,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
-    {
-      "timestamp": "2026-08-24 00:44:40",
-      "account_id": "SIM-333",
-      "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
-      "symbol": "CVXUSDT",
-      "side": "LONG",
-      "entry_price": 2.094,
-      "exit_price": 2.078,
-      "pnl_usd": -0.18,
-      "result": "LOSS",
-      "notes": "LOSS on CVXUSDT (PnL: -0.76%, Net: $-0.18 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 33.46,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
-    {
-      "timestamp": "2026-08-24 00:44:40",
-      "account_id": "SIM-337",
-      "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
-      "symbol": "AXSUSDT",
-      "side": "LONG",
-      "entry_price": 0.994,
-      "exit_price": 0.993,
-      "pnl_usd": -0.05,
-      "result": "LOSS",
-      "notes": "LOSS on AXSUSDT (PnL: -0.10%, Net: $-0.05 Fase 3)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 34.85,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 00:44:40",
       "account_id": "SIM-338",
@@ -11093,6 +10973,126 @@
       "context": {
         "score": 0,
         "rsi_15m": 48.87,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 01:26:35",
+      "account_id": "SIM-296",
+      "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
+      "symbol": "CRVUSDT",
+      "side": "LONG",
+      "entry_price": 0.3243,
+      "exit_price": 0.3252,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on CRVUSDT (PnL: +0.28%, Net: $+0.03 Fase 3)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.55,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 01:26:36",
+      "account_id": "SIM-534",
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "symbol": "CRVUSDT",
+      "side": "LONG",
+      "entry_price": 0.3243,
+      "exit_price": 0.3252,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on CRVUSDT (PnL: +0.28%, Net: $+0.03 Fase 3)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.55,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 01:26:36",
+      "account_id": "SIM-535",
+      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
+      "symbol": "CRVUSDT",
+      "side": "LONG",
+      "entry_price": 0.3243,
+      "exit_price": 0.3252,
+      "pnl_usd": 0.03,
+      "result": "WIN",
+      "notes": "WIN on CRVUSDT (PnL: +0.28%, Net: $+0.03 Fase 3)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 39.55,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 01:26:36",
+      "account_id": "SIM-868",
+      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
+      "symbol": "BONKUSDT",
+      "side": "SHORT",
+      "entry_price": 3.22e-06,
+      "exit_price": 3.22e-06,
+      "pnl_usd": -0.03,
+      "result": "LOSS",
+      "notes": "LOSS on BONKUSDT (PnL: +0.00%, Net: $-0.03 Fase 3)",
+      "context": {
+        "score": 65,
+        "rsi_15m": 41.16,
+        "macro_trend_4h": "NEUTRAL",
+        "fii_score": null,
+        "atr_pct_15m": null,
+        "obv_trend": null,
+        "vol_surge_1m": null,
+        "adx_15m": null,
+        "cci_15m": null,
+        "range_position_1m": null
+      }
+    },
+    {
+      "timestamp": "2026-08-24 01:26:36",
+      "account_id": "SIM-959",
+      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
+      "symbol": "TIAUSDT",
+      "side": "SHORT",
+      "entry_price": 0.3776,
+      "exit_price": 0.3771,
+      "pnl_usd": -0.0,
+      "result": "WIN",
+      "notes": "WIN on TIAUSDT (PnL: +0.13%, Net: $-0.00 Fase 3)",
+      "context": {
+        "score": 0,
+        "rsi_15m": 43.22,
         "macro_trend_4h": "NEUTRAL",
         "fii_score": null,
         "atr_pct_15m": null,
