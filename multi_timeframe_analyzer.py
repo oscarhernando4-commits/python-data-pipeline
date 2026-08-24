@@ -1076,6 +1076,13 @@ def analyze_multi_timeframe_candles(symbol):
     ]
     multi_tf_score = min(100, sum(score_components))
     
+    # 🏔️ BASE FLOOR FOUNDATION BOOSTER (Rompe la trampa de atrape en el suelo):
+    # Premia a los activos que están sentados en el soporte con acumulación antes del despegue
+    is_in_support_pocket = (rsi_15m <= 55.0 and rsi_1m <= 52.0 and not is_15m_red_cascade)
+    if is_in_support_pocket:
+        multi_tf_score += 25  # Base fractal limpia para lanzamiento
+    if is_true_structural_floor:
+        multi_tf_score += 15  # Suelo estructural confirmado
     if is_ema_golden_cross:
         multi_tf_score += 10  # EMA(9) > EMA(21) bullish momentum
     if is_obv_accumulating:

@@ -1790,20 +1790,20 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
             vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
             
-            # 🎯 MATRIZ ARMÓNICA DE BASE 8D (1M<=35%, 5M<=40%, 10M<=45%, 15M<=50%, 30M<=55%, 1H<=60%, 2H<=60%)
+            # 🎯 MATRIZ ARMÓNICA DE BASE 8D (1M<=38%, 5M<=45%, 10M<=50%, 15M<=55%, 30M<=60%, 1H<=65%, 2H<=65%)
             is_macro_base_valid = bool(
-                range_pos_2h <= 0.60 and
-                range_pos_1h <= 0.60 and
-                range_pos_30m <= 0.55 and
-                range_pos_15m <= 0.50 and
-                range_pos_10m <= 0.45 and
-                range_pos_5m <= 0.40 and
-                range_pos_1m <= 0.35
+                range_pos_2h <= 0.65 and
+                range_pos_1h <= 0.65 and
+                range_pos_30m <= 0.60 and
+                range_pos_15m <= 0.55 and
+                range_pos_10m <= 0.50 and
+                range_pos_5m <= 0.45 and
+                range_pos_1m <= 0.38
             )
             
             if not is_macro_base_valid or is_at_daily_ceiling:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado: Fuera de la Matriz Armónica 8D o en Techo:")
-                print(f"     Canales: [1M: {range_pos_1m*100:.0f}% (max 35) | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% (max 40) | 10M: {range_pos_10m*100:.0f}% (max 45) | 15M: {range_pos_15m*100:.0f}% (max 50) | 30M: {range_pos_30m*100:.0f}% (max 55) | 1H: {range_pos_1h*100:.0f}% (max 60) | 2H: {range_pos_2h*100:.0f}% (max 60)]")
+                print(f"     Canales: [1M: {range_pos_1m*100:.0f}% (max 38) | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% (max 45) | 10M: {range_pos_10m*100:.0f}% (max 50) | 15M: {range_pos_15m*100:.0f}% (max 55) | 30M: {range_pos_30m*100:.0f}% (max 60) | 1H: {range_pos_1h*100:.0f}% (max 65) | 2H: {range_pos_2h*100:.0f}% (max 65)]")
                 continue
                 
             if not has_floor_turnaround:
@@ -1812,9 +1812,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 
             is_spring = mtf_res.get("spring_coiling", {}).get("is_spring_compressed", False)
             is_wave2 = mtf_res.get("wave2_retest", {}).get("is_wave2_retest", False)
-            if (mtf_res.get("rsi_2m", 50.0) > 54.0 or mtf_res.get("rsi_1m", 50.0) > 54.0) and not (is_spring or is_wave2):
-                # Allow entries up to RSI 60 if there is strong volume ignition or FII confirmation
-                rsi_hard_cap = 60.0 if (vol_1m_now >= 1.5 or fii >= 50 or has_dual_sub_minute_ignition) else 54.0
+            if (mtf_res.get("rsi_2m", 50.0) > 56.0 or mtf_res.get("rsi_1m", 50.0) > 56.0) and not (is_spring or is_wave2):
+                # Allow entries up to RSI 62 if there is strong volume ignition or FII confirmation
+                rsi_hard_cap = 62.0 if (vol_1m_now >= 1.2 or fii >= 45 or has_dual_sub_minute_ignition) else 56.0
                 if mtf_res.get("rsi_2m", 50.0) > rsi_hard_cap or mtf_res.get("rsi_1m", 50.0) > rsi_hard_cap:
                     print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Entrada Tardía (RSI 2M={mtf_res.get('rsi_2m'):.1f} > {rsi_hard_cap:.0f}).")
                     continue
@@ -1824,17 +1824,17 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             spread_now = ob_info.get("spread_pct", 0.0)
             bid_dom_now = ob_info.get("bid_dominance_pct", 50.0)
             
-            max_allowed_spread = 0.30 if ob_info.get("bid_vol_usdt", 0.0) >= 35000.0 else 0.26
+            max_allowed_spread = 0.30 if ob_info.get("bid_vol_usdt", 0.0) >= 25000.0 else 0.28
             if spread_now > max_allowed_spread:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Spread excesivo ({spread_now:.3f}% > {max_allowed_spread:.3f}%).")
                 continue
                 
-            if bid_dom_now < 49.0:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Bids insuficientes ({bid_dom_now:.1f}% < 49.0%).")
+            if bid_dom_now < 48.0:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Bids insuficientes ({bid_dom_now:.1f}% < 48.0%).")
                 continue
                 
-            if ob_info.get("bid_vol_usdt", 0.0) > 0 and ob_info.get("bid_vol_usdt", 0.0) < 15000.0:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Muro Bids delgado (${ob_info.get('bid_vol_usdt', 0.0):,.0f} < $15k).")
+            if ob_info.get("bid_vol_usdt", 0.0) > 0 and ob_info.get("bid_vol_usdt", 0.0) < 10000.0:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Muro Bids delgado (${ob_info.get('bid_vol_usdt', 0.0):,.0f} < $10k).")
                 continue
                 
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
@@ -1846,20 +1846,19 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             tf_1m_up = mtf_res.get("tf_1m_up", False)
             is_1m_wick = mtf_res.get("is_1m_lower_wick_absorption", False)
             
-            # 🚀 REGLA DE ORO DE LIQUIDEZ Y VOLUMEN ACTIVO (Elimina trampas de liquidez muerta como COMP):
-            # 1. Prohibido comprar si el volumen de 15M está muerto (< 0.40x) sin importar otros indicadores
-            if vol_15m_now < 0.40 and vol_1m_now < 1.5:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Volumen 15M Muerto ({vol_15m_now:.2f}x < 0.40x). Exige liquidez activa real.")
+            # 🚀 REGLA DE LIQUIDEZ Y VOLUMEN ACTIVO (Permite consolidación natural en base):
+            if vol_15m_now < 0.25 and vol_1m_now < 0.8:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Volumen 15M Abandonado ({vol_15m_now:.2f}x < 0.25x).")
                 continue
                 
-            is_dead_volume = (vol_1m_now < 0.50 and vol_15m_now < 0.60)
+            is_dead_volume = (vol_1m_now < 0.30 and vol_15m_now < 0.35)
             has_active_ignition = (
-                (vol_1m_now >= 0.85 and vol_15m_now >= 0.50) or 
-                (vol_2m_now >= 1.00 and vol_15m_now >= 0.50) or 
-                (vol_15m_now >= 1.20) or 
-                (vol_1m_now >= 1.80) or
-                (vol_acc >= 1.40 and vol_15m_now >= 0.40) or 
-                is_pre_pump or is_30s_burst
+                (vol_1m_now >= 0.60 and vol_15m_now >= 0.35) or 
+                (vol_2m_now >= 0.70 and vol_15m_now >= 0.35) or 
+                (vol_15m_now >= 0.80) or 
+                (vol_1m_now >= 1.20) or
+                (vol_acc >= 1.20 and vol_15m_now >= 0.30) or 
+                is_pre_pump or is_30s_burst or (fii >= 45)
             )
             has_trigger_candle = (tf_1m_up or is_1m_wick or mtf_res.get("is_ground_zero_micro_ignition", False))
             

@@ -297,10 +297,13 @@ def run_infinite_trading_matrix_cycle():
             
             # Blended Multi-Timeframe Confluence Score
             mtf_score = mtf_res.get("multi_tf_score", 50)
+            fii_sc = mtf_res.get("fii_score", 0)
             if mtf_res.get("is_falling_knife") or mtf_res.get("is_dead_cat_bounce"):
                 final_score = 0
             else:
-                raw_blend = (tech.get("confluence_score", 50) * 0.35) + (mtf_score * 0.65)
+                raw_blend = (tech.get("confluence_score", 50) * 0.25) + (mtf_score * 0.75)
+                if fii_sc >= 45:
+                    raw_blend = max(raw_blend, mtf_score * 0.85)
                 if mtf_res.get("is_pre_pump_signal"):
                     raw_blend = min(100, raw_blend + 15)
                 final_score = int(round(raw_blend))
@@ -522,12 +525,12 @@ def run_infinite_trading_matrix_cycle():
                 r5m_r = round(r5m, 1)
                 r15m_r = round(r15m, 1)
                 r1h_r = round(r1h, 1)
-                is_base = (r1m_r <= 35.0 and r5m_r <= 40.0 and r15m_r <= 50.0 and r1h_r <= 60.0)
+                is_base = (r1m_r <= 38.0 and r5m_r <= 45.0 and r15m_r <= 55.0 and r1h_r <= 65.0)
                 diag_reasons = []
-                if r1m_r > 35.0: diag_reasons.append(f"1M={r1m:.1f}% > 35%")
-                if r5m_r > 40.0: diag_reasons.append(f"5M={r5m:.1f}% > 40%")
-                if r15m_r > 50.0: diag_reasons.append(f"15M={r15m:.1f}% > 50%")
-                if r1h_r > 60.0: diag_reasons.append(f"1H={r1h:.1f}% > 60%")
+                if r1m_r > 38.0: diag_reasons.append(f"1M={r1m:.1f}% > 38%")
+                if r5m_r > 45.0: diag_reasons.append(f"5M={r5m:.1f}% > 45%")
+                if r15m_r > 55.0: diag_reasons.append(f"15M={r15m:.1f}% > 55%")
+                if r1h_r > 65.0: diag_reasons.append(f"1H={r1h:.1f}% > 65%")
                 if obv_t == "DISTRIBUTING": diag_reasons.append("OBV=DISTRIBUCIÓN")
                 if fii_sc < 45: diag_reasons.append(f"FII={fii_sc} bajo")
                 if c_score < 55: diag_reasons.append(f"Score={c_score} insuficiente")
