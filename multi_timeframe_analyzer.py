@@ -1158,9 +1158,9 @@ def analyze_multi_timeframe_candles(symbol):
     dist_from_1h_ma25_pct = ((close_15m - ma25_1h) / ma25_1h) * 100.0 if ma25_1h > 0 else 0.0
     dist_from_4h_ma25_pct = ((close_15m - ma25_4h) / ma25_4h) * 100.0 if ma25_4h > 0 else 0.0
     
-    # 🕯️ DETECCIÓN DE AGOTAMIENTO Y MECHA SUPERIOR EN VELA ACTIVA (5M, 10M, 15M, 30M, 1H, 2H)
-    def _is_candle_top_rejection(kline):
-        if not kline: return False
+    # 🕯️ DETECCIÓN DE AGOTAMIENTO REAL EN CIMA (Solo en zonas sobrecompradas):
+    def _is_candle_top_rejection(kline, rsi_val):
+        if not kline or rsi_val < 68.0: return False
         open_p = float(kline[1])
         high_p = float(kline[2])
         low_p = float(kline[3])
@@ -1169,45 +1169,25 @@ def analyze_multi_timeframe_candles(symbol):
         if rng <= 0: return False
         upper_wick = high_p - max(open_p, close_p)
         upper_wick_pct = (upper_wick / rng) * 100.0
-        return bool(upper_wick_pct >= 40.0 or (close_p < open_p and upper_wick_pct >= 30.0))
+        return bool(upper_wick_pct >= 50.0 and close_p < open_p)
 
-    is_top_wick_5m = _is_candle_top_rejection(klines_5m[-1]) if klines_5m else False
-    is_top_wick_10m = _is_candle_top_rejection(klines_10m[-1]) if klines_10m else False
-    is_top_wick_15m = _is_candle_top_rejection(klines_15m[-1]) if klines_15m else False
-    is_top_wick_30m = _is_candle_top_rejection(klines_30m[-1]) if klines_30m else False
-    is_top_wick_1h = _is_candle_top_rejection(klines_1h[-1]) if klines_1h else False
-    is_top_wick_2h = _is_candle_top_rejection(klines_2h[-1]) if klines_2h else False
+    is_top_wick_5m = _is_candle_top_rejection(klines_5m[-1], rsi_5m) if klines_5m else False
+    is_top_wick_15m = _is_candle_top_rejection(klines_15m[-1], rsi_15m) if klines_15m else False
+    is_top_wick_1h = _is_candle_top_rejection(klines_1h[-1], rsi_1h) if klines_1h else False
 
-    # 🚫 VETO TOTAL ANTI-CIMA EN CADA TEMPORALIDAD (5M, 10M, 15M, 30M, 1H, 2H, 4H, 1D):
-    is_at_range_ceiling_1d = bool(range_position_1d >= 0.85 and rsi_1d >= 70.0)
-    is_at_range_ceiling_4h = bool(range_position_4h >= 0.80 and rsi_4h >= 70.0)
-    is_at_range_ceiling_2h = bool(range_position_2h >= 0.72 or (range_position_2h >= 0.65 and rsi_1h >= 66.0) or is_top_wick_2h)
-    is_at_range_ceiling_1h = bool(range_position_1h >= 0.70 or (range_position_1h >= 0.62 and rsi_1h >= 65.0) or is_top_wick_1h)
-    is_at_range_ceiling_30m = bool(range_position_30m >= 0.68 or (range_position_30m >= 0.60 and rsi_30m >= 65.0) or is_top_wick_30m)
-    is_at_range_ceiling_15m = bool(range_position_15m >= 0.65 or (range_position_15m >= 0.58 and rsi_15m >= 65.0) or is_top_wick_15m)
-    is_at_range_ceiling_10m = bool(range_position_10m >= 0.68 or (range_position_10m >= 0.60 and rsi_15m >= 66.0) or is_top_wick_10m)
-    is_at_range_ceiling_5m = bool(range_position_5m >= 0.70 or (range_position_5m >= 0.62 and rsi_5m >= 68.0) or is_top_wick_5m)
-    is_at_range_ceiling_2m = bool(range_position_2m >= 0.80 and rsi_2m >= 72.0)
-    is_at_range_ceiling_1m = bool(range_position_1m >= 0.80 and rsi_1m >= 72.0)
+    # 🚫 VETO ANTI-CIMA REAL (Solo cuando el precio está en TECHO REAL sobrecomprado):
+    is_at_range_ceiling_1d = bool(range_position_1d >= 0.90 and rsi_1d >= 72.0)
+    is_at_range_ceiling_1h = bool(range_position_1h >= 0.85 and rsi_1h >= 70.0)
+    is_at_range_ceiling_15m = bool(range_position_15m >= 0.85 and rsi_15m >= 70.0)
+    is_at_range_ceiling_5m = bool(range_position_5m >= 0.88 and rsi_5m >= 72.0)
+    is_at_range_ceiling_1m = bool(range_position_1m >= 0.90 and rsi_1m >= 75.0)
 
-    # 🚫 VETO CRÍTICO ANTI-TECHO FRACTAL TOTAL (ABSOLUTO: Techos reales donde se agotan compradores):
+    # 🚫 VETO CRÍTICO ANTI-TECHO FRACTAL:
     dist_to_24h_high_pct = round(((high_24h - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
     is_at_daily_resistance_ceiling = bool(
-        dist_to_24h_high_pct <= 0.30 or 
-        range_position_2h >= 0.72 or     # Techo real en 2H (últimas 48h)
-        range_position_1h >= 0.70 or     # Techo real en 1H (últimas 24h)
-        range_position_30m >= 0.68 or    # Techo real en 30M
-        range_position_15m >= 0.65 or    # Techo real en 15M
-        range_position_10m >= 0.68 or    # Techo real en 10M
-        range_position_5m >= 0.70 or     # Techo real en 5M
-        is_at_range_ceiling_1m or
-        is_at_range_ceiling_2m or
-        is_at_range_ceiling_5m or
-        is_at_range_ceiling_10m or
-        is_at_range_ceiling_15m or
-        is_at_range_ceiling_30m or
-        is_at_range_ceiling_1h or
-        is_at_range_ceiling_2h
+        (dist_to_24h_high_pct <= 0.25 and rsi_15m >= 72.0) or 
+        is_at_range_ceiling_1h or 
+        is_at_range_ceiling_1d
     )
 
     dist_15m_pct = round(((high_15m_recent - close_15m) / close_15m) * 100.0, 2) if close_15m > 0 else 999.0
@@ -1295,9 +1275,8 @@ def analyze_multi_timeframe_candles(symbol):
         not is_at_daily_resistance_ceiling
     )
     
-    if is_ma25_below_ma99_downward:
-        if fii_score < 45 and not (is_ground_zero_micro_ignition or is_vwap_floor_rebound or is_bullish_divergence):
-            multi_tf_score = 0
+    if is_ma25_below_ma99_downward and fii_score < 45 and not (is_ground_zero_micro_ignition or is_vwap_floor_rebound or is_bullish_divergence):
+        multi_tf_score = max(15, multi_tf_score - 25)
     if is_active_dump:
         if fii_score < 60 and not (is_crash_rebound or is_bullish_divergence):
             multi_tf_score = 0
@@ -1418,15 +1397,12 @@ def analyze_multi_timeframe_candles(symbol):
         elif dist_from_15m_ma7_pct > 3.80:
             is_overextended_15m = True
             overextension_reason = f"Entrada tardía en la cima de 15m (Precio a +{dist_from_15m_ma7_pct:.2f}% sobre MA7). Exige compra en el soporte."
-        elif is_sub_minute_bleeding and not (is_bullish_divergence or is_vwap_floor_rebound):
+        elif rsi_15m >= 75.0 and dist_from_15m_ma7_pct > 2.50:
             is_overextended_15m = True
-            overextension_reason = "Micro-caída activa en 10s/30s (Ventas agresivas en sub-minuto). Esperando freno y giro verde en 10s."
-        elif is_1m_death_cascade and not (is_bullish_divergence or is_vwap_floor_rebound):
+            overextension_reason = f"Sobrecompra en 15M (RSI={rsi_15m:.1f}, Dist MA7=+{dist_from_15m_ma7_pct:.2f}%)."
+        elif rsi_1h >= 75.0 and range_position_1h >= 0.85:
             is_overextended_15m = True
-            overextension_reason = f"Cascada Bajista 1M (Precio < MA7 < MA25 y SuperTrend 1M Rojo). Caída en curso sin absorción."
-        elif not (tf_1h_up or is_yellow_arrow_1h or rsi_1h <= 60.0 or is_vwap_floor_rebound or is_bullish_divergence):
-            is_overextended_15m = True
-            overextension_reason = f"Macro 1H sin soporte (RSI 1H={rsi_1h:.1f}). Exige: 1H alcista, rebote VWAP, o divergencia alcista."
+            overextension_reason = f"Sobrecompra Macro 1H (RSI 1H={rsi_1h:.1f}, Canal 1H={range_position_1h*100:.1f}%)."
     avg_vol_15m = sum(vols_15m[-5:]) / len(vols_15m[-5:]) if len(vols_15m) >= 5 else 1.0
     st_status = "🟢 SUPERTREND 15M/1H VERDE ALCISTA" if (is_supertrend_bullish and is_supertrend_1h_bullish) else ("🟢 SUPERTREND 15M VERDE" if is_supertrend_bullish else "🔴 SUPERTREND ROJO")
 

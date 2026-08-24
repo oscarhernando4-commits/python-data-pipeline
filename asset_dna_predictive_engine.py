@@ -96,27 +96,27 @@ def get_btc_dominance_guard() -> Dict[str, Any]:
         btc_status = "NEUTRAL"
         altcoin_impact = "NEUTRAL"
         
-        if btc_1h_change > 1.5:
+        if btc_1h_change > 2.0:
             btc_status = "PUMP_DOMINANCE"
             altcoin_impact = "CAUTION"  # Capital flowing into BTC, altcoins may lag
         elif btc_1h_change > 0.4:
             btc_status = "BTC_LEADING"
             altcoin_impact = "POSITIVE"  # Healthy BTC rally often pulls altcoins up
-        elif btc_1h_change < -0.40 or (btc_1h_change < -0.20 and btc_rsi < 48):
+        elif btc_1h_change < -1.5 or (btc_1h_change < -0.80 and btc_rsi < 35.0):
             btc_status = "BTC_CRASH"
             altcoin_impact = "AVOID"  # Fear spreading to all alts, protect 100% USDT
-        elif btc_1h_change < -0.25:
+        elif btc_1h_change < -0.50:
             btc_status = "BTC_DECLINING"
             altcoin_impact = "CAUTION"
         else:
             btc_status = "BTC_STABLE"
-            altcoin_impact = "POSITIVE" if btc_rsi >= 46 else "CAUTION"
+            altcoin_impact = "POSITIVE" if btc_rsi >= 45 else "CAUTION"
         
         # RSI extremes add additional risk signals
-        if btc_rsi > 78:
+        if btc_rsi > 82:
             altcoin_impact = "CAUTION"  # BTC overbought → potential correction risk
-        elif btc_rsi < 42:
-            altcoin_impact = "AVOID"  # BTC weak/bearish momentum → don't catch falling altcoins
+        elif btc_rsi < 32:
+            altcoin_impact = "AVOID"  # BTC deep cascade momentum
         
         result = {
             "btc_price": current_btc,

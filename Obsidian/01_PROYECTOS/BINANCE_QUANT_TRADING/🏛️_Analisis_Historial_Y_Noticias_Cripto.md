@@ -3192,3 +3192,42 @@ date: 2026-08-01 19:25:56
 - 🔴 **Mayores Caídas Flash de 1 Día:** `Sin días < -10%`
 
 ---
+
+### 🪙 Profile Completo de Vida: FLOKIUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-28` hasta `2026-08-23` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.0000 USD`
+- 📈 **Máximo Histórico (ATH):** `$0.0003 USD` (`2024-06-04`) | Distancia: `-92.31%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0000 USD` (`2025-10-09`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-03-07 (+66.35%)`, `2024-02-29 (+62.98%)`, `2024-03-01 (+52.19%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-27.48%)`, `2024-03-04 (-19.8%)`, `2024-03-15 (-19.75%)`
+
+---
+
+### 🪙 Profile Completo de Vida: IMXUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2023-11-28` hasta `2026-08-23` (1000 Días de Historial)
+- 💵 **Precio Actual:** `$0.1284 USD`
+- 📈 **Máximo Histórico (ATH):** `$3.7605 USD` (`2024-03-11`) | Distancia: `-96.59%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0942 USD` (`2026-08-18`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2023-12-08 (+21.51%)`, `2025-04-21 (+20.17%)`, `2025-10-11 (+18.41%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-10-09 (-29.51%)`, `2026-02-04 (-17.77%)`, `2024-12-08 (-16.33%)`
+
+---
+
+### 🪙 Profile Completo de Vida: STRKUSDT (Nuevo Activo Incorporado)
+- 📅 **Historial Rastreado:** Desde `2024-02-19` hasta `2026-08-23` (917 Días de Historial)
+- 💵 **Precio Actual:** `$0.0270 USD`
+- 📈 **Máximo Histórico (ATH):** `$7.7100 USD` (`2024-02-19`) | Distancia: `-99.65%`
+- 📉 **Mínimo Histórico (ATL):** `$0.0222 USD` (`2026-08-11`)
+- 🤝 **Empresas e Instituciones Aliadas:** `Alianzas corporativas y validadores del ecosistema`
+- 🚀 **Próximos Lanzamientos y Catalizadores (+) :** `Lanzamientos de Roadmap, Actualizaciones tecnológicas y expansiones DeFi/RWA`
+- ⚠️ **Riesgos y Eventos de Caída (-) :** `Calendario de Token Unlocks (Desbloqueos) y presión de venta de mineros/inversores`
+- 🚀 **Mayores Explosiones de 1 Día:** `2024-02-19 (+882.5%)`, `2025-11-06 (+38.37%)`, `2024-03-04 (+25.46%)`
+- 🔴 **Mayores Caídas Flash de 1 Día:** `2025-11-21 (-29.64%)`, `2025-10-09 (-29.04%)`, `2024-12-08 (-19.94%)`
+
+---

@@ -1790,9 +1790,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
             vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
             
-            # 🎯 MATRIZ ARMÓNICA DE BASE 8D (1M<=38%, 5M<=45%, 10M<=50%, 15M<=55%, 30M<=60%, 1H<=65%, 2H<=65%)
+            # 🎯 MATRIZ ARMÓNICA DE BASE 8D (1M<=38%, 5M<=45%, 10M<=50%, 15M<=55%, 30M<=60%, 1H<=65%, 2H<=70%)
             is_macro_base_valid = bool(
-                range_pos_2h <= 0.65 and
+                range_pos_2h <= 0.70 and
                 range_pos_1h <= 0.65 and
                 range_pos_30m <= 0.60 and
                 range_pos_15m <= 0.55 and
@@ -1803,7 +1803,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             
             if not is_macro_base_valid or is_at_daily_ceiling:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado: Fuera de la Matriz Armónica 8D o en Techo:")
-                print(f"     Canales: [1M: {range_pos_1m*100:.0f}% (max 38) | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% (max 45) | 10M: {range_pos_10m*100:.0f}% (max 50) | 15M: {range_pos_15m*100:.0f}% (max 55) | 30M: {range_pos_30m*100:.0f}% (max 60) | 1H: {range_pos_1h*100:.0f}% (max 65) | 2H: {range_pos_2h*100:.0f}% (max 65)]")
+                print(f"     Canales: [1M: {range_pos_1m*100:.0f}% (max 38) | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% (max 45) | 10M: {range_pos_10m*100:.0f}% (max 50) | 15M: {range_pos_15m*100:.0f}% (max 55) | 30M: {range_pos_30m*100:.0f}% (max 60) | 1H: {range_pos_1h*100:.0f}% (max 65) | 2H: {range_pos_2h*100:.0f}% (max 70)]")
                 continue
                 
             if not has_floor_turnaround:
