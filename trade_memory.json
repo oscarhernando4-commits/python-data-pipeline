@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 10134,
-    "wins": 4642,
+    "total_trades": 10135,
+    "wins": 4643,
     "losses": 5492,
     "win_rate_pct": 45.81,
-    "total_pnl_usd": 11762.980976549394
+    "total_pnl_usd": 11763.006776549393
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MORPHOUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ALGOUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on VIRTUALUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on OPUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on RENDERUSDT)",
@@ -49,34 +48,11 @@
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SHIBUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BCHUSDT)",
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BCHUSDT)",
-      "BOOST LONG when OBV:ACCUMULATING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BCHUSDT)"
+      "BOOST LONG when OBV:ACCUMULATING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BCHUSDT)",
+      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SHIBUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 02:56:32",
-      "account_id": "SIM-945",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "SOLUSDT",
-      "side": "SHORT",
-      "entry_price": 94.75,
-      "exit_price": 94.55,
-      "pnl_usd": 0.01,
-      "result": "WIN",
-      "notes": "WIN on SOLUSDT (PnL: +0.21%, Net: $+0.01 Fase 3)",
-      "context": {
-        "score": 5,
-        "rsi_15m": 45.99,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 02:56:32",
       "account_id": "SIM-947",
@@ -12018,6 +11994,28 @@
         "atr_pct_15m": 1.204,
         "vol_surge": 1.38,
         "vol_surge_1m": 0.71,
+        "fii_score": 50,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-24 16:00:42",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "SHIBUSDT",
+      "side": "LONG",
+      "entry_price": 5.43e-06,
+      "exit_price": 5.44e-06,
+      "pnl_usd": 0.0258,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.18% <= +0.18%) (Fase 2, PnL: +0.18%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 45.3,
+        "atr_pct_15m": 0.998,
+        "vol_surge": 0.11,
+        "vol_surge_1m": 0.0,
         "fii_score": 50,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
