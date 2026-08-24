@@ -1232,17 +1232,17 @@ def analyze_multi_timeframe_candles(symbol):
     )
     
     # ═══════════════════════════════════════════════════════════════════════
-    # 🌌 MATRIZ DE CONFLUENCIA FRACTAL DE SUELO 8D (1M, 2M, 5M, 10M, 15M, 30M, 1H, 2H):
-    # Calibrado: Base micro estricta + espacio saludable para consolidaciones macro
+    # 🌌 MATRIZ ARMÓNICA DE CONFLUENCIA FRACTAL 8D (Propuesta Armónica Cuántica):
+    # 1M <= 35% | 5M <= 40% | 10M <= 45% | 15M <= 50% | 30M <= 55% | 1H <= 60% | 2H <= 60%
     # ═══════════════════════════════════════════════════════════════════════
-    is_1m_floor_zone = bool(range_position_1m <= 0.40)
-    is_2m_floor_zone = bool(range_position_2m <= 0.45)
-    is_5m_floor_zone = bool(range_position_5m <= 0.48)
-    is_10m_floor_zone = bool(range_position_10m <= 0.52)
-    is_15m_floor_zone = bool(range_position_15m <= 0.55)
-    is_30m_floor_zone = bool(range_position_30m <= 0.58)
+    is_1m_floor_zone = bool(range_position_1m <= 0.35)
+    is_2m_floor_zone = bool(range_position_2m <= 0.38)
+    is_5m_floor_zone = bool(range_position_5m <= 0.40)
+    is_10m_floor_zone = bool(range_position_10m <= 0.45)
+    is_15m_floor_zone = bool(range_position_15m <= 0.50)
+    is_30m_floor_zone = bool(range_position_30m <= 0.55)
     is_1h_floor_zone = bool(range_position_1h <= 0.60)
-    is_2h_floor_zone = bool(range_position_2h <= 0.65)
+    is_2h_floor_zone = bool(range_position_2h <= 0.60)
 
     # Detección de Mecha Inferior en Vela de 1M (Absorción de Suelo):
     lower_wick_1m_pct = 0.0
@@ -1257,32 +1257,32 @@ def analyze_multi_timeframe_candles(symbol):
             
     is_1m_lower_wick_absorption = bool(lower_wick_1m_pct >= 20.0 and tf_1m_up)
     
-    # Suelo Micro 1M / 2M (Gatillo de Entrada)
+    # Suelo Micro 1M / 2M (Gatillo de Entrada Sniper)
     is_1m_true_floor = bool(
         is_1m_floor_zone or 
         is_1m_lower_wick_absorption or 
-        (rsi_1m <= 45.0 and tf_1m_up) or
-        (range_position_2m <= 0.45 and tf_2m_up)
+        (rsi_1m <= 42.0 and tf_1m_up) or
+        (range_position_2m <= 0.38 and tf_2m_up)
     )
     
     # Suelo Estructural & Contextual en 8D (5M, 10M, 15M, 30M, 1H, 2H)
-    # Permite entrar en la zona baja/media-baja y rebotes a soporte
+    # Progresión armónica exacta propuesta
     is_structural_floor_ok = bool(
-        range_position_5m <= 0.50 and
-        range_position_10m <= 0.52 and
-        range_position_15m <= 0.55 and
-        range_position_30m <= 0.58 and
+        range_position_5m <= 0.40 and
+        range_position_10m <= 0.45 and
+        range_position_15m <= 0.50 and
+        range_position_30m <= 0.55 and
         range_position_1h <= 0.60 and
-        range_position_2h <= 0.65
+        range_position_2h <= 0.60
     )
 
     # Confluencia Fractal Suprema de Suelo (TODAS las escalas en la base):
     is_confluent_fractal_floor = bool(
         is_1m_true_floor and
         is_structural_floor_ok and
-        rsi_1m <= 55.0 and
-        rsi_5m <= 58.0 and
-        rsi_15m <= 60.0 and
+        rsi_1m <= 52.0 and
+        rsi_5m <= 55.0 and
+        rsi_15m <= 58.0 and
         not is_15m_red_cascade and
         not is_at_daily_resistance_ceiling
     )
