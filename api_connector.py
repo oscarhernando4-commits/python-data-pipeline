@@ -1478,16 +1478,16 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     stagnation_exit = True
                     reason_str = f"🔄 Rotación Alpha Dinámica ({real_holding_minutes}m plano → {best_symbol} @ {best_score}pts, delta={score_delta}pts)"
         
-        # 🧠 MEJORA 6: FII en Tiempo Real durante el Holding — Re-evalúa cada 5 ciclos
-        # Si el dinero institucional salió (FII < 20) y tenemos pérdida severa (> -1.50%), salir
-        if not stagnation_exit and phase == 1 and holding_cycles >= 10 and holding_cycles % 5 == 0 and pnl_pct < -1.50:
+        # 🧠 MEJORA: FII en Tiempo Real durante el Holding — Re-evalúa cada 3 ciclos
+        # Si el dinero institucional salió (FII < 25) y tenemos pérdida (> -0.40%), rotar capital
+        if not stagnation_exit and phase == 1 and holding_cycles >= 6 and holding_cycles % 3 == 0 and pnl_pct < -0.40:
             try:
                 import multi_timeframe_analyzer as _mtf_live
                 mtf_live_data = _mtf_live.analyze_multi_timeframe_candles(active_symbol)
                 fii_live = mtf_live_data.get("fii_score", 50)
-                if fii_live < 20:
+                if fii_live < 30:
                     stagnation_exit = True
-                    reason_str = f"🧠 FII COLAPSÓ EN TIEMPO REAL ({fii_live}/100 < 20): Capital institucional salió. Salida anticipada al SL."
+                    reason_str = f"🧠 FII COLAPSÓ EN TIEMPO REAL ({fii_live}/100 < 30): Capital institucional salió. Salida anticipada para preservar capital."
                     print(f"⚠️ [FII LIVE] {active_symbol} FII={fii_live}/100. Capital institucional salió → salida preventiva.")
             except Exception:
                 pass
@@ -1586,7 +1586,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                             }
                             learning_engine.record_trade_outcome(
                                 symbol=active_symbol, side="BUY", entry_price=entry, exit_price=active_current_price,
-                                pnl_usd=pnl_usd, result_type=res_type, notes=f"Real Money Trade closed with {pnl_pct:.2f}%",
+                                pnl_usd=pnl_usd, result_type=res_type,
+                                notes=f"Real Money Trade exited via {reason_str} (Fase {phase}, PnL: {pnl_pct:.2f}%)",
                                 account_id="R-01", group_name="CUENTA REAL", context=trade_ctx
                             )
                         except Exception as le:
@@ -1874,18 +1875,24 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             is_1m_wick = mtf_res.get("is_1m_lower_wick_absorption", False)
             
             # 🚀 REGLA DE LIQUIDEZ Y VOLUMEN ACTIVO (Permite compresión natural en soporte con FII >= 50):
-            if vol_15m_now < 0.10 and vol_1m_now < 0.25 and fii < 50:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Volumen Abandonado ({vol_15m_now:.2f}x < 0.10x).")
+            if vol_15m_now < 0.10 and vol_1m_now < 0.20:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Volumen Abandonado ({vol_1m_now:.2f}x 1M / {vol_15m_now:.2f}x 15M).")
                 continue
                 
-            is_dead_volume = (vol_1m_now < 0.20 and vol_15m_now < 0.15 and fii < 50)
+            # BUG FIX: ATOM slipped through with vol_surge=0.02 because FII>=50 bypassed. 
+            # Now vol_surge_1m >= 0.20 is MANDATORY regardless of FII. FII only upgrades ignition, not replaces it.
+            if vol_1m_now < 0.20:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Volumen 1M muerto ({vol_1m_now:.2f}x < 0.20x). Mínimo de actividad de compradores obligatorio.")
+                continue
+                
+            is_dead_volume = (vol_1m_now < 0.20 or vol_15m_now < 0.12)
             has_active_ignition = (
                 (vol_1m_now >= 0.50 and vol_15m_now >= 0.15) or 
                 (vol_2m_now >= 0.50 and vol_15m_now >= 0.15) or 
                 (vol_15m_now >= 0.50) or 
                 (vol_1m_now >= 0.80) or
                 (vol_acc >= 1.10 and vol_15m_now >= 0.15) or
-                fii >= 50 or
+                (fii >= 60 and vol_1m_now >= 0.25) or  # FII boost requires at least 0.25x not 0
                 is_spring or
                 is_wave2 or
                 is_cetus_rocket or
@@ -1903,7 +1910,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             )
             
             if is_dead_volume or not has_active_ignition:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Volumen Insuficiente/Sin Ignición (1M={vol_1m_now:.2f}x, 15M={vol_15m_now:.2f}x). Exige compradores activos.")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Volumen Muerto/Sin Ignición Real (1M={vol_1m_now:.2f}x, 15M={vol_15m_now:.2f}x). Exige compradores activos.")
                 continue
                 
             if not has_trigger_candle:
