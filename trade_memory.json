@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 10126,
-    "wins": 4635,
+    "total_trades": 10127,
+    "wins": 4636,
     "losses": 5491,
-    "win_rate_pct": 45.77,
-    "total_pnl_usd": 11762.582576549394
+    "win_rate_pct": 45.78,
+    "total_pnl_usd": 11762.634776549394
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -53,30 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 02:56:32",
-      "account_id": "SIM-868",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "IMXUSDT",
-      "side": "SHORT",
-      "entry_price": 0.1276,
-      "exit_price": 0.1288,
-      "pnl_usd": -0.22,
-      "result": "LOSS",
-      "notes": "LOSS on IMXUSDT (PnL: -0.94%, Net: $-0.22 Fase 1)",
-      "context": {
-        "score": 5,
-        "rsi_15m": 38.76,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 02:56:32",
       "account_id": "SIM-902",
@@ -12019,6 +11995,28 @@
     },
     {
       "timestamp": "2026-08-24 14:30:11",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "SHIBUSDT",
+      "side": "LONG",
+      "entry_price": 5.4e-06,
+      "exit_price": 5.42e-06,
+      "pnl_usd": 0.0522,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.37% <= +0.39%) (Fase 3, PnL: +0.37%)",
+      "context": {
+        "score": 80,
+        "rsi_15m": 50.0,
+        "atr_pct_15m": 0.45,
+        "vol_surge": 1.0,
+        "vol_surge_1m": 1.0,
+        "fii_score": 60,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-24 14:30:38",
       "account_id": "R-01",
       "group_name": "CUENTA REAL",
       "symbol": "SHIBUSDT",
