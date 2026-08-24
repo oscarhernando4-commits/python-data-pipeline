@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 10140,
-    "wins": 4644,
+    "total_trades": 10141,
+    "wins": 4645,
     "losses": 5496,
     "win_rate_pct": 45.8,
-    "total_pnl_usd": 11762.885056549394
+    "total_pnl_usd": 11762.899616549394
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ATOMUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on OPUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on RENDERUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on WIFUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on HBARUSDT)",
@@ -49,34 +48,11 @@
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BCHUSDT)",
       "BOOST LONG when OBV:ACCUMULATING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BCHUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SHIBUSDT)",
-      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MORPHOUSDT)"
+      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MORPHOUSDT)",
+      "BOOST BUY when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZECUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 02:56:32",
-      "account_id": "SIM-989",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "VETUSDT",
-      "side": "SHORT",
-      "entry_price": 0.005648,
-      "exit_price": 0.005648,
-      "pnl_usd": -0.03,
-      "result": "LOSS",
-      "notes": "LOSS on VETUSDT (PnL: +0.00%, Net: $-0.03 Fase 2)",
-      "context": {
-        "score": 5,
-        "rsi_15m": 41.56,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 02:56:32",
       "account_id": "SIM-999",
@@ -12007,6 +11983,28 @@
         "vol_surge": 0.02,
         "vol_surge_1m": 0.03,
         "fii_score": 70,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-24 17:04:23",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "ZECUSDT",
+      "side": "BUY",
+      "entry_price": 824.64,
+      "exit_price": 825.55,
+      "pnl_usd": 0.014559999999999492,
+      "result": "WIN",
+      "notes": "Real Money Trade closed with 0.11%",
+      "context": {
+        "score": 80,
+        "rsi_15m": 50.0,
+        "atr_pct_15m": 0.45,
+        "vol_surge": 1.0,
+        "vol_surge_1m": 1.0,
+        "fii_score": 60,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
