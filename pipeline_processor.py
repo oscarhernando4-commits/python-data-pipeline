@@ -501,6 +501,15 @@ def run_infinite_trading_matrix_cycle():
                 obv_t = cmtf.get("obv_trend", "NEUTRAL") if cmtf else "NEUTRAL"
                 fii_sc = cmtf.get("fii_score", 0) if cmtf else 0
                 rsi_1m = cmtf.get("rsi_1m", 50.0) if cmtf else 50.0
+                rsi_15m = cmtf.get("rsi_15m", ctech.get("indicators", {}).get("rsi_15m", 50.0))
+                vol_1m = cmtf.get("vol_surge_1m", ctech.get("indicators", {}).get("vol_surge_1m", 1.0))
+                vol_15m = cmtf.get("vol_surge_15m", ctech.get("indicators", {}).get("volume_surge_ratio", 1.0))
+                
+                tf_1m_up = cmtf.get("tf_1m_up", False)
+                tf_2m_up = cmtf.get("tf_2m_up", False)
+                is_1m_wick = cmtf.get("is_1m_lower_wick_absorption", False)
+                is_vwap_rebound = cmtf.get("is_vwap_floor_rebound", False)
+                has_turnaround = bool(tf_1m_up or tf_2m_up or is_1m_wick or is_vwap_rebound)
                 
                 c_score = cand.get("score", 0)
                 is_knife = ctech.get("indicators", {}).get("is_falling_knife", False)
@@ -510,21 +519,31 @@ def run_infinite_trading_matrix_cycle():
                 r5m_r = round(r5m, 1)
                 r15m_r = round(r15m, 1)
                 r1h_r = round(r1h, 1)
-                is_base = (r1m_r <= 38.0 and r5m_r <= 42.0 and r15m_r <= 48.0 and r1h_r <= 55.0)
+                
+                # 🎯 CALIBRACIÓN ULTRA-SELECTIVA ÉLITE: 2 a máximo 3 finalistas
+                # 1. 8D Matrix Tight: 1M<=35%, 5M<=38%, 15M<=42%, 1H<=50%
+                # 2. FII >= 60 (y FII >= 70 si RSI15M >= 38)
+                # 3. Volumen Vivo Obligatorio: vol_1m >= 0.35x y vol_15m >= 0.20x
+                # 4. Giro de Suelo Activo (1M/2M verde o mecha absorción)
+                # 5. Score >= 80 (Élite A+)
                 diag_reasons = []
-                if r1m_r > 38.0: diag_reasons.append(f"1M={r1m:.1f}% > 38%")
-                if r5m_r > 42.0: diag_reasons.append(f"5M={r5m:.1f}% > 42%")
-                if r15m_r > 48.0: diag_reasons.append(f"15M={r15m:.1f}% > 48%")
-                if r1h_r > 55.0: diag_reasons.append(f"1H={r1h:.1f}% > 55%")
+                if r1m_r > 35.0: diag_reasons.append(f"1M={r1m:.1f}% > 35%")
+                if r5m_r > 38.0: diag_reasons.append(f"5M={r5m:.1f}% > 38%")
+                if r15m_r > 42.0: diag_reasons.append(f"15M={r15m:.1f}% > 42%")
+                if r1h_r > 50.0: diag_reasons.append(f"1H={r1h:.1f}% > 50%")
                 if obv_t == "DISTRIBUTING": diag_reasons.append("OBV=DISTRIBUCIÓN")
-                if fii_sc < 46: diag_reasons.append(f"FII={fii_sc} bajo < 46")
-                if c_score < 55: diag_reasons.append(f"Score={c_score} insuficiente")
+                if fii_sc < 60: diag_reasons.append(f"FII={fii_sc} bajo < 60")
+                elif rsi_15m >= 38.0 and fii_sc < 70: diag_reasons.append(f"FII={fii_sc} < 70 con RSI={rsi_15m:.0f}")
+                if vol_1m < 0.35: diag_reasons.append(f"Vol1M={vol_1m:.2f}x < 0.35x")
+                if vol_15m < 0.20: diag_reasons.append(f"Vol15M={vol_15m:.2f}x < 0.20x")
+                if not has_turnaround: diag_reasons.append("Sin giro verde 1M/2M")
+                if c_score < 80: diag_reasons.append(f"Score={c_score} < 80")
                 if is_knife: diag_reasons.append("⛔ Cuchillo Cayendo")
                 if is_dead_cat: diag_reasons.append("🪤 Rebote Gato Muerto")
                 
-                is_truly_valid = (is_base and obv_t != "DISTRIBUTING" and fii_sc >= 46 and c_score >= 55 and not is_knife and not is_dead_cat)
-                status_icon = "🟢 BASE A+ VÁLIDA" if is_truly_valid else "🔴 DESCARTADO"
-                diag_str = " | ".join(diag_reasons) if diag_reasons else "Cumple Base 8D + Score A+"
+                is_truly_valid = len(diag_reasons) == 0 and not is_knife and not is_dead_cat
+                status_icon = "🟢 BASE A+ ÉLITE" if is_truly_valid else "🔴 DESCARTADO"
+                diag_str = " | ".join(diag_reasons) if diag_reasons else "Cumple Base 8D Élite + Score 80+"
                 
                 if is_truly_valid:
                     valid_base_candidates.append(cand)
@@ -532,30 +551,32 @@ def run_infinite_trading_matrix_cycle():
                 print(f"  #{idx:02d} {csym:<10} | Score: {c_score:>2}/100 | FII: {fii_sc:>2} | OBV: {obv_t:<12} | RSI 1M: {rsi_1m:>4.1f} | Canales: [1M:{r1m:>4.1f}% 5M:{r5m:>4.1f}% 15M:{r15m:>4.1f}% 1H:{r1h:>4.1f}%] -> {status_icon} ({diag_str})")
             print("═══════════════════════════════════════════════════════════════════════════════════════════════════════════\n")
 
-            # 🎯 REGLA SUPREMA: Consultar a Gemini AI EXCLUSIVAMENTE cuando hay candidatos en BASE A+
+            # 🎯 REGLA SUPREMA: Consultar a Gemini AI EXCLUSIVAMENTE para los mejores 2 a 3 finalistas élite
             if not valid_base_candidates:
-                print(f"🛡️ [PRESERVACIÓN CUÁNTICA] 0 de {len(top_all_candidates)} activos en Suelo Fractal 8D (1M<=38%, 5M<=42%, 15M<=48%, 1H<=55%, FII>=46). Manteniendo 100% liquidez en USDT.\n", flush=True)
+                print(f"🛡️ [PRESERVACIÓN CUÁNTICA] 0 de {len(top_all_candidates)} activos en Suelo Fractal 8D Élite (1M<=35%, 5M<=38%, 15M<=42%, FII>=60, Vol>=0.35x). Manteniendo 100% liquidez en USDT.\n", flush=True)
                 gemini_res = {
                     "selected_symbol": "NONE",
                     "action": "HOLD",
                     "approved": False,
                     "confidence": 98,
                     "committee_deliberation": {
-                        "agent_1_macro": "Mercado sin activos en suelo fractal.",
-                        "agent_2_tech": "Los 67 pares del Top 100 CMC están en zona media/techo (>38% en 1M).",
-                        "agent_3_orderbook": "Sin confluencia de volumen en soporte.",
+                        "agent_1_macro": "Mercado sin activos en suelo fractal élite.",
+                        "agent_2_tech": "Los 67 pares están fuera de la zona élite 8D (1M<=35%, 5M<=38%).",
+                        "agent_3_orderbook": "Sin confluencia de volumen y FII>=60.",
                         "agent_4_sector": "Esperando rotación limpia al piso.",
-                        "agent_5_memory": "Regla RAG: Prohibido comprar en techos o sin base A+.",
+                        "agent_5_memory": "Regla RAG: Prohibido comprar sin confluencia élite.",
                         "agent_6_risk": "Veto de sobreextensión activo.",
                         "agent_7_ceo_anti_loss": "100% USDT preservado en liquidez."
                     },
-                    "reasoning": "Todos los 67 activos analizados están fuera de la base de suelo (1M > 38% o 5M > 45%). Preservando capital."
+                    "reasoning": "Ninguno de los 67 activos cumple la confluencia élite (Base 8D estricta + FII>=60 + Vol>=0.35x). Preservando capital."
                 }
                 winner_sym = "NONE"
                 selected_opp = None
             else:
-                candidates_for_gemini = valid_base_candidates[:5]
-                print(f"🎯 [FINALISTAS BASE A+] Se detectaron {len(valid_base_candidates)} activos en Suelo Fractal 8D ({[c['symbol'] for c in candidates_for_gemini]}). Consultando al Comité para seleccionar el Cohete #1...\n", flush=True)
+                # Top 2 a máximo 3 finalistas
+                candidates_for_gemini = valid_base_candidates[:3]
+                print(f"🎯 [FINALISTAS BASE A+ ÉLITE] Se detectaron {len(valid_base_candidates)} activos en Suelo 8D Élite (Top {len(candidates_for_gemini)}: {[c['symbol'] for c in candidates_for_gemini]}). Consultando al Comité para el dictamen supremo...\n", flush=True)
+
 
                 specific_news_map = {}
                 for cand in candidates_for_gemini:
