@@ -589,6 +589,30 @@ def get_recent_kline_high(symbol, limit=5, start_time_ms=None):
             
     return 0.0
 
+def get_klines(symbol: str, interval: str = "5m", limit: int = 3) -> list:
+    """
+    Fetches raw OHLCV kline data from Binance public mirrors.
+    Returns list of klines: [open_time, open, high, low, close, volume, ...]
+    Used by the BTC Pre-Entry Guard and Circuit Breaker.
+    """
+    mirrors = [
+        "https://data-api.binance.vision/api/v3/klines",
+        "https://api1.binance.com/api/v3/klines",
+        "https://api2.binance.com/api/v3/klines",
+        "https://api.binance.com/api/v3/klines",
+    ]
+    params = {"symbol": symbol, "interval": interval, "limit": limit}
+    for url in mirrors:
+        try:
+            res = requests.get(url, params=params, timeout=4)
+            if res.status_code == 200:
+                data = res.json()
+                if isinstance(data, list) and len(data) > 0:
+                    return data
+        except Exception:
+            continue
+    return []
+
 # ============================================================
 # ORDER EXECUTION (Uses Fixie proxy - counted towards quota)
 # ============================================================
