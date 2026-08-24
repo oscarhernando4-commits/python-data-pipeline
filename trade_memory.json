@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 10143,
+    "total_trades": 10144,
     "wins": 4646,
-    "losses": 5497,
+    "losses": 5498,
     "win_rate_pct": 45.8,
-    "total_pnl_usd": 11762.777316549395
+    "total_pnl_usd": 11762.701016549394
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:30-40(Weak) + Score:50-70(Mild) + Trend:NEUTRAL (Lost on ONDOUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SKYUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on BONKUSDT)",
       "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on FLOKIUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK BUY when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZECUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ATOMUSDT)",
-      "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ALGOUSDT)"
+      "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ALGOUSDT)",
+      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on OPUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on WIFUSDT)",
@@ -53,30 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 02:58:30",
-      "account_id": "SIM-203",
-      "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
-      "symbol": "FILUSDT",
-      "side": "LONG",
-      "entry_price": 0.7607,
-      "exit_price": 0.762,
-      "pnl_usd": 0.0,
-      "result": "WIN",
-      "notes": "WIN on FILUSDT (PnL: +0.17%, Net: $+0.00 Fase 3)",
-      "context": {
-        "score": 5,
-        "rsi_15m": 44.71,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 02:58:30",
       "account_id": "SIM-204",
@@ -12001,6 +11977,28 @@
         "vol_surge": 1.05,
         "vol_surge_1m": 1.26,
         "fii_score": 60,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-24 17:33:26",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "OPUSDT",
+      "side": "LONG",
+      "entry_price": 0.107,
+      "exit_price": 0.1064,
+      "pnl_usd": -0.0763,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🚪 MICRO-SCRATCH PREVENTIVO: OPUSDT lleva 8m sin arranque (PnL -0.56%). Liberando USDT con pérdida mínima. (Fase 1, PnL: -0.56%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 35.2,
+        "atr_pct_15m": 1.019,
+        "vol_surge": 0.15,
+        "vol_surge_1m": 0.09,
+        "fii_score": 80,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
