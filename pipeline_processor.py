@@ -495,9 +495,15 @@ def run_infinite_trading_matrix_cycle():
                 ctech = cdata.get("tech", {})
                 cmtf = ctech.get("mtf_analysis", {})
                 r1m = cmtf.get("range_position_1m", 0.5) * 100 if cmtf else 50
+                r2m = cmtf.get("range_position_2m", 0.5) * 100 if cmtf else 50
                 r5m = cmtf.get("range_position_5m", 0.5) * 100 if cmtf else 50
+                r10m = cmtf.get("range_position_10m", 0.5) * 100 if cmtf else 50
                 r15m = cmtf.get("range_position_15m", 0.5) * 100 if cmtf else 50
+                r30m = cmtf.get("range_position_30m", 0.5) * 100 if cmtf else 50
                 r1h = cmtf.get("range_position_1h", 0.5) * 100 if cmtf else 50
+                r2h = cmtf.get("range_position_2h", 0.5) * 100 if cmtf else 50
+                r4h = cmtf.get("range_position_4h", 0.5) * 100 if cmtf else 50
+                r1d = cmtf.get("range_position_1d", 0.5) * 100 if cmtf else 50
                 obv_t = cmtf.get("obv_trend", "NEUTRAL") if cmtf else "NEUTRAL"
                 fii_sc = cmtf.get("fii_score", 0) if cmtf else 0
                 rsi_1m = cmtf.get("rsi_1m", 50.0) if cmtf else 50.0
@@ -516,21 +522,26 @@ def run_infinite_trading_matrix_cycle():
                 is_dead_cat = ctech.get("indicators", {}).get("is_dead_cat_bounce", False)
                 
                 r1m_r = round(r1m, 1)
+                r2m_r = round(r2m, 1)
                 r5m_r = round(r5m, 1)
+                r10m_r = round(r10m, 1)
                 r15m_r = round(r15m, 1)
+                r30m_r = round(r30m, 1)
                 r1h_r = round(r1h, 1)
+                r2h_r = round(r2h, 1)
+                r4h_r = round(r4h, 1)
+                r1d_r = round(r1d, 1)
                 
-                # 🎯 CALIBRACIÓN ESTÁNDAR 8D + TOP 2-3 FINALISTAS
-                # 1. 8D Matrix: 1M<=38%, 5M<=42%, 15M<=48%, 1H<=55%
-                # 2. FII >= 50 (y FII >= 65 si RSI15M >= 40)
-                # 3. Volumen Vivo: vol_1m >= 0.20x y vol_15m >= 0.15x
-                # 4. Giro de Suelo Activo (1M/2M verde o mecha absorción)
-                # 5. Score >= 75 (Confluencia A+)
+                # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL COMPLETA (1M a 1D):
+                # 1M<=38%, 2M<=40%, 5M<=42%, 10M<=45%, 15M<=48%, 30M<=52%, 1H<=55%, 2H<=60%, 4H<=65%, 1D<=70%
                 diag_reasons = []
-                if r1m_r > 38.0: diag_reasons.append(f"1M={r1m:.1f}% > 38%")
-                if r5m_r > 42.0: diag_reasons.append(f"5M={r5m:.1f}% > 42%")
-                if r15m_r > 48.0: diag_reasons.append(f"15M={r15m:.1f}% > 48%")
-                if r1h_r > 55.0: diag_reasons.append(f"1H={r1h:.1f}% > 55%")
+                if r1m_r > 38.0: diag_reasons.append(f"1M={r1m:.0f}% > 38%")
+                if r5m_r > 42.0: diag_reasons.append(f"5M={r5m:.0f}% > 42%")
+                if r15m_r > 48.0: diag_reasons.append(f"15M={r15m:.0f}% > 48%")
+                if r1h_r > 55.0: diag_reasons.append(f"1H={r1h:.0f}% > 55%")
+                if r2h_r > 60.0: diag_reasons.append(f"2H={r2h:.0f}% > 60%")
+                if r4h_r > 65.0: diag_reasons.append(f"4H={r4h:.0f}% > 65%")
+                if r1d_r > 70.0: diag_reasons.append(f"1D={r1d:.0f}% > 70%")
                 if obv_t == "DISTRIBUTING": diag_reasons.append("OBV=DISTRIBUCIÓN")
                 if fii_sc < 50: diag_reasons.append(f"FII={fii_sc} bajo < 50")
                 elif rsi_15m >= 40.0 and fii_sc < 65: diag_reasons.append(f"FII={fii_sc} < 65 con RSI={rsi_15m:.0f}")
@@ -542,14 +553,15 @@ def run_infinite_trading_matrix_cycle():
                 
                 is_truly_valid = len(diag_reasons) == 0 and not is_knife and not is_dead_cat
                 status_icon = "🟢 BASE A+ VÁLIDA" if is_truly_valid else "🔴 DESCARTADO"
-
-                diag_str = " | ".join(diag_reasons) if diag_reasons else "Cumple Base 8D Élite + Score 80+"
+                diag_str = " | ".join(diag_reasons) if diag_reasons else "Cumple Base 8D + Macro 1D"
                 
                 if is_truly_valid:
                     valid_base_candidates.append(cand)
                 
-                print(f"  #{idx:02d} {csym:<10} | Score: {c_score:>2}/100 | FII: {fii_sc:>2} | OBV: {obv_t:<12} | RSI 1M: {rsi_1m:>4.1f} | Canales: [1M:{r1m:>4.1f}% 5M:{r5m:>4.1f}% 15M:{r15m:>4.1f}% 1H:{r1h:>4.1f}%] -> {status_icon} ({diag_str})")
+                canales_str = f"[1M:{r1m:>2.0f}% 5M:{r5m:>2.0f}% 15M:{r15m:>2.0f}% 1H:{r1h:>2.0f}% 2H:{r2h:>2.0f}% 4H:{r4h:>2.0f}% 1D:{r1d:>2.0f}%]"
+                print(f"  #{idx:02d} {csym:<10} | Score: {c_score:>2}/100 | FII: {fii_sc:>2} | OBV: {obv_t:<12} | RSI 1M: {rsi_1m:>4.1f} | Canales: {canales_str} -> {status_icon} ({diag_str})")
             print("═══════════════════════════════════════════════════════════════════════════════════════════════════════════\n")
+
 
             # 🎯 REGLA SUPREMA: Consultar a Gemini AI EXCLUSIVAMENTE para los mejores 2 a 3 finalistas élite
             if not valid_base_candidates:
