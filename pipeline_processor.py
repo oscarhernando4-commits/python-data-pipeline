@@ -497,6 +497,38 @@ def run_infinite_trading_matrix_cycle():
             except Exception as e_btc_guard:
                 print(f"⚠️ BTC Guard check error (non-blocking): {e_btc_guard}")
             
+            # 🔬 DIAGNÓSTICO INDIVIDUAL DETALLADO DE LOS TOP CANDIDATOS DEL ESCÁNER:
+            print("\n🔬 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════")
+            print(f"📊 [DIAGNÓSTICO INDIVIDUAL DETALLADO — TOP ACTIVOS DE LOS {len(top_all_candidates)} PARES TOP 100 CMC]")
+            print("═══════════════════════════════════════════════════════════════════════════════════════════════════════════")
+            for idx, cand in enumerate(top_all_candidates[:5], 1):
+                csym = cand["symbol"]
+                cdata = symbol_analysis_map.get(csym, {})
+                ctech = cdata.get("tech", {})
+                cmtf = ctech.get("mtf_analysis", {})
+                r1m = cmtf.get("range_position_1m", 0.5) * 100 if cmtf else 50
+                r5m = cmtf.get("range_position_5m", 0.5) * 100 if cmtf else 50
+                r15m = cmtf.get("range_position_15m", 0.5) * 100 if cmtf else 50
+                r1h = cmtf.get("range_position_1h", 0.5) * 100 if cmtf else 50
+                obv_t = cmtf.get("obv_trend", "NEUTRAL") if cmtf else "NEUTRAL"
+                fii_sc = cmtf.get("fii_score", 0) if cmtf else 0
+                rsi_1m = cmtf.get("rsi_1m", 50.0) if cmtf else 50.0
+                
+                is_base = (r1m <= 35 and r5m <= 40 and r15m <= 50 and r1h <= 60)
+                diag_reasons = []
+                if r1m > 35: diag_reasons.append(f"1M={r1m:.0f}% > 35%")
+                if r5m > 40: diag_reasons.append(f"5M={r5m:.0f}% > 40%")
+                if r15m > 50: diag_reasons.append(f"15M={r15m:.0f}% > 50%")
+                if r1h > 60: diag_reasons.append(f"1H={r1h:.0f}% > 60%")
+                if obv_t == "DISTRIBUTING": diag_reasons.append("OBV=DISTRIBUCIÓN")
+                if fii_sc < 40: diag_reasons.append(f"FII={fii_sc} bajo")
+                
+                status_icon = "🟢 BASE A+ VÁLIDA" if (is_base and obv_t != "DISTRIBUTING") else "🔴 DESCARTADO"
+                diag_str = " | ".join(diag_reasons) if diag_reasons else "Cumple Base 8D + Volumen"
+                
+                print(f"  #{idx} {csym:<10} | Score: {cand['score']:>2}/100 | FII: {fii_sc:>2} | OBV: {obv_t:<12} | RSI 1M: {rsi_1m:>4.1f} | Canales: [1M:{r1m:>2.0f}% 5M:{r5m:>2.0f}% 15M:{r15m:>2.0f}% 1H:{r1h:>2.0f}%] -> {status_icon} ({diag_str})")
+            print("═══════════════════════════════════════════════════════════════════════════════════════════════════════════\n")
+
             specific_news_map = {}
             for cand in top_all_candidates[:25]:  # Notícias específicas para los 25 principales
                 c_sym = cand["symbol"]
@@ -515,18 +547,18 @@ def run_infinite_trading_matrix_cycle():
             )
             
             winner_sym = gemini_res.get("selected_symbol")
+            delib = gemini_res.get("committee_deliberation", {})
             if winner_sym and winner_sym != "NONE" and winner_sym in symbol_analysis_map:
                 top_data = symbol_analysis_map[winner_sym]
                 top_side = gemini_res.get("action", "BUY_LONG")
                 selected_opp = (winner_sym, top_data, top_side)
                 
-                delib = gemini_res.get("committee_deliberation", {})
                 print(f"\n🏛️ ═══════════════════════════════════════════════════════════════════")
                 print(f"👑 [COMITÉ INSTITUCIONAL 7 AGENTES - DICTAMEN SUPREMO: {winner_sym}]")
                 print(f"═══════════════════════════════════════════════════════════════════════")
                 if delib:
                     if delib.get("agent_1_macro"): print(f"  🕵️ Agente 1 (Macro & BTC): {delib.get('agent_1_macro')}")
-                    if delib.get("agent_2_tech"): print(f"  📊 Agente 2 (Suelo 7D & DNA): {delib.get('agent_2_tech')}")
+                    if delib.get("agent_2_tech"): print(f"  📊 Agente 2 (Suelo 8D & DNA): {delib.get('agent_2_tech')}")
                     if delib.get("agent_3_orderbook"): print(f"  🌊 Agente 3 (Libro & Bids): {delib.get('agent_3_orderbook')}")
                     if delib.get("agent_4_sector"): print(f"  🧩 Agente 4 (Sector & Tiempo): {delib.get('agent_4_sector')}")
                     if delib.get("agent_5_memory"): print(f"  🧠 Agente 5 (Memoria RAG): {delib.get('agent_5_memory')}")
@@ -536,10 +568,21 @@ def run_infinite_trading_matrix_cycle():
                 print(f"  💡 Consenso: {gemini_res.get('reasoning')}")
                 print(f"═══════════════════════════════════════════════════════════════════════\n")
             else:
-                delib = gemini_res.get("committee_deliberation", {})
                 ceo_verdict = delib.get("agent_7_ceo_anti_loss", gemini_res.get("reasoning", "Preservando 100% USDT"))
-                print(f"\n🏛️ [COMITÉ 7 AGENTES] Veredicto: 🛡️ HOLD (100% USDT Protegido)")
-                print(f"  💡 Razón del CEO: {ceo_verdict}\n")
+                print(f"\n🏛️ ═══════════════════════════════════════════════════════════════════")
+                print(f"🛡️ [COMITÉ INSTITUCIONAL 7 AGENTES - DICTAMEN DE PROTECCIÓN: HOLD]")
+                print(f"═══════════════════════════════════════════════════════════════════════")
+                if delib:
+                    if delib.get("agent_1_macro"): print(f"  🕵️ Agente 1 (Macro & BTC): {delib.get('agent_1_macro')}")
+                    if delib.get("agent_2_tech"): print(f"  📊 Agente 2 (Suelo 8D & DNA): {delib.get('agent_2_tech')}")
+                    if delib.get("agent_3_orderbook"): print(f"  🌊 Agente 3 (Libro & Bids): {delib.get('agent_3_orderbook')}")
+                    if delib.get("agent_4_sector"): print(f"  🧩 Agente 4 (Sector & Tiempo): {delib.get('agent_4_sector')}")
+                    if delib.get("agent_5_memory"): print(f"  🧠 Agente 5 (Memoria RAG): {delib.get('agent_5_memory')}")
+                    if delib.get("agent_6_risk"): print(f"  🛡️ Agente 6 (Riesgo & Anti-Cima): {delib.get('agent_6_risk')}")
+                    if delib.get("agent_7_ceo_anti_loss"): print(f"  👑 Agente 7 (CEO Scalp): {delib.get('agent_7_ceo_anti_loss')}")
+                print(f"  🎯 Dictamen Final: 🛡️ HOLD (100% USDT Protegido) | Confianza={gemini_res.get('confidence', 100)}%")
+                print(f"  💡 Consenso: {gemini_res.get('reasoning')}")
+                print(f"═══════════════════════════════════════════════════════════════════════\n")
             
             # Build rich top candidates metrics for dashboard persistence (3-tier RSI architecture)
             top_candidates_rich = []
