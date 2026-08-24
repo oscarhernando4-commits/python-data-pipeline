@@ -23,36 +23,27 @@ _BTC_DOM_CACHE: Dict[str, Any] = {}
 _BTC_DOM_TTL = 300  # 5 minutes
 _FUNDING_TTL = 180  # 3 minutes
 
-# ─── Token → Sector mapping ──────────────────────────────────────────────────
+# ─── Token → Sector mapping (Top 100 CMC Oficial) ──────────────────────────
 TOKEN_SECTOR_MAP = {
-    # DeFi
-    "AAVE": "DeFi", "UNI": "DeFi", "LINK": "Oracle/DeFi", "MKR": "DeFi",
-    "COMP": "DeFi", "CRV": "DeFi", "SNX": "DeFi", "BAL": "DeFi",
-    "SUSHI": "DeFi", "1INCH": "DeFi", "DYDX": "DeFi", "PENDLE": "DeFi",
-    # Layer 1
-    "ETH": "L1", "SOL": "L1", "ADA": "L1", "AVAX": "L1", "DOT": "L1",
-    "ATOM": "L1", "NEAR": "L1", "ALGO": "L1", "FTM": "L1", "ONE": "L1",
-    "HBAR": "L1", "XLM": "L1", "XRP": "L1", "BNB": "L1",
-    # Layer 2
-    "MATIC": "L2", "POL": "L2", "ARB": "L2", "OP": "L2", "IMX": "L2",
-    "LRC": "L2", "ZK": "L2", "STRK": "L2",
-    # AI & Data
-    "FET": "AI", "AGIX": "AI", "OCEAN": "AI", "TAO": "AI", "WLD": "AI",
-    "NMR": "AI", "GRT": "AI",
-    # Privacy
-    "ZEC": "Privacy", "XMR": "Privacy", "SCRT": "Privacy",
-    # Payments
-    "LTC": "Payments", "BCH": "Payments", "DASH": "Payments", "XLM": "Payments",
-    # Gaming / Metaverse
-    "AXS": "Gaming", "SAND": "Gaming", "MANA": "Gaming", "GALA": "Gaming",
-    "ENJ": "Gaming", "ILV": "Gaming",
-    # Infrastructure
-    "FIL": "Infrastructure", "AR": "Infrastructure", "ANKR": "Infrastructure",
-    "BAND": "Oracle", "API3": "Oracle",
-    # Move ecosystem
-    "SUI": "Move", "APT": "Move",
-    # TON ecosystem
-    "TON": "TON", "NOT": "TON",
+    # DeFi / RWA / Yield
+    "AAVE": "DeFi", "UNI": "DeFi", "ENA": "DeFi", "ONDO": "RWA", "CRV": "DeFi",
+    "JUP": "DeFi", "AERO": "DeFi", "MORPHO": "DeFi", "CAKE": "DeFi", "INJ": "DeFi",
+    "NEXO": "DeFi", "SKY": "DeFi", "LINK": "Oracle/DeFi", "PYTH": "Oracle",
+    # Layer 1 / Core
+    "BTC": "L1", "ETH": "L1", "SOL": "L1", "BNB": "L1", "XRP": "L1",
+    "ADA": "L1", "AVAX": "L1", "SUI": "L1", "NEAR": "L1", "DOT": "L1",
+    "ATOM": "L1", "ICP": "L1", "SEI": "L1", "APT": "L1", "TIA": "L1",
+    "LTC": "Payments", "BCH": "Payments", "ETC": "L1", "XLM": "Payments", "TRX": "L1",
+    "ALGO": "L1", "HBAR": "L1", "STX": "L1", "KAS": "L1", "QNT": "Infrastructure",
+    # Layer 2 & Modular Infra
+    "POL": "L2", "ARB": "L2", "OP": "L2", "IMX": "L2", "ETHFI": "L2", "ZRO": "L2", "STRK": "L2",
+    # AI & Compute
+    "TAO": "AI", "FET": "AI", "RENDER": "AI", "WLD": "AI", "FIL": "Infrastructure",
+    # Memes & High-Beta Momentum
+    "DOGE": "Meme", "SHIB": "Meme", "PEPE": "Meme", "PENGU": "Meme", "TRUMP": "Meme",
+    "PUMP": "Meme", "WLFI": "Meme", "ASTER": "Meme", "FLOKI": "Meme", "BONK": "Meme", "WIF": "Meme",
+    # Privacy / Utility
+    "DASH": "Privacy", "ZEC": "Privacy", "VET": "Utility", "VIRTUAL": "AI", "SUN": "DeFi", "JST": "DeFi"
 }
 
 # ─── Sector strength tracking (updated each cycle) ───────────────────────────
