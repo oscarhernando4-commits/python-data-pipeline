@@ -1774,22 +1774,34 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     bc = float(bkl[-1][4]); bo = float(bkl[-1][1])
                     if bc < bo:
                         bearish_count += 1
-            if bearish_count >= 7:
-                print(f"🛑 [AMPLITUD DE MERCADO] {bearish_count}/10 alts de referencia en vela 15M roja. Mercado en corrección generalizada. No abrir longs.")
+            if bearish_count >= 6:
+                print(f"🛑 [AMPLITUD DE MERCADO] {bearish_count}/10 alts de referencia en vela 15M roja (>=60% del mercado cayendo). Bloqueo total de longs.")
                 return
             elif bearish_count >= 5:
-                print(f"⚠️ [AMPLITUD NEUTRAL] {bearish_count}/10 alts en rojo 15M. Mercado mixto — solo entradas con FII >= 70.")
-                # Temporarily raise FII bar when market is mixed
+                print(f"⚠️ [AMPLITUD MIXTA] {bearish_count}/10 alts en rojo 15M. Exigiendo FII >= 80 y Score >= 90.")
                 state["_breadth_warning"] = True
             else:
                 state["_breadth_warning"] = False
         except Exception:
             state["_breadth_warning"] = False
 
-        # 🪙 GUARDIÁN BITCOIN PRE-ENTRADA (Anti-Cascada de Mercado):
-        # Si Bitcoin está en caída activa en 5M (vela roja > -0.15% o 2 velas rojas consecutivas), frenar compras
-
+        # 🪙 GUARDIÁN BITCOIN MULTI-TEMPORAL (5M + 15M Anti-Cascada):
+        # Bloquea si BTC tiene 2 velas 15M rojas consecutivas o si está cayendo en 5M
         try:
+            # 1. Chequeo 15M (Tendencia Macro Corta)
+            btc_15m_kl = get_klines("BTCUSDT", "15m", 3)
+            if btc_15m_kl and len(btc_15m_kl) >= 2:
+                c15_now = float(btc_15m_kl[-1][4])
+                o15_now = float(btc_15m_kl[-1][1])
+                c15_prev = float(btc_15m_kl[-2][4])
+                o15_prev = float(btc_15m_kl[-2][1])
+                btc_15m_pct = ((c15_now - o15_now) / o15_now) * 100.0
+                btc_15m_2red = (c15_now < o15_now) and (c15_prev < o15_prev)
+                if btc_15m_pct <= -0.22 or (btc_15m_2red and btc_15m_pct < -0.05):
+                    print(f"🛑 [GUARDIÁN BITCOIN 15M] BTC en sangrado consecutivo en 15M ({btc_15m_pct:+.2f}% | 2 velas rojas). Prohibido abrir longs.")
+                    return
+
+            # 2. Chequeo 5M (Gatillo Rápido)
             btc_kl = get_klines("BTCUSDT", "5m", 3)
             if btc_kl and len(btc_kl) >= 2:
                 c_now = float(btc_kl[-1][4])
@@ -1798,11 +1810,12 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 o_prev = float(btc_kl[-2][1])
                 btc_5m_pct = ((c_now - o_now) / o_now) * 100.0
                 btc_2candles_red = (c_now < o_now) and (c_prev < o_prev)
-                if btc_5m_pct <= -0.18 or (btc_2candles_red and btc_5m_pct < -0.08):
-                    print(f"🛑 [GUARDIÁN BITCOIN] BTC en caída activa en 5M ({btc_5m_pct:+.2f}%). Prohibido abrir longs en altcoins durante la corrección de mercado.")
+                if btc_5m_pct <= -0.15 or (btc_2candles_red and btc_5m_pct < -0.06):
+                    print(f"🛑 [GUARDIÁN BITCOIN 5M] BTC en caída activa en 5M ({btc_5m_pct:+.2f}%). Prohibido abrir longs durante corrección.")
                     return
         except Exception:
             pass
+
 
         total_cands = len(candidate_queue)
         print(f"\n🔬 [EJECUCIÓN DE PRECISIÓN A+] Verificando confluencia 8D en {total_cands} finalistas seleccionados...")
@@ -2210,16 +2223,17 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 vd_accel = vd.get("delta_acceleration", 0.0)
                 print(f"⚡ [VOLUME DELTA] {cand_sym}: {vd_label}")
 
-                # VETO: If sell takers are flooding in (>= 60% sell dominance), wait for reversal
-                if vd_sell_wave and vd_buy <= 40.0 and not (fii >= 70):
-                    print(f"  🛑 [VOLUME DELTA VETO] {cand_sym} descartado: Ola vendedora activa (Buy={vd_buy:.0f}%, Delta={vd_delta:+,.0f} USDT). Esperando reversión de flujo.")
+                # VETO OBLIGATORIO: Si los vendedores taker dominan (>52% venta o sell_wave), no entrar
+                if vd_sell_wave or vd_buy < 48.0:
+                    print(f"  🛑 [VOLUME DELTA VETO] {cand_sym} descartado: Dominancia vendedora taker activa (Buy={vd_buy:.0f}% < 48%, Delta={vd_delta:+,.0f} USDT). Esperando compradores agresivos.")
                     continue
 
                 # BOOST: Strong buy delta unlocks entry even at moderate score
-                if vd.get("strong_buy", False):
-                    print(f"  🚀 [VOLUME DELTA BOOST] Flujo comprador explosivo confirmado. Entrada de máxima precisión.")
+                if vd.get("strong_buy", False) or vd_buy >= 55.0:
+                    print(f"  🚀 [VOLUME DELTA BOOST] Flujo comprador agresivo confirmado (Buy={vd_buy:.0f}%). Entrada de máxima precisión.")
             except Exception as _vde:
                 print(f"  ⚠️ [VOLUME DELTA] Sin datos de flujo ({_vde}). Continuando con filtros estándar.")
+
 
 
             buy_res = execute_real_spot_market_buy(cand_sym, usdt_free)
