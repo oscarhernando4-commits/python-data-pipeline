@@ -64,71 +64,68 @@ ARCHETYPE_CONFIGS = {
         "archetype": "HYPER_VOLATILE_SPRINT",
         "label": "🐆 SPRINT HIPER-VOLÁTIL (Meme / High-Beta)",
         "emoji": "🐆",
-        "initial_sl_pct": -0.50,          # SL Defensivo de -0.50%
-        "max_stagnation_minutes": 240,    # 240 min (4.0h) de paciencia en Fase 1
-        "phase_2_trigger_pct": 0.35,      # Break-even al tocar +0.35%
-        "phase_2_retention_ratio": 0.75,
-        "phase_3_trigger_pct": 1.20,
+        "initial_sl_pct": -5.00,         # SL de -5.00%
+        "max_stagnation_minutes": 999999, # Tiempo ilimitado
+        "phase_2_trigger_pct": 1.25,
+        "phase_2_retention_ratio": 1.00,
+        "phase_3_trigger_pct": 2.00,
         "phase_3_retention_ratio": 0.70,
-        "phase_4_retention_ratio": 0.65,
         "required_vol_surge_1m": 1.5,
         "required_min_bids_pct": 52.0,
-        "trend_ride_enabled": False,
+        "trend_ride_enabled": True,
         "wick_slack": 0.30,
-        "guideline_for_ai": "Trata este activo como un SPRINT. Exige volumen explosivo en 1M/10s. Dale 240m (4h) de paciencia en Fase 1."
+        "guideline_for_ai": "Trata este activo como un SPRINT. Exige volumen explosivo en 1M/10s. Meta mínima +1.25%."
     },
     "BLUE_CHIP_CORE": {
         "archetype": "BLUE_CHIP_CORE",
         "label": "🏛️ BLUE-CHIP INSTITUCIONAL (L1 / Core)",
         "emoji": "🏛️",
-        "initial_sl_pct": -0.50,          # SL Defensivo de -0.50%
-        "max_stagnation_minutes": 240,    # 240 min (4.0h) de paciencia en Fase 1 para maduración fractal
-        "phase_2_trigger_pct": 0.35,
-        "phase_2_retention_ratio": 0.75,
-        "phase_3_trigger_pct": 1.50,
+        "initial_sl_pct": -5.00,         # SL de -5.00%
+        "max_stagnation_minutes": 999999, # Tiempo ilimitado
+        "phase_2_trigger_pct": 1.25,
+        "phase_2_retention_ratio": 1.00,
+        "phase_3_trigger_pct": 2.00,
         "phase_3_retention_ratio": 0.70,
-        "phase_4_retention_ratio": 0.65,
         "required_vol_surge_1m": 0.8,
         "required_min_bids_pct": 48.0,
-        "trend_ride_enabled": False,
+        "trend_ride_enabled": True,
         "wick_slack": 0.32,
-        "guideline_for_ai": "Trata este activo como CORE. Exige confluencia y ATR >= 0.35%. Dale 240m (4h) de paciencia en Fase 1."
+        "guideline_for_ai": "Trata este activo como CORE. Exige confluencia. Meta mínima +1.25%."
     },
     "SECTOR_ROTATION": {
         "archetype": "SECTOR_ROTATION",
         "label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
         "emoji": "🧩",
-        "initial_sl_pct": -0.50,          # SL Defensivo de -0.50%
-        "max_stagnation_minutes": 240,    # 240 min (4.0h) de paciencia en Fase 1
-        "phase_2_trigger_pct": 0.35,
-        "phase_2_retention_ratio": 0.75,
-        "phase_3_trigger_pct": 1.50,
+        "initial_sl_pct": -5.00,         # SL de -5.00%
+        "max_stagnation_minutes": 999999, # Tiempo ilimitado
+        "phase_2_trigger_pct": 1.25,
+        "phase_2_retention_ratio": 1.00,
+        "phase_3_trigger_pct": 2.00,
         "phase_3_retention_ratio": 0.70,
-        "phase_4_retention_ratio": 0.65,
         "required_vol_surge_1m": 1.0,
         "required_min_bids_pct": 50.0,
-        "trend_ride_enabled": False,
+        "trend_ride_enabled": True,
         "wick_slack": 0.32,
-        "guideline_for_ai": "Trata este activo como ROTACIÓN SECTORIAL. Exige sector caliente y volumen. Dale 240m (4h) de paciencia en Fase 1."
+        "guideline_for_ai": "Trata este activo como ROTACIÓN SECTORIAL. Exige sector caliente y volumen. Meta mínima +1.25%."
     },
     "THIN_BOOK_MICRO": {
         "archetype": "THIN_BOOK_MICRO",
         "label": "🎯 MICRO-CAP / LIBRO DELGADO",
         "emoji": "🎯",
-        "initial_sl_pct": -0.50,          # SL Defensivo de -0.50%
-        "max_stagnation_minutes": 240,    # 240 min (4.0h) de paciencia en Fase 1
-        "phase_2_trigger_pct": 0.35,
-        "phase_2_retention_ratio": 0.75,
-        "phase_3_trigger_pct": 1.10,
+        "initial_sl_pct": -5.00,         # SL de -5.00%
+        "max_stagnation_minutes": 999999, # Tiempo ilimitado
+        "phase_2_trigger_pct": 1.25,
+        "phase_2_retention_ratio": 1.00,
+        "phase_3_trigger_pct": 2.00,
         "phase_3_retention_ratio": 0.70,
-        "phase_4_retention_ratio": 0.65,
         "required_vol_surge_1m": 1.3,
         "required_min_bids_pct": 54.0,
-        "trend_ride_enabled": False,
+        "trend_ride_enabled": True,
         "wick_slack": 0.28,
-        "guideline_for_ai": "Trata este activo como LIBRO DELGADO. Exige volumen real y muro de Bids. Dale 240m (4h) de paciencia en Fase 1."
+        "guideline_for_ai": "Trata este activo como LIBRO DELGADO. Exige volumen real. Meta mínima +1.25%."
     }
 }
+
 
 
 
@@ -199,56 +196,33 @@ def calculate_archetype_trailing(
     atr_pct: float = 0.30
 ) -> Tuple[float, int, str]:
     """
-    Sistema Dinámico Cuántico de Curva Continua para Captura de Rallies (+1.20% a +4.00%+):
-    - FASE 1 (0.00% a +0.349%): Respiración y absorción con SL Defensivo (-0.50%).
-    - FASE 2 (+0.35% a +0.499%): Break-Even Blindado a +0.10% neto (Piso Fijo, comisiones cubiertas).
-    - FASE 3 (+0.50% a +1.199%): Expansión Hacia la Meta (Piso = max(+0.15%, Cima * 50%)). Da amplio aire.
-    - FASE 4 (>= +1.20%): Meta Cumplida (+1.20%+). Bloquea mínimo +0.90% neto y acompaña el rally.
-    - FASE 5 (>= +2.00%): Tendencia Fuerte (Retención 70%+, mínimo +1.50% neto).
-    - FASE 6 (>= +4.00%): Mega Rally (Retención 80%+, mínimo +3.20% neto).
+    Arquitectura Cuántica Pura de 3 Fases:
+    - FASE 1 (0.00% a +1.249%): Rumbo a la Meta con Stop Loss de -5.00%. Sin piso intermedio, tiempo ilimitado.
+    - FASE 2 (+1.25% a +1.999%): Meta Cumplida. Piso Fijo en +1.25% asegurado.
+    - FASE 3 (>= +2.00%): Rally Dinámico:
+        Retención(%) = 60% + (Cima × 5%)  [con cap en 85%]
+        Piso = max(+1.25%, Cima × Retención(%))
     """
     arch = archetype_dna.get("archetype", "SECTOR_ROTATION")
     emoji = archetype_dna.get("emoji", "🧬")
     label = archetype_dna.get("label", arch)
 
-    if highest_pnl_pct >= 4.00:
-        retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
+    if highest_pnl_pct >= 2.00:
+        retention_pct = min(85.0, 60.0 + (highest_pnl_pct * 5.0))
         retention_ratio = retention_pct / 100.0
-        sl_pct = max(3.20, round(highest_pnl_pct * retention_ratio, 4))
-        phase = 6
-        phase_label = f"👑 MEGA RALLY ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 2.00:
-        retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
-        retention_ratio = retention_pct / 100.0
-        sl_pct = max(1.50, round(highest_pnl_pct * retention_ratio, 4))
-        phase = 5
-        phase_label = f"🚀 TENDENCIA FUERTE ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 1.20:
-        retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
-        retention_ratio = retention_pct / 100.0
-        sl_pct = max(0.90, round(highest_pnl_pct * retention_ratio, 4))
-        phase = 4
-        phase_label = f"🎯 META CUMPLIDA +1.20%+ ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.50:
-        # Fase 3: +0.50% a +1.199% -> Deja respirar el precio para que no se corte el viaje a +1.20%+
-        sl_pct = max(0.15, round(highest_pnl_pct * 0.45, 4))
+        sl_pct = max(1.25, round(highest_pnl_pct * retention_ratio, 4))
         phase = 3
-        phase_label = f"🔒 EXPANSIÓN A META ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso Amplio +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.35:
-        # Fase 2: +0.35% a +0.499% (Break-Even Blindado a +0.10%)
-        sl_pct = 0.10
+        phase_label = f"🚀 FASE 3 RALLY DINÁMICO ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 1.25:
+        sl_pct = 1.25
         phase = 2
-        phase_label = f"🛡️ FASE 2 BREAK-EVEN BLINDADO (+0.10% NETO | {emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Fijo +0.10%)"
+        phase_label = f"🎯 FASE 2 META CUMPLIDA (+1.25% FIJO | {emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Fijo +1.25%)"
     else:
-        # Fase 1: 0.00% a +0.349% (SL Defensivo -0.50%)
-        sl_pct = -0.50
+        sl_pct = -5.00
         phase = 1
-        phase_label = f"🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN ({emoji} Cima +{highest_pnl_pct:.2f}% | SL Defensivo -0.50%)"
+        phase_label = f"🌱 FASE 1 RUMBO A META ({emoji} Cima +{highest_pnl_pct:.2f}% | SL -5.00% | Tiempo Ilimitado)"
 
     return sl_pct, phase, phase_label
-
-
-
 
 
 # ─── 5. VERIFICACIÓN DE ESTANCAMIENTO POR ARQUETIPO ──────────────────────────
@@ -260,22 +234,8 @@ def check_archetype_stagnation_exit(
     phase: int
 ) -> Tuple[bool, str]:
     """
-    Determines if a trade should exit due to stagnation based on the asset's patience window.
-    - Sprint memes: 12 min max.
-    - Thin books: 15 min max.
-    - Sector rotation: 35 min max.
-    - Blue chips: 60 min max.
+    Sin límite de tiempo en Fase 1: Paciencia absoluta e ilimitada.
     """
-    if phase > 1:
-        return False, ""  # If already in profit protection (Phase 2+), let the trailing stop handle it
-
-    max_mins = int(archetype_dna.get("max_stagnation_minutes", 240))
-    emoji = archetype_dna.get("emoji", "⏱️")
-    arch_name = archetype_dna.get("archetype", "GENERAL")
-
-    if holding_minutes >= max_mins and abs(pnl_pct) <= 0.50:
-        reason = f"🚀 Liberación por Límite de 4 Horas {emoji} ({holding_minutes}m en Fase 1 sin despegue para {arch_name}, PnL={pnl_pct:+.2f}%)"
-        return True, reason
-
     return False, ""
+
 

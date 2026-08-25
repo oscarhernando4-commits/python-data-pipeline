@@ -1121,39 +1121,24 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             atr_pct=atr_pct
         )
     except Exception as e:
-        # Fallback to Dynamic Curve Trailing Architecture (+1.20%+ Target)
-        if highest_pnl_pct >= 4.00:
-            retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
+        # Fallback to 3-Phase Pure Architecture (F1: SL -5% Ilimitado, F2: +1.25% Fijo, F3: >=2% Dinámico)
+        if highest_pnl_pct >= 2.00:
+            retention_pct = min(85.0, 60.0 + (highest_pnl_pct * 5.0))
             retention_ratio = retention_pct / 100.0
-            sl_pct = max(3.20, round(highest_pnl_pct * retention_ratio, 4))
-            phase = 6
-            phase_label = f"👑 MEGA RALLY (Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 2.00:
-            retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
-            retention_ratio = retention_pct / 100.0
-            sl_pct = max(1.50, round(highest_pnl_pct * retention_ratio, 4))
-            phase = 5
-            phase_label = f"🚀 TENDENCIA FUERTE (Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 1.20:
-            retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
-            retention_ratio = retention_pct / 100.0
-            sl_pct = max(0.90, round(highest_pnl_pct * retention_ratio, 4))
-            phase = 4
-            phase_label = f"🎯 META CUMPLIDA +1.20%+ (Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.50:
-            sl_pct = max(0.15, round(highest_pnl_pct * 0.45, 4))
+            sl_pct = max(1.25, round(highest_pnl_pct * retention_ratio, 4))
             phase = 3
-            phase_label = f"🔒 EXPANSIÓN A META (Cima +{highest_pnl_pct:.2f}% | Piso Amplio +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.35:
-            sl_pct = 0.10
+            phase_label = f"🚀 FASE 3 RALLY DINÁMICO (Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 1.25:
+            sl_pct = 1.25
             phase = 2
-            phase_label = f"🛡️ FASE 2 BREAK-EVEN BLINDADO (+0.10% NETO | Cima +{highest_pnl_pct:.2f}% -> Piso Fijo +0.10%)"
+            phase_label = f"🎯 FASE 2 META CUMPLIDA (+1.25% FIJO | Cima +{highest_pnl_pct:.2f}% -> Piso Fijo +1.25%)"
         else:
-            sl_pct = -0.50
+            sl_pct = -5.00
             phase = 1
-            phase_label = f"🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (Cima +{highest_pnl_pct:.2f}% | SL Defensivo -0.50%)"
+            phase_label = f"🌱 FASE 1 RUMBO A META (Cima +{highest_pnl_pct:.2f}% | SL -5.00% | Tiempo Ilimitado)"
                 
         return sl_pct, phase, phase_label
+
 
 
 def quick_position_heartbeat():
@@ -1246,23 +1231,9 @@ def quick_position_heartbeat():
                     should_exit = True
                     exit_reason = f"🚨 ESCUDO BITCOIN ACTIVO: BTC cayó {btc_drop_pct:+.2f}% desde la entrada. Eyectando {sym} para evitar contagio de la caída general."
             
-        # ⏱️ LIBERACIÓN ESTRICTA POR TIEMPO EN FASE 1: 4 HORAS (240 MINUTOS) DE PACIENCIA:
-        # El activo tiene 4 horas completas para madurar el despegue fractal sin interrupciones prematuras.
-        max_stag_mins = 240
-        if not should_exit and new_phase == 1:
-            if holding_minutes_hb >= max_stag_mins and current_pnl_pct <= -0.50:
-                should_exit = True
-                exit_reason = f"⏱️ LÍMITE DE 4 HORAS EN FASE 1: {sym} lleva {holding_minutes_hb}m sin despegue (PnL {current_pnl_pct:+.2f}%). Liberando 100% USDT para rotar a nuevo Setup A+."
-            else:
-                is_stag, stag_msg = adaptive_asset_dna.check_archetype_stagnation_exit(
-                    archetype_dna=arch_dna,
-                    holding_minutes=holding_minutes_hb,
-                    pnl_pct=current_pnl_pct,
-                    phase=new_phase
-                )
-                if is_stag:
-                    should_exit = True
-                    exit_reason = stag_msg
+        # ⏱️ FASE 1: PACIENCIA ILIMITADA (CERO LÍMITE DE TIEMPO):
+        # La posición se mantiene activa sin límite de horas hasta alcanzar la meta de +1.25% o tocar SL -5.00%.
+
 
 
         
