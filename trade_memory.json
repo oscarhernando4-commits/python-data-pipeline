@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 10153,
-    "wins": 4652,
+    "total_trades": 10154,
+    "wins": 4653,
     "losses": 5501,
     "win_rate_pct": 45.82,
-    "total_pnl_usd": 11762.768416549392
+    "total_pnl_usd": 11762.793416549392
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SEIUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ICPUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on APTUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ZROUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PYTHUSDT)",
@@ -49,34 +48,11 @@
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ALGOUSDT)",
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ICPUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLDUSDT)",
-      "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)"
+      "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)",
+      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SHIBUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 02:58:31",
-      "account_id": "SIM-836",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "ETCUSDT",
-      "side": "SHORT",
-      "entry_price": 7.78,
-      "exit_price": 7.75,
-      "pnl_usd": 0.05,
-      "result": "WIN",
-      "notes": "WIN on ETCUSDT (PnL: +0.39%, Net: $+0.05 Fase 3)",
-      "context": {
-        "score": 5,
-        "rsi_15m": 39.56,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 03:00:34",
       "account_id": "SIM-833",
@@ -11981,6 +11957,28 @@
         "vol_surge": 1.1,
         "vol_surge_1m": 2.2,
         "fii_score": 85,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-25 13:34:58",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "SHIBUSDT",
+      "side": "LONG",
+      "entry_price": 5.44e-06,
+      "exit_price": 5.45e-06,
+      "pnl_usd": 0.025,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via ⚡ VOLUME DELTA: Ola Vendedora detectada (Sell=70%, Accel=-26.0%). Cosechando ganancia en Fase 2 antes del retroceso. (Fase 2, PnL: +0.18%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 36.2,
+        "atr_pct_15m": 0.86,
+        "vol_surge": 0.59,
+        "vol_surge_1m": 0.67,
+        "fii_score": 90,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
