@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 10154,
-    "wins": 4653,
+    "total_trades": 10155,
+    "wins": 4654,
     "losses": 5501,
-    "win_rate_pct": 45.82,
-    "total_pnl_usd": 11762.793416549392
+    "win_rate_pct": 45.83,
+    "total_pnl_usd": 11762.860316549391
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SEIUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on APTUSDT)",
       "BOOST SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Won on ZROUSDT)",
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PYTHUSDT)",
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LINKUSDT)",
@@ -49,34 +48,11 @@
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ICPUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLDUSDT)",
       "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)",
-      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SHIBUSDT)"
+      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SHIBUSDT)",
+      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 03:00:34",
-      "account_id": "SIM-833",
-      "group_name": "🧬 GRUPO 5: Explorador Genético de Parámetros",
-      "symbol": "MORPHOUSDT",
-      "side": "SHORT",
-      "entry_price": 2.703,
-      "exit_price": 2.725,
-      "pnl_usd": -0.19,
-      "result": "LOSS",
-      "notes": "LOSS on MORPHOUSDT (PnL: -0.81%, Net: $-0.19 Fase 1)",
-      "context": {
-        "score": 5,
-        "rsi_15m": 44.91,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 03:00:34",
       "account_id": "SIM-968",
@@ -11979,6 +11955,28 @@
         "vol_surge": 0.59,
         "vol_surge_1m": 0.67,
         "fii_score": 90,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-25 14:09:05",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.813,
+      "exit_price": 0.817,
+      "pnl_usd": 0.0669,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via ⚡ VOLUME DELTA: Ola Vendedora detectada (Sell=63%, Accel=-98.6%). Cosechando ganancia en Fase 3 antes del retroceso. (Fase 3, PnL: +0.49%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 29.2,
+        "atr_pct_15m": 0.706,
+        "vol_surge": 0.33,
+        "vol_surge_1m": 0.48,
+        "fii_score": 65,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
