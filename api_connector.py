@@ -1925,12 +1925,12 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
             vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
             
-            # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL CALIBRADA EXACTA (1M<=35%, 2M<=36%, 5M<=38%, 10M<=40%, 15M<=42%, 30M<=46%, 1H<=50%, 2H<=54%, 4H<=58%, 1D<=65%)
+            # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL CALIBRADA EXACTA (1M<=35%, 2M<=36%, 5M<=38%, 10M<=40%, 15M<=42%, 30M<=46%, 1H<=50%, 2H<=50%, 4H<=50%, 1D<=50%)
             max_1m_base_cap = 0.35
             is_macro_base_valid = bool(
-                range_pos_1d <= 0.65 and
-                range_pos_4h <= 0.58 and
-                range_pos_2h <= 0.54 and
+                range_pos_1d <= 0.50 and
+                range_pos_4h <= 0.50 and
+                range_pos_2h <= 0.50 and
                 range_pos_1h <= 0.50 and
                 range_pos_30m <= 0.46 and
                 range_pos_15m <= 0.42 and
@@ -1942,8 +1942,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             
             if not is_macro_base_valid or is_at_daily_ceiling:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado: Fuera de la Matriz Armónica 8D o en Techo:")
-                print(f"     Canales: [1M: {range_pos_1m*100:.0f}% (max 35) | 2M: {range_pos_2m*100:.0f}% (max 36) | 5M: {range_pos_5m*100:.0f}% (max 38) | 10M: {range_pos_10m*100:.0f}% (max 40) | 15M: {range_pos_15m*100:.0f}% (max 42) | 30M: {range_pos_30m*100:.0f}% (max 46) | 1H: {range_pos_1h*100:.0f}% (max 50) | 2H: {range_pos_2h*100:.0f}% (max 54) | 4H: {range_pos_4h*100:.0f}% (max 58) | 1D: {range_pos_1d*100:.0f}% (max 65)]")
+                print(f"     Canales: [1M: {range_pos_1m*100:.0f}% (max 35) | 2M: {range_pos_2m*100:.0f}% (max 36) | 5M: {range_pos_5m*100:.0f}% (max 38) | 10M: {range_pos_10m*100:.0f}% (max 40) | 15M: {range_pos_15m*100:.0f}% (max 42) | 30M: {range_pos_30m*100:.0f}% (max 46) | 1H: {range_pos_1h*100:.0f}% (max 50) | 2H: {range_pos_2h*100:.0f}% (max 50) | 4H: {range_pos_4h*100:.0f}% (max 50) | 1D: {range_pos_1d*100:.0f}% (max 50)]")
                 continue
+
 
                 
             if not has_floor_turnaround:

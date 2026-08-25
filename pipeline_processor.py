@@ -533,7 +533,7 @@ def run_infinite_trading_matrix_cycle():
                 r1d_r = round(r1d, 1)
                 
                 # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL CALIBRADA EXACTA (1M a 1D):
-                # 1M<=35%, 2M<=36%, 5M<=38%, 10M<=40%, 15M<=42%, 30M<=46%, 1H<=50%, 2H<=54%, 4H<=58%, 1D<=65%
+                # 1M<=35%, 2M<=36%, 5M<=38%, 10M<=40%, 15M<=42%, 30M<=46%, 1H<=50%, 2H<=50%, 4H<=50%, 1D<=50%
                 diag_reasons = []
                 if r1m_r > 35.0: diag_reasons.append(f"1M={r1m:.0f}% > 35%")
                 if r2m_r > 36.0: diag_reasons.append(f"2M={r2m:.0f}% > 36%")
@@ -542,9 +542,10 @@ def run_infinite_trading_matrix_cycle():
                 if r15m_r > 42.0: diag_reasons.append(f"15M={r15m:.0f}% > 42%")
                 if r30m_r > 46.0: diag_reasons.append(f"30M={r30m:.0f}% > 46%")
                 if r1h_r > 50.0: diag_reasons.append(f"1H={r1h:.0f}% > 50%")
-                if r2h_r > 54.0: diag_reasons.append(f"2H={r2h:.0f}% > 54%")
-                if r4h_r > 58.0: diag_reasons.append(f"4H={r4h:.0f}% > 58%")
-                if r1d_r > 65.0: diag_reasons.append(f"1D={r1d:.0f}% > 65%")
+                if r2h_r > 50.0: diag_reasons.append(f"2H={r2h:.0f}% > 50%")
+                if r4h_r > 50.0: diag_reasons.append(f"4H={r4h:.0f}% > 50%")
+                if r1d_r > 50.0: diag_reasons.append(f"1D={r1d:.0f}% > 50%")
+
                 if obv_t == "DISTRIBUTING": diag_reasons.append("OBV=DISTRIBUCIÓN")
                 if fii_sc < 50: diag_reasons.append(f"FII={fii_sc} bajo < 50")
                 elif rsi_15m >= 40.0 and fii_sc < 65: diag_reasons.append(f"FII={fii_sc} < 65 con RSI={rsi_15m:.0f}")
