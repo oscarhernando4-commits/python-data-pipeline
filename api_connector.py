@@ -1123,11 +1123,12 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
     except Exception as e:
         # Fallback to 3-Phase Pure Architecture (F1: SL -5% Ilimitado, F2: +1.25% Fijo, F3: >=2% Dinámico)
         if highest_pnl_pct >= 2.00:
-            retention_pct = min(85.0, 60.0 + (highest_pnl_pct * 5.0))
+            retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
             retention_ratio = retention_pct / 100.0
             sl_pct = max(1.25, round(highest_pnl_pct * retention_ratio, 4))
             phase = 3
             phase_label = f"🚀 FASE 3 RALLY DINÁMICO (Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
+
         elif highest_pnl_pct >= 1.25:
             sl_pct = 1.25
             phase = 2

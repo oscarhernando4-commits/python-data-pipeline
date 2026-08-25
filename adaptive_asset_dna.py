@@ -200,7 +200,7 @@ def calculate_archetype_trailing(
     - FASE 1 (0.00% a +1.249%): Rumbo a la Meta con Stop Loss de -5.00%. Sin piso intermedio, tiempo ilimitado.
     - FASE 2 (+1.25% a +1.999%): Meta Cumplida. Piso Fijo en +1.25% asegurado.
     - FASE 3 (>= +2.00%): Rally Dinámico:
-        Retención(%) = 60% + (Cima × 5%)  [con cap en 85%]
+        Retención(%) = 50% + (Cima × 5%)  [con cap en 85%]
         Piso = max(+1.25%, Cima × Retención(%))
     """
     arch = archetype_dna.get("archetype", "SECTOR_ROTATION")
@@ -208,7 +208,7 @@ def calculate_archetype_trailing(
     label = archetype_dna.get("label", arch)
 
     if highest_pnl_pct >= 2.00:
-        retention_pct = min(85.0, 60.0 + (highest_pnl_pct * 5.0))
+        retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
         retention_ratio = retention_pct / 100.0
         sl_pct = max(1.25, round(highest_pnl_pct * retention_ratio, 4))
         phase = 3
@@ -223,6 +223,7 @@ def calculate_archetype_trailing(
         phase_label = f"🌱 FASE 1 RUMBO A META ({emoji} Cima +{highest_pnl_pct:.2f}% | SL -5.00% | Tiempo Ilimitado)"
 
     return sl_pct, phase, phase_label
+
 
 
 # ─── 5. VERIFICACIÓN DE ESTANCAMIENTO POR ARQUETIPO ──────────────────────────
