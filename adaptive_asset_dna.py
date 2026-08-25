@@ -199,38 +199,43 @@ def calculate_archetype_trailing(
     atr_pct: float = 0.30
 ) -> Tuple[float, int, str]:
     """
-    Sistema Dinámico Cuántico de Curva Continua:
+    Sistema Dinámico Cuántico de Curva Continua para Captura de Rallies (+1.20% a +4.00%+):
     - FASE 1 (0.00% a +0.349%): Respiración y absorción con SL Defensivo (-0.50%).
-    - FASE 2 (+0.35% a +0.399%): Break-Even Blindado a +0.10% neto (Piso Fijo).
-    - FASE 3 EN ADELANTE (>= +0.40%): Curva Dinámica Continua:
-        Retención(%) = 50% + (Cima × 5%)   [con cap en 85%]
-        Piso Asegurado = Cima × Retención(%)
+    - FASE 2 (+0.35% a +0.499%): Break-Even Blindado a +0.10% neto (Piso Fijo, comisiones cubiertas).
+    - FASE 3 (+0.50% a +1.199%): Expansión Hacia la Meta (Piso = max(+0.15%, Cima * 50%)). Da amplio aire.
+    - FASE 4 (>= +1.20%): Meta Cumplida (+1.20%+). Bloquea mínimo +0.90% neto y acompaña el rally.
+    - FASE 5 (>= +2.00%): Tendencia Fuerte (Retención 70%+, mínimo +1.50% neto).
+    - FASE 6 (>= +4.00%): Mega Rally (Retención 80%+, mínimo +3.20% neto).
     """
     arch = archetype_dna.get("archetype", "SECTOR_ROTATION")
     emoji = archetype_dna.get("emoji", "🧬")
     label = archetype_dna.get("label", arch)
 
-    if highest_pnl_pct >= 0.40:
+    if highest_pnl_pct >= 4.00:
         retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
         retention_ratio = retention_pct / 100.0
-        sl_pct = round(highest_pnl_pct * retention_ratio, 4)
-        
-        if highest_pnl_pct >= 4.00:
-            phase = 6
-            tag = "👑 MEGA RALLY"
-        elif highest_pnl_pct >= 2.00:
-            phase = 5
-            tag = "🚀 TENDENCIA FUERTE"
-        elif highest_pnl_pct >= 1.00:
-            phase = 4
-            tag = "💎 MODO COHETE 🎯"
-        else:
-            phase = 3
-            tag = "🔒 CURVA DINÁMICA"
-            
-        phase_label = f"{tag} ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
+        sl_pct = max(3.20, round(highest_pnl_pct * retention_ratio, 4))
+        phase = 6
+        phase_label = f"👑 MEGA RALLY ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 2.00:
+        retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
+        retention_ratio = retention_pct / 100.0
+        sl_pct = max(1.50, round(highest_pnl_pct * retention_ratio, 4))
+        phase = 5
+        phase_label = f"🚀 TENDENCIA FUERTE ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 1.20:
+        retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
+        retention_ratio = retention_pct / 100.0
+        sl_pct = max(0.90, round(highest_pnl_pct * retention_ratio, 4))
+        phase = 4
+        phase_label = f"🎯 META CUMPLIDA +1.20%+ ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 0.50:
+        # Fase 3: +0.50% a +1.199% -> Deja respirar el precio para que no se corte el viaje a +1.20%+
+        sl_pct = max(0.15, round(highest_pnl_pct * 0.45, 4))
+        phase = 3
+        phase_label = f"🔒 EXPANSIÓN A META ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso Amplio +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= 0.35:
-        # Fase 2: +0.35% a +0.399% (Break-Even Blindado a +0.10%)
+        # Fase 2: +0.35% a +0.499% (Break-Even Blindado a +0.10%)
         sl_pct = 0.10
         phase = 2
         phase_label = f"🛡️ FASE 2 BREAK-EVEN BLINDADO (+0.10% NETO | {emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Fijo +0.10%)"
@@ -241,6 +246,7 @@ def calculate_archetype_trailing(
         phase_label = f"🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN ({emoji} Cima +{highest_pnl_pct:.2f}% | SL Defensivo -0.50%)"
 
     return sl_pct, phase, phase_label
+
 
 
 

@@ -1121,14 +1121,29 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             atr_pct=atr_pct
         )
     except Exception as e:
-        # Fallback to Dynamic Curve Trailing Architecture
-        if highest_pnl_pct >= 0.40:
+        # Fallback to Dynamic Curve Trailing Architecture (+1.20%+ Target)
+        if highest_pnl_pct >= 4.00:
             retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
             retention_ratio = retention_pct / 100.0
-            sl_pct = round(highest_pnl_pct * retention_ratio, 4)
-            phase = 6 if highest_pnl_pct >= 4.0 else (5 if highest_pnl_pct >= 2.0 else (4 if highest_pnl_pct >= 1.0 else 3))
-            tag = "👑 MEGA RALLY" if phase == 6 else ("🚀 TENDENCIA FUERTE" if phase == 5 else ("💎 MODO COHETE 🎯" if phase == 4 else "🔒 CURVA DINÁMICA"))
-            phase_label = f"{tag} (Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
+            sl_pct = max(3.20, round(highest_pnl_pct * retention_ratio, 4))
+            phase = 6
+            phase_label = f"👑 MEGA RALLY (Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 2.00:
+            retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
+            retention_ratio = retention_pct / 100.0
+            sl_pct = max(1.50, round(highest_pnl_pct * retention_ratio, 4))
+            phase = 5
+            phase_label = f"🚀 TENDENCIA FUERTE (Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 1.20:
+            retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
+            retention_ratio = retention_pct / 100.0
+            sl_pct = max(0.90, round(highest_pnl_pct * retention_ratio, 4))
+            phase = 4
+            phase_label = f"🎯 META CUMPLIDA +1.20%+ (Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 0.50:
+            sl_pct = max(0.15, round(highest_pnl_pct * 0.45, 4))
+            phase = 3
+            phase_label = f"🔒 EXPANSIÓN A META (Cima +{highest_pnl_pct:.2f}% | Piso Amplio +{sl_pct:.2f}%)"
         elif highest_pnl_pct >= 0.35:
             sl_pct = 0.10
             phase = 2
@@ -1139,6 +1154,7 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             phase_label = f"🛡️ FASE 1 RESPIRACIÓN Y ABSORCIÓN (Cima +{highest_pnl_pct:.2f}% | SL Defensivo -0.50%)"
                 
         return sl_pct, phase, phase_label
+
 
 def quick_position_heartbeat():
     """
@@ -1263,24 +1279,9 @@ def quick_position_heartbeat():
             except Exception:
                 pass
             
-        # ⚡ VOLUME DELTA EXIT SIGNAL — Detects sell waves before price drops
-        # In Phase 2+: if aggressive sellers flood in and we have profit, exit immediately
-        # In Phase 1: only flag but don't force exit (let trailing SL handle it)
-        if not should_exit and new_phase >= 2 and holding_minutes_hb >= 2:
-            try:
-                import volume_delta_engine as _vde
-                vd_exit = _vde.get_volume_delta_signal(sym, window_seconds=20)
-                vd_sell_ratio = vd_exit.get("sell_ratio_pct", 50.0)
-                vd_accel = vd_exit.get("delta_acceleration", 0.0)
-                vd_is_sell_wave = vd_exit.get("sell_wave", False)
-                vd_label = vd_exit.get("signal_label", "")
-                # Exit on sell wave if: sellers > 62% of flow AND momentum accelerating bearish
-                if vd_is_sell_wave and vd_accel <= -5.0 and current_pnl_pct >= 0.10:
-                    should_exit = True
-                    exit_reason = f"⚡ VOLUME DELTA: Ola Vendedora detectada (Sell={vd_sell_ratio:.0f}%, Accel={vd_accel:+.1f}%). Cosechando ganancia en Fase {new_phase} antes del retroceso."
-                    print(f"⚡ [VOL DELTA EXIT] {sym}: {vd_label}")
-            except Exception:
-                pass
+        # ⚡ PROTECCIÓN DE TENDENCIA: Las olas de venta de micro-segundos (20s) NO deben cortar
+        # una operación ganadora antes de alcanzar la meta de +1.20%+. Dejar que el Trailing Stop gestione la salida.
+
 
         if should_exit:
 
