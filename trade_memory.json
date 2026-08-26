@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 10156,
+    "total_trades": 10157,
     "wins": 4655,
-    "losses": 5501,
+    "losses": 5502,
     "win_rate_pct": 45.83,
-    "total_pnl_usd": 11763.006416549391
+    "total_pnl_usd": 11762.926416549391
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on FLOKIUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on DOGEUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on FILUSDT)",
       "BLOCK SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on SEIUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ALGOUSDT)",
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on OPUSDT)",
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on RENDERUSDT)",
-      "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SEIUSDT)"
+      "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SEIUSDT)",
+      "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on OPUSDT)"
     ],
     "boosted_patterns": [
       "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PYTHUSDT)",
@@ -53,30 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 03:02:29",
-      "account_id": "SIM-235",
-      "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
-      "symbol": "WIFUSDT",
-      "side": "LONG",
-      "entry_price": 0.1992,
-      "exit_price": 0.1974,
-      "pnl_usd": -0.21,
-      "result": "LOSS",
-      "notes": "LOSS on WIFUSDT (PnL: -0.90%, Net: $-0.21 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 42.68,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 03:02:29",
       "account_id": "SIM-236",
@@ -11974,6 +11950,28 @@
         "atr_pct_15m": 0.575,
         "vol_surge": 0.74,
         "vol_surge_1m": 1.4,
+        "fii_score": 100,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-26 09:47:25",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "OPUSDT",
+      "side": "LONG",
+      "entry_price": 0.1013,
+      "exit_price": 0.1007,
+      "pnl_usd": -0.08,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🚨 ESCUDO BITCOIN ACTIVO: BTC cayó -0.38% desde la entrada. Eyectando OPUSDT para evitar contagio de la caída general. (Fase 1, PnL: -0.59%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 40.5,
+        "atr_pct_15m": 0.505,
+        "vol_surge": 1.77,
+        "vol_surge_1m": 1.35,
         "fii_score": 100,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
