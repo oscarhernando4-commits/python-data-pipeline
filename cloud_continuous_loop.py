@@ -1,13 +1,14 @@
 """
-Continuous 4-Hour Cloud Quant Trading Loop (Optimized Lightweight Local Edition)
-- Runs every 60 seconds in Local Mode (240 cycles / 4 hours).
-- High-frequency 10-second Micro-Heartbeat for active real-money positions.
-- Zero dashboard rendering overhead (HTML / Markdown disabled for maximum PC speed).
-- Periodic git sync (every 10 cycles) to minimize disk I/O and CPU context switching.
+Continuous 4-Hour Cloud Quant Trading Loop (Live Production Edition)
+- Real-Money Spot Engine with Double Bottom & Bullish RSI Divergence Detection.
+- 10D Fractal Matrix (1M<=35%, 5M<=38%, 15M<=42%, 1H<=50%, 1D<=55%).
+- 3-Phase Pure Trailing Architecture (F1: SL -4% Unlimited, F2: +1% Fixed, F3: >=1.6% Dynamic).
+- High-frequency 1-second Micro-Heartbeat for real-money positions.
 """
 
 import time
 import os
+
 import subprocess
 import sys
 from datetime import datetime
