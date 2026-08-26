@@ -66,15 +66,15 @@ ARCHETYPE_CONFIGS = {
         "emoji": "🐆",
         "initial_sl_pct": -4.00,         # SL de -4.00%
         "max_stagnation_minutes": 999999, # Tiempo ilimitado
-        "phase_2_trigger_pct": 1.10,
+        "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
-        "phase_3_trigger_pct": 2.00,
+        "phase_3_trigger_pct": 1.60,
         "phase_3_retention_ratio": 0.70,
         "required_vol_surge_1m": 1.5,
         "required_min_bids_pct": 52.0,
         "trend_ride_enabled": True,
         "wick_slack": 0.30,
-        "guideline_for_ai": "Trata este activo como un SPRINT. Exige volumen explosivo en 1M/10s. Meta mínima +1.10%."
+        "guideline_for_ai": "Trata este activo como un SPRINT. Exige volumen explosivo en 1M/10s. Meta mínima +1.00%."
     },
     "BLUE_CHIP_CORE": {
         "archetype": "BLUE_CHIP_CORE",
@@ -82,15 +82,15 @@ ARCHETYPE_CONFIGS = {
         "emoji": "🏛️",
         "initial_sl_pct": -4.00,         # SL de -4.00%
         "max_stagnation_minutes": 999999, # Tiempo ilimitado
-        "phase_2_trigger_pct": 1.10,
+        "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
-        "phase_3_trigger_pct": 2.00,
+        "phase_3_trigger_pct": 1.60,
         "phase_3_retention_ratio": 0.70,
         "required_vol_surge_1m": 0.8,
         "required_min_bids_pct": 48.0,
         "trend_ride_enabled": True,
         "wick_slack": 0.32,
-        "guideline_for_ai": "Trata este activo como CORE. Exige confluencia. Meta mínima +1.10%."
+        "guideline_for_ai": "Trata este activo como CORE. Exige confluencia. Meta mínima +1.00%."
     },
     "SECTOR_ROTATION": {
         "archetype": "SECTOR_ROTATION",
@@ -98,15 +98,15 @@ ARCHETYPE_CONFIGS = {
         "emoji": "🧩",
         "initial_sl_pct": -4.00,         # SL de -4.00%
         "max_stagnation_minutes": 999999, # Tiempo ilimitado
-        "phase_2_trigger_pct": 1.10,
+        "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
-        "phase_3_trigger_pct": 2.00,
+        "phase_3_trigger_pct": 1.60,
         "phase_3_retention_ratio": 0.70,
         "required_vol_surge_1m": 1.0,
         "required_min_bids_pct": 50.0,
         "trend_ride_enabled": True,
         "wick_slack": 0.32,
-        "guideline_for_ai": "Trata este activo como ROTACIÓN SECTORIAL. Exige sector caliente y volumen. Meta mínima +1.10%."
+        "guideline_for_ai": "Trata este activo como ROTACIÓN SECTORIAL. Exige sector caliente y volumen. Meta mínima +1.00%."
     },
     "THIN_BOOK_MICRO": {
         "archetype": "THIN_BOOK_MICRO",
@@ -114,17 +114,18 @@ ARCHETYPE_CONFIGS = {
         "emoji": "🎯",
         "initial_sl_pct": -4.00,         # SL de -4.00%
         "max_stagnation_minutes": 999999, # Tiempo ilimitado
-        "phase_2_trigger_pct": 1.10,
+        "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
-        "phase_3_trigger_pct": 2.00,
+        "phase_3_trigger_pct": 1.60,
         "phase_3_retention_ratio": 0.70,
         "required_vol_surge_1m": 1.3,
         "required_min_bids_pct": 54.0,
         "trend_ride_enabled": True,
         "wick_slack": 0.28,
-        "guideline_for_ai": "Trata este activo como LIBRO DELGADO. Exige volumen real. Meta mínima +1.10%."
+        "guideline_for_ai": "Trata este activo como LIBRO DELGADO. Exige volumen real. Meta mínima +1.00%."
     }
 }
+
 
 
 
@@ -197,33 +198,34 @@ def calculate_archetype_trailing(
     atr_pct: float = 0.30
 ) -> Tuple[float, int, str]:
     """
-    Arquitectura Cuántica Pura de 3 Fases:
-    - FASE 1 (0.00% a +1.099%): Rumbo a la Meta con Stop Loss de -4.00%. Sin piso intermedio, tiempo ilimitado.
-    - FASE 2 (+1.10% a +1.999%): Meta Cumplida. Piso Fijo en +1.10% asegurado.
-    - FASE 3 (>= +2.00%): Rally Dinámico:
+    Arquitectura Cuántica Pura de 3 Fases Calibrada:
+    - FASE 1 (0.00% a +0.999%): Rumbo a la Meta con Stop Loss de -4.00%. Sin piso intermedio, tiempo ilimitado.
+    - FASE 2 (+1.00% a +1.599%): Meta Cumplida. Piso Fijo en +1.00% asegurado.
+    - FASE 3 (>= +1.60%): Rally Dinámico:
         Retención(%) = 50% + (Cima × 5%)  [con cap en 85%]
-        Piso = max(+1.10%, Cima × Retención(%))
+        Piso = max(+1.00%, Cima × Retención(%))
     """
     arch = archetype_dna.get("archetype", "SECTOR_ROTATION")
     emoji = archetype_dna.get("emoji", "🧬")
     label = archetype_dna.get("label", arch)
 
-    if highest_pnl_pct >= 2.00:
+    if highest_pnl_pct >= 1.60:
         retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
         retention_ratio = retention_pct / 100.0
-        sl_pct = max(1.10, round(highest_pnl_pct * retention_ratio, 4))
+        sl_pct = max(1.00, round(highest_pnl_pct * retention_ratio, 4))
         phase = 3
         phase_label = f"🚀 FASE 3 RALLY DINÁMICO ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 1.10:
-        sl_pct = 1.10
+    elif highest_pnl_pct >= 1.00:
+        sl_pct = 1.00
         phase = 2
-        phase_label = f"🎯 FASE 2 META CUMPLIDA (+1.10% FIJO | {emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Fijo +1.10%)"
+        phase_label = f"🎯 FASE 2 META CUMPLIDA (+1.00% FIJO | {emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Fijo +1.00%)"
     else:
         sl_pct = -4.00
         phase = 1
         phase_label = f"🌱 FASE 1 RUMBO A META ({emoji} Cima +{highest_pnl_pct:.2f}% | SL -4.00% | Tiempo Ilimitado)"
 
     return sl_pct, phase, phase_label
+
 
 
 
