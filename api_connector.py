@@ -1212,20 +1212,18 @@ def quick_position_heartbeat():
         # Check if Stop Loss or Trailing Stop triggered (STRICT INVIOLABLE FLOOR)
         should_exit = current_pnl_pct <= sl_pct
         exit_reason = f"🎯 Trailing Floor Activado ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
-        
-        # 🎯 SNIPER COSECHA GANANCIA DINÁMICA POR RETROCESO DE MECHA (WICK SNATCHING):
-        # Solo se activa en ganancias fuertes (>= +1.00%) para dejar respirar y madurar las Fases 1, 2 y 3 (+0.40% a +0.99%)
-        if not should_exit and highest_pnl_pct >= 1.00:
-            wick_pullback_threshold = max(0.30, round(highest_pnl_pct * 0.25, 2))
-            if (highest_pnl_pct - current_pnl_pct) >= wick_pullback_threshold:
-                should_exit = True
-                exit_reason = f"🎯 SNIPER COSECHA GANANCIA EN PICO (Pico +{highest_pnl_pct:.2f}% -> Venta Asegurada en {current_pnl_pct:+.2f}% tras retroceso de -{(highest_pnl_pct - current_pnl_pct):.2f}%)"
+        # 🚫 WICK SNATCHING ELIMINADO (Claude Opus 4.6 Audit):
+        # Las 3 Fases ya gestionan todas las salidas óptimamente.
+        # El Wick Snatching vendía con retrocesos de 0.30% desde el pico,
+        # impidiendo que las Fases 2 y 3 capturaran ganancias de +1.60% a +3.44%.
+
 
             
         # 🪙 ESCUDO BITCOIN SUB-SEGUNDO (Circuit Breaker Instantáneo):
-        # Si Bitcoin se desploma >= 0.35% desde el momento de nuestra entrada, eyectar la posición de inmediato
+        # Solo eyectar si BTC cae >= 0.35% Y el altcoin TAMBIÉN está en pérdida.
+        # Si el altcoin sube mientras BTC cae, tiene momentum propio y no debe cortarse.
         btc_entry = float(pos.get("btc_entry_price", 0.0))
-        if not should_exit and btc_entry > 0 and holding_minutes_hb <= 45:
+        if not should_exit and btc_entry > 0 and holding_minutes_hb <= 45 and current_pnl_pct < 0:
             btc_now = get_symbol_price("BTCUSDT", is_futures=False)
             if btc_now and btc_now > 0:
                 btc_drop_pct = ((btc_now - btc_entry) / btc_entry) * 100.0
@@ -1234,7 +1232,7 @@ def quick_position_heartbeat():
                     exit_reason = f"🚨 ESCUDO BITCOIN ACTIVO: BTC cayó {btc_drop_pct:+.2f}% desde la entrada. Eyectando {sym} para evitar contagio de la caída general."
             
         # ⏱️ FASE 1: PACIENCIA ILIMITADA (CERO LÍMITE DE TIEMPO):
-        # La posición se mantiene activa sin límite de horas hasta alcanzar la meta de +1.25% o tocar SL -5.00%.
+        # La posición se mantiene activa sin límite de horas hasta alcanzar la meta de +1.00% o tocar SL -4.00%.
 
 
 
@@ -1967,6 +1965,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             # 🛡️ FILTRO ANTI-RENDER: Momentum 5M bajista activo
             # Si los últimas 5 velas de 5M tienen >= 3 rojas con mayor volumen en rojas
             # que en verdes → distribución activa → entrada prohibida aunque la 8D diga base.
+            is_spring = mtf_res.get("spring_coiling", {}).get("is_spring_compressed", False)
+            is_wave2 = mtf_res.get("wave2_retest", {}).get("is_wave2_retest", False)
+
             # ═══════════════════════════════════════════════════════════════════
             try:
                 import api_connector as _self
@@ -1986,8 +1987,6 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             except Exception:
                 pass
 
-            is_spring = mtf_res.get("spring_coiling", {}).get("is_spring_compressed", False)
-            is_wave2 = mtf_res.get("wave2_retest", {}).get("is_wave2_retest", False)
 
             if (mtf_res.get("rsi_2m", 50.0) > 56.0 or mtf_res.get("rsi_1m", 50.0) > 56.0) and not (is_spring or is_wave2):
                 # Allow entries up to RSI 62 if there is strong volume ignition or FII confirmation

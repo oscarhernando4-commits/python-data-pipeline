@@ -1453,18 +1453,25 @@ def analyze_multi_timeframe_candles(symbol):
     bullish_rsi_divergence = False
     double_bottom_label = "🟢 GIRO DIRECTO EN V"
 
-    if len(klines_1m) >= 14:
+    if len(klines_1m) >= 20:
         lows_1m_recent = [float(k[3]) for k in klines_1m[-20:]]
+        highs_1m_recent = [float(k[2]) for k in klines_1m[-20:]]
         half = len(lows_1m_recent) // 2
         min_1 = min(lows_1m_recent[:half])
         min_2 = min(lows_1m_recent[half:])
+        idx_1 = lows_1m_recent[:half].index(min_1)
+        idx_2 = half + lows_1m_recent[half:].index(min_2)
         diff_pct = ((min_2 - min_1) / min_1) * 100.0 if min_1 > 0 else 999.0
         
-        if -0.40 <= diff_pct <= 0.80:
+        # Require: (1) lows within tolerance, (2) separated by >=5 candles, (3) intermediate peak exists
+        separation = idx_2 - idx_1
+        neckline_peak = max(highs_1m_recent[idx_1:idx_2+1]) if idx_2 > idx_1 else min_1
+        neckline_above_pct = ((neckline_peak - max(min_1, min_2)) / max(min_1, min_2)) * 100.0 if max(min_1, min_2) > 0 else 0.0
+        
+        if -0.40 <= diff_pct <= 0.80 and separation >= 5 and neckline_above_pct >= 0.15:
             is_double_bottom = True
-            idx_1 = lows_1m_recent[:half].index(min_1)
             closes_sub1 = [float(k[4]) for k in klines_1m[:-(len(lows_1m_recent) - idx_1)]]
-            rsi_low_1 = calculate_rsi(closes_sub1) if len(closes_sub1) >= 10 else 30.0
+            rsi_low_1 = calculate_rsi(closes_sub1) if len(closes_sub1) >= 14 else rsi_1m  # Fix: use rsi_1m as fallback, not 30.0
             rsi_low_2 = rsi_1m
             if rsi_low_2 > (rsi_low_1 + 1.5):
                 bullish_rsi_divergence = True
@@ -1473,6 +1480,7 @@ def analyze_multi_timeframe_candles(symbol):
                 double_bottom_label = f"💎 DOBLE SUELO (Suelo 1: {min_1:.4f}, Suelo 2: {min_2:.4f})"
     elif is_1m_green_ignition or vol_surge_1m >= 1.5:
         double_bottom_label = "🚀 GIRO DIRECTO EN V (Rebote Explosivo)"
+
 
     pattern_15m_summary = (
         f"RSI 10S={rsi_10s:.1f} | 30S={rsi_30s:.1f} | 1M={rsi_1m} | 2M={rsi_2m} | 5M={rsi_5m} | 15M={rsi_15m} | 1H={rsi_1h} | "
