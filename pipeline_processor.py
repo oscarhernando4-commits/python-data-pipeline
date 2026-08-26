@@ -564,8 +564,10 @@ def run_infinite_trading_matrix_cycle():
                 if is_truly_valid:
                     valid_base_candidates.append(cand)
                 
+                dbl_lbl = cmtf.get("double_bottom_label", "🟢 Giro en V")
                 canales_str = f"[1M:{r1m:>2.0f}% 5M:{r5m:>2.0f}% 15M:{r15m:>2.0f}% 1H:{r1h:>2.0f}% 2H:{r2h:>2.0f}% 4H:{r4h:>2.0f}% 1D:{r1d:>2.0f}%]"
-                print(f"  #{idx:02d} {csym:<10} | Score: {c_score:>2}/100 | FII: {fii_sc:>2} | OBV: {obv_t:<12} | RSI 1M: {rsi_1m:>4.1f} | Canales: {canales_str} -> {status_icon} ({diag_str})")
+                print(f"  #{idx:02d} {csym:<10} | Score: {c_score:>2}/100 | FII: {fii_sc:>2} | OBV: {obv_t:<12} | {dbl_lbl} | Canales: {canales_str} -> {status_icon} ({diag_str})")
+
             print("═══════════════════════════════════════════════════════════════════════════════════════════════════════════\n")
 
 

@@ -1448,6 +1448,32 @@ def analyze_multi_timeframe_candles(symbol):
     pump_status = "🚀 PRE-PUMP DETECTADO (VolAcc=" + str(vol_acceleration) + "x, BBSqueeze=" + str(bb_squeeze_ratio) + ")" if is_pre_pump_signal else ""
     knife_status = " | ⛔ FALLING KNIFE VETADO (Caída 24h=" + str(price_change_24h_pct) + "%)" if is_falling_knife else (" | 🪤 DEAD CAT BOUNCE TRAMPA (Caída 24h=" + str(price_change_24h_pct) + "%)" if is_dead_cat_bounce else (" | ⚠️ MACRO BAJISTA DOMINANTE" if is_macro_bearish_dominance else ""))
 
+    # 💎 DETECTOR DINÁMICO DE DOBLE SUELO Y DIVERGENCIA DE RSI EN 1M/5M:
+    is_double_bottom = False
+    bullish_rsi_divergence = False
+    double_bottom_label = "🟢 GIRO DIRECTO EN V"
+
+    if len(klines_1m) >= 14:
+        lows_1m_recent = [float(k[3]) for k in klines_1m[-20:]]
+        half = len(lows_1m_recent) // 2
+        min_1 = min(lows_1m_recent[:half])
+        min_2 = min(lows_1m_recent[half:])
+        diff_pct = ((min_2 - min_1) / min_1) * 100.0 if min_1 > 0 else 999.0
+        
+        if -0.40 <= diff_pct <= 0.80:
+            is_double_bottom = True
+            idx_1 = lows_1m_recent[:half].index(min_1)
+            closes_sub1 = [float(k[4]) for k in klines_1m[:-(len(lows_1m_recent) - idx_1)]]
+            rsi_low_1 = calculate_rsi(closes_sub1) if len(closes_sub1) >= 10 else 30.0
+            rsi_low_2 = rsi_1m
+            if rsi_low_2 > (rsi_low_1 + 1.5):
+                bullish_rsi_divergence = True
+                double_bottom_label = f"💎 DOBLE SUELO + DIVERGENCIA RSI (RSI {rsi_low_1:.0f} -> {rsi_low_2:.0f})"
+            else:
+                double_bottom_label = f"💎 DOBLE SUELO (Suelo 1: {min_1:.4f}, Suelo 2: {min_2:.4f})"
+    elif is_1m_green_ignition or vol_surge_1m >= 1.5:
+        double_bottom_label = "🚀 GIRO DIRECTO EN V (Rebote Explosivo)"
+
     pattern_15m_summary = (
         f"RSI 10S={rsi_10s:.1f} | 30S={rsi_30s:.1f} | 1M={rsi_1m} | 2M={rsi_2m} | 5M={rsi_5m} | 15M={rsi_15m} | 1H={rsi_1h} | "
         f"TF: 10s={'UP' if tf_10s_up else 'DN'} 30s={'UP' if tf_30s_up else 'DN'} 1m={'UP' if tf_1m_up else 'DN'} 2m={'UP' if tf_2m_up else 'DN'} 5m={'UP' if tf_5m_up else 'DN'} 15m={'UP' if tf_15m_up else 'DN'} 1h={'UP' if tf_1h_up else 'DN'} | "
@@ -1456,8 +1482,9 @@ def analyze_multi_timeframe_candles(symbol):
         f"MA25_15m=${ma25_15m:.4f} | MA99_15m=${ma99_15m:.4f} | {ma99_status} | {st_status} | {vwap_status} | "
         f"{macd_status} | {gbm_status} | {pump_status}{knife_status} | "
         f"Fase={'BASE/LANZAMIENTO' if 0.0 <= dist_from_15m_ma7_pct <= 3.0 else 'SOBRE_EXTENDIDO/CIMA'} | "
-        f"Patrón={yellow_arrow_status}{yellow_arrow_macro} | Canal1H={range_position_1h*100:.0f}%"
+        f"Patrón={yellow_arrow_status}{yellow_arrow_macro} | {double_bottom_label} | Canal1H={range_position_1h*100:.0f}%"
     )
+
 
     is_tradable = not (is_overextended_15m or is_at_daily_resistance_ceiling)
     final_score = 0 if not is_tradable else multi_tf_score
@@ -1525,7 +1552,11 @@ def analyze_multi_timeframe_candles(symbol):
         "sniper_timing_label": sniper_timing_label,
         "is_1m_green_ignition": is_1m_green_ignition,
         "is_5m_higher_low": is_5m_higher_low,
+        "is_double_bottom": is_double_bottom,
+        "bullish_rsi_divergence": bullish_rsi_divergence,
+        "double_bottom_label": double_bottom_label,
         "price_above_15m_mas": price_above_15m_ma7 and price_above_15m_ma25,
+
         # Volúmenes sub-minuto y micro
         "vol_surge_10s": vol_surge_10s,
         "vol_surge_30s": vol_surge_30s,

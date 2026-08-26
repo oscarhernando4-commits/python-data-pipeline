@@ -456,11 +456,14 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         floor_lbl = mtf.get('floor_structure_label', '⚪ ESPERANDO GIRO')
         is_15m_casc = mtf.get('is_15m_red_cascade', False)
         sniper_lbl = mtf.get('sniper_timing_label', '⏳ CONSOLIDANDO BASE')
+        double_btm_lbl = mtf.get('double_bottom_label', '🟢 GIRO DIRECTO EN V')
 
         candidates_prompt_text += f"\nCANDIDATO: {sym} (Sector: {sec} | Acción Sugerida: {action}){cetus_tag}{fii_tag}\n"
         candidates_prompt_text += f"- Score: {score}/100 | MTF Score: {mtf.get('multi_tf_score', score)}/100 | FII (Inyección Suelo): {fii}/100\n"
         candidates_prompt_text += f"- 🏔️ ESTRUCTURA DE SUELO 15M: {floor_lbl} | Cascada Roja 15M={is_15m_casc}\n"
+        candidates_prompt_text += f"- 💎 PATRÓN DINÁMICO: {double_btm_lbl}\n"
         candidates_prompt_text += f"- 🎯 GATILLO SNIPER 1M/5M: {sniper_lbl}\n"
+
         # ── 🔬 RADIOGRAFÍA CONDUCTUAL HOLOGRÁFICA 360° DEL ACTIVO ──────────────
         xray = mtf.get("behavioral_xray", {})
         xray_behav = xray.get("behavior_type", "ROTACIÓN_ESTRUCTURAL")
@@ -544,9 +547,11 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     
     REGLAS DE DECISIÓN DEL CEO:
     - Compara a los finalistas y selecciona al MEJOR ACTIVO DE LA LISTA.
+    - 💎 RECONOCIMIENTO DE PATRÓN DINÁMICO: Si el candidato tiene "💎 DOBLE SUELO" o "💎 DOBLE SUELO + DIVERGENCIA RSI", dale prioridad alta #1 y confianza 90-95%. Si presenta "🚀 GIRO DIRECTO EN V" con volumen institucional, es 100% válido y ejecutable inmediatamente (no es obligatorio esperar doble suelo).
     - 🎯 REGLA DE DISPARO EN BASE: Si un candidato cumple con la BASE FRACTAL (1M<=35%, 5M<=38%, 15M<=42%, 1H<=50%, 2H<=50%, 4H<=50%, 1D<=55%), tiene Score >= 75, FII >= 50, Bids >= 46%, VolSurge >= 0.20x, OBV != DISTRIBUTING, y no tiene vetos duros de dump, APRUÉBALO con "BUY_LONG", approved: true, confidence: 85-95.
     - Si absolutamente ningún candidato cumple con la base de suelo o Bitcoin está en caída activa, responde "selected_symbol": "NONE", "action": "HOLD".
     - 🔍 REGLA DE TRANSPARENCIA: En tu 'reasoning', menciona OBLIGATORIAMENTE los activos principales evaluados y el motivo técnico específico.
+
 
     RESPONDE ÚNICAMENTE EN FORMATO JSON EXACTO CON ESTA ESTRUCTURA (7 AGENTES):
     {{
