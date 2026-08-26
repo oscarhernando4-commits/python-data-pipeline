@@ -533,7 +533,7 @@ def run_infinite_trading_matrix_cycle():
                 r1d_r = round(r1d, 1)
                 
                 # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL CALIBRADA EXACTA (1M a 1D):
-                # 1M<=35%, 2M<=36%, 5M<=38%, 10M<=40%, 15M<=42%, 30M<=46%, 1H<=50%, 2H<=50%, 4H<=50%, 1D<=50%
+                # 1M<=35%, 2M<=36%, 5M<=38%, 10M<=40%, 15M<=42%, 30M<=46%, 1H<=50%, 2H<=50%, 4H<=50%, 1D<=55%
                 diag_reasons = []
                 if r1m_r > 35.0: diag_reasons.append(f"1M={r1m:.0f}% > 35%")
                 if r2m_r > 36.0: diag_reasons.append(f"2M={r2m:.0f}% > 36%")
@@ -544,7 +544,8 @@ def run_infinite_trading_matrix_cycle():
                 if r1h_r > 50.0: diag_reasons.append(f"1H={r1h:.0f}% > 50%")
                 if r2h_r > 50.0: diag_reasons.append(f"2H={r2h:.0f}% > 50%")
                 if r4h_r > 50.0: diag_reasons.append(f"4H={r4h:.0f}% > 50%")
-                if r1d_r > 50.0: diag_reasons.append(f"1D={r1d:.0f}% > 50%")
+                if r1d_r > 55.0: diag_reasons.append(f"1D={r1d:.0f}% > 55%")
+
 
                 if obv_t == "DISTRIBUTING": diag_reasons.append("OBV=DISTRIBUCIÓN")
                 if fii_sc < 50: diag_reasons.append(f"FII={fii_sc} bajo < 50")

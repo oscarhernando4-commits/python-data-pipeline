@@ -544,7 +544,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     
     REGLAS DE DECISIÓN DEL CEO:
     - Compara a los finalistas y selecciona al MEJOR ACTIVO DE LA LISTA.
-    - 🎯 REGLA DE DISPARO EN BASE: Si un candidato cumple con la BASE FRACTAL (1M<=35%, 5M<=38%, 15M<=42%, 1H<=50%, 2H<=50%, 4H<=50%, 1D<=50%), tiene Score >= 75, FII >= 50, Bids >= 46%, VolSurge >= 0.20x, OBV != DISTRIBUTING, y no tiene vetos duros de dump, APRUÉBALO con "BUY_LONG", approved: true, confidence: 85-95.
+    - 🎯 REGLA DE DISPARO EN BASE: Si un candidato cumple con la BASE FRACTAL (1M<=35%, 5M<=38%, 15M<=42%, 1H<=50%, 2H<=50%, 4H<=50%, 1D<=55%), tiene Score >= 75, FII >= 50, Bids >= 46%, VolSurge >= 0.20x, OBV != DISTRIBUTING, y no tiene vetos duros de dump, APRUÉBALO con "BUY_LONG", approved: true, confidence: 85-95.
     - Si absolutamente ningún candidato cumple con la base de suelo o Bitcoin está en caída activa, responde "selected_symbol": "NONE", "action": "HOLD".
     - 🔍 REGLA DE TRANSPARENCIA: En tu 'reasoning', menciona OBLIGATORIAMENTE los activos principales evaluados y el motivo técnico específico.
 
@@ -556,8 +556,9 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         "approved": true o false,
         "committee_deliberation": {{
             "agent_1_macro": "Dictamen macro en 1 oración...",
-            "agent_2_tech": "Dictamen del suelo 10D (1M<=35%, 5M<=38%, 15M<=42%, 1H<=50%, 2H<=50%, 4H<=50%, 1D<=50%) y posición del canal en 1 oración...",
+            "agent_2_tech": "Dictamen del suelo 10D (1M<=35%, 5M<=38%, 15M<=42%, 1H<=50%, 2H<=50%, 4H<=50%, 1D<=55%) y posición del canal en 1 oración...",
             "agent_3_orderbook": "Dictamen de libro de órdenes y Bids en 1 oración...",
+
 
             "agent_4_sector": "Dictamen de rotación sectorial en 1 oración...",
             "agent_5_memory": "Dictamen de memoria RAG y patrones ganadores en 1 oración...",
