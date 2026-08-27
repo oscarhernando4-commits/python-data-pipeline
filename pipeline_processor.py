@@ -536,10 +536,11 @@ def run_infinite_trading_matrix_cycle():
                 r4h_r = round(r4h, 1)
                 r1d_r = round(r1d, 1)
                 
-                # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL CALIBRADA EXACTA (1M a 1D):
-                # 1M<=35%, 2M<=36%, 5M<=38%, 10M<=40%, 15M<=42%, 30M<=46%, 1H<=50%, 2H<=50%, 4H<=50%, 1D<=55%
+                # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL ADAPTATIVA DINÁMICA (1M a 1D):
+                # 1M: Base 35%, o hasta 45% si tiene Doble Suelo, Divergencia RSI o FII fuerte >= 75
+                max_1m_cap = 45.0 if (is_double_bottom or is_bullish_div or fii_sc >= 75) else 35.0
                 diag_reasons = []
-                if r1m_r > 35.0: diag_reasons.append(f"1M={r1m:.0f}% > 35%")
+                if r1m_r > max_1m_cap: diag_reasons.append(f"1M={r1m:.0f}% > {max_1m_cap:.0f}%")
                 if r2m_r > 36.0: diag_reasons.append(f"2M={r2m:.0f}% > 36%")
                 if r5m_r > 38.0: diag_reasons.append(f"5M={r5m:.0f}% > 38%")
                 if r10m_r > 40.0: diag_reasons.append(f"10M={r10m:.0f}% > 40%")
@@ -550,8 +551,9 @@ def run_infinite_trading_matrix_cycle():
                 if r4h_r > 50.0: diag_reasons.append(f"4H={r4h:.0f}% > 50%")
                 if r1d_r > 55.0: diag_reasons.append(f"1D={r1d:.0f}% > 55%")
 
-
-                if obv_t == "DISTRIBUTING": diag_reasons.append("OBV=DISTRIBUCIÓN")
+                # ⚡ OBV HÍBRIDO: Permite absorción en suelo si Micro-OBV está acumulando y hay Doble Suelo / Divergencia
+                is_hybrid_obv_valid = cmtf.get("is_hybrid_obv_valid", False)
+                if obv_t == "DISTRIBUTING" and not is_hybrid_obv_valid: diag_reasons.append("OBV=DISTRIBUCIÓN")
                 if fii_sc < 50: diag_reasons.append(f"FII={fii_sc} bajo < 50")
                 elif rsi_15m >= 45.0 and fii_sc < 65: diag_reasons.append(f"FII={fii_sc} < 65 con RSI={rsi_15m:.0f}")
                 if vol_1m < 0.20: diag_reasons.append(f"Vol1M={vol_1m:.2f}x < 0.20x")
