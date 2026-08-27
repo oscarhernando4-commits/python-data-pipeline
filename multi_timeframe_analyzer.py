@@ -647,6 +647,7 @@ def analyze_multi_timeframe_candles(symbol):
     closes_2m = [float(k[4]) for k in klines_2m] if klines_2m else []
     vols_2m = [float(k[5]) for k in klines_2m] if klines_2m else []
     closes_5m = [float(k[4]) for k in klines_5m]
+    vols_5m = [float(k[5]) for k in klines_5m]
     ma25_5m = sum(closes_5m[-25:]) / 25.0 if len(closes_5m) >= 25 else closes_5m[-1] if closes_5m else 1.0
     closes_15m = [float(k[4]) for k in klines_15m]
     vols_15m = [float(k[5]) for k in klines_15m]
@@ -711,9 +712,19 @@ def analyze_multi_timeframe_candles(symbol):
     ema21_15m = _ema(closes_15m, 21) if len(closes_15m) >= 21 else closes_15m[-1]
     is_ema_golden_cross = ema9_15m > ema21_15m
     
-    # OBV (On-Balance Volume) - Accumulation/Distribution detection
+    # OBV (On-Balance Volume) - Multi-Timeframe Accumulation/Distribution Detection
     obv_15m, obv_trend = calculate_obv(closes_15m, vols_15m)
     is_obv_accumulating = obv_trend == "ACCUMULATING"
+    
+    # ⚡ MICRO-OBV MULTI-ESCALA (1M & 5M) para Detección de Absorción Inmediata en Suelo:
+    obv_1m, obv_trend_1m = calculate_obv(closes_1m, vols_1m) if (closes_1m and vols_1m) else ([], "NEUTRAL")
+    obv_5m, obv_trend_5m = calculate_obv(closes_5m, vols_5m) if (closes_5m and vols_5m) else ([], "NEUTRAL")
+    is_micro_obv_accumulating = bool(
+        obv_trend_1m == "ACCUMULATING" or 
+        obv_trend_5m == "ACCUMULATING" or
+        (len(obv_1m) >= 5 and obv_1m[-1] > obv_1m[-5]) or
+        (len(obv_5m) >= 3 and obv_5m[-1] > obv_5m[-3])
+    )
     
     # ATR(14) Normalized 15M & 1H - Volatility & DNA filter
     highs_15m = [float(k[2]) for k in klines_15m]
@@ -1481,6 +1492,10 @@ def analyze_multi_timeframe_candles(symbol):
     elif is_1m_green_ignition or vol_surge_1m >= 1.5:
         double_bottom_label = "🚀 GIRO DIRECTO EN V (Rebote Explosivo)"
 
+    # ⚡ OBV HÍBRIDO MULTI-ESCALA: Si hay Doble Suelo, Divergencia RSI o FII fuerte, y Micro-OBV está acumulando,
+    # el estatus de OBV se valida como absorción institucional en suelo para eliminar el lag matemático de 15M.
+    is_hybrid_obv_valid = bool(is_obv_accumulating or (is_micro_obv_accumulating and (is_double_bottom or bullish_rsi_divergence or fii_score >= 50)))
+    obv_hybrid_status = "ACCUMULATING_FLOOR_ABSORPTION" if (not is_obv_accumulating and is_hybrid_obv_valid) else obv_trend
 
     pattern_15m_summary = (
         f"RSI 10S={rsi_10s:.1f} | 30S={rsi_30s:.1f} | 1M={rsi_1m} | 2M={rsi_2m} | 5M={rsi_5m} | 15M={rsi_15m} | 1H={rsi_1h} | "
@@ -1576,7 +1591,10 @@ def analyze_multi_timeframe_candles(symbol):
         "ema21_15m": round(ema21_15m, 6),
         "is_ema_golden_cross": is_ema_golden_cross,
         "obv_trend": obv_trend,
+        "obv_hybrid_status": obv_hybrid_status,
         "is_obv_accumulating": is_obv_accumulating,
+        "is_micro_obv_accumulating": is_micro_obv_accumulating,
+        "is_hybrid_obv_valid": is_hybrid_obv_valid,
         "atr_15m": round(atr_15m, 6),
         "atr_pct_15m": atr_pct_15m,
         "atr_pct_1h": atr_pct_1h,

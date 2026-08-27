@@ -1909,7 +1909,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Techo/Cascada/Cuchillo.")
                 continue
                 
-            if mtf_res.get("obv_trend") == "DISTRIBUTING":
+            # ⚡ OBV HÍBRIDO: Permite absorción en suelo si Micro-OBV está acumulando y hay Doble Suelo / Divergencia
+            is_hybrid_obv_valid = mtf_res.get("is_hybrid_obv_valid", False)
+            if mtf_res.get("obv_trend") == "DISTRIBUTING" and not is_hybrid_obv_valid:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Distribución Institucional (OBV=DISTRIBUTING).")
                 continue
                 
@@ -1930,8 +1932,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
             vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
             
-            # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL CALIBRADA EXACTA (1M<=35%, 2M<=36%, 5M<=38%, 10M<=40%, 15M<=42%, 30M<=46%, 1H<=50%, 2H<=50%, 4H<=50%, 1D<=55%)
-            max_1m_base_cap = 0.35
+            # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL ADAPTATIVA DINÁMICA (1M<=35%-45%, 2M<=36%, 5M<=38%, 10M<=40%, 15M<=42%, 30M<=46%, 1H<=50%, 2H<=50%, 4H<=50%, 1D<=55%)
+            max_1m_base_cap = 0.45 if (mtf_res.get("is_double_bottom") or mtf_res.get("bullish_rsi_divergence") or fii >= 75) else 0.35
             is_macro_base_valid = bool(
                 range_pos_1d <= 0.55 and
                 range_pos_4h <= 0.50 and
@@ -1942,7 +1944,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 range_pos_10m <= 0.40 and
                 range_pos_5m <= 0.38 and
                 range_pos_2m <= 0.36 and
-                range_pos_1m <= 0.35
+                range_pos_1m <= max_1m_base_cap
             )
             
             if not is_macro_base_valid or is_at_daily_ceiling:
