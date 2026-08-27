@@ -536,20 +536,32 @@ def run_infinite_trading_matrix_cycle():
                 r4h_r = round(r4h, 1)
                 r1d_r = round(r1d, 1)
                 
-                # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL ADAPTATIVA DINÁMICA (1M a 1D):
-                # 1M: Base 35%, o hasta 45% si tiene Doble Suelo, Divergencia RSI o FII fuerte >= 75
-                max_1m_cap = 45.0 if (is_double_bottom or is_bullish_div or fii_sc >= 75) else 35.0
+                # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL ADAPTATIVA DINÁMICA 2.0 (1M a 1D):
+                # Ancla Macro Estricta: 4H<=50%, 2H<=50%, 1H<=50%, 1D<=60%
+                # Expansión Micro/Mid Adaptativa si hay Confluencia A+ (Doble Suelo, Divergencia RSI o FII >= 65):
+                is_a_plus_floor = bool(is_double_bottom or is_bullish_div or fii_sc >= 65)
+                max_1d_cap = 60.0 if is_a_plus_floor else 55.0
+                max_4h_cap = 50.0
+                max_2h_cap = 50.0
+                max_1h_cap = 50.0
+                max_30m_cap = 52.0 if is_a_plus_floor else 46.0
+                max_15m_cap = 52.0 if is_a_plus_floor else 42.0
+                max_10m_cap = 48.0 if is_a_plus_floor else 40.0
+                max_5m_cap = 46.0 if is_a_plus_floor else 38.0
+                max_2m_cap = 48.0 if is_a_plus_floor else 36.0
+                max_1m_cap = 50.0 if is_a_plus_floor else 35.0
+
                 diag_reasons = []
                 if r1m_r > max_1m_cap: diag_reasons.append(f"1M={r1m:.0f}% > {max_1m_cap:.0f}%")
-                if r2m_r > 36.0: diag_reasons.append(f"2M={r2m:.0f}% > 36%")
-                if r5m_r > 38.0: diag_reasons.append(f"5M={r5m:.0f}% > 38%")
-                if r10m_r > 40.0: diag_reasons.append(f"10M={r10m:.0f}% > 40%")
-                if r15m_r > 42.0: diag_reasons.append(f"15M={r15m:.0f}% > 42%")
-                if r30m_r > 46.0: diag_reasons.append(f"30M={r30m:.0f}% > 46%")
-                if r1h_r > 50.0: diag_reasons.append(f"1H={r1h:.0f}% > 50%")
-                if r2h_r > 50.0: diag_reasons.append(f"2H={r2h:.0f}% > 50%")
-                if r4h_r > 50.0: diag_reasons.append(f"4H={r4h:.0f}% > 50%")
-                if r1d_r > 55.0: diag_reasons.append(f"1D={r1d:.0f}% > 55%")
+                if r2m_r > max_2m_cap: diag_reasons.append(f"2M={r2m:.0f}% > {max_2m_cap:.0f}%")
+                if r5m_r > max_5m_cap: diag_reasons.append(f"5M={r5m:.0f}% > {max_5m_cap:.0f}%")
+                if r10m_r > max_10m_cap: diag_reasons.append(f"10M={r10m:.0f}% > {max_10m_cap:.0f}%")
+                if r15m_r > max_15m_cap: diag_reasons.append(f"15M={r15m:.0f}% > {max_15m_cap:.0f}%")
+                if r30m_r > max_30m_cap: diag_reasons.append(f"30M={r30m:.0f}% > {max_30m_cap:.0f}%")
+                if r1h_r > max_1h_cap: diag_reasons.append(f"1H={r1h:.0f}% > {max_1h_cap:.0f}%")
+                if r2h_r > max_2h_cap: diag_reasons.append(f"2H={r2h:.0f}% > {max_2h_cap:.0f}%")
+                if r4h_r > max_4h_cap: diag_reasons.append(f"4H={r4h:.0f}% > {max_4h_cap:.0f}%")
+                if r1d_r > max_1d_cap: diag_reasons.append(f"1D={r1d:.0f}% > {max_1d_cap:.0f}%")
 
                 # ⚡ OBV HÍBRIDO: Permite absorción en suelo si Micro-OBV está acumulando y hay Doble Suelo / Divergencia
                 is_hybrid_obv_valid = cmtf.get("is_hybrid_obv_valid", False)

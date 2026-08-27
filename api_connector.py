@@ -1971,24 +1971,37 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
             vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
             
-            # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL ADAPTATIVA DINÁMICA (1M<=35%-45%, 2M<=36%, 5M<=38%, 10M<=40%, 15M<=42%, 30M<=46%, 1H<=50%, 2H<=50%, 4H<=50%, 1D<=55%)
-            max_1m_base_cap = 0.45 if (mtf_res.get("is_double_bottom") or mtf_res.get("bullish_rsi_divergence") or fii >= 75) else 0.35
+            # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL ADAPTATIVA DINÁMICA 2.0 (1M a 1D):
+            # Ancla Macro Estricta: 4H<=50%, 2H<=50%, 1H<=50%, 1D<=60%
+            # Expansión Micro/Mid Adaptativa si hay Confluencia A+ (Doble Suelo, Divergencia RSI o FII >= 65):
+            is_a_plus_floor = bool(mtf_res.get("is_double_bottom") or mtf_res.get("bullish_rsi_divergence") or fii >= 65)
+            max_1d_cap = 0.60 if is_a_plus_floor else 0.55
+            max_4h_cap = 0.50
+            max_2h_cap = 0.50
+            max_1h_cap = 0.50
+            max_30m_cap = 0.52 if is_a_plus_floor else 0.46
+            max_15m_cap = 0.52 if is_a_plus_floor else 0.42
+            max_10m_cap = 0.48 if is_a_plus_floor else 0.40
+            max_5m_cap = 0.46 if is_a_plus_floor else 0.38
+            max_2m_cap = 0.48 if is_a_plus_floor else 0.36
+            max_1m_cap = 0.50 if is_a_plus_floor else 0.35
+
             is_macro_base_valid = bool(
-                range_pos_1d <= 0.55 and
-                range_pos_4h <= 0.50 and
-                range_pos_2h <= 0.50 and
-                range_pos_1h <= 0.50 and
-                range_pos_30m <= 0.46 and
-                range_pos_15m <= 0.42 and
-                range_pos_10m <= 0.40 and
-                range_pos_5m <= 0.38 and
-                range_pos_2m <= 0.36 and
-                range_pos_1m <= max_1m_base_cap
+                range_pos_1d <= max_1d_cap and
+                range_pos_4h <= max_4h_cap and
+                range_pos_2h <= max_2h_cap and
+                range_pos_1h <= max_1h_cap and
+                range_pos_30m <= max_30m_cap and
+                range_pos_15m <= max_15m_cap and
+                range_pos_10m <= max_10m_cap and
+                range_pos_5m <= max_5m_cap and
+                range_pos_2m <= max_2m_cap and
+                range_pos_1m <= max_1m_cap
             )
             
             if not is_macro_base_valid or is_at_daily_ceiling:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado: Fuera de la Matriz Armónica 8D o en Techo:")
-                print(f"     Canales: [1M: {range_pos_1m*100:.0f}% (max 35) | 2M: {range_pos_2m*100:.0f}% (max 36) | 5M: {range_pos_5m*100:.0f}% (max 38) | 10M: {range_pos_10m*100:.0f}% (max 40) | 15M: {range_pos_15m*100:.0f}% (max 42) | 30M: {range_pos_30m*100:.0f}% (max 46) | 1H: {range_pos_1h*100:.0f}% (max 50) | 2H: {range_pos_2h*100:.0f}% (max 50) | 4H: {range_pos_4h*100:.0f}% (max 50) | 1D: {range_pos_1d*100:.0f}% (max 55)]")
+                print(f"     Canales: [1M: {range_pos_1m*100:.0f}% (max {max_1m_cap*100:.0f}) | 2M: {range_pos_2m*100:.0f}% (max {max_2m_cap*100:.0f}) | 5M: {range_pos_5m*100:.0f}% (max {max_5m_cap*100:.0f}) | 10M: {range_pos_10m*100:.0f}% (max {max_10m_cap*100:.0f}) | 15M: {range_pos_15m*100:.0f}% (max {max_15m_cap*100:.0f}) | 30M: {range_pos_30m*100:.0f}% (max {max_30m_cap*100:.0f}) | 1H: {range_pos_1h*100:.0f}% (max 50) | 2H: {range_pos_2h*100:.0f}% (max 50) | 4H: {range_pos_4h*100:.0f}% (max 50) | 1D: {range_pos_1d*100:.0f}% (max {max_1d_cap*100:.0f})]")
                 continue
 
 
