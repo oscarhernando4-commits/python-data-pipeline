@@ -515,7 +515,11 @@ def run_infinite_trading_matrix_cycle():
                 tf_2m_up = cmtf.get("tf_2m_up", False)
                 is_1m_wick = cmtf.get("is_1m_lower_wick_absorption", False)
                 is_vwap_rebound = cmtf.get("is_vwap_floor_rebound", False)
-                has_turnaround = bool(tf_1m_up or tf_2m_up or is_1m_wick or is_vwap_rebound)
+                is_double_bottom = cmtf.get("is_double_bottom", False)
+                is_bullish_div = cmtf.get("bullish_rsi_divergence", False)
+                is_sniper_ready = cmtf.get("is_sniper_timing_ready", False)
+                is_1m_green_ign = cmtf.get("is_1m_green_ignition", False)
+                has_turnaround = bool(tf_1m_up or tf_2m_up or is_1m_wick or is_vwap_rebound or is_double_bottom or is_bullish_div or is_sniper_ready or is_1m_green_ign)
                 
                 c_score = cand.get("score", 0)
                 is_knife = ctech.get("indicators", {}).get("is_falling_knife", False)
@@ -549,7 +553,7 @@ def run_infinite_trading_matrix_cycle():
 
                 if obv_t == "DISTRIBUTING": diag_reasons.append("OBV=DISTRIBUCIÓN")
                 if fii_sc < 50: diag_reasons.append(f"FII={fii_sc} bajo < 50")
-                elif rsi_15m >= 40.0 and fii_sc < 65: diag_reasons.append(f"FII={fii_sc} < 65 con RSI={rsi_15m:.0f}")
+                elif rsi_15m >= 45.0 and fii_sc < 65: diag_reasons.append(f"FII={fii_sc} < 65 con RSI={rsi_15m:.0f}")
                 if vol_1m < 0.20: diag_reasons.append(f"Vol1M={vol_1m:.2f}x < 0.20x")
                 if not has_turnaround: diag_reasons.append("Sin giro verde 1M/2M")
                 if c_score < 75: diag_reasons.append(f"Score={c_score} < 75")

@@ -1884,6 +1884,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 tf_1m == "BULLISH" or
                 tf_2m == "BULLISH" or
                 mtf_res.get("is_bullish_divergence") or
+                mtf_res.get("is_double_bottom") or
+                mtf_res.get("bullish_rsi_divergence") or
+                mtf_res.get("is_sniper_timing_ready") or
+                mtf_res.get("is_1m_green_ignition") or
                 mtf_res.get("is_yellow_arrow_pivot") or
                 mtf_res.get("is_vwap_floor_rebound") or
                 mtf_res.get("is_ema_golden_cross") or
@@ -1893,6 +1897,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             is_active_falling_knife = bool(
                 (tf_10s == "BEARISH" and tf_30s == "BEARISH" and tf_1m == "BEARISH") and
                 not mtf_res.get("is_bullish_divergence") and
+                not mtf_res.get("is_double_bottom") and
+                not mtf_res.get("bullish_rsi_divergence") and
                 not mtf_res.get("is_vwap_floor_rebound")
             )
             
@@ -1952,13 +1958,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 continue
 
             # ═══════════════════════════════════════════════════════════════════
-            # 🛡️ FILTRO ANTI-RENDER: FII mínimo aumentado cuando RSI 15M > 40
+            # 🛡️ FILTRO ANTI-RENDER: FII mínimo aumentado cuando RSI 15M > 45
             # RENDER entró con FII=60 + RSI15m=43 — no es suficiente confirmación institucional
             # para un activo en zona de consolidación bajista. Exigir FII >= 65.
             # ═══════════════════════════════════════════════════════════════════
             rsi_15m_val = mtf_res.get("rsi_15m", 50.0)
-            if rsi_15m_val >= 40.0 and fii < 65:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por FII Insuficiente con RSI 15M neutral (RSI15M={rsi_15m_val:.1f} >= 40 pero FII={fii} < 65). Exige FII >= 65 para zona no-oversold.")
+            if rsi_15m_val >= 45.0 and fii < 65:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por FII Insuficiente con RSI 15M neutral (RSI15M={rsi_15m_val:.1f} >= 45 pero FII={fii} < 65). Exige FII >= 65 para zona no-oversold.")
                 continue
 
             # ═══════════════════════════════════════════════════════════════════
