@@ -1731,26 +1731,65 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             pass
 
         # ═══════════════════════════════════════════════════════════════════════
-        # 🛡️ ESCUDO 3: FILTRO DE AMPLITUD DE MERCADO (Market Breadth)
-        # Verifica si el mercado de altcoins en general está bajando.
-        # Si >= 7 de los 10 alts de referencia están en vela 15M roja → HOLD.
-        # Esto detecta cuando todo el mercado se voltea — no solo Bitcoin.
+        # 🛡️ ESCUDO 3: SISMÓGRAFO DE AMPLITUD DE MERCADO DINÁMICA 2.0 (Dynamic Breadth)
+        # Analiza las 10 altcoins de referencia (ETH, SOL, BNB, XRP, ADA, DOT, LINK, LTC, AVAX, POL)
+        # 1. 🌪️ DETECTOR DE CASCADA TEMPRANA / PÁNICO: Si >= 6/10 están en rojo sin mechas de absorción
+        #    → Bloqueo total en búnker 100% USDT (protección de capital).
+        # 2. 💎 DETECTOR DE CLÍMAX DE CAPITULACIÓN & SUELO DE MERCADO (Rebote en V):
+        #    Si hay >= 6/10 rojas PERO las velas tienen mechas de absorción inferior >= 35%
+        #    o el candidato tiene Doble Suelo + Divergencia RSI + FII >= 65
+        #    → Autoriza compra exclusiva para cazar el rebote desde el fondo exacto.
         # ═══════════════════════════════════════════════════════════════════════
         try:
             breadth_symbols = ["ETHUSDT", "BNBUSDT", "SOLUSDT", "XRPUSDT", "ADAUSDT",
-                               "DOTUSDT", "LINKUSDT", "LTCUSDT", "AVAXUSDT", "MATICUSDT"]
+                               "DOTUSDT", "LINKUSDT", "LTCUSDT", "AVAXUSDT", "POLUSDT"]
             bearish_count = 0
+            lower_wicks = []
+            drop_pcts = []
+            
             for bsym in breadth_symbols:
                 bkl = get_klines(bsym, "15m", 2)
                 if bkl and len(bkl) >= 1:
-                    bc = float(bkl[-1][4]); bo = float(bkl[-1][1])
+                    bc = float(bkl[-1][4])
+                    bo = float(bkl[-1][1])
+                    bh = float(bkl[-1][2])
+                    bl = float(bkl[-1][3])
+                    
+                    rng = bh - bl
+                    lower_wick = min(bo, bc) - bl
+                    wick_pct = (lower_wick / rng * 100.0) if rng > 0 else 0.0
+                    lower_wicks.append(wick_pct)
+                    
+                    drop_pct = ((bc - bo) / bo * 100.0) if bo > 0 else 0.0
+                    drop_pcts.append(drop_pct)
+                    
                     if bc < bo:
                         bearish_count += 1
+                        
+            avg_wick_pct = (sum(lower_wicks) / len(lower_wicks)) if lower_wicks else 0.0
+            avg_drop_pct = (sum(drop_pcts) / len(drop_pcts)) if drop_pcts else 0.0
+            
+            # Chequeo si el candidato actual es una joya A+ descorrelacionada
+            cand_is_floor_gem = False
+            if best_symbol and candidates_list:
+                for c in candidates_list:
+                    if isinstance(c, dict) and c.get("symbol") == best_symbol:
+                        c_mtf = c.get("mtf_analysis", {})
+                        if (c_mtf.get("is_double_bottom") or c_mtf.get("bullish_rsi_divergence")) and c_mtf.get("fii_score", 0) >= 65:
+                            cand_is_floor_gem = True
+                        break
+
+            is_market_capitulation_floor = bool(avg_wick_pct >= 35.0 or cand_is_floor_gem)
+
             if bearish_count >= 6:
-                print(f"🛑 [AMPLITUD DE MERCADO] {bearish_count}/10 alts de referencia en vela 15M roja (>=60% del mercado cayendo). Bloqueo total de longs.")
-                return
+                if is_market_capitulation_floor:
+                    print(f"💎 [AMPLITUD DINÁMICA: SUELO DE MERCADO & ABSORCIÓN] {bearish_count}/10 alts en rojo 15M pero con mechas de absorción institucional (Mechas={avg_wick_pct:.0f}% >= 35% | Joya={cand_is_floor_gem}). Clímax de capitulación detectado. Autorizando compra élite.")
+                    state["_breadth_warning"] = False
+                else:
+                    print(f"🛑 [AMPLITUD DINÁMICA: PÁNICO ACTIVO] {bearish_count}/10 alts en caída neta (Promedio={avg_drop_pct:+.2f}% | Mechas={avg_wick_pct:.0f}% < 35%). Preservando 100% USDT en búnker.")
+                    return
             elif bearish_count >= 5:
-                print(f"⚠️ [AMPLITUD MIXTA] {bearish_count}/10 alts en rojo 15M. Exigiendo FII >= 80 y Score >= 90.")
+                print(f"⚠️ [AMPLITUD DINÁMICA: MERCADO MIXTO] {bearish_count}/10 alts en rojo 15M (Mechas={avg_wick_pct:.0f}%). Exigiendo confluencia A+.")
                 state["_breadth_warning"] = True
             else:
                 state["_breadth_warning"] = False
