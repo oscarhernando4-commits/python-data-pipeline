@@ -1219,17 +1219,34 @@ def quick_position_heartbeat():
 
 
             
-        # 🪙 ESCUDO BITCOIN SUB-SEGUNDO (Circuit Breaker Instantáneo):
-        # Solo eyectar si BTC cae >= 0.35% Y el altcoin TAMBIÉN está en pérdida.
-        # Si el altcoin sube mientras BTC cae, tiene momentum propio y no debe cortarse.
+        # 🪙 ESCUDO BITCOIN DINÁMICO & ADAPTATIVO 2.0 (Circuit Breaker Inteligente):
+        # Protege contra caídas severas de BTC pero NO eyecta por micro-ruido de -0.35%.
+        # Criterios de activación justificada:
+        # 1. Caída Severa de BTC: BTC cae <= -0.65% Y el altcoin está perdiendo <= -0.80%.
+        # 2. Contagio Confirmado en Libro: BTC cae <= -0.45% Y el altcoin está perdiendo <= -1.20% con Bids < 40%.
+        # 3. Inmunidad por Fuerza Propia: Si el altcoin está en verde (PnL >= 0) o tiene Bids >= 52%, NUNCA se eyecta.
         btc_entry = float(pos.get("btc_entry_price", 0.0))
         if not should_exit and btc_entry > 0 and holding_minutes_hb <= 45 and current_pnl_pct < 0:
             btc_now = get_symbol_price("BTCUSDT", is_futures=False)
             if btc_now and btc_now > 0:
                 btc_drop_pct = ((btc_now - btc_entry) / btc_entry) * 100.0
-                if btc_drop_pct <= -0.35:
+                
+                # Check orderbook bid dominance to verify real contagion
+                bids_hb = 50.0
+                try:
+                    import orderbook_analyzer as _ob
+                    ob_quick = _ob.fetch_orderbook_depth(sym, limit=10)
+                    bids_hb = ob_quick.get("bid_dominance_pct", 50.0)
+                except Exception:
+                    pass
+                
+                is_severe_btc_dump = bool(btc_drop_pct <= -0.65 and current_pnl_pct <= -0.80)
+                is_contagion_dump = bool(btc_drop_pct <= -0.45 and current_pnl_pct <= -1.20 and bids_hb < 40.0)
+                
+                if (is_severe_btc_dump or is_contagion_dump) and bids_hb < 52.0:
                     should_exit = True
-                    exit_reason = f"🚨 ESCUDO BITCOIN ACTIVO: BTC cayó {btc_drop_pct:+.2f}% desde la entrada. Eyectando {sym} para evitar contagio de la caída general."
+                    exit_reason = f"🚨 ESCUDO BITCOIN 2.0: BTC cayó {btc_drop_pct:+.2f}% y contagió a {sym} (PnL={current_pnl_pct:+.2f}%, Bids={bids_hb:.0f}%). Eyectando para proteger capital."
+                    state["_last_exit_was_btc_shield"] = True
             
         # ⏱️ FASE 1: PACIENCIA ILIMITADA (CERO LÍMITE DE TIEMPO):
         # La posición se mantiene activa sin límite de horas hasta alcanzar la meta de +1.00% o tocar SL -4.00%.
@@ -1864,19 +1881,33 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 price=cand_price
             )
             
-            # 4. Cooldown 4H Anti-Resaca (se permite cascadear si es cooldown)
-            if cand_sym == last_closed_sym and (now_epoch - last_closed_time) < 14400:
-                discount_from_exit_pct = ((last_exit_price - cand_price) / last_exit_price) * 100.0 if (last_exit_price > 0 and cand_price > 0) else 0.0
-                time_since_last_exit = now_epoch - last_closed_time
-                if not (is_ai_top and time_since_last_exit >= 300) and not (discount_from_exit_pct >= 1.50 and time_since_last_exit >= 180):
-                    mins_passed = int(time_since_last_exit / 60)
-                    print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] En Cooldown 4H ({mins_passed}m transcurridos). Pasando al siguiente finalista...")
-                    continue  # Cooldown is temporal, cascading is OK
-            
             # 5. Multi-Timeframe Institutional Analysis (1m, 2m, 5m, 15m, 1h)
             mtf_res = multi_timeframe_analyzer.analyze_multi_timeframe_candles(cand_sym)
             tf_align = mtf_res.get("timeframe_alignment", {})
             atr_15m = mtf_res.get("atr_pct_15m", 0.45)
+            fii = mtf_res.get("fii_score", 0)
+            
+            # 4. Cooldown Adaptativo & Protocolo de Re-Enganche Inteligente (Fast Re-Entry):
+            # Si la moneda fue cerrada recientemente pero presenta:
+            # - Doble Suelo / Divergencia RSI, o
+            # - FII Institucional >= 65, o
+            # - Ignición Verde 1M con volumen,
+            # → El Cooldown se anula tras solo 2 minutos (120s) para capturar el rebote explosivo y cubrir comisiones con creces.
+            if cand_sym == last_closed_sym and (now_epoch - last_closed_time) < 14400:
+                discount_from_exit_pct = ((last_exit_price - cand_price) / last_exit_price) * 100.0 if (last_exit_price > 0 and cand_price > 0) else 0.0
+                time_since_last_exit = now_epoch - last_closed_time
+                
+                is_fast_reentry_eligible = bool(
+                    (mtf_res.get("is_double_bottom") or mtf_res.get("bullish_rsi_divergence") or fii >= 65 or mtf_res.get("is_1m_green_ignition")) and
+                    time_since_last_exit >= 120
+                )
+                
+                if is_fast_reentry_eligible:
+                    print(f"  ⚡ [RE-ENGANCHE INTELIGENTE #{cand_idx}/{total_cands} {cand_sym}] Setup A+ confirmado tras salida previa ({int(time_since_last_exit)}s). Anulando Cooldown para capturar rebote institucional.")
+                elif not (is_ai_top and time_since_last_exit >= 300) and not (discount_from_exit_pct >= 1.50 and time_since_last_exit >= 180):
+                    mins_passed = int(time_since_last_exit / 60)
+                    print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] En Cooldown 4H ({mins_passed}m transcurridos). Pasando al siguiente finalista...")
+                    continue  # Cooldown is temporal, cascading is OK
             
             # Re-evaluate archetype with live 15M ATR
             arch_dna = adaptive_asset_dna.get_asset_dna_archetype(cand_sym, atr_15m, cand_price)
@@ -1894,7 +1925,6 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             tf_1h = tf_align.get("1h", "BEARISH")
             tf_10s = tf_align.get("10s", "BEARISH")
             tf_30s = tf_align.get("30s", "BEARISH")
-            fii = mtf_res.get("fii_score", 0)
             
             # Macro Base Check
             is_macro_base = (
