@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 10159,
-    "wins": 4656,
+    "total_trades": 10160,
+    "wins": 4657,
     "losses": 5503,
-    "win_rate_pct": 45.83,
-    "total_pnl_usd": 11762.50861654939
+    "win_rate_pct": 45.84,
+    "total_pnl_usd": 11762.62051654939
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on OPUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST SHORT when RSI:30-40(Weak) + Score:<30(Bearish) + Trend:NEUTRAL (Won on PYTHUSDT)",
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on LINKUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on IMXUSDT)",
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SHIBUSDT)",
@@ -49,34 +48,11 @@
       "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SHIBUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)",
-      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on OPUSDT)"
+      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on OPUSDT)",
+      "BOOST LONG when OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLFIUSDT)"
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 03:02:29",
-      "account_id": "SIM-238",
-      "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
-      "symbol": "WIFUSDT",
-      "side": "LONG",
-      "entry_price": 0.1992,
-      "exit_price": 0.1974,
-      "pnl_usd": -0.21,
-      "result": "LOSS",
-      "notes": "LOSS on WIFUSDT (PnL: -0.90%, Net: $-0.21 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 42.68,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 03:02:29",
       "account_id": "SIM-239",
@@ -11970,6 +11946,28 @@
         "vol_surge_1m": 4.03,
         "fii_score": 95,
         "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-27 08:46:19",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "WLFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.0581,
+      "exit_price": 0.0586,
+      "pnl_usd": 0.1119,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.86% <= +1.00%) (Fase 2, PnL: +0.86%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 44.7,
+        "atr_pct_15m": 0.497,
+        "vol_surge": 0.88,
+        "vol_surge_1m": 1.4,
+        "fii_score": 85,
+        "obv_trend": "DISTRIBUTING",
         "macro_trend_4h": "NEUTRAL"
       }
     }
