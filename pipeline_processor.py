@@ -516,9 +516,11 @@ def run_infinite_trading_matrix_cycle():
                 is_vwap_rebound = cmtf.get("is_vwap_floor_rebound", False)
                 is_double_bottom = cmtf.get("is_double_bottom", False)
                 is_bullish_div = cmtf.get("bullish_rsi_divergence", False)
+                is_liquidity_sweep = cmtf.get("is_liquidity_sweep", False)
+                is_second_touch = cmtf.get("is_second_touch_sniper", False)
                 is_sniper_ready = cmtf.get("is_sniper_timing_ready", False)
                 is_1m_green_ign = cmtf.get("is_1m_green_ignition", False)
-                has_turnaround = bool(tf_1m_up or tf_2m_up or is_1m_wick or is_vwap_rebound or is_double_bottom or is_bullish_div or is_sniper_ready or is_1m_green_ign)
+                has_turnaround = bool(tf_1m_up or tf_2m_up or is_1m_wick or is_vwap_rebound or is_double_bottom or is_bullish_div or is_sniper_ready or is_1m_green_ign or is_liquidity_sweep or is_second_touch)
                 
                 c_score = cand.get("score", 0)
                 is_knife = ctech.get("indicators", {}).get("is_falling_knife", False)
@@ -535,8 +537,8 @@ def run_infinite_trading_matrix_cycle():
                 r4h_r = round(r4h, 1)
                 r1d_r = round(r1d, 1)
                 
-                # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL ADAPTATIVA DINÁMICA 2.0 (1M a 1D):
-                is_a_plus_floor = bool(is_double_bottom or is_bullish_div or fii_sc >= 65)
+                # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL ADAPTATIVA DINÁMICA 3.0 (1M a 1D):
+                is_a_plus_floor = bool(is_double_bottom or is_bullish_div or is_second_touch or is_liquidity_sweep or fii_sc >= 65)
                 max_1d_cap = 60.0 if is_a_plus_floor else 55.0
                 max_4h_cap = 50.0
                 max_2h_cap = 50.0
@@ -566,6 +568,12 @@ def run_infinite_trading_matrix_cycle():
                 elif rsi_15m >= 45.0 and fii_sc < 65: diag_reasons.append(f"FII={fii_sc}<65(RSI={rsi_15m:.0f})")
                 if vol_1m < 0.20: diag_reasons.append(f"Vol1M={vol_1m:.2f}x<0.20x")
                 if not has_turnaround: diag_reasons.append("SinGiroVerde")
+                
+                # 🏹 GATE DE MADUREZ DE SUELO 3.0 (Evita compras apresuradas antes del barrido):
+                is_unconfirmed_first_bounce = not (is_second_touch or is_liquidity_sweep or is_double_bottom)
+                if is_unconfirmed_first_bounce and rsi_15m >= 48.0 and vol_1m < 0.35:
+                    diag_reasons.append("EsperandoSuelo2(RSI15M>=48)")
+                    
                 if c_score < 75: diag_reasons.append(f"Score={c_score}<75")
                 if is_knife: diag_reasons.append("Cuchillo")
                 if is_dead_cat: diag_reasons.append("GatoMuerto")

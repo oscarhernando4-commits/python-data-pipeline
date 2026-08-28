@@ -547,8 +547,8 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     
     REGLAS DE DECISIÓN DEL CEO:
     - Compara a los finalistas y selecciona al MEJOR ACTIVO DE LA LISTA.
-    - 💎 RECONOCIMIENTO DE PATRÓN DINÁMICO & RAG HISTÓRICO: Si el candidato tiene "💎 DOBLE SUELO" o "💎 DOBLE SUELO + DIVERGENCIA RSI", dale prioridad alta #1 y confianza 90-95% (patrón histórico con 75% Win Rate). Si presenta "🚀 GIRO DIRECTO EN V" con volumen institucional, es 100% válido y ejecutable inmediatamente (no es obligatorio esperar doble suelo).
-    - 🎯 REGLA DE DISPARO EN BASE ADAPTATIVA: Si un candidato cumple con la BASE FRACTAL (1M<=35%-45% en Doble Suelo, 5M<=38%, 15M<=42%, 1H<=50%, 2H<=50%, 4H<=50%, 1D<=55%), tiene Score >= 75, FII >= 50, Bids >= 46%, VolSurge >= 0.20x, OBV no distribuyendo (o validado por Micro-OBV de absorción en suelo), y no tiene vetos duros de dump, APRUÉBALO con "BUY_LONG", approved: true, confidence: 85-95.
+    - 💎 RECONOCIMIENTO DE PATRÓN DINÁMICO & RAG HISTÓRICO 3.0: Si el candidato tiene "💎 SUELO 2 CONFIRMADO", "🏹 BARRIDO DE LIQUIDEZ Y GIRO EN SUELO 2", "💎 DOBLE SUELO" o "💎 DOBLE SUELO + DIVERGENCIA RSI", dale prioridad absoluta #1 y confianza 92-98% (patrón de máximo descuento y alta tasa de victoria). Si presenta "🚀 GIRO DIRECTO EN V" con volumen institucional, es 100% válido y ejecutable inmediatamente.
+    - 🎯 REGLA DE DISPARO EN BASE ADAPTATIVA 3.0: Si un candidato cumple con la BASE FRACTAL (1M<=35%-50%, 5M<=38%-46%, 15M<=42%-52%, 1H<=50%, 2H<=50%, 4H<=50%, 1D<=60%), tiene Score >= 75, FII >= 50, Bids >= 46%, VolSurge >= 0.20x, OBV no distribuyendo (o validado por Micro-OBV de absorción en suelo), y no tiene vetos duros de dump, APRUÉBALO con "BUY_LONG", approved: true, confidence: 85-95.
     - Si absolutamente ningún candidato cumple con la base de suelo o Bitcoin está en caída activa, responde "selected_symbol": "NONE", "action": "HOLD".
     - 🔍 REGLA DE TRANSPARENCIA: En tu 'reasoning', menciona OBLIGATORIAMENTE los activos principales evaluados y el motivo técnico específico.
 

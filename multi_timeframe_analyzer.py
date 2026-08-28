@@ -1459,14 +1459,17 @@ def analyze_multi_timeframe_candles(symbol):
     pump_status = "🚀 PRE-PUMP DETECTADO (VolAcc=" + str(vol_acceleration) + "x, BBSqueeze=" + str(bb_squeeze_ratio) + ")" if is_pre_pump_signal else ""
     knife_status = " | ⛔ FALLING KNIFE VETADO (Caída 24h=" + str(price_change_24h_pct) + "%)" if is_falling_knife else (" | 🪤 DEAD CAT BOUNCE TRAMPA (Caída 24h=" + str(price_change_24h_pct) + "%)" if is_dead_cat_bounce else (" | ⚠️ MACRO BAJISTA DOMINANTE" if is_macro_bearish_dominance else ""))
 
-    # 💎 DETECTOR DINÁMICO DE DOBLE SUELO Y DIVERGENCIA DE RSI EN 1M/5M:
+    # 💎 DETECTOR CUÁNTICO 3.0 DE SEGUNDO SUELO, BARRIDO DE LIQUIDEZ Y DIVERGENCIA DE RSI:
     is_double_bottom = False
     bullish_rsi_divergence = False
+    is_liquidity_sweep = False
+    is_second_touch_sniper = False
     double_bottom_label = "🟢 GIRO DIRECTO EN V"
 
     if len(klines_1m) >= 20:
         lows_1m_recent = [float(k[3]) for k in klines_1m[-20:]]
         highs_1m_recent = [float(k[2]) for k in klines_1m[-20:]]
+        closes_1m_recent = [float(k[4]) for k in klines_1m[-20:]]
         half = len(lows_1m_recent) // 2
         min_1 = min(lows_1m_recent[:half])
         min_2 = min(lows_1m_recent[half:])
@@ -1474,23 +1477,40 @@ def analyze_multi_timeframe_candles(symbol):
         idx_2 = half + lows_1m_recent[half:].index(min_2)
         diff_pct = ((min_2 - min_1) / min_1) * 100.0 if min_1 > 0 else 999.0
         
-        # Require: (1) lows within tolerance, (2) separated by >=5 candles, (3) intermediate peak exists
+        # Require: separation between touches and intermediate peak
         separation = idx_2 - idx_1
         neckline_peak = max(highs_1m_recent[idx_1:idx_2+1]) if idx_2 > idx_1 else min_1
         neckline_above_pct = ((neckline_peak - max(min_1, min_2)) / max(min_1, min_2)) * 100.0 if max(min_1, min_2) > 0 else 0.0
         
-        if -0.40 <= diff_pct <= 0.80 and separation >= 5 and neckline_above_pct >= 0.15:
+        closes_sub1 = [float(k[4]) for k in klines_1m[:-(len(lows_1m_recent) - idx_1)]]
+        rsi_low_1 = calculate_rsi(closes_sub1) if len(closes_sub1) >= 14 else rsi_1m
+        rsi_low_2 = rsi_1m
+        has_rsi_div = bool(rsi_low_2 > (rsi_low_1 + 1.2))
+        
+        # 1. Caso A: Doble Suelo Clásico / Segundo Toque (-0.40% a +0.80%)
+        if -0.40 <= diff_pct <= 0.80 and separation >= 4 and neckline_above_pct >= 0.12:
             is_double_bottom = True
-            closes_sub1 = [float(k[4]) for k in klines_1m[:-(len(lows_1m_recent) - idx_1)]]
-            rsi_low_1 = calculate_rsi(closes_sub1) if len(closes_sub1) >= 14 else rsi_1m  # Fix: use rsi_1m as fallback, not 30.0
-            rsi_low_2 = rsi_1m
-            if rsi_low_2 > (rsi_low_1 + 1.5):
+            if has_rsi_div:
                 bullish_rsi_divergence = True
-                double_bottom_label = f"💎 DOBLE SUELO + DIVERGENCIA RSI (RSI {rsi_low_1:.0f} -> {rsi_low_2:.0f})"
+                is_second_touch_sniper = True
+                double_bottom_label = f"💎 SUELO 2 CONFIRMADO + DIVERGENCIA RSI (RSI {rsi_low_1:.0f} -> {rsi_low_2:.0f})"
             else:
-                double_bottom_label = f"💎 DOBLE SUELO (Suelo 1: {min_1:.4f}, Suelo 2: {min_2:.4f})"
+                is_second_touch_sniper = True
+                double_bottom_label = f"💎 SUELO 2 SNIPER (Suelo 1: {min_1:.4f}, Suelo 2: {min_2:.4f})"
+                
+        # 2. Caso B: Barrido de Liquidez Institucional / Spring de Wyckoff (-1.80% a -0.40%)
+        # El precio perfora ligeramente el Piso 1 (-0.4% a -1.8%) pero el RSI se mantiene más alto y el cierre actual recupera el piso
+        elif -1.80 <= diff_pct < -0.40 and separation >= 4 and has_rsi_div:
+            is_double_bottom = True
+            bullish_rsi_divergence = True
+            is_liquidity_sweep = True
+            is_second_touch_sniper = True
+            double_bottom_label = f"🏹 BARRIDO DE LIQUIDEZ Y GIRO EN SUELO 2 (Mecha -{abs(diff_pct):.2f}% | RSI {rsi_low_1:.0f} -> {rsi_low_2:.0f})"
+            
     elif is_1m_green_ignition or vol_surge_1m >= 1.5:
         double_bottom_label = "🚀 GIRO DIRECTO EN V (Rebote Explosivo)"
+
+    is_deep_oversold_exhaustion = bool(rsi_1m <= 32.0 or rsi_5m <= 35.0 or is_second_touch_sniper or is_liquidity_sweep or is_vwap_floor_rebound)
 
     # ⚡ OBV HÍBRIDO MULTI-ESCALA: Si hay Doble Suelo, Divergencia RSI o FII fuerte, y Micro-OBV está acumulando,
     # el estatus de OBV se valida como absorción institucional en suelo para eliminar el lag matemático de 15M.
@@ -1574,9 +1594,11 @@ def analyze_multi_timeframe_candles(symbol):
         "is_sniper_timing_ready": is_sniper_timing_ready,
         "sniper_timing_label": sniper_timing_label,
         "is_1m_green_ignition": is_1m_green_ignition,
-        "is_5m_higher_low": is_5m_higher_low,
         "is_double_bottom": is_double_bottom,
         "bullish_rsi_divergence": bullish_rsi_divergence,
+        "is_liquidity_sweep": is_liquidity_sweep,
+        "is_second_touch_sniper": is_second_touch_sniper,
+        "is_deep_oversold_exhaustion": is_deep_oversold_exhaustion,
         "double_bottom_label": double_bottom_label,
         "price_above_15m_mas": price_above_15m_ma7 and price_above_15m_ma25,
 

@@ -1955,6 +1955,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 mtf_res.get("is_bullish_divergence") or
                 mtf_res.get("is_double_bottom") or
                 mtf_res.get("bullish_rsi_divergence") or
+                mtf_res.get("is_second_touch_sniper") or
+                mtf_res.get("is_liquidity_sweep") or
                 mtf_res.get("is_sniper_timing_ready") or
                 mtf_res.get("is_1m_green_ignition") or
                 mtf_res.get("is_yellow_arrow_pivot") or
@@ -1968,6 +1970,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 not mtf_res.get("is_bullish_divergence") and
                 not mtf_res.get("is_double_bottom") and
                 not mtf_res.get("bullish_rsi_divergence") and
+                not mtf_res.get("is_second_touch_sniper") and
+                not mtf_res.get("is_liquidity_sweep") and
                 not mtf_res.get("is_vwap_floor_rebound")
             )
             
@@ -2001,10 +2005,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
             vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
             
-            # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL ADAPTATIVA DINÁMICA 2.0 (1M a 1D):
+            # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL ADAPTATIVA DINÁMICA 3.0 (1M a 1D):
             # Ancla Macro Estricta: 4H<=50%, 2H<=50%, 1H<=50%, 1D<=60%
-            # Expansión Micro/Mid Adaptativa si hay Confluencia A+ (Doble Suelo, Divergencia RSI o FII >= 65):
-            is_a_plus_floor = bool(mtf_res.get("is_double_bottom") or mtf_res.get("bullish_rsi_divergence") or fii >= 65)
+            # Expansión Micro/Mid Adaptativa si hay Confluencia A+ (Suelo 2, Barrido Liquidez, Doble Suelo, Divergencia RSI o FII >= 65):
+            is_a_plus_floor = bool(mtf_res.get("is_double_bottom") or mtf_res.get("bullish_rsi_divergence") or mtf_res.get("is_second_touch_sniper") or mtf_res.get("is_liquidity_sweep") or fii >= 65)
             max_1d_cap = 0.60 if is_a_plus_floor else 0.55
             max_4h_cap = 0.50
             max_2h_cap = 0.50
