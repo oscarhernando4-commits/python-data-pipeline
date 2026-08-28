@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 10164,
+    "total_trades": 10165,
     "wins": 4659,
-    "losses": 5505,
-    "win_rate_pct": 45.84,
-    "total_pnl_usd": 11762.84841654939
+    "losses": 5506,
+    "win_rate_pct": 45.83,
+    "total_pnl_usd": 11762.31881654939
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ETHUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on LTCUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on HBARUSDT)",
       "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ENAUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on OPUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on OPUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on WLFIUSDT)",
-      "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SUNUSDT)"
+      "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SUNUSDT)",
+      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on FLOKIUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SHIBUSDT)",
@@ -53,30 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 03:02:29",
-      "account_id": "SIM-424",
-      "group_name": "⚖️ GRUPO 3: Rotación Sectorial",
-      "symbol": "WIFUSDT",
-      "side": "LONG",
-      "entry_price": 0.1995,
-      "exit_price": 0.1974,
-      "pnl_usd": -0.24,
-      "result": "LOSS",
-      "notes": "LOSS on WIFUSDT (PnL: -1.05%, Net: $-0.24 Fase 1)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 42.68,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 03:02:29",
       "account_id": "SIM-425",
@@ -11958,6 +11934,28 @@
         "atr_pct_15m": 0.757,
         "vol_surge": 0.66,
         "vol_surge_1m": 0.93,
+        "fii_score": 80,
+        "obv_trend": "DISTRIBUTING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-28 16:14:51",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "FLOKIUSDT",
+      "side": "LONG",
+      "entry_price": 2.642e-05,
+      "exit_price": 2.536e-05,
+      "pnl_usd": -0.5296,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (-4.01% <= -4.00%) (Fase 1, PnL: -4.01%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 35.6,
+        "atr_pct_15m": 0.588,
+        "vol_surge": 0.34,
+        "vol_surge_1m": 0.37,
         "fii_score": 80,
         "obv_trend": "DISTRIBUTING",
         "macro_trend_4h": "NEUTRAL"
