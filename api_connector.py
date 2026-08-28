@@ -1219,17 +1219,20 @@ def quick_position_heartbeat():
 
 
             
-        # 🪙 ESCUDO BITCOIN DINÁMICO & ADAPTATIVO 2.0 (Circuit Breaker Inteligente):
-        # Protege contra caídas severas de BTC pero NO eyecta por micro-ruido de -0.35%.
-        # Criterios de activación justificada:
-        # 1. Caída Severa de BTC: BTC cae <= -0.65% Y el altcoin está perdiendo <= -0.80%.
-        # 2. Contagio Confirmado en Libro: BTC cae <= -0.45% Y el altcoin está perdiendo <= -1.20% con Bids < 40%.
-        # 3. Inmunidad por Fuerza Propia: Si el altcoin está en verde (PnL >= 0) o tiene Bids >= 52%, NUNCA se eyecta.
+        # 🪙 ESCUDO BITCOIN PEAK-TRAILING & CIRCUIT BREAKER 3.0:
+        # Registra el precio pico de BTC durante la operación y detecta caídas tanto desde la entrada como desde el pico.
         btc_entry = float(pos.get("btc_entry_price", 0.0))
-        if not should_exit and btc_entry > 0 and holding_minutes_hb <= 45 and current_pnl_pct < 0:
-            btc_now = get_symbol_price("BTCUSDT", is_futures=False)
-            if btc_now and btc_now > 0:
-                btc_drop_pct = ((btc_now - btc_entry) / btc_entry) * 100.0
+        btc_peak = float(pos.get("btc_peak_price", btc_entry if btc_entry > 0 else 0.0))
+        btc_now = get_symbol_price("BTCUSDT", is_futures=False)
+        
+        if btc_now and btc_now > 0:
+            if btc_now > btc_peak:
+                pos["btc_peak_price"] = btc_now
+                btc_peak = btc_now
+                
+            if not should_exit and current_pnl_pct < 0:
+                btc_drop_from_entry_pct = ((btc_now - btc_entry) / btc_entry) * 100.0 if btc_entry > 0 else 0.0
+                btc_drop_from_peak_pct = ((btc_now - btc_peak) / btc_peak) * 100.0 if btc_peak > 0 else 0.0
                 
                 # Check orderbook bid dominance to verify real contagion
                 bids_hb = 50.0
@@ -1240,16 +1243,35 @@ def quick_position_heartbeat():
                 except Exception:
                     pass
                 
-                is_severe_btc_dump = bool(btc_drop_pct <= -0.65 and current_pnl_pct <= -0.80)
-                is_contagion_dump = bool(btc_drop_pct <= -0.45 and current_pnl_pct <= -1.20 and bids_hb < 40.0)
+                # Criterio 1: Desplome de BTC desde el pico (>= -0.80%) arrastrando la altcoin
+                is_peak_btc_dump = bool(btc_drop_from_peak_pct <= -0.80 and current_pnl_pct <= -0.60)
+                # Criterio 2: Caída severa desde entrada
+                is_severe_btc_dump = bool(btc_drop_from_entry_pct <= -0.65 and current_pnl_pct <= -0.80)
+                # Criterio 3: Contagio con libro colapsado
+                is_contagion_dump = bool(btc_drop_from_entry_pct <= -0.45 and current_pnl_pct <= -1.20 and bids_hb < 40.0)
                 
-                if (is_severe_btc_dump or is_contagion_dump) and bids_hb < 52.0:
+                if (is_peak_btc_dump or is_severe_btc_dump or is_contagion_dump) and bids_hb < 52.0:
                     should_exit = True
-                    exit_reason = f"🚨 ESCUDO BITCOIN 2.0: BTC cayó {btc_drop_pct:+.2f}% y contagió a {sym} (PnL={current_pnl_pct:+.2f}%, Bids={bids_hb:.0f}%). Eyectando para proteger capital."
+                    trigger_drop = btc_drop_from_peak_pct if is_peak_btc_dump else btc_drop_from_entry_pct
+                    exit_reason = f"🚨 ESCUDO BITCOIN 3.0: BTC cayó {trigger_drop:+.2f}% y contagió a {sym} (PnL={current_pnl_pct:+.2f}%, Bids={bids_hb:.0f}%). Eyectando para proteger capital."
                     state["_last_exit_was_btc_shield"] = True
+
+        # ⏱️ CONTROL DE ESTANCAMIENTO & TIME-DECAY SL DINÁMICO 3.0 (Por Arquetipo ADN):
+        if not should_exit and current_phase == 1:
+            max_stag_mins = arch_dna.get("max_stagnation_minutes", 120)
+            stag_decay_mins = arch_dna.get("stagnation_decay_minutes", 75)
+            decay_sl = arch_dna.get("decay_sl_pct", -1.80)
             
-        # ⏱️ FASE 1: PACIENCIA ILIMITADA (CERO LÍMITE DE TIEMPO):
-        # La posición se mantiene activa sin límite de horas hasta alcanzar la meta de +1.00% o tocar SL -4.00%.
+            # 1. Contracción dinámica de SL si lleva tiempo sin impulso alcista
+            if holding_minutes_hb >= stag_decay_mins and highest_pnl_pct < 0.70:
+                if current_pnl_pct <= decay_sl:
+                    should_exit = True
+                    exit_reason = f"⏱️ SL DINÁMICO POR ESTANCAMIENTO ({holding_minutes_hb}m sin despegue | PnL={current_pnl_pct:+.2f}% <= {decay_sl:+.2f}%). Liberando USDT."
+            
+            # 2. Cierre por agotamiento total de ventana temporal (Momentum decay)
+            if holding_minutes_hb >= max_stag_mins and highest_pnl_pct < 0.80:
+                should_exit = True
+                exit_reason = f"⏱️ CIERRE POR AGOTAMIENTO DE TIEMPO ({holding_minutes_hb}m >= {max_stag_mins}m límite ADN). Momentum decay confirmado. Liberando capital."
 
 
 

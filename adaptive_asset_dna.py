@@ -64,8 +64,10 @@ ARCHETYPE_CONFIGS = {
         "archetype": "HYPER_VOLATILE_SPRINT",
         "label": "🐆 SPRINT HIPER-VOLÁTIL (Meme / High-Beta)",
         "emoji": "🐆",
-        "initial_sl_pct": -4.00,         # SL de -4.00%
-        "max_stagnation_minutes": 999999, # Tiempo ilimitado
+        "initial_sl_pct": -4.00,         # SL inicial de -4.00%
+        "max_stagnation_minutes": 120,    # Cierre automático a los 120 min si no hay volumen
+        "stagnation_decay_minutes": 75,   # A los 75 min sin impulso, contraer SL a -1.80%
+        "decay_sl_pct": -1.80,
         "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
         "phase_3_trigger_pct": 1.60,
@@ -80,8 +82,10 @@ ARCHETYPE_CONFIGS = {
         "archetype": "BLUE_CHIP_CORE",
         "label": "🏛️ BLUE-CHIP INSTITUCIONAL (L1 / Core)",
         "emoji": "🏛️",
-        "initial_sl_pct": -4.00,         # SL de -4.00%
-        "max_stagnation_minutes": 999999, # Tiempo ilimitado
+        "initial_sl_pct": -4.00,         # SL inicial de -4.00%
+        "max_stagnation_minutes": 240,    # Mayor paciencia para L1s (240 min)
+        "stagnation_decay_minutes": 180,  # A los 180 min, contraer SL a -2.50%
+        "decay_sl_pct": -2.50,
         "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
         "phase_3_trigger_pct": 1.60,
@@ -96,8 +100,10 @@ ARCHETYPE_CONFIGS = {
         "archetype": "SECTOR_ROTATION",
         "label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
         "emoji": "🧩",
-        "initial_sl_pct": -4.00,         # SL de -4.00%
-        "max_stagnation_minutes": 999999, # Tiempo ilimitado
+        "initial_sl_pct": -4.00,         # SL inicial de -4.00%
+        "max_stagnation_minutes": 180,    # 180 min de ventana para rotación sectorial
+        "stagnation_decay_minutes": 120,  # A los 120 min, contraer SL a -2.00%
+        "decay_sl_pct": -2.00,
         "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
         "phase_3_trigger_pct": 1.60,
@@ -112,8 +118,10 @@ ARCHETYPE_CONFIGS = {
         "archetype": "THIN_BOOK_MICRO",
         "label": "🎯 MICRO-CAP / LIBRO DELGADO",
         "emoji": "🎯",
-        "initial_sl_pct": -4.00,         # SL de -4.00%
-        "max_stagnation_minutes": 999999, # Tiempo ilimitado
+        "initial_sl_pct": -4.00,         # SL inicial de -4.00%
+        "max_stagnation_minutes": 120,    # 120 min máx para micro-caps
+        "stagnation_decay_minutes": 75,   # A los 75 min, contraer SL a -1.80%
+        "decay_sl_pct": -1.80,
         "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
         "phase_3_trigger_pct": 1.60,
