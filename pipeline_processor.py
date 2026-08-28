@@ -484,11 +484,10 @@ def run_infinite_trading_matrix_cycle():
             except Exception as e_btc_guard:
                 print(f"⚠️ BTC Guard check error (non-blocking): {e_btc_guard}")
             
-            # 🔬 DIAGNÓSTICO INDIVIDUAL DETALLADO DE TODOS LOS 67 PARES DEL TOP 100 CMC:
-            print("\n🔬 ═══════════════════════════════════════════════════════════════════════════════════════════════════════════")
-            print(f"📊 [DIAGNÓSTICO INDIVIDUAL DETALLADO — LOS {len(top_all_candidates)} PARES DEL TOP 100 CMC]")
-            print("═══════════════════════════════════════════════════════════════════════════════════════════════════════════")
+            # 🔬 EVALUACIÓN MULTI-TEMPORAL ADAPTATIVA DE LOS 67 PARES DEL TOP 100 CMC:
             valid_base_candidates = []
+            proximity_candidates = []
+            
             for idx, cand in enumerate(top_all_candidates, 1):
                 csym = cand["symbol"]
                 cdata = symbol_analysis_map.get(csym, {})
@@ -537,8 +536,6 @@ def run_infinite_trading_matrix_cycle():
                 r1d_r = round(r1d, 1)
                 
                 # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL ADAPTATIVA DINÁMICA 2.0 (1M a 1D):
-                # Ancla Macro Estricta: 4H<=50%, 2H<=50%, 1H<=50%, 1D<=60%
-                # Expansión Micro/Mid Adaptativa si hay Confluencia A+ (Doble Suelo, Divergencia RSI o FII >= 65):
                 is_a_plus_floor = bool(is_double_bottom or is_bullish_div or fii_sc >= 65)
                 max_1d_cap = 60.0 if is_a_plus_floor else 55.0
                 max_4h_cap = 50.0
@@ -552,41 +549,51 @@ def run_infinite_trading_matrix_cycle():
                 max_1m_cap = 50.0 if is_a_plus_floor else 35.0
 
                 diag_reasons = []
-                if r1m_r > max_1m_cap: diag_reasons.append(f"1M={r1m:.0f}% > {max_1m_cap:.0f}%")
-                if r2m_r > max_2m_cap: diag_reasons.append(f"2M={r2m:.0f}% > {max_2m_cap:.0f}%")
-                if r5m_r > max_5m_cap: diag_reasons.append(f"5M={r5m:.0f}% > {max_5m_cap:.0f}%")
-                if r10m_r > max_10m_cap: diag_reasons.append(f"10M={r10m:.0f}% > {max_10m_cap:.0f}%")
-                if r15m_r > max_15m_cap: diag_reasons.append(f"15M={r15m:.0f}% > {max_15m_cap:.0f}%")
-                if r30m_r > max_30m_cap: diag_reasons.append(f"30M={r30m:.0f}% > {max_30m_cap:.0f}%")
-                if r1h_r > max_1h_cap: diag_reasons.append(f"1H={r1h:.0f}% > {max_1h_cap:.0f}%")
-                if r2h_r > max_2h_cap: diag_reasons.append(f"2H={r2h:.0f}% > {max_2h_cap:.0f}%")
-                if r4h_r > max_4h_cap: diag_reasons.append(f"4H={r4h:.0f}% > {max_4h_cap:.0f}%")
-                if r1d_r > max_1d_cap: diag_reasons.append(f"1D={r1d:.0f}% > {max_1d_cap:.0f}%")
+                if r1m_r > max_1m_cap: diag_reasons.append(f"1M={r1m:.0f}%>{max_1m_cap:.0f}%")
+                if r2m_r > max_2m_cap: diag_reasons.append(f"2M={r2m:.0f}%>{max_2m_cap:.0f}%")
+                if r5m_r > max_5m_cap: diag_reasons.append(f"5M={r5m:.0f}%>{max_5m_cap:.0f}%")
+                if r10m_r > max_10m_cap: diag_reasons.append(f"10M={r10m:.0f}%>{max_10m_cap:.0f}%")
+                if r15m_r > max_15m_cap: diag_reasons.append(f"15M={r15m:.0f}%>{max_15m_cap:.0f}%")
+                if r30m_r > max_30m_cap: diag_reasons.append(f"30M={r30m:.0f}%>{max_30m_cap:.0f}%")
+                if r1h_r > max_1h_cap: diag_reasons.append(f"1H={r1h:.0f}%>{max_1h_cap:.0f}%")
+                if r2h_r > max_2h_cap: diag_reasons.append(f"2H={r2h:.0f}%>{max_2h_cap:.0f}%")
+                if r4h_r > max_4h_cap: diag_reasons.append(f"4H={r4h:.0f}%>{max_4h_cap:.0f}%")
+                if r1d_r > max_1d_cap: diag_reasons.append(f"1D={r1d:.0f}%>{max_1d_cap:.0f}%")
 
-                # ⚡ OBV HÍBRIDO: Permite absorción en suelo si Micro-OBV está acumulando y hay Doble Suelo / Divergencia
                 is_hybrid_obv_valid = cmtf.get("is_hybrid_obv_valid", False)
-                if obv_t == "DISTRIBUTING" and not is_hybrid_obv_valid: diag_reasons.append("OBV=DISTRIBUCIÓN")
-                if fii_sc < 50: diag_reasons.append(f"FII={fii_sc} bajo < 50")
-                elif rsi_15m >= 45.0 and fii_sc < 65: diag_reasons.append(f"FII={fii_sc} < 65 con RSI={rsi_15m:.0f}")
-                if vol_1m < 0.20: diag_reasons.append(f"Vol1M={vol_1m:.2f}x < 0.20x")
-                if not has_turnaround: diag_reasons.append("Sin giro verde 1M/2M")
-                if c_score < 75: diag_reasons.append(f"Score={c_score} < 75")
-                if is_knife: diag_reasons.append("⛔ Cuchillo Cayendo")
-                if is_dead_cat: diag_reasons.append("🪤 Rebote Gato Muerto")
+                if obv_t == "DISTRIBUTING" and not is_hybrid_obv_valid: diag_reasons.append("OBV=DIST")
+                if fii_sc < 50: diag_reasons.append(f"FII={fii_sc}<50")
+                elif rsi_15m >= 45.0 and fii_sc < 65: diag_reasons.append(f"FII={fii_sc}<65(RSI={rsi_15m:.0f})")
+                if vol_1m < 0.20: diag_reasons.append(f"Vol1M={vol_1m:.2f}x<0.20x")
+                if not has_turnaround: diag_reasons.append("SinGiroVerde")
+                if c_score < 75: diag_reasons.append(f"Score={c_score}<75")
+                if is_knife: diag_reasons.append("Cuchillo")
+                if is_dead_cat: diag_reasons.append("GatoMuerto")
                 
                 is_truly_valid = len(diag_reasons) == 0 and not is_knife and not is_dead_cat
-                status_icon = "🟢 BASE A+ VÁLIDA" if is_truly_valid else "🔴 DESCARTADO"
-
-                diag_str = " | ".join(diag_reasons) if diag_reasons else "Cumple Base 8D + Macro 1D"
+                dbl_lbl = cmtf.get("double_bottom_label", "🟢 Giro en V")
+                canales_str = f"[1M:{r1m:>2.0f}% 5M:{r5m:>2.0f}% 15M:{r15m:>2.0f}% 1H:{r1h:>2.0f}% 4H:{r4h:>2.0f}% 1D:{r1d:>2.0f}%]"
                 
                 if is_truly_valid:
                     valid_base_candidates.append(cand)
-                
-                dbl_lbl = cmtf.get("double_bottom_label", "🟢 Giro en V")
-                canales_str = f"[1M:{r1m:>2.0f}% 5M:{r5m:>2.0f}% 15M:{r15m:>2.0f}% 1H:{r1h:>2.0f}% 2H:{r2h:>2.0f}% 4H:{r4h:>2.0f}% 1D:{r1d:>2.0f}%]"
-                print(f"  #{idx:02d} {csym:<10} | Score: {c_score:>2}/100 | FII: {fii_sc:>2} | OBV: {obv_t:<12} | {dbl_lbl} | Canales: {canales_str} -> {status_icon} ({diag_str})")
+                    print(f"  🟢 [CANDIDATO A+ #{idx:02d}] {csym:<10} | Score: {c_score:>2} | FII: {fii_sc:>2} | {dbl_lbl} | Canales: {canales_str} -> VÁLIDO")
+                else:
+                    proximity_candidates.append({
+                        "sym": csym,
+                        "rank": idx,
+                        "reasons_count": len(diag_reasons),
+                        "score": c_score,
+                        "fii": fii_sc,
+                        "diag": ", ".join(diag_reasons[:2]),
+                        "canales": canales_str
+                    })
 
-            print("═══════════════════════════════════════════════════════════════════════════════════════════════════════════\n")
+            # 📊 RESUMEN EJECUTIVO COMPACTO (Cero saturación de logs en GitHub Actions)
+            if not valid_base_candidates:
+                proximity_sorted = sorted(proximity_candidates, key=lambda x: (x["reasons_count"], -x["score"], -x["fii"]))
+                top_prox = proximity_sorted[:3]
+                prox_str = " | ".join([f"#{p['rank']} {p['sym']} ({p['diag']})" for p in top_prox])
+                print(f"📊 [RADAR 67 PARES] 0 Válidos en Suelo Fractal | {len(top_all_candidates)} en Espera | Top 3 Proximidad: [{prox_str}]", flush=True)
 
 
             # 🎯 REGLA SUPREMA: Consultar a Gemini AI EXCLUSIVAMENTE para los mejores 2 a 3 finalistas élite
