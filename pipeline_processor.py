@@ -483,6 +483,30 @@ def run_infinite_trading_matrix_cycle():
                     return
             except Exception as e_btc_guard:
                 print(f"⚠️ BTC Guard check error (non-blocking): {e_btc_guard}")
+
+            # 🚫 BLOQUEO MACRO BTC 1H 3.0: Si BTC está en tendencia bajista clara en 1H, suspender TODOS los trades.
+            # Una altcoin casi nunca puede subir +1.50% si Bitcoin está cayendo en 1H.
+            try:
+                from multi_timeframe_analyzer import calculate_rsi as _calc_rsi
+                import api_connector as _ac_btc
+                btc_1h = _ac_btc.get_klines("BTCUSDT", "1h", 25)
+                if btc_1h and len(btc_1h) >= 22:
+                    _btc_closes_1h = [float(k[4]) for k in btc_1h]
+                    _btc_rsi_1h = _calc_rsi(_btc_closes_1h)
+                    _btc_ema21_1h = sum(_btc_closes_1h[-21:]) / 21
+                    _btc_price_now = _btc_closes_1h[-1]
+                    _btc_below_ema21 = _btc_price_now < _btc_ema21_1h
+                    _btc_rsi_bearish = _btc_rsi_1h < 42.0
+                    if _btc_rsi_bearish and _btc_below_ema21:
+                        print(f"🔴 [VETO BTC MACRO 1H] BTC en tendencia bajista confirmada (RSI1H={_btc_rsi_1h:.1f}<42 | Precio ${_btc_price_now:,.0f} < EMA21=${_btc_ema21_1h:,.0f}). CERO operaciones hasta recuperación.")
+                        import api_connector
+                        api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
+                        return
+                    else:
+                        _above_str = "POR ENCIMA" if not _btc_below_ema21 else "BAJO"
+                        print(f"✅ [BTC MACRO 1H] BTC en zona segura (RSI1H={_btc_rsi_1h:.1f} | Precio vs EMA21: {_above_str}). Altcoins habilitadas.")
+            except Exception as e_btc_1h:
+                print(f"⚠️ BTC 1H macro check error (non-blocking): {e_btc_1h}")
             
             # 🔬 EVALUACIÓN MULTI-TEMPORAL ADAPTATIVA DE LOS 67 PARES DEL TOP 100 CMC:
             valid_base_candidates = []
@@ -573,8 +597,11 @@ def run_infinite_trading_matrix_cycle():
                 is_unconfirmed_first_bounce = not (is_second_touch or is_liquidity_sweep or is_double_bottom)
                 if is_unconfirmed_first_bounce and rsi_15m >= 48.0 and vol_1m < 0.35:
                     diag_reasons.append("EsperandoSuelo2(RSI15M>=48)")
-                    
-                if c_score < 75: diag_reasons.append(f"Score={c_score}<75")
+
+                # 🎯 SCORE MÍNIMO FRANCOTIRADOR 3.0: +85 puntos obligatorio
+                # Permite bajar a 80 solo si hay Suelo 2 confirmado + Divergencia RSI (máxima calidad de setup)
+                min_score_required = 80 if (is_second_touch or is_liquidity_sweep or is_bullish_div) else 85
+                if c_score < min_score_required: diag_reasons.append(f"Score={c_score}<{min_score_required}")
                 if is_knife: diag_reasons.append("Cuchillo")
                 if is_dead_cat: diag_reasons.append("GatoMuerto")
                 

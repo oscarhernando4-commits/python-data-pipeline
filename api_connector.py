@@ -1121,21 +1121,21 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             atr_pct=atr_pct
         )
     except Exception as e:
-        # Fallback to 3-Phase Pure Architecture (F1: SL -4% Ilimitado, F2: +1.00% Fijo, F3: >=1.60% Dinámico)
-        if highest_pnl_pct >= 1.60:
+        # Fallback: Fase 2 en +1.50%, Fase 3 en >= +2.20%
+        if highest_pnl_pct >= 2.20:
             retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
             retention_ratio = retention_pct / 100.0
-            sl_pct = max(1.00, round(highest_pnl_pct * retention_ratio, 4))
+            sl_pct = max(1.50, round(highest_pnl_pct * retention_ratio, 4))
             phase = 3
             phase_label = f"🚀 FASE 3 RALLY DINÁMICO (Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 1.00:
-            sl_pct = 1.00
+        elif highest_pnl_pct >= 1.50:
+            sl_pct = 1.50
             phase = 2
-            phase_label = f"🎯 FASE 2 META CUMPLIDA (+1.00% FIJO | Cima +{highest_pnl_pct:.2f}% -> Piso Fijo +1.00%)"
+            phase_label = f"🎯 FASE 2 META CUMPLIDA (+1.50% FIJO | Cima +{highest_pnl_pct:.2f}% -> Piso Fijo +1.50%)"
         else:
             sl_pct = -4.00
             phase = 1
-            phase_label = f"🌱 FASE 1 RUMBO A META (Cima +{highest_pnl_pct:.2f}% | SL -4.00% | Tiempo Ilimitado)"
+            phase_label = f"🌱 FASE 1 RUMBO A META (Cima +{highest_pnl_pct:.2f}% | SL -4.00%)"
                 
         return sl_pct, phase, phase_label
 
