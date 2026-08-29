@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 10172,
+    "total_trades": 10173,
     "wins": 4662,
-    "losses": 5510,
+    "losses": 5511,
     "win_rate_pct": 45.83,
-    "total_pnl_usd": 11762.135316549393
+    "total_pnl_usd": 11762.079916549394
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK SHORT when RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on ZROUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SHIBUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on CRVUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on XRPUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEXOUSDT)",
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEXOUSDT)",
-      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ONDOUSDT)"
+      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ONDOUSDT)",
+      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on STRKUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BCHUSDT)",
@@ -53,30 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 03:02:30",
-      "account_id": "SIM-644",
-      "group_name": "⚡ GRUPO 4: Micro-Scalping Pullback",
-      "symbol": "TRUMPUSDT",
-      "side": "SHORT",
-      "entry_price": 2.538,
-      "exit_price": 2.537,
-      "pnl_usd": -0.02,
-      "result": "LOSS",
-      "notes": "LOSS on TRUMPUSDT (PnL: +0.04%, Net: $-0.02 Fase 4)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 39.61,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 03:02:30",
       "account_id": "SIM-711",
@@ -11943,6 +11919,28 @@
         "vol_surge": 0.35,
         "vol_surge_1m": 0.49,
         "fii_score": 60,
+        "obv_trend": "DISTRIBUTING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-29 09:57:12",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "STRKUSDT",
+      "side": "LONG",
+      "entry_price": 0.02443,
+      "exit_price": 0.02432,
+      "pnl_usd": -0.0554,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via ⏱️ CIERRE POR AGOTAMIENTO DE TIEMPO (180m >= 180m límite ADN). Momentum decay confirmado. Liberando capital. (Fase 1, PnL: -0.45%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 36.6,
+        "atr_pct_15m": 0.415,
+        "vol_surge": 4.07,
+        "vol_surge_1m": 8.14,
+        "fii_score": 95,
         "obv_trend": "DISTRIBUTING",
         "macro_trend_4h": "NEUTRAL"
       }
