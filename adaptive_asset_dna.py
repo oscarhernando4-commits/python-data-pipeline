@@ -68,15 +68,15 @@ ARCHETYPE_CONFIGS = {
         "max_stagnation_minutes": 120,
         "stagnation_decay_minutes": 75,
         "decay_sl_pct": -1.80,
-        "phase_2_trigger_pct": 1.50,  # ⬆️ Subido de 1.00% a 1.50% (neto positivo tras comisiones)
+        "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
-        "phase_3_trigger_pct": 2.20,  # ⬆️ Subido de 1.60% a 2.20%
+        "phase_3_trigger_pct": 1.60,
         "phase_3_retention_ratio": 0.72,
         "required_vol_surge_1m": 1.5,
         "required_min_bids_pct": 52.0,
         "trend_ride_enabled": True,
         "wick_slack": 0.30,
-        "guideline_for_ai": "Trata este activo como un SPRINT. Exige volumen explosivo en 1M/10s. Meta mínima +1.50%."
+        "guideline_for_ai": "Trata este activo como un SPRINT. Exige volumen explosivo en 1M/10s. Meta mínima +1.00%."
     },
     "BLUE_CHIP_CORE": {
         "archetype": "BLUE_CHIP_CORE",
@@ -86,15 +86,15 @@ ARCHETYPE_CONFIGS = {
         "max_stagnation_minutes": 240,
         "stagnation_decay_minutes": 180,
         "decay_sl_pct": -2.50,
-        "phase_2_trigger_pct": 1.50,  # ⬆️ Subido de 1.00% a 1.50%
+        "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
-        "phase_3_trigger_pct": 2.20,  # ⬆️ Subido de 1.60% a 2.20%
+        "phase_3_trigger_pct": 1.60,
         "phase_3_retention_ratio": 0.72,
         "required_vol_surge_1m": 0.8,
         "required_min_bids_pct": 48.0,
         "trend_ride_enabled": True,
         "wick_slack": 0.32,
-        "guideline_for_ai": "Trata este activo como CORE. Exige confluencia. Meta mínima +1.50%."
+        "guideline_for_ai": "Trata este activo como CORE. Exige confluencia. Meta mínima +1.00%."
     },
     "SECTOR_ROTATION": {
         "archetype": "SECTOR_ROTATION",
@@ -104,15 +104,15 @@ ARCHETYPE_CONFIGS = {
         "max_stagnation_minutes": 180,
         "stagnation_decay_minutes": 120,
         "decay_sl_pct": -2.00,
-        "phase_2_trigger_pct": 1.50,  # ⬆️ Subido de 1.00% a 1.50%
+        "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
-        "phase_3_trigger_pct": 2.20,  # ⬆️ Subido de 1.60% a 2.20%
+        "phase_3_trigger_pct": 1.60,
         "phase_3_retention_ratio": 0.72,
         "required_vol_surge_1m": 1.0,
         "required_min_bids_pct": 50.0,
         "trend_ride_enabled": True,
         "wick_slack": 0.32,
-        "guideline_for_ai": "Trata este activo como ROTACIÓN SECTORIAL. Exige sector caliente y volumen. Meta mínima +1.50%."
+        "guideline_for_ai": "Trata este activo como ROTACIÓN SECTORIAL. Exige sector caliente y volumen. Meta mínima +1.00%."
     },
     "THIN_BOOK_MICRO": {
         "archetype": "THIN_BOOK_MICRO",
@@ -122,15 +122,15 @@ ARCHETYPE_CONFIGS = {
         "max_stagnation_minutes": 120,
         "stagnation_decay_minutes": 75,
         "decay_sl_pct": -1.80,
-        "phase_2_trigger_pct": 1.50,  # ⬆️ Subido de 1.00% a 1.50%
+        "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
-        "phase_3_trigger_pct": 2.20,  # ⬆️ Subido de 1.60% a 2.20%
+        "phase_3_trigger_pct": 1.60,
         "phase_3_retention_ratio": 0.72,
         "required_vol_surge_1m": 1.3,
         "required_min_bids_pct": 54.0,
         "trend_ride_enabled": True,
         "wick_slack": 0.28,
-        "guideline_for_ai": "Trata este activo como LIBRO DELGADO. Exige volumen real. Meta mínima +1.50%."
+        "guideline_for_ai": "Trata este activo como LIBRO DELGADO. Exige volumen real. Meta mínima +1.00%."
     }
 }
 
