@@ -1898,26 +1898,39 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                       f"PAUSA TOTAL — prefiero no operar antes que seguir perdiendo. USDT protegido.")
                 return
 
-            # Bloqueo 2: 2 losses consecutivos → esperar antes de la próxima entrada
-            _history = mem_state.get("history", []) if "mem_state" in dir() else []
-            # Fallback: leer trade_memory directamente
+            # Bloqueo 2: 2 losses consecutivos → pausa de 30 minutos (no infinita)
+            # ANTES: esperaba un WIN (deadlock — nunca entra si no opera)
+            # AHORA: pausa 30 minutos desde el último loss, luego re-evalúa
+            _history_real = []
             try:
                 import json as _json
                 with open("trade_memory.json", "r", encoding="utf-8") as _tmf:
                     _tm = _json.load(_tmf)
-                _history = _tm.get("history", [])
+                # Solo trades REALES (no simulaciones) para esta evaluación
+                _history_real = [h for h in _tm.get("history", []) if h.get("source") != "SIMULATION"]
             except Exception:
-                _history = []
+                _history_real = []
 
-            if len(_history) >= 2:
-                _last2 = _history[-2:]
+            if len(_history_real) >= 2:
+                _last2 = _history_real[-2:]
                 _all_loss = all(t.get("result") == "LOSS" for t in _last2)
                 if _all_loss:
                     _l1_sym = _last2[-1].get("symbol", "?")
                     _l2_sym = _last2[-2].get("symbol", "?")
-                    print(f"🟠 [PAUSA INTELIGENTE] 2 LOSSES consecutivos ({_l2_sym}, {_l1_sym}). "
-                          f"Esperando condiciones superiores antes de la próxima entrada. USDT protegido.")
-                    return
+                    # ⏱️ Calcular cuánto tiempo pasó desde el último loss
+                    _last_loss_ms = _last2[-1].get("timestamp_ms", 0)
+                    _mins_since_loss = (time.time() * 1000 - _last_loss_ms) / 60000 if _last_loss_ms else 999
+                    _pause_minutes = 30  # Pausa máxima de 30 minutos
+
+                    if _mins_since_loss < _pause_minutes:
+                        _remaining = round(_pause_minutes - _mins_since_loss, 1)
+                        print(f"🟠 [PAUSA INTELIGENTE] 2 LOSSES consecutivos ({_l2_sym}, {_l1_sym}). "
+                              f"Pausa de {_pause_minutes}min. Quedan {_remaining} min. USDT protegido.")
+                        return
+                    else:
+                        print(f"✅ [PAUSA INTELIGENTE] Pausa de {_pause_minutes}min completada tras {_l1_sym}/{_l2_sym}. "
+                              f"Re-evaluando mercado con nuevas condiciones...")
+
         except Exception as _cb_err:
             pass  # Circuit breaker no-blocking — si falla, continúa operando normalmente
 
