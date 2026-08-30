@@ -6,8 +6,8 @@
   "wins": 45,
   "losses": 30,
   "trades_count": 75,
-  "daily_wins": 22,
-  "daily_losses": 19,
+  "daily_wins": 0,
+  "daily_losses": 0,
   "position": {
     "symbol": "WLFIUSDT",
     "entry_price": 0.0579,
@@ -53,5 +53,6 @@
   "_daily_pnl_date": "2026-08-30",
   "_daily_pnl_usd": 0.0,
   "_breadth_warning": false,
-  "_last_exit_was_btc_shield": true
+  "_last_exit_was_btc_shield": true,
+  "last_daily_reset_date": "2026-08-30"
 }

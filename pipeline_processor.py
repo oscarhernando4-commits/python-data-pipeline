@@ -253,23 +253,22 @@ def run_infinite_trading_matrix_cycle():
             except Exception:
                 _t.sleep(1.0)
         # 🧬 SIMULACIONES PARALELAS — corren incluso mientras hay posición real abierta
-        # El motor de simulación usa el analysis_map del ciclo anterior (si está en caché)
-        # para no duplicar llamadas a la API. No-blocking.
         try:
             import simulation_engine as _sim_eng
-            # Re-inicializar matriz con 5 grupos genéticos si la estructura es antigua
             _matrix_check = _sim_eng.load_matrix()
             _accounts_check = _matrix_check.get("accounts", [])
-            if _accounts_check and "group_id" not in _accounts_check[0]:
+            # Solo re-inicializar si NO tiene estructura genética Y no tiene trades acumulados
+            _needs_reinit = (_accounts_check and "group_id" not in _accounts_check[0]
+                             and sum(a.get("trades_count", 0) for a in _accounts_check) == 0)
+            if _needs_reinit:
                 print("🧬 [SIM ENGINE] Re-inicializando matriz con 5 grupos genéticos evolutivos...")
                 _sim_eng._init_fresh_matrix()
-            # Durante modo guardián, usamos el último symbol_analysis_map cacheado (si existe)
-            # Pasamos vacío — el engine actualizará posiciones abiertas con precios de API directa
             _sim_result = _sim_eng.run_simulation_cycle({})
             if _sim_result and _sim_result.get("total_trades", 0) > 0:
                 _sim_eng.print_simulation_report()
         except Exception as _sim_err:
             pass  # Non-blocking
+
 
         return
 
@@ -1142,7 +1141,10 @@ def run_infinite_trading_matrix_cycle():
         import simulation_engine as _sim_eng
         _matrix_check = _sim_eng.load_matrix()
         _accounts_check = _matrix_check.get("accounts", [])
-        if _accounts_check and "group_id" not in _accounts_check[0]:
+        # Solo re-inicializar si NO tiene estructura genética Y trades acumulados = 0
+        _needs_reinit = (_accounts_check and "group_id" not in _accounts_check[0]
+                         and sum(a.get("trades_count", 0) for a in _accounts_check) == 0)
+        if _needs_reinit:
             print("🧬 [SIM ENGINE] Re-inicializando matriz con 5 grupos genéticos evolutivos...")
             _sim_eng._init_fresh_matrix()
         _sim_result = _sim_eng.run_simulation_cycle(symbol_analysis_map)
@@ -1150,9 +1152,7 @@ def run_infinite_trading_matrix_cycle():
             total_sim_trades = _sim_result.get("total_trades", 0)
             if total_sim_trades > 0:
                 print(f"🧬 [SIM ENGINE] {total_sim_trades} trades acumulados | WR Global: {_sim_result.get('global_win_rate', 0):.1f}% | PnL Simulado: ${_sim_result.get('global_pnl_usd', 0):+.2f}")
-                # Cada 50 ciclos imprimir reporte completo por grupo
                 _sim_eng.print_simulation_report()
-            # Si hay un grupo genético claro ganador, informar al operador
             _best = _sim_eng.get_best_group_params()
             if _best:
                 print(f"🏆 [GRUPO LÍDER] {_best.get('name', '?')[:50]} → WR mayor detectado. Parámetros óptimos identificados.")

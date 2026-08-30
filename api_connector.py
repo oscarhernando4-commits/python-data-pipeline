@@ -421,6 +421,21 @@ def load_real_account_state():
                 state.setdefault("position", None)
                 state.setdefault("last_trade_time", datetime.now().strftime("%y-%m-%d<br>%H:%M"))
                 state.setdefault("status", "🟦 Buscando Entrada A+")
+
+                # ✅ RESET DIARIO AUTOMÁTICO A MEDIANOCHE UTC
+                # Si la fecha UTC actual es distinta al último reset → contadores a 0
+                from datetime import timezone as _tz
+                _today_utc = datetime.now(_tz.utc).strftime("%Y-%m-%d")
+                _last_reset = state.get("last_daily_reset_date", "")
+                if _last_reset != _today_utc:
+                    _prev_w = state.get("daily_wins", 0)
+                    _prev_l = state.get("daily_losses", 0)
+                    state["daily_wins"] = 0
+                    state["daily_losses"] = 0
+                    state["last_daily_reset_date"] = _today_utc
+                    if _prev_w > 0 or _prev_l > 0:
+                        print(f"🔄 [RESET DIARIO] Nuevo día UTC ({_today_utc}). Contadores reiniciados: {_prev_w}W/{_prev_l}L → 0W/0L. Circuit Breaker listo para hoy.")
+
                 return state
         except Exception:
             pass
