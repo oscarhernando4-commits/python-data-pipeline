@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 10181,
+    "total_trades": 10182,
     "wins": 4668,
-    "losses": 5513,
+    "losses": 5514,
     "win_rate_pct": 45.85,
-    "total_pnl_usd": 11762.631716549397
+    "total_pnl_usd": 11762.544016549396
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on CRVUSDT)",
       "BLOCK BUY when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZECUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ATOMUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ONDOUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on STRKUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on WLFIUSDT)",
-      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SHIBUSDT)"
+      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SHIBUSDT)",
+      "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on WLFIUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SUIUSDT)",
@@ -53,30 +53,6 @@
     ]
   },
   "history": [
-    {
-      "timestamp": "2026-08-24 03:06:31",
-      "account_id": "SIM-260",
-      "group_name": "🔷 GRUPO 2: Elasticidad High-Beta",
-      "symbol": "SOLUSDT",
-      "side": "LONG",
-      "entry_price": 94.15,
-      "exit_price": 94.2,
-      "pnl_usd": -0.02,
-      "result": "LOSS",
-      "notes": "LOSS on SOLUSDT (PnL: +0.05%, Net: $-0.02 Fase 2)",
-      "context": {
-        "score": 0,
-        "rsi_15m": 42.46,
-        "macro_trend_4h": "NEUTRAL",
-        "fii_score": null,
-        "atr_pct_15m": null,
-        "obv_trend": null,
-        "vol_surge_1m": null,
-        "adx_15m": null,
-        "cci_15m": null,
-        "range_position_1m": null
-      }
-    },
     {
       "timestamp": "2026-08-24 03:06:31",
       "account_id": "SIM-261",
@@ -11924,6 +11900,28 @@
         "atr_pct_15m": 0.809,
         "vol_surge": 1.08,
         "vol_surge_1m": 2.07,
+        "fii_score": 95,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-08-30 21:01:39",
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "symbol": "WLFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.0579,
+      "exit_price": 0.0575,
+      "pnl_usd": -0.0877,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🚨 ESCUDO BITCOIN 3.0: BTC cayó -0.83% y contagió a WLFIUSDT (PnL=-0.69%, Bids=48%). Eyectando para proteger capital. (Fase 1, PnL: -0.69%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 45.5,
+        "atr_pct_15m": 0.47,
+        "vol_surge": 1.11,
+        "vol_surge_1m": 1.52,
         "fii_score": 95,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
