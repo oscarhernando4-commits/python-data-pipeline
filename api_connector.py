@@ -1931,8 +1931,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                         if _ts_str:
                             try:
                                 from datetime import datetime as _dtp
+                                import calendar as _cal
                                 _dt_obj = _dtp.strptime(_ts_str, "%Y-%m-%d %H:%M:%S")
-                                _last_loss_ms = int(_dt_obj.timestamp() * 1000)
+                                # FIX: timestamp guardado en UTC — usar calendar.timegm para evitar offset de zona horaria local
+                                _last_loss_ms = int(_cal.timegm(_dt_obj.timetuple()) * 1000)
                             except Exception:
                                 _last_loss_ms = 0
                     _mins_since_loss = (time.time() * 1000 - _last_loss_ms) / 60000 if _last_loss_ms else 999
