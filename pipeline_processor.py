@@ -511,7 +511,10 @@ def run_infinite_trading_matrix_cycle():
                 if btc_1h and len(btc_1h) >= 22:
                     _btc_closes_1h = [float(k[4]) for k in btc_1h]
                     _btc_rsi_1h = _calc_rsi(_btc_closes_1h)
-                    _btc_ema21_1h = sum(_btc_closes_1h[-21:]) / 21
+                    _btc_ema21_1h = sum(_btc_closes_1h[-21:]) / 21  # SMA21 seed
+                    _ema_k = 2 / (21 + 1)  # BUG 7 FIX: calcular EMA21 real con suavizado exponencial
+                    for _ep in _btc_closes_1h[-20:]:
+                        _btc_ema21_1h = _ep * _ema_k + _btc_ema21_1h * (1 - _ema_k)
                     _btc_price_now = _btc_closes_1h[-1]
                     _btc_below_ema21 = _btc_price_now < _btc_ema21_1h
                     _btc_rsi_bearish = _btc_rsi_1h < 42.0

@@ -626,9 +626,17 @@ def sync_learning_note(data):
     boosted = "\n".join([f"- ⚡ {r}" for r in data["learned_rules"]["boosted_patterns"]])
     
     history_rows = ""
-    for t in reversed(data["history"][-10:]):
-        res_emoji = "🟢 WIN" if t['result'] == 'WIN' else "🔴 LOSS"
-        history_rows += f"| {t['timestamp']} | {t['symbol']} | {t['side']} | `${t['entry_price']}` | `${t['exit_price']}` | `${t['pnl_usd']:+.2f}` | {res_emoji} |\n"
+    # BUGS 10+15 FIX: Solo mostrar trades REALES en dashboard; usar .get() con defaults seguros
+    _real_history = [t for t in data.get("history", []) if t.get("source") != "SIMULATION"]
+    for t in reversed(_real_history[-10:]):
+        res_emoji = "🟢 WIN" if t.get("result", "") == "WIN" else "🔴 LOSS"
+        _ts   = t.get("timestamp", t.get("timestamp_ms", "—"))  # fallback a timestamp_ms si no hay string
+        _sym  = t.get("symbol", "?")
+        _side = t.get("side", "LONG")
+        _ep   = t.get("entry_price", 0)
+        _xp   = t.get("exit_price", 0)
+        _pnl  = t.get("pnl_usd", 0)
+        history_rows += f"| {_ts} | {_sym} | {_side} | `${_ep}` | `${_xp}` | `${_pnl:+.2f}` | {res_emoji} |\n"
     if not history_rows:
         history_rows = "| - | - | - | - | - | - | Esperando primeras operaciones |"
 

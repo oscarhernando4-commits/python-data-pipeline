@@ -194,10 +194,19 @@ def run_simulation_cycle(symbol_analysis_map: dict):
             open_time_s = float(pos.get("open_time_epoch", time.time()))
             hold_min = (time.time() - open_time_s) / 60.0
 
-            # Pegar precio actual desde analysis_map
+            # BUG 12 FIX: si el símbolo desaparece del map, usar entry como precio
+            # pero NO hacer continue — permitir evaluación de tiempo máximo para evitar posiciones zombi
             sym_data = symbol_analysis_map.get(sym, {})
-            current_price = sym_data.get("price", entry)
+            current_price = sym_data.get("price", 0)
             if not current_price or current_price <= 0:
+                # Símbolo ausente del map: evaluar solo cierre por tiempo
+                if hold_min >= grp_max_hold:
+                    # Cerrar posición zombi por tiempo agotado con precio de entrada (pnl=0)
+                    acct["trades_count"] = acct.get("trades_count", 0) + 1
+                    acct["losses"] = acct.get("losses", 0) + 1
+                    acct["consecutive_losses"] = acct.get("consecutive_losses", 0) + 1
+                    acct["position"] = None
+                    acct["status"] = "BUSCANDO"
                 continue
 
             pnl_pct = ((current_price - entry) / entry) * 100.0
@@ -404,19 +413,28 @@ def _feed_learning_engine(new_entries: list):
         history = mem.get("history", [])
 
         for entry in new_entries:
-            # Formato compatible con lo que usa learning_engine.py
+            # BUG 10 FIX: incluir TODOS los campos que learning_engine.py espera (timestamp, side, entry_price, exit_price)
+            from datetime import datetime as _dt10
+            _ts_str = _dt10.utcfromtimestamp(entry["timestamp_ms"] / 1000).strftime("%Y-%m-%d %H:%M:%S")
             history.append({
+                "timestamp": _ts_str,               # requerido por sync_learning_note
+                "timestamp_ms": entry["timestamp_ms"],
+                "account_id": f"SIM-G{entry['group_id']}",
+                "group_name": entry["group_name"],
                 "symbol": entry["symbol"],
+                "side": "LONG",                      # requerido por sync_learning_note
+                "entry_price": entry["entry_price"],  # requerido por sync_learning_note
+                "exit_price": entry["exit_price"],    # requerido por sync_learning_note
                 "result": entry["result"],
                 "pnl_pct": entry["pnl_pct"],
                 "pnl_usd": entry["pnl_usd"],
                 "exit_reason": entry["exit_reason"],
-                "group_name": entry["group_name"],
-                "source": "SIMULATION",
-                "timestamp_ms": entry["timestamp_ms"],
+                "source": "SIMULATION",              # marcado para exclusión en dashboards y CB
                 "min_score": entry["min_score_used"],
                 "min_fii": entry["min_fii_used"],
                 "hold_min": entry["hold_min"],
+                "notes": entry["exit_reason"],
+                "context": {}
             })
 
         # Mantener máximo 2000 entradas (500 reales + 1500 simuladas)

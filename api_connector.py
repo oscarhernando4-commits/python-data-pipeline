@@ -435,6 +435,11 @@ def load_real_account_state():
                     state["last_daily_reset_date"] = _today_utc
                     if _prev_w > 0 or _prev_l > 0:
                         print(f"🔄 [RESET DIARIO] Nuevo día UTC ({_today_utc}). Contadores reiniciados: {_prev_w}W/{_prev_l}L → 0W/0L. Circuit Breaker listo para hoy.")
+                    # BUG 1 FIX: persistir inmediatamente al disco para que el reset no se pierda
+                    try:
+                        save_real_account_state(state)
+                    except Exception:
+                        pass
 
                 return state
         except Exception:
@@ -1903,8 +1908,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             # AHORA: pausa 30 minutos desde el último loss, luego re-evalúa
             _history_real = []
             try:
-                import json as _json
-                with open("trade_memory.json", "r", encoding="utf-8") as _tmf:
+                import json as _json, os as _os
+                _tm_path = _os.path.join(_os.path.dirname(__file__), "trade_memory.json")  # BUG 5 FIX: absolute path
+                with open(_tm_path, "r", encoding="utf-8") as _tmf:
                     _tm = _json.load(_tmf)
                 # Solo trades REALES (no simulaciones) para esta evaluación
                 _history_real = [h for h in _tm.get("history", []) if h.get("source") != "SIMULATION"]
@@ -2312,7 +2318,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             
             # Veto CCI Overbought: Si el CCI está por encima de +150, el activo ya subió demasiado
             if is_cci_overbought and not (vol_1m_now >= 2.5):
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] CCI Sobrecomprado ({cci_val:.0f} >= 150). Entrada prohibida en cima.")
+                _cci_display = f"{cci_val:.0f}" if cci_val is not None else "N/A"  # BUG 2 FIX: guard None
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] CCI Sobrecomprado ({_cci_display} >= 150). Entrada prohibida en cima.")
                 continue
             
             # 🧬 BLACKLIST DINÁMICA TIERED + WHITELIST ÉLITE (Aprendizaje de Simulaciones + Cuenta Real):
