@@ -1917,8 +1917,18 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 if _all_loss:
                     _l1_sym = _last2[-1].get("symbol", "?")
                     _l2_sym = _last2[-2].get("symbol", "?")
-                    # ⏱️ Calcular cuánto tiempo pasó desde el último loss
+                    # ⏱️ Calcular tiempo desde el último loss — con fallback a timestamp string
                     _last_loss_ms = _last2[-1].get("timestamp_ms", 0)
+                    if not _last_loss_ms:
+                        # Fallback: parsear timestamp string si timestamp_ms no existe (trades históricos)
+                        _ts_str = _last2[-1].get("timestamp", "")
+                        if _ts_str:
+                            try:
+                                from datetime import datetime as _dtp
+                                _dt_obj = _dtp.strptime(_ts_str, "%Y-%m-%d %H:%M:%S")
+                                _last_loss_ms = int(_dt_obj.timestamp() * 1000)
+                            except Exception:
+                                _last_loss_ms = 0
                     _mins_since_loss = (time.time() * 1000 - _last_loss_ms) / 60000 if _last_loss_ms else 999
                     _pause_minutes = 30  # Pausa máxima de 30 minutos
 
@@ -1930,6 +1940,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     else:
                         print(f"✅ [PAUSA INTELIGENTE] Pausa de {_pause_minutes}min completada tras {_l1_sym}/{_l2_sym}. "
                               f"Re-evaluando mercado con nuevas condiciones...")
+
 
         except Exception as _cb_err:
             pass  # Circuit breaker no-blocking — si falla, continúa operando normalmente

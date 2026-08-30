@@ -253,8 +253,10 @@ def record_trade_outcome(symbol, side="LONG", entry_price=0.0, exit_price=0.0, p
         except Exception:
             pass
     
+    import time as _time_mod
     trade_entry = {
         "timestamp": now_str,
+        "timestamp_ms": int(_time_mod.time() * 1000),  # ← Requerido por Pausa Inteligente 30min
         "account_id": account_id,
         "group_name": group_name,
         "symbol": symbol.upper(),
