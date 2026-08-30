@@ -2314,9 +2314,12 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 vd_accel = vd.get("delta_acceleration", 0.0)
                 print(f"⚡ [VOLUME DELTA] {cand_sym}: {vd_label}")
 
-                # VETO OBLIGATORIO: Si los vendedores taker dominan (>52% venta o sell_wave), no entrar
-                if vd_sell_wave or vd_buy < 48.0:
-                    print(f"  🛑 [VOLUME DELTA VETO] {cand_sym} descartado: Dominancia vendedora taker activa (Buy={vd_buy:.0f}% < 48%, Delta={vd_delta:+,.0f} USDT). Esperando compradores agresivos.")
+                # VETO INTELIGENTE: Con FII >= 70 (absorción institucional activa),
+                # los institucionales están comprando OTC → toleramos más presión taker vendedora.
+                # Solo vetamos si la presión vendedora es extrema (buy < 38% con FII alto, o buy < 48% sin FII alto).
+                vd_min_buy = 38.0 if fii >= 70 else 48.0
+                if vd_sell_wave or vd_buy < vd_min_buy:
+                    print(f"  🛑 [VOLUME DELTA VETO] {cand_sym} descartado: Dominancia vendedora taker activa (Buy={vd_buy:.0f}% < {vd_min_buy:.0f}%, FII={fii}, Delta={vd_delta:+,.0f} USDT). Esperando compradores agresivos.")
                     continue
 
                 # BOOST: Strong buy delta unlocks entry even at moderate score

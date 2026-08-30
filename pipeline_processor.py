@@ -604,6 +604,21 @@ def run_infinite_trading_matrix_cycle():
                 if c_score < min_score_required: diag_reasons.append(f"Score={c_score}<{min_score_required}")
                 if is_knife: diag_reasons.append("Cuchillo")
                 if is_dead_cat: diag_reasons.append("GatoMuerto")
+
+                # ⚡ VOLUME DELTA PRE-FILTRO 3.0 — Corre AQUI, ANTES del Comité IA.
+                # Evita gastar tokens de Gemini en candidatos que serán vetados por flujo vendedor.
+                # Inteligente: FII >= 70 relaja el umbral (absorción institucional compensa presión taker).
+                try:
+                    import volume_delta_engine as _vde_pre
+                    _vd = _vde_pre.get_volume_delta_signal(csym, window_seconds=30)
+                    _vd_buy = _vd.get("buy_ratio_pct", 50.0)
+                    _vd_sell_wave = _vd.get("sell_wave", False)
+                    # Con FII alto (institucionales comprando), tolerar más presión taker vendedora
+                    _min_buy_ratio = 38.0 if fii_sc >= 70 else 42.0
+                    if _vd_sell_wave or _vd_buy < _min_buy_ratio:
+                        diag_reasons.append(f"VolDelta=VENDEDOR(Buy={_vd_buy:.0f}%<{_min_buy_ratio:.0f}%,FII={fii_sc})")
+                except Exception:
+                    pass  # Sin datos de Volume Delta → no bloquear (no-blocking)
                 
                 is_truly_valid = len(diag_reasons) == 0 and not is_knife and not is_dead_cat
                 dbl_lbl = cmtf.get("double_bottom_label", "🟢 Giro en V")
