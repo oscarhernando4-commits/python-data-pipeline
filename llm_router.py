@@ -552,7 +552,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     P3. DOBLE SUELO + OBV ACUMULANDO + FII >= 70 → Confianza 92%+
     P4. GIRO EN V + VolSurge >= 1.5x + FII >= 70 + Canal 1M <= 20% → Confianza 90%+
 
-    CONFIANZA MÍNIMA PARA EJECUTAR: 88%. Por debajo de 88% → responde HOLD.
+    CONFIANZA MÍNIMA PARA EJECUTAR: 90%. Por debajo de 90% → responde HOLD.
 
     ═══════════════════════════════════════════════════════════
     LOS 7 AGENTES — DELIBERACIÓN CUÁNTICA:

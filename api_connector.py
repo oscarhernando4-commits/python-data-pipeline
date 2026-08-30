@@ -1866,8 +1866,48 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         except Exception:
             pass
 
+        # ══════════════════════════════════════════════════════════════════════
+        # 🔴 CIRCUIT BREAKER DIARIO — PREFIERO NO OPERAR ANTES QUE OPERAR MAL
+        # Si el día ya acumula 3+ pérdidas → pausa total hasta mañana.
+        # Si las últimas 2 operaciones fueron LOSS consecutivos → esperar recuperación.
+        # Un día sin operar vale más que un día con pérdidas acumuladas.
+        # ══════════════════════════════════════════════════════════════════════
+        try:
+            _daily_losses = state.get("daily_losses", 0)
+            _daily_wins   = state.get("daily_wins", 0)
+            _daily_total  = _daily_losses + _daily_wins
+
+            # Bloqueo 1: 3 pérdidas en el día → pausa total
+            if _daily_losses >= 3:
+                print(f"🔴 [CIRCUIT BREAKER DIARIO] {_daily_losses} pérdidas hoy ({_daily_wins}W/{_daily_losses}L). "
+                      f"PAUSA TOTAL — prefiero no operar antes que seguir perdiendo. USDT protegido.")
+                return
+
+            # Bloqueo 2: 2 losses consecutivos → esperar antes de la próxima entrada
+            _history = mem_state.get("history", []) if "mem_state" in dir() else []
+            # Fallback: leer trade_memory directamente
+            try:
+                import json as _json
+                with open("trade_memory.json", "r", encoding="utf-8") as _tmf:
+                    _tm = _json.load(_tmf)
+                _history = _tm.get("history", [])
+            except Exception:
+                _history = []
+
+            if len(_history) >= 2:
+                _last2 = _history[-2:]
+                _all_loss = all(t.get("result") == "LOSS" for t in _last2)
+                if _all_loss:
+                    _l1_sym = _last2[-1].get("symbol", "?")
+                    _l2_sym = _last2[-2].get("symbol", "?")
+                    print(f"🟠 [PAUSA INTELIGENTE] 2 LOSSES consecutivos ({_l2_sym}, {_l1_sym}). "
+                          f"Esperando condiciones superiores antes de la próxima entrada. USDT protegido.")
+                    return
+        except Exception as _cb_err:
+            pass  # Circuit breaker no-blocking — si falla, continúa operando normalmente
 
         total_cands = len(candidate_queue)
+
         print(f"\n🔬 [EJECUCIÓN DE PRECISIÓN A+] Verificando confluencia 8D en {total_cands} finalistas seleccionados...")
         
         executed_trade = False
