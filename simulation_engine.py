@@ -158,9 +158,20 @@ def run_simulation_cycle(symbol_analysis_map: dict):
     matrix = load_matrix()
     accounts = matrix.get("accounts", [])
 
-    # Verificar si necesitamos re-inicializar (estructura antigua sin grupos genéticos)
+    # Verificar si necesitamos re-inicializar (estructura antigua o grupos colapsados)
+    _needs_reinit = False
     if accounts and "group_id" not in accounts[0]:
-        print("🧬 [SIM ENGINE] Detectada matriz antigua. Re-inicializando con 5 grupos genéticos...")
+        _needs_reinit = True
+        print("🧬 [SIM ENGINE] Detectada matriz sin group_id. Re-inicializando con 5 grupos genéticos...")
+    elif accounts:
+        # Detectar colapso: todas las cuentas tienen group_id=0 (solo 1 grupo en vez de 5)
+        from collections import Counter as _Ctr
+        _gids = _Ctr(a.get("group_id") for a in accounts)
+        if len(_gids) < 5:
+            _needs_reinit = True
+            print(f"🧬 [SIM ENGINE] Solo {len(_gids)} grupo(s) detectado(s) (esperado 5). Re-inicializando...")
+
+    if _needs_reinit:
         matrix = _init_fresh_matrix()
         accounts = matrix["accounts"]
 

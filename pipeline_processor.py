@@ -257,9 +257,13 @@ def run_infinite_trading_matrix_cycle():
             import simulation_engine as _sim_eng
             _matrix_check = _sim_eng.load_matrix()
             _accounts_check = _matrix_check.get("accounts", [])
-            # Solo re-inicializar si NO tiene estructura genética Y no tiene trades acumulados
-            _needs_reinit = (_accounts_check and "group_id" not in _accounts_check[0]
-                             and sum(a.get("trades_count", 0) for a in _accounts_check) == 0)
+            # Re-inicializar si: sin group_id O grupos colapsados (menos de 5 grupos distintos)
+            from collections import Counter as _GCtr
+            _gid_dist = _GCtr(a.get("group_id") for a in _accounts_check)
+            _needs_reinit = (
+                (_accounts_check and "group_id" not in _accounts_check[0]) or
+                (len(_gid_dist) < 5)
+            )
             if _needs_reinit:
                 print("🧬 [SIM ENGINE] Re-inicializando matriz con 5 grupos genéticos evolutivos...")
                 _sim_eng._init_fresh_matrix()
@@ -1144,9 +1148,13 @@ def run_infinite_trading_matrix_cycle():
         import simulation_engine as _sim_eng
         _matrix_check = _sim_eng.load_matrix()
         _accounts_check = _matrix_check.get("accounts", [])
-        # Solo re-inicializar si NO tiene estructura genética Y trades acumulados = 0
-        _needs_reinit = (_accounts_check and "group_id" not in _accounts_check[0]
-                         and sum(a.get("trades_count", 0) for a in _accounts_check) == 0)
+        # Re-inicializar si: sin group_id O grupos colapsados (menos de 5 grupos distintos)
+        from collections import Counter as _GCtr2
+        _gid_dist2 = _GCtr2(a.get("group_id") for a in _accounts_check)
+        _needs_reinit = (
+            (_accounts_check and "group_id" not in _accounts_check[0]) or
+            (len(_gid_dist2) < 5)
+        )
         if _needs_reinit:
             print("🧬 [SIM ENGINE] Re-inicializando matriz con 5 grupos genéticos evolutivos...")
             _sim_eng._init_fresh_matrix()
