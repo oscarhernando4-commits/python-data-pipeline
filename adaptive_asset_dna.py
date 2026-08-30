@@ -65,8 +65,8 @@ ARCHETYPE_CONFIGS = {
         "label": "🐆 SPRINT HIPER-VOLÁTIL (Meme / High-Beta)",
         "emoji": "🐆",
         "initial_sl_pct": -4.00,
-        "max_stagnation_minutes": 120,
-        "stagnation_decay_minutes": 75,
+        "max_stagnation_minutes": 360,    # ×3 (antes: 120 min)
+        "stagnation_decay_minutes": 225,  # ×3 (antes: 75 min)
         "decay_sl_pct": -1.80,
         "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
@@ -83,8 +83,8 @@ ARCHETYPE_CONFIGS = {
         "label": "🏛️ BLUE-CHIP INSTITUCIONAL (L1 / Core)",
         "emoji": "🏛️",
         "initial_sl_pct": -4.00,
-        "max_stagnation_minutes": 240,
-        "stagnation_decay_minutes": 180,
+        "max_stagnation_minutes": 720,    # ×3 (antes: 240 min)
+        "stagnation_decay_minutes": 540,  # ×3 (antes: 180 min)
         "decay_sl_pct": -2.50,
         "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
@@ -101,8 +101,8 @@ ARCHETYPE_CONFIGS = {
         "label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
         "emoji": "🧩",
         "initial_sl_pct": -4.00,
-        "max_stagnation_minutes": 180,
-        "stagnation_decay_minutes": 120,
+        "max_stagnation_minutes": 540,    # ×3 (antes: 180 min)
+        "stagnation_decay_minutes": 360,  # ×3 (antes: 120 min)
         "decay_sl_pct": -2.00,
         "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
@@ -119,8 +119,8 @@ ARCHETYPE_CONFIGS = {
         "label": "🎯 MICRO-CAP / LIBRO DELGADO",
         "emoji": "🎯",
         "initial_sl_pct": -4.00,
-        "max_stagnation_minutes": 120,
-        "stagnation_decay_minutes": 75,
+        "max_stagnation_minutes": 360,    # ×3 (antes: 120 min)
+        "stagnation_decay_minutes": 225,  # ×3 (antes: 75 min)
         "decay_sl_pct": -1.80,
         "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
