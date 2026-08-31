@@ -522,14 +522,27 @@ def run_infinite_trading_matrix_cycle():
                     _btc_price_now = _btc_closes_1h[-1]
                     _btc_below_ema21 = _btc_price_now < _btc_ema21_1h
                     _btc_rsi_bearish = _btc_rsi_1h < 42.0
+                    _btc_rsi_crash   = _btc_rsi_1h < 28.0  # crash extremo = bloqueo total
+
                     if _btc_rsi_bearish and _btc_below_ema21:
-                        print(f"🔴 [VETO BTC MACRO 1H] BTC en tendencia bajista confirmada (RSI1H={_btc_rsi_1h:.1f}<42 | Precio ${_btc_price_now:,.0f} < EMA21=${_btc_ema21_1h:,.0f}). CERO operaciones hasta recuperación.")
-                        import api_connector
-                        api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
-                        return
+                        if _btc_rsi_crash:
+                            # RSI 1H < 28 → DUMP EXTREMO → bloqueo total
+                            print(f"🔴 [VETO BTC MACRO 1H] CRASH EXTREMO (RSI1H={_btc_rsi_1h:.1f}<28). CERO operaciones.")
+                            import api_connector
+                            api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
+                            return
+                        else:
+                            # RSI 1H entre 28-42 → MODO SELECTIVO BAJISTA
+                            # Permite SOLO candidatos ultra-fuertes: Score ≥ 90 + FII ≥ 80 + máx 2/día
+                            print(f"🟡 [BTC MACRO 1H] MODO SELECTIVO BAJISTA (RSI1H={_btc_rsi_1h:.1f}<42 | Precio ${_btc_price_now:,.0f} < EMA21=${_btc_ema21_1h:,.0f}).")
+                            print(f"   Solo candidatos ÉLITE (Score≥90 + FII≥80) pasan. Máx 2 ops/día en modo bajista.")
+                            # Marcar modo bajista para que el candidate gate sea más estricto
+                            _btc_bearish_mode = True
                     else:
+                        _btc_bearish_mode = False
                         _above_str = "POR ENCIMA" if not _btc_below_ema21 else "BAJO"
                         print(f"✅ [BTC MACRO 1H] BTC en zona segura (RSI1H={_btc_rsi_1h:.1f} | Precio vs EMA21: {_above_str}). Altcoins habilitadas.")
+
             except Exception as e_btc_1h:
                 print(f"⚠️ BTC 1H macro check error (non-blocking): {e_btc_1h}")
             
@@ -646,12 +659,28 @@ def run_infinite_trading_matrix_cycle():
                     pass  # Sin datos de Volume Delta → no bloquear (no-blocking)
                 
                 is_truly_valid = len(diag_reasons) == 0 and not is_knife and not is_dead_cat
+
+                # 🟡 MODO SELECTIVO BAJISTA: si BTC RSI 1H entre 28-42, solo ÉLITE pasa
+                _bearish_mode = locals().get("_btc_bearish_mode", False)
+                if is_truly_valid and _bearish_mode:
+                    if c_score < 90 or fii_sc < 80:
+                        is_truly_valid = False
+                        diag_reasons.append(f"BAJISTA:Score{c_score}<90oFII{fii_sc}<80")
+                    else:
+                        import api_connector as _ac_bm
+                        _bm_state = _ac_bm.load_real_account_state()
+                        _bm_ops_hoy = _bm_state.get("daily_wins", 0) + _bm_state.get("daily_losses", 0)
+                        if _bm_ops_hoy >= 2:
+                            is_truly_valid = False
+                            diag_reasons.append(f"BAJISTA:Max2ops/dia({_bm_ops_hoy} ya)")
+
                 dbl_lbl = cmtf.get("double_bottom_label", "🟢 Giro en V")
                 canales_str = f"[1M:{r1m:>2.0f}% 5M:{r5m:>2.0f}% 15M:{r15m:>2.0f}% 1H:{r1h:>2.0f}% 4H:{r4h:>2.0f}% 1D:{r1d:>2.0f}%]"
-                
+
                 if is_truly_valid:
                     valid_base_candidates.append(cand)
-                    print(f"  🟢 [CANDIDATO A+ #{idx:02d}] {csym:<10} | Score: {c_score:>2} | FII: {fii_sc:>2} | {dbl_lbl} | Canales: {canales_str} -> VÁLIDO")
+                    _bm_tag = " 🟡BAJISTA-ELITE" if _bearish_mode else ""
+                    print(f"  🟢 [CANDIDATO A+ #{idx:02d}] {csym:<10} | Score: {c_score:>2} | FII: {fii_sc:>2} | {dbl_lbl} | Canales: {canales_str} -> VÁLIDO{_bm_tag}")
                 else:
                     proximity_candidates.append({
                         "sym": csym,
