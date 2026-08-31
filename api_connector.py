@@ -399,6 +399,10 @@ FAPI_URL = "https://fapi.binance.com"
 
 REAL_STATE_FILE = os.path.join(os.path.dirname(__file__), "real_money_account.json")
 
+# Flag para prevenir múltiples trades en el mismo ciclo de pipeline
+# Se resetea al inicio de cada ciclo en cloud_continuous_loop.py
+_trade_executed_this_cycle = False
+
 # ============================================================
 # STATE MANAGEMENT (Atomic writes to prevent corruption)
 # ============================================================
@@ -1405,12 +1409,21 @@ def trunc_1d(val):
     return math.floor(float(val) * 10.0) / 10.0
 
 def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bearish=False, is_learned_signal=False, best_confidence=75, candidates_list=None):
+    global _trade_executed_this_cycle
     state = load_real_account_state()
     import math
+
+    # ═══ PROTECCIÓN: Solo 1 trade real por ciclo de pipeline ═══
+    # Evita que múltiples candidatos abran posiciones en paralelo en el mismo ciclo
+    if best_symbol and not is_bearish:
+        if _trade_executed_this_cycle:
+            print(f"🔒 [1 TRADE/CICLO] Ya se ejecutó 1 trade real este ciclo. {best_symbol} queda en cola para el próximo ciclo.")
+            return
     
     # Null guard on current_price
     if not current_price or current_price <= 0:
         current_price = 1.0
+
     
     # AUTOMATIC COMPOUND INTEREST ALLOCATION (SPOT ONLY - EXACTLY 1 POSITION AT A TIME)
     # Strictly truncated to 1 decimal place WITHOUT rounding, minus 0.1 USD buffer for Binance spot fees
@@ -2475,6 +2488,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 state["_cached_usdt_free"] = 0.0
                 save_real_account_state(state)
                 print(f"✅ SPOT LONG ejecutado exitosamente: {cand_sym} ({qty} @ ${actual_entry_price:.4f} = ${actual_cost} USD)")
+                # Marcar que ya se ejecutó 1 trade en este ciclo — bloquea candidatos adicionales
+                _trade_executed_this_cycle = True
                 try:
                     import asset_dna_predictive_engine as _adna
                     _adna.register_trade_today(cand_sym)
