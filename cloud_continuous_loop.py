@@ -233,6 +233,13 @@ def main():
         except Exception as e:
             print(f"⚠️ Reload note: {e}", flush=True)
 
+        # Resetear flag de 1-trade-por-ciclo al inicio de cada nuevo ciclo
+        try:
+            import api_connector as _ac_reset
+            _ac_reset._trade_executed_this_cycle = False
+        except Exception:
+            pass
+
         # 🎯 MODO GUARDIÁN 100% EN PRIMER PLANO: Si hay posición real abierta en Binance Spot,
         # SUSPENDER los ciclos de 2 minutos y enfocar el 100% de la consola y CPU en el Heartbeat 1s continuo
         has_active_real_pos = False
