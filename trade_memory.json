@@ -7,50 +7,8 @@
     "total_pnl_usd": 0.0
   },
   "learned_rules": {
-    "blocked_patterns": [
-      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:DISTRIBUTING + FII:Weak(<45) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on TRUMPUSDT)",
-      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Weak(<45) + ATR:HighBeta(>=0.45%) + RSI>70(Overbought) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on FILUSDT)",
-      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Weak(<45) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ETHFIUSDT)",
-      "BLOCK LONG when OBV:DISTRIBUTING + FII:Weak(<45) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on PENGUUSDT)",
-      "BLOCK LONG when OBV:DISTRIBUTING + FII:Weak(<45) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on CAKEUSDT)",
-      "BLOCK LONG when OBV:ACCUMULATING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on APTUSDT)",
-      "BLOCK LONG when OBV:DISTRIBUTING + FII:Weak(<45) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on INJUSDT)",
-      "BLOCK LONG when OBV:DISTRIBUTING + FII:Weak(<45) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEXOUSDT)",
-      "BLOCK LONG when OBV:ACCUMULATING + FII:Weak(<45) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:<30(Bearish) + Trend:NEUTRAL (Lost on CRVUSDT)",
-      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on VETUSDT)",
-      "BLOCK LONG when OBV:ACCUMULATING + FII:Weak(<45) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on VIRTUALUSDT)",
-      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:DISTRIBUTING + FII:Weak(<45) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on AEROUSDT)",
-      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Weak(<45) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:30-50(Mild-Bear) + Trend:NEUTRAL (Lost on ZROUSDT)",
-      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on STXUSDT)",
-      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Weak(<45) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on PYTHUSDT)",
-      "BLOCK LONG when OBV:ACCUMULATING + FII:Weak(<45) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on FETUSDT)",
-      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Weak(<45) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SEIUSDT)",
-      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Weak(<45) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on TIAUSDT)",
-      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on SUNUSDT)",
-      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on BONKUSDT)"
-    ],
-    "boosted_patterns": [
-      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SUIUSDT)",
-      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XRPUSDT)",
-      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SEIUSDT)",
-      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ALGOUSDT)",
-      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ICPUSDT)",
-      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLDUSDT)",
-      "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)",
-      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SHIBUSDT)",
-      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)",
-      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on OPUSDT)",
-      "BOOST LONG when OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLFIUSDT)",
-      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ARBUSDT)",
-      "BOOST LONG when OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ARBUSDT)",
-      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ETHFIUSDT)",
-      "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SHIBUSDT)",
-      "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on FETUSDT)",
-      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZROUSDT)",
-      "BOOST LONG when OBV:DISTRIBUTING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on MORPHOUSDT)",
-      "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on POLUSDT)",
-      "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZROUSDT)"
-    ]
+    "blocked_patterns": [],
+    "boosted_patterns": []
   },
   "history": []
 }
