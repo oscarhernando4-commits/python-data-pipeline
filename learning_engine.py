@@ -227,9 +227,12 @@ def record_trade_outcome(symbol, side="LONG", entry_price=0.0, exit_price=0.0, p
     # 🛡️ DEDUPLICACIÓN ANTI-TRIPLICACIÓN: Evita registrar el mismo trade de la
     # cuenta real (R-01) más de una vez dentro de una ventana de 90 segundos.
     # Causa: pipeline_processor.py corre 1000 cuentas del matrix y cada una que
-    # tuvo el mismo símbolo invoca record_trade_outcome independientemente.
     # ─────────────────────────────────────────────────────────────────────────
-    is_real_account = ("R-01" in str(account_id)) or ("REAL" in str(group_name).upper())
+    # 🛡️ IDENTIFICACIÓN ESTRICTA DE CUENTA REAL (R-01):
+    # Solo R-01 o CUENTA REAL exacta. Evita que grupos simulados como
+    # "MATRIZ CUÁNTICA A+ (Condición Real)" se clasifiquen como reales.
+    # ─────────────────────────────────────────────────────────────────────────
+    is_real_account = (str(account_id).strip() == "R-01") or (str(group_name).strip() == "CUENTA REAL")
     history = data.get("history", [])
     
     if not is_real_account:
@@ -242,7 +245,7 @@ def record_trade_outcome(symbol, side="LONG", entry_price=0.0, exit_price=0.0, p
                 acc = str(recent.get("account_id", ""))
                 sym_r = str(recent.get("symbol", ""))
                 res_r = str(recent.get("result", ""))
-                if "R-01" in acc or "REAL" in str(recent.get("group_name", "")).upper():
+                if acc == "R-01" or str(recent.get("group_name", "")).strip() == "CUENTA REAL":
                     try:
                         ts = _dt.strptime(ts_str, "%Y-%m-%d %H:%M:%S")
                         if ts >= cutoff and sym_r == symbol.upper() and res_r == result_type.upper():
@@ -259,6 +262,7 @@ def record_trade_outcome(symbol, side="LONG", entry_price=0.0, exit_price=0.0, p
         "timestamp_ms": int(_time_mod.time() * 1000),  # ← Requerido por Pausa Inteligente 30min
         "account_id": account_id,
         "group_name": group_name,
+        "source": "REAL" if is_real_account else "SIMULATION",
         "symbol": symbol.upper(),
         "side": side.upper() if side else "LONG",
         "entry_price": entry_price,
@@ -270,14 +274,18 @@ def record_trade_outcome(symbol, side="LONG", entry_price=0.0, exit_price=0.0, p
     }
     
     data["history"].append(trade_entry)
-    stats = data["stats"]
-    stats["total_trades"] += 1
-    if result_type.upper() == "WIN":
-        stats["wins"] += 1
-    else:
-        stats["losses"] += 1
-    stats["total_pnl_usd"] += pnl_usd
-    stats["win_rate_pct"] = round((stats["wins"] / stats["total_trades"]) * 100.0, 2)
+    
+    # Actualizar estadísticas principales SOLO con operaciones REALES
+    if is_real_account:
+        stats = data["stats"]
+        stats["total_trades"] += 1
+        if result_type.upper() == "WIN":
+            stats["wins"] += 1
+        else:
+            stats["losses"] += 1
+        stats["total_pnl_usd"] += pnl_usd
+        stats["win_rate_pct"] = round((stats["wins"] / stats["total_trades"]) * 100.0, 2)
+
     
     # Generate ABSTRACT technical rules (not trade-specific strings)
     tech_rule = _extract_technical_rule(symbol, side or "LONG", result_type, context)

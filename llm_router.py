@@ -537,22 +537,23 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     ✅ REQUISITOS MÍNIMOS PARA APROBAR (TODOS deben cumplirse):
     ═══════════════════════════════════════════════════════════
     R1. Canal 1M <= 35%, Canal 5M <= 42%, Canal 15M <= 50% (precio en base real, no a mitad del rango)
-    R2. FII >= 60 (institucionales activamente absorbiendo en el suelo)
-    R3. VolSurge 1M >= 0.25x (hay actividad compradora, no abandono)
-    R4. Bids >= 46% (libro de órdenes equilibrado o a favor del comprador)
-    R5. Score MTF >= 85/100
-    R6. NO es cuchillo cayendo (no más de 3 velas rojas consecutivas con volumen creciente)
-    R7. RSI 15M <= 52 (sin sobrecompra en timeframe medio)
+    R1. Canal 1M <= 45% (compra en base/suelo fractal, prohibido comprar en cima)
+    R2. FII >= 50 (institucionales absorbiendo en el suelo)
+    R3. VolSurge 1M >= 0.20x (hay actividad compradora)
+    R4. Bids >= 45% (libro de órdenes equilibrado o a favor del comprador)
+    R5. Score MTF >= 75/100 (setup A+ de alta calidad)
+    R6. NO es cuchillo cayendo (sin caída descontrolada)
+    R7. RSI 15M <= 55 (sin sobrecompra en timeframe medio)
 
     ═══════════════════════════════════════════════════════════
     🏆 PATRONES DE ALTA CERTEZA (prioridad absoluta):
     ═══════════════════════════════════════════════════════════
-    P1. SUELO 2 CONFIRMADO (segundo toque del mismo soporte con RSI divergente) → Confianza 95%+
-    P2. BARRIDO DE LIQUIDEZ (Wyckoff Spring: spike debajo del soporte con recuperación) → Confianza 93%+
-    P3. DOBLE SUELO + OBV ACUMULANDO + FII >= 70 → Confianza 92%+
-    P4. GIRO EN V + VolSurge >= 1.5x + FII >= 70 + Canal 1M <= 20% → Confianza 90%+
+    P1. SUELO 2 CONFIRMADO (segundo toque del mismo soporte con RSI divergente) → Confianza 92%+
+    P2. BARRIDO DE LIQUIDEZ (Wyckoff Spring: spike debajo del soporte con recuperación) → Confianza 90%+
+    P3. DOBLE SUELO + OBV ACUMULANDO + FII >= 60 → Confianza 88%+
+    P4. GIRO EN V + VolSurge >= 1.2x + FII >= 60 + Canal 1M <= 30% → Confianza 85%+
 
-    CONFIANZA MÍNIMA PARA EJECUTAR: 90%. Por debajo de 90% → responde HOLD.
+    CONFIANZA MÍNIMA PARA EJECUTAR: 80%. Por debajo de 80% → responde HOLD.
 
     ═══════════════════════════════════════════════════════════
     LOS 7 AGENTES — DELIBERACIÓN CUÁNTICA:
@@ -560,16 +561,16 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
     1. 🕵️ AGENTE 1 (Guardián Macro & BTC):
        Contexto: {macro_context} | Wall Street: {wall_street_str} | Fear&Greed: {fear_greed.get('score')}
-       VETA si: BTC en caída activa 5M, Semáforo DEFENSIVO, Fear&Greed < 25.
-       APRUEBA si: BTC estable/alcista, mercado RISK-ON, Fear&Greed 35-85.
+       VETA si: BTC en caída activa 5M, Semáforo DEFENSIVO, Fear&Greed < 20.
+       APRUEBA si: BTC estable/alcista, mercado RISK-ON, Fear&Greed 25-85.
 
     2. 📊 AGENTE 2 (Sniper de Suelo Fractal 8D):
-       VETA si: Canal 15M > 52% o Canal 1H > 58% (precio en cima, no en suelo).
-       APRUEBA si: Canal 1M <= 35%, 5M <= 42%, 15M <= 50% (base fractal real).
+       VETA si: Canal 15M > 55% o Canal 1H > 60% (precio en cima, no en suelo).
+       APRUEBA si: Canal 1M <= 45%, 5M <= 48%, 15M <= 52% (base fractal real).
 
     3. 🌊 AGENTE 3 (Auditor de Libro, Volume Delta & OBV):
-       VETA si: Buy Taker < 42% (flujo vendedor real), OBV DISTRIBUTING + Bids < 48%, Muro Bids < $10k.
-       APRUEBA si: Buy Taker >= 45%, OBV ACUMULANDO o Bids >= 52%, Muro Bids >= $12k.
+       VETA si: Buy Taker < 38% (flujo vendedor real), OBV DISTRIBUTING + Bids < 45%, Muro Bids < $8k.
+       APRUEBA si: Buy Taker >= 42%, OBV ACUMULANDO o Bids >= 48%, Muro Bids >= $10k.
 
     4. 🧩 AGENTE 4 (Analista Sectorial & Timing):
        VETA si: Sesión con multiplicador < 0.50 (BLACKOUT absoluto).
@@ -577,14 +578,14 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
 
     5. 🧠 AGENTE 5 (Memoria RAG & Aprendizaje):
        VETA si: Moneda en Blacklist dinámica (WR < 40%) o COLD_STREAK activo.
-       APRUEBA si: Moneda en HOT_STREAK o ADN ÉLITE (WR >= 65% en >= 3 trades recientes).
+       APRUEBA si: Moneda en HOT_STREAK o ADN ÉLITE (WR >= 60% en >= 3 trades recientes).
 
     6. 🛡️ AGENTE 6 (Chief Risk Officer):
-       VETA si: Dump Risk >= 50%, cascada roja 15M activa, OBV triple distribución.
-       APRUEBA si: Dump Risk <= 20%, estructura de soporte sólida, sin señales de trampa.
+       VETA si: Dump Risk >= 60%, cascada roja 15M activa, OBV triple distribución.
+       APRUEBA si: Dump Risk <= 30%, estructura de soporte sólida, sin señales de trampa.
 
     7. 👑 AGENTE 7 (CEO Ejecutor — Veredicto Final):
-       Solo aprueba si los 6 agentes anteriores aprueban Y la confianza calculada >= 88%.
+       Solo aprueba si los 6 agentes anteriores aprueban Y la confianza calculada >= 80%.
        Prioridad de patrones: P1 > P2 > P3 > P4.
        Si hay empate entre candidatos: selecciona el de MENOR Canal 1M (más profundo en el suelo).
        Si ningún candidato supera el umbral de certeza: "HOLD". El USDT protegido es la victoria.

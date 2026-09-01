@@ -522,21 +522,20 @@ def run_infinite_trading_matrix_cycle():
                     _btc_price_now = _btc_closes_1h[-1]
                     _btc_below_ema21 = _btc_price_now < _btc_ema21_1h
                     _btc_rsi_bearish = _btc_rsi_1h < 42.0
-                    _btc_rsi_crash   = _btc_rsi_1h < 28.0  # crash extremo = bloqueo total
+                    _btc_rsi_crash   = _btc_rsi_1h < 22.0  # crash nuclear extremo = bloqueo total
 
                     if _btc_rsi_bearish and _btc_below_ema21:
                         if _btc_rsi_crash:
-                            # RSI 1H < 28 → DUMP EXTREMO → bloqueo total
-                            print(f"🔴 [VETO BTC MACRO 1H] CRASH EXTREMO (RSI1H={_btc_rsi_1h:.1f}<28). CERO operaciones.")
+                            # RSI 1H < 22 → DUMP NUCLEAR EXTREMO → bloqueo total
+                            print(f"🔴 [VETO BTC MACRO 1H] CRASH NUCLEAR (RSI1H={_btc_rsi_1h:.1f}<22). CERO operaciones.")
                             import api_connector
                             api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
                             return
                         else:
-                            # RSI 1H entre 28-42 → MODO SELECTIVO BAJISTA
-                            # Permite SOLO candidatos ultra-fuertes: Score ≥ 90 + FII ≥ 80 + máx 2/día
+                            # RSI 1H entre 22-42 → MODO SELECTIVO BAJISTA
+                            # Permite candidatos de alta calidad: Score ≥ 78 + FII ≥ 55
                             print(f"🟡 [BTC MACRO 1H] MODO SELECTIVO BAJISTA (RSI1H={_btc_rsi_1h:.1f}<42 | Precio ${_btc_price_now:,.0f} < EMA21=${_btc_ema21_1h:,.0f}).")
-                            print(f"   Solo candidatos ÉLITE (Score≥90 + FII≥80) pasan. Máx 2 ops/día en modo bajista.")
-                            # Marcar modo bajista para que el candidate gate sea más estricto
+                            print(f"   Candidatos ÉLITE con Score≥78 y FII≥55 habilitados.")
                             _btc_bearish_mode = True
                     else:
                         _btc_bearish_mode = False
@@ -600,17 +599,17 @@ def run_infinite_trading_matrix_cycle():
                 r1d_r = round(r1d, 1)
                 
                 # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL ADAPTATIVA DINÁMICA 3.0 (1M a 1D):
-                is_a_plus_floor = bool(is_double_bottom or is_bullish_div or is_second_touch or is_liquidity_sweep or fii_sc >= 65)
-                max_1d_cap = 60.0 if is_a_plus_floor else 55.0
-                max_4h_cap = 50.0
-                max_2h_cap = 50.0
-                max_1h_cap = 50.0
-                max_30m_cap = 52.0 if is_a_plus_floor else 46.0
-                max_15m_cap = 52.0 if is_a_plus_floor else 42.0
-                max_10m_cap = 48.0 if is_a_plus_floor else 40.0
-                max_5m_cap = 46.0 if is_a_plus_floor else 38.0
-                max_2m_cap = 48.0 if is_a_plus_floor else 36.0
-                max_1m_cap = 50.0 if is_a_plus_floor else 35.0
+                is_a_plus_floor = bool(is_double_bottom or is_bullish_div or is_second_touch or is_liquidity_sweep or fii_sc >= 55)
+                max_1d_cap = 65.0 if is_a_plus_floor else 60.0
+                max_4h_cap = 55.0
+                max_2h_cap = 55.0
+                max_1h_cap = 55.0
+                max_30m_cap = 55.0 if is_a_plus_floor else 50.0
+                max_15m_cap = 55.0 if is_a_plus_floor else 48.0
+                max_10m_cap = 52.0 if is_a_plus_floor else 46.0
+                max_5m_cap = 50.0 if is_a_plus_floor else 44.0
+                max_2m_cap = 50.0 if is_a_plus_floor else 42.0
+                max_1m_cap = 52.0 if is_a_plus_floor else 42.0
 
                 diag_reasons = []
                 if r1m_r > max_1m_cap: diag_reasons.append(f"1M={r1m:.0f}%>{max_1m_cap:.0f}%")
@@ -626,33 +625,23 @@ def run_infinite_trading_matrix_cycle():
 
                 is_hybrid_obv_valid = cmtf.get("is_hybrid_obv_valid", False)
                 if obv_t == "DISTRIBUTING" and not is_hybrid_obv_valid: diag_reasons.append("OBV=DIST")
-                if fii_sc < 50: diag_reasons.append(f"FII={fii_sc}<50")
-                elif rsi_15m >= 45.0 and fii_sc < 65: diag_reasons.append(f"FII={fii_sc}<65(RSI={rsi_15m:.0f})")
-                if vol_1m < 0.20: diag_reasons.append(f"Vol1M={vol_1m:.2f}x<0.20x")
+                if fii_sc < 40: diag_reasons.append(f"FII={fii_sc}<40")
+                if vol_1m < 0.15: diag_reasons.append(f"Vol1M={vol_1m:.2f}x<0.15x")
                 if not has_turnaround: diag_reasons.append("SinGiroVerde")
-                
-                # 🏹 GATE DE MADUREZ DE SUELO 3.0 (Evita compras apresuradas antes del barrido):
-                is_unconfirmed_first_bounce = not (is_second_touch or is_liquidity_sweep or is_double_bottom)
-                if is_unconfirmed_first_bounce and rsi_15m >= 48.0 and vol_1m < 0.35:
-                    diag_reasons.append("EsperandoSuelo2(RSI15M>=48)")
 
-                # 🎯 SCORE MÍNIMO FRANCOTIRADOR 3.0: +85 puntos obligatorio
-                # Permite bajar a 80 solo si hay Suelo 2 confirmado + Divergencia RSI (máxima calidad de setup)
-                min_score_required = 80 if (is_second_touch or is_liquidity_sweep or is_bullish_div) else 85
+                # 🎯 SCORE MÍNIMO FRANCOTIRADOR 3.0: 75-80 puntos
+                min_score_required = 75 if (is_second_touch or is_liquidity_sweep or is_bullish_div or is_double_bottom or fii_sc >= 55) else 80
                 if c_score < min_score_required: diag_reasons.append(f"Score={c_score}<{min_score_required}")
                 if is_knife: diag_reasons.append("Cuchillo")
                 if is_dead_cat: diag_reasons.append("GatoMuerto")
 
-                # ⚡ VOLUME DELTA PRE-FILTRO 3.0 — Corre AQUI, ANTES del Comité IA.
-                # Evita gastar tokens de Gemini en candidatos que serán vetados por flujo vendedor.
-                # Inteligente: FII >= 70 relaja el umbral (absorción institucional compensa presión taker).
+                # ⚡ VOLUME DELTA PRE-FILTRO 3.0
                 try:
                     import volume_delta_engine as _vde_pre
                     _vd = _vde_pre.get_volume_delta_signal(csym, window_seconds=30)
                     _vd_buy = _vd.get("buy_ratio_pct", 50.0)
                     _vd_sell_wave = _vd.get("sell_wave", False)
-                    # Con FII alto (institucionales comprando), tolerar más presión taker vendedora
-                    _min_buy_ratio = 38.0 if fii_sc >= 70 else 42.0
+                    _min_buy_ratio = 35.0 if fii_sc >= 55 else 40.0
                     if _vd_sell_wave or _vd_buy < _min_buy_ratio:
                         diag_reasons.append(f"VolDelta=VENDEDOR(Buy={_vd_buy:.0f}%<{_min_buy_ratio:.0f}%,FII={fii_sc})")
                 except Exception:
@@ -660,19 +649,19 @@ def run_infinite_trading_matrix_cycle():
                 
                 is_truly_valid = len(diag_reasons) == 0 and not is_knife and not is_dead_cat
 
-                # 🟡 MODO SELECTIVO BAJISTA: si BTC RSI 1H entre 28-42, solo ÉLITE pasa
+                # 🟡 MODO SELECTIVO BAJISTA: si BTC RSI 1H entre 22-42, filtro élite balanceado
                 _bearish_mode = locals().get("_btc_bearish_mode", False)
                 if is_truly_valid and _bearish_mode:
-                    if c_score < 90 or fii_sc < 80:
+                    if c_score < 78 or fii_sc < 55:
                         is_truly_valid = False
-                        diag_reasons.append(f"BAJISTA:Score{c_score}<90oFII{fii_sc}<80")
+                        diag_reasons.append(f"BAJISTA:Score{c_score}<78oFII{fii_sc}<55")
                     else:
                         import api_connector as _ac_bm
                         _bm_state = _ac_bm.load_real_account_state()
                         _bm_ops_hoy = _bm_state.get("daily_wins", 0) + _bm_state.get("daily_losses", 0)
-                        if _bm_ops_hoy >= 2:
+                        if _bm_ops_hoy >= 4:
                             is_truly_valid = False
-                            diag_reasons.append(f"BAJISTA:Max2ops/dia({_bm_ops_hoy} ya)")
+                            diag_reasons.append(f"BAJISTA:Max4ops/dia({_bm_ops_hoy} ya)")
 
                 dbl_lbl = cmtf.get("double_bottom_label", "🟢 Giro en V")
                 canales_str = f"[1M:{r1m:>2.0f}% 5M:{r5m:>2.0f}% 15M:{r15m:>2.0f}% 1H:{r1h:>2.0f}% 4H:{r4h:>2.0f}% 1D:{r1d:>2.0f}%]"
@@ -935,7 +924,7 @@ def run_infinite_trading_matrix_cycle():
                     pnl_usd=net_pnl, result_type=res_type,
                     notes=f"{res_type} on {symbol} (PnL: {unr_pct:+.2f}%, Net: ${net_pnl:+.2f} Fase {phase} | {phase_label})",
                     account_id=acc.get("account_id", "SIM-000"),
-                    group_name=acc.get("group_name", "💎 MATRIZ CUÁNTICA A+"),
+                    group_name="MATRIZ_SIMULADA",
                     context=ctx
                 )
             else:

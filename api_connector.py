@@ -1925,8 +1925,14 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 _tm_path = _os.path.join(_os.path.dirname(__file__), "trade_memory.json")  # BUG 5 FIX: absolute path
                 with open(_tm_path, "r", encoding="utf-8") as _tmf:
                     _tm = _json.load(_tmf)
-                # Solo trades REALES (no simulaciones) para esta evaluación
-                _history_real = [h for h in _tm.get("history", []) if h.get("source") != "SIMULATION"]
+                # Solo trades REALES legítimos de la cuenta R-01 (ignorar absolutamente cualquier simulación)
+                _history_real = [
+                    h for h in _tm.get("history", []) 
+                    if (str(h.get("account_id", "")).strip() == "R-01" or str(h.get("group_name", "")).strip() == "CUENTA REAL" or h.get("source") == "REAL")
+                    and h.get("source") != "SIMULATION"
+                    and not str(h.get("account_id", "")).startswith("SIM")
+                    and not str(h.get("account_id", "")).startswith("G")
+                ]
             except Exception:
                 _history_real = []
 
