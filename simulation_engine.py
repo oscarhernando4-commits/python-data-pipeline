@@ -410,10 +410,16 @@ def _extract_candidates(symbol_analysis_map: dict) -> list:
 
 def _feed_learning_engine(new_entries: list):
     """
-    Alimenta el trade_memory.json con los trades simulados.
+    Alimenta el trade_memory.json y quant_intelligence.db con los trades simulados.
     El learning_engine ya lee de este archivo para calcular bias, blacklist, elite.
     Los trades simulados se marcan con 'source': 'SIMULATION' para diferenciarlos.
     """
+    try:
+        import quant_database
+        quant_database.log_sim_trades_batch(new_entries)
+    except Exception:
+        pass
+
     try:
         if not os.path.exists(MEMORY_FILE):
             return
@@ -488,11 +494,14 @@ def get_best_group_params() -> dict:
             gname = acct.get("group_name", "?")
             if gid not in group_stats:
                 group_stats[gid] = {
+                    "group_id": gid,
                     "name": gname,
                     "wins": 0, "losses": 0, "pnl": 0.0,
                     "min_score": acct.get("min_score", 85),
                     "min_fii": acct.get("min_fii", 60),
+                    "sl_pct": acct.get("sl_pct", -4.0),
                     "phase2_pct": acct.get("phase2_pct", 1.0),
+                    "phase3_pct": acct.get("phase3_pct", 1.6),
                 }
             group_stats[gid]["wins"] += acct.get("wins", 0)
             group_stats[gid]["losses"] += acct.get("losses", 0)
@@ -502,10 +511,11 @@ def get_best_group_params() -> dict:
         best_wr = 0
         for gid, st in group_stats.items():
             total = st["wins"] + st["losses"]
+            st["total_trades"] = total
+            st["win_rate_pct"] = round(st["wins"] / max(total, 1) * 100.0, 1)
             if total >= 10:
-                wr = st["wins"] / total * 100
-                if wr > best_wr:
-                    best_wr = wr
+                if st["win_rate_pct"] > best_wr or (st["win_rate_pct"] == best_wr and st["pnl"] > (best.get("pnl", 0) if best else 0)):
+                    best_wr = st["win_rate_pct"]
                     best = st
 
         return best or {}

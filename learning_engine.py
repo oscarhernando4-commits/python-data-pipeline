@@ -305,6 +305,15 @@ def record_trade_outcome(symbol, side="LONG", entry_price=0.0, exit_price=0.0, p
             stats["losses"] += 1
         stats["total_pnl_usd"] += pnl_usd
         stats["win_rate_pct"] = round((stats["wins"] / stats["total_trades"]) * 100.0, 2)
+        try:
+            import quant_database
+            quant_database.log_real_trade(
+                symbol=symbol, side=side or "LONG", entry_price=entry_price,
+                exit_price=exit_price, pnl_usd=pnl_usd, result=result_type,
+                exit_reason=notes, context=context
+            )
+        except Exception:
+            pass
 
     
     # Generate ABSTRACT technical rules (not trade-specific strings)

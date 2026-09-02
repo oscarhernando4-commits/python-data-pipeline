@@ -1221,7 +1221,12 @@ def run_infinite_trading_matrix_cycle():
                 _sim_eng.print_simulation_report()
             _best = _sim_eng.get_best_group_params()
             if _best:
-                print(f"🏆 [GRUPO LÍDER] {_best.get('name', '?')[:50]} → WR mayor detectado. Parámetros óptimos identificados.")
+                print(f"🏆 [GRUPO LÍDER] {_best.get('name', '?')[:50]} → WR mayor detectado ({_best.get('win_rate_pct', 0)}%). Auto-calibrando cuenta real...")
+                try:
+                    import auto_tune_thresholds
+                    auto_tune_thresholds.auto_tune()
+                except Exception as _at_err:
+                    print(f"⚠️ Auto-tune error: {_at_err}")
     except Exception as _sim_err:
         pass  # Non-blocking — nunca interrumpe el flujo real
 
