@@ -206,18 +206,26 @@ def calculate_archetype_trailing(
     atr_pct: float = 0.30
 ) -> Tuple[float, int, str]:
     """
-    Arquitectura Cuántica Pura de 3 Fases Calibrada:
-    - FASE 1 (0.00% a +0.999%): Rumbo a la Meta con Stop Loss de -4.00%. Sin piso intermedio, tiempo ilimitado.
-    - FASE 2 (+1.00% a +1.599%): Meta Cumplida. Piso Fijo en +1.00% asegurado.
-    - FASE 3 (>= +1.60%): Rally Dinámico:
-        Retención(%) = 50% + (Cima × 5%)  [con cap en 85%]
-        Piso = max(+1.00%, Cima × Retención(%))
+    🎯 SISTEMA DE COSECHA DINÁMICA PROPORCIONAL MULTI-NIVEL:
+    - FASE 3 (>= +1.60%): Rally Dinámico con retención del 75% al 85% de la cima.
+    - FASE 2 (+1.00% a +1.59%): Meta Cumplida. Piso de retención en max(+1.00%, Cima × 75%).
+    - ⚡ SUB-FASE COSECHA DINÁMICA (+0.65% a +0.99%):
+        * ¡LA SOLUCIÓN EXACTA PARA CASOS COMO RENDER (+0.93%)!
+        * Cuando la moneda supera +0.65%, el piso se vuelve DINÁMICO reteniendo el 70% de la cima:
+          Piso = max(+0.20%, Cima × 0.70).
+          Ejemplo: Cima +0.93% -> Piso asegurado en +0.65%. Si retrocede, ¡VENDE EN GANANCIA!
+    - 🛡️ SUB-FASE BREAK-EVEN BLINDADO (+0.45% a +0.64%):
+        * Una vez tocado +0.45%, el SL salta a +0.12% (cubre comisión BNB). Cero riesgo de perder.
+    - 🌱 FASE 1 (0.00% a +0.44%): Rumbo a impulso inicial con Stop Loss protector de -4.00%.
     """
     arch = archetype_dna.get("archetype", "SECTOR_ROTATION")
     emoji = archetype_dna.get("emoji", "🧬")
     label = archetype_dna.get("label", arch)
-    p2_trigger = archetype_dna.get("phase_2_trigger_pct", 1.50)
-    p3_trigger = archetype_dna.get("phase_3_trigger_pct", 2.20)
+    base_p2 = archetype_dna.get("phase_2_trigger_pct", 1.00)
+    p3_trigger = archetype_dna.get("phase_3_trigger_pct", 1.60)
+    
+    # Adaptación por volatilidad: si el ATR es moderado, el trigger de Fase 2 puede iniciar en 0.80%
+    p2_trigger = max(0.80, min(base_p2, round(atr_pct * 1.6, 2))) if atr_pct and atr_pct > 0 else base_p2
 
     if highest_pnl_pct >= p3_trigger:
         retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
@@ -226,9 +234,21 @@ def calculate_archetype_trailing(
         phase = 3
         phase_label = f"🚀 FASE 3 RALLY DINÁMICO ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= p2_trigger:
-        sl_pct = p2_trigger
+        # Retención dinámica desde el trigger de fase 2 (al menos el 75% de la cima)
+        sl_pct = max(p2_trigger, round(highest_pnl_pct * 0.75, 4))
         phase = 2
-        phase_label = f"🎯 FASE 2 META CUMPLIDA (+{p2_trigger:.2f}% FIJO | {emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Fijo +{p2_trigger:.2f}%)"
+        phase_label = f"🎯 FASE 2 META DINÁMICA (+{p2_trigger:.2f}% | {emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 0.65:
+        # ⚡ COSECHA DINÁMICA ANTE REVERSIÓN:
+        # Retiene el 70% de la cima ganada. Si RENDER llegó a +0.93%, el piso se fija en +0.65%.
+        sl_pct = max(0.20, round(highest_pnl_pct * 0.70, 4))
+        phase = 1
+        phase_label = f"⚡ SUB-FASE COSECHA DINÁMICA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 0.45:
+        # 🛡️ BREAK-EVEN BLINDADO: Protege contra cualquier pérdida y cubre comisiones
+        sl_pct = 0.12
+        phase = 1
+        phase_label = f"🛡️ BREAK-EVEN BLINDADO ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +0.12%)"
     else:
         sl_pct = -4.00
         phase = 1

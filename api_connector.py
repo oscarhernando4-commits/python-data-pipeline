@@ -1145,7 +1145,7 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             atr_pct=atr_pct
         )
     except Exception as e:
-        # Fallback: Fase 2 en +1.00%, Fase 3 en >= +1.60%
+        # Fallback dinámico proporcional multi-nivel
         if highest_pnl_pct >= 1.60:
             retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
             retention_ratio = retention_pct / 100.0
@@ -1153,9 +1153,17 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             phase = 3
             phase_label = f"🚀 FASE 3 RALLY DINÁMICO (Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
         elif highest_pnl_pct >= 1.00:
-            sl_pct = 1.00
+            sl_pct = max(1.00, round(highest_pnl_pct * 0.75, 4))
             phase = 2
-            phase_label = f"🎯 FASE 2 META CUMPLIDA (+1.00% FIJO | Cima +{highest_pnl_pct:.2f}% -> Piso Fijo +1.00%)"
+            phase_label = f"🎯 FASE 2 META DINÁMICA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 0.65:
+            sl_pct = max(0.20, round(highest_pnl_pct * 0.70, 4))
+            phase = 1
+            phase_label = f"⚡ SUB-FASE COSECHA DINÁMICA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 0.45:
+            sl_pct = 0.12
+            phase = 1
+            phase_label = f"🛡️ BREAK-EVEN BLINDADO (Cima +{highest_pnl_pct:.2f}% -> Piso +0.12%)"
         else:
             sl_pct = -4.00
             phase = 1

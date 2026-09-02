@@ -227,12 +227,18 @@ def run_simulation_cycle(symbol_analysis_map: dict):
 
             highest_pnl = ((highest - entry) / entry) * 100.0
 
-            # Trailing floor dinámico
+            # Trailing floor dinámico proporcional multi-nivel
             if highest_pnl >= grp_p3:
                 retention = min(85.0, 50.0 + highest_pnl * 5.0)
                 floor_pct = max(grp_p2, highest_pnl * retention / 100.0)
             elif highest_pnl >= grp_p2:
-                floor_pct = grp_p2
+                floor_pct = max(grp_p2, highest_pnl * 0.75)
+            elif highest_pnl >= 0.65:
+                # Cosecha dinámica del 70% de la cima alcanzada
+                floor_pct = max(0.20, highest_pnl * 0.70)
+            elif highest_pnl >= 0.45:
+                # Breakeven blindado
+                floor_pct = 0.12
             else:
                 floor_pct = grp_sl_pct
 
