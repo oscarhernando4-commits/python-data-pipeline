@@ -174,9 +174,10 @@ def run_git_push_sync(cycle_num: int, total_cycles: int = 240):
         if gh_token and gh_repo:
             subprocess.run(["git", "remote", "set-url", "origin", f"https://x-access-token:{gh_token}@github.com/{gh_repo}.git"], check=False, timeout=5, env=_env)
 
-        # Export intelligence matrix from SQLite vault
+        # Compile DNA profiles and export intelligence matrix from SQLite vault
         try:
             import quant_database
+            quant_database.compile_all_dna_profiles()
             quant_database.export_intelligence_matrix()
         except Exception:
             pass
