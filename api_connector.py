@@ -2421,12 +2421,15 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 vd_accel = vd.get("delta_acceleration", 0.0)
                 print(f"⚡ [VOLUME DELTA] {cand_sym}: {vd_label}")
 
-                # VETO INTELIGENTE: Con FII >= 70 (absorción institucional activa),
-                # los institucionales están comprando OTC → toleramos más presión taker vendedora.
-                # Solo vetamos si la presión vendedora es extrema (buy < 38% con FII alto, o buy < 48% sin FII alto).
-                vd_min_buy = 38.0 if fii >= 70 else 48.0
+                # BUG 2 FIX: Eliminar excepción FII≥70 para buy ratio.
+                # Con BTC bajista, FII alto NO compensa flujo vendedor en la pantalla.
+                # Los institucionales compran OTC pero los retails venden en mercado = caída de precio.
+                # Regla unificada: si vemos más vendedores que compradores → VETO sin importar FII.
+                # Mercado normal: buy≥45% | Con BTC bajista: buy≥48% (más estricto)
+                _is_btc_bearish_now = is_bearish  # 'is_bearish' se pasa desde pipeline
+                vd_min_buy = 48.0 if _is_btc_bearish_now else 45.0
                 if vd_sell_wave or vd_buy < vd_min_buy:
-                    print(f"  🛑 [VOLUME DELTA VETO] {cand_sym} descartado: Dominancia vendedora taker activa (Buy={vd_buy:.0f}% < {vd_min_buy:.0f}%, FII={fii}, Delta={vd_delta:+,.0f} USDT). Esperando compradores agresivos.")
+                    print(f"  🛑 [VOLUME DELTA VETO] {cand_sym} descartado: Dominancia vendedora taker activa (Buy={vd_buy:.0f}% < {vd_min_buy:.0f}%, FII={fii}, BTC_bajista={_is_btc_bearish_now}, Delta={vd_delta:+,.0f} USDT). Esperando compradores agresivos.")
                     continue
 
                 # BOOST: Strong buy delta unlocks entry even at moderate score
@@ -2435,7 +2438,30 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             except Exception as _vde:
                 print(f"  ⚠️ [VOLUME DELTA] Sin datos de flujo ({_vde}). Continuando con filtros estándar.")
 
-
+            # ═══════════════════════════════════════════════════════════════════════
+            # 🛡️ BUG 5 FIX: PRE-BUY FINAL GATE — Chequeo OBV + BTC justo antes de comprar
+            # El pipeline puede aprobar un candidato, pero entre el escaneo (~30s antes)
+            # y la ejecución real las condiciones pueden haber cambiado.
+            # Si BTC bajista Y el OBV del activo es DISTRIBUTING → CANCELAR compra.
+            # ═══════════════════════════════════════════════════════════════════════
+            try:
+                _pre_buy_obv = mtf_res.get("obv_trend", "NEUTRAL")
+                if is_bearish and _pre_buy_obv == "DISTRIBUTING":
+                    print(f"  🔴 [PRE-BUY GATE] {cand_sym} CANCELADO: BTC bajista + OBV=DISTRIBUTING al momento de ejecutar. Capital protegido.")
+                    continue
+                # También verificar que BTC no haya caído un 0.5% adicional desde el escaneo inicial
+                try:
+                    _btc_now_px = get_symbol_price("BTCUSDT", is_futures=False)
+                    _btc_entry_px = cand.get("btc_ref_price", _btc_now_px)
+                    if _btc_entry_px and _btc_now_px:
+                        _btc_drop_since_scan = (_btc_now_px - _btc_entry_px) / _btc_entry_px * 100
+                        if _btc_drop_since_scan < -0.5:
+                            print(f"  🔴 [PRE-BUY GATE] {cand_sym} CANCELADO: BTC cayó {_btc_drop_since_scan:.2f}% desde el escaneo. Condiciones deterioradas.")
+                            continue
+                except Exception:
+                    pass  # No bloquear si no hay datos comparativos
+            except Exception as _pb_err:
+                print(f"  ⚠️ [PRE-BUY GATE] Error en chequeo final ({_pb_err}). Continuando.")
 
             buy_res = execute_real_spot_market_buy(cand_sym, usdt_free)
             if isinstance(buy_res, dict) and "orderId" in buy_res:

@@ -649,19 +649,34 @@ def run_infinite_trading_matrix_cycle():
                 
                 is_truly_valid = len(diag_reasons) == 0 and not is_knife and not is_dead_cat
 
-                # 🟡 MODO SELECTIVO BAJISTA: si BTC RSI 1H entre 22-42, filtro élite balanceado
+                # 🔴 MODO SELECTIVO BAJISTA ULTRA-ESTRICTO: BTC RSI 1H entre 22-42
+                # FILOSOFÍA: Prefiero NO operar antes que operar mal con BTC bajista.
+                # Solo 1 op/día máximo y con los filtros MÁS estrictos del sistema.
                 _bearish_mode = locals().get("_btc_bearish_mode", False)
                 if is_truly_valid and _bearish_mode:
-                    if c_score < 78 or fii_sc < 55:
+                    # BUG 1 FIX: OBV=DISTRIBUTING es VETO ABSOLUTO en modo bajista (sin excepción hybrid ni FII)
+                    # Institucionales vendiendo + BTC bajando = pérdida garantizada
+                    if obv_t == "DISTRIBUTING":
                         is_truly_valid = False
-                        diag_reasons.append(f"BAJISTA:Score{c_score}<78oFII{fii_sc}<55")
+                        diag_reasons.append("BAJISTA_CRITICO:OBV=DISTRIBUTING(VETO_ABSOLUTO)")
+                    # BUG 4 FIX: Vol mínimo sube a 0.30x en modo bajista (antes 0.15x)
+                    # Sin fuerza compradora visible no hay rebote real posible
+                    elif vol_1m < 0.30:
+                        is_truly_valid = False
+                        diag_reasons.append(f"BAJISTA_CRITICO:Vol1M={vol_1m:.2f}x<0.30x")
+                    # Score y FII más exigentes cuando el macro es adverso
+                    elif c_score < 82 or fii_sc < 60:
+                        is_truly_valid = False
+                        diag_reasons.append(f"BAJISTA:Score{c_score}<82oFII{fii_sc}<60")
                     else:
                         import api_connector as _ac_bm
                         _bm_state = _ac_bm.load_real_account_state()
                         _bm_ops_hoy = _bm_state.get("daily_wins", 0) + _bm_state.get("daily_losses", 0)
-                        if _bm_ops_hoy >= 4:
+                        # BUG 3 FIX: Solo 1 operación/día en modo bajista (antes eran 4)
+                        # La 1 operación debe ser la MEJOR del día — no dispersar capital en caída de BTC
+                        if _bm_ops_hoy >= 1:
                             is_truly_valid = False
-                            diag_reasons.append(f"BAJISTA:Max4ops/dia({_bm_ops_hoy} ya)")
+                            diag_reasons.append(f"BAJISTA:Max1op/dia({_bm_ops_hoy} ya ejecutada hoy)")
 
                 dbl_lbl = cmtf.get("double_bottom_label", "🟢 Giro en V")
                 canales_str = f"[1M:{r1m:>2.0f}% 5M:{r5m:>2.0f}% 15M:{r15m:>2.0f}% 1H:{r1h:>2.0f}% 4H:{r4h:>2.0f}% 1D:{r1d:>2.0f}%]"
