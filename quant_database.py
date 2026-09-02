@@ -1,4 +1,4 @@
-﻿"""
+"""
 QUANT INTELLIGENCE DATABASE — SQLite High-Performance Vault
 ============================================================
 Provides persistent relational storage for millions of simulated
@@ -170,6 +170,75 @@ def get_symbol_win_rate(symbol: str) -> dict:
         pass
     return {"symbol": symbol.upper(), "total_trades": 0, "wins": 0, "win_rate_pct": 50.0, "net_pnl": 0.0}
 
+def export_intelligence_matrix() -> dict:
+    """
+    Compila un resumen estadístico compacto (< 15 KB) de la base de datos SQLite
+    en 'intelligence_matrix.json' para sincronización ultra-ligera en Git y consumo por IA.
+    """
+    matrix_data = {
+        "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC"),
+        "elite_tokens": [],
+        "blacklisted_tokens": [],
+        "global_sim_wr": 0.0,
+        "total_sim_trades": 0,
+        "total_real_trades": 0
+    }
+    try:
+        init_db()
+        conn = get_db_connection()
+        cur = conn.cursor()
+        
+        # Win Rate por símbolo con >= 3 trades
+        cur.execute("""
+        SELECT 
+            symbol,
+            COUNT(*) as total,
+            SUM(CASE WHEN result = 'WIN' THEN 1 ELSE 0 END) as wins,
+            SUM(pnl_usd) as net_pnl
+        FROM sim_trades 
+        GROUP BY symbol
+        HAVING COUNT(*) >= 3
+        ORDER BY (SUM(CASE WHEN result = 'WIN' THEN 1 ELSE 0 END) * 1.0 / COUNT(*)) DESC
+        """)
+        rows = cur.fetchall()
+        for r in rows:
+            wr = round(r["wins"] / r["total"] * 100.0, 1)
+            token_info = {
+                "symbol": r["symbol"],
+                "total": r["total"],
+                "wins": r["wins"],
+                "win_rate": wr,
+                "net_pnl": round(r["net_pnl"] or 0.0, 2)
+            }
+            if wr >= 65.0:
+                matrix_data["elite_tokens"].append(token_info)
+            elif wr < 40.0:
+                matrix_data["blacklisted_tokens"].append(token_info)
+                
+        # Total global simulado
+        cur.execute("SELECT COUNT(*), SUM(CASE WHEN result = 'WIN' THEN 1 ELSE 0 END) FROM sim_trades")
+        tot_row = cur.fetchone()
+        if tot_row and tot_row[0] > 0:
+            matrix_data["total_sim_trades"] = tot_row[0]
+            matrix_data["global_sim_wr"] = round((tot_row[1] or 0) / tot_row[0] * 100.0, 1)
+            
+        # Total global real
+        cur.execute("SELECT COUNT(*) FROM real_trades")
+        rt_row = cur.fetchone()
+        if rt_row:
+            matrix_data["total_real_trades"] = rt_row[0]
+            
+        conn.close()
+        
+        out_path = os.path.join(os.path.dirname(__file__), "intelligence_matrix.json")
+        with open(out_path, "w", encoding="utf-8") as f:
+            json.dump(matrix_data, f, indent=2, ensure_ascii=False)
+    except Exception as e:
+        print(f"⚠️ Error exportando intelligence_matrix: {e}")
+        
+    return matrix_data
+
 if __name__ == "__main__":
     init_db()
-    print("quant_intelligence.db initialized successfully.")
+    mat = export_intelligence_matrix()
+    print("quant_intelligence.db initialized successfully. Matrix exported:", mat)

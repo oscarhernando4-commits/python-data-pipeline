@@ -316,20 +316,25 @@ def record_trade_outcome(symbol, side="LONG", entry_price=0.0, exit_price=0.0, p
             pass
 
     
-    # Generate ABSTRACT technical rules (not trade-specific strings)
-    tech_rule = _extract_technical_rule(symbol, side or "LONG", result_type, context)
-    if tech_rule:
-        if result_type.upper() == "LOSS":
-            if tech_rule not in data["learned_rules"]["blocked_patterns"]:
-                data["learned_rules"]["blocked_patterns"].append(tech_rule)
-                # Keep only the latest 20 rules to avoid noise
-                if len(data["learned_rules"]["blocked_patterns"]) > 20:
-                    data["learned_rules"]["blocked_patterns"] = data["learned_rules"]["blocked_patterns"][-20:]
-        elif result_type.upper() == "WIN":
-            if tech_rule not in data["learned_rules"]["boosted_patterns"]:
-                data["learned_rules"]["boosted_patterns"].append(tech_rule)
-                if len(data["learned_rules"]["boosted_patterns"]) > 20:
-                    data["learned_rules"]["boosted_patterns"] = data["learned_rules"]["boosted_patterns"][-20:]
+    # Generate ABSTRACT technical rules (SOLO para cuenta real o simulaciones válidas con PnL realista)
+    _is_valid_rule_source = is_real_account or (
+        entry_price > 0 and exit_price > 0 and 
+        abs((exit_price - entry_price) / entry_price) <= 0.10
+    )
+    if _is_valid_rule_source:
+        tech_rule = _extract_technical_rule(symbol, side or "LONG", result_type, context)
+        if tech_rule:
+            if result_type.upper() == "LOSS":
+                if tech_rule not in data["learned_rules"]["blocked_patterns"]:
+                    data["learned_rules"]["blocked_patterns"].append(tech_rule)
+                    # Keep only the latest 20 rules to avoid noise
+                    if len(data["learned_rules"]["blocked_patterns"]) > 20:
+                        data["learned_rules"]["blocked_patterns"] = data["learned_rules"]["blocked_patterns"][-20:]
+            elif result_type.upper() == "WIN":
+                if tech_rule not in data["learned_rules"]["boosted_patterns"]:
+                    data["learned_rules"]["boosted_patterns"].append(tech_rule)
+                    if len(data["learned_rules"]["boosted_patterns"]) > 20:
+                        data["learned_rules"]["boosted_patterns"] = data["learned_rules"]["boosted_patterns"][-20:]
         
     save_memory(data)
     return trade_entry
@@ -376,10 +381,21 @@ def get_executive_learning_summary(data=None):
     blocked_str = "\n".join([f"    - 🛑 {b}" for b in blocked]) if blocked else "    - Ninguna trampa activa."
     boosted_str = "\n".join([f"    - ⚡ {b}" for b in boosted]) if boosted else "    - Reversión en suelo + FII >= 50 + Bids >= 45%."
     
-    # 5. Dynamic Token Intelligence
+    # 5. Dynamic Token Intelligence (SQLite Vault + Local Memory)
     token_intel = get_dynamic_token_intelligence(data)
-    elite_str = ", ".join(token_intel["elite_tokens"][:4]) if token_intel["elite_tokens"] else "SUI, NIL, AVAX, XPL"
-    blocked_tok_str = ", ".join(token_intel["blocked_tokens"][:4]) if token_intel["blocked_tokens"] else "PEPE, BARD, DEXE, APT"
+    elite_tokens = list(token_intel.get("elite_tokens", []))
+    blocked_tokens = list(token_intel.get("blocked_tokens", []))
+    try:
+        import quant_database
+        q_mat = quant_database.export_intelligence_matrix()
+        if q_mat.get("elite_tokens"):
+            elite_tokens = [t["symbol"] for t in q_mat["elite_tokens"][:4]]
+        if q_mat.get("blacklisted_tokens"):
+            blocked_tokens = [t["symbol"] for t in q_mat["blacklisted_tokens"][:4]]
+    except Exception:
+        pass
+    elite_str = ", ".join(elite_tokens[:4]) if elite_tokens else "ZRO, BCH, SOL, AVAX"
+    blocked_tok_str = ", ".join(blocked_tokens[:4]) if blocked_tokens else "PEPE, BARD, DEXE, APT"
 
     # 6. Champions from Matrix
     matrix_champs = get_matrix_champions_summary()

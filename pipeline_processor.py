@@ -955,15 +955,8 @@ def run_infinite_trading_matrix_cycle():
                         "vol_surge": _indicators.get("volume_surge_ratio", 1.0),
                         "range_position_1m": _mtf.get("range_position_1m", 0.50),
                     }
-                    
-                learning_engine.record_trade_outcome(
-                    symbol=symbol, side="LONG", entry_price=entry_p, exit_price=curr_price,
-                    pnl_usd=net_pnl, result_type=res_type,
-                    notes=f"{res_type} on {symbol} (PnL: {unr_pct:+.2f}%, Net: ${net_pnl:+.2f} Fase {phase} | {phase_label})",
-                    account_id=acc.get("account_id", "SIM-000"),
-                    group_name="MATRIZ_SIMULADA",
-                    context=ctx
-                )
+                # Nota: Las simulaciones genéticas se gestionan exclusivamente en simulation_engine.py
+                pass
             else:
                 acc["last_trade_time"] = position.get("open_time_br", now_br)
                 phase_badge = f"⚡ Fase {phase}" if phase <= 2 else f"💎 Fase {phase}"

@@ -174,8 +174,15 @@ def run_git_push_sync(cycle_num: int, total_cycles: int = 240):
         if gh_token and gh_repo:
             subprocess.run(["git", "remote", "set-url", "origin", f"https://x-access-token:{gh_token}@github.com/{gh_repo}.git"], check=False, timeout=5, env=_env)
 
+        # Export intelligence matrix from SQLite vault
+        try:
+            import quant_database
+            quant_database.export_intelligence_matrix()
+        except Exception:
+            pass
+
         # Add and commit state files
-        subprocess.run(["git", "add", "real_money_account.json", "top_100_pairs.json", "dynamic_thresholds.json", "proxy_state.json", "gemini_key_state.json", "trade_memory.json", "matrix_100_simulations.json"], check=False, timeout=5, env=_env)
+        subprocess.run(["git", "add", "real_money_account.json", "top_100_pairs.json", "dynamic_thresholds.json", "proxy_state.json", "gemini_key_state.json", "trade_memory.json", "matrix_100_simulations.json", "intelligence_matrix.json", "quant_intelligence.db"], check=False, timeout=5, env=_env)
         status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True, timeout=5, env=_env)
         if status.stdout.strip():
             msg = f"chore: live sync [Cycle {cycle_num}/{total_cycles}] [{now_utc}]"
