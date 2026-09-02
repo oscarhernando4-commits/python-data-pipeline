@@ -629,11 +629,33 @@ def run_infinite_trading_matrix_cycle():
                 if vol_1m < 0.15: diag_reasons.append(f"Vol1M={vol_1m:.2f}x<0.15x")
                 if not has_turnaround: diag_reasons.append("SinGiroVerde")
 
+                # MEJORA 5: ANTI SCORE-INFLADO — Score>=95 sin volumen real -> deflactar a 85
+                if c_score >= 95 and vol_1m < 0.40:
+                    c_score = 85  # Score realista: Gemini infla sin respaldo de volumen
+
                 # 🎯 SCORE MÍNIMO FRANCOTIRADOR 3.0: 75-80 puntos
                 min_score_required = 75 if (is_second_touch or is_liquidity_sweep or is_bullish_div or is_double_bottom or fii_sc >= 55) else 80
                 if c_score < min_score_required: diag_reasons.append(f"Score={c_score}<{min_score_required}")
                 if is_knife: diag_reasons.append("Cuchillo")
                 if is_dead_cat: diag_reasons.append("GatoMuerto")
+
+                # MEJORA 3: RELATIVE STRENGTH vs BTC — filtro de fuerza relativa 1H
+                # Altcoin que cae mas que BTC = debilidad estructural = VETO
+                # Altcoin que cae menos o sube = fuerza = BOOST +8 puntos
+                try:
+                    import api_connector as _ac_rs
+                    _btc_rs_kl = _ac_rs.get_klines("BTCUSDT", "1h", 3)
+                    _alt_rs_kl = _ac_rs.get_klines(csym, "1h", 3)
+                    if _btc_rs_kl and _alt_rs_kl and len(_btc_rs_kl) >= 2 and len(_alt_rs_kl) >= 2:
+                        _btc_ret = (float(_btc_rs_kl[-1][4]) - float(_btc_rs_kl[-2][4])) / float(_btc_rs_kl[-2][4]) * 100
+                        _alt_ret = (float(_alt_rs_kl[-1][4]) - float(_alt_rs_kl[-2][4])) / float(_alt_rs_kl[-2][4]) * 100
+                        _rs_diff = _alt_ret - _btc_ret
+                        if _btc_ret < -0.5 and _alt_ret < _btc_ret * 1.8:
+                            diag_reasons.append(f"RS_DEBIL({_alt_ret:+.1f}%vsBTC{_btc_ret:+.1f}%)")
+                        elif _rs_diff > 1.0:
+                            c_score = min(100, c_score + 8)
+                except Exception:
+                    pass  # No bloquear si no hay datos comparativos
 
                 # ⚡ VOLUME DELTA PRE-FILTRO 3.0
                 try:

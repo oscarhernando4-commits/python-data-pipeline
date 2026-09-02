@@ -61,6 +61,28 @@ def sleep_with_micro_heartbeat(sleep_secs: int):
         except Exception:
             pass
 
+        # 🟢 MEJORA 1 — BTC RECOVERY DETECTOR (cada 30 segundos cuando NO hay posición activa)
+        # Si BTC RSI cruza 42 al alza durante el sleep de 2 min, romper y escanear YA.
+        # Los primeros setups del rebote de BTC son los más rentables — no esperar 2 minutos.
+        if tick_count % 30 == 0:
+            try:
+                _btc_kl = api_connector.get_klines("BTCUSDT", "1h", 25)
+                if _btc_kl and len(_btc_kl) >= 15:
+                    from multi_timeframe_analyzer import calculate_rsi as _crsi
+                    _btc_cls = [float(k[4]) for k in _btc_kl]
+                    _btc_rsi_now = _crsi(_btc_cls)
+                    _btc_px_now = _btc_cls[-1]
+                    _prev_btc_rsi = getattr(sleep_with_micro_heartbeat, "_last_btc_rsi", 30.0)
+                    sleep_with_micro_heartbeat._last_btc_rsi = _btc_rsi_now
+                    if _btc_rsi_now >= 42.0 and _prev_btc_rsi < 42.0:
+                        print(f"\n🟢 [BTC RECOVERY DETECTOR] ¡BTC RSI cruzó 42 al ALZA! ({_prev_btc_rsi:.1f} → {_btc_rsi_now:.1f}) @ ${_btc_px_now:,.0f}", flush=True)
+                        print("⚡ Rompiendo sleep anticipadamente — capturando PRIMEROS SETUPS del rebote...\n", flush=True)
+                        break
+                    elif tick_count % 60 == 0:
+                        print(f"📊 [BTC MONITOR 60s] RSI1H={_btc_rsi_now:.1f} | ${_btc_px_now:,.0f} | {'🟡 Bajista (esperando RSI>42)' if _btc_rsi_now < 42 else '🟢 Modo Normal activo'}", flush=True)
+            except Exception:
+                pass
+
 
 def run_focused_position_guardian(max_duration_secs: int = 14400):
     """
@@ -296,6 +318,45 @@ def main():
 
     print(f"\n🏁 [RUNNER CONTINUO FINALIZADO] Se completaron los {total_cycles} ciclos (4 horas).", flush=True)
     print("El siguiente disparador o cron tomará el relevo automáticamente.", flush=True)
+
+    # 📊 MEJORA 6 — DAILY RECAP: Resumen completo al final de cada run de 4 horas
+    try:
+        import api_connector as _ac_recap
+        from multi_timeframe_analyzer import calculate_rsi as _rsi_recap
+        _st = _ac_recap.load_real_account_state()
+        _bal = _st.get("current_balance_usd", 0)
+        _wins = _st.get("daily_wins", 0)
+        _losses = _st.get("daily_losses", 0)
+        _total_ops = _wins + _losses
+        _wr = (_wins / _total_ops * 100) if _total_ops > 0 else 0
+        _daily_pnl = _st.get("_daily_pnl_usd", 0)
+        _pos = _st.get("position")
+        _btc_kl = _ac_recap.get_klines("BTCUSDT", "1h", 25)
+        _btc_rsi = _rsi_recap([float(k[4]) for k in _btc_kl]) if _btc_kl else 50
+        _btc_px = float(_btc_kl[-1][4]) if _btc_kl else 0
+        _btc_mode = "CRASH" if _btc_rsi < 22 else ("BAJISTA" if _btc_rsi < 42 else ("NORMAL" if _btc_rsi < 55 else "ALCISTA"))
+        print("\n" + "=" * 70, flush=True)
+        print("📊 RESUMEN DE SESIÓN (4 HORAS)", flush=True)
+        print("=" * 70, flush=True)
+        print(f"  💰 Balance: ${_bal:.2f} USD", flush=True)
+        print(f"  📈 Operaciones hoy: {_total_ops} ({_wins} wins / {_losses} losses) | WR: {_wr:.0f}%", flush=True)
+        print(f"  💵 PnL del día: ${_daily_pnl:+.4f} USD", flush=True)
+        if _pos:
+            _entry = _pos.get("entry_price", 0)
+            _sym_p = _pos.get("symbol", "?")
+            _px_p = _ac_recap.get_symbol_price(_sym_p, is_futures=False) or _entry
+            _pnl_p = ((_px_p - _entry) / _entry * 100) if _entry > 0 else 0
+            print(f"  📌 Posición activa: {_sym_p} | Entrada ${_entry:.4f} | PnL {_pnl_p:+.2f}%", flush=True)
+        else:
+            print(f"  📌 Sin posición activa — 100% USDT protegido", flush=True)
+        print(f"  🔷 BTC: ${_btc_px:,.0f} | RSI1H: {_btc_rsi:.1f} | Modo: {_btc_mode}", flush=True)
+        if _btc_rsi < 42:
+            print(f"  ⏳ Próxima ventana de alta operatividad: cuando BTC RSI > 42 (~${_btc_px*1.03:,.0f})", flush=True)
+        else:
+            print(f"  ✅ Mercado en modo normal — Siguiente sesión con máxima operatividad", flush=True)
+        print("=" * 70 + "\n", flush=True)
+    except Exception as _recap_err:
+        print(f"⚠️ Recap error (no-blocking): {_recap_err}", flush=True)
 
 if __name__ == "__main__":
     main()

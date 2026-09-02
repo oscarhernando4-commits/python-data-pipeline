@@ -1297,10 +1297,54 @@ def quick_position_heartbeat():
                 should_exit = True
                 exit_reason = f"⏱️ CIERRE POR AGOTAMIENTO DE TIEMPO ({holding_minutes_hb}m >= {max_stag_mins}m límite ADN). Momentum decay confirmado. Liberando capital."
 
+            # 🎯 MEJORA 4 — STAGNATION EARLY EXIT en 3 niveles (más inteligente que esperar 12h)
+            # Si el precio no muestra fuerza compradora en las primeras horas → salir antes
+            # En vez de perder tiempo con un trade estancado, buscar un mejor setup
+            if not should_exit:
+                if holding_minutes_hb >= 45 and highest_pnl_pct < 0.30 and current_pnl_pct <= -1.50:
+                    should_exit = True
+                    exit_reason = f"⏱️ SALIDA TEMPRANA L1 (45m sin llegar a +0.30% | PnL={current_pnl_pct:+.2f}%<=-1.50%). Liberando capital para mejor setup."
+                elif holding_minutes_hb >= 90 and highest_pnl_pct < 0.60 and current_pnl_pct <= -2.00:
+                    should_exit = True
+                    exit_reason = f"⏱️ SALIDA TEMPRANA L2 (90m sin llegar a +0.60% | PnL={current_pnl_pct:+.2f}%<=-2.00%). Momentum agotado."
+                elif holding_minutes_hb >= 180 and highest_pnl_pct < 0.80:
+                    should_exit = True
+                    exit_reason = f"⏱️ SALIDA TEMPRANA L3 (3h sin llegar a +0.80% de pico. Pico={highest_pnl_pct:+.2f}%). Cerrando a precio de mercado."
+
+        # 🔴 MEJORA 2 — OBV IN-POSITION MONITOR (cada ~5 min en Fase 1)
+        # Si OBV se vuelve DISTRIBUTING durante el trade → institucionales vendiendo nuestra posición
+        # Reducir SL de -4% a -1.5% inmediatamente para limitar la pérdida potencial
+        if not should_exit and current_phase == 1 and holding_minutes_hb > 0 and holding_minutes_hb % 5 == 0:
+            try:
+                from multi_timeframe_analyzer import calculate_rsi as _crsi_hb
+                _kl_obv = get_klines(sym, "15m", 20)
+                if _kl_obv and len(_kl_obv) >= 10:
+                    # Calcular OBV simple en tiempo real
+                    _obv_val = 0.0
+                    for _i in range(1, len(_kl_obv)):
+                        _c_now = float(_kl_obv[_i][4])
+                        _c_prev = float(_kl_obv[_i-1][4])
+                        _vol = float(_kl_obv[_i][5])
+                        _obv_val += _vol if _c_now > _c_prev else (-_vol if _c_now < _c_prev else 0)
+                    _obv_5_ago = 0.0
+                    for _i in range(1, len(_kl_obv)-5):
+                        _c_now = float(_kl_obv[_i][4])
+                        _c_prev = float(_kl_obv[_i-1][4])
+                        _vol = float(_kl_obv[_i][5])
+                        _obv_5_ago += _vol if _c_now > _c_prev else (-_vol if _c_now < _c_prev else 0)
+                    _live_obv_trend = "DISTRIBUTING" if _obv_val < _obv_5_ago * 0.95 else "ACUMULANDO"
+                    if _live_obv_trend == "DISTRIBUTING" and current_pnl_pct < 0:
+                        # Tighten SL: adjust initial_sl_pct to -1.5% if was -4.0%
+                        _cur_sl_orig = float(pos.get("initial_sl_pct", -4.0))
+                        if _cur_sl_orig <= -2.5:
+                            pos["initial_sl_pct"] = -1.5
+                            state["position"] = pos
+                            save_real_account_state(state)
+                            print(f"🔴 [OBV MONITOR] {sym}: OBV viró a DISTRIBUTING en Fase 1 ({holding_minutes_hb}m). SL ajustado {_cur_sl_orig:.1f}% → -1.5% para proteger capital.", flush=True)
+            except Exception:
+                pass
 
 
-        
-        # 🧱 MEJORA 4: Cancelación Preventiva — Solo si el libro de órdenes colapsa severamente
         # Requiere pérdida > -1.50% y Bids < 30% para evitar falsas salidas por ruido de micro-spread
         if not should_exit and holding_minutes_hb <= 2 and current_pnl_pct < -1.50:
             try:
