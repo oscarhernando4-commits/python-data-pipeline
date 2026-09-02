@@ -1417,11 +1417,14 @@ def quick_position_heartbeat():
                 state["wins"] = state.get("wins", 0) + 1
                 state["daily_wins"] = state.get("daily_wins", 0) + 1
                 state["_consecutive_losses"] = 0  # Reset racha de pérdidas al ganar
+                state["_last_exit_was_btc_shield"] = False  # Reset flag de escudo en victoria
             else:
                 state["losses"] = state.get("losses", 0) + 1
                 state["daily_losses"] = state.get("daily_losses", 0) + 1
                 state["_consecutive_losses"] = state.get("_consecutive_losses", 0) + 1
                 state["_last_loss_time"] = time.time()  # FIX: registrar timestamp de pérdida para Circuit Breakers
+                if "ESCUDO BITCOIN" not in str(exit_reason):
+                    state["_last_exit_was_btc_shield"] = False
             state["trades_count"] = state.get("trades_count", 0) + 1
             state["net_pnl_usd"] = round(state.get("net_pnl_usd", 0.0) + pnl_usd, 4)
             # FIX: Actualizar PnL diario correctamente (clave para el límite diario de pérdida)
@@ -1880,8 +1883,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         # Protege el capital de días de mercado adverso sostenido.
         # ═══════════════════════════════════════════════════════════════════════
         try:
-            from datetime import datetime as _dt
-            today_str = _dt.now().strftime("%Y-%m-%d")
+            from datetime import datetime as _dt, timezone as _tz_mod
+            today_str = _dt.now(_tz_mod.utc).strftime("%Y-%m-%d")
             if state.get("_daily_pnl_date") != today_str:
                 state["_daily_pnl_date"] = today_str
                 state["_daily_pnl_usd"] = 0.0

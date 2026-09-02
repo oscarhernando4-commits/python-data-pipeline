@@ -12534,5 +12534,47 @@
         "range_position_1m": 0.75
       }
     }
+  ],
+  "real_history": [
+    {
+      "timestamp": "2026-09-02 14:07:00",
+      "timestamp_ms": 1788358020000,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "ZROUSDT",
+      "side": "LONG",
+      "entry_price": 1.006,
+      "exit_price": 1.016,
+      "pnl_usd": 0.1182,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via Trailing Floor / Target Hit (+0.99%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 44.0,
+        "vol_surge": 0.77,
+        "obv_trend": "ACCUMULATING"
+      }
+    },
+    {
+      "timestamp": "2026-09-02 09:48:00",
+      "timestamp_ms": 1788342480000,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "BCHUSDT",
+      "side": "LONG",
+      "entry_price": 244.2,
+      "exit_price": 244.1,
+      "pnl_usd": -0.05,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via BTC Shield (-0.04%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 33.6,
+        "vol_surge": 0.23,
+        "obv_trend": "DISTRIBUTING"
+      }
+    }
   ]
 }

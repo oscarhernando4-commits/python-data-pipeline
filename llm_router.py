@@ -536,8 +536,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     ═══════════════════════════════════════════════════════════
     ✅ REQUISITOS MÍNIMOS PARA APROBAR (TODOS deben cumplirse):
     ═══════════════════════════════════════════════════════════
-    R1. Canal 1M <= 35%, Canal 5M <= 42%, Canal 15M <= 50% (precio en base real, no a mitad del rango)
-    R1. Canal 1M <= 45% (compra en base/suelo fractal, prohibido comprar en cima)
+    R1. Canal 1M <= 35%, Canal 5M <= 42%, Canal 15M <= 50% (precio en base fractal real, prohibido comprar en cima)
     R2. FII >= 50 (institucionales absorbiendo en el suelo)
     R3. VolSurge 1M >= 0.20x (hay actividad compradora)
     R4. Bids >= 45% (libro de órdenes equilibrado o a favor del comprador)

@@ -26,15 +26,32 @@ def load_memory():
                     "4H Macro Trend Alignment with 15M Reversal"
                 ]
             },
-            "history": []
+            "history": [],
+            "real_history": []
         }
         with open(DATA_FILE, "w", encoding="utf-8") as f:
             json.dump(initial_data, f, indent=2, ensure_ascii=False)
         return initial_data
     with open(DATA_FILE, "r", encoding="utf-8") as f:
-        return json.load(f)
+        data = json.load(f)
+        if "real_history" not in data:
+            data["real_history"] = []
+        return data
 
 def save_memory(data):
+    # 🛡️ AISLAMIENTO DE CUENTA REAL: Asegurar que real_history siempre preserve todas las operaciones R-01
+    if "real_history" not in data:
+        data["real_history"] = []
+    
+    # Extraer cualquier trade real que esté en history y guardarlo permanentemente en real_history
+    for t in data.get("history", []):
+        if str(t.get("account_id", "")).strip() == "R-01" or t.get("source") == "REAL" or "REAL" in str(t.get("group_name", "")).upper():
+            ts_ms = t.get("timestamp_ms", 0)
+            sym = t.get("symbol", "")
+            if not any(r.get("timestamp_ms") == ts_ms and r.get("symbol") == sym for r in data["real_history"]):
+                data["real_history"].append(t)
+    
+    # Solo se recortan las simulaciones para no sobrecargar el disco
     if len(data.get("history", [])) > 500:
         data["history"] = data["history"][-500:]
     with open(DATA_FILE, "w", encoding="utf-8") as f:
@@ -277,6 +294,9 @@ def record_trade_outcome(symbol, side="LONG", entry_price=0.0, exit_price=0.0, p
     
     # Actualizar estadísticas principales SOLO con operaciones REALES
     if is_real_account:
+        if "real_history" not in data:
+            data["real_history"] = []
+        data["real_history"].append(trade_entry)
         stats = data["stats"]
         stats["total_trades"] += 1
         if result_type.upper() == "WIN":
@@ -323,8 +343,10 @@ def get_executive_learning_summary(data=None):
     wins = stats.get("wins", sum(1 for t in history if t.get("result") == "WIN"))
     wr = stats.get("win_rate_pct", round((wins / max(total_trades, 1)) * 100, 1))
     
-    # 2. Extract recent real performance
-    real_trades = [t for t in history if "REAL" in str(t.get("group_name", "")).upper() or "R-01" in str(t.get("account_id", "")).upper()]
+    # 2. Extract recent real performance (prioritize isolated real_history)
+    real_trades = data.get("real_history", [])
+    if not real_trades:
+        real_trades = [t for t in history if "REAL" in str(t.get("group_name", "")).upper() or "R-01" in str(t.get("account_id", "")).upper()]
     real_wins = sum(1 for t in real_trades if t.get("result") == "WIN")
     real_wr = round((real_wins / max(len(real_trades), 1)) * 100, 1) if real_trades else wr
     
