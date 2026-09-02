@@ -191,6 +191,22 @@ def get_asset_dna_archetype(symbol: str, atr_15m_pct: float = None, price: float
     else:
         config["is_low_volatility_zombie"] = False  # Allow pipeline to fetch live ATR before vetoing
         
+    # 🧬 INYECCIÓN DE ADN PERSONALIZADO APRENDIDO (Desde quant_database SQLite):
+    try:
+        import quant_database
+        dna_p = quant_database.get_crypto_dna_profile(symbol)
+        if dna_p:
+            config["dna_profile"] = dna_p
+            config["dna_tier"] = dna_p.get("dna_tier", "BALANCED")
+            rec_target = float(dna_p.get("recommended_target_pct", 0.85))
+            if 0.70 <= rec_target <= 1.40:
+                config["phase_2_trigger_pct"] = rec_target
+            if dna_p.get("dna_tier") == "☠️ TÓXICO":
+                config["is_low_volatility_zombie"] = True
+                config["guideline_for_ai"] = "⛔ VETO ACTIVO: Token con historial tóxico comprobado en SQLite (WR < 40%)."
+    except Exception:
+        pass
+
     if config["is_low_volatility_zombie"]:
         config["guideline_for_ai"] = "⛔ VETO ACTIVO: Volatilidad/Elasticidad insuficiente (ATR 15M < 0.35% o Mega-Cap lenta). Prohibido para scalping spot."
     return config

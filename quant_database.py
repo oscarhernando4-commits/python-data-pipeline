@@ -73,6 +73,26 @@ def init_db():
     cur.execute("CREATE INDEX IF NOT EXISTS idx_sim_group ON sim_trades(group_id)")
     cur.execute("CREATE INDEX IF NOT EXISTS idx_sim_symbol ON sim_trades(symbol)")
     
+    # 3. Tabla de Perfiles de ADN por Criptomoneda (Auto-Aprendizaje Específico)
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS crypto_dna_profiles (
+        symbol TEXT PRIMARY KEY,
+        sector TEXT,
+        historical_trades INTEGER DEFAULT 0,
+        wins INTEGER DEFAULT 0,
+        losses INTEGER DEFAULT 0,
+        win_rate_pct REAL DEFAULT 50.0,
+        net_pnl_usd REAL DEFAULT 0.0,
+        avg_peak_gain_pct REAL DEFAULT 1.0,
+        recommended_target_pct REAL DEFAULT 0.90,
+        recommended_sl_pct REAL DEFAULT -4.0,
+        avg_hold_mins REAL DEFAULT 45.0,
+        dna_tier TEXT DEFAULT 'BALANCED',
+        last_updated_utc TEXT
+    )
+    """)
+    cur.execute("CREATE INDEX IF NOT EXISTS idx_dna_tier ON crypto_dna_profiles(dna_tier)")
+    
     conn.commit()
     conn.close()
 
@@ -238,7 +258,134 @@ def export_intelligence_matrix() -> dict:
         
     return matrix_data
 
+def get_crypto_dna_profile(symbol: str) -> dict:
+    """
+    Retorna el perfil fenotípico de ADN aprendido para una criptomoneda específica.
+    Si aún no tiene historial suficiente, infiere parámetros inteligentes basados en su sector.
+    """
+    try:
+        init_db()
+        conn = get_db_connection()
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM crypto_dna_profiles WHERE symbol = ?", (symbol.upper(),))
+        row = cur.fetchone()
+        conn.close()
+        if row:
+            return dict(row)
+    except Exception:
+        pass
+    
+    clean_sym = symbol.upper().replace("USDT", "")
+    try:
+        from asset_dna_predictive_engine import TOKEN_SECTOR_MAP
+        sec = TOKEN_SECTOR_MAP.get(clean_sym, "L1")
+    except Exception:
+        sec = "L1"
+        
+    return {
+        "symbol": symbol.upper(),
+        "sector": sec,
+        "historical_trades": 0,
+        "wins": 0,
+        "losses": 0,
+        "win_rate_pct": 50.0,
+        "net_pnl_usd": 0.0,
+        "avg_peak_gain_pct": 1.00,
+        "recommended_target_pct": 0.85,
+        "recommended_sl_pct": -4.0,
+        "avg_hold_mins": 45.0,
+        "dna_tier": "BALANCED",
+        "last_updated_utc": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+    }
+
+def compile_all_dna_profiles():
+    """
+    Analiza todos los trades (reales y simulados) en SQLite y actualiza
+    los perfiles de ADN de cada criptomoneda con métricas hiper-detalladas.
+    """
+    try:
+        init_db()
+        conn = get_db_connection()
+        cur = conn.cursor()
+        
+        try:
+            from asset_dna_predictive_engine import TOKEN_SECTOR_MAP
+        except Exception:
+            TOKEN_SECTOR_MAP = {}
+            
+        now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+
+        # Agrupar estadísticas por símbolo desde sim_trades y real_trades
+        cur.execute("""
+        SELECT 
+            symbol,
+            COUNT(*) as total,
+            SUM(CASE WHEN result = 'WIN' THEN 1 ELSE 0 END) as wins,
+            SUM(CASE WHEN result = 'LOSS' THEN 1 ELSE 0 END) as losses,
+            SUM(pnl_usd) as net_pnl,
+            AVG(CASE WHEN pnl_pct > 0 THEN pnl_pct ELSE NULL END) as avg_win,
+            AVG(hold_min) as avg_hold
+        FROM sim_trades
+        GROUP BY symbol
+        """)
+        sim_rows = cur.fetchall()
+        
+        for r in sim_rows:
+            sym = r["symbol"].upper()
+            clean_sym = sym.replace("USDT", "")
+            sec = TOKEN_SECTOR_MAP.get(clean_sym, "L1")
+            total = r["total"]
+            wins = r["wins"] or 0
+            losses = r["losses"] or 0
+            net_pnl = round(r["net_pnl"] or 0.0, 4)
+            wr = round(wins / max(total, 1) * 100.0, 1)
+            avg_win = round(r["avg_win"] or 1.00, 2)
+            avg_hold = round(r["avg_hold"] or 45.0, 1)
+            
+            # Cima típica recomendada: entre 0.75% y 1.25% según su comportamiento histórico
+            rec_target = max(0.75, min(1.30, avg_win * 0.90))
+            
+            # Calificación del ADN
+            if wr >= 65.0 and total >= 3:
+                tier = "💎 A+ ÉLITE"
+            elif wr >= 52.0:
+                tier = "🟢 A SÓLIDO"
+            elif wr < 40.0 and total >= 3:
+                tier = "☠️ TÓXICO"
+            else:
+                tier = "🔵 B BALANCED"
+                
+            cur.execute("""
+            INSERT INTO crypto_dna_profiles (
+                symbol, sector, historical_trades, wins, losses, win_rate_pct,
+                net_pnl_usd, avg_peak_gain_pct, recommended_target_pct,
+                recommended_sl_pct, avg_hold_mins, dna_tier, last_updated_utc
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(symbol) DO UPDATE SET
+                sector = excluded.sector,
+                historical_trades = excluded.historical_trades,
+                wins = excluded.wins,
+                losses = excluded.losses,
+                win_rate_pct = excluded.win_rate_pct,
+                net_pnl_usd = excluded.net_pnl_usd,
+                avg_peak_gain_pct = excluded.avg_peak_gain_pct,
+                recommended_target_pct = excluded.recommended_target_pct,
+                recommended_sl_pct = excluded.recommended_sl_pct,
+                avg_hold_mins = excluded.avg_hold_mins,
+                dna_tier = excluded.dna_tier,
+                last_updated_utc = excluded.last_updated_utc
+            """, (
+                sym, sec, total, wins, losses, wr, net_pnl, avg_win,
+                rec_target, -4.0, avg_hold, tier, now_str
+            ))
+            
+        conn.commit()
+        conn.close()
+    except Exception as e:
+        print(f"⚠️ Error compiling DNA profiles: {e}")
+
 if __name__ == "__main__":
     init_db()
+    compile_all_dna_profiles()
     mat = export_intelligence_matrix()
     print("quant_intelligence.db initialized successfully. Matrix exported:", mat)

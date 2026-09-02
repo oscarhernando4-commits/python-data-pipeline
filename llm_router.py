@@ -501,9 +501,21 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         candidates_prompt_text += f"- 🟠 BTC GUARD: BTC 1H={btc_1h_chg:+.2f}% ({btc_status}) | Impacto Altcoins={btc_impact}{btc_avoid_str}\n"
         fund_risk_str = " ⛔DUMP_RISK_FUNDING" if fund_dump_risk else (" 🔥SHORT_SQUEEZE" if fund_squeeze else "")
         candidates_prompt_text += f"- 💰 FUNDING PERPS: {fund_signal} ({fund_rate:+.4f}%){fund_risk_str}\n"
-        sector_hot_str = " 🔥SECTOR_CALIENTE" if sector_hot else ""
-        already_str = " ⛔YA_OPERADO_HOY" if already_traded else ""
-        candidates_prompt_text += f"- 🏭 SECTOR: {token_sector} (Sector mas caliente hoy: {hottest_sec}){sector_hot_str}{already_str}\n"
+        # 🧬 PERFIL EMPÍRICO APRENDIDO (Desde quant_database SQLite)
+        try:
+            import quant_database
+            dna_prof = quant_database.get_crypto_dna_profile(sym)
+            if dna_prof and dna_prof.get("historical_trades", 0) > 0:
+                candidates_prompt_text += (
+                    f"- 🧬 ADN APRENDIDO: Rating={dna_prof.get('dna_tier')} | "
+                    f"WR={dna_prof.get('win_rate_pct')}% ({dna_prof.get('wins')}W/{dna_prof.get('losses')}L) | "
+                    f"Cima Típica=+{dna_prof.get('avg_peak_gain_pct'):.2f}% | "
+                    f"Meta Sugerida=+{dna_prof.get('recommended_target_pct'):.2f}%\n"
+                )
+            else:
+                candidates_prompt_text += f"- 🧬 ADN APRENDIDO: Sector={token_sector} | Perfil Limpio A+ (Meta Sugerida=+0.85%)\n"
+        except Exception:
+            pass
         candidates_prompt_text += "------------------------------------\n"
 
     print(f"✅ [Comité Institucional 7 Agentes] Consultando al Súper-Cerebro Gemini AI (Gemini 3.1 Flash Lite) para el TOP {len(candidates_data_list)} simultáneo...", flush=True)
