@@ -19,7 +19,7 @@
     "phase": 1,
     "archetype": "SECTOR_ROTATION",
     "archetype_label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
-    "initial_sl_pct": -4.0,
+    "initial_sl_pct": -1.5,
     "max_stagnation_minutes": 540,
     "vol_surge": 0.77,
     "vol_surge_1m": 0.98,
@@ -37,8 +37,9 @@
     "btc_entry_price": 77270.01,
     "is_sniper_setup": false,
     "is_super_sniper": false,
-    "holding_cycles": 0,
-    "volatility_regime": "🌱 FASE 1 RUMBO A META (🧩 Cima +0.10% | SL -4.00%)"
+    "holding_cycles": 10,
+    "volatility_regime": "🌱 FASE 1 RUMBO A META (🧩 Cima +0.10% | SL -4.00%)",
+    "btc_peak_price": 77304.68
   },
   "last_trade_time": "26-09-02<br>14:07",
   "status": "🔵 En Vivo LONG (ZROUSDT @ $1.0060)",
