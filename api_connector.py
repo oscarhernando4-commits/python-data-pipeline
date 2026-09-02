@@ -1243,8 +1243,10 @@ def quick_position_heartbeat():
 
 
             
-        # 🪙 ESCUDO BITCOIN PEAK-TRAILING & CIRCUIT BREAKER 3.0:
-        # Registra el precio pico de BTC durante la operación y detecta caídas tanto desde la entrada como desde el pico.
+        # 🪙 ESCUDO BITCOIN PEAK-TRAILING & CIRCUIT BREAKER 4.0:
+        # FIX CRITICO: El shield NO debe dispararse cuando BTC está en RECUPERACIÓN.
+        # Antes: -0.80% desde pico disparaba el shield incluso con BTC subiendo → cerraba trades prematuramente.
+        # Ahora: Verifica modo BTC ANTES de evaluar el shield.
         btc_entry = float(pos.get("btc_entry_price", 0.0))
         btc_peak = float(pos.get("btc_peak_price", btc_entry if btc_entry > 0 else 0.0))
         btc_now = get_symbol_price("BTCUSDT", is_futures=False)
@@ -1256,8 +1258,27 @@ def quick_position_heartbeat():
                 
             if not should_exit and current_pnl_pct < 0:
                 btc_drop_from_entry_pct = ((btc_now - btc_entry) / btc_entry) * 100.0 if btc_entry > 0 else 0.0
-                btc_drop_from_peak_pct = ((btc_now - btc_peak) / btc_peak) * 100.0 if btc_peak > 0 else 0.0
-                
+                btc_drop_from_peak_pct  = ((btc_now - btc_peak)  / btc_peak)  * 100.0 if btc_peak  > 0 else 0.0
+
+                # ── DETECCIÓN DE MODO BTC (nueva lógica) ──────────────────────────
+                # Si BTC está en recuperación activa, el shield debe ser más tolerante.
+                # Una caída de -0.80% desde el pico es ruido normal en una subida de BTC.
+                _btc_in_recovery = False
+                try:
+                    from multi_timeframe_analyzer import calculate_rsi as _crsi_shield
+                    _kl_shield = get_klines("BTCUSDT", "1h", 25)
+                    if _kl_shield and len(_kl_shield) >= 22:
+                        _cls_shield = [float(k[4]) for k in _kl_shield]
+                        _rsi_shield = _crsi_shield(_cls_shield)
+                        _ema21_s = sum(_cls_shield[-21:]) / 21
+                        _ek = 2 / 22
+                        for _ep in _cls_shield[-20:]:
+                            _ema21_s = _ep * _ek + _ema21_s * (1 - _ek)
+                        _btc_in_recovery = _rsi_shield >= 38.0 and btc_now >= _ema21_s
+                except Exception:
+                    pass
+                # ──────────────────────────────────────────────────────────────────
+
                 # Check orderbook bid dominance to verify real contagion
                 bids_hb = 50.0
                 try:
@@ -1266,19 +1287,27 @@ def quick_position_heartbeat():
                     bids_hb = ob_quick.get("bid_dominance_pct", 50.0)
                 except Exception:
                     pass
-                
-                # Criterio 1: Desplome de BTC desde el pico (>= -0.80%) arrastrando la altcoin
-                is_peak_btc_dump = bool(btc_drop_from_peak_pct <= -0.80 and current_pnl_pct <= -0.60)
-                # Criterio 2: Caída severa desde entrada
-                is_severe_btc_dump = bool(btc_drop_from_entry_pct <= -0.65 and current_pnl_pct <= -0.80)
-                # Criterio 3: Contagio con libro colapsado
-                is_contagion_dump = bool(btc_drop_from_entry_pct <= -0.45 and current_pnl_pct <= -1.20 and bids_hb < 40.0)
-                
+
+                if _btc_in_recovery:
+                    # BTC recuperándose: umbrales MUY relajados — solo actuar en caídas brutales
+                    # Ruido de -0.80% desde pico = normal en subida. Necesitamos -2.0%+ para alertar.
+                    is_peak_btc_dump   = bool(btc_drop_from_peak_pct  <= -2.00 and current_pnl_pct <= -1.50)
+                    is_severe_btc_dump = bool(btc_drop_from_entry_pct <= -1.50 and current_pnl_pct <= -1.80)
+                    is_contagion_dump  = bool(btc_drop_from_entry_pct <= -1.00 and current_pnl_pct <= -2.00 and bids_hb < 35.0)
+                    _shield_mode_label = "RECOVERY_MODE(umbrales_relajados)"
+                else:
+                    # BTC bajista/neutro: umbrales originales
+                    is_peak_btc_dump   = bool(btc_drop_from_peak_pct  <= -0.80 and current_pnl_pct <= -0.60)
+                    is_severe_btc_dump = bool(btc_drop_from_entry_pct <= -0.65 and current_pnl_pct <= -0.80)
+                    is_contagion_dump  = bool(btc_drop_from_entry_pct <= -0.45 and current_pnl_pct <= -1.20 and bids_hb < 40.0)
+                    _shield_mode_label = "BEARISH_MODE(umbrales_normales)"
+
                 if (is_peak_btc_dump or is_severe_btc_dump or is_contagion_dump) and bids_hb < 52.0:
                     should_exit = True
                     trigger_drop = btc_drop_from_peak_pct if is_peak_btc_dump else btc_drop_from_entry_pct
-                    exit_reason = f"🚨 ESCUDO BITCOIN 3.0: BTC cayó {trigger_drop:+.2f}% y contagió a {sym} (PnL={current_pnl_pct:+.2f}%, Bids={bids_hb:.0f}%). Eyectando para proteger capital."
+                    exit_reason = f"🚨 ESCUDO BITCOIN 4.0 [{_shield_mode_label}]: BTC cayó {trigger_drop:+.2f}% y contagió a {sym} (PnL={current_pnl_pct:+.2f}%, Bids={bids_hb:.0f}%). Eyectando para proteger capital."
                     state["_last_exit_was_btc_shield"] = True
+
 
         # ⏱️ CONTROL DE ESTANCAMIENTO & TIME-DECAY SL DINÁMICO 3.0 (Por Arquetipo ADN):
         if not should_exit and current_phase == 1:
@@ -1387,11 +1416,20 @@ def quick_position_heartbeat():
             if is_win_exit:
                 state["wins"] = state.get("wins", 0) + 1
                 state["daily_wins"] = state.get("daily_wins", 0) + 1
+                state["_consecutive_losses"] = 0  # Reset racha de pérdidas al ganar
             else:
                 state["losses"] = state.get("losses", 0) + 1
                 state["daily_losses"] = state.get("daily_losses", 0) + 1
+                state["_consecutive_losses"] = state.get("_consecutive_losses", 0) + 1
+                state["_last_loss_time"] = time.time()  # FIX: registrar timestamp de pérdida para Circuit Breakers
             state["trades_count"] = state.get("trades_count", 0) + 1
             state["net_pnl_usd"] = round(state.get("net_pnl_usd", 0.0) + pnl_usd, 4)
+            # FIX: Actualizar PnL diario correctamente (clave para el límite diario de pérdida)
+            state["_daily_pnl_usd"] = round(state.get("_daily_pnl_usd", 0.0) + pnl_usd, 4)
+            state["_last_closed_symbol"] = sym
+            state["_last_closed_time"] = time.time()
+            state["_last_exit_price"] = current_price
+
             
             # 📖 Guardar en Learning Engine para memoria y aprendizaje de futuros trades
             try:
@@ -1825,6 +1863,17 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             else:
                 print(f"✅ [CIRCUIT BREAKER] Cooldown completado ({minutes_since_loss:.0f}m). Reactivando búsqueda A+.")
 
+        # FIX CRITICO: Circuit Breaker basado en LOSSES DEL DÍA (más confiable que _daily_pnl_usd)
+        # _daily_pnl_usd a veces no se actualiza correctamente → usar daily_losses como fallback
+        _daily_l = state.get("daily_losses", 0)
+        _last_loss_ts = state.get("_last_loss_time", 0)
+        if _daily_l >= 2 and _last_loss_ts > 0:
+            _mins_since = (time.time() - _last_loss_ts) / 60.0
+            if _mins_since < 45.0:
+                _remaining = 45.0 - _mins_since
+                print(f"🛑 [CB DIARIO] {_daily_l} pérdidas hoy. Cooldown de seguridad: {_remaining:.0f}m restantes. Esperando condiciones más favorables.")
+                return
+
         # ═══════════════════════════════════════════════════════════════════════
         # 🛡️ ESCUDO 2: LÍMITE DIARIO DE PÉRDIDA (Daily Loss Limit)
         # Máximo $0.40 de pérdida neta en el día. Si se supera → STOP por hoy.
@@ -1845,6 +1894,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"⚠️ [ALERTA DIARIA] Pérdida acumulada hoy: ${daily_pnl:.3f}. Cerca del límite diario. Modo ultra-selectivo activado.")
         except Exception:
             pass
+
 
         # ═══════════════════════════════════════════════════════════════════════
         # 🛡️ ESCUDO 3: SISMÓGRAFO DE AMPLITUD DE MERCADO DINÁMICA 2.0 (Dynamic Breadth)
