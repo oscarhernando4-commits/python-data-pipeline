@@ -1223,12 +1223,12 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             sl_pct = max(0.75, round(highest_pnl_pct * 0.75, 4))
             phase = 2
             phase_label = f"🎯 FASE 2 META DINÁMICA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.45:
-            sl_pct = max(0.25, round(highest_pnl_pct * 0.75, 4))
+        elif highest_pnl_pct >= 0.50:
+            sl_pct = max(0.35, round(highest_pnl_pct * 0.75, 4))
             phase = 1
             phase_label = f"⚡ SUB-FASE COSECHA MEDIA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.20:
-            sl_pct = max(0.16, round(highest_pnl_pct * 0.75, 4))
+        elif highest_pnl_pct >= 0.35:
+            sl_pct = max(0.25, round(highest_pnl_pct * 0.75, 4))
             phase = 1
             phase_label = f"🛡️ GANANCIA LIBRE ASEGURADA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
         else:
@@ -1313,17 +1313,16 @@ def quick_position_heartbeat():
         exit_reason = f"🎯 Trailing Floor Activado ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
 
         # ⚡ COSECHA DINÁMICA POR FLUJO DE COMPRAS Y VENTAS EN VIVO (ORDER FLOW & TAPE READING):
-        # Si ya estamos en ganancia neta libre de comisión (>= +0.20%, cubre 0.15% fee de Binance BNB):
-        # Monitorear compras vs ventas y micro-retroceso para cosechar en el momento justo
-        if not should_exit and current_pnl_pct >= 0.20:
-            # A) Micro-retroceso desde la cima local (holgura de 0.10% para no devolver ganancias)
-            if highest_pnl_pct >= 0.28 and current_pnl_pct <= (highest_pnl_pct - 0.10):
+        # Asegura ganancia neta sustancial libre de comisiones (>= +0.28% para cubrir 0.15% fee de Binance):
+        if not should_exit and current_pnl_pct >= 0.28:
+            # A) Micro-retroceso desde la cima local (holgura de 0.12% para dejar respirar el trade)
+            if highest_pnl_pct >= 0.38 and current_pnl_pct <= (highest_pnl_pct - 0.12):
                 should_exit = True
                 exit_reason = f"⚡ Cosecha Dinámica Micro-Retroceso ({current_pnl_pct:+.2f}% libre | Cima fue +{highest_pnl_pct:.2f}%)"
             else:
-                # B) Flujo de órdenes agresivas y libro en tiempo real
+                # B) Flujo de órdenes agresivas y libro en tiempo real (si ventas taker superan 60%)
                 flow = get_realtime_order_flow_momentum(sym)
-                if flow.get("is_exhaustion_or_dump", False):
+                if flow.get("is_exhaustion_or_dump", False) and current_pnl_pct >= 0.28:
                     should_exit = True
                     exit_reason = (
                         f"⚡ Cosecha Dinámica Flujo Vendedor ({current_pnl_pct:+.2f}% libre | "

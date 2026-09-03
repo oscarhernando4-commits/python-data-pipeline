@@ -233,11 +233,11 @@ def run_simulation_cycle(symbol_analysis_map: dict):
                 floor_pct = max(grp_p2, highest_pnl * retention / 100.0)
             elif highest_pnl >= grp_p2:
                 floor_pct = max(grp_p2 * 0.90, highest_pnl * 0.75)
-            elif highest_pnl >= 0.45:
+            elif highest_pnl >= 0.50:
+                floor_pct = max(0.35, highest_pnl * 0.75)
+            elif highest_pnl >= 0.35:
+                # Ganancia neta libre asegurada cubriendo comisión 0.15%
                 floor_pct = max(0.25, highest_pnl * 0.75)
-            elif highest_pnl >= 0.20:
-                # Ganancia libre asegurada cubriendo comisión 0.15%
-                floor_pct = max(0.16, highest_pnl * 0.75)
             else:
                 floor_pct = grp_sl_pct
 

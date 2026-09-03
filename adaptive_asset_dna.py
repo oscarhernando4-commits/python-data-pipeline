@@ -256,14 +256,14 @@ def calculate_archetype_trailing(
         sl_pct = max(p2_trigger * 0.90, round(highest_pnl_pct * retention_ratio, 4))
         phase = 2
         phase_label = f"🎯 FASE 2 META DINÁMICA (+{p2_trigger:.2f}% | {emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.45:
-        # Cima media: retiene el 75% del avance
-        sl_pct = max(0.25, round(highest_pnl_pct * 0.75, 4))
+    elif highest_pnl_pct >= 0.50:
+        # Cima media: retiene el 75% del avance, piso mínimo en +0.35% (cubre comisiones con holgura)
+        sl_pct = max(0.35, round(highest_pnl_pct * 0.75, 4))
         phase = 1
         phase_label = f"⚡ SUB-FASE COSECHA MEDIA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.20:
-        # Cima micro: cubre comisión 0.15% y asegura ganancia libre
-        sl_pct = max(0.16, round(highest_pnl_pct * 0.75, 4))
+    elif highest_pnl_pct >= 0.35:
+        # Cima inicial: piso en +0.25% (asegura ganancia neta libre de comisiones Binance)
+        sl_pct = max(0.25, round(highest_pnl_pct * 0.75, 4))
         phase = 1
         phase_label = f"🛡️ GANANCIA LIBRE ASEGURADA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
     else:
