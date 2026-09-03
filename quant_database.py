@@ -208,31 +208,32 @@ def export_intelligence_matrix() -> dict:
         conn = get_db_connection()
         cur = conn.cursor()
         
-        # Win Rate por símbolo con >= 3 trades
+        # Win Rate por símbolo desde perfiles de ADN aprendidos
         cur.execute("""
         SELECT 
             symbol,
-            COUNT(*) as total,
-            SUM(CASE WHEN result = 'WIN' THEN 1 ELSE 0 END) as wins,
-            SUM(pnl_usd) as net_pnl
-        FROM sim_trades 
-        GROUP BY symbol
-        HAVING COUNT(*) >= 3
-        ORDER BY (SUM(CASE WHEN result = 'WIN' THEN 1 ELSE 0 END) * 1.0 / COUNT(*)) DESC
+            historical_trades as total,
+            wins,
+            win_rate_pct as win_rate,
+            net_pnl_usd as net_pnl,
+            dna_tier
+        FROM crypto_dna_profiles
+        WHERE historical_trades > 0
+        ORDER BY win_rate_pct DESC, historical_trades DESC
         """)
         rows = cur.fetchall()
         for r in rows:
-            wr = round(r["wins"] / r["total"] * 100.0, 1)
             token_info = {
                 "symbol": r["symbol"],
                 "total": r["total"],
                 "wins": r["wins"],
-                "win_rate": wr,
-                "net_pnl": round(r["net_pnl"] or 0.0, 2)
+                "win_rate": r["win_rate"],
+                "net_pnl": round(r["net_pnl"] or 0.0, 2),
+                "tier": r["dna_tier"]
             }
-            if wr >= 65.0:
+            if r["win_rate"] >= 65.0:
                 matrix_data["elite_tokens"].append(token_info)
-            elif wr < 40.0:
+            elif r["win_rate"] < 40.0 and r["total"] >= 2:
                 matrix_data["blacklisted_tokens"].append(token_info)
                 
         # Total global simulado
@@ -315,7 +316,19 @@ def compile_all_dna_profiles():
             
         now_str = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
 
-        # Agrupar estadísticas por símbolo desde sim_trades y real_trades
+        # 1. Pre-sembrar todos los tokens de la lista oficial CMC con su sector
+        for asset, sec in TOKEN_SECTOR_MAP.items():
+            sym = f"{asset}USDT"
+            cur.execute("""
+            INSERT INTO crypto_dna_profiles (
+                symbol, sector, historical_trades, wins, losses, win_rate_pct,
+                net_pnl_usd, avg_peak_gain_pct, recommended_target_pct,
+                recommended_sl_pct, avg_hold_mins, dna_tier, last_updated_utc
+            ) VALUES (?, ?, 0, 0, 0, 50.0, 0.0, 1.0, 0.85, -4.0, 45.0, 'BALANCED', ?)
+            ON CONFLICT(symbol) DO NOTHING
+            """, (sym, sec, now_str))
+
+        # 2. Agrupar estadísticas por símbolo combinando real_trades y sim_trades
         cur.execute("""
         SELECT 
             symbol,
@@ -325,7 +338,11 @@ def compile_all_dna_profiles():
             SUM(pnl_usd) as net_pnl,
             AVG(CASE WHEN pnl_pct > 0 THEN pnl_pct ELSE NULL END) as avg_win,
             AVG(hold_min) as avg_hold
-        FROM sim_trades
+        FROM (
+            SELECT symbol, result, pnl_usd, pnl_pct, 45.0 as hold_min FROM real_trades
+            UNION ALL
+            SELECT symbol, result, pnl_usd, pnl_pct, hold_min FROM sim_trades
+        )
         GROUP BY symbol
         """)
         sim_rows = cur.fetchall()
@@ -346,11 +363,11 @@ def compile_all_dna_profiles():
             rec_target = max(0.75, min(1.30, avg_win * 0.90))
             
             # Calificación del ADN
-            if wr >= 65.0 and total >= 3:
+            if wr >= 65.0 and total >= 2:
                 tier = "💎 A+ ÉLITE"
             elif wr >= 52.0:
                 tier = "🟢 A SÓLIDO"
-            elif wr < 40.0 and total >= 3:
+            elif wr < 40.0 and total >= 2:
                 tier = "☠️ TÓXICO"
             else:
                 tier = "🔵 B BALANCED"
