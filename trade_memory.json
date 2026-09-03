@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 6,
-    "wins": 5,
+    "total_trades": 7,
+    "wins": 6,
     "losses": 1,
-    "win_rate_pct": 83.33,
-    "total_pnl_usd": 0.2769
+    "win_rate_pct": 85.71,
+    "total_pnl_usd": 0.29159999999999997
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -17,7 +17,8 @@
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on RENDERUSDT)",
       "BOOST LONG when OBV:DISTRIBUTING + FII:Institutional(>=60) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on BCHUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on INJUSDT)",
-      "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)"
+      "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)",
+      "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)"
     ]
   },
   "history": [
@@ -156,6 +157,30 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-09-03 08:44:57",
+      "timestamp_ms": 1788425097739,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.837,
+      "exit_price": 0.838,
+      "pnl_usd": 0.0147,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.12% <= +0.12%) (Fase 1, PnL: +0.12%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 48.3,
+        "atr_pct_15m": 0.484,
+        "vol_surge": 4.44,
+        "vol_surge_1m": 8.37,
+        "fii_score": 85,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -291,6 +316,30 @@
         "vol_surge": 1.19,
         "vol_surge_1m": 2.18,
         "fii_score": 100,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-09-03 08:44:57",
+      "timestamp_ms": 1788425097739,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.837,
+      "exit_price": 0.838,
+      "pnl_usd": 0.0147,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.12% <= +0.12%) (Fase 1, PnL: +0.12%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 48.3,
+        "atr_pct_15m": 0.484,
+        "vol_surge": 4.44,
+        "vol_surge_1m": 8.37,
+        "fii_score": 85,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
