@@ -637,6 +637,73 @@ def get_klines(symbol: str, interval: str = "5m", limit: int = 3) -> list:
             continue
     return []
 
+def get_realtime_order_flow_momentum(symbol: str) -> dict:
+    """
+    ⚡ DETECTOR DE FLUJO DE ÓRDENES Y TAPE READING EN TIEMPO REAL:
+    Monitorea las compras y ventas agresivas de mercado (Recent Trades Taker Flow)
+    y la profundidad del libro (Order Book Imbalance) para cosechar ganancias en la cima:
+    - taker_buy_pct: % de compras de mercado agresivas vs ventas
+    - bid_dominance_pct: % de volumen en Bids frente a Asks
+    - is_exhaustion_or_dump: Señal de que los compradores se agotaron y domina la venta
+    Usa mirrors públicos directos (0 consumo de proxy Fixie).
+    """
+    mirrors = [
+        "https://data-api.binance.vision/api/v3",
+        "https://api1.binance.com/api/v3",
+        "https://api2.binance.com/api/v3",
+        "https://api3.binance.com/api/v3",
+        "https://api.binance.com/api/v3"
+    ]
+    for base_url in mirrors:
+        try:
+            # 1. Consulta últimos 25 trades agresivos
+            t_res = requests.get(f"{base_url}/trades?symbol={symbol}&limit=25", timeout=2.5)
+            if t_res.status_code != 200:
+                continue
+            trades = t_res.json()
+            if not isinstance(trades, list) or not trades:
+                continue
+
+            buy_vol = sum(float(t.get('price', 0)) * float(t.get('qty', 0)) for t in trades if not t.get('isBuyerMaker', False))
+            sell_vol = sum(float(t.get('price', 0)) * float(t.get('qty', 0)) for t in trades if t.get('isBuyerMaker', False))
+            tot_vol = buy_vol + sell_vol
+            taker_buy_pct = (buy_vol / tot_vol * 100.0) if tot_vol > 0 else 50.0
+
+            # 2. Consulta profundidad Top 10 Bids vs Asks
+            d_res = requests.get(f"{base_url}/depth?symbol={symbol}&limit=10", timeout=2.5)
+            depth = d_res.json() if d_res.status_code == 200 else {}
+            bids = depth.get('bids', [])
+            asks = depth.get('asks', [])
+
+            bid_vol = sum(float(b[0]) * float(b[1]) for b in bids)
+            ask_vol = sum(float(a[0]) * float(a[1]) for a in asks)
+            tot_depth = bid_vol + ask_vol
+            bid_dom_pct = (bid_vol / tot_depth * 100.0) if tot_depth > 0 else 50.0
+
+            # Agotamiento o reversión bajista:
+            # Menos de 40% de compras taker O menos de 40% de soporte en bids
+            is_exhaustion = bool(taker_buy_pct < 40.0 or bid_dom_pct < 40.0)
+
+            return {
+                "symbol": symbol,
+                "taker_buy_pct": round(taker_buy_pct, 1),
+                "taker_sell_pct": round(100.0 - taker_buy_pct, 1),
+                "bid_dominance_pct": round(bid_dom_pct, 1),
+                "ask_dominance_pct": round(100.0 - bid_dom_pct, 1),
+                "is_exhaustion_or_dump": is_exhaustion
+            }
+        except Exception:
+            continue
+
+    return {
+        "symbol": symbol,
+        "taker_buy_pct": 50.0,
+        "taker_sell_pct": 50.0,
+        "bid_dominance_pct": 50.0,
+        "ask_dominance_pct": 50.0,
+        "is_exhaustion_or_dump": False
+    }
+
 # ============================================================
 # ORDER EXECUTION (Uses Fixie proxy - counted towards quota)
 # ============================================================
@@ -1145,25 +1212,25 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             atr_pct=atr_pct
         )
     except Exception as e:
-        # Fallback dinámico proporcional multi-nivel
+        # Fallback dinámico proporcional multi-nivel (desde +0.20% ganancia libre)
         if highest_pnl_pct >= 1.60:
-            retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
+            retention_pct = min(85.0, 55.0 + (highest_pnl_pct * 5.0))
             retention_ratio = retention_pct / 100.0
             sl_pct = max(1.00, round(highest_pnl_pct * retention_ratio, 4))
             phase = 3
             phase_label = f"🚀 FASE 3 RALLY DINÁMICO (Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 1.00:
-            sl_pct = max(1.00, round(highest_pnl_pct * 0.75, 4))
+        elif highest_pnl_pct >= 0.85:
+            sl_pct = max(0.75, round(highest_pnl_pct * 0.75, 4))
             phase = 2
             phase_label = f"🎯 FASE 2 META DINÁMICA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.65:
-            sl_pct = max(0.20, round(highest_pnl_pct * 0.70, 4))
-            phase = 1
-            phase_label = f"⚡ SUB-FASE COSECHA DINÁMICA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
         elif highest_pnl_pct >= 0.45:
-            sl_pct = 0.12
+            sl_pct = max(0.25, round(highest_pnl_pct * 0.75, 4))
             phase = 1
-            phase_label = f"🛡️ BREAK-EVEN BLINDADO (Cima +{highest_pnl_pct:.2f}% -> Piso +0.12%)"
+            phase_label = f"⚡ SUB-FASE COSECHA MEDIA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 0.20:
+            sl_pct = max(0.16, round(highest_pnl_pct * 0.75, 4))
+            phase = 1
+            phase_label = f"🛡️ GANANCIA LIBRE ASEGURADA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
         else:
             sl_pct = -4.00
             phase = 1
@@ -1244,10 +1311,24 @@ def quick_position_heartbeat():
         # Check if Stop Loss or Trailing Stop triggered (STRICT INVIOLABLE FLOOR)
         should_exit = current_pnl_pct <= sl_pct
         exit_reason = f"🎯 Trailing Floor Activado ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
-        # 🚫 WICK SNATCHING ELIMINADO (Claude Opus 4.6 Audit):
-        # Las 3 Fases ya gestionan todas las salidas óptimamente.
-        # El Wick Snatching vendía con retrocesos de 0.30% desde el pico,
-        # impidiendo que las Fases 2 y 3 capturaran ganancias de +1.60% a +3.44%.
+
+        # ⚡ COSECHA DINÁMICA POR FLUJO DE COMPRAS Y VENTAS EN VIVO (ORDER FLOW & TAPE READING):
+        # Si ya estamos en ganancia neta libre de comisión (>= +0.20%, cubre 0.15% fee de Binance BNB):
+        # Monitorear compras vs ventas y micro-retroceso para cosechar en el momento justo
+        if not should_exit and current_pnl_pct >= 0.20:
+            # A) Micro-retroceso desde la cima local (holgura de 0.10% para no devolver ganancias)
+            if highest_pnl_pct >= 0.28 and current_pnl_pct <= (highest_pnl_pct - 0.10):
+                should_exit = True
+                exit_reason = f"⚡ Cosecha Dinámica Micro-Retroceso ({current_pnl_pct:+.2f}% libre | Cima fue +{highest_pnl_pct:.2f}%)"
+            else:
+                # B) Flujo de órdenes agresivas y libro en tiempo real
+                flow = get_realtime_order_flow_momentum(sym)
+                if flow.get("is_exhaustion_or_dump", False):
+                    should_exit = True
+                    exit_reason = (
+                        f"⚡ Cosecha Dinámica Flujo Vendedor ({current_pnl_pct:+.2f}% libre | "
+                        f"Compras Taker: {flow.get('taker_buy_pct', 0):.1f}%, Bids: {flow.get('bid_dominance_pct', 0):.1f}%)"
+                    )
 
 
             

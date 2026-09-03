@@ -222,49 +222,50 @@ def calculate_archetype_trailing(
     atr_pct: float = 0.30
 ) -> Tuple[float, int, str]:
     """
-    🎯 SISTEMA DE COSECHA DINÁMICA PROPORCIONAL MULTI-NIVEL:
+    🎯 SISTEMA DE COSECHA DINÁMICA ULTRA-PROPORCIONAL (DESDE +0.20% GANANCIA LIBRE):
     - FASE 3 (>= +1.60%): Rally Dinámico con retención del 75% al 85% de la cima.
-    - FASE 2 (+1.00% a +1.59%): Meta Cumplida. Piso de retención en max(+1.00%, Cima × 75%).
-    - ⚡ SUB-FASE COSECHA DINÁMICA (+0.65% a +0.99%):
-        * ¡LA SOLUCIÓN EXACTA PARA CASOS COMO RENDER (+0.93%)!
-        * Cuando la moneda supera +0.65%, el piso se vuelve DINÁMICO reteniendo el 70% de la cima:
-          Piso = max(+0.20%, Cima × 0.70).
-          Ejemplo: Cima +0.93% -> Piso asegurado en +0.65%. Si retrocede, ¡VENDE EN GANANCIA!
-    - 🛡️ SUB-FASE BREAK-EVEN BLINDADO (+0.45% a +0.64%):
-        * Una vez tocado +0.45%, el SL salta a +0.12% (cubre comisión BNB). Cero riesgo de perder.
-    - 🌱 FASE 1 (0.00% a +0.44%): Rumbo a impulso inicial con Stop Loss protector de -4.00%.
+    - FASE 2 (+0.80% a +1.59%): Meta Cumplida. Retención del 75% al 80% de la cima.
+    - ⚡ COSECHA DINÁMICA MEDIA (+0.45% a +0.79%):
+        * Piso = max(+0.25%, Cima × 75%).
+        * Ejemplo: Cima +0.50% -> Piso en +0.38%. Ganancia neta libre de comisión.
+    - 🛡️ COSECHA DINÁMICA MICRO (+0.20% a +0.44%):
+        * ¡LA SOLUCIÓN DE ALTA FRECUENCIA Y GANANCIA LIBRE ACUMULADA!
+        * En cuanto la moneda sube a +0.20% (cubriendo la comisión de 0.150% Binance BNB),
+          el piso salta a max(+0.16%, Cima × 75%).
+        * Si la cima fue +0.30%, el piso se fija en +0.225%.
+        * Garantiza ganancias netas libres de comisiones acumulables.
+    - 🌱 FASE 1 (0.00% a +0.19%): Rumbo a despegue inicial con Stop Loss protector de -4.00%.
     """
     arch = archetype_dna.get("archetype", "SECTOR_ROTATION")
     emoji = archetype_dna.get("emoji", "🧬")
     label = archetype_dna.get("label", arch)
-    base_p2 = archetype_dna.get("phase_2_trigger_pct", 1.00)
+    base_p2 = archetype_dna.get("phase_2_trigger_pct", 0.85)
     p3_trigger = archetype_dna.get("phase_3_trigger_pct", 1.60)
     
     # Adaptación por volatilidad: si el ATR es moderado, el trigger de Fase 2 puede iniciar en 0.80%
     p2_trigger = max(0.80, min(base_p2, round(atr_pct * 1.6, 2))) if atr_pct and atr_pct > 0 else base_p2
 
     if highest_pnl_pct >= p3_trigger:
-        retention_pct = min(85.0, 50.0 + (highest_pnl_pct * 5.0))
+        retention_pct = min(85.0, 55.0 + (highest_pnl_pct * 5.0))
         retention_ratio = retention_pct / 100.0
         sl_pct = max(p2_trigger, round(highest_pnl_pct * retention_ratio, 4))
         phase = 3
         phase_label = f"🚀 FASE 3 RALLY DINÁMICO ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= p2_trigger:
-        # Retención dinámica desde el trigger de fase 2 (al menos el 75% de la cima)
-        sl_pct = max(p2_trigger, round(highest_pnl_pct * 0.75, 4))
+        retention_ratio = 0.75
+        sl_pct = max(p2_trigger * 0.90, round(highest_pnl_pct * retention_ratio, 4))
         phase = 2
         phase_label = f"🎯 FASE 2 META DINÁMICA (+{p2_trigger:.2f}% | {emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.65:
-        # ⚡ COSECHA DINÁMICA ANTE REVERSIÓN:
-        # Retiene el 70% de la cima ganada. Si RENDER llegó a +0.93%, el piso se fija en +0.65%.
-        sl_pct = max(0.20, round(highest_pnl_pct * 0.70, 4))
-        phase = 1
-        phase_label = f"⚡ SUB-FASE COSECHA DINÁMICA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= 0.45:
-        # 🛡️ BREAK-EVEN BLINDADO: Protege contra cualquier pérdida y cubre comisiones
-        sl_pct = 0.12
+        # Cima media: retiene el 75% del avance
+        sl_pct = max(0.25, round(highest_pnl_pct * 0.75, 4))
         phase = 1
-        phase_label = f"🛡️ BREAK-EVEN BLINDADO ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +0.12%)"
+        phase_label = f"⚡ SUB-FASE COSECHA MEDIA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 0.20:
+        # Cima micro: cubre comisión 0.15% y asegura ganancia libre
+        sl_pct = max(0.16, round(highest_pnl_pct * 0.75, 4))
+        phase = 1
+        phase_label = f"🛡️ GANANCIA LIBRE ASEGURADA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
     else:
         sl_pct = -4.00
         phase = 1

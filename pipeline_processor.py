@@ -690,15 +690,6 @@ def run_infinite_trading_matrix_cycle():
                     elif c_score < 82 or fii_sc < 60:
                         is_truly_valid = False
                         diag_reasons.append(f"BAJISTA:Score{c_score}<82oFII{fii_sc}<60")
-                    else:
-                        import api_connector as _ac_bm
-                        _bm_state = _ac_bm.load_real_account_state()
-                        _bm_ops_hoy = _bm_state.get("daily_wins", 0) + _bm_state.get("daily_losses", 0)
-                        # BUG 3 FIX: Solo 1 operación/día en modo bajista (antes eran 4)
-                        # La 1 operación debe ser la MEJOR del día — no dispersar capital en caída de BTC
-                        if _bm_ops_hoy >= 1:
-                            is_truly_valid = False
-                            diag_reasons.append(f"BAJISTA:Max1op/dia({_bm_ops_hoy} ya ejecutada hoy)")
 
                 dbl_lbl = cmtf.get("double_bottom_label", "🟢 Giro en V")
                 canales_str = f"[1M:{r1m:>2.0f}% 5M:{r5m:>2.0f}% 15M:{r15m:>2.0f}% 1H:{r1h:>2.0f}% 4H:{r4h:>2.0f}% 1D:{r1d:>2.0f}%]"
