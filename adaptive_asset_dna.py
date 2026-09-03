@@ -239,26 +239,28 @@ def calculate_archetype_trailing(
     arch = archetype_dna.get("archetype", "SECTOR_ROTATION")
     emoji = archetype_dna.get("emoji", "🧬")
     label = archetype_dna.get("label", arch)
-    base_p2 = archetype_dna.get("phase_2_trigger_pct", 0.85)
     p3_trigger = archetype_dna.get("phase_3_trigger_pct", 1.60)
-    
-    # Adaptación por volatilidad: si el ATR es moderado, el trigger de Fase 2 puede iniciar en 0.80%
-    p2_trigger = max(0.80, min(base_p2, round(atr_pct * 1.6, 2))) if atr_pct and atr_pct > 0 else base_p2
+    initial_sl = float(archetype_dna.get("initial_sl_pct", -3.50))
 
     if highest_pnl_pct >= p3_trigger:
-        retention_pct = min(85.0, 55.0 + (highest_pnl_pct * 5.0))
+        retention_pct = min(85.0, 60.0 + (highest_pnl_pct * 5.0))
         retention_ratio = retention_pct / 100.0
-        sl_pct = max(p2_trigger, round(highest_pnl_pct * retention_ratio, 4))
+        sl_pct = max(1.20, round(highest_pnl_pct * retention_ratio, 4))
         phase = 3
         phase_label = f"🚀 FASE 3 RALLY DINÁMICO ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= p2_trigger:
-        retention_ratio = 0.75
-        sl_pct = max(p2_trigger * 0.90, round(highest_pnl_pct * retention_ratio, 4))
+    elif highest_pnl_pct >= 1.00:
+        # 🏆 META +1% PEDIDA POR EL USUARIO: Al llegar a +1.00%, piso asegurado exactamente en +0.80% (Retención 80%)
+        sl_pct = max(0.80, round(highest_pnl_pct * 0.80, 4))
         phase = 2
-        phase_label = f"🎯 FASE 2 META DINÁMICA (+{p2_trigger:.2f}% | {emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
+        phase_label = f"🏆 FASE 2 META +1% CUMPLIDA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Asegurado +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 0.75:
+        # Cima fuerte previa a meta: piso en +0.58% (retiene ~78%)
+        sl_pct = max(0.58, round(highest_pnl_pct * 0.78, 4))
+        phase = 1
+        phase_label = f"⚡ SUB-FASE COSECHA FUERTE ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= 0.50:
-        # Cima media: retiene el 75% del avance, piso mínimo en +0.35% (cubre comisiones con holgura)
-        sl_pct = max(0.35, round(highest_pnl_pct * 0.75, 4))
+        # Cima media: retiene el 75% del avance, piso mínimo en +0.38% (cubre comisiones con holgura)
+        sl_pct = max(0.38, round(highest_pnl_pct * 0.75, 4))
         phase = 1
         phase_label = f"⚡ SUB-FASE COSECHA MEDIA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= 0.35:
@@ -267,9 +269,9 @@ def calculate_archetype_trailing(
         phase = 1
         phase_label = f"🛡️ GANANCIA LIBRE ASEGURADA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
     else:
-        sl_pct = -4.00
+        sl_pct = initial_sl
         phase = 1
-        phase_label = f"🌱 FASE 1 RUMBO A META ({emoji} Cima +{highest_pnl_pct:.2f}% | SL -4.00%)"
+        phase_label = f"🌱 NIVEL 0 DESPEGUE ({emoji} Cima +{highest_pnl_pct:.2f}% | SL Base {initial_sl:.2f}%)"
 
     return sl_pct, phase, phase_label
 

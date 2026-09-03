@@ -1212,19 +1212,23 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             atr_pct=atr_pct
         )
     except Exception as e:
-        # Fallback dinámico proporcional multi-nivel (desde +0.20% ganancia libre)
+        # Fallback dinámico proporcional multi-nivel
         if highest_pnl_pct >= 1.60:
-            retention_pct = min(85.0, 55.0 + (highest_pnl_pct * 5.0))
+            retention_pct = min(85.0, 60.0 + (highest_pnl_pct * 5.0))
             retention_ratio = retention_pct / 100.0
-            sl_pct = max(1.00, round(highest_pnl_pct * retention_ratio, 4))
+            sl_pct = max(1.20, round(highest_pnl_pct * retention_ratio, 4))
             phase = 3
             phase_label = f"🚀 FASE 3 RALLY DINÁMICO (Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.85:
-            sl_pct = max(0.75, round(highest_pnl_pct * 0.75, 4))
+        elif highest_pnl_pct >= 1.00:
+            sl_pct = max(0.80, round(highest_pnl_pct * 0.80, 4))
             phase = 2
-            phase_label = f"🎯 FASE 2 META DINÁMICA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
+            phase_label = f"🏆 FASE 2 META +1% CUMPLIDA (Cima +{highest_pnl_pct:.2f}% -> Piso Asegurado +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 0.75:
+            sl_pct = max(0.58, round(highest_pnl_pct * 0.78, 4))
+            phase = 1
+            phase_label = f"⚡ SUB-FASE COSECHA FUERTE (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
         elif highest_pnl_pct >= 0.50:
-            sl_pct = max(0.35, round(highest_pnl_pct * 0.75, 4))
+            sl_pct = max(0.38, round(highest_pnl_pct * 0.75, 4))
             phase = 1
             phase_label = f"⚡ SUB-FASE COSECHA MEDIA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
         elif highest_pnl_pct >= 0.35:
@@ -1232,9 +1236,9 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             phase = 1
             phase_label = f"🛡️ GANANCIA LIBRE ASEGURADA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
         else:
-            sl_pct = -4.00
+            sl_pct = -3.50
             phase = 1
-            phase_label = f"🌱 FASE 1 RUMBO A META (Cima +{highest_pnl_pct:.2f}% | SL -4.00%)"
+            phase_label = f"🌱 NIVEL 0 DESPEGUE (Cima +{highest_pnl_pct:.2f}% | SL Base -3.50%)"
 
         return sl_pct, phase, phase_label
 

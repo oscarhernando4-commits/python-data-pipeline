@@ -227,14 +227,17 @@ def run_simulation_cycle(symbol_analysis_map: dict):
 
             highest_pnl = ((highest - entry) / entry) * 100.0
 
-            # Trailing floor dinámico proporcional multi-nivel (desde +0.20% ganancia libre)
+            # Trailing floor dinámico proporcional multi-nivel
             if highest_pnl >= grp_p3:
-                retention = min(85.0, 55.0 + highest_pnl * 5.0)
-                floor_pct = max(grp_p2, highest_pnl * retention / 100.0)
-            elif highest_pnl >= grp_p2:
-                floor_pct = max(grp_p2 * 0.90, highest_pnl * 0.75)
+                retention = min(85.0, 60.0 + highest_pnl * 5.0)
+                floor_pct = max(1.20, highest_pnl * retention / 100.0)
+            elif highest_pnl >= 1.00:
+                # Meta +1% cumplida: piso en +0.80%
+                floor_pct = max(0.80, highest_pnl * 0.80)
+            elif highest_pnl >= 0.75:
+                floor_pct = max(0.58, highest_pnl * 0.78)
             elif highest_pnl >= 0.50:
-                floor_pct = max(0.35, highest_pnl * 0.75)
+                floor_pct = max(0.38, highest_pnl * 0.75)
             elif highest_pnl >= 0.35:
                 # Ganancia neta libre asegurada cubriendo comisión 0.15%
                 floor_pct = max(0.25, highest_pnl * 0.75)
