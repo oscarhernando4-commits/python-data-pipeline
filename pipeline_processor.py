@@ -281,8 +281,18 @@ def run_infinite_trading_matrix_cycle():
     cached_fundamental_report = fundamental_sentinel.get_crypto_fundamental_sentinel()
 
     import concurrent.futures
+    import learning_engine
+    try:
+        _pre_bl = learning_engine.get_dynamic_blacklist()
+    except Exception:
+        _pre_bl = {}
 
     def analyze_symbol(s):
+        # ⚡ OPTIMIZACIÓN INSTITUCIONAL: Salta inmediatamente activos tóxicos en HARD Blacklist
+        # para no desperdiciar tiempo ni ancho de banda descargando 8 temporalidades
+        if s in _pre_bl and _pre_bl[s].get("tier") == "HARD":
+            return s, None
+
         try:
             import multi_timeframe_analyzer
             mtf_res = multi_timeframe_analyzer.analyze_multi_timeframe_candles(s)

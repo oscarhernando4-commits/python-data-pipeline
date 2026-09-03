@@ -933,6 +933,8 @@ def diagnose_full_spot_wallet():
             bnb_usd = free_qty * bnb_price
             total_wallet_usd += bnb_usd
             print(f"  🟡 BNB Escudo Comisiones: {free_qty:.6f} BNB (~${bnb_usd:.2f} USD @ ${bnb_price:.2f})")
+            if bnb_usd < 0.08:
+                print(f"  ⚠️ [ALERTA ESCUDO BNB] Balance de BNB bajo (~${bnb_usd:.2f} USD). Recomendable recargar $1-$2 USD en BNB para no perder el descuento del 25% en comisiones.", flush=True)
         else:
             # Other crypto asset: calculate USD value
             sym = f"{asset}USDT"
