@@ -401,6 +401,43 @@ def compile_all_dna_profiles():
     except Exception as e:
         print(f"⚠️ Error compiling DNA profiles: {e}")
 
+def maintain_and_scale_database():
+    """
+    Mantenimiento y Escalabilidad Infinita en la Nube:
+    1. Asegura que los perfiles fenotípicos de ADN (crypto_dna_profiles) hayan absorbido
+       todas las estadísticas antes de cualquier limpieza.
+    2. Si sim_trades supera los 150,000 registros, recorta las simulaciones antiguas
+       conservando las últimas 50,000 más recientes para que el archivo .db jamás
+       se acerque al límite de 100 MB de GitHub.
+    3. LAS OPERACIONES REALES (real_trades) NUNCA SE BORRAN (permanencia histórica sagrada).
+    4. Ejecuta PRAGMA optimize y VACUUM para mantener el rendimiento en < 2ms por consulta.
+    """
+    try:
+        init_db()
+        compile_all_dna_profiles()
+        
+        conn = get_db_connection()
+        cur = conn.cursor()
+        
+        cur.execute("SELECT COUNT(*) FROM sim_trades")
+        count = cur.fetchone()[0]
+        
+        if count > 150000:
+            cur.execute("""
+            DELETE FROM sim_trades 
+            WHERE id NOT IN (
+                SELECT id FROM sim_trades ORDER BY id DESC LIMIT 50000
+            )
+            """)
+            conn.commit()
+            cur.execute("VACUUM")
+            print(f"🧹 [Auto-Mantenimiento Nube] Base de datos optimizada: {count} -> 50,000 sim_trades.")
+            
+        cur.execute("PRAGMA optimize")
+        conn.close()
+    except Exception as e:
+        print(f"⚠️ Error en mantenimiento de base de datos: {e}")
+
 if __name__ == "__main__":
     init_db()
     compile_all_dna_profiles()
