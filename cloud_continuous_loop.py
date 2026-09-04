@@ -256,6 +256,7 @@ def main():
             import llm_router
             import data_fetcher
             import pipeline_processor
+            import macro_mcp_gateway
             importlib.reload(adaptive_asset_dna)
             importlib.reload(quant_database)
             importlib.reload(asset_dna_predictive_engine)
@@ -264,6 +265,7 @@ def main():
             importlib.reload(llm_router)
             importlib.reload(data_fetcher)
             importlib.reload(pipeline_processor)
+            importlib.reload(macro_mcp_gateway)
         except Exception as e:
             print(f"⚠️ Reload note: {e}", flush=True)
 

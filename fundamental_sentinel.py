@@ -67,6 +67,14 @@ def get_crypto_fundamental_sentinel(symbol="BTCUSDT"):
     # NUEVO: Noticias Específicas
     coin_news = fetch_coin_specific_news(symbol)
     
+    # 🌐 INTEGRACIÓN GATEWAY MCP 5.0 (CoinGecko Trending + Sectores + Order Flow + Whale Pulse)
+    mcp_intel = {}
+    try:
+        import macro_mcp_gateway
+        mcp_intel = macro_mcp_gateway.get_combined_mcp_intelligence(symbol)
+    except Exception:
+        pass
+
     macro_risk = "LOW_RISK"
     if len(risk_alerts) >= 3 or fng['score'] <= 20:
         macro_risk = "HIGH_RISK"
@@ -80,7 +88,12 @@ def get_crypto_fundamental_sentinel(symbol="BTCUSDT"):
         "macro_risk_level": macro_risk,
         "recent_headlines": headlines[:3],
         "coin_specific_news": coin_news,
-        "risk_alerts_detected": risk_alerts
+        "risk_alerts_detected": risk_alerts,
+        "coingecko_trending": mcp_intel.get("coingecko_trending", []),
+        "hot_sectors": mcp_intel.get("hot_sectors", []),
+        "top_hot_sector": mcp_intel.get("top_hot_sector", "GENERAL"),
+        "is_symbol_trending": mcp_intel.get("is_symbol_trending", False),
+        "whale_pulse": mcp_intel.get("whale_pulse", {})
     }
 
 def analyze_fundamental_catalysts(symbol="BTCUSDT"):

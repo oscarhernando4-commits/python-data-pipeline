@@ -683,6 +683,20 @@ def run_infinite_trading_matrix_cycle():
                 except Exception:
                     pass  # No bloquear si no hay datos comparativos
 
+                # 🌐 INTEGRACIÓN MCP GATEWAY 5.0 (CoinGecko Trending & News Veto)
+                try:
+                    import macro_mcp_gateway as _mmcp
+                    _cg_trending = cached_fundamental_report.get("coingecko_trending", [])
+                    if csym in _cg_trending or csym.replace("USDT", "") in _cg_trending:
+                        c_score = min(100, c_score + 7)  # Boost por Hype/Trending Global en CoinGecko
+                    
+                    # Veto por cisne negro en noticias
+                    _news_v = _mmcp.get_news_and_black_swan_sentinel(csym)
+                    if _news_v.get("symbol_veto", False):
+                        diag_reasons.append(_news_v.get("veto_reason", "VetoNoticiaCisneNegro"))
+                except Exception:
+                    pass
+
                 # ⚡ VOLUME DELTA PRE-FILTRO 3.0
                 try:
                     import volume_delta_engine as _vde_pre
