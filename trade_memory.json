@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 12,
-    "wins": 10,
+    "total_trades": 13,
+    "wins": 11,
     "losses": 2,
-    "win_rate_pct": 83.33,
-    "total_pnl_usd": 0.39369999999999994
+    "win_rate_pct": 84.62,
+    "total_pnl_usd": 0.43249999999999994
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -23,7 +23,8 @@
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PUMPUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PENGUUSDT)",
-      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ETHFIUSDT)"
+      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ETHFIUSDT)",
+      "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on JUPUSDT)"
     ]
   },
   "history": [
@@ -306,6 +307,30 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-09-04 08:35:19",
+      "timestamp_ms": 1788510919503,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "JUPUSDT",
+      "side": "LONG",
+      "entry_price": 0.2217,
+      "exit_price": 0.2224,
+      "pnl_usd": 0.0388,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via ⚡ Cosecha Dinámica Flujo Vendedor (+0.32% libre | Compras Taker: 0.0%, Bids: 48.9%) (Fase 1, PnL: +0.32%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 35.0,
+        "atr_pct_15m": 0.629,
+        "vol_surge": 1.36,
+        "vol_surge_1m": 2.28,
+        "fii_score": 75,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -585,6 +610,30 @@
         "vol_surge": 0.45,
         "vol_surge_1m": 0.48,
         "fii_score": 90,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-09-04 08:35:19",
+      "timestamp_ms": 1788510919503,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "JUPUSDT",
+      "side": "LONG",
+      "entry_price": 0.2217,
+      "exit_price": 0.2224,
+      "pnl_usd": 0.0388,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via ⚡ Cosecha Dinámica Flujo Vendedor (+0.32% libre | Compras Taker: 0.0%, Bids: 48.9%) (Fase 1, PnL: +0.32%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 35.0,
+        "atr_pct_15m": 0.629,
+        "vol_surge": 1.36,
+        "vol_surge_1m": 2.28,
+        "fii_score": 75,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
