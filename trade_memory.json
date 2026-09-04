@@ -1,16 +1,17 @@
 {
   "stats": {
-    "total_trades": 10,
+    "total_trades": 11,
     "wins": 9,
-    "losses": 1,
-    "win_rate_pct": 90.0,
-    "total_pnl_usd": 0.41129999999999994
+    "losses": 2,
+    "win_rate_pct": 81.82,
+    "total_pnl_usd": 0.3524999999999999
   },
   "learned_rules": {
     "blocked_patterns": [
       "BLOCK LONG when OBV:DISTRIBUTING (Institucional Distribuyendo)",
       "BLOCK LONG when Vol1M:Dead(<0.30x) en mercado bajista",
-      "BLOCK LONG when is_falling_knife is True (Cuchillo Cayendo)"
+      "BLOCK LONG when is_falling_knife is True (Cuchillo Cayendo)",
+      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEXOUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZROUSDT)",
@@ -256,6 +257,30 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-09-04 06:36:03",
+      "timestamp_ms": 1788503763678,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.844,
+      "exit_price": 0.84,
+      "pnl_usd": -0.0588,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via ⏱️ SALIDA TEMPRANA L3 (3h sin llegar a +0.80% de pico. Pico=+0.24%). Cerrando a precio de mercado. (Fase 1, PnL: -0.47%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 39.3,
+        "atr_pct_15m": 0.533,
+        "vol_surge": 1.26,
+        "vol_surge_1m": 3.37,
+        "fii_score": 95,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -487,6 +512,30 @@
         "vol_surge": 0.38,
         "vol_surge_1m": 0.43,
         "fii_score": 90,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-09-04 06:36:03",
+      "timestamp_ms": 1788503763678,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.844,
+      "exit_price": 0.84,
+      "pnl_usd": -0.0588,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via ⏱️ SALIDA TEMPRANA L3 (3h sin llegar a +0.80% de pico. Pico=+0.24%). Cerrando a precio de mercado. (Fase 1, PnL: -0.47%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 39.3,
+        "atr_pct_15m": 0.533,
+        "vol_surge": 1.26,
+        "vol_surge_1m": 3.37,
+        "fii_score": 95,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
