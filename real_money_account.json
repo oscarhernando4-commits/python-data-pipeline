@@ -19,7 +19,7 @@
     "phase": 1,
     "archetype": "SECTOR_ROTATION",
     "archetype_label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
-    "initial_sl_pct": -4.0,
+    "initial_sl_pct": -1.5,
     "max_stagnation_minutes": 540,
     "vol_surge": 1.26,
     "vol_surge_1m": 3.37,
@@ -37,8 +37,9 @@
     "btc_entry_price": 80859.99,
     "is_sniper_setup": false,
     "is_super_sniper": false,
-    "holding_cycles": 0,
-    "volatility_regime": "🌱 NIVEL 0 DESPEGUE (🧩 Cima +0.12% | SL Base -4.00%)"
+    "holding_cycles": 20,
+    "volatility_regime": "🌱 NIVEL 0 DESPEGUE (🧩 Cima +0.12% | SL Base -4.00%)",
+    "btc_peak_price": 80976.55
   },
   "last_trade_time": "26-09-04<br>03:35",
   "status": "🔵 En Vivo LONG (NEXOUSDT @ $0.8440)",
