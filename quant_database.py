@@ -259,6 +259,36 @@ def export_intelligence_matrix() -> dict:
         
     return matrix_data
 
+def is_symbol_in_quarantine(symbol: str) -> tuple:
+    """
+    🛡️ CUARENTENA ANTI-REINCIDENCIA 24H (SÚPER-CEREBRO 5.0):
+    Verifica si una criptomoneda cerró en pérdida en las últimas 24 horas en real_trades.
+    Retorna (is_quarantined: bool, reason: str).
+    """
+    sym = symbol.upper()
+    try:
+        init_db()
+        conn = get_db_connection()
+        cur = conn.cursor()
+        
+        cutoff_ms = int((time.time() - 86400) * 1000)
+        cur.execute("""
+        SELECT timestamp_ms, pnl_pct, pnl_usd, exit_reason
+        FROM real_trades
+        WHERE symbol = ? AND result = 'LOSS' AND timestamp_ms >= ?
+        ORDER BY timestamp_ms DESC LIMIT 1
+        """, (sym, cutoff_ms))
+        row = cur.fetchone()
+        conn.close()
+        
+        if row:
+            hours_ago = round((time.time() - (row["timestamp_ms"] / 1000)) / 3600, 1)
+            return True, f"🚫 CUARENTENA 24H: {sym} cerró en LOSS hace {hours_ago}h (PnL: {row['pnl_pct']:+.2f}%). Vetado temporalmente."
+    except Exception:
+        pass
+        
+    return False, ""
+
 def get_crypto_dna_profile(symbol: str) -> dict:
     """
     Retorna el perfil fenotípico de ADN aprendido para una criptomoneda específica.

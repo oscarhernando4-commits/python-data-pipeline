@@ -235,14 +235,12 @@ def run_simulation_cycle(symbol_analysis_map: dict):
                 # Meta +1% cumplida: piso en +0.80%
                 floor_pct = max(0.80, highest_pnl * 0.80)
             elif highest_pnl >= 0.75:
-                floor_pct = max(0.58, highest_pnl * 0.78)
-            elif highest_pnl >= 0.50:
-                floor_pct = max(0.38, highest_pnl * 0.75)
-            elif highest_pnl >= 0.35:
+                floor_pct = max(0.60, highest_pnl * 0.80)
+            elif highest_pnl >= 0.45:
                 # Ganancia neta libre asegurada cubriendo comisión 0.15%
-                floor_pct = max(0.25, highest_pnl * 0.75)
+                floor_pct = max(0.35, highest_pnl * 0.75)
             else:
-                floor_pct = grp_sl_pct
+                floor_pct = -0.45
 
             # Condiciones de salida
             should_exit = False

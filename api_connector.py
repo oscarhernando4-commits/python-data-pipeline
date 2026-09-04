@@ -1238,9 +1238,9 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             phase = 1
             phase_label = f"🛡️ GANANCIA LIBRE ASEGURADA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
         else:
-            sl_pct = -3.50
+            sl_pct = -0.45
             phase = 1
-            phase_label = f"🌱 NIVEL 0 DESPEGUE (Cima +{highest_pnl_pct:.2f}% | SL Base -3.50%)"
+            phase_label = f"🌱 NIVEL 0 DESPEGUE (Cima +{highest_pnl_pct:.2f}% | SL Ceñido 5.0: -0.45%)"
 
         return sl_pct, phase, phase_label
 
@@ -1403,36 +1403,13 @@ def quick_position_heartbeat():
                     state["_last_exit_was_btc_shield"] = True
 
 
-        # ⏱️ CONTROL DE ESTANCAMIENTO & TIME-DECAY SL DINÁMICO 3.0 (Por Arquetipo ADN):
-        if not should_exit and current_phase == 1:
-            max_stag_mins = arch_dna.get("max_stagnation_minutes", 120)
-            stag_decay_mins = arch_dna.get("stagnation_decay_minutes", 75)
-            decay_sl = arch_dna.get("decay_sl_pct", -1.80)
-            
-            # 1. Contracción dinámica de SL si lleva tiempo sin impulso alcista
-            if holding_minutes_hb >= stag_decay_mins and highest_pnl_pct < 0.70:
-                if current_pnl_pct <= decay_sl:
-                    should_exit = True
-                    exit_reason = f"⏱️ SL DINÁMICO POR ESTANCAMIENTO ({holding_minutes_hb}m sin despegue | PnL={current_pnl_pct:+.2f}% <= {decay_sl:+.2f}%). Liberando USDT."
-            
-            # 2. Cierre por agotamiento total de ventana temporal (Momentum decay)
-            if holding_minutes_hb >= max_stag_mins and highest_pnl_pct < 0.80:
-                should_exit = True
-                exit_reason = f"⏱️ CIERRE POR AGOTAMIENTO DE TIEMPO ({holding_minutes_hb}m >= {max_stag_mins}m límite ADN). Momentum decay confirmado. Liberando capital."
-
-            # 🎯 MEJORA 4 — STAGNATION EARLY EXIT en 3 niveles (más inteligente que esperar 12h)
-            # Si el precio no muestra fuerza compradora en las primeras horas → salir antes
-            # En vez de perder tiempo con un trade estancado, buscar un mejor setup
-            if not should_exit:
-                if holding_minutes_hb >= 45 and highest_pnl_pct < 0.30 and current_pnl_pct <= -1.50:
-                    should_exit = True
-                    exit_reason = f"⏱️ SALIDA TEMPRANA L1 (45m sin llegar a +0.30% | PnL={current_pnl_pct:+.2f}%<=-1.50%). Liberando capital para mejor setup."
-                elif holding_minutes_hb >= 90 and highest_pnl_pct < 0.60 and current_pnl_pct <= -2.00:
-                    should_exit = True
-                    exit_reason = f"⏱️ SALIDA TEMPRANA L2 (90m sin llegar a +0.60% | PnL={current_pnl_pct:+.2f}%<=-2.00%). Momentum agotado."
-                elif holding_minutes_hb >= 180 and highest_pnl_pct < 0.80:
-                    should_exit = True
-                    exit_reason = f"⏱️ SALIDA TEMPRANA L3 (3h sin llegar a +0.80% de pico. Pico={highest_pnl_pct:+.2f}%). Cerrando a precio de mercado."
+        # 🛑 ASIMETRÍA MATEMÁTICA 2:1 & BLINDAJE ANTI-SANGRADO 5.0:
+        # En Spot NUNCA vendemos a mercado con pérdidas por un reloj de tiempo (L1, L2, L3 eliminados).
+        # Solo se sale si el precio toca el Stop Loss ceñido de -0.45%, limitando
+        # la pérdida máxima a ~$0.05 USD (recuperable de inmediato con un solo trade ganador).
+        if not should_exit and current_pnl_pct <= -0.45:
+            should_exit = True
+            exit_reason = f"🛑 STOP LOSS CEÑIDO 5.0 ({current_pnl_pct:+.2f}% <= -0.45%). Cortando pérdida mínima (-$0.05 USD)."
 
         # 🔴 MEJORA 2 — OBV IN-POSITION MONITOR (cada ~5 min en Fase 1)
         # Si OBV se vuelve DISTRIBUTING durante el trade → institucionales vendiendo nuestra posición

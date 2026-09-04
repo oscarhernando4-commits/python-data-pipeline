@@ -289,9 +289,17 @@ def run_infinite_trading_matrix_cycle():
 
     def analyze_symbol(s):
         # ⚡ OPTIMIZACIÓN INSTITUCIONAL: Salta inmediatamente activos tóxicos en HARD Blacklist
-        # para no desperdiciar tiempo ni ancho de banda descargando 8 temporalidades
+        # o en CUARENTENA ANTI-REINCIDENCIA 24H (Súper-Cerebro 5.0)
         if s in _pre_bl and _pre_bl[s].get("tier") == "HARD":
             return s, None
+
+        try:
+            import quant_database as _qdb_quar
+            is_quar, _ = _qdb_quar.is_symbol_in_quarantine(s)
+            if is_quar:
+                return s, None
+        except Exception:
+            pass
 
         try:
             import multi_timeframe_analyzer
@@ -643,11 +651,19 @@ def run_infinite_trading_matrix_cycle():
                 if c_score >= 95 and vol_1m < 0.40:
                     c_score = 85  # Score realista: Gemini infla sin respaldo de volumen
 
-                # 🎯 SCORE MÍNIMO FRANCOTIRADOR 3.0: 75-80 puntos
                 min_score_required = 75 if (is_second_touch or is_liquidity_sweep or is_bullish_div or is_double_bottom or fii_sc >= 55) else 80
                 if c_score < min_score_required: diag_reasons.append(f"Score={c_score}<{min_score_required}")
                 if is_knife: diag_reasons.append("Cuchillo")
                 if is_dead_cat: diag_reasons.append("GatoMuerto")
+
+                # 🚫 CUARENTENA ANTI-REINCIDENCIA 24H (Súper-Cerebro 5.0)
+                try:
+                    import quant_database as _qdb_quar2
+                    is_quar2, quar_reason = _qdb_quar2.is_symbol_in_quarantine(csym)
+                    if is_quar2:
+                        diag_reasons.append(quar_reason)
+                except Exception:
+                    pass
 
                 # MEJORA 3: RELATIVE STRENGTH vs BTC — filtro de fuerza relativa 1H
                 # Altcoin que cae mas que BTC = debilidad estructural = VETO
