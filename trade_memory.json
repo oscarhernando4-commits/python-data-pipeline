@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 18,
+    "total_trades": 19,
     "wins": 14,
-    "losses": 4,
-    "win_rate_pct": 77.78,
-    "total_pnl_usd": 0.3806999999999998
+    "losses": 5,
+    "win_rate_pct": 73.68,
+    "total_pnl_usd": 0.32259999999999983
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -13,7 +13,8 @@
       "BLOCK LONG when is_falling_knife is True (Cuchillo Cayendo)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEXOUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEXOUSDT)",
-      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on PYTHUSDT)"
+      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on PYTHUSDT)",
+      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on PUMPUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZROUSDT)",
@@ -454,6 +455,30 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-09-05 05:22:20",
+      "timestamp_ms": 1788585740772,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "PUMPUSDT",
+      "side": "LONG",
+      "entry_price": 0.004236,
+      "exit_price": 0.004216,
+      "pnl_usd": -0.0581,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (-0.47% <= -0.45%) (Fase 1, PnL: -0.47%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 45.4,
+        "atr_pct_15m": 0.604,
+        "vol_surge": 1.71,
+        "vol_surge_1m": 2.01,
+        "fii_score": 75,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -877,6 +902,30 @@
         "vol_surge": 2.75,
         "vol_surge_1m": 11.06,
         "fii_score": 100,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-09-05 05:22:20",
+      "timestamp_ms": 1788585740772,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "PUMPUSDT",
+      "side": "LONG",
+      "entry_price": 0.004236,
+      "exit_price": 0.004216,
+      "pnl_usd": -0.0581,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (-0.47% <= -0.45%) (Fase 1, PnL: -0.47%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 45.4,
+        "atr_pct_15m": 0.604,
+        "vol_surge": 1.71,
+        "vol_surge_1m": 2.01,
+        "fii_score": 75,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }

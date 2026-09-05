@@ -1,14 +1,6 @@
 {
-  "updated_at": "2026-09-05 05:17:52 UTC",
+  "updated_at": "2026-09-05 05:22:26 UTC",
   "elite_tokens": [
-    {
-      "symbol": "PUMPUSDT",
-      "total": 3,
-      "wins": 3,
-      "win_rate": 100.0,
-      "net_pnl": 0.18,
-      "tier": "💎 A+ ÉLITE"
-    },
     {
       "symbol": "JUPUSDT",
       "total": 1,
@@ -56,10 +48,18 @@
       "win_rate": 100.0,
       "net_pnl": 0.04,
       "tier": "🟢 A SÓLIDO"
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "total": 4,
+      "wins": 3,
+      "win_rate": 75.0,
+      "net_pnl": 0.12,
+      "tier": "💎 A+ ÉLITE"
     }
   ],
   "blacklisted_tokens": [],
   "global_sim_wr": 0.0,
   "total_sim_trades": 0,
-  "total_real_trades": 18
+  "total_real_trades": 19
 }
