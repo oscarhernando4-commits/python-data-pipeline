@@ -603,7 +603,8 @@ def get_recent_kline_high(symbol, limit=5, start_time_ms=None):
                 k_data = res.json()
                 if isinstance(k_data, list) and len(k_data) > 0:
                     if start_time_ms and start_time_ms > 0:
-                        filtered = [k for k in k_data if int(k[0]) >= int(start_time_ms)]
+                        # FIX 1.3b: Incluir la vela del minuto de entrada (k[0] es inicio de vela, +60s cubre la vela completa)
+                        filtered = [k for k in k_data if int(k[0]) + 60000 > int(start_time_ms)]
                         if filtered:
                             return max([float(k[2]) for k in filtered])
                         return 0.0
@@ -680,10 +681,9 @@ def get_realtime_order_flow_momentum(symbol: str) -> dict:
             tot_depth = bid_vol + ask_vol
             bid_dom_pct = (bid_vol / tot_depth * 100.0) if tot_depth > 0 else 50.0
 
-            # Agotamiento o reversión bajista real:
-            # Ventas masivas agresivas (taker buy < 25%) Y colapso de soporte en bids (< 25%)
-            # Evita salidas en falso por ruido normal de liquidez en velas de 1 minuto
-            is_exhaustion = bool(taker_buy_pct < 25.0 and bid_dom_pct < 25.0)
+            # FIX 2.4: Agotamiento calibrado a pánico real alcanzable:
+            # Ventas agresivas taker (buy < 35%) Y (soporte débil bids < 40% O pánico extremo taker buy < 20%)
+            is_exhaustion = bool(taker_buy_pct < 35.0 and (bid_dom_pct < 40.0 or taker_buy_pct < 20.0))
 
             return {
                 "symbol": symbol,
@@ -1217,7 +1217,7 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
     except Exception as e:
         # Fallback dinámico proporcional multi-nivel
         if highest_pnl_pct >= 1.60:
-            retention_pct = min(85.0, 60.0 + (highest_pnl_pct * 5.0))
+            retention_pct = min(85.0, 65.0 + (highest_pnl_pct * 5.0))  # FIX 2.3: Unificado con DNA (65.0)
             retention_ratio = retention_pct / 100.0
             sl_pct = max(1.20, round(highest_pnl_pct * retention_ratio, 4))
             phase = 3
@@ -1228,8 +1228,8 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             phase_label = f"🏆 FASE 2 META +1% CUMPLIDA (Cima +{highest_pnl_pct:.2f}% -> Piso Asegurado +{sl_pct:.2f}%)"
         elif highest_pnl_pct >= 0.70:
             sl_pct = max(0.55, round(highest_pnl_pct * 0.78, 4))
-            phase = 1
-            phase_label = f"⚡ FASE 1 COSECHA REAL (Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
+            phase = 2  # FIX 2.2b: Phase 2 para habilitar salidas sniper
+            phase_label = f"⚡ FASE 2 COSECHA REAL (Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
         elif highest_pnl_pct >= 0.35:
             sl_pct = 0.08
             phase = 1
@@ -1316,11 +1316,11 @@ def quick_position_heartbeat():
         exit_reason = f"🎯 Trailing Floor Activado ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
 
         # ⚡ COSECHA DINÁMICA SÚPER-CEREBRO 6.0 (PROFIT-RUNNER META ≥ 1.0%):
-        # Permitir que las operaciones respiren para alcanzar la meta obligatoria del 1.0% a 1.50%.
-        # El trailing stop ya protege con Escudo Break-Even (+0.35% -> +0.08%) y Cosecha Real (+0.70% -> +0.55%).
+        # FIX 2.1: Micro-retroceso SOLO en Fase 2 (1.00%-1.60%) con tolerancia de 0.30%.
+        # En Fase 3 (+1.60%+), el trailing floor del DNA ya protege sin necesidad de corte rápido.
         if not should_exit and current_pnl_pct >= 0.70:
-            # A) Micro-retroceso solo si ya alcanzamos la meta del +1.00% (holgura de 0.20% tras superar +1.00%)
-            if highest_pnl_pct >= 1.00 and current_pnl_pct <= (highest_pnl_pct - 0.20):
+            # A) Micro-retroceso solo si estamos en Fase 2 (entre +1.00% y +1.60%), con 0.30% de tolerancia
+            if 1.00 <= highest_pnl_pct < 1.60 and current_pnl_pct <= (highest_pnl_pct - 0.30):
                 should_exit = True
                 exit_reason = f"🏆 Cosecha Dinámica Meta 1% Cumplida ({current_pnl_pct:+.2f}% libre | Cima fue +{highest_pnl_pct:.2f}%)"
             else:
@@ -1634,7 +1634,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         pnl_usd = (active_current_price - entry) * active_qty
         
         # Track Highest Price Reached for Dynamic Trailing Stop (incluyendo mechas de velas 1m para Local y Nube)
-        kline_high = get_recent_kline_high(active_symbol, limit=5)
+        # FIX 1.3: Filtrar por entry_time_ms para no capturar mechas PRE-compra que inflan el trailing
+        _entry_time_ms = state["position"].get("entry_time_ms", 0)
+        kline_high = get_recent_kline_high(active_symbol, limit=5, start_time_ms=_entry_time_ms)
         highest_price = max(state["position"].get("highest_price", entry), active_current_price, kline_high)
         highest_pnl_pct = ((highest_price - entry) / entry) * 100.0 if entry > 0 else 0.0
         
@@ -1727,7 +1729,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
 
         sl_target = entry * (1.0 + (trailing_floor_pct / 100.0))
         
-        state["position"] = {
+        # FIX 1.2: Actualización in-place para preservar metadatos críticos
+        # (entry_time_ms, btc_entry_price, btc_peak_price, score, fii_score, etc.)
+        state["position"].update({
             "symbol": active_symbol,
             "quantity": active_qty,
             "entry_price": entry,
@@ -1737,7 +1741,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             "phase": phase,
             "holding_cycles": holding_cycles,
             "volatility_regime": phase_msg
-        }
+        })
         price_fmt = lambda p: f"${p:.8f}" if p < 0.01 else f"${p:.4f}"
         state["status"] = f"🔵 En Vivo LONG ({active_asset}USDT @ {price_fmt(active_current_price)})"
         
@@ -2012,7 +2016,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             if best_symbol and candidates_list:
                 for c in candidates_list:
                     if isinstance(c, dict) and c.get("symbol") == best_symbol:
-                        c_mtf = c.get("mtf_analysis", {})
+                        # FIX 1.5: mtf_analysis está dentro de tech_data, no en la raíz del candidato
+                        c_mtf = c.get("tech_data", {}).get("mtf_analysis", {}) or c.get("mtf_analysis", {})
                         if (c_mtf.get("is_double_bottom") or c_mtf.get("bullish_rsi_divergence")) and c_mtf.get("fii_score", 0) >= 65:
                             cand_is_floor_gem = True
                         break

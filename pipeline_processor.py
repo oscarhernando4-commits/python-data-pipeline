@@ -778,6 +778,7 @@ def run_infinite_trading_matrix_cycle():
                 }
                 winner_sym = "NONE"
                 selected_opp = None
+                candidates_for_gemini = []  # FIX 1.4c: Inicializar para evitar UnboundLocalError
             else:
                 # Top 2 a máximo 3 finalistas
                 candidates_for_gemini = valid_base_candidates[:3]
@@ -1181,10 +1182,10 @@ def run_infinite_trading_matrix_cycle():
                 elif is_overextended_bs:
                     print(f"🛡️ [FILTRO ANTI-CIMA 15M] Oportunidad {bs_sym} ({bs_score} Pts) BLOQUEADA: Entrada en la cima ({overextension_reason_bs}). Exige compra en el suelo.")
                     api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
-                elif (is_btc_crashing or is_high_btc_risk) and bs_sym not in ["BTCUSDT", "PAXGUSDT", "XAUTUSDT"]:
+                elif (is_btc_crashing or is_btc_weak) and bs_sym not in ["BTCUSDT", "PAXGUSDT", "XAUTUSDT"]:
                     print(f"🛡️ [FILTRO CORRELACIÓN BETA BTC] Oportunidad {bs_sym} ({bs_score} Pts, Rho={beta_res.get('rho')}) bloqueada. BTC débil / Alta Correlación.")
                     api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
-                elif is_order_flow_dump:
+                elif of_res.get("is_bearish_dump", False):
                     print(f"🎯 [FILTRO ORDER FLOW CVD] Oportunidad {bs_sym} ({bs_score} Pts) bloqueada por presión vendedora a mercado (CVD Delta {of_res.get('cvd_delta_usd')} USD).")
                     api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True, candidates_list=None)
                 else:
