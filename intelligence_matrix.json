@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-09-06 17:34:37 UTC",
+  "updated_at": "2026-09-06 17:48:28 UTC",
   "elite_tokens": [
+    {
+      "symbol": "ETHFIUSDT",
+      "total": 2,
+      "wins": 2,
+      "win_rate": 100.0,
+      "net_pnl": 0.1,
+      "tier": "💎 A+ ÉLITE"
+    },
     {
       "symbol": "ENAUSDT",
       "total": 1,
@@ -23,14 +31,6 @@
       "wins": 1,
       "win_rate": 100.0,
       "net_pnl": 0.06,
-      "tier": "🟢 A SÓLIDO"
-    },
-    {
-      "symbol": "ETHFIUSDT",
-      "total": 1,
-      "wins": 1,
-      "win_rate": 100.0,
-      "net_pnl": 0.04,
       "tier": "🟢 A SÓLIDO"
     },
     {
@@ -77,5 +77,5 @@
   "blacklisted_tokens": [],
   "global_sim_wr": 0.0,
   "total_sim_trades": 0,
-  "total_real_trades": 25
+  "total_real_trades": 26
 }

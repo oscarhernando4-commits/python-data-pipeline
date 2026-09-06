@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 25,
-    "wins": 18,
+    "total_trades": 26,
+    "wins": 19,
     "losses": 7,
-    "win_rate_pct": 72.0,
-    "total_pnl_usd": 0.38819999999999977
+    "win_rate_pct": 73.08,
+    "total_pnl_usd": 0.4463999999999998
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -34,7 +34,8 @@
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ENAUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ASTERUSDT)",
       "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLFIUSDT)",
-      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)"
+      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)",
+      "BOOST LONG when OBV:DISTRIBUTING + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ETHFIUSDT)"
     ]
   },
   "history": [
@@ -629,6 +630,30 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-09-06 17:48:23",
+      "timestamp_ms": 1788716903631,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "ETHFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.5655,
+      "exit_price": 0.5685,
+      "pnl_usd": 0.0582,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.53% <= +0.57%) (Fase 1, PnL: +0.53%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 33.7,
+        "atr_pct_15m": 0.742,
+        "vol_surge": 1.11,
+        "vol_surge_1m": 1.72,
+        "fii_score": 55,
+        "obv_trend": "DISTRIBUTING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -1221,6 +1246,30 @@
         "vol_surge_1m": 0.28,
         "fii_score": 80,
         "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-09-06 17:48:23",
+      "timestamp_ms": 1788716903631,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "ETHFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.5655,
+      "exit_price": 0.5685,
+      "pnl_usd": 0.0582,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.53% <= +0.57%) (Fase 1, PnL: +0.53%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 33.7,
+        "atr_pct_15m": 0.742,
+        "vol_surge": 1.11,
+        "vol_surge_1m": 1.72,
+        "fii_score": 55,
+        "obv_trend": "DISTRIBUTING",
         "macro_trend_4h": "NEUTRAL"
       }
     }
