@@ -253,20 +253,15 @@ def calculate_archetype_trailing(
         sl_pct = max(0.80, round(highest_pnl_pct * 0.80, 4))
         phase = 2
         phase_label = f"🏆 FASE 2 META +1% CUMPLIDA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Asegurado +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.75:
-        # Cima fuerte previa a meta: piso en +0.60% (ganancia neta libre +0.45%)
-        sl_pct = max(0.60, round(highest_pnl_pct * 0.80, 4))
+    elif highest_pnl_pct >= 0.70:
+        # Cima de cosecha real: piso en +0.55% (ganancia neta libre +0.40% asegurada tras comisiones)
+        sl_pct = max(0.55, round(highest_pnl_pct * 0.78, 4))
         phase = 1
-        phase_label = f"⚡ SUB-FASE COSECHA FUERTE ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.45:
-        # Cima de cosecha inicial: piso en +0.35% (ganancia neta libre +0.20% asegurada)
-        sl_pct = max(0.35, round(highest_pnl_pct * 0.75, 4))
-        phase = 1
-        phase_label = f"🛡️ GANANCIA NETA ASEGURADA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
+        phase_label = f"⚡ FASE 1 COSECHA REAL ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
     else:
         sl_pct = -0.45
         phase = 1
-        phase_label = f"🌱 NIVEL 0 DESPEGUE ({emoji} Cima +{highest_pnl_pct:.2f}% | SL Ceñido 5.0: -0.45%)"
+        phase_label = f"🌱 ZONA DE DESARROLLO ({emoji} Cima +{highest_pnl_pct:.2f}% | SL Ceñido 6.0: -0.45%)"
 
     return sl_pct, phase, phase_label
 

@@ -1225,22 +1225,14 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             sl_pct = max(0.80, round(highest_pnl_pct * 0.80, 4))
             phase = 2
             phase_label = f"🏆 FASE 2 META +1% CUMPLIDA (Cima +{highest_pnl_pct:.2f}% -> Piso Asegurado +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.75:
-            sl_pct = max(0.58, round(highest_pnl_pct * 0.78, 4))
+        elif highest_pnl_pct >= 0.70:
+            sl_pct = max(0.55, round(highest_pnl_pct * 0.78, 4))
             phase = 1
-            phase_label = f"⚡ SUB-FASE COSECHA FUERTE (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.50:
-            sl_pct = max(0.38, round(highest_pnl_pct * 0.75, 4))
-            phase = 1
-            phase_label = f"⚡ SUB-FASE COSECHA MEDIA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.35:
-            sl_pct = max(0.25, round(highest_pnl_pct * 0.75, 4))
-            phase = 1
-            phase_label = f"🛡️ GANANCIA LIBRE ASEGURADA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
+            phase_label = f"⚡ FASE 1 COSECHA REAL (Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
         else:
             sl_pct = -0.45
             phase = 1
-            phase_label = f"🌱 NIVEL 0 DESPEGUE (Cima +{highest_pnl_pct:.2f}% | SL Ceñido 5.0: -0.45%)"
+            phase_label = f"🌱 ZONA DE DESARROLLO (Cima +{highest_pnl_pct:.2f}% | SL Ceñido 6.0: -0.45%)"
 
         return sl_pct, phase, phase_label
 
@@ -1318,17 +1310,18 @@ def quick_position_heartbeat():
         should_exit = current_pnl_pct <= sl_pct
         exit_reason = f"🎯 Trailing Floor Activado ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
 
-        # ⚡ COSECHA DINÁMICA POR FLUJO DE COMPRAS Y VENTAS EN VIVO (ORDER FLOW & TAPE READING):
-        # Asegura ganancia neta sustancial libre de comisiones (>= +0.28% para cubrir 0.15% fee de Binance):
-        if not should_exit and current_pnl_pct >= 0.28:
-            # A) Micro-retroceso desde la cima local (holgura de 0.12% para dejar respirar el trade)
-            if highest_pnl_pct >= 0.38 and current_pnl_pct <= (highest_pnl_pct - 0.12):
+        # ⚡ COSECHA DINÁMICA SÚPER-CEREBRO 6.0 (PROFIT-RUNNER REAL):
+        # NUNCA estrangular un trade en centavos (+0.28%). Las operaciones deben respirar
+        # para buscar objetivos de +0.75% a +1.50% dejando ganancias sustanciales.
+        if not should_exit and current_pnl_pct >= 0.70:
+            # A) Micro-retroceso desde la cima alta (holgura de 0.15% tras superar +0.80%)
+            if highest_pnl_pct >= 0.80 and current_pnl_pct <= (highest_pnl_pct - 0.15):
                 should_exit = True
                 exit_reason = f"⚡ Cosecha Dinámica Micro-Retroceso ({current_pnl_pct:+.2f}% libre | Cima fue +{highest_pnl_pct:.2f}%)"
             else:
-                # B) Flujo de órdenes agresivas y libro en tiempo real (si ventas taker superan 60%)
+                # B) Flujo de órdenes agresivas y libro en tiempo real (solo si ya estamos en ganancia sólida >= +0.70%)
                 flow = get_realtime_order_flow_momentum(sym)
-                if flow.get("is_exhaustion_or_dump", False) and current_pnl_pct >= 0.28:
+                if flow.get("is_exhaustion_or_dump", False) and current_pnl_pct >= 0.70:
                     should_exit = True
                     exit_reason = (
                         f"⚡ Cosecha Dinámica Flujo Vendedor ({current_pnl_pct:+.2f}% libre | "

@@ -261,8 +261,10 @@ def export_intelligence_matrix() -> dict:
 
 def is_symbol_in_quarantine(symbol: str) -> tuple:
     """
-    🛡️ CUARENTENA ANTI-REINCIDENCIA 24H (SÚPER-CEREBRO 5.0):
-    Verifica si una criptomoneda cerró en pérdida en las últimas 24 horas en real_trades.
+    🛡️ CUARENTENA ANTI-REINCIDENCIA UNIVERSAL (SÚPER-CEREBRO 6.0):
+    1. Si cerró en LOSS en las últimas 24h -> Bloqueada 24 horas.
+    2. Si cerró en WIN en las últimas 12h -> Bloqueada 12 horas para NO recomprar
+       la misma moneda en la cima tras haber cosechado.
     Retorna (is_quarantined: bool, reason: str).
     """
     sym = symbol.upper()
@@ -270,20 +272,38 @@ def is_symbol_in_quarantine(symbol: str) -> tuple:
         init_db()
         conn = get_db_connection()
         cur = conn.cursor()
+        now = time.time()
         
-        cutoff_ms = int((time.time() - 86400) * 1000)
+        # 1. Chequeo de LOSS reciente (24h)
+        cutoff_loss = int((now - 86400) * 1000)
         cur.execute("""
-        SELECT timestamp_ms, pnl_pct, pnl_usd, exit_reason
+        SELECT timestamp_ms, pnl_pct, pnl_usd, result
         FROM real_trades
         WHERE symbol = ? AND result = 'LOSS' AND timestamp_ms >= ?
         ORDER BY timestamp_ms DESC LIMIT 1
-        """, (sym, cutoff_ms))
-        row = cur.fetchone()
+        """, (sym, cutoff_loss))
+        row_loss = cur.fetchone()
+        
+        if row_loss:
+            hours_ago = round((now - (row_loss["timestamp_ms"] / 1000)) / 3600, 1)
+            conn.close()
+            return True, f"🚫 CUARENTENA LOSS 24H: {sym} cerró en LOSS hace {hours_ago}h (PnL: {row_loss['pnl_pct']:+.2f}%). Vetado para evitar pérdidas dobles."
+
+        # 2. Chequeo de WIN reciente (12h cooldown anti-recompra en la cima)
+        cutoff_win = int((now - 43200) * 1000)
+        cur.execute("""
+        SELECT timestamp_ms, pnl_pct, pnl_usd, result
+        FROM real_trades
+        WHERE symbol = ? AND result = 'WIN' AND timestamp_ms >= ?
+        ORDER BY timestamp_ms DESC LIMIT 1
+        """, (sym, cutoff_win))
+        row_win = cur.fetchone()
         conn.close()
         
-        if row:
-            hours_ago = round((time.time() - (row["timestamp_ms"] / 1000)) / 3600, 1)
-            return True, f"🚫 CUARENTENA 24H: {sym} cerró en LOSS hace {hours_ago}h (PnL: {row['pnl_pct']:+.2f}%). Vetado temporalmente."
+        if row_win:
+            hours_ago = round((now - (row_win["timestamp_ms"] / 1000)) / 3600, 1)
+            return True, f"❄️ COOLDOWN POST-WIN 12H: {sym} ganó hace {hours_ago}h. Vetado temporalmente para no recomprar en la cima."
+
     except Exception:
         pass
         
