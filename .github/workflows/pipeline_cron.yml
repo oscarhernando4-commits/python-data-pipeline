@@ -17,7 +17,7 @@ on:
 
 concurrency:
   group: "continuous-quant-engine"
-  cancel-in-progress: false # FIX 2.7: NUNCA matar bot con dinero real en posición activa
+  cancel-in-progress: true # Cancela automáticamente ejecuciones previas para arrancar la versión limpia de inmediato
 
 jobs:
   continuous_trade_and_sync:
