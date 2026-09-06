@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 22,
-    "wins": 17,
+    "total_trades": 23,
+    "wins": 18,
     "losses": 5,
-    "win_rate_pct": 77.27,
-    "total_pnl_usd": 0.4650999999999998
+    "win_rate_pct": 78.26,
+    "total_pnl_usd": 0.5089999999999998
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -31,7 +31,8 @@
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on PYTHUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ENAUSDT)",
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ASTERUSDT)",
-      "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLFIUSDT)"
+      "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on WLFIUSDT)",
+      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)"
     ]
   },
   "history": [
@@ -554,6 +555,30 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-09-06 07:35:05",
+      "timestamp_ms": 1788680105565,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.833,
+      "exit_price": 0.836,
+      "pnl_usd": 0.0439,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via ⚡ Cosecha Dinámica Flujo Vendedor (+0.36% libre | Compras Taker: 25.4%, Bids: 52.2%) (Fase 1, PnL: +0.36%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 41.2,
+        "atr_pct_15m": 0.382,
+        "vol_surge": 0.54,
+        "vol_surge_1m": 1.06,
+        "fii_score": 80,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -1073,6 +1098,30 @@
         "vol_surge": 3.63,
         "vol_surge_1m": 13.37,
         "fii_score": 90,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-09-06 07:35:05",
+      "timestamp_ms": 1788680105565,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.833,
+      "exit_price": 0.836,
+      "pnl_usd": 0.0439,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via ⚡ Cosecha Dinámica Flujo Vendedor (+0.36% libre | Compras Taker: 25.4%, Bids: 52.2%) (Fase 1, PnL: +0.36%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 41.2,
+        "atr_pct_15m": 0.382,
+        "vol_surge": 0.54,
+        "vol_surge_1m": 1.06,
+        "fii_score": 80,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
