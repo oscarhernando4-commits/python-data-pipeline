@@ -1,6 +1,8 @@
 name: 🤖 Quant Trading Engine (4-Hour Continuous Runner)
 
 on:
+  schedule:
+    - cron: '56 */4 * * *'  # FIX 2.8: Cron nativo GitHub como fallback de cron-job.org
   push:
     branches: [ main ]
   workflow_dispatch:
@@ -15,7 +17,7 @@ on:
 
 concurrency:
   group: "continuous-quant-engine"
-  cancel-in-progress: true # Automatically cancels previous running instance when new 4-hour cron arrives
+  cancel-in-progress: false # FIX 2.7: NUNCA matar bot con dinero real en posición activa
 
 jobs:
   continuous_trade_and_sync:

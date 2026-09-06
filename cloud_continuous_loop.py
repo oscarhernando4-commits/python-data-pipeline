@@ -117,28 +117,49 @@ def run_focused_position_guardian(max_duration_secs: int = 14400):
         except Exception:
             pass
 
+    _git_lock = threading.Lock()  # FIX 1.7: Mutex para operaciones git concurrentes
+    _consecutive_no_pos = 0  # FIX 1.6: Contador de confirmaciones de cierre
+
     start_t = time.time()
     tick = 0
     while time.time() - start_t < max_duration_secs:
         tick += 1
         time.sleep(1.0)
         
-        # 🔄 Sincronización en segundo plano (0ms de bloqueo para garantizar pulso ininterrumpido cada 1s)
-        if tick % 30 == 0:
-            threading.Thread(target=_async_git_pull, daemon=True).start()
+        # 🔄 Sincronización en segundo plano con mutex (0ms de bloqueo)
+        if tick % 30 == 0 and tick % 300 != 0:  # FIX 1.7: No colisionar pull con push
+            def _safe_git_pull():
+                with _git_lock:
+                    _async_git_pull()
+            threading.Thread(target=_safe_git_pull, daemon=True).start()
         
         try:
             hb = api_connector.quick_position_heartbeat()
             if not hb or not isinstance(hb, dict) or not hb.get("symbol"):
-                # La posición se ha cerrado
-                print(f"\n🎯 [OPERACIÓN FINALIZADA TRAS {tick}s] Salida ejecutada con éxito.", flush=True)
-                print("🔄 Sincronizando billetera y reactivando Radar Cuántico de 67 Pares Top 100 CMC...\n", flush=True)
-                try:
-                    api_connector.diagnose_full_spot_wallet()
-                except Exception:
-                    pass
-                break
+                _consecutive_no_pos += 1
+                # FIX 1.6: Exigir 3 confirmaciones consecutivas para evitar falsos positivos por glitch de red
+                if _consecutive_no_pos >= 3:
+                    # Confirmar contra el estado real persistido
+                    try:
+                        _real_st = api_connector.load_real_account_state()
+                        if _real_st.get("position") is not None:
+                            print(f"⚠️ [GUARDIAN] Heartbeat vacío pero posición existe en estado. Reintentando...", flush=True)
+                            _consecutive_no_pos = 0
+                            continue
+                    except Exception:
+                        pass
+                    print(f"\n🎯 [OPERACIÓN FINALIZADA TRAS {tick}s] Salida confirmada (3 checks consecutivos).", flush=True)
+                    print("🔄 Sincronizando billetera y reactivando Radar Cuántico de 67 Pares Top 100 CMC...\n", flush=True)
+                    try:
+                        api_connector.diagnose_full_spot_wallet()
+                    except Exception:
+                        pass
+                    break
+                else:
+                    print(f"⚠️ [GUARDIAN] Heartbeat vacío ({_consecutive_no_pos}/3). Verificando...", flush=True)
+                    continue
             
+            _consecutive_no_pos = 0  # Reset en heartbeat exitoso
             p_fmt = f"${hb['price']:.5f}" if hb['price'] < 0.05 else f"${hb['price']:.4f}"
             pnl_sign = "+" if hb['pnl_pct'] >= 0 else ""
             curr_phase = hb.get('phase', 1)
@@ -147,9 +168,12 @@ def run_focused_position_guardian(max_duration_secs: int = 14400):
             # 💓 Monitoreo en Vivo Segundo a Segundo en Tiempo Real (flush=True inmediato)
             print(f"💓 [HEARTBEAT 1s | T+{tick}s] {hb['symbol']} @ {p_fmt} | PnL: {pnl_sign}{hb['pnl_pct']:.2f}% (Pico: +{curr_highest:.2f}% | Fase {curr_phase})", flush=True)
             
-            # Sincronización periódica ligera de estado a git cada 300s en hilo secundario (0ms de retraso)
+            # Sincronización periódica ligera de estado a git cada 300s con mutex
             if tick % 300 == 0:
-                threading.Thread(target=_async_git_push, daemon=True).start()
+                def _safe_git_push():
+                    with _git_lock:
+                        _async_git_push()
+                threading.Thread(target=_safe_git_push, daemon=True).start()
         except Exception as e:
             print(f"⚠️ Nota en Heartbeat Guardian: {e}", flush=True)
             time.sleep(1.0)

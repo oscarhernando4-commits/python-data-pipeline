@@ -229,7 +229,7 @@ def run_simulation_cycle(symbol_analysis_map: dict):
 
             # Trailing floor dinámico proporcional multi-nivel
             if highest_pnl >= grp_p3:
-                retention = min(85.0, 60.0 + highest_pnl * 5.0)
+                retention = min(85.0, 65.0 + highest_pnl * 5.0)  # FIX 2.3b: Unificado con DNA (65.0)
                 floor_pct = max(1.20, highest_pnl * retention / 100.0)
             elif highest_pnl >= 1.00:
                 # Meta +1% cumplida: piso en +0.80%
