@@ -680,9 +680,10 @@ def get_realtime_order_flow_momentum(symbol: str) -> dict:
             tot_depth = bid_vol + ask_vol
             bid_dom_pct = (bid_vol / tot_depth * 100.0) if tot_depth > 0 else 50.0
 
-            # Agotamiento o reversión bajista:
-            # Menos de 40% de compras taker O menos de 40% de soporte en bids
-            is_exhaustion = bool(taker_buy_pct < 40.0 or bid_dom_pct < 40.0)
+            # Agotamiento o reversión bajista real:
+            # Ventas masivas agresivas (taker buy < 25%) Y colapso de soporte en bids (< 25%)
+            # Evita salidas en falso por ruido normal de liquidez en velas de 1 minuto
+            is_exhaustion = bool(taker_buy_pct < 25.0 and bid_dom_pct < 25.0)
 
             return {
                 "symbol": symbol,
@@ -1314,21 +1315,21 @@ def quick_position_heartbeat():
         should_exit = current_pnl_pct <= sl_pct
         exit_reason = f"🎯 Trailing Floor Activado ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
 
-        # ⚡ COSECHA DINÁMICA SÚPER-CEREBRO 6.0 (PROFIT-RUNNER REAL):
-        # NUNCA estrangular un trade en centavos (+0.28%). Las operaciones deben respirar
-        # para buscar objetivos de +0.75% a +1.50% dejando ganancias sustanciales.
+        # ⚡ COSECHA DINÁMICA SÚPER-CEREBRO 6.0 (PROFIT-RUNNER META ≥ 1.0%):
+        # Permitir que las operaciones respiren para alcanzar la meta obligatoria del 1.0% a 1.50%.
+        # El trailing stop ya protege con Escudo Break-Even (+0.35% -> +0.08%) y Cosecha Real (+0.70% -> +0.55%).
         if not should_exit and current_pnl_pct >= 0.70:
-            # A) Micro-retroceso desde la cima alta (holgura de 0.15% tras superar +0.80%)
-            if highest_pnl_pct >= 0.80 and current_pnl_pct <= (highest_pnl_pct - 0.15):
+            # A) Micro-retroceso solo si ya alcanzamos la meta del +1.00% (holgura de 0.20% tras superar +1.00%)
+            if highest_pnl_pct >= 1.00 and current_pnl_pct <= (highest_pnl_pct - 0.20):
                 should_exit = True
-                exit_reason = f"⚡ Cosecha Dinámica Micro-Retroceso ({current_pnl_pct:+.2f}% libre | Cima fue +{highest_pnl_pct:.2f}%)"
+                exit_reason = f"🏆 Cosecha Dinámica Meta 1% Cumplida ({current_pnl_pct:+.2f}% libre | Cima fue +{highest_pnl_pct:.2f}%)"
             else:
-                # B) Flujo de órdenes agresivas y libro en tiempo real (solo si ya estamos en ganancia sólida >= +0.70%)
+                # B) Flujo de órdenes agresivas y libro en tiempo real (solo si hay pánico/dump extremo real)
                 flow = get_realtime_order_flow_momentum(sym)
                 if flow.get("is_exhaustion_or_dump", False) and current_pnl_pct >= 0.70:
                     should_exit = True
                     exit_reason = (
-                        f"⚡ Cosecha Dinámica Flujo Vendedor ({current_pnl_pct:+.2f}% libre | "
+                        f"⚡ Cosecha Dinámica Dump Extremo ({current_pnl_pct:+.2f}% libre | "
                         f"Compras Taker: {flow.get('taker_buy_pct', 0):.1f}%, Bids: {flow.get('bid_dominance_pct', 0):.1f}%)"
                     )
 

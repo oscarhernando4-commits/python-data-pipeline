@@ -302,6 +302,22 @@ def main():
         print(f"🔄 CICLO [{cycle}/{total_cycles}] - ESCANEO Y OPERACIÓN CUÁNTICA EN VIVO", flush=True)
         print(f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", flush=True)
 
+        # 🎯 HUD META DIARIA OBLIGATORIA (≥ 1.0% DIARIO)
+        try:
+            _st_hud = api_connector.load_real_account_state()
+            _bal_hud = _st_hud.get("current_balance_usd", 12.16)
+            _daily_pnl_hud = _st_hud.get("_daily_pnl_usd", 0.0)
+            _target_usd = round(_bal_hud * 0.01, 4)
+            _pct_done = (_daily_pnl_hud / _target_usd * 100.0) if _target_usd > 0 else 0.0
+            if _daily_pnl_hud >= _target_usd:
+                _status_str = f"🏆 META CUMPLIDA (+{_daily_pnl_hud:+.4f} USD >= ${_target_usd:.4f} USD)"
+            else:
+                _rem = _target_usd - _daily_pnl_hud
+                _status_str = f"EN CAMINO ({_pct_done:.1f}% | Faltan ${_rem:.4f} USD para el 1.0%)"
+            print(f"🎯 META DIARIA OBLIGATORIA (≥1.0% = ${_target_usd:.4f} USD) | PnL Hoy: ${_daily_pnl_hud:+.4f} USD | {_status_str}", flush=True)
+        except Exception:
+            pass
+
         # Step 1: Update market universe
         try:
             if hasattr(data_fetcher, 'fetch_top_100_pairs'):
@@ -355,6 +371,9 @@ def main():
         print(f"  💰 Balance: ${_bal:.2f} USD", flush=True)
         print(f"  📈 Operaciones hoy: {_total_ops} ({_wins} wins / {_losses} losses) | WR: {_wr:.0f}%", flush=True)
         print(f"  💵 PnL del día: ${_daily_pnl:+.4f} USD", flush=True)
+        _meta_1pct = round(_bal * 0.01, 4)
+        _meta_status = "🏆 CUMPLIDA (≥1.0%)" if _daily_pnl >= _meta_1pct else f"{(_daily_pnl/_meta_1pct*100):.1f}% alcanzado"
+        print(f"  🎯 Meta Diaria Obligatoria (≥1.0% = ${_meta_1pct:.4f} USD): {_meta_status}", flush=True)
         if _pos:
             _entry = _pos.get("entry_price", 0)
             _sym_p = _pos.get("symbol", "?")
