@@ -1229,6 +1229,10 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             sl_pct = max(0.55, round(highest_pnl_pct * 0.78, 4))
             phase = 1
             phase_label = f"⚡ FASE 1 COSECHA REAL (Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 0.35:
+            sl_pct = 0.08
+            phase = 1
+            phase_label = f"🛡️ ESCUDO BREAK-EVEN (Cima +{highest_pnl_pct:.2f}% -> Piso +0.08% RIESGO CERO)"
         else:
             sl_pct = -0.45
             phase = 1
@@ -2588,7 +2592,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 # Regla unificada: si vemos más vendedores que compradores → VETO sin importar FII.
                 # Mercado normal: buy≥45% | Con BTC bajista: buy≥48% (más estricto)
                 _is_btc_bearish_now = is_bearish  # 'is_bearish' se pasa desde pipeline
-                vd_min_buy = 48.0 if _is_btc_bearish_now else 45.0
+                vd_min_buy = 52.0 if _is_btc_bearish_now else 50.0
                 if vd_sell_wave or vd_buy < vd_min_buy:
                     print(f"  🛑 [VOLUME DELTA VETO] {cand_sym} descartado: Dominancia vendedora taker activa (Buy={vd_buy:.0f}% < {vd_min_buy:.0f}%, FII={fii}, BTC_bajista={_is_btc_bearish_now}, Delta={vd_delta:+,.0f} USDT). Esperando compradores agresivos.")
                     continue

@@ -254,10 +254,16 @@ def calculate_archetype_trailing(
         phase = 2
         phase_label = f"🏆 FASE 2 META +1% CUMPLIDA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Asegurado +{sl_pct:.2f}%)"
     elif highest_pnl_pct >= 0.70:
-        # Cima de cosecha real: piso en +0.55% (ganancia neta libre +0.40% asegurada tras comisiones)
+        # Cima de cosecha real: piso en +0.55% (ganancia neta libre +0.47% asegurada tras comisiones)
         sl_pct = max(0.55, round(highest_pnl_pct * 0.78, 4))
         phase = 1
         phase_label = f"⚡ FASE 1 COSECHA REAL ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 0.35:
+        # 🛡️ ESCUDO BREAK-EVEN 6.0: Cero pérdidas. Piso en +0.08% cubre la comisión BNB (0.075%).
+        # Jamás permitir que una operación que subió a +0.35% termine en derrota.
+        sl_pct = 0.08
+        phase = 1
+        phase_label = f"🛡️ ESCUDO BREAK-EVEN ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +0.08% RIESGO CERO)"
     else:
         sl_pct = -0.45
         phase = 1
