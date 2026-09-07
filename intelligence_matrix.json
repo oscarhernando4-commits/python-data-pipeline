@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07 21:05:48 UTC",
+  "updated_at": "2026-09-07 21:07:45 UTC",
   "elite_tokens": [
     {
       "symbol": "XLMUSDT",
@@ -98,19 +98,19 @@
       "tier": "🟢 A SÓLIDO"
     },
     {
+      "symbol": "ARBUSDT",
+      "total": 54,
+      "wins": 53,
+      "win_rate": 98.1,
+      "net_pnl": 61.9,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ETCUSDT",
       "total": 31,
       "wins": 30,
       "win_rate": 96.8,
       "net_pnl": 13.73,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "ARBUSDT",
-      "total": 24,
-      "wins": 23,
-      "win_rate": 95.8,
-      "net_pnl": 42.86,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -159,6 +159,14 @@
       "wins": 220,
       "win_rate": 88.0,
       "net_pnl": 572.64,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "PYTHUSDT",
+      "total": 19,
+      "wins": 16,
+      "win_rate": 84.2,
+      "net_pnl": 0.71,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -340,6 +348,14 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "BONKUSDT",
+      "total": 42,
+      "wins": 0,
+      "win_rate": 0.0,
+      "net_pnl": -18.99,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "LTCUSDT",
       "total": 30,
       "wins": 0,
@@ -353,14 +369,6 @@
       "wins": 0,
       "win_rate": 0.0,
       "net_pnl": -80.71,
-      "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "BONKUSDT",
-      "total": 30,
-      "wins": 0,
-      "win_rate": 0.0,
-      "net_pnl": -18.99,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -388,7 +396,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 50.8,
-  "total_sim_trades": 2115,
+  "global_sim_wr": 51.5,
+  "total_sim_trades": 2169,
   "total_real_trades": 37
 }
