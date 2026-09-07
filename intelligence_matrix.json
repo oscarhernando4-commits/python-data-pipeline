@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07 17:11:43 UTC",
+  "updated_at": "2026-09-07 17:13:44 UTC",
   "elite_tokens": [
     {
       "symbol": "FILUSDT",
@@ -7,6 +7,22 @@
       "wins": 40,
       "win_rate": 100.0,
       "net_pnl": 20.88,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "total": 8,
+      "wins": 8,
+      "win_rate": 100.0,
+      "net_pnl": 4.3,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "FETUSDT",
+      "total": 4,
+      "wins": 4,
+      "win_rate": 100.0,
+      "net_pnl": 6.72,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -244,14 +260,6 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "HBARUSDT",
-      "total": 7,
-      "wins": 0,
-      "win_rate": 0.0,
-      "net_pnl": -3.93,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "WIFUSDT",
       "total": 7,
       "wins": 0,
@@ -284,7 +292,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 26.8,
-  "total_sim_trades": 518,
+  "global_sim_wr": 29.6,
+  "total_sim_trades": 538,
   "total_real_trades": 36
 }
