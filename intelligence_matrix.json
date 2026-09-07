@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-09-07 15:16:01 UTC",
+  "updated_at": "2026-09-07 15:19:49 UTC",
   "elite_tokens": [
+    {
+      "symbol": "ONDOUSDT",
+      "total": 30,
+      "wins": 30,
+      "win_rate": 100.0,
+      "net_pnl": 7.0,
+      "tier": "💎 A+ ÉLITE"
+    },
     {
       "symbol": "ETHFIUSDT",
       "total": 2,
@@ -82,6 +90,14 @@
       "tier": "🟢 A SÓLIDO"
     },
     {
+      "symbol": "NEXOUSDT",
+      "total": 37,
+      "wins": 34,
+      "win_rate": 91.9,
+      "net_pnl": 18.0,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "PUMPUSDT",
       "total": 4,
       "wins": 3,
@@ -108,6 +124,14 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "STXUSDT",
+      "total": 30,
+      "wins": 0,
+      "win_rate": 0.0,
+      "net_pnl": -7.4,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "ADAUSDT",
       "total": 10,
       "wins": 0,
@@ -116,7 +140,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 0.0,
-  "total_sim_trades": 40,
+  "global_sim_wr": 46.2,
+  "total_sim_trades": 130,
   "total_real_trades": 34
 }
