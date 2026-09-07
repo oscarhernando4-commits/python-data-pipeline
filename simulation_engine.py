@@ -239,7 +239,7 @@ def run_simulation_cycle(symbol_analysis_map: dict):
             elif highest_pnl >= 0.35:
                 floor_pct = 0.08
             else:
-                floor_pct = -0.45
+                floor_pct = -2.50
 
             # Condiciones de salida
             should_exit = False

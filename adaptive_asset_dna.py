@@ -64,10 +64,10 @@ ARCHETYPE_CONFIGS = {
         "archetype": "HYPER_VOLATILE_SPRINT",
         "label": "🐆 SPRINT HIPER-VOLÁTIL (Meme / High-Beta)",
         "emoji": "🐆",
-        "initial_sl_pct": -0.45,
+        "initial_sl_pct": -2.50,
         "max_stagnation_minutes": 360,
         "stagnation_decay_minutes": 225,
-        "decay_sl_pct": -0.45,
+        "decay_sl_pct": -2.50,
         "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
         "phase_3_trigger_pct": 1.60,
@@ -82,10 +82,10 @@ ARCHETYPE_CONFIGS = {
         "archetype": "BLUE_CHIP_CORE",
         "label": "🏛️ BLUE-CHIP INSTITUCIONAL (L1 / Core)",
         "emoji": "🏛️",
-        "initial_sl_pct": -0.45,
+        "initial_sl_pct": -2.50,
         "max_stagnation_minutes": 720,
         "stagnation_decay_minutes": 540,
-        "decay_sl_pct": -0.45,
+        "decay_sl_pct": -2.50,
         "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
         "phase_3_trigger_pct": 1.60,
@@ -100,10 +100,10 @@ ARCHETYPE_CONFIGS = {
         "archetype": "SECTOR_ROTATION",
         "label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
         "emoji": "🧩",
-        "initial_sl_pct": -0.45,
+        "initial_sl_pct": -2.50,
         "max_stagnation_minutes": 540,
         "stagnation_decay_minutes": 360,
-        "decay_sl_pct": -0.45,
+        "decay_sl_pct": -2.50,
         "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
         "phase_3_trigger_pct": 1.60,
@@ -118,10 +118,10 @@ ARCHETYPE_CONFIGS = {
         "archetype": "THIN_BOOK_MICRO",
         "label": "🎯 MICRO-CAP / LIBRO DELGADO",
         "emoji": "🎯",
-        "initial_sl_pct": -0.45,
+        "initial_sl_pct": -2.50,
         "max_stagnation_minutes": 360,    # ×3 (antes: 120 min)
         "stagnation_decay_minutes": 225,  # ×3 (antes: 75 min)
-        "decay_sl_pct": -1.80,
+        "decay_sl_pct": -2.50,
         "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
         "phase_3_trigger_pct": 1.60,
@@ -240,7 +240,7 @@ def calculate_archetype_trailing(
     emoji = archetype_dna.get("emoji", "🧬")
     label = archetype_dna.get("label", arch)
     p3_trigger = archetype_dna.get("phase_3_trigger_pct", 1.50)
-    initial_sl = float(archetype_dna.get("initial_sl_pct", -0.45))
+    initial_sl = float(archetype_dna.get("initial_sl_pct", -2.50))
 
     if highest_pnl_pct >= p3_trigger:
         retention_pct = min(85.0, 65.0 + (highest_pnl_pct * 5.0))

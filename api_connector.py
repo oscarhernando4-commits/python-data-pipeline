@@ -1235,9 +1235,9 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             phase = 1
             phase_label = f"🛡️ ESCUDO BREAK-EVEN (Cima +{highest_pnl_pct:.2f}% -> Piso +0.08% RIESGO CERO)"
         else:
-            sl_pct = -0.45
+            sl_pct = -2.50
             phase = 1
-            phase_label = f"🌱 ZONA DE DESARROLLO (Cima +{highest_pnl_pct:.2f}% | SL Ceñido 6.0: -0.45%)"
+            phase_label = f"🌱 ZONA DE DESARROLLO (Cima +{highest_pnl_pct:.2f}% | SL: -2.50%)"
 
         return sl_pct, phase, phase_label
 
@@ -1401,13 +1401,12 @@ def quick_position_heartbeat():
                     state["_last_exit_was_btc_shield"] = True
 
 
-        # 🛑 ASIMETRÍA MATEMÁTICA 2:1 & BLINDAJE ANTI-SANGRADO 5.0:
-        # En Spot NUNCA vendemos a mercado con pérdidas por un reloj de tiempo (L1, L2, L3 eliminados).
-        # Solo se sale si el precio toca el Stop Loss ceñido de -0.45%, limitando
-        # la pérdida máxima a ~$0.05 USD (recuperable de inmediato con un solo trade ganador).
-        if not should_exit and current_pnl_pct <= -0.45:
+        # 🛑 ASIMETRÍA MATEMÁTICA & STOP LOSS INICIAL -2.50%:
+        # Margen amplio para absorber la volatilidad natural (ATR) y permitir el desarrollo del trade.
+        # Al tocar +0.35%, el Escudo Break-Even asegura la posición a +0.08% (Riesgo Cero).
+        if not should_exit and current_pnl_pct <= -2.50:
             should_exit = True
-            exit_reason = f"🛑 STOP LOSS CEÑIDO 5.0 ({current_pnl_pct:+.2f}% <= -0.45%). Cortando pérdida mínima (-$0.05 USD)."
+            exit_reason = f"🛑 STOP LOSS INICIAL ({current_pnl_pct:+.2f}% <= -2.50%). Cortando pérdida."
 
         # 🔴 MEJORA 2 — OBV IN-POSITION MONITOR (cada ~5 min en Fase 1)
         # Si OBV se vuelve DISTRIBUTING durante el trade → institucionales vendiendo nuestra posición
@@ -1962,7 +1961,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 state["_daily_pnl_date"] = today_str
                 state["_daily_pnl_usd"] = 0.0
             daily_pnl = state.get("_daily_pnl_usd", 0.0)
-            daily_loss_limit = -0.40  # Max $0.40 loss per day
+            daily_loss_limit = -0.65  # Max $0.65 loss per day (tolera 2 SL de -2.50% en posición de ~$11)
             if daily_pnl <= daily_loss_limit:
                 print(f"🛑 [LÍMITE DIARIO] Pérdida acumulada hoy: ${daily_pnl:.3f}. Límite: ${daily_loss_limit}. Operaciones pausadas hasta mañana. Preservando capital.")
                 return
