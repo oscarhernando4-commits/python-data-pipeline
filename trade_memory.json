@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 28,
+    "total_trades": 29,
     "wins": 21,
-    "losses": 7,
-    "win_rate_pct": 75.0,
-    "total_pnl_usd": 0.5379999999999998
+    "losses": 8,
+    "win_rate_pct": 72.41,
+    "total_pnl_usd": 0.4870999999999998
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -16,7 +16,8 @@
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on PYTHUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on PUMPUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEXOUSDT)",
-      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ASTERUSDT)"
+      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ASTERUSDT)",
+      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on FLOKIUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ZROUSDT)",
@@ -704,6 +705,30 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
+    },
+    {
+      "timestamp": "2026-09-07 03:25:42",
+      "timestamp_ms": 1788751542726,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "FLOKIUSDT",
+      "side": "LONG",
+      "entry_price": 2.619e-05,
+      "exit_price": 2.607e-05,
+      "pnl_usd": -0.0509,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (-0.46% <= -0.45%) (Fase 1, PnL: -0.46%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 50.4,
+        "atr_pct_15m": 0.674,
+        "vol_surge": 2.08,
+        "vol_surge_1m": 2.79,
+        "fii_score": 100,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -1366,6 +1391,30 @@
         "atr_pct_15m": 0.407,
         "vol_surge": 1.28,
         "vol_surge_1m": 2.48,
+        "fii_score": 100,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-09-07 03:25:42",
+      "timestamp_ms": 1788751542726,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "FLOKIUSDT",
+      "side": "LONG",
+      "entry_price": 2.619e-05,
+      "exit_price": 2.607e-05,
+      "pnl_usd": -0.0509,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (-0.46% <= -0.45%) (Fase 1, PnL: -0.46%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 50.4,
+        "atr_pct_15m": 0.674,
+        "vol_surge": 2.08,
+        "vol_surge_1m": 2.79,
         "fii_score": 100,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
