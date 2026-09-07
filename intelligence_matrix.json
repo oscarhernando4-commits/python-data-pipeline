@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07 15:11:58 UTC",
+  "updated_at": "2026-09-07 15:16:01 UTC",
   "elite_tokens": [
     {
       "symbol": "ETHFIUSDT",
@@ -58,14 +58,6 @@
       "tier": "🟢 A SÓLIDO"
     },
     {
-      "symbol": "ZROUSDT",
-      "total": 1,
-      "wins": 1,
-      "win_rate": 100.0,
-      "net_pnl": 0.12,
-      "tier": "🟢 A SÓLIDO"
-    },
-    {
       "symbol": "RENDERUSDT",
       "total": 1,
       "wins": 1,
@@ -106,8 +98,25 @@
       "tier": "💎 A+ ÉLITE"
     }
   ],
-  "blacklisted_tokens": [],
+  "blacklisted_tokens": [
+    {
+      "symbol": "ZROUSDT",
+      "total": 31,
+      "wins": 1,
+      "win_rate": 3.2,
+      "net_pnl": -13.02,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "ADAUSDT",
+      "total": 10,
+      "wins": 0,
+      "win_rate": 0.0,
+      "net_pnl": 0.0,
+      "tier": "☠️ TÓXICO"
+    }
+  ],
   "global_sim_wr": 0.0,
-  "total_sim_trades": 0,
+  "total_sim_trades": 40,
   "total_real_trades": 34
 }
