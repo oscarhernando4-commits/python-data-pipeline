@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07 21:07:45 UTC",
+  "updated_at": "2026-09-07 21:09:47 UTC",
   "elite_tokens": [
     {
       "symbol": "XLMUSDT",
@@ -50,6 +50,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "BTCUSDT",
+      "total": 14,
+      "wins": 14,
+      "win_rate": 100.0,
+      "net_pnl": 3.67,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "FETUSDT",
       "total": 13,
       "wins": 13,
@@ -71,14 +79,6 @@
       "wins": 5,
       "win_rate": 100.0,
       "net_pnl": 3.6,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "BTCUSDT",
-      "total": 4,
-      "wins": 4,
-      "win_rate": 100.0,
-      "net_pnl": 1.61,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -163,10 +163,10 @@
     },
     {
       "symbol": "PYTHUSDT",
-      "total": 19,
-      "wins": 16,
-      "win_rate": 84.2,
-      "net_pnl": 0.71,
+      "total": 20,
+      "wins": 17,
+      "win_rate": 85.0,
+      "net_pnl": 0.76,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -236,14 +236,6 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "APTUSDT",
-      "total": 29,
-      "wins": 7,
-      "win_rate": 24.1,
-      "net_pnl": 13.51,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "ASTERUSDT",
       "total": 18,
       "wins": 4,
@@ -268,14 +260,6 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "LINKUSDT",
-      "total": 6,
-      "wins": 1,
-      "win_rate": 16.7,
-      "net_pnl": -6.08,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "ALGOUSDT",
       "total": 8,
       "wins": 1,
@@ -297,6 +281,14 @@
       "wins": 2,
       "win_rate": 6.2,
       "net_pnl": -37.66,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "LINKUSDT",
+      "total": 16,
+      "wins": 1,
+      "win_rate": 6.2,
+      "net_pnl": -20.88,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -372,6 +364,14 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "TRXUSDT",
+      "total": 15,
+      "wins": 0,
+      "win_rate": 0.0,
+      "net_pnl": 0.0,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "ADAUSDT",
       "total": 10,
       "wins": 0,
@@ -386,17 +386,9 @@
       "win_rate": 0.0,
       "net_pnl": -3.65,
       "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "TRXUSDT",
-      "total": 5,
-      "wins": 0,
-      "win_rate": 0.0,
-      "net_pnl": 0.0,
-      "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 51.5,
-  "total_sim_trades": 2169,
+  "global_sim_wr": 51.6,
+  "total_sim_trades": 2219,
   "total_real_trades": 37
 }
