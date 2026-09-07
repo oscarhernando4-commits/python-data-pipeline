@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07 17:25:44 UTC",
+  "updated_at": "2026-09-07 17:27:53 UTC",
   "elite_tokens": [
     {
       "symbol": "FILUSDT",
@@ -42,6 +42,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "SUIUSDT",
+      "total": 8,
+      "wins": 8,
+      "win_rate": 100.0,
+      "net_pnl": 8.63,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "SHIBUSDT",
       "total": 8,
       "wins": 8,
@@ -63,14 +71,6 @@
       "wins": 3,
       "win_rate": 100.0,
       "net_pnl": 2.54,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "SUIUSDT",
-      "total": 2,
-      "wins": 2,
-      "win_rate": 100.0,
-      "net_pnl": 2.29,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -178,6 +178,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "OPUSDT",
+      "total": 19,
+      "wins": 14,
+      "win_rate": 73.7,
+      "net_pnl": 23.84,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ONDOUSDT",
       "total": 47,
       "wins": 32,
@@ -201,14 +209,6 @@
       "wins": 1,
       "win_rate": 33.3,
       "net_pnl": -0.0,
-      "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "OPUSDT",
-      "total": 7,
-      "wins": 2,
-      "win_rate": 28.6,
-      "net_pnl": 0.88,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -356,7 +356,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 52.0,
-  "total_sim_trades": 953,
+  "global_sim_wr": 52.9,
+  "total_sim_trades": 971,
   "total_real_trades": 36
 }
