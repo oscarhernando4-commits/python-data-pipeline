@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 874,
+    "total_trades": 875,
     "wins": 584,
-    "losses": 290,
-    "win_rate_pct": 66.82,
-    "total_pnl_usd": -2229.5079
+    "losses": 291,
+    "win_rate_pct": 66.74,
+    "total_pnl_usd": -2230.8053
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -17528,6 +17528,26 @@
       "min_fii": 55,
       "hold_min": 137.7,
       "notes": "SL/Floor 0.08% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-07 20:11:28",
+      "timestamp_ms": 1788811888922,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "BCHUSDT",
+      "side": "LONG",
+      "entry_price": 263.7,
+      "exit_price": 260.2,
+      "result": "LOSS",
+      "pnl_pct": -1.3273,
+      "pnl_usd": -1.2974,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 181.9,
+      "notes": "Tiempo max 180min agotado",
       "context": {}
     }
   ],
