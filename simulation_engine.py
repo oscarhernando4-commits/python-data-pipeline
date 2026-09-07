@@ -26,7 +26,7 @@ GENETIC_GROUPS = [
         "count": 200,
         "min_score": 90,
         "min_fii": 70,
-        "sl_pct": -3.50,
+        "sl_pct": -2.50,
         "phase2_pct": 1.00,
         "phase3_pct": 1.60,
         "max_hold_min": 360,
@@ -38,7 +38,7 @@ GENETIC_GROUPS = [
         "count": 200,
         "min_score": 85,
         "min_fii": 60,
-        "sl_pct": -4.00,
+        "sl_pct": -2.50,
         "phase2_pct": 1.00,
         "phase3_pct": 1.60,
         "max_hold_min": 360,
@@ -50,7 +50,7 @@ GENETIC_GROUPS = [
         "count": 200,
         "min_score": 75,
         "min_fii": 50,
-        "sl_pct": -3.00,
+        "sl_pct": -2.00,
         "phase2_pct": 0.80,
         "phase3_pct": 1.20,
         "max_hold_min": 180,
@@ -62,7 +62,7 @@ GENETIC_GROUPS = [
         "count": 200,
         "min_score": 85,
         "min_fii": 60,
-        "sl_pct": -4.00,
+        "sl_pct": -2.50,
         "phase2_pct": 1.50,
         "phase3_pct": 2.50,
         "max_hold_min": 720,
@@ -74,7 +74,7 @@ GENETIC_GROUPS = [
         "count": 200,
         "min_score": 80,
         "min_fii": 55,
-        "sl_pct": -3.50,
+        "sl_pct": -2.50,
         "phase2_pct": 1.20,
         "phase3_pct": 1.80,
         "max_hold_min": 480,
@@ -95,12 +95,19 @@ def load_matrix():
 
 def _init_fresh_matrix():
     """Inicializa la matriz con 1000 cuentas en 5 grupos genéticos."""
+    try:
+        from pipeline_processor import TOP_PAIRS
+    except Exception:
+        TOP_PAIRS = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT", "XRPUSDT"]
+
     accounts = []
     for grp in GENETIC_GROUPS:
         for i in range(grp["count"]):
             acct_id = f"G{grp['group_id']}-SIM-{i:03d}"
+            assigned_sym = TOP_PAIRS[i % len(TOP_PAIRS)] if TOP_PAIRS else "BTCUSDT"
             accounts.append({
                 "account_id": acct_id,
+                "symbol": assigned_sym,
                 "group_id": grp["group_id"],
                 "group_name": grp["group_name"],
                 "min_score": grp["min_score"],
@@ -180,6 +187,23 @@ def run_simulation_cycle(symbol_analysis_map: dict):
     # Pre-calcular candidatos válidos por símbolo desde el analysis_map
     candidates_by_quality = _extract_candidates(symbol_analysis_map)
 
+    # Pre-cargar precios de posiciones abiertas ausentes del mapa (1 llamada por símbolo único, nunca 1000)
+    missing_syms = {
+        a["position"]["symbol"] for a in accounts
+        if a.get("position") and isinstance(a["position"], dict) and a["position"].get("symbol")
+        and (a["position"]["symbol"] not in symbol_analysis_map or symbol_analysis_map[a["position"]["symbol"]].get("price", 0) <= 0)
+    }
+    extra_prices = {}
+    if missing_syms:
+        try:
+            import api_connector as _ac_px
+            for msym in missing_syms:
+                px = _ac_px.get_symbol_price(msym)
+                if px and px > 0:
+                    extra_prices[msym] = px
+        except Exception:
+            pass
+
     # Contadores del ciclo
     cycle_entries = 0
     cycle_exits_win = 0
@@ -205,12 +229,12 @@ def run_simulation_cycle(symbol_analysis_map: dict):
             open_time_s = float(pos.get("open_time_epoch", time.time()))
             hold_min = (time.time() - open_time_s) / 60.0
 
-            # BUG 12 FIX: si el símbolo desaparece del map, usar entry como precio
-            # pero NO hacer continue — permitir evaluación de tiempo máximo para evitar posiciones zombi
+            # Obtener precio del mapa o del cache de precios extra
             sym_data = symbol_analysis_map.get(sym, {})
-            current_price = sym_data.get("price", 0)
+            current_price = sym_data.get("price", 0) or extra_prices.get(sym, 0)
+
             if not current_price or current_price <= 0:
-                # Símbolo ausente del map: evaluar solo cierre por tiempo
+                # Símbolo ausente del map y de API: evaluar solo cierre por tiempo
                 if hold_min >= grp_max_hold:
                     # Cerrar posición zombi por tiempo agotado con precio de entrada (pnl=0)
                     acct["trades_count"] = acct.get("trades_count", 0) + 1
@@ -239,7 +263,7 @@ def run_simulation_cycle(symbol_analysis_map: dict):
             elif highest_pnl >= 0.35:
                 floor_pct = 0.08
             else:
-                floor_pct = -2.50
+                floor_pct = grp_sl_pct
 
             # Condiciones de salida
             should_exit = False
@@ -320,12 +344,31 @@ def run_simulation_cycle(symbol_analysis_map: dict):
             ]
 
             if eligible:
-                # Cada cuenta elige al candidato con mayor score que no esté ya en su historial reciente
+                # Anti-concentración institucional: máximo 15 cuentas en la matriz por símbolo
+                sym_counts = {}
+                for a in accounts:
+                    p = a.get("position")
+                    if p and p.get("symbol"):
+                        s = p["symbol"]
+                        sym_counts[s] = sym_counts.get(s, 0) + 1
+
                 recent_syms = {h["symbol"] for h in acct.get("trade_history", [])[-3:]}
-                best = next((c for c in eligible if c["symbol"] not in recent_syms), eligible[0])
+                unconcentrated = [c for c in eligible if sym_counts.get(c["symbol"], 0) < 15 and c["symbol"] not in recent_syms]
+                if not unconcentrated:
+                    unconcentrated = [c for c in eligible if sym_counts.get(c["symbol"], 0) < 30]
+                if not unconcentrated:
+                    unconcentrated = eligible
+
+                try:
+                    acct_num = int(acct.get("account_id", "0").split("-")[-1])
+                except Exception:
+                    acct_num = 0
+
+                best = unconcentrated[acct_num % len(unconcentrated)]
 
                 entry_price = best.get("price", 0)
                 if entry_price and entry_price > 0:
+                    acct["symbol"] = best["symbol"]
                     acct["position"] = {
                         "symbol": best["symbol"],
                         "entry_price": entry_price,
@@ -362,10 +405,16 @@ def run_simulation_cycle(symbol_analysis_map: dict):
         _feed_learning_engine(new_history_entries)
 
     if total_trades > 0 or cycle_entries > 0:
-        print(f"🧬 [SIM ENGINE] Ciclo completado: +{cycle_entries} entradas | "
-              f"+{cycle_exits_win}W / +{cycle_exits_loss}L este ciclo | "
-              f"Global: {total_wins}W/{total_losses}L ({global_wr}% WR) | "
-              f"PnL global: ${global_pnl:+.2f} USD")
+        try:
+            print(f"🧬 [SIM ENGINE] Ciclo completado: +{cycle_entries} entradas | "
+                  f"+{cycle_exits_win}W / +{cycle_exits_loss}L este ciclo | "
+                  f"Global: {total_wins}W/{total_losses}L ({global_wr}% WR) | "
+                  f"PnL global: ${global_pnl:+.2f} USD", flush=True)
+        except Exception:
+            print(f"[SIM ENGINE] Ciclo completado: +{cycle_entries} entradas | "
+                  f"+{cycle_exits_win}W / +{cycle_exits_loss}L este ciclo | "
+                  f"Global: {total_wins}W/{total_losses}L ({global_wr}% WR) | "
+                  f"PnL global: ${global_pnl:+.2f} USD", flush=True)
 
     return {
         "cycle_entries": cycle_entries,

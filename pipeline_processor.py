@@ -65,13 +65,25 @@ def get_obsidian_folder():
 OBSIDIAN_FOLDER = get_obsidian_folder()
 
 def get_group_info(index):
-    return {
-        "group_id": 0,
-        "group_name": "💎 MATRIZ CUÁNTICA A+ (Condición Real)",
-        "threshold_score": 55,
-        "risk_pct": 1.0,
-        "label": "Ecosistema Real A+ (Base 8D + FII + Vol + Trailing)"
-    }
+    try:
+        import simulation_engine as _se
+        gid = min(index // 200, 4)
+        grp = _se.GENETIC_GROUPS[gid]
+        return {
+            "group_id": grp["group_id"],
+            "group_name": grp["group_name"],
+            "threshold_score": grp["min_score"],
+            "risk_pct": 1.0,
+            "label": grp["description"]
+        }
+    except Exception:
+        return {
+            "group_id": 0,
+            "group_name": "💎 ÉLITE ESTRICTO (Score≥90, FII≥70)",
+            "threshold_score": 90,
+            "risk_pct": 1.0,
+            "label": "Máxima precisión"
+        }
 
 
 def load_live_matrix():
@@ -163,12 +175,14 @@ def load_live_matrix():
                 acc["position"] = None
                 acc["status"] = "BUSCANDO_OPORTUNIDAD"
                 
-            g_info = get_group_info(i)
-            acc["group_id"] = g_info["group_id"]
-            acc["group_name"] = g_info["group_name"]
-            acc["threshold_score"] = g_info["threshold_score"]
-            acc["risk_pct"] = g_info["risk_pct"]
-            acc["permissiveness_label"] = g_info["label"]
+            # Solo asignar group_info si la cuenta no tiene group_id asignado
+            if "group_id" not in acc:
+                g_info = get_group_info(i)
+                acc["group_id"] = g_info["group_id"]
+                acc["group_name"] = g_info["group_name"]
+                acc["threshold_score"] = g_info["threshold_score"]
+                acc["risk_pct"] = g_info["risk_pct"]
+                acc["permissiveness_label"] = g_info["label"]
             pnl = acc.get("pnl_usd", 0.0)
             if "last_result" not in acc or acc["last_result"] in ["NINGUNO", "-"]:
                 if pnl > 0:
@@ -887,171 +901,17 @@ def run_infinite_trading_matrix_cycle():
         except Exception as ge:
             print(f"💡 Gemini Sentinel Note: {ge}")
 
-    total_balance = 0.0
-    global_trades = 0
-    global_wins = 0
-    has_triggered_learned_trade = False
-
-    for acc_idx, acc in enumerate(accounts):
-        curr_bal = acc["current_balance"]
-        curr_level = acc.get("current_level", 1)
-
-        # Hard floor: clamp to 0 to prevent negative balance compounding bug
-        if curr_bal < 0:
-            acc["current_balance"] = 0.0
-            curr_bal = 0.0
-        if curr_bal <= 5.0:
-            acc["status"] = "💀 Bancarrota"
-            acc["position"] = None  # Force close any open position on bankrupt accounts
-            total_balance += max(curr_bal, 0.0)
-            continue
-
-        position = acc.get("position", None)
-
-        # 1. EVALUATE LIVE OPEN POSITION (EXACT REAL ACCOUNT PARITY: 6-PHASE TRAILING + 60M MICRO-SCRATCH)
-        if position is not None:
-            symbol = acc["symbol"]
-            analysis = symbol_analysis_map.get(symbol)
-            curr_price = analysis["price"] if analysis else position["entry_price"]
-            
-            entry_p = position["entry_price"]
-            side = "LONG"
-            
-            # Increment holding minutes (~2 minutes per cycle)
-            holding_mins = position.get("holding_minutes", 0) + 2
-            position["holding_minutes"] = holding_mins
-            
-            highest_price = max(position.get("highest_price", entry_p), curr_price)
-            position["highest_price"] = highest_price
-            highest_pnl_pct = ((highest_price - entry_p) / entry_p) * 100.0
-            unr_pct = ((curr_price - entry_p) / entry_p) * 100.0
-                
-            atr_pct = analysis.get("tech", {}).get("mtf_analysis", {}).get("atr_pct_15m", 0.30) if analysis else 0.30
-            
-            # 🎯 EXACT REPLICA: Adaptive Asset DNA 6-Phase Trailing Ladder
-            import adaptive_asset_dna
-            arch_dna = adaptive_asset_dna.get_asset_dna_archetype(symbol, atr_pct, curr_price)
-            sl_pct, phase, phase_label = adaptive_asset_dna.calculate_archetype_trailing(
-                archetype_dna=arch_dna,
-                highest_pnl_pct=highest_pnl_pct,
-                current_pnl_pct=unr_pct,
-                holding_minutes=holding_mins,
-                atr_pct=atr_pct
-            )
-                
-            position["phase"] = phase
-            position["phase_label"] = phase_label
-            
-            # Exit Conditions: Pure 3-Phase Trailing Stop (F1: SL -5% Ilimitado, F2: +1.25% Fijo, F3: >=2% Dinámico)
-            should_close = unr_pct <= sl_pct
-
-
-            
-            invested = curr_bal * 0.20  # 20% position size per simulation trade
-            bnb_fee = invested * 0.00075 * 2  # 0.075% BNB discount fee (entrada + salida = 0.15%)
-            
-            if should_close:
-                pnl_ratio = unr_pct / 100.0
-                net_pnl = round((invested * pnl_ratio) - bnb_fee, 2)
-                acc["current_balance"] += net_pnl
-                acc["pnl_usd"] += net_pnl
-                acc["trades_count"] += 1
-                acc["last_trade_time"] = now_br
-                acc["position"] = None
-                acc["status"] = "BUSCANDO_OPORTUNIDAD"
-                
-                is_win = net_pnl >= 0.0
-                if is_win:
-                    acc["wins"] += 1
-                    acc["consecutive_losses"] = 0
-                    acc["last_result"] = f"🟢 Ganó +${net_pnl:.2f} (Fase {phase})"
-                    acc["current_level"] = acc.get("current_level", 1) + 1
-                    res_type = "WIN"
-                else:
-                    acc["losses"] += 1
-                    acc["consecutive_losses"] = acc.get("consecutive_losses", 0) + 1
-                    acc["last_result"] = f"🔴 Perdió -${abs(net_pnl):.2f}"
-                    res_type = "LOSS"
-                    
-                ctx = {}
-                if analysis:
-                    _indicators = analysis.get("tech", {}).get("indicators", {})
-                    _mtf = analysis.get("tech", {}).get("mtf_analysis", {})
-                    ctx = {
-                        "score": analysis.get("score"),
-                        "rsi_15m": _indicators.get("rsi_15m"),
-                        "macro_trend_4h": analysis.get("tech", {}).get("macro_trend_4h"),
-                        "fii_score": _mtf.get("fii_score", _indicators.get("fii_score", 0)),
-                        "atr_pct_15m": _mtf.get("atr_pct_15m", 0.30),
-                        "obv_trend": _mtf.get("obv_trend", "NEUTRAL"),
-                        "vol_surge_1m": _mtf.get("vol_surge_1m", 1.0),
-                        "vol_surge": _indicators.get("volume_surge_ratio", 1.0),
-                        "range_position_1m": _mtf.get("range_position_1m", 0.50),
-                    }
-                # Nota: Las simulaciones genéticas se gestionan exclusivamente en simulation_engine.py
-                pass
-            else:
-                acc["last_trade_time"] = position.get("open_time_br", now_br)
-                phase_badge = f"⚡ Fase {phase}" if phase <= 2 else f"💎 Fase {phase}"
-                acc["last_result"] = f"🔵 {phase_badge} ({unr_pct:+.2f}%)"
-                acc["status"] = f"EN_OPERACION_VIVO ({symbol} LONG {unr_pct:+.1f}%)"
-
-        # 2. DYNAMIC MARKET ROTATION: EVALUATE UNIFIED REAL ACCOUNT A+ STRATEGY
-        else:
-            best_action = "HOLD"
-            selected_symbol = acc["symbol"]
-            best_reason = ""
-            best_curr_price = 0
-            
-            # 🔀 DISPERSIÓN DE SÍMBOLOS: Distribuye las 1000 cuentas en los 67 pares del Top 100 CMC
-            _symbols_list = list(symbol_analysis_map.items())
-            _account_offset = acc_idx % max(len(_symbols_list), 1)
-            _rotated_symbols = _symbols_list[_account_offset:] + _symbols_list[:_account_offset]
-            
-            for sym, data_item in _rotated_symbols:
-                eval_res = strategy_engine.evaluate_opportunity(data_item["tech"])
-                if eval_res["action"] == "LONG":
-                    # 🚫 ANTI-CONCENTRACIÓN: Máximo 15 cuentas simultáneas por símbolo
-                    _sym_active_count = sum(1 for a in accounts if a.get("position") and a.get("symbol") == sym)
-                    if _sym_active_count >= 15:
-                        continue  # Símbolo ya cubierto por 15 cuentas, evaluar siguiente par
-                    
-                    best_action = "LONG"
-                    selected_symbol = sym
-                    best_reason = eval_res["reason"]
-                    best_curr_price = data_item["price"]
-                    break
-                    
-            if best_action == "LONG" and best_curr_price > 0:
-                qty = round((curr_bal * 0.2) / best_curr_price, 8)
-                current_hour = datetime.now().hour
-                acc["symbol"] = selected_symbol
-                acc["last_trade_time"] = now_br
-                acc["last_result"] = "🔵 En Curso"
-                acc["position"] = {
-                    "side": "LONG",
-                    "entry_price": best_curr_price,
-                    "qty": qty,
-                    "open_time": now_str,
-                    "open_time_br": now_br,
-                    "open_hour": current_hour,
-                    "holding_minutes": 1,
-                    "highest_price": best_curr_price
-                }
-                acc["status"] = f"EN_OPERACION_VIVO ({selected_symbol} LONG @ ${best_curr_price:.2f})"
-            else:
-                acc["status"] = "BUSCANDO_OPORTUNIDAD (Ecosistema Real A+)"
-
-        total_balance += acc["current_balance"]
-        global_trades += acc["trades_count"]
-        global_wins += acc["wins"]
-
-    matrix["current_total_usd"] = round(total_balance, 2)
-    matrix["net_pnl_usd"] = round(total_balance - matrix.get("total_fund_usd", 100000.0), 2)
-    matrix["global_win_rate_pct"] = round((global_wins / global_trades * 100.0), 2) if global_trades > 0 else 0.0
-
-
-    save_live_matrix(matrix)
+    # 🧬 MOTOR GENÉTICO 1000 SIMULACIONES (5 Grupos Evolutivos)
+    # Ejecutado soberanamente por simulation_engine.py con symbol_analysis_map
+    total_balance = 100000.0
+    try:
+        import simulation_engine as _sim_eng
+        _sim_res = _sim_eng.run_simulation_cycle(symbol_analysis_map)
+        matrix = _sim_eng.load_matrix()
+        total_balance = matrix.get("current_total_usd", 100000.0)
+        sync_live_matrix_obsidian(matrix)
+    except Exception as _sim_err:
+        print(f"⚠️ Nota ejecución simulación: {_sim_err}")
     
     # Execute Real Money Trading ONLY on AI Approved signals with Dynamic Scores (SYNCED WITH GRUPO 0)
     # Fixie proxy is consumed ONLY when an actual order is placed
@@ -1223,36 +1083,18 @@ def run_infinite_trading_matrix_cycle():
     except Exception as e_tune:
         print(f"Error auto-tuning thresholds: {e_tune}")
 
-    # 🧬 MOTOR GENÉTICO 1000 SIMULACIONES — Alimenta el Súper-Cerebro con datos reales
-    # Usa el mismo symbol_analysis_map calculado este ciclo → 0 llamadas extra a la API
+    # 🧬 REPORTE GENÉTICO Y AUTO-TUNE (Cierre del ciclo)
     try:
         import simulation_engine as _sim_eng
-        _matrix_check = _sim_eng.load_matrix()
-        _accounts_check = _matrix_check.get("accounts", [])
-        # Re-inicializar si: sin group_id O grupos colapsados (menos de 5 grupos distintos)
-        from collections import Counter as _GCtr2
-        _gid_dist2 = _GCtr2(a.get("group_id") for a in _accounts_check)
-        _needs_reinit = (
-            (_accounts_check and "group_id" not in _accounts_check[0]) or
-            (len(_gid_dist2) < 5)
-        )
-        if _needs_reinit:
-            print("🧬 [SIM ENGINE] Re-inicializando matriz con 5 grupos genéticos evolutivos...")
-            _sim_eng._init_fresh_matrix()
-        _sim_result = _sim_eng.run_simulation_cycle(symbol_analysis_map)
-        if _sim_result:
-            total_sim_trades = _sim_result.get("total_trades", 0)
-            if total_sim_trades > 0:
-                print(f"🧬 [SIM ENGINE] {total_sim_trades} trades acumulados | WR Global: {_sim_result.get('global_win_rate', 0):.1f}% | PnL Simulado: ${_sim_result.get('global_pnl_usd', 0):+.2f}")
-                _sim_eng.print_simulation_report()
-            _best = _sim_eng.get_best_group_params()
-            if _best:
-                print(f"🏆 [GRUPO LÍDER] {_best.get('name', '?')[:50]} → WR mayor detectado ({_best.get('win_rate_pct', 0)}%). Auto-calibrando cuenta real...")
-                try:
-                    import auto_tune_thresholds
-                    auto_tune_thresholds.auto_tune()
-                except Exception as _at_err:
-                    print(f"⚠️ Auto-tune error: {_at_err}")
+        _sim_eng.print_simulation_report()
+        _best = _sim_eng.get_best_group_params()
+        if _best and _best.get("total_trades", 0) >= 10:
+            print(f"🏆 [GRUPO LÍDER] {_best.get('name', '?')[:50]} → WR mayor detectado ({_best.get('win_rate_pct', 0)}%). Auto-calibrando cuenta real...")
+            try:
+                import auto_tune_thresholds
+                auto_tune_thresholds.auto_tune()
+            except Exception as _at_err:
+                print(f"⚠️ Auto-tune error: {_at_err}")
     except Exception as _sim_err:
         pass  # Non-blocking — nunca interrumpe el flujo real
 
@@ -1267,10 +1109,10 @@ def sync_live_matrix_obsidian(matrix):
     now_br = f"{now_date}<br>{now_time}"
     accounts = matrix["accounts"]
     
-    # Group Accounts by group_id (0 to 5)
+    # Group Accounts by group_id (0 to 4)
     groups_dict = {}
     for acc in accounts:
-        g_id = acc.get("group_id", 1)
+        g_id = acc.get("group_id", 0)
         if g_id not in groups_dict:
             groups_dict[g_id] = []
         groups_dict[g_id].append(acc)
@@ -1278,12 +1120,11 @@ def sync_live_matrix_obsidian(matrix):
     grouped_tables_md = ""
     
     group_titles = {
-        0: "🥇 GRUPO 0: RÉPLICA REAL (Copia Fiel - Capital $100.00 USD)",
-        1: "🛡️ GRUPO 1: Ultra-Estricto (Copia Estrategia Real A+ - Score >= 85 Pts)",
-        2: "🔷 GRUPO 2: Moderado-Estricto (Permisividad Nivel 2 - Score >= 75 Pts)",
-        3: "⚖️ GRUPO 3: Balanceado (Permisividad Nivel 3 - Score >= 65 Pts)",
-        4: "⚡ GRUPO 4: Frecuencia Alta (Permisividad Nivel 4 - Score >= 55 Pts)",
-        5: "🔥 GRUPO 5: Exploratorio de Máxima Frecuencia (Permisividad Nivel 5 - Score >= 45 Pts)"
+        0: "💎 GRUPO 0: Élite Estricto (Score≥90, FII≥70)",
+        1: "🎯 GRUPO 1: Francotirador (Score≥85, FII≥60)",
+        2: "⚡ GRUPO 2: Agresivo Rápido (Score≥75, FII≥50)",
+        3: "🐢 GRUPO 3: Paciencia Total (Score≥85, FII≥60, Hold Max 720m)",
+        4: "🧬 GRUPO 4: Adaptativo Híbrido (Score≥80, FII≥55)"
     }
 
     for g_id in sorted(groups_dict.keys()):
