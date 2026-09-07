@@ -1,14 +1,6 @@
 {
-  "updated_at": "2026-09-07 21:37:56 UTC",
+  "updated_at": "2026-09-07 21:39:46 UTC",
   "elite_tokens": [
-    {
-      "symbol": "XLMUSDT",
-      "total": 77,
-      "wins": 77,
-      "win_rate": 100.0,
-      "net_pnl": 40.87,
-      "tier": "💎 A+ ÉLITE"
-    },
     {
       "symbol": "VETUSDT",
       "total": 47,
@@ -115,10 +107,18 @@
     },
     {
       "symbol": "PUMPUSDT",
-      "total": 42,
-      "wins": 39,
-      "win_rate": 92.9,
-      "net_pnl": 38.81,
+      "total": 43,
+      "wins": 40,
+      "win_rate": 93.0,
+      "net_pnl": 38.88,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "XLMUSDT",
+      "total": 85,
+      "wins": 78,
+      "win_rate": 91.8,
+      "net_pnl": 40.71,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -241,6 +241,14 @@
       "wins": 18,
       "win_rate": 33.3,
       "net_pnl": 5.0,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "total": 27,
+      "wins": 9,
+      "win_rate": 33.3,
+      "net_pnl": -26.08,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -404,7 +412,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 53.0,
-  "total_sim_trades": 2581,
+  "global_sim_wr": 52.7,
+  "total_sim_trades": 2596,
   "total_real_trades": 37
 }
