@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07 20:17:30 UTC",
+  "updated_at": "2026-09-07 20:19:39 UTC",
   "elite_tokens": [
     {
       "symbol": "XLMUSDT",
@@ -234,14 +234,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "PYTHUSDT",
-      "total": 3,
-      "wins": 2,
-      "win_rate": 66.7,
-      "net_pnl": -0.02,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "FILUSDT",
       "total": 89,
       "wins": 59,
@@ -251,6 +243,14 @@
     }
   ],
   "blacklisted_tokens": [
+    {
+      "symbol": "SHIBUSDT",
+      "total": 45,
+      "wins": 17,
+      "win_rate": 37.8,
+      "net_pnl": 11.97,
+      "tier": "☠️ TÓXICO"
+    },
     {
       "symbol": "ASTERUSDT",
       "total": 18,
@@ -428,7 +428,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 56.7,
-  "total_sim_trades": 1627,
+  "global_sim_wr": 56.6,
+  "total_sim_trades": 1632,
   "total_real_trades": 37
 }
