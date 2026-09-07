@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07 17:21:46 UTC",
+  "updated_at": "2026-09-07 17:23:43 UTC",
   "elite_tokens": [
     {
       "symbol": "FILUSDT",
@@ -130,11 +130,11 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "BCHUSDT",
-      "total": 11,
-      "wins": 10,
-      "win_rate": 90.9,
-      "net_pnl": 14.44,
+      "symbol": "ARBUSDT",
+      "total": 9,
+      "wins": 8,
+      "win_rate": 88.9,
+      "net_pnl": 9.55,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -168,14 +168,6 @@
       "win_rate": 66.7,
       "net_pnl": -0.02,
       "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "ARBUSDT",
-      "total": 3,
-      "wins": 2,
-      "win_rate": 66.7,
-      "net_pnl": 1.15,
-      "tier": "💎 A+ ÉLITE"
     }
   ],
   "blacklisted_tokens": [
@@ -193,6 +185,14 @@
       "wins": 1,
       "win_rate": 25.0,
       "net_pnl": -0.26,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "TAOUSDT",
+      "total": 6,
+      "wins": 1,
+      "win_rate": 16.7,
+      "net_pnl": -10.64,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -316,14 +316,6 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "TAOUSDT",
-      "total": 5,
-      "wins": 0,
-      "win_rate": 0.0,
-      "net_pnl": -11.47,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "DOGEUSDT",
       "total": 3,
       "wins": 0,
@@ -341,6 +333,6 @@
     }
   ],
   "global_sim_wr": 37.5,
-  "total_sim_trades": 618,
+  "total_sim_trades": 642,
   "total_real_trades": 36
 }
