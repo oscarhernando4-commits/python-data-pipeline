@@ -1,14 +1,6 @@
 {
-  "updated_at": "2026-09-07 15:46:24 UTC",
+  "updated_at": "2026-09-07 15:50:15 UTC",
   "elite_tokens": [
-    {
-      "symbol": "ONDOUSDT",
-      "total": 30,
-      "wins": 30,
-      "win_rate": 100.0,
-      "net_pnl": 7.0,
-      "tier": "💎 A+ ÉLITE"
-    },
     {
       "symbol": "FILUSDT",
       "total": 30,
@@ -64,6 +56,14 @@
       "win_rate": 100.0,
       "net_pnl": 0.04,
       "tier": "🟢 A SÓLIDO"
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "total": 32,
+      "wins": 30,
+      "win_rate": 93.8,
+      "net_pnl": 2.59,
+      "tier": "💎 A+ ÉLITE"
     },
     {
       "symbol": "NEXOUSDT",
@@ -156,6 +156,14 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "STRKUSDT",
+      "total": 30,
+      "wins": 0,
+      "win_rate": 0.0,
+      "net_pnl": -80.71,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "BONKUSDT",
       "total": 30,
       "wins": 0,
@@ -169,6 +177,14 @@
       "wins": 0,
       "win_rate": 0.0,
       "net_pnl": -2.07,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "ZECUSDT",
+      "total": 27,
+      "wins": 0,
+      "win_rate": 0.0,
+      "net_pnl": -2.52,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -212,11 +228,19 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "STRKUSDT",
-      "total": 4,
+      "symbol": "WIFUSDT",
+      "total": 7,
       "wins": 0,
       "win_rate": 0.0,
-      "net_pnl": -8.46,
+      "net_pnl": -14.17,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "TAOUSDT",
+      "total": 5,
+      "wins": 0,
+      "win_rate": 0.0,
+      "net_pnl": -11.47,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -234,9 +258,17 @@
       "win_rate": 0.0,
       "net_pnl": -0.34,
       "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "TIAUSDT",
+      "total": 2,
+      "wins": 0,
+      "win_rate": 0.0,
+      "net_pnl": -6.39,
+      "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 22.6,
-  "total_sim_trades": 399,
+  "global_sim_wr": 19.2,
+  "total_sim_trades": 468,
   "total_real_trades": 34
 }
