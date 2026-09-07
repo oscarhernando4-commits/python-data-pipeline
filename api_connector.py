@@ -1230,7 +1230,7 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             sl_pct = max(0.55, round(highest_pnl_pct * 0.78, 4))
             phase = 2  # FIX 2.2b: Phase 2 para habilitar salidas sniper
             phase_label = f"⚡ FASE 2 COSECHA REAL (Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.35:
+        elif highest_pnl_pct >= 0.28:
             sl_pct = 0.08
             phase = 1
             phase_label = f"🛡️ ESCUDO BREAK-EVEN (Cima +{highest_pnl_pct:.2f}% -> Piso +0.08% RIESGO CERO)"
@@ -1381,18 +1381,17 @@ def quick_position_heartbeat():
                     pass
 
                 if _btc_in_recovery:
-                    # BTC recuperándose: umbrales MUY relajados — solo actuar en caídas brutales
-                    # Ruido de -0.80% desde pico = normal en subida. Necesitamos -2.0%+ para alertar.
-                    is_peak_btc_dump   = bool(btc_drop_from_peak_pct  <= -2.00 and current_pnl_pct <= -1.50)
-                    is_severe_btc_dump = bool(btc_drop_from_entry_pct <= -1.50 and current_pnl_pct <= -1.80)
-                    is_contagion_dump  = bool(btc_drop_from_entry_pct <= -1.00 and current_pnl_pct <= -2.00 and bids_hb < 35.0)
+                    # BTC recuperándose: umbrales muy relajados — solo actuar en caídas brutales
+                    is_peak_btc_dump   = bool(btc_drop_from_peak_pct  <= -3.00 and current_pnl_pct <= -2.00)
+                    is_severe_btc_dump = bool(btc_drop_from_entry_pct <= -2.50 and current_pnl_pct <= -2.20)
+                    is_contagion_dump  = bool(btc_drop_from_entry_pct <= -2.00 and current_pnl_pct <= -2.20 and bids_hb < 25.0)
                     _shield_mode_label = "RECOVERY_MODE(umbrales_relajados)"
                 else:
-                    # BTC bajista/neutro: umbrales originales
-                    is_peak_btc_dump   = bool(btc_drop_from_peak_pct  <= -0.80 and current_pnl_pct <= -0.60)
-                    is_severe_btc_dump = bool(btc_drop_from_entry_pct <= -0.65 and current_pnl_pct <= -0.80)
-                    is_contagion_dump  = bool(btc_drop_from_entry_pct <= -0.45 and current_pnl_pct <= -1.20 and bids_hb < 40.0)
-                    _shield_mode_label = "BEARISH_MODE(umbrales_normales)"
+                    # BTC bajista/neutro: solo cortar si hay un colapso severo de BTC (no micro-ruido de 0.65%)
+                    is_peak_btc_dump   = bool(btc_drop_from_peak_pct  <= -2.50 and current_pnl_pct <= -2.00)
+                    is_severe_btc_dump = bool(btc_drop_from_entry_pct <= -2.00 and current_pnl_pct <= -2.20)
+                    is_contagion_dump  = bool(btc_drop_from_entry_pct <= -1.50 and current_pnl_pct <= -2.20 and bids_hb < 28.0)
+                    _shield_mode_label = "BEARISH_MODE(colapso_severo)"
 
                 if (is_peak_btc_dump or is_severe_btc_dump or is_contagion_dump) and bids_hb < 52.0:
                     should_exit = True
@@ -1403,7 +1402,7 @@ def quick_position_heartbeat():
 
         # 🛑 ASIMETRÍA MATEMÁTICA & STOP LOSS INICIAL -2.50%:
         # Margen amplio para absorber la volatilidad natural (ATR) y permitir el desarrollo del trade.
-        # Al tocar +0.35%, el Escudo Break-Even asegura la posición a +0.08% (Riesgo Cero).
+        # Al tocar +0.28%, el Escudo Break-Even asegura la posición a +0.08% (Riesgo Cero).
         if not should_exit and current_pnl_pct <= -2.50:
             should_exit = True
             exit_reason = f"🛑 STOP LOSS INICIAL ({current_pnl_pct:+.2f}% <= -2.50%). Cortando pérdida."

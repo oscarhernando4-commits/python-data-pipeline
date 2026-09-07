@@ -258,9 +258,9 @@ def calculate_archetype_trailing(
         sl_pct = max(0.55, round(highest_pnl_pct * 0.78, 4))
         phase = 2  # FIX 2.2: Phase 2 para habilitar salidas sniper en wick pullback
         phase_label = f"⚡ FASE 2 COSECHA REAL ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.35:
+    elif highest_pnl_pct >= 0.28:
         # 🛡️ ESCUDO BREAK-EVEN 6.0: Cero pérdidas. Piso en +0.08% cubre la comisión BNB (0.075%).
-        # Jamás permitir que una operación que subió a +0.35% termine en derrota.
+        # Jamás permitir que una operación que subió a +0.28% termine en derrota.
         sl_pct = 0.08
         phase = 1
         phase_label = f"🛡️ ESCUDO BREAK-EVEN ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +0.08% RIESGO CERO)"
