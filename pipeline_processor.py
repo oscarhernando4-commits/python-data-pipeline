@@ -617,11 +617,12 @@ def run_infinite_trading_matrix_cycle():
                 r1d_r = round(r1d, 1)
                 
                 # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL ADAPTATIVA DINÁMICA 3.0 (1M a 1D):
+                # Compra de retrocesos locales (1M-15M) en activos con tendencia macro saludable (1H-1D)
                 is_a_plus_floor = bool(is_double_bottom or is_bullish_div or is_second_touch or is_liquidity_sweep or fii_sc >= 55)
-                max_1d_cap = 65.0 if is_a_plus_floor else 60.0
-                max_4h_cap = 55.0
-                max_2h_cap = 55.0
-                max_1h_cap = 55.0
+                max_1d_cap = 85.0 if is_a_plus_floor else 80.0
+                max_4h_cap = 75.0 if is_a_plus_floor else 70.0
+                max_2h_cap = 70.0 if is_a_plus_floor else 65.0
+                max_1h_cap = 65.0 if is_a_plus_floor else 60.0
                 max_30m_cap = 55.0 if is_a_plus_floor else 50.0
                 max_15m_cap = 55.0 if is_a_plus_floor else 48.0
                 max_10m_cap = 52.0 if is_a_plus_floor else 46.0

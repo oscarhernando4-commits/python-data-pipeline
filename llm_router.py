@@ -240,7 +240,8 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     }
     
     models_to_try = [
-        "gemini-2.5-flash"
+        "gemini-2.5-flash-lite",
+        "gemini-flash-lite-latest"
     ]
     
     keys_pool = get_gemini_api_keys()
@@ -642,9 +643,9 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     
     # 🏎️ SUPER-CEREBRO GEMINI FLASH LITE (Ultra-Rápido, 30 RPM, Máxima Disponibilidad Libre de 429)
     models_to_try = [
-        "gemini-2.5-flash",
-        "gemini-2.0-flash",
-        "gemini-2.5-flash-lite"
+        "gemini-2.5-flash-lite",
+        "gemini-flash-lite-latest",
+        "gemini-3.1-flash-lite"
     ]
     
     keys_pool = get_gemini_api_keys()

@@ -2305,19 +2305,19 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
             
             # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL ADAPTATIVA DINÁMICA 3.0 (1M a 1D):
-            # Ancla Macro Estricta: 4H<=50%, 2H<=50%, 1H<=50%, 1D<=60%
+            # Ancla Macro: 4H<=75%, 2H<=70%, 1H<=65%, 1D<=85% (permite comprar retrocesos en tendencias alcistas)
             # Expansión Micro/Mid Adaptativa si hay Confluencia A+ (Suelo 2, Barrido Liquidez, Doble Suelo, Divergencia RSI o FII >= 65):
             is_a_plus_floor = bool(mtf_res.get("is_double_bottom") or mtf_res.get("bullish_rsi_divergence") or mtf_res.get("is_second_touch_sniper") or mtf_res.get("is_liquidity_sweep") or fii >= 65)
-            max_1d_cap = 0.60 if is_a_plus_floor else 0.55
-            max_4h_cap = 0.50
-            max_2h_cap = 0.50
-            max_1h_cap = 0.50
-            max_30m_cap = 0.52 if is_a_plus_floor else 0.46
-            max_15m_cap = 0.52 if is_a_plus_floor else 0.42
-            max_10m_cap = 0.48 if is_a_plus_floor else 0.40
-            max_5m_cap = 0.46 if is_a_plus_floor else 0.38
-            max_2m_cap = 0.48 if is_a_plus_floor else 0.36
-            max_1m_cap = 0.50 if is_a_plus_floor else 0.35
+            max_1d_cap = 0.85 if is_a_plus_floor else 0.80
+            max_4h_cap = 0.75 if is_a_plus_floor else 0.70
+            max_2h_cap = 0.70 if is_a_plus_floor else 0.65
+            max_1h_cap = 0.65 if is_a_plus_floor else 0.60
+            max_30m_cap = 0.55 if is_a_plus_floor else 0.50
+            max_15m_cap = 0.55 if is_a_plus_floor else 0.48
+            max_10m_cap = 0.52 if is_a_plus_floor else 0.46
+            max_5m_cap = 0.50 if is_a_plus_floor else 0.44
+            max_2m_cap = 0.50 if is_a_plus_floor else 0.42
+            max_1m_cap = 0.52 if is_a_plus_floor else 0.42
 
             is_macro_base_valid = bool(
                 range_pos_1d <= max_1d_cap and
