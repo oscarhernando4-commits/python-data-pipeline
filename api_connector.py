@@ -2080,10 +2080,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             _daily_wins   = state.get("daily_wins", 0)
             _daily_total  = _daily_losses + _daily_wins
 
-            # Bloqueo 1: 3 pérdidas en el día → pausa total
-            if _daily_losses >= 3:
-                print(f"🔴 [CIRCUIT BREAKER DIARIO] {_daily_losses} pérdidas hoy ({_daily_wins}W/{_daily_losses}L). "
-                      f"PAUSA TOTAL — prefiero no operar antes que seguir perdiendo. USDT protegido.")
+            # Bloqueo 1: Pérdida real diaria significativa (evalúa dinero neto y no solo conteo)
+            _daily_pnl = state.get("_daily_pnl_usd", 0.0)
+            if _daily_losses >= 4 and _daily_pnl <= -0.40 and _daily_losses > _daily_wins:
+                print(f"🔴 [CIRCUIT BREAKER DIARIO] {_daily_losses} pérdidas hoy ({_daily_wins}W/{_daily_losses}L | PnL: ${_daily_pnl:+.4f} USD). "
+                      f"PAUSA TOTAL — pérdida neta superó el umbral. USDT protegido.")
                 return
 
             # Bloqueo 2: 2 losses consecutivos → pausa de 30 minutos (no infinita)
