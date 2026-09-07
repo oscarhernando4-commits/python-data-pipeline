@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07 21:35:43 UTC",
+  "updated_at": "2026-09-07 21:37:56 UTC",
   "elite_tokens": [
     {
       "symbol": "XLMUSDT",
@@ -178,19 +178,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "DOGEUSDT",
-      "total": 22,
-      "wins": 17,
-      "win_rate": 77.3,
-      "net_pnl": 9.09,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "TRUMPUSDT",
       "total": 17,
       "wins": 13,
       "win_rate": 76.5,
       "net_pnl": 8.32,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "total": 24,
+      "wins": 17,
+      "win_rate": 70.8,
+      "net_pnl": 9.04,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -211,6 +211,14 @@
     }
   ],
   "blacklisted_tokens": [
+    {
+      "symbol": "VIRTUALUSDT",
+      "total": 53,
+      "wins": 21,
+      "win_rate": 39.6,
+      "net_pnl": 1.61,
+      "tier": "☠️ TÓXICO"
+    },
     {
       "symbol": "BCHUSDT",
       "total": 33,
@@ -261,9 +269,9 @@
     },
     {
       "symbol": "ADAUSDT",
-      "total": 14,
+      "total": 17,
       "wins": 4,
-      "win_rate": 28.6,
+      "win_rate": 23.5,
       "net_pnl": 2.41,
       "tier": "☠️ TÓXICO"
     },
@@ -300,14 +308,6 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "ETHFIUSDT",
-      "total": 32,
-      "wins": 2,
-      "win_rate": 6.2,
-      "net_pnl": -37.66,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "LINKUSDT",
       "total": 16,
       "wins": 1,
@@ -329,6 +329,14 @@
       "wins": 1,
       "win_rate": 4.8,
       "net_pnl": -8.41,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "ETHFIUSDT",
+      "total": 44,
+      "wins": 2,
+      "win_rate": 4.5,
+      "net_pnl": -39.54,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -396,7 +404,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 53.4,
-  "total_sim_trades": 2561,
+  "global_sim_wr": 53.0,
+  "total_sim_trades": 2581,
   "total_real_trades": 37
 }
