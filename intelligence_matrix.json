@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07 20:47:59 UTC",
+  "updated_at": "2026-09-07 20:50:32 UTC",
   "elite_tokens": [
     {
       "symbol": "XLMUSDT",
@@ -213,10 +213,18 @@
   "blacklisted_tokens": [
     {
       "symbol": "SHIBUSDT",
-      "total": 51,
+      "total": 57,
+      "wins": 21,
+      "win_rate": 36.8,
+      "net_pnl": 13.63,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "total": 54,
       "wins": 18,
-      "win_rate": 35.3,
-      "net_pnl": 12.52,
+      "win_rate": 33.3,
+      "net_pnl": 5.0,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -284,6 +292,14 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "JUPUSDT",
+      "total": 33,
+      "wins": 2,
+      "win_rate": 6.1,
+      "net_pnl": -23.72,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "WIFUSDT",
       "total": 37,
       "wins": 2,
@@ -313,14 +329,6 @@
       "wins": 1,
       "win_rate": 3.2,
       "net_pnl": -10.64,
-      "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "JUPUSDT",
-      "total": 32,
-      "wins": 1,
-      "win_rate": 3.1,
-      "net_pnl": -23.8,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -388,7 +396,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 56.0,
-  "total_sim_trades": 1812,
+  "global_sim_wr": 55.4,
+  "total_sim_trades": 1836,
   "total_real_trades": 37
 }
