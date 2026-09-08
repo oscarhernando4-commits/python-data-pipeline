@@ -4,7 +4,7 @@
     "wins": 853,
     "losses": 648,
     "win_rate_pct": 56.83,
-    "total_pnl_usd": 335.4614
+    "total_pnl_usd": 334.0843
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -70,46 +70,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-08 07:35:20",
-      "timestamp_ms": 1788852920821,
-      "account_id": "SIM-G0",
-      "group_name": "💎 ÉLITE ESTRICTO (Score≥90, FII≥70)",
-      "symbol": "VETUSDT",
-      "side": "LONG",
-      "entry_price": 0.007347,
-      "exit_price": 0.007399,
-      "result": "WIN",
-      "pnl_pct": 0.7078,
-      "pnl_usd": 0.7179,
-      "exit_reason": "SL/Floor 0.74% tocado",
-      "source": "SIMULATION",
-      "min_score": 90,
-      "min_fii": 70,
-      "hold_min": 88.1,
-      "notes": "SL/Floor 0.74% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-08 07:35:20",
-      "timestamp_ms": 1788852920821,
-      "account_id": "SIM-G0",
-      "group_name": "💎 ÉLITE ESTRICTO (Score≥90, FII≥70)",
-      "symbol": "VETUSDT",
-      "side": "LONG",
-      "entry_price": 0.007347,
-      "exit_price": 0.007399,
-      "result": "WIN",
-      "pnl_pct": 0.7078,
-      "pnl_usd": 0.7179,
-      "exit_reason": "SL/Floor 0.74% tocado",
-      "source": "SIMULATION",
-      "min_score": 90,
-      "min_fii": 70,
-      "hold_min": 88.1,
-      "notes": "SL/Floor 0.74% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-08 07:35:20",
@@ -30068,6 +30028,46 @@
       "min_score": 80,
       "min_fii": 55,
       "hold_min": 20.0,
+      "notes": "SL/Floor 0.08% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 09:17:16",
+      "timestamp_ms": 1788859036538,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "TRXUSDT",
+      "side": "LONG",
+      "entry_price": 0.3378,
+      "exit_price": 0.3379,
+      "result": "WIN",
+      "pnl_pct": 0.0296,
+      "pnl_usd": 0.0298,
+      "exit_reason": "SL/Floor 0.08% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 44.0,
+      "notes": "SL/Floor 0.08% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 09:17:16",
+      "timestamp_ms": 1788859036541,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "TRXUSDT",
+      "side": "LONG",
+      "entry_price": 0.3378,
+      "exit_price": 0.3379,
+      "result": "WIN",
+      "pnl_pct": 0.0296,
+      "pnl_usd": 0.0289,
+      "exit_reason": "SL/Floor 0.08% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 44.0,
       "notes": "SL/Floor 0.08% tocado",
       "context": {}
     }
