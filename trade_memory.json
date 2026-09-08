@@ -4,7 +4,7 @@
     "wins": 4,
     "losses": 31,
     "win_rate_pct": 11.43,
-    "total_pnl_usd": -43.5451
+    "total_pnl_usd": -42.4126
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -167,46 +167,6 @@
         "obv_trend": "DISTRIBUTING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-08 19:04:12",
-      "timestamp_ms": 1788894252742,
-      "account_id": "SIM-G0",
-      "group_name": "💎 ÉLITE ESTRICTO (Score≥90, FII≥70)",
-      "symbol": "ZECUSDT",
-      "side": "LONG",
-      "entry_price": 1182.14,
-      "exit_price": 1160.14,
-      "result": "LOSS",
-      "pnl_pct": -1.861,
-      "pnl_usd": -1.9669,
-      "exit_reason": "SL/Floor -1.40% tocado",
-      "source": "SIMULATION",
-      "min_score": 90,
-      "min_fii": 70,
-      "hold_min": 93.6,
-      "notes": "SL/Floor -1.40% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-08 19:04:12",
-      "timestamp_ms": 1788894252742,
-      "account_id": "SIM-G0",
-      "group_name": "💎 ÉLITE ESTRICTO (Score≥90, FII≥70)",
-      "symbol": "TAOUSDT",
-      "side": "LONG",
-      "entry_price": 263.7,
-      "exit_price": 258.9,
-      "result": "LOSS",
-      "pnl_pct": -1.8203,
-      "pnl_usd": -1.8755,
-      "exit_reason": "SL/Floor -1.40% tocado",
-      "source": "SIMULATION",
-      "min_score": 90,
-      "min_fii": 70,
-      "hold_min": 93.6,
-      "notes": "SL/Floor -1.40% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-08 19:04:12",
@@ -765,6 +725,46 @@
       "min_score": 80,
       "min_fii": 55,
       "hold_min": 134.2,
+      "notes": "SL/Floor -1.40% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 19:10:03",
+      "timestamp_ms": 1788894603913,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "SEIUSDT",
+      "side": "LONG",
+      "entry_price": 0.05032,
+      "exit_price": 0.04964,
+      "result": "LOSS",
+      "pnl_pct": -1.3514,
+      "pnl_usd": -1.3374,
+      "exit_reason": "SL/Floor -1.20% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 49.1,
+      "notes": "SL/Floor -1.20% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 19:10:03",
+      "timestamp_ms": 1788894603914,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "TAOUSDT",
+      "side": "LONG",
+      "entry_price": 262.5,
+      "exit_price": 258.8,
+      "result": "LOSS",
+      "pnl_pct": -1.4095,
+      "pnl_usd": -1.3725,
+      "exit_reason": "SL/Floor -1.40% tocado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 42.5,
       "notes": "SL/Floor -1.40% tocado",
       "context": {}
     }
