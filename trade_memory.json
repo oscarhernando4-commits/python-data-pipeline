@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1339,
-    "wins": 1051,
+    "total_trades": 1341,
+    "wins": 1053,
     "losses": 288,
-    "win_rate_pct": 78.49,
-    "total_pnl_usd": 414.053
+    "win_rate_pct": 78.52,
+    "total_pnl_usd": 415.3805
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -26829,6 +26829,46 @@
       "min_fii": 60,
       "hold_min": 18.0,
       "notes": "SL/Floor 0.85% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 08:43:14",
+      "timestamp_ms": 1788856994319,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "FLOKIUSDT",
+      "side": "LONG",
+      "entry_price": 2.628e-05,
+      "exit_price": 2.645e-05,
+      "result": "WIN",
+      "pnl_pct": 0.6469,
+      "pnl_usd": 0.6815,
+      "exit_reason": "SL/Floor 0.65% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 53.9,
+      "notes": "SL/Floor 0.65% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 08:43:14",
+      "timestamp_ms": 1788856994319,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "FLOKIUSDT",
+      "side": "LONG",
+      "entry_price": 2.628e-05,
+      "exit_price": 2.645e-05,
+      "result": "WIN",
+      "pnl_pct": 0.6469,
+      "pnl_usd": 0.646,
+      "exit_reason": "SL/Floor 0.65% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 53.9,
+      "notes": "SL/Floor 0.65% tocado",
       "context": {}
     }
   ],
