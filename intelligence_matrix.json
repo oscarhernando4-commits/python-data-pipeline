@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08 09:33:21 UTC",
+  "updated_at": "2026-09-08 09:35:21 UTC",
   "elite_tokens": [
     {
       "symbol": "INJUSDT",
@@ -67,10 +67,10 @@
     },
     {
       "symbol": "ARBUSDT",
-      "total": 64,
-      "wins": 58,
-      "win_rate": 90.6,
-      "net_pnl": 63.0,
+      "total": 67,
+      "wins": 61,
+      "win_rate": 91.0,
+      "net_pnl": 65.32,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -79,14 +79,6 @@
       "wins": 15,
       "win_rate": 88.2,
       "net_pnl": 14.13,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "XLMUSDT",
-      "total": 139,
-      "wins": 119,
-      "win_rate": 85.6,
-      "net_pnl": 46.6,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -103,6 +95,14 @@
       "wins": 514,
       "win_rate": 84.8,
       "net_pnl": 599.32,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "XLMUSDT",
+      "total": 141,
+      "wins": 119,
+      "win_rate": 84.4,
+      "net_pnl": 43.96,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -276,19 +276,19 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "OPUSDT",
+      "total": 66,
+      "wins": 17,
+      "win_rate": 25.8,
+      "net_pnl": -21.16,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "ZECUSDT",
       "total": 78,
       "wins": 20,
       "win_rate": 25.6,
       "net_pnl": -60.51,
-      "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "OPUSDT",
-      "total": 63,
-      "wins": 14,
-      "win_rate": 22.2,
-      "net_pnl": -21.44,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -397,6 +397,6 @@
     }
   ],
   "global_sim_wr": 53.7,
-  "total_sim_trades": 6470,
+  "total_sim_trades": 6480,
   "total_real_trades": 39
 }
