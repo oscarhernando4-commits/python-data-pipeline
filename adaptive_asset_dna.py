@@ -259,9 +259,19 @@ def calculate_archetype_trailing(
         sl_pct = max(0.70, round(highest_pnl_pct * 0.80, 4))
         phase = 2
         phase_label = f"⚡ FASE 2 COSECHA ALTA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.45:
-        # 🛡️ ESCUDO BREAK-EVEN LIBRE DE COMISIÓN (0.45% de pico -> Piso +0.16% cubre 0.15% comisión):
-        # Colchón de 0.29% para absorber micro-retrocesos de 1m sin ser expulsado
+    elif highest_pnl_pct >= 0.65:
+        # 🎯 FASE 2 COSECHA MEDIA: Cima >= +0.65% -> Piso ceñido a 0.14% de la cima (mínimo +0.50% bruto / +0.35% neto libre)
+        sl_pct = max(0.50, round(highest_pnl_pct - 0.14, 4))
+        phase = 2
+        phase_label = f"🎯 FASE 2 COSECHA MEDIA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 0.50:
+        # ⚡ FASE 2 COSECHA RÁPIDA (+0.50% SUPERADO): Asegurar ganancias inmediatas sin permitir retorno a 0.16%
+        # Piso ceñido a 0.12% de la cima (mínimo +0.38% bruto / +0.23% neto libre)
+        sl_pct = max(0.38, round(highest_pnl_pct - 0.12, 4))
+        phase = 2
+        phase_label = f"⚡ FASE 2 COSECHA RÁPIDA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 0.38:
+        # 🛡️ ESCUDO BREAK-EVEN LIBRE DE COMISIÓN (0.38% de pico -> Piso +0.16% cubre 0.15% comisión):
         sl_pct = 0.16
         phase = 1
         phase_label = f"🛡️ ESCUDO BREAK-EVEN ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +0.16% NETO LIBRE)"

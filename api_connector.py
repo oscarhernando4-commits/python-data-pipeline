@@ -1230,7 +1230,15 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             sl_pct = max(0.70, round(highest_pnl_pct * 0.80, 4))
             phase = 2
             phase_label = f"⚡ FASE 2 COSECHA ALTA (Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.45:
+        elif highest_pnl_pct >= 0.65:
+            sl_pct = max(0.50, round(highest_pnl_pct - 0.14, 4))
+            phase = 2
+            phase_label = f"🎯 FASE 2 COSECHA MEDIA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 0.50:
+            sl_pct = max(0.38, round(highest_pnl_pct - 0.12, 4))
+            phase = 2
+            phase_label = f"⚡ FASE 2 COSECHA RÁPIDA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 0.38:
             sl_pct = 0.16
             phase = 1
             phase_label = f"🛡️ ESCUDO BREAK-EVEN (Cima +{highest_pnl_pct:.2f}% -> Piso +0.16% NETO LIBRE)"
@@ -1315,18 +1323,20 @@ def quick_position_heartbeat():
         should_exit = current_pnl_pct <= sl_pct
         exit_reason = f"🎯 Trailing Floor Activado ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
 
-        # ⚡ COSECHA DINÁMICA SÚPER-CEREBRO 6.0 (PROFIT-RUNNER META ≥ 1.0%):
-        # FIX 2.1: Micro-retroceso SOLO en Fase 2 (1.00%-1.60%) con tolerancia de 0.30%.
-        # En Fase 3 (+1.60%+), el trailing floor del DNA ya protege sin necesidad de corte rápido.
-        if not should_exit and current_pnl_pct >= 0.70:
-            # A) Micro-retroceso solo si estamos en Fase 2 (entre +1.00% y +1.60%), con 0.30% de tolerancia
-            if 1.00 <= highest_pnl_pct < 1.60 and current_pnl_pct <= (highest_pnl_pct - 0.30):
+        # ⚡ COSECHA RÁPIDA & MICRO-RETROCESO DINÁMICO (APENAS PASE +0.50%):
+        # Apenas la ganancia supera el +0.50%, NUNCA permitir que se devuelva a +0.16% o al punto de partida.
+        # 1. Si la cima superó +0.50% y el precio retrocede más de 0.12% desde la cima O cae de +0.38%:
+        #    → VENTA INMEDIATA para embolsar la ganancia real (+0.25% a +0.70% neto libre de comisiones).
+        # 2. Si la cima superó +1.00% y retrocede más de 0.18% desde la cima:
+        #    → VENTA INMEDIATA para blindar la meta diaria de +1.0%.
+        if not should_exit and highest_pnl_pct >= 0.50:
+            allowed_retrace = 0.12 if highest_pnl_pct < 0.85 else 0.18
+            if current_pnl_pct <= (highest_pnl_pct - allowed_retrace) or current_pnl_pct <= 0.38:
                 should_exit = True
-                exit_reason = f"🏆 Cosecha Dinámica Meta 1% Cumplida ({current_pnl_pct:+.2f}% libre | Cima fue +{highest_pnl_pct:.2f}%)"
-            else:
-                # B) Flujo de órdenes agresivas y libro en tiempo real (solo si hay pánico/dump extremo real)
+                exit_reason = f"⚡ Cosecha Rápida +0.50% Ejecutada ({current_pnl_pct:+.2f}% | Cima fue +{highest_pnl_pct:.2f}%)"
+            elif current_pnl_pct >= 0.70:
                 flow = get_realtime_order_flow_momentum(sym)
-                if flow.get("is_exhaustion_or_dump", False) and current_pnl_pct >= 0.70:
+                if flow.get("is_exhaustion_or_dump", False):
                     should_exit = True
                     exit_reason = (
                         f"⚡ Cosecha Dinámica Dump Extremo ({current_pnl_pct:+.2f}% libre | "

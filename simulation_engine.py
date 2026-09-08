@@ -260,7 +260,12 @@ def run_simulation_cycle(symbol_analysis_map: dict):
                 floor_pct = max(1.00, highest_pnl * 0.85)
             elif highest_pnl >= 0.85:
                 floor_pct = max(0.70, highest_pnl * 0.80)
-            elif highest_pnl >= 0.45:
+            elif highest_pnl >= 0.65:
+                floor_pct = max(0.50, round(highest_pnl - 0.14, 4))
+            elif highest_pnl >= 0.50:
+                # Cosecha rápida: piso mínimo +0.38% o cima - 0.12%
+                floor_pct = max(0.38, round(highest_pnl - 0.12, 4))
+            elif highest_pnl >= 0.38:
                 # Escudo Break-Even libre de comisión
                 floor_pct = 0.16
             else:
