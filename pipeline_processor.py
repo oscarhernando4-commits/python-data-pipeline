@@ -808,7 +808,7 @@ def run_infinite_trading_matrix_cycle():
                         specific_news_map[c_sym] = s_news
                 
                 macro_summary = macro_ctx.get("summary_text", str(macro_ctx)) if isinstance(macro_ctx, dict) else str(macro_ctx)
-                print(f"✅ [Comité Institucional 7 Agentes] Consultando al Súper-Cerebro Gemini AI (Pool 10 Claves) para los {len(candidates_for_gemini)} finalistas seleccionados...")
+                print(f"✅ [Comité Institucional 7 Agentes] Consultando al Súper-Cerebro Gemini AI (Gemini 3.1 Flash Lite - Pool 10 Claves) para los {len(candidates_for_gemini)} finalistas seleccionados...")
                 gemini_res = llm_router.review_top_candidates(
                     candidates_data_list=candidates_for_gemini,
                     news_data={"headlines": cached_fundamental_report.get("recent_headlines", []), "specific_news": specific_news_map},

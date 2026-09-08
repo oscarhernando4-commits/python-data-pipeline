@@ -241,10 +241,8 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
     }
     
     models_to_try = [
-        "gemini-2.5-flash",
-        "gemini-3.6-flash",
-        "gemini-flash-latest",
-        "gemini-2.5-flash-lite"
+        "gemini-3.1-flash-lite",
+        "gemini-3.1-flash-lite-preview"
     ]
     
     keys_pool = get_gemini_api_keys()
@@ -267,7 +265,7 @@ def consult_gemini_flash_oracle(symbol, score, tech_data, news_data, fear_greed,
                     if "approved" in parsed_res and "confidence" in parsed_res:
                         return (parsed_res, key_label)
         except urllib.error.HTTPError as e:
-            if e.code == 429:
+            if e.code in (429, 503):
                 mark_key_in_cooldown(key)
         except Exception:
             pass
@@ -522,7 +520,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
             pass
         candidates_prompt_text += "------------------------------------\n"
 
-    print(f"✅ [Comité Institucional 7 Agentes] Consultando al Súper-Cerebro Gemini AI (Pool 10 Claves) para el TOP {len(candidates_data_list)} simultáneo...", flush=True)
+    print(f"✅ [Comité Institucional 7 Agentes] Consultando al Súper-Cerebro Gemini AI (Gemini 3.1 Flash Lite - Pool 10 Claves) para el TOP {len(candidates_data_list)} simultáneo...", flush=True)
 
     try:
         from data_fetcher import fetch_wall_street_macro_context
@@ -644,12 +642,10 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
         }
     }
     
-    # 🏎️ SUPER-CEREBRO GEMINI FLASH (Ultra-Rápido, 1500 RPD, Máxima Disponibilidad Libre de 429)
+    # 🏎️ SUPER-CEREBRO GEMINI FLASH LITE (Gemini 3.1 Flash Lite Exclusivo)
     models_to_try = [
-        "gemini-2.5-flash",
-        "gemini-3.6-flash",
-        "gemini-flash-latest",
-        "gemini-2.5-flash-lite"
+        "gemini-3.1-flash-lite",
+        "gemini-3.1-flash-lite-preview"
     ]
     
     keys_pool = get_gemini_api_keys()
@@ -677,7 +673,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
                     if "selected_symbol" in parsed:
                         return (parsed, key_label, model_name)
         except urllib.error.HTTPError as e:
-            if e.code == 429:
+            if e.code in (429, 503):
                 mark_key_in_cooldown(key)
         except Exception as err:
             pass
