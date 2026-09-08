@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08 09:09:23 UTC",
+  "updated_at": "2026-09-08 09:11:19 UTC",
   "elite_tokens": [
     {
       "symbol": "INJUSDT",
@@ -18,19 +18,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "ETCUSDT",
+      "total": 112,
+      "wins": 110,
+      "win_rate": 98.2,
+      "net_pnl": 68.87,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "AVAXUSDT",
       "total": 56,
       "wins": 55,
       "win_rate": 98.2,
       "net_pnl": 32.26,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "ETCUSDT",
-      "total": 107,
-      "wins": 105,
-      "win_rate": 98.1,
-      "net_pnl": 62.54,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -164,14 +164,6 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "LTCUSDT",
-      "total": 47,
-      "wins": 17,
-      "win_rate": 36.2,
-      "net_pnl": -2939.26,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "PEPEUSDT",
       "total": 78,
       "wins": 28,
@@ -193,6 +185,14 @@
       "wins": 31,
       "win_rate": 34.1,
       "net_pnl": 53.38,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "LTCUSDT",
+      "total": 51,
+      "wins": 17,
+      "win_rate": 33.3,
+      "net_pnl": -2939.62,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -245,9 +245,9 @@
     },
     {
       "symbol": "SHIBUSDT",
-      "total": 75,
+      "total": 76,
       "wins": 22,
-      "win_rate": 29.3,
+      "win_rate": 28.9,
       "net_pnl": 13.27,
       "tier": "☠️ TÓXICO"
     },
@@ -324,6 +324,14 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "LINKUSDT",
+      "total": 33,
+      "wins": 3,
+      "win_rate": 9.1,
+      "net_pnl": -58.98,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "PYTHUSDT",
       "total": 226,
       "wins": 19,
@@ -364,14 +372,6 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "LINKUSDT",
-      "total": 31,
-      "wins": 1,
-      "win_rate": 3.2,
-      "net_pnl": -59.14,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "WLFIUSDT",
       "total": 32,
       "wins": 1,
@@ -389,6 +389,6 @@
     }
   ],
   "global_sim_wr": 52.0,
-  "total_sim_trades": 6130,
+  "total_sim_trades": 6142,
   "total_real_trades": 39
 }
