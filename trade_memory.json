@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1228,
+    "total_trades": 1231,
     "wins": 987,
-    "losses": 241,
-    "win_rate_pct": 80.37,
-    "total_pnl_usd": 421.9536
+    "losses": 244,
+    "win_rate_pct": 80.18,
+    "total_pnl_usd": 421.4211
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -24609,6 +24609,66 @@
       "min_fii": 60,
       "hold_min": 716.1,
       "notes": "SL/Floor 0.61% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 08:07:19",
+      "timestamp_ms": 1788854839803,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "JSTUSDT",
+      "side": "LONG",
+      "entry_price": 0.10529,
+      "exit_price": 0.1051,
+      "result": "LOSS",
+      "pnl_pct": -0.1805,
+      "pnl_usd": -0.1738,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 180.3,
+      "notes": "Tiempo max 180min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 08:07:19",
+      "timestamp_ms": 1788854839804,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "JSTUSDT",
+      "side": "LONG",
+      "entry_price": 0.10529,
+      "exit_price": 0.1051,
+      "result": "LOSS",
+      "pnl_pct": -0.1805,
+      "pnl_usd": -0.1806,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 180.3,
+      "notes": "Tiempo max 180min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 08:07:19",
+      "timestamp_ms": 1788854839804,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "JSTUSDT",
+      "side": "LONG",
+      "entry_price": 0.10529,
+      "exit_price": 0.1051,
+      "result": "LOSS",
+      "pnl_pct": -0.1805,
+      "pnl_usd": -0.1781,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 180.3,
+      "notes": "Tiempo max 180min agotado",
       "context": {}
     }
   ],
