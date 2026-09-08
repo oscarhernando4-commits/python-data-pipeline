@@ -4,7 +4,7 @@
     "wins": 23,
     "losses": 12,
     "win_rate_pct": 65.71,
-    "total_pnl_usd": 5.0843
+    "total_pnl_usd": 4.6549
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -167,26 +167,6 @@
         "obv_trend": "DISTRIBUTING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-08 22:12:09",
-      "timestamp_ms": 1788905529280,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "PEPEUSDT",
-      "side": "LONG",
-      "entry_price": 3.66e-06,
-      "exit_price": 3.66e-06,
-      "result": "LOSS",
-      "pnl_pct": 0.0,
-      "pnl_usd": 0.0,
-      "exit_reason": "SL/Floor 0.43% tocado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 40.6,
-      "notes": "SL/Floor 0.43% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-08 22:12:09",
@@ -766,6 +746,26 @@
       "min_fii": 50,
       "hold_min": 113.9,
       "notes": "SL/Floor 0.16% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 23:31:24",
+      "timestamp_ms": 1788910284494,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "HBARUSDT",
+      "side": "LONG",
+      "entry_price": 0.07967,
+      "exit_price": 0.07933,
+      "result": "LOSS",
+      "pnl_pct": -0.4268,
+      "pnl_usd": -0.4294,
+      "exit_reason": "Tiempo max 360min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 360.8,
+      "notes": "Tiempo max 360min agotado",
       "context": {}
     }
   ],
