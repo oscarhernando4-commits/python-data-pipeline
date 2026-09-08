@@ -4,7 +4,7 @@
     "wins": 32,
     "losses": 0,
     "win_rate_pct": 100.0,
-    "total_pnl_usd": 32.7733
+    "total_pnl_usd": 32.9614
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -94,46 +94,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-08 14:28:01",
-      "timestamp_ms": 1788877681047,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "ETCUSDT",
-      "side": "LONG",
-      "entry_price": 8.26,
-      "exit_price": 8.33,
-      "result": "WIN",
-      "pnl_pct": 0.8475,
-      "pnl_usd": 0.8475,
-      "exit_reason": "SL/Floor 1.13% tocado",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 74.9,
-      "notes": "SL/Floor 1.13% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-08 14:31:57",
-      "timestamp_ms": 1788877917103,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "STXUSDT",
-      "side": "LONG",
-      "entry_price": 0.268,
-      "exit_price": 0.2698,
-      "result": "WIN",
-      "pnl_pct": 0.6716,
-      "pnl_usd": 0.6716,
-      "exit_reason": "SL/Floor 0.72% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 78.8,
-      "notes": "SL/Floor 0.72% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-08 14:31:57",
@@ -693,6 +653,46 @@
       "min_fii": 60,
       "hold_min": 24.5,
       "notes": "SL/Floor 1.17% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 15:25:11",
+      "timestamp_ms": 1788881111810,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.827,
+      "exit_price": 0.834,
+      "result": "WIN",
+      "pnl_pct": 0.8464,
+      "pnl_usd": 0.8536,
+      "exit_reason": "SL/Floor 0.87% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 53.2,
+      "notes": "SL/Floor 0.87% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 15:25:11",
+      "timestamp_ms": 1788881111810,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.827,
+      "exit_price": 0.834,
+      "result": "WIN",
+      "pnl_pct": 0.8464,
+      "pnl_usd": 0.8536,
+      "exit_reason": "SL/Floor 0.87% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 53.2,
+      "notes": "SL/Floor 0.87% tocado",
       "context": {}
     }
   ],
