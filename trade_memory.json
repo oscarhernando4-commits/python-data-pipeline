@@ -4,7 +4,7 @@
     "wins": 17,
     "losses": 18,
     "win_rate_pct": 48.57,
-    "total_pnl_usd": -1.6259
+    "total_pnl_usd": -1.273
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -167,26 +167,6 @@
         "obv_trend": "DISTRIBUTING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-08 21:59:27",
-      "timestamp_ms": 1788904767082,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "TRXUSDT",
-      "side": "LONG",
-      "entry_price": 0.3393,
-      "exit_price": 0.3381,
-      "result": "LOSS",
-      "pnl_pct": -0.3537,
-      "pnl_usd": -0.3529,
-      "exit_reason": "Tiempo max 360min agotado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 367.8,
-      "notes": "Tiempo max 360min agotado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-08 21:59:27",
@@ -766,6 +746,26 @@
       "min_fii": 60,
       "hold_min": 361.4,
       "notes": "Tiempo max 360min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 23:08:37",
+      "timestamp_ms": 1788908917787,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "TRUMPUSDT",
+      "side": "LONG",
+      "entry_price": 2.228,
+      "exit_price": 2.228,
+      "result": "LOSS",
+      "pnl_pct": 0.0,
+      "pnl_usd": 0.0,
+      "exit_reason": "SL/Floor 0.16% tocado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 52.5,
+      "notes": "SL/Floor 0.16% tocado",
       "context": {}
     }
   ],
