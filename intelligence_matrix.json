@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08 08:35:20 UTC",
+  "updated_at": "2026-09-08 08:37:20 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -18,11 +18,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "AVAXUSDT",
+      "total": 56,
+      "wins": 55,
+      "win_rate": 98.2,
+      "net_pnl": 32.26,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ETCUSDT",
-      "total": 106,
-      "wins": 104,
+      "total": 107,
+      "wins": 105,
       "win_rate": 98.1,
-      "net_pnl": 61.83,
+      "net_pnl": 62.54,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -31,14 +39,6 @@
       "wins": 91,
       "win_rate": 97.8,
       "net_pnl": 6.02,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "AVAXUSDT",
-      "total": 38,
-      "wins": 37,
-      "win_rate": 97.4,
-      "net_pnl": 30.38,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -82,19 +82,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "XLMUSDT",
-      "total": 138,
-      "wins": 119,
-      "win_rate": 86.2,
-      "net_pnl": 46.98,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "ICPUSDT",
       "total": 589,
       "wins": 506,
       "win_rate": 85.9,
       "net_pnl": 593.14,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "XLMUSDT",
+      "total": 139,
+      "wins": 119,
+      "win_rate": 85.6,
+      "net_pnl": 46.6,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -388,7 +388,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 54.9,
-  "total_sim_trades": 5457,
+  "global_sim_wr": 55.0,
+  "total_sim_trades": 5479,
   "total_real_trades": 39
 }
