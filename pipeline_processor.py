@@ -656,17 +656,20 @@ def run_infinite_trading_matrix_cycle():
                 if r4h_r > max_4h_cap: diag_reasons.append(f"4H={r4h:.0f}%>{max_4h_cap:.0f}%")
                 if r1d_r > max_1d_cap: diag_reasons.append(f"1D={r1d:.0f}%>{max_1d_cap:.0f}%")
 
-                is_hybrid_obv_valid = cmtf.get("is_hybrid_obv_valid", False)
-                if obv_t == "DISTRIBUTING" and not is_hybrid_obv_valid: diag_reasons.append("OBV=DIST")
-                if fii_sc < 40: diag_reasons.append(f"FII={fii_sc}<40")
-                if vol_1m < 0.15: diag_reasons.append(f"Vol1M={vol_1m:.2f}x<0.15x")
+                # 🛑 VETO ABSOLUTO OBV DISTRIBUCIÓN (Sin excepciones — si institucionales venden, VETO TOTAL)
+                if obv_t == "DISTRIBUTING": diag_reasons.append("OBV=DIST(VETO)")
+                # 💎 REGLA ÉLITE G0: FII mínimo 65 (solo inyección institucional comprobada)
+                if fii_sc < 65: diag_reasons.append(f"FII={fii_sc}<65(Bajo)")
+                # 🚀 VOLUMEN ACTIVO OBLIGATORIO: Mínimo 0.60x (prohibido entrar en activos muertos como MORPHO 0.6x)
+                if vol_1m < 0.60: diag_reasons.append(f"Vol1M={vol_1m:.2f}x<0.60x")
                 if not has_turnaround: diag_reasons.append("SinGiroVerde")
 
                 # MEJORA 5: ANTI SCORE-INFLADO — Score>=95 sin volumen real -> deflactar a 85
                 if c_score >= 95 and vol_1m < 0.40:
                     c_score = 85  # Score realista: Gemini infla sin respaldo de volumen
 
-                min_score_required = 75 if (is_second_touch or is_liquidity_sweep or is_bullish_div or is_double_bottom or fii_sc >= 55) else 80
+                # 💎 SCORE ÉLITE MÍNIMO: 85 puntos requeridos para ser finalista
+                min_score_required = 85
                 if c_score < min_score_required: diag_reasons.append(f"Score={c_score}<{min_score_required}")
                 if is_knife: diag_reasons.append("Cuchillo")
                 if is_dead_cat: diag_reasons.append("GatoMuerto")

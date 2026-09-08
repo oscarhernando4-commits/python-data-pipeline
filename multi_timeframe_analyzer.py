@@ -1512,10 +1512,13 @@ def analyze_multi_timeframe_candles(symbol):
 
     is_deep_oversold_exhaustion = bool(rsi_1m <= 32.0 or rsi_5m <= 35.0 or is_second_touch_sniper or is_liquidity_sweep or is_vwap_floor_rebound)
 
-    # ⚡ OBV HÍBRIDO MULTI-ESCALA: Si hay Doble Suelo, Divergencia RSI o FII fuerte, y Micro-OBV está acumulando,
-    # el estatus de OBV se valida como absorción institucional en suelo para eliminar el lag matemático de 15M.
-    is_hybrid_obv_valid = bool(is_obv_accumulating or (is_micro_obv_accumulating and (is_double_bottom or bullish_rsi_divergence or fii_score >= 50)))
-    obv_hybrid_status = "ACCUMULATING_FLOOR_ABSORPTION" if (not is_obv_accumulating and is_hybrid_obv_valid) else obv_trend
+    # ⚡ VETO DE HIERRO: Si el OBV 15M/1H está en DISTRIBUCIÓN (volumen institucional saliendo), NUNCA autorizar compra.
+    if obv_trend == "DISTRIBUTING":
+        is_hybrid_obv_valid = False
+        obv_hybrid_status = "DISTRIBUTING"
+    else:
+        is_hybrid_obv_valid = bool(is_obv_accumulating or (is_micro_obv_accumulating and (is_double_bottom or bullish_rsi_divergence or fii_score >= 65)))
+        obv_hybrid_status = "ACCUMULATING_FLOOR_ABSORPTION" if (not is_obv_accumulating and is_hybrid_obv_valid) else obv_trend
 
     pattern_15m_summary = (
         f"RSI 10S={rsi_10s:.1f} | 30S={rsi_30s:.1f} | 1M={rsi_1m} | 2M={rsi_2m} | 5M={rsi_5m} | 15M={rsi_15m} | 1H={rsi_1h} | "

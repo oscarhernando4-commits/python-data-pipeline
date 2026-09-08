@@ -1243,9 +1243,9 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             phase = 1
             phase_label = f"🛡️ ESCUDO BREAK-EVEN (Cima +{highest_pnl_pct:.2f}% -> Piso +0.16% NETO LIBRE)"
         else:
-            sl_pct = -1.40
+            sl_pct = -0.75
             phase = 1
-            phase_label = f"🌱 ZONA DE DESARROLLO (Cima +{highest_pnl_pct:.2f}% | SL: -1.40%)"
+            phase_label = f"🌱 ZONA DE DESARROLLO (Cima +{highest_pnl_pct:.2f}% | SL: -0.75%)"
 
         return sl_pct, phase, phase_label
 
@@ -1343,6 +1343,20 @@ def quick_position_heartbeat():
                         f"Compras Taker: {flow.get('taker_buy_pct', 0):.1f}%, Bids: {flow.get('bid_dominance_pct', 0):.1f}%)"
                     )
 
+        # 🛑 INVALIDACIÓN TEMPRANA / MICRO-SCRATCH (CORTA-PÉRDIDAS QUIRÚRGICO):
+        # Si un trade no despega en los primeros 2 minutos (holding_minutes_hb >= 2), nunca superó +0.20% de pico,
+        # y cae a <= -0.40% con presión vendedora institucional (compras taker < 48% o dump),
+        # NO esperar al -0.75%: CORTAR DE INMEDIATO con micro-pérdida de -$0.04 USD (fácilmente recuperable en 1 win).
+        if not should_exit and holding_minutes_hb >= 2 and highest_pnl_pct < 0.20 and current_pnl_pct <= -0.40:
+            flow_check = get_realtime_order_flow_momentum(sym)
+            taker_pct = flow_check.get("taker_buy_pct", 50.0)
+            if taker_pct < 48.0 or flow_check.get("is_exhaustion_or_dump", False):
+                should_exit = True
+                exit_reason = (
+                    f"🛑 Invalidación Temprana Micro-Scratch ({current_pnl_pct:+.2f}% en {holding_minutes_hb}m | "
+                    f"Cima apenas +{highest_pnl_pct:.2f}% | Compras Taker: {taker_pct:.1f}% < 48%)"
+                )
+
 
             
         # 🪙 ESCUDO BITCOIN PEAK-TRAILING & CIRCUIT BREAKER 4.0:
@@ -1410,22 +1424,20 @@ def quick_position_heartbeat():
                     state["_last_exit_was_btc_shield"] = True
 
 
-        # 🛑 ASIMETRÍA MATEMÁTICA & STOP LOSS INICIAL -1.40%:
-        # Margen calibrado para absorber la volatilidad natural sin arriesgar ganancias previas.
-        # Al tocar +0.45%, el Escudo Break-Even asegura la posición a +0.16% (Libre de comisiones).
-        if not should_exit and current_pnl_pct <= -1.40:
+        # 🛑 ASIMETRÍA MATEMÁTICA & STOP LOSS INICIAL MÁXIMO -0.75%:
+        # Pérdida acotada estrictamente a -$0.08 USD máximo (menos de la mitad de antes).
+        # Al tocar +0.38%, el Escudo Break-Even asegura la posición a +0.16% (Libre de comisiones).
+        if not should_exit and current_pnl_pct <= -0.75:
             should_exit = True
-            exit_reason = f"🛑 STOP LOSS INICIAL ({current_pnl_pct:+.2f}% <= -1.40%). Cortando pérdida."
+            exit_reason = f"🛑 STOP LOSS INICIAL ({current_pnl_pct:+.2f}% <= -0.75%). Cortando pérdida controlada."
 
-        # 🔴 MEJORA 2 — OBV IN-POSITION MONITOR (cada ~5 min en Fase 1)
-        # Si OBV se vuelve DISTRIBUTING durante el trade → institucionales vendiendo nuestra posición
-        # Reducir SL de -4% a -1.5% inmediatamente para limitar la pérdida potencial
-        if not should_exit and current_phase == 1 and holding_minutes_hb > 0 and holding_minutes_hb % 5 == 0:
+        # 🔴 MEJORA 2 — OBV IN-POSITION MONITOR (cada ~3 min en Fase 1)
+        # Si OBV se vuelve DISTRIBUTING durante el trade con PnL negativo → institucionales vendiendo.
+        # Salida inmediata de emergencia para blindar el balance.
+        if not should_exit and current_phase == 1 and holding_minutes_hb > 0 and holding_minutes_hb % 3 == 0:
             try:
-                from multi_timeframe_analyzer import calculate_rsi as _crsi_hb
                 _kl_obv = get_klines(sym, "15m", 20)
                 if _kl_obv and len(_kl_obv) >= 10:
-                    # Calcular OBV simple en tiempo real
                     _obv_val = 0.0
                     for _i in range(1, len(_kl_obv)):
                         _c_now = float(_kl_obv[_i][4])
@@ -1440,13 +1452,8 @@ def quick_position_heartbeat():
                         _obv_5_ago += _vol if _c_now > _c_prev else (-_vol if _c_now < _c_prev else 0)
                     _live_obv_trend = "DISTRIBUTING" if _obv_val < _obv_5_ago * 0.95 else "ACUMULANDO"
                     if _live_obv_trend == "DISTRIBUTING" and current_pnl_pct < 0:
-                        # Tighten SL: adjust initial_sl_pct to -1.5% if was -4.0%
-                        _cur_sl_orig = float(pos.get("initial_sl_pct", -4.0))
-                        if _cur_sl_orig <= -2.5:
-                            pos["initial_sl_pct"] = -1.5
-                            state["position"] = pos
-                            save_real_account_state(state)
-                            print(f"🔴 [OBV MONITOR] {sym}: OBV viró a DISTRIBUTING en Fase 1 ({holding_minutes_hb}m). SL ajustado {_cur_sl_orig:.1f}% → -1.5% para proteger capital.", flush=True)
+                        should_exit = True
+                        exit_reason = f"🔴 [OBV MONITOR] {sym}: OBV viró a DISTRIBUTING en Fase 1 ({holding_minutes_hb}m, PnL={current_pnl_pct:+.2f}%). Eyección inmediata para proteger capital."
             except Exception:
                 pass
 
@@ -1916,8 +1923,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 "is_ai_champion": is_learned_signal
             })
             
-        if candidates_list:
-            for c in candidates_list[:3]:  # Máximo los 3 finalistas Base A+ pre-filtrados
+        # 🛡️ BLINDAJE ANTI-CASCADA ÉLITE:
+        # Si la IA (Gemini) ya evaluó y emitió un dictamen para el mejor activo (is_learned_signal=True),
+        # NUNCA hacer cascada hacia monedas secundarias que la IA no aprobó (evita trampas como MORPHO).
+        if not is_learned_signal and candidates_list:
+            for c in candidates_list[:2]:  # Máximo los 2 finalistas Base A+ pre-filtrados
                 csym = c.get("symbol")
                 if csym and csym not in [q["symbol"] for q in candidate_queue]:
                     cscore = c.get("score", 50)
@@ -2189,6 +2199,16 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             if sym_clean in stablecoins_blacklist or cand_sym in stablecoins_blacklist:
                 continue
                 
+            # 1.1 Cuarentena SQLite Universal (24h post-loss / 12h post-win)
+            try:
+                import quant_database
+                is_quar_sql, quar_sql_msg = quant_database.is_symbol_in_quarantine(cand_sym)
+                if is_quar_sql:
+                    print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] En Cuarentena SQLite: {quar_sql_msg}")
+                    continue
+            except Exception:
+                pass
+                
             # 2. Get live price if missing
             if not cand_price or cand_price <= 0:
                 cand_price = get_symbol_price(cand_sym)
@@ -2307,10 +2327,27 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Techo/Cascada/Cuchillo.")
                 continue
                 
-            # ⚡ OBV HÍBRIDO: Permite absorción en suelo si Micro-OBV está acumulando y hay Doble Suelo / Divergencia
-            is_hybrid_obv_valid = mtf_res.get("is_hybrid_obv_valid", False)
-            if mtf_res.get("obv_trend") == "DISTRIBUTING" and not is_hybrid_obv_valid:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Distribución Institucional (OBV=DISTRIBUTING).")
+            # 🛑 VETO ABSOLUTO 1: OBV EN DISTRIBUCIÓN
+            # Si el dinero institucional está saliendo (DISTRIBUTING), PROHIBIDO COMPRAR con dinero real.
+            if mtf_res.get("obv_trend") == "DISTRIBUTING":
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO TOTAL: Distribución Institucional en curso (OBV=DISTRIBUTING).")
+                continue
+
+            # 💎 REGLA ÉLITE G0 - VETO 2: FII INSTITUCIONAL MÍNIMO (>= 65)
+            # Solo compras respaldadas por inyección comprobada de dinero inteligente.
+            if fii < 65:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO G0: FII={fii} < 65. Flujo institucional insuficiente para dinero real.")
+                continue
+
+            # 💎 REGLA ÉLITE G0 - VETO 3: SCORE MÍNIMO (>= 88)
+            if cand_score < 88:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO G0: Score={cand_score} < 88. Solo candidatos A+ Élite autorizados.")
+                continue
+
+            # 💎 REGLA ÉLITE G0 - VETO 4: VOLUMEN ACTIVO 1M (>= 0.70x)
+            vol_1m_check = mtf_res.get("vol_surge_1m", 1.0)
+            if vol_1m_check < 0.70:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO G0: Vol 1M={vol_1m_check:.2f}x < 0.70x. Sin impulso de volumen para dinero real.")
                 continue
                 
             # 🎯 VETO DE CONFLUENCIA FRACTAL DE SUELO (1M + 2M + 5M + 10M + 15M + 30M + 1H + 2H):
