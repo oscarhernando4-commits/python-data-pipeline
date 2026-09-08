@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 1501,
-    "wins": 831,
-    "losses": 670,
-    "win_rate_pct": 55.36,
-    "total_pnl_usd": 146.9813
+    "wins": 829,
+    "losses": 672,
+    "win_rate_pct": 55.23,
+    "total_pnl_usd": 144.1612
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -70,46 +70,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-08 07:43:25",
-      "timestamp_ms": 1788853405211,
-      "account_id": "SIM-G3",
-      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
-      "symbol": "WLDUSDT",
-      "side": "LONG",
-      "entry_price": 0.4705,
-      "exit_price": 0.4742,
-      "result": "WIN",
-      "pnl_pct": 0.7864,
-      "pnl_usd": 0.7596,
-      "exit_reason": "SL/Floor 1.11% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 122.4,
-      "notes": "SL/Floor 1.11% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-08 07:43:25",
-      "timestamp_ms": 1788853405211,
-      "account_id": "SIM-G3",
-      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
-      "symbol": "ATOMUSDT",
-      "side": "LONG",
-      "entry_price": 1.65,
-      "exit_price": 1.651,
-      "result": "WIN",
-      "pnl_pct": 0.0606,
-      "pnl_usd": 0.0615,
-      "exit_reason": "SL/Floor 0.08% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 617.7,
-      "notes": "SL/Floor 0.08% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-08 07:43:25",
@@ -30069,6 +30029,46 @@
       "min_fii": 55,
       "hold_min": 19.9,
       "notes": "SL/Floor 0.84% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 09:37:16",
+      "timestamp_ms": 1788860236586,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "XLMUSDT",
+      "side": "LONG",
+      "entry_price": 0.1932,
+      "exit_price": 0.1912,
+      "result": "LOSS",
+      "pnl_pct": -1.0352,
+      "pnl_usd": -1.0592,
+      "exit_reason": "Tiempo max 720min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 721.6,
+      "notes": "Tiempo max 720min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 09:37:16",
+      "timestamp_ms": 1788860236587,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.835,
+      "exit_price": 0.827,
+      "result": "LOSS",
+      "pnl_pct": -0.9581,
+      "pnl_usd": -0.9398,
+      "exit_reason": "Tiempo max 720min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 721.6,
+      "notes": "Tiempo max 720min agotado",
       "context": {}
     }
   ],
