@@ -4,7 +4,7 @@
     "wins": 31,
     "losses": 4,
     "win_rate_pct": 88.57,
-    "total_pnl_usd": 6.188
+    "total_pnl_usd": 7.0288
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -167,26 +167,6 @@
         "obv_trend": "DISTRIBUTING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-08 19:10:03",
-      "timestamp_ms": 1788894603914,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "TAOUSDT",
-      "side": "LONG",
-      "entry_price": 262.5,
-      "exit_price": 258.8,
-      "result": "LOSS",
-      "pnl_pct": -1.4095,
-      "pnl_usd": -1.3725,
-      "exit_reason": "SL/Floor -1.40% tocado",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 42.5,
-      "notes": "SL/Floor -1.40% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-08 19:18:55",
@@ -766,6 +746,26 @@
       "min_fii": 60,
       "hold_min": 70.3,
       "notes": "SL/Floor -1.50% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 19:44:10",
+      "timestamp_ms": 1788896650633,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "SUNUSDT",
+      "side": "LONG",
+      "entry_price": 0.01695,
+      "exit_price": 0.01686,
+      "result": "LOSS",
+      "pnl_pct": -0.531,
+      "pnl_usd": -0.5317,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 182.2,
+      "notes": "Tiempo max 180min agotado",
       "context": {}
     }
   ],
