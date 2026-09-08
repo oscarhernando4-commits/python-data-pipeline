@@ -4,7 +4,7 @@
     "wins": 1081,
     "losses": 420,
     "win_rate_pct": 72.02,
-    "total_pnl_usd": 440.5095
+    "total_pnl_usd": 439.0925
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -70,46 +70,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-08 09:05:16",
-      "timestamp_ms": 1788858316446,
-      "account_id": "SIM-G0",
-      "group_name": "💎 ÉLITE ESTRICTO (Score≥90, FII≥70)",
-      "symbol": "NEXOUSDT",
-      "side": "LONG",
-      "entry_price": 0.831,
-      "exit_price": 0.831,
-      "result": "LOSS",
-      "pnl_pct": 0.0,
-      "pnl_usd": 0.0,
-      "exit_reason": "SL/Floor 0.08% tocado",
-      "source": "SIMULATION",
-      "min_score": 90,
-      "min_fii": 70,
-      "hold_min": 8.0,
-      "notes": "SL/Floor 0.08% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-08 09:05:16",
-      "timestamp_ms": 1788858316446,
-      "account_id": "SIM-G0",
-      "group_name": "💎 ÉLITE ESTRICTO (Score≥90, FII≥70)",
-      "symbol": "NEXOUSDT",
-      "side": "LONG",
-      "entry_price": 0.831,
-      "exit_price": 0.831,
-      "result": "LOSS",
-      "pnl_pct": 0.0,
-      "pnl_usd": 0.0,
-      "exit_reason": "SL/Floor 0.08% tocado",
-      "source": "SIMULATION",
-      "min_score": 90,
-      "min_fii": 70,
-      "hold_min": 8.0,
-      "notes": "SL/Floor 0.08% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-08 09:05:16",
@@ -30068,6 +30028,46 @@
       "min_score": 75,
       "min_fii": 50,
       "hold_min": 182.7,
+      "notes": "Tiempo max 180min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 10:51:47",
+      "timestamp_ms": 1788864707939,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "JUPUSDT",
+      "side": "LONG",
+      "entry_price": 0.2456,
+      "exit_price": 0.2439,
+      "result": "LOSS",
+      "pnl_pct": -0.6922,
+      "pnl_usd": -0.7169,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 182.5,
+      "notes": "Tiempo max 180min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 10:51:47",
+      "timestamp_ms": 1788864707940,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "JUPUSDT",
+      "side": "LONG",
+      "entry_price": 0.2456,
+      "exit_price": 0.2439,
+      "result": "LOSS",
+      "pnl_pct": -0.6922,
+      "pnl_usd": -0.7001,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 182.5,
       "notes": "Tiempo max 180min agotado",
       "context": {}
     }
