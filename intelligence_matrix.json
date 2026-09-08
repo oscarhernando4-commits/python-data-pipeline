@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08 07:55:27 UTC",
+  "updated_at": "2026-09-08 07:57:30 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -144,25 +144,9 @@
       "win_rate": 69.4,
       "net_pnl": 14.43,
       "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "SKYUSDT",
-      "total": 28,
-      "wins": 19,
-      "win_rate": 67.9,
-      "net_pnl": 11.06,
-      "tier": "💎 A+ ÉLITE"
     }
   ],
   "blacklisted_tokens": [
-    {
-      "symbol": "QNTUSDT",
-      "total": 83,
-      "wins": 32,
-      "win_rate": 38.6,
-      "net_pnl": -12.57,
-      "tier": "☠️ TÓXICO"
-    },
     {
       "symbol": "BCHUSDT",
       "total": 34,
@@ -201,6 +185,14 @@
       "wins": 17,
       "win_rate": 34.0,
       "net_pnl": -14.05,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "QNTUSDT",
+      "total": 95,
+      "wins": 32,
+      "win_rate": 33.7,
+      "net_pnl": -18.2,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -396,7 +388,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 53.8,
-  "total_sim_trades": 5068,
+  "global_sim_wr": 53.5,
+  "total_sim_trades": 5101,
   "total_real_trades": 39
 }
