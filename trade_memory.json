@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1451,
+    "total_trades": 1452,
     "wins": 481,
-    "losses": 970,
-    "win_rate_pct": 33.15,
-    "total_pnl_usd": -1082.7522
+    "losses": 971,
+    "win_rate_pct": 33.13,
+    "total_pnl_usd": -1084.3385
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -29068,6 +29068,26 @@
       "min_score": 80,
       "min_fii": 55,
       "hold_min": 481.3,
+      "notes": "Tiempo max 480min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 05:13:02",
+      "timestamp_ms": 1788844382453,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "MORPHOUSDT",
+      "side": "LONG",
+      "entry_price": 2.458,
+      "exit_price": 2.419,
+      "result": "LOSS",
+      "pnl_pct": -1.5867,
+      "pnl_usd": -1.5863,
+      "exit_reason": "Tiempo max 480min agotado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 481.4,
       "notes": "Tiempo max 480min agotado",
       "context": {}
     }
