@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-09-08 05:21:04 UTC",
+  "updated_at": "2026-09-08 05:23:05 UTC",
   "elite_tokens": [
     {
       "symbol": "FETUSDT",
-      "total": 65,
-      "wins": 65,
+      "total": 72,
+      "wins": 72,
       "win_rate": 100.0,
-      "net_pnl": 51.64,
+      "net_pnl": 51.95,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -164,6 +164,22 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "PEPEUSDT",
+      "total": 59,
+      "wins": 23,
+      "win_rate": 39.0,
+      "net_pnl": 8.39,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "APTUSDT",
+      "total": 80,
+      "wins": 31,
+      "win_rate": 38.8,
+      "net_pnl": -1.51,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "BCHUSDT",
       "total": 34,
       "wins": 13,
@@ -173,18 +189,10 @@
     },
     {
       "symbol": "DOGEUSDT",
-      "total": 46,
+      "total": 47,
       "wins": 17,
-      "win_rate": 37.0,
-      "net_pnl": -12.83,
-      "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "APTUSDT",
-      "total": 76,
-      "wins": 27,
-      "win_rate": 35.5,
-      "net_pnl": -3.38,
+      "win_rate": 36.2,
+      "net_pnl": -12.84,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -201,14 +209,6 @@
       "wins": 32,
       "win_rate": 33.7,
       "net_pnl": -40.95,
-      "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "PEPEUSDT",
-      "total": 54,
-      "wins": 18,
-      "win_rate": 33.3,
-      "net_pnl": 5.0,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -420,7 +420,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 45.2,
-  "total_sim_trades": 3674,
+  "global_sim_wr": 45.4,
+  "total_sim_trades": 3691,
   "total_real_trades": 38
 }
