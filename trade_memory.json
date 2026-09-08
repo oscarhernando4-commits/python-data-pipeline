@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 35,
-    "wins": 23,
-    "losses": 12,
-    "win_rate_pct": 65.71,
-    "total_pnl_usd": 4.6549
+    "wins": 24,
+    "losses": 11,
+    "win_rate_pct": 68.57,
+    "total_pnl_usd": 5.1808
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -167,26 +167,6 @@
         "obv_trend": "DISTRIBUTING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-08 22:12:09",
-      "timestamp_ms": 1788905529280,
-      "account_id": "SIM-G3",
-      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
-      "symbol": "RENDERUSDT",
-      "side": "LONG",
-      "entry_price": 1.508,
-      "exit_price": 1.507,
-      "result": "LOSS",
-      "pnl_pct": -0.0663,
-      "pnl_usd": -0.0648,
-      "exit_reason": "SL/Floor 0.16% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 10.0,
-      "notes": "SL/Floor 0.16% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-08 22:12:09",
@@ -766,6 +746,26 @@
       "min_fii": 60,
       "hold_min": 360.8,
       "notes": "Tiempo max 360min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 23:43:24",
+      "timestamp_ms": 1788911004559,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "PYTHUSDT",
+      "side": "LONG",
+      "entry_price": 0.05323,
+      "exit_price": 0.05348,
+      "result": "WIN",
+      "pnl_pct": 0.4697,
+      "pnl_usd": 0.4611,
+      "exit_reason": "SL/Floor 0.48% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 101.2,
+      "notes": "SL/Floor 0.48% tocado",
       "context": {}
     }
   ],
