@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08 05:23:05 UTC",
+  "updated_at": "2026-09-08 05:25:03 UTC",
   "elite_tokens": [
     {
       "symbol": "FETUSDT",
@@ -74,6 +74,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "CAKEUSDT",
+      "total": 46,
+      "wins": 41,
+      "win_rate": 89.1,
+      "net_pnl": 24.31,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "BNBUSDT",
       "total": 15,
       "wins": 13,
@@ -95,14 +103,6 @@
       "wins": 78,
       "win_rate": 84.8,
       "net_pnl": 29.86,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "CAKEUSDT",
-      "total": 30,
-      "wins": 25,
-      "win_rate": 83.3,
-      "net_pnl": 11.93,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -188,19 +188,19 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "DOGEUSDT",
-      "total": 47,
-      "wins": 17,
-      "win_rate": 36.2,
-      "net_pnl": -12.84,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "SEIUSDT",
       "total": 54,
       "wins": 19,
       "win_rate": 35.2,
       "net_pnl": -28.34,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "total": 49,
+      "wins": 17,
+      "win_rate": 34.7,
+      "net_pnl": -14.04,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -252,19 +252,19 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "ATOMUSDT",
-      "total": 30,
-      "wins": 9,
-      "win_rate": 30.0,
-      "net_pnl": -7.84,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "SOLUSDT",
       "total": 27,
       "wins": 8,
       "win_rate": 29.6,
       "net_pnl": -4.82,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "ATOMUSDT",
+      "total": 31,
+      "wins": 9,
+      "win_rate": 29.0,
+      "net_pnl": -8.18,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -420,7 +420,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 45.4,
-  "total_sim_trades": 3691,
+  "global_sim_wr": 45.6,
+  "total_sim_trades": 3710,
   "total_real_trades": 38
 }
