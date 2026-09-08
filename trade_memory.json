@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 35,
-    "wins": 28,
-    "losses": 7,
-    "win_rate_pct": 80.0,
-    "total_pnl_usd": 1.3097
+    "wins": 27,
+    "losses": 8,
+    "win_rate_pct": 77.14,
+    "total_pnl_usd": -0.7955
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -167,26 +167,6 @@
         "obv_trend": "DISTRIBUTING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-08 20:17:28",
-      "timestamp_ms": 1788898648312,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "HBARUSDT",
-      "side": "LONG",
-      "entry_price": 0.07923,
-      "exit_price": 0.0797,
-      "result": "WIN",
-      "pnl_pct": 0.5932,
-      "pnl_usd": 0.5915,
-      "exit_reason": "SL/Floor 0.60% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 21.9,
-      "notes": "SL/Floor 0.60% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-08 20:17:28",
@@ -766,6 +746,26 @@
       "min_fii": 50,
       "hold_min": 72.0,
       "notes": "SL/Floor 0.46% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 21:07:24",
+      "timestamp_ms": 1788901644529,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "HBARUSDT",
+      "side": "LONG",
+      "entry_price": 0.08028,
+      "exit_price": 0.07906,
+      "result": "LOSS",
+      "pnl_pct": -1.5197,
+      "pnl_usd": -1.5137,
+      "exit_reason": "SL/Floor -1.40% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 245.3,
+      "notes": "SL/Floor -1.40% tocado",
       "context": {}
     }
   ],
