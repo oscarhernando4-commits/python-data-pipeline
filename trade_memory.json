@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1334,
+    "total_trades": 1335,
     "wins": 1049,
-    "losses": 285,
-    "win_rate_pct": 78.64,
-    "total_pnl_usd": 414.1809
+    "losses": 286,
+    "win_rate_pct": 78.58,
+    "total_pnl_usd": 413.1288
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -26723,6 +26723,26 @@
       "result": "WIN",
       "pnl_pct": 0.1116,
       "pnl_usd": 0.1096,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 180.3,
+      "notes": "Tiempo max 180min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 08:39:17",
+      "timestamp_ms": 1788856757279,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "RENDERUSDT",
+      "side": "LONG",
+      "entry_price": 1.537,
+      "exit_price": 1.521,
+      "result": "LOSS",
+      "pnl_pct": -1.041,
+      "pnl_usd": -1.0521,
       "exit_reason": "Tiempo max 180min agotado",
       "source": "SIMULATION",
       "min_score": 75,
