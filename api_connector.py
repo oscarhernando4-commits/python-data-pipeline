@@ -1783,12 +1783,14 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     if "orderId" in res_json or res_json.get("status") == "FILLED":
                         pnl_usd = (active_current_price - entry) * active_qty
                         
-                        # Update daily counters
-                        today_str = datetime.now().strftime("%Y-%m-%d")
-                        if state.get("last_trading_day") != today_str:
+                        # Update daily counters (synchronized with UTC reset date)
+                        from datetime import timezone as _tz
+                        today_str = datetime.now(_tz.utc).strftime("%Y-%m-%d")
+                        if state.get("last_daily_reset_date") != today_str:
                             state["daily_wins"] = 0
                             state["daily_losses"] = 0
-                            state["last_trading_day"] = today_str
+                            state["last_daily_reset_date"] = today_str
+                        state["last_trading_day"] = today_str
                         
                         if pnl_usd > 0:
                             state["wins"] = state.get("wins", 0) + 1
@@ -1966,6 +1968,16 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 return
             elif daily_pnl < -0.20:
                 print(f"⚠️ [ALERTA DIARIA] Pérdida acumulada hoy: ${daily_pnl:.3f}. Cerca del límite diario. Modo ultra-selectivo activado.")
+
+            # 🏆 CANDADO DE META DIARIA CUMPLIDA (≥ +1.0% NETO LIBRE DE COMISIONES)
+            # En cuanto se alcanza el +1.0% neto del capital (+$0.12 USD), se blinda la ganancia
+            # para no devolver nada al mercado y asegurar que el día cierre en positivo.
+            _cur_bal = state.get("current_balance_usd", 12.0)
+            _target_goal_usd = round(_cur_bal * 0.01, 4)
+            if daily_pnl >= _target_goal_usd:
+                print(f"🏆 [META DIARIA CUMPLIDA] PnL hoy: +${daily_pnl:.4f} USD >= +${_target_goal_usd:.4f} USD (≥ +1.0% neto libre de comisiones).")
+                print(f"   Ganancia diaria blindada. Capital protegido hasta el próximo día UTC para garantizar el +1% diario.")
+                return
         except Exception:
             pass
 
