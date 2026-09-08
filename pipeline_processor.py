@@ -677,6 +677,9 @@ def run_infinite_trading_matrix_cycle():
                     is_quar2, quar_reason = _qdb_quar2.is_symbol_in_quarantine(csym)
                     if is_quar2:
                         diag_reasons.append(quar_reason)
+                    _dna_prof_pre = _qdb_quar2.get_crypto_dna_profile(csym)
+                    if _dna_prof_pre and _dna_prof_pre.get("dna_tier") == "☠️ TÓXICO":
+                        diag_reasons.append(f"ADNToxico(WR={_dna_prof_pre.get('win_rate_pct', 0):.0f}%<40%)")
                 except Exception:
                     pass
 
@@ -927,10 +930,14 @@ def run_infinite_trading_matrix_cycle():
         ai_symbol = gemini_res.get('selected_symbol', '')
         ai_confidence = gemini_res.get('confidence', 0)
         
-        # Get the AI-selected opportunity data (from any of the top 5, not just #1)
         ai_opp_data = symbol_analysis_map.get(ai_symbol, {}) if ai_symbol and ai_symbol != "NONE" else {}
         ai_price = ai_opp_data.get("price", 0)
         ai_score = ai_opp_data.get("score", 50)
+        ai_cand_match = next((c for c in candidates_for_gemini if c.get("symbol") == ai_symbol), None)
+        if ai_cand_match:
+            ai_score = ai_cand_match.get("score", ai_score)
+            if not ai_price:
+                ai_price = ai_cand_match.get("price", 0)
         
         # --- BITCOIN (BTC) MASTER REGIME & CORRELATION GATEKEEPER ---
         btc_data = symbol_analysis_map.get("BTCUSDT", {})

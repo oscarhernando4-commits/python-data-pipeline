@@ -202,12 +202,16 @@ def get_asset_dna_archetype(symbol: str, atr_15m_pct: float = None, price: float
             if 0.70 <= rec_target <= 1.40:
                 config["phase_2_trigger_pct"] = rec_target
             if dna_p.get("dna_tier") == "☠️ TÓXICO":
-                config["is_low_volatility_zombie"] = True
-                config["guideline_for_ai"] = "⛔ VETO ACTIVO: Token con historial tóxico comprobado en SQLite (WR < 40%)."
+                config["is_toxic_tier"] = True
+                config["guideline_for_ai"] = f"⛔ VETO ACTIVO: Token con historial tóxico comprobado en SQLite (WR {dna_p.get('win_rate_pct', 0):.1f}% < 40%)."
+            else:
+                config["is_toxic_tier"] = False
     except Exception:
         pass
 
-    if config["is_low_volatility_zombie"]:
+    if config.get("is_toxic_tier", False):
+        pass
+    elif config.get("is_low_volatility_zombie", False):
         config["guideline_for_ai"] = "⛔ VETO ACTIVO: Volatilidad/Elasticidad insuficiente (ATR 15M < 0.35% o Mega-Cap lenta). Prohibido para scalping spot."
     return config
 

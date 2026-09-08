@@ -2233,7 +2233,12 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             arch_dna = adaptive_asset_dna.get_asset_dna_archetype(cand_sym, atr_15m, cand_price)
             print(f"🧬 [ADN ACTIVO #{cand_idx}/{total_cands}] {cand_sym} ({cand_score} Pts) -> {arch_dna.get('label')} (ATR={atr_15m:.2f}%, SL={arch_dna.get('initial_sl_pct')}%, MaxT={arch_dna.get('max_stagnation_minutes')}m)")
             
-            # 6. Veto Zombi / Mega-Cap lenta (ATR < 0.35%)
+            # 6. Veto ADN Tóxico (WR < 40% en SQLite) o Zombi / Mega-Cap lenta (ATR < 0.35%)
+            if arch_dna.get("is_toxic_tier", False):
+                _dna_prof = arch_dna.get("dna_profile", {})
+                _wr_p = _dna_prof.get("win_rate_pct", 0.0)
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por ADN Tóxico en SQLite (WR {_wr_p:.1f}% < 40% histórico). Preservando capital.")
+                continue
             if arch_dna.get("is_low_volatility_zombie", False):
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por ATR insuficiente ({atr_15m:.2f}% < 0.35% o Mega-Cap lenta).")
                 continue
@@ -2595,7 +2600,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             except Exception:
                 pass
                 
-            print(f"🚀 Ejecutando SPOT BUY en {cand_sym} con ${usdt_free:.2f} USDT (100% Capital)...")
+            print(f"🔬 [PRE-BUY CHECK] Verificando micro-flujo Volume Delta para {cand_sym} (${usdt_free:.2f} USDT)...")
 
             # ═══════════════════════════════════════════════════════════════════════
             # ⚡ VOLUME DELTA PRECISION GATE — Sub-Second Entry Timing
@@ -2655,6 +2660,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             except Exception as _pb_err:
                 print(f"  ⚠️ [PRE-BUY GATE] Error en chequeo final ({_pb_err}). Continuando.")
 
+            print(f"🚀 [ORDEN A MERCADO SPOT] Enviando orden de compra en {cand_sym} con ${usdt_free:.2f} USDT (100% Capital)...")
             buy_res = execute_real_spot_market_buy(cand_sym, usdt_free)
             if isinstance(buy_res, dict) and "orderId" in buy_res:
                 time.sleep(0.5)
