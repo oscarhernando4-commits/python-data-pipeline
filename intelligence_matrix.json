@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08 09:19:19 UTC",
+  "updated_at": "2026-09-08 09:21:33 UTC",
   "elite_tokens": [
     {
       "symbol": "INJUSDT",
@@ -90,19 +90,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "ICPUSDT",
-      "total": 603,
-      "wins": 514,
-      "win_rate": 85.2,
-      "net_pnl": 599.61,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "ZROUSDT",
       "total": 365,
       "wins": 310,
       "win_rate": 84.9,
       "net_pnl": 89.44,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "ICPUSDT",
+      "total": 606,
+      "wins": 514,
+      "win_rate": 84.8,
+      "net_pnl": 599.32,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -139,10 +139,10 @@
     },
     {
       "symbol": "FILUSDT",
-      "total": 146,
-      "wins": 107,
-      "win_rate": 73.3,
-      "net_pnl": -8.43,
+      "total": 151,
+      "wins": 112,
+      "win_rate": 74.2,
+      "net_pnl": -8.31,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -155,10 +155,10 @@
     },
     {
       "symbol": "IMXUSDT",
-      "total": 55,
+      "total": 56,
       "wins": 39,
-      "win_rate": 70.9,
-      "net_pnl": 9.68,
+      "win_rate": 69.6,
+      "net_pnl": 9.61,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -181,10 +181,10 @@
   "blacklisted_tokens": [
     {
       "symbol": "ADAUSDT",
-      "total": 53,
-      "wins": 20,
-      "win_rate": 37.7,
-      "net_pnl": -13.48,
+      "total": 54,
+      "wins": 21,
+      "win_rate": 38.9,
+      "net_pnl": -12.89,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -220,14 +220,6 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "CRVUSDT",
-      "total": 62,
-      "wins": 20,
-      "win_rate": 32.3,
-      "net_pnl": -86.78,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "DOGEUSDT",
       "total": 53,
       "wins": 17,
@@ -241,6 +233,22 @@
       "wins": 32,
       "win_rate": 31.4,
       "net_pnl": -20.92,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "CRVUSDT",
+      "total": 64,
+      "wins": 20,
+      "win_rate": 31.2,
+      "net_pnl": -86.94,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "total": 78,
+      "wins": 24,
+      "win_rate": 30.8,
+      "net_pnl": 13.63,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -260,27 +268,19 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "ONDOUSDT",
+      "total": 112,
+      "wins": 33,
+      "win_rate": 29.5,
+      "net_pnl": -48.03,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "VIRTUALUSDT",
       "total": 85,
       "wins": 25,
       "win_rate": 29.4,
       "net_pnl": -19.8,
-      "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "SHIBUSDT",
-      "total": 76,
-      "wins": 22,
-      "win_rate": 28.9,
-      "net_pnl": 13.27,
-      "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "ONDOUSDT",
-      "total": 111,
-      "wins": 32,
-      "win_rate": 28.8,
-      "net_pnl": -48.62,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -348,6 +348,14 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "TAOUSDT",
+      "total": 63,
+      "wins": 6,
+      "win_rate": 9.5,
+      "net_pnl": -58.61,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "LINKUSDT",
       "total": 33,
       "wins": 3,
@@ -364,6 +372,14 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "PENGUUSDT",
+      "total": 30,
+      "wins": 2,
+      "win_rate": 6.7,
+      "net_pnl": -59.59,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "STXUSDT",
       "total": 272,
       "wins": 14,
@@ -372,27 +388,11 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "TAOUSDT",
-      "total": 60,
-      "wins": 3,
-      "win_rate": 5.0,
-      "net_pnl": -58.84,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "JUPUSDT",
       "total": 51,
       "wins": 2,
       "win_rate": 3.9,
       "net_pnl": -53.27,
-      "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "PENGUUSDT",
-      "total": 29,
-      "wins": 1,
-      "win_rate": 3.4,
-      "net_pnl": -60.17,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -412,7 +412,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 52.0,
-  "total_sim_trades": 6199,
+  "global_sim_wr": 52.1,
+  "total_sim_trades": 6219,
   "total_real_trades": 39
 }
