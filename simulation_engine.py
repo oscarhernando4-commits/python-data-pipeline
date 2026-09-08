@@ -477,6 +477,9 @@ def _feed_learning_engine(new_entries: list):
     try:
         import quant_database
         quant_database.log_sim_trades_batch(new_entries)
+        if new_entries:
+            quant_database.compile_all_dna_profiles()
+            quant_database.export_intelligence_matrix()
     except Exception:
         pass
 

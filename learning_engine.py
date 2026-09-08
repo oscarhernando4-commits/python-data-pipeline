@@ -312,6 +312,8 @@ def record_trade_outcome(symbol, side="LONG", entry_price=0.0, exit_price=0.0, p
                 exit_price=exit_price, pnl_usd=pnl_usd, result=result_type,
                 exit_reason=notes, context=context
             )
+            quant_database.compile_all_dna_profiles()
+            quant_database.export_intelligence_matrix()
         except Exception:
             pass
 
