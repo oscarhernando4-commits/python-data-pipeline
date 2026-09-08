@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08 06:25:22 UTC",
+  "updated_at": "2026-09-08 06:27:34 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -26,14 +26,6 @@
       "tier": "🟢 A SÓLIDO"
     },
     {
-      "symbol": "ARBUSDT",
-      "total": 54,
-      "wins": 53,
-      "win_rate": 98.1,
-      "net_pnl": 61.9,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "RENDERUSDT",
       "total": 93,
       "wins": 91,
@@ -55,6 +47,14 @@
       "wins": 67,
       "win_rate": 95.7,
       "net_pnl": 28.42,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "ARBUSDT",
+      "total": 63,
+      "wins": 58,
+      "win_rate": 92.1,
+      "net_pnl": 63.05,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -445,6 +445,6 @@
     }
   ],
   "global_sim_wr": 50.0,
-  "total_sim_trades": 4630,
+  "total_sim_trades": 4639,
   "total_real_trades": 38
 }
