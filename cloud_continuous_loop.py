@@ -269,6 +269,12 @@ def main():
 
     cycle = 0
     while cycle < total_cycles:
+        # Fast pull from origin main so any pushed code updates apply immediately
+        try:
+            subprocess.run(["git", "pull", "--no-rebase", "-X", "theirs", "origin", "main"], capture_output=True, text=True, timeout=8)
+        except Exception:
+            pass
+
         # Hot-reload modules so any pulled git improvements take effect immediately
         try:
             import api_connector
