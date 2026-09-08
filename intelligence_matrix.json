@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08 09:03:18 UTC",
+  "updated_at": "2026-09-08 09:05:20 UTC",
   "elite_tokens": [
     {
       "symbol": "INJUSDT",
@@ -130,14 +130,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "FILUSDT",
-      "total": 142,
-      "wins": 107,
-      "win_rate": 75.4,
-      "net_pnl": -6.51,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "IMXUSDT",
       "total": 52,
       "wins": 39,
@@ -146,21 +138,29 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "FILUSDT",
+      "total": 145,
+      "wins": 107,
+      "win_rate": 73.8,
+      "net_pnl": -8.2,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "PUMPUSDT",
-      "total": 64,
+      "total": 65,
       "wins": 43,
-      "win_rate": 67.2,
-      "net_pnl": 14.43,
+      "win_rate": 66.2,
+      "net_pnl": 13.62,
       "tier": "💎 A+ ÉLITE"
     }
   ],
   "blacklisted_tokens": [
     {
       "symbol": "ADAUSDT",
-      "total": 52,
+      "total": 53,
       "wins": 20,
-      "win_rate": 38.5,
-      "net_pnl": -13.35,
+      "win_rate": 37.7,
+      "net_pnl": -13.48,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -188,19 +188,19 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "ETHFIUSDT",
+      "total": 76,
+      "wins": 26,
+      "win_rate": 34.2,
+      "net_pnl": -44.44,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "ALGOUSDT",
       "total": 91,
       "wins": 31,
       "win_rate": 34.1,
       "net_pnl": 53.38,
-      "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "ETHFIUSDT",
-      "total": 75,
-      "wins": 25,
-      "win_rate": 33.3,
-      "net_pnl": -44.5,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -284,6 +284,14 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "NEXOUSDT",
+      "total": 345,
+      "wins": 76,
+      "win_rate": 22.0,
+      "net_pnl": 28.04,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "SUNUSDT",
       "total": 38,
       "wins": 8,
@@ -317,10 +325,10 @@
     },
     {
       "symbol": "PYTHUSDT",
-      "total": 224,
+      "total": 226,
       "wins": 19,
-      "win_rate": 8.5,
-      "net_pnl": -346.29,
+      "win_rate": 8.4,
+      "net_pnl": -347.54,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -380,7 +388,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 53.9,
-  "total_sim_trades": 5913,
+  "global_sim_wr": 52.1,
+  "total_sim_trades": 6121,
   "total_real_trades": 39
 }
