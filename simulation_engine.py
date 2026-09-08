@@ -23,11 +23,11 @@ GENETIC_GROUPS = [
     {
         "group_id": 0,
         "group_name": "💎 ÉLITE ESTRICTO (Score≥90, FII≥70)",
-        "count": 200,
+        "count": 20,
         "min_score": 90,
         "min_fii": 70,
-        "sl_pct": -2.50,
-        "phase2_pct": 1.00,
+        "sl_pct": -1.40,
+        "phase2_pct": 1.15,
         "phase3_pct": 1.60,
         "max_hold_min": 360,
         "description": "Máxima precisión — solo entradas con certeza casi total"
@@ -35,34 +35,34 @@ GENETIC_GROUPS = [
     {
         "group_id": 1,
         "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-        "count": 200,
+        "count": 20,
         "min_score": 85,
         "min_fii": 60,
-        "sl_pct": -2.50,
-        "phase2_pct": 1.00,
+        "sl_pct": -1.40,
+        "phase2_pct": 1.15,
         "phase3_pct": 1.60,
         "max_hold_min": 360,
-        "description": "Configuración actual del sistema real"
+        "description": "Configuración de alta probabilidad"
     },
     {
         "group_id": 2,
         "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-        "count": 200,
+        "count": 20,
         "min_score": 75,
         "min_fii": 50,
-        "sl_pct": -2.00,
-        "phase2_pct": 0.80,
-        "phase3_pct": 1.20,
+        "sl_pct": -1.20,
+        "phase2_pct": 0.85,
+        "phase3_pct": 1.30,
         "max_hold_min": 180,
         "description": "Más trades, menos espera — para mercados muy activos"
     },
     {
         "group_id": 3,
         "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
-        "count": 200,
+        "count": 20,
         "min_score": 85,
         "min_fii": 60,
-        "sl_pct": -2.50,
+        "sl_pct": -1.50,
         "phase2_pct": 1.50,
         "phase3_pct": 2.50,
         "max_hold_min": 720,
@@ -71,11 +71,11 @@ GENETIC_GROUPS = [
     {
         "group_id": 4,
         "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-        "count": 200,
+        "count": 20,
         "min_score": 80,
         "min_fii": 55,
-        "sl_pct": -2.50,
-        "phase2_pct": 1.20,
+        "sl_pct": -1.40,
+        "phase2_pct": 1.15,
         "phase3_pct": 1.80,
         "max_hold_min": 480,
         "description": "Balance entre precisión y frecuencia"
@@ -253,15 +253,16 @@ def run_simulation_cycle(symbol_analysis_map: dict):
 
             # Trailing floor dinámico proporcional multi-nivel
             if highest_pnl >= grp_p3:
-                retention = min(85.0, 65.0 + highest_pnl * 5.0)  # FIX 2.3b: Unificado con DNA (65.0)
-                floor_pct = max(1.20, highest_pnl * retention / 100.0)
-            elif highest_pnl >= 1.00:
-                # Meta +1% cumplida: piso en +0.80%
-                floor_pct = max(0.80, highest_pnl * 0.80)
-            elif highest_pnl >= 0.70:
-                floor_pct = max(0.55, highest_pnl * 0.78)
-            elif highest_pnl >= 0.28:
-                floor_pct = 0.08
+                retention = min(85.0, 70.0 + highest_pnl * 4.0)
+                floor_pct = max(1.30, highest_pnl * retention / 100.0)
+            elif highest_pnl >= 1.15:
+                # Meta +1% cumplida libre de comisiones: piso en +1.00%
+                floor_pct = max(1.00, highest_pnl * 0.85)
+            elif highest_pnl >= 0.85:
+                floor_pct = max(0.70, highest_pnl * 0.80)
+            elif highest_pnl >= 0.45:
+                # Escudo Break-Even libre de comisión
+                floor_pct = 0.16
             else:
                 floor_pct = grp_sl_pct
 
@@ -508,10 +509,11 @@ def _feed_learning_engine(new_entries: list):
                 "context": {}
             })
 
-        # Mantener máximo 2000 entradas (500 reales + 1500 simuladas)
+        # Mantener solo las 30 simuladas más recientes (evita inflar trade_memory.json a megabytes)
+        # El historial completo de simulaciones se almacena en SQLite (quant_intelligence.db)
         real = [h for h in history if h.get("source") != "SIMULATION"]
         sims = [h for h in history if h.get("source") == "SIMULATION"]
-        sims = sims[-1500:]  # últimas 1500 simuladas
+        sims = sims[-30:]
         mem["history"] = real + sims
 
         # Actualizar stats globales

@@ -64,10 +64,10 @@ ARCHETYPE_CONFIGS = {
         "archetype": "HYPER_VOLATILE_SPRINT",
         "label": "🐆 SPRINT HIPER-VOLÁTIL (Meme / High-Beta)",
         "emoji": "🐆",
-        "initial_sl_pct": -2.50,
+        "initial_sl_pct": -1.40,
         "max_stagnation_minutes": 360,
         "stagnation_decay_minutes": 225,
-        "decay_sl_pct": -2.50,
+        "decay_sl_pct": -1.40,
         "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
         "phase_3_trigger_pct": 1.60,
@@ -82,10 +82,10 @@ ARCHETYPE_CONFIGS = {
         "archetype": "BLUE_CHIP_CORE",
         "label": "🏛️ BLUE-CHIP INSTITUCIONAL (L1 / Core)",
         "emoji": "🏛️",
-        "initial_sl_pct": -2.50,
+        "initial_sl_pct": -1.40,
         "max_stagnation_minutes": 720,
         "stagnation_decay_minutes": 540,
-        "decay_sl_pct": -2.50,
+        "decay_sl_pct": -1.40,
         "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
         "phase_3_trigger_pct": 1.60,
@@ -100,10 +100,10 @@ ARCHETYPE_CONFIGS = {
         "archetype": "SECTOR_ROTATION",
         "label": "🧩 ROTACIÓN SECTORIAL (L2 / DeFi / AI)",
         "emoji": "🧩",
-        "initial_sl_pct": -2.50,
+        "initial_sl_pct": -1.40,
         "max_stagnation_minutes": 540,
         "stagnation_decay_minutes": 360,
-        "decay_sl_pct": -2.50,
+        "decay_sl_pct": -1.40,
         "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
         "phase_3_trigger_pct": 1.60,
@@ -118,10 +118,10 @@ ARCHETYPE_CONFIGS = {
         "archetype": "THIN_BOOK_MICRO",
         "label": "🎯 MICRO-CAP / LIBRO DELGADO",
         "emoji": "🎯",
-        "initial_sl_pct": -2.50,
+        "initial_sl_pct": -1.40,
         "max_stagnation_minutes": 360,    # ×3 (antes: 120 min)
         "stagnation_decay_minutes": 225,  # ×3 (antes: 75 min)
-        "decay_sl_pct": -2.50,
+        "decay_sl_pct": -1.40,
         "phase_2_trigger_pct": 1.00,
         "phase_2_retention_ratio": 1.00,
         "phase_3_trigger_pct": 1.60,
@@ -243,31 +243,32 @@ def calculate_archetype_trailing(
     initial_sl = float(archetype_dna.get("initial_sl_pct", -2.50))
 
     if highest_pnl_pct >= p3_trigger:
-        retention_pct = min(85.0, 65.0 + (highest_pnl_pct * 5.0))
+        retention_pct = min(85.0, 70.0 + (highest_pnl_pct * 4.0))
         retention_ratio = retention_pct / 100.0
-        sl_pct = max(1.20, round(highest_pnl_pct * retention_ratio, 4))
+        sl_pct = max(1.30, round(highest_pnl_pct * retention_ratio, 4))
         phase = 3
         phase_label = f"🚀 FASE 3 RALLY DINÁMICO ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 1.00:
-        # 🏆 META +1% PEDIDA POR EL USUARIO: Al llegar a +1.00%, piso asegurado exactamente en +0.80% (Retención 80%)
-        sl_pct = max(0.80, round(highest_pnl_pct * 0.80, 4))
+    elif highest_pnl_pct >= 1.15:
+        # 🏆 META +1% LIBRE DE COMISIONES (1.15% bruto - 0.15% comisiones = +1.00% neto):
+        # Piso asegurado en +1.00% (Ganancia neta libre >= +0.85% asegurada)
+        sl_pct = max(1.00, round(highest_pnl_pct * 0.85, 4))
         phase = 2
-        phase_label = f"🏆 FASE 2 META +1% CUMPLIDA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Asegurado +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.70:
-        # Cima de cosecha real: piso en +0.55% (ganancia neta libre +0.47% asegurada tras comisiones)
-        sl_pct = max(0.55, round(highest_pnl_pct * 0.78, 4))
-        phase = 2  # FIX 2.2: Phase 2 para habilitar salidas sniper en wick pullback
-        phase_label = f"⚡ FASE 2 COSECHA REAL ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.28:
-        # 🛡️ ESCUDO BREAK-EVEN 6.0: Cero pérdidas. Piso en +0.08% cubre la comisión BNB (0.075%).
-        # Jamás permitir que una operación que subió a +0.28% termine en derrota.
-        sl_pct = 0.08
+        phase_label = f"🏆 FASE 2 META 1% CUMPLIDA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 0.85:
+        # Medio camino de meta: asegurar al menos +0.70% (+0.55% neto)
+        sl_pct = max(0.70, round(highest_pnl_pct * 0.80, 4))
+        phase = 2
+        phase_label = f"⚡ FASE 2 COSECHA ALTA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
+    elif highest_pnl_pct >= 0.45:
+        # 🛡️ ESCUDO BREAK-EVEN LIBRE DE COMISIÓN (0.45% de pico -> Piso +0.16% cubre 0.15% comisión):
+        # Colchón de 0.29% para absorber micro-retrocesos de 1m sin ser expulsado
+        sl_pct = 0.16
         phase = 1
-        phase_label = f"🛡️ ESCUDO BREAK-EVEN ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +0.08% RIESGO CERO)"
+        phase_label = f"🛡️ ESCUDO BREAK-EVEN ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +0.16% NETO LIBRE)"
     else:
-        sl_pct = initial_sl  # FIX 3.2: Usar SL del arquetipo en vez de -0.45 hardcodeado
+        sl_pct = initial_sl  # SL inicial (-1.40%)
         phase = 1
-        phase_label = f"🌱 ZONA DE DESARROLLO ({emoji} Cima +{highest_pnl_pct:.2f}% | SL Ceñido: {sl_pct:+.2f}%)"
+        phase_label = f"🌱 ZONA DE DESARROLLO ({emoji} Cima +{highest_pnl_pct:.2f}% | SL: {sl_pct:+.2f}%)"
 
     return sl_pct, phase, phase_label
 

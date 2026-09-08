@@ -179,10 +179,9 @@ def run_focused_position_guardian(max_duration_secs: int = 14400):
             time.sleep(1.0)
 
 def run_git_push_sync(cycle_num: int, total_cycles: int = 240):
-    """Safely commits and pushes state periodically to avoid CPU and disk thrashing."""
-    # In local mode, only sync to GitHub every 10 cycles (10 mins) or on final cycle
-    is_cloud = os.getenv("GITHUB_ACTIONS") == "true" or os.getenv("CI") == "true"
-    if not is_cloud and (cycle_num % 10 != 0 and cycle_num != total_cycles and cycle_num != 1):
+    # Sincronización a git periódica cada 5 ciclos (10 minutos), o en ciclo 1 o final
+    # Elimina el sobrecosto de sincronizar cada 120 segundos sin cambios reales
+    if cycle_num % 5 != 0 and cycle_num != total_cycles and cycle_num != 1:
         return
 
     try:

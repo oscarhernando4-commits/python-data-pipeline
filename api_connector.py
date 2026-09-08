@@ -1217,27 +1217,27 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
     except Exception as e:
         # Fallback dinámico proporcional multi-nivel
         if highest_pnl_pct >= 1.60:
-            retention_pct = min(85.0, 65.0 + (highest_pnl_pct * 5.0))  # FIX 2.3: Unificado con DNA (65.0)
+            retention_pct = min(85.0, 70.0 + (highest_pnl_pct * 4.0))
             retention_ratio = retention_pct / 100.0
-            sl_pct = max(1.20, round(highest_pnl_pct * retention_ratio, 4))
+            sl_pct = max(1.30, round(highest_pnl_pct * retention_ratio, 4))
             phase = 3
             phase_label = f"🚀 FASE 3 RALLY DINÁMICO (Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 1.00:
-            sl_pct = max(0.80, round(highest_pnl_pct * 0.80, 4))
+        elif highest_pnl_pct >= 1.15:
+            sl_pct = max(1.00, round(highest_pnl_pct * 0.85, 4))
             phase = 2
-            phase_label = f"🏆 FASE 2 META +1% CUMPLIDA (Cima +{highest_pnl_pct:.2f}% -> Piso Asegurado +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.70:
-            sl_pct = max(0.55, round(highest_pnl_pct * 0.78, 4))
-            phase = 2  # FIX 2.2b: Phase 2 para habilitar salidas sniper
-            phase_label = f"⚡ FASE 2 COSECHA REAL (Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.28:
-            sl_pct = 0.08
+            phase_label = f"🏆 FASE 2 META 1% CUMPLIDA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 0.85:
+            sl_pct = max(0.70, round(highest_pnl_pct * 0.80, 4))
+            phase = 2
+            phase_label = f"⚡ FASE 2 COSECHA ALTA (Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 0.45:
+            sl_pct = 0.16
             phase = 1
-            phase_label = f"🛡️ ESCUDO BREAK-EVEN (Cima +{highest_pnl_pct:.2f}% -> Piso +0.08% RIESGO CERO)"
+            phase_label = f"🛡️ ESCUDO BREAK-EVEN (Cima +{highest_pnl_pct:.2f}% -> Piso +0.16% NETO LIBRE)"
         else:
-            sl_pct = -2.50
+            sl_pct = -1.40
             phase = 1
-            phase_label = f"🌱 ZONA DE DESARROLLO (Cima +{highest_pnl_pct:.2f}% | SL: -2.50%)"
+            phase_label = f"🌱 ZONA DE DESARROLLO (Cima +{highest_pnl_pct:.2f}% | SL: -1.40%)"
 
         return sl_pct, phase, phase_label
 
@@ -1400,12 +1400,12 @@ def quick_position_heartbeat():
                     state["_last_exit_was_btc_shield"] = True
 
 
-        # 🛑 ASIMETRÍA MATEMÁTICA & STOP LOSS INICIAL -2.50%:
-        # Margen amplio para absorber la volatilidad natural (ATR) y permitir el desarrollo del trade.
-        # Al tocar +0.28%, el Escudo Break-Even asegura la posición a +0.08% (Riesgo Cero).
-        if not should_exit and current_pnl_pct <= -2.50:
+        # 🛑 ASIMETRÍA MATEMÁTICA & STOP LOSS INICIAL -1.40%:
+        # Margen calibrado para absorber la volatilidad natural sin arriesgar ganancias previas.
+        # Al tocar +0.45%, el Escudo Break-Even asegura la posición a +0.16% (Libre de comisiones).
+        if not should_exit and current_pnl_pct <= -1.40:
             should_exit = True
-            exit_reason = f"🛑 STOP LOSS INICIAL ({current_pnl_pct:+.2f}% <= -2.50%). Cortando pérdida."
+            exit_reason = f"🛑 STOP LOSS INICIAL ({current_pnl_pct:+.2f}% <= -1.40%). Cortando pérdida."
 
         # 🔴 MEJORA 2 — OBV IN-POSITION MONITOR (cada ~5 min en Fase 1)
         # Si OBV se vuelve DISTRIBUTING durante el trade → institucionales vendiendo nuestra posición
