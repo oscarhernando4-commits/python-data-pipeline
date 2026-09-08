@@ -4,7 +4,7 @@
     "wins": 17,
     "losses": 18,
     "win_rate_pct": 48.57,
-    "total_pnl_usd": -11.8244
+    "total_pnl_usd": -11.8235
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -167,26 +167,6 @@
         "obv_trend": "DISTRIBUTING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-08 20:19:27",
-      "timestamp_ms": 1788898767769,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "UNIUSDT",
-      "side": "LONG",
-      "entry_price": 6.771,
-      "exit_price": 6.78,
-      "result": "WIN",
-      "pnl_pct": 0.1329,
-      "pnl_usd": 0.1323,
-      "exit_reason": "SL/Floor 0.16% tocado",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 23.9,
-      "notes": "SL/Floor 0.16% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-08 20:21:25",
@@ -766,6 +746,26 @@
       "min_fii": 50,
       "hold_min": 182.0,
       "notes": "Tiempo max 180min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 21:37:26",
+      "timestamp_ms": 1788903446136,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "ASTERUSDT",
+      "side": "LONG",
+      "entry_price": 0.75,
+      "exit_price": 0.751,
+      "result": "WIN",
+      "pnl_pct": 0.1333,
+      "pnl_usd": 0.1332,
+      "exit_reason": "SL/Floor 0.16% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 35.9,
+      "notes": "SL/Floor 0.16% tocado",
       "context": {}
     }
   ],
