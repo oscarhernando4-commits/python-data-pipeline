@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 1288,
+    "total_trades": 1290,
     "wins": 1007,
-    "losses": 281,
-    "win_rate_pct": 78.18,
-    "total_pnl_usd": 397.7322
+    "losses": 283,
+    "win_rate_pct": 78.06,
+    "total_pnl_usd": 397.5989
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -25808,6 +25808,46 @@
       "min_score": 80,
       "min_fii": 55,
       "hold_min": 34.3,
+      "notes": "SL/Floor 0.08% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 08:19:21",
+      "timestamp_ms": 1788855561413,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "ICPUSDT",
+      "side": "LONG",
+      "entry_price": 3.033,
+      "exit_price": 3.031,
+      "result": "LOSS",
+      "pnl_pct": -0.0659,
+      "pnl_usd": -0.0663,
+      "exit_reason": "SL/Floor 0.08% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 32.0,
+      "notes": "SL/Floor 0.08% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-08 08:19:21",
+      "timestamp_ms": 1788855561413,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "ICPUSDT",
+      "side": "LONG",
+      "entry_price": 3.033,
+      "exit_price": 3.031,
+      "result": "LOSS",
+      "pnl_pct": -0.0659,
+      "pnl_usd": -0.067,
+      "exit_reason": "SL/Floor 0.08% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 32.0,
       "notes": "SL/Floor 0.08% tocado",
       "context": {}
     }
