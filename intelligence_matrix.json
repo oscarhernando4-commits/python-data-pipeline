@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-09-08 05:13:15 UTC",
+  "updated_at": "2026-09-08 05:15:11 UTC",
   "elite_tokens": [
+    {
+      "symbol": "FETUSDT",
+      "total": 65,
+      "wins": 65,
+      "win_rate": 100.0,
+      "net_pnl": 51.64,
+      "tier": "💎 A+ ÉLITE"
+    },
     {
       "symbol": "VETUSDT",
       "total": 48,
@@ -11,10 +19,10 @@
     },
     {
       "symbol": "WLDUSDT",
-      "total": 40,
-      "wins": 40,
+      "total": 43,
+      "wins": 43,
       "win_rate": 100.0,
-      "net_pnl": 22.88,
+      "net_pnl": 23.01,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -23,14 +31,6 @@
       "wins": 35,
       "win_rate": 100.0,
       "net_pnl": 30.45,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "FETUSDT",
-      "total": 18,
-      "wins": 18,
-      "win_rate": 100.0,
-      "net_pnl": 27.33,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -236,14 +236,6 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "SOLUSDT",
-      "total": 26,
-      "wins": 8,
-      "win_rate": 30.8,
-      "net_pnl": -4.1,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "SHIBUSDT",
       "total": 69,
       "wins": 21,
@@ -265,6 +257,14 @@
       "wins": 9,
       "win_rate": 30.0,
       "net_pnl": -7.84,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "total": 27,
+      "wins": 8,
+      "win_rate": 29.6,
+      "net_pnl": -4.82,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -420,7 +420,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 43.7,
-  "total_sim_trades": 3572,
+  "global_sim_wr": 44.5,
+  "total_sim_trades": 3623,
   "total_real_trades": 38
 }
