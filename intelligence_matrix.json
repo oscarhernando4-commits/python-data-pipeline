@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08 05:37:00 UTC",
+  "updated_at": "2026-09-08 05:39:09 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -18,14 +18,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "WLDUSDT",
-      "total": 43,
-      "wins": 43,
-      "win_rate": 100.0,
-      "net_pnl": 23.01,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "AVAXUSDT",
       "total": 35,
       "wins": 35,
@@ -40,6 +32,14 @@
       "win_rate": 100.0,
       "net_pnl": 0.06,
       "tier": "🟢 A SÓLIDO"
+    },
+    {
+      "symbol": "WLDUSDT",
+      "total": 68,
+      "wins": 67,
+      "win_rate": 98.5,
+      "net_pnl": 28.85,
+      "tier": "💎 A+ ÉLITE"
     },
     {
       "symbol": "ARBUSDT",
@@ -123,18 +123,10 @@
     },
     {
       "symbol": "SKYUSDT",
-      "total": 27,
+      "total": 28,
       "wins": 19,
-      "win_rate": 70.4,
-      "net_pnl": 11.39,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "NEARUSDT",
-      "total": 26,
-      "wins": 18,
-      "win_rate": 69.2,
-      "net_pnl": -4.44,
+      "win_rate": 67.9,
+      "net_pnl": 11.06,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -143,6 +135,14 @@
       "wins": 40,
       "win_rate": 67.8,
       "net_pnl": 14.32,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "NEARUSDT",
+      "total": 27,
+      "wins": 18,
+      "win_rate": 66.7,
+      "net_pnl": -5.82,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -252,14 +252,6 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "SOLUSDT",
-      "total": 27,
-      "wins": 8,
-      "win_rate": 29.6,
-      "net_pnl": -4.82,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "ATOMUSDT",
       "total": 31,
       "wins": 9,
@@ -273,6 +265,14 @@
       "wins": 14,
       "win_rate": 28.0,
       "net_pnl": -21.44,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "SOLUSDT",
+      "total": 29,
+      "wins": 8,
+      "win_rate": 27.6,
+      "net_pnl": -6.11,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -308,6 +308,14 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "HBARUSDT",
+      "total": 258,
+      "wins": 46,
+      "win_rate": 17.8,
+      "net_pnl": 13.28,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "STRKUSDT",
       "total": 83,
       "wins": 13,
@@ -316,27 +324,11 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "ALGOUSDT",
-      "total": 35,
-      "wins": 5,
-      "win_rate": 14.3,
-      "net_pnl": -2.13,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "ADAUSDT",
-      "total": 29,
+      "total": 30,
       "wins": 4,
-      "win_rate": 13.8,
-      "net_pnl": -13.84,
-      "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "HBARUSDT",
-      "total": 237,
-      "wins": 25,
-      "win_rate": 10.5,
-      "net_pnl": 11.82,
+      "win_rate": 13.3,
+      "net_pnl": -14.95,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -405,10 +397,10 @@
     },
     {
       "symbol": "STXUSDT",
-      "total": 58,
-      "wins": 0,
-      "win_rate": 0.0,
-      "net_pnl": -16.51,
+      "total": 59,
+      "wins": 1,
+      "win_rate": 1.7,
+      "net_pnl": -16.44,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -436,7 +428,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 46.3,
-  "total_sim_trades": 3952,
+  "global_sim_wr": 47.2,
+  "total_sim_trades": 4030,
   "total_real_trades": 38
 }
