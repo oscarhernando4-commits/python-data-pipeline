@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-09-09 07:21:37 UTC",
+  "updated_at": "2026-09-09 07:31:54 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
-      "total": 543,
-      "wins": 542,
+      "total": 545,
+      "wins": 544,
       "win_rate": 99.8,
-      "net_pnl": 283.18,
+      "net_pnl": 285.44,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -42,14 +42,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "DOTUSDT",
-      "total": 50,
-      "wins": 42,
-      "win_rate": 84.0,
-      "net_pnl": 22.82,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "RENDERUSDT",
       "total": 117,
       "wins": 98,
@@ -59,10 +51,18 @@
     },
     {
       "symbol": "ETCUSDT",
-      "total": 226,
+      "total": 227,
       "wins": 188,
-      "win_rate": 83.2,
-      "net_pnl": 115.73,
+      "win_rate": 82.8,
+      "net_pnl": 114.31,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "DOTUSDT",
+      "total": 51,
+      "wins": 42,
+      "win_rate": 82.4,
+      "net_pnl": 21.58,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -317,6 +317,6 @@
     }
   ],
   "global_sim_wr": 56.8,
-  "total_sim_trades": 8724,
+  "total_sim_trades": 8731,
   "total_real_trades": 44
 }
