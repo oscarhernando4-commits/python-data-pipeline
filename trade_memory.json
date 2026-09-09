@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 36,
-    "wins": 22,
-    "losses": 14,
-    "win_rate_pct": 61.11,
-    "total_pnl_usd": 8.0699
+    "wins": 21,
+    "losses": 15,
+    "win_rate_pct": 58.33,
+    "total_pnl_usd": 5.4031
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -192,26 +192,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-09 13:07:52",
-      "timestamp_ms": 1788959272519,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "STRKUSDT",
-      "side": "LONG",
-      "entry_price": 0.03161,
-      "exit_price": 0.03199,
-      "result": "WIN",
-      "pnl_pct": 1.2022,
-      "pnl_usd": 1.3227,
-      "exit_reason": "SL/Floor 1.37% tocado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 13.3,
-      "notes": "SL/Floor 1.37% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-09 13:13:51",
@@ -791,6 +771,26 @@
       "min_fii": 60,
       "hold_min": 82.3,
       "notes": "SL/Floor -1.50% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-09 13:58:43",
+      "timestamp_ms": 1788962323671,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "JSTUSDT",
+      "side": "LONG",
+      "entry_price": 0.1036,
+      "exit_price": 0.10222,
+      "result": "LOSS",
+      "pnl_pct": -1.332,
+      "pnl_usd": -1.3441,
+      "exit_reason": "SL/Floor -1.20% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 106.5,
+      "notes": "SL/Floor -1.20% tocado",
       "context": {}
     }
   ],
