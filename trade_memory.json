@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 36,
-    "wins": 18,
-    "losses": 18,
-    "win_rate_pct": 50.0,
-    "total_pnl_usd": -13.252
+    "wins": 17,
+    "losses": 19,
+    "win_rate_pct": 47.22,
+    "total_pnl_usd": -15.6178
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -192,26 +192,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-09 08:53:53",
-      "timestamp_ms": 1788944033041,
-      "account_id": "SIM-G3",
-      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
-      "symbol": "DASHUSDT",
-      "side": "LONG",
-      "entry_price": 65.43,
-      "exit_price": 65.99,
-      "result": "WIN",
-      "pnl_pct": 0.8559,
-      "pnl_usd": 0.8565,
-      "exit_reason": "SL/Floor 1.00% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 100.3,
-      "notes": "SL/Floor 1.00% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-09 08:53:53",
@@ -790,6 +770,26 @@
       "min_score": 80,
       "min_fii": 55,
       "hold_min": 44.0,
+      "notes": "SL/Floor -1.40% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-09 09:41:40",
+      "timestamp_ms": 1788946900702,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "ADAUSDT",
+      "side": "LONG",
+      "entry_price": 0.2227,
+      "exit_price": 0.2194,
+      "result": "LOSS",
+      "pnl_pct": -1.4818,
+      "pnl_usd": -1.5093,
+      "exit_reason": "SL/Floor -1.40% tocado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 78.1,
       "notes": "SL/Floor -1.40% tocado",
       "context": {}
     }
