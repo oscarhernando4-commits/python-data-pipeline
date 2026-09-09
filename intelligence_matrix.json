@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-09-09 21:35:35 UTC",
+  "updated_at": "2026-09-09 21:45:35 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
-      "total": 562,
+      "total": 567,
       "wins": 553,
-      "win_rate": 98.4,
-      "net_pnl": 275.64,
+      "win_rate": 97.5,
+      "net_pnl": 268.28,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -168,14 +168,6 @@
       "win_rate": 65.1,
       "net_pnl": -2.5,
       "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "TRUMPUSDT",
-      "total": 80,
-      "wins": 52,
-      "win_rate": 65.0,
-      "net_pnl": 14.36,
-      "tier": "💎 A+ ÉLITE"
     }
   ],
   "blacklisted_tokens": [
@@ -244,19 +236,19 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "LINKUSDT",
-      "total": 62,
-      "wins": 20,
-      "win_rate": 32.3,
-      "net_pnl": -76.24,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "NEXOUSDT",
       "total": 419,
       "wins": 135,
       "win_rate": 32.2,
       "net_pnl": 44.62,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "LINKUSDT",
+      "total": 63,
+      "wins": 20,
+      "win_rate": 31.7,
+      "net_pnl": -77.64,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -309,6 +301,6 @@
     }
   ],
   "global_sim_wr": 56.8,
-  "total_sim_trades": 9691,
+  "total_sim_trades": 9700,
   "total_real_trades": 44
 }
