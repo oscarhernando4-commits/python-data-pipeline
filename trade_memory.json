@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 36,
-    "wins": 10,
-    "losses": 26,
-    "win_rate_pct": 27.78,
-    "total_pnl_usd": -35.1046
+    "wins": 12,
+    "losses": 24,
+    "win_rate_pct": 33.33,
+    "total_pnl_usd": -29.567
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -192,46 +192,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-09 14:03:32",
-      "timestamp_ms": 1788962612431,
-      "account_id": "SIM-G0",
-      "group_name": "💎 ÉLITE ESTRICTO (Score≥90, FII≥70)",
-      "symbol": "PEPEUSDT",
-      "side": "LONG",
-      "entry_price": 3.71e-06,
-      "exit_price": 3.65e-06,
-      "result": "LOSS",
-      "pnl_pct": -1.6173,
-      "pnl_usd": -1.6619,
-      "exit_reason": "SL/Floor -1.40% tocado",
-      "source": "SIMULATION",
-      "min_score": 90,
-      "min_fii": 70,
-      "hold_min": 49.7,
-      "notes": "SL/Floor -1.40% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-09 14:03:32",
-      "timestamp_ms": 1788962612431,
-      "account_id": "SIM-G0",
-      "group_name": "💎 ÉLITE ESTRICTO (Score≥90, FII≥70)",
-      "symbol": "PEPEUSDT",
-      "side": "LONG",
-      "entry_price": 3.71e-06,
-      "exit_price": 3.65e-06,
-      "result": "LOSS",
-      "pnl_pct": -1.6173,
-      "pnl_usd": -1.5917,
-      "exit_reason": "SL/Floor -1.40% tocado",
-      "source": "SIMULATION",
-      "min_score": 90,
-      "min_fii": 70,
-      "hold_min": 49.7,
-      "notes": "SL/Floor -1.40% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-09 14:03:32",
@@ -791,6 +751,46 @@
       "min_fii": 55,
       "hold_min": 6.2,
       "notes": "SL/Floor 0.16% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-09 14:21:42",
+      "timestamp_ms": 1788963702363,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "DASHUSDT",
+      "side": "LONG",
+      "entry_price": 63.59,
+      "exit_price": 64.35,
+      "result": "WIN",
+      "pnl_pct": 1.1952,
+      "pnl_usd": 1.1739,
+      "exit_reason": "SL/Floor 1.27% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 18.2,
+      "notes": "SL/Floor 1.27% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-09 14:21:42",
+      "timestamp_ms": 1788963702363,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "DASHUSDT",
+      "side": "LONG",
+      "entry_price": 63.59,
+      "exit_price": 64.35,
+      "result": "WIN",
+      "pnl_pct": 1.1952,
+      "pnl_usd": 1.1101,
+      "exit_reason": "SL/Floor 1.30% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 18.2,
+      "notes": "SL/Floor 1.30% tocado",
       "context": {}
     }
   ],
