@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09 06:29:39 UTC",
+  "updated_at": "2026-09-09 06:41:37 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -43,10 +43,10 @@
     },
     {
       "symbol": "ETCUSDT",
-      "total": 222,
+      "total": 224,
       "wins": 188,
-      "win_rate": 84.7,
-      "net_pnl": 121.84,
+      "win_rate": 83.9,
+      "net_pnl": 118.97,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -162,6 +162,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "CAKEUSDT",
+      "total": 124,
+      "wins": 82,
+      "win_rate": 66.1,
+      "net_pnl": 42.48,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "TRUMPUSDT",
       "total": 75,
       "wins": 49,
@@ -172,19 +180,19 @@
   ],
   "blacklisted_tokens": [
     {
+      "symbol": "SEIUSDT",
+      "total": 73,
+      "wins": 29,
+      "win_rate": 39.7,
+      "net_pnl": -21.41,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "LTCUSDT",
       "total": 56,
       "wins": 22,
       "win_rate": 39.3,
       "net_pnl": -2938.24,
-      "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "SEIUSDT",
-      "total": 72,
-      "wins": 28,
-      "win_rate": 38.9,
-      "net_pnl": -21.72,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -245,10 +253,10 @@
     },
     {
       "symbol": "TAOUSDT",
-      "total": 104,
-      "wins": 32,
-      "win_rate": 30.8,
-      "net_pnl": -64.48,
+      "total": 105,
+      "wins": 33,
+      "win_rate": 31.4,
+      "net_pnl": -64.4,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -325,6 +333,6 @@
     }
   ],
   "global_sim_wr": 56.6,
-  "total_sim_trades": 8666,
+  "total_sim_trades": 8680,
   "total_real_trades": 44
 }
