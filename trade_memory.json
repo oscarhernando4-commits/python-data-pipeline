@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 35,
-    "wins": 18,
-    "losses": 17,
-    "win_rate_pct": 51.43,
-    "total_pnl_usd": -15.9748
+    "wins": 16,
+    "losses": 19,
+    "win_rate_pct": 45.71,
+    "total_pnl_usd": -19.2612
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -167,46 +167,6 @@
         "obv_trend": "DISTRIBUTING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-09 00:37:25",
-      "timestamp_ms": 1788914245814,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "JSTUSDT",
-      "side": "LONG",
-      "entry_price": 0.10477,
-      "exit_price": 0.10525,
-      "result": "WIN",
-      "pnl_pct": 0.4581,
-      "pnl_usd": 0.4555,
-      "exit_reason": "SL/Floor 0.47% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 299.5,
-      "notes": "SL/Floor 0.47% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-09 00:37:25",
-      "timestamp_ms": 1788914245814,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "JSTUSDT",
-      "side": "LONG",
-      "entry_price": 0.10391,
-      "exit_price": 0.10525,
-      "result": "WIN",
-      "pnl_pct": 1.2896,
-      "pnl_usd": 1.3075,
-      "exit_reason": "SL/Floor 1.30% tocado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 141.3,
-      "notes": "SL/Floor 1.30% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-09 00:37:25",
@@ -766,6 +726,46 @@
       "min_fii": 55,
       "hold_min": 302.0,
       "notes": "SL/Floor -1.40% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-09 01:31:31",
+      "timestamp_ms": 1788917491335,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "TIAUSDT",
+      "side": "LONG",
+      "entry_price": 0.411,
+      "exit_price": 0.4058,
+      "result": "LOSS",
+      "pnl_pct": -1.2652,
+      "pnl_usd": -1.2799,
+      "exit_reason": "SL/Floor -1.20% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 62.1,
+      "notes": "SL/Floor -1.20% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-09 01:35:29",
+      "timestamp_ms": 1788917729763,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "NEXOUSDT",
+      "side": "LONG",
+      "entry_price": 0.841,
+      "exit_price": 0.839,
+      "result": "LOSS",
+      "pnl_pct": -0.2378,
+      "pnl_usd": -0.2435,
+      "exit_reason": "Tiempo max 480min agotado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 480.0,
+      "notes": "Tiempo max 480min agotado",
       "context": {}
     }
   ],
