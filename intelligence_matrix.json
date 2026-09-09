@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09 20:45:47 UTC",
+  "updated_at": "2026-09-09 20:55:34 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -82,19 +82,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "AAVEUSDT",
+      "total": 73,
+      "wins": 52,
+      "win_rate": 71.2,
+      "net_pnl": 5.7,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "IMXUSDT",
       "total": 88,
       "wins": 62,
       "win_rate": 70.5,
       "net_pnl": 7.86,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "AAVEUSDT",
-      "total": 71,
-      "wins": 50,
-      "win_rate": 70.4,
-      "net_pnl": 5.41,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -196,6 +196,14 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "ADAUSDT",
+      "total": 121,
+      "wins": 46,
+      "win_rate": 38.0,
+      "net_pnl": -21.61,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "ZECUSDT",
       "total": 116,
       "wins": 44,
@@ -205,18 +213,10 @@
     },
     {
       "symbol": "SUNUSDT",
-      "total": 85,
+      "total": 86,
       "wins": 32,
-      "win_rate": 37.6,
-      "net_pnl": -9.66,
-      "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "ADAUSDT",
-      "total": 120,
-      "wins": 45,
-      "win_rate": 37.5,
-      "net_pnl": -21.7,
+      "win_rate": 37.2,
+      "net_pnl": -9.96,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -285,10 +285,10 @@
     },
     {
       "symbol": "STXUSDT",
-      "total": 303,
-      "wins": 33,
-      "win_rate": 10.9,
-      "net_pnl": -25.29,
+      "total": 304,
+      "wins": 34,
+      "win_rate": 11.2,
+      "net_pnl": -25.11,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -301,6 +301,6 @@
     }
   ],
   "global_sim_wr": 56.8,
-  "total_sim_trades": 9666,
+  "total_sim_trades": 9672,
   "total_real_trades": 44
 }
