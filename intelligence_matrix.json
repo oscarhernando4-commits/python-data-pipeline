@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09 06:41:37 UTC",
+  "updated_at": "2026-09-09 06:51:39 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -42,14 +42,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "ETCUSDT",
-      "total": 224,
-      "wins": 188,
-      "win_rate": 83.9,
-      "net_pnl": 118.97,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "RENDERUSDT",
       "total": 117,
       "wins": 98,
@@ -66,11 +58,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "ETCUSDT",
+      "total": 226,
+      "wins": 188,
+      "win_rate": 83.2,
+      "net_pnl": 115.73,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ICPUSDT",
-      "total": 634,
-      "wins": 521,
+      "total": 635,
+      "wins": 522,
       "win_rate": 82.2,
-      "net_pnl": 563.94,
+      "net_pnl": 565.23,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -107,10 +107,10 @@
     },
     {
       "symbol": "ARBUSDT",
-      "total": 95,
-      "wins": 67,
-      "win_rate": 70.5,
-      "net_pnl": 52.34,
+      "total": 96,
+      "wins": 68,
+      "win_rate": 70.8,
+      "net_pnl": 52.84,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -196,19 +196,19 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "OPUSDT",
-      "total": 84,
-      "wins": 30,
-      "win_rate": 35.7,
-      "net_pnl": -19.02,
+      "symbol": "LINKUSDT",
+      "total": 48,
+      "wins": 18,
+      "win_rate": 37.5,
+      "net_pnl": -55.56,
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "LINKUSDT",
-      "total": 46,
-      "wins": 16,
-      "win_rate": 34.8,
-      "net_pnl": -56.53,
+      "symbol": "OPUSDT",
+      "total": 85,
+      "wins": 31,
+      "win_rate": 36.5,
+      "net_pnl": -18.0,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -333,6 +333,6 @@
     }
   ],
   "global_sim_wr": 56.6,
-  "total_sim_trades": 8680,
+  "total_sim_trades": 8692,
   "total_real_trades": 44
 }
