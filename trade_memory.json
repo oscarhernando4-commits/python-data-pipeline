@@ -4,7 +4,7 @@
     "wins": 5,
     "losses": 31,
     "win_rate_pct": 13.89,
-    "total_pnl_usd": -40.7103
+    "total_pnl_usd": -40.3305
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -192,26 +192,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-09 21:35:30",
-      "timestamp_ms": 1788989730537,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "TRUMPUSDT",
-      "side": "LONG",
-      "entry_price": 2.16,
-      "exit_price": 2.13,
-      "result": "LOSS",
-      "pnl_pct": -1.3889,
-      "pnl_usd": -1.3472,
-      "exit_reason": "SL/Floor -1.20% tocado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 107.9,
-      "notes": "SL/Floor -1.20% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-09 21:35:30",
@@ -791,6 +771,26 @@
       "min_fii": 55,
       "hold_min": 117.9,
       "notes": "SL/Floor -1.40% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-09 21:58:32",
+      "timestamp_ms": 1788991112640,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 2484.65,
+      "exit_price": 2460.71,
+      "result": "LOSS",
+      "pnl_pct": -0.9635,
+      "pnl_usd": -0.9674,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 180.2,
+      "notes": "Tiempo max 180min agotado",
       "context": {}
     }
   ],
