@@ -436,6 +436,7 @@ def load_real_account_state():
                     _prev_l = state.get("daily_losses", 0)
                     state["daily_wins"] = 0
                     state["daily_losses"] = 0
+                    state["_consecutive_losses"] = 0
                     state["last_daily_reset_date"] = _today_utc
                     if _prev_w > 0 or _prev_l > 0:
                         print(f"🔄 [RESET DIARIO] Nuevo día UTC ({_today_utc}). Contadores reiniciados: {_prev_w}W/{_prev_l}L → 0W/0L. Circuit Breaker listo para hoy.")
@@ -1958,6 +1959,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 return
             else:
                 print(f"✅ [CIRCUIT BREAKER] Cooldown completado ({minutes_since_loss:.0f}m). Reactivando búsqueda A+.")
+                state["_consecutive_losses"] = 0
+                save_real_account_state(state)
 
         # FIX CRITICO: Circuit Breaker basado en LOSSES DEL DÍA (más confiable que _daily_pnl_usd)
         # _daily_pnl_usd a veces no se actualiza correctamente → usar daily_losses como fallback
@@ -2333,71 +2336,47 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO TOTAL: Distribución Institucional en curso (OBV=DISTRIBUTING).")
                 continue
 
-            # 💎 REGLA ÉLITE G0 - VETO 2: FII INSTITUCIONAL MÍNIMO (>= 65)
+            # 💎 REGLA ÉLITE G0 - VETO 2: FII INSTITUCIONAL MÍNIMO (>= 60)
             # Solo compras respaldadas por inyección comprobada de dinero inteligente.
-            if fii < 65:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO G0: FII={fii} < 65. Flujo institucional insuficiente para dinero real.")
+            if fii < 60:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO G0: FII={fii} < 60. Flujo institucional insuficiente para dinero real.")
                 continue
 
-            # 💎 REGLA ÉLITE G0 - VETO 3: SCORE MÍNIMO (>= 88)
-            if cand_score < 88:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO G0: Score={cand_score} < 88. Solo candidatos A+ Élite autorizados.")
+            # 💎 REGLA ÉLITE G0 - VETO 3: SCORE MÍNIMO (>= 85)
+            if cand_score < 85:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO G0: Score={cand_score} < 85. Solo candidatos A+ Élite autorizados.")
                 continue
 
-            # 💎 REGLA ÉLITE G0 - VETO 4: VOLUMEN ACTIVO 1M (>= 0.70x)
+            # 💎 REGLA ÉLITE G0 - VETO 4: VOLUMEN ACTIVO 1M (>= 0.50x)
             vol_1m_check = mtf_res.get("vol_surge_1m", 1.0)
-            if vol_1m_check < 0.70:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO G0: Vol 1M={vol_1m_check:.2f}x < 0.70x. Sin impulso de volumen para dinero real.")
+            if vol_1m_check < 0.50:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO G0: Vol 1M={vol_1m_check:.2f}x < 0.50x. Sin impulso de volumen para dinero real.")
                 continue
                 
-            # 🎯 VETO DE CONFLUENCIA FRACTAL DE SUELO (1M + 2M + 5M + 10M + 15M + 30M + 1H + 2H):
-            # Prohibido entrar si el precio está en el centro o techo de 5M/10M/15M/30M/1H/2H.
-            # Exige que el activo esté en el PISO SIMULTÁNEO en todas las escalas temporales.
-            range_pos_1m = mtf_res.get("range_position_1m", 0.50)
-            range_pos_2m = mtf_res.get("range_position_2m", 0.50)
-            range_pos_5m = mtf_res.get("range_position_5m", 0.50)
-            range_pos_10m = mtf_res.get("range_position_10m", 0.50)
-            range_pos_15m = mtf_res.get("range_position_15m", 0.50)
-            range_pos_30m = mtf_res.get("range_position_30m", 0.50)
             range_pos_1h = mtf_res.get("range_position_1h", 0.50)
             range_pos_2h = mtf_res.get("range_position_2h", 0.50)
             range_pos_4h = mtf_res.get("range_position_4h", 0.50)
             range_pos_1d = mtf_res.get("range_position_1d", 0.50)
-            is_confluent_floor = mtf_res.get("is_confluent_fractal_floor", False)
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
             vol_15m_now = mtf_res.get("vol_surge_15m", 1.0)
+            rsi_15m_now = mtf_res.get("rsi_15m", 50.0)
+            rsi_1m_now = mtf_res.get("rsi_1m", 50.0)
             
-            # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL ADAPTATIVA DINÁMICA 3.0 (1M a 1D):
-            # Ancla Macro: 4H<=75%, 2H<=70%, 1H<=65%, 1D<=85% (permite comprar retrocesos en tendencias alcistas)
-            # Expansión Micro/Mid Adaptativa si hay Confluencia A+ (Suelo 2, Barrido Liquidez, Doble Suelo, Divergencia RSI o FII >= 65):
-            is_a_plus_floor = bool(mtf_res.get("is_double_bottom") or mtf_res.get("bullish_rsi_divergence") or mtf_res.get("is_second_touch_sniper") or mtf_res.get("is_liquidity_sweep") or fii >= 65)
-            max_1d_cap = 0.85 if is_a_plus_floor else 0.80
-            max_4h_cap = 0.75 if is_a_plus_floor else 0.70
-            max_2h_cap = 0.70 if is_a_plus_floor else 0.65
-            max_1h_cap = 0.65 if is_a_plus_floor else 0.60
-            max_30m_cap = 0.55 if is_a_plus_floor else 0.50
-            max_15m_cap = 0.55 if is_a_plus_floor else 0.48
-            max_10m_cap = 0.52 if is_a_plus_floor else 0.46
-            max_5m_cap = 0.50 if is_a_plus_floor else 0.44
-            max_2m_cap = 0.50 if is_a_plus_floor else 0.42
-            max_1m_cap = 0.52 if is_a_plus_floor else 0.42
-
+            # 🎯 MATRIZ ARMÓNICA MACRO ANTI-TECHO (PROTECCIÓN DE CAPITAL INSTITUCIONAL):
+            # Ancla Macro: 1D<=90%, 4H<=85%, 2H<=85%, 1H<=85%, RSI 15M<=72, RSI 1M<=82.
+            # Se eliminan los topes micro (1M, 2M, 5M, 10M, 15M, 30M <= 50%) que sofocaban el ingreso de velas verdes de ignición.
             is_macro_base_valid = bool(
-                range_pos_1d <= max_1d_cap and
-                range_pos_4h <= max_4h_cap and
-                range_pos_2h <= max_2h_cap and
-                range_pos_1h <= max_1h_cap and
-                range_pos_30m <= max_30m_cap and
-                range_pos_15m <= max_15m_cap and
-                range_pos_10m <= max_10m_cap and
-                range_pos_5m <= max_5m_cap and
-                range_pos_2m <= max_2m_cap and
-                range_pos_1m <= max_1m_cap
+                range_pos_1d <= 0.90 and
+                range_pos_4h <= 0.85 and
+                range_pos_2h <= 0.85 and
+                range_pos_1h <= 0.85 and
+                rsi_15m_now <= 72.0 and
+                rsi_1m_now <= 82.0
             )
             
             if not is_macro_base_valid or is_at_daily_ceiling:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado: Fuera de la Matriz Armónica 8D o en Techo:")
-                print(f"     Canales: [1M: {range_pos_1m*100:.0f}% (max {max_1m_cap*100:.0f}) | 2M: {range_pos_2m*100:.0f}% (max {max_2m_cap*100:.0f}) | 5M: {range_pos_5m*100:.0f}% (max {max_5m_cap*100:.0f}) | 10M: {range_pos_10m*100:.0f}% (max {max_10m_cap*100:.0f}) | 15M: {range_pos_15m*100:.0f}% (max {max_15m_cap*100:.0f}) | 30M: {range_pos_30m*100:.0f}% (max {max_30m_cap*100:.0f}) | 1H: {range_pos_1h*100:.0f}% (max 50) | 2H: {range_pos_2h*100:.0f}% (max 50) | 4H: {range_pos_4h*100:.0f}% (max 50) | 1D: {range_pos_1d*100:.0f}% (max {max_1d_cap*100:.0f})]")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado: En Techo Macro o Sobrecomprado:")
+                print(f"     Canales Macro: [1H: {range_pos_1h*100:.0f}% (max 85) | 2H: {range_pos_2h*100:.0f}% (max 85) | 4H: {range_pos_4h*100:.0f}% (max 85) | 1D: {range_pos_1d*100:.0f}% (max 90) | RSI15M: {rsi_15m_now:.1f} (max 72)]")
                 continue
 
 

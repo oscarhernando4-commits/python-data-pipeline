@@ -630,38 +630,23 @@ def run_infinite_trading_matrix_cycle():
                 r4h_r = round(r4h, 1)
                 r1d_r = round(r1d, 1)
                 
-                # 🎯 MATRIZ ARMÓNICA MULTI-TEMPORAL ADAPTATIVA DINÁMICA 3.0 (1M a 1D):
-                # Compra de retrocesos locales (1M-15M) en activos con tendencia macro saludable (1H-1D)
-                is_a_plus_floor = bool(is_double_bottom or is_bullish_div or is_second_touch or is_liquidity_sweep or fii_sc >= 55)
-                max_1d_cap = 85.0 if is_a_plus_floor else 80.0
-                max_4h_cap = 75.0 if is_a_plus_floor else 70.0
-                max_2h_cap = 70.0 if is_a_plus_floor else 65.0
-                max_1h_cap = 65.0 if is_a_plus_floor else 60.0
-                max_30m_cap = 55.0 if is_a_plus_floor else 50.0
-                max_15m_cap = 55.0 if is_a_plus_floor else 48.0
-                max_10m_cap = 52.0 if is_a_plus_floor else 46.0
-                max_5m_cap = 50.0 if is_a_plus_floor else 44.0
-                max_2m_cap = 50.0 if is_a_plus_floor else 42.0
-                max_1m_cap = 52.0 if is_a_plus_floor else 42.0
-
+                # 🎯 MATRIZ ARMÓNICA MACRO ANTI-TECHO (1H a 1D):
+                # Protege contra compras en techos macro reales (1H, 4H, 1D, RSI sobrecomprado).
+                # Se eliminan los topes micro (1M, 2M, 5M <= 50%) que sofocaban e impedían la entrada en velas verdes de ignición institucional.
                 diag_reasons = []
-                if r1m_r > max_1m_cap: diag_reasons.append(f"1M={r1m:.0f}%>{max_1m_cap:.0f}%")
-                if r2m_r > max_2m_cap: diag_reasons.append(f"2M={r2m:.0f}%>{max_2m_cap:.0f}%")
-                if r5m_r > max_5m_cap: diag_reasons.append(f"5M={r5m:.0f}%>{max_5m_cap:.0f}%")
-                if r10m_r > max_10m_cap: diag_reasons.append(f"10M={r10m:.0f}%>{max_10m_cap:.0f}%")
-                if r15m_r > max_15m_cap: diag_reasons.append(f"15M={r15m:.0f}%>{max_15m_cap:.0f}%")
-                if r30m_r > max_30m_cap: diag_reasons.append(f"30M={r30m:.0f}%>{max_30m_cap:.0f}%")
-                if r1h_r > max_1h_cap: diag_reasons.append(f"1H={r1h:.0f}%>{max_1h_cap:.0f}%")
-                if r2h_r > max_2h_cap: diag_reasons.append(f"2H={r2h:.0f}%>{max_2h_cap:.0f}%")
-                if r4h_r > max_4h_cap: diag_reasons.append(f"4H={r4h:.0f}%>{max_4h_cap:.0f}%")
-                if r1d_r > max_1d_cap: diag_reasons.append(f"1D={r1d:.0f}%>{max_1d_cap:.0f}%")
+                if r1d_r > 90.0: diag_reasons.append(f"1D_Techo={r1d:.0f}%>90%")
+                if r4h_r > 85.0: diag_reasons.append(f"4H_Techo={r4h:.0f}%>85%")
+                if r2h_r > 85.0: diag_reasons.append(f"2H_Techo={r2h:.0f}%>85%")
+                if r1h_r > 85.0: diag_reasons.append(f"1H_Techo={r1h:.0f}%>85%")
+                if rsi_15m > 72.0: diag_reasons.append(f"RSI15M={rsi_15m:.0f}>72")
+                if rsi_1m > 82.0: diag_reasons.append(f"RSI1M_Extremo={rsi_1m:.0f}>82")
 
                 # 🛑 VETO ABSOLUTO OBV DISTRIBUCIÓN (Sin excepciones — si institucionales venden, VETO TOTAL)
                 if obv_t == "DISTRIBUTING": diag_reasons.append("OBV=DIST(VETO)")
-                # 💎 REGLA ÉLITE G0: FII mínimo 65 (solo inyección institucional comprobada)
-                if fii_sc < 65: diag_reasons.append(f"FII={fii_sc}<65(Bajo)")
-                # 🚀 VOLUMEN ACTIVO OBLIGATORIO: Mínimo 0.60x (prohibido entrar en activos muertos como MORPHO 0.6x)
-                if vol_1m < 0.60: diag_reasons.append(f"Vol1M={vol_1m:.2f}x<0.60x")
+                # 💎 REGLA ÉLITE INSTITUCIONAL: FII mínimo 60 (solo inyección institucional comprobada)
+                if fii_sc < 60: diag_reasons.append(f"FII={fii_sc}<60(Bajo)")
+                # 🚀 VOLUMEN ACTIVO OBLIGATORIO: Mínimo 0.50x
+                if vol_1m < 0.50: diag_reasons.append(f"Vol1M={vol_1m:.2f}x<0.50x")
                 if not has_turnaround: diag_reasons.append("SinGiroVerde")
 
                 # MEJORA 5: ANTI SCORE-INFLADO — Score>=95 sin volumen real -> deflactar a 85
