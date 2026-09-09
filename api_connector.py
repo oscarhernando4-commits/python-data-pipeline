@@ -2015,6 +2015,16 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         #    o el candidato tiene Doble Suelo + Divergencia RSI + FII >= 65
         #    → Autoriza compra exclusiva para cazar el rebote desde el fondo exacto.
         # ═══════════════════════════════════════════════════════════════════════
+        # ═══════════════════════════════════════════════════════════════════════
+        # 🛡️ ESCUDO 3: SISMÓGRAFO DE AMPLITUD DE MERCADO DINÁMICA 2.0 (Dynamic Breadth)
+        # Analiza las 10 altcoins de referencia (ETH, SOL, BNB, XRP, ADA, DOT, LINK, LTC, AVAX, POL)
+        # 1. 🌪️ DETECTOR DE DESPLOME / CASCADA REAL: Solo bloquea si hay una caída violenta generalizada
+        #    (avg_drop_pct <= -1.20% con mechas < 25%).
+        #    Una deriva lateral suave (ej. -0.14%) NO es pánico y NO debe abortar una señal A+.
+        # 2. 💎 SOBERANÍA CUÁNTICA IA (Gemini 3.1 Flash Lite): Si el Comité de 7 agentes ya deliberó
+        #    y aprobó el activo (is_learned_signal=True), prevalece la visión del Súper-Cerebro
+        #    a menos que haya un colapso sistémico severo (avg_drop_pct <= -1.80%).
+        # ═══════════════════════════════════════════════════════════════════════
         try:
             breadth_symbols = ["ETHUSDT", "BNBUSDT", "SOLUSDT", "XRPUSDT", "ADAUSDT",
                                "DOTUSDT", "LINKUSDT", "LTCUSDT", "AVAXUSDT", "POLUSDT"]
@@ -2044,38 +2054,42 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             avg_wick_pct = (sum(lower_wicks) / len(lower_wicks)) if lower_wicks else 0.0
             avg_drop_pct = (sum(drop_pcts) / len(drop_pcts)) if drop_pcts else 0.0
             
-            # Chequeo si el candidato actual es una joya A+ descorrelacionada
-            cand_is_floor_gem = False
-            if best_symbol and candidates_list:
-                for c in candidates_list:
-                    if isinstance(c, dict) and c.get("symbol") == best_symbol:
-                        # FIX 1.5: mtf_analysis está dentro de tech_data, no en la raíz del candidato
-                        c_mtf = c.get("tech_data", {}).get("mtf_analysis", {}) or c.get("mtf_analysis", {})
-                        if (c_mtf.get("is_double_bottom") or c_mtf.get("bullish_rsi_divergence")) and c_mtf.get("fii_score", 0) >= 65:
-                            cand_is_floor_gem = True
-                        break
+            # Chequeo si el candidato actual es una joya A+ descorrelacionada o aprobada por IA
+            cand_is_floor_gem = bool(is_learned_signal)
+            if not cand_is_floor_gem and best_symbol:
+                try:
+                    import multi_timeframe_analyzer
+                    _cand_mtf = multi_timeframe_analyzer.analyze_multi_timeframe_candles(best_symbol)
+                    if (_cand_mtf.get("is_double_bottom") or _cand_mtf.get("bullish_rsi_divergence")) and _cand_mtf.get("fii_score", 0) >= 60:
+                        cand_is_floor_gem = True
+                except Exception:
+                    pass
 
-            is_market_capitulation_floor = bool(avg_wick_pct >= 35.0 or cand_is_floor_gem)
+            is_market_capitulation_floor = bool(avg_wick_pct >= 25.0 or cand_is_floor_gem)
+            # Pánico real: caída neta significativa del mercado (no una ligera deriva lateral como -0.14%)
+            is_genuine_market_panic = bool(bearish_count >= 7 and avg_drop_pct <= -1.20 and avg_wick_pct < 25.0)
 
-            if bearish_count >= 6:
-                if is_market_capitulation_floor:
-                    print(f"💎 [AMPLITUD DINÁMICA: SUELO DE MERCADO & ABSORCIÓN] {bearish_count}/10 alts en rojo 15M pero con mechas de absorción institucional (Mechas={avg_wick_pct:.0f}% >= 35% | Joya={cand_is_floor_gem}). Clímax de capitulación detectado. Autorizando compra élite.")
+            if is_genuine_market_panic:
+                if is_market_capitulation_floor and not (avg_drop_pct <= -2.00):
+                    print(f"💎 [AMPLITUD DINÁMICA: SUELO DE MERCADO & ABSORCIÓN] {bearish_count}/10 alts en caída ({avg_drop_pct:.2f}%) pero con absorción institucional (Mechas={avg_wick_pct:.0f}% | IA/Joya={cand_is_floor_gem}). Clímax detectado. Autorizando compra élite.")
                     state["_breadth_warning"] = False
                 else:
-                    print(f"🛑 [AMPLITUD DINÁMICA: PÁNICO ACTIVO] {bearish_count}/10 alts en caída neta (Promedio={avg_drop_pct:+.2f}% | Mechas={avg_wick_pct:.0f}% < 35%). Preservando 100% USDT en búnker.")
+                    print(f"🛑 [AMPLITUD DINÁMICA: PÁNICO REAL ACTIVO] {bearish_count}/10 alts en caída violenta (Promedio={avg_drop_pct:+.2f}% <= -1.20% | Mechas={avg_wick_pct:.0f}% < 25%). Preservando 100% USDT en búnker.")
                     return
-            elif bearish_count >= 5:
-                print(f"⚠️ [AMPLITUD DINÁMICA: MERCADO MIXTO] {bearish_count}/10 alts en rojo 15M (Mechas={avg_wick_pct:.0f}%). Exigiendo confluencia A+.")
+            elif bearish_count >= 6:
+                print(f"⚠️ [AMPLITUD DINÁMICA: DERIVA LATERAL / MERCADO MIXTO] {bearish_count}/10 alts en rojo suave 15M (Promedio={avg_drop_pct:+.2f}% | Mechas={avg_wick_pct:.0f}%). "
+                      f"{'Soberanía Gemini AI activa ✅' if is_learned_signal else 'Exigiendo confluencia A+'}.")
                 state["_breadth_warning"] = True
             else:
                 state["_breadth_warning"] = False
         except Exception:
             state["_breadth_warning"] = False
 
-        # 🪙 GUARDIÁN BITCOIN MULTI-TEMPORAL (5M + 15M Anti-Cascada):
-        # Bloquea si BTC tiene 2 velas 15M rojas consecutivas o si está cayendo en 5M
+        # 🪙 GUARDIÁN BITCOIN MULTI-TEMPORAL (5M + 15M Anti-Cascada Dinámico):
+        # Protege contra caídas violentas y súbitas de Bitcoin en tiempo real.
+        # Micro-fluctuaciones normales de -0.05% NO deben abortar compras élite.
         try:
-            # 1. Chequeo 15M (Tendencia Macro Corta)
+            # 1. Chequeo 15M (Tendencia Macro Corta - Detección de Sangrado Fuerte)
             btc_15m_kl = get_klines("BTCUSDT", "15m", 3)
             if btc_15m_kl and len(btc_15m_kl) >= 2:
                 c15_now = float(btc_15m_kl[-1][4])
@@ -2084,11 +2098,14 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 o15_prev = float(btc_15m_kl[-2][1])
                 btc_15m_pct = ((c15_now - o15_now) / o15_now) * 100.0
                 btc_15m_2red = (c15_now < o15_now) and (c15_prev < o15_prev)
-                if btc_15m_pct <= -0.22 or (btc_15m_2red and btc_15m_pct < -0.05):
-                    print(f"🛑 [GUARDIÁN BITCOIN 15M] BTC en sangrado consecutivo en 15M ({btc_15m_pct:+.2f}% | 2 velas rojas). Prohibido abrir longs.")
+                # Umbral calibrado a caídas reales de mercado (evita falsos positivos por $30 USD de ruido en BTC)
+                btc_15m_dump_thresh = -0.65 if not is_learned_signal else -0.90
+                btc_15m_2red_thresh = -0.35 if not is_learned_signal else -0.55
+                if btc_15m_pct <= btc_15m_dump_thresh or (btc_15m_2red and btc_15m_pct < btc_15m_2red_thresh):
+                    print(f"🛑 [GUARDIÁN BITCOIN 15M] BTC en sangrado severo en 15M ({btc_15m_pct:+.2f}% | 2 velas rojas). Prohibido abrir longs.")
                     return
 
-            # 2. Chequeo 5M (Gatillo Rápido)
+            # 2. Chequeo 5M (Gatillo Rápido - Detección de Flash Dump)
             btc_kl = get_klines("BTCUSDT", "5m", 3)
             if btc_kl and len(btc_kl) >= 2:
                 c_now = float(btc_kl[-1][4])
@@ -2097,8 +2114,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 o_prev = float(btc_kl[-2][1])
                 btc_5m_pct = ((c_now - o_now) / o_now) * 100.0
                 btc_2candles_red = (c_now < o_now) and (c_prev < o_prev)
-                if btc_5m_pct <= -0.15 or (btc_2candles_red and btc_5m_pct < -0.06):
-                    print(f"🛑 [GUARDIÁN BITCOIN 5M] BTC en caída activa en 5M ({btc_5m_pct:+.2f}%). Prohibido abrir longs durante corrección.")
+                btc_5m_dump_thresh = -0.45 if not is_learned_signal else -0.65
+                btc_5m_2red_thresh = -0.25 if not is_learned_signal else -0.45
+                if btc_5m_pct <= btc_5m_dump_thresh or (btc_2candles_red and btc_5m_pct < btc_5m_2red_thresh):
+                    print(f"🛑 [GUARDIÁN BITCOIN 5M] BTC en caída activa severa en 5M ({btc_5m_pct:+.2f}%). Prohibido abrir longs durante corrección.")
                     return
         except Exception:
             pass
@@ -2336,22 +2355,37 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO TOTAL: Distribución Institucional en curso (OBV=DISTRIBUTING).")
                 continue
 
-            # 💎 REGLA ÉLITE G0 - VETO 2: FII INSTITUCIONAL MÍNIMO (>= 60)
-            # Solo compras respaldadas por inyección comprobada de dinero inteligente.
-            if fii < 60:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO G0: FII={fii} < 60. Flujo institucional insuficiente para dinero real.")
+            # 🧬 PARÁMETROS ADAPTATIVOS POR ADN Y DICTAMEN IA (Soberanía Gemini AI):
+            # Si Gemini AI aprobó el candidato (is_ai_top=True), los umbrales se adaptan dinámicamente
+            # a su arquetipo fenotípico y perfil de SQLite en vez de aplicar un bloqueo rígido arbitrario.
+            dna_tier = arch_dna.get("dna_tier", "BALANCED")
+            is_dna_elite = (dna_tier == "🌟 ÉLITE" or arch_dna.get("archetype") in ["BLUE_CHIP_CORE", "SECTOR_ROTATION"])
+
+            # 💎 VETO 2: FII INSTITUCIONAL DINÁMICO
+            min_fii_req = 50 if (is_ai_top or is_dna_elite) else 60
+            if fii < min_fii_req:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO: FII={fii} < {min_fii_req}. Flujo institucional insuficiente para dinero real.")
                 continue
 
-            # 💎 REGLA ÉLITE G0 - VETO 3: SCORE MÍNIMO (>= 85)
-            if cand_score < 85:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO G0: Score={cand_score} < 85. Solo candidatos A+ Élite autorizados.")
+            # 💎 VETO 3: SCORE MÍNIMO DINÁMICO
+            min_score_req = 70 if is_ai_top else 85
+            if cand_score < min_score_req:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO: Score={cand_score} < {min_score_req}. Solo candidatos A+ Élite autorizados.")
                 continue
 
-            # 💎 REGLA ÉLITE G0 - VETO 4: VOLUMEN ACTIVO 1M (>= 0.50x)
+            # 💎 VETO 4: VOLUMEN ACTIVO 1M DINÁMICO SEGÚN ADN
+            # En suelos fractales y giros en V (ej. WLD, ENA, ETC), el volumen 1M comprime antes de estallar (0.25x - 0.48x).
             vol_1m_check = mtf_res.get("vol_surge_1m", 1.0)
-            if vol_1m_check < 0.50:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO G0: Vol 1M={vol_1m_check:.2f}x < 0.50x. Sin impulso de volumen para dinero real.")
+            if is_ai_top:
+                min_vol_1m = 0.25 if (is_dna_elite or fii >= 55 or has_floor_turnaround) else 0.35
+            else:
+                min_vol_1m = 0.50
+
+            if vol_1m_check < min_vol_1m:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO VOLUMEN: Vol 1M={vol_1m_check:.2f}x < {min_vol_1m:.2f}x. Sin impulso de volumen.")
                 continue
+            elif is_ai_top and vol_1m_check < 0.50:
+                print(f"  ⚡ [ADN ADAPTATIVO: VOLUMEN APROBADO] {cand_sym} Vol 1M={vol_1m_check:.2f}x >= {min_vol_1m:.2f}x para {arch_dna.get('label')} (FII={fii} | IA Aprobado).")
                 
             range_pos_1h = mtf_res.get("range_position_1h", 0.50)
             range_pos_2h = mtf_res.get("range_position_2h", 0.50)
@@ -2379,9 +2413,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"     Canales Macro: [1H: {range_pos_1h*100:.0f}% (max 85) | 2H: {range_pos_2h*100:.0f}% (max 85) | 4H: {range_pos_4h*100:.0f}% (max 85) | 1D: {range_pos_1d*100:.0f}% (max 90) | RSI15M: {rsi_15m_now:.1f} (max 72)]")
                 continue
 
+            if is_ai_top:
+                has_floor_turnaround = True  # El Comité IA ya validó el giro y suelo de mercado
 
-
-                
             if not has_floor_turnaround:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Falta de Giro de Suelo en 1M/2M.")
                 continue
@@ -2392,7 +2426,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             # para un activo en zona de consolidación bajista. Exigir FII >= 65.
             # ═══════════════════════════════════════════════════════════════════
             rsi_15m_val = mtf_res.get("rsi_15m", 50.0)
-            if rsi_15m_val >= 45.0 and fii < 65:
+            if rsi_15m_val >= 45.0 and fii < 65 and not is_ai_top:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por FII Insuficiente con RSI 15M neutral (RSI15M={rsi_15m_val:.1f} >= 45 pero FII={fii} < 65). Exige FII >= 65 para zona no-oversold.")
                 continue
 
@@ -2413,10 +2447,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     red_vol = sum(float(k[5]) * float(k[4]) for k in kl_5m if float(k[4]) < float(k[1]))
                     green_vol = sum(float(k[5]) * float(k[4]) for k in kl_5m if float(k[4]) >= float(k[1]))
                     red_count = len([k for k in kl_5m if float(k[4]) < float(k[1])])
-                    # Block if: 3+ red candles AND red volume dominates (>= 58% of total volume)
+                    # Block if: 3+ red candles AND red volume dominates (>= 62% of total volume)
                     total_vol_5m = red_vol + green_vol
                     red_vol_pct = (red_vol / total_vol_5m * 100) if total_vol_5m > 0 else 50.0
-                    if red_count >= 3 and red_vol_pct >= 58.0 and not (fii >= 75 or is_spring):
+                    if red_count >= 3 and red_vol_pct >= 62.0 and not (fii >= 65 or is_spring or is_ai_top):
                         print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Momentum 5M Bajista Activo ({red_count}/5 velas rojas | VolRojo={red_vol_pct:.0f}% del flujo). Distribución activa — esperar reversión real.")
                         continue
             except Exception:
@@ -2424,8 +2458,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
 
 
             if (mtf_res.get("rsi_2m", 50.0) > 56.0 or mtf_res.get("rsi_1m", 50.0) > 56.0) and not (is_spring or is_wave2):
-                # Allow entries up to RSI 62 if there is strong volume ignition or FII confirmation
-                rsi_hard_cap = 62.0 if (vol_1m_now >= 1.2 or fii >= 45 or has_dual_sub_minute_ignition) else 56.0
+                # Si la IA aprobó el activo (is_ai_top) o hay ignición confirmada, permitir RSI hasta 68.0 en timeframe corto
+                if is_ai_top or has_floor_turnaround:
+                    rsi_hard_cap = 68.0
+                elif vol_1m_now >= 1.2 or fii >= 45 or has_dual_sub_minute_ignition:
+                    rsi_hard_cap = 62.0
+                else:
+                    rsi_hard_cap = 56.0
                 if mtf_res.get("rsi_2m", 50.0) > rsi_hard_cap or mtf_res.get("rsi_1m", 50.0) > rsi_hard_cap:
                     print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Entrada Tardía (RSI 2M={mtf_res.get('rsi_2m'):.1f} > {rsi_hard_cap:.0f}).")
                     continue
@@ -2440,7 +2479,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Spread excesivo ({spread_now:.3f}% > {max_allowed_spread:.3f}%).")
                 continue
                 
-            min_bid_dom = 46.0 if (fii >= 46 and ob_info.get("bid_vol_usdt", 0.0) >= 15000.0) else 48.0
+            min_bid_dom = 45.0 if is_ai_top else (46.0 if (fii >= 46 and ob_info.get("bid_vol_usdt", 0.0) >= 15000.0) else 48.0)
             if bid_dom_now < min_bid_dom:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Bids insuficientes ({bid_dom_now:.1f}% < {min_bid_dom:.1f}%).")
                 continue
@@ -2503,13 +2542,13 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
 
             is_dead_volume = (vol_1m_now < 0.20 or vol_15m_now < 0.12)
             has_active_ignition = (
-
                 (vol_1m_now >= 0.50 and vol_15m_now >= 0.15) or 
                 (vol_2m_now >= 0.50 and vol_15m_now >= 0.15) or 
                 (vol_15m_now >= 0.50) or 
                 (vol_1m_now >= 0.80) or
                 (vol_acc >= 1.10 and vol_15m_now >= 0.15) or
                 (fii >= 60 and vol_1m_now >= 0.25) or  # FII boost requires at least 0.25x not 0
+                (is_ai_top and vol_1m_now >= 0.25) or  # Soberanía IA en base fractal
                 is_spring or
                 is_wave2 or
                 is_cetus_rocket or
@@ -2523,7 +2562,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 is_1m_wick or 
                 tf_2m_up or
                 (fii >= 55 and tf_5m_up) or
-                mtf_res.get("is_ground_zero_micro_ignition", False)
+                mtf_res.get("is_ground_zero_micro_ignition", False) or
+                (is_ai_top and has_floor_turnaround)
             )
             
             if is_dead_volume or not has_active_ignition:
@@ -2535,8 +2575,9 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 continue
                 
             final_cand_score = max(cand_score, mtf_res.get("multi_tf_score", 50))
-            if final_cand_score < min_required_score:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Score insuficiente ({final_cand_score} < {min_required_score}).")
+            req_min_score = min(70, min_required_score) if is_ai_top else min_required_score
+            if final_cand_score < req_min_score:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Score insuficiente ({final_cand_score} < {req_min_score}).")
                 continue
                 
             # ═══════════════════════════════════════════════════════════════════════
@@ -2640,7 +2681,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 # Regla unificada: si vemos más vendedores que compradores → VETO sin importar FII.
                 # Mercado normal: buy≥45% | Con BTC bajista: buy≥48% (más estricto)
                 _is_btc_bearish_now = is_bearish  # 'is_bearish' se pasa desde pipeline
-                vd_min_buy = 52.0 if _is_btc_bearish_now else 50.0
+                vd_min_buy = 46.0 if is_ai_top else (52.0 if _is_btc_bearish_now else 50.0)
                 if vd_sell_wave or vd_buy < vd_min_buy:
                     print(f"  🛑 [VOLUME DELTA VETO] {cand_sym} descartado: Dominancia vendedora taker activa (Buy={vd_buy:.0f}% < {vd_min_buy:.0f}%, FII={fii}, BTC_bajista={_is_btc_bearish_now}, Delta={vd_delta:+,.0f} USDT). Esperando compradores agresivos.")
                     continue
@@ -2665,7 +2706,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 # También verificar que BTC no haya caído un 0.5% adicional desde el escaneo inicial
                 try:
                     _btc_now_px = get_symbol_price("BTCUSDT", is_futures=False)
-                    _btc_entry_px = cand.get("btc_ref_price", _btc_now_px)
+                    _btc_entry_px = cand_info.get("btc_ref_price", _btc_now_px)
                     if _btc_entry_px and _btc_now_px:
                         _btc_drop_since_scan = (_btc_now_px - _btc_entry_px) / _btc_entry_px * 100
                         if _btc_drop_since_scan < -0.5:
