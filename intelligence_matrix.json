@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09 14:53:50 UTC",
+  "updated_at": "2026-09-09 15:03:44 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -51,10 +51,10 @@
     },
     {
       "symbol": "ZROUSDT",
-      "total": 422,
+      "total": 423,
       "wins": 345,
-      "win_rate": 81.8,
-      "net_pnl": 110.05,
+      "win_rate": 81.6,
+      "net_pnl": 108.44,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -188,14 +188,6 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "OPUSDT",
-      "total": 87,
-      "wins": 33,
-      "win_rate": 37.9,
-      "net_pnl": -16.14,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "ZECUSDT",
       "total": 111,
       "wins": 42,
@@ -204,11 +196,19 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "SUNUSDT",
-      "total": 72,
-      "wins": 27,
+      "symbol": "OPUSDT",
+      "total": 88,
+      "wins": 33,
       "win_rate": 37.5,
-      "net_pnl": -6.36,
+      "net_pnl": -17.87,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "SUNUSDT",
+      "total": 73,
+      "wins": 27,
+      "win_rate": 37.0,
+      "net_pnl": -6.61,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -309,6 +309,6 @@
     }
   ],
   "global_sim_wr": 56.9,
-  "total_sim_trades": 9175,
+  "total_sim_trades": 9182,
   "total_real_trades": 44
 }
