@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10 11:34:15 UTC",
+  "updated_at": "2026-09-10 11:54:19 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -11,10 +11,10 @@
     },
     {
       "symbol": "AVAXUSDT",
-      "total": 93,
-      "wins": 87,
-      "win_rate": 93.5,
-      "net_pnl": 44.56,
+      "total": 94,
+      "wins": 88,
+      "win_rate": 93.6,
+      "net_pnl": 44.66,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -67,10 +67,10 @@
     },
     {
       "symbol": "AEROUSDT",
-      "total": 507,
-      "wins": 385,
-      "win_rate": 75.9,
-      "net_pnl": 108.32,
+      "total": 508,
+      "wins": 386,
+      "win_rate": 76.0,
+      "net_pnl": 108.93,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -146,31 +146,23 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "NEARUSDT",
+      "total": 88,
+      "wins": 58,
+      "win_rate": 65.9,
+      "net_pnl": -0.2,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "UNIUSDT",
       "total": 86,
       "wins": 56,
       "win_rate": 65.1,
       "net_pnl": -3.71,
       "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "NEARUSDT",
-      "total": 86,
-      "wins": 56,
-      "win_rate": 65.1,
-      "net_pnl": -0.68,
-      "tier": "💎 A+ ÉLITE"
     }
   ],
   "blacklisted_tokens": [
-    {
-      "symbol": "WLFIUSDT",
-      "total": 104,
-      "wins": 41,
-      "win_rate": 39.4,
-      "net_pnl": -24.26,
-      "tier": "☠️ TÓXICO"
-    },
     {
       "symbol": "PENGUUSDT",
       "total": 54,
@@ -197,10 +189,10 @@
     },
     {
       "symbol": "TAOUSDT",
-      "total": 148,
-      "wins": 54,
-      "win_rate": 36.5,
-      "net_pnl": -91.15,
+      "total": 151,
+      "wins": 57,
+      "win_rate": 37.7,
+      "net_pnl": -89.63,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -268,7 +260,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 56.6,
-  "total_sim_trades": 10305,
+  "global_sim_wr": 56.7,
+  "total_sim_trades": 10328,
   "total_real_trades": 44
 }
