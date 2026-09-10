@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10 07:46:13 UTC",
+  "updated_at": "2026-09-10 08:06:10 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -66,19 +66,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "FLOKIUSDT",
-      "total": 117,
-      "wins": 90,
-      "win_rate": 76.9,
-      "net_pnl": -2.91,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "AEROUSDT",
       "total": 507,
       "wins": 385,
       "win_rate": 75.9,
       "net_pnl": 108.32,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "FLOKIUSDT",
+      "total": 119,
+      "wins": 90,
+      "win_rate": 75.6,
+      "net_pnl": -5.89,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -156,14 +156,6 @@
   ],
   "blacklisted_tokens": [
     {
-      "symbol": "WLFIUSDT",
-      "total": 101,
-      "wins": 40,
-      "win_rate": 39.6,
-      "net_pnl": -21.7,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "OPUSDT",
       "total": 95,
       "wins": 37,
@@ -177,6 +169,14 @@
       "wins": 21,
       "win_rate": 38.9,
       "net_pnl": -49.44,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "WLFIUSDT",
+      "total": 103,
+      "wins": 40,
+      "win_rate": 38.8,
+      "net_pnl": -24.59,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -205,10 +205,10 @@
     },
     {
       "symbol": "NEXOUSDT",
-      "total": 428,
-      "wins": 142,
-      "win_rate": 33.2,
-      "net_pnl": 46.71,
+      "total": 430,
+      "wins": 144,
+      "win_rate": 33.5,
+      "net_pnl": 47.05,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -261,6 +261,6 @@
     }
   ],
   "global_sim_wr": 56.9,
-  "total_sim_trades": 10173,
+  "total_sim_trades": 10184,
   "total_real_trades": 44
 }
