@@ -4,7 +4,7 @@
     "wins": 4,
     "losses": 32,
     "win_rate_pct": 11.11,
-    "total_pnl_usd": -52.5062
+    "total_pnl_usd": -52.4958
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -192,26 +192,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-10 13:04:15",
-      "timestamp_ms": 1789045455079,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "RENDERUSDT",
-      "side": "LONG",
-      "entry_price": 1.427,
-      "exit_price": 1.401,
-      "result": "LOSS",
-      "pnl_pct": -1.822,
-      "pnl_usd": -1.686,
-      "exit_reason": "SL/Floor -1.40% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 318.1,
-      "notes": "SL/Floor -1.40% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-10 13:04:15",
@@ -791,6 +771,26 @@
       "min_fii": 50,
       "hold_min": 203.8,
       "notes": "SL/Floor -1.20% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-10 13:58:57",
+      "timestamp_ms": 1789048737598,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "ENAUSDT",
+      "side": "LONG",
+      "entry_price": 0.149,
+      "exit_price": 0.1464,
+      "result": "LOSS",
+      "pnl_pct": -1.745,
+      "pnl_usd": -1.6756,
+      "exit_reason": "SL/Floor -1.50% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 124.7,
+      "notes": "SL/Floor -1.50% tocado",
       "context": {}
     }
   ],
