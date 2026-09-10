@@ -4,7 +4,7 @@
     "wins": 16,
     "losses": 20,
     "win_rate_pct": 44.44,
-    "total_pnl_usd": -18.3902
+    "total_pnl_usd": -19.1823
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -192,26 +192,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-10 22:09:33",
-      "timestamp_ms": 1789078173912,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "STXUSDT",
-      "side": "LONG",
-      "entry_price": 0.2623,
-      "exit_price": 0.2606,
-      "result": "LOSS",
-      "pnl_pct": -0.6481,
-      "pnl_usd": -0.5686,
-      "exit_reason": "Tiempo max 180min agotado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 181.9,
-      "notes": "Tiempo max 180min agotado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-10 22:09:33",
@@ -791,6 +771,26 @@
       "min_fii": 60,
       "hold_min": 360.6,
       "notes": "Tiempo max 360min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-10 23:08:02",
+      "timestamp_ms": 1789081682434,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "AVAXUSDT",
+      "side": "LONG",
+      "entry_price": 7.612,
+      "exit_price": 7.502,
+      "result": "LOSS",
+      "pnl_pct": -1.4451,
+      "pnl_usd": -1.3607,
+      "exit_reason": "SL/Floor -1.40% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 146.4,
+      "notes": "SL/Floor -1.40% tocado",
       "context": {}
     }
   ],
