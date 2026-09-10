@@ -4,7 +4,7 @@
     "wins": 22,
     "losses": 14,
     "win_rate_pct": 61.11,
-    "total_pnl_usd": -2.4691
+    "total_pnl_usd": -2.2002
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -192,46 +192,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-10 19:51:41",
-      "timestamp_ms": 1789069901311,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "TRXUSDT",
-      "side": "LONG",
-      "entry_price": 0.3403,
-      "exit_price": 0.3396,
-      "result": "LOSS",
-      "pnl_pct": -0.2057,
-      "pnl_usd": -0.1957,
-      "exit_reason": "Tiempo max 480min agotado",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 481.4,
-      "notes": "Tiempo max 480min agotado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-10 19:56:02",
-      "timestamp_ms": 1789070162872,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "AEROUSDT",
-      "side": "LONG",
-      "entry_price": 0.5531,
-      "exit_price": 0.5537,
-      "result": "WIN",
-      "pnl_pct": 0.1085,
-      "pnl_usd": 0.1064,
-      "exit_reason": "SL/Floor 0.16% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 48.4,
-      "notes": "SL/Floor 0.16% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-10 19:56:02",
@@ -791,6 +751,46 @@
       "min_fii": 60,
       "hold_min": 70.0,
       "notes": "SL/Floor 0.16% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-10 20:59:40",
+      "timestamp_ms": 1789073980966,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "WLFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.0561,
+      "exit_price": 0.0561,
+      "result": "LOSS",
+      "pnl_pct": 0.0,
+      "pnl_usd": 0.0,
+      "exit_reason": "SL/Floor 0.41% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 32.0,
+      "notes": "SL/Floor 0.41% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-10 20:59:40",
+      "timestamp_ms": 1789073980966,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "WLFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.056,
+      "exit_price": 0.0561,
+      "result": "WIN",
+      "pnl_pct": 0.1786,
+      "pnl_usd": 0.1796,
+      "exit_reason": "SL/Floor 0.57% tocado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 112.0,
+      "notes": "SL/Floor 0.57% tocado",
       "context": {}
     }
   ],
