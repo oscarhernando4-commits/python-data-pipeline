@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10 16:09:53 UTC",
+  "updated_at": "2026-09-10 16:21:55 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -83,10 +83,10 @@
     },
     {
       "symbol": "AAVEUSDT",
-      "total": 79,
+      "total": 80,
       "wins": 57,
-      "win_rate": 72.2,
-      "net_pnl": 6.96,
+      "win_rate": 71.2,
+      "net_pnl": 5.54,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -138,14 +138,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "CAKEUSDT",
-      "total": 151,
-      "wins": 99,
-      "win_rate": 65.6,
-      "net_pnl": 35.21,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "INJUSDT",
       "total": 96,
       "wins": 63,
@@ -162,6 +154,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "CAKEUSDT",
+      "total": 152,
+      "wins": 99,
+      "win_rate": 65.1,
+      "net_pnl": 33.76,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "IMXUSDT",
       "total": 103,
       "wins": 67,
@@ -173,18 +173,10 @@
   "blacklisted_tokens": [
     {
       "symbol": "PEPEUSDT",
-      "total": 151,
+      "total": 152,
       "wins": 60,
-      "win_rate": 39.7,
-      "net_pnl": -35.48,
-      "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "PENGUUSDT",
-      "total": 54,
-      "wins": 21,
-      "win_rate": 38.9,
-      "net_pnl": -49.44,
+      "win_rate": 39.5,
+      "net_pnl": -36.55,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -201,6 +193,14 @@
       "wins": 35,
       "win_rate": 38.0,
       "net_pnl": -9.48,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "PENGUUSDT",
+      "total": 57,
+      "wins": 21,
+      "win_rate": 36.8,
+      "net_pnl": -53.45,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -245,10 +245,10 @@
     },
     {
       "symbol": "PYTHUSDT",
-      "total": 289,
+      "total": 290,
       "wins": 57,
       "win_rate": 19.7,
-      "net_pnl": -359.19,
+      "net_pnl": -360.93,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -276,7 +276,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 56.5,
-  "total_sim_trades": 10556,
+  "global_sim_wr": 56.4,
+  "total_sim_trades": 10574,
   "total_real_trades": 44
 }
