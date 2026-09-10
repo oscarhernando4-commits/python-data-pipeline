@@ -4,7 +4,7 @@
     "wins": 14,
     "losses": 22,
     "win_rate_pct": 38.89,
-    "total_pnl_usd": -21.463
+    "total_pnl_usd": -21.3087
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -192,26 +192,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-10 01:16:12",
-      "timestamp_ms": 1789002972755,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "ZECUSDT",
-      "side": "LONG",
-      "entry_price": 1231.98,
-      "exit_price": 1236.5,
-      "result": "WIN",
-      "pnl_pct": 0.3669,
-      "pnl_usd": 0.3796,
-      "exit_reason": "SL/Floor 0.64% tocado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 24.0,
-      "notes": "SL/Floor 0.64% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-10 01:16:12",
@@ -791,6 +771,26 @@
       "min_fii": 60,
       "hold_min": 90.9,
       "notes": "SL/Floor -1.40% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-10 02:12:10",
+      "timestamp_ms": 1789006330470,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "ETHFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.6044,
+      "exit_price": 0.6077,
+      "result": "WIN",
+      "pnl_pct": 0.546,
+      "pnl_usd": 0.5339,
+      "exit_reason": "SL/Floor 0.65% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 35.9,
+      "notes": "SL/Floor 0.65% tocado",
       "context": {}
     }
   ],
