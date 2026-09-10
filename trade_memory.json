@@ -4,7 +4,7 @@
     "wins": 16,
     "losses": 20,
     "win_rate_pct": 44.44,
-    "total_pnl_usd": -18.9086
+    "total_pnl_usd": -18.3902
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -192,26 +192,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-10 22:07:30",
-      "timestamp_ms": 1789078050237,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "IMXUSDT",
-      "side": "LONG",
-      "entry_price": 0.1223,
-      "exit_price": 0.1216,
-      "result": "LOSS",
-      "pnl_pct": -0.5724,
-      "pnl_usd": -0.5184,
-      "exit_reason": "Tiempo max 180min agotado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 181.9,
-      "notes": "Tiempo max 180min agotado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-10 22:09:33",
@@ -791,6 +771,26 @@
       "min_fii": 55,
       "hold_min": 83.8,
       "notes": "SL/Floor -1.40% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-10 22:56:23",
+      "timestamp_ms": 1789080983385,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "JSTUSDT",
+      "side": "LONG",
+      "entry_price": 0.10379,
+      "exit_price": 0.10379,
+      "result": "LOSS",
+      "pnl_pct": 0.0,
+      "pnl_usd": 0.0,
+      "exit_reason": "Tiempo max 360min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 360.6,
+      "notes": "Tiempo max 360min agotado",
       "context": {}
     }
   ],
