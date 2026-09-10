@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10 15:17:58 UTC",
+  "updated_at": "2026-09-10 15:36:02 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -114,11 +114,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "NEARUSDT",
+      "total": 94,
+      "wins": 64,
+      "win_rate": 68.1,
+      "net_pnl": 3.02,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "FETUSDT",
-      "total": 180,
+      "total": 181,
       "wins": 123,
-      "win_rate": 68.3,
-      "net_pnl": 41.09,
+      "win_rate": 68.0,
+      "net_pnl": 39.65,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -127,14 +135,6 @@
       "wins": 63,
       "win_rate": 67.7,
       "net_pnl": 41.28,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "NEARUSDT",
-      "total": 93,
-      "wins": 63,
-      "win_rate": 67.7,
-      "net_pnl": 2.66,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -245,10 +245,10 @@
     },
     {
       "symbol": "BONKUSDT",
-      "total": 119,
+      "total": 120,
       "wins": 21,
-      "win_rate": 17.6,
-      "net_pnl": -11.25,
+      "win_rate": 17.5,
+      "net_pnl": -13.02,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -269,6 +269,6 @@
     }
   ],
   "global_sim_wr": 56.5,
-  "total_sim_trades": 10472,
+  "total_sim_trades": 10480,
   "total_real_trades": 44
 }
