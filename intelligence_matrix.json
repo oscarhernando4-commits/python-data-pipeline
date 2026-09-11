@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11 05:14:23 UTC",
+  "updated_at": "2026-09-11 05:35:25 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -138,6 +138,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "UNIUSDT",
+      "total": 91,
+      "wins": 61,
+      "win_rate": 67.0,
+      "net_pnl": 1.08,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "MORPHOUSDT",
       "total": 132,
       "wins": 88,
@@ -151,14 +159,6 @@
       "wins": 70,
       "win_rate": 66.7,
       "net_pnl": 16.52,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "UNIUSDT",
-      "total": 90,
-      "wins": 60,
-      "win_rate": 66.7,
-      "net_pnl": -1.18,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -245,6 +245,6 @@
     }
   ],
   "global_sim_wr": 56.9,
-  "total_sim_trades": 11269,
+  "total_sim_trades": 11273,
   "total_real_trades": 44
 }
