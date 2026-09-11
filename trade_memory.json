@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 36,
-    "wins": 30,
-    "losses": 6,
-    "win_rate_pct": 83.33,
-    "total_pnl_usd": 8.1392
+    "wins": 28,
+    "losses": 8,
+    "win_rate_pct": 77.78,
+    "total_pnl_usd": 5.2524
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -192,46 +192,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-11 12:07:39",
-      "timestamp_ms": 1789128459506,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "FLOKIUSDT",
-      "side": "LONG",
-      "entry_price": 2.382e-05,
-      "exit_price": 2.396e-05,
-      "result": "WIN",
-      "pnl_pct": 0.5877,
-      "pnl_usd": 0.5189,
-      "exit_reason": "SL/Floor 0.70% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 49.7,
-      "notes": "SL/Floor 0.70% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-11 12:07:39",
-      "timestamp_ms": 1789128459506,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "DOGEUSDT",
-      "side": "LONG",
-      "entry_price": 0.08323,
-      "exit_price": 0.08358,
-      "result": "WIN",
-      "pnl_pct": 0.4205,
-      "pnl_usd": 0.3859,
-      "exit_reason": "SL/Floor 0.44% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 59.7,
-      "notes": "SL/Floor 0.44% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-11 12:07:39",
@@ -791,6 +751,46 @@
       "min_fii": 50,
       "hold_min": 61.7,
       "notes": "SL/Floor 0.52% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-11 12:28:01",
+      "timestamp_ms": 1789129681826,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "NEARUSDT",
+      "side": "LONG",
+      "entry_price": 2.438,
+      "exit_price": 2.402,
+      "result": "LOSS",
+      "pnl_pct": -1.4766,
+      "pnl_usd": -1.3626,
+      "exit_reason": "SL/Floor -1.40% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 15.3,
+      "notes": "SL/Floor -1.40% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-11 12:28:01",
+      "timestamp_ms": 1789129681826,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 2474.38,
+      "exit_price": 2457.63,
+      "result": "LOSS",
+      "pnl_pct": -0.6769,
+      "pnl_usd": -0.6194,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 189.7,
+      "notes": "Tiempo max 180min agotado",
       "context": {}
     }
   ],
