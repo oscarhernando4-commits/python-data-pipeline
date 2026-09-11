@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11 21:58:35 UTC",
+  "updated_at": "2026-09-11 22:05:36 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -148,19 +148,19 @@
   ],
   "blacklisted_tokens": [
     {
-      "symbol": "OPUSDT",
-      "total": 108,
-      "wins": 43,
-      "win_rate": 39.8,
-      "net_pnl": -21.78,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "ONDOUSDT",
       "total": 141,
       "wins": 56,
       "win_rate": 39.7,
       "net_pnl": -40.42,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "OPUSDT",
+      "total": 109,
+      "wins": 43,
+      "win_rate": 39.4,
+      "net_pnl": -23.18,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -197,10 +197,10 @@
     },
     {
       "symbol": "PYTHUSDT",
-      "total": 336,
+      "total": 337,
       "wins": 91,
-      "win_rate": 27.1,
-      "net_pnl": -346.27,
+      "win_rate": 27.0,
+      "net_pnl": -348.19,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -229,6 +229,6 @@
     }
   ],
   "global_sim_wr": 57.2,
-  "total_sim_trades": 12368,
+  "total_sim_trades": 12380,
   "total_real_trades": 46
 }
