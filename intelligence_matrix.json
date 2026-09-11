@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11 06:13:32 UTC",
+  "updated_at": "2026-09-11 06:32:21 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -35,10 +35,10 @@
     },
     {
       "symbol": "ZROUSDT",
-      "total": 440,
-      "wins": 356,
-      "win_rate": 80.9,
-      "net_pnl": 110.74,
+      "total": 442,
+      "wins": 357,
+      "win_rate": 80.8,
+      "net_pnl": 111.03,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -75,10 +75,10 @@
     },
     {
       "symbol": "RENDERUSDT",
-      "total": 151,
-      "wins": 111,
-      "win_rate": 73.5,
-      "net_pnl": -33.18,
+      "total": 152,
+      "wins": 112,
+      "win_rate": 73.7,
+      "net_pnl": -33.04,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -172,19 +172,19 @@
   ],
   "blacklisted_tokens": [
     {
+      "symbol": "LINKUSDT",
+      "total": 77,
+      "wins": 29,
+      "win_rate": 37.7,
+      "net_pnl": -81.9,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "ONDOUSDT",
       "total": 134,
       "wins": 49,
       "win_rate": 36.6,
       "net_pnl": -46.48,
-      "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "LINKUSDT",
-      "total": 75,
-      "wins": 27,
-      "win_rate": 36.0,
-      "net_pnl": -82.87,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -245,6 +245,6 @@
     }
   ],
   "global_sim_wr": 57.0,
-  "total_sim_trades": 11293,
+  "total_sim_trades": 11300,
   "total_real_trades": 44
 }
