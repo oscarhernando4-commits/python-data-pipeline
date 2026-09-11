@@ -4,7 +4,7 @@
     "wins": 19,
     "losses": 19,
     "win_rate_pct": 50.0,
-    "total_pnl_usd": -14.5326
+    "total_pnl_usd": -16.1696
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -240,46 +240,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-11 17:18:59",
-      "timestamp_ms": 1789147139043,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "TRXUSDT",
-      "side": "LONG",
-      "entry_price": 0.3369,
-      "exit_price": 0.3363,
-      "result": "LOSS",
-      "pnl_pct": -0.1781,
-      "pnl_usd": -0.1728,
-      "exit_reason": "Tiempo max 180min agotado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 184.3,
-      "notes": "Tiempo max 180min agotado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-11 17:18:59",
-      "timestamp_ms": 1789147139043,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "SUNUSDT",
-      "side": "LONG",
-      "entry_price": 0.01679,
-      "exit_price": 0.01666,
-      "result": "LOSS",
-      "pnl_pct": -0.7743,
-      "pnl_usd": -0.6883,
-      "exit_reason": "Tiempo max 180min agotado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 184.3,
-      "notes": "Tiempo max 180min agotado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-11 17:18:59",
@@ -839,6 +799,46 @@
       "min_fii": 55,
       "hold_min": 15.1,
       "notes": "SL/Floor 0.43% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-11 18:01:24",
+      "timestamp_ms": 1789149684308,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "ENAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1473,
+      "exit_price": 0.1455,
+      "result": "LOSS",
+      "pnl_pct": -1.222,
+      "pnl_usd": -1.1377,
+      "exit_reason": "SL/Floor -1.20% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 47.3,
+      "notes": "SL/Floor -1.20% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-11 18:01:24",
+      "timestamp_ms": 1789149684308,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "ENAUSDT",
+      "side": "LONG",
+      "entry_price": 0.1476,
+      "exit_price": 0.1455,
+      "result": "LOSS",
+      "pnl_pct": -1.4228,
+      "pnl_usd": -1.3604,
+      "exit_reason": "SL/Floor -1.40% tocado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 99.5,
+      "notes": "SL/Floor -1.40% tocado",
       "context": {}
     }
   ],
