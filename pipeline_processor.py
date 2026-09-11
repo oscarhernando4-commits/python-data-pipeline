@@ -553,7 +553,7 @@ def run_infinite_trading_matrix_cycle():
                         _btc_ema21_1h = _ep * _ema_k + _btc_ema21_1h * (1 - _ema_k)
                     _btc_price_now = _btc_closes_1h[-1]
                     _btc_below_ema21 = _btc_price_now < _btc_ema21_1h
-                    _btc_rsi_bearish = _btc_rsi_1h < 42.0
+                    _btc_rsi_bearish = _btc_rsi_1h < 37.0
                     _btc_rsi_crash   = _btc_rsi_1h < 22.0  # crash nuclear extremo = bloqueo total
 
                     if _btc_rsi_bearish and _btc_below_ema21:
@@ -634,27 +634,27 @@ def run_infinite_trading_matrix_cycle():
                 # Protege contra compras en techos macro reales (1H, 4H, 1D, RSI sobrecomprado).
                 # Se eliminan los topes micro (1M, 2M, 5M <= 50%) que sofocaban e impedían la entrada en velas verdes de ignición institucional.
                 diag_reasons = []
-                if r1d_r > 90.0: diag_reasons.append(f"1D_Techo={r1d:.0f}%>90%")
-                if r4h_r > 85.0: diag_reasons.append(f"4H_Techo={r4h:.0f}%>85%")
-                if r2h_r > 85.0: diag_reasons.append(f"2H_Techo={r2h:.0f}%>85%")
-                if r1h_r > 85.0: diag_reasons.append(f"1H_Techo={r1h:.0f}%>85%")
-                if rsi_15m > 72.0: diag_reasons.append(f"RSI15M={rsi_15m:.0f}>72")
-                if rsi_1m > 82.0: diag_reasons.append(f"RSI1M_Extremo={rsi_1m:.0f}>82")
+                if r1d_r > 92.0: diag_reasons.append(f"1D_Techo={r1d:.0f}%>92%")
+                if r4h_r > 88.0: diag_reasons.append(f"4H_Techo={r4h:.0f}%>88%")
+                if r2h_r > 88.0: diag_reasons.append(f"2H_Techo={r2h:.0f}%>88%")
+                if r1h_r > 87.0: diag_reasons.append(f"1H_Techo={r1h:.0f}%>87%")
+                if rsi_15m > 75.0: diag_reasons.append(f"RSI15M={rsi_15m:.0f}>75")
+                if rsi_1m > 85.0: diag_reasons.append(f"RSI1M_Extremo={rsi_1m:.0f}>85")
 
                 # 🛑 VETO ABSOLUTO OBV DISTRIBUCIÓN (Sin excepciones — si institucionales venden, VETO TOTAL)
                 if obv_t == "DISTRIBUTING": diag_reasons.append("OBV=DIST(VETO)")
-                # 💎 REGLA ÉLITE INSTITUCIONAL: FII mínimo 60 (solo inyección institucional comprobada)
-                if fii_sc < 60: diag_reasons.append(f"FII={fii_sc}<60(Bajo)")
-                # 🚀 VOLUMEN ACTIVO OBLIGATORIO: Mínimo 0.50x
-                if vol_1m < 0.50: diag_reasons.append(f"Vol1M={vol_1m:.2f}x<0.50x")
+                # 💎 FII mínimo 45 (inyección institucional moderada aceptable)
+                if fii_sc < 45: diag_reasons.append(f"FII={fii_sc}<45(Bajo)")
+                # 🚀 VOLUMEN ACTIVO OBLIGATORIO: Mínimo 0.25x
+                if vol_1m < 0.25: diag_reasons.append(f"Vol1M={vol_1m:.2f}x<0.25x")
                 if not has_turnaround: diag_reasons.append("SinGiroVerde")
 
-                # MEJORA 5: ANTI SCORE-INFLADO — Score>=95 sin volumen real -> deflactar a 85
-                if c_score >= 95 and vol_1m < 0.40:
+                # ANTI SCORE-INFLADO — Score>=95 sin volumen real -> deflactar a 85
+                if c_score >= 95 and vol_1m < 0.25:
                     c_score = 85  # Score realista: Gemini infla sin respaldo de volumen
 
-                # 💎 SCORE ÉLITE MÍNIMO: 85 puntos requeridos para ser finalista
-                min_score_required = 85
+                # SCORE MÍNIMO: 75 puntos requeridos para ser finalista
+                min_score_required = 75
                 if c_score < min_score_required: diag_reasons.append(f"Score={c_score}<{min_score_required}")
                 if is_knife: diag_reasons.append("Cuchillo")
                 if is_dead_cat: diag_reasons.append("GatoMuerto")
@@ -727,15 +727,14 @@ def run_infinite_trading_matrix_cycle():
                     if obv_t == "DISTRIBUTING":
                         is_truly_valid = False
                         diag_reasons.append("BAJISTA_CRITICO:OBV=DISTRIBUTING(VETO_ABSOLUTO)")
-                    # BUG 4 FIX: Vol mínimo sube a 0.30x en modo bajista (antes 0.15x)
-                    # Sin fuerza compradora visible no hay rebote real posible
-                    elif vol_1m < 0.30:
+                    # BUG 4 FIX: Vol mínimo sube a 0.25x en modo bajista
+                    elif vol_1m < 0.25:
                         is_truly_valid = False
-                        diag_reasons.append(f"BAJISTA_CRITICO:Vol1M={vol_1m:.2f}x<0.30x")
-                    # Score y FII más exigentes cuando el macro es adverso
-                    elif c_score < 82 or fii_sc < 60:
+                        diag_reasons.append(f"BAJISTA:Vol1M={vol_1m:.2f}x<0.25x")
+                    # Score y FII más exigentes cuando el macro es adverso (pero razonables)
+                    elif c_score < 75 or fii_sc < 45:
                         is_truly_valid = False
-                        diag_reasons.append(f"BAJISTA:Score{c_score}<82oFII{fii_sc}<60")
+                        diag_reasons.append(f"BAJISTA:Score{c_score}<75oFII{fii_sc}<45")
 
                 dbl_lbl = cmtf.get("double_bottom_label", "🟢 Giro en V")
                 canales_str = f"[1M:{r1m:>2.0f}% 5M:{r5m:>2.0f}% 15M:{r15m:>2.0f}% 1H:{r1h:>2.0f}% 4H:{r4h:>2.0f}% 1D:{r1d:>2.0f}%]"

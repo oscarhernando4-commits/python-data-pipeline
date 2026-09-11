@@ -115,8 +115,8 @@ def get_btc_dominance_guard() -> Dict[str, Any]:
         # RSI extremes add additional risk signals
         if btc_rsi > 82:
             altcoin_impact = "CAUTION"  # BTC overbought → potential correction risk
-        elif btc_rsi < 32:
-            altcoin_impact = "AVOID"  # BTC deep cascade momentum
+        elif btc_rsi < 22:
+            altcoin_impact = "AVOID"  # BTC crash nuclear absoluto — RSI < 22 = capitulación extrema
         
         result = {
             "btc_price": current_btc,
