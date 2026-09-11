@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11 10:12:11 UTC",
+  "updated_at": "2026-09-11 10:30:11 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -66,14 +66,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "DASHUSDT",
-      "total": 79,
-      "wins": 58,
-      "win_rate": 73.4,
-      "net_pnl": 16.2,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "AAVEUSDT",
       "total": 84,
       "wins": 61,
@@ -82,11 +74,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "DASHUSDT",
+      "total": 81,
+      "wins": 58,
+      "win_rate": 71.6,
+      "net_pnl": 13.17,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "RENDERUSDT",
-      "total": 159,
+      "total": 162,
       "wins": 112,
-      "win_rate": 70.4,
-      "net_pnl": -42.47,
+      "win_rate": 69.1,
+      "net_pnl": -47.14,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -138,14 +138,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "UNIUSDT",
-      "total": 91,
-      "wins": 61,
-      "win_rate": 67.0,
-      "net_pnl": 1.08,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "CAKEUSDT",
       "total": 159,
       "wins": 106,
@@ -167,6 +159,14 @@
       "wins": 70,
       "win_rate": 66.0,
       "net_pnl": 14.84,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "UNIUSDT",
+      "total": 93,
+      "wins": 61,
+      "win_rate": 65.6,
+      "net_pnl": -1.84,
       "tier": "💎 A+ ÉLITE"
     }
   ],
@@ -213,18 +213,18 @@
     },
     {
       "symbol": "HBARUSDT",
-      "total": 321,
+      "total": 322,
       "wins": 77,
-      "win_rate": 24.0,
-      "net_pnl": -0.73,
+      "win_rate": 23.9,
+      "net_pnl": -2.09,
       "tier": "☠️ TÓXICO"
     },
     {
       "symbol": "BONKUSDT",
-      "total": 129,
-      "wins": 29,
-      "win_rate": 22.5,
-      "net_pnl": -10.46,
+      "total": 130,
+      "wins": 30,
+      "win_rate": 23.1,
+      "net_pnl": -10.09,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -237,14 +237,14 @@
     },
     {
       "symbol": "STXUSDT",
-      "total": 340,
-      "wins": 52,
-      "win_rate": 15.3,
-      "net_pnl": -39.88,
+      "total": 341,
+      "wins": 53,
+      "win_rate": 15.5,
+      "net_pnl": -39.54,
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 57.0,
-  "total_sim_trades": 11424,
+  "global_sim_wr": 56.9,
+  "total_sim_trades": 11442,
   "total_real_trades": 44
 }
