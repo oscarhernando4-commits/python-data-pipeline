@@ -2636,6 +2636,14 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             cci_label = f"CCI={cci_val:.0f}" if cci_val is not None else "CCI=N/A"
             adx_label = f"ADX={adx_val:.0f}" if adx_val is not None else "ADX=N/A"
             
+            # Fix: extraer variables de canal micro que no se definían en este scope
+            range_pos_1m  = mtf_res.get("range_position_1m",  0.50)
+            range_pos_2m  = mtf_res.get("range_position_2m",  0.50)
+            range_pos_5m  = mtf_res.get("range_position_5m",  0.50)
+            range_pos_10m = mtf_res.get("range_position_10m", 0.50)
+            range_pos_15m = mtf_res.get("range_position_15m", 0.50)
+            range_pos_30m = mtf_res.get("range_position_30m", 0.50)
+
             print(f"\n💎 ═══════════════════════════════════════════════════════════════════════════════════")
             print(f"🚀 [DICTAMEN & EJECUCIÓN CUÁNTICA SPOT: #{cand_idx}/{total_cands} -> {cand_sym}]")
             print(f"═══════════════════════════════════════════════════════════════════════════════════════")
