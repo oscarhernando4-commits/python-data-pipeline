@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11 04:14:23 UTC",
+  "updated_at": "2026-09-11 04:34:21 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -172,22 +172,6 @@
   ],
   "blacklisted_tokens": [
     {
-      "symbol": "OPUSDT",
-      "total": 103,
-      "wins": 41,
-      "win_rate": 39.8,
-      "net_pnl": -20.79,
-      "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "SUNUSDT",
-      "total": 103,
-      "wins": 41,
-      "win_rate": 39.8,
-      "net_pnl": -8.76,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "ONDOUSDT",
       "total": 134,
       "wins": 49,
@@ -196,19 +180,19 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "LINKUSDT",
+      "total": 75,
+      "wins": 27,
+      "win_rate": 36.0,
+      "net_pnl": -82.87,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "TAOUSDT",
       "total": 184,
       "wins": 65,
       "win_rate": 35.3,
       "net_pnl": -158.22,
-      "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "LINKUSDT",
-      "total": 74,
-      "wins": 26,
-      "win_rate": 35.1,
-      "net_pnl": -82.91,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -237,10 +221,10 @@
     },
     {
       "symbol": "BONKUSDT",
-      "total": 128,
-      "wins": 28,
-      "win_rate": 21.9,
-      "net_pnl": -11.43,
+      "total": 129,
+      "wins": 29,
+      "win_rate": 22.5,
+      "net_pnl": -10.46,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -261,6 +245,6 @@
     }
   ],
   "global_sim_wr": 56.8,
-  "total_sim_trades": 11222,
+  "total_sim_trades": 11236,
   "total_real_trades": 44
 }
