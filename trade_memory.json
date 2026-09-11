@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 38,
-    "wins": 27,
-    "losses": 11,
-    "win_rate_pct": 71.05,
-    "total_pnl_usd": 3.7481
+    "wins": 29,
+    "losses": 9,
+    "win_rate_pct": 76.32,
+    "total_pnl_usd": 5.864
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -240,46 +240,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-11 18:58:05",
-      "timestamp_ms": 1789153085670,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "NEARUSDT",
-      "side": "LONG",
-      "entry_price": 2.562,
-      "exit_price": 2.525,
-      "result": "LOSS",
-      "pnl_pct": -1.4442,
-      "pnl_usd": -1.3202,
-      "exit_reason": "SL/Floor -1.40% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 28.5,
-      "notes": "SL/Floor -1.40% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-11 19:01:40",
-      "timestamp_ms": 1789153300127,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "PUMPUSDT",
-      "side": "LONG",
-      "entry_price": 0.003536,
-      "exit_price": 0.003535,
-      "result": "LOSS",
-      "pnl_pct": -0.0283,
-      "pnl_usd": -0.0255,
-      "exit_reason": "SL/Floor 0.16% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 6.1,
-      "notes": "SL/Floor 0.16% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-11 19:01:40",
@@ -839,6 +799,46 @@
       "min_fii": 55,
       "hold_min": 41.9,
       "notes": "SL/Floor 0.49% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-11 19:52:02",
+      "timestamp_ms": 1789156322782,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "ATOMUSDT",
+      "side": "LONG",
+      "entry_price": 1.64,
+      "exit_price": 1.648,
+      "result": "WIN",
+      "pnl_pct": 0.4878,
+      "pnl_usd": 0.4339,
+      "exit_reason": "SL/Floor 0.53% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 25.7,
+      "notes": "SL/Floor 0.53% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-11 19:52:02",
+      "timestamp_ms": 1789156322782,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "ATOMUSDT",
+      "side": "LONG",
+      "entry_price": 1.642,
+      "exit_price": 1.648,
+      "result": "WIN",
+      "pnl_pct": 0.3654,
+      "pnl_usd": 0.3363,
+      "exit_reason": "SL/Floor 0.43% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 56.5,
+      "notes": "SL/Floor 0.43% tocado",
       "context": {}
     }
   ],
