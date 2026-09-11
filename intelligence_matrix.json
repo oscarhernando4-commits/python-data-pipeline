@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11 00:38:07 UTC",
+  "updated_at": "2026-09-11 00:58:08 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -90,6 +90,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "NEARUSDT",
+      "total": 96,
+      "wins": 66,
+      "win_rate": 68.8,
+      "net_pnl": 3.17,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "FETUSDT",
       "total": 184,
       "wins": 126,
@@ -103,14 +111,6 @@
       "wins": 136,
       "win_rate": 68.3,
       "net_pnl": 34.35,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "NEARUSDT",
-      "total": 94,
-      "wins": 64,
-      "win_rate": 68.1,
-      "net_pnl": 3.02,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -139,10 +139,18 @@
     },
     {
       "symbol": "FILUSDT",
-      "total": 244,
-      "wins": 163,
-      "win_rate": 66.8,
-      "net_pnl": -0.55,
+      "total": 246,
+      "wins": 165,
+      "win_rate": 67.1,
+      "net_pnl": 0.8,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "UNIUSDT",
+      "total": 90,
+      "wins": 60,
+      "win_rate": 66.7,
+      "net_pnl": -1.18,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -151,14 +159,6 @@
       "wins": 105,
       "win_rate": 66.5,
       "net_pnl": 36.66,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "UNIUSDT",
-      "total": 89,
-      "wins": 59,
-      "win_rate": 66.3,
-      "net_pnl": -1.85,
       "tier": "💎 A+ ÉLITE"
     }
   ],
@@ -173,10 +173,10 @@
     },
     {
       "symbol": "SUNUSDT",
-      "total": 99,
-      "wins": 38,
-      "win_rate": 38.4,
-      "net_pnl": -9.39,
+      "total": 100,
+      "wins": 39,
+      "win_rate": 39.0,
+      "net_pnl": -9.22,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -253,6 +253,6 @@
     }
   ],
   "global_sim_wr": 56.5,
-  "total_sim_trades": 11018,
+  "total_sim_trades": 11029,
   "total_real_trades": 44
 }
