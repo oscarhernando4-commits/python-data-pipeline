@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 47,
-    "wins": 35,
-    "losses": 12,
-    "win_rate_pct": 74.47,
-    "total_pnl_usd": 9.4686
+    "wins": 33,
+    "losses": 14,
+    "win_rate_pct": 70.21,
+    "total_pnl_usd": 7.8102
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -460,46 +460,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-12 11:35:21",
-      "timestamp_ms": 1789212921147,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "SKYUSDT",
-      "side": "LONG",
-      "entry_price": 0.06351,
-      "exit_price": 0.06379,
-      "result": "WIN",
-      "pnl_pct": 0.4409,
-      "pnl_usd": 0.4542,
-      "exit_reason": "SL/Floor 0.49% tocado",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 82.0,
-      "notes": "SL/Floor 0.49% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-12 11:47:22",
-      "timestamp_ms": 1789213642502,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "SUNUSDT",
-      "side": "LONG",
-      "entry_price": 0.01697,
-      "exit_price": 0.01706,
-      "result": "WIN",
-      "pnl_pct": 0.5303,
-      "pnl_usd": 0.4369,
-      "exit_reason": "SL/Floor 0.63% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 72.0,
-      "notes": "SL/Floor 0.63% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-12 11:47:22",
@@ -1059,6 +1019,46 @@
       "min_fii": 55,
       "hold_min": 106.1,
       "notes": "SL/Floor 0.46% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 12:37:02",
+      "timestamp_ms": 1789216622266,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "AVAXUSDT",
+      "side": "LONG",
+      "entry_price": 7.456,
+      "exit_price": 7.453,
+      "result": "LOSS",
+      "pnl_pct": -0.0402,
+      "pnl_usd": -0.0366,
+      "exit_reason": "Tiempo max 360min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 361.0,
+      "notes": "Tiempo max 360min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 12:37:02",
+      "timestamp_ms": 1789216622266,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "CRVUSDT",
+      "side": "LONG",
+      "entry_price": 0.3372,
+      "exit_price": 0.335,
+      "result": "LOSS",
+      "pnl_pct": -0.6524,
+      "pnl_usd": -0.7307,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 191.0,
+      "notes": "Tiempo max 180min agotado",
       "context": {}
     }
   ],
