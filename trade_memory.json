@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 54,
-    "wins": 19,
-    "losses": 35,
-    "win_rate_pct": 35.19,
-    "total_pnl_usd": -10.1786
+    "wins": 18,
+    "losses": 36,
+    "win_rate_pct": 33.33,
+    "total_pnl_usd": -12.247
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -630,46 +630,6 @@
       }
     },
     {
-      "timestamp": "2026-09-12 21:01:19",
-      "timestamp_ms": 1789246879838,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "CAKEUSDT",
-      "side": "LONG",
-      "entry_price": 2.231,
-      "exit_price": 2.212,
-      "result": "LOSS",
-      "pnl_pct": -0.8516,
-      "pnl_usd": -0.9322,
-      "exit_reason": "Tiempo max 480min agotado",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 481.3,
-      "notes": "Tiempo max 480min agotado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-12 21:11:19",
-      "timestamp_ms": 1789247479522,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "BTCUSDT",
-      "side": "LONG",
-      "entry_price": 77210.93,
-      "exit_price": 77231.71,
-      "result": "WIN",
-      "pnl_pct": 0.0269,
-      "pnl_usd": 0.0253,
-      "exit_reason": "Tiempo max 180min agotado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 180.1,
-      "notes": "Tiempo max 180min agotado",
-      "context": {}
-    },
-    {
       "timestamp": "2026-09-12 21:11:19",
       "timestamp_ms": 1789247479522,
       "account_id": "SIM-G2",
@@ -1227,6 +1187,46 @@
       "min_fii": 60,
       "hold_min": 360.3,
       "notes": "Tiempo max 360min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 23:03:17",
+      "timestamp_ms": 1789254197199,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "WIFUSDT",
+      "side": "LONG",
+      "entry_price": 0.1932,
+      "exit_price": 0.1903,
+      "result": "LOSS",
+      "pnl_pct": -1.501,
+      "pnl_usd": -1.6235,
+      "exit_reason": "SL/Floor -1.50% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 668.0,
+      "notes": "SL/Floor -1.50% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 23:03:17",
+      "timestamp_ms": 1789254197199,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "WIFUSDT",
+      "side": "LONG",
+      "entry_price": 0.1932,
+      "exit_price": 0.1903,
+      "result": "LOSS",
+      "pnl_pct": -1.501,
+      "pnl_usd": -1.3518,
+      "exit_reason": "SL/Floor -1.50% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 674.0,
+      "notes": "SL/Floor -1.50% tocado",
       "context": {}
     }
   ],
