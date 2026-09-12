@@ -1244,9 +1244,9 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             phase = 1
             phase_label = f"🛡️ ESCUDO BREAK-EVEN (Cima +{highest_pnl_pct:.2f}% -> Piso +0.16% NETO LIBRE)"
         else:
-            sl_pct = -0.75
+            sl_pct = -0.50
             phase = 1
-            phase_label = f"🌱 ZONA DE DESARROLLO (Cima +{highest_pnl_pct:.2f}% | SL: -0.75%)"
+            phase_label = f"🌱 ZONA DE DESARROLLO (Cima +{highest_pnl_pct:.2f}% | SL: -0.50%)"
 
         return sl_pct, phase, phase_label
 
@@ -1330,9 +1330,9 @@ def quick_position_heartbeat():
         #    → VENTA INMEDIATA para embolsar la ganancia real (+0.25% a +0.70% neto libre de comisiones).
         # 2. Si la cima superó +1.00% y retrocede más de 0.18% desde la cima:
         #    → VENTA INMEDIATA para blindar la meta diaria de +1.0%.
-        if not should_exit and highest_pnl_pct >= 0.50:
-            allowed_retrace = 0.12 if highest_pnl_pct < 0.85 else 0.18
-            if current_pnl_pct <= (highest_pnl_pct - allowed_retrace) or current_pnl_pct <= 0.38:
+        if not should_exit and highest_pnl_pct >= 0.40:
+            allowed_retrace = 0.10 if highest_pnl_pct < 0.85 else 0.15
+            if current_pnl_pct <= (highest_pnl_pct - allowed_retrace) or current_pnl_pct <= 0.28:
                 should_exit = True
                 exit_reason = f"⚡ Cosecha Rápida +0.50% Ejecutada ({current_pnl_pct:+.2f}% | Cima fue +{highest_pnl_pct:.2f}%)"
             elif current_pnl_pct >= 0.70:
@@ -1348,7 +1348,7 @@ def quick_position_heartbeat():
         # Si un trade no despega en los primeros 2 minutos (holding_minutes_hb >= 2), nunca superó +0.20% de pico,
         # y cae a <= -0.40% con presión vendedora institucional (compras taker < 48% o dump),
         # NO esperar al -0.75%: CORTAR DE INMEDIATO con micro-pérdida de -$0.04 USD (fácilmente recuperable en 1 win).
-        if not should_exit and holding_minutes_hb >= 2 and highest_pnl_pct < 0.20 and current_pnl_pct <= -0.40:
+        if not should_exit and holding_minutes_hb >= 2 and highest_pnl_pct < 0.20 and current_pnl_pct <= -0.30:
             flow_check = get_realtime_order_flow_momentum(sym)
             taker_pct = flow_check.get("taker_buy_pct", 50.0)
             if taker_pct < 48.0 or flow_check.get("is_exhaustion_or_dump", False):
