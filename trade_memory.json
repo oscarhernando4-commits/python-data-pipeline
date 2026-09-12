@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 54,
-    "wins": 32,
-    "losses": 22,
-    "win_rate_pct": 59.26,
-    "total_pnl_usd": 3.8777
+    "wins": 33,
+    "losses": 21,
+    "win_rate_pct": 61.11,
+    "total_pnl_usd": 4.0079
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -630,46 +630,6 @@
       }
     },
     {
-      "timestamp": "2026-09-12 23:11:18",
-      "timestamp_ms": 1789254678205,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "SUIUSDT",
-      "side": "LONG",
-      "entry_price": 0.7233,
-      "exit_price": 0.7224,
-      "result": "LOSS",
-      "pnl_pct": -0.1244,
-      "pnl_usd": -0.1056,
-      "exit_reason": "Tiempo max 180min agotado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 180.0,
-      "notes": "Tiempo max 180min agotado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-12 23:15:19",
-      "timestamp_ms": 1789254919128,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "XRPUSDT",
-      "side": "LONG",
-      "entry_price": 1.3649,
-      "exit_price": 1.364,
-      "result": "LOSS",
-      "pnl_pct": -0.0659,
-      "pnl_usd": -0.0663,
-      "exit_reason": "Tiempo max 180min agotado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 182.0,
-      "notes": "Tiempo max 180min agotado",
-      "context": {}
-    },
-    {
       "timestamp": "2026-09-12 23:15:19",
       "timestamp_ms": 1789254919128,
       "account_id": "SIM-G2",
@@ -1227,6 +1187,46 @@
       "min_fii": 50,
       "hold_min": 26.0,
       "notes": "SL/Floor 0.46% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 23:39:22",
+      "timestamp_ms": 1789256362091,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "FLOKIUSDT",
+      "side": "LONG",
+      "entry_price": 2.482e-05,
+      "exit_price": 2.47e-05,
+      "result": "LOSS",
+      "pnl_pct": -0.4835,
+      "pnl_usd": -0.4634,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 182.0,
+      "notes": "Tiempo max 180min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 23:45:18",
+      "timestamp_ms": 1789256718730,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "ASTERUSDT",
+      "side": "LONG",
+      "entry_price": 0.683,
+      "exit_price": 0.686,
+      "result": "WIN",
+      "pnl_pct": 0.4392,
+      "pnl_usd": 0.4217,
+      "exit_reason": "SL/Floor 0.47% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 22.0,
+      "notes": "SL/Floor 0.47% tocado",
       "context": {}
     }
   ],
