@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 54,
-    "wins": 21,
-    "losses": 33,
-    "win_rate_pct": 38.89,
-    "total_pnl_usd": -7.3057
+    "wins": 19,
+    "losses": 35,
+    "win_rate_pct": 35.19,
+    "total_pnl_usd": -10.3346
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -630,46 +630,6 @@
       }
     },
     {
-      "timestamp": "2026-09-12 20:59:18",
-      "timestamp_ms": 1789246758817,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "STXUSDT",
-      "side": "LONG",
-      "entry_price": 0.2643,
-      "exit_price": 0.267,
-      "result": "WIN",
-      "pnl_pct": 1.0216,
-      "pnl_usd": 0.9433,
-      "exit_reason": "SL/Floor 1.09% tocado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 68.0,
-      "notes": "SL/Floor 1.09% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-12 21:01:19",
-      "timestamp_ms": 1789246879838,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "ADAUSDT",
-      "side": "LONG",
-      "entry_price": 0.2074,
-      "exit_price": 0.2077,
-      "result": "WIN",
-      "pnl_pct": 0.1446,
-      "pnl_usd": 0.14,
-      "exit_reason": "SL/Floor 0.16% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 123.2,
-      "notes": "SL/Floor 0.16% tocado",
-      "context": {}
-    },
-    {
       "timestamp": "2026-09-12 21:01:19",
       "timestamp_ms": 1789246879838,
       "account_id": "SIM-G4",
@@ -1226,6 +1186,46 @@
       "min_score": 80,
       "min_fii": 55,
       "hold_min": 354.5,
+      "notes": "SL/Floor -1.40% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 22:49:35",
+      "timestamp_ms": 1789253375071,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "HBARUSDT",
+      "side": "LONG",
+      "entry_price": 0.07476,
+      "exit_price": 0.07462,
+      "result": "LOSS",
+      "pnl_pct": -0.1873,
+      "pnl_usd": -0.1633,
+      "exit_reason": "Tiempo max 360min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 366.2,
+      "notes": "Tiempo max 360min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 22:49:35",
+      "timestamp_ms": 1789253375071,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "DOTUSDT",
+      "side": "LONG",
+      "entry_price": 1.034,
+      "exit_price": 1.016,
+      "result": "LOSS",
+      "pnl_pct": -1.7408,
+      "pnl_usd": -1.7823,
+      "exit_reason": "SL/Floor -1.40% tocado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 291.3,
       "notes": "SL/Floor -1.40% tocado",
       "context": {}
     }
