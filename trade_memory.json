@@ -4,7 +4,7 @@
     "wins": 19,
     "losses": 35,
     "win_rate_pct": 35.19,
-    "total_pnl_usd": -10.3346
+    "total_pnl_usd": -10.1786
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -634,26 +634,6 @@
       "timestamp_ms": 1789246879838,
       "account_id": "SIM-G4",
       "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "WIFUSDT",
-      "side": "LONG",
-      "entry_price": 0.1927,
-      "exit_price": 0.1904,
-      "result": "LOSS",
-      "pnl_pct": -1.1936,
-      "pnl_usd": -1.1935,
-      "exit_reason": "Tiempo max 480min agotado",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 481.3,
-      "notes": "Tiempo max 480min agotado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-12 21:01:19",
-      "timestamp_ms": 1789246879838,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
       "symbol": "CAKEUSDT",
       "side": "LONG",
       "entry_price": 2.231,
@@ -1227,6 +1207,26 @@
       "min_fii": 55,
       "hold_min": 291.3,
       "notes": "SL/Floor -1.40% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 22:53:38",
+      "timestamp_ms": 1789253618784,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "XLMUSDT",
+      "side": "LONG",
+      "entry_price": 0.1818,
+      "exit_price": 0.1798,
+      "result": "LOSS",
+      "pnl_pct": -1.1001,
+      "pnl_usd": -1.0375,
+      "exit_reason": "Tiempo max 360min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 360.3,
+      "notes": "Tiempo max 360min agotado",
       "context": {}
     }
   ],
