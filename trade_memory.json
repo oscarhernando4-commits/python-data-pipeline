@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 51,
-    "wins": 12,
-    "losses": 39,
-    "win_rate_pct": 23.53,
-    "total_pnl_usd": -25.6136
+    "wins": 11,
+    "losses": 40,
+    "win_rate_pct": 21.57,
+    "total_pnl_usd": -26.537
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -556,46 +556,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-12 19:05:22",
-      "timestamp_ms": 1789239922019,
-      "account_id": "SIM-G0",
-      "group_name": "💎 ÉLITE ESTRICTO (Score≥90, FII≥70)",
-      "symbol": "CAKEUSDT",
-      "side": "LONG",
-      "entry_price": 2.234,
-      "exit_price": 2.21,
-      "result": "LOSS",
-      "pnl_pct": -1.0743,
-      "pnl_usd": -1.004,
-      "exit_reason": "Tiempo max 360min agotado",
-      "source": "SIMULATION",
-      "min_score": 90,
-      "min_fii": 70,
-      "hold_min": 361.3,
-      "notes": "Tiempo max 360min agotado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-12 19:07:20",
-      "timestamp_ms": 1789240040571,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "WLFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.0571,
-      "exit_price": 0.0573,
-      "result": "WIN",
-      "pnl_pct": 0.3503,
-      "pnl_usd": 0.328,
-      "exit_reason": "SL/Floor 0.41% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 9.2,
-      "notes": "SL/Floor 0.41% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-12 19:13:18",
@@ -1154,6 +1114,46 @@
       "min_score": 80,
       "min_fii": 55,
       "hold_min": 482.0,
+      "notes": "Tiempo max 480min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 19:57:19",
+      "timestamp_ms": 1789243039586,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "ATOMUSDT",
+      "side": "LONG",
+      "entry_price": 1.627,
+      "exit_price": 1.606,
+      "result": "LOSS",
+      "pnl_pct": -1.2907,
+      "pnl_usd": -1.3143,
+      "exit_reason": "SL/Floor -1.20% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 108.0,
+      "notes": "SL/Floor -1.20% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 20:03:20",
+      "timestamp_ms": 1789243400086,
+      "account_id": "SIM-G4",
+      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 77360.0,
+      "exit_price": 77144.99,
+      "result": "LOSS",
+      "pnl_pct": -0.2779,
+      "pnl_usd": -0.2851,
+      "exit_reason": "Tiempo max 480min agotado",
+      "source": "SIMULATION",
+      "min_score": 80,
+      "min_fii": 55,
+      "hold_min": 481.9,
       "notes": "Tiempo max 480min agotado",
       "context": {}
     }
