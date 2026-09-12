@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 43,
-    "wins": 23,
-    "losses": 20,
-    "win_rate_pct": 53.49,
-    "total_pnl_usd": -0.7061
+    "wins": 22,
+    "losses": 21,
+    "win_rate_pct": 51.16,
+    "total_pnl_usd": -1.7412
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -364,46 +364,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-12 03:20:08",
-      "timestamp_ms": 1789183208024,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "TRXUSDT",
-      "side": "LONG",
-      "entry_price": 0.3385,
-      "exit_price": 0.3396,
-      "result": "WIN",
-      "pnl_pct": 0.325,
-      "pnl_usd": 0.2938,
-      "exit_reason": "Tiempo max 360min agotado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 360.1,
-      "notes": "Tiempo max 360min agotado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-12 03:24:07",
-      "timestamp_ms": 1789183447540,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "CAKEUSDT",
-      "side": "LONG",
-      "entry_price": 2.208,
-      "exit_price": 2.233,
-      "result": "WIN",
-      "pnl_pct": 1.1322,
-      "pnl_usd": 1.096,
-      "exit_reason": "SL/Floor 1.31% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 102.1,
-      "notes": "SL/Floor 1.31% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-12 03:24:07",
@@ -963,6 +923,46 @@
       "min_fii": 55,
       "hold_min": 481.5,
       "notes": "Tiempo max 480min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 05:23:31",
+      "timestamp_ms": 1789190611174,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "SHIBUSDT",
+      "side": "LONG",
+      "entry_price": 5.2e-06,
+      "exit_price": 5.22e-06,
+      "result": "WIN",
+      "pnl_pct": 0.3846,
+      "pnl_usd": 0.3674,
+      "exit_reason": "SL/Floor 0.46% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 115.3,
+      "notes": "SL/Floor 0.46% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 05:29:31",
+      "timestamp_ms": 1789190971585,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "ETHFIUSDT",
+      "side": "LONG",
+      "entry_price": 0.702,
+      "exit_price": 0.7019,
+      "result": "LOSS",
+      "pnl_pct": -0.0142,
+      "pnl_usd": -0.0127,
+      "exit_reason": "SL/Floor 0.16% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 8.0,
+      "notes": "SL/Floor 0.16% tocado",
       "context": {}
     }
   ],
