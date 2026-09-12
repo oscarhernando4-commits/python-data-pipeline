@@ -4,7 +4,7 @@
     "wins": 36,
     "losses": 10,
     "win_rate_pct": 78.26,
-    "total_pnl_usd": 14.4385
+    "total_pnl_usd": 14.5339
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -436,26 +436,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-12 09:58:18",
-      "timestamp_ms": 1789207098474,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "BTCUSDT",
-      "side": "LONG",
-      "entry_price": 77324.59,
-      "exit_price": 77341.0,
-      "result": "WIN",
-      "pnl_pct": 0.0212,
-      "pnl_usd": 0.0202,
-      "exit_reason": "Tiempo max 180min agotado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 190.2,
-      "notes": "Tiempo max 180min agotado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-12 09:58:18",
@@ -1035,6 +1015,26 @@
       "min_fii": 55,
       "hold_min": 59.4,
       "notes": "SL/Floor 0.40% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 10:47:20",
+      "timestamp_ms": 1789210040914,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "FETUSDT",
+      "side": "LONG",
+      "entry_price": 0.1701,
+      "exit_price": 0.1703,
+      "result": "WIN",
+      "pnl_pct": 0.1176,
+      "pnl_usd": 0.1156,
+      "exit_reason": "SL/Floor 0.16% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 73.4,
+      "notes": "SL/Floor 0.16% tocado",
       "context": {}
     }
   ],
