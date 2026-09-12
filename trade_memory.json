@@ -4,7 +4,7 @@
     "wins": 26,
     "losses": 22,
     "win_rate_pct": 54.17,
-    "total_pnl_usd": -10.1741
+    "total_pnl_usd": -10.5039
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -484,26 +484,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-12 12:56:04",
-      "timestamp_ms": 1789217764370,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "VIRTUALUSDT",
-      "side": "LONG",
-      "entry_price": 0.6361,
-      "exit_price": 0.6385,
-      "result": "WIN",
-      "pnl_pct": 0.3773,
-      "pnl_usd": 0.3662,
-      "exit_reason": "SL/Floor 0.54% tocado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 84.7,
-      "notes": "SL/Floor 0.54% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-12 12:56:04",
@@ -1083,6 +1063,26 @@
       "min_fii": 55,
       "hold_min": 374.0,
       "notes": "SL/Floor -1.40% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 13:58:37",
+      "timestamp_ms": 1789221517443,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 77300.0,
+      "exit_price": 77329.99,
+      "result": "WIN",
+      "pnl_pct": 0.0388,
+      "pnl_usd": 0.0364,
+      "exit_reason": "Tiempo max 720min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 728.6,
+      "notes": "Tiempo max 720min agotado",
       "context": {}
     }
   ],
