@@ -4,7 +4,7 @@
     "wins": 23,
     "losses": 20,
     "win_rate_pct": 53.49,
-    "total_pnl_usd": 1.7772
+    "total_pnl_usd": 0.8351
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -364,46 +364,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-12 03:24:07",
-      "timestamp_ms": 1789183447541,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "LTCUSDT",
-      "side": "LONG",
-      "entry_price": 53.28,
-      "exit_price": 53.93,
-      "result": "WIN",
-      "pnl_pct": 1.22,
-      "pnl_usd": 1.0042,
-      "exit_reason": "SL/Floor 1.23% tocado",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 204.0,
-      "notes": "SL/Floor 1.23% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-12 05:10:11",
-      "timestamp_ms": 1789189811760,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "DOGEUSDT",
-      "side": "LONG",
-      "entry_price": 0.0842,
-      "exit_price": 0.08431,
-      "result": "WIN",
-      "pnl_pct": 0.1306,
-      "pnl_usd": 0.1232,
-      "exit_reason": "SL/Floor 0.16% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 402.7,
-      "notes": "SL/Floor 0.16% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-12 05:10:11",
@@ -963,6 +923,46 @@
       "min_fii": 50,
       "hold_min": 261.4,
       "notes": "SL/Floor 1.30% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 05:58:59",
+      "timestamp_ms": 1789192739601,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "WIFUSDT",
+      "side": "LONG",
+      "entry_price": 0.194,
+      "exit_price": 0.1942,
+      "result": "WIN",
+      "pnl_pct": 0.1031,
+      "pnl_usd": 0.1039,
+      "exit_reason": "SL/Floor 0.16% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 25.5,
+      "notes": "SL/Floor 0.16% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 05:58:59",
+      "timestamp_ms": 1789192739601,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "NEARUSDT",
+      "side": "LONG",
+      "entry_price": 2.347,
+      "exit_price": 2.349,
+      "result": "WIN",
+      "pnl_pct": 0.0852,
+      "pnl_usd": 0.0814,
+      "exit_reason": "SL/Floor 0.16% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 37.5,
+      "notes": "SL/Floor 0.16% tocado",
       "context": {}
     }
   ],
