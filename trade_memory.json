@@ -4,7 +4,7 @@
     "wins": 35,
     "losses": 11,
     "win_rate_pct": 76.09,
-    "total_pnl_usd": 24.9456
+    "total_pnl_usd": 24.3467
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -436,46 +436,6 @@
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
-    },
-    {
-      "timestamp": "2026-09-12 09:26:00",
-      "timestamp_ms": 1789205160176,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "PYTHUSDT",
-      "side": "LONG",
-      "entry_price": 0.05256,
-      "exit_price": 0.0529,
-      "result": "WIN",
-      "pnl_pct": 0.6469,
-      "pnl_usd": 0.5285,
-      "exit_reason": "SL/Floor 0.68% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 110.0,
-      "notes": "SL/Floor 0.68% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-12 09:26:00",
-      "timestamp_ms": 1789205160176,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "PYTHUSDT",
-      "side": "LONG",
-      "entry_price": 0.05256,
-      "exit_price": 0.0529,
-      "result": "WIN",
-      "pnl_pct": 0.6469,
-      "pnl_usd": 0.6509,
-      "exit_reason": "SL/Floor 0.68% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 110.0,
-      "notes": "SL/Floor 0.68% tocado",
-      "context": {}
     },
     {
       "timestamp": "2026-09-12 09:29:58",
@@ -1034,6 +994,46 @@
       "min_score": 80,
       "min_fii": 55,
       "hold_min": 29.4,
+      "notes": "SL/Floor 0.57% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 10:23:18",
+      "timestamp_ms": 1789208598790,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "BTCUSDT",
+      "side": "LONG",
+      "entry_price": 77189.71,
+      "exit_price": 77382.01,
+      "result": "WIN",
+      "pnl_pct": 0.2491,
+      "pnl_usd": 0.2404,
+      "exit_reason": "Tiempo max 720min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 721.8,
+      "notes": "Tiempo max 720min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 10:25:21",
+      "timestamp_ms": 1789208721724,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "BONKUSDT",
+      "side": "LONG",
+      "entry_price": 2.83e-06,
+      "exit_price": 2.84e-06,
+      "result": "WIN",
+      "pnl_pct": 0.3534,
+      "pnl_usd": 0.3401,
+      "exit_reason": "SL/Floor 0.57% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 121.4,
       "notes": "SL/Floor 0.57% tocado",
       "context": {}
     }
