@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12 04:58:17 UTC",
+  "updated_at": "2026-09-12 05:10:17 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -51,10 +51,10 @@
     },
     {
       "symbol": "AAVEUSDT",
-      "total": 96,
+      "total": 97,
       "wins": 73,
-      "win_rate": 76.0,
-      "net_pnl": 14.0,
+      "win_rate": 75.3,
+      "net_pnl": 13.96,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -98,19 +98,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "MORPHOUSDT",
-      "total": 144,
-      "wins": 99,
-      "win_rate": 68.8,
-      "net_pnl": -6.05,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "ARBUSDT",
       "total": 146,
       "wins": 100,
       "win_rate": 68.5,
       "net_pnl": 42.07,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "total": 145,
+      "wins": 99,
+      "win_rate": 68.3,
+      "net_pnl": -7.56,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -155,6 +155,14 @@
     }
   ],
   "blacklisted_tokens": [
+    {
+      "symbol": "ONDOUSDT",
+      "total": 143,
+      "wins": 57,
+      "win_rate": 39.9,
+      "net_pnl": -40.18,
+      "tier": "☠️ TÓXICO"
+    },
     {
       "symbol": "TAOUSDT",
       "total": 192,
@@ -229,6 +237,6 @@
     }
   ],
   "global_sim_wr": 57.4,
-  "total_sim_trades": 12577,
-  "total_real_trades": 50
+  "total_sim_trades": 12590,
+  "total_real_trades": 51
 }
