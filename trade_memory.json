@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 45,
-    "wins": 33,
-    "losses": 12,
-    "win_rate_pct": 73.33,
-    "total_pnl_usd": 8.8955
+    "total_trades": 46,
+    "wins": 32,
+    "losses": 14,
+    "win_rate_pct": 69.57,
+    "total_pnl_usd": 7.1017
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when is_falling_knife is True (Cuchillo Cayendo)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEXOUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEXOUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on PYTHUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when OBV:ACCUMULATING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
       "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on AAVEUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ENAUSDT)",
-      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEARUSDT)"
+      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEARUSDT)",
+      "BLOCK LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on RENDERUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI<30(Oversold) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ETHFIUSDT)",
@@ -414,24 +414,28 @@
       }
     },
     {
-      "timestamp": "2026-09-12 08:16:02",
-      "timestamp_ms": 1789200962504,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "XLMUSDT",
+      "timestamp": "2026-09-12 09:01:37",
+      "timestamp_ms": 1789203697775,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "RENDERUSDT",
       "side": "LONG",
-      "entry_price": 0.1798,
-      "exit_price": 0.1808,
-      "result": "WIN",
-      "pnl_pct": 0.5562,
-      "pnl_usd": 0.5609,
-      "exit_reason": "SL/Floor 0.58% tocado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 130.7,
-      "notes": "SL/Floor 0.58% tocado",
-      "context": {}
+      "entry_price": 1.401,
+      "exit_price": 1.399,
+      "pnl_usd": -0.0153,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🔴 [OBV MONITOR] RENDERUSDT: OBV viró a DISTRIBUTING en Fase 1 (33m, PnL=-0.14%). Eyección inmediata para proteger capital. (Fase 1, PnL: -0.14%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 56.4,
+        "atr_pct_15m": 0.371,
+        "vol_surge": 0.27,
+        "vol_surge_1m": 0.31,
+        "fii_score": 60,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     },
     {
       "timestamp": "2026-09-12 08:16:02",
@@ -1011,6 +1015,26 @@
       "min_fii": 60,
       "hold_min": 160.5,
       "notes": "SL/Floor 1.17% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-12 09:03:52",
+      "timestamp_ms": 1789203832051,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "ALGOUSDT",
+      "side": "LONG",
+      "entry_price": 0.0938,
+      "exit_price": 0.0926,
+      "result": "LOSS",
+      "pnl_pct": -1.2793,
+      "pnl_usd": -1.2176,
+      "exit_reason": "SL/Floor -1.20% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 147.8,
+      "notes": "SL/Floor -1.20% tocado",
       "context": {}
     }
   ],
@@ -2275,6 +2299,30 @@
         "vol_surge": 0.22,
         "vol_surge_1m": 0.4,
         "fii_score": 80,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-09-12 09:01:37",
+      "timestamp_ms": 1789203697775,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "RENDERUSDT",
+      "side": "LONG",
+      "entry_price": 1.401,
+      "exit_price": 1.399,
+      "pnl_usd": -0.0153,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🔴 [OBV MONITOR] RENDERUSDT: OBV viró a DISTRIBUTING en Fase 1 (33m, PnL=-0.14%). Eyección inmediata para proteger capital. (Fase 1, PnL: -0.14%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 56.4,
+        "atr_pct_15m": 0.371,
+        "vol_surge": 0.27,
+        "vol_surge_1m": 0.31,
+        "fii_score": 60,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
