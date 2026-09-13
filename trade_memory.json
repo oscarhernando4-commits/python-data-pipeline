@@ -4,7 +4,7 @@
     "wins": 29,
     "losses": 29,
     "win_rate_pct": 50.0,
-    "total_pnl_usd": 5.2726
+    "total_pnl_usd": 5.9183
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -726,26 +726,6 @@
       }
     },
     {
-      "timestamp": "2026-09-13 01:33:19",
-      "timestamp_ms": 1789263199839,
-      "account_id": "SIM-G3",
-      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
-      "symbol": "UNIUSDT",
-      "side": "LONG",
-      "entry_price": 6.469,
-      "exit_price": 6.369,
-      "result": "LOSS",
-      "pnl_pct": -1.5458,
-      "pnl_usd": -1.4694,
-      "exit_reason": "SL/Floor -1.50% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 62.0,
-      "notes": "SL/Floor -1.50% tocado",
-      "context": {}
-    },
-    {
       "timestamp": "2026-09-13 01:37:20",
       "timestamp_ms": 1789263440941,
       "account_id": "SIM-G2",
@@ -1323,6 +1303,26 @@
       "min_fii": 60,
       "hold_min": 592.0,
       "notes": "SL/Floor 0.43% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-13 02:49:17",
+      "timestamp_ms": 1789267757091,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "TIAUSDT",
+      "side": "LONG",
+      "entry_price": 0.3512,
+      "exit_price": 0.3482,
+      "result": "LOSS",
+      "pnl_pct": -0.8542,
+      "pnl_usd": -0.8237,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 182.0,
+      "notes": "Tiempo max 180min agotado",
       "context": {}
     }
   ],
