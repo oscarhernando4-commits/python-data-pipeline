@@ -4,7 +4,7 @@
     "wins": 30,
     "losses": 25,
     "win_rate_pct": 54.55,
-    "total_pnl_usd": 5.2245
+    "total_pnl_usd": 5.2572
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -656,26 +656,6 @@
     {
       "timestamp": "2026-09-13 00:28:44",
       "timestamp_ms": 1789259324962,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "ONDOUSDT",
-      "side": "LONG",
-      "entry_price": 0.349,
-      "exit_price": 0.3494,
-      "result": "WIN",
-      "pnl_pct": 0.1146,
-      "pnl_usd": 0.1089,
-      "exit_reason": "Tiempo max 180min agotado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 195.5,
-      "notes": "Tiempo max 180min agotado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-13 00:28:44",
-      "timestamp_ms": 1789259324962,
       "account_id": "SIM-G3",
       "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
       "symbol": "XRPUSDT",
@@ -1251,6 +1231,26 @@
       "min_fii": 60,
       "hold_min": 721.3,
       "notes": "Tiempo max 720min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-13 01:05:21",
+      "timestamp_ms": 1789261521896,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "DASHUSDT",
+      "side": "LONG",
+      "entry_price": 54.7,
+      "exit_price": 54.77,
+      "result": "WIN",
+      "pnl_pct": 0.128,
+      "pnl_usd": 0.1416,
+      "exit_reason": "SL/Floor 0.16% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 22.0,
+      "notes": "SL/Floor 0.16% tocado",
       "context": {}
     }
   ],
