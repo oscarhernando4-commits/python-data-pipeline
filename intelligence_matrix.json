@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13 06:27:29 UTC",
+  "updated_at": "2026-09-13 06:42:27 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -27,10 +27,10 @@
     },
     {
       "symbol": "ICPUSDT",
-      "total": 674,
+      "total": 675,
       "wins": 547,
-      "win_rate": 81.2,
-      "net_pnl": 567.62,
+      "win_rate": 81.0,
+      "net_pnl": 567.14,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -136,15 +136,23 @@
       "win_rate": 67.5,
       "net_pnl": 7.36,
       "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "POLUSDT",
+      "total": 43,
+      "wins": 28,
+      "win_rate": 65.1,
+      "net_pnl": 9.71,
+      "tier": "💎 A+ ÉLITE"
     }
   ],
   "blacklisted_tokens": [
     {
       "symbol": "TAOUSDT",
-      "total": 199,
-      "wins": 76,
-      "win_rate": 38.2,
-      "net_pnl": -152.18,
+      "total": 200,
+      "wins": 77,
+      "win_rate": 38.5,
+      "net_pnl": -151.69,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -165,10 +173,10 @@
     },
     {
       "symbol": "SHIBUSDT",
-      "total": 174,
+      "total": 175,
       "wins": 62,
-      "win_rate": 35.6,
-      "net_pnl": 12.65,
+      "win_rate": 35.4,
+      "net_pnl": 12.47,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -213,6 +221,6 @@
     }
   ],
   "global_sim_wr": 57.8,
-  "total_sim_trades": 13296,
+  "total_sim_trades": 13304,
   "total_real_trades": 68
 }
