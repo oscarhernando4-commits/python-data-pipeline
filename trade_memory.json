@@ -4,7 +4,7 @@
     "wins": 26,
     "losses": 35,
     "win_rate_pct": 42.62,
-    "total_pnl_usd": -3.5163
+    "total_pnl_usd": -3.9463
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -802,26 +802,6 @@
       "timestamp_ms": 1789279881599,
       "account_id": "SIM-G3",
       "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
-      "symbol": "TRUMPUSDT",
-      "side": "LONG",
-      "entry_price": 1.985,
-      "exit_price": 2.002,
-      "result": "WIN",
-      "pnl_pct": 0.8564,
-      "pnl_usd": 0.7896,
-      "exit_reason": "SL/Floor 0.89% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 188.1,
-      "notes": "SL/Floor 0.89% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-13 06:11:21",
-      "timestamp_ms": 1789279881599,
-      "account_id": "SIM-G3",
-      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
       "symbol": "AAVEUSDT",
       "side": "LONG",
       "entry_price": 127.3,
@@ -1395,6 +1375,26 @@
       "min_fii": 55,
       "hold_min": 342.0,
       "notes": "SL/Floor 0.16% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-13 07:21:31",
+      "timestamp_ms": 1789284091292,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "BONKUSDT",
+      "side": "LONG",
+      "entry_price": 2.8e-06,
+      "exit_price": 2.81e-06,
+      "result": "WIN",
+      "pnl_pct": 0.3571,
+      "pnl_usd": 0.3596,
+      "exit_reason": "SL/Floor 0.57% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 34.3,
+      "notes": "SL/Floor 0.57% tocado",
       "context": {}
     }
   ],
