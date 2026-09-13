@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 65,
-    "wins": 40,
-    "losses": 25,
-    "win_rate_pct": 61.54,
-    "total_pnl_usd": 11.9159
+    "wins": 39,
+    "losses": 26,
+    "win_rate_pct": 60.0,
+    "total_pnl_usd": 11.489
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -898,26 +898,6 @@
       "timestamp_ms": 1789302194219,
       "account_id": "SIM-G2",
       "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "ICPUSDT",
-      "side": "LONG",
-      "entry_price": 2.658,
-      "exit_price": 2.67,
-      "result": "WIN",
-      "pnl_pct": 0.4515,
-      "pnl_usd": 0.4269,
-      "exit_reason": "Tiempo max 180min agotado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 180.0,
-      "notes": "Tiempo max 180min agotado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-13 12:23:14",
-      "timestamp_ms": 1789302194219,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
       "symbol": "MORPHOUSDT",
       "side": "LONG",
       "entry_price": 2.176,
@@ -1491,6 +1471,26 @@
       "min_fii": 50,
       "hold_min": 14.0,
       "notes": "SL/Floor 0.47% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-13 13:09:34",
+      "timestamp_ms": 1789304974948,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "PEPEUSDT",
+      "side": "LONG",
+      "entry_price": 3.41e-06,
+      "exit_price": 3.41e-06,
+      "result": "LOSS",
+      "pnl_pct": 0.0,
+      "pnl_usd": 0.0,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 180.3,
+      "notes": "Tiempo max 180min agotado",
       "context": {}
     }
   ],
