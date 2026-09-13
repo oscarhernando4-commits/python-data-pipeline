@@ -2305,8 +2305,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 _wr_p = _dna_prof.get("win_rate_pct", 0.0)
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por ADN Tóxico en SQLite (WR {_wr_p:.1f}% < 40% histórico). Preservando capital.")
                 continue
-            if arch_dna.get("is_low_volatility_zombie", False) or atr_15m < 0.80:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por ATR insuficiente ({atr_15m:.2f}% < 0.80%). Necesita ATR >= 0.80% para alcanzar +1.30%.")
+            if arch_dna.get("is_low_volatility_zombie", False) or atr_15m < 0.25:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por ATR insuficiente ({atr_15m:.2f}% < 0.25%). Zombie sin movimiento.")
                 continue
                 
             tf_1m = tf_align.get("1m", "BEARISH")
