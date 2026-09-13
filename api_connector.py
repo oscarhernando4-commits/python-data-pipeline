@@ -1223,26 +1223,18 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             sl_pct = max(1.30, round(highest_pnl_pct * retention_ratio, 4))
             phase = 3
             phase_label = f"🚀 FASE 3 RALLY DINÁMICO (Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 1.15:
-            sl_pct = max(1.00, round(highest_pnl_pct * 0.85, 4))
+        elif highest_pnl_pct >= 1.00:
+            sl_pct = max(0.80, round(highest_pnl_pct * 0.80, 4))
             phase = 2
             phase_label = f"🏆 FASE 2 META 1% CUMPLIDA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.85:
-            sl_pct = max(0.70, round(highest_pnl_pct * 0.80, 4))
+        elif highest_pnl_pct >= 0.80:
+            sl_pct = max(0.55, round(highest_pnl_pct * 0.70, 4))
             phase = 2
-            phase_label = f"⚡ FASE 2 COSECHA ALTA (Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.65:
-            sl_pct = max(0.50, round(highest_pnl_pct - 0.14, 4))
-            phase = 2
-            phase_label = f"🎯 FASE 2 COSECHA MEDIA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.50:
-            sl_pct = max(0.38, round(highest_pnl_pct - 0.12, 4))
-            phase = 2
-            phase_label = f"⚡ FASE 2 COSECHA RÁPIDA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.38:
-            sl_pct = 0.16
+            phase_label = f"🎯 FASE 2 COSECHA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
+        elif highest_pnl_pct >= 0.55:
+            sl_pct = 0.20
             phase = 1
-            phase_label = f"🛡️ ESCUDO BREAK-EVEN (Cima +{highest_pnl_pct:.2f}% -> Piso +0.16% NETO LIBRE)"
+            phase_label = f"🛡️ ESCUDO BREAK-EVEN (Cima +{highest_pnl_pct:.2f}% -> Piso +0.20% NETO)"
         else:
             sl_pct = -0.50
             phase = 1
@@ -1324,18 +1316,18 @@ def quick_position_heartbeat():
         should_exit = current_pnl_pct <= sl_pct
         exit_reason = f"🎯 Trailing Floor Activado ({current_pnl_pct:+.2f}% <= {sl_pct:+.2f}%)"
 
-        # ⚡ COSECHA RÁPIDA & MICRO-RETROCESO DINÁMICO (APENAS PASE +0.50%):
-        # Apenas la ganancia supera el +0.50%, NUNCA permitir que se devuelva a +0.16% o al punto de partida.
-        # 1. Si la cima superó +0.50% y el precio retrocede más de 0.12% desde la cima O cae de +0.38%:
-        #    → VENTA INMEDIATA para embolsar la ganancia real (+0.25% a +0.70% neto libre de comisiones).
-        # 2. Si la cima superó +1.00% y retrocede más de 0.18% desde la cima:
-        #    → VENTA INMEDIATA para blindar la meta diaria de +1.0%.
-        if not should_exit and highest_pnl_pct >= 0.40:
-            allowed_retrace = 0.10 if highest_pnl_pct < 0.85 else 0.15
-            if current_pnl_pct <= (highest_pnl_pct - allowed_retrace) or current_pnl_pct <= 0.28:
+        # ⚡ COSECHA RÁPIDA & MICRO-RETROCESO DINÁMICO:
+        # Apenas la ganancia supera el +0.60%, proteger con trailing ajustado.
+        # 1. Si la cima superó +0.60% y retrocede más de 0.15% desde la cima O cae de +0.45%:
+        #    → VENTA para embolsar +0.25% a +0.80% neto libre de comisiones.
+        # 2. Si la cima superó +1.00% y retrocede más de 0.20% desde la cima:
+        #    → VENTA para blindar la meta diaria.
+        if not should_exit and highest_pnl_pct >= 0.60:
+            allowed_retrace = 0.15 if highest_pnl_pct < 1.00 else 0.20
+            if current_pnl_pct <= (highest_pnl_pct - allowed_retrace) or current_pnl_pct <= 0.45:
                 should_exit = True
-                exit_reason = f"⚡ Cosecha Rápida +0.50% Ejecutada ({current_pnl_pct:+.2f}% | Cima fue +{highest_pnl_pct:.2f}%)"
-            elif current_pnl_pct >= 0.70:
+                exit_reason = f"⚡ Cosecha Rápida Ejecutada ({current_pnl_pct:+.2f}% | Cima fue +{highest_pnl_pct:.2f}%)"
+            elif current_pnl_pct >= 0.90:
                 flow = get_realtime_order_flow_momentum(sym)
                 if flow.get("is_exhaustion_or_dump", False):
                     should_exit = True
@@ -1966,10 +1958,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         # _daily_pnl_usd a veces no se actualiza correctamente → usar daily_losses como fallback
         _daily_l = state.get("daily_losses", 0)
         _last_loss_ts = state.get("_last_loss_time", 0)
-        if _daily_l >= 2 and _last_loss_ts > 0:
+        if _daily_l >= 4 and _last_loss_ts > 0:
             _mins_since = (time.time() - _last_loss_ts) / 60.0
-            if _mins_since < 45.0:
-                _remaining = 45.0 - _mins_since
+            if _mins_since < 20.0:
+                _remaining = 20.0 - _mins_since
                 print(f"🛑 [CB DIARIO] {_daily_l} pérdidas hoy. Cooldown de seguridad: {_remaining:.0f}m restantes. Esperando condiciones más favorables.")
                 return
 
@@ -1985,11 +1977,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 state["_daily_pnl_date"] = today_str
                 state["_daily_pnl_usd"] = 0.0
             daily_pnl = state.get("_daily_pnl_usd", 0.0)
-            daily_loss_limit = -0.65  # Max $0.65 loss per day (tolera 2 SL de -2.50% en posición de ~$11)
+            daily_loss_limit = -1.20  # Max $1.20 loss per day — permite ~20 trades con SL -0.50% antes de bloquear
             if daily_pnl <= daily_loss_limit:
                 print(f"🛑 [LÍMITE DIARIO] Pérdida acumulada hoy: ${daily_pnl:.3f}. Límite: ${daily_loss_limit}. Operaciones pausadas hasta mañana. Preservando capital.")
                 return
-            elif daily_pnl < -0.20:
+            elif daily_pnl < -0.50:
                 print(f"⚠️ [ALERTA DIARIA] Pérdida acumulada hoy: ${daily_pnl:.3f}. Cerca del límite diario. Modo ultra-selectivo activado.")
 
             # 🏆 CANDADO DE META DIARIA CUMPLIDA (≥ +1.0% NETO LIBRE DE COMISIONES)
