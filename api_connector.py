@@ -1430,10 +1430,10 @@ def quick_position_heartbeat():
             should_exit = True
             exit_reason = f"🛑 STOP LOSS INICIAL ({current_pnl_pct:+.2f}% <= -0.75%). Cortando pérdida controlada."
 
-        # 🔴 MEJORA 2 — OBV IN-POSITION MONITOR (cada ~3 min en Fase 1)
-        # Si OBV se vuelve DISTRIBUTING durante el trade con PnL negativo → institucionales vendiendo.
-        # Salida inmediata de emergencia para blindar el balance.
-        if not should_exit and current_phase == 1 and holding_minutes_hb > 0 and holding_minutes_hb % 3 == 0:
+        # 🔴 OBV IN-POSITION MONITOR (cada ~8 min en Fase 1)
+        # Solo eyecta si PnL < -0.25% Y OBV DISTRIBUTING — no por ruido de spread
+        # QNTUSDT fue eyectado a los 3 min con -0.06% (ruido del spread, NO distribución real)
+        if not should_exit and current_phase == 1 and holding_minutes_hb >= 8 and holding_minutes_hb % 8 == 0:
             try:
                 _kl_obv = get_klines(sym, "15m", 20)
                 if _kl_obv and len(_kl_obv) >= 10:
@@ -1450,9 +1450,9 @@ def quick_position_heartbeat():
                         _vol = float(_kl_obv[_i][5])
                         _obv_5_ago += _vol if _c_now > _c_prev else (-_vol if _c_now < _c_prev else 0)
                     _live_obv_trend = "DISTRIBUTING" if _obv_val < _obv_5_ago * 0.95 else "ACUMULANDO"
-                    if _live_obv_trend == "DISTRIBUTING" and current_pnl_pct < 0:
+                    if _live_obv_trend == "DISTRIBUTING" and current_pnl_pct < -0.25:
                         should_exit = True
-                        exit_reason = f"🔴 [OBV MONITOR] {sym}: OBV viró a DISTRIBUTING en Fase 1 ({holding_minutes_hb}m, PnL={current_pnl_pct:+.2f}%). Eyección inmediata para proteger capital."
+                        exit_reason = f"🔴 [OBV MONITOR] {sym}: OBV DISTRIBUTING + PnL={current_pnl_pct:+.2f}% < -0.25% tras {holding_minutes_hb}m. Eyección."
             except Exception:
                 pass
 
@@ -1948,12 +1948,12 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
         # ═══════════════════════════════════════════════════════════════════════
         consec_losses = state.get("_consecutive_losses", 0)
         last_loss_time = state.get("_last_loss_time", 0)
-        if consec_losses >= 2:
+        if consec_losses >= 3:
             minutes_since_loss = (time.time() - last_loss_time) / 60.0
-            cooldown_needed = 25.0  # 25 min cooling period after 2 consecutive losses
+            cooldown_needed = 10.0  # 10 min cooling after 3 consecutive losses
             if minutes_since_loss < cooldown_needed:
                 remaining = cooldown_needed - minutes_since_loss
-                print(f"🛑 [CIRCUIT BREAKER RACHA] {consec_losses} pérdidas consecutivas detectadas. Enfriamiento: {remaining:.0f}m restantes. Protegiendo capital.")
+                print(f"🛑 [CIRCUIT BREAKER RACHA] {consec_losses} pérdidas consecutivas. Enfriamiento: {remaining:.0f}m restantes.")
                 return
             else:
                 print(f"✅ [CIRCUIT BREAKER] Cooldown completado ({minutes_since_loss:.0f}m). Reactivando búsqueda A+.")
