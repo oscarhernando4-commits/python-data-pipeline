@@ -68,16 +68,17 @@ def auto_tune():
         wr = best.get("win_rate_pct", 0.0)
         gname = best.get("name", "Genético")
 
-        # 🛡️ GUARDARRAÍLES DE SEGURIDAD INSTITUCIONAL:
-        # Score nunca menor a 78 ni mayor a 90
-        target_score = max(78, min(90, cand_score))
-        # FII nunca menor a 48 ni mayor a 70
-        target_fii = max(48, min(70, cand_fii))
+        # 🛡️ GUARDARRAÍLES — CAP MÁXIMO ESTRICTO:
+        # TODOS los 5 grupos de simulación tienen PnL NEGATIVO (G0: -$132, G1: -$93, G2: -$98, G3: -$21, G4: -$37)
+        # Adaptar la cuenta real desde grupos perdedores es CONTRAPRODUCENTE
+        # CAP: Score NUNCA mayor a 82, FII NUNCA mayor a 62 (no bloquear más que el pipeline base)
+        target_score = max(75, min(82, cand_score))
+        target_fii = max(45, min(62, cand_fii))
 
-        # Si hubo pérdidas recientes en real, elevar defensas automáticamente (+2 score, +5 FII)
-        if consec_losses >= 1 or daily_losses >= 2:
-            target_score = min(90, target_score + 2)
-            target_fii = min(70, target_fii + 5)
+        # Si hubo pérdidas recientes, elevar solo ligeramente
+        if consec_losses >= 2 or daily_losses >= 3:
+            target_score = min(84, target_score + 2)
+            target_fii = min(64, target_fii + 2)
 
         # Suavizado exponencial (50% actual + 50% target) para evitar oscilaciones bruscas
         cur_score = t["group_0"].get("long_score", 82)

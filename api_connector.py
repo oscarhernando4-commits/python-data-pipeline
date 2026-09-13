@@ -2352,8 +2352,12 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             is_at_daily_ceiling = mtf_res.get("is_at_daily_resistance_ceiling", False)
             
             if is_at_daily_ceiling or is_15m_cascade:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Techo Diario o Cascada 15M.")
-                continue
+                if is_ai_top and fii >= 65:
+                    # Gemini IA ya evaluó techos y cascadas en sus Agentes 2 y 6
+                    print(f"  ⚡ [OVERRIDE IA] {cand_sym}: Techo/Cascada detectada PERO Gemini aprobó (FII={fii}). Permitiendo entrada.")
+                else:
+                    print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Techo Diario o Cascada 15M.")
+                    continue
             # Falling knife: excepción si está en suelo fractal profundo con flujo institucional
             if is_active_falling_knife:
                 _range_15m = mtf_res.get("range_position_15m", 0.50)
@@ -2500,9 +2504,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Bids insuficientes ({bid_dom_now:.1f}% < {min_bid_dom:.1f}%).")
                 continue
                 
-            if ob_info.get("bid_vol_usdt", 0.0) > 0 and ob_info.get("bid_vol_usdt", 0.0) < 10000.0:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Muro Bids delgado (${ob_info.get('bid_vol_usdt', 0.0):,.0f} < $10k).")
-                continue
+            if ob_info.get("bid_vol_usdt", 0.0) > 0:
+                _min_bids_usd = 2000.0 if is_ai_top else 3000.0
+                if ob_info.get("bid_vol_usdt", 0.0) < _min_bids_usd:
+                    print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Muro Bids delgado (${ob_info.get('bid_vol_usdt', 0.0):,.0f} < ${_min_bids_usd:,.0f}).")
+                    continue
                 
             vol_1m_now = mtf_res.get("vol_surge_1m", 1.0)
             vol_2m_now = mtf_res.get("vol_surge_2m", 1.0)
