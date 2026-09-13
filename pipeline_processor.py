@@ -959,9 +959,18 @@ def run_infinite_trading_matrix_cycle():
             is_fk_ai = mtf_ai.get("is_falling_knife", False)
             is_dcb_ai = mtf_ai.get("is_dead_cat_bounce", False)
 
-            if is_fk_ai or is_dcb_ai:
+            is_floor_rebound = (
+                mtf_ai.get("is_double_bottom") or
+                mtf_ai.get("is_second_touch_sniper") or
+                mtf_ai.get("is_liquidity_sweep") or
+                mtf_ai.get("is_bullish_divergence") or
+                mtf_ai.get("price_change_24h_pct", 0) > -5.0
+            )
+            if (is_fk_ai or is_dcb_ai) and not (ai_confidence >= 80 and is_floor_rebound):
                 print(f"🛡️ [VETO FALLING KNIFE REAL] Compra en {ai_symbol} VETADA: Activo en caída libre o trampa Dead Cat (Caída 24h: {mtf_ai.get('price_change_24h_pct', 0):+.1f}%).")
                 api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
+            elif (is_fk_ai or is_dcb_ai) and ai_confidence >= 80 and is_floor_rebound:
+                print(f"⚡ [SOBERANÍA IA] {ai_symbol}: Falling Knife bypass por Suelo Confirmado y Confianza Gemini {ai_confidence}% (Caída 24h: {mtf_ai.get('price_change_24h_pct', 0):+.1f}%). Procediendo a evaluación...")
             elif ai_score < 55:
                 print(f"🛡️ [ESCUDO CAPITAL REAL] Compra en {ai_symbol} bloqueada (Score {ai_score} < 55). Solo operamos Setups A+ para dinero real.")
                 api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)

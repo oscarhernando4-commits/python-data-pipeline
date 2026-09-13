@@ -2706,7 +2706,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             print(f"\n💎 ═══════════════════════════════════════════════════════════════════════════════════")
             print(f"🚀 [DICTAMEN & EJECUCIÓN CUÁNTICA SPOT: #{cand_idx}/{total_cands} -> {cand_sym}]")
             print(f"═══════════════════════════════════════════════════════════════════════════════════════")
-            print(f"🧬 Arquetipo ADN: {cand_archetype.get('label')} | SL Inicial: {arch_dna.get('initial_sl_pct', -0.75)}% | Cosecha Fase 2: +0.44%{token_dna_label}")
+            print(f"🧬 Arquetipo ADN: {cand_archetype.get('label')} | SL Inicial: {arch_dna.get('initial_sl_pct', -2.00)}% | Cosecha Fase 2: +0.44%{token_dna_label}")
             print(f"📊 Score MTF: {final_cand_score}/100 | FII Suelo: {fii}/100 | ATR: {atr_15m:.2f}% | Spread: {ob_info.get('spread_pct'):.3f}%")
             print(f"🌌 Canales Fractales: [1M: {range_pos_1m*100:.0f}% | 2M: {range_pos_2m*100:.0f}% | 5M: {range_pos_5m*100:.0f}% | 10M: {range_pos_10m*100:.0f}% | 15M: {range_pos_15m*100:.0f}% | 30M: {range_pos_30m*100:.0f}% | 1H: {range_pos_1h*100:.0f}% | 2H: {range_pos_2h*100:.0f}%]")
             print(f"🌊 Muro Comprador: ${ob_info.get('bid_vol_usdt', 0):,.0f} USDT (Bids={ob_info.get('bid_dominance_pct'):.1f}%) | OBV={mtf_res.get('obv_trend')}")

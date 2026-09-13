@@ -1506,6 +1506,39 @@ def analyze_multi_timeframe_candles(symbol):
             is_liquidity_sweep = True
             is_second_touch_sniper = True
             double_bottom_label = f"🏹 BARRIDO DE LIQUIDEZ Y GIRO EN SUELO 2 (Mecha -{abs(diff_pct):.2f}% | RSI {rsi_low_1:.0f} -> {rsi_low_2:.0f})"
+
+        # 3. Caso C: Triple Suelo en el Piso (3 toques del soporte)
+        if len(lows_1m_recent) >= 18 and not is_double_bottom:
+            seg = len(lows_1m_recent) // 3
+            t1 = min(lows_1m_recent[:seg])
+            t2 = min(lows_1m_recent[seg:2*seg])
+            t3 = min(lows_1m_recent[2*seg:])
+            spread_t = (max(t1, t2, t3) - min(t1, t2, t3)) / min(t1, t2, t3) * 100.0 if min(t1, t2, t3) > 0 else 999.0
+            if spread_t <= 0.65:
+                is_double_bottom = True
+                is_second_touch_sniper = True
+                double_bottom_label = f"👑 TRIPLE SUELO EN PISO (3 Toques a ${min(t1,t2,t3):.4f} | Dispersión {spread_t:.2f}%)"
+                if has_rsi_div:
+                    bullish_rsi_divergence = True
+
+        # 4. Caso D: Doble o Triple Vela de Rechazo Inferior (Velas Martillo / Absorción en el piso)
+        if not is_double_bottom and len(klines_1m) >= 4:
+            recent_4 = klines_1m[-4:]
+            wick_rejections = 0
+            for ck in recent_4:
+                c_open = float(ck[1])
+                c_high = float(ck[2])
+                c_low = float(ck[3])
+                c_close = float(ck[4])
+                c_range = c_high - c_low
+                if c_range > 0:
+                    lower_wick = min(c_open, c_close) - c_low
+                    if (lower_wick / c_range) >= 0.38:
+                        wick_rejections += 1
+            if wick_rejections >= 2 and range_position_1m <= 0.45:
+                is_double_bottom = True
+                is_second_touch_sniper = True
+                double_bottom_label = f"🕯️ {'TRIPLE' if wick_rejections >= 3 else 'DOBLE'} VELA DE RECHAZO EN PISO ({wick_rejections}/4 con mecha absorción)"
             
     elif is_1m_green_ignition or vol_surge_1m >= 1.5:
         double_bottom_label = "🚀 GIRO DIRECTO EN V (Rebote Explosivo)"

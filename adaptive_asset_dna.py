@@ -243,46 +243,42 @@ def calculate_archetype_trailing(
     arch = archetype_dna.get("archetype", "SECTOR_ROTATION")
     emoji = archetype_dna.get("emoji", "🧬")
     label = archetype_dna.get("label", arch)
-    p3_trigger = archetype_dna.get("phase_3_trigger_pct", 1.50)
-    initial_sl = float(archetype_dna.get("initial_sl_pct", -2.50))
 
-    if highest_pnl_pct >= p3_trigger:
-        retention_pct = min(85.0, 70.0 + (highest_pnl_pct * 4.0))
+    # ═══════════════════════════════════════════════════════════════════
+    # SISTEMA CUÁNTICO 6 FASES (0.15% compra + 0.15% venta = 0.30% ida/vuelta)
+    # FASE 1: Margen hasta -2.00% (opera desde el piso)
+    # FASE 2: +0.50% -> SL +0.20%
+    # FASE 3: +0.80% -> SL +0.40%
+    # FASE 4: +1.00% -> SL +0.50%
+    # FASE 5: +1.30% -> Piso +1.00% (= +0.70% neto libre de comisiones)
+    # FASE 6: +2.00%+ -> Trailing 75-85% de la cima
+    # ═══════════════════════════════════════════════════════════════════
+    if highest_pnl_pct >= 2.00:
+        retention_pct = min(85.0, 75.0 + (highest_pnl_pct * 2.5))
         retention_ratio = retention_pct / 100.0
-        sl_pct = max(1.30, round(highest_pnl_pct * retention_ratio, 4))
+        sl_pct = max(1.50, round(highest_pnl_pct * retention_ratio, 4))
+        phase = 6
+        phase_label = f"🚀 F6 RALLY ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Neto +{sl_pct-0.30:.2f}%)"
+    elif highest_pnl_pct >= 1.30:
+        sl_pct = 1.00
+        phase = 5
+        phase_label = f"🏆 F5 META 1% NETO ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +1.00% | Neto +0.70%)"
+    elif highest_pnl_pct >= 1.00:
+        sl_pct = 0.50
+        phase = 4
+        phase_label = f"💎 F4 GANANCIA ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +0.50% | Neto +0.20%)"
+    elif highest_pnl_pct >= 0.80:
+        sl_pct = 0.40
         phase = 3
-        phase_label = f"🚀 FASE 3 RALLY DINÁMICO ({emoji} Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 1.15:
-        # 🏆 META +1% LIBRE DE COMISIONES (1.15% bruto - 0.15% comisiones = +1.00% neto):
-        # Piso asegurado en +1.00% (Ganancia neta libre >= +0.85% asegurada)
-        sl_pct = max(1.00, round(highest_pnl_pct * 0.85, 4))
-        phase = 2
-        phase_label = f"🏆 FASE 2 META 1% CUMPLIDA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.85:
-        # Medio camino de meta: asegurar al menos +0.70% (+0.55% neto)
-        sl_pct = max(0.70, round(highest_pnl_pct * 0.80, 4))
-        phase = 2
-        phase_label = f"⚡ FASE 2 COSECHA ALTA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso Protegido +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.65:
-        # 🎯 FASE 2 COSECHA MEDIA: Cima >= +0.65% -> Piso ceñido a 0.14% de la cima (mínimo +0.50% bruto / +0.35% neto libre)
-        sl_pct = max(0.50, round(highest_pnl_pct - 0.14, 4))
-        phase = 2
-        phase_label = f"🎯 FASE 2 COSECHA MEDIA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
+        phase_label = f"🎯 F3 PROTECCIÓN ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +0.40% | Neto +0.10%)"
     elif highest_pnl_pct >= 0.50:
-        # ⚡ FASE 2 COSECHA RÁPIDA (+0.50% SUPERADO): Asegurar ganancias inmediatas sin permitir retorno a 0.16%
-        # Piso ceñido a 0.12% de la cima (mínimo +0.38% bruto / +0.23% neto libre)
-        sl_pct = max(0.38, round(highest_pnl_pct - 0.12, 4))
+        sl_pct = 0.20
         phase = 2
-        phase_label = f"⚡ FASE 2 COSECHA RÁPIDA ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
-    elif highest_pnl_pct >= 0.38:
-        # 🛡️ ESCUDO BREAK-EVEN LIBRE DE COMISIÓN (0.38% de pico -> Piso +0.16% cubre 0.15% comisión):
-        sl_pct = 0.16
-        phase = 1
-        phase_label = f"🛡️ ESCUDO BREAK-EVEN ({emoji} Cima +{highest_pnl_pct:.2f}% -> Piso +0.16% NETO LIBRE)"
+        phase_label = f"🛡️ F2 BREAKEVEN ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +0.20% | Neto -0.10%)"
     else:
-        sl_pct = max(initial_sl, -0.75)  # SL inicial acotado estrictamente a -0.75%
+        sl_pct = -2.00
         phase = 1
-        phase_label = f"🌱 ZONA DE DESARROLLO ({emoji} Cima +{highest_pnl_pct:.2f}% | SL: {sl_pct:+.2f}%)"
+        phase_label = f"🌱 F1 DESARROLLO ({emoji} Cima +{highest_pnl_pct:.2f}% | SL: -2.00%)"
 
     return sl_pct, phase, phase_label
 
