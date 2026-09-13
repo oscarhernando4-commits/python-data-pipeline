@@ -4,7 +4,7 @@
     "wins": 37,
     "losses": 31,
     "win_rate_pct": 54.41,
-    "total_pnl_usd": 9.979
+    "total_pnl_usd": 9.701
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -966,26 +966,6 @@
       }
     },
     {
-      "timestamp": "2026-09-13 18:51:27",
-      "timestamp_ms": 1789325487373,
-      "account_id": "SIM-G2",
-      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
-      "symbol": "DASHUSDT",
-      "side": "LONG",
-      "entry_price": 54.68,
-      "exit_price": 54.91,
-      "result": "WIN",
-      "pnl_pct": 0.4206,
-      "pnl_usd": 0.3993,
-      "exit_reason": "SL/Floor 0.43% tocado",
-      "source": "SIMULATION",
-      "min_score": 75,
-      "min_fii": 50,
-      "hold_min": 42.0,
-      "notes": "SL/Floor 0.43% tocado",
-      "context": {}
-    },
-    {
       "timestamp": "2026-09-13 18:53:27",
       "timestamp_ms": 1789325607389,
       "account_id": "SIM-G4",
@@ -1563,6 +1543,26 @@
       "min_fii": 50,
       "hold_min": 181.2,
       "notes": "Tiempo max 180min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-13 20:09:51",
+      "timestamp_ms": 1789330191349,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "TRXUSDT",
+      "side": "LONG",
+      "entry_price": 0.3409,
+      "exit_price": 0.3413,
+      "result": "WIN",
+      "pnl_pct": 0.1173,
+      "pnl_usd": 0.1213,
+      "exit_reason": "Tiempo max 360min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 364.5,
+      "notes": "Tiempo max 360min agotado",
       "context": {}
     }
   ],
