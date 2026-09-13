@@ -1216,29 +1216,48 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             atr_pct=atr_pct
         )
     except Exception as e:
-        # Fallback dinámico — CALIBRADO PARA 0.30% COMISIÓN ida+vuelta (0.15% compra + 0.15% venta)
-        # Meta: +1.00% NETO libre de comisiones = necesita +1.30% BRUTO mínimo
+        # ═══════════════════════════════════════════════════════════════════
+        # SISTEMA DE 6 FASES CON SL -2% Y COMISIÓN 0.30% (0.15% compra + 0.15% venta)
+        # Opera desde el PISO (doble/triple vela) → margen amplio para respirar
+        # ═══════════════════════════════════════════════════════════════════
+        
         if highest_pnl_pct >= 2.00:
-            # 🚀 RALLY: Retener 75-85% de la ganancia pico
-            retention_pct = min(85.0, 70.0 + (highest_pnl_pct * 4.0))
+            # 🚀 FASE 6 RALLY: Trailing 75-85% de la cima
+            retention_pct = min(85.0, 75.0 + (highest_pnl_pct * 2.5))
             retention_ratio = retention_pct / 100.0
-            sl_pct = max(1.60, round(highest_pnl_pct * retention_ratio, 4))
-            phase = 3
-            phase_label = f"🚀 FASE 3 RALLY (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Neto +{sl_pct-0.30:.2f}%)"
+            sl_pct = max(1.50, round(highest_pnl_pct * retention_ratio, 4))
+            phase = 6
+            phase_label = f"🚀 F6 RALLY (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Neto +{sl_pct-0.30:.2f}%)"
+        
         elif highest_pnl_pct >= 1.30:
-            # 🏆 META CUMPLIDA: +1.30% bruto = +1.00% neto libre de comisiones
-            sl_pct = max(1.00, round(highest_pnl_pct * 0.78, 4))
-            phase = 2
-            phase_label = f"🏆 META 1% NETO CUMPLIDA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}% | Neto +{sl_pct-0.30:.2f}%)"
+            # 🏆 FASE 5 META: +1.30% → Piso +1.00% (= +0.70% neto)
+            sl_pct = 1.00
+            phase = 5
+            phase_label = f"🏆 F5 META (Cima +{highest_pnl_pct:.2f}% | Piso +1.00% | Neto +0.70%)"
+        
+        elif highest_pnl_pct >= 1.00:
+            # 💎 FASE 4: +1.00% → SL +0.50%
+            sl_pct = 0.50
+            phase = 4
+            phase_label = f"💎 F4 GANANCIA (Cima +{highest_pnl_pct:.2f}% | Piso +0.50% | Neto +0.20%)"
+        
         elif highest_pnl_pct >= 0.80:
-            # 🛡️ BREAK-EVEN REAL: +0.80% bruto = +0.50% neto (cubre comisión + micro-ganancia)
-            sl_pct = max(0.35, round(highest_pnl_pct * 0.50, 4))
-            phase = 1
-            phase_label = f"🛡️ BREAK-EVEN REAL (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}% | Neto +{sl_pct-0.30:.2f}%)"
+            # 🎯 FASE 3: +0.80% → SL +0.40%
+            sl_pct = 0.40
+            phase = 3
+            phase_label = f"🎯 F3 PROTECCIÓN (Cima +{highest_pnl_pct:.2f}% | Piso +0.40% | Neto +0.10%)"
+        
+        elif highest_pnl_pct >= 0.50:
+            # 🛡️ FASE 2: +0.50% → SL +0.20%
+            sl_pct = 0.20
+            phase = 2
+            phase_label = f"🛡️ F2 BREAKEVEN (Cima +{highest_pnl_pct:.2f}% | Piso +0.20% | Neto -0.10%)"
+        
         else:
-            sl_pct = -0.50
+            # 🌱 FASE 1: Margen -2.00% (opera desde el piso, da tiempo para desarrollar)
+            sl_pct = -2.00
             phase = 1
-            phase_label = f"🌱 DESARROLLO (Cima +{highest_pnl_pct:.2f}% | SL: -0.50% | Pérdida máx: -{0.50+0.30:.2f}%)"
+            phase_label = f"🌱 F1 DESARROLLO (Cima +{highest_pnl_pct:.2f}% | SL: -2.00%)"
 
         return sl_pct, phase, phase_label
 
@@ -1342,18 +1361,17 @@ def quick_position_heartbeat():
                         f"Compras Taker: {flow.get('taker_buy_pct', 0):.1f}%)"
                     )
 
-        # 🛑 INVALIDACIÓN TEMPRANA / MICRO-SCRATCH (CORTA-PÉRDIDAS QUIRÚRGICO):
-        # Si un trade no despega en los primeros 2 minutos (holding_minutes_hb >= 2), nunca superó +0.20% de pico,
-        # y cae a <= -0.40% con presión vendedora institucional (compras taker < 48% o dump),
-        # NO esperar al -0.75%: CORTAR DE INMEDIATO con micro-pérdida de -$0.04 USD (fácilmente recuperable en 1 win).
-        if not should_exit and holding_minutes_hb >= 2 and highest_pnl_pct < 0.20 and current_pnl_pct <= -0.30:
+        # 🛑 INVALIDACIÓN TEMPRANA DESACTIVADA — SL ahora es -2.00%
+        # El trade opera desde el PISO y necesita margen amplio para desarrollar
+        # La invalidación solo aplica si lleva +30 min sin superar +0.10% Y PnL < -1.50%
+        if not should_exit and holding_minutes_hb >= 30 and highest_pnl_pct < 0.10 and current_pnl_pct <= -1.50:
             flow_check = get_realtime_order_flow_momentum(sym)
             taker_pct = flow_check.get("taker_buy_pct", 50.0)
-            if taker_pct < 48.0 or flow_check.get("is_exhaustion_or_dump", False):
+            if taker_pct < 40.0 or flow_check.get("is_exhaustion_or_dump", False):
                 should_exit = True
                 exit_reason = (
-                    f"🛑 Invalidación Temprana Micro-Scratch ({current_pnl_pct:+.2f}% en {holding_minutes_hb}m | "
-                    f"Cima apenas +{highest_pnl_pct:.2f}% | Compras Taker: {taker_pct:.1f}% < 48%)"
+                    f"🛑 Invalidación Tardía ({current_pnl_pct:+.2f}% en {holding_minutes_hb}m | "
+                    f"Sin impulso tras 30 min | Taker: {taker_pct:.1f}%)"
                 )
 
 
@@ -1423,17 +1441,17 @@ def quick_position_heartbeat():
                     state["_last_exit_was_btc_shield"] = True
 
 
-        # 🛑 ASIMETRÍA MATEMÁTICA & STOP LOSS INICIAL MÁXIMO -0.75%:
-        # Pérdida acotada estrictamente a -$0.08 USD máximo (menos de la mitad de antes).
-        # Al tocar +0.38%, el Escudo Break-Even asegura la posición a +0.16% (Libre de comisiones).
-        if not should_exit and current_pnl_pct <= -0.75:
+        # 🛑 STOP LOSS INICIAL MÁXIMO -2.00%:
+        # Opera desde el PISO (doble/triple vela) → margen amplio para respirar
+        # Pérdida máxima: -2.00% bruto + 0.30% comisión = -2.30% total = ~$0.24 USD
+        if not should_exit and current_pnl_pct <= -2.00:
             should_exit = True
-            exit_reason = f"🛑 STOP LOSS INICIAL ({current_pnl_pct:+.2f}% <= -0.75%). Cortando pérdida controlada."
+            exit_reason = f"🛑 STOP LOSS -2% ({current_pnl_pct:+.2f}% <= -2.00%). Cortando pérdida máxima."
 
-        # 🔴 OBV IN-POSITION MONITOR (cada ~8 min en Fase 1)
-        # Solo eyecta si PnL < -0.25% Y OBV DISTRIBUTING — no por ruido de spread
-        # QNTUSDT fue eyectado a los 3 min con -0.06% (ruido del spread, NO distribución real)
-        if not should_exit and current_phase == 1 and holding_minutes_hb >= 8 and holding_minutes_hb % 8 == 0:
+        # 🔴 OBV IN-POSITION MONITOR (a las 3 HORAS en Fase 1)
+        # Solo eyecta si PnL < -0.25% Y OBV DISTRIBUTING después de 3 horas
+        # El trade desde el piso necesita TIEMPO para desarrollarse
+        if not should_exit and current_phase == 1 and holding_minutes_hb >= 180:
             try:
                 _kl_obv = get_klines(sym, "15m", 20)
                 if _kl_obv and len(_kl_obv) >= 10:
