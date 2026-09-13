@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13 05:25:22 UTC",
+  "updated_at": "2026-09-13 05:37:25 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -42,6 +42,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "FLOKIUSDT",
+      "total": 175,
+      "wins": 136,
+      "win_rate": 77.7,
+      "net_pnl": 12.7,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ETCUSDT",
       "total": 287,
       "wins": 220,
@@ -55,14 +63,6 @@
       "wins": 73,
       "win_rate": 75.3,
       "net_pnl": 13.96,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "FLOKIUSDT",
-      "total": 155,
-      "wins": 116,
-      "win_rate": 74.8,
-      "net_pnl": 10.46,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -91,18 +91,18 @@
     },
     {
       "symbol": "FILUSDT",
-      "total": 271,
-      "wins": 187,
-      "win_rate": 69.0,
-      "net_pnl": 7.65,
+      "total": 272,
+      "wins": 188,
+      "win_rate": 69.1,
+      "net_pnl": 8.03,
       "tier": "💎 A+ ÉLITE"
     },
     {
       "symbol": "XLMUSDT",
-      "total": 231,
+      "total": 232,
       "wins": 159,
-      "win_rate": 68.8,
-      "net_pnl": 40.72,
+      "win_rate": 68.5,
+      "net_pnl": 40.36,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -156,19 +156,19 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "BONKUSDT",
+      "total": 170,
+      "wins": 61,
+      "win_rate": 35.9,
+      "net_pnl": -7.88,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "SHIBUSDT",
       "total": 174,
       "wins": 62,
       "win_rate": 35.6,
       "net_pnl": 12.65,
-      "tier": "☠️ TÓXICO"
-    },
-    {
-      "symbol": "BONKUSDT",
-      "total": 169,
-      "wins": 60,
-      "win_rate": 35.5,
-      "net_pnl": -8.23,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -213,6 +213,6 @@
     }
   ],
   "global_sim_wr": 57.7,
-  "total_sim_trades": 13237,
+  "total_sim_trades": 13261,
   "total_real_trades": 68
 }
