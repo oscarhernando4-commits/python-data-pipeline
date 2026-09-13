@@ -4,7 +4,7 @@
     "wins": 41,
     "losses": 26,
     "win_rate_pct": 61.19,
-    "total_pnl_usd": 13.0705
+    "total_pnl_usd": 13.6656
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -952,26 +952,6 @@
       "exit_price": 0.007752,
       "result": "WIN",
       "pnl_pct": 0.1421,
-      "pnl_usd": 0.129,
-      "exit_reason": "SL/Floor 0.16% tocado",
-      "source": "SIMULATION",
-      "min_score": 90,
-      "min_fii": 70,
-      "hold_min": 61.3,
-      "notes": "SL/Floor 0.16% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-13 18:41:23",
-      "timestamp_ms": 1789324883903,
-      "account_id": "SIM-G0",
-      "group_name": "💎 ÉLITE ESTRICTO (Score≥90, FII≥70)",
-      "symbol": "VETUSDT",
-      "side": "LONG",
-      "entry_price": 0.007741,
-      "exit_price": 0.007752,
-      "result": "WIN",
-      "pnl_pct": 0.1421,
       "pnl_usd": 0.1325,
       "exit_reason": "SL/Floor 0.16% tocado",
       "source": "SIMULATION",
@@ -1539,6 +1519,26 @@
       "min_fii": 55,
       "hold_min": 184.6,
       "notes": "SL/Floor 0.42% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-13 19:17:48",
+      "timestamp_ms": 1789327068641,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "BNBUSDT",
+      "side": "LONG",
+      "entry_price": 716.16,
+      "exit_price": 721.41,
+      "result": "WIN",
+      "pnl_pct": 0.7331,
+      "pnl_usd": 0.7241,
+      "exit_reason": "SL/Floor 0.74% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 568.5,
+      "notes": "SL/Floor 0.74% tocado",
       "context": {}
     }
   ],
