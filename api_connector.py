@@ -2305,8 +2305,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 _wr_p = _dna_prof.get("win_rate_pct", 0.0)
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por ADN Tóxico en SQLite (WR {_wr_p:.1f}% < 40% histórico). Preservando capital.")
                 continue
-            if arch_dna.get("is_low_volatility_zombie", False):
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por ATR insuficiente ({atr_15m:.2f}% < 0.35% o Mega-Cap lenta).")
+            if arch_dna.get("is_low_volatility_zombie", False) or atr_15m < 0.80:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por ATR insuficiente ({atr_15m:.2f}% < 0.80%). Necesita ATR >= 0.80% para alcanzar +1.30%.")
                 continue
                 
             tf_1m = tf_align.get("1m", "BEARISH")
@@ -2506,6 +2506,25 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 if mtf_res.get("rsi_2m", 50.0) > rsi_hard_cap or mtf_res.get("rsi_1m", 50.0) > rsi_hard_cap:
                     print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Entrada Tardía (RSI 2M={mtf_res.get('rsi_2m'):.1f} > {rsi_hard_cap:.0f}).")
                     continue
+
+            # 🔄 CONFIRMACIÓN DE REBOTE: No comprar EN el suelo, comprar cuando YA REBOTÓ
+            # La última vela de 1M debe ser VERDE (compradores activos) para confirmar que el piso aguantó
+            try:
+                _kl_bounce = get_klines(cand_sym, "1m", 3)
+                if _kl_bounce and len(_kl_bounce) >= 2:
+                    _last_open = float(_kl_bounce[-1][1])
+                    _last_close = float(_kl_bounce[-1][4])
+                    _prev_close = float(_kl_bounce[-2][4])
+                    _is_green = _last_close > _last_open
+                    _is_rising = _last_close > _prev_close
+                    if not _is_green and not _is_rising:
+                        if not (is_ai_top and fii >= 70):
+                            print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Sin confirmación de rebote (última vela 1M roja y descendente). Esperando rebote.")
+                            continue
+                        else:
+                            print(f"  ⚡ [OVERRIDE IA] {cand_sym}: Vela roja PERO Gemini aprobó con FII={fii}. Entrando por soberanía IA.")
+            except Exception:
+                pass
                 
             # 7. Orderbook Depth & Micro-Surge Checks
             ob_info = orderbook_analyzer.fetch_orderbook_depth(cand_sym, limit=20)
