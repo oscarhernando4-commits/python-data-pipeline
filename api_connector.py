@@ -2337,9 +2337,19 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             is_15m_cascade = mtf_res.get("is_15m_red_cascade", False)
             is_at_daily_ceiling = mtf_res.get("is_at_daily_resistance_ceiling", False)
             
-            if is_at_daily_ceiling or is_15m_cascade or is_active_falling_knife:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Techo/Cascada/Cuchillo.")
+            if is_at_daily_ceiling or is_15m_cascade:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Techo Diario o Cascada 15M.")
                 continue
+            # Falling knife: excepción si está en suelo fractal profundo con flujo institucional
+            if is_active_falling_knife:
+                _range_15m = mtf_res.get("range_position_15m", 0.50)
+                if _range_15m <= 0.20 and fii >= 60:
+                    print(f"  ⚡ [FALLING KNIFE → SUELO FRACTAL] {cand_sym}: Canal 15M={_range_15m*100:.0f}% FII={fii}. Caída ES el suelo — comprando el rebote.")
+                elif is_ai_top:
+                    print(f"  ⚡ [FALLING KNIFE → IA APRUEBA] {cand_sym}: Gemini validó giro. Permitiendo entrada.")
+                else:
+                    print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Cuchillo Cayendo sin suelo fractal.")
+                    continue
                 
             # 🛑 VETO ABSOLUTO 1: OBV EN DISTRIBUCIÓN
             # Si el dinero institucional está saliendo (DISTRIBUTING), PROHIBIDO COMPRAR con dinero real.
@@ -2449,14 +2459,14 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 pass
 
 
-            if (mtf_res.get("rsi_2m", 50.0) > 56.0 or mtf_res.get("rsi_1m", 50.0) > 56.0) and not (is_spring or is_wave2):
-                # Si la IA aprobó el activo (is_ai_top) o hay ignición confirmada, permitir RSI hasta 68.0 en timeframe corto
+            if (mtf_res.get("rsi_2m", 50.0) > 65.0 or mtf_res.get("rsi_1m", 50.0) > 65.0) and not (is_spring or is_wave2):
+                # Si la IA aprobó el activo (is_ai_top) o hay ignición confirmada, permitir RSI hasta 72.0 en timeframe corto
                 if is_ai_top or has_floor_turnaround:
-                    rsi_hard_cap = 68.0
+                    rsi_hard_cap = 72.0
                 elif vol_1m_now >= 1.2 or fii >= 45 or has_dual_sub_minute_ignition:
-                    rsi_hard_cap = 62.0
+                    rsi_hard_cap = 68.0
                 else:
-                    rsi_hard_cap = 56.0
+                    rsi_hard_cap = 65.0
                 if mtf_res.get("rsi_2m", 50.0) > rsi_hard_cap or mtf_res.get("rsi_1m", 50.0) > rsi_hard_cap:
                     print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Entrada Tardía (RSI 2M={mtf_res.get('rsi_2m'):.1f} > {rsi_hard_cap:.0f}).")
                     continue
