@@ -1,14 +1,13 @@
 {
   "stats": {
-    "total_trades": 59,
+    "total_trades": 60,
     "wins": 28,
-    "losses": 31,
-    "win_rate_pct": 47.46,
-    "total_pnl_usd": -4.1645
+    "losses": 32,
+    "win_rate_pct": 46.67,
+    "total_pnl_usd": -4.1756
   },
   "learned_rules": {
     "blocked_patterns": [
-      "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on POLUSDT)",
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ATOMUSDT)",
       "BLOCK LONG when OBV:DISTRIBUTING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on MORPHOUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on NEARUSDT)",
@@ -27,7 +26,8 @@
       "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on INJUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on PUMPUSDT)",
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on ZROUSDT)",
-      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on UNIUSDT)"
+      "BLOCK LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on UNIUSDT)",
+      "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on WIFUSDT)"
     ],
     "boosted_patterns": [
       "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:DISTRIBUTING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ENAUSDT)",
@@ -1348,6 +1348,30 @@
       "hold_min": 81.9,
       "notes": "SL/Floor 2.16% tocado",
       "context": {}
+    },
+    {
+      "timestamp": "2026-09-13 04:22:50",
+      "timestamp_ms": 1789273370849,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "WIFUSDT",
+      "side": "LONG",
+      "entry_price": 0.1894,
+      "exit_price": 0.1892,
+      "pnl_usd": -0.0111,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🔴 [OBV MONITOR] WIFUSDT: OBV viró a DISTRIBUTING en Fase 1 (9m, PnL=-0.11%). Eyección inmediata para proteger capital. (Fase 1, PnL: -0.11%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 35.4,
+        "atr_pct_15m": 0.35,
+        "vol_surge": 0.0,
+        "vol_surge_1m": 1.0,
+        "fii_score": 75,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -2947,6 +2971,30 @@
         "vol_surge": 1.74,
         "vol_surge_1m": 3.09,
         "fii_score": 80,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-09-13 04:22:50",
+      "timestamp_ms": 1789273370849,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "WIFUSDT",
+      "side": "LONG",
+      "entry_price": 0.1894,
+      "exit_price": 0.1892,
+      "pnl_usd": -0.0111,
+      "result": "LOSS",
+      "notes": "Real Money Trade exited via 🔴 [OBV MONITOR] WIFUSDT: OBV viró a DISTRIBUTING en Fase 1 (9m, PnL=-0.11%). Eyección inmediata para proteger capital. (Fase 1, PnL: -0.11%)",
+      "context": {
+        "score": 100,
+        "rsi_15m": 35.4,
+        "atr_pct_15m": 0.35,
+        "vol_surge": 0.0,
+        "vol_surge_1m": 1.0,
+        "fii_score": 75,
         "obv_trend": "ACCUMULATING",
         "macro_trend_4h": "NEUTRAL"
       }
