@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13 23:30:05 UTC",
+  "updated_at": "2026-09-13 23:50:03 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -50,19 +50,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "ETCUSDT",
-      "total": 294,
-      "wins": 225,
-      "win_rate": 76.5,
-      "net_pnl": 90.5,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "AAVEUSDT",
       "total": 111,
       "wins": 81,
       "win_rate": 73.0,
       "net_pnl": 9.67,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "ETCUSDT",
+      "total": 309,
+      "wins": 225,
+      "win_rate": 72.8,
+      "net_pnl": 56.95,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -181,10 +181,18 @@
     },
     {
       "symbol": "PYTHUSDT",
-      "total": 403,
-      "wins": 152,
-      "win_rate": 37.7,
-      "net_pnl": -325.28,
+      "total": 404,
+      "wins": 153,
+      "win_rate": 37.9,
+      "net_pnl": -324.99,
+      "tier": "☠️ TÓXICO"
+    },
+    {
+      "symbol": "SEIUSDT",
+      "total": 116,
+      "wins": 44,
+      "win_rate": 37.9,
+      "net_pnl": -58.07,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -196,14 +204,6 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "SHIBUSDT",
-      "total": 181,
-      "wins": 64,
-      "win_rate": 35.4,
-      "net_pnl": 8.61,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "SUNUSDT",
       "total": 188,
       "wins": 64,
@@ -212,15 +212,23 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "SHIBUSDT",
+      "total": 196,
+      "wins": 64,
+      "win_rate": 32.7,
+      "net_pnl": -22.76,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "STXUSDT",
-      "total": 383,
+      "total": 398,
       "wins": 82,
-      "win_rate": 21.4,
-      "net_pnl": -32.59,
+      "win_rate": 20.6,
+      "net_pnl": -70.49,
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 59.5,
-  "total_sim_trades": 14437,
+  "global_sim_wr": 59.1,
+  "total_sim_trades": 14532,
   "total_real_trades": 77
 }
