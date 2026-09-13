@@ -1216,29 +1216,29 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             atr_pct=atr_pct
         )
     except Exception as e:
-        # Fallback dinámico proporcional multi-nivel
-        if highest_pnl_pct >= 1.60:
+        # Fallback dinámico — CALIBRADO PARA 0.30% COMISIÓN ida+vuelta (0.15% compra + 0.15% venta)
+        # Meta: +1.00% NETO libre de comisiones = necesita +1.30% BRUTO mínimo
+        if highest_pnl_pct >= 2.00:
+            # 🚀 RALLY: Retener 75-85% de la ganancia pico
             retention_pct = min(85.0, 70.0 + (highest_pnl_pct * 4.0))
             retention_ratio = retention_pct / 100.0
-            sl_pct = max(1.30, round(highest_pnl_pct * retention_ratio, 4))
+            sl_pct = max(1.60, round(highest_pnl_pct * retention_ratio, 4))
             phase = 3
-            phase_label = f"🚀 FASE 3 RALLY DINÁMICO (Cima +{highest_pnl_pct:.2f}% | Retención {retention_pct:.1f}% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 1.00:
-            sl_pct = max(0.80, round(highest_pnl_pct * 0.80, 4))
+            phase_label = f"🚀 FASE 3 RALLY (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Neto +{sl_pct-0.30:.2f}%)"
+        elif highest_pnl_pct >= 1.30:
+            # 🏆 META CUMPLIDA: +1.30% bruto = +1.00% neto libre de comisiones
+            sl_pct = max(1.00, round(highest_pnl_pct * 0.78, 4))
             phase = 2
-            phase_label = f"🏆 FASE 2 META 1% CUMPLIDA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
+            phase_label = f"🏆 META 1% NETO CUMPLIDA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}% | Neto +{sl_pct-0.30:.2f}%)"
         elif highest_pnl_pct >= 0.80:
-            sl_pct = max(0.55, round(highest_pnl_pct * 0.70, 4))
-            phase = 2
-            phase_label = f"🎯 FASE 2 COSECHA (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}%)"
-        elif highest_pnl_pct >= 0.55:
-            sl_pct = 0.20
+            # 🛡️ BREAK-EVEN REAL: +0.80% bruto = +0.50% neto (cubre comisión + micro-ganancia)
+            sl_pct = max(0.35, round(highest_pnl_pct * 0.50, 4))
             phase = 1
-            phase_label = f"🛡️ ESCUDO BREAK-EVEN (Cima +{highest_pnl_pct:.2f}% -> Piso +0.20% NETO)"
+            phase_label = f"🛡️ BREAK-EVEN REAL (Cima +{highest_pnl_pct:.2f}% -> Piso +{sl_pct:.2f}% | Neto +{sl_pct-0.30:.2f}%)"
         else:
             sl_pct = -0.50
             phase = 1
-            phase_label = f"🌱 ZONA DE DESARROLLO (Cima +{highest_pnl_pct:.2f}% | SL: -0.50%)"
+            phase_label = f"🌱 DESARROLLO (Cima +{highest_pnl_pct:.2f}% | SL: -0.50% | Pérdida máx: -{0.50+0.30:.2f}%)"
 
         return sl_pct, phase, phase_label
 
@@ -1322,18 +1322,24 @@ def quick_position_heartbeat():
         #    → VENTA para embolsar +0.25% a +0.80% neto libre de comisiones.
         # 2. Si la cima superó +1.00% y retrocede más de 0.20% desde la cima:
         #    → VENTA para blindar la meta diaria.
-        if not should_exit and highest_pnl_pct >= 0.60:
-            allowed_retrace = 0.15 if highest_pnl_pct < 1.00 else 0.20
-            if current_pnl_pct <= (highest_pnl_pct - allowed_retrace) or current_pnl_pct <= 0.45:
+        # ⚡ COSECHA CON COMISIÓN 0.30% CALCULADA:
+        # +1.30% bruto - 0.30% comisión = +1.00% NETO = META DIARIA en 1 trade
+        # Retroceso permitido: 0.25% desde la cima para dar espacio al momentum
+        # Piso mínimo: +0.80% bruto (= +0.50% neto, cubre comisión + ganancia real)
+        if not should_exit and highest_pnl_pct >= 1.30:
+            allowed_retrace = 0.25 if highest_pnl_pct < 2.00 else 0.35
+            if current_pnl_pct <= (highest_pnl_pct - allowed_retrace) or current_pnl_pct <= 0.80:
                 should_exit = True
-                exit_reason = f"⚡ Cosecha Rápida Ejecutada ({current_pnl_pct:+.2f}% | Cima fue +{highest_pnl_pct:.2f}%)"
-            elif current_pnl_pct >= 0.90:
+                net_pnl = current_pnl_pct - 0.30
+                exit_reason = f"🏆 Cosecha Meta 1% ({current_pnl_pct:+.2f}% bruto | NETO: +{net_pnl:.2f}% | Cima +{highest_pnl_pct:.2f}%)"
+            elif current_pnl_pct >= 1.50:
                 flow = get_realtime_order_flow_momentum(sym)
                 if flow.get("is_exhaustion_or_dump", False):
                     should_exit = True
+                    net_pnl = current_pnl_pct - 0.30
                     exit_reason = (
-                        f"⚡ Cosecha Dinámica Dump Extremo ({current_pnl_pct:+.2f}% libre | "
-                        f"Compras Taker: {flow.get('taker_buy_pct', 0):.1f}%, Bids: {flow.get('bid_dominance_pct', 0):.1f}%)"
+                        f"🏆 Cosecha Dump Extremo ({current_pnl_pct:+.2f}% bruto | NETO: +{net_pnl:.2f}% | "
+                        f"Compras Taker: {flow.get('taker_buy_pct', 0):.1f}%)"
                     )
 
         # 🛑 INVALIDACIÓN TEMPRANA / MICRO-SCRATCH (CORTA-PÉRDIDAS QUIRÚRGICO):
@@ -1985,13 +1991,21 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"⚠️ [ALERTA DIARIA] Pérdida acumulada hoy: ${daily_pnl:.3f}. Cerca del límite diario. Modo ultra-selectivo activado.")
 
             # 🏆 CANDADO DE META DIARIA CUMPLIDA (≥ +1.0% NETO LIBRE DE COMISIONES)
-            # En cuanto se alcanza el +1.0% neto del capital (+$0.12 USD), se blinda la ganancia
-            # para no devolver nada al mercado y asegurar que el día cierre en positivo.
+            # Comisión = 0.15% compra + 0.15% venta = 0.30% por trade
+            # Meta: PnL bruto >= 1.30% del capital (1.00% neto + 0.30% comisión ya deducida en PnL)
             _cur_bal = state.get("current_balance_usd", 12.0)
-            _target_goal_usd = round(_cur_bal * 0.01, 4)
+            _target_goal_usd = round(_cur_bal * 0.01, 4)  # 1% del balance
             if daily_pnl >= _target_goal_usd:
                 print(f"🏆 [META DIARIA CUMPLIDA] PnL hoy: +${daily_pnl:.4f} USD >= +${_target_goal_usd:.4f} USD (≥ +1.0% neto libre de comisiones).")
-                print(f"   Ganancia diaria blindada. Capital protegido hasta el próximo día UTC para garantizar el +1% diario.")
+                print(f"   Ganancia diaria blindada. Capital protegido hasta el próximo día UTC.")
+                return
+
+            # 🛑 LÍMITE MÁXIMO DE TRADES DIARIOS: 3 trades/día
+            # Ayer: 11 trades × 0.30% comisión = 3.3% del balance perdido solo en comisiones
+            # Con max 3 trades: 0.90% máximo en comisiones → preserva capital
+            _daily_trades = state.get("daily_wins", 0) + state.get("daily_losses", 0)
+            if _daily_trades >= 3:
+                print(f"🛑 [LÍMITE TRADES DIARIOS] Ya se ejecutaron {_daily_trades}/3 trades hoy (PnL: ${daily_pnl:+.4f}). Máximo 3 trades/día para minimizar comisiones.")
                 return
         except Exception:
             pass
@@ -2363,30 +2377,30 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             dna_tier = arch_dna.get("dna_tier", "BALANCED")
             is_dna_elite = (dna_tier == "🌟 ÉLITE" or arch_dna.get("archetype") in ["BLUE_CHIP_CORE", "SECTOR_ROTATION"])
 
-            # 💎 VETO 2: FII INSTITUCIONAL DINÁMICO
-            min_fii_req = 50 if (is_ai_top or is_dna_elite) else 60
+            # 💎 VETO 2: FII INSTITUCIONAL — Solo trades con flujo institucional FUERTE
+            # Con max 3 trades/día, cada entrada debe ser premium
+            min_fii_req = 60 if (is_ai_top or is_dna_elite) else 65
             if fii < min_fii_req:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO: FII={fii} < {min_fii_req}. Flujo institucional insuficiente para dinero real.")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO: FII={fii} < {min_fii_req}. Flujo institucional insuficiente.")
                 continue
 
-            # 💎 VETO 3: SCORE MÍNIMO DINÁMICO
-            min_score_req = 70 if is_ai_top else 85
+            # 💎 VETO 3: SCORE MÍNIMO — Solo A+ élite
+            min_score_req = 80 if is_ai_top else 88
             if cand_score < min_score_req:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO: Score={cand_score} < {min_score_req}. Solo candidatos A+ Élite autorizados.")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO: Score={cand_score} < {min_score_req}. Solo candidatos élite autorizados.")
                 continue
 
-            # 💎 VETO 4: VOLUMEN ACTIVO 1M DINÁMICO SEGÚN ADN
-            # En suelos fractales y giros en V (ej. WLD, ENA, ETC), el volumen 1M comprime antes de estallar (0.25x - 0.48x).
+            # 💎 VETO 4: VOLUMEN ACTIVO — Impulso real obligatorio
             vol_1m_check = mtf_res.get("vol_surge_1m", 1.0)
             if is_ai_top:
-                min_vol_1m = 0.25 if (is_dna_elite or fii >= 55 or has_floor_turnaround) else 0.35
+                min_vol_1m = 0.40 if (is_dna_elite or fii >= 65 or has_floor_turnaround) else 0.50
             else:
-                min_vol_1m = 0.50
+                min_vol_1m = 0.60
 
             if vol_1m_check < min_vol_1m:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO VOLUMEN: Vol 1M={vol_1m_check:.2f}x < {min_vol_1m:.2f}x. Sin impulso de volumen.")
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO VOLUMEN: Vol 1M={vol_1m_check:.2f}x < {min_vol_1m:.2f}x. Sin impulso.")
                 continue
-            elif is_ai_top and vol_1m_check < 0.50:
+            elif is_ai_top and vol_1m_check < 0.60:
                 print(f"  ⚡ [ADN ADAPTATIVO: VOLUMEN APROBADO] {cand_sym} Vol 1M={vol_1m_check:.2f}x >= {min_vol_1m:.2f}x para {arch_dna.get('label')} (FII={fii} | IA Aprobado).")
                 
             range_pos_1h = mtf_res.get("range_position_1h", 0.50)
