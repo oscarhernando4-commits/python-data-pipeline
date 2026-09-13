@@ -4,7 +4,7 @@
     "wins": 28,
     "losses": 31,
     "win_rate_pct": 47.46,
-    "total_pnl_usd": -5.4917
+    "total_pnl_usd": -4.1645
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -750,26 +750,6 @@
       }
     },
     {
-      "timestamp": "2026-09-13 02:57:19",
-      "timestamp_ms": 1789268239038,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "TRUMPUSDT",
-      "side": "LONG",
-      "entry_price": 1.982,
-      "exit_price": 1.987,
-      "result": "WIN",
-      "pnl_pct": 0.2523,
-      "pnl_usd": 0.2598,
-      "exit_reason": "SL/Floor 0.38% tocado",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 46.0,
-      "notes": "SL/Floor 0.38% tocado",
-      "context": {}
-    },
-    {
       "timestamp": "2026-09-13 02:59:18",
       "timestamp_ms": 1789268358888,
       "account_id": "SIM-G1",
@@ -1347,6 +1327,26 @@
       "min_fii": 55,
       "hold_min": 481.9,
       "notes": "Tiempo max 480min agotado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-13 03:59:16",
+      "timestamp_ms": 1789271956760,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "VETUSDT",
+      "side": "LONG",
+      "entry_price": 0.007588,
+      "exit_price": 0.007717,
+      "result": "WIN",
+      "pnl_pct": 1.7001,
+      "pnl_usd": 1.587,
+      "exit_reason": "SL/Floor 2.16% tocado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 81.9,
+      "notes": "SL/Floor 2.16% tocado",
       "context": {}
     }
   ],
