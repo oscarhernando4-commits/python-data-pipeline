@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 70,
-    "wins": 27,
-    "losses": 43,
-    "win_rate_pct": 38.57,
-    "total_pnl_usd": -33.9236
+    "wins": 26,
+    "losses": 44,
+    "win_rate_pct": 37.14,
+    "total_pnl_usd": -35.1779
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -1020,26 +1020,6 @@
       "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
       "symbol": "HBARUSDT",
       "side": "LONG",
-      "entry_price": 0.07656,
-      "exit_price": 0.07682,
-      "result": "WIN",
-      "pnl_pct": 0.3396,
-      "pnl_usd": 0.3493,
-      "exit_reason": "SL/Floor 0.48% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 81.8,
-      "notes": "SL/Floor 0.48% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-14 11:37:35",
-      "timestamp_ms": 1789385855085,
-      "account_id": "SIM-G3",
-      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
-      "symbol": "HBARUSDT",
-      "side": "LONG",
       "entry_price": 0.07657,
       "exit_price": 0.07682,
       "result": "WIN",
@@ -1611,6 +1591,26 @@
       "min_fii": 55,
       "hold_min": 329.8,
       "notes": "SL/Floor -3.50% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-14 11:59:32",
+      "timestamp_ms": 1789387172261,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "VIRTUALUSDT",
+      "side": "LONG",
+      "entry_price": 0.6211,
+      "exit_price": 0.6155,
+      "result": "LOSS",
+      "pnl_pct": -0.9016,
+      "pnl_usd": -0.905,
+      "exit_reason": "Tiempo max 180min agotado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 181.7,
+      "notes": "Tiempo max 180min agotado",
       "context": {}
     }
   ],
