@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14 22:27:40 UTC",
+  "updated_at": "2026-09-14 22:37:41 UTC",
   "elite_tokens": [
     {
       "symbol": "AVAXUSDT",
@@ -114,19 +114,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "NEARUSDT",
-      "total": 287,
-      "wins": 214,
-      "win_rate": 74.6,
-      "net_pnl": 69.86,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "UNIUSDT",
       "total": 380,
       "wins": 283,
       "win_rate": 74.5,
       "net_pnl": 55.84,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "NEARUSDT",
+      "total": 288,
+      "wins": 214,
+      "win_rate": 74.3,
+      "net_pnl": 69.78,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -276,6 +276,14 @@
   ],
   "blacklisted_tokens": [
     {
+      "symbol": "POLUSDT",
+      "total": 306,
+      "wins": 121,
+      "win_rate": 39.5,
+      "net_pnl": -74.12,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "STXUSDT",
       "total": 505,
       "wins": 166,
@@ -301,6 +309,6 @@
     }
   ],
   "global_sim_wr": 65.7,
-  "total_sim_trades": 24536,
+  "total_sim_trades": 24559,
   "total_real_trades": 78
 }
