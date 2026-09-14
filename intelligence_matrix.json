@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14 08:23:56 UTC",
+  "updated_at": "2026-09-14 08:39:56 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -131,10 +131,10 @@
     },
     {
       "symbol": "SKYUSDT",
-      "total": 205,
-      "wins": 142,
-      "win_rate": 69.3,
-      "net_pnl": 11.42,
+      "total": 206,
+      "wins": 143,
+      "win_rate": 69.4,
+      "net_pnl": 11.52,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -180,14 +180,6 @@
   ],
   "blacklisted_tokens": [
     {
-      "symbol": "POLUSDT",
-      "total": 82,
-      "wins": 32,
-      "win_rate": 39.0,
-      "net_pnl": -14.57,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "SHIBUSDT",
       "total": 224,
       "wins": 69,
@@ -196,11 +188,11 @@
       "tier": "☠️ TÓXICO"
     },
     {
-      "symbol": "SUNUSDT",
-      "total": 218,
-      "wins": 64,
-      "win_rate": 29.4,
-      "net_pnl": -49.3,
+      "symbol": "POLUSDT",
+      "total": 108,
+      "wins": 32,
+      "win_rate": 29.6,
+      "net_pnl": -51.15,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -212,6 +204,14 @@
       "tier": "☠️ TÓXICO"
     },
     {
+      "symbol": "SUNUSDT",
+      "total": 243,
+      "wins": 64,
+      "win_rate": 26.3,
+      "net_pnl": -62.47,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "STXUSDT",
       "total": 443,
       "wins": 105,
@@ -220,7 +220,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 60.1,
-  "total_sim_trades": 16620,
+  "global_sim_wr": 59.8,
+  "total_sim_trades": 16699,
   "total_real_trades": 78
 }
