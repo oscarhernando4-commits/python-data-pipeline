@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14 03:46:25 UTC",
+  "updated_at": "2026-09-14 04:06:06 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -74,6 +74,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "TIAUSDT",
+      "total": 181,
+      "wins": 129,
+      "win_rate": 71.3,
+      "net_pnl": 27.96,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ARBUSDT",
       "total": 178,
       "wins": 127,
@@ -87,14 +95,6 @@
       "wins": 479,
       "win_rate": 71.1,
       "net_pnl": 105.52,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "TIAUSDT",
-      "total": 180,
-      "wins": 128,
-      "win_rate": 71.1,
-      "net_pnl": 26.02,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -180,14 +180,6 @@
   ],
   "blacklisted_tokens": [
     {
-      "symbol": "ONDOUSDT",
-      "total": 158,
-      "wins": 62,
-      "win_rate": 39.2,
-      "net_pnl": -44.07,
-      "tier": "☠️ TÓXICO"
-    },
-    {
       "symbol": "SEIUSDT",
       "total": 118,
       "wins": 46,
@@ -261,6 +253,6 @@
     }
   ],
   "global_sim_wr": 58.3,
-  "total_sim_trades": 15377,
+  "total_sim_trades": 15392,
   "total_real_trades": 78
 }
