@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-14 10:07:48 UTC",
+  "updated_at": "2026-09-14 10:21:37 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -75,10 +75,10 @@
     },
     {
       "symbol": "ETCUSDT",
-      "total": 341,
-      "wins": 250,
-      "win_rate": 73.3,
-      "net_pnl": 67.38,
+      "total": 356,
+      "wins": 265,
+      "win_rate": 74.4,
+      "net_pnl": 69.37,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -154,6 +154,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "FILUSDT",
+      "total": 286,
+      "wins": 193,
+      "win_rate": 67.5,
+      "net_pnl": 9.78,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "TIAUSDT",
       "total": 216,
       "wins": 145,
@@ -162,19 +170,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "FILUSDT",
-      "total": 281,
-      "wins": 188,
-      "win_rate": 66.9,
-      "net_pnl": 4.5,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "CAKEUSDT",
       "total": 240,
       "wins": 160,
       "win_rate": 66.7,
       "net_pnl": 71.61,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "FLOKIUSDT",
+      "total": 230,
+      "wins": 152,
+      "win_rate": 66.1,
+      "net_pnl": 16.44,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -188,11 +196,19 @@
   ],
   "blacklisted_tokens": [
     {
+      "symbol": "LTCUSDT",
+      "total": 213,
+      "wins": 85,
+      "win_rate": 39.9,
+      "net_pnl": -3020.11,
+      "tier": "☠️ TÓXICO"
+    },
+    {
       "symbol": "SHIBUSDT",
-      "total": 238,
-      "wins": 83,
-      "win_rate": 34.9,
-      "net_pnl": -26.26,
+      "total": 239,
+      "wins": 84,
+      "win_rate": 35.1,
+      "net_pnl": -25.87,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -228,7 +244,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 59.6,
-  "total_sim_trades": 17549,
+  "global_sim_wr": 59.7,
+  "total_sim_trades": 17623,
   "total_real_trades": 78
 }
