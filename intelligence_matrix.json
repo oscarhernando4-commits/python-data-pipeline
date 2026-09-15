@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15 23:13:47 UTC",
+  "updated_at": "2026-09-15 23:24:34 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -98,6 +98,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "CRVUSDT",
+      "total": 556,
+      "wins": 398,
+      "win_rate": 71.6,
+      "net_pnl": 28.24,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "XLMUSDT",
       "total": 423,
       "wins": 303,
@@ -106,11 +114,11 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "CRVUSDT",
-      "total": 553,
-      "wins": 395,
+      "symbol": "TRUMPUSDT",
+      "total": 426,
+      "wins": 304,
       "win_rate": 71.4,
-      "net_pnl": 24.62,
+      "net_pnl": 5.82,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -122,19 +130,11 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "TRUMPUSDT",
-      "total": 423,
-      "wins": 301,
-      "win_rate": 71.2,
-      "net_pnl": 2.25,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "NEARUSDT",
-      "total": 379,
-      "wins": 269,
-      "win_rate": 71.0,
-      "net_pnl": 14.59,
+      "total": 380,
+      "wins": 270,
+      "win_rate": 71.1,
+      "net_pnl": 15.0,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -147,10 +147,10 @@
     },
     {
       "symbol": "ZECUSDT",
-      "total": 510,
-      "wins": 358,
-      "win_rate": 70.2,
-      "net_pnl": 27.56,
+      "total": 512,
+      "wins": 359,
+      "win_rate": 70.1,
+      "net_pnl": 27.7,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -173,10 +173,10 @@
   "blacklisted_tokens": [
     {
       "symbol": "STXUSDT",
-      "total": 577,
-      "wins": 181,
-      "win_rate": 31.4,
-      "net_pnl": -230.07,
+      "total": 580,
+      "wins": 184,
+      "win_rate": 31.7,
+      "net_pnl": -228.56,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -189,6 +189,6 @@
     }
   ],
   "global_sim_wr": 61.8,
-  "total_sim_trades": 32132,
+  "total_sim_trades": 32145,
   "total_real_trades": 83
 }
