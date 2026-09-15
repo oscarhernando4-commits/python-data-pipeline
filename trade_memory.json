@@ -1,10 +1,10 @@
 {
   "stats": {
-    "total_trades": 73,
-    "wins": 21,
+    "total_trades": 74,
+    "wins": 22,
     "losses": 52,
-    "win_rate_pct": 28.77,
-    "total_pnl_usd": -15.8493
+    "win_rate_pct": 29.73,
+    "total_pnl_usd": -15.8295
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -30,7 +30,6 @@
       "BLOCK LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Lost on AEROUSDT)"
     ],
     "boosted_patterns": [
-      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEXOUSDT)",
       "BOOST LONG when OBV:DISTRIBUTING + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on ETHFIUSDT)",
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on AAVEUSDT)",
       "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on XRPUSDT)",
@@ -49,7 +48,8 @@
       "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:Zombie(<0.40%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on FETUSDT)",
       "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on NEARUSDT)",
       "BOOST LONG when Vol1M:Explosive(>=2.0x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on IMXUSDT)",
-      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on CRVUSDT)"
+      "BOOST LONG when Vol1M:Dead(<0.70x) + OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:30-40(Weak) + Score:70+(Bullish) + Trend:NEUTRAL (Won on CRVUSDT)",
+      "BOOST LONG when OBV:ACCUMULATING + FII:Institutional(>=60) + ATR:HighBeta(>=0.45%) + RSI:40-60(Neutral) + Score:70+(Bullish) + Trend:NEUTRAL (Won on SKYUSDT)"
     ]
   },
   "history": [
@@ -1684,6 +1684,30 @@
       "hold_min": 192.5,
       "notes": "Tiempo max 180min agotado",
       "context": {}
+    },
+    {
+      "timestamp": "2026-09-15 12:59:18",
+      "timestamp_ms": 1789477158169,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "SKYUSDT",
+      "side": "LONG",
+      "entry_price": 0.06224,
+      "exit_price": 0.06236,
+      "pnl_usd": 0.0198,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.19% <= +0.20%) (Fase 2, PnL: +0.19%)",
+      "context": {
+        "score": 80,
+        "rsi_15m": 50.0,
+        "atr_pct_15m": 0.45,
+        "vol_surge": 1.0,
+        "vol_surge_1m": 1.0,
+        "fii_score": 60,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
     }
   ],
   "real_history": [
@@ -3612,6 +3636,30 @@
       "pnl_usd": -0.2102,
       "result": "LOSS",
       "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (-2.00% <= -2.00%) (Fase 1, PnL: -2.00%)",
+      "context": {
+        "score": 80,
+        "rsi_15m": 50.0,
+        "atr_pct_15m": 0.45,
+        "vol_surge": 1.0,
+        "vol_surge_1m": 1.0,
+        "fii_score": 60,
+        "obv_trend": "ACCUMULATING",
+        "macro_trend_4h": "NEUTRAL"
+      }
+    },
+    {
+      "timestamp": "2026-09-15 12:59:18",
+      "timestamp_ms": 1789477158169,
+      "account_id": "R-01",
+      "group_name": "CUENTA REAL",
+      "source": "REAL",
+      "symbol": "SKYUSDT",
+      "side": "LONG",
+      "entry_price": 0.06224,
+      "exit_price": 0.06236,
+      "pnl_usd": 0.0198,
+      "result": "WIN",
+      "notes": "Real Money Trade exited via 🎯 Trailing Floor Activado (+0.19% <= +0.20%) (Fase 2, PnL: +0.19%)",
       "context": {
         "score": 80,
         "rsi_15m": 50.0,
