@@ -4,7 +4,7 @@
     "wins": 17,
     "losses": 56,
     "win_rate_pct": 23.29,
-    "total_pnl_usd": -71.3882
+    "total_pnl_usd": -72.6587
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -1150,26 +1150,6 @@
       "timestamp_ms": 1789449495164,
       "account_id": "SIM-G1",
       "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
-      "symbol": "NEXOUSDT",
-      "side": "LONG",
-      "entry_price": 0.808,
-      "exit_price": 0.808,
-      "result": "LOSS",
-      "pnl_pct": 0.0,
-      "pnl_usd": 0.0,
-      "exit_reason": "SL/Floor 0.16% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 32.0,
-      "notes": "SL/Floor 0.16% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-15 05:18:15",
-      "timestamp_ms": 1789449495164,
-      "account_id": "SIM-G1",
-      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
       "symbol": "BNBUSDT",
       "side": "LONG",
       "entry_price": 721.83,
@@ -1683,6 +1663,26 @@
       "min_fii": 60,
       "hold_min": 522.1,
       "notes": "SL/Floor -4.00% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-15 05:44:05",
+      "timestamp_ms": 1789451045261,
+      "account_id": "SIM-G1",
+      "group_name": "🎯 FRANCOTIRADOR (Score≥85, FII≥60)",
+      "symbol": "ETHUSDT",
+      "side": "LONG",
+      "entry_price": 2521.09,
+      "exit_price": 2489.52,
+      "result": "LOSS",
+      "pnl_pct": -1.2522,
+      "pnl_usd": -1.2705,
+      "exit_reason": "Tiempo max 360min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 368.5,
+      "notes": "Tiempo max 360min agotado",
       "context": {}
     }
   ],
