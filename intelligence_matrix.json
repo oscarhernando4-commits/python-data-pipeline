@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15 14:18:28 UTC",
+  "updated_at": "2026-09-15 14:32:28 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -99,10 +99,10 @@
     },
     {
       "symbol": "CRVUSDT",
-      "total": 501,
-      "wins": 361,
+      "total": 502,
+      "wins": 362,
       "win_rate": 72.1,
-      "net_pnl": 14.29,
+      "net_pnl": 15.65,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -123,26 +123,18 @@
     },
     {
       "symbol": "MORPHOUSDT",
-      "total": 281,
+      "total": 283,
       "wins": 202,
-      "win_rate": 71.9,
-      "net_pnl": 24.8,
+      "win_rate": 71.4,
+      "net_pnl": 21.38,
       "tier": "💎 A+ ÉLITE"
     },
     {
       "symbol": "NEARUSDT",
-      "total": 347,
+      "total": 353,
       "wins": 248,
-      "win_rate": 71.5,
-      "net_pnl": 17.97,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "ZECUSDT",
-      "total": 441,
-      "wins": 309,
-      "win_rate": 70.1,
-      "net_pnl": 10.4,
+      "win_rate": 70.3,
+      "net_pnl": 8.26,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -151,6 +143,14 @@
       "wins": 282,
       "win_rate": 70.1,
       "net_pnl": 76.25,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "ZECUSDT",
+      "total": 442,
+      "wins": 309,
+      "win_rate": 69.9,
+      "net_pnl": 8.45,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -171,10 +171,10 @@
     },
     {
       "symbol": "RENDERUSDT",
-      "total": 292,
+      "total": 294,
       "wins": 197,
-      "win_rate": 67.5,
-      "net_pnl": -37.1,
+      "win_rate": 67.0,
+      "net_pnl": -38.98,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -213,10 +213,10 @@
   "blacklisted_tokens": [
     {
       "symbol": "STXUSDT",
-      "total": 533,
+      "total": 534,
       "wins": 174,
       "win_rate": 32.6,
-      "net_pnl": -114.8,
+      "net_pnl": -115.5,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -229,6 +229,6 @@
     }
   ],
   "global_sim_wr": 62.5,
-  "total_sim_trades": 28271,
+  "total_sim_trades": 28299,
   "total_real_trades": 82
 }
