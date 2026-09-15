@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-15 18:34:09 UTC",
+  "updated_at": "2026-09-15 18:50:30 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -66,14 +66,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "ASTERUSDT",
-      "total": 333,
-      "wins": 251,
-      "win_rate": 75.4,
-      "net_pnl": 22.86,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "AEROUSDT",
       "total": 951,
       "wins": 714,
@@ -82,19 +74,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "ASTERUSDT",
+      "total": 334,
+      "wins": 251,
+      "win_rate": 75.1,
+      "net_pnl": 22.3,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ICPUSDT",
       "total": 935,
       "wins": 697,
       "win_rate": 74.5,
       "net_pnl": 328.19,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "XLMUSDT",
-      "total": 411,
-      "wins": 303,
-      "win_rate": 73.7,
-      "net_pnl": 100.67,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -107,10 +99,18 @@
     },
     {
       "symbol": "TRUMPUSDT",
-      "total": 412,
+      "total": 416,
       "wins": 299,
-      "win_rate": 72.6,
-      "net_pnl": 28.32,
+      "win_rate": 71.9,
+      "net_pnl": 13.52,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "XLMUSDT",
+      "total": 423,
+      "wins": 303,
+      "win_rate": 71.6,
+      "net_pnl": 36.03,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -186,37 +186,21 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "OPUSDT",
-      "total": 406,
-      "wins": 271,
-      "win_rate": 66.7,
-      "net_pnl": 77.55,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "ENAUSDT",
-      "total": 707,
+      "total": 709,
       "wins": 468,
-      "win_rate": 66.2,
-      "net_pnl": 159.04,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "XRPUSDT",
-      "total": 275,
-      "wins": 181,
-      "win_rate": 65.8,
-      "net_pnl": 38.93,
+      "win_rate": 66.0,
+      "net_pnl": 152.83,
       "tier": "💎 A+ ÉLITE"
     }
   ],
   "blacklisted_tokens": [
     {
       "symbol": "STXUSDT",
-      "total": 546,
+      "total": 560,
       "wins": 180,
-      "win_rate": 33.0,
-      "net_pnl": -121.17,
+      "win_rate": 32.1,
+      "net_pnl": -173.53,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -228,7 +212,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 62.6,
-  "total_sim_trades": 30056,
+  "global_sim_wr": 62.3,
+  "total_sim_trades": 30185,
   "total_real_trades": 83
 }
