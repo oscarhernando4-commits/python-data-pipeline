@@ -2018,12 +2018,11 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"   Ganancia diaria blindada. Capital protegido hasta el próximo día UTC.")
                 return
 
-            # 🛑 LÍMITE MÁXIMO DE TRADES DIARIOS: 3 trades/día
-            # Ayer: 11 trades × 0.30% comisión = 3.3% del balance perdido solo en comisiones
-            # Con max 3 trades: 0.90% máximo en comisiones → preserva capital
+            # 🛑 LÍMITE MÁXIMO DE TRADES DIARIOS: 5 trades/día (con límite duro de pérdida -$1.20)
+            # Permite recuperar el día si las condiciones de mercado mejoran
             _daily_trades = state.get("daily_wins", 0) + state.get("daily_losses", 0)
-            if _daily_trades >= 3:
-                print(f"🛑 [LÍMITE TRADES DIARIOS] Ya se ejecutaron {_daily_trades}/3 trades hoy (PnL: ${daily_pnl:+.4f}). Máximo 3 trades/día para minimizar comisiones.")
+            if _daily_trades >= 5:
+                print(f"🛑 [LÍMITE TRADES DIARIOS] Ya se ejecutaron {_daily_trades}/5 trades hoy (PnL: ${daily_pnl:+.4f}). Máximo 5 trades/día para minimizar comisiones.")
                 return
         except Exception:
             pass
@@ -2421,6 +2420,10 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
 
             if vol_1m_check < min_vol_1m:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO VOLUMEN: Vol 1M={vol_1m_check:.2f}x < {min_vol_1m:.2f}x. Sin impulso.")
+                continue
+            vol_15m_check = mtf_res.get("vol_surge_15m", 1.0)
+            if vol_15m_check < 0.25:
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO VOLUMEN 15M: Vol 15M={vol_15m_check:.2f}x < 0.25x. Sin liquidez institucional macro.")
                 continue
             elif is_ai_top and vol_1m_check < 0.60:
                 print(f"  ⚡ [ADN ADAPTATIVO: VOLUMEN APROBADO] {cand_sym} Vol 1M={vol_1m_check:.2f}x >= {min_vol_1m:.2f}x para {arch_dna.get('label')} (FII={fii} | IA Aprobado).")

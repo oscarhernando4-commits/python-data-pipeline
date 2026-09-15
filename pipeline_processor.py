@@ -977,8 +977,8 @@ def run_infinite_trading_matrix_cycle():
             elif is_btc_crashing and ai_symbol != "BTCUSDT":
                 print(f"🛡️ [FILTRO CRASH BTC] Entrada LONG bloqueada en {ai_symbol}. Bitcoin en colapso activo ({btc_status_str}). Protegiendo capital.")
                 api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
-            elif is_btc_weak and ai_symbol != "BTCUSDT" and not (ai_score >= 65 or target_vol_surge >= 1.8):
-                print(f"🛡️ [FILTRO CORRELACIÓN BTC] Entrada en {ai_symbol} bloqueada (Score {ai_score}, VolSurge {target_vol_surge:.2f}x). Se exige Score>=65 o VolSurge>=1.8x durante BTC débil ({btc_status_str}).")
+            elif is_btc_weak and ai_symbol != "BTCUSDT" and (target_vol_surge < 0.45 or ai_score < 75):
+                print(f"🛡️ [FILTRO CORRELACIÓN BTC] Entrada en {ai_symbol} bloqueada (Score {ai_score}, VolSurge {target_vol_surge:.2f}x). Durante BTC débil ({btc_status_str}) se exige Score>=75 y VolSurge>=0.45x.")
                 api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
             elif ai_confidence < 60:
                 print(f"🛡️ [FILTRO CONFIANZA IA] Confianza de Gemini ({ai_confidence}%) menor al umbral mínimo (60%). Esperando mejor setup.")
