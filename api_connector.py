@@ -2510,22 +2510,27 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado por Entrada Tardía (RSI 2M={mtf_res.get('rsi_2m'):.1f} > {rsi_hard_cap:.0f}).")
                     continue
 
-            # 🔄 CONFIRMACIÓN DE REBOTE: No comprar EN el suelo, comprar cuando YA REBOTÓ
-            # La última vela de 1M debe ser VERDE (compradores activos) para confirmar que el piso aguantó
+            # 🔄 CONFIRMACIÓN DE REBOTE: No comprar EN el suelo mientras cae, comprar cuando YA REBOTÓ
+            # La última vela de 1M debe ser VERDE, o ascendente, o tener mecha de absorción inferior >= 38%
             try:
                 _kl_bounce = get_klines(cand_sym, "1m", 3)
                 if _kl_bounce and len(_kl_bounce) >= 2:
                     _last_open = float(_kl_bounce[-1][1])
+                    _last_high = float(_kl_bounce[-1][2])
+                    _last_low = float(_kl_bounce[-1][3])
                     _last_close = float(_kl_bounce[-1][4])
                     _prev_close = float(_kl_bounce[-2][4])
                     _is_green = _last_close > _last_open
                     _is_rising = _last_close > _prev_close
-                    if not _is_green and not _is_rising:
-                        if not (is_ai_top and fii >= 70):
-                            print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Sin confirmación de rebote (última vela 1M roja y descendente). Esperando rebote.")
-                            continue
-                        else:
-                            print(f"  ⚡ [OVERRIDE IA] {cand_sym}: Vela roja PERO Gemini aprobó con FII={fii}. Entrando por soberanía IA.")
+                    _c_range = _last_high - _last_low
+                    _lower_wick = min(_last_open, _last_close) - _last_low
+                    _has_wick_abs = (_lower_wick / _c_range >= 0.38) if _c_range > 0 else False
+                    
+                    if not _is_green and not _is_rising and not _has_wick_abs:
+                        print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Sin confirmación de rebote (última vela 1M roja y descendente sin absorción). Esperando rebote real en el suelo.")
+                        continue
+                    elif _has_wick_abs and not _is_green:
+                        print(f"  🕯️ [ABSORCIÓN EN PISO] {cand_sym}: Mecha inferior de rechazo ({_lower_wick/_c_range*100:.0f}%). Compradores absorbiendo soporte.")
             except Exception:
                 pass
                 
@@ -2784,6 +2789,19 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                             continue
                 except Exception:
                     pass  # No bloquear si no hay datos comparativos
+
+                # 🛡️ CENTINELA DE MICRO-CAÍDA BTC (1M): Jamás disparar una compra si Bitcoin está cayendo activamente en 1M
+                try:
+                    _btc_1m = get_klines("BTCUSDT", "1m", 2)
+                    if _btc_1m and len(_btc_1m) >= 1:
+                        _b1_o = float(_btc_1m[-1][1])
+                        _b1_c = float(_btc_1m[-1][4])
+                        _b1_ret = ((_b1_c - _b1_o) / _b1_o * 100.0) if _b1_o > 0 else 0.0
+                        if _b1_ret < -0.15:
+                            print(f"  🛑 [PRE-BUY GATE] {cand_sym} CANCELADO: Bitcoin en micro-caída 1M ({_b1_ret:+.2f}%). Protegiendo capital hasta estabilización.")
+                            continue
+                except Exception:
+                    pass
             except Exception as _pb_err:
                 print(f"  ⚠️ [PRE-BUY GATE] Error en chequeo final ({_pb_err}). Continuando.")
 
