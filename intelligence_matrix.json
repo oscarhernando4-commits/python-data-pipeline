@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-09-16 13:10:24 UTC",
+  "updated_at": "2026-09-16 13:30:36 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
-      "total": 1024,
+      "total": 1031,
       "wins": 928,
-      "win_rate": 90.6,
-      "net_pnl": 298.2,
+      "win_rate": 90.0,
+      "net_pnl": 298.02,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -27,10 +27,10 @@
     },
     {
       "symbol": "IMXUSDT",
-      "total": 546,
+      "total": 547,
       "wins": 432,
-      "win_rate": 79.1,
-      "net_pnl": 38.89,
+      "win_rate": 79.0,
+      "net_pnl": 38.27,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -122,14 +122,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "CAKEUSDT",
-      "total": 495,
-      "wins": 347,
-      "win_rate": 70.1,
-      "net_pnl": 58.87,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "ZROUSDT",
       "total": 985,
       "wins": 689,
@@ -146,11 +138,27 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "CAKEUSDT",
+      "total": 498,
+      "wins": 347,
+      "win_rate": 69.7,
+      "net_pnl": 58.07,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "PEPEUSDT",
-      "total": 605,
-      "wins": 416,
-      "win_rate": 68.8,
-      "net_pnl": 84.81,
+      "total": 612,
+      "wins": 420,
+      "win_rate": 68.6,
+      "net_pnl": 85.98,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "ARBUSDT",
+      "total": 1095,
+      "wins": 749,
+      "win_rate": 68.4,
+      "net_pnl": 761.01,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -159,14 +167,6 @@
       "wins": 400,
       "win_rate": 68.3,
       "net_pnl": 0.53,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "ARBUSDT",
-      "total": 1086,
-      "wins": 740,
-      "win_rate": 68.1,
-      "net_pnl": 648.83,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -197,10 +197,10 @@
   "blacklisted_tokens": [
     {
       "symbol": "LTCUSDT",
-      "total": 624,
+      "total": 626,
       "wins": 249,
-      "win_rate": 39.9,
-      "net_pnl": -3540.83,
+      "win_rate": 39.8,
+      "net_pnl": -3542.38,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -228,7 +228,7 @@
       "tier": "☠️ TÓXICO"
     }
   ],
-  "global_sim_wr": 61.5,
-  "total_sim_trades": 34481,
+  "global_sim_wr": 61.6,
+  "total_sim_trades": 34558,
   "total_real_trades": 86
 }
