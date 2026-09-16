@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-16 01:50:04 UTC",
+  "updated_at": "2026-09-16 01:58:39 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -7,14 +7,6 @@
       "wins": 924,
       "win_rate": 90.6,
       "net_pnl": 297.42,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "AAVEUSDT",
-      "total": 417,
-      "wins": 341,
-      "win_rate": 81.8,
-      "net_pnl": -17.56,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -26,11 +18,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "AAVEUSDT",
+      "total": 419,
+      "wins": 341,
+      "win_rate": 81.4,
+      "net_pnl": -24.28,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "IMXUSDT",
-      "total": 531,
+      "total": 537,
       "wins": 429,
-      "win_rate": 80.8,
-      "net_pnl": 72.06,
+      "win_rate": 79.9,
+      "net_pnl": 49.19,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -42,19 +42,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "FLOKIUSDT",
-      "total": 625,
-      "wins": 482,
-      "win_rate": 77.1,
-      "net_pnl": 237.17,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "SKYUSDT",
       "total": 449,
       "wins": 345,
       "win_rate": 76.8,
       "net_pnl": 15.98,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "FLOKIUSDT",
+      "total": 629,
+      "wins": 482,
+      "win_rate": 76.6,
+      "net_pnl": 220.1,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -122,19 +122,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "NEARUSDT",
-      "total": 385,
-      "wins": 273,
-      "win_rate": 70.9,
-      "net_pnl": 15.57,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "PEPEUSDT",
       "total": 580,
       "wins": 410,
       "win_rate": 70.7,
       "net_pnl": 97.98,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "NEARUSDT",
+      "total": 387,
+      "wins": 273,
+      "win_rate": 70.5,
+      "net_pnl": 7.31,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -189,10 +189,10 @@
   "blacklisted_tokens": [
     {
       "symbol": "SHIBUSDT",
-      "total": 364,
+      "total": 365,
       "wins": 145,
-      "win_rate": 39.8,
-      "net_pnl": -67.97,
+      "win_rate": 39.7,
+      "net_pnl": -70.01,
       "tier": "☠️ TÓXICO"
     },
     {
@@ -213,6 +213,6 @@
     }
   ],
   "global_sim_wr": 61.5,
-  "total_sim_trades": 32861,
+  "total_sim_trades": 32886,
   "total_real_trades": 83
 }
