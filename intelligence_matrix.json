@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-17 10:15:52 UTC",
+  "updated_at": "2026-09-17 10:25:50 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -66,19 +66,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "TRUMPUSDT",
-      "total": 636,
-      "wins": 487,
-      "win_rate": 76.6,
-      "net_pnl": 101.16,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "WIFUSDT",
       "total": 686,
       "wins": 523,
       "win_rate": 76.2,
       "net_pnl": 67.18,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "total": 639,
+      "wins": 487,
+      "win_rate": 76.2,
+      "net_pnl": 98.33,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -115,10 +115,10 @@
     },
     {
       "symbol": "ETCUSDT",
-      "total": 733,
+      "total": 734,
       "wins": 543,
-      "win_rate": 74.1,
-      "net_pnl": -8.72,
+      "win_rate": 74.0,
+      "net_pnl": -10.01,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -242,14 +242,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "SUIUSDT",
-      "total": 398,
-      "wins": 273,
-      "win_rate": 68.6,
-      "net_pnl": 38.43,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "ALGOUSDT",
       "total": 811,
       "wins": 555,
@@ -282,11 +274,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "UNIUSDT",
-      "total": 807,
-      "wins": 538,
+      "symbol": "SUIUSDT",
+      "total": 409,
+      "wins": 273,
       "win_rate": 66.7,
-      "net_pnl": -239.92,
+      "net_pnl": 30.12,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "UNIUSDT",
+      "total": 809,
+      "wins": 538,
+      "win_rate": 66.5,
+      "net_pnl": -246.19,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -341,6 +341,6 @@
     }
   ],
   "global_sim_wr": 66.2,
-  "total_sim_trades": 44072,
+  "total_sim_trades": 44102,
   "total_real_trades": 90
 }
