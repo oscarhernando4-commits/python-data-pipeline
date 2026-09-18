@@ -1,12 +1,20 @@
 {
-  "updated_at": "2026-09-18 09:34:12 UTC",
+  "updated_at": "2026-09-18 09:54:13 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
-      "total": 1329,
-      "wins": 1183,
-      "win_rate": 89.0,
-      "net_pnl": 434.62,
+      "total": 1334,
+      "wins": 1188,
+      "win_rate": 89.1,
+      "net_pnl": 435.11,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "ZECUSDT",
+      "total": 1056,
+      "wins": 874,
+      "win_rate": 82.8,
+      "net_pnl": 354.92,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -15,14 +23,6 @@
       "wins": 489,
       "win_rate": 82.2,
       "net_pnl": 283.01,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "ZECUSDT",
-      "total": 1016,
-      "wins": 834,
-      "win_rate": 82.1,
-      "net_pnl": 339.26,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -275,10 +275,26 @@
     },
     {
       "symbol": "WLFIUSDT",
-      "total": 1139,
+      "total": 1140,
       "wins": 797,
-      "win_rate": 70.0,
-      "net_pnl": 266.96,
+      "win_rate": 69.9,
+      "net_pnl": 264.65,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "APTUSDT",
+      "total": 942,
+      "wins": 658,
+      "win_rate": 69.9,
+      "net_pnl": 47.36,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "total": 687,
+      "wins": 478,
+      "win_rate": 69.6,
+      "net_pnl": 144.12,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -287,22 +303,6 @@
       "wins": 432,
       "win_rate": 69.6,
       "net_pnl": -60.17,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "ONDOUSDT",
-      "total": 685,
-      "wins": 476,
-      "win_rate": 69.5,
-      "net_pnl": 142.94,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "APTUSDT",
-      "total": 923,
-      "wins": 639,
-      "win_rate": 69.2,
-      "net_pnl": 39.02,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -331,10 +331,18 @@
     },
     {
       "symbol": "FILUSDT",
-      "total": 864,
-      "wins": 592,
-      "win_rate": 68.5,
-      "net_pnl": -95.7,
+      "total": 867,
+      "wins": 595,
+      "win_rate": 68.6,
+      "net_pnl": -91.82,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "PENGUUSDT",
+      "total": 488,
+      "wins": 334,
+      "win_rate": 68.4,
+      "net_pnl": 32.5,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -343,14 +351,6 @@
       "wins": 556,
       "win_rate": 68.2,
       "net_pnl": 108.26,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "PENGUUSDT",
-      "total": 481,
-      "wins": 327,
-      "win_rate": 68.0,
-      "net_pnl": 22.83,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -392,19 +392,27 @@
       "win_rate": 66.1,
       "net_pnl": 58.35,
       "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "HBARUSDT",
+      "total": 1029,
+      "wins": 674,
+      "win_rate": 65.5,
+      "net_pnl": 279.12,
+      "tier": "💎 A+ ÉLITE"
     }
   ],
   "blacklisted_tokens": [
     {
       "symbol": "SUNUSDT",
-      "total": 702,
-      "wins": 183,
-      "win_rate": 26.1,
-      "net_pnl": -197.91,
+      "total": 708,
+      "wins": 189,
+      "win_rate": 26.7,
+      "net_pnl": -195.31,
       "tier": "☠️ TÓXICO"
     }
   ],
   "global_sim_wr": 69.7,
-  "total_sim_trades": 54167,
+  "total_sim_trades": 54307,
   "total_real_trades": 91
 }
