@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18 08:14:12 UTC",
+  "updated_at": "2026-09-18 08:34:12 UTC",
   "elite_tokens": [
     {
       "symbol": "VETUSDT",
@@ -10,19 +10,19 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "ZECUSDT",
-      "total": 975,
-      "wins": 811,
-      "win_rate": 83.2,
-      "net_pnl": 336.02,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "WLDUSDT",
       "total": 595,
       "wins": 489,
       "win_rate": 82.2,
       "net_pnl": 283.01,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "ZECUSDT",
+      "total": 990,
+      "wins": 811,
+      "win_rate": 81.9,
+      "net_pnl": 334.12,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -75,10 +75,10 @@
     },
     {
       "symbol": "IMXUSDT",
-      "total": 852,
-      "wins": 664,
-      "win_rate": 77.9,
-      "net_pnl": 208.68,
+      "total": 861,
+      "wins": 673,
+      "win_rate": 78.2,
+      "net_pnl": 212.47,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -138,6 +138,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "XRPUSDT",
+      "total": 661,
+      "wins": 493,
+      "win_rate": 74.6,
+      "net_pnl": 192.47,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ETCUSDT",
       "total": 931,
       "wins": 692,
@@ -170,11 +178,11 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "XRPUSDT",
-      "total": 631,
-      "wins": 463,
-      "win_rate": 73.4,
-      "net_pnl": 178.95,
+      "symbol": "CAKEUSDT",
+      "total": 638,
+      "wins": 467,
+      "win_rate": 73.2,
+      "net_pnl": 213.42,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -183,14 +191,6 @@
       "wins": 370,
       "win_rate": 73.0,
       "net_pnl": 134.82,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "CAKEUSDT",
-      "total": 631,
-      "wins": 460,
-      "win_rate": 72.9,
-      "net_pnl": 203.74,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -362,6 +362,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "PENGUUSDT",
+      "total": 463,
+      "wins": 309,
+      "win_rate": 66.7,
+      "net_pnl": 20.57,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ETHUSDT",
       "total": 478,
       "wins": 317,
@@ -384,14 +392,6 @@
       "win_rate": 66.1,
       "net_pnl": 58.35,
       "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "PENGUUSDT",
-      "total": 452,
-      "wins": 298,
-      "win_rate": 65.9,
-      "net_pnl": 15.58,
-      "tier": "💎 A+ ÉLITE"
     }
   ],
   "blacklisted_tokens": [
@@ -405,6 +405,6 @@
     }
   ],
   "global_sim_wr": 69.4,
-  "total_sim_trades": 53471,
+  "total_sim_trades": 53558,
   "total_real_trades": 91
 }
