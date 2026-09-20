@@ -540,17 +540,18 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     ═══════════════════════════════════════════════════════════
     V1. BTC en vela roja activa 5M (< -0.15%) o cascada bajista → VETO TOTAL
     V2. Semáforo macro DEFENSIVO o RISK-OFF → VETO TOTAL
-    V3. Canal 15M > 52% o Canal 1H > 58% (precio en techo, no en suelo) → VETO TOTAL
+    V3. Canal 15M > 48%, Canal 1H > 50% o Canal 4H > 55% (precio en techo o zona alta) → VETO TOTAL
     V4. OBV=DISTRIBUTING + Bids < 48% + VolSurge 1M < 0.30x (triple señal de distribución) → VETO TOTAL
     V5. Riesgo de Dump >= 50% → VETO TOTAL
     V6. Buy Taker < 42% (más vendedores que compradores en flujo real) → VETO TOTAL
     V7. Moneda en COLD_STREAK o Blacklist Dinámica → VETO TOTAL
     V8. FII < 50 → VETO TOTAL (sin institucionales, no hay piso real)
+    V9. Moneda cerca del máximo 24H (Distancia < 4.0% con 4H > 50%) o pump parabólico → VETO TOTAL (Bull Trap / Distribución)
 
     ═══════════════════════════════════════════════════════════
     ✅ REQUISITOS MÍNIMOS PARA APROBAR (TODOS deben cumplirse):
     ═══════════════════════════════════════════════════════════
-    R1. Canal 1M <= 35%, Canal 5M <= 42%, Canal 15M <= 50% (precio en base fractal real, prohibido comprar en cima)
+    R1. Canal 1M <= 35%, Canal 5M <= 40%, Canal 15M <= 48%, Canal 1H <= 50%, Canal 4H <= 55% (precio en base fractal real, prohibido comprar en cima)
     R2. FII >= 50 (institucionales absorbiendo en el suelo)
     R3. VolSurge 1M >= 0.20x (hay actividad compradora)
     R4. Bids >= 45% (libro de órdenes equilibrado o a favor del comprador)

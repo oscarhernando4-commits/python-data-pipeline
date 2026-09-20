@@ -2438,20 +2438,24 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             rsi_1m_now = mtf_res.get("rsi_1m", 50.0)
             
             # 🎯 MATRIZ ARMÓNICA MACRO ANTI-TECHO (PROTECCIÓN DE CAPITAL INSTITUCIONAL):
-            # Ancla Macro: 1D<=90%, 4H<=85%, 2H<=85%, 1H<=85%, RSI 15M<=72, RSI 1M<=82.
-            # Se eliminan los topes micro (1M, 2M, 5M, 10M, 15M, 30M <= 50%) que sofocaban el ingreso de velas verdes de ignición.
+            # Ancla Macro Estricta: 1D<=65%, 4H<=55%, 2H<=55%, 1H<=50%, RSI 15M<=65, RSI 1M<=80.
+            # Veto Anti-Pump / Bull Trap: Prohíbe comprar cerca del techo del día (<4%) cuando 4H > 50%.
+            dist_24h_high = mtf_res.get("dist_to_24h_high_pct", 99.0)
+            is_near_pump_peak = bool(dist_24h_high < 4.0 and range_pos_4h > 0.50)
+
             is_macro_base_valid = bool(
-                range_pos_1d <= 0.90 and
-                range_pos_4h <= 0.85 and
-                range_pos_2h <= 0.85 and
-                range_pos_1h <= 0.85 and
-                rsi_15m_now <= 72.0 and
-                rsi_1m_now <= 82.0
+                range_pos_1d <= 0.65 and
+                range_pos_4h <= 0.55 and
+                range_pos_2h <= 0.55 and
+                range_pos_1h <= 0.50 and
+                rsi_15m_now <= 65.0 and
+                rsi_1m_now <= 80.0 and
+                not is_near_pump_peak
             )
             
             if not is_macro_base_valid or is_at_daily_ceiling:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado: En Techo Macro o Sobrecomprado:")
-                print(f"     Canales Macro: [1H: {range_pos_1h*100:.0f}% (max 85) | 2H: {range_pos_2h*100:.0f}% (max 85) | 4H: {range_pos_4h*100:.0f}% (max 85) | 1D: {range_pos_1d*100:.0f}% (max 90) | RSI15M: {rsi_15m_now:.1f} (max 72)]")
+                print(f"     Canales Macro: [1H: {range_pos_1h*100:.0f}% (max 50) | 2H: {range_pos_2h*100:.0f}% (max 55) | 4H: {range_pos_4h*100:.0f}% (max 55) | 1D: {range_pos_1d*100:.0f}% (max 65) | RSI15M: {rsi_15m_now:.1f} (max 65)]")
                 continue
 
             if is_ai_top:

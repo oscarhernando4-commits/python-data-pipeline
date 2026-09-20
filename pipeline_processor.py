@@ -348,23 +348,25 @@ def run_infinite_trading_matrix_cycle():
                 
             tech["confluence_score"] = final_score
             
-            # Record 5M Time-Series Reading for Pattern Recognition Learning (Thread-Safe)
-            try:
-                import time_series_memory
-                rsi_val = mtf_res.get("rsi_structure", {}).get("rsi_15m", tech.get("indicators", {}).get("rsi_15m", 50.0))
-                time_series_memory.record_5m_reading(
-                    symbol=s,
-                    price=tech.get("current_price", 0.0),
-                    score=final_score,
-                    rsi=rsi_val,
-                    macd="Bullish Cross" if mtf_res.get("is_macd_bullish_cross") else tech.get("indicators", {}).get("macd_signal", "Neutral"),
-                    volume_surge=mtf_res.get("vol_surge_15m", tech.get("indicators", {}).get("volume_surge_ratio", 1.0)),
-                    wyckoff=tech.get("indicators", {}).get("wyckoff_phase", "Sin patron"),
-                    news_headline=None,
-                    fear_greed_score=50
-                )
-            except Exception:
-                pass
+            # Record 5M Time-Series Reading solo para activos relevantes (Score >= 65)
+            # ⚡ OPTIMIZACIÓN: Evita contención de bloqueo SQLite en 67 pares simultáneos
+            if final_score >= 65:
+                try:
+                    import time_series_memory
+                    rsi_val = mtf_res.get("rsi_structure", {}).get("rsi_15m", tech.get("indicators", {}).get("rsi_15m", 50.0))
+                    time_series_memory.record_5m_reading(
+                        symbol=s,
+                        price=tech.get("current_price", 0.0),
+                        score=final_score,
+                        rsi=rsi_val,
+                        macd="Bullish Cross" if mtf_res.get("is_macd_bullish_cross") else tech.get("indicators", {}).get("macd_signal", "Neutral"),
+                        volume_surge=mtf_res.get("vol_surge_15m", tech.get("indicators", {}).get("volume_surge_ratio", 1.0)),
+                        wyckoff=tech.get("indicators", {}).get("wyckoff_phase", "Sin patron"),
+                        news_headline=None,
+                        fear_greed_score=50
+                    )
+                except Exception:
+                    pass
                 
             return s, {
                 "tech": tech,
@@ -634,12 +636,17 @@ def run_infinite_trading_matrix_cycle():
                 # Protege contra compras en techos macro reales (1H, 4H, 1D, RSI sobrecomprado).
                 # Se eliminan los topes micro (1M, 2M, 5M <= 50%) que sofocaban e impedían la entrada en velas verdes de ignición institucional.
                 diag_reasons = []
-                if r1d_r > 92.0: diag_reasons.append(f"1D_Techo={r1d:.0f}%>92%")
-                if r4h_r > 88.0: diag_reasons.append(f"4H_Techo={r4h:.0f}%>88%")
-                if r2h_r > 88.0: diag_reasons.append(f"2H_Techo={r2h:.0f}%>88%")
-                if r1h_r > 87.0: diag_reasons.append(f"1H_Techo={r1h:.0f}%>87%")
-                if rsi_15m > 75.0: diag_reasons.append(f"RSI15M={rsi_15m:.0f}>75")
-                if rsi_1m > 85.0: diag_reasons.append(f"RSI1M_Extremo={rsi_1m:.0f}>85")
+                if r1d_r > 65.0: diag_reasons.append(f"1D_Techo={r1d:.0f}%>65%")
+                if r4h_r > 55.0: diag_reasons.append(f"4H_Techo={r4h:.0f}%>55%")
+                if r2h_r > 55.0: diag_reasons.append(f"2H_Techo={r2h:.0f}%>55%")
+                if r1h_r > 50.0: diag_reasons.append(f"1H_Techo={r1h:.0f}%>50%")
+                if rsi_15m > 65.0: diag_reasons.append(f"RSI15M={rsi_15m:.0f}>65")
+                if rsi_1m > 80.0: diag_reasons.append(f"RSI1M_Extremo={rsi_1m:.0f}>80")
+                
+                # 🚫 VETO ANTI-PUMP / BULL TRAP: Prohibido comprar cerca del techo de un pump
+                dist_24h_high = cmtf.get("dist_to_24h_high_pct", 99.0) if cmtf else 99.0
+                if dist_24h_high < 4.0 and r4h_r > 50.0:
+                    diag_reasons.append(f"CercaMax24H({dist_24h_high:.1f}%<4%)")
 
                 # 🛑 VETO ABSOLUTO OBV DISTRIBUCIÓN (Sin excepciones — si institucionales venden, VETO TOTAL)
                 if obv_t == "DISTRIBUTING": diag_reasons.append("OBV=DIST(VETO)")
@@ -1105,6 +1112,10 @@ def run_infinite_trading_matrix_cycle():
     return matrix
 
 def sync_live_matrix_obsidian(matrix):
+    # ⚡ OPTIMIZACIÓN DE VELOCIDAD: En GitHub Actions / Nube no hay Obsidian instalado.
+    # Saltar esta escritura pesada de 1,000 cuentas ahorra tiempo y CPU valiosos.
+    if os.getenv("GITHUB_ACTIONS") == "true" or os.getenv("CI") == "true":
+        return
     ensure_obsidian_dir()
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     now_date = datetime.now().strftime("%y-%m-%d")
