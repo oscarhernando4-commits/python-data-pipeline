@@ -1229,17 +1229,11 @@ def calculate_dynamic_proportional_trailing(highest_pnl_pct: float, atr_pct: flo
             phase = 6
             phase_label = f"🚀 F6 RALLY (Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Neto +{sl_pct-0.30:.2f}%)"
         
-        elif highest_pnl_pct >= 1.40:
-            # 🏆 FASE 5B META: +1.40% → Piso +1.30% (= +1.00% NETO LIBRE DE COMISIONES)
-            sl_pct = 1.30
-            phase = 5
-            phase_label = f"🏆 F5B META 1% NETO (Cima +{highest_pnl_pct:.2f}% | Piso +1.30% | Neto +1.00%)"
-        
-        elif highest_pnl_pct >= 1.25:
-            # 🏆 FASE 5A SUBIENDO: +1.25% → Piso +1.00% (= +0.70% neto)
+        elif highest_pnl_pct >= 1.30:
+            # 🏆 FASE 5 META: +1.30% → Piso +1.00% (= +0.70% neto)
             sl_pct = 1.00
             phase = 5
-            phase_label = f"🏆 F5A SUBIENDO (Cima +{highest_pnl_pct:.2f}% | Piso +1.00% | Neto +0.70%)"
+            phase_label = f"🏆 F5 META (Cima +{highest_pnl_pct:.2f}% | Piso +1.00% | Neto +0.70%)"
         
         elif highest_pnl_pct >= 1.00:
             # 💎 FASE 4: +1.00% → SL +0.50%
@@ -1349,12 +1343,11 @@ def quick_position_heartbeat():
         #    → VENTA para blindar la meta diaria.
         # ⚡ COSECHA CON COMISIÓN 0.30% CALCULADA:
         # +1.30% bruto - 0.30% comisión = +1.00% NETO = META DIARIA en 1 trade
-        # Retroceso permitido: 0.20% desde la cima para amarrar la ganancia
-        # Piso mínimo dinámico: si la cima superó +1.40%, piso asegurado en +1.30% (= +1.00% neto garantizado)
-        if not should_exit and highest_pnl_pct >= 1.25:
-            allowed_retrace = 0.20 if highest_pnl_pct < 2.00 else 0.35
-            min_reap_floor = 1.00 if highest_pnl_pct < 1.40 else 1.30
-            if current_pnl_pct <= (highest_pnl_pct - allowed_retrace) or current_pnl_pct <= min_reap_floor:
+        # Retroceso permitido: 0.25% desde la cima para dar espacio al momentum
+        # Piso mínimo: +0.80% bruto (= +0.50% neto, cubre comisión + ganancia real)
+        if not should_exit and highest_pnl_pct >= 1.30:
+            allowed_retrace = 0.25 if highest_pnl_pct < 2.00 else 0.35
+            if current_pnl_pct <= (highest_pnl_pct - allowed_retrace) or current_pnl_pct <= 0.80:
                 should_exit = True
                 net_pnl = current_pnl_pct - 0.30
                 exit_reason = f"🏆 Cosecha Meta 1% ({current_pnl_pct:+.2f}% bruto | NETO: +{net_pnl:.2f}% | Cima +{highest_pnl_pct:.2f}%)"
@@ -2018,10 +2011,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             # 🏆 CANDADO DE META DIARIA CUMPLIDA (≥ +1.0% NETO LIBRE DE COMISIONES)
             # Comisión = 0.15% compra + 0.15% venta = 0.30% por trade
             # Meta: PnL bruto >= 1.30% del capital (1.00% neto + 0.30% comisión ya deducida en PnL)
-            _cur_bal = state.get("current_balance_usd", state.get("_cached_total_val", 11.55))
-            if _cur_bal <= 0:
-                _cur_bal = state.get("_cached_usdt_free", 11.0) + state.get("_cached_bnb_usd", 0.5)
-            _target_goal_usd = max(0.10, round(_cur_bal * 0.01, 4))  # 1% exacto del balance actual (crece dinámicamente)
+            _cur_bal = state.get("current_balance_usd", 12.0)
+            _target_goal_usd = round(_cur_bal * 0.01, 4)  # 1% del balance
             if daily_pnl >= _target_goal_usd:
                 print(f"🏆 [META DIARIA CUMPLIDA] PnL hoy: +${daily_pnl:.4f} USD >= +${_target_goal_usd:.4f} USD (≥ +1.0% neto libre de comisiones).")
                 print(f"   Ganancia diaria blindada. Capital protegido hasta el próximo día UTC.")
