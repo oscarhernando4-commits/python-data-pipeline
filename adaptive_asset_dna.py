@@ -259,10 +259,14 @@ def calculate_archetype_trailing(
         sl_pct = max(1.50, round(highest_pnl_pct * retention_ratio, 4))
         phase = 6
         phase_label = f"🚀 F6 RALLY ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +{sl_pct:.2f}% | Neto +{sl_pct-0.30:.2f}%)"
-    elif highest_pnl_pct >= 1.30:
+    elif highest_pnl_pct >= 1.40:
+        sl_pct = 1.30
+        phase = 5
+        phase_label = f"🏆 F5B META 1% NETO ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +1.30% | Neto +1.00%)"
+    elif highest_pnl_pct >= 1.25:
         sl_pct = 1.00
         phase = 5
-        phase_label = f"🏆 F5 META 1% NETO ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +1.00% | Neto +0.70%)"
+        phase_label = f"🏆 F5A SUBIENDO ({emoji} Cima +{highest_pnl_pct:.2f}% | Piso +1.00% | Neto +0.70%)"
     elif highest_pnl_pct >= 1.00:
         sl_pct = 0.50
         phase = 4
