@@ -1,10 +1,10 @@
 {
   "stats": {
     "total_trades": 86,
-    "wins": 40,
-    "losses": 46,
-    "win_rate_pct": 46.51,
-    "total_pnl_usd": -1.2507
+    "wins": 39,
+    "losses": 47,
+    "win_rate_pct": 45.35,
+    "total_pnl_usd": -4.6339
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -1402,26 +1402,6 @@
       "timestamp_ms": 1789954313693,
       "account_id": "SIM-G4",
       "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
-      "symbol": "ETHFIUSDT",
-      "side": "LONG",
-      "entry_price": 0.7429,
-      "exit_price": 0.7434,
-      "result": "WIN",
-      "pnl_pct": 0.0673,
-      "pnl_usd": 0.0666,
-      "exit_reason": "SL/Floor 1.24% tocado",
-      "source": "SIMULATION",
-      "min_score": 80,
-      "min_fii": 55,
-      "hold_min": 42.0,
-      "notes": "SL/Floor 1.24% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-21 01:31:53",
-      "timestamp_ms": 1789954313693,
-      "account_id": "SIM-G4",
-      "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
       "symbol": "ATOMUSDT",
       "side": "LONG",
       "entry_price": 1.768,
@@ -1995,6 +1975,26 @@
       "min_fii": 55,
       "hold_min": 34.0,
       "notes": "SL/Floor 1.34% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-21 01:39:56",
+      "timestamp_ms": 1789954796998,
+      "account_id": "SIM-G2",
+      "group_name": "⚡ AGRESIVO RÁPIDO (Score≥75, FII≥50)",
+      "symbol": "CRVUSDT",
+      "side": "LONG",
+      "entry_price": 0.3617,
+      "exit_price": 0.3508,
+      "result": "LOSS",
+      "pnl_pct": -3.0135,
+      "pnl_usd": -3.3166,
+      "exit_reason": "SL/Floor -3.00% tocado",
+      "source": "SIMULATION",
+      "min_score": 75,
+      "min_fii": 50,
+      "hold_min": 56.0,
+      "notes": "SL/Floor -3.00% tocado",
       "context": {}
     }
   ],
