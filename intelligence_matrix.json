@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21 13:11:36 UTC",
+  "updated_at": "2026-09-21 13:21:35 UTC",
   "elite_tokens": [
     {
       "symbol": "SKYUSDT",
@@ -83,10 +83,10 @@
     },
     {
       "symbol": "MORPHOUSDT",
-      "total": 1250,
-      "wins": 990,
+      "total": 1252,
+      "wins": 992,
       "win_rate": 79.2,
-      "net_pnl": 332.75,
+      "net_pnl": 333.02,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -243,10 +243,18 @@
     },
     {
       "symbol": "ICPUSDT",
-      "total": 1850,
-      "wins": 1371,
-      "win_rate": 74.1,
-      "net_pnl": 647.02,
+      "total": 1853,
+      "wins": 1374,
+      "win_rate": 74.2,
+      "net_pnl": 647.4,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "CRVUSDT",
+      "total": 1654,
+      "wins": 1224,
+      "win_rate": 74.0,
+      "net_pnl": 301.45,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -271,14 +279,6 @@
       "wins": 669,
       "win_rate": 73.9,
       "net_pnl": 405.2,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "CRVUSDT",
-      "total": 1643,
-      "wins": 1213,
-      "win_rate": 73.8,
-      "net_pnl": 294.16,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -354,19 +354,11 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "STRKUSDT",
-      "total": 1296,
-      "wins": 921,
-      "win_rate": 71.1,
-      "net_pnl": 270.09,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "ARBUSDT",
-      "total": 2489,
-      "wins": 1759,
-      "win_rate": 70.7,
-      "net_pnl": 1433.88,
+      "total": 2519,
+      "wins": 1789,
+      "win_rate": 71.0,
+      "net_pnl": 1673.37,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -379,18 +371,26 @@
     },
     {
       "symbol": "ETHFIUSDT",
-      "total": 1377,
-      "wins": 954,
-      "win_rate": 69.3,
-      "net_pnl": 241.26,
+      "total": 1391,
+      "wins": 968,
+      "win_rate": 69.6,
+      "net_pnl": 242.4,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "STRKUSDT",
+      "total": 1328,
+      "wins": 921,
+      "win_rate": 69.4,
+      "net_pnl": 84.81,
       "tier": "💎 A+ ÉLITE"
     },
     {
       "symbol": "POLUSDT",
-      "total": 1462,
-      "wins": 1009,
+      "total": 1463,
+      "wins": 1010,
       "win_rate": 69.0,
-      "net_pnl": -56.88,
+      "net_pnl": -56.24,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -452,6 +452,6 @@
   ],
   "blacklisted_tokens": [],
   "global_sim_wr": 72.5,
-  "total_sim_trades": 90924,
+  "total_sim_trades": 91037,
   "total_real_trades": 94
 }
