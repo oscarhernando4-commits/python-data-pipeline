@@ -331,19 +331,23 @@ def main():
         print(f"🔄 CICLO [{cycle}/{total_cycles}] - ESCANEO Y OPERACIÓN CUÁNTICA EN VIVO", flush=True)
         print(f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━", flush=True)
 
-        # 🎯 HUD META DIARIA OBLIGATORIA (≥ 1.0% DIARIO)
+        # 🎯 HUD META DIARIA OBLIGATORIA (≥ 1.0% DIARIO - REINICIO AUTOMÁTICO 00:00 UTC)
         try:
+            from datetime import timezone as _tz_hud
+            _utc_now = datetime.now(_tz_hud.utc)
+            _utc_date_str = _utc_now.strftime("%Y-%m-%d")
             _st_hud = api_connector.load_real_account_state()
-            _bal_hud = _st_hud.get("current_balance_usd", 12.16)
+            api_connector.check_and_apply_utc_daily_reset(_st_hud)
+            _bal_hud = _st_hud.get("current_balance_usd", 11.42)
             _daily_pnl_hud = _st_hud.get("_daily_pnl_usd", 0.0)
             _target_usd = round(_bal_hud * 0.01, 4)
             _pct_done = (_daily_pnl_hud / _target_usd * 100.0) if _target_usd > 0 else 0.0
-            if _daily_pnl_hud >= _target_usd:
+            if _daily_pnl_hud >= _target_usd and _daily_pnl_hud > 0.0001:
                 _status_str = f"🏆 META CUMPLIDA (+{_daily_pnl_hud:+.4f} USD >= ${_target_usd:.4f} USD)"
             else:
-                _rem = _target_usd - _daily_pnl_hud
-                _status_str = f"EN CAMINO ({_pct_done:.1f}% | Faltan ${_rem:.4f} USD para el 1.0%)"
-            print(f"🎯 META DIARIA OBLIGATORIA (≥1.0% = ${_target_usd:.4f} USD) | PnL Hoy: ${_daily_pnl_hud:+.4f} USD | {_status_str}", flush=True)
+                _rem = max(0.0, _target_usd - _daily_pnl_hud)
+                _status_str = f"EN CAMINO ({_pct_done:.1f}% | Faltan ${_rem:.4f} USD para el 1.0%) [Modo Francotirador]"
+            print(f"🎯 META DIARIA [{_utc_date_str} UTC] (≥1.0% = ${_target_usd:.4f} USD) | PnL Hoy: ${_daily_pnl_hud:+.4f} USD | {_status_str}", flush=True)
         except Exception:
             pass
 

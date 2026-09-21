@@ -579,8 +579,8 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
        APRUEBA si: BTC estable/alcista, mercado RISK-ON, Fear&Greed 25-85.
 
     2. 📊 AGENTE 2 (Sniper de Suelo Fractal 8D):
-       VETA si: Canal 15M > 55% o Canal 1H > 60% (precio en cima, no en suelo).
-       APRUEBA si: Canal 1M <= 45%, 5M <= 48%, 15M <= 52% (base fractal real).
+       VETA si: Canal 15M > 48%, Canal 1H > 50% o Canal 4H > 55% (precio en techo o zona alta).
+       APRUEBA si: Canal 1M <= 35%, Canal 5M <= 40%, Canal 15M <= 48%, Canal 1H <= 50%, Canal 4H <= 55% (base fractal real - Francotirador de Suelo).
 
     3. 🌊 AGENTE 3 (Auditor de Libro, Volume Delta & OBV):
        VETA si: Buy Taker < 38% (flujo vendedor real), OBV DISTRIBUTING + Bids < 45%, Muro Bids < $8k.

@@ -407,6 +407,47 @@ _trade_executed_this_cycle = False
 # STATE MANAGEMENT (Atomic writes to prevent corruption)
 # ============================================================
 
+def check_and_apply_utc_daily_reset(state):
+    """
+    Reinicia rigurosamente todos los acumuladores diarios a las 00:00:00 UTC.
+    Garantiza que la meta diaria del 1.0%, el contador de operaciones y el PnL
+    del día comiencen en CERO ($0.0000 USD, 0W/0L) en cada nuevo día UTC.
+    """
+    if not isinstance(state, dict):
+        return False
+
+    from datetime import datetime, timezone
+    today_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    last_reset = state.get("last_daily_reset_date", "")
+    pnl_date = state.get("_daily_pnl_date", "")
+
+    # Si la fecha UTC actual no coincide con la fecha de reset o la fecha de PnL
+    if last_reset != today_utc or pnl_date != today_utc:
+        prev_w = state.get("daily_wins", 0)
+        prev_l = state.get("daily_losses", 0)
+        prev_pnl = state.get("_daily_pnl_usd", 0.0)
+
+        state["daily_wins"] = 0
+        state["daily_losses"] = 0
+        state["_consecutive_losses"] = 0
+        state["_daily_pnl_usd"] = 0.0
+        state["_daily_pnl_date"] = today_utc
+        state["last_daily_reset_date"] = today_utc
+        state["last_trading_day"] = today_utc
+        if not state.get("position"):
+            state["status"] = "🟦 Buscando Entrada A+ (Modo Francotirador)"
+
+        print(f"🔄 [REINICIO UTC 00:00] Nuevo día UTC ({today_utc}) detectado.", flush=True)
+        print(f"   Contadores reiniciados a CERO: {prev_w}W/{prev_l}L | PnL previo: ${prev_pnl:+.4f} USD → $0.0000 USD.", flush=True)
+        print(f"   🎯 Búsqueda de Meta Diaria 1.0% reactivada en Modo Francotirador.", flush=True)
+
+        try:
+            save_real_account_state(state)
+        except Exception:
+            pass
+        return True
+    return False
+
 def load_real_account_state():
     if os.path.exists(REAL_STATE_FILE):
         try:
@@ -424,27 +465,11 @@ def load_real_account_state():
                 state.setdefault("daily_losses", 0)
                 state.setdefault("position", None)
                 state.setdefault("last_trade_time", datetime.now().strftime("%y-%m-%d<br>%H:%M"))
-                state.setdefault("status", "🟦 Buscando Entrada A+")
+                state.setdefault("status", "🟦 Buscando Entrada A+ (Modo Francotirador)")
+                state.setdefault("_daily_pnl_usd", 0.0)
 
-                # ✅ RESET DIARIO AUTOMÁTICO A MEDIANOCHE UTC
-                # Si la fecha UTC actual es distinta al último reset → contadores a 0
-                from datetime import timezone as _tz
-                _today_utc = datetime.now(_tz.utc).strftime("%Y-%m-%d")
-                _last_reset = state.get("last_daily_reset_date", "")
-                if _last_reset != _today_utc:
-                    _prev_w = state.get("daily_wins", 0)
-                    _prev_l = state.get("daily_losses", 0)
-                    state["daily_wins"] = 0
-                    state["daily_losses"] = 0
-                    state["_consecutive_losses"] = 0
-                    state["last_daily_reset_date"] = _today_utc
-                    if _prev_w > 0 or _prev_l > 0:
-                        print(f"🔄 [RESET DIARIO] Nuevo día UTC ({_today_utc}). Contadores reiniciados: {_prev_w}W/{_prev_l}L → 0W/0L. Circuit Breaker listo para hoy.")
-                    # BUG 1 FIX: persistir inmediatamente al disco para que el reset no se pierda
-                    try:
-                        save_real_account_state(state)
-                    except Exception:
-                        pass
+                # ✅ RESET DIARIO AUTOMÁTICO A MEDIANOCHE UTC (00:00 UTC)
+                check_and_apply_utc_daily_reset(state)
 
                 return state
         except Exception:
@@ -1817,26 +1842,46 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                     if "orderId" in res_json or res_json.get("status") == "FILLED":
                         pnl_usd = (active_current_price - entry) * active_qty
                         
-                        # Update daily counters (synchronized with UTC reset date)
+                        # Update daily counters and PnL (synchronized with UTC reset date)
                         from datetime import timezone as _tz
                         today_str = datetime.now(_tz.utc).strftime("%Y-%m-%d")
-                        if state.get("last_daily_reset_date") != today_str:
+                        if state.get("last_daily_reset_date") != today_str or state.get("_daily_pnl_date") != today_str:
                             state["daily_wins"] = 0
                             state["daily_losses"] = 0
+                            state["_consecutive_losses"] = 0
+                            state["_daily_pnl_usd"] = 0.0
+                            state["_daily_pnl_date"] = today_str
                             state["last_daily_reset_date"] = today_str
+
                         state["last_trading_day"] = today_str
                         
                         if pnl_usd > 0:
                             state["wins"] = state.get("wins", 0) + 1
                             state["daily_wins"] = state.get("daily_wins", 0) + 1
+                            state["_consecutive_losses"] = 0  # Reset on any win
                             res_type = "WIN"
                         else:
                             state["losses"] = state.get("losses", 0) + 1
                             state["daily_losses"] = state.get("daily_losses", 0) + 1
+                            state["_consecutive_losses"] = state.get("_consecutive_losses", 0) + 1
+                            state["_last_loss_time"] = time.time()
                             res_type = "LOSS"
                             
                         state["trades_count"] = state.get("trades_count", 0) + 1
+                        state["_daily_pnl_usd"] = round(state.get("_daily_pnl_usd", 0.0) + pnl_usd, 4)
+                        state["_daily_pnl_date"] = today_str
+                        state["position"] = None
+                        state["status"] = f"🟢 WIN Cerrado ({active_symbol} PnL: {pnl_pct:+.2f}% / ${pnl_usd:+.4f})" if res_type == "WIN" else f"🔴 STOP Cerrado ({active_symbol} PnL: {pnl_pct:+.2f}% / ${pnl_usd:+.4f})"
+                        state["_last_closed_symbol"] = active_symbol
+                        state["_last_closed_time"] = time.time()
+                        state["_last_exit_price"] = active_current_price
                         save_real_account_state(state)
+
+                        if res_type == "LOSS":
+                            print(f"📊 [RACHA] Pérdidas consecutivas: {state['_consecutive_losses']} | PnL hoy ({today_str} UTC): ${state['_daily_pnl_usd']:+.4f}")
+                        else:
+                            print(f"📊 [RACHA] Racha ganadora activa ✅ | PnL hoy ({today_str} UTC): ${state['_daily_pnl_usd']:+.4f}")
+
                         # Sync exact live balances from Binance API
                         try:
                             diagnose_full_spot_wallet()
@@ -1863,29 +1908,6 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                             )
                         except Exception as le:
                             print(f"Learning engine error: {le}")
-                        
-                        state["position"] = None
-                        state["status"] = "🟦 Buscando Entrada A+"
-                        state["_last_closed_symbol"] = active_symbol
-                        state["_last_closed_time"] = time.time()
-                        state["_last_exit_price"] = active_current_price
-
-                        # ── Consecutive Loss Counter & Daily PnL Tracker ──────────────────
-                        from datetime import datetime as _dt2
-                        today_key = _dt2.now().strftime("%Y-%m-%d")
-                        if state.get("_daily_pnl_date") != today_key:
-                            state["_daily_pnl_date"] = today_key
-                            state["_daily_pnl_usd"] = 0.0
-                        state["_daily_pnl_usd"] = round(state.get("_daily_pnl_usd", 0.0) + pnl_usd, 4)
-
-                        if res_type == "LOSS":
-                            state["_consecutive_losses"] = state.get("_consecutive_losses", 0) + 1
-                            state["_last_loss_time"] = time.time()
-                            print(f"📊 [RACHA] Pérdidas consecutivas: {state['_consecutive_losses']} | PnL hoy: ${state['_daily_pnl_usd']:.3f}")
-                        else:
-                            state["_consecutive_losses"] = 0  # Reset on any win
-                            print(f"📊 [RACHA] Racha ganadora activa ✅ | PnL hoy: ${state['_daily_pnl_usd']:.3f}")
-                        # ─────────────────────────────────────────────────────────────────
 
                         print(f"✅ LONG cerrado exitosamente: {res_type} ({pnl_pct:+.2f}% | ${pnl_usd:+.2f})")
 
@@ -1899,7 +1921,8 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
     # ========================================
     else:
         state["position"] = None
-        state["status"] = "🟦 Buscando Entrada A+"
+        state["status"] = "🟦 Buscando Entrada A+ (Modo Francotirador)"
+        check_and_apply_utc_daily_reset(state)
         
         # 🚫 Stablecoin & Non-Speculative Commodity Peg filter (USDT, USDC, PAXG, XAUT, etc.)
         stablecoins_blacklist = {
@@ -1991,38 +2014,34 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
 
         # ═══════════════════════════════════════════════════════════════════════
         # 🛡️ ESCUDO 2: LÍMITE DIARIO DE PÉRDIDA (Daily Loss Limit)
-        # Máximo $0.40 de pérdida neta en el día. Si se supera → STOP por hoy.
+        # Máximo $1.20 de pérdida neta en el día. Si se supera → STOP por hoy.
         # Protege el capital de días de mercado adverso sostenido.
         # ═══════════════════════════════════════════════════════════════════════
         try:
+            check_and_apply_utc_daily_reset(state)
             from datetime import datetime as _dt, timezone as _tz_mod
             today_str = _dt.now(_tz_mod.utc).strftime("%Y-%m-%d")
-            if state.get("_daily_pnl_date") != today_str:
-                state["_daily_pnl_date"] = today_str
-                state["_daily_pnl_usd"] = 0.0
             daily_pnl = state.get("_daily_pnl_usd", 0.0)
             daily_loss_limit = -1.20  # Max $1.20 loss per day — permite ~20 trades con SL -0.50% antes de bloquear
             if daily_pnl <= daily_loss_limit:
-                print(f"🛑 [LÍMITE DIARIO] Pérdida acumulada hoy: ${daily_pnl:.3f}. Límite: ${daily_loss_limit}. Operaciones pausadas hasta mañana. Preservando capital.")
+                print(f"🛑 [LÍMITE DIARIO] Pérdida acumulada hoy ({today_str} UTC): ${daily_pnl:.3f}. Límite: ${daily_loss_limit}. Operaciones pausadas hasta mañana. Preservando capital.")
                 return
             elif daily_pnl < -0.50:
-                print(f"⚠️ [ALERTA DIARIA] Pérdida acumulada hoy: ${daily_pnl:.3f}. Cerca del límite diario. Modo ultra-selectivo activado.")
+                print(f"⚠️ [ALERTA DIARIA] Pérdida acumulada hoy ({today_str} UTC): ${daily_pnl:.3f}. Cerca del límite diario. Modo ultra-selectivo activado.")
 
             # 🏆 CANDADO DE META DIARIA CUMPLIDA (≥ +1.0% NETO LIBRE DE COMISIONES)
-            # Comisión = 0.15% compra + 0.15% venta = 0.30% por trade
-            # Meta: PnL bruto >= 1.30% del capital (1.00% neto + 0.30% comisión ya deducida en PnL)
             _cur_bal = state.get("current_balance_usd", 12.0)
             _target_goal_usd = round(_cur_bal * 0.01, 4)  # 1% del balance
-            if daily_pnl >= _target_goal_usd:
-                print(f"🏆 [META DIARIA CUMPLIDA] PnL hoy: +${daily_pnl:.4f} USD >= +${_target_goal_usd:.4f} USD (≥ +1.0% neto libre de comisiones).")
-                print(f"   Ganancia diaria blindada. Capital protegido hasta el próximo día UTC.")
+            if daily_pnl >= _target_goal_usd and daily_pnl > 0.0001:
+                print(f"🏆 [META DIARIA CUMPLIDA] PnL hoy ({state.get('_daily_pnl_date', today_str)} UTC): +${daily_pnl:.4f} USD >= +${_target_goal_usd:.4f} USD (≥ +1.0% neto libre de comisiones).")
+                print(f"   Ganancia diaria blindada. Capital protegido hasta las 00:00:00 UTC.")
                 return
 
             # 🛑 LÍMITE MÁXIMO DE TRADES DIARIOS: 5 trades/día (con límite duro de pérdida -$1.20)
             # Permite recuperar el día si las condiciones de mercado mejoran
             _daily_trades = state.get("daily_wins", 0) + state.get("daily_losses", 0)
             if _daily_trades >= 5:
-                print(f"🛑 [LÍMITE TRADES DIARIOS] Ya se ejecutaron {_daily_trades}/5 trades hoy (PnL: ${daily_pnl:+.4f}). Máximo 5 trades/día para minimizar comisiones.")
+                print(f"🛑 [LÍMITE TRADES DIARIOS] Ya se ejecutaron {_daily_trades}/5 trades hoy ({today_str} UTC) (PnL: ${daily_pnl:+.4f}). Máximo 5 trades/día para minimizar comisiones.")
                 return
         except Exception:
             pass
