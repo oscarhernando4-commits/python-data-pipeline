@@ -112,7 +112,8 @@ def get_gemini_api_keys():
     if k1: raw_keys.append(k1)
     
     # Keys 2 to 10
-    for i in range(2, 11):
+    # Keys 2 to 20 soporta hasta GEMINI_API_KEY_20
+    for i in range(2, 21):
         env_name = f"GEMINI_API_KEY_{i:02d}"
         val = os.getenv(env_name, "")
         if not val:
