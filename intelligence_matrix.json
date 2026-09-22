@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22 11:27:45 UTC",
+  "updated_at": "2026-09-22 11:33:03 UTC",
   "elite_tokens": [
     {
       "symbol": "VIRTUALUSDT",
@@ -66,14 +66,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "VETUSDT",
-      "total": 2048,
-      "wins": 1634,
-      "win_rate": 79.8,
-      "net_pnl": 509.17,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "AVAXUSDT",
       "total": 910,
       "wins": 726,
@@ -82,19 +74,27 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "VETUSDT",
+      "total": 2049,
+      "wins": 1634,
+      "win_rate": 79.7,
+      "net_pnl": 506.83,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "ENAUSDT",
-      "total": 2176,
-      "wins": 1719,
+      "total": 2177,
+      "wins": 1720,
       "win_rate": 79.0,
-      "net_pnl": 1130.39,
+      "net_pnl": 1132.02,
       "tier": "💎 A+ ÉLITE"
     },
     {
       "symbol": "ASTERUSDT",
-      "total": 1257,
-      "wins": 993,
+      "total": 1258,
+      "wins": 994,
       "win_rate": 79.0,
-      "net_pnl": 10.11,
+      "net_pnl": 10.13,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -355,10 +355,10 @@
     },
     {
       "symbol": "BNBUSDT",
-      "total": 1058,
+      "total": 1060,
       "wins": 747,
-      "win_rate": 70.6,
-      "net_pnl": 181.99,
+      "win_rate": 70.5,
+      "net_pnl": 177.29,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -426,14 +426,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "JSTUSDT",
-      "total": 1553,
-      "wins": 1037,
-      "win_rate": 66.8,
-      "net_pnl": -30.73,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "SHIBUSDT",
       "total": 1379,
       "wins": 919,
@@ -450,6 +442,14 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "JSTUSDT",
+      "total": 1565,
+      "wins": 1037,
+      "win_rate": 66.3,
+      "net_pnl": -38.13,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "STXUSDT",
       "total": 2224,
       "wins": 1468,
@@ -460,6 +460,6 @@
   ],
   "blacklisted_tokens": [],
   "global_sim_wr": 72.5,
-  "total_sim_trades": 102536,
-  "total_real_trades": 96
+  "total_sim_trades": 102555,
+  "total_real_trades": 97
 }
