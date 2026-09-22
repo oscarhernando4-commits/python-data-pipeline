@@ -1,0 +1,26 @@
+name: 🔍 Audit Gemini API Keys
+
+on:
+  workflow_dispatch:
+
+jobs:
+  audit-keys:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Key Audit
+        env:
+          GEMINI_API_KEY:    ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_02: ${{ secrets.GEMINI_API_KEY_02 }}
+          GEMINI_API_KEY_03: ${{ secrets.GEMINI_API_KEY_03 }}
+          GEMINI_API_KEY_04: ${{ secrets.GEMINI_API_KEY_04 }}
+          GEMINI_API_KEY_05: ${{ secrets.GEMINI_API_KEY_05 }}
+          GEMINI_API_KEY_06: ${{ secrets.GEMINI_API_KEY_06 }}
+          GEMINI_API_KEY_07: ${{ secrets.GEMINI_API_KEY_07 }}
+          GEMINI_API_KEY_08: ${{ secrets.GEMINI_API_KEY_08 }}
+          GEMINI_API_KEY_09: ${{ secrets.GEMINI_API_KEY_09 }}
+          GEMINI_API_KEY_10: ${{ secrets.GEMINI_API_KEY_10 }}
+        run: python audit_keys.py
