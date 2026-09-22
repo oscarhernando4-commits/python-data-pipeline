@@ -582,8 +582,27 @@ def run_infinite_trading_matrix_cycle():
             # 🔬 EVALUACIÓN MULTI-TEMPORAL ADAPTATIVA DE LOS 67 PARES DEL TOP 100 CMC:
             valid_base_candidates = []
             proximity_candidates = []
-            
+
+            # 📈 BULL MARKET ADAPTATIVO — Pre-calcular umbrales UNA VEZ antes del loop (no 67x)
+            # Fear & Greed >= 65 (Greed) + BTC RSI1H >= 50: canal 1H=55%, 1D=70%
+            # Fear & Greed >= 75 (Extreme Greed) + BTC RSI1H >= 50: canal 1H=55%, 1D=75% (activos en rangos altos)
+            _fg_score_pre = cached_fundamental_report.get("fear_and_greed", {}).get("score", 50) if isinstance(cached_fundamental_report.get("fear_and_greed"), dict) else 50
+            _btc_rsi_pre = locals().get("_btc_rsi_1h", 50.0)
+            _bull_market_mode = (_fg_score_pre >= 65 and _btc_rsi_pre >= 50)
+            if _fg_score_pre >= 75 and _btc_rsi_pre >= 50:
+                _1h_ceiling_pre = 55.0
+                _1d_ceiling_pre = 75.0   # Extreme Greed: activos naturalmente más altos en 1D
+                print(f"   📈 [EXTREME GREED MODE] Fear&Greed={_fg_score_pre} + BTC_RSI1H={_btc_rsi_pre:.1f} → Canal 1H≤55% | 1D≤75% (mercado en euforia).", flush=True)
+            elif _bull_market_mode:
+                _1h_ceiling_pre = 55.0
+                _1d_ceiling_pre = 70.0
+                print(f"   📈 [BULL MODE] Fear&Greed={_fg_score_pre} + BTC_RSI1H={_btc_rsi_pre:.1f} → Canal 1H≤55% | 1D≤70% (adaptativo).", flush=True)
+            else:
+                _1h_ceiling_pre = 50.0
+                _1d_ceiling_pre = 65.0
+
             for idx, cand in enumerate(top_all_candidates, 1):
+
                 csym = cand["symbol"]
                 cdata = symbol_analysis_map.get(csym, {})
                 ctech = cdata.get("tech", {})
@@ -634,21 +653,12 @@ def run_infinite_trading_matrix_cycle():
                 
                 # 🎯 MATRIZ ARMÓNICA MACRO ANTI-TECHO (1H a 1D):
                 # Protege contra compras en techos macro reales (1H, 4H, 1D, RSI sobrecomprado).
-                # Se eliminan los topes micro (1M, 2M, 5M <= 50%) que sofocaban e impedían la entrada en velas verdes de ignición institucional.
+                # Los umbrales adaptativos (_1h_ceiling_pre, _1d_ceiling_pre) se calculan UNA VEZ antes del loop.
                 diag_reasons = []
 
-                # 📈 BULL MARKET ADAPTATIVO: En mercado alcista confirmado (Fear&Greed≥65 + BTC_RSI1H≥50),
-                # los activos se mueven naturalmente en rangos más altos.
-                # Relajamos 1H (50%→55%) y 1D (65%→70%) para no perder setups A+ legítimos.
-                # Todos los demás filtros (FII, Vol, OBV, Score, Anti-Pump) se mantienen sin cambio.
-                _fg_score = cached_fundamental_report.get("fear_and_greed", {}).get("score", 50) if isinstance(cached_fundamental_report.get("fear_and_greed"), dict) else 50
-                _btc_rsi_for_filter = locals().get("_btc_rsi_1h", 50.0)
-                _bull_market_mode = (_fg_score >= 65 and _btc_rsi_for_filter >= 50)
-                _1h_ceiling = 55.0 if _bull_market_mode else 50.0
-                _1d_ceiling = 70.0 if _bull_market_mode else 65.0
-
-                if _bull_market_mode:
-                    print(f"   📈 [BULL MODE] Fear&Greed={_fg_score} + BTC_RSI1H={_btc_rsi_for_filter:.1f} → Canal 1H≤{_1h_ceiling:.0f}% | 1D≤{_1d_ceiling:.0f}% (adaptativo).", flush=True)
+                # Usar umbrales pre-calculados (Extreme Greed: 1H≤55%, 1D≤75% | Bull: 1H≤55%, 1D≤70% | Normal: 1H≤50%, 1D≤65%)
+                _1h_ceiling = _1h_ceiling_pre
+                _1d_ceiling = _1d_ceiling_pre
 
                 if r1d_r > _1d_ceiling: diag_reasons.append(f"1D_Techo={r1d:.0f}%>{_1d_ceiling:.0f}%")
                 if r4h_r > 55.0: diag_reasons.append(f"4H_Techo={r4h:.0f}%>55%")
@@ -657,7 +667,7 @@ def run_infinite_trading_matrix_cycle():
                 if rsi_15m > 65.0: diag_reasons.append(f"RSI15M={rsi_15m:.0f}>65")
                 if rsi_1m > 80.0: diag_reasons.append(f"RSI1M_Extremo={rsi_1m:.0f}>80")
 
-                
+
                 # 🚫 VETO ANTI-PUMP / BULL TRAP: Prohibido comprar cerca del techo de un pump
                 dist_24h_high = cmtf.get("dist_to_24h_high_pct", 99.0) if cmtf else 99.0
                 if dist_24h_high < 4.0 and r4h_r > 50.0:
