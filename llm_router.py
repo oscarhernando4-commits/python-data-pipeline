@@ -52,10 +52,57 @@ def _advance_key_index(key_label=""):
     state["last_used_time"] = time.strftime("%Y-%m-%d %H:%M:%S")
     _save_gemini_key_state(state)
 
+def _get_persistent_failed_keys():
+    """Lee las claves con cooldown persistente desde gemini_key_state.json (sobrevive reload)."""
+    try:
+        state = _load_gemini_key_state()
+        return state.get("failed_keys", {})
+    except Exception:
+        return {}
+
+def _save_persistent_failed_key(key, fail_count):
+    """Guarda una clave fallida en gemini_key_state.json con cooldown progresivo."""
+    # Cooldown progresivo: 1er fallo→60s, 2do→300s, 3ro→1800s, 4to+→3600s
+    cooldown_seconds = {1: 60, 2: 300, 3: 1800}.get(fail_count, 3600)
+    failed_until = time.time() + cooldown_seconds
+    try:
+        state = _load_gemini_key_state()
+        failed_keys = state.setdefault("failed_keys", {})
+        # Usar hash corto de la key para no exponer el valor completo en el JSON
+        key_id = key[-8:] if len(key) >= 8 else key
+        failed_keys[key_id] = {"failed_until": failed_until, "fail_count": fail_count, "key_suffix": key_id}
+        state["failed_keys"] = failed_keys
+        _save_gemini_key_state(state)
+        return cooldown_seconds
+    except Exception:
+        return 30
+
+def _get_persistent_fail_count(key):
+    """Retorna el número de fallos persistidos para una key (para cooldown progresivo)."""
+    try:
+        key_id = key[-8:] if len(key) >= 8 else key
+        state = _load_gemini_key_state()
+        return state.get("failed_keys", {}).get(key_id, {}).get("fail_count", 0)
+    except Exception:
+        return 0
+
+def _is_key_in_persistent_cooldown(key):
+    """Verifica si una clave tiene cooldown activo en el JSON (persiste tras reload)."""
+    try:
+        key_id = key[-8:] if len(key) >= 8 else key
+        state = _load_gemini_key_state()
+        entry = state.get("failed_keys", {}).get(key_id)
+        if entry and entry.get("failed_until", 0) > time.time():
+            return True
+    except Exception:
+        pass
+    return False
+
 def get_gemini_api_keys():
     """
     Extracts all available Gemini API Keys from environment variables.
-    Filters out any keys placed in the 5-minute cooldown blacklist due to HTTP 429.
+    Filters out keys in cooldown — both in-memory (RAM) and persistent (JSON file).
+    The persistent check survives importlib.reload() called every 2 minutes by cloud_continuous_loop.py.
     """
     now = time.time()
     raw_keys = []
@@ -73,16 +120,26 @@ def get_gemini_api_keys():
             val = os.getenv(env_name_alt, "")
         if val and val not in raw_keys:
             raw_keys.append(val)
-            
-    # Filter out keys in 30-second cooldown (30 seconds allows RPM rate limit to reset naturally)
-    healthy_keys = [k for k in raw_keys if (now - _KEY_COOLDOWN.get(k, 0)) >= 30]
+
+    # Dual filter: RAM cooldown (fast) + JSON cooldown (persistent across reloads)
+    healthy_keys = [
+        k for k in raw_keys
+        if (now - _KEY_COOLDOWN.get(k, 0)) >= 30   # RAM check
+        and not _is_key_in_persistent_cooldown(k)   # JSON persistent check
+    ]
     
-    # If all keys happen to be in cooldown, clear cooldown to prevent hard lock
+    # If all keys happen to be in cooldown, clear RAM cooldown (not JSON) to prevent hard lock
     if not healthy_keys and raw_keys:
-        print("💡 Cooldown de claves Gemini expirado/reiniciado. Reanudando rotación de claves...")
-        _KEY_COOLDOWN.clear()
-        healthy_keys = raw_keys
-        
+        # Only clear RAM; persistent JSON cooldowns are authoritative
+        ram_blocked = [k for k in raw_keys if (now - _KEY_COOLDOWN.get(k, 0)) < 30]
+        if ram_blocked:
+            print("💡 Cooldown RAM de claves Gemini expirado/reiniciado. Reanudando rotación...")
+            _KEY_COOLDOWN.clear()
+        healthy_keys = [k for k in raw_keys if not _is_key_in_persistent_cooldown(k)]
+        if not healthy_keys:
+            print("⚠️ [KEY POOL] Todas las claves en cooldown persistente. Esperando expiración...")
+            healthy_keys = raw_keys  # Último recurso: usar todas para no bloquear
+
     return healthy_keys if healthy_keys else [""]
 
 def get_key_label(key, keys_pool):
@@ -94,12 +151,25 @@ def get_key_label(key, keys_pool):
         return f"Key_XX"
 
 def mark_key_in_cooldown(key):
-    """Puts a key in 30-second cooldown blacklist when it encounters HTTP 429 Rate Limit."""
+    """
+    Pone una clave en cooldown progresivo (RAM + JSON persistente).
+    El JSON persiste entre recargas de módulo (importlib.reload) evitando que
+    claves con cupo agotado vuelvan al pool cada 2 minutos.
+    Cooldown progresivo: 1er fallo=60s, 2do=300s, 3ro=1800s, 4to+=3600s
+    """
     if key and key != "":
+        # 1. RAM cooldown (retrocompatibilidad — 30s mínimo)
         _KEY_COOLDOWN[key] = time.time()
+        # 2. Persistir en JSON con cooldown progresivo
+        prev_fails = _get_persistent_fail_count(key)
+        new_fail_count = prev_fails + 1
+        cooldown_s = _save_persistent_failed_key(key, new_fail_count)
         healthy = len(get_gemini_api_keys())
-        lbl = get_key_label(key, get_gemini_api_keys() + list(_KEY_COOLDOWN.keys()))
-        print(f"🔄 [ROTACIÓN INTELIGENTE API] {lbl} en refresco breve (30s). Rotando automáticamente a siguiente clave en pool ({healthy} activas)...", flush=True)
+        all_raw = [k for k in [os.getenv("GEMINI_API_KEY", "")] + [os.getenv(f"GEMINI_API_KEY_{i:02d}", "") or os.getenv(f"GEMINI_API_KEY_{i}", "") for i in range(2, 11)] if k]
+        lbl = get_key_label(key, all_raw)
+        cooldown_label = f"{cooldown_s}s" if cooldown_s < 120 else f"{cooldown_s//60}m"
+        print(f"🔄 [ROTACIÓN INTELIGENTE API] {lbl} → Cooldown progresivo {cooldown_label} (Fallo #{new_fail_count}). Pool activo: {healthy} claves.", flush=True)
+
 
 def get_next_gemini_key():
     """Returns the next API key in round-robin sequence across the healthy key pool."""

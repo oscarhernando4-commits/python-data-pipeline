@@ -636,12 +636,27 @@ def run_infinite_trading_matrix_cycle():
                 # Protege contra compras en techos macro reales (1H, 4H, 1D, RSI sobrecomprado).
                 # Se eliminan los topes micro (1M, 2M, 5M <= 50%) que sofocaban e impedían la entrada en velas verdes de ignición institucional.
                 diag_reasons = []
-                if r1d_r > 65.0: diag_reasons.append(f"1D_Techo={r1d:.0f}%>65%")
+
+                # 📈 BULL MARKET ADAPTATIVO: En mercado alcista confirmado (Fear&Greed≥65 + BTC_RSI1H≥50),
+                # los activos se mueven naturalmente en rangos más altos.
+                # Relajamos 1H (50%→55%) y 1D (65%→70%) para no perder setups A+ legítimos.
+                # Todos los demás filtros (FII, Vol, OBV, Score, Anti-Pump) se mantienen sin cambio.
+                _fg_score = cached_fundamental_report.get("fear_and_greed", {}).get("score", 50) if isinstance(cached_fundamental_report.get("fear_and_greed"), dict) else 50
+                _btc_rsi_for_filter = locals().get("_btc_rsi_1h", 50.0)
+                _bull_market_mode = (_fg_score >= 65 and _btc_rsi_for_filter >= 50)
+                _1h_ceiling = 55.0 if _bull_market_mode else 50.0
+                _1d_ceiling = 70.0 if _bull_market_mode else 65.0
+
+                if _bull_market_mode:
+                    print(f"   📈 [BULL MODE] Fear&Greed={_fg_score} + BTC_RSI1H={_btc_rsi_for_filter:.1f} → Canal 1H≤{_1h_ceiling:.0f}% | 1D≤{_1d_ceiling:.0f}% (adaptativo).", flush=True)
+
+                if r1d_r > _1d_ceiling: diag_reasons.append(f"1D_Techo={r1d:.0f}%>{_1d_ceiling:.0f}%")
                 if r4h_r > 55.0: diag_reasons.append(f"4H_Techo={r4h:.0f}%>55%")
                 if r2h_r > 55.0: diag_reasons.append(f"2H_Techo={r2h:.0f}%>55%")
-                if r1h_r > 50.0: diag_reasons.append(f"1H_Techo={r1h:.0f}%>50%")
+                if r1h_r > _1h_ceiling: diag_reasons.append(f"1H_Techo={r1h:.0f}%>{_1h_ceiling:.0f}%")
                 if rsi_15m > 65.0: diag_reasons.append(f"RSI15M={rsi_15m:.0f}>65")
                 if rsi_1m > 80.0: diag_reasons.append(f"RSI1M_Extremo={rsi_1m:.0f}>80")
+
                 
                 # 🚫 VETO ANTI-PUMP / BULL TRAP: Prohibido comprar cerca del techo de un pump
                 dist_24h_high = cmtf.get("dist_to_24h_high_pct", 99.0) if cmtf else 99.0
@@ -984,9 +999,41 @@ def run_infinite_trading_matrix_cycle():
             elif is_btc_crashing and ai_symbol != "BTCUSDT":
                 print(f"🛡️ [FILTRO CRASH BTC] Entrada LONG bloqueada en {ai_symbol}. Bitcoin en colapso activo ({btc_status_str}). Protegiendo capital.")
                 api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
-            elif is_btc_weak and ai_symbol != "BTCUSDT" and (target_vol_surge < 0.45 or ai_score < 75):
-                print(f"🛡️ [FILTRO CORRELACIÓN BTC] Entrada en {ai_symbol} bloqueada (Score {ai_score}, VolSurge {target_vol_surge:.2f}x). Durante BTC débil ({btc_status_str}) se exige Score>=75 y VolSurge>=0.45x.")
-                api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
+            elif is_btc_weak and ai_symbol != "BTCUSDT":
+                # ⚡ FILTRO CORRELACIÓN BTC — UMBRAL ADAPTATIVO (Fix v2.0)
+                # Cuando BTC está en consolidación (weak, no crash), aplicar VolSurge diferenciado:
+                # · Elite A+ (FII≥65 + Score≥82 + Gemini≥80%): acumulación silenciosa → solo 0.20x
+                # · Quality (FII≥55 + Score≥78): umbral intermedio → 0.30x
+                # · Standard: umbral estricto → 0.45x (original)
+                _ai_fii = gemini_res.get("fii", mtf_ai.get("fii_score", 0)) if mtf_ai else 0
+                if _ai_fii == 0:
+                    try:
+                        _ai_fii = mtf_ai.get("fii_score", 0) if mtf_ai else 0
+                    except Exception:
+                        _ai_fii = 0
+                if ai_score >= 82 and _ai_fii >= 65 and ai_confidence >= 80:
+                    _min_vol_for_btc_weak = 0.20
+                    _vol_label = "ÉLITE A+ (FII≥65+Score≥82+Conf≥80)"
+                elif ai_score >= 78 and _ai_fii >= 55:
+                    _min_vol_for_btc_weak = 0.30
+                    _vol_label = "QUALITY (FII≥55+Score≥78)"
+                else:
+                    _min_vol_for_btc_weak = 0.45
+                    _vol_label = "STANDARD"
+                if target_vol_surge < _min_vol_for_btc_weak or ai_score < 75:
+                    print(f"🛡️ [FILTRO CORRELACIÓN BTC] Entrada en {ai_symbol} bloqueada (Score {ai_score}, VolSurge {target_vol_surge:.2f}x < {_min_vol_for_btc_weak:.2f}x [{_vol_label}]). BTC débil ({btc_status_str}).")
+                    api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)
+                else:
+                    print(f"✅ [CORRELACIÓN BTC SUPERADA] {ai_symbol}: VolSurge {target_vol_surge:.2f}x >= {_min_vol_for_btc_weak:.2f}x [{_vol_label}]. Procediendo con A+ confirmado...")
+                    api_connector.evaluate_and_trade_real_money(
+                        best_symbol=ai_symbol,
+                        best_score=ai_score,
+                        current_price=ai_price,
+                        is_bearish=False,
+                        is_learned_signal=True,
+                        candidates_list=candidates_for_gemini
+                    )
+
             elif ai_confidence < 60:
                 print(f"🛡️ [FILTRO CONFIANZA IA] Confianza de Gemini ({ai_confidence}%) menor al umbral mínimo (60%). Esperando mejor setup.")
                 api_connector.evaluate_and_trade_real_money(best_symbol=None, best_score=50, current_price=0.0, is_bearish=True)

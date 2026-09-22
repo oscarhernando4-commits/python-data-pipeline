@@ -2037,12 +2037,15 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
                 print(f"   Ganancia diaria blindada. Capital protegido hasta las 00:00:00 UTC.")
                 return
 
-            # 🛑 LÍMITE MÁXIMO DE TRADES DIARIOS: 5 trades/día (con límite duro de pérdida -$1.20)
-            # Permite recuperar el día si las condiciones de mercado mejoran
+            # 🛑 LÍMITE MÁXIMO DE TRADES DIARIOS ADAPTATIVO:
+            # · Día ganador (PnL > 0): hasta 8 trades — el sistema está demostrando precisión ese día.
+            # · Día neutral o en rojo (PnL <= 0): máximo 5 trades — modo conservador para proteger capital.
             _daily_trades = state.get("daily_wins", 0) + state.get("daily_losses", 0)
-            if _daily_trades >= 5:
-                print(f"🛑 [LÍMITE TRADES DIARIOS] Ya se ejecutaron {_daily_trades}/5 trades hoy ({today_str} UTC) (PnL: ${daily_pnl:+.4f}). Máximo 5 trades/día para minimizar comisiones.")
+            _max_daily_trades = 8 if daily_pnl > 0 else 5
+            if _daily_trades >= _max_daily_trades:
+                print(f"🛑 [LÍMITE TRADES DIARIOS] Ya se ejecutaron {_daily_trades}/{_max_daily_trades} trades hoy ({today_str} UTC) (PnL: ${daily_pnl:+.4f}). {'Día ganador → máx 8 trades.' if daily_pnl > 0 else 'Día en rojo → máx 5 trades (modo conservador).'}")
                 return
+
         except Exception:
             pass
 
