@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22 16:32:09 UTC",
+  "updated_at": "2026-09-22 16:49:04 UTC",
   "elite_tokens": [
     {
       "symbol": "VIRTUALUSDT",
@@ -211,7 +211,7 @@
     },
     {
       "symbol": "OPUSDT",
-      "total": 1892,
+      "total": 1893,
       "wins": 1425,
       "win_rate": 75.3,
       "net_pnl": 592.82,
@@ -251,10 +251,10 @@
     },
     {
       "symbol": "APTUSDT",
-      "total": 2001,
-      "wins": 1485,
-      "win_rate": 74.2,
-      "net_pnl": 350.34,
+      "total": 2008,
+      "wins": 1488,
+      "win_rate": 74.1,
+      "net_pnl": 348.1,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -290,14 +290,6 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
-      "symbol": "SEIUSDT",
-      "total": 927,
-      "wins": 683,
-      "win_rate": 73.7,
-      "net_pnl": 333.53,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
       "symbol": "ICPUSDT",
       "total": 2077,
       "wins": 1524,
@@ -306,19 +298,27 @@
       "tier": "💎 A+ ÉLITE"
     },
     {
+      "symbol": "SEIUSDT",
+      "total": 933,
+      "wins": 683,
+      "win_rate": 73.2,
+      "net_pnl": 332.15,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
+      "symbol": "NEARUSDT",
+      "total": 1181,
+      "wins": 862,
+      "win_rate": 73.0,
+      "net_pnl": 587.75,
+      "tier": "💎 A+ ÉLITE"
+    },
+    {
       "symbol": "QNTUSDT",
       "total": 1437,
       "wins": 1048,
       "win_rate": 72.9,
       "net_pnl": 362.06,
-      "tier": "💎 A+ ÉLITE"
-    },
-    {
-      "symbol": "NEARUSDT",
-      "total": 1172,
-      "wins": 853,
-      "win_rate": 72.8,
-      "net_pnl": 582.83,
       "tier": "💎 A+ ÉLITE"
     },
     {
@@ -460,6 +460,6 @@
   ],
   "blacklisted_tokens": [],
   "global_sim_wr": 72.7,
-  "total_sim_trades": 105291,
+  "total_sim_trades": 105323,
   "total_real_trades": 97
 }
