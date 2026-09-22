@@ -1015,12 +1015,18 @@ def run_infinite_trading_matrix_cycle():
                 # · Elite A+ (FII≥65 + Score≥82 + Gemini≥80%): acumulación silenciosa → solo 0.20x
                 # · Quality (FII≥55 + Score≥78): umbral intermedio → 0.30x
                 # · Standard: umbral estricto → 0.45x (original)
-                _ai_fii = gemini_res.get("fii", mtf_ai.get("fii_score", 0)) if mtf_ai else 0
-                if _ai_fii == 0:
-                    try:
-                        _ai_fii = mtf_ai.get("fii_score", 0) if mtf_ai else 0
-                    except Exception:
-                        _ai_fii = 0
+                # FII: prioridad 1=candidato pre-filtrado (más confiable), 2=gemini_res, 3=mtf_ai
+                _ai_fii = 0
+                if candidates_for_gemini:
+                    _best_cand_data = next(
+                        (c for c in candidates_for_gemini if c.get("symbol") == ai_symbol),
+                        candidates_for_gemini[0]
+                    )
+                    _ai_fii = (_best_cand_data.get("tech_data") or {}).get("mtf_analysis", {}).get("fii_score", 0)
+                if not _ai_fii:
+                    _ai_fii = gemini_res.get("fii", 0) or (mtf_ai.get("fii_score", 0) if mtf_ai else 0)
+                print(f"   🔍 [BTC WEAK FILTER] {ai_symbol}: FII={_ai_fii} | Score={ai_score} | Conf={ai_confidence}% | VolSurge={target_vol_surge:.2f}x", flush=True)
+
                 if ai_score >= 82 and _ai_fii >= 65 and ai_confidence >= 80:
                     _min_vol_for_btc_weak = 0.20
                     _vol_label = "ÉLITE A+ (FII≥65+Score≥82+Conf≥80)"
