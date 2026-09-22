@@ -4,7 +4,7 @@
     "wins": 35,
     "losses": 54,
     "win_rate_pct": 39.33,
-    "total_pnl_usd": 3.2422
+    "total_pnl_usd": 2.733
   },
   "learned_rules": {
     "blocked_patterns": [
@@ -1471,26 +1471,6 @@
     },
     {
       "timestamp": "2026-09-22 13:39:55",
-      "timestamp_ms": 1790084395499,
-      "account_id": "SIM-G3",
-      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
-      "symbol": "NEXOUSDT",
-      "side": "LONG",
-      "entry_price": 0.878,
-      "exit_price": 0.882,
-      "result": "WIN",
-      "pnl_pct": 0.4556,
-      "pnl_usd": 0.6046,
-      "exit_reason": "SL/Floor 0.54% tocado",
-      "source": "SIMULATION",
-      "min_score": 85,
-      "min_fii": 60,
-      "hold_min": 17.9,
-      "notes": "SL/Floor 0.54% tocado",
-      "context": {}
-    },
-    {
-      "timestamp": "2026-09-22 13:39:55",
       "timestamp_ms": 1790084395500,
       "account_id": "SIM-G4",
       "group_name": "🧬 ADAPTATIVO HÍBRIDO (Score≥80, FII≥55)",
@@ -2067,6 +2047,26 @@
       "min_fii": 55,
       "hold_min": 12.9,
       "notes": "SL/Floor 0.53% tocado",
+      "context": {}
+    },
+    {
+      "timestamp": "2026-09-22 14:00:00",
+      "timestamp_ms": 1790085600285,
+      "account_id": "SIM-G3",
+      "group_name": "🐢 PACIENCIA TOTAL (Score≥85, FII≥60, Hold Max 720min)",
+      "symbol": "AAVEUSDT",
+      "side": "LONG",
+      "entry_price": 144.49,
+      "exit_price": 144.61,
+      "result": "WIN",
+      "pnl_pct": 0.0831,
+      "pnl_usd": 0.0954,
+      "exit_reason": "Tiempo max 720min agotado",
+      "source": "SIMULATION",
+      "min_score": 85,
+      "min_fii": 60,
+      "hold_min": 721.0,
+      "notes": "Tiempo max 720min agotado",
       "context": {}
     }
   ],
