@@ -2435,19 +2435,27 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
 
             # 💎 VETO 4: VOLUMEN ACTIVO — Impulso real obligatorio
             vol_1m_check = mtf_res.get("vol_surge_1m", 1.0)
+            vol_15m_check = mtf_res.get("vol_surge_15m", 1.0)
             if is_ai_top:
-                min_vol_1m = 0.40 if (is_dna_elite or fii >= 65 or has_floor_turnaround) else 0.50
+                # Soberanía IA: Si Gemini aprobó con alta certeza (>=80%) y el activo tiene FII institucional (>=60)
+                # o patrón de suelo, el piso es 0.20x (alineado con la regla R3 del Comité IA y piso anti-muertos).
+                # Si además el volumen macro en 15M es potente (>= 0.50x), permite acumulación en suelo fractal (>= 0.15x).
+                if fii >= 65 and vol_15m_check >= 0.50:
+                    min_vol_1m = 0.15
+                elif is_dna_elite or fii >= 60 or has_floor_turnaround:
+                    min_vol_1m = 0.20
+                else:
+                    min_vol_1m = 0.35
             else:
-                min_vol_1m = 0.60
+                min_vol_1m = 0.50
 
             if vol_1m_check < min_vol_1m:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO VOLUMEN: Vol 1M={vol_1m_check:.2f}x < {min_vol_1m:.2f}x. Sin impulso.")
                 continue
-            vol_15m_check = mtf_res.get("vol_surge_15m", 1.0)
-            if vol_15m_check < 0.25:
-                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO VOLUMEN 15M: Vol 15M={vol_15m_check:.2f}x < 0.25x. Sin liquidez institucional macro.")
+            if vol_15m_check < 0.20 and not (is_ai_top and fii >= 65):
+                print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] VETO VOLUMEN 15M: Vol 15M={vol_15m_check:.2f}x < 0.20x. Sin liquidez institucional macro.")
                 continue
-            elif is_ai_top and vol_1m_check < 0.60:
+            elif is_ai_top:
                 print(f"  ⚡ [ADN ADAPTATIVO: VOLUMEN APROBADO] {cand_sym} Vol 1M={vol_1m_check:.2f}x >= {min_vol_1m:.2f}x para {arch_dna.get('label')} (FII={fii} | IA Aprobado).")
                 
             range_pos_1h = mtf_res.get("range_position_1h", 0.50)
@@ -2460,16 +2468,20 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             rsi_1m_now = mtf_res.get("rsi_1m", 50.0)
             
             # 🎯 MATRIZ ARMÓNICA MACRO ANTI-TECHO (PROTECCIÓN DE CAPITAL INSTITUCIONAL):
-            # Ancla Macro Estricta: 1D<=65%, 4H<=55%, 2H<=55%, 1H<=50%, RSI 15M<=65, RSI 1M<=80.
+            # Ancla Macro Adaptativa: 1D<=75% (o 65% estándar), 4H<=55%, 2H<=55%, 1H<=55% (o 50% estándar).
             # Veto Anti-Pump / Bull Trap: Prohíbe comprar cerca del techo del día (<4%) cuando 4H > 50%.
             dist_24h_high = mtf_res.get("dist_to_24h_high_pct", 99.0)
             is_near_pump_peak = bool(dist_24h_high < 4.0 and range_pos_4h > 0.50)
 
+            # Umbrales adaptativos sincronizados con el régimen de mercado y soberanía IA
+            _max_macro_1h = 0.55 if is_ai_top else 0.50
+            _max_macro_1d = 0.75 if is_ai_top else 0.65
+
             is_macro_base_valid = bool(
-                range_pos_1d <= 0.65 and
+                range_pos_1d <= _max_macro_1d and
                 range_pos_4h <= 0.55 and
                 range_pos_2h <= 0.55 and
-                range_pos_1h <= 0.50 and
+                range_pos_1h <= _max_macro_1h and
                 rsi_15m_now <= 65.0 and
                 rsi_1m_now <= 80.0 and
                 not is_near_pump_peak
@@ -2477,7 +2489,7 @@ def evaluate_and_trade_real_money(best_symbol, best_score, current_price, is_bea
             
             if not is_macro_base_valid or is_at_daily_ceiling:
                 print(f"  ⛔ [#{cand_idx}/{total_cands} {cand_sym}] Descartado: En Techo Macro o Sobrecomprado:")
-                print(f"     Canales Macro: [1H: {range_pos_1h*100:.0f}% (max 50) | 2H: {range_pos_2h*100:.0f}% (max 55) | 4H: {range_pos_4h*100:.0f}% (max 55) | 1D: {range_pos_1d*100:.0f}% (max 65) | RSI15M: {rsi_15m_now:.1f} (max 65)]")
+                print(f"     Canales Macro: [1H: {range_pos_1h*100:.0f}% (max {_max_macro_1h*100:.0f}) | 2H: {range_pos_2h*100:.0f}% (max 55) | 4H: {range_pos_4h*100:.0f}% (max 55) | 1D: {range_pos_1d*100:.0f}% (max {_max_macro_1d*100:.0f}) | RSI15M: {rsi_15m_now:.1f} (max 65)]")
                 continue
 
             if is_ai_top:

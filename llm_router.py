@@ -611,7 +611,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     ═══════════════════════════════════════════════════════════
     V1. BTC en vela roja activa 5M (< -0.15%) o cascada bajista → VETO TOTAL
     V2. Semáforo macro DEFENSIVO o RISK-OFF → VETO TOTAL
-    V3. Canal 15M > 48%, Canal 1H > 50% o Canal 4H > 55% (precio en techo o zona alta) → VETO TOTAL
+    V3. Canal 15M > 55% (o > 48% si 1M > 35%), Canal 1H > 55% o Canal 4H > 55% (precio en techo o zona alta) → VETO TOTAL
     V4. OBV=DISTRIBUTING + Bids < 48% + VolSurge 1M < 0.30x (triple señal de distribución) → VETO TOTAL
     V5. Riesgo de Dump >= 50% → VETO TOTAL
     V6. Buy Taker < 42% (más vendedores que compradores en flujo real) → VETO TOTAL
@@ -622,7 +622,7 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
     ═══════════════════════════════════════════════════════════
     ✅ REQUISITOS MÍNIMOS PARA APROBAR (TODOS deben cumplirse):
     ═══════════════════════════════════════════════════════════
-    R1. Canal 1M <= 35%, Canal 5M <= 40%, Canal 15M <= 48%, Canal 1H <= 50%, Canal 4H <= 55% (precio en base fractal real, prohibido comprar en cima)
+    R1. Canal 1M <= 35%, Canal 5M <= 40%, Canal 15M <= 55%, Canal 1H <= 55%, Canal 4H <= 55% (precio en base fractal real, prohibido comprar en cima. En Suelo 2 / Doble Suelo, si 1M <= 25% y 5M <= 30%, el piso micro valida la entrada aunque 15M esté en 50-55%)
     R2. FII >= 50 (institucionales absorbiendo en el suelo)
     R3. VolSurge 1M >= 0.20x (hay actividad compradora)
     R4. Bids >= 45% (libro de órdenes equilibrado o a favor del comprador)
@@ -650,8 +650,8 @@ def review_top_candidates(candidates_data_list, news_data, fear_greed, macro_con
        APRUEBA si: BTC estable/alcista, mercado RISK-ON, Fear&Greed 25-85.
 
     2. 📊 AGENTE 2 (Sniper de Suelo Fractal 8D):
-       VETA si: Canal 15M > 48%, Canal 1H > 50% o Canal 4H > 55% (precio en techo o zona alta).
-       APRUEBA si: Canal 1M <= 35%, Canal 5M <= 40%, Canal 15M <= 48%, Canal 1H <= 50%, Canal 4H <= 55% (base fractal real - Francotirador de Suelo).
+       VETA si: Canal 15M > 55% (o > 48% si 1M > 35%), Canal 1H > 55% o Canal 4H > 55% (precio en techo o zona alta).
+       APRUEBA si: Canal 1M <= 35%, Canal 5M <= 40%, Canal 15M <= 55%, Canal 1H <= 55%, Canal 4H <= 55% (base fractal real - Francotirador de Suelo. Si 1M <= 25% y 5M <= 30% en Suelo 2/Doble Suelo, la base micro confirma el soporte).
 
     3. 🌊 AGENTE 3 (Auditor de Libro, Volume Delta & OBV):
        VETA si: Buy Taker < 38% (flujo vendedor real), OBV DISTRIBUTING + Bids < 45%, Muro Bids < $8k.
